@@ -1,12 +1,12 @@
 package com.discord.media.engine.video.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -62,18 +62,18 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnSizeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -91,7 +91,7 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a};
+         return new KSerializer[]{N.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnSizeEvent {

@@ -1,15 +1,15 @@
 package com.discord.chrome_custom_tabs
 
+import L0.e0
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
 import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
-import k2.d1
 import kotlin.jvm.internal.q
-import s3.a
-import s3.b
+import t1.a
+import t1.b
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -21,7 +21,7 @@ internal object CustomTabsPackages {
       var var2: Intent = this.getDefaultViewIntentHandler();
       val var5: java.util.List;
       if (VERSION.SDK_INT >= 33) {
-         var5 = a.a(var1.getPackageManager(), var2, d1.a((long)0));
+         var5 = a.a(var1.getPackageManager(), var2, e0.a((long)0));
       } else {
          var5 = var1.getPackageManager().queryIntentActivities(var2, 0);
       }
@@ -34,7 +34,7 @@ internal object CustomTabsPackages {
          q.g(var2, "setPackage(...)");
          val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var8 = b.a(var1.getPackageManager(), var2, d1.a((long)0));
+            var8 = b.a(var1.getPackageManager(), var2, e0.a((long)0));
          } else {
             var8 = var1.getPackageManager().resolveService(var2, 0);
          }
@@ -126,7 +126,7 @@ internal object CustomTabsPackages {
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = i.g0(var5) as java.lang.String;
+                  var7 = i.h0(var5) as java.lang.String;
                }
             }
          }

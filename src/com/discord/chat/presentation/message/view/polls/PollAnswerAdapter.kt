@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.polls
 
 import android.annotation.SuppressLint
 import android.view.View
-import androidx.core.view.r0
+import androidx.core.view.a0
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollsAnswerAccessibilityDelegate
@@ -43,8 +43,8 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       val var4: View = var1.getBinding().getRoot();
       var4.setEnabled(var3.getCanTapAnswers());
       var4.setOnClickListener(new e(this, var3));
-      r0.A0(var4, 1);
-      r0.q0(var4, new PollsAnswerAccessibilityDelegate(var3));
+      var4.setImportantForAccessibility(1);
+      a0.p0(var4, new PollsAnswerAccessibilityDelegate(var3));
       var1.bind(var3, new Function0(this, var3) {
          final PollAnswerAccessory $accessory;
          final PollAnswerAdapter<THolder> this$0;

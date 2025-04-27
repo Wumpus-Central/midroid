@@ -22,9 +22,9 @@ import com.discord.mobile_voice_overlay.R
 import com.discord.mobile_voice_overlay.databinding.OverlayMenuBubbleBinding
 import com.discord.react_activities.ReactActivity
 import com.discord.theme.ThemeManagerKt
+import j8.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import nh.w
 
 public class OverlayMenuBubbleDialog : OverlayDialog {
    private final val adapter: VoiceUserAdapter
@@ -50,9 +50,9 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    public constructor(context: Context) : q.h(var1, "context") {
       super(var1);
-      val var3: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var2: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
+      q.g(var2, "inflate(...)");
+      this.binding = var2;
       this.adapter = new VoiceUserAdapter();
       this.onGetInvitePressed = <unrepresentable>.INSTANCE;
       this.onSwitchChannelsPressed = <unrepresentable>.INSTANCE;
@@ -60,27 +60,27 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       this.onMutePressed = <unrepresentable>.INSTANCE;
       this.onDisconnectPressed = <unrepresentable>.INSTANCE;
       this.onShowSelectorDialog = <unrepresentable>.INSTANCE;
-      var3.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new b(this));
-      var3.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new c(this));
-      var3.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new d(this));
-      var3.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
-      var3.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new f(this));
+      var2.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new b(this));
+      var2.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new c(this));
+      var2.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new d(this));
+      var2.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
+      var2.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new f(this));
       this.setClipChildren(false);
-      val var2: TextView = var3.overlayMembersOverflowText;
-      q.e(var3.overlayMembersOverflowText);
-      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryExtraBold);
-      SetTextSizeSpKt.setTextSizeSp(var2, 20.0F);
-      val var4: TextView = var3.overlayMembersOverflowText;
-      var3.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var3: TextView = var2.overlayMembersOverflowText;
+      q.e(var2.overlayMembersOverflowText);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryExtraBold);
+      SetTextSizeSpKt.setTextSizeSp(var3, 20.0F);
+      val var4: TextView = var2.overlayMembersOverflowText;
+      var2.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       q.e(var4);
       ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
    }
 
    public constructor(context: Context, attrs: AttributeSet?) : q.h(var1, "context") {
       super(var1, var2);
-      val var3: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
+      q.g(var5, "inflate(...)");
+      this.binding = var5;
       this.adapter = new VoiceUserAdapter();
       this.onGetInvitePressed = <unrepresentable>.INSTANCE;
       this.onSwitchChannelsPressed = <unrepresentable>.INSTANCE;
@@ -88,18 +88,18 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       this.onMutePressed = <unrepresentable>.INSTANCE;
       this.onDisconnectPressed = <unrepresentable>.INSTANCE;
       this.onShowSelectorDialog = <unrepresentable>.INSTANCE;
-      var3.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new b(this));
-      var3.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new c(this));
-      var3.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new d(this));
-      var3.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
-      var3.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new f(this));
+      var5.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new b(this));
+      var5.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new c(this));
+      var5.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new d(this));
+      var5.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
+      var5.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new f(this));
       this.setClipChildren(false);
-      val var5: TextView = var3.overlayMembersOverflowText;
-      q.e(var3.overlayMembersOverflowText);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryExtraBold);
-      SetTextSizeSpKt.setTextSizeSp(var5, 20.0F);
-      val var4: TextView = var3.overlayMembersOverflowText;
-      var3.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var3: TextView = var5.overlayMembersOverflowText;
+      q.e(var5.overlayMembersOverflowText);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryExtraBold);
+      SetTextSizeSpKt.setTextSizeSp(var3, 20.0F);
+      val var4: TextView = var5.overlayMembersOverflowText;
+      var5.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       q.e(var4);
       ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
    }
@@ -164,14 +164,14 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
    }
 
    public override fun getClosingAnimator(): Animator {
-      val var1: AnimatorSet = new AnimatorSet();
-      var1.setStartDelay((long)this.getResources().getInteger(17694720));
-      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
-      var2.setTarget(this.binding.overlayMenu);
+      val var2: AnimatorSet = new AnimatorSet();
+      var2.setStartDelay((long)this.getResources().getInteger(17694720));
+      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
+      var1.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_up_fade_out);
       var4.setTarget(this.binding.overlayHeader);
-      var1.playTogether(new Animator[]{var2, var4});
-      return var1;
+      var2.playTogether(new Animator[]{var1, var4});
+      return var2;
    }
 
    protected open fun onAttachedToWindow() {
@@ -206,7 +206,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       if (var3.size() < 2) {
          var3 = i.k();
       } else {
-         var3 = i.G0(var3, kotlin.ranges.f.r(1, var3.size()));
+         var3 = i.G0(var3, kotlin.ranges.d.r(1, var3.size()));
       }
 
       this.adapter.setData(var3);
@@ -246,7 +246,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
             val var1: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
             val var2: Context = this.this$0.getContext();
             q.g(var2, "getContext(...)");
-            var1.startHeadlessTask(var2, "GenerateInvite", androidx.core.os.e.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
+            var1.startHeadlessTask(var2, "GenerateInvite", androidx.core.os.d.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
             val var3: MobileVoiceOverlayAssets = this.this$0.getOverlayAssets();
             if (var3 != null) {
                Toast.makeText(this.this$0.getContext(), var3.getInviteLinkCopied(), 0).show();
@@ -285,7 +285,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
             val var4: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
             val var3: Context = this.this$0.getContext();
             q.g(var3, "getContext(...)");
-            var4.startHeadlessTask(var3, "SelectChannel", androidx.core.os.e.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
+            var4.startHeadlessTask(var3, "SelectChannel", androidx.core.os.d.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
          }
       };
       this.onMutePressed = new Function0(this) {
@@ -317,7 +317,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
             val var1: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
             val var2: Context = this.this$0.getContext();
             q.g(var2, "getContext(...)");
-            var1.startHeadlessTask(var2, "Disconnect", androidx.core.os.e.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
+            var1.startHeadlessTask(var2, "Disconnect", androidx.core.os.d.a(w.a("channelId", java.lang.String.valueOf(this.$data.getChannelId-o4g7jtM()))));
          }
       };
    }

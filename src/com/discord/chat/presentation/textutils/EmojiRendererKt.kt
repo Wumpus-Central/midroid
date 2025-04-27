@@ -14,9 +14,51 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
+import j8.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.p
+
+public fun GenericDraweeHierarchyBuilder.handleEmojiSpoiler(rc: RenderContext, revealTransparent: Boolean = false) {
+   q.h(var0, "<this>");
+   q.h(var1, "rc");
+   var var4: Int = 0;
+   var0.D(new ColorDrawable(0));
+   var0.z(0);
+   if (var1.spoilerExists()) {
+      val var5: Boolean = var1.spoilerIsRevealed();
+      val var3: Int;
+      if (var5 && var2) {
+         var3 = 0;
+      } else if (var5) {
+         var3 = ThemeManagerKt.getTheme().getSpoilerRevealedBackground();
+      } else {
+         var3 = ThemeManagerKt.getTheme().getSpoilerHiddenBackground();
+      }
+
+      val var6: DiscordThemeObject = ThemeManagerKt.getTheme();
+      if (var5) {
+         var6.getSpoilerRevealedBackground();
+      } else {
+         var6.getSpoilerHiddenBackground();
+      }
+
+      if (!var5) {
+         var4 = ThemeManagerKt.getTheme().getSpoilerHiddenBackground();
+      }
+
+      var0.x(new ColorDrawable(var3));
+      var0.C(new ColorDrawable(var4));
+   }
+}
+
+@JvmSynthetic
+fun `handleEmojiSpoiler$default`(var0: GenericDraweeHierarchyBuilder, var1: RenderContext, var2: Boolean, var3: Int, var4: Any) {
+   if ((var3 and 2) != 0) {
+      var2 = false;
+   }
+
+   handleEmojiSpoiler(var0, var1, var2);
+}
 
 public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode, rc: RenderContext) {
    q.h(var0, "builder");
@@ -73,26 +115,7 @@ public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode
 
       public final void invoke(GenericDraweeHierarchyBuilder var1) {
          q.h(var1, "$this$renderEmojiInto");
-         var var3: Int = 0;
-         var1.D(new ColorDrawable(0));
-         var1.z(0);
-         if (this.$rc.spoilerExists()) {
-            val var4: Boolean = this.$rc.spoilerIsRevealed();
-            val var5: DiscordThemeObject = ThemeManagerKt.getTheme();
-            val var2: Int;
-            if (var4) {
-               var2 = var5.getSpoilerRevealedBackground();
-            } else {
-               var2 = var5.getSpoilerHiddenBackground();
-            }
-
-            if (!var4) {
-               var3 = ThemeManagerKt.getTheme().getSpoilerHiddenBackground();
-            }
-
-            var1.x(new ColorDrawable(var2));
-            var1.C(new ColorDrawable(var3));
-         }
+         EmojiRendererKt.handleEmojiSpoiler$default(var1, this.$rc, false, 2, null);
       }
    });
 
@@ -106,25 +129,26 @@ public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode
 
 public fun EmojiContentNode.renderable(): RenderableEmoji {
    q.h(var0, "<this>");
-   val var7: Any;
+   val var6: Any;
    if (var0 is CustomEmojiContentNode) {
-      val var5: RenderableEmoji.Companion = RenderableEmoji.Companion;
-      val var6: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var3: Long = (var0 as CustomEmojiContentNode).getId();
-      val var2: Boolean = kotlin.text.h.x((var0 as CustomEmojiContentNode).getSrc());
-      var var1: Boolean = true;
-      if (!(var2 xor true) || q.c(var6.getSrc(), var6.getFrozenSrc())) {
-         var1 = false;
+      val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
+      val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
+      val var1: Long = (var0 as CustomEmojiContentNode).getId();
+      val var3: Boolean;
+      if (!kotlin.text.h.d0(var5.getSrc()) && !q.c(var5.getSrc(), var5.getFrozenSrc())) {
+         var3 = true;
+      } else {
+         var3 = false;
       }
 
-      var7 = var5.customWithEmojiId(var3, var1, var6.getAlt());
+      var6 = var4.customWithEmojiId(var1, var3, var5.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
          throw new p();
       }
 
-      var7 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());
+      var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());
    }
 
-   return (RenderableEmoji)var7;
+   return (RenderableEmoji)var6;
 }

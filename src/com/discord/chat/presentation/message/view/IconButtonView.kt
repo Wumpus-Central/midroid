@@ -53,6 +53,6 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
       kotlin.jvm.internal.q.g(this.binding.iconContainer, "iconContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new h0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new H(var3), 1, null);
    }
 }

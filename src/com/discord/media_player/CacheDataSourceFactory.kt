@@ -1,5 +1,7 @@
 package com.discord.media_player
 
+import A4.s
+import B4.h
 import android.content.Context
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
@@ -8,8 +10,6 @@ import com.google.android.exoplayer2.upstream.cache.SimpleCache
 import com.google.android.exoplayer2.upstream.cache.c
 import java.io.File
 import kotlin.jvm.internal.q
-import w9.s
-import x9.h
 
 public class CacheDataSourceFactory private constructor(defaultDatasourceFactory: Factory = new Factory()) :
    com.google.android.exoplayer2.upstream.DataSource.Factory {
@@ -45,7 +45,7 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
       private final lateinit var factory: CacheDataSourceFactory
 
       private fun getSimpleCache(context: Context): SimpleCache {
-         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new h(104857600L), new a8.c(var1));
+         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new h(104857600L), new E3.c(var1));
       }
 
       public fun getInstance(): CacheDataSourceFactory {
@@ -62,13 +62,11 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
       public fun init(context: Context) {
          q.h(var1, "context");
          CacheDataSourceFactory.access$setCache$cp(this.getSimpleCache(var1));
-         var var3: CacheDataSourceFactory = null;
          CacheDataSourceFactory.access$setFactory$cp(new CacheDataSourceFactory(null, 1, null));
-         val var2: CacheDataSourceFactory = CacheDataSourceFactory.access$getFactory$cp();
-         if (var2 == null) {
+         var var3: CacheDataSourceFactory = CacheDataSourceFactory.access$getFactory$cp();
+         if (var3 == null) {
             q.y("factory");
-         } else {
-            var3 = var2;
+            var3 = null;
          }
 
          com.brentvatne.exoplayer.b.e(var3);

@@ -18,7 +18,9 @@ public class SpoilerViewManager {
       obscureLabelVisible: Boolean,
       isObscureAwaitingScan: Boolean,
       showSpoiler: Boolean,
-      radiusPx: Int
+      radiusPx: Int,
+      obscureHideControls: Boolean,
+      obscureIsOpaque: Boolean
    ) {
       kotlin.jvm.internal.q.h(var2, "parentView");
       kotlin.jvm.internal.q.h(var3, "containerView");
@@ -28,16 +30,18 @@ public class SpoilerViewManager {
             this.spoilerView = SpoilerView.Companion.createAndAttachSpoilerView(var3, var9);
          }
 
-         val var10: SpoilerView = this.spoilerView;
+         val var12: SpoilerView = this.spoilerView;
          if (this.spoilerView != null) {
             this.spoilerView.configure(var1, var2);
-            if (var8 && var10.isOverlayVisible()) {
+            if (var8 && var12.isOverlayVisible()) {
                if (var5 != null) {
                   var5.setVisibility(0);
                }
 
-               var10.setObscureLabelVisible(var6);
-               var10.handleObscureAwaitingScan(var7);
+               var12.setObscureLabelVisible(var6);
+               var12.handleObscureAwaitingScan(var7);
+               var12.setRevealButtonVisible(var10 xor true);
+               var12.setOpaqueBackgroundVisible(var11);
                var4.setImportantForAccessibility(4);
                var4.clearFocus();
             } else {
@@ -47,7 +51,7 @@ public class SpoilerViewManager {
 
                var4.setImportantForAccessibility(0);
                if (var8) {
-                  var10.clearFocus();
+                  var12.clearFocus();
                   var4.requestFocus();
                }
             }

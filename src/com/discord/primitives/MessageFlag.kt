@@ -1,7 +1,7 @@
 package com.discord.primitives
 
 import kotlin.enums.EnumEntries
-import uh.a
+import q8.a
 
 public enum class MessageFlag(value: Long) {
    CROSSPOSTED(1L),
@@ -9,8 +9,8 @@ public enum class MessageFlag(value: Long) {
    FAILED_TO_MENTION_SOME_ROLES_IN_THREAD(256L),
    HAS_SNAPSHOT(16384L),
    HAS_THREAD(32L),
+   IS_COMPONENTS_V2(32768L),
    IS_CROSSPOST(2L),
-   IS_UIKIT_COMPONENTS(32768L),
    IS_VOICE_MESSAGE(8192L),
    LOADING(128L),
    SHOULD_SHOW_LINK_NOT_DISCORD_WARNING(1024L),

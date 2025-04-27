@@ -1,11 +1,11 @@
 package com.discord.react_gesture_handler.passthrough_touch.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -21,7 +21,7 @@ public class OnTouchDownData : ReactEvent {
       return ReactEvent.DefaultImpls.serialize(this);
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;

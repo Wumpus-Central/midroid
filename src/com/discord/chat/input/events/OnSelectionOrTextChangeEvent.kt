@@ -1,13 +1,13 @@
 package com.discord.chat.input.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -84,15 +84,15 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    }
 
    public override fun toString(): String {
-      val var1: Int = this.start;
-      val var2: Int = this.end;
+      val var2: Int = this.start;
+      val var1: Int = this.end;
       val var3: java.lang.String = this.text;
       val var5: java.lang.String = this.editId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("OnSelectionOrTextChangeEvent(start=");
-      var4.append(var1);
-      var4.append(", end=");
       var4.append(var2);
+      var4.append(", end=");
+      var4.append(var1);
       var4.append(", text=");
       var4.append(var3);
       var4.append(", editId=");
@@ -101,7 +101,7 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -121,7 +121,7 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a, b2.a, b2.a};
+         return new KSerializer[]{N.a, N.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): OnSelectionOrTextChangeEvent {
@@ -129,27 +129,26 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         val var5: Int;
+         var var3: Int;
+         var var4: Int;
          var var7: java.lang.String;
-         val var11: java.lang.String;
-         var var13: Int;
+         val var8: java.lang.String;
          if (var10.y()) {
-            var13 = var10.k(var9, 0);
-            val var4: Int = var10.k(var9, 1);
+            var4 = var10.k(var9, 0);
+            var3 = var10.k(var9, 1);
             var7 = var10.t(var9, 2);
-            var11 = var10.t(var9, 3);
+            val var11: java.lang.String = var10.t(var9, 3);
             var2 = 15;
-            var5 = var13;
-            var13 = var4;
+            var8 = var11;
          } else {
             var7 = null;
             var var12: java.lang.String = null;
-            var var15: Boolean = true;
-            var var14: Int = 0;
-            var13 = 0;
+            var var5: Boolean = true;
+            var4 = 0;
+            var3 = 0;
             var2 = 0;
 
-            while (var15) {
+            while (var5) {
                val var6: Int = var10.x(var9);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -166,25 +165,24 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
                            var2 |= 4;
                         }
                      } else {
-                        var13 = var10.k(var9, 1);
+                        var3 = var10.k(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var14 = var10.k(var9, 0);
+                     var4 = var10.k(var9, 0);
                      var2 |= 1;
                   }
                } else {
-                  var15 = false;
+                  var5 = false;
                }
             }
 
+            var8 = var7;
             var7 = var12;
-            var11 = var7;
-            var5 = var14;
          }
 
          var10.b(var9);
-         return new OnSelectionOrTextChangeEvent(var2, var5, var13, var7, var11, null);
+         return new OnSelectionOrTextChangeEvent(var2, var4, var3, var7, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSelectionOrTextChangeEvent) {

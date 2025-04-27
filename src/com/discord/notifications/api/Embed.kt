@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import fl.f
-import fl.n
-import gl.a
-import il.g0
+import ca.f
+import ca.n
+import da.a
+import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -63,7 +63,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,12 +89,12 @@ public data class Embed(fields: List<EmbedField>? = null) {
          val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = Embed.access$get$childSerializers$cp();
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var9: java.util.List;
          if (var5) {
             var9 = var7.v(var6, 0, var8[0], null) as java.util.List;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var9 = null;
 
@@ -106,7 +106,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
                   }
 
                   var9 = var7.v(var6, 0, var8[0], var9) as java.util.List;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }
@@ -127,7 +127,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

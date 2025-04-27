@@ -19,7 +19,6 @@ import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.message.utils.ReplyUtilsKt
 import com.discord.chat.presentation.message.view.MessageContentView
-import com.discord.chat.presentation.root.ChatView
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.chat.presentation.textutils.TextUtilsKt
@@ -30,7 +29,7 @@ import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
 import com.discord.reactions.ReactionView
-import com.discord.reactions.ReactionsView
+import com.discord.reactions.ShortcutsFlexbox
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.theme.ThemeManagerKt
@@ -90,14 +89,14 @@ public class MessageBundleConversationView  public constructor(context: Context,
    fun `configure$lambda$7$lambda$5`(var0: ChatEventHandler, var1: Message, var2: View) {
       q.h(var0, "$eventHandler");
       q.h(var1, "$message");
-      ChatEventHandler.DefaultImpls.onTapReaction-u7_MRrM$default(var0, var1.getId-3Eiw7ao(), null, null, 4, null);
+      ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var0, var1.getId-3Eiw7ao(), null, null, null, 12, null);
    }
 
    @JvmStatic
    fun `configure$lambda$7$lambda$6`(var0: ChatEventHandler, var1: Message, var2: View) {
       q.h(var0, "$eventHandler");
       q.h(var1, "$message");
-      var0.onTapReaction-u7_MRrM(var1.getId-3Eiw7ao(), null, java.lang.Boolean.TRUE);
+      ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var0, var1.getId-3Eiw7ao(), null, java.lang.Boolean.TRUE, null, 8, null);
    }
 
    public fun configure(messageItem: MessageItem, eventHandler: ChatEventHandler) {
@@ -117,27 +116,29 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var19: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
          val var13: StructurableText = var11.getContent();
-         val var10: Context = this.getContext();
-         val var14: java.lang.String = var11.getId-3Eiw7ao();
-         val var6: Boolean = MessageKt.shouldAnimateEmoji(var11);
+         val var14: Context = this.getContext();
+         val var10: java.lang.String = var11.getId-3Eiw7ao();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var11);
          val var7: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-         val var9: Boolean = var11.getShouldShowRoleDot();
+         val var6: Boolean = var11.getShouldShowRoleDot();
          val var8: Boolean = var11.getShouldShowRoleOnName();
          val var15: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          q.g(var15, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var15);
-         val var35: TextPaint = this.binding.replyText.getPaint();
-         q.e(var10);
-         q.e(var35);
+         val var34: TextPaint = this.binding.replyText.getPaint();
+         q.e(var14);
+         q.e(var34);
          val var26: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var13,
-            var10,
             var14,
-            var6,
-            var7,
+            var10,
             var9,
+            var7,
+            var6,
             var8,
-            var35,
+            var34,
+            null,
+            null,
             null,
             null,
             null,
@@ -155,7 +156,7 @@ public class MessageBundleConversationView  public constructor(context: Context,
             null,
             var3,
             null,
-            11534208,
+            46137216,
             null
          );
          val var31: MessageContentView = this.binding.replyText;
@@ -163,12 +164,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
          SpannableExtensionsKt.coverWithSpan(var26, new BackgroundSpanDrawer(var31));
          var20 = ReplyUtilsKt.createReplyContent(var19, var26);
       } else {
-         val var21: TextView = this.binding.replyAuthorName;
+         val var27: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var27: Context = this.getContext();
-         q.g(var27, "getContext(...)");
+         val var21: Context = this.getContext();
+         q.g(var21, "getContext(...)");
          var20 = ReplyUtilsKt.createSystemReplyContent(
-            var21, I18nUtilsKt.i18nFormat$default(var27, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var27, I18nUtilsKt.i18nFormat$default(var21, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 
@@ -179,27 +180,25 @@ public class MessageBundleConversationView  public constructor(context: Context,
          var28.getLineBounds(0, this.replyTextLineBounds);
          val var22: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var32: android.view.ViewGroup.LayoutParams = var22.getLayoutParams();
-         if (var32 == null) {
+         val var29: android.view.ViewGroup.LayoutParams = var22.getLayoutParams();
+         if (var29 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var32.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
-         var22.setLayoutParams(var32);
+         var29.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
+         var22.setLayoutParams(var29);
       }
 
-      val var33: ReactionsView = this.binding.reactionsView;
+      val var33: ShortcutsFlexbox = this.binding.reactionsView;
       q.e(this.binding.reactionsView);
-      val var34: java.lang.String = var11.getId-3Eiw7ao();
       val var30: java.util.List = var11.getReactions();
       var var23: java.util.List = var30;
       if (var30 == null) {
          var23 = i.k();
       }
 
-      ReactionsView.setReactions$default(
+      ShortcutsFlexbox.setReactions$default(
          var33,
-         var34,
          var23,
          var12.getCanAddNewReactions(),
          var12.getUseAddBurstReaction(),
@@ -221,13 +220,23 @@ public class MessageBundleConversationView  public constructor(context: Context,
 
             public final void invoke(ReactionView.Reaction var1) {
                q.h(var1, "it");
-               ChatEventHandler.DefaultImpls.onTapReaction-u7_MRrM$default(this.$eventHandler, this.$message.getId-3Eiw7ao(), var1, null, 4, null);
+               ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(this.$eventHandler, this.$message.getId-3Eiw7ao(), var1, null, null, 12, null);
             }
          },
          null,
          null,
-         ChatView.Companion.getAreChatAnimationsEnabled(),
-         6144,
+         false,
+         false,
+         false,
+         false,
+         false,
+         null,
+         null,
+         null,
+         var12.getReplyAccessibilityLabel(),
+         var12.getForwardAccessibilityLabel(),
+         var12.getThreadAccessibilityLabel(),
+         1047552,
          null
       );
       val var24: java.util.List = var11.getReactions();
@@ -238,7 +247,7 @@ public class MessageBundleConversationView  public constructor(context: Context,
          var4 = 1;
       }
 
-      if (true xor var4) {
+      if (!var4) {
          var4 = 0;
       } else {
          var4 = 8;

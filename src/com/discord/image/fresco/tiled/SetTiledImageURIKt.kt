@@ -10,7 +10,7 @@ public fun SimpleDraweeView.setTiledImageURI(uri: String) {
    q.h(var0, "<this>");
    q.h(var1, "uri");
    if ((var0.getHierarchy() as GenericDraweeHierarchy).n() != null) {
-      throw new IllegalArgumentException("Somebody forgot to set actualImageScaleType='none'".toString());
+      throw new IllegalArgumentException("Somebody forgot to set actualImageScaleType='none'");
    } else {
       val var2: Resources = var0.getResources();
       q.g(var2, "getResources(...)");

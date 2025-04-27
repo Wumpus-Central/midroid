@@ -6,14 +6,13 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
-import androidx.appcompat.app.b
+import androidx.appcompat.app.AppCompatActivity
 import com.discord.logging.Log
 import com.msc.sa.aidl.ISACallback
-import com.msc.sa.aidl.a
 import com.msc.sa.aidl.ISACallback.Stub
 import kotlin.jvm.internal.q
 
-public class SamsungConnectActivity : b {
+public class SamsungConnectActivity : AppCompatActivity {
    private final lateinit var samsungAccountServiceCallback: ISACallback
    private final var serviceBound: Boolean
 
@@ -30,7 +29,7 @@ public class SamsungConnectActivity : b {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.a(var2);
+            val var5: com.msc.sa.aidl.a = com.msc.sa.aidl.a.a.e(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -56,7 +55,7 @@ public class SamsungConnectActivity : b {
             }
 
             try {
-               var38 = var5.P("97t47j218f", "dummy", "com.discord", var37);
+               var38 = var5.L("97t47j218f", "dummy", "com.discord", var37);
                val var41: StringBuilder = new StringBuilder();
                var41.append("Samsung Account service connection established: ");
                var41.append(var38);
@@ -78,9 +77,9 @@ public class SamsungConnectActivity : b {
                }
             } else {
                try {
-                  val var6: Bundle = new Bundle();
-                  var6.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.c0(1221, var38, var6);
+                  val var42: Bundle = new Bundle();
+                  var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
+                  val var3: Boolean = var5.a0(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
@@ -116,7 +115,7 @@ public class SamsungConnectActivity : b {
          }
 
          public void onReceiveAccessToken(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveAccessToken".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveAccessToken");
          }
 
          public void onReceiveAuthCode(int var1, boolean var2, Bundle var3) {
@@ -140,7 +139,7 @@ public class SamsungConnectActivity : b {
             var6.append("Samsung onReceiveAuthCode=");
             var6.append(var2);
             Log.i$default(var8, "Samsung", var6.toString(), null, 4, null);
-            if (!var2 || var4 == null || h.x(var4)) {
+            if (!var2 || var4 == null || h.d0(var4)) {
                val var13: java.lang.String;
                if (var3 != null) {
                   var13 = var3.getString("error_code");
@@ -158,7 +157,7 @@ public class SamsungConnectActivity : b {
                val var9: StringBuilder = new StringBuilder();
                var9.append("Samsung Account link failure ");
                if (var4 != null) {
-                  var7 = h.d1(var4, 4);
+                  var7 = h.g1(var4, 4);
                }
 
                val var10: StringBuilder = new StringBuilder();
@@ -178,27 +177,27 @@ public class SamsungConnectActivity : b {
          }
 
          public void onReceiveChecklistValidation(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveAccessToken".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveAccessToken");
          }
 
          public void onReceiveDisclaimerAgreement(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveDisclaimerAgreement".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveDisclaimerAgreement");
          }
 
          public void onReceivePasswordConfirmation(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceivePasswordConfirmation".toString());
+            throw new IllegalStateException("Unexpected call to onReceivePasswordConfirmation");
          }
 
          public void onReceiveRLControlFMM(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveRLControlFMM".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveRLControlFMM");
          }
 
          public void onReceiveRubinRequest(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveRubinRequest".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveRubinRequest");
          }
 
          public void onReceiveSCloudAccessToken(int var1, boolean var2, Bundle var3) {
-            throw new IllegalStateException("Unexpected call to onReceiveSCloudAccessToken".toString());
+            throw new IllegalStateException("Unexpected call to onReceiveSCloudAccessToken");
          }
       };
    }
@@ -211,7 +210,7 @@ public class SamsungConnectActivity : b {
       var4.append(", AuthServerUrl: ");
       var4.append(var2);
       Log.i$default(var3, "Samsung", var4.toString(), null, 4, null);
-      if (var1 != null && !h.x(var1) && var2 != null && !h.x(var2)) {
+      if (var1 != null && !h.d0(var1) && var2 != null && !h.d0(var2)) {
          val var6: Intent = new Intent();
          var6.putExtra("com.discord.samsung.intent.extra.AUTH_CODE", var1);
          var6.putExtra("com.discord.samsung.intent.extra.SERVER_URL", var2);
@@ -380,15 +379,15 @@ public class SamsungConnectActivity : b {
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.authCode;
-            val var2: java.lang.String = this.serverUrl;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("Success(authCode=");
-            var3.append(var1);
-            var3.append(", serverUrl=");
-            var3.append(var2);
-            var3.append(")");
-            return var3.toString();
+            val var3: java.lang.String = this.authCode;
+            val var1: java.lang.String = this.serverUrl;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Success(authCode=");
+            var2.append(var3);
+            var2.append(", serverUrl=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

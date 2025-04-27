@@ -61,19 +61,28 @@ public class Scroller(recyclerView: RecyclerView) {
       onComplete: () -> Unit,
       onScrollProgress: () -> Unit
    ) {
-      val var6: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(this.getLayoutManager(), var1);
-      if (var6 != null && !var6) {
+      val var7: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(this.getLayoutManager(), var1);
+      if (var7 != null && !var7) {
          this.doScrollToPosition(var1, var2);
          var5.invoke();
-         val var7: a = new a(this, var1, var2, var3, var4, var5);
-         this.currentSearch = var7;
-         this.recyclerView.post(var7);
-      } else if (var2 is Scroller.TargetAlignment.Top) {
-         this.doScrollToPosition(var1, var2);
-         var5.invoke();
-         var4.invoke();
+         val var8: a = new a(this, var1, var2, var3, var4, var5);
+         this.currentSearch = var8;
+         this.recyclerView.post(var8);
       } else {
-         var4.invoke();
+         val var6: Boolean;
+         if (var2 is Scroller.TargetAlignment.Center) {
+            var6 = true;
+         } else {
+            var6 = var2 is Scroller.TargetAlignment.Top;
+         }
+
+         if (var6) {
+            this.doScrollToPosition(var1, var2);
+            var5.invoke();
+            var4.invoke();
+         } else {
+            var4.invoke();
+         }
       }
    }
 
@@ -130,9 +139,41 @@ public class Scroller(recyclerView: RecyclerView) {
    }
 
    public sealed class TargetAlignment protected constructor() {
-      public object Anywhere : Scroller.TargetAlignment()
+      public data object Anywhere : Scroller.TargetAlignment() {
+         public override operator fun equals(other: Any?): Boolean {
+            if (this === var1) {
+               return true;
+            } else {
+               return var1 is Scroller.TargetAlignment.Anywhere;
+            }
+         }
 
-      public object Center : Scroller.TargetAlignment()
+         public override fun hashCode(): Int {
+            return 425096303;
+         }
+
+         public override fun toString(): String {
+            return "Anywhere";
+         }
+      }
+
+      public data object Center : Scroller.TargetAlignment() {
+         public override operator fun equals(other: Any?): Boolean {
+            if (this === var1) {
+               return true;
+            } else {
+               return var1 is Scroller.TargetAlignment.Center;
+            }
+         }
+
+         public override fun hashCode(): Int {
+            return 232298313;
+         }
+
+         public override fun toString(): String {
+            return "Center";
+         }
+      }
 
       public data class Top(offsetPx: Int) : Scroller.TargetAlignment() {
          public final val offsetPx: Int

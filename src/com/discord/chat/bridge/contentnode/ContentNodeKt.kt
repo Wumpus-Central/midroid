@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.reflect.KClass
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
@@ -8,38 +8,38 @@ import kotlinx.serialization.SealedClassSerializer
 private final val sealedClassSerializer: SealedClassSerializer<ContentNode> =
    new SealedClassSerializer(
       "ContentNode",
-      g0.b(ContentNode.class),
+      E.b(ContentNode.class),
       new KClass[]{
-         g0.b(AttachmentLinkContentNode.class),
-         g0.b(BlockQuoteContentNode.class),
-         g0.b(BulletListContentNode.class),
-         g0.b(ChannelMentionContentNode.class),
-         g0.b(ChannelNameContentNode.class),
-         g0.b(CodeBlockContentNode.class),
-         g0.b(CommandMentionContentNode.class),
-         g0.b(CustomEmojiContentNode.class),
-         g0.b(EmojiContentNode.class),
-         g0.b(EmphasisContentNode.class),
-         g0.b(GuildNameContentNode.class),
-         g0.b(HeadingContentNode.class),
-         g0.b(InlineCodeContentNode.class),
-         g0.b(LineBreakContentNode.class),
-         g0.b(LinkContentNode.class),
-         g0.b(LHeadingContentNode.class),
-         g0.b(MentionContentNode.class),
-         g0.b(NewLineContentNode.class),
-         g0.b(ParagraphContentNode.class),
-         g0.b(SoundmojiContentNode.class),
-         g0.b(SpoilerContentNode.class),
-         g0.b(StaticChannelMentionContentNode.class),
-         g0.b(StrikethroughContentNode.class),
-         g0.b(StrongContentNode.class),
-         g0.b(SubtextContentNode.class),
-         g0.b(TextContentNode.class),
-         g0.b(TimestampContentNode.class),
-         g0.b(UnderlineContentNode.class),
-         g0.b(UnicodeEmojiContentNode.class),
-         g0.b(UserOrRoleMentionContentNode.class)
+         E.b(AttachmentLinkContentNode.class),
+         E.b(BlockQuoteContentNode.class),
+         E.b(BulletListContentNode.class),
+         E.b(ChannelMentionContentNode.class),
+         E.b(ChannelNameContentNode.class),
+         E.b(CodeBlockContentNode.class),
+         E.b(CommandMentionContentNode.class),
+         E.b(CustomEmojiContentNode.class),
+         E.b(EmojiContentNode.class),
+         E.b(EmphasisContentNode.class),
+         E.b(GuildNameContentNode.class),
+         E.b(HeadingContentNode.class),
+         E.b(InlineCodeContentNode.class),
+         E.b(LineBreakContentNode.class),
+         E.b(LinkContentNode.class),
+         E.b(LHeadingContentNode.class),
+         E.b(MentionContentNode.class),
+         E.b(NewLineContentNode.class),
+         E.b(ParagraphContentNode.class),
+         E.b(SoundmojiContentNode.class),
+         E.b(SpoilerContentNode.class),
+         E.b(StaticChannelMentionContentNode.class),
+         E.b(StrikethroughContentNode.class),
+         E.b(StrongContentNode.class),
+         E.b(SubtextContentNode.class),
+         E.b(TextContentNode.class),
+         E.b(TimestampContentNode.class),
+         E.b(UnderlineContentNode.class),
+         E.b(UnicodeEmojiContentNode.class),
+         E.b(UserOrRoleMentionContentNode.class)
       },
       new KSerializer[]{
          AttachmentLinkContentNode.Companion.serializer(),

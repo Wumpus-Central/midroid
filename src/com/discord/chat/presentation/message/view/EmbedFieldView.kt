@@ -73,9 +73,9 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
       val var4: SimpleDraweeSpanTextView = this.binding.name;
       kotlin.jvm.internal.q.e(this.binding.name);
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var4, var2);
-      val var5: l;
+      val var5: m;
       if (var2 != null) {
-         var5 = new l(var3, var1);
+         var5 = new m(var3, var1);
       } else {
          var5 = null;
       }
@@ -97,9 +97,9 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
       }
 
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var5, var4);
-      val var6: m;
+      val var6: l;
       if (var2 != null) {
-         var6 = new m(var3, var1);
+         var6 = new l(var3, var1);
       } else {
          var6 = null;
       }

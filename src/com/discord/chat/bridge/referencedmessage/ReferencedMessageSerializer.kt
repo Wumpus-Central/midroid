@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.referencedmessage
 
-import jl.d
-import jl.g
-import kotlin.jvm.internal.g0
+import ga.d
+import ga.g
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 
-public object ReferencedMessageSerializer : d(g0.b(ReferencedMessage.class)) {
+public object ReferencedMessageSerializer : d(E.b(ReferencedMessage.class)) {
    private const val STATE_LOADED: String = "0"
    private const val STATE_SYSTEM: String = "1"
 

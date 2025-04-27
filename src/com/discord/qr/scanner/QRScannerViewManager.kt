@@ -7,16 +7,16 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
+import j8.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
    private final val delegate: DCDQRScannerManagerDelegate<QRScanner, QRScannerViewManager>
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onQRCodeFound", g0.b(OnQRCodeFoundEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onQRCodeFound", E.b(OnQRCodeFoundEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): QRScanner {
       q.h(var1, "reactContext");

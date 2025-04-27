@@ -10,7 +10,7 @@ import kotlin.jvm.internal.q
 public object DominantColor {
    private fun getPrimaryColorsForBitmap(bitmap: Bitmap): List<Int> {
       val var2: java.util.List = ColorCutQuantizer.Companion.fromBitmap(var1, 5).getQuantizedColors();
-      if (!(var2.isEmpty() xor true)) {
+      if (var2.isEmpty()) {
          throw new DominantColor.NoSwatchesFoundException();
       } else {
          val var3: ArrayList = new ArrayList(i.v(var2, 10));

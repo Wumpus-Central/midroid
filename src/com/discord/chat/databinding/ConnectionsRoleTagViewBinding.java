@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import n1.a;
+import u0.a;
 
 public final class ConnectionsRoleTagViewBinding implements ViewBinding {
    public final CardView connectionsRoleTagContainer;
@@ -36,15 +36,15 @@ public final class ConnectionsRoleTagViewBinding implements ViewBinding {
          TextView var6 = (TextView)a.a(var0, var1);
          if (var6 != null) {
             var1 = R.id.verified_check_icon;
-            ImageView var2 = (ImageView)a.a(var0, var1);
-            if (var2 != null) {
+            ImageView var4 = (ImageView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.verified_check_icon_background;
                ImageView var5 = (ImageView)a.a(var0, var1);
                if (var5 != null) {
                   var1 = R.id.verified_check_icon_container;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-                  if (var4 != null) {
-                     return new ConnectionsRoleTagViewBinding(var0, var3, var6, var2, var5, var4);
+                  FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                  if (var2 != null) {
+                     return new ConnectionsRoleTagViewBinding(var0, var3, var6, var4, var5, var2);
                   }
                }
             }

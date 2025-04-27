@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.message
 
-import android.content.Context
-import com.discord.cache.CacheModule
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.attachment.AttachmentType
@@ -13,99 +11,85 @@ import com.discord.chat.presentation.message.messagepart.MessageAttachmentAccess
 import com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory
 import com.discord.primitives.MessageFlag
 import com.discord.primitives.MessageFlagKt
-import com.facebook.react.bridge.ReactContext
 
-internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, constrainedWidth: Int, radiusPx: Int, context: Context): MessageAttachmentAccessory {
-   var var11: java.lang.String;
-   var var13: SpoilerAttributes;
-   label64: {
+internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, constrainedWidth: Int, radiusPx: Int, verifyAge: Boolean?): MessageAttachmentAccessory {
+   var var12: SpoilerAttributes;
+   label50: {
       kotlin.jvm.internal.q.h(var0, "<this>");
       kotlin.jvm.internal.q.h(var1, "message");
-      kotlin.jvm.internal.q.h(var5, "context");
-      var13 = SpoilerAttributes.Companion.forAttachment(var0, var1, var2);
+      var12 = SpoilerAttributes.Companion.forAttachment(var0, var1, var2, var5);
       if (kotlin.jvm.internal.q.c(var1.isCurrentUserMessageAuthor(), java.lang.Boolean.TRUE)) {
-         val var12: java.lang.String = var1.getNonce-N_6c4I0();
-         var11 = var12;
-         if (var12 != null) {
-            break label64;
+         val var11: java.lang.String = var1.getNonce-N_6c4I0();
+         var15 = var11;
+         if (var11 != null) {
+            break label50;
          }
       }
 
-      var11 = var1.getId-3Eiw7ao();
+      var15 = var1.getId-3Eiw7ao();
    }
 
    val var6: Int = CreateAttachmentAccessoryKt.WhenMappings.$EnumSwitchMapping$0[var0.type().ordinal()];
-   var var7: Boolean = false;
    val var14: Any;
    if (var6 != 1) {
       if (var6 != 2) {
          if (var6 != 3) {
             if (var6 != 4) {
-               throw new nh.p();
+               throw new j8.p();
             }
 
-            val var15: ReactContext;
-            if (var5 is ReactContext) {
-               var15 = var5 as ReactContext;
-            } else {
-               var15 = null;
-            }
-
-            if (var15 != null) {
-               var7 = kotlin.jvm.internal.q.c(CacheModule.Companion.get(var15).getItem("MEDIA_BACKGROUNDING_PHASE_1"), "true");
-            }
-
-            val var8: Boolean = MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.IS_VOICE_MESSAGE);
-            if (!var8 && !var7) {
-               var14 = new FileAttachmentMessageAccessory(
-                  var11, var0, var2, var1.getAttachmentsOpacity(), var13, var0.getUploaderId(), var0.getUploaderItemId(), null
-               );
-            } else {
-               var14 = new AudioAttachmentMessageAccessory(
-                  var1.getChannelId-o4g7jtM(),
-                  var11,
-                  var0,
-                  var2,
-                  var1.getAttachmentsOpacity(),
-                  var1.getAuthorId-wUX8bhU(),
-                  var1.getAudioAttachmentBackgroundColor(),
-                  var8,
-                  null
-               );
-            }
+            var14 = new AudioAttachmentMessageAccessory(
+               var1.getChannelId-o4g7jtM(),
+               var15,
+               var0,
+               var2,
+               var1.getAttachmentsOpacity(),
+               var1.getAuthorId-wUX8bhU(),
+               var1.getAudioAttachmentBackgroundColor(),
+               MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.IS_VOICE_MESSAGE),
+               null
+            );
          } else {
             var14 = new FileAttachmentMessageAccessory(
-               var11, var0, var2, var1.getAttachmentsOpacity(), var13, var0.getUploaderId(), var0.getUploaderItemId(), null
+               var15, var0, var2, var1.getAttachmentsOpacity(), var12, var0.getUploaderId(), var0.getUploaderItemId(), null
             );
          }
       } else {
-         val var25: Long = var1.getChannelId-o4g7jtM();
-         val var19: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-         if (var19 != null) {
-            var7 = var19;
+         val var18: Long = var1.getChannelId-o4g7jtM();
+         var var22: java.lang.Boolean = var1.getUseAttachmentGridLayout();
+         val var7: Boolean;
+         if (var22 != null) {
+            var7 = var22;
          } else {
             var7 = false;
          }
 
-         val var20: java.lang.Boolean = var1.getUseAttachmentUploadPreview();
-         val var24: Boolean;
-         if (var20 != null && var20 && var0.getProgress() != null) {
-            var24 = true;
+         var22 = var1.getUseAttachmentUploadPreview();
+         var var8: Boolean;
+         if (var22 != null) {
+            var8 = var22;
          } else {
-            var24 = false;
+            var8 = false;
          }
 
-         var14 = new VideoAttachmentMessageAccessory(var25, var11, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var13, var7, var24, null);
+         if (var8 && var0.getProgress() != null) {
+            var8 = true;
+         } else {
+            var8 = false;
+         }
+
+         var14 = new VideoAttachmentMessageAccessory(var18, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var7, var8, null);
       }
    } else {
-      val var21: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-      if (var21 != null) {
-         var7 = var21;
+      val var24: java.lang.Boolean = var1.getUseAttachmentGridLayout();
+      val var16: Boolean;
+      if (var24 != null) {
+         var16 = var24;
       } else {
-         var7 = false;
+         var16 = false;
       }
 
-      var14 = new ImageAttachmentMessageAccessory(var11, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var13, var7, null);
+      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var16, null);
    }
 
    return (MessageAttachmentAccessory)var14;

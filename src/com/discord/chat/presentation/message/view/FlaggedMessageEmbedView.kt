@@ -81,13 +81,13 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.g(var7, "getContext(...)");
       var6.setImageURI(MessageKt.avatarUrl(var1, var7));
       kotlin.jvm.internal.q.e(var6);
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new a0(var1, var2), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new b0(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new A(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new B(var1, var2), 1, null);
       val var11: TextView = this.binding.authorName;
       this.binding.authorName.setTextColor(MessageKt.usernameColor$default(var1, 0, 1, null));
       var11.setText(var1.getUsername());
       kotlin.jvm.internal.q.e(var11);
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new c0(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new C(var1, var2), 1, null);
       val var12: RoleIconView = this.binding.roleIcon;
       kotlin.jvm.internal.q.e(this.binding.roleIcon);
       var var3: Boolean;
@@ -225,7 +225,7 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       var8.setVisibility(var3);
       val var17: StructurableText = var1.getContent();
       if (var17 != null && var17.getHasContent()) {
-         MessageContentView.setMessageContent-2ZcwkLU$default(
+         MessageContentView.setMessageContent-AeCz66Y$default(
             var8,
             var1.getContent(),
             var1.getId-3Eiw7ao(),
@@ -233,6 +233,8 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
             MessageKt.shouldShowLinkDecorations(var1),
             var1.getShouldShowRoleDot(),
             var1.getShouldShowRoleOnName(),
+            <unrepresentable>.INSTANCE,
+            <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
@@ -255,7 +257,7 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
             null,
             null,
             null,
-            260046848,
+            1040187392,
             null
          );
       }

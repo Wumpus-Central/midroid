@@ -5,14 +5,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
-import androidx.lifecycle.Lifecycle
+import com.discord.bundle_updater.BundleUpdater
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.discord.react_startup_flags.StartupFlagsModule
-import com.discord.window.WindowFoldingFeatureDetector
 import com.facebook.react.bridge.ReactContext
 import kotlin.jvm.internal.q
 
@@ -32,27 +31,23 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
-            val var2: NotificationClient = NotificationClient.Companion.getInstance();
-            var var3: Context = this.getContext();
-            q.g(var3, "getContext(...)");
-            var2.handleIntent(var3, var1);
+            val var3: NotificationClient = NotificationClient.Companion.getInstance();
+            val var2: Context = this.getContext();
+            q.g(var2, "getContext(...)");
+            var3.handleIntent(var2, var1);
             val var4: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
-            var3 = this.getContext();
-            q.g(var3, "getContext(...)");
-            var4.handleIntent(var3, var1);
+            val var5: Context = this.getContext();
+            q.g(var5, "getContext(...)");
+            var4.handleIntent(var5, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
+            BundleUpdater.Companion.instance().handleIntent(var1);
          }
 
-         protected void onCreate(Bundle var1) {
+         public void onCreate(Bundle var1) {
             super.onCreate(var1);
-            val var4: Intent = this.this$0.getIntent();
-            q.g(var4, "getIntent(...)");
-            this.parseIntent(var4);
-            val var2: WindowFoldingFeatureDetector = WindowFoldingFeatureDetector.INSTANCE;
-            val var5: MainActivity = this.this$0;
-            val var3: Lifecycle = this.this$0.getLifecycle();
-            q.g(var3, "getLifecycle(...)");
-            var2.configure(var5, var3, this.this$0);
+            val var2: Intent = this.this$0.getIntent();
+            q.g(var2, "getIntent(...)");
+            this.parseIntent(var2);
          }
 
          public boolean onNewIntent(Intent var1) {
@@ -78,7 +73,7 @@ public class MainActivity : ReactActivity {
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   protected open fun onUserLeaveHint() {
+   public open fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

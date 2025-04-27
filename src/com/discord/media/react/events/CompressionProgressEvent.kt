@@ -1,13 +1,13 @@
 package com.discord.media.react.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,7 +77,7 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -95,7 +95,7 @@ internal data class CompressionProgressEvent(uri: String, progress: Int) : React
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, n0.a};
+         return new KSerializer[]{C0.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): CompressionProgressEvent {

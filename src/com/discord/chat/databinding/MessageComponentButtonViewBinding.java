@@ -3,52 +3,58 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewStub;
+import android.widget.LinearLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import com.discord.chat.presentation.message.view.botuikit.components.ButtonComponentView;
-import com.discord.progress_dots.ProgressDots;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
-import n1.a;
+import u0.a;
 
 public final class MessageComponentButtonViewBinding implements ViewBinding {
    public final MaterialButton button;
    public final SimpleDraweeSpanTextView emoji;
    public final MaterialTextView label;
+   public final LinearLayout labelContainer;
    public final SimpleDraweeView linkIcon;
-   public final ProgressDots loadingDots;
-   private final ButtonComponentView rootView;
+   public final ViewStub loadingDots;
+   private final View rootView;
 
    private MessageComponentButtonViewBinding(
-      ButtonComponentView var1, MaterialButton var2, SimpleDraweeSpanTextView var3, MaterialTextView var4, SimpleDraweeView var5, ProgressDots var6
+      View var1, MaterialButton var2, SimpleDraweeSpanTextView var3, MaterialTextView var4, LinearLayout var5, SimpleDraweeView var6, ViewStub var7
    ) {
       this.rootView = var1;
       this.button = var2;
       this.emoji = var3;
       this.label = var4;
-      this.linkIcon = var5;
-      this.loadingDots = var6;
+      this.labelContainer = var5;
+      this.linkIcon = var6;
+      this.loadingDots = var7;
    }
 
    public static MessageComponentButtonViewBinding bind(View var0) {
       int var1 = R.id.button;
-      MaterialButton var2 = (MaterialButton)a.a(var0, var1);
-      if (var2 != null) {
+      MaterialButton var6 = (MaterialButton)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.emoji;
-         SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.label;
-            MaterialTextView var5 = (MaterialTextView)a.a(var0, var1);
-            if (var5 != null) {
-               var1 = R.id.link_icon;
-               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-               if (var3 != null) {
-                  var1 = R.id.loading_dots;
-                  ProgressDots var4 = (ProgressDots)a.a(var0, var1);
+            MaterialTextView var7 = (MaterialTextView)a.a(var0, var1);
+            if (var7 != null) {
+               var1 = R.id.label_container;
+               LinearLayout var5 = (LinearLayout)a.a(var0, var1);
+               if (var5 != null) {
+                  var1 = R.id.link_icon;
+                  SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
                   if (var4 != null) {
-                     return new MessageComponentButtonViewBinding((ButtonComponentView)var0, var2, var6, var5, var3, var4);
+                     var1 = R.id.loading_dots;
+                     ViewStub var3 = (ViewStub)a.a(var0, var1);
+                     if (var3 != null) {
+                        return new MessageComponentButtonViewBinding(var0, var6, var2, var7, var5, var4, var3);
+                     }
                   }
                }
             }
@@ -58,20 +64,17 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
       throw new NullPointerException("Missing required view with ID: ".concat(var0.getResources().getResourceName(var1)));
    }
 
-   public static MessageComponentButtonViewBinding inflate(LayoutInflater var0) {
-      return inflate(var0, null, false);
-   }
-
-   public static MessageComponentButtonViewBinding inflate(LayoutInflater var0, ViewGroup var1, boolean var2) {
-      View var3 = var0.inflate(R.layout.message_component_button_view, var1, false);
-      if (var2) {
-         var1.addView(var3);
+   public static MessageComponentButtonViewBinding inflate(LayoutInflater var0, ViewGroup var1) {
+      if (var1 != null) {
+         var0.inflate(R.layout.message_component_button_view, var1);
+         return bind(var1);
+      } else {
+         throw new NullPointerException("parent");
       }
-
-      return bind(var3);
    }
 
-   public ButtonComponentView getRoot() {
+   @Override
+   public View getRoot() {
       return this.rootView;
    }
 }

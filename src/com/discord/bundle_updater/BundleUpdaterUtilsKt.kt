@@ -10,35 +10,29 @@ import kotlinx.serialization.json.Json
 public final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
 
 internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
-   label21: {
+   label18: {
       q.h(var0, "<this>");
       q.h(var1, "asset");
       val var9: InputStream = var0.open(var1);
       q.g(var9, "open(...)");
-      val var10: InputStreamReader = new InputStreamReader(var9, tk.a.b);
-      val var11: BufferedReader;
-      if (var10 is BufferedReader) {
-         var11 = var10 as BufferedReader;
-      } else {
-         var11 = new BufferedReader(var10, 8192);
-      }
+      val var10: BufferedReader = new BufferedReader(new InputStreamReader(var9, Q9.a.b), 8192);
 
       try {
-         val var12: Json = json;
-         val var14: java.lang.String = yh.q.e(var11);
-         var12.a();
-         var13 = var12.b(AppManifest.Companion.serializer(), var14) as AppManifest;
+         val var2: Json = json;
+         var1 = u8.q.e(var10);
+         var2.a();
+         var13 = var2.b(AppManifest.Companion.serializer(), var1) as AppManifest;
       } catch (var4: java.lang.Throwable) {
-         val var2: java.lang.Throwable = var4;
+         val var11: java.lang.Throwable = var4;
 
          try {
-            throw var2;
+            throw var11;
          } catch (var3: java.lang.Throwable) {
-            yh.c.a(var11, var4);
+            u8.c.a(var10, var4);
          }
       }
 
-      yh.c.a(var11, null);
+      u8.c.a(var10, null);
       return var13;
    }
 }

@@ -20,10 +20,10 @@ import com.discord.span.utilities.spannable.BlockBackgroundSpan
 import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
+import j8.r
+import j8.s
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
-import nh.r
-import nh.s
 
 public object CodeStyle {
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
@@ -34,10 +34,10 @@ public object CodeStyle {
          var var2: Any = var4.get(var3);
          var var1: Any = var2;
          if (var2 == null) {
-            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new g(), new h(), null, null, null, null, null, null, 252, null);
-            val var5: CodeRules = CodeRules.INSTANCE;
+            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            var2 = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, ((CodeStyleProviders)var2).getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
+               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
@@ -50,7 +50,7 @@ public object CodeStyle {
 
    private final val parsers: MutableMap<String, Parser<RenderContext, Node<RenderContext>, Any>> = new LinkedHashMap()
    private final val staticCodeStyles: CodeStyleProviders<RenderContext> =
-      new CodeStyleProviders(null, null, new a(), new b(), new c(), new d(), new e(), new f(), 3, null)
+      new CodeStyleProviders(null, null, new c(), new d(), new e(), new f(), new g(), new h(), 3, null)
 
    @JvmStatic
    fun `_get_parser_$lambda$9$lambda$6`(var0: RenderContext): java.lang.Iterable {
@@ -65,7 +65,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      var var3: java.lang.String = kotlin.text.h.X0(var1.getLang()).toString();
+      val var3: java.lang.String = kotlin.text.h.a1(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -73,21 +73,21 @@ public object CodeStyle {
       var6.append("\n");
       var6.append(var2);
       var6.append("\n```");
-      var3 = var6.toString();
+      val var7: java.lang.String = var6.toString();
 
       label16:
       try {
-         val var8: nh.r.a = r.k;
-         var7 = r.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
+         val var11: j8.r.a = r.k;
+         var9 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var11: nh.r.a = r.k;
-         var7 = r.b(s.a(var4));
+         val var8: j8.r.a = r.k;
+         var9 = r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = i.e(new TextNode(var2));
-      var2 = (java.lang.String)var7;
-      if (r.g(var7)) {
+      var2 = (java.lang.String)var9;
+      if (r.g(var9)) {
          var2 = var12;
       }
 
@@ -134,19 +134,19 @@ public object CodeStyle {
       return i.e(new ForegroundColorSpan(Color.parseColor("#AF8AF4")));
    }
 
-   public fun renderCodeBlock(builder: DraweeSpanStringBuilder, node: CodeBlockContentNode, rc: RenderContext) {
+   public fun renderCodeBlock(builder: DraweeSpanStringBuilder, node: CodeBlockContentNode, rc: RenderContext, isLastContentNode: Boolean) {
       q.h(var1, "builder");
       q.h(var2, "node");
       q.h(var3, "rc");
-      var var4: Int;
+      var var5: Int;
       if (var3.spoilerIsHidden()) {
-         var4 = var3.getTheme().getSpoilerHiddenBackground();
+         var5 = var3.getTheme().getSpoilerHiddenBackground();
       } else {
-         var4 = var3.getTheme().getBackgroundSecondary();
+         var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var9: BlockBackgroundSpan = new BlockBackgroundSpan(
-         var4,
+      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
+         var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
          SizeUtilsKt.getDpToPx(4),
@@ -154,21 +154,23 @@ public object CodeStyle {
          var3.getInsets().getTop(),
          var3.getInsets().getBottom()
       );
-      var4 = SizeUtilsKt.getDpToPx(4);
-      val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var6: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var8: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      var5 = SizeUtilsKt.getDpToPx(4);
+      val var10: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var11: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var9: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
-      val var5: Int = var1.length();
-      SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
+      val var6: Int = var1.length();
+      SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
       INSTANCE.renderCode(var1, var2, var3);
-      SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var4));
+      if (!var4) {
+         SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
+      }
 
-      for (int var13 = 0; var13 < 5; var13++) {
-         val var11: Any = new Object[]{var9, var7, var6, var8, var10}[var13];
-         if (var11 != null) {
-            var1.setSpan(var11, var5, var1.length(), 33);
+      for (int var14 = 0; var14 < 5; var14++) {
+         val var12: Any = new Object[]{var8, var10, var11, var7, var9}[var14];
+         if (var12 != null) {
+            var1.setSpan(var12, var6, var1.length(), 33);
          }
       }
    }

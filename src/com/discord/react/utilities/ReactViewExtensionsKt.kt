@@ -6,13 +6,14 @@ import com.facebook.react.uimanager.ReactShadowNode
 import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
+import com.facebook.yoga.YogaDirection
+import j8.l
 import java.lang.reflect.Method
 import kotlin.jvm.internal.q
-import nh.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by l.b(<unrepresentable>.INSTANCE)
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
@@ -30,20 +31,19 @@ private fun ReactContext.getUIImplementation(): UIImplementation {
 }
 
 private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
-   var var1: UIViewOperationQueue = (UIViewOperationQueue)getViewOperationQueueMethod().invoke(var0);
-   if (var1 is UIViewOperationQueue) {
-      var1 = var1;
-   } else {
-      var1 = null;
+   val var4: Any = getViewOperationQueueMethod().invoke(var0, null);
+   var var3: UIViewOperationQueue = null;
+   if (var4 is UIViewOperationQueue) {
+      var3 = var4 as UIViewOperationQueue;
    }
 
-   return var1;
+   return var3;
 }
 
 public fun ReactContext.queueManualLayout(viewId: Int) {
    q.h(var0, "<this>");
    if (!viewLayoutQueued.contains(var1)) {
-      var0.runOnNativeModulesQueueThread(new a(var0, var1));
+      var0.runOnNativeModulesQueueThread(new b(var0, var1));
    }
 }
 
@@ -57,7 +57,9 @@ fun `queueManualLayout$lambda$1`(var0: ReactContext, var1: Int) {
       if (var3 != null) {
          val var5: ReactShadowNode = var4.getParent();
          q.e(var5);
-         var3.enqueueUpdateLayout(var5.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight());
+         var3.enqueueUpdateLayout(
+            var5.getReactTag(), var4.getReactTag(), var4.getScreenX(), var4.getScreenY(), var4.getScreenWidth(), var4.getScreenHeight(), YogaDirection.k
+         );
       }
    }
 

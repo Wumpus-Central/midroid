@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.o1
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.p0
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -26,7 +26,7 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
 
    fun TapSelectActionComponent(var1: Int, var2: java.lang.String, var3: java.lang.String, var4: SerializationConstructorMarker) {
       if (3 != (var1 and 3)) {
-         o1.b(var1, 3, TapSelectActionComponent.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 3, TapSelectActionComponent.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -91,7 +91,7 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
       return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -109,7 +109,7 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE, b2.a};
+         return new KSerializer[]{MessageId.$serializer.INSTANCE, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapSelectActionComponent {

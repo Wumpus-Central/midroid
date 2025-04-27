@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -36,7 +36,7 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
       return ReactEvent.DefaultImpls.serialize(this);
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -55,7 +55,7 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, b2.a};
+         return new KSerializer[]{N.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapForwardFooterData {
@@ -63,22 +63,22 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         val var4: Int;
+         var var3: Int;
          var var6: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
             var2 = var9.k(var8, 0);
             var6 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
-            var4 = 7;
+            var3 = 7;
          } else {
             var6 = null;
             var var11: java.lang.String = null;
-            var var13: Boolean = true;
-            var var3: Int = 0;
+            var var4: Boolean = true;
+            var3 = 0;
             var2 = 0;
 
-            while (var13) {
+            while (var4) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -98,18 +98,18 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
                      var2 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var4 = false;
                }
             }
 
-            var4 = var2;
+            var3 = var2;
             var10 = var6;
             var6 = var11;
             var2 = var3;
          }
 
          var9.b(var8);
-         return new TapForwardFooterData(var4, var2, var6, var10, null);
+         return new TapForwardFooterData(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapForwardFooterData) {

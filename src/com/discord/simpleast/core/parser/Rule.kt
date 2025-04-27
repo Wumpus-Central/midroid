@@ -45,7 +45,7 @@ public abstract class Rule<R, T extends Node<R>, S> {
 
       public override fun match(inspectionSource: CharSequence, lastCapture: String?, state: Any): Matcher? {
          q.h(var1, "inspectionSource");
-         return if (var2 != null && !h.P(var2, '\n', false, 2, null)) null else super.match(var1, var2, (S)var3);
+         return if (var2 != null && !h.R(var2, '\n', false, 2, null)) null else super.match(var1, var2, (S)var3);
       }
    }
 }

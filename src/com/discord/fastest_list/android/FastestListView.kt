@@ -159,6 +159,7 @@ internal class FastestListView(context: Context,
       this.setAdapter(var23);
       this.setHorizontalScrollBarEnabled(var17);
       this.setVerticalScrollBarEnabled(var18);
+      this.setScrollBarStyle(33554432);
       this.getRecycledViewPool().setMaxRecycledViews(0, 50);
       this.addItemDecoration(var19);
       this.addOnScrollListener(var22);
@@ -167,7 +168,7 @@ internal class FastestListView(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = i.k()) {
-      if (var1.isEmpty() xor true) {
+      if (!var1.isEmpty()) {
          for (FastestListViewAdapter.DataChanged var4 : var1) {
             val var2: Int = var4.component1();
             val var3: Int = var4.component2();
@@ -289,6 +290,12 @@ internal class FastestListView(context: Context,
       if (this.typedLayoutManager.getRenderAhead() != var1) {
          this.typedLayoutManager.setRenderAhead(var1);
          onItemDataChanged$default(this, null, 1, null);
+      }
+   }
+
+   public fun setScrollEventThrottle(scrollEventThrottle: Long) {
+      if (this.onScrollListener.getTimeoutMillis() != var1) {
+         this.onScrollListener.setTimeoutMillis(var1);
       }
    }
 

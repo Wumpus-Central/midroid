@@ -1,8 +1,8 @@
 package com.discord.resource_usage.utils
 
-import bm.c
 import java.io.File
-import yh.j
+import u8.j
+import ya.e
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    public final val rssPages: Long
@@ -45,13 +45,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var3: Long = this.totalTime;
-      val var1: Long = this.rssPages;
+      val var1: Long = this.totalTime;
+      val var3: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var3);
-      var5.append(", rssPages=");
       var5.append(var1);
+      var5.append(", rssPages=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -71,7 +71,7 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
                return var8;
             }
 
-            var12 = j.d(var1, null, 1, null);
+            var12 = j.f(var1, null, 1, null);
          } catch (var11: Exception) {
             return null;
          }
@@ -80,9 +80,9 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
 
          try {
             if (var12.length() > 0) {
-               val var13: java.util.List = h.y0(var12, new char[]{' '}, false, 0, 6, null);
+               val var13: java.util.List = h.B0(var12, new char[]{' '}, false, 0, 6, null);
                var8 = new ProcfsStats(
-                  c.T(var13.get(13) as java.lang.String, 0L) + c.T(var13.get(14) as java.lang.String, 0L), c.T(var13.get(23) as java.lang.String, 0L)
+                  e.X(var13.get(13) as java.lang.String, 0L) + e.X(var13.get(14) as java.lang.String, 0L), e.X(var13.get(23) as java.lang.String, 0L)
                );
             }
          } catch (var10: Exception) {

@@ -10,6 +10,6 @@ public final class b implements OnLongClickListener {
    public final ImageAttachmentMessageAccessory k;
 
    public final boolean onLongClick(View var1) {
-      return AttachmentMediaMosaicAdapter.c(this.j, this.k, var1);
+      return AttachmentMediaMosaicAdapter.b(this.j, this.k, var1);
    }
 }

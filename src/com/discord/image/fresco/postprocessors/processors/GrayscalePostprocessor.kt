@@ -1,6 +1,5 @@
 package com.discord.image.fresco.postprocessors.processors
 
-import a4.h
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.ColorMatrix
@@ -9,6 +8,7 @@ import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
 import kotlin.jvm.internal.q
+import z1.h
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public open fun getName(): String {

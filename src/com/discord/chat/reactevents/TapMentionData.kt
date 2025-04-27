@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import da.a
+import fa.C0
+import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -106,24 +106,24 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.userId;
-      val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.roleName;
-      val var5: java.lang.String = this.parsedUserId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapMentionData(userId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", roleName=");
-      var2.append(var3);
-      var2.append(", parsedUserId=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.userId;
+      val var5: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.roleName;
+      val var3: java.lang.String = this.parsedUserId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapMentionData(userId=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var5);
+      var1.append(", roleName=");
+      var1.append(var2);
+      var1.append(", parsedUserId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -143,8 +143,8 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), a.u(var1)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var1, a.u(var1), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): TapMentionData {
@@ -155,21 +155,23 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
          var var8: java.lang.String = null;
          var var2: Int;
          var var7: java.lang.String;
-         val var12: java.lang.String;
+         var var13: java.lang.String;
          var var14: java.lang.String;
          if (var5) {
-            val var6: b2 = b2.a;
-            var8 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            val var6: C0 = C0.a;
+            var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             var7 = var11.t(var10, 1);
-            var12 = var11.v(var10, 2, var6, null) as java.lang.String;
-            var14 = var11.v(var10, 3, var6, null) as java.lang.String;
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
+            val var9: java.lang.String = var11.v(var10, 3, var6, null) as java.lang.String;
             var2 = 15;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var14 = null;
-            var var13: java.lang.String = null;
+            var13 = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -181,10 +183,10 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
                               throw new n(var4);
                            }
 
-                           var13 = var11.v(var10, 3, b2.a, var13) as java.lang.String;
+                           var13 = var11.v(var10, 3, C0.a, var13) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var14 = var11.v(var10, 2, b2.a, var14) as java.lang.String;
+                           var14 = var11.v(var10, 2, C0.a, var14) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -192,20 +194,17 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.v(var10, 0, b2.a, var8) as java.lang.String;
+                     var8 = var11.v(var10, 0, C0.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var14 = var13;
-            var12 = var14;
          }
 
          var11.b(var10);
-         return new TapMentionData(var2, var8, var7, var12, var14, null);
+         return new TapMentionData(var2, var8, var7, var14, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapMentionData) {
@@ -218,7 +217,7 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

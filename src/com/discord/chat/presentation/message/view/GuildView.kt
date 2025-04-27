@@ -34,54 +34,77 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var6: View = var4.getRoot();
-      kotlin.jvm.internal.q.g(var6, "getRoot(...)");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var6, SizeUtilsKt.getDpToPx(16));
-      val var5: TextView = var4.guildText;
-      kotlin.jvm.internal.q.e(var4.guildText);
+      val var6: GuildViewBinding = GuildViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var6, "inflate(...)");
+      this.binding = var6;
+      val var4: View = var6.getRoot();
+      kotlin.jvm.internal.q.g(var4, "getRoot(...)");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(16));
+      val var5: TextView = var6.guildText;
+      kotlin.jvm.internal.q.e(var6.guildText);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
    }
 
-   public fun configure(iconUrl: String?, shortGuildName: String? = null, thumbnailBackgroundColor: Int?) {
+   public fun configure(
+      iconUrl: String?,
+      shortGuildName: String? = null,
+      thumbnailBackgroundColor: Int?,
+      borderRadiusDp: Int? = null,
+      thumbnailTextColor: Int? = null
+   ) {
       if (!kotlin.jvm.internal.q.c(this.boundIconUrl, var1) || !kotlin.jvm.internal.q.c(this.boundShortGuildName, var2)) {
          this.boundIconUrl = var1;
          this.boundShortGuildName = var2;
-         var var4: Int = 0;
-         if (var1 != null && !kotlin.text.h.x(var1)) {
-            val var8: SimpleDraweeView = this.binding.guildAvatar;
+         var var6: Int = 0;
+         if (var1 != null && !kotlin.text.h.d0(var1)) {
+            val var12: SimpleDraweeView = this.binding.guildAvatar;
             kotlin.jvm.internal.q.g(this.binding.guildAvatar, "guildAvatar");
-            var8.setVisibility(0);
-            val var9: TextView = this.binding.guildText;
+            var12.setVisibility(0);
+            val var13: TextView = this.binding.guildText;
             kotlin.jvm.internal.q.g(this.binding.guildText, "guildText");
-            var9.setVisibility(8);
+            var13.setVisibility(8);
             this.binding.guildAvatar.setImageURI(var1);
             if (var3 != null) {
-               var4 = var3;
+               var6 = var3;
             }
 
-            this.setBackgroundColor(var4);
+            this.setBackgroundColor(var6);
          } else {
-            val var5: SimpleDraweeView = this.binding.guildAvatar;
+            val var7: SimpleDraweeView = this.binding.guildAvatar;
             kotlin.jvm.internal.q.g(this.binding.guildAvatar, "guildAvatar");
-            var5.setVisibility(8);
-            val var6: TextView = this.binding.guildText;
+            var7.setVisibility(8);
+            val var8: TextView = this.binding.guildText;
             kotlin.jvm.internal.q.g(this.binding.guildText, "guildText");
-            var6.setVisibility(0);
+            var8.setVisibility(0);
             this.binding.guildText.setText(var2);
             if (var3 != null) {
-               var4 = var3;
+               var6 = var3;
             } else {
-               val var7: Context = this.getContext();
-               kotlin.jvm.internal.q.g(var7, "getContext(...)");
-               var4 = ColorUtilsKt.getColorCompat(var7, R.color.brand);
+               val var9: Context = this.getContext();
+               kotlin.jvm.internal.q.g(var9, "getContext(...)");
+               var6 = ColorUtilsKt.getColorCompat(var9, R.color.brand);
             }
 
-            this.setBackgroundColor(var4);
+            this.setBackgroundColor(var6);
+            if (var5 != null) {
+               var6 = var5;
+            } else {
+               var6 = -1;
+            }
+
+            this.binding.guildText.setTextColor(var6);
          }
+
+         val var11: View = this.binding.getRoot();
+         kotlin.jvm.internal.q.g(var11, "getRoot(...)");
+         if (var4 != null) {
+            var6 = var4;
+         } else {
+            var6 = 16;
+         }
+
+         ViewClippingUtilsKt.clipToRoundedRectangle(var11, SizeUtilsKt.getDpToPx(var6));
       }
    }
 }

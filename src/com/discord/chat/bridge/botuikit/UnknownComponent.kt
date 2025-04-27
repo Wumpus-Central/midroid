@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -65,17 +65,17 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UnknownComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UnknownComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -93,7 +93,7 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a};
+         return new KSerializer[]{N.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): UnknownComponent {

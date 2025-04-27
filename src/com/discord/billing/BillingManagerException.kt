@@ -32,41 +32,42 @@ public sealed class BillingManagerException protected constructor(reason: String
    public companion object {
       public fun fromBillingResult(responseCode: Int): BillingManagerException {
          var var2: Any;
-         switch (var1) {
-            case -3:
-               var2 = new BillingManagerException.ServiceTimeoutException(var1);
-               break;
-            case -2:
-               var2 = new BillingManagerException.FeatureNotSupportedException(var1);
-               break;
-            case -1:
+         if (var1 != -2) {
+            if (var1 != -1) {
+               if (var1 != 12) {
+                  switch (var1) {
+                     case 2:
+                        var2 = new BillingManagerException.ServiceUnavailableException(var1);
+                        break;
+                     case 3:
+                        var2 = new BillingManagerException.BillingUnavailableException(var1);
+                        break;
+                     case 4:
+                        var2 = new BillingManagerException.ItemUnavailableException(var1);
+                        break;
+                     case 5:
+                        var2 = new BillingManagerException.DeveloperErrorException(var1);
+                        break;
+                     case 6:
+                        var2 = new BillingManagerException.GenericErrorException(var1);
+                        break;
+                     case 7:
+                        var2 = new BillingManagerException.ItemAlreadyOwnedException(var1);
+                        break;
+                     case 8:
+                        var2 = new BillingManagerException.ItemNotOwnedException(var1);
+                        break;
+                     default:
+                        var2 = new BillingManagerException.UnknownBillingException(var1);
+                  }
+               } else {
+                  var2 = new BillingManagerException.NetworkErrorException(var1);
+               }
+            } else {
                var2 = new BillingManagerException.ServiceDisconnectedException(var1);
-               break;
-            case 0:
-            case 1:
-            default:
-               var2 = new BillingManagerException.UnknownBillingException(var1);
-               break;
-            case 2:
-               var2 = new BillingManagerException.ServiceUnavailableException(var1);
-               break;
-            case 3:
-               var2 = new BillingManagerException.BillingUnavailableException(var1);
-               break;
-            case 4:
-               var2 = new BillingManagerException.ItemUnavailableException(var1);
-               break;
-            case 5:
-               var2 = new BillingManagerException.DeveloperErrorException(var1);
-               break;
-            case 6:
-               var2 = new BillingManagerException.GenericErrorException(var1);
-               break;
-            case 7:
-               var2 = new BillingManagerException.ItemAlreadyOwnedException(var1);
-               break;
-            case 8:
-               var2 = new BillingManagerException.ItemNotOwnedException(var1);
+            }
+         } else {
+            var2 = new BillingManagerException.FeatureNotSupportedException(var1);
          }
 
          return (BillingManagerException)var2;
@@ -127,19 +128,19 @@ public sealed class BillingManagerException protected constructor(reason: String
       }
    }
 
-   public class ServiceDisconnectedException(code: Int) : BillingManagerException {
+   public class NetworkErrorException(code: Int) : BillingManagerException {
       init {
          val var2: StringBuilder = new StringBuilder();
-         var2.append("Billing service disconnected, Google Error Code: ");
+         var2.append("Network error, Google Error Code: ");
          var2.append(var1);
          super(var2.toString(), java.lang.String.valueOf(var1), null);
       }
    }
 
-   public class ServiceTimeoutException(code: Int) : BillingManagerException {
+   public class ServiceDisconnectedException(code: Int) : BillingManagerException {
       init {
          val var2: StringBuilder = new StringBuilder();
-         var2.append("Service timed out, Google Error Code: ");
+         var2.append("Billing service disconnected, Google Error Code: ");
          var2.append(var1);
          super(var2.toString(), java.lang.String.valueOf(var1), null);
       }

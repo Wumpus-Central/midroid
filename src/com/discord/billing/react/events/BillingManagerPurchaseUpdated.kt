@@ -1,13 +1,14 @@
 package com.discord.billing.react.events
 
+import ca.f
+import ca.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
+import j8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {
@@ -43,7 +43,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       );
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -64,7 +64,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): BillingManagerPurchaseUpdated {
@@ -111,8 +111,8 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                }
             }
 
-            var10 = var5;
             var5 = var11;
+            var10 = var5;
          }
 
          var9.b(var8);

@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,18 +67,18 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPollSubmitVote(channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapPollSubmitVote(channelId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -96,7 +96,7 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapPollSubmitVote {

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.row
 
+import ca.f
+import ca.n
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,23 +83,23 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var4: ChangeType = this.changeType;
+      val var3: ChangeType = this.changeType;
       val var5: Message = this.message;
-      val var2: java.lang.String = this.fileId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UploadProgressRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var4);
-      var3.append(", message=");
-      var3.append(var5);
-      var3.append(", fileId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.fileId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UploadProgressRow(index=");
+      var2.append(var1);
+      var2.append(", changeType=");
+      var2.append(var3);
+      var2.append(", message=");
+      var2.append(var5);
+      var2.append(", fileId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -119,7 +119,7 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, ChangeType.Serializer.INSTANCE, Message.$serializer.INSTANCE, b2.a};
+         return new KSerializer[]{N.a, ChangeType.Serializer.INSTANCE, Message.$serializer.INSTANCE, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): UploadProgressRow {

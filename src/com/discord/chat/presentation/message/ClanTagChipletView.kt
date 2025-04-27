@@ -57,7 +57,7 @@ public class ClanTagChipletView(context: Context, attrs: AttributeSet) : FrameLa
       if (var2 != null) {
          val var9: SimpleDraweeView = this.binding.badge;
          kotlin.jvm.internal.q.g(this.binding.badge, "badge");
-         SetOptionalImageUrlKt.setOptionalImageUrl$default(var9, var2, null, null, 6, null);
+         SetOptionalImageUrlKt.setOptionalImageUrl$default(var9, var2, null, null, null, 14, null);
          val var12: LayoutParams = this.binding.badge.getLayoutParams();
          var12.width = SizeUtilsKt.getDpToPx(var6 * 12.0F);
          var12.height = SizeUtilsKt.getDpToPx(var6 * 12.0F);

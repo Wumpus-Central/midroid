@@ -42,6 +42,7 @@ public object NativePermissionPromise {
    @JvmStatic
    fun `generate$lambda$1`(var0: Function0, var1: Array<Any>) {
       q.h(var0, "$onRejected");
+      q.h(var1, "result");
       val var2: CrashReporting = CrashReporting.INSTANCE;
       val var3: StringBuilder = new StringBuilder();
       var3.append("NativePermissionPromise: Rejection: ");

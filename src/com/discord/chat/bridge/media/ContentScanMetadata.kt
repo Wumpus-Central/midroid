@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.media
 
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.x0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.G
+import fa.N
+import fa.Y
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,14 +16,14 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class ContentScanMetadata(version: Int, contentFlags: Long) {
-   public final val contentFlags: Long
+public data class ContentScanMetadata(version: Int, flags: Long) {
+   public final val flags: Long
    public final val version: Int
 
    init {
       super();
       this.version = var1;
-      this.contentFlags = var2;
+      this.flags = var2;
    }
 
    public operator fun component1(): Int {
@@ -31,10 +31,10 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
    }
 
    public operator fun component2(): Long {
-      return this.contentFlags;
+      return this.flags;
    }
 
-   public fun copy(version: Int = var0.version, contentFlags: Long = var0.contentFlags): ContentScanMetadata {
+   public fun copy(version: Int = var0.version, flags: Long = var0.flags): ContentScanMetadata {
       return new ContentScanMetadata(var1, var2);
    }
 
@@ -48,28 +48,28 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          if (this.version != var1.version) {
             return false;
          } else {
-            return this.contentFlags == var1.contentFlags;
+            return this.flags == var1.flags;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return Integer.hashCode(this.version) * 31 + java.lang.Long.hashCode(this.contentFlags);
+      return Integer.hashCode(this.version) * 31 + java.lang.Long.hashCode(this.flags);
    }
 
    public override fun toString(): String {
       val var1: Int = this.version;
-      val var2: Long = this.contentFlags;
+      val var2: Long = this.flags;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ContentScanMetadata(version=");
       var4.append(var1);
-      var4.append(", contentFlags=");
+      var4.append(", flags=");
       var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -82,33 +82,32 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
          INSTANCE = var0;
          val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.media.ContentScanMetadata", var0, 2);
          var1.l("version", false);
-         var1.l("contentFlags", false);
+         var1.l("flags", false);
          descriptor = var1;
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, x0.a};
+         return new KSerializer[]{N.a, Y.a};
       }
 
       public open fun deserialize(decoder: Decoder): ContentScanMetadata {
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
          if (var9.y()) {
-            val var2: Int = var9.k(var8, 0);
+            var3 = var9.k(var8, 0);
             var6 = var9.h(var8, 1);
-            var3 = 3;
-            var4 = var2;
+            var2 = 3;
          } else {
             var6 = 0L;
-            var var12: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
-            var var10: Int = 0;
+            var2 = 0;
 
-            while (var12) {
+            while (var4) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -117,22 +116,19 @@ public data class ContentScanMetadata(version: Int, contentFlags: Long) {
                      }
 
                      var6 = var9.h(var8, 1);
-                     var10 |= 2;
+                     var2 |= 2;
                   } else {
                      var3 = var9.k(var8, 0);
-                     var10 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var4 = false;
                }
             }
-
-            var4 = var3;
-            var3 = var10;
          }
 
          var9.b(var8);
-         return new ContentScanMetadata(var3, var4, var6, null);
+         return new ContentScanMetadata(var2, var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

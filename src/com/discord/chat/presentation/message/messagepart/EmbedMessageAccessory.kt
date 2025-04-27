@@ -21,17 +21,14 @@ public data class EmbedMessageAccessory(messageId: MessageId,
       shouldShowRoleOnName: Boolean,
       spoilerAttributes: SpoilerAttributes?,
       onLongClick: OnLongClickListener?,
-      isForwardedContent: Boolean,
-      isShowingInlineForward: Boolean,
-      useOldForwardIcon: Boolean
-   ) : EmbedMessageAccessory(var1, var2, var3, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17),
+      isForwardedContent: Boolean
+   ) : EmbedMessageAccessory(var1, var2, var3, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15),
    PortalUiModel {
    public final val channelId: ChannelId
    public final val constrainedWidth: Int
    public final val embed: Embed
    public open val index: Int
    public final val isForwardedContent: Boolean
-   public final val isShowingInlineForward: Boolean
    public open val messageId: MessageId
    public final val onLongClick: OnLongClickListener?
    public final val radiusPx: Int
@@ -41,7 +38,6 @@ public data class EmbedMessageAccessory(messageId: MessageId,
    public final val shouldShowRoleDot: Boolean
    public final val shouldShowRoleOnName: Boolean
    public final val spoilerAttributes: SpoilerAttributes?
-   public final val useOldForwardIcon: Boolean
 
    fun EmbedMessageAccessory(
       var1: java.lang.String,
@@ -57,16 +53,14 @@ public data class EmbedMessageAccessory(messageId: MessageId,
       var12: Boolean,
       var13: SpoilerAttributes,
       var14: OnLongClickListener,
-      var15: Boolean,
-      var16: Boolean,
-      var17: Boolean
+      var15: Boolean
    ) {
       q.h(var1, "messageId");
       q.h(var7, "embed");
-      val var18: StringBuilder = new StringBuilder();
-      var18.append("embed ");
-      var18.append(var2);
-      super(var1, var18.toString(), false, 4, null);
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("embed ");
+      var16.append(var2);
+      super(var1, var16.toString(), false, 4, null);
       this.messageId = var1;
       this.index = var2;
       this.channelId = var3;
@@ -81,8 +75,6 @@ public data class EmbedMessageAccessory(messageId: MessageId,
       this.spoilerAttributes = var13;
       this.onLongClick = var14;
       this.isForwardedContent = var15;
-      this.isShowingInlineForward = var16;
-      this.useOldForwardIcon = var17;
    }
 
    public operator fun component1(): MessageId {
@@ -107,14 +99,6 @@ public data class EmbedMessageAccessory(messageId: MessageId,
 
    public operator fun component14(): Boolean {
       return this.isForwardedContent;
-   }
-
-   public operator fun component15(): Boolean {
-      return this.isShowingInlineForward;
-   }
-
-   public operator fun component16(): Boolean {
-      return this.useOldForwardIcon;
    }
 
    public operator fun component2(): Int {
@@ -163,13 +147,11 @@ public data class EmbedMessageAccessory(messageId: MessageId,
       shouldShowRoleOnName: Boolean = ...,
       spoilerAttributes: SpoilerAttributes? = ...,
       onLongClick: OnLongClickListener? = ...,
-      isForwardedContent: Boolean = ...,
-      isShowingInlineForward: Boolean = ...,
-      useOldForwardIcon: Boolean = ...
+      isForwardedContent: Boolean = ...
    ): EmbedMessageAccessory {
       q.h(var1, "messageId");
       q.h(var7, "embed");
-      return new EmbedMessageAccessory(var1, var2, var3, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, null);
+      return new EmbedMessageAccessory(var1, var2, var3, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, null);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -205,12 +187,8 @@ public data class EmbedMessageAccessory(messageId: MessageId,
             return false;
          } else if (!q.c(this.onLongClick, var1.onLongClick)) {
             return false;
-         } else if (this.isForwardedContent != var1.isForwardedContent) {
-            return false;
-         } else if (this.isShowingInlineForward != var1.isShowingInlineForward) {
-            return false;
          } else {
-            return this.useOldForwardIcon == var1.useOldForwardIcon;
+            return this.isForwardedContent == var1.isForwardedContent;
          }
       }
    }
@@ -221,16 +199,16 @@ public data class EmbedMessageAccessory(messageId: MessageId,
 
    public override fun hashCode(): Int {
       val var8: Int = MessageId.hashCode-impl(this.messageId);
-      val var7: Int = Integer.hashCode(this.index);
-      val var13: Int = ChannelId.hashCode-impl(this.channelId);
-      val var10: Int = Integer.hashCode(this.constrainedWidth);
+      val var10: Int = Integer.hashCode(this.index);
+      val var6: Int = ChannelId.hashCode-impl(this.channelId);
+      val var11: Int = Integer.hashCode(this.constrainedWidth);
       val var3: Int = Integer.hashCode(this.radiusPx);
-      val var6: Int = this.embed.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.shouldAutoPlayGifs);
-      val var5: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
-      val var12: Int = java.lang.Boolean.hashCode(this.shouldShowLinkDecorations);
-      val var4: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
-      val var11: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
+      val var12: Int = this.embed.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.shouldAutoPlayGifs);
+      val var13: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
+      val var9: Int = java.lang.Boolean.hashCode(this.shouldShowLinkDecorations);
+      val var5: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
+      val var7: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
       var var2: Int = 0;
       val var1: Int;
       if (this.spoilerAttributes == null) {
@@ -248,97 +226,71 @@ public data class EmbedMessageAccessory(messageId: MessageId,
                         (
                                  (
                                           (
-                                                   (
-                                                            (
-                                                                     (
-                                                                              (
-                                                                                       (
-                                                                                                ((((var8 * 31 + var7) * 31 + var13) * 31 + var10) * 31 + var3)
-                                                                                                      * 31
-                                                                                                   + var6
-                                                                                             )
-                                                                                             * 31
-                                                                                          + var9
-                                                                                    )
-                                                                                    * 31
-                                                                                 + var5
-                                                                           )
-                                                                           * 31
-                                                                        + var12
-                                                                  )
-                                                                  * 31
-                                                               + var4
-                                                         )
+                                                   (((((((var8 * 31 + var10) * 31 + var6) * 31 + var11) * 31 + var3) * 31 + var12) * 31 + var4) * 31 + var13)
                                                          * 31
-                                                      + var11
+                                                      + var9
                                                 )
                                                 * 31
-                                             + var1
+                                             + var5
                                        )
                                        * 31
-                                    + var2
+                                    + var7
                               )
                               * 31
-                           + java.lang.Boolean.hashCode(this.isForwardedContent)
+                           + var1
                      )
                      * 31
-                  + java.lang.Boolean.hashCode(this.isShowingInlineForward)
+                  + var2
             )
             * 31
-         + java.lang.Boolean.hashCode(this.useOldForwardIcon);
+         + java.lang.Boolean.hashCode(this.isForwardedContent);
    }
 
    public override fun toString(): String {
-      val var14: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Int = this.index;
-      val var15: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: Int = this.constrainedWidth;
-      val var1: Int = this.radiusPx;
-      val var13: Embed = this.embed;
-      val var8: Boolean = this.shouldAutoPlayGifs;
-      val var4: Boolean = this.shouldAnimateEmoji;
+      val var15: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Int = this.index;
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: Int = this.constrainedWidth;
+      val var3: Int = this.radiusPx;
+      val var11: Embed = this.embed;
+      val var9: Boolean = this.shouldAutoPlayGifs;
+      val var6: Boolean = this.shouldAnimateEmoji;
       val var5: Boolean = this.shouldShowLinkDecorations;
-      val var9: Boolean = this.shouldShowRoleDot;
-      val var7: Boolean = this.shouldShowRoleOnName;
-      val var16: SpoilerAttributes = this.spoilerAttributes;
-      val var12: OnLongClickListener = this.onLongClick;
-      val var10: Boolean = this.isForwardedContent;
-      val var6: Boolean = this.isShowingInlineForward;
-      val var11: Boolean = this.useOldForwardIcon;
-      val var17: StringBuilder = new StringBuilder();
-      var17.append("EmbedMessageAccessory(messageId=");
-      var17.append(var14);
-      var17.append(", index=");
-      var17.append(var2);
-      var17.append(", channelId=");
-      var17.append(var15);
-      var17.append(", constrainedWidth=");
-      var17.append(var3);
-      var17.append(", radiusPx=");
-      var17.append(var1);
-      var17.append(", embed=");
-      var17.append(var13);
-      var17.append(", shouldAutoPlayGifs=");
-      var17.append(var8);
-      var17.append(", shouldAnimateEmoji=");
-      var17.append(var4);
-      var17.append(", shouldShowLinkDecorations=");
-      var17.append(var5);
-      var17.append(", shouldShowRoleDot=");
-      var17.append(var9);
-      var17.append(", shouldShowRoleOnName=");
-      var17.append(var7);
-      var17.append(", spoilerAttributes=");
-      var17.append(var16);
-      var17.append(", onLongClick=");
-      var17.append(var12);
-      var17.append(", isForwardedContent=");
-      var17.append(var10);
-      var17.append(", isShowingInlineForward=");
-      var17.append(var6);
-      var17.append(", useOldForwardIcon=");
-      var17.append(var11);
-      var17.append(")");
-      return var17.toString();
+      val var4: Boolean = this.shouldShowRoleDot;
+      val var8: Boolean = this.shouldShowRoleOnName;
+      val var12: SpoilerAttributes = this.spoilerAttributes;
+      val var13: OnLongClickListener = this.onLongClick;
+      val var7: Boolean = this.isForwardedContent;
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("EmbedMessageAccessory(messageId=");
+      var14.append(var15);
+      var14.append(", index=");
+      var14.append(var1);
+      var14.append(", channelId=");
+      var14.append(var10);
+      var14.append(", constrainedWidth=");
+      var14.append(var2);
+      var14.append(", radiusPx=");
+      var14.append(var3);
+      var14.append(", embed=");
+      var14.append(var11);
+      var14.append(", shouldAutoPlayGifs=");
+      var14.append(var9);
+      var14.append(", shouldAnimateEmoji=");
+      var14.append(var6);
+      var14.append(", shouldShowLinkDecorations=");
+      var14.append(var5);
+      var14.append(", shouldShowRoleDot=");
+      var14.append(var4);
+      var14.append(", shouldShowRoleOnName=");
+      var14.append(var8);
+      var14.append(", spoilerAttributes=");
+      var14.append(var12);
+      var14.append(", onLongClick=");
+      var14.append(var13);
+      var14.append(", isForwardedContent=");
+      var14.append(var7);
+      var14.append(")");
+      return var14.toString();
    }
 }

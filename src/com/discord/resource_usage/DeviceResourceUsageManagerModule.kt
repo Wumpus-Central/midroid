@@ -25,7 +25,7 @@ public class DeviceResourceUsageManagerModule(reactContext: ReactApplicationCont
    @ReactMethod
    public fun getCumulativeCpuUsage(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{(double)Process.getElapsedCpuTime() / (double)f.c(this.deviceResourceUsageManager.getCpuCoreCount(), 1) / (double)1000});
+      var1.invoke(new Object[]{(double)Process.getElapsedCpuTime() / (double)d.c(this.deviceResourceUsageManager.getCpuCoreCount(), 1) / (double)1000});
    }
 
    @ReactMethod

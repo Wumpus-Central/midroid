@@ -1,6 +1,5 @@
 package com.discord.zoom_layout
 
-import android.graphics.Matrix
 import com.discord.reactevents.ReactEvents
 import com.discord.zoom_layout.reactevents.OnZoomChangedEvent
 import com.facebook.react.bridge.ReadableArray
@@ -11,62 +10,42 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
-import com.otaliastudios.zoom.ZoomEngine
-import kotlin.jvm.internal.g0
+import j8.w
+import kotlin.jvm.functions.Function1
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
-public class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
+internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
    private final val delegate: DCDZoomLayoutAndroidManagerDelegate<ZoomLayoutFixed, ZoomLayoutViewManager> = new DCDZoomLayoutAndroidManagerDelegate(this)
-   internal final val reactEvents: ReactEvents = new ReactEvents(new Pair[]{w.a("onZoomChanged", g0.b(OnZoomChangedEvent.class))})
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onZoomChanged", E.b(OnZoomChangedEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ZoomLayoutFixed {
       q.h(var1, "reactContext");
-      val var2: ZoomLayoutFixed = new ZoomLayoutFixed(var1, null, 0, 6, null);
-      var2.setOverScrollHorizontal(false);
-      var2.setOverScrollVertical(false);
-      var2.setOverPinchable(false);
-      var2.getEngine()
-         .l(
-            new ZoomEngine.c(this, var1, var2) {
-               final ThemedReactContext $reactContext;
-               final ZoomLayoutFixed $zoomLayout;
-               final ZoomLayoutViewManager this$0;
+      return new ZoomLayoutFixed(var1, new Function1(this) {
+         final ZoomLayoutViewManager this$0;
 
-               {
-                  this.this$0 = var1;
-                  this.$reactContext = var2;
-                  this.$zoomLayout = var3;
-               }
+         {
+            super(1);
+            this.this$0 = var1;
+         }
 
-               @Override
-               public void onIdle(ZoomEngine var1) {
-                  q.h(var1, "engine");
-               }
-
-               @Override
-               public void onUpdate(ZoomEngine var1, Matrix var2) {
-                  q.h(var1, "engine");
-                  q.h(var2, "matrix");
-                  this.this$0
-                     .getReactEvents$zoom_layout_release()
-                     .emitEvent(this.$reactContext, this.$zoomLayout, new OnZoomChangedEvent(this.$zoomLayout.getZoom()));
-               }
-            }
-         );
-      return var2;
+         public final void invoke(ZoomLayoutFixed var1) {
+            q.h(var1, "zoomLayout");
+            ZoomLayoutViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnZoomChangedEvent(var1.getZoom()));
+         }
+      });
    }
 
-   protected override fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed>? {
+   protected open fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed> {
       return this.delegate;
    }
 
-   public override fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
+   public open fun getExportedCustomDirectEventTypeConstants(): MutableMap<String, Any> {
       return this.reactEvents.exportEventConstants();
    }
 
-   public override fun getName(): String {
+   public open fun getName(): String {
       return "DCDZoomLayoutAndroid";
    }
 

@@ -21,7 +21,7 @@ internal object CustomFontFamilyOverride {
          var11 = "";
       }
 
-      val var16: Array<java.lang.String> = kotlin.text.h.z0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
+      val var16: Array<java.lang.String> = kotlin.text.h.C0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
       val var10: Int = var16.length;
 
       for (int var6 = 0; var6 < var10; var6++) {
@@ -107,17 +107,17 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var10[var5];
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("fonts/");
-            var12.append(var11);
-            var12.append(var13);
-            val var28: java.lang.String = var12.toString();
-            kotlin.jvm.internal.q.g(var28, "toString(...)");
+            var var12: java.lang.String = var10[var5];
+            val var13: StringBuilder = new StringBuilder();
+            var13.append("fonts/");
+            var13.append(var11);
+            var13.append(var12);
+            var12 = var13.toString();
+            kotlin.jvm.internal.q.g(var12, "toString(...)");
 
             try {
                b.a();
-               val var29: Font = a.a(k.a(var3, var28));
+               val var29: Font = a.a(k.a(var3, var12));
                kotlin.jvm.internal.q.g(var29, "build(...)");
                c.a();
                val var30: FontFamily = f.a(l.a(var29));
@@ -146,7 +146,7 @@ internal object CustomFontFamilyOverride {
          var26 = var26.toLowerCase(var25);
          kotlin.jvm.internal.q.g(var26, "toLowerCase(...)");
          val var20: Byte;
-         if (kotlin.text.h.Z(var26, "italic", 0, false, 6, null) > -1) {
+         if (kotlin.text.h.b0(var26, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
          } else {
             var20 = 0;
@@ -157,7 +157,7 @@ internal object CustomFontFamilyOverride {
          val var17: java.lang.String = var16.toLowerCase(var25);
          kotlin.jvm.internal.q.g(var17, "toLowerCase(...)");
          var var23: Short = 0;
-         if (kotlin.text.h.Z(var17, "bold", 0, false, 6, null) > -1) {
+         if (kotlin.text.h.b0(var17, "bold", 0, false, 6, null) > -1) {
             var23 = 1;
          }
 
@@ -177,12 +177,7 @@ internal object CustomFontFamilyOverride {
 
    @JvmStatic
    fun `override$lambda$0`(var0: CreateTypefaceObject): Typeface {
-      val var3: CustomFontFamilyOverride = INSTANCE;
-      val var2: java.lang.String = var0.fontFamilyName;
-      val var1: Int = var0.style;
-      val var4: AssetManager = var0.assetManager;
-      kotlin.jvm.internal.q.f(var0.assetManager, "null cannot be cast to non-null type android.content.res.AssetManager");
-      return var3.createAssetTypeface(var2, var1, var4);
+      return INSTANCE.createAssetTypeface(var0.getFontFamilyName(), var0.getStyle(), var0.getAssetManager());
    }
 
    public fun override() {

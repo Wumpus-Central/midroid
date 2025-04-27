@@ -2,8 +2,8 @@ package com.discord.chat.presentation.root
 
 import android.content.Context
 import com.discord.chat.presentation.events.CreateChatReactEventsKt
+import com.discord.chat.presentation.list.ChatListView
 import com.discord.chat.reactevents.ChatViewEventHandler
-import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.reactevents.ReactEvents
 import com.discord.recycler_view.scroller.Scroller
 import com.facebook.react.bridge.ReadableArray
@@ -23,10 +23,10 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
       q.h(var1, "reactContext");
-      val var2: ChatView = new ChatView(var1);
-      val var3: Context = var2.getContext();
-      q.g(var3, "getContext(...)");
-      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new Function0(var2) {
+      val var3: ChatView = new ChatView(var1);
+      val var2: Context = var3.getContext();
+      q.g(var2, "getContext(...)");
+      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0(var3) {
          final ChatView $chatView;
 
          {
@@ -38,7 +38,7 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
             return this.$chatView.getId();
          }
       }));
-      return var2;
+      return var3;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
@@ -64,14 +64,14 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
                   return;
                }
 
-               this.scrollIntoView(var1, var3.getInt(0), var3.getBoolean(1));
+               this.scrollIntoView(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2));
             }
          } else if (var2.equals("scrollTo")) {
             if (var3 == null) {
                return;
             }
 
-            this.scrollTo(var1, var3.getInt(0), var3.getBoolean(1));
+            this.scrollTo(var1, var3.getInt(0), var3.getBoolean(1), var3.getBoolean(2), var3.getInt(3));
          }
       } else if (var2.equals("scrollToBottom")) {
          if (var3 == null) {
@@ -82,14 +82,14 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       }
    }
 
-   public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean) {
+   public open fun scrollIntoView(view: ChatView, index: Int, animated: Boolean, highlight: Boolean) {
       q.h(var1, "view");
-      var1.scrollTo(var2, Scroller.TargetAlignment.Anywhere.INSTANCE, var3, false);
+      var1.scrollTo(var2, Scroller.TargetAlignment.Anywhere.INSTANCE, var3, var4);
    }
 
-   public open fun scrollTo(view: ChatView, index: Int, animated: Boolean) {
+   public open fun scrollTo(view: ChatView, index: Int, animated: Boolean, highlight: Boolean, position: Int) {
       q.h(var1, "view");
-      var1.scrollTo(var2, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(4)), var3, false);
+      var1.scrollTo(var2, new Scroller.TargetAlignment.Top(ChatListView.Companion.getMESSAGE_TOP_SCROLL_OFFSET_PX()), var3, var4);
    }
 
    public open fun scrollToBottom(view: ChatView, animated: Boolean) {
@@ -140,17 +140,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
 
    @ReactProp(name = "scrollEnabled")
    public open fun setScrollEnabled(view: ChatView, value: Boolean) {
-      q.h(var1, "view");
-   }
-
-   @ReactProp(name = "shouldAnimateAndroid")
-   public open fun setShouldAnimateAndroid(view: ChatView, value: Boolean) {
-      q.h(var1, "view");
-      var1.setAnimated(var2);
-   }
-
-   @ReactProp(name = "shouldCalculateMessageVisibilityPercentages")
-   public open fun setShouldCalculateMessageVisibilityPercentages(view: ChatView, value: Boolean) {
       q.h(var1, "view");
    }
 

@@ -1,0 +1,334 @@
+package com.discord.chat.bridge.botuikit
+
+import ca.f
+import ca.n
+import com.discord.chat.bridge.media.UnfurledMediaItem
+import com.discord.chat.bridge.spoiler.SpoilerableData
+import da.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.h0
+import kotlin.jvm.internal.q
+import kotlinx.serialization.KSerializer
+import kotlinx.serialization.descriptors.SerialDescriptor
+import kotlinx.serialization.encoding.CompositeEncoder
+import kotlinx.serialization.encoding.Decoder
+import kotlinx.serialization.encoding.Encoder
+import kotlinx.serialization.encoding.c
+import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+
+@f
+public data class FileDisplayComponent(type: Int,
+      id: String,
+      file: UnfurledMediaItem,
+      name: String,
+      size: String,
+      isSpoiler: Boolean,
+      spoilerDescription: String?
+   )
+   : Component,
+   SpoilerableData {
+   public final val file: UnfurledMediaItem
+   public open val id: String
+   public final val isSpoiler: Boolean
+   public final val name: String
+   public open val obscureOrNull: Nothing?
+   public final val size: String
+   public final val spoilerDescription: String?
+   public open val spoilerOrNull: String?
+   public open val type: Int
+
+   init {
+      q.h(var2, "id");
+      q.h(var3, "file");
+      q.h(var4, "name");
+      q.h(var5, "size");
+      super(null);
+      this.type = var1;
+      this.id = var2;
+      this.file = var3;
+      this.name = var4;
+      this.size = var5;
+      this.isSpoiler = var6;
+      this.spoilerDescription = var7;
+      val var8: Boolean;
+      if (var7 != null && !h.d0(var7)) {
+         var8 = false;
+      } else {
+         var8 = true;
+      }
+
+      if (var8) {
+         var7 = null;
+      }
+
+      this.spoilerOrNull = var7;
+   }
+
+   public operator fun component1(): Int {
+      return this.type;
+   }
+
+   public operator fun component2(): String {
+      return this.id;
+   }
+
+   public operator fun component3(): UnfurledMediaItem {
+      return this.file;
+   }
+
+   public operator fun component4(): String {
+      return this.name;
+   }
+
+   public operator fun component5(): String {
+      return this.size;
+   }
+
+   public operator fun component6(): Boolean {
+      return this.isSpoiler;
+   }
+
+   public operator fun component7(): String? {
+      return this.spoilerDescription;
+   }
+
+   public fun copy(
+      type: Int = var0.type,
+      id: String = var0.id,
+      file: UnfurledMediaItem = var0.file,
+      name: String = var0.name,
+      size: String = var0.size,
+      isSpoiler: Boolean = var0.isSpoiler,
+      spoilerDescription: String? = var0.spoilerDescription
+   ): FileDisplayComponent {
+      q.h(var2, "id");
+      q.h(var3, "file");
+      q.h(var4, "name");
+      q.h(var5, "size");
+      return new FileDisplayComponent(var1, var2, var3, var4, var5, var6, var7);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is FileDisplayComponent) {
+         return false;
+      } else {
+         var1 = var1;
+         if (this.type != var1.type) {
+            return false;
+         } else if (!q.c(this.id, var1.id)) {
+            return false;
+         } else if (!q.c(this.file, var1.file)) {
+            return false;
+         } else if (!q.c(this.name, var1.name)) {
+            return false;
+         } else if (!q.c(this.size, var1.size)) {
+            return false;
+         } else if (this.isSpoiler != var1.isSpoiler) {
+            return false;
+         } else {
+            return q.c(this.spoilerDescription, var1.spoilerDescription);
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      val var3: Int = Integer.hashCode(this.type);
+      val var5: Int = this.id.hashCode();
+      val var7: Int = this.file.hashCode();
+      val var4: Int = this.name.hashCode();
+      val var6: Int = this.size.hashCode();
+      val var2: Int = java.lang.Boolean.hashCode(this.isSpoiler);
+      val var1: Int;
+      if (this.spoilerDescription == null) {
+         var1 = 0;
+      } else {
+         var1 = this.spoilerDescription.hashCode();
+      }
+
+      return (((((var3 * 31 + var5) * 31 + var7) * 31 + var4) * 31 + var6) * 31 + var2) * 31 + var1;
+   }
+
+   public override fun toString(): String {
+      val var1: Int = this.type;
+      val var8: java.lang.String = this.id;
+      val var3: UnfurledMediaItem = this.file;
+      val var4: java.lang.String = this.name;
+      val var6: java.lang.String = this.size;
+      val var2: Boolean = this.isSpoiler;
+      val var7: java.lang.String = this.spoilerDescription;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FileDisplayComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var8);
+      var5.append(", file=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var4);
+      var5.append(", size=");
+      var5.append(var6);
+      var5.append(", isSpoiler=");
+      var5.append(var2);
+      var5.append(", spoilerDescription=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
+   }
+
+   public object `$serializer` : G {
+      public open val descriptor: SerialDescriptor
+         public open get() {
+            return descriptor;
+         }
+
+
+      @JvmStatic
+      fun {
+         val var0: FileDisplayComponent.$serializer = new FileDisplayComponent.$serializer();
+         INSTANCE = var0;
+         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("13", var0, 9);
+         var1.l("type", false);
+         var1.l("id", false);
+         var1.l("file", false);
+         var1.l("name", false);
+         var1.l("size", false);
+         var1.l("isSpoiler", false);
+         var1.l("spoilerDescription", false);
+         var1.l("spoilerOrNull", true);
+         var1.l("obscureOrNull", true);
+         descriptor = var1;
+      }
+
+      public open fun childSerializers(): Array<KSerializer<*>> {
+         val var3: C0 = C0.a;
+         return new KSerializer[]{N.a, C0.a, UnfurledMediaItem.$serializer.INSTANCE, C0.a, C0.a, fa.h.a, a.u(C0.a), a.u(var3), a.u(h0.a)};
+      }
+
+      public open fun deserialize(decoder: Decoder): FileDisplayComponent {
+         q.h(var1, "decoder");
+         val var16: SerialDescriptor = this.getDescriptor();
+         val var17: c = var1.c(var16);
+         var var2: Int;
+         var var3: Int;
+         val var5: Int;
+         var var7: java.lang.String;
+         val var10: Void;
+         var var11: java.lang.String;
+         var var12: Any;
+         val var13: java.lang.String;
+         val var14: java.lang.String;
+         val var19: java.lang.String;
+         if (var17.y()) {
+            var3 = var17.k(var16, 0);
+            var13 = var17.t(var16, 1);
+            var12 = var17.m(var16, 2, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
+            val var9: java.lang.String = var17.t(var16, 3);
+            var11 = var17.t(var16, 4);
+            val var4: Byte = var17.s(var16, 5);
+            val var18: C0 = C0.a;
+            var7 = var17.v(var16, 6, C0.a, null) as java.lang.String;
+            var19 = var17.v(var16, 7, var18, null) as java.lang.String;
+            val var8: Void = var17.v(var16, 8, h0.a, null) as Void;
+            var2 = 511;
+            var14 = var9;
+            var5 = var4;
+            var10 = var8;
+         } else {
+            var var23: Boolean = true;
+            var var22: Int = 0;
+            var2 = 0;
+            var12 = null;
+            var11 = null;
+            var var26: java.lang.String = null;
+            var var25: Any = null;
+            var7 = null;
+            var var20: java.lang.String = null;
+            var var27: java.lang.String = null;
+            var3 = 0;
+
+            while (var23) {
+               val var6: Int = var17.x(var16);
+               switch (var6) {
+                  case -1:
+                     var23 = false;
+                     break;
+                  case 0:
+                     var22 = var17.k(var16, 0);
+                     var2 |= 1;
+                     break;
+                  case 1:
+                     var26 = var17.t(var16, 1);
+                     var2 |= 2;
+                     break;
+                  case 2:
+                     var25 = var17.m(var16, 2, UnfurledMediaItem.$serializer.INSTANCE, var25) as UnfurledMediaItem;
+                     var2 |= 4;
+                     break;
+                  case 3:
+                     var7 = var17.t(var16, 3);
+                     var2 |= 8;
+                     break;
+                  case 4:
+                     var20 = var17.t(var16, 4);
+                     var2 |= 16;
+                     break;
+                  case 5:
+                     var3 = var17.s(var16, 5);
+                     var2 |= 32;
+                     break;
+                  case 6:
+                     var27 = var17.v(var16, 6, C0.a, var27) as java.lang.String;
+                     var2 |= 64;
+                     break;
+                  case 7:
+                     var11 = var17.v(var16, 7, C0.a, var11) as java.lang.String;
+                     var2 |= 128;
+                     break;
+                  case 8:
+                     var12 = var17.v(var16, 8, h0.a, var12) as Void;
+                     var2 |= 256;
+                     break;
+                  default:
+                     throw new n(var6);
+               }
+            }
+
+            var14 = var7;
+            var10 = (Void)var12;
+            var19 = var11;
+            var7 = var27;
+            var5 = var3;
+            var11 = var20;
+            var12 = var25;
+            var13 = var26;
+            var3 = var22;
+         }
+
+         var17.b(var16);
+         return new FileDisplayComponent(var2, var3, var13, (UnfurledMediaItem)var12, var14, var11, (boolean)var5, var7, var19, var10, null);
+      }
+
+      public open fun serialize(encoder: Encoder, value: FileDisplayComponent) {
+         q.h(var1, "encoder");
+         q.h(var2, "value");
+         val var3: SerialDescriptor = this.getDescriptor();
+         val var4: CompositeEncoder = var1.c(var3);
+         FileDisplayComponent.write$Self$chat_release(var2, var4, var3);
+         var4.b(var3);
+      }
+
+      fun typeParametersSerializers(): Array<KSerializer> {
+         return fa.G.a.a(this);
+      }
+   }
+
+   public companion object {
+      public fun serializer(): KSerializer<FileDisplayComponent> {
+         return FileDisplayComponent.$serializer.INSTANCE;
+      }
+   }
+}

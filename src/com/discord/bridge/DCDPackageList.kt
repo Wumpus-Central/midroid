@@ -1,21 +1,31 @@
 package com.discord.bridge
 
 import com.discord.animated_png.react.APNGPackage
+import com.discord.audio.AudioManagerModule
 import com.discord.avatar.react.AvatarPackage
 import com.discord.blur.BlurViewPackage
 import com.discord.chat.ChatPackage
+import com.discord.device.DevicePackage
 import com.discord.emoji_picker.react.EmojiPickerPackage
+import com.discord.fast_connect.FastConnectPackage
 import com.discord.fastest_list.react.FastestListPackage
 import com.discord.portals.PortalsPackage
 import com.discord.react_gesture_handler.DiscordGestureHandlerPackage
+import com.discord.safearea.SafeAreaPackage
 import com.discord.sticker.react.StickerPackage
 import com.discord.sticker_picker.react.StickerPickerPackage
 import com.discord.suspense_visible_view.SuspenseVisibleViewPackage
 import com.discord.thumbhash.ThumbhashPackage
+import com.discord.tti_measurement_view.TTIMeasurementViewPackage
+import com.discord.wakelock.WakelockPackage
+import com.discord.zoom_layout.ZoomLayoutPackage
 import com.facebook.react.PackageList
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.ReactPackage
+import com.facebook.react.bridge.NativeModule
+import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
+import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public class DCDPackageList(host: ReactNativeHost) : PackageList {
@@ -25,76 +35,47 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
    }
 
    public open fun getPackages(): ArrayList<ReactPackage> {
-      val var1: ArrayList = super.getPackages();
-      val var2: DCDModuleProvider = DCDModuleProvider.INSTANCE;
-      var1.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(new APNGPackage());
-      var1.add(new AvatarPackage());
-      var1.add(new BlurViewPackage());
-      var1.add(new ChatPackage());
-      var1.add(new DiscordGestureHandlerPackage());
-      var1.add(new EmojiPickerPackage());
-      var1.add(new FastestListPackage());
-      var1.add(new PortalsPackage());
-      var1.add(new StickerPackage());
-      var1.add(new StickerPickerPackage());
-      var1.add(new ThumbhashPackage());
-      var1.add(new SuspenseVisibleViewPackage());
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(
-         var2.getViewManagers(
+      val var2: ArrayList = super.getPackages();
+      val var1: DCDModuleProvider = DCDModuleProvider.INSTANCE;
+      var2.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
+      var2.add(
+         var1.getViewManagers(
+            <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
@@ -105,30 +86,79 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
             <unrepresentable>.INSTANCE
          )
       );
-      var1.add(var2.getTurboPackageForModule("RTNAppIconManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNApplicationReadyManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNAppRatingRequestManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNAudioRouteEmitter", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNClientInfoManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNClipboardManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("CPUPnQModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNDeviceLocaleManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNDeviceManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNDevicePerformanceManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNFileManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("JankStatsModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("JSWatchdogModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNKeyboardManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNNativeMetricMonitor", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNMobileVoiceOverlay", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNOnDemandResource", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNNativePushNotificationMonitor", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNStartupFlags", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNThemeManager", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("TimersModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNArchitectureProvider", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNAudioManager", <unrepresentable>.INSTANCE));
-      q.e(var1);
-      return var1;
+      var2.add(var1.getTurboPackageForModule("NativeAppDatabaseModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppIconModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeApplicationReadyModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppLifecycleModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppRatingRequestModule", <unrepresentable>.INSTANCE));
+      var2.add(
+         var1.getTurboPackageForModule(
+            "NativeAudioManagerModule",
+            new Function1(AudioManagerModule.Companion) {
+               {
+                  super(
+                     1,
+                     var1,
+                     AudioManagerModule.Companion::class.java,
+                     "create",
+                     "create(Lcom/facebook/react/bridge/ReactApplicationContext;)Lcom/facebook/react/bridge/NativeModule;",
+                     0
+                  );
+               }
+
+               public final NativeModule invoke(ReactApplicationContext var1) {
+                  q.h(var1, "p0");
+                  return (super.receiver as AudioManagerModule.Companion).create(var1);
+               }
+            }
+         )
+      );
+      var2.add(var1.getTurboPackageForModule("NativeAudioPlayerModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAudioRouteEmitterModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeBrowserManagerModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCacheModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeClientInfoModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCommandClipboardModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCompressionModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCPUPnQModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeDateFormatUtilsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeFileModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeI18nModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeJankStatsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeJSWatchdogModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("RTNKeyCommandsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeKeyboardModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeMetricMonitorModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeMobileVoiceOverlayModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeOnDemandResourceModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativePushNotificationMonitorModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeReactAssetModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeStartupFlagsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeArchitectureProvider", <unrepresentable>.INSTANCE));
+      q.e(var2);
+      var1.addTurboPackages(
+         var2,
+         new APNGPackage(),
+         new AvatarPackage(),
+         new BlurViewPackage(),
+         new ChatPackage(),
+         new DevicePackage(),
+         new DiscordGestureHandlerPackage(),
+         new EmojiPickerPackage(),
+         new FastConnectPackage(),
+         new FastestListPackage(),
+         new PortalsPackage(),
+         new SafeAreaPackage(),
+         new SuspenseVisibleViewPackage(),
+         new StickerPackage(),
+         new StickerPickerPackage(),
+         new ThumbhashPackage(),
+         new TTIMeasurementViewPackage(),
+         new WakelockPackage(),
+         new ZoomLayoutPackage()
+      );
+      return var2;
    }
 }

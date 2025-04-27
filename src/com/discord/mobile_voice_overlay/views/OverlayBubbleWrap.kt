@@ -11,11 +11,9 @@ import android.view.View
 import android.view.WindowManager
 import android.view.View.OnLayoutChangeListener
 import android.view.WindowManager.LayoutParams
-import androidx.core.view.r0
 import androidx.dynamicanimation.animation.SpringAnimation
 import com.discord.mobile_voice_overlay.R
 import com.discord.mobile_voice_overlay.utils.WindowUtils
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlin.reflect.KProperty
 
@@ -77,11 +75,12 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
             q.h(var1, "property");
+            val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
-               val var5: Function1 = this.this$0.getOnMovingStateChanged();
-               if (var5 != null) {
-                  var5.invoke(var4);
+               var2 = this.this$0.getOnMovingStateChanged();
+               if (var2 != null) {
+                  var2.invoke(var5);
                }
 
                if (var4) {
@@ -129,11 +128,12 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
             q.h(var1, "property");
+            val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
-               val var5: Function1 = this.this$0.getOnMovingStateChanged();
-               if (var5 != null) {
-                  var5.invoke(var4);
+               var2 = this.this$0.getOnMovingStateChanged();
+               if (var2 != null) {
+                  var2.invoke(var5);
                }
 
                if (var4) {
@@ -181,11 +181,12 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
             q.h(var1, "property");
+            val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
-               val var5: Function1 = this.this$0.getOnMovingStateChanged();
-               if (var5 != null) {
-                  var5.invoke(var4);
+               var2 = this.this$0.getOnMovingStateChanged();
+               if (var2 != null) {
+                  var2.invoke(var5);
                }
 
                if (var4) {
@@ -264,11 +265,11 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
       q.h(var3, "screenBounds");
-      var var4: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
-      var4 = this.screenOffset[1];
-      var1 = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var4, var2), var1 - this.getHeight()));
+      val var5: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
+      val var12: Int = this.screenOffset[1];
+      val var10: Int = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var12, var2), var10 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
@@ -285,10 +286,10 @@ public abstract class OverlayBubbleWrap : OverlayView {
                   this.actualPosition.x = (int)var1.getRawX() - this.deltaX;
                   this.actualPosition.y = (int)var1.getRawY() - this.deltaY;
                   if (this.isAttachedToWindow() && this.anchorPosition == null) {
-                     val var4: LayoutParams = this.windowLayoutParams;
-                     val var3: Point = this.actualPosition;
+                     val var3: LayoutParams = this.windowLayoutParams;
+                     val var4: Point = this.actualPosition;
                      this.windowLayoutParams.x = this.actualPosition.x;
-                     var4.y = var3.y;
+                     var3.y = var4.y;
                      this.updateViewLayout();
                   }
                }
@@ -344,7 +345,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
    protected open fun onConfigurationChanged(newConfig: Configuration?) {
       super.onConfigurationChanged(var1);
       this.updateViewLayout();
-      if (r0.U(this) && !this.isLayoutRequested()) {
+      if (this.isLaidOut() && !this.isLayoutRequested()) {
          access$computeScreenOffset(this);
       } else {
          this.addOnLayoutChangeListener(new OnLayoutChangeListener(this) {

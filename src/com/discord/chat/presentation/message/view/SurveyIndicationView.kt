@@ -88,7 +88,7 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
             kotlin.jvm.internal.q.h(var1, "node");
             this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
          }
-      }, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var4, null, 12582656, null);
+      }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var4, null, 50331392, null);
       SpannableExtensionsKt.coverWithSpan(var8, new BackgroundSpanDrawer(var10));
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var10, var8);
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var10, false, 1, null);

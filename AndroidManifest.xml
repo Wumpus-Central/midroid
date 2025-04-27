@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="34" android:compileSdkVersionCodename="14" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="com.discord" platformBuildVersionCode="34" platformBuildVersionName="14">
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="35" android:compileSdkVersionCodename="15" android:requiredSplitTypes="base__abi,base__density" android:splitTypes="" package="com.discord" platformBuildVersionCode="35" platformBuildVersionName="15">
     <uses-feature android:name="android.hardware.camera" android:required="false"/>
     <uses-feature android:name="android.hardware.camera.autofocus" android:required="false"/>
     <uses-feature android:name="android.hardware.faketouch" android:required="false"/>
@@ -46,6 +47,7 @@
         <package android:name="tv.twitch.android.app"/>
         <package android:name="com.zhiliaoapp.musically"/>
         <package android:name="com.snapchat.android"/>
+        <package android:name="xyz.blueskyweb.app"/>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="xbox"/>
@@ -71,17 +73,17 @@
             <action android:name="android.media.action.IMAGE_CAPTURE"/>
         </intent>
         <intent>
-            <action android:name="android.support.customtabs.action.CustomTabsService"/>
-        </intent>
-        <intent>
             <action android:name="com.android.vending.billing.InAppBillingService.BIND"/>
         </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService"/>
+        </intent>
     </queries>
-    <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC"/>
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
     <uses-permission android:name="android.permission.MANAGE_OWN_CALLS"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
     <uses-permission android:name="com.android.vending.BILLING"/>
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
@@ -89,24 +91,11 @@
     <uses-permission android:name="com.discord.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE"/>
     <application android:allowBackup="false" android:appCategory="social" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:dataExtractionRules="@xml/data_extraction_rules" android:extractNativeLibs="false" android:fullBackupContent="@xml/data_extraction_rules_legacy" android:hardwareAccelerated="true" android:icon="@mipmap/ic_logo_square" android:label="@string/app_name" android:largeHeap="true" android:name="com.discord.MainApplication" android:networkSecurityConfig="@xml/network_security_config" android:roundIcon="@mipmap/ic_logo_round" android:supportsRtl="false" android:theme="@style/AppTheme">
-        <meta-data android:name="libdiscord_version" android:value="89.0.96-scrypt"/>
+        <meta-data android:name="libdiscord_version" android:value="90.0.3-audio-input-initialized"/>
         <meta-data android:name="com.discord.features.FLAG" android:value="1"/>
         <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
         <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:launchMode="singleTask" android:name="com.discord.share.ShareActivity" android:windowSoftInputMode="adjustResize">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND"/>
-                <action android:name="android.intent.action.SEND_MULTIPLE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <category android:name="android.intent.category.OPENABLE"/>
-                <data android:mimeType="*/*"/>
-            </intent-filter>
-            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="androidx.sharetarget.ChooserTargetServiceCompat"/>
-        </activity>
-        <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
-        </provider>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|uiMode" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.discord.main.MainActivity" android:supportsPictureInPicture="true" android:windowSoftInputMode="adjustResize">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" android:exported="true" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.discord.main.MainActivity" android:supportsPictureInPicture="true" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
@@ -135,9 +124,12 @@
                 <data android:host="discord.com" android:pathPattern="/events/.*" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPattern="/connections/.*/link" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPattern="/quests/.*" android:scheme="https"/>
+                <data android:host="l.discord.com" android:pathPattern="/a/.*" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPattern="/__development/link" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPattern="/mweb-handoff" android:scheme="https"/>
                 <data android:host="discord.com" android:pathPattern="/activate" android:scheme="https"/>
+                <data android:host="discord.com" android:pathPrefix="/activities" android:scheme="https"/>
+                <data android:host="*.discord.com" android:pathPrefix="/activities" android:scheme="https"/>
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
@@ -359,11 +351,25 @@
                 <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
         </service>
+        <activity android:exported="true" android:launchMode="singleTop" android:name="com.discord.notifications.renderer.IncomingCallActivity" android:showOnLockScreen="true" android:taskAffinity="" android:theme="@style/CallTheme" android:windowSoftInputMode="adjustResize"/>
         <receiver android:exported="false" android:name="com.discord.notifications.actions.NotificationActions">
             <intent-filter>
                 <action android:name="com.discord.intent.action.NOTIFICATION_ACTION"/>
             </intent-filter>
         </receiver>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:launchMode="singleTask" android:name="com.discord.share.ShareActivity" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.OPENABLE"/>
+                <data android:mimeType="*/*"/>
+            </intent-filter>
+            <meta-data android:name="android.service.chooser.chooser_target_service" android:value="androidx.sharetarget.ChooserTargetServiceCompat"/>
+        </activity>
+        <provider android:authorities="com.discord.file-provider" android:exported="false" android:grantUriPermissions="true" android:name="androidx.core.content.FileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+        </provider>
         <meta-data android:name="com.google.android.nearby.messages.API_KEY" android:value="AIzaSyD-4L6bgKMixqBRtrG2UktVXK6IexXlsog"/>
         <activity android:name="com.discord.samsung.SamsungConnectActivity"/>
         <receiver android:exported="true" android:name="com.discord.file_downloader.PublicFileDownloader$PublicFileDownloadBroadcastReceiver">
@@ -371,6 +377,12 @@
                 <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
             </intent-filter>
         </receiver>
+        <provider android:authorities="com.discord.imagepickerprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.imagepicker.ImagePickerProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/imagepicker_provider_paths"/>
+        </provider>
+        <provider android:authorities="com.discord.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
+        </provider>
         <service android:name="com.discord.react.headless_tasks.service.HeadlessTasksService"/>
         <meta-data android:name="io.sentry.auto-init" android:value="false"/>
         <receiver android:exported="true" android:name="com.adjust.sdk.AdjustReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
@@ -382,12 +394,22 @@
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ivpusic_imagepicker_provider_paths"/>
         </provider>
         <activity android:name="com.yalantis.ucrop.UCropActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <provider android:authorities="com.discord.imagepickerprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.imagepicker.ImagePickerProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/imagepicker_provider_paths"/>
-        </provider>
-        <provider android:authorities="com.discord.fileprovider" android:exported="false" android:grantUriPermissions="true" android:name="com.reactnativecommunity.webview.RNCWebViewFileProvider">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_provider_paths"/>
-        </provider>
+        <uses-library android:name="androidx.window.extensions" android:required="false"/>
+        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
+        <service android:exported="true" android:name="com.google.android.gms.nearby.exposurenotification.WakeUpService" android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK"/>
+        <service android:exported="true" android:name="androidx.sharetarget.ChooserTargetServiceCompat" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.chooser.ChooserTargetService"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="com.discord.SentryInitProvider" android:exported="false" android:name="io.sentry.android.core.SentryInitProvider"/>
+        <provider android:authorities="com.discord.SentryPerformanceProvider" android:exported="false" android:initOrder="200" android:name="io.sentry.android.core.SentryPerformanceProvider"/>
+        <service android:enabled="true" android:exported="false" android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder">
+            <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
+        </service>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="androidx.credentials.playservices.HiddenActivity" android:theme="@style/Theme.Hidden"/>
+        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
         <receiver android:exported="true" android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver" android:permission="com.google.android.c2dm.permission.SEND">
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
@@ -408,37 +430,23 @@
             <meta-data android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
             <meta-data android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar" android:value="com.google.firebase.components.ComponentRegistrar"/>
         </service>
-        <service android:enabled="true" android:exported="false" android:name="androidx.credentials.playservices.CredentialProviderMetadataHolder">
-            <meta-data android:name="androidx.credentials.CREDENTIAL_PROVIDER_KEY" android:value="androidx.credentials.playservices.CredentialProviderPlayServicesImpl"/>
-        </service>
-        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" android:enabled="true" android:exported="false" android:fitsSystemWindows="true" android:name="androidx.credentials.playservices.HiddenActivity" android:theme="@style/Theme.Hidden"/>
-        <activity android:excludeFromRecents="true" android:exported="false" android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
-        <service android:exported="true" android:name="com.google.android.gms.auth.api.signin.RevocationBoundService" android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" android:visibleToInstantApps="true"/>
-        <service android:exported="true" android:name="com.google.android.gms.nearby.exposurenotification.WakeUpService" android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK"/>
         <receiver android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsReceiver"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsService"/>
         <service android:enabled="true" android:exported="false" android:name="com.google.android.gms.analytics.AnalyticsJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
-        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <provider android:authorities="com.discord.firebaseinitprovider" android:directBootAware="true" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <meta-data android:name="com.google.android.play.billingclient.version" android:value="7.0.0"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivityV2" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <service android:enabled="false" android:exported="true" android:name="com.google.android.play.core.assetpacks.AssetPackExtractionService">
-            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="20100"/>
+            <meta-data android:name="com.google.android.play.core.assetpacks.versionCode" android:value="20202"/>
         </service>
         <service android:enabled="false" android:exported="false" android:foregroundServiceType="dataSync" android:name="com.google.android.play.core.assetpacks.ExtractionForegroundService"/>
-        <uses-library android:name="androidx.window.extensions" android:required="false"/>
-        <uses-library android:name="androidx.window.sidecar" android:required="false"/>
-        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
-        <service android:exported="true" android:name="androidx.sharetarget.ChooserTargetServiceCompat" android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
-            <intent-filter>
-                <action android:name="android.service.chooser.ChooserTargetService"/>
-            </intent-filter>
-        </service>
         <provider android:authorities="com.discord.androidx-startup" android:exported="false" android:name="androidx.startup.InitializationProvider">
-            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
             <meta-data android:name="androidx.work.WorkManagerInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.emoji2.text.EmojiCompatInitializer" android:value="androidx.startup"/>
             <meta-data android:name="androidx.lifecycle.ProcessLifecycleInitializer" android:value="androidx.startup"/>
+            <meta-data android:name="androidx.profileinstaller.ProfileInstallerInitializer" android:value="androidx.startup"/>
         </provider>
-        <provider android:authorities="com.discord.SentryInitProvider" android:exported="false" android:name="io.sentry.android.core.SentryInitProvider"/>
-        <provider android:authorities="com.discord.SentryPerformanceProvider" android:exported="false" android:initOrder="200" android:name="io.sentry.android.core.SentryPerformanceProvider"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_alarm_service_default" android:exported="false" android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_job_service_default" android:exported="true" android:name="androidx.work.impl.background.systemjob.SystemJobService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <service android:directBootAware="false" android:enabled="@bool/enable_system_foreground_service_default" android:exported="false" android:name="androidx.work.impl.foreground.SystemForegroundService"/>
@@ -483,21 +491,35 @@
                 <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
             </intent-filter>
         </receiver>
+        <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
         <service android:directBootAware="true" android:exported="false" android:name="androidx.room.MultiInstanceInvalidationService"/>
+        <receiver android:directBootAware="false" android:enabled="true" android:exported="true" android:name="androidx.profileinstaller.ProfileInstallReceiver" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION"/>
+            </intent-filter>
+        </receiver>
         <service android:exported="false" android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery">
             <meta-data android:name="backend:com.google.android.datatransport.cct.CctBackendFactory" android:value="cct"/>
         </service>
         <service android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:exported="false" android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"/>
-        <meta-data android:name="com.facebook.soloader.enabled" android:value="false"/>
         <activity android:exported="false" android:name="com.jakewharton.processphoenix.ProcessPhoenix" android:process=":phoenix" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="com.facebook.soloader.enabled" android:value="false"/>
         <activity android:exported="false" android:name="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" android:stateNotNeeded="true" android:theme="@style/Theme.PlayCore.Transparent"/>
-        <meta-data android:name="com.google.android.play.billingclient.version" android:value="5.2.1"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" android:exported="false" android:name="com.android.billingclient.api.ProxyBillingActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <meta-data android:name="com.android.vending.splits.required" android:value="true"/>
         <meta-data android:name="com.android.stamp.source" android:value="https://play.google.com/store"/>
         <meta-data android:name="com.android.stamp.type" android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
         <meta-data android:name="com.android.vending.splits" android:resource="@xml/splits0"/>
-        <meta-data android:name="com.android.vending.derived.apk.id" android:value="2"/>
+        <meta-data android:name="com.android.vending.derived.apk.id" android:value="3"/>
     </application>
 </manifest>

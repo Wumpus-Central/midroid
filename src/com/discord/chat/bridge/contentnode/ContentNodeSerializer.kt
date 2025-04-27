@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import hl.g
-import hl.e.i
-import jl.e
+import ea.g
+import ea.e.i
+import ga.e
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -23,7 +23,7 @@ public object ContentNodeSerializer : KSerializer {
 
       try {
          if (var1 !is e) {
-            throw new IllegalArgumentException("Failed requirement.".toString());
+            throw new IllegalArgumentException("Failed requirement.");
          }
 
          val var2: JsonElement = (var1 as e).i();

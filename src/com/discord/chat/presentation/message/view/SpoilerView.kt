@@ -14,12 +14,13 @@ import com.discord.chat.bridge.spoiler.SpoilerManager
 import com.discord.chat.databinding.SpoilerViewBinding
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import kotlin.jvm.functions.Function0
+import kotlin.jvm.functions.Function1
 
 public class SpoilerView  public constructor(context: Context, attributeSet: AttributeSet? = null) : FrameLayout {
    private final val binding: SpoilerViewBinding
    private final var isOverlayVisible: Boolean
-   private final var onHide: () -> Unit
    private final var onReveal: () -> Unit
+   private final var onHide: () -> Unit
 
    fun SpoilerView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");
@@ -36,12 +37,41 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       this.onHide = <unrepresentable>.INSTANCE;
    }
 
-   private fun configureObscureOverlay(label: String, parent: ViewGroup) {
-      val var4: View = this.binding.obscure.getOverlayView();
-      val var3: ObscureOverlayView = this.binding.obscure;
+   private fun configureObscureOverlay(label: String, parent: ViewGroup, verifyAge: Boolean?, onTapObscureToggle: (Boolean) -> Unit) {
+      val var5: View = this.binding.obscure.getOverlayView();
+      val var6: Function1;
+      if (kotlin.jvm.internal.q.c(var3, java.lang.Boolean.TRUE)) {
+         var6 = this.onObscureVerifyAgeClick(var4);
+      } else {
+         var6 = this.onObscureToggleVisibilityClick(var5, var4);
+      }
+
+      val var7: ObscureOverlayView = this.binding.obscure;
       kotlin.jvm.internal.q.g(this.binding.obscure, "obscure");
-      var3.setVisibility(0);
-      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, this.onClick(true, var4), this.onClick(false, var4));
+      var7.setVisibility(0);
+      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, new Function0(var6) {
+         final Function1 $obscureCallback;
+
+         {
+            super(0);
+            this.$obscureCallback = var1;
+         }
+
+         public final void invoke() {
+            this.$obscureCallback.invoke(java.lang.Boolean.TRUE);
+         }
+      }, new Function0(var6) {
+         final Function1 $obscureCallback;
+
+         {
+            super(0);
+            this.$obscureCallback = var1;
+         }
+
+         public final void invoke() {
+            this.$obscureCallback.invoke(java.lang.Boolean.FALSE);
+         }
+      });
    }
 
    private fun configureSpoilerOverlay(label: String) {
@@ -49,74 +79,53 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var2: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
       var2.setVisibility(0);
-      this.binding.spoiler.configure(var1, this.onClick(true, var3));
-   }
-
-   private fun onClick(showImage: Boolean, overlayView: View): () -> Unit {
-      return new Function0(this, var1, var2) {
+      this.binding.spoiler.configure(var1, new Function0(this, var3) {
          final View $overlayView;
-         final boolean $showImage;
          final SpoilerView this$0;
 
          {
             super(0);
             this.this$0 = var1;
-            this.$showImage = var2;
-            this.$overlayView = var3;
+            this.$overlayView = var2;
          }
 
          public final void invoke() {
-            var var3: Any;
-            if (this.this$0.getParent().getParent() is ViewGroup) {
-               var3 = this.this$0.getParent().getParent();
-            } else if (this.this$0.getParent() is ViewGroup) {
-               var3 = this.this$0.getParent();
-            } else {
-               var3 = this.this$0;
-            }
+            SpoilerView.access$toggleContentVisibility(this.this$0, true, this.$overlayView);
+         }
+      });
+   }
 
-            kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type android.view.ViewGroup");
-            val var5: ViewGroup = var3 as ViewGroup;
-            var var1: Byte;
-            if (this.$showImage) {
-               var1 = 2;
-            } else {
-               var1 = 1;
-            }
+   private fun onObscureToggleVisibilityClick(overlayView: View, onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
+      return new Function1(this, var1, var2) {
+         final Function1 $onTapObscureToggle;
+         final View $overlayView;
+         final SpoilerView this$0;
 
-            var3 = new androidx.transition.c(var1);
-            val var2: Boolean = this.$showImage;
-            val var4: SpoilerView = this.this$0;
-            var3.b0(150L);
-            var3.b(new androidx.transition.i(var2, var4) {
-               final boolean $showImage;
-               final SpoilerView this$0;
+         {
+            super(1);
+            this.this$0 = var1;
+            this.$overlayView = var2;
+            this.$onTapObscureToggle = var3;
+         }
 
-               {
-                  this.$showImage = var1;
-                  this.this$0 = var2x;
-               }
+         public final void invoke(boolean var1) {
+            SpoilerView.access$toggleContentVisibility(this.this$0, var1, this.$overlayView);
+            this.$onTapObscureToggle.invoke(var1);
+         }
+      };
+   }
 
-               @Override
-               public void onTransitionEnd(Transition var1) {
-                  kotlin.jvm.internal.q.h(var1, "transition");
-                  if (this.$showImage) {
-                     SpoilerView.access$getOnReveal$p(this.this$0).invoke();
-                     SpoilerView.access$setOverlayVisible$p(this.this$0, false);
-                  } else {
-                     SpoilerView.access$getOnHide$p(this.this$0).invoke();
-                     SpoilerView.access$setOverlayVisible$p(this.this$0, true);
-                  }
-               }
-            });
-            androidx.transition.j.a(var5, var3);
-            if (this.$showImage xor true) {
-               var1 = 0;
-            } else {
-               var1 = 8;
-            }
+   private fun onObscureVerifyAgeClick(onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
+      return new Function1(var1) {
+         final Function1 $onTapObscureToggle;
 
-            this.$overlayView.setVisibility(var1);
+         {
+            super(1);
+            this.$onTapObscureToggle = var1;
+         }
+
+         public final void invoke(boolean var1) {
+            this.$onTapObscureToggle.invoke(var1);
          }
       };
    }
@@ -130,13 +139,65 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var2.setVisibility(8);
    }
 
+   private fun toggleContentVisibility(showImage: Boolean, overlayView: View) {
+      var var4: Any;
+      if (this.getParent().getParent() is ViewGroup) {
+         var4 = this.getParent().getParent();
+      } else if (this.getParent() is ViewGroup) {
+         var4 = this.getParent();
+      } else {
+         var4 = this;
+      }
+
+      kotlin.jvm.internal.q.f(var4, "null cannot be cast to non-null type android.view.ViewGroup");
+      var4 = var4 as ViewGroup;
+      var var3: Byte;
+      if (var1) {
+         var3 = 2;
+      } else {
+         var3 = 1;
+      }
+
+      val var5: androidx.transition.c = new androidx.transition.c(var3);
+      var5.b0(150L);
+      var5.b(new androidx.transition.i(var1, this) {
+         final boolean $showImage;
+         final SpoilerView this$0;
+
+         {
+            this.$showImage = var1;
+            this.this$0 = var2;
+         }
+
+         @Override
+         public void onTransitionEnd(Transition var1) {
+            kotlin.jvm.internal.q.h(var1, "transition");
+            if (this.$showImage) {
+               SpoilerView.access$getOnReveal$p(this.this$0).invoke();
+               SpoilerView.access$setOverlayVisible$p(this.this$0, false);
+            } else {
+               SpoilerView.access$getOnHide$p(this.this$0).invoke();
+               SpoilerView.access$setOverlayVisible$p(this.this$0, true);
+            }
+         }
+      });
+      androidx.transition.j.a((ViewGroup)var4, var5);
+      if (!var1) {
+         var3 = 0;
+      } else {
+         var3 = 8;
+      }
+
+      var2.setVisibility(var3);
+   }
+
    public fun configure(config: SpoilerConfig?, viewToBlur: ViewGroup) {
       kotlin.jvm.internal.q.h(var2, "viewToBlur");
       if (var1 != null) {
          this.resetOverlays();
          this.isOverlayVisible = SpoilerManager.INSTANCE.isNotRevealed-V2PEE7g(var1.getAttributes().getIdentifier-Bq9X6Gg());
          if (SpoilerView.WhenMappings.$EnumSwitchMapping$0[var1.getAttributes().getType().ordinal()] == 1) {
-            this.configureObscureOverlay(var1.getAttributes().getLabel(), var2);
+            this.configureObscureOverlay(var1.getAttributes().getLabel(), var2, var1.getAttributes().getVerifyAge(), var1.getOnTapObscureToggle());
          } else {
             this.configureSpoilerOverlay(var1.getAttributes().getLabel());
          }
@@ -182,6 +243,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       this.binding.obscure.setLabelVisible(var1);
    }
 
+   public fun setOpaqueBackgroundVisible(isVisible: Boolean) {
+      this.binding.obscure.setOpaqueBackgroundVisible(var1);
+   }
+
+   public fun setRevealButtonVisible(isVisible: Boolean) {
+      this.binding.obscure.setRevealButtonVisible(var1);
+   }
+
    public companion object {
       public fun ConstraintLayout.createAndAttachSpoilerView(radiusPx: Int): SpoilerView {
          kotlin.jvm.internal.q.h(var1, "<this>");
@@ -193,11 +262,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var4.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
          var1.addView(var4);
          val var5: ConstraintSet = new ConstraintSet();
-         var5.f(var1);
-         var5.g(var4.getId(), 6, 0, 6, 0);
-         var5.g(var4.getId(), 7, 0, 7, 0);
-         var5.g(var4.getId(), 3, 0, 3, 0);
-         var5.g(var4.getId(), 4, 0, 4, 0);
+         var5.g(var1);
+         var5.h(var4.getId(), 6, 0, 6, 0);
+         var5.h(var4.getId(), 7, 0, 7, 0);
+         var5.h(var4.getId(), 3, 0, 3, 0);
+         var5.h(var4.getId(), 4, 0, 4, 0);
          var5.c(var1);
          return var4;
       }

@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.egl_renderer;
 
-import java.util.concurrent.CountDownLatch;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
 public final class a implements Runnable {
    public final EglRenderer j;
-   public final CountDownLatch k;
+   public final Function0 k;
 
    @Override
    public final void run() {
-      EglRenderer.c(this.j, this.k);
+      EglRenderer.a(this.j, this.k);
    }
 }

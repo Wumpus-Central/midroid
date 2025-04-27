@@ -1,21 +1,26 @@
 package com.discord.sticker_picker.react
 
-import com.facebook.react.ReactPackage
-import com.facebook.react.bridge.NativeModule
+import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
+import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import java.util.ArrayList
 import kotlin.jvm.internal.q
 
-public class StickerPickerPackage : ReactPackage {
-   public open fun createNativeModules(reactContext: ReactApplicationContext): MutableList<NativeModule> {
+public class StickerPickerPackage : TurboReactPackage {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return new ArrayList<>();
+      return i.e(new StickerPickerRowViewManager());
    }
 
-   public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
-      q.h(var1, "reactContext");
-      return i.q(new ViewManager[]{new StickerPickerRowViewManager()});
+   public open fun getModule(name: String, context: ReactApplicationContext): Nothing? {
+      q.h(var1, "name");
+      q.h(var2, "context");
+      return null;
+   }
+
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

@@ -1,5 +1,6 @@
 package com.discord.thumbhash
 
+import V1.c
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -10,9 +11,8 @@ import com.facebook.drawee.controller.a
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import kotlin.jvm.internal.q
-import w4.c
 
-public class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
+internal class ImageWithThumbhashPlaceholderView  public constructor(context: Context, attrs: AttributeSet? = null) : SimpleDraweeView {
    private final var placeholder: String?
    private final var placeholderVersion: Int?
    private final var uri: String?

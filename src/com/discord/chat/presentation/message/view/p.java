@@ -1,15 +1,18 @@
 package com.discord.chat.presentation.message.view;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import kotlin.jvm.functions.Function1;
+import android.view.View.OnClickListener;
+import com.facebook.drawee.span.DraweeSpanStringBuilder;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
-public final class p implements OnLongClickListener {
-   public final Function1 j;
+public final class p implements OnClickListener {
+   public final Function3 j;
    public final String k;
+   public final String l;
+   public final DraweeSpanStringBuilder m;
 
-   public final boolean onLongClick(View var1) {
-      return EmbedView.a(this.j, this.k, var1);
+   public final void onClick(View var1) {
+      EmbedView.b(this.j, this.k, this.l, this.m, var1);
    }
 }

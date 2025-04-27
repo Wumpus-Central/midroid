@@ -55,19 +55,19 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GlUtil.checkNoGLES2Error("glBindFramebuffer");
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
-      val var4: Float = var1.getRotatedWidth();
+      val var5: Float = var1.getRotatedWidth();
       val var2: Float = var1.getRotatedHeight();
-      if (var4 / var2 < (float)this.width / this.height) {
-         val var12: Float = var4 * (this.height / var2);
+      if (var5 / var2 < (float)this.width / this.height) {
+         val var10: Float = var5 * (this.height / var2);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, ci.a.b(((float)this.width - var4 * ((float)this.height / var2)) / 2.0F), 0, ci.a.b(var12), this.height
+               var1, this.rectDrawer, renderMatrix, z8.a.c(((float)this.width - var5 * ((float)this.height / var2)) / 2.0F), 0, z8.a.c(var10), this.height
             );
       } else {
-         val var13: Float = var2 * (this.width / var4);
+         val var13: Float = var2 * (this.width / var5);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, ci.a.b(((float)this.height - var2 * ((float)this.width / var4)) / 2.0F), this.width, ci.a.b(var13)
+               var1, this.rectDrawer, renderMatrix, 0, z8.a.c(((float)this.height - var2 * ((float)this.width / var5)) / 2.0F), this.width, z8.a.c(var13)
             );
       }
 
@@ -85,14 +85,14 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
    public fun onFrame(frame: VideoFrame) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -145,14 +145,14 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
    public fun release() {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:

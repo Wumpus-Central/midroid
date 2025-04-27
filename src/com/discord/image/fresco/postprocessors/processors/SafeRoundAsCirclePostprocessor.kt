@@ -1,8 +1,8 @@
 package com.discord.image.fresco.postprocessors.processors
 
+import M2.a
 import android.graphics.Bitmap
 import kotlin.jvm.internal.q
-import n6.a
 
 internal class SafeRoundAsCirclePostprocessor : a {
    public open fun process(bitmap: Bitmap) {

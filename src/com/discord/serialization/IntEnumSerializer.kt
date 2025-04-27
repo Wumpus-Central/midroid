@@ -1,7 +1,7 @@
 package com.discord.serialization
 
-import hl.g
-import hl.e.f
+import ea.g
+import ea.e.f
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -9,7 +9,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import zh.a
+import w8.a
 
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
    private final val choices: Array<Any>
@@ -22,7 +22,7 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       q.h(var1, "type");
       super();
       this.default = (T)var2;
-      val var8: java.lang.String = var1.i();
+      val var8: java.lang.String = var1.j();
       q.e(var8);
       this.serialName = var8;
       val var5: Array<Any> = a.b(var1).getEnumConstants();
@@ -40,11 +40,11 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       this.choicesNumbers = var7;
       this.descriptor = g.a(this.serialName, f.a);
       if (var7.length == this.choices.length) {
-         if (c.A(var7).size() != var7.length) {
-            throw new IllegalArgumentException("There must be no duplicates of serial numbers.".toString());
+         if (c.B(var7).size() != var7.length) {
+            throw new IllegalArgumentException("There must be no duplicates of serial numbers.");
          }
       } else {
-         throw new IllegalArgumentException("There must be exactly one serial number for every enum constant.".toString());
+         throw new IllegalArgumentException("There must be exactly one serial number for every enum constant.");
       }
    }
 
@@ -71,12 +71,12 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             throw new IllegalStateException(var11.toString().toString());
          }
       } else {
-         val var4: java.lang.String = this.serialName;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var3);
-         var6.append(" is not a valid serial value of ");
-         var6.append(var4);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append(var3);
+         var4.append(" is not a valid serial value of ");
+         var4.append(var6);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -90,14 +90,14 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       } else if (var3 != -1) {
          var1.x(this.choicesNumbers[var3]);
       } else {
-         val var5: java.lang.String = this.serialName;
-         val var7: Array<IntEnum> = this.choices;
+         val var7: java.lang.String = this.serialName;
+         val var5: Array<IntEnum> = this.choices;
          val var6: StringBuilder = new StringBuilder();
          var6.append(var2);
          var6.append(" is not a valid enum ");
-         var6.append(var5);
-         var6.append(", choices are ");
          var6.append(var7);
+         var6.append(", choices are ");
+         var6.append(var5);
          throw new IllegalStateException(var6.toString().toString());
       }
    }

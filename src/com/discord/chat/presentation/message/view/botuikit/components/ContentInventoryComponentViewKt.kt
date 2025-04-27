@@ -2,18 +2,19 @@ package com.discord.chat.presentation.message.view.botuikit.components
 
 import android.graphics.drawable.Animatable
 import android.view.View
-import androidx.core.view.r0
+import androidx.core.view.a0
 import com.discord.chat.bridge.botuikit.ContentInventoryEntry
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryClickable
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.misc.utilities.size.SizeUtilsKt
+import com.discord.primitives.UserId
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.image.ImageInfo
 import kotlin.jvm.internal.q
 
 @JvmSynthetic
-fun a(var0: ContentInventoryEntry, var1: ComponentContext, var2: java.lang.String, var3: View) {
+fun a(var0: ComponentContext, var1: ContentInventoryEntry, var2: java.lang.String, var3: View) {
    applyClickable$lambda$0(var0, var1, var2, var3);
 }
 
@@ -32,7 +33,7 @@ private fun View.applyClickable(
       var0.setOnClickListener(null);
    } else {
       var0.setContentDescription(var3.getAriaDescription());
-      var0.setOnClickListener(new c(var2, var1, var4));
+      var0.setOnClickListener(new c(var1, var2, var4));
    }
 
    val var5: Boolean;
@@ -42,15 +43,15 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   r0.J0(var0, var5);
+   a0.H0(var0, var5);
    var0.setClickable(var5);
 }
 
-fun `applyClickable$lambda$0`(var0: ContentInventoryEntry, var1: ComponentContext, var2: java.lang.String, var3: View) {
-   q.h(var0, "$entry");
-   q.h(var1, "$componentContext");
+fun `applyClickable$lambda$0`(var0: ComponentContext, var1: ContentInventoryEntry, var2: java.lang.String, var3: View) {
+   q.h(var0, "$componentContext");
+   q.h(var1, "$entry");
    q.h(var2, "$tappedElement");
-   var0.onTap(var1.getContentInventoryEventHandlers(), var2);
+   var0.getComponentActionEventHandlers().getOnTapContentInventoryEntry().invoke(UserId.box-impl(var1.getAuthorId-re6GcUE()), var1.getContentId(), var2);
 }
 
 public fun getContentControllerListener(imageView: SimpleDraweeView): ControllerListener<ImageInfo> {
@@ -62,6 +63,7 @@ public fun getContentControllerListener(imageView: SimpleDraweeView): Controller
          this.$imageView = var1;
       }
 
+      @Override
       public void onFailure(java.lang.String var1, java.lang.Throwable var2) {
       }
 
@@ -73,15 +75,18 @@ public fun getContentControllerListener(imageView: SimpleDraweeView): Controller
          }
       }
 
+      @Override
       public void onIntermediateImageFailed(java.lang.String var1, java.lang.Throwable var2) {
       }
 
       public void onIntermediateImageSet(java.lang.String var1, ImageInfo var2) {
       }
 
+      @Override
       public void onRelease(java.lang.String var1) {
       }
 
+      @Override
       public void onSubmit(java.lang.String var1, Object var2) {
       }
    };

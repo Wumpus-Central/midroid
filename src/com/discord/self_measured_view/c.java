@@ -1,11 +1,14 @@
 package com.discord.self_measured_view;
 
+import com.facebook.react.uimanager.UIManagerModule;
+
 // $VF: synthetic class
 public final class c implements Runnable {
-   public final SelfMeasuredView j;
+   public final UIManagerModule j;
+   public final SelfMeasuredView k;
 
    @Override
    public final void run() {
-      SelfMeasuredView.a(this.j);
+      SelfMeasuredView.b(this.j, this.k);
    }
 }

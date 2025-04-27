@@ -27,11 +27,11 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
       val var3: CtaButtonBinding = CtaButtonBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
-      var3.ctaButton.setDiscordFont(DiscordFont.PrimaryNormal);
+      var3.ctaButton.setDiscordFont(DiscordFont.PrimarySemibold);
    }
 
    private fun setButtonCallback(channelId: ChannelId, messageId: MessageId, callback: String?, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
-      if (var4 != null && !kotlin.text.h.x(var4)) {
+      if (var4 != null && !kotlin.text.h.d0(var4)) {
          this.binding.ctaButton.setOnClickButtonListener(new j(var5, var1, var3, var4));
          this.binding.ctaButton.setEnabled(true);
          this.binding.ctaButton.setAlpha(1.0F);
@@ -82,6 +82,8 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
       }
 
       var11.setBackgroundColor(var9);
+      this.binding.ctaButton.setTextSizeSp(14.0F);
+      this.binding.ctaButton.setCornerRadius(32);
       this.setButtonCallback-JjTCmh4(var1, var3, var7, var8);
    }
 }

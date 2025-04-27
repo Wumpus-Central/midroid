@@ -42,7 +42,6 @@ public class JSWatchdogStorage(context: Context) {
 
    public fun clear() {
       val var1: Editor = this.storage.edit();
-      q.g(var1, "editor");
       var1.clear();
       var1.apply();
    }
@@ -61,7 +60,6 @@ public class JSWatchdogStorage(context: Context) {
    public fun update(stallTime: Int, sessionId: String, trace: String?) {
       q.h(var2, "sessionId");
       val var4: Editor = this.storage.edit();
-      q.g(var4, "editor");
       var4.putInt("stall_time", var1);
       var4.putString("session_id", var2);
       if (var3 != null) {

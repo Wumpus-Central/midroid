@@ -1,12 +1,12 @@
 package com.discord.external_pip.react_events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.h
-import il.g0.a
+import fa.G
+import fa.h
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -60,7 +60,7 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -85,11 +85,11 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          var var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          if (var5) {
             var5 = var7.s(var6, 0);
          } else {
+            var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
@@ -101,7 +101,7 @@ internal data class OnPipModeChangedEvent(isInPipMode: Boolean) : ReactEvent {
                   }
 
                   var5 = var7.s(var6, 0);
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

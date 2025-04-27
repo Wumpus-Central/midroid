@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.reaction
 
-import com.discord.reactions.BurstReactionView
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import ca.f
+import ca.n
+import com.discord.reactions.ReactionView
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,8 +15,7 @@ import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
-public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) :
-   BurstReactionView.ThemedBurstColorPalette {
+public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ReactionView.ThemedBurstColorPalette {
    public open val dark: BurstReactionColorPalette
    public open val light: BurstReactionColorPalette
 
@@ -62,18 +61,18 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var2: BurstReactionColorPalette = this.light;
-      val var3: BurstReactionColorPalette = this.dark;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ThemedBurstReactionColorPalette(light=");
-      var1.append(var2);
-      var1.append(", dark=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: BurstReactionColorPalette = this.light;
+      val var1: BurstReactionColorPalette = this.dark;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ThemedBurstReactionColorPalette(light=");
+      var2.append(var3);
+      var2.append(", dark=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;

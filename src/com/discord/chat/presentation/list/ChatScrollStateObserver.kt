@@ -6,6 +6,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
 public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) : RecyclerView.OnScrollListener {
+   internal final val chatListVisibilityCalculator: ChatListVisibilityCalculator
    private final var isWatching: Boolean
    private final var scrollState: ScrollState?
    private final var scrollStateInt: Int
@@ -15,6 +16,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       q.h(var1, "scrollStateUpdated");
       super();
       this.scrollStateUpdated = var1;
+      this.chatListVisibilityCalculator = new ChatListVisibilityCalculator();
    }
 
    private fun computeScrollState(
@@ -27,9 +29,13 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          this.scrollStateInt = var2;
          val var18: RecyclerView.LayoutManager = var1.getLayoutManager();
          q.f(var18, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
-         val var26: LinearLayoutManager = var18 as LinearLayoutManager;
+         val var28: LinearLayoutManager = var18 as LinearLayoutManager;
          val var17: Boolean = (var18 as LinearLayoutManager).getReverseLayout();
-         val var6: Int = (var18 as LinearLayoutManager).findFirstVisibleItemPosition();
+         this.chatListVisibilityCalculator.updateFirstAndLastMessageVisibilityData(var1);
+         val var6: Int = this.chatListVisibilityCalculator.getFirstMessagePosition();
+         val var20: java.lang.Double = this.chatListVisibilityCalculator.getFirstMessagePercentVisible();
+         val var7: Int = this.chatListVisibilityCalculator.getLastMessagePosition();
+         val var19: java.lang.Double = this.chatListVisibilityCalculator.getLastMessagePercentVisible();
          var var10: Boolean;
          if (var6 == 0) {
             var10 = true;
@@ -37,23 +43,22 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
             var10 = false;
          }
 
-         var var21: Byte;
+         var var23: Byte;
          if (var17) {
-            var21 = 5;
+            var23 = 5;
          } else {
-            var21 = 15;
+            var23 = 15;
          }
 
          val var11: Boolean;
-         if (var6 <= var21) {
+         if (var6 <= var23) {
             var11 = true;
          } else {
             var11 = false;
          }
 
-         val var9: Int = var26.getItemCount() - 1;
-         val var8: Int = var26.findLastCompletelyVisibleItemPosition();
-         val var7: Int = var26.findLastVisibleItemPosition();
+         val var9: Int = var28.getItemCount() - 1;
+         val var8: Int = var28.findLastCompletelyVisibleItemPosition();
          val var12: Boolean;
          if (var8 == var9 && var8 >= 0) {
             var12 = true;
@@ -62,13 +67,13 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          if (var17) {
-            var21 = (byte)15;
+            var23 = (byte)15;
          } else {
-            var21 = (byte)5;
+            var23 = (byte)5;
          }
 
          val var13: Boolean;
-         if (kotlin.ranges.f.c(var9 - var21, 0) <= var8 && var8 <= var9) {
+         if (kotlin.ranges.d.c(var9 - var23, 0) <= var8 && var8 <= var9) {
             var13 = true;
          } else {
             var13 = false;
@@ -88,36 +93,36 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
             var15 = false;
          }
 
-         val var27: ScrollDirection;
+         val var29: ScrollDirection;
          if (var3 < 0) {
-            var27 = ScrollDirection.UP;
+            var29 = ScrollDirection.UP;
          } else if (var3 > 0) {
-            var27 = ScrollDirection.DOWN;
+            var29 = ScrollDirection.DOWN;
          } else {
-            var27 = null;
+            var29 = null;
          }
 
-         val var19: RecyclerView.Adapter = var1.getAdapter();
-         q.f(var19, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChannelChatListAdapter");
-         var21 = (var19 as ChannelChatListAdapter).getFirstMessageItemPosition();
+         val var21: RecyclerView.Adapter = var1.getAdapter();
+         q.f(var21, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChannelChatListAdapter");
+         var23 = (var21 as ChannelChatListAdapter).getFirstMessageItemPosition();
          val var16: Boolean;
-         if (var6 <= var21 && var21 <= var8) {
+         if (var6 <= var23 && var23 <= var8) {
             var16 = true;
          } else {
             var16 = false;
          }
 
-         val var20: ScrollState;
+         val var22: ScrollState;
          if (var17) {
-            var20 = new ScrollState(var14, var15, var11, var10, var13, var12, var27, var16, var7, var6);
+            var22 = new ScrollState(var14, var15, var11, var10, var13, var12, var29, var16, var7, var19, var6, var20);
          } else {
-            var20 = new ScrollState(var14, var15, var13, var12, var11, var10, var27, var16, var6, var7);
+            var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var6, var20, var7, var19);
          }
 
-         var10 = q.c(this.scrollState, var20);
-         this.scrollState = var20;
-         if (var4 === ChatScrollStateObserver.EmitMode.YES || var4 === ChatScrollStateObserver.EmitMode.IF_CHANGED && var10 xor true) {
-            this.scrollStateUpdated.invoke(var20);
+         var10 = q.c(this.scrollState, var22);
+         this.scrollState = var22;
+         if (var4 === ChatScrollStateObserver.EmitMode.YES || var4 === ChatScrollStateObserver.EmitMode.IF_CHANGED && !var10) {
+            this.scrollStateUpdated.invoke(var22);
          }
       }
    }
@@ -159,7 +164,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = uh.a.a(var0);
+         $ENTRIES = q8.a.a(var0);
       }
 
       @JvmStatic

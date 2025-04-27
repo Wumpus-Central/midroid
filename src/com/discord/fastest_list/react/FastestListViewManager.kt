@@ -23,25 +23,25 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
+import j8.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
-import nh.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         w.a("onUnexpectedItemSize", g0.b(OnUnexpectedItemSizeEvent.class)),
-         w.a("onLayout", g0.b(OnLayoutEvent.class)),
-         w.a("onScroll", g0.b(OnScrollEvent.class)),
-         w.a("onScrollBeginDrag", g0.b(OnScrollBeginDragEvent.class)),
-         w.a("onScrollEndDrag", g0.b(OnScrollEndDragEvent.class)),
-         w.a("onVisibleItemsChanged", g0.b(OnVisibleItemsChangedEvent.class))
+         w.a("onUnexpectedItemSize", E.b(OnUnexpectedItemSizeEvent.class)),
+         w.a("onLayout", E.b(OnLayoutEvent.class)),
+         w.a("onScroll", E.b(OnScrollEvent.class)),
+         w.a("onScrollBeginDrag", E.b(OnScrollBeginDragEvent.class)),
+         w.a("onScrollEndDrag", E.b(OnScrollEndDragEvent.class)),
+         w.a("onVisibleItemsChanged", E.b(OnVisibleItemsChangedEvent.class))
       )
 
    public open fun createShadowNodeInstance(): LayoutShadowNode {
@@ -74,7 +74,7 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
                   );
             }
          },
-         100L,
+         ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "scrollEventThrottle"),
          new Function2(this) {
             final FastestListViewManager this$0;
 
@@ -225,7 +225,7 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       if (var2 != null) {
          var1.setPlaceholderConfig(FastestListDeserializerPlaceholderConfigKt.invoke(FastestListPlaceholderConfig.Companion, var2));
       } else {
-         throw new IllegalArgumentException("Required value was null.".toString());
+         throw new IllegalArgumentException("Required value was null.");
       }
    }
 
@@ -235,8 +235,14 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       if (var2 != null) {
          var1.setRenderAhead(FastestListVisibleItemsTracker.RenderAhead.Companion.create(var2));
       } else {
-         throw new IllegalArgumentException("Required value was null.".toString());
+         throw new IllegalArgumentException("Required value was null.");
       }
+   }
+
+   @ReactProp(name = "scrollEventThrottle")
+   public open fun setScrollEventThrottle(view: FastestListView, value: Int) {
+      q.h(var1, "view");
+      var1.setScrollEventThrottle((long)var2);
    }
 
    @ReactProp(name = "sectionsVersioned")
@@ -245,7 +251,7 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       if (var2 != null) {
          var1.setSectionsVersioned(FastestListDeserializerSectionsKt.invoke(FastestListSections.Versioned.Companion, var2));
       } else {
-         throw new IllegalArgumentException("Required value was null.".toString());
+         throw new IllegalArgumentException("Required value was null.");
       }
    }
 
@@ -269,6 +275,7 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       private const val PROP_KEYBOARD_DISMISS_ON_DRAG: String
       private const val PROP_PLACEHOLDER_CONFIG: String
       private const val PROP_RENDER_AHEAD: String
+      private const val PROP_SCROLL_EVENT_THROTTLE: String
       private const val PROP_SECTIONS_VERSIONED: String
       private const val PROP_SHOWS_HORIZONTAL_SCROLL_INDICATOR: String
       private const val PROP_SHOWS_VERTICAL_SCROLL_INDICATOR: String

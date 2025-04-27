@@ -1,19 +1,53 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "n.simpleName" is null
-  at org.vineflower.kotlin.KotlinWriter.lambda$writeClass$0(KotlinWriter.java:265)
-  at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-  at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1685)
-  at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-  at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-  at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-  at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-  at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-  at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  at java.base/java.util.stream.ReferencePipeline.findAny(ReferencePipeline.java:652)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:266)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
-*/
+package com.discord.cache
+
+import com.discord.codegen.NativeCacheModuleSpec
+import com.facebook.react.bridge.Promise
+import com.facebook.react.bridge.ReactApplicationContext
+import com.facebook.react.bridge.ReadableArray
+import kotlin.jvm.internal.q
+
+public class CacheModule(reactContext: ReactApplicationContext) : NativeCacheModuleSpec {
+   init {
+      q.h(var1, "reactContext");
+      super(var1);
+   }
+
+   public override fun clear() {
+      Cache.Companion.get().clear();
+   }
+
+   public override fun getItem(key: String, promise: Promise) {
+      q.h(var1, "key");
+      q.h(var2, "promise");
+
+      try {
+         var2.resolve(Cache.Companion.get().getItem(var1));
+      } catch (var3: java.lang.Throwable) {
+         var2.reject(var3);
+         return;
+      }
+   }
+
+   public override fun refresh(exclude: ReadableArray, promise: Promise) {
+      q.h(var1, "exclude");
+      q.h(var2, "promise");
+
+      try {
+         var2.resolve(Cache.Companion.get().refresh(var1));
+      } catch (var3: java.lang.Throwable) {
+         var2.reject(var3);
+         return;
+      }
+   }
+
+   public override fun removeItem(key: String) {
+      q.h(var1, "key");
+      Cache.Companion.get().removeItem(var1);
+   }
+
+   public override fun setItem(key: String, value: String) {
+      q.h(var1, "key");
+      q.h(var2, "value");
+      Cache.Companion.get().setItem(var1, var2);
+   }
+}

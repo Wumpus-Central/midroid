@@ -42,14 +42,23 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
             return;
          }
 
-         this.setup(var1, var3.getString(0), var3.getString(1), var3.getInt(2), var3.getInt(3), var3.getInt(4), var3.getBoolean(5));
+         this.setup(var1, var3.getString(0), var3.getString(1), var3.getInt(2), var3.getInt(3), var3.getInt(4), var3.getBoolean(5), var3.getString(6));
       }
    }
 
-   public open fun setup(view: StickerView, asset: String?, url: String?, width: Int, height: Int, renderMode: Int, animating: Boolean) {
+   public open fun setup(
+      view: StickerView,
+      asset: String?,
+      url: String?,
+      width: Int,
+      height: Int,
+      renderMode: Int,
+      animating: Boolean,
+      accessibilityLabel: String?
+   ) {
       q.h(var1, "view");
       if (var2 != null && var3 != null) {
-         var1.asLottie(var3, var4, var5, var7, var2, var6);
+         var1.asLottie(var3, var4, var5, var7, var2, var6, var8);
       }
    }
 

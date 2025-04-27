@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,18 +67,18 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var1: java.lang.String = this.userId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressAvatarData(messageId=");
-      var2.append(var3);
-      var2.append(", userId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressAvatarData(messageId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -96,7 +96,7 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): LongPressAvatarData {

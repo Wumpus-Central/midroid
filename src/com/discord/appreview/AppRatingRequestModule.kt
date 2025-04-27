@@ -1,23 +1,17 @@
 package com.discord.appreview
 
 import android.app.Activity
-import com.discord.codegen.NativeAppRatingRequestManagerSpec
+import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
-@ReactModule(name = "AppRatingRequestModule")
-public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestManagerSpec {
+public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
-   }
-
-   public override fun getName(): String {
-      return "RTNAppRatingRequestManager";
    }
 
    public override fun requestRating(promise: Promise) {
@@ -54,7 +48,6 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public companion object {
-      public const val NAME: String
       private const val SUCCESS: Int
    }
 }

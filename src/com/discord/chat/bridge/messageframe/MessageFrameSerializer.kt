@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.messageframe
 
+import ga.d
+import ga.g
 import java.util.ArrayList
-import jl.d
-import jl.g
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
@@ -12,25 +12,25 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 
-public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
+public object MessageFrameSerializer : d(E.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
    @JvmStatic
    fun {
-      val var2: Array<MessageFrameType> = MessageFrameType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<MessageFrameType> = MessageFrameType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
-         g0.b(MessageFrame.class),
-         new KClass[]{g0.b(UnknownMessageFrame.class), g0.b(MessageFrameJump.class), g0.b(MessageFrameMediaViewer.class)},
+         E.b(MessageFrame.class),
+         new KClass[]{E.b(UnknownMessageFrame.class), E.b(MessageFrameJump.class), E.b(MessageFrameMediaViewer.class)},
          new KSerializer[]{UnknownMessageFrame.Companion.serializer(), MessageFrameJump.Companion.serializer(), MessageFrameMediaViewer.Companion.serializer()}
       );
    }
@@ -53,7 +53,7 @@ public object MessageFrameSerializer : d(g0.b(MessageFrame.class)) {
       }
 
       val var6: Any;
-      if (i.U(var2, var5)) {
+      if (i.V(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

@@ -1,12 +1,13 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import fa.G
+import fa.G.a
+import j8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,7 +16,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
@@ -63,7 +63,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,12 +89,12 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
          val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = TapCopyText.access$get$childSerializers$cp();
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var9: java.lang.CharSequence;
          if (var5) {
             var9 = var7.m(var6, 0, var8[0], null) as java.lang.CharSequence;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var9 = null;
 
@@ -106,7 +106,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
                   }
 
                   var9 = var7.m(var6, 0, var8[0], var9) as java.lang.CharSequence;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

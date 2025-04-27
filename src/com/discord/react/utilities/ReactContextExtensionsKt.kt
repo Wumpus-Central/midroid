@@ -10,7 +10,7 @@ public fun JavaScriptContextHolder.jsiId(): Long {
    if (var1 != 0L) {
       return var1;
    } else {
-      throw new IllegalStateException("JSI Runtime is not available.".toString());
+      throw new IllegalStateException("JSI Runtime is not available.");
    }
 }
 

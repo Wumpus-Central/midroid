@@ -1,5 +1,6 @@
 package com.discord.sounds
 
+import android.app.NotificationManager
 import android.content.Context
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
@@ -29,9 +30,28 @@ internal class SoundManager(context: Context) {
    }
 
    public fun play(key: Int) {
-      val var2: Any = this.soundPlayers.get(var1);
-      q.e(var2);
-      (var2 as SoundPlayer).play();
+      var var3: NotificationManager = (NotificationManager)this.context.getSystemService("notification");
+      q.f(var3, "null cannot be cast to non-null type android.app.NotificationManager");
+      var3 = var3;
+      var var4: SoundPlayer = this.soundPlayers.get(var1);
+      q.e(var4);
+      var4 = var4;
+      var1 = var3.getCurrentInterruptionFilter();
+      var var2: Boolean = false;
+      val var6: Boolean;
+      if (var1 == 1) {
+         var6 = true;
+      } else {
+         var6 = false;
+      }
+
+      if (var4.getUsage() == 5) {
+         var2 = true;
+      }
+
+      if (var6 || !var2) {
+         var4.play();
+      }
    }
 
    public fun prepare(key: Int, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) {

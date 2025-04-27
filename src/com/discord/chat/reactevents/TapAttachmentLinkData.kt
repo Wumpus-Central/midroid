@@ -1,13 +1,14 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import da.a
+import fa.C0
+import fa.G
+import j8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -16,7 +17,6 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import nh.w
 
 @f
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -72,7 +72,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -89,7 +89,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(b2.a)};
+         return new KSerializer[]{a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): TapAttachmentLinkData {
@@ -97,12 +97,12 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var8 = var7.v(var6, 0, C0.a, null) as java.lang.String;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -113,8 +113,8 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
                      throw new n(var4);
                   }
 
-                  var8 = var7.v(var6, 0, b2.a, var8) as java.lang.String;
-                  var2 |= 1;
+                  var8 = var7.v(var6, 0, C0.a, var8) as java.lang.String;
+                  var2 = 1;
                } else {
                   var3 = false;
                }
@@ -135,7 +135,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

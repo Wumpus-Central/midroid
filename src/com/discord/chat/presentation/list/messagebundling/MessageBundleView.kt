@@ -10,6 +10,8 @@ import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
+import ca.f
+import ca.n
 import com.discord.chat.R
 import com.discord.chat.bridge.row.MessageRow
 import com.discord.chat.bridge.row.MessageRowKt
@@ -29,11 +31,9 @@ import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.ripple.RippleUtilsKt
-import fl.f
-import fl.n
-import il.b2
-import il.f0
-import il.g0
+import fa.C0
+import fa.F
+import fa.G
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -89,14 +89,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       val var6: MessageBundleViewBinding = MessageBundleViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var6, "inflate(...)");
       this.binding = var6;
-      val var5: MessageBundleAdapter = new MessageBundleAdapter();
-      this.adapter = var5;
+      val var7: MessageBundleAdapter = new MessageBundleAdapter();
+      this.adapter = var7;
       var3 = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
       this.leftMarginPx = var3;
       val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
       this.rightMarginPx = var4;
-      val var7: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
-      this.spineItemDecoration = var7;
+      val var5: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
+      this.spineItemDecoration = var5;
       this.onTruncateMessage = <unrepresentable>.INSTANCE;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
       this.setOrientation(1);
@@ -107,11 +107,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          var9,
          var1,
          new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(8), 0, SizeUtilsKt.getDpToPx(8), false, 10, null),
-         var7,
+         var5,
          new MessageBundleHorizontalSpacingDecoration(var3, var4)
       );
       var9.setLayoutManager(new LinearLayoutManager(var1));
-      var9.setAdapter(var5);
+      var9.setAdapter(var7);
       var9.setNestedScrollingEnabled(false);
    }
 
@@ -175,10 +175,10 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var var14: Boolean;
             label61: {
                var8 = i.A0(var25, var22);
-               var30 = this.spineItemDecoration;
-               if (!(var1.getReferenceMessageRows().isEmpty() xor true)) {
-                  val var26: java.lang.String = var1.getViewMoreText();
-                  if (var26 == null || var26.length() == 0) {
+               var26 = this.spineItemDecoration;
+               if (var1.getReferenceMessageRows().isEmpty()) {
+                  val var30: java.lang.String = var1.getViewMoreText();
+                  if (var30 == null || var30.length() == 0) {
                      var14 = false;
                      break label61;
                   }
@@ -187,7 +187,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var14 = true;
             }
 
-            var30.setShowThreadSpine(var14);
+            var26.setShowThreadSpine(var14);
             val var31: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
             val var27: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
             if (var27 != null) {
@@ -211,7 +211,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var31.setVisibility(var6);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
-            this.adapter.setItems(i.b0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
+            this.adapter.setItems(i.c0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
                final Function1 $onTapReply;
 
                {
@@ -261,7 +261,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new il.f(MessageRow.$serializer.INSTANCE), null, new il.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new fa.f(MessageRow.$serializer.INSTANCE), null, new fa.f(var0), null};
       }
 
       init {
@@ -354,27 +354,27 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var1: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var5: java.util.List = this.rows;
-         val var2: java.lang.Float = this.truncationThreshold;
+         val var5: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var1: java.util.List = this.rows;
+         val var3: java.lang.Float = this.truncationThreshold;
          val var6: java.util.List = this.referenceMessageRows;
          val var4: java.lang.String = this.viewMoreText;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("MessageBundle(messageFrame=");
-         var3.append(var1);
-         var3.append(", rows=");
-         var3.append(var5);
-         var3.append(", truncationThreshold=");
-         var3.append(var2);
-         var3.append(", referenceMessageRows=");
-         var3.append(var6);
-         var3.append(", viewMoreText=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundle(messageFrame=");
+         var2.append(var5);
+         var2.append(", rows=");
+         var2.append(var1);
+         var2.append(", truncationThreshold=");
+         var2.append(var3);
+         var2.append(", referenceMessageRows=");
+         var2.append(var6);
+         var2.append(", viewMoreText=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
 
-      public object `$serializer` : g0 {
+      public object `$serializer` : G {
          public open val descriptor: SerialDescriptor
             public open get() {
                return descriptor;
@@ -398,7 +398,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var1: Array<KSerializer> = MessageBundleView.MessageBundle.access$get$childSerializers$cp();
-            return new KSerializer[]{gl.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], gl.a.u(f0.a), var1[3], gl.a.u(b2.a)};
+            return new KSerializer[]{da.a.u(MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE), var1[1], da.a.u(F.a), var1[3], da.a.u(C0.a)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.list.messagebundling.MessageBundleView.MessageBundle {
@@ -416,9 +416,9 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             if (var5) {
                var9 = var12.v(var11, 0, MessageFrameFeedHeaderView.MessageBundleHeader.$serializer.INSTANCE, null) as MessageFrameFeedHeaderView.MessageBundleHeader;
                var8 = var12.m(var11, 1, var10[1], null) as java.util.List;
-               var7 = var12.v(var11, 2, f0.a, null) as java.lang.Float;
+               var7 = var12.v(var11, 2, F.a, null) as java.lang.Float;
                var13 = var12.m(var11, 3, var10[3], null) as java.util.List;
-               var6 = var12.v(var11, 4, b2.a, null) as java.lang.String;
+               var6 = var12.v(var11, 4, C0.a, null) as java.lang.String;
                var2 = 31;
             } else {
                var var3: Boolean = true;
@@ -439,14 +439,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                                     throw new n(var4);
                                  }
 
-                                 var13 = var12.v(var11, 4, b2.a, var13) as java.lang.String;
+                                 var13 = var12.v(var11, 4, C0.a, var13) as java.lang.String;
                                  var2 |= 16;
                               } else {
                                  var6 = var12.m(var11, 3, var10[3], var6) as java.util.List;
                                  var2 |= 8;
                               }
                            } else {
-                              var7 = var12.v(var11, 2, f0.a, var7) as java.lang.Float;
+                              var7 = var12.v(var11, 2, F.a, var7) as java.lang.Float;
                               var2 |= 4;
                            }
                         } else {
@@ -480,7 +480,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return il.g0.a.a(this);
+            return fa.G.a.a(this);
          }
       }
 

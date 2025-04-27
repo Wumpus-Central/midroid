@@ -4,7 +4,9 @@ import android.view.View
 import com.discord.chat.bridge.codedlinks.GuildEventInviteEmbedImpl
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.GuildEventInviteMessageAccessory
 import com.discord.chat.presentation.message.view.GuildEventInviteView
@@ -49,14 +51,14 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "inviteAccessory");
-      val var19: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var17: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var19.getHeaderIcon(), var19.getHeaderText(), var19.getHeaderColor());
-      var17.setCreatorAvatar(var19.getCreatorAvatar());
-      var17.setBadge(var19.getBadgeIcon(), var19.getBadgeCount());
-      var17.setTitle(var19.getTitleText(), var19.getTitleColor());
-      var17.setDescription-nMRbdFE(
-         var19.getContent(),
+      val var16: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var19: GuildEventInviteView = this.guildEventInviteView;
+      this.guildEventInviteView.setHeader(var16.getHeaderIcon(), var16.getHeaderText(), var16.getHeaderColor());
+      var19.setCreatorAvatar(var16.getCreatorAvatar());
+      var19.setBadge(var16.getBadgeIcon(), var16.getBadgeCount());
+      var19.setTitle(var16.getTitleText(), var16.getTitleColor());
+      var19.setDescription-iRUqyQU(
+         var16.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
@@ -206,6 +208,18 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          },
          new Function1(this.eventHandler) {
             {
+               super(
+                  1, var1, ChatEventHandler::class.java, "onTapInlineCode", "onTapInlineCode(Lcom/discord/chat/bridge/contentnode/InlineCodeContentNode;)V", 0
+               );
+            }
+
+            public final void invoke(InlineCodeContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapInlineCode(var1);
+            }
+         },
+         new Function1(this.eventHandler) {
+            {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
 
@@ -223,18 +237,28 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                kotlin.jvm.internal.q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
+         },
+         new Function1(this.eventHandler) {
+            {
+               super(1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0);
+            }
+
+            public final void invoke(SoundmojiContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
+            }
          }
       );
-      var17.setGuild(var19.getGuildName(), var19.getGuildIcon());
-      var17.setChannel(var19.getChannelIcon(), var19.getChannelName());
-      var17.setAcceptButton(
-         var19.getAcceptLabelIcon(),
-         var19.getAcceptLabelText(),
-         var19.getAcceptLabelColor(),
-         var19.getAcceptLabelBorderColor(),
-         var19.getAcceptLabelBackgroundColor(),
+      var19.setGuild(var16.getGuildName(), var16.getGuildIcon());
+      var19.setChannel(var16.getChannelIcon(), var16.getChannelName());
+      var19.setAcceptButton(
+         var16.getAcceptLabelIcon(),
+         var16.getAcceptLabelText(),
+         var16.getAcceptLabelColor(),
+         var16.getAcceptLabelBorderColor(),
+         var16.getAcceptLabelBackgroundColor(),
          new n(this, var1)
       );
-      var17.setSecondaryButton(var19.getSecondaryActionIcon(), new o(this, var1));
+      var19.setSecondaryButton(var16.getSecondaryActionIcon(), new o(this, var1));
    }
 }

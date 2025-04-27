@@ -5,6 +5,7 @@ import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.LayerDrawable
 import android.text.style.DynamicDrawableSpan
+import com.discord.chat.bridge.rolecolors.RoleColors
 import com.discord.chat.presentation.message.viewholder.RoleDotDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.FontManager
@@ -31,11 +32,11 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
       this.topPos = SizeUtilsKt.getSpToPx(var3 * -1 / 4);
       val var5: Int = ColorUtilsKt.getThemeColor(var1, R.color.black, R.color.white);
       this.borderColor = var5;
-      val var7: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
-      this.roleDot = var7;
-      val var6: ColorDrawable = new ColorDrawable(var2);
-      this.backgroundDrawable = var6;
-      this.layerDrawable = new LayerDrawable(new Drawable[]{var6, var7});
+      val var6: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
+      this.roleDot = var6;
+      val var7: ColorDrawable = new ColorDrawable(var2);
+      this.backgroundDrawable = var7;
+      this.layerDrawable = new LayerDrawable(new Drawable[]{var7, var6});
    }
 
    public open fun getDrawable(): Drawable {
@@ -43,7 +44,8 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
       return this.layerDrawable;
    }
 
-   public fun setColor(roleColor: Int) {
-      this.roleDot.setColor(var1);
+   public fun setColors(roleColors: RoleColors) {
+      kotlin.jvm.internal.q.h(var1, "roleColors");
+      this.roleDot.setColors(var1);
    }
 }

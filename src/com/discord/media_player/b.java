@@ -9,6 +9,6 @@ public final class b implements Runnable {
 
    @Override
    public final void run() {
-      MediaPlayerManagerModule.b(this.j, this.k);
+      MediaPlayerManagerModule.a(this.j, this.k);
    }
 }

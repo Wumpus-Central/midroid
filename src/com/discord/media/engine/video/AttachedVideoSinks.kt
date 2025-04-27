@@ -1,6 +1,7 @@
 package com.discord.media.engine.video
 
 import com.discord.media.engine.MediaEngine
+import com.discord.media.engine.types.VideoSink
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArraySet
 import kotlin.jvm.functions.Function1
@@ -8,7 +9,6 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 import org.webrtc.VideoFrame
-import org.webrtc.VideoSink
 
 internal object AttachedVideoSinks {
    private final val streamOutputMap: ConcurrentHashMap<String, com.discord.media.engine.video.AttachedVideoSinks.VideoOutputSinks> = new ConcurrentHashMap()
@@ -30,7 +30,7 @@ internal object AttachedVideoSinks {
       q.h(var2, "sink");
       q.h(var3, "streamId");
       val var4: BooleanRef = new BooleanRef();
-      val var5: Any = streamOutputMap.computeIfAbsent(var3, new b(new Function1(var4, var2, var1, var3) {
+      val var5: Any = streamOutputMap.computeIfAbsent(var3, new a(new Function1(var4, var2, var1, var3) {
          final BooleanRef $isNewlyCreated;
          final MediaEngine $mediaEngine;
          final VideoSink $sink;
@@ -48,14 +48,14 @@ internal object AttachedVideoSinks {
             q.h(var1, "it");
             this.$isNewlyCreated.j = true;
             val var2: AttachedVideoSinks.VideoOutputSinks = new AttachedVideoSinks.VideoOutputSinks(this.$sink);
-            this.$mediaEngine.setVideoOutputSink$media_engine_release(this.$streamId, new Function1(var2) {
+            this.$mediaEngine.setVideoOutputSink$media_engine_release(this.$streamId, new Function2(var2) {
                {
-                  super(1, var1, AttachedVideoSinks.VideoOutputSinks::class.java, "onFrame", "onFrame(Lorg/webrtc/VideoFrame;)Z", 0);
+                  super(2, var1, AttachedVideoSinks.VideoOutputSinks::class.java, "onFrame", "onFrame(Lorg/webrtc/VideoFrame;Z)Z", 0);
                }
 
-               public final java.lang.Boolean invoke(VideoFrame var1) {
+               public final java.lang.Boolean invoke(VideoFrame var1, boolean var2x) {
                   q.h(var1, "p0");
-                  return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1);
+                  return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1, var2x);
                }
             });
             return var2;
@@ -75,7 +75,7 @@ internal object AttachedVideoSinks {
       q.h(var2, "sink");
       q.h(var3, "streamId");
       val var4: Boolean;
-      if (streamOutputMap.compute(var3, new a(new Function2(var2, var1, var3) {
+      if (streamOutputMap.compute(var3, new b(new Function2(var2, var1, var3) {
          final MediaEngine $mediaEngine;
          final VideoSink $sink;
          final java.lang.String $streamId;
@@ -91,12 +91,12 @@ internal object AttachedVideoSinks {
             q.h(var1, "<anonymous parameter 0>");
             var var5: AttachedVideoSinks.VideoOutputSinks = null;
             if (var2 != null) {
-               val var4: MediaEngine = this.$mediaEngine;
-               val var3: java.lang.String = this.$streamId;
+               val var3: MediaEngine = this.$mediaEngine;
+               val var4: java.lang.String = this.$streamId;
                var2.remove(this.$sink);
                var5 = var2;
                if (var2.isEmpty()) {
-                  var4.setVideoOutputSink$media_engine_release(var3, null);
+                  var3.setVideoOutputSink$media_engine_release(var4, null);
                   var5 = null;
                }
             }
@@ -132,12 +132,12 @@ internal object AttachedVideoSinks {
          return this.sinks.isEmpty();
       }
 
-      public fun onFrame(frame: VideoFrame): Boolean {
+      public fun onFrame(frame: VideoFrame, mirror: Boolean): Boolean {
          q.h(var1, "frame");
-         val var2: java.util.Iterator = this.sinks.iterator();
+         val var3: java.util.Iterator = this.sinks.iterator();
 
-         while (var2.hasNext()) {
-            (var2.next() as VideoSink).onFrame(var1);
+         while (var3.hasNext()) {
+            (var3.next() as VideoSink).onFrame(var1, var2);
          }
 
          var1.release();

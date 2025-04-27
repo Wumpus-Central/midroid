@@ -1,21 +1,27 @@
 package com.discord.bridge
 
+import com.discord.image.fresco.FrescoModuleDiscord
+import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
 import com.facebook.react.ReactPackage
 import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
+import com.facebook.react.turbomodule.core.interfaces.TurboModule
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import nh.w
-import oh.r
 
 public object DCDModuleProvider {
+   public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: TurboReactPackage): Boolean {
+      q.h(var1, "<this>");
+      q.h(var2, "turboPackages");
+      return i.B(var1, var2);
+   }
+
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
       q.h(var1, "onNativeModule");
       return getLegacyPackageForModuleWithViewManager$default(this, var1, null, 2, null);
@@ -43,7 +49,17 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return i.o(var3);
+            if (var3 !is FrescoModuleDiscord && var3 is TurboModule) {
+               val var4: StringBuilder = new StringBuilder();
+               var4.append(
+                  "\n                            Do not provide a TurboModule to getLegacyPackage method,\n                            use getTurboPackageForModule instead, class: "
+               );
+               var4.append(var3);
+               var4.append("\n                        ");
+               throw new IllegalArgumentException(var4.toString().toString());
+            } else {
+               return i.o(var3);
+            }
          }
 
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
@@ -72,11 +88,6 @@ public object DCDModuleProvider {
             this.$onNativeModule = var2;
          }
 
-         private static final java.util.Map getReactModuleInfoProvider$lambda$0(java.lang.String var0) {
-            q.h(var0, "$moduleName");
-            return r.m(new Pair[]{w.a(var0, new ReactModuleInfo(var0, var0, false, false, true, false, true))});
-         }
-
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             q.h(var1, "name");
             q.h(var2, "reactApplicationContext");
@@ -91,7 +102,7 @@ public object DCDModuleProvider {
          }
 
          public ReactModuleInfoProvider getReactModuleInfoProvider() {
-            return new a(this.$moduleName);
+            return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(this.$moduleName, false, 2, null);
          }
       };
    }

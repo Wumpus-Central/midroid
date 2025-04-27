@@ -1,4 +1,4 @@
-version: 2.9.3
+version: 2.11.1
 apkFileName: stable.apk
 isFrameworkApk: false
 usesFramework:
@@ -12,56 +12,23 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 249020
-  versionName: 249.20 - Stable
-resourcesAreCompressed: false
+  versionCode: 276013
+  versionName: 276.13 - Stable
 sharedLibrary: false
 sparseResources: false
-unknownFiles:
-  DebugProbesKt.bin: 8
-  asset-delivery-ktx.properties: 8
-  asset-delivery.properties: 8
-  billing-ktx.properties: 8
-  billing.properties: 8
-  client_analytics.proto: 8
-  core-common.properties: 8
-  firebase-annotations.properties: 8
-  firebase-encoders-json.properties: 8
-  firebase-encoders-proto.properties: 8
-  firebase-encoders.properties: 8
-  firebase-iid-interop.properties: 8
-  firebase-measurement-connector.properties: 8
-  googleid.properties: 8
-  kotlin-tooling-metadata.json: 8
-  messaging_event.proto: 8
-  messaging_event_extension.proto: 8
-  play-services-ads-identifier.properties: 8
-  play-services-analytics-impl.properties: 8
-  play-services-analytics.properties: 8
-  play-services-auth-api-phone.properties: 8
-  play-services-auth-base.properties: 8
-  play-services-auth.properties: 8
-  play-services-base.properties: 8
-  play-services-basement.properties: 8
-  play-services-cloud-messaging.properties: 8
-  play-services-deviceperformance.properties: 8
-  play-services-fido.properties: 8
-  play-services-nearby.properties: 8
-  play-services-stats.properties: 8
-  play-services-tagmanager-v4-impl.properties: 8
-  play-services-tasks.properties: 8
-  review-ktx.properties: 8
-  review.properties: 8
-  stamp-cert-sha256: 8
-  okhttp3/internal/publicsuffix/NOTICE: 8
-  okhttp3/internal/publicsuffix/publicsuffixes.gz: 0
+compactEntries: false
 doNotCompress:
-- resources.arsc
+- arsc
+- dex
+- jpg
+- mp3
+- png
+- webm
+- webp
 - META-INF/androidx.activity_activity.version
 - META-INF/androidx.annotation_annotation-experimental.version
 - META-INF/androidx.appcompat_appcompat-resources.version
 - META-INF/androidx.appcompat_appcompat.version
-- META-INF/androidx.arch.core_core-runtime.version
 - META-INF/androidx.autofill_autofill.version
 - META-INF/androidx.browser_browser.version
 - META-INF/androidx.cardview_cardview.version
@@ -89,19 +56,12 @@ doNotCompress:
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
 - META-INF/androidx.lifecycle_lifecycle-extensions.version
-- META-INF/androidx.lifecycle_lifecycle-livedata-core.version
-- META-INF/androidx.lifecycle_lifecycle-livedata.version
-- META-INF/androidx.lifecycle_lifecycle-process.version
-- META-INF/androidx.lifecycle_lifecycle-runtime-ktx.version
-- META-INF/androidx.lifecycle_lifecycle-runtime.version
-- META-INF/androidx.lifecycle_lifecycle-service.version
-- META-INF/androidx.lifecycle_lifecycle-viewmodel-savedstate.version
-- META-INF/androidx.lifecycle_lifecycle-viewmodel.version
 - META-INF/androidx.loader_loader.version
 - META-INF/androidx.localbroadcastmanager_localbroadcastmanager.version
 - META-INF/androidx.media_media.version
 - META-INF/androidx.metrics_metrics-performance.version
 - META-INF/androidx.print_print.version
+- META-INF/androidx.profileinstaller_profileinstaller.version
 - META-INF/androidx.recyclerview_recyclerview.version
 - META-INF/androidx.room_room-runtime.version
 - META-INF/androidx.savedstate_savedstate.version
@@ -127,12 +87,13 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/al.v
-- META-INF/services/mi.a
-- META-INF/services/vk.z
-- png
+- META-INF/services/J8.a
+- META-INF/services/S9.z
+- META-INF/services/X9.t
+- META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
+- assets/index.android.bundle
 - assets/net/time4j/calendar/names/buddhist/buddhist_bs.properties
 - assets/net/time4j/calendar/names/buddhist/buddhist_en.properties
 - assets/net/time4j/calendar/names/buddhist/buddhist_eu.properties
@@ -260,9 +221,10 @@ doNotCompress:
 - assets/net/time4j/i18n/numbers/symbol_zu.properties
 - assets/net/time4j/i18n/units/upattern_en_GB.properties
 - assets/net/time4j/olson/zones/tzname_gsw.properties
-- jpg
-- webp
-- mp3
+- okhttp3/internal/publicsuffix/publicsuffixes.gz
+- res/raw/cache_intl_aw50ba_idmessagesa0aa3774e064cca7bab0fc18be60dfdfcompiledmessages.jsona
+- res/raw/com_android_billingclient_heterodyne_info
+- res/raw/com_android_billingclient_registration_info.binarypb
 - res/raw/design_components_lottieicon_native_generated_lotties_camera.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_halloweenaction.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_halloweenidle.lottie
@@ -282,5 +244,4 @@ doNotCompress:
 - res/raw/design_components_lottieicon_native_generated_lotties_servertab.lottie
 - res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
 - res/raw/emojis_json.gz
-- webm
 - res/raw/modules_intl_messages_secondtestcompiledmessages.jsona

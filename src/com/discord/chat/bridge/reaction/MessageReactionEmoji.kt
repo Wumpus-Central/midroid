@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.reaction
 
+import ca.f
+import ca.n
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.h
+import da.a
+import fa.C0
+import fa.G
+import fa.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -129,27 +129,27 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var4: java.lang.String = this.src;
-      val var6: java.lang.String = this.displayName;
-      val var1: java.lang.String = this.id;
-      val var2: java.lang.Boolean = this.animated;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MessageReactionEmoji(name=");
-      var5.append(var3);
-      var5.append(", src=");
-      var5.append(var4);
-      var5.append(", displayName=");
-      var5.append(var6);
-      var5.append(", id=");
-      var5.append(var1);
-      var5.append(", animated=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.name;
+      val var3: java.lang.String = this.src;
+      val var4: java.lang.String = this.displayName;
+      val var2: java.lang.String = this.id;
+      val var5: java.lang.Boolean = this.animated;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MessageReactionEmoji(name=");
+      var6.append(var1);
+      var6.append(", src=");
+      var6.append(var3);
+      var6.append(", displayName=");
+      var6.append(var4);
+      var6.append(", id=");
+      var6.append(var2);
+      var6.append(", animated=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -170,8 +170,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, var1, a.u(var1), a.u(h.a)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var1, var1, a.u(var1), a.u(h.a)};
       }
 
       public open fun deserialize(decoder: Decoder): MessageReactionEmoji {
@@ -186,8 +186,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var var8: java.lang.String;
          var var13: Any;
          if (var5) {
-            var13 = b2.a;
-            var9 = var11.v(var10, 0, b2.a, null) as java.lang.String;
+            var13 = C0.a;
+            var9 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             var8 = var11.t(var10, 1);
             var7 = var11.t(var10, 2);
             var6 = var11.v(var10, 3, (DeserializationStrategy)var13, null) as java.lang.String;
@@ -215,7 +215,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
                               var13 = var11.v(var10, 4, h.a, var13) as java.lang.Boolean;
                               var2 |= 16;
                            } else {
-                              var6 = var11.v(var10, 3, b2.a, var6) as java.lang.String;
+                              var6 = var11.v(var10, 3, C0.a, var6) as java.lang.String;
                               var2 |= 8;
                            }
                         } else {
@@ -227,7 +227,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
                         var2 |= 2;
                      }
                   } else {
-                     var9 = var11.v(var10, 0, b2.a, var9) as java.lang.String;
+                     var9 = var11.v(var10, 0, C0.a, var9) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -250,7 +250,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

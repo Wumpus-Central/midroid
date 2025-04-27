@@ -10,8 +10,8 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
+import k8.n
 import kotlin.jvm.internal.q
-import oh.o
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
@@ -28,6 +28,12 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
 
    public open fun getName(): String {
       return "ClipView";
+   }
+
+   @ReactProp(name = "backgroundColor")
+   public open fun setBackgroundColor(view: ClipView, backgroundColor: Int) {
+      q.h(var1, "view");
+      var1.setBackgroundColor(var2);
    }
 
    @ReactProp(name = "borderRadius")
@@ -47,33 +53,27 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
       q.h(var1, "view");
       var1.resetCutouts();
       if (var2 != null) {
-         val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
-         if (var4 != null) {
-            val var5: java.util.Iterator = var4.iterator();
+         val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
+         if (var3 != null) {
+            val var4: java.util.Iterator = var3.iterator();
 
-            while (var5.hasNext()) {
-               val var7: ReadableMap = var2.getMap((var5 as o).c());
-               q.g(var7, "getMap(...)");
-               val var6: java.lang.String = var7.getString("shape");
-               if (var6 != null) {
-                  val var3: Int = var6.hashCode();
-                  if (var3 != -1360216880) {
-                     if (var3 == 2002554116 && var6.equals("rounded-rect")) {
-                        var1.addRoundedRectCutout(
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("width")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("height")),
-                           (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("cornerRadius"))
-                        );
-                     }
-                  } else if (var6.equals("circle")) {
-                     var1.addCircleCutout(
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("x")),
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("y")),
-                        (float)SizeUtilsKt.getDpToPx((float)var7.getDouble("size"))
-                     );
-                  }
+            while (var4.hasNext()) {
+               val var6: ReadableMap = var2.getMap((var4 as n).a());
+               val var5: java.lang.String = var6.getString("shape");
+               if (q.c(var5, "circle")) {
+                  var1.addCircleCutout(
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("size"))
+                  );
+               } else if (q.c(var5, "rounded-rect")) {
+                  var1.addRoundedRectCutout(
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("width")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("height")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("cornerRadius"))
+                  );
                }
             }
          }

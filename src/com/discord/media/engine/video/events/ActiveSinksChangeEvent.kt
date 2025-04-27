@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.h
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.h
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,18 +66,18 @@ internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.streamId;
+      val var3: java.lang.String = this.streamId;
       val var1: Boolean = this.active;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ActiveSinksChangeEvent(streamId=");
-      var3.append(var2);
-      var3.append(", active=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActiveSinksChangeEvent(streamId=");
+      var2.append(var3);
+      var2.append(", active=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -97,7 +97,7 @@ internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, h.a};
+         return new KSerializer[]{C0.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): ActiveSinksChangeEvent {

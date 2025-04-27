@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeEngine;
-import kotlin.jvm.functions.Function1;
+import com.discord.native.engine.NativeConnection;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class u implements NativeEngine.GetSupportedVideoCodecsCallback {
-   public final Function1 a;
+public final class u implements NativeConnection.MLSFailureCallback {
+   public final Function2 a;
 
    @Override
-   public final void onSupportedVideoCodecs(String[] var1) {
-      MediaEngine.e(this.a, var1);
+   public final void onMLSFailureCallback(String var1, String var2) {
+      MediaEngine.o(this.a, var1, var2);
    }
 }

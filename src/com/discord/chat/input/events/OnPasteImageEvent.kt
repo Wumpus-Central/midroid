@@ -1,12 +1,12 @@
 package com.discord.chat.input.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import da.a
+import fa.C0
+import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -84,7 +84,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -102,7 +102,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, a.u(b2.a)};
+         return new KSerializer[]{C0.a, a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): OnPasteImageEvent {
@@ -114,7 +114,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
          var var8: java.lang.String;
          if (var7.y()) {
             var8 = var7.t(var6, 0);
-            var5 = var7.v(var6, 1, b2.a, null) as java.lang.String;
+            var5 = var7.v(var6, 1, C0.a, null) as java.lang.String;
             var2 = 3;
          } else {
             var var3: Boolean = true;
@@ -130,7 +130,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
                         throw new n(var4);
                      }
 
-                     var5 = var7.v(var6, 1, b2.a, var5) as java.lang.String;
+                     var5 = var7.v(var6, 1, C0.a, var5) as java.lang.String;
                      var2 |= 2;
                   } else {
                      var8 = var7.t(var6, 0);
@@ -156,7 +156,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

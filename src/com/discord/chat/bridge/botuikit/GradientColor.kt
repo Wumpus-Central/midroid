@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import fl.f
-import fl.n
-import il.f0
-import il.g0
-import il.n0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.F
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,24 +73,24 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.r;
+      val var4: Int = this.r;
       val var3: Int = this.g;
-      val var4: Int = this.b;
+      val var2: Int = this.b;
       val var1: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GradientColor(r=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", g=");
       var5.append(var3);
       var5.append(", b=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", a=");
       var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, n0.a, n0.a, f0.a};
+         return new KSerializer[]{N.a, N.a, N.a, F.a};
       }
 
       public open fun deserialize(decoder: Decoder): GradientColor {
@@ -118,26 +118,25 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Float;
+         var var3: Int;
          var var4: Int;
          var var5: Int;
-         var var6: Int;
          val var7: Int;
          if (var10.y()) {
-            var6 = var10.k(var9, 0);
+            var4 = var10.k(var9, 0);
             var7 = var10.k(var9, 1);
-            val var3: Int = var10.k(var9, 2);
+            var3 = var10.k(var9, 2);
             var2 = var10.G(var9, 3);
-            var4 = 15;
-            var5 = var3;
+            var5 = 15;
          } else {
             var2 = 0.0F;
-            var var13: Boolean = true;
-            var6 = 0;
+            var var14: Boolean = true;
+            var var6: Int = 0;
             var5 = 0;
             var4 = 0;
-            var var11: Int = 0;
+            var3 = 0;
 
-            while (var13) {
+            while (var14) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -148,30 +147,32 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            }
 
                            var2 = var10.G(var9, 3);
-                           var11 |= 8;
+                           var3 |= 8;
                         } else {
                            var5 = var10.k(var9, 2);
-                           var11 |= 4;
+                           var3 |= 4;
                         }
                      } else {
                         var4 = var10.k(var9, 1);
-                        var11 |= 2;
+                        var3 |= 2;
                      }
                   } else {
                      var6 = var10.k(var9, 0);
-                     var11 |= 1;
+                     var3 |= 1;
                   }
                } else {
-                  var13 = false;
+                  var14 = false;
                }
             }
 
+            var5 = var3;
+            var3 = var5;
             var7 = var4;
-            var4 = var11;
+            var4 = var6;
          }
 
          var10.b(var9);
-         return new GradientColor(var4, var6, var7, var5, var2, null);
+         return new GradientColor(var5, var4, var7, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {
@@ -184,7 +185,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

@@ -1,12 +1,12 @@
 package com.discord.media_player.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.y
-import il.g0.a
+import fa.G
+import fa.y
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -105,7 +105,7 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
       return var9.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -141,11 +141,11 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
          var var17: Double;
          if (var16.y()) {
             var4 = var16.A(var15, 0);
-            var8 = var16.A(var15, 1);
+            var6 = var16.A(var15, 1);
             var17 = var16.A(var15, 2);
             val var10: Double = var16.A(var15, 3);
             var12 = 15;
-            var6 = var17;
+            var8 = var17;
             var17 = var10;
          } else {
             var8 = 0.0;
@@ -185,11 +185,12 @@ public data class MediaPlayerDownloadProgress(id: Double, progressSeconds: Doubl
             }
 
             var17 = var8;
-            var8 = var17;
+            var8 = var6;
+            var6 = var17;
          }
 
          var16.b(var15);
-         return new MediaPlayerDownloadProgress(var12, var4, var8, var6, var17, null);
+         return new MediaPlayerDownloadProgress(var12, var4, var6, var8, var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerDownloadProgress) {

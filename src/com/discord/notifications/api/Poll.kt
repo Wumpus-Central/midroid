@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -55,7 +55,7 @@ public data class Poll(question: PollMedia) {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -80,12 +80,12 @@ public data class Poll(question: PollMedia) {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: PollMedia;
          if (var5) {
             var8 = var7.m(var6, 0, PollMedia.$serializer.INSTANCE, null) as PollMedia;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -97,7 +97,7 @@ public data class Poll(question: PollMedia) {
                   }
 
                   var8 = var7.m(var6, 0, PollMedia.$serializer.INSTANCE, var8) as PollMedia;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

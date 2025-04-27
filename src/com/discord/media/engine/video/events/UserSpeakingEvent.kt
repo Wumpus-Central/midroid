@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,20 +75,20 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
 
    public override fun toString(): String {
       val var2: Int = this.connectionId;
-      val var3: java.lang.String = this.userId;
+      val var4: java.lang.String = this.userId;
       val var1: Int = this.isSpeaking;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSpeakingEvent(connectionId=");
-      var4.append(var2);
-      var4.append(", userId=");
-      var4.append(var3);
-      var4.append(", isSpeaking=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSpeakingEvent(connectionId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var4);
+      var3.append(", isSpeaking=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -107,7 +107,7 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, n0.a};
+         return new KSerializer[]{N.a, C0.a, N.a};
       }
 
       public open fun deserialize(decoder: Decoder): UserSpeakingEvent {
@@ -116,22 +116,23 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          val var8: c = var1.c(var7);
          var var3: Int;
          var var4: Int;
-         val var5: Int;
          var var9: java.lang.String;
+         var var10: Int;
          if (var8.y()) {
-            var4 = var8.k(var7, 0);
+            var10 = var8.k(var7, 0);
             var9 = var8.t(var7, 1);
-            val var2: Int = var8.k(var7, 2);
-            var5 = 7;
-            var3 = var2;
+            val var5: Int = var8.k(var7, 2);
+            var3 = 7;
+            var4 = var10;
+            var10 = var5;
          } else {
             var9 = null;
-            var var11: Boolean = true;
+            var var13: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var var10: Int = 0;
+            var10 = 0;
 
-            while (var11) {
+            while (var13) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -151,15 +152,16 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                      var10 |= 1;
                   }
                } else {
-                  var11 = false;
+                  var13 = false;
                }
             }
 
-            var5 = var10;
+            var3 = var10;
+            var10 = var3;
          }
 
          var8.b(var7);
-         return new UserSpeakingEvent(var5, var4, var9, var3, null);
+         return new UserSpeakingEvent(var3, var4, var9, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

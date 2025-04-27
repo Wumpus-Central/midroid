@@ -1,10 +1,9 @@
 package com.discord.billing
 
 import com.discord.billing.react.events.BillingManagerConnectionStateUpdated
-import com.discord.billing.react.events.BillingManagerDowngradeCommand
 import com.discord.billing.react.events.BillingManagerPurchaseStateUpdated
 import com.discord.billing.react.events.BillingManagerPurchaseUpdated
-import com.discord.billing.types.SkuType
+import com.discord.billing.types.ProductType
 import com.discord.client_info.ClientInfo
 import com.discord.reactevents.ReactEvent
 import com.discord.reactevents.ReactEvents
@@ -13,17 +12,17 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
+import j8.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
-import nh.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
-   public final val reactContext: ReactApplicationContext
+   private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
 
    init {
@@ -31,10 +30,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         w.a("billing-manager-connection-state-updated", g0.b(BillingManagerConnectionStateUpdated.class)),
-         w.a("billing-manager-purchase-updated", g0.b(BillingManagerPurchaseUpdated.class)),
-         w.a("billing-manager-downgrade-command", g0.b(BillingManagerDowngradeCommand.class)),
-         w.a("billing-manager-purchase-state-updated", g0.b(BillingManagerPurchaseStateUpdated.class))
+         w.a("billing-manager-connection-state-updated", E.b(BillingManagerConnectionStateUpdated.class)),
+         w.a("billing-manager-purchase-updated", E.b(BillingManagerPurchaseUpdated.class)),
+         w.a("billing-manager-purchase-state-updated", E.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
          final BillingManagerModule this$0;
@@ -69,19 +67,8 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
             q.h(var1, "purchaseToken");
             q.h(var2, "packageName");
-            q.h(var3, "sku");
+            q.h(var3, "product");
             BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerPurchaseUpdated(var1, var2, var3));
-         }
-      }, new Function1(this) {
-         final BillingManagerModule this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(int var1) {
-            BillingManagerModule.access$emitEvent(this.this$0, new BillingManagerDowngradeCommand(var1));
          }
       });
    }
@@ -90,9 +77,8 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       this.reactEvents.emitModuleEvent(this.reactContext, var1);
    }
 
-   private fun BillingManager.getSkus(skuIds: ReadableArray, skuType: SkuType, promise: Promise) {
+   private fun BillingManager.getProducts(productIds: ReadableArray, productType: ProductType, promise: Promise) {
       val var5: ArrayList = var2.toArrayList();
-      q.g(var5, "toArrayList(...)");
       val var7: ArrayList = new ArrayList();
 
       for (Object var6 : var5) {
@@ -101,7 +87,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var9: Function1 = new Function1(var4) {
+      val var10: Function1 = new Function1(var4) {
          final Promise $promise;
 
          {
@@ -114,9 +100,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
             this.$promise.reject(var1.getErrorCode(), var1.getReason(), var1);
          }
       };
-      val var10: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var10, "getReactApplicationContext(...)");
-      var1.getSkus(var7, var3, var4, var9, var10);
+      val var9: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var9, "getReactApplicationContext(...)");
+      var1.getProducts(var7, var3, var4, var10, var9);
    }
 
    @ReactMethod
@@ -160,10 +146,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    }
 
    @ReactMethod
-   public fun getIAPSkus(skuIds: ReadableArray, promise: Promise) {
-      q.h(var1, "skuIds");
+   public fun getIAPSkus(productIds: ReadableArray, promise: Promise) {
+      q.h(var1, "productIds");
       q.h(var2, "promise");
-      this.getSkus(this.billingManager, var1, SkuType.IAP, var2);
+      this.getProducts(this.billingManager, var1, ProductType.IAP, var2);
    }
 
    public open fun getName(): String {
@@ -171,10 +157,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    }
 
    @ReactMethod
-   public fun getSubscriptionSkus(skuIds: ReadableArray, promise: Promise) {
-      q.h(var1, "skuIds");
+   public fun getSubscriptionSkus(productIds: ReadableArray, promise: Promise) {
+      q.h(var1, "productIds");
       q.h(var2, "promise");
-      this.getSkus(this.billingManager, var1, SkuType.SUBSCRIPTIONS, var2);
+      this.getProducts(this.billingManager, var1, ProductType.SUBSCRIPTIONS, var2);
    }
 
    @ReactMethod
@@ -215,11 +201,11 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    }
 
    @ReactMethod
-   public fun purchase(skuId: String, userId: String, promise: Promise) {
-      q.h(var1, "skuId");
+   public fun purchase(productId: String, userId: String, promise: Promise) {
+      q.h(var1, "productId");
       q.h(var2, "userId");
       q.h(var3, "promise");
-      BillingManager.purchase$default(this.billingManager, this.getCurrentActivity(), var1, SkuType.IAP, var2, null, null, null, new Function0(var3) {
+      BillingManager.purchase$default(this.billingManager, this.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new Function0(var3) {
          final Promise $promise;
 
          {
@@ -250,11 +236,11 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    }
 
    @ReactMethod
-   public fun subscribe(skuId: String, userId: String, oldSkuId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      q.h(var1, "skuId");
+   public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
+      q.h(var1, "productId");
       q.h(var2, "userId");
       q.h(var6, "promise");
-      this.billingManager.purchase(this.getCurrentActivity(), var1, SkuType.SUBSCRIPTIONS, var2, var3, var4, var5, new Function0(var6) {
+      this.billingManager.purchase(this.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new Function0(var6) {
          final Promise $promise;
 
          {

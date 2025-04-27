@@ -5,38 +5,34 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
+import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.chat.presentation.message.messagepart.MessageComponentsAccessory
-import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
+import com.discord.chat.presentation.message.view.botuikit.ComponentActionEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
-import com.discord.chat.presentation.message.view.botuikit.ContentInventoryEventHandlers
+import com.discord.chat.presentation.message.view.botuikit.GeneralEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderOptions
 import com.discord.chat.presentation.message.view.botuikit.MediaItemEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.MessageComponentsView
-import com.discord.chat.presentation.message.view.botuikit.UserEventHandlers
+import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
 
-public class MessageComponentsViewHolder(messageComponentsView: MessageComponentsView, eventHandler: ChatEventHandler)
-   : MessagePartViewHolder,
-   ComponentActionListener {
+public class MessageComponentsViewHolder(messageComponentsView: MessageComponentsView) : MessagePartViewHolder {
    private final val messageComponentsView: MessageComponentsView
-   private final val eventHandler: ChatEventHandler
-   public final var messageId: MessageId
 
    init {
       kotlin.jvm.internal.q.h(var1, "messageComponentsView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
       super(var1, null);
       this.messageComponentsView = var1;
-      this.eventHandler = var2;
-      this.messageId = MessageId.constructor-impl("0");
    }
 
    public fun bind(
@@ -45,40 +41,71 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       onMediaItemClicked: (View, String, Int?, Double?) -> Unit,
       onMediaItemLongClicked: ((String, Int?) -> Unit)?,
       onTapSpoiler: () -> Unit,
+      onTapObscureToggle: (Boolean) -> Unit,
       eventHandler: ChatEventHandler
    ) {
       kotlin.jvm.internal.q.h(var1, "componentsComponentsAccessory");
       kotlin.jvm.internal.q.h(var3, "onMediaItemClicked");
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
-      kotlin.jvm.internal.q.h(var6, "eventHandler");
-      val var9: Message = var1.getMessage();
-      var var10: java.lang.String = var1.getMessageId-3Eiw7ao();
-      this.messageId = var10;
-      var10 = MessageId.toString-impl(var10);
-      val var11: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var9.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var9),
-         MessageKt.shouldShowLinkDecorations(var9),
-         var9.getShouldShowRoleDot(),
-         var9.getShouldShowRoleOnName()
+      kotlin.jvm.internal.q.h(var6, "onTapObscureToggle");
+      kotlin.jvm.internal.q.h(var7, "eventHandler");
+      val var12: Message = var1.getMessage();
+      val var16: java.lang.String = var1.getMessageId-3Eiw7ao();
+      var var8: Int = var1.getConstrainedWidth();
+      var var9: Boolean;
+      if (var12.getForwardInfo() != null) {
+         var9 = true;
+      } else {
+         var9 = false;
+      }
+
+      if (MessageAccessoriesView.Companion.getWidth(var8, var9) >= SizeUtilsKt.getDpToPx(480)) {
+         var9 = true;
+      } else {
+         var9 = false;
+      }
+
+      val var14: java.lang.String = MessageId.toString-impl(var16);
+      val var15: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var16) {
+         final ChatEventHandler $eventHandler;
+         final java.lang.String $messageId;
+
+         {
+            super(2);
+            this.$eventHandler = var1;
+            this.$messageId = var2;
+         }
+
+         public final void invoke(java.lang.String var1, java.lang.String var2) {
+            kotlin.jvm.internal.q.h(var1, "url");
+            kotlin.jvm.internal.q.h(var2, "title");
+            this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, var2);
+         }
+      }, var5);
+      val var13: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+         MessageId.toString-impl(var12.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var12),
+         MessageKt.shouldShowLinkDecorations(var12),
+         var12.getShouldShowRoleDot(),
+         var12.getShouldShowRoleOnName()
       );
-      val var28: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
-         new Function1(var6, this) {
+      val var35: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
+         new Function1(var7, var16) {
             final ChatEventHandler $eventHandler;
-            final MessageComponentsViewHolder this$0;
+            final java.lang.String $messageId;
 
             {
                super(1);
                this.$eventHandler = var1;
-               this.this$0 = var2;
+               this.$messageId = var2;
             }
 
             public final void invoke(LinkContentNode var1) {
                kotlin.jvm.internal.q.h(var1, "node");
-               this.$eventHandler.onLinkClicked-ntcYbpo(this.this$0.getMessageId-3Eiw7ao(), var1);
+               this.$eventHandler.onLinkClicked-ntcYbpo(this.$messageId, var1);
             }
          },
-         new Function1(var6) {
+         new Function1(var7) {
             {
                super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
             }
@@ -88,7 +115,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
             }
          },
-         new Function3(var6) {
+         new Function3(var7) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -98,7 +125,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          },
-         new Function4(var6) {
+         new Function4(var7) {
             {
                super(
                   4,
@@ -115,7 +142,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onLongPressChannel(var1, var2, var3, var4);
             }
          },
-         new Function1(var6) {
+         new Function1(var7) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapAttachmentLink", "onTapAttachmentLink(Ljava/lang/String;)V", 0);
             }
@@ -125,7 +152,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onTapAttachmentLink(var1);
             }
          },
-         new Function2(var6) {
+         new Function2(var7) {
             {
                super(2, var1, ChatEventHandler::class.java, "onLongPressAttachmentLink", "onLongPressAttachmentLink(Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -136,7 +163,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onLongPressAttachmentLink(var1, var2);
             }
          },
-         new Function4(var6) {
+         new Function4(var7) {
             {
                super(
                   4,
@@ -153,7 +180,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
             }
          },
-         new Function1(var6) {
+         new Function1(var7) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapCommand", "onTapCommand(Lcom/discord/chat/bridge/contentnode/CommandMentionContentNode;)V", 0);
             }
@@ -163,7 +190,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onTapCommand(var1);
             }
          },
-         new Function1(var6) {
+         new Function1(var7) {
             {
                super(
                   1,
@@ -181,7 +208,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             }
          },
          var5,
-         new Function1(var6) {
+         new Function1(var7) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
             }
@@ -191,7 +218,19 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                (super.receiver as ChatEventHandler).onTapTimestamp(var1);
             }
          },
-         new Function1(var6) {
+         new Function1(var7) {
+            {
+               super(
+                  1, var1, ChatEventHandler::class.java, "onTapInlineCode", "onTapInlineCode(Lcom/discord/chat/bridge/contentnode/InlineCodeContentNode;)V", 0
+               );
+            }
+
+            public final void invoke(InlineCodeContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapInlineCode(var1);
+            }
+         },
+         new Function1(var7) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
@@ -200,9 +239,19 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
                kotlin.jvm.internal.q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapEmoji(var1);
             }
+         },
+         new Function1(var7) {
+            {
+               super(1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0);
+            }
+
+            public final void invoke(SoundmojiContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
+            }
          }
       );
-      val var24: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var6) {
+      val var29: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var7) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -211,75 +260,82 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             kotlin.jvm.internal.q.h(var1, "p0");
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
-      });
-      val var22: UserEventHandlers = new UserEventHandlers(new Function1(var6, this) {
+      }, var6);
+      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var16) {
          final ChatEventHandler $eventHandler;
-         final MessageComponentsViewHolder this$0;
+         final java.lang.String $messageId;
 
          {
             super(1);
             this.$eventHandler = var1;
-            this.this$0 = var2;
+            this.$messageId = var2;
          }
 
-         public final void invoke_XF5_Sv8/* $VF was: invoke-XF5-Sv8*/(long var1) {
-            this.$eventHandler.onTapUsername-x5gers8(this.this$0.getMessageId-3Eiw7ao(), var1);
+         public final void invoke(java.lang.String var1) {
+            kotlin.jvm.internal.q.h(var1, "componentId");
+            this.$eventHandler.onTapButtonActionComponent-ntcYbpo(this.$messageId, var1);
          }
-      }, new Function1(var6, this) {
+      }, new Function1(var7, var16) {
          final ChatEventHandler $eventHandler;
-         final MessageComponentsViewHolder this$0;
+         final java.lang.String $messageId;
 
          {
             super(1);
             this.$eventHandler = var1;
-            this.this$0 = var2;
+            this.$messageId = var2;
          }
 
-         public final void invoke_XF5_Sv8/* $VF was: invoke-XF5-Sv8*/(long var1) {
-            this.$eventHandler.onTapAvatar-x5gers8(this.this$0.getMessageId-3Eiw7ao(), var1);
+         public final void invoke(java.lang.String var1) {
+            kotlin.jvm.internal.q.h(var1, "url");
+            this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, "");
          }
-      });
-      val var25: ContentInventoryEventHandlers = new ContentInventoryEventHandlers(new Function3(var6, this) {
+      }, new Function1(var7, var16) {
          final ChatEventHandler $eventHandler;
-         final MessageComponentsViewHolder this$0;
+         final java.lang.String $messageId;
+
+         {
+            super(1);
+            this.$eventHandler = var1;
+            this.$messageId = var2;
+         }
+
+         public final void invoke(java.lang.String var1) {
+            kotlin.jvm.internal.q.h(var1, "componentId");
+            this.$eventHandler.onTapSelectActionComponent-ntcYbpo(this.$messageId, var1);
+         }
+      }, new Function3(var7, var16) {
+         final ChatEventHandler $eventHandler;
+         final java.lang.String $messageId;
 
          {
             super(3);
             this.$eventHandler = var1;
-            this.this$0 = var2;
+            this.$messageId = var2;
          }
 
          public final void invoke_lle484o/* $VF was: invoke-lle484o*/(long var1, java.lang.String var3, java.lang.String var4) {
             kotlin.jvm.internal.q.h(var3, "contentId");
             kotlin.jvm.internal.q.h(var4, "tappedElement");
-            this.$eventHandler.onTapContentInventoryEntryEmbed-tsfjtEQ(this.this$0.getMessageId-3Eiw7ao(), var1, var3, var4);
+            this.$eventHandler.onTapContentInventoryEntryEmbed-tsfjtEQ(this.$messageId, var1, var3, var4);
          }
       });
-      val var7: Int = var1.getConstrainedWidth();
-      val var26: java.lang.Boolean = var9.getGifAutoPlay();
-      val var8: Boolean;
-      if (var26 != null) {
-         var8 = var26;
+      var8 = var1.getConstrainedWidth();
+      val var31: java.lang.Boolean = var12.getGifAutoPlay();
+      val var10: Boolean;
+      if (var31 != null) {
+         var10 = var31;
       } else {
-         var8 = false;
+         var10 = false;
+      }
+
+      val var11: Boolean;
+      if (var12.getForwardInfo() != null) {
+         var11 = true;
+      } else {
+         var11 = false;
       }
 
       this.messageComponentsView
-         .setComponents(var2, var1.getMessageComponents(), new ComponentContext(var10, var11, var28, var24, var22, var25, var7, var8), this);
-   }
-
-   public override fun onTapButtonActionComponent(componentId: String) {
-      kotlin.jvm.internal.q.h(var1, "componentId");
-      this.eventHandler.onTapButtonActionComponent-ntcYbpo(this.messageId, var1);
-   }
-
-   public override fun onTapSelectActionComponent(componentId: String) {
-      kotlin.jvm.internal.q.h(var1, "componentId");
-      this.eventHandler.onTapSelectActionComponent-ntcYbpo(this.messageId, var1);
-   }
-
-   public override fun openLink(url: String) {
-      kotlin.jvm.internal.q.h(var1, "url");
-      this.eventHandler.onLinkClicked-u7_MRrM(this.messageId, var1, "");
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var14, var15, var13, var35, var29, var32, var8, var9, var10, var11, false));
    }
 }

@@ -1,15 +1,14 @@
 package com.discord.crash_reporting.system_logs
 
+import G0.e
+import G0.f
+import G0.g
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import e2.e
-import e2.f
-import e2.g
-import kotlin.jvm.internal.q
-import nh.w
-import oh.r
+import j8.w
+import k8.q
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -18,9 +17,9 @@ internal object HistoricalProcessExitReason {
    fun {
       val var0: java.util.Map;
       if (VERSION.SDK_INT < 30) {
-         var0 = r.h();
+         var0 = q.h();
       } else {
-         var0 = r.l(
+         var0 = q.l(
             new Pair[]{
                w.a(6, "ANR"),
                w.a(4, "CRASH"),
@@ -44,7 +43,7 @@ internal object HistoricalProcessExitReason {
    }
 
    public fun lastReason(context: Context): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason? {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       if (VERSION.SDK_INT < 30) {
          return null;
       } else {
@@ -59,8 +58,8 @@ internal object HistoricalProcessExitReason {
             return null;
          } else {
             var5 = e.a((ActivityManager)var5, null, 0, 1);
-            q.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = f.a(i.g0((java.util.List)var5));
+            kotlin.jvm.internal.q.g(var5, "getHistoricalProcessExitReasons(...)");
+            val var4: ApplicationExitInfo = f.a(i.h0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
@@ -85,7 +84,7 @@ internal object HistoricalProcessExitReason {
       public final val reason: String
 
       init {
-         q.h(var1, "reason");
+         kotlin.jvm.internal.q.h(var1, "reason");
          super();
          this.reason = var1;
          this.description = var2;
@@ -100,7 +99,7 @@ internal object HistoricalProcessExitReason {
       }
 
       public fun copy(reason: String = var0.reason, description: String? = var0.description): com.discord.crash_reporting.system_logs.HistoricalProcessExitReason.Reason {
-         q.h(var1, "reason");
+         kotlin.jvm.internal.q.h(var1, "reason");
          return new HistoricalProcessExitReason.Reason(var1, var2);
       }
 
@@ -111,10 +110,10 @@ internal object HistoricalProcessExitReason {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.reason, var1.reason)) {
+            if (!kotlin.jvm.internal.q.c(this.reason, var1.reason)) {
                return false;
             } else {
-               return q.c(this.description, var1.description);
+               return kotlin.jvm.internal.q.c(this.description, var1.description);
             }
          }
       }
@@ -133,14 +132,14 @@ internal object HistoricalProcessExitReason {
 
       public override fun toString(): String {
          val var2: java.lang.String = this.reason;
-         val var1: java.lang.String = this.description;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Reason(reason=");
-         var3.append(var2);
-         var3.append(", description=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.description;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Reason(reason=");
+         var1.append(var2);
+         var1.append(", description=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

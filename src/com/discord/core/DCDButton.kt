@@ -1,7 +1,10 @@
 package com.discord.core
 
+import Q5.k
+import Q5.k.b
 import android.content.Context
 import android.content.res.ColorStateList
+import android.graphics.drawable.Drawable
 import android.text.TextUtils.TruncateAt
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -18,8 +21,6 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.internal.q
-import pc.k
-import pc.k.b
 
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DcdButtonBinding
@@ -139,6 +140,12 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    public fun setDiscordFont(font: DiscordFont) {
       q.h(var1, "font");
       DiscordFontUtilsKt.setDiscordFont(this.button, var1);
+   }
+
+   public fun setDrawableBackground(drawable: Drawable) {
+      q.h(var1, "drawable");
+      this.button.setBackground(var1);
+      this.button.setBackgroundTintList(null);
    }
 
    public open fun setEnabled(enabled: Boolean) {

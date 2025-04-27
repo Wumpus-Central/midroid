@@ -1,11 +1,11 @@
 package com.discord.app_database
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
-import il.x0
+import ca.f
+import ca.n
+import da.a
+import fa.C0
+import fa.G
+import fa.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -91,7 +91,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, x0.a, a.u(b2.a)};
+         return new KSerializer[]{C0.a, Y.a, a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): NonGuildVersion {
@@ -124,7 +124,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          if (var9.y()) {
             var7 = var9.t(var8, 0);
             var5 = var9.h(var8, 1);
-            var10 = var9.v(var8, 2, b2.a, null) as java.lang.String;
+            var10 = var9.v(var8, 2, C0.a, null) as java.lang.String;
             var2 = 7;
          } else {
             var5 = 0L;
@@ -142,7 +142,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
                            throw new n(var4);
                         }
 
-                        var10 = var9.v(var8, 2, b2.a, var10) as java.lang.String;
+                        var10 = var9.v(var8, 2, C0.a, var10) as java.lang.String;
                         var2 |= 4;
                      } else {
                         var5 = var9.h(var8, 1);
@@ -172,7 +172,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

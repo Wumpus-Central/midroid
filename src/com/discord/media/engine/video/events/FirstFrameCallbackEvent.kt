@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.events
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.n0
-import il.x0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.N
+import fa.Y
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -86,23 +86,23 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var5: java.lang.String = this.userId;
+      val var6: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var6: java.lang.String = this.streamId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("FirstFrameCallbackEvent(connectionId=");
-      var4.append(var1);
-      var4.append(", userId=");
-      var4.append(var5);
-      var4.append(", ssrc=");
-      var4.append(var2);
-      var4.append(", streamId=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.streamId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FirstFrameCallbackEvent(connectionId=");
+      var5.append(var1);
+      var5.append(", userId=");
+      var5.append(var6);
+      var5.append(", ssrc=");
+      var5.append(var2);
+      var5.append(", streamId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -124,7 +124,7 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, b2.a, x0.a, b2.a};
+         return new KSerializer[]{N.a, C0.a, Y.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): FirstFrameCallbackEvent {
@@ -137,12 +137,12 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          var var8: java.lang.String;
          val var9: java.lang.String;
          if (var11.y()) {
-            var2 = var11.k(var10, 0);
-            var8 = var11.t(var10, 1);
+            var3 = var11.k(var10, 0);
+            var9 = var11.t(var10, 1);
             var6 = var11.h(var10, 2);
             val var12: java.lang.String = var11.t(var10, 3);
-            var3 = 15;
-            var9 = var12;
+            var2 = 15;
+            var8 = var12;
          } else {
             var var13: java.lang.String = null;
             var var4: Boolean = true;
@@ -180,14 +180,11 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                }
             }
 
-            var3 = var2;
-            var9 = var8;
-            var8 = var13;
-            var2 = var3;
+            var9 = var13;
          }
 
          var11.b(var10);
-         return new FirstFrameCallbackEvent(var3, var2, var8, var6, var9, null);
+         return new FirstFrameCallbackEvent(var2, var3, var9, var6, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

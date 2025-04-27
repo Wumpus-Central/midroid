@@ -105,9 +105,9 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       kotlin.jvm.internal.q.h(var1, "accessory");
       kotlin.jvm.internal.q.h(var2, "eventHandler");
-      val var6: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
-      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var6, null, 1, null));
-      val var7: Attachment = var1.getAttachment();
+      val var7: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
+      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var7, null, 1, null));
+      val var8: Attachment = var1.getAttachment();
       val var9: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
@@ -119,37 +119,37 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var8: AudioPlayerView = this.view;
+      val var6: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var4: ByteArray = var7.getWaveformByteArray();
+      val var4: ByteArray = var8.getWaveformByteArray();
       val var11: Unit;
       if (var4 != null) {
-         var8.setSampleData(var4);
+         var6.setSampleData(var4);
          var11 = Unit.a;
       } else {
          var11 = null;
       }
 
       if (var11 == null) {
-         var8.setAudioFileDetails(var1.getAttachment());
+         var6.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var10: java.lang.Float = var7.getDurationSecs();
+      val var10: java.lang.Float = var8.getDurationSecs();
       var var12: Unit = null;
       if (var10 != null) {
-         var8.setDurationMs((long)(var10.floatValue() * (float)1000));
+         var6.setDurationMs((long)(var10.floatValue() * (float)1000));
          var12 = Unit.a;
       }
 
       if (var12 == null) {
-         var8.setUnknownDuration();
+         var6.setUnknownDuration();
       }
 
-      var8.setUploadProgress(var9);
-      var8.setOnLongPress(new d(var3, var1));
-      var8.shouldAnimate(var7.isAnimated());
-      var8.setContainerBackgroundColor(var1.getColor());
-      var8.setListener(new AudioPlayerView.Listener(var7, var2, var1, var6) {
+      var6.setUploadProgress(var9);
+      var6.setOnLongPress(new d(var3, var1));
+      var6.shouldAnimate(var8.isAnimated());
+      var6.setContainerBackgroundColor(var1.getColor());
+      var6.setListener(new AudioPlayerView.Listener(var8, var2, var1, var7) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;
@@ -170,29 +170,29 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var3 = var7;
             } else {
                val var13: MediaPlayer = AudioPlayerManager.INSTANCE.getPlayer(this.$audioSource);
-               val var5: Long;
+               val var4: Long;
                if (var13 != null) {
-                  var5 = var13.durationMs();
+                  var4 = var13.durationMs();
                } else {
-                  var5 = 0L;
+                  var4 = 0L;
                }
 
-               var3 = (float)var5 * 1000.0F;
+               var3 = (float)var4 * 1000.0F;
             }
 
-            val var10: ChatEventHandler = this.$eventHandler;
-            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var9: ChatEventHandler = this.$eventHandler;
+            val var10: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var14: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var14 != null) {
                val var11: Long = var14.unbox-impl();
-               val var4: Boolean = this.$accessory.isVoiceMessage();
+               val var6: Boolean = this.$accessory.isVoiceMessage();
                val var8: java.lang.String = this.$accessory.getAttachment().getId();
                var var15: java.lang.String = var8;
                if (var8 == null) {
                   var15 = "";
                }
 
-               var10.mediaAttachmentPlaybackEnded-O97gnAM(var9, var3, var1, var11, var2, var4, var15);
+               var9.mediaAttachmentPlaybackEnded-O97gnAM(var10, var3, var1, var11, var2, var6, var15);
             }
          }
 
@@ -214,8 +214,8 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var2 = (float)var3 * 1000.0F;
             }
 
-            val var8: ChatEventHandler = this.$eventHandler;
-            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var9: ChatEventHandler = this.$eventHandler;
+            val var8: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var13: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var13 != null) {
                val var10: Long = var13.unbox-impl();
@@ -226,7 +226,7 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                   var14 = "";
                }
 
-               var8.mediaAttachmentPlaybackStarted-jd4C3YQ(var9, var2, var1, var10, var5, var14);
+               var9.mediaAttachmentPlaybackStarted-jd4C3YQ(var8, var2, var1, var10, var5, var14);
             }
          }
 

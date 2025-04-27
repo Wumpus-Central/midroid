@@ -1,13 +1,12 @@
 package com.discord.timers.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -47,8 +46,8 @@ internal data class TimerEvent(id: Int) : ReactEvent {
       return Integer.hashCode(this.id);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -60,7 +59,7 @@ internal data class TimerEvent(id: Int) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -77,7 +76,7 @@ internal data class TimerEvent(id: Int) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a};
+         return new KSerializer[]{N.a};
       }
 
       public open fun deserialize(decoder: Decoder): TimerEvent {
@@ -85,12 +84,12 @@ internal data class TimerEvent(id: Int) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var3: Int = 1;
-         var var4: Boolean = true;
+         var var3: Byte = 1;
          var var2: Int;
          if (var6) {
             var2 = var8.k(var7, 0);
          } else {
+            var var4: Boolean = true;
             var2 = 0;
             var3 = 0;
 
@@ -102,7 +101,7 @@ internal data class TimerEvent(id: Int) : ReactEvent {
                   }
 
                   var2 = var8.k(var7, 0);
-                  var3 |= 1;
+                  var3 = 1;
                } else {
                   var4 = false;
                }

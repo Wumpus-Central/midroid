@@ -3,9 +3,9 @@ package com.discord.chrome_custom_tabs
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.net.Uri
+import androidx.browser.customtabs.a
+import androidx.browser.customtabs.b
 import kotlin.jvm.internal.q
-import m.a
-import m.b
 
 public object CustomTabs {
    public fun openUrlWithCustomTabs(
@@ -25,13 +25,13 @@ public object CustomTabs {
       if (CustomTabsPackages.INSTANCE.getCustomTabsDefaultPackage(var1) != null) {
          val var10: a = new a.a().b(var4).d(var4).c(var4).a();
          q.g(var10, "build(...)");
-         val var13: b.a = new b.a().b(var10).e(var3);
+         val var13: b.d = new b.d().c(var10).g(var3);
          if (var5 != null && var6 != null) {
-            var13.f(var1, var5, var6);
+            var13.h(var1, var5, var6);
          }
 
          if (var7 != null && var8 != null) {
-            var13.c(var1, var7, var8);
+            var13.d(var1, var7, var8);
          }
 
          val var12: b = var13.a();

@@ -28,7 +28,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private final var intervalNanos: Int
    private final var lastFrameTimestamp: Long?
    private final val lastMeasuredSize: Rect
-   private final var maxDimension: Int
+   private final var maxPixelCount: Int
    private final lateinit var nativeObserver: NativeCapturerObserver
    public final val soundshare: SoundshareAudioSource
    private final lateinit var surfaceTextureHelper: SurfaceTextureHelper
@@ -58,12 +58,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var4: AudioPlaybackCaptureConfiguration = c.a(b.a(b.a(b.a(e.a(this.mediaProjection), 1), 14), 0));
-         q.g(var4, "build(...)");
+         val var6: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
+         q.g(var6, "build(...)");
 
          try {
-            var1 = d.a(
-                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var4
+            var1 = c.a(
+                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var6
                )
                .build();
          } catch (var5: SecurityException) {
@@ -82,7 +82,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
          q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
-         var3.set(x1.e.a(a.a(var4 as WindowManager)));
+         var3.set(z0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }
@@ -110,31 +110,52 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    }
 
    public open fun changeCaptureFormat(width: Int, height: Int, framerate: Int) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            this.changeCaptureFormatInternal(this.lastMeasuredSize, Math.max(var1, var2));
-            this.setFramerate(var3);
-         } catch (var5: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
-   }
-
-   public fun changeCaptureFormatInternal(measuredSize: Rect, maxDimension: Int) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 0
+      // 03: aload 0
+      // 04: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.lastMeasuredSize Landroid/graphics/Rect;
+      // 07: iload 1
+      // 08: iload 2
+      // 09: imul
+      // 0a: invokevirtual com/discord/media/engine/video/screen_capture/ScreenCapturer.changeCaptureFormatInternal (Landroid/graphics/Rect;I)V
+      // 0d: aload 0
+      // 0e: iload 3
+      // 0f: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.setFramerate (I)V
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: return
+      // 15: astore 4
+      // 17: aload 0
+      // 18: monitorexit
+      // 19: aload 4
+      // 1b: athrow
+   }
+
+   public fun changeCaptureFormatInternal(measuredSize: Rect, maxPixelCount: Int) {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -147,68 +168,71 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 0a: invokevirtual android/graphics/Rect.width ()I
       // 0d: aload 1
       // 0e: invokevirtual android/graphics/Rect.height ()I
-      // 11: invokestatic java/lang/Math.max (II)I
-      // 14: istore 4
-      // 16: iload 4
-      // 18: ifle 78
-      // 1b: iload 2
-      // 1c: i2f
-      // 1d: iload 4
-      // 1f: i2f
-      // 20: fdiv
-      // 21: fstore 3
-      // 22: aload 0
-      // 23: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 26: aload 1
-      // 27: invokevirtual android/graphics/Rect.width ()I
-      // 2a: i2f
-      // 2b: fload 3
-      // 2c: fmul
-      // 2d: f2i
-      // 2e: aload 1
-      // 2f: invokevirtual android/graphics/Rect.height ()I
-      // 32: i2f
-      // 33: fload 3
-      // 34: fmul
-      // 35: f2i
-      // 36: invokevirtual android/graphics/Point.set (II)V
-      // 39: aload 0
-      // 3a: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 3d: astore 1
-      // 3e: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 41: astore 5
-      // 43: aload 1
-      // 44: aload 5
-      // 46: aload 1
-      // 47: getfield android/graphics/Point.x I
-      // 4a: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 4d: aload 5
-      // 4f: aload 0
-      // 50: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 53: getfield android/graphics/Point.y I
-      // 56: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 59: invokevirtual android/graphics/Point.set (II)V
-      // 5c: aload 0
-      // 5d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 60: astore 1
-      // 61: aload 0
-      // 62: aload 1
-      // 63: getfield android/graphics/Point.x I
-      // 66: aload 1
-      // 67: getfield android/graphics/Point.y I
-      // 6a: aload 0
-      // 6b: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.framerate I
-      // 6e: invokespecial org/webrtc/ScreenCapturerAndroid.changeCaptureFormat (III)V
-      // 71: goto 78
-      // 74: astore 1
-      // 75: goto 7b
-      // 78: aload 0
-      // 79: monitorexit
-      // 7a: return
+      // 11: imul
+      // 12: istore 4
+      // 14: iload 4
+      // 16: ifle 7b
+      // 19: iload 2
+      // 1a: i2f
+      // 1b: iload 4
+      // 1d: i2f
+      // 1e: fdiv
+      // 1f: f2d
+      // 20: invokestatic java/lang/Math.sqrt (D)D
+      // 23: d2f
+      // 24: fstore 3
+      // 25: aload 0
+      // 26: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
+      // 29: aload 1
+      // 2a: invokevirtual android/graphics/Rect.width ()I
+      // 2d: i2f
+      // 2e: fload 3
+      // 2f: fmul
+      // 30: f2i
+      // 31: aload 1
+      // 32: invokevirtual android/graphics/Rect.height ()I
+      // 35: i2f
+      // 36: fload 3
+      // 37: fmul
+      // 38: f2i
+      // 39: invokevirtual android/graphics/Point.set (II)V
+      // 3c: aload 0
+      // 3d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
+      // 40: astore 5
+      // 42: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 45: astore 1
+      // 46: aload 5
+      // 48: aload 1
+      // 49: aload 5
+      // 4b: getfield android/graphics/Point.x I
+      // 4e: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 51: aload 1
+      // 52: aload 0
+      // 53: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
+      // 56: getfield android/graphics/Point.y I
+      // 59: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 5c: invokevirtual android/graphics/Point.set (II)V
+      // 5f: aload 0
+      // 60: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
+      // 63: astore 1
+      // 64: aload 0
+      // 65: aload 1
+      // 66: getfield android/graphics/Point.x I
+      // 69: aload 1
+      // 6a: getfield android/graphics/Point.y I
+      // 6d: aload 0
+      // 6e: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.framerate I
+      // 71: invokespecial org/webrtc/ScreenCapturerAndroid.changeCaptureFormat (III)V
+      // 74: goto 7b
+      // 77: astore 1
+      // 78: goto 7e
       // 7b: aload 0
       // 7c: monitorexit
-      // 7d: aload 1
-      // 7e: athrow
+      // 7d: return
+      // 7e: aload 0
+      // 7f: monitorexit
+      // 80: aload 1
+      // 81: athrow
    }
 
    public open fun dispose() {
@@ -217,23 +241,53 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    }
 
    public open fun initialize(surfaceTextureHelper: SurfaceTextureHelper, applicationContext: Context, capturerObserver: CapturerObserver) {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            q.h(var1, "surfaceTextureHelper");
-            q.h(var2, "applicationContext");
-            q.h(var3, "capturerObserver");
-            this.surfaceTextureHelper = var1;
-            this.context = var2;
-            this.nativeObserver = var3 as NativeCapturerObserver;
-            super.initialize(var1, var2, var3);
-         } catch (var4: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc_w "surfaceTextureHelper"
+      // 06: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 09: aload 2
+      // 0a: ldc_w "applicationContext"
+      // 0d: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 10: aload 3
+      // 11: ldc_w "capturerObserver"
+      // 14: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 17: aload 0
+      // 18: aload 1
+      // 19: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.surfaceTextureHelper Lorg/webrtc/SurfaceTextureHelper;
+      // 1c: aload 0
+      // 1d: aload 2
+      // 1e: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.context Landroid/content/Context;
+      // 21: aload 0
+      // 22: aload 3
+      // 23: checkcast co/discord/media_engine/NativeCapturerObserver
+      // 26: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.nativeObserver Lco/discord/media_engine/NativeCapturerObserver;
+      // 29: aload 0
+      // 2a: aload 1
+      // 2b: aload 2
+      // 2c: aload 3
+      // 2d: invokespecial org/webrtc/ScreenCapturerAndroid.initialize (Lorg/webrtc/SurfaceTextureHelper;Landroid/content/Context;Lorg/webrtc/CapturerObserver;)V
+      // 30: aload 0
+      // 31: monitorexit
+      // 32: return
+      // 33: astore 1
+      // 34: aload 0
+      // 35: monitorexit
+      // 36: aload 1
+      // 37: athrow
    }
 
    public open fun onFrame(frame: VideoFrame?) {
@@ -247,7 +301,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
          val var4: Rect = this.getScreenSize(var2);
          if (!q.c(var4, this.lastMeasuredSize)) {
             this.lastMeasuredSize.set(var4);
-            this.changeCaptureFormatInternal(var4, this.maxDimension);
+            this.changeCaptureFormatInternal(var4, this.maxPixelCount);
          }
 
          this.lastFrameTimestamp = var1.getTimestampNs();
@@ -280,14 +334,14 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    public open fun startCapture(width: Int, height: Int, framerate: Int) {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
       //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
       //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
       //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
       //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
       //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
       //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
@@ -301,52 +355,70 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 09: aload 0
       // 0a: iload 1
       // 0b: iload 2
-      // 0c: invokestatic java/lang/Math.max (II)I
-      // 0f: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.maxDimension I
-      // 12: aload 0
-      // 13: iload 3
-      // 14: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.setFramerate (I)V
-      // 17: getstatic android/os/Build$VERSION.SDK_INT I
-      // 1a: bipush 29
-      // 1c: if_icmplt 3c
-      // 1f: aload 0
-      // 20: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.createRecorder ()Landroid/media/AudioRecord;
-      // 23: astore 4
-      // 25: aload 4
-      // 27: ifnull 3c
-      // 2a: aload 0
-      // 2b: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.soundshare Lco/discord/media_engine/SoundshareAudioSource;
-      // 2e: aload 4
-      // 30: invokevirtual co/discord/media_engine/SoundshareAudioSource.startRecording (Landroid/media/AudioRecord;)Z
-      // 33: pop
-      // 34: goto 3c
-      // 37: astore 4
-      // 39: goto 43
-      // 3c: aload 0
-      // 3d: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.startWatchdog ()V
-      // 40: aload 0
-      // 41: monitorexit
-      // 42: return
-      // 43: aload 0
-      // 44: monitorexit
-      // 45: aload 4
-      // 47: athrow
+      // 0c: imul
+      // 0d: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.maxPixelCount I
+      // 10: aload 0
+      // 11: iload 3
+      // 12: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.setFramerate (I)V
+      // 15: getstatic android/os/Build$VERSION.SDK_INT I
+      // 18: bipush 29
+      // 1a: if_icmplt 3a
+      // 1d: aload 0
+      // 1e: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.createRecorder ()Landroid/media/AudioRecord;
+      // 21: astore 4
+      // 23: aload 4
+      // 25: ifnull 3a
+      // 28: aload 0
+      // 29: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.soundshare Lco/discord/media_engine/SoundshareAudioSource;
+      // 2c: aload 4
+      // 2e: invokevirtual co/discord/media_engine/SoundshareAudioSource.startRecording (Landroid/media/AudioRecord;)Z
+      // 31: pop
+      // 32: goto 3a
+      // 35: astore 4
+      // 37: goto 41
+      // 3a: aload 0
+      // 3b: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.startWatchdog ()V
+      // 3e: aload 0
+      // 3f: monitorexit
+      // 40: return
+      // 41: aload 0
+      // 42: monitorexit
+      // 43: aload 4
+      // 45: athrow
    }
 
    public open fun stopCapture() {
-      label13: {
-         synchronized (this){} // $VF: monitorenter 
-
-         try {
-            super.stopCapture();
-            this.soundshare.stopRecording();
-            this.stopWatchdog();
-         } catch (var2: java.lang.Throwable) {
-            // $VF: monitorexit
-         }
-
-         // $VF: monitorexit
-      }
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 0
+      // 03: invokespecial org/webrtc/ScreenCapturerAndroid.stopCapture ()V
+      // 06: aload 0
+      // 07: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.soundshare Lco/discord/media_engine/SoundshareAudioSource;
+      // 0a: invokevirtual co/discord/media_engine/SoundshareAudioSource.stopRecording ()Z
+      // 0d: pop
+      // 0e: aload 0
+      // 0f: invokespecial com/discord/media/engine/video/screen_capture/ScreenCapturer.stopWatchdog ()V
+      // 12: aload 0
+      // 13: monitorexit
+      // 14: return
+      // 15: astore 1
+      // 16: aload 0
+      // 17: monitorexit
+      // 18: aload 1
+      // 19: athrow
    }
 
    protected open fun updateVirtualDisplay() {

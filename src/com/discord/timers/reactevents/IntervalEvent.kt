@@ -1,13 +1,12 @@
 package com.discord.timers.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
-import com.discord.reactevents.ReactEvent.DefaultImpls
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -47,8 +46,8 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
       return Integer.hashCode(this.id);
    }
 
-   fun serialize(): WritableMap {
-      return DefaultImpls.serialize(this);
+   override fun serialize(): WritableMap {
+      return ReactEvent.DefaultImpls.serialize(this);
    }
 
    public override fun toString(): String {
@@ -60,7 +59,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -77,7 +76,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a};
+         return new KSerializer[]{N.a};
       }
 
       public open fun deserialize(decoder: Decoder): IntervalEvent {
@@ -85,14 +84,14 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var6: Boolean = var8.y();
-         var var2: Int = 1;
-         var var4: Boolean = true;
-         var var3: Int;
+         var var3: Byte = 1;
+         var var2: Int;
          if (var6) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
          } else {
-            var3 = 0;
+            var var4: Boolean = true;
             var2 = 0;
+            var3 = 0;
 
             while (var4) {
                val var5: Int = var8.x(var7);
@@ -101,8 +100,8 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
                      throw new n(var5);
                   }
 
-                  var3 = var8.k(var7, 0);
-                  var2 |= 1;
+                  var2 = var8.k(var7, 0);
+                  var3 = 1;
                } else {
                   var4 = false;
                }
@@ -110,7 +109,7 @@ internal data class IntervalEvent(id: Int) : ReactEvent {
          }
 
          var8.b(var7);
-         return new IntervalEvent(var2, var3, null);
+         return new IntervalEvent(var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: IntervalEvent) {

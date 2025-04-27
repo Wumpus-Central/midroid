@@ -1,9 +1,9 @@
 package com.discord.push_notification_monitor
 
-import fl.f
-import fl.n
-import il.g0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -51,15 +51,15 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.pushNotifications;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PushNotificationLog(pushNotifications=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.pushNotifications;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PushNotificationLog(pushNotifications=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -85,12 +85,12 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
          val var7: c = var1.c(var6);
          val var8: Array<KSerializer> = PushNotificationLog.access$get$childSerializers$cp();
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var9: java.util.List;
          if (var5) {
             var9 = var7.m(var6, 0, var8[0], null) as java.util.List;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var9 = null;
 
@@ -102,7 +102,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
                   }
 
                   var9 = var7.m(var6, 0, var8[0], var9) as java.util.List;
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

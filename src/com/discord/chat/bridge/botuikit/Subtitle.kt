@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import ca.f
+import ca.n
+import da.a
+import fa.C0
+import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -101,24 +101,24 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.badgeUrl;
+      val var3: java.lang.String = this.badgeUrl;
       val var2: java.lang.String = this.text;
-      val var5: java.lang.String = this.ariaDescription;
-      val var1: ContentInventoryEntryClickable = this.clickable;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Subtitle(badgeUrl=");
-      var3.append(var4);
-      var3.append(", text=");
-      var3.append(var2);
-      var3.append(", ariaDescription=");
-      var3.append(var5);
-      var3.append(", clickable=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.ariaDescription;
+      val var5: ContentInventoryEntryClickable = this.clickable;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Subtitle(badgeUrl=");
+      var1.append(var3);
+      var1.append(", text=");
+      var1.append(var2);
+      var1.append(", ariaDescription=");
+      var1.append(var4);
+      var1.append(", clickable=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -138,8 +138,8 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: b2 = b2.a;
-         return new KSerializer[]{a.u(b2.a), var1, a.u(var1), a.u(ContentInventoryEntryClickable.$serializer.INSTANCE)};
+         val var1: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var1, a.u(var1), a.u(ContentInventoryEntryClickable.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): Subtitle {
@@ -153,8 +153,8 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
          var var7: java.lang.String;
          var var12: Any;
          if (var5) {
-            var12 = b2.a;
-            var8 = var10.v(var9, 0, b2.a, null) as java.lang.String;
+            var12 = C0.a;
+            var8 = var10.v(var9, 0, C0.a, null) as java.lang.String;
             var7 = var10.t(var9, 1);
             var6 = var10.v(var9, 2, (DeserializationStrategy)var12, null) as java.lang.String;
             var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, null) as ContentInventoryEntryClickable;
@@ -179,7 +179,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
                            var12 = var10.v(var9, 3, ContentInventoryEntryClickable.$serializer.INSTANCE, var12) as ContentInventoryEntryClickable;
                            var2 |= 8;
                         } else {
-                           var6 = var10.v(var9, 2, b2.a, var6) as java.lang.String;
+                           var6 = var10.v(var9, 2, C0.a, var6) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
@@ -187,7 +187,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var10.v(var9, 0, b2.a, var8) as java.lang.String;
+                     var8 = var10.v(var9, 0, C0.a, var8) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -210,7 +210,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

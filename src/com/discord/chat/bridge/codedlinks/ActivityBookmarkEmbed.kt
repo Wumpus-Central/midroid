@@ -6,8 +6,10 @@ import com.discord.primitives.ChannelId
 public interface ActivityBookmarkEmbed {
    public val applicationId: ApplicationId
    public val channelId: ChannelId
+   public val customId: String?
    public val description: String?
    public val extendedType: CodedLinkExtendedType
    public val participantAvatarUris: List<String>
    public val participantsText: String
+   public val referrerId: String
 }

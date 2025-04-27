@@ -33,7 +33,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    init {
       this.reactionHeight = var1;
-      this.reactions = i.k();
+      this.reactions = kotlin.collections.i.k();
       this.setHasStableIds(true);
    }
 
@@ -75,28 +75,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun getItemId(position: Int): Long {
       val var2: Int = this.getAddBurstReactionIndex();
-      var var7: java.lang.String = null;
       var var6: java.lang.String = null;
+      var var7: java.lang.String = null;
       val var3: Long;
       if (var1 == var2) {
-         var6 = this.messageId;
-         if (this.messageId == null) {
-            q.y("messageId");
-            var6 = null;
-         }
-
-         var7 = this.addReactionLabel;
-         if (this.addReactionLabel == null) {
-            q.y("addReactionLabel");
-            var7 = null;
-         }
-
-         val var15: StringBuilder = new StringBuilder();
-         var15.append(var6);
-         var15.append("_add_burst_reactions_");
-         var15.append(var7);
-         var3 = IdUtilsKt.convertToId(var15.toString());
-      } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
             q.y("messageId");
@@ -107,6 +89,24 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             q.y("addReactionLabel");
          } else {
             var7 = this.addReactionLabel;
+         }
+
+         val var17: StringBuilder = new StringBuilder();
+         var17.append(var6);
+         var17.append("_add_burst_reactions_");
+         var17.append(var7);
+         var3 = IdUtilsKt.convertToId(var17.toString());
+      } else if (var1 == this.getAddReactionIndex()) {
+         var6 = this.messageId;
+         if (this.messageId == null) {
+            q.y("messageId");
+            var6 = null;
+         }
+
+         var7 = this.addReactionLabel;
+         if (this.addReactionLabel == null) {
+            q.y("addReactionLabel");
+            var7 = null;
          }
 
          val var18: StringBuilder = new StringBuilder();
@@ -152,15 +152,15 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       q.h(var1, "holder");
-      val var9: ThemeManager = ThemeManager.INSTANCE;
+      val var7: ThemeManager = ThemeManager.INSTANCE;
       val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var9.setThemeOverride(this.theme);
-      val var3: Boolean = var1 is BurstReactionViewHolder;
+      var7.setThemeOverride(this.theme);
+      val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
       if (var3) {
-         val var27: ReactionView.Reaction = this.reactions.get(var2);
-         val var31: BurstReactionViewHolder = var1 as BurstReactionViewHolder;
+         val var23: ReactionView.Reaction = this.reactions.get(var2);
+         val var9: ReactionViewHolder = var1 as ReactionViewHolder;
          var var10: Function1 = this.onReactionClick;
          if (this.onReactionClick == null) {
             q.y("onReactionClick");
@@ -173,35 +173,19 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var4 = this.onReactionLongPress;
          }
 
-         var31.bind(var27, var10, var4);
-      } else if (var1 is ReactionViewHolder) {
-         val var24: ReactionView.Reaction = this.reactions.get(var2);
-         val var28: ReactionViewHolder = var1 as ReactionViewHolder;
-         var var11: Function1 = this.onReactionClick;
-         if (this.onReactionClick == null) {
-            q.y("onReactionClick");
+         var9.bind(var23, var10, var4, this.reactionsTheme);
+      } else if (var1 is AddReactionViewHolder) {
+         val var26: AddReactionViewHolder = var1 as AddReactionViewHolder;
+         var var11: java.lang.String = this.addReactionLabel;
+         if (this.addReactionLabel == null) {
+            q.y("addReactionLabel");
             var11 = null;
          }
 
-         var4 = this.onReactionLongPress;
-         if (this.onReactionLongPress == null) {
-            q.y("onReactionLongPress");
-            var4 = null;
-         }
-
-         var28.bind(var24, var11, var4, this.reactionsTheme);
-      } else if (var1 is AddReactionViewHolder) {
-         val var32: AddReactionViewHolder = var1 as AddReactionViewHolder;
-         var var12: java.lang.String = this.addReactionLabel;
-         if (this.addReactionLabel == null) {
-            q.y("addReactionLabel");
-            var12 = null;
-         }
-
-         var var18: java.lang.String = this.addNewReactionAccessibilityLabel;
+         var var15: java.lang.String = this.addNewReactionAccessibilityLabel;
          if (this.addNewReactionAccessibilityLabel == null) {
             q.y("addNewReactionAccessibilityLabel");
-            var18 = null;
+            var15 = null;
          }
 
          if (this.onAddReactionClick == null) {
@@ -210,27 +194,27 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var5 = this.onAddReactionClick;
          }
 
-         var32.bind(var12, var18, var5, this.reactionsTheme);
+         var26.bind(var11, var15, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var14: Class = var1.getClass();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Invalid view holder type ");
-            var21.append(var14);
-            throw new IllegalStateException(var21.toString().toString());
+            val var13: Class = var1.getClass();
+            val var18: StringBuilder = new StringBuilder();
+            var18.append("Invalid view holder type ");
+            var18.append(var13);
+            throw new IllegalStateException(var18.toString().toString());
          }
 
-         val var33: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
-         var var13: java.lang.String = this.addReactionLabel;
+         val var27: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;
+         var var12: java.lang.String = this.addReactionLabel;
          if (this.addReactionLabel == null) {
             q.y("addReactionLabel");
-            var13 = null;
+            var12 = null;
          }
 
-         var var20: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+         var var17: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
          if (this.addNewBurstReactionAccessibilityLabel == null) {
             q.y("addNewBurstReactionAccessibilityLabel");
-            var20 = null;
+            var17 = null;
          }
 
          var5 = this.onAddBurstReactionClick;
@@ -239,27 +223,20 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var5 = null;
          }
 
-         var33.bind(var13, var20, var5, this.reactionsTheme);
+         var27.bind(var12, var17, var5, this.reactionsTheme);
       }
 
-      var9.setThemeOverride(var8);
+      var7.setThemeOverride(var8);
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       q.h(var1, "parent");
-      val var5: com.google.android.flexbox.FlexboxLayoutManager.b = new com.google.android.flexbox.FlexboxLayoutManager.b(-2, this.reactionHeight);
+      val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var4.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
-         case 45:
-            val var14: Context = var1.getContext();
-            q.g(var14, "getContext(...)");
-            val var15: BurstReactionView = new BurstReactionView(var14, null, 2, null);
-            var15.setLayoutParams(var5);
-            var9 = new BurstReactionViewHolder(var15);
-            break;
          case 46:
             val var12: Context = var1.getContext();
             q.g(var12, "getContext(...)");

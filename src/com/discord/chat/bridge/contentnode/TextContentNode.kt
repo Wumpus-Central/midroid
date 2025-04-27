@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import gl.a
-import il.b2
-import il.g0
+import ca.f
+import ca.n
+import da.a
+import fa.C0
+import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -56,15 +56,15 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TextContentNode(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TextContentNode(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -81,7 +81,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{a.u(b2.a)};
+         return new KSerializer[]{a.u(C0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): TextContentNode {
@@ -89,12 +89,12 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var8: java.lang.String;
          if (var5) {
-            var8 = var7.v(var6, 0, b2.a, null) as java.lang.String;
+            var8 = var7.v(var6, 0, C0.a, null) as java.lang.String;
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var8 = null;
 
@@ -105,8 +105,8 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
                      throw new n(var4);
                   }
 
-                  var8 = var7.v(var6, 0, b2.a, var8) as java.lang.String;
-                  var2 |= 1;
+                  var8 = var7.v(var6, 0, C0.a, var8) as java.lang.String;
+                  var2 = 1;
                } else {
                   var3 = false;
                }
@@ -127,7 +127,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return il.g0.a.a(this);
+         return fa.G.a.a(this);
       }
    }
 

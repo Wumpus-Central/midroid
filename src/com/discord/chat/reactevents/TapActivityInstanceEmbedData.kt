@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -92,24 +92,24 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.applicationId;
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.instanceId;
+      val var4: java.lang.String = this.applicationId;
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.instanceId;
       val var2: java.lang.String = this.messageId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapActivityInstanceEmbedData(applicationId=");
-      var1.append(var5);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", instanceId=");
-      var1.append(var4);
-      var1.append(", messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapActivityInstanceEmbedData(applicationId=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var1);
+      var5.append(", instanceId=");
+      var5.append(var3);
+      var5.append(", messageId=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -129,7 +129,7 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapActivityInstanceEmbedData {

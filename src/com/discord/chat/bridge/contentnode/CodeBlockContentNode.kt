@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.h
-import il.g0.a
+import ca.f
+import ca.n
+import fa.C0
+import fa.G
+import fa.h
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,20 +71,20 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
 
    public override fun toString(): String {
       val var3: java.lang.String = this.lang;
-      val var2: java.lang.String = this.content;
+      val var4: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CodeBlockContentNode(lang=");
-      var4.append(var3);
-      var4.append(", content=");
-      var4.append(var2);
-      var4.append(", inQuote=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CodeBlockContentNode(lang=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(", inQuote=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -103,31 +103,31 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, h.a};
+         return new KSerializer[]{C0.a, C0.a, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): CodeBlockContentNode {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
+         val var7: SerialDescriptor = this.getDescriptor();
+         val var8: c = var1.c(var7);
          var var2: Int;
          var var5: Boolean;
-         val var7: java.lang.String;
-         val var10: java.lang.String;
-         if (var9.y()) {
-            var10 = var9.t(var8, 0);
-            var7 = var9.t(var8, 1);
-            var5 = var9.s(var8, 2);
+         var var6: java.lang.String;
+         var var9: java.lang.String;
+         if (var8.y()) {
+            var6 = var8.t(var7, 0);
+            var9 = var8.t(var7, 1);
+            var5 = var8.s(var7, 2);
             var2 = 7;
          } else {
-            var var6: java.lang.String = null;
-            var var11: java.lang.String = null;
+            var6 = null;
+            var9 = null;
             var var3: Boolean = true;
             var5 = false;
             var2 = 0;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var8.x(var7);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -135,27 +135,24 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                            throw new n(var4);
                         }
 
-                        var5 = var9.s(var8, 2);
+                        var5 = var8.s(var7, 2);
                         var2 |= 4;
                      } else {
-                        var11 = var9.t(var8, 1);
+                        var9 = var8.t(var7, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.t(var8, 0);
+                     var6 = var8.t(var7, 0);
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
-
-            var7 = var11;
-            var10 = var6;
          }
 
-         var9.b(var8);
-         return new CodeBlockContentNode(var2, var10, var7, var5, null);
+         var8.b(var7);
+         return new CodeBlockContentNode(var2, var6, var9, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: CodeBlockContentNode) {

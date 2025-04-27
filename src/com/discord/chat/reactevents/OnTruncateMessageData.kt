@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.o1
-import il.g0.a
+import fa.G
+import fa.p0
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -24,7 +24,7 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
 
    fun OnTruncateMessageData(var1: Int, var2: java.lang.String, var3: SerializationConstructorMarker) {
       if (1 != (var1 and 1)) {
-         o1.b(var1, 1, OnTruncateMessageData.$serializer.INSTANCE.getDescriptor());
+         p0.b(var1, 1, OnTruncateMessageData.$serializer.INSTANCE.getDescriptor());
       }
 
       super();
@@ -65,15 +65,15 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnTruncateMessageData(messageId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnTruncateMessageData(messageId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -98,8 +98,7 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
          val var6: SerialDescriptor = this.getDescriptor();
          val var7: c = var1.c(var6);
          val var5: Boolean = var7.y();
-         var var2: Int = 1;
-         var var3: Boolean = true;
+         var var2: Byte = 1;
          var var10: java.lang.String;
          if (var5) {
             val var9: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
@@ -109,6 +108,7 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
                var10 = null;
             }
          } else {
+            var var3: Boolean = true;
             var2 = 0;
             var10 = null;
 
@@ -133,7 +133,7 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
                      var10 = null;
                   }
 
-                  var2 |= 1;
+                  var2 = 1;
                } else {
                   var3 = false;
                }

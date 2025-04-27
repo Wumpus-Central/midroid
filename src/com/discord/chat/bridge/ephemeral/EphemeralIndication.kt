@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.ephemeral
 
+import ca.f
+import ca.n
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,21 +77,21 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var1: StructurableText = this.content;
+      val var3: StructurableText = this.content;
       val var4: java.lang.String = this.helpArticleLink;
-      val var3: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var1: java.lang.String = this.helpButtonAccessibilityLabel;
       val var2: StringBuilder = new StringBuilder();
       var2.append("EphemeralIndication(content=");
-      var2.append(var1);
+      var2.append(var3);
       var2.append(", helpArticleLink=");
       var2.append(var4);
       var2.append(", helpButtonAccessibilityLabel=");
-      var2.append(var3);
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -110,7 +110,7 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{StructurableTextSerializer.INSTANCE, b2.a, b2.a};
+         return new KSerializer[]{StructurableTextSerializer.INSTANCE, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): EphemeralIndication {

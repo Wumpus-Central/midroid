@@ -2,26 +2,20 @@ package com.discord.push_notification_monitor
 
 import android.content.Context
 import android.content.SharedPreferences
-import androidx.core.app.NotificationManagerCompat
-import com.discord.codegen.NativePushNotificationMonitorManagerSpec
+import com.discord.codegen.NativePushNotificationMonitorModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
 
-public class PushNotificationMonitorModule(reactContext: ReactApplicationContext) : NativePushNotificationMonitorManagerSpec {
+public class PushNotificationMonitorModule(reactContext: ReactApplicationContext) : NativePushNotificationMonitorModuleSpec {
    private final val reactContext: ReactApplicationContext
 
    init {
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-   }
-
-   public override fun areNotificationsEnabled(promise: Promise) {
-      q.h(var1, "promise");
-      var1.resolve(NotificationManagerCompat.g(this.reactContext).a());
    }
 
    public override fun clearLogs() {
@@ -38,8 +32,6 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
    }
 
    public companion object {
-      public const val NAME: String
-
       public fun getPushNotificationLogStorage(context: Context): SharedPreferences {
          q.h(var1, "context");
          val var2: SharedPreferences = var1.getSharedPreferences("push_notification_monitor", 0);

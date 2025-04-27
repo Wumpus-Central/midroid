@@ -19,7 +19,7 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
       this.messageContext = var2;
       this.backgroundHighlight = var3;
       if (!MessageKt.isSystemMessage(var1)) {
-         throw new IllegalArgumentException("Only system messages are allowed".toString());
+         throw new IllegalArgumentException("Only system messages are allowed");
       }
    }
 
@@ -76,17 +76,17 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun toString(): String {
-      val var4: Message = this.message;
+      val var1: Message = this.message;
       val var3: MessageContext = this.messageContext;
-      val var2: BackgroundHighlight = this.backgroundHighlight;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SystemMessageItem(message=");
-      var1.append(var4);
-      var1.append(", messageContext=");
-      var1.append(var3);
-      var1.append(", backgroundHighlight=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var4: BackgroundHighlight = this.backgroundHighlight;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SystemMessageItem(message=");
+      var2.append(var1);
+      var2.append(", messageContext=");
+      var2.append(var3);
+      var2.append(", backgroundHighlight=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

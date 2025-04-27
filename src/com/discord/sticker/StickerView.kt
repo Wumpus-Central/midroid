@@ -30,15 +30,74 @@ public class StickerView  public constructor(context: Context, attrs: AttributeS
       super(var1, var2, var3);
    }
 
-   public fun asApng(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
+   public fun asApng(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean, accessibilityLabel: String?) {
       q.h(var1, "url");
       APNGImageView.inflateApngView$default(this, false, 1, null);
       this.getApngView().loadImage(new APNGView.Config(var1, var4, false, var2, var3, "stickers", 4, null));
+      if (var5 != null) {
+         this.getApngView().setContentDescription(var5);
+      }
+
       APNGImageView.resetViews$default(this, this.getApngView(), false, 2, null);
    }
 
-   public fun asGif(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
+   public fun asGif(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean, accessibilityLabel: String) {
       q.h(var1, "url");
+      q.h(var5, "accessibilityLabel");
+      this.inflatePngView();
+      var var6: PNGStickerView = this.pngView;
+      if (this.pngView == null) {
+         q.y("pngView");
+         var6 = null;
+      }
+
+      var6.loadGifImage(var1, var2, var3, var4);
+      var var8: PNGStickerView = this.pngView;
+      if (this.pngView == null) {
+         q.y("pngView");
+         var8 = null;
+      }
+
+      var8.setContentDescription(var5);
+      var var9: PNGStickerView = this.pngView;
+      if (this.pngView == null) {
+         q.y("pngView");
+         var9 = null;
+      }
+
+      APNGImageView.resetViews$default(this, var9, false, 2, null);
+   }
+
+   public fun asLottie(url: String, widthDp: Int, heightDp: Int, animate: Boolean, asset: String, renderMode: Int, accessibilityLabel: String?) {
+      q.h(var1, "url");
+      q.h(var5, "asset");
+      this.inflateLottieView();
+      var var8: View = this.lottieView;
+      if (this.lottieView == null) {
+         q.y("lottieView");
+         var8 = null;
+      }
+
+      val var10: RLottieImageView;
+      if (var8 is RLottieImageView) {
+         var10 = var8 as RLottieImageView;
+      } else {
+         var10 = null;
+      }
+
+      if (var10 != null) {
+         var10.loadImage(new RLottieImageView.Config(var1, var4, var2, var3, var5, var6));
+         if (var7 != null) {
+            var10.setContentDescription(var7);
+         }
+
+         APNGImageView.resetViews$default(this, var10, false, 2, null);
+      }
+   }
+
+   public fun asPng(url: String, widthDp: Int?, heightDp: Int?, accessibilityLabel: String) {
+      q.h(var1, "url");
+      q.h(var4, "accessibilityLabel");
       this.inflatePngView();
       var var5: PNGStickerView = this.pngView;
       if (this.pngView == null) {
@@ -46,56 +105,21 @@ public class StickerView  public constructor(context: Context, attrs: AttributeS
          var5 = null;
       }
 
-      var5.loadGifImage(var1, var2, var3, var4);
+      var5.loadImage(var1, var2, var3);
       var var7: PNGStickerView = this.pngView;
       if (this.pngView == null) {
          q.y("pngView");
          var7 = null;
       }
 
-      APNGImageView.resetViews$default(this, var7, false, 2, null);
-   }
-
-   public fun asLottie(url: String, widthDp: Int, heightDp: Int, animate: Boolean, asset: String, renderMode: Int) {
-      q.h(var1, "url");
-      q.h(var5, "asset");
-      this.inflateLottieView();
-      var var7: View = this.lottieView;
-      if (this.lottieView == null) {
-         q.y("lottieView");
-         var7 = null;
-      }
-
-      val var9: RLottieImageView;
-      if (var7 is RLottieImageView) {
-         var9 = var7 as RLottieImageView;
-      } else {
-         var9 = null;
-      }
-
-      if (var9 != null) {
-         var9.loadImage(new RLottieImageView.Config(var1, var4, var2, var3, var5, var6));
-         APNGImageView.resetViews$default(this, var9, false, 2, null);
-      }
-   }
-
-   public fun asPng(url: String, widthDp: Int?, heightDp: Int?) {
-      q.h(var1, "url");
-      this.inflatePngView();
-      var var4: PNGStickerView = this.pngView;
+      var7.setContentDescription(var4);
+      var var8: PNGStickerView = this.pngView;
       if (this.pngView == null) {
          q.y("pngView");
-         var4 = null;
+         var8 = null;
       }
 
-      var4.loadImage(var1, var2, var3);
-      var var6: PNGStickerView = this.pngView;
-      if (this.pngView == null) {
-         q.y("pngView");
-         var6 = null;
-      }
-
-      APNGImageView.resetViews$default(this, var6, false, 2, null);
+      APNGImageView.resetViews$default(this, var8, false, 2, null);
    }
 
    public fun inflateLottieView() {

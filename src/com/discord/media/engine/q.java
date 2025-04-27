@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
 import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
-public final class q implements NativeConnection.GetStatsCallback {
-   public final Function1 a;
+public final class q implements NativeConnection.OnPingTimeoutCallback {
+   public final Function4 a;
 
    @Override
-   public final void onStats(String var1) {
-      MediaEngine.c(this.a, var1);
+   public final void onPingTimeout(String var1, int var2, int var3, int var4) {
+      MediaEngine.s(this.a, var1, var2, var3, var4);
    }
 }

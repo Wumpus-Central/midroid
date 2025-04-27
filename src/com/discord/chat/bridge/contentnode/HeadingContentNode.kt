@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
-import fl.n
-import il.g0
-import il.n0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.G
+import fa.N
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -70,7 +70,7 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
       return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -88,7 +88,7 @@ public data class HeadingContentNode(level: Int, content: List<ContentNode>) : C
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{n0.a, HeadingContentNode.access$get$childSerializers$cp()[1]};
+         return new KSerializer[]{N.a, HeadingContentNode.access$get$childSerializers$cp()[1]};
       }
 
       public open fun deserialize(decoder: Decoder): HeadingContentNode {

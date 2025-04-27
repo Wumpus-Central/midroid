@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.policynotice
 
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import ca.f
+import ca.n
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -120,30 +120,30 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.classificationId;
-      val var1: java.lang.String = this.titleText;
-      val var6: java.lang.String = this.titleIcon;
-      val var2: java.lang.String = this.subtitleText;
+      val var1: java.lang.String = this.classificationId;
+      val var6: java.lang.String = this.titleText;
+      val var4: java.lang.String = this.titleIcon;
+      val var3: java.lang.String = this.subtitleText;
       val var7: java.lang.String = this.descriptionText;
       val var5: java.lang.String = this.ctaText;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var4.append(var3);
-      var4.append(", titleText=");
-      var4.append(var1);
-      var4.append(", titleIcon=");
-      var4.append(var6);
-      var4.append(", subtitleText=");
-      var4.append(var2);
-      var4.append(", descriptionText=");
-      var4.append(var7);
-      var4.append(", ctaText=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var2.append(var1);
+      var2.append(", titleText=");
+      var2.append(var6);
+      var2.append(", titleIcon=");
+      var2.append(var4);
+      var2.append(", subtitleText=");
+      var2.append(var3);
+      var2.append(", descriptionText=");
+      var2.append(var7);
+      var2.append(", ctaText=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -167,7 +167,7 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): SafetyPolicyNoticeEmbed {
@@ -183,10 +183,10 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          val var14: java.lang.String;
          if (var13.y()) {
             var9 = var13.t(var12, 0);
-            var7 = var13.t(var12, 1);
-            var8 = var13.t(var12, 2);
-            var6 = var13.t(var12, 3);
-            var5 = var13.t(var12, 4);
+            var8 = var13.t(var12, 1);
+            var7 = var13.t(var12, 2);
+            var5 = var13.t(var12, 3);
+            var6 = var13.t(var12, 4);
             var14 = var13.t(var12, 5);
             var2 = 63;
          } else {
@@ -234,15 +234,14 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
-            var8 = var5;
             var14 = var8;
-            var5 = var6;
-            var6 = var7;
-            var7 = var15;
+            var5 = var7;
+            var7 = var5;
+            var8 = var15;
          }
 
          var13.b(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var9, var7, var8, var6, var5, var14, null);
+         return new SafetyPolicyNoticeEmbed(var2, var9, var8, var7, var5, var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {

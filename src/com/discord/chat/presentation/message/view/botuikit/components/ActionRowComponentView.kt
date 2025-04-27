@@ -3,15 +3,13 @@ package com.discord.chat.presentation.message.view.botuikit.components
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.ViewGroup
 import android.widget.LinearLayout
+import android.widget.LinearLayout.LayoutParams
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.chat.bridge.botuikit.ActionRowComponent
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.chat.databinding.MessageComponentActionRowViewBinding
-import com.discord.chat.presentation.message.view.botuikit.ComponentActionListener
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
-import com.discord.chat.presentation.message.view.botuikit.ComponentInflater
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.chat.presentation.message.view.botuikit.MessageComponentsViewKt
@@ -22,13 +20,15 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
 import java.util.ArrayList
-import kotlin.jvm.internal.g0
+import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
 public class ActionRowComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
    ComponentView<ActionRowComponent> {
+   public final val binding: MessageComponentActionRowViewBinding
+
    fun ActionRowComponentView(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 0, 6, null);
@@ -42,118 +42,91 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
+      val var4: MessageComponentActionRowViewBinding = MessageComponentActionRowViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var4, "inflate(...)");
+      this.binding = var4;
+      this.setOrientation(1);
+      this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
-   public open fun configure(
-      component: ActionRowComponent,
-      componentProvider: ComponentProvider,
-      componentActionListener: ComponentActionListener,
-      componentContext: ComponentContext
-   ) {
+   public open fun configure(component: ActionRowComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
       q.h(var1, "component");
       q.h(var2, "componentProvider");
-      q.h(var3, "componentActionListener");
-      q.h(var4, "componentContext");
-      val var11: MessageComponentActionRowViewBinding = MessageComponentActionRowViewBinding.bind(this);
-      q.g(var11, "bind(...)");
-      val var9: java.util.List = var1.getComponents();
-      val var12: ArrayList = new ArrayList(i.v(var9, 10));
-      val var13: java.util.Iterator = var9.iterator();
+      q.h(var3, "componentContext");
+      val var7: java.util.List = var1.getComponents();
+      val var6: ArrayList = new ArrayList(i.v(var7, 10));
+      val var20: java.util.Iterator = var7.iterator();
 
-      for (int var5 = 0; var13.hasNext(); var5++) {
-         var var27: ComponentView = (ComponentView)var13.next();
-         if (var5 < 0) {
+      for (int var4 = 0; var20.hasNext(); var4++) {
+         var var8: Any = var20.next();
+         if (var4 < 0) {
             i.u();
          }
 
-         val var14: Component = var27 as Component;
-         val var15: FlexboxLayout = var11.actionRowComponentViewGroup;
-         q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
-         var27 = var15.getChildAt(var5);
-         val var8: Boolean = var27 is ComponentView;
-         var var10: ComponentView = null;
-         if (var8) {
-            var27 = var27 as ComponentView;
-         } else {
-            var27 = null;
-         }
-
-         label52: {
-            if (var27 != null) {
-               if (((ComponentView)var27).getComponentType() is Component) {
-                  var10 = (ComponentView)var27;
-               }
-
-               var27 = var10;
-               if (var10 != null) {
-                  break label52;
-               }
-            }
-
-            var27 = new ComponentInflater(var2.getContext()).inflateComponent(var14, var15);
-         }
-
-         if (var27 != null) {
-            var27.configure(var14, var2, var3, var4);
-         }
-
-         var12.add(var27);
+         var8 = var8 as Component;
+         val var9: FlexboxLayout = this.binding.actionRowComponentViewGroup;
+         q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
+         var6.add(var2.getConfiguredComponentView((Component)var8, var3, var9, var4));
       }
 
-      val var17: java.util.List = i.b0(var12);
-      val var21: FlexboxLayout = var11.actionRowComponentViewGroup;
-      q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
-      MessageComponentsViewKt.replaceViews(var21, var17);
-      val var22: FlexboxLayout = var11.actionRowComponentViewGroup;
-      q.g(var11.actionRowComponentViewGroup, "actionRowComponentViewGroup");
-      val var23: Byte;
-      if (var17.isEmpty() xor true) {
-         var23 = 0;
+      val var15: java.util.List = i.c0(var6);
+      val var19: FlexboxLayout = this.binding.actionRowComponentViewGroup;
+      q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
+      MessageComponentsViewKt.replaceViews$default(var19, var15, var2, 0, 0, 12, null);
+      val var11: FlexboxLayout = this.binding.actionRowComponentViewGroup;
+      q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
+      val var16: Byte;
+      if (!var15.isEmpty()) {
+         var16 = 0;
       } else {
-         var23 = 8;
+         var16 = 8;
       }
 
-      var22.setVisibility(var23);
-      val var18: ConstraintLayout = var11.actionRowComponentViewGroupErrorRow.getRoot();
-      q.g(var18, "getRoot(...)");
-      var var24: Boolean;
+      var11.setVisibility(var16);
+      val var12: ConstraintLayout = this.binding.actionRowComponentViewGroupErrorRow.getRoot();
+      q.g(var12, "getRoot(...)");
+      var var17: Boolean;
       if (var1.getErrorText() != null) {
-         var24 = 1;
+         var17 = 1;
       } else {
-         var24 = 0;
+         var17 = 0;
       }
 
-      if (var24) {
-         var24 = 0;
+      if (var17) {
+         var17 = 0;
       } else {
-         var24 = 8;
+         var17 = 8;
       }
 
-      var18.setVisibility(var24);
-      val var16: java.lang.String = var1.getErrorText();
-      if (var16 != null) {
-         val var19: SimpleDraweeView = var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
-         q.g(var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
-         ReactAssetUtilsKt.setReactAsset(var19, ReactAsset.Warning);
-         val var20: SimpleDraweeView = var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
-         q.g(var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
-         ColorUtilsKt.setTintColor(var20, ThemeManagerKt.getTheme().getInfoDangerForeground());
-         var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelMessage.setText(var16);
-         var11.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelMessage.setTextColor(ThemeManagerKt.getTheme().getInfoDangerForeground());
+      var12.setVisibility(var17);
+      val var10: java.lang.String = var1.getErrorText();
+      if (var10 != null) {
+         val var13: SimpleDraweeView = this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
+         q.g(this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
+         ReactAssetUtilsKt.setReactAsset(var13, ReactAsset.Warning);
+         val var14: SimpleDraweeView = this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon;
+         q.g(this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelIcon, "viewInteractionFailedLabelIcon");
+         ColorUtilsKt.setTintColor(var14, ThemeManagerKt.getTheme().getInfoDangerForeground());
+         this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelMessage.setText(var10);
+         this.binding.actionRowComponentViewGroupErrorRow.viewInteractionFailedLabelMessage.setTextColor(ThemeManagerKt.getTheme().getInfoDangerForeground());
       }
    }
 
    public override fun getComponentType(): KClass<ActionRowComponent> {
-      return g0.b(ActionRowComponent.class);
+      return E.b(ActionRowComponent.class);
+   }
+
+   public override fun onRecycle(componentProvider: ComponentProvider) {
+      q.h(var1, "componentProvider");
+      val var2: FlexboxLayout = this.binding.actionRowComponentViewGroup;
+      q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
+      MessageComponentsViewKt.recycleChildComponents(var2, var1);
    }
 
    public companion object {
-      public fun inflateComponent(context: Context, root: ViewGroup): ComponentView<ActionRowComponent> {
+      public fun inflateComponent(context: Context): ComponentView<ActionRowComponent> {
          q.h(var1, "context");
-         q.h(var2, "root");
-         val var3: ActionRowComponentView = MessageComponentActionRowViewBinding.inflate(LayoutInflater.from(var1), var2, false).getRoot();
-         q.g(var3, "getRoot(...)");
-         return var3;
+         return new ActionRowComponentView(var1, null, 0, 6, null);
       }
    }
 }

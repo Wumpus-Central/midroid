@@ -83,10 +83,12 @@ public class GuildInviteDisabledView  public constructor(context: Context, attrs
    }
 
    public fun setGuildImage(url: String?, thumbnailText: String?, thumbnailBackgroundColor: Int?) {
-      this.binding.itemInviteImage.configure(var1, var2, var3);
-      val var4: SimpleDraweeView = this.binding.itemInviteDisabledIcon;
+      val var4: GuildView = this.binding.itemInviteImage;
+      kotlin.jvm.internal.q.g(this.binding.itemInviteImage, "itemInviteImage");
+      GuildView.configure$default(var4, var1, var2, var3, null, null, 24, null);
+      val var5: SimpleDraweeView = this.binding.itemInviteDisabledIcon;
       kotlin.jvm.internal.q.g(this.binding.itemInviteDisabledIcon, "itemInviteDisabledIcon");
-      ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.InvitesDisabled);
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.InvitesDisabled);
    }
 
    public fun setHeaderColor(color: Int?) {
@@ -112,7 +114,7 @@ public class GuildInviteDisabledView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var3, "onHelpArticleClicked");
       val var4: SimpleDraweeView = this.binding.itemInviteHelpIcon;
       this.binding.itemInviteHelpIcon.setContentDescription(var1);
-      var4.setOnClickListener(new g0(var3, var2));
+      var4.setOnClickListener(new G(var3, var2));
    }
 
    public fun setSubtitle(subtitle: String, guildName: String) {

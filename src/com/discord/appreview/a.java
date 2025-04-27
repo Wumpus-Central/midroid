@@ -1,8 +1,8 @@
 package com.discord.appreview;
 
+import A5.d;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.review.ReviewManager;
-import wb.d;
 
 // $VF: synthetic class
 public final class a implements d {
@@ -10,6 +10,6 @@ public final class a implements d {
    public final AppRatingRequester b;
 
    public final void a(Task var1) {
-      AppRatingRequester.c(this.a, this.b, var1);
+      AppRatingRequester.b(this.a, this.b, var1);
    }
 }

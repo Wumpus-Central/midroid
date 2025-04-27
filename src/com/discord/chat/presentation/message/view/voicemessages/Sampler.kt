@@ -10,7 +10,7 @@ public object Sampler {
       } else if (var1.length == 0) {
          return new byte[var2];
       } else if (var1.length < var2) {
-         return kotlin.collections.c.o(var1, new byte[var2 - var1.length]);
+         return kotlin.collections.c.p(var1, new byte[var2 - var1.length]);
       } else {
          val var3: Float = (float)var1.length / var2;
          val var11: ByteArray = new byte[var2];

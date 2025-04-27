@@ -7,21 +7,21 @@ import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.core.content.FileProvider
-import il.f
+import fa.f
 import java.io.File
 import java.nio.file.Path
 import java.util.ArrayList
+import k8.n
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import oh.o
 
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {
-      val var2: java.lang.String = this.getFilesDir().getPath();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var2);
-      var3.append("/rows");
-      return new File(a.a(var3.toString(), new java.lang.String[0]).toString(), var1);
+      val var3: java.lang.String = this.getFilesDir().getPath();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var3);
+      var2.append("/rows");
+      return new File(a.a(var2.toString(), new java.lang.String[0]).toString(), var1);
    }
 
    private fun getReplaysList(): List<Replay> {
@@ -37,20 +37,20 @@ public class ReplayProviderActivity : Activity {
          var6 = new File[0];
       }
 
-      val var3: IntRange = c.H(var6);
+      val var3: IntRange = c.I(var6);
       val var9: ArrayList = new ArrayList(i.v(var3, 10));
       val var11: java.util.Iterator = var3.iterator();
 
       while (var11.hasNext()) {
-         var9.add(var6[(var11 as o).c()]);
+         var9.add(var6[(var11 as n).a()]);
       }
 
       val var7: ArrayList = new ArrayList(i.v(var9, 10));
 
-      for (File var10 : var9) {
-         val var12: java.lang.String = var10.getName();
-         q.g(var12, "getName(...)");
-         var7.add(new Replay(var12, var10.lastModified()));
+      for (File var12 : var9) {
+         val var10: java.lang.String = var12.getName();
+         q.g(var10, "getName(...)");
+         var7.add(new Replay(var10, var12.lastModified()));
       }
 
       return var7;
@@ -103,11 +103,11 @@ public class ReplayProviderActivity : Activity {
 
       public fun getReplaysListFromIntent(intent: Intent): List<Replay> {
          q.h(var1, "intent");
-         val var3: java.lang.String = var1.getStringExtra("INTENT_EXTRA_REPLAYS_LIST");
-         q.e(var3);
-         val var2: kotlinx.serialization.json.Json.a = Json.d;
+         val var2: java.lang.String = var1.getStringExtra("INTENT_EXTRA_REPLAYS_LIST");
+         q.e(var2);
+         val var3: kotlinx.serialization.json.Json.a = Json.d;
          Json.d.a();
-         return var2.b(new f(Replay.Companion.serializer()), var3) as MutableList<Replay>;
+         return var3.b(new f(Replay.Companion.serializer()), var2) as MutableList<Replay>;
       }
 
       public fun requestReplayList(activity: Activity, requestCode: Int) {

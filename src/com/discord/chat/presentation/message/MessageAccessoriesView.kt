@@ -8,8 +8,7 @@ import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import androidx.core.view.v0
-import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.core.view.g0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.R
@@ -22,8 +21,6 @@ import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAcces
 import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
-import com.discord.chat.presentation.message.viewholder.MessageContentViewHolder
-import com.discord.chat.presentation.root.ChatView
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextType
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
@@ -31,7 +28,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
-import com.discord.reactions.ReactionsView
+import com.discord.reactions.ShortcutsFlexbox
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
@@ -41,7 +38,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    private final val accessoriesAdapter: MessageAccessoriesAdapter
    private final val contentViewTracker: com.discord.chat.presentation.message.MessageAccessoriesView.ContentViewTracker
    private final val transitionResilientLinearLayoutManager: TransitionResilientLinearLayoutManager
-   private final val defaultItemAnimator: <unrepresentable>
    private final var messageAccessoriesDecoration: MessageAccessoriesHorizontalSpacingDecoration
 
    private final val forwardBarPaint: Paint
@@ -67,7 +63,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var6: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -76,29 +72,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var6;
+      this.accessoriesAdapter = var4;
       val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
       this.contentViewTracker = var5;
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var4;
-      val var3: DefaultItemAnimator = new DefaultItemAnimator() {
-         @Override
-         public boolean canReuseUpdatedViewHolder(RecyclerView.ViewHolder var1, java.util.List<Object> var2) {
-            kotlin.jvm.internal.q.h(var1, "viewHolder");
-            kotlin.jvm.internal.q.h(var2, "payloads");
-            val var3: Boolean;
-            if (super.canReuseUpdatedViewHolder(var1, var2) && var1 !is MessageContentViewHolder) {
-               var3 = true;
-            } else {
-               var3 = false;
-            }
-
-            return var3;
-         }
-      };
-      var3.setSupportsChangeAnimations(false);
-      this.defaultItemAnimator = var3;
-      this.forwardBarPaint$delegate = nh.l.a(<unrepresentable>.INSTANCE);
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var3;
+      this.forwardBarPaint$delegate = j8.l.b(<unrepresentable>.INSTANCE);
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -111,16 +90,16 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var4);
-      this.setAdapter(var6);
-      var6.setMessageContentViewLifecycleListener(var5);
+      this.setLayoutManager(var3);
+      this.setAdapter(var4);
+      var4.setMessageContentViewLifecycleListener(var5);
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : sk.j.H(v0.a(this))) {
+      for (Pair var3 : P9.j.H(g0.a(this))) {
          val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
-         if (var4 is ReactionsView || var4 is ThreadEmbedView) {
+         if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
             return var1.getBottom();
          }
       }
@@ -128,9 +107,23 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       return this.getHeight();
    }
 
-   public fun clear() {
+   private fun updateLeftMargin(leftMargin: Int) {
+      if (var1 != this.messageAccessoriesDecoration.getLeftMarginPx() || this.showingForwardBar != this.messageAccessoriesDecoration.getIsForwardedMessage()) {
+         leftMarginPx = var1;
+         this.removeItemDecoration(this.messageAccessoriesDecoration);
+         val var2: MessageAccessoriesHorizontalSpacingDecoration = new MessageAccessoriesHorizontalSpacingDecoration(
+            leftMarginPx, rightMarginPx, this.showingForwardBar
+         );
+         this.messageAccessoriesDecoration = var2;
+         this.addItemDecoration(var2);
+      }
+   }
+
+   public fun clear(removeViews: Boolean = true) {
       this.accessoriesAdapter.clear();
-      this.removeAllViewsInLayout();
+      if (var1) {
+         this.removeAllViewsInLayout();
+      }
    }
 
    public open fun endViewTransition(view: View?) {
@@ -147,7 +140,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var2, 0.0F, (float)FORWARD_BAR_WIDTH + var3, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -173,26 +166,18 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var5, "items");
       kotlin.jvm.internal.q.h(var6, "eventHandler");
       kotlin.jvm.internal.q.h(var8, "messageContext");
-      val var11: <unrepresentable>;
-      if (ChatView.Companion.getAreChatAnimationsEnabled()) {
-         var11 = this.defaultItemAnimator;
-      } else {
-         var11 = null;
-      }
-
-      this.setItemAnimator(var11);
+      this.setItemAnimator(null);
       if (this.showingForwardBar != var10) {
          this.showingForwardBar = var10;
       }
 
       val var12: MessageAccessoriesView.Companion = Companion;
-      val var17: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var17, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var17, var8, var9));
-      val var18: ThreadSpineItemDecoration = this.threadSpineDecoration;
-      var9 = var5 is java.util.Collection;
+      val var11: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var11, "getResources(...)");
+      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
+      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
-      if (var9 && var5.isEmpty()) {
+      if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
          val var13: java.util.Iterator = var5.iterator();
@@ -210,7 +195,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       }
 
-      var18.setShowThreadSpine(var9);
+      var16.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);
@@ -231,22 +216,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.transitionResilientLinearLayoutManager.disableRecycling(true);
    }
 
-   public fun updateLeftMargin(leftMargin: Int) {
-      if (var1 != this.messageAccessoriesDecoration.getLeftMarginPx() || this.showingForwardBar != this.messageAccessoriesDecoration.getIsForwardedMessage()) {
-         leftMarginPx = var1;
-         this.removeItemDecoration(this.messageAccessoriesDecoration);
-         val var2: MessageAccessoriesHorizontalSpacingDecoration = new MessageAccessoriesHorizontalSpacingDecoration(
-            leftMarginPx, rightMarginPx, this.showingForwardBar
-         );
-         this.messageAccessoriesDecoration = var2;
-         this.addItemDecoration(var2);
-      }
-   }
-
    public companion object {
       public final val FORWARD_BAR_SPACING: Int
       public final val FORWARD_BAR_WIDTH: Int
-      private final val INLINE_FORWARD_BUTTON_SPACING: Int
       private final var embedContentMarginPx: Int
       private final var leftMarginPx: Int
       private final var rightMarginPx: Int
@@ -268,23 +240,18 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       }
 
-      public fun getWidth(constrainedWidth: Int, isForwardedContent: Boolean, isShowingInlineForward: Boolean): Int {
-         var var4: Int = var1 - MessageAccessoriesView.access$getLeftMarginPx$cp() - MessageAccessoriesView.access$getRightMarginPx$cp();
-         var1 = var4;
+      public fun getWidth(constrainedWidth: Int, isForwardedContent: Boolean): Int {
+         val var3: Int = var1 - MessageAccessoriesView.access$getLeftMarginPx$cp() - MessageAccessoriesView.access$getRightMarginPx$cp();
+         var1 = var3;
          if (var2) {
-            var1 = var4 - this.getFORWARD_BAR_SPACING();
+            var1 = var3 - this.getFORWARD_BAR_SPACING();
          }
 
-         var4 = var1;
-         if (var3) {
-            var4 = var1 - MessageAccessoriesView.access$getINLINE_FORWARD_BUTTON_SPACING$cp();
-         }
-
-         return var4;
+         return var1;
       }
 
-      public fun getWidthForEmbedContent(constrainedWidth: Int, isForward: Boolean, isShowingInlineForward: Boolean): Int {
-         return this.getWidth(var1, var2, var3) - MessageAccessoriesView.access$getEmbedContentMarginPx$cp() * 2;
+      public fun getWidthForEmbedContent(constrainedWidth: Int, isForward: Boolean): Int {
+         return this.getWidth(var1, var2) - MessageAccessoriesView.access$getEmbedContentMarginPx$cp() * 2;
       }
    }
 

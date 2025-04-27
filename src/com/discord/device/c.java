@@ -1,13 +1,14 @@
 package com.discord.device;
 
+import com.facebook.react.bridge.ReadableArray;
+
 // $VF: synthetic class
 public final class c implements Runnable {
-   public final DeviceSettingsManagerModule j;
-   public final boolean k;
-   public final int l;
+   public final DeviceSettingsModule j;
+   public final ReadableArray k;
 
    @Override
    public final void run() {
-      DeviceSettingsManagerModule.c(this.j, this.k, this.l);
+      DeviceSettingsModule.a(this.j, this.k);
    }
 }

@@ -6,7 +6,7 @@ import com.discord.image.animated_image.apng.APNGImageView
 import com.discord.image.animated_image.apng.APNGView
 import kotlin.jvm.internal.q
 
-public class APNGManagedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : APNGImageView {
+internal class APNGManagedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : APNGImageView {
    fun APNGManagedView(var1: Context) {
       q.h(var1, "context");
       this(var1, null, 0, 6, null);

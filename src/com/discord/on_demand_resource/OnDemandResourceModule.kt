@@ -1,13 +1,13 @@
 package com.discord.on_demand_resource
 
-import com.discord.codegen.NativeOnDemandResourceSpec
+import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
-public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceSpec {
+public class OnDemandResourceModule(reactContext: ReactApplicationContext) : NativeOnDemandResourceModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
@@ -48,9 +48,5 @@ public class OnDemandResourceModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun isOnDemandResourcingAvailable(): Boolean {
       return PlayAssetDelivery.INSTANCE.isAssetDeliveryAvailable();
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

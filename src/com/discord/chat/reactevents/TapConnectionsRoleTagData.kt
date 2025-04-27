@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.b2
-import il.g0
-import il.g0.a
+import fa.C0
+import fa.G
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -88,23 +88,23 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
 
    public override fun toString(): String {
       val var1: java.lang.String = this.userId;
-      val var2: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.roleId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapConnectionsRoleTagData(userId=");
-      var5.append(var1);
-      var5.append(", guildId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", roleId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.guildId;
+      val var5: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.roleId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapConnectionsRoleTagData(userId=");
+      var3.append(var1);
+      var3.append(", guildId=");
+      var3.append(var4);
+      var3.append(", channelId=");
+      var3.append(var5);
+      var3.append(", roleId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;
@@ -124,7 +124,7 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{b2.a, b2.a, b2.a, b2.a};
+         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a};
       }
 
       public open fun deserialize(decoder: Decoder): TapConnectionsRoleTagData {
@@ -179,8 +179,8 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
                }
             }
 
-            var11 = var6;
             var6 = var12;
+            var11 = var6;
          }
 
          var10.b(var9);

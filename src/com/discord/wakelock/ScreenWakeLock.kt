@@ -6,16 +6,14 @@ import java.util.LinkedHashSet
 import kotlin.jvm.internal.q
 
 public object ScreenWakeLock {
-   public final var keys: MutableSet<String> = new LinkedHashSet()
-      internal set
+   private final var keys: MutableSet<String> = new LinkedHashSet()
 
    public fun releaseLock(activity: Activity, key: String) {
       q.h(var1, "activity");
       q.h(var2, "key");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var3: ScreenWakeLock = INSTANCE;
-         INSTANCE.getKeys().remove(var2);
-         if (var3.getKeys().isEmpty()) {
+         access$getKeys$p().remove(var2);
+         if (access$getKeys$p().isEmpty()) {
             var1.getWindow().clearFlags(128);
          }
       } else {
@@ -30,9 +28,8 @@ public object ScreenWakeLock {
 
             @Override
             public final void run() {
-               val var1: ScreenWakeLock = ScreenWakeLock.INSTANCE;
-               ScreenWakeLock.INSTANCE.getKeys().remove(this.$key$inlined);
-               if (var1.getKeys().isEmpty()) {
+               ScreenWakeLock.access$getKeys$p().remove(this.$key$inlined);
+               if (ScreenWakeLock.access$getKeys$p().isEmpty()) {
                   this.$activity$inlined.getWindow().clearFlags(128);
                }
             }
@@ -44,7 +41,7 @@ public object ScreenWakeLock {
       q.h(var1, "activity");
       q.h(var2, "key");
       if (ThreadUtilsKt.isOnMainThread()) {
-         if (INSTANCE.getKeys().add(var2)) {
+         if (access$getKeys$p().add(var2)) {
             var1.getWindow().addFlags(128);
          }
       } else {
@@ -59,7 +56,7 @@ public object ScreenWakeLock {
 
             @Override
             public final void run() {
-               if (ScreenWakeLock.INSTANCE.getKeys().add(this.$key$inlined)) {
+               if (ScreenWakeLock.access$getKeys$p().add(this.$key$inlined)) {
                   this.$activity$inlined.getWindow().addFlags(128);
                }
             }

@@ -1,13 +1,13 @@
 package com.discord.bundle_updater
 
+import Ma.g
+import j8.w
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import nh.w
 import okio.BufferedSource
-import pm.m
-import yh.j
+import u8.j
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
@@ -43,7 +43,7 @@ public object BundleUpdaterUtils {
    public fun getManifestFromFile(file: File): AppManifest {
       q.h(var1, "file");
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = j.d(var1, null, 1, null);
+      val var3: java.lang.String = j.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
@@ -51,24 +51,24 @@ public object BundleUpdaterUtils {
    public fun md5(file: File): String {
       label18: {
          q.h(var1, "file");
-         val var10: BufferedSource = m.d(m.k(var1));
+         val var10: BufferedSource = Ma.j.d(Ma.j.k(var1));
 
          var var11: java.lang.String;
          try {
-            val var2: pm.j = pm.j.m.a(m.b());
-            var10.E1(var2);
-            var11 = var2.a().p();
+            val var2: g = g.m.a(Ma.j.b());
+            var10.F1(var2);
+            var11 = var2.a().r();
          } catch (var5: java.lang.Throwable) {
             val var3: java.lang.Throwable = var5;
 
             try {
                throw var3;
             } catch (var4: java.lang.Throwable) {
-               yh.c.a(var10, var5);
+               u8.c.a(var10, var5);
             }
          }
 
-         yh.c.a(var10, null);
+         u8.c.a(var10, null);
          return var11;
       }
    }

@@ -15,43 +15,42 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
+import j8.p
 import kotlin.jvm.internal.q
-import nh.p
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,
    messageContext: MessageContext,
    allowChildGestures: Boolean = true,
-   isHighlight: Boolean = false,
    renderContentOnly: Boolean = false,
    reactTag: Int? = null,
    backgroundHighlight: BackgroundHighlight? = null
 ): ChatListItem {
    q.h(var0, "<this>");
    q.h(var2, "messageContext");
-   val var9: Any;
+   val var8: Any;
    if (var0 is Message) {
-      val var8: Message = var0 as Message;
+      val var7: Message = var0 as Message;
       if (MessageKt.isSystemMessage(var0 as Message)) {
-         if (MessageKt.isCallMessage(var8)) {
-            var9 = new CallSystemMessageItem(var8);
+         if (MessageKt.isCallMessage(var7)) {
+            var8 = new CallSystemMessageItem(var7);
          } else {
-            var9 = new SystemMessageItem(var8, var2, var7);
+            var8 = new SystemMessageItem(var7, var2, var6);
          }
-      } else if (MessageKt.isAutomodSystemMessage(var8)) {
-         var9 = new AutomodSystemMessageItem(var8, var2, var3);
+      } else if (MessageKt.isAutomodSystemMessage(var7)) {
+         var8 = new AutomodSystemMessageItem(var7, var2, var3);
       } else {
-         var9 = new MessageItem(var8, var1, var2, var3, var4, var7, var6, var5);
+         var8 = new MessageItem(var7, var1, var2, var3, var6, var5, var4);
       }
    } else {
       if (var0 !is ErrorMessage) {
          throw new p();
       }
 
-      var9 = new DeserializationErrorMessageItem(var0 as ErrorMessage);
+      var8 = new DeserializationErrorMessageItem(var0 as ErrorMessage, false, 2, null);
    }
 
-   return (ChatListItem)var9;
+   return (ChatListItem)var8;
 }
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
@@ -74,53 +73,33 @@ public fun MessageRow.toChatListMessageItem(): ChatListItem {
    }
 
    return toChatListMessageItem(
-      var3,
-      var4,
-      MessageContextKt.getMessageContext(var0),
-      var1,
-      var0.isHighlight(),
-      var0.getRenderContentOnly(),
-      var0.getReactTag(),
-      var0.getBackgroundHighlight()
+      var3, var4, MessageContextKt.getMessageContext(var0), var1, var0.getRenderContentOnly(), var0.getReactTag(), var0.getBackgroundHighlight()
    );
 }
 
 @JvmSynthetic
 fun `toChatListMessageItem$default`(
-   var0: MessageBase,
-   var1: MessageFrame,
-   var2: MessageContext,
-   var3: Boolean,
-   var4: Boolean,
-   var5: Boolean,
-   var6: Int,
-   var7: BackgroundHighlight,
-   var8: Int,
-   var9: Any
+   var0: MessageBase, var1: MessageFrame, var2: MessageContext, var3: Boolean, var4: Boolean, var5: Int, var6: BackgroundHighlight, var7: Int, var8: Any
 ): ChatListItem {
-   if ((var8 and 1) != 0) {
+   if ((var7 and 1) != 0) {
       var1 = null;
    }
 
-   if ((var8 and 4) != 0) {
+   if ((var7 and 4) != 0) {
       var3 = true;
    }
 
-   if ((var8 and 8) != 0) {
+   if ((var7 and 8) != 0) {
       var4 = false;
    }
 
-   if ((var8 and 16) != 0) {
-      var5 = false;
+   if ((var7 and 16) != 0) {
+      var5 = null;
    }
 
-   if ((var8 and 32) != 0) {
+   if ((var7 and 32) != 0) {
       var6 = null;
    }
 
-   if ((var8 and 64) != 0) {
-      var7 = null;
-   }
-
-   return toChatListMessageItem(var0, var1, var2, var3, var4, var5, var6, var7);
+   return toChatListMessageItem(var0, var1, var2, var3, var4, var5, var6);
 }

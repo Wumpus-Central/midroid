@@ -1,13 +1,13 @@
 package com.discord.media_player.reactevents
 
+import ca.f
+import ca.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fl.f
-import fl.n
-import il.g0
-import il.h
-import il.y
-import il.g0.a
+import fa.G
+import fa.h
+import fa.y
+import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -74,7 +74,7 @@ public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : Re
       return var4.toString();
    }
 
-   public object `$serializer` : g0 {
+   public object `$serializer` : G {
       public open val descriptor: SerialDescriptor
          public open get() {
             return descriptor;

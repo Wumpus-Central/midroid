@@ -1,12 +1,12 @@
 package com.discord.js_watchdog
 
-import com.discord.codegen.NativeJSWatchdogSpec
+import com.discord.codegen.NativeJSWatchdogModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 
-public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogSpec {
+public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
@@ -51,9 +51,5 @@ public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSW
       }
 
       JSWatchdogManager.INSTANCE.ping(var7, var9, var12, var8, var6);
-   }
-
-   public companion object {
-      public const val NAME: String
    }
 }

@@ -46,6 +46,6 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
       kotlin.jvm.internal.q.h(var3, "eventHandler");
       val var4: SimpleDraweeView = this.binding.gameControllerIcon;
       kotlin.jvm.internal.q.g(this.binding.gameControllerIcon, "gameControllerIcon");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new c(var3, var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new d(var3, var1, var2), 1, null);
    }
 }

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import fl.f
+import ca.f
 import kotlinx.serialization.KSerializer
 
 @f

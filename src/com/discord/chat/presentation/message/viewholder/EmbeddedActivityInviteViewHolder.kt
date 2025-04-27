@@ -4,7 +4,9 @@ import android.view.View
 import com.discord.chat.bridge.codedlinks.EmbeddedActivityInviteEmbedImpl
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
+import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.chat.bridge.contentnode.LinkContentNode
+import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.EmbeddedActivityInviteMessageAccessory
 import com.discord.chat.presentation.message.view.EmbeddedActivityInviteView
@@ -34,13 +36,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "embeddedActivityInviteAccessory");
-      val var4: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var16: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var4.getSplashUrl(), var1.getConstrainedWidth());
-      var16.setTitleText(var4.getTitleText());
-      var16.setHeaderText(var4.getHeaderText());
-      var16.setSubtitleText-oCLp7l4(
-         var4.getStructurableSubtitleText(),
+      val var2: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var4: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var2.getSplashUrl(), var1.getConstrainedWidth());
+      var4.setTitleText(var2.getTitleText());
+      var4.setHeaderText(var2.getHeaderText());
+      var4.setSubtitleText-Tu_1QLM(
+         var2.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2(this.eventHandler) {
             {
@@ -175,6 +177,18 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
          },
          new Function1(this.eventHandler) {
             {
+               super(
+                  1, var1, ChatEventHandler::class.java, "onTapInlineCode", "onTapInlineCode(Lcom/discord/chat/bridge/contentnode/InlineCodeContentNode;)V", 0
+               );
+            }
+
+            public final void invoke(InlineCodeContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapInlineCode(var1);
+            }
+         },
+         new Function1(this.eventHandler) {
+            {
                super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
             }
 
@@ -192,11 +206,21 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
                kotlin.jvm.internal.q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
+         },
+         new Function1(this.eventHandler) {
+            {
+               super(1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0);
+            }
+
+            public final void invoke(SoundmojiContentNode var1) {
+               kotlin.jvm.internal.q.h(var1, "p0");
+               (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
+            }
          }
       );
-      var16.setNoParticipantsText(var4.getNoParticipantsText());
-      var16.setLaunchButton(var4.getAcceptLabelText(), var4.getAcceptLabelBackgroundColor(), var4.getCtaEnabled());
-      var16.setAvatarUris(var4.getParticipantAvatarUris());
-      var16.setOnLaunchButtonClickListener(new k(this, var1));
+      var4.setNoParticipantsText(var2.getNoParticipantsText());
+      var4.setLaunchButton(var2.getAcceptLabelText(), var2.getAcceptLabelBackgroundColor(), var2.getCtaEnabled());
+      var4.setAvatarUris(var2.getParticipantAvatarUris());
+      var4.setOnLaunchButtonClickListener(new k(this, var1));
    }
 }

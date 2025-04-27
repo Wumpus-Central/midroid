@@ -34,6 +34,8 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
       spoilerConfig: SpoilerConfig?,
       isObscure: Boolean,
       isObscureAwaitingScan: Boolean,
+      obscureHideControls: Boolean,
+      obscureIsOpaque: Boolean,
       showDescription: Boolean,
       description: String?,
       descriptionHint: String?,
@@ -57,11 +59,11 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
    ) {
       kotlin.jvm.internal.q.h(var4, "url");
       kotlin.jvm.internal.q.h(var5, "previewUrl");
-      kotlin.jvm.internal.q.h(var31, "onClicked");
-      kotlin.jvm.internal.q.h(var33, "onMediaPlayFinishedAnalytics");
-      kotlin.jvm.internal.q.h(var34, "playerSettings");
+      kotlin.jvm.internal.q.h(var33, "onClicked");
+      kotlin.jvm.internal.q.h(var35, "onMediaPlayFinishedAnalytics");
+      kotlin.jvm.internal.q.h(var36, "playerSettings");
       this.view
-         .setContent-eqgJMyY(
+         .setContent-w--JTRs(
             var1,
             var2,
             var3,
@@ -71,41 +73,43 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
             var6,
             var8,
             var9,
-            var19,
-            var20,
+            var21,
+            var22,
             var10,
             var11,
             var12,
             var13,
-            var21,
-            var22,
+            var14,
+            var15,
             var23,
             var24,
             var25,
             var26,
             var27,
+            var28,
             var29,
-            var34
+            var31,
+            var36
          );
-      this.view.setDescription(var15, var16);
-      if (var17 && var14) {
+      this.view.setDescription(var17, var18);
+      if (var19 && var16) {
          var10 = true;
       } else {
          var10 = false;
       }
 
-      this.view.showAltTextButton(var10, var15, var18);
+      this.view.showAltTextButton(var10, var17, var20);
       var10 = false;
-      if (!var17) {
+      if (!var19) {
          var10 = false;
-         if (var14) {
+         if (var16) {
             var10 = true;
          }
       }
 
-      this.view.showDescription(var10, var15);
-      this.view.setRole(var28);
-      this.view.setOnMediaClickListeners(var31, var32);
-      this.view.setMediaAnalyticsListener(var33);
+      this.view.showDescription(var10, var17);
+      this.view.setRole(var30);
+      this.view.setOnMediaClickListeners(var33, var34);
+      this.view.setMediaAnalyticsListener(var35);
    }
 }

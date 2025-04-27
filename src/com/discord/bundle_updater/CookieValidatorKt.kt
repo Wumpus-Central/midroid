@@ -13,11 +13,11 @@ public fun CookieManager.getCookiesForUrl(url: String): List<Cookie> {
    if (var4 == null) {
       return i.k();
    } else {
-      val var2: java.util.List = h.z0(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
+      val var2: java.util.List = h.C0(var4, new java.lang.String[]{"; "}, false, 0, 6, null);
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var3 : var2) {
-         val var7: Cookie = Cookie.n.c(HttpUrl.l.d(var1), var3);
+         val var7: Cookie = Cookie.j.c(HttpUrl.k.d(var1), var3);
          if (var7 != null) {
             var5.add(var7);
          }

@@ -78,7 +78,7 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
       kotlin.jvm.internal.q.h(var5, "onTapForwardFooter");
       val var8: ForwardFooterInfo = var4.getFooterInfo();
       if (var8 != null) {
-         val var9: d0 = new d0(var5, var4, var1, var3);
+         val var9: D = new D(var5, var4, var1, var3);
          var var6: Byte = 1;
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var9, 1, null);
          val var10: SimpleDraweeView = this.binding.icon;
