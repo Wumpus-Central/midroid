@@ -20,6 +20,7 @@ import com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackStartedData
 import com.discord.chat.reactevents.TapActivityBookmarkEmbedData
 import com.discord.chat.reactevents.TapActivityInstanceEmbedData
+import com.discord.chat.reactevents.TapAppMessageEmbedData
 import com.discord.chat.reactevents.TapAttachmentLinkData
 import com.discord.chat.reactevents.TapAutoModerationActionsData
 import com.discord.chat.reactevents.TapAutoModerationFeedbackData
@@ -85,7 +86,7 @@ import com.discord.chat.reactevents.TapWelcomeReplyData
 import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
-import j8.w
+import f8.w
 import kotlin.jvm.internal.E
 
 internal fun createChatReactEvents(): ReactEvents {
@@ -153,6 +154,7 @@ internal fun createChatReactEvents(): ReactEvents {
       w.a("onMediaAttachmentPlaybackStarted", E.b(MediaAttachmentPlaybackStartedData.class)),
       w.a("onTapActivityBookmarkEmbed", E.b(TapActivityBookmarkEmbedData.class)),
       w.a("onTapActivityInstanceEmbed", E.b(TapActivityInstanceEmbedData.class)),
+      w.a("onTapAppMessageEmbed", E.b(TapAppMessageEmbedData.class)),
       w.a("onTapPostPreviewEmbed", E.b(TapPostPreviewEmbedData.class)),
       w.a("onTapDismissMediaPostSharePrompt", E.b(TapDismissMediaPostSharePromptData.class)),
       w.a("onTapTag", E.b(TapTagData.class)),

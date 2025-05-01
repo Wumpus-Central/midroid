@@ -4,6 +4,7 @@ public object ChatViewRecyclerTypes {
    public const val ACTIVITY_BOOKMARK: Int = 30
    public const val ACTIVITY_INSTANCE_EMBED: Int = 40
    public const val ACTIVITY_INVITE_EMBED: Int = 17
+   public const val APP_MESSAGE_EMBED: Int = 54
    public const val AUDIO_ATTACHMENT: Int = 29
    public const val AUTO_MODERATION_NOTIFICATION_EMBED: Int = 33
    public const val BOT_COMPONENTS: Int = 12

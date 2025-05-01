@@ -672,14 +672,13 @@
   "KXNTgY": "Allow Direct Messages",
   "jMFSQU": "Anyone in the server can message you",
   "2YwzGh": "Anyone in the Hub can message you",
-  "WO2Hlp": "Allow DMs from Game Friends in Discord",
-  "VaxeGh": [
-    "Game Friends are players you have added as friends only in connected games. They have less access to you than your Discord Friends. ",
+  "oZsHTE": [
+    "Receive in-game messages from your ",
     [
       8,
       "$link",
       [
-        "Learn more"
+        "Game Friends"
       ],
       [
         [
@@ -687,10 +686,10 @@
           "helpdeskArticle"
         ]
       ]
-    ]
+    ],
+    " right in Discord--even when you're not playing the game"
   ],
-  "oPyABA": "Game Friends",
-  "/U8Iwc": "Direct Messages",
+  "XpBObG": "Stay connected with in-game friends on Discord",
   "7UgSGB": "Allow Message Requests",
   "INRaYW": "Filter messages from members you may not know",
   "i9IRUV": "All Albums",
@@ -1457,6 +1456,8 @@
     " has been authorized and added to your apps!"
   ],
   "f6kk+v": "Authorized Apps",
+  "Pkw//v": "Mobile Push Notifications",
+  "c1uXo6": "Allow notifications for DMs from this app",
   "yOApCA": [
     "Authorized on ",
     [
@@ -6366,6 +6367,7 @@
   "/lEZpq": "Disconnect from Voice",
   "/jERiI": "Disconnect",
   "6vrfgo": "Disconnect",
+  "/7xJCA": "Discord",
   "zJlwvb": "Discord system messages",
   "4nEZLi": "Discover",
   "gHPk3N": "Allow people to find me",
@@ -9025,12 +9027,14 @@
   "8RswJC": "Gallery View",
   "tuHPRU": "List",
   "4HXEZG": "List View",
-  "NLADIy": "Show posts",
   "xyYt8P": "Sort & View",
   "Iqetys": "Change the sort and layout for Forum Posts",
   "f8wNDg": "Sort by",
   "UIltXV": "Date Posted",
   "jOPmcH": "Recently Active",
+  "Paxaur": "Tag Matching",
+  "FCXUu7": "Match All",
+  "rQ0ctb": "Match Some",
   "jPhTvb": [
     [
       1,
@@ -9086,6 +9090,7 @@
   ],
   "gePre3": "Sort Order",
   "165cVV": "Set the default sort order for new posts. Members will still be able to toggle between these options.",
+  "DqOl8P": "Set the default tag matching behaviour. Members will still be able to toggle between these options.",
   "YtsXFB": [
     "What do you want to post about in #",
     [
@@ -11349,6 +11354,17 @@
   "GoV0ub": "An event topic is required.",
   "0HbEQ0": "Event Topic",
   "6/yarq": "What's your event?",
+  "sdRx+P": [
+    [
+      1,
+      "date"
+    ],
+    " at ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "v2GWNT": "Are you sure you want to cancel this event?",
   "ZcpcyM": [
     "Canceling this event will also ",
@@ -11882,6 +11898,7 @@
   "riu2R0": "Join Server",
   "s1fAEx": "Retry Loading Server Profile",
   "tmGHjY": "Unable to load server profile",
+  "wZmuen": "Private Server",
   "8mfCqa": "The server has limited who can see this profile.",
   "DmIUGB": "Unknown Server",
   "J2+r19": "Set up your server",
@@ -19186,8 +19203,8 @@
     ],
     " available"
   ],
-  "alYXBA": [
-    "File should be APNG, JPG, PNG, Lottie, or GIF (",
+  "kpcMfn": [
+    "File should be APNG, JPG, PNG, or GIF (",
     [
       1,
       "fileSize"
@@ -20223,6 +20240,7 @@
   "msFJy8": "This emoji doesn't work because it's animated. Discord Nitro can solve all of that, check User Settings > Nitro for details",
   "mY2R+P": "You cannot friend yourself",
   "sRJGR0": "This server is not available in your location.",
+  "nr0MVV": "Email is not valid.",
   "Q87rIy": "This emoji doesn't work here because it's from a different server. Upgrade to Discord Nitro to use emoji from other servers",
   "FzugNj": "This emoji doesn't work here because it's from a different server. Discord Nitro can solve all of that, check User Settings > Nitro for details",
   "IRq5am": "Please enter a valid invite link or invite code.",
@@ -20628,6 +20646,11 @@
       "channelName"
     ]
   ],
+  "JIFnNz": "Show all DMs",
+  "4NN4+/": "Read and respond to DMs directly from game chats. Customize which DMs to show in your connected games.",
+  "AolKwM": "Show none",
+  "ms+TmZ": "Show Direct Messages in games",
+  "rRdsk5": "Show only DMs from people who also play the game",
   "C7iIKC": "In the voice channel",
   "zrhHHx": "Oops...",
   "PjfUXV": "Something went wrong while processing your request, please try again.",
@@ -21220,6 +21243,7 @@
   "9VLmlZ": "Join this server",
   "E4u4n5": "macOS",
   "X9izyc": "Magenta",
+  "2p07FR": "Main Profile",
   "9rqRws": [
     "This link ",
     [
@@ -22691,6 +22715,13 @@
   ],
   "w4m94+": "Mute",
   "lhPHm5": "Muted",
+  "j7h4AA": [
+    "Muted until ",
+    [
+      1,
+      "endTime"
+    ]
+  ],
   "X4NtYW": [
     [
       1,
@@ -23508,6 +23539,7 @@
   "RBbtMz": "Get the party started by uploading an emoji",
   "IxxiKC": "No emoji match your search",
   "lxsmBQ": "No Emoji",
+  "+0U77e": "No games Connected",
   "Y7Ml/P": "Ready for a next-level group chat?",
   "kuyE4u": "Build your community with organized conversations, spontaneous hangouts, and powerful customization features!",
   "/QIjDA": "No Input Devices",
@@ -30174,6 +30206,7 @@
   ],
   "vVcTtL": "Choose a Platform",
   "EMrUHR": "Select Platform",
+  "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
   "coKAb2": [
@@ -31305,6 +31338,15 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
+  "5b60go": "Resend Code",
+  "31Txs7": [
+    "Resend Code in ",
+    [
+      1,
+      "countdown"
+    ],
+    " seconds"
+  ],
   "WnX4Jy": "Resend Email",
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
@@ -32977,6 +33019,16 @@
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
+  "tCcq5u": "Sent an image",
+  "p0oZm5": "Sent a GIF",
+  "rtfTKi": [
+    "Sent ",
+    [
+      1,
+      "count"
+    ],
+    " images"
+  ],
   "5qyruL": "Server",
   "7hB4kp": "Servers",
   "SeoUoq": [
@@ -34673,6 +34725,38 @@
       ]
     ],
     ". ",
+    [
+      8,
+      "$link",
+      [
+        "Edit group"
+      ],
+      [
+        [
+          1,
+          "onEditGroup"
+        ]
+      ]
+    ]
+  ],
+  "hToFyc": [
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "username"
+        ]
+      ],
+      [
+        [
+          1,
+          "usernameOnClick"
+        ]
+      ]
+    ],
+    " removed the custom group name. ",
     [
       8,
       "$link",
@@ -36545,6 +36629,36 @@
     ],
     "."
   ],
+  "KI+BSU": [
+    "By clicking “Create account,” you agree to Discord’s ",
+    [
+      8,
+      "$link",
+      [
+        "Terms of Service"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " and have read the ",
+    [
+      8,
+      "$link",
+      [
+        "Privacy Policy"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
+  ],
   "qMDAPz": [
     "I have read and agree to Discord's ",
     [
@@ -36945,6 +37059,7 @@
   "svRBmJ": "Copied Message ID",
   "wk1Ay8": "Some characters are not available in remix.",
   "FHVR//": "Username Copied",
+  "gI8ISU": "Code sent!",
   "cEK+1t": "Video Saved",
   "HK4JIi": "Toggle camera",
   "iZ7Mz8": "Toggle emoji keyboard",
@@ -37604,6 +37719,13 @@
   "xIk/iI": "Keyword",
   "8QJcoa": "Enable language filter",
   "CB5reH": "Language filter",
+  "9NqwWV": [
+    [
+      1,
+      "username"
+    ],
+    " has left the call"
+  ],
   "+OecxM": "User Management",
   "1w6dr6": "Pronouns",
   "jGoPJS": "About Me",
@@ -38059,7 +38181,6 @@
   "gMlDNT": "Nitro Preview",
   "TGg/2t": "Your username is invalid or contains invalid characters. You must update your username before you can change other user settings.",
   "FkFLDA": "Used Backup Codes",
-  "7vhiqq": "User Profile",
   "GJ3Fcn": "Use Default",
   "/6sFWV": [
     "All of your calls on Discord are end-to-end encrypted no matter what. That means nobody — not even Wumpus — can listen in on your conversations. These settings let you control optional details when verifying our encryption protocol. ",
@@ -38689,6 +38810,22 @@
   "BnSq1N": "Not Connected",
   "w//7ER": "You are disconnected from this call.",
   "Xuzre3": "Ringing…",
+  "V8wClJ": [
+    "Want to connect a game to your account? ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
   "I6JG4+": "Watch",
   "pW3Ip6": [
     "Watching ",

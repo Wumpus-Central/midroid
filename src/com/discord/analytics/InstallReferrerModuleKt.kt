@@ -1,15 +1,15 @@
 package com.discord.analytics
 
+import a1.a
 import com.android.installreferrer.api.InstallReferrerClient
-import e1.a
-import j8.r
-import j8.s
+import f8.r
+import f8.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import p8.b
+import l8.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -50,14 +50,14 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var2: InstallReferrerClient = this.$this_await;
+            val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: j8.r.a = r.k;
-               var2.a();
+               val var6: f8.r.a = r.k;
+               var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var5: j8.r.a = r.k;
+               val var2: f8.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,24 +67,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var10: j8.r.a = r.k;
+      val var3: f8.r.a = r.k;
       var0.d(var4);
-      var7 = r.b(Unit.a);
+      var8 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var3: j8.r.a = r.k;
-      var7 = r.b(s.a(var5));
+      val var7: f8.r.a = r.k;
+      var8 = r.b(s.a(var5));
       break label20;
    }
 
-   val var8: java.lang.Throwable = r.e(var7);
-   if (var8 != null) {
-      var2.resumeWith(r.b(s.a(var8)));
+   val var9: java.lang.Throwable = r.e(var8);
+   if (var9 != null) {
+      var2.resumeWith(r.b(s.a(var9)));
    }
 
-   val var9: Any = var2.z();
-   if (var9 === b.e()) {
+   val var10: Any = var2.z();
+   if (var10 === b.e()) {
       g.c(var1);
    }
 
-   return var9;
+   return var10;
 }

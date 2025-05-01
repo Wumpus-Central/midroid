@@ -6,10 +6,10 @@ import com.google.android.gms.nearby.messages.SubscribeOptions
 import com.google.android.gms.nearby.messages.SubscribeOptions.a
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import v5.b
-import v5.d
-import v5.h
-import v5.i
+import r5.b
+import r5.d
+import r5.h
+import r5.i
 
 internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : b {
    private final val onFoundUser: (String) -> Unit
@@ -48,16 +48,16 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
 
    public fun disableNearby(context: Context) {
       q.h(var1, "context");
-      val var3: d = s5.a.a(var1);
-      var3.i(this.statusCallback);
+      val var3: d = o5.a.a(var1);
+      var3.c(this.statusCallback);
       var var4: Message = this.outboundMessage;
       if (this.outboundMessage == null) {
          q.y("outboundMessage");
          var4 = null;
       }
 
-      var3.b(var4);
-      var3.c(this);
+      var3.d(var4);
+      var3.a(this);
    }
 
    public fun enableNearby(context: Context) {
@@ -68,33 +68,33 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var2 = null;
       }
 
-      val var4: d = s5.a.a(var1);
-      var4.k(this.statusCallback);
-      var4.j(var2);
-      var4.m(this, this.subscribeOptions);
+      val var4: d = o5.a.a(var1);
+      var4.e(this.statusCallback);
+      var4.k(var2);
+      var4.j(this, this.subscribeOptions);
    }
 
    public open fun onFound(message: Message) {
       q.h(var1, "message");
       super.onFound(var1);
       val var2: Function1 = this.onFoundUser;
-      val var3: ByteArray = var1.o();
+      val var3: ByteArray = var1.p();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, Q9.a.b));
+      var2.invoke(new java.lang.String(var3, M9.a.b));
    }
 
    public open fun onLost(message: Message) {
       q.h(var1, "message");
       super.onLost(var1);
       val var2: Function1 = this.onLostUser;
-      val var3: ByteArray = var1.o();
+      val var3: ByteArray = var1.p();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, Q9.a.b));
+      var2.invoke(new java.lang.String(var3, M9.a.b));
    }
 
    public fun setOutboundMessage(message: String) {
       q.h(var1, "message");
-      val var2: ByteArray = var1.getBytes(Q9.a.b);
+      val var2: ByteArray = var1.getBytes(M9.a.b);
       q.g(var2, "getBytes(...)");
       this.outboundMessage = new Message(var2);
    }

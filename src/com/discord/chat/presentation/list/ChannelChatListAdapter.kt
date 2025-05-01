@@ -12,8 +12,8 @@ import com.discord.chat.presentation.list.item.PortalViewChatListItem
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.logging.Log
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import j8.p
-import j8.s
+import f8.p
+import f8.s
 import java.util.LinkedList
 import java.util.Queue
 import java.util.UUID
@@ -47,11 +47,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var4: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var4);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var5);
+         throw new IllegalStateException(var4.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
@@ -139,11 +139,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             access$processUpdate(this, var3 as ChannelChatListAdapterUpdate);
          }
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -231,7 +231,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, S9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
+         access$setProcessNextUpdateJob$p(this, O9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -249,7 +249,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
 
             public final Object invokeSuspend(Object var1) {
-               p8.b.e();
+               l8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -370,7 +370,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = q8.a.a(var0);
+         $ENTRIES = m8.a.a(var0);
       }
 
       @JvmStatic

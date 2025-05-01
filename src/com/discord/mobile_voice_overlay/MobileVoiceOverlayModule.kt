@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ActivityEventListener
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
-import j8.l
+import f8.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
@@ -45,10 +45,10 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
 
    public override fun enableOverlay(promise: Promise) {
       q.h(var1, "promise");
-      val var2: WindowUtils = WindowUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      if (var2.canDrawOverlay(var3)) {
+      val var3: WindowUtils = WindowUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      if (var3.canDrawOverlay(var2)) {
          var1.resolve(java.lang.Boolean.TRUE);
       } else {
          val var4: ActivityEventListener = new ActivityEventListener(this, var1) {
@@ -64,10 +64,10 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
                   val var6: Promise = this.$promise;
-                  val var5: WindowUtils = WindowUtils.INSTANCE;
-                  val var7: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  q.g(var7, "access$getReactApplicationContext(...)");
-                  var6.resolve(var5.canDrawOverlay(var7));
+                  val var7: WindowUtils = WindowUtils.INSTANCE;
+                  val var5: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  q.g(var5, "access$getReactApplicationContext(...)");
+                  var6.resolve(var7.canDrawOverlay(var5));
                }
             }
 

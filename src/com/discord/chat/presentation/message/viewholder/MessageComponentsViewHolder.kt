@@ -49,11 +49,11 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var6, "onTapObscureToggle");
       kotlin.jvm.internal.q.h(var7, "eventHandler");
-      val var12: Message = var1.getMessage();
+      val var15: Message = var1.getMessage();
       val var16: java.lang.String = var1.getMessageId-3Eiw7ao();
       var var8: Int = var1.getConstrainedWidth();
       var var9: Boolean;
-      if (var12.getForwardInfo() != null) {
+      if (var15.getForwardInfo() != null) {
          var9 = true;
       } else {
          var9 = false;
@@ -65,8 +65,8 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          var9 = false;
       }
 
-      val var14: java.lang.String = MessageId.toString-impl(var16);
-      val var15: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var16) {
+      val var12: java.lang.String = MessageId.toString-impl(var16);
+      val var14: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var16) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -83,11 +83,11 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       }, var5);
       val var13: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var12.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var12),
-         MessageKt.shouldShowLinkDecorations(var12),
-         var12.getShouldShowRoleDot(),
-         var12.getShouldShowRoleOnName()
+         MessageId.toString-impl(var15.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var15),
+         MessageKt.shouldShowLinkDecorations(var15),
+         var15.getShouldShowRoleDot(),
+         var15.getShouldShowRoleOnName()
       );
       val var35: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
          new Function1(var7, var16) {
@@ -261,7 +261,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var16) {
+      val var31: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var16) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -320,22 +320,22 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       });
       var8 = var1.getConstrainedWidth();
-      val var31: java.lang.Boolean = var12.getGifAutoPlay();
+      val var32: java.lang.Boolean = var15.getGifAutoPlay();
       val var10: Boolean;
-      if (var31 != null) {
-         var10 = var31;
+      if (var32 != null) {
+         var10 = var32;
       } else {
          var10 = false;
       }
 
       val var11: Boolean;
-      if (var12.getForwardInfo() != null) {
+      if (var15.getForwardInfo() != null) {
          var11 = true;
       } else {
          var11 = false;
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var14, var15, var13, var35, var29, var32, var8, var9, var10, var11, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var12, var14, var13, var35, var29, var31, var8, var9, var10, var11, false));
    }
 }

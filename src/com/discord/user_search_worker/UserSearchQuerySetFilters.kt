@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -88,18 +88,18 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guild;
-      val var2: java.lang.Boolean = this.friends;
-      val var4: java.lang.Boolean = this.strict;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserSearchQuerySetFilters(guild=");
-      var1.append(var3);
-      var1.append(", friends=");
-      var1.append(var2);
-      var1.append(", strict=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.guild;
+      val var1: java.lang.Boolean = this.friends;
+      val var2: java.lang.Boolean = this.strict;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSearchQuerySetFilters(guild=");
+      var3.append(var4);
+      var3.append(", friends=");
+      var3.append(var1);
+      var3.append(", strict=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -121,9 +121,9 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: KSerializer = a.u(C0.a);
-         val var1: h = h.a;
-         return new KSerializer[]{var2, a.u(h.a), a.u(var1)};
+         val var1: KSerializer = a.u(C0.a);
+         val var2: h = h.a;
+         return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {
@@ -186,7 +186,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

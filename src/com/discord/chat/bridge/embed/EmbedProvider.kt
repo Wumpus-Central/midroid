@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import ca.f
-import ca.n
-import fa.C0
-import fa.G
-import fa.G.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -48,12 +48,12 @@ public data class EmbedProvider(name: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("EmbedProvider(name=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.name;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("EmbedProvider(name=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

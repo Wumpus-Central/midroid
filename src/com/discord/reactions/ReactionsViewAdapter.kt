@@ -75,28 +75,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun getItemId(position: Int): Long {
       val var2: Int = this.getAddBurstReactionIndex();
-      var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var3: Long;
+      var var6: java.lang.String = null;
+      val var4: Long;
       if (var1 == var2) {
-         var6 = this.messageId;
-         if (this.messageId == null) {
-            q.y("messageId");
-            var6 = null;
-         }
-
-         if (this.addReactionLabel == null) {
-            q.y("addReactionLabel");
-         } else {
-            var7 = this.addReactionLabel;
-         }
-
-         val var17: StringBuilder = new StringBuilder();
-         var17.append(var6);
-         var17.append("_add_burst_reactions_");
-         var17.append(var7);
-         var3 = IdUtilsKt.convertToId(var17.toString());
-      } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
             q.y("messageId");
@@ -109,11 +91,29 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var7 = null;
          }
 
+         val var15: StringBuilder = new StringBuilder();
+         var15.append(var6);
+         var15.append("_add_burst_reactions_");
+         var15.append(var7);
+         var4 = IdUtilsKt.convertToId(var15.toString());
+      } else if (var1 == this.getAddReactionIndex()) {
+         var6 = this.messageId;
+         if (this.messageId == null) {
+            q.y("messageId");
+            var6 = null;
+         }
+
+         if (this.addReactionLabel == null) {
+            q.y("addReactionLabel");
+         } else {
+            var7 = this.addReactionLabel;
+         }
+
          val var18: StringBuilder = new StringBuilder();
          var18.append(var6);
          var18.append("_add_reactions_");
          var18.append(var7);
-         var3 = IdUtilsKt.convertToId(var18.toString());
+         var4 = IdUtilsKt.convertToId(var18.toString());
       } else {
          val var19: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -123,16 +123,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          }
 
          var7 = var19.getEmoji().getEmojiId();
-         val var5: Boolean = var19.isBurstReaction();
+         val var3: Boolean = var19.isBurstReaction();
          val var20: StringBuilder = new StringBuilder();
          var20.append(var6);
          var20.append("_");
          var20.append(var7);
-         var20.append(var5);
-         var3 = IdUtilsKt.convertToId(var20.toString());
+         var20.append(var3);
+         var4 = IdUtilsKt.convertToId(var20.toString());
       }
 
-      return var3;
+      return var4;
    }
 
    public override fun getItemViewType(position: Int): Int {
@@ -152,9 +152,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       q.h(var1, "holder");
-      val var7: ThemeManager = ThemeManager.INSTANCE;
-      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var7.setThemeOverride(this.theme);
+      val var8: ThemeManager = ThemeManager.INSTANCE;
+      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var8.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -226,7 +226,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var27.bind(var12, var17, var5, this.reactionsTheme);
       }
 
-      var7.setThemeOverride(var8);
+      var8.setThemeOverride(var7);
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

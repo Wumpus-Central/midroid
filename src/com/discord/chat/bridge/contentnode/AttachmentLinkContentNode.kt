@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -65,8 +65,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -74,22 +74,22 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var1: java.lang.String = this.attachmentName;
-      val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AttachmentLinkContentNode(attachmentUrl=");
-      var3.append(var2);
-      var3.append(", attachmentName=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentName;
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AttachmentLinkContentNode(attachmentUrl=");
+      var2.append(var4);
+      var2.append(", attachmentName=");
+      var2.append(var3);
+      var2.append(", content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -174,7 +174,7 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

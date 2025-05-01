@@ -21,7 +21,7 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
-import j8.s
+import f8.s
 import java.lang.reflect.Field
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
@@ -178,15 +178,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var4: Any = var2.get(this);
-         val var3: CrashReporting = CrashReporting.INSTANCE;
-         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("About to crash because of ChatList, dumping update log:\n");
-         var7.append(var5);
-         var7.append("\n Recycler State: ");
-         var7.append(var4);
-         CrashReporting.addBreadcrumb$default(var3, var7.toString(), null, null, 6, null);
+         val var3: Any = var2.get(this);
+         val var4: CrashReporting = CrashReporting.INSTANCE;
+         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("About to crash because of ChatList, dumping update log:\n");
+         var5.append(var7);
+         var5.append("\n Recycler State: ");
+         var5.append(var3);
+         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -270,19 +270,19 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
                         if (var3) {
+                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
+                           if (var4 == null) {
+                              q.y("eventHandler");
+                              var4 = null;
+                           }
+
+                           var4.onFirstLayout(var1, var6, var2, var7);
+                        } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
                               q.y("eventHandler");
                            } else {
                               var4 = var12;
-                           }
-
-                           var4.onFirstLayout(var1, var6, var2, var7);
-                        } else {
-                           var4 = ChatListView.access$getEventHandler$p(this.this$0);
-                           if (var4 == null) {
-                              q.y("eventHandler");
-                              var4 = null;
                            }
 
                            var4.onFirstLayout(var2, var7, var1, var6);
@@ -326,11 +326,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var2);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var3);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -343,7 +343,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          kotlinx.coroutines.Job.a.a(this.updateSubscriptionJob, null, 1, null);
       }
 
-      this.updateSubscriptionJob = S9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      this.updateSubscriptionJob = O9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final ChatListView this$0;
 
@@ -361,7 +361,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = p8.b.e();
+            val var4: Any = l8.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

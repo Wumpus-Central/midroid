@@ -32,11 +32,11 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
 
    private fun setButtonCallback(channelId: ChannelId, messageId: MessageId, callback: String?, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
       if (var4 != null && !kotlin.text.h.d0(var4)) {
-         this.binding.ctaButton.setOnClickButtonListener(new j(var5, var1, var3, var4));
+         this.binding.ctaButton.setOnClickButtonListener(new l(var5, var1, var3, var4));
          this.binding.ctaButton.setEnabled(true);
          this.binding.ctaButton.setAlpha(1.0F);
       } else {
-         this.binding.ctaButton.setOnClickButtonListener(new k());
+         this.binding.ctaButton.setOnClickButtonListener(new m());
          this.binding.ctaButton.setEnabled(false);
          this.binding.ctaButton.setAlpha(0.5F);
       }

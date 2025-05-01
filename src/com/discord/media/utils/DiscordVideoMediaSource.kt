@@ -6,16 +6,16 @@ import android.media.MediaFormat
 import android.media.MediaMetadataRetriever
 import android.net.Uri
 import android.os.Build.VERSION
-import j8.r
-import j8.s
-import j8.w
+import f8.r
+import f8.s
+import f8.w
+import g8.n
 import java.nio.ByteBuffer
 import java.util.ArrayList
 import java.util.concurrent.TimeUnit
-import k8.n
 import kotlin.jvm.internal.q
 
-internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
+internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : l7.a {
    public final val inputUri: Uri
    private final val srcTrackFormats: List<MediaFormat>
    private final val srcVideoFormat: MediaFormat?
@@ -84,61 +84,61 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
       if (this.srcVideoFormat != null) {
          label173:
          try {
-            val var148: j8.r.a = r.k;
-            var147 = r.b(var182.getInteger("width"));
+            val var149: f8.r.a = r.k;
+            var148 = r.b(var182.getInteger("width"));
          } catch (var19: java.lang.Throwable) {
-            val var168: j8.r.a = r.k;
-            var147 = r.b(s.a(var19));
+            val var147: f8.r.a = r.k;
+            var148 = r.b(s.a(var19));
             break label173;
          }
 
-         var var169: Any = var147;
-         if (r.g(var147)) {
-            var169 = 640;
+         var var168: Any = var148;
+         if (r.g(var148)) {
+            var168 = 640;
          }
 
-         this.width = (var169 as java.lang.Number).intValue();
+         this.width = (var168 as java.lang.Number).intValue();
 
          label167:
          try {
-            var149 = r.b(var182.getInteger("height"));
+            var151 = r.b(var182.getInteger("height"));
          } catch (var18: java.lang.Throwable) {
-            var169 = r.k;
-            var149 = r.b(s.a(var18));
+            val var150: f8.r.a = r.k;
+            var151 = r.b(s.a(var18));
             break label167;
          }
 
-         var169 = var149;
-         if (r.g(var149)) {
-            var169 = 480;
+         var168 = var151;
+         if (r.g(var151)) {
+            var168 = 480;
          }
 
-         this.height = (var169 as java.lang.Number).intValue();
-         var169 = MediaFormatUtilsKt.getProfileName(var182);
-         var var150: java.lang.String = (java.lang.String)var169;
-         if (var169 == null) {
-            var150 = "unknown";
+         this.height = (var168 as java.lang.Number).intValue();
+         var168 = MediaFormatUtilsKt.getProfileName(var182);
+         var var152: java.lang.String = (java.lang.String)var168;
+         if (var168 == null) {
+            var152 = "unknown";
          }
 
-         this.profile = var150;
-         val var151: Int = MediaFormatUtilsKt.getLevel(var182);
+         this.profile = var152;
+         val var153: Int = MediaFormatUtilsKt.getLevel(var182);
          var var3: Int;
-         if (var151 != null) {
-            var3 = var151;
+         if (var153 != null) {
+            var3 = var153;
          } else {
             var3 = 0;
          }
 
          this.level = var3;
          this.durationMs = (int)TimeUnit.MICROSECONDS.toMillis(var182.getLong("durationUs"));
-         var var152: java.lang.String = MediaFormatUtilsKt.getCodecType(var182);
-         if (var152 == null) {
-            var152 = "unknown";
+         var var154: java.lang.String = MediaFormatUtilsKt.getCodecType(var182);
+         if (var154 == null) {
+            var154 = "unknown";
          }
 
          var var165: Boolean;
          label204: {
-            this.videoFormat = var152;
+            this.videoFormat = var154;
             if (var182.containsKey("color-transfer")) {
                var165 = true;
                if (var182.getInteger("color-transfer") == 7) {
@@ -162,37 +162,37 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
 
          label149:
          try {
-            var153 = r.b(var182.getInteger("frame-rate"));
+            var155 = r.b(var182.getInteger("frame-rate"));
          } catch (var17: java.lang.Throwable) {
-            var169 = r.k;
-            var153 = r.b(s.a(var17));
+            var168 = r.k;
+            var155 = r.b(s.a(var17));
             break label149;
          }
 
-         if (r.e(var153) != null) {
+         if (r.e(var155) != null) {
             label144:
             try {
-               var153 = r.b((int)var182.getFloat("frame-rate"));
+               var155 = r.b((int)var182.getFloat("frame-rate"));
             } catch (var16: java.lang.Throwable) {
-               val var154: j8.r.a = r.k;
-               var153 = r.b(s.a(var16));
+               var168 = r.k;
+               var155 = r.b(s.a(var16));
                break label144;
             }
          }
 
-         var169 = var153;
-         if (r.g(var153)) {
-            var169 = 30;
+         var168 = var155;
+         if (r.g(var155)) {
+            var168 = 30;
          }
 
-         this.frameRate = (var169 as java.lang.Number).intValue();
-         this.bitRate = s7.h.a(this, this.srcTrackFormats.indexOf(var182));
+         this.frameRate = (var168 as java.lang.Number).intValue();
+         this.bitRate = o7.h.a(this, this.srcTrackFormats.indexOf(var182));
 
          label138:
          try {
             var156 = r.b(var182.getFloat("i-frame-interval"));
          } catch (var15: java.lang.Throwable) {
-            val var155: j8.r.a = r.k;
+            var168 = r.k;
             var156 = r.b(s.a(var15));
             break label138;
          }
@@ -202,18 +202,18 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
             try {
                var156 = r.b((float)var182.getInteger("i-frame-interval"));
             } catch (var14: java.lang.Throwable) {
-               var169 = r.k;
+               var168 = r.k;
                var156 = r.b(s.a(var14));
                break label133;
             }
          }
 
-         var169 = var156;
+         var168 = var156;
          if (r.g(var156)) {
-            var169 = 5.0F;
+            var168 = 5.0F;
          }
 
-         this.keyFrameIntervalSeconds = (var169 as java.lang.Number).floatValue();
+         this.keyFrameIntervalSeconds = (var168 as java.lang.Number).floatValue();
 
          label1394: {
             label205: {
@@ -223,7 +223,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
                      break label205;
                   }
                } catch (var13: java.lang.Throwable) {
-                  val var157: j8.r.a = r.k;
+                  val var157: f8.r.a = r.k;
                   var141 = r.b(s.a(var13));
                   break label1394;
                }
@@ -233,7 +233,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
                   var159.setDataSource(var1, this.inputUri);
                   var142 = var159.extractMetadata(24);
                } catch (var12: java.lang.Throwable) {
-                  val var158: j8.r.a = r.k;
+                  val var158: f8.r.a = r.k;
                   var141 = r.b(s.a(var12));
                   break label1394;
                }
@@ -242,7 +242,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
                   try {
                      var143 = h.m(var142);
                   } catch (var11: java.lang.Throwable) {
-                     val var160: j8.r.a = r.k;
+                     val var160: f8.r.a = r.k;
                      var141 = r.b(s.a(var11));
                      break label1394;
                   }
@@ -252,7 +252,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
                         var3 = var143;
                         break label205;
                      } catch (var10: java.lang.Throwable) {
-                        val var161: j8.r.a = r.k;
+                        val var161: f8.r.a = r.k;
                         var141 = r.b(s.a(var10));
                         break label1394;
                      }
@@ -266,7 +266,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
             try {
                var141 = r.b(var3);
             } catch (var9: java.lang.Throwable) {
-               val var162: j8.r.a = r.k;
+               val var162: f8.r.a = r.k;
                var141 = r.b(s.a(var9));
                break label108;
             }
@@ -408,7 +408,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
    }
 
    public fun getMetadata(): Map<String, Any> {
-      return k8.q.l(
+      return g8.q.l(
          new Pair[]{
             w.a("width", this.width),
             w.a("height", this.height),
@@ -512,21 +512,21 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : p7.a {
       }
 
       public override fun toString(): String {
-         val var5: Int = this.colorTransfer;
-         val var4: Int = this.colorStandard;
-         val var3: Int = this.colorRange;
+         val var3: Int = this.colorTransfer;
+         val var2: Int = this.colorStandard;
+         val var4: Int = this.colorRange;
          val var1: ByteBuffer = this.hdrStaticInfo;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ColorFormatSettings(colorTransfer=");
-         var2.append(var5);
-         var2.append(", colorStandard=");
-         var2.append(var4);
-         var2.append(", colorRange=");
-         var2.append(var3);
-         var2.append(", hdrStaticInfo=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ColorFormatSettings(colorTransfer=");
+         var5.append(var3);
+         var5.append(", colorStandard=");
+         var5.append(var2);
+         var5.append(", colorRange=");
+         var5.append(var4);
+         var5.append(", hdrStaticInfo=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
    }
 

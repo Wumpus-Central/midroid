@@ -1,0 +1,70 @@
+{
+  "rdfRys": [
+    "Vi har en ",
+    [
+      8,
+      "$code",
+      [
+        "const static codeSpan = 2;"
+      ]
+    ],
+    " her."
+  ],
+  "HMvECw": [
+    "Alt dette administreres lokalt og har ",
+    [
+      8,
+      "$b",
+      [
+        "ikke"
+      ]
+    ],
+    " erstattet det globale i18n-systemet ennå."
+  ],
+  "XOdbAw": [
+    "Bruk kroker som ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " for spesialinnhold."
+  ],
+  "rmps8/": [
+    "Denne strengen har en ",
+    [
+      8,
+      "$link",
+      [
+        "statisk lenke"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ", og url-en er definert i strengen."
+  ],
+  "uczI4u": [
+    "Denne lenken bruker en ",
+    [
+      8,
+      "$link",
+      [
+        "variabel lenke"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " som leveres ved kjøretid."
+  ],
+  "swfLzc": "Denne meldingen kommer fra en separat fil"
+}

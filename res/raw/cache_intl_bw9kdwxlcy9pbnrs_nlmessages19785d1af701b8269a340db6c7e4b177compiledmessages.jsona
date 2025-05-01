@@ -1,0 +1,70 @@
+{
+  "rdfRys": [
+    "We hebben hier een ",
+    [
+      8,
+      "$code",
+      [
+        "const static codeSpan = 2;"
+      ]
+    ],
+    "."
+  ],
+  "HMvECw": [
+    "Dit wordt allemaal lokaal beheerd en heeft het globale i18n-systeem ",
+    [
+      8,
+      "$b",
+      [
+        "nog niet"
+      ]
+    ],
+    " vervangen."
+  ],
+  "XOdbAw": [
+    "Gebruik hooks zoals ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " voor speciale content."
+  ],
+  "rmps8/": [
+    "Deze string bevat een ",
+    [
+      8,
+      "$link",
+      [
+        "statische link"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ", met een in de string gedefinieerde URL."
+  ],
+  "uczI4u": [
+    "Deze link maakt gebruik van een ",
+    [
+      8,
+      "$link",
+      [
+        "variabele link"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    " die tijdens runtime wordt verstrekt."
+  ],
+  "swfLzc": "Dit bericht is afkomstig van een apart bestand"
+}

@@ -7,7 +7,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import j8.w
+import f8.w
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

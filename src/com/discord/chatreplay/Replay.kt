@@ -1,10 +1,10 @@
 package com.discord.chatreplay
 
-import ca.f
-import ca.n
-import fa.C0
-import fa.G
-import fa.Y
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -142,7 +142,7 @@ public data class Replay(filename: String, lastModified: Long) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

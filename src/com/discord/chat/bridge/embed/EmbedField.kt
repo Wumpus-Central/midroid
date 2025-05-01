@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.embed
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import da.a
-import fa.C0
-import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -109,21 +109,21 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.rawName;
-      val var3: java.lang.String = this.rawValue;
-      val var5: StructurableText = this.name;
-      val var2: StructurableText = this.value;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("EmbedField(rawName=");
-      var4.append(var1);
-      var4.append(", rawValue=");
-      var4.append(var3);
-      var4.append(", name=");
-      var4.append(var5);
-      var4.append(", value=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.rawName;
+      val var5: java.lang.String = this.rawValue;
+      val var2: StructurableText = this.name;
+      val var4: StructurableText = this.value;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("EmbedField(rawName=");
+      var1.append(var3);
+      var1.append(", rawValue=");
+      var1.append(var5);
+      var1.append(", name=");
+      var1.append(var2);
+      var1.append(", value=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -148,9 +148,9 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var2: C0 = C0.a;
          val var1: KSerializer = a.u(C0.a);
-         val var4: KSerializer = a.u(var2);
-         val var3: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
-         return new KSerializer[]{var1, var4, a.u(StructurableTextSerializer.INSTANCE), a.u(var3)};
+         val var3: KSerializer = a.u(var2);
+         val var4: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
+         return new KSerializer[]{var1, var3, a.u(StructurableTextSerializer.INSTANCE), a.u(var4)};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedField {
@@ -160,7 +160,7 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
          val var5: Boolean = var11.y();
          var var8: java.lang.String = null;
          var var2: Int;
-         var var7: java.lang.String;
+         val var9: java.lang.String;
          var var14: StructurableText;
          var var15: StructurableText;
          if (var5) {
@@ -168,15 +168,15 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
             var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             val var6: java.lang.String = var11.v(var10, 1, var12, null) as java.lang.String;
             val var13: StructurableTextSerializer = StructurableTextSerializer.INSTANCE;
-            val var9: StructurableText = var11.v(var10, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            val var7: StructurableText = var11.v(var10, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
             var14 = var11.v(var10, 3, var13, null) as StructurableText;
             var2 = 15;
-            var7 = var6;
-            var15 = var9;
+            var9 = var6;
+            var15 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var7 = null;
+            var var16: java.lang.String = null;
             var15 = null;
             var14 = null;
 
@@ -197,7 +197,7 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.v(var10, 1, C0.a, var7) as java.lang.String;
+                        var16 = var11.v(var10, 1, C0.a, var16) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -208,10 +208,12 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
                   var3 = false;
                }
             }
+
+            var9 = var16;
          }
 
          var11.b(var10);
-         return new EmbedField(var2, var8, var7, var15, var14, null);
+         return new EmbedField(var2, var8, var9, var15, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedField) {
@@ -224,7 +226,7 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

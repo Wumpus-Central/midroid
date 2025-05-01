@@ -1,11 +1,11 @@
 package com.discord.file_downloader
 
-import V9.e
+import R9.e
 import android.content.Context
-import j8.l
+import f8.l
+import g8.q
 import java.io.File
 import java.util.Map.Entry
-import k8.q
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.flow.Flow
 import okhttp3.OkHttpClient
@@ -25,8 +25,8 @@ public object FileDownloader {
       kotlin.jvm.internal.q.h(var3, "client");
       val var4: Builder = new Builder();
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.a(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.a(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       return var3.b(var4.l(var1).b()).execute();

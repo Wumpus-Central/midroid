@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.N
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -78,15 +78,15 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var2: java.lang.String = this.id;
+      val var4: ContentInventoryEntry = this.contentInventoryEntry;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ContentInventoryEntryComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var4);
-      var3.append(", contentInventoryEntry=");
       var3.append(var2);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
@@ -157,8 +157,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                }
             }
 
-            var2 = var3;
             var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
@@ -175,7 +175,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

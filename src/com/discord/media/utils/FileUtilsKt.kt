@@ -1,11 +1,11 @@
 package com.discord.media.utils
 
-import Ma.j
+import Ia.j
 import java.io.File
 import java.io.InputStream
 import kotlin.jvm.internal.q
 import okio.BufferedSink
-import u8.c
+import q8.c
 
 internal fun InputStream.writeTo(outputFile: File): File {
    label18: {
@@ -16,10 +16,10 @@ internal fun InputStream.writeTo(outputFile: File): File {
       try {
          var2.Y0(j.l(var0));
       } catch (var4: java.lang.Throwable) {
-         val var10: java.lang.Throwable = var4;
+         val var9: java.lang.Throwable = var4;
 
          try {
-            throw var10;
+            throw var9;
          } catch (var3: java.lang.Throwable) {
             c.a(var2, var4);
          }

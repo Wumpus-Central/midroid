@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.executedcommand
 
-import ca.f
-import ca.n
-import da.a
-import fa.G
-import fa.N
-import fa.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
+import ba.N
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -88,18 +88,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var4: Int = this.color;
-      val var2: Int = this.borderRadius;
-      val var3: java.lang.Boolean = this.spaceAround;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ExecutedCommandBackgroundStyles(color=");
-      var1.append(var4);
-      var1.append(", borderRadius=");
-      var1.append(var2);
-      var1.append(", spaceAround=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: Int = this.color;
+      val var4: Int = this.borderRadius;
+      val var1: java.lang.Boolean = this.spaceAround;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ExecutedCommandBackgroundStyles(color=");
+      var2.append(var3);
+      var2.append(", borderRadius=");
+      var2.append(var4);
+      var2.append(", spaceAround=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -187,7 +187,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

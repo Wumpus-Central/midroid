@@ -2,7 +2,7 @@ package com.discord.key_commands
 
 import com.discord.codegen.NativeKeyCommandsModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 
 public class KeyCommandsModule(reactContext: ReactApplicationContext) : NativeKeyCommandsModuleSpec {
@@ -12,7 +12,7 @@ public class KeyCommandsModule(reactContext: ReactApplicationContext) : NativeKe
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
-      return k8.q.m(
+      return g8.q.m(
          new Pair[]{
             w.a("keyModifierAlphaShift", 65536),
             w.a("keyModifierShift", 131072),

@@ -120,6 +120,9 @@ public interface ChatEventHandler {
    public abstract fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
    }
 
+   public abstract fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
+   }
+
    public abstract fun onTapAttachmentLink(attachmentUrl: String) {
    }
 
@@ -463,6 +466,13 @@ public interface ChatEventHandler {
       public override fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
          q.h(var5, "instanceId");
          q.h(var6, "messageId");
+      }
+
+      public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
+         q.h(var1, "messageId");
+         q.h(var2, "actionId");
+         q.h(var3, "appId");
+         q.h(var4, "embedUrl");
       }
 
       public override fun onTapAttachmentLink(attachmentUrl: String) {

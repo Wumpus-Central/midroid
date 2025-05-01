@@ -54,36 +54,36 @@ public final class PostPreviewEmbedViewBinding implements ViewBinding {
 
    public static PostPreviewEmbedViewBinding bind(View var0) {
       int var1 = R.id.background_image;
-      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-      if (var4 != null) {
+      SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+      if (var9 != null) {
          var1 = R.id.cover_image;
-         SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-         if (var9 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.cover_image_overlay_button;
-            DCDButton var6 = (DCDButton)a.a(var0, var1);
-            if (var6 != null) {
+            DCDButton var10 = (DCDButton)a.a(var0, var1);
+            if (var10 != null) {
                var1 = R.id.cta;
-               DCDButton var10 = (DCDButton)a.a(var0, var1);
-               if (var10 != null) {
+               DCDButton var5 = (DCDButton)a.a(var0, var1);
+               if (var5 != null) {
                   var1 = R.id.footer;
-                  SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var2 != null) {
+                  SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.header_divider;
-                     View var5 = a.a(var0, var1);
-                     if (var5 != null) {
+                     View var7 = a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.image_blur_bg;
-                        FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                        if (var7 != null) {
+                        FrameLayout var3 = (FrameLayout)a.a(var0, var1);
+                        if (var3 != null) {
                            var1 = R.id.spoiler;
-                           SpoilerView var11 = (SpoilerView)a.a(var0, var1);
-                           if (var11 != null) {
+                           SpoilerView var4 = (SpoilerView)a.a(var0, var1);
+                           if (var4 != null) {
                               var1 = R.id.subtitle;
-                              TextView var3 = (TextView)a.a(var0, var1);
-                              if (var3 != null) {
+                              TextView var11 = (TextView)a.a(var0, var1);
+                              if (var11 != null) {
                                  var1 = R.id.title;
                                  TextView var8 = (TextView)a.a(var0, var1);
                                  if (var8 != null) {
-                                    return new PostPreviewEmbedViewBinding(var0, var4, var9, var6, var10, var2, var5, var7, var11, var3, var8);
+                                    return new PostPreviewEmbedViewBinding(var0, var9, var2, var10, var5, var6, var7, var3, var4, var11, var8);
                                  }
                               }
                            }

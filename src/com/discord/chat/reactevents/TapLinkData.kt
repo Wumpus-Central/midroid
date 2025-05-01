@@ -11,7 +11,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
@@ -137,11 +137,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          NativeMapExtensionsKt.put(var5, "messageChannelId", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getMessageChannelId());
          NativeMapExtensionsKt.put(var5, "linkColor", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getLinkColor());
       } else {
-         val var10: Log = Log.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Missing target type data: ");
-         var4.append(var2);
-         Log.e$default(var10, "TapLink", var4.toString(), null, 4, null);
+         val var4: Log = Log.INSTANCE;
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("Missing target type data: ");
+         var10.append(var2);
+         Log.e$default(var4, "TapLink", var10.toString(), null, 4, null);
       }
 
       return var5;
@@ -260,18 +260,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
+      val var3: java.lang.String = this.title;
       val var2: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
+      val var4: java.lang.String = this.content;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapLinkData(messageId=");
       var5.append(var6);
       var5.append(", title=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", target=");
       var5.append(var2);
       var5.append(", content=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

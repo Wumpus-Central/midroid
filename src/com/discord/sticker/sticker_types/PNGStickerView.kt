@@ -1,6 +1,6 @@
 package com.discord.sticker.sticker_types
 
-import V1.c
+import R1.c
 import android.content.Context
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape

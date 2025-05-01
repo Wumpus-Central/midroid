@@ -181,11 +181,11 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          Log.i$default(var5, var9, var6.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var7);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var4);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
@@ -208,16 +208,16 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
          val var5: Long = System.currentTimeMillis();
-         val var12: Log = Log.INSTANCE;
-         val var8: java.lang.String = access$getName(this);
+         val var8: Log = Log.INSTANCE;
+         val var11: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("releaseEglSurface (");
-         var11.append(var5 - var3);
-         var11.append(" ms) (");
-         var11.append(var2);
-         var11.append(" total)");
-         Log.i$default(var12, var8, var11.toString(), null, 4, null);
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("releaseEglSurface (");
+         var12.append(var5 - var3);
+         var12.append(" ms) (");
+         var12.append(var2);
+         var12.append(" total)");
+         Log.i$default(var8, var11, var12.toString(), null, 4, null);
          return true;
       } else {
          val var9: Thread = Thread.currentThread();

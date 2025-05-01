@@ -144,14 +144,14 @@ public class ForegroundServiceManager {
       // 03: ldc "foregroundService"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc "On service connected."
       // 1a: aconst_null
       // 1b: bipush 4
@@ -178,11 +178,11 @@ public class ForegroundServiceManager {
       // 48: aload 0
       // 49: aload 1
       // 4a: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4d: aload 3
+      // 4d: aload 2
       // 4e: ldc "tag"
       // 50: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 53: aload 2
-      // 54: aload 3
+      // 53: aload 3
+      // 54: aload 2
       // 55: ldc_w "No configuration present (process liked died), stopping service."
       // 58: aconst_null
       // 59: bipush 4
@@ -217,14 +217,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc_w "On service created."
       // 1b: aconst_null
       // 1c: bipush 4

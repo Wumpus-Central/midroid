@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import j8.w
+import f8.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
@@ -81,9 +81,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 

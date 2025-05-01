@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.N
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -91,8 +91,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -100,28 +100,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var6: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var4: SectionAccessory = this.accessory;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SectionComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var5);
-      var2.append(", errorText=");
-      var2.append(var6);
-      var2.append(", components=");
-      var2.append(var3);
-      var2.append(", accessory=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.components;
+      val var5: SectionAccessory = this.accessory;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SectionComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", errorText=");
+      var3.append(var6);
+      var3.append(", components=");
+      var3.append(var2);
+      var3.append(", accessory=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -209,8 +209,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
                }
             }
 
-            var2 = var3;
             var3 = var2;
+            var2 = var3;
          }
 
          var10.b(var9);
@@ -227,7 +227,7 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

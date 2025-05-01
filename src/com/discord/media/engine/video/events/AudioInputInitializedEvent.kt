@@ -3,7 +3,7 @@ package com.discord.media.engine.video.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 
 internal data class AudioInputInitializedEvent(timeToInitialized: Double, description: Map<String, Any>) : ReactEvent {

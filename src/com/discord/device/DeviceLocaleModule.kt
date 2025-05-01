@@ -3,7 +3,7 @@ package com.discord.device
 import android.os.LocaleList
 import com.discord.codegen.NativeDeviceLocaleModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import j8.w
+import f8.w
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -14,29 +14,29 @@ internal class DeviceLocaleModule(reactContext: ReactApplicationContext) : Nativ
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
-      val var6: ArrayList = new ArrayList();
-      val var7: LocaleList = LocaleList.getAdjustedDefault();
-      q.g(var7, "getAdjustedDefault(...)");
-      val var3: Int = var7.size();
+      val var4: ArrayList = new ArrayList();
+      val var5: LocaleList = LocaleList.getAdjustedDefault();
+      q.g(var5, "getAdjustedDefault(...)");
+      val var3: Int = var5.size();
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var4: java.lang.String = var7.get(var1).toLanguageTag();
+         val var6: java.lang.String = var5.get(var1).toLanguageTag();
          if (var1 == 0) {
-            q.e(var4);
-            var6.add(var4);
+            q.e(var6);
+            var4.add(var6);
          } else {
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var4);
-            var5.append(";q=0.");
-            var5.append(var2);
-            var6.add(var5.toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append(var6);
+            var7.append(";q=0.");
+            var7.append(var2);
+            var4.add(var7.toString());
          }
 
          var2 = kotlin.ranges.d.c(1, var2 - 1);
       }
 
-      i.o0(var6, ",", null, null, 0, null, null, 62, null);
-      return k8.q.m(new Pair[]{w.a("Language", i.f0(var6)), w.a("Languages", var6)});
+      i.o0(var4, ",", null, null, 0, null, null, 62, null);
+      return g8.q.m(new Pair[]{w.a("Language", i.f0(var4)), w.a("Languages", var4)});
    }
 }

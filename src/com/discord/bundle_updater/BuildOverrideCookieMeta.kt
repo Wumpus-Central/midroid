@@ -1,17 +1,17 @@
 package com.discord.bundle_updater
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.T
+import ba.h
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
-import fa.C0
-import fa.G
-import fa.N
-import fa.T
-import fa.h
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -39,7 +39,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: C0 = C0.a;
-      $childSerializers = new KSerializer[]{null, null, new fa.f(C0.a), new fa.f(var0), null, new T(var0, N.a)};
+      $childSerializers = new KSerializer[]{null, null, new ba.f(C0.a), new ba.f(var0), null, new T(var0, N.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -188,9 +188,9 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       val var4: java.lang.String = this.expiresAt;
       val var5: java.lang.String = this.releaseChannel;
       val var7: java.util.List = this.validForUserIds;
-      val var6: java.util.List = this.allowedVersions;
-      val var2: java.lang.Boolean = this.allowLoggedOut;
-      val var1: java.util.Map = this.experiments;
+      val var1: java.util.List = this.allowedVersions;
+      val var6: java.lang.Boolean = this.allowLoggedOut;
+      val var2: java.util.Map = this.experiments;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BuildOverrideCookieMeta(expiresAt=");
       var3.append(var4);
@@ -199,11 +199,11 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       var3.append(", validForUserIds=");
       var3.append(var7);
       var3.append(", allowedVersions=");
-      var3.append(var6);
-      var3.append(", allowLoggedOut=");
-      var3.append(var2);
-      var3.append(", experiments=");
       var3.append(var1);
+      var3.append(", allowLoggedOut=");
+      var3.append(var6);
+      var3.append(", experiments=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -230,9 +230,9 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
-         val var1: C0 = C0.a;
-         return new KSerializer[]{da.a.u(C0.a), da.a.u(var1), da.a.u(var2[2]), da.a.u(var2[3]), da.a.u(h.a), da.a.u(var2[5])};
+         val var1: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
+         val var2: C0 = C0.a;
+         return new KSerializer[]{Z9.a.u(C0.a), Z9.a.u(var2), Z9.a.u(var1[2]), Z9.a.u(var1[3]), Z9.a.u(h.a), Z9.a.u(var1[5])};
       }
 
       public open fun deserialize(decoder: Decoder): BuildOverrideCookieMeta {
@@ -321,7 +321,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

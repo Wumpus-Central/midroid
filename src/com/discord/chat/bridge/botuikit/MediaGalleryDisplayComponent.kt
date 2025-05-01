@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import ca.f
-import ca.n
-import fa.C0
-import fa.G
-import fa.N
-import fa.G.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,15 +71,15 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.util.List = this.items;
+      val var4: java.lang.String = this.id;
+      val var3: java.util.List = this.items;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MediaGalleryDisplayComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var3);
-      var2.append(", items=");
       var2.append(var4);
+      var2.append(", items=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -151,8 +151,8 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                }
             }
 
-            var3 = var2;
             var2 = var3;
+            var3 = var2;
          }
 
          var8.b(var7);

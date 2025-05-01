@@ -13,8 +13,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
+import g8.n
 import java.util.ArrayList
-import k8.n
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -54,15 +54,15 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
       q.h(var1, "$rects");
       val var2: Function2 = ReactRootViewProxy.INSTANCE.getSetSystemGestureExclusionRects();
       if (var2 != null) {
-         val var3: ReactApplicationContext = var0.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
+         val var6: ReactApplicationContext = var0.getReactApplicationContext();
+         q.g(var6, "getReactApplicationContext(...)");
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-         val var6: ArrayList = new ArrayList(i.v(var4, 10));
+         val var3: ArrayList = new ArrayList(i.v(var4, 10));
          val var5: java.util.Iterator = var4.iterator();
 
          while (var5.hasNext()) {
             val var7: ReadableMap = var1.getMap((var5 as n).a());
-            var6.add(
+            var3.add(
                new Rect(
                   SizeUtilsKt.getDpToPx(var7.getInt("left")),
                   SizeUtilsKt.getDpToPx(var7.getInt("top")),
@@ -72,7 +72,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
             );
          }
 
-         var2.invoke(var3, var6);
+         var2.invoke(var6, var3);
       }
    }
 

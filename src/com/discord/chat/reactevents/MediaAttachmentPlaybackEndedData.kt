@@ -1,17 +1,17 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.F
+import ba.G
+import ba.h
+import ba.p0
+import ba.G.a
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.C0
-import fa.F
-import fa.G
-import fa.h
-import fa.p0
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -171,30 +171,30 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Float = this.totalDurationSecs;
       val var3: Float = this.endDurationSecs;
-      val var8: java.lang.String = UserId.toString-impl(this.senderUserId);
-      val var1: Float = this.durationListeningSecs;
+      val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var2: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var6: java.lang.String = this.attachmentId;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var7.append(var5);
-      var7.append(", totalDurationSecs=");
-      var7.append(var2);
-      var7.append(", endDurationSecs=");
-      var7.append(var3);
-      var7.append(", senderUserId=");
-      var7.append(var8);
-      var7.append(", durationListeningSecs=");
-      var7.append(var1);
-      var7.append(", isVoiceMessage=");
-      var7.append(var4);
-      var7.append(", attachmentId=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = this.attachmentId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaAttachmentPlaybackEndedData(messageId=");
+      var5.append(var8);
+      var5.append(", totalDurationSecs=");
+      var5.append(var1);
+      var5.append(", endDurationSecs=");
+      var5.append(var3);
+      var5.append(", senderUserId=");
+      var5.append(var6);
+      var5.append(", durationListeningSecs=");
+      var5.append(var2);
+      var5.append(", isVoiceMessage=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -318,9 +318,9 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
                }
             }
 
+            var10 = var18;
             var17 = (java.lang.String)var10;
             var2 = var4;
-            var10 = var18;
             var4 = var2;
          }
 

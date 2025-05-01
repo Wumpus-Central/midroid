@@ -68,7 +68,6 @@
             <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="instagram"/>
         </intent>
-        <package android:name="com.facebook.katana"/>
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE"/>
         </intent>
@@ -385,11 +384,6 @@
         </provider>
         <service android:name="com.discord.react.headless_tasks.service.HeadlessTasksService"/>
         <meta-data android:name="io.sentry.auto-init" android:value="false"/>
-        <receiver android:exported="true" android:name="com.adjust.sdk.AdjustReferrerReceiver" android:permission="android.permission.INSTALL_PACKAGES">
-            <intent-filter>
-                <action android:name="com.android.vending.INSTALL_REFERRER"/>
-            </intent-filter>
-        </receiver>
         <provider android:authorities="com.discord.provider" android:exported="false" android:grantUriPermissions="true" android:name="com.reactnative.ivpusic.imagepicker.IvpusicImagePickerFileProvider">
             <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/ivpusic_imagepicker_provider_paths"/>
         </provider>

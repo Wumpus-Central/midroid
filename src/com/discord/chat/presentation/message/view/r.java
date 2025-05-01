@@ -2,16 +2,17 @@ package com.discord.chat.presentation.message.view;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.discord.media_player.MediaSource;
-import kotlin.jvm.functions.Function2;
+import com.facebook.drawee.span.DraweeSpanStringBuilder;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class r implements OnClickListener {
-   public final Function2 j;
-   public final MediaSource k;
-   public final int l;
+   public final Function3 j;
+   public final String k;
+   public final String l;
+   public final DraweeSpanStringBuilder m;
 
    public final void onClick(View var1) {
-      EmbedView.a(this.j, this.k, this.l, var1);
+      EmbedView.b(this.j, this.k, this.l, this.m, var1);
    }
 }

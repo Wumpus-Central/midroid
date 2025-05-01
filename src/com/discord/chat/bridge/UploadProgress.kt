@@ -1,12 +1,12 @@
 package com.discord.chat.bridge
 
-import ca.f
-import ca.n
-import fa.C0
-import fa.F
-import fa.G
-import fa.N
-import fa.G.a
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.F
+import ba.G
+import ba.N
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -193,42 +193,42 @@ public data class UploadProgress(headerText: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.headerText;
-      val var2: Int = this.headerColor;
-      val var3: Int = this.backgroundColor;
+      val var10: java.lang.String = this.headerText;
+      val var8: Int = this.headerColor;
+      val var6: Int = this.backgroundColor;
       val var1: Float = this.progress;
       val var12: java.lang.String = this.fileId;
       val var11: java.lang.String = this.fileType;
-      val var6: Int = this.progressTrackColor;
-      val var8: Int = this.progressStartColor;
-      val var4: Int = this.progressEndColor;
-      val var5: Int = this.iconTintColor;
-      val var7: Int = this.closeTintColor;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("UploadProgress(headerText=");
-      var10.append(var9);
-      var10.append(", headerColor=");
-      var10.append(var2);
-      var10.append(", backgroundColor=");
-      var10.append(var3);
-      var10.append(", progress=");
-      var10.append(var1);
-      var10.append(", fileId=");
-      var10.append(var12);
-      var10.append(", fileType=");
-      var10.append(var11);
-      var10.append(", progressTrackColor=");
-      var10.append(var6);
-      var10.append(", progressStartColor=");
-      var10.append(var8);
-      var10.append(", progressEndColor=");
-      var10.append(var4);
-      var10.append(", iconTintColor=");
-      var10.append(var5);
-      var10.append(", closeTintColor=");
-      var10.append(var7);
-      var10.append(")");
-      return var10.toString();
+      val var3: Int = this.progressTrackColor;
+      val var4: Int = this.progressStartColor;
+      val var7: Int = this.progressEndColor;
+      val var2: Int = this.iconTintColor;
+      val var5: Int = this.closeTintColor;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("UploadProgress(headerText=");
+      var9.append(var10);
+      var9.append(", headerColor=");
+      var9.append(var8);
+      var9.append(", backgroundColor=");
+      var9.append(var6);
+      var9.append(", progress=");
+      var9.append(var1);
+      var9.append(", fileId=");
+      var9.append(var12);
+      var9.append(", fileType=");
+      var9.append(var11);
+      var9.append(", progressTrackColor=");
+      var9.append(var3);
+      var9.append(", progressStartColor=");
+      var9.append(var4);
+      var9.append(", progressEndColor=");
+      var9.append(var7);
+      var9.append(", iconTintColor=");
+      var9.append(var2);
+      var9.append(", closeTintColor=");
+      var9.append(var5);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : G {
@@ -263,101 +263,101 @@ public data class UploadProgress(headerText: String,
 
       public open fun deserialize(decoder: Decoder): UploadProgress {
          q.h(var1, "decoder");
-         val var18: SerialDescriptor = this.getDescriptor();
-         val var19: c = var1.c(var18);
-         val var14: Boolean = var19.y();
+         val var17: SerialDescriptor = this.getDescriptor();
+         val var18: c = var1.c(var17);
+         val var13: Boolean = var18.y();
          var var3: Int = 0;
          var var2: Float;
          var var6: Int;
+         var var7: Int;
          var var8: Int;
          var var9: Int;
-         var var10: Int;
          val var11: Int;
+         var var14: java.lang.String;
          var var15: java.lang.String;
-         var var16: java.lang.String;
-         val var20: java.lang.String;
-         var var23: Int;
-         var var25: Int;
-         var var28: Int;
-         if (var14) {
-            var16 = var19.t(var18, 0);
-            var10 = var19.k(var18, 1);
-            var6 = var19.k(var18, 2);
-            var2 = var19.G(var18, 3);
-            var15 = var19.t(var18, 4);
-            var20 = var19.t(var18, 5);
-            var8 = var19.k(var18, 6);
-            var25 = var19.k(var18, 7);
-            var28 = var19.k(var18, 8);
-            var23 = var19.k(var18, 9);
-            var3 = var19.k(var18, 10);
-            var11 = 2047;
-            var9 = var25;
-            var25 = var28;
-            var28 = var23;
-            var23 = var3;
+         val var19: java.lang.String;
+         var var22: Int;
+         var var24: Int;
+         var var29: Int;
+         if (var13) {
+            var15 = var18.t(var17, 0);
+            var7 = var18.k(var17, 1);
+            var6 = var18.k(var17, 2);
+            var2 = var18.G(var17, 3);
+            var14 = var18.t(var17, 4);
+            var19 = var18.t(var17, 5);
+            var11 = var18.k(var17, 6);
+            var24 = var18.k(var17, 7);
+            var29 = var18.k(var17, 8);
+            var22 = var18.k(var17, 9);
+            var3 = var18.k(var17, 10);
+            var9 = 2047;
+            var8 = var24;
+            var24 = var29;
+            var29 = var22;
+            var22 = var3;
          } else {
-            var16 = null;
             var15 = null;
-            var var21: java.lang.String = null;
-            var var34: Boolean = true;
+            var14 = null;
+            var var20: java.lang.String = null;
+            var var31: Boolean = true;
             var9 = 0;
             var8 = 0;
-            var28 = 0;
+            var7 = 0;
             var6 = 0;
-            var25 = 0;
-            var23 = 0;
+            var24 = 0;
+            var22 = 0;
             var2 = 0.0F;
-            var10 = 0;
+            var29 = 0;
 
-            while (var34) {
-               val var12: Int = var19.x(var18);
+            while (var31) {
+               val var12: Int = var18.x(var17);
                switch (var12) {
                   case -1:
-                     var34 = false;
+                     var31 = false;
                      break;
                   case 0:
-                     var16 = var19.t(var18, 0);
+                     var15 = var18.t(var17, 0);
                      var3 |= 1;
                      break;
                   case 1:
-                     var23 = var19.k(var18, 1);
+                     var22 = var18.k(var17, 1);
                      var3 |= 2;
                      break;
                   case 2:
-                     var25 = var19.k(var18, 2);
+                     var24 = var18.k(var17, 2);
                      var3 |= 4;
                      break;
                   case 3:
-                     var2 = var19.G(var18, 3);
+                     var2 = var18.G(var17, 3);
                      var3 |= 8;
                      break;
                   case 4:
-                     var21 = var19.t(var18, 4);
+                     var20 = var18.t(var17, 4);
                      var3 |= 16;
                      break;
                   case 5:
-                     var15 = var19.t(var18, 5);
+                     var14 = var18.t(var17, 5);
                      var3 |= 32;
                      break;
                   case 6:
-                     var28 = var19.k(var18, 6);
+                     var7 = var18.k(var17, 6);
                      var3 |= 64;
                      break;
                   case 7:
-                     var8 = var19.k(var18, 7);
+                     var8 = var18.k(var17, 7);
                      var3 |= 128;
                      break;
                   case 8:
-                     var6 = var19.k(var18, 8);
+                     var6 = var18.k(var17, 8);
                      var3 |= 256;
                      break;
                   case 9:
-                     var9 = var19.k(var18, 9);
+                     var9 = var18.k(var17, 9);
                      var3 |= 512;
                      break;
                   case 10:
-                     var10 = var19.k(var18, 10);
+                     var29 = var18.k(var17, 10);
                      var3 |= 1024;
                      break;
                   default:
@@ -365,20 +365,19 @@ public data class UploadProgress(headerText: String,
                }
             }
 
-            var15 = var21;
-            var6 = var25;
-            var23 = var10;
-            var28 = var9;
-            var25 = var6;
-            var9 = var8;
-            var8 = var28;
-            var20 = var15;
-            var10 = var23;
-            var11 = var3;
+            var14 = var20;
+            var6 = var24;
+            var22 = var29;
+            var29 = var9;
+            var24 = var6;
+            var11 = var7;
+            var19 = var14;
+            var7 = var22;
+            var9 = var3;
          }
 
-         var19.b(var18);
-         return new UploadProgress(var11, var16, var10, var6, var2, var15, var20, var8, var9, var25, var28, var23, null);
+         var18.b(var17);
+         return new UploadProgress(var9, var15, var7, var6, var2, var14, var19, var11, var8, var24, var29, var22, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgress) {

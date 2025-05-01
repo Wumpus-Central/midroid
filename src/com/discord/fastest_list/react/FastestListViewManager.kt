@@ -23,7 +23,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
-import j8.w
+import f8.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5

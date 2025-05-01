@@ -106,7 +106,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 077
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 1
@@ -170,7 +170,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 108: astore 1
       // 109: aload 7
       // 10b: aconst_null
-      // 10c: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10c: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 10f: aload 1
       // 110: areturn
       // 111: aload 1
@@ -178,12 +178,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 113: astore 6
       // 115: aload 7
       // 117: aload 1
-      // 118: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 118: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11b: aload 6
       // 11d: athrow
       // 11e: aload 7
       // 120: aconst_null
-      // 121: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 121: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 124: aconst_null
       // 125: areturn
    }
@@ -200,12 +200,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var2 != null) {
-         if (this.lastProcessedPath == null || !h.w(this.lastProcessedPath, var2.getPath(), false, 2, null)) {
-            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
-               && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
-               this.lastProcessedPath = var2.getPath();
+      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var3 != null) {
+         if (this.lastProcessedPath == null || !h.w(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
+            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
+               && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
+               this.lastProcessedPath = var3.getPath();
                this.onScreenshot.invoke();
             }
          }
@@ -223,11 +223,11 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var3: java.lang.String = var2.toString();
-         q.g(var3, "toString(...)");
-         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         val var4: java.lang.String = var2.toString();
          q.g(var4, "toString(...)");
-         if (h.J(var3, var4, false, 2, null)) {
+         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         q.g(var3, "toString(...)");
+         if (h.J(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {

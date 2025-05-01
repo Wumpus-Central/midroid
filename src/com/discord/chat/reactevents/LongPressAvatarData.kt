@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.C0
-import fa.G
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,15 +67,15 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: java.lang.String = this.userId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LongPressAvatarData(messageId=");
-      var3.append(var2);
-      var3.append(", userId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressAvatarData(messageId=");
+      var2.append(var3);
+      var2.append(", userId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

@@ -1,12 +1,12 @@
 package com.discord.media.engine.video.events
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.C0
-import fa.G
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -55,12 +55,12 @@ internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.imgdata;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnBroadcastThumbnailEvent(imgdata=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.imgdata;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnBroadcastThumbnailEvent(imgdata=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {

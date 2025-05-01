@@ -27,15 +27,15 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
       val var5: ReactAssetCache = ReactAssetCache.INSTANCE;
       val var4: ReactApplicationContext = this.reactContext;
       val var3: HashMap = new HashMap();
-      val var7: java.util.Iterator = ReactAsset.getEntries().iterator();
+      val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
 
-      for (int var2 = 0; var7.hasNext(); var2++) {
-         val var6: Any = var7.next();
+      for (int var2 = 0; var6.hasNext(); var2++) {
+         val var7: Any = var6.next();
          if (var2 < 0) {
             i.u();
          }
 
-         var3.put((var6 as ReactAsset).name(), var1.getString(var2));
+         var3.put((var7 as ReactAsset).name(), var1.getString(var2));
       }
 
       var5.set(var4, var3);

@@ -125,13 +125,13 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
       }
 
       public override fun toString(): String {
-         val var1: Int = this.start;
-         val var2: Int = this.end;
+         val var2: Int = this.start;
+         val var1: Int = this.end;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DeleteEvent(start=");
-         var3.append(var1);
-         var3.append(", end=");
          var3.append(var2);
+         var3.append(", end=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

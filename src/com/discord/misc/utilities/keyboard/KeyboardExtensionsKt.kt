@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.keyboard
 
-import S9.f
+import O9.f
 import android.app.Activity
 import android.view.View
 import android.view.Window
@@ -10,12 +10,12 @@ import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.o0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
-import j8.s
+import f8.s
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import p8.b
+import l8.b
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {

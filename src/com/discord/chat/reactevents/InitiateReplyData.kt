@@ -1,16 +1,16 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
+import ba.p0
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.a
-import fa.C0
-import fa.G
-import fa.h
-import fa.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -122,21 +122,21 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: java.lang.Boolean = this.triggerHaptic;
-      val var2: java.lang.String = this.location;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InitiateReplyData(messageId=");
-      var3.append(var5);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", triggerHaptic=");
-      var3.append(var1);
-      var3.append(", location=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.location;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("InitiateReplyData(messageId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", triggerHaptic=");
+      var4.append(var1);
+      var4.append(", location=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -256,7 +256,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

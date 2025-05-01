@@ -1,0 +1,70 @@
+{
+  "rdfRys": [
+    "Tässä on koodi ",
+    [
+      8,
+      "$code",
+      [
+        "const static codeSpan = 2;"
+      ]
+    ],
+    "."
+  ],
+  "HMvECw": [
+    "Kaikki tämä on paikallisesti hallittua eikä sitä ",
+    [
+      8,
+      "$b",
+      [
+        "ole vielä"
+      ]
+    ],
+    " korvattu globaalilla i18n-järjestelmällä."
+  ],
+  "XOdbAw": [
+    "Hook-viittauksia (kuten ",
+    [
+      8,
+      "usernameHook",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    ") käyttämällä voi lisätä erikoissisältöä."
+  ],
+  "rmps8/": [
+    "Tässä tekstissä on ",
+    [
+      8,
+      "$link",
+      [
+        "staattinen linkki"
+      ],
+      [
+        "https://discord.com"
+      ]
+    ],
+    ", jossa URL-osoite on määritetty tekstiin."
+  ],
+  "uczI4u": [
+    "Tämä linkki käyttää käytönaikana määritettävää ",
+    [
+      8,
+      "$link",
+      [
+        "muuttuvaa linkkiä"
+      ],
+      [
+        [
+          1,
+          "linkTarget"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "swfLzc": "Tämä viesti on peräisin erillisestä tiedostosta"
+}

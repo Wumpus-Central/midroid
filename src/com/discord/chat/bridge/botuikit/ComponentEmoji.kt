@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -111,24 +111,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var4: java.lang.String = this.name;
-      val var3: java.lang.String = this.src;
+      val var2: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ComponentEmoji(id=");
-      var2.append(var6);
-      var2.append(", name=");
-      var2.append(var4);
-      var2.append(", src=");
-      var2.append(var3);
-      var2.append(", animated=");
-      var2.append(var1);
-      var2.append(", surrogates=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var6: java.lang.String = this.surrogates;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ComponentEmoji(id=");
+      var3.append(var5);
+      var3.append(", name=");
+      var3.append(var4);
+      var3.append(", src=");
+      var3.append(var2);
+      var3.append(", animated=");
+      var3.append(var1);
+      var3.append(", surrogates=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -235,7 +235,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

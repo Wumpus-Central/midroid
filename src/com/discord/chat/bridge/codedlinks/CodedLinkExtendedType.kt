@@ -1,18 +1,19 @@
 package com.discord.chat.bridge.codedlinks
 
-import ca.f
+import Y9.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import j8.l
-import j8.o
+import f8.l
+import f8.o
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.E
 import kotlinx.serialization.KSerializer
-import q8.a
+import m8.a
 
 @f(with = CodedLinkExtendedType.Serializer::class)
 public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
    ACTIVITY_BOOKMARK(3),
+   APP_MESSAGE_EMBED(5),
    EMBEDDED_ACTIVITY_INVITE(4),
    GUILD_INVITE_DISABLED(2),
    GUILD_PROFILE_INVITE(6),

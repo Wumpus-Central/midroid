@@ -1,6 +1,6 @@
 package com.discord.image.fresco.config
 
-import V1.c
+import R1.c
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration

@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.C0
-import fa.G
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,15 +67,15 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapShareForumPost(channelId=");
-      var3.append(var1);
-      var3.append(", guildId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.guildId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapShareForumPost(channelId=");
+      var1.append(var2);
+      var1.append(", guildId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {

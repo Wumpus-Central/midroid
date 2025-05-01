@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.N
-import fa.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -125,15 +125,15 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.content;
+      val var1: java.util.List = this.content;
       val var2: LinkContextData = this.target;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LinkContentNode(content=");
-      var1.append(var3);
-      var1.append(", target=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LinkContentNode(content=");
+      var3.append(var1);
+      var3.append(", target=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -158,11 +158,11 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var4: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
+         val var2: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
+         val var1: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
          val var3: KSerializer = a.u(N.a);
          val var5: C0 = C0.a;
-         return new KSerializer[]{var1, var4, var3, a.u(C0.a), h.a, a.u(var5)};
+         return new KSerializer[]{var2, var1, var3, a.u(C0.a), h.a, a.u(var5)};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {
@@ -172,27 +172,27 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
          var var10: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
          var var2: Int;
          var var5: Boolean;
-         var var8: LinkContextData;
+         var var7: LinkContextData;
          var var9: java.util.List;
          var var14: Any;
          var var15: Any;
          if (var12.y()) {
             var15 = var12.m(var11, 0, var10[0], null) as java.util.List;
-            var8 = var12.v(var11, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
-            var10 = var12.v(var11, 2, N.a, null) as Int;
+            var7 = var12.v(var11, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
+            val var8: Int = var12.v(var11, 2, N.a, null) as Int;
             var14 = C0.a;
-            val var7: java.lang.String = var12.v(var11, 3, C0.a, null) as java.lang.String;
+            var10 = var12.v(var11, 3, C0.a, null) as java.lang.String;
             var5 = var12.s(var11, 4);
             var14 = var12.v(var11, 5, (DeserializationStrategy)var14, null) as java.lang.String;
             var2 = 63;
             var9 = (java.util.List)var15;
-            var15 = var7;
+            var15 = var8;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var9 = null;
-            var8 = null;
-            var var16: Any = null;
+            var var18: LinkContextData = null;
+            var7 = null;
             var15 = null;
             var14 = null;
             var2 = 0;
@@ -208,11 +208,11 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                      var2 |= 1;
                      break;
                   case 1:
-                     var8 = var12.v(var11, 1, LinkContextDataSerializer.INSTANCE, var8) as LinkContextData;
+                     var18 = var12.v(var11, 1, LinkContextDataSerializer.INSTANCE, var18) as LinkContextData;
                      var2 |= 2;
                      break;
                   case 2:
-                     var16 = var12.v(var11, 2, N.a, var16) as Int;
+                     var7 = var12.v(var11, 2, N.a, var7) as Int;
                      var2 |= 4;
                      break;
                   case 3:
@@ -232,11 +232,13 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                }
             }
 
-            var10 = (KSerializer[])var16;
+            var10 = (KSerializer[])var15;
+            var15 = var7;
+            var7 = var18;
          }
 
          var12.b(var11);
-         return new LinkContentNode(var2, var9, var8, var10, (java.lang.String)var15, var5, (java.lang.String)var14, null);
+         return new LinkContentNode(var2, var9, var7, (Integer)var15, var10, var5, (java.lang.String)var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LinkContentNode) {
@@ -249,7 +251,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

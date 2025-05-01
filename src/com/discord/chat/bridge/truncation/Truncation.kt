@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.truncation
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
-import fa.N
-import fa.h
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.N
+import ba.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -112,22 +112,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var4: java.lang.String = this.seeMoreLabel;
+      val var5: java.lang.String = this.seeMoreLabel;
       val var3: Int = this.seeMoreLabelColor;
-      val var5: java.lang.Boolean = this.forceShow;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Truncation(numberOfLines=");
-      var6.append(var1);
-      var6.append(", expandable=");
-      var6.append(var2);
-      var6.append(", seeMoreLabel=");
-      var6.append(var4);
-      var6.append(", seeMoreLabelColor=");
-      var6.append(var3);
-      var6.append(", forceShow=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var6: java.lang.Boolean = this.forceShow;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Truncation(numberOfLines=");
+      var4.append(var1);
+      var4.append(", expandable=");
+      var4.append(var2);
+      var4.append(", seeMoreLabel=");
+      var4.append(var5);
+      var4.append(", seeMoreLabelColor=");
+      var4.append(var3);
+      var4.append(", forceShow=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -151,9 +151,9 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: N = N.a;
-         val var2: h = h.a;
-         return new KSerializer[]{N.a, h.a, a.u(C0.a), a.u(var1), a.u(var2)};
+         val var2: N = N.a;
+         val var1: h = h.a;
+         return new KSerializer[]{N.a, h.a, a.u(C0.a), a.u(var2), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): Truncation {
@@ -236,7 +236,7 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

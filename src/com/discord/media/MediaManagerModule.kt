@@ -1,7 +1,7 @@
 package com.discord.media
 
-import S9.K
-import S9.f
+import O9.K
+import O9.f
 import android.media.MediaCodecInfo
 import android.media.MediaCodecList
 import android.media.MediaCodecInfo.VideoCapabilities
@@ -27,10 +27,10 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableArray
 import com.facebook.react.bridge.WritableMap
-import j8.r
-import j8.s
-import j8.w
-import j8.r.a
+import f8.r
+import f8.s
+import f8.w
+import f8.r.a
 import java.util.Map.Entry
 import java.util.concurrent.CancellationException
 import kotlin.coroutines.Continuation
@@ -41,7 +41,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import p8.b
+import l8.b
 
 public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val mediaResolver: MediaResolver
@@ -63,12 +63,12 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
          public final void invoke(Uri var1, int var2) {
             q.h(var1, "uri");
-            val var4: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
-            val var3: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-            q.g(var3, "access$getReactApplicationContext(...)");
+            val var3: ReactEvents = MediaManagerModule.access$getReactEvents$p(this.this$0);
+            val var4: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+            q.g(var4, "access$getReactApplicationContext(...)");
             val var5: java.lang.String = var1.toString();
             q.g(var5, "toString(...)");
-            var4.emitModuleEvent(var3, new CompressionProgressEvent(var5, var2));
+            var3.emitModuleEvent(var4, new CompressionProgressEvent(var5, var2));
          }
       });
    }
@@ -78,18 +78,18 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       if (var1 % var5.getWidthAlignment() != 0 || var2 % var5.getHeightAlignment() != 0) {
          val var16: WritableMap = Arguments.createMap();
          var16.putString("type", "resolution_alignment");
-         val var6: Int = var5.getWidthAlignment();
-         val var7: Int = var5.getHeightAlignment();
+         val var7: Int = var5.getWidthAlignment();
+         val var6: Int = var5.getHeightAlignment();
          val var17: StringBuilder = new StringBuilder();
          var17.append("Resolution must be aligned to ");
-         var17.append(var6);
-         var17.append("x");
          var17.append(var7);
+         var17.append("x");
+         var17.append(var6);
          var16.putString("message", var17.toString());
-         val var11: WritableMap = Arguments.createMap();
-         var11.putInt("width", var1);
-         var11.putInt("height", var2);
-         var16.putMap("current", var11);
+         val var18: WritableMap = Arguments.createMap();
+         var18.putInt("width", var1);
+         var18.putInt("height", var2);
+         var16.putMap("current", var18);
          val var19: WritableMap = Arguments.createMap();
          var19.putInt("width", var5.getWidthAlignment());
          var19.putInt("height", var5.getHeightAlignment());
@@ -111,18 +111,18 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          var12.putMap("current", var10);
          var8.pushMap(var12);
       } else if (!var5.areSizeAndRateSupported(var1, var2, var3)) {
-         val var13: WritableMap = Arguments.createMap();
-         var13.putString("type", "frameRate");
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("Frame rate ");
-         var15.append(var3);
-         var15.append(" not supported at resolution ");
-         var15.append(var1);
-         var15.append("x");
-         var15.append(var2);
-         var13.putString("message", var15.toString());
-         var13.putDouble("current", var3);
-         var8.pushMap(var13);
+         val var15: WritableMap = Arguments.createMap();
+         var15.putString("type", "frameRate");
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("Frame rate ");
+         var13.append(var3);
+         var13.append(" not supported at resolution ");
+         var13.append(var1);
+         var13.append("x");
+         var13.append(var2);
+         var15.putString("message", var13.toString());
+         var15.putDouble("current", var3);
+         var8.pushMap(var15);
       }
 
       q.e(var8);
@@ -174,19 +174,19 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    }
 
    private fun getEncoderInfo(mimeType: String): MediaCodecInfo? {
-      val var7: Array<MediaCodecInfo> = new MediaCodecList(0).getCodecInfos();
-      q.g(var7, "getCodecInfos(...)");
-      val var4: Int = var7.length;
+      val var8: Array<MediaCodecInfo> = new MediaCodecList(0).getCodecInfos();
+      q.g(var8, "getCodecInfos(...)");
+      val var4: Int = var8.length;
 
       for (int var2 = 0; var2 < var4; var2++) {
-         val var6: MediaCodecInfo = var7[var2];
-         if (var7[var2].isEncoder()) {
-            val var8: Array<java.lang.String> = var6.getSupportedTypes();
-            q.g(var8, "getSupportedTypes(...)");
-            val var5: Int = var8.length;
+         val var6: MediaCodecInfo = var8[var2];
+         if (var8[var2].isEncoder()) {
+            val var7: Array<java.lang.String> = var6.getSupportedTypes();
+            q.g(var7, "getSupportedTypes(...)");
+            val var5: Int = var7.length;
 
             for (int var3 = 0; var3 < var5; var3++) {
-               if (q.c(var8[var3], var1)) {
+               if (q.c(var7[var3], var1)) {
                   return var6;
                }
             }
@@ -282,13 +282,13 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                s.b(var1);
             } else {
                s.b(var1);
-               val var5: PublicFileDownloader = PublicFileDownloader.INSTANCE;
-               var1 = MediaManagerModule.access$getReactApplicationContext(this.this$0);
-               q.g(var1, "access$getReactApplicationContext(...)");
-               val var6: java.lang.String = this.$uri;
-               val var4: java.lang.String = URLUtil.guessFileName(this.$uri, null, null);
-               q.g(var4, "guessFileName(...)");
-               val var8: Flow = PublicFileDownloader.downloadFile$default(var5, var1, var6, var4, null, 8, null);
+               var1 = PublicFileDownloader.INSTANCE;
+               val var6: ReactApplicationContext = MediaManagerModule.access$getReactApplicationContext(this.this$0);
+               q.g(var6, "access$getReactApplicationContext(...)");
+               val var4: java.lang.String = this.$uri;
+               val var5: java.lang.String = URLUtil.guessFileName(this.$uri, null, null);
+               q.g(var5, "guessFileName(...)");
+               val var8: Flow = PublicFileDownloader.downloadFile$default(var1, var6, var4, var5, null, 8, null);
                val var9: FlowCollector = new FlowCollector(this.$promise) {
                   final Promise $promise;
 
@@ -320,7 +320,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
    }
 
    public open fun getConstants(): Map<String, List<String>> {
-      return k8.q.e(w.a("supportedExtensions", i.n(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
+      return g8.q.e(w.a("supportedExtensions", i.n(new java.lang.String[]{"mp4", "mov", "png", "jpg", "jpeg", "gif", "webp"})));
    }
 
    @ReactMethod
@@ -473,14 +473,14 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                            }
 
                            try {
-                              val var64: java.lang.String = var66.getClass().getName();
-                              val var67: StringBuilder = new StringBuilder();
-                              var67.append("Unsupported value type ");
-                              var67.append(var64);
-                              var67.append(" for key [");
-                              var67.append(var60);
-                              var67.append("]");
-                              throw new IllegalArgumentException(var67.toString());
+                              val var67: java.lang.String = var66.getClass().getName();
+                              val var64: StringBuilder = new StringBuilder();
+                              var64.append("Unsupported value type ");
+                              var64.append(var67);
+                              var64.append(" for key [");
+                              var64.append(var60);
+                              var64.append("]");
+                              throw new IllegalArgumentException(var64.toString());
                            } catch (var7: java.lang.Throwable) {
                               val var55: a = r.k;
                               var1 = r.b(s.a(var7));
@@ -563,8 +563,8 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       label58: {
          label57: {
             try {
-               var6 = var1.getInt("width");
-               var5 = var1.getInt("height");
+               var5 = var1.getInt("width");
+               var6 = var1.getInt("height");
                var3 = var1.getDouble("frameRate");
                if (var1.getBoolean("isHEVC")) {
                   break label57;
@@ -602,15 +602,15 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
       if (var8 == null) {
          try {
             var27.putBoolean("isSupported", false);
-            val var32: WritableArray = Arguments.createArray();
+            val var10: WritableArray = Arguments.createArray();
             val var9: WritableMap = Arguments.createMap();
             var9.putString("type", "codec_not_found");
-            val var10: StringBuilder = new StringBuilder();
-            var10.append("No encoder found for mime type: ");
-            var10.append(var18);
-            var9.putString("message", var10.toString());
-            var32.pushMap(var9);
-            var27.putArray("failures", var32);
+            val var32: StringBuilder = new StringBuilder();
+            var32.append("No encoder found for mime type: ");
+            var32.append(var18);
+            var9.putString("message", var32.toString());
+            var10.pushMap(var9);
+            var27.putArray("failures", var10);
             var27.putMap("capabilities", Arguments.createMap());
             var2.resolve(var27);
             return;
@@ -628,7 +628,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                val var22: VideoCapabilities = var8.getCapabilitiesForType(var18).getVideoCapabilities();
                q.e(var22);
                var27.putMap("capabilities", this.createCapabilitiesMap(var22));
-               val var23: WritableArray = this.checkEncodingConstraints(var6, var5, var3, var22);
+               val var23: WritableArray = this.checkEncodingConstraints(var5, var6, var3, var22);
                if (var23.size() > 0) {
                   var27.putBoolean("isSupported", false);
                   var27.putArray("failures", var23);
@@ -673,7 +673,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun resolveToMediaFilePath(uri: String, options: ReadableMap?, promise: Promise) {
-      var var6: Int;
+      var var8: Int;
       var var10: Boolean;
       var var11: Boolean;
       var var12: Boolean;
@@ -682,9 +682,9 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          q.h(var1, "uri");
          q.h(var3, "promise");
          var13 = Uri.parse(var1);
-         var6 = (int)(NativeMapExtensionsKt.getDouble(var2, "compressionQuality", 1.0) * 100);
-         var10 = NativeMapExtensionsKt.getBoolean(var2, "isLowQuality", false);
-         var12 = NativeMapExtensionsKt.getBoolean(var2, "skipVideoTranscode", false);
+         var8 = (int)(NativeMapExtensionsKt.getDouble(var2, "compressionQuality", 1.0) * 100);
+         var12 = NativeMapExtensionsKt.getBoolean(var2, "isLowQuality", false);
+         var10 = NativeMapExtensionsKt.getBoolean(var2, "skipVideoTranscode", false);
          var11 = NativeMapExtensionsKt.getBoolean(var2, "useOriginalIfSmaller", false);
          if (var2 != null) {
             var2 = var2.getMap("encodingConfig");
@@ -703,11 +703,11 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   );
                   break label17;
                } catch (var14: Exception) {
-                  var1 = var14.getMessage();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Invalid encodingConfig: ");
-                  var18.append(var1);
-                  var3.reject(new IllegalArgumentException(var18.toString()));
+                  val var18: java.lang.String = var14.getMessage();
+                  val var15: StringBuilder = new StringBuilder();
+                  var15.append("Invalid encodingConfig: ");
+                  var15.append(var18);
+                  var3.reject(new IllegalArgumentException(var15.toString()));
                   return;
                }
             }
@@ -720,7 +720,7 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
          this.scope,
          null,
          null,
-         new Function2(this, var13, var6, var10, var12, var11, var17, var3, var1, null) {
+         new Function2(this, var13, var8, var12, var10, var11, var17, var3, var1, null) {
             final EncodingConfig $encodingConfig;
             final int $imageCompressionQuality;
             final Uri $inputUri;
@@ -791,22 +791,22 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   } else {
                      s.b(var1);
                      val var25: CoroutineScope = this.L$0 as CoroutineScope;
-                     val var9: MediaManagerModule = this.this$0;
+                     val var10: MediaManagerModule = this.this$0;
                      val var26: Uri = this.$inputUri;
                      val var30: Int = this.$imageCompressionQuality;
-                     val var4: Boolean = this.$isLowQuality;
+                     val var5: Boolean = this.$isLowQuality;
                      val var3x: Boolean = this.$skipVideoTranscode;
-                     val var5: Boolean = this.$useOriginalIfSmaller;
+                     val var4: Boolean = this.$useOriginalIfSmaller;
                      val var8: EncodingConfig = this.$encodingConfig;
                      var6 = this.$promise;
 
                      try {
-                        val var10: a = r.k;
-                        val var35: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var9);
+                        val var9: a = r.k;
+                        val var35: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var10);
                         q.e(var26);
                         this.L$0 = var6;
                         this.label = 1;
-                        var1 = (a)var35.resolveToUri$media_release(var26, var30, var4, var3x, var5, var8, this);
+                        var1 = (a)var35.resolveToUri$media_release(var26, var30, var5, var3x, var4, var8, this);
                      } catch (var12: java.lang.Throwable) {
                         var1 = r.k;
                         var1 = r.b(s.a(var12));
@@ -829,30 +829,30 @@ public class MediaManagerModule(reactContext: ReactApplicationContext) : ReactCo
                   }
                }
 
-               val var31: Promise = this.$promise;
+               val var32: Promise = this.$promise;
                val var37: java.lang.String = this.$uri;
                val var33: MediaManagerModule = this.this$0;
-               val var32: Uri = this.$inputUri;
+               val var31: Uri = this.$inputUri;
                val var29: java.lang.Throwable = r.e(var1);
                if (var29 != null) {
                   if (var29 is CancellationException) {
-                     var31.reject(var29);
+                     var32.reject(var29);
                   }
 
                   val var36: CrashReporting = CrashReporting.INSTANCE;
                   val var38: Pair = w.a("uri", var37);
                   val var34: MediaResolver = MediaManagerModule.access$getMediaResolver$p(var33);
-                  q.e(var32);
+                  q.e(var31);
                   CrashReporting.addBreadcrumb$default(
                      var36,
                      "Failed to resolve URI to file",
-                     k8.q.l(new Pair[]{var38, w.a("mimeType", java.lang.String.valueOf(var34.getMimeType(var32)))}),
+                     g8.q.l(new Pair[]{var38, w.a("mimeType", java.lang.String.valueOf(var34.getMimeType(var31)))}),
                      null,
                      4,
                      null
                   );
                   CrashReporting.captureException$default(var36, var29, false, 2, null);
-                  var31.reject(var29);
+                  var32.reject(var29);
                }
 
                return Unit.a;

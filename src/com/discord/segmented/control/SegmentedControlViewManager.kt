@@ -14,9 +14,9 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
-import j8.w
+import f8.w
+import g8.n
 import java.util.ArrayList
-import k8.n
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

@@ -1,8 +1,8 @@
 package com.discord.file_downloader
 
-import U9.p
-import U9.s.a
-import V9.e
+import Q9.p
+import Q9.s.a
+import R9.e
 import android.app.DownloadManager
 import android.app.DownloadManager.Request
 import android.content.BroadcastReceiver
@@ -11,7 +11,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Environment
 import com.discord.file_downloader.utils.FilenameSanitizedKt
-import j8.s
+import f8.s
 import java.util.LinkedHashMap
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
@@ -20,7 +20,7 @@ import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.channels.ProducerScope
 import kotlinx.coroutines.flow.Flow
-import p8.b
+import l8.b
 
 public object PublicFileDownloader {
    private final val onDownloadListeners: MutableMap<Long, () -> Unit> = new LinkedHashMap()
@@ -64,7 +64,7 @@ public object PublicFileDownloader {
       // 15: astore 2
       // 16: aload 2
       // 17: invokeinterface android/database/Cursor.moveToFirst ()Z 1
-      // 1c: ifeq 4d
+      // 1c: ifeq 4e
       // 1f: new java/io/File
       // 22: astore 7
       // 24: aload 7
@@ -79,48 +79,48 @@ public object PublicFileDownloader {
       // 3a: invokespecial com/discord/file_downloader/DownloadState$Completed.<init> (Ljava/io/File;)V
       // 3d: aload 1
       // 3e: aload 5
-      // 40: invokeinterface U9/s.f (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 40: invokeinterface Q9/s.f (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 45: pop
-      // 46: goto 78
-      // 49: astore 1
-      // 4a: goto 89
-      // 4d: new com/discord/file_downloader/DownloadState$Failure
-      // 50: astore 7
-      // 52: new java/lang/IllegalStateException
-      // 55: astore 8
-      // 57: new java/io/FileNotFoundException
-      // 5a: astore 5
-      // 5c: aload 5
-      // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 8
-      // 63: aload 5
-      // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 68: aload 7
-      // 6a: aload 8
-      // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
-      // 6f: aload 1
-      // 70: aload 7
-      // 72: invokeinterface U9/s.f (Ljava/lang/Object;)Ljava/lang/Object; 2
-      // 77: pop
-      // 78: aload 1
-      // 79: aconst_null
-      // 7a: bipush 1
-      // 7b: aconst_null
-      // 7c: invokestatic U9/s$a.a (LU9/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
-      // 7f: istore 6
-      // 81: aload 2
-      // 82: aconst_null
-      // 83: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 86: iload 6
-      // 88: ireturn
-      // 89: aload 1
-      // 8a: athrow
-      // 8b: astore 5
-      // 8d: aload 2
-      // 8e: aload 1
-      // 8f: invokestatic u8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 92: aload 5
-      // 94: athrow
+      // 46: goto 79
+      // 49: astore 5
+      // 4b: goto 8a
+      // 4e: new com/discord/file_downloader/DownloadState$Failure
+      // 51: astore 8
+      // 53: new java/lang/IllegalStateException
+      // 56: astore 5
+      // 58: new java/io/FileNotFoundException
+      // 5b: astore 7
+      // 5d: aload 7
+      // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
+      // 62: aload 5
+      // 64: aload 7
+      // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
+      // 69: aload 8
+      // 6b: aload 5
+      // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
+      // 70: aload 1
+      // 71: aload 8
+      // 73: invokeinterface Q9/s.f (Ljava/lang/Object;)Ljava/lang/Object; 2
+      // 78: pop
+      // 79: aload 1
+      // 7a: aconst_null
+      // 7b: bipush 1
+      // 7c: aconst_null
+      // 7d: invokestatic Q9/s$a.a (LQ9/s;Ljava/lang/Throwable;ILjava/lang/Object;)Z
+      // 80: istore 6
+      // 82: aload 2
+      // 83: aconst_null
+      // 84: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 87: iload 6
+      // 89: ireturn
+      // 8a: aload 5
+      // 8c: athrow
+      // 8d: astore 1
+      // 8e: aload 2
+      // 8f: aload 5
+      // 91: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 94: aload 1
+      // 95: athrow
    }
 
    public fun downloadFile(context: Context, url: String, fileName: String, description: String? = null): Flow<DownloadState> {
@@ -210,13 +210,13 @@ public object PublicFileDownloader {
 
                            val var21: Any = this.$context.getSystemService("download");
                            q.f(var21, "null cannot be cast to non-null type android.app.DownloadManager");
-                           val var10: DownloadManager = var21 as DownloadManager;
+                           val var25: DownloadManager = var21 as DownloadManager;
                            var22 = new LongRef();
                            var22.j = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var10.enqueue(
+                              var3x = var25.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var22.j = var3x;
@@ -232,7 +232,7 @@ public object PublicFileDownloader {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
                                     .put(
                                        kotlin.coroutines.jvm.internal.b.e(var22.j),
-                                       new Function0(var22, var1, var10, this.$fileName) {
+                                       new Function0(var22, var1, var25, this.$fileName) {
                                           final ProducerScope $$this$callbackFlow;
                                           final LongRef $downloadId;
                                           final java.lang.String $fileName;
@@ -264,13 +264,13 @@ public object PublicFileDownloader {
                            }
 
                            try {
-                              val var30: DownloadState.Failure = new DownloadState.Failure(
+                              val var26: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var22;
                               this.label = 2;
-                              var26 = var1.g(var30, this);
+                              var27 = var1.g(var26, this);
                            } catch (var13: Exception) {
                               var6 = var1;
                               var1 = var13;
@@ -278,12 +278,12 @@ public object PublicFileDownloader {
                               break label86;
                            }
 
-                           if (var26 === var9) {
+                           if (var27 === var9) {
                               return var9;
                            }
 
-                           var1 = var22;
                            var19 = var1;
+                           var1 = var22;
                         }
 
                         var7 = var1;

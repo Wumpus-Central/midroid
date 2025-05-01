@@ -89,11 +89,13 @@ public final class R {
       public static int action_text;
       public static int actions;
       public static int actions_button;
+      public static int actions_container;
       public static int add_reaction;
       public static int alt_remix_tag;
       public static int alt_text_container;
       public static int alt_text_label;
       public static int answers;
+      public static int app_icon;
       public static int arrow;
       public static int audio_details_view;
       public static int audio_file_name;
@@ -114,6 +116,7 @@ public final class R {
       public static int badge_container;
       public static int badge_icon;
       public static int badge_text;
+      public static int banner;
       public static int barrier;
       public static int barrier_button;
       public static int barrier_footer;
@@ -328,6 +331,7 @@ public final class R {
       public static int percentage_bar_background;
       public static int percentage_bar_container;
       public static int player_container;
+      public static int player_icon;
       public static int primary_action;
       public static int primary_cta;
       public static int progress;
@@ -418,6 +422,7 @@ public final class R {
       public static int tag;
       public static int tag_chiplet;
       public static int tag_maybe_animate_elevation_to;
+      public static int tagline;
       public static int tertiary_action_button;
       public static int text;
       public static int thread_embed_container;
@@ -477,6 +482,7 @@ public final class R {
       public static int activity_bookmark_view;
       public static int activity_instance_embed_view;
       public static int alt_text_button_view;
+      public static int app_message_embed_view;
       public static int attachment_media_mosaic_container_view;
       public static int attachment_upload_overlay_view;
       public static int audio_player_view;

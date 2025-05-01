@@ -3,7 +3,7 @@ package com.discord.app_database
 import com.discord.cache.Cache
 import com.discord.codegen.NativeAppDatabaseModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAppDatabaseModuleSpec {
@@ -13,7 +13,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAp
    }
 
    protected override fun getTypedExportedConstants(): Map<String, String?> {
-      return k8.q.e(w.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
+      return g8.q.e(w.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
    }
 
    public override fun setUserId(userId: String?) {

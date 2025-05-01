@@ -218,16 +218,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.q.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var13: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var12: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
-      val var13: GradientDrawable = new GradientDrawable();
-      var13.setShape(0);
-      var13.setStroke(
-         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var12: GenericDraweeHierarchy = var13.getHierarchy() as GenericDraweeHierarchy;
+      val var5: GradientDrawable = new GradientDrawable();
+      var5.setShape(0);
+      var5.setStroke(
+         var13.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var12.z(var13);
+      var12.z(var5);
    }
 
    private fun pause() {
@@ -262,11 +262,11 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
             val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var12: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var12, "getContext(...)");
+            val var7: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var7);
+            var10 = var11.acquire(var12, var7, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -344,30 +344,30 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
                kotlin.jvm.internal.q.e(this.mediaPlayer);
-               val var9: MediaPlayerView = this.mediaPlayerView;
+               val var7: MediaPlayerView = this.mediaPlayerView;
                kotlin.jvm.internal.q.e(this.mediaPlayerView);
-               var7 = new Pair(var6, var9);
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
                .addPortal(
                   var1,
-                  (var7.b() as MediaPlayerView).getView(),
+                  (var6.b() as MediaPlayerView).getView(),
                   new Function1(this) {
                      final MediaView this$0;
 
@@ -382,7 +382,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         ViewRemoveFromParentKt.removeFromParent(var1);
                      }
                   },
-                  new Function1(this, var5, var10) {
+                  new Function1(this, var5, var4) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -404,7 +404,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         MediaView.access$play(this.this$0);
                      }
                   },
-                  new Function1(this, var10, var5) {
+                  new Function1(this, var4, var5) {
                      final MediaPlayer $mediaPlayer;
                      final MediaSource $mediaSource;
                      final MediaView this$0;
@@ -631,7 +631,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      S9.f.d(
+      O9.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -653,17 +653,17 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = p8.b.e();
+               val var3: Any = l8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  j8.s.b(var1);
+                  f8.s.b(var1);
                } else {
-                  j8.s.b(var1);
-                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  val var4: FlowCollector = new FlowCollector(this.this$0) {
+                  f8.s.b(var1);
+                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  var1 = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -698,7 +698,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var1.collect(var4, this) === var3) {
+                  if (var4.collect(var1, this) === var3) {
                      return var3;
                   }
                }
@@ -709,7 +709,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      S9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      O9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final MediaView this$0;
 
@@ -727,15 +727,15 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = p8.b.e();
+            val var3: Any = l8.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               j8.s.b(var1);
+               f8.s.b(var1);
             } else {
-               j8.s.b(var1);
+               f8.s.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
                   val var4: Flow = var1.getPausePlayerFlow();
@@ -985,9 +985,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var36.setVisibility(var54);
          val var62: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
-         val var37: K;
+         val var37: M;
          if (this.mediaCanPlayInline && !var10 && var1 != null) {
-            var37 = new K(this, var1);
+            var37 = new M(this, var1);
          } else {
             var37 = null;
          }
@@ -1034,7 +1034,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          I18nUtilsKt.i18nContentDescription$default(var64, var41, null, 2, null);
          val var42: SimpleDraweeView = this.binding.inlineMediaVolumeToggle;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaVolumeToggle, "inlineMediaVolumeToggle");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new L(this, var6, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new N(this, var6, var1), 1, null);
          val var43: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
          if (var43.getVisibility() == 0 && var14 != null && var14.length() != 0) {
@@ -1133,9 +1133,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setOnMediaClickListeners(onClickListener: OnClickListener?, onLongClickListener: OnLongClickListener?) {
-      val var3: J;
+      val var3: L;
       if (var1 != null) {
-         var3 = new J(this, var1);
+         var3 = new L(this, var1);
       } else {
          var3 = null;
       }

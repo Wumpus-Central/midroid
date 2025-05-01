@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
-import ca.f
-import ca.n
-import fa.G
-import fa.G.a
+import Y9.f
+import Y9.n
+import ba.G
+import ba.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -47,12 +47,12 @@ public data class LoadingAction(type: LoadingActionType) {
    }
 
    public override fun toString(): String {
-      val var2: LoadingActionType = this.type;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LoadingAction(type=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: LoadingActionType = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LoadingAction(type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

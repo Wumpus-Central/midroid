@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.a
-import fa.C0
-import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -82,9 +82,9 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.applicationId.hashCode();
-      val var2: Int = this.channelId.hashCode();
-      val var4: Int = this.referrerId.hashCode();
+      val var4: Int = this.applicationId.hashCode();
+      val var3: Int = this.channelId.hashCode();
+      val var2: Int = this.referrerId.hashCode();
       val var1: Int;
       if (this.customId == null) {
          var1 = 0;
@@ -92,7 +92,7 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
          var1 = this.customId.hashCode();
       }
 
-      return ((var3 * 31 + var2) * 31 + var4) * 31 + var1;
+      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -100,21 +100,21 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.applicationId;
-      val var2: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.applicationId;
+      val var4: java.lang.String = this.channelId;
       val var1: java.lang.String = this.referrerId;
-      val var5: java.lang.String = this.customId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapActivityBookmarkEmbedData(applicationId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", referrerId=");
-      var4.append(var1);
-      var4.append(", customId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.customId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapActivityBookmarkEmbedData(applicationId=");
+      var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", referrerId=");
+      var2.append(var1);
+      var2.append(", customId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -211,7 +211,7 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

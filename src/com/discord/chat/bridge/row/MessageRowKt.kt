@@ -15,7 +15,7 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
-import j8.p
+import f8.p
 import kotlin.jvm.internal.q
 
 public fun MessageBase.toChatListMessageItem(

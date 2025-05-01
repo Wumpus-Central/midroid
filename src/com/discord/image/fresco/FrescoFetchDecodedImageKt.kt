@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import V1.c
+import R1.c
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -9,16 +9,16 @@ import com.facebook.datasource.DataSource
 import com.facebook.imagepipeline.core.DefaultExecutorSupplier
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import j8.r
-import j8.s
-import j8.r.a
+import f8.r
+import f8.s
+import f8.r.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import p8.b
+import l8.b
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -40,7 +40,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = c.a().g(var7.H(var10).a(), var0);
-      var8.e(new D2.b(var6, var3) {
+      var8.b(new z2.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -49,11 +49,13 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$copyBitmap = var2;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             q.h(var1, "dataSource");
             this.$continuation.resumeWith(r.b(null));
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             val var2: a = r.k;
             var var4: Bitmap = var1;
@@ -120,18 +122,20 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      c.a().g(var5.H(var6).a(), var0).e(new D2.b(var3) {
+      c.a().g(var5.H(var6).a(), var0).b(new z2.b(var3) {
          final Function1 $onDecodedImage;
 
          {
             this.$onDecodedImage = var1;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             q.h(var1, "dataSource");
             this.$onDecodedImage.invoke(null);
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
@@ -145,16 +149,16 @@ public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor?
 
    label16:
    try {
-      val var8: a = r.k;
-      var7 = r.b(Uri.parse(var1));
-   } catch (var5: java.lang.Throwable) {
       val var4: a = r.k;
-      var7 = r.b(s.a(var5));
+      var8 = r.b(Uri.parse(var1));
+   } catch (var5: java.lang.Throwable) {
+      val var7: a = r.k;
+      var8 = r.b(s.a(var5));
       break label16;
    }
 
-   var var9: Any = var7;
-   if (r.g(var7)) {
+   var var9: Any = var8;
+   if (r.g(var8)) {
       var9 = null;
    }
 

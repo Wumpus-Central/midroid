@@ -9,7 +9,7 @@ import android.os.Build.VERSION
 import androidx.core.content.a
 import com.discord.foreground_service.service.ServiceNotificationConfiguration
 import kotlin.jvm.internal.q
-import u1.b
+import q1.b
 
 public fun hasMicrophonePermission(context: Context): Boolean {
    q.h(var0, "context");
@@ -51,7 +51,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
          var7 = var5;
       }
 
-      u1.a.a(var0, var2, var3, var7);
+      q1.a.a(var0, var2, var3, var7);
    } else {
       var0.startForeground(var2, var3);
    }

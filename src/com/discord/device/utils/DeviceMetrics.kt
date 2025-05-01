@@ -28,11 +28,11 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            val var2: WindowMetrics = y0.a.a.a().a(var1);
+            val var4: WindowMetrics = y0.a.a.a().a(var1);
             if (VERSION.SDK_INT >= 34) {
-               val var4: Insets = var2.b().g(WindowInsetsCompat.m.h() or WindowInsetsCompat.m.b());
-               q.g(var4, "getInsetsIgnoringVisibility(...)");
-               return new MetricsSize(var2.a().width() - var4.a - var4.c, var2.a().height() - var4.b - var4.d);
+               val var2: Insets = var4.b().g(WindowInsetsCompat.m.h() or WindowInsetsCompat.m.b());
+               q.g(var2, "getInsetsIgnoringVisibility(...)");
+               return new MetricsSize(var4.a().width() - var2.a - var2.c, var4.a().height() - var2.b - var2.d);
             }
          } catch (var3: Exception) {
          }

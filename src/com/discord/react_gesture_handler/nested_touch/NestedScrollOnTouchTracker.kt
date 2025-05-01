@@ -1,7 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
-import S9.I
-import S9.f
+import O9.I
+import O9.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -10,14 +10,14 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import j8.s
-import k8.n
+import f8.s
+import g8.n
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import p8.b
+import l8.b
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -116,7 +116,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                      var15 = var34;
                   } else {
                      var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var34).getTouchPriority();
-                     val var20: n = new IntRange(1, var28).o();
+                     val var20: n = new IntRange(1, var28).p();
 
                      while (true) {
                         var15 = var34;

@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.h
+import ba.p0
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import da.a
-import fa.C0
-import fa.G
-import fa.h
-import fa.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -188,9 +188,9 @@ public data class SoundmojiContentNode(soundId: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.soundId.hashCode();
-      val var7: Int = ChannelId.hashCode-impl(this.channelId);
-      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var7: Int = this.soundId.hashCode();
+      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       var var4: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -218,37 +218,37 @@ public data class SoundmojiContentNode(soundId: String,
          var4 = this.emojiName.hashCode();
       }
 
-      return ((((((var6 * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var7 * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var4: java.lang.String = this.soundId;
-      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = this.content;
-      val var6: java.lang.String = this.guildId;
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: java.lang.String = this.content;
+      val var5: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
       val var9: java.lang.String = this.emojiId;
       val var7: java.lang.String = this.emojiName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SoundmojiContentNode(soundId=");
-      var3.append(var4);
-      var3.append(", channelId=");
-      var3.append(var8);
-      var3.append(", messageId=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(", guildId=");
-      var3.append(var6);
-      var3.append(", jumboable=");
-      var3.append(var1);
-      var3.append(", emojiId=");
-      var3.append(var9);
-      var3.append(", emojiName=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("SoundmojiContentNode(soundId=");
+      var6.append(var4);
+      var6.append(", channelId=");
+      var6.append(var3);
+      var6.append(", messageId=");
+      var6.append(var2);
+      var6.append(", content=");
+      var6.append(var8);
+      var6.append(", guildId=");
+      var6.append(var5);
+      var6.append(", jumboable=");
+      var6.append(var1);
+      var6.append(", emojiId=");
+      var6.append(var9);
+      var6.append(", emojiName=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : G {
@@ -275,8 +275,8 @@ public data class SoundmojiContentNode(soundId: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var5: C0 = C0.a;
-         return new KSerializer[]{C0.a, ChannelId.$serializer.INSTANCE, MessageId.$serializer.INSTANCE, a.u(C0.a), a.u(var5), h.a, a.u(var5), a.u(var5)};
+         val var3: C0 = C0.a;
+         return new KSerializer[]{C0.a, ChannelId.$serializer.INSTANCE, MessageId.$serializer.INSTANCE, a.u(C0.a), a.u(var3), h.a, a.u(var3), a.u(var3)};
       }
 
       public open fun deserialize(decoder: Decoder): SoundmojiContentNode {
@@ -288,13 +288,13 @@ public data class SoundmojiContentNode(soundId: String,
          var var2: Int;
          var var7: Any;
          var var8: Any;
-         val var10: java.lang.String;
-         val var12: ChannelId;
+         var var10: ChannelId;
+         var var11: java.lang.String;
          var var17: Any;
          var var20: Any;
          if (var5) {
-            var10 = var15.t(var14, 0);
-            var12 = var15.m(var14, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var11 = var15.t(var14, 0);
+            var10 = var15.m(var14, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var17 = var15.m(var14, 2, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var17 != null) {
                var17 = var17.unbox-impl();
@@ -313,12 +313,12 @@ public data class SoundmojiContentNode(soundId: String,
             var var3: Boolean = true;
             var2 = 0;
             var5 = false;
-            var var11: java.lang.String = null;
-            var var27: ChannelId = null;
-            var8 = null;
+            var11 = null;
+            var10 = null;
+            var7 = null;
             var20 = null;
             var17 = null;
-            var7 = null;
+            var8 = null;
 
             while (var3) {
                val var4: Int = var15.x(var14);
@@ -331,21 +331,21 @@ public data class SoundmojiContentNode(soundId: String,
                      var2 |= 1;
                      break;
                   case 1:
-                     var27 = var15.m(var14, 1, ChannelId.$serializer.INSTANCE, var27) as ChannelId;
+                     var10 = var15.m(var14, 1, ChannelId.$serializer.INSTANCE, var10) as ChannelId;
                      var2 |= 2;
                      break;
                   case 2:
-                     if (var7 != null) {
-                        var7 = MessageId.box-impl((java.lang.String)var7);
+                     if (var8 != null) {
+                        var8 = MessageId.box-impl((java.lang.String)var8);
                      } else {
-                        var7 = null;
+                        var8 = null;
                      }
 
-                     var7 = var15.m(var14, 2, MessageId.$serializer.INSTANCE, var7) as MessageId;
-                     if (var7 != null) {
-                        var7 = var7.unbox-impl();
+                     var8 = var15.m(var14, 2, MessageId.$serializer.INSTANCE, var8) as MessageId;
+                     if (var8 != null) {
+                        var8 = var8.unbox-impl();
                      } else {
-                        var7 = null;
+                        var8 = null;
                      }
 
                      var2 |= 4;
@@ -367,7 +367,7 @@ public data class SoundmojiContentNode(soundId: String,
                      var2 |= 64;
                      break;
                   case 7:
-                     var8 = var15.v(var14, 7, C0.a, var8) as java.lang.String;
+                     var7 = var15.v(var14, 7, C0.a, var7) as java.lang.String;
                      var2 |= 128;
                      break;
                   default:
@@ -375,16 +375,14 @@ public data class SoundmojiContentNode(soundId: String,
                }
             }
 
-            var20 = var8;
-            var7 = (MessageId)var20;
+            var7 = var20;
+            var20 = var7;
             var8 = var17;
-            var17 = (MessageId)var7;
-            var12 = var27;
-            var10 = var11;
+            var17 = (MessageId)var8;
          }
 
          var15.b(var14);
-         return new SoundmojiContentNode(var2, var10, var12, var17, (java.lang.String)var8, var9, var5, var7, (java.lang.String)var20, null, null);
+         return new SoundmojiContentNode(var2, var11, var10, var17, var8, var9, var5, (java.lang.String)var7, (java.lang.String)var20, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SoundmojiContentNode) {
@@ -397,7 +395,7 @@ public data class SoundmojiContentNode(soundId: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

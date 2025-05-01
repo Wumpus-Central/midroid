@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.reaction
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.F
+import ba.G
 import com.discord.reactions.ReactionView
-import da.a
-import fa.C0
-import fa.F
-import fa.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -101,20 +101,20 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
 
    public override fun toString(): String {
       val var3: java.lang.String = this.backgroundColor;
-      val var5: java.lang.String = this.accentColor;
-      val var2: java.lang.String = this.highlightColor;
+      val var2: java.lang.String = this.accentColor;
+      val var4: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BurstReactionColorPalette(backgroundColor=");
-      var4.append(var3);
-      var4.append(", accentColor=");
-      var4.append(var5);
-      var4.append(", highlightColor=");
-      var4.append(var2);
-      var4.append(", opacity=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("BurstReactionColorPalette(backgroundColor=");
+      var5.append(var3);
+      var5.append(", accentColor=");
+      var5.append(var2);
+      var5.append(", highlightColor=");
+      var5.append(var4);
+      var5.append(", opacity=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -209,7 +209,7 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

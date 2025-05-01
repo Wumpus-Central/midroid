@@ -19,7 +19,7 @@ import com.discord.primitives.MessageId
 import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
-import j8.p
+import f8.p
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 

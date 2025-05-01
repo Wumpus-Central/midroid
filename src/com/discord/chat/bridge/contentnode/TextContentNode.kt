@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import ca.f
-import ca.n
-import da.a
-import fa.C0
-import fa.G
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -127,7 +127,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

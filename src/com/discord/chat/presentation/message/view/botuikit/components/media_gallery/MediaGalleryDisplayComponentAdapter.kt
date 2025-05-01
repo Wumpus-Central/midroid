@@ -16,7 +16,7 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemVisualPlaceholderViewHolder
-import j8.p
+import f8.p
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
@@ -141,7 +141,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
       val var4: Boolean = var1 is MosaicItemMessageAttachmentImageViewHolder;
       var var3: Boolean = false;
       if (var4) {
-         val var8: MediaGalleryItem = this.items.get(var2);
+         val var7: MediaGalleryItem = this.items.get(var2);
          val var10: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
@@ -153,7 +153,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
          }
 
          val var9: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-         val var7: java.lang.String = this.containerId;
+         val var8: java.lang.String = this.containerId;
          val var5: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
@@ -161,7 +161,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             var3 = false;
          }
 
-         var9.bindGalleryItem(var7, var5, var8, var3, new a(this, var10, var8, var1), new b(this, var10, var8), new Function0(this, var8) {
+         var9.bindGalleryItem(var8, var5, var7, var3, new a(this, var10, var7, var1), new b(this, var10, var7), new Function0(this, var7) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -185,7 +185,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             public final void invoke(boolean var1) {
                MediaGalleryDisplayComponentAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
             }
-         }, new Function1(this, var8) {
+         }, new Function1(this, var7) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -208,22 +208,22 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             }
          }, var6.getShouldAutoPlayGif());
       } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-         val var16: MediaGalleryItem = this.items.get(var2);
-         val var20: MediaGalleryDisplayComponent = this.component;
+         val var21: MediaGalleryItem = this.items.get(var2);
+         val var22: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var22: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
-         val var19: java.lang.String = this.containerId;
-         val var21: java.lang.String = this.component.getId();
+         val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+         val var20: java.lang.String = this.containerId;
+         val var19: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
          } else {
             var3 = false;
          }
 
-         var22.bindGalleryItem(var19, var21, var16, var3, new c(this, var20, var16, var1), new d(this, var20, var16), new Function0(this, var16) {
+         var16.bindGalleryItem(var20, var19, var21, var3, new c(this, var22, var21, var1), new d(this, var22, var21), new Function0(this, var21) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 
@@ -247,7 +247,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             public final void invoke(boolean var1) {
                MediaGalleryDisplayComponentAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
             }
-         }, new Function1(this, var16) {
+         }, new Function1(this, var21) {
             final MediaGalleryItem $accessory;
             final MediaGalleryDisplayComponentAdapter this$0;
 

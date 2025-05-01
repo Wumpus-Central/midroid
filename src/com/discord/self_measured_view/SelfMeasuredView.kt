@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.FabricViewStateManager
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.FabricViewStateManager.HasFabricViewStateManager
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout, HasFabricViewStateManager {

@@ -5,7 +5,7 @@ import java.util.function.UnaryOperator
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.i
 import kotlin.jvm.internal.q
-import y8.a
+import u8.a
 
 public open class StubbedList<T> : java.util.List<T>, a {
    public open val size: Int
@@ -137,7 +137,7 @@ public open class StubbedList<T> : java.util.List<T>, a {
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var2: java.lang.String = E.b(StubbedList.class).j();
+         val var2: java.lang.String = E.b(StubbedList.class).e();
          val var3: StringBuilder = new StringBuilder();
          var3.append(var2);
          var3.append(" did not implement ");

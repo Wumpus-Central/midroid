@@ -8,7 +8,7 @@ import com.discord.logging.Log
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
-import j8.w
+import f8.w
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
 import okhttp3.WebSocket
@@ -88,7 +88,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return k8.q.m(
+      return g8.q.m(
          new Pair[]{
             w.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             w.a("userId", var1.get().getItem("_userIdKey")),

@@ -1,7 +1,7 @@
 package com.discord.misc.utilities.coroutines
 
-import S9.K
-import S9.k0
+import O9.K
+import O9.k0
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 

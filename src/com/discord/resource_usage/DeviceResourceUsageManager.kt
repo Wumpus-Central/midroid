@@ -2,8 +2,8 @@ package com.discord.resource_usage
 
 import android.system.Os
 import android.system.OsConstants
-import j8.r
-import j8.s
+import f8.r
+import f8.s
 
 internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
    private final var activeThreadId: Long?
@@ -29,7 +29,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
          var0 = r.k;
          var0 = r.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         val var1: j8.r.a = r.k;
+         val var1: f8.r.a = r.k;
          var0 = r.b(s.a(var4));
          break label42;
       }
@@ -45,7 +45,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var18 = r.k;
+         var0 = r.k;
          var0 = r.b(s.a(var3));
          break label36;
       }
@@ -61,7 +61,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = r.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var0 = r.k;
+         var18 = r.k;
          var0 = r.b(s.a(var2));
          break label30;
       }
@@ -237,7 +237,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 1b: aload 3
       // 1c: bipush 4
       // 1d: aconst_null
-      // 1e: invokestatic n8/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1e: invokestatic j8/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 21: astore 3
       // 22: aload 0
       // 23: aload 3

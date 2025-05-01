@@ -49,7 +49,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
-         n8.a.b(false, false, null, "ReactNativeLoader", 10, new Function0(this) {
+         j8.a.b(false, false, null, "ReactNativeLoader", 10, new Function0(this) {
             final MainApplication this$0;
 
             {
@@ -76,7 +76,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "276.13", 276013, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "277.12", 277012, "google", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -89,7 +89,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@276.13.0-0+276013";
+         var5 = "discord_android@277.12.0-0+277012";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

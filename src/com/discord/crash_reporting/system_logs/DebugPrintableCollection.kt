@@ -77,20 +77,20 @@ public class DebugPrintableCollection {
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
       // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 12
+      // 5d: astore 13
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 13
-      // 64: aload 13
+      // 62: astore 12
+      // 64: aload 12
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 12
+      // 6a: aload 13
       // 6c: aload 2
-      // 6d: aload 13
+      // 6d: aload 12
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
       // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 12
+      // 79: aload 13
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -361,15 +361,15 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.tag;
-         val var2: WeakReference = this.reference;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("DebugPrintableRef(tag=");
-         var1.append(var3);
-         var1.append(", reference=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var2: java.lang.String = this.tag;
+         val var1: WeakReference = this.reference;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("DebugPrintableRef(tag=");
+         var3.append(var2);
+         var3.append(", reference=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

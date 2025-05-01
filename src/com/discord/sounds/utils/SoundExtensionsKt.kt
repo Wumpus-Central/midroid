@@ -1,15 +1,15 @@
 package com.discord.sounds.utils
 
-import S9.K
-import S9.d0
-import S9.f
+import O9.K
+import O9.f
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import j8.s
+import f8.s
+import i8.a
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
@@ -22,8 +22,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import m8.a
-import p8.b
+import l8.b
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -185,8 +184,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         s.b(var17);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              val var6: d0 = K.c();
-                              var17 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
+                              var17 = K.c();
+                              val var6: Function2 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
                                  final DownloadState $downloadState;
                                  final int $key;
                                  final SoundManager $soundManager;
@@ -232,7 +231,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var14).label = 1;
-                              var9 = f.g(var6, (Function2)var17, (Continuation)var14);
+                              var9 = f.g((CoroutineContext)var17, var6, (Continuation)var14);
                            } catch (var8: Exception) {
                               var9 = K.c();
                               var17 = new Function2(var8, null) {

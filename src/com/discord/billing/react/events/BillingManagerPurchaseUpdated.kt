@@ -1,14 +1,14 @@
 package com.discord.billing.react.events
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.G.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import fa.C0
-import fa.G
-import fa.G.a
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,15 +73,15 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
          val var9: c = var1.c(var8);
          var var2: Int;
          var var5: java.lang.String;
-         var var6: java.lang.String;
+         val var7: java.lang.String;
          val var10: java.lang.String;
          if (var9.y()) {
-            var6 = var9.t(var8, 0);
-            var5 = var9.t(var8, 1);
+            var5 = var9.t(var8, 0);
+            var7 = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
          } else {
-            var6 = null;
+            var var6: java.lang.String = null;
             var5 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
@@ -111,12 +111,13 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                }
             }
 
-            var5 = var11;
+            var7 = var11;
             var10 = var5;
+            var5 = var6;
          }
 
          var9.b(var8);
-         return new BillingManagerPurchaseUpdated(var2, var6, var5, var10, null);
+         return new BillingManagerPurchaseUpdated(var2, var5, var7, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerPurchaseUpdated) {

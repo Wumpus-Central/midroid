@@ -8,7 +8,7 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
-import j8.p
+import f8.p
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 

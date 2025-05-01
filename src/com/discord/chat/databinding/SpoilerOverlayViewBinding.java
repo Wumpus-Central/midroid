@@ -22,12 +22,12 @@ public final class SpoilerOverlayViewBinding implements ViewBinding {
 
    public static SpoilerOverlayViewBinding bind(View var0) {
       int var1 = R.id.label;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var3 = (TextView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.overlay_container;
-         FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-         if (var3 != null) {
-            return new SpoilerOverlayViewBinding(var0, var2, var3);
+         FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+         if (var2 != null) {
+            return new SpoilerOverlayViewBinding(var0, var3, var2);
          }
       }
 

@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.p0
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.a
-import fa.C0
-import fa.G
-import fa.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -142,15 +142,15 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          var var11: java.lang.String;
          var var12: java.lang.String;
          if (var5) {
-            val var7: java.lang.String = var9.t(var8, 0);
-            val var6: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var6 != null) {
-               var10 = var6.unbox-impl();
+            var12 = var9.t(var8, 0);
+            val var7: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var7 != null) {
+               var10 = var7.unbox-impl();
             }
 
             var2 = 3;
+            var11 = var12;
             var12 = var10;
-            var11 = var7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -204,7 +204,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

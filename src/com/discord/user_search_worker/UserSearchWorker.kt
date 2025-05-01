@@ -1,7 +1,8 @@
 package com.discord.user_search_worker
 
-import Q9.d
-import j8.p
+import M9.d
+import f8.p
+import i8.a
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -13,7 +14,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
-import m8.a
 
 internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String, String) -> Unit) {
    public final val onResults: (List<UserSearchWorkerResult>, String, String) -> Unit
@@ -159,7 +159,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                var5 = var10.getGlobalName();
             }
 
-            var14 = var10.copy(var13, var12, var15, var3, var21, var5, k8.q.p(var10.getNicknames(), var6.getNicknames()));
+            var14 = var10.copy(var13, var12, var15, var3, var21, var5, g8.q.p(var10.getNicknames(), var6.getNicknames()));
             if (var14 == null) {
                var14 = var6;
             }
@@ -196,11 +196,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
-         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var24: UserSearchQuerySetFilters = var28.getFilters();
-         if (var24 == null || q.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
-            this.searchUsers(var16, var28);
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
+         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var28: UserSearchQuerySetFilters = var24.getFilters();
+         if (var28 == null || q.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
+            this.searchUsers(var20, var24);
          }
       }
    }

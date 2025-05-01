@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.G
+import ba.p0
+import ba.G.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.G
-import fa.p0
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -78,15 +78,15 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateThreadData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("InitiateThreadData(messageId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -127,9 +127,9 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
             }
 
             val var6: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var2 = 3;
             var5 = var10;
             var11 = var6;
+            var2 = 3;
          } else {
             var var3: Boolean = true;
             var2 = 0;

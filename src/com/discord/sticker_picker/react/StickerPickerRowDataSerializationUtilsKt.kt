@@ -5,25 +5,25 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.sticker_picker.StickerPickerRow
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
+import g8.n
 import java.util.ArrayList
-import k8.n
 import kotlin.jvm.internal.q
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    q.h(var0, "data");
-   val var2: Int = var0.getInt("rowContentWidth");
+   val var1: Int = var0.getInt("rowContentWidth");
    val var3: Int = var0.getInt("rowContentPaddingVertical");
-   val var1: Int = var0.getInt("itemSize");
-   val var5: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
-   val var12: IntRange = NativeArrayExtensionsKt.sizeRange(var5);
-   val var6: ArrayList = new ArrayList(i.v(var12, 10));
+   val var2: Int = var0.getInt("itemSize");
+   val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
+   val var12: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
+   val var5: ArrayList = new ArrayList(i.v(var12, 10));
    val var7: java.util.Iterator = var12.iterator();
 
    while (var7.hasNext()) {
       var var4: Int = (var7 as n).a();
       val var15: StickerPickerRow.Sticker;
-      if (!var5.isNull(var4)) {
-         val var8: ReadableMap = var5.getMap(var4);
+      if (!var6.isNull(var4)) {
+         val var8: ReadableMap = var6.getMap(var4);
          val var10: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "stickerId");
          val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "stickerName");
          var4 = var8.getInt("stickerType");
@@ -62,8 +62,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          var15 = null;
       }
 
-      var6.add(var15);
+      var5.add(var15);
    }
 
-   return new StickerPickerRow(var2, var3, var1, var6);
+   return new StickerPickerRow(var1, var3, var2, var5);
 }

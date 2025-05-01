@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import ca.g
+import Y9.g
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -34,14 +34,14 @@ public object CookieValidator {
                      return null;
                   }
 
-                  val var3: JsonElement = ga.g.o(var14).get("$meta") as JsonElement;
+                  var var3: JsonElement = ca.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = ga.g.o(var14);
+                  val var15: JsonObject = ca.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {
@@ -50,14 +50,14 @@ public object CookieValidator {
                      }
                   }
 
-                  val var17: LinkedHashMap = new LinkedHashMap(k8.q.d(var18.size()));
+                  val var17: LinkedHashMap = new LinkedHashMap(g8.q.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     val var20: Any = var5.getKey();
+                     var3 = (JsonElement)var5.getKey();
                      val var21: JsonElement = var5.getValue() as JsonElement;
                      val var6: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
+                     var17.put(var3, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

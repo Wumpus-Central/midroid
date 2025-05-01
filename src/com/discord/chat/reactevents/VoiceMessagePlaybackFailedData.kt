@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.C0
+import ba.G
+import ba.p0
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.a
-import fa.C0
-import fa.G
-import fa.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -86,15 +86,15 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = this.errorMessage;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("VoiceMessagePlaybackFailedData(messageId=");
-      var1.append(var3);
-      var1.append(", errorMessage=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = this.errorMessage;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("VoiceMessagePlaybackFailedData(messageId=");
+      var3.append(var2);
+      var3.append(", errorMessage=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -124,9 +124,10 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
          val var8: c = var1.c(var7);
          var var2: Int;
          val var6: java.lang.String;
-         val var10: java.lang.String;
+         var var11: java.lang.String;
          if (var8.y()) {
             val var9: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
+            val var10: java.lang.String;
             if (var9 != null) {
                var10 = var9.unbox-impl();
             } else {
@@ -135,12 +136,13 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
 
             val var5: java.lang.String = var8.v(var7, 1, C0.a, null) as java.lang.String;
             var2 = 3;
-            var6 = var5;
+            var6 = var10;
+            var11 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var var12: java.lang.String = null;
-            var var11: java.lang.String = null;
+            var11 = null;
 
             while (var3) {
                val var4: Int = var8.x(var7);
@@ -174,12 +176,11 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
                }
             }
 
-            var6 = var11;
-            var10 = var12;
+            var6 = var12;
          }
 
          var8.b(var7);
-         return new VoiceMessagePlaybackFailedData(var2, var10, var6, null, null);
+         return new VoiceMessagePlaybackFailedData(var2, var6, var11, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: VoiceMessagePlaybackFailedData) {
@@ -192,7 +193,7 @@ public data class VoiceMessagePlaybackFailedData(messageId: MessageId, errorMess
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

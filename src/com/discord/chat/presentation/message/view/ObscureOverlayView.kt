@@ -40,7 +40,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       this.binding = var4;
       val var3: BlurView = var4.blurView;
       kotlin.jvm.internal.q.g(var4.blurView, "blurView");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new M(), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new O(), 1, null);
       val var5: SimpleDraweeView = var4.mediaWarningIcon;
       kotlin.jvm.internal.q.e(var4.mediaWarningIcon);
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.MediaChannelNSFW);

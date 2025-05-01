@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.events
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
+import ba.N
+import ba.Y
+import ba.G.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.C0
-import fa.G
-import fa.N
-import fa.Y
-import fa.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -151,30 +151,30 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          q.h(var1, "decoder");
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Long;
-         var var8: java.lang.String;
+         var var9: java.lang.String;
          val var10: java.lang.String;
          val var13: java.lang.String;
          if (var12.y()) {
-            val var2: Int = var12.k(var11, 0);
-            var10 = var12.t(var11, 1);
+            var2 = var12.k(var11, 0);
+            var9 = var12.t(var11, 1);
             var6 = var12.h(var11, 2);
-            var8 = var12.t(var11, 3);
+            val var8: java.lang.String = var12.t(var11, 3);
             var13 = var12.t(var11, 4);
             var3 = 31;
-            var4 = var2;
+            var10 = var8;
          } else {
             var var14: java.lang.String = null;
-            var var17: Boolean = true;
-            var var15: Int = 0;
+            var var4: Boolean = true;
+            var2 = 0;
             var6 = 0L;
-            var var9: java.lang.String = null;
-            var8 = null;
+            var9 = null;
+            var var18: java.lang.String = null;
             var3 = 0;
 
-            while (var17) {
+            while (var4) {
                val var5: Int = var12.x(var11);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -185,38 +185,38 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
                                  throw new n(var5);
                               }
 
-                              var8 = var12.t(var11, 4);
-                              var15 |= 16;
+                              var18 = var12.t(var11, 4);
+                              var2 |= 16;
                            } else {
                               var9 = var12.t(var11, 3);
-                              var15 |= 8;
+                              var2 |= 8;
                            }
                         } else {
                            var6 = var12.h(var11, 2);
-                           var15 |= 4;
+                           var2 |= 4;
                         }
                      } else {
                         var14 = var12.t(var11, 1);
-                        var15 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var3 = var12.k(var11, 0);
-                     var15 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var17 = false;
+                  var4 = false;
                }
             }
 
-            var10 = var14;
-            var13 = var8;
-            var8 = var9;
-            var4 = var3;
-            var3 = var15;
+            var13 = var18;
+            var10 = var9;
+            var9 = var14;
+            var2 = var3;
+            var3 = var2;
          }
 
          var12.b(var11);
-         return new OnVideoCallbackEvent(var3, var4, var10, var6, var8, var13, null);
+         return new OnVideoCallbackEvent(var3, var2, var9, var6, var10, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnVideoCallbackEvent) {

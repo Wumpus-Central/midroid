@@ -1,6 +1,5 @@
 package com.discord.chrome_custom_tabs
 
-import L0.e0
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
@@ -8,8 +7,9 @@ import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import t1.a
-import t1.b
+import p1.a
+import p1.b
+import p1.c
 
 internal object CustomTabsPackages {
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
@@ -21,7 +21,7 @@ internal object CustomTabsPackages {
       var var2: Intent = this.getDefaultViewIntentHandler();
       val var5: java.util.List;
       if (VERSION.SDK_INT >= 33) {
-         var5 = a.a(var1.getPackageManager(), var2, e0.a((long)0));
+         var5 = b.a(var1.getPackageManager(), var2, a.a((long)0));
       } else {
          var5 = var1.getPackageManager().queryIntentActivities(var2, 0);
       }
@@ -34,7 +34,7 @@ internal object CustomTabsPackages {
          q.g(var2, "setPackage(...)");
          val var8: ResolveInfo;
          if (VERSION.SDK_INT >= 33) {
-            var8 = b.a(var1.getPackageManager(), var2, e0.a((long)0));
+            var8 = c.a(var1.getPackageManager(), var2, a.a((long)0));
          } else {
             var8 = var1.getPackageManager().resolveService(var2, 0);
          }

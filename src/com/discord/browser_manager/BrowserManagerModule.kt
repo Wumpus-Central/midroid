@@ -5,7 +5,7 @@ import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import j8.w
+import f8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -20,11 +20,11 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = h.m(var2);
          if (var3 != null) {
-            return k8.q.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return g8.q.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return k8.q.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return g8.q.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {

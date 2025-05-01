@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.rolecolors
 
-import ca.f
-import ca.n
-import da.a
-import fa.G
-import fa.N
+import Y9.f
+import Y9.n
+import Z9.a
+import ba.G
+import ba.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,15 +79,15 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var4: Int = this.secondaryColor;
-      val var3: Int = this.tertiaryColor;
+      val var3: Int = this.secondaryColor;
+      val var4: Int = this.tertiaryColor;
       val var2: StringBuilder = new StringBuilder();
       var2.append("RoleColors(primaryColor=");
       var2.append(var1);
       var2.append(", secondaryColor=");
-      var2.append(var4);
-      var2.append(", tertiaryColor=");
       var2.append(var3);
+      var2.append(", tertiaryColor=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }
@@ -175,7 +175,7 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

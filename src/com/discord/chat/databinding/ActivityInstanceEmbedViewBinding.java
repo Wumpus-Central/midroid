@@ -31,15 +31,15 @@ public final class ActivityInstanceEmbedViewBinding implements ViewBinding {
       DCDButton var3 = (DCDButton)a.a(var0, var1);
       if (var3 != null) {
          var1 = R.id.participants;
-         OverlappingCirclesView var4 = (OverlappingCirclesView)a.a(var0, var1);
-         if (var4 != null) {
+         OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.status_text;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.status_text_barrier;
                Barrier var2 = (Barrier)a.a(var0, var1);
                if (var2 != null) {
-                  return new ActivityInstanceEmbedViewBinding(var0, var3, var4, var5, var2);
+                  return new ActivityInstanceEmbedViewBinding(var0, var3, var5, var4, var2);
                }
             }
          }

@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import ga.d
-import ga.g
+import ca.d
+import ca.g
 import java.util.ArrayList
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
@@ -18,15 +18,15 @@ public object ComponentSerializer : d(E.b(Component.class)) {
 
    @JvmStatic
    fun {
-      val var2: Array<ComponentType> = ComponentType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<ComponentType> = ComponentType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
          E.b(Component.class),

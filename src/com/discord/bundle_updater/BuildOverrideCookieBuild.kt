@@ -1,12 +1,12 @@
 package com.discord.bundle_updater
 
-import ca.f
-import ca.n
+import Y9.f
+import Y9.n
+import ba.C0
+import ba.G
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import fa.C0
-import fa.G
-import j8.w
+import f8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,15 +66,15 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.type;
-      val var1: java.lang.String = this.id;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BuildOverrideCookieBuild(type=");
-      var3.append(var2);
-      var3.append(", id=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.type;
+      val var3: java.lang.String = this.id;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BuildOverrideCookieBuild(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -149,7 +149,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return fa.G.a.a(this);
+         return ba.G.a.a(this);
       }
    }
 

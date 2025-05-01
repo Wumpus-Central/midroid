@@ -5,7 +5,7 @@ import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import j8.w
+import f8.w
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

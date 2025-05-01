@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import ea.g
-import ea.e.i
+import aa.g
+import aa.e.i
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

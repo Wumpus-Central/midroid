@@ -10,6 +10,6 @@ public final class w implements OnLongClickListener {
    public final String k;
 
    public final boolean onLongClick(View var1) {
-      return EmbedView.g(this.j, this.k, var1);
+      return EmbedView.e(this.j, this.k, var1);
    }
 }

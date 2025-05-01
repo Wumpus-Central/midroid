@@ -1,6 +1,7 @@
 package com.discord.networking.okhttp
 
-import j8.p
+import f8.p
+import i8.a
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -8,8 +9,7 @@ import java.util.ArrayList
 import java.util.Comparator
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import m8.a
-import xa.h
+import ta.h
 
 internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode) : h {
    private final val mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode
@@ -99,7 +99,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = q8.a.a(var0);
+         $ENTRIES = m8.a.a(var0);
       }
 
       init {

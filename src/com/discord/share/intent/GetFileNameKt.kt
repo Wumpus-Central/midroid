@@ -3,11 +3,11 @@ package com.discord.share.intent
 import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
-import j8.r
-import j8.s
-import j8.r.a
+import f8.r
+import f8.s
+import f8.r.a
 import kotlin.jvm.internal.q
-import u8.c
+import q8.c
 
 internal fun ContentResolver.getFileName(uri: Uri): String {
    label45: {

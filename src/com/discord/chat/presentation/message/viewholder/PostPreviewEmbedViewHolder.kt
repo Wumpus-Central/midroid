@@ -34,17 +34,17 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
    public fun bind(postPreviewEmbed: PostPreviewEmbed, onTapPostPreviewEmbed: (GuildId, ChannelId, ChannelId, MessageId) -> Unit, spoilerConfig: SpoilerConfig?) {
       kotlin.jvm.internal.q.h(var1, "postPreviewEmbed");
       kotlin.jvm.internal.q.h(var2, "onTapPostPreviewEmbed");
-      val var13: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var11: java.lang.String = var1.getTitle();
-      val var16: java.lang.String = var1.getSubtitle();
-      val var10: java.lang.String = var1.getCtaText();
+      val var17: PostPreviewEmbedView = this.postPreviewEmbedView;
+      val var15: java.lang.String = var1.getTitle();
+      val var10: java.lang.String = var1.getSubtitle();
+      val var13: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
-      val var18: java.lang.String = var1.getCoverImage();
-      val var17: java.lang.String = var1.getBlurredCoverImage();
-      val var9: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var14: StructurableText = var1.getFooter();
-      val var15: java.lang.String = var1.getCoverImageOverlayText();
-      val var12: java.lang.String = var1.getBackgroundImage();
+      val var9: java.lang.String = var1.getCoverImage();
+      val var12: java.lang.String = var1.getBlurredCoverImage();
+      val var16: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var18: StructurableText = var1.getFooter();
+      val var11: java.lang.String = var1.getCoverImageOverlayText();
+      val var14: java.lang.String = var1.getBackgroundImage();
       val var21: t = new t(var2, var1);
       val var8: Boolean = var1.getShouldSpoiler();
       var var19: java.lang.Boolean = var1.getObscureAwaitingScan();
@@ -71,6 +71,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var7 = false;
       }
 
-      var13.setPostPreviewEmbed-4itWklQ(var11, var16, var10, var4, var14, var9, var18, var17, var15, var12, var21, var8, var5, var6, var7, var3);
+      var17.setPostPreviewEmbed-4itWklQ(var15, var10, var13, var4, var18, var16, var9, var12, var11, var14, var21, var8, var5, var6, var7, var3);
    }
 }

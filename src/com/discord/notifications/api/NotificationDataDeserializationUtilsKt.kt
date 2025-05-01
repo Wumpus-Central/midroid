@@ -4,7 +4,7 @@ import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.snowflake.SnowflakeUtils
-import j8.w
+import f8.w
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -24,9 +24,9 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var4 : var9.entrySet()) {
-            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
-               var3.put(var4.getKey(), var4.getValue());
+         for (Entry var6 : var9.entrySet()) {
+            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
+               var3.put(var6.getKey(), var6.getValue());
             }
          }
 
@@ -41,13 +41,13 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
             var12.add(w.a(var24, var21 as java.lang.String));
          }
 
-         var9 = k8.q.t(var12);
+         var9 = g8.q.t(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = k8.q.h();
+      var9 = g8.q.h();
    }
 
    var var19: ChannelId;

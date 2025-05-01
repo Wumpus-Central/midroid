@@ -51,21 +51,21 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
          PollMediaView var5 = (PollMediaView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var7 != null) {
                var1 = R.id.percentage_bar_background;
-               View var4 = a.a(var0, var1);
-               if (var4 != null) {
+               View var6 = a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var7 = (FrameLayout)a.a(var0, var1);
-                  if (var7 != null) {
+                  FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var4 = (TextView)a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var3, var5, var6, var4, var7, var8, var2);
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var3, var5, var7, var6, var2, var4, var8);
                         }
                      }
                   }
