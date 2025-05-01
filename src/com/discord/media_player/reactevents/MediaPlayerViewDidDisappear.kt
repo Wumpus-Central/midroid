@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import f8.w
+import da.C0
+import da.G
+import da.G.a
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,14 +73,14 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
 
    public override fun toString(): String {
       val var1: java.lang.String = this.channelId;
-      val var2: java.util.List = this.mediaItemIds;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaPlayerViewDidDisappear(channelId=");
-      var3.append(var1);
-      var3.append(", mediaItemIds=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.List = this.mediaItemIds;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MediaPlayerViewDidDisappear(channelId=");
+      var2.append(var1);
+      var2.append(", mediaItemIds=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

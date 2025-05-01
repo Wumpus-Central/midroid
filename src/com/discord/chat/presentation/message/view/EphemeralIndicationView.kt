@@ -83,7 +83,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var4, "onHelpArticleClicked");
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
-      var6.setOnClickListener(new z(var4, var2));
+      var6.setOnClickListener(new A(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
       kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
       val var11: StructurableText = var2.getContent();

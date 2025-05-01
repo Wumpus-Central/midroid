@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.referral
 
-import ca.d
-import ca.g
+import ea.d
+import ea.g
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy

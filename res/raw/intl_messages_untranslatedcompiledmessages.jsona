@@ -4,11 +4,6 @@
   "6kp9Hx": "[attachment]",
   "tUu8V1": "Background",
   "W+j15e": "Get my stats!",
-  "eyPefn": "Badge",
-  "2Af/ZW": "We play to chill and have fun, but more fun if we win!",
-  "dnOc/v": "We play together to win, rank up, or beat challenges.",
-  "Yd1GgY": "Skill doesn't matter. We have a good time win or lose.",
-  "rSwwx8": "We won't sleep until we win.",
   "bhdB9/": "Join on PlayStation (sp-int)",
   "BDiXtb": "Transfer to PlayStation (sp-int)",
   "3rUmPT": [
@@ -161,6 +156,7 @@
       ]
     ]
   ],
+  "29mxFh": "Explore",
   "x4OezM": "The more servers you join, the more interesting content you’ll find.",
   "lv1tcX": "Featured servers you might like",
   "F6TmZG": "Content was irrelevant",
@@ -678,8 +674,20 @@
   "60uRDA": "Follow the steps",
   "SFWVER": "Verify Age",
   "NjO/s7": "This channel is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this channel?",
+  "+tEu6+": "This server is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this server?",
   "ECL1eX": [
     "This channel contains adult content marked as age-restricted. We determined you're in the ",
+    [
+      8,
+      "$b",
+      [
+        "teen"
+      ]
+    ],
+    " age group. If we made a mistake, you can reverify."
+  ],
+  "8yts9f": [
+    "This server contains adult content marked as age-restricted. We determined you're in the ",
     [
       8,
       "$b",

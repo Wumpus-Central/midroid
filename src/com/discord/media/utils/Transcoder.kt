@@ -5,8 +5,8 @@ import android.media.MediaFormat
 import android.net.Uri
 import com.linkedin.android.litr.MediaTransformer
 import com.linkedin.android.litr.d
-import f8.r
-import f8.s
+import h8.r
+import h8.s
 import java.nio.ByteBuffer
 import java.util.LinkedHashMap
 import kotlin.coroutines.jvm.internal.g
@@ -35,7 +35,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: e = new e(l8.b.c(var7), 1);
+      val var8: e = new e(n8.b.c(var7), 1);
       var8.C();
       val var9: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0(var9, var1) {
@@ -126,7 +126,7 @@ internal object Transcoder {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: f8.r.a = r.k;
+            val var3: h8.r.a = r.k;
             this.$continuation.resumeWith(r.b(this.$outputUri));
          }
 
@@ -134,7 +134,7 @@ internal object Transcoder {
             q.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: f8.r.a = r.k;
+            val var4: h8.r.a = r.k;
             var var5: java.lang.Throwable = var2;
             if (var2 == null) {
                var5 = new java.lang.Throwable("Unknown transcoding error");
@@ -166,7 +166,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === l8.b.e()) {
+      if (var12 === n8.b.e()) {
          g.c(var7);
       }
 

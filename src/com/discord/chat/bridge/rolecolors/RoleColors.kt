@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.rolecolors
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
+import aa.f
+import aa.n
+import ba.a
+import da.G
+import da.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,17 +79,17 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var3: Int = this.secondaryColor;
-      val var4: Int = this.tertiaryColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("RoleColors(primaryColor=");
-      var2.append(var1);
-      var2.append(", secondaryColor=");
-      var2.append(var3);
-      var2.append(", tertiaryColor=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: Int = this.secondaryColor;
+      val var2: Int = this.tertiaryColor;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleColors(primaryColor=");
+      var3.append(var1);
+      var3.append(", secondaryColor=");
+      var3.append(var4);
+      var3.append(", tertiaryColor=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -119,25 +119,24 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: Int;
          var var10: Int;
          if (var8.y()) {
-            val var2: Int = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             val var9: N = N.a;
             var6 = var8.v(var7, 1, N.a, null) as Int;
             var10 = var8.v(var7, 2, var9, null) as Int;
-            var4 = 7;
-            var3 = var2;
+            var2 = 7;
          } else {
-            var var12: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
             var6 = null;
             var10 = null;
-            var var11: Int = 0;
+            var2 = 0;
 
-            while (var12) {
+            while (var4) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -147,25 +146,23 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
                         }
 
                         var10 = var8.v(var7, 2, N.a, var10) as Int;
-                        var11 |= 4;
+                        var2 |= 4;
                      } else {
                         var6 = var8.v(var7, 1, N.a, var6) as Int;
-                        var11 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var11 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var4 = false;
                }
             }
-
-            var4 = var11;
          }
 
          var8.b(var7);
-         return new RoleColors(var4, var3, var6, var10, null);
+         return new RoleColors(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleColors) {
@@ -178,7 +175,7 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

@@ -1,8 +1,7 @@
 package com.discord.user_search_worker
 
-import M9.d
-import f8.p
-import i8.a
+import O9.d
+import h8.p
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -10,6 +9,7 @@ import java.util.LinkedHashMap
 import java.util.LinkedHashSet
 import java.util.Locale
 import java.util.Map.Entry
+import k8.a
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
@@ -163,7 +163,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                var5 = var10.getGlobalName();
             }
 
-            var14 = var10.copy(var12, var13, var15, var3, var21, var5, g8.q.p(var10.getNicknames(), var6.getNicknames()));
+            var14 = var10.copy(var12, var13, var15, var3, var21, var5, i8.q.p(var10.getNicknames(), var6.getNicknames()));
             if (var14 == null) {
                var14 = var6;
             }
@@ -200,11 +200,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
-         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var28: UserSearchQuerySetFilters = var24.getFilters();
-         if (var28 == null || q.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var16, var24);
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
+         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var24: UserSearchQuerySetFilters = var28.getFilters();
+         if (var24 == null || q.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
+            this.searchUsers(var20, var28);
          }
       }
    }
@@ -262,9 +262,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var31: java.util.List;
                   if (var5) {
-                     val var12: java.lang.String = var28.getUsername();
-                     val var10: java.lang.String = var28.getGlobalName();
-                     val var33: java.lang.String = var28.getFriendNickname();
+                     val var10: java.lang.String = var28.getUsername();
+                     val var33: java.lang.String = var28.getGlobalName();
+                     val var12: java.lang.String = var28.getFriendNickname();
                      val var17: java.util.Map = var28.getNicknames();
                      val var29: UserSearchQuerySetFilters = var2.getFilters();
                      val var30: java.lang.String;
@@ -274,7 +274,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var30 = null;
                      }
 
-                     var31 = i.n(new java.lang.String[]{var12, var10, var33, (java.lang.String)var17.get(var30)});
+                     var31 = i.n(new java.lang.String[]{var10, var33, var12, (java.lang.String)var17.get(var30)});
                   } else {
                      if (var5) {
                         throw new p();
@@ -408,15 +408,15 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.comparator;
+            val var3: java.lang.String = this.comparator;
             val var1: Double = this.score;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("LocalResult(comparator=");
-            var3.append(var4);
-            var3.append(", score=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("LocalResult(comparator=");
+            var4.append(var3);
+            var4.append(", score=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
       }
    }

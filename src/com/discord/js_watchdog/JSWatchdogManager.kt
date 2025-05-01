@@ -1,12 +1,12 @@
 package com.discord.js_watchdog
 
-import O9.U
-import O9.f
+import Q9.U
+import Q9.f
 import android.content.Context
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
-import f8.s
+import h8.s
 import java.io.File
 import java.util.Timer
 import java.util.TimerTask
@@ -17,7 +17,7 @@ import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import l8.b
+import n8.b
 
 public object JSWatchdogManager {
    private final lateinit var cacheDir: File
@@ -230,7 +230,7 @@ public object JSWatchdogManager {
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
                         val var21: Timer = new Timer();
-                        val var20: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
+                        val var18: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
                            final java.lang.String $sessionId$inlined;
@@ -248,8 +248,8 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var21.scheduleAtFixedRate(var20, 1500L, 1000L);
-                        JSWatchdogManager.access$setFreezeTimer$p(var20);
+                        var21.scheduleAtFixedRate(var18, 1500L, 1000L);
+                        JSWatchdogManager.access$setFreezeTimer$p(var18);
                      }
                   } catch (var9: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var9);

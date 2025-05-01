@@ -20,8 +20,8 @@ import com.discord.span.utilities.spannable.BlockBackgroundSpan
 import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import f8.r
-import f8.s
+import h8.r
+import h8.s
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 
@@ -34,10 +34,10 @@ public object CodeStyle {
          var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
-            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
-            var2 = CodeRules.INSTANCE;
+            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            val var5: CodeRules = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
+               CodeRules.INSTANCE, ((CodeStyleProviders)var2).getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
@@ -77,10 +77,10 @@ public object CodeStyle {
 
       label16:
       try {
-         val var11: f8.r.a = r.k;
+         val var11: h8.r.a = r.k;
          var8 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: f8.r.a = r.k;
+         val var10: h8.r.a = r.k;
          var8 = r.b(s.a(var4));
          break label16;
       }
@@ -145,7 +145,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var9: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var11: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -155,10 +155,10 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var5 = SizeUtilsKt.getDpToPx(4);
-      val var7: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var10: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var11: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var9: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var8: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
@@ -168,7 +168,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var9, var7, var10, var11, var8}[var14];
+         val var12: Any = new Object[]{var11, var9, var8, var7, var10}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

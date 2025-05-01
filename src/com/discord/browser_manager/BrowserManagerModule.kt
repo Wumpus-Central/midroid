@@ -5,7 +5,7 @@ import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import f8.w
+import h8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -20,11 +20,11 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = h.m(var2);
          if (var3 != null) {
-            return g8.q.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return i8.q.m(new Pair[]{w.a("selectedBrowser", var3), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return g8.q.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return i8.q.m(new Pair[]{w.a("selectedBrowser", 1), w.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {
@@ -55,10 +55,10 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
    public override fun openInChromeURL(url: String, promise: Promise) {
       q.h(var1, "url");
       q.h(var2, "promise");
-      val var3: BrowserManager = BrowserManager.INSTANCE;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      var3.tryOpenUrlExternally(var4, var1, new Function1(var2) {
+      val var4: BrowserManager = BrowserManager.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var4.tryOpenUrlExternally(var3, var1, new Function1(var2) {
          final Promise $promise;
 
          {

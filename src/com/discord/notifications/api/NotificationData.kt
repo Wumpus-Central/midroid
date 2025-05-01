@@ -1,20 +1,20 @@
 package com.discord.notifications.api
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.N
-import ba.Y
-import ba.h
-import ba.p0
+import aa.f
+import aa.n
+import ba.a
 import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import g8.q
+import da.C0
+import da.G
+import da.N
+import da.Y
+import da.h
+import da.p0
+import i8.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -368,11 +368,14 @@ public data class NotificationData(type: String,
          this.channelRtcRegion = var17;
       }
 
+      val var61: java.util.List;
       if ((var1 and '耀') == 0) {
-         var18 = i.k();
+         var61 = i.k();
+      } else {
+         var61 = var18;
       }
 
-      this.ackChannelIds = var18;
+      this.ackChannelIds = var61;
       if ((var1 and 65536) == 0) {
          this.userId = null;
       } else {
@@ -547,14 +550,14 @@ public data class NotificationData(type: String,
          this.deeplink = var47;
       }
 
-      val var61: java.lang.Boolean;
+      val var62: java.lang.Boolean;
       if ((var2 and 8192) == 0) {
-         var61 = java.lang.Boolean.FALSE;
+         var62 = java.lang.Boolean.FALSE;
       } else {
-         var61 = var48;
+         var62 = var48;
       }
 
-      this.expandSubtitle = var61;
+      this.expandSubtitle = var62;
       if ((var2 and 16384) == 0) {
          this.imageAttachmentUrl = null;
       } else {
@@ -573,11 +576,14 @@ public data class NotificationData(type: String,
          this.silent = var51;
       }
 
+      val var63: java.util.Map;
       if ((var2 and 131072) == 0) {
-         var52 = q.h();
+         var63 = q.h();
+      } else {
+         var63 = var52;
       }
 
-      this.userInfo = var52;
+      this.userInfo = var63;
       if ((var2 and 262144) == 0) {
          this.appDm = false;
       } else {
@@ -1087,19 +1093,19 @@ public data class NotificationData(type: String,
       } else if (var1 !is NotificationData) {
          return false;
       } else {
-         var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.type, var1.type)) {
+         val var3: NotificationData = var1 as NotificationData;
+         if (!kotlin.jvm.internal.q.c(this.type, (var1 as NotificationData).type)) {
             return false;
          } else {
             var var2: Boolean;
             label244: {
                if (this.messageId == null) {
-                  if (var1.messageId == null) {
+                  if (var3.messageId == null) {
                      var2 = true;
                      break label244;
                   }
-               } else if (var1.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+               } else if (var3.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
                   break label244;
                }
 
@@ -1108,114 +1114,114 @@ public data class NotificationData(type: String,
 
             if (!var2) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageActivityType, var1.messageActivityType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageActivityType, var3.messageActivityType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageApplicationName, var1.messageApplicationName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageApplicationName, var3.messageApplicationName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageType, var1.messageType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageType, var3.messageType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageContent, var1.messageContent)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageContent, var3.messageContent)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageFlags, var1.messageFlags)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageFlags, var3.messageFlags)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.channelType, var1.channelType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.channelType, var3.channelType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.channelName, var1.channelName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.channelName, var3.channelName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.channelId, var1.channelId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.channelId, var3.channelId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.channelIcon, var1.channelIcon)) {
+            } else if (!kotlin.jvm.internal.q.c(this.channelIcon, var3.channelIcon)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.parentName, var1.parentName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.parentName, var3.parentName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.parentId, var1.parentId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.parentId, var3.parentId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.messageReferenceType, var1.messageReferenceType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.messageReferenceType, var3.messageReferenceType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.channelRtcRegion, var1.channelRtcRegion)) {
+            } else if (!kotlin.jvm.internal.q.c(this.channelRtcRegion, var3.channelRtcRegion)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.ackChannelIds, var1.ackChannelIds)) {
+            } else if (!kotlin.jvm.internal.q.c(this.ackChannelIds, var3.ackChannelIds)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userId, var1.userId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userId, var3.userId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userUsername, var1.userUsername)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userUsername, var3.userUsername)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userGlobalName, var1.userGlobalName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userGlobalName, var3.userGlobalName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userDiscriminator, var1.userDiscriminator)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userDiscriminator, var3.userDiscriminator)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userAvatar, var1.userAvatar)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userAvatar, var3.userAvatar)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userGuildAvatar, var1.userGuildAvatar)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userGuildAvatar, var3.userGuildAvatar)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.platformUserUsername, var1.platformUserUsername)) {
+            } else if (!kotlin.jvm.internal.q.c(this.platformUserUsername, var3.platformUserUsername)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.relationshipType, var1.relationshipType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.relationshipType, var3.relationshipType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.guildId, var1.guildId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.guildId, var3.guildId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.guildName, var1.guildName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.guildName, var3.guildName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.guildIcon, var1.guildIcon)) {
+            } else if (!kotlin.jvm.internal.q.c(this.guildIcon, var3.guildIcon)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.activityInstanceId, var1.activityInstanceId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.activityInstanceId, var3.activityInstanceId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.activityType, var1.activityType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.activityType, var3.activityType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.activityName, var1.activityName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.activityName, var3.activityName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.applicationId, var1.applicationId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.applicationId, var3.applicationId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.applicationName, var1.applicationName)) {
+            } else if (!kotlin.jvm.internal.q.c(this.applicationName, var3.applicationName)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.applicationIcon, var1.applicationIcon)) {
+            } else if (!kotlin.jvm.internal.q.c(this.applicationIcon, var3.applicationIcon)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.message, var1.message)) {
+            } else if (!kotlin.jvm.internal.q.c(this.message, var3.message)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.stageInstanceTopic, var1.stageInstanceTopic)) {
+            } else if (!kotlin.jvm.internal.q.c(this.stageInstanceTopic, var3.stageInstanceTopic)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.guildScheduledEventEntityType, var1.guildScheduledEventEntityType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.guildScheduledEventEntityType, var3.guildScheduledEventEntityType)) {
                return false;
-            } else if (this.canReply != var1.canReply) {
+            } else if (this.canReply != var3.canReply) {
                return false;
-            } else if (this.isFromCurrentUser != var1.isFromCurrentUser) {
+            } else if (this.isFromCurrentUser != var3.isFromCurrentUser) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.receivingUserId, var1.receivingUserId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.receivingUserId, var3.receivingUserId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.title, var1.title)) {
+            } else if (!kotlin.jvm.internal.q.c(this.title, var3.title)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.subtitle, var1.subtitle)) {
+            } else if (!kotlin.jvm.internal.q.c(this.subtitle, var3.subtitle)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.iconUrl, var1.iconUrl)) {
+            } else if (!kotlin.jvm.internal.q.c(this.iconUrl, var3.iconUrl)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.notificationChannel, var1.notificationChannel)) {
+            } else if (!kotlin.jvm.internal.q.c(this.notificationChannel, var3.notificationChannel)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.trackingType, var1.trackingType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.trackingType, var3.trackingType)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.deeplink, var1.deeplink)) {
+            } else if (!kotlin.jvm.internal.q.c(this.deeplink, var3.deeplink)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.expandSubtitle, var1.expandSubtitle)) {
+            } else if (!kotlin.jvm.internal.q.c(this.expandSubtitle, var3.expandSubtitle)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.imageAttachmentUrl, var1.imageAttachmentUrl)) {
+            } else if (!kotlin.jvm.internal.q.c(this.imageAttachmentUrl, var3.imageAttachmentUrl)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.timeReceived, var1.timeReceived)) {
+            } else if (!kotlin.jvm.internal.q.c(this.timeReceived, var3.timeReceived)) {
                return false;
-            } else if (this.silent != var1.silent) {
+            } else if (this.silent != var3.silent) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.userInfo, var1.userInfo)) {
+            } else if (!kotlin.jvm.internal.q.c(this.userInfo, var3.userInfo)) {
                return false;
-            } else if (this.appDm != var1.appDm) {
+            } else if (this.appDm != var3.appDm) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.notifTypeId, var1.notifTypeId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.notifTypeId, var3.notifTypeId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.notifInstanceId, var1.notifInstanceId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.notifInstanceId, var3.notifInstanceId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.joinId, var1.joinId)) {
+            } else if (!kotlin.jvm.internal.q.c(this.joinId, var3.joinId)) {
                return false;
-            } else if (!kotlin.jvm.internal.q.c(this.mentionType, var1.mentionType)) {
+            } else if (!kotlin.jvm.internal.q.c(this.mentionType, var3.mentionType)) {
                return false;
             } else {
-               return kotlin.jvm.internal.q.c(this.appState, var1.appState);
+               return kotlin.jvm.internal.q.c(this.appState, var3.appState);
             }
          }
       }
@@ -1463,8 +1469,8 @@ public data class NotificationData(type: String,
          var34 = this.guildScheduledEventEntityType.hashCode();
       }
 
-      val var52: Int = java.lang.Boolean.hashCode(this.canReply);
-      val var53: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
+      val var53: Int = java.lang.Boolean.hashCode(this.canReply);
+      val var52: Int = java.lang.Boolean.hashCode(this.isFromCurrentUser);
       val var35: Int;
       if (this.receivingUserId == null) {
          var35 = 0;
@@ -1535,9 +1541,9 @@ public data class NotificationData(type: String,
          var44 = this.timeReceived.hashCode();
       }
 
-      val var54: Int = java.lang.Boolean.hashCode(this.silent);
+      val var55: Int = java.lang.Boolean.hashCode(this.silent);
       val var56: Int = this.userInfo.hashCode();
-      val var55: Int = java.lang.Boolean.hashCode(this.appDm);
+      val var54: Int = java.lang.Boolean.hashCode(this.appDm);
       val var45: Int;
       if (this.notifTypeId == null) {
          var45 = 0;
@@ -1731,10 +1737,10 @@ public data class NotificationData(type: String,
                                                                                                                                                                                              + var34
                                                                                                                                                                                        )
                                                                                                                                                                                        * 31
-                                                                                                                                                                                    + var52
+                                                                                                                                                                                    + var53
                                                                                                                                                                               )
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var53
+                                                                                                                                                                           + var52
                                                                                                                                                                      )
                                                                                                                                                                      * 31
                                                                                                                                                                   + var35
@@ -1767,13 +1773,13 @@ public data class NotificationData(type: String,
                                                                                  + var44
                                                                            )
                                                                            * 31
-                                                                        + var54
+                                                                        + var55
                                                                   )
                                                                   * 31
                                                                + var56
                                                          )
                                                          * 31
-                                                      + var55
+                                                      + var54
                                                 )
                                                 * 31
                                              + var45
@@ -1800,175 +1806,175 @@ public data class NotificationData(type: String,
          var58 = MessageId.toString-impl(this.messageId);
       }
 
-      val var7: Int = this.messageActivityType;
-      val var25: java.lang.String = this.messageApplicationName;
-      val var47: Int = this.messageType;
-      val var22: java.lang.String = this.messageContent;
-      val var14: java.lang.Long = this.messageFlags;
-      val var31: Int = this.channelType;
-      val var45: java.lang.String = this.channelName;
-      val var20: ChannelId = this.channelId;
-      val var39: java.lang.String = this.channelIcon;
-      val var46: java.lang.String = this.parentName;
-      val var8: ChannelId = this.parentId;
-      val var44: Int = this.messageReferenceType;
-      val var17: java.lang.String = this.channelRtcRegion;
-      val var38: java.util.List = this.ackChannelIds;
-      val var56: UserId = this.userId;
-      val var41: java.lang.String = this.userUsername;
-      val var28: java.lang.String = this.userGlobalName;
-      val var21: Int = this.userDiscriminator;
-      val var40: java.lang.String = this.userAvatar;
-      val var9: java.lang.String = this.userGuildAvatar;
-      val var52: java.lang.String = this.platformUserUsername;
-      val var32: Int = this.relationshipType;
-      val var30: GuildId = this.guildId;
-      val var27: java.lang.String = this.guildName;
-      val var33: java.lang.String = this.guildIcon;
-      val var50: java.lang.String = this.activityInstanceId;
-      val var26: Int = this.activityType;
-      val var19: java.lang.String = this.activityName;
-      val var24: ApplicationId = this.applicationId;
-      val var10: java.lang.String = this.applicationName;
-      val var35: java.lang.String = this.applicationIcon;
-      val var42: NotificationMessage = this.message;
-      val var23: java.lang.String = this.stageInstanceTopic;
-      val var12: Int = this.guildScheduledEventEntityType;
-      val var1: Boolean = this.canReply;
+      val var11: Int = this.messageActivityType;
+      val var31: java.lang.String = this.messageApplicationName;
+      val var52: Int = this.messageType;
+      val var25: java.lang.String = this.messageContent;
+      val var24: java.lang.Long = this.messageFlags;
+      val var32: Int = this.channelType;
+      val var47: java.lang.String = this.channelName;
+      val var51: ChannelId = this.channelId;
+      val var48: java.lang.String = this.channelIcon;
+      val var9: java.lang.String = this.parentName;
+      val var55: ChannelId = this.parentId;
+      val var19: Int = this.messageReferenceType;
+      val var14: java.lang.String = this.channelRtcRegion;
+      val var17: java.util.List = this.ackChannelIds;
+      val var18: UserId = this.userId;
+      val var42: java.lang.String = this.userUsername;
+      val var46: java.lang.String = this.userGlobalName;
+      val var30: Int = this.userDiscriminator;
+      val var28: java.lang.String = this.userAvatar;
+      val var43: java.lang.String = this.userGuildAvatar;
+      val var39: java.lang.String = this.platformUserUsername;
+      val var36: Int = this.relationshipType;
+      val var15: GuildId = this.guildId;
+      val var8: java.lang.String = this.guildName;
+      val var20: java.lang.String = this.guildIcon;
+      val var54: java.lang.String = this.activityInstanceId;
+      val var44: Int = this.activityType;
+      val var12: java.lang.String = this.activityName;
+      val var45: ApplicationId = this.applicationId;
+      val var40: java.lang.String = this.applicationName;
+      val var34: java.lang.String = this.applicationIcon;
+      val var21: NotificationMessage = this.message;
+      val var57: java.lang.String = this.stageInstanceTopic;
+      val var53: Int = this.guildScheduledEventEntityType;
+      val var4: Boolean = this.canReply;
       val var3: Boolean = this.isFromCurrentUser;
-      val var36: UserId = this.receivingUserId;
-      val var55: java.lang.String = this.title;
-      val var34: java.lang.String = this.subtitle;
-      val var15: java.lang.String = this.iconUrl;
-      val var53: java.lang.String = this.notificationChannel;
-      val var49: java.lang.String = this.trackingType;
-      val var48: java.lang.String = this.deeplink;
-      val var43: java.lang.Boolean = this.expandSubtitle;
-      val var57: java.lang.String = this.imageAttachmentUrl;
-      val var13: java.lang.String = this.timeReceived;
+      val var16: UserId = this.receivingUserId;
+      val var13: java.lang.String = this.title;
+      val var37: java.lang.String = this.subtitle;
+      val var38: java.lang.String = this.iconUrl;
+      val var50: java.lang.String = this.notificationChannel;
+      val var23: java.lang.String = this.trackingType;
+      val var22: java.lang.String = this.deeplink;
+      val var7: java.lang.Boolean = this.expandSubtitle;
+      val var35: java.lang.String = this.imageAttachmentUrl;
+      val var27: java.lang.String = this.timeReceived;
       val var2: Boolean = this.silent;
-      val var37: java.util.Map = this.userInfo;
-      val var4: Boolean = this.appDm;
-      val var51: java.lang.String = this.notifTypeId;
-      val var11: java.lang.String = this.notifInstanceId;
-      val var18: java.lang.String = this.joinId;
-      val var54: java.lang.String = this.mentionType;
-      val var29: java.lang.String = this.appState;
-      val var16: StringBuilder = new StringBuilder();
-      var16.append("NotificationData(type=");
-      var16.append(var6);
-      var16.append(", messageId=");
-      var16.append(var58);
-      var16.append(", messageActivityType=");
-      var16.append(var7);
-      var16.append(", messageApplicationName=");
-      var16.append(var25);
-      var16.append(", messageType=");
-      var16.append(var47);
-      var16.append(", messageContent=");
-      var16.append(var22);
-      var16.append(", messageFlags=");
-      var16.append(var14);
-      var16.append(", channelType=");
-      var16.append(var31);
-      var16.append(", channelName=");
-      var16.append(var45);
-      var16.append(", channelId=");
-      var16.append(var20);
-      var16.append(", channelIcon=");
-      var16.append(var39);
-      var16.append(", parentName=");
-      var16.append(var46);
-      var16.append(", parentId=");
-      var16.append(var8);
-      var16.append(", messageReferenceType=");
-      var16.append(var44);
-      var16.append(", channelRtcRegion=");
-      var16.append(var17);
-      var16.append(", ackChannelIds=");
-      var16.append(var38);
-      var16.append(", userId=");
-      var16.append(var56);
-      var16.append(", userUsername=");
-      var16.append(var41);
-      var16.append(", userGlobalName=");
-      var16.append(var28);
-      var16.append(", userDiscriminator=");
-      var16.append(var21);
-      var16.append(", userAvatar=");
-      var16.append(var40);
-      var16.append(", userGuildAvatar=");
-      var16.append(var9);
-      var16.append(", platformUserUsername=");
-      var16.append(var52);
-      var16.append(", relationshipType=");
-      var16.append(var32);
-      var16.append(", guildId=");
-      var16.append(var30);
-      var16.append(", guildName=");
-      var16.append(var27);
-      var16.append(", guildIcon=");
-      var16.append(var33);
-      var16.append(", activityInstanceId=");
-      var16.append(var50);
-      var16.append(", activityType=");
-      var16.append(var26);
-      var16.append(", activityName=");
-      var16.append(var19);
-      var16.append(", applicationId=");
-      var16.append(var24);
-      var16.append(", applicationName=");
-      var16.append(var10);
-      var16.append(", applicationIcon=");
-      var16.append(var35);
-      var16.append(", message=");
-      var16.append(var42);
-      var16.append(", stageInstanceTopic=");
-      var16.append(var23);
-      var16.append(", guildScheduledEventEntityType=");
-      var16.append(var12);
-      var16.append(", canReply=");
-      var16.append(var1);
-      var16.append(", isFromCurrentUser=");
-      var16.append(var3);
-      var16.append(", receivingUserId=");
-      var16.append(var36);
-      var16.append(", title=");
-      var16.append(var55);
-      var16.append(", subtitle=");
-      var16.append(var34);
-      var16.append(", iconUrl=");
-      var16.append(var15);
-      var16.append(", notificationChannel=");
-      var16.append(var53);
-      var16.append(", trackingType=");
-      var16.append(var49);
-      var16.append(", deeplink=");
-      var16.append(var48);
-      var16.append(", expandSubtitle=");
-      var16.append(var43);
-      var16.append(", imageAttachmentUrl=");
-      var16.append(var57);
-      var16.append(", timeReceived=");
-      var16.append(var13);
-      var16.append(", silent=");
-      var16.append(var2);
-      var16.append(", userInfo=");
-      var16.append(var37);
-      var16.append(", appDm=");
-      var16.append(var4);
-      var16.append(", notifTypeId=");
-      var16.append(var51);
-      var16.append(", notifInstanceId=");
-      var16.append(var11);
-      var16.append(", joinId=");
-      var16.append(var18);
-      var16.append(", mentionType=");
-      var16.append(var54);
-      var16.append(", appState=");
-      var16.append(var29);
-      var16.append(")");
-      return var16.toString();
+      val var10: java.util.Map = this.userInfo;
+      val var1: Boolean = this.appDm;
+      val var26: java.lang.String = this.notifTypeId;
+      val var49: java.lang.String = this.notifInstanceId;
+      val var29: java.lang.String = this.joinId;
+      val var56: java.lang.String = this.mentionType;
+      val var41: java.lang.String = this.appState;
+      val var33: StringBuilder = new StringBuilder();
+      var33.append("NotificationData(type=");
+      var33.append(var6);
+      var33.append(", messageId=");
+      var33.append(var58);
+      var33.append(", messageActivityType=");
+      var33.append(var11);
+      var33.append(", messageApplicationName=");
+      var33.append(var31);
+      var33.append(", messageType=");
+      var33.append(var52);
+      var33.append(", messageContent=");
+      var33.append(var25);
+      var33.append(", messageFlags=");
+      var33.append(var24);
+      var33.append(", channelType=");
+      var33.append(var32);
+      var33.append(", channelName=");
+      var33.append(var47);
+      var33.append(", channelId=");
+      var33.append(var51);
+      var33.append(", channelIcon=");
+      var33.append(var48);
+      var33.append(", parentName=");
+      var33.append(var9);
+      var33.append(", parentId=");
+      var33.append(var55);
+      var33.append(", messageReferenceType=");
+      var33.append(var19);
+      var33.append(", channelRtcRegion=");
+      var33.append(var14);
+      var33.append(", ackChannelIds=");
+      var33.append(var17);
+      var33.append(", userId=");
+      var33.append(var18);
+      var33.append(", userUsername=");
+      var33.append(var42);
+      var33.append(", userGlobalName=");
+      var33.append(var46);
+      var33.append(", userDiscriminator=");
+      var33.append(var30);
+      var33.append(", userAvatar=");
+      var33.append(var28);
+      var33.append(", userGuildAvatar=");
+      var33.append(var43);
+      var33.append(", platformUserUsername=");
+      var33.append(var39);
+      var33.append(", relationshipType=");
+      var33.append(var36);
+      var33.append(", guildId=");
+      var33.append(var15);
+      var33.append(", guildName=");
+      var33.append(var8);
+      var33.append(", guildIcon=");
+      var33.append(var20);
+      var33.append(", activityInstanceId=");
+      var33.append(var54);
+      var33.append(", activityType=");
+      var33.append(var44);
+      var33.append(", activityName=");
+      var33.append(var12);
+      var33.append(", applicationId=");
+      var33.append(var45);
+      var33.append(", applicationName=");
+      var33.append(var40);
+      var33.append(", applicationIcon=");
+      var33.append(var34);
+      var33.append(", message=");
+      var33.append(var21);
+      var33.append(", stageInstanceTopic=");
+      var33.append(var57);
+      var33.append(", guildScheduledEventEntityType=");
+      var33.append(var53);
+      var33.append(", canReply=");
+      var33.append(var4);
+      var33.append(", isFromCurrentUser=");
+      var33.append(var3);
+      var33.append(", receivingUserId=");
+      var33.append(var16);
+      var33.append(", title=");
+      var33.append(var13);
+      var33.append(", subtitle=");
+      var33.append(var37);
+      var33.append(", iconUrl=");
+      var33.append(var38);
+      var33.append(", notificationChannel=");
+      var33.append(var50);
+      var33.append(", trackingType=");
+      var33.append(var23);
+      var33.append(", deeplink=");
+      var33.append(var22);
+      var33.append(", expandSubtitle=");
+      var33.append(var7);
+      var33.append(", imageAttachmentUrl=");
+      var33.append(var35);
+      var33.append(", timeReceived=");
+      var33.append(var27);
+      var33.append(", silent=");
+      var33.append(var2);
+      var33.append(", userInfo=");
+      var33.append(var10);
+      var33.append(", appDm=");
+      var33.append(var1);
+      var33.append(", notifTypeId=");
+      var33.append(var26);
+      var33.append(", notifInstanceId=");
+      var33.append(var49);
+      var33.append(", joinId=");
+      var33.append(var29);
+      var33.append(", mentionType=");
+      var33.append(var56);
+      var33.append(", appState=");
+      var33.append(var41);
+      var33.append(")");
+      return var33.toString();
    }
 
    public object `$serializer` : G {
@@ -2044,102 +2050,102 @@ public data class NotificationData(type: String,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var47: Array<KSerializer> = NotificationData.access$get$childSerializers$cp();
-         val var5: C0 = C0.a;
-         val var12: KSerializer = a.u(MessageId.$serializer.INSTANCE);
+         val var1: C0 = C0.a;
+         val var8: KSerializer = a.u(MessageId.$serializer.INSTANCE);
          val var35: N = N.a;
-         val var11: KSerializer = a.u(N.a);
-         val var10: KSerializer = a.u(var5);
-         val var1: KSerializer = a.u(var35);
-         val var4: KSerializer = a.u(var5);
-         val var8: KSerializer = a.u(Y.a);
-         val var7: KSerializer = a.u(var35);
-         val var2: KSerializer = a.u(var5);
+         val var6: KSerializer = a.u(N.a);
+         val var10: KSerializer = a.u(var1);
+         val var3: KSerializer = a.u(var35);
+         val var11: KSerializer = a.u(var1);
+         val var4: KSerializer = a.u(Y.a);
+         val var5: KSerializer = a.u(var35);
+         val var2: KSerializer = a.u(var1);
          val var13: ChannelId.$serializer = ChannelId.$serializer.INSTANCE;
-         val var6: KSerializer = a.u(ChannelId.$serializer.INSTANCE);
-         val var3: KSerializer = a.u(var5);
-         val var9: KSerializer = a.u(var5);
-         val var18: KSerializer = a.u(var13);
+         val var9: KSerializer = a.u(ChannelId.$serializer.INSTANCE);
+         val var12: KSerializer = a.u(var1);
+         val var7: KSerializer = a.u(var1);
+         val var29: KSerializer = a.u(var13);
          val var22: KSerializer = a.u(var35);
-         val var26: KSerializer = a.u(var5);
+         val var26: KSerializer = a.u(var1);
          val var37: UserId.$serializer = UserId.$serializer.INSTANCE;
-         val var20: KSerializer = a.u(UserId.$serializer.INSTANCE);
-         val var25: KSerializer = a.u(var5);
-         val var28: KSerializer = a.u(var5);
-         val var19: KSerializer = a.u(var35);
-         val var16: KSerializer = a.u(var5);
-         val var17: KSerializer = a.u(var5);
-         val var24: KSerializer = a.u(var5);
-         val var14: KSerializer = a.u(var35);
-         val var29: KSerializer = a.u(GuildId.$serializer.INSTANCE);
-         val var23: KSerializer = a.u(var5);
-         val var33: KSerializer = a.u(var5);
-         val var53: KSerializer = a.u(var5);
-         val var27: KSerializer = a.u(var35);
-         val var15: KSerializer = a.u(var5);
-         val var31: KSerializer = a.u(ApplicationId.$serializer.INSTANCE);
-         val var21: KSerializer = a.u(var5);
-         val var34: KSerializer = a.u(var5);
-         val var30: KSerializer = a.u(NotificationMessageSerializer.INSTANCE);
-         val var32: KSerializer = a.u(var5);
+         val var17: KSerializer = a.u(UserId.$serializer.INSTANCE);
+         val var53: KSerializer = a.u(var1);
+         val var20: KSerializer = a.u(var1);
+         val var32: KSerializer = a.u(var35);
+         val var24: KSerializer = a.u(var1);
+         val var34: KSerializer = a.u(var1);
+         val var31: KSerializer = a.u(var1);
+         val var33: KSerializer = a.u(var35);
+         val var19: KSerializer = a.u(GuildId.$serializer.INSTANCE);
+         val var15: KSerializer = a.u(var1);
+         val var30: KSerializer = a.u(var1);
+         val var16: KSerializer = a.u(var1);
+         val var21: KSerializer = a.u(var35);
+         val var23: KSerializer = a.u(var1);
+         val var14: KSerializer = a.u(ApplicationId.$serializer.INSTANCE);
+         val var27: KSerializer = a.u(var1);
+         val var18: KSerializer = a.u(var1);
+         val var25: KSerializer = a.u(NotificationMessageSerializer.INSTANCE);
+         val var28: KSerializer = a.u(var1);
          val var54: KSerializer = a.u(var35);
          val var36: h = h.a;
          return new KSerializer[]{
-            var5,
-            var12,
-            var11,
-            var10,
             var1,
-            var4,
             var8,
-            var7,
-            var2,
             var6,
+            var10,
             var3,
+            var11,
+            var4,
+            var5,
+            var2,
             var9,
-            var18,
+            var12,
+            var7,
+            var29,
             var22,
             var26,
             ChannelListSerializer.INSTANCE,
+            var17,
+            var53,
             var20,
+            var32,
+            var24,
+            var34,
+            var31,
+            var33,
+            var19,
+            var15,
+            var30,
+            var16,
+            var21,
+            var23,
+            var14,
+            var27,
+            var18,
             var25,
             var28,
-            var19,
-            var16,
-            var17,
-            var24,
-            var14,
-            var29,
-            var23,
-            var33,
-            var53,
-            var27,
-            var15,
-            var31,
-            var21,
-            var34,
-            var30,
-            var32,
             var54,
             CanReplySerializer.INSTANCE,
             h.a,
             a.u(var37),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
             a.u(var36),
-            a.u(var5),
-            a.u(var5),
+            a.u(var1),
+            a.u(var1),
             var36,
             var47[49],
             var36,
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5),
-            a.u(var5)
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1),
+            a.u(var1)
          };
       }
 
@@ -2149,33 +2155,30 @@ public data class NotificationData(type: String,
          val var77: c = var1.c(var76);
          val var78: Array<KSerializer> = NotificationData.access$get$childSerializers$cp();
          var var3: Byte;
-         val var4: Byte;
+         val var4: Int;
          var var5: Byte;
-         var var6: Int;
+         var var6: Byte;
          var var7: Byte;
          var var9: Int;
          var var13: java.lang.String;
-         var var17: Any;
-         var var22: Any;
-         var var29: java.lang.String;
+         var var31: java.lang.String;
          var var32: java.lang.String;
          var var33: java.lang.String;
          var var34: java.lang.String;
+         var var35: java.lang.String;
          var var36: Any;
          var var37: java.lang.String;
-         var var38: java.lang.String;
          var var39: java.lang.String;
          var var40: Any;
-         var var41: java.lang.String;
+         var var41: Any;
          var var42: Any;
-         var var43: java.lang.String;
          var var44: java.lang.String;
          var var45: Any;
          var var46: java.lang.String;
          var var47: java.lang.String;
          var var48: java.lang.String;
          var var49: java.lang.String;
-         var var50: Any;
+         var var50: java.lang.String;
          var var51: java.lang.String;
          var var52: java.lang.String;
          var var53: java.lang.String;
@@ -2184,136 +2187,141 @@ public data class NotificationData(type: String,
          var var56: Any;
          var var57: java.lang.String;
          var var58: java.lang.String;
-         var var59: Any;
+         var var59: java.lang.String;
          var var60: Any;
          var var61: Any;
-         var var62: Any;
+         var var62: java.lang.String;
          var var63: java.lang.String;
-         var var64: java.lang.String;
-         var var65: java.lang.String;
+         var var64: Any;
+         var var65: Any;
          var var66: java.lang.String;
-         var var67: Any;
+         var var67: java.lang.String;
          var var68: java.lang.String;
+         var var69: Any;
          val var70: Any;
-         val var82: java.lang.String;
-         var var94: java.lang.String;
+         val var71: Any;
+         var var81: Any;
+         var var95: java.lang.String;
          var var97: java.lang.String;
-         var var108: java.lang.String;
-         var var113: Any;
-         var var142: java.lang.String;
+         var var109: Any;
+         var var113: java.lang.String;
+         var var118: Any;
+         var var141: java.lang.String;
          var var154: Any;
-         var var169: java.lang.String;
-         var var174: Any;
-         var var191: Any;
-         var var368: java.lang.String;
+         var var166: java.lang.String;
+         var var170: Any;
+         var var202: java.lang.String;
+         var var229: java.lang.String;
          if (var77.y()) {
             var47 = var77.t(var76, 0);
-            val var79: MessageId = var77.v(var76, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
+            var81 = var77.v(var76, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var80: java.lang.String;
-            if (var79 != null) {
-               var80 = var79.unbox-impl();
+            if (var81 != null) {
+               var80 = var81.unbox-impl();
             } else {
                var80 = null;
             }
 
-            val var12: N = N.a;
+            val var11: N = N.a;
             var56 = var77.v(var76, 2, N.a, null) as Int;
             val var10: C0 = C0.a;
             var49 = var77.v(var76, 3, C0.a, null) as java.lang.String;
-            var45 = var77.v(var76, 4, var12, null) as Int;
+            var45 = var77.v(var76, 4, var11, null) as Int;
             var33 = var77.v(var76, 5, var10, null) as java.lang.String;
             var154 = var77.v(var76, 6, Y.a, null) as java.lang.Long;
-            var36 = var77.v(var76, 7, var12, null) as Int;
+            var36 = var77.v(var76, 7, var11, null) as Int;
             var48 = var77.v(var76, 8, var10, null) as java.lang.String;
-            val var11: ChannelId.$serializer = ChannelId.$serializer.INSTANCE;
-            val var23: ChannelId = var77.v(var76, 9, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var174 = var77.v(var76, 10, var10, null) as java.lang.String;
+            val var12: ChannelId.$serializer = ChannelId.$serializer.INSTANCE;
+            val var26: ChannelId = var77.v(var76, 9, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var31 = var77.v(var76, 10, var10, null) as java.lang.String;
             var34 = var77.v(var76, 11, var10, null) as java.lang.String;
-            var59 = var77.v(var76, 12, var11, null) as ChannelId;
-            var22 = var77.v(var76, 13, var12, null) as Int;
+            var70 = var77.v(var76, 12, var12, null) as ChannelId;
+            val var22: Int = var77.v(var76, 13, var11, null) as Int;
             var37 = var77.v(var76, 14, var10, null) as java.lang.String;
             var42 = var77.m(var76, 15, ChannelListSerializer.INSTANCE, null) as java.util.List;
-            val var95: UserId.$serializer = UserId.$serializer.INSTANCE;
-            var54 = var77.v(var76, 16, UserId.$serializer.INSTANCE, null) as UserId;
-            var41 = var77.v(var76, 17, var10, null) as java.lang.String;
-            var39 = var77.v(var76, 18, var10, null) as java.lang.String;
-            var40 = var77.v(var76, 19, var12, null) as Int;
-            var29 = var77.v(var76, 20, var10, null) as java.lang.String;
-            var64 = var77.v(var76, 21, var10, null) as java.lang.String;
-            var63 = var77.v(var76, 22, var10, null) as java.lang.String;
-            val var30: Int = var77.v(var76, 23, var12, null) as Int;
-            val var24: GuildId = var77.v(var76, 24, GuildId.$serializer.INSTANCE, null) as GuildId;
-            val var25: java.lang.String = var77.v(var76, 25, var10, null) as java.lang.String;
+            val var102: UserId.$serializer = UserId.$serializer.INSTANCE;
+            var69 = var77.v(var76, 16, UserId.$serializer.INSTANCE, null) as UserId;
+            var39 = var77.v(var76, 17, var10, null) as java.lang.String;
+            var59 = var77.v(var76, 18, var10, null) as java.lang.String;
+            var40 = var77.v(var76, 19, var11, null) as Int;
+            var62 = var77.v(var76, 20, var10, null) as java.lang.String;
+            var46 = var77.v(var76, 21, var10, null) as java.lang.String;
+            var202 = var77.v(var76, 22, var10, null) as java.lang.String;
+            val var29: Int = var77.v(var76, 23, var11, null) as Int;
+            val var25: GuildId = var77.v(var76, 24, GuildId.$serializer.INSTANCE, null) as GuildId;
+            val var24: java.lang.String = var77.v(var76, 25, var10, null) as java.lang.String;
             val var21: java.lang.String = var77.v(var76, 26, var10, null) as java.lang.String;
             val var20: java.lang.String = var77.v(var76, 27, var10, null) as java.lang.String;
-            val var19: Int = var77.v(var76, 28, var12, null) as Int;
+            val var19: Int = var77.v(var76, 28, var11, null) as Int;
             val var18: java.lang.String = var77.v(var76, 29, var10, null) as java.lang.String;
-            var17 = var77.v(var76, 30, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
-            val var26: java.lang.String = var77.v(var76, 31, var10, null) as java.lang.String;
+            var118 = var77.v(var76, 30, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
+            val var23: java.lang.String = var77.v(var76, 31, var10, null) as java.lang.String;
             var113 = var77.v(var76, 32, var10, null) as java.lang.String;
             val var15: NotificationMessage = var77.v(var76, 33, NotificationMessageSerializer.INSTANCE, null) as NotificationMessage;
             var13 = var77.v(var76, 34, var10, null) as java.lang.String;
-            val var14: Int = var77.v(var76, 35, var12, null) as Int;
+            var109 = var77.v(var76, 35, var11, null) as Int;
             var5 = var77.m(var76, 36, CanReplySerializer.INSTANCE, java.lang.Boolean.FALSE) as java.lang.Boolean;
-            var4 = var77.s(var76, 37);
-            var61 = var77.v(var76, 38, var95, null) as UserId;
-            val var102: java.lang.String = var77.v(var76, 39, var10, null) as java.lang.String;
-            var43 = var77.v(var76, 40, var10, null) as java.lang.String;
-            var32 = var77.v(var76, 41, var10, null) as java.lang.String;
-            var51 = var77.v(var76, 42, var10, null) as java.lang.String;
-            var66 = var77.v(var76, 43, var10, null) as java.lang.String;
-            var38 = var77.v(var76, 44, var10, null) as java.lang.String;
-            var60 = var77.v(var76, 45, h.a, null) as java.lang.Boolean;
+            var6 = var77.s(var76, 37);
+            val var43: UserId = var77.v(var76, 38, var102, null) as UserId;
+            val var103: java.lang.String = var77.v(var76, 39, var10, null) as java.lang.String;
+            var32 = var77.v(var76, 40, var10, null) as java.lang.String;
+            var35 = var77.v(var76, 41, var10, null) as java.lang.String;
+            var52 = var77.v(var76, 42, var10, null) as java.lang.String;
+            var67 = var77.v(var76, 43, var10, null) as java.lang.String;
+            var57 = var77.v(var76, 44, var10, null) as java.lang.String;
+            var61 = var77.v(var76, 45, h.a, null) as java.lang.Boolean;
             var97 = var77.v(var76, 46, var10, null) as java.lang.String;
-            var58 = var77.v(var76, 47, var10, null) as java.lang.String;
+            var53 = var77.v(var76, 47, var10, null) as java.lang.String;
             var3 = var77.s(var76, 48);
-            var191 = var77.m(var76, 49, var78[49], null) as java.util.Map;
+            var170 = var77.m(var76, 49, var78[49], null) as java.util.Map;
             val var2: Byte = var77.s(var76, 50);
             val var28: java.lang.String = var77.v(var76, 51, var10, null) as java.lang.String;
-            var57 = var77.v(var76, 52, var10, null) as java.lang.String;
-            var368 = var77.v(var76, 53, var10, null) as java.lang.String;
-            val var71: java.lang.String = var77.v(var76, 54, var10, null) as java.lang.String;
-            var94 = var77.v(var76, 55, var10, null) as java.lang.String;
+            var63 = var77.v(var76, 52, var10, null) as java.lang.String;
+            var50 = var77.v(var76, 53, var10, null) as java.lang.String;
+            val var72: java.lang.String = var77.v(var76, 54, var10, null) as java.lang.String;
+            var95 = var77.v(var76, 55, var10, null) as java.lang.String;
             var55 = var80;
-            var6 = 16777215;
+            var4 = 16777215;
             var9 = -1;
-            var67 = var154;
-            var154 = var23;
-            var142 = (java.lang.String)var174;
-            var62 = var30;
-            var174 = var24;
-            var46 = var25;
-            var53 = var21;
-            var65 = var20;
-            var191 = var19;
-            var169 = var18;
-            var52 = var26;
-            var68 = (java.lang.String)var113;
-            var113 = var15;
-            var70 = var14;
-            var108 = var102;
-            var44 = var97;
-            var50 = var191;
+            var81 = (MessageId)var170;
+            var170 = var154;
+            var71 = var26;
+            var54 = var22;
+            var141 = var202;
+            var154 = var29;
+            var64 = var25;
+            var68 = var24;
+            var202 = var21;
+            var166 = var20;
+            var65 = var19;
+            var58 = var18;
+            var60 = var118;
+            var44 = var23;
+            var51 = var113;
+            var118 = var15;
+            var41 = var109;
+            var109 = var43;
+            var113 = var103;
+            var66 = var97;
             var7 = var2;
-            var97 = var28;
-            var82 = var368;
-            var368 = var71;
+            var229 = var28;
+            var97 = var72;
          } else {
             var57 = null;
-            var var88: Boolean = true;
+            var var87: Boolean = true;
             var6 = 0;
-            var var86: Byte = 0;
+            var var85: Byte = 0;
             var var8: Byte = 0;
             var5 = 0;
             var3 = 0;
             var9 = 0;
-            var94 = null;
-            var38 = null;
+            var95 = null;
+            var202 = null;
             var32 = null;
             var53 = null;
             var60 = null;
-            var191 = null;
-            var108 = null;
+            var35 = null;
+            var109 = null;
             var59 = null;
             var52 = null;
             var51 = null;
@@ -2324,15 +2332,15 @@ public data class NotificationData(type: String,
             var34 = null;
             var33 = null;
             var var145: java.lang.String = null;
-            var142 = null;
-            var22 = null;
-            var var135: Any = null;
-            var var132: Any = null;
+            var var143: java.lang.String = null;
+            var141 = null;
+            var var136: Any = null;
+            var var133: Any = null;
             var154 = null;
             var var162: java.lang.String = null;
-            var29 = null;
-            var169 = null;
-            var174 = null;
+            var166 = null;
+            var170 = null;
+            var31 = null;
             var37 = null;
             var42 = null;
             var54 = null;
@@ -2340,26 +2348,26 @@ public data class NotificationData(type: String,
             var39 = null;
             var40 = null;
             var97 = null;
-            var var83: Any = null;
+            var81 = null;
             var48 = null;
-            var17 = null;
+            var118 = null;
             var44 = null;
             var45 = null;
             var46 = null;
-            var var103: java.lang.String = null;
+            var var104: java.lang.String = null;
             var13 = null;
             var55 = null;
             var47 = null;
             var41 = null;
-            var43 = null;
+            var229 = null;
             var var150: Any = null;
-            var var110: Any = null;
+            var var111: Any = null;
             var36 = null;
-            var var128: Any = null;
+            var var129: Any = null;
             var var123: java.lang.String = null;
             var49 = null;
 
-            while (var88) {
+            while (var87) {
                label347: {
                   label348: {
                      label284: {
@@ -2386,25 +2394,25 @@ public data class NotificationData(type: String,
                                                                                  switch (var7) {
                                                                                     case -1:
                                                                                        var7 = var9;
-                                                                                       var88 = false;
+                                                                                       var87 = false;
                                                                                        break label258;
                                                                                     case 0:
                                                                                        var47 = var77.t(var76, 0);
                                                                                        var7 = var9 or 1;
                                                                                        break label258;
                                                                                     case 1:
-                                                                                       val var247: MessageId;
+                                                                                       val var250: MessageId;
                                                                                        if (var55 != null) {
-                                                                                          var247 = MessageId.box-impl(var55);
+                                                                                          var250 = MessageId.box-impl(var55);
                                                                                        } else {
-                                                                                          var247 = null;
+                                                                                          var250 = null;
                                                                                        }
 
-                                                                                       val var248: MessageId = var77.v(
-                                                                                          var76, 1, MessageId.$serializer.INSTANCE, var247
+                                                                                       val var251: MessageId = var77.v(
+                                                                                          var76, 1, MessageId.$serializer.INSTANCE, var250
                                                                                        ) as MessageId;
-                                                                                       if (var248 != null) {
-                                                                                          var55 = var248.unbox-impl();
+                                                                                       if (var251 != null) {
+                                                                                          var55 = var251.unbox-impl();
                                                                                        } else {
                                                                                           var55 = null;
                                                                                        }
@@ -2420,11 +2428,11 @@ public data class NotificationData(type: String,
                                                                                        var7 = var9 or 8;
                                                                                        break label258;
                                                                                     case 4:
+                                                                                       var61 = var36;
                                                                                        var45 = var77.v(var76, 4, N.a, var45) as Int;
-                                                                                       var61 = var123;
                                                                                        var7 = var9 or 16;
-                                                                                       var123 = (java.lang.String)var150;
-                                                                                       var62 = var36;
+                                                                                       var36 = var150;
+                                                                                       var63 = var123;
                                                                                        break label351;
                                                                                     case 5:
                                                                                        var61 = var77.v(var76, 5, C0.a, var123) as java.lang.String;
@@ -2439,27 +2447,27 @@ public data class NotificationData(type: String,
                                                                                        var123 = (java.lang.String)var61;
                                                                                        break label358;
                                                                                     case 7:
-                                                                                       var62 = var77.v(var76, 7, N.a, var36) as Int;
+                                                                                       var61 = var77.v(var76, 7, N.a, var36) as Int;
                                                                                        var7 = var9 or 128;
-                                                                                       var61 = var123;
-                                                                                       var123 = (java.lang.String)var150;
+                                                                                       var63 = var123;
+                                                                                       var36 = var150;
                                                                                        break label351;
                                                                                     case 8:
-                                                                                       var65 = var34;
-                                                                                       var34 = var33;
-                                                                                       var33 = (java.lang.String)var42;
+                                                                                       var34 = (java.lang.String)var42;
                                                                                        var48 = var77.v(var76, 8, C0.a, var48) as java.lang.String;
                                                                                        var7 = var9 or 256;
-                                                                                       var64 = var37;
-                                                                                       var37 = (java.lang.String)var110;
-                                                                                       var42 = var150;
-                                                                                       var62 = var36;
-                                                                                       var36 = var128;
-                                                                                       var63 = var147;
-                                                                                       var61 = var123;
+                                                                                       var65 = var37;
+                                                                                       var64 = var33;
+                                                                                       var33 = var34;
+                                                                                       var37 = (java.lang.String)var111;
+                                                                                       var36 = var150;
+                                                                                       var61 = var36;
+                                                                                       var62 = (java.lang.String)var129;
+                                                                                       var42 = var147;
+                                                                                       var63 = var123;
                                                                                        break label349;
                                                                                     case 9:
-                                                                                       var110 = var77.v(var76, 9, ChannelId.$serializer.INSTANCE, var110) as ChannelId;
+                                                                                       var111 = var77.v(var76, 9, ChannelId.$serializer.INSTANCE, var111) as ChannelId;
                                                                                        var7 = var9 or 512;
                                                                                        break label357;
                                                                                     case 10:
@@ -2475,71 +2483,71 @@ public data class NotificationData(type: String,
                                                                                        var7 = var9 or 4096;
                                                                                        break label357;
                                                                                     case 13:
-                                                                                       var61 = var77.v(var76, 13, N.a, var128) as Int;
+                                                                                       var61 = var77.v(var76, 13, N.a, var129) as Int;
                                                                                        var7 = var9 or 8192;
-                                                                                       var128 = var37;
+                                                                                       var129 = var37;
                                                                                        var37 = (java.lang.String)var61;
                                                                                        break label356;
                                                                                     case 14:
                                                                                        var61 = var77.v(var76, 14, C0.a, var37) as java.lang.String;
                                                                                        var7 = var9 or 16384;
-                                                                                       var37 = (java.lang.String)var128;
-                                                                                       var128 = var61;
+                                                                                       var37 = (java.lang.String)var129;
+                                                                                       var129 = var61;
                                                                                        break label356;
                                                                                     case 15:
-                                                                                       var42 = var77.m(var76, 15, ChannelListSerializer.INSTANCE, var42) as java.util.List;
-                                                                                       var64 = var37;
-                                                                                       var37 = (java.lang.String)var110;
-                                                                                       var110 = var128;
+                                                                                       var61 = var77.m(var76, 15, ChannelListSerializer.INSTANCE, var42) as java.util.List;
+                                                                                       var64 = var33;
+                                                                                       var65 = var37;
                                                                                        var7 = var9 or '耀';
-                                                                                       var63 = var147;
-                                                                                       var65 = var34;
-                                                                                       var34 = var33;
-                                                                                       var33 = (java.lang.String)var42;
+                                                                                       var42 = var147;
+                                                                                       var62 = (java.lang.String)var129;
+                                                                                       var37 = (java.lang.String)var111;
+                                                                                       var33 = var34;
+                                                                                       var34 = (java.lang.String)var61;
                                                                                        break label277;
                                                                                     case 16:
-                                                                                       var145 = (java.lang.String)var22;
-                                                                                       var142 = (java.lang.String)var135;
-                                                                                       var22 = var132;
-                                                                                       var132 = var154;
+                                                                                       var145 = var141;
+                                                                                       var143 = (java.lang.String)var136;
+                                                                                       var141 = (java.lang.String)var133;
+                                                                                       var133 = var154;
                                                                                        var162 = var39;
                                                                                        var154 = var40;
                                                                                        var54 = var77.v(var76, 16, UserId.$serializer.INSTANCE, var54) as UserId;
-                                                                                       var29 = var46;
-                                                                                       var174 = var37;
-                                                                                       var169 = (java.lang.String)var42;
-                                                                                       var37 = (java.lang.String)var110;
+                                                                                       var166 = var46;
+                                                                                       var31 = var37;
+                                                                                       var170 = var42;
+                                                                                       var37 = (java.lang.String)var111;
                                                                                        var7 = var9 or 65536;
                                                                                        var66 = var53;
                                                                                        var67 = var52;
                                                                                        var68 = var51;
-                                                                                       var368 = (java.lang.String)var50;
-                                                                                       var83 = var38;
-                                                                                       var97 = (java.lang.String)var113;
-                                                                                       var103 = var32;
-                                                                                       var110 = var83;
-                                                                                       var113 = var174;
-                                                                                       var17 = var169;
-                                                                                       var123 = var29;
-                                                                                       var128 = var162;
-                                                                                       var135 = var17;
-                                                                                       var147 = var142;
+                                                                                       var69 = var50;
+                                                                                       var84 = var202;
+                                                                                       var97 = var113;
+                                                                                       var104 = var32;
+                                                                                       var111 = var81;
+                                                                                       var113 = var31;
+                                                                                       var118 = var170;
+                                                                                       var123 = var166;
+                                                                                       var129 = var162;
+                                                                                       var136 = var118;
+                                                                                       var147 = var143;
                                                                                        var150 = var145;
                                                                                        var32 = var33;
                                                                                        var33 = var34;
-                                                                                       var34 = var103;
-                                                                                       var38 = (java.lang.String)var150;
+                                                                                       var34 = var104;
+                                                                                       var202 = (java.lang.String)var150;
                                                                                        var39 = (java.lang.String)var36;
-                                                                                       var40 = var128;
+                                                                                       var40 = var129;
                                                                                        var42 = var147;
                                                                                        var46 = var123;
                                                                                        var36 = var97;
                                                                                        break label347;
                                                                                     case 17:
-                                                                                       var40 = var39;
                                                                                        var113 = var77.v(var76, 17, C0.a, var113) as java.lang.String;
                                                                                        var7 = var9 or 131072;
                                                                                        var39 = (java.lang.String)var40;
+                                                                                       var40 = var39;
                                                                                        break label350;
                                                                                     case 18:
                                                                                        var61 = var77.v(var76, 18, C0.a, var39) as java.lang.String;
@@ -2558,103 +2566,103 @@ public data class NotificationData(type: String,
                                                                                        var7 = var9 or 1048576;
                                                                                        break label354;
                                                                                     case 21:
-                                                                                       var142 = var77.v(var76, 21, C0.a, var142) as java.lang.String;
+                                                                                       var143 = var77.v(var76, 21, C0.a, var143) as java.lang.String;
                                                                                        var7 = var9 or 2097152;
                                                                                        break label354;
                                                                                     case 22:
-                                                                                       var22 = var77.v(var76, 22, C0.a, var22) as java.lang.String;
+                                                                                       var141 = var77.v(var76, 22, C0.a, var141) as java.lang.String;
                                                                                        var7 = var9 or 4194304;
                                                                                        break label354;
                                                                                     case 23:
-                                                                                       var135 = var77.v(var76, 23, N.a, var135) as Int;
+                                                                                       var136 = var77.v(var76, 23, N.a, var136) as Int;
                                                                                        var7 = var9 or 8388608;
                                                                                        break label354;
                                                                                     case 24:
-                                                                                       var132 = var77.v(var76, 24, GuildId.$serializer.INSTANCE, var132) as GuildId;
+                                                                                       var133 = var77.v(var76, 24, GuildId.$serializer.INSTANCE, var133) as GuildId;
                                                                                        var7 = var9 or 16777216;
                                                                                        break label354;
                                                                                     case 25:
-                                                                                       var162 = var169;
-                                                                                       var174 = var154;
+                                                                                       var162 = (java.lang.String)var170;
+                                                                                       var31 = (java.lang.String)var154;
                                                                                        var46 = var77.v(var76, 25, C0.a, var46) as java.lang.String;
                                                                                        var7 = var9 or 33554432;
-                                                                                       var154 = var174;
-                                                                                       var169 = var162;
+                                                                                       var154 = var31;
+                                                                                       var170 = var162;
                                                                                        break label280;
                                                                                     case 26:
+                                                                                       var170 = var162;
                                                                                        var62 = var77.v(var76, 26, C0.a, var154) as java.lang.String;
                                                                                        var7 = var9 or 67108864;
-                                                                                       var154 = var174;
-                                                                                       var162 = var169;
-                                                                                       var169 = var162;
-                                                                                       var174 = var62;
+                                                                                       var154 = var31;
+                                                                                       var162 = (java.lang.String)var170;
+                                                                                       var31 = var62;
                                                                                        break label280;
                                                                                     case 27:
                                                                                        var62 = var77.v(var76, 27, C0.a, var162) as java.lang.String;
                                                                                        var7 = var9 or 134217728;
-                                                                                       var154 = var174;
-                                                                                       var162 = var169;
-                                                                                       var169 = (java.lang.String)var62;
-                                                                                       var174 = var154;
+                                                                                       var154 = var31;
+                                                                                       var162 = (java.lang.String)var170;
+                                                                                       var170 = var62;
+                                                                                       var31 = (java.lang.String)var154;
                                                                                        break label280;
                                                                                     case 28:
-                                                                                       var29 = var77.v(var76, 28, N.a, var29) as Int;
+                                                                                       var166 = var77.v(var76, 28, N.a, var166) as Int;
                                                                                        var7 = var9 or 268435456;
-                                                                                       var154 = var174;
-                                                                                       var162 = var169;
-                                                                                       var169 = var162;
-                                                                                       var174 = var154;
+                                                                                       var154 = var31;
+                                                                                       var162 = (java.lang.String)var170;
+                                                                                       var170 = var162;
+                                                                                       var31 = (java.lang.String)var154;
                                                                                        break label280;
                                                                                     case 29:
-                                                                                       var62 = var77.v(var76, 29, C0.a, var169) as java.lang.String;
+                                                                                       var62 = var77.v(var76, 29, C0.a, var170) as java.lang.String;
                                                                                        var7 = var9 or 536870912;
-                                                                                       var169 = var162;
-                                                                                       var162 = (java.lang.String)var62;
-                                                                                       var154 = var174;
-                                                                                       var174 = var154;
+                                                                                       var31 = (java.lang.String)var154;
+                                                                                       var170 = var162;
+                                                                                       var162 = var62;
+                                                                                       var154 = var31;
                                                                                        break label280;
                                                                                     case 30:
-                                                                                       var61 = var77.v(var76, 30, ApplicationId.$serializer.INSTANCE, var174) as ApplicationId;
+                                                                                       var61 = var77.v(var76, 30, ApplicationId.$serializer.INSTANCE, var31) as ApplicationId;
                                                                                        var7 = var9 or 1073741824;
-                                                                                       var162 = var169;
-                                                                                       var174 = var154;
-                                                                                       var169 = var162;
+                                                                                       var162 = (java.lang.String)var170;
+                                                                                       var31 = (java.lang.String)var154;
+                                                                                       var170 = var162;
                                                                                        var154 = var61;
                                                                                        break label280;
                                                                                     case 31:
-                                                                                       var103 = var77.v(var76, 31, C0.a, var103) as java.lang.String;
+                                                                                       var104 = var77.v(var76, 31, C0.a, var104) as java.lang.String;
                                                                                        var32 = var33;
-                                                                                       var147 = var142;
-                                                                                       var145 = (java.lang.String)var22;
-                                                                                       var142 = (java.lang.String)var135;
-                                                                                       var22 = var132;
-                                                                                       var132 = var154;
-                                                                                       var17 = var169;
-                                                                                       var174 = var37;
-                                                                                       var169 = (java.lang.String)var42;
+                                                                                       var147 = var143;
+                                                                                       var145 = var141;
+                                                                                       var143 = (java.lang.String)var136;
+                                                                                       var141 = (java.lang.String)var133;
+                                                                                       var133 = var154;
+                                                                                       var118 = var170;
+                                                                                       var31 = var37;
+                                                                                       var170 = var42;
                                                                                        var162 = var39;
                                                                                        var154 = var40;
-                                                                                       var29 = var46;
-                                                                                       var40 = var128;
+                                                                                       var166 = var46;
+                                                                                       var40 = var129;
                                                                                        var46 = var123;
                                                                                        var7 = var9 or Integer.MIN_VALUE;
                                                                                        var66 = var53;
                                                                                        var67 = var52;
                                                                                        var68 = var51;
-                                                                                       var368 = (java.lang.String)var50;
-                                                                                       var83 = var38;
-                                                                                       var97 = (java.lang.String)var113;
-                                                                                       var103 = var32;
-                                                                                       var110 = var83;
-                                                                                       var113 = var174;
-                                                                                       var123 = var29;
-                                                                                       var128 = var162;
-                                                                                       var135 = var17;
+                                                                                       var69 = var50;
+                                                                                       var84 = var202;
+                                                                                       var97 = var113;
+                                                                                       var104 = var32;
+                                                                                       var111 = var81;
+                                                                                       var113 = var31;
+                                                                                       var123 = var166;
+                                                                                       var129 = var162;
+                                                                                       var136 = var118;
                                                                                        var150 = var145;
                                                                                        var33 = var34;
-                                                                                       var34 = var103;
-                                                                                       var37 = (java.lang.String)var110;
-                                                                                       var38 = (java.lang.String)var150;
+                                                                                       var34 = var104;
+                                                                                       var37 = (java.lang.String)var111;
+                                                                                       var202 = (java.lang.String)var150;
                                                                                        var39 = (java.lang.String)var36;
                                                                                        var42 = var147;
                                                                                        var36 = var97;
@@ -2662,18 +2670,18 @@ public data class NotificationData(type: String,
                                                                                     case 32:
                                                                                        var97 = var77.v(var76, 32, C0.a, var97) as java.lang.String;
                                                                                        var6 |= 1;
-                                                                                       var83 = var191;
+                                                                                       var83 = var35;
                                                                                        var61 = var53;
                                                                                        var53 = var52;
                                                                                        var52 = var51;
-                                                                                       var97 = (java.lang.String)var50;
-                                                                                       var17 = var38;
-                                                                                       var51 = (java.lang.String)var83;
-                                                                                       var38 = (java.lang.String)var17;
+                                                                                       var97 = var50;
+                                                                                       var118 = var202;
+                                                                                       var51 = var81;
+                                                                                       var202 = (java.lang.String)var118;
                                                                                        var50 = var97;
                                                                                        break label348;
                                                                                     case 33:
-                                                                                       var83 = var77.v(var76, 33, NotificationMessageSerializer.INSTANCE, var83) as NotificationMessage;
+                                                                                       var81 = var77.v(var76, 33, NotificationMessageSerializer.INSTANCE, var81) as NotificationMessage;
                                                                                        var6 |= 2;
                                                                                        break;
                                                                                     case 34:
@@ -2681,15 +2689,15 @@ public data class NotificationData(type: String,
                                                                                        var6 |= 4;
                                                                                        break;
                                                                                     case 35:
-                                                                                       var17 = var77.v(var76, 35, N.a, var17) as Int;
+                                                                                       var118 = var77.v(var76, 35, N.a, var118) as Int;
                                                                                        var6 |= 8;
                                                                                        break;
                                                                                     case 36:
-                                                                                       var86 = var77.m(
+                                                                                       var85 = var77.m(
                                                                                           var76,
                                                                                           36,
                                                                                           CanReplySerializer.INSTANCE,
-                                                                                          java.lang.Boolean.valueOf((boolean)var86)
+                                                                                          java.lang.Boolean.valueOf((boolean)var85)
                                                                                        ) as java.lang.Boolean;
                                                                                        var6 |= 16;
                                                                                        break;
@@ -2706,16 +2714,16 @@ public data class NotificationData(type: String,
                                                                                        var6 |= 128;
                                                                                        break;
                                                                                     case 40:
-                                                                                       var43 = var77.v(var76, 40, C0.a, var43) as java.lang.String;
+                                                                                       var229 = var77.v(var76, 40, C0.a, var229) as java.lang.String;
                                                                                        var6 |= 256;
                                                                                        break;
                                                                                     case 41:
-                                                                                       var61 = var77.v(var76, 41, C0.a, var191) as java.lang.String;
+                                                                                       var61 = var77.v(var76, 41, C0.a, var35) as java.lang.String;
                                                                                        var6 |= 512;
-                                                                                       var191 = var83;
+                                                                                       var35 = var81;
                                                                                        break label249;
                                                                                     case 42:
-                                                                                       var108 = var77.v(var76, 42, C0.a, var108) as java.lang.String;
+                                                                                       var109 = var77.v(var76, 42, C0.a, var109) as java.lang.String;
                                                                                        var6 |= 1024;
                                                                                        break label355;
                                                                                     case 43:
@@ -2734,7 +2742,7 @@ public data class NotificationData(type: String,
                                                                                        var61 = var53;
                                                                                        break label257;
                                                                                     case 46:
-                                                                                       var38 = var77.v(var76, 46, C0.a, var38) as java.lang.String;
+                                                                                       var202 = var77.v(var76, 46, C0.a, var202) as java.lang.String;
                                                                                        var6 |= 16384;
                                                                                        var61 = var53;
                                                                                        break label257;
@@ -2753,14 +2761,14 @@ public data class NotificationData(type: String,
                                                                                     case 50:
                                                                                        var8 = var77.s(var76, 50);
                                                                                        var6 |= 262144;
-                                                                                       var38 = (java.lang.String)var17;
-                                                                                       var83 = var191;
+                                                                                       var83 = var35;
                                                                                        var61 = var53;
                                                                                        var53 = var52;
                                                                                        var52 = var51;
                                                                                        var62 = var50;
-                                                                                       var17 = var38;
-                                                                                       var191 = var83;
+                                                                                       var118 = var202;
+                                                                                       var35 = var81;
+                                                                                       var202 = (java.lang.String)var118;
                                                                                        break label281;
                                                                                     case 51:
                                                                                        var50 = var77.v(var76, 51, C0.a, var50) as java.lang.String;
@@ -2779,15 +2787,15 @@ public data class NotificationData(type: String,
                                                                                        var7 = 4194304;
                                                                                        break label359;
                                                                                     case 55:
-                                                                                       var94 = var77.v(var76, 55, C0.a, var94) as java.lang.String;
+                                                                                       var95 = var77.v(var76, 55, C0.a, var95) as java.lang.String;
                                                                                        var7 = 8388608;
                                                                                        break label359;
                                                                                     default:
                                                                                        throw new n(var7);
                                                                                  }
 
-                                                                                 var61 = var191;
-                                                                                 var191 = var83;
+                                                                                 var61 = var35;
+                                                                                 var35 = var81;
                                                                                  break label249;
                                                                               }
 
@@ -2796,34 +2804,35 @@ public data class NotificationData(type: String,
                                                                               break label257;
                                                                            }
 
-                                                                           var62 = var36;
-                                                                           var61 = var150;
+                                                                           var61 = var36;
+                                                                           var36 = var123;
+                                                                           var63 = (java.lang.String)var150;
                                                                            break label351;
                                                                         }
 
-                                                                        var128 = var37;
-                                                                        var61 = var33;
-                                                                        var65 = var34;
-                                                                        var37 = (java.lang.String)var110;
-                                                                        var110 = var128;
+                                                                        var62 = (java.lang.String)var129;
+                                                                        var129 = var37;
+                                                                        var64 = var33;
+                                                                        var33 = var34;
+                                                                        var37 = (java.lang.String)var111;
                                                                         break label259;
                                                                      }
 
-                                                                     var110 = var37;
-                                                                     var37 = (java.lang.String)var110;
-                                                                     var65 = var34;
-                                                                     var61 = var33;
+                                                                     var64 = var33;
+                                                                     var62 = var37;
+                                                                     var37 = (java.lang.String)var111;
+                                                                     var33 = var34;
                                                                      break label259;
                                                                   }
 
-                                                                  var83 = var61;
-                                                                  var63 = (java.lang.String)var17;
+                                                                  var83 = (java.lang.String)var61;
+                                                                  var63 = (java.lang.String)var118;
                                                                   break label353;
                                                                }
 
-                                                               var63 = (java.lang.String)var17;
-                                                               var191 = var83;
-                                                               var83 = var191;
+                                                               var83 = var35;
+                                                               var63 = (java.lang.String)var118;
+                                                               var35 = var81;
                                                                break label353;
                                                             }
 
@@ -2837,340 +2846,338 @@ public data class NotificationData(type: String,
                                                          break label352;
                                                       }
 
-                                                      var61 = var123;
-                                                      var123 = (java.lang.String)var150;
-                                                      var62 = var36;
+                                                      var61 = var36;
+                                                      var36 = var150;
+                                                      var63 = var123;
                                                       break label351;
                                                    }
 
-                                                   var33 = (java.lang.String)var42;
-                                                   var64 = (java.lang.String)var128;
-                                                   var34 = (java.lang.String)var61;
-                                                   var63 = var147;
+                                                   var34 = (java.lang.String)var42;
+                                                   var65 = var129;
+                                                   var42 = var147;
                                                    break label277;
                                                 }
 
-                                                var39 = (java.lang.String)var40;
                                                 var40 = var39;
+                                                var39 = (java.lang.String)var40;
                                                 break label350;
                                              }
 
-                                             var17 = var38;
+                                             var118 = var202;
                                              var61 = var53;
                                              var53 = var52;
                                              var52 = var51;
                                              var62 = var50;
-                                             var38 = var63;
+                                             var202 = var63;
                                              break label281;
                                           }
 
-                                          var83 = var191;
-                                          var38 = (java.lang.String)var17;
-                                          var191 = var83;
-                                          var17 = var38;
+                                          var83 = var35;
+                                          var202 = (java.lang.String)var118;
+                                          var35 = var81;
+                                          var118 = var202;
                                           var62 = var50;
                                           var52 = var51;
                                           break label281;
                                        }
 
-                                       var65 = var34;
-                                       var34 = var33;
-                                       var33 = (java.lang.String)var42;
-                                       var64 = var37;
-                                       var37 = (java.lang.String)var110;
-                                       var42 = var123;
-                                       var36 = var128;
-                                       var63 = var147;
+                                       var34 = (java.lang.String)var42;
+                                       var65 = var37;
+                                       var64 = var33;
+                                       var33 = var34;
+                                       var37 = (java.lang.String)var111;
+                                       var62 = (java.lang.String)var129;
+                                       var42 = var147;
                                        break label349;
                                     }
 
-                                    var62 = var36;
-                                    var61 = var123;
-                                    var36 = var110;
-                                    var42 = var150;
+                                    var63 = var123;
+                                    var61 = var36;
+                                    var36 = var150;
                                     break label349;
                                  }
 
-                                 var162 = var169;
+                                 var162 = (java.lang.String)var170;
                                  var154 = var113;
-                                 var113 = var174;
-                                 var169 = var162;
-                                 var174 = var154;
-                                 var65 = (java.lang.String)var132;
-                                 var64 = (java.lang.String)var135;
-                                 var63 = (java.lang.String)var22;
-                                 var62 = var142;
+                                 var113 = var31;
+                                 var170 = var162;
+                                 var31 = (java.lang.String)var154;
+                                 var65 = var133;
+                                 var64 = var136;
+                                 var63 = var141;
+                                 var62 = var143;
                                  var61 = var145;
                                  var46 = var39;
                                  var39 = var46;
                                  break label284;
                               }
 
-                              var65 = (java.lang.String)var132;
+                              var65 = var133;
                               var39 = var46;
                               var40 = var39;
                               var46 = (java.lang.String)var40;
                               var61 = var145;
-                              var62 = var142;
-                              var63 = (java.lang.String)var22;
-                              var64 = (java.lang.String)var135;
-                              var113 = var154;
+                              var62 = var143;
+                              var63 = var141;
+                              var64 = var136;
+                              var113 = (java.lang.String)var154;
                               var154 = var113;
                               break label284;
                            }
 
                            var50 = var97;
-                           var51 = (java.lang.String)var191;
-                           var97 = (java.lang.String)var62;
+                           var51 = var35;
+                           var97 = var62;
                            break label348;
                         }
 
-                        var110 = var83;
-                        var97 = (java.lang.String)var113;
+                        var111 = var81;
+                        var97 = var113;
                         var150 = var145;
-                        var147 = var142;
-                        var145 = (java.lang.String)var22;
-                        var142 = (java.lang.String)var135;
-                        var22 = var132;
-                        var132 = var154;
-                        var128 = var162;
-                        var123 = var29;
-                        var113 = var174;
-                        var103 = var32;
-                        var83 = var38;
-                        var29 = var46;
-                        var135 = var17;
+                        var147 = var143;
+                        var145 = var141;
+                        var143 = (java.lang.String)var136;
+                        var141 = (java.lang.String)var133;
+                        var133 = var154;
+                        var129 = var162;
+                        var123 = var166;
+                        var113 = var31;
+                        var104 = var32;
+                        var84 = var202;
+                        var166 = var46;
+                        var136 = var118;
                         var66 = var53;
                         var67 = var52;
                         var68 = var51;
-                        var368 = (java.lang.String)var50;
-                        var17 = var169;
+                        var69 = var50;
+                        var118 = var170;
                         var154 = var40;
                         var162 = var39;
-                        var169 = var33;
-                        var174 = var64;
-                        var32 = var34;
-                        var33 = var65;
-                        var34 = var103;
-                        var38 = (java.lang.String)var42;
-                        var39 = (java.lang.String)var62;
-                        var40 = var36;
-                        var42 = var63;
-                        var46 = (java.lang.String)var61;
+                        var170 = var34;
+                        var31 = (java.lang.String)var65;
+                        var32 = (java.lang.String)var64;
+                        var34 = var104;
+                        var202 = (java.lang.String)var36;
+                        var39 = (java.lang.String)var61;
+                        var40 = var62;
+                        var46 = var63;
                         var36 = var97;
                         break label347;
                      }
 
-                     var135 = var17;
-                     var103 = var32;
-                     var83 = var38;
-                     var38 = (java.lang.String)var150;
+                     var136 = var118;
+                     var104 = var32;
+                     var84 = var202;
+                     var202 = (java.lang.String)var150;
                      var66 = var53;
                      var67 = var52;
                      var68 = var51;
-                     var368 = (java.lang.String)var50;
+                     var69 = var50;
                      var97 = (java.lang.String)var154;
-                     var110 = var83;
-                     var17 = var162;
-                     var123 = var29;
-                     var128 = var169;
-                     var132 = var174;
-                     var22 = var65;
-                     var142 = var64;
+                     var111 = var81;
+                     var118 = var162;
+                     var123 = var166;
+                     var129 = var170;
+                     var133 = var31;
+                     var141 = (java.lang.String)var65;
+                     var143 = (java.lang.String)var64;
                      var145 = var63;
-                     var147 = (java.lang.String)var62;
+                     var147 = var62;
                      var150 = var61;
                      var154 = var46;
                      var162 = (java.lang.String)var40;
-                     var29 = var39;
-                     var169 = (java.lang.String)var42;
-                     var174 = var37;
+                     var166 = var39;
+                     var170 = var42;
+                     var31 = var37;
                      var32 = var33;
                      var33 = var34;
-                     var34 = var103;
-                     var37 = (java.lang.String)var110;
+                     var34 = var104;
+                     var37 = (java.lang.String)var111;
                      var39 = (java.lang.String)var36;
-                     var40 = var128;
+                     var40 = var129;
                      var42 = var147;
                      var46 = var123;
                      var36 = var97;
                      break label347;
                   }
 
-                  var147 = var142;
-                  var145 = (java.lang.String)var22;
-                  var142 = (java.lang.String)var135;
-                  var22 = var132;
-                  var132 = var154;
+                  var147 = var143;
+                  var145 = var141;
+                  var143 = (java.lang.String)var136;
+                  var141 = (java.lang.String)var133;
+                  var133 = var154;
                   var7 = var9;
-                  var29 = var46;
+                  var166 = var46;
                   var66 = (java.lang.String)var61;
-                  var191 = var83;
+                  var35 = var83;
                   var67 = var53;
                   var68 = var52;
-                  var368 = var97;
-                  var83 = var17;
-                  var97 = (java.lang.String)var113;
-                  var103 = var32;
-                  var110 = var51;
-                  var113 = var174;
-                  var17 = var169;
-                  var123 = var29;
-                  var128 = var162;
-                  var135 = var38;
+                  var69 = var97;
+                  var84 = (java.lang.String)var118;
+                  var97 = var113;
+                  var104 = var32;
+                  var111 = var51;
+                  var113 = var31;
+                  var118 = var170;
+                  var123 = var166;
+                  var129 = var162;
+                  var136 = var202;
                   var150 = var145;
                   var154 = var40;
                   var162 = var39;
-                  var169 = (java.lang.String)var42;
-                  var174 = var37;
+                  var170 = var42;
+                  var31 = var37;
                   var32 = var33;
                   var33 = var34;
-                  var34 = var103;
-                  var37 = (java.lang.String)var110;
-                  var38 = (java.lang.String)var150;
+                  var34 = var104;
+                  var37 = (java.lang.String)var111;
+                  var202 = (java.lang.String)var150;
                   var39 = (java.lang.String)var36;
-                  var40 = var128;
+                  var40 = var129;
                   var42 = var147;
                   var46 = var123;
                   var36 = var50;
                }
 
-               var83 = var110;
-               var17 = var135;
-               var132 = var22;
-               var135 = var142;
-               var22 = var145;
-               var142 = var147;
+               var81 = (MessageId)var111;
+               var118 = var136;
+               var133 = var141;
+               var136 = var143;
+               var141 = var145;
+               var143 = var147;
                var145 = (java.lang.String)var150;
-               var110 = var37;
-               var150 = var38;
-               var128 = var40;
+               var111 = var37;
+               var150 = var202;
+               var129 = var40;
                var147 = (java.lang.String)var42;
-               var38 = (java.lang.String)var83;
-               var32 = var103;
+               var202 = var84;
+               var32 = var104;
                var53 = var66;
-               var52 = (java.lang.String)var67;
+               var52 = var67;
                var51 = var68;
-               var50 = var368;
+               var50 = (java.lang.String)var69;
                var34 = var33;
                var33 = var32;
-               var154 = var132;
-               var162 = (java.lang.String)var128;
-               var29 = var123;
-               var169 = (java.lang.String)var17;
-               var174 = var113;
-               var37 = (java.lang.String)var174;
-               var42 = var169;
+               var154 = var133;
+               var162 = (java.lang.String)var129;
+               var166 = var123;
+               var170 = var118;
+               var31 = var113;
+               var37 = var31;
+               var42 = var170;
                var113 = var97;
                var39 = var162;
                var40 = var154;
                var97 = (java.lang.String)var36;
-               var46 = var29;
-               var103 = var34;
+               var46 = var166;
+               var104 = var34;
                var36 = var39;
                var123 = var46;
                var9 = var7;
             }
 
-            var50 = var58;
-            var113 = var83;
             var7 = var8;
-            var68 = var97;
-            var4 = var3;
-            var368 = var32;
-            var82 = var52;
-            var57 = var51;
-            var97 = (java.lang.String)var50;
+            var113 = (java.lang.String)var41;
+            var4 = var6;
+            var97 = var32;
+            var50 = var52;
+            var63 = var51;
+            var229 = var50;
+            var81 = var58;
             var3 = var5;
-            var58 = var53;
-            var44 = var38;
-            var38 = var57;
-            var66 = (java.lang.String)var59;
-            var51 = var108;
-            var32 = (java.lang.String)var191;
-            var108 = var41;
-            var61 = var44;
-            var5 = var86;
-            var70 = var17;
-            var52 = var103;
-            var17 = var174;
-            var191 = var29;
-            var65 = var162;
-            var53 = (java.lang.String)var154;
-            var174 = var132;
-            var62 = var135;
-            var63 = (java.lang.String)var22;
-            var64 = var142;
-            var29 = var145;
-            var41 = (java.lang.String)var113;
-            var22 = var128;
-            var59 = var33;
-            var142 = var147;
-            var154 = var110;
-            var67 = var150;
+            var66 = var202;
+            var61 = var60;
+            var67 = var59;
+            var52 = (java.lang.String)var109;
+            var32 = var229;
+            var109 = var44;
+            var6 = var3;
+            var5 = var85;
+            var41 = var118;
+            var118 = var81;
+            var51 = var97;
+            var44 = var104;
+            var60 = var31;
+            var58 = (java.lang.String)var170;
+            var65 = var166;
+            var166 = var162;
+            var202 = (java.lang.String)var154;
+            var68 = var46;
+            var64 = var133;
+            var154 = var136;
+            var46 = var143;
+            var62 = var145;
+            var59 = var39;
+            var39 = var113;
+            var69 = var54;
+            var54 = var129;
+            var70 = var33;
+            var31 = var147;
+            var71 = var111;
+            var170 = var150;
             var33 = var123;
          }
 
          var77.b(var76);
          return new NotificationData(
             var9,
-            var6,
+            var4,
             var47,
             var55,
             (Integer)var56,
             var49,
             (Integer)var45,
             var33,
-            (java.lang.Long)var67,
+            (java.lang.Long)var170,
             (Integer)var36,
             var48,
-            (ChannelId)var154,
-            var142,
+            (ChannelId)var71,
+            var31,
             var34,
-            (ChannelId)var59,
-            (Integer)var22,
+            (ChannelId)var70,
+            (Integer)var54,
             var37,
             (java.util.List)var42,
-            (UserId)var54,
-            var41,
+            (UserId)var69,
             var39,
+            var59,
             (Integer)var40,
-            var29,
-            var64,
-            var63,
-            (Integer)var62,
-            (GuildId)var174,
+            var62,
             var46,
-            var53,
-            var65,
-            (Integer)var191,
-            var169,
-            (ApplicationId)var17,
-            var52,
+            var141,
+            (Integer)var154,
+            (GuildId)var64,
             var68,
-            (NotificationMessage)var113,
-            var13,
-            (Integer)var70,
-            (boolean)var5,
-            (boolean)var4,
-            (UserId)var61,
-            var108,
-            var43,
-            var32,
-            var51,
-            var66,
-            var38,
-            (java.lang.Boolean)var60,
-            var44,
+            var202,
+            var166,
+            (Integer)var65,
             var58,
-            (boolean)var3,
-            (java.util.Map)var50,
-            (boolean)var7,
-            var97,
+            (ApplicationId)var60,
+            var44,
+            var51,
+            (NotificationMessage)var118,
+            var13,
+            (Integer)var41,
+            (boolean)var5,
+            (boolean)var6,
+            (UserId)var109,
+            var113,
+            var32,
+            var35,
+            var52,
+            var67,
             var57,
-            var82,
-            var368,
-            var94,
+            (java.lang.Boolean)var61,
+            var66,
+            var53,
+            (boolean)var3,
+            var81,
+            (boolean)var7,
+            var229,
+            var63,
+            var50,
+            var97,
+            var95,
             null,
             null
          );
@@ -3186,7 +3193,7 @@ public data class NotificationData(type: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

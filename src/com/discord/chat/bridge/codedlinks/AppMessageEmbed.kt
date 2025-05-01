@@ -5,7 +5,6 @@ public interface AppMessageEmbed {
    public val appId: String
    public val bannerRatio: String
    public val embedUrl: String?
-   public val extendedType: CodedLinkExtendedType
    public val gradientColors: List<Map<String, Int>>?
    public val header: String?
    public val iconSrc: String?

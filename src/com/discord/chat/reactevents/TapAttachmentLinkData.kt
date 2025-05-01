@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
+import aa.f
+import aa.n
+import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import f8.w
+import da.C0
+import da.G
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -64,12 +64,12 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapAttachmentLinkData(attachmentUrl=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.attachmentUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapAttachmentLinkData(attachmentUrl=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -135,7 +135,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

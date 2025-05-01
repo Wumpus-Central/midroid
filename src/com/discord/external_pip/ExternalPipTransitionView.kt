@@ -90,22 +90,22 @@ public class ExternalPipTransitionView(context: Context) : View {
 
       public fun tryShow(activity: Activity?) {
          this.tryHide(var1, false);
-         var var2: ViewGroup = null;
-         val var3: View;
+         val var2: View;
          if (var1 != null) {
-            var3 = ActivityExtensionsKt.getRootView(var1);
+            var2 = ActivityExtensionsKt.getRootView(var1);
          } else {
-            var3 = null;
+            var2 = null;
          }
 
-         if (var3 is ViewGroup) {
-            var2 = var3 as ViewGroup;
+         var var4: ViewGroup = null;
+         if (var2 is ViewGroup) {
+            var4 = var2 as ViewGroup;
          }
 
-         if (var2 != null) {
-            val var4: Context = var2.getContext();
-            q.g(var4, "getContext(...)");
-            var2.addView(new ExternalPipTransitionView(var4));
+         if (var4 != null) {
+            val var5: Context = var4.getContext();
+            q.g(var5, "getContext(...)");
+            var4.addView(new ExternalPipTransitionView(var5));
          }
       }
    }

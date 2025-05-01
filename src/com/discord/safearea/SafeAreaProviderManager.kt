@@ -10,7 +10,7 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
-import f8.w
+import h8.w
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
@@ -31,22 +31,22 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    }
 
    private fun handleInsetsChanged(reactContext: ThemedReactContext, safeAreaEdgeInsets: SafeAreaEdgeInsets, view: SafeAreaProvider) {
-      val var5: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var2.getTopDp(), var2.getBottomDp(), var2.getLeftDp(), var2.getRightDp());
-      val var6: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var3);
+      val var6: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(var2.getTopDp(), var2.getBottomDp(), var2.getLeftDp(), var2.getRightDp());
+      val var5: SafeAreaProviderManager.SafeAreaProviderDimensions = new SafeAreaProviderManager.SafeAreaProviderDimensions(var3);
       val var4: Boolean;
-      if (!q.c(this.dimensions, var6)) {
+      if (!q.c(this.dimensions, var5)) {
          this.changeData = this.changeDatastableInsets;
-         this.dimensions = var6;
+         this.dimensions = var5;
          var4 = true;
       } else {
          var4 = false;
       }
 
       val var7: OnSafeAreaInsetsDidChangeData = new OnSafeAreaInsetsDidChangeData(
-         Math.max(var5.getTop(), this.changeData.getTop()),
-         Math.max(var5.getBottom(), this.changeData.getBottom()),
-         Math.max(var5.getLeft(), this.changeData.getLeft()),
-         Math.max(var5.getRight(), this.changeData.getRight())
+         Math.max(var6.getTop(), this.changeData.getTop()),
+         Math.max(var6.getBottom(), this.changeData.getBottom()),
+         Math.max(var6.getLeft(), this.changeData.getLeft()),
+         Math.max(var6.getRight(), this.changeData.getRight())
       );
       if (!q.c(this.changeData, var7) || var4) {
          this.changeData = var7;

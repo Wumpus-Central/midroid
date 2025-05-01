@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
+import aa.f
+import aa.n
+import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import f8.w
+import da.C0
+import da.G
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -97,18 +97,18 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapChannelData(guildId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapChannelData(guildId=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var3);
+      var4.append(", messageId=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -141,18 +141,18 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
          val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         val var8: java.lang.String;
          val var11: java.lang.String;
+         var var13: java.lang.String;
          if (var5) {
             val var6: C0 = C0.a;
             var7 = var10.v(var9, 0, C0.a, null) as java.lang.String;
             var11 = var10.v(var9, 1, var6, null) as java.lang.String;
-            var8 = var10.v(var9, 2, var6, null) as java.lang.String;
+            var13 = var10.v(var9, 2, var6, null) as java.lang.String;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var13: java.lang.String = null;
+            var13 = null;
             var var12: java.lang.String = null;
 
             while (var3) {
@@ -179,12 +179,12 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
                }
             }
 
-            var8 = var12;
+            var13 = var12;
             var11 = var13;
          }
 
          var10.b(var9);
-         return new TapChannelData(var2, var7, var11, var8, null);
+         return new TapChannelData(var2, var7, var11, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapChannelData) {
@@ -197,7 +197,7 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

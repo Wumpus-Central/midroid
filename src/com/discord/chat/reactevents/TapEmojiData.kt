@@ -7,8 +7,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import f8.p
-import f8.w
+import h8.p
+import h8.w
 import kotlin.jvm.internal.q
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {

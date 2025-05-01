@@ -82,12 +82,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       }
 
       (this.binding.splash.getHierarchy() as GenericDraweeHierarchy).x(var3);
-      var3 = androidx.core.graphics.c.k(var1.getBackgroundColor(), v8.a.c(var1.getSplashOpacity() * (float)255));
+      var3 = androidx.core.graphics.c.k(var1.getBackgroundColor(), x8.a.c(var1.getSplashOpacity() * (float)255));
       val var4: SimpleDraweeView = this.binding.splash;
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var12: PipelineDraweeControllerBuilder = R1.c.g()
+         val var14: PipelineDraweeControllerBuilder = R1.c.g()
             .F(
                ImageRequestBuilder.b(var6)
                   .H(
@@ -99,14 +99,14 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   )
                   .a()
             ) as PipelineDraweeControllerBuilder;
-         val var14: java.lang.String = var1.getGiftCode();
+         val var12: java.lang.String = var1.getGiftCode();
          val var8: java.lang.String = var1.getSplashUrl();
          val var15: StringBuilder = new StringBuilder();
          var15.append("splash-");
-         var15.append(var14);
+         var15.append(var12);
          var15.append("-");
          var15.append(var8);
-         var9 = ((var12.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         var9 = ((var14.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -176,16 +176,16 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var13: GradientDrawable = new GradientDrawable(
+         val var19: GradientDrawable = new GradientDrawable(
             var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
          );
-         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var19: IntArray = this.binding.gradients.getReferencedIds();
-         kotlin.jvm.internal.q.g(var19, "getReferencedIds(...)");
-         val var23: Int = var19.length;
+         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var13: IntArray = this.binding.gradients.getReferencedIds();
+         kotlin.jvm.internal.q.g(var13, "getReferencedIds(...)");
+         val var23: Int = var13.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
+            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
          }
 
          val var14: Group = this.binding.gradients;
@@ -250,28 +250,28 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          } else if (var27 is GiftEmbed.Resolved.Valid) {
             var8 = this.binding.content;
             kotlin.jvm.internal.q.g(this.binding.content, "content");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new G(var2, var9), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new H(var2, var9), 1, null);
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var29: TextView = this.binding.body;
+            val var34: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var29.setTextColor(var17.getBodyTextColor());
-            kotlin.jvm.internal.q.e(var29);
-            val var34: java.lang.CharSequence = var29.getText();
-            kotlin.jvm.internal.q.g(var34, "getText(...)");
-            if (!kotlin.text.h.d0(var34)) {
+            var34.setTextColor(var17.getBodyTextColor());
+            kotlin.jvm.internal.q.e(var34);
+            val var29: java.lang.CharSequence = var34.getText();
+            kotlin.jvm.internal.q.g(var29, "getText(...)");
+            if (!kotlin.text.h.d0(var29)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var29.setVisibility(var20);
+            var34.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());
             var30.setBackgroundColor(var17.getAcceptLabelBackgroundColor());
-            var30.setOnClickButtonListener(new H(var3, var9));
+            var30.setOnClickButtonListener(new I(var3, var9));
             var30.setEnabled(var17.getCanBeAccepted());
          }
 

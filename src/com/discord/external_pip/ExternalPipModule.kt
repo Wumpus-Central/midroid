@@ -13,8 +13,8 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import f8.r
-import f8.w
+import h8.r
+import h8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
@@ -66,7 +66,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return g8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return i8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

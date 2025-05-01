@@ -81,13 +81,13 @@ public class FlaggedMessageEmbedView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.g(var7, "getContext(...)");
       var6.setImageURI(MessageKt.avatarUrl(var1, var7));
       kotlin.jvm.internal.q.e(var6);
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new C(var1, var2), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new D(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new D(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var6, false, new E(var1, var2), 1, null);
       val var11: TextView = this.binding.authorName;
       this.binding.authorName.setTextColor(MessageKt.usernameColor$default(var1, 0, 1, null));
       var11.setText(var1.getUsername());
       kotlin.jvm.internal.q.e(var11);
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new E(var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var11, false, new F(var1, var2), 1, null);
       val var12: RoleIconView = this.binding.roleIcon;
       kotlin.jvm.internal.q.e(this.binding.roleIcon);
       var var3: Boolean;

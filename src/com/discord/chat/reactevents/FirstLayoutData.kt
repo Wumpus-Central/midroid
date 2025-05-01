@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
-import ba.y
+import aa.f
+import aa.n
+import ba.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.G
+import da.N
+import da.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -105,18 +105,18 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
 
    public override fun toString(): String {
       val var2: Int = this.firstVisibleMessageIndex;
-      val var4: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var3: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var1: Int = this.lastVisibleMessageIndex;
-      val var3: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var4: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var5: StringBuilder = new StringBuilder();
       var5.append("FirstLayoutData(firstVisibleMessageIndex=");
       var5.append(var2);
       var5.append(", firstVisibleMessagePercentVisible=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", lastVisibleMessageIndex=");
       var5.append(var1);
       var5.append(", lastVisibleMessagePercentVisible=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -149,27 +149,29 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var2: Int;
          var var3: Int;
-         var var4: Int;
+         val var5: Int;
          var var7: java.lang.Double;
          var var11: java.lang.Double;
+         var var12: Int;
          if (var9.y()) {
-            var4 = var9.k(var8, 0);
+            var12 = var9.k(var8, 0);
             val var10: y = y.a;
             var7 = var9.v(var8, 1, y.a, null) as java.lang.Double;
-            var2 = var9.k(var8, 2);
+            val var4: Int = var9.k(var8, 2);
             var11 = var9.v(var8, 3, var10, null) as java.lang.Double;
             var3 = 15;
+            var5 = var12;
+            var12 = var4;
          } else {
-            var var5: Boolean = true;
-            var4 = 0;
-            var2 = 0;
+            var var16: Boolean = true;
+            var var15: Int = 0;
+            var12 = 0;
             var7 = null;
             var11 = null;
             var3 = 0;
 
-            while (var5) {
+            while (var16) {
                val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -180,30 +182,31 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
                            }
 
                            var11 = var9.v(var8, 3, y.a, var11) as java.lang.Double;
-                           var2 |= 8;
+                           var12 |= 8;
                         } else {
                            var3 = var9.k(var8, 2);
-                           var2 |= 4;
+                           var12 |= 4;
                         }
                      } else {
                         var7 = var9.v(var8, 1, y.a, var7) as java.lang.Double;
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
-                     var4 = var9.k(var8, 0);
-                     var2 |= 1;
+                     var15 = var9.k(var8, 0);
+                     var12 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var16 = false;
                }
             }
 
-            var3 = var2;
-            var2 = var3;
+            var3 = var12;
+            var12 = var3;
+            var5 = var15;
          }
 
          var9.b(var8);
-         return new FirstLayoutData(var3, var4, var7, var2, var11, null);
+         return new FirstLayoutData(var3, var5, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstLayoutData) {
@@ -216,7 +219,7 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

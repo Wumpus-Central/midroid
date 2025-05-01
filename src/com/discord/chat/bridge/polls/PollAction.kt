@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.h
+import aa.f
+import aa.n
+import ba.a
+import da.C0
+import da.G
+import da.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -108,12 +108,12 @@ public data class PollAction(label: String,
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var1: java.lang.String = this.label;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var1);
-         var2.append("  •  ");
-         var2.append(var3);
-         return var2.toString();
+         val var2: java.lang.String = this.label;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var2);
+         var1.append("  •  ");
+         var1.append(var3);
+         return var1.toString();
       }
    }
 
@@ -147,24 +147,24 @@ public data class PollAction(label: String,
       val var4: java.lang.String = this.label;
       val var2: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var6: java.lang.String = this.type;
-      val var5: java.lang.String = this.secondaryLabel;
-      val var3: java.lang.String = this.accessibilityHint;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("PollAction(label=");
-      var7.append(var4);
-      var7.append(", presentation=");
-      var7.append(var2);
-      var7.append(", enabled=");
-      var7.append(var1);
-      var7.append(", type=");
-      var7.append(var6);
-      var7.append(", secondaryLabel=");
-      var7.append(var5);
-      var7.append(", accessibilityHint=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var5: java.lang.String = this.type;
+      val var6: java.lang.String = this.secondaryLabel;
+      val var7: java.lang.String = this.accessibilityHint;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollAction(label=");
+      var3.append(var4);
+      var3.append(", presentation=");
+      var3.append(var2);
+      var3.append(", enabled=");
+      var3.append(var1);
+      var3.append(", type=");
+      var3.append(var5);
+      var3.append(", secondaryLabel=");
+      var3.append(var6);
+      var3.append(", accessibilityHint=");
+      var3.append(var7);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -277,7 +277,7 @@ public data class PollAction(label: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

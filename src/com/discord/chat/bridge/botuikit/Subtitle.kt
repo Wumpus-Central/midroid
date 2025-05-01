@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
+import aa.f
+import aa.n
+import ba.a
+import da.C0
+import da.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -100,15 +100,15 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.badgeUrl;
-      val var4: java.lang.String = this.text;
+      val var4: java.lang.String = this.badgeUrl;
+      val var3: java.lang.String = this.text;
       val var5: java.lang.String = this.ariaDescription;
       val var1: ContentInventoryEntryClickable = this.clickable;
       val var2: StringBuilder = new StringBuilder();
       var2.append("Subtitle(badgeUrl=");
-      var2.append(var3);
-      var2.append(", text=");
       var2.append(var4);
+      var2.append(", text=");
+      var2.append(var3);
       var2.append(", ariaDescription=");
       var2.append(var5);
       var2.append(", clickable=");
@@ -212,7 +212,7 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

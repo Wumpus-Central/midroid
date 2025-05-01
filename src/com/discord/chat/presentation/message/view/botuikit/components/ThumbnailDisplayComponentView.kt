@@ -60,16 +60,16 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var12: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var11: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
       val var16: java.lang.String = var3.getContainerId();
-      var var13: java.lang.String = var1.getId();
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("ThumbnailDisplayComponent(");
-      var11.append(var13);
-      var11.append(")");
-      val var17: SpoilerAttributes = var12.forGenericMedia(var1, var16, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
-      val var21: UnfurledMediaItem = var1.getMedia();
-      val var20: MediaImageViewHolder = this.imageViewHolder;
+      val var12: java.lang.String = var1.getId();
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("ThumbnailDisplayComponent(");
+      var13.append(var12);
+      var13.append(")");
+      val var17: SpoilerAttributes = var11.forGenericMedia(var1, var16, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var20: UnfurledMediaItem = var1.getMedia();
+      val var21: MediaImageViewHolder = this.imageViewHolder;
       val var7: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
@@ -78,12 +78,12 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var6: Boolean = var1.isObscure();
-      val var10: Boolean = var1.isObscureAwaitingScan();
-      val var9: Boolean = var1.getObscureHideControls();
+      val var10: Boolean = var1.isObscure();
+      val var9: Boolean = var1.isObscureAwaitingScan();
+      val var6: Boolean = var1.getObscureHideControls();
       val var8: Boolean = var1.getObscureIsOpaque();
-      var13 = var21.getProxyUrl();
-      var var14: Int = var21.getWidth();
+      val var22: java.lang.String = var20.getProxyUrl();
+      var var14: Int = var20.getWidth();
       var var4: Int;
       if (var14 != null) {
          var4 = var14;
@@ -91,7 +91,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var4 = 0;
       }
 
-      var14 = var21.getHeight();
+      var14 = var20.getHeight();
       val var5: Int;
       if (var14 != null) {
          var5 = var14;
@@ -99,17 +99,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var5 = 0;
       }
 
-      var20.bind(
-         var13,
+      var21.bind(
+         var22,
          var4,
          var5,
-         var21.getPlaceholder(),
-         var21.getPlaceholderVersion(),
+         var20.getPlaceholder(),
+         var20.getPlaceholderVersion(),
          var7,
          var18,
-         var6,
          var10,
          var9,
+         var6,
          var8,
          false,
          var1.getDescription(),
@@ -127,7 +127,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          null,
          var1.getSrcIsAnimated()
       );
-      if (var3.isLargeWidthRenderingMode()) {
+      if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
          var4 = ThumbnailDisplayComponentViewKt.getTHUMBNAIL_BIG_MODE_SIZE();
       } else {
          var4 = ThumbnailDisplayComponentViewKt.getTHUMBNAIL_NORMAL_SIZE();

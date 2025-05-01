@@ -1,12 +1,12 @@
 package com.discord.emoji_picker.react_events
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
+import aa.f
+import aa.n
+import ba.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -74,14 +74,14 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
 
    public override fun toString(): String {
       val var2: java.lang.String = this.emojiName;
-      val var1: java.lang.String = this.emojiId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnLongPressEmojiEvent(emojiName=");
-      var3.append(var2);
-      var3.append(", emojiId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.emojiId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnLongPressEmojiEvent(emojiName=");
+      var1.append(var2);
+      var1.append(", emojiId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -156,7 +156,7 @@ internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

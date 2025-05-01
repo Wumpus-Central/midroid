@@ -2,7 +2,7 @@ package com.discord.misc.utilities.size
 
 import android.content.res.Resources
 import android.util.TypedValue
-import v8.a
+import x8.a
 
 public final val dpToPx: Int
    public final get() {

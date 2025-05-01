@@ -11,7 +11,7 @@ import com.discord.safearea.extensions.WindowInsetsCompatExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableNativeMap
-import f8.w
+import h8.w
 import kotlin.jvm.internal.q
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {

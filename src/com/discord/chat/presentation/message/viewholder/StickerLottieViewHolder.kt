@@ -47,8 +47,8 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
          }
 
          var8.asLottie(var7, var4, var5, var6, var1.getAsset(), var1.getRenderMode(), var1.getAccessibilityLabel());
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new y(var2, var1), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new z(var3, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new x(var2, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new y(var3, var1), 1, null);
       }
    }
 }

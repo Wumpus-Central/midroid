@@ -10,9 +10,8 @@ public final class c implements OnClickListener {
    public final AppMessageEmbedView j;
    public final ChatEventHandler k;
    public final AppMessageEmbedImpl l;
-   public final String m;
 
    public final void onClick(View var1) {
-      AppMessageEmbedView.g(this.j, this.k, this.l, this.m, var1);
+      AppMessageEmbedView.g(this.j, this.k, this.l, var1);
    }
 }

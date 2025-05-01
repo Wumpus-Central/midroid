@@ -5,7 +5,6 @@ import android.content.Context
 import android.graphics.Color
 import android.net.Uri
 import android.view.Window
-import ba.f
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.events.OnContentSizeChangeEvent
 import com.discord.chat.input.events.OnEndBlurEvent
@@ -27,6 +26,7 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
+import da.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b

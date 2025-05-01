@@ -11,6 +11,6 @@ public final class T implements OnClickListener {
    public final String l;
 
    public final void onClick(View var1) {
-      SafetySystemNotificationView.a(this.j, this.k, this.l, var1);
+      SafetySystemNotificationView.b(this.j, this.k, this.l, var1);
    }
 }

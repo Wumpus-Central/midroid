@@ -92,19 +92,19 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun toString(): String {
-      val var3: DiscordFont = this.font;
+      val var2: DiscordFont = this.font;
       val var1: Int = this.linkColor;
       val var5: LinkBackgroundStyle = this.backgroundStyle;
-      val var2: ReactAsset = this.icon;
+      val var3: ReactAsset = this.icon;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LinkStyle(font=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", linkColor=");
       var4.append(var1);
       var4.append(", backgroundStyle=");
       var4.append(var5);
       var4.append(", icon=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

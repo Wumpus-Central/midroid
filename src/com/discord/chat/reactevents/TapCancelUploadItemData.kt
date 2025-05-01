@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,13 +67,13 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uploaderId;
-      val var3: java.lang.String = this.itemId;
+      val var3: java.lang.String = this.uploaderId;
+      val var1: java.lang.String = this.itemId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapCancelUploadItemData(uploaderId=");
-      var2.append(var1);
-      var2.append(", itemId=");
       var2.append(var3);
+      var2.append(", itemId=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

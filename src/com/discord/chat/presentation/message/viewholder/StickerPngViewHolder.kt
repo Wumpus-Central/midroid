@@ -38,8 +38,8 @@ public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHol
       if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
          this.stickerView.asPng(var1.getUrl(), var4, var5, var1.getAccessibilityLabel());
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new A(var2, var1), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new B(var3, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new z(var2, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new A(var3, var1), 1, null);
       }
    }
 }

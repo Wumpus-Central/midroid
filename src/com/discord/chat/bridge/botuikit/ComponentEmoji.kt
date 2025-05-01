@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.h
+import aa.f
+import aa.n
+import ba.a
+import da.C0
+import da.G
+import da.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -111,24 +111,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var4: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var6: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var6: java.lang.String = this.surrogates;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ComponentEmoji(id=");
-      var3.append(var5);
-      var3.append(", name=");
-      var3.append(var4);
-      var3.append(", src=");
-      var3.append(var2);
-      var3.append(", animated=");
-      var3.append(var1);
-      var3.append(", surrogates=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.surrogates;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ComponentEmoji(id=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var4);
+      var5.append(", src=");
+      var5.append(var6);
+      var5.append(", animated=");
+      var5.append(var1);
+      var5.append(", surrogates=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -152,8 +152,8 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), var3, a.u(var3), h.a, a.u(var3)};
+         val var4: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var4, a.u(var4), h.a, a.u(var4)};
       }
 
       public open fun deserialize(decoder: Decoder): ComponentEmoji {
@@ -164,23 +164,25 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          var var5: Boolean;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         val var12: java.lang.String;
+         var var13: java.lang.String;
          var var14: java.lang.String;
          if (var11.y()) {
             val var6: C0 = C0.a;
             var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             var7 = var11.t(var10, 1);
-            var12 = var11.v(var10, 2, var6, null) as java.lang.String;
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
             var5 = var11.s(var10, 3);
-            var14 = var11.v(var10, 4, var6, null) as java.lang.String;
+            val var9: java.lang.String = var11.v(var10, 4, var6, null) as java.lang.String;
             var2 = 31;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var5 = false;
             var8 = null;
             var7 = null;
             var14 = null;
-            var var13: java.lang.String = null;
+            var13 = null;
             var2 = 0;
 
             while (var3) {
@@ -216,13 +218,10 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
                   var3 = false;
                }
             }
-
-            var14 = var13;
-            var12 = var14;
          }
 
          var11.b(var10);
-         return new ComponentEmoji(var2, var8, var7, var12, var5, var14, null);
+         return new ComponentEmoji(var2, var8, var7, var14, var5, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ComponentEmoji) {
@@ -235,7 +234,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

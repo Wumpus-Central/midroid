@@ -1,7 +1,7 @@
 package com.discord.analytics
 
-import O9.f
-import O9.t0
+import Q9.f
+import Q9.t0
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.android.installreferrer.api.InstallReferrerClient
@@ -9,9 +9,9 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import f8.r
-import f8.s
-import f8.r.a
+import h8.r
+import h8.s
+import h8.r.a
 import java.util.concurrent.CancellationException
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
@@ -19,7 +19,7 @@ import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import l8.b
+import n8.b
 
 public class InstallReferrerModule(context: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

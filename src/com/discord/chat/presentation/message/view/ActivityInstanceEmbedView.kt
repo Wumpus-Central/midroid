@@ -3,25 +3,18 @@ package com.discord.chat.presentation.message.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import com.discord.SetTextSizeSpKt
-import com.discord.chat.databinding.ActivityInstanceEmbedViewBinding
-import com.discord.core.DCDButton
-import com.discord.fonts.DiscordFont
-import com.discord.fonts.DiscordFontUtilsKt
-import com.discord.misc.utilities.size.SizeUtilsKt
-import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
+import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
+import com.discord.chat.databinding.AppMessageEmbedViewBinding
+import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.overlapping_circles.OverlappingCirclesView
 import com.discord.overlapping_circles.OverlappingItem
-import com.discord.theme.R
-import com.discord.theme.ThemeManagerKt
-import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 
 public class ActivityInstanceEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final val binding: ActivityInstanceEmbedViewBinding
+   private final val appMessageEmbedView: AppMessageEmbedView
+   private final var binding: AppMessageEmbedViewBinding
 
    fun ActivityInstanceEmbedView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");
@@ -36,63 +29,21 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: ActivityInstanceEmbedViewBinding = ActivityInstanceEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
+      val var4: AppMessageEmbedViewBinding = AppMessageEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.q.g(var4, "inflate(...)");
       this.binding = var4;
-      var3 = SizeUtilsKt.getDpToPx(16);
-      this.setPadding(var3, var3, var3, var3);
-      val var5: TextView = var4.statusText;
-      var4.statusText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.q.e(var5);
-      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
-      val var6: DCDButton = var4.launchButton;
-      this.setMinWidth(SizeUtilsKt.getDpToPx(64));
-      ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-         this,
-         ColorUtilsKt.getColorCompat(var1, ThemeManagerKt.getTheme().getColorRes(R.color.primary_130, R.color.primary_630)),
-         SizeUtilsKt.getDpToPx(8),
-         null,
-         0,
-         12,
-         null
-      );
+      val var5: AppMessageEmbedView = new AppMessageEmbedView(var1, var2, var3);
+      this.appMessageEmbedView = var5;
+      var5.setView(this.binding);
+      this.binding.header.setMaxLines(2);
+      var5.setDefaultBackground(this);
    }
 
-   public fun setLaunchButton(text: String?, backgroundColor: Int?, enabled: Boolean = true, submitting: Boolean = false) {
-      val var8: DCDButton = this.binding.launchButton;
-      kotlin.jvm.internal.q.e(this.binding.launchButton);
-      var var6: Boolean;
-      if (var1 != null && var1.length() != 0) {
-         var6 = 0;
-      } else {
-         var6 = 1;
-      }
-
-      if (!var6) {
-         var6 = 0;
-      } else {
-         var6 = 8;
-      }
-
-      var8.setVisibility(var6);
-      var8.setText(var1);
-      var8.setBackgroundColor(var2);
-      var8.setClickable(var3);
-      val var5: Float;
-      if (var3) {
-         var5 = 1.0F;
-      } else {
-         var5 = 0.5F;
-      }
-
-      var8.setAlpha(var5);
-      var8.setLoading(var4, true);
-   }
-
-   public fun setOnLaunchButtonClickListener(onLaunchButtonClickListener: OnClickListener) {
-      kotlin.jvm.internal.q.h(var1, "onLaunchButtonClickListener");
-      this.binding.launchButton.setOnClickButtonListener(var1);
+   public fun initAppMessageEmbed(data: AppMessageEmbedImpl, eventHandler: ChatEventHandler, constrainedWidth: Int) {
+      kotlin.jvm.internal.q.h(var1, "data");
+      kotlin.jvm.internal.q.h(var2, "eventHandler");
+      this.appMessageEmbedView.initView(var1, var2, var3);
+      this.appMessageEmbedView.setBackgroundGradient(this, var1);
    }
 
    public fun setParticipantAvatarUris(avatarUris: List<String>) {
@@ -119,7 +70,11 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       var4.setItems(var5);
    }
 
-   public fun setStatusText(text: String?) {
-      this.binding.statusText.setText(var1);
+   public fun setParticipantText(text: String) {
+      kotlin.jvm.internal.q.h(var1, "text");
+      val var2: TextView = this.binding.participantsText;
+      kotlin.jvm.internal.q.g(this.binding.participantsText, "participantsText");
+      var2.setVisibility(0);
+      this.binding.participantsText.setText(var1);
    }
 }

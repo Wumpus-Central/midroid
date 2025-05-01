@@ -8,7 +8,7 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
-import f8.p
+import h8.p
 import java.util.EnumMap
 import kotlin.jvm.internal.q
 

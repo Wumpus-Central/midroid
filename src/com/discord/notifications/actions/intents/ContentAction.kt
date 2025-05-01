@@ -82,14 +82,14 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
 
    public override fun toString(): String {
       val var3: java.lang.String = this.tag;
-      val var2: java.util.Map = this.data;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ContentAction(tag=");
-      var1.append(var3);
-      var1.append(", data=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.Map = this.data;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentAction(tag=");
+      var2.append(var3);
+      var2.append(", data=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public open fun writeToParcel(parcel: Parcel, flags: Int) {

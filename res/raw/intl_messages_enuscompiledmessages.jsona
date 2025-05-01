@@ -761,7 +761,7 @@
       1,
       "interval"
     ],
-    " until you cancel. You can cancel any time up to 24 hours before your current period ends in the Google Play Store Settings."
+    " until you cancel. Prices subject to change with notice to you. You can cancel any time up to 24 hours before your current period ends in the Google Play Store Settings."
   ],
   "7wpqfn": [
     "By clicking ",
@@ -801,7 +801,7 @@
       1,
       "interval"
     ],
-    " until you cancel. You can cancel any time up to 24 hours before your current period ends in the App Store Settings."
+    " until you cancel. Prices subject to change with notice to you. You can cancel any time up to 24 hours before your current period ends in the App Store Settings."
   ],
   "gJs+kZ": "Submit age verification",
   "eQg0Cg": "REASON",
@@ -1296,7 +1296,6 @@
   "z2YTgI": "This activity cannot be launched on this device at this time",
   "5khEk5": "Ad Supported",
   "GOXqkp": "All Commands",
-  "JDj6Xl": "App Added!",
   "Wuie9P": "Start typing...",
   "X9fusr": "Built-in commands for everyday use",
   "UB2gGx": "Discord Built-In",
@@ -1651,8 +1650,6 @@
   "H4mGfH": "Auto-hide options",
   "479+PT": "Sticker Suggestions",
   "r3uQUV": "Allows sticker suggestions to appear when typing messages.",
-  "d6sv6u": "Apply",
-  "R3blbG": "Avatar Decoration Selection Section",
   "7eZ3jo": "Add profile picture",
   "yP28YG": "or choose a Discord avatar",
   "XyLlVl": "Please upload a JPG or PNG file.",
@@ -2574,8 +2571,6 @@
   "N0bC3N": "Change Banner",
   "t9eQ/v": "Change camera",
   "+caQHB": "Change Category",
-  "DIJLzM": "Exclusive to Nitro",
-  "JEimX1": "Your Decorations",
   "Vm8akJ": "Change Email",
   "8pOYUF": "Change Friend Nickname",
   "PKQB/P": "Edit Per-server Profile",
@@ -2812,10 +2807,6 @@
   "QrTl5+": "You can change the swipe behavior in Settings.",
   "3tYNDQ": "Reply to Message",
   "RzWDqa": "Check it out",
-  "IZZoho": "Casual",
-  "Zo1X5u": "Competitive",
-  "cxUHv7": "Very Casual",
-  "xfySBw": "Very Competitive",
   "VkKicX": "Clear",
   "O8k7Oz": "Clear all",
   "/Nz9ra": "Clear Build Override",
@@ -2924,7 +2915,7 @@
     ]
   ],
   "zp6caG": "Add to your collection",
-  "/bUsx8": "Already owned",
+  "6cfuDg": "Acquired",
   "hORo2d": [
     "Avatar decoration preview: ",
     [
@@ -2932,8 +2923,9 @@
       "avatarDecoration"
     ]
   ],
-  "zOA4a2": "Your avatar decoration is updated!",
+  "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
   "kAeDcH": "Buy Profile Effect",
   "hEsdAw": [
@@ -2946,6 +2938,13 @@
   ],
   "d5YwKy": "Look at my beautiful decoration",
   "sB3lwM": "Claim",
+  "4kp0AA": [
+    [
+      1,
+      "itemName"
+    ],
+    " has been added to your collection."
+  ],
   "fYfGgI": "Go to Shop",
   "Io7ozs": [
     [
@@ -3048,7 +3047,7 @@
       "price"
     ]
   ],
-  "gOzMv7": "Your nameplate is updated!",
+  "gOzMv7": "Your Nameplate is updated!",
   "W3gIWF": [
     [
       1,
@@ -3070,9 +3069,8 @@
       ]
     ]
   ],
-  "5b+JhY": "Partially owned",
   "44b50t": "This decoration is now part of your collection and can be used anytime!",
-  "SWm2am": "Your profile effect is updated!",
+  "SWm2am": "Your Profile Effect is updated!",
   "f9M1YG": "This effect is now part of your collection and can be used anytime!",
   "HSX4HR": [
     "Profile effect preview: ",
@@ -3132,17 +3130,17 @@
       1,
       "sender"
     ],
-    " gifted you an avatar decoration!"
+    " gifted you an Avatar Decoration!"
   ],
-  "2ZO6CA": "You have been gifted an avatar decoration!",
+  "2ZO6CA": "You have been gifted an Avatar Decoration!",
   "1w42T0": [
     [
       1,
       "sender"
     ],
-    " gifted you a profile effect!"
+    " gifted you a Profile Effect!"
   ],
-  "2NxdjY": "You have been gifted a profile effect!",
+  "2NxdjY": "You have been gifted a Profile Effect!",
   "pWG4zc": "Shop",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
@@ -5139,6 +5137,29 @@
       "answerNumber"
     ]
   ],
+  "w8e4qK": [
+    "You have ",
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " error"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " errors"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "e9hWx8": "Poll answer style",
   "GhK6X1": "Text answers with optional media",
   "an4GKS": "Media only answers",
@@ -5731,6 +5752,13 @@
   ],
   "2p9FMz": "Change custom status",
   "E45wvL": "Clear after",
+  "DN91Jy": [
+    "tomorrow at ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     "Clear in ",
     [
@@ -7582,7 +7610,7 @@
       "code"
     ]
   ],
-  "3ejJen": "Expand activity",
+  "3ejJen": "Expand Activity",
   "06YebG": "Heads Up!",
   "z81WwM": "This app is not made by Discord. Only test apps from developers you trust.",
   "Z/eMDQ": [
@@ -7673,7 +7701,7 @@
     ],
     " participants"
   ],
-  "brPQ5e": "Minimize activity",
+  "brPQ5e": "Minimize Activity",
   "Yw5Hr6": [
     "A preview of ",
     [
@@ -9831,7 +9859,6 @@
   ],
   "1wR7yM": "Ready to Play",
   "p1j56u": "Use anywhere with Nitro",
-  "xSnNWl": "View Server",
   "xm6W9P": [
     "Icon for the ",
     [
@@ -11140,6 +11167,7 @@
   "70CJbW": "OFFICIAL",
   "q1L2v7": "Block Words in Member Profile Names",
   "OiCBhI": "View Blocked Message Help Article",
+  "HHYPgI": "Badge",
   "mOWsFx": "Boosting is not available while your Nitro subscription is paused!",
   "CduWAg": "You cannot manage Server Boosts while your Nitro subscription is paused.",
   "mkXb2N": [
@@ -11838,8 +11866,6 @@
     ],
     " is streaming"
   ],
-  "Yn1+xs": "We can't show any further details.",
-  "+kdPHx": "This server is not available.",
   "mYlo/f": "This is currently not supported on this device.",
   "s2N5HR": "Thank you,",
   "2Ab4IS": "By creating an announcement channel, your server profile will be visible to others outside your server members. You can control Profile privacy in Server Settings > Profile.",
@@ -12366,7 +12392,7 @@
         ]
       ]
     ],
-    ". This is a recurring subscription, we'll charge your account today and every month until you cancel."
+    ". This is a recurring subscription, we'll charge your account today and every month until you cancel. Prices subject to change with notice to you."
   ],
   "mPHb19": "Choose a subscription to unlock more",
   "A1L1hY": [
@@ -18440,7 +18466,7 @@
   "L+P4t7": "Due to this server's size, members will not get mobile push notifications for non-@mention messages.",
   "s35OuL": "There was a problem updating your per-server profile...",
   "jrXfy8": "Upload Requirements",
-  "N2qTQ0": "File type: JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "File type: JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Recommended file size: ",
     [
@@ -22899,28 +22925,6 @@
       "recipient"
     ]
   ],
-  "g2/d+f": "Check the status of your friends in the Messages tab with Activity Cards",
-  "hBm+cX": "Got it",
-  "608/Ag": [
-    "Learn more about this change and how to share your feedback ",
-    [
-      8,
-      "$link",
-      [
-        "here"
-      ],
-      [
-        [
-          1,
-          "onPress"
-        ]
-      ]
-    ],
-    "."
-  ],
-  "kxNf2t": "Jump into a chat with your friends in the new Messages tab",
-  "R5uhUF": "Enjoy more organized chatting with the new Servers tab",
-  "orML/v": "Welcome to the new layout!",
   "8zH0LC": "New Mentions",
   "jD1qzM": "New Message",
   "BctFHx": [
@@ -23582,6 +23586,7 @@
   ],
   "bAVpRU": "Age-restricted server",
   "uy25Q0": "Stickers from this server are unavailable",
+  "xi46lp": "Age-Restricted Server",
   "ZmwvDQ": "Age-Restricted Channel",
   "Gtctho": "Hang out, play games, or just talk. Tap below to get started!",
   "mufH2N": "Channels are places in your server where people can talk about different topics.",
@@ -29223,8 +29228,6 @@
     " permissions required to create this private channel."
   ],
   "LYju5O": "Profile",
-  "t5SVGR": "Add Profile Effect",
-  "fmIfaG": "Preview the Shop",
   "Uv4OPT": "double tap to copy user I.D",
   "V15uUF": [
     [
@@ -29371,10 +29374,6 @@
   "zbyz7u": "Prune Members",
   "QjAZAQ": "Head over to a voice channel to try it out! Chat with Discord voice chat on your PS5. Show which games you're playing with rich presence, and more.",
   "e6SOl5": "That's it!",
-  "Q9g0Cg": "Hang out with Discord friends while playing games in voice chat.",
-  "LWC6fX": "Now you can chat in Discord Voice Channels and Voice Calls while gaming on your PS5!",
-  "FKmud3": "Connect PlayStation Network",
-  "623c8f": "Send Discord audio to your PS5!",
   "lTZBio": [
     "Now you can chat in Discord Voice Channels and Voice Calls on your PlayStation 5! You'll need to reconnect to PlayStation Network in order to enable this feature. ",
     [
@@ -29889,6 +29888,17 @@
     " to participate in this quest."
   ],
   "YstzGB": "Launched a game?",
+  "vY9GgI": "Why?",
+  "XEHDT0": "You've done a lot of Quests today!",
+  "+5XVHx": [
+    "Come back in ",
+    [
+      1,
+      "countdownString"
+    ],
+    " to do more!"
+  ],
+  "V293qq": "Temporarily Unavailable",
   "yHzB4e": "From your desktop Discord app or browser you can go to\nDiscovery > Quests and accept the Quest there.",
   "ii4mJi": "Sorry! You're not eligible for this quest right now. Tap here to view other quests available to you.",
   "Dd6Da2": "This quest isn't available here",
@@ -31127,6 +31137,8 @@
   "8DLZrq": "You will lose all changes to your remix creation if you undo all.",
   "TeBod3": "Cancel",
   "N86XcH": "Remove",
+  "ZbtGBg": "Remove All Reactions",
+  "VpjOCg": "Are you sure you want to remove all reactions from this message?",
   "faHmOz": "This will remove this attachment from this message permanently.",
   "kFwAsb": "Remove Attachment",
   "CbTIEh": "Are you sure?",
@@ -31244,6 +31256,7 @@
   "p9jC2t": "ON",
   "PBgTSE": "Tap to disable pinging the original author.",
   "E+6SSU": "Click to see command",
+  "Xxm5i4": "Tap to see message",
   "XAkOo6": "Blocked message",
   "mE3KJC": "Original message was deleted",
   "G7p6v7": "Ignored message",
@@ -33300,7 +33313,6 @@
   "MR7/kp": "Share to",
   "fjBNo6": "Share Your Screen",
   "eXan7O": "Sharing their screen",
-  "kkKapK": "Show chat",
   "5/5xY2": "Show chat input",
   "2d4+Vl": "Open to reveal chat input to type a message",
   "MH8ESU": "Show My Own Camera",
@@ -36605,6 +36617,36 @@
     ],
     "."
   ],
+  "KI+BSU": [
+    "By clicking “Create account,” you agree to Discord’s ",
+    [
+      8,
+      "$link",
+      [
+        "Terms of Service"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " and have read the ",
+    [
+      8,
+      "$link",
+      [
+        "Privacy Policy"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
+  ],
   "qMDAPz": [
     "I have read and agree to Discord's ",
     [
@@ -37147,12 +37189,12 @@
   "yO4lAA": "6-digit authentication code/8-digit backup code",
   "tARzgo": "6-digit authentication code",
   "fZSi1N": "8-digit backup code",
-  "OhmvYm": [
+  "iVTs6u": [
     [
       8,
       "$p",
       [
-        "These codes will allow you to enter your account if you lose your auth app, protect them like you would protect your password. Do not share them with anyone and keep them somewhere safe."
+        "These codes will allow you to enter your account if you lose your security key, protect them like you would protect your password. Do not share them with anyone and keep them somewhere safe."
       ]
     ],
     [
@@ -37227,6 +37269,7 @@
   "EA4ZEh": "Are you sure you want to remove your Authenticator App?",
   "0d1bXF": "Your Discord account is now protected with an extra layer of security",
   "Awk3Gx": "2FA is activated! 🎉",
+  "7wPZlp": "Security key activated! 🎉",
   "1u5B+P": "Oh no, an error has occurred.",
   "xZEzbm": "View Backup Codes",
   "PsQmzc": "Enter Your Password",
@@ -37964,9 +38007,19 @@
   "PFOUKS": "Blocked accounts",
   "23xR5+": "Caches Cleared!",
   "GgUIfn": "Caches Written!",
-  "Tna/TU": "Change Decoration",
-  "0nEVoK": "Change Effect",
   "ZImm//": "Choose a server",
+  "Jh8fJy": "Apply",
+  "VqmVqK": "Your Decorations",
+  "w+hNj4": "Avatar Decoration Selection Section",
+  "HykynZ": "Change Avatar Decoration",
+  "BVcYCw": "Change Decoration",
+  "/6nv6O": "Change Profile Effect",
+  "/dRfCQ": "Change Effect",
+  "TiLCg4": "Exclusive to Nitro",
+  "t8CdeX": "Profile Effect Selection Section",
+  "9x1v/v": "Your Effects",
+  "1vbbeX": "See What's in Shop",
+  "CHf9iI": "Use Default",
   "SUnWBA": "Are you sure you want to logout?",
   "aBZ/oa": "Discovery",
   "KXLX7u": "Upgrade to Unlock",
@@ -38067,7 +38120,6 @@
   "+T3RIy": "Pronouns",
   "twB3f3": "Remove Avatar",
   "tT9n7O": "Remove Banner",
-  "GsW4/v": "Use Default",
   "jHlJNT": "Reset Banner",
   "L+Gmoa": "Reset Theme",
   "MA9iNj": "Resets theme to match User Profile theme.",
@@ -38127,7 +38179,6 @@
   "gMlDNT": "Nitro Preview",
   "TGg/2t": "Your username is invalid or contains invalid characters. You must update your username before you can change other user settings.",
   "FkFLDA": "Used Backup Codes",
-  "GJ3Fcn": "Use Default",
   "/6sFWV": [
     "All of your calls on Discord are end-to-end encrypted no matter what. That means nobody — not even Wumpus — can listen in on your conversations. These settings let you control optional details when verifying our encryption protocol. ",
     [

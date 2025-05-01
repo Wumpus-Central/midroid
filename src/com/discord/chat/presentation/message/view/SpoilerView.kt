@@ -75,11 +75,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureSpoilerOverlay(label: String) {
-      val var2: View = this.binding.spoiler.getOverlayView();
-      val var3: SpoilerOverlayView = this.binding.spoiler;
+      val var3: View = this.binding.spoiler.getOverlayView();
+      val var2: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
-      var3.setVisibility(0);
-      this.binding.spoiler.configure(var1, new Function0(this, var2) {
+      var2.setVisibility(0);
+      this.binding.spoiler.configure(var1, new Function0(this, var3) {
          final View $overlayView;
          final SpoilerView this$0;
 
@@ -150,7 +150,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       }
 
       kotlin.jvm.internal.q.f(var4, "null cannot be cast to non-null type android.view.ViewGroup");
-      val var5: ViewGroup = var4 as ViewGroup;
+      var4 = var4 as ViewGroup;
       var var3: Byte;
       if (var1) {
          var3 = 2;
@@ -158,9 +158,9 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          var3 = 1;
       }
 
-      var4 = new androidx.transition.c(var3);
-      var4.b0(150L);
-      var4.b(new androidx.transition.i(var1, this) {
+      val var5: androidx.transition.c = new androidx.transition.c(var3);
+      var5.b0(150L);
+      var5.b(new androidx.transition.i(var1, this) {
          final boolean $showImage;
          final SpoilerView this$0;
 
@@ -181,7 +181,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
             }
          }
       });
-      androidx.transition.j.a(var5, var4);
+      androidx.transition.j.a((ViewGroup)var4, var5);
       if (!var1) {
          var3 = 0;
       } else {

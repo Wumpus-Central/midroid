@@ -53,10 +53,10 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
          public final void invoke(ReactEvent var1) {
             q.h(var1, "event");
-            val var2: ReactEvents = this.$reactEvents;
-            val var3: Context = this.$context;
+            val var3: ReactEvents = this.$reactEvents;
+            val var2: Context = this.$context;
             q.f(this.$context, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
-            var2.emitEvent(var3 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
+            var3.emitEvent(var2 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
          }
       };
       this.onMessageLongPressed = new Function6(this) {
@@ -266,8 +266,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       val var9: Function1 = this.emitReactEvent;
       val var6: Boolean = var1.isAtBottom();
-      val var8: Boolean = var1.isDragging();
-      val var7: Boolean = var1.isSettling();
+      val var7: Boolean = var1.isDragging();
+      val var8: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -280,8 +280,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
             var6,
             var3,
             var4,
-            var8,
             var7,
+            var8,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),

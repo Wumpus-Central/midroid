@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.media
 
-import Y9.f
-import Y9.n
-import ba.G
-import ba.N
-import ba.Y
-import ba.G.a
+import aa.f
+import aa.n
+import da.G
+import da.N
+import da.Y
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -98,9 +98,9 @@ public data class ContentScanMetadata(version: Int, flags: Long) {
          var var3: Int;
          var var6: Long;
          if (var9.y()) {
-            var2 = var9.k(var8, 0);
+            var3 = var9.k(var8, 0);
             var6 = var9.h(var8, 1);
-            var3 = 3;
+            var2 = 3;
          } else {
             var6 = 0L;
             var var4: Boolean = true;
@@ -125,13 +125,10 @@ public data class ContentScanMetadata(version: Int, flags: Long) {
                   var4 = false;
                }
             }
-
-            var2 = var3;
-            var3 = var2;
          }
 
          var9.b(var8);
-         return new ContentScanMetadata(var3, var2, var6, null);
+         return new ContentScanMetadata(var2, var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentScanMetadata) {

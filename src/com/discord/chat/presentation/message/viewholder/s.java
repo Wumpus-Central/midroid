@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.viewholder;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.discord.chat.presentation.events.ChatEventHandler;
+import com.discord.chat.bridge.postpreviewembed.PostPreviewEmbed;
+import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
 public final class s implements OnClickListener {
-   public final ChatEventHandler j;
-   public final String k;
-   public final int l;
+   public final Function4 j;
+   public final PostPreviewEmbed k;
 
    public final void onClick(View var1) {
-      GuildProfileInviteViewHolder.c(this.j, this.k, this.l, var1);
+      PostPreviewEmbedViewHolder.b(this.j, this.k, var1);
    }
 }

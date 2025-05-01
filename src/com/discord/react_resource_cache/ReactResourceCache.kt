@@ -91,25 +91,25 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       // 71: astore 1
       // 72: aload 2
       // 73: invokevirtual java/lang/Enum.name ()Ljava/lang/String;
-      // 76: astore 3
+      // 76: astore 2
       // 77: new java/lang/StringBuilder
-      // 7a: astore 2
-      // 7b: aload 2
+      // 7a: astore 3
+      // 7b: aload 3
       // 7c: invokespecial java/lang/StringBuilder.<init> ()V
-      // 7f: aload 2
+      // 7f: aload 3
       // 80: ldc "Unable to access "
       // 82: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 85: pop
-      // 86: aload 2
-      // 87: aload 3
+      // 86: aload 3
+      // 87: aload 2
       // 88: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 8b: pop
-      // 8c: aload 2
+      // 8c: aload 3
       // 8d: ldc " as it has not yet been provided."
       // 8f: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 92: pop
       // 93: aload 1
-      // 94: aload 2
+      // 94: aload 3
       // 95: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 98: invokespecial java/lang/IllegalAccessException.<init> (Ljava/lang/String;)V
       // 9b: aload 1
@@ -153,52 +153,52 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       // 14: aload 1
       // 15: invokespecial com/discord/react_resource_cache/ReactResourceCache.getCache (Landroid/content/Context;)Landroid/content/SharedPreferences;
       // 18: invokeinterface android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor; 1
-      // 1d: astore 1
-      // 1e: aload 1
-      // 1f: invokeinterface android/content/SharedPreferences$Editor.clear ()Landroid/content/SharedPreferences$Editor; 1
-      // 24: pop
-      // 25: aload 2
-      // 26: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
-      // 2b: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 30: astore 4
-      // 32: aload 4
+      // 1d: astore 5
+      // 1f: aload 5
+      // 21: invokeinterface android/content/SharedPreferences$Editor.clear ()Landroid/content/SharedPreferences$Editor; 1
+      // 26: pop
+      // 27: aload 2
+      // 28: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
+      // 2d: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
+      // 32: astore 1
+      // 33: aload 1
       // 34: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 39: ifeq 6a
-      // 3c: aload 4
-      // 3e: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 43: checkcast java/util/Map$Entry
-      // 46: astore 5
-      // 48: aload 1
-      // 49: aload 5
+      // 3c: aload 1
+      // 3d: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 42: checkcast java/util/Map$Entry
+      // 45: astore 4
+      // 47: aload 5
+      // 49: aload 4
       // 4b: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 50: checkcast java/lang/String
-      // 53: aload 5
+      // 53: aload 4
       // 55: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 5a: checkcast java/lang/String
       // 5d: invokeinterface android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor; 3
       // 62: pop
-      // 63: goto 32
+      // 63: goto 33
       // 66: astore 1
-      // 67: goto 85
-      // 6a: aload 1
-      // 6b: invokeinterface android/content/SharedPreferences$Editor.apply ()V 1
-      // 70: new java/util/HashMap
-      // 73: astore 1
-      // 74: aload 1
-      // 75: aload 2
-      // 76: invokespecial java/util/HashMap.<init> (Ljava/util/Map;)V
-      // 79: aload 0
-      // 7a: aload 1
-      // 7b: putfield com/discord/react_resource_cache/ReactResourceCache.reactResources Ljava/util/Map;
-      // 7e: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 81: astore 1
-      // 82: aload 3
-      // 83: monitorexit
-      // 84: return
-      // 85: aload 3
-      // 86: monitorexit
-      // 87: aload 1
-      // 88: athrow
+      // 67: goto 86
+      // 6a: aload 5
+      // 6c: invokeinterface android/content/SharedPreferences$Editor.apply ()V 1
+      // 71: new java/util/HashMap
+      // 74: astore 1
+      // 75: aload 1
+      // 76: aload 2
+      // 77: invokespecial java/util/HashMap.<init> (Ljava/util/Map;)V
+      // 7a: aload 0
+      // 7b: aload 1
+      // 7c: putfield com/discord/react_resource_cache/ReactResourceCache.reactResources Ljava/util/Map;
+      // 7f: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 82: astore 1
+      // 83: aload 3
+      // 84: monitorexit
+      // 85: return
+      // 86: aload 3
+      // 87: monitorexit
+      // 88: aload 1
+      // 89: athrow
    }
 
    public fun wasSet(context: Context, reactResource: Any): Boolean {

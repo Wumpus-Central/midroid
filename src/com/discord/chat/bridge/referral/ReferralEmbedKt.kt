@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.referral
 
-import ca.g
+import ea.g
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive

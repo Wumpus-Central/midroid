@@ -1,9 +1,9 @@
 package com.discord.recycler_view.scroll
 
-import O9.K
-import O9.f
-import R9.e
-import R9.s
+import Q9.K
+import Q9.f
+import T9.e
+import T9.s
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
@@ -18,7 +18,7 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import l8.b
+import n8.b
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -67,13 +67,13 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  f8.s.b(var1);
+                  h8.s.b(var1);
                } else {
-                  f8.s.b(var1);
+                  h8.s.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
+                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     var1 = new FlowCollector(this.$onEvent) {
+                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1 $tmp0;
 
                         {
@@ -116,12 +116,12 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
                         return var5;
                      }
                   } else {
-                     val var9: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     var1 = new FlowCollector(this.$onEvent) {
+                     val var8: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1 $tmp0;
 
                         {
@@ -164,7 +164,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var9.collect(var1, this) === var5) {
+                     if (var8.collect(var9, this) === var5) {
                         return var5;
                      }
                   }
@@ -188,6 +188,6 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
    public fun tryEmit(event: Any) {
       q.h(var1, "event");
-      this.events.b(var1);
+      this.events.d(var1);
    }
 }

@@ -1,16 +1,16 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.h
-import ba.p0
+import aa.f
+import aa.n
+import ba.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.h
+import da.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -122,19 +122,19 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.Boolean = this.triggerHaptic;
-      val var2: java.lang.String = this.location;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.Boolean = this.triggerHaptic;
+      val var4: java.lang.String = this.location;
       val var1: StringBuilder = new StringBuilder();
       var1.append("InitiateReplyData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var4);
-      var1.append(", triggerHaptic=");
       var1.append(var5);
-      var1.append(", location=");
+      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", triggerHaptic=");
+      var1.append(var3);
+      var1.append(", location=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }
@@ -236,8 +236,8 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                }
             }
 
-            var13 = (java.lang.String)var6;
             var6 = var14;
+            var13 = (java.lang.String)var6;
          }
 
          var10.b(var9);
@@ -254,7 +254,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

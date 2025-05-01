@@ -18,6 +18,6 @@ public class AppMessageEmbedViewHolder(view: AppMessageEmbedView, eventHandler: 
 
    public fun bind(accessory: AppMessageEmbedAccessory) {
       kotlin.jvm.internal.q.h(var1, "accessory");
-      this.view.initView(var1, this.eventHandler);
+      this.view.initView(var1.getAppMessageEmbed(), this.eventHandler, var1.getConstrainedWidth());
    }
 }

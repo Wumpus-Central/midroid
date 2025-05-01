@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import ba.G
-import ba.p0
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.G
+import da.p0
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -78,13 +78,13 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: StringBuilder = new StringBuilder();
       var3.append("InitiateThreadData(messageId=");
-      var3.append(var1);
-      var3.append(", channelId=");
       var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.truncation
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.N
-import ba.h
+import aa.f
+import aa.n
+import ba.a
+import da.C0
+import da.G
+import da.N
+import da.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -113,8 +113,8 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
       val var4: java.lang.String = this.seeMoreLabel;
-      val var5: Int = this.seeMoreLabelColor;
-      val var6: java.lang.Boolean = this.forceShow;
+      val var6: Int = this.seeMoreLabelColor;
+      val var5: java.lang.Boolean = this.forceShow;
       val var3: StringBuilder = new StringBuilder();
       var3.append("Truncation(numberOfLines=");
       var3.append(var1);
@@ -123,9 +123,9 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       var3.append(", seeMoreLabel=");
       var3.append(var4);
       var3.append(", seeMoreLabelColor=");
-      var3.append(var5);
-      var3.append(", forceShow=");
       var3.append(var6);
+      var3.append(", forceShow=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }
@@ -158,32 +158,33 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
 
       public open fun deserialize(decoder: Decoder): Truncation {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Int;
          var var3: Int;
-         var var4: Int;
-         var var7: Int;
+         val var5: Int;
+         var var7: Any;
          var var8: java.lang.String;
-         var var11: Any;
-         if (var10.y()) {
-            var4 = var10.k(var9, 0);
-            var3 = var10.s(var9, 1);
-            var8 = var10.v(var9, 2, C0.a, null) as java.lang.String;
-            var7 = var10.v(var9, 3, N.a, null) as Int;
-            var11 = var10.v(var9, 4, h.a, null) as java.lang.Boolean;
+         val var12: Int;
+         if (var11.y()) {
+            var3 = var11.k(var10, 0);
+            val var4: Byte = var11.s(var10, 1);
+            var8 = var11.v(var10, 2, C0.a, null) as java.lang.String;
+            var12 = var11.v(var10, 3, N.a, null) as Int;
+            var7 = var11.v(var10, 4, h.a, null) as java.lang.Boolean;
             var2 = 31;
+            var5 = var4;
          } else {
-            var var5: Boolean = true;
-            var4 = 0;
+            var var16: Boolean = true;
+            var var15: Int = 0;
             var2 = 0;
             var8 = null;
             var7 = null;
-            var11 = null;
+            var var13: Any = null;
             var3 = 0;
 
-            while (var5) {
-               val var6: Int = var10.x(var9);
+            while (var16) {
+               val var6: Int = var11.x(var10);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -193,32 +194,37 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                                  throw new n(var6);
                               }
 
-                              var11 = var10.v(var9, 4, h.a, var11) as java.lang.Boolean;
+                              var13 = var11.v(var10, 4, h.a, var13) as java.lang.Boolean;
                               var2 |= 16;
                            } else {
-                              var7 = var10.v(var9, 3, N.a, var7) as Int;
+                              var7 = var11.v(var10, 3, N.a, var7) as Int;
                               var2 |= 8;
                            }
                         } else {
-                           var8 = var10.v(var9, 2, C0.a, var8) as java.lang.String;
+                           var8 = var11.v(var10, 2, C0.a, var8) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var10.s(var9, 1);
+                        var3 = var11.s(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var10.k(var9, 0);
+                     var15 = var11.k(var10, 0);
                      var2 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var16 = false;
                }
             }
+
+            var7 = var13;
+            var12 = (Integer)var7;
+            var5 = var3;
+            var3 = var15;
          }
 
-         var10.b(var9);
-         return new Truncation(var2, var4, (boolean)var3, var8, var7, (java.lang.Boolean)var11, null);
+         var11.b(var10);
+         return new Truncation(var2, var3, (boolean)var5, var8, var12, (java.lang.Boolean)var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {
@@ -231,7 +237,7 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

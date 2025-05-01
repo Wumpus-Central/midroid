@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
-import ba.h
-import ba.y
+import aa.f
+import aa.n
+import ba.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.G
+import da.N
+import da.h
+import da.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -163,14 +163,14 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var6: Int = java.lang.Boolean.hashCode(this.isNearBottom);
-      val var10: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var7: Int = java.lang.Boolean.hashCode(this.dragging);
-      val var3: Int = java.lang.Boolean.hashCode(this.decelerating);
-      val var8: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
-      val var5: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
-      val var4: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      val var10: Int = java.lang.Boolean.hashCode(this.isAtBottom);
+      val var8: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var4: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var9: Int = java.lang.Boolean.hashCode(this.dragging);
+      val var7: Int = java.lang.Boolean.hashCode(this.decelerating);
+      val var3: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
+      val var6: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
+      val var5: Int = Integer.hashCode(this.firstVisibleMessageIndex);
       var var2: Int = 0;
       val var1: Int;
       if (this.firstVisibleMessagePercentVisible == null) {
@@ -184,7 +184,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var2 = this.lastVisibleMessagePercentVisible.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var6) * 31 + var10) * 31 + var7) * 31 + var3) * 31 + var8) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var11) * 31 + var2)
+      return ((((((((((var10 * 31 + var8) * 31 + var4) * 31 + var9) * 31 + var7) * 31 + var3) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var11) * 31 + var2)
             * 31
          + Integer.hashCode(this.changesetUpdateId);
    }
@@ -194,39 +194,39 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var6: Boolean = this.isAtBottom;
+      val var7: Boolean = this.isAtBottom;
       val var5: Boolean = this.isNearBottom;
-      val var7: Boolean = this.isNearTop;
-      val var4: Boolean = this.dragging;
-      val var8: Boolean = this.decelerating;
-      val var10: Boolean = this.shouldShowJumpToPresent;
-      val var9: Boolean = this.isFirstMessageVisible;
-      val var2: Int = this.firstVisibleMessageIndex;
+      val var4: Boolean = this.isNearTop;
+      val var8: Boolean = this.dragging;
+      val var6: Boolean = this.decelerating;
+      val var9: Boolean = this.shouldShowJumpToPresent;
+      val var10: Boolean = this.isFirstMessageVisible;
+      val var1: Int = this.firstVisibleMessageIndex;
       val var13: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var1: Int = this.lastVisibleMessageIndex;
+      val var2: Int = this.lastVisibleMessageIndex;
       val var12: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var3: Int = this.changesetUpdateId;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ChatScrollPositionEvent(isAtBottom=");
-      var11.append(var6);
+      var11.append(var7);
       var11.append(", isNearBottom=");
       var11.append(var5);
       var11.append(", isNearTop=");
-      var11.append(var7);
-      var11.append(", dragging=");
       var11.append(var4);
-      var11.append(", decelerating=");
+      var11.append(", dragging=");
       var11.append(var8);
+      var11.append(", decelerating=");
+      var11.append(var6);
       var11.append(", shouldShowJumpToPresent=");
-      var11.append(var10);
-      var11.append(", isFirstMessageVisible=");
       var11.append(var9);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var10);
       var11.append(", firstVisibleMessageIndex=");
-      var11.append(var2);
+      var11.append(var1);
       var11.append(", firstVisibleMessagePercentVisible=");
       var11.append(var13);
       var11.append(", lastVisibleMessageIndex=");
-      var11.append(var1);
+      var11.append(var2);
       var11.append(", lastVisibleMessagePercentVisible=");
       var11.append(var12);
       var11.append(", changesetUpdateId=");
@@ -273,8 +273,6 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          val var20: c = var1.c(var19);
          var var16: Boolean = var20.y();
          var var2: Int = 0;
-         var var3: Int;
-         var var4: Int;
          var var5: Int;
          var var6: Int;
          var var7: Int;
@@ -284,25 +282,30 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var var11: Int;
          val var12: Int;
          var var17: java.lang.Double;
-         val var22: java.lang.Double;
+         val var18: java.lang.Double;
+         var var25: Int;
+         var var27: Int;
          if (var16) {
             var16 = var20.s(var19, 0);
             var8 = var20.s(var19, 1);
-            var11 = var20.s(var19, 2);
-            var9 = var20.s(var19, 3);
-            var12 = var20.s(var19, 4);
-            var7 = var20.s(var19, 5);
+            var9 = var20.s(var19, 2);
+            var11 = var20.s(var19, 3);
+            var10 = var20.s(var19, 4);
+            var6 = var20.s(var19, 5);
             var5 = var20.s(var19, 6);
-            var4 = var20.k(var19, 7);
+            var27 = var20.k(var19, 7);
             val var21: y = y.a;
             var17 = var20.v(var19, 8, y.a, null) as java.lang.Double;
-            var3 = var20.k(var19, 9);
-            var22 = var20.v(var19, 10, var21, null) as java.lang.Double;
+            var25 = var20.k(var19, 9);
+            val var22: java.lang.Double = var20.v(var19, 10, var21, null) as java.lang.Double;
             var2 = var20.k(var19, 11);
-            var6 = 4095;
-            var10 = var2;
+            var7 = 4095;
+            var12 = var27;
+            var27 = var25;
+            var18 = var22;
+            var25 = var2;
          } else {
-            var var34: Boolean = true;
+            var var38: Boolean = true;
             var16 = false;
             var10 = 0;
             var9 = 0;
@@ -310,28 +313,28 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
             var7 = 0;
             var6 = 0;
             var5 = 0;
-            var4 = 0;
-            var3 = 0;
+            var27 = 0;
+            var25 = 0;
             var17 = null;
             var var23: java.lang.Double = null;
             var11 = 0;
 
-            while (var34) {
+            while (var38) {
                val var13: Int = var20.x(var19);
                switch (var13) {
                   case -1:
-                     var34 = false;
+                     var38 = false;
                      break;
                   case 0:
                      var16 = var20.s(var19, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var3 = var20.s(var19, 1);
+                     var25 = var20.s(var19, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var4 = var20.s(var19, 2);
+                     var27 = var20.s(var19, 2);
                      var2 |= 4;
                      break;
                   case 3:
@@ -375,22 +378,23 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                }
             }
 
+            var12 = var9;
+            var8 = var25;
+            var25 = var11;
+            var18 = var17;
+            var27 = var10;
             var17 = var23;
-            var8 = var3;
-            var10 = var11;
-            var22 = var17;
-            var3 = var10;
-            var4 = var9;
             var5 = var8;
-            var12 = var5;
-            var9 = var6;
-            var11 = var4;
-            var6 = var2;
+            var6 = var7;
+            var10 = var5;
+            var11 = var6;
+            var9 = var27;
+            var7 = var2;
          }
 
          var20.b(var19);
          return new ChatScrollPositionEvent(
-            var6, var16, (boolean)var8, (boolean)var11, (boolean)var9, (boolean)var12, (boolean)var7, (boolean)var5, var4, var17, var3, var22, var10, null
+            var7, var16, (boolean)var8, (boolean)var9, (boolean)var11, (boolean)var10, (boolean)var6, (boolean)var5, var12, var17, var27, var18, var25, null
          );
       }
 
@@ -404,7 +408,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

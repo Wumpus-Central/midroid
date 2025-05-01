@@ -9,15 +9,15 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
-import g8.n
+import i8.n
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
    q.h(var0, "<this>");
    q.h(var1, "readableMap");
-   val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
-   val var5: java.lang.String = var1.getString("content");
+   val var5: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
+   val var6: java.lang.String = var1.getString("content");
    var var2: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
    val var4: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
    val var9: ReadableMap = var1.getMap("contentAction");
@@ -46,7 +46,7 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
       var2 = i.k();
    }
 
-   return new ServiceNotificationConfiguration(var6, var5, var4, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
+   return new ServiceNotificationConfiguration(var5, var6, var4, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
@@ -61,7 +61,7 @@ private fun Companion.parseAction(readableMap: ReadableMap): Action {
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var2, var3, var4, g8.q.h());
+   return new ServiceNotificationConfiguration.Action(var2, var3, var4, i8.q.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {

@@ -11,6 +11,6 @@ public final class r implements OnClickListener {
    public final int l;
 
    public final void onClick(View var1) {
-      GuildProfileInviteViewHolder.b(this.j, this.k, this.l, var1);
+      GuildProfileInviteViewHolder.c(this.j, this.k, this.l, var1);
    }
 }

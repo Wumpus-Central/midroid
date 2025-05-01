@@ -34,15 +34,15 @@ public final class ForwardBreadcrumbViewBinding implements ViewBinding {
          SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
          if (var6 != null) {
             var1 = R.id.label;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.separator;
                TextView var4 = (TextView)a.a(var0, var1);
                if (var4 != null) {
                   var1 = R.id.timestamp;
-                  TextView var2 = (TextView)a.a(var0, var1);
-                  if (var2 != null) {
-                     return new ForwardBreadcrumbViewBinding(var0, var3, var6, var5, var4, var2);
+                  TextView var5 = (TextView)a.a(var0, var1);
+                  if (var5 != null) {
+                     return new ForwardBreadcrumbViewBinding(var0, var3, var6, var2, var4, var5);
                   }
                }
             }

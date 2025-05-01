@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.reaction
 
-import Y9.f
-import Y9.n
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.reactions.ReactionView
+import da.G
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -61,15 +61,15 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
    }
 
    public override fun toString(): String {
-      val var1: BurstReactionColorPalette = this.light;
+      val var2: BurstReactionColorPalette = this.light;
       val var3: BurstReactionColorPalette = this.dark;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThemedBurstReactionColorPalette(light=");
-      var2.append(var1);
-      var2.append(", dark=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThemedBurstReactionColorPalette(light=");
+      var1.append(var2);
+      var1.append(", dark=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {

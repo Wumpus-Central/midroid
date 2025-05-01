@@ -6,7 +6,7 @@ import com.discord.codegen.NativeDeviceThermalStateModuleSpec
 import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
-import f8.w
+import h8.w
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 

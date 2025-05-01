@@ -1,6 +1,6 @@
 package com.discord.notifications.renderer.utils
 
-import M9.b
+import O9.b
 import android.text.format.DateUtils
 import java.text.DateFormat
 import java.util.Date
@@ -74,10 +74,10 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.d().a();
-      val var12: Int = var6.d().m();
+      val var12: Int = var6.d().a();
+      val var2: Int = var6.d().j();
       q.e(var10);
-      var14 = h.w0(var14, var2, var12 + 1, var10).toString();
-      var13 = h.w0(var13, var6.d().a(), var6.d().m() + 1, var10).toString();
+      var14 = h.w0(var14, var12, var2 + 1, var10).toString();
+      var13 = h.w0(var13, var6.d().a(), var6.d().j() + 1, var10).toString();
    }
 }

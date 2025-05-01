@@ -2,8 +2,8 @@ package com.discord.resource_usage
 
 import android.system.Os
 import android.system.OsConstants
-import f8.r
-import f8.s
+import h8.r
+import h8.s
 
 internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
    private final var activeThreadId: Long?
@@ -45,7 +45,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var14 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var1 = r.k;
+         var14 = r.k;
          var14 = r.b(s.a(var3));
          break label36;
       }
@@ -237,7 +237,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 1b: aload 3
       // 1c: bipush 4
       // 1d: aconst_null
-      // 1e: invokestatic j8/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1e: invokestatic l8/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 21: astore 3
       // 22: aload 0
       // 23: aload 3

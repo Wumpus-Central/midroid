@@ -173,16 +173,16 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          if (var46 != null && !kotlin.text.h.d0(var46)) {
             var38.setText(var36.getBodyText());
          } else if (var36.getStructuredBodyText() != null) {
-            val var11: AnnotatedStructurableText = var36.getStructuredBodyText();
-            val var12: Context = var38.getContext();
+            val var12: AnnotatedStructurableText = var36.getStructuredBodyText();
+            val var11: Context = var38.getContext();
             val var47: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var13, "getFontMetrics(...)");
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
-            kotlin.jvm.internal.q.e(var12);
+            kotlin.jvm.internal.q.e(var11);
             kotlin.jvm.internal.q.e(var48);
-            var38.setDraweeSpanStringBuilder(TextUtilsKt.toSpannable$default(var11, var12, var47, false, true, false, false, var48, new Function1(var3, var1) {
+            var38.setDraweeSpanStringBuilder(TextUtilsKt.toSpannable$default(var12, var11, var47, false, true, false, false, var48, new Function1(var3, var1) {
                final ReferralMessageAccessory $accessory;
                final Function2 $onTapLink;
 
@@ -258,7 +258,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
             var26.setText(var36.getAcceptLabelText());
             var26.setTextColor(var36.getAcceptLabelColor());
-            var26.setOnClickButtonListener(new P(var2));
+            var26.setOnClickButtonListener(new Q(var2));
             val var15: Context = var26.getContext();
             kotlin.jvm.internal.q.g(var15, "getContext(...)");
             val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, R.drawable.premium_tier2_gradient);

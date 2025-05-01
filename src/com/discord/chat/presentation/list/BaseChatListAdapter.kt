@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list
 
-import O9.K
+import Q9.K
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -16,9 +16,9 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_strings.I18nCache
 import com.discord.react_strings.I18nMessage
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
-import f8.s
-import f8.w
-import g8.q
+import h8.s
+import h8.w
+import i8.q
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
@@ -50,10 +50,10 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public fun configureRecycledViewPoolSizes() {
-      for (Entry var3 : recycledViewPoolSizes.entrySet()) {
-         val var4: Class = var3.getKey() as Class;
-         val var1: Int = (var3.getValue() as java.lang.Number).intValue();
-         val var5: Int = this.delegateViewTypes.get(var4);
+      for (Entry var4 : recycledViewPoolSizes.entrySet()) {
+         val var3: Class = var4.getKey() as Class;
+         val var1: Int = (var4.getValue() as java.lang.Number).intValue();
+         val var5: Int = this.delegateViewTypes.get(var3);
          if (var5 != null) {
             ChatListView.Companion.getSharedPool().setMaxRecycledViews(var5, var1);
          }
@@ -63,10 +63,10 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    public fun fillAdapter(recyclerView: RecyclerView) {
       kotlin.jvm.internal.q.h(var1, "recyclerView");
       this.configureRecycledViewPoolSizes();
-      val var3: java.util.Map = this.delegateViewTypes;
-      val var2: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
-      kotlin.jvm.internal.q.g(var2, "getRecycledViewPool(...)");
-      ChatListViewFactoryKt.fillChatList(var1, this, var3, var2);
+      val var2: java.util.Map = this.delegateViewTypes;
+      val var3: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
+      kotlin.jvm.internal.q.g(var3, "getRecycledViewPool(...)");
+      ChatListViewFactoryKt.fillChatList(var1, this, var2, var3);
       ChatListViewFactoryKt.fillAccessories(var1, new MessageAccessoriesAdapter(null, 1, null), messageAccessoriesRecycledViewPool);
    }
 
@@ -90,7 +90,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
 
       public fun prefill(context: Context) {
          kotlin.jvm.internal.q.h(var1, "context");
-         O9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
+         Q9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
             final Context $context;
             int label;
 
@@ -108,7 +108,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
             }
 
             public final Object invokeSuspend(Object var1) {
-               l8.b.e();
+               n8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   if (ReactAsset.Launch.wasSet(this.$context) && I18nCache.INSTANCE.wasSet(this.$context, I18nMessage.HIGHLIGHT)) {

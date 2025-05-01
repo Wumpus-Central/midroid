@@ -1,11 +1,11 @@
 package com.discord.chat.input.bridge
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
+import aa.f
+import aa.n
+import ba.a
 import com.discord.span.utilities.common.BackgroundStyle
+import da.G
+import da.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -99,21 +99,21 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var4: Int = this.fontSize;
+      val var2: Int = this.fontSize;
       val var1: Int = this.color;
-      val var2: BackgroundStyle = this.backgroundStyle;
+      val var3: BackgroundStyle = this.backgroundStyle;
       val var5: ChatInputNodeFontWeight = this.fontWeight;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChatInputNodeStyle(fontSize=");
-      var3.append(var4);
-      var3.append(", color=");
-      var3.append(var1);
-      var3.append(", backgroundStyle=");
-      var3.append(var2);
-      var3.append(", fontWeight=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChatInputNodeStyle(fontSize=");
+      var4.append(var2);
+      var4.append(", color=");
+      var4.append(var1);
+      var4.append(", backgroundStyle=");
+      var4.append(var3);
+      var4.append(", fontWeight=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -136,9 +136,9 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
-         val var1: N = N.a;
-         return new KSerializer[]{a.u(N.a), var1, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var2[3])};
+         val var1: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
+         val var2: N = N.a;
+         return new KSerializer[]{a.u(N.a), var2, a.u(BackgroundStyle.$serializer.INSTANCE), a.u(var1[3])};
       }
 
       public open fun deserialize(decoder: Decoder): ChatInputNodeStyle {
@@ -212,7 +212,7 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

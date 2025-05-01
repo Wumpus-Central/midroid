@@ -236,10 +236,10 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
                                     CrashReporting.addBreadcrumb$default(
                                        CrashReporting.INSTANCE, "requestForegroundServicePermissionVoiceCall: Permission Rejected", null, null, 6, null
                                     );
-                                    val var1: Promise = this.$promise;
-                                    val var2: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
-                                    q.g(var2, "toLowerCase(...)");
-                                    var1.resolve(var2);
+                                    val var2: Promise = this.$promise;
+                                    val var1: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
+                                    q.g(var1, "toLowerCase(...)");
+                                    var2.resolve(var1);
                                  }
                               }
                            )

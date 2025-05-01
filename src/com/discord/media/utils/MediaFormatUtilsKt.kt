@@ -1,8 +1,8 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import f8.r
-import f8.s
+import h8.r
+import h8.s
 import kotlin.jvm.internal.q
 
 public final val codecType: String?
@@ -69,16 +69,16 @@ public final val level: Int?
 
       label16:
       try {
-         val var5: f8.r.a = r.k;
-         var4 = r.b(var0.getInteger("level"));
+         val var1: h8.r.a = r.k;
+         var5 = r.b(var0.getInteger("level"));
       } catch (var2: java.lang.Throwable) {
-         val var1: f8.r.a = r.k;
-         var4 = r.b(s.a(var2));
+         val var4: h8.r.a = r.k;
+         var5 = r.b(s.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (r.g(var4)) {
+      var var6: Any = var5;
+      if (r.g(var5)) {
          var6 = null;
       }
 
@@ -92,10 +92,10 @@ public final val mimeType: String?
 
       label16:
       try {
-         val var1: f8.r.a = r.k;
+         val var1: h8.r.a = r.k;
          var5 = r.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: f8.r.a = r.k;
+         val var4: h8.r.a = r.k;
          var5 = r.b(s.a(var2));
          break label16;
       }
@@ -115,16 +115,16 @@ public final val profile: Int?
 
       label16:
       try {
-         val var5: f8.r.a = r.k;
-         var4 = r.b(var0.getInteger("profile"));
+         val var1: h8.r.a = r.k;
+         var5 = r.b(var0.getInteger("profile"));
       } catch (var2: java.lang.Throwable) {
-         val var1: f8.r.a = r.k;
-         var4 = r.b(s.a(var2));
+         val var4: h8.r.a = r.k;
+         var5 = r.b(s.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (r.g(var4)) {
+      var var6: Any = var5;
+      if (r.g(var5)) {
          var6 = null;
       }
 

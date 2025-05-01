@@ -9,6 +9,7 @@ import com.discord.chat.R
 import com.discord.chat.databinding.AttachmentMediaMosaicContainerViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.AccessoriesViewPool
+import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
 import com.discord.chat.presentation.message.messagepart.MessageAttachmentAccessory
@@ -16,6 +17,7 @@ import com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageA
 import com.discord.chat.presentation.message.view.mosaic_recycler.AttachmentMediaMosaicAdapter
 import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
+import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
@@ -151,9 +153,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       q.h(var6, "onAttachmentObscureToggle");
       val var10: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
       q.f(var10, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
-      val var11: MosaicLayoutManager = var10 as MosaicLayoutManager;
-      (var10 as MosaicLayoutManager).setConstrainedWidth(var8);
-      var11.setIsForwardedContent(var7);
+      (var10 as MosaicLayoutManager).setAvailableWidth(Math.min(MessageAccessoriesView.Companion.getWidth(var8, var7), SizeUtilsKt.getDpToPx(550)));
       this.onAttachmentClicked = var3;
       this.onAttachmentLongClicked = var4;
       this.onAttachmentSpoilerClicked = var5;

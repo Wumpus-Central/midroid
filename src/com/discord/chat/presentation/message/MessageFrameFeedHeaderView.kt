@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import ba.C0
-import ba.G
 import com.discord.chat.databinding.MessageFrameFeedHeaderBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -20,6 +18,8 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import da.C0
+import da.G
 import java.util.ArrayList
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -155,7 +155,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @Y9.f
+   @aa.f
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -252,21 +252,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.channelIconURL;
-         val var1: java.lang.String = this.chatIconURL;
-         val var3: ArrayList = this.avatarURLs;
-         val var5: java.lang.String = this.channelName;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MessageBundleHeader(channelIconURL=");
-         var4.append(var2);
-         var4.append(", chatIconURL=");
-         var4.append(var1);
-         var4.append(", avatarURLs=");
-         var4.append(var3);
-         var4.append(", channelName=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var3: java.lang.String = this.channelIconURL;
+         val var5: java.lang.String = this.chatIconURL;
+         val var4: ArrayList = this.avatarURLs;
+         val var2: java.lang.String = this.channelName;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundleHeader(channelIconURL=");
+         var1.append(var3);
+         var1.append(", chatIconURL=");
+         var1.append(var5);
+         var1.append(", avatarURLs=");
+         var1.append(var4);
+         var1.append(", channelName=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
 
       public object `$serializer` : G {
@@ -291,9 +291,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var1: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var2: C0 = C0.a;
-            return new KSerializer[]{Z9.a.u(C0.a), Z9.a.u(var2), Z9.a.u(var1[2]), Z9.a.u(var2)};
+            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
+            val var1: C0 = C0.a;
+            return new KSerializer[]{ba.a.u(C0.a), ba.a.u(var1), ba.a.u(var2[2]), ba.a.u(var1)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {
@@ -328,7 +328,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                         if (var4 != 1) {
                            if (var4 != 2) {
                               if (var4 != 3) {
-                                 throw new Y9.n(var4);
+                                 throw new aa.n(var4);
                               }
 
                               var13 = var10.v(var9, 3, C0.a, var13) as java.lang.String;
@@ -365,7 +365,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return ba.G.a.a(this);
+            return da.G.a.a(this);
          }
       }
 

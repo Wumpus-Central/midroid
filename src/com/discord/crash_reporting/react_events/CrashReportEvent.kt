@@ -11,9 +11,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import f8.w
+import h8.w
 import kotlin.jvm.internal.q
-import w8.c
+import y8.c
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: SentryCrashData?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -138,16 +138,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
 
    public override fun toString(): String {
       val var1: java.lang.Boolean = this.crashedLastRun;
-      val var3: SystemLogReport.SentryCrashData = this.sentryData;
-      val var5: HistoricalProcessExitReason.Reason = this.reason;
+      val var5: SystemLogReport.SentryCrashData = this.sentryData;
+      val var3: HistoricalProcessExitReason.Reason = this.reason;
       val var2: SystemLogUtils.Tombstone = this.tombstone;
       val var4: StringBuilder = new StringBuilder();
       var4.append("CrashReportEvent(crashedLastRun=");
       var4.append(var1);
       var4.append(", sentryData=");
-      var4.append(var3);
-      var4.append(", reason=");
       var4.append(var5);
+      var4.append(", reason=");
+      var4.append(var3);
       var4.append(", tombstone=");
       var4.append(var2);
       var4.append(")");

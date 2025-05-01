@@ -19,6 +19,7 @@ import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderEve
 import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderOptions
 import com.discord.chat.presentation.message.view.botuikit.MediaItemEventHandlers
 import com.discord.chat.presentation.message.view.botuikit.MessageComponentsView
+import com.discord.chat.presentation.message.view.botuikit.WidthInfo
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.primitives.MessageId
 import kotlin.jvm.functions.Function1
@@ -50,7 +51,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.q.h(var6, "onTapObscureToggle");
       kotlin.jvm.internal.q.h(var7, "eventHandler");
       val var12: Message = var1.getMessage();
-      val var16: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var15: java.lang.String = var1.getMessageId-3Eiw7ao();
       var var8: Int = var1.getConstrainedWidth();
       var var9: Boolean;
       if (var12.getForwardInfo() != null) {
@@ -59,14 +60,9 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          var9 = false;
       }
 
-      if (MessageAccessoriesView.Companion.getWidth(var8, var9) >= SizeUtilsKt.getDpToPx(480)) {
-         var9 = true;
-      } else {
-         var9 = false;
-      }
-
-      val var13: java.lang.String = MessageId.toString-impl(var16);
-      val var15: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var16) {
+      var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
+      val var14: java.lang.String = MessageId.toString-impl(var15);
+      val var11: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -82,7 +78,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, var2);
          }
       }, var5);
-      val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var13: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var12.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var12),
          MessageKt.shouldShowLinkDecorations(var12),
@@ -90,7 +86,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          var12.getShouldShowRoleOnName()
       );
       val var35: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
-         new Function1(var7, var16) {
+         new Function1(var7, var15) {
             final ChatEventHandler $eventHandler;
             final java.lang.String $messageId;
 
@@ -251,7 +247,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             }
          }
       );
-      val var29: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var7) {
+      val var28: MediaItemEventHandlers = new MediaItemEventHandlers(var3, var4, var5, new Function1(var7) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
          }
@@ -261,7 +257,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var16) {
+      val var30: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -275,7 +271,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             kotlin.jvm.internal.q.h(var1, "componentId");
             this.$eventHandler.onTapButtonActionComponent-ntcYbpo(this.$messageId, var1);
          }
-      }, new Function1(var7, var16) {
+      }, new Function1(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -289,7 +285,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             kotlin.jvm.internal.q.h(var1, "url");
             this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, "");
          }
-      }, new Function1(var7, var16) {
+      }, new Function1(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -303,7 +299,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             kotlin.jvm.internal.q.h(var1, "componentId");
             this.$eventHandler.onTapSelectActionComponent-ntcYbpo(this.$messageId, var1);
          }
-      }, new Function3(var7, var16) {
+      }, new Function3(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -319,23 +315,22 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             this.$eventHandler.onTapContentInventoryEntryEmbed-tsfjtEQ(this.$messageId, var1, var3, var4);
          }
       });
-      var8 = var1.getConstrainedWidth();
+      val var32: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
       val var31: java.lang.Boolean = var12.getGifAutoPlay();
-      val var10: Boolean;
       if (var31 != null) {
-         var10 = var31;
+         var9 = var31;
+      } else {
+         var9 = false;
+      }
+
+      val var10: Boolean;
+      if (var12.getForwardInfo() != null) {
+         var10 = true;
       } else {
          var10 = false;
       }
 
-      val var11: Boolean;
-      if (var12.getForwardInfo() != null) {
-         var11 = true;
-      } else {
-         var11 = false;
-      }
-
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var15, var14, var35, var29, var32, var8, var9, var10, var11, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var14, var11, var13, var35, var28, var30, var32, var9, var10, false));
    }
 }

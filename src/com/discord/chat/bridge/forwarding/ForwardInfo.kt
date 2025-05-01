@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.forwarding
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
+import aa.f
+import aa.n
+import ba.a
+import da.G
+import da.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,14 +66,14 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
 
    public override fun toString(): String {
       val var1: Int = this.snapshotIndex;
-      val var3: ForwardFooterInfo = this.footerInfo;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ForwardInfo(snapshotIndex=");
-      var2.append(var1);
-      var2.append(", footerInfo=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: ForwardFooterInfo = this.footerInfo;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardInfo(snapshotIndex=");
+      var3.append(var1);
+      var3.append(", footerInfo=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -148,7 +148,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

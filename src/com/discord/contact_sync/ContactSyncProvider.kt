@@ -63,14 +63,14 @@ public object ContactSyncProvider {
       // 45: astore 1
       // 46: aload 2
       // 47: aconst_null
-      // 48: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 48: invokestatic s8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 4b: goto 5a
       // 4e: aload 4
       // 50: athrow
       // 51: astore 1
       // 52: aload 2
       // 53: aload 4
-      // 55: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 55: invokestatic s8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 58: aload 1
       // 59: athrow
       // 5a: aload 1
@@ -151,10 +151,10 @@ public object ContactSyncProvider {
       } else {
          while (var7.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var7, "display_name");
-            val var10: java.lang.String = this.getColumnString(var7, "data4");
-            val var9: java.lang.String = this.getColumnString(var7, "_id");
+            val var9: java.lang.String = this.getColumnString(var7, "data4");
+            val var10: java.lang.String = this.getColumnString(var7, "_id");
             var var3: java.lang.String = this.getColumnString(var7, "contact_id");
-            if (var9 != null && var3 != null) {
+            if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -186,13 +186,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var10 != null) {
+               if (var9 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
@@ -286,7 +286,7 @@ public object ContactSyncProvider {
       // 7c: astore 1
       // 7d: aload 3
       // 7e: aconst_null
-      // 7f: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7f: invokestatic s8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 82: aload 1
       // 83: astore 2
       // 84: goto 91
@@ -295,7 +295,7 @@ public object ContactSyncProvider {
       // 89: astore 1
       // 8a: aload 3
       // 8b: aload 2
-      // 8c: invokestatic q8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8c: invokestatic s8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8f: aload 1
       // 90: athrow
       // 91: aload 2
