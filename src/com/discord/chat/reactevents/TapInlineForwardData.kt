@@ -1,17 +1,17 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.N
-import ba.h
+import aa.f
+import aa.n
+import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import f8.w
+import da.C0
+import da.G
+import da.N
+import da.h
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -87,61 +87,63 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
 
       public open fun deserialize(decoder: Decoder): TapInlineForwardData {
          q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         val var5: Boolean = var13.y();
          var var10: java.lang.String = null;
          var var2: Int;
          var var6: Any;
          var var7: Any;
-         var var8: java.lang.String;
          var var9: java.lang.String;
-         var var13: java.lang.String;
+         var var14: java.lang.String;
+         var var15: java.lang.String;
          if (var5) {
-            var10 = var12.t(var11, 0);
-            var9 = var12.t(var11, 1);
-            var8 = var12.t(var11, 2);
-            var7 = var12.v(var11, 3, N.a, null) as Int;
-            var6 = var12.v(var11, 4, h.a, null) as java.lang.Boolean;
-            var13 = var12.v(var11, 5, C0.a, null) as java.lang.String;
+            var15 = var13.t(var12, 0);
+            var9 = var13.t(var12, 1);
+            val var11: java.lang.String = var13.t(var12, 2);
+            var7 = var13.v(var12, 3, N.a, null) as Int;
+            var6 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
+            var14 = var13.v(var12, 5, C0.a, null) as java.lang.String;
             var2 = 63;
+            var10 = var15;
+            var15 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
-            var8 = null;
+            var15 = null;
             var7 = null;
             var6 = null;
-            var13 = null;
+            var14 = null;
 
             while (var3) {
-               val var4: Int = var12.x(var11);
+               val var4: Int = var13.x(var12);
                switch (var4) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var10 = var12.t(var11, 0);
+                     var10 = var13.t(var12, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var9 = var12.t(var11, 1);
+                     var9 = var13.t(var12, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var8 = var12.t(var11, 2);
+                     var15 = var13.t(var12, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var7 = var12.v(var11, 3, N.a, var7) as Int;
+                     var7 = var13.v(var12, 3, N.a, var7) as Int;
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var12.v(var11, 4, h.a, var6) as java.lang.Boolean;
+                     var6 = var13.v(var12, 4, h.a, var6) as java.lang.Boolean;
                      var2 |= 16;
                      break;
                   case 5:
-                     var13 = var12.v(var11, 5, C0.a, var13) as java.lang.String;
+                     var14 = var13.v(var12, 5, C0.a, var14) as java.lang.String;
                      var2 |= 32;
                      break;
                   default:
@@ -150,8 +152,8 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
             }
          }
 
-         var12.b(var11);
-         return new TapInlineForwardData(var2, var10, var9, var8, (Integer)var7, (java.lang.Boolean)var6, var13, null);
+         var13.b(var12);
+         return new TapInlineForwardData(var2, var10, var9, var15, (Integer)var7, (java.lang.Boolean)var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {
@@ -164,7 +166,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

@@ -67,16 +67,16 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
       if (this.childView != null && var1 == 0) {
          return this.childView;
       } else {
-         val var2: java.lang.String = this.getPortalId$portals_release();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Requesting non-existent child or invalid index: ");
-         var3.append(var1);
-         var3.append(", ");
-         var3.append(var2);
-         var3.append(", ");
-         var3.append(var4);
-         var3.append(".");
-         throw new IllegalArgumentException(var3.toString().toString());
+         val var3: java.lang.String = this.getPortalId$portals_release();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Requesting non-existent child or invalid index: ");
+         var2.append(var1);
+         var2.append(", ");
+         var2.append(var3);
+         var2.append(", ");
+         var2.append(var4);
+         var2.append(".");
+         throw new IllegalArgumentException(var2.toString().toString());
       }
    }
 
@@ -94,10 +94,10 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var2: java.lang.String = this.getPortalId$portals_release();
-         val var3: View = this.childView;
+         val var3: java.lang.String = this.getPortalId$portals_release();
+         val var2: View = this.childView;
          q.e(this.childView);
-         this.childViewAdded(var2, var3);
+         this.childViewAdded(var3, var2);
          this.portalIdPrev = null;
       }
    }

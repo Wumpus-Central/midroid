@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.reaction
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.h
+import aa.f
+import aa.n
+import ba.a
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
+import da.C0
+import da.G
+import da.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -128,24 +128,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
+      val var1: java.lang.String = this.name;
       val var6: java.lang.String = this.src;
-      val var2: java.lang.String = this.displayName;
+      val var3: java.lang.String = this.displayName;
       val var4: java.lang.String = this.id;
       val var5: java.lang.Boolean = this.animated;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageReactionEmoji(name=");
-      var1.append(var3);
-      var1.append(", src=");
-      var1.append(var6);
-      var1.append(", displayName=");
-      var1.append(var2);
-      var1.append(", id=");
-      var1.append(var4);
-      var1.append(", animated=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageReactionEmoji(name=");
+      var2.append(var1);
+      var2.append(", src=");
+      var2.append(var6);
+      var2.append(", displayName=");
+      var2.append(var3);
+      var2.append(", id=");
+      var2.append(var4);
+      var2.append(", animated=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -252,7 +252,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

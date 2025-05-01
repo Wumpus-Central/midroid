@@ -1,16 +1,16 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.h
-import ba.p0
+import aa.f
+import aa.n
+import ba.a
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.h
+import da.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -123,20 +123,20 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.Boolean = this.triggerHaptic;
-      val var3: java.lang.String = this.location;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("InitiateReplyData(messageId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var5);
-      var4.append(", triggerHaptic=");
-      var4.append(var1);
-      var4.append(", location=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.Boolean = this.triggerHaptic;
+      val var5: java.lang.String = this.location;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InitiateReplyData(messageId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(", triggerHaptic=");
+      var1.append(var4);
+      var1.append(", location=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -167,10 +167,10 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         var var5: java.lang.String;
          var var6: Any;
-         val var8: Any;
          val var13: java.lang.String;
+         var var15: Any;
+         var var18: java.lang.String;
          if (var10.y()) {
             val var11: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var12: java.lang.String;
@@ -180,18 +180,18 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                var12 = null;
             }
 
-            var8 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var8: ChannelId = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var6 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
-            val var7: java.lang.String = var10.v(var9, 3, C0.a, null) as java.lang.String;
-            var5 = var12;
-            var13 = var7;
+            var13 = var10.v(var9, 3, C0.a, null) as java.lang.String;
             var2 = 15;
+            var18 = var12;
+            var15 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var17: java.lang.String = null;
+            var18 = null;
             var6 = null;
-            var5 = null;
+            var15 = null;
             var var14: Any = null;
 
             while (var3) {
@@ -207,7 +207,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                            var6 = var10.v(var9, 3, C0.a, var6) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var5 = var10.v(var9, 2, h.a, var5) as java.lang.Boolean;
+                           var15 = var10.v(var9, 2, h.a, var15) as java.lang.Boolean;
                            var2 |= 4;
                         }
                      } else {
@@ -215,18 +215,18 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                         var2 |= 2;
                      }
                   } else {
-                     val var18: MessageId;
-                     if (var17 != null) {
-                        var18 = MessageId.box-impl(var17);
+                     val var19: MessageId;
+                     if (var18 != null) {
+                        var19 = MessageId.box-impl(var18);
                      } else {
-                        var18 = null;
+                        var19 = null;
                      }
 
-                     val var19: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var18) as MessageId;
-                     if (var19 != null) {
-                        var17 = var19.unbox-impl();
+                     val var20: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var19) as MessageId;
+                     if (var20 != null) {
+                        var18 = var20.unbox-impl();
                      } else {
-                        var17 = null;
+                        var18 = null;
                      }
 
                      var2 |= 1;
@@ -236,14 +236,13 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                }
             }
 
-            var8 = var14;
+            var6 = var15;
+            var15 = var14;
             var13 = (java.lang.String)var6;
-            var6 = var5;
-            var5 = var17;
          }
 
          var10.b(var9);
-         return new InitiateReplyData(var2, var5, (ChannelId)var8, (java.lang.Boolean)var6, var13, null, null);
+         return new InitiateReplyData(var2, var18, (ChannelId)var15, (java.lang.Boolean)var6, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: InitiateReplyData) {
@@ -256,7 +255,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

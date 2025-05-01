@@ -129,14 +129,14 @@ internal object SystemLogReport {
             }
 
             val var10: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-            val var6: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(this.$context);
-            val var7: Function3 = this.$cb;
-            val var9: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var9: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(this.$context);
+            val var6: Function3 = this.$cb;
+            val var7: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var7.invoke(var9, var1, var6);
+            var6.invoke(var7, var1, var9);
             var10.clear(this.$context);
          }
       });

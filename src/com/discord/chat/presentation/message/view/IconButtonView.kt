@@ -28,13 +28,13 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var3: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
-      this.binding = var3;
-      val var4: FrameLayout = var3.iconContainer;
-      kotlin.jvm.internal.q.g(var3.iconContainer, "iconContainer");
-      ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(8));
-      (var3.iconButton.getHierarchy() as GenericDraweeHierarchy).x(0);
+      val var4: IconButtonViewBinding = IconButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
+      val var3: FrameLayout = var4.iconContainer;
+      kotlin.jvm.internal.q.g(var4.iconContainer, "iconContainer");
+      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
+      (var4.iconButton.getHierarchy() as GenericDraweeHierarchy).x(0);
    }
 
    @JvmStatic
@@ -53,6 +53,6 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
       kotlin.jvm.internal.q.g(this.binding.iconContainer, "iconContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new J(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new K(var3), 1, null);
    }
 }

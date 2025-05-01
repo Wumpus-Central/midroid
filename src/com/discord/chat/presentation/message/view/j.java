@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.animation.ValueAnimator;
+import android.animation.ValueAnimator.AnimatorUpdateListener;
 
 // $VF: synthetic class
-public final class j implements OnClickListener {
-   public final UploadItemProps j;
+public final class j implements AnimatorUpdateListener {
+   public final AttachmentUploadOverlayView a;
 
-   public final void onClick(View var1) {
-      AttachmentUploadOverlayView.j(this.j, var1);
+   public final void onAnimationUpdate(ValueAnimator var1) {
+      AttachmentUploadOverlayView.n(this.a, var1);
    }
 }

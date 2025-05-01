@@ -1,13 +1,13 @@
 package com.discord.js_watchdog
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.N
+import aa.f
+import aa.n
+import ba.a
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,8 +66,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.stallTime);
-      val var3: Int = this.sessionId.hashCode();
+      val var3: Int = Integer.hashCode(this.stallTime);
+      val var2: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -75,7 +75,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -84,17 +84,17 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var3: java.lang.String = this.sessionId;
-      val var2: java.lang.String = this.trace;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("StallReport(stallTime=");
-      var4.append(var1);
-      var4.append(", sessionId=");
-      var4.append(var3);
-      var4.append(", trace=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.sessionId;
+      val var4: java.lang.String = this.trace;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("StallReport(stallTime=");
+      var3.append(var1);
+      var3.append(", sessionId=");
+      var3.append(var2);
+      var3.append(", trace=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -182,7 +182,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

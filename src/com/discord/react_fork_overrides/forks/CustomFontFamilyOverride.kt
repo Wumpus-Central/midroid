@@ -21,12 +21,12 @@ internal object CustomFontFamilyOverride {
          var11 = "";
       }
 
-      val var16: Array<java.lang.String> = kotlin.text.h.C0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
-      val var10: Int = var16.length;
+      val var12: Array<java.lang.String> = kotlin.text.h.C0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
+      val var10: Int = var12.length;
 
       for (int var6 = 0; var6 < var10; var6++) {
-         val var12: java.lang.String = var16[var6];
-         var var5: Int = var16[var6].length() - 1;
+         var1 = var12[var6];
+         var var5: Int = var12[var6].length() - 1;
          var var4: Int = 0;
          var var7: Boolean = false;
 
@@ -38,21 +38,21 @@ internal object CustomFontFamilyOverride {
                var8 = var5;
             }
 
-            val var21: Boolean;
-            if (kotlin.jvm.internal.q.j(var12.charAt(var8), 32) <= 0) {
-               var21 = true;
+            val var23: Boolean;
+            if (kotlin.jvm.internal.q.j(var1.charAt(var8), 32) <= 0) {
+               var23 = true;
             } else {
-               var21 = false;
+               var23 = false;
             }
 
             if (!var7) {
-               if (!var21) {
+               if (!var23) {
                   var7 = true;
                } else {
                   var4++;
                }
             } else {
-               if (!var21) {
+               if (!var23) {
                   break;
                }
 
@@ -60,101 +60,161 @@ internal object CustomFontFamilyOverride {
             }
          }
 
-         var16[var6] = var12.subSequence(var4, var5 + 1).toString();
+         var12[var6] = var1.subSequence(var4, var5 + 1).toString();
       }
 
-      if (var16.length > 1) {
+      var1 = var11;
+      if (var12.length > 1) {
          if (VERSION.SDK_INT >= 29) {
-            return this.createAssetTypefaceWithFallbacks(var16, var2, var3);
+            return this.createAssetTypefaceWithFallbacks(var12, var2, var3);
          }
 
-         var11 = var16[0];
+         var1 = var12[0];
       }
 
-      val var17: Array<java.lang.String> = FILE_EXTENSIONS;
-      val var20: Int = FILE_EXTENSIONS.length;
+      var11 = var1;
+      if (var12.length > 1) {
+         var11 = var1;
+         if (VERSION.SDK_INT < 29) {
+            var11 = var1;
+            if ((var2 and 2) != 0) {
+               var11 = kotlin.text.h.B(
+                  kotlin.text.h.B(
+                     kotlin.text.h.B(
+                        kotlin.text.h.B(kotlin.text.h.B(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
+                        "Semibold",
+                        "SemiboldItalic",
+                        true
+                     ),
+                     "Bold",
+                     "BoldItalic",
+                     true
+                  ),
+                  "ExtraBold",
+                  "ExtraBoldItalic",
+                  true
+               );
+            }
 
-      for (int var19 = 0; var19 < var20; var19++) {
-         val var13: java.lang.String = var17[var19];
-         val var22: StringBuilder = new StringBuilder();
-         var22.append("fonts/");
-         var22.append(var11);
-         var22.append(var13);
-         val var23: java.lang.String = var22.toString();
-         kotlin.jvm.internal.q.g(var23, "toString(...)");
+            var1 = var11;
+            if ((var2 and 1) != 0) {
+               var1 = kotlin.text.h.B(kotlin.text.h.B(kotlin.text.h.B(var11, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+            }
+
+            var11 = kotlin.text.h.B(kotlin.text.h.B(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         }
+      }
+
+      val var19: Array<java.lang.String> = FILE_EXTENSIONS;
+      val var22: Int = FILE_EXTENSIONS.length;
+
+      for (int var21 = 0; var21 < var22; var21++) {
+         val var13: java.lang.String = var19[var21];
+         val var26: StringBuilder = new StringBuilder();
+         var26.append("fonts/");
+         var26.append(var11);
+         var26.append(var13);
+         val var27: java.lang.String = var26.toString();
+         kotlin.jvm.internal.q.g(var27, "toString(...)");
 
          try {
-            val var24: Typeface = Typeface.createFromAsset(var3, var23);
-            kotlin.jvm.internal.q.e(var24);
-            return var24;
+            val var28: Typeface = Typeface.createFromAsset(var3, var27);
+            kotlin.jvm.internal.q.e(var28);
+            return var28;
          } catch (var14: RuntimeException) {
          }
       }
 
-      val var18: Typeface = Typeface.create(var11, var2);
-      kotlin.jvm.internal.q.g(var18, "create(...)");
-      return var18;
+      val var20: Typeface = Typeface.create(var11, var2);
+      kotlin.jvm.internal.q.g(var20, "create(...)");
+      return var20;
    }
 
    private fun createAssetTypefaceWithFallbacks(fontFamilyNames: Array<String>, style: Int, assetManager: AssetManager): Typeface {
-      val var9: ArrayList = new ArrayList();
+      val var11: ArrayList = new ArrayList();
       val var7: Int = var1.length;
 
       for (int var4 = 0; var4 < var7; var4++) {
-         val var10: java.lang.String = var1[var4];
-         val var11: Array<java.lang.String> = FILE_EXTENSIONS;
+         var var10: java.lang.String = var1[var4];
+         var var9: java.lang.String = var1[var4];
+         if ((var2 and 2) != 0) {
+            var9 = kotlin.text.h.B(
+               kotlin.text.h.B(
+                  kotlin.text.h.B(
+                     kotlin.text.h.B(kotlin.text.h.B(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
+                     "Semibold",
+                     "SemiboldItalic",
+                     true
+                  ),
+                  "Bold",
+                  "BoldItalic",
+                  true
+               ),
+               "ExtraBold",
+               "ExtraBoldItalic",
+               true
+            );
+         }
+
+         var10 = var9;
+         if ((var2 and 1) != 0) {
+            var10 = kotlin.text.h.B(kotlin.text.h.B(kotlin.text.h.B(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+         }
+
+         var10 = kotlin.text.h.B(kotlin.text.h.B(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var11[var5];
+            val var13: java.lang.String = var25[var5];
             val var12: StringBuilder = new StringBuilder();
             var12.append("fonts/");
             var12.append(var10);
             var12.append(var13);
-            val var28: java.lang.String = var12.toString();
-            kotlin.jvm.internal.q.g(var28, "toString(...)");
+            val var31: java.lang.String = var12.toString();
+            kotlin.jvm.internal.q.g(var31, "toString(...)");
 
             try {
                b.a();
-               val var29: Font = a.a(k.a(var3, var28));
-               kotlin.jvm.internal.q.g(var29, "build(...)");
+               val var32: Font = a.a(k.a(var3, var31));
+               kotlin.jvm.internal.q.g(var32, "build(...)");
                c.a();
-               val var30: FontFamily = f.a(l.a(var29));
-               kotlin.jvm.internal.q.g(var30, "build(...)");
-               var9.add(var30);
+               val var33: FontFamily = f.a(l.a(var32));
+               kotlin.jvm.internal.q.g(var33, "build(...)");
+               var11.add(var33);
             } catch (var14: java.lang.Throwable) {
                continue;
             }
          }
       }
 
-      if (var9.size() == 0) {
+      if (var11.size() == 0) {
          return this.createAssetTypeface(var1[0], var2, var3);
       } else {
          d.a();
-         val var21: CustomFallbackBuilder = m.a(g.a(var9.get(0)));
-         val var22: Int = var9.size();
+         val var21: CustomFallbackBuilder = m.a(g.a(var11.get(0)));
+         val var22: Int = var11.size();
 
          for (int var19 = 1; var19 < var22; var19++) {
-            h.a(var21, g.a(var9.get(var19)));
+            h.a(var21, g.a(var11.get(var19)));
          }
 
-         var var26: java.lang.String = var1[0];
-         val var25: Locale = Locale.ROOT;
+         var var29: java.lang.String = var1[0];
+         val var26: Locale = Locale.ROOT;
          kotlin.jvm.internal.q.g(Locale.ROOT, "ROOT");
-         var26 = var26.toLowerCase(var25);
-         kotlin.jvm.internal.q.g(var26, "toLowerCase(...)");
+         var29 = var29.toLowerCase(var26);
+         kotlin.jvm.internal.q.g(var29, "toLowerCase(...)");
          val var20: Byte;
-         if (kotlin.text.h.b0(var26, "italic", 0, false, 6, null) > -1) {
+         if (kotlin.text.h.b0(var29, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
          } else {
             var20 = 0;
          }
 
          val var16: java.lang.String = var1[0];
-         kotlin.jvm.internal.q.g(var25, "ROOT");
-         val var17: java.lang.String = var16.toLowerCase(var25);
+         kotlin.jvm.internal.q.g(var26, "ROOT");
+         val var17: java.lang.String = var16.toLowerCase(var26);
          kotlin.jvm.internal.q.g(var17, "toLowerCase(...)");
          var var23: Short = 0;
          if (kotlin.text.h.b0(var17, "bold", 0, false, 6, null) > -1) {

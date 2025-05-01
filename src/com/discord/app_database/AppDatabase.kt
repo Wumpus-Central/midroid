@@ -1,9 +1,9 @@
 package com.discord.app_database
 
 import android.content.Context
-import ba.x0
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
+import da.x0
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
@@ -126,7 +126,7 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       q.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      j8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
+      l8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
          final Context $context;
 
          {

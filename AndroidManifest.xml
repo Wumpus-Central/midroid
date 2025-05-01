@@ -50,11 +50,27 @@
         <package android:name="xyz.blueskyweb.app"/>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="xbox"/>
+            <data android:scheme="bestbuy"/>
         </intent>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="vnd.youtube"/>
+            <data android:scheme="com.asana.app"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="bluesky"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="homedepot"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="instagram"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="notion"/>
         </intent>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
@@ -62,11 +78,27 @@
         </intent>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="spotify"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
             <data android:scheme="tiktok"/>
         </intent>
         <intent>
             <action android:name="android.intent.action.VIEW"/>
-            <data android:scheme="instagram"/>
+            <data android:scheme="twitch"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="twitter"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="vnd.youtube"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW"/>
+            <data android:scheme="xbox"/>
         </intent>
         <intent>
             <action android:name="android.media.action.IMAGE_CAPTURE"/>

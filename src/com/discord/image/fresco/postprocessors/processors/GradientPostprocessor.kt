@@ -7,8 +7,8 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
-import f8.p
-import f8.w
+import h8.p
+import h8.w
 import kotlin.jvm.internal.q
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
@@ -57,8 +57,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var3: Float = var1.getWidth();
-      val var4: Float = var1.getHeight();
+      val var7: Float = var1.getWidth();
+      val var5: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -71,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var3, var4, var15);
+      var18.drawRect(0.0F, 0.0F, var7, var5, var15);
    }
 
    public companion object {
@@ -116,13 +116,13 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          }
 
          public override fun toString(): String {
-            val var2: Float = this.x;
-            val var1: Float = this.y;
+            val var1: Float = this.x;
+            val var2: Float = this.y;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Point(x=");
-            var3.append(var2);
-            var3.append(", y=");
             var3.append(var1);
+            var3.append(", y=");
+            var3.append(var2);
             var3.append(")");
             return var3.toString();
          }

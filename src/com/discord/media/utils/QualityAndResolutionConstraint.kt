@@ -1,10 +1,10 @@
 package com.discord.media.utils
 
-import M7.c
+import O7.c
 import java.io.File
 import kotlin.jvm.internal.q
 
-public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : N7.a {
+public class QualityAndResolutionConstraint(quality: Int, shouldResize: Boolean) : P7.a {
    private final val quality: Int
    private final val shouldResize: Boolean
    private final var isResolved: Boolean

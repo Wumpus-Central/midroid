@@ -425,6 +425,7 @@
     <item type="id" name="line1" />
     <item type="id" name="line3" />
     <item type="id" name="link_icon" />
+    <item type="id" name="link_icon_title" />
     <item type="id" name="list_item" />
     <item type="id" name="loading_dots" />
     <item type="id" name="lottie_layer_name" />
@@ -559,6 +560,7 @@
     <item type="id" name="participants_container" />
     <item type="id" name="participants_info" />
     <item type="id" name="participants_info_container" />
+    <item type="id" name="participants_text" />
     <item type="id" name="percentage_bar_background" />
     <item type="id" name="percentage_bar_container" />
     <item type="id" name="pickerWrapper" />
@@ -692,8 +694,6 @@
     <item type="id" name="state_rotate" />
     <item type="id" name="state_scale" />
     <item type="id" name="status_bar_latest_event_content" />
-    <item type="id" name="status_text" />
-    <item type="id" name="status_text_barrier" />
     <item type="id" name="sticker_view" />
     <item type="id" name="submenuarrow" />
     <item type="id" name="submit_area" />

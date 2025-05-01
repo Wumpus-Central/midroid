@@ -164,10 +164,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                throw new IllegalStateException(var10.toString().toString());
             }
 
-            var var14: Any = this.items.get(var2);
+            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
             q.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
-            var14 = var14 as VideoAttachmentMessageAccessory;
-            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
+            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -175,39 +175,31 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var16.bindAttachment(
-               var5,
-               (VideoAttachmentMessageAccessory)var14,
-               var11,
-               new c(this, (VideoAttachmentMessageAccessory)var14, var1),
-               new d(this, (VideoAttachmentMessageAccessory)var14),
-               new Function0(this, (VideoAttachmentMessageAccessory)var14) {
-                  final VideoAttachmentMessageAccessory $accessory;
-                  final AttachmentMediaMosaicAdapter this$0;
+            var14.bindAttachment(var5, var16, var11, new c(this, var16, var1), new d(this, var16), new Function0(this, var16) {
+               final VideoAttachmentMessageAccessory $accessory;
+               final AttachmentMediaMosaicAdapter this$0;
 
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                     this.$accessory = var2;
-                  }
-
-                  public final void invoke() {
-                     AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
-                  }
-               },
-               new Function1(this) {
-                  final AttachmentMediaMosaicAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(boolean var1) {
-                     AttachmentMediaMosaicAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
-                  }
+               {
+                  super(0);
+                  this.this$0 = var1;
+                  this.$accessory = var2;
                }
-            );
+
+               public final void invoke() {
+                  AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
+               }
+            }, new Function1(this) {
+               final AttachmentMediaMosaicAdapter this$0;
+
+               {
+                  super(1);
+                  this.this$0 = var1;
+               }
+
+               public final void invoke(boolean var1) {
+                  AttachmentMediaMosaicAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
+               }
+            });
          }
       }
    }

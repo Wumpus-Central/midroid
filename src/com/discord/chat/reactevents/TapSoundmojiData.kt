@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.p0
+import aa.f
+import aa.n
+import ba.a
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -134,9 +134,9 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.soundId;
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.soundId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.guildId;
       val var6: java.lang.String;
       if (this.messageId == null) {
          var6 = "null";
@@ -146,11 +146,11 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
 
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapSoundmojiData(soundId=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", guildId=");
       var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var2);
+      var5.append(", guildId=");
+      var5.append(var3);
       var5.append(", messageId=");
       var5.append(var6);
       var5.append(")");
@@ -182,34 +182,35 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
 
       public open fun deserialize(decoder: Decoder): TapSoundmojiData {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var5: Boolean = var11.y();
-         var var12: java.lang.String = null;
+         val var11: SerialDescriptor = this.getDescriptor();
+         val var12: c = var1.c(var11);
+         val var5: Boolean = var12.y();
+         var var13: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
          var var7: java.lang.String;
-         var var8: java.lang.String;
+         val var9: java.lang.String;
+         val var10: java.lang.String;
          if (var5) {
-            var7 = var11.t(var10, 0);
-            var8 = var11.t(var10, 1);
-            var6 = var11.v(var10, 2, C0.a, null) as java.lang.String;
-            val var9: MessageId = var11.v(var10, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var9 != null) {
-               var12 = var9.unbox-impl();
+            var7 = var12.t(var11, 0);
+            var9 = var12.t(var11, 1);
+            val var6: java.lang.String = var12.v(var11, 2, C0.a, null) as java.lang.String;
+            val var8: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            if (var8 != null) {
+               var13 = var8.unbox-impl();
             }
 
             var2 = 15;
+            var10 = var6;
          } else {
             var var3: Boolean = true;
             var2 = 0;
+            var var20: java.lang.String = null;
+            var var15: java.lang.String = null;
+            var var14: java.lang.String = null;
             var7 = null;
-            var6 = null;
-            var var13: java.lang.String = null;
-            var8 = null;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var12.x(var11);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -218,31 +219,31 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
                               throw new n(var4);
                            }
 
-                           val var15: MessageId;
-                           if (var8 != null) {
-                              var15 = MessageId.box-impl(var8);
+                           val var18: MessageId;
+                           if (var7 != null) {
+                              var18 = MessageId.box-impl(var7);
                            } else {
-                              var15 = null;
+                              var18 = null;
                            }
 
-                           val var16: MessageId = var11.v(var10, 3, MessageId.$serializer.INSTANCE, var15) as MessageId;
-                           if (var16 != null) {
-                              var8 = var16.unbox-impl();
+                           val var19: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, var18) as MessageId;
+                           if (var19 != null) {
+                              var7 = var19.unbox-impl();
                            } else {
-                              var8 = null;
+                              var7 = null;
                            }
 
                            var2 |= 8;
                         } else {
-                           var6 = var11.v(var10, 2, C0.a, var6) as java.lang.String;
+                           var15 = var12.v(var11, 2, C0.a, var15) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var13 = var11.t(var10, 1);
+                        var14 = var12.t(var11, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var11.t(var10, 0);
+                     var20 = var12.t(var11, 0);
                      var2 |= 1;
                   }
                } else {
@@ -250,12 +251,14 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
                }
             }
 
-            var12 = var8;
-            var8 = var13;
+            var13 = var7;
+            var10 = var15;
+            var9 = var14;
+            var7 = var20;
          }
 
-         var11.b(var10);
-         return new TapSoundmojiData(var2, var7, var8, var6, var12, null, null);
+         var12.b(var11);
+         return new TapSoundmojiData(var2, var7, var9, var10, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapSoundmojiData) {
@@ -268,7 +271,7 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

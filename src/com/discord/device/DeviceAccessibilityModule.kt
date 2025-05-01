@@ -12,7 +12,7 @@ import com.discord.react.utilities.ReactContextFindViewKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
-import g8.n
+import i8.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -32,9 +32,9 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
       q.h(var0, "$nativeIds");
       q.h(var1, "this$0");
-      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var4: ArrayList = new ArrayList();
+      val var3: ArrayList = new ArrayList();
       val var7: java.util.Iterator = var5.iterator();
 
       while (var7.hasNext()) {
@@ -43,11 +43,11 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
          q.g(var6, "getReactApplicationContext(...)");
          val var8: View = ReactContextFindViewKt.findView(var6, var0.getString(var2));
          if (var8 != null) {
-            var4.add(var8);
+            var3.add(var8);
          }
       }
 
-      var3.enableFocusLock(var4);
+      var4.enableFocusLock(var3);
    }
 
    public override fun disableFocusLock() {

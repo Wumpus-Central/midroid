@@ -6,8 +6,6 @@ import android.view.LayoutInflater
 import android.view.View.OnClickListener
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import ba.C0
-import ba.G
 import com.discord.chat.databinding.MessageFrameFeedHeaderBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -20,6 +18,8 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
+import da.C0
+import da.G
 import java.util.ArrayList
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -155,7 +155,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @Y9.f
+   @aa.f
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -252,21 +252,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.channelIconURL;
-         val var1: java.lang.String = this.chatIconURL;
-         val var3: ArrayList = this.avatarURLs;
-         val var4: java.lang.String = this.channelName;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("MessageBundleHeader(channelIconURL=");
-         var2.append(var5);
-         var2.append(", chatIconURL=");
-         var2.append(var1);
-         var2.append(", avatarURLs=");
-         var2.append(var3);
-         var2.append(", channelName=");
-         var2.append(var4);
-         var2.append(")");
-         return var2.toString();
+         val var1: java.lang.String = this.channelIconURL;
+         val var2: java.lang.String = this.chatIconURL;
+         val var4: ArrayList = this.avatarURLs;
+         val var5: java.lang.String = this.channelName;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MessageBundleHeader(channelIconURL=");
+         var3.append(var1);
+         var3.append(", chatIconURL=");
+         var3.append(var2);
+         var3.append(", avatarURLs=");
+         var3.append(var4);
+         var3.append(", channelName=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
 
       public object `$serializer` : G {
@@ -293,7 +293,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          public open fun childSerializers(): Array<KSerializer<*>> {
             val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
             val var1: C0 = C0.a;
-            return new KSerializer[]{Z9.a.u(C0.a), Z9.a.u(var1), Z9.a.u(var2[2]), Z9.a.u(var1)};
+            return new KSerializer[]{ba.a.u(C0.a), ba.a.u(var1), ba.a.u(var2[2]), ba.a.u(var1)};
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {
@@ -328,7 +328,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
                         if (var4 != 1) {
                            if (var4 != 2) {
                               if (var4 != 3) {
-                                 throw new Y9.n(var4);
+                                 throw new aa.n(var4);
                               }
 
                               var13 = var10.v(var9, 3, C0.a, var13) as java.lang.String;
@@ -365,7 +365,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return ba.G.a.a(this);
+            return da.G.a.a(this);
          }
       }
 

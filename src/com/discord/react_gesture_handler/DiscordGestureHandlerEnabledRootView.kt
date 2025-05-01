@@ -39,10 +39,10 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
       val var5: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
       while (var5.hasNext()) {
-         val var4: Entry = var5.next() as Entry;
-         val var3: Function1 = var4.getKey() as Function1;
-         if (var4.getValue() as java.lang.Boolean) {
-            var3.invoke(var1);
+         val var3: Entry = var5.next() as Entry;
+         val var4: Function1 = var3.getKey() as Function1;
+         if (var3.getValue() as java.lang.Boolean) {
+            var4.invoke(var1);
          } else {
             var5.remove();
          }

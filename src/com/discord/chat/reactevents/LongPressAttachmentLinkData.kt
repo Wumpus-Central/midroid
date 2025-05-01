@@ -1,14 +1,14 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
+import aa.f
+import aa.n
+import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import f8.w
+import da.C0
+import da.G
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -167,7 +167,7 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

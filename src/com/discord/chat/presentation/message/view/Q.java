@@ -7,9 +7,8 @@ import kotlin.jvm.functions.Function1;
 // $VF: synthetic class
 public final class Q implements OnClickListener {
    public final Function1 j;
-   public final String k;
 
    public final void onClick(View var1) {
-      SafetyPolicyNoticeView.g(this.j, this.k, var1);
+      ReferralView.a(this.j, var1);
    }
 }

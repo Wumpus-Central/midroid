@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData
 import com.discord.emoji_picker.EmojiPickerView.Config
-import f8.p
-import g8.n
+import h8.p
+import i8.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -199,10 +199,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          q.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
          var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var10: EmojiPickerItem = this.getItem(var2);
-         q.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
+         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var7: EmojiPickerItem = this.getItem(var2);
+         q.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockHeader) {

@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.G.a
-import g8.q
+import aa.f
+import aa.n
+import da.C0
+import da.G
+import da.G.a
+import i8.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -84,16 +84,16 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.selectedIcon;
-      val var3: java.lang.String = this.checkmarkIcon;
-      val var1: java.util.Map = this.styles;
+      val var3: java.lang.String = this.selectedIcon;
+      val var1: java.lang.String = this.checkmarkIcon;
+      val var2: java.util.Map = this.styles;
       val var4: StringBuilder = new StringBuilder();
       var4.append("PollResources(selectedIcon=");
-      var4.append(var2);
-      var4.append(", checkmarkIcon=");
       var4.append(var3);
-      var4.append(", styles=");
+      var4.append(", checkmarkIcon=");
       var4.append(var1);
+      var4.append(", styles=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

@@ -1,6 +1,6 @@
 package com.discord.security_key
 
-import O9.f
+import Q9.f
 import android.app.Activity
 import android.content.Intent
 import android.os.Build.VERSION
@@ -44,10 +44,10 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var2: CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      this.credentialManager = var2.a(var1);
+      val var3: CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 

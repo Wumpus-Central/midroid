@@ -288,6 +288,7 @@ public final class R {
       public static int learn_more;
       public static int left_bar;
       public static int link_icon;
+      public static int link_icon_title;
       public static int loading_dots;
       public static int media_view;
       public static int media_view_alt_text;
@@ -328,6 +329,7 @@ public final class R {
       public static int participants_container;
       public static int participants_info;
       public static int participants_info_container;
+      public static int participants_text;
       public static int percentage_bar_background;
       public static int percentage_bar_container;
       public static int player_container;
@@ -401,8 +403,6 @@ public final class R {
       public static int splash;
       public static int spoiler;
       public static int start_spacer;
-      public static int status_text;
-      public static int status_text_barrier;
       public static int sticker_view;
       public static int subtitle;
       public static int subtitleGradient;
@@ -480,7 +480,6 @@ public final class R {
 
    public static final class layout {
       public static int activity_bookmark_view;
-      public static int activity_instance_embed_view;
       public static int alt_text_button_view;
       public static int app_message_embed_view;
       public static int attachment_media_mosaic_container_view;

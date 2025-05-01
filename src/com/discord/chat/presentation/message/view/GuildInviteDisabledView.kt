@@ -114,7 +114,7 @@ public class GuildInviteDisabledView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var3, "onHelpArticleClicked");
       val var4: SimpleDraweeView = this.binding.itemInviteHelpIcon;
       this.binding.itemInviteHelpIcon.setContentDescription(var1);
-      var4.setOnClickListener(new I(var3, var2));
+      var4.setOnClickListener(new J(var3, var2));
    }
 
    public fun setSubtitle(subtitle: String, guildName: String) {

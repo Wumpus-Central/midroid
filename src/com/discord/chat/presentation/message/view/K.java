@@ -9,6 +9,6 @@ public final class K implements OnClickListener {
    public final Function0 j;
 
    public final void onClick(View var1) {
-      InfoLinkView.a(this.j, var1);
+      IconButtonView.a(this.j, var1);
    }
 }

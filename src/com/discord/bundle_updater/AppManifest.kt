@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.T
-import g8.q
+import aa.f
+import aa.n
+import da.C0
+import da.G
+import da.T
+import i8.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -77,15 +77,15 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
 
    public override fun toString(): String {
       val var2: AppManifestMetadata = this.metadata;
-      val var4: java.util.Map = this.hashes;
-      val var1: java.util.Map = this.patches;
+      val var1: java.util.Map = this.hashes;
+      val var4: java.util.Map = this.patches;
       val var3: StringBuilder = new StringBuilder();
       var3.append("AppManifest(metadata=");
       var3.append(var2);
       var3.append(", hashes=");
-      var3.append(var4);
-      var3.append(", patches=");
       var3.append(var1);
+      var3.append(", patches=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
@@ -173,7 +173,7 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

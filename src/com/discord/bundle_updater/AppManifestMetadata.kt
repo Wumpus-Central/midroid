@@ -1,13 +1,13 @@
 package com.discord.bundle_updater
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.h
+import aa.f
+import aa.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import f8.w
+import da.C0
+import da.G
+import da.h
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -98,21 +98,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.build;
-      val var3: java.lang.String = this.releaseName;
-      val var4: java.lang.String = this.commit;
+      val var2: java.lang.String = this.build;
+      val var5: java.lang.String = this.releaseName;
+      val var3: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AppManifestMetadata(build=");
-      var2.append(var5);
-      var2.append(", releaseName=");
-      var2.append(var3);
-      var2.append(", commit=");
-      var2.append(var4);
-      var2.append(", confirmUpdate=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AppManifestMetadata(build=");
+      var4.append(var2);
+      var4.append(", releaseName=");
+      var4.append(var5);
+      var4.append(", commit=");
+      var4.append(var3);
+      var4.append(", confirmUpdate=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -136,7 +136,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: C0 = C0.a;
-         return new KSerializer[]{C0.a, Z9.a.u(C0.a), var1, h.a};
+         return new KSerializer[]{C0.a, ba.a.u(C0.a), var1, h.a};
       }
 
       public open fun deserialize(decoder: Decoder): AppManifestMetadata {
@@ -209,7 +209,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

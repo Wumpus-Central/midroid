@@ -16,7 +16,7 @@ import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import m8.a
+import o8.a
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX

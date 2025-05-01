@@ -29,35 +29,35 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   var var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var1 = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   val var6: ImagePipelineConfig.Builder = var1.U(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Y(var2.newSmallDiskCache(var0))
       .Q(new FrescoBitmapSupplier(var0))
       .V(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
    val var3: C.a = C.n();
-   val var6: F = o.a();
-   val var4: ImagePipelineConfig.Builder = var1.W(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).R(new DefaultCacheKeyFactory() {
+   val var5: F = o.a();
+   val var4: ImagePipelineConfig.Builder = var6.W(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).R(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var5: Builder = var1.buildUpon();
-            var5.clearQuery();
+            val var2: Builder = var1.buildUpon();
+            var2.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var4: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var3 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
+                  val var5: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var4.hasNext()) {
-                     var5.appendQueryParameter(var2, var4.next() as java.lang.String);
+                  while (var5.hasNext()) {
+                     var2.appendQueryParameter(var3, var5.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var5.build();
+            var1 = var2.build();
             q.g(var1, "build(...)");
             return var1;
          }

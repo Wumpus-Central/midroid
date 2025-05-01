@@ -1,10 +1,10 @@
 package com.discord.chat.input.bridge
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
+import da.C0
+import da.G
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,17 +72,17 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
 
    public override fun toString(): String {
       val var1: java.lang.String = this.action;
-      val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.optionName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapAction(action=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", optionName=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.optionName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapAction(action=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var4);
+      var3.append(", optionName=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -151,8 +151,8 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
                }
             }
 
-            var10 = var5;
             var5 = var11;
+            var10 = var5;
          }
 
          var9.b(var8);

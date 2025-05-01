@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.executedcommand
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
-import ba.h
+import aa.f
+import aa.n
+import ba.a
+import da.G
+import da.N
+import da.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -187,7 +187,7 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

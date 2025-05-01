@@ -9,6 +9,7 @@ import com.discord.device.DevicePackage
 import com.discord.emoji_picker.react.EmojiPickerPackage
 import com.discord.fast_connect.FastConnectPackage
 import com.discord.fastest_list.react.FastestListPackage
+import com.discord.intents.IntentsPackage
 import com.discord.portals.PortalsPackage
 import com.discord.react_gesture_handler.DiscordGestureHandlerPackage
 import com.discord.safearea.SafeAreaPackage
@@ -38,7 +39,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       val var1: ArrayList = super.getPackages();
       val var2: DCDModuleProvider = DCDModuleProvider.INSTANCE;
       var1.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
@@ -149,6 +149,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
          new EmojiPickerPackage(),
          new FastConnectPackage(),
          new FastestListPackage(),
+         new IntentsPackage(),
          new PortalsPackage(),
          new SafeAreaPackage(),
          new SuspenseVisibleViewPackage(),

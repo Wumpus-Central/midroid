@@ -3,7 +3,7 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import f8.l
+import h8.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 

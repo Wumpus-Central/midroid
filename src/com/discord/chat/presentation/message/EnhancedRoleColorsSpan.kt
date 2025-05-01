@@ -17,6 +17,6 @@ public class EnhancedRoleColorsSpan(roleColors: IntArray) : CharacterStyle, Upda
 
    public open fun updateDrawState(tp: TextPaint) {
       kotlin.jvm.internal.q.h(var1, "tp");
-      var1.setShader(new LinearGradient(0.0F, 0.0F, 100.0F, 0.0F, this.roleColors, null, TileMode.MIRROR));
+      var1.setShader(new LinearGradient(0.0F, 0.0F, 150.0F, 0.0F, this.roleColors, null, TileMode.MIRROR));
    }
 }
