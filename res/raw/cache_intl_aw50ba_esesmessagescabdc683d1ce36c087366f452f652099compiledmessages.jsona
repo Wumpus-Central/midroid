@@ -1309,20 +1309,6 @@
   "TzufcX": "Sin permisos",
   "0TBExc": "¡Descubre juegos, música y otras cosas divertidas que hacer con tus amigos!",
   "bCPN5+": "Descubre nuevas aplicaciones",
-  "1dZsgo": "Ocultar atajo para Jugar",
-  "AAwS5u": [
-    "Para mostrar esto, ve a ",
-    [
-      8,
-      "$b",
-      [
-        "Ajustes de usuario ",
-        "> ",
-        "Avanzado"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Aún no se han instalado aplicaciones en este servidor",
   "oJyzCg": "En este servidor",
   "GZoV1N": "Visita nuestro Centro de ayuda para obtener más información sobre el uso y el descubrimiento de aplicaciones en Discord.",
@@ -3102,6 +3088,24 @@
     ],
     ". Esta compra no es reembolsable. Una vez que completes la compra, el artículo estará disponible para usarlo de inmediato y podrás acceder a él en los ajustes de tu perfil de usuario. Ten en cuenta que las suscripciones Nitro no son reembolsables una vez que has comprado un artículo."
   ],
+  "SKduys": [
+    "¡",
+    [
+      1,
+      "sender"
+    ],
+    " te ha regalado una decoración de avatar!"
+  ],
+  "2ZO6CA": "¡Te han regalado una decoración de avatar!",
+  "1w42T0": [
+    "¡",
+    [
+      1,
+      "sender"
+    ],
+    " te ha regalado un efecto de perfil!"
+  ],
+  "2NxdjY": "¡Te han regalado un efecto de perfil!",
   "pWG4zc": "Tienda",
   "MAS7uL": "Usar ahora",
   "eZrmtr": "¡Esta decoración ya forma parte de tu colección y puedes usarla en cualquier momento!",
@@ -37181,7 +37185,16 @@
   "GgUIfn": "¡Cachés guardadas!",
   "ZImm//": "Elige un servidor",
   "Jh8fJy": "Aplicar",
+  "VqmVqK": "Tus decoraciones",
+  "w+hNj4": "Sección para seleccionar la decoración de avatar",
+  "HykynZ": "Cambiar decoración de avatar",
+  "BVcYCw": "Cambiar decoración",
+  "/6nv6O": "Cambiar efecto de perfil",
+  "/dRfCQ": "Cambiar efecto",
   "TiLCg4": "Exclusivo de Nitro",
+  "t8CdeX": "Sección de selección de efecto de perfil",
+  "9x1v/v": "Tus efectos",
+  "1vbbeX": "Échale un vistazo a la Tienda",
   "CHf9iI": "Usar predeterminado",
   "SUnWBA": "¿Seguro que quieres cerrar sesión?",
   "aBZ/oa": "Descubrimiento",

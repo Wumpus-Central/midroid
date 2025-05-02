@@ -1303,20 +1303,6 @@
   "TzufcX": "Geen machtigingen",
   "0TBExc": "Ontdek games, muziek en andere leuke dingen om te delen met vrienden!",
   "bCPN5+": "Zoek nieuwe apps",
-  "1dZsgo": "Snelkoppeling 'Spelen' verbergen",
-  "AAwS5u": [
-    "Om dit weer zichtbaar te maken, ga je naar ",
-    [
-      8,
-      "$b",
-      [
-        "Gebruikersinstellingen ",
-        "> ",
-        "Geavanceerd"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Er zijn nog geen apps geïnstalleerd in deze server",
   "oJyzCg": "In deze server",
   "GZoV1N": "Ga naar ons Helpcentrum voor meer informatie over het gebruiken en ontdekken van apps op Discord.",
@@ -3082,6 +3068,22 @@
     ],
     " naar de sectie Virtuele goederen. Deze aankoop komt niet in aanmerking voor restitutie. Als je je aankoop hebt voltooid, is het item direct beschikbaar via de instellingen van je gebruikersprofiel. Denk eraan dat je geen geld terug kunt krijgen voor je Nitro-abonnement als je een item hebt gekocht."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " heeft je een avatarversiering gegeven!"
+  ],
+  "2ZO6CA": "Je hebt een avatarversiering cadeau gekregen!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " heeft je een profieleffect gegeven!"
+  ],
+  "2NxdjY": "Je hebt een profieleffect cadeau gekregen!",
   "pWG4zc": "Winkel",
   "MAS7uL": "Nu gebruiken",
   "eZrmtr": "Deze versiering maakt nu deel uit van je collectie en is altijd beschikbaar!",
@@ -37105,7 +37107,16 @@
   "GgUIfn": "Caches opgeslagen!",
   "ZImm//": "Kies een server",
   "Jh8fJy": "Toepassen",
+  "VqmVqK": "Je versieringen",
+  "w+hNj4": "Avatarversieringen-sectie",
+  "HykynZ": "Avatarversiering wijzigen",
+  "BVcYCw": "Versiering wijzigen",
+  "/6nv6O": "Profieleffect wijzigen",
+  "/dRfCQ": "Effect wijzigen",
   "TiLCg4": "Exclusief voor Nitro",
+  "t8CdeX": "Profieleffecten-sectie",
+  "9x1v/v": "Je effecten",
+  "1vbbeX": "Wat valt er te halen in de winkel?",
   "CHf9iI": "Standaard gebruiken",
   "SUnWBA": "Weet je zeker dat je wilt uitloggen?",
   "aBZ/oa": "Ontdekking",

@@ -1360,20 +1360,6 @@
   "TzufcX": "Žádná oprávnění",
   "0TBExc": "Objevuj hry, hudbu a další zábavné aktivity, kterým se můžeš věnovat s přáteli!",
   "bCPN5+": "Najít nové aplikace",
-  "1dZsgo": "Skrýt zástupce hraní",
-  "AAwS5u": [
-    "Pro zrušení skrytí této možnosti přejdi do nabídky ",
-    [
-      8,
-      "$b",
-      [
-        "Uživatelská nastavení",
-        "> ",
-        "Pokročilé"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Na tomto serveru zatím nebyly nainstalovány žádné aplikace",
   "oJyzCg": "Na tomto serveru",
   "GZoV1N": "Další informace o používání a vyhledávání aplikací na Discordu najdeš v našem centru nápovědy.",
@@ -3182,6 +3168,22 @@
     ],
     ". Tento nákup nelze refundovat. Jakmile nákup dokončíš, položka bude okamžitě dostupná v nastavení tvého uživatelského profilu. Nezapomeň, že jakmile zakoupíš jakoukoli položku, také předplatné Nitro se stává nerefundovatelným."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " ti daruje vzhled avataru!"
+  ],
+  "2ZO6CA": "Dostáváš darem vzhled avataru!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " ti daruje efekt profilu!"
+  ],
+  "2NxdjY": "Dostáváš darem efekt profilu!",
   "pWG4zc": "Obchod",
   "MAS7uL": "Použít teď",
   "eZrmtr": "Tento vzhled je odteď součástí tvojí sbírky a můžeš ho kdykoli použít!",
@@ -38287,7 +38289,16 @@
   "GgUIfn": "Mezipaměti zapsány!",
   "ZImm//": "Vyber si server",
   "Jh8fJy": "Použít",
+  "VqmVqK": "Tvoje vzhledy",
+  "w+hNj4": "Sekce pro výběr vzhledu avataru",
+  "HykynZ": "Změnit vzhled avataru",
+  "BVcYCw": "Změnit vzhled",
+  "/6nv6O": "Změnit efekt profilu",
+  "/dRfCQ": "Změnit efekt",
   "TiLCg4": "Exkluzivní pro Nitro",
+  "t8CdeX": "Sekce pro výběr efektu profilu",
+  "9x1v/v": "Tvoje efekty",
+  "1vbbeX": "Omrkni, co je v Obchodě",
   "CHf9iI": "Použít výchozí",
   "SUnWBA": "Určitě se chceš odhlásit?",
   "aBZ/oa": "Vyhledávání",

@@ -1288,20 +1288,6 @@
   "TzufcX": "Nessun permesso",
   "0TBExc": "Scopri giochi, musica e altre attività divertenti da fare insieme agli amici!",
   "bCPN5+": "Scopri nuove app",
-  "1dZsgo": "Nascondi scorciatoia Gioca",
-  "AAwS5u": [
-    "Per mostrare di nuovo, vai su ",
-    [
-      8,
-      "$b",
-      [
-        "Impostazioni utente ",
-        "> ",
-        "Avanzate"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "In questo server non sono ancora state installate app",
   "oJyzCg": "In questo server",
   "GZoV1N": "Visita il nostro Centro assistenza per scoprire di più su come usare e torvare le app su Discord.",
@@ -3086,6 +3072,22 @@
     ],
     ". Questo acquisto non è rimborsabile. Una volta completato l'acquisto, l'oggetto sarà immediatamente disponibile per l'uso e potrai accedervi dalle impostazioni del tuo profilo utente. Ricorda che gli abbonamenti a Nitro non sono più rimborsabili, una volta acquistato un oggetto."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " ti ha regalato una decorazione avatar!"
+  ],
+  "2ZO6CA": "Hai ricevuto una decorazione avatar in regalo!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " ti ha regalato un effetto del profilo!"
+  ],
+  "2NxdjY": "Hai ricevuto un effetto del profilo in regalo!",
   "pWG4zc": "Negozio",
   "MAS7uL": "Usa ora",
   "eZrmtr": "Questa decorazione ora fa parte della tua collezione e può essere utilizzata in qualsiasi momento!",
@@ -37106,8 +37108,17 @@
   "GgUIfn": "Cache salvate!",
   "ZImm//": "Scegli un server",
   "Jh8fJy": "Applica",
+  "VqmVqK": "Le tue decorazioni",
+  "w+hNj4": "Sezione selezione decorazioni avatar",
+  "HykynZ": "Cambia decorazione avatar",
+  "BVcYCw": "Cambia decorazione",
+  "/6nv6O": "Cambia l'effetto del profilo",
+  "/dRfCQ": "Cambia effetto",
   "TiLCg4": "Esclusiva Nitro",
-  "CHf9iI": "Usa predefinito",
+  "t8CdeX": "Sezione selezione effetto del profilo",
+  "9x1v/v": "I tuoi effetti",
+  "1vbbeX": "Guarda cosa c'è nel negozio",
+  "CHf9iI": "Usa predefinita",
   "SUnWBA": "Sei sicuro di volerti disconnettere?",
   "aBZ/oa": "Esplora",
   "KXLX7u": "Fai l'upgrade per sbloccare",

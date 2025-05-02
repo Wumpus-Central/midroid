@@ -1302,20 +1302,6 @@
   "TzufcX": "Sem permissões",
   "0TBExc": "Descubra jogos, música e outras atividades divertidas para fazer com amigos!",
   "bCPN5+": "Descubra Novos Apps",
-  "1dZsgo": "Esconder Atalho para Jogar",
-  "AAwS5u": [
-    "Para voltar a exibir vá para ",
-    [
-      8,
-      "$b",
-      [
-        "Configurações de Usuário ",
-        "> ",
-        "Avançado"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Nenhum aplicativo foi instalado neste servidor ainda",
   "oJyzCg": "Neste Servidor",
   "GZoV1N": "Visite nossa Central de Ajuda para saber mais sobre como usar e descobrir aplicativos no Discord.",
@@ -3036,7 +3022,7 @@
     ]
   ],
   "44b50t": "Essa decoração agora faz parte da sua coleção e pode ser usada a qualquer momento!",
-  "SWm2am": "O efeito do seu Perfil foi atualizado!",
+  "SWm2am": "O efeito do seu perfil foi atualizado!",
   "f9M1YG": "Este efeito agora é parte da sua coleção e pode ser utilizado a qualquer momento!",
   "HSX4HR": [
     "Prévia do efeito do perfil: ",
@@ -3097,6 +3083,14 @@
     " presenteou você com uma decoração de avatar!"
   ],
   "2ZO6CA": "Você ganhou uma decoração de avatar!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " presenteou você com um efeito de perfil!"
+  ],
+  "2NxdjY": "Você ganhou um efeito de perfil!",
   "pWG4zc": "Loja",
   "MAS7uL": "Usar agora",
   "eZrmtr": "Essa decoração entrou na sua coleção e pode ser usada a qualquer momento.",
@@ -37139,7 +37133,16 @@
   "GgUIfn": "Cache gravado!",
   "ZImm//": "Escolha um servidor",
   "Jh8fJy": "Aplicar",
+  "VqmVqK": "Suas decorações",
+  "w+hNj4": "Seção de seleção da decoração de avatar",
+  "HykynZ": "Mudar decoração de avatar",
+  "BVcYCw": "Mudar decoração",
+  "/6nv6O": "Alterar o efeito de perfil",
+  "/dRfCQ": "Alterar efeito",
   "TiLCg4": "Exclusivo do Nitro",
+  "t8CdeX": "Seção de seleção de efeito de perfil",
+  "9x1v/v": "Seus efeitos",
+  "1vbbeX": "Veja o que há na Loja",
   "CHf9iI": "Usar padrão",
   "SUnWBA": "Deseja mesmo sair?",
   "aBZ/oa": "Descobrir",

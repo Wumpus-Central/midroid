@@ -1294,20 +1294,6 @@
   "TzufcX": "Nicio permisiune",
   "0TBExc": "Descoperă jocuri, muzică și alte lucruri distractive de împărtășit cu prietenii!",
   "bCPN5+": "Găsește aplicații noi",
-  "1dZsgo": "Ascunde scurtătura Joacă",
-  "AAwS5u": [
-    "Pentru a dezvălui la loc, mergi la ",
-    [
-      8,
-      "$b",
-      [
-        "Setări utilizator ",
-        "> ",
-        "Funcții avansate"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Nu s-au instalat încă aplicații pe acest server",
   "oJyzCg": "În acest server",
   "GZoV1N": "Vizitează centrul de asistență pentru a afla mai multe despre folosirea și descoperirea aplicațiilor pe Discord.",
@@ -3070,6 +3056,22 @@
     ],
     ". Această achiziție este nerambursabilă. După finalizarea achiziția, articolul va putea fi folosit imediat și poate fi accesat din setările Profilului de utilizator. Nu uita că abonamentele Nitro devin nerambursabile din momentul în care achiziționezi un articol."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " ți-a dăruit o decorațiune pentru avatar!"
+  ],
+  "2ZO6CA": "Ai primit cadou o decorațiune pentru avatar!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " ți-a dăruit un efect pentru profil!"
+  ],
+  "2NxdjY": "Ai primit cadou un efect pentru profil!",
   "pWG4zc": "Magazin",
   "MAS7uL": "Folosește acum",
   "eZrmtr": "Această decorațiune face acum parte din colecția ta și poate fi folosită oricând!",
@@ -37060,7 +37062,16 @@
   "GgUIfn": "Cache creat!",
   "ZImm//": "Alege un server",
   "Jh8fJy": "Aplică",
+  "VqmVqK": "Decorațiunile tale",
+  "w+hNj4": "Secțiune selecție decorațiuni pentru avatar",
+  "HykynZ": "Schimbă decorațiunea pentru avatar",
+  "BVcYCw": "Schimbă decorațiunea",
+  "/6nv6O": "Schimbă efectul profilului",
+  "/dRfCQ": "Schimbă efectul",
   "TiLCg4": "Exclusiv la Nitro",
+  "t8CdeX": "Secțiunea de selecție a efectului pentru profil",
+  "9x1v/v": "Efectele tale",
+  "1vbbeX": "Vezi ce se află în Magazin",
   "CHf9iI": "Folosește setarea implicită",
   "SUnWBA": "Ești sigur că vrei să te deconectezi?",
   "aBZ/oa": "Descoperire",

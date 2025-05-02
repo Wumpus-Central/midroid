@@ -1302,20 +1302,6 @@
   "TzufcX": "Aucune permission",
   "0TBExc": "Découvre des jeux, de la musique et d'autres activités amusantes à faire avec tes amis !",
   "bCPN5+": "Trouve de nouvelles applications",
-  "1dZsgo": "Masquer le raccourci Jouer",
-  "AAwS5u": [
-    "Pour ne plus masquer cela, rends-toi dans ",
-    [
-      8,
-      "$b",
-      [
-        "Paramètres utilisateur ",
-        "> ",
-        "Avancé"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Aucune application n'a encore été installée sur ce serveur",
   "oJyzCg": "Dans ce serveur",
   "GZoV1N": "Visite notre centre d'aide pour en savoir plus sur l'utilisation et la découverte d'applications sur Discord.",
@@ -3093,6 +3079,22 @@
     ],
     ". Cet achat est non remboursable. Une fois ton achat terminé, l'objet sera disponible immédiatement et pourra être consulté dans les paramètres de ton profil d'utilisateur. Note que les abonnements Nitro deviennent non remboursables une fois que tu as acheté un objet."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " t'a offert une décoration d'avatar !"
+  ],
+  "2ZO6CA": "Tu as reçu une décoration d'avatar !",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " t'a offert un effet de profil !"
+  ],
+  "2NxdjY": "Tu as reçu un effet de profil !",
   "pWG4zc": "Boutique",
   "MAS7uL": "Utiliser maintenant",
   "eZrmtr": "Cette décoration fait maintenant partie de ta collection et peut être utilisée à tout moment !",
@@ -37128,7 +37130,16 @@
   "GgUIfn": "Mémoire cache enregistrée !",
   "ZImm//": "Choisis un serveur",
   "Jh8fJy": "Appliquer",
+  "VqmVqK": "Tes décorations",
+  "w+hNj4": "Section de sélection de décoration d'avatar",
+  "HykynZ": "Changer de décoration d'avatar",
+  "BVcYCw": "Changer la décoration",
+  "/6nv6O": "Changer d'effet de profil",
+  "/dRfCQ": "Modifier l'effet",
   "TiLCg4": "Exclusivité Nitro",
+  "t8CdeX": "Section de sélection d'effet de profil",
+  "9x1v/v": "Tes effets",
+  "1vbbeX": "Va jeter un œil à la Boutique",
   "CHf9iI": "Utiliser par défaut",
   "SUnWBA": "Tu es sûr(e) de vouloir te déconnecter ?",
   "aBZ/oa": "Découverte",

@@ -1306,20 +1306,6 @@
   "TzufcX": "Keine Berechtigungen",
   "0TBExc": "Entdecke Spiele, Musik und andere lustige Aktivitäten, die du mit Freunden machen kannst!",
   "bCPN5+": "Entdecke neue Apps",
-  "1dZsgo": "Spiele-Verknüpfungen ausblenden",
-  "AAwS5u": [
-    "Gehe zum Einblenden zu ",
-    [
-      8,
-      "$b",
-      [
-        "Benutzereinstellungen ",
-        "> ",
-        "Erweitert"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Auf diesem Server wurden noch keine Apps installiert",
   "oJyzCg": "Auf diesem Server",
   "GZoV1N": "Besuche unser Hilfecenter, um mehr über die Nutzung und Entdeckung von Apps auf Discord zu erfahren.",
@@ -3102,6 +3088,22 @@
     ],
     ". Dieser Kauf ist nicht erstattungsfähig. Sobald du deinen Kauf abgeschlossen hast, ist der Artikel sofort verfügbar und kann in deinen Nutzerprofileinstellungen eingesehen werden. Bitte beachte, dass Nitro-Abonnements nach dem Kauf eines Artikels nicht mehr erstattungsfähig sind."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " hat dir eine Avatardekoration geschenkt!"
+  ],
+  "2ZO6CA": "Du hast eine Avatardekoration geschenkt bekommen!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " hat dir einen Profil-Effekt geschenkt!"
+  ],
+  "2NxdjY": "Du hast einen Profil-Effekt geschenkt bekommen!",
   "pWG4zc": "Shop",
   "MAS7uL": "Jetzt verwenden",
   "eZrmtr": "Diese Dekoration ist jetzt Teil deiner Sammlung und kann jederzeit verwendet werden!",
@@ -37305,7 +37307,16 @@
   "GgUIfn": "Caches zwischengespeichert!",
   "ZImm//": "Server wählen",
   "Jh8fJy": "Anwenden",
+  "VqmVqK": "Deine Dekorationen",
+  "w+hNj4": "Avatardekoration-Auswahl",
+  "HykynZ": "Avatardekoration ändern",
+  "BVcYCw": "Dekoration ändern",
+  "/6nv6O": "Profil-Effekt ändern",
+  "/dRfCQ": "Effekt ändern",
   "TiLCg4": "Nur mit Nitro",
+  "t8CdeX": "Profil-Effekt-Auswahl",
+  "9x1v/v": "Deine Effekte",
+  "1vbbeX": "Entdecke das Angebot im Shop",
   "CHf9iI": "Standard verwenden",
   "SUnWBA": "Bist du sicher, dass du dich abmelden möchtest?",
   "aBZ/oa": "Entdeckung",

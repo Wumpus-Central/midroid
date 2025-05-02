@@ -1304,20 +1304,6 @@
   "TzufcX": "İzin yok",
   "0TBExc": "Arkadaşlarınla oyun, müzik ve diğer eğlenceli şeyleri keşfet!",
   "bCPN5+": "Yeni Uygulamalar Bul",
-  "1dZsgo": "Oyna Kısayolunu Gizle",
-  "AAwS5u": [
-    "Bunu göstermek için ",
-    [
-      8,
-      "$b",
-      [
-        "Kullanıcı Ayarları ",
-        "> ",
-        "Gelişmiş"
-      ]
-    ],
-    " bölümüne git."
-  ],
   "V7+xhI": "Bu sunucuya henüz uygulama kurulmamış",
   "oJyzCg": "Bu Sunucuda",
   "GZoV1N": "Discord'daki uygulamaları kullanmayı ve keşfetmeyi öğrenmek için yardım merkezimizi ziyaret et.",
@@ -3087,6 +3073,22 @@
     ],
     " ulaşabilirsin. Bu satın alma işlemi iade edilemez. Satın alma işlemini tamamladığında öğe derhal kullanıma hazır olacak ve Kullanıcı Profili ayarlarından erişilebilecektir. Nitro aboneliklerinin bir öğe satın alındıktan sonra iade edilemeyeceğini hatırlatırız."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    ", sana bir avatar dekorasyonu hediye etti!"
+  ],
+  "2ZO6CA": "Sana bir avatar dekorasyonu hediye edildi!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    ", sana bir profil efekti hediye etti!"
+  ],
+  "2NxdjY": "Sana bir profil efekti hediye edildi!",
   "pWG4zc": "Mağaza",
   "MAS7uL": "Şimdi Kullan",
   "eZrmtr": "Bu dekorasyon artık koleksiyonunun bir parçası oldu ve dilediğin zaman kullanabilirsin!",
@@ -37018,7 +37020,16 @@
   "GgUIfn": "Önbellekler Kaydedildi!",
   "ZImm//": "Bir sunucu seç",
   "Jh8fJy": "Uygula",
+  "VqmVqK": "Dekorasyonların",
+  "w+hNj4": "Avatar Dekorasyonu Seçim Bölümü",
+  "HykynZ": "Avatar Dekorasyonunu Değiştir",
+  "BVcYCw": "Dekorasyonu Değiştir",
+  "/6nv6O": "Profil Efektini Değiştir",
+  "/dRfCQ": "Efekti Değiştir",
   "TiLCg4": "Nitro'ya Özel",
+  "t8CdeX": "Profil Efekti Seçim Bölümü",
+  "9x1v/v": "Efektlerin",
+  "1vbbeX": "Mağazaya göz at",
   "CHf9iI": "Varsayılanı Kullan",
   "SUnWBA": "Çıkış yapmak istediğine emin misin?",
   "aBZ/oa": "Keşif",

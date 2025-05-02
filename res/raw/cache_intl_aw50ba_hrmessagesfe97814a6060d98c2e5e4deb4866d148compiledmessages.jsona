@@ -1330,20 +1330,6 @@
   "TzufcX": "Nema dozvola",
   "0TBExc": "Otkrivaj s prijateljima igre, glazbu i druge zabavne aktivnosti!",
   "bCPN5+": "Pronađi nove aplikacije",
-  "1dZsgo": "Sakrij prečac za igranje",
-  "AAwS5u": [
-    "Želiš li poništiti skrivanje, idi u ",
-    [
-      8,
-      "$b",
-      [
-        "Korisničke postavke ",
-        "> ",
-        "Napredno"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Još nije instalirana nijedna aplikacija na ovom serveru",
   "oJyzCg": "Na ovom serveru",
   "GZoV1N": "Posjeti naš centar za pomoć i saznaj više o upotrebi i otkrivanju aplikacija na Discordu.",
@@ -3175,6 +3161,22 @@
     ],
     ". Ova je kupnja nepovratna. Nakon što dovršiš kupnju, artikl će odmah biti dostupan za korištenje i moći ćeš mu pristupiti u postavkama svog korisničkog profila. Imaj na umu da pretplate na Nitro postaju nepovratne nakon što kupiš neki artikl."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " daruje ti ukras avatara!"
+  ],
+  "2ZO6CA": "Darovan ti je ukras avatara!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " daruje ti efekt profila!"
+  ],
+  "2NxdjY": "Darovan ti je efekt profila!",
   "pWG4zc": "Trgovina",
   "MAS7uL": "Koristi sada",
   "eZrmtr": "Ovaj je ukras sada dio tvoje kolekcije i možeš ga koristiti kada god poželiš!",
@@ -38322,7 +38324,16 @@
   "GgUIfn": "Predmemorije su spremljene!",
   "ZImm//": "Odaberite server",
   "Jh8fJy": "Primijeni",
+  "VqmVqK": "Tvoji ukrasi",
+  "w+hNj4": "Odjeljak za izbor ukrasa avatara",
+  "HykynZ": "Promijeni ukras avatara",
+  "BVcYCw": "Promijeni ukras",
+  "/6nv6O": "Promijeni efekt profila",
+  "/dRfCQ": "Promijeni efekt",
   "TiLCg4": "To ima samo Nitro",
+  "t8CdeX": "Odjeljak za odabir efekta profila",
+  "9x1v/v": "Tvoji efekti",
+  "1vbbeX": "Pogledaj što je u Trgovini",
   "CHf9iI": "Koristi zadano",
   "SUnWBA": "Jesi li siguran/na da se želiš odjaviti?",
   "aBZ/oa": "Otkrivanje",

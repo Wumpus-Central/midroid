@@ -1299,20 +1299,6 @@
   "TzufcX": "Hiányzó jogosultságok",
   "0TBExc": "Játékokat, zenéket és más szórakoztató tevékenységeket találhatsz a barátaiddal!",
   "bCPN5+": "Új alkalmazások keresése",
-  "1dZsgo": "Lejátszás billentyűparancs elrejtése",
-  "AAwS5u": [
-    "Ha vissza szeretnéd vonni az elrejtését, kövesd a következő útvonalat: ",
-    [
-      8,
-      "$b",
-      [
-        "Felhasználói beállítások ",
-        "> ",
-        "Speciális"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Még nem telepítettek alkalmazásokat erre a szerverre",
   "oJyzCg": "Ezen a szerveren",
   "GZoV1N": "Súgóközpontunkban részletesebben tájékozódhatsz az alkalmazások használatáról és felfedezéséről a Discordon.",
@@ -3089,6 +3075,22 @@
     ],
     " olvashatsz további tájékoztatást a „Virtuális áruk” területen. A vásárlás nem téríthető vissza. A vásárlás végrehajtása után a termék azonnal felhasználható, és a Felhasználói profilbeállításoknál fogod megtalálni. Fontos tudni, hogy miután vásárolsz egy terméket, a Nitro-előfizetések nem téríthetők vissza."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " profilkép-dekorációt ajándékozott neked!"
+  ],
+  "2ZO6CA": "Profilkép-dekorációt ajándékoztak neked!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " profileffektust ajándékozott neked!"
+  ],
+  "2NxdjY": "Profileffektust ajándékoztak neked!",
   "pWG4zc": "Vásárlás",
   "MAS7uL": "Most használom",
   "eZrmtr": "Ez a dekoráció már része a gyűjteményednek, és bármikor használhatod!",
@@ -37032,7 +37034,16 @@
   "GgUIfn": "Gyorsítótárak visszaírva!",
   "ZImm//": "Válassz szervert",
   "Jh8fJy": "Alkalmazás",
-  "TiLCg4": "A Nitro-előfizetés exkluzív része",
+  "VqmVqK": "Saját dekorációk",
+  "w+hNj4": "Profilkép-dekoráció kiválasztására szolgáló terület",
+  "HykynZ": "Profilkép-dekoráció módosítása",
+  "BVcYCw": "Dekoráció módosítása",
+  "/6nv6O": "Profileffektus módosítása",
+  "/dRfCQ": "Effektus módosítása",
+  "TiLCg4": "Kizárólag Nitro-előfizetéssel",
+  "t8CdeX": "Profileffektus kiválasztására szolgáló terület",
+  "9x1v/v": "Saját effektusok",
+  "1vbbeX": "Nézd meg, mi kapható az Áruházban",
   "CHf9iI": "Alapértelmezett használata",
   "SUnWBA": "Biztos, hogy kijelentkezel?",
   "aBZ/oa": "Felfedezés",

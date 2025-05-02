@@ -1306,20 +1306,6 @@
   "TzufcX": "Sin permisos",
   "0TBExc": "¡Descubre juegos, música y otras actividades divertidas para hacer con amigos!",
   "bCPN5+": "Encuentra nuevas aplicaciones",
-  "1dZsgo": "Ocultar el atajo de juegos",
-  "AAwS5u": [
-    "Para volver a mostrar esto, ve a ",
-    [
-      8,
-      "$b",
-      [
-        "Ajustes de usuario ",
-        "> ",
-        "Avanzado"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Aún no se han instalado aplicaciones en este servidor",
   "oJyzCg": "En este servidor",
   "GZoV1N": "Visita nuestro Centro de Ayuda para aprender más sobre cómo usar y descubrir aplicaciones en Discord.",
@@ -2922,7 +2908,7 @@
       "avatarDecoration"
     ]
   ],
-  "zOA4a2": "¡Tu decoración de avatar se actualizó!",
+  "zOA4a2": "¡Se actualizó tu decoración de avatar!",
   "V1AWw8": "Comprar paquete",
   "BEjTio": "Paquete no disponible",
   "AQ0Ven": "Comprar decoración",
@@ -3040,7 +3026,7 @@
       "price"
     ]
   ],
-  "gOzMv7": "¡Tu placa de nombre está actualizada!",
+  "gOzMv7": "¡Se actualizó tu placa de nombre!",
   "W3gIWF": [
     [
       1,
@@ -3063,7 +3049,7 @@
     ]
   ],
   "44b50t": "¡Esta decoración ya es parte de tu colección y puedes usarla en cualquier momento!",
-  "SWm2am": "¡Tu efecto de perfil se actualizó!",
+  "SWm2am": "¡Se actualizó tu efecto de perfil!",
   "f9M1YG": "¡Este efecto ya es parte de tu colección y puedes usarlo en cualquier momento!",
   "HSX4HR": [
     "Vista previa de efecto de perfil: ",
@@ -3122,6 +3108,24 @@
     ],
     ". Esta compra no es reembolsable. Apenas completes tu compra, el artículo estará disponible de inmediato y podrás acceder a él desde los ajustes de tu perfil de usuario. Ten en cuenta que las suscripciones Nitro dejan de ser reembolsables después de que compras un artículo."
   ],
+  "SKduys": [
+    "¡",
+    [
+      1,
+      "sender"
+    ],
+    " te ha regalado una decoración de avatar!"
+  ],
+  "2ZO6CA": "¡Te han regalado una decoración de avatar!",
+  "1w42T0": [
+    "¡",
+    [
+      1,
+      "sender"
+    ],
+    " te ha regalado un efecto de perfil!"
+  ],
+  "2NxdjY": "¡Te han regalado un efecto de perfil!",
   "pWG4zc": "Tienda",
   "MAS7uL": "Usar ahora",
   "eZrmtr": "¡Ahora esta decoración es parte de tu colección y puedes usarla cuando quieras!",
@@ -36845,7 +36849,16 @@
   "GgUIfn": "¡Caché guardado!",
   "ZImm//": "Elige un servidor",
   "Jh8fJy": "Aplicar",
+  "VqmVqK": "Tus decoraciones",
+  "w+hNj4": "Sección de selección de decoraciones de avatar",
+  "HykynZ": "Cambiar decoración de avatar",
+  "BVcYCw": "Cambiar decoración",
+  "/6nv6O": "Cambiar efecto de perfil",
+  "/dRfCQ": "Cambiar efecto",
   "TiLCg4": "Exclusivo para Nitro",
+  "t8CdeX": "Sección de selección de efecto de perfil",
+  "9x1v/v": "Tus efectos",
+  "1vbbeX": "Explora la tienda",
   "CHf9iI": "Usar predeterminado",
   "SUnWBA": "¿Realmente quieres cerrar sesión?",
   "aBZ/oa": "Descubrimiento",

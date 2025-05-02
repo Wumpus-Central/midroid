@@ -1255,6 +1255,18 @@
   "0H5OT0": "Try sending another one!",
   "NaQLEx": "Invalid Link",
   "m9hXGR": "Resolving Application",
+  "eGZFws": "Notifications are disabled for this DM.",
+  "7Sbhqa": [
+    "Notifications are disabled until ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Notifications are enabled for this DM.",
+  "GFEn8/": "Turn off",
+  "JFu44e": "Turn on",
   "9PUXpK": "Fuming",
   "IoLVi4": "Sherbet Dreamsicle",
   "nmd90t": "uwu~",
@@ -1310,20 +1322,6 @@
   "TzufcX": "No permissions",
   "0TBExc": "Discover games, music, and other fun things to do with friends!",
   "bCPN5+": "Find New Apps",
-  "1dZsgo": "Hide Play Shortcut",
-  "AAwS5u": [
-    "To unhide this, go to ",
-    [
-      8,
-      "$b",
-      [
-        "User Settings ",
-        "> ",
-        "Advanced"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "No apps have been installed in this server yet",
   "oJyzCg": "In This Server",
   "GZoV1N": "Visit our help center to learn more about using and discovering apps on Discord.",
@@ -1852,6 +1850,7 @@
   "yX8s2t": "The card was declined due to insufficient funds.",
   "3s/vDA": "Invalid captcha response. Please try again.",
   "+4Empq": "This purchase results in a negative balance and unfortunately cannot be completed. We know this is frustrating and are currently working on improving this system. Check back soon!",
+  "uhPY5u": "The purchase could not be validated. Please update your client.",
   "3jprCQ": "Unable to process change due to pending payment.",
   "sUWxgY": "You've attempted too many purchases too quickly. Please wait a bit and try again!",
   "yNYvKy": "An unknown payment source was specified. Select another and try again.",
@@ -24909,6 +24908,7 @@
   "9g5UGx": "Yes, I'm sure",
   "9SNpzs": "Turn off personalization?",
   "dEYpSk": "Phone",
+  "MD1EqK": "This phone number is unable to be associated with this account. To troubleshoot please go here:",
   "cCVXOT": "Failed to add phone number, please try again later",
   "0/ALaG": "We don’t recognize this location. We sent a confirmation code to the phone number connected to this account.",
   "w55Ocn": "Enter your confirmation code to verify it's you",
@@ -38325,6 +38325,7 @@
   "jec90t": "Next, create an account",
   "KtJgIy": "Password must be 8 or more characters.",
   "y7LSyc": "Only use letters, numbers, underscores, and periods.",
+  "w/XiOz": "You can change this at anytime.",
   "EJ26Oj": "This channel requires Push to Talk to voice chat. You will only be able to listen until you switch modes\nto Push to Talk from Voice Activity Detection.",
   "NYklho": "Push to Talk Required",
   "hFzI4u": "Nitro is in the air <3",

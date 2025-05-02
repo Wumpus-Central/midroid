@@ -1320,20 +1320,6 @@
   "TzufcX": "Nėra leidimų",
   "0TBExc": "Atrask žaidimų, muzikos ir kitų smagių užsiėmimų su draugais!",
   "bCPN5+": "Rask naujų programėlių",
-  "1dZsgo": "Slėpti paleidimo spartųjį klavišą",
-  "AAwS5u": [
-    "Kad tai nebebūtų slepiama, eik į ",
-    [
-      8,
-      "$b",
-      [
-        "Naudotojo nustatymai ",
-        "> ",
-        "Išplėstiniai"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Šiame serveryje kol kas neįdiegta jokių programėlių",
   "oJyzCg": "Šiame serveryje",
   "GZoV1N": "Apsilankyk mūsų pagalbos centre ir sužinok daugiau, kaip naudoti ir atrasti programėles platformoje Discord.",
@@ -3171,6 +3157,22 @@
     ],
     ". Už šį įsigijimą lėšos negali būti grąžinamos. Kai baigsi pirkimą, šią prekę galėsi naudoti iš karto, ją pasieksi savo naudotojo profilio nustatymuose. Atkreipk dėmesį, kad įsigijus prekę, lėšos už Nitro prenumeratą nebegali būti grąžinamos."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " tau padovanojo pseudoportreto papuošimą!"
+  ],
+  "2ZO6CA": "Gavai dovanų pseudoportreto papuošimą!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " tau padovanojo profilio efektą!"
+  ],
+  "2NxdjY": "Gavai dovanų profilio efektą!",
   "pWG4zc": "Parduotuvė",
   "MAS7uL": "Naudoti dabar",
   "eZrmtr": "Šis papuošimas papildė tavo kolekciją, jį gali naudoti bet kada!",
@@ -38267,7 +38269,16 @@
   "GgUIfn": "Talpyklos išsaugotos!",
   "ZImm//": "Pasirink serverį",
   "Jh8fJy": "Taikyti",
-  "TiLCg4": "Tik Nitro",
+  "VqmVqK": "Tavo papuošimai",
+  "w+hNj4": "Pseudoportreto papuošimų pasirinkimo skyrius",
+  "HykynZ": "Keisti pseudoportreto papuošimą",
+  "BVcYCw": "Keisti papuošimą",
+  "/6nv6O": "Keisti profilio efektą",
+  "/dRfCQ": "Keisti efektą",
+  "TiLCg4": "Tik su Nitro",
+  "t8CdeX": "Profilio efektų pasirinkimo skiltis",
+  "9x1v/v": "Tavo efektai",
+  "1vbbeX": "Pažiūrėk, ko yra Parduotuvėje",
   "CHf9iI": "Naudoti numatytąjį",
   "SUnWBA": "Ar tikrai nori atsijungti?",
   "aBZ/oa": "Atradimas",

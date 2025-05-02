@@ -1300,20 +1300,6 @@
   "TzufcX": "Ingen tillatelser",
   "0TBExc": "Finn spill, musikk og annet morsomt du kan gjøre med venner!",
   "bCPN5+": "Finn nye apper",
-  "1dZsgo": "Skjul spillsnarvei",
-  "AAwS5u": [
-    "Gå til ",
-    [
-      8,
-      "$b",
-      [
-        "Brukerinnstillinger ",
-        "> ",
-        "Avansert"
-      ]
-    ],
-    " for å vise dette igjen."
-  ],
   "V7+xhI": "Ingen apper er installert på serveren",
   "oJyzCg": "På denne serveren",
   "GZoV1N": "Gå til hjelpesenteret hvis du vil vite mer om å finne og bruke apper på Discord.",
@@ -3077,6 +3063,22 @@
     ],
     ". Kjøpet kan ikke angres. Når kjøpet er fullført, får du umiddelbart tilgang til å bruke varen, som du finner i brukerprofilinnstillingene. Vi gjør oppmerksom på at kjøp av varer medfører at kjøp av Nitro-abonnement ikke kan angres."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " ga deg en avatardekorasjon!"
+  ],
+  "2ZO6CA": "Du har fått en avatardekorasjon i gave!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " ga deg en profileffekt!"
+  ],
+  "2NxdjY": "Du har fått en profileffekt i gave!",
   "pWG4zc": "Butikk",
   "MAS7uL": "Bruk nå",
   "eZrmtr": "Nå har du fått denne dekorasjonen i samlingen. Du kan bruke den når som helst!",
@@ -37019,7 +37021,16 @@
   "GgUIfn": "Lagret til buffer!",
   "ZImm//": "Velg en server",
   "Jh8fJy": "Bruk",
+  "VqmVqK": "Dekorasjonene dine",
+  "w+hNj4": "Valg av avatardekorasjon",
+  "HykynZ": "Bytt avatardekorasjon",
+  "BVcYCw": "Bytt dekorasjon",
+  "/6nv6O": "Bytt profileffekt",
+  "/dRfCQ": "Bytt effekt",
   "TiLCg4": "Eksklusivt for Nitro",
+  "t8CdeX": "Del for valg av profileffekt",
+  "9x1v/v": "Effektene dine",
+  "1vbbeX": "Se hva som er i butikken",
   "CHf9iI": "Bruk standard",
   "SUnWBA": "Er du sikker på at du vil logge ut?",
   "aBZ/oa": "Oppdagelse",

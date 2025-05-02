@@ -1347,20 +1347,6 @@
   "TzufcX": "Brak uprawnień",
   "0TBExc": "Odkryj gry, muzykę i inne wspaniałe treści, których możesz doświadczyć razem ze znajomymi!",
   "bCPN5+": "Znajdź nowe aplikacje",
-  "1dZsgo": "Ukryj skrót do grania",
-  "AAwS5u": [
-    "Aby to odkryć, otwórz ",
-    [
-      8,
-      "$b",
-      [
-        "Ustawienia użytkownika ",
-        "> ",
-        "Zaawansowane"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Na tym serwerze nie zainstalowano jeszcze żadnych aplikacji",
   "oJyzCg": "Na tym serwerze",
   "GZoV1N": "Odwiedź nasze centrum pomocy, aby dowiedzieć się więcej na temat używania i wyszukiwania aplikacji na Discordzie.",
@@ -3194,6 +3180,24 @@
     ],
     ". Zakup nie podlega zwrotowi. Po dokonaniu zakupu przedmiot będzie natychmiast dostępny w ustawieniach Twojego profilu użytkownika. Pamiętaj, że subskrypcje Nitro przestają podlegać zwrotowi po zakupie przedmiotu."
   ],
+  "SKduys": [
+    "Użytkownik ",
+    [
+      1,
+      "sender"
+    ],
+    " podarował Ci dekorację awatara!"
+  ],
+  "2ZO6CA": "Otrzymujesz w prezencie dekorację awatara!",
+  "1w42T0": [
+    "Użytkownik ",
+    [
+      1,
+      "sender"
+    ],
+    " podarował Ci efekt profilu!"
+  ],
+  "2NxdjY": "Otrzymujesz w prezencie efekt profilu!",
   "pWG4zc": "Sklep",
   "MAS7uL": "Użyj teraz",
   "eZrmtr": "Ta dekoracja jest teraz częścią Twojej kolekcji i może być używana w dowolnym momencie!",
@@ -38142,7 +38146,16 @@
   "GgUIfn": "Pamięć podręczna zapisana!",
   "ZImm//": "Wybierz serwer",
   "Jh8fJy": "Zastosuj",
+  "VqmVqK": "Twoje dekoracje",
+  "w+hNj4": "Sekcja wyboru dekoracji awatara",
+  "HykynZ": "Zmień dekorację awatara",
+  "BVcYCw": "Zmień dekorację",
+  "/6nv6O": "Zmień efekt profilu",
+  "/dRfCQ": "Zmień efekt",
   "TiLCg4": "Tylko w Nitro",
+  "t8CdeX": "Sekcja wyboru efektu profilu",
+  "9x1v/v": "Twoje efekty",
+  "1vbbeX": "Zobacz zawartość sklepu",
   "CHf9iI": "Użyj domyślnych",
   "SUnWBA": "Na pewno chcesz się wylogować?",
   "aBZ/oa": "Wyszukiwa|nie",

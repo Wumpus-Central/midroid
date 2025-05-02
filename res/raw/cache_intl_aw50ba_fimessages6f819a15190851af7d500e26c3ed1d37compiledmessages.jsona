@@ -1300,20 +1300,6 @@
   "TzufcX": "Ei käyttöoikeuksia",
   "0TBExc": "Löydä pelejä, musiikkia ja muita hauskoja juttuja, joita voit tehdä kavereiden kanssa!",
   "bCPN5+": "Etsi uusia sovelluksia",
-  "1dZsgo": "Piilota pelaamisen pikakuvake",
-  "AAwS5u": [
-    "Poista piilotus valitsemalla ",
-    [
-      8,
-      "$b",
-      [
-        "Käyttäjäasetukset ",
-        "> ",
-        "Lisäasetukset"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Tälle palvelimelle ei ole asennettu vielä sovelluksia",
   "oJyzCg": "Tällä palvelimella",
   "GZoV1N": "Ohjekeskuksessamme on lisätietoja sovellusten etsimisestä ja hakemisesta Discordista.",
@@ -3086,6 +3072,22 @@
     ],
     ". Tästä ostoksesta ei myönnetä hyvityksiä. Kun olet vahvistanut ostoksen, tuote on heti käytettävissä ja sen voi ottaa käyttöön Käyttäjäprofiili-asetuksista. Huomaa, että Nitro-tilauksista ei voida myöntää enää hyvityksiä, kun ne on ostettu."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " lahjoitti sinulle avatar-koristeen!"
+  ],
+  "2ZO6CA": "Olet saanut lahjaksi avatar-koristeen!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " lahjoitti sinulle profiilitehosteen!"
+  ],
+  "2NxdjY": "Olet saanut lahjaksi profiilitehosteen!",
   "pWG4zc": "Kauppa",
   "MAS7uL": "Käytä nyt",
   "eZrmtr": "Tämä koriste on nyt osa kokoelmaasi, ja sitä voi käyttää milloin tahansa.",
@@ -37122,7 +37124,16 @@
   "GgUIfn": "Välimuistit tallennettu!",
   "ZImm//": "Valitse palvelin",
   "Jh8fJy": "Käytä",
+  "VqmVqK": "Koristeesi",
+  "w+hNj4": "Avatar-koristeiden valintaosio",
+  "HykynZ": "Vaihda avatar-koriste",
+  "BVcYCw": "Muuta koristeita",
+  "/6nv6O": "Vaihda profiilitehoste",
+  "/dRfCQ": "Vaihda tehoste",
   "TiLCg4": "Vain Nitrossa",
+  "t8CdeX": "Profiilitehosteen valintaosio",
+  "9x1v/v": "Omat tehosteet",
+  "1vbbeX": "Katso, mitä kaupasta löytyy",
   "CHf9iI": "Käytä oletusta",
   "SUnWBA": "Haluatko varmasti kirjautua ulos?",
   "aBZ/oa": "Haku",

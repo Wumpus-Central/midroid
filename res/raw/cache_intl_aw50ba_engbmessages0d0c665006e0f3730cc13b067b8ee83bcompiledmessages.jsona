@@ -1299,20 +1299,6 @@
   "TzufcX": "No permissions",
   "0TBExc": "Discover games, music and other fun things to do with friends!",
   "bCPN5+": "Find New Apps",
-  "1dZsgo": "Hide Play Shortcut",
-  "AAwS5u": [
-    "To unhide this, go to ",
-    [
-      8,
-      "$b",
-      [
-        "User Settings ",
-        "> ",
-        "Advanced"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "No apps have been installed in this server yet",
   "oJyzCg": "In This Server",
   "GZoV1N": "Visit our Help Centre to learn more about using and discovering apps on Discord.",
@@ -2890,7 +2876,7 @@
       "avatarDecoration"
     ]
   ],
-  "zOA4a2": "Your avatar decoration is updated!",
+  "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
@@ -3006,7 +2992,7 @@
       "price"
     ]
   ],
-  "gOzMv7": "Your nameplate is updated!",
+  "gOzMv7": "Your Nameplate is updated!",
   "W3gIWF": [
     [
       1,
@@ -3029,7 +3015,7 @@
     ]
   ],
   "44b50t": "This decoration is now part of your collection and can be used at any time!",
-  "SWm2am": "Your profile effect is updated!",
+  "SWm2am": "Your Profile Effect is updated!",
   "f9M1YG": "This effect is now part of your collection and can be used at any time!",
   "HSX4HR": [
     "Profile effect preview: ",
@@ -3082,6 +3068,22 @@
     ],
     ". This purchase is non-refundable. Once you complete your purchase, the item will be available for use immediately and can be accessed in your User Profile settings. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " gifted you an Avatar Decoration!"
+  ],
+  "2ZO6CA": "You have been gifted an Avatar Decoration!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " gifted you a Profile Effect!"
+  ],
+  "2NxdjY": "You have been gifted a Profile Effect!",
   "pWG4zc": "Shop",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at any time!",
@@ -37036,7 +37038,16 @@
   "GgUIfn": "Caches Written!",
   "ZImm//": "Choose a server",
   "Jh8fJy": "Apply",
+  "VqmVqK": "Your Decorations",
+  "w+hNj4": "Avatar Decoration Selection Section",
+  "HykynZ": "Change Avatar Decoration",
+  "BVcYCw": "Change Decoration",
+  "/6nv6O": "Change Profile Effect",
+  "/dRfCQ": "Change Effect",
   "TiLCg4": "Exclusive to Nitro",
+  "t8CdeX": "Profile Effect Selection Section",
+  "9x1v/v": "Your Effects",
+  "1vbbeX": "See What's in Shop",
   "CHf9iI": "Use Default",
   "SUnWBA": "Are you sure you want to log out?",
   "aBZ/oa": "Discovery",

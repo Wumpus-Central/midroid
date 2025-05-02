@@ -1307,20 +1307,6 @@
   "TzufcX": "Không có quyền",
   "0TBExc": "Khám phá các trò chơi, âm nhạc và các thứ thú vị khác để làm với bạn bè!",
   "bCPN5+": "Tìm ứng dụng mới",
-  "1dZsgo": "Ẩn Lối Tắt Chơi Game",
-  "AAwS5u": [
-    "Để bỏ ẩn nội dung này, hãy tới ",
-    [
-      8,
-      "$b",
-      [
-        "Thiết Lập Người Dùng ",
-        "> ",
-        "Nâng Cao"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Chưa có ứng dụng nào được cài đặt trên máy chủ này",
   "oJyzCg": "Trong máy chủ này",
   "GZoV1N": "Hãy truy cập trung tâm trợ giúp để tìm hiểu thêm về việc sử dụng và khám phá các ứng dụng trên Discord.",
@@ -2908,7 +2894,7 @@
       "avatarDecoration"
     ]
   ],
-  "zOA4a2": "Trang trí ảnh đại diện của bạn đã được cập nhật!",
+  "zOA4a2": "Trang Trí Ảnh Đại Diện của bạn đã được cập nhật!",
   "V1AWw8": "Mua gói",
   "BEjTio": "Gói không khả dụng",
   "AQ0Ven": "Mua trang trí",
@@ -3104,6 +3090,22 @@
     ],
     ". Đây là giao dịch mua không thể hoàn tiền. Sau khi bạn hoàn tất giao dịch mua, vật phẩm sẽ có thể sử dụng ngay lập tức và bạn có thể truy cập vật phẩm trong cài đặt Hồ Sơ Người Dùng của mình. Lưu ý rằng gói đăng ký Nitro sẽ không được hoàn tiền sau khi bạn đã mua một vật phẩm."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " đã tặng bạn một Trang Trí Ảnh Đại Diện!"
+  ],
+  "2ZO6CA": "Bạn đã được tặng một Trang trí ảnh đại diện!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " đã tặng bạn một Hiệu Ứng Hồ Sơ!"
+  ],
+  "2NxdjY": "Bạn đã được tặng một Hiệu Ứng Hồ Sơ!",
   "pWG4zc": "Cửa hàng",
   "MAS7uL": "Dùng ngay",
   "eZrmtr": "Trang trí này hiện đã nằm trong bộ sưu tập của bạn và có thể được sử dụng bất kỳ lúc nào!",
@@ -37144,8 +37146,17 @@
   "23xR5+": "Đã xóa bộ nhớ cache!",
   "GgUIfn": "Đã lưu vào bộ nhớ cache!",
   "ZImm//": "Chọn một máy chủ",
-  "Jh8fJy": "Tham Gia",
+  "Jh8fJy": "Đăng ký",
+  "VqmVqK": "Trang trí của bạn",
+  "w+hNj4": "Mục Chọn Trang Trí Ảnh Đại Diện",
+  "HykynZ": "Đổi Trang Trí Ảnh Đại Diện",
+  "BVcYCw": "Thay Đổi Trang Trí",
+  "/6nv6O": "Thay đổi Hiệu Ứng Hồ Sơ",
+  "/dRfCQ": "Thay đổi hiệu ứng",
   "TiLCg4": "Dành riêng cho Nitro",
+  "t8CdeX": "Mục Chọn Hiệu Ứng Hồ Sơ",
+  "9x1v/v": "Hiệu ứng của bạn",
+  "1vbbeX": "Ghé xem Cửa hàng",
   "CHf9iI": "Sử Dụng Mặc Định",
   "SUnWBA": "Bạn có chắc muốn đăng xuất không?",
   "aBZ/oa": "Khám phá",

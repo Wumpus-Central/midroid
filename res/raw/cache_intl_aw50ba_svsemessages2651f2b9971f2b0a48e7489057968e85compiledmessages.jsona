@@ -1307,20 +1307,6 @@
   "TzufcX": "Inga behörigheter",
   "0TBExc": "Upptäck spel, musik och annat roligt som du kan göra ihop med dina vänner!",
   "bCPN5+": "Hitta nya appar",
-  "1dZsgo": "Dölj genvägen Spela",
-  "AAwS5u": [
-    "För att visa detta går du till ",
-    [
-      8,
-      "$b",
-      [
-        "Användarinställningar ",
-        "> ",
-        "Avancerat"
-      ]
-    ],
-    "."
-  ],
   "V7+xhI": "Det finns inga appar installerade på den här servern än",
   "oJyzCg": "På den här servern",
   "GZoV1N": "Besök vårt hjälpcenter för att lära dig mer om hur man använder och upptäcker appar på Discord.",
@@ -3095,6 +3081,22 @@
     ],
     ". Detta köp är ej återbetalningsbart. När du har genomfört köpet hamnar föremålet i inställningarna för din användarprofil och kan börja användas direkt. Obs! Nitro-prenumerationer blir ej återbetalningsbara när du köper ett föremål."
   ],
+  "SKduys": [
+    [
+      1,
+      "sender"
+    ],
+    " gav dig en avatardekoration i gåva!"
+  ],
+  "2ZO6CA": "Du har fått en avatardekoration!",
+  "1w42T0": [
+    [
+      1,
+      "sender"
+    ],
+    " gav dig en profileffekt i gåva!"
+  ],
+  "2NxdjY": "Du har fått en profileffekt!",
   "pWG4zc": "Butik",
   "MAS7uL": "Använd nu",
   "eZrmtr": "Den här dekorationen är nu en del av din samling och kan användas när som helst!",
@@ -37012,8 +37014,17 @@
   "23xR5+": "Cache-minnen har rensats!",
   "GgUIfn": "Cachar sparade!",
   "ZImm//": "Välj en server",
-  "Jh8fJy": "Tillämpa",
+  "Jh8fJy": "Använd",
+  "VqmVqK": "Dina dekorationer",
+  "w+hNj4": "Sektion för avatardekorationsval",
+  "HykynZ": "Ändra avatardekoration",
+  "BVcYCw": "Ändra dekoration",
+  "/6nv6O": "Ändra profileffekt",
+  "/dRfCQ": "Ändra effekt",
   "TiLCg4": "Exklusiv för Nitro",
+  "t8CdeX": "Sektion för profileffektsval",
+  "9x1v/v": "Dina effekter",
+  "1vbbeX": "Se vad som finns i butiken",
   "CHf9iI": "Använd standard",
   "SUnWBA": "Är du säker på att du vill logga ut?",
   "aBZ/oa": "Identifiering",
