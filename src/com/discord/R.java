@@ -1941,6 +1941,7 @@ public final class R {
       public static int intl_messages_enuscompiledmessages;
       public static int intl_messages_internationalcompiledmessages;
       public static int intl_messages_untranslatedcompiledmessages;
+      public static int modules_activity_privacy_activityprivacycompiledmessages;
       public static int modules_activity_privacy_usersettingsactivitysharingredesigncompiledmessages;
       public static int modules_clicker_game_clickergamecompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;

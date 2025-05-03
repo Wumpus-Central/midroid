@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 279205
-  versionName: 279.5 - Alpha
+  versionCode: 279206
+  versionName: 279.6 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -416,6 +416,7 @@ doNotCompress:
 - res/raw/design_components_lottieicon_native_generated_lotties_youtab.lottie
 - res/raw/design_intl_manacompiledmessages.jsona
 - res/raw/emojis_json.gz
+- res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
 - res/raw/modules_activity_privacy_usersettingsactivitysharingredesigncompiledmessages.jsona
 - res/raw/modules_clicker_game_clickergamecompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
