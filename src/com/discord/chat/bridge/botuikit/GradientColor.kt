@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import Y9.f
-import Y9.n
-import ba.F
-import ba.G
-import ba.N
-import ba.G.a
+import aa.f
+import aa.n
+import da.F
+import da.G
+import da.N
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,17 +73,17 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
    }
 
    public override fun toString(): String {
-      val var3: Int = this.r;
-      val var4: Int = this.g;
-      val var2: Int = this.b;
+      val var4: Int = this.r;
+      val var2: Int = this.g;
+      val var3: Int = this.b;
       val var1: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("GradientColor(r=");
-      var5.append(var3);
-      var5.append(", g=");
       var5.append(var4);
-      var5.append(", b=");
+      var5.append(", g=");
       var5.append(var2);
+      var5.append(", b=");
+      var5.append(var3);
       var5.append(", a=");
       var5.append(var1);
       var5.append(")");
@@ -119,28 +119,26 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
          val var10: c = var1.c(var9);
          var var2: Float;
          var var4: Int;
-         var var6: Int;
-         var var13: Int;
-         var var15: Int;
+         var var5: Int;
+         val var7: Int;
+         var var8: Int;
          if (var10.y()) {
-            var13 = var10.k(var9, 0);
-            var15 = var10.k(var9, 1);
+            var4 = var10.k(var9, 0);
+            var7 = var10.k(var9, 1);
             val var3: Int = var10.k(var9, 2);
             var2 = var10.G(var9, 3);
-            var4 = 15;
-            var6 = var13;
-            var13 = var15;
-            var15 = var3;
+            var5 = 15;
+            var8 = var3;
          } else {
             var2 = 0.0F;
-            var var16: Boolean = true;
-            var6 = 0;
-            var13 = 0;
+            var var14: Boolean = true;
+            var var6: Int = 0;
+            var5 = 0;
             var4 = 0;
             var var11: Int = 0;
 
-            while (var16) {
-               val var8: Int = var10.x(var9);
+            while (var14) {
+               var8 = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
                      if (var8 != 1) {
@@ -152,7 +150,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                            var2 = var10.G(var9, 3);
                            var11 |= 8;
                         } else {
-                           var13 = var10.k(var9, 2);
+                           var5 = var10.k(var9, 2);
                            var11 |= 4;
                         }
                      } else {
@@ -164,17 +162,18 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
                      var11 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var14 = false;
                }
             }
 
-            var15 = var13;
-            var13 = var4;
-            var4 = var11;
+            var8 = var5;
+            var7 = var4;
+            var4 = var6;
+            var5 = var11;
          }
 
          var10.b(var9);
-         return new GradientColor(var4, var6, var13, var15, var2, null);
+         return new GradientColor(var5, var4, var7, var8, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: GradientColor) {
@@ -187,7 +186,7 @@ public data class GradientColor(r: Int, g: Int, b: Int, a: Float) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

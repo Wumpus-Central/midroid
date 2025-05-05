@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.view.media
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import f8.l
+import h8.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import y5.f

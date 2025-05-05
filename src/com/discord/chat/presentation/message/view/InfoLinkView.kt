@@ -53,6 +53,6 @@ public class InfoLinkView(context: Context, attrs: AttributeSet? = null) : Frame
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var7: ConstraintLayout = this.binding.infoLinkContainer;
       kotlin.jvm.internal.q.g(this.binding.infoLinkContainer, "infoLinkContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new K(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new L(var3), 1, null);
    }
 }

@@ -103,14 +103,14 @@ public inline fun SpannableStringBuilder.wrapIn(vararg spans: Any?, priority: In
    q.h(var0, "<this>");
    q.h(var1, "spans");
    q.h(var3, "action");
-   val var5: Int = var0.length();
+   val var6: Int = var0.length();
    var3.invoke(var0);
-   val var6: Int = var1.length;
+   val var5: Int = var1.length;
 
-   for (int var4 = 0; var4 < var6; var4++) {
+   for (int var4 = 0; var4 < var5; var4++) {
       val var7: Any = var1[var4];
       if (var1[var4] != null) {
-         var0.setSpan(var7, var5, var0.length(), var2 shl 16 or 33);
+         var0.setSpan(var7, var6, var0.length(), var2 shl 16 or 33);
       }
    }
 
@@ -121,14 +121,14 @@ public inline fun SpannableStringBuilder.wrapIn(vararg spans: Any?, action: (Spa
    q.h(var0, "<this>");
    q.h(var1, "spans");
    q.h(var2, "action");
-   val var5: Int = var0.length();
+   val var4: Int = var0.length();
    var2.invoke(var0);
-   val var4: Int = var1.length;
+   val var5: Int = var1.length;
 
-   for (int var3 = 0; var3 < var4; var3++) {
+   for (int var3 = 0; var3 < var5; var3++) {
       val var6: Any = var1[var3];
       if (var1[var3] != null) {
-         var0.setSpan(var6, var5, var0.length(), 33);
+         var0.setSpan(var6, var4, var0.length(), 33);
       }
    }
 

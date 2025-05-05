@@ -133,18 +133,18 @@ public data class MessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var6: Message = this.message;
-      val var5: MessageFrame = this.messageFrame;
+      val var8: Message = this.message;
+      val var6: MessageFrame = this.messageFrame;
       val var7: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
       val var3: BackgroundHighlight = this.backgroundHighlight;
-      val var8: Int = this.reactTag;
+      val var5: Int = this.reactTag;
       val var2: Boolean = this.renderContentOnly;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MessageItem(message=");
-      var4.append(var6);
+      var4.append(var8);
       var4.append(", messageFrame=");
-      var4.append(var5);
+      var4.append(var6);
       var4.append(", messageContext=");
       var4.append(var7);
       var4.append(", allowChildGestures=");
@@ -152,7 +152,7 @@ public data class MessageItem(message: Message,
       var4.append(", backgroundHighlight=");
       var4.append(var3);
       var4.append(", reactTag=");
-      var4.append(var8);
+      var4.append(var5);
       var4.append(", renderContentOnly=");
       var4.append(var2);
       var4.append(")");

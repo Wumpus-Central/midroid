@@ -28,8 +28,8 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import f8.l
-import f8.o
+import h8.l
+import h8.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.E

@@ -5,7 +5,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
-import g8.n
+import i8.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -168,7 +168,7 @@ public fun ReadableArray.toIntList(): List<Int> {
 
 public fun ReadableArray.toJson(): JSONArray {
    q.h(var0, "<this>");
-   val var4: JSONArray = new JSONArray();
+   val var5: JSONArray = new JSONArray();
    val var2: Int = var0.size();
 
    for (int var1 = 0; var1 < var2; var1++) {
@@ -178,23 +178,23 @@ public fun ReadableArray.toJson(): JSONArray {
             if (var3 != 4) {
                if (var3 != 5) {
                   if (var3 == 6) {
-                     var4.put(toJson(var0.getArray(var1)));
+                     var5.put(toJson(var0.getArray(var1)));
                   }
                } else {
-                  var4.put(NativeMapExtensionsKt.toJson(var0.getMap(var1)));
+                  var5.put(NativeMapExtensionsKt.toJson(var0.getMap(var1)));
                }
             } else {
-               var4.put(var0.getString(var1));
+               var5.put(var0.getString(var1));
             }
          } else {
-            var4.put(var0.getDouble(var1));
+            var5.put(var0.getDouble(var1));
          }
       } else {
-         var4.put(var0.getBoolean(var1));
+         var5.put(var0.getBoolean(var1));
       }
    }
 
-   return var4;
+   return var5;
 }
 
 public fun ReadableArray.toJsonString(): String {

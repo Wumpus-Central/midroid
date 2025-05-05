@@ -10,7 +10,7 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
-import f8.w
+import h8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

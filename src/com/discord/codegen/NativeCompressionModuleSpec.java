@@ -31,24 +31,24 @@ public abstract class NativeCompressionModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var1 = new HashSet<>(Arrays.asList("supportsZstd"));
-         HashSet var3 = new HashSet();
-         HashSet var2 = new HashSet(var4.keySet());
-         var2.removeAll(var1);
-         var2.removeAll(var3);
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
+         HashSet var4 = new HashSet<>(Arrays.asList("supportsZstd"));
+         HashSet var2 = new HashSet();
+         HashSet var3 = new HashSet(var1.keySet());
+         var3.removeAll(var4);
+         var3.removeAll(var2);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var1.removeAll(var4.keySet());
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
+         var4.removeAll(var1.keySet());
+         if (!var4.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
          }
       }
 
-      return var4;
+      return var1;
    }
 
    public String getName() {

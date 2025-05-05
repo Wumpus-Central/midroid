@@ -59,7 +59,7 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       var3.setSubtitle(var2);
       var3.setSubtitleColor(var4.getSubtitleColor());
       var3.setSubtitleIcon(var4.getChannelIcon());
-      var3.setClickListeners(var4.getCanBeAccepted(), new p(this, var1), new q(this, var1));
+      var3.setClickListeners(var4.getCanBeAccepted(), new o(this, var1), new p(this, var1));
       var3.setButtonText(var4.getAcceptLabelText());
       var3.setButtonTextColor(var4.getAcceptLabelColor());
       var3.setButtonBackgroundColor(var4.getAcceptLabelBackgroundColor());

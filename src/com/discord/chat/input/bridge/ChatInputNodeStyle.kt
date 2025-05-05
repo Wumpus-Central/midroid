@@ -1,11 +1,11 @@
 package com.discord.chat.input.bridge
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.G
-import ba.N
+import aa.f
+import aa.n
+import ba.a
 import com.discord.span.utilities.common.BackgroundStyle
+import da.G
+import da.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -99,21 +99,21 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var5: Int = this.fontSize;
+      val var2: Int = this.fontSize;
       val var1: Int = this.color;
-      val var4: BackgroundStyle = this.backgroundStyle;
-      val var2: ChatInputNodeFontWeight = this.fontWeight;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChatInputNodeStyle(fontSize=");
-      var3.append(var5);
-      var3.append(", color=");
-      var3.append(var1);
-      var3.append(", backgroundStyle=");
-      var3.append(var4);
-      var3.append(", fontWeight=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: BackgroundStyle = this.backgroundStyle;
+      val var5: ChatInputNodeFontWeight = this.fontWeight;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChatInputNodeStyle(fontSize=");
+      var4.append(var2);
+      var4.append(", color=");
+      var4.append(var1);
+      var4.append(", backgroundStyle=");
+      var4.append(var3);
+      var4.append(", fontWeight=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -146,26 +146,27 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          val var10: Array<KSerializer> = ChatInputNodeStyle.access$get$childSerializers$cp();
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: BackgroundStyle;
          var var7: Int;
          var var11: Any;
          if (var9.y()) {
             var7 = var9.v(var8, 0, N.a, null) as Int;
-            var3 = var9.k(var8, 1);
+            val var2: Int = var9.k(var8, 1);
             var6 = var9.v(var8, 2, BackgroundStyle.$serializer.INSTANCE, null) as BackgroundStyle;
             var11 = var9.v(var8, 3, var10[3], null) as ChatInputNodeFontWeight;
-            var2 = 15;
+            var4 = 15;
+            var3 = var2;
          } else {
-            var var4: Boolean = true;
-            var2 = 0;
+            var var13: Boolean = true;
+            var var12: Int = 0;
             var7 = null;
             var6 = null;
             var11 = null;
             var3 = 0;
 
-            while (var4) {
+            while (var13) {
                val var5: Int = var9.x(var8);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -176,27 +177,29 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
                            }
 
                            var11 = var9.v(var8, 3, var10[3], var11) as ChatInputNodeFontWeight;
-                           var2 |= 8;
+                           var12 |= 8;
                         } else {
                            var6 = var9.v(var8, 2, BackgroundStyle.$serializer.INSTANCE, var6) as BackgroundStyle;
-                           var2 |= 4;
+                           var12 |= 4;
                         }
                      } else {
                         var3 = var9.k(var8, 1);
-                        var2 |= 2;
+                        var12 |= 2;
                      }
                   } else {
                      var7 = var9.v(var8, 0, N.a, var7) as Int;
-                     var2 |= 1;
+                     var12 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var13 = false;
                }
             }
+
+            var4 = var12;
          }
 
          var9.b(var8);
-         return new ChatInputNodeStyle(var2, var7, var3, var6, (ChatInputNodeFontWeight)var11, null);
+         return new ChatInputNodeStyle(var4, var7, var3, var6, (ChatInputNodeFontWeight)var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChatInputNodeStyle) {
@@ -209,7 +212,7 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

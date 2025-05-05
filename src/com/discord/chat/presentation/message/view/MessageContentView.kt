@@ -64,7 +64,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = f8.l.b(new Function0(this) {
+      this.shadowView$delegate = h8.l.b(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -86,13 +86,13 @@ public open class MessageContentView  public constructor(context: Context, attrs
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var7: QuoteSpan = kotlin.collections.c.G(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.c.G(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -102,8 +102,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 
@@ -149,7 +149,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
                var3 = ThemeManagerKt.getTheme().getTextLink();
             }
 
-            var4.setSpan(new ClickableSpan(var20, var3, null, null, new Function1(var5, var1) {
+            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new Function1(var5, var1) {
                final java.lang.String $messageId;
                final Function1 $onTapSeeMore;
 
@@ -163,7 +163,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
                   kotlin.jvm.internal.q.h(var1, "it");
                   this.$onTapSeeMore.invoke(MessageId.box-impl(this.$messageId));
                }
-            }, 12, null), var7, var4.length(), 33);
+            }, 124, null), var7, var4.length(), 33);
             var4.setSpan(new BoldSpan(), var7, var4.length(), 33);
          } else {
             var4.delete(var7, var4.length());

@@ -3,6 +3,8 @@ package com.discord.chat.bridge.rolecolors
 import androidx.core.graphics.c
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 
+public const val ROLE_COLORS_PATTERN_WIDTH: Float = 150.0F
+
 public fun RoleColors?.toAndroidColors(): RoleColors? {
    var var2: RoleColors = null;
    if (var0 != null) {

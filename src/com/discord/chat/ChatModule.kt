@@ -1,9 +1,8 @@
 package com.discord.chat
 
-import O9.T
-import O9.k0
+import Q9.T
+import Q9.k0
 import android.content.Context
-import ba.f
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -20,8 +19,9 @@ import com.discord.logging.PIIKt
 import com.discord.serialization.SerializerUtils
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
-import f8.s
-import f8.w
+import da.f
+import h8.s
+import h8.w
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import java.util.concurrent.CancellationException
@@ -37,7 +37,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
 import kotlinx.serialization.json.Json
-import l8.b
+import n8.b
 import org.json.JSONArray
 import org.json.JSONObject
 
@@ -152,10 +152,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           val var43: Json = ChatModule.access$getJson$cp();
-                           var1 = this.$rowsJSON;
-                           var43.a();
-                           var64 = var43.b(new f(Row.Companion.serializer()), var1) as java.util.List;
+                           var1 = ChatModule.access$getJson$cp();
+                           val var5: java.lang.String = this.$rowsJSON;
+                           var1.a();
+                           var64 = var1.b(new f(Row.Companion.serializer()), var5) as java.util.List;
                            if (this.$scrollDataJSON != null) {
                               val var23: Json = ChatModule.access$getJson$cp();
                               val var44: java.lang.String = this.$scrollDataJSON;
@@ -168,7 +168,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            CrashReporting.addBreadcrumb$default(
                               CrashReporting.INSTANCE,
                               "Bad row update",
-                              g8.q.l(
+                              i8.q.l(
                                  new Pair[]{
                                     w.a("tag", java.lang.String.valueOf(this.$tag)),
                                     w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -187,9 +187,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            );
                            CrashReporting.captureException$default(var4, new Exception("Failed to update rows", var19), false, 2, null);
                            val var42: java.lang.String = this.$rowsJSON;
-                           var1 = var19.getMessage();
-                           q.e(var1);
-                           var3x.handleError(var42, var1, this.$changesetUpdateId);
+                           val var20: java.lang.String = var19.getMessage();
+                           q.e(var20);
+                           var3x.handleError(var42, var20, this.$changesetUpdateId);
                            break label131;
                         }
 
@@ -210,7 +210,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "Bad row update",
-                           g8.q.l(
+                           i8.q.l(
                               new Pair[]{
                                  w.a("tag", java.lang.String.valueOf(this.$tag)),
                                  w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -229,9 +229,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                         );
                         CrashReporting.captureException$default(var45, new Exception("Failed to update rows", var18), false, 2, null);
                         var47 = this.$rowsJSON;
-                        var1 = var18.getMessage();
-                        q.e(var1);
-                        var3x.handleError(var47, var1, this.$changesetUpdateId);
+                        val var24: java.lang.String = var18.getMessage();
+                        q.e(var24);
+                        var3x.handleError(var47, var24, this.$changesetUpdateId);
                         break label131;
                      }
 
@@ -251,7 +251,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               CrashReporting.addBreadcrumb$default(
                                  CrashReporting.INSTANCE,
                                  "Bad row update",
-                                 g8.q.l(
+                                 i8.q.l(
                                     new Pair[]{
                                        w.a("tag", java.lang.String.valueOf(this.$tag)),
                                        w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -270,9 +270,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               );
                               CrashReporting.captureException$default(var48, new Exception("Failed to update rows", var11), false, 2, null);
                               var47 = this.$rowsJSON;
-                              var1 = var11.getMessage();
-                              q.e(var1);
-                              var3x.handleError(var47, var1, this.$changesetUpdateId);
+                              val var25: java.lang.String = var11.getMessage();
+                              q.e(var25);
+                              var3x.handleError(var47, var25, this.$changesetUpdateId);
                               break;
                            }
 
@@ -284,7 +284,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  CrashReporting.addBreadcrumb$default(
                                     CrashReporting.INSTANCE,
                                     "Bad row update",
-                                    g8.q.l(
+                                    i8.q.l(
                                        new Pair[]{
                                           w.a("tag", java.lang.String.valueOf(this.$tag)),
                                           w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -303,9 +303,9 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  );
                                  CrashReporting.captureException$default(var50, new Exception("Failed to update rows", var10), false, 2, null);
                                  var47 = this.$rowsJSON;
-                                 var1 = var10.getMessage();
-                                 q.e(var1);
-                                 var3x.handleError(var47, var1, this.$changesetUpdateId);
+                                 val var27: java.lang.String = var10.getMessage();
+                                 q.e(var27);
+                                 var3x.handleError(var47, var27, this.$changesetUpdateId);
                                  break;
                               }
                            }
@@ -322,7 +322,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  CrashReporting.addBreadcrumb$default(
                                     CrashReporting.INSTANCE,
                                     "Bad row update",
-                                    g8.q.l(
+                                    i8.q.l(
                                        new Pair[]{
                                           w.a("tag", java.lang.String.valueOf(this.$tag)),
                                           w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -359,7 +359,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  CrashReporting.addBreadcrumb$default(
                                     CrashReporting.INSTANCE,
                                     "Bad row update",
-                                    g8.q.l(
+                                    i8.q.l(
                                        new Pair[]{
                                           w.a("tag", java.lang.String.valueOf(this.$tag)),
                                           w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -387,8 +387,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var32 = null;
                            }
 
-                           var var7: java.util.Iterator;
-                           var var9: java.util.List;
+                           var var7: java.util.List;
+                           var var9: java.util.Iterator;
                            var var67: LinkedHashMap;
                            try {
                               if (var32 !is ErrorMessage) {
@@ -400,19 +400,19 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var66: java.lang.String = var6.toString();
                               q.g(var66, "toString(...)");
                               var1 = var35.findErroringFields(var66, E.b(Message.class));
-                              var9 = PIIKt.getPIIFieldNames(E.b(Message.class));
+                              var7 = PIIKt.getPIIFieldNames(E.b(Message.class));
                               var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
                               }
 
-                              var7 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var9 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var56: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
                                  CrashReporting.INSTANCE,
                                  "Bad row update",
-                                 g8.q.l(
+                                 i8.q.l(
                                     new Pair[]{
                                        w.a("tag", java.lang.String.valueOf(this.$tag)),
                                        w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -440,12 +440,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            while (true) {
                               var var8: Entry;
                               try {
-                                 if (!var7.hasNext()) {
+                                 if (!var9.hasNext()) {
                                     break;
                                  }
 
-                                 var8 = var7.next() as Entry;
-                                 if (var9.contains(var8.getKey())) {
+                                 var8 = var9.next() as Entry;
+                                 if (var7.contains(var8.getKey())) {
                                     var67.put(var8.getKey(), "<REDACTED>");
                                     continue;
                                  }
@@ -454,7 +454,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  CrashReporting.addBreadcrumb$default(
                                     CrashReporting.INSTANCE,
                                     "Bad row update",
-                                    g8.q.l(
+                                    i8.q.l(
                                        new Pair[]{
                                           w.a("tag", java.lang.String.valueOf(this.$tag)),
                                           w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -486,7 +486,7 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                                  CrashReporting.addBreadcrumb$default(
                                     CrashReporting.INSTANCE,
                                     "Bad row update",
-                                    g8.q.l(
+                                    i8.q.l(
                                        new Pair[]{
                                           w.a("tag", java.lang.String.valueOf(this.$tag)),
                                           w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -515,19 +515,19 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            try {
                               val var69: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Message Deserialization Error", var67, null, 4, null);
-                              val var70: java.lang.String = i.o0(
+                              val var40: java.lang.String = i.o0(
                                  (var1 as SerializerUtils.SerializerError.Data).getData().keySet(), ",", null, null, 0, null, null, 62, null
                               );
-                              val var40: StringBuilder = new StringBuilder();
-                              var40.append("Could not deserialize message. Bad Fields: ");
-                              var40.append(var70);
-                              CrashReporting.captureException$default(var69, new Exception(var40.toString()), false, 2, null);
+                              val var70: StringBuilder = new StringBuilder();
+                              var70.append("Could not deserialize message. Bad Fields: ");
+                              var70.append(var40);
+                              CrashReporting.captureException$default(var69, new Exception(var70.toString()), false, 2, null);
                            } catch (var12: Exception) {
                               val var62: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
                                  CrashReporting.INSTANCE,
                                  "Bad row update",
-                                 g8.q.l(
+                                 i8.q.l(
                                     new Pair[]{
                                        w.a("tag", java.lang.String.valueOf(this.$tag)),
                                        w.a("tagRowSize", java.lang.String.valueOf(var3x.getRowCount())),
@@ -577,29 +577,29 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var2: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
-         val var1: java.lang.String = E.b(ChatModule.class).e();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var1);
-         var3.append(" invalidate()");
-         v.g(var2, new CancellationException(var3.toString()));
+         val var1: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var3: java.lang.String = E.b(ChatModule.class).j();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append(var3);
+         var2.append(" invalidate()");
+         v.g(var1, new CancellationException(var2.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
-         val var4: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
-         val var5: Int = var2;
-         val var3: Any = var4.get(var5);
+         val var5: java.util.Map = ChatModule.access$getRowUpdateLoggers$cp();
+         val var4: Int = var2;
+         val var3: Any = var5.get(var4);
          var var6: Any = var3;
          if (var3 == null) {
             var6 = new ReleaseRowLogger();
-            var4.put(var5, var6);
+            var5.put(var4, var6);
          }
 
          return var6 as RowLogger;
       }
 
       private fun withChatManager(tag: Int, block: (ChatListManager, Continuation<Unit>) -> Any?) {
-         O9.f.d(ChatModule.access$getModuleScope$cp(), null, null, new Function2(var2, this.getChatListManager(var1), null) {
+         Q9.f.d(ChatModule.access$getModuleScope$cp(), null, null, new Function2(var2, this.getChatListManager(var1), null) {
             final Function2 $block;
             final ChatListManager $manager;
             int label;
@@ -628,10 +628,10 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                   s.b(var1);
                } else {
                   s.b(var1);
-                  var1 = this.$block;
-                  val var4: ChatListManager = this.$manager;
+                  val var4: Function2 = this.$block;
+                  var1 = this.$manager;
                   this.label = 1;
-                  if (var1.invoke(var4, this) === var3) {
+                  if (var4.invoke(var1, this) === var3) {
                      return var3;
                   }
                }

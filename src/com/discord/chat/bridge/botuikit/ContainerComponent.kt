@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.botuikit
 
-import Y9.f
-import Y9.n
-import Z9.a
-import ba.C0
-import ba.G
-import ba.N
-import ba.h0
+import aa.f
+import aa.n
+import ba.a
 import com.discord.chat.bridge.spoiler.SpoilerableData
+import da.C0
+import da.G
+import da.N
+import da.h0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -176,32 +176,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var6: java.util.List = this.components;
-      val var9: Int = this.accentColor;
+      val var6: java.lang.String = this.id;
+      val var3: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var7: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var5: java.lang.String = this.spoilerDescription;
-      val var3: Int = this.themedBackgroundColor;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ContainerComponent(type=");
-      var8.append(var1);
-      var8.append(", id=");
-      var8.append(var7);
-      var8.append(", errorText=");
-      var8.append(var4);
-      var8.append(", components=");
-      var8.append(var6);
-      var8.append(", accentColor=");
-      var8.append(var9);
-      var8.append(", isSpoiler=");
-      var8.append(var2);
-      var8.append(", spoilerDescription=");
-      var8.append(var5);
-      var8.append(", themedBackgroundColor=");
-      var8.append(var3);
-      var8.append(")");
-      return var8.toString();
+      val var8: java.lang.String = this.spoilerDescription;
+      val var4: Int = this.themedBackgroundColor;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ContainerComponent(type=");
+      var9.append(var1);
+      var9.append(", id=");
+      var9.append(var6);
+      var9.append(", errorText=");
+      var9.append(var3);
+      var9.append(", components=");
+      var9.append(var5);
+      var9.append(", accentColor=");
+      var9.append(var7);
+      var9.append(", isSpoiler=");
+      var9.append(var2);
+      var9.append(", spoilerDescription=");
+      var9.append(var8);
+      var9.append(", themedBackgroundColor=");
+      var9.append(var4);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : G {
@@ -231,106 +231,105 @@ public data class ContainerComponent(type: Int,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var4: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
-         val var1: N = N.a;
-         val var2: C0 = C0.a;
-         return new KSerializer[]{N.a, C0.a, a.u(C0.a), var4[3], a.u(var1), ba.h.a, a.u(var2), a.u(var1), a.u(var2), a.u(h0.a)};
+         val var2: N = N.a;
+         val var3: C0 = C0.a;
+         return new KSerializer[]{N.a, C0.a, a.u(C0.a), var4[3], a.u(var2), da.h.a, a.u(var3), a.u(var2), a.u(var3), a.u(h0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): ContainerComponent {
          q.h(var1, "decoder");
-         val var19: SerialDescriptor = this.getDescriptor();
-         val var20: c = var1.c(var19);
-         var var16: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
-         val var8: Boolean = var20.y();
+         val var18: SerialDescriptor = this.getDescriptor();
+         val var19: c = var1.c(var18);
+         val var17: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
+         val var8: Boolean = var19.y();
          var var5: Byte = 9;
          var var2: Int;
          var var3: Int;
          var var4: Int;
+         var var10: java.lang.String;
          var var12: java.lang.String;
-         var var14: java.lang.String;
-         var var15: Any;
-         val var17: java.lang.String;
-         var var25: java.lang.String;
-         var var27: Any;
-         var var30: Void;
+         var var13: java.lang.String;
+         var var14: Any;
+         val var16: java.lang.String;
+         val var21: Void;
+         var var30: Any;
+         var var34: Any;
          if (var8) {
-            var4 = var20.k(var19, 0);
-            var14 = var20.t(var19, 1);
-            val var21: C0 = C0.a;
-            var17 = var20.v(var19, 2, C0.a, null) as java.lang.String;
-            var27 = var20.m(var19, 3, var16[3], null) as java.util.List;
+            var4 = var19.k(var18, 0);
+            var13 = var19.t(var18, 1);
+            val var20: C0 = C0.a;
+            var16 = var19.v(var18, 2, C0.a, null) as java.lang.String;
+            var30 = var19.m(var18, 3, var17[3], null) as java.util.List;
             val var9: N = N.a;
-            val var13: Int = var20.v(var19, 4, N.a, null) as Int;
-            var3 = var20.s(var19, 5);
-            var12 = var20.v(var19, 6, var21, null) as java.lang.String;
-            val var24: Int = var20.v(var19, 7, var9, null) as Int;
-            val var11: java.lang.String = var20.v(var19, 8, var21, null) as java.lang.String;
-            val var22: Void = var20.v(var19, 9, h0.a, null) as Void;
-            var2 = 1023;
-            var15 = var27;
-            var27 = var13;
-            var16 = var24;
-            var25 = var11;
-            var30 = var22;
+            var34 = var19.v(var18, 4, N.a, null) as Int;
+            var2 = var19.s(var18, 5);
+            var12 = var19.v(var18, 6, var20, null) as java.lang.String;
+            val var26: Int = var19.v(var18, 7, var9, null) as Int;
+            var10 = var19.v(var18, 8, var20, null) as java.lang.String;
+            var21 = var19.v(var18, 9, h0.a, null) as Void;
+            var3 = 1023;
+            var14 = var30;
+            var30 = var34;
+            var34 = var26;
          } else {
             var var6: Boolean = true;
             var4 = 0;
             var2 = 0;
-            var15 = null;
+            var34 = null;
             var14 = null;
+            var13 = null;
             var30 = null;
-            var var29: Any = null;
             var12 = null;
-            var27 = null;
-            var var23: java.lang.String = null;
-            var25 = null;
+            var10 = null;
+            var var22: java.lang.String = null;
+            var var27: java.lang.String = null;
             var3 = 0;
 
             while (var6) {
-               val var7: Int = var20.x(var19);
+               val var7: Int = var19.x(var18);
                switch (var7) {
                   case -1:
                      var6 = false;
                      continue;
                   case 0:
-                     var4 = var20.k(var19, 0);
+                     var4 = var19.k(var18, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var23 = var20.t(var19, 1);
+                     var22 = var19.t(var18, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var25 = var20.v(var19, 2, C0.a, var25) as java.lang.String;
+                     var27 = var19.v(var18, 2, C0.a, var27) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
-                     var27 = var20.m(var19, 3, var16[3], var27) as java.util.List;
+                     var10 = var19.m(var18, 3, var17[3], var10) as java.util.List;
                      var2 |= 8;
                      break;
                   case 4:
-                     var29 = var20.v(var19, 4, N.a, var29) as Int;
+                     var30 = var19.v(var18, 4, N.a, var30) as Int;
                      var2 |= 16;
                      break;
                   case 5:
-                     var3 = var20.s(var19, 5);
+                     var3 = var19.s(var18, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var12 = var20.v(var19, 6, C0.a, var12) as java.lang.String;
+                     var12 = var19.v(var18, 6, C0.a, var12) as java.lang.String;
                      var2 |= 64;
                      break;
                   case 7:
-                     var30 = var20.v(var19, 7, N.a, var30) as Int;
+                     var13 = var19.v(var18, 7, N.a, var13) as Int;
                      var2 |= 128;
                      var5 = 9;
                      continue;
                   case 8:
-                     var14 = var20.v(var19, 8, C0.a, var14) as java.lang.String;
+                     var14 = var19.v(var18, 8, C0.a, var14) as java.lang.String;
                      var2 |= 256;
                      continue;
                   case 9:
-                     var15 = var20.v(var19, var5, h0.a, var15) as Void;
+                     var34 = var19.v(var18, var5, h0.a, var34) as Void;
                      var2 |= 512;
                      continue;
                   default:
@@ -340,17 +339,20 @@ public data class ContainerComponent(type: Int,
                var5 = 9;
             }
 
-            var17 = var25;
-            var30 = (Void)var15;
-            var25 = var14;
-            var16 = var30;
-            var27 = var29;
-            var15 = var27;
-            var14 = var23;
+            var16 = var27;
+            var3 = var2;
+            var21 = (Void)var34;
+            var10 = (java.lang.String)var14;
+            var34 = var13;
+            var2 = var3;
+            var14 = var10;
+            var13 = var22;
          }
 
-         var20.b(var19);
-         return new ContainerComponent(var2, var4, var14, var17, (java.util.List)var15, (Integer)var27, (boolean)var3, var12, var16, var25, var30, null);
+         var19.b(var18);
+         return new ContainerComponent(
+            var3, var4, var13, var16, (java.util.List)var14, (Integer)var30, (boolean)var2, var12, (Integer)var34, var10, var21, null
+         );
       }
 
       public open fun serialize(encoder: Encoder, value: ContainerComponent) {
@@ -363,7 +365,7 @@ public data class ContainerComponent(type: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ba.G.a.a(this);
+         return da.G.a.a(this);
       }
    }
 

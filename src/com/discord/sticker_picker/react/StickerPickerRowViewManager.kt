@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
-import f8.w
+import h8.w
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

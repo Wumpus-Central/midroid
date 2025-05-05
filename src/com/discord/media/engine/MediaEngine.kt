@@ -1,8 +1,8 @@
 package com.discord.media.engine
 
-import O9.B
-import O9.K
-import O9.x0
+import Q9.B
+import Q9.K
+import Q9.x0
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -1137,7 +1137,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
             public final void invoke(Bitmap var1) {
                kotlin.jvm.internal.q.h(var1, "bitmap");
-               O9.f.d(MediaEngine.access$getCoroutineScope$p(this.this$0), null, null, new Function2(var1, this.$callback, null) {
+               Q9.f.d(MediaEngine.access$getCoroutineScope$p(this.this$0), null, null, new Function2(var1, this.$callback, null) {
                   final Bitmap $bitmap;
                   final Function1 $callback;
                   int label;
@@ -1157,19 +1157,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   }
 
                   public final Object invokeSuspend(Object var1) {
-                     val var4: Any = l8.b.e();
+                     val var4: Any = n8.b.e();
                      if (this.label != 0) {
                         if (this.label != 1) {
                            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                         }
 
-                        f8.s.b(var1);
+                        h8.s.b(var1);
                      } else {
-                        f8.s.b(var1);
-                        var var3: MediaEngine.Companion = MediaEngine.Companion;
-                        var1 = this.$bitmap;
+                        h8.s.b(var1);
+                        var1 = MediaEngine.Companion;
+                        var var3: Bitmap = this.$bitmap;
                         this.label = 1;
-                        var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
+                        var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
                         var1 = var3;
                         if (var3 === var4) {
                            return var4;
@@ -1754,7 +1754,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = l8.b.e();
+            val var10: Any = n8.b.e();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {
@@ -1763,14 +1763,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                   }
 
                   var7 = ((<unrepresentable>)var8).L$0 as java.lang.String;
-                  f8.s.b(var5);
+                  h8.s.b(var5);
                   break label27;
                }
 
                var6 = ((<unrepresentable>)var8).L$0 as ByteArray;
-               f8.s.b(var5);
+               h8.s.b(var5);
             } else {
-               f8.s.b(var5);
+               h8.s.b(var5);
                var6 = this.compressToJpegBytes(var1);
                ((<unrepresentable>)var8).L$0 = var6;
                ((<unrepresentable>)var8).label = 1;

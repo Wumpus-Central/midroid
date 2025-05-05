@@ -1,9 +1,9 @@
 package com.discord.image.fresco.tiled
 
 import D2.e
-import O9.K
-import O9.f
-import O9.k0
+import Q9.K
+import Q9.f
+import Q9.k0
 import android.content.res.Resources
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
@@ -82,7 +82,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.j1();
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.i1();
       }
    }
 

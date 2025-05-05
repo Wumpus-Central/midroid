@@ -66,14 +66,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       // 40: ifnull 63
       // 43: aload 0
       // 44: getfield com/discord/react_resource_cache/ReactResourceCache.reactResources Ljava/util/Map;
-      // 47: astore 3
-      // 48: aload 2
-      // 49: invokevirtual java/lang/Enum.name ()Ljava/lang/String;
-      // 4c: astore 4
+      // 47: astore 4
+      // 49: aload 2
+      // 4a: invokevirtual java/lang/Enum.name ()Ljava/lang/String;
+      // 4d: astore 3
       // 4e: aload 1
       // 4f: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
-      // 52: aload 3
-      // 53: aload 4
+      // 52: aload 4
+      // 54: aload 3
       // 55: aload 1
       // 56: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 5b: pop
@@ -153,34 +153,34 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       // 14: aload 1
       // 15: invokespecial com/discord/react_resource_cache/ReactResourceCache.getCache (Landroid/content/Context;)Landroid/content/SharedPreferences;
       // 18: invokeinterface android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor; 1
-      // 1d: astore 4
-      // 1f: aload 4
+      // 1d: astore 5
+      // 1f: aload 5
       // 21: invokeinterface android/content/SharedPreferences$Editor.clear ()Landroid/content/SharedPreferences$Editor; 1
       // 26: pop
       // 27: aload 2
       // 28: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 2d: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 32: astore 5
-      // 34: aload 5
-      // 36: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 3b: ifeq 6a
-      // 3e: aload 5
-      // 40: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 45: checkcast java/util/Map$Entry
-      // 48: astore 1
+      // 32: astore 1
+      // 33: aload 1
+      // 34: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 39: ifeq 6a
+      // 3c: aload 1
+      // 3d: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 42: checkcast java/util/Map$Entry
+      // 45: astore 4
+      // 47: aload 5
       // 49: aload 4
-      // 4b: aload 1
-      // 4c: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 51: checkcast java/lang/String
-      // 54: aload 1
+      // 4b: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
+      // 50: checkcast java/lang/String
+      // 53: aload 4
       // 55: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 5a: checkcast java/lang/String
       // 5d: invokeinterface android/content/SharedPreferences$Editor.putString (Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor; 3
       // 62: pop
-      // 63: goto 34
+      // 63: goto 33
       // 66: astore 1
       // 67: goto 86
-      // 6a: aload 4
+      // 6a: aload 5
       // 6c: invokeinterface android/content/SharedPreferences$Editor.apply ()V 1
       // 71: new java/util/HashMap
       // 74: astore 1

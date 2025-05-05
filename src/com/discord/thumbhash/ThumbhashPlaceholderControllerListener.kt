@@ -1,7 +1,7 @@
 package com.discord.thumbhash
 
-import O9.K
-import O9.f
+import Q9.K
+import Q9.f
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -10,14 +10,14 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import f8.s
+import h8.s
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import l8.b
+import n8.b
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {

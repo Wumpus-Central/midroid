@@ -5,7 +5,6 @@ import android.content.Context
 import android.graphics.Color
 import android.net.Uri
 import android.view.Window
-import ba.f
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.events.OnContentSizeChangeEvent
 import com.discord.chat.input.events.OnEndBlurEvent
@@ -27,6 +26,7 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
+import da.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
@@ -92,12 +92,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var2: ThemedReactContext = this.$reactContext;
-            val var5: ChatInputRootView = this.$view;
-            val var4: java.lang.String = var1.toString();
-            q.g(var4, "toString(...)");
-            var3.emitEvent(var2, var5, new OnPasteImageEvent(var4, this.$reactContext.getContentResolver().getType(var1)));
+            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var4: ThemedReactContext = this.$reactContext;
+            val var2: ChatInputRootView = this.$view;
+            val var3: java.lang.String = var1.toString();
+            q.g(var3, "toString(...)");
+            var5.emitEvent(var4, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

@@ -77,6 +77,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
                )
             );
       } else {
+         this.roleColorPaint.setShader(null);
          this.roleColorPaint
             .setColor(Color.argb(255, Color.red(var1.getPrimaryColor()), Color.green(var1.getPrimaryColor()), Color.blue(var1.getPrimaryColor())));
       }

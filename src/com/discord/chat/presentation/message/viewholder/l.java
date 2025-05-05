@@ -11,6 +11,6 @@ public final class l implements OnClickListener {
    public final long l;
 
    public final void onClick(View var1) {
-      FlaggedMessageActionBarViewHolder.b(this.j, this.k, this.l, var1);
+      FlaggedMessageActionBarViewHolder.c(this.j, this.k, this.l, var1);
    }
 }

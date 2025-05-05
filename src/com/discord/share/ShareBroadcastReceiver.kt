@@ -14,7 +14,7 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import f8.w
+import h8.w
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q
 

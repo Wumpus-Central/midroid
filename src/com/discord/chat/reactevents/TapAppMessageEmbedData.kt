@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import Y9.f
-import Y9.n
-import ba.C0
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import da.C0
+import da.G
+import da.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -87,19 +87,19 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.messageId;
       val var1: java.lang.String = this.actionId;
-      val var3: java.lang.String = this.appId;
-      val var5: java.lang.String = this.embedUrl;
+      val var2: java.lang.String = this.appId;
+      val var3: java.lang.String = this.embedUrl;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapAppMessageEmbedData(messageId=");
-      var4.append(var2);
+      var4.append(var5);
       var4.append(", actionId=");
       var4.append(var1);
       var4.append(", appId=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", embedUrl=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

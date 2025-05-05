@@ -30,7 +30,7 @@ import com.facebook.drawee.drawable.ScalingUtils
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
-import f8.l
+import h8.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -303,10 +303,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
       }
 
       public fun onBindViewHolder(emojiSize: Int, emojiMargin: Int) {
-         val var4: View = this.itemView;
-         val var3: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
-         var3.setMargins(var2, var2, var2, var2);
-         var4.setLayoutParams(var3);
+         val var3: View = this.itemView;
+         val var4: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var1, var1);
+         var4.setMargins(var2, var2, var2, var2);
+         var3.setLayoutParams(var4);
       }
    }
 

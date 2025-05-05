@@ -1,14 +1,14 @@
 package com.discord.fastest_list.react_events
 
-import Y9.f
-import Y9.n
-import ba.F
-import ba.G
-import ba.G.a
+import aa.f
+import aa.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import f8.w
+import da.F
+import da.G
+import da.G.a
+import h8.w
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -129,18 +129,20 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
          val var11: c = var1.c(var10);
          var var2: Float;
          var var3: Float;
-         var var4: Float;
          var var5: Float;
          var var7: Int;
+         var var13: Float;
          if (var11.y()) {
-            var5 = var11.G(var10, 0);
-            var3 = var11.G(var10, 1);
-            var4 = var11.G(var10, 2);
+            var13 = var11.G(var10, 0);
+            val var6: Float = var11.G(var10, 1);
+            var3 = var11.G(var10, 2);
             var2 = var11.G(var10, 3);
             var7 = 15;
+            var5 = var13;
+            var13 = var6;
          } else {
             var5 = 0.0F;
-            var4 = 0.0F;
+            var13 = 0.0F;
             var3 = 0.0F;
             var2 = 0.0F;
             var var8: Boolean = true;
@@ -156,7 +158,7 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                               throw new n(var9);
                            }
 
-                           var4 = var11.G(var10, 3);
+                           var13 = var11.G(var10, 3);
                            var7 |= 8;
                         } else {
                            var3 = var11.G(var10, 2);
@@ -175,13 +177,12 @@ internal data class OnLayoutEvent(x: Float, y: Float, width: Float, height: Floa
                }
             }
 
-            var2 = var4;
-            var4 = var3;
-            var3 = var2;
+            var13 = var2;
+            var2 = var13;
          }
 
          var11.b(var10);
-         return new OnLayoutEvent(var7, var5, var3, var4, var2, null);
+         return new OnLayoutEvent(var7, var5, var13, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnLayoutEvent) {

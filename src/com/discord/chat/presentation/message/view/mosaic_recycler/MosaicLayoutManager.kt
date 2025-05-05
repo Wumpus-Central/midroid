@@ -137,7 +137,7 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                var28 = var13 - 1;
             }
 
-            var28 = v8.a.c((float)Math.ceil((double)((float)(var8 - var28 * this.spacingPx) / 6.0F * (float)var19 + (float)var4)));
+            var28 = x8.a.c((float)Math.ceil((double)((float)(var8 - var28 * this.spacingPx) / 6.0F * (float)var19 + (float)var4)));
             this.layoutDecoratedWithMargins(var18, var28, var11, var28 + var7, var11 + var6);
             var var31: MosaicView = null;
             if (var15) {

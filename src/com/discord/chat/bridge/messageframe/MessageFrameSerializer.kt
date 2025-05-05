@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.messageframe
 
-import ca.d
-import ca.g
+import ea.d
+import ea.g
 import java.util.ArrayList
 import kotlin.jvm.internal.E
 import kotlin.jvm.internal.q

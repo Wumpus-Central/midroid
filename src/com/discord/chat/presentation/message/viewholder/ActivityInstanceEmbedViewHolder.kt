@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.viewholder
 
-import android.view.View
 import com.discord.chat.bridge.activities.ActivityInstanceEmbed
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.ActivityInstanceEmbedMessageAccessory
@@ -18,28 +17,23 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
       this.eventHandler = var2;
    }
 
-   @JvmStatic
-   fun `bind$lambda$1$lambda$0`(var0: ActivityInstanceEmbed, var1: ActivityInstanceEmbedViewHolder, var2: ActivityInstanceEmbedMessageAccessory, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "$activityInstanceEmbed");
-      kotlin.jvm.internal.q.h(var1, "this$0");
-      kotlin.jvm.internal.q.h(var2, "$activityMessageAccessory");
-      var1.eventHandler
-         .onTapActivityInstanceEmbed-Ewv8C84(var0.getApplicationId-VavddsQ(), var0.getChannelId-o4g7jtM(), var0.getInstanceId(), var2.getMessageId-3Eiw7ao());
-   }
-
    public fun bind(activityMessageAccessory: ActivityInstanceEmbedMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
       val var4: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
-      val var5: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
-      this.activityInstanceEmbedView.setStatusText(var4.getStatusText());
-      val var3: java.util.List = var4.getParticipantAvatarUris();
-      var var2: java.util.List = var3;
-      if (var3 == null) {
-         var2 = kotlin.collections.i.k();
+      val var3: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
+      if (var4.getAppMessageEmbedModel() != null) {
+         var3.initAppMessageEmbed(var4.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());
       }
 
-      var5.setParticipantAvatarUris(var2);
-      var5.setLaunchButton(var4.getButtonLabelText(), var4.getButtonBackgroundColor(), var4.getButtonDisabled() xor true, var4.getSubmitting());
-      var5.setOnLaunchButtonClickListener(new b(var4, this, var1));
+      val var2: java.util.List = var4.getParticipantAvatarUris();
+      var var5: java.util.List = var2;
+      if (var2 == null) {
+         var5 = kotlin.collections.i.k();
+      }
+
+      var3.setParticipantAvatarUris(var5);
+      if (var4.getParticipantsDescription() != null) {
+         var3.setParticipantText(var4.getParticipantsDescription());
+      }
    }
 }
