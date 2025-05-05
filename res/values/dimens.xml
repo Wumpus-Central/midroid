@@ -408,7 +408,7 @@
     <dimen name="message_horizontal_spacing">12.0dip</dimen>
     <dimen name="message_media_grid_inner_radius">2.0dip</dimen>
     <dimen name="message_media_grid_spacing">4.0dip</dimen>
-    <dimen name="message_media_max_height">400.0dip</dimen>
+    <dimen name="message_media_max_height">350.0dip</dimen>
     <dimen name="message_media_non_mosaic_radius">8.0dip</dimen>
     <dimen name="message_media_radius">16.0dip</dimen>
     <dimen name="message_media_view_stroke">0.25dip</dimen>

@@ -180,10 +180,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   s.b(var1);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var3 != 0 && var22 != 0) {
-                     var1 = new Size(var3, var22);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var22 != 0 && var3 != 0) {
+                     var1 = new Size(var22, var3);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -246,10 +246,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      }
 
                      try {
-                        val var17: ContentResolver = this.this$0.getContext().getContentResolver();
-                        val var26: java.lang.String = this.$uri.getLastPathSegment();
-                        q.e(var26);
-                        var1 = Thumbnails.getThumbnail(var17, java.lang.Long.parseLong(var26), 1, null);
+                        val var26: ContentResolver = this.this$0.getContext().getContentResolver();
+                        val var17: java.lang.String = this.$uri.getLastPathSegment();
+                        q.e(var17);
+                        var1 = Thumbnails.getThumbnail(var26, java.lang.Long.parseLong(var17), 1, null);
                      } catch (var11: Exception) {
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,

@@ -232,10 +232,10 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
 
       this.binding.actionsButton.setText(var8);
       var33.setOnClickButtonListener(var2);
-      val var9: java.lang.String = var1.getFeedbackText();
-      val var10: DCDButton = this.binding.feedbackButton;
-      this.binding.feedbackButton.setText(var9);
-      var10.setOnClickButtonListener(var3);
+      val var10: java.lang.String = var1.getFeedbackText();
+      val var9: DCDButton = this.binding.feedbackButton;
+      this.binding.feedbackButton.setText(var10);
+      var9.setOnClickButtonListener(var3);
    }
 
    public open fun onInterceptTouchEvent(ev: MotionEvent): Boolean {

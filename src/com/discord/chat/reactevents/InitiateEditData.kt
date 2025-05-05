@@ -125,12 +125,13 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
                var10 = null;
             }
 
-            var6 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            val var5: ChannelId = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
             var2 = 3;
+            var6 = var5;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var5: java.lang.String = null;
+            var var12: java.lang.String = null;
             var var11: ChannelId = null;
 
             while (var3) {
@@ -144,18 +145,18 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
                      var11 = var8.m(var7, 1, ChannelId.$serializer.INSTANCE, var11) as ChannelId;
                      var2 |= 2;
                   } else {
-                     val var12: MessageId;
-                     if (var5 != null) {
-                        var12 = MessageId.box-impl(var5);
+                     val var13: MessageId;
+                     if (var12 != null) {
+                        var13 = MessageId.box-impl(var12);
                      } else {
-                        var12 = null;
+                        var13 = null;
                      }
 
-                     val var13: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, var12) as MessageId;
-                     if (var13 != null) {
-                        var5 = var13.unbox-impl();
+                     val var14: MessageId = var8.m(var7, 0, MessageId.$serializer.INSTANCE, var13) as MessageId;
+                     if (var14 != null) {
+                        var12 = var14.unbox-impl();
                      } else {
-                        var5 = null;
+                        var12 = null;
                      }
 
                      var2 |= 1;
@@ -166,7 +167,7 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
             }
 
             var6 = var11;
-            var10 = var5;
+            var10 = var12;
          }
 
          var8.b(var7);

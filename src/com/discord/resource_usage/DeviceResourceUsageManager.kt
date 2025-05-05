@@ -23,55 +23,55 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    @JvmStatic
    fun {
-      var var0: Any;
+      var var14: Any;
       label42:
       try {
-         var0 = r.k;
-         var0 = r.b(Os.sysconf(OsConstants._SC_CLK_TCK));
+         var14 = r.k;
+         var14 = r.b(Os.sysconf(OsConstants._SC_CLK_TCK));
       } catch (var4: java.lang.Throwable) {
-         val var1: h8.r.a = r.k;
-         var0 = r.b(s.a(var4));
+         var14 = r.k;
+         var14 = r.b(s.a(var4));
          break label42;
       }
 
-      var var18: Any = var0;
-      if (r.g(var0)) {
-         var18 = 100L;
+      var var1: Any = var14;
+      if (r.g(var14)) {
+         var1 = 100L;
       }
 
-      SC_CLK_TCK = (var18 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var1 as java.lang.Number).longValue();
 
       label36:
       try {
-         var0 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
+         var14 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var0 = r.k;
-         var0 = r.b(s.a(var3));
+         var14 = r.k;
+         var14 = r.b(s.a(var3));
          break label36;
       }
 
-      var18 = var0;
-      if (r.g(var0)) {
-         var18 = 4096L;
+      var1 = var14;
+      if (r.g(var14)) {
+         var1 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var18 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var1 as java.lang.Number).longValue();
 
       label30:
       try {
-         var0 = r.b(Runtime.getRuntime().availableProcessors());
+         var14 = r.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var18 = r.k;
-         var0 = r.b(s.a(var2));
+         var14 = r.k;
+         var14 = r.b(s.a(var2));
          break label30;
       }
 
-      var18 = var0;
-      if (r.g(var0)) {
-         var18 = 1;
+      var1 = var14;
+      if (r.g(var14)) {
+         var1 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var18 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var1 as java.lang.Number).intValue();
    }
 
    fun DeviceResourceUsageManager() {

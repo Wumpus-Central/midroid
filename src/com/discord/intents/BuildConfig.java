@@ -4,8 +4,6 @@ public final class BuildConfig {
    public static final String BUILD_TYPE = "release";
    public static final boolean DEBUG = false;
    public static final String LIBRARY_PACKAGE_NAME = "com.discord.intents";
-   public static final String PACKAGE_ASANA = "com.asana.app";
-   public static final String PACKAGE_BLUESKY = "xyz.blueskyweb.app";
    public static final String PACKAGE_FACEBOOK = "com.facebook.orca";
    public static final String PACKAGE_INSTAGRAM = "com.instagram.android";
    public static final String PACKAGE_LINE = "jp.naver.line.android";

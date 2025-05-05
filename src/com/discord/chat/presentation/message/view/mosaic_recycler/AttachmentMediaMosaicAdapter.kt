@@ -127,10 +127,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new Function0(this, (ImageAttachmentMessageAccessory)var6) {
+            var7.bindAttachment(var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new Function0(this, (ImageAttachmentMessageAccessory)var6) {
                final ImageAttachmentMessageAccessory $accessory;
                final AttachmentMediaMosaicAdapter this$0;
 
@@ -157,11 +157,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
             }, var4);
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
+               val var10: Class = var1.getClass();
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Invalid view holder type ");
+               var12.append(var10);
+               throw new IllegalStateException(var12.toString().toString());
             }
 
             var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);

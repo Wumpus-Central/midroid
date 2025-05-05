@@ -67,13 +67,13 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.gameApplicationId;
-      val var3: java.lang.String = this.timestamp;
+      val var3: java.lang.String = this.gameApplicationId;
+      val var1: java.lang.String = this.timestamp;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapGameIconData(gameApplicationId=");
-      var2.append(var1);
-      var2.append(", timestamp=");
       var2.append(var3);
+      var2.append(", timestamp=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

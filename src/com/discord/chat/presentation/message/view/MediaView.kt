@@ -261,12 +261,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
+            val var7: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var12, "getContext(...)");
             val var11: java.lang.Double = var1.getPortal();
             kotlin.jvm.internal.q.e(var11);
-            var10 = var12.acquire(var7, var11, this.playerSettings);
+            var10 = var7.acquire(var12, var11, this.playerSettings);
          }
 
          var10.setEventListener(

@@ -11,17 +11,21 @@ public class IntentsPackage : TurboReactPackage {
    public open fun getModule(name: String, context: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
       q.h(var2, "context");
-      val var3: IntentsModule;
+      val var3: Any;
       if (q.c(var1, "NativeIntentsModule")) {
          var3 = new IntentsModule(var2);
+      } else if (q.c(var1, "NativeLinkingModule")) {
+         var3 = new LinkingModule(var2);
       } else {
          var3 = null;
       }
 
-      return var3;
+      return (NativeModule)var3;
    }
 
    public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
-      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(i.e("NativeIntentsModule"), false, 2, null);
+      return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(
+         i.n(new java.lang.String[]{"NativeIntentsModule", "NativeLinkingModule"}), false, 2, null
+      );
    }
 }

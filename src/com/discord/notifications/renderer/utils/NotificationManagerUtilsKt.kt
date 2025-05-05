@@ -122,16 +122,16 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
    if (var5 != null) {
       label58:
       try {
-         val var14: a = r.k;
-         var13 = r.b(var5.getActiveNotifications());
+         val var13: a = r.k;
+         var12 = r.b(var5.getActiveNotifications());
       } catch (var9: java.lang.Throwable) {
-         val var12: a = r.k;
-         var13 = r.b(s.a(var9));
+         val var18: a = r.k;
+         var12 = r.b(s.a(var9));
          break label58;
       }
 
-      var5 = (NotificationManager)var13;
-      if (r.g(var13)) {
+      var5 = (NotificationManager)var12;
+      if (r.g(var12)) {
          var5 = null;
       }
 
@@ -146,12 +146,12 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var15: Regex = messageRegex;
+                  val var14: Regex = messageRegex;
                   val var8: java.lang.String = var21.getTag();
                   q.g(var8, "getTag(...)");
-                  var16 = Regex.c(var15, var8, 0, 2, null);
-                  if (var16 != null) {
-                     val var22: java.util.List = var16.b();
+                  var15 = Regex.c(var14, var8, 0, 2, null);
+                  if (var15 != null) {
+                     val var22: java.util.List = var15.b();
                      if (var22 != null) {
                         var3 = var22.size();
                         break label45;
@@ -165,18 +165,18 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
                q.g(var23, "getTag(...)");
                if (h.J(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
                   label38: {
-                     if (var16 != null) {
-                        val var17: java.util.List = var16.b();
-                        if (var17 != null) {
-                           var18 = var17.get(2) as java.lang.String;
+                     if (var15 != null) {
+                        val var16: java.util.List = var15.b();
+                        if (var16 != null) {
+                           var17 = var16.get(2) as java.lang.String;
                            break label38;
                         }
                      }
 
-                     var18 = null;
+                     var17 = null;
                   }
 
-                  if (q.c(var18, var1)) {
+                  if (q.c(var17, var1)) {
                      var20.add(var21);
                   }
                }

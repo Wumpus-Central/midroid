@@ -141,15 +141,15 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
       }
 
       public override fun toString(): String {
-         val var3: Int = this.widthPx;
+         val var2: Int = this.widthPx;
          val var1: Int = this.heightPx;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("MeasureBounds(widthPx=");
-         var2.append(var3);
-         var2.append(", heightPx=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MeasureBounds(widthPx=");
+         var3.append(var2);
+         var3.append(", heightPx=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

@@ -10,6 +10,7 @@ import da.G
 import da.N
 import da.p0
 import kotlin.jvm.internal.q
+import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
@@ -159,9 +160,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var2: java.lang.String = this.assetUrl;
-      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -169,20 +170,20 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          var7 = MessageId.toString-impl(this.messageId);
       }
 
-      val var6: Int = this.attachmentIndex;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MediaPlayerPlaybackSource(id=");
-      var5.append(var4);
-      var5.append(", assetUrl=");
-      var5.append(var2);
-      var5.append(", channelId=");
-      var5.append(var3);
-      var5.append(", messageId=");
-      var5.append(var7);
-      var5.append(", attachmentIndex=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var5: Int = this.attachmentIndex;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MediaPlayerPlaybackSource(id=");
+      var6.append(var3);
+      var6.append(", assetUrl=");
+      var6.append(var2);
+      var6.append(", channelId=");
+      var6.append(var4);
+      var6.append(", messageId=");
+      var6.append(var7);
+      var6.append(", attachmentIndex=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : G {
@@ -217,27 +218,28 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
          val var11: SerialDescriptor = this.getDescriptor();
          val var12: c = var1.c(var11);
          var var2: Int;
-         var var5: Any;
+         var var5: java.lang.String;
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         val var10: java.lang.String;
+         var var16: Any;
          if (var12.y()) {
-            val var13: C0 = C0.a;
+            var16 = C0.a;
             var8 = var12.v(var11, 0, C0.a, null) as java.lang.String;
-            var7 = var12.v(var11, 1, var13, null) as java.lang.String;
-            var6 = var12.v(var11, 2, var13, null) as java.lang.String;
-            val var14: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
+            var7 = var12.v(var11, 1, (DeserializationStrategy)var16, null) as java.lang.String;
+            var5 = var12.v(var11, 2, (DeserializationStrategy)var16, null) as java.lang.String;
+            var16 = var12.v(var11, 3, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var15: java.lang.String;
-            if (var14 != null) {
-               var15 = var14.unbox-impl();
+            if (var16 != null) {
+               var15 = var16.unbox-impl();
             } else {
                var15 = null;
             }
 
-            var5 = var12.v(var11, 4, N.a, null) as Int;
+            val var9: Int = var12.v(var11, 4, N.a, null) as Int;
+            var6 = var15;
+            var16 = var9;
             var2 = 31;
-            var10 = var15;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -245,7 +247,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             var8 = null;
             var6 = null;
             var5 = null;
-            var var16: java.lang.String = null;
+            var var17: java.lang.String = null;
 
             while (var3) {
                val var4: Int = var12.x(var11);
@@ -261,16 +263,16 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                               var6 = var12.v(var11, 4, N.a, var6) as Int;
                               var2 |= 16;
                            } else {
-                              val var21: MessageId;
+                              val var22: MessageId;
                               if (var8 != null) {
-                                 var21 = MessageId.box-impl(var8);
+                                 var22 = MessageId.box-impl(var8);
                               } else {
-                                 var21 = null;
+                                 var22 = null;
                               }
 
-                              val var22: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, var21) as MessageId;
-                              if (var22 != null) {
-                                 var8 = var22.unbox-impl();
+                              val var23: MessageId = var12.v(var11, 3, MessageId.$serializer.INSTANCE, var22) as MessageId;
+                              if (var23 != null) {
+                                 var8 = var23.unbox-impl();
                               } else {
                                  var8 = null;
                               }
@@ -286,7 +288,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                         var2 |= 2;
                      }
                   } else {
-                     var16 = var12.v(var11, 0, C0.a, var16) as java.lang.String;
+                     var17 = var12.v(var11, 0, C0.a, var17) as java.lang.String;
                      var2 |= 1;
                   }
                } else {
@@ -294,15 +296,15 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
                }
             }
 
-            var5 = var6;
-            var10 = var8;
-            var6 = var7;
-            var7 = (java.lang.String)var5;
-            var8 = var16;
+            var8 = var17;
+            var16 = var6;
+            var6 = var8;
+            var5 = var7;
+            var7 = var5;
          }
 
          var12.b(var11);
-         return new MediaPlayerPlaybackSource(var2, var8, var7, var6, var10, (Integer)var5, null, null);
+         return new MediaPlayerPlaybackSource(var2, var8, var7, var5, var6, var16, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackSource) {

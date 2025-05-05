@@ -660,7 +660,6 @@
     <item type="id" name="see_more_button" />
     <item type="id" name="segmentContainer" />
     <item type="id" name="select_component_chevron" />
-    <item type="id" name="select_component_loading" />
     <item type="id" name="select_component_selection_icon" />
     <item type="id" name="select_component_selection_text" />
     <item type="id" name="select_component_selections_root" />
