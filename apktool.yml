@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 280201
-  versionName: 280.1 - Alpha
+  versionCode: 280202
+  versionName: 280.2 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
