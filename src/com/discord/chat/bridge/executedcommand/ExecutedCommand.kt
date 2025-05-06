@@ -1,16 +1,16 @@
 package com.discord.chat.bridge.executedcommand
 
-import aa.f
-import aa.n
-import ba.a
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableTextSerializer
 import com.discord.primitives.UserId
-import da.C0
-import da.G
-import da.N
-import da.h
-import da.p0
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
+import ha.N
+import ha.h
+import ha.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -192,8 +192,8 @@ public data class ExecutedCommand(userId: UserId,
          var1 = this.avatarURL.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.targetUsernameColor);
-      val var7: Int = this.content.hashCode();
+      val var7: Int = Integer.hashCode(this.targetUsernameColor);
+      val var8: Int = this.content.hashCode();
       val var2: Int;
       if (this.commandNameBackgroundStyles == null) {
          var2 = 0;
@@ -212,37 +212,37 @@ public data class ExecutedCommand(userId: UserId,
          var4 = this.showControllerIcon.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.userId);
+      val var6: java.lang.String = UserId.toString-impl(this.userId);
       val var2: Int = this.usernameColor;
-      val var3: java.lang.String = this.avatarURL;
+      val var9: java.lang.String = this.avatarURL;
       val var1: Int = this.targetUsernameColor;
-      val var6: AnnotatedStructurableText = this.content;
-      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var7: java.lang.Boolean = this.showAppsIcon;
-      val var8: java.lang.Boolean = this.showControllerIcon;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ExecutedCommand(userId=");
-      var9.append(var5);
-      var9.append(", usernameColor=");
-      var9.append(var2);
-      var9.append(", avatarURL=");
-      var9.append(var3);
-      var9.append(", targetUsernameColor=");
-      var9.append(var1);
-      var9.append(", content=");
-      var9.append(var6);
-      var9.append(", commandNameBackgroundStyles=");
-      var9.append(var4);
-      var9.append(", showAppsIcon=");
-      var9.append(var7);
-      var9.append(", showControllerIcon=");
-      var9.append(var8);
-      var9.append(")");
-      return var9.toString();
+      val var4: AnnotatedStructurableText = this.content;
+      val var8: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var3: java.lang.Boolean = this.showAppsIcon;
+      val var7: java.lang.Boolean = this.showControllerIcon;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ExecutedCommand(userId=");
+      var5.append(var6);
+      var5.append(", usernameColor=");
+      var5.append(var2);
+      var5.append(", avatarURL=");
+      var5.append(var9);
+      var5.append(", targetUsernameColor=");
+      var5.append(var1);
+      var5.append(", content=");
+      var5.append(var4);
+      var5.append(", commandNameBackgroundStyles=");
+      var5.append(var8);
+      var5.append(", showAppsIcon=");
+      var5.append(var3);
+      var5.append(", showControllerIcon=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -270,90 +270,88 @@ public data class ExecutedCommand(userId: UserId,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: KSerializer = a.u(C0.a);
-         val var3: KSerializer = a.u(ExecutedCommandBackgroundStyles.$serializer.INSTANCE);
+         val var2: KSerializer = a.u(ExecutedCommandBackgroundStyles.$serializer.INSTANCE);
          val var4: h = h.a;
-         return new KSerializer[]{UserId.$serializer.INSTANCE, N.a, var1, N.a, AnnotatedStructurableTextSerializer.INSTANCE, var3, a.u(h.a), a.u(var4)};
+         return new KSerializer[]{UserId.$serializer.INSTANCE, N.a, var1, N.a, AnnotatedStructurableTextSerializer.INSTANCE, var2, a.u(h.a), a.u(var4)};
       }
 
       public open fun deserialize(decoder: Decoder): ExecutedCommand {
          q.h(var1, "decoder");
-         val var16: SerialDescriptor = this.getDescriptor();
-         val var17: c = var1.c(var16);
-         val var8: Boolean = var17.y();
+         val var15: SerialDescriptor = this.getDescriptor();
+         val var16: c = var1.c(var15);
+         val var8: Boolean = var16.y();
          var var6: Byte = 7;
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
+         var var10: Any;
          var var11: Any;
+         var var12: Any;
          var var13: Any;
          val var14: java.lang.Boolean;
-         val var15: Any;
-         var var26: Any;
-         var var29: java.lang.Boolean;
+         val var18: java.lang.Boolean;
          if (var8) {
-            var26 = var17.m(var16, 0, UserId.$serializer.INSTANCE, null) as UserId;
-            var4 = var17.k(var16, 1);
-            var11 = var17.v(var16, 2, C0.a, null) as java.lang.String;
-            var2 = var17.k(var16, 3);
-            var15 = var17.m(var16, 4, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
-            val var12: ExecutedCommandBackgroundStyles = var17.v(var16, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
-            val var18: h = h.a;
-            val var9: java.lang.Boolean = var17.v(var16, 6, h.a, null) as java.lang.Boolean;
-            val var19: java.lang.Boolean = var17.v(var16, 7, var18, null) as java.lang.Boolean;
+            var13 = var16.m(var15, 0, UserId.$serializer.INSTANCE, null) as UserId;
+            var5 = var16.k(var15, 1);
+            var11 = var16.v(var15, 2, C0.a, null) as java.lang.String;
+            val var2: Int = var16.k(var15, 3);
+            var10 = var16.m(var15, 4, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
+            var12 = var16.v(var15, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, null) as ExecutedCommandBackgroundStyles;
+            val var17: h = h.a;
+            val var9: java.lang.Boolean = var16.v(var15, 6, h.a, null) as java.lang.Boolean;
+            var18 = var16.v(var15, 7, var17, null) as java.lang.Boolean;
             var3 = 255;
-            var13 = var26;
-            var26 = var12;
-            var29 = var9;
-            var14 = var19;
+            var4 = var2;
+            var14 = var9;
          } else {
-            var var5: Boolean = true;
+            var var22: Boolean = true;
             var4 = 0;
-            var2 = 0;
+            var var20: Int = 0;
             var13 = null;
-            var29 = null;
-            var var25: Any = null;
-            var var20: Any = null;
-            var26 = null;
+            var12 = null;
+            var var23: Any = null;
+            var var19: Any = null;
+            var10 = null;
             var11 = null;
             var3 = 0;
 
-            while (var5) {
-               val var7: Int = var17.x(var16);
+            while (var22) {
+               val var7: Int = var16.x(var15);
                switch (var7) {
                   case -1:
-                     var5 = false;
+                     var22 = false;
                      continue;
                   case 0:
-                     var25 = var17.m(var16, 0, UserId.$serializer.INSTANCE, var25) as UserId;
-                     var2 |= 1;
+                     var23 = var16.m(var15, 0, UserId.$serializer.INSTANCE, var23) as UserId;
+                     var20 |= 1;
                      break;
                   case 1:
-                     var3 = var17.k(var16, 1);
-                     var2 |= 2;
+                     var3 = var16.k(var15, 1);
+                     var20 |= 2;
                      break;
                   case 2:
-                     var20 = var17.v(var16, 2, C0.a, var20) as java.lang.String;
-                     var2 |= 4;
+                     var19 = var16.v(var15, 2, C0.a, var19) as java.lang.String;
+                     var20 |= 4;
                      break;
                   case 3:
-                     var4 = var17.k(var16, 3);
-                     var2 |= 8;
+                     var4 = var16.k(var15, 3);
+                     var20 |= 8;
                      continue;
                   case 4:
-                     var26 = var17.m(var16, 4, AnnotatedStructurableTextSerializer.INSTANCE, var26) as AnnotatedStructurableText;
-                     var2 |= 16;
+                     var10 = var16.m(var15, 4, AnnotatedStructurableTextSerializer.INSTANCE, var10) as AnnotatedStructurableText;
+                     var20 |= 16;
                      continue;
                   case 5:
-                     var11 = var17.v(var16, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var11) as ExecutedCommandBackgroundStyles;
-                     var2 |= 32;
+                     var11 = var16.v(var15, 5, ExecutedCommandBackgroundStyles.$serializer.INSTANCE, var11) as ExecutedCommandBackgroundStyles;
+                     var20 |= 32;
                      continue;
                   case 6:
-                     var29 = var17.v(var16, 6, h.a, var29) as java.lang.Boolean;
-                     var2 |= 64;
+                     var12 = var16.v(var15, 6, h.a, var12) as java.lang.Boolean;
+                     var20 |= 64;
                      continue;
                   case 7:
-                     var13 = var17.v(var16, var6, h.a, var13) as java.lang.Boolean;
-                     var2 |= 128;
+                     var13 = var16.v(var15, var6, h.a, var13) as java.lang.Boolean;
+                     var20 |= 128;
                      continue;
                   default:
                      throw new n(var7);
@@ -362,27 +360,26 @@ public data class ExecutedCommand(userId: UserId,
                var6 = 7;
             }
 
-            var15 = var26;
-            var14 = (java.lang.Boolean)var13;
-            var26 = var11;
-            var2 = var4;
-            var11 = var20;
-            var4 = var3;
-            var13 = var25;
-            var3 = var2;
+            var14 = (java.lang.Boolean)var12;
+            var12 = var11;
+            var11 = var19;
+            var18 = (java.lang.Boolean)var13;
+            var5 = var3;
+            var13 = var23;
+            var3 = var20;
          }
 
-         var17.b(var16);
+         var16.b(var15);
          return new ExecutedCommand(
             var3,
             (UserId)var13,
-            var4,
+            var5,
             (java.lang.String)var11,
-            var2,
-            (AnnotatedStructurableText)var15,
-            (ExecutedCommandBackgroundStyles)var26,
-            var29,
+            var4,
+            (AnnotatedStructurableText)var10,
+            (ExecutedCommandBackgroundStyles)var12,
             var14,
+            var18,
             null,
             null
          );
@@ -398,7 +395,7 @@ public data class ExecutedCommand(userId: UserId,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

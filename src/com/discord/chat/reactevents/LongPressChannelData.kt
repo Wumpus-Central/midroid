@@ -1,14 +1,13 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
-import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import h8.w
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
 
 @f
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
@@ -123,21 +123,21 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
       val var5: java.lang.String = this.originalLink;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LongPressChannelData(guildId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(", originalLink=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressChannelData(guildId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var4);
+      var3.append(", originalLink=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -172,21 +172,23 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          var var8: java.lang.String = null;
          var var2: Int;
          var var7: java.lang.String;
-         val var12: java.lang.String;
+         var var13: java.lang.String;
          var var14: java.lang.String;
          if (var5) {
             val var6: C0 = C0.a;
             var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
             var7 = var11.v(var10, 1, var6, null) as java.lang.String;
-            var12 = var11.v(var10, 2, var6, null) as java.lang.String;
-            var14 = var11.v(var10, 3, var6, null) as java.lang.String;
+            val var12: java.lang.String = var11.v(var10, 2, var6, null) as java.lang.String;
+            val var9: java.lang.String = var11.v(var10, 3, var6, null) as java.lang.String;
             var2 = 15;
+            var14 = var12;
+            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
             var14 = null;
-            var var13: java.lang.String = null;
+            var13 = null;
 
             while (var3) {
                val var4: Int = var11.x(var10);
@@ -216,13 +218,10 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
                   var3 = false;
                }
             }
-
-            var14 = var13;
-            var12 = var14;
          }
 
          var11.b(var10);
-         return new LongPressChannelData(var2, var8, var7, var12, var14, null);
+         return new LongPressChannelData(var2, var8, var7, var14, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LongPressChannelData) {
@@ -235,7 +234,7 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

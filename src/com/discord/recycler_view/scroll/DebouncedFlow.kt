@@ -1,9 +1,9 @@
 package com.discord.recycler_view.scroll
 
-import Q9.K
-import Q9.f
-import T9.e
-import T9.s
+import U9.K
+import U9.f
+import X9.e
+import X9.s
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
@@ -18,7 +18,7 @@ import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import n8.b
+import s8.b
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -67,9 +67,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  h8.s.b(var1);
+                  l8.s.b(var1);
                } else {
-                  h8.s.b(var1);
+                  l8.s.b(var1);
                   if (this.$collectWithLeadingDebounce) {
                      var1 = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
@@ -120,8 +120,8 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         return var5;
                      }
                   } else {
-                     val var8: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
+                     val var9: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var8: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1 $tmp0;
 
                         {
@@ -164,7 +164,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var8.collect(var9, this) === var5) {
+                     if (var9.collect(var8, this) === var5) {
                         return var5;
                      }
                   }

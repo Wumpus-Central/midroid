@@ -703,11 +703,11 @@
   "w5beJC": "Siamo qui per aiutarvi!",
   "xfAlNz": "Aggiornamenti community",
   "COObWV": [
-    "Facendo clic su ",
+    "Cliccando su ",
     "\"",
     "Acquista",
-    "\" ",
-    "accetterai i ",
+    "\"",
+    ", accetti i ",
     [
       8,
       "$link",
@@ -735,19 +735,19 @@
         ]
       ]
     ],
-    ". Stai acquistando un abbonamento a rinnovo automatico, il che significa che addebiteremo un importo sul tuo account Google Play oggi e continueremo a farlo ogni ",
+    ". Quello che stai acquistando è un abbonamento ricorrente, il che significa che ti addebiteremo un pagamento sul tuo account Google Play oggi e che continueremo ad addebitarti ogni ",
     [
       1,
       "interval"
     ],
-    " fino a quando non lo annullerai. Puoi annullare il tuo abbonamento in qualsiasi momento fino a 24 ore prima del termine del periodo attualmente in corso, tramite le impostazioni del negozio Google Play."
+    " fino a che non annullerai il servizio. I prezzi sono soggetti a modifiche, con previa comunicazione. Puoi cancellare in qualsiasi momento fino a 24 ore prima del termine del periodo attualmente in corso, nelle Impostazioni del negozio Google Play."
   ],
   "7wpqfn": [
-    "Facendo clic su ",
+    "Cliccando su ",
     "\"",
     "Acquista",
-    "\" ",
-    "accetterai i ",
+    "\"",
+    ", accetti i ",
     [
       8,
       "$link",
@@ -775,12 +775,12 @@
         ]
       ]
     ],
-    ". Stai acquistando un abbonamento a rinnovo automatico, il che significa che addebiteremo un importo sul tuo account Apple oggi e continueremo a farlo ogni ",
+    ". Quello che stai acquistando è un abbonamento ricorrente, il che significa che ti addebiteremo un pagamento sul tuo account Apple oggi e che continueremo ad addebitarti ogni ",
     [
       1,
       "interval"
     ],
-    " fino a quando non lo annullerai. Puoi annullare il tuo abbonamento in qualsiasi momento fino a 24 ore prima del termine del periodo attualmente in corso, tramite le impostazioni dell'App Store."
+    " fino a che non annullerai il servizio. I prezzi sono soggetti a modifiche, con previa comunicazione. Puoi cancellare in qualsiasi momento fino a 24 ore prima del termine del periodo attualmente in corso, nelle Impostazioni dell'App Store."
   ],
   "gJs+kZ": "Invia la verifica dell'età",
   "eQg0Cg": "MOTIVO",
@@ -5066,6 +5066,29 @@
       "answerNumber"
     ]
   ],
+  "w8e4qK": [
+    "Hai ",
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " errore"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " errori"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "e9hWx8": "Stile di risposta al sondaggio",
   "GhK6X1": "Risposte testuali con media opzionali",
   "an4GKS": "Risposte con soli media",
@@ -5660,6 +5683,13 @@
   ],
   "2p9FMz": "Cambia stato personalizzato",
   "E45wvL": "Svuota dopo",
+  "DN91Jy": [
+    "domani alle ore ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     "Svuota in ",
     [
@@ -7357,6 +7387,7 @@
       "code"
     ]
   ],
+  "3ejJen": "Espandi attività",
   "06YebG": "Attenzione!",
   "z81WwM": "Questa applicazione non è stata realizzata da Discord. Consigliamo di testare solo le app di sviluppatori di cui ti fidi.",
   "Z/eMDQ": [
@@ -12028,7 +12059,7 @@
         ]
       ]
     ],
-    ". Questo è un abbonamento ricorrente, pertanto riceverai un addebito sul tuo account oggi e ogni mese fino all'annullamento."
+    ". Questo è un abbonamento ricorrente, pertanto riceverai un addebito sul tuo account oggi e ogni mese fino all'annullamento. I prezzi sono soggetti a modifiche, con previa comunicazione."
   ],
   "mPHb19": "Scegli un abbonamento per sbloccare molto altro",
   "A1L1hY": [
@@ -17992,7 +18023,7 @@
   "L+P4t7": "A causa delle dimensioni di questo server, i membri non riceveranno notifiche push su mobile per i messaggi che non siano @menzioni.",
   "s35OuL": "Si è verificato un problema durante l'aggiornamento del tuo profilo specifico del server...",
   "jrXfy8": "Requisiti di caricamento",
-  "N2qTQ0": "Tipo di file: JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "Tipo di file: JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Dimensione consigliata: ",
     [
@@ -22915,6 +22946,7 @@
   ],
   "bAVpRU": "Server soggetto a limiti di età",
   "uy25Q0": "Gli adesivi di questo server non sono disponibili",
+  "xi46lp": "Server soggetto a limiti di età",
   "ZmwvDQ": "Canale soggetto a limiti di età",
   "Gtctho": "Parla, gioca o passa del tempo con gli amici. Tocca qui sotto per iniziare!",
   "mufH2N": "I canali sono luoghi all'interno del tuo server in cui gli utenti possono parlare di diversi argomenti.",
@@ -30928,6 +30960,24 @@
     ],
     " post"
   ],
+  "v5a2+f": [
+    "Deve avere almeno ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " recensione/i positiva/e"
+  ],
+  "yYbR2t": [
+    "Deve avere al massimo ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " recensione/i negativa/e"
+  ],
   "kCAN5+": "Deve avere Reddit Gold",
   "0JyE8P": "Deve avere un conto bancario verificato",
   "W3iY5+": "Devi collegarne almeno uno",
@@ -35789,6 +35839,40 @@
       ]
     ],
     " di Discord."
+  ],
+  "KI+BSU": [
+    "Cliccando su ",
+    "\"",
+    "Crea account",
+    "\"",
+    ", accetti i ",
+    [
+      8,
+      "$link",
+      [
+        "Termini di Servizio"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " di Discord e hai letto l'",
+    [
+      8,
+      "$link",
+      [
+        "Informativa sulla privacy"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
   ],
   "qMDAPz": [
     "Dichiaro di aver letto e di accettare i ",

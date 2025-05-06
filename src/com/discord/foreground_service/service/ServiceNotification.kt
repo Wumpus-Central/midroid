@@ -12,10 +12,10 @@ import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
-import h8.w
 import java.util.Comparator
-import k8.a
 import kotlin.jvm.internal.q
+import l8.w
+import p8.a
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -32,7 +32,7 @@ internal object ServiceNotification {
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      val var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      var var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var7: PendingIntent;
       if (var3 != null) {
@@ -43,19 +43,19 @@ internal object ServiceNotification {
          var7 = null;
       }
 
-      val var8: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      var4 = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var9 : var2.getAuxiliaryActions()) {
-         var8.a(
+      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
+         var4.a(
             0,
-            var9.getTitle(),
+            var5.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var9.getTag(), var9.getTaskName(), var9.getData()), var1, 0, false, 2, null
+               new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      val var6: Notification = var8.A(d.a(w.a("permissionType", var2.getType().ordinal()))).g();
+      val var6: Notification = var4.A(d.a(w.a("permissionType", var2.getType().ordinal()))).g();
       q.g(var6, "build(...)");
       return var6;
    }

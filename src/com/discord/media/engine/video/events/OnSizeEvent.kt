@@ -1,12 +1,12 @@
 package com.discord.media.engine.video.events
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -62,13 +62,13 @@ internal data class OnSizeEvent(width: Int, height: Int) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnSizeEvent(width=");
-      var3.append(var2);
-      var3.append(", height=");
       var3.append(var1);
+      var3.append(", height=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

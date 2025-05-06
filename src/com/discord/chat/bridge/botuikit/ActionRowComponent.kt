@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
-import da.N
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
+import ha.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -74,8 +74,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -83,7 +83,7 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = this.errorText.hashCode();
       }
 
-      return ((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode();
+      return ((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode();
    }
 
    public override fun toString(): String {
@@ -131,22 +131,23 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          q.h(var1, "decoder");
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
-         var var8: Array<KSerializer> = ActionRowComponent.access$get$childSerializers$cp();
+         val var8: Array<KSerializer> = ActionRowComponent.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
+         var var6: Any;
          var var7: java.lang.String;
          val var11: java.lang.String;
          if (var10.y()) {
             var3 = var10.k(var9, 0);
             var7 = var10.t(var9, 1);
             var11 = var10.v(var9, 2, C0.a, null) as java.lang.String;
-            var8 = var10.m(var9, 3, var8[3], null) as java.util.List;
+            var6 = var10.m(var9, 3, var8[3], null) as java.util.List;
             var2 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
             var7 = null;
-            var var6: java.lang.String = null;
+            var6 = null;
             var var12: Any = null;
             var2 = 0;
 
@@ -179,12 +180,12 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
                }
             }
 
-            var8 = (KSerializer[])var12;
-            var11 = var6;
+            var6 = var12;
+            var11 = (java.lang.String)var6;
          }
 
          var10.b(var9);
-         return new ActionRowComponent(var2, var3, var7, var11, var8, null);
+         return new ActionRowComponent(var2, var3, var7, var11, (java.util.List)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ActionRowComponent) {
@@ -197,7 +198,7 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

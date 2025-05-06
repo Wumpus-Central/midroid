@@ -1,12 +1,12 @@
 package com.discord.chat.input.events
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -116,10 +116,10 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
          val var6: Int;
          if (var9.y()) {
             var5 = var9.k(var8, 0);
-            var6 = var9.k(var8, 1);
+            var3 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var3 = 7;
-            var4 = var2;
+            var4 = 7;
+            var6 = var2;
          } else {
             var var12: Boolean = true;
             var5 = 0;
@@ -151,12 +151,12 @@ internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactE
                }
             }
 
-            var6 = var3;
-            var3 = var10;
+            var6 = var4;
+            var4 = var10;
          }
 
          var9.b(var8);
-         return new OnFocusEvent(var3, var5, var6, var4, null);
+         return new OnFocusEvent(var4, var5, var3, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnFocusEvent) {

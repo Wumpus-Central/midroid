@@ -10,15 +10,15 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
-import h8.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
    private final val delegate: DCDZoomLayoutAndroidManagerDelegate<ZoomLayoutFixed, ZoomLayoutViewManager> = new DCDZoomLayoutAndroidManagerDelegate(this)
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onZoomChanged", E.b(OnZoomChangedEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onZoomChanged", G.b(OnZoomChangedEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ZoomLayoutFixed {
       q.h(var1, "reactContext");

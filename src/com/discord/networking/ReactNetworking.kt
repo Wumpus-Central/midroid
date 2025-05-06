@@ -39,7 +39,7 @@ public object ReactNetworking {
    }
 
    public fun createReactOkHttpNetworkFetcher(): NetworkFetcher<*> {
-      val var3: OkHttpClient = OkHttpClientProvider.createClient().A().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      val var3: OkHttpClient = OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -76,6 +76,6 @@ public object ReactNetworking {
 
    public fun patchReactNetworking() {
       NetworkingModule.setCustomClientBuilder(new a());
-      WebSocketModule.setCustomClientBuilder(new b());
+      WebSocketModule.Companion.setCustomClientBuilder(new b());
    }
 }

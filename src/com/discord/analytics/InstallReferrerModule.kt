@@ -1,7 +1,7 @@
 package com.discord.analytics
 
-import Q9.f
-import Q9.t0
+import U9.f
+import U9.t0
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.android.installreferrer.api.InstallReferrerClient
@@ -9,9 +9,6 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import h8.r
-import h8.s
-import h8.r.a
 import java.util.concurrent.CancellationException
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
@@ -19,7 +16,10 @@ import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import n8.b
+import l8.r
+import l8.s
+import l8.r.a
+import s8.b
 
 public class InstallReferrerModule(context: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -30,18 +30,18 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    @ReactMethod
    public fun get(promise: Promise) {
       q.h(var1, "promise");
-      val var4: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var3: ObjectRef = new ObjectRef();
-      var3.j = var4.getString("referrer", null);
-      val var2: Int = var4.getInt("attempts", 0);
-      if (var3.j != null) {
-         var1.resolve(var3.j);
+      val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
+      val var4: ObjectRef = new ObjectRef();
+      var4.j = var3.getString("referrer", null);
+      val var2: Int = var3.getInt("attempts", 0);
+      if (var4.j != null) {
+         var1.resolve(var4.j);
       } else if (var2 < 10) {
          f.d(
             g.b(),
             null,
             null,
-            new Function2(new ObjectRef(), this, var3, var4, var1, var2, null) {
+            new Function2(new ObjectRef(), this, var4, var3, var1, var2, null) {
                final int $attempts;
                final ObjectRef $client;
                final SharedPreferences $prefs;

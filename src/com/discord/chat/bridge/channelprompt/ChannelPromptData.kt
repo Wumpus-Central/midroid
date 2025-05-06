@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.channelprompt
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -162,30 +162,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.cameraButtonIcon;
-      val var1: java.lang.String = this.gifButtonIcon;
-      val var2: java.lang.String = this.emojiButtonIcon;
-      val var6: java.lang.String = this.gamingStatsButtonText;
-      val var3: java.lang.String = this.cameraButtonText;
-      val var7: java.lang.String = this.gifButtonText;
-      val var8: java.lang.String = this.emojiButtonText;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ChannelPromptData(cameraButtonIcon=");
-      var5.append(var4);
-      var5.append(", gifButtonIcon=");
-      var5.append(var1);
-      var5.append(", emojiButtonIcon=");
-      var5.append(var2);
-      var5.append(", gamingStatsButtonText=");
-      var5.append(var6);
-      var5.append(", cameraButtonText=");
-      var5.append(var3);
-      var5.append(", gifButtonText=");
-      var5.append(var7);
-      var5.append(", emojiButtonText=");
-      var5.append(var8);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.cameraButtonIcon;
+      val var6: java.lang.String = this.gifButtonIcon;
+      val var7: java.lang.String = this.emojiButtonIcon;
+      val var8: java.lang.String = this.gamingStatsButtonText;
+      val var1: java.lang.String = this.cameraButtonText;
+      val var2: java.lang.String = this.gifButtonText;
+      val var3: java.lang.String = this.emojiButtonText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChannelPromptData(cameraButtonIcon=");
+      var4.append(var5);
+      var4.append(", gifButtonIcon=");
+      var4.append(var6);
+      var4.append(", emojiButtonIcon=");
+      var4.append(var7);
+      var4.append(", gamingStatsButtonText=");
+      var4.append(var8);
+      var4.append(", cameraButtonText=");
+      var4.append(var1);
+      var4.append(", gifButtonText=");
+      var4.append(var2);
+      var4.append(", emojiButtonText=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -217,74 +217,76 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
 
       public open fun deserialize(decoder: Decoder): ChannelPromptData {
          q.h(var1, "decoder");
-         val var14: SerialDescriptor = this.getDescriptor();
-         val var15: c = var1.c(var14);
-         val var6: Boolean = var15.y();
+         val var15: SerialDescriptor = this.getDescriptor();
+         val var16: c = var1.c(var15);
+         val var6: Boolean = var16.y();
          var var4: Byte = 6;
-         var var16: java.lang.String = null;
+         var var17: java.lang.String = null;
          var var2: Int;
-         var var8: java.lang.String;
+         var var9: java.lang.String;
          var var10: java.lang.String;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          val var13: java.lang.String;
-         var var18: java.lang.String;
          var var19: java.lang.String;
+         var var20: java.lang.String;
+         var var23: java.lang.String;
          if (var6) {
-            val var9: C0 = C0.a;
-            var12 = var15.v(var14, 0, C0.a, null) as java.lang.String;
-            var11 = var15.v(var14, 1, var9, null) as java.lang.String;
-            var10 = var15.v(var14, 2, var9, null) as java.lang.String;
-            var18 = var15.v(var14, 3, var9, null) as java.lang.String;
-            var8 = var15.v(var14, 4, var9, null) as java.lang.String;
-            val var17: java.lang.String = var15.v(var14, 5, var9, null) as java.lang.String;
-            var19 = var15.v(var14, 6, var9, null) as java.lang.String;
+            val var12: C0 = C0.a;
+            var9 = var16.v(var15, 0, C0.a, null) as java.lang.String;
+            var11 = var16.v(var15, 1, var12, null) as java.lang.String;
+            var10 = var16.v(var15, 2, var12, null) as java.lang.String;
+            var19 = var16.v(var15, 3, var12, null) as java.lang.String;
+            var20 = var16.v(var15, 4, var12, null) as java.lang.String;
+            val var18: java.lang.String = var16.v(var15, 5, var12, null) as java.lang.String;
+            val var14: java.lang.String = var16.v(var15, 6, var12, null) as java.lang.String;
             var2 = 127;
-            var13 = var18;
-            var18 = var17;
+            var13 = var19;
+            var23 = var20;
+            var19 = var18;
+            var20 = var14;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var12 = null;
+            var23 = null;
             var11 = null;
             var10 = null;
+            var9 = null;
+            var20 = null;
             var19 = null;
-            var8 = null;
-            var18 = null;
 
             while (var3) {
-               val var5: Int = var15.x(var14);
+               val var5: Int = var16.x(var15);
                switch (var5) {
                   case -1:
                      var3 = false;
                      break;
                   case 0:
-                     var16 = var15.v(var14, 0, C0.a, var16) as java.lang.String;
+                     var17 = var16.v(var15, 0, C0.a, var17) as java.lang.String;
                      var2 |= 1;
                      break;
                   case 1:
-                     var11 = var15.v(var14, 1, C0.a, var11) as java.lang.String;
+                     var11 = var16.v(var15, 1, C0.a, var11) as java.lang.String;
                      var2 |= 2;
                      var4 = 6;
                      continue;
                   case 2:
-                     var10 = var15.v(var14, 2, C0.a, var10) as java.lang.String;
+                     var10 = var16.v(var15, 2, C0.a, var10) as java.lang.String;
                      var2 |= 4;
                      continue;
                   case 3:
-                     var19 = var15.v(var14, 3, C0.a, var19) as java.lang.String;
+                     var9 = var16.v(var15, 3, C0.a, var9) as java.lang.String;
                      var2 |= 8;
                      continue;
                   case 4:
-                     var8 = var15.v(var14, 4, C0.a, var8) as java.lang.String;
+                     var20 = var16.v(var15, 4, C0.a, var20) as java.lang.String;
                      var2 |= 16;
                      continue;
                   case 5:
-                     var18 = var15.v(var14, 5, C0.a, var18) as java.lang.String;
+                     var19 = var16.v(var15, 5, C0.a, var19) as java.lang.String;
                      var2 |= 32;
                      continue;
                   case 6:
-                     var12 = var15.v(var14, var4, C0.a, var12) as java.lang.String;
+                     var23 = var16.v(var15, var4, C0.a, var23) as java.lang.String;
                      var2 |= 64;
                      continue;
                   default:
@@ -294,13 +296,14 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
                var4 = 6;
             }
 
-            var13 = var19;
-            var19 = var12;
-            var12 = var16;
+            var20 = var23;
+            var23 = var20;
+            var13 = var9;
+            var9 = var17;
          }
 
-         var15.b(var14);
-         return new ChannelPromptData(var2, var12, var11, var10, var13, var8, var18, var19, null);
+         var16.b(var15);
+         return new ChannelPromptData(var2, var9, var11, var10, var13, var23, var19, var20, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ChannelPromptData) {
@@ -313,7 +316,7 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

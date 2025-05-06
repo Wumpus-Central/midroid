@@ -2,14 +2,14 @@ package com.discord.analytics
 
 import a1.a
 import com.android.installreferrer.api.InstallReferrerClient
-import h8.r
-import h8.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import n8.b
+import l8.r
+import l8.s
+import s8.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -50,14 +50,14 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var5: InstallReferrerClient = this.$this_await;
+            val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: h8.r.a = r.k;
-               var5.a();
+               val var6: l8.r.a = r.k;
+               var2.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var2: h8.r.a = r.k;
+               val var5: l8.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var3: h8.r.a = r.k;
+      val var3: l8.r.a = r.k;
       var0.d(var4);
       var8 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: h8.r.a = r.k;
+      val var7: l8.r.a = r.k;
       var8 = r.b(s.a(var5));
       break label20;
    }

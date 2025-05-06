@@ -1,6 +1,6 @@
 package com.discord.shortcuts
 
-import N9.j
+import R9.j
 import android.content.Context
 import android.content.Intent
 import java.util.Map.Entry
@@ -52,15 +52,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var2: java.util.Map = this.data;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ShortcutData(tag=");
-      var3.append(var1);
-      var3.append(", data=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.tag;
+      val var3: java.util.Map = this.data;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ShortcutData(tag=");
+      var1.append(var2);
+      var1.append(", data=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {
@@ -101,25 +101,25 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = i8.q.c();
+            val var11: java.util.Map = m8.q.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = c.v(var6);
+               val var7: Sequence = c.x(var6);
                if (var7 != null) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var4: java.lang.String = var5.get(0) as java.lang.String;
+                        val var9: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        q.e(var4);
+                        q.e(var9);
                         q.e(var12);
-                        var11.put(var4, var12);
+                        var11.put(var9, var12);
                      }
                   }
                }
             }
 
-            var10 = new ShortcutData(var2, i8.q.b(var11));
+            var10 = new ShortcutData(var2, m8.q.b(var11));
          } else {
             var10 = null;
          }

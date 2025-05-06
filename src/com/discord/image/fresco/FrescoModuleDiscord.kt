@@ -20,10 +20,10 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
    }
 
    public open fun initialize() {
-      val var2: FrescoModuleDiscord.Companion = Companion;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.initializeFresco(var1);
+      val var1: FrescoModuleDiscord.Companion = Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.initializeFresco(var2);
       this.initializeSkinny();
    }
 
@@ -98,7 +98,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 13: aload 1
          // 14: aload 1
          // 15: invokestatic com/discord/image/fresco/config/FrescoConfigKt.frescoConfig (Landroid/content/Context;)Lcom/facebook/imagepipeline/core/ImagePipelineConfig;
-         // 18: invokestatic R1/c.c (Landroid/content/Context;Lcom/facebook/imagepipeline/core/ImagePipelineConfig;)V
+         // 18: invokestatic R1/d.c (Landroid/content/Context;Lcom/facebook/imagepipeline/core/ImagePipelineConfig;)V
          // 1b: getstatic com/discord/image/fresco/config/FrescoMemoryTrimmer.INSTANCE Lcom/discord/image/fresco/config/FrescoMemoryTrimmer;
          // 1e: aload 1
          // 1f: invokevirtual com/discord/image/fresco/config/FrescoMemoryTrimmer.initialize (Landroid/content/Context;)V

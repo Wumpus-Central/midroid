@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
-import da.N
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
+import ha.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -105,23 +105,23 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var2: java.lang.String = this.errorText;
-      val var4: java.util.List = this.components;
-      val var5: SectionAccessory = this.accessory;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SectionComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var3);
-      var6.append(", errorText=");
-      var6.append(var2);
-      var6.append(", components=");
-      var6.append(var4);
-      var6.append(", accessory=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: java.lang.String = this.id;
+      val var6: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var2: SectionAccessory = this.accessory;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SectionComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", errorText=");
+      var3.append(var6);
+      var3.append(", components=");
+      var3.append(var5);
+      var3.append(", accessory=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -150,22 +150,22 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
 
       public open fun deserialize(decoder: Decoder): SectionComponent {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var11: Array<KSerializer> = SectionComponent.access$get$childSerializers$cp();
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
+         val var9: Array<KSerializer> = SectionComponent.access$get$childSerializers$cp();
          var var2: Int;
          var var3: Int;
          var var6: Any;
          var var7: java.lang.String;
          var var8: java.lang.String;
          var var12: Any;
-         if (var10.y()) {
-            var3 = var10.k(var9, 0);
-            var8 = var10.t(var9, 1);
-            var7 = var10.v(var9, 2, C0.a, null) as java.lang.String;
-            var6 = var10.m(var9, 3, var11[3], null) as java.util.List;
-            var12 = var10.m(var9, 4, SectionAccessory.Serializer.INSTANCE, null) as SectionAccessory;
-            var2 = 31;
+         if (var11.y()) {
+            var2 = var11.k(var10, 0);
+            var8 = var11.t(var10, 1);
+            var7 = var11.v(var10, 2, C0.a, null) as java.lang.String;
+            var12 = var11.m(var10, 3, var9[3], null) as java.util.List;
+            var6 = var11.m(var10, 4, SectionAccessory.Serializer.INSTANCE, null) as SectionAccessory;
+            var3 = 31;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -176,7 +176,7 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
             var2 = 0;
 
             while (var4) {
-               val var5: Int = var10.x(var9);
+               val var5: Int = var11.x(var10);
                if (var5 != -1) {
                   if (var5 != 0) {
                      if (var5 != 1) {
@@ -186,32 +186,37 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
                                  throw new n(var5);
                               }
 
-                              var12 = var10.m(var9, 4, SectionAccessory.Serializer.INSTANCE, var12) as SectionAccessory;
+                              var12 = var11.m(var10, 4, SectionAccessory.Serializer.INSTANCE, var12) as SectionAccessory;
                               var2 |= 16;
                            } else {
-                              var6 = var10.m(var9, 3, var11[3], var6) as java.util.List;
+                              var6 = var11.m(var10, 3, var9[3], var6) as java.util.List;
                               var2 |= 8;
                            }
                         } else {
-                           var7 = var10.v(var9, 2, C0.a, var7) as java.lang.String;
+                           var7 = var11.v(var10, 2, C0.a, var7) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var8 = var10.t(var9, 1);
+                        var8 = var11.t(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var3 = var10.k(var9, 0);
+                     var3 = var11.k(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var6 = var12;
+            var12 = var6;
+            var2 = var3;
          }
 
-         var10.b(var9);
-         return new SectionComponent(var2, var3, var8, var7, (java.util.List)var6, (SectionAccessory)var12, null);
+         var11.b(var10);
+         return new SectionComponent(var3, var2, var8, var7, (java.util.List)var12, (SectionAccessory)var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SectionComponent) {
@@ -224,7 +229,7 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

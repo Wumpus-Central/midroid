@@ -1,7 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
-import Q9.I
-import Q9.f
+import U9.I
+import U9.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -10,14 +10,13 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import h8.s
-import i8.n
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import n8.b
+import l8.s
+import s8.b
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -70,30 +69,30 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
             var14 = var1;
          }
 
-         val var19: TextView = var14 as TextView;
+         val var20: TextView = var14 as TextView;
          if (var14 as TextView != null) {
             val var16: Array<NestedClickableSpan>;
             if (var2.getAction() == 0) {
-               val var31: java.lang.CharSequence = var19.getText();
-               val var32: Spannable;
-               if (var31 is Spannable) {
-                  var32 = var31 as Spannable;
+               val var32: java.lang.CharSequence = var20.getText();
+               val var33: Spannable;
+               if (var32 is Spannable) {
+                  var33 = var32 as Spannable;
                } else {
-                  var32 = null;
+                  var33 = null;
                }
 
-               label157: {
-                  if (var32 != null) {
-                     var var7: Int = (int)var2.getX() - var19.getTotalPaddingLeft() + var19.getScrollX();
-                     val var30: Int = var19.getLayout().getLineForVertical((int)var2.getY() - var19.getTotalPaddingTop() + var19.getScrollY());
-                     val var4: Float = var19.getLayout().getLineRight(var30);
-                     val var6: Float = var19.getLayout().getLineLeft(var30);
+               label164: {
+                  if (var33 != null) {
+                     var var7: Int = (int)var2.getX() - var20.getTotalPaddingLeft() + var20.getScrollX();
+                     val var30: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
+                     val var6: Float = var20.getLayout().getLineRight(var30);
+                     val var4: Float = var20.getLayout().getLineLeft(var30);
                      val var5: Float = var7;
-                     if (!(var7 > var4) && (var7 < 0 || !(var7 < var6))) {
-                        var7 = var19.getLayout().getOffsetForHorizontal(var30, var5);
-                        var14 = var32.getSpans(var7, var7, NestedClickableSpan.class);
+                     if (!(var7 > var6) && (var7 < 0 || !(var7 < var4))) {
+                        var7 = var20.getLayout().getOffsetForHorizontal(var30, var5);
+                        var14 = var33.getSpans(var7, var7, NestedClickableSpan.class);
                         q.g(var14, "getSpans(...)");
-                        break label157;
+                        break label164;
                      }
                   }
 
@@ -106,29 +105,37 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
             }
 
             if (var16 != null && var16.length != 0) {
-               val var15: Any;
+               var var15: Any;
                if (var16.length == 0) {
                   var15 = null;
                } else {
-                  var var34: Any = var16[0];
-                  val var28: Int = c.L(var16);
-                  if (var28 == 0) {
-                     var15 = var34;
+                  var var35: Any = var16[0];
+                  val var31: Int = c.N(var16);
+                  if (var31 == 0) {
+                     var15 = var35;
                   } else {
-                     var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var34).getTouchPriority();
-                     val var20: n = new IntRange(1, var28).o();
+                     var var17: NestedClickableSpan.TouchPriority = ((NestedClickableSpan)var35).getTouchPriority();
+                     var15 = var35;
+                     if (1 <= var31) {
+                        var var28: Int = 1;
+                        var var36: NestedClickableSpan.TouchPriority = var17;
 
-                     while (true) {
-                        var15 = var34;
-                        if (!var20.hasNext()) {
-                           break;
-                        }
+                        while (true) {
+                           val var19: NestedClickableSpan = var16[var28];
+                           val var18: NestedClickableSpan.TouchPriority = var16[var28].getTouchPriority();
+                           var17 = var36;
+                           if (var36.compareTo(var18) < 0) {
+                              var35 = var19;
+                              var17 = var18;
+                           }
 
-                        val var18: NestedClickableSpan = var16[var20.a()];
-                        val var35: NestedClickableSpan.TouchPriority = var18.getTouchPriority();
-                        if (var17.compareTo(var35) < 0) {
-                           var34 = var18;
-                           var17 = var35;
+                           var15 = var35;
+                           if (var28 == var31) {
+                              break;
+                           }
+
+                           var28++;
+                           var36 = var17;
                         }
                      }
                   }
@@ -137,7 +144,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                q.e(var15);
                this.spanBeingTouched = (NestedClickableSpan)var15;
                if (var15 != null) {
-                  ((NestedClickableSpan)var15).enableHighlight(var19);
+                  ((NestedClickableSpan)var15).enableHighlight(var20);
                }
             }
          }

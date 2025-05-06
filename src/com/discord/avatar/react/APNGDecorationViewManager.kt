@@ -10,14 +10,14 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {
    private final val delegate: APNGDecorationViewManagerDelegate<DecorationView, APNGDecorationViewManager> = new APNGDecorationViewManagerDelegate(this)
-   internal final val reactEvents: ReactEvents = new ReactEvents(w.a("onLoad", E.b(OnImageLoadedEvent.class)))
+   internal final val reactEvents: ReactEvents = new ReactEvents(w.a("onLoad", G.b(OnImageLoadedEvent.class)))
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): DecorationView {
       q.h(var1, "reactContext");

@@ -1,16 +1,15 @@
 package com.discord.bundle_updater.react.events
 
-import aa.f
-import aa.n
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import da.G
-import da.G.a
-import h8.w
+import ea.f
+import ea.n
+import ha.G
+import ha.G.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -20,6 +19,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
 
 @f
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
@@ -67,12 +67,12 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.metrics;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OtaCheckAttemptEvent(metrics=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.metrics;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OtaCheckAttemptEvent(metrics=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {

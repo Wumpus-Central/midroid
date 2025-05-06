@@ -11,11 +11,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import h8.w
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -33,7 +33,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("onCrashReportsReceived", E.b(CrashReportEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("onCrashReportsReceived", G.b(CrashReportEvent.class)));
    }
 
    @ReactMethod
@@ -52,10 +52,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
             }
 
             public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2, SystemLogReport.SentryCrashData var3) {
-               val var4: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var5: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               q.g(var5, "access$getReactApplicationContext(...)");
-               var4.emitModuleEvent(var5, new CrashReportEvent(java.lang.Boolean.TRUE, var3, var1, var2));
+               val var5: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
+               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
+               q.g(var4, "access$getReactApplicationContext(...)");
+               var5.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var3, var1, var2));
             }
          });
       }
@@ -78,10 +78,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
       q.h(var1, "callback");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
+      val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
    }
 
    public open fun getName(): String {
@@ -113,9 +113,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun setUser(user: ReadableMap) {
       q.h(var1, "user");
       val var2: Boolean = var1.getBoolean("staff");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      var3.getInstance(var4).setStaff(var2);
+      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var4.getInstance(var3).setStaff(var2);
    }
 }

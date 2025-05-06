@@ -1,10 +1,10 @@
 package com.discord.reactevents
 
-import h8.w
-import i8.q
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
+import l8.w
+import m8.q
 
 internal class ReactEventRegistry {
    public final var didExportEvents: Boolean
@@ -29,15 +29,15 @@ internal class ReactEventRegistry {
 
    public fun getEventName(event: ReactEvent): String {
       kotlin.jvm.internal.q.h(var1, "event");
-      val var2: java.lang.String = this.events.get(E.b(var1.getClass()));
+      val var2: java.lang.String = this.events.get(G.b(var1.getClass()));
       if (var2 != null) {
          return var2;
       } else {
-         val var4: KClass = E.b(var1.getClass());
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("No event name registered for event: ");
-         var3.append(var4);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: KClass = G.b(var1.getClass());
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("No event name registered for event: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 

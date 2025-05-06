@@ -8,10 +8,10 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import h8.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val manager: NearbyManager
@@ -23,9 +23,9 @@ public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactCo
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         w.a("nearbyMessageReceived", E.b(OnNearbyMessageReceivedEvent.class)),
-         w.a("nearbyMessageLost", E.b(OnNearbyMessageLostEvent.class)),
-         w.a("nearbyError", E.b(OnNearbyErrorEvent.class))
+         w.a("nearbyMessageReceived", G.b(OnNearbyMessageReceivedEvent.class)),
+         w.a("nearbyMessageLost", G.b(OnNearbyMessageLostEvent.class)),
+         w.a("nearbyError", G.b(OnNearbyErrorEvent.class))
       );
       this.manager = new NearbyManager(
          new Function1(this) {

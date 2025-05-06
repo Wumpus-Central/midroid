@@ -10,8 +10,8 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
-import i8.n
 import kotlin.jvm.internal.q
+import m8.n
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
@@ -59,6 +59,7 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
 
             while (var6.hasNext()) {
                val var5: ReadableMap = var2.getMap((var6 as n).a());
+               q.e(var5);
                val var4: java.lang.String = var5.getString("shape");
                if (q.c(var4, "circle")) {
                   var1.addCircleCutout(

@@ -1,14 +1,13 @@
 package com.discord.billing.react.events
 
-import aa.f
-import aa.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import da.C0
-import da.G
-import da.G.a
-import h8.w
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,6 +16,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
 
 @f
 internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName: String, sku: String) : ReactEvent {
@@ -72,17 +72,19 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
          var var2: Int;
-         var var5: java.lang.String;
-         val var7: java.lang.String;
+         var var6: java.lang.String;
          val var10: java.lang.String;
+         var var12: java.lang.String;
          if (var9.y()) {
-            var5 = var9.t(var8, 0);
-            var7 = var9.t(var8, 1);
+            var12 = var9.t(var8, 0);
+            val var7: java.lang.String = var9.t(var8, 1);
             var10 = var9.t(var8, 2);
             var2 = 7;
+            var6 = var12;
+            var12 = var7;
          } else {
-            var var6: java.lang.String = null;
-            var5 = null;
+            var6 = null;
+            var12 = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -96,7 +98,7 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                            throw new n(var4);
                         }
 
-                        var5 = var9.t(var8, 2);
+                        var12 = var9.t(var8, 2);
                         var2 |= 4;
                      } else {
                         var11 = var9.t(var8, 1);
@@ -111,13 +113,12 @@ internal class BillingManagerPurchaseUpdated(purchaseToken: String, packageName:
                }
             }
 
-            var7 = var11;
-            var10 = var5;
-            var5 = var6;
+            var12 = var11;
+            var10 = var12;
          }
 
          var9.b(var8);
-         return new BillingManagerPurchaseUpdated(var2, var5, var7, var10, null);
+         return new BillingManagerPurchaseUpdated(var2, var6, var12, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BillingManagerPurchaseUpdated) {

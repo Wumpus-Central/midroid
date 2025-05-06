@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.rolecolors
 
-import aa.f
-import aa.n
-import ba.a
-import da.G
-import da.N
+import ea.f
+import ea.n
+import fa.a
+import ha.G
+import ha.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,17 +79,17 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var4: Int = this.secondaryColor;
-      val var2: Int = this.tertiaryColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("RoleColors(primaryColor=");
-      var3.append(var1);
-      var3.append(", secondaryColor=");
-      var3.append(var4);
-      var3.append(", tertiaryColor=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: Int = this.secondaryColor;
+      val var3: Int = this.tertiaryColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("RoleColors(primaryColor=");
+      var4.append(var1);
+      var4.append(", secondaryColor=");
+      var4.append(var2);
+      var4.append(", tertiaryColor=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -175,7 +175,7 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

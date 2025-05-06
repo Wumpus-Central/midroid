@@ -1,12 +1,12 @@
 package com.discord.sticker.sticker_types
 
-import R1.c
+import R1.d
 import android.content.Context
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
-import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
@@ -25,7 +25,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView {
 
    public fun loadGifImage(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
       q.h(var1, "url");
-      this.setController((c.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
+      this.setController((d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
       var var5: Int;
       if (var2 != null) {
          var5 = var2;
@@ -45,7 +45,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView {
    public fun loadImage(url: String, widthDp: Int?, heightDp: Int?) {
       q.h(var1, "url");
       this.setImageURI(var1);
-      (this.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.e);
+      (this.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
       (this.getHierarchy() as GenericDraweeHierarchy).A(this.placeholder);
       var var4: Int;
       if (var2 != null) {

@@ -1,9 +1,9 @@
 package com.discord.core
 
-import Q9.K
-import Q9.d0
-import Q9.f
-import R1.c
+import R1.d
+import U9.K
+import U9.d0
+import U9.f
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -21,18 +21,18 @@ import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
-import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import h8.s
-import h8.w
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import n8.b
+import l8.s
+import l8.w
+import s8.b
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
@@ -57,7 +57,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
       this.imageView = var5;
       val var4: SimpleDraweeView = new SimpleDraweeView(var1);
       this.addToParent(var4);
-      (var4.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.i);
+      (var4.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.i);
       this.simpleDraweeView = var4;
    }
 
@@ -68,7 +68,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
 
    private fun SimpleDraweeView.loadDefaultBitmap(uri: Uri) {
       var1.setController(
-         (c.g().F(ImageRequestBuilder.w(var2).L(ResizeOptions.e.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).d()
+         (d.g().F(ImageRequestBuilder.x(var2).N(ResizeOptions.e.a(var1.getWidth(), var1.getHeight())).a()) as PipelineDraweeControllerBuilder).d()
       );
    }
 
@@ -130,7 +130,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           i8.q.l(new Pair[]{w.a("exception", var8.toString()), w.a("url", this.$uri.toString())}),
+                           m8.q.l(new Pair[]{w.a("exception", var8.toString()), w.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -198,7 +198,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           i8.q.l(new Pair[]{w.a("exception", var12.toString()), w.a("url", this.$uri.toString())}),
+                           m8.q.l(new Pair[]{w.a("exception", var12.toString()), w.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -254,7 +254,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           i8.q.l(new Pair[]{w.a("exception", var11.toString()), w.a("url", this.$uri.toString())}),
+                           m8.q.l(new Pair[]{w.a("exception", var11.toString()), w.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -309,7 +309,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           i8.q.l(new Pair[]{w.a("exception", var10.toString()), w.a("url", this.$uri.toString())}),
+                           m8.q.l(new Pair[]{w.a("exception", var10.toString()), w.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -416,7 +416,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,
                         "DCDLocalImageThumbnail - Failed to load thumbnail",
-                        i8.q.l(new Pair[]{w.a("exception", var9.toString()), w.a("url", this.$uri.toString())}),
+                        m8.q.l(new Pair[]{w.a("exception", var9.toString()), w.a("url", this.$uri.toString())}),
                         null,
                         4,
                         null

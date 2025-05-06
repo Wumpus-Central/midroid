@@ -182,17 +182,17 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
       }
 
       public override fun toString(): String {
-         val var5: Int = this.x;
-         val var6: Int = this.y;
+         val var6: Int = this.x;
+         val var5: Int = this.y;
          val var3: Int = this.width;
          val var4: Int = this.height;
          val var2: Int = this.contentWidth;
          val var1: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Data(x=");
-         var7.append(var5);
-         var7.append(", y=");
          var7.append(var6);
+         var7.append(", y=");
+         var7.append(var5);
          var7.append(", width=");
          var7.append(var3);
          var7.append(", height=");

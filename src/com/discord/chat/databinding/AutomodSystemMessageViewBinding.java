@@ -75,71 +75,71 @@ public final class AutomodSystemMessageViewBinding implements ViewBinding {
 
    public static AutomodSystemMessageViewBinding bind(View var0) {
       int var1 = R.id.accessories_view;
-      MessageAccessoriesView var6 = (MessageAccessoriesView)a.a(var0, var1);
-      if (var6 != null) {
+      MessageAccessoriesView var7 = (MessageAccessoriesView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.author_avatar;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.author_name;
-            TextView var10 = (TextView)a.a(var0, var1);
-            if (var10 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.automod_message_channel;
-               TextView var13 = (TextView)a.a(var0, var1);
-               if (var13 != null) {
+               TextView var14 = (TextView)a.a(var0, var1);
+               if (var14 != null) {
                   var1 = R.id.automod_message_context_header;
-                  TextView var9 = (TextView)a.a(var0, var1);
-                  if (var9 != null) {
+                  TextView var13 = (TextView)a.a(var0, var1);
+                  if (var13 != null) {
                      var1 = R.id.guild_communication_disabled_icon;
-                     SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var4 != null) {
+                     SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var12 != null) {
                         var1 = R.id.header_section;
                         Flow var16 = (Flow)a.a(var0, var1);
                         if (var16 != null) {
                            var1 = R.id.message_end_guideline;
-                           Guideline var5 = (Guideline)a.a(var0, var1);
-                           if (var5 != null) {
+                           Guideline var4 = (Guideline)a.a(var0, var1);
+                           if (var4 != null) {
                               var1 = R.id.message_header_barrier;
                               Barrier var11 = (Barrier)a.a(var0, var1);
                               if (var11 != null) {
                                  var1 = R.id.message_header_divider;
-                                 View var14 = a.a(var0, var1);
-                                 if (var14 != null) {
+                                 View var17 = a.a(var0, var1);
+                                 if (var17 != null) {
                                     var1 = R.id.message_header_subtitle;
-                                    TextView var15 = (TextView)a.a(var0, var1);
-                                    if (var15 != null) {
+                                    TextView var5 = (TextView)a.a(var0, var1);
+                                    if (var5 != null) {
                                        var1 = R.id.message_header_title;
-                                       TextView var17 = (TextView)a.a(var0, var1);
-                                       if (var17 != null) {
+                                       TextView var3 = (TextView)a.a(var0, var1);
+                                       if (var3 != null) {
                                           var1 = R.id.message_tag_view;
-                                          MessageTagView var12 = (MessageTagView)a.a(var0, var1);
-                                          if (var12 != null) {
+                                          MessageTagView var15 = (MessageTagView)a.a(var0, var1);
+                                          if (var15 != null) {
                                              var1 = R.id.reply_preview;
-                                             MessageViewReplyPreview var7 = (MessageViewReplyPreview)a.a(var0, var1);
-                                             if (var7 != null) {
+                                             MessageViewReplyPreview var8 = (MessageViewReplyPreview)a.a(var0, var1);
+                                             if (var8 != null) {
                                                 var1 = R.id.thread_starter_header;
-                                                ThreadStarterMessageHeaderView var3 = (ThreadStarterMessageHeaderView)a.a(var0, var1);
-                                                if (var3 != null) {
+                                                ThreadStarterMessageHeaderView var6 = (ThreadStarterMessageHeaderView)a.a(var0, var1);
+                                                if (var6 != null) {
                                                    var1 = R.id.timestamp;
-                                                   TextView var8 = (TextView)a.a(var0, var1);
-                                                   if (var8 != null) {
+                                                   TextView var9 = (TextView)a.a(var0, var1);
+                                                   if (var9 != null) {
                                                       return new AutomodSystemMessageViewBinding(
                                                          var0,
-                                                         var6,
-                                                         var2,
-                                                         var10,
-                                                         var13,
-                                                         var9,
-                                                         var4,
-                                                         var16,
-                                                         var5,
-                                                         var11,
-                                                         var14,
-                                                         var15,
-                                                         var17,
-                                                         var12,
                                                          var7,
+                                                         var10,
+                                                         var2,
+                                                         var14,
+                                                         var13,
+                                                         var12,
+                                                         var16,
+                                                         var4,
+                                                         var11,
+                                                         var17,
+                                                         var5,
                                                          var3,
-                                                         var8
+                                                         var15,
+                                                         var8,
+                                                         var6,
+                                                         var9
                                                       );
                                                    }
                                                 }

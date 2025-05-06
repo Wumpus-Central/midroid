@@ -23,25 +23,25 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
-import h8.w
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         w.a("onUnexpectedItemSize", E.b(OnUnexpectedItemSizeEvent.class)),
-         w.a("onLayout", E.b(OnLayoutEvent.class)),
-         w.a("onScroll", E.b(OnScrollEvent.class)),
-         w.a("onScrollBeginDrag", E.b(OnScrollBeginDragEvent.class)),
-         w.a("onScrollEndDrag", E.b(OnScrollEndDragEvent.class)),
-         w.a("onVisibleItemsChanged", E.b(OnVisibleItemsChangedEvent.class))
+         w.a("onUnexpectedItemSize", G.b(OnUnexpectedItemSizeEvent.class)),
+         w.a("onLayout", G.b(OnLayoutEvent.class)),
+         w.a("onScroll", G.b(OnScrollEvent.class)),
+         w.a("onScrollBeginDrag", G.b(OnScrollBeginDragEvent.class)),
+         w.a("onScrollEndDrag", G.b(OnScrollEndDragEvent.class)),
+         w.a("onVisibleItemsChanged", G.b(OnVisibleItemsChangedEvent.class))
       )
 
    public open fun createShadowNodeInstance(): LayoutShadowNode {

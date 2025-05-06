@@ -1,17 +1,16 @@
 package com.discord.bundle_updater
 
-import aa.f
-import aa.n
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
-import da.C0
-import da.G
-import da.N
-import da.T
-import da.h
-import h8.w
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.N
+import ha.T
+import ha.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -20,6 +19,7 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
 
 @f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
@@ -39,7 +39,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: C0 = C0.a;
-      $childSerializers = new KSerializer[]{null, null, new da.f(C0.a), new da.f(var0), null, new T(var0, N.a)};
+      $childSerializers = new KSerializer[]{null, null, new ha.f(C0.a), new ha.f(var0), null, new T(var0, N.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -158,8 +158,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = w.a("expiresAt", this.expiresAt);
-      val var3: Pair = w.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = w.a("expiresAt", this.expiresAt);
+      val var4: Pair = w.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -174,38 +174,38 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var6: Pair = w.a("allowedVersions", var9);
-      val var7: Pair = w.a("allowLoggedOut", this.allowLoggedOut);
+      val var7: Pair = w.a("allowedVersions", var9);
+      val var6: Pair = w.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var6, var7, w.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var7, var6, w.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.expiresAt;
-      val var2: java.lang.String = this.releaseChannel;
-      val var1: java.util.List = this.validForUserIds;
-      val var3: java.util.List = this.allowedVersions;
-      val var7: java.lang.Boolean = this.allowLoggedOut;
-      val var4: java.util.Map = this.experiments;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("BuildOverrideCookieMeta(expiresAt=");
-      var6.append(var5);
-      var6.append(", releaseChannel=");
-      var6.append(var2);
-      var6.append(", validForUserIds=");
-      var6.append(var1);
-      var6.append(", allowedVersions=");
-      var6.append(var3);
-      var6.append(", allowLoggedOut=");
-      var6.append(var7);
-      var6.append(", experiments=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var7: java.lang.String = this.expiresAt;
+      val var5: java.lang.String = this.releaseChannel;
+      val var4: java.util.List = this.validForUserIds;
+      val var6: java.util.List = this.allowedVersions;
+      val var1: java.lang.Boolean = this.allowLoggedOut;
+      val var2: java.util.Map = this.experiments;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BuildOverrideCookieMeta(expiresAt=");
+      var3.append(var7);
+      var3.append(", releaseChannel=");
+      var3.append(var5);
+      var3.append(", validForUserIds=");
+      var3.append(var4);
+      var3.append(", allowedVersions=");
+      var3.append(var6);
+      var3.append(", allowLoggedOut=");
+      var3.append(var1);
+      var3.append(", experiments=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -232,7 +232,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var1: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
          val var2: C0 = C0.a;
-         return new KSerializer[]{ba.a.u(C0.a), ba.a.u(var2), ba.a.u(var1[2]), ba.a.u(var1[3]), ba.a.u(h.a), ba.a.u(var1[5])};
+         return new KSerializer[]{fa.a.u(C0.a), fa.a.u(var2), fa.a.u(var1[2]), fa.a.u(var1[3]), fa.a.u(h.a), fa.a.u(var1[5])};
       }
 
       public open fun deserialize(decoder: Decoder): BuildOverrideCookieMeta {
@@ -243,30 +243,30 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          val var5: Boolean = var13.y();
          var var10: java.lang.String = null;
          var var2: Int;
-         var var6: java.util.List;
-         var var7: Any;
+         var var7: java.util.List;
          var var8: java.util.List;
          var var9: java.lang.String;
-         var var16: Any;
+         var var15: Any;
+         var var17: Any;
          if (var5) {
-            var16 = C0.a;
+            var15 = C0.a;
             var10 = var13.v(var12, 0, C0.a, null) as java.lang.String;
-            var9 = var13.v(var12, 1, (DeserializationStrategy)var16, null) as java.lang.String;
+            var9 = var13.v(var12, 1, (DeserializationStrategy)var15, null) as java.lang.String;
             var8 = var13.v(var12, 2, var11[2], null) as java.util.List;
-            var6 = var13.v(var12, 3, var11[3], null) as java.util.List;
-            var16 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
+            var17 = var13.v(var12, 3, var11[3], null) as java.util.List;
+            var15 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
             val var19: java.util.Map = var13.v(var12, 5, var11[5], null) as java.util.Map;
             var2 = 63;
-            var7 = var16;
-            var16 = var19;
+            var7 = (java.util.List)var17;
+            var17 = var19;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
             var8 = null;
             var7 = null;
-            var6 = null;
-            var16 = null;
+            var17 = null;
+            var15 = null;
 
             while (var3) {
                val var4: Int = var13.x(var12);
@@ -291,11 +291,11 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                      var2 |= 8;
                      break;
                   case 4:
-                     var6 = var13.v(var12, 4, h.a, var6) as java.lang.Boolean;
+                     var17 = var13.v(var12, 4, h.a, var17) as java.lang.Boolean;
                      var2 |= 16;
                      break;
                   case 5:
-                     var16 = var13.v(var12, 5, var11[5], var16) as java.util.Map;
+                     var15 = var13.v(var12, 5, var11[5], var15) as java.util.Map;
                      var2 |= 32;
                      break;
                   default:
@@ -303,12 +303,12 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
                }
             }
 
-            var7 = var6;
-            var6 = (java.util.List)var7;
+            var17 = var15;
+            var15 = var17;
          }
 
          var13.b(var12);
-         return new BuildOverrideCookieMeta(var2, var10, var9, var8, var6, (java.lang.Boolean)var7, (java.util.Map)var16, null);
+         return new BuildOverrideCookieMeta(var2, var10, var9, var8, var7, (java.lang.Boolean)var15, (java.util.Map)var17, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BuildOverrideCookieMeta) {
@@ -321,7 +321,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

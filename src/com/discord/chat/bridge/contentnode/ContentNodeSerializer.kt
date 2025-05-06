@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import ca.g
-import ca.e.i
-import ea.e
+import ga.g
+import ga.e.i
+import ia.e
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

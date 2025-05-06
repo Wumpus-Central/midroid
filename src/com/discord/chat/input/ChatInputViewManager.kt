@@ -26,7 +26,7 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatInputManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatInputManagerInterface
-import da.f
+import ha.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
@@ -92,12 +92,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var4: ThemedReactContext = this.$reactContext;
-            val var2: ChatInputRootView = this.$view;
+            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var2: ThemedReactContext = this.$reactContext;
+            val var5: ChatInputRootView = this.$view;
             val var3: java.lang.String = var1.toString();
             q.g(var3, "toString(...)");
-            var5.emitEvent(var4, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
+            var4.emitEvent(var2, var5, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -194,7 +194,9 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               this.flushText(var1, var3.getString(0));
+               var2 = var3.getString(0);
+               q.e(var2);
+               this.flushText(var1, var2);
             }
             break;
          case 3027047:
@@ -208,7 +210,9 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               this.updateTextBlocks(var1, var3.getString(0), var3.getString(1));
+               var2 = var3.getString(0);
+               q.e(var2);
+               this.updateTextBlocks(var1, var2, var3.getString(1));
             }
             break;
          case 97604824:
@@ -222,7 +226,13 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
                   return;
                }
 
-               this.replaceRange(var1, var3.getInt(0), var3.getInt(1), var3.getString(2), var3.getString(3), var3.getBoolean(4), var3.getString(5));
+               val var4: Int = var3.getInt(0);
+               val var5: Int = var3.getInt(1);
+               var2 = var3.getString(2);
+               q.e(var2);
+               val var6: java.lang.String = var3.getString(3);
+               q.e(var6);
+               this.replaceRange(var1, var4, var5, var2, var6, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:

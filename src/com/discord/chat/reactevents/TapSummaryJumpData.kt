@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.G.a
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,14 +77,14 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
       val var4: java.lang.String = this.summaryId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapSummaryJumpData(channelId=");
-      var1.append(var3);
-      var1.append(", messageId=");
       var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
       var1.append(", summaryId=");
       var1.append(var4);
       var1.append(")");
@@ -157,8 +157,8 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.b(var8);

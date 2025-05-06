@@ -14,9 +14,9 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
    private final val reactApplicationContext: ReactApplicationContext
@@ -26,7 +26,7 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       q.h(var1, "reactContext");
       super();
       this.reactApplicationContext = var1;
-      this.reactEvents = new ReactEvents(w.a("share-broadcast-receiver-app-clicked", E.b(ShareBroadcastReceiverAppClicked.class)));
+      this.reactEvents = new ReactEvents(w.a("share-broadcast-receiver-app-clicked", G.b(ShareBroadcastReceiverAppClicked.class)));
    }
 
    public open fun onReceive(context: Context?, intent: Intent?) {
@@ -43,11 +43,11 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var4: ReactEvents = this.reactEvents;
-         val var7: ReactApplicationContext = this.reactApplicationContext;
+         val var7: ReactEvents = this.reactEvents;
+         val var4: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
          q.g(var6, "getPackageName(...)");
-         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 

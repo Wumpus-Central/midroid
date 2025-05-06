@@ -29,11 +29,11 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import h8.l
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import l8.l
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -64,10 +64,10 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
-      this.binding = var6;
-      this.progressDots$delegate = l.b(new Function0(this) {
+      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var4, "inflate(...)");
+      this.binding = var4;
+      this.progressDots$delegate = l.a(new Function0(this) {
          final ButtonComponentView this$0;
 
          {
@@ -82,13 +82,13 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          }
       });
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var4.b(0.0F);
-      this.setLayoutParams(var4);
+      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var6.b(0.0F);
+      this.setLayoutParams(var6);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var6.linkIcon;
-      q.g(var6.linkIcon, "linkIcon");
+      val var5: SimpleDraweeView = var4.linkIcon;
+      q.g(var4.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 
@@ -296,7 +296,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    public override fun getComponentType(): KClass<ButtonComponent> {
-      return E.b(ButtonComponent.class);
+      return G.b(ButtonComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

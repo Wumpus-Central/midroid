@@ -4,9 +4,9 @@ import android.app.Activity
 import android.app.PictureInPictureParams.Builder
 import android.os.Build.VERSION
 import android.util.Rational
-import h8.r
-import h8.s
 import kotlin.jvm.internal.q
+import l8.r
+import l8.s
 
 internal class ExternalPipManager {
    private final var enabled: Boolean
@@ -33,44 +33,44 @@ internal class ExternalPipManager {
    public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (r<Unit>) -> Unit = <unrepresentable>.INSTANCE) {
       q.h(var3, "onResult");
       if ((this.enabled || var2) && CAN_PIP) {
-         val var10: java.lang.Boolean;
+         val var11: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var14: ExternalPipManager.Companion = Companion;
+               val var4: ExternalPipManager.Companion = Companion;
                e.a();
                val var5: Builder = a.a(d.a(), this.aspectRatio);
                q.g(var5, "setAspectRatio(...)");
-               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var14, var5, false)));
+               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var4, var5, false)));
             } catch (var8: Exception) {
-               val var4: h8.r.a = r.k;
+               val var10: l8.r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var8))));
                return;
             }
          } else {
-            var10 = null;
+            var11 = null;
          }
 
          try {
-            if (q.c(var10, java.lang.Boolean.TRUE)) {
-               val var13: h8.r.a = r.k;
+            if (q.c(var11, java.lang.Boolean.TRUE)) {
+               val var16: l8.r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var15: h8.r.a = r.k;
+            val var12: l8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
             return;
          }
 
          try {
-            val var11: h8.r.a = r.k;
+            val var14: l8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var16: h8.r.a = r.k;
+            val var13: l8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var6))));
          }
       } else {
-         val var9: h8.r.a = r.k;
+         val var9: l8.r.a = r.k;
          var3.invoke(r.a(r.b(s.a(new Exception("Disabled or unsupported.")))));
       }
    }

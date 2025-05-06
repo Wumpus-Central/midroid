@@ -722,11 +722,7 @@
   "w5beJC": "Vi är här för att hjälpa!",
   "xfAlNz": "Communityuppdateringar",
   "COObWV": [
-    "Genom att klicka på ",
-    "\"",
-    "Köp",
-    "\" ",
-    "godkänner du Discords ",
+    "Genom att klicka på ”Köp” godkänner du våra ",
     [
       8,
       "$link",
@@ -754,19 +750,15 @@
         ]
       ]
     ],
-    ". Du håller på att köpa en löpande prenumeration, vilket innebär att vi debiterar ditt Google Play-konto i dag och fortsätter att debitera dig varje ",
+    ". Det du köper är en löpande prenumeration, vilket innebär att vi debiterar ditt Google Play-konto i dag och fortsätter att debitera dig varje ",
     [
       1,
       "interval"
     ],
-    " tills du säger upp prenumerationen. Du kan när som helst, fram till 24 timmar innan din aktuella period löper ut, säga upp tjänsten i inställningarna i Google Play."
+    " tills du avbryter den. Priser kan ändras, men du får då ett meddelande i förväg. Du kan avbryta när som helst upp till 24 timmar innan din nuvarande period löper ut i inställningarna i Google Play-butiken."
   ],
   "7wpqfn": [
-    "Genom att klicka på ",
-    "\"",
-    "Köp",
-    "\" ",
-    "godkänner du Discords ",
+    "Genom att klicka på ”Köp” godkänner du våra ",
     [
       8,
       "$link",
@@ -794,12 +786,12 @@
         ]
       ]
     ],
-    ". Du håller på att köpa en löpande prenumeration, vilket innebär att vi debiterar ditt Apple ID-konto i dag och fortsätter att debitera dig varje ",
+    ". Det du köper är en löpande prenumeration, vilket innebär att vi debiterar ditt Apple-ID-konto i dag och fortsätter att debitera dig varje ",
     [
       1,
       "interval"
     ],
-    " tills du säger upp prenumerationen. Du kan när som helst, fram till 24 timmar innan din aktuella period löper ut, säga upp tjänsten i inställningarna i App Store."
+    " tills du avbryter den. Priser kan ändras, men du får då ett meddelande i förväg. Du kan avbryta när som helst upp till 24 timmar innan din nuvarande period löper ut i inställningarna i App Store."
   ],
   "gJs+kZ": "Skicka åldersverifiering",
   "eQg0Cg": "ANLEDNING",
@@ -5077,6 +5069,29 @@
       "answerNumber"
     ]
   ],
+  "w8e4qK": [
+    "Du har ",
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " fel"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " fel"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "e9hWx8": "Stil på undersökningssvar",
   "GhK6X1": "Textsvar med valfritt medieinnehåll",
   "an4GKS": "Endast mediesvar",
@@ -5659,6 +5674,13 @@
   ],
   "2p9FMz": "Ändra anpassad status",
   "E45wvL": "Rensa efter",
+  "DN91Jy": [
+    "i morgon kl. ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     "Rensa om ",
     [
@@ -7358,6 +7380,7 @@
       "code"
     ]
   ],
+  "3ejJen": "Expandera aktivitet",
   "06YebG": "Obs!",
   "z81WwM": "Den här appen kommer inte från Discord. Prova bara appar från betrodda utgivare.",
   "Z/eMDQ": [
@@ -11967,16 +11990,12 @@
   "hub6t7": "Visa alla förmåner",
   "UdEvUl": "vad du låser upp",
   "FSPTDA": [
-    "Genom att klicka på ",
-    "\"",
-    "Prenumerera",
-    "\" ",
-    "samtycker du till ",
+    "Genom att klicka på ”Prenumerera” godkänner du våra ",
     [
       8,
       "$link",
       [
-        "villkoren för betaltjänster"
+        "Villkor för betaltjänster"
       ],
       [
         [
@@ -11990,7 +12009,7 @@
       8,
       "$link",
       [
-        "tjänstevillkoren"
+        "Användarvillkor"
       ],
       [
         [
@@ -11999,7 +12018,7 @@
         ]
       ]
     ],
-    ". Detta är en löpande prenumeration, och vi debiterar ditt konto idag och varje månad fram till att du avbryter den."
+    ". Detta är en löpande prenumeration, vi debiterar ditt konto i dag och varje månad tills du avbryter den. Priser kan ändras, men du får då ett meddelande i förväg."
   ],
   "mPHb19": "Välj en prenumeration för att låsa upp mer",
   "A1L1hY": [
@@ -17947,7 +17966,7 @@
   "L+P4t7": "På grund av den här serverns storlek kommer medlemmarna inte att få mobilaviseringar för @meddelanden som inte är omnämnda.",
   "s35OuL": "Det uppstod ett problem när din serverspecifika profil skulle uppdateras ...",
   "jrXfy8": "Uppladdningskrav",
-  "N2qTQ0": "Filtyp: JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "Filtyp: JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Rekommenderad filstorlek: ",
     [
@@ -22894,6 +22913,7 @@
   ],
   "bAVpRU": "Åldersbegränsad server",
   "uy25Q0": "Dekaler från den här servern är inte tillgängliga",
+  "xi46lp": "Åldersbegränsad server",
   "ZmwvDQ": "Åldersbegränsad kanal",
   "Gtctho": "Häng med kompisar, spela spel eller bara prata. Tryck nedan för att sätta igång!",
   "mufH2N": "Kanaler är platser på din server där folk kan prata om olika ämnen.",
@@ -30842,6 +30862,24 @@
     ],
     " poster"
   ],
+  "v5a2+f": [
+    "Måste ha minst ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " recension(er) med positivt omdöme"
+  ],
+  "yYbR2t": [
+    "Får som mest ha ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " recension(er) med negativt omdöme"
+  ],
   "kCAN5+": "Måste ha Reddit Gold",
   "0JyE8P": "Måste ha ett verifierat bankkonto",
   "W3iY5+": "Måste ansluta minst ett",
@@ -35703,6 +35741,36 @@
       ]
     ],
     "."
+  ],
+  "KI+BSU": [
+    "Genom att klicka på ”Skapa konto” godkänner du Discords ",
+    [
+      8,
+      "$link",
+      [
+        "Användarvillkor"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " och intygar att du har läst vår ",
+    [
+      8,
+      "$link",
+      [
+        "Sekretesspolicy"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
   ],
   "qMDAPz": [
     "Jag har läst och godkänner Discords ",

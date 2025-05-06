@@ -1,9 +1,9 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import h8.r
-import h8.s
 import kotlin.jvm.internal.q
+import l8.r
+import l8.s
 
 public final val codecType: String?
    public final get() {
@@ -69,10 +69,10 @@ public final val level: Int?
 
       label16:
       try {
-         val var1: h8.r.a = r.k;
+         val var1: l8.r.a = r.k;
          var5 = r.b(var0.getInteger("level"));
       } catch (var2: java.lang.Throwable) {
-         val var4: h8.r.a = r.k;
+         val var4: l8.r.a = r.k;
          var5 = r.b(s.a(var2));
          break label16;
       }
@@ -92,10 +92,10 @@ public final val mimeType: String?
 
       label16:
       try {
-         val var1: h8.r.a = r.k;
+         val var1: l8.r.a = r.k;
          var5 = r.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: h8.r.a = r.k;
+         val var4: l8.r.a = r.k;
          var5 = r.b(s.a(var2));
          break label16;
       }
@@ -115,10 +115,10 @@ public final val profile: Int?
 
       label16:
       try {
-         val var1: h8.r.a = r.k;
+         val var1: l8.r.a = r.k;
          var5 = r.b(var0.getInteger("profile"));
       } catch (var2: java.lang.Throwable) {
-         val var4: h8.r.a = r.k;
+         val var4: l8.r.a = r.k;
          var5 = r.b(s.a(var2));
          break label16;
       }

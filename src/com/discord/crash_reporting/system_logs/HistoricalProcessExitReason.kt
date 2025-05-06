@@ -7,8 +7,8 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import h8.w
-import i8.q
+import l8.w
+import m8.q
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>

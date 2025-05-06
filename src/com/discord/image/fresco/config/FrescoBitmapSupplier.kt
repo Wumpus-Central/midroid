@@ -4,7 +4,7 @@ import android.app.ActivityManager
 import android.content.Context
 import com.facebook.imagepipeline.cache.MemoryCacheParams
 import kotlin.jvm.internal.q
-import w2.o
+import x2.o
 
 internal class FrescoBitmapSupplier(context: Context) : o {
    init {

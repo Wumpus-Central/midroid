@@ -24,7 +24,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
 import java.util.ArrayList
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -74,11 +74,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var1: View = this.getCurrentAccessoryView();
-      if (var1 != null) {
-         this.binding.sectionLayoutBox.removeView(var1);
+      val var2: View = this.getCurrentAccessoryView();
+      if (var2 != null) {
+         this.binding.sectionLayoutBox.removeView(var2);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
          }
       }
    }
@@ -126,11 +126,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
             }
 
             var8 = i.c0(var20);
-            val var26: Component = var1.getAccessory().getComponent();
-            q.e(var26);
-            val var23: FlexboxLayout = this.binding.sectionLayoutBox;
+            val var23: Component = var1.getAccessory().getComponent();
+            q.e(var23);
+            val var26: FlexboxLayout = this.binding.sectionLayoutBox;
             q.g(this.binding.sectionLayoutBox, "sectionLayoutBox");
-            val var24: ComponentView = var2.getConfiguredComponentView(var26, var3, var23, 1);
+            val var24: ComponentView = var2.getConfiguredComponentView(var23, var3, var26, 1);
             if (!var8.isEmpty() && var24 != null) {
                MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
                this.setAccessoryView(var24 as View);
@@ -189,7 +189,7 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    public override fun getComponentType(): KClass<SectionComponent> {
-      return E.b(SectionComponent.class);
+      return G.b(SectionComponent.class);
    }
 
    public override fun onRecycle(componentProvider: ComponentProvider) {

@@ -1,7 +1,7 @@
 package com.discord.device
 
 import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
@@ -9,15 +9,15 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
-public class DevicePackage : TurboReactPackage {
+public class DevicePackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
       return i.k();
    }
 
-   public open fun getModule(name: String, context: ReactApplicationContext): NativeModule? {
+   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
-      q.h(var2, "context");
+      q.h(var2, "reactContext");
       switch (var1.hashCode()) {
          case -2084303303:
             if (var1.equals("NativeDeviceModule")) {

@@ -13,10 +13,10 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
-import i8.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import m8.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
@@ -62,6 +62,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
 
          while (var5.hasNext()) {
             val var7: ReadableMap = var1.getMap((var5 as n).a());
+            q.e(var7);
             var3.add(
                new Rect(
                   SizeUtilsKt.getDpToPx(var7.getInt("left")),

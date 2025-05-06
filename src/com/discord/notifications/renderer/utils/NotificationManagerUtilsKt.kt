@@ -13,11 +13,11 @@ import com.discord.notifications.renderer.NotificationBehaviors
 import com.discord.primitives.ChannelId
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import h8.r
-import h8.s
-import h8.r.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import l8.r
+import l8.s
+import l8.r.a
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 private final val messageRegex: Regex = new Regex("/channels/(\\d+|@me)(?:/)(\\d+)(?:/)(\\d+)")
@@ -197,16 +197,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var15: a = r.k;
-         var14 = r.b(var6.getActiveNotifications());
+         val var14: a = r.k;
+         var13 = r.b(var6.getActiveNotifications());
       } catch (var10: java.lang.Throwable) {
-         val var13: a = r.k;
-         var14 = r.b(s.a(var10));
+         val var15: a = r.k;
+         var13 = r.b(s.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var14;
-      if (r.g(var14)) {
+      var6 = (NotificationManager)var13;
+      if (r.g(var13)) {
          var6 = null;
       }
 
@@ -222,14 +222,14 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
             if (var17[var3].getTag() == null) {
                var5 = false;
             } else {
-               var var9: java.lang.String = ChannelId.toString-impl(var1);
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("CALL_RING");
-               var8.append(var9);
-               var9 = var8.toString();
-               val var19: java.lang.String = var18.getTag();
-               q.g(var19, "getTag(...)");
-               var5 = h.J(var19, var9, false, 2, null);
+               var var8: java.lang.String = ChannelId.toString-impl(var1);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("CALL_RING");
+               var9.append(var8);
+               val var20: java.lang.String = var9.toString();
+               var8 = var18.getTag();
+               q.g(var8, "getTag(...)");
+               var5 = h.J(var8, var20, false, 2, null);
             }
 
             if (var5) {

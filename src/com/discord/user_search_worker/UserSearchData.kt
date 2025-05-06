@@ -1,9 +1,9 @@
 package com.discord.user_search_worker
 
-import aa.f
-import ea.d
-import ea.g
-import kotlin.jvm.internal.E
+import ea.f
+import ia.d
+import ia.g
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -18,7 +18,7 @@ internal sealed class UserSearchData protected constructor() {
       }
    }
 
-   internal object Serializer : d(E.b(UserSearchData.class)) {
+   internal object Serializer : d(G.b(UserSearchData.class)) {
       protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<UserSearchData> {
          var var6: java.lang.String;
          label34: {

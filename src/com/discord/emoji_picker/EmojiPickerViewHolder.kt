@@ -26,13 +26,13 @@ import com.discord.portals.from_js.PortalFromJsContextManager
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
-import h8.l
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import l8.l
 
 internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
    public class Category(context: Context) : EmojiPickerViewHolder {
@@ -123,7 +123,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          q.h(var2, "onPressEmoji");
          q.h(var3, "onLongPressEmoji");
          super(new SimpleDraweeView(var1), null);
-         this.placeholder$delegate = l.b(<unrepresentable>.INSTANCE);
+         this.placeholder$delegate = l.a(<unrepresentable>.INSTANCE);
          val var4: View = this.itemView;
          q.f(this.itemView, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var5: SimpleDraweeView = var4 as SimpleDraweeView;
@@ -131,7 +131,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiLoadListener = new EmojiPickerViewHolder.Emoji.EmojiLoadListener(false);
          RippleUtilsKt.addCircleRipple(var5, true);
          (var5.getHierarchy() as GenericDraweeHierarchy).x(var1.getResources().getInteger(com.discord.image.fresco.R.integer.image_fade_duration) / 3);
-         (var5.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.e);
+         (var5.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new d(this, var2), 1, null);
          NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var5, false, new e(this, var3), 1, null);
       }
@@ -211,10 +211,10 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          this.emojiItem = var1;
          this.emojiSize = var3;
          this.emojiMargin = var4;
-         val var8: SimpleDraweeView = this.emojiView;
-         val var7: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
-         var7.setMargins(var4, var4, var4, var4);
-         var8.setLayoutParams(var7);
+         val var7: SimpleDraweeView = this.emojiView;
+         val var8: RecyclerView.LayoutParams = new RecyclerView.LayoutParams(var3, var3);
+         var8.setMargins(var4, var4, var4, var4);
+         var7.setLayoutParams(var8);
          this.emojiView.setContentDescription(var1.getName());
          val var11: GenericDraweeHierarchy = this.emojiView.getHierarchy() as GenericDraweeHierarchy;
          val var10: Drawable;

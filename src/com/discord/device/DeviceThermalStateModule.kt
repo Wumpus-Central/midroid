@@ -6,9 +6,9 @@ import com.discord.codegen.NativeDeviceThermalStateModuleSpec
 import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) : NativeDeviceThermalStateModuleSpec {
    private final val reactEvents: ReactEvents
@@ -16,7 +16,7 @@ internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) :
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(w.a("DeviceThermalStateDidChange", E.b(DeviceThermalStateChangedEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("DeviceThermalStateDidChange", G.b(DeviceThermalStateChangedEvent.class)));
    }
 
    @JvmStatic

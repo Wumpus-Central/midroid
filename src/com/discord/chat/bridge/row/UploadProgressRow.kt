@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.row
 
-import aa.f
-import aa.n
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import da.C0
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,18 +83,18 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var4: ChangeType = this.changeType;
-      val var2: Message = this.message;
-      val var3: java.lang.String = this.fileId;
+      val var2: ChangeType = this.changeType;
+      val var3: Message = this.message;
+      val var4: java.lang.String = this.fileId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("UploadProgressRow(index=");
       var5.append(var1);
       var5.append(", changeType=");
-      var5.append(var4);
-      var5.append(", message=");
       var5.append(var2);
-      var5.append(", fileId=");
+      var5.append(", message=");
       var5.append(var3);
+      var5.append(", fileId=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

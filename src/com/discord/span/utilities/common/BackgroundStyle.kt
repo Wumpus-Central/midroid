@@ -1,10 +1,10 @@
 package com.discord.span.utilities.common
 
-import aa.f
-import aa.n
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -110,10 +110,10 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
          val var6: Int;
          if (var9.y()) {
             var5 = var9.k(var8, 0);
-            var4 = var9.k(var8, 1);
+            var6 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var3 = 7;
-            var6 = var2;
+            var4 = 7;
+            var3 = var2;
          } else {
             var var13: Boolean = true;
             var5 = 0;
@@ -145,13 +145,13 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
                }
             }
 
-            var6 = var4;
-            var4 = var3;
-            var3 = var10;
+            var6 = var3;
+            var3 = var4;
+            var4 = var10;
          }
 
          var9.b(var8);
-         return new BackgroundStyle(var3, var5, var4, var6, null);
+         return new BackgroundStyle(var4, var5, var6, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

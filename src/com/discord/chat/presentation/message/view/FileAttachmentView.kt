@@ -101,7 +101,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var1, "$url");
       kotlin.jvm.internal.q.h(var2, "$attachmentName");
       kotlin.jvm.internal.q.h(var3, "$attachmentDescription");
-      Q9.f.d(CoroutineViewUtilsKt.getAttachedScope(var0), Q9.K.b(), null, new Function2(var0, var1, var2, var3, null) {
+      U9.f.d(CoroutineViewUtilsKt.getAttachedScope(var0), U9.K.b(), null, new Function2(var0, var1, var2, var3, null) {
          final java.lang.String $attachmentDescription;
          final java.lang.String $attachmentName;
          final java.lang.String $url;
@@ -125,20 +125,20 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = n8.b.e();
+            val var3: Any = s8.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               h8.s.b(var1);
+               l8.s.b(var1);
             } else {
-               h8.s.b(var1);
-               val var4: PublicFileDownloader = PublicFileDownloader.INSTANCE;
-               var1 = this.this$0.getContext();
-               kotlin.jvm.internal.q.g(var1, "getContext(...)");
-               val var7: Flow = var4.downloadFile(var1, this.$url, this.$attachmentName, this.$attachmentDescription);
-               val var6: FlowCollector = new FlowCollector(this.this$0) {
+               l8.s.b(var1);
+               var1 = PublicFileDownloader.INSTANCE;
+               val var4: Context = this.this$0.getContext();
+               kotlin.jvm.internal.q.g(var4, "getContext(...)");
+               val var6: Flow = var1.downloadFile(var4, this.$url, this.$attachmentName, this.$attachmentDescription);
+               val var7: FlowCollector = new FlowCollector(this.this$0) {
                   final FileAttachmentView this$0;
 
                   {
@@ -146,7 +146,7 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                   }
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
-                     val var3x: Any = Q9.f.g(Q9.K.c(), new Function2(var1, this.this$0, null) {
+                     val var3x: Any = U9.f.g(U9.K.c(), new Function2(var1, this.this$0, null) {
                         final DownloadState $downloadState;
                         int label;
                         final FileAttachmentView this$0;
@@ -166,9 +166,9 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           n8.b.e();
+                           s8.b.e();
                            if (this.label == 0) {
-                              h8.s.b(var1);
+                              l8.s.b(var1);
                               val var4: Boolean = this.$downloadState is DownloadState.InProgress;
                               var1 = FileAttachmentView.access$getBinding$p(this.this$0).fileAttachmentDownloadProgressBar;
                               kotlin.jvm.internal.q.g(var1, "fileAttachmentDownloadProgressBar");
@@ -194,11 +194,11 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
                            }
                         }
                      }, var2x);
-                     return if (var3x === n8.b.e()) var3x else Unit.a;
+                     return if (var3x === s8.b.e()) var3x else Unit.a;
                   }
                };
                this.label = 1;
-               if (var7.collect(var6, this) === var3) {
+               if (var6.collect(var7, this) === var3) {
                   return var3;
                }
             }
@@ -229,12 +229,12 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
          var10 = false;
       }
 
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var14: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var15: java.lang.String = this.getClass().getSimpleName();
-      val var14: StringBuilder = new StringBuilder();
-      var14.append("Binding ");
-      var14.append(var15);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var14.toString(), null, 2, null);
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var15);
+      AttachedViewCoroutineScope.cancelAllWork$default(var14, var13.toString(), null, 2, null);
       val var29: SimpleDraweeView = this.binding.fileAttachmentDownload;
       kotlin.jvm.internal.q.g(this.binding.fileAttachmentDownload, "fileAttachmentDownload");
       var var11: Byte;
@@ -292,16 +292,16 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       }
 
       var17.setAlpha(var9);
-      val var23: AttachmentUploadOverlayView = this.binding.uploadOverlay;
+      val var22: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
       val var18: ShapeDrawable = new ShapeDrawable();
-      val var25: Paint = var18.getPaint();
-      val var22: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var22, "getContext(...)");
-      var25.setColor(ColorUtilsKt.getColorCompat(var22, 17170445));
+      val var23: Paint = var18.getPaint();
+      val var25: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var25, "getContext(...)");
+      var23.setColor(ColorUtilsKt.getColorCompat(var25, 17170445));
       val var12: Int = ThemeManagerKt.getTheme().getBackgroundModifierAccent();
-      kotlin.jvm.internal.q.e(var23);
-      AttachmentUploadOverlayView.configureProgressView$default(var23, null, var18, null, var11, null, var12, 21, null);
+      kotlin.jvm.internal.q.e(var22);
+      AttachmentUploadOverlayView.configureProgressView$default(var22, null, var18, null, var11, null, var12, 21, null);
       if (!kotlin.jvm.internal.q.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;
          this.uploadFinished = false;

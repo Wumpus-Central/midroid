@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
-import aa.f
-import aa.n
-import da.G
-import da.G.a
+import ea.f
+import ea.n
+import ha.G
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -47,12 +47,12 @@ public data class BlockedGroupButton(action: BlockedGroupButtonAction) {
    }
 
    public override fun toString(): String {
-      val var2: BlockedGroupButtonAction = this.action;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BlockedGroupButton(action=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: BlockedGroupButtonAction = this.action;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BlockedGroupButton(action=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

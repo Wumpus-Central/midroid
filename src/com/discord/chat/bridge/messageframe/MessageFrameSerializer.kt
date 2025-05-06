@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.messageframe
 
-import ea.d
-import ea.g
+import ia.d
+import ia.g
 import java.util.ArrayList
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
@@ -12,7 +12,7 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 
-public object MessageFrameSerializer : d(E.b(MessageFrame.class)) {
+public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
@@ -29,8 +29,8 @@ public object MessageFrameSerializer : d(E.b(MessageFrame.class)) {
       knownTypes = var2;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
-         E.b(MessageFrame.class),
-         new KClass[]{E.b(UnknownMessageFrame.class), E.b(MessageFrameJump.class), E.b(MessageFrameMediaViewer.class)},
+         G.b(MessageFrame.class),
+         new KClass[]{G.b(UnknownMessageFrame.class), G.b(MessageFrameJump.class), G.b(MessageFrameMediaViewer.class)},
          new KSerializer[]{UnknownMessageFrame.Companion.serializer(), MessageFrameJump.Companion.serializer(), MessageFrameMediaViewer.Companion.serializer()}
       );
    }

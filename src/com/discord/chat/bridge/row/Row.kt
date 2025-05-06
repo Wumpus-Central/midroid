@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.row
 
-import aa.f
 import com.discord.chat.bridge.ChangeType
+import ea.f
 import kotlinx.serialization.KSerializer
 
 @f(with = RowSerializer::class)

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.referencedmessage
 
-import aa.f
+import ea.f
 import kotlinx.serialization.KSerializer
 
 @f(with = ReferencedMessageSerializer::class)

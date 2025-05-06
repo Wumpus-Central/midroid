@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import aa.f
-import aa.n
-import da.C0
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -116,10 +116,10 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -150,10 +150,13 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
                   var4 = false;
                }
             }
+
+            var3 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new LHeadingContentNode(var2, var3, var6, var10, null);
+         return new LHeadingContentNode(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LHeadingContentNode) {

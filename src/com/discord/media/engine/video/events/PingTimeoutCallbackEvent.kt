@@ -1,13 +1,13 @@
 package com.discord.media.engine.video.events
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.N
-import da.G.a
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.N
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -91,22 +91,22 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public override fun toString(): String {
-      val var4: Int = this.connectionId;
+      val var1: Int = this.connectionId;
       val var6: java.lang.String = this.server;
       val var2: Int = this.port;
-      val var3: Int = this.seq;
-      val var1: Int = this.timeout;
+      val var4: Int = this.seq;
+      val var3: Int = this.timeout;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PingTimeoutCallbackEvent(connectionId=");
-      var5.append(var4);
+      var5.append(var1);
       var5.append(", server=");
       var5.append(var6);
       var5.append(", port=");
       var5.append(var2);
       var5.append(", seq=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(", timeout=");
-      var5.append(var1);
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -142,29 +142,31 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var3: Int;
-         var var4: Int;
-         var var5: Int;
          var var6: Int;
          val var7: Int;
          var var11: java.lang.String;
+         var var14: Int;
+         var var16: Int;
          if (var10.y()) {
-            var6 = var10.k(var9, 0);
+            var14 = var10.k(var9, 0);
             var11 = var10.t(var9, 1);
-            var5 = var10.k(var9, 2);
+            var16 = var10.k(var9, 2);
             val var2: Int = var10.k(var9, 3);
             var3 = var10.k(var9, 4);
             var7 = 31;
-            var4 = var2;
+            var6 = var14;
+            var14 = var16;
+            var16 = var2;
          } else {
             var11 = null;
-            var var16: Boolean = true;
+            var var17: Boolean = true;
             var6 = 0;
-            var5 = 0;
-            var4 = 0;
+            var16 = 0;
+            var14 = 0;
             var3 = 0;
             var var12: Int = 0;
 
-            while (var16) {
+            while (var17) {
                val var8: Int = var10.x(var9);
                if (var8 != -1) {
                   if (var8 != 0) {
@@ -175,10 +177,10 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                                  throw new n(var8);
                               }
 
-                              var4 = var10.k(var9, 4);
+                              var14 = var10.k(var9, 4);
                               var12 |= 16;
                            } else {
-                              var5 = var10.k(var9, 3);
+                              var16 = var10.k(var9, 3);
                               var12 |= 8;
                            }
                         } else {
@@ -194,18 +196,17 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
                      var12 |= 1;
                   }
                } else {
-                  var16 = false;
+                  var17 = false;
                }
             }
 
-            var3 = var4;
-            var4 = var5;
-            var5 = var3;
+            var14 = var3;
+            var3 = var14;
             var7 = var12;
          }
 
          var10.b(var9);
-         return new PingTimeoutCallbackEvent(var7, var6, var11, var5, var4, var3, null);
+         return new PingTimeoutCallbackEvent(var7, var6, var11, var14, var16, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: PingTimeoutCallbackEvent) {

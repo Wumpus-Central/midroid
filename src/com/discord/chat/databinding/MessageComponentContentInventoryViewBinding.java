@@ -42,11 +42,11 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
 
    public static MessageComponentContentInventoryViewBinding bind(View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
-         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-         if (var2 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.content_inventory_component_media_image;
             SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
             if (var8 != null) {
@@ -57,12 +57,12 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
                   TextView var4 = (TextView)a.a(var0, var1);
                   if (var4 != null) {
                      var1 = R.id.content_inventory_component_title;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var5 = (TextView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.content_inventory_component_username;
-                        TextView var3 = (TextView)a.a(var0, var1);
-                        if (var3 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var5, var2, var8, var6, var4, var7, var3);
+                        TextView var2 = (TextView)a.a(var0, var1);
+                        if (var2 != null) {
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var7, var3, var8, var6, var4, var5, var2);
                         }
                      }
                   }

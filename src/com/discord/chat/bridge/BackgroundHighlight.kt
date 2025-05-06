@@ -1,10 +1,10 @@
 package com.discord.chat.bridge
 
-import aa.f
-import aa.n
-import ba.a
-import da.G
-import da.N
+import ea.f
+import ea.n
+import fa.a
+import ha.G
+import ha.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,15 +72,15 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var3: Int = this.backgroundColor;
-      val var1: Int = this.gutterColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BackgroundHighlight(backgroundColor=");
-      var2.append(var3);
-      var2.append(", gutterColor=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: Int = this.backgroundColor;
+      val var3: Int = this.gutterColor;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BackgroundHighlight(backgroundColor=");
+      var1.append(var2);
+      var1.append(", gutterColor=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -157,7 +157,7 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

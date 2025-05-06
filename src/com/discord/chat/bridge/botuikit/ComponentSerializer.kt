@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
-import ea.d
-import ea.g
+import ia.d
+import ia.g
 import java.util.ArrayList
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
@@ -12,7 +12,7 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
 
-public object ComponentSerializer : d(E.b(Component.class)) {
+public object ComponentSerializer : d(G.b(Component.class)) {
    private final val knownTypes: List<Int>
    private final val componentClassSerializer: SealedClassSerializer<Component>
 
@@ -29,24 +29,24 @@ public object ComponentSerializer : d(E.b(Component.class)) {
       knownTypes = var3;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
-         E.b(Component.class),
+         G.b(Component.class),
          new KClass[]{
-            E.b(UnknownComponent.class),
-            E.b(ActionRowComponent.class),
-            E.b(ButtonComponent.class),
-            E.b(StringSelectComponent.class),
-            E.b(UserSelectComponent.class),
-            E.b(RoleSelectComponent.class),
-            E.b(MentionableSelectComponent.class),
-            E.b(ChannelSelectComponent.class),
-            E.b(SectionComponent.class),
-            E.b(TextDisplayComponent.class),
-            E.b(ThumbnailDisplayComponent.class),
-            E.b(MediaGalleryDisplayComponent.class),
-            E.b(FileDisplayComponent.class),
-            E.b(SeparatorDisplayComponent.class),
-            E.b(ContentInventoryEntryComponent.class),
-            E.b(ContainerComponent.class)
+            G.b(UnknownComponent.class),
+            G.b(ActionRowComponent.class),
+            G.b(ButtonComponent.class),
+            G.b(StringSelectComponent.class),
+            G.b(UserSelectComponent.class),
+            G.b(RoleSelectComponent.class),
+            G.b(MentionableSelectComponent.class),
+            G.b(ChannelSelectComponent.class),
+            G.b(SectionComponent.class),
+            G.b(TextDisplayComponent.class),
+            G.b(ThumbnailDisplayComponent.class),
+            G.b(MediaGalleryDisplayComponent.class),
+            G.b(FileDisplayComponent.class),
+            G.b(SeparatorDisplayComponent.class),
+            G.b(ContentInventoryEntryComponent.class),
+            G.b(ContainerComponent.class)
          },
          new KSerializer[]{
             UnknownComponent.Companion.serializer(),

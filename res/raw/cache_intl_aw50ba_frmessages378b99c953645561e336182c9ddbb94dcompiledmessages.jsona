@@ -753,12 +753,12 @@
         ]
       ]
     ],
-    ". Tu achètes un abonnement qui se renouvelle automatiquement, ce qui signifie que nous allons te facturer aujourd'hui et continuer à te facturer tous les ",
+    ". Ce que tu achètes est un abonnement se renouvelle automatiquement, ce qui signifie que nous facturerons ton compte Google Play aujourd'hui et continuerons de le facturer tou(te)s les ",
     [
       1,
       "interval"
     ],
-    " sur ton compte Google Play jusqu'à ce que tu résilies ton abonnement. Tu peux le résilier en te rendant dans les paramètres de Google Play jusqu'à un délai de 24 heures avant la fin de la période en cours."
+    " jusqu'à ce que tu résilies cet abonnement. Les prix peuvent être modifiés avec un préavis. Tu peux le résilier à tout moment en te rendant dans les paramètres du Google Play Store jusqu'à un délai de 24 heures avant la fin de la période en cours."
   ],
   "7wpqfn": [
     "En cliquant sur « Acheter », tu acceptes les ",
@@ -789,12 +789,12 @@
         ]
       ]
     ],
-    ". Tu achètes un abonnement qui se renouvelle automatiquement, ce qui signifie que nous allons te facturer aujourd'hui et continuer à te facturer tous les ",
+    ". Ce que tu achètes est un abonnement se renouvelle automatiquement, ce qui signifie que nous facturerons ton compte Apple aujourd'hui et continuerons de le facturer tou(te)s les ",
     [
       1,
       "interval"
     ],
-    " sur ton compte Apple jusqu'à ce que tu résilies ton abonnement. Tu peux le résilier en te rendant dans les paramètres de l'App Store jusqu'à un délai de 24 heures avant la fin de la période en cours."
+    " jusqu'à ce que tu résilies cet abonnement. Les prix peuvent être modifiés avec un préavis. Tu peux le résilier à tout moment en te rendant dans les paramètres de l'App Store jusqu'à un délai de 24 heures avant la fin de la période en cours."
   ],
   "gJs+kZ": "Soumettre la vérification d'âge",
   "eQg0Cg": "RAISON",
@@ -5076,6 +5076,29 @@
       "answerNumber"
     ]
   ],
+  "w8e4qK": [
+    "Tu as ",
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " erreur"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " erreurs"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "e9hWx8": "Style de réponse au sondage",
   "GhK6X1": "Réponses textuelles avec contenu média optionnel",
   "an4GKS": "Réponses avec contenu média uniquement",
@@ -5664,6 +5687,13 @@
   ],
   "2p9FMz": "Changer le statut personnalisé",
   "E45wvL": "Supprimer ultérieurement",
+  "DN91Jy": [
+    "demain à ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     "Supprimer dans ",
     [
@@ -7332,6 +7362,7 @@
       "code"
     ]
   ],
+  "3ejJen": "Étendre l'activité",
   "06YebG": "Pour info !",
   "z81WwM": "Cette application n'est pas créée par Discord. Teste uniquement les applications des développeurs en qui tu as confiance.",
   "Z/eMDQ": [
@@ -7422,7 +7453,7 @@
     ],
     " participants"
   ],
-  "brPQ5e": "Minimiser l'activité",
+  "brPQ5e": "Réduire l'Activité",
   "Yw5Hr6": [
     "Un aperçu de ",
     [
@@ -12006,7 +12037,7 @@
         ]
       ]
     ],
-    ". C'est un renouvellement d'abonnement, nous débiterons ton compte aujourd'hui et chaque mois jusqu'à ce que tu résilies."
+    ". C'est un renouvellement d'abonnement, nous débiterons ton compte aujourd'hui et chaque mois jusqu'à ce que tu résilies. Les prix peuvent être modifiés avec un préavis."
   ],
   "mPHb19": "Choisis un abonnement pour déverrouiller plus",
   "A1L1hY": [
@@ -17991,7 +18022,7 @@
   "L+P4t7": "En raison de la taille de ce serveur, les membres ne recevront de notifications push que pour les messages à @mention.",
   "s35OuL": "Un problème est survenu lors de la mise à jour de ton profil par serveur…",
   "jrXfy8": "Critères d'upload",
-  "N2qTQ0": "Format de fichier : JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "Format de fichier : JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Taille du fichier recommandée : ",
     [
@@ -22947,6 +22978,7 @@
   ],
   "bAVpRU": "Serveur soumis à une limite d'âge",
   "uy25Q0": "Les autocollants de ce serveur ne sont pas disponibles",
+  "xi46lp": "Serveur soumis à une limite d'âge",
   "ZmwvDQ": "Salon soumis à une limite d'âge",
   "Gtctho": "Détends-toi, joue à des jeux ou viens simplement discuter. Touche le bouton ci-dessous pour commencer !",
   "mufH2N": "Les salons sont des lieux dans ton serveur où les gens peuvent parler de différents sujets.",
@@ -30950,6 +30982,24 @@
     ],
     " posts"
   ],
+  "v5a2+f": [
+    "Doit avoir au moins ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " commentaires positif(s)"
+  ],
+  "yYbR2t": [
+    "Doit avoir au maximum ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " commentaires négatif(s)"
+  ],
   "kCAN5+": "Doit posséder un abonnement Reddit Premium",
   "0JyE8P": "Doit disposer d'un compte en banque vérifié",
   "W3iY5+": "Doit en associer au moins un",
@@ -35810,6 +35860,36 @@
       ]
     ],
     " de Discord."
+  ],
+  "KI+BSU": [
+    "En cliquant sur « Créer un compte », tu confirmes avoir accepté les ",
+    [
+      8,
+      "$link",
+      [
+        "Conditions d'Utilisation"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " de Discord et lu la ",
+    [
+      8,
+      "$link",
+      [
+        "Politique de Confidentialité"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
   ],
   "qMDAPz": [
     "J'ai lu et accepté les ",

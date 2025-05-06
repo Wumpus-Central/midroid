@@ -1,13 +1,13 @@
 package com.discord.bundle_updater
 
-import Ka.g
-import h8.w
+import Oa.g
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
+import l8.w
 import okio.BufferedSource
-import s8.j
+import x8.j
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
@@ -51,25 +51,25 @@ public object BundleUpdaterUtils {
    public fun md5(file: File): String {
       label18: {
          q.h(var1, "file");
-         val var10: BufferedSource = Ka.j.d(Ka.j.k(var1));
+         val var10: BufferedSource = Oa.j.d(Oa.j.k(var1));
 
-         var var11: java.lang.String;
+         var var12: java.lang.String;
          try {
-            val var2: g = g.m.a(Ka.j.b());
-            var10.F1(var2);
-            var11 = var2.a().s();
+            val var11: g = g.m.a(Oa.j.b());
+            var10.F1(var11);
+            var12 = var11.a().r();
          } catch (var5: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var5;
+            val var2: java.lang.Throwable = var5;
 
             try {
-               throw var3;
+               throw var2;
             } catch (var4: java.lang.Throwable) {
-               s8.c.a(var10, var5);
+               x8.c.a(var10, var5);
             }
          }
 
-         s8.c.a(var10, null);
-         return var11;
+         x8.c.a(var10, null);
+         return var12;
       }
    }
 }

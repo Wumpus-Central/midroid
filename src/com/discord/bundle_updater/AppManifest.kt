@@ -1,17 +1,17 @@
 package com.discord.bundle_updater
 
-import aa.f
-import aa.n
-import da.C0
-import da.G
-import da.T
-import i8.q
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.T
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import m8.q
 
 @f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
@@ -76,18 +76,18 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var2: AppManifestMetadata = this.metadata;
-      val var1: java.util.Map = this.hashes;
-      val var4: java.util.Map = this.patches;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AppManifest(metadata=");
-      var3.append(var2);
-      var3.append(", hashes=");
-      var3.append(var1);
-      var3.append(", patches=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: AppManifestMetadata = this.metadata;
+      val var4: java.util.Map = this.hashes;
+      val var2: java.util.Map = this.patches;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AppManifest(metadata=");
+      var1.append(var3);
+      var1.append(", hashes=");
+      var1.append(var4);
+      var1.append(", patches=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -173,7 +173,7 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

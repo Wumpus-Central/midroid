@@ -727,7 +727,7 @@
       8,
       "$link",
       [
-        "Hizmet Koşulları"
+        "Hizmet Koşullarını"
       ],
       [
         [
@@ -736,12 +736,12 @@
         ]
       ]
     ],
-    "'nı ve ",
+    " ve ",
     [
       8,
       "$link",
       [
-        "Ücretli Hizmet Koşulları"
+        "Ücretli Hizmet Koşullarını"
       ],
       [
         [
@@ -750,12 +750,12 @@
         ]
       ]
     ],
-    "'nı kabul edersin. Satın aldığın şey yenilenen bir aboneliktir, yani bugün Google Play hesabından ücret alacağız ve sen iptal edene kadar da her ",
+    " kabul edersin. Satın aldığın şey yenilenen bir aboneliktir, yani bugün Google Play hesabından ücret alacağız ve sen iptal edene kadar da her ",
     [
       1,
       "interval"
     ],
-    " senden ücret almaya devam edeceğiz anlamına gelir. Güncel fatura döneminin son 24 saatine kadar Google Play Store Ayarlarından istediğin zaman iptal edebilirsin."
+    " senden ücret almaya devam edeceğiz anlamına gelir. Fiyatlar sana bildirilerek değiştirilebilir. Güncel fatura döneminin son 24 saatine kadar Google Play Store ayarlarından istediğin zaman iptal edebilirsin."
   ],
   "7wpqfn": [
     "\"",
@@ -766,7 +766,7 @@
       8,
       "$link",
       [
-        "Hizmet Koşulları"
+        "Hizmet Koşullarını"
       ],
       [
         [
@@ -775,12 +775,12 @@
         ]
       ]
     ],
-    "'nı ve ",
+    " ve ",
     [
       8,
       "$link",
       [
-        "Ücretli Hizmet Koşulları"
+        "Ücretli Hizmet Koşullarını"
       ],
       [
         [
@@ -789,12 +789,12 @@
         ]
       ]
     ],
-    "'nı kabul edersin. Satın aldığın şey yenilenen bir aboneliktir, yani bugün Apple ID hesabından ücret alacağız ve sen iptal edene kadar da her ",
+    " kabul edersin. Satın aldığın şey yenilenen bir aboneliktir, yani bugün Apple ID hesabından ücret alacağız ve sen iptal edene kadar da her ",
     [
       1,
       "interval"
     ],
-    " senden ücret almaya devam edeceğiz anlamına gelir. Güncel fatura döneminin son 24 saatine kadar App Store Ayarlarından istediğin zaman iptal edebilirsin."
+    " senden ücret almaya devam edeceğiz anlamına gelir. Fiyatlar sana bildirilerek değiştirilebilir. Güncel fatura döneminin son 24 saatine kadar App Store ayarlarından istediğin zaman iptal edebilirsin."
   ],
   "gJs+kZ": "Yaş doğrulamayı gönder",
   "eQg0Cg": "NEDEN",
@@ -5016,6 +5016,29 @@
     ],
     " medyasını güncelle"
   ],
+  "w8e4qK": [
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " hata"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " hata"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " var"
+  ],
   "e9hWx8": "Anket yanıt şekli",
   "GhK6X1": "Tercihe bağlı medyayla birlikte yazılı yanıtlar",
   "an4GKS": "Yalnızca medyadan oluşan yanıtlar",
@@ -5588,6 +5611,13 @@
   ],
   "2p9FMz": "Özel durumu değiştir",
   "E45wvL": "Sonrasında temizle",
+  "DN91Jy": [
+    "yarın ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     [
       6,
@@ -7270,6 +7300,7 @@
       "code"
     ]
   ],
+  "3ejJen": "Etkinliği Genişlet",
   "06YebG": "Dikkat!",
   "z81WwM": "Bu uygulama Discord tarafından üretilmedi. Sadece güvendiğin geliştiricilerin uygulamalarını test et.",
   "Z/eMDQ": [
@@ -7361,7 +7392,7 @@
     ],
     " katılımcı"
   ],
-  "brPQ5e": "Etkinliği küçült",
+  "brPQ5e": "Etkinliği Küçült",
   "Yw5Hr6": [
     [
       1,
@@ -11887,7 +11918,7 @@
     "\"",
     "Abone Ol",
     "\" ",
-    "seçeneğine tıklayarak ",
+    "butonuna tıklayarak ",
     [
       8,
       "$link",
@@ -11915,7 +11946,7 @@
         ]
       ]
     ],
-    " kabul etmiş olursun. Bu otomatik yenilenen bir aboneliktir, sen iptal edene kadar hesabından bugün ve her ay olmak üzere ücret alacağız."
+    " kabul etmiş olursun. Bu otomatik yenilenen bir aboneliktir, sen iptal edene kadar hesabından bugün ve her ay olmak üzere ücret alacağız. Fiyatlar sana bildirilerek değiştirilebilir."
   ],
   "mPHb19": "Daha fazlasının kilidini açmak için bir abonelik seç",
   "A1L1hY": [
@@ -17985,7 +18016,7 @@
   "L+P4t7": "Bu sunucunun boyutu nedeniyle, üyeler @bahsetme içermeyen mesajlar için mobil anlık bildirimleri almayacaklar.",
   "s35OuL": "Sunucu başına profilin güncellenirken bir sorun oluştu...",
   "jrXfy8": "Yükleme Gereksinimleri",
-  "N2qTQ0": "Dosya türü: JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "Dosya türü: JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Önerilen dosya boyutu: ",
     [
@@ -22936,6 +22967,7 @@
   ],
   "bAVpRU": "Yaş sınırlı sunucu",
   "uy25Q0": "Bu sunucudaki çıkartmalar mevcut değil.",
+  "xi46lp": "Yaş Sınırlı Sunucu",
   "ZmwvDQ": "Yaş Sınırlı Kanal",
   "Gtctho": "Vakit geçir, oyunlar oyna veya sadece konuş. Başlamak için aşağıya dokun!",
   "mufH2N": "Kanallar, sunucundaki insanların farklı konularda sohbet edebileceği yerlerdir.",
@@ -30841,6 +30873,24 @@
     ],
     " gönderi olmalı"
   ],
+  "v5a2+f": [
+    "Olumlu geri bildirim incelemesi en az ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " olmalı"
+  ],
+  "yYbR2t": [
+    "Olumsuz geri bildirim incelemesi en fazla ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " olmalı"
+  ],
   "kCAN5+": "Reddit Gold'u olmalı",
   "0JyE8P": "Doğrulanmış banka hesabı olmalı",
   "W3iY5+": "En az birini bağlamalısın",
@@ -35713,6 +35763,40 @@
       ]
     ],
     "'nı kabul etmiş olursun."
+  ],
+  "KI+BSU": [
+    "\"",
+    "Hesap Oluştur",
+    "\" ",
+    "butonuna tıklayarak Discord'un ",
+    [
+      8,
+      "$link",
+      [
+        "Hizmet Koşullarını"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " onayladığını ve ",
+    [
+      8,
+      "$link",
+      [
+        "Gizlilik Politikamızı"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ],
+    " okuduğunu kabul etmiş olursun."
   ],
   "qMDAPz": [
     "Discord'un ",

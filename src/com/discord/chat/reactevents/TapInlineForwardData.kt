@@ -1,17 +1,16 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
-import ba.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import da.C0
-import da.G
-import da.N
-import da.h
-import h8.w
+import ea.f
+import ea.n
+import fa.a
+import ha.C0
+import ha.G
+import ha.N
+import ha.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -20,6 +19,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?, triggerHaptic: Boolean?, location: String?) :
@@ -96,11 +96,12 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          var var7: Any;
          var var8: java.lang.String;
          var var9: java.lang.String;
+         val var11: java.lang.String;
          var var14: java.lang.String;
          if (var5) {
-            var10 = var13.t(var12, 0);
+            var8 = var13.t(var12, 0);
             var9 = var13.t(var12, 1);
-            var8 = var13.t(var12, 2);
+            var11 = var13.t(var12, 2);
             var6 = var13.v(var12, 3, N.a, null) as Int;
             var7 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
             var14 = var13.v(var12, 5, C0.a, null) as java.lang.String;
@@ -151,10 +152,12 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
 
             var7 = var6;
             var6 = var7;
+            var11 = var8;
+            var8 = var10;
          }
 
          var13.b(var12);
-         return new TapInlineForwardData(var2, var10, var9, var8, (Integer)var6, (java.lang.Boolean)var7, var14, null);
+         return new TapInlineForwardData(var2, var8, var9, var11, (Integer)var6, (java.lang.Boolean)var7, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapInlineForwardData) {
@@ -167,7 +170,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

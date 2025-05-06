@@ -8,9 +8,10 @@ import com.discord.logging.Log
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
-import h8.w
+import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
+import l8.w
 import okhttp3.WebSocket
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec {
@@ -88,7 +89,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return i8.q.m(
+      return m8.q.m(
          new Pair[]{
             w.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             w.a("userId", var1.get().getItem("_userIdKey")),
@@ -101,7 +102,18 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
       super.initialize();
       val var1: WebSocketModule = this.getWebSocketModule();
       if (var1 != null) {
-         var1.mOnOpenHandler = new a(this);
+         var1.setMOnOpenHandler(new OnOpenHandler(this) {
+            final FastConnectModule this$0;
+
+            {
+               this.this$0 = var1;
+            }
+
+            public void onOpen(WebSocket var1, int var2) {
+               q.h(var1, "webSocket");
+               FastConnectModule.access$handleWebSocketOpen(this.this$0, var1, var2);
+            }
+         });
       }
    }
 
@@ -109,7 +121,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
       super.invalidate();
       val var1: WebSocketModule = this.getWebSocketModule();
       if (var1 != null) {
-         var1.mOnOpenHandler = null;
+         var1.setMOnOpenHandler(null);
       }
    }
 

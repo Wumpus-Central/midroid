@@ -1,16 +1,14 @@
 package com.discord.media_player.reactevents
 
-import aa.f
-import aa.j
-import aa.n
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import da.G
-import da.Y
-import h8.w
-import ha.a
+import ea.f
+import ea.j
+import ea.n
+import ha.G
+import ha.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +17,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import l8.w
+import la.a
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -80,7 +80,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    public override fun serialize(): WritableMap {
       val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(w.a("time", this.time), w.a("duration", this.duration));
       if (this.source != null) {
-         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source)));
+         var1.putMap("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source)));
       }
 
       return var1;
@@ -88,15 +88,15 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
 
    public override fun toString(): String {
       val var5: MediaPlayerPlaybackSource = this.source;
-      val var3: Long = this.time;
-      val var1: Long = this.duration;
+      val var1: Long = this.time;
+      val var3: Long = this.duration;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaPlayerPlaybackProgressUpdated(source=");
       var6.append(var5);
       var6.append(", time=");
-      var6.append(var3);
-      var6.append(", duration=");
       var6.append(var1);
+      var6.append(", duration=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }
@@ -122,31 +122,32 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{ba.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), Y.a, Y.a};
+         return new KSerializer[]{fa.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), Y.a, Y.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var5: Boolean = var11.y();
-         var var12: MediaPlayerPlaybackSource = null;
+         val var12: SerialDescriptor = this.getDescriptor();
+         val var13: c = var1.c(var12);
+         val var11: Boolean = var13.y();
+         var var14: MediaPlayerPlaybackSource = null;
          var var2: Int;
-         var var6: Long;
-         var var8: Long;
-         if (var5) {
-            var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
-            var8 = var11.h(var10, 1);
-            var6 = var11.h(var10, 2);
+         var var5: Long;
+         val var9: Long;
+         if (var11) {
+            var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
+            var5 = var13.h(var12, 1);
+            val var7: Long = var13.h(var12, 2);
             var2 = 7;
+            var9 = var7;
          } else {
-            var8 = 0L;
+            var var16: Long = 0L;
             var var3: Boolean = true;
             var2 = 0;
-            var6 = 0L;
+            var5 = 0L;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var13.x(var12);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -154,24 +155,27 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
                            throw new n(var4);
                         }
 
-                        var6 = var11.h(var10, 2);
+                        var5 = var13.h(var12, 2);
                         var2 |= 4;
                      } else {
-                        var8 = var11.h(var10, 1);
+                        var16 = var13.h(var12, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var12 = var11.v(var10, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var12) as MediaPlayerPlaybackSource;
+                     var14 = var13.v(var12, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var14) as MediaPlayerPlaybackSource;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var9 = var5;
+            var5 = var16;
          }
 
-         var11.b(var10);
-         return new MediaPlayerPlaybackProgressUpdated(var2, var12, var8, var6, null);
+         var13.b(var12);
+         return new MediaPlayerPlaybackProgressUpdated(var2, var14, var5, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackProgressUpdated) {
@@ -184,7 +188,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ha.G.a.a(this);
       }
    }
 

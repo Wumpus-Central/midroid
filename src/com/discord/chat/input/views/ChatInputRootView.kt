@@ -1,8 +1,8 @@
 package com.discord.chat.input.views
 
-import Q9.I
-import Q9.K
-import T9.w
+import U9.I
+import U9.K
+import X9.w
 import android.content.Context
 import android.content.Intent
 import android.content.ClipData.Item
@@ -35,7 +35,6 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
-import h8.s
 import java.util.ArrayList
 import java.util.LinkedHashSet
 import java.util.UUID
@@ -47,9 +46,9 @@ import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableStateFlow
+import l8.s
 
 public class ChatInputRootView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : RelativeLayout, KeyboardEvent {
    private final val binding: ChatInputRootViewBinding
@@ -244,17 +243,17 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             }
 
             public void afterTextChanged(Editable var1) {
-               val var3: java.lang.String = java.lang.String.valueOf(var1);
-               val var2: ChatInputRootView = this.this$0;
-               val var4: java.lang.String = UUID.randomUUID().toString();
-               q.g(var4, "toString(...)");
-               ChatInputRootView.access$setLastEditId$p(var2, var4);
+               val var4: java.lang.String = java.lang.String.valueOf(var1);
+               val var3: ChatInputRootView = this.this$0;
+               val var2: java.lang.String = UUID.randomUUID().toString();
+               q.g(var2, "toString(...)");
+               ChatInputRootView.access$setLastEditId$p(var3, var2);
                ChatInputRootView.access$getCurrentTextFlow$p(this.this$0)
                   .setValue(
                      new ChatInputRootView.CurrentTextAndSelection(
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionStart(),
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionEnd(),
-                        var3,
+                        var4,
                         ChatInputRootView.access$getLastEditId$p(this.this$0)
                      )
                   );
@@ -316,10 +315,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var7: Uri = var9.c().getItemAt(var4).getUri();
-            q.g(var7, "getUri(...)");
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            q.g(var8, "getUri(...)");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var7);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -349,9 +348,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var19 = 0; var19 < var20; var19++) {
                val var12: Intent = var16.c().getItemAt(var19).getIntent();
                q.g(var12, "getIntent(...)");
-               val var17: java.lang.String = var12.getStringExtra("data");
-               if (var17 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var17);
+               val var13: java.lang.String = var12.getStringExtra("data");
+               if (var13 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var13);
                }
             }
 
@@ -416,14 +415,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(i.v(var1, 10));
 
-      for (ChatInputNode var5 : var1) {
-         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var6 : var1) {
+         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
       for (ChatInputNode var18 : var4) {
-         val var17: Editable = this.editText.getEditableText();
-         q.g(var17, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var17, var18);
+         val var7: Editable = this.editText.getEditableText();
+         q.g(var7, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var7, var18);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -495,7 +494,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      Q9.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
+      U9.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
          int label;
          final ChatInputRootView this$0;
 
@@ -513,7 +512,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = n8.b.e();
+            val var3: Any = s8.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -522,8 +521,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                s.b(var1);
             } else {
                s.b(var1);
-               val var4: Flow = T9.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
-               var1 = new FlowCollector(this.this$0) {
+               var1 = X9.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
+               val var4: FlowCollector = new FlowCollector(this.this$0) {
                   final ChatInputRootView this$0;
 
                   {
@@ -544,7 +543,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   }
                };
                this.label = 1;
-               if (var4.collect(var1, this) === var3) {
+               if (var1.collect(var4, this) === var3) {
                   return var3;
                }
             }
@@ -560,7 +559,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       if (!var1) {
-         this.blurJob = Q9.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
+         this.blurJob = U9.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
             int label;
             final ChatInputRootView this$0;
 
@@ -578,7 +577,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = n8.b.e();
+               val var3: Any = s8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -604,7 +603,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = n8.b.e();
+                        val var3: Any = s8.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -623,7 +622,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (Q9.f.g(var4, var1, this) === var3) {
+                  if (U9.f.g(var4, var1, this) === var3) {
                      return var3;
                   }
                }
@@ -771,18 +770,18 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var1: Int = this.selectionStart;
          val var2: Int = this.selectionEnd;
          val var3: java.lang.String = this.text;
-         val var4: java.lang.String = this.editId;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CurrentTextAndSelection(selectionStart=");
-         var5.append(var1);
-         var5.append(", selectionEnd=");
-         var5.append(var2);
-         var5.append(", text=");
-         var5.append(var3);
-         var5.append(", editId=");
-         var5.append(var4);
-         var5.append(")");
-         return var5.toString();
+         val var5: java.lang.String = this.editId;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CurrentTextAndSelection(selectionStart=");
+         var4.append(var1);
+         var4.append(", selectionEnd=");
+         var4.append(var2);
+         var4.append(", text=");
+         var4.append(var3);
+         var4.append(", editId=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

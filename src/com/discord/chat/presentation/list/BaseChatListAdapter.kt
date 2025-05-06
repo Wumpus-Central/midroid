@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list
 
-import Q9.K
+import U9.K
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -16,14 +16,14 @@ import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.react_strings.I18nCache
 import com.discord.react_strings.I18nMessage
 import com.hannesdorfmann.adapterdelegates4.AdapterDelegatesManager
-import h8.s
-import h8.w
-import i8.q
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
+import l8.s
+import l8.w
+import m8.q
 
 public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
    : com.hannesdorfmann.adapterdelegates4.c,
@@ -33,9 +33,9 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
 
    @JvmStatic
    fun {
-      val var1: Pair = w.a(RegularMessageDelegate.class, 50);
-      val var0: Int = 25;
-      recycledViewPoolSizes = q.l(new Pair[]{var1, w.a(SystemMessageDelegate.class, var0), w.a(SeparatorDelegate.class, var0)});
+      val var0: Pair = w.a(RegularMessageDelegate.class, 50);
+      val var1: Int = 25;
+      recycledViewPoolSizes = q.l(new Pair[]{var0, w.a(SystemMessageDelegate.class, var1), w.a(SeparatorDelegate.class, var1)});
    }
 
    init {
@@ -90,7 +90,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
 
       public fun prefill(context: Context) {
          kotlin.jvm.internal.q.h(var1, "context");
-         Q9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
+         U9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
             final Context $context;
             int label;
 
@@ -108,7 +108,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
             }
 
             public final Object invokeSuspend(Object var1) {
-               n8.b.e();
+               s8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   if (ReactAsset.Launch.wasSet(this.$context) && I18nCache.INSTANCE.wasSet(this.$context, I18nMessage.HIGHLIGHT)) {

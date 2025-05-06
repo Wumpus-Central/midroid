@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.G.a
+import ea.f
+import ea.n
+import ha.C0
+import ha.G
+import ha.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,15 +67,15 @@ internal data class TapMessageReplyData(channelId: String, originId: String) : R
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.channelId;
       val var3: java.lang.String = this.originId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapMessageReplyData(channelId=");
-      var1.append(var2);
-      var1.append(", originId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapMessageReplyData(channelId=");
+      var2.append(var1);
+      var2.append(", originId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

@@ -14,10 +14,10 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
-import h8.p
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import l8.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
@@ -77,7 +77,7 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<SeparatorDisplayComponent> {
-      return E.b(SeparatorDisplayComponent.class);
+      return G.b(SeparatorDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

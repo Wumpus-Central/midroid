@@ -1,6 +1,6 @@
 package com.discord.serialization
 
-import C8.c
+import G8.c
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass

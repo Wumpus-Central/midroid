@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 280200
-  versionName: 280.0 - Alpha
+  versionCode: 280201
+  versionName: 280.1 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -87,9 +87,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/H8.a
-- META-INF/services/Q9.z
-- META-INF/services/V9.t
+- META-INF/services/L8.a
+- META-INF/services/U9.z
+- META-INF/services/Z9.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

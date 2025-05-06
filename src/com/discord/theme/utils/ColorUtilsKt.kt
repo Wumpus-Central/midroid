@@ -1,5 +1,6 @@
 package com.discord.theme.utils
 
+import B8.a
 import android.content.Context
 import android.content.res.ColorStateList
 import android.content.res.Resources
@@ -15,7 +16,6 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.q
 import kotlin.text.MatchResult.b
-import x8.a
 
 private final val hsv: FloatArray = new float[3]
 private final val rgbaPattern: Regex = new Regex("rgba\\((\\d+),\\s*(\\d+),\\s*(\\d+),\\s*(\\d+(?:\\.\\d*)?|\\.\\d+)\\)")

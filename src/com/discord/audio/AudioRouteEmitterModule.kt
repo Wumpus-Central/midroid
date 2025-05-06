@@ -8,9 +8,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import l8.w
 
 public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : NativeAudioRouteEmitterModuleSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
@@ -33,10 +33,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
             val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            q.g(var4, "access$getReactApplicationContext(...)");
-            var3.emitModuleEvent(var4, var2);
+            val var4: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            q.g(var3, "access$getReactApplicationContext(...)");
+            var4.emitModuleEvent(var3, var2);
          }
 
          @Override
@@ -44,7 +44,7 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
             q.h(var1, "audioDevices");
          }
       };
-      this.reactEvents = new ReactEvents(w.a("audio-route-changed", E.b(AudioRouteEmitterAudioRouteChanged.class)));
+      this.reactEvents = new ReactEvents(w.a("audio-route-changed", G.b(AudioRouteEmitterAudioRouteChanged.class)));
    }
 
    public fun addListener(type: String) {

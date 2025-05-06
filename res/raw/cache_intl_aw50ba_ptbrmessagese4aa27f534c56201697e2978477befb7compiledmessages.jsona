@@ -758,7 +758,7 @@
       1,
       "interval"
     ],
-    " até você cancelar sua assinatura. Você pode cancelar a qualquer momento, até 24 horas antes do fim do período atual nas configurações da Google Play Store."
+    " até você cancelar sua assinatura. Os preços estão sujeitos a alterações, mediante aviso prévio. Você pode cancelar a qualquer momento, até 24 horas antes do fim do período atual, nas configurações da Google Play Store."
   ],
   "7wpqfn": [
     "Ao clicar em “Comprar”, você aceita os ",
@@ -794,7 +794,7 @@
       1,
       "interval"
     ],
-    " até você cancelar sua assinatura. Você pode cancelar a qualquer momento, até 24 horas antes do fim do período atual nas configurações da App Store."
+    " até você cancelar sua assinatura. Os preços estão sujeitos a alterações, mediante aviso prévio. Você pode cancelar a qualquer momento, até 24 horas antes do fim do período atual, nas configurações da App Store."
   ],
   "gJs+kZ": "Enviar verificação de idade",
   "eQg0Cg": "MOTIVO",
@@ -5068,6 +5068,29 @@
       "answerNumber"
     ]
   ],
+  "w8e4qK": [
+    "Você tem ",
+    [
+      6,
+      "numOfErrors",
+      {
+        "one": [
+          [
+            7
+          ],
+          " erro"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " erros"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "e9hWx8": "Estilo das respostas da enquete",
   "GhK6X1": "Respostas em texto com mídia opcional",
   "an4GKS": "Resposta em mídia apenas",
@@ -5656,6 +5679,13 @@
   ],
   "2p9FMz": "Mudar status personalizado",
   "E45wvL": "Limpar depois de",
+  "DN91Jy": [
+    "amanhã às ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "mLs2c3": [
     "Limpar em ",
     [
@@ -7357,6 +7387,7 @@
       "code"
     ]
   ],
+  "3ejJen": "Expandir a atividade",
   "06YebG": "Atenção!",
   "z81WwM": "Este aplicativo não foi criado pelo Discord. Teste apenas aplicativos de desenvolvedores em quem você confia.",
   "Z/eMDQ": [
@@ -12042,7 +12073,7 @@
         ]
       ]
     ],
-    ". Esta é uma assinatura de renovação automática, que será cobrada hoje e mensalmente até que seja cancelada."
+    ". Esta é uma assinatura automática, cobraremos sua conta hoje e todo mês até você cancelar. Os preços estão sujeitos a alterações, mediante aviso prévio."
   ],
   "mPHb19": "Escolha uma assinatura para desbloquear mais",
   "A1L1hY": [
@@ -17986,7 +18017,7 @@
   "L+P4t7": "Devido ao tamanho desse servidor, os membros não receberão notificações push em dispositivos móveis para mensagens que não sejam @mention.",
   "s35OuL": "Houve um problema ao atualizar o seu perfil por servidor...",
   "jrXfy8": "Requisitos de envio",
-  "N2qTQ0": "Tipo de arquivo: JPEG, PNG, GIF, WEBP",
+  "N2qTQ0": "Tipo de arquivo: JPEG, PNG, GIF, WEBP, AVIF",
   "gfAXoa": [
     "Tamanho de arquivo recomendado: ",
     [
@@ -22936,6 +22967,7 @@
   ],
   "bAVpRU": "Servidor com restrição de idade",
   "uy25Q0": "As figurinhas deste servidor estão indisponíveis",
+  "xi46lp": "Servidor com restrição de idade",
   "ZmwvDQ": "Canal com restrição de idade",
   "Gtctho": "Relaxe, jogue jogos ou apenas converse. Toque abaixo para começar!",
   "mufH2N": "Canais são lugares em seu servidor onde as pessoas podem conversar sobre assuntos diferentes.",
@@ -30921,6 +30953,24 @@
     ],
     " postagens"
   ],
+  "v5a2+f": [
+    "Deve ter pelo menos ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " comentário(s) positivo(s)"
+  ],
+  "yYbR2t": [
+    "Deve ter no máximo ",
+    [
+      8,
+      "metadataHook",
+      []
+    ],
+    " comentário(s) negativo(s)"
+  ],
   "kCAN5+": "Precisa ter Ouro no Reddit",
   "0JyE8P": "A conta bancária precisa ser verificada",
   "W3iY5+": "É preciso conectar ao menos uma",
@@ -35814,6 +35864,36 @@
       ]
     ],
     " do Discord."
+  ],
+  "KI+BSU": [
+    "Ao clicar em “Criar conta”, você concorda com os ",
+    [
+      8,
+      "$link",
+      [
+        "termos de serviço"
+      ],
+      [
+        [
+          1,
+          "termsURL"
+        ]
+      ]
+    ],
+    " do Discord e confirma que leu a ",
+    [
+      8,
+      "$link",
+      [
+        "política de privacidade"
+      ],
+      [
+        [
+          1,
+          "privacyURL"
+        ]
+      ]
+    ]
   ],
   "qMDAPz": [
     "Li e concordo com os ",

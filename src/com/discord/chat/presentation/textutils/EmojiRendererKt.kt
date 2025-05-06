@@ -14,9 +14,9 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import h8.p
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import l8.p
 
 public fun GenericDraweeHierarchyBuilder.handleEmojiSpoiler(rc: RenderContext, revealTransparent: Boolean = false) {
    q.h(var0, "<this>");

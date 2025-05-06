@@ -39,24 +39,24 @@ public final class UploadProgressViewBinding implements ViewBinding {
       Barrier var2 = (Barrier)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.progress_bar;
-         View var6 = a.a(var0, var1);
-         if (var6 != null) {
+         View var3 = a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.progress_bg;
-            FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-            if (var4 != null) {
+            FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.progress_cancel;
-               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-               if (var3 != null) {
+               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.progress_file_image;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.progress_subtext;
-                     TextView var5 = (TextView)a.a(var0, var1);
-                     if (var5 != null) {
+                     TextView var8 = (TextView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.progress_text;
                         TextView var7 = (TextView)a.a(var0, var1);
                         if (var7 != null) {
-                           return new UploadProgressViewBinding(var0, var2, var6, var4, var3, var8, var5, var7);
+                           return new UploadProgressViewBinding(var0, var2, var3, var5, var4, var6, var8, var7);
                         }
                      }
                   }

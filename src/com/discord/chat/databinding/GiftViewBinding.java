@@ -70,67 +70,67 @@ public final class GiftViewBinding implements ViewBinding {
 
    public static GiftViewBinding bind(View var0) {
       int var1 = R.id.acceptButton;
-      DCDButton var6 = (DCDButton)a.a(var0, var1);
-      if (var6 != null) {
+      DCDButton var8 = (DCDButton)a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.acceptButtonGradient;
-         View var14 = a.a(var0, var1);
-         if (var14 != null) {
+         View var6 = a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.barrier;
-            Barrier var10 = (Barrier)a.a(var0, var1);
-            if (var10 != null) {
+            Barrier var4 = (Barrier)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.body;
-               TextView var4 = (TextView)a.a(var0, var1);
-               if (var4 != null) {
+               TextView var9 = (TextView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.content;
-                  ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
-                  if (var8 != null) {
+                  ConstraintLayout var15 = (ConstraintLayout)a.a(var0, var1);
+                  if (var15 != null) {
                      var1 = R.id.gradients;
-                     Group var12 = (Group)a.a(var0, var1);
-                     if (var12 != null) {
+                     Group var7 = (Group)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.header;
-                        TextView var15 = (TextView)a.a(var0, var1);
-                        if (var15 != null) {
+                        TextView var16 = (TextView)a.a(var0, var1);
+                        if (var16 != null) {
                            var1 = R.id.headerGradient;
-                           View var16 = a.a(var0, var1);
-                           if (var16 != null) {
+                           View var12 = a.a(var0, var1);
+                           if (var12 != null) {
                               var1 = R.id.splash;
-                              SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var9 != null) {
+                              SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var14 != null) {
                                  var1 = R.id.subtitle;
                                  TextView var5 = (TextView)a.a(var0, var1);
                                  if (var5 != null) {
                                     var1 = R.id.subtitleGradient;
-                                    View var3 = a.a(var0, var1);
-                                    if (var3 != null) {
+                                    View var10 = a.a(var0, var1);
+                                    if (var10 != null) {
                                        var1 = R.id.thumbnail;
                                        SimpleDraweeView var13 = (SimpleDraweeView)a.a(var0, var1);
                                        if (var13 != null) {
                                           var1 = R.id.thumbnailGradient;
-                                          View var11 = a.a(var0, var1);
-                                          if (var11 != null) {
+                                          View var2 = a.a(var0, var1);
+                                          if (var2 != null) {
                                              var1 = R.id.title;
-                                             TextView var2 = (TextView)a.a(var0, var1);
-                                             if (var2 != null) {
+                                             TextView var11 = (TextView)a.a(var0, var1);
+                                             if (var11 != null) {
                                                 var1 = R.id.titleGradient;
-                                                View var7 = a.a(var0, var1);
-                                                if (var7 != null) {
+                                                View var3 = a.a(var0, var1);
+                                                if (var3 != null) {
                                                    return new GiftViewBinding(
                                                       (FrameLayout)var0,
-                                                      var6,
-                                                      var14,
-                                                      var10,
-                                                      var4,
                                                       var8,
-                                                      var12,
-                                                      var15,
-                                                      var16,
+                                                      var6,
+                                                      var4,
                                                       var9,
+                                                      var15,
+                                                      var7,
+                                                      var16,
+                                                      var12,
+                                                      var14,
                                                       var5,
-                                                      var3,
+                                                      var10,
                                                       var13,
-                                                      var11,
                                                       var2,
-                                                      var7
+                                                      var11,
+                                                      var3
                                                    );
                                                 }
                                              }

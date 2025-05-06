@@ -12,7 +12,7 @@ import java.util.Locale
 import java.util.concurrent.CountDownLatch
 import java.util.concurrent.atomic.AtomicInteger
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.J
+import kotlin.jvm.internal.L
 import kotlin.jvm.internal.q
 import org.webrtc.ThreadUtils
 import org.webrtc.VideoFrame
@@ -172,13 +172,13 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
          val var5: Log = Log.INSTANCE;
-         val var6: java.lang.String = access$getName(this);
+         val var9: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("createEglSurface (");
-         var9.append(var2);
-         var9.append(" total)");
-         Log.i$default(var5, var6, var9.toString(), null, 4, null);
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("createEglSurface (");
+         var6.append(var2);
+         var6.append(" total)");
+         Log.i$default(var5, var9, var6.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
          val var4: Thread = Thread.currentThread();
@@ -192,7 +192,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    public open fun onSurfaceTextureDestroyed(surface: SurfaceTexture): Boolean {
       q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var5: Long = System.currentTimeMillis();
+         val var3: Long = System.currentTimeMillis();
          val var10: CountDownLatch = new CountDownLatch(1);
          this.releaseEglSurface(new Function0(var10) {
             final CountDownLatch $completionLatch;
@@ -207,17 +207,17 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
             }
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
-         val var3: Long = System.currentTimeMillis();
-         val var8: Log = Log.INSTANCE;
-         val var11: java.lang.String = access$getName(this);
+         val var5: Long = System.currentTimeMillis();
+         val var11: Log = Log.INSTANCE;
+         val var12: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
-         val var12: StringBuilder = new StringBuilder();
-         var12.append("releaseEglSurface (");
-         var12.append(var3 - var5);
-         var12.append(" ms) (");
-         var12.append(var2);
-         var12.append(" total)");
-         Log.i$default(var8, var11, var12.toString(), null, 4, null);
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("releaseEglSurface (");
+         var8.append(var5 - var3);
+         var8.append(" ms) (");
+         var8.append(var2);
+         var8.append(" total)");
+         Log.i$default(var11, var12, var8.toString(), null, 4, null);
          return true;
       } else {
          val var7: Thread = Thread.currentThread();
@@ -240,7 +240,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
       private final val count: AtomicInteger
 
       private fun Float.toNiceString(): String {
-         val var2: J = J.a;
+         val var2: L = L.a;
          val var3: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.3f", Arrays.copyOf(new Object[]{var1}, 1));
          q.g(var3, "format(...)");
          return var3;

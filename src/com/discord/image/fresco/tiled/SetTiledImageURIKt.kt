@@ -14,10 +14,10 @@ public fun SimpleDraweeView.setTiledImageURI(uri: String) {
    } else {
       val var2: Resources = var0.getResources();
       q.g(var2, "getResources(...)");
-      val var4: TiledDraweeController = new TiledDraweeController(var2, var1, null, 4, null);
-      val var3: DraweeController = var0.getController();
-      if (var3 == null || !var3.isSameImageRequest(var4)) {
-         var0.setController(var4);
+      val var3: TiledDraweeController = new TiledDraweeController(var2, var1, null, 4, null);
+      val var4: DraweeController = var0.getController();
+      if (var4 == null || !var4.isSameImageRequest(var3)) {
+         var0.setController(var3);
       }
    }
 }

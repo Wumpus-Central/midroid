@@ -10,12 +10,12 @@ import com.discord.crash_reporting.CrashReporting
 import com.discord.notifications.api.NotificationData
 import com.discord.notifications.renderer.utils.NotificationManagerUtilsKt
 import com.discord.theme.utils.ColorUtilsKt
-import h8.w
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import l8.w
 
 internal object NotificationChannels {
    private const val BASE_CALL_CHANNEL_ID: String = "calls"
@@ -71,15 +71,15 @@ internal object NotificationChannels {
    }
 
    private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<k> {
-      val var6: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
-      val var7: ArrayList = new ArrayList(var6.length);
-      val var4: Int = var6.length;
+      val var7: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
+      val var6: ArrayList = new ArrayList(var7.length);
+      val var4: Int = var7.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
          var var10: k;
          label20: {
-            val var5: NotificationChannels.ChannelGroup = var6[var3];
-            if (var2.containsKey(var6[var3].getId())) {
+            val var5: NotificationChannels.ChannelGroup = var7[var3];
+            if (var2.containsKey(var7[var3].getId())) {
                val var8: java.lang.CharSequence = var2.get(var5.getId()) as java.lang.CharSequence;
                if (var8 != null && !kotlin.text.h.d0(var8)) {
                   var10 = new k.c(var5.getGroupId()).c(var2.get(var5.getId()) as java.lang.CharSequence).b(var2.get(var5.getId()) as java.lang.String).a();
@@ -92,11 +92,11 @@ internal object NotificationChannels {
             var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
          }
 
-         var7.add(var10);
+         var6.add(var10);
       }
 
-      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var7);
-      return var7;
+      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var6);
+      return var6;
    }
 
    private fun com.discord.notifications.renderer.NotificationChannels.Category.getAndDeleteLegacyNotificationChannel(context: Context): NotificationChannelCompat? {
@@ -305,12 +305,12 @@ internal object NotificationChannels {
       q.h(var3, "localizedGroupNames");
       val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var14: java.util.List = this.createNotificationChannelGroups(var1, var3);
-      val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
-      val var9: ArrayList = new ArrayList();
-      val var6: Int = var8.length;
+      val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
+      val var8: ArrayList = new ArrayList();
+      val var6: Int = var9.length;
 
       for (int var4 = 0; var4 < var6; var4++) {
-         val var17: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var5, var2, new Function2(var8[var4], var1) {
+         val var17: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var5, var2, new Function2(var9[var4], var1) {
             final NotificationChannels.Category $category;
             final Context $context;
 
@@ -333,26 +333,26 @@ internal object NotificationChannels {
             }
          });
          if (var17 != null) {
-            var9.add(var17);
+            var8.add(var17);
          }
       }
 
       try {
-         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
+         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
       } catch (var12: Exception) {
          val var13: CrashReporting = CrashReporting.INSTANCE;
-         val var16: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(i8.q.d(i.v(var14, 10)), 16));
+         val var16: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.c(m8.q.d(i.v(var14, 10)), 16));
 
-         for (k var18 : var14) {
-            val var11: java.lang.String = java.lang.String.valueOf(var18.b());
+         for (k var11 : var14) {
+            val var18: java.lang.String = java.lang.String.valueOf(var11.b());
             val var7: Boolean;
-            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var18.a()) != null) {
+            if (NotificationManagerUtilsKt.getNotificationManagerCompat(var1).k(var11.a()) != null) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            val var19: Pair = w.a(var11, java.lang.String.valueOf(var7));
+            val var19: Pair = w.a(var18, java.lang.String.valueOf(var7));
             var16.put(var19.c(), var19.d());
          }
 
@@ -368,28 +368,28 @@ internal object NotificationChannels {
          val var4: ArrayList = new ArrayList();
          val var8: NotificationChannels.CallRingtone = NotificationChannels.CallRingtone.Companion.fromName(var2);
 
-         for (NotificationChannelCompat var6 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-            val var7: java.lang.String = var6.b();
-            q.g(var7, "getId(...)");
-            if (kotlin.text.h.J(var7, "calls", false, 2, null)) {
-               q.e(var6);
-               var4.add(var6);
+         for (NotificationChannelCompat var7 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+            val var5: java.lang.String = var7.b();
+            q.g(var5, "getId(...)");
+            if (kotlin.text.h.J(var5, "calls", false, 2, null)) {
+               q.e(var7);
+               var4.add(var7);
             }
          }
 
          if (!var4.isEmpty()) {
-            val var11: NotificationChannelCompat = var4.get(0) as NotificationChannelCompat;
-            val var14: NotificationChannelCompat.Builder = new NotificationChannelCompat.Builder(this.getChannelId(var8), var11.c())
-               .f(java.lang.String.valueOf(var11.d()))
-               .b(java.lang.String.valueOf(var11.d()))
+            val var13: NotificationChannelCompat = var4.get(0) as NotificationChannelCompat;
+            val var11: NotificationChannelCompat.Builder = new NotificationChannelCompat.Builder(this.getChannelId(var8), var13.c())
+               .f(java.lang.String.valueOf(var13.d()))
+               .b(java.lang.String.valueOf(var13.d()))
                .c(NotificationChannels.Category.Calls.getGroup().getGroupId())
-               .i(var11.g())
-               .e(var11.f())
+               .i(var13.g())
+               .e(var13.f())
                .d(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
-            val var13: NotificationChannels = INSTANCE;
-            q.e(var14);
-            var13.configureCallChannel(var1, var11, var14, var8.getResource());
-            val var9: NotificationChannelCompat = var14.a();
+            val var14: NotificationChannels = INSTANCE;
+            q.e(var11);
+            var14.configureCallChannel(var1, var13, var11, var8.getResource());
+            val var9: NotificationChannelCompat = var11.a();
             q.g(var9, "build(...)");
 
             for (NotificationChannelCompat var10 : var4) {
@@ -417,7 +417,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.CallRingtone> = $values();
          $VALUES = var0;
-         $ENTRIES = o8.a.a(var0);
+         $ENTRIES = t8.a.a(var0);
       }
 
       init {
@@ -501,7 +501,7 @@ internal object NotificationChannels {
          OtherHighPriority = new NotificationChannels.Category("otherHighPriority", 4, var0, "GeneralHigh");
          val var4: Array<NotificationChannels.Category> = $values();
          $VALUES = var4;
-         $ENTRIES = o8.a.a(var4);
+         $ENTRIES = t8.a.a(var4);
       }
 
       init {
@@ -662,7 +662,7 @@ internal object NotificationChannels {
       fun {
          val var0: Array<NotificationChannels.ChannelGroup> = $values();
          $VALUES = var0;
-         $ENTRIES = o8.a.a(var0);
+         $ENTRIES = t8.a.a(var0);
       }
 
       init {

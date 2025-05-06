@@ -1,8 +1,8 @@
 package com.discord.billing
 
-import Q9.K
-import Q9.U
-import Q9.f
+import U9.K
+import U9.U
+import U9.f
 import Y0.k
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
@@ -16,7 +16,6 @@ import com.discord.billing.types.QueryProductDetailsParams
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.s
 import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -26,6 +25,7 @@ import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
+import l8.s
 
 internal class BillingManager(isProdBuild: Boolean,
    onConnectionUpdated: (Int) -> Unit,
@@ -202,7 +202,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               n8.b.e();
+               s8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -231,13 +231,13 @@ internal class BillingManager(isProdBuild: Boolean,
          q.g(var2, "getProducts(...)");
 
          for (java.lang.String var7 : var2) {
-            val var3: Function3 = this.onPurchaseUpdated;
+            val var5: Function3 = this.onPurchaseUpdated;
             val var6: java.lang.String = var1.i();
             q.g(var6, "getPurchaseToken(...)");
-            val var5: java.lang.String = var1.e();
-            q.g(var5, "getPackageName(...)");
+            val var4: java.lang.String = var1.e();
+            q.g(var4, "getPackageName(...)");
             q.e(var7);
-            var3.invoke(var6, var5, var7);
+            var5.invoke(var6, var4, var7);
          }
       }
    }
@@ -436,7 +436,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = o8.a.a(var0);
+         $ENTRIES = t8.a.a(var0);
       }
 
       init {
@@ -501,15 +501,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
-         val var2: java.util.List = this.productDetails;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ProductDetailsResponse(billingResult=");
-         var3.append(var1);
-         var3.append(", productDetails=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var2: BillingResult = this.billingResult;
+         val var3: java.util.List = this.productDetails;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("ProductDetailsResponse(billingResult=");
+         var1.append(var2);
+         var1.append(", productDetails=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

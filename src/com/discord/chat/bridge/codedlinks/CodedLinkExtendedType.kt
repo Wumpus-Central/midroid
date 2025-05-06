@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.codedlinks
 
-import aa.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import h8.l
-import h8.o
+import ea.f
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.a
+import l8.l
+import l8.o
+import t8.a
 
 @f(with = CodedLinkExtendedType.Serializer::class)
 public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
@@ -25,7 +25,7 @@ public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
    @JvmStatic
    private CodedLinkExtendedType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public CodedLinkExtendedType.Companion Companion = new CodedLinkExtendedType.Companion(null);
 
@@ -51,5 +51,5 @@ public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(E.b(CodedLinkExtendedType.class), null, 2)
+   public object Serializer : IntEnumSerializer(G.b(CodedLinkExtendedType.class), null, 2)
 }

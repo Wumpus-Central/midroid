@@ -46,22 +46,33 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var11 = true;
       }
 
-      val var29: EmbedView = this.embedView;
-      val var32: Embed = var2.getEmbed();
-      val var20: Long = var2.getChannelId-o4g7jtM();
-      val var28: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var27: EmbedView = this.embedView;
+      val var24: Embed = var2.getEmbed();
+      val var13: Long = var2.getChannelId-o4g7jtM();
+      val var30: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var12: Int = var2.getConstrainedWidth();
-      val var13: Boolean;
+      val var15: Boolean;
       if (var2.getShouldAutoPlayGifs() && var11) {
-         var13 = true;
+         var15 = true;
       } else {
-         var13 = false;
+         var15 = false;
       }
 
-      val var18: Boolean = var2.getShouldAnimateEmoji();
-      val var16: Boolean = var2.getShouldShowLinkDecorations();
-      val var17: Boolean = var2.getShouldShowRoleDot();
-      val var19: Boolean = var2.getShouldShowRoleOnName();
+      val var20: Boolean = var2.getShouldAnimateEmoji();
+      val var18: Boolean = var2.getShouldShowLinkDecorations();
+      val var19: Boolean = var2.getShouldShowRoleDot();
+      val var21: Boolean = var2.getShouldShowRoleOnName();
+      val var28: Function3 = new Function3(var1) {
+         {
+            super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
+         }
+
+         public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
+            kotlin.jvm.internal.q.h(var1, "p0");
+            kotlin.jvm.internal.q.h(var2, "p1");
+            (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
+         }
+      };
       val var23: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
@@ -73,18 +84,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var30: Function3 = new Function3(var1) {
-         {
-            super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
-         }
-
-         public final void invoke_u7_MRrM/* $VF was: invoke-u7_MRrM*/(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-            kotlin.jvm.internal.q.h(var1, "p0");
-            kotlin.jvm.internal.q.h(var2, "p1");
-            (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
-         }
-      };
-      val var26: Function2 = new Function2(var1) {
+      val var35: Function2 = new Function2(var1) {
          {
             super(
                2,
@@ -102,7 +102,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
          }
       };
-      val var27: Function1 = new Function1(var1) {
+      val var29: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
          }
@@ -112,7 +112,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
          }
       };
-      val var25: Function1 = new Function1(var1) {
+      val var26: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
          }
@@ -122,7 +122,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapCopyText(var1);
          }
       };
-      val var31: Function1 = new Function1(var1) {
+      val var32: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
          }
@@ -132,7 +132,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapEmoji(var1);
          }
       };
-      val var24: Function3 = new Function3(var1) {
+      val var31: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -142,7 +142,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
          }
       };
-      val var35: Function4 = new Function4(var1) {
+      val var25: Function4 = new Function4(var1) {
          {
             super(
                4,
@@ -170,50 +170,50 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          }
       };
       var var33: java.lang.Boolean = var2.getEmbed().getObscureIsOpaque();
-      val var14: Boolean;
+      val var16: Boolean;
       if (var33 != null) {
-         var14 = var33;
+         var16 = var33;
       } else {
-         var14 = false;
+         var16 = false;
       }
 
       var33 = var2.getEmbed().getObscureHideControls();
-      val var15: Boolean;
+      val var17: Boolean;
       if (var33 != null) {
-         var15 = var33;
+         var17 = var33;
       } else {
-         var15 = false;
+         var17 = false;
       }
 
-      var29.setEmbed-0qg1u9A(
-         var32,
-         var20,
-         var28,
+      var27.setEmbed-0qg1u9A(
+         var24,
+         var13,
+         var30,
          var12,
          var3,
          var4,
-         var13,
+         var15,
+         var20,
          var18,
-         var16,
-         var17,
          var19,
+         var21,
+         var28,
          var23,
-         var30,
          var7,
          var8,
-         var26,
-         var27,
-         var25,
-         var5,
-         var31,
-         var24,
          var35,
+         var29,
+         var26,
+         var5,
+         var32,
+         var31,
+         var25,
          var34,
          var6,
          var9,
          var11 xor true,
-         var15,
-         var14,
+         var17,
+         var16,
          var2.isForwardedContent()
       );
    }

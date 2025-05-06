@@ -1,9 +1,9 @@
 package com.discord.chat.listmanager
 
-import Q9.K
-import Q9.f
-import S9.a
-import T9.s
+import U9.K
+import U9.f
+import W9.a
+import X9.s
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.row.BlockedGroupContent
 import com.discord.chat.bridge.row.BlockedGroupRow
@@ -33,7 +33,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import n8.b
+import s8.b
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
    private final var isDisabled: Boolean
@@ -113,42 +113,42 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
 
          val var13: ArrayList = new ArrayList();
 
-         for (Object var10 : var1) {
-            if ((var10 as Row).getChangeType() === ChangeType.DELETE || (var10 as Row).getChangeType() === ChangeType.UPDATE) {
-               var13.add(var10);
+         for (Object var18 : var1) {
+            if ((var18 as Row).getChangeType() === ChangeType.DELETE || (var18 as Row).getChangeType() === ChangeType.UPDATE) {
+               var13.add(var18);
             }
          }
 
-         for (Row var14 : i.M(var13)) {
-            if (var14 is DeleteRow) {
-               var5.remove(var14.getIndex());
-               var6.add(new ListOperation.Remove(var14.getIndex()));
+         for (Row var11 : i.M(var13)) {
+            if (var11 is DeleteRow) {
+               var5.remove(var11.getIndex());
+               var6.add(new ListOperation.Remove(var11.getIndex()));
             } else {
                val var2: Boolean;
-               if (var14 is LoadingRow
-                  && (var14 as LoadingRow).getButton().getAction().getType() === LoadingActionType.LOAD_MORE_AFTER
-                  && var14.getIndex() == 0) {
+               if (var11 is LoadingRow
+                  && (var11 as LoadingRow).getButton().getAction().getType() === LoadingActionType.LOAD_MORE_AFTER
+                  && var11.getIndex() == 0) {
                   var2 = true;
                } else {
                   var2 = false;
                }
 
-               val var11: Row = i.f0(var5) as Row;
+               val var17: Row = i.f0(var5) as Row;
                val var3: Boolean;
-               if (var11 is LoadingRow && (var11 as LoadingRow).isLoading()) {
+               if (var17 is LoadingRow && (var17 as LoadingRow).isLoading()) {
                   var3 = true;
                } else {
                   var3 = false;
                }
 
                if (var2 && var3) {
-                  var5.add(1, var14);
+                  var5.add(1, var11);
                   var5.remove(0);
                   var6.add(new ListOperation.Insert(1));
                   var6.add(new ListOperation.Remove(0));
                } else {
-                  var5.set(var14.getIndex(), var14);
-                  var6.add(new ListOperation.Change(var14.getIndex()));
+                  var5.set(var11.getIndex(), var11);
+                  var6.add(new ListOperation.Change(var11.getIndex()));
                }
             }
          }
@@ -184,9 +184,9 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               h8.s.b(var1);
+               l8.s.b(var1);
             } else {
-               h8.s.b(var1);
+               l8.s.b(var1);
                var1 = ChatListManager.access$getUpdatesFlow$p(this.this$0);
                val var4: ChatListUpdate = this.$update;
                this.label = 1;
@@ -219,8 +219,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
          val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
          val var2: Int = var11.getColor();
-         val var3: Int = var11.getBackgroundColor();
-         val var4: Int = var11.getBorderColor();
+         val var4: Int = var11.getBackgroundColor();
+         val var3: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -249,7 +249,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var2, var3, var4, var5, i.M(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var2, var4, var3, var5, i.M(var14));
       }
 
       return (ChatListItem)var9;

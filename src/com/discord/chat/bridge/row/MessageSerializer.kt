@@ -1,19 +1,19 @@
 package com.discord.chat.bridge.row
 
-import ca.g
-import ca.e.i
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
 import com.discord.crash_reporting.CrashReporting
 import com.discord.primitives.MessageId
-import h8.e
+import ga.g
+import ga.e.i
 import java.util.UUID
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import l8.e
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
