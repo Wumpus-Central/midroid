@@ -229,13 +229,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -335,13 +335,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
+         val var2: Int = this.width;
+         val var1: Int = this.height;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var1);
-         var3.append(", height=");
          var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }
@@ -393,15 +393,15 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.sourceUrl;
-         val var2: java.lang.String = this.previewUrl;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetUrl(sourceUrl=");
-         var3.append(var1);
-         var3.append(", previewUrl=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.sourceUrl;
+         val var1: java.lang.String = this.previewUrl;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("TargetUrl(sourceUrl=");
+         var2.append(var3);
+         var2.append(", previewUrl=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

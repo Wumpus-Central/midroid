@@ -1,7 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
-import U9.I
-import U9.f
+import V9.I
+import V9.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -15,8 +15,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import l8.s
-import s8.b
+import m8.s
+import t8.b
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -85,11 +85,11 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   if (var33 != null) {
                      var var7: Int = (int)var2.getX() - var20.getTotalPaddingLeft() + var20.getScrollX();
                      val var30: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
-                     val var6: Float = var20.getLayout().getLineRight(var30);
-                     val var4: Float = var20.getLayout().getLineLeft(var30);
-                     val var5: Float = var7;
-                     if (!(var7 > var6) && (var7 < 0 || !(var7 < var4))) {
-                        var7 = var20.getLayout().getOffsetForHorizontal(var30, var5);
+                     val var5: Float = var20.getLayout().getLineRight(var30);
+                     val var6: Float = var20.getLayout().getLineLeft(var30);
+                     val var4: Float = var7;
+                     if (!(var7 > var5) && (var7 < 0 || !(var7 < var6))) {
+                        var7 = var20.getLayout().getOffsetForHorizontal(var30, var4);
                         var14 = var33.getSpans(var7, var7, NestedClickableSpan.class);
                         q.g(var14, "getSpans(...)");
                         break label164;

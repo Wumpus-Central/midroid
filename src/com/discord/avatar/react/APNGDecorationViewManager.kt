@@ -12,7 +12,7 @@ import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {

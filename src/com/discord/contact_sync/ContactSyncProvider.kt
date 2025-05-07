@@ -32,49 +32,49 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 5b
+      // 0e: ifnull 59
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 45
+      // 17: ifnull 43
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 1
-      // 1f: new java/io/ByteArrayOutputStream
-      // 22: astore 4
-      // 24: aload 4
-      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 29: aload 1
+      // 1e: astore 4
+      // 20: new java/io/ByteArrayOutputStream
+      // 23: astore 1
+      // 24: aload 1
+      // 25: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 28: aload 4
       // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
       // 2d: iload 3
-      // 2e: aload 4
-      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 33: pop
-      // 34: aload 4
-      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 39: bipush 0
-      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
-      // 3d: astore 1
-      // 3e: goto 47
-      // 41: astore 1
-      // 42: goto 4f
-      // 45: aconst_null
-      // 46: astore 1
-      // 47: aload 2
-      // 48: aconst_null
-      // 49: invokestatic x8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4c: goto 5b
-      // 4f: aload 1
-      // 50: athrow
-      // 51: astore 4
-      // 53: aload 2
-      // 54: aload 1
-      // 55: invokestatic x8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 58: aload 4
-      // 5a: athrow
-      // 5b: aload 1
-      // 5c: areturn
+      // 2e: aload 1
+      // 2f: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 32: pop
+      // 33: aload 1
+      // 34: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 37: bipush 0
+      // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 3b: astore 1
+      // 3c: goto 45
+      // 3f: astore 1
+      // 40: goto 4d
+      // 43: aconst_null
+      // 44: astore 1
+      // 45: aload 2
+      // 46: aconst_null
+      // 47: invokestatic y8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4a: goto 59
+      // 4d: aload 1
+      // 4e: athrow
+      // 4f: astore 4
+      // 51: aload 2
+      // 52: aload 1
+      // 53: invokestatic y8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 56: aload 4
+      // 58: athrow
+      // 59: aload 1
+      // 5a: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -95,8 +95,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var6 = var10;
-            var5 = var2;
+            var5 = var10;
+            var6 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -115,8 +115,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -125,8 +125,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -137,7 +137,7 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var5, var6);
+         return new ContactNameEntry(var6, var5);
       }
    }
 
@@ -286,7 +286,7 @@ public object ContactSyncProvider {
       // 7c: astore 1
       // 7d: aload 3
       // 7e: aconst_null
-      // 7f: invokestatic x8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7f: invokestatic y8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 82: aload 1
       // 83: astore 2
       // 84: goto 91
@@ -295,7 +295,7 @@ public object ContactSyncProvider {
       // 89: astore 2
       // 8a: aload 3
       // 8b: aload 1
-      // 8c: invokestatic x8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8c: invokestatic y8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8f: aload 2
       // 90: athrow
       // 91: aload 2

@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.rolecolors.RoleColors
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
-import ha.h
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
+import ia.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -143,15 +143,15 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: LinkContextData = this.target;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LinkContentNode(content=");
-      var3.append(var2);
-      var3.append(", target=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.util.List = this.content;
+      val var3: LinkContextData = this.target;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LinkContentNode(content=");
+      var2.append(var1);
+      var2.append(", target=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -178,42 +178,42 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var6: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var1: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
-         val var3: KSerializer = a.u(N.a);
+         val var3: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
+         val var4: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
+         val var6: KSerializer = a.u(N.a);
          val var5: KSerializer = a.u(RoleColors.$serializer.INSTANCE);
          val var7: h = h.a;
-         val var2: KSerializer = a.u(h.a);
-         val var4: C0 = C0.a;
-         return new KSerializer[]{var6, var1, var3, var5, var2, a.u(C0.a), var7, a.u(var4)};
+         val var1: KSerializer = a.u(h.a);
+         val var2: C0 = C0.a;
+         return new KSerializer[]{var3, var4, var6, var5, var1, a.u(C0.a), var7, a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {
          q.h(var1, "decoder");
          val var15: SerialDescriptor = this.getDescriptor();
          val var16: c = var1.c(var15);
-         var var13: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
+         val var13: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
          var var6: Boolean = var16.y();
          var var3: Byte = 7;
          var var2: Int;
+         var var7: java.lang.String;
          var var8: Any;
          var var9: Any;
          var var10: Any;
-         var var11: java.lang.String;
+         var var11: Any;
          var var12: Any;
          val var18: java.lang.String;
          if (var6) {
             var8 = var16.m(var15, 0, var13[0], null) as java.util.List;
-            var12 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
-            var9 = var16.v(var15, 2, N.a, null) as Int;
-            var13 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, null) as RoleColors;
-            var10 = var16.v(var15, 4, h.a, null) as java.lang.Boolean;
+            var9 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
+            var12 = var16.v(var15, 2, N.a, null) as Int;
+            var10 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, null) as RoleColors;
+            var11 = var16.v(var15, 4, h.a, null) as java.lang.Boolean;
             val var17: C0 = C0.a;
-            val var7: java.lang.String = var16.v(var15, 5, C0.a, null) as java.lang.String;
+            var7 = var16.v(var15, 5, C0.a, null) as java.lang.String;
             var6 = var16.s(var15, 6);
             var18 = var16.v(var15, 7, var17, null) as java.lang.String;
             var2 = 255;
-            var11 = var7;
          } else {
             var var4: Boolean = true;
             var6 = false;
@@ -221,7 +221,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
             var11 = null;
             var10 = null;
             var8 = null;
-            var var21: Any = null;
+            var7 = null;
             var var19: Any = null;
             var9 = null;
             var2 = 0;
@@ -237,7 +237,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                      var2 |= 1;
                      break;
                   case 1:
-                     var21 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, var21) as LinkContextData;
+                     var7 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, var7) as LinkContextData;
                      var2 |= 2;
                      break;
                   case 2:
@@ -272,15 +272,17 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                var3 = 7;
             }
 
+            var9 = var7;
             var18 = (java.lang.String)var12;
-            var13 = (KSerializer[])var9;
-            var9 = var19;
-            var12 = var21;
+            var7 = (java.lang.String)var11;
+            var11 = var10;
+            var10 = var9;
+            var12 = var19;
          }
 
          var16.b(var15);
          return new LinkContentNode(
-            var2, (java.util.List)var8, (LinkContextData)var12, (Integer)var9, var13, (java.lang.Boolean)var10, var11, var6, var18, null
+            var2, (java.util.List)var8, (LinkContextData)var9, (Integer)var12, (RoleColors)var10, (java.lang.Boolean)var11, var7, var6, var18, null
          );
       }
 
@@ -294,7 +296,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

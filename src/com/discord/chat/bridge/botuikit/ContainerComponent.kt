@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
-import ha.h0
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
+import ia.h0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -141,8 +141,8 @@ public data class ContainerComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var5: Int = this.id.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var6: Int = this.id.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.errorText == null) {
@@ -171,37 +171,37 @@ public data class ContainerComponent(type: Int,
          var4 = this.themedBackgroundColor.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var5: java.util.List = this.components;
-      val var9: Int = this.accentColor;
+      val var8: java.lang.String = this.id;
+      val var5: java.lang.String = this.errorText;
+      val var3: java.util.List = this.components;
+      val var4: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
       val var6: java.lang.String = this.spoilerDescription;
       val var7: Int = this.themedBackgroundColor;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ContainerComponent(type=");
-      var8.append(var1);
-      var8.append(", id=");
-      var8.append(var3);
-      var8.append(", errorText=");
-      var8.append(var4);
-      var8.append(", components=");
-      var8.append(var5);
-      var8.append(", accentColor=");
-      var8.append(var9);
-      var8.append(", isSpoiler=");
-      var8.append(var2);
-      var8.append(", spoilerDescription=");
-      var8.append(var6);
-      var8.append(", themedBackgroundColor=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ContainerComponent(type=");
+      var9.append(var1);
+      var9.append(", id=");
+      var9.append(var8);
+      var9.append(", errorText=");
+      var9.append(var5);
+      var9.append(", components=");
+      var9.append(var3);
+      var9.append(", accentColor=");
+      var9.append(var4);
+      var9.append(", isSpoiler=");
+      var9.append(var2);
+      var9.append(", spoilerDescription=");
+      var9.append(var6);
+      var9.append(", themedBackgroundColor=");
+      var9.append(var7);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : G {
@@ -231,58 +231,58 @@ public data class ContainerComponent(type: Int,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var4: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
-         val var2: N = N.a;
-         val var1: C0 = C0.a;
-         return new KSerializer[]{N.a, C0.a, a.u(C0.a), var4[3], a.u(var2), ha.h.a, a.u(var1), a.u(var2), a.u(var1), a.u(h0.a)};
+         val var1: N = N.a;
+         val var2: C0 = C0.a;
+         return new KSerializer[]{N.a, C0.a, a.u(C0.a), var4[3], a.u(var1), ia.h.a, a.u(var2), a.u(var1), a.u(var2), a.u(h0.a)};
       }
 
       public open fun deserialize(decoder: Decoder): ContainerComponent {
          q.h(var1, "decoder");
          val var19: SerialDescriptor = this.getDescriptor();
          val var20: c = var1.c(var19);
-         val var17: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
+         val var16: Array<KSerializer> = ContainerComponent.access$get$childSerializers$cp();
          val var8: Boolean = var20.y();
          var var5: Int = 9;
+         var var2: Int;
          var var3: Int;
-         var var4: Int;
-         var var11: Any;
+         var var10: Any;
          var var13: java.lang.String;
          var var14: Any;
-         var var15: Any;
-         val var16: java.lang.String;
-         val var22: Void;
-         var var30: java.lang.String;
+         val var15: java.lang.String;
+         val var17: java.lang.String;
+         val var18: Void;
+         var var30: Any;
          val var35: java.lang.String;
          if (var8) {
-            var4 = var20.k(var19, 0);
-            var13 = var20.t(var19, 1);
+            var3 = var20.k(var19, 0);
+            var15 = var20.t(var19, 1);
             val var21: C0 = C0.a;
-            var16 = var20.v(var19, 2, C0.a, null) as java.lang.String;
-            var11 = var20.m(var19, 3, var17[3], null) as java.util.List;
+            var13 = var20.v(var19, 2, C0.a, null) as java.lang.String;
+            var10 = var20.m(var19, 3, var16[3], null) as java.util.List;
             val var9: N = N.a;
-            var15 = var20.v(var19, 4, N.a, null) as Int;
-            val var2: Byte = var20.s(var19, 5);
+            var14 = var20.v(var19, 4, N.a, null) as Int;
+            var2 = var20.s(var19, 5);
             var30 = var20.v(var19, 6, var21, null) as java.lang.String;
-            val var26: Int = var20.v(var19, 7, var9, null) as Int;
-            val var10: java.lang.String = var20.v(var19, 8, var21, null) as java.lang.String;
-            var22 = var20.v(var19, 9, h0.a, null) as Void;
+            val var27: Int = var20.v(var19, 7, var9, null) as Int;
+            val var11: java.lang.String = var20.v(var19, 8, var21, null) as java.lang.String;
+            val var22: Void = var20.v(var19, 9, h0.a, null) as Void;
             var5 = 1023;
-            var3 = var2;
-            var35 = var30;
-            var14 = var26;
-            var30 = var10;
+            var35 = (java.lang.String)var30;
+            var30 = var27;
+            var17 = var11;
+            var18 = var22;
          } else {
             var var6: Boolean = true;
-            var4 = 0;
-            var var24: Int = 0;
-            var15 = null;
+            var var4: Int = 0;
+            var2 = 0;
+            var var34: Void = null;
             var14 = null;
             var13 = null;
-            var11 = null;
+            var var29: Any = null;
             var30 = null;
-            var var28: Any = null;
+            var10 = null;
             var var23: java.lang.String = null;
-            var var27: java.lang.String = null;
+            var var28: java.lang.String = null;
             var3 = 0;
 
             while (var6) {
@@ -293,44 +293,44 @@ public data class ContainerComponent(type: Int,
                      continue;
                   case 0:
                      var4 = var20.k(var19, 0);
-                     var24 |= 1;
+                     var2 |= 1;
                      break;
                   case 1:
                      var23 = var20.t(var19, 1);
-                     var24 |= 2;
+                     var2 |= 2;
                      break;
                   case 2:
-                     var27 = var20.v(var19, 2, C0.a, var27) as java.lang.String;
-                     var24 |= 4;
+                     var28 = var20.v(var19, 2, C0.a, var28) as java.lang.String;
+                     var2 |= 4;
                      break;
                   case 3:
-                     var28 = var20.m(var19, 3, var17[3], var28) as java.util.List;
-                     var24 |= 8;
+                     var10 = var20.m(var19, 3, var16[3], var10) as java.util.List;
+                     var2 |= 8;
                      break;
                   case 4:
-                     var11 = var20.v(var19, 4, N.a, var11) as Int;
-                     var24 |= 16;
+                     var29 = var20.v(var19, 4, N.a, var29) as Int;
+                     var2 |= 16;
                      break;
                   case 5:
                      var3 = var20.s(var19, 5);
-                     var24 |= 32;
+                     var2 |= 32;
                      break;
                   case 6:
                      var30 = var20.v(var19, 6, C0.a, var30) as java.lang.String;
-                     var24 |= 64;
+                     var2 |= 64;
                      break;
                   case 7:
                      var13 = var20.v(var19, 7, N.a, var13) as Int;
-                     var24 |= 128;
+                     var2 |= 128;
                      var5 = 9;
                      continue;
                   case 8:
                      var14 = var20.v(var19, 8, C0.a, var14) as java.lang.String;
-                     var24 |= 256;
+                     var2 |= 256;
                      continue;
                   case 9:
-                     var15 = var20.v(var19, var5, h0.a, var15) as Void;
-                     var24 |= 512;
+                     var34 = var20.v(var19, var5, h0.a, var34) as Void;
+                     var2 |= 512;
                      continue;
                   default:
                      throw new n(var7);
@@ -339,20 +339,21 @@ public data class ContainerComponent(type: Int,
                var5 = 9;
             }
 
-            var35 = var30;
-            var22 = (Void)var15;
-            var30 = (java.lang.String)var14;
-            var14 = var13;
-            var15 = var11;
-            var11 = var28;
-            var16 = var27;
-            var13 = var23;
-            var5 = var24;
+            var35 = (java.lang.String)var30;
+            var5 = var2;
+            var18 = var34;
+            var17 = (java.lang.String)var14;
+            var30 = var13;
+            var2 = var3;
+            var14 = var29;
+            var13 = var28;
+            var15 = var23;
+            var3 = var4;
          }
 
          var20.b(var19);
          return new ContainerComponent(
-            var5, var4, var13, var16, (java.util.List)var11, (Integer)var15, (boolean)var3, var35, (Integer)var14, var30, var22, null
+            var5, var3, var15, var13, (java.util.List)var10, (Integer)var14, (boolean)var2, var35, (Integer)var30, var17, var18, null
          );
       }
 
@@ -366,7 +367,7 @@ public data class ContainerComponent(type: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

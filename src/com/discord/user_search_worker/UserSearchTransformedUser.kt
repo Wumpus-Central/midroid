@@ -1,9 +1,9 @@
 package com.discord.user_search_worker
 
-import ea.f
-import ga.g
-import ga.e.i
-import ia.e
+import fa.f
+import ha.g
+import ha.e.i
+import ja.e
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -149,30 +149,30 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.username;
-      val var1: java.lang.Boolean = this.isBot;
-      val var4: java.lang.Boolean = this.isFriend;
-      val var6: java.lang.String = this.friendNickname;
-      val var7: java.lang.String = this.globalName;
-      val var8: java.util.Map = this.nicknames;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UserSearchTransformedUser(id=");
-      var5.append(var2);
-      var5.append(", username=");
-      var5.append(var3);
-      var5.append(", isBot=");
-      var5.append(var1);
-      var5.append(", isFriend=");
-      var5.append(var4);
-      var5.append(", friendNickname=");
-      var5.append(var6);
-      var5.append(", globalName=");
-      var5.append(var7);
-      var5.append(", nicknames=");
-      var5.append(var8);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.id;
+      val var7: java.lang.String = this.username;
+      val var8: java.lang.Boolean = this.isBot;
+      val var2: java.lang.Boolean = this.isFriend;
+      val var3: java.lang.String = this.friendNickname;
+      val var5: java.lang.String = this.globalName;
+      val var6: java.util.Map = this.nicknames;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSearchTransformedUser(id=");
+      var4.append(var1);
+      var4.append(", username=");
+      var4.append(var7);
+      var4.append(", isBot=");
+      var4.append(var8);
+      var4.append(", isFriend=");
+      var4.append(var2);
+      var4.append(", friendNickname=");
+      var4.append(var3);
+      var4.append(", globalName=");
+      var4.append(var5);
+      var4.append(", nicknames=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {
@@ -198,9 +198,9 @@ internal data class UserSearchTransformedUser(id: String,
          val var12: LinkedHashMap = new LinkedHashMap();
 
          for (Entry var3 : var5.entrySet()) {
-            val var6: java.lang.String = var3.getKey() as java.lang.String;
-            val var4: JsonElement = var3.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var6) && (ia.g.p(var4).m() || ia.g.p(var4) is JsonNull)) {
+            val var4: java.lang.String = var3.getKey() as java.lang.String;
+            val var7: JsonElement = var3.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var4) && (ja.g.p(var7).m() || ja.g.p(var7) is JsonNull)) {
                var12.put(var3.getKey(), var3.getValue());
             }
          }
@@ -216,18 +216,18 @@ internal data class UserSearchTransformedUser(id: String,
                var var9: java.lang.String;
                var var32: java.util.Map;
                label55: {
-                  var32 = m8.q.t(var23);
+                  var32 = n8.q.t(var23);
                   var var14: Any = var5.get("id");
                   q.e(var14);
-                  var8 = ia.g.p(var14 as JsonElement).a();
+                  var8 = ja.g.p(var14 as JsonElement).a();
                   var14 = var5.get("username");
                   q.e(var14);
-                  var9 = ia.g.p(var14 as JsonElement).a();
+                  var9 = ja.g.p(var14 as JsonElement).a();
                   var14 = var5.get("isBot") as JsonElement;
                   if (var14 != null) {
-                     var14 = ia.g.p((JsonElement)var14);
+                     var14 = ja.g.p((JsonElement)var14);
                      if (var14 != null) {
-                        var24 = ia.g.f((JsonPrimitive)var14);
+                        var24 = ja.g.f((JsonPrimitive)var14);
                         break label55;
                      }
                   }
@@ -238,9 +238,9 @@ internal data class UserSearchTransformedUser(id: String,
                label50: {
                   val var18: JsonElement = var5.get("isFriend") as JsonElement;
                   if (var18 != null) {
-                     val var19: JsonPrimitive = ia.g.p(var18);
+                     val var19: JsonPrimitive = ja.g.p(var18);
                      if (var19 != null) {
-                        var26 = ia.g.f(var19);
+                        var26 = ja.g.f(var19);
                         break label50;
                      }
                   }
@@ -251,7 +251,7 @@ internal data class UserSearchTransformedUser(id: String,
                label45: {
                   val var20: JsonElement = var5.get("friendNickname") as JsonElement;
                   if (var20 != null) {
-                     val var21: JsonPrimitive = ia.g.p(var20);
+                     val var21: JsonPrimitive = ja.g.p(var20);
                      if (var21 != null) {
                         if (var21.m()) {
                            var22 = var21.a();
@@ -268,7 +268,7 @@ internal data class UserSearchTransformedUser(id: String,
                val var10: JsonElement = var5.get("globalName") as JsonElement;
                var var27: java.lang.String = null;
                if (var10 != null) {
-                  val var33: JsonPrimitive = ia.g.p(var10);
+                  val var33: JsonPrimitive = ja.g.p(var10);
                   var27 = null;
                   if (var33 != null) {
                      var27 = null;
@@ -284,11 +284,11 @@ internal data class UserSearchTransformedUser(id: String,
             val var30: Entry = var25.next() as Entry;
             val var29: java.lang.String = var30.getKey() as java.lang.String;
             val var31: JsonElement = var30.getValue() as JsonElement;
-            if (ia.g.p(var31).m()) {
-               var13 = ia.g.p(var31).a();
+            if (ja.g.p(var31).m()) {
+               var13 = ja.g.p(var31).a();
             }
 
-            var23.add(l8.w.a(var29, var13));
+            var23.add(m8.w.a(var29, var13));
          }
       }
 

@@ -1,10 +1,10 @@
 package com.discord.mobile_voice_overlay
 
-import ea.f
+import fa.f
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import l8.l
-import l8.o
+import m8.l
+import m8.o
 
 @f
 public enum class ConnectionQuality {
@@ -24,7 +24,7 @@ public enum class ConnectionQuality {
    fun {
       val var0: Array<ConnectionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = t8.a.a(var0);
+      $ENTRIES = u8.a.a(var0);
    }
 
    @JvmStatic

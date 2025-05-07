@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
-import ha.h
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
+import ia.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -139,13 +139,13 @@ public data class BlockedGroupRow(index: Int,
 
    public override fun hashCode(): Int {
       val var9: Int = Integer.hashCode(this.index);
-      val var3: Int = this.changeType.hashCode();
-      val var4: Int = Integer.hashCode(this.color);
-      val var7: Int = Integer.hashCode(this.borderColor);
+      val var7: Int = this.changeType.hashCode();
+      val var8: Int = Integer.hashCode(this.color);
+      val var6: Int = Integer.hashCode(this.borderColor);
       val var2: Int = Integer.hashCode(this.backgroundColor);
-      val var8: Int = this.text.hashCode();
-      val var6: Int = java.lang.Boolean.hashCode(this.revealed);
-      val var5: Int = this.button.hashCode();
+      val var5: Int = this.text.hashCode();
+      val var4: Int = java.lang.Boolean.hashCode(this.revealed);
+      val var3: Int = this.button.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -153,40 +153,40 @@ public data class BlockedGroupRow(index: Int,
          var1 = this.content.hashCode();
       }
 
-      return (((((((var9 * 31 + var3) * 31 + var4) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var6) * 31 + var5) * 31 + var1;
+      return (((((((var9 * 31 + var7) * 31 + var8) * 31 + var6) * 31 + var2) * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: Int = this.index;
+      val var4: Int = this.index;
       val var9: ChangeType = this.changeType;
-      val var1: Int = this.color;
-      val var4: Int = this.borderColor;
-      val var2: Int = this.backgroundColor;
+      val var2: Int = this.color;
+      val var3: Int = this.borderColor;
+      val var1: Int = this.backgroundColor;
       val var6: java.lang.String = this.text;
       val var5: Boolean = this.revealed;
-      val var10: BlockedGroupButton = this.button;
-      val var8: java.util.List = this.content;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("BlockedGroupRow(index=");
-      var7.append(var3);
-      var7.append(", changeType=");
-      var7.append(var9);
-      var7.append(", color=");
-      var7.append(var1);
-      var7.append(", borderColor=");
-      var7.append(var4);
-      var7.append(", backgroundColor=");
-      var7.append(var2);
-      var7.append(", text=");
-      var7.append(var6);
-      var7.append(", revealed=");
-      var7.append(var5);
-      var7.append(", button=");
-      var7.append(var10);
-      var7.append(", content=");
-      var7.append(var8);
-      var7.append(")");
-      return var7.toString();
+      val var7: BlockedGroupButton = this.button;
+      val var10: java.util.List = this.content;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("BlockedGroupRow(index=");
+      var8.append(var4);
+      var8.append(", changeType=");
+      var8.append(var9);
+      var8.append(", color=");
+      var8.append(var2);
+      var8.append(", borderColor=");
+      var8.append(var3);
+      var8.append(", backgroundColor=");
+      var8.append(var1);
+      var8.append(", text=");
+      var8.append(var6);
+      var8.append(", revealed=");
+      var8.append(var5);
+      var8.append(", button=");
+      var8.append(var7);
+      var8.append(", content=");
+      var8.append(var10);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : G {
@@ -235,56 +235,56 @@ public data class BlockedGroupRow(index: Int,
          val var10: Boolean = var16.y();
          var var2: Int = 0;
          var var5: Int;
+         var var6: Int;
          var var7: Int;
-         val var8: Int;
-         var var9: Int;
-         var var11: BlockedGroupButton;
-         var var12: Any;
+         var var11: Any;
+         val var12: BlockedGroupButton;
          var var13: Any;
          val var18: java.util.List;
          var var21: Int;
          var var23: Int;
+         var var26: Int;
          if (var10) {
-            var21 = var16.k(var15, 0);
-            var12 = var16.m(var15, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
-            var5 = var16.k(var15, 2);
-            var23 = var16.k(var15, 3);
-            val var6: Int = var16.k(var15, 4);
-            var13 = var16.t(var15, 5);
+            var23 = var16.k(var15, 0);
+            var13 = var16.m(var15, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
+            var26 = var16.k(var15, 2);
+            var5 = var16.k(var15, 3);
+            var21 = var16.k(var15, 4);
+            var11 = var16.t(var15, 5);
             val var20: Byte = var16.s(var15, 6);
             val var17: BlockedGroupButton = var16.m(var15, 7, BlockedGroupButton.$serializer.INSTANCE, null) as BlockedGroupButton;
             val var30: java.util.List = var16.v(var15, 8, var14[8], null) as java.util.List;
-            var9 = 511;
-            var7 = var21;
-            var8 = var23;
-            var23 = var6;
+            var6 = 511;
+            var7 = var23;
+            var23 = var26;
+            var26 = var21;
             var21 = var20;
-            var11 = var17;
+            var12 = var17;
             var18 = var30;
          } else {
-            var var26: Boolean = true;
+            var var27: Boolean = true;
             var7 = 0;
             var5 = 0;
             var23 = 0;
             var21 = 0;
-            var13 = null;
+            var var29: java.util.List = null;
             var11 = null;
-            var12 = null;
+            var13 = null;
             var var19: Any = null;
-            var var25: Int = 0;
+            var6 = 0;
 
-            while (var26) {
-               var9 = var16.x(var15);
+            while (var27) {
+               val var9: Int = var16.x(var15);
                switch (var9) {
                   case -1:
-                     var26 = false;
+                     var27 = false;
                      break;
                   case 0:
                      var7 = var16.k(var15, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var12 = var16.m(var15, 1, ChangeType.Serializer.INSTANCE, var12) as ChangeType;
+                     var13 = var16.m(var15, 1, ChangeType.Serializer.INSTANCE, var13) as ChangeType;
                      var2 |= 2;
                      break;
                   case 2:
@@ -304,7 +304,7 @@ public data class BlockedGroupRow(index: Int,
                      var2 |= 32;
                      break;
                   case 6:
-                     var25 = var16.s(var15, 6);
+                     var6 = var16.s(var15, 6);
                      var2 |= 64;
                      break;
                   case 7:
@@ -312,7 +312,7 @@ public data class BlockedGroupRow(index: Int,
                      var2 |= 128;
                      break;
                   case 8:
-                     var13 = var16.v(var15, 8, var14[8], var13) as java.util.List;
+                     var29 = var16.v(var15, 8, var14[8], var29) as java.util.List;
                      var2 |= 256;
                      break;
                   default:
@@ -320,16 +320,17 @@ public data class BlockedGroupRow(index: Int,
                }
             }
 
-            var13 = var19;
-            var18 = (java.util.List)var13;
-            var21 = var25;
-            var8 = var5;
-            var5 = var21;
-            var9 = var2;
+            var12 = (BlockedGroupButton)var11;
+            var26 = var23;
+            var23 = var21;
+            var11 = var19;
+            var18 = var29;
+            var21 = var6;
+            var6 = var2;
          }
 
          var16.b(var15);
-         return new BlockedGroupRow(var9, var7, (ChangeType)var12, var5, var8, var23, (java.lang.String)var13, (boolean)var21, var11, var18, null);
+         return new BlockedGroupRow(var6, var7, (ChangeType)var13, var23, var5, var26, (java.lang.String)var11, (boolean)var21, var12, var18, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BlockedGroupRow) {
@@ -342,7 +343,7 @@ public data class BlockedGroupRow(index: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

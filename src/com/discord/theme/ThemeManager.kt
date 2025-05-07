@@ -10,7 +10,7 @@ import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
 import kotlin.jvm.internal.q
-import l8.p
+import m8.p
 
 public object ThemeManager {
    private final lateinit var resourceTheme: Theme

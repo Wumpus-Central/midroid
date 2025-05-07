@@ -230,16 +230,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var31: java.util.Iterator = var36.iterator();
 
       for (int var24 = 0; var31.hasNext(); var24++) {
-         var var41: ReactionView = (ReactionView)var31.next();
+         var var41: Any = var31.next();
          if (var24 < 0) {
             kotlin.collections.i.u();
          }
 
-         val var30: ReactionView.Reaction = var41 as ReactionView.Reaction;
-         var41 = this.getOrCreateReactionView(var24, var17, var27, var36.size());
-         var41.setReaction(var30, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var41, false, new h(var10, var30), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var41, false, new i(var11, var30), 1, null);
+         var41 = var41 as ReactionView.Reaction;
+         val var30: ReactionView = this.getOrCreateReactionView(var24, var17, var27, var36.size());
+         var30.setReaction((ReactionView.Reaction)var41, var7);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new h(var10, (ReactionView.Reaction)var41), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new i(var11, (ReactionView.Reaction)var41), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var36.size());

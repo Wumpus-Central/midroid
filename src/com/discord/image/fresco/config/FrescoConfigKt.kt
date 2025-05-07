@@ -1,9 +1,10 @@
 package com.discord.image.fresco.config
 
-import H2.C
-import H2.E
-import H2.F
-import H2.o
+import I2.C
+import I2.E
+import I2.F
+import I2.o
+import I2.C.a
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
@@ -37,7 +38,7 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
       .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var3: C.a = C.n();
+   val var3: a = C.n();
    val var6: F = o.a();
    val var4: ImagePipelineConfig.Builder = var1.X(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
@@ -46,20 +47,20 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var5: Builder = var1.buildUpon();
-            var5.clearQuery();
+            val var4: Builder = var1.buildUpon();
+            var4.clearQuery();
 
-            for (java.lang.String var3 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
-                  val var4: java.util.Iterator = var1.getQueryParameters(var3).iterator();
+            for (java.lang.String var2 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
+                  val var3: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var4.hasNext()) {
-                     var5.appendQueryParameter(var3, var4.next() as java.lang.String);
+                  while (var3.hasNext()) {
+                     var4.appendQueryParameter(var2, var3.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var5.build();
+            var1 = var4.build();
             q.g(var1, "build(...)");
             return var1;
          }

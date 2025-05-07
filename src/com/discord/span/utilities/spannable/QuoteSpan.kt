@@ -58,15 +58,15 @@ public class QuoteSpan(stripeColor: Int, stripeWidth: Int, gapWidth: Int) : Lead
       q.h(var8, "text");
       q.h(var12, "layout");
       if (var8 is Spanned) {
-         val var13: Spanned = var8 as Spanned;
+         val var15: Spanned = var8 as Spanned;
          if ((var8 as Spanned).getSpanStart(this) == var9) {
-            val var15: RectF = this.rect;
+            val var13: RectF = this.rect;
             this.rect.left = var3;
-            var15.right = var3 + var4 * this.stripeWidth;
-            var15.top = var5;
+            var13.right = var3 + var4 * this.stripeWidth;
+            var13.top = var5;
          }
 
-         var3 = var13.getSpanEnd(this);
+         var3 = var15.getSpanEnd(this);
          if (var3 == var10 || var3 - 1 == var10 && var8.charAt(var10) == '\n') {
             this.rect.bottom = var7;
             this.draw(var1, var2);

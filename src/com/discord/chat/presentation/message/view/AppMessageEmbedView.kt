@@ -96,13 +96,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var2: Int = var1.get("r") as Int;
-      val var3: Int = var1.get("g") as Int;
+      val var3: Int = var1.get("r") as Int;
+      val var2: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var2 == null || var3 == null || var4 == null) {
+      if (var3 == null || var2 == null || var4 == null) {
          return null;
       } else {
-         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
+         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
       }
    }
 
@@ -244,10 +244,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var3 / var4;
-         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var38: SimpleDraweeView = this.view.banner;
+         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var52: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
-         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
@@ -255,10 +255,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         kotlin.jvm.internal.q.g(var40, "toUpperCase(...)");
-         var14.setText(var40);
+         val var40: TextView = this.view.title;
+         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         kotlin.jvm.internal.q.g(var53, "toUpperCase(...)");
+         var40.setText(var53);
       } else {
          val var41: TextView = this.view.title;
          kotlin.jvm.internal.q.g(this.view.title, "title");
@@ -314,8 +314,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
                var31 = false;
             }
 
-            val var55: java.lang.String = var63.getLabel();
-            val var61: java.lang.String = var63.getId();
+            val var61: java.lang.String = var63.getLabel();
+            val var55: java.lang.String = var63.getId();
             val var64: java.lang.Boolean = var63.getDisabled();
             val var12: Boolean;
             if (var64 != null) {
@@ -358,14 +358,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var71.setAlpha(var7);
-            var71.setText(var55);
+            var71.setText(var61);
             var71.setBackgroundColor(var10);
             var71.setTextColor(var9);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
             var71.setLayoutParams(var67);
-            var71.setOnClickButtonListener(new d(this, var2, var1, var61));
+            var71.setOnClickButtonListener(new d(this, var2, var1, var55));
             this.view.actionsContainer.addView(var71);
          }
 

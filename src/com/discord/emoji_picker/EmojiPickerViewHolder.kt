@@ -32,7 +32,7 @@ import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import l8.l
+import m8.l
 
 internal sealed class EmojiPickerViewHolder protected constructor(view: View) : RecyclerView.ViewHolder(var1) {
    public class Category(context: Context) : EmojiPickerViewHolder {

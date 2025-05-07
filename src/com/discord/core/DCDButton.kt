@@ -1,7 +1,7 @@
 package com.discord.core
 
-import Q5.k
-import Q5.k.b
+import R5.k
+import R5.k.b
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable

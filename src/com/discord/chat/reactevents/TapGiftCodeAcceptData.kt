@@ -3,12 +3,12 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.p0
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -140,22 +140,22 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          var var10: java.lang.String = null;
          var var2: Int;
          var var11: java.lang.String;
-         val var15: java.lang.String;
+         var var12: java.lang.String;
          if (var5) {
-            val var6: java.lang.String = var9.t(var8, 0);
+            var12 = var9.t(var8, 0);
             val var7: MessageId = var9.v(var8, 1, MessageId.$serializer.INSTANCE, null) as MessageId;
             if (var7 != null) {
                var10 = var7.unbox-impl();
             }
 
             var2 = 3;
-            var15 = var10;
-            var11 = var6;
+            var11 = var12;
+            var12 = var10;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var11 = null;
-            var var12: java.lang.String = null;
+            var12 = null;
 
             while (var3) {
                val var4: Int = var9.x(var8);
@@ -188,12 +188,10 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
                   var3 = false;
                }
             }
-
-            var15 = var12;
          }
 
          var9.b(var8);
-         return new TapGiftCodeAcceptData(var2, var11, var15, null, null);
+         return new TapGiftCodeAcceptData(var2, var11, var12, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapGiftCodeAcceptData) {
@@ -206,7 +204,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

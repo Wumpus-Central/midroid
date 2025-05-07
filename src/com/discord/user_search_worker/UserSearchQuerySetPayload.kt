@@ -1,13 +1,13 @@
 package com.discord.user_search_worker
 
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
-import ha.T
-import ha.y
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
+import ia.T
+import ia.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -35,7 +35,7 @@ internal data class UserSearchQuerySetPayload(query: String,
    @JvmStatic
    fun {
       val var0: C0 = C0.a;
-      $childSerializers = new KSerializer[]{null, null, new ha.f(C0.a), new ha.f(var0), new T(var0, y.a), null};
+      $childSerializers = new KSerializer[]{null, null, new ia.f(C0.a), new ia.f(var0), new T(var0, y.a), null};
    }
 
    init {
@@ -135,27 +135,27 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.query;
-      val var7: UserSearchQuerySetFilters = this.filters;
-      val var4: java.util.List = this.blacklist;
-      val var2: java.util.List = this.whitelist;
-      val var5: java.util.Map = this.boosters;
+      val var2: java.lang.String = this.query;
+      val var6: UserSearchQuerySetFilters = this.filters;
+      val var7: java.util.List = this.blacklist;
+      val var4: java.util.List = this.whitelist;
+      val var3: java.util.Map = this.boosters;
       val var1: Int = this.limit;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("UserSearchQuerySetPayload(query=");
-      var6.append(var3);
-      var6.append(", filters=");
-      var6.append(var7);
-      var6.append(", blacklist=");
-      var6.append(var4);
-      var6.append(", whitelist=");
-      var6.append(var2);
-      var6.append(", boosters=");
-      var6.append(var5);
-      var6.append(", limit=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("UserSearchQuerySetPayload(query=");
+      var5.append(var2);
+      var5.append(", filters=");
+      var5.append(var6);
+      var5.append(", blacklist=");
+      var5.append(var7);
+      var5.append(", whitelist=");
+      var5.append(var4);
+      var5.append(", boosters=");
+      var5.append(var3);
+      var5.append(", limit=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -203,10 +203,10 @@ internal data class UserSearchQuerySetPayload(query: String,
             var6 = var11.v(var10, 3, var12[3], null) as java.util.List;
             var13 = var11.m(var10, 4, var12[4], null) as java.util.Map;
             val var2: Int = var11.k(var10, 5);
-            var3 = 63;
-            var4 = var2;
+            var4 = 63;
+            var3 = var2;
          } else {
-            var var16: Boolean = true;
+            var var15: Boolean = true;
             var3 = 0;
             var9 = null;
             var8 = null;
@@ -215,11 +215,11 @@ internal data class UserSearchQuerySetPayload(query: String,
             var13 = null;
             var var14: Int = 0;
 
-            while (var16) {
+            while (var15) {
                val var5: Int = var11.x(var10);
                switch (var5) {
                   case -1:
-                     var16 = false;
+                     var15 = false;
                      break;
                   case 0:
                      var9 = var11.t(var10, 0);
@@ -250,12 +250,11 @@ internal data class UserSearchQuerySetPayload(query: String,
                }
             }
 
-            var4 = var3;
-            var3 = var14;
+            var4 = var14;
          }
 
          var11.b(var10);
-         return new UserSearchQuerySetPayload(var3, var9, var8, (java.util.List)var7, (java.util.List)var6, (java.util.Map)var13, var4, null);
+         return new UserSearchQuerySetPayload(var4, var9, var8, (java.util.List)var7, (java.util.List)var6, (java.util.Map)var13, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSearchQuerySetPayload) {
@@ -268,7 +267,7 @@ internal data class UserSearchQuerySetPayload(query: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

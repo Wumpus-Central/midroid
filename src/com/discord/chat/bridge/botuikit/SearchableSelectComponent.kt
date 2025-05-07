@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import ea.f
+import fa.f
 import kotlinx.serialization.KSerializer
 
 @f

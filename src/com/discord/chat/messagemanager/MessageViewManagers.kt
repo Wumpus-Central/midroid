@@ -48,7 +48,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import l8.w
+import m8.w
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
@@ -359,13 +359,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var5: Message = var10 as Message;
+            val var6: Message = var10 as Message;
             val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var11: MessageFrame = var4.getMessageFrame();
-            val var6: Context = var1.getContext();
-            q.g(var6, "getContext(...)");
+            val var5: MessageFrame = var4.getMessageFrame();
+            val var11: Context = var1.getContext();
+            q.g(var11, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var5, var7, var11, MessageViewManagers.access$getEventHandler(var3, var4, var6), this.componentProvider, null, false, false, 224, null
+               var1, var6, var7, var5, MessageViewManagers.access$getEventHandler(var3, var4, var11), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }

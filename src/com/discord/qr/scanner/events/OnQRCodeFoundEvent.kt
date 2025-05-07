@@ -2,11 +2,11 @@ package com.discord.qr.scanner.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,13 +73,13 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.status;
-      val var2: java.lang.String = this.result;
+      val var2: java.lang.String = this.status;
+      val var3: java.lang.String = this.result;
       val var1: StringBuilder = new StringBuilder();
       var1.append("OnQRCodeFoundEvent(status=");
-      var1.append(var3);
-      var1.append(", result=");
       var1.append(var2);
+      var1.append(", result=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }
@@ -156,7 +156,7 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

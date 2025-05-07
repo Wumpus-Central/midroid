@@ -14,7 +14,7 @@ import com.discord.share.intent.GetFileNameKt
 import com.discord.shortcuts.ShortcutData
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 internal data class ShareProps(text: String, attachments: List<com.discord.share.ShareProps.Attachment>, targetChannelId: String?, targetUserId: String?) {
    public final val attachments: List<com.discord.share.ShareProps.Attachment>
@@ -110,21 +110,21 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var2: java.util.List = this.attachments;
+      val var4: java.lang.String = this.text;
+      val var5: java.util.List = this.attachments;
       val var3: java.lang.String = this.targetChannelId;
-      val var4: java.lang.String = this.targetUserId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ShareProps(text=");
-      var5.append(var1);
-      var5.append(", attachments=");
-      var5.append(var2);
-      var5.append(", targetChannelId=");
-      var5.append(var3);
-      var5.append(", targetUserId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.targetUserId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ShareProps(text=");
+      var2.append(var4);
+      var2.append(", attachments=");
+      var2.append(var5);
+      var2.append(", targetChannelId=");
+      var2.append(var3);
+      var2.append(", targetUserId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -195,15 +195,15 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
 
       public override fun toString(): String {
          val var2: java.lang.String = this.name;
-         val var4: java.lang.String = this.uri;
-         val var3: java.lang.String = this.mimeType;
+         val var3: java.lang.String = this.uri;
+         val var4: java.lang.String = this.mimeType;
          val var1: StringBuilder = new StringBuilder();
          var1.append("Attachment(name=");
          var1.append(var2);
          var1.append(", uri=");
-         var1.append(var4);
-         var1.append(", mimeType=");
          var1.append(var3);
+         var1.append(", mimeType=");
+         var1.append(var4);
          var1.append(")");
          return var1.toString();
       }
@@ -278,10 +278,10 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          for (Uri var21 : var20) {
             val var9: ContentResolver = var2.getContentResolver();
             q.g(var9, "getContentResolver(...)");
-            val var22: java.lang.String = GetFileNameKt.getFileName(var9, var21);
-            val var10: java.lang.String = var21.toString();
-            q.g(var10, "toString(...)");
-            var11.add(new ShareProps.Attachment(var22, var10, var2.getContentResolver().getType(var21)));
+            val var10: java.lang.String = GetFileNameKt.getFileName(var9, var21);
+            val var22: java.lang.String = var21.toString();
+            q.g(var22, "toString(...)");
+            var11.add(new ShareProps.Attachment(var10, var22, var2.getContentResolver().getType(var21)));
          }
 
          return new ShareProps(var14, var11, var4, var5);

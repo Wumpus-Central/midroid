@@ -17,7 +17,7 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import l8.p
+import m8.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,

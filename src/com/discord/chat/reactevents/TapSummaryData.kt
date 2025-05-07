@@ -2,11 +2,11 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,18 +77,18 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.channelId;
       val var1: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.summaryId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapSummaryData(channelId=");
-      var3.append(var2);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(", summaryId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.summaryId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapSummaryData(channelId=");
+      var4.append(var3);
+      var4.append(", messageId=");
+      var4.append(var1);
+      var4.append(", summaryId=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -157,8 +157,8 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
                }
             }
 
-            var5 = var11;
             var10 = var5;
+            var5 = var11;
          }
 
          var9.b(var8);

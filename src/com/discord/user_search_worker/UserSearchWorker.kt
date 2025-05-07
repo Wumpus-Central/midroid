@@ -1,6 +1,6 @@
 package com.discord.user_search_worker
 
-import S9.d
+import T9.d
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -12,8 +12,8 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.b
-import l8.p
-import p8.a
+import m8.p
+import q8.a
 
 internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String, String) -> Unit) {
    public final val onResults: (List<UserSearchWorkerResult>, String, String) -> Unit
@@ -137,8 +137,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          val var10: UserSearchTransformedUser = this.users.get(var11);
          var var14: UserSearchTransformedUser = var6;
          if (var10 != null) {
-            val var13: java.lang.String = var6.getId();
-            val var12: java.lang.String = var6.getUsername();
+            val var12: java.lang.String = var6.getId();
+            val var13: java.lang.String = var6.getUsername();
             var var3: java.lang.Boolean = var6.isBot();
             var var15: java.lang.Boolean = var3;
             if (var3 == null) {
@@ -163,7 +163,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                var5 = var10.getGlobalName();
             }
 
-            var14 = var10.copy(var13, var12, var15, var3, var21, var5, m8.q.p(var10.getNicknames(), var6.getNicknames()));
+            var14 = var10.copy(var12, var13, var15, var3, var21, var5, n8.q.p(var10.getNicknames(), var6.getNicknames()));
             if (var14 == null) {
                var14 = var6;
             }
@@ -200,11 +200,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var20: java.lang.String = var23.getKey() as java.lang.String;
-         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var28: UserSearchQuerySetFilters = var24.getFilters();
-         if (var28 == null || q.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var20, var24);
+         val var16: java.lang.String = var23.getKey() as java.lang.String;
+         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var24: UserSearchQuerySetFilters = var28.getFilters();
+         if (var24 == null || q.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
+            this.searchUsers(var16, var28);
          }
       }
    }
@@ -262,9 +262,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var31: java.util.List;
                   if (var5) {
-                     val var10: java.lang.String = var28.getUsername();
-                     val var12: java.lang.String = var28.getGlobalName();
-                     val var33: java.lang.String = var28.getFriendNickname();
+                     val var33: java.lang.String = var28.getUsername();
+                     val var10: java.lang.String = var28.getGlobalName();
+                     val var12: java.lang.String = var28.getFriendNickname();
                      val var17: java.util.Map = var28.getNicknames();
                      val var29: UserSearchQuerySetFilters = var2.getFilters();
                      val var30: java.lang.String;
@@ -274,7 +274,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var30 = null;
                      }
 
-                     var31 = i.n(new java.lang.String[]{var10, var12, var33, (java.lang.String)var17.get(var30)});
+                     var31 = i.n(new java.lang.String[]{var33, var10, var12, (java.lang.String)var17.get(var30)});
                   } else {
                      if (var5) {
                         throw new p();

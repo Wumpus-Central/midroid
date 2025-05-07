@@ -1,7 +1,7 @@
 package com.discord.serialization
 
-import H8.b
-import ia.g
+import I8.b
+import ja.g
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -33,7 +33,7 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
 
          g.k(g.p(var1));
       }
-   } catch (IllegalArgumentException | var3: ea.g) {
+   } catch (IllegalArgumentException | var3: fa.g) {
       return false;
    }
 

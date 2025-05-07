@@ -1,11 +1,11 @@
 package com.discord.app_database
 
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.Y
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,16 +79,16 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    public override fun toString(): String {
       val var3: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var4: java.lang.String = this.versionString;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("NonGuildVersion(id=");
-      var5.append(var3);
-      var5.append(", version=");
-      var5.append(var1);
-      var5.append(", versionString=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.versionString;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("NonGuildVersion(id=");
+      var4.append(var3);
+      var4.append(", version=");
+      var4.append(var1);
+      var4.append(", versionString=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -172,7 +172,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

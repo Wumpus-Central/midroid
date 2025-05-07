@@ -233,16 +233,16 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
-         val var15: MessageType = MessageType.DEFAULT;
-         val var13: java.lang.String = var17.getId-3Eiw7ao();
+         val var14: MessageType = MessageType.DEFAULT;
+         val var10: java.lang.String = var17.getId-3Eiw7ao();
          val var6: Long = var17.getChannelId-o4g7jtM();
-         val var16: GuildId = var17.getGuildId-qOKuAAo();
-         val var12: UserId = var17.getUserId-wUX8bhU();
-         val var11: java.lang.String = var17.getUsername();
-         val var10: java.lang.String = var17.getAvatarURL();
-         val var9: StructurableText = var17.getContent();
+         val var13: GuildId = var17.getGuildId-qOKuAAo();
+         val var11: UserId = var17.getUserId-wUX8bhU();
+         val var9: java.lang.String = var17.getUsername();
+         val var15: java.lang.String = var17.getAvatarURL();
+         val var16: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var14: Int = var17.getRoleColor();
+         val var12: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
          val var4: Boolean;
@@ -253,13 +253,13 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          }
 
          val var20: Message = new Message(
-            var15,
-            var13,
+            var14,
+            var10,
             null,
             var6,
-            var16,
+            var13,
             null,
-            var12,
+            var11,
             0L,
             null,
             null,
@@ -268,19 +268,19 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var11,
+            var9,
             var3,
-            var14,
+            var12,
             null,
             var5,
             false,
             null,
-            var10,
+            var15,
             null,
             null,
             null,
             null,
-            var9,
+            var16,
             null,
             null,
             null,

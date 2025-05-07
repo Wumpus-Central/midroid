@@ -36,45 +36,45 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
    }
 
    public open fun getPackages(): ArrayList<ReactPackage> {
-      val var1: ArrayList = super.getPackages();
-      val var2: DCDModuleProvider = DCDModuleProvider.INSTANCE;
-      var1.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
-      var1.add(
-         var2.getViewManagers(
+      val var2: ArrayList = super.getPackages();
+      val var1: DCDModuleProvider = DCDModuleProvider.INSTANCE;
+      var2.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
+      var2.add(var1.getLegacyPackageForModuleWithViewManager(<unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE));
+      var2.add(
+         var1.getViewManagers(
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
             <unrepresentable>.INSTANCE,
@@ -86,13 +86,13 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
             <unrepresentable>.INSTANCE
          )
       );
-      var1.add(var2.getTurboPackageForModule("NativeAppDatabaseModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeAppIconModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeApplicationReadyModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeAppLifecycleModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeAppRatingRequestModule", <unrepresentable>.INSTANCE));
-      var1.add(
-         var2.getTurboPackageForModule(
+      var2.add(var1.getTurboPackageForModule("NativeAppDatabaseModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppIconModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeApplicationReadyModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppLifecycleModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAppRatingRequestModule", <unrepresentable>.INSTANCE));
+      var2.add(
+         var1.getTurboPackageForModule(
             "NativeAudioManagerModule",
             new Function1(AudioManagerModule.Companion) {
                {
@@ -113,33 +113,33 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
             }
          )
       );
-      var1.add(var2.getTurboPackageForModule("NativeAudioPlayerModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeAudioRouteEmitterModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeBrowserManagerModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeCacheModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeClientInfoModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeCommandClipboardModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeCompressionModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeCPUPnQModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeDateFormatUtilsModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeFileModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeI18nModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeJankStatsModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeJSWatchdogModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("RTNKeyCommandsModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeKeyboardModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeMetricMonitorModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeMobileVoiceOverlayModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeOnDemandResourceModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativePushNotificationMonitorModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeReactAssetModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeStartupFlagsModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
-      var1.add(var2.getTurboPackageForModule("NativeArchitectureProvider", <unrepresentable>.INSTANCE));
-      q.e(var1);
-      var2.addTurboPackages(
-         var1,
+      var2.add(var1.getTurboPackageForModule("NativeAudioPlayerModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeAudioRouteEmitterModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeBrowserManagerModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCacheModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeClientInfoModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCommandClipboardModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCompressionModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeCPUPnQModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeDateFormatUtilsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeFileModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeI18nModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeJankStatsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeJSWatchdogModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("RTNKeyCommandsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeKeyboardModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeMetricMonitorModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeMobileVoiceOverlayModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeOnDemandResourceModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativePushNotificationMonitorModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeReactAssetModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeStartupFlagsModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeThemeModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeTimersModule", <unrepresentable>.INSTANCE));
+      var2.add(var1.getTurboPackageForModule("NativeArchitectureProvider", <unrepresentable>.INSTANCE));
+      q.e(var2);
+      var1.addTurboPackages(
+         var2,
          new APNGPackage(),
          new AvatarPackage(),
          new BlurViewPackage(),
@@ -160,6 +160,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
          new WakelockPackage(),
          new ZoomLayoutPackage()
       );
-      return var1;
+      return var2;
    }
 }

@@ -1,7 +1,7 @@
 package com.discord.thumbhash
 
-import U9.K
-import U9.f
+import V9.K
+import V9.f
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -16,8 +16,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import l8.s
-import s8.b
+import m8.s
+import t8.b
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {

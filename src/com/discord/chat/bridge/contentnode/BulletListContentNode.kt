@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import ea.f
-import ea.n
-import fa.a
-import ha.G
-import ha.Y
-import ha.h
+import fa.f
+import fa.n
+import ga.a
+import ia.G
+import ia.Y
+import ia.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,18 +75,18 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.Long = this.start;
+      val var3: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var3: java.util.List = this.items;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BulletListContentNode(start=");
-      var2.append(var4);
-      var2.append(", ordered=");
-      var2.append(var1);
-      var2.append(", items=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.items;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("BulletListContentNode(start=");
+      var4.append(var3);
+      var4.append(", ordered=");
+      var4.append(var1);
+      var4.append(", items=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -171,7 +171,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,16 +79,16 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    public override fun toString(): String {
       val var1: Int = this.type;
       val var4: java.lang.String = this.id;
-      val var3: ContentInventoryEntry = this.contentInventoryEntry;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContentInventoryEntryComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", contentInventoryEntry=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ContentInventoryEntryComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -117,23 +117,24 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          var var9: ContentInventoryEntry;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            val var2: Int = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, null) as ContentInventoryEntry;
-            var3 = 7;
+            var4 = 7;
+            var3 = var2;
          } else {
-            var var4: Boolean = true;
+            var var11: Boolean = true;
             var3 = 0;
             var6 = null;
             var9 = null;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var4) {
+            while (var11) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -143,26 +144,25 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
                         }
 
                         var9 = var8.v(var7, 2, ContentInventoryEntry.$serializer.INSTANCE, var9) as ContentInventoryEntry;
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var6 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var11 = false;
                }
             }
 
-            var2 = var3;
-            var3 = var2;
+            var4 = var10;
          }
 
          var8.b(var7);
-         return new ContentInventoryEntryComponent(var3, var2, var6, var9, null);
+         return new ContentInventoryEntryComponent(var4, var3, var6, var9, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ContentInventoryEntryComponent) {
@@ -175,7 +175,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

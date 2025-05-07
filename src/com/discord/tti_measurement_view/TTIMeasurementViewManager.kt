@@ -10,7 +10,7 @@ import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {

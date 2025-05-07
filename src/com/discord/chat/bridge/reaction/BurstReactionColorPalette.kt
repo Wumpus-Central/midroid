@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.F
-import ha.G
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.F
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -209,7 +209,7 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

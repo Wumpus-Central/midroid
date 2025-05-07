@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.contentnode
 
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.h
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.h
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -70,18 +70,18 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.lang;
-      val var3: java.lang.String = this.content;
+      val var3: java.lang.String = this.lang;
+      val var2: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CodeBlockContentNode(lang=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(", inQuote=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CodeBlockContentNode(lang=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var2);
+      var4.append(", inQuote=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -116,11 +116,12 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          val var10: java.lang.String;
          if (var9.y()) {
             var10 = var9.t(var8, 0);
-            var7 = var9.t(var8, 1);
+            val var6: java.lang.String = var9.t(var8, 1);
             var5 = var9.s(var8, 2);
             var2 = 7;
+            var7 = var6;
          } else {
-            var var6: java.lang.String = null;
+            var var12: java.lang.String = null;
             var var11: java.lang.String = null;
             var var3: Boolean = true;
             var5 = false;
@@ -142,7 +143,7 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
                         var2 |= 2;
                      }
                   } else {
-                     var6 = var9.t(var8, 0);
+                     var12 = var9.t(var8, 0);
                      var2 |= 1;
                   }
                } else {
@@ -151,7 +152,7 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
             }
 
             var7 = var11;
-            var10 = var6;
+            var10 = var12;
          }
 
          var9.b(var8);

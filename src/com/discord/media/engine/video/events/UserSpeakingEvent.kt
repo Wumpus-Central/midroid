@@ -2,12 +2,12 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.N
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.N
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -114,23 +114,24 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
          q.h(var1, "decoder");
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
-         var var2: Int;
          var var3: Int;
          var var4: Int;
+         val var5: Int;
          var var9: java.lang.String;
          if (var8.y()) {
-            var4 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             var9 = var8.t(var7, 1);
-            var2 = var8.k(var7, 2);
-            var3 = 7;
+            val var2: Int = var8.k(var7, 2);
+            var4 = 7;
+            var5 = var2;
          } else {
             var9 = null;
-            var var5: Boolean = true;
+            var var13: Boolean = true;
             var4 = 0;
             var3 = 0;
-            var2 = 0;
+            var var10: Int = 0;
 
-            while (var5) {
+            while (var13) {
                val var6: Int = var8.x(var7);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -140,26 +141,27 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
                         }
 
                         var3 = var8.k(var7, 2);
-                        var2 |= 4;
+                        var10 |= 4;
                      } else {
                         var9 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var10 |= 2;
                      }
                   } else {
                      var4 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var10 |= 1;
                   }
                } else {
-                  var5 = false;
+                  var13 = false;
                }
             }
 
-            var3 = var2;
-            var2 = var3;
+            var5 = var3;
+            var3 = var4;
+            var4 = var10;
          }
 
          var8.b(var7);
-         return new UserSpeakingEvent(var3, var4, var9, var2, null);
+         return new UserSpeakingEvent(var4, var3, var9, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSpeakingEvent) {

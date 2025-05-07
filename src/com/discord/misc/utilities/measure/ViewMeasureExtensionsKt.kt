@@ -4,7 +4,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.View.MeasureSpec
 import kotlin.jvm.internal.q
-import m8.n
+import n8.n
 
 public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, Int> {
    q.h(var0, "<this>");

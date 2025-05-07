@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.codedlinks
 
-import ea.f
+import fa.f
 import kotlinx.serialization.KSerializer
 
 @f(with = CodedLinkSerializer::class)

@@ -22,8 +22,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import l8.p
-import l8.s
+import m8.p
+import m8.s
 
 public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
    : BaseChatListAdapter {
@@ -231,7 +231,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, U9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
+         access$setProcessNextUpdateJob$p(this, V9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -249,7 +249,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
 
             public final Object invokeSuspend(Object var1) {
-               s8.b.e();
+               t8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -310,11 +310,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 
@@ -370,7 +370,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = t8.a.a(var0);
+         $ENTRIES = u8.a.a(var0);
       }
 
       @JvmStatic

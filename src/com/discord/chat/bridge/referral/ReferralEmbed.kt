@@ -2,13 +2,13 @@ package com.discord.chat.bridge.referral
 
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableTextSerializer
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
-import ha.N
-import ha.h
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
+import ia.N
+import ia.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -496,73 +496,73 @@ public sealed interface ReferralEmbed {
       }
 
       public override fun toString(): String {
-         val var22: java.lang.String = this.headerText;
-         val var1: Int = this.headerColor;
-         val var3: Int = this.backgroundColor;
-         val var2: Int = this.thumbnailCornerRadius;
-         val var5: java.lang.String = this.headerLogoUrl;
-         val var11: java.lang.String = this.headerUrl;
-         val var7: java.lang.String = this.thumbnailUrl;
-         val var20: java.lang.String = this.titleText;
-         val var14: Int = this.titleColor;
+         val var10: java.lang.String = this.headerText;
+         val var3: Int = this.headerColor;
+         val var2: Int = this.backgroundColor;
+         val var1: Int = this.thumbnailCornerRadius;
+         val var23: java.lang.String = this.headerLogoUrl;
+         val var6: java.lang.String = this.headerUrl;
+         val var4: java.lang.String = this.thumbnailUrl;
+         val var19: java.lang.String = this.titleText;
+         val var16: Int = this.titleColor;
          val var17: java.lang.String = this.bodyText;
-         val var4: AnnotatedStructurableText = this.structuredBodyText;
-         val var18: Int = this.bodyTextColor;
-         val var15: AnnotatedStructurableText = this.linkButtonLabel;
-         val var23: Int = this.linkButtonColor;
-         val var8: java.lang.String = this.subText;
-         val var21: Int = this.subTextColor;
-         val var6: java.lang.String = this.footerText;
-         val var16: Int = this.footerTextColor;
-         val var13: java.lang.String = this.acceptLabelText;
-         val var19: Int = this.acceptLabelColor;
-         val var10: java.lang.String = this.acceptLabelIconUrl;
-         val var12: java.lang.Boolean = this.canBeAccepted;
+         val var12: AnnotatedStructurableText = this.structuredBodyText;
+         val var7: Int = this.bodyTextColor;
+         val var5: AnnotatedStructurableText = this.linkButtonLabel;
+         val var18: Int = this.linkButtonColor;
+         val var11: java.lang.String = this.subText;
+         val var14: Int = this.subTextColor;
+         val var8: java.lang.String = this.footerText;
+         val var15: Int = this.footerTextColor;
+         val var21: java.lang.String = this.acceptLabelText;
+         val var22: Int = this.acceptLabelColor;
+         val var20: java.lang.String = this.acceptLabelIconUrl;
+         val var13: java.lang.Boolean = this.canBeAccepted;
          val var9: StringBuilder = new StringBuilder();
          var9.append("Resolved(headerText=");
-         var9.append(var22);
+         var9.append(var10);
          var9.append(", headerColor=");
-         var9.append(var1);
-         var9.append(", backgroundColor=");
          var9.append(var3);
-         var9.append(", thumbnailCornerRadius=");
+         var9.append(", backgroundColor=");
          var9.append(var2);
+         var9.append(", thumbnailCornerRadius=");
+         var9.append(var1);
          var9.append(", headerLogoUrl=");
-         var9.append(var5);
+         var9.append(var23);
          var9.append(", headerUrl=");
-         var9.append(var11);
+         var9.append(var6);
          var9.append(", thumbnailUrl=");
-         var9.append(var7);
+         var9.append(var4);
          var9.append(", titleText=");
-         var9.append(var20);
+         var9.append(var19);
          var9.append(", titleColor=");
-         var9.append(var14);
+         var9.append(var16);
          var9.append(", bodyText=");
          var9.append(var17);
          var9.append(", structuredBodyText=");
-         var9.append(var4);
-         var9.append(", bodyTextColor=");
-         var9.append(var18);
-         var9.append(", linkButtonLabel=");
-         var9.append(var15);
-         var9.append(", linkButtonColor=");
-         var9.append(var23);
-         var9.append(", subText=");
-         var9.append(var8);
-         var9.append(", subTextColor=");
-         var9.append(var21);
-         var9.append(", footerText=");
-         var9.append(var6);
-         var9.append(", footerTextColor=");
-         var9.append(var16);
-         var9.append(", acceptLabelText=");
-         var9.append(var13);
-         var9.append(", acceptLabelColor=");
-         var9.append(var19);
-         var9.append(", acceptLabelIconUrl=");
-         var9.append(var10);
-         var9.append(", canBeAccepted=");
          var9.append(var12);
+         var9.append(", bodyTextColor=");
+         var9.append(var7);
+         var9.append(", linkButtonLabel=");
+         var9.append(var5);
+         var9.append(", linkButtonColor=");
+         var9.append(var18);
+         var9.append(", subText=");
+         var9.append(var11);
+         var9.append(", subTextColor=");
+         var9.append(var14);
+         var9.append(", footerText=");
+         var9.append(var8);
+         var9.append(", footerTextColor=");
+         var9.append(var15);
+         var9.append(", acceptLabelText=");
+         var9.append(var21);
+         var9.append(", acceptLabelColor=");
+         var9.append(var22);
+         var9.append(", acceptLabelIconUrl=");
+         var9.append(var20);
+         var9.append(", canBeAccepted=");
+         var9.append(var13);
          var9.append(")");
          return var9.toString();
       }
@@ -605,222 +605,220 @@ public sealed interface ReferralEmbed {
          }
 
          public open fun childSerializers(): Array<KSerializer<*>> {
-            val var2: C0 = C0.a;
-            val var1: N = N.a;
-            val var7: KSerializer = a.u(C0.a);
-            val var6: KSerializer = a.u(var2);
-            val var9: KSerializer = a.u(var2);
-            val var3: KSerializer = a.u(var2);
-            val var8: KSerializer = a.u(var1);
-            val var4: KSerializer = a.u(var2);
-            val var5: AnnotatedStructurableTextSerializer = AnnotatedStructurableTextSerializer.INSTANCE;
+            val var3: C0 = C0.a;
+            val var6: N = N.a;
+            val var1: KSerializer = a.u(C0.a);
+            val var7: KSerializer = a.u(var3);
+            val var2: KSerializer = a.u(var3);
+            val var5: KSerializer = a.u(var3);
+            val var4: KSerializer = a.u(var6);
+            val var9: KSerializer = a.u(var3);
+            val var8: AnnotatedStructurableTextSerializer = AnnotatedStructurableTextSerializer.INSTANCE;
             return new KSerializer[]{
-               var2,
-               var1,
-               var1,
+               var3,
+               var6,
+               var6,
+               var6,
                var1,
                var7,
-               var6,
-               var9,
-               var3,
-               var8,
+               var2,
+               var5,
                var4,
+               var9,
                a.u(AnnotatedStructurableTextSerializer.INSTANCE),
-               a.u(var1),
-               a.u(var5),
-               a.u(var1),
-               a.u(var2),
-               a.u(var1),
-               a.u(var2),
-               a.u(var1),
-               a.u(var2),
-               a.u(var1),
-               a.u(var2),
+               a.u(var6),
+               a.u(var8),
+               a.u(var6),
+               a.u(var3),
+               a.u(var6),
+               a.u(var3),
+               a.u(var6),
+               a.u(var3),
+               a.u(var6),
+               a.u(var3),
                a.u(h.a)
             };
          }
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.bridge.referral.ReferralEmbed.Resolved {
             q.h(var1, "decoder");
-            val var33: SerialDescriptor = this.getDescriptor();
-            val var34: c = var1.c(var33);
-            val var8: Boolean = var34.y();
+            val var32: SerialDescriptor = this.getDescriptor();
+            val var33: c = var1.c(var32);
+            val var8: Boolean = var33.y();
             var var3: Int = 0;
             var var17: Int = null;
             var var2: Int;
             var var4: Int;
             var var5: Int;
-            var var18: Int;
+            var var16: Any;
+            var var18: Any;
             var var19: Any;
             var var20: Any;
-            var var22: Any;
-            var var23: Any;
+            var var21: Any;
+            var var22: Int;
             var var24: Any;
             var var25: Any;
             var var26: Any;
             val var27: Any;
             val var28: Any;
-            val var36: java.lang.Boolean;
-            var var44: Any;
-            var var46: Any;
+            val var29: Any;
+            val var35: java.lang.Boolean;
+            var var40: Any;
+            var var42: Any;
+            var var44: java.lang.String;
             var var48: Any;
-            var var52: Any;
-            var var55: Any;
-            var var60: java.lang.String;
-            var var68: Any;
+            var var60: Any;
             if (var8) {
-               var23 = var34.t(var33, 0);
-               var5 = var34.k(var33, 1);
-               var4 = var34.k(var33, 2);
-               var2 = var34.k(var33, 3);
-               val var35: C0 = C0.a;
-               var20 = var34.v(var33, 4, C0.a, null) as java.lang.String;
-               var28 = var34.v(var33, 5, var35, null) as java.lang.String;
-               var19 = var34.v(var33, 6, var35, null) as java.lang.String;
-               var17 = var34.v(var33, 7, var35, null) as java.lang.String;
-               var44 = N.a;
-               var55 = var34.v(var33, 8, N.a, null) as Int;
-               var60 = var34.v(var33, 9, var35, null) as java.lang.String;
-               var46 = AnnotatedStructurableTextSerializer.INSTANCE;
-               val var15: AnnotatedStructurableText = var34.v(var33, 10, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
-               var26 = var34.v(var33, 11, (DeserializationStrategy)var44, null) as Int;
-               var25 = var34.v(var33, 12, (DeserializationStrategy)var46, null) as AnnotatedStructurableText;
-               var48 = var34.v(var33, 13, (DeserializationStrategy)var44, null) as Int;
-               var68 = var34.v(var33, 14, var35, null) as java.lang.String;
-               var18 = var34.v(var33, 15, (DeserializationStrategy)var44, null) as Int;
-               var52 = var34.v(var33, 16, var35, null) as java.lang.String;
-               val var13: Int = var34.v(var33, 17, (DeserializationStrategy)var44, null) as Int;
-               val var12: java.lang.String = var34.v(var33, 18, var35, null) as java.lang.String;
-               var44 = var34.v(var33, 19, (DeserializationStrategy)var44, null) as Int;
-               var46 = var34.v(var33, 20, var35, null) as java.lang.String;
-               var36 = var34.v(var33, 21, h.a, null) as java.lang.Boolean;
+               var19 = var33.t(var32, 0);
+               var4 = var33.k(var32, 1);
+               var5 = var33.k(var32, 2);
+               var2 = var33.k(var32, 3);
+               val var34: C0 = C0.a;
+               var20 = var33.v(var32, 4, C0.a, null) as java.lang.String;
+               var21 = var33.v(var32, 5, var34, null) as java.lang.String;
+               var17 = var33.v(var32, 6, var34, null) as java.lang.String;
+               var27 = var33.v(var32, 7, var34, null) as java.lang.String;
+               var40 = N.a;
+               var48 = var33.v(var32, 8, N.a, null) as Int;
+               var28 = var33.v(var32, 9, var34, null) as java.lang.String;
+               var42 = AnnotatedStructurableTextSerializer.INSTANCE;
+               val var15: AnnotatedStructurableText = var33.v(var32, 10, AnnotatedStructurableTextSerializer.INSTANCE, null) as AnnotatedStructurableText;
+               var26 = var33.v(var32, 11, (DeserializationStrategy)var40, null) as Int;
+               var25 = var33.v(var32, 12, (DeserializationStrategy)var42, null) as AnnotatedStructurableText;
+               val var11: Int = var33.v(var32, 13, (DeserializationStrategy)var40, null) as Int;
+               var60 = var33.v(var32, 14, var34, null) as java.lang.String;
+               var22 = var33.v(var32, 15, (DeserializationStrategy)var40, null) as Int;
+               var16 = var33.v(var32, 16, var34, null) as java.lang.String;
+               val var13: Int = var33.v(var32, 17, (DeserializationStrategy)var40, null) as Int;
+               val var12: java.lang.String = var33.v(var32, 18, var34, null) as java.lang.String;
+               var40 = var33.v(var32, 19, (DeserializationStrategy)var40, null) as Int;
+               var42 = var33.v(var32, 20, var34, null) as java.lang.String;
+               var35 = var33.v(var32, 21, h.a, null) as java.lang.Boolean;
                var3 = 4194303;
-               var22 = var55;
-               var55 = var60;
-               var24 = var15;
-               var27 = var48;
-               var60 = (java.lang.String)var68;
-               var68 = var52;
-               var48 = var13;
-               var52 = var12;
+               var18 = var48;
+               var48 = var15;
+               var24 = var11;
+               var44 = (java.lang.String)var60;
+               var29 = var13;
+               var60 = var12;
             } else {
                var var7: Boolean = true;
                var var6: Int = 0;
                var5 = 0;
                var4 = 0;
-               var52 = null;
-               var23 = null;
-               var22 = null;
+               var48 = null;
                var60 = null;
+               var22 = null;
+               var21 = null;
                var26 = null;
                var19 = null;
                var18 = null;
-               var55 = null;
+               var16 = null;
                var25 = null;
                var24 = null;
-               var44 = null;
-               var var37: Any = null;
-               var var54: Any = null;
-               var20 = null;
-               var var51: Any = null;
+               var40 = null;
+               var var36: Any = null;
                var var50: Any = null;
-               var48 = null;
-               var46 = null;
+               var20 = null;
+               var var47: Any = null;
+               var var46: Any = null;
+               var44 = null;
+               var42 = null;
 
                while (var7) {
                   label44: {
-                     var2 = var34.x(var33);
+                     var2 = var33.x(var32);
                      switch (var2) {
                         case -1:
                            var7 = false;
                            var2 = var3;
                            break;
                         case 0:
-                           var54 = var34.t(var33, 0);
+                           var50 = var33.t(var32, 0);
                            var2 = var3 or 1;
                            break;
                         case 1:
-                           var4 = var34.k(var33, 1);
+                           var4 = var33.k(var32, 1);
                            var2 = var3 or 2;
                            break;
                         case 2:
-                           var5 = var34.k(var33, 2);
+                           var5 = var33.k(var32, 2);
                            var2 = var3 or 4;
                            break;
                         case 3:
-                           var6 = var34.k(var33, 3);
+                           var6 = var33.k(var32, 3);
                            var2 = var3 or 8;
                            break;
                         case 4:
-                           var20 = var34.v(var33, 4, C0.a, var20) as java.lang.String;
+                           var20 = var33.v(var32, 4, C0.a, var20) as java.lang.String;
                            var2 = var3 or 16;
                            break;
                         case 5:
-                           var51 = var34.v(var33, 5, C0.a, var51) as java.lang.String;
+                           var47 = var33.v(var32, 5, C0.a, var47) as java.lang.String;
                            var2 = var3 or 32;
                            break;
                         case 6:
-                           var50 = var34.v(var33, 6, C0.a, var50) as java.lang.String;
+                           var46 = var33.v(var32, 6, C0.a, var46) as java.lang.String;
                            var2 = var3 or 64;
                            break;
                         case 7:
-                           var48 = var34.v(var33, 7, C0.a, var48) as java.lang.String;
+                           var44 = var33.v(var32, 7, C0.a, var44) as java.lang.String;
                            var2 = var3 or 128;
                            break;
                         case 8:
-                           var46 = var34.v(var33, 8, N.a, var46) as Int;
+                           var42 = var33.v(var32, 8, N.a, var42) as Int;
                            var2 = var3 or 256;
                            break;
                         case 9:
-                           var37 = var34.v(var33, 9, C0.a, var37) as java.lang.String;
+                           var36 = var33.v(var32, 9, C0.a, var36) as java.lang.String;
                            var2 = var3 or 512;
                            break;
                         case 10:
-                           var44 = var34.v(var33, 10, AnnotatedStructurableTextSerializer.INSTANCE, var44) as AnnotatedStructurableText;
+                           var40 = var33.v(var32, 10, AnnotatedStructurableTextSerializer.INSTANCE, var40) as AnnotatedStructurableText;
                            var3 |= 1024;
                            continue;
                         case 11:
-                           var26 = var34.v(var33, 11, N.a, var26) as Int;
+                           var26 = var33.v(var32, 11, N.a, var26) as Int;
                            var3 |= 2048;
                            continue;
                         case 12:
-                           var24 = var34.v(var33, 12, AnnotatedStructurableTextSerializer.INSTANCE, var24) as AnnotatedStructurableText;
+                           var24 = var33.v(var32, 12, AnnotatedStructurableTextSerializer.INSTANCE, var24) as AnnotatedStructurableText;
                            var3 |= 4096;
                            continue;
                         case 13:
-                           var25 = var34.v(var33, 13, N.a, var25) as Int;
+                           var25 = var33.v(var32, 13, N.a, var25) as Int;
                            var3 |= 8192;
                            continue;
                         case 14:
-                           var52 = var34.v(var33, 14, C0.a, var52) as java.lang.String;
+                           var48 = var33.v(var32, 14, C0.a, var48) as java.lang.String;
                            var3 |= 16384;
                            continue;
                         case 15:
-                           var17 = var34.v(var33, 15, N.a, var17) as Int;
+                           var17 = var33.v(var32, 15, N.a, var17) as Int;
                            var2 = 32768;
                            break label44;
                         case 16:
-                           var55 = var34.v(var33, 16, C0.a, var55) as java.lang.String;
+                           var16 = var33.v(var32, 16, C0.a, var16) as java.lang.String;
                            var2 = 65536;
                            break label44;
                         case 17:
-                           var18 = var34.v(var33, 17, N.a, var18) as Int;
+                           var18 = var33.v(var32, 17, N.a, var18) as Int;
                            var2 = 131072;
                            break label44;
                         case 18:
-                           var19 = var34.v(var33, 18, C0.a, var19) as java.lang.String;
+                           var19 = var33.v(var32, 18, C0.a, var19) as java.lang.String;
                            var2 = 262144;
                            break label44;
                         case 19:
-                           var22 = var34.v(var33, 19, N.a, var22) as Int;
+                           var22 = var33.v(var32, 19, N.a, var22) as Int;
                            var2 = 524288;
                            break label44;
                         case 20:
-                           var60 = var34.v(var33, 20, C0.a, var60) as java.lang.String;
+                           var21 = var33.v(var32, 20, C0.a, var21) as java.lang.String;
                            var2 = 1048576;
                            break label44;
                         case 21:
-                           var23 = var34.v(var33, 21, h.a, var23) as java.lang.Boolean;
+                           var60 = var33.v(var32, 21, h.a, var60) as java.lang.Boolean;
                            var2 = 2097152;
                            break label44;
                         default:
@@ -834,53 +832,50 @@ public sealed interface ReferralEmbed {
                   var3 |= var2;
                }
 
-               var18 = var17;
-               var17 = (Integer)var48;
+               var29 = var18;
+               var44 = (java.lang.String)var48;
                var2 = var6;
-               var5 = var4;
-               var36 = (java.lang.Boolean)var23;
-               var46 = var60;
-               var44 = var22;
-               var52 = var19;
-               var48 = var18;
-               var68 = var55;
-               var60 = (java.lang.String)var52;
-               var27 = var25;
+               var35 = (java.lang.Boolean)var60;
+               var42 = var21;
+               var40 = var22;
+               var60 = var19;
+               var22 = var17;
+               var24 = var25;
                var25 = var24;
-               var24 = var44;
-               var55 = var37;
-               var22 = var46;
+               var48 = var40;
+               var28 = var36;
+               var18 = var42;
+               var27 = var44;
+               var17 = (Integer)var46;
+               var21 = var47;
                var19 = var50;
-               var28 = var51;
-               var4 = var5;
-               var23 = var54;
             }
 
-            var34.b(var33);
+            var33.b(var32);
             return new ReferralEmbed.Resolved(
                var3,
-               (java.lang.String)var23,
-               var5,
+               (java.lang.String)var19,
                var4,
+               var5,
                var2,
                (java.lang.String)var20,
-               (java.lang.String)var28,
-               (java.lang.String)var19,
+               (java.lang.String)var21,
                var17,
-               (Integer)var22,
-               (java.lang.String)var55,
-               (AnnotatedStructurableText)var24,
+               (java.lang.String)var27,
+               (Integer)var18,
+               (java.lang.String)var28,
+               (AnnotatedStructurableText)var48,
                (Integer)var26,
                (AnnotatedStructurableText)var25,
-               (Integer)var27,
-               var60,
-               var18,
-               (java.lang.String)var68,
-               (Integer)var48,
-               (java.lang.String)var52,
-               (Integer)var44,
-               (java.lang.String)var46,
-               var36,
+               (Integer)var24,
+               var44,
+               var22,
+               (java.lang.String)var16,
+               (Integer)var29,
+               (java.lang.String)var60,
+               (Integer)var40,
+               (java.lang.String)var42,
+               var35,
                null
             );
          }
@@ -895,7 +890,7 @@ public sealed interface ReferralEmbed {
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return ha.G.a.a(this);
+            return ia.G.a.a(this);
          }
       }
 
@@ -1004,9 +999,9 @@ public sealed interface ReferralEmbed {
 
       public override fun hashCode(): Int {
          val var5: Int = this.headerText.hashCode();
-         val var3: Int = Integer.hashCode(this.headerColor);
+         val var2: Int = Integer.hashCode(this.headerColor);
          val var4: Int = Integer.hashCode(this.backgroundColor);
-         val var2: Int = Integer.hashCode(this.thumbnailCornerRadius);
+         val var3: Int = Integer.hashCode(this.thumbnailCornerRadius);
          val var1: Int;
          if (this.headerLogoUrl == null) {
             var1 = 0;
@@ -1014,33 +1009,33 @@ public sealed interface ReferralEmbed {
             var1 = this.headerLogoUrl.hashCode();
          }
 
-         return (((((var5 * 31 + var3) * 31 + var4) * 31 + var2) * 31 + var1) * 31 + Integer.hashCode(this.resolvingGradientStart)) * 31
+         return (((((var5 * 31 + var2) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + Integer.hashCode(this.resolvingGradientStart)) * 31
             + Integer.hashCode(this.resolvingGradientEnd);
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.headerText;
-         val var1: Int = this.headerColor;
-         val var5: Int = this.backgroundColor;
-         val var2: Int = this.thumbnailCornerRadius;
-         val var8: java.lang.String = this.headerLogoUrl;
-         val var4: Int = this.resolvingGradientStart;
-         val var3: Int = this.resolvingGradientEnd;
+         val var8: java.lang.String = this.headerText;
+         val var2: Int = this.headerColor;
+         val var4: Int = this.backgroundColor;
+         val var3: Int = this.thumbnailCornerRadius;
+         val var7: java.lang.String = this.headerLogoUrl;
+         val var1: Int = this.resolvingGradientStart;
+         val var5: Int = this.resolvingGradientEnd;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Resolving(headerText=");
-         var6.append(var7);
-         var6.append(", headerColor=");
-         var6.append(var1);
-         var6.append(", backgroundColor=");
-         var6.append(var5);
-         var6.append(", thumbnailCornerRadius=");
-         var6.append(var2);
-         var6.append(", headerLogoUrl=");
          var6.append(var8);
-         var6.append(", resolvingGradientStart=");
+         var6.append(", headerColor=");
+         var6.append(var2);
+         var6.append(", backgroundColor=");
          var6.append(var4);
-         var6.append(", resolvingGradientEnd=");
+         var6.append(", thumbnailCornerRadius=");
          var6.append(var3);
+         var6.append(", headerLogoUrl=");
+         var6.append(var7);
+         var6.append(", resolvingGradientStart=");
+         var6.append(var1);
+         var6.append(", resolvingGradientEnd=");
+         var6.append(var5);
          var6.append(")");
          return var6.toString();
       }
@@ -1073,88 +1068,84 @@ public sealed interface ReferralEmbed {
 
          public open fun deserialize(decoder: Decoder): com.discord.chat.bridge.referral.ReferralEmbed.Resolving {
             q.h(var1, "decoder");
-            val var12: SerialDescriptor = this.getDescriptor();
-            val var13: c = var1.c(var12);
+            val var11: SerialDescriptor = this.getDescriptor();
+            val var12: c = var1.c(var11);
+            var var2: Int;
+            var var3: Int;
             var var4: Int;
             var var5: Int;
             var var6: Int;
             var var7: Int;
-            val var8: Int;
-            var var9: Int;
             var var10: java.lang.String;
-            val var14: java.lang.String;
-            if (var13.y()) {
-               var10 = var13.t(var12, 0);
-               var9 = var13.k(var12, 1);
-               var6 = var13.k(var12, 2);
-               var5 = var13.k(var12, 3);
-               var14 = var13.v(var12, 4, C0.a, null) as java.lang.String;
-               val var3: Int = var13.k(var12, 5);
-               val var2: Int = var13.k(var12, 6);
-               var4 = 127;
-               var7 = var3;
-               var8 = var2;
+            var var13: java.lang.String;
+            if (var12.y()) {
+               var13 = var12.t(var11, 0);
+               var7 = var12.k(var11, 1);
+               var4 = var12.k(var11, 2);
+               var6 = var12.k(var11, 3);
+               var10 = var12.v(var11, 4, C0.a, null) as java.lang.String;
+               var3 = var12.k(var11, 5);
+               var2 = var12.k(var11, 6);
+               var5 = 127;
             } else {
-               var var21: Boolean = true;
+               var var8: Boolean = true;
                var7 = 0;
                var5 = 0;
                var4 = 0;
-               var var17: Int = 0;
-               var var16: Int = 0;
-               var var15: java.lang.String = null;
+               var3 = 0;
+               var2 = 0;
+               var13 = null;
                var10 = null;
                var6 = 0;
 
-               while (var21) {
-                  var9 = var13.x(var12);
+               while (var8) {
+                  val var9: Int = var12.x(var11);
                   switch (var9) {
                      case -1:
-                        var21 = false;
+                        var8 = false;
                         break;
                      case 0:
-                        var15 = var13.t(var12, 0);
-                        var16 |= 1;
+                        var13 = var12.t(var11, 0);
+                        var2 |= 1;
                         break;
                      case 1:
-                        var17 = var13.k(var12, 1);
-                        var16 |= 2;
+                        var3 = var12.k(var11, 1);
+                        var2 |= 2;
                         break;
                      case 2:
-                        var4 = var13.k(var12, 2);
-                        var16 |= 4;
+                        var4 = var12.k(var11, 2);
+                        var2 |= 4;
                         break;
                      case 3:
-                        var5 = var13.k(var12, 3);
-                        var16 |= 8;
+                        var5 = var12.k(var11, 3);
+                        var2 |= 8;
                         break;
                      case 4:
-                        var10 = var13.v(var12, 4, C0.a, var10) as java.lang.String;
-                        var16 |= 16;
+                        var10 = var12.v(var11, 4, C0.a, var10) as java.lang.String;
+                        var2 |= 16;
                         break;
                      case 5:
-                        var6 = var13.k(var12, 5);
-                        var16 |= 32;
+                        var6 = var12.k(var11, 5);
+                        var2 |= 32;
                         break;
                      case 6:
-                        var7 = var13.k(var12, 6);
-                        var16 |= 64;
+                        var7 = var12.k(var11, 6);
+                        var2 |= 64;
                         break;
                      default:
                         throw new n(var9);
                   }
                }
 
-               var10 = var15;
-               var8 = var7;
-               var7 = var6;
-               var14 = var10;
-               var6 = var4;
-               var9 = var17;
-               var4 = var16;
+               var6 = var5;
+               var2 = var7;
+               var3 = var6;
+               var7 = var3;
+               var5 = var2;
             }
 
-            var13.b(var12);
-            return new ReferralEmbed.Resolving(var4, var10, var9, var6, var5, var14, var7, var8, null);
+            var12.b(var11);
+            return new ReferralEmbed.Resolving(var5, var13, var7, var4, var6, var10, var3, var2, null);
          }
 
          public open fun serialize(encoder: Encoder, value: com.discord.chat.bridge.referral.ReferralEmbed.Resolving) {
@@ -1167,7 +1158,7 @@ public sealed interface ReferralEmbed {
          }
 
          fun typeParametersSerializers(): Array<KSerializer> {
-            return ha.G.a.a(this);
+            return ia.G.a.a(this);
          }
       }
 

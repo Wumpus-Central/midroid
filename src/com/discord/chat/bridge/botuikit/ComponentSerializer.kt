@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.botuikit
 
-import ia.d
-import ia.g
+import ja.d
+import ja.g
 import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q

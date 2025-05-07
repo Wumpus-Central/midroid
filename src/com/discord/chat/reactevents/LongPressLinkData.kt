@@ -2,11 +2,11 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -59,12 +59,12 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.url;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressLinkData(url=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.url;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressLinkData(url=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -130,7 +130,7 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

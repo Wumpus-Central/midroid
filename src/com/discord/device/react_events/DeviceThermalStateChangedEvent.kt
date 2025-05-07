@@ -3,7 +3,7 @@ package com.discord.device.react_events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import l8.w
+import m8.w
 
 internal class DeviceThermalStateChangedEvent(state: Int) : ReactEvent {
    private final val state: Int

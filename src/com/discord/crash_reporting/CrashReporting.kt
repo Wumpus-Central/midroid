@@ -26,7 +26,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import l8.p
+import m8.p
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -88,16 +88,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var8);
-      var6.append("/sentry");
-      var5.setCacheDirPath(var6.toString());
+      val var6: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var6);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("512d4f2d-e29c-41b9-92f3-4e8e808a0e13");
+      var5.setProguardUuid("3df1df42-c87e-4bf0-811f-f49f4a49a3f2");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -111,7 +111,7 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = m8.q.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = n8.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
@@ -127,7 +127,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", l8.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", m8.e.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
@@ -213,7 +213,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = t8.a.a(var0);
+         $ENTRIES = u8.a.a(var0);
       }
 
       @JvmStatic

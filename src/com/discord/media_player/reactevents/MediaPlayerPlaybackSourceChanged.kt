@@ -3,10 +3,10 @@ package com.discord.media_player.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.j
-import ea.n
-import ha.G
+import fa.f
+import fa.j
+import fa.n
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -15,8 +15,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import l8.w
-import la.a
+import m8.w
+import ma.a
 
 @f
 public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSource?) : ReactEvent {
@@ -58,7 +58,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
 
    public override fun serialize(): WritableMap {
       return if (this.source == null)
-         NativeMapExtensionsKt.toNativeMap(m8.q.h())
+         NativeMapExtensionsKt.toNativeMap(n8.q.h())
          else
          NativeMapExtensionsKt.nativeMapOf(w.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source))));
    }
@@ -91,7 +91,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{fa.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
+         return new KSerializer[]{ga.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackSourceChanged {
@@ -137,7 +137,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

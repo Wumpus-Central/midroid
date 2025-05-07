@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import R2.a;
+import S2.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;

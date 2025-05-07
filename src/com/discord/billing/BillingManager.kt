@@ -1,8 +1,8 @@
 package com.discord.billing
 
-import U9.K
-import U9.U
-import U9.f
+import V9.K
+import V9.U
+import V9.f
 import Y0.k
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
@@ -25,7 +25,7 @@ import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
-import l8.s
+import m8.s
 
 internal class BillingManager(isProdBuild: Boolean,
    onConnectionUpdated: (Int) -> Unit,
@@ -202,7 +202,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               s8.b.e();
+               t8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -230,14 +230,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var7 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
+         for (java.lang.String var5 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
             val var6: java.lang.String = var1.i();
             q.g(var6, "getPurchaseToken(...)");
-            val var4: java.lang.String = var1.e();
-            q.g(var4, "getPackageName(...)");
-            q.e(var7);
-            var5.invoke(var6, var4, var7);
+            val var7: java.lang.String = var1.e();
+            q.g(var7, "getPackageName(...)");
+            q.e(var5);
+            var4.invoke(var6, var7, var5);
          }
       }
    }
@@ -436,7 +436,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = t8.a.a(var0);
+         $ENTRIES = u8.a.a(var0);
       }
 
       init {

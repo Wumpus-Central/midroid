@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.row
 
-import ia.d
-import ia.g
+import ja.d
+import ja.g
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass

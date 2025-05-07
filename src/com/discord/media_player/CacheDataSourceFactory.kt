@@ -1,7 +1,7 @@
 package com.discord.media_player
 
-import A4.s
-import B4.h
+import B4.s
+import C4.h
 import android.content.Context
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
@@ -45,7 +45,7 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
       private final lateinit var factory: CacheDataSourceFactory
 
       private fun getSimpleCache(context: Context): SimpleCache {
-         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new h(104857600L), new E3.c(var1));
+         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new h(104857600L), new F3.c(var1));
       }
 
       public fun getInstance(): CacheDataSourceFactory {

@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.forwarding
 
-import ea.f
-import ea.n
-import fa.a
-import ha.G
-import ha.N
+import fa.f
+import fa.n
+import ga.a
+import ia.G
+import ia.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -148,7 +148,7 @@ public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo?
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

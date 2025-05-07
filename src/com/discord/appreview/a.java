@@ -1,6 +1,6 @@
 package com.discord.appreview;
 
-import A5.d;
+import B5.d;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.review.ReviewManager;
 

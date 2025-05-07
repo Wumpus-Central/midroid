@@ -2,7 +2,7 @@ package com.discord.sticker.sticker_types
 
 import com.discord.logging.Log
 import com.discord.rlottie.RLottie
-import q8.a
+import r8.a
 
 public object RLottieUtils {
    internal final var initialized: Boolean

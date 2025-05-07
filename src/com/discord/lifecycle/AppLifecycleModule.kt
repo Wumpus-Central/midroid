@@ -7,7 +7,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec {
    private final val reactContext: ReactApplicationContext

@@ -8,7 +8,7 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) : NativeDeviceThermalStateModuleSpec {
    private final val reactEvents: ReactEvents

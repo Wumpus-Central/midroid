@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
-import ea.f
-import ea.n
-import fa.a
-import ha.G
-import ha.N
+import fa.f
+import fa.n
+import ga.a
+import ia.G
+import ia.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -147,27 +147,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.reactionBackgroundColor;
-      val var5: Int = this.reactionBorderColor;
-      val var2: Int = this.reactionTextColor;
-      val var7: Int = this.activeReactionBackgroundColor;
-      val var6: Int = this.activeReactionBorderColor;
-      val var3: Int = this.activeReactionTextColor;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ReactionsTheme(reactionBackgroundColor=");
-      var4.append(var1);
-      var4.append(", reactionBorderColor=");
-      var4.append(var5);
-      var4.append(", reactionTextColor=");
-      var4.append(var2);
-      var4.append(", activeReactionBackgroundColor=");
-      var4.append(var7);
-      var4.append(", activeReactionBorderColor=");
-      var4.append(var6);
-      var4.append(", activeReactionTextColor=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: Int = this.reactionBackgroundColor;
+      val var6: Int = this.reactionBorderColor;
+      val var4: Int = this.reactionTextColor;
+      val var1: Int = this.activeReactionBackgroundColor;
+      val var3: Int = this.activeReactionBorderColor;
+      val var7: Int = this.activeReactionTextColor;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ReactionsTheme(reactionBackgroundColor=");
+      var5.append(var2);
+      var5.append(", reactionBorderColor=");
+      var5.append(var6);
+      var5.append(", reactionTextColor=");
+      var5.append(var4);
+      var5.append(", activeReactionBackgroundColor=");
+      var5.append(var1);
+      var5.append(", activeReactionBorderColor=");
+      var5.append(var3);
+      var5.append(", activeReactionTextColor=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -207,22 +207,22 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
          var var8: Int;
          var var9: Int;
          val var14: Int;
-         var var17: Int;
+         var var16: Int;
          if (var5) {
             val var7: N = N.a;
             var10 = var13.v(var12, 0, N.a, null) as Int;
             var9 = var13.v(var12, 1, var7, null) as Int;
             var8 = var13.v(var12, 2, var7, null) as Int;
-            var6 = var13.v(var12, 3, var7, null) as Int;
-            var14 = var13.v(var12, 4, var7, null) as Int;
-            var17 = var13.v(var12, 5, var7, null) as Int;
+            var14 = var13.v(var12, 3, var7, null) as Int;
+            var6 = var13.v(var12, 4, var7, null) as Int;
+            var16 = var13.v(var12, 5, var7, null) as Int;
             var2 = 63;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
             var8 = null;
-            var17 = null;
+            var16 = null;
             var6 = null;
             var var15: Int = null;
 
@@ -245,7 +245,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                      var2 |= 4;
                      break;
                   case 3:
-                     var17 = var13.v(var12, 3, N.a, var17) as Int;
+                     var16 = var13.v(var12, 3, N.a, var16) as Int;
                      var2 |= 8;
                      break;
                   case 4:
@@ -261,13 +261,12 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
                }
             }
 
-            var17 = var15;
-            var14 = var6;
-            var6 = var17;
+            var16 = var15;
+            var14 = var16;
          }
 
          var13.b(var12);
-         return new ReactionsTheme(var2, var10, var9, var8, var6, var14, var17, null);
+         return new ReactionsTheme(var2, var10, var9, var8, var14, var6, var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ReactionsTheme) {
@@ -280,7 +279,7 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

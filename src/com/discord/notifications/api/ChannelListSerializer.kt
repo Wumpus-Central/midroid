@@ -1,7 +1,7 @@
 package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
-import fa.a
+import ga.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer

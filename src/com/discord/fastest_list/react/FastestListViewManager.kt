@@ -29,7 +29,7 @@ import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {

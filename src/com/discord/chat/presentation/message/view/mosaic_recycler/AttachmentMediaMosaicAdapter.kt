@@ -127,10 +127,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new Function0(this, (ImageAttachmentMessageAccessory)var6) {
+            var7.bindAttachment(var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new Function0(this, (ImageAttachmentMessageAccessory)var6) {
                final ImageAttachmentMessageAccessory $accessory;
                final AttachmentMediaMosaicAdapter this$0;
 

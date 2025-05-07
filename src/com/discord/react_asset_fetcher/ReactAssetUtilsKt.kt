@@ -1,7 +1,7 @@
 package com.discord.react_asset_fetcher
 
-import U9.K
-import U9.f
+import V9.K
+import V9.f
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -22,8 +22,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import l8.s
-import s8.b
+import m8.s
+import t8.b
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");
@@ -130,20 +130,20 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      s.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      q.g(var1, "getContext(...)");
-                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var2x.isResource()) {
-                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var3.isResource()) {
+                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
                         q.g(var6, "getContext(...)");
-                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
+                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
                         q.e(var1);
                      } else {
-                        if (q.c(var2x.getUri().getScheme(), "file")) {
-                           var1 = Drawable.createFromPath(var2x.getUri().getPath());
+                        if (q.c(var3.getUri().getScheme(), "file")) {
+                           var1 = Drawable.createFromPath(var3.getUri().getPath());
                            q.e(var1);
                         } else {
-                           val var8: URLConnection = new URL(var2x.getSource()).openConnection();
+                           val var8: URLConnection = new URL(var3.getSource()).openConnection();
                            q.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
                            val var9: HttpURLConnection = var8 as HttpURLConnection;
                            (var8 as HttpURLConnection).connect();

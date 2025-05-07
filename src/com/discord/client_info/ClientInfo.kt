@@ -3,13 +3,13 @@ package com.discord.client_info
 import android.content.Context
 import java.util.Locale
 import kotlin.jvm.internal.q
-import l8.l
+import m8.l
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "512d4f2d-e29c-41b9-92f3-4e8e808a0e13"
+   public const val PROGUARD_UUID: String = "3df1df42-c87e-4bf0-811f-f49f4a49a3f2"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@280.2.0-2+280202"
+   public const val SENTRY_RELEASE: String = "discord_android@280.3.0-2+280203"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -124,11 +124,11 @@ public object ClientInfo {
       var2 = var1.getPackageName();
       q.g(var2, "getPackageName(...)");
       this.setPackageName(var2);
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("Discord-Android/");
-      var10.append(var3);
-      var10.append(";RNA");
-      var9.init(var1, var10.toString());
+      val var10: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var10.init(var1, var9.toString());
    }
 }

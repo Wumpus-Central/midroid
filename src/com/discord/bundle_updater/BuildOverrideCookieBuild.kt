@@ -2,10 +2,10 @@ package com.discord.bundle_updater
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -13,7 +13,7 @@ import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import l8.w
+import m8.w
 
 @f
 public data class BuildOverrideCookieBuild(type: String, id: String) {
@@ -66,15 +66,15 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.type;
-      val var3: java.lang.String = this.id;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BuildOverrideCookieBuild(type=");
-      var1.append(var2);
-      var1.append(", id=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.type;
+      val var2: java.lang.String = this.id;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BuildOverrideCookieBuild(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -149,7 +149,7 @@ public data class BuildOverrideCookieBuild(type: String, id: String) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

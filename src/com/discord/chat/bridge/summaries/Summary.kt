@@ -3,13 +3,13 @@ package com.discord.chat.bridge.summaries
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.N
-import ha.p0
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.N
+import ia.p0
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -189,33 +189,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.id;
-      val var5: java.lang.String = this.topic;
-      val var9: java.lang.String = this.summShort;
+      val var6: java.lang.String = this.id;
+      val var8: java.lang.String = this.topic;
+      val var2: java.lang.String = this.summShort;
       val var7: java.util.List = this.people;
-      val var3: java.lang.String = MessageId.toString-impl(this.startId);
-      val var6: java.lang.String = MessageId.toString-impl(this.endId);
+      val var9: java.lang.String = MessageId.toString-impl(this.startId);
+      val var3: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
       val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Summary(id=");
-      var2.append(var8);
-      var2.append(", topic=");
-      var2.append(var5);
-      var2.append(", summShort=");
-      var2.append(var9);
-      var2.append(", people=");
-      var2.append(var7);
-      var2.append(", startId=");
-      var2.append(var3);
-      var2.append(", endId=");
-      var2.append(var6);
-      var2.append(", count=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Summary(id=");
+      var5.append(var6);
+      var5.append(", topic=");
+      var5.append(var8);
+      var5.append(", summShort=");
+      var5.append(var2);
+      var5.append(", people=");
+      var5.append(var7);
+      var5.append(", startId=");
+      var5.append(var9);
+      var5.append(", endId=");
+      var5.append(var3);
+      var5.append(", count=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {

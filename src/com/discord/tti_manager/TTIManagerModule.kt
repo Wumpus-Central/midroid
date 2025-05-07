@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
@@ -66,7 +66,7 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    }
 
    public open fun getConstants(): MutableMap<String, Long> {
-      return m8.q.m(new Pair[]{w.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
+      return n8.q.m(new Pair[]{w.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
    }
 
    @ReactMethod

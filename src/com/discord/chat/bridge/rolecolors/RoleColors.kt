@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.rolecolors
 
-import ea.f
-import ea.n
-import fa.a
-import ha.G
-import ha.N
+import fa.f
+import fa.n
+import ga.a
+import ia.G
+import ia.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,17 +79,17 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var2: Int = this.secondaryColor;
-      val var3: Int = this.tertiaryColor;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleColors(primaryColor=");
-      var4.append(var1);
-      var4.append(", secondaryColor=");
-      var4.append(var2);
-      var4.append(", tertiaryColor=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: Int = this.secondaryColor;
+      val var4: Int = this.tertiaryColor;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("RoleColors(primaryColor=");
+      var2.append(var1);
+      var2.append(", secondaryColor=");
+      var2.append(var3);
+      var2.append(", tertiaryColor=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -124,11 +124,11 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          var var6: Int;
          var var10: Int;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             val var9: N = N.a;
             var6 = var8.v(var7, 1, N.a, null) as Int;
             var10 = var8.v(var7, 2, var9, null) as Int;
-            var2 = 7;
+            var3 = 7;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -159,10 +159,13 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var8.b(var7);
-         return new RoleColors(var2, var3, var6, var10, null);
+         return new RoleColors(var3, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleColors) {
@@ -175,7 +178,7 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

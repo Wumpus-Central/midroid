@@ -12,8 +12,8 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.q
-import l8.w
-import p8.a
+import m8.w
+import q8.a
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {

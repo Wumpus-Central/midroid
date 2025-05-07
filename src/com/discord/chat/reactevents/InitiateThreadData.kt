@@ -4,11 +4,11 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import ha.G
-import ha.p0
-import ha.G.a
+import fa.f
+import fa.n
+import ia.G
+import ia.p0
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,14 +79,14 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("InitiateThreadData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InitiateThreadData(messageId=");
+      var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

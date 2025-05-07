@@ -1,8 +1,8 @@
 package com.discord.portals.from_native
 
-import U9.I
-import U9.K
-import U9.f
+import V9.I
+import V9.K
+import V9.f
 import android.app.Activity
 import android.widget.FrameLayout
 import com.discord.codegen.NativePortalFromNativeModuleSpec
@@ -18,8 +18,8 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import l8.s
-import s8.b
+import m8.s
+import t8.b
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec {
    init {

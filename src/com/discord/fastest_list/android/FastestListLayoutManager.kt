@@ -12,14 +12,14 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
          val var1: Float;
          val var2: Float;
          if (this.horizontal) {
-            var2 = this.getWidth();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getWidth();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          } else {
-            var2 = this.getHeight();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getHeight();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          }
 
-         return (int)(var2 * var1);
+         return (int)(var1 * var2);
       }
 
 

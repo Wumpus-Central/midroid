@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.presentation.textutils.Jumboable
-import ea.f
+import fa.f
 import kotlinx.serialization.KSerializer
 
 @f

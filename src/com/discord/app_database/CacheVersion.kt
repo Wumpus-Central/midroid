@@ -1,10 +1,10 @@
 package com.discord.app_database
 
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -48,12 +48,12 @@ public data class CacheVersion(version: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.version;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CacheVersion(version=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.version;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CacheVersion(version=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {

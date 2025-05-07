@@ -2,11 +2,11 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import fa.a
-import ha.C0
-import ha.G
+import fa.f
+import fa.n
+import ga.a
+import ia.C0
+import ia.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -73,15 +73,15 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var2: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnPasteImageEvent(url=");
-      var3.append(var1);
-      var3.append(", type=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.url;
+      val var1: java.lang.String = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnPasteImageEvent(url=");
+      var2.append(var3);
+      var2.append(", type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -156,7 +156,7 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ha.G.a.a(this);
+         return ia.G.a.a(this);
       }
    }
 

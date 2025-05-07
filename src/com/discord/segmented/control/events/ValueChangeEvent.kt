@@ -2,12 +2,12 @@ package com.discord.segmented.control.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.N
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.N
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,15 +66,15 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.value;
+      val var2: java.lang.String = this.value;
       val var1: Int = this.selectedSegmentIndex;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ValueChangeEvent(value=");
-      var2.append(var3);
-      var2.append(", selectedSegmentIndex=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ValueChangeEvent(value=");
+      var3.append(var2);
+      var3.append(", selectedSegmentIndex=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {

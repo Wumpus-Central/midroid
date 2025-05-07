@@ -1,6 +1,6 @@
 package com.discord.browser_manager
 
-import R9.j
+import S9.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent

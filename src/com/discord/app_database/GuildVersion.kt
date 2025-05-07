@@ -1,11 +1,11 @@
 package com.discord.app_database
 
-import ea.f
-import ea.n
-import ha.C0
-import ha.G
-import ha.Y
-import ha.G.a
+import fa.f
+import fa.n
+import ia.C0
+import ia.G
+import ia.Y
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -60,15 +60,15 @@ public data class GuildVersion(id: String, version: Long) {
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GuildVersion(id=");
-      var3.append(var4);
-      var3.append(", version=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GuildVersion(id=");
+      var4.append(var3);
+      var4.append(", version=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {

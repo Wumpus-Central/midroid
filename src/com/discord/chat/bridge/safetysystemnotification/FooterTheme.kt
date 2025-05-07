@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import ea.f
+import fa.f
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import l8.l
-import l8.o
-import t8.a
+import m8.l
+import m8.o
+import u8.a
 
 @f
 public enum class FooterTheme {

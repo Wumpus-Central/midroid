@@ -10,7 +10,7 @@ import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext

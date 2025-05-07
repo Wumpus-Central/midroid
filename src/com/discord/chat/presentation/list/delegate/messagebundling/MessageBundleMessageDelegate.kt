@@ -55,15 +55,15 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
       if (var1 is MessageView) {
          if (var2 is MessageBundleMessageItem) {
             val var11: MessageView = var1 as MessageView;
-            val var8: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
-            val var7: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
-            val var12: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
-            val var6: MessageFrame = var8.getMessageItem().getMessageFrame();
-            val var10: MessageItem = var8.getMessageItem();
+            val var12: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
+            val var6: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
+            val var7: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
+            val var8: MessageFrame = var12.getMessageItem().getMessageFrame();
+            val var10: MessageItem = var12.getMessageItem();
             val var9: Context = var11.getContext();
             q.g(var9, "getContext(...)");
             MessageView.setMessage$default(
-               var11, var7, var12, var6, MessageBundleDelegateUtilsKt.getEventHandler(var10, var9), null, new Function0(this, var3, var4) {
+               var11, var6, var7, var8, MessageBundleDelegateUtilsKt.getEventHandler(var10, var9), null, new Function0(this, var3, var4) {
                   final java.util.List<MessageBundleItem> $items;
                   final int $position;
                   final MessageBundleMessageDelegate this$0;
@@ -78,7 +78,7 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
                   public final MessageView.ChainPart invoke() {
                      return MessageBundleMessageDelegate.access$getChainPart(this.this$0, this.$items, this.$position);
                   }
-               }, false, var8.getMessageItem().getRenderContentOnly(), 80, null
+               }, false, var12.getMessageItem().getRenderContentOnly(), 80, null
             );
             if (this.messageAccessoriesViewPool != null) {
                var11.setAccessoriesRecycledViewPool(this.messageAccessoriesViewPool);

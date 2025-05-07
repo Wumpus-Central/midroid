@@ -80,19 +80,19 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var3: Float = this.topDp;
+      val var1: Float = this.topDp;
       val var2: Float = this.rightDp;
-      val var4: Float = this.bottomDp;
-      val var1: Float = this.leftDp;
+      val var3: Float = this.bottomDp;
+      val var4: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var3);
+      var5.append(var1);
       var5.append(", rightDp=");
       var5.append(var2);
       var5.append(", bottomDp=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", leftDp=");
-      var5.append(var1);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -104,8 +104,8 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
          var var6: Int = -1;
          val var11: SafeAreaEdgeInsets;
          if (VERSION.SDK_INT > 29) {
-            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var9.b));
-            val var3: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var9.d));
+            val var3: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var9.b));
+            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var9.d));
             val var15: Int;
             if (var2) {
                var15 = var9.a;
@@ -118,7 +118,7 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
                var6 = var9.c;
             }
 
-            var11 = new SafeAreaEdgeInsets(var5, SizeUtilsKt.getPxToDp(Math.max(var10.c, var6)), var3, var4);
+            var11 = new SafeAreaEdgeInsets(var3, SizeUtilsKt.getPxToDp(Math.max(var10.c, var6)), var5, var4);
          } else {
             val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var1.k()));
             val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var1.h()));

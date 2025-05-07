@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.media
 
-import ea.f
-import ea.n
-import ha.G
-import ha.N
-import ha.Y
-import ha.G.a
+import fa.f
+import fa.n
+import ia.G
+import ia.N
+import ia.Y
+import ia.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -126,8 +126,8 @@ public data class ContentScanMetadata(version: Int, flags: Long) {
                }
             }
 
-            var2 = var3;
             var3 = var2;
+            var2 = var3;
          }
 
          var9.b(var8);

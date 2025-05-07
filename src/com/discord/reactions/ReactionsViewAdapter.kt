@@ -77,7 +77,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
       val var2: Int = this.getAddBurstReactionIndex();
       var var6: java.lang.String = null;
       var var7: java.lang.String = null;
-      val var4: Long;
+      val var3: Long;
       if (var1 == var2) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -95,7 +95,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var17.append(var6);
          var17.append("_add_burst_reactions_");
          var17.append(var7);
-         var4 = IdUtilsKt.convertToId(var17.toString());
+         var3 = IdUtilsKt.convertToId(var17.toString());
       } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
@@ -113,7 +113,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var18.append(var6);
          var18.append("_add_reactions_");
          var18.append(var7);
-         var4 = IdUtilsKt.convertToId(var18.toString());
+         var3 = IdUtilsKt.convertToId(var18.toString());
       } else {
          val var19: ReactionView.Reaction = this.reactions.get(var1);
          if (this.messageId == null) {
@@ -123,16 +123,16 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          }
 
          var7 = var19.getEmoji().getEmojiId();
-         val var3: Boolean = var19.isBurstReaction();
+         val var5: Boolean = var19.isBurstReaction();
          val var20: StringBuilder = new StringBuilder();
          var20.append(var6);
          var20.append("_");
          var20.append(var7);
-         var20.append(var3);
-         var4 = IdUtilsKt.convertToId(var20.toString());
+         var20.append(var5);
+         var3 = IdUtilsKt.convertToId(var20.toString());
       }
 
-      return var4;
+      return var3;
    }
 
    public override fun getItemViewType(position: Int): Int {
@@ -232,9 +232,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       q.h(var1, "parent");
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var4: ThemeManager = ThemeManager.INSTANCE;
-      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var4.setThemeOverride(this.theme);
+      val var3: ThemeManager = ThemeManager.INSTANCE;
+      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var3.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
          case 46:
@@ -265,7 +265,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             throw new IllegalStateException(var6.toString().toString());
       }
 
-      var4.setThemeOverride(var3);
+      var3.setThemeOverride(var4);
       return (RecyclerView.ViewHolder)var9;
    }
 

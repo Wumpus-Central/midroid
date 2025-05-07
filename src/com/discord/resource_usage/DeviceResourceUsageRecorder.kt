@@ -1,6 +1,6 @@
 package com.discord.resource_usage
 
-import Fa.e
+import Ga.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
@@ -9,7 +9,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import l8.w
+import m8.w
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
