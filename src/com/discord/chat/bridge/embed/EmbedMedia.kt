@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.embed
 
-import fa.f
-import fa.n
-import ga.a
-import ia.C0
-import ia.G
-import ia.N
-import ia.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.N
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -128,8 +128,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var5: Int = Integer.hashCode(this.height);
+      val var5: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -141,34 +141,34 @@ public data class EmbedMedia(url: String,
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return (((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
+      return (((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var8: java.lang.String = this.proxyURL;
+      val var6: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
       val var1: Int = this.width;
       val var2: Int = this.height;
-      val var6: java.lang.String = this.placeholder;
+      val var7: java.lang.String = this.placeholder;
       val var5: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedMedia(url=");
-      var7.append(var4);
-      var7.append(", proxyURL=");
-      var7.append(var8);
-      var7.append(", width=");
-      var7.append(var1);
-      var7.append(", height=");
-      var7.append(var2);
-      var7.append(", placeholder=");
-      var7.append(var6);
-      var7.append(", placeholderVersion=");
-      var7.append(var5);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("EmbedMedia(url=");
+      var8.append(var6);
+      var8.append(", proxyURL=");
+      var8.append(var4);
+      var8.append(", width=");
+      var8.append(var1);
+      var8.append(", height=");
+      var8.append(var2);
+      var8.append(", placeholder=");
+      var8.append(var7);
+      var8.append(", placeholderVersion=");
+      var8.append(var5);
+      var8.append(", srcIsAnimated=");
+      var8.append(var3);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : G {
@@ -195,10 +195,10 @@ public data class EmbedMedia(url: String,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: C0 = C0.a;
-         val var3: KSerializer = a.u(C0.a);
-         val var1: N = N.a;
-         return new KSerializer[]{var2, var3, N.a, N.a, a.u(var2), a.u(var1), h.a, var2};
+         val var1: C0 = C0.a;
+         val var2: KSerializer = a.u(C0.a);
+         val var3: N = N.a;
+         return new KSerializer[]{var1, var2, N.a, N.a, a.u(var1), a.u(var3), h.a, var1};
       }
 
       public open fun deserialize(decoder: Decoder): EmbedMedia {
@@ -211,28 +211,28 @@ public data class EmbedMedia(url: String,
          var var7: Boolean;
          var var9: java.lang.String;
          var var10: java.lang.String;
-         val var11: java.lang.String;
-         val var12: Int;
+         var var11: Int;
+         val var12: java.lang.String;
          var var16: java.lang.String;
          if (var14.y()) {
             var9 = var14.t(var13, 0);
             val var15: C0 = C0.a;
-            var10 = var14.v(var13, 1, C0.a, null) as java.lang.String;
-            var5 = var14.k(var13, 2);
+            var12 = var14.v(var13, 1, C0.a, null) as java.lang.String;
+            var3 = var14.k(var13, 2);
             val var2: Int = var14.k(var13, 3);
-            var11 = var14.v(var13, 4, var15, null) as java.lang.String;
+            var10 = var14.v(var13, 4, var15, null) as java.lang.String;
             val var8: Int = var14.v(var13, 5, N.a, null) as Int;
             var7 = var14.s(var13, 6);
             var16 = var14.t(var13, 7);
-            var3 = 255;
-            var4 = var2;
-            var12 = var8;
+            var4 = 255;
+            var5 = var2;
+            var11 = var8;
          } else {
             var var19: Boolean = true;
             var7 = false;
             var3 = 0;
             var var17: Int = 0;
-            var var22: Int = null;
+            var11 = null;
             var9 = null;
             var var20: java.lang.String = null;
             var16 = null;
@@ -266,7 +266,7 @@ public data class EmbedMedia(url: String,
                      var17 |= 16;
                      break;
                   case 5:
-                     var22 = var14.v(var13, 5, N.a, var22) as Int;
+                     var11 = var14.v(var13, 5, N.a, var11) as Int;
                      var17 |= 32;
                      break;
                   case 6:
@@ -282,15 +282,13 @@ public data class EmbedMedia(url: String,
                }
             }
 
-            var12 = var22;
-            var11 = var10;
-            var5 = var3;
-            var10 = var20;
-            var3 = var17;
+            var5 = var4;
+            var12 = var20;
+            var4 = var17;
          }
 
          var14.b(var13);
-         return new EmbedMedia(var3, var9, var10, var5, var4, var11, var12, var7, var16, null);
+         return new EmbedMedia(var4, var9, var12, var3, var5, var10, var11, var7, var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EmbedMedia) {
@@ -303,7 +301,7 @@ public data class EmbedMedia(url: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

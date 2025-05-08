@@ -3,7 +3,7 @@ package com.discord.client_info
 import com.discord.codegen.NativeClientInfoModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 public class ClientInfoModule(reactContext: ReactApplicationContext) : NativeClientInfoModuleSpec {
    init {
@@ -12,24 +12,24 @@ public class ClientInfoModule(reactContext: ReactApplicationContext) : NativeCli
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
-      val var7: ClientInfo = ClientInfo.INSTANCE;
-      val var3: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
-      val var8: Pair = w.a("Version", var7.getVersionName());
-      val var4: Pair = w.a("Build", var7.getVersionCode());
-      val var6: Pair = w.a("Manifest", var7.getOtaManifestETag());
-      val var1: Pair = w.a("OTABuild", var7.getOtaVersion());
-      val var2: ClientInfoCache = ClientInfoCache.INSTANCE;
-      val var5: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var5, "getReactApplicationContext(...)");
-      return n8.q.m(
+      val var2: ClientInfo = ClientInfo.INSTANCE;
+      val var6: Pair = w.a("Identifier", ClientInfo.INSTANCE.getPackageName());
+      val var8: Pair = w.a("Version", var2.getVersionName());
+      val var1: Pair = w.a("Build", var2.getVersionCode());
+      val var3: Pair = w.a("Manifest", var2.getOtaManifestETag());
+      val var4: Pair = w.a("OTABuild", var2.getOtaVersion());
+      val var5: ClientInfoCache = ClientInfoCache.INSTANCE;
+      val var7: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var7, "getReactApplicationContext(...)");
+      return p8.q.m(
          new Pair[]{
-            var3,
-            var8,
-            var4,
             var6,
+            var8,
             var1,
-            w.a("DeviceVendorID", var2.getDeviceVendorId(var5)),
-            w.a("ReleaseChannel", var7.getReleaseChannel()),
+            var3,
+            var4,
+            w.a("DeviceVendorID", var5.getDeviceVendorId(var7)),
+            w.a("ReleaseChannel", var2.getReleaseChannel()),
             w.a("SentryDsn", "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"),
             w.a("SentryStaffDsn", "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"),
             w.a("SentryAlphaBetaDsn", "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375")

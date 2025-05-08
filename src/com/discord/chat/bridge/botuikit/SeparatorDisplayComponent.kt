@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import fa.f
-import fa.n
-import ia.C0
-import ia.G
-import ia.N
-import ia.h
-import ia.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.N
+import ka.h
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -80,20 +80,20 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
+      val var5: java.lang.String = this.id;
       val var2: Boolean = this.divider;
-      val var5: SeparatorSpacingSize = this.spacing;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SeparatorDisplayComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var3);
-      var4.append(", divider=");
-      var4.append(var2);
-      var4.append(", spacing=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: SeparatorSpacingSize = this.spacing;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SeparatorDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var5);
+      var3.append(", divider=");
+      var3.append(var2);
+      var3.append(", spacing=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -131,9 +131,9 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
          if (var9.y()) {
             var4 = var9.k(var8, 0);
             var7 = var9.t(var8, 1);
-            var2 = var9.s(var8, 2);
+            var3 = var9.s(var8, 2);
             var10 = var9.m(var8, 3, SeparatorSpacingSize.Serializer.INSTANCE, null) as SeparatorSpacingSize;
-            var3 = 15;
+            var2 = 15;
          } else {
             var var5: Boolean = true;
             var4 = 0;
@@ -170,13 +170,10 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
                   var5 = false;
                }
             }
-
-            var3 = var2;
-            var2 = var3;
          }
 
          var9.b(var8);
-         return new SeparatorDisplayComponent(var3, var4, var7, (boolean)var2, var10, null);
+         return new SeparatorDisplayComponent(var2, var4, var7, (boolean)var3, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SeparatorDisplayComponent) {

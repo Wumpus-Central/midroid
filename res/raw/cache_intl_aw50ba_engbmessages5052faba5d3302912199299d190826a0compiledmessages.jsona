@@ -1384,6 +1384,9 @@
   "wOr6hI": "Too many uploads!",
   "BEWw//": "double tap to play video and enlarge",
   "3AS4UF": "Attach Files",
+  "vlj5uL": "Heads up – allowing tracking lets us personalise the content you see in your Quests & Rewards and keeps your experience as relevant as possible!",
+  "y4HOMj": "Help support Discord to be your cosy home on the internet",
+  "fpfPTk": "Receive personalised Quests that are crafted to your relevant interests",
   "QLMGho": [
     [
       1,
@@ -2911,13 +2914,6 @@
   "3lv7q6": "Give your avatar a new look.",
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " with Nitro"
-  ],
   "sPvyr6": [
     "Original price: ",
     [
@@ -36264,6 +36260,28 @@
   "yO4lAA": "6-digit authentication code/8-digit backup code",
   "tARzgo": "6-digit authentication code",
   "fZSi1N": "8-digit backup code",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "These codes will allow you to enter your account if you lose your auth app. Protect them like you would protect your password. Do not share them with anyone and keep them somewhere safe."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Each code can only be used once! Any previously generated codes no longer work!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Change account details",
   "37S9yc": "As an added security measure, please enter the key we’ve just sent to your email address. You should see it in a minute or two.",
   "TjGb4e": "Verification key",

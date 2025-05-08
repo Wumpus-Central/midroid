@@ -4,11 +4,11 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fa.f
-import fa.j
-import fa.n
-import ia.G
-import ia.y
+import ha.f
+import ha.j
+import ha.n
+import ka.G
+import ka.y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,8 +17,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import m8.w
-import ma.a
+import o8.w
+import oa.a
 
 @f
 public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSource?, rate: Double) : ReactEvent {
@@ -110,7 +110,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{ga.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), y.a};
+         return new KSerializer[]{ia.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), y.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackRateChanged {
@@ -164,7 +164,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

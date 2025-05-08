@@ -5,11 +5,11 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import fa.f
-import fa.n
-import ga.a
-import ia.C0
-import ia.G
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -18,7 +18,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import m8.w
+import o8.w
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -83,15 +83,15 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var1: java.util.List = this.tags;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MetricEvent(name=");
-      var2.append(var3);
-      var2.append(", tags=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.name;
+      val var3: java.util.List = this.tags;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MetricEvent(name=");
+      var1.append(var2);
+      var1.append(", tags=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -167,7 +167,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

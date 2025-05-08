@@ -87,7 +87,7 @@ import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
 import kotlin.jvm.internal.G
-import m8.w
+import o8.w
 
 internal fun createChatReactEvents(): ReactEvents {
    return new ReactEvents(

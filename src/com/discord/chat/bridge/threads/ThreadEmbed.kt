@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.threads
 
-import fa.f
-import fa.n
-import ga.a
-import ia.C0
-import ia.G
-import ia.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -136,27 +136,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.title;
-      val var3: java.lang.String = this.messageCountLabel;
-      val var4: java.lang.String = this.messagePreviewString;
+      val var4: java.lang.String = this.title;
+      val var5: java.lang.String = this.messageCountLabel;
+      val var3: java.lang.String = this.messagePreviewString;
       val var1: java.lang.Boolean = this.archived;
-      val var7: java.lang.String = this.archivedIconUrl;
+      val var6: java.lang.String = this.archivedIconUrl;
       val var2: ThreadEmbedMessage = this.referencedMessage;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ThreadEmbed(title=");
-      var6.append(var5);
-      var6.append(", messageCountLabel=");
-      var6.append(var3);
-      var6.append(", messagePreviewString=");
-      var6.append(var4);
-      var6.append(", archived=");
-      var6.append(var1);
-      var6.append(", archivedIconUrl=");
-      var6.append(var7);
-      var6.append(", referencedMessage=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ThreadEmbed(title=");
+      var7.append(var4);
+      var7.append(", messageCountLabel=");
+      var7.append(var5);
+      var7.append(", messagePreviewString=");
+      var7.append(var3);
+      var7.append(", archived=");
+      var7.append(var1);
+      var7.append(", archivedIconUrl=");
+      var7.append(var6);
+      var7.append(", referencedMessage=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : G {
@@ -194,25 +194,23 @@ public data class ThreadEmbed(title: String,
          var var2: Int;
          var var6: Any;
          var var7: java.lang.String;
+         var var8: java.lang.String;
          var var9: java.lang.String;
          var var15: Any;
-         var var18: java.lang.String;
          if (var5) {
-            var18 = var13.t(var12, 0);
+            var10 = var13.t(var12, 0);
             var9 = var13.t(var12, 1);
             var15 = C0.a;
-            val var11: java.lang.String = var13.v(var12, 2, C0.a, null) as java.lang.String;
+            var8 = var13.v(var12, 2, C0.a, null) as java.lang.String;
             var6 = var13.v(var12, 3, h.a, null) as java.lang.Boolean;
             var7 = var13.v(var12, 4, (DeserializationStrategy)var15, null) as java.lang.String;
             var15 = var13.v(var12, 5, ThreadEmbedMessage.$serializer.INSTANCE, null) as ThreadEmbedMessage;
             var2 = 63;
-            var10 = var18;
-            var18 = var11;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var9 = null;
-            var18 = null;
+            var8 = null;
             var7 = null;
             var6 = null;
             var15 = null;
@@ -232,7 +230,7 @@ public data class ThreadEmbed(title: String,
                      var2 |= 2;
                      break;
                   case 2:
-                     var18 = var13.v(var12, 2, C0.a, var18) as java.lang.String;
+                     var8 = var13.v(var12, 2, C0.a, var8) as java.lang.String;
                      var2 |= 4;
                      break;
                   case 3:
@@ -257,7 +255,7 @@ public data class ThreadEmbed(title: String,
          }
 
          var13.b(var12);
-         return new ThreadEmbed(var2, var10, var9, var18, (java.lang.Boolean)var6, var7, (ThreadEmbedMessage)var15, null);
+         return new ThreadEmbed(var2, var10, var9, var8, (java.lang.Boolean)var6, var7, (ThreadEmbedMessage)var15, null);
       }
 
       public open fun serialize(encoder: Encoder, value: ThreadEmbed) {
@@ -270,7 +268,7 @@ public data class ThreadEmbed(title: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

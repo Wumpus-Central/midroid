@@ -1392,6 +1392,11 @@
   "wOr6hI": "Quá nhiều mục tải lên!",
   "BEWw//": "nhấn đúp để phát video và phóng lớn",
   "3AS4UF": "Đính kèm tập tin",
+  "vlj5uL": "Lưu ý — cho phép theo dõi giúp chúng tôi cá nhân hóa nội dung bạn thấy trong Nhiệm Vụ & Phần Thưởng và đảm bảo trải nghiệm của bạn liên quan đến nội dung nhất có thể!",
+  "y4HOMj": "Giúp hỗ trợ Discord trở thành nơi trú ngụ ấm cúng của bạn trên internet",
+  "fpfPTk": "Nhận các Nhiệm Vụ được cá nhân hóa theo sở thích liên quan của bạn",
+  "mH8BIS": "Bạn luôn có thể cập nhật lựa chọn của mình cho thiết bị này trong cài đặt iOS bất kỳ lúc nào. Nếu cho phép theo dõi, bạn có thể:",
+  "UBpcNz": "Hỗ trợ các doanh nghiệp và studio game dựa vào quảng cáo để khám phá",
   "QLMGho": [
     [
       1,
@@ -2929,13 +2934,6 @@
   "3lv7q6": "Tạo diện mạo mới cho ảnh đại diện của bạn.",
   "ik37ER": "Để tên của bạn trở nên nổi bật trên máy chủ và cuộc trò chuyện.",
   "VhJL7+": "Hiển thị hiệu ứng này khi người khác xem hồ sơ của bạn.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " khi có đăng ký Nitro"
-  ],
   "sPvyr6": [
     "Giá gốc: ",
     [
@@ -36417,6 +36415,28 @@
   "yO4lAA": "Mã xác thực 6 chữ số/mã dự phòng 8 chữ số",
   "tARzgo": "Mã xác thực 6 chữ số",
   "fZSi1N": "Mã dự phòng 8 chữ số",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Các mã này sẽ cho phép bạn đăng nhập nếu mất đi ứng dụng gốc, hãy bảo vệ chúng như chính mật khẩu của bạn vậy. Vui lòng không chia sẻ chúng với bất kỳ ai khác và giữ chúng ở nơi an toàn."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Mỗi mã chỉ có thể dùng được một lần! Các mã được tạo trước đó sẽ không còn hiệu lực!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Thay đổi thông tin chi tiết tài khoản",
   "37S9yc": "Là một biện pháp bảo mật bổ sung, vui lòng nhập mã xác thực mà chúng tôi vừa gửi đến địa chỉ email của bạn. Bạn sẽ thấy nó sau một hoặc hai phút.",
   "TjGb4e": "Mã xác thực",

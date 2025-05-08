@@ -1431,6 +1431,11 @@
   "wOr6hI": "Zbyt wiele przesyłanych plików!",
   "BEWw//": "stuknij dwukrotnie, aby odtworzyć film i powiększyć",
   "3AS4UF": "Załączanie plików",
+  "vlj5uL": "Uwaga – zezwalanie na śledzenie pozwala nam personalizować zawartość, którą widzisz w sekcji zadań i nagród, i dostosować doświadczenie do Twoich zainteresowań!",
+  "y4HOMj": "Pomóż wspierać Discord, aby był Twoim domem w Internecie",
+  "fpfPTk": "Otrzymuj spersonalizowane zadania dopasowane do Twoich zainteresowań",
+  "mH8BIS": "Możesz w każdej chwili zmienić swój wybór dla tego urządzenia w Ustawieniach systemu iOS. Jeśli zezwolisz na śledzenie, możesz:",
+  "UBpcNz": "Wspieraj firmy i studia gier, które polegają na reklamach, aby dotrzeć do odbiorców",
   "QLMGho": [
     [
       1,
@@ -3023,13 +3028,6 @@
   "3lv7q6": "Nadaj swojemu awatarowi nowy wygląd.",
   "ik37ER": "Spraw, by Twoja nazwa wyróżniała się na serwerach i czatach.",
   "VhJL7+": "Pokazuj ten efekt, gdy inni przeglądają Twój profil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " z Nitro"
-  ],
   "sPvyr6": [
     "Oryginalna cena: ",
     [
@@ -37393,6 +37391,28 @@
   "yO4lAA": "6-cyfrowy kod uwierzytelniający / 8-cyfrowy zapasowy kod",
   "tARzgo": "6-cyfrowy kod uwierzytelniający",
   "fZSi1N": "8-cyfrowy kod zapasowy",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Kody te pozwalają na zalogowanie się na Twoje konto w przypadku zgubienia aplikacji uwierzytelniającej – chroń je jak hasło. Nie udostępniaj ich nikomu i trzymaj je w bezpiecznym miejscu."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Każdy kod może być użyty tylko raz! Wszystkie poprzednie kody nie będą już działać!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Zmień szczegóły konta",
   "37S9yc": "W ramach dodatkowego zabezpieczenia wprowadź klucz, który wysłaliśmy właśnie na Twój adres e-mail. Powinien on dotrzeć za kilka minut.",
   "TjGb4e": "Klucz weryfikacji",

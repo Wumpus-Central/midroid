@@ -4,11 +4,11 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import fa.f
-import fa.j
-import fa.n
-import ia.G
-import ia.Y
+import ha.f
+import ha.j
+import ha.n
+import ka.G
+import ka.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -17,8 +17,8 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import m8.w
-import ma.a
+import o8.w
+import oa.a
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -88,15 +88,15 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
 
    public override fun toString(): String {
       val var6: MediaPlayerPlaybackSource = this.source;
-      val var3: Long = this.time;
-      val var1: Long = this.duration;
+      val var1: Long = this.time;
+      val var3: Long = this.duration;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaPlayerPlaybackProgressUpdated(source=");
       var5.append(var6);
       var5.append(", time=");
-      var5.append(var3);
-      var5.append(", duration=");
       var5.append(var1);
+      var5.append(", duration=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }
@@ -122,7 +122,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{ga.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), Y.a, Y.a};
+         return new KSerializer[]{ia.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE), Y.a, Y.a};
       }
 
       public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackProgressUpdated {
@@ -184,7 +184,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

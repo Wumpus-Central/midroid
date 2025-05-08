@@ -1387,6 +1387,11 @@
   "wOr6hI": "Çok fazla yükleme var!",
   "BEWw//": "videoyu oynatmak ve büyütmek için çift dokun",
   "3AS4UF": "Dosya Ekle",
+  "vlj5uL": "Dikkat! İzlemeye izni vermek, görevler ve ödüller içeriklerini senin için kişiselleştirmemizi ve deneyimini sana uykun kılmamızı sağlar!",
+  "y4HOMj": "Discord'un internetteki rahat evin olabilmesi için destek ol",
+  "fpfPTk": "İlgi alanlarına göre hazırlanmış kişiselleştirilmiş görevler al",
+  "mH8BIS": "Bu cihaz için tercihini istediğin zaman iOS ayarlarında güncelleyebilirsin. İzlemeye izin verirsen:",
+  "UBpcNz": "Keşif için reklamları kullanan işletmeleri ve oyun stüdyolarını destekle",
   "QLMGho": [
     [
       1,
@@ -2911,13 +2916,6 @@
   "3lv7q6": "Avatarını yeni bir görünüme kavuştur.",
   "ik37ER": "Adını sunucularda ve sohbetlerde ön plana çıkar.",
   "VhJL7+": "Diğer kullanıcılar profilini görüntülediğinde bu efekti göster.",
-  "kWkpdH": [
-    "Nitro ile ",
-    [
-      1,
-      "price"
-    ]
-  ],
   "sPvyr6": [
     "Asıl fiyat: ",
     [
@@ -36299,6 +36297,28 @@
   "yO4lAA": "6 haneli doğrulama kodu/8 haneli yedek kod",
   "tARzgo": "6 haneli doğrulama kodu",
   "fZSi1N": "8 haneli yedek kod",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Bu kodlar eğer doğrulama uygulamasını kaybedersen hesabına girmene imkân verecek. Bunları şifren gibi koru, kimseyle paylaşma ve güvenli bir yerde sakla."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Her bir kod sadece bir kere kullanılabilir! Önceden oluşturulmuş hiçbir kod çalışmayacaktır!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Hesap detaylarını değiştir",
   "37S9yc": "Bir güvenlik önlemi olarak lütfen az önce e-posta adresine gönderdiğimiz anahtarı gir. Birkaç dakika içinde gelmiş olmalı.",
   "TjGb4e": "Doğrulama anahtarı",

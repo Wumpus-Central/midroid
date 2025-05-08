@@ -1,6 +1,6 @@
 package com.discord.security_key;
 
-import B5.f;
+import D5.f;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class

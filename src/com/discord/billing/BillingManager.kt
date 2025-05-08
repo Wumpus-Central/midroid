@@ -1,8 +1,8 @@
 package com.discord.billing
 
-import V9.K
-import V9.U
-import V9.f
+import X9.K
+import X9.U
+import X9.f
 import Y0.k
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
@@ -25,7 +25,7 @@ import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
-import m8.s
+import o8.s
 
 internal class BillingManager(isProdBuild: Boolean,
    onConnectionUpdated: (Int) -> Unit,
@@ -202,7 +202,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               t8.b.e();
+               v8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -230,14 +230,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var5 : var2) {
+         for (java.lang.String var3 : var2) {
             val var4: Function3 = this.onPurchaseUpdated;
-            val var6: java.lang.String = var1.i();
-            q.g(var6, "getPurchaseToken(...)");
+            val var5: java.lang.String = var1.i();
+            q.g(var5, "getPurchaseToken(...)");
             val var7: java.lang.String = var1.e();
             q.g(var7, "getPackageName(...)");
-            q.e(var5);
-            var4.invoke(var6, var7, var5);
+            q.e(var3);
+            var4.invoke(var5, var7, var3);
          }
       }
    }
@@ -436,7 +436,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = u8.a.a(var0);
+         $ENTRIES = w8.a.a(var0);
       }
 
       init {
@@ -501,15 +501,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var2: BillingResult = this.billingResult;
-         val var3: java.util.List = this.productDetails;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ProductDetailsResponse(billingResult=");
-         var1.append(var2);
-         var1.append(", productDetails=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: BillingResult = this.billingResult;
+         val var1: java.util.List = this.productDetails;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ProductDetailsResponse(billingResult=");
+         var2.append(var3);
+         var2.append(", productDetails=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

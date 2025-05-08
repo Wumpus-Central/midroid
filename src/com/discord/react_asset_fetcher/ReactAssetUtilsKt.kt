@@ -1,7 +1,7 @@
 package com.discord.react_asset_fetcher
 
-import V9.K
-import V9.f
+import X9.K
+import X9.f
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -22,8 +22,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import m8.s
-import t8.b
+import o8.s
+import v8.b
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");
@@ -91,21 +91,21 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
       }
 
       public final Object invokeSuspend(Object var1) {
-         var var3: MaterialButton = (MaterialButton)b.e();
-         var var4: Any;
+         var var4: MaterialButton = (MaterialButton)b.e();
+         var var3: Any;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var3 = this.L$0 as MaterialButton;
+            var4 = this.L$0 as MaterialButton;
             s.b(var1);
-            var4 = var1;
+            var3 = var1;
          } else {
             s.b(var1);
             var1 = this.$this_setReactIcon;
             val var5: CoroutineDispatcher = K.b();
-            var4 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            var3 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -161,15 +161,15 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = f.g(var5, (Function2)var4, this);
-            if (var4 === var3) {
-               return var3;
+            var3 = f.g(var5, (Function2)var3, this);
+            if (var3 === var4) {
+               return var4;
             }
 
-            var3 = var1;
+            var4 = var1;
          }
 
-         var3.setIcon(var4 as Drawable);
+         var4.setIcon(var3 as Drawable);
          return Unit.a;
       }
    }, 3, null);

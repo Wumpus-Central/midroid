@@ -3,7 +3,7 @@ package com.discord.app_database
 import android.content.Context
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
-import ia.x0
+import ka.x0
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
@@ -27,13 +27,13 @@ public object AppDatabase {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !q.c(var4, "")) {
-         val var2: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var2);
-         val var5: Log = Log.INSTANCE;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("speculatively opening ");
-         var3.append(var2);
-         Log.i$default(var5, "AppDatabase", var3.toString(), null, 4, null);
+         val var5: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var5);
+         val var3: Log = Log.INSTANCE;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("speculatively opening ");
+         var2.append(var5);
+         Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -53,23 +53,23 @@ public object AppDatabase {
          DiscordMobileApi.initialize(dataDirectory);
 
          var var4: Int;
-         var var26: Array<GuildVersion>;
+         var var24: Array<GuildVersion>;
          var var27: Array<NonGuildVersion>;
          try {
             var1 = this.databaseName(var1);
-            val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
+            val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
             val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-            val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+            val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
             val var15: a = Json.d;
-            q.e(var6);
+            q.e(var23);
             var15.a();
-            var26 = var15.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var6) as Array<GuildVersion>;
+            var24 = var15.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
             q.e(var7);
             var15.a();
             var27 = var15.b(new x0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
-            q.e(var23);
+            q.e(var6);
             var15.a();
-            var16 = var15.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var23) as Array<CacheVersion>;
+            var16 = var15.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var6) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;
@@ -91,10 +91,10 @@ public object AppDatabase {
                } catch (var9: Exception) {
                   val var18: Log = Log.INSTANCE;
                   var2 = var9.getMessage();
-                  val var25: StringBuilder = new StringBuilder();
-                  var25.append("couldn't load guild versions: ");
-                  var25.append(var2);
-                  Log.e$default(var18, "AppDatabase", var25.toString(), null, 4, null);
+                  val var26: StringBuilder = new StringBuilder();
+                  var26.append("couldn't load guild versions: ");
+                  var26.append(var2);
+                  Log.e$default(var18, "AppDatabase", var26.toString(), null, 4, null);
                   var13 = DatabaseVersions.Companion.getEMPTY();
                }
                break;
@@ -102,16 +102,16 @@ public object AppDatabase {
 
             try {
                if (q.c(var16[var3].getVersion(), var2)) {
-                  var13 = new DatabaseVersions(var26, var27);
+                  var13 = new DatabaseVersions(var24, var27);
                   break;
                }
             } catch (var10: Exception) {
                val var17: Log = Log.INSTANCE;
                var2 = var10.getMessage();
-               val var24: StringBuilder = new StringBuilder();
-               var24.append("couldn't load guild versions: ");
-               var24.append(var2);
-               Log.e$default(var17, "AppDatabase", var24.toString(), null, 4, null);
+               val var25: StringBuilder = new StringBuilder();
+               var25.append("couldn't load guild versions: ");
+               var25.append(var2);
+               Log.e$default(var17, "AppDatabase", var25.toString(), null, 4, null);
                var13 = DatabaseVersions.Companion.getEMPTY();
                break;
             }
@@ -126,7 +126,7 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       q.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      r8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
+      t8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
          final Context $context;
 
          {

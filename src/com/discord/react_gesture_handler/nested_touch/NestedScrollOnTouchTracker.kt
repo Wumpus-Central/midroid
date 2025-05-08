@@ -1,7 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
-import V9.I
-import V9.f
+import X9.I
+import X9.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -15,8 +15,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import m8.s
-import t8.b
+import o8.s
+import v8.b
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -250,10 +250,10 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                               this.$view.setPressed(true);
                            }
 
-                           val var11: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
-                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
+                           val var5: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getLONG_PRESS_DOWN_TIME();
+                           val var11: Long = NestedScrollOnTouchTracker.access$getCompanion$p().getCLICK_MAX_DOWN_TIME();
                            this.label = 2;
-                           if (I.a(var11 - var5, this) === var7) {
+                           if (I.a(var5 - var11, this) === var7) {
                               return var7;
                            }
                         }

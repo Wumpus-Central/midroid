@@ -2,10 +2,10 @@ package com.discord.primitives
 
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import fa.f
-import ia.G
-import ia.Y
-import ia.G.a
+import ha.f
+import ka.G
+import ka.Y
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor

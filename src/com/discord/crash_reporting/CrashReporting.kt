@@ -26,7 +26,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import m8.p
+import o8.p
 
 public object CrashReporting {
    private const val TAG_APP_VERSION: String = "appVersion"
@@ -97,7 +97,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("3df1df42-c87e-4bf0-811f-f49f4a49a3f2");
+      var5.setProguardUuid("7d532df5-ea10-41f6-9f3f-b9728945bc71");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -111,13 +111,13 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = n8.q.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = p8.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.n(var3);
@@ -127,7 +127,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", m8.e.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", o8.e.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
@@ -213,7 +213,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = u8.a.a(var0);
+         $ENTRIES = w8.a.a(var0);
       }
 
       @JvmStatic

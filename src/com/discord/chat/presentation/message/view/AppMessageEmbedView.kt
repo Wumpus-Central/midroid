@@ -96,13 +96,13 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun rgbToColorInt(map: Map<String, Int>): Int? {
-      val var3: Int = var1.get("r") as Int;
-      val var2: Int = var1.get("g") as Int;
+      val var2: Int = var1.get("r") as Int;
+      val var3: Int = var1.get("g") as Int;
       val var4: Int = var1.get("b") as Int;
-      if (var3 == null || var2 == null || var4 == null) {
+      if (var2 == null || var3 == null || var4 == null) {
          return null;
       } else {
-         return if (var3 == 0 && var2 == 0 && var4 == 0) null else Color.rgb(var3, var2, var4);
+         return if (var2 == 0 && var3 == 0 && var4 == 0) null else Color.rgb(var2, var3, var4);
       }
    }
 
@@ -314,8 +314,8 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
                var31 = false;
             }
 
-            val var61: java.lang.String = var63.getLabel();
-            val var55: java.lang.String = var63.getId();
+            val var55: java.lang.String = var63.getLabel();
+            val var61: java.lang.String = var63.getId();
             val var64: java.lang.Boolean = var63.getDisabled();
             val var12: Boolean;
             if (var64 != null) {
@@ -358,14 +358,14 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             }
 
             var71.setAlpha(var7);
-            var71.setText(var61);
+            var71.setText(var55);
             var71.setBackgroundColor(var10);
             var71.setTextColor(var9);
             var71.setTextSizeSp(14.0F);
             var71.setDiscordFont(DiscordFont.PrimaryMedium);
             var71.setCornerRadius(SizeUtilsKt.getDpToPx(8));
             var71.setLayoutParams(var67);
-            var71.setOnClickButtonListener(new d(this, var2, var1, var55));
+            var71.setOnClickButtonListener(new d(this, var2, var1, var61));
             this.view.actionsContainer.addView(var71);
          }
 

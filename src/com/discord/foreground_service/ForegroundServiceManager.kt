@@ -31,20 +31,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var6: Log = Log.INSTANCE;
+      val var4: Log = Log.INSTANCE;
       val var5: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Start service with ");
-      var4.append(var3);
-      var4.append(" configurations.");
-      Log.i$foreground_service_release$default(var6, var5, var4.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Start service with ");
+      var6.append(var3);
+      var6.append(" configurations.");
+      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -144,14 +144,14 @@ public class ForegroundServiceManager {
       // 03: ldc "foregroundService"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 3
+      // 0b: astore 2
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 2
-      // 10: aload 2
+      // 0f: astore 3
+      // 10: aload 3
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 3
-      // 17: aload 2
+      // 16: aload 2
+      // 17: aload 3
       // 18: ldc "On service connected."
       // 1a: aconst_null
       // 1b: bipush 4
@@ -178,11 +178,11 @@ public class ForegroundServiceManager {
       // 48: aload 0
       // 49: aload 1
       // 4a: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4d: aload 2
+      // 4d: aload 3
       // 4e: ldc "tag"
       // 50: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 53: aload 3
-      // 54: aload 2
+      // 53: aload 2
+      // 54: aload 3
       // 55: ldc_w "No configuration present (process liked died), stopping service."
       // 58: aconst_null
       // 59: bipush 4
@@ -217,14 +217,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc_w "On service created."
       // 1b: aconst_null
       // 1c: bipush 4
@@ -397,14 +397,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc_w "Stop service."
       // 1b: aconst_null
       // 1c: bipush 4

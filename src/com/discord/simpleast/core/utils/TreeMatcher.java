@@ -47,14 +47,14 @@ public class TreeMatcher {
          return false;
       } else {
          for (int var3 = 0; var3 < var5.size(); var3++) {
-            Node var7 = (Node)var5.get(var3);
-            Node var8 = (Node)var4.get(var3);
-            if (var7.getClass() != var8.getClass()) {
+            Node var8 = (Node)var5.get(var3);
+            Node var7 = (Node)var4.get(var3);
+            if (var8.getClass() != var7.getClass()) {
                return false;
             }
 
-            Class var6 = var7.getClass();
-            if (this.matchers.containsKey(var6) && !this.matchers.get(var6).matches(var7, var8)) {
+            Class var6 = var8.getClass();
+            if (this.matchers.containsKey(var6) && !this.matchers.get(var6).matches(var8, var7)) {
                return false;
             }
          }
@@ -90,14 +90,14 @@ public class TreeMatcher {
             StyleNode var6 = (StyleNode)var1;
             StyleNode var8 = (StyleNode)var2;
             List var7 = var6.getStyles();
-            List var4 = var8.getStyles();
-            if (var7.size() != var4.size()) {
+            List var5 = var8.getStyles();
+            if (var7.size() != var5.size()) {
                return false;
             } else {
                for (int var3 = 0; var3 < var7.size(); var3++) {
-                  CharacterStyle var5 = (CharacterStyle)var7.get(var3);
-                  CharacterStyle var9 = (CharacterStyle)var4.get(var3);
-                  if (var5.getClass() != var9.getClass()) {
+                  CharacterStyle var4 = (CharacterStyle)var7.get(var3);
+                  CharacterStyle var9 = (CharacterStyle)var5.get(var3);
+                  if (var4.getClass() != var9.getClass()) {
                      return false;
                   }
                }

@@ -2,7 +2,7 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.f
+import ha.f
 import kotlinx.serialization.KSerializer
 
 @f

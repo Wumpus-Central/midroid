@@ -11,7 +11,7 @@ import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 import okhttp3.WebSocket
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec {
@@ -89,7 +89,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return n8.q.m(
+      return p8.q.m(
          new Pair[]{
             w.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             w.a("userId", var1.get().getItem("_userIdKey")),

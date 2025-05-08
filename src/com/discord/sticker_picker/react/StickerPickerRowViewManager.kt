@@ -14,7 +14,7 @@ import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 @ReactModule(name = "StickerPickerRowView")
 internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowView>, StickerPickerRowViewManagerInterface<StickerPickerRowView> {

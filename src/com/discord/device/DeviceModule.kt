@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.TimeZone
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDeviceModuleSpec {
    private final val reactContext: ReactApplicationContext
@@ -45,28 +45,28 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
 
    protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
       val var8: Pair = w.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
-      val var6: Pair = w.a("device", Build.DEVICE);
-      val var10: Pair = w.a("deviceModel", Build.MODEL);
-      val var9: Pair = w.a("deviceBrand", Build.BRAND);
-      val var5: Pair = w.a("deviceProduct", Build.PRODUCT);
-      val var2: Pair = w.a("deviceManufacturer", Build.MANUFACTURER);
-      val var3: Pair = w.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
+      val var3: Pair = w.a("device", Build.DEVICE);
+      val var5: Pair = w.a("deviceModel", Build.MODEL);
+      val var4: Pair = w.a("deviceBrand", Build.BRAND);
+      val var9: Pair = w.a("deviceProduct", Build.PRODUCT);
+      val var6: Pair = w.a("deviceManufacturer", Build.MANUFACTURER);
+      val var1: Pair = w.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
       val var7: Pair = w.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
-      val var1: Pair = w.a("socName", DeviceHardwareInfoKt.socName());
-      val var4: Context = this.reactContext.getApplicationContext();
-      q.g(var4, "getApplicationContext(...)");
-      return n8.q.m(
+      val var2: Pair = w.a("socName", DeviceHardwareInfoKt.socName());
+      val var10: Context = this.reactContext.getApplicationContext();
+      q.g(var10, "getApplicationContext(...)");
+      return p8.q.m(
          new Pair[]{
             var8,
-            var6,
-            var10,
-            var9,
-            var5,
-            var2,
             var3,
-            var7,
+            var5,
+            var4,
+            var9,
+            var6,
             var1,
-            w.a("ramSize", DeviceHardwareInfoKt.ramSize(var4)),
+            var7,
+            var2,
+            w.a("ramSize", DeviceHardwareInfoKt.ramSize(var10)),
             w.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq()),
             w.a("timeZone", TimeZone.getDefault().getID())
          }

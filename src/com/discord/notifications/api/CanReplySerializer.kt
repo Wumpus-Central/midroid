@@ -1,6 +1,6 @@
 package com.discord.notifications.api
 
-import ga.a
+import ia.a
 import kotlin.jvm.internal.c
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer

@@ -13,7 +13,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 public object CodeRules {
    private const val CODE_BLOCK_BODY_GROUP: Int = 3
@@ -192,12 +192,12 @@ public object CodeRules {
          var1, var37, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
-      val var48: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
+      val var42: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
       val var52: Array<java.lang.String> = var51.getKEYWORDS();
       val var13: java.util.List = this.createGenericCodeRules(
-         var1, var48, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
+         var1, var42, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
       );
-      return n8.q.l(
+      return p8.q.l(
          new Pair[]{
             w.a("kt", var2),
             w.a("kotlin", var2),

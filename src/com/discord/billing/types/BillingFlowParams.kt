@@ -1,6 +1,6 @@
 package com.discord.billing.types
 
-import T9.a
+import V9.a
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
 import java.security.MessageDigest
@@ -107,14 +107,14 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var4: Long = this.getPriceAmountMicros(var1);
-      val var6: Long = this.getPriceAmountMicros(var2);
+      val var6: Long = this.getPriceAmountMicros(var1);
+      val var4: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       q.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       q.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
          var3 = 6;
       } else {
          var3 = 2;
@@ -277,13 +277,13 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  var2 = var20.d();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Could not find offer token for productId: ");
-                  var18.append(var2);
-                  var18.append(" offerId: ");
-                  var18.append(var6);
-                  throw new AssertionError(var18.toString());
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
                var25.b(var13);

@@ -261,12 +261,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var11: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var11, "getContext(...)");
-            val var7: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var7);
-            var10 = var12.acquire(var11, var7, this.playerSettings);
+            val var7: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var12, "getContext(...)");
+            val var11: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var11);
+            var10 = var7.acquire(var12, var11, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -631,7 +631,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      V9.f.d(
+      X9.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -653,15 +653,15 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = t8.b.e();
+               val var3: Any = v8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  m8.s.b(var1);
+                  o8.s.b(var1);
                } else {
-                  m8.s.b(var1);
+                  o8.s.b(var1);
                   var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
                   val var4: FlowCollector = new FlowCollector(this.this$0) {
                      final MediaView this$0;
@@ -709,7 +709,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      V9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      X9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final MediaView this$0;
 
@@ -727,15 +727,15 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = t8.b.e();
+            val var3: Any = v8.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               m8.s.b(var1);
+               o8.s.b(var1);
             } else {
-               m8.s.b(var1);
+               o8.s.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
                   val var6: Flow = var1.getPausePlayerFlow();

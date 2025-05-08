@@ -2,11 +2,11 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import fa.f
-import fa.n
-import ia.C0
-import ia.G
-import ia.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -92,19 +92,19 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.applicationId;
+      val var4: java.lang.String = this.applicationId;
       val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.instanceId;
-      val var1: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.instanceId;
+      val var5: java.lang.String = this.messageId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapActivityInstanceEmbedData(applicationId=");
-      var3.append(var5);
+      var3.append(var4);
       var3.append(", channelId=");
       var3.append(var2);
       var3.append(", instanceId=");
-      var3.append(var4);
-      var3.append(", messageId=");
       var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var5);
       var3.append(")");
       return var3.toString();
    }
@@ -184,9 +184,9 @@ internal data class TapActivityInstanceEmbedData(applicationId: String, channelI
                }
             }
 
+            var5 = var12;
             var11 = var6;
             var6 = var5;
-            var5 = var12;
          }
 
          var10.b(var9);

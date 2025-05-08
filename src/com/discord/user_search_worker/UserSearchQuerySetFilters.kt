@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import fa.f
-import fa.n
-import ga.a
-import ia.C0
-import ia.G
-import ia.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -89,17 +89,17 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
 
    public override fun toString(): String {
       val var2: java.lang.String = this.guild;
-      val var1: java.lang.Boolean = this.friends;
-      val var3: java.lang.Boolean = this.strict;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSearchQuerySetFilters(guild=");
-      var4.append(var2);
-      var4.append(", friends=");
-      var4.append(var1);
-      var4.append(", strict=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.Boolean = this.friends;
+      val var1: java.lang.Boolean = this.strict;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSearchQuerySetFilters(guild=");
+      var3.append(var2);
+      var3.append(", friends=");
+      var3.append(var4);
+      var3.append(", strict=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -121,9 +121,9 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = a.u(C0.a);
-         val var2: h = h.a;
-         return new KSerializer[]{var1, a.u(h.a), a.u(var2)};
+         val var2: KSerializer = a.u(C0.a);
+         val var1: h = h.a;
+         return new KSerializer[]{var2, a.u(h.a), a.u(var1)};
       }
 
       public open fun deserialize(decoder: Decoder): UserSearchQuerySetFilters {
@@ -188,7 +188,7 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return ia.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

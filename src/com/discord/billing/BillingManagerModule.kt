@@ -18,7 +18,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -81,9 +81,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (Object var6 : var5) {
-         if (var6 is java.lang.String) {
-            var7.add(var6);
+      for (var5 : var5) {
+         if (var5 is java.lang.String) {
+            var7.add(var5);
          }
       }
 

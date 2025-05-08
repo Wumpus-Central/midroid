@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list
 
-import V9.K
-import V9.d0
+import X9.K
+import X9.d0
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
@@ -16,7 +16,7 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import m8.s
+import o8.s
 
 private final val accessoriesToCreate: Map<Int, Int>
 private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
@@ -35,7 +35,7 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
    q.h(var0, "recycler");
    q.h(var1, "accessoriesAdapter");
    q.h(var2, "accessoriesViewPool");
-   V9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var1, var0, var2, null) {
+   X9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var1, var0, var2, null) {
       final MessageAccessoriesAdapter $accessoriesAdapter;
       final RecyclerView.RecycledViewPool $accessoriesViewPool;
       final RecyclerView $recycler;
@@ -66,7 +66,7 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var10: Any = t8.b.e();
+         val var10: Any = v8.b.e();
          var var3: Int;
          var var4: Int;
          var var5: RecyclerView;
@@ -80,8 +80,8 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
             }
 
             var15 = this.I$2;
-            var4 = this.I$1;
-            var3 = this.I$0;
+            var3 = this.I$1;
+            var4 = this.I$0;
             var8 = this.L$4 as java.util.List;
             var7 = this.L$3 as java.util.Iterator;
             val var9: RecyclerView.RecycledViewPool = this.L$2 as RecyclerView.RecycledViewPool;
@@ -102,30 +102,30 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
             }
 
             var8 = var7.next() as Entry;
-            var3 = (var8.getKey() as java.lang.Number).intValue();
-            var4 = (var8.getValue() as java.lang.Number).intValue();
+            var4 = (var8.getKey() as java.lang.Number).intValue();
+            var3 = (var8.getValue() as java.lang.Number).intValue();
             var8 = new ArrayList();
             var15 = 0;
-            var1 = var17;
             var5 = var13;
+            var1 = var17;
          }
 
          while (true) {
-            while (var15 >= var4) {
+            while (var15 >= var3) {
                if (!var7.hasNext()) {
                   return Unit.a;
                }
 
                var8 = var7.next() as Entry;
-               var3 = (var8.getKey() as java.lang.Number).intValue();
-               var4 = (var8.getValue() as java.lang.Number).intValue();
+               var4 = (var8.getKey() as java.lang.Number).intValue();
+               var3 = (var8.getValue() as java.lang.Number).intValue();
                var8 = new ArrayList();
                var15 = 0;
-               var1 = var1;
                var5 = var5;
+               var1 = var1;
             }
 
-            val var25: RecyclerView.ViewHolder = var6.createViewHolder(var5, var3);
+            val var25: RecyclerView.ViewHolder = var6.createViewHolder(var5, var4);
             q.g(var25, "createViewHolder(...)");
             val var11: MessagePartViewHolder = var25 as MessagePartViewHolder;
             val var26: View = (var25 as MessagePartViewHolder).itemView;
@@ -155,7 +155,7 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
                }
 
                public final Object invokeSuspend(Object var1) {
-                  t8.b.e();
+                  v8.b.e();
                   if (this.label == 0) {
                      s.b(var1);
                      this.$accessoriesViewPool.putRecycledView(this.$viewHolder);
@@ -170,11 +170,11 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
             this.L$2 = var1;
             this.L$3 = var7;
             this.L$4 = var8;
-            this.I$0 = var3;
-            this.I$1 = var4;
+            this.I$0 = var4;
+            this.I$1 = var3;
             this.I$2 = var15;
             this.label = 1;
-            if (V9.f.g(var27, var28, this) === var10) {
+            if (X9.f.g(var27, var28, this) === var10) {
                return var10;
             }
 
@@ -194,7 +194,7 @@ public fun fillChatList(
    q.h(var1, "chatListAdapter");
    q.h(var2, "delegateViewTypes");
    q.h(var3, "chatListViewPool");
-   V9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var2, var1, var0, var3, null) {
+   X9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var2, var1, var0, var3, null) {
       final BaseChatListAdapter $chatListAdapter;
       final RecyclerView.RecycledViewPool $chatListViewPool;
       final java.util.Map<Class<? extends BaseChatListItemDelegate<? extends ChatListItem, ? extends View>>, Integer> $delegateViewTypes;
@@ -228,7 +228,7 @@ public fun fillChatList(
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var12: Any = t8.b.e();
+         val var12: Any = v8.b.e();
          var var3: Int;
          var var4: Int;
          var var5: RecyclerView;
@@ -266,19 +266,19 @@ public fun fillChatList(
                return Unit.a;
             }
 
-            var9 = var8.next() as Entry;
-            val var32: Class = var9.getKey() as Class;
-            var4 = (var9.getValue() as java.lang.Number).intValue();
-            var9 = (Entry)var14.get(var32);
+            val var32: Entry = var8.next() as Entry;
+            var9 = var32.getKey() as Class;
+            var4 = (var32.getValue() as java.lang.Number).intValue();
+            var9 = var14.get(var9);
             q.e(var9);
             var3 = (var9 as java.lang.Number).intValue();
             val var11: ArrayList = new ArrayList();
             var16 = 0;
-            var6 = var18;
             var7 = var14;
             var1 = var22;
             var9 = var11;
             var5 = var20;
+            var6 = var18;
          }
 
          while (true) {
@@ -287,19 +287,19 @@ public fun fillChatList(
                   return Unit.a;
                }
 
-               var9 = var8.next() as Entry;
-               val var35: Class = var9.getKey() as Class;
-               var4 = (var9.getValue() as java.lang.Number).intValue();
-               var9 = (Entry)var7.get(var35);
+               val var35: Entry = var8.next() as Entry;
+               var9 = var35.getKey() as Class;
+               var4 = (var35.getValue() as java.lang.Number).intValue();
+               var9 = var7.get(var9);
                q.e(var9);
                var3 = (var9 as java.lang.Number).intValue();
                val var39: ArrayList = new ArrayList();
                var16 = 0;
-               var6 = var6;
                var7 = var7;
                var1 = var1;
                var9 = var39;
                var5 = var5;
+               var6 = var6;
             }
 
             val var40: RecyclerView.ViewHolder = var6.createViewHolder(var5, var3);
@@ -331,7 +331,7 @@ public fun fillChatList(
                }
 
                public final Object invokeSuspend(Object var1) {
-                  t8.b.e();
+                  v8.b.e();
                   if (this.label == 0) {
                      s.b(var1);
                      this.$chatListViewPool.putRecycledView(this.$viewHolder);
@@ -351,7 +351,7 @@ public fun fillChatList(
             this.I$1 = var3;
             this.I$2 = var16;
             this.label = 1;
-            if (V9.f.g(var38, var41, this) === var12) {
+            if (X9.f.g(var38, var41, this) === var12) {
                return var12;
             }
 

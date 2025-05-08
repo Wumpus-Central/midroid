@@ -1414,6 +1414,11 @@
   "wOr6hI": "Previše prenošenja!",
   "BEWw//": "dvaput dodirni za reprodukciju videa i povećanje",
   "3AS4UF": "Prilaganje datoteka",
+  "vlj5uL": "Imaj na umu – dopustiš li praćenje, moći ćemo personalizirati sadržaj koji vidiš u svojim misijama i nagradama, pa će i tvoj doživljaj biti potpuniji!",
+  "y4HOMj": "Olakšaj Discordu posao - želi biti tvoj slatki dom na internetu",
+  "fpfPTk": "Primaj personalizirane misije koje su izrađene sukladno tvojim interesima",
+  "mH8BIS": "Uvijek možeš ažurirati svoj izbor za ovaj uređaj u postavkama iOS-a. To možeš učiniti u svakom trenutku. Ako dopustiš praćenje, možeš:",
+  "UBpcNz": "Podrži tvrtke i studije za razvoj igara koji ovise o oglasima koji se otkrivaju",
   "QLMGho": [
     [
       1,
@@ -3005,13 +3010,6 @@
   "3lv7q6": "Promijeni izgled svojeg avatara.",
   "ik37ER": "Neka se tvoje ime ističe na serverima i u chatovima.",
   "VhJL7+": "Ovaj će se efekt prikazivati kada druge osobe pregledavaju tvoj profil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " s Nitrom"
-  ],
   "sPvyr6": [
     "Izvorna cijena: ",
     [
@@ -37569,6 +37567,28 @@
   "yO4lAA": "Šesteroznamenkasti autentikacijski kôd/Osmeroznamenkasti rezervni kôd",
   "tARzgo": "Šesteroznamenkasti sigurnosni kôd",
   "fZSi1N": "Rezervni kôd od 8 znakova",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Ovi kôdovi će ti omogućiti ulazak na tvoj korisnički račun u slučaju da izgubiš autentikacijsku aplikaciju; čuvaj ih kao što čuvaš svoje lozinke. Nemoj ih nikome (o)davati i čuvaj ih na nekom sigurnom mjestu."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Svaki kôd se može koristiti samo jednom! Svi ranije generirani kôdovi više neće raditi!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Promijeni detalje korisničkog računa",
   "37S9yc": "Potrebno je pojačati sigurnost i zato te molimo da upišeš ključ koji smo ti poslali na tvoju adresu e-pošte. Trebao bi stići u roku od minute ili dvije.",
   "TjGb4e": "Ključ za verifikaciju",

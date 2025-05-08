@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.contentnode
 
-import ja.d
-import ja.g
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
+import la.d
+import la.g
 
 private object LinkContextDataSerializer : d(G.b(LinkContextData.class)) {
    protected open fun selectDeserializer(element: JsonElement): KSerializer<out LinkContextData> {

@@ -10,7 +10,7 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern

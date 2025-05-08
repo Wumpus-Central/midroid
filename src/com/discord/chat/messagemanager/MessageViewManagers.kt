@@ -48,7 +48,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import m8.w
+import o8.w
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
@@ -124,11 +124,11 @@ public object MessageViewManagers {
             val var7: MessageRow = MessageViewManagers.access$convertRowJsonToMessageRow(MessageViewManagers.INSTANCE, var2);
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var4 as Message;
-            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var5: Context = var1.getContext();
-            q.g(var5, "getContext(...)");
-            var1.setMessage(var6, var8, MessageViewManagers.access$getEventHandler(var3, var7, var5));
+            val var5: Message = var4 as Message;
+            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var8: Context = var1.getContext();
+            q.g(var8, "getContext(...)");
+            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
          }
       }
 
@@ -359,13 +359,13 @@ public object MessageViewManagers {
 
             val var10: MessageBase = var4.getMessage();
             q.f(var10, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
-            val var6: Message = var10 as Message;
-            val var7: MessageContext = MessageContextKt.getMessageContext(var4);
-            val var5: MessageFrame = var4.getMessageFrame();
-            val var11: Context = var1.getContext();
-            q.g(var11, "getContext(...)");
+            val var7: Message = var10 as Message;
+            val var5: MessageContext = MessageContextKt.getMessageContext(var4);
+            val var11: MessageFrame = var4.getMessageFrame();
+            val var6: Context = var1.getContext();
+            q.g(var6, "getContext(...)");
             DecoratedMessageView.setMessage$default(
-               var1, var6, var7, var5, MessageViewManagers.access$getEventHandler(var3, var4, var11), this.componentProvider, null, false, false, 224, null
+               var1, var7, var5, var11, MessageViewManagers.access$getEventHandler(var3, var4, var6), this.componentProvider, null, false, false, 224, null
             );
             ThemeManager.INSTANCE.clearThemeOverride();
          }

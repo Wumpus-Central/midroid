@@ -150,13 +150,13 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
       val var3: java.util.List = this.audioDevices;
       val var2: ArrayList = new ArrayList();
 
-      for (var3 : var3) {
-         val var6: AudioDeviceInfo = var3 as AudioDeviceInfo;
-         val var4: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
+      for (Object var4 : var3) {
+         val var6: AudioDeviceInfo = var4 as AudioDeviceInfo;
+         val var9: java.util.Map = AndroidAudioDeviceKt.getAudioDeviceTypeToSimpleMapping();
          val var1: Int = var6.getType();
          val var12: SimpleDeviceType = SimpleDeviceType.INVALID;
-         if (var4.getOrDefault(var1, var12) != var12) {
-            var2.add(var3);
+         if (var9.getOrDefault(var1, var12) != var12) {
+            var2.add(var4);
          }
       }
 
@@ -234,19 +234,19 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
          public void onAudioDevicesAdded(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var5: DiscordAudioManager = this.this$0;
+               val var7: DiscordAudioManager = this.this$0;
                val var4: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
                val var6: ArrayList = new ArrayList();
                var var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
-                  val var7: AudioDeviceInfo = var1[var2];
+                  val var5: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var6.add(var7);
+                     var6.add(var5);
                   }
                }
 
-               DiscordAudioManager.access$setAudioDevices$p(var5, i.z0(var4, var6));
+               DiscordAudioManager.access$setAudioDevices$p(var7, i.z0(var4, var6));
                DiscordAudioManager.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager this$0;
 
@@ -278,19 +278,19 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
          public void onAudioDevicesRemoved(AudioDeviceInfo[] var1) {
             if (var1 != null && var1.length != 0) {
-               val var4: DiscordAudioManager = this.this$0;
-               val var7: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
-               val var6: ArrayList = new ArrayList();
+               val var7: DiscordAudioManager = this.this$0;
+               val var6: java.util.List = DiscordAudioManager.access$getAudioDevices$p(this.this$0);
+               val var4: ArrayList = new ArrayList();
                val var3: Int = var1.length;
 
                for (int var2 = 0; var2 < var3; var2++) {
                   val var5: AudioDeviceInfo = var1[var2];
                   if (var1[var2].isSink()) {
-                     var6.add(var5);
+                     var4.add(var5);
                   }
                }
 
-               DiscordAudioManager.access$setAudioDevices$p(var4, i.v0(var7, i.V0(var6)));
+               DiscordAudioManager.access$setAudioDevices$p(var7, i.v0(var6, i.V0(var4)));
                DiscordAudioManager.access$notifyListeners(this.this$0, new Function1(this.this$0) {
                   final DiscordAudioManager this$0;
 
@@ -304,15 +304,15 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
                      var1.onAudioDevicesUpdated(i.R0(this.this$0.getAudioDevices()));
                   }
                });
-               val var9: SimpleDeviceType = DiscordAudioManager.access$getDesiredDeviceType$p(this.this$0);
-               val var10: SimpleDeviceType = SimpleDeviceType.DEFAULT;
-               if (var9 != SimpleDeviceType.DEFAULT
+               val var10: SimpleDeviceType = DiscordAudioManager.access$getDesiredDeviceType$p(this.this$0);
+               val var9: SimpleDeviceType = SimpleDeviceType.DEFAULT;
+               if (var10 != SimpleDeviceType.DEFAULT
                   && !DiscordAudioManager.access$getSimpleDevices(this.this$0).contains(DiscordAudioManager.access$getDesiredDeviceType$p(this.this$0))) {
                   if (DiscordAudioManager.access$getDesiredDeviceType$p(this.this$0) === SimpleDeviceType.BLUETOOTH_HEADSET) {
                      DiscordAudioManager.access$getAndroidAudioManager$p(this.this$0).stopBluetoothSco();
                   }
 
-                  DiscordAudioManager.access$setDesiredDeviceType$p(this.this$0, var10);
+                  DiscordAudioManager.access$setDesiredDeviceType$p(this.this$0, var9);
                }
 
                DiscordAudioManager.access$emitEffectiveDevice(this.this$0);
@@ -350,7 +350,7 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
 
    public override fun getEffectiveAudioDevice(): AndroidAudioDevice {
       val var3: SimpleDeviceType = this.getActiveAudioDevice();
-      val var2: SimpleDeviceType = this.desiredDeviceType;
+      val var1: SimpleDeviceType = this.desiredDeviceType;
       if (this.desiredDeviceType === SimpleDeviceType.DEFAULT) {
          return AndroidAudioDevice.Companion.fromSimpleDeviceType(var3);
       } else {
@@ -397,11 +397,11 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
    public override fun setCommunicationModeOn(on: Boolean) {
       this.communicationModeOn = var1;
       this.scoRetryAttempts = 0;
-      val var2: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("setCommunicationModeOn: ");
-      var3.append(var1);
-      Log.i$default(var2, "DiscordAudioManager", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("setCommunicationModeOn: ");
+      var2.append(var1);
+      Log.i$default(var3, "DiscordAudioManager", var2.toString(), null, 4, null);
       if (var1) {
          val var4: Array<AudioDeviceInfo> = this.androidAudioManager.getDevices(2);
          q.e(var4);
@@ -412,10 +412,10 @@ public class DiscordAudioManager(context: Context) : DiscordAudioManagerInterfac
          if (this.desiredDeviceType != SimpleDeviceType.DEFAULT) {
             this.setActiveAudioDevice(this.desiredDeviceType);
          } else {
-            val var7: java.util.Set = this.getSimpleDevices();
-            val var6: SimpleDeviceType = SimpleDeviceType.BLUETOOTH_HEADSET;
-            if (var7.contains(SimpleDeviceType.BLUETOOTH_HEADSET)) {
-               this.desiredDeviceType = var6;
+            val var6: java.util.Set = this.getSimpleDevices();
+            val var7: SimpleDeviceType = SimpleDeviceType.BLUETOOTH_HEADSET;
+            if (var6.contains(SimpleDeviceType.BLUETOOTH_HEADSET)) {
+               this.desiredDeviceType = var7;
                this.androidAudioManager.setSpeakerphoneOn(false);
                this.androidAudioManager.startBluetoothSco();
             } else if (this.getSimpleDevices().contains(SimpleDeviceType.WIRED_HEADSET)) {

@@ -1384,6 +1384,11 @@
   "wOr6hI": "For mange opplastinger!",
   "BEWw//": "dobbelttrykk for å spille av video og forstørre",
   "3AS4UF": "Legg ved filer",
+  "vlj5uL": "Obs! Hvis du tillater sporing, kan vi tilpasse det du ser i Oppdrag og belønninger, sånn at du får en opplevelse som passer deg best mulig.",
+  "y4HOMj": "Bidra til at Discord blir det triveligste stedet å være på nett",
+  "fpfPTk": "Få tilbud om oppdrag som er tilpasset interessene dine",
+  "mH8BIS": "Du kan når som helst endre valget for denne enheten i iOS-innstillingene. Hvis du tillater sporing, kan du:",
+  "UBpcNz": "Bidra til selskaper og spillutviklere som er avhengig av reklame for å bli oppdaget",
   "QLMGho": [
     [
       1,
@@ -2909,13 +2914,6 @@
   "3lv7q6": "Gi avataren et nytt utseende.",
   "ik37ER": "Få navnet ditt til å skille seg ut i mengden på servere og i chatter.",
   "VhJL7+": "Vis denne effekten når andre ser profilen din.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " med Nitro"
-  ],
   "sPvyr6": [
     "Opprinnelig pris: ",
     [
@@ -36288,6 +36286,28 @@
   "yO4lAA": "6-sifret autentiseringskode / 8-sifret sikkerhetskopikode",
   "tARzgo": "6-sifret autentiseringskode",
   "fZSi1N": "Sikkerhetskopikode på 8 tegn",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Med disse kodene kan du få tilgang til kontoen din hvis du mister autentiseringsappen. Beskytt dem som om de var et passord. Ikke del dem med noen, og oppbevar dem på et trygt sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Hver kode kan bare brukes én gang! Tidligere genererte koder virker ikke lenger!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Endre kontoopplysninger",
   "37S9yc": "Som et ekstra sikkerhetstiltak må du angi nøkkelen vi nettopp sendte til e-postadressen din. Den skal være fremme om et minutt eller to.",
   "TjGb4e": "Bekreftelsesnøkkel",

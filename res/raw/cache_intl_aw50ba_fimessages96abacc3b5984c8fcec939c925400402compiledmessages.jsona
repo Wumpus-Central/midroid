@@ -1384,6 +1384,11 @@
   "wOr6hI": "Liian monta latausta!",
   "BEWw//": "toista video ja suurenna kaksoisnapautuksella",
   "3AS4UF": "Liitä tiedostoja",
+  "vlj5uL": "Huomautus – jos sallit seurannan, voimme mukauttaa tehtävissä ja palkinnoissa näkemääsi sisältöä ja varmistaa, että käyttökokemuksesi on mahdollisimman paljon itseäsi kiinnostava!",
+  "y4HOMj": "Auta tukemaan Discordia ja tekemään siitä itsellesi kotoisa paikka Internetissä",
+  "fpfPTk": "Vastaanota kiinnostuksenaihedesi mukaan räätälöityjä tehtäviä",
+  "mH8BIS": "Voit muuttaa valintaasi tässä laitteessa milloin tahansa iOS-asetuksissa. Jos sallit seurannan, voit käyttää seuraavia ominaisuuksia:",
+  "UBpcNz": "Tue yrityksiä ja pelistudioita, jotka edistävät palvelimiensa löytämistä mainoksilla",
   "QLMGho": [
     [
       1,
@@ -2918,13 +2923,6 @@
   "3lv7q6": "Uudista avatarisi ulkoasu.",
   "ik37ER": "Tee nimestäsi joukosta erottuva palvelimilla ja keskusteluissa.",
   "VhJL7+": "Näytä tämä tehoste, kun profiiliasi katsellaan.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " Nitro-tilauksella"
-  ],
   "sPvyr6": [
     "Alkuperäinen hinta: ",
     [
@@ -36389,6 +36387,28 @@
   "yO4lAA": "Kuusinumeroinen todennuskoodi / kahdeksannumeroinen varakoodi",
   "tARzgo": "Kuusinumeroinen todennuskoodi",
   "fZSi1N": "8 numeron pituinen varakoodi",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Näiden koodien avulla voit kirjautua tilillesi, jos menetät todennussovelluksesi. Suojaa koodit vastaavasti kuin salasanasi. Älä jaa niitä kenellekään ja säilytä ne turvallisessa paikassa."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Jokaisen koodin voi käyttää vain kerran! Mikään aikaisemmin luotu koodi ei enää toimi!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Muuta tilin tietoja",
   "37S9yc": "Lisäturvatoimena syötä avain viestistä, jonka lähetimme juuri sähköpostiosoitteeseesi. Viestin pitäisi näkyä parin minuutin kuluessa.",
   "TjGb4e": "Vahvistusavain",

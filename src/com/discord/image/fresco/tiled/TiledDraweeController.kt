@@ -1,9 +1,9 @@
 package com.discord.image.fresco.tiled
 
 import F2.e
-import V9.K
-import V9.f
-import V9.k0
+import X9.K
+import X9.f
+import X9.k0
 import android.content.res.Resources
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
@@ -39,7 +39,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.R(K.c().Z1()));
+      this.scope = g.a(var4.P(K.c().Z1()));
    }
 
    private fun load() {
@@ -82,7 +82,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.g1();
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.h1();
       }
    }
 

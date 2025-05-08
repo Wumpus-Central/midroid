@@ -5,8 +5,8 @@ import android.app.PictureInPictureParams.Builder
 import android.os.Build.VERSION
 import android.util.Rational
 import kotlin.jvm.internal.q
-import m8.r
-import m8.s
+import o8.r
+import o8.s
 
 internal class ExternalPipManager {
    private final var enabled: Boolean
@@ -36,13 +36,13 @@ internal class ExternalPipManager {
          val var10: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var5: ExternalPipManager.Companion = Companion;
+               val var14: ExternalPipManager.Companion = Companion;
                e.a();
-               val var14: Builder = a.a(d.a(), this.aspectRatio);
-               q.g(var14, "setAspectRatio(...)");
-               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var14, false)));
+               val var5: Builder = a.a(d.a(), this.aspectRatio);
+               q.g(var5, "setAspectRatio(...)");
+               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var14, var5, false)));
             } catch (var8: Exception) {
-               val var4: m8.r.a = r.k;
+               val var4: o8.r.a = r.k;
                var3.invoke(r.a(r.b(s.a(var8))));
                return;
             }
@@ -52,25 +52,25 @@ internal class ExternalPipManager {
 
          try {
             if (q.c(var10, java.lang.Boolean.TRUE)) {
-               val var13: m8.r.a = r.k;
+               val var13: o8.r.a = r.k;
                var3.invoke(r.a(r.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var15: m8.r.a = r.k;
+            val var15: o8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var7))));
             return;
          }
 
          try {
-            val var11: m8.r.a = r.k;
+            val var11: o8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var16: m8.r.a = r.k;
+            val var16: o8.r.a = r.k;
             var3.invoke(r.a(r.b(s.a(var6))));
          }
       } else {
-         val var9: m8.r.a = r.k;
+         val var9: o8.r.a = r.k;
          var3.invoke(r.a(r.b(s.a(new Exception("Disabled or unsupported.")))));
       }
    }

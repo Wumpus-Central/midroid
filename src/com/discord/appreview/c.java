@@ -1,6 +1,6 @@
 package com.discord.appreview;
 
-import B5.d;
+import D5.d;
 import com.google.android.gms.tasks.Task;
 
 // $VF: synthetic class

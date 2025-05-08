@@ -3,8 +3,8 @@ package com.discord.reactevents
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
-import m8.w
-import n8.q
+import o8.w
+import p8.q
 
 internal class ReactEventRegistry {
    public final var didExportEvents: Boolean
@@ -18,13 +18,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var3: LinkedHashMap = new LinkedHashMap();
+      val var2: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var1 : this.events.values()) {
-         var3.put(var1, q.m(new Pair[]{w.a("registrationName", var1)}));
+      for (java.lang.String var3 : this.events.values()) {
+         var2.put(var3, q.m(new Pair[]{w.a("registrationName", var3)}));
       }
 
-      return var3;
+      return var2;
    }
 
    public fun getEventName(event: ReactEvent): String {

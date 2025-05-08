@@ -16,8 +16,8 @@ import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import m8.r
-import m8.w
+import o8.r
+import o8.w
 
 @ReactModule(name = "ExternalPip")
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -49,10 +49,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var3: ReactEvents = this.reactEvents;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
+      val var2: ReactEvents = this.reactEvents;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
@@ -66,7 +66,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return n8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return p8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

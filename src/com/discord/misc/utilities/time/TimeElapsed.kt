@@ -5,7 +5,7 @@ import java.util.Date
 import java.util.Locale
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import m8.l
+import o8.l
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    public final val duration: String

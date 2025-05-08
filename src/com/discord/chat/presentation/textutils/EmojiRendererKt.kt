@@ -16,7 +16,7 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import m8.p
+import o8.p
 
 public fun GenericDraweeHierarchyBuilder.handleEmojiSpoiler(rc: RenderContext, revealTransparent: Boolean = false) {
    q.h(var0, "<this>");

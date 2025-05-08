@@ -2,12 +2,12 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
-import fa.f
-import fa.n
-import ia.C0
-import ia.G
-import ia.N
-import ia.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.N
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -83,20 +83,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var4: ChangeType = this.changeType;
-      val var5: Message = this.message;
-      val var2: java.lang.String = this.fileId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UploadProgressRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var4);
-      var3.append(", message=");
-      var3.append(var5);
-      var3.append(", fileId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var5: ChangeType = this.changeType;
+      val var3: Message = this.message;
+      val var4: java.lang.String = this.fileId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UploadProgressRow(index=");
+      var2.append(var1);
+      var2.append(", changeType=");
+      var2.append(var5);
+      var2.append(", message=");
+      var2.append(var3);
+      var2.append(", fileId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -132,11 +132,11 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
          var var7: ChangeType;
          var var10: Any;
          if (var9.y()) {
-            var3 = var9.k(var8, 0);
+            var2 = var9.k(var8, 0);
             var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
             var6 = var9.m(var8, 2, Message.$serializer.INSTANCE, null) as Message;
             var10 = var9.t(var8, 3);
-            var2 = 15;
+            var3 = 15;
          } else {
             var var4: Boolean = true;
             var3 = 0;
@@ -173,10 +173,13 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
                   var4 = false;
                }
             }
+
+            var2 = var3;
+            var3 = var2;
          }
 
          var9.b(var8);
-         return new UploadProgressRow(var2, var3, var7, var6, (java.lang.String)var10, null);
+         return new UploadProgressRow(var3, var2, var7, var6, (java.lang.String)var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: UploadProgressRow) {

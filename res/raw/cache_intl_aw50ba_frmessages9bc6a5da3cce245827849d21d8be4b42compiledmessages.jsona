@@ -1386,6 +1386,11 @@
   "wOr6hI": "Uploads trop nombreux !",
   "BEWw//": "Touche deux fois pour lancer la vidéo et agrandir",
   "3AS4UF": "Joindre des fichiers",
+  "vlj5uL": "Attention : autoriser le suivi nous permet de personnaliser le contenu que tu vois dans tes quêtes et récompenses et de rendre ton expérience aussi pertinente que possible !",
+  "y4HOMj": "Aide Discord à être ton petit nid douillet sur Internet",
+  "fpfPTk": "Reçois des quêtes personnalisées conçues pour tes propres intérêts",
+  "mH8BIS": "Tu peux toujours modifier ton choix pour cet appareil dans tes paramètres iOS à tout moment. Si tu autorises le suivi, tu peux :",
+  "UBpcNz": "Soutiens les entreprises et les studios de jeux vidéo qui comptent sur la publicité pour se faire connaître",
   "QLMGho": [
     [
       1,
@@ -2925,13 +2930,6 @@
   "3lv7q6": "Donne un nouveau look à ton avatar.",
   "ik37ER": "Mets ton nom en valeur dans les serveurs et les conversations.",
   "VhJL7+": "Applique cet effet quand d'autres personnes consultent ton profil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " avec Nitro"
-  ],
   "sPvyr6": [
     "Prix initial : ",
     [
@@ -36399,6 +36397,28 @@
   "yO4lAA": "Code d'authentification à 6 chiffres/Code de sauvegarde à 8 chiffres",
   "tARzgo": "Code d'authentification à 6 chiffres",
   "fZSi1N": "Code de sauvegarde à 8 chiffres",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Ces codes te permettront d'accéder à ton compte si tu perds ton application d'authentification. Protège-les de la même manière que ton mot de passe. Ne les partage jamais avec qui que ce soit et garde-les en sécurité."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Chaque code ne peut être utilisé qu'une seule fois ! Tout code précédemment généré ne fonctionnera plus !"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Changer les détails du compte",
   "37S9yc": "Par mesure de sécurité complémentaire, merci d'entrer la clé que nous venons d'envoyer à ton adresse e-mail. Tu devrais l'avoir reçue d'ici une ou deux minutes.",
   "TjGb4e": "Clé de vérification",

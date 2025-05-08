@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import fa.f
-import fa.n
-import ia.C0
-import ia.G
-import ia.N
-import ia.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.N
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -72,16 +72,16 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
    public override fun toString(): String {
       val var1: Int = this.type;
       val var4: java.lang.String = this.id;
-      val var3: java.util.List = this.items;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MediaGalleryDisplayComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var4);
-      var2.append(", items=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.items;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaGalleryDisplayComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", items=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {

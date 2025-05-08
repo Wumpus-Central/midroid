@@ -1392,6 +1392,11 @@
   "wOr6hI": "For mange uploads!",
   "BEWw//": "tryk to gange for at afspille video og forstørre",
   "3AS4UF": "Vedhæft filer",
+  "vlj5uL": "Vær opmærksom på, at når du tillader sporing, giver du os mulighed for at tilpasse det indhold, du ser, i dine missioner og belønninger og holder din oplevelse så relevant som muligt!",
+  "y4HOMj": "Hjælp med at støtte Discord, så det bliver dit hyggelige hjem på internettet",
+  "fpfPTk": "Modtag personlige missioner, der er skræddersyet til dine relevante interesser",
+  "mH8BIS": "Du kan altid ændre dit valg for denne enhed i dine iOS-indstillinger. Hvis du tillader sporing, kan du:",
+  "UBpcNz": "Støt virksomheder og spilstudier, der er afhængige af annoncer for at blive opdaget",
   "QLMGho": [
     [
       1,
@@ -2923,13 +2928,6 @@
   "3lv7q6": "Giv din avatar et nyt udseende.",
   "ik37ER": "Få dit navn til at skille sig ud på servere og i chats.",
   "VhJL7+": "Vis denne effekt, når andre ser din profil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " med Nitro"
-  ],
   "sPvyr6": [
     "Normalpris: ",
     [
@@ -36393,6 +36391,28 @@
   "yO4lAA": "6-cifret godkendelseskode / 8-cifret backup-kode",
   "tARzgo": "6-cifret autentificeringskode",
   "fZSi1N": "Backup-kode med 8 cifre",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Disse koder lader dig komme ind på din konto, hvis du mister din autorisations-app. Beskyt dem, som du ville beskytte din adgangskode. Du må ikke oplyse dem til andre og skal opbevare dem på et sikkert sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Hver kode kan kun bruges én gang. Eventuelle tidligere genererede koder virker ikke længere."
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Ændr kontooplysninger",
   "37S9yc": "Som en ekstra sikkerhedsforanstaltning bedes du indtaste den kode, vi netop har sendt til din e-mailadresse. Du bør modtage den i løbet af et par minutter.",
   "TjGb4e": "Bekræftelseskode",

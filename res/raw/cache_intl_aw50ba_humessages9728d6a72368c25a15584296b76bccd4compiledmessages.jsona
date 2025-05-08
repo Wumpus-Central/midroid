@@ -1383,6 +1383,11 @@
   "wOr6hI": "Túl sok feltöltés!",
   "BEWw//": "koppints duplán a videó lejátszásához és a nagyításhoz",
   "3AS4UF": "Fájlok csatolása",
+  "vlj5uL": "Figyelem – ha engedélyezed a követést, személyre szabhatjuk a Küldetések és jutalmak területen látott tartalmakat, és a lehető legrelevánsabb élményben lehet részed!",
+  "y4HOMj": "Segíthetsz a Discord támogatásában, hogy otthonos hely legyen számodra az interneten",
+  "fpfPTk": "A releváns érdeklődési köreid alapján kaphatsz személyre szabott küldetéseket",
+  "mH8BIS": "Az iOS-beállításoknál bármikor módosíthatod a döntésedet erre az eszközre vonatkozóan. A következőkre nyílik lehetőséged, ha engedélyezed a követést:",
+  "UBpcNz": "Támogathatod azokat a vállalkozásokat és játékstúdiókat, amelyek hirdetéseken keresztül igyekeznek elérni, hogy felfedezzék őket",
   "QLMGho": [
     [
       1,
@@ -2919,13 +2924,6 @@
   "3lv7q6": "Új megjelenést kölcsönözhetsz a profilképednek.",
   "ik37ER": "Kitűnhet a neved a tömegből a szervereken és a csevegésekben.",
   "VhJL7+": "Megjelenítheted ezt az effektust, amikor mások megtekintik a profilodat.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " Nitro-előfizetéssel"
-  ],
   "sPvyr6": [
     "Eredeti ár: ",
     [
@@ -36302,6 +36300,28 @@
   "yO4lAA": "6 jegyű hitelesítő kód/8 jegyű biztonsági kód",
   "tARzgo": "6 jegyű hitelesítő kód",
   "fZSi1N": "8 számjegyű tartalékkód",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Ezek a kódok lehetővé teszik, hogy beléphess a fiókodba, ha elvesztenéd a hitelesítő alkalmazásod. Vigyázz rájuk úgy, mint egy jelszóra! Ne oszd meg őket senkivel, és tartsd őket biztonságos helyen!"
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Minden kód csak egyszer használható fel! A korábbi kódok érvénytelenné válnak!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Felhasználói adatok módosítása",
   "37S9yc": "További biztonsági intézkedésként, kérjük, írd be a kulcsot, amit most elküldtünk az e-mail-címedre. Egy vagy két percen belül meg kell érkeznie.",
   "TjGb4e": "Hitelesítő kulcs",

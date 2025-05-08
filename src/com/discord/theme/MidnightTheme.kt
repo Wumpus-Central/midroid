@@ -5,7 +5,7 @@ import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import m8.l
+import o8.l
 
 internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int

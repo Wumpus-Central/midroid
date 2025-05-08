@@ -22,8 +22,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import m8.p
-import m8.s
+import o8.p
+import o8.s
 
 public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
    : BaseChatListAdapter {
@@ -57,10 +57,10 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
             access$processNextUpdate(this);
          } else if (!access$getUpdateQueue$p(this).isEmpty() && !access$isProcessingUpdate$p(this)) {
-            val var2: Log = Log.INSTANCE;
-            val var3: java.lang.String = access$getLOGGING_TAG$cp();
-            q.g(var3, "access$getLOGGING_TAG$cp(...)");
-            Log.w$default(var2, var3, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
+            val var3: Log = Log.INSTANCE;
+            val var2: java.lang.String = access$getLOGGING_TAG$cp();
+            q.g(var2, "access$getLOGGING_TAG$cp(...)");
+            Log.w$default(var3, var2, "Skipped a chat list update. adapter may be frozen.", null, 4, null);
          }
       }
    }
@@ -231,7 +231,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          this.getDoLayout().invoke();
          access$syncFirstMessageItemPosition(this);
          var1.getPostCommit().invoke();
-         access$setProcessNextUpdateJob$p(this, V9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
+         access$setProcessNextUpdateJob$p(this, X9.f.d(kotlinx.coroutines.g.b(), null, null, new Function2(this, null) {
             int label;
             final ChannelChatListAdapter this$0;
 
@@ -249,7 +249,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
 
             public final Object invokeSuspend(Object var1) {
-               t8.b.e();
+               v8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   ChannelChatListAdapter.access$setProcessingUpdate$p(this.this$0, false);
@@ -261,11 +261,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
             }
          }, 3, null));
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Expected to be on android main thread. Current: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 
@@ -370,7 +370,7 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
       fun {
          val var0: Array<ChannelChatListAdapter.PortalViewUpdateType> = $values();
          $VALUES = var0;
-         $ENTRIES = u8.a.a(var0);
+         $ENTRIES = w8.a.a(var0);
       }
 
       @JvmStatic

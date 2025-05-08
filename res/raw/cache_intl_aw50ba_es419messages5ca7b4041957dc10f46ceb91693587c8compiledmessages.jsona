@@ -2945,13 +2945,6 @@
   "3lv7q6": "Dale un nuevo estilo a tu avatar.",
   "ik37ER": "Destaca tu nombre en chats y servidores.",
   "VhJL7+": "Muestra este efecto cuando otras personas vean tu perfil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " con Nitro"
-  ],
   "sPvyr6": [
     "Precio original: ",
     [
@@ -36039,6 +36032,28 @@
   "yO4lAA": "código de autenticación de 6 dígitos/código de respaldo de 8 dígitos",
   "tARzgo": "código de autenticación de 6 dígitos",
   "fZSi1N": "código de respaldo de 8 dígitos",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Estos códigos te permitirán acceder a tu cuenta si pierdes tu app de autenticación. Son muy importantes, así que no los pierdas, no los compartas con nadie y guárdalos en un lugar seguro."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "¡Cada código solo se puede usar una vez! ¡Los códigos generados anteriormente ya no funcionarán!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Cambiar datos de la cuenta",
   "37S9yc": "Como medida de seguridad adicional, ingresa la clave que acabamos de enviar a tu dirección de correo electrónico. Deberías recibirla en uno o dos minutos.",
   "TjGb4e": "Clave de verificación",

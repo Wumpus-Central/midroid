@@ -15,7 +15,7 @@ import com.facebook.react.bridge.ReadableMap
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import m8.l
+import o8.l
 
 public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : NativeMobileVoiceOverlayModuleSpec {
    private final val mobileVoiceOverlay: MobileVoiceOverlay
@@ -64,10 +64,10 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
                   val var7: Promise = this.$promise;
-                  val var6: WindowUtils = WindowUtils.INSTANCE;
-                  val var5: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  q.g(var5, "access$getReactApplicationContext(...)");
-                  var7.resolve(var6.canDrawOverlay(var5));
+                  val var5: WindowUtils = WindowUtils.INSTANCE;
+                  val var6: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  q.g(var6, "access$getReactApplicationContext(...)");
+                  var7.resolve(var5.canDrawOverlay(var6));
                }
             }
 

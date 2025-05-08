@@ -13,7 +13,7 @@ import com.th3rdwave.safeareacontext.SafeAreaProvider
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 @ReactModule(name = "DCDSafeArea")
 public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeAreaViewManagerInterface<SafeAreaProvider> {

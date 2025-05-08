@@ -1378,6 +1378,11 @@
   "wOr6hI": "Prea multe încărcări!",
   "BEWw//": "atinge de două ori pentru a reda videoclipul și a mări",
   "3AS4UF": "Atașează fișiere",
+  "vlj5uL": "Atenție: Dacă accepți să te urmărim, îți putem personaliza conținutul din misiuni și recompense, ca să vezi ce e mai relevant!",
+  "y4HOMj": "Ajută Discord să fie un loc unde te simți ca acasă pe internet",
+  "fpfPTk": "Primești misiuni personalizate care se potrivesc cu interesele tale relevante",
+  "mH8BIS": "Poți oricând să-ți actualizezi alegerea pentru acest dispozitiv din setările iOS. Dacă permiți urmărirea, poți să:",
+  "UBpcNz": "Susții companiile și studiourile de jocuri care se bazează pe reclame pentru a se face cunoscute",
   "QLMGho": [
     [
       1,
@@ -2900,13 +2905,6 @@
   "3lv7q6": "Dă-i avatarului tău o nouă înfățișare.",
   "ik37ER": "Fă-ți numele să iasă în evidență în servere și chaturi.",
   "VhJL7+": "Afișează acest efect atunci când alții îți văd profilul.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " cu Nitro"
-  ],
   "sPvyr6": [
     "Preț inițial: ",
     [
@@ -36332,6 +36330,28 @@
   "yO4lAA": "Cod de autentificare din 6 cifre sau cod de rezervă din 8 cifre",
   "tARzgo": "Cod de autentificare de 6 cifre",
   "fZSi1N": "Cod de rezervă din 8 cifre",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Aceste coduri îți vor permite să intri în cont în cazul în care îți pierzi aplicația de autentificare, deci protejează-le ca și cum ar fi parole. Nu le comunica nimănui și ține-le într-un loc sigur."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Fiecare cod poate fi folosit numai o dată! Codurile generate anterior nu mai funcționează!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Modifică detaliile contului",
   "37S9yc": "Ca măsură suplimentară de securitate, introdu codul pe care tocmai ți l-am trimis pe adresa de e-mail. Ar trebui să-l primești în câteva minute.",
   "TjGb4e": "Cod de verificare",

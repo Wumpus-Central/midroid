@@ -1386,6 +1386,11 @@
   "wOr6hI": "Muitos uploads!",
   "BEWw//": "toque duplo para reproduzir vídeo e ampliar",
   "3AS4UF": "Anexar arquivos",
+  "vlj5uL": "Atenção — permitir o rastreamento nos permite personalizar o conteúdo que você vê em suas missões e recompensas e otimizar a sua experiência!",
+  "y4HOMj": "Ajudar o Discord a ser o seu canto aconchegante da internet",
+  "fpfPTk": "Receber missões personalizadas, criadas com base nos seus interesses",
+  "mH8BIS": "Você pode atualizar sua escolha para este dispositivo nas configurações do iOS a qualquer momento. Caso o rastreamento esteja ativado, você pode:",
+  "UBpcNz": "Apoiar empresas e estúdios de jogos que contam com anúncios para serem descobertos",
   "QLMGho": [
     [
       1,
@@ -2921,13 +2926,6 @@
   "3lv7q6": "Renove o visual do seu avatar.",
   "ik37ER": "Faça seu nome se destacar em servidores e chats.",
   "VhJL7+": "Exiba esse efeito quando visualizarem seu perfil.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " com Nitro"
-  ],
   "sPvyr6": [
     "Preço original: ",
     [
@@ -36398,6 +36396,28 @@
   "yO4lAA": "Código de verificação de 6 dígitos/código de backup de 8 dígitos",
   "tARzgo": "Código de verificação de 6 dígitos",
   "fZSi1N": "Código de recuperação de 8 dígitos",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Estes códigos permitirão que você entre em sua conta caso perca seu aplicativo de verificação, proteja-os como você protegeria sua senha. Nãos os compartilhe com ninguém e mantenha-os em um lugar seguro."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Cada código só pode ser usado uma vez! Qualquer código gerado anteriormente não funciona mais!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Alterar detalhes da conta",
   "37S9yc": "Como uma medida de segurança adiciona, insira a chave que acabamos de enviar para seu endereço de e-mail. Você deve encontrá-la em alguns minutos.",
   "TjGb4e": "Chave de verificação",

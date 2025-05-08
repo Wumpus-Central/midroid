@@ -46,14 +46,14 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
             var var3: Int = var5;
             if (var4 >= 20) {
                while (var3 < 10) {
-                  val var12: java.util.Map = this.viewCache;
-                  val var13: java.lang.String = ActionRowComponent.class.getSimpleName();
-                  q.g(var13, "getSimpleName(...)");
-                  val var11: Any = var12.get(var13);
+                  val var13: java.util.Map = this.viewCache;
+                  val var12: java.lang.String = ActionRowComponent.class.getSimpleName();
+                  q.g(var12, "getSimpleName(...)");
+                  val var11: Any = var13.get(var12);
                   var var10: Any = var11;
                   if (var11 == null) {
                      var10 = new ArrayList();
-                     var12.put(var13, var10);
+                     var13.put(var12, var10);
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
@@ -62,14 +62,14 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                break;
             }
 
-            val var7: java.util.Map = this.viewCache;
-            val var8: java.lang.String = ButtonComponent.class.getSimpleName();
-            q.g(var8, "getSimpleName(...)");
-            val var6: Any = var7.get(var8);
+            val var8: java.util.Map = this.viewCache;
+            val var7: java.lang.String = ButtonComponent.class.getSimpleName();
+            q.g(var7, "getSimpleName(...)");
+            val var6: Any = var8.get(var7);
             var var9: Any = var6;
             if (var6 == null) {
                var9 = new ArrayList();
-               var7.put(var8, var9);
+               var8.put(var7, var9);
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));

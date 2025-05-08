@@ -577,26 +577,26 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
 
       public override fun toString(): String {
          val var2: Int = this.backgroundSize;
-         val var4: Drawable = this.backgroundDrawable;
+         val var7: Drawable = this.backgroundDrawable;
          val var3: Int = this.cancelButtonSize;
-         val var7: Int = this.primaryColor;
-         val var1: Int = this.progressIndicatorSize;
-         val var6: Int = this.trackColor;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("ProgressViewConfig(backgroundSize=");
-         var5.append(var2);
-         var5.append(", backgroundDrawable=");
-         var5.append(var4);
-         var5.append(", cancelButtonSize=");
-         var5.append(var3);
-         var5.append(", primaryColor=");
-         var5.append(var7);
-         var5.append(", progressIndicatorSize=");
-         var5.append(var1);
-         var5.append(", trackColor=");
-         var5.append(var6);
-         var5.append(")");
-         return var5.toString();
+         val var5: Int = this.primaryColor;
+         val var4: Int = this.progressIndicatorSize;
+         val var1: Int = this.trackColor;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("ProgressViewConfig(backgroundSize=");
+         var6.append(var2);
+         var6.append(", backgroundDrawable=");
+         var6.append(var7);
+         var6.append(", cancelButtonSize=");
+         var6.append(var3);
+         var6.append(", primaryColor=");
+         var6.append(var5);
+         var6.append(", progressIndicatorSize=");
+         var6.append(var4);
+         var6.append(", trackColor=");
+         var6.append(var1);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

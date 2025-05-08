@@ -2,10 +2,10 @@ package com.discord.primitives
 
 import android.os.Parcel
 import android.os.Parcelable
-import fa.f
-import ia.C0
-import ia.G
-import ia.G.a
+import ha.f
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -109,7 +109,7 @@ public inline class MessageId : Parcelable {
          q.h(var2, "value");
          var1 = var1.y(this.getDescriptor());
          if (var1 != null) {
-            var1.E(var2);
+            var1.F(var2);
          }
       }
 

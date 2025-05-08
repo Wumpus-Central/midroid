@@ -27,14 +27,14 @@ internal object SystemLogReport {
 
    private fun recordBreadcrumb(msg: String, category: String) {
       val var5: Log = Log.INSTANCE;
-      val var3: java.lang.String = TAG;
+      val var4: java.lang.String = TAG;
       q.g(TAG, "TAG");
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Breadcrumb, [");
-      var4.append(var2);
-      var4.append("]: ");
-      var4.append(var1);
-      Log.i$default(var5, var3, var4.toString(), null, 4, null);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Breadcrumb, [");
+      var3.append(var2);
+      var3.append("]: ");
+      var3.append(var1);
+      Log.i$default(var5, var4, var3.toString(), null, 4, null);
    }
 
    public fun recordSentryCrash(context: Context, event: SentryEvent) {
@@ -128,16 +128,16 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var6: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-            val var7: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(this.$context);
-            val var9: Function3 = this.$cb;
-            val var10: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
+            val var7: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+            val var9: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(this.$context);
+            val var10: Function3 = this.$cb;
+            val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var9.invoke(var10, var1, var7);
-            var6.clear(this.$context);
+            var10.invoke(var6, var1, var9);
+            var7.clear(this.$context);
          }
       });
    }
@@ -253,15 +253,15 @@ internal object SystemLogReport {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.message;
-         val var1: java.lang.String = this.callStackTrace;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("SentryCrashData(message=");
-         var3.append(var2);
-         var3.append(", callStackTrace=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.message;
+         val var2: java.lang.String = this.callStackTrace;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("SentryCrashData(message=");
+         var1.append(var3);
+         var1.append(", callStackTrace=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

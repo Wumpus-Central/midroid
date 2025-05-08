@@ -75,11 +75,11 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun configureSpoilerOverlay(label: String) {
-      val var3: View = this.binding.spoiler.getOverlayView();
-      val var2: SpoilerOverlayView = this.binding.spoiler;
+      val var2: View = this.binding.spoiler.getOverlayView();
+      val var3: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
-      var2.setVisibility(0);
-      this.binding.spoiler.configure(var1, new Function0(this, var3) {
+      var3.setVisibility(0);
+      this.binding.spoiler.configure(var1, new Function0(this, var2) {
          final View $overlayView;
          final SpoilerView this$0;
 

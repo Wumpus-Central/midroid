@@ -55,13 +55,13 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
 
    private fun configureSpoiler(component: ContainerComponent, componentContext: ComponentContext) {
       val var6: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var5: java.lang.String = var2.getContainerId();
-      val var4: java.lang.String = var1.getId();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ContainerComponent(");
-      var7.append(var4);
-      var7.append(")");
-      val var11: SpoilerAttributes = var6.forGenericMedia(var1, var5, var7.toString(), "content", null);
+      val var4: java.lang.String = var2.getContainerId();
+      val var7: java.lang.String = var1.getId();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ContainerComponent(");
+      var5.append(var7);
+      var5.append(")");
+      val var11: SpoilerAttributes = var6.forGenericMedia(var1, var4, var5.toString(), "content", null);
       var var10: SpoilerConfig = null;
       if (var11 != null) {
          var10 = SpoilerAttributes.configure$default(var11, new Function0(var2, this) {

@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list
 
-import V9.K
+import X9.K
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -21,9 +21,9 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
-import m8.s
-import m8.w
-import n8.q
+import o8.s
+import o8.w
+import p8.q
 
 public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandler, messageComponentProvider: () -> ComponentProvider)
    : com.hannesdorfmann.adapterdelegates4.c,
@@ -90,7 +90,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
 
       public fun prefill(context: Context) {
          kotlin.jvm.internal.q.h(var1, "context");
-         V9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
+         X9.f.d(kotlinx.coroutines.g.a(K.a()), null, null, new Function2(var1, null) {
             final Context $context;
             int label;
 
@@ -108,7 +108,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
             }
 
             public final Object invokeSuspend(Object var1) {
-               t8.b.e();
+               v8.b.e();
                if (this.label == 0) {
                   s.b(var1);
                   if (ReactAsset.Launch.wasSet(this.$context) && I18nCache.INSTANCE.wasSet(this.$context, I18nMessage.HIGHLIGHT)) {

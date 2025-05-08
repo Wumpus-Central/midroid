@@ -10,7 +10,7 @@ import com.facebook.react.viewmanagers.PassthroughTouchViewManagerInterface
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import m8.w
+import o8.w
 
 @ReactModule(name = "PassthroughTouchView")
 internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchViewGroup>, PassthroughTouchViewManagerInterface<PassthroughTouchViewGroup> {

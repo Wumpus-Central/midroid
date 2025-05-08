@@ -1408,6 +1408,26 @@
   "wOr6hI": "Too many uploads!",
   "BEWw//": "double tap to play video and enlarge",
   "3AS4UF": "Attach Files",
+  "vlj5uL": "Heads up — allowing tracking lets us personalize the content you see in your Quests & Rewards and keeps your experience as relevant as possible!",
+  "1dqa3d": "Wanna level up? Enabling tracking helps us make your experiences as rewarding and relevant as possible! You can opt out anytime in your iOS settings.",
+  "acNnra": "Just a quick ping - Allowing tracking helps us show you Quests that you’re actually into! You can opt out anytime in your iOS settings",
+  "Cq8QKS": "Player checkpoint - Allowing tracking personalizes your experience and ensures you have a rewarding experience. You can opt out anytime in your iOS settings.",
+  "y4HOMj": "Help support Discord to be your cozy home on the internet",
+  "YW0z09": "You’ll help support Discord to be your cozy home on the internet",
+  "xaXauL": "Discord continues to be your cozy home on the internet",
+  "oD52ER": "Ensure Discord continues to be your cozy home on the internet",
+  "fpfPTk": "Receive personalized Quests that are crafted to your relevant interests",
+  "ZxkYWV": "We’ll personalize Quests to reflect your relevant interests",
+  "2xEEtr": "Quests will be personalized to offer you the rewards you want",
+  "nvVy39": "Receive Quests that match your interests",
+  "mH8BIS": "You can always update your choice for this device in your iOS settings at any time. If you allow tracking, you can:",
+  "1xzDm5": "Allowing tracking means:",
+  "P9bOBQ": "If you allow tracking:",
+  "b0WurK": "Allowing tracking means you will:",
+  "UBpcNz": "Support businesses and game studios that rely on ads for discovery",
+  "TSMwsr": "You’ll back game studios who rely on ads for discovery",
+  "mE2qtL": "Businesses and game studios you love can be discovered",
+  "QNWJs7": "Back businesses and game studios who rely on ads for discovery",
   "QLMGho": [
     [
       1,
@@ -2985,13 +3005,6 @@
   "3lv7q6": "Give your avatar a new look.",
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " with Nitro"
-  ],
   "sPvyr6": [
     "Original price: ",
     [
@@ -3122,12 +3135,12 @@
       8,
       "$b",
       [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the “Virtual Goods” section ",
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
         [
           8,
           "$link",
           [
-            "here"
+            "“Virtual Goods” section"
           ],
           [
             [
@@ -3157,6 +3170,7 @@
   ],
   "2NxdjY": "You have been gifted a Profile Effect!",
   "pWG4zc": "Shop",
+  "5upuq6": "Discord Shop",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -30198,6 +30212,7 @@
     ],
     ". If you think it's extra cool, keep it with Nitro."
   ],
+  "EMp8/P": "You Claimed this Reward",
   "23SS+/": "Done",
   "SLZMi4": "Get Code",
   "srzsU1": "Your Reward Code",
@@ -37217,6 +37232,28 @@
   "yO4lAA": "6-digit authentication code/8-digit backup code",
   "tARzgo": "6-digit authentication code",
   "fZSi1N": "8-digit backup code",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "These codes will allow you to enter your account if you lose your auth app, protect them like you would protect your password. Do not share them with anyone and keep them somewhere safe."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Each code can only be used once! Any previously generated codes no longer work!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "iVTs6u": [
     [
       8,
