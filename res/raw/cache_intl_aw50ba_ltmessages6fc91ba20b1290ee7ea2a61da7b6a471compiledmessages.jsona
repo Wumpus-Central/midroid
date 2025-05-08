@@ -37427,6 +37427,28 @@
   "yO4lAA": "6 skaitmenų autentifikavimo kodas / 8 skaitmenų atsarginis kodas",
   "tARzgo": "6 skaitmenų autentifikacijos kodas",
   "fZSi1N": "8 skaitmenų atkūrimo kodas",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Šie kodai padės prisijungti prie paskyros, jei prarasi savo autentifikavimo programėlę, saugok juos kaip savo slaptažodį. Su niekuo jais nesidalyk ir laikyk juos saugioje vietoje."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Kiekvienas kodas gali būti panaudotas vieną kartą! Jokie anksčiau sugeneruoti kodai nebeveiks!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Keisti paskyros duomenis",
   "37S9yc": "Dėl papildomo saugumo įvesk raktą, kurį išsiuntėme tavo el. pašto adresu. Turėtum jį gauti per vieną ar dvi minutes.",
   "TjGb4e": "Patvirtinimo raktas",

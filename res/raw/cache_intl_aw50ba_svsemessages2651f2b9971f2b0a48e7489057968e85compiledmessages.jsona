@@ -36222,6 +36222,28 @@
   "yO4lAA": "6-siffrig autentiseringskod/8-siffrig reservkod",
   "tARzgo": "6-siffrig autentiseringskod",
   "fZSi1N": "Åttasiffrig reservkod",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Dessa koder ger dig åtkomst till ditt konto om du förlorar din 2FA-app. Skydda dem på samma sätt som du skyddar ett lösenord. Dela dem inte med någon och förvara dem på ett säkert ställe."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "En kod kan endast användas en gång. Alla tidigare genererade koder blir ogiltiga!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Ändra kontouppgifter",
   "37S9yc": "Som en extra säkerhetsåtgärd vill vi att du anger nyckeln vi just skickade till din e-postadress. Den borde komma om en minut eller två.",
   "TjGb4e": "Verifieringsnyckel",

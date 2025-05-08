@@ -36232,6 +36232,28 @@
   "yO4lAA": "6 haneli doğrulama kodu/8 haneli yedek kod",
   "tARzgo": "6 haneli doğrulama kodu",
   "fZSi1N": "8 haneli yedek kod",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Bu kodlar eğer doğrulama uygulamasını kaybedersen hesabına girmene imkân verecek. Bunları şifren gibi koru, kimseyle paylaşma ve güvenli bir yerde sakla."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Her bir kod sadece bir kere kullanılabilir! Önceden oluşturulmuş hiçbir kod çalışmayacaktır!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Hesap detaylarını değiştir",
   "37S9yc": "Bir güvenlik önlemi olarak lütfen az önce e-posta adresine gönderdiğimiz anahtarı gir. Birkaç dakika içinde gelmiş olmalı.",
   "TjGb4e": "Doğrulama anahtarı",

@@ -37472,6 +37472,28 @@
   "yO4lAA": "6místný ověřovací kód / 8místný záložní kód",
   "tARzgo": "6místný ověřovací kód",
   "fZSi1N": "8místný záložní kód",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "S těmito kódy se budeš moct přihlásit ke svému účtu, pokud ztratíš ověřovací aplikaci. Chraň je, jako by se jednalo o tvé heslo. S nikým je nesdílej a uchovávej je v bezpečí."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Každý kód lze použít jenom jednou! Všechny dříve vygenerované kódy přestávají platit!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Změnit podrobnosti účtu",
   "37S9yc": "V zájmu vyšší bezpečnosti zadej klíč, který jsme ti právě poslali na tvůj e-mail. Zpráva by ti měla přijít každým okamžikem.",
   "TjGb4e": "Ověřovací klíč",

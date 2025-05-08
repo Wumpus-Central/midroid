@@ -37326,6 +37326,28 @@
   "yO4lAA": "6-cyfrowy kod uwierzytelniający / 8-cyfrowy zapasowy kod",
   "tARzgo": "6-cyfrowy kod uwierzytelniający",
   "fZSi1N": "8-cyfrowy kod zapasowy",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Kody te pozwalają na zalogowanie się na Twoje konto w przypadku zgubienia aplikacji uwierzytelniającej – chroń je jak hasło. Nie udostępniaj ich nikomu i trzymaj je w bezpiecznym miejscu."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Każdy kod może być użyty tylko raz! Wszystkie poprzednie kody nie będą już działać!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Zmień szczegóły konta",
   "37S9yc": "W ramach dodatkowego zabezpieczenia wprowadź klucz, który wysłaliśmy właśnie na Twój adres e-mail. Powinien on dotrzeć za kilka minut.",
   "TjGb4e": "Klucz weryfikacji",

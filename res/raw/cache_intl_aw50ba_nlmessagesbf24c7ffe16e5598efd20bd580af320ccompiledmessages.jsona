@@ -36309,6 +36309,28 @@
   "yO4lAA": "6-cijferige authenticatiecode/8-cijferige back-upcode",
   "tARzgo": "6-cijferige authenticatiecode",
   "fZSi1N": "Back-upcode van 8 tekens",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Met deze codes krijg je toegang tot je account als je je auth-app kwijtraakt. Beveilig ze alsof het wachtwoorden zijn. Deel ze met niemand en bewaar ze op een veilige plek."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Elke code kan maar één keer worden gebruikt! Alle eerder gegenereerde codes werken niet meer!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Accountdetails veranderen",
   "37S9yc": "Als extra veiligheidsmaatregel moet je de code invoeren die we net naar je hebben gemaild. Je ontvangt hem binnen een minuut of twee.",
   "TjGb4e": "Verificatiecode",

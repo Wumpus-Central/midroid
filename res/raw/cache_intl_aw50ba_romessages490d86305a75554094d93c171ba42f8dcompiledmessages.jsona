@@ -36269,6 +36269,28 @@
   "yO4lAA": "Cod de autentificare din 6 cifre sau cod de rezervă din 8 cifre",
   "tARzgo": "Cod de autentificare de 6 cifre",
   "fZSi1N": "Cod de rezervă din 8 cifre",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Aceste coduri îți vor permite să intri în cont în cazul în care îți pierzi aplicația de autentificare, deci protejează-le ca și cum ar fi parole. Nu le comunica nimănui și ține-le într-un loc sigur."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Fiecare cod poate fi folosit numai o dată! Codurile generate anterior nu mai funcționează!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Modifică detaliile contului",
   "37S9yc": "Ca măsură suplimentară de securitate, introdu codul pe care tocmai ți l-am trimis pe adresa de e-mail. Ar trebui să-l primești în câteva minute.",
   "TjGb4e": "Cod de verificare",

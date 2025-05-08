@@ -36225,6 +36225,28 @@
   "yO4lAA": "6-sifret autentiseringskode / 8-sifret sikkerhetskopikode",
   "tARzgo": "6-sifret autentiseringskode",
   "fZSi1N": "Sikkerhetskopikode på 8 tegn",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Med disse kodene kan du få tilgang til kontoen din hvis du mister autentiseringsappen. Beskytt dem som om de var et passord. Ikke del dem med noen, og oppbevar dem på et trygt sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Hver kode kan bare brukes én gang! Tidligere genererte koder virker ikke lenger!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Endre kontoopplysninger",
   "37S9yc": "Som et ekstra sikkerhetstiltak må du angi nøkkelen vi nettopp sendte til e-postadressen din. Den skal være fremme om et minutt eller to.",
   "TjGb4e": "Bekreftelsesnøkkel",

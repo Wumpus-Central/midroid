@@ -36335,6 +36335,28 @@
   "yO4lAA": "Código de verificação de 6 dígitos/código de backup de 8 dígitos",
   "tARzgo": "Código de verificação de 6 dígitos",
   "fZSi1N": "Código de recuperação de 8 dígitos",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Estes códigos permitirão que você entre em sua conta caso perca seu aplicativo de verificação, proteja-os como você protegeria sua senha. Nãos os compartilhe com ninguém e mantenha-os em um lugar seguro."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Cada código só pode ser usado uma vez! Qualquer código gerado anteriormente não funciona mais!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Alterar detalhes da conta",
   "37S9yc": "Como uma medida de segurança adiciona, insira a chave que acabamos de enviar para seu endereço de e-mail. Você deve encontrá-la em alguns minutos.",
   "TjGb4e": "Chave de verificação",

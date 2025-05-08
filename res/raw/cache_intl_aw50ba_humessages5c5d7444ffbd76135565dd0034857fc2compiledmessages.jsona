@@ -36238,6 +36238,28 @@
   "yO4lAA": "6 jegyű hitelesítő kód/8 jegyű biztonsági kód",
   "tARzgo": "6 jegyű hitelesítő kód",
   "fZSi1N": "8 számjegyű tartalékkód",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Ezek a kódok lehetővé teszik, hogy beléphess a fiókodba, ha elvesztenéd a hitelesítő alkalmazásod. Vigyázz rájuk úgy, mint egy jelszóra! Ne oszd meg őket senkivel, és tartsd őket biztonságos helyen!"
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Minden kód csak egyszer használható fel! A korábbi kódok érvénytelenné válnak!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Felhasználói adatok módosítása",
   "37S9yc": "További biztonsági intézkedésként, kérjük, írd be a kulcsot, amit most elküldtünk az e-mail-címedre. Egy vagy két percen belül meg kell érkeznie.",
   "TjGb4e": "Hitelesítő kulcs",

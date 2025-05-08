@@ -36311,6 +36311,28 @@
   "yO4lAA": "Codice di verifica a 6 cifre/codice di backup a 8 cifre",
   "tARzgo": "Codice di verifica a 6 cifre",
   "fZSi1N": "Codice di backup di 8 cifre",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Questi codici ti permettono di accedere al tuo account in caso smarrissi l'app di verifica, quindi proteggili come faresti con una password. Non condividerli con nessuno e conservali in un posto sicuro."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Ciascun codice può essere usato una volta sola! Generare nuovi codici farà scadere quelli precedenti!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Cambia i dettagli dell'account",
   "37S9yc": "Come ulteriore misura di sicurezza, inserisci il codice che abbiamo inviato al tuo indirizzo e-mail. Arriverà tra un paio di minuti.",
   "TjGb4e": "Codice di verifica",

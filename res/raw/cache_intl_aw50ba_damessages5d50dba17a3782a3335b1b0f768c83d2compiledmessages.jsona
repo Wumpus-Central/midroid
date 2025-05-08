@@ -36314,6 +36314,28 @@
   "yO4lAA": "6-cifret godkendelseskode / 8-cifret backup-kode",
   "tARzgo": "6-cifret autentificeringskode",
   "fZSi1N": "Backup-kode med 8 cifre",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Disse koder lader dig komme ind på din konto, hvis du mister din autorisations-app. Beskyt dem, som du ville beskytte din adgangskode. Du må ikke oplyse dem til andre og skal opbevare dem på et sikkert sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Hver kode kan kun bruges én gang. Eventuelle tidligere genererede koder virker ikke længere."
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Ændr kontooplysninger",
   "37S9yc": "Som en ekstra sikkerhedsforanstaltning bedes du indtaste den kode, vi netop har sendt til din e-mailadresse. Du bør modtage den i løbet af et par minutter.",
   "TjGb4e": "Bekræftelseskode",

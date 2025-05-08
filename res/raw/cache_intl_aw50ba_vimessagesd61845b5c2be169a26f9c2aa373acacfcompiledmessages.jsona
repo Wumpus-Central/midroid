@@ -36354,6 +36354,28 @@
   "yO4lAA": "Mã xác thực 6 chữ số/mã dự phòng 8 chữ số",
   "tARzgo": "Mã xác thực 6 chữ số",
   "fZSi1N": "Mã dự phòng 8 chữ số",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Các mã này sẽ cho phép bạn đăng nhập nếu mất đi ứng dụng gốc, hãy bảo vệ chúng như chính mật khẩu của bạn vậy. Vui lòng không chia sẻ chúng với bất kỳ ai khác và giữ chúng ở nơi an toàn."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Mỗi mã chỉ có thể dùng được một lần! Các mã được tạo trước đó sẽ không còn hiệu lực!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Thay đổi thông tin chi tiết tài khoản",
   "37S9yc": "Là một biện pháp bảo mật bổ sung, vui lòng nhập mã xác thực mà chúng tôi vừa gửi đến địa chỉ email của bạn. Bạn sẽ thấy nó sau một hoặc hai phút.",
   "TjGb4e": "Mã xác thực",

@@ -36328,6 +36328,28 @@
   "yO4lAA": "Kuusinumeroinen todennuskoodi / kahdeksannumeroinen varakoodi",
   "tARzgo": "Kuusinumeroinen todennuskoodi",
   "fZSi1N": "8 numeron pituinen varakoodi",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Näiden koodien avulla voit kirjautua tilillesi, jos menetät todennussovelluksesi. Suojaa koodit vastaavasti kuin salasanasi. Älä jaa niitä kenellekään ja säilytä ne turvallisessa paikassa."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Jokaisen koodin voi käyttää vain kerran! Mikään aikaisemmin luotu koodi ei enää toimi!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Muuta tilin tietoja",
   "37S9yc": "Lisäturvatoimena syötä avain viestistä, jonka lähetimme juuri sähköpostiosoitteeseesi. Viestin pitäisi näkyä parin minuutin kuluessa.",
   "TjGb4e": "Vahvistusavain",

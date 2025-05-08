@@ -36505,6 +36505,28 @@
   "yO4lAA": "6-stelliger Authentifizierungscode/8-stelliger Backup-Code",
   "tARzgo": "6-stelliger Authentifizierungscode",
   "fZSi1N": "8-stelliger Backup-Code",
+  "OhmvYm": [
+    [
+      8,
+      "$p",
+      [
+        "Mit diesen Codes kannst du dich in deinen Account einloggen, wenn du deine Authentifizierungs-App verlieren solltest. Schütze sie wie dein Passwort. Gib sie an niemanden weiter und bewahre sie an einem sicheren Ort auf."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Jeder Code kann nur einmal verwendet werden! Jeder zuvor generierte Code wird nicht mehr funktionieren!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Accountdetails ändern",
   "37S9yc": "Gib als zusätzliche Sicherheitsmaßnahme bitte den Schlüssel ein, den wir dir an deine E-Mail-Adresse gesendet haben. Er sollte in ein oder zwei Minuten in deinem Postfach erscheinen.",
   "TjGb4e": "Verifizierungsschlüssel",
