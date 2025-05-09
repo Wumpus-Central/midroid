@@ -5779,6 +5779,20 @@
   "ISyHmZ": "Ezek tetszettek mostanában",
   "G1b309": "Folyamatosan ez megy",
   "iXcll5": "Ezekkel játszottál mostanában",
+  "+KXSFh": [
+    "Egyedi állapotcímke eltávolítása: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Egyedi állapotcímke beállítása a következőre: ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Magvas gondolat",
   "NcnbEx": "Ezeket nézted mostanában",
   "TS3eJS": [
@@ -5837,6 +5851,7 @@
   "pzz9iI": "Mit néztél mostanában?",
   "/UonHB": "Egyéni állapot beállítása",
   "Iuzg8f": "Saját állapot beállítása",
+  "zOdg0N": "Állapot",
   "GQmLra": "Ma",
   "UcdRn5": "Mi a helyzet?",
   "xod36+": "Mi jár a fejedben?",

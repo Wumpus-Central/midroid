@@ -79,15 +79,15 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
    }
 
    public override fun toString(): String {
-      val var1: Float = this.top;
-      val var4: Float = this.bottom;
+      val var4: Float = this.top;
+      val var1: Float = this.bottom;
       val var3: Float = this.left;
       val var2: Float = this.right;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnSafeAreaInsetsDidChangeData(top=");
-      var5.append(var1);
-      var5.append(", bottom=");
       var5.append(var4);
+      var5.append(", bottom=");
+      var5.append(var1);
       var5.append(", left=");
       var5.append(var3);
       var5.append(", right=");
@@ -131,9 +131,9 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          val var6: Float;
          var var7: Int;
          if (var11.y()) {
-            var3 = var11.G(var10, 0);
-            var4 = var11.G(var10, 1);
-            var6 = var11.G(var10, 2);
+            var4 = var11.G(var10, 0);
+            var6 = var11.G(var10, 1);
+            var3 = var11.G(var10, 2);
             var2 = var11.G(var10, 3);
             var7 = 15;
          } else {
@@ -173,14 +173,13 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
                }
             }
 
-            var4 = var2;
+            var6 = var2;
             var2 = var4;
-            var6 = var3;
-            var3 = var5;
+            var4 = var5;
          }
 
          var11.b(var10);
-         return new OnSafeAreaInsetsDidChangeData(var7, var3, var4, var6, var2, null);
+         return new OnSafeAreaInsetsDidChangeData(var7, var4, var6, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSafeAreaInsetsDidChangeData) {

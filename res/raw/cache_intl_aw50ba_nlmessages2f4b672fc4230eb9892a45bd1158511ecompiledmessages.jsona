@@ -5774,6 +5774,20 @@
   "ISyHmZ": "Wat ik de laatste tijd leuk vind",
   "G1b309": "Op herhaling",
   "iXcll5": "Speelt de laatste tijd",
+  "+KXSFh": [
+    "Gepersonaliseerd statuslabel verwijderen: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Gepersonaliseerd statuslabel instellen als ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Eurekamomentje onder de douche",
   "NcnbEx": "Kijkt de laatste tijd",
   "TS3eJS": [
@@ -5832,6 +5846,7 @@
   "pzz9iI": "Wat heb je de laatste tijd gekeken?",
   "/UonHB": "Gepersonaliseerde status instellen",
   "Iuzg8f": "Je status instellen",
+  "zOdg0N": "Status",
   "GQmLra": "Vandaag",
   "UcdRn5": "Hoe staat het leven?",
   "xod36+": "Waar denk je aan?",

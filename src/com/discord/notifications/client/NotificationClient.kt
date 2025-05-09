@@ -90,9 +90,9 @@ public class NotificationClient {
       // 04f: pop
       // 050: goto 05b
       // 053: astore 1
-      // 054: goto 248
-      // 057: astore 1
-      // 058: goto 229
+      // 054: goto 249
+      // 057: astore 2
+      // 058: goto 22a
       // 05b: aload 2
       // 05c: invokevirtual com/discord/notifications/api/NotificationData.getNotifTypeId ()Ljava/lang/String;
       // 05f: astore 6
@@ -295,36 +295,36 @@ public class NotificationClient {
       // 214: aload 1
       // 215: aconst_null
       // 216: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 219: goto 245
-      // 21c: astore 2
-      // 21d: aload 2
-      // 21e: athrow
-      // 21f: astore 5
-      // 221: aload 1
-      // 222: aload 2
-      // 223: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 226: aload 5
-      // 228: athrow
-      // 229: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
-      // 22c: astore 5
-      // 22e: ldc com/discord/notifications/client/NotificationClient
-      // 230: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
-      // 233: astore 2
-      // 234: aload 2
-      // 235: ldc_w "getSimpleName(...)"
-      // 238: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 23b: aload 5
-      // 23d: aload 2
-      // 23e: ldc_w "Error appending notification to cache file"
-      // 241: aload 1
-      // 242: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
-      // 245: aload 0
-      // 246: monitorexit
-      // 247: return
-      // 248: aload 0
-      // 249: monitorexit
-      // 24a: aload 1
-      // 24b: athrow
+      // 219: goto 246
+      // 21c: astore 5
+      // 21e: aload 5
+      // 220: athrow
+      // 221: astore 2
+      // 222: aload 1
+      // 223: aload 5
+      // 225: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 228: aload 2
+      // 229: athrow
+      // 22a: getstatic com/discord/logging/Log.INSTANCE Lcom/discord/logging/Log;
+      // 22d: astore 5
+      // 22f: ldc com/discord/notifications/client/NotificationClient
+      // 231: invokevirtual java/lang/Class.getSimpleName ()Ljava/lang/String;
+      // 234: astore 1
+      // 235: aload 1
+      // 236: ldc_w "getSimpleName(...)"
+      // 239: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 23c: aload 5
+      // 23e: aload 1
+      // 23f: ldc_w "Error appending notification to cache file"
+      // 242: aload 2
+      // 243: invokevirtual com/discord/logging/Log.e (Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+      // 246: aload 0
+      // 247: monitorexit
+      // 248: return
+      // 249: aload 0
+      // 24a: monitorexit
+      // 24b: aload 1
+      // 24c: athrow
    }
 
    private fun getBehaviors(context: Context): NotificationBehaviors? {
@@ -371,9 +371,9 @@ public class NotificationClient {
    }
 
    private fun showNotification(context: Context, notificationData: NotificationData, notificationDataMap: Map<String, String>, makeOrUpdateShortcut: Boolean) {
-      var var12: CrashReporting = CrashReporting.INSTANCE;
+      val var9: CrashReporting = CrashReporting.INSTANCE;
       val var11: Pair = w.a("type", var2.getType());
-      val var9: Pair = w.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
+      var var12: Pair = w.a("channelId", java.lang.String.valueOf(var2.getChannelId-qMVnFVQ()));
       var var8: java.lang.String = var2.getMessageId-N_6c4I0();
       var var10: java.lang.String = "null";
       if (var8 == null) {
@@ -383,7 +383,7 @@ public class NotificationClient {
       }
 
       CrashReporting.addBreadcrumb$default(
-         var12, "Kotlin NotificationClient received Notification.", q.l(new Pair[]{var11, var9, w.a("messageId", var8)}), null, 4, null
+         var9, "Kotlin NotificationClient received Notification.", q.l(new Pair[]{var11, var12, w.a("messageId", var8)}), null, 4, null
       );
       if (this.cache.isAuthed(var1)) {
          val var82: SilentNotificationManager = SilentNotificationManager.Companion.get(var1);
@@ -570,7 +570,7 @@ public class NotificationClient {
 
                   if (var76 != null && var78 != null) {
                      try {
-                        var12 = (CrashReporting)var3.get("receiving_user_id");
+                        var12 = (Pair)var3.get("receiving_user_id");
                         val var64: StringBuilder = new StringBuilder();
                         var64.append("@account.");
                         var64.append(var12);
@@ -599,10 +599,10 @@ public class NotificationClient {
 
                      try {
                         var10 = ChannelId.toString-impl(var78.unbox-impl());
-                        val var77: java.lang.String = MessageId.toString-impl(var76);
-                        val var81: a = Json.d;
+                        val var81: java.lang.String = MessageId.toString-impl(var76);
+                        val var77: a = Json.d;
                         Json.d.a();
-                        DiscordMobileApi.putMessage(var65, var47, var10, var77, var81.c(KvMessageEntry.Companion.serializer(), var72));
+                        DiscordMobileApi.putMessage(var65, var47, var10, var81, var77.c(KvMessageEntry.Companion.serializer(), var72));
                      } catch (var19: Exception) {
                         val var49: Log = Log.INSTANCE;
                         val var67: java.lang.String = NotificationClient.class.getSimpleName();
@@ -751,8 +751,8 @@ public class NotificationClient {
    public fun onNotificationReceived(context: Context, data: Map<String, String>) {
       kotlin.jvm.internal.q.h(var1, "context");
       kotlin.jvm.internal.q.h(var2, "data");
-      val var5: oa.a.a = oa.a.b;
-      val var4: KSerializer = NotificationData.Companion.serializer();
+      val var4: oa.a.a = oa.a.b;
+      val var5: KSerializer = NotificationData.Companion.serializer();
       val var6: java.util.Map = q.x(var2);
       var6.put("time_received", java.lang.String.valueOf(System.currentTimeMillis()));
       val var3: java.lang.String;
@@ -763,7 +763,7 @@ public class NotificationClient {
       }
 
       var6.put("app_state", var3);
-      val var8: NotificationData = var5.d(var4, var6) as NotificationData;
+      val var8: NotificationData = var4.d(var5, var6) as NotificationData;
       this.appendNotificationToCacheFile(var1, var8);
       this.showNotification(var1, var8, var2, true);
    }

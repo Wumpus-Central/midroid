@@ -46,10 +46,10 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var11 = true;
       }
 
-      val var27: EmbedView = this.embedView;
-      val var30: Embed = var2.getEmbed();
+      val var24: EmbedView = this.embedView;
+      val var23: Embed = var2.getEmbed();
       val var20: Long = var2.getChannelId-o4g7jtM();
-      val var32: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var30: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var12: Int = var2.getConstrainedWidth();
       val var13: Boolean;
       if (var2.getShouldAutoPlayGifs() && var11) {
@@ -58,11 +58,11 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var13 = false;
       }
 
-      val var16: Boolean = var2.getShouldAnimateEmoji();
-      val var19: Boolean = var2.getShouldShowLinkDecorations();
-      val var18: Boolean = var2.getShouldShowRoleDot();
+      val var18: Boolean = var2.getShouldAnimateEmoji();
+      val var16: Boolean = var2.getShouldShowLinkDecorations();
+      val var19: Boolean = var2.getShouldShowRoleDot();
       val var17: Boolean = var2.getShouldShowRoleOnName();
-      val var35: Function3 = new Function3(var1) {
+      val var27: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -73,7 +73,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var24: Function3 = new Function3(var1) {
+      val var25: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -84,7 +84,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var26: Function2 = new Function2(var1) {
+      val var32: Function2 = new Function2(var1) {
          {
             super(
                2,
@@ -112,7 +112,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
          }
       };
-      val var23: Function1 = new Function1(var1) {
+      val var26: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
          }
@@ -132,7 +132,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapEmoji(var1);
          }
       };
-      val var25: Function3 = new Function3(var1) {
+      val var35: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -185,28 +185,28 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var15 = false;
       }
 
-      var27.setEmbed-0qg1u9A(
-         var30,
+      var24.setEmbed-0qg1u9A(
+         var23,
          var20,
-         var32,
+         var30,
          var12,
          var3,
          var4,
          var13,
+         var18,
          var16,
          var19,
-         var18,
          var17,
-         var35,
-         var24,
+         var27,
+         var25,
          var7,
          var8,
-         var26,
+         var32,
          var31,
-         var23,
+         var26,
          var5,
          var28,
-         var25,
+         var35,
          var29,
          var34,
          var6,

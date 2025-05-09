@@ -35,10 +35,10 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
             i.u();
          }
 
-         var7 = (var7 as I18nMessage).name();
-         val var8: java.lang.String = var1.getString(var2);
-         q.e(var8);
-         var3.put(var7, var8);
+         val var8: java.lang.String = (var7 as I18nMessage).name();
+         var7 = var1.getString(var2);
+         q.e(var7);
+         var3.put(var8, var7);
       }
 
       var5.set(var4, var3);

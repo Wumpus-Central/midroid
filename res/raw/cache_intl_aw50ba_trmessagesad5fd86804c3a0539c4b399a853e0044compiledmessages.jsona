@@ -5699,6 +5699,21 @@
   "ISyHmZ": "Son zamanlarda seviyorum",
   "G1b309": "Durmadan dinliyorum",
   "iXcll5": "Son zamanlarda oynuyorum",
+  "+KXSFh": [
+    "Özel durum etiketini kaldır: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Özel durum etiketini ",
+    [
+      1,
+      "label"
+    ],
+    " olarak ayarla"
+  ],
   "45vlm5": "Bir anda esen düşünceler",
   "NcnbEx": "Son zamanlarda izliyorum",
   "TS3eJS": [
@@ -5757,6 +5772,7 @@
   "pzz9iI": "Ne izliyorsun?",
   "/UonHB": "Bir özel durum belirle",
   "Iuzg8f": "Durumunu ayarla",
+  "zOdg0N": "Durum",
   "GQmLra": "Bugün",
   "UcdRn5": "N'aber?",
   "xod36+": "Aklında ne var?",

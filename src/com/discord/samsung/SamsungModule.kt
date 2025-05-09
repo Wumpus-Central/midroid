@@ -154,17 +154,17 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
             )
          );
       } else if (var1 is SamsungConnectActivity.Result.Failure) {
-         val var4: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
+         val var5: SamsungConnectActivity.Result.Failure = var1 as SamsungConnectActivity.Result.Failure;
          if ((var1 as SamsungConnectActivity.Result.Failure).isRetryAllowed() && (var1 as SamsungConnectActivity.Result.Failure).getAttemptCount() < 2) {
             val var6: Activity = this.getCurrentActivity();
             q.e(var6);
-            val var9: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
-            val var5: Activity = this.getCurrentActivity();
-            q.e(var5);
-            var6.startActivityForResult(var9.getIntent(var5, var4.getAttemptCount()), 101);
+            val var4: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
+            val var9: Activity = this.getCurrentActivity();
+            q.e(var9);
+            var6.startActivityForResult(var4.getIntent(var9, var5.getAttemptCount()), 101);
          } else {
-            val var2: Int = var4.getAttemptCount();
-            val var3: Boolean = var4.isRetryAllowed();
+            val var2: Int = var5.getAttemptCount();
+            val var3: Boolean = var5.isRetryAllowed();
             val var8: StringBuilder = new StringBuilder();
             var8.append("Attempts: ");
             var8.append(var2);
@@ -294,7 +294,7 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
             // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
             public final Object invokeSuspend(Object var1) {
                label43: {
-                  var var3x: Any = b.e();
+                  val var3x: Any = b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -303,23 +303,23 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                      try {
                         s.b(var1);
                      } catch (var12: java.lang.Throwable) {
-                        var3x = r.k;
+                        var1 = r.k;
                         var1 = r.b(s.a(var12));
                         break label43;
                      }
                   } else {
                      s.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
-                     val var24: java.lang.String = this.$location;
-                     val var5: SamsungModule = this.this$0;
-                     val var4: java.lang.String = this.$state;
-                     val var6: java.lang.String = this.$authCode;
+                     val var24: CoroutineScope = this.L$0 as CoroutineScope;
+                     val var5: java.lang.String = this.$location;
+                     val var25: SamsungModule = this.this$0;
+                     val var6: java.lang.String = this.$state;
+                     val var4: java.lang.String = this.$authCode;
 
                      try {
                         val var7: a = r.k;
-                        val var9: OkHttpClient = new Builder().k(false).c();
-                        val var8: CoroutineDispatcher = K.b();
-                        val var31: Function2 = new Function2(var24, var5, var9, var4, var6, null) {
+                        val var31: OkHttpClient = new Builder().k(false).c();
+                        val var9: CoroutineDispatcher = K.b();
+                        val var8: Function2 = new Function2(var5, var25, var31, var6, var4, null) {
                            final java.lang.String $authCode;
                            final OkHttpClient $client;
                            final java.lang.String $location;
@@ -350,27 +350,27 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                               } else {
                                  s.b(var1);
-                                 var1 = new okhttp3.Request.Builder().d();
-                                 val var2x: java.lang.String = this.$location;
+                                 val var2x: okhttp3.Request.Builder = new okhttp3.Request.Builder().d();
+                                 var1 = this.$location;
                                  q.e(this.$location);
-                                 val var9: Uri = SamsungModule.access$handleSamsungCallback(this.this$0, this.$client.b(var1.l(var2x).b()).execute());
+                                 val var9: Uri = SamsungModule.access$handleSamsungCallback(this.this$0, this.$client.b(var2x.l(var1).b()).execute());
                                  if (var9 != null) {
-                                    val var10: java.lang.String = var9.getQueryParameter("redirect_uri");
-                                    if (var10 != null) {
-                                       val var12: Pair = w.a("state", this.$state);
-                                       var var3: java.lang.String = this.$authCode;
-                                       val var4: StringBuilder = new StringBuilder();
-                                       var4.append("{\"code\":\"");
-                                       var4.append(var3);
-                                       var4.append("\"}");
-                                       val var16: java.util.Map = p8.q.l(new Pair[]{var12, w.a("code", var4.toString())});
+                                    var1 = var9.getQueryParameter("redirect_uri");
+                                    if (var1 != null) {
+                                       val var3: Pair = w.a("state", this.$state);
+                                       var var4: java.lang.String = this.$authCode;
+                                       val var12: StringBuilder = new StringBuilder();
+                                       var12.append("{\"code\":\"");
+                                       var12.append(var4);
+                                       var12.append("\"}");
+                                       val var16: java.util.Map = p8.q.l(new Pair[]{var3, w.a("code", var12.toString())});
                                        val var13: ArrayList = new ArrayList(var16.size());
 
                                        for (Entry var5 : var16.entrySet()) {
-                                          var3 = var5.getKey() as java.lang.String;
+                                          var4 = var5.getKey() as java.lang.String;
                                           val var6: java.lang.String = var5.getValue() as java.lang.String;
                                           val var19: StringBuilder = new StringBuilder();
-                                          var19.append(var3);
+                                          var19.append(var4);
                                           var19.append("=");
                                           var19.append(var6);
                                           var13.add(var19.toString());
@@ -388,7 +388,7 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                                                             MediaType.e.a("application/x-www-form-urlencoded")
                                                          )
                                                    )
-                                                   .l(var10)
+                                                   .l(var1)
                                                    .b()
                                              )
                                              .execute()
@@ -403,11 +403,11 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                            }
                         };
                         this.label = 1;
-                        if (f.g(var8, var31, this) === var3x) {
+                        if (f.g(var9, var8, this) === var3x) {
                            return var3x;
                         }
                      } catch (var11: java.lang.Throwable) {
-                        var3x = r.k;
+                        var1 = r.k;
                         var1 = r.b(s.a(var11));
                         break label43;
                      }
@@ -417,20 +417,20 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
                   try {
                      var1 = r.b(Unit.a);
                   } catch (var10: java.lang.Throwable) {
-                     var3x = r.k;
+                     var1 = r.k;
                      var1 = r.b(s.a(var10));
                      break label33;
                   }
                }
 
                val var29: SamsungModule = this.this$0;
-               val var25: java.lang.Throwable = r.e(var1);
-               if (var25 != null) {
-                  if (var25 is CancellationException) {
-                     throw var25;
+               val var28: java.lang.Throwable = r.e(var1);
+               if (var28 != null) {
+                  if (var28 is CancellationException) {
+                     throw var28;
                   }
 
-                  SamsungModule.access$rejectConnection(var29, var25);
+                  SamsungModule.access$rejectConnection(var29, var28);
                }
 
                return Unit.a;
@@ -448,21 +448,21 @@ public class SamsungModule(reactContext: ReactApplicationContext) : ReactContext
 
       label16:
       try {
-         val var8: a = r.k;
-         val var9: ReactApplicationContext = this.getReactApplicationContext();
+         val var7: a = r.k;
+         val var8: ReactApplicationContext = this.getReactApplicationContext();
          val var3: SamsungConnectActivity.Companion = SamsungConnectActivity.Companion;
-         val var2: Activity = this.getCurrentActivity();
-         q.e(var2);
-         var7 = r.b(var9.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var3, var2, 0, 2, null), 101, Bundle.EMPTY));
+         val var10: Activity = this.getCurrentActivity();
+         q.e(var10);
+         var6 = r.b(var8.startActivityForResult(SamsungConnectActivity.Companion.getIntent$default(var3, var10, 0, 2, null), 101, Bundle.EMPTY));
       } catch (var4: java.lang.Throwable) {
-         val var6: a = r.k;
-         var7 = r.b(s.a(var4));
+         val var2: a = r.k;
+         var6 = r.b(s.a(var4));
          break label16;
       }
 
-      val var10: java.lang.Throwable = r.e(var7);
-      if (var10 != null) {
-         this.rejectConnection(var10);
+      val var9: java.lang.Throwable = r.e(var6);
+      if (var9 != null) {
+         this.rejectConnection(var9);
       }
    }
 

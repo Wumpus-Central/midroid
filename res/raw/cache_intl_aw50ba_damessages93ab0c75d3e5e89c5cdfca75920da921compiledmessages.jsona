@@ -5775,6 +5775,20 @@
   "ISyHmZ": "Elsker for tiden",
   "G1b309": "Om og om igen",
   "iXcll5": "Har for nyligt spillet",
+  "+KXSFh": [
+    "Fjern brugerdefineret statusmærke: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Indstil brugerdefineret statusetiket til ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Pludselig tanke",
   "NcnbEx": "Set for nylig",
   "TS3eJS": [
@@ -5833,6 +5847,7 @@
   "pzz9iI": "Hvad har du set?",
   "/UonHB": "Indstil en brugerdefineret status",
   "Iuzg8f": "Sæt din status",
+  "zOdg0N": "Status",
   "GQmLra": "I dag",
   "UcdRn5": "Hvad sker der?",
   "xod36+": "Hvad har du på hjertet?",

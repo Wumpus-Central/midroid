@@ -7,13 +7,13 @@ internal object CustomLineHeightSpanOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: Array<Any>) {
       kotlin.jvm.internal.q.h(var0, "<name for destructuring parameter 0>");
-      var var2: Any = ((Object[])var0)[0];
+      var var1: Any = ((Object[])var0)[0];
       var0 = ((Object[])var0)[1];
-      val var1: CustomLineHeightSpanOverride = INSTANCE;
-      kotlin.jvm.internal.q.f(var2, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
-      var2 = var2 as FontMetricsInt;
+      val var2: CustomLineHeightSpanOverride = INSTANCE;
+      kotlin.jvm.internal.q.f(var1, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
+      var1 = var1 as FontMetricsInt;
       kotlin.jvm.internal.q.f(var0, "null cannot be cast to non-null type kotlin.Int");
-      var1.overrideLineHeight((FontMetricsInt)var2, var0 as Int);
+      var2.overrideLineHeight((FontMetricsInt)var1, var0 as Int);
    }
 
    private fun overrideLineHeight(fm: FontMetricsInt, mHeight: Int) {

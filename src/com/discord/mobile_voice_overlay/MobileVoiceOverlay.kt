@@ -127,10 +127,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                public final void invoke(OverlayMenuBubbleDialog var1) {
                   q.h(var1, "menuDialog");
                   val var2x: LayoutParams = var1.getLinkedAnchorView().getLayoutParams();
-                  val var4x: OverlayVoiceBubble = this.$voiceBubble;
-                  val var3x: Rect = this.$marginRect;
-                  var2x.width = this.$voiceBubble.getWidth() - var3x.left - var3x.right;
-                  var2x.height = var4x.getHeight();
+                  val var3x: OverlayVoiceBubble = this.$voiceBubble;
+                  val var4x: Rect = this.$marginRect;
+                  var2x.width = this.$voiceBubble.getWidth() - var4x.left - var4x.right;
+                  var2x.height = var3x.getHeight();
                   var1.getLinkedAnchorView().requestLayout();
                   var1.getLinkedAnchorView().setTag("Active Voice Bubble");
                   var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this.$voiceBubble) {
@@ -183,10 +183,10 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          public final OverlayVoiceBubble invoke(OverlayViewProvider<OverlayVoiceBubble> var1) {
             q.h(var1, "it");
             val var2: Int = MobileVoiceOverlay.access$getContext$p(this.this$0).getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-            val var5: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
-            var5.getInsetMargins().set(-var2, var2, -var2, var2);
-            var5.setOnClickListener(new a(var5, this.this$0));
-            var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var5) {
+            val var4: OverlayVoiceBubble = new OverlayVoiceBubble(MobileVoiceOverlay.access$getContext$p(this.this$0));
+            var4.getInsetMargins().set(-var2, var2, -var2, var2);
+            var4.setOnClickListener(new a(var4, this.this$0));
+            var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -219,7 +219,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            var5.setOnMovingStateChanged(new Function1(this.this$0, var5) {
+            var4.setOnMovingStateChanged(new Function1(this.this$0, var4) {
                final OverlayVoiceBubble $voiceBubble;
                final MobileVoiceOverlay this$0;
 
@@ -254,7 +254,7 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                   });
                }
             });
-            return var5;
+            return var4;
          }
       });
       this.trashWrapProvider = new OverlayViewProvider<>(new Function1(this) {
@@ -360,11 +360,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
                      }
 
                      public final void invoke_R7gqayM/* $VF was: invoke-R7gqayM*/(long var1) {
-                        val var3x: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
-                        val var4: Context = this.$this_apply.getContext();
-                        q.g(var4, "getContext(...)");
-                        var3x.startHeadlessTask(
-                           var4, "SelectChannel", d.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
+                        val var4: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
+                        val var3x: Context = this.$this_apply.getContext();
+                        q.g(var3x, "getContext(...)");
+                        var4.startHeadlessTask(
+                           var3x, "SelectChannel", d.a(w.a("channelId", java.lang.String.valueOf(var1)), w.a("connectToVoice", java.lang.Boolean.TRUE))
                         );
                      }
                   }

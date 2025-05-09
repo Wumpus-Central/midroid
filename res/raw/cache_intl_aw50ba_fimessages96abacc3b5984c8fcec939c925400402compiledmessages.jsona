@@ -5771,6 +5771,20 @@
   "ISyHmZ": "Viime ajan mieleiset",
   "G1b309": "Koko ajan päällä",
   "iXcll5": "Viime aikoina pelattu",
+  "+KXSFh": [
+    "Poista mukautettu tila: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Aseta mukautetuksi tilaksi ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Suihkuajatus",
   "NcnbEx": "Viime aikana katseltua",
   "TS3eJS": [
@@ -5829,6 +5843,7 @@
   "pzz9iI": "Mitä olet katsellut?",
   "/UonHB": "Aseta mukautettu tila",
   "Iuzg8f": "Aseta oma tilasi",
+  "zOdg0N": "Tila",
   "GQmLra": "Tänään",
   "UcdRn5": "Miten menee?",
   "xod36+": "Mitä sinulla on mielessä?",

@@ -117,8 +117,8 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.id.hashCode();
-      val var6: Int = this.username.hashCode();
+      val var6: Int = this.id.hashCode();
+      val var5: Int = this.username.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.isBot == null) {
@@ -145,34 +145,34 @@ internal data class UserSearchTransformedUser(id: String,
          var4 = this.globalName.hashCode();
       }
 
-      return (((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
+      return (((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var1: java.lang.String = this.username;
-      val var7: java.lang.Boolean = this.isBot;
-      val var3: java.lang.Boolean = this.isFriend;
-      val var6: java.lang.String = this.friendNickname;
-      val var2: java.lang.String = this.globalName;
-      val var8: java.util.Map = this.nicknames;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UserSearchTransformedUser(id=");
-      var4.append(var5);
-      var4.append(", username=");
-      var4.append(var1);
-      var4.append(", isBot=");
-      var4.append(var7);
-      var4.append(", isFriend=");
-      var4.append(var3);
-      var4.append(", friendNickname=");
-      var4.append(var6);
-      var4.append(", globalName=");
-      var4.append(var2);
-      var4.append(", nicknames=");
-      var4.append(var8);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.id;
+      val var8: java.lang.String = this.username;
+      val var4: java.lang.Boolean = this.isBot;
+      val var6: java.lang.Boolean = this.isFriend;
+      val var7: java.lang.String = this.friendNickname;
+      val var3: java.lang.String = this.globalName;
+      val var5: java.util.Map = this.nicknames;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UserSearchTransformedUser(id=");
+      var1.append(var2);
+      var1.append(", username=");
+      var1.append(var8);
+      var1.append(", isBot=");
+      var1.append(var4);
+      var1.append(", isFriend=");
+      var1.append(var6);
+      var1.append(", friendNickname=");
+      var1.append(var7);
+      var1.append(", globalName=");
+      var1.append(var3);
+      var1.append(", nicknames=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {
@@ -197,11 +197,11 @@ internal data class UserSearchTransformedUser(id: String,
          val var5: JsonObject = var11 as JsonObject;
          val var12: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var3 : var5.entrySet()) {
-            val var6: java.lang.String = var3.getKey() as java.lang.String;
-            val var7: JsonElement = var3.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var6) && (la.g.p(var7).m() || la.g.p(var7) is JsonNull)) {
-               var12.put(var3.getKey(), var3.getValue());
+         for (Entry var6 : var5.entrySet()) {
+            val var7: java.lang.String = var6.getKey() as java.lang.String;
+            val var3: JsonElement = var6.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var7) && (la.g.p(var3).m() || la.g.p(var3) is JsonNull)) {
+               var12.put(var6.getKey(), var6.getValue());
             }
          }
 

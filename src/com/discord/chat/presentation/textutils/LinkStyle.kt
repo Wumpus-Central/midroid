@@ -74,8 +74,8 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.font.hashCode();
-      val var4: Int = Integer.hashCode(this.linkColor);
+      val var4: Int = this.font.hashCode();
+      val var3: Int = Integer.hashCode(this.linkColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.backgroundStyle == null) {
@@ -88,7 +88,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
          var2 = this.icon.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {

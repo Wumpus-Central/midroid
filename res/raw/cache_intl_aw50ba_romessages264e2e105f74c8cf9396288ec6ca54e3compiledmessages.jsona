@@ -5748,6 +5748,20 @@
   "ISyHmZ": "Îmi place în ultima vreme",
   "G1b309": "Pe repeat",
   "iXcll5": "Joc în ultima vreme",
+  "+KXSFh": [
+    "Elimină eticheta cu statusul personalizat: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Setează eticheta cu statusul personalizat la ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Idee creață de la duș",
   "NcnbEx": "Urmăresc în ultima vreme",
   "TS3eJS": [
@@ -5806,6 +5820,7 @@
   "pzz9iI": "La ce te-ai mai uitat în ultima vreme?",
   "/UonHB": "Setează un status personalizat",
   "Iuzg8f": "Setează-ți statusul",
+  "zOdg0N": "Status",
   "GQmLra": "Astăzi",
   "UcdRn5": "Ce mai faci?",
   "xod36+": "La ce te gândești?",

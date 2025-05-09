@@ -5767,6 +5767,20 @@
   "ISyHmZ": "Amando ultimamente",
   "G1b309": "Não sai da cabeça",
   "iXcll5": "Jogando ultimamente",
+  "+KXSFh": [
+    "Remover rótulo de status personalizado: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Definir rótulo de status personalizado para ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Pensamento de chuveiro",
   "NcnbEx": "Assistindo recentemente",
   "TS3eJS": [
@@ -5825,6 +5839,7 @@
   "pzz9iI": "O que você tem assistido?",
   "/UonHB": "Definir status personalizado",
   "Iuzg8f": "Definir seu status",
+  "zOdg0N": "Status",
   "GQmLra": "Hoje",
   "UcdRn5": "Qual é a boa?",
   "xod36+": "No que você está pensando?",

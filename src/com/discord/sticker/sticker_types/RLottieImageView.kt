@@ -172,16 +172,16 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                }
 
-               val var9: FileDownloader = FileDownloader.INSTANCE;
-               val var11: Context = this.this$0.getContext();
-               q.g(var11, "getContext(...)");
-               val var7: java.lang.String = this.$config.getUrl();
-               val var6: java.lang.String = this.$config.getAsset();
-               val var5: StringBuilder = new StringBuilder();
-               var5.append(var6);
-               var5.append(".json");
+               val var11: FileDownloader = FileDownloader.INSTANCE;
+               val var7: Context = this.this$0.getContext();
+               q.g(var7, "getContext(...)");
+               val var9: java.lang.String = this.$config.getUrl();
+               val var5: java.lang.String = this.$config.getAsset();
+               val var6: StringBuilder = new StringBuilder();
+               var6.append(var5);
+               var6.append(".json");
                val var10: Flow = FileDownloader.downloadFile$default(
-                  var9, var11, var7, var5.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+                  var11, var7, var9, var6.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
                val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
@@ -428,25 +428,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var3: Int = this.heightDp;
-         val var5: java.lang.String = this.asset;
-         val var1: Int = this.renderMode;
+         val var1: Int = this.widthDp;
+         val var2: Int = this.heightDp;
+         val var7: java.lang.String = this.asset;
+         val var3: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Config(url=");
-         var6.append(var7);
+         var6.append(var5);
          var6.append(", animate=");
          var6.append(var4);
          var6.append(", widthDp=");
-         var6.append(var2);
-         var6.append(", heightDp=");
-         var6.append(var3);
-         var6.append(", asset=");
-         var6.append(var5);
-         var6.append(", renderMode=");
          var6.append(var1);
+         var6.append(", heightDp=");
+         var6.append(var2);
+         var6.append(", asset=");
+         var6.append(var7);
+         var6.append(", renderMode=");
+         var6.append(var3);
          var6.append(")");
          return var6.toString();
       }

@@ -5786,6 +5786,20 @@
   "ISyHmZ": "Đang yêu thích dạo gần đây",
   "G1b309": "Lặp lại",
   "iXcll5": "Đang chơi dạo gần đây",
+  "+KXSFh": [
+    "Xóa nhãn trạng thái tùy chỉnh: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Cài đặt trạng thái tùy chỉnh thành ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Những suy nghĩ khi đi tắm",
   "NcnbEx": "Đang xem dạo gần đây",
   "TS3eJS": [
@@ -5844,6 +5858,7 @@
   "pzz9iI": "Gần đây bạn đã xem gì?",
   "/UonHB": "Đặt trạng thái tùy chỉnh",
   "Iuzg8f": "Thiết lập trạng thái của bạn",
+  "zOdg0N": "Trạng Thái",
   "GQmLra": "Hôm nay",
   "UcdRn5": "Làm gì đây?",
   "xod36+": "Bạn đang nghĩ gì?",

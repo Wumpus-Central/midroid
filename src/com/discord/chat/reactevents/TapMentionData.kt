@@ -106,19 +106,19 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.userId;
-      val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.roleName;
-      val var3: java.lang.String = this.parsedUserId;
+      val var3: java.lang.String = this.userId;
+      val var4: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.roleName;
+      val var1: java.lang.String = this.parsedUserId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapMentionData(userId=");
-      var2.append(var5);
-      var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(", roleName=");
-      var2.append(var4);
-      var2.append(", parsedUserId=");
       var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", roleName=");
+      var2.append(var5);
+      var2.append(", parsedUserId=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

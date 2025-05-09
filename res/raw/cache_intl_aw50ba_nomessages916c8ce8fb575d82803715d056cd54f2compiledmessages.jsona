@@ -5756,6 +5756,20 @@
   "ISyHmZ": "Mange digger dette for tiden",
   "G1b309": "Gjentas",
   "iXcll5": "Mange spiller dette for tiden",
+  "+KXSFh": [
+    "Fjern egendefinert statusetikett: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Angi egendefinert statusetikett til ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Dusjtanke",
   "NcnbEx": "Mange ser på dette for tiden",
   "TS3eJS": [
@@ -5814,6 +5828,7 @@
   "pzz9iI": "Hva har du sett på?",
   "/UonHB": "Angi egendefinert status",
   "Iuzg8f": "Angi status",
+  "zOdg0N": "Status",
   "GQmLra": "I dag",
   "UcdRn5": "Hva skjer?",
   "xod36+": "Hva tenker du på?",

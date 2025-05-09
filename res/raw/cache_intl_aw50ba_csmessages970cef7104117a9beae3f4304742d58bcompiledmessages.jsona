@@ -5990,6 +5990,20 @@
   "ISyHmZ": "Poslední dobou se mi líbí",
   "G1b309": "Sjíždím znovu",
   "iXcll5": "Poslední dobou hraju",
+  "+KXSFh": [
+    "Odebrat štítek vlastního stavu: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Nastavit štítek vlastního stavu na ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Momentální nápad",
   "NcnbEx": "Poslední dobou koukám na",
   "TS3eJS": [
@@ -6048,6 +6062,7 @@
   "pzz9iI": "Jaké video ti hrálo?",
   "/UonHB": "Nastavit vlastní status",
   "Iuzg8f": "Nastav svůj stav",
+  "zOdg0N": "Stav",
   "GQmLra": "Dnes",
   "UcdRn5": "Jak to jde?",
   "xod36+": "Co se ti honí hlavou?",

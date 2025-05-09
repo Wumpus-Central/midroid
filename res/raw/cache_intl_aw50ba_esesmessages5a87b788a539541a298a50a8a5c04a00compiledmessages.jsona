@@ -5764,6 +5764,20 @@
   "ISyHmZ": "Pasión reciente",
   "G1b309": "En bucle",
   "iXcll5": "Juego reciente",
+  "+KXSFh": [
+    "Elimina la etiqueta de estado personalizado: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Establece la etiqueta de estado personalizado a ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Reflexión en la ducha",
   "NcnbEx": "Visualización reciente",
   "TS3eJS": [
@@ -5822,6 +5836,7 @@
   "pzz9iI": "¿Qué has estado viendo?",
   "/UonHB": "Establecer un estado personalizado",
   "Iuzg8f": "Establecer estado",
+  "zOdg0N": "Estado",
   "GQmLra": "Hoy",
   "UcdRn5": "¿Qué se cuece?",
   "xod36+": "¿En qué piensas?",

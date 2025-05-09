@@ -87,21 +87,21 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.actionId;
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.actionId;
       val var3: java.lang.String = this.appId;
-      val var4: java.lang.String = this.embedUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapAppMessageEmbedData(messageId=");
-      var1.append(var5);
-      var1.append(", actionId=");
-      var1.append(var2);
-      var1.append(", appId=");
-      var1.append(var3);
-      var1.append(", embedUrl=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var5: java.lang.String = this.embedUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapAppMessageEmbedData(messageId=");
+      var2.append(var4);
+      var2.append(", actionId=");
+      var2.append(var1);
+      var2.append(", appId=");
+      var2.append(var3);
+      var2.append(", embedUrl=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -138,8 +138,8 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
          val var11: java.lang.String;
          if (var10.y()) {
             var7 = var10.t(var9, 0);
-            var5 = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
+            var6 = var10.t(var9, 1);
+            var5 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
          } else {
@@ -179,13 +179,12 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
                }
             }
 
-            var5 = var12;
+            var6 = var12;
             var11 = var6;
-            var6 = var5;
          }
 
          var10.b(var9);
-         return new TapAppMessageEmbedData(var2, var7, var5, var6, var11, null);
+         return new TapAppMessageEmbedData(var2, var7, var6, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapAppMessageEmbedData) {

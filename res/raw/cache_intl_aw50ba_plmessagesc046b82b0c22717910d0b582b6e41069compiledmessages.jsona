@@ -5991,6 +5991,20 @@
   "ISyHmZ": "Ostatnio ulubione",
   "G1b309": "W kółko",
   "iXcll5": "Ostatnio grane",
+  "+KXSFh": [
+    "Usuń etykietę statusu własnego: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Ustaw etykietę statusu własnego na ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Przemyślenia pod prysznicem",
   "NcnbEx": "Ostatnio oglądane",
   "TS3eJS": [
@@ -6049,6 +6063,7 @@
   "pzz9iI": "Co ostatnio oglądasz?",
   "/UonHB": "Ustaw status własny",
   "Iuzg8f": "Ustaw status",
+  "zOdg0N": "Status",
   "GQmLra": "Dzisiaj",
   "UcdRn5": "Co słychać?",
   "xod36+": "Co Ci chodzi po głowie?",

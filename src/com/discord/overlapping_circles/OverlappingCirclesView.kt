@@ -127,12 +127,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             var11 = new OverlappingCirclesView.OverlappingClippedItem(var25, var18, var10, this.overlapPx, this.separatorSizePx, this.imageLoadingColorDrawable);
          } else {
             val var21: Context = this.getContext();
-            val var6: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
-            val var8: Int = this.overlapPx;
-            val var7: Int = this.separatorSizePx;
-            val var9: Int = this.getLayoutParams().height;
+            val var7: Int = ThemeManagerKt.getTheme().getBackgroundAccent();
+            val var9: Int = this.overlapPx;
+            val var6: Int = this.separatorSizePx;
+            val var8: Int = this.getLayoutParams().height;
             q.e(var21);
-            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var6, var10, var8, var7, var9);
+            var11 = new OverlappingCirclesView.PlaceholderItem(var21, var7, var10, var9, var6, var8);
          }
 
          val var26: LayoutParams = new LayoutParams(this.getLayoutParams().height, this.getLayoutParams().height);
@@ -146,12 +146,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var22: Context = this.getContext();
          q.g(var22, "getContext(...)");
-         val var23: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var15: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var22, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var15: LayoutParams = new LayoutParams(-2, -1);
-         var15.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var23, var15);
+         val var24: LayoutParams = new LayoutParams(-2, -1);
+         var24.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var15, var24);
       }
    }
 
@@ -205,13 +205,13 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
             @Override
             public final void run() {
-               val var2: View = this.$this_doOnPreDraw;
-               val var1: OverlappingCirclesView.OverflowItem = this.this$0;
+               val var1: View = this.$this_doOnPreDraw;
+               val var2: OverlappingCirclesView.OverflowItem = this.this$0;
                val var3: android.view.ViewGroup.LayoutParams = this.this$0.getLayoutParams();
                if (var3 != null) {
                   val var4: LayoutParams = var3 as LayoutParams;
-                  (var3 as LayoutParams).width = d.c(var2.getWidth(), var2.getHeight());
-                  var1.setLayoutParams(var4);
+                  (var3 as LayoutParams).width = d.c(var1.getWidth(), var1.getHeight());
+                  var2.setLayoutParams(var4);
                } else {
                   throw new NullPointerException("null cannot be cast to non-null type android.widget.LinearLayout.LayoutParams");
                }

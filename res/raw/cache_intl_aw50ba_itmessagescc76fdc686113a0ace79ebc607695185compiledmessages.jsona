@@ -5771,6 +5771,20 @@
   "ISyHmZ": "Piaciuto di recente",
   "G1b309": "A ripetizione",
   "iXcll5": "Giocato di recente",
+  "+KXSFh": [
+    "Rimuovi l'etichetta di stato personalizzata: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Imposta l'etichetta di stato personalizzata come ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Idea da doccia",
   "NcnbEx": "Guardato di recente",
   "TS3eJS": [
@@ -5829,6 +5843,7 @@
   "pzz9iI": "Cosa hai guardato?",
   "/UonHB": "Imposta uno stato personalizzato",
   "Iuzg8f": "Imposta il tuo stato",
+  "zOdg0N": "Stato",
   "GQmLra": "Oggi",
   "UcdRn5": "Cosa bolle in pentola oggi?",
   "xod36+": "A cosa stai pensando?",

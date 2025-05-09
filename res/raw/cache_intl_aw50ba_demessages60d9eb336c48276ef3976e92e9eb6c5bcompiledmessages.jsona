@@ -5763,6 +5763,20 @@
   "ISyHmZ": "In letzter Zeit geliebt",
   "G1b309": "In Dauerschleife",
   "iXcll5": "In letzter Zeit gespielt",
+  "+KXSFh": [
+    "Personalisiertes Status-Label entfernen: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Personalisiertes Status-Label festlegen auf ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Geistesblitz",
   "NcnbEx": "Kürzlich angeschaut",
   "TS3eJS": [
@@ -5821,6 +5835,7 @@
   "pzz9iI": "Was hast du angeschaut?",
   "/UonHB": "Einen personalisierten Status festlegen",
   "Iuzg8f": "Status festlegen",
+  "zOdg0N": "Status",
   "GQmLra": "Heute",
   "UcdRn5": "Was geht ab?",
   "xod36+": "Was geht dir durch den Kopf?",

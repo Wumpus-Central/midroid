@@ -188,10 +188,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var15 = null;
          }
 
-         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             q.y("onAddReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddReactionClick;
          }
 
          var26.bind(var11, var15, var5, this.reactionsTheme);
@@ -217,10 +217,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var17 = null;
          }
 
+         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             q.y("onAddBurstReactionClick");
-         } else {
-            var5 = this.onAddBurstReactionClick;
+            var5 = null;
          }
 
          var27.bind(var12, var17, var5, this.reactionsTheme);

@@ -114,9 +114,9 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = java.lang.Long.hashCode(this.receivedTimestamp);
+      val var6: Int = java.lang.Long.hashCode(this.receivedTimestamp);
       val var4: Int = java.lang.Boolean.hashCode(this.silent);
-      val var6: Int = this.type.hashCode();
+      val var5: Int = this.type.hashCode();
       val var7: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
@@ -137,32 +137,32 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var5 * 31 + var4) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var6 * 31 + var4) * 31 + var5) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: Long = this.receivedTimestamp;
-      val var3: Boolean = this.silent;
-      val var6: java.lang.String = this.type;
-      val var4: java.lang.String = this.title;
-      val var5: java.lang.String = this.content;
+      val var2: Long = this.receivedTimestamp;
+      val var1: Boolean = this.silent;
+      val var9: java.lang.String = this.type;
+      val var5: java.lang.String = this.title;
+      val var4: java.lang.String = this.content;
       val var8: java.lang.String = this.channelId;
-      val var9: java.lang.String = this.messageId;
+      val var6: java.lang.String = this.messageId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("PushNotificationMeta(receivedTimestamp=");
-      var7.append(var1);
+      var7.append(var2);
       var7.append(", silent=");
-      var7.append(var3);
+      var7.append(var1);
       var7.append(", type=");
-      var7.append(var6);
+      var7.append(var9);
       var7.append(", title=");
-      var7.append(var4);
-      var7.append(", content=");
       var7.append(var5);
+      var7.append(", content=");
+      var7.append(var4);
       var7.append(", channelId=");
       var7.append(var8);
       var7.append(", messageId=");
-      var7.append(var9);
+      var7.append(var6);
       var7.append(")");
       return var7.toString();
    }
@@ -190,8 +190,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: C0 = C0.a;
-         return new KSerializer[]{Y.a, h.a, C0.a, C0.a, a.u(C0.a), a.u(var2), a.u(var2)};
+         val var4: C0 = C0.a;
+         return new KSerializer[]{Y.a, h.a, C0.a, C0.a, a.u(C0.a), a.u(var4), a.u(var4)};
       }
 
       public open fun deserialize(decoder: Decoder): PushNotificationMeta {

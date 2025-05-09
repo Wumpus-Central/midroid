@@ -5731,6 +5731,20 @@
   "ISyHmZ": "Loving lately",
   "G1b309": "On repeat",
   "iXcll5": "Playing lately",
+  "+KXSFh": [
+    "Remove custom status label: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Set custom status label to ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Shower thought",
   "NcnbEx": "Watching lately",
   "TS3eJS": [
@@ -5789,6 +5803,7 @@
   "pzz9iI": "What have you been watching?",
   "/UonHB": "Set a custom status",
   "Iuzg8f": "Set your status",
+  "zOdg0N": "Status",
   "GQmLra": "Today",
   "UcdRn5": "What’s cookin’?",
   "xod36+": "What’s on your mind?",

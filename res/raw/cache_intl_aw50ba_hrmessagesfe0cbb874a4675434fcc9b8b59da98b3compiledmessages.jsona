@@ -5942,6 +5942,20 @@
   "ISyHmZ": "U posljednje vrijeme mi se sviđa",
   "G1b309": "Ponavlja se",
   "iXcll5": "U posljednje vrijeme igram",
+  "+KXSFh": [
+    "Ukloni prilagođenu oznaku statusa: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Postavi prilagođenu oznaku statusa na ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Iznenadna ideja",
   "NcnbEx": "U posljednje vrijeme gledam",
   "TS3eJS": [
@@ -6006,6 +6020,7 @@
   "pzz9iI": "Što to gledaš?",
   "/UonHB": "Postavi prilagođeni status",
   "Iuzg8f": "Postavi svoj status",
+  "zOdg0N": "Status",
   "GQmLra": "Danas",
   "UcdRn5": "Što ima kod tebe?",
   "xod36+": "Što ti se mota po glavi?",

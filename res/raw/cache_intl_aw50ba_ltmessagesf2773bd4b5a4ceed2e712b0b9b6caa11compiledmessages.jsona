@@ -5974,6 +5974,20 @@
   "ISyHmZ": "Patiko pastaruoju metu",
   "G1b309": "Pakartotinai žaista",
   "iXcll5": "Pastaruoju metu žaista",
+  "+KXSFh": [
+    "Pašalinti tinkintos būsenos etiketę: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Tinkintos būsenos etiketę nustatyk į ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Geniali idėja",
   "NcnbEx": "Pastaruoju metu žiūrėta",
   "TS3eJS": [
@@ -6032,6 +6046,7 @@
   "pzz9iI": "Ką gero žiūri?",
   "/UonHB": "Nustatyti pritaikytą būseną",
   "Iuzg8f": "Nustatyk savo būseną",
+  "zOdg0N": "Būsena",
   "GQmLra": "Šiandien",
   "UcdRn5": "Kas vyksta?",
   "xod36+": "Apie ką galvoji?",

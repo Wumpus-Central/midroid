@@ -5775,6 +5775,20 @@
   "ISyHmZ": "En ce moment, j'adore",
   "G1b309": "J'écoute en boucle",
   "iXcll5": "En ce moment, je joue à",
+  "+KXSFh": [
+    "Supprimer l'étiquette de statut personnalisé : ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Modifier l'étiquette de statut personnalisé en : ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Pensée à partager",
   "NcnbEx": "En ce moment, je regarde",
   "TS3eJS": [
@@ -5833,6 +5847,7 @@
   "pzz9iI": "Qu'est-ce que tu as regardé récemment ?",
   "/UonHB": "Définir un statut personnalisé",
   "Iuzg8f": "Définir ton statut",
+  "zOdg0N": "Statut",
   "GQmLra": "Aujourd'hui",
   "UcdRn5": "Quoi d'neuf ?",
   "xod36+": "À quoi tu penses, en ce moment ?",

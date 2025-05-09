@@ -51,8 +51,8 @@ fun `createReactModuleInfoProvider$lambda$1`(var0: java.util.List, var1: Boolean
    q.h(var0, "$moduleNames");
    val var2: LinkedHashMap = new LinkedHashMap(d.c(p8.q.d(i.v(var0, 10)), 16));
 
-   for (Object var4 : var0) {
-      var2.put(var4, createReactModuleInfo(var4 as java.lang.String, var1));
+   for (Object var3 : var0) {
+      var2.put(var3, createReactModuleInfo(var3 as java.lang.String, var1));
    }
 
    return var2;

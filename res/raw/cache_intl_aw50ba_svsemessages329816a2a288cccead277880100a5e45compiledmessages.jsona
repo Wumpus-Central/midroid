@@ -5762,6 +5762,20 @@
   "ISyHmZ": "Favorit på sistone",
   "G1b309": "På repeat",
   "iXcll5": "Spelat på sistone",
+  "+KXSFh": [
+    "Ta bort anpassad statusetikett: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Ange anpassad statusetikett till ",
+    [
+      1,
+      "label"
+    ]
+  ],
   "45vlm5": "Duschfundering",
   "NcnbEx": "Tittat på den senaste tiden",
   "TS3eJS": [
@@ -5820,6 +5834,7 @@
   "pzz9iI": "Vad har du tittat på?",
   "/UonHB": "Ställ in en anpassad status",
   "Iuzg8f": "Ange din status",
+  "zOdg0N": "Status",
   "GQmLra": "I dag",
   "UcdRn5": "Hur är läget?",
   "xod36+": "Vad tänker du på?",

@@ -53,16 +53,16 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
    if (var4 != null) {
       label35:
       try {
-         val var11: a = r.k;
-         var10 = r.b(var4.getActiveNotifications());
+         val var10: a = r.k;
+         var9 = r.b(var4.getActiveNotifications());
       } catch (var6: java.lang.Throwable) {
-         val var9: a = r.k;
-         var10 = r.b(s.a(var6));
+         val var13: a = r.k;
+         var9 = r.b(s.a(var6));
          break label35;
       }
 
-      var4 = (NotificationManager)var10;
-      if (r.g(var10)) {
+      var4 = (NotificationManager)var9;
+      if (r.g(var9)) {
          var4 = null;
       }
 
@@ -74,13 +74,13 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 
          while (true) {
             if (var2 >= var3) {
-               var13 = null;
+               var12 = null;
                break;
             }
 
-            val var12: StatusBarNotification = var15[var2];
+            val var11: StatusBarNotification = var15[var2];
             if (q.c(var15[var2].getTag(), var1)) {
-               var13 = var12;
+               var12 = var11;
                break;
             }
 
@@ -88,8 +88,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
          }
 
          var8 = null;
-         if (var13 != null) {
-            var8 = var13.getNotification();
+         if (var12 != null) {
+            var8 = var12.getNotification();
          }
       }
    }
@@ -222,14 +222,14 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
             if (var17[var3].getTag() == null) {
                var5 = false;
             } else {
-               var var9: java.lang.String = ChannelId.toString-impl(var1);
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("CALL_RING");
-               var8.append(var9);
-               val var19: java.lang.String = var8.toString();
-               var9 = var18.getTag();
-               q.g(var9, "getTag(...)");
-               var5 = h.J(var9, var19, false, 2, null);
+               var var8: java.lang.String = ChannelId.toString-impl(var1);
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("CALL_RING");
+               var9.append(var8);
+               val var20: java.lang.String = var9.toString();
+               var8 = var18.getTag();
+               q.g(var8, "getTag(...)");
+               var5 = h.J(var8, var20, false, 2, null);
             }
 
             if (var5) {

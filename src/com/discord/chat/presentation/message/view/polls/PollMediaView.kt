@@ -190,6 +190,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             }
 
             this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var10, var4, var7, 0, null, 48, null));
+            this.setImportantForAccessibility(2);
             this.setOnClickListener(new h(var2));
             var4 = 1;
          } else {
