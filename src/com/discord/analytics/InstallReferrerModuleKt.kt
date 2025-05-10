@@ -19,7 +19,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.C();
-   val var3: a = new a(var2) {
+   val var4: a = new a(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -50,11 +50,11 @@ private suspend fun InstallReferrerClient.await(): Int {
          // $VF: Could not inline inconsistent finally blocks
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public final void invoke(java.lang.Throwable var1) {
-            val var2: InstallReferrerClient = this.$this_await;
+            val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var5: o8.r.a = r.k;
-               var2.a();
+               val var2: o8.r.a = r.k;
+               var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
                val var6: o8.r.a = r.k;
@@ -67,11 +67,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var4: o8.r.a = r.k;
-      var0.d(var3);
+      val var10: o8.r.a = r.k;
+      var0.d(var4);
       var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var10: o8.r.a = r.k;
+      val var3: o8.r.a = r.k;
       var7 = r.b(s.a(var5));
       break label20;
    }

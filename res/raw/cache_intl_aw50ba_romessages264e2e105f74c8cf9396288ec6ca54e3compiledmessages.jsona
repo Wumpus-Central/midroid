@@ -1226,19 +1226,6 @@
   "PHjkRE": "Aplicații",
   "AKcFUl": "Catalog de aplicații",
   "LO4f0N": "Partener",
-  "6IW6Wl": [
-    "în ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servere"
-  ],
-  "KC1oZ2": "Adaugă aplicația",
-  "j4KtLS": "Ups, acest link nu funcționează...",
-  "0H5OT0": "Încearcă să mai trimiți unul!",
-  "NaQLEx": "Link nevalid",
-  "m9hXGR": "Se rezolvă aplicația",
   "9PUXpK": "Mă-nervezi",
   "IoLVi4": "Șerbet de vis",
   "nmd90t": "uwu~",
@@ -5745,7 +5732,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Îmi place în ultima vreme",
   "G1b309": "Pe repeat",
   "iXcll5": "Joc în ultima vreme",
   "+KXSFh": [
@@ -5790,7 +5776,6 @@
   "ZPjue3": "Care a fost cea mai bună chestie pe care ai mâncat-o săptămâna asta?",
   "40gTj4": "De-abia aștept...",
   "SWVxPD": "Alege-ți clasa personajului",
-  "ZStIVl": "Fix acum mă obsedează...",
   "3XVZ0t": "Cea mai bună glumă de tați?",
   "4U+EJC": "Ce emoji îți descrie ziua cel mai bine?",
   "R1f9RU": "Un anime favorit din ultima vreme?",
@@ -5821,6 +5806,8 @@
   "/UonHB": "Setează un status personalizat",
   "Iuzg8f": "Setează-ți statusul",
   "zOdg0N": "Status",
+  "hA60Ul": "Evidențiază-ți statusul cu un tag presetat",
+  "jrzHRk": "Taguri de status personalizate",
   "GQmLra": "Astăzi",
   "UcdRn5": "Ce mai faci?",
   "xod36+": "La ce te gândești?",
@@ -7499,7 +7486,6 @@
     ],
     " într-o activitate"
   ],
-  "LQx1UF": "Se rezolvă activitatea",
   "1fRDnZ": "Reia video",
   "VOgTj4": "Funcția video a fost oprită temporar pe dispozitivul tău pentru a îmbunătăți performanța",
   "i+9VW1": "Nu se pot partaja jurnale goale",

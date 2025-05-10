@@ -1231,19 +1231,6 @@
   "PHjkRE": "Appar",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "på ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servrar"
-  ],
-  "KC1oZ2": "Lägg till app",
-  "j4KtLS": "Oj, den här länken fungerar inte ...",
-  "0H5OT0": "Försök att skicka en annan!",
-  "NaQLEx": "Ogiltig länk",
-  "m9hXGR": "Analyserar ansökan",
   "9PUXpK": "Arg",
   "IoLVi4": "Vinterdröm",
   "nmd90t": "UwU",
@@ -5759,7 +5746,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Favorit på sistone",
   "G1b309": "På repeat",
   "iXcll5": "Spelat på sistone",
   "+KXSFh": [
@@ -5804,7 +5790,6 @@
   "ZPjue3": "Det bästa du åt den här veckan?",
   "40gTj4": "Längtar efter ...",
   "SWVxPD": "Välj din karaktärsklass",
-  "ZStIVl": "För närvarande besatt av ...",
   "3XVZ0t": "Vilket är bästa pappaskämtet?",
   "4U+EJC": "Bästa emojin för att beskriva din dag?",
   "R1f9RU": "Favoritanime på sistone?",
@@ -5835,6 +5820,8 @@
   "/UonHB": "Ställ in en anpassad status",
   "Iuzg8f": "Ange din status",
   "zOdg0N": "Status",
+  "hA60Ul": "Få din status att sticka ut med en förinställd tagg",
+  "jrzHRk": "Anpassade statustaggar",
   "GQmLra": "I dag",
   "UcdRn5": "Hur är läget?",
   "xod36+": "Vad tänker du på?",
@@ -7521,7 +7508,6 @@
     ],
     " i en aktivitet"
   ],
-  "LQx1UF": "Analyserar aktiviteten",
   "1fRDnZ": "Återuppta video",
   "VOgTj4": "Videon pausades temporärt på din enhet för bättre prestanda",
   "i+9VW1": "Kunde inte dela tomma loggar",

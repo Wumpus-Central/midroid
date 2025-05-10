@@ -1237,18 +1237,6 @@
   "PHjkRE": "Uygulamalar",
   "AKcFUl": "Uygulama Dizini",
   "LO4f0N": "Ortak",
-  "6IW6Wl": [
-    [
-      1,
-      "guildCount"
-    ],
-    " sunucuda"
-  ],
-  "KC1oZ2": "Uygulamayı Ekle",
-  "j4KtLS": "Tüh, bağlantı çalışmıyor...",
-  "0H5OT0": "Başka bir tane göndermeyi dene!",
-  "NaQLEx": "Geçersiz Bağlantı",
-  "m9hXGR": "Uygulama Çözümleniyor",
   "9PUXpK": "Tütüyor",
   "IoLVi4": "Şerbetli Düş Dondurması",
   "nmd90t": "uwu~",
@@ -5696,7 +5684,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Son zamanlarda seviyorum",
   "G1b309": "Durmadan dinliyorum",
   "iXcll5": "Son zamanlarda oynuyorum",
   "+KXSFh": [
@@ -5742,7 +5729,6 @@
   "ZPjue3": "Bu hafta yediğin en iyi yemek neydi?",
   "40gTj4": "Sabırsızlıkla beklediğim şey...",
   "SWVxPD": "Karakter sınıfını seç",
-  "ZStIVl": "Şu anda takıntılı olduğum şey...",
   "3XVZ0t": "En iyi baba şakası mı?",
   "4U+EJC": "Gününü anlatan emoji hangisi?",
   "R1f9RU": "Son zamanlarda en sevdiğin anime hangisi?",
@@ -5773,6 +5759,8 @@
   "/UonHB": "Bir özel durum belirle",
   "Iuzg8f": "Durumunu ayarla",
   "zOdg0N": "Durum",
+  "hA60Ul": "Önceden ayarlanmış bir etiketle durumunu öne çıkar",
+  "jrzHRk": "Özel durum etiketleri",
   "GQmLra": "Bugün",
   "UcdRn5": "N'aber?",
   "xod36+": "Aklında ne var?",
@@ -7444,7 +7432,6 @@
     ],
     " bulunuyor"
   ],
-  "LQx1UF": "Etkinlik Çözümleniyor",
   "1fRDnZ": "Videoya devam et",
   "VOgTj4": "Cihazında daha iyi performans sağlamak için video geçici olarak duraklatıldı.",
   "i+9VW1": "Boş günlükler paylaşılamıyor",

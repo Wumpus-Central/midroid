@@ -51,13 +51,13 @@ public data class GeneralEventHandlers(onLinkClicked: (String, String) -> Unit, 
 
    public override fun toString(): String {
       val var3: Function2 = this.onLinkClicked;
-      val var2: Function0 = this.onTapSpoiler;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GeneralEventHandlers(onLinkClicked=");
-      var1.append(var3);
-      var1.append(", onTapSpoiler=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: Function0 = this.onTapSpoiler;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("GeneralEventHandlers(onLinkClicked=");
+      var2.append(var3);
+      var2.append(", onTapSpoiler=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

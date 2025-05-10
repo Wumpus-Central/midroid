@@ -1233,18 +1233,6 @@
   "PHjkRE": "Sovellukset",
   "AKcFUl": "App-hakemisto",
   "LO4f0N": "Kumppani",
-  "6IW6Wl": [
-    [
-      1,
-      "guildCount"
-    ],
-    " palvelimella"
-  ],
-  "KC1oZ2": "Lisää sovellus",
-  "j4KtLS": "Tämä linkki ei näytä toimivan...",
-  "0H5OT0": "Kokeile lähettää uusi!",
-  "NaQLEx": "Virheellinen linkki",
-  "m9hXGR": "Selvitetään sovellusta",
   "9PUXpK": "Päreensä polttanut",
   "IoLVi4": "Metka mehujää",
   "nmd90t": "uwu~",
@@ -5768,7 +5756,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Viime ajan mieleiset",
   "G1b309": "Koko ajan päällä",
   "iXcll5": "Viime aikoina pelattu",
   "+KXSFh": [
@@ -5813,7 +5800,6 @@
   "ZPjue3": "Paras tällä viikolla syömäsi juttu?",
   "40gTj4": "En malta odottaa tätä...",
   "SWVxPD": "Valitse hahmoluokkasi",
-  "ZStIVl": "Mielessä pyörii tätä nykyä...",
   "3XVZ0t": "Paras isävitsi?",
   "4U+EJC": "Parhaiten päivääsi kuvaava emoji?",
   "R1f9RU": "Suosikkianimesi tätä nykyä?",
@@ -5844,6 +5830,8 @@
   "/UonHB": "Aseta mukautettu tila",
   "Iuzg8f": "Aseta oma tilasi",
   "zOdg0N": "Tila",
+  "hA60Ul": "Tee tilatiedostasi erottuva esiasetetulla tunnisteella",
+  "jrzHRk": "Mukautetut tilatunnisteet",
   "GQmLra": "Tänään",
   "UcdRn5": "Miten menee?",
   "xod36+": "Mitä sinulla on mielessä?",
@@ -7534,7 +7522,6 @@
     ],
     " on toiminnossa"
   ],
-  "LQx1UF": "Selvitetään toimintaa",
   "1fRDnZ": "Jatka videota",
   "VOgTj4": "Video pysäytettiin tilapäisesti laitteellasi suorituskyvyn parantamiseksi",
   "i+9VW1": "Tyhjiä lokeja ei voida jakaa",

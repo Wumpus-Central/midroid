@@ -39,7 +39,7 @@ public class ActivityInviteEmbedViewHolder(activityInviteEmbedView: ActivityInvi
             var3.getSubtext(),
             var3.getJoinable(),
             var3.getCtaText(),
-            new b(var2, var1)
+            new a(var2, var1)
          );
    }
 }

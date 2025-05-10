@@ -600,7 +600,6 @@ public final class R {
       public static int images_native_icons_camera_upload;
       public static int images_native_icons_camera_upload_light;
       public static int images_native_icons_check;
-      public static int images_native_icons_discovery_20px;
       public static int images_native_icons_empty_channel_add_friend_32px;
       public static int images_native_icons_empty_channel_guild_progress_32px;
       public static int images_native_icons_empty_channel_personalize_32px;
@@ -1945,6 +1944,7 @@ public final class R {
       public static int modules_activity_privacy_usersettingsactivitysharingredesigncompiledmessages;
       public static int modules_clicker_game_clickergamecompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
+      public static int modules_custom_status_images_custom_status_prompts_coachmark_art;
       public static int modules_go_live_web_modal_golivemodalcompiledmessages;
       public static int modules_guild_settings_web_tags_guildsettingstagscompiledmessages;
       public static int modules_holidays_assets_snowsgiving_loading_dark;

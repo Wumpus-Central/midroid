@@ -94,14 +94,14 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
    }
 
    public override fun toString(): String {
-      val var3: Int = this.topLevelAvailableWidth;
-      val var2: Int = this.topLevelMaxWidth;
+      val var2: Int = this.topLevelAvailableWidth;
+      val var3: Int = this.topLevelMaxWidth;
       val var1: Int = this.widthReductions;
       val var4: StringBuilder = new StringBuilder();
       var4.append("WidthInfo(topLevelAvailableWidth=");
-      var4.append(var3);
-      var4.append(", topLevelMaxWidth=");
       var4.append(var2);
+      var4.append(", topLevelMaxWidth=");
+      var4.append(var3);
       var4.append(", widthReductions=");
       var4.append(var1);
       var4.append(")");

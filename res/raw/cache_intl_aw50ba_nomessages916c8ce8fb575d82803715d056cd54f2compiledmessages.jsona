@@ -1232,19 +1232,6 @@
   "PHjkRE": "Apper",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "i ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servere"
-  ],
-  "KC1oZ2": "Legg til app",
-  "j4KtLS": "Lenken fungerer ikke …",
-  "0H5OT0": "Prøv å sende en annen!",
-  "NaQLEx": "Ugyldig lenke",
-  "m9hXGR": "Løser app",
   "9PUXpK": "Sinna",
   "IoLVi4": "Drømmeis",
   "nmd90t": "uwu~",
@@ -5753,7 +5740,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Mange digger dette for tiden",
   "G1b309": "Gjentas",
   "iXcll5": "Mange spiller dette for tiden",
   "+KXSFh": [
@@ -5798,7 +5784,6 @@
   "ZPjue3": "Det beste du har spist denne uken?",
   "40gTj4": "Gleder meg til …",
   "SWVxPD": "Velg en karakterklasse",
-  "ZStIVl": "For tiden opphengt i …",
   "3XVZ0t": "Beste pappavits?",
   "4U+EJC": "Beste emoji for å beskrive dagen din?",
   "R1f9RU": "Animeen du liker best nå?",
@@ -5829,6 +5814,8 @@
   "/UonHB": "Angi egendefinert status",
   "Iuzg8f": "Angi status",
   "zOdg0N": "Status",
+  "hA60Ul": "Få statusen din til å skille seg ut med en forhåndsinnstilt tagg",
+  "jrzHRk": "Egendefinerte statustagger",
   "GQmLra": "I dag",
   "UcdRn5": "Hva skjer?",
   "xod36+": "Hva tenker du på?",
@@ -7517,7 +7504,6 @@
     ],
     " deltar i en aktivitet"
   ],
-  "LQx1UF": "Løser aktivitet",
   "1fRDnZ": "Gjenoppta video",
   "VOgTj4": "For å forbedre kvaliteten ble videoen satt på pause på enheten din",
   "i+9VW1": "Kan ikke dele tomme logger",

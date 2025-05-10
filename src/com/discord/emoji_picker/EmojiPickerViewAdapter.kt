@@ -53,27 +53,27 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    public fun findFirstItemPositionAboveOrBelowPosition(position: Int, itemType: Int): Int {
       val var5: Int = this.getItemCount();
-      var var4: Int = var1;
+      var var3: Int = var1;
 
       while (true) {
-         var var3: Int = var1;
-         if (var4 < 0) {
-            while (var3 < var5) {
-               if (this.getItemViewType(var3) == var2) {
-                  return var3;
+         var var4: Int = var1;
+         if (var3 < 0) {
+            while (var4 < var5) {
+               if (this.getItemViewType(var4) == var2) {
+                  return var4;
                }
 
-               var3++;
+               var4++;
             }
 
             return -1;
          }
 
-         if (this.getItemViewType(var4) == var2) {
-            return var4;
+         if (this.getItemViewType(var3) == var2) {
+            return var3;
          }
 
-         var4--;
+         var3--;
       }
    }
 
@@ -199,10 +199,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          q.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
          var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var10: EmojiPickerItem = this.getItem(var2);
-         q.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
+         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var7: EmojiPickerItem = this.getItem(var2);
+         q.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockHeader) {

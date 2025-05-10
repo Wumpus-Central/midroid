@@ -222,9 +222,9 @@ public data class PollData(resources: PollResources,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.resources.hashCode();
-      val var9: Int = this.question.hashCode();
-      val var7: Int = this.answers.hashCode();
+      val var9: Int = this.resources.hashCode();
+      val var7: Int = this.question.hashCode();
+      val var10: Int = this.answers.hashCode();
       val var8: Int = this.answersInteraction.hashCode();
       var var6: Int = 0;
       val var1: Int;
@@ -234,13 +234,13 @@ public data class PollData(resources: PollResources,
          var1 = this.answerTapAccessibilityLabel.hashCode();
       }
 
-      val var16: Int = this.layoutType.hashCode();
-      val var17: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
+      val var17: Int = this.layoutType.hashCode();
+      val var11: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
       val var14: Int = java.lang.Boolean.hashCode(this.canTapAnswers);
-      val var12: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
-      val var11: Int = java.lang.Boolean.hashCode(this.hasVoted);
+      val var15: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
+      val var12: Int = java.lang.Boolean.hashCode(this.hasVoted);
       val var13: Int = java.lang.Boolean.hashCode(this.isExpired);
-      val var15: Int = this.containerStyle.hashCode();
+      val var16: Int = this.containerStyle.hashCode();
       val var2: Int;
       if (this.myAvatarUrl == null) {
          var2 = 0;
@@ -286,7 +286,7 @@ public data class PollData(resources: PollResources,
                                                                                                 (
                                                                                                          (
                                                                                                                   (
-                                                                                                                           ((var10 * 31 + var9) * 31 + var7)
+                                                                                                                           ((var9 * 31 + var7) * 31 + var10)
                                                                                                                                  * 31
                                                                                                                               + var8
                                                                                                                         )
@@ -294,25 +294,25 @@ public data class PollData(resources: PollResources,
                                                                                                                      + var1
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var16
+                                                                                                            + var17
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var17
+                                                                                                   + var11
                                                                                              )
                                                                                              * 31
                                                                                           + var14
                                                                                     )
                                                                                     * 31
-                                                                                 + var12
+                                                                                 + var15
                                                                            )
                                                                            * 31
-                                                                        + var11
+                                                                        + var12
                                                                   )
                                                                   * 31
                                                                + var13
                                                          )
                                                          * 31
-                                                      + var15
+                                                      + var16
                                                 )
                                                 * 31
                                              + var2
@@ -331,60 +331,60 @@ public data class PollData(resources: PollResources,
    }
 
    public override fun toString(): String {
-      val var8: PollResources = this.resources;
-      val var13: PollMedia = this.question;
+      val var11: PollResources = this.resources;
+      val var16: PollMedia = this.question;
       val var6: java.util.List = this.answers;
-      val var11: PollChatAnswerInteractionType = this.answersInteraction;
-      val var9: java.lang.String = this.answerTapAccessibilityLabel;
-      val var14: PollLayoutType = this.layoutType;
-      val var1: Boolean = this.canSelectMultipleAnswers;
-      val var2: Boolean = this.canTapAnswers;
-      val var5: Boolean = this.canShowVoteCounts;
-      val var3: Boolean = this.hasVoted;
-      val var4: Boolean = this.isExpired;
+      val var15: PollChatAnswerInteractionType = this.answersInteraction;
+      val var17: java.lang.String = this.answerTapAccessibilityLabel;
+      val var9: PollLayoutType = this.layoutType;
+      val var3: Boolean = this.canSelectMultipleAnswers;
+      val var1: Boolean = this.canTapAnswers;
+      val var4: Boolean = this.canShowVoteCounts;
+      val var5: Boolean = this.hasVoted;
+      val var2: Boolean = this.isExpired;
       val var7: java.lang.String = this.containerStyle;
-      val var17: java.lang.String = this.myAvatarUrl;
-      val var16: PollAction = this.secondaryAction;
-      val var18: PollAction = this.primaryAction;
-      val var10: PollAction = this.tertiaryAction;
-      val var15: java.lang.String = this.promptLabel;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("PollData(resources=");
-      var12.append(var8);
-      var12.append(", question=");
-      var12.append(var13);
-      var12.append(", answers=");
-      var12.append(var6);
-      var12.append(", answersInteraction=");
-      var12.append(var11);
-      var12.append(", answerTapAccessibilityLabel=");
-      var12.append(var9);
-      var12.append(", layoutType=");
-      var12.append(var14);
-      var12.append(", canSelectMultipleAnswers=");
-      var12.append(var1);
-      var12.append(", canTapAnswers=");
-      var12.append(var2);
-      var12.append(", canShowVoteCounts=");
-      var12.append(var5);
-      var12.append(", hasVoted=");
-      var12.append(var3);
-      var12.append(", isExpired=");
-      var12.append(var4);
-      var12.append(", containerStyle=");
-      var12.append(var7);
-      var12.append(", myAvatarUrl=");
-      var12.append(var17);
-      var12.append(", secondaryAction=");
-      var12.append(var16);
-      var12.append(", primaryAction=");
-      var12.append(var18);
-      var12.append(", tertiaryAction=");
-      var12.append(var10);
-      var12.append(", promptLabel=");
-      var12.append(var15);
-      var12.append(")");
-      return var12.toString();
+      val var12: java.lang.String = this.myAvatarUrl;
+      val var13: PollAction = this.secondaryAction;
+      val var10: PollAction = this.primaryAction;
+      val var8: PollAction = this.tertiaryAction;
+      val var18: java.lang.String = this.promptLabel;
+      val var14: StringBuilder = new StringBuilder();
+      var14.append("PollData(resources=");
+      var14.append(var11);
+      var14.append(", question=");
+      var14.append(var16);
+      var14.append(", answers=");
+      var14.append(var6);
+      var14.append(", answersInteraction=");
+      var14.append(var15);
+      var14.append(", answerTapAccessibilityLabel=");
+      var14.append(var17);
+      var14.append(", layoutType=");
+      var14.append(var9);
+      var14.append(", canSelectMultipleAnswers=");
+      var14.append(var3);
+      var14.append(", canTapAnswers=");
+      var14.append(var1);
+      var14.append(", canShowVoteCounts=");
+      var14.append(var4);
+      var14.append(", hasVoted=");
+      var14.append(var5);
+      var14.append(", isExpired=");
+      var14.append(var2);
+      var14.append(", containerStyle=");
+      var14.append(var7);
+      var14.append(", myAvatarUrl=");
+      var14.append(var12);
+      var14.append(", secondaryAction=");
+      var14.append(var13);
+      var14.append(", primaryAction=");
+      var14.append(var10);
+      var14.append(", tertiaryAction=");
+      var14.append(var8);
+      var14.append(", promptLabel=");
+      var14.append(var18);
+      var14.append(")");
+      return var14.toString();
    }
 
    public object `$serializer` : G {
@@ -420,29 +420,29 @@ public data class PollData(resources: PollResources,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: KSerializer = PollData.access$get$childSerializers$cp()[2];
-         val var5: C0 = C0.a;
-         val var3: KSerializer = a.u(C0.a);
-         val var6: KSerializer = a.u(var5);
+         val var2: KSerializer = PollData.access$get$childSerializers$cp()[2];
+         val var1: C0 = C0.a;
+         val var4: KSerializer = a.u(C0.a);
+         val var6: KSerializer = a.u(var1);
          val var7: PollAction.$serializer = PollAction.$serializer.INSTANCE;
          return new KSerializer[]{
             PollResources.$serializer.INSTANCE,
             PollMedia.$serializer.INSTANCE,
-            var1,
+            var2,
             PollChatAnswerInteractionType.Serializer.INSTANCE,
-            var3,
+            var4,
             PollLayoutType.Serializer.INSTANCE,
             h.a,
             h.a,
             h.a,
             h.a,
             h.a,
-            var5,
+            var1,
             var6,
             a.u(PollAction.$serializer.INSTANCE),
             a.u(var7),
             a.u(var7),
-            a.u(var5)
+            a.u(var1)
          };
       }
 
@@ -458,44 +458,46 @@ public data class PollData(resources: PollResources,
          var var8: Boolean;
          var var9: Boolean;
          val var10: Boolean;
-         var var12: Any;
          var var14: PollResources;
+         var var15: Any;
          var var17: Any;
          var var18: Any;
-         var var19: Any;
          var var20: PollChatAnswerInteractionType;
          var var21: PollLayoutType;
+         var var36: Any;
          var var38: Any;
-         var var41: Any;
-         var var43: Any;
-         var var45: Any;
+         var var40: Any;
+         var var44: Any;
+         var var51: Any;
          if (var5) {
             var14 = var25.m(var24, 0, PollResources.$serializer.INSTANCE, null) as PollResources;
             var18 = var25.m(var24, 1, PollMedia.$serializer.INSTANCE, null) as PollMedia;
-            var19 = var25.m(var24, 2, var22[2], null) as java.util.List;
+            var22 = var25.m(var24, 2, var22[2], null) as java.util.List;
             var20 = var25.m(var24, 3, PollChatAnswerInteractionType.Serializer.INSTANCE, null) as PollChatAnswerInteractionType;
             val var27: C0 = C0.a;
-            var41 = var25.v(var24, 4, C0.a, null) as java.lang.String;
-            var21 = var25.m(var24, 5, PollLayoutType.Serializer.INSTANCE, null) as PollLayoutType;
+            var40 = var25.v(var24, 4, C0.a, null) as java.lang.String;
+            val var19: PollLayoutType = var25.m(var24, 5, PollLayoutType.Serializer.INSTANCE, null) as PollLayoutType;
             var7 = var25.s(var24, 6);
-            var10 = var25.s(var24, 7);
-            var8 = var25.s(var24, 8);
+            var9 = var25.s(var24, 7);
+            var10 = var25.s(var24, 8);
             val var6: Boolean = var25.s(var24, 9);
             var5 = var25.s(var24, 10);
-            var45 = var25.t(var24, 11);
-            var22 = var25.v(var24, 12, var27, null) as java.lang.String;
-            var38 = PollAction.$serializer.INSTANCE;
-            var43 = var25.v(var24, 13, PollAction.$serializer.INSTANCE, null) as PollAction;
-            var12 = var25.v(var24, 14, (DeserializationStrategy)var38, null) as PollAction;
-            var38 = var25.v(var24, 15, (DeserializationStrategy)var38, null) as PollAction;
+            var17 = var25.t(var24, 11);
+            var51 = var25.v(var24, 12, var27, null) as java.lang.String;
+            var36 = PollAction.$serializer.INSTANCE;
+            var44 = var25.v(var24, 13, PollAction.$serializer.INSTANCE, null) as PollAction;
+            var38 = var25.v(var24, 14, (DeserializationStrategy)var36, null) as PollAction;
+            var36 = var25.v(var24, 15, (DeserializationStrategy)var36, null) as PollAction;
             val var28: java.lang.String = var25.v(var24, 16, var27, null) as java.lang.String;
             var2 = 131071;
-            var17 = var41;
-            var9 = var6;
-            var41 = var45;
-            var45 = var43;
-            var43 = var38;
-            var38 = var28;
+            var15 = var40;
+            var21 = var19;
+            var8 = var6;
+            var40 = var51;
+            var51 = var44;
+            var44 = var38;
+            var38 = var36;
+            var36 = var28;
          } else {
             var var3: Boolean = true;
             var2 = 0;
@@ -506,15 +508,15 @@ public data class PollData(resources: PollResources,
             var5 = false;
             var21 = null;
             var20 = null;
-            var19 = null;
+            var var48: Any = null;
             var18 = null;
-            var12 = null;
-            var17 = null;
-            var45 = null;
-            var43 = null;
-            var14 = null;
             var38 = null;
-            var41 = null;
+            var17 = null;
+            var44 = null;
+            var15 = null;
+            var14 = null;
+            var36 = null;
+            var40 = null;
 
             while (var3) {
                var var4: Int = var25.x(var24);
@@ -531,7 +533,7 @@ public data class PollData(resources: PollResources,
                      var2 |= 2;
                      continue;
                   case 2:
-                     var19 = var25.m(var24, 2, var22[2], var19) as java.util.List;
+                     var48 = var25.m(var24, 2, var22[2], var48) as java.util.List;
                      var2 |= 4;
                      continue;
                   case 3:
@@ -567,15 +569,15 @@ public data class PollData(resources: PollResources,
                      var2 |= 1024;
                      continue;
                   case 11:
-                     var41 = var25.t(var24, 11);
+                     var40 = var25.t(var24, 11);
                      var2 |= 2048;
                      continue;
                   case 12:
-                     var43 = var25.v(var24, 12, C0.a, var43) as java.lang.String;
+                     var15 = var25.v(var24, 12, C0.a, var15) as java.lang.String;
                      var2 |= 4096;
                      continue;
                   case 13:
-                     var45 = var25.v(var24, 13, PollAction.$serializer.INSTANCE, var45) as PollAction;
+                     var44 = var25.v(var24, 13, PollAction.$serializer.INSTANCE, var44) as PollAction;
                      var2 |= 8192;
                      continue;
                   case 14:
@@ -583,11 +585,11 @@ public data class PollData(resources: PollResources,
                      var2 |= 16384;
                      continue;
                   case 15:
-                     var38 = var25.v(var24, 15, PollAction.$serializer.INSTANCE, var38) as PollAction;
+                     var36 = var25.v(var24, 15, PollAction.$serializer.INSTANCE, var36) as PollAction;
                      var4 = 32768;
                      break;
                   case 16:
-                     var12 = var25.v(var24, 16, C0.a, var12) as java.lang.String;
+                     var38 = var25.v(var24, 16, C0.a, var38) as java.lang.String;
                      var4 = 65536;
                      break;
                   default:
@@ -597,16 +599,18 @@ public data class PollData(resources: PollResources,
                var2 |= var4;
             }
 
-            var12 = var17;
-            var22 = (KSerializer[])var43;
-            var43 = var38;
-            var38 = var12;
+            var51 = var44;
+            var10 = var5;
+            var36 = var38;
+            var38 = var36;
+            var44 = var17;
+            var40 = var15;
+            var17 = var40;
             var5 = var9;
-            var9 = var8;
-            var8 = var5;
-            var10 = var7;
+            var9 = var7;
             var7 = var32;
-            var17 = var14;
+            var15 = var14;
+            var22 = (KSerializer[])var48;
             var14 = var26;
          }
 
@@ -615,21 +619,21 @@ public data class PollData(resources: PollResources,
             var2,
             var14,
             (PollMedia)var18,
-            (java.util.List)var19,
+            var22,
             var20,
-            (java.lang.String)var17,
+            (java.lang.String)var15,
             var21,
             var7,
+            var9,
             var10,
             var8,
-            var9,
             var5,
-            (java.lang.String)var41,
-            var22,
-            (PollAction)var45,
-            (PollAction)var12,
-            (PollAction)var43,
-            (java.lang.String)var38,
+            (java.lang.String)var17,
+            (java.lang.String)var40,
+            (PollAction)var51,
+            (PollAction)var44,
+            (PollAction)var38,
+            (java.lang.String)var36,
             null
          );
       }

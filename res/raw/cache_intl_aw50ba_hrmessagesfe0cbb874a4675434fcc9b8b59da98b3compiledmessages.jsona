@@ -1262,19 +1262,6 @@
   "PHjkRE": "Aplikacije",
   "AKcFUl": "App direktorij",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "u ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servera"
-  ],
-  "KC1oZ2": "Dodavanje aplikacije",
-  "j4KtLS": "Ups, ova poveznica ne radi...",
-  "0H5OT0": "Pokušaj poslati drugu!",
-  "NaQLEx": "Neispravna poveznica",
-  "m9hXGR": "Rješavanje problema s aplikacijom",
   "9PUXpK": "Ljutit",
   "IoLVi4": "Slatkiš iz snova od šerbeta",
   "nmd90t": "uwu~",
@@ -5939,7 +5926,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "U posljednje vrijeme mi se sviđa",
   "G1b309": "Ponavlja se",
   "iXcll5": "U posljednje vrijeme igram",
   "+KXSFh": [
@@ -5990,7 +5976,6 @@
   "ZPjue3": "Najbolja stvar koju si pojeo/la ovog tjedna?",
   "40gTj4": "Ne mogu dočekati...",
   "SWVxPD": "Odaberi razred svojeg lika",
-  "ZStIVl": "Trenutačno sam opsjednut/a s...",
   "3XVZ0t": "Najbolji bazični vic?",
   "4U+EJC": "Koji emoji najbolje opisuje tvoj dan?",
   "R1f9RU": "Koji ti je omiljeni anime u posljednje vrijeme?",
@@ -6021,6 +6006,8 @@
   "/UonHB": "Postavi prilagođeni status",
   "Iuzg8f": "Postavi svoj status",
   "zOdg0N": "Status",
+  "hA60Ul": "Istakni svoj status unaprijed postavljenim tagom",
+  "jrzHRk": "Prilagođeni tagovi statusa",
   "GQmLra": "Danas",
   "UcdRn5": "Što ima kod tebe?",
   "xod36+": "Što ti se mota po glavi?",
@@ -7788,7 +7775,6 @@
     ],
     " u aktivnosti"
   ],
-  "LQx1UF": "Razrješavanje aktivnosti",
   "1fRDnZ": "Nastavi video",
   "VOgTj4": "Video je privremeno pauziran na tvojem uređaju kako bi performanse bile bolje",
   "i+9VW1": "Nije moguće dijeliti prazne zapisnike",

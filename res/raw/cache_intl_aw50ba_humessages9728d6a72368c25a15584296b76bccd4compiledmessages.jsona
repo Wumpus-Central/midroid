@@ -1232,18 +1232,6 @@
   "PHjkRE": "Alkalmazások",
   "AKcFUl": "Alkalmazáskönyvtár",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    [
-      1,
-      "guildCount"
-    ],
-    " szerveren"
-  ],
-  "KC1oZ2": "Alkalmazás hozzáadása",
-  "j4KtLS": "Hoppá, ez a hivatkozás nem működik…",
-  "0H5OT0": "Próbálj meg másikat küldeni!",
-  "NaQLEx": "Érvénytelen hivatkozás",
-  "m9hXGR": "Alkalmazással kapcsolatos problémák megoldása",
   "9PUXpK": "Mérges",
   "IoLVi4": "Sörbet álomfagyi",
   "nmd90t": "uwu~",
@@ -5776,7 +5764,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Ezek tetszettek mostanában",
   "G1b309": "Folyamatosan ez megy",
   "iXcll5": "Ezekkel játszottál mostanában",
   "+KXSFh": [
@@ -5821,7 +5808,6 @@
   "ZPjue3": "Mi volt a legfinomabb dolog, amit a héten ettél?",
   "40gTj4": "Alig várom a következőt…",
   "SWVxPD": "Válassz karakterosztályt",
-  "ZStIVl": "Jelenleg odáig van a következőért…",
   "3XVZ0t": "Legjobb favicc?",
   "4U+EJC": "Melyik emotikon írja le a legjobban a napodat?",
   "R1f9RU": "Mi mostanában a kedvenc animéd?",
@@ -5852,6 +5838,8 @@
   "/UonHB": "Egyéni állapot beállítása",
   "Iuzg8f": "Saját állapot beállítása",
   "zOdg0N": "Állapot",
+  "hA60Ul": "Előre beállított címkével érheted el, hogy az állapotod kitűnjön a tömegből",
+  "jrzHRk": "Egyéni állapotcímkék",
   "GQmLra": "Ma",
   "UcdRn5": "Mi a helyzet?",
   "xod36+": "Mi jár a fejedben?",
@@ -7530,7 +7518,6 @@
     ],
     " vesz részt egy tevékenységben"
   ],
-  "LQx1UF": "Tevékenység beolvasása",
   "1fRDnZ": "Videó lejátszásának folytatása",
   "VOgTj4": "A rendszer ideiglenesen szünetelteti a videót az eszközödön a jobb teljesítmény érdekében",
   "i+9VW1": "Az üres naplók megosztása sikertelen",

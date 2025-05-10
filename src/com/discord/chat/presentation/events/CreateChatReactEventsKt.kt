@@ -18,8 +18,6 @@ import com.discord.chat.reactevents.LongPressStickerData
 import com.discord.chat.reactevents.LongPressUsernameData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackEndedData
 import com.discord.chat.reactevents.MediaAttachmentPlaybackStartedData
-import com.discord.chat.reactevents.TapActivityBookmarkEmbedData
-import com.discord.chat.reactevents.TapActivityInstanceEmbedData
 import com.discord.chat.reactevents.TapAppMessageEmbedData
 import com.discord.chat.reactevents.TapAttachmentLinkData
 import com.discord.chat.reactevents.TapAutoModerationActionsData
@@ -152,8 +150,6 @@ internal fun createChatReactEvents(): ReactEvents {
       w.a("onMediaAttachmentPlaybackEnded", G.b(MediaAttachmentPlaybackEndedData.class)),
       w.a("onVoiceMessagePlaybackFailed", G.b(VoiceMessagePlaybackFailedData.class)),
       w.a("onMediaAttachmentPlaybackStarted", G.b(MediaAttachmentPlaybackStartedData.class)),
-      w.a("onTapActivityBookmarkEmbed", G.b(TapActivityBookmarkEmbedData.class)),
-      w.a("onTapActivityInstanceEmbed", G.b(TapActivityInstanceEmbedData.class)),
       w.a("onTapAppMessageEmbed", G.b(TapAppMessageEmbedData.class)),
       w.a("onTapPostPreviewEmbed", G.b(TapPostPreviewEmbedData.class)),
       w.a("onTapDismissMediaPostSharePrompt", G.b(TapDismissMediaPostSharePromptData.class)),

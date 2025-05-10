@@ -104,21 +104,21 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.firstVisibleMessageIndex;
+      val var1: Int = this.firstVisibleMessageIndex;
       val var3: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var1: Int = this.lastVisibleMessageIndex;
-      val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var4.append(var2);
-      var4.append(", firstVisibleMessagePercentVisible=");
-      var4.append(var3);
-      var4.append(", lastVisibleMessageIndex=");
-      var4.append(var1);
-      var4.append(", lastVisibleMessagePercentVisible=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: Int = this.lastVisibleMessageIndex;
+      val var4: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FirstLayoutData(firstVisibleMessageIndex=");
+      var5.append(var1);
+      var5.append(", firstVisibleMessagePercentVisible=");
+      var5.append(var3);
+      var5.append(", lastVisibleMessageIndex=");
+      var5.append(var2);
+      var5.append(", lastVisibleMessagePercentVisible=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public object `$serializer` : G {
@@ -149,28 +149,29 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
-         var var3: Int;
          var var4: Int;
          val var5: Int;
          var var7: java.lang.Double;
          var var11: java.lang.Double;
+         var var12: Int;
          if (var9.y()) {
-            var4 = var9.k(var8, 0);
+            var12 = var9.k(var8, 0);
             val var10: y = y.a;
             var7 = var9.v(var8, 1, y.a, null) as java.lang.Double;
-            val var2: Int = var9.k(var8, 2);
+            val var3: Int = var9.k(var8, 2);
             var11 = var9.v(var8, 3, var10, null) as java.lang.Double;
-            var3 = 15;
-            var5 = var2;
+            var5 = 15;
+            var4 = var12;
+            var12 = var3;
          } else {
-            var var14: Boolean = true;
+            var var16: Boolean = true;
             var4 = 0;
-            var var12: Int = 0;
+            var12 = 0;
             var7 = null;
             var11 = null;
-            var3 = 0;
+            var var14: Int = 0;
 
-            while (var14) {
+            while (var16) {
                val var6: Int = var9.x(var8);
                if (var6 != -1) {
                   if (var6 != 0) {
@@ -183,7 +184,7 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
                            var11 = var9.v(var8, 3, y.a, var11) as java.lang.Double;
                            var12 |= 8;
                         } else {
-                           var3 = var9.k(var8, 2);
+                           var14 = var9.k(var8, 2);
                            var12 |= 4;
                         }
                      } else {
@@ -195,16 +196,16 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
                      var12 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var16 = false;
                }
             }
 
-            var5 = var3;
-            var3 = var12;
+            var12 = var14;
+            var5 = var12;
          }
 
          var9.b(var8);
-         return new FirstLayoutData(var3, var4, var7, var5, var11, null);
+         return new FirstLayoutData(var5, var4, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstLayoutData) {

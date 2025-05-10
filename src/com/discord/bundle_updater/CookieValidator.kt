@@ -20,16 +20,16 @@ public object CookieValidator {
          if (var8 == null) {
             return null;
          } else {
-            val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var2: okio.ByteString.a = ByteString.m;
-            q.e(var9);
-            val var10: ByteString = var2.b(var9);
+            var var2: java.lang.String = URLDecoder.decode(var8, "UTF-8");
+            val var9: okio.ByteString.a = ByteString.m;
+            q.e(var2);
+            val var10: ByteString = var9.b(var2);
             if (var10 != null) {
-               val var13: java.lang.String = var10.H();
-               if (var13 != null) {
+               var2 = var10.H();
+               if (var2 != null) {
                   try {
                      var11 = Json.d;
-                     var14 = Json.d.g(var13);
+                     var14 = Json.d.g(var2);
                   } catch (var7: g) {
                      return null;
                   }

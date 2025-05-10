@@ -89,7 +89,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                         val var4: Int = var1.length;
 
                         for (int var2x = 0; var2x < var4; var2x++) {
-                           var var9: File = var1[var2x];
+                           val var9: File = var1[var2x];
                            if (var1[var2x].isFile()) {
                               val var8: java.lang.String = var9.getName();
                               q.g(var8, "getName(...)");
@@ -100,15 +100,15 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                            }
 
                            if (var9.isDirectory() && q.c(var9.getName(), "compressor")) {
-                              val var11: Array<File> = var9.listFiles();
-                              if (var11 != null) {
-                                 q.e(var11);
-                                 val var5: Int = var11.length;
+                              val var12: Array<File> = var9.listFiles();
+                              if (var12 != null) {
+                                 q.e(var12);
+                                 val var5: Int = var12.length;
 
                                  for (int var3 = 0; var3 < var5; var3++) {
-                                    var9 = var11[var3];
-                                    if (var11[var3].isFile() && var11[var3].lastModified() < var6) {
-                                       var9.delete();
+                                    val var11: File = var12[var3];
+                                    if (var12[var3].isFile() && var12[var3].lastModified() < var6) {
+                                       var11.delete();
                                     }
                                  }
                               }
@@ -162,23 +162,23 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                      );
                   }
 
-                  val var12: Uri = this.$uri;
-                  val var13: InputStream = MediaResolver.access$getResolver(this.this$0).openInputStream(var12);
-                  if (var13 != null) {
+                  val var11: Uri = this.$uri;
+                  val var12: InputStream = MediaResolver.access$getResolver(this.this$0).openInputStream(var11);
+                  if (var12 != null) {
                      try {
-                        q.e(var13);
-                        FileUtilsKt.writeTo(var13, var1);
+                        q.e(var12);
+                        FileUtilsKt.writeTo(var12, var1);
                      } catch (var5: java.lang.Throwable) {
-                        val var11: java.lang.Throwable = var5;
+                        val var13: java.lang.Throwable = var5;
 
                         try {
-                           throw var11;
+                           throw var13;
                         } catch (var4: java.lang.Throwable) {
-                           c.a(var13, var5);
+                           c.a(var12, var5);
                         }
                      }
 
-                     c.a(var13, null);
+                     c.a(var12, null);
                   }
 
                   return Uri.fromFile(var1);
@@ -228,8 +228,8 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 27: aload 1
       // 28: ldc "r"
       // 2a: invokevirtual android/content/ContentResolver.openFileDescriptor (Landroid/net/Uri;Ljava/lang/String;)Landroid/os/ParcelFileDescriptor;
-      // 2d: astore 10
-      // 2f: aload 10
+      // 2d: astore 9
+      // 2f: aload 9
       // 31: ifnonnull 36
       // 34: aconst_null
       // 35: areturn
@@ -242,19 +242,19 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 41: bipush 2
       // 42: aconst_null
       // 43: invokestatic com/discord/media/utils/ContentResolverUtils.createTempFile$default (Lcom/discord/media/utils/ContentResolverUtils;Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/io/File;
-      // 46: astore 9
+      // 46: astore 10
       // 48: bipush 0
       // 49: istore 5
-      // 4b: aload 10
+      // 4b: aload 9
       // 4d: invokevirtual android/os/ParcelFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
-      // 50: aload 9
+      // 50: aload 10
       // 52: invokestatic Ba/b.a (Ljava/io/FileDescriptor;Ljava/io/File;)Z
       // 55: istore 6
       // 57: iload 6
       // 59: ifeq 6f
       // 5c: iload 6
       // 5e: istore 5
-      // 60: aload 9
+      // 60: aload 10
       // 62: invokestatic android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;
       // 65: astore 7
       // 67: goto 72
@@ -262,7 +262,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 6c: goto aa
       // 6f: aload 1
       // 70: astore 7
-      // 72: aload 10
+      // 72: aload 9
       // 74: invokevirtual android/os/ParcelFileDescriptor.close ()V
       // 77: iload 6
       // 79: ifeq 8c
@@ -273,7 +273,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 85: invokevirtual java/io/File.delete ()Z
       // 88: pop
       // 89: goto a7
-      // 8c: aload 9
+      // 8c: aload 10
       // 8e: invokevirtual java/io/File.delete ()Z
       // 91: pop
       // 92: aload 1
@@ -288,11 +288,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // a6: pop
       // a7: aload 7
       // a9: areturn
-      // aa: aload 10
+      // aa: aload 9
       // ac: invokevirtual android/os/ParcelFileDescriptor.close ()V
       // af: iload 5
       // b1: ifne d2
-      // b4: aload 9
+      // b4: aload 10
       // b6: invokevirtual java/io/File.delete ()Z
       // b9: pop
       // ba: aload 1
@@ -405,8 +405,8 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                }
 
                val var30: V7.a = V7.a.a;
-               val var13: Context = this.context;
-               val var21: Function1 = new Function1(var2, var26, this, var1) {
+               val var21: Context = this.context;
+               val var13: Function1 = new Function1(var2, var26, this, var1) {
                   final int $compressionQuality;
                   final Uri $inputUri;
                   final boolean $shouldResize;
@@ -434,15 +434,15 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                };
                ((<unrepresentable>)var9).L$0 = this;
                ((<unrepresentable>)var9).L$1 = var1;
-               var3 = var4;
                ((<unrepresentable>)var9).Z$0 = var4;
                ((<unrepresentable>)var9).label = 1;
-               var19 = V7.a.b(var30, var13, var1, null, var21, (Continuation)var9, 4, null);
+               var19 = V7.a.b(var30, var21, var1, null, var13, (Continuation)var9, 4, null);
                if (var19 === var11) {
                   return var11;
                }
 
                var14 = this;
+               var3 = var4;
             }
 
             var22 = var19 as File;
@@ -541,7 +541,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 04d: getfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
       // 050: istore 5
       // 052: iload 5
-      // 054: ifeq 0d6
+      // 054: ifeq 0de
       // 057: iload 5
       // 059: bipush 1
       // 05a: if_icmpeq 084
@@ -553,7 +553,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 066: if_icmpne 071
       // 069: aload 4
       // 06b: invokestatic o8/s.b (Ljava/lang/Object;)V
-      // 06e: goto 341
+      // 06e: goto 34a
       // 071: new java/lang/IllegalStateException
       // 074: dup
       // 075: ldc_w "call to 'resume' before 'invoke' with coroutine"
@@ -561,7 +561,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 07b: athrow
       // 07c: aload 4
       // 07e: invokestatic o8/s.b (Ljava/lang/Object;)V
-      // 081: goto 316
+      // 081: goto 31f
       // 084: aload 8
       // 086: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
       // 089: checkcast com/discord/media/utils/MediaResolver
@@ -569,351 +569,357 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 08e: aload 8
       // 090: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$3 Ljava/lang/Object;
       // 093: checkcast com/discord/media/utils/DiscordVideoMediaSource
-      // 096: astore 9
+      // 096: astore 11
       // 098: aload 8
       // 09a: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$2 Ljava/lang/Object;
       // 09d: checkcast android/net/Uri
-      // 0a0: astore 7
+      // 0a0: astore 6
       // 0a2: aload 8
       // 0a4: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$1 Ljava/lang/Object;
       // 0a7: checkcast android/net/Uri
-      // 0aa: astore 6
+      // 0aa: astore 7
       // 0ac: aload 8
       // 0ae: getfield com/discord/media/utils/MediaResolver$handleVideo$1.L$0 Ljava/lang/Object;
       // 0b1: checkcast com/discord/media/utils/MediaResolver
       // 0b4: astore 1
       // 0b5: aload 4
       // 0b7: invokestatic o8/s.b (Ljava/lang/Object;)V
-      // 0ba: aload 7
+      // 0ba: aload 6
       // 0bc: astore 3
-      // 0bd: aload 9
-      // 0bf: astore 7
+      // 0bd: aload 7
+      // 0bf: astore 6
       // 0c1: aload 4
       // 0c3: astore 9
       // 0c5: aload 10
       // 0c7: astore 4
-      // 0c9: goto 220
-      // 0cc: astore 3
-      // 0cd: aload 1
-      // 0ce: astore 4
-      // 0d0: aload 7
-      // 0d2: astore 1
-      // 0d3: goto 287
-      // 0d6: aload 4
-      // 0d8: invokestatic o8/s.b (Ljava/lang/Object;)V
-      // 0db: getstatic com/discord/media/utils/ContentResolverUtils.INSTANCE Lcom/discord/media/utils/ContentResolverUtils;
-      // 0de: aload 0
-      // 0df: invokespecial com/discord/media/utils/MediaResolver.getResolver ()Landroid/content/ContentResolver;
-      // 0e2: aload 1
-      // 0e3: aconst_null
-      // 0e4: ldc "mp4"
-      // 0e6: bipush 2
-      // 0e7: aconst_null
-      // 0e8: invokestatic com/discord/media/utils/ContentResolverUtils.createTempFile$default (Lcom/discord/media/utils/ContentResolverUtils;Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/io/File;
-      // 0eb: invokestatic android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;
-      // 0ee: astore 9
-      // 0f0: aload 9
-      // 0f2: astore 4
-      // 0f4: getstatic o8/r.k Lo8/r$a;
-      // 0f7: astore 7
-      // 0f9: new com/discord/media/utils/DiscordVideoMediaSource
-      // 0fc: astore 7
-      // 0fe: aload 7
-      // 100: aload 0
-      // 101: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
-      // 104: aload 6
-      // 106: invokespecial com/discord/media/utils/DiscordVideoMediaSource.<init> (Landroid/content/Context;Landroid/net/Uri;)V
-      // 109: aload 7
-      // 10b: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
-      // 10e: astore 7
-      // 110: goto 124
-      // 113: astore 7
-      // 115: getstatic o8/r.k Lo8/r$a;
-      // 118: astore 10
-      // 11a: aload 7
-      // 11c: invokestatic o8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 11f: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
-      // 122: astore 7
-      // 124: aload 7
-      // 126: invokestatic o8/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
-      // 129: astore 10
-      // 12b: aload 10
-      // 12d: ifnull 172
-      // 130: aload 10
-      // 132: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // 135: astore 13
-      // 137: new java/lang/StringBuilder
-      // 13a: dup
-      // 13b: invokespecial java/lang/StringBuilder.<init> ()V
-      // 13e: astore 11
-      // 140: aload 11
-      // 142: ldc_w "["
-      // 145: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 148: pop
-      // 149: aload 11
-      // 14b: aload 10
-      // 14d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      // 0c9: aload 11
+      // 0cb: astore 7
+      // 0cd: goto 228
+      // 0d0: astore 3
+      // 0d1: aload 1
+      // 0d2: astore 4
+      // 0d4: aload 6
+      // 0d6: astore 1
+      // 0d7: aload 7
+      // 0d9: astore 6
+      // 0db: goto 290
+      // 0de: aload 4
+      // 0e0: invokestatic o8/s.b (Ljava/lang/Object;)V
+      // 0e3: getstatic com/discord/media/utils/ContentResolverUtils.INSTANCE Lcom/discord/media/utils/ContentResolverUtils;
+      // 0e6: aload 0
+      // 0e7: invokespecial com/discord/media/utils/MediaResolver.getResolver ()Landroid/content/ContentResolver;
+      // 0ea: aload 1
+      // 0eb: aconst_null
+      // 0ec: ldc "mp4"
+      // 0ee: bipush 2
+      // 0ef: aconst_null
+      // 0f0: invokestatic com/discord/media/utils/ContentResolverUtils.createTempFile$default (Lcom/discord/media/utils/ContentResolverUtils;Landroid/content/ContentResolver;Landroid/net/Uri;Ljava/lang/String;Ljava/lang/String;ILjava/lang/Object;)Ljava/io/File;
+      // 0f3: invokestatic android/net/Uri.fromFile (Ljava/io/File;)Landroid/net/Uri;
+      // 0f6: astore 9
+      // 0f8: aload 9
+      // 0fa: astore 4
+      // 0fc: getstatic o8/r.k Lo8/r$a;
+      // 0ff: astore 7
+      // 101: new com/discord/media/utils/DiscordVideoMediaSource
+      // 104: astore 7
+      // 106: aload 7
+      // 108: aload 0
+      // 109: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
+      // 10c: aload 6
+      // 10e: invokespecial com/discord/media/utils/DiscordVideoMediaSource.<init> (Landroid/content/Context;Landroid/net/Uri;)V
+      // 111: aload 7
+      // 113: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 116: astore 7
+      // 118: goto 12c
+      // 11b: astore 10
+      // 11d: getstatic o8/r.k Lo8/r$a;
+      // 120: astore 7
+      // 122: aload 10
+      // 124: invokestatic o8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 127: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 12a: astore 7
+      // 12c: aload 7
+      // 12e: invokestatic o8/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
+      // 131: astore 11
+      // 133: aload 11
+      // 135: ifnull 17a
+      // 138: aload 11
+      // 13a: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
+      // 13d: astore 10
+      // 13f: new java/lang/StringBuilder
+      // 142: dup
+      // 143: invokespecial java/lang/StringBuilder.<init> ()V
+      // 146: astore 13
+      // 148: aload 13
+      // 14a: ldc_w "["
+      // 14d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 150: pop
-      // 151: aload 11
-      // 153: ldc_w "] Error creating source: "
-      // 156: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 159: pop
-      // 15a: aload 11
-      // 15c: aload 13
+      // 151: aload 13
+      // 153: aload 11
+      // 155: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      // 158: pop
+      // 159: aload 13
+      // 15b: ldc_w "] Error creating source: "
       // 15e: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 161: pop
-      // 162: aload 0
-      // 163: ldc_w "Media source error"
-      // 166: aload 11
-      // 168: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 16b: aload 6
-      // 16d: aload 4
-      // 16f: invokespecial com/discord/media/utils/MediaResolver.logMediaError (Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;)V
-      // 172: aload 7
-      // 174: astore 10
-      // 176: aload 7
-      // 178: invokestatic o8/r.g (Ljava/lang/Object;)Z
-      // 17b: ifeq 181
-      // 17e: aconst_null
-      // 17f: astore 10
-      // 181: aload 10
-      // 183: checkcast com/discord/media/utils/DiscordVideoMediaSource
-      // 186: astore 7
-      // 188: aload 7
-      // 18a: ifnull 324
-      // 18d: iload 2
-      // 18e: ifeq 1a8
-      // 191: aload 7
-      // 193: astore 9
-      // 195: aload 6
-      // 197: astore 7
-      // 199: aload 0
-      // 19a: astore 1
-      // 19b: aload 1
-      // 19c: astore 3
-      // 19d: aload 1
-      // 19e: astore 10
-      // 1a0: aload 3
-      // 1a1: astore 1
-      // 1a2: aload 4
+      // 162: aload 13
+      // 164: aload 10
+      // 166: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 169: pop
+      // 16a: aload 0
+      // 16b: ldc_w "Media source error"
+      // 16e: aload 13
+      // 170: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 173: aload 6
+      // 175: aload 4
+      // 177: invokespecial com/discord/media/utils/MediaResolver.logMediaError (Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;)V
+      // 17a: aload 7
+      // 17c: astore 10
+      // 17e: aload 7
+      // 180: invokestatic o8/r.g (Ljava/lang/Object;)Z
+      // 183: ifeq 189
+      // 186: aconst_null
+      // 187: astore 10
+      // 189: aload 10
+      // 18b: checkcast com/discord/media/utils/DiscordVideoMediaSource
+      // 18e: astore 7
+      // 190: aload 7
+      // 192: ifnull 32d
+      // 195: iload 2
+      // 196: ifeq 1b0
+      // 199: aload 7
+      // 19b: astore 10
+      // 19d: aload 6
+      // 19f: astore 7
+      // 1a1: aload 0
+      // 1a2: astore 1
+      // 1a3: aload 1
       // 1a4: astore 3
-      // 1a5: goto 233
+      // 1a5: aload 1
+      // 1a6: astore 9
       // 1a8: aload 3
-      // 1a9: ifnull 27a
-      // 1ac: getstatic com/discord/media/utils/Transcoder.INSTANCE Lcom/discord/media/utils/Transcoder;
-      // 1af: astore 10
-      // 1b1: aload 0
-      // 1b2: aload 1
-      // 1b3: invokespecial com/discord/media/utils/MediaResolver.getRequestId (Landroid/net/Uri;)Ljava/lang/String;
-      // 1b6: astore 11
-      // 1b8: aload 0
-      // 1b9: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
-      // 1bc: astore 14
-      // 1be: new com/discord/media/utils/MediaResolver$handleVideo$2$compressedUri$2
-      // 1c1: astore 13
-      // 1c3: aload 13
-      // 1c5: aload 0
-      // 1c6: aload 6
-      // 1c8: invokespecial com/discord/media/utils/MediaResolver$handleVideo$2$compressedUri$2.<init> (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;)V
-      // 1cb: aload 8
+      // 1a9: astore 1
+      // 1aa: aload 4
+      // 1ac: astore 3
+      // 1ad: goto 23b
+      // 1b0: aload 3
+      // 1b1: ifnull 283
+      // 1b4: getstatic com/discord/media/utils/Transcoder.INSTANCE Lcom/discord/media/utils/Transcoder;
+      // 1b7: astore 10
+      // 1b9: aload 0
+      // 1ba: aload 1
+      // 1bb: invokespecial com/discord/media/utils/MediaResolver.getRequestId (Landroid/net/Uri;)Ljava/lang/String;
+      // 1be: astore 14
+      // 1c0: aload 0
+      // 1c1: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
+      // 1c4: astore 11
+      // 1c6: new com/discord/media/utils/MediaResolver$handleVideo$2$compressedUri$2
+      // 1c9: astore 13
+      // 1cb: aload 13
       // 1cd: aload 0
-      // 1ce: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$0 Ljava/lang/Object;
-      // 1d1: aload 8
-      // 1d3: aload 6
-      // 1d5: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$1 Ljava/lang/Object;
-      // 1d8: aload 8
-      // 1da: aload 4
-      // 1dc: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$2 Ljava/lang/Object;
-      // 1df: aload 8
-      // 1e1: aload 7
-      // 1e3: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$3 Ljava/lang/Object;
-      // 1e6: aload 8
-      // 1e8: aload 0
-      // 1e9: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
-      // 1ec: aload 8
-      // 1ee: bipush 1
-      // 1ef: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
-      // 1f2: aload 4
-      // 1f4: astore 1
-      // 1f5: aload 10
-      // 1f7: aload 11
-      // 1f9: aload 14
-      // 1fb: aload 7
-      // 1fd: aload 4
-      // 1ff: aload 3
-      // 200: aload 13
-      // 202: aload 8
-      // 204: invokevirtual com/discord/media/utils/Transcoder.convertCompress (Ljava/lang/String;Landroid/content/Context;Lcom/discord/media/utils/DiscordVideoMediaSource;Landroid/net/Uri;Lcom/discord/media/utils/EncodingConfig;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
-      // 207: astore 3
-      // 208: aload 3
-      // 209: aload 12
-      // 20b: if_acmpne 211
-      // 20e: aload 12
-      // 210: areturn
-      // 211: aload 3
-      // 212: astore 9
-      // 214: aload 0
-      // 215: astore 4
-      // 217: aload 4
-      // 219: astore 10
-      // 21b: aload 1
-      // 21c: astore 3
-      // 21d: aload 10
-      // 21f: astore 1
-      // 220: aload 9
-      // 222: checkcast android/net/Uri
-      // 225: astore 11
-      // 227: aload 7
-      // 229: astore 9
-      // 22b: aload 4
-      // 22d: astore 10
-      // 22f: aload 11
-      // 231: astore 7
-      // 233: aload 10
-      // 235: aload 6
-      // 237: aload 7
-      // 239: aload 9
-      // 23b: invokevirtual s7/a.getSize ()J
-      // 23e: invokespecial com/discord/media/utils/MediaResolver.createMP4FastStartUri (Landroid/net/Uri;Landroid/net/Uri;J)Landroid/net/Uri;
-      // 241: astore 4
-      // 243: aload 4
-      // 245: ifnonnull 24b
-      // 248: goto 24f
+      // 1ce: aload 6
+      // 1d0: invokespecial com/discord/media/utils/MediaResolver$handleVideo$2$compressedUri$2.<init> (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;)V
+      // 1d3: aload 8
+      // 1d5: aload 0
+      // 1d6: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$0 Ljava/lang/Object;
+      // 1d9: aload 8
+      // 1db: aload 6
+      // 1dd: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$1 Ljava/lang/Object;
+      // 1e0: aload 8
+      // 1e2: aload 4
+      // 1e4: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$2 Ljava/lang/Object;
+      // 1e7: aload 8
+      // 1e9: aload 7
+      // 1eb: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$3 Ljava/lang/Object;
+      // 1ee: aload 8
+      // 1f0: aload 0
+      // 1f1: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
+      // 1f4: aload 8
+      // 1f6: bipush 1
+      // 1f7: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
+      // 1fa: aload 4
+      // 1fc: astore 1
+      // 1fd: aload 10
+      // 1ff: aload 14
+      // 201: aload 11
+      // 203: aload 7
+      // 205: aload 4
+      // 207: aload 3
+      // 208: aload 13
+      // 20a: aload 8
+      // 20c: invokevirtual com/discord/media/utils/Transcoder.convertCompress (Ljava/lang/String;Landroid/content/Context;Lcom/discord/media/utils/DiscordVideoMediaSource;Landroid/net/Uri;Lcom/discord/media/utils/EncodingConfig;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
+      // 20f: astore 3
+      // 210: aload 3
+      // 211: aload 12
+      // 213: if_acmpne 219
+      // 216: aload 12
+      // 218: areturn
+      // 219: aload 3
+      // 21a: astore 9
+      // 21c: aload 0
+      // 21d: astore 4
+      // 21f: aload 4
+      // 221: astore 10
+      // 223: aload 1
+      // 224: astore 3
+      // 225: aload 10
+      // 227: astore 1
+      // 228: aload 9
+      // 22a: checkcast android/net/Uri
+      // 22d: astore 11
+      // 22f: aload 7
+      // 231: astore 10
+      // 233: aload 4
+      // 235: astore 9
+      // 237: aload 11
+      // 239: astore 7
+      // 23b: aload 9
+      // 23d: aload 6
+      // 23f: aload 7
+      // 241: aload 10
+      // 243: invokevirtual s7/a.getSize ()J
+      // 246: invokespecial com/discord/media/utils/MediaResolver.createMP4FastStartUri (Landroid/net/Uri;Landroid/net/Uri;J)Landroid/net/Uri;
+      // 249: astore 4
       // 24b: aload 4
-      // 24d: astore 7
-      // 24f: aload 7
-      // 251: areturn
-      // 252: astore 7
-      // 254: aload 1
-      // 255: astore 4
-      // 257: aload 3
+      // 24d: ifnonnull 256
+      // 250: aload 7
+      // 252: astore 1
+      // 253: goto 259
+      // 256: aload 4
       // 258: astore 1
-      // 259: aload 7
-      // 25b: astore 3
-      // 25c: goto 287
-      // 25f: astore 7
-      // 261: aload 1
-      // 262: astore 4
-      // 264: aload 3
-      // 265: astore 1
-      // 266: aload 7
-      // 268: astore 3
-      // 269: goto 25c
-      // 26c: astore 3
-      // 26d: aload 0
-      // 26e: astore 4
-      // 270: aload 9
-      // 272: astore 1
-      // 273: goto 287
-      // 276: astore 3
-      // 277: goto 26d
-      // 27a: new java/lang/IllegalArgumentException
-      // 27d: astore 1
-      // 27e: aload 1
-      // 27f: ldc_w "encodingConfig is required"
-      // 282: invokespecial java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V
-      // 285: aload 1
-      // 286: athrow
-      // 287: getstatic o8/r.k Lo8/r$a;
-      // 28a: astore 7
-      // 28c: aload 3
-      // 28d: invokestatic o8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 290: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
-      // 293: astore 3
-      // 294: aload 3
-      // 295: invokestatic o8/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
-      // 298: astore 7
-      // 29a: aload 7
-      // 29c: ifnonnull 2a4
-      // 29f: aload 3
-      // 2a0: astore 1
-      // 2a1: goto 31c
-      // 2a4: aload 7
-      // 2a6: instanceof java/util/concurrent/CancellationException
-      // 2a9: ifne 321
-      // 2ac: aload 7
-      // 2ae: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // 2b1: astore 7
-      // 2b3: new java/lang/StringBuilder
-      // 2b6: dup
-      // 2b7: invokespecial java/lang/StringBuilder.<init> ()V
-      // 2ba: astore 3
-      // 2bb: aload 3
-      // 2bc: ldc_w "Error compressing/converting video: "
-      // 2bf: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 2c2: pop
-      // 2c3: aload 3
-      // 2c4: aload 7
-      // 2c6: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 2c9: pop
-      // 2ca: aload 4
-      // 2cc: ldc_w "Media conversion error"
-      // 2cf: aload 3
-      // 2d0: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 2d3: aload 6
-      // 2d5: aload 1
-      // 2d6: invokespecial com/discord/media/utils/MediaResolver.logMediaError (Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;)V
-      // 2d9: aload 8
-      // 2db: aconst_null
-      // 2dc: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$0 Ljava/lang/Object;
-      // 2df: aload 8
-      // 2e1: aconst_null
-      // 2e2: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$1 Ljava/lang/Object;
-      // 2e5: aload 8
-      // 2e7: aconst_null
-      // 2e8: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$2 Ljava/lang/Object;
-      // 2eb: aload 8
-      // 2ed: aconst_null
-      // 2ee: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$3 Ljava/lang/Object;
-      // 2f1: aload 8
-      // 2f3: aconst_null
-      // 2f4: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
-      // 2f7: aload 8
-      // 2f9: bipush 2
-      // 2fa: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
-      // 2fd: aload 4
-      // 2ff: aload 6
-      // 301: aconst_null
-      // 302: aload 8
-      // 304: bipush 2
-      // 305: aconst_null
-      // 306: invokestatic com/discord/media/utils/MediaResolver.copyToFile$default (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-      // 309: astore 1
-      // 30a: aload 1
-      // 30b: astore 4
-      // 30d: aload 1
-      // 30e: aload 12
-      // 310: if_acmpne 316
-      // 313: aload 12
-      // 315: areturn
-      // 316: aload 4
-      // 318: checkcast android/net/Uri
-      // 31b: astore 1
-      // 31c: aload 1
-      // 31d: checkcast android/net/Uri
-      // 320: areturn
-      // 321: aload 7
-      // 323: athrow
-      // 324: aload 8
-      // 326: bipush 3
-      // 327: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
-      // 32a: aload 0
-      // 32b: aload 1
-      // 32c: aconst_null
+      // 259: aload 1
+      // 25a: areturn
+      // 25b: astore 7
+      // 25d: aload 1
+      // 25e: astore 4
+      // 260: aload 3
+      // 261: astore 1
+      // 262: aload 7
+      // 264: astore 3
+      // 265: goto 290
+      // 268: astore 7
+      // 26a: aload 1
+      // 26b: astore 4
+      // 26d: aload 3
+      // 26e: astore 1
+      // 26f: aload 7
+      // 271: astore 3
+      // 272: goto 265
+      // 275: astore 3
+      // 276: aload 0
+      // 277: astore 4
+      // 279: aload 9
+      // 27b: astore 1
+      // 27c: goto 290
+      // 27f: astore 3
+      // 280: goto 276
+      // 283: new java/lang/IllegalArgumentException
+      // 286: astore 1
+      // 287: aload 1
+      // 288: ldc_w "encodingConfig is required"
+      // 28b: invokespecial java/lang/IllegalArgumentException.<init> (Ljava/lang/String;)V
+      // 28e: aload 1
+      // 28f: athrow
+      // 290: getstatic o8/r.k Lo8/r$a;
+      // 293: astore 7
+      // 295: aload 3
+      // 296: invokestatic o8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 299: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 29c: astore 3
+      // 29d: aload 3
+      // 29e: invokestatic o8/r.e (Ljava/lang/Object;)Ljava/lang/Throwable;
+      // 2a1: astore 7
+      // 2a3: aload 7
+      // 2a5: ifnonnull 2ad
+      // 2a8: aload 3
+      // 2a9: astore 1
+      // 2aa: goto 325
+      // 2ad: aload 7
+      // 2af: instanceof java/util/concurrent/CancellationException
+      // 2b2: ifne 32a
+      // 2b5: aload 7
+      // 2b7: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
+      // 2ba: astore 7
+      // 2bc: new java/lang/StringBuilder
+      // 2bf: dup
+      // 2c0: invokespecial java/lang/StringBuilder.<init> ()V
+      // 2c3: astore 3
+      // 2c4: aload 3
+      // 2c5: ldc_w "Error compressing/converting video: "
+      // 2c8: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 2cb: pop
+      // 2cc: aload 3
+      // 2cd: aload 7
+      // 2cf: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 2d2: pop
+      // 2d3: aload 4
+      // 2d5: ldc_w "Media conversion error"
+      // 2d8: aload 3
+      // 2d9: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 2dc: aload 6
+      // 2de: aload 1
+      // 2df: invokespecial com/discord/media/utils/MediaResolver.logMediaError (Ljava/lang/String;Ljava/lang/String;Landroid/net/Uri;Landroid/net/Uri;)V
+      // 2e2: aload 8
+      // 2e4: aconst_null
+      // 2e5: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$0 Ljava/lang/Object;
+      // 2e8: aload 8
+      // 2ea: aconst_null
+      // 2eb: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$1 Ljava/lang/Object;
+      // 2ee: aload 8
+      // 2f0: aconst_null
+      // 2f1: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$2 Ljava/lang/Object;
+      // 2f4: aload 8
+      // 2f6: aconst_null
+      // 2f7: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$3 Ljava/lang/Object;
+      // 2fa: aload 8
+      // 2fc: aconst_null
+      // 2fd: putfield com/discord/media/utils/MediaResolver$handleVideo$1.L$4 Ljava/lang/Object;
+      // 300: aload 8
+      // 302: bipush 2
+      // 303: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
+      // 306: aload 4
+      // 308: aload 6
+      // 30a: aconst_null
+      // 30b: aload 8
+      // 30d: bipush 2
+      // 30e: aconst_null
+      // 30f: invokestatic com/discord/media/utils/MediaResolver.copyToFile$default (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+      // 312: astore 1
+      // 313: aload 1
+      // 314: astore 4
+      // 316: aload 1
+      // 317: aload 12
+      // 319: if_acmpne 31f
+      // 31c: aload 12
+      // 31e: areturn
+      // 31f: aload 4
+      // 321: checkcast android/net/Uri
+      // 324: astore 1
+      // 325: aload 1
+      // 326: checkcast android/net/Uri
+      // 329: areturn
+      // 32a: aload 7
+      // 32c: athrow
       // 32d: aload 8
-      // 32f: bipush 2
-      // 330: aconst_null
-      // 331: invokestatic com/discord/media/utils/MediaResolver.copyToFile$default (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
-      // 334: astore 1
-      // 335: aload 1
-      // 336: astore 4
-      // 338: aload 1
-      // 339: aload 12
-      // 33b: if_acmpne 341
-      // 33e: aload 12
-      // 340: areturn
-      // 341: aload 4
-      // 343: areturn
+      // 32f: bipush 3
+      // 330: putfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
+      // 333: aload 0
+      // 334: aload 1
+      // 335: aconst_null
+      // 336: aload 8
+      // 338: bipush 2
+      // 339: aconst_null
+      // 33a: invokestatic com/discord/media/utils/MediaResolver.copyToFile$default (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;Ljava/io/File;Lkotlin/coroutines/Continuation;ILjava/lang/Object;)Ljava/lang/Object;
+      // 33d: astore 1
+      // 33e: aload 1
+      // 33f: astore 4
+      // 341: aload 1
+      // 342: aload 12
+      // 344: if_acmpne 34a
+      // 347: aload 12
+      // 349: areturn
+      // 34a: aload 4
+      // 34c: areturn
    }
 
    private fun logMediaError(tag: String, message: String, inputUri: Uri, outputUri: Uri) {
@@ -1021,28 +1027,28 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
 
                val var9: ContentResolverUtils = ContentResolverUtils.INSTANCE;
                if (ContentResolverUtils.INSTANCE.isVideo(MediaResolver.access$getResolver(this.this$0), this.$inputUri)) {
-                  val var7: MediaResolver = this.this$0;
+                  var1 = this.this$0;
                   var var19: Uri = this.$inputUri;
                   val var15: Boolean = this.$skipVideoTranscode;
-                  val var13: EncodingConfig = this.$encodingConfig;
+                  val var7: EncodingConfig = this.$encodingConfig;
                   this.label = 2;
-                  var19 = (Uri)MediaResolver.access$handleVideo(var7, var19, var15, var13, this);
+                  var19 = (Uri)MediaResolver.access$handleVideo(var1, var19, var15, var7, this);
                   return if (var19 === var6) var6 else var19;
                } else if (var9.isImage(MediaResolver.access$getResolver(this.this$0), this.$inputUri)) {
-                  var1 = this.this$0;
-                  var var17: Uri = this.$inputUri;
+                  var var17: MediaResolver = this.this$0;
+                  val var12: Uri = this.$inputUri;
                   val var14: Int = this.$imageCompressionQuality;
                   val var3: Boolean = this.$isLowQuality;
                   val var4: Boolean = this.$useOriginalIfSmaller;
                   this.label = 3;
-                  var17 = (Uri)MediaResolver.access$handleImage(var1, var17, var14, var3, var4, this);
-                  return if (var17 === var6) var6 else var17;
+                  var17 = (MediaResolver)MediaResolver.access$handleImage(var17, var12, var14, var3, var4, this);
+                  return if (var17 === var6) var6 else var17 as Uri;
                } else {
-                  var var5: MediaResolver = this.this$0;
-                  val var10: Uri = this.$inputUri;
+                  var1 = this.this$0;
+                  var var5: Uri = this.$inputUri;
                   this.label = 4;
-                  var5 = (MediaResolver)MediaResolver.copyToFile$default(var5, var10, null, this, 2, null);
-                  return if (var5 === var6) var6 else var5 as Uri;
+                  var5 = (Uri)MediaResolver.copyToFile$default(var1, var5, null, this, 2, null);
+                  return if (var5 === var6) var6 else var5;
                }
             }
          },

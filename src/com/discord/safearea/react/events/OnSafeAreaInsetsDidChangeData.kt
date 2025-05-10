@@ -79,19 +79,19 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
    }
 
    public override fun toString(): String {
-      val var4: Float = this.top;
-      val var1: Float = this.bottom;
-      val var3: Float = this.left;
-      val var2: Float = this.right;
+      val var3: Float = this.top;
+      val var2: Float = this.bottom;
+      val var1: Float = this.left;
+      val var4: Float = this.right;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnSafeAreaInsetsDidChangeData(top=");
-      var5.append(var4);
-      var5.append(", bottom=");
-      var5.append(var1);
-      var5.append(", left=");
       var5.append(var3);
-      var5.append(", right=");
+      var5.append(", bottom=");
       var5.append(var2);
+      var5.append(", left=");
+      var5.append(var1);
+      var5.append(", right=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

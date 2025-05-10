@@ -1220,19 +1220,6 @@
   "PHjkRE": "App",
   "AKcFUl": "Elenco App",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "in ",
-    [
-      1,
-      "guildCount"
-    ],
-    " server"
-  ],
-  "KC1oZ2": "Aggiungi app",
-  "j4KtLS": "Ops, questo link non funziona...",
-  "0H5OT0": "Prova a inviarne un altro!",
-  "NaQLEx": "Link non valido",
-  "m9hXGR": "Elaborazione applicazione",
   "9PUXpK": "Rabbia",
   "IoLVi4": "Sorbetto psichedelico",
   "nmd90t": "uwu~",
@@ -5768,7 +5755,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Piaciuto di recente",
   "G1b309": "A ripetizione",
   "iXcll5": "Giocato di recente",
   "+KXSFh": [
@@ -5813,7 +5799,6 @@
   "ZPjue3": "La cosa più buona che hai mangiato questa settimana?",
   "40gTj4": "Non vedo l'ora che...",
   "SWVxPD": "Scegli la classe del tuo personaggio",
-  "ZStIVl": "Ultimamente sono in fissa con...",
   "3XVZ0t": "La miglior barzelletta imbarazzante?",
   "4U+EJC": "Quale emoji descrive meglio la tua giornata?",
   "R1f9RU": "Anime preferito degli ultimi tempi?",
@@ -5844,6 +5829,8 @@
   "/UonHB": "Imposta uno stato personalizzato",
   "Iuzg8f": "Imposta il tuo stato",
   "zOdg0N": "Stato",
+  "hA60Ul": "Fai risaltare il tuo stato con un tag preimpostato",
+  "jrzHRk": "Tag dello stato personalizzati",
   "GQmLra": "Oggi",
   "UcdRn5": "Cosa bolle in pentola oggi?",
   "xod36+": "A cosa stai pensando?",
@@ -7528,7 +7515,6 @@
     ],
     " in un'attività"
   ],
-  "LQx1UF": "Elaborazione dell'attività",
   "1fRDnZ": "Riprendi video",
   "VOgTj4": "Il video è stato momentaneamente messo in pausa sul tuo dispositivo per migliorare le prestazioni",
   "i+9VW1": "Impossibile condividere log vuoti",

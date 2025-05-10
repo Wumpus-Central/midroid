@@ -5,7 +5,7 @@ import android.graphics.Bitmap
 import kotlin.jvm.internal.q
 
 internal class SafeRoundAsCirclePostprocessor : a {
-   public open fun process(bitmap: Bitmap) {
+   public override fun process(bitmap: Bitmap) {
       q.h(var1, "bitmap");
       if (var1.getWidth() >= 2 && var1.getHeight() >= 2) {
          super.process(var1);

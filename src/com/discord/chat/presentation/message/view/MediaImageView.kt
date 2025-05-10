@@ -86,10 +86,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var4: Int = GIF_INDICATOR_PADDING;
+         val var6: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var4 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -176,13 +176,13 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var39: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var24: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var38: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
+         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var24: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var39, var1, var24, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
+            var38, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
          );
       }
 
@@ -216,8 +216,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       val var27: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var28: SpoilerViewManager = this.spoilerViewManager;
-      val var31: ConstraintLayout = this.binding.container;
+      val var33: SpoilerViewManager = this.spoilerViewManager;
+      val var28: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var34: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.q.g(this.binding.image, "image");
@@ -233,7 +233,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var28.configureSpoiler(var8, this, var31, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      var33.configureSpoiler(var8, this, var28, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
       val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var32: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -376,18 +376,18 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
-         var4.append(var1);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var1: Int = this.width;
+         val var2: Int = this.height;
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

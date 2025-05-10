@@ -12,11 +12,10 @@ import w8.a
 
 @f(with = CodedLinkExtendedType.Serializer::class)
 public enum class CodedLinkExtendedType(serialNumber: Int) : IntEnum {
-   ACTIVITY_BOOKMARK(3),
-   APP_MESSAGE_EMBED(5),
-   EMBEDDED_ACTIVITY_INVITE(4),
+   APP_MESSAGE_EMBED(4),
+   EMBEDDED_ACTIVITY_INVITE(3),
    GUILD_INVITE_DISABLED(2),
-   GUILD_PROFILE_INVITE(6),
+   GUILD_PROFILE_INVITE(5),
    GUILD_SCHEDULED_EVENT(1),
    STAGE_INSTANCE(0)
    public open val serialNumber: Int

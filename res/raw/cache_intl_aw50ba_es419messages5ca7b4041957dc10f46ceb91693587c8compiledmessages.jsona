@@ -1239,19 +1239,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "Directorio de apps",
   "LO4f0N": "Socio",
-  "6IW6Wl": [
-    "en ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servidores"
-  ],
-  "KC1oZ2": "Añadir aplicación",
-  "j4KtLS": "¡Vaya! Este enlace no funciona...",
-  "0H5OT0": "¡Intenta enviar otro!",
-  "NaQLEx": "Enlace no válido",
-  "m9hXGR": "Resolución de aplicación",
   "9PUXpK": "Furioso",
   "IoLVi4": "Masa psicodélica",
   "nmd90t": "UwU",
@@ -5766,7 +5753,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Me gusta últimamente",
   "G1b309": "En repetición",
   "iXcll5": "Jugando últimamente",
   "+KXSFh": [
@@ -5811,7 +5797,6 @@
   "ZPjue3": "¿Qué fue lo mejor que comí esta semana?",
   "40gTj4": "No puedo esperar por...",
   "SWVxPD": "Elige la clase de tu personaje",
-  "ZStIVl": "Me encanta actualmente...",
   "3XVZ0t": "¿La mejor broma de papás?",
   "4U+EJC": "¿Cuál es el mejor emoji para describir mi día?",
   "R1f9RU": "¿Mi anime favorito últimamente?",
@@ -5842,6 +5827,8 @@
   "/UonHB": "Establece un estado personalizado",
   "Iuzg8f": "Establecer tu estado",
   "zOdg0N": "Estado",
+  "hA60Ul": "Haz que tu estado llame la atención con una etiqueta preestablecida",
+  "jrzHRk": "Etiquetas para estados personalizados",
   "GQmLra": "Hoy",
   "UcdRn5": "¿Qué estás haciendo?",
   "xod36+": "¿En qué estás pensando?",
@@ -7521,7 +7508,6 @@
     ],
     " en una actividad"
   ],
-  "LQx1UF": "Resolución de actividad",
   "1fRDnZ": "Reanudar video",
   "VOgTj4": "Tu cámara y las transmisiones de video entrantes fueron pausadas para mejorar el rendimiento del dispositivo. Si reanudas el video, podrías experimentar retrasos o distorsión de voz.",
   "i+9VW1": "No es posible compartir registros vacíos",

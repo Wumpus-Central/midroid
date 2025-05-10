@@ -133,20 +133,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          val var34: SimpleDraweeView = this.binding.nitroLogoBanner;
          kotlin.jvm.internal.q.g(this.binding.nitroLogoBanner, "nitroLogoBanner");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var34, var9.getHeaderLogoUrl());
-         val var35: TextView = this.binding.imageCopy;
+         val var42: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var9.getHeaderText());
-         var35.setTextColor(var9.getHeaderColor());
-         kotlin.jvm.internal.q.e(var35);
-         var var42: java.lang.CharSequence = var35.getText();
-         kotlin.jvm.internal.q.g(var42, "getText(...)");
+         var42.setTextColor(var9.getHeaderColor());
+         kotlin.jvm.internal.q.e(var42);
+         val var35: java.lang.CharSequence = var42.getText();
+         kotlin.jvm.internal.q.g(var35, "getText(...)");
          var var5: Byte;
-         if (!kotlin.text.h.d0(var42)) {
+         if (!kotlin.text.h.d0(var35)) {
             var5 = 0;
          } else {
             var5 = 8;
          }
 
-         var35.setVisibility(var5);
+         var42.setVisibility(var5);
          val var43: SimpleDraweeView = this.binding.nitroTicket;
          kotlin.jvm.internal.q.g(this.binding.nitroTicket, "nitroTicket");
          val var36: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
@@ -159,9 +159,9 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          }
 
          kotlin.jvm.internal.q.e(var37);
-         var42 = var37.getText();
-         kotlin.jvm.internal.q.g(var42, "getText(...)");
-         if (!kotlin.text.h.d0(var42)) {
+         val var45: java.lang.CharSequence = var37.getText();
+         kotlin.jvm.internal.q.g(var45, "getText(...)");
+         if (!kotlin.text.h.d0(var45)) {
             var5 = 0;
          } else {
             var5 = 8;

@@ -1,6 +1,8 @@
 package com.discord.safearea.extensions
 
 import android.app.Activity
+import android.content.Context
+import android.os.Build.VERSION
 import android.view.View
 import android.view.Window
 import androidx.core.graphics.Insets
@@ -59,18 +61,38 @@ fun `getInsets$default`(var0: WindowInsetsCompat, var1: Int, var2: Boolean, var3
    return getInsets(var0, var1, var2);
 }
 
-internal fun WindowInsetsCompat.getSystemBarInsets(ignoringVisibility: Boolean = false): Insets {
+internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.h(), var1);
+   q.h(var1, "context");
+   val var4: Insets = getInsets(var0, WindowInsetsCompat.m.h(), var2);
+   if (VERSION.SDK_INT > 29) {
+      return var4;
+   } else {
+      var var5: Int = var1.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
+      if (var5.intValue() <= 0) {
+         var5 = null;
+      }
+
+      val var7: Int;
+      if (var5 != null) {
+         var7 = var1.getResources().getDimensionPixelSize(var5.intValue());
+      } else {
+         var7 = 0;
+      }
+
+      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var7);
+      q.g(var6, "of(...)");
+      return var6;
+   }
 }
 
 @JvmSynthetic
-fun `getSystemBarInsets$default`(var0: WindowInsetsCompat, var1: Boolean, var2: Int, var3: Any): Insets {
-   if ((var2 and 1) != 0) {
-      var1 = false;
+fun `getSystemBarInsets$default`(var0: WindowInsetsCompat, var1: Context, var2: Boolean, var3: Int, var4: Any): Insets {
+   if ((var3 and 2) != 0) {
+      var2 = false;
    }
 
-   return getSystemBarInsets(var0, var1);
+   return getSystemBarInsets(var0, var1, var2);
 }
 
 internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {

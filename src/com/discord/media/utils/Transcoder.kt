@@ -126,7 +126,7 @@ internal object Transcoder {
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var3: o8.r.a = r.k;
+            val var4: o8.r.a = r.k;
             this.$continuation.resumeWith(r.b(this.$outputUri));
          }
 

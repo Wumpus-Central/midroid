@@ -79,18 +79,18 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.id;
-      val var2: java.lang.String = this.label;
-      val var3: java.lang.Boolean = this.disabled;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppMessageActionImpl(id=");
-      var4.append(var1);
-      var4.append(", label=");
-      var4.append(var2);
-      var4.append(", disabled=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var4: java.lang.Boolean = this.disabled;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppMessageActionImpl(id=");
+      var2.append(var3);
+      var2.append(", label=");
+      var2.append(var1);
+      var2.append(", disabled=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -122,18 +122,19 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         val var8: java.lang.String;
          var var11: java.lang.Boolean;
+         var var12: java.lang.String;
          if (var5) {
-            var6 = var10.t(var9, 0);
-            var8 = var10.t(var9, 1);
+            var12 = var10.t(var9, 0);
+            val var8: java.lang.String = var10.t(var9, 1);
             var11 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
+            var7 = var12;
+            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
+            var12 = null;
             var11 = null;
 
             while (var3) {
@@ -148,7 +149,7 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
                         var11 = var10.v(var9, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var6 = var10.t(var9, 1);
+                        var12 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
@@ -159,13 +160,10 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
                   var3 = false;
                }
             }
-
-            var8 = var6;
-            var6 = var7;
          }
 
          var10.b(var9);
-         return new AppMessageActionImpl(var2, var6, var8, var11, null);
+         return new AppMessageActionImpl(var2, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppMessageActionImpl) {

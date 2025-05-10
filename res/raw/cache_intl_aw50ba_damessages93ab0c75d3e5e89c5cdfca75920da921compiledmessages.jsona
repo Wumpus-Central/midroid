@@ -1239,19 +1239,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "i ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servere"
-  ],
-  "KC1oZ2": "Tilføj app",
-  "j4KtLS": "Ups, dette link virker ikke...",
-  "0H5OT0": "Prøv at sende et andet!",
-  "NaQLEx": "Ugyldigt link",
-  "m9hXGR": "Løser applikation",
   "9PUXpK": "Rasende",
   "IoLVi4": "Sherbet-ispind",
   "nmd90t": "uwu~",
@@ -5772,7 +5759,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Elsker for tiden",
   "G1b309": "Om og om igen",
   "iXcll5": "Har for nyligt spillet",
   "+KXSFh": [
@@ -5817,7 +5803,6 @@
   "ZPjue3": "Det bedste, du har spist i denne uge?",
   "40gTj4": "Kan ikke vente til ...",
   "SWVxPD": "Vælg din karakterklasse",
-  "ZStIVl": "Er i øjeblikket besat af ...",
   "3XVZ0t": "Bedste farjoke?",
   "4U+EJC": "Bedste emoji til at beskrive din dag?",
   "R1f9RU": "Hvad er din favorit anime for tiden?",
@@ -5848,6 +5833,8 @@
   "/UonHB": "Indstil en brugerdefineret status",
   "Iuzg8f": "Sæt din status",
   "zOdg0N": "Status",
+  "hA60Ul": "Få din status til at skille sig ud med et forudindstillet tag",
+  "jrzHRk": "Brugerdefinerede status-tags",
   "GQmLra": "I dag",
   "UcdRn5": "Hvad sker der?",
   "xod36+": "Hvad har du på hjertet?",
@@ -7533,7 +7520,6 @@
     ],
     " i en aktivitet"
   ],
-  "LQx1UF": "Løser aktivitet",
   "1fRDnZ": "Genoptag video",
   "VOgTj4": "Videoen blev midlertidigt sat på pause på din enhed for at forbedre kvaliteten",
   "i+9VW1": "Kan ikke dele tomme log-filer",

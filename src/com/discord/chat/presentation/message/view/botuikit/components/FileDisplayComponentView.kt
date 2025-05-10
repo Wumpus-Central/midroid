@@ -32,25 +32,25 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var10: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      var var6: java.lang.String = var3.getContainerId();
-      val var7: java.lang.String = var1.getId();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FileDisplayComponent(");
-      var5.append(var7);
-      var5.append(")");
-      val var8: SpoilerAttributes = var10.forGenericMedia(var1, var6, var5.toString(), var1.getFile().getUrl(), null);
+      val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var10: java.lang.String = var3.getContainerId();
+      var var6: java.lang.String = var1.getId();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("FileDisplayComponent(");
+      var7.append(var6);
+      var7.append(")");
+      val var14: SpoilerAttributes = var5.forGenericMedia(var1, var10, var7.toString(), var1.getFile().getUrl(), null);
       val var12: java.lang.String = var1.getName();
       var6 = var1.getSize();
       val var11: java.lang.String = var1.getFile().getUrl();
       val var4: Boolean = var1.isSpoiler();
-      val var14: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
+      val var8: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
       var var9: SpoilerConfig = null;
-      if (var8 != null) {
-         var9 = SpoilerAttributes.configure$default(var8, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
+      if (var14 != null) {
+         var9 = SpoilerAttributes.configure$default(var14, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
       }
 
-      this.setContent(var12, var6, var11, var14, var4, var9, null, null);
+      this.setContent(var12, var6, var11, var8, var4, var9, null, null);
    }
 
    public override fun getComponentType(): KClass<FileDisplayComponent> {

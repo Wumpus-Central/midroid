@@ -1235,19 +1235,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "Appgids",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "op ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servers"
-  ],
-  "KC1oZ2": "App toevoegen",
-  "j4KtLS": "Ai, deze link werkt niet...",
-  "0H5OT0": "Stuur er nog een!",
-  "NaQLEx": "Ongeldige link",
-  "m9hXGR": "Applicatie verwijderen",
   "9PUXpK": "Woedend",
   "IoLVi4": "Droomijs",
   "nmd90t": "uwu~",
@@ -5771,7 +5758,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Wat ik de laatste tijd leuk vind",
   "G1b309": "Op herhaling",
   "iXcll5": "Speelt de laatste tijd",
   "+KXSFh": [
@@ -5816,7 +5802,6 @@
   "ZPjue3": "Wat is het lekkerste dat je deze week hebt gegeten?",
   "40gTj4": "Kan niet wachten op...",
   "SWVxPD": "Kies je personageklasse",
-  "ZStIVl": "Momenteel volledig in de ban van...",
   "3XVZ0t": "Beste vadergrap?",
   "4U+EJC": "Welke emoji past het beste bij je dag?",
   "R1f9RU": "Welke anime is je favoriet de laatste tijd?",
@@ -5847,6 +5832,8 @@
   "/UonHB": "Gepersonaliseerde status instellen",
   "Iuzg8f": "Je status instellen",
   "zOdg0N": "Status",
+  "hA60Ul": "Laat je status opvallen met een vooraf ingestelde tag",
+  "jrzHRk": "Gepersonaliseerde statustags",
   "GQmLra": "Vandaag",
   "UcdRn5": "Hoe staat het leven?",
   "xod36+": "Waar denk je aan?",
@@ -7527,7 +7514,6 @@
     ],
     " bezig met een activiteit"
   ],
-  "LQx1UF": "Activiteit ophalen…",
   "1fRDnZ": "Video hervatten",
   "VOgTj4": "De video is tijdelijk gepauzeerd op je apparaat om de prestaties te bevorderen",
   "i+9VW1": "Kan lege logs niet versturen",

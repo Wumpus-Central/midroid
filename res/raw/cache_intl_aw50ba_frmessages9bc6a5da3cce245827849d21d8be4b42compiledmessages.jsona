@@ -1234,19 +1234,6 @@
   "PHjkRE": "Applications",
   "AKcFUl": "Répertoire d'applications",
   "LO4f0N": "Partenaire",
-  "6IW6Wl": [
-    "dans ",
-    [
-      1,
-      "guildCount"
-    ],
-    " serveurs"
-  ],
-  "KC1oZ2": "Ajouter l'application",
-  "j4KtLS": "Mince, ce lien ne fonctionne pas...",
-  "0H5OT0": "Essaie d'en envoyer un autre !",
-  "NaQLEx": "Lien invalide",
-  "m9hXGR": "Résolution de l'application...",
   "9PUXpK": "Énervé",
   "IoLVi4": "Sorbet cocktail",
   "nmd90t": "uwu~",
@@ -5772,7 +5759,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "En ce moment, j'adore",
   "G1b309": "J'écoute en boucle",
   "iXcll5": "En ce moment, je joue à",
   "+KXSFh": [
@@ -5817,7 +5803,6 @@
   "ZPjue3": "Le meilleur truc que tu as mangé cette semaine ?",
   "40gTj4": "J'attends avec impatience…",
   "SWVxPD": "Choisis ta classe de personnage",
-  "ZStIVl": "Mon obsession du moment, c'est…",
   "3XVZ0t": "Meilleure blague ringarde ?",
   "4U+EJC": "Le meilleur émoji pour décrire ta journée ?",
   "R1f9RU": "Ton anime préféré du moment ?",
@@ -5848,6 +5833,8 @@
   "/UonHB": "Définir un statut personnalisé",
   "Iuzg8f": "Définir ton statut",
   "zOdg0N": "Statut",
+  "hA60Ul": "Fais ressortir ton statut avec un tag prédéfini",
+  "jrzHRk": "Tags de statut personnalisés",
   "GQmLra": "Aujourd'hui",
   "UcdRn5": "Quoi d'neuf ?",
   "xod36+": "À quoi tu penses, en ce moment ?",
@@ -7503,7 +7490,6 @@
     ],
     " à une Activité"
   ],
-  "LQx1UF": "Résolution de l'activité",
   "1fRDnZ": "Reprendre la vidéo",
   "VOgTj4": "La vidéo a été temporairement mise en pause sur ton appareil pour améliorer les performances.",
   "i+9VW1": "Impossible de partager des journaux vides",

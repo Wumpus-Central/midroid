@@ -1253,18 +1253,6 @@
   "PHjkRE": "Programėlės",
   "AKcFUl": "Programėlių katalogas",
   "LO4f0N": "Partnerių",
-  "6IW6Wl": [
-    [
-      1,
-      "guildCount"
-    ],
-    " serveriuose"
-  ],
-  "KC1oZ2": "Pridėti programėlę",
-  "j4KtLS": "Oi, ši nuoroda neveikia...",
-  "0H5OT0": "Pabandyk išsiųsti kitą!",
-  "NaQLEx": "Netinkama nuoroda",
-  "m9hXGR": "Programėlės tvarkymas",
   "9PUXpK": "Nirštantis",
   "IoLVi4": "Šerbetiniai ledai",
   "nmd90t": "uwu~",
@@ -5971,7 +5959,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Patiko pastaruoju metu",
   "G1b309": "Pakartotinai žaista",
   "iXcll5": "Pastaruoju metu žaista",
   "+KXSFh": [
@@ -6016,7 +6003,6 @@
   "ZPjue3": "Ką skaniausio ragavai šią savaitę?",
   "40gTj4": "Laukiu nesulaukiu...",
   "SWVxPD": "Pasirink savo veikėjų klasę",
-  "ZStIVl": "Šiuo metu negaliu nustoti žaisti...",
   "3XVZ0t": "Geriausias tėvelio juokelis?",
   "4U+EJC": "Geriausiai tavo dieną apibūdinantis jaustukas?",
   "R1f9RU": "Pastaruoju metu mėgstamiausias anime?",
@@ -6047,6 +6033,8 @@
   "/UonHB": "Nustatyti pritaikytą būseną",
   "Iuzg8f": "Nustatyk savo būseną",
   "zOdg0N": "Būsena",
+  "hA60Ul": "Išskirk savo būseną iš kitų su iš anksto nustatyta žyme",
+  "jrzHRk": "Tinkintos būsenos žymės",
   "GQmLra": "Šiandien",
   "UcdRn5": "Kas vyksta?",
   "xod36+": "Apie ką galvoji?",
@@ -7815,7 +7803,6 @@
     ],
     " dalyvauja kažkurioje veikloje"
   ],
-  "LQx1UF": "Kuriama veikla",
   "1fRDnZ": "Tęsti vaizdo transliaciją",
   "VOgTj4": "Vaizdo transliacija laikinai sustabdyta tavo įrenginiui dėl geresnės kokybės",
   "i+9VW1": "Nepavyko pasidalyti tuščiais įrašais",

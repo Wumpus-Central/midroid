@@ -43,9 +43,9 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableStateFlow
 import o8.s
@@ -243,17 +243,17 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             }
 
             public void afterTextChanged(Editable var1) {
-               val var4: java.lang.String = java.lang.String.valueOf(var1);
-               val var2: ChatInputRootView = this.this$0;
+               val var2: java.lang.String = java.lang.String.valueOf(var1);
+               val var4: ChatInputRootView = this.this$0;
                val var3: java.lang.String = UUID.randomUUID().toString();
                q.g(var3, "toString(...)");
-               ChatInputRootView.access$setLastEditId$p(var2, var3);
+               ChatInputRootView.access$setLastEditId$p(var4, var3);
                ChatInputRootView.access$getCurrentTextFlow$p(this.this$0)
                   .setValue(
                      new ChatInputRootView.CurrentTextAndSelection(
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionStart(),
                         ChatInputRootView.access$getEditText$p(this.this$0).getSelectionEnd(),
-                        var4,
+                        var2,
                         ChatInputRootView.access$getLastEditId$p(this.this$0)
                      )
                   );
@@ -315,10 +315,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          val var6: Int = var9.c().getItemCount();
 
          for (int var4 = 0; var4 < var6; var4++) {
-            val var7: Uri = var9.c().getItemAt(var4).getUri();
-            q.g(var7, "getUri(...)");
+            val var8: Uri = var9.c().getItemAt(var4).getUri();
+            q.g(var8, "getUri(...)");
             if (var0.listener != null) {
-               var0.listener.onImageInserted(var7);
+               var0.listener.onImageInserted(var8);
             }
          }
 
@@ -348,9 +348,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var19 = 0; var19 < var20; var19++) {
                val var12: Intent = var16.c().getItemAt(var19).getIntent();
                q.g(var12, "getIntent(...)");
-               val var17: java.lang.String = var12.getStringExtra("data");
-               if (var17 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var17);
+               val var13: java.lang.String = var12.getStringExtra("data");
+               if (var13 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var13);
                }
             }
 
@@ -420,9 +420,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       for (ChatInputNode var7 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         q.g(var18, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var7);
+         val var17: Editable = this.editText.getEditableText();
+         q.g(var17, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -473,14 +473,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public fun clearAndApplyChatNodes(editId: String?, chatInputNodes: List<ChatInputNode>) {
       q.h(var2, "chatInputNodes");
       if (q.c(this.lastEditId, var1) || var1 == null) {
-         val var5: Editable = this.editText.getEditableText();
-         val var6: Array<DCDInputSpan> = var5.getSpans(0, var5.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
-         if (var6 != null) {
-            q.e(var6);
-            val var4: Int = var6.length;
+         val var6: Editable = this.editText.getEditableText();
+         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
+         if (var5 != null) {
+            q.e(var5);
+            val var4: Int = var5.length;
 
             for (int var3 = 0; var3 < var4; var3++) {
-               var5.removeSpan(var6[var3]);
+               var6.removeSpan(var5[var3]);
             }
          }
 
@@ -521,8 +521,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                s.b(var1);
             } else {
                s.b(var1);
-               var1 = aa.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
-               val var4: FlowCollector = new FlowCollector(this.this$0) {
+               val var4: Flow = aa.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
+               var1 = new FlowCollector(this.this$0) {
                   final ChatInputRootView this$0;
 
                   {
@@ -543,7 +543,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   }
                };
                this.label = 1;
-               if (var1.collect(var4, this) === var3) {
+               if (var4.collect(var1, this) === var3) {
                   return var3;
                }
             }
@@ -586,8 +586,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   s.b(var1);
                } else {
                   s.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2(null) {
                      int label;
 
                      {
@@ -622,7 +622,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (X9.f.g(var4, var1, this) === var3) {
+                  if (X9.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
@@ -769,19 +769,19 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       public override fun toString(): String {
          val var2: Int = this.selectionStart;
          val var1: Int = this.selectionEnd;
-         val var3: java.lang.String = this.text;
-         val var5: java.lang.String = this.editId;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("CurrentTextAndSelection(selectionStart=");
-         var4.append(var2);
-         var4.append(", selectionEnd=");
-         var4.append(var1);
-         var4.append(", text=");
-         var4.append(var3);
-         var4.append(", editId=");
-         var4.append(var5);
-         var4.append(")");
-         return var4.toString();
+         val var5: java.lang.String = this.text;
+         val var4: java.lang.String = this.editId;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CurrentTextAndSelection(selectionStart=");
+         var3.append(var2);
+         var3.append(", selectionEnd=");
+         var3.append(var1);
+         var3.append(", text=");
+         var3.append(var5);
+         var3.append(", editId=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

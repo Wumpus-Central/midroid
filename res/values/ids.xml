@@ -386,7 +386,6 @@
     <item type="id" name="invite_to_speak_text" />
     <item type="id" name="is_pooling_container_tag" />
     <item type="id" name="item_bottom_container" />
-    <item type="id" name="item_description" />
     <item type="id" name="item_guild_badge" />
     <item type="id" name="item_header" />
     <item type="id" name="item_hero" />
@@ -559,8 +558,6 @@
     <item type="id" name="parent_matrix" />
     <item type="id" name="participants" />
     <item type="id" name="participants_container" />
-    <item type="id" name="participants_info" />
-    <item type="id" name="participants_info_container" />
     <item type="id" name="participants_text" />
     <item type="id" name="percentage_bar_background" />
     <item type="id" name="percentage_bar_container" />

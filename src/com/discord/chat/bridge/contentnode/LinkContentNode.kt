@@ -143,13 +143,13 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.content;
-      val var1: LinkContextData = this.target;
+      val var1: java.util.List = this.content;
+      val var3: LinkContextData = this.target;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LinkContentNode(content=");
-      var2.append(var3);
-      var2.append(", target=");
       var2.append(var1);
+      var2.append(", target=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -178,53 +178,54 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var6: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var7: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
+         val var5: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
+         val var1: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
          val var4: KSerializer = a.u(N.a);
-         val var5: KSerializer = a.u(RoleColors.$serializer.INSTANCE);
-         val var2: h = h.a;
-         val var1: KSerializer = a.u(h.a);
-         val var3: C0 = C0.a;
-         return new KSerializer[]{var6, var7, var4, var5, var1, a.u(C0.a), var2, a.u(var3)};
+         val var2: KSerializer = a.u(RoleColors.$serializer.INSTANCE);
+         val var3: h = h.a;
+         val var7: KSerializer = a.u(h.a);
+         val var6: C0 = C0.a;
+         return new KSerializer[]{var5, var1, var4, var2, var7, a.u(C0.a), var3, a.u(var6)};
       }
 
       public open fun deserialize(decoder: Decoder): LinkContentNode {
          q.h(var1, "decoder");
          val var15: SerialDescriptor = this.getDescriptor();
          val var16: c = var1.c(var15);
-         val var13: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
+         var var13: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
          var var6: Boolean = var16.y();
          var var3: Byte = 7;
          var var2: Int;
-         var var8: Any;
-         var var9: Any;
+         var var7: java.lang.String;
          var var10: Any;
          var var11: Any;
          var var12: Any;
          val var18: java.lang.String;
-         val var26: java.lang.String;
+         var var23: Any;
          if (var6) {
-            var8 = var16.m(var15, 0, var13[0], null) as java.util.List;
-            var10 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
-            var9 = var16.v(var15, 2, N.a, null) as Int;
-            var12 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, null) as RoleColors;
-            var11 = var16.v(var15, 4, h.a, null) as java.lang.Boolean;
+            var23 = var16.m(var15, 0, var13[0], null) as java.util.List;
+            val var8: LinkContextData = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
+            val var14: Int = var16.v(var15, 2, N.a, null) as Int;
+            var13 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, null) as RoleColors;
+            var10 = var16.v(var15, 4, h.a, null) as java.lang.Boolean;
             val var17: C0 = C0.a;
-            val var7: java.lang.String = var16.v(var15, 5, C0.a, null) as java.lang.String;
+            var7 = var16.v(var15, 5, C0.a, null) as java.lang.String;
             var6 = var16.s(var15, 6);
             var18 = var16.v(var15, 7, var17, null) as java.lang.String;
             var2 = 255;
-            var26 = var7;
+            var11 = var23;
+            var12 = var8;
+            var23 = var14;
          } else {
             var var4: Boolean = true;
             var6 = false;
             var12 = null;
             var11 = null;
             var10 = null;
-            var8 = null;
-            var var21: Any = null;
+            var var22: Any = null;
+            var7 = null;
             var var19: Any = null;
-            var9 = null;
+            var23 = null;
             var2 = 0;
 
             while (var4) {
@@ -234,11 +235,11 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                      var4 = false;
                      continue;
                   case 0:
-                     var8 = var16.m(var15, 0, var13[0], var8) as java.util.List;
+                     var22 = var16.m(var15, 0, var13[0], var22) as java.util.List;
                      var2 |= 1;
                      break;
                   case 1:
-                     var21 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, var21) as LinkContextData;
+                     var7 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, var7) as LinkContextData;
                      var2 |= 2;
                      break;
                   case 2:
@@ -246,7 +247,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                      var2 |= 4;
                      break;
                   case 3:
-                     var9 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, var9) as RoleColors;
+                     var23 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, var23) as RoleColors;
                      var2 |= 8;
                      break;
                   case 4:
@@ -273,17 +274,17 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
                var3 = 7;
             }
 
+            var12 = var7;
             var18 = (java.lang.String)var12;
-            var26 = (java.lang.String)var11;
-            var11 = var10;
-            var12 = var9;
-            var9 = var19;
-            var10 = var21;
+            var7 = (java.lang.String)var11;
+            var13 = (KSerializer[])var23;
+            var23 = var19;
+            var11 = var22;
          }
 
          var16.b(var15);
          return new LinkContentNode(
-            var2, (java.util.List)var8, (LinkContextData)var10, (Integer)var9, (RoleColors)var12, (java.lang.Boolean)var11, var26, var6, var18, null
+            var2, (java.util.List)var11, (LinkContextData)var12, (Integer)var23, var13, (java.lang.Boolean)var10, var7, var6, var18, null
          );
       }
 

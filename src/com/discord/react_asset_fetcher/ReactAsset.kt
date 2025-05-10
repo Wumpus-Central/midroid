@@ -122,9 +122,4 @@ public enum class ReactAsset {
       q.h(var1, "context");
       return ReactAssetCache.INSTANCE.get(var1, this);
    }
-
-   public fun wasSet(context: Context): Boolean {
-      q.h(var1, "context");
-      return ReactAssetCache.INSTANCE.wasSet(var1, this);
-   }
 }

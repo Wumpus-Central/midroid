@@ -1292,19 +1292,6 @@
   "PHjkRE": "Aplikace",
   "AKcFUl": "Adresář aplikací",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "na ",
-    [
-      1,
-      "guildCount"
-    ],
-    " serverech"
-  ],
-  "KC1oZ2": "Přidat aplikaci",
-  "j4KtLS": "Jejda, tento odkaz nefunguje…",
-  "0H5OT0": "Zkus odeslat jiný!",
-  "NaQLEx": "Neplatný odkaz",
-  "m9hXGR": "Rozhodování o aplikaci",
   "9PUXpK": "Rozzuřený",
   "IoLVi4": "Zmrzlinový sorbet",
   "nmd90t": "uwu~",
@@ -5987,7 +5974,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Poslední dobou se mi líbí",
   "G1b309": "Sjíždím znovu",
   "iXcll5": "Poslední dobou hraju",
   "+KXSFh": [
@@ -6032,7 +6018,6 @@
   "ZPjue3": "Nejlepší věc, která ti tento týden skončila v žaludku?",
   "40gTj4": "Nemůžu se dočkat…",
   "SWVxPD": "Vyber si třídu své postavy",
-  "ZStIVl": "V poslední době ujíždím na…",
   "3XVZ0t": "Nejlepší otcovský vtip?",
   "4U+EJC": "Který smajlík nejlépe vystihuje tvůj den?",
   "R1f9RU": "Nějaké oblíbené anime v poslední době?",
@@ -6063,6 +6048,8 @@
   "/UonHB": "Nastavit vlastní status",
   "Iuzg8f": "Nastav svůj stav",
   "zOdg0N": "Stav",
+  "hA60Ul": "Nech svůj stav vyniknout díky přednastavenému štítku",
+  "jrzHRk": "Vlastní štítky stavu",
   "GQmLra": "Dnes",
   "UcdRn5": "Jak to jde?",
   "xod36+": "Co se ti honí hlavou?",
@@ -7846,7 +7833,6 @@
       "cardinal"
     ]
   ],
-  "LQx1UF": "Řeším aktivitu",
   "1fRDnZ": "Pokračovat ve videu",
   "VOgTj4": "Video bylo na tvém zařízení dočasně pozastaveno, abychom zvýšili kvalitu interakce",
   "i+9VW1": "Prázdné protokoly nelze sdílet",

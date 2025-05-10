@@ -99,20 +99,20 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
 
    public override fun toString(): String {
       val var2: java.lang.String = this.build;
-      val var3: java.lang.String = this.releaseName;
-      val var4: java.lang.String = this.commit;
+      val var4: java.lang.String = this.releaseName;
+      val var5: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("AppManifestMetadata(build=");
-      var5.append(var2);
-      var5.append(", releaseName=");
-      var5.append(var3);
-      var5.append(", commit=");
-      var5.append(var4);
-      var5.append(", confirmUpdate=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AppManifestMetadata(build=");
+      var3.append(var2);
+      var3.append(", releaseName=");
+      var3.append(var4);
+      var3.append(", commit=");
+      var3.append(var5);
+      var3.append(", confirmUpdate=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {
@@ -145,22 +145,20 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
          val var10: kotlinx.serialization.encoding.c = var1.c(var9);
          var var2: Int;
          var var5: Boolean;
-         var var7: java.lang.String;
+         var var6: java.lang.String;
+         val var8: java.lang.String;
          var var11: java.lang.String;
-         var var12: java.lang.String;
          if (var10.y()) {
-            var12 = var10.t(var9, 0);
-            val var8: java.lang.String = var10.v(var9, 1, C0.a, null) as java.lang.String;
+            var6 = var10.t(var9, 0);
+            var8 = var10.v(var9, 1, C0.a, null) as java.lang.String;
             var11 = var10.t(var9, 2);
             var5 = var10.s(var9, 3);
             var2 = 15;
-            var7 = var12;
-            var12 = var8;
          } else {
             var var3: Boolean = true;
             var5 = false;
-            var7 = null;
-            var12 = null;
+            var var7: java.lang.String = null;
+            var6 = null;
             var11 = null;
             var2 = 0;
 
@@ -181,7 +179,7 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                            var2 |= 4;
                         }
                      } else {
-                        var12 = var10.v(var9, 1, C0.a, var12) as java.lang.String;
+                        var6 = var10.v(var9, 1, C0.a, var6) as java.lang.String;
                         var2 |= 2;
                      }
                   } else {
@@ -192,10 +190,13 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
                   var3 = false;
                }
             }
+
+            var8 = var6;
+            var6 = var7;
          }
 
          var10.b(var9);
-         return new AppManifestMetadata(var2, var7, var12, var11, var5, null);
+         return new AppManifestMetadata(var2, var6, var8, var11, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifestMetadata) {

@@ -1239,19 +1239,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "App-Verzeichnis",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "auf ",
-    [
-      1,
-      "guildCount"
-    ],
-    " Servern"
-  ],
-  "KC1oZ2": "App hinzufügen",
-  "j4KtLS": "Ups, dieser Link funktioniert nicht …",
-  "0H5OT0": "Versuch es mit einem anderen!",
-  "NaQLEx": "Ungültiger Link",
-  "m9hXGR": "Anwendung auflösen",
   "9PUXpK": "Wütend",
   "IoLVi4": "Regenbogen-Sorbet",
   "nmd90t": "uwu~",
@@ -5760,7 +5747,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "In letzter Zeit geliebt",
   "G1b309": "In Dauerschleife",
   "iXcll5": "In letzter Zeit gespielt",
   "+KXSFh": [
@@ -5805,7 +5791,6 @@
   "ZPjue3": "Was war das Beste, das du diese Woche gegessen hast?",
   "40gTj4": "Ich warte schon gespannt auf …",
   "SWVxPD": "Wähle deine Charakterklasse",
-  "ZStIVl": "Ich bin derzeit verrückt nach …",
   "3XVZ0t": "Bester Flachwitz?",
   "4U+EJC": "Welches Emoji beschreibt deinen Tag am besten?",
   "R1f9RU": "Lieblingsanime in letzter Zeit?",
@@ -5836,6 +5821,8 @@
   "/UonHB": "Einen personalisierten Status festlegen",
   "Iuzg8f": "Status festlegen",
   "zOdg0N": "Status",
+  "hA60Ul": "Hebe deinen Status mit einer Tag-Vorlage hervor",
+  "jrzHRk": "Personalisierte Status-Tags",
   "GQmLra": "Heute",
   "UcdRn5": "Was geht ab?",
   "xod36+": "Was geht dir durch den Kopf?",
@@ -7540,7 +7527,6 @@
     ],
     " an einer Aktivität beteiligt"
   ],
-  "LQx1UF": "Aktivität zuordnen",
   "1fRDnZ": "Video fortsetzen",
   "VOgTj4": "Das Video wurde für bessere Leistung vorübergehend auf deinem Gerät pausiert",
   "i+9VW1": "Leere Protokolle können nicht geteilt werden",

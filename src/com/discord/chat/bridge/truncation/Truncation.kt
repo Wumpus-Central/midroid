@@ -112,22 +112,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var3: java.lang.String = this.seeMoreLabel;
-      val var5: Int = this.seeMoreLabelColor;
-      val var4: java.lang.Boolean = this.forceShow;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Truncation(numberOfLines=");
-      var6.append(var1);
-      var6.append(", expandable=");
-      var6.append(var2);
-      var6.append(", seeMoreLabel=");
-      var6.append(var3);
-      var6.append(", seeMoreLabelColor=");
-      var6.append(var5);
-      var6.append(", forceShow=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.seeMoreLabel;
+      val var3: Int = this.seeMoreLabelColor;
+      val var6: java.lang.Boolean = this.forceShow;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Truncation(numberOfLines=");
+      var4.append(var1);
+      var4.append(", expandable=");
+      var4.append(var2);
+      var4.append(", seeMoreLabel=");
+      var4.append(var5);
+      var4.append(", seeMoreLabelColor=");
+      var4.append(var3);
+      var4.append(", forceShow=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -158,20 +158,20 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
 
       public open fun deserialize(decoder: Decoder): Truncation {
          q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
+         val var10: SerialDescriptor = this.getDescriptor();
+         val var11: c = var1.c(var10);
          var var2: Int;
          var var3: Int;
          var var4: Int;
-         var var7: Int;
+         var var7: Any;
          var var8: java.lang.String;
-         var var11: Any;
-         if (var10.y()) {
-            var4 = var10.k(var9, 0);
-            var3 = var10.s(var9, 1);
-            var8 = var10.v(var9, 2, C0.a, null) as java.lang.String;
-            var7 = var10.v(var9, 3, N.a, null) as Int;
-            var11 = var10.v(var9, 4, h.a, null) as java.lang.Boolean;
+         val var12: Int;
+         if (var11.y()) {
+            var4 = var11.k(var10, 0);
+            var3 = var11.s(var10, 1);
+            var8 = var11.v(var10, 2, C0.a, null) as java.lang.String;
+            var12 = var11.v(var10, 3, N.a, null) as Int;
+            var7 = var11.v(var10, 4, h.a, null) as java.lang.Boolean;
             var2 = 31;
          } else {
             var var5: Boolean = true;
@@ -179,11 +179,11 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             var2 = 0;
             var8 = null;
             var7 = null;
-            var11 = null;
+            var var13: Any = null;
             var3 = 0;
 
             while (var5) {
-               val var6: Int = var10.x(var9);
+               val var6: Int = var11.x(var10);
                if (var6 != -1) {
                   if (var6 != 0) {
                      if (var6 != 1) {
@@ -193,32 +193,35 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
                                  throw new n(var6);
                               }
 
-                              var11 = var10.v(var9, 4, h.a, var11) as java.lang.Boolean;
+                              var13 = var11.v(var10, 4, h.a, var13) as java.lang.Boolean;
                               var2 |= 16;
                            } else {
-                              var7 = var10.v(var9, 3, N.a, var7) as Int;
+                              var7 = var11.v(var10, 3, N.a, var7) as Int;
                               var2 |= 8;
                            }
                         } else {
-                           var8 = var10.v(var9, 2, C0.a, var8) as java.lang.String;
+                           var8 = var11.v(var10, 2, C0.a, var8) as java.lang.String;
                            var2 |= 4;
                         }
                      } else {
-                        var3 = var10.s(var9, 1);
+                        var3 = var11.s(var10, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var4 = var10.k(var9, 0);
+                     var4 = var11.k(var10, 0);
                      var2 |= 1;
                   }
                } else {
                   var5 = false;
                }
             }
+
+            var7 = var13;
+            var12 = (Integer)var7;
          }
 
-         var10.b(var9);
-         return new Truncation(var2, var4, (boolean)var3, var8, var7, (java.lang.Boolean)var11, null);
+         var11.b(var10);
+         return new Truncation(var2, var4, (boolean)var3, var8, var12, (java.lang.Boolean)var7, null);
       }
 
       public open fun serialize(encoder: Encoder, value: Truncation) {

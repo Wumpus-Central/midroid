@@ -50,19 +50,19 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       kotlin.jvm.internal.q.h(var5, "onTapSpoiler");
       kotlin.jvm.internal.q.h(var6, "onTapObscureToggle");
       kotlin.jvm.internal.q.h(var7, "eventHandler");
-      val var14: Message = var1.getMessage();
+      val var12: Message = var1.getMessage();
       val var15: java.lang.String = var1.getMessageId-3Eiw7ao();
       var var8: Int = var1.getConstrainedWidth();
       var var9: Boolean;
-      if (var14.getForwardInfo() != null) {
+      if (var12.getForwardInfo() != null) {
          var9 = true;
       } else {
          var9 = false;
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var13: java.lang.String = MessageId.toString-impl(var15);
-      val var12: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
+      val var11: java.lang.String = MessageId.toString-impl(var15);
+      val var14: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -78,12 +78,12 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, var2);
          }
       }, var5);
-      val var11: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
-         MessageId.toString-impl(var14.getId-3Eiw7ao()),
-         MessageKt.shouldAnimateEmoji(var14),
-         MessageKt.shouldShowLinkDecorations(var14),
-         var14.getShouldShowRoleDot(),
-         var14.getShouldShowRoleOnName()
+      val var13: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+         MessageId.toString-impl(var12.getId-3Eiw7ao()),
+         MessageKt.shouldAnimateEmoji(var12),
+         MessageKt.shouldShowLinkDecorations(var12),
+         var12.getShouldShowRoleDot(),
+         var12.getShouldShowRoleOnName()
       );
       val var35: MarkdownTextRenderEventHandlers = new MarkdownTextRenderEventHandlers(
          new Function1(var7, var15) {
@@ -316,7 +316,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       });
       val var30: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
-      val var31: java.lang.Boolean = var14.getGifAutoPlay();
+      val var31: java.lang.Boolean = var12.getGifAutoPlay();
       if (var31 != null) {
          var9 = var31;
       } else {
@@ -324,13 +324,13 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       val var10: Boolean;
-      if (var14.getForwardInfo() != null) {
+      if (var12.getForwardInfo() != null) {
          var10 = true;
       } else {
          var10 = false;
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var12, var11, var35, var28, var32, var30, var9, var10, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var11, var14, var13, var35, var28, var32, var30, var9, var10, false));
    }
 }

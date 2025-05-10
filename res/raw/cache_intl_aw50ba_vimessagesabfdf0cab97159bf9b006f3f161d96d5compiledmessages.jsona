@@ -1239,19 +1239,6 @@
   "PHjkRE": "Ứng dụng",
   "AKcFUl": "Thư Mục App",
   "LO4f0N": "Đối Tác",
-  "6IW6Wl": [
-    "trong ",
-    [
-      1,
-      "guildCount"
-    ],
-    " máy chủ"
-  ],
-  "KC1oZ2": "Thêm ứng dụng",
-  "j4KtLS": "Ối, đường link này không hoạt động...",
-  "0H5OT0": "Hãy thử gửi một đường link khác!",
-  "NaQLEx": "Đường Link Không Hợp Lệ",
-  "m9hXGR": "Ứng Dụng Đang Xử Lý",
   "9PUXpK": "Tức Giận",
   "IoLVi4": "Kem Bảy Màu",
   "nmd90t": "uwu~",
@@ -5783,7 +5770,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Đang yêu thích dạo gần đây",
   "G1b309": "Lặp lại",
   "iXcll5": "Đang chơi dạo gần đây",
   "+KXSFh": [
@@ -5828,7 +5814,6 @@
   "ZPjue3": "Món ngon nhất bạn đã ăn trong tuần này?",
   "40gTj4": "Không thể đợi...",
   "SWVxPD": "Chọn hệ nhân vật của bạn",
-  "ZStIVl": "Hiện tại đang bị ám ảnh với...",
   "3XVZ0t": "Câu đùa hay nhất của các ông bố?",
   "4U+EJC": "Emoji phù hợp nhất để mô tả ngày của bạn?",
   "R1f9RU": "Anime ưa thích gần đây?",
@@ -5859,6 +5844,8 @@
   "/UonHB": "Đặt trạng thái tùy chỉnh",
   "Iuzg8f": "Thiết lập trạng thái của bạn",
   "zOdg0N": "Trạng Thái",
+  "hA60Ul": "Khiến trạng thái của bạn trở nên nổi bật với một số nhận diện thiết lập sẵn",
+  "jrzHRk": "Tùy chỉnh số nhận diện trạng thái",
   "GQmLra": "Hôm nay",
   "UcdRn5": "Làm gì đây?",
   "xod36+": "Bạn đang nghĩ gì?",
@@ -7546,7 +7533,6 @@
     ],
     " tham gia Hoạt Động"
   ],
-  "LQx1UF": "Hoạt Động Đang Xử Lý",
   "1fRDnZ": "Tiếp tục video",
   "VOgTj4": "Video đã bị tạm dừng trên thiết bị của bạn để giúp tăng hiệu năng",
   "i+9VW1": "Không thể chia sẻ nhật ký trống",

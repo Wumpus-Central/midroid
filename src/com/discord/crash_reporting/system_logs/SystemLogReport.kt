@@ -117,8 +117,8 @@ internal object SystemLogReport {
             if (var1 != null) {
                val var3: Context = this.$context;
 
-               for (java.lang.String var5 : h.C0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
-                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var5, "Tombstone");
+               for (java.lang.String var4 : h.C0(var1.getText(), new java.lang.String[]{"\n"}, false, 0, 6, null)) {
+                  SystemLogReport.access$recordBreadcrumb(SystemLogReport.INSTANCE, var4, "Tombstone");
                }
 
                val var8: SystemLogReport = SystemLogReport.INSTANCE;
@@ -128,16 +128,16 @@ internal object SystemLogReport {
                var2 = false;
             }
 
-            val var10: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+            val var9: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
             val var7: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(this.$context);
-            val var9: Function3 = this.$cb;
+            val var10: Function3 = this.$cb;
             val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(this.$context);
             if (!var2) {
                var1 = null;
             }
 
-            var9.invoke(var6, var1, var7);
-            var10.clear(this.$context);
+            var10.invoke(var6, var1, var7);
+            var9.clear(this.$context);
          }
       });
    }
@@ -253,13 +253,13 @@ internal object SystemLogReport {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.message;
-         val var3: java.lang.String = this.callStackTrace;
+         val var3: java.lang.String = this.message;
+         val var1: java.lang.String = this.callStackTrace;
          val var2: StringBuilder = new StringBuilder();
          var2.append("SentryCrashData(message=");
-         var2.append(var1);
-         var2.append(", callStackTrace=");
          var2.append(var3);
+         var2.append(", callStackTrace=");
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }

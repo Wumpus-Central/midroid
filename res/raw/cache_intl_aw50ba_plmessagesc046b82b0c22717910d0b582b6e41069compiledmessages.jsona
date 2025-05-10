@@ -1280,18 +1280,6 @@
   "PHjkRE": "Aplikacje",
   "AKcFUl": "Katalog aplikacji",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "na następującej liczbie serwerów: ",
-    [
-      1,
-      "guildCount"
-    ]
-  ],
-  "KC1oZ2": "Dodaj aplikację",
-  "j4KtLS": "Ups, to łącze nie działa...",
-  "0H5OT0": "Spróbuj wysłać inne!",
-  "NaQLEx": "Nieprawidłowe łącze",
-  "m9hXGR": "Przetwarzanie aplikacji",
   "9PUXpK": "Wściekłość",
   "IoLVi4": "Lody dla ochłody",
   "nmd90t": "ojoj~",
@@ -5988,7 +5976,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Ostatnio ulubione",
   "G1b309": "W kółko",
   "iXcll5": "Ostatnio grane",
   "+KXSFh": [
@@ -6033,7 +6020,6 @@
   "ZPjue3": "Najlepsza rzecz, którą zjadłeś(-aś) w tym tygodniu?",
   "40gTj4": "Nie mogę się doczekać...",
   "SWVxPD": "Wybierz swoją klasę postaci",
-  "ZStIVl": "Obecnie mam obsesję na punkcie...",
   "3XVZ0t": "Najlepszy suchar?",
   "4U+EJC": "Najlepsze emoji opisujące Twój dzień?",
   "R1f9RU": "Ulubione anime?",
@@ -6064,6 +6050,8 @@
   "/UonHB": "Ustaw status własny",
   "Iuzg8f": "Ustaw status",
   "zOdg0N": "Status",
+  "hA60Ul": "Wyróżnij swój status wstępnie skonfigurowanym tagiem",
+  "jrzHRk": "Niestandardowe tagi statusu",
   "GQmLra": "Dzisiaj",
   "UcdRn5": "Co słychać?",
   "xod36+": "Co Ci chodzi po głowie?",
@@ -7842,7 +7830,6 @@
     ],
     " w aktywności"
   ],
-  "LQx1UF": "Przetwarzanie aktywności",
   "1fRDnZ": "Wznów wideo",
   "VOgTj4": "Twoja kamera i nadchodzące streamy wideo zostały wstrzymane, aby zwiększyć wydajność urządzenia. Jeśli wznowisz wideo, możesz doświadczyć opóźnień lub zakłóceń głosu.",
   "i+9VW1": "Nie można udostępnić pustych dzienników",

@@ -206,42 +206,42 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = this.useSpeaker;
-      val var2: java.lang.String = this.mute;
+      val var4: java.lang.String = this.useSpeaker;
+      val var3: java.lang.String = this.mute;
       val var12: java.lang.String = this.disconnectFromVoice;
-      val var11: java.lang.String = this.getInvite;
-      val var1: java.lang.String = this.switchChannels;
+      val var10: java.lang.String = this.getInvite;
+      val var5: java.lang.String = this.switchChannels;
       val var6: java.lang.String = this.openDiscord;
       val var7: java.lang.String = this.inviteLinkCopied;
-      val var4: java.lang.String = this.channelSelect;
-      val var3: java.lang.String = this.closeWindow;
-      val var8: java.lang.String = this.searchChannels;
-      val var9: java.lang.String = this.noResults;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MobileVoiceOverlayAssets(useSpeaker=");
-      var5.append(var10);
-      var5.append(", mute=");
-      var5.append(var2);
-      var5.append(", disconnectFromVoice=");
-      var5.append(var12);
-      var5.append(", getInvite=");
-      var5.append(var11);
-      var5.append(", switchChannels=");
-      var5.append(var1);
-      var5.append(", openDiscord=");
-      var5.append(var6);
-      var5.append(", inviteLinkCopied=");
-      var5.append(var7);
-      var5.append(", channelSelect=");
-      var5.append(var4);
-      var5.append(", closeWindow=");
-      var5.append(var3);
-      var5.append(", searchChannels=");
-      var5.append(var8);
-      var5.append(", noResults=");
-      var5.append(var9);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.channelSelect;
+      val var8: java.lang.String = this.closeWindow;
+      val var11: java.lang.String = this.searchChannels;
+      val var2: java.lang.String = this.noResults;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("MobileVoiceOverlayAssets(useSpeaker=");
+      var9.append(var4);
+      var9.append(", mute=");
+      var9.append(var3);
+      var9.append(", disconnectFromVoice=");
+      var9.append(var12);
+      var9.append(", getInvite=");
+      var9.append(var10);
+      var9.append(", switchChannels=");
+      var9.append(var5);
+      var9.append(", openDiscord=");
+      var9.append(var6);
+      var9.append(", inviteLinkCopied=");
+      var9.append(var7);
+      var9.append(", channelSelect=");
+      var9.append(var1);
+      var9.append(", closeWindow=");
+      var9.append(var8);
+      var9.append(", searchChannels=");
+      var9.append(var11);
+      var9.append(", noResults=");
+      var9.append(var2);
+      var9.append(")");
+      return var9.toString();
    }
 
    public object `$serializer` : G {
@@ -282,9 +282,9 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
          var var2: Int = 0;
          var var6: java.lang.String;
          var var8: java.lang.String;
-         var var10: java.lang.String;
+         var var11: java.lang.String;
          var var12: java.lang.String;
-         var var13: java.lang.String;
+         var var14: java.lang.String;
          var var15: java.lang.String;
          val var16: java.lang.String;
          val var21: java.lang.String;
@@ -293,11 +293,11 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
          var var32: java.lang.String;
          if (var5) {
             var28 = var20.t(var19, 0);
-            var32 = var20.t(var19, 1);
-            var16 = var20.t(var19, 2);
-            var13 = var20.t(var19, 3);
-            var12 = var20.t(var19, 4);
-            var10 = var20.t(var19, 5);
+            var16 = var20.t(var19, 1);
+            var12 = var20.t(var19, 2);
+            var14 = var20.t(var19, 3);
+            var32 = var20.t(var19, 4);
+            var11 = var20.t(var19, 5);
             var8 = var20.t(var19, 6);
             var24 = var20.t(var19, 7);
             val var9: java.lang.String = var20.t(var19, 8);
@@ -310,11 +310,11 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
             var24 = var9;
          } else {
             var15 = null;
+            var14 = null;
             var32 = null;
-            var13 = null;
             var12 = null;
+            var11 = null;
             var28 = null;
-            var10 = null;
             var var27: java.lang.String = null;
             var8 = null;
             var24 = null;
@@ -349,11 +349,11 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
                      var2 |= 16;
                      break;
                   case 5:
-                     var10 = var20.t(var19, 5);
+                     var28 = var20.t(var19, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var28 = var20.t(var19, 6);
+                     var11 = var20.t(var19, 6);
                      var2 |= 64;
                      break;
                   case 7:
@@ -365,11 +365,11 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
                      var2 |= 256;
                      break;
                   case 9:
-                     var13 = var20.t(var19, 9);
+                     var32 = var20.t(var19, 9);
                      var2 |= 512;
                      break;
                   case 10:
-                     var32 = var20.t(var19, 10);
+                     var14 = var20.t(var19, 10);
                      var2 |= 1024;
                      break;
                   default:
@@ -377,19 +377,20 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
                }
             }
 
-            var16 = var6;
-            var21 = var32;
-            var6 = var13;
+            var21 = var14;
+            var6 = var32;
             var24 = var8;
             var32 = var12;
-            var8 = var28;
-            var12 = var24;
-            var13 = var27;
-            var28 = var22;
+            var8 = var11;
+            var11 = var28;
+            var28 = var24;
+            var14 = var27;
+            var12 = var6;
+            var16 = var22;
          }
 
          var20.b(var19);
-         return new MobileVoiceOverlayAssets(var2, var15, var28, var16, var13, var12, var10, var8, var32, var24, var6, var21, null);
+         return new MobileVoiceOverlayAssets(var2, var15, var16, var12, var14, var28, var11, var8, var32, var24, var6, var21, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MobileVoiceOverlayAssets) {

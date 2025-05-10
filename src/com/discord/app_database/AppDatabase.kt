@@ -27,13 +27,13 @@ public object AppDatabase {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !q.c(var4, "")) {
-         val var5: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var5);
-         val var3: Log = Log.INSTANCE;
+         val var3: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var3);
+         val var5: Log = Log.INSTANCE;
          val var2: StringBuilder = new StringBuilder();
          var2.append("speculatively opening ");
-         var2.append(var5);
-         Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
+         var2.append(var3);
+         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -59,17 +59,17 @@ public object AppDatabase {
             var1 = this.databaseName(var1);
             val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
             val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
-            val var6: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-            val var15: a = Json.d;
+            var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
+            val var6: a = Json.d;
             q.e(var23);
-            var15.a();
-            var24 = var15.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
+            var6.a();
+            var24 = var6.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
             q.e(var7);
-            var15.a();
-            var27 = var15.b(new x0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
-            q.e(var6);
-            var15.a();
-            var16 = var15.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var6) as Array<CacheVersion>;
+            var6.a();
+            var27 = var6.b(new x0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+            q.e(var1);
+            var6.a();
+            var16 = var6.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;

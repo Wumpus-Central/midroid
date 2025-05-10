@@ -149,10 +149,10 @@ public data class RoleSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
+      val var5: Int = Integer.hashCode(this.type);
       val var6: Int = this.id.hashCode();
       val var4: Int = this.state.hashCode();
-      val var5: Int = this.customId.hashCode();
+      val var3: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -167,7 +167,7 @@ public data class RoleSelectComponent(type: Int,
 
       return (
                (
-                        ((((((var3 * 31 + var6) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                        ((((((var5 * 31 + var6) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                            + Integer.hashCode(this.maxValues)
                      )
                      * 31
@@ -179,38 +179,38 @@ public data class RoleSelectComponent(type: Int,
 
    public override fun toString(): String {
       val var2: Int = this.type;
-      val var9: java.lang.String = this.id;
-      val var10: ActionComponentState = this.state;
-      val var6: java.lang.String = this.customId;
-      val var11: java.lang.String = this.placeholder;
+      val var6: java.lang.String = this.id;
+      val var11: ActionComponentState = this.state;
+      val var8: java.lang.String = this.customId;
+      val var9: java.lang.String = this.placeholder;
       val var5: java.lang.String = this.accessibilityLabel;
-      val var1: Int = this.minValues;
-      val var3: Int = this.maxValues;
+      val var3: Int = this.minValues;
+      val var1: Int = this.maxValues;
       val var4: Boolean = this.disabled;
       val var7: java.util.List = this.selectedOptions;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("RoleSelectComponent(type=");
-      var8.append(var2);
-      var8.append(", id=");
-      var8.append(var9);
-      var8.append(", state=");
-      var8.append(var10);
-      var8.append(", customId=");
-      var8.append(var6);
-      var8.append(", placeholder=");
-      var8.append(var11);
-      var8.append(", accessibilityLabel=");
-      var8.append(var5);
-      var8.append(", minValues=");
-      var8.append(var1);
-      var8.append(", maxValues=");
-      var8.append(var3);
-      var8.append(", disabled=");
-      var8.append(var4);
-      var8.append(", selectedOptions=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("RoleSelectComponent(type=");
+      var10.append(var2);
+      var10.append(", id=");
+      var10.append(var6);
+      var10.append(", state=");
+      var10.append(var11);
+      var10.append(", customId=");
+      var10.append(var8);
+      var10.append(", placeholder=");
+      var10.append(var9);
+      var10.append(", accessibilityLabel=");
+      var10.append(var5);
+      var10.append(", minValues=");
+      var10.append(var3);
+      var10.append(", maxValues=");
+      var10.append(var1);
+      var10.append(", disabled=");
+      var10.append(var4);
+      var10.append(", selectedOptions=");
+      var10.append(var7);
+      var10.append(")");
+      return var10.toString();
    }
 
    public object `$serializer` : G {
@@ -240,8 +240,8 @@ public data class RoleSelectComponent(type: Int,
 
       public open fun childSerializers(): Array<KSerializer<*>> {
          val var4: Array<KSerializer> = RoleSelectComponent.access$get$childSerializers$cp();
-         val var3: C0 = C0.a;
-         return new KSerializer[]{N.a, C0.a, ActionComponentState.Serializer.INSTANCE, C0.a, a.u(C0.a), a.u(var3), N.a, N.a, h.a, var4[9]};
+         val var2: C0 = C0.a;
+         return new KSerializer[]{N.a, C0.a, ActionComponentState.Serializer.INSTANCE, C0.a, a.u(C0.a), a.u(var2), N.a, N.a, h.a, var4[9]};
       }
 
       public open fun deserialize(decoder: Decoder): RoleSelectComponent {
@@ -254,44 +254,44 @@ public data class RoleSelectComponent(type: Int,
          var var9: Byte = 6;
          var var2: Int = 0;
          var var3: Int;
-         var var4: Int;
          var var5: Int;
-         var var6: Int;
-         val var7: Int;
+         val var6: Int;
          var var12: Any;
          var var13: Any;
          var var14: Any;
-         var var15: Any;
-         var var16: java.lang.String;
-         val var22: java.util.List;
+         var var15: java.util.List;
+         var var16: Any;
+         val var21: java.lang.String;
+         var var25: Int;
+         var var30: Int;
          if (var11) {
-            var4 = var19.k(var18, 0);
+            var25 = var19.k(var18, 0);
             var12 = var19.t(var18, 1);
             var13 = var19.m(var18, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
-            var14 = var19.t(var18, 3);
+            var16 = var19.t(var18, 3);
             val var20: C0 = C0.a;
-            var15 = var19.v(var18, 4, C0.a, null) as java.lang.String;
-            val var21: java.lang.String = var19.v(var18, 5, var20, null) as java.lang.String;
-            var5 = var19.k(var18, 6);
+            var14 = var19.v(var18, 4, C0.a, null) as java.lang.String;
+            var21 = var19.v(var18, 5, var20, null) as java.lang.String;
+            var30 = var19.k(var18, 6);
             var2 = var19.k(var18, 7);
-            var6 = var19.s(var18, 8);
-            val var31: java.util.List = var19.m(var18, 9, var17[9], null) as java.util.List;
+            var5 = var19.s(var18, 8);
+            var15 = var19.m(var18, 9, var17[9], null) as java.util.List;
             var3 = 1023;
-            var16 = var21;
-            var7 = var2;
-            var22 = var31;
+            var6 = var25;
+            var25 = var30;
+            var30 = var2;
          } else {
             var var28: Boolean = true;
             var3 = 0;
             var5 = 0;
-            var4 = 0;
+            var25 = 0;
             var16 = null;
             var15 = null;
             var14 = null;
             var13 = null;
             var12 = null;
-            var var23: Any = null;
-            var6 = 0;
+            var var22: Any = null;
+            var30 = 0;
 
             while (var28) {
                label41: {
@@ -313,7 +313,7 @@ public data class RoleSelectComponent(type: Int,
                         var2 |= 4;
                         break;
                      case 3:
-                        var23 = var19.t(var18, 3);
+                        var22 = var19.t(var18, 3);
                         var2 |= 8;
                         break label41;
                      case 4:
@@ -330,11 +330,11 @@ public data class RoleSelectComponent(type: Int,
                         var2 |= 64;
                         continue;
                      case 7:
-                        var6 = var19.k(var18, var8);
+                        var30 = var19.k(var18, var8);
                         var2 |= 128;
                         continue;
                      case 8:
-                        var4 = var19.s(var18, 8);
+                        var25 = var19.s(var18, 8);
                         var2 |= 256;
                         continue;
                      case 9:
@@ -353,28 +353,27 @@ public data class RoleSelectComponent(type: Int,
                var8 = 7;
             }
 
-            var7 = var6;
-            var22 = (java.util.List)var15;
-            var6 = var4;
-            var15 = var14;
-            var14 = var23;
-            var4 = var3;
+            var5 = var25;
+            var25 = var5;
+            var21 = (java.lang.String)var16;
+            var16 = var22;
+            var6 = var3;
             var3 = var2;
          }
 
          var19.b(var18);
          return new RoleSelectComponent(
             var3,
-            var4,
+            var6,
             (java.lang.String)var12,
             (ActionComponentState)var13,
+            (java.lang.String)var16,
             (java.lang.String)var14,
-            (java.lang.String)var15,
-            var16,
-            var5,
-            var7,
-            (boolean)var6,
-            var22,
+            var21,
+            var25,
+            var30,
+            (boolean)var5,
+            var15,
             null
          );
       }

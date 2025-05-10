@@ -1234,19 +1234,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "Diretório de Apps",
   "LO4f0N": "Parceiro",
-  "6IW6Wl": [
-    "em ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servidores"
-  ],
-  "KC1oZ2": "Adicionar app",
-  "j4KtLS": "Opa, esse link não funciona...",
-  "0H5OT0": "Tente enviar outro!",
-  "NaQLEx": "Link inválido",
-  "m9hXGR": "Processando aplicativo",
   "9PUXpK": "Fúria",
   "IoLVi4": "Sorvete de Sonho",
   "nmd90t": "uwu~",
@@ -5764,7 +5751,6 @@
       "cardinal"
     ]
   ],
-  "ISyHmZ": "Amando ultimamente",
   "G1b309": "Não sai da cabeça",
   "iXcll5": "Jogando ultimamente",
   "+KXSFh": [
@@ -5809,7 +5795,6 @@
   "ZPjue3": "Qual a melhor coisa que você comeu esta semana?",
   "40gTj4": "Mal posso esperar por...",
   "SWVxPD": "Escolha a sua classe de personagem",
-  "ZStIVl": "Atualmente obcecado com...",
   "3XVZ0t": "Melhor piada de tiozão?",
   "4U+EJC": "Melhor emoji para descrever o seu dia?",
   "R1f9RU": "Anime favorito dos últimos tempos?",
@@ -5840,6 +5825,8 @@
   "/UonHB": "Definir status personalizado",
   "Iuzg8f": "Definir seu status",
   "zOdg0N": "Status",
+  "hA60Ul": "Faça seu status se destacar com uma tag predefinida",
+  "jrzHRk": "Tags de status personalizadas",
   "GQmLra": "Hoje",
   "UcdRn5": "Qual é a boa?",
   "xod36+": "No que você está pensando?",
@@ -7528,7 +7515,6 @@
     ],
     " em uma Atividade"
   ],
-  "LQx1UF": "Processando atividade",
   "1fRDnZ": "Retomar vídeo",
   "VOgTj4": "O vídeo foi pausado no seu dispositivo para uma melhor performance",
   "i+9VW1": "Não é possível compartilhar registros vazios",

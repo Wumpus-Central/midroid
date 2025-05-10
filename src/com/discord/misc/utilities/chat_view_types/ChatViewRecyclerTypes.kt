@@ -1,7 +1,6 @@
 package com.discord.misc.utilities.chat_view_types
 
 public object ChatViewRecyclerTypes {
-   public const val ACTIVITY_BOOKMARK: Int = 30
    public const val ACTIVITY_INSTANCE_EMBED: Int = 40
    public const val ACTIVITY_INVITE_EMBED: Int = 17
    public const val APP_MESSAGE_EMBED: Int = 54

@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.viewholder;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAccessory;
-import kotlin.jvm.functions.Function1;
+import com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
 public final class B implements OnClickListener {
-   public final Function1 j;
-   public final ThreadEmbedMessageAccessory k;
+   public final Function3 j;
+   public final VoiceInviteEmbed k;
 
    public final void onClick(View var1) {
-      ThreadEmbedViewHolder.b(this.j, this.k, var1);
+      VoiceInviteEmbedViewHolder.b(this.j, this.k, var1);
    }
 }
