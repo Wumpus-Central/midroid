@@ -3,9 +3,9 @@ package com.discord.app_database
 import android.content.Context
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
-import da.x0
+import ka.x0
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
@@ -29,11 +29,11 @@ public object AppDatabase {
       if (var4 != null && !q.c(var4, "")) {
          val var3: java.lang.String = this.databaseName(var4);
          DiscordMobileApi.openAsync(var3);
-         val var2: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("speculatively opening ");
-         var5.append(var3);
-         Log.i$default(var2, "AppDatabase", var5.toString(), null, 4, null);
+         val var5: Log = Log.INSTANCE;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("speculatively opening ");
+         var2.append(var3);
+         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -63,13 +63,13 @@ public object AppDatabase {
             val var6: a = Json.d;
             q.e(var23);
             var6.a();
-            var24 = var6.b(new x0(E.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
+            var24 = var6.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
             q.e(var7);
             var6.a();
-            var27 = var6.b(new x0(E.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+            var27 = var6.b(new x0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
             q.e(var1);
             var6.a();
-            var16 = var6.b(new x0(E.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
+            var16 = var6.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;
@@ -126,7 +126,7 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       q.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      l8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
+      t8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
          final Context $context;
 
          {

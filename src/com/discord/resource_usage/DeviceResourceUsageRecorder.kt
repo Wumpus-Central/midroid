@@ -1,6 +1,6 @@
 package com.discord.resource_usage
 
-import Ba.e
+import Ia.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
@@ -8,8 +8,8 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import h8.w
 import kotlin.jvm.internal.q
+import o8.w
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
@@ -52,7 +52,7 @@ public class DeviceResourceUsageRecorder {
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
             var5.s(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.j().W1());
+            var2.setBytesReceived(var2.getBytesReceived() + var5.j().X1());
          }
 
          return var4;

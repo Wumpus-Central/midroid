@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = o8.a.a(var0);
+      $ENTRIES = w8.a.a(var0);
    }
 
    init {

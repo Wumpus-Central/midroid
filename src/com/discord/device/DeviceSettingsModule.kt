@@ -9,14 +9,14 @@ import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceSettingsModuleSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
+import com.discord.react_activities.ReactRootView
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
-import i8.n
 import java.util.ArrayList
-import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
+import p8.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
@@ -52,28 +52,27 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
       q.h(var0, "this$0");
       q.h(var1, "$rects");
-      val var2: Function2 = ReactRootViewProxy.INSTANCE.getSetSystemGestureExclusionRects();
-      if (var2 != null) {
-         val var6: ReactApplicationContext = var0.getReactApplicationContext();
-         q.g(var6, "getReactApplicationContext(...)");
-         val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-         val var3: ArrayList = new ArrayList(i.v(var4, 10));
-         val var5: java.util.Iterator = var4.iterator();
+      val var2: ReactRootView.Companion = ReactRootView.Companion;
+      val var3: ReactApplicationContext = var0.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
+      val var6: ArrayList = new ArrayList(i.v(var4, 10));
+      val var7: java.util.Iterator = var4.iterator();
 
-         while (var5.hasNext()) {
-            val var7: ReadableMap = var1.getMap((var5 as n).a());
-            var3.add(
-               new Rect(
-                  SizeUtilsKt.getDpToPx(var7.getInt("left")),
-                  SizeUtilsKt.getDpToPx(var7.getInt("top")),
-                  SizeUtilsKt.getDpToPx(var7.getInt("right")),
-                  SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
-               )
-            );
-         }
-
-         var2.invoke(var6, var3);
+      while (var7.hasNext()) {
+         val var5: ReadableMap = var1.getMap((var7 as n).a());
+         q.e(var5);
+         var6.add(
+            new Rect(
+               SizeUtilsKt.getDpToPx(var5.getInt("left")),
+               SizeUtilsKt.getDpToPx(var5.getInt("top")),
+               SizeUtilsKt.getDpToPx(var5.getInt("right")),
+               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
+            )
+         );
       }
+
+      var2.setSystemGestureExclusionRects(var3, var6);
    }
 
    public override fun openAccessibilitySettings() {

@@ -6,7 +6,7 @@ import android.view.View
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.EventDispatcher
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -26,7 +26,7 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
 
    private fun ReactEvent.requireEventExporting() {
       if (!this.eventRegistry.getDidExportEvents()) {
-         val var2: KClass = E.b(var1.getClass());
+         val var2: KClass = G.b(var1.getClass());
          val var3: StringBuilder = new StringBuilder();
          var3.append("attempting to emit event: ");
          var3.append(var2);

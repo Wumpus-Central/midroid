@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import aa.f
-import aa.n
-import ba.a
-import da.G
+import ha.f
+import ha.n
+import ia.a
+import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -127,7 +127,7 @@ public data class Embed(fields: List<EmbedField>? = null) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

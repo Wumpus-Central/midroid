@@ -20,10 +20,10 @@ import com.discord.span.utilities.spannable.BlockBackgroundSpan
 import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import h8.r
-import h8.s
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
+import o8.r
+import o8.s
 
 public object CodeStyle {
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
@@ -34,10 +34,10 @@ public object CodeStyle {
          var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
-            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
-            val var5: CodeRules = CodeRules.INSTANCE;
+            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            var2 = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, ((CodeStyleProviders)var2).getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
+               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
@@ -65,7 +65,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      val var3: java.lang.String = kotlin.text.h.a1(var1.getLang()).toString();
+      var var3: java.lang.String = kotlin.text.h.a1(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -73,21 +73,21 @@ public object CodeStyle {
       var6.append("\n");
       var6.append(var2);
       var6.append("\n```");
-      val var7: java.lang.String = var6.toString();
+      var3 = var6.toString();
 
       label16:
       try {
-         val var11: h8.r.a = r.k;
-         var8 = r.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         val var8: o8.r.a = r.k;
+         var7 = r.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: h8.r.a = r.k;
-         var8 = r.b(s.a(var4));
+         val var11: o8.r.a = r.k;
+         var7 = r.b(s.a(var4));
          break label16;
       }
 
       val var12: java.util.List = i.e(new TextNode(var2));
-      var2 = (java.lang.String)var8;
-      if (r.g(var8)) {
+      var2 = (java.lang.String)var7;
+      if (r.g(var7)) {
          var2 = var12;
       }
 
@@ -145,7 +145,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var11: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -156,7 +156,7 @@ public object CodeStyle {
       );
       var5 = SizeUtilsKt.getDpToPx(4);
       val var9: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var8: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var11: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
       val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
@@ -168,7 +168,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var11, var9, var8, var7, var10}[var14];
+         val var12: Any = new Object[]{var8, var9, var11, var7, var10}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

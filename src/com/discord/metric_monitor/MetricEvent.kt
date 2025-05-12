@@ -1,16 +1,15 @@
 package com.discord.metric_monitor
 
-import aa.f
-import aa.n
-import ba.a
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import h8.w
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -19,6 +18,7 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.encoding.c
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import o8.w
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -167,7 +167,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

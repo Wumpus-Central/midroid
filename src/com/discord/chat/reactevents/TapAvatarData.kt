@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,13 +67,13 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.userId;
+      val var3: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.userId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapAvatarData(messageId=");
-      var2.append(var1);
-      var2.append(", userId=");
       var2.append(var3);
+      var2.append(", userId=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

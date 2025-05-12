@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -56,12 +56,12 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.ariaDescription;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContentInventoryEntryClickable(ariaDescription=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.ariaDescription;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ContentInventoryEntryClickable(ariaDescription=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public object `$serializer` : G {
@@ -129,7 +129,7 @@ public data class ContentInventoryEntryClickable(ariaDescription: String? = null
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

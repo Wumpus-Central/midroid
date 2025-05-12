@@ -16,7 +16,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.chat.presentation.message.viewholder.MediaImageViewHolder
 import com.google.android.flexbox.FlexboxLayout.LayoutParams
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -60,17 +60,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var11: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var16: java.lang.String = var3.getContainerId();
-      val var12: java.lang.String = var1.getId();
+      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var12: java.lang.String = var3.getContainerId();
+      val var11: java.lang.String = var1.getId();
       val var13: StringBuilder = new StringBuilder();
       var13.append("ThumbnailDisplayComponent(");
-      var13.append(var12);
+      var13.append(var11);
       var13.append(")");
-      val var17: SpoilerAttributes = var11.forGenericMedia(var1, var16, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var17: SpoilerAttributes = var16.forGenericMedia(var1, var12, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var20: UnfurledMediaItem = var1.getMedia();
       val var21: MediaImageViewHolder = this.imageViewHolder;
-      val var7: Boolean = var1.isSpoiler();
+      val var6: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
          var18 = SpoilerAttributes.configure$default(var17, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
@@ -78,9 +78,9 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var10: Boolean = var1.isObscure();
-      val var9: Boolean = var1.isObscureAwaitingScan();
-      val var6: Boolean = var1.getObscureHideControls();
+      val var9: Boolean = var1.isObscure();
+      val var10: Boolean = var1.isObscureAwaitingScan();
+      val var7: Boolean = var1.getObscureHideControls();
       val var8: Boolean = var1.getObscureIsOpaque();
       val var22: java.lang.String = var20.getProxyUrl();
       var var14: Int = var20.getWidth();
@@ -105,11 +105,11 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var5,
          var20.getPlaceholder(),
          var20.getPlaceholderVersion(),
-         var7,
-         var18,
-         var10,
-         var9,
          var6,
+         var18,
+         var9,
+         var10,
+         var7,
          var8,
          false,
          var1.getDescription(),
@@ -139,7 +139,7 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<ThumbnailDisplayComponent> {
-      return E.b(ThumbnailDisplayComponent.class);
+      return G.b(ThumbnailDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

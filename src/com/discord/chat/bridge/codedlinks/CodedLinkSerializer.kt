@@ -1,24 +1,24 @@
 package com.discord.chat.bridge.codedlinks
 
-import ea.d
-import ea.g
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
+import la.d
+import la.g
 
-public object CodedLinkSerializer : d(E.b(CodedLinkEmbed.class)) {
+public object CodedLinkSerializer : d(G.b(CodedLinkEmbed.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<CodedLinkEmbed> {
-      label32: {
+      label29: {
          q.h(var1, "element");
          var1 = g.o(var1).get("extendedType") as JsonElement;
          if (var1 != null) {
             val var3: JsonPrimitive = g.p(var1);
             if (var3 != null) {
                var4 = var3.a();
-               break label32;
+               break label29;
             }
          }
 
@@ -30,8 +30,6 @@ public object CodedLinkSerializer : d(E.b(CodedLinkEmbed.class)) {
          var5 = GuildEventInviteEmbedImpl.Companion.serializer();
       } else if (q.c(var4, java.lang.String.valueOf(CodedLinkExtendedType.GUILD_INVITE_DISABLED.getSerialNumber()))) {
          var5 = GuildInviteDisabledEmbedImpl.Companion.serializer();
-      } else if (q.c(var4, java.lang.String.valueOf(CodedLinkExtendedType.ACTIVITY_BOOKMARK.getSerialNumber()))) {
-         var5 = ActivityBookmarkEmbedImpl.Companion.serializer();
       } else if (q.c(var4, java.lang.String.valueOf(CodedLinkExtendedType.APP_MESSAGE_EMBED.getSerialNumber()))) {
          var5 = AppMessageEmbedImpl.Companion.serializer();
       } else if (q.c(var4, java.lang.String.valueOf(CodedLinkExtendedType.EMBEDDED_ACTIVITY_INVITE.getSerialNumber()))) {

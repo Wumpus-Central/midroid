@@ -1,13 +1,13 @@
 package com.discord.bundle_updater
 
-import Ka.g
-import h8.w
+import A8.j
+import Ra.g
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
+import o8.w
 import okio.BufferedSource
-import s8.j
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
@@ -51,11 +51,11 @@ public object BundleUpdaterUtils {
    public fun md5(file: File): String {
       label18: {
          q.h(var1, "file");
-         val var10: BufferedSource = Ka.j.d(Ka.j.k(var1));
+         val var10: BufferedSource = Ra.j.d(Ra.j.k(var1));
 
          var var11: java.lang.String;
          try {
-            val var2: g = g.m.a(Ka.j.b());
+            val var2: g = g.m.a(Ra.j.b());
             var10.F1(var2);
             var11 = var2.a().s();
          } catch (var5: java.lang.Throwable) {
@@ -64,11 +64,11 @@ public object BundleUpdaterUtils {
             try {
                throw var3;
             } catch (var4: java.lang.Throwable) {
-               s8.c.a(var10, var5);
+               A8.c.a(var10, var5);
             }
          }
 
-         s8.c.a(var10, null);
+         A8.c.a(var10, null);
          return var11;
       }
    }

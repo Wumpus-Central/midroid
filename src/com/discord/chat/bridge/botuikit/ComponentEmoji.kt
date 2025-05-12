@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
-import da.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -111,24 +111,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
-      val var6: java.lang.String = this.src;
+      val var4: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
+      val var3: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var2: java.lang.String = this.surrogates;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ComponentEmoji(id=");
-      var5.append(var3);
-      var5.append(", name=");
-      var5.append(var4);
-      var5.append(", src=");
-      var5.append(var6);
-      var5.append(", animated=");
-      var5.append(var1);
-      var5.append(", surrogates=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.surrogates;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ComponentEmoji(id=");
+      var6.append(var4);
+      var6.append(", name=");
+      var6.append(var2);
+      var6.append(", src=");
+      var6.append(var3);
+      var6.append(", animated=");
+      var6.append(var1);
+      var6.append(", surrogates=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : G {
@@ -152,8 +152,8 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var4: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), var4, a.u(var4), h.a, a.u(var4)};
+         val var2: C0 = C0.a;
+         return new KSerializer[]{a.u(C0.a), var2, a.u(var2), h.a, a.u(var2)};
       }
 
       public open fun deserialize(decoder: Decoder): ComponentEmoji {
@@ -234,7 +234,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

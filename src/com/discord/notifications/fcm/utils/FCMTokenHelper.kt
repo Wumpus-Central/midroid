@@ -68,7 +68,7 @@ internal object FCMTokenHelper {
       q.h(var1, "onToken");
 
       try {
-         FirebaseMessaging.n().q().f(new a()).d(new b(var1));
+         FirebaseMessaging.n().q().e(new a()).c(new b(var1));
       } catch (var4: Exception) {
          this.logError(var4);
       }

@@ -34,7 +34,7 @@ import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
-import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
@@ -45,12 +45,12 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
-import h8.l
-import h8.p
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import o8.l
+import o8.p
 
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -86,7 +86,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = l.b(new Function0(this) {
+      this.progressDots$delegate = l.a(new Function0(this) {
          final SelectComponentView this$0;
 
          {
@@ -100,7 +100,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
             return var1 as ProgressDots;
          }
       });
-      this.postProcessor$delegate = l.b(<unrepresentable>.INSTANCE);
+      this.postProcessor$delegate = l.a(<unrepresentable>.INSTANCE);
       this.setMaxWidth(SizeUtilsKt.getDpToPx(300));
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
@@ -119,20 +119,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var6: DraweeSpanStringBuilder = new DraweeSpanStringBuilder();
       val var5: Int = SizeUtilsKt.getDpToPx(20);
       var6.append('\u200b');
-      val var8: ImageRequestBuilder = ImageRequestBuilder.w(Uri.parse(var2)).L(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).G(RequestLevel.k);
+      val var8: ImageRequestBuilder = ImageRequestBuilder.x(Uri.parse(var2)).N(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).I(RequestLevel.k);
       if (var4) {
-         var8.H(this.getPostProcessor());
+         var8.J(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (R1.c.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      q.g(var9, "build(...)");
-      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils.ScaleType.e);
-      q.g(var7, "setActualImageScaleType(...)");
+      val var7: com.facebook.drawee.controller.a = (R1.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      q.g(var7, "build(...)");
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
+      q.g(var9, "setActualImageScaleType(...)");
       if (var3 != null) {
-         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
@@ -237,20 +237,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var34 is SearchableSelectItem) {
-                        val var19: SearchableSelectItem = var34 as SearchableSelectItem;
+                        val var13: SearchableSelectItem = var34 as SearchableSelectItem;
                         if ((var34 as SearchableSelectItem).getIconSrc() != null) {
-                           val var36: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var20: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var13: java.lang.String = var19.getIconSrc();
-                           val var12: Int = var19.getIconColor();
+                           val var36: java.lang.String = var13.getIconSrc();
+                           val var12: Int = var13.getIconColor();
                            val var28: Boolean;
-                           if (var19.getType() === SelectOptionType.USER) {
+                           if (var13.getType() === SelectOptionType.USER) {
                               var28 = true;
                            } else {
                               var28 = false;
                            }
 
-                           this.setImage(var36, var13, var12, var28);
+                           this.setImage(var20, var36, var12, var28);
                            val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var21.setVisibility(0);
@@ -258,9 +258,9 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                         }
                      }
 
-                     val var20: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     val var19: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                      q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                     var20.setVisibility(8);
+                     var19.setVisibility(8);
                   }
                }
             }
@@ -291,31 +291,31 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var5 = true;
       }
 
-      val var9: Boolean;
+      val var29: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var9 = true;
+         var29 = true;
       } else {
-         var9 = false;
+         var29 = false;
       }
 
       val var23: SimpleDraweeView = this.binding.selectComponentChevron;
       q.g(this.binding.selectComponentChevron, "selectComponentChevron");
-      if (!var9) {
+      if (!var29) {
          var6 = 0;
       }
 
       var23.setVisibility(var6);
-      if (var9 != this.currentIsLoading) {
+      if (var29 != this.currentIsLoading) {
          val var24: ProgressDots = this.getProgressDots();
          var6 = 8;
-         if (var9) {
+         if (var29) {
             var6 = 0;
          }
 
          var24.setVisibility(var6);
       }
 
-      this.currentIsLoading = var9;
+      this.currentIsLoading = var29;
       val var25: View = this.binding.getRoot();
       val var4: Float;
       if (var5) {
@@ -329,20 +329,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       q.g(var26, "getRoot(...)");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new d(var3, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var29: Boolean = false;
-      if (!var9) {
-         var29 = false;
+      var var9: Boolean = false;
+      if (!var29) {
+         var9 = false;
          if (!var5) {
-            var29 = true;
+            var9 = true;
          }
       }
 
-      var14.setClickable(var29);
+      var14.setClickable(var9);
       this.binding.getRoot().setEnabled(var5 xor true);
    }
 
    public override fun getComponentType(): KClass<SelectComponent> {
-      return E.b(SelectComponent.class);
+      return G.b(SelectComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

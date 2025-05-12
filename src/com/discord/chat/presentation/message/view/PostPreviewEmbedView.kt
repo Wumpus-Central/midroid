@@ -24,7 +24,7 @@ import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
-import com.facebook.drawee.drawable.ScalingUtils
+import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
@@ -121,10 +121,10 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       var8.setVisibility(var4);
       if (var1 != null && !kotlin.text.h.d0(var1)) {
          if (var3 != null && !kotlin.text.h.d0(var3)) {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.e);
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
             this.binding.backgroundImage.setImageURI(var3);
          } else {
-            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils.ScaleType.i);
+            (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.i);
          }
 
          this.binding.coverImage.setImageURI(var1);

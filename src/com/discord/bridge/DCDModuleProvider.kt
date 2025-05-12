@@ -2,8 +2,8 @@ package com.discord.bridge
 
 import com.discord.image.fresco.FrescoModuleDiscord
 import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.ReactPackage
-import com.facebook.react.TurboReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -16,7 +16,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public object DCDModuleProvider {
-   public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: TurboReactPackage): Boolean {
+   public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: BaseReactPackage): Boolean {
       q.h(var1, "<this>");
       q.h(var2, "turboPackages");
       return i.B(var1, var2);
@@ -76,10 +76,10 @@ public object DCDModuleProvider {
       };
    }
 
-   public fun getTurboPackageForModule(moduleName: String, onNativeModule: (ReactApplicationContext) -> NativeModule): TurboReactPackage {
+   public fun getTurboPackageForModule(moduleName: String, onNativeModule: (ReactApplicationContext) -> NativeModule): BaseReactPackage {
       q.h(var1, "moduleName");
       q.h(var2, "onNativeModule");
-      return new TurboReactPackage(var1, var2) {
+      return new BaseReactPackage(var1, var2) {
          final java.lang.String $moduleName;
          final Function1 $onNativeModule;
 
@@ -90,7 +90,7 @@ public object DCDModuleProvider {
 
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             q.h(var1, "name");
-            q.h(var2, "reactApplicationContext");
+            q.h(var2, "reactContext");
             val var3: NativeModule;
             if (q.c(var1, this.$moduleName)) {
                var3 = this.$onNativeModule.invoke(var2) as NativeModule;

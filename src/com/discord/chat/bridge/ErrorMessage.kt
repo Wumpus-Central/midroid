@@ -1,12 +1,12 @@
 package com.discord.chat.bridge
 
-import aa.f
-import aa.n
 import com.discord.primitives.MessageId
-import da.C0
-import da.G
-import da.p0
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.p0
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -75,14 +75,14 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var3: java.lang.String = this.stackTrace;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ErrorMessage(id=");
-      var1.append(var2);
-      var1.append(", stackTrace=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.stackTrace;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ErrorMessage(id=");
+      var3.append(var2);
+      var3.append(", stackTrace=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public object `$serializer` : G {

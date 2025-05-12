@@ -12,8 +12,8 @@ import okhttp3.Interceptor.Chain
 internal object ClientUserAgent {
    private fun createDispatcher(): Dispatcher {
       val var1: Dispatcher = new Dispatcher();
-      var1.n(var1.i() * 2);
-      var1.o(var1.i());
+      var1.o(var1.j() * 2);
+      var1.p(var1.j());
       return var1;
    }
 

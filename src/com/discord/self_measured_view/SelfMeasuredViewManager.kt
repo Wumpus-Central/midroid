@@ -20,9 +20,6 @@ public class SelfMeasuredViewManager : ViewGroupManager<SelfMeasuredView> {
 
    public open fun updateState(view: SelfMeasuredView, props: ReactStylesDiffMap?, stateWrapper: StateWrapper?) {
       q.h(var1, "view");
-      if (var3 != null) {
-         var1.getFabricViewStateManager().setStateWrapper(var3);
-      }
    }
 
    public companion object {

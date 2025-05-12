@@ -15,7 +15,7 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react.FontManager
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -42,21 +42,21 @@ public class TextDisplayComponentView(context: Context) : MessageContentView, Co
       }
 
       SetTextSizeSpKt.setTextSizeSp(this, var4);
-      val var6: TextPaint = this.getPaint();
-      q.g(var6, "getPaint(...)");
+      val var5: TextPaint = this.getPaint();
+      q.g(var5, "getPaint(...)");
       val var8: FontManager = FontManager.INSTANCE;
-      val var5: Context = this.getContext();
-      q.g(var5, "getContext(...)");
+      val var6: Context = this.getContext();
+      q.g(var6, "getContext(...)");
       this.setMessageContent(
          var1.getContent(),
          var3.getMarkdownTextRenderOptions(),
          var3.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var6, var8.getScaledSpToPx(16, var5))
+         TextUtilsKt.getBaselineHeightForFontSizePx(var5, var8.getScaledSpToPx(16, var6))
       );
    }
 
    public override fun getComponentType(): KClass<TextDisplayComponent> {
-      return E.b(TextDisplayComponent.class);
+      return G.b(TextDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

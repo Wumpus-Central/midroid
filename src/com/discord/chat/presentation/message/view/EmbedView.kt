@@ -175,13 +175,13 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
    }
 
    private fun clearInlineMedia() {
-      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView;
-      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
-      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
+      val var3: EmbedViewResizingMediaView = this.binding.inlineMediaView;
+      val var4: EmbedViewResizingMediaView = this.binding.inlineMediaView2;
+      val var2: EmbedViewResizingMediaView = this.binding.inlineMediaView3;
       val var6: EmbedViewResizingMediaView = this.binding.inlineMediaView4;
 
       for (int var1 = 0; var1 < 4; var1++) {
-         val var7: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var2, var3, var4, var6}[var1];
+         val var7: EmbedViewResizingMediaView = new EmbedViewResizingMediaView[]{var3, var4, var2, var6}[var1];
          kotlin.jvm.internal.q.e(var7);
          MediaView.setMediaData$default(
             var7, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262142, null
@@ -589,24 +589,24 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var31 = "";
          }
 
-         val var35: StructurableText = var22.getValue();
-         if (var35 != null) {
-            val var37: Context = var21.getContext();
-            val var36: TextPaint = var21.getBinding().value.getPaint();
-            val var33: FontMetrics = var21.getBinding().value.getPaint().getFontMetrics();
-            kotlin.jvm.internal.q.g(var33, "getFontMetrics(...)");
-            val var14: Float = TextUtilsKt.getBaselineHeightPx(var33);
-            kotlin.jvm.internal.q.e(var37);
+         val var33: StructurableText = var22.getValue();
+         if (var33 != null) {
+            val var36: Context = var21.getContext();
+            val var37: TextPaint = var21.getBinding().value.getPaint();
+            val var35: FontMetrics = var21.getBinding().value.getPaint().getFontMetrics();
+            kotlin.jvm.internal.q.g(var35, "getFontMetrics(...)");
+            val var14: Float = TextUtilsKt.getBaselineHeightPx(var35);
             kotlin.jvm.internal.q.e(var36);
+            kotlin.jvm.internal.q.e(var37);
             var32 = TextUtilsKt.toSpannable$default(
-               var35,
-               var37,
+               var33,
+               var36,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var36,
+               var37,
                var25,
                var8,
                var12,
@@ -914,7 +914,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             }
          }
       } else {
-         var var35: StructurableText = var1.getTitle();
+         val var35: StructurableText = var1.getTitle();
          val var78: DraweeSpanStringBuilder;
          if (var35 != null) {
             val var77: Context = this.getContext();
@@ -983,17 +983,17 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var50 = "";
          }
 
-         var35 = var1.getDescription();
+         val var85: StructurableText = var1.getDescription();
          val var71: DraweeSpanStringBuilder;
-         if (var35 != null) {
-            val var85: Context = this.getContext();
+         if (var85 != null) {
+            val var80: Context = this.getContext();
             val var82: TextPaint = this.binding.description.getPaint();
-            val var80: FontMetrics = this.binding.description.getPaint().getFontMetrics();
-            kotlin.jvm.internal.q.g(var80, "getFontMetrics(...)");
-            val var32: Float = TextUtilsKt.getBaselineHeightPx(var80);
-            kotlin.jvm.internal.q.e(var85);
+            val var84: FontMetrics = this.binding.description.getPaint().getFontMetrics();
+            kotlin.jvm.internal.q.g(var84, "getFontMetrics(...)");
+            val var32: Float = TextUtilsKt.getBaselineHeightPx(var84);
+            kotlin.jvm.internal.q.e(var80);
             kotlin.jvm.internal.q.e(var82);
-            var71 = TextUtilsKt.toSpannable$default(var35, var85, var4, var9, var10, var11, var12, var82, new Function1(var17, var4) {
+            var71 = TextUtilsKt.toSpannable$default(var85, var80, var4, var9, var10, var11, var12, var82, new Function1(var17, var4) {
                final java.lang.String $messageId;
                final Function2 $onLinkClicked;
 

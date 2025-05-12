@@ -10,10 +10,10 @@ import com.facebook.react.viewmanagers.SafeAreaViewManagerInterface
 import com.th3rdwave.safeareacontext.EdgeInsets
 import com.th3rdwave.safeareacontext.Rect
 import com.th3rdwave.safeareacontext.SafeAreaProvider
-import h8.w
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.w
 
 @ReactModule(name = "DCDSafeArea")
 public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeAreaViewManagerInterface<SafeAreaProvider> {
@@ -21,7 +21,7 @@ public class SafeAreaProviderManager : ViewGroupManager<SafeAreaProvider>, SafeA
    private final var changeDatastableInsets: OnSafeAreaInsetsDidChangeData
    private final val delegate: SafeAreaViewManagerDelegate<SafeAreaProvider, SafeAreaProviderManager> = new SafeAreaViewManagerDelegate(this)
    private final var dimensions: com.discord.safearea.SafeAreaProviderManager.SafeAreaProviderDimensions?
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onSafeAreaInsetsDidChange", E.b(OnSafeAreaInsetsDidChangeData.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onSafeAreaInsetsDidChange", G.b(OnSafeAreaInsetsDidChangeData.class)))
 
    @JvmStatic
    fun {

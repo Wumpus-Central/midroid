@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.codedlinks
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
-import da.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -66,8 +66,8 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.id.hashCode();
-      val var2: Int = this.label.hashCode();
+      val var2: Int = this.id.hashCode();
+      val var3: Int = this.label.hashCode();
       val var1: Int;
       if (this.disabled == null) {
          var1 = 0;
@@ -75,22 +75,22 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
          var1 = this.disabled.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var2: java.lang.String = this.label;
-      val var1: java.lang.Boolean = this.disabled;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AppMessageActionImpl(id=");
-      var3.append(var4);
-      var3.append(", label=");
-      var3.append(var2);
-      var3.append(", disabled=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var4: java.lang.Boolean = this.disabled;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppMessageActionImpl(id=");
+      var2.append(var3);
+      var2.append(", label=");
+      var2.append(var1);
+      var2.append(", disabled=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -117,26 +117,28 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
 
       public open fun deserialize(decoder: Decoder): AppMessageActionImpl {
          q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         val var5: Boolean = var9.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var5: Boolean = var10.y();
          var var7: java.lang.String = null;
          var var2: Int;
-         var var6: java.lang.String;
-         var var10: java.lang.Boolean;
+         var var11: java.lang.Boolean;
+         var var12: java.lang.String;
          if (var5) {
-            var7 = var9.t(var8, 0);
-            var6 = var9.t(var8, 1);
-            var10 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
+            var12 = var10.t(var9, 0);
+            val var8: java.lang.String = var10.t(var9, 1);
+            var11 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
             var2 = 7;
+            var7 = var12;
+            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
-            var10 = null;
+            var12 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -144,14 +146,14 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
                            throw new n(var4);
                         }
 
-                        var10 = var9.v(var8, 2, h.a, var10) as java.lang.Boolean;
+                        var11 = var10.v(var9, 2, h.a, var11) as java.lang.Boolean;
                         var2 |= 4;
                      } else {
-                        var6 = var9.t(var8, 1);
+                        var12 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.t(var8, 0);
+                     var7 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -160,8 +162,8 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
             }
          }
 
-         var9.b(var8);
-         return new AppMessageActionImpl(var2, var7, var6, var10, null);
+         var10.b(var9);
+         return new AppMessageActionImpl(var2, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppMessageActionImpl) {
@@ -174,7 +176,7 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

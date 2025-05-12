@@ -1,10 +1,10 @@
 package com.discord.chatreplay
 
-import aa.f
-import aa.n
-import da.C0
-import da.G
-import da.Y
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.Y
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -59,15 +59,15 @@ public data class Replay(filename: String, lastModified: Long) {
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.filename;
+      val var3: java.lang.String = this.filename;
       val var1: Long = this.lastModified;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Replay(filename=");
-      var3.append(var4);
-      var3.append(", lastModified=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Replay(filename=");
+      var4.append(var3);
+      var4.append(", lastModified=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -142,7 +142,7 @@ public data class Replay(filename: String, lastModified: Long) {
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

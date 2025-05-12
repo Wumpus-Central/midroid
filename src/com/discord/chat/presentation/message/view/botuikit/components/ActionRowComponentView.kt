@@ -20,7 +20,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
 import java.util.ArrayList
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -113,7 +113,7 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
    }
 
    public override fun getComponentType(): KClass<ActionRowComponent> {
-      return E.b(ActionRowComponent.class);
+      return G.b(ActionRowComponent.class);
    }
 
    public override fun onRecycle(componentProvider: ComponentProvider) {

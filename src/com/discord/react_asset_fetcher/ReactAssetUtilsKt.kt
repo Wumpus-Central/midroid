@@ -1,7 +1,7 @@
 package com.discord.react_asset_fetcher
 
-import Q9.K
-import Q9.f
+import X9.K
+import X9.f
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -14,21 +14,21 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
-import h8.s
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import n8.b
+import o8.s
+import v8.b
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");
    q.h(var1, "assetUrl");
-   val var2: java.lang.String = new ImageSource(var0, var1, 0.0, 0.0, false, 28, null).getUri().toString();
+   val var2: java.lang.String = new ImageSource(var0, var1, 0.0, 0.0, null, false, 60, null).getUri().toString();
    q.g(var2, "toString(...)");
    return var2;
 }
@@ -104,8 +104,8 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          } else {
             s.b(var1);
             var1 = this.$this_setReactIcon;
-            val var5: CoroutineDispatcher = K.b();
-            var3 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            var3 = K.b();
+            val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -130,7 +130,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      s.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      q.g(var1, "getContext(...)");
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, false, 28, null);
+                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
                      if (var3.isResource()) {
                         val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
@@ -161,7 +161,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var3 = f.g(var5, (Function2)var3, this);
+            var3 = f.g((CoroutineContext)var3, var5, this);
             if (var3 === var4) {
                return var4;
             }

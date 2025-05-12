@@ -43,6 +43,6 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
       var6.setPresence(var4.getOnlineText(), var4.getMemberText());
       var6.setBody(var4.getBodyText(), var4.getHasProfileOverflow());
       var6.setAcceptButton(var4.getAcceptLabelText());
-      var6.setClickListeners(new q(var2, var5, var3), new r(var2, var5, var3));
+      var6.setClickListeners(new p(var2, var5, var3), new q(var2, var5, var3));
    }
 }

@@ -7,13 +7,13 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
-import h8.l
 import java.lang.reflect.Method
 import kotlin.jvm.internal.q
+import o8.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.b(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }

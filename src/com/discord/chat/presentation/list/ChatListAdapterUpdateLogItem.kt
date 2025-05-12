@@ -3,8 +3,8 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import h8.p
 import kotlin.jvm.internal.q
+import o8.p
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {

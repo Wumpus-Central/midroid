@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import da.C0
-import da.G
-import da.N
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -251,8 +251,8 @@ public data class ThumbnailDisplayComponent(type: Int,
       }
 
       val var12: Int = java.lang.Boolean.hashCode(this.isObscure);
-      val var11: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
-      val var9: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var9: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
+      val var11: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
       val var10: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var3: Int;
       if (this.obscureDescription == null) {
@@ -274,10 +274,10 @@ public data class ThumbnailDisplayComponent(type: Int,
                                                             (
                                                                      ((((((var7 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var12)
                                                                            * 31
-                                                                        + var11
+                                                                        + var9
                                                                   )
                                                                   * 31
-                                                               + var9
+                                                               + var11
                                                          )
                                                          * 31
                                                       + var10
@@ -300,53 +300,53 @@ public data class ThumbnailDisplayComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var10: java.lang.String = this.id;
-      val var16: UnfurledMediaItem = this.media;
+      val var15: java.lang.String = this.id;
+      val var13: UnfurledMediaItem = this.media;
       val var12: java.lang.String = this.description;
-      val var6: Boolean = this.isSpoiler;
+      val var4: Boolean = this.isSpoiler;
       val var11: java.lang.String = this.spoilerDescription;
-      val var3: Boolean = this.isObscure;
-      val var4: Boolean = this.isObscureAwaitingScan;
-      val var5: Boolean = this.obscureHideControls;
+      val var7: Boolean = this.isObscure;
+      val var3: Boolean = this.isObscureAwaitingScan;
+      val var6: Boolean = this.obscureHideControls;
       val var2: Boolean = this.obscureIsOpaque;
-      val var8: java.lang.String = this.obscureDescription;
-      val var9: java.lang.Boolean = this.verifyAge;
-      val var13: java.lang.String = this.descriptionHint;
-      val var14: java.lang.String = this.accessibilityRole;
-      val var7: Boolean = this.srcIsAnimated;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("ThumbnailDisplayComponent(type=");
-      var15.append(var1);
-      var15.append(", id=");
-      var15.append(var10);
-      var15.append(", media=");
-      var15.append(var16);
-      var15.append(", description=");
-      var15.append(var12);
-      var15.append(", isSpoiler=");
-      var15.append(var6);
-      var15.append(", spoilerDescription=");
-      var15.append(var11);
-      var15.append(", isObscure=");
-      var15.append(var3);
-      var15.append(", isObscureAwaitingScan=");
-      var15.append(var4);
-      var15.append(", obscureHideControls=");
-      var15.append(var5);
-      var15.append(", obscureIsOpaque=");
-      var15.append(var2);
-      var15.append(", obscureDescription=");
-      var15.append(var8);
-      var15.append(", verifyAge=");
-      var15.append(var9);
-      var15.append(", descriptionHint=");
-      var15.append(var13);
-      var15.append(", accessibilityRole=");
-      var15.append(var14);
-      var15.append(", srcIsAnimated=");
-      var15.append(var7);
-      var15.append(")");
-      return var15.toString();
+      val var10: java.lang.String = this.obscureDescription;
+      val var16: java.lang.Boolean = this.verifyAge;
+      val var14: java.lang.String = this.descriptionHint;
+      val var9: java.lang.String = this.accessibilityRole;
+      val var5: Boolean = this.srcIsAnimated;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ThumbnailDisplayComponent(type=");
+      var8.append(var1);
+      var8.append(", id=");
+      var8.append(var15);
+      var8.append(", media=");
+      var8.append(var13);
+      var8.append(", description=");
+      var8.append(var12);
+      var8.append(", isSpoiler=");
+      var8.append(var4);
+      var8.append(", spoilerDescription=");
+      var8.append(var11);
+      var8.append(", isObscure=");
+      var8.append(var7);
+      var8.append(", isObscureAwaitingScan=");
+      var8.append(var3);
+      var8.append(", obscureHideControls=");
+      var8.append(var6);
+      var8.append(", obscureIsOpaque=");
+      var8.append(var2);
+      var8.append(", obscureDescription=");
+      var8.append(var10);
+      var8.append(", verifyAge=");
+      var8.append(var16);
+      var8.append(", descriptionHint=");
+      var8.append(var14);
+      var8.append(", accessibilityRole=");
+      var8.append(var9);
+      var8.append(", srcIsAnimated=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public object `$serializer` : G {
@@ -382,27 +382,27 @@ public data class ThumbnailDisplayComponent(type: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var8: C0 = C0.a;
-         val var5: KSerializer = a.u(C0.a);
-         val var1: da.h = da.h.a;
+         val var1: C0 = C0.a;
+         val var7: KSerializer = a.u(C0.a);
+         val var3: ka.h = ka.h.a;
          return new KSerializer[]{
             N.a,
-            var8,
+            var1,
             UnfurledMediaItem.$serializer.INSTANCE,
-            var5,
-            da.h.a,
-            a.u(var8),
-            var1,
-            var1,
-            var1,
-            var1,
-            a.u(var8),
+            var7,
+            ka.h.a,
             a.u(var1),
-            var8,
-            var8,
+            var3,
+            var3,
+            var3,
+            var3,
+            a.u(var1),
+            a.u(var3),
             var1,
-            a.u(var8),
-            a.u(var8)
+            var1,
+            var3,
+            a.u(var1),
+            a.u(var1)
          };
       }
 
@@ -422,55 +422,59 @@ public data class ThumbnailDisplayComponent(type: Int,
          var var14: Boolean;
          val var15: Boolean;
          val var16: Boolean;
-         var var17: java.lang.String;
-         var var18: java.lang.String;
-         var var19: Any;
+         var var19: java.lang.String;
          var var20: java.lang.String;
          var var21: java.lang.String;
          var var22: java.lang.String;
+         var var23: Any;
          var var24: java.lang.String;
-         var var25: UnfurledMediaItem;
-         val var26: java.lang.String;
-         val var30: java.lang.String;
+         val var31: java.lang.String;
+         var var43: java.lang.String;
+         var var46: java.lang.String;
+         var var50: UnfurledMediaItem;
          if (var9) {
-            var3 = var29.k(var28, 0);
+            var2 = var29.k(var28, 0);
             var20 = var29.t(var28, 1);
-            var25 = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
-            val var23: C0 = C0.a;
+            val var18: UnfurledMediaItem = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
+            val var25: C0 = C0.a;
             var24 = var29.v(var28, 3, C0.a, null) as java.lang.String;
-            var16 = var29.s(var28, 4);
-            var22 = var29.v(var28, 5, var23, null) as java.lang.String;
-            var13 = var29.s(var28, 6);
+            var14 = var29.s(var28, 4);
+            var22 = var29.v(var28, 5, var25, null) as java.lang.String;
+            var16 = var29.s(var28, 6);
             val var10: Boolean = var29.s(var28, 7);
-            var14 = var29.s(var28, 8);
+            var15 = var29.s(var28, 8);
             var9 = var29.s(var28, 9);
-            var18 = var29.v(var28, 10, var23, null) as java.lang.String;
-            var19 = var29.v(var28, 11, da.h.a, null) as java.lang.Boolean;
-            var17 = var29.t(var28, 12);
-            var30 = var29.t(var28, 13);
-            var15 = var29.s(var28, 14);
-            var21 = var29.v(var28, 15, var23, null) as java.lang.String;
-            var26 = var29.v(var28, 16, var23, null) as java.lang.String;
-            var2 = 131071;
+            var19 = var29.v(var28, 10, var25, null) as java.lang.String;
+            var23 = var29.v(var28, 11, ka.h.a, null) as java.lang.Boolean;
+            var43 = var29.t(var28, 12);
+            val var30: java.lang.String = var29.t(var28, 13);
+            var13 = var29.s(var28, 14);
+            var21 = var29.v(var28, 15, var25, null) as java.lang.String;
+            val var26: java.lang.String = var29.v(var28, 16, var25, null) as java.lang.String;
+            var3 = 131071;
+            var50 = var18;
             var11 = var10;
             var12 = var9;
+            var46 = var43;
+            var43 = var30;
+            var31 = var26;
          } else {
             var var5: Boolean = true;
-            var25 = null;
+            var50 = null;
             var24 = null;
-            var17 = null;
-            var var31: java.lang.String = null;
-            var var43: Any = null;
+            var43 = null;
+            var var32: java.lang.String = null;
+            var23 = null;
             var22 = null;
             var21 = null;
             var20 = null;
             var19 = null;
-            var18 = null;
+            var46 = null;
             var3 = 0;
             var12 = false;
             var14 = false;
             var11 = false;
-            var var35: Boolean = false;
+            var var39: Boolean = false;
             var9 = false;
             var13 = false;
 
@@ -492,7 +496,7 @@ public data class ThumbnailDisplayComponent(type: Int,
                               var2 |= 2;
                               break label46;
                            case 2:
-                              var25 = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, var25) as UnfurledMediaItem;
+                              var50 = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, var50) as UnfurledMediaItem;
                               var2 |= 4;
                               break label46;
                            case 3:
@@ -508,7 +512,7 @@ public data class ThumbnailDisplayComponent(type: Int,
                               var2 |= 32;
                               break label46;
                            case 6:
-                              var35 = var29.s(var28, 6);
+                              var39 = var29.s(var28, 6);
                               var2 |= 64;
                               break label47;
                            case 7:
@@ -529,7 +533,7 @@ public data class ThumbnailDisplayComponent(type: Int,
                               var2 |= 1024;
                               break label48;
                            case 11:
-                              var43 = var29.v(var28, var4, da.h.a, var43) as java.lang.Boolean;
+                              var23 = var29.v(var28, var4, ka.h.a, var23) as java.lang.Boolean;
                               var2 |= 2048;
                               break label48;
                            case 12:
@@ -537,7 +541,7 @@ public data class ThumbnailDisplayComponent(type: Int,
                               var2 |= 4096;
                               break label48;
                            case 13:
-                              var18 = var29.t(var28, 13);
+                              var46 = var29.t(var28, 13);
                               var2 |= 8192;
                               break label48;
                            case 14:
@@ -545,11 +549,11 @@ public data class ThumbnailDisplayComponent(type: Int,
                               var2 |= 16384;
                               break label48;
                            case 15:
-                              var31 = var29.v(var28, 15, C0.a, var31) as java.lang.String;
+                              var32 = var29.v(var28, 15, C0.a, var32) as java.lang.String;
                               var6 = 32768;
                               break;
                            case 16:
-                              var17 = var29.v(var28, 16, C0.a, var17) as java.lang.String;
+                              var43 = var29.v(var28, 16, C0.a, var43) as java.lang.String;
                               var6 = 65536;
                               break;
                            default:
@@ -572,22 +576,23 @@ public data class ThumbnailDisplayComponent(type: Int,
                var6 = 9;
             }
 
-            var15 = var12;
+            var15 = var13;
+            var31 = var43;
+            var21 = var32;
+            var13 = var12;
+            var43 = var46;
+            var46 = var19;
+            var19 = var21;
             var12 = var14;
-            var26 = var17;
-            var21 = var31;
-            var30 = var18;
-            var17 = (java.lang.String)var19;
-            var19 = var43;
-            var18 = var21;
-            var14 = var13;
-            var13 = var35;
-            var16 = var9;
+            var16 = var39;
+            var14 = var9;
+            var2 = var3;
+            var3 = var2;
          }
 
          var29.b(var28);
          return new ThumbnailDisplayComponent(
-            var2, var3, var20, var25, var24, var16, var22, var13, var11, var14, var12, var18, (java.lang.Boolean)var19, var17, var30, var15, var21, var26, null
+            var3, var2, var20, var50, var24, var14, var22, var16, var11, var15, var12, var19, (java.lang.Boolean)var23, var46, var43, var13, var21, var31, null
          );
       }
 
@@ -601,7 +606,7 @@ public data class ThumbnailDisplayComponent(type: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

@@ -1,17 +1,17 @@
 package com.discord.bundle_updater
 
-import aa.f
-import aa.n
-import da.C0
-import da.G
-import da.T
-import i8.q
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.T
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.CompositeEncoder
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
+import p8.q
 
 @f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
@@ -76,14 +76,14 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var2: AppManifestMetadata = this.metadata;
-      val var1: java.util.Map = this.hashes;
+      val var1: AppManifestMetadata = this.metadata;
+      val var2: java.util.Map = this.hashes;
       val var4: java.util.Map = this.patches;
       val var3: StringBuilder = new StringBuilder();
       var3.append("AppManifest(metadata=");
-      var3.append(var2);
-      var3.append(", hashes=");
       var3.append(var1);
+      var3.append(", hashes=");
+      var3.append(var2);
       var3.append(", patches=");
       var3.append(var4);
       var3.append(")");
@@ -115,27 +115,27 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
 
       public open fun deserialize(decoder: Decoder): AppManifest {
          kotlin.jvm.internal.q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: kotlinx.serialization.encoding.c = var1.c(var8);
-         val var10: Array<KSerializer> = AppManifest.access$get$childSerializers$cp();
-         val var5: Boolean = var9.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: kotlinx.serialization.encoding.c = var1.c(var9);
+         val var8: Array<KSerializer> = AppManifest.access$get$childSerializers$cp();
+         val var5: Boolean = var10.y();
          var var7: AppManifestMetadata = null;
          var var2: Int;
-         var var6: java.util.Map;
-         var var11: java.util.Map;
+         val var11: java.util.Map;
+         val var13: java.util.Map;
          if (var5) {
-            var7 = var9.m(var8, 0, AppManifestMetadata.$serializer.INSTANCE, null) as AppManifestMetadata;
-            var6 = var9.m(var8, 1, var10[1], null) as java.util.Map;
-            var11 = var9.m(var8, 2, var10[2], null) as java.util.Map;
+            var7 = var10.m(var9, 0, AppManifestMetadata.$serializer.INSTANCE, null) as AppManifestMetadata;
+            var11 = var10.m(var9, 1, var8[1], null) as java.util.Map;
+            var13 = var10.m(var9, 2, var8[2], null) as java.util.Map;
             var2 = 7;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var6 = null;
-            var11 = null;
+            var var6: java.util.Map = null;
+            var var12: java.util.Map = null;
 
             while (var3) {
-               val var4: Int = var9.x(var8);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -143,24 +143,27 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
                            throw new n(var4);
                         }
 
-                        var11 = var9.m(var8, 2, var10[2], var11) as java.util.Map;
+                        var12 = var10.m(var9, 2, var8[2], var12) as java.util.Map;
                         var2 |= 4;
                      } else {
-                        var6 = var9.m(var8, 1, var10[1], var6) as java.util.Map;
+                        var6 = var10.m(var9, 1, var8[1], var6) as java.util.Map;
                         var2 |= 2;
                      }
                   } else {
-                     var7 = var9.m(var8, 0, AppManifestMetadata.$serializer.INSTANCE, var7) as AppManifestMetadata;
+                     var7 = var10.m(var9, 0, AppManifestMetadata.$serializer.INSTANCE, var7) as AppManifestMetadata;
                      var2 |= 1;
                   }
                } else {
                   var3 = false;
                }
             }
+
+            var13 = var12;
+            var11 = var6;
          }
 
-         var9.b(var8);
-         return new AppManifest(var2, var7, var6, var11, null);
+         var10.b(var9);
+         return new AppManifest(var2, var7, var11, var13, null);
       }
 
       public open fun serialize(encoder: Encoder, value: AppManifest) {
@@ -173,7 +176,7 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

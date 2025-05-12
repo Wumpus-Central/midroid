@@ -6,6 +6,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      SelfMeasuredView.c(this.j);
+      SelfMeasuredView.b(this.j);
    }
 }

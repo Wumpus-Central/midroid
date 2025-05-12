@@ -12,10 +12,10 @@ import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
-import h8.w
 import java.util.Comparator
-import k8.a
 import kotlin.jvm.internal.q
+import o8.w
+import s8.a
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -45,12 +45,12 @@ internal object ServiceNotification {
 
       val var8: NotificationCompat.Builder = var4.v(var7).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var9 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
          var8.a(
             0,
-            var9.getTitle(),
+            var5.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var9.getTag(), var9.getTaskName(), var9.getData()), var1, 0, false, 2, null
+               new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null
             )
          );
       }

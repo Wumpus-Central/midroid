@@ -27,15 +27,18 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
       val var4: I18nCache = I18nCache.INSTANCE;
       val var3: ReactApplicationContext = this.reactContext;
       val var5: HashMap = new HashMap();
-      val var7: java.util.Iterator = I18nMessage.getEntries().iterator();
+      val var6: java.util.Iterator = I18nMessage.getEntries().iterator();
 
-      for (int var2 = 0; var7.hasNext(); var2++) {
-         val var6: Any = var7.next();
+      for (int var2 = 0; var6.hasNext(); var2++) {
+         var var7: Any = var6.next();
          if (var2 < 0) {
             i.u();
          }
 
-         var5.put((var6 as I18nMessage).name(), var1.getString(var2));
+         val var8: java.lang.String = (var7 as I18nMessage).name();
+         var7 = var1.getString(var2);
+         q.e(var7);
+         var5.put(var8, var7);
       }
 
       var4.set(var3, var5);

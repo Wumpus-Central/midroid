@@ -1,6 +1,6 @@
 package com.discord.shortcuts
 
-import N9.j
+import U9.j
 import android.content.Context
 import android.content.Intent
 import java.util.Map.Entry
@@ -78,10 +78,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            val var9: java.lang.String = var12.getKey() as java.lang.String;
+            var4 = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var9);
+               var8.add(var4);
                var8.add(var13);
             }
          }
@@ -101,10 +101,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = i8.q.c();
+            val var11: java.util.Map = p8.q.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
-               val var7: Sequence = c.v(var6);
+               val var7: Sequence = c.x(var6);
                if (var7 != null) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
@@ -119,7 +119,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                }
             }
 
-            var10 = new ShortcutData(var2, i8.q.b(var11));
+            var10 = new ShortcutData(var2, p8.q.b(var11));
          } else {
             var10 = null;
          }

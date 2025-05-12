@@ -1,15 +1,15 @@
 package com.discord.client_info
 
 import android.content.Context
-import h8.l
 import java.util.Locale
 import kotlin.jvm.internal.q
+import o8.l
 
 public object ClientInfo {
-   public const val PROGUARD_UUID: String = "e330f31c-9c8c-4e74-907a-4cb55b9a5154"
+   public const val PROGUARD_UUID: String = "06b2b1ac-2c13-4221-8353-e5856bf48a86"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@279.12.0-1+279112"
+   public const val SENTRY_RELEASE: String = "discord_android@280.7.0-1+280107"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    private final lateinit var buildType: String
    private final lateinit var flavor: String
@@ -51,7 +51,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by l.b(<unrepresentable>.INSTANCE)
+   public final val isProdBuild: Boolean by l.a(<unrepresentable>.INSTANCE)
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -124,11 +124,11 @@ public object ClientInfo {
       var2 = var1.getPackageName();
       q.g(var2, "getPackageName(...)");
       this.setPackageName(var2);
-      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("Discord-Android/");
-      var10.append(var3);
-      var10.append(";RNA");
-      var9.init(var1, var10.toString());
+      val var10: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Discord-Android/");
+      var9.append(var3);
+      var9.append(";RNA");
+      var10.init(var1, var9.toString());
    }
 }

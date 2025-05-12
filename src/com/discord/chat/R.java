@@ -254,7 +254,6 @@ public final class R {
       public static int invite_to_speak_button;
       public static int invite_to_speak_text;
       public static int item_bottom_container;
-      public static int item_description;
       public static int item_guild_badge;
       public static int item_header;
       public static int item_hero;
@@ -327,8 +326,6 @@ public final class R {
       public static int overlay_tag_text;
       public static int participants;
       public static int participants_container;
-      public static int participants_info;
-      public static int participants_info_container;
       public static int participants_text;
       public static int percentage_bar_background;
       public static int percentage_bar_container;
@@ -478,7 +475,6 @@ public final class R {
    }
 
    public static final class layout {
-      public static int activity_bookmark_view;
       public static int alt_text_button_view;
       public static int app_message_embed_view;
       public static int attachment_media_mosaic_container_view;

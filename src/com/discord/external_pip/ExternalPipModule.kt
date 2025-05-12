@@ -13,11 +13,11 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
-import h8.r
-import h8.w
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.r
+import o8.w
 
 @ReactModule(name = "ExternalPip")
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -29,7 +29,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       super(var1);
       this.manager = new ExternalPipManager();
       this.reactEvents = new ReactEvents(
-         w.a("onPipModeChanged", E.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", E.b(OnPipModeWillChangeEvent.class))
+         w.a("onPipModeChanged", G.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", G.b(OnPipModeWillChangeEvent.class))
       );
    }
 
@@ -49,24 +49,24 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var3: ReactEvents = this.reactEvents;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
+      val var2: ReactEvents = this.reactEvents;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var2: ReactEvents = this.reactEvents;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
+         val var1: ReactEvents = this.reactEvents;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return i8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return p8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

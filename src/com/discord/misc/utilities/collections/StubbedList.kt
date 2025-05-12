@@ -1,11 +1,11 @@
 package com.discord.misc.utilities.collections
 
+import D8.a
 import java.util.Comparator
 import java.util.function.UnaryOperator
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.i
 import kotlin.jvm.internal.q
-import w8.a
 
 public open class StubbedList<T> : java.util.List<T>, a {
    public open val size: Int
@@ -137,12 +137,12 @@ public open class StubbedList<T> : java.util.List<T>, a {
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var3: java.lang.String = E.b(StubbedList.class).j();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append(var3);
-         var2.append(" did not implement ");
-         var2.append(var1);
-         return var2.toString();
+         val var2: java.lang.String = G.b(StubbedList.class).e();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" did not implement ");
+         var3.append(var1);
+         return var3.toString();
       }
    }
 }

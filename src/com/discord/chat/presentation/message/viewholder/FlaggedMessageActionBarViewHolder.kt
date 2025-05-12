@@ -42,6 +42,6 @@ public class FlaggedMessageActionBarViewHolder(actionBarView: FlaggedMessageActi
       val var6: AutoModerationContext = var1.getAutoModerationContext();
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var7: java.lang.String = var1.getMessage().getId-3Eiw7ao();
-      this.actionBarView.setActions(var6, new k(var2, var7, var4), new l(var3, var7, var4));
+      this.actionBarView.setActions(var6, new j(var2, var7, var4), new k(var3, var7, var4));
    }
 }

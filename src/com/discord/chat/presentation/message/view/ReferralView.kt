@@ -173,16 +173,16 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          if (var46 != null && !kotlin.text.h.d0(var46)) {
             var38.setText(var36.getBodyText());
          } else if (var36.getStructuredBodyText() != null) {
-            val var12: AnnotatedStructurableText = var36.getStructuredBodyText();
-            val var11: Context = var38.getContext();
-            val var47: java.lang.String = var1.getMessageId-3Eiw7ao();
+            val var11: AnnotatedStructurableText = var36.getStructuredBodyText();
+            val var47: Context = var38.getContext();
+            val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var13, "getFontMetrics(...)");
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
             val var48: TextPaint = var38.getPaint();
-            kotlin.jvm.internal.q.e(var11);
+            kotlin.jvm.internal.q.e(var47);
             kotlin.jvm.internal.q.e(var48);
-            var38.setDraweeSpanStringBuilder(TextUtilsKt.toSpannable$default(var12, var11, var47, false, true, false, false, var48, new Function1(var3, var1) {
+            var38.setDraweeSpanStringBuilder(TextUtilsKt.toSpannable$default(var11, var47, var12, false, true, false, false, var48, new Function1(var3, var1) {
                final ReferralMessageAccessory $accessory;
                final Function2 $onTapLink;
 

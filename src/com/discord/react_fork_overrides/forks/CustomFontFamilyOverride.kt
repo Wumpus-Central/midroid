@@ -241,6 +241,6 @@ internal object CustomFontFamilyOverride {
    }
 
    public fun override() {
-      ReactFontManager.createAssetTypefaceOverride = new o();
+      ReactFontManager.Companion.setCreateAssetTypefaceOverride(new o());
    }
 }

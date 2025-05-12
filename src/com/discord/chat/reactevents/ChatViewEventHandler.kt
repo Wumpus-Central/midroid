@@ -14,7 +14,6 @@ import com.discord.chat.presentation.events.TapReactionOverflow
 import com.discord.chat.presentation.list.ScrollDirection
 import com.discord.chat.presentation.list.ScrollState
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
-import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
@@ -72,8 +71,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          ) {
             q.h(var1, "messageId");
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var10: java.lang.String = MessageId.toString-impl(var1);
-            val var11: java.lang.String = ChannelId.toString-impl(var2);
+            val var11: java.lang.String = MessageId.toString-impl(var1);
+            val var10: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -93,7 +92,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2(this) {
@@ -265,9 +264,9 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var6: Boolean = var1.isAtBottom();
-      val var7: Boolean = var1.isDragging();
-      val var8: Boolean = var1.isSettling();
+      val var7: Boolean = var1.isAtBottom();
+      val var8: Boolean = var1.isDragging();
+      val var6: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -277,11 +276,11 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var6,
+            var7,
             var3,
             var4,
-            var7,
             var8,
+            var6,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),
@@ -303,21 +302,6 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       q.h(var1, "sticker");
       q.h(var2, "messageId");
       this.emitReactEvent.invoke(new LongPressStickerData(var2, var1, null));
-   }
-
-   public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
-      q.h(var5, "referrerId");
-      this.emitReactEvent
-         .invoke(
-            new TapActivityBookmarkEmbedData(ApplicationId.toString-impl(var1), ChannelId.toString-impl(var3), var5.toString(), java.lang.String.valueOf(var6))
-         );
-   }
-
-   public override fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
-      q.h(var5, "instanceId");
-      q.h(var6, "messageId");
-      this.emitReactEvent
-         .invoke(new TapActivityInstanceEmbedData(ApplicationId.toString-impl(var1), ChannelId.toString-impl(var3), var5, MessageId.toString-impl(var6)));
    }
 
    public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {

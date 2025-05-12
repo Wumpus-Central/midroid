@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.voicemessages
 
-import T9.w
+import aa.w
 import android.content.Context
 import android.media.AudioAttributes
 import android.media.AudioFocusRequest
@@ -85,13 +85,13 @@ public object AudioPlayerManager {
    }
 
    private fun maybeCreateDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource, durationMs: Long): com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress? {
-      val var5: java.util.Map = currentProgressMap;
+      val var4: java.util.Map = currentProgressMap;
       if (currentProgressMap.get(var1) != null) {
          return null;
       } else {
-         val var4: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
-         var5.put(var1, var4);
-         return var4;
+         val var5: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
+         var4.put(var1, var5);
+         return var5;
       }
    }
 
@@ -292,9 +292,9 @@ public object AudioPlayerManager {
          this.maybeCreateDuration(var2, var3);
          if (this.requestAudioFocus()) {
             var8.setValue(var2);
-            val var7: MediaPlayer = mediaPlayer;
+            val var9: MediaPlayer = mediaPlayer;
             kotlin.jvm.internal.q.e(mediaPlayer);
-            val var9: MediaSource = AudioPlayerUtilsKt.toMediaSource$default(var2, null, 1, null);
+            val var7: MediaSource = AudioPlayerUtilsKt.toMediaSource$default(var2, null, 1, null);
             val var6: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
             if (var6 != null) {
                var3 = var6.getCurrentProgress();
@@ -302,7 +302,7 @@ public object AudioPlayerManager {
                var3 = 0L;
             }
 
-            MediaPlayer.preparePlayer$default(var7, var9, true, false, var3, null, null, 52, null);
+            MediaPlayer.preparePlayer$default(var9, var7, true, false, var3, null, null, 52, null);
          }
       }
 
@@ -338,15 +338,15 @@ public object AudioPlayerManager {
 
    public fun storeDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource?) {
       if (this.hasCurrentPlayer(var1)) {
-         val var3: MediaPlayer = mediaPlayer;
+         val var4: MediaPlayer = mediaPlayer;
          if (mediaPlayer != null) {
             val var2: java.util.Map = currentProgressMap;
             kotlin.jvm.internal.q.e(var1);
-            val var4: AudioPlayerManager.CurrentProgress = var2.get(var1) as AudioPlayerManager.CurrentProgress;
-            if (var4 != null) {
-               val var5: AudioPlayerManager.CurrentProgress = AudioPlayerManager.CurrentProgress.copy$default(var4, var3.currentPositionMs(), 0L, 2, null);
-               if (var5 != null) {
-                  var2.put(var1, var5);
+            var var3: AudioPlayerManager.CurrentProgress = var2.get(var1) as AudioPlayerManager.CurrentProgress;
+            if (var3 != null) {
+               var3 = AudioPlayerManager.CurrentProgress.copy$default(var3, var4.currentPositionMs(), 0L, 2, null);
+               if (var3 != null) {
+                  var2.put(var1, var3);
                }
             }
          }
@@ -432,18 +432,18 @@ public object AudioPlayerManager {
 
       public override fun toString(): String {
          val var4: ChannelId = this.channelId;
-         val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var1: java.lang.String = MessageId.toString-impl(this.messageId);
          val var2: java.lang.String = this.url;
-         val var1: Int = this.index;
+         val var5: Int = this.index;
          val var3: StringBuilder = new StringBuilder();
          var3.append("AudioSource(channelId=");
          var3.append(var4);
          var3.append(", messageId=");
-         var3.append(var5);
+         var3.append(var1);
          var3.append(", url=");
          var3.append(var2);
          var3.append(", index=");
-         var3.append(var1);
+         var3.append(var5);
          var3.append(")");
          return var3.toString();
       }

@@ -8,11 +8,11 @@ import com.discord.react.utilities.PromiseWrapper
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactContext
-import da.C0
-import da.T
-import da.f
 import java.util.ArrayList
 import java.util.Locale
+import ka.C0
+import ka.T
+import ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 
@@ -22,16 +22,16 @@ fun `access$mapResultToContactSyncPermission`(var0: java.lang.String): Int {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   q.g(var2, "toLowerCase(...)");
+   val var2: Locale = Locale.ROOT;
+   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   q.g(var3, "toLowerCase(...)");
    val var1: Byte;
-   if (q.c(var0, var2)) {
+   if (q.c(var0, var3)) {
       var1 = 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      q.g(var2, "toLowerCase(...)");
-      q.c(var0, var2);
+      val var4: java.lang.String = "DENIED".toLowerCase(var2);
+      q.g(var4, "toLowerCase(...)");
+      q.c(var0, var4);
       var1 = 0;
    }
 

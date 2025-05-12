@@ -1,8 +1,8 @@
 package com.discord.portals.from_native
 
-import Q9.I
-import Q9.K
-import Q9.f
+import X9.I
+import X9.K
+import X9.f
 import android.app.Activity
 import android.widget.FrameLayout
 import com.discord.codegen.NativePortalFromNativeModuleSpec
@@ -14,13 +14,12 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import h8.s
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import n8.b
+import o8.s
+import v8.b
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec {
    init {
@@ -90,8 +89,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   s.b(var1);
                } else {
                   s.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2(null) {
                      int label;
 
                      {
@@ -126,7 +125,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var4, var1, this) === var3) {
+                  if (f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

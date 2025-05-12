@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import com.discord.chat.bridge.botuikit.Component
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 
 public class ComponentProvider(context: Context, preInflateRecycledViews: Boolean) {
@@ -22,24 +22,24 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
       q.h(var1, "component");
       q.h(var2, "componentContext");
       q.h(var3, "root");
-      val var7: View = var3.getChildAt(var4);
-      val var5: Boolean = var7 is ComponentView;
-      var var6: ComponentView = null;
+      val var6: View = var3.getChildAt(var4);
+      val var5: Boolean = var6 is ComponentView;
+      var var7: ComponentView = null;
       val var8: ComponentView;
       if (var5) {
-         var8 = var7 as ComponentView;
+         var8 = var6 as ComponentView;
       } else {
          var8 = null;
       }
 
       label23: {
          if (var8 != null) {
-            if (q.c(var8.getComponentType(), E.b(var1.getClass()))) {
-               var6 = var8;
+            if (q.c(var8.getComponentType(), G.b(var1.getClass()))) {
+               var7 = var8;
             }
 
-            var9 = var6;
-            if (var6 != null) {
+            var9 = var7;
+            if (var7 != null) {
                break label23;
             }
          }

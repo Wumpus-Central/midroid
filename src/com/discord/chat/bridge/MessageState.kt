@@ -1,17 +1,17 @@
 package com.discord.chat.bridge
 
-import aa.f
-import ca.g
-import ca.e.i
-import h8.l
-import h8.o
+import ha.f
+import ja.g
+import ja.e.i
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import o8.a
+import o8.l
+import o8.o
+import w8.a
 
 @f(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
@@ -25,7 +25,7 @@ public enum class MessageState(key: String) {
    @JvmStatic
    private MessageState[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.a(o.k, <unrepresentable>.INSTANCE);
+   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public MessageState.Companion Companion = new MessageState.Companion(null);
 

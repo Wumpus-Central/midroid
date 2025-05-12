@@ -12,13 +12,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
-import h8.w
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.w
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val billingManager: BillingManager
@@ -30,9 +30,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         w.a("billing-manager-connection-state-updated", E.b(BillingManagerConnectionStateUpdated.class)),
-         w.a("billing-manager-purchase-updated", E.b(BillingManagerPurchaseUpdated.class)),
-         w.a("billing-manager-purchase-state-updated", E.b(BillingManagerPurchaseStateUpdated.class))
+         w.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
+         w.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
+         w.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new Function1(this) {
          final BillingManagerModule this$0;
@@ -81,9 +81,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       val var5: ArrayList = var2.toArrayList();
       val var7: ArrayList = new ArrayList();
 
-      for (var5 : var5) {
-         if (var5 is java.lang.String) {
-            var7.add(var5);
+      for (Object var6 : var5) {
+         if (var6 is java.lang.String) {
+            var7.add(var6);
          }
       }
 
@@ -194,10 +194,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var2: BillingManager = this.billingManager;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.open(var1);
+      val var1: BillingManager = this.billingManager;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.open(var2);
    }
 
    @ReactMethod

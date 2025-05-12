@@ -1,6 +1,6 @@
 package com.discord.thumbhash
 
-import R1.c
+import R1.d
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
@@ -48,7 +48,7 @@ internal class ImageWithThumbhashPlaceholderView  public constructor(context: Co
 
    public fun update() {
       if (this.uri != null) {
-         val var3: a = ((c.g().F(ImageRequestBuilder.w(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
+         val var3: a = ((d.g().F(ImageRequestBuilder.x(Uri.parse(this.uri)).a()) as PipelineDraweeControllerBuilder)
                .E(
                   new ThumbhashPlaceholderControllerListener(
                      this, new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondary()), this.placeholder, this.placeholderVersion
