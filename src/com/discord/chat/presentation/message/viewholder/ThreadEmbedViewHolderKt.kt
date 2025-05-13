@@ -26,6 +26,8 @@ private fun getContentlessPreviewText(context: Context, message: Message): CharS
       return I18nUtilsKt.i18nFormat$default(var0, I18nMessage.REPLY_QUOTE_STICKER_MOBILE, null, 2, null);
    } else if (MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.IS_VOICE_MESSAGE)) {
       return I18nUtilsKt.i18nFormat$default(var0, I18nMessage.REPLY_QUOTE_VOICE_MESSAGE_MOBILE, null, 2, null);
+   } else if (MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.IS_COMPONENTS_V2)) {
+      return I18nUtilsKt.i18nFormat$default(var0, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null);
    } else {
       var4 = var1.getAttachments();
       if (var4 != null) {

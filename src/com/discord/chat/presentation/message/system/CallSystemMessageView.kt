@@ -114,12 +114,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var9: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
       val var19: StringBuilder = new StringBuilder();
       var19.append("Binding ");
-      var19.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var9, var19.toString(), null, 2, null);
+      var19.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var13, var19.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
@@ -158,9 +158,9 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      s.b(var1);
                   } else {
                      s.b(var1);
-                     val var5: CallSystemMessageView = this.this$0;
+                     var1 = this.this$0;
                      val var4: Lifecycle.State = Lifecycle.State.m;
-                     var1 = new Function2(this.$start, this.this$0, this.$message, null) {
+                     val var5: Function2 = new Function2(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -192,7 +192,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                            } else {
                               s.b(var1);
                               var1 = Duration.k;
-                              val var6: Flow = e.n(
+                              val var4: Flow = e.n(
                                  new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, P9.b.n), Duration.k.c()), this.$start) {
                                     final long $start$inlined;
                                     final Flow $this_unsafeTransform$inlined;
@@ -217,10 +217,10 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                 public final Object emit(Object var1, Continuation var2x) {
                                                    label23: {
                                                       if (var2x is <unrepresentable>) {
-                                                         val var4: <unrepresentable> = var2x as <unrepresentable>;
+                                                         val var4x: <unrepresentable> = var2x as <unrepresentable>;
                                                          if (((var2x as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
-                                                            var4.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
-                                                            var9 = var4;
+                                                            var4x.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
+                                                            var9 = var4x;
                                                             break label23;
                                                          }
                                                       }
@@ -277,7 +277,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  },
                                  K.a()
                               );
-                              val var4: FlowCollector = new FlowCollector(this.this$0, this.$message) {
+                              val var6: FlowCollector = new FlowCollector(this.this$0, this.$message) {
                                  final Message $message;
                                  final CallSystemMessageView this$0;
 
@@ -290,8 +290,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                     val var9: CallSystemMessageView = this.this$0;
                                     val var8: Message = this.$message;
                                     val var6x: Long = Duration.w(var1);
-                                    val var5: Int = Duration.A(var1);
-                                    val var4x: Int = Duration.C(var1);
+                                    val var4x: Int = Duration.A(var1);
+                                    val var5: Int = Duration.C(var1);
                                     Duration.B(var1);
                                     val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
                                     val var11: java.lang.String = java.lang.String.format(
@@ -299,8 +299,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.e(var6x),
-                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              kotlin.coroutines.jvm.internal.b.d(var4x),
+                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              var8.getDescription()
                                           },
                                           4
@@ -312,7 +312,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
                               };
                               this.label = 1;
-                              if (var6.collect(var4, this) === var3) {
+                              if (var4.collect(var6, this) === var3) {
                                  return var3;
                               }
                            }
@@ -321,7 +321,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var5, var4, var1, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var4, var5, this) === var3) {
                         return var3;
                      }
                   }

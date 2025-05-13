@@ -80,48 +80,48 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var2: Float = this.topDp;
+      val var4: Float = this.topDp;
       val var1: Float = this.rightDp;
-      val var4: Float = this.bottomDp;
-      val var3: Float = this.leftDp;
+      val var3: Float = this.bottomDp;
+      val var2: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", rightDp=");
       var5.append(var1);
       var5.append(", bottomDp=");
-      var5.append(var4);
-      var5.append(", leftDp=");
       var5.append(var3);
+      var5.append(", leftDp=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }
 
    public companion object {
       private fun fromRootViewAsStableInsets(insets: WindowInsetsCompat, leftRight: Boolean = false): SafeAreaEdgeInsets {
-         val var10: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var1, true);
-         val var9: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var1, true);
+         val var9: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var1, true);
+         val var10: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var1, true);
          var var6: Int = -1;
          val var11: SafeAreaEdgeInsets;
          if (VERSION.SDK_INT > 29) {
-            val var3: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var9.b));
-            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var9.d));
+            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var9.b, var10.b));
+            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var9.d, var10.d));
             val var15: Int;
             if (var2) {
-               var15 = var9.a;
+               var15 = var10.a;
             } else {
                var15 = -1;
             }
 
-            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var15));
+            val var3: Float = SizeUtilsKt.getPxToDp(Math.max(var9.a, var15));
             if (var2) {
-               var6 = var9.c;
+               var6 = var10.c;
             }
 
-            var11 = new SafeAreaEdgeInsets(var3, SizeUtilsKt.getPxToDp(Math.max(var10.c, var6)), var4, var5);
+            var11 = new SafeAreaEdgeInsets(var4, SizeUtilsKt.getPxToDp(Math.max(var9.c, var6)), var5, var3);
          } else {
-            val var12: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var1.k()));
-            val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var1.h()));
+            val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var9.b, var1.k()));
+            val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var9.d, var1.h()));
             val var17: Int;
             if (var2) {
                var17 = var1.i();
@@ -129,12 +129,12 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
                var17 = -1;
             }
 
-            val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var17));
+            val var12: Float = SizeUtilsKt.getPxToDp(Math.max(var9.a, var17));
             if (var2) {
                var6 = var1.j();
             }
 
-            var11 = new SafeAreaEdgeInsets(var12, SizeUtilsKt.getPxToDp(Math.max(var10.c, var6)), var14, var13);
+            var11 = new SafeAreaEdgeInsets(var13, SizeUtilsKt.getPxToDp(Math.max(var9.c, var6)), var14, var12);
          }
 
          return var11;

@@ -64,14 +64,14 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
    }
 
    public override fun toString(): String {
-      val var1: Int = this.backgroundColor;
-      val var2: Int = this.cornerRadius;
+      val var2: Int = this.backgroundColor;
+      val var1: Int = this.cornerRadius;
       val var3: Int = this.marginVertical;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BackgroundStyle(backgroundColor=");
-      var4.append(var1);
-      var4.append(", cornerRadius=");
       var4.append(var2);
+      var4.append(", cornerRadius=");
+      var4.append(var1);
       var4.append(", marginVertical=");
       var4.append(var3);
       var4.append(")");
@@ -110,18 +110,18 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
          val var6: Int;
          if (var9.y()) {
             var5 = var9.k(var8, 0);
-            var3 = var9.k(var8, 1);
+            var4 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var6 = 7;
-            var4 = var2;
+            var3 = 7;
+            var6 = var2;
          } else {
-            var var11: Boolean = true;
+            var var13: Boolean = true;
             var5 = 0;
             var4 = 0;
             var3 = 0;
             var var10: Int = 0;
 
-            while (var11) {
+            while (var13) {
                val var7: Int = var9.x(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
@@ -141,15 +141,17 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
                      var10 |= 1;
                   }
                } else {
-                  var11 = false;
+                  var13 = false;
                }
             }
 
-            var6 = var10;
+            var6 = var4;
+            var4 = var3;
+            var3 = var10;
          }
 
          var9.b(var8);
-         return new BackgroundStyle(var6, var5, var3, var4, null);
+         return new BackgroundStyle(var3, var5, var4, var6, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

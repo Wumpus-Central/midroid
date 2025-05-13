@@ -82,9 +82,9 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.applicationId.hashCode();
-      val var3: Int = this.channelId.hashCode();
-      val var2: Int = this.referrerId.hashCode();
+      val var3: Int = this.applicationId.hashCode();
+      val var2: Int = this.channelId.hashCode();
+      val var4: Int = this.referrerId.hashCode();
       val var1: Int;
       if (this.customId == null) {
          var1 = 0;
@@ -92,7 +92,7 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
          var1 = this.customId.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
+      return ((var3 * 31 + var2) * 31 + var4) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -102,17 +102,17 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
    public override fun toString(): String {
       val var2: java.lang.String = this.applicationId;
       val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.referrerId;
-      val var1: java.lang.String = this.customId;
+      val var1: java.lang.String = this.referrerId;
+      val var4: java.lang.String = this.customId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapActivityBookmarkEmbedData(applicationId=");
       var5.append(var2);
       var5.append(", channelId=");
       var5.append(var3);
       var5.append(", referrerId=");
-      var5.append(var4);
-      var5.append(", customId=");
       var5.append(var1);
+      var5.append(", customId=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -142,31 +142,29 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
 
       public open fun deserialize(decoder: Decoder): TapActivityBookmarkEmbedData {
          q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         val var5: Boolean = var11.y();
+         val var9: SerialDescriptor = this.getDescriptor();
+         val var10: c = var1.c(var9);
+         val var5: Boolean = var10.y();
          var var8: java.lang.String = null;
          var var2: Int;
+         var var6: java.lang.String;
          var var7: java.lang.String;
-         var var12: java.lang.String;
-         var var13: java.lang.String;
+         var var11: java.lang.String;
          if (var5) {
-            var13 = var11.t(var10, 0);
-            var7 = var11.t(var10, 1);
-            val var9: java.lang.String = var11.t(var10, 2);
-            var12 = var11.v(var10, 3, C0.a, null) as java.lang.String;
+            var8 = var10.t(var9, 0);
+            var7 = var10.t(var9, 1);
+            var6 = var10.t(var9, 2);
+            var11 = var10.v(var9, 3, C0.a, null) as java.lang.String;
             var2 = 15;
-            var8 = var13;
-            var13 = var9;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var7 = null;
-            var13 = null;
-            var12 = null;
+            var6 = null;
+            var11 = null;
 
             while (var3) {
-               val var4: Int = var11.x(var10);
+               val var4: Int = var10.x(var9);
                if (var4 != -1) {
                   if (var4 != 0) {
                      if (var4 != 1) {
@@ -175,18 +173,18 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
                               throw new n(var4);
                            }
 
-                           var12 = var11.v(var10, 3, C0.a, var12) as java.lang.String;
+                           var11 = var10.v(var9, 3, C0.a, var11) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var13 = var11.t(var10, 2);
+                           var6 = var10.t(var9, 2);
                            var2 |= 4;
                         }
                      } else {
-                        var7 = var11.t(var10, 1);
+                        var7 = var10.t(var9, 1);
                         var2 |= 2;
                      }
                   } else {
-                     var8 = var11.t(var10, 0);
+                     var8 = var10.t(var9, 0);
                      var2 |= 1;
                   }
                } else {
@@ -195,8 +193,8 @@ internal data class TapActivityBookmarkEmbedData(applicationId: String, channelI
             }
          }
 
-         var11.b(var10);
-         return new TapActivityBookmarkEmbedData(var2, var8, var7, var13, var12, null);
+         var10.b(var9);
+         return new TapActivityBookmarkEmbedData(var2, var8, var7, var6, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapActivityBookmarkEmbedData) {

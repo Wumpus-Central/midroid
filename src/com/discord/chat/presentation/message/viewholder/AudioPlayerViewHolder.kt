@@ -105,10 +105,10 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       kotlin.jvm.internal.q.h(var1, "accessory");
       kotlin.jvm.internal.q.h(var2, "eventHandler");
-      val var9: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
-      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var9, null, 1, null));
-      val var8: Attachment = var1.getAttachment();
-      val var6: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
+      val var7: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
+      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var7, null, 1, null));
+      val var9: Attachment = var1.getAttachment();
+      val var8: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -119,37 +119,37 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var7: AudioPlayerView = this.view;
+      val var6: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var4: ByteArray = var8.getWaveformByteArray();
+      val var4: ByteArray = var9.getWaveformByteArray();
       val var11: Unit;
       if (var4 != null) {
-         var7.setSampleData(var4);
+         var6.setSampleData(var4);
          var11 = Unit.a;
       } else {
          var11 = null;
       }
 
       if (var11 == null) {
-         var7.setAudioFileDetails(var1.getAttachment());
+         var6.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var10: java.lang.Float = var8.getDurationSecs();
+      val var10: java.lang.Float = var9.getDurationSecs();
       var var12: Unit = null;
       if (var10 != null) {
-         var7.setDurationMs((long)(var10.floatValue() * (float)1000));
+         var6.setDurationMs((long)(var10.floatValue() * (float)1000));
          var12 = Unit.a;
       }
 
       if (var12 == null) {
-         var7.setUnknownDuration();
+         var6.setUnknownDuration();
       }
 
-      var7.setUploadProgress(var6);
-      var7.setOnLongPress(new c(var3, var1));
-      var7.shouldAnimate(var8.isAnimated());
-      var7.setContainerBackgroundColor(var1.getColor());
-      var7.setListener(new AudioPlayerView.Listener(var8, var2, var1, var9) {
+      var6.setUploadProgress(var8);
+      var6.setOnLongPress(new c(var3, var1));
+      var6.shouldAnimate(var9.isAnimated());
+      var6.setContainerBackgroundColor(var1.getColor());
+      var6.setListener(new AudioPlayerView.Listener(var9, var2, var1, var7) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;

@@ -25,8 +25,8 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
    public override fun valuesResult(values: ReadableArray) {
       q.h(var1, "values");
       val var4: I18nCache = I18nCache.INSTANCE;
-      val var5: ReactApplicationContext = this.reactContext;
-      val var3: HashMap = new HashMap();
+      val var3: ReactApplicationContext = this.reactContext;
+      val var5: HashMap = new HashMap();
       val var7: java.util.Iterator = I18nMessage.getEntries().iterator();
 
       for (int var2 = 0; var7.hasNext(); var2++) {
@@ -35,9 +35,9 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
             i.u();
          }
 
-         var3.put((var6 as I18nMessage).name(), var1.getString(var2));
+         var5.put((var6 as I18nMessage).name(), var1.getString(var2));
       }
 
-      var4.set(var5, var3);
+      var4.set(var3, var5);
    }
 }

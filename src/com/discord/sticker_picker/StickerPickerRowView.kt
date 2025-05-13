@@ -142,9 +142,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var1 : g0.a(this)) {
-         q.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var1 as StickerView).recycle();
+      for (View var2 : g0.a(this)) {
+         q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var2 as StickerView).recycle();
       }
    }
 

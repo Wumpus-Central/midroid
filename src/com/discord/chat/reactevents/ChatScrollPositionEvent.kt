@@ -163,14 +163,14 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var10: Int = java.lang.Boolean.hashCode(this.isNearBottom);
-      val var5: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var8: Int = java.lang.Boolean.hashCode(this.dragging);
-      val var6: Int = java.lang.Boolean.hashCode(this.decelerating);
-      val var7: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
-      val var4: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
-      val var3: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      val var10: Int = java.lang.Boolean.hashCode(this.isAtBottom);
+      val var8: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var4: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var9: Int = java.lang.Boolean.hashCode(this.dragging);
+      val var7: Int = java.lang.Boolean.hashCode(this.decelerating);
+      val var3: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
+      val var6: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
+      val var5: Int = Integer.hashCode(this.firstVisibleMessageIndex);
       var var2: Int = 0;
       val var1: Int;
       if (this.firstVisibleMessagePercentVisible == null) {
@@ -184,7 +184,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var2 = this.lastVisibleMessagePercentVisible.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var10) * 31 + var5) * 31 + var8) * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var11) * 31 + var2)
+      return ((((((((((var10 * 31 + var8) * 31 + var4) * 31 + var9) * 31 + var7) * 31 + var3) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var11) * 31 + var2)
             * 31
          + Integer.hashCode(this.changesetUpdateId);
    }
@@ -194,45 +194,45 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var8: Boolean = this.isAtBottom;
+      val var7: Boolean = this.isAtBottom;
       val var5: Boolean = this.isNearBottom;
       val var4: Boolean = this.isNearTop;
-      val var7: Boolean = this.dragging;
-      val var9: Boolean = this.decelerating;
-      val var10: Boolean = this.shouldShowJumpToPresent;
-      val var6: Boolean = this.isFirstMessageVisible;
-      val var3: Int = this.firstVisibleMessageIndex;
+      val var8: Boolean = this.dragging;
+      val var6: Boolean = this.decelerating;
+      val var9: Boolean = this.shouldShowJumpToPresent;
+      val var10: Boolean = this.isFirstMessageVisible;
+      val var1: Int = this.firstVisibleMessageIndex;
       val var13: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var2: Int = this.lastVisibleMessageIndex;
-      val var11: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var1: Int = this.changesetUpdateId;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("ChatScrollPositionEvent(isAtBottom=");
-      var12.append(var8);
-      var12.append(", isNearBottom=");
-      var12.append(var5);
-      var12.append(", isNearTop=");
-      var12.append(var4);
-      var12.append(", dragging=");
-      var12.append(var7);
-      var12.append(", decelerating=");
-      var12.append(var9);
-      var12.append(", shouldShowJumpToPresent=");
-      var12.append(var10);
-      var12.append(", isFirstMessageVisible=");
-      var12.append(var6);
-      var12.append(", firstVisibleMessageIndex=");
-      var12.append(var3);
-      var12.append(", firstVisibleMessagePercentVisible=");
-      var12.append(var13);
-      var12.append(", lastVisibleMessageIndex=");
-      var12.append(var2);
-      var12.append(", lastVisibleMessagePercentVisible=");
-      var12.append(var11);
-      var12.append(", changesetUpdateId=");
-      var12.append(var1);
-      var12.append(")");
-      return var12.toString();
+      val var12: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var3: Int = this.changesetUpdateId;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("ChatScrollPositionEvent(isAtBottom=");
+      var11.append(var7);
+      var11.append(", isNearBottom=");
+      var11.append(var5);
+      var11.append(", isNearTop=");
+      var11.append(var4);
+      var11.append(", dragging=");
+      var11.append(var8);
+      var11.append(", decelerating=");
+      var11.append(var6);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var9);
+      var11.append(", isFirstMessageVisible=");
+      var11.append(var10);
+      var11.append(", firstVisibleMessageIndex=");
+      var11.append(var1);
+      var11.append(", firstVisibleMessagePercentVisible=");
+      var11.append(var13);
+      var11.append(", lastVisibleMessageIndex=");
+      var11.append(var2);
+      var11.append(", lastVisibleMessagePercentVisible=");
+      var11.append(var12);
+      var11.append(", changesetUpdateId=");
+      var11.append(var3);
+      var11.append(")");
+      return var11.toString();
    }
 
    public object `$serializer` : G {
@@ -269,12 +269,10 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
 
       public open fun deserialize(decoder: Decoder): ChatScrollPositionEvent {
          q.h(var1, "decoder");
-         val var20: SerialDescriptor = this.getDescriptor();
-         val var21: c = var1.c(var20);
-         var var17: Boolean = var21.y();
+         val var19: SerialDescriptor = this.getDescriptor();
+         val var20: c = var1.c(var19);
+         var var16: Boolean = var20.y();
          var var2: Int = 0;
-         var var3: Int;
-         var var4: Int;
          var var5: Int;
          var var6: Int;
          var var7: Int;
@@ -283,91 +281,96 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var var10: Int;
          var var11: Int;
          val var12: Int;
-         var var18: java.lang.Double;
-         val var23: java.lang.Double;
-         if (var17) {
-            var17 = var21.s(var20, 0);
-            var12 = var21.s(var20, 1);
-            var9 = var21.s(var20, 2);
-            var8 = var21.s(var20, 3);
-            var7 = var21.s(var20, 4);
-            var6 = var21.s(var20, 5);
-            var5 = var21.s(var20, 6);
-            var4 = var21.k(var20, 7);
-            val var22: y = y.a;
-            var18 = var21.v(var20, 8, y.a, null) as java.lang.Double;
-            var3 = var21.k(var20, 9);
-            var23 = var21.v(var20, 10, var22, null) as java.lang.Double;
-            var2 = var21.k(var20, 11);
-            var11 = 4095;
-            var10 = var2;
+         var var17: java.lang.Double;
+         val var18: java.lang.Double;
+         var var25: Int;
+         var var27: Int;
+         if (var16) {
+            var16 = var20.s(var19, 0);
+            var8 = var20.s(var19, 1);
+            var9 = var20.s(var19, 2);
+            var11 = var20.s(var19, 3);
+            var10 = var20.s(var19, 4);
+            var6 = var20.s(var19, 5);
+            var5 = var20.s(var19, 6);
+            var27 = var20.k(var19, 7);
+            val var21: y = y.a;
+            var17 = var20.v(var19, 8, y.a, null) as java.lang.Double;
+            var25 = var20.k(var19, 9);
+            val var22: java.lang.Double = var20.v(var19, 10, var21, null) as java.lang.Double;
+            var2 = var20.k(var19, 11);
+            var7 = 4095;
+            var12 = var27;
+            var27 = var25;
+            var18 = var22;
+            var25 = var2;
          } else {
-            var var36: Boolean = true;
-            var17 = false;
+            var var38: Boolean = true;
+            var16 = false;
             var10 = 0;
             var9 = 0;
             var8 = 0;
             var7 = 0;
             var6 = 0;
             var5 = 0;
-            var4 = 0;
-            var3 = 0;
-            var18 = null;
-            var var24: java.lang.Double = null;
+            var27 = 0;
+            var25 = 0;
+            var17 = null;
+            var var23: java.lang.Double = null;
             var11 = 0;
 
-            while (var36) {
-               val var13: Int = var21.x(var20);
+            while (var38) {
+               val var13: Int = var20.x(var19);
                switch (var13) {
                   case -1:
-                     var36 = false;
+                     var38 = false;
                      break;
                   case 0:
-                     var17 = var21.s(var20, 0);
+                     var16 = var20.s(var19, 0);
                      var2 |= 1;
                      break;
                   case 1:
-                     var3 = var21.s(var20, 1);
+                     var25 = var20.s(var19, 1);
                      var2 |= 2;
                      break;
                   case 2:
-                     var4 = var21.s(var20, 2);
+                     var27 = var20.s(var19, 2);
                      var2 |= 4;
                      break;
                   case 3:
-                     var6 = var21.s(var20, 3);
+                     var6 = var20.s(var19, 3);
                      var2 |= 8;
                      break;
                   case 4:
-                     var5 = var21.s(var20, 4);
+                     var5 = var20.s(var19, 4);
                      var2 |= 16;
                      break;
                   case 5:
-                     var7 = var21.s(var20, 5);
+                     var7 = var20.s(var19, 5);
                      var2 |= 32;
                      break;
                   case 6:
-                     var8 = var21.s(var20, 6);
+                     var8 = var20.s(var19, 6);
                      var2 |= 64;
                      break;
                   case 7:
-                     var9 = var21.k(var20, 7);
+                     var9 = var20.k(var19, 7);
                      var2 |= 128;
                      break;
                   case 8:
-                     var24 = var21.v(var20, 8, y.a, var24) as java.lang.Double;
+                     var23 = var20.v(var19, 8, y.a, var23) as java.lang.Double;
                      var2 |= 256;
                      break;
                   case 9:
-                     var10 = var21.k(var20, 9);
+                     var10 = var20.k(var19, 9);
                      var2 |= 512;
                      break;
                   case 10:
-                     var18 = var21.v(var20, 10, y.a, var18) as java.lang.Double;
+                     var17 = var20.v(var19, 10, y.a, var17) as java.lang.Double;
                      var2 |= 1024;
                      break;
                   case 11:
-                     var11 = var21.k(var20, 11);
+                     var11 = var20.k(var19, 11);
                      var2 |= 2048;
                      break;
                   default:
@@ -375,23 +378,23 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
                }
             }
 
-            var8 = var6;
-            var12 = var3;
-            var10 = var11;
-            var23 = var18;
-            var3 = var10;
-            var18 = var24;
-            var4 = var9;
+            var12 = var9;
+            var8 = var25;
+            var25 = var11;
+            var18 = var17;
+            var27 = var10;
+            var17 = var23;
             var5 = var8;
             var6 = var7;
-            var7 = var5;
-            var9 = var4;
-            var11 = var2;
+            var10 = var5;
+            var11 = var6;
+            var9 = var27;
+            var7 = var2;
          }
 
-         var21.b(var20);
+         var20.b(var19);
          return new ChatScrollPositionEvent(
-            var11, var17, (boolean)var12, (boolean)var9, (boolean)var8, (boolean)var7, (boolean)var6, (boolean)var5, var4, var18, var3, var23, var10, null
+            var7, var16, (boolean)var8, (boolean)var9, (boolean)var11, (boolean)var10, (boolean)var6, (boolean)var5, var12, var17, var27, var18, var25, null
          );
       }
 

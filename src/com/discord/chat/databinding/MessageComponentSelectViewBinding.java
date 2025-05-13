@@ -3,7 +3,7 @@ package com.discord.chat.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ProgressBar;
+import android.view.ViewStub;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
@@ -13,30 +13,30 @@ import com.google.android.material.textview.MaterialTextView;
 import u0.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
+   public final ViewStub loadingDots;
    private final View rootView;
    public final SimpleDraweeView selectComponentChevron;
-   public final ProgressBar selectComponentLoading;
    public final SimpleDraweeSpanTextView selectComponentSelectionIcon;
    public final MaterialTextView selectComponentSelectionText;
    public final FlexboxLayout selectComponentSelectionsRoot;
 
    private MessageComponentSelectViewBinding(
-      View var1, SimpleDraweeView var2, ProgressBar var3, SimpleDraweeSpanTextView var4, MaterialTextView var5, FlexboxLayout var6
+      View var1, ViewStub var2, SimpleDraweeView var3, SimpleDraweeSpanTextView var4, MaterialTextView var5, FlexboxLayout var6
    ) {
       this.rootView = var1;
-      this.selectComponentChevron = var2;
-      this.selectComponentLoading = var3;
+      this.loadingDots = var2;
+      this.selectComponentChevron = var3;
       this.selectComponentSelectionIcon = var4;
       this.selectComponentSelectionText = var5;
       this.selectComponentSelectionsRoot = var6;
    }
 
    public static MessageComponentSelectViewBinding bind(View var0) {
-      int var1 = R.id.select_component_chevron;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      int var1 = R.id.loading_dots;
+      ViewStub var5 = (ViewStub)a.a(var0, var1);
       if (var5 != null) {
-         var1 = R.id.select_component_loading;
-         ProgressBar var4 = (ProgressBar)a.a(var0, var1);
+         var1 = R.id.select_component_chevron;
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.select_component_selection_icon;
             SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);

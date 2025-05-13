@@ -66,14 +66,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
       // 40: ifnull 63
       // 43: aload 0
       // 44: getfield com/discord/react_resource_cache/ReactResourceCache.reactResources Ljava/util/Map;
-      // 47: astore 4
-      // 49: aload 2
-      // 4a: invokevirtual java/lang/Enum.name ()Ljava/lang/String;
-      // 4d: astore 3
+      // 47: astore 3
+      // 48: aload 2
+      // 49: invokevirtual java/lang/Enum.name ()Ljava/lang/String;
+      // 4c: astore 4
       // 4e: aload 1
       // 4f: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
-      // 52: aload 4
-      // 54: aload 3
+      // 52: aload 3
+      // 53: aload 4
       // 55: aload 1
       // 56: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 5b: pop

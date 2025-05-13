@@ -134,7 +134,7 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
             if (!var8.isEmpty() && var24 != null) {
                MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
                this.setAccessoryView(var24 as View);
-               if (var3.isLargeWidthRenderingMode()) {
+               if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
                   val var16: FlexboxLayout = this.binding.sectionLayoutBox;

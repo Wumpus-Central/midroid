@@ -14,7 +14,7 @@ internal class DeviceLocaleModule(reactContext: ReactApplicationContext) : Nativ
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any?> {
-      val var4: ArrayList = new ArrayList();
+      val var5: ArrayList = new ArrayList();
       val var6: LocaleList = LocaleList.getAdjustedDefault();
       q.g(var6, "getAdjustedDefault(...)");
       val var3: Int = var6.size();
@@ -24,19 +24,19 @@ internal class DeviceLocaleModule(reactContext: ReactApplicationContext) : Nativ
          val var7: java.lang.String = var6.get(var1).toLanguageTag();
          if (var1 == 0) {
             q.e(var7);
-            var4.add(var7);
+            var5.add(var7);
          } else {
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var7);
-            var5.append(";q=0.");
-            var5.append(var2);
-            var4.add(var5.toString());
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var7);
+            var4.append(";q=0.");
+            var4.append(var2);
+            var5.add(var4.toString());
          }
 
          var2 = kotlin.ranges.d.c(1, var2 - 1);
       }
 
-      i.o0(var4, ",", null, null, 0, null, null, 62, null);
-      return i8.q.m(new Pair[]{w.a("Language", i.f0(var4)), w.a("Languages", var4)});
+      i.o0(var5, ",", null, null, 0, null, null, 62, null);
+      return i8.q.m(new Pair[]{w.a("Language", i.f0(var5)), w.a("Languages", var5)});
    }
 }

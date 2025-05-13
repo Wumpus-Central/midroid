@@ -122,19 +122,19 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.Boolean = this.triggerHaptic;
-      val var5: java.lang.String = this.location;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.Boolean = this.triggerHaptic;
+      val var4: java.lang.String = this.location;
       val var1: StringBuilder = new StringBuilder();
       var1.append("InitiateReplyData(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", triggerHaptic=");
-      var1.append(var4);
-      var1.append(", location=");
       var1.append(var5);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", triggerHaptic=");
+      var1.append(var3);
+      var1.append(", location=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }
@@ -167,10 +167,10 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
+         var var5: Any;
          var var6: Any;
+         var var7: java.lang.String;
          val var13: java.lang.String;
-         var var15: Any;
-         var var18: java.lang.String;
          if (var10.y()) {
             val var11: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
             val var12: java.lang.String;
@@ -180,18 +180,18 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                var12 = null;
             }
 
-            val var8: ChannelId = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var6 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
-            var13 = var10.v(var9, 3, C0.a, null) as java.lang.String;
+            var6 = var10.m(var9, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
+            var5 = var10.v(var9, 2, h.a, null) as java.lang.Boolean;
+            val var8: java.lang.String = var10.v(var9, 3, C0.a, null) as java.lang.String;
+            var7 = var12;
+            var13 = var8;
             var2 = 15;
-            var18 = var12;
-            var15 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var18 = null;
+            var7 = null;
             var6 = null;
-            var15 = null;
+            var5 = null;
             var var14: Any = null;
 
             while (var3) {
@@ -207,7 +207,7 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                            var6 = var10.v(var9, 3, C0.a, var6) as java.lang.String;
                            var2 |= 8;
                         } else {
-                           var15 = var10.v(var9, 2, h.a, var15) as java.lang.Boolean;
+                           var5 = var10.v(var9, 2, h.a, var5) as java.lang.Boolean;
                            var2 |= 4;
                         }
                      } else {
@@ -215,18 +215,18 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                         var2 |= 2;
                      }
                   } else {
-                     val var19: MessageId;
-                     if (var18 != null) {
-                        var19 = MessageId.box-impl(var18);
+                     val var16: MessageId;
+                     if (var7 != null) {
+                        var16 = MessageId.box-impl(var7);
                      } else {
-                        var19 = null;
+                        var16 = null;
                      }
 
-                     val var20: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var19) as MessageId;
-                     if (var20 != null) {
-                        var18 = var20.unbox-impl();
+                     val var17: MessageId = var10.m(var9, 0, MessageId.$serializer.INSTANCE, var16) as MessageId;
+                     if (var17 != null) {
+                        var7 = var17.unbox-impl();
                      } else {
-                        var18 = null;
+                        var7 = null;
                      }
 
                      var2 |= 1;
@@ -236,13 +236,12 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
                }
             }
 
-            var6 = var15;
-            var15 = var14;
+            var6 = var14;
             var13 = (java.lang.String)var6;
          }
 
          var10.b(var9);
-         return new InitiateReplyData(var2, var18, (ChannelId)var15, (java.lang.Boolean)var6, var13, null, null);
+         return new InitiateReplyData(var2, var7, (ChannelId)var6, (java.lang.Boolean)var5, var13, null, null);
       }
 
       public open fun serialize(encoder: Encoder, value: InitiateReplyData) {

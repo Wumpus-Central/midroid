@@ -130,24 +130,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.stickerItems;
-      val var4: JsonObject = this.author;
-      val var3: java.util.List = this.mentions;
-      val var5: Poll = this.poll;
-      val var6: java.util.List = this.embeds;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("NotificationMessage(stickerItems=");
-      var2.append(var1);
-      var2.append(", author=");
-      var2.append(var4);
-      var2.append(", mentions=");
-      var2.append(var3);
-      var2.append(", poll=");
-      var2.append(var5);
-      var2.append(", embeds=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.util.List = this.stickerItems;
+      val var1: JsonObject = this.author;
+      val var4: java.util.List = this.mentions;
+      val var2: Poll = this.poll;
+      val var5: java.util.List = this.embeds;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("NotificationMessage(stickerItems=");
+      var6.append(var3);
+      var6.append(", author=");
+      var6.append(var1);
+      var6.append(", mentions=");
+      var6.append(var4);
+      var6.append(", poll=");
+      var6.append(var2);
+      var6.append(", embeds=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public object `$serializer` : G {
@@ -184,21 +184,21 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
          var var9: java.util.List = null;
          var var2: Int;
          var var6: java.util.List;
-         var var7: java.util.List;
          var var8: JsonObject;
          var var13: Any;
+         val var16: java.util.List;
          if (var5) {
             var9 = var12.m(var11, 0, var10[0], null) as java.util.List;
             var8 = var12.v(var11, 1, ea.q.a, null) as JsonObject;
             var6 = var12.m(var11, 2, var10[2], null) as java.util.List;
             var13 = var12.v(var11, 3, Poll.$serializer.INSTANCE, null) as Poll;
-            var7 = var12.m(var11, 4, var10[4], null) as java.util.List;
+            var16 = var12.m(var11, 4, var10[4], null) as java.util.List;
             var2 = 31;
          } else {
             var var3: Boolean = true;
             var2 = 0;
             var8 = null;
-            var7 = null;
+            var var7: java.util.List = null;
             var6 = null;
             var13 = null;
 
@@ -236,13 +236,13 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
                }
             }
 
-            var7 = (java.util.List)var13;
+            var16 = (java.util.List)var13;
             var13 = var6;
             var6 = var7;
          }
 
          var12.b(var11);
-         return new NotificationMessage(var2, var9, var8, var6, (Poll)var13, var7, null);
+         return new NotificationMessage(var2, var9, var8, var6, (Poll)var13, var16, null);
       }
 
       public open fun serialize(encoder: Encoder, value: NotificationMessage) {

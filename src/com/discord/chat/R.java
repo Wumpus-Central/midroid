@@ -383,7 +383,6 @@ public final class R {
       public static int section_layout_box;
       public static int see_more_button;
       public static int select_component_chevron;
-      public static int select_component_loading;
       public static int select_component_selection_icon;
       public static int select_component_selection_text;
       public static int select_component_selections_root;

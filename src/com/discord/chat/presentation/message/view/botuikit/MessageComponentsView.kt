@@ -6,7 +6,6 @@ import android.view.View.MeasureSpec
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import com.discord.chat.bridge.botuikit.Component
-import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
 import kotlin.jvm.internal.q
@@ -33,13 +32,13 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      val var5: ComponentContext = this.componentContext;
+      val var3: ComponentContext = this.componentContext;
       if (this.componentContext == null) {
          super.onMeasure(var1, var2);
-      } else if (MessageAccessoriesView.Companion.getWidth(this.componentContext.getConstrainedWidth(), var5.isForwardedContent()) <= MAX_ALLOWED_WIDTH) {
+      } else if (!this.componentContext.getWidthInfo().getShouldRestrictTopLevelWidth()) {
          super.onMeasure(var1, var2);
       } else {
-         super.onMeasure(MeasureSpec.makeMeasureSpec(MAX_ALLOWED_WIDTH, Integer.MIN_VALUE), var2);
+         super.onMeasure(MeasureSpec.makeMeasureSpec(var3.getWidthInfo().getTopLevelMaxWidth(), Integer.MIN_VALUE), var2);
       }
    }
 
@@ -67,9 +66,5 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
       }
 
       MessageComponentsViewKt.replaceViews$default(this, i.c0(var5), var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);
-   }
-
-   public companion object {
-      private final val MAX_ALLOWED_WIDTH: Int
    }
 }
