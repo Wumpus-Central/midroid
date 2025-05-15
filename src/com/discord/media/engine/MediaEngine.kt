@@ -207,13 +207,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       kotlin.jvm.internal.q.h(var0, "$callback");
       kotlin.jvm.internal.q.h(var1, "connectionInfo");
       kotlin.jvm.internal.q.h(var2, "errorMessage");
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("On created with ");
-      var3.append(var1);
-      var3.append(", ");
-      var3.append(var2);
-      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("On created with ");
+      var4.append(var1);
+      var4.append(", ");
+      var4.append(var2);
+      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -233,19 +233,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var3: NativeConnection = this.engineConnections.get(var1);
-      if (var3 == null) {
-         val var5: Log = Log.INSTANCE;
+      val var5: NativeConnection = this.engineConnections.get(var1);
+      if (var5 == null) {
+         val var3: Log = Log.INSTANCE;
          val var4: StringBuilder = new StringBuilder();
          var4.append("[");
          var4.append(var2);
          var4.append("] no NativeConnection for connectionId=");
          var4.append(var1);
          var4.append(", returning null");
-         Log.w$default(var5, "MediaEngine", var4.toString(), null, 4, null);
+         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var3;
+      return var5;
    }
 
    @JvmStatic
@@ -1166,10 +1166,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                         o8.s.b(var1);
                      } else {
                         o8.s.b(var1);
-                        var var3: MediaEngine.Companion = MediaEngine.Companion;
-                        var1 = this.$bitmap;
+                        var1 = MediaEngine.Companion;
+                        var var3: Bitmap = this.$bitmap;
                         this.label = 1;
-                        var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
+                        var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
                         var1 = var3;
                         if (var3 === var4) {
                            return var4;

@@ -53,15 +53,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var4: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
+      val var5: Log = Log.INSTANCE;
+      val var4: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
       val var6: StringBuilder = new StringBuilder();
       var6.append("Start service with ");
       var6.append(var3);
       var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
+      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
    }
@@ -217,14 +217,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc_w "On service created."
       // 1b: aconst_null
       // 1c: bipush 4
@@ -261,14 +261,14 @@ public class ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 1
+      // 05: astore 2
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 2
-      // 0a: aload 2
+      // 09: astore 1
+      // 0a: aload 1
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 1
-      // 11: aload 2
+      // 10: aload 2
+      // 11: aload 1
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4

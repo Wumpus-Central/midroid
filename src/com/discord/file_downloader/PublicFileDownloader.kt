@@ -85,21 +85,21 @@ public object PublicFileDownloader {
       // 49: astore 5
       // 4b: goto 8a
       // 4e: new com/discord/file_downloader/DownloadState$Failure
-      // 51: astore 7
+      // 51: astore 8
       // 53: new java/lang/IllegalStateException
-      // 56: astore 5
+      // 56: astore 7
       // 58: new java/io/FileNotFoundException
-      // 5b: astore 8
-      // 5d: aload 8
+      // 5b: astore 5
+      // 5d: aload 5
       // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 5
-      // 64: aload 8
+      // 62: aload 7
+      // 64: aload 5
       // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 69: aload 7
-      // 6b: aload 5
+      // 69: aload 8
+      // 6b: aload 7
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
-      // 71: aload 7
+      // 71: aload 8
       // 73: invokeinterface Z9/s.e (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 78: pop
       // 79: aload 1
@@ -210,13 +210,13 @@ public object PublicFileDownloader {
 
                            val var21: Any = this.$context.getSystemService("download");
                            q.f(var21, "null cannot be cast to non-null type android.app.DownloadManager");
-                           val var30: DownloadManager = var21 as DownloadManager;
+                           val var32: DownloadManager = var21 as DownloadManager;
                            var22 = new LongRef();
                            var22.j = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var30.enqueue(
+                              var3x = var32.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var22.j = var3x;
@@ -232,7 +232,7 @@ public object PublicFileDownloader {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
                                     .put(
                                        kotlin.coroutines.jvm.internal.b.e(var22.j),
-                                       new Function0(var22, var1, var30, this.$fileName) {
+                                       new Function0(var22, var1, var32, this.$fileName) {
                                           final ProducerScope $$this$callbackFlow;
                                           final LongRef $downloadId;
                                           final java.lang.String $fileName;
@@ -264,13 +264,13 @@ public object PublicFileDownloader {
                            }
 
                            try {
-                              val var31: DownloadState.Failure = new DownloadState.Failure(
+                              val var30: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var22;
                               this.label = 2;
-                              var26 = var1.g(var31, this);
+                              var26 = var1.g(var30, this);
                            } catch (var13: Exception) {
                               var7 = var22;
                               var6 = var1;
@@ -303,8 +303,8 @@ public object PublicFileDownloader {
                      var19 = var6;
                   }
 
-                  var22 = var1;
                   var1 = var19;
+                  var22 = var1;
                }
 
                val var23: Function0 = new Function0(var22) {

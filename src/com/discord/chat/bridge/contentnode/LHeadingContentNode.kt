@@ -71,15 +71,15 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var4: java.lang.String = this.className;
-      val var3: java.util.List = this.content;
+      val var3: java.lang.String = this.className;
+      val var4: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LHeadingContentNode(level=");
       var2.append(var1);
       var2.append(", className=");
-      var2.append(var4);
-      var2.append(", content=");
       var2.append(var3);
+      var2.append(", content=");
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }
@@ -111,23 +111,24 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var9: Array<KSerializer> = LHeadingContentNode.access$get$childSerializers$cp();
-         var var2: Int;
          var var3: Int;
+         val var4: Int;
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            val var2: Int = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var2 = 7;
+            var3 = 7;
+            var4 = var2;
          } else {
-            var var4: Boolean = true;
+            var var13: Boolean = true;
             var3 = 0;
             var6 = null;
             var10 = null;
-            var2 = 0;
+            var var11: Int = 0;
 
-            while (var4) {
+            while (var13) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -137,23 +138,26 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
                         }
 
                         var10 = var8.m(var7, 2, var9[2], var10) as java.util.List;
-                        var2 |= 4;
+                        var11 |= 4;
                      } else {
                         var6 = var8.t(var7, 1);
-                        var2 |= 2;
+                        var11 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var2 |= 1;
+                     var11 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var13 = false;
                }
             }
+
+            var4 = var3;
+            var3 = var11;
          }
 
          var8.b(var7);
-         return new LHeadingContentNode(var2, var3, var6, var10, null);
+         return new LHeadingContentNode(var3, var4, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: LHeadingContentNode) {

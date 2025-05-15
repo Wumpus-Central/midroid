@@ -31,6 +31,11 @@ public object HermesSamplingProfilerUtil {
    public fun findSampleTrace(cacheDir: File): String? {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.code.cfg.ExceptionRangeCFG.isCircular()" because "range" is null
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.graphToStatement(DomHelper.java:84)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:203)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.createStatement(DomHelper.java:27)
+      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:157)
       //
       // Bytecode:
       // 000: aload 1
@@ -39,9 +44,9 @@ public object HermesSamplingProfilerUtil {
       // 006: bipush 0
       // 007: istore 5
       // 009: bipush 0
-      // 00a: istore 4
-      // 00c: bipush 0
-      // 00d: istore 3
+      // 00a: istore 3
+      // 00b: bipush 0
+      // 00c: istore 4
       // 00e: bipush 0
       // 00f: istore 6
       // 011: aconst_null
@@ -104,7 +109,7 @@ public object HermesSamplingProfilerUtil {
       // 085: astore 9
       // 087: aload 8
       // 089: astore 1
-      // 08a: goto 373
+      // 08a: goto 371
       // 08d: astore 10
       // 08f: aload 9
       // 091: astore 8
@@ -317,19 +322,19 @@ public object HermesSamplingProfilerUtil {
       // 250: aload 14
       // 252: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 257: checkcast java/util/Map$Entry
-      // 25a: astore 13
+      // 25a: astore 12
       // 25c: aload 9
       // 25e: astore 1
-      // 25f: aload 13
+      // 25f: aload 12
       // 261: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 266: checkcast java/lang/String
       // 269: invokestatic kotlin/text/h.m (Ljava/lang/String;)Ljava/lang/Integer;
-      // 26c: astore 12
-      // 26e: aload 12
+      // 26c: astore 13
+      // 26e: aload 13
       // 270: ifnull 294
       // 273: aload 9
       // 275: astore 1
-      // 276: aload 12
+      // 276: aload 13
       // 278: invokevirtual java/lang/Number.intValue ()I
       // 27b: aload 11
       // 27d: invokevirtual java/lang/Integer.intValue ()I
@@ -352,9 +357,9 @@ public object HermesSamplingProfilerUtil {
       // 29a: aload 9
       // 29c: astore 1
       // 29d: aload 10
-      // 29f: aload 13
+      // 29f: aload 12
       // 2a1: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 2a6: aload 13
+      // 2a6: aload 12
       // 2a8: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 2ad: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 2b2: pop
@@ -378,26 +383,26 @@ public object HermesSamplingProfilerUtil {
       // 2d7: aload 9
       // 2d9: astore 1
       // 2da: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 2dd: astore 12
+      // 2dd: astore 11
       // 2df: aload 9
       // 2e1: astore 1
       // 2e2: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
       // 2e5: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
-      // 2e8: astore 11
+      // 2e8: astore 10
       // 2ea: aload 9
       // 2ec: astore 1
       // 2ed: new kotlinx/serialization/json/JsonObject
-      // 2f0: astore 10
+      // 2f0: astore 12
       // 2f2: aload 9
       // 2f4: astore 1
-      // 2f5: aload 10
+      // 2f5: aload 12
       // 2f7: aload 8
       // 2f9: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 2fc: aload 9
       // 2fe: astore 1
-      // 2ff: aload 12
-      // 301: aload 11
-      // 303: aload 10
+      // 2ff: aload 11
+      // 301: aload 10
+      // 303: aload 12
       // 305: invokevirtual kotlinx/serialization/json/Json.c (Lha/h;Ljava/lang/Object;)Ljava/lang/String;
       // 308: astore 8
       // 30a: iload 5
@@ -427,7 +432,7 @@ public object HermesSamplingProfilerUtil {
       // 336: astore 1
       // 337: aload 8
       // 339: astore 9
-      // 33b: goto 373
+      // 33b: goto 371
       // 33e: astore 10
       // 340: aconst_null
       // 341: astore 8
@@ -439,30 +444,30 @@ public object HermesSamplingProfilerUtil {
       // 34c: bipush 2
       // 34d: aconst_null
       // 34e: invokestatic com/discord/crash_reporting/CrashReporting.captureException$default (Lcom/discord/crash_reporting/CrashReporting;Ljava/lang/Throwable;ZILjava/lang/Object;)V
-      // 351: iload 4
-      // 353: istore 2
-      // 354: aload 8
-      // 356: ifnull 367
-      // 359: iload 4
-      // 35b: istore 2
-      // 35c: aload 8
-      // 35e: invokevirtual java/io/File.exists ()Z
-      // 361: bipush 1
-      // 362: if_icmpne 367
-      // 365: bipush 1
-      // 366: istore 2
-      // 367: iload 2
-      // 368: ifeq 371
-      // 36b: aload 8
-      // 36d: invokevirtual java/io/File.delete ()Z
-      // 370: pop
-      // 371: aconst_null
-      // 372: areturn
-      // 373: iload 3
-      // 374: istore 2
-      // 375: aload 9
-      // 377: ifnull 387
-      // 37a: iload 3
+      // 351: iload 3
+      // 352: istore 2
+      // 353: aload 8
+      // 355: ifnull 365
+      // 358: iload 3
+      // 359: istore 2
+      // 35a: aload 8
+      // 35c: invokevirtual java/io/File.exists ()Z
+      // 35f: bipush 1
+      // 360: if_icmpne 365
+      // 363: bipush 1
+      // 364: istore 2
+      // 365: iload 2
+      // 366: ifeq 36f
+      // 369: aload 8
+      // 36b: invokevirtual java/io/File.delete ()Z
+      // 36e: pop
+      // 36f: aconst_null
+      // 370: areturn
+      // 371: iload 4
+      // 373: istore 2
+      // 374: aload 9
+      // 376: ifnull 387
+      // 379: iload 4
       // 37b: istore 2
       // 37c: aload 9
       // 37e: invokevirtual java/io/File.exists ()Z

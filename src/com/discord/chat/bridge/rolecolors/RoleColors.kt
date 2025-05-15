@@ -79,17 +79,17 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var4: Int = this.secondaryColor;
-      val var2: Int = this.tertiaryColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("RoleColors(primaryColor=");
-      var3.append(var1);
-      var3.append(", secondaryColor=");
-      var3.append(var4);
-      var3.append(", tertiaryColor=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: Int = this.secondaryColor;
+      val var3: Int = this.tertiaryColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("RoleColors(primaryColor=");
+      var4.append(var1);
+      var4.append(", secondaryColor=");
+      var4.append(var2);
+      var4.append(", tertiaryColor=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -120,23 +120,23 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
-         val var4: Int;
+         var var3: Int;
          var var6: Int;
          var var10: Int;
          if (var8.y()) {
-            var2 = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             val var9: N = N.a;
             var6 = var8.v(var7, 1, N.a, null) as Int;
             var10 = var8.v(var7, 2, var9, null) as Int;
-            var4 = 7;
+            var2 = 7;
          } else {
-            var var12: Boolean = true;
-            var var3: Int = 0;
+            var var4: Boolean = true;
+            var3 = 0;
             var6 = null;
             var10 = null;
             var2 = 0;
 
-            while (var12) {
+            while (var4) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -156,16 +156,13 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
                      var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var4 = false;
                }
             }
-
-            var4 = var2;
-            var2 = var3;
          }
 
          var8.b(var7);
-         return new RoleColors(var4, var2, var6, var10, null);
+         return new RoleColors(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleColors) {

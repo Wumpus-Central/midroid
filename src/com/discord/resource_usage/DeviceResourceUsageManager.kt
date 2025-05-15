@@ -45,7 +45,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = r.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var0 = r.k;
+         var18 = r.k;
          var0 = r.b(s.a(var3));
          break label36;
       }
@@ -61,7 +61,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = r.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var18 = r.k;
+         var0 = r.k;
          var0 = r.b(s.a(var2));
          break label30;
       }

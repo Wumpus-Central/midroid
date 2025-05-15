@@ -61,8 +61,8 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var11: java.lang.String = MessageId.toString-impl(var15);
-      val var14: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
+      val var13: java.lang.String = MessageId.toString-impl(var15);
+      val var11: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -78,7 +78,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             this.$eventHandler.onLinkClicked-u7_MRrM(this.$messageId, var1, var2);
          }
       }, var5);
-      val var13: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
+      val var14: MarkdownTextRenderOptions = new MarkdownTextRenderOptions(
          MessageId.toString-impl(var12.getId-3Eiw7ao()),
          MessageKt.shouldAnimateEmoji(var12),
          MessageKt.shouldShowLinkDecorations(var12),
@@ -257,7 +257,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var15) {
+      val var31: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -316,9 +316,9 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
          }
       });
       val var30: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
-      val var31: java.lang.Boolean = var12.getGifAutoPlay();
-      if (var31 != null) {
-         var9 = var31;
+      val var32: java.lang.Boolean = var12.getGifAutoPlay();
+      if (var32 != null) {
+         var9 = var32;
       } else {
          var9 = false;
       }
@@ -331,6 +331,6 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var11, var14, var13, var35, var28, var32, var30, var9, var10, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var13, var11, var14, var35, var28, var31, var30, var9, var10, false));
    }
 }

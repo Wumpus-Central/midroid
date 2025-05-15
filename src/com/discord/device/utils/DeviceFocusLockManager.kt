@@ -18,14 +18,14 @@ public object DeviceFocusLockManager {
       val var7: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var9: ArrayList = new ArrayList();
+         val var8: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             q.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
             if (var7.contains(var5 as ViewGroup)) {
-               var9.clear();
+               var8.clear();
                break;
             }
 
@@ -35,7 +35,7 @@ public object DeviceFocusLockManager {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
                   q.e(var4);
-                  var9.add(var4);
+                  var8.add(var4);
                }
             }
 
@@ -43,7 +43,7 @@ public object DeviceFocusLockManager {
             var4 = var11;
          }
 
-         var6.addAll(var9);
+         var6.addAll(var8);
       }
 
       return i.R0(var6);

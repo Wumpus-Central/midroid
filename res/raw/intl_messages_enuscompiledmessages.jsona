@@ -1239,6 +1239,7 @@
   ],
   "T15lqq": "Too fast! Wait a bit and try again.",
   "/s1xR0": "Gift ready for delivery",
+  "1Qm829": "Apply",
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
@@ -2924,6 +2925,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Join Nitro to unlock access to this avatar decoration!",
+  "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
   "IQQYeX": [
@@ -3168,8 +3171,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Join Nitro to unlock access to this avatar decoration!",
-  "dIepy8": "Upgrade to unlock access to this avatar decoration!",
   "0hKkS0": "Commands",
   "5C107O": "Optional",
   "Ocw/sL": [
@@ -5013,6 +5014,7 @@
     " more"
   ],
   "CumH4u": "Create",
+  "825cFx": "Create Account",
   "ISN+ND": "Create Category",
   "fUYU+v": "Create Channel",
   "qyjZub": "Create Events",
@@ -29541,6 +29543,7 @@
     ]
   ],
   "cfY4PD": "Claim Reward",
+  "Av9jcX": "Claim Reward!",
   "0IUT4e": [
     "Claim ",
     [

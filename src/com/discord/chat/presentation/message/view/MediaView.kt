@@ -261,12 +261,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var11: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var11, "getContext(...)");
+            val var7: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var7);
+            var10 = var12.acquire(var11, var7, this.playerSettings);
          }
 
          var10.setEventListener(
@@ -738,9 +738,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                o8.s.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var4: Flow = var1.getPausePlayerFlow();
-                  if (var4 != null) {
-                     val var6: FlowCollector = new FlowCollector(this.this$0) {
+                  val var6: Flow = var1.getPausePlayerFlow();
+                  if (var6 != null) {
+                     val var4: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -757,7 +757,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var4.collect(var6, this) === var3) {
+                     if (var6.collect(var4, this) === var3) {
                         return var3;
                      }
                   }

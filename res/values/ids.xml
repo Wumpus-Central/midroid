@@ -231,6 +231,7 @@
     <item type="id" name="error" />
     <item type="id" name="error_icon" />
     <item type="id" name="error_label" />
+    <item type="id" name="established_text" />
     <item type="id" name="exception" />
     <item type="id" name="exo_ad_overlay" />
     <item type="id" name="exo_artwork" />

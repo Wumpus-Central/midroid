@@ -81,19 +81,19 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
    }
 
    public override fun toString(): String {
-      val var1: Float = this.topDp;
-      val var2: Float = this.rightDp;
-      val var4: Float = this.bottomDp;
-      val var3: Float = this.leftDp;
+      val var2: Float = this.topDp;
+      val var3: Float = this.rightDp;
+      val var1: Float = this.bottomDp;
+      val var4: Float = this.leftDp;
       val var5: StringBuilder = new StringBuilder();
       var5.append("SafeAreaEdgeInsets(topDp=");
-      var5.append(var1);
-      var5.append(", rightDp=");
       var5.append(var2);
-      var5.append(", bottomDp=");
-      var5.append(var4);
-      var5.append(", leftDp=");
+      var5.append(", rightDp=");
       var5.append(var3);
+      var5.append(", bottomDp=");
+      var5.append(var1);
+      var5.append(", leftDp=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }
@@ -105,7 +105,7 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
          var var7: Int = -1;
          val var12: SafeAreaEdgeInsets;
          if (VERSION.SDK_INT > 29) {
-            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var11.b));
+            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var11.b));
             val var6: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var11.d));
             val var16: Int;
             if (var3) {
@@ -114,12 +114,12 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
                var16 = -1;
             }
 
-            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var16));
+            val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var16));
             if (var3) {
                var7 = var11.c;
             }
 
-            var12 = new SafeAreaEdgeInsets(var5, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var6, var4);
+            var12 = new SafeAreaEdgeInsets(var4, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var6, var5);
          } else {
             val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var2.k()));
             val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var2.h()));

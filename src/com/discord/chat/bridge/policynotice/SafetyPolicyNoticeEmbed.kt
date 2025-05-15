@@ -120,27 +120,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.classificationId;
+      val var5: java.lang.String = this.classificationId;
       val var6: java.lang.String = this.titleText;
       val var2: java.lang.String = this.titleIcon;
       val var3: java.lang.String = this.subtitleText;
-      val var7: java.lang.String = this.descriptionText;
-      val var4: java.lang.String = this.ctaText;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var5.append(var1);
-      var5.append(", titleText=");
-      var5.append(var6);
-      var5.append(", titleIcon=");
-      var5.append(var2);
-      var5.append(", subtitleText=");
-      var5.append(var3);
-      var5.append(", descriptionText=");
-      var5.append(var7);
-      var5.append(", ctaText=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var1: java.lang.String = this.descriptionText;
+      val var7: java.lang.String = this.ctaText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var4.append(var5);
+      var4.append(", titleText=");
+      var4.append(var6);
+      var4.append(", titleIcon=");
+      var4.append(var2);
+      var4.append(", subtitleText=");
+      var4.append(var3);
+      var4.append(", descriptionText=");
+      var4.append(var1);
+      var4.append(", ctaText=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -179,18 +179,18 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          var var6: java.lang.String;
          var var7: java.lang.String;
          var var8: java.lang.String;
-         var var9: java.lang.String;
+         val var10: java.lang.String;
          val var14: java.lang.String;
          if (var13.y()) {
-            var9 = var13.t(var12, 0);
-            var7 = var13.t(var12, 1);
+            var7 = var13.t(var12, 0);
+            var10 = var13.t(var12, 1);
             var8 = var13.t(var12, 2);
             var5 = var13.t(var12, 3);
             var6 = var13.t(var12, 4);
             var14 = var13.t(var12, 5);
             var2 = 63;
          } else {
-            var9 = null;
+            var var9: java.lang.String = null;
             var8 = null;
             var7 = null;
             var6 = null;
@@ -234,14 +234,15 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
                }
             }
 
-            var8 = var5;
             var14 = var8;
             var5 = var7;
-            var7 = var15;
+            var8 = var5;
+            var10 = var15;
+            var7 = var9;
          }
 
          var13.b(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var9, var7, var8, var5, var6, var14, null);
+         return new SafetyPolicyNoticeEmbed(var2, var7, var10, var8, var5, var6, var14, null);
       }
 
       public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {
