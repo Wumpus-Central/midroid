@@ -2967,6 +2967,27 @@
   ],
   "zOA4a2": "Tvé vzhledy avataru jsou aktualizované!",
   "V1AWw8": "Koupit balíček",
+  "IQQYeX": [
+    "Vzhled avataru: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Jmenovka: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Efekt profilu: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Balíček není dostupný",
   "AQ0Ven": "Koupit vzhled",
   "kAeDcH": "Koupit efekt profilu",

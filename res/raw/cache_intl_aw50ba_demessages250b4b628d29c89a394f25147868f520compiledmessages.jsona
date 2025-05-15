@@ -2878,6 +2878,27 @@
   ],
   "zOA4a2": "Deine Avatardekoration wurde aktualisiert!",
   "V1AWw8": "Paket kaufen",
+  "IQQYeX": [
+    "Avatardekoration: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Namensschild: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Profil-Effekt: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Paket nicht verfügbar",
   "AQ0Ven": "Dekoration kaufen",
   "kAeDcH": "Profil-Effekt kaufen",

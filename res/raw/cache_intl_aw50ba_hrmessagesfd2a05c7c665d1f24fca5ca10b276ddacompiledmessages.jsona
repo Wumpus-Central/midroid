@@ -2958,6 +2958,27 @@
   ],
   "zOA4a2": "Tvoj je ukras avatara ažuriran!",
   "V1AWw8": "Kupi paket",
+  "IQQYeX": [
+    "Ukras avatara: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Pločica s imenom: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Efekt profila: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Komplet nije dostupan",
   "AQ0Ven": "Kupi ukras",
   "kAeDcH": "Kupi efekt profila",

@@ -2873,6 +2873,27 @@
   ],
   "zOA4a2": "Avatar-koristeesi on päivitetty!",
   "V1AWw8": "Osta paketti",
+  "IQQYeX": [
+    "Avatar-koriste: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Nimikyltti: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Profiilitehoste: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Paketti ei ole saatavana",
   "AQ0Ven": "Osta koriste",
   "kAeDcH": "Osta profiilitehoste",

@@ -2976,6 +2976,27 @@
   ],
   "zOA4a2": "Twoja dekoracja awatara została zaktualizowana!",
   "V1AWw8": "Kup pakiet",
+  "IQQYeX": [
+    "Dekoracja awatara: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Tabliczka z nazwą: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Efekt profilu: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Pakiet niedostępny",
   "AQ0Ven": "Kup dekorację",
   "kAeDcH": "Kup efekt profilu",

@@ -2878,6 +2878,27 @@
   ],
   "zOA4a2": "Ta décoration d'avatar a été mise à jour !",
   "V1AWw8": "Acheter le lot",
+  "IQQYeX": [
+    "Décoration d'avatar : ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Plaque nominative : ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Effet de profil : ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Pack indisponible",
   "AQ0Ven": "Acheter de la décoration",
   "kAeDcH": "Acheter l'effet de profil",

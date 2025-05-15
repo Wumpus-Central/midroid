@@ -2874,6 +2874,27 @@
   ],
   "zOA4a2": "Sua decoração de avatar foi atualizada!",
   "V1AWw8": "Comprar pacote",
+  "IQQYeX": [
+    "Decoração de avatar: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Placa de identificação: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Efeito de perfil: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Pacote indisponível",
   "AQ0Ven": "Comprar decoração",
   "kAeDcH": "Comprar efeito de perfil",

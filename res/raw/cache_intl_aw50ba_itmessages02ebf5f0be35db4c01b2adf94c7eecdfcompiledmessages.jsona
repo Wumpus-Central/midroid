@@ -2862,6 +2862,27 @@
   ],
   "zOA4a2": "La tua decorazione avatar è aggiornata!",
   "V1AWw8": "Acquista bundle",
+  "IQQYeX": [
+    "Decorazione avatar: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Targhetta nome: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Effetto del profilo: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Bundle non disponibile",
   "AQ0Ven": "Acquista decorazione",
   "kAeDcH": "Acquista l'effetto del profilo",

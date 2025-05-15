@@ -2954,6 +2954,27 @@
   ],
   "zOA4a2": "Tavo pseudoportreto papuošimas atnaujintas!",
   "V1AWw8": "Pirkti Paketą",
+  "IQQYeX": [
+    "Pseudoportreto papuošimas: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Vardo lentelė: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Profilio efektas: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Paketas neprieinamas",
   "AQ0Ven": "Pirkti papuošimą",
   "kAeDcH": "Pirkti profilio efektą",

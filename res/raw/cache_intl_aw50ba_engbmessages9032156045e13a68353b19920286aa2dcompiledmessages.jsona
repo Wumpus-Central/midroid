@@ -2863,6 +2863,27 @@
   ],
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "IQQYeX": [
+    "Avatar Decoration: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Nameplate: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Profile Effect: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
   "kAeDcH": "Buy Profile Effect",
