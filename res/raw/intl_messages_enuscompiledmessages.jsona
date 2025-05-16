@@ -571,7 +571,7 @@
     ],
     ". Is that correct?"
   ],
-  "xNpFJy": "Date of birth",
+  "xNpFJy": "Date of Birth",
   "hZaF/P": "Tap to open date picker",
   "F8otRk": "Help us keep Discord safe",
   "mhUrKS": "Before you can use Family Center, we need to verify your age so we can show you the appropriate experience. We will only ask you for this once.",
@@ -5745,6 +5745,13 @@
   "r6Vm8f": "Answer questions to get access to more channels and roles.",
   "BGkaen": "Customization Questions",
   "FHBa//": "Custom Color",
+  "7BFCRU": [
+    "Custom color, ",
+    [
+      1,
+      "color"
+    ]
+  ],
   "xalUlZ": "Custom Status",
   "pP5Aa2": [
     [
@@ -32937,6 +32944,7 @@
   "z4FcDg": "Event Details",
   "eXHkho": "See Thread ›",
   "XqMe3N": "Select",
+  "ozfa/v": "Selected color",
   "3aednJ": [
     "Select component ",
     [
