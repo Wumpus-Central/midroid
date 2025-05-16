@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4063",
-    "commit": "f1f964799ea85f4956449959800647d31f8cf956",
+    "build": "4067",
+    "commit": "d6a4d32c592a0fb57fde811b0475c40c72ccfb01",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "e28c46e293cb76a0cac2ba39d72fc536",
+    "app/src/main/assets/index.android.bundle": "7fc6b560c922af8d5f5ac43f514dfba6",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_bixhs5kr6rehjvfo6cwuhtshxq_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_cs.png": "44a7840b2161275358742595c9257e76",
@@ -3340,9 +3340,9 @@
     "app/src/main/res/raw/images_platforms_img_roblox_dark.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/images_platforms_img_roblox_light.svg": "8004c631509b26672d76ec4ff50dd8cb",
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
-    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "4ee884e91109d155f4eb7647dcfc2676",
+    "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "60984e6687ce34f1e2f8745a2ae68aa7",
     "app/src/main/res/raw/intl_messages_internationalcompiledmessages.jsona": "7826c5731011d653ad231a2c3b0d1f32",
-    "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "e1fbcaa70177cc8e9fdc6903e41e8ca5",
+    "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "ae5f6e095b3797ec34e64b32c3f23ec8",
     "app/src/main/res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_activity_privacy_usersettingsactivitysharingredesigncompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_clicker_game_clickergamecompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
