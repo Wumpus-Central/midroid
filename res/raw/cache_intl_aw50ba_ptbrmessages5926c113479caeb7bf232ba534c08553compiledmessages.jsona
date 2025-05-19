@@ -1231,9 +1231,22 @@
   ],
   "T15lqq": "Pisa no freio, Zé! Espera um pouco e tenta de novo.",
   "/s1xR0": "O presente está pronto para enviar",
+  "1Qm829": "Aplicar",
   "PHjkRE": "Apps",
   "AKcFUl": "Diretório de Apps",
   "LO4f0N": "Parceiro",
+  "eGZFws": "As notificações estão desativadas para esta DM.",
+  "7Sbhqa": [
+    "As notificações estão desativadas até ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "As notificações estão ativadas para esta DM.",
+  "GFEn8/": "Desativar",
+  "JFu44e": "Ativar",
   "9PUXpK": "Fúria",
   "IoLVi4": "Sorvete de Sonho",
   "nmd90t": "uwu~",
@@ -1812,6 +1825,7 @@
   "yX8s2t": "O cartão foi recusado devido a fundos insuficientes.",
   "3s/vDA": "Resposta inválida do captcha. Tente novamente.",
   "+4Empq": "Esta compra resultaria em um saldo negativo, portanto, infelizmente, não pode ser concluída. Sabemos o quão irritante isso é e estamos nos esforçando para melhorar este sistema. Volte mais tarde!",
+  "uhPY5u": "A compra não pôde ser validada. Atualize o seu cliente.",
   "3jprCQ": "Não foi possível processar a mudança, seu pagamento está pendente.",
   "sUWxgY": "Você tentou realizar muitas compras muito rapidamente. Aguarde um pouco e tente novamente!",
   "yNYvKy": "Um método de pagamento desconhecido foi escolhido., Selecione outro e tente novamente.",
@@ -2431,12 +2445,9 @@
   "++JLLy": "As pessoas se portaram de forma tóxica ou inadequada",
   "tLi4cX": "Conte-nos como foi sua experiência com a chamada.",
   "C/12Tk": "Negativo",
-  "0jP8iY": "Eu tive algumas dificuldades técnicas...",
   "Xcb4cH": "Neutro",
   "1Vyb5O": "Positivo",
-  "B81oy8": "A chamada fluiu perfeitamente!",
   "Ss6tlZ": "Como foi a chamada?",
-  "xv0BJi": "Você teve algum problema técnico?",
   "IdKo29": [
     "Você precisa ser amigo de ",
     [
@@ -2872,6 +2883,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Junte-se ao Nitro para desbloquear o acesso a esta decoração de avatar!",
+  "e1UiOT": "Faça a melhoria para desbloquear o acesso a esta decoração de avatar!",
   "zOA4a2": "Sua decoração de avatar foi atualizada!",
   "V1AWw8": "Comprar pacote",
   "IQQYeX": [
@@ -3103,8 +3116,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Junte-se ao Nitro para desbloquear o acesso a esta decoração de avatar!",
-  "dIepy8": "Faça a melhoria para desbloquear o acesso a esta decoração de avatar!",
   "0hKkS0": "Comandos",
   "5C107O": "Opcional",
   "Ocw/sL": [
@@ -4928,6 +4939,7 @@
     ]
   ],
   "CumH4u": "Criar",
+  "825cFx": "Criar conta",
   "ISN+ND": "Criar categoria",
   "fUYU+v": "Criar canal",
   "qyjZub": "Criar eventos",
@@ -5816,6 +5828,7 @@
   "ZPjue3": "Qual a melhor coisa que você comeu esta semana?",
   "40gTj4": "Mal posso esperar por...",
   "SWVxPD": "Escolha a sua classe de personagem",
+  "xaCthI": "Qual a sua obsessão atualmente?",
   "3XVZ0t": "Melhor piada de tiozão?",
   "4U+EJC": "Melhor emoji para descrever o seu dia?",
   "R1f9RU": "Anime favorito dos últimos tempos?",
@@ -5847,7 +5860,7 @@
   "Iuzg8f": "Definir seu status",
   "zOdg0N": "Status",
   "hA60Ul": "Faça seu status se destacar com uma tag predefinida",
-  "jrzHRk": "Tags de status personalizadas",
+  "jrzHRk": "Tags de status personalizado",
   "GQmLra": "Hoje",
   "UcdRn5": "Qual é a boa?",
   "xod36+": "No que você está pensando?",
@@ -10880,6 +10893,7 @@
   "70CJbW": "OFICIAL",
   "q1L2v7": "Bloquear palavras nos nomes dos perfis de membros",
   "OiCBhI": "Ver artigo de ajuda para mensagem bloqueada",
+  "HHYPgI": "Insígnia",
   "mOWsFx": "O impulso não está disponível enquanto sua assinatura Nitro está em pausa!",
   "CduWAg": "Você não pode gerenciar Impulsos do Servidor enquanto sua assinatura Nitro está pausada.",
   "mkXb2N": [
@@ -24303,6 +24317,22 @@
   "9g5UGx": "Sim, tenho certeza",
   "9SNpzs": "Desativar a personalização?",
   "dEYpSk": "Telefone",
+  "kj8xiI": [
+    "Este número de telefone já está associado a outra conta. Por favor, ",
+    [
+      8,
+      "$link",
+      [
+        "solucione o problema aqui"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Falha ao adicionar número de telefone, tente novamente mais tarde.",
   "0/ALaG": "Não reconhecemos esta localização. Enviamos um código de confirmação para o número de telefone conectado a essa conta.",
   "w55Ocn": "Insira seu código de confirmação para verificar que é você",
@@ -30615,6 +30645,7 @@
   "p9jC2t": "LIGADO",
   "PBgTSE": "Toque para desabilitar a menção ao autor original.",
   "E+6SSU": "Clique para ver o comando",
+  "Xxm5i4": "Toque para ver a mensagem",
   "XAkOo6": "Mensagem bloqueada",
   "mE3KJC": "A mensagem original foi excluída",
   "G7p6v7": "Mensagem ignorada",
@@ -33452,7 +33483,6 @@
   "G2egzc": "Áudio do app ausente",
   "aHOfIi": "Áudio do app em baixa qualidade",
   "5smP3d": "Como foi a transmissão?",
-  "OR6KNz": "Você teve algum problema técnico?",
   "fxiRNj": "Transmissão preta",
   "E8jTMD": "Transmissão borrada ou pixelada",
   "Xwv419": "Áudio do app ausente",
@@ -33468,8 +33498,6 @@
   "KHGhHR": "Relatar problema na transmissão",
   "CqjnLC": "Conte-nos sobre seu trabalho atual e/ou atividades escolares.",
   "0uxA2d": "Conte-nos como foi sua experiência com a transmissão.",
-  "ISINlJ": "Eu tive algumas dificuldades técnicas...",
-  "IySkjY": "A transmissão fluiu perfeitamente!",
   "kLQySE": "Mostrar todos participantes",
   "YSGk4O": "Convide pessoas para se juntar a você!",
   "WkAgPT": "Não tem mais ninguém nesta chamada.",
@@ -36440,6 +36468,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Estes códigos permitirão que você entre em sua conta caso perca sua chave de segurança, proteja-os como você protegeria sua senha. Não os compartilhe com ninguém e mantenha-os em um lugar seguro."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Cada código só pode ser usado uma vez! Qualquer código gerado anteriormente não funciona mais!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Alterar detalhes da conta",
   "37S9yc": "Como uma medida de segurança adiciona, insira a chave que acabamos de enviar para seu endereço de e-mail. Você deve encontrá-la em alguns minutos.",
   "TjGb4e": "Chave de verificação",
@@ -36497,6 +36547,7 @@
   "EA4ZEh": "Você tem certeza de que deseja remover seu Aplicativo de Autenticação?",
   "0d1bXF": "Sua conta Discord agora está protegida com mais uma camada de segurança",
   "Awk3Gx": "A verificação em duas etapas está ativada! 🎉",
+  "7wPZlp": "Chave de segurança ativada! 🎉",
   "1u5B+P": "Eita, ocorreu um erro.",
   "xZEzbm": "Ver códigos de recuperação",
   "PsQmzc": "Insira sua senha",
@@ -37544,6 +37595,7 @@
   "jec90t": "Agora, crie uma conta",
   "KtJgIy": "A senha deve ter 8 ou mais caracteres.",
   "y7LSyc": "Use apenas letras, números, underlines e pontos.",
+  "w/XiOz": "Você pode mudar isso a qualquer momento.",
   "EJ26Oj": "Este canal requer Apertar para falar para o chat de voz. Você só poderá ouvir quando alterar\nseu modo de fala para Apertar para falar.",
   "NYklho": "Aperte para Falar obrigatório",
   "hFzI4u": "O Nitro está no ar <3",

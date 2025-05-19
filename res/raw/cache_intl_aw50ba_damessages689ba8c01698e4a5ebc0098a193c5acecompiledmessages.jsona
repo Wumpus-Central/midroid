@@ -1236,9 +1236,22 @@
   ],
   "T15lqq": "For hurtigt! Vent lidt, og prøv igen.",
   "/s1xR0": "Gave klar til levering",
+  "1Qm829": "Anvend",
   "PHjkRE": "Apps",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
+  "eGZFws": "Meddelelser er deaktiveret for denne direkte besked.",
+  "7Sbhqa": [
+    "Meddelelser er deaktiveret indtil ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Meddelelser er aktiveret for denne DM.",
+  "GFEn8/": "Slå fra",
+  "JFu44e": "Slå til",
   "9PUXpK": "Rasende",
   "IoLVi4": "Sherbet-ispind",
   "nmd90t": "uwu~",
@@ -1815,6 +1828,7 @@
   "yX8s2t": "Kortet blev afvist på grund af utilstrækkelige midler.",
   "3s/vDA": "Ugyldigt svar på captcha-tekst. Prøv igen.",
   "+4Empq": "Dette køb resulterede i en negativ balance og kan derfor ikke gennemføres. Vi ved, at det er nedtur og arbejder lige nu på at forbedre vort system. Kom snart tilbage igen!",
+  "uhPY5u": "Købet kunne ikke valideres. Opdater din klient.",
   "sUWxgY": "Du har forsøgt for mange indkøb for hurtigt. Vent lidt, og prøv igen.",
   "yNYvKy": "Der blev angivet en ukendt betalingskilde. Vælg en anden og prøv igen.",
   "qS+yMj": "Gave-link",
@@ -2434,12 +2448,9 @@
   "++JLLy": "Folk var giftige eller upassende",
   "tLi4cX": "Fortæl os om din opkalds-oplevelse.",
   "C/12Tk": "Negativ",
-  "0jP8iY": "Jeg oplevede nogle tekniske problemer …",
   "Xcb4cH": "Neutral",
   "1Vyb5O": "Positiv",
-  "B81oy8": "Opkaldet gik tydeligt igennem!",
   "Ss6tlZ": "Hvordan gik det med opkaldet?",
-  "xv0BJi": "Oplevede du tekniske problemer?",
   "IdKo29": [
     "Du skal være ven med ",
     [
@@ -2875,6 +2886,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Blev medlem af Nitro for at låse op for adgang til denne avatardekoration!",
+  "e1UiOT": "Opgrader for at låse op for adgang til denne avatardekoration!",
   "zOA4a2": "Din avatardekoration er opdateret!",
   "V1AWw8": "Køb bundt",
   "IQQYeX": [
@@ -3107,8 +3120,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Blev medlem af Nitro for at låse op for adgang til denne avatardekoration!",
-  "dIepy8": "Opgrader for at låse op for adgang til denne avatardekoration!",
   "0hKkS0": "Kommandoer",
   "5C107O": "Valgfrit",
   "Ocw/sL": [
@@ -4937,6 +4948,7 @@
     " mere"
   ],
   "CumH4u": "Opret",
+  "825cFx": "Opret konto",
   "ISN+ND": "Opret kategori",
   "fUYU+v": "Opret kanal",
   "qyjZub": "Opret events",
@@ -5824,6 +5836,7 @@
   "ZPjue3": "Det bedste, du har spist i denne uge?",
   "40gTj4": "Kan ikke vente til ...",
   "SWVxPD": "Vælg din karakterklasse",
+  "xaCthI": "Hvad er du i øjeblikket besat af?",
   "3XVZ0t": "Bedste farjoke?",
   "4U+EJC": "Bedste emoji til at beskrive din dag?",
   "R1f9RU": "Hvad er din favorit anime for tiden?",
@@ -5855,7 +5868,7 @@
   "Iuzg8f": "Sæt din status",
   "zOdg0N": "Status",
   "hA60Ul": "Få din status til at skille sig ud med et forudindstillet tag",
-  "jrzHRk": "Brugerdefinerede status-tags",
+  "jrzHRk": "Tags i brugerdefineret status",
   "GQmLra": "I dag",
   "UcdRn5": "Hvad sker der?",
   "xod36+": "Hvad har du på hjertet?",
@@ -10864,6 +10877,7 @@
   "70CJbW": "OFFICIEL",
   "q1L2v7": "Bloker ord i medlemsprofilnavne",
   "OiCBhI": "Se blokeret meddelelse Hjælpeartikel",
+  "HHYPgI": "Emblem",
   "mOWsFx": "Boosting er ikke muligt, mens dit Discord Nitro-abonnement er sat på pause!",
   "CduWAg": "Du kan ikke administrere serverboosts, mens dit Nitro-abonnement er sat på pause.",
   "mkXb2N": [
@@ -24333,6 +24347,22 @@
   "9g5UGx": "Ja, jeg er sikker",
   "9SNpzs": "Slå personaliseringsdata fra?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Dette telefonnummer er allerede knyttet til en anden konti. Foretag ",
+    [
+      8,
+      "$link",
+      [
+        "fejlfinding her"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Der opstod en fejl under tilføjelse af telefonnummer, prøv igen senere",
   "0/ALaG": "Vi kan ikke genkende denne placering. Vi har sendt en bekræftelseskode til det telefonnummer, der er tilknyttet til denne konto.",
   "w55Ocn": "Indtast din bekræftelseskode for at bekræfte, at det er dig",
@@ -30602,6 +30632,7 @@
   "p9jC2t": "TIL",
   "PBgTSE": "Tryk for at deaktivere ping af den oprindelige forfatter.",
   "E+6SSU": "Klik for at se kommando",
+  "Xxm5i4": "Tryk for at se meddelelse",
   "XAkOo6": "Blokeret besked",
   "mE3KJC": "Den originale besked blev slettet",
   "G7p6v7": "Ignoreret besked",
@@ -33444,7 +33475,6 @@
   "G2egzc": "Lyd fra applikationen mangler",
   "aHOfIi": "Lyd fra applikationen er simpelthen noget skod",
   "5smP3d": "Hvordan gik det med dit stream?",
-  "OR6KNz": "Oplevede du tekniske problemer?",
   "fxiRNj": "Stream er sort",
   "E8jTMD": "Stream er utydeligt eller pixeleret",
   "Xwv419": "Lyd fra applikationen manglede",
@@ -33460,8 +33490,6 @@
   "KHGhHR": "Rapporter problem med stream",
   "CqjnLC": "Fortæl os om din oplevelse med at se stream.",
   "0uxA2d": "Fortæl os om din streaming oplevelse.",
-  "ISINlJ": "Jeg oplevede nogle tekniske problemer …",
-  "IySkjY": "Streamen gik tydeligt igennem!",
   "kLQySE": "Vis alle deltagere",
   "YSGk4O": "Inviter folk til at joine dig!",
   "WkAgPT": "Du er alene i dette opkald.",
@@ -36435,6 +36463,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Disse koder lader dig komme ind på din konto, hvis du mister din sikkerhedsnøgle. Beskyt dem, som du ville beskytte din adgangskode. Du må ikke oplyse dem til andre og skal opbevare dem på et sikkert sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Hver kode kan kun bruges én gang. Eventuelle tidligere genererede koder virker ikke længere!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Ændr kontooplysninger",
   "37S9yc": "Som en ekstra sikkerhedsforanstaltning bedes du indtaste den kode, vi netop har sendt til din e-mailadresse. Du bør modtage den i løbet af et par minutter.",
   "TjGb4e": "Bekræftelseskode",
@@ -36492,6 +36542,7 @@
   "EA4ZEh": "Er du sikker på, at du ønsker at fjerne din Godkendelse-app?",
   "0d1bXF": "Din Discord-konto er nu beskyttet med et ekstra lag af sikkerhed",
   "Awk3Gx": "2FA er aktiveret! 🎉",
+  "7wPZlp": "Sikkerhedsnøgle aktiveret! 🎉",
   "1u5B+P": "Åh nej, der er sket en fejl.",
   "xZEzbm": "Se backup-koder",
   "PsQmzc": "Indtast din adgangskode",
@@ -37545,6 +37596,7 @@
   "jec90t": "Bagefter skal du oprette en konto",
   "KtJgIy": "Adgangskoden skal være på 8 eller flere tegn.",
   "y7LSyc": "Brug kun bogstaver, tal, underscore og punktummer.",
+  "w/XiOz": "Du kan ændre dette når som helst.",
   "EJ26Oj": "Denne stemmekanal kræver Tryk-og-tal. Du kan kun lytte, indtil du skifter tilstand\ntil Tryk-og-tal fra Taleaktivitetsopdagelse.",
   "NYklho": "Tryk-og-tal påkrævet",
   "hFzI4u": "Der er Nitro i luften <3",

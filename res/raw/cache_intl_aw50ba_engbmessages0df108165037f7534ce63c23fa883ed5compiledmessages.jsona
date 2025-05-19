@@ -1228,9 +1228,22 @@
   ],
   "T15lqq": "Too fast! Wait a mo' and try again.",
   "/s1xR0": "Gift ready for delivery",
+  "1Qm829": "Apply",
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
+  "eGZFws": "Notifications are disabled for this DM.",
+  "7Sbhqa": [
+    "Notifications are disabled until ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Notifications are enabled for this DM.",
+  "GFEn8/": "Turn off",
+  "JFu44e": "Turn on",
   "9PUXpK": "Fuming",
   "IoLVi4": "Sherbet Dreamsicle",
   "nmd90t": "uwu~",
@@ -1801,6 +1814,7 @@
   "yX8s2t": "The card was declined due to insufficient funds.",
   "3s/vDA": "Invalid captcha response. Please try again.",
   "+4Empq": "This purchase results in a negative balance and unfortunately cannot be completed. We know this is frustrating and are currently working on improving this system. Check back soon!",
+  "uhPY5u": "The purchase could not be validated. Please update your client.",
   "3jprCQ": "Unable to process change due to pending payment.",
   "sUWxgY": "You've attempted too many purchases too quickly. Please wait a bit and try again!",
   "yNYvKy": "An unknown payment source was specified. Select another and try again.",
@@ -2420,12 +2434,9 @@
   "++JLLy": "People were toxic or inappropriate",
   "tLi4cX": "Tell us about your call experience.",
   "C/12Tk": "Negative",
-  "0jP8iY": "I had some technical difficulties...",
   "Xcb4cH": "Neutral",
   "1Vyb5O": "Positive",
-  "B81oy8": "The call was perfectly smooth!",
   "Ss6tlZ": "How'd the call go?",
-  "xv0BJi": "Did you have any technical problems?",
   "IdKo29": [
     "You need to be friends with ",
     [
@@ -2861,6 +2872,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Join Nitro to unlock access to this avatar decoration!",
+  "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
   "IQQYeX": [
@@ -3094,8 +3107,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Join Nitro to unlock access to this avatar decoration!",
-  "dIepy8": "Upgrade to unlock access to this avatar decoration!",
   "0hKkS0": "Commands",
   "5C107O": "Optional",
   "Ocw/sL": [
@@ -4921,6 +4932,7 @@
     " more"
   ],
   "CumH4u": "Create",
+  "825cFx": "Create Account",
   "ISN+ND": "Create Category",
   "fUYU+v": "Create Channel",
   "qyjZub": "Create Events",
@@ -5780,6 +5792,7 @@
   "ZPjue3": "Best thing you’ve eaten this week?",
   "40gTj4": "Can’t wait for...",
   "SWVxPD": "Choose your character class",
+  "xaCthI": "What are you currently obsessed with?",
   "3XVZ0t": "Best dad joke?",
   "4U+EJC": "Best emoji to describe your day?",
   "R1f9RU": "Favourite anime lately?",
@@ -10834,6 +10847,7 @@
   "70CJbW": "OFFICIAL",
   "q1L2v7": "Block Words in Member Profile Names",
   "OiCBhI": "View Blocked Message Help Article",
+  "HHYPgI": "Badge",
   "mOWsFx": "Boosting is not available while your Nitro subscription is paused!",
   "CduWAg": "You cannot manage Server Boosts while your Nitro subscription is paused.",
   "mkXb2N": [
@@ -24242,6 +24256,22 @@
   "9g5UGx": "Yes, I'm sure",
   "9SNpzs": "Turn off personalisation?",
   "dEYpSk": "Phone",
+  "kj8xiI": [
+    "This phone number is already associated with another account. Please ",
+    [
+      8,
+      "$link",
+      [
+        "troubleshoot here"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Failed to add phone number, please try again later",
   "0/ALaG": "We don't recognise this location. We sent a confirmation code to the phone number connected to this account.",
   "w55Ocn": "Enter your confirmation code to verify it's you",
@@ -30523,6 +30553,7 @@
   "p9jC2t": "ON",
   "PBgTSE": "Tap to disable pinging the original author.",
   "E+6SSU": "Click to see command",
+  "Xxm5i4": "Tap to see message",
   "XAkOo6": "Blocked message",
   "mE3KJC": "Original message was deleted",
   "G7p6v7": "Ignored message",
@@ -33321,7 +33352,6 @@
   "G2egzc": "Application audio is absent",
   "aHOfIi": "Application audio is low quality",
   "5smP3d": "How'd the stream go?",
-  "OR6KNz": "Did you have any technical problems?",
   "fxiRNj": "Stream is black",
   "E8jTMD": "Stream is blurry or pixelated",
   "Xwv419": "Application audio was absent",
@@ -33337,8 +33367,6 @@
   "KHGhHR": "Report Stream Issue",
   "CqjnLC": "Tell us about your stream watching experience.",
   "0uxA2d": "Tell us about your streaming experience.",
-  "ISINlJ": "I had some technical difficulties...",
-  "IySkjY": "The stream was perfectly smooth!",
   "kLQySE": "Show All Participants",
   "YSGk4O": "Invite people to join you!",
   "WkAgPT": "You're alone in this call.",
@@ -36302,6 +36330,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "These codes will allow you to enter your account if you lose your security key. Protect them like you would protect your password. Do not share them with anyone and keep them somewhere safe."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Each code can only be used once! Any previously generated codes no longer work!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Change account details",
   "37S9yc": "As an added security measure, please enter the key we’ve just sent to your email address. You should see it in a minute or two.",
   "TjGb4e": "Verification key",
@@ -36359,6 +36409,7 @@
   "EA4ZEh": "Are you sure you want to remove your Authenticator App?",
   "0d1bXF": "Your Discord account is now protected with an extra layer of security",
   "Awk3Gx": "2FA is activated! 🎉",
+  "7wPZlp": "Security key activated! 🎉",
   "1u5B+P": "Oh no, an error has occurred.",
   "xZEzbm": "View Backup Codes",
   "PsQmzc": "Enter Your Password",
@@ -37402,6 +37453,7 @@
   "jec90t": "Next, create an account",
   "KtJgIy": "Password must be 8 or more characters.",
   "y7LSyc": "Only use letters, numbers, underscores and full stops.",
+  "w/XiOz": "You can change this at any time.",
   "EJ26Oj": "This channel requires Push-to-talk to voice chat. You will only be able to listen until you switch modes\nto Push-to-talk from Voice Activity Detection.",
   "NYklho": "Push-to-talk Required",
   "hFzI4u": "Nitro is in the air <3",

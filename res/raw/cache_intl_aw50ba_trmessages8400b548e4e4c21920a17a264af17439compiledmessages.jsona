@@ -1234,9 +1234,22 @@
   ],
   "T15lqq": "Çok hızlı! Biraz bekle ve tekrar dene.",
   "/s1xR0": "Hediye teslimata hazır",
+  "1Qm829": "Uygula",
   "PHjkRE": "Uygulamalar",
   "AKcFUl": "Uygulama Dizini",
   "LO4f0N": "Ortak",
+  "eGZFws": "Bildirimler bu DM için devre dışı.",
+  "7Sbhqa": [
+    "Bildirimler ",
+    [
+      1,
+      "endDate"
+    ],
+    " tarihine kadar devre dışı."
+  ],
+  "VeIJWl": "Bu DM için bildirimler etkin.",
+  "GFEn8/": "Kapat",
+  "JFu44e": "Aç",
   "9PUXpK": "Tütüyor",
   "IoLVi4": "Şerbetli Düş Dondurması",
   "nmd90t": "uwu~",
@@ -1806,6 +1819,7 @@
   "yX8s2t": "Kart yetersiz bakiye nedeniyle reddedildi.",
   "3s/vDA": "Geçersiz captcha yanıtı. Lütfen tekrar dene.",
   "+4Empq": "Bu satın alma işlemi bakiyeni eksiye düşürecek ve ne yazık ki bu nedenle tamamlanamıyor. Bunun çok sinir bozucu olduğunu biliyoruz ve şu anda bu sistemi geliştirmeye çalışıyoruz. Bir süre sonra tekrar kontrol et!",
+  "uhPY5u": "Satın alma doğrulanamadı. Lütfen istemcini güncelle.",
   "3jprCQ": "Ödeme henüz beklemede olduğundan değişiklik yapılamadı.",
   "sUWxgY": "Kısa bir süre içinde çok fazla satın alım yapmayı denedin. Lütfen biraz bekle ve tekrar dene!",
   "yNYvKy": "Bilinmeyen bir ödeme kaynağı belirtildi. Başka birini seç ve tekrar dene.",
@@ -2423,12 +2437,9 @@
   "++JLLy": "İnsanlar kötü niyetli veya uygunsuzdu",
   "tLi4cX": "Bize arama deneyiminden bahset.",
   "C/12Tk": "Olumsuz",
-  "0jP8iY": "Bazı teknik zorluklar yaşadım...",
   "Xcb4cH": "Nötr",
   "1Vyb5O": "Olumlu",
-  "B81oy8": "Arama kusursuz geçti!",
   "Ss6tlZ": "Arama nasıl geçti?",
-  "xv0BJi": "Herhangi bir teknik sorun yaşadın mı?",
   "IdKo29": [
     "Arama başlatmak için ",
     [
@@ -2863,6 +2874,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Bu avatar dekorasyonuna erişim sağlamak için Nitro'ya katıl!",
+  "e1UiOT": "Bu avatar dekorasyonuna erişim sağlamak için yükselt!",
   "zOA4a2": "Avatar dekorasyonun güncellendi!",
   "V1AWw8": "Paket satın al",
   "IQQYeX": [
@@ -3101,8 +3114,6 @@
     ],
     " ögesini topladın!"
   ],
-  "2xIzZW": "Bu avatar dekorasyonuna erişim sağlamak için Nitro'ya katıl!",
-  "dIepy8": "Bu avatar dekorasyonuna erişim sağlamak için yükselt!",
   "0hKkS0": "Komutlar",
   "5C107O": "İsteğe Bağlı",
   "Ocw/sL": [
@@ -4874,6 +4885,7 @@
     " daha"
   ],
   "CumH4u": "Oluştur",
+  "825cFx": "Hesap Oluştur",
   "ISN+ND": "Kategori Oluştur",
   "fUYU+v": "Kanal Oluştur",
   "qyjZub": "Etkinlik Oluştur",
@@ -5750,6 +5762,7 @@
   "ZPjue3": "Bu hafta yediğin en iyi yemek neydi?",
   "40gTj4": "Sabırsızlıkla beklediğim şey...",
   "SWVxPD": "Karakter sınıfını seç",
+  "xaCthI": "Şu anda neye takıntılısın?",
   "3XVZ0t": "En iyi baba şakası mı?",
   "4U+EJC": "Gününü anlatan emoji hangisi?",
   "R1f9RU": "Son zamanlarda en sevdiğin anime hangisi?",
@@ -10772,6 +10785,7 @@
   "70CJbW": "RESMÎ",
   "q1L2v7": "Üye Profil Adlarındaki Kelimeleri Engelle",
   "OiCBhI": "Engellenen Mesaj Yardım Makalesini Görüntüle",
+  "HHYPgI": "Rozet",
   "mOWsFx": "Nitro aboneliğin duraklatılmışken takviye kullanılamaz!",
   "CduWAg": "Nitro aboneliğin duraklatılmışken Sunucu Takviyelerini yönetemezsin.",
   "mkXb2N": [
@@ -24302,6 +24316,22 @@
   "9g5UGx": "Evet, eminim",
   "9SNpzs": "Kişiselleştirme kapatılsın mı?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Bu telefon numarası zaten başka bir hesapla ilişkilendirilmiş. Lütfen ",
+    [
+      8,
+      "$link",
+      [
+        "sorunu buradan çöz"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Telefon numarası eklenemedi, lütfen daha sonra tekrar dene",
   "0/ALaG": "Bu konumu tanımıyoruz. Bu hesapla bağlantılı telefon numarasına SMS gönderdik.",
   "w55Ocn": "Kimliğini doğrulamak için onay kodunu gir.",
@@ -30538,6 +30568,7 @@
   "p9jC2t": "AÇIK",
   "PBgTSE": "İlk yazardan bahsetmeyi kapatmak için dokun.",
   "E+6SSU": "Komutu görmek için tıkla",
+  "Xxm5i4": "Mesajı görmek için dokun",
   "XAkOo6": "Engellenen mesaj",
   "mE3KJC": "Orijinal mesaj silinmiş",
   "G7p6v7": "Yok sayılan mesaj yok",
@@ -33357,7 +33388,6 @@
   "G2egzc": "Uygulamanın sesi yok",
   "aHOfIi": "Uygulamanın ses kalitesi düşük",
   "5smP3d": "Yayın nasıl gidiyor?",
-  "OR6KNz": "Herhangi bir teknik sorun yaşadın mı?",
   "fxiRNj": "Yayın ekranı siyah",
   "E8jTMD": "Yayın bulanık veya piksel görünümünde",
   "Xwv419": "Uygulamanın sesi yoktu",
@@ -33373,8 +33403,6 @@
   "KHGhHR": "Yayın Sorunu Bildir",
   "CqjnLC": "Bize yayın izleme deneyiminden bahset.",
   "0uxA2d": "Bize yayın yapma deneyiminden bahset.",
-  "ISINlJ": "Bazı teknik zorluklar yaşadım...",
-  "IySkjY": "Yayın kusursuz geçti!",
   "kLQySE": "Tüm Katılımcıları Göster",
   "YSGk4O": "İnsanları sana katılmaya davet et!",
   "WkAgPT": "Bu aramada tek başınasın.",
@@ -36343,6 +36371,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Bu kodlar eğer güvenlik anahtarını kaybedersen hesabına girmene imkân verecek. Bunları şifren gibi koru, kimseyle paylaşma ve güvenli bir yerde sakla."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Her bir kod sadece bir kere kullanılabilir! Önceden oluşturulmuş hiçbir kod çalışmayacaktır!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Hesap detaylarını değiştir",
   "37S9yc": "Bir güvenlik önlemi olarak lütfen az önce e-posta adresine gönderdiğimiz anahtarı gir. Birkaç dakika içinde gelmiş olmalı.",
   "TjGb4e": "Doğrulama anahtarı",
@@ -36399,6 +36449,7 @@
   "EA4ZEh": "Doğrulayıcı Uygulama'yı kaldırmak istediğinden emin misin?",
   "0d1bXF": "Discord hesabın artık ekstra bir güvenlik katmanı ile korunuyor",
   "Awk3Gx": "2FA etkinleştirildi! 🎉",
+  "7wPZlp": "Güvenlik anahtarı etkinleştirildi! 🎉",
   "1u5B+P": "Eyvah, bir hata oluştu.",
   "xZEzbm": "Yedek Kodları Görüntüle",
   "PsQmzc": "Şifreni Gir",
@@ -37446,6 +37497,7 @@
   "jec90t": "Sonra bir hesap oluştur",
   "KtJgIy": "Şifre 8 veya daha fazla karakterden oluşmalı.",
   "y7LSyc": "Yalnızca harf, rakam, alt çizgi ve nokta kullan.",
+  "w/XiOz": "Bunu istediğin zaman değiştirebilirsin.",
   "EJ26Oj": "Bu kanal sesli sohbet için Bas-Konuş gerektirir. Ses Etkinliği Algılama seçeneğinden\nBas-Konuş'a geçene kadar sadece sesleri duyabilirsin.",
   "NYklho": "Bas-Konuş Gereklidir",
   "hFzI4u": "Havada Nitro kokusu var <3",

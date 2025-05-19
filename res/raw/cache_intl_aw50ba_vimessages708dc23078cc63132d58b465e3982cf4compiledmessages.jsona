@@ -1236,9 +1236,22 @@
   ],
   "T15lqq": "Quá nhanh! Vui lòng chờ một chút và thử lại sau nhé.",
   "/s1xR0": "Quà tặng đã sẵn sàng để gửi đi",
+  "1Qm829": "Tham Gia",
   "PHjkRE": "Ứng dụng",
   "AKcFUl": "Thư Mục App",
   "LO4f0N": "Đối Tác",
+  "eGZFws": "Thông báo đã bị tắt cho DM này.",
+  "7Sbhqa": [
+    "Thông báo sẽ bị tắt cho tới ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Đã bật thông báo cho DM này.",
+  "GFEn8/": "Tắt",
+  "JFu44e": "Bật",
   "9PUXpK": "Tức Giận",
   "IoLVi4": "Kem Bảy Màu",
   "nmd90t": "uwu~",
@@ -1817,6 +1830,7 @@
   "yX8s2t": "Thẻ đã bị từ chối do không đủ tiền.",
   "3s/vDA": "Phản hồi captcha không hợp lệ. Vui lòng thử lại.",
   "+4Empq": "Giao dịch này sẽ khiến số dư tài khoản bị âm và không may là sẽ không thể hoàn thành được. Chúng tôi hiểu rằng điều này sẽ khiến bạn bực bội và chúng tôi vẫn đang cố gắng để cải thiện hệ thống này. Sẽ sớm cập nhật!",
+  "uhPY5u": "Giao dịch mua không thể xác thực. Vui lòng cập nhật máy khách của bạn.",
   "3jprCQ": "Không thể xử lý thay đổi vì có khoản thanh toán đang chờ.",
   "sUWxgY": "Bạn đã thử thực hiện quá nhiều giao dịch quá nhanh. Vui lòng chờ và thử lại sau!",
   "yNYvKy": "Nguồn thanh toán được chỉ định không rõ ràng. Vui lòng chọn phương thức khác và thử lại.",
@@ -2441,12 +2455,9 @@
   "++JLLy": "Mọi người có hành vi độc hại hoặc không phù hợp",
   "tLi4cX": "Hãy cho chúng tôi biết về trải nghiệm của bạn khi gọi.",
   "C/12Tk": "Tiêu cực",
-  "0jP8iY": "Tôi gặp chút khó khăn về kỹ thuật...",
   "Xcb4cH": "Trung lập",
   "1Vyb5O": "Tích cực",
-  "B81oy8": "Cuộc gọi hoàn toàn suôn sẻ!",
   "Ss6tlZ": "Cuộc gọi thế nào?",
-  "xv0BJi": "Bạn có gặp vấn đề kỹ thuật nào không?",
   "IdKo29": [
     "Bạn cần kết bạn với ",
     [
@@ -2881,6 +2892,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Đăng ký Nitro để mở khóa quyền truy cập vào trang trí ảnh đại diện này!",
+  "e1UiOT": "Nâng cấp để mở khóa quyền truy cập vào trang trí ảnh đại diện này!",
   "zOA4a2": "Trang trí ảnh đại diện của bạn đã được cập nhật!",
   "V1AWw8": "Mua gói",
   "IQQYeX": [
@@ -3118,8 +3131,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Đăng ký Nitro để mở khóa quyền truy cập vào trang trí ảnh đại diện này!",
-  "dIepy8": "Nâng cấp để mở khóa quyền truy cập vào trang trí ảnh đại diện này!",
   "0hKkS0": "Lệnh",
   "5C107O": "Không bắt buộc",
   "Ocw/sL": [
@@ -4947,6 +4958,7 @@
     ]
   ],
   "CumH4u": "Tạo",
+  "825cFx": "Tạo tài khoản",
   "ISN+ND": "Tạo Danh Mục",
   "fUYU+v": "Tạo kênh",
   "qyjZub": "Tạo Sự kiện",
@@ -5835,6 +5847,7 @@
   "ZPjue3": "Món ngon nhất bạn đã ăn trong tuần này?",
   "40gTj4": "Không thể đợi...",
   "SWVxPD": "Chọn hệ nhân vật của bạn",
+  "xaCthI": "Bạn hiện đang bị ám ảnh với điều gì?",
   "3XVZ0t": "Câu đùa hay nhất của các ông bố?",
   "4U+EJC": "Emoji phù hợp nhất để mô tả ngày của bạn?",
   "R1f9RU": "Anime ưa thích gần đây?",
@@ -10894,6 +10907,7 @@
   "70CJbW": "CHÍNH THỨC",
   "q1L2v7": "Chặn các từ trong Tên Hồ Sơ Thành Viên",
   "OiCBhI": "Xem mục hỗ trợ về tin nhắn bị chặn",
+  "HHYPgI": "Huy hiệu",
   "mOWsFx": "Nâng Cấp không khả dụng trong thời gian gói đăng ký Nitro của bạn đang tạm dừng!",
   "CduWAg": "Bạn không thể quản lý Nâng Cấp Máy Chủ trong thời gian gói đăng ký Nitro của bạn đang tạm dừng.",
   "mkXb2N": [
@@ -24339,6 +24353,22 @@
   "9g5UGx": "Vâng tôi chắc chắn",
   "9SNpzs": "Tắt cá nhân hóa?",
   "dEYpSk": "Điện thoại",
+  "kj8xiI": [
+    "Số điện thoại này đã được liên kết với một tài khoản khác. Vui lòng ",
+    [
+      8,
+      "$link",
+      [
+        "khắc phục sự cố tại đây"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Thêm số điện thoại thất bại, vui lòng thử lại sau",
   "0/ALaG": "Chúng tôi không nhận diện được địa điểm hiện tại của bạn. Chúng tôi đã gửi mã xác minh đến số điện thoại có liên kết với tài khoản này.",
   "w55Ocn": "Hãy nhập mã xác minh để xác thực đó là bạn",
@@ -30625,6 +30655,7 @@
   "p9jC2t": "BẬT",
   "PBgTSE": "Nhấn để tắt tính năng ping tác giả gốc.",
   "E+6SSU": "Nhấn để xem câu lệnh",
+  "Xxm5i4": "Nhấn để xem tin nhắn",
   "XAkOo6": "Tin nhắn bị chặn",
   "mE3KJC": "Tin nhắn gốc đã bị xóa",
   "G7p6v7": "Tin nhắn đã bỏ qua",
@@ -33472,7 +33503,6 @@
   "G2egzc": "Ứng dụng không có tiếng",
   "aHOfIi": "Âm thanh ứng dụng có chất lượng kém",
   "5smP3d": "Stream thế nào?",
-  "OR6KNz": "Bạn có gặp vấn đề kỹ thuật nào không?",
   "fxiRNj": "Màn hình stream màu đen",
   "E8jTMD": "Stream bị mờ hoặc vỡ hình",
   "Xwv419": "Ứng dụng không có tiếng",
@@ -33488,8 +33518,6 @@
   "KHGhHR": "Báo Cáo Lỗi Stream",
   "CqjnLC": "Hãy cho chúng tôi biết về trải nghiệm của bạn khi xem stream.",
   "0uxA2d": "Hãy cho chúng tôi biết về trải nghiệm của bạn khi stream.",
-  "ISINlJ": "Tôi gặp chút khó khăn về kỹ thuật...",
-  "IySkjY": "Stream hoàn toàn mượt mà!",
   "kLQySE": "Hiển Thị Tất Cả Thành Viên Tham Gia",
   "YSGk4O": "Hãy mời mọi người tham gia máy chủ của bạn!",
   "WkAgPT": "Có mỗi mình bạn trong cuộc gọi này.",
@@ -36459,6 +36487,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Các mã này sẽ cho phép bạn đăng nhập nếu mất đi mã bảo mật, hãy bảo vệ chúng như chính mật khẩu của bạn vậy. Vui lòng không chia sẻ chúng với bất kỳ ai khác và giữ chúng ở nơi an toàn."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Mỗi mã chỉ có thể dùng được một lần! Các mã được tạo trước đó sẽ không còn hiệu lực!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Thay đổi thông tin chi tiết tài khoản",
   "37S9yc": "Là một biện pháp bảo mật bổ sung, vui lòng nhập mã xác thực mà chúng tôi vừa gửi đến địa chỉ email của bạn. Bạn sẽ thấy nó sau một hoặc hai phút.",
   "TjGb4e": "Mã xác thực",
@@ -36516,6 +36566,7 @@
   "EA4ZEh": "Bạn có chắc muốn gỡ Ứng Dụng Xác Thực không?",
   "0d1bXF": "Tài khoản Discord của bạn đã được thêm một lớp bảo mật",
   "Awk3Gx": "2FA đã được kích hoạt! 🎉",
+  "7wPZlp": "Đã kích hoạt mã bảo mật! 🎉",
   "1u5B+P": "Ôi không, đã xảy ra lỗi.",
   "xZEzbm": "Xem Mã Dự Phòng",
   "PsQmzc": "Nhập mật khẩu của bạn",
@@ -37566,6 +37617,7 @@
   "jec90t": "Tiếp theo, tạo một tài khoản",
   "KtJgIy": "Mật khẩu phải có 8 ký tự trở lên.",
   "y7LSyc": "Chỉ chứa ký tự, chữ số, dấu gạch dưới và dấu chấm.",
+  "w/XiOz": "Bạn có thể thay đổi thông tin này bất cứ lúc nào.",
   "EJ26Oj": "Kênh này yêu cầu Push to Talk để trò chuyện thoại. Bạn chỉ có thể nghe cho đến khi bạn chuyển chế độ\ntừ Bộ Phát Hiện Giọng Nói sang Push to Talk.",
   "NYklho": "Cần có Push to Talk",
   "hFzI4u": "Nitro đang loanh quanh đâu đây <3",

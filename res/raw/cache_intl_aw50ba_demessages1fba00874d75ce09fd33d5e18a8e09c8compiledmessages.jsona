@@ -1236,9 +1236,22 @@
   ],
   "T15lqq": "Zu schnell! Bitte warte ein wenig und versuch’s dann nochmal.",
   "/s1xR0": "Geschenk bereit zur Auslieferung",
+  "1Qm829": "Anwenden",
   "PHjkRE": "Apps",
   "AKcFUl": "App-Verzeichnis",
   "LO4f0N": "Partner",
+  "eGZFws": "Benachrichtigungen sind für diese DM deaktiviert.",
+  "7Sbhqa": [
+    "Benachrichtigungen sind bis ",
+    [
+      1,
+      "endDate"
+    ],
+    " deaktiviert."
+  ],
+  "VeIJWl": "Benachrichtigungen sind für diese DM aktiviert.",
+  "GFEn8/": "Deaktivieren",
+  "JFu44e": "Aktivieren",
   "9PUXpK": "Wütend",
   "IoLVi4": "Regenbogen-Sorbet",
   "nmd90t": "uwu~",
@@ -1810,6 +1823,7 @@
   "yX8s2t": "Die Karte wurde wegen unzureichender Mittel abgelehnt.",
   "3s/vDA": "Ungültige Captcha-Antwort. Bitte versuch es noch einmal.",
   "+4Empq": "Dieser Kauf würde dazu führen, dass dein Kontostand ins Minus fällt, und kann deshalb leider nicht abgeschlossen werden. Wir wissen, wie frustrierend das ist, und arbeiten zurzeit daran, dieses System zu verbessern. Schau bald wieder rein!",
+  "uhPY5u": "Der Kauf konnte nicht validiert werden. Bitte aktualisiere deinen Client.",
   "sUWxgY": "Du hast zu viele Käufe nacheinander getätigt. Hab einen Augenblick Geduld und versuch es später nochmal!",
   "yNYvKy": "Du hast eine unbekannte Zahlungsmethode angegeben. Wähle eine andere aus und versuche es noch einmal.",
   "qS+yMj": "Geschenklink",
@@ -2429,12 +2443,9 @@
   "++JLLy": "Personen waren toxisch oder unangemessen",
   "tLi4cX": "Erzähl uns von deinem Anruf.",
   "C/12Tk": "Negativ",
-  "0jP8iY": "Ich hatte ein paar technische Schwierigkeiten …",
   "Xcb4cH": "Neutral",
   "1Vyb5O": "Positiv",
-  "B81oy8": "Der Anruf war absolut reibungslos!",
   "Ss6tlZ": "Wie lief der Anruf?",
-  "xv0BJi": "Hattest du irgendwelche technischen Probleme?",
   "IdKo29": [
     "Du musst mit ",
     [
@@ -2876,6 +2887,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Hol dir Nitro, um Zugriff auf diese Avatardekoration freizuschalten!",
+  "e1UiOT": "Upgraden, um Zugriff auf diese Avatardekoration freizuschalten!",
   "zOA4a2": "Deine Avatardekoration wurde aktualisiert!",
   "V1AWw8": "Paket kaufen",
   "IQQYeX": [
@@ -3111,8 +3124,6 @@
     ],
     " gesammelt!"
   ],
-  "2xIzZW": "Hol dir Nitro, um Zugriff auf diese Avatardekoration freizuschalten!",
-  "dIepy8": "Upgraden, um Zugriff auf diese Avatardekoration freizuschalten!",
   "0hKkS0": "Befehle",
   "5C107O": "Optional",
   "Ocw/sL": [
@@ -4950,6 +4961,7 @@
     " weitere"
   ],
   "CumH4u": "Erstellen",
+  "825cFx": "Account erstellen",
   "ISN+ND": "Kategorie erstellen",
   "fUYU+v": "Kanal erstellen",
   "qyjZub": "Events erstellen",
@@ -5812,6 +5824,7 @@
   "ZPjue3": "Was war das Beste, das du diese Woche gegessen hast?",
   "40gTj4": "Ich warte schon gespannt auf …",
   "SWVxPD": "Wähle deine Charakterklasse",
+  "xaCthI": "Wonach bist du derzeit ganz verrückt?",
   "3XVZ0t": "Bester Flachwitz?",
   "4U+EJC": "Welches Emoji beschreibt deinen Tag am besten?",
   "R1f9RU": "Lieblingsanime in letzter Zeit?",
@@ -8744,9 +8757,9 @@
   "f8wNDg": "Sortieren nach",
   "UIltXV": "Gepostet am",
   "jOPmcH": "Kürzlich aktiv",
-  "Paxaur": "Tag-Zuordnung",
-  "FCXUu7": "Alle zuordnen",
-  "rQ0ctb": "Manche zuordnen",
+  "Paxaur": "Tag-Übereinstimmung",
+  "FCXUu7": "Alle",
+  "rQ0ctb": "Beliebige",
   "jPhTvb": [
     [
       1,
@@ -8802,7 +8815,7 @@
   ],
   "gePre3": "Sortierung",
   "165cVV": "Lege die Standard-Sortierung für neue Posts fest. Mitglieder können weiterhin zwischen diesen Optionen wechseln.",
-  "DqOl8P": "Lege das Standardverhalten für die Zuordnung von Tags fest. Mitglieder können weiterhin zwischen diesen Optionen wechseln.",
+  "DqOl8P": "Lege das Standardverhalten für die Tag-Übereinstimmung fest. Mitglieder können weiterhin zwischen diesen Optionen wechseln.",
   "YtsXFB": [
     "Worüber möchtest du in #",
     [
@@ -10917,6 +10930,7 @@
   "70CJbW": "OFFIZIELL",
   "q1L2v7": "Wörter in Mitgliederprofilnamen blockieren",
   "OiCBhI": "Hilfeartikel für blockierte Nachrichten anzeigen",
+  "HHYPgI": "Abzeichen",
   "mOWsFx": "Boosting ist nicht verfügbar, solange dein Nitro-Abonnement pausiert ist!",
   "CduWAg": "Du kannst Server-Boosts nicht verwalten, während dein Nitro-Abonnement pausiert ist.",
   "mkXb2N": [
@@ -24469,6 +24483,22 @@
   "9g5UGx": "Ja, ich will das!",
   "9SNpzs": "Personalisierung deaktivieren?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Diese Telefonnummer ist bereits mit einem anderen Account verknüpft. Bitte ",
+    [
+      8,
+      "$link",
+      [
+        "hier beheben"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Hinzufügen der Telefonnummer fehlgeschlagen, bitte versuch es später erneut",
   "0/ALaG": "Wir erkennen diesen Standort nicht. Ein Bestätigungscode wurde an die Telefonnummer gesendet, die mit diesem Account verknüpft ist.",
   "w55Ocn": "Gib deinen Bestätigungscode ein, um dich zu verifizieren.",
@@ -30810,6 +30840,7 @@
   "p9jC2t": "AN",
   "PBgTSE": "Tippen, um das Anpingen des ursprünglichen Verfassers zu deaktivieren.",
   "E+6SSU": "Klicken, um Befehl anzuzeigen",
+  "Xxm5i4": "Tippe, um die Nachricht anzuzeigen",
   "XAkOo6": "Nachricht wurde blockiert",
   "mE3KJC": "Ursprüngliche Nachricht wurde gelöscht",
   "G7p6v7": "Ignorierte Nachricht",
@@ -33605,7 +33636,6 @@
   "G2egzc": "Kein Ton in der Anwendung",
   "aHOfIi": "Die Tonqualität der Anwendung ist schlecht",
   "5smP3d": "Wie lief der Stream?",
-  "OR6KNz": "Hattest du irgendwelche technischen Probleme?",
   "fxiRNj": "Stream ist schwarz",
   "E8jTMD": "Stream ist verschwommen oder verpixelt",
   "Xwv419": "Kein Ton in der Anwendung",
@@ -33621,8 +33651,6 @@
   "KHGhHR": "Stream-Problem melden",
   "CqjnLC": "Erzähl uns von deiner Erfahrung als Stream-Zuschauer.",
   "0uxA2d": "Erzähl uns von deiner Erfahrung als Streamer.",
-  "ISINlJ": "Ich hatte ein paar technische Schwierigkeiten …",
-  "IySkjY": "Der Stream war absolut reibungslos!",
   "kLQySE": "Alle Teilnehmer zeigen",
   "YSGk4O": "Lade Leute zu dir ein!",
   "WkAgPT": "Du bist in diesem Gespräch alleine.",
@@ -36525,6 +36553,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Mit diesen Codes kannst du dich in deinen Account einloggen, wenn du deinen Sicherheitsschlüssel verlieren solltest. Schütze sie wie dein Passwort. Gib sie an niemanden weiter und bewahre sie an einem sicheren Ort auf."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Jeder Code kann nur einmal verwendet werden! Jeder zuvor generierte Code wird nicht mehr funktionieren!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Accountdetails ändern",
   "37S9yc": "Gib als zusätzliche Sicherheitsmaßnahme bitte den Schlüssel ein, den wir dir an deine E-Mail-Adresse gesendet haben. Er sollte in ein oder zwei Minuten in deinem Postfach erscheinen.",
   "TjGb4e": "Verifizierungsschlüssel",
@@ -36582,6 +36632,7 @@
   "EA4ZEh": "Bist du sicher, dass du deine Authentifizierungs-App entfernen möchtest?",
   "0d1bXF": "Dein Discord-Account wird jetzt noch besser geschützt.",
   "Awk3Gx": "2FA ist aktiviert! 🎉",
+  "7wPZlp": "Sicherheitsschlüssel aktiviert! 🎉",
   "1u5B+P": "Ups, hier ist etwas schiefgegangen.",
   "xZEzbm": "Backup-Codes anzeigen",
   "PsQmzc": "Passwort eingeben",
@@ -37635,6 +37686,7 @@
   "jec90t": "Erstelle als Nächstes einen Account",
   "KtJgIy": "Das Passwort benötigt mindestens 8 Zeichen.",
   "y7LSyc": "Verwende nur Buchstaben, Zahlen, Unterstriche und Punkte.",
+  "w/XiOz": "Du kannst deine Auswahl jederzeit ändern.",
   "EJ26Oj": "Dieser Kanal erfordert Push-to-Talk um zu sprechen. Solange du den Modus nicht von Sprachaktivierung\nauf Push-to-Talk änderst, kannst du nur zuhören.",
   "NYklho": "Push-to-Talk erforderlich",
   "hFzI4u": "Nitro liegt in der Luft <3",

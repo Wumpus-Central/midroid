@@ -39,10 +39,10 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var1: CompletableJob = k0.b(null, 1, null);
-      val var0: ExecutorService = Executors.newSingleThreadExecutor();
-      q.g(var0, "newSingleThreadExecutor(...)");
-      scope = g.a(var1.P(T.b(var0)));
+      val var0: CompletableJob = k0.b(null, 1, null);
+      val var1: ExecutorService = Executors.newSingleThreadExecutor();
+      q.g(var1, "newSingleThreadExecutor(...)");
+      scope = g.a(var0.P(T.b(var1)));
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
@@ -257,17 +257,17 @@ public object MediaPlayerManager {
                   } else {
                      s.b(var1);
                      var1 = this.$mediaPlayer.getMediaSource();
-                     val var16: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+                     val var7: MediaPlayerManager = MediaPlayerManager.INSTANCE;
                      val var4: Boolean = q.c(
                         (MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release().getValue() as Pair).a() as MediaSource, var1
                      );
-                     val var7: MediaPlayer.Event = this.$event;
+                     val var16: MediaPlayer.Event = this.$event;
                      if (q.c(this.$event, MediaPlayer.Event.Paused.INSTANCE)) {
                         if (!var4) {
                            return Unit.a;
                         }
 
-                        var6 = var16.getPlaybackRateFlow$media_player_release();
+                        var6 = var7.getPlaybackRateFlow$media_player_release();
 
                         do {
                            var17 = (MediaSource)var6.getValue();
@@ -277,14 +277,14 @@ public object MediaPlayerManager {
                         return Unit.a;
                      }
 
-                     if (!q.c(var7, MediaPlayer.Event.StartedPlaying.INSTANCE)) {
-                        if (q.c(var7, MediaPlayer.Event.PlaybackEnded.INSTANCE)) {
+                     if (!q.c(var16, MediaPlayer.Event.StartedPlaying.INSTANCE)) {
+                        if (q.c(var16, MediaPlayer.Event.PlaybackEnded.INSTANCE)) {
                            if (!var4) {
                               return Unit.a;
                            }
 
-                           var16.getPlaybackRateFlow$media_player_release().setValue(o8.w.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0)));
-                           var6 = var16.getPlaybackProgressFlow$media_player_release();
+                           var7.getPlaybackRateFlow$media_player_release().setValue(o8.w.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0)));
+                           var6 = var7.getPlaybackProgressFlow$media_player_release();
 
                            do {
                               var1 = var6.getValue();
@@ -304,12 +304,12 @@ public object MediaPlayerManager {
 
                            MediaPlayerManager.access$setActiveMonitoringJob$p(null);
                         } else {
-                           if (!q.c(var7, MediaPlayer.Event.BufferEnd.INSTANCE)) {
-                              var3 = q.c(var7, MediaPlayer.Event.BufferStart.INSTANCE);
+                           if (!q.c(var16, MediaPlayer.Event.BufferEnd.INSTANCE)) {
+                              var3 = q.c(var16, MediaPlayer.Event.BufferStart.INSTANCE);
                            }
 
                            if (!var3) {
-                              var3 = var7 is MediaPlayer.Event.PlaybackError;
+                              var3 = var16 is MediaPlayer.Event.PlaybackError;
                               return Unit.a;
                            }
                         }
@@ -339,8 +339,8 @@ public object MediaPlayerManager {
                         break label86;
                      }
 
-                     val var18: d0 = K.c();
-                     val var8: Function2 = new Function2(var26, null) {
+                     val var8: d0 = K.c();
+                     val var18: Function2 = new Function2(var26, null) {
                         final MediaPlayer $prevMediaPlayer;
                         int label;
 
@@ -371,7 +371,7 @@ public object MediaPlayerManager {
                      this.L$0 = var1;
                      this.L$1 = var26;
                      this.label = 1;
-                     if (f.g(var18, var8, this) === var6) {
+                     if (f.g(var8, var18, this) === var6) {
                         return var6;
                      }
                   }
@@ -379,21 +379,22 @@ public object MediaPlayerManager {
                   var17 = var1;
                }
 
-               val var27: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
+               val var22: MutableStateFlow = MediaPlayerManager.INSTANCE.getPlaybackRateFlow$media_player_release();
 
+               val var27: Any;
                do {
-                  var1 = var27.getValue();
-                  val var22: Pair = var1 as Pair;
-               } while (!var27.a(var1, o8.w.a(var17, kotlin.coroutines.jvm.internal.b.c(1.0))));
+                  var27 = var22.getValue();
+                  val var10: Pair = var27 as Pair;
+               } while (!var22.a(var27, o8.w.a(var17, kotlin.coroutines.jvm.internal.b.c(1.0))));
 
-               var1 = new WeakReference<>(this.$mediaPlayer);
-               MediaPlayerManager.access$setActivePlayerRef$p(var1);
+               val var11: WeakReference = new WeakReference<>(this.$mediaPlayer);
+               MediaPlayerManager.access$setActivePlayerRef$p(var11);
                val var19: Job = MediaPlayerManager.access$getActiveMonitoringJob$p();
                if (var19 != null) {
                   v.f(var19, "New progress monitor override", null, 2, null);
                }
 
-               MediaPlayerManager.access$setActiveMonitoringJob$p(MediaPlayerManager.access$startProgressMonitor(MediaPlayerManager.INSTANCE, var1));
+               MediaPlayerManager.access$setActiveMonitoringJob$p(MediaPlayerManager.access$startProgressMonitor(MediaPlayerManager.INSTANCE, var11));
                return Unit.a;
             }
          },

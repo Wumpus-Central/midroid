@@ -29,15 +29,15 @@ public class MessageFrameJumpHeaderView  public constructor(context: Context, at
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      val var6: MessageFrameJumpHeaderBinding = MessageFrameJumpHeaderBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var6, "inflate(...)");
-      this.binding = var6;
-      val var4: TextView = var6.messageHeaderTitle;
-      var6.messageHeaderTitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.q.e(var4);
-      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-      val var5: TextView = var6.messageHeaderSubtitle;
-      var6.messageHeaderSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      val var4: MessageFrameJumpHeaderBinding = MessageFrameJumpHeaderBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      this.binding = var4;
+      val var6: TextView = var4.messageHeaderTitle;
+      var4.messageHeaderTitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      kotlin.jvm.internal.q.e(var6);
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      val var5: TextView = var4.messageHeaderSubtitle;
+      var4.messageHeaderSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       kotlin.jvm.internal.q.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryNormal);
       this.setPadding(SizeUtilsKt.getDpToPx(8), 0, SizeUtilsKt.getDpToPx(8), SizeUtilsKt.getDpToPx(8));

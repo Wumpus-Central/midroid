@@ -196,11 +196,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
          val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
          val var28: UserSearchQuerySetFilters = var24.getFilters();
          if (var28 == null || q.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var16, var24);
+            this.searchUsers(var20, var24);
          }
       }
    }
@@ -259,8 +259,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                   val var31: java.util.List;
                   if (var5) {
                      val var33: java.lang.String = var28.getUsername();
-                     val var12: java.lang.String = var28.getGlobalName();
-                     val var10: java.lang.String = var28.getFriendNickname();
+                     val var10: java.lang.String = var28.getGlobalName();
+                     val var12: java.lang.String = var28.getFriendNickname();
                      val var17: java.util.Map = var28.getNicknames();
                      val var29: UserSearchQuerySetFilters = var2.getFilters();
                      val var30: java.lang.String;
@@ -270,7 +270,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var30 = null;
                      }
 
-                     var31 = i.n(new java.lang.String[]{var33, var12, var10, (java.lang.String)var17.get(var30)});
+                     var31 = i.n(new java.lang.String[]{var33, var10, var12, (java.lang.String)var17.get(var30)});
                   } else {
                      if (var5) {
                         throw new p();

@@ -177,6 +177,7 @@ public final class R {
       public static int error;
       public static int error_icon;
       public static int error_label;
+      public static int established_text;
       public static int exception;
       public static int feed_channel_icon;
       public static int feed_channel_text;

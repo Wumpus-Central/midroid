@@ -49,10 +49,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
    @ReactMethod
    public fun removeListeners(count: Int) {
       try {
-         val var2: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var2.unregister(var3, this.shareBroadcastReceiver);
+         val var3: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.unregister(var2, this.shareBroadcastReceiver);
       } catch (var4: Exception) {
       }
    }

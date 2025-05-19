@@ -119,10 +119,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    @SuppressLint(["SetTextI18n"])
    private fun configureAuthor(message: Message, automodContext: AutoModerationContext, eventHandler: ChatEventHandler) {
-      val var6: SimpleDraweeView = this.binding.authorAvatar;
-      val var5: Context = this.getContext();
-      q.g(var5, "getContext(...)");
-      var6.setImageURI(MessageKt.avatarUrl(var1, var5));
+      val var5: SimpleDraweeView = this.binding.authorAvatar;
+      val var6: Context = this.getContext();
+      q.g(var6, "getContext(...)");
+      var5.setImageURI(MessageKt.avatarUrl(var1, var6));
       this.binding.authorName.setText(var1.getUsername());
       val var9: MessageTagView = this.binding.messageTagView;
       q.g(this.binding.messageTagView, "messageTagView");
@@ -233,16 +233,16 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          return this.accessories;
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
-         val var15: MessageType = MessageType.DEFAULT;
-         val var16: java.lang.String = var17.getId-3Eiw7ao();
+         val var12: MessageType = MessageType.DEFAULT;
+         val var11: java.lang.String = var17.getId-3Eiw7ao();
          val var6: Long = var17.getChannelId-o4g7jtM();
-         val var9: GuildId = var17.getGuildId-qOKuAAo();
-         val var11: UserId = var17.getUserId-wUX8bhU();
-         val var14: java.lang.String = var17.getUsername();
-         val var10: java.lang.String = var17.getAvatarURL();
-         val var12: StructurableText = var17.getContent();
+         val var14: GuildId = var17.getGuildId-qOKuAAo();
+         val var9: UserId = var17.getUserId-wUX8bhU();
+         val var10: java.lang.String = var17.getUsername();
+         val var15: java.lang.String = var17.getAvatarURL();
+         val var13: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
-         val var13: Int = var17.getRoleColor();
+         val var16: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
          val var21: java.lang.Boolean = var17.getCommunicationDisabled();
          val var4: Boolean;
@@ -253,13 +253,13 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
          }
 
          val var20: Message = new Message(
-            var15,
-            var16,
+            var12,
+            var11,
             null,
             var6,
-            var9,
+            var14,
             null,
-            var11,
+            var9,
             0L,
             null,
             null,
@@ -268,19 +268,19 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var14,
+            var10,
             var3,
-            var13,
+            var16,
             null,
             var5,
             false,
             null,
-            var10,
+            var15,
             null,
             null,
             null,
             null,
-            var12,
+            var13,
             null,
             null,
             null,
@@ -440,18 +440,18 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          var9.configure(var14, var5);
          this.binding.replyPreview.clear();
-         val var11: java.util.List = this.generateMessageAccessories(var1, var2);
+         val var15: java.util.List = this.generateMessageAccessories(var1, var2);
          val var16: MessageAccessoriesView = this.binding.accessoriesView;
-         val var10: java.lang.String = var1.getId-3Eiw7ao();
+         val var11: java.lang.String = var1.getId-3Eiw7ao();
          val var6: Long = var1.getChannelId-o4g7jtM();
-         val var15: GuildId = var1.getGuildId-qOKuAAo();
+         val var10: GuildId = var1.getGuildId-qOKuAAo();
          if (var1.getForwardInfo() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var16.setAccessories-mFdI1tY(var10, var6, var15, var11, var3, var4, var2, false, var5);
+         var16.setAccessories-mFdI1tY(var11, var6, var10, var15, var3, var4, var2, false, var5);
       }
    }
 

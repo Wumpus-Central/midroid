@@ -1223,9 +1223,22 @@
   ],
   "T15lqq": "Prea repede! Așteaptă puțin și încearcă din nou.",
   "/s1xR0": "Cadou gata de livrare",
+  "1Qm829": "Aplică",
   "PHjkRE": "Aplicații",
   "AKcFUl": "Catalog de aplicații",
   "LO4f0N": "Partener",
+  "eGZFws": "Notificările sunt dezactivate pentru aceste mesaje directe.",
+  "7Sbhqa": [
+    "Notificările sunt dezactivate până pe ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Notificările sunt activate pentru aceste mesaje directe.",
+  "GFEn8/": "Oprește",
+  "JFu44e": "Pornește",
   "9PUXpK": "Mă-nervezi",
   "IoLVi4": "Șerbet de vis",
   "nmd90t": "uwu~",
@@ -1798,6 +1811,7 @@
   "yX8s2t": "Cardul a fost respins din cauza fondurilor insuficiente.",
   "3s/vDA": "Răspuns captcha nevalid. Încearcă din nou.",
   "+4Empq": "Această achiziție duce la un sold negativ și, din păcate, nu poate fi finalizată. Știm că acest lucru este frustrant, așa că lucrăm în prezent la îmbunătățirea sistemului. Încearcă din nou în curând!",
+  "uhPY5u": "Această achiziție nu poate fi validată. Te rugăm să-ți actualizezi clientul.",
   "3jprCQ": "Modificarea nu poate fi procesată pentru că există o plată în așteptare.",
   "sUWxgY": "Ai încercat să faci prea multe achiziții prea repede. Așteaptă puțin și încearcă din nou!",
   "yNYvKy": "S-a specificat o metodă de plată necunoscută. Selectează alta și încearcă din nou.",
@@ -2421,12 +2435,9 @@
   "++JLLy": "Participanții au fost toxici sau s-au comportat neadecvat",
   "tLi4cX": "Spune-ne despre experiența cu apelul.",
   "C/12Tk": "Negativ",
-  "0jP8iY": "Am avut niște dificultăți tehnice...",
   "Xcb4cH": "Neutru",
   "1Vyb5O": "Pozitiv",
-  "B81oy8": "Apelul a mers perfect!",
   "Ss6tlZ": "Cum a mers apelul?",
-  "xv0BJi": "Ai întâmpinat probleme tehnice?",
   "IdKo29": [
     "Trebuie să fii prieten cu **",
     [
@@ -2851,6 +2862,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Treci la Nitro pentru a debloca această decorațiune pentru avatar!",
+  "e1UiOT": "Fă upgrade pentru a debloca această decorațiune pentru avatar!",
   "zOA4a2": "Decorațiunea ta pentru avatar s-a actualizat!",
   "V1AWw8": "Cumpără pachet",
   "IQQYeX": [
@@ -3084,8 +3097,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Treci la Nitro pentru a debloca această decorațiune pentru avatar!",
-  "dIepy8": "Fă upgrade pentru a debloca această decorațiune pentru avatar!",
   "0hKkS0": "Comenzi",
   "5C107O": "Opțional",
   "Ocw/sL": [
@@ -4910,6 +4921,7 @@
     ]
   ],
   "CumH4u": "Creează",
+  "825cFx": "Creează un cont",
   "ISN+ND": "Creează o categorie",
   "fUYU+v": "Creează canal",
   "qyjZub": "Creare evenimente",
@@ -5797,6 +5809,7 @@
   "ZPjue3": "Care a fost cea mai bună chestie pe care ai mâncat-o săptămâna asta?",
   "40gTj4": "De-abia aștept...",
   "SWVxPD": "Alege-ți clasa personajului",
+  "xaCthI": "Ce te obsedează fix acum?",
   "3XVZ0t": "Cea mai bună glumă de tați?",
   "4U+EJC": "Ce emoji îți descrie ziua cel mai bine?",
   "R1f9RU": "Un anime favorit din ultima vreme?",
@@ -5828,7 +5841,7 @@
   "Iuzg8f": "Setează-ți statusul",
   "zOdg0N": "Status",
   "hA60Ul": "Evidențiază-ți statusul cu un tag presetat",
-  "jrzHRk": "Taguri de status personalizate",
+  "jrzHRk": "Taguri pentru statusuri personalizate",
   "GQmLra": "Astăzi",
   "UcdRn5": "Ce mai faci?",
   "xod36+": "La ce te gândești?",
@@ -10845,6 +10858,7 @@
   "70CJbW": "OFICIAL",
   "q1L2v7": "Blochează cuvinte în numele profilurilor membrilor",
   "OiCBhI": "Vezi articolul de ajutor privind mesajele blocate",
+  "HHYPgI": "Insignă",
   "mOWsFx": "Nu poți folosi boosturi când abonamentul tău Nitro este pe pauză!",
   "CduWAg": "Nu îți poți gestiona boosturile pentru server cât timp abonamentul tău Nitro este pe pauză.",
   "mkXb2N": [
@@ -24278,6 +24292,22 @@
   "9g5UGx": "Da, sunt sigur",
   "9SNpzs": "Dezactivezi personalizarea?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Acest număr de telefon este deja asociat altui cont. ",
+    [
+      8,
+      "$link",
+      [
+        "Depanează problema aici"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Nu s-a putut adăuga numărul de telefon, încearcă din nou mai târziu",
   "0/ALaG": "Nu recunoaștem locația. Am trimis un cod de confirmare la numărul de telefon asociat contului.",
   "w55Ocn": "Introdu codul de confirmare, ca să verificăm că ești tu",
@@ -30557,6 +30587,7 @@
   "p9jC2t": "PORNIT",
   "PBgTSE": "Atinge pentru a dezactiva pingul către autorul original.",
   "E+6SSU": "Dă clic pentru a vedea comanda",
+  "Xxm5i4": "Atinge pentru a vedea mesajul",
   "XAkOo6": "Mesaj blocat",
   "mE3KJC": "Mesajul original a fost șters",
   "G7p6v7": "Mesaj ignorat",
@@ -33379,7 +33410,6 @@
   "G2egzc": "Sunetul din aplicație este absent",
   "aHOfIi": "Sunetul din aplicație are calitate scăzută",
   "5smP3d": "Cum a mers stream-ul?",
-  "OR6KNz": "Ai întâmpinat probleme tehnice?",
   "fxiRNj": "Stream-ul este negru",
   "E8jTMD": "Stream-ul este neclar sau pixelat",
   "Xwv419": "Sunetul din aplicație a fost absent",
@@ -33395,8 +33425,6 @@
   "KHGhHR": "Raportează o problemă cu stream-ul",
   "CqjnLC": "Spune-ne despre experiența de vizionare a stream-ului.",
   "0uxA2d": "Spune-ne despre experiența de streaming.",
-  "ISINlJ": "Am avut niște dificultăți tehnice...",
-  "IySkjY": "Streamul a mers perfect!",
   "kLQySE": "Arată toți participanții",
   "YSGk4O": "Invită lumea să ți se alăture!",
   "WkAgPT": "Doar tu ești în acest apel.",
@@ -36374,6 +36402,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Aceste coduri îți vor permite să intri în cont în cazul în care îți pierzi cheia de securitate, deci protejează-le ca și cum ar fi parole. Nu le comunica nimănui și ține-le într-un loc sigur."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Fiecare cod poate fi folosit numai o dată! Codurile generate anterior nu mai funcționează!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Modifică detaliile contului",
   "37S9yc": "Ca măsură suplimentară de securitate, introdu codul pe care tocmai ți l-am trimis pe adresa de e-mail. Ar trebui să-l primești în câteva minute.",
   "TjGb4e": "Cod de verificare",
@@ -36431,6 +36481,7 @@
   "EA4ZEh": "Sigur vrei să-ți elimini aplicația de autentificare?",
   "0d1bXF": "Contul tău Discord este acum protejat cu un nivel suplimentar de securitate",
   "Awk3Gx": "A2F este activată! 🎉",
+  "7wPZlp": "Cheie de securitate activată! 🎉",
   "1u5B+P": "Of, nu, a apărut o eroare.",
   "xZEzbm": "Vezi codurile de rezervă",
   "PsQmzc": "Introdu parola",
@@ -37481,6 +37532,7 @@
   "jec90t": "Acum, creează un cont",
   "KtJgIy": "Parola trebuie să conțină cel puțin 8 caractere.",
   "y7LSyc": "Folosește numai litere, numere, underscore-uri și puncte.",
+  "w/XiOz": "Îl poți schimba oricând.",
   "EJ26Oj": "Acest canal necesită modul Push to Talk pentru activarea chat-ului prin voce. Până când nu vei trece de la modul\nDetectarea activității vocale la Push to Talk, vei putea doar să asculți.",
   "NYklho": "Modul Push-to-talk este necesar",
   "hFzI4u": "Nitro plutește în aer <3",

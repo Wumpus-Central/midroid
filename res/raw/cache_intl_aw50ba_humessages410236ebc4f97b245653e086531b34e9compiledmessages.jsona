@@ -1229,9 +1229,22 @@
   ],
   "T15lqq": "Túl gyors! Várj egy kicsit, és próbáld újra.",
   "/s1xR0": "Az ajándék készen áll az átadásra",
+  "1Qm829": "Alkalmazás",
   "PHjkRE": "Alkalmazások",
   "AKcFUl": "Alkalmazáskönyvtár",
   "LO4f0N": "Partner",
+  "eGZFws": "Az értesítések le vannak tiltva ezeknél a közvetlen üzeneteknél.",
+  "7Sbhqa": [
+    "Az értesítések le vannak tiltva eddig: ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Az értesítések engedélyezve vannak ezeknél a közvetlen üzeneteknél.",
+  "GFEn8/": "Kikapcsolás",
+  "JFu44e": "Bekapcsolás",
   "9PUXpK": "Mérges",
   "IoLVi4": "Sörbet álomfagyi",
   "nmd90t": "uwu~",
@@ -1810,6 +1823,7 @@
   "yX8s2t": "A kártyát elégtelen egyenleg miatt elutasították.",
   "3s/vDA": "Érvénytelen képkódválasz. Próbád újra.",
   "+4Empq": "Ez a vásárlás negatív egyenleghez vezet, és sajnos nem fejezhető be. Tudjuk, hogy ez milyen frusztráló és jelenleg is a rendszer javításán dolgozunk. Térj vissza kicsit később!",
+  "uhPY5u": "A vásárlás nem érvényesíthető. Frissítsd a kliensedet.",
   "3jprCQ": "Egy függőben lévő fizetés miatt nem tudjuk feldolgozni a módosítást.",
   "sUWxgY": "Túl sok vásárlást próbáltál túl gyorsan. Várj egy keveset, és próbáld újra!",
   "yNYvKy": "Ismeretlen fizetési forrás lett megadva. Válassz ki másikat, majd próbáld meg újra.",
@@ -2430,12 +2444,9 @@
   "++JLLy": "Az emberek toxikus légkört teremtettek vagy kifogásolhatóan viselkedtek",
   "tLi4cX": "Mondd el, hogyan tetszett a hívás.",
   "C/12Tk": "Negatív",
-  "0jP8iY": "Kisebb technikai problémám adódott…",
   "Xcb4cH": "Semleges",
   "1Vyb5O": "Pozitív",
-  "B81oy8": "Teljesen zökkenőmentes volt a hívás!",
   "Ss6tlZ": "Milyen volt a hívás?",
-  "xv0BJi": "Tapasztalsz valamilyen technikai problémát?",
   "IdKo29": [
     [
       8,
@@ -2871,6 +2882,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Csatlakozz a Nitróhoz, ha hozzá szeretnél férni ehhez a profilkép-dekorációhoz!",
+  "e1UiOT": "Válts magasabb szintű csomagra, ha hozzá szeretnél férni ehhez a profilkép-dekorációhoz!",
   "zOA4a2": "Frissült a profilkép-dekorációd!",
   "V1AWw8": "Csomag vásárlása",
   "IQQYeX": [
@@ -3104,8 +3117,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Csatlakozz a Nitróhoz, ha hozzá szeretnél férni ehhez a profilkép-dekorációhoz!",
-  "dIepy8": "Válts magasabb szintű csomagra, ha hozzá szeretnél férni ehhez a profilkép-dekorációhoz!",
   "0hKkS0": "Parancsok",
   "5C107O": "Opcionális",
   "Ocw/sL": [
@@ -4934,6 +4945,7 @@
     " további"
   ],
   "CumH4u": "Létrehozás",
+  "825cFx": "Fiók létrehozása",
   "ISN+ND": "Kategória létrehozása",
   "fUYU+v": "Csatorna létrehozása",
   "qyjZub": "Események létrehozása",
@@ -5829,6 +5841,7 @@
   "ZPjue3": "Mi volt a legfinomabb dolog, amit a héten ettél?",
   "40gTj4": "Alig várom a következőt…",
   "SWVxPD": "Válassz karakterosztályt",
+  "xaCthI": "Miért vagy jelenleg odáig?",
   "3XVZ0t": "Legjobb favicc?",
   "4U+EJC": "Melyik emotikon írja le a legjobban a napodat?",
   "R1f9RU": "Mi mostanában a kedvenc animéd?",
@@ -10867,6 +10880,7 @@
   "70CJbW": "HIVATALOS",
   "q1L2v7": "Szavak letiltása a tagprofilnevekben",
   "OiCBhI": "Letiltott üzenet súgócikk megtekintése",
+  "HHYPgI": "Jelvény",
   "mOWsFx": "A gyorsítás nem érhető el a Nitro-előfizetés szüneteltetése alatt!",
   "CduWAg": "Nem kezelhetsz szervergyorsításokat, amíg szünetel a Nitro-előfizetésed.",
   "mkXb2N": [
@@ -24254,6 +24268,22 @@
   "9g5UGx": "Igen, tuti",
   "9SNpzs": "Kikapcsolod a személyre szabást?",
   "dEYpSk": "Telefonszám",
+  "kj8xiI": [
+    "Ez a telefonszám már egy másik fiókhoz van társítva. ",
+    [
+      8,
+      "$link",
+      [
+        "Itt végezhetsz hibaelhárítást"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Nem sikerült hozzáadni a telefonszámot, próbáld újra később",
   "0/ALaG": "Nem ismerjük fel ezt a helyet. Küldtünk egy megerősítő kódot a fiókhoz kapcsolt telefonszámra.",
   "w55Ocn": "Add meg a megerősítő kódodat, hogy hitelesítsd magad",
@@ -30535,6 +30565,7 @@
   "p9jC2t": "BE",
   "PBgTSE": "Koppints az eredeti szerző pingelésének letiltásához.",
   "E+6SSU": "Kattints a parancs megtekintéséhez",
+  "Xxm5i4": "Koppints az üzenet megtekintéséhez",
   "XAkOo6": "Letiltott üzenet",
   "mE3KJC": "Az eredeti üzenetet törölték",
   "G7p6v7": "Figyelmen kívül hagyott üzenet",
@@ -33371,7 +33402,6 @@
   "G2egzc": "Hiányzik az alkalmazás hangja",
   "aHOfIi": "Az alkalmazás hangja rossz minőségű",
   "5smP3d": "Hogy ment a közvetítés?",
-  "OR6KNz": "Tapasztalsz valamilyen technikai problémát?",
   "fxiRNj": "A közvetítés fekete",
   "E8jTMD": "A közvetítés elmosódott vagy pixeles",
   "Xwv419": "Hiányzott az alkalmazás hangja",
@@ -33387,8 +33417,6 @@
   "KHGhHR": "Közvetítéssel kapcsolatos hiba bejelentése",
   "CqjnLC": "Mondd el, milyen élmény volt nézni a közvetítést.",
   "0uxA2d": "Mondd el, milyen élmény volt a közvetítés.",
-  "ISINlJ": "Kisebb technikai problémám adódott…",
-  "IySkjY": "Teljesen zökkenőmentes volt a közvetítés!",
   "kLQySE": "Minden résztvevő megjelenítése",
   "YSGk4O": "Hívj meg másokat, hogy csatlakozzanak hozzád!",
   "WkAgPT": "Egyedül vagy ebben a hívásban.",
@@ -36345,6 +36373,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Ezek a kódok lehetővé teszik, hogy belépj a fiókodba, ha elvesztenéd a biztonsági kulcsodat. Vigyázz rájuk úgy, mint egy jelszóra. Ne oszd meg őket senkivel, és tartsd őket biztonságos helyen."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Minden kód csak egyszer használható fel. A korábbi kódok érvénytelenné válnak."
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Felhasználói adatok módosítása",
   "37S9yc": "További biztonsági intézkedésként, kérjük, írd be a kulcsot, amit most elküldtünk az e-mail-címedre. Egy vagy két percen belül meg kell érkeznie.",
   "TjGb4e": "Hitelesítő kulcs",
@@ -36402,6 +36452,7 @@
   "EA4ZEh": "Biztosan eltávolítod a hitelesítő alkalmazást?",
   "0d1bXF": "A Discord-fiókot most már egy extra biztonsági réteg védi",
   "Awk3Gx": "Kétlépcsős hitelesítés aktiválva! 🎉",
+  "7wPZlp": "Biztonsági kulcs aktiválva! 🎉",
   "1u5B+P": "Óh nem, hiba történt.",
   "xZEzbm": "Biztonsági kódok megtekintése",
   "PsQmzc": "Írd be a jelszavad",
@@ -37454,6 +37505,7 @@
   "jec90t": "Ezt követően hozz létre egy fiókot",
   "KtJgIy": "A jelszónak legalább 8 karakterből kell állnia.",
   "y7LSyc": "Csak betűket, számokat, aláhúzásjeleket és pontokat használhatsz.",
+  "w/XiOz": "Ezt bármikor megváltoztathatod.",
   "EJ26Oj": "A csatornához a Push to Talk szükséges. Csak hallgatózni tudsz, amíg nem váltasz Voice Activity-ről\nPush to Talk módra.",
   "NYklho": "Push to Talk szükséges",
   "hFzI4u": "Mindent átjár a Nitro <3",

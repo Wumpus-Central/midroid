@@ -147,27 +147,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var7: Int = this.reactionBackgroundColor;
+      val var3: Int = this.reactionBackgroundColor;
       val var6: Int = this.reactionBorderColor;
-      val var2: Int = this.reactionTextColor;
-      val var4: Int = this.activeReactionBackgroundColor;
-      val var5: Int = this.activeReactionBorderColor;
-      val var1: Int = this.activeReactionTextColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ReactionsTheme(reactionBackgroundColor=");
-      var3.append(var7);
-      var3.append(", reactionBorderColor=");
-      var3.append(var6);
-      var3.append(", reactionTextColor=");
-      var3.append(var2);
-      var3.append(", activeReactionBackgroundColor=");
-      var3.append(var4);
-      var3.append(", activeReactionBorderColor=");
-      var3.append(var5);
-      var3.append(", activeReactionTextColor=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: Int = this.reactionTextColor;
+      val var1: Int = this.activeReactionBackgroundColor;
+      val var2: Int = this.activeReactionBorderColor;
+      val var5: Int = this.activeReactionTextColor;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ReactionsTheme(reactionBackgroundColor=");
+      var7.append(var3);
+      var7.append(", reactionBorderColor=");
+      var7.append(var6);
+      var7.append(", reactionTextColor=");
+      var7.append(var4);
+      var7.append(", activeReactionBackgroundColor=");
+      var7.append(var1);
+      var7.append(", activeReactionBorderColor=");
+      var7.append(var2);
+      var7.append(", activeReactionTextColor=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : G {

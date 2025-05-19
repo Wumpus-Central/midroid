@@ -1250,9 +1250,22 @@
   ],
   "T15lqq": "Per greitai! Šiek tiek luktelėk ir bandyk dar kartą.",
   "/s1xR0": "Dovana paruošta įteikti",
+  "1Qm829": "Taikyti",
   "PHjkRE": "Programėlės",
   "AKcFUl": "Programėlių katalogas",
   "LO4f0N": "Partnerių",
+  "eGZFws": "Šiai AŽ pranešimai išjungti.",
+  "7Sbhqa": [
+    "Pranešimai išjungti iki ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Šiai AŽ pranešimai įjungti.",
+  "GFEn8/": "Išjungti",
+  "JFu44e": "Įjungti",
   "9PUXpK": "Nirštantis",
   "IoLVi4": "Šerbetiniai ledai",
   "nmd90t": "uwu~",
@@ -1832,6 +1845,7 @@
   "yX8s2t": "Kortelė atmesta dėl lėšų trūkumo.",
   "3s/vDA": "Netinkamas CAPTCHA atsakymas. Pabandyk dar kartą.",
   "+4Empq": "Atlikus šį pirkimą sąskaitos likutis būtų neigiamas, todėl jo atlikti negalima. Suprantame, kaip tai apmaudu, ir stengiamės patobulinti šią sistemą. Patikrink ją vėliau!",
+  "uhPY5u": "Šio įsigijimo nepavyko patvirtinti. Atnaujink savo klientą.",
   "3jprCQ": "Pokyčio nepavyko atlikti dėl kol kas nesulaukto mokėjimo.",
   "sUWxgY": "Vienu metu per greitai bandei įvykdyti per daug pirkimų. Luktelėk ir pabandyk dar kartą!",
   "yNYvKy": "Nurodytas nežinomas mokėjimo šaltinis. Pasirink kitą ir bandyk dar kartą.",
@@ -2492,12 +2506,9 @@
   "++JLLy": "Žmonės elgėsi toksiškai arba netinkamai",
   "tLi4cX": "Papasakokite apie savo pokalbio patirtį.",
   "C/12Tk": "Neigiamas",
-  "0jP8iY": "Susidūriau su techninėmis problemomis...",
   "Xcb4cH": "Neutralus",
   "1Vyb5O": "Teigiamas",
-  "B81oy8": "Skambučio kokybė buvo nepriekaištinga!",
   "Ss6tlZ": "Kaip pavyko pokalbis?",
-  "xv0BJi": "Susidūrei su techninėmis problemomis?",
   "IdKo29": [
     "Turi būti draugais su ",
     [
@@ -2952,6 +2963,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Junkis prie Nitro ir gauk prieigą prie šio pseudoportreto papuošimo!",
+  "e1UiOT": "Naujovink ir gauk prieigą prie šio pseudoportreto papuošimo!",
   "zOA4a2": "Tavo pseudoportreto papuošimas atnaujintas!",
   "V1AWw8": "Pirkti Paketą",
   "IQQYeX": [
@@ -3186,8 +3199,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Junkis prie Nitro ir gauk prieigą prie šio pseudoportreto papuošimo!",
-  "dIepy8": "Naujovink ir gauk prieigą prie šio pseudoportreto papuošimo!",
   "0hKkS0": "Komandos",
   "5C107O": "Neprivaloma",
   "Ocw/sL": [
@@ -5074,6 +5085,7 @@
     ]
   ],
   "CumH4u": "Sukurti",
+  "825cFx": "Kurti paskyrą",
   "ISN+ND": "Sukurti Kategoriją",
   "fUYU+v": "Sukurti kanalą",
   "qyjZub": "Kurti renginius",
@@ -6024,6 +6036,7 @@
   "ZPjue3": "Ką skaniausio ragavai šią savaitę?",
   "40gTj4": "Laukiu nesulaukiu...",
   "SWVxPD": "Pasirink savo veikėjų klasę",
+  "xaCthI": "Ko šiuo metu negali nustoti žaisti?",
   "3XVZ0t": "Geriausias tėvelio juokelis?",
   "4U+EJC": "Geriausiai tavo dieną apibūdinantis jaustukas?",
   "R1f9RU": "Pastaruoju metu mėgstamiausias anime?",
@@ -9033,7 +9046,7 @@
   "jOPmcH": "Vėliausias aktyvumas",
   "Paxaur": "Žymių atitikimas",
   "FCXUu7": "Ieškoti visų žymių atitikimo",
-  "rQ0ctb": "Paieškoti atitinkančių",
+  "rQ0ctb": "Ieškoti kelių žymių atitikimo",
   "jPhTvb": [
     [
       1,
@@ -11235,6 +11248,7 @@
   "70CJbW": "OFICIALUS",
   "q1L2v7": "Užblokuoti žodžius narių profilių varduose",
   "OiCBhI": "Žiūrėti pagalbos straipsnį apie blokuojamas žinutes",
+  "HHYPgI": "Ženklelis",
   "mOWsFx": "Kol tavo Nitro prenumerata laikinai sustabdyta, stiprinimas neprieinamas!",
   "CduWAg": "Kol tavo Nitro prenumerata laikinai sustabdyta, serverio stiprinimų tvarkyti negali.",
   "mkXb2N": [
@@ -25146,6 +25160,22 @@
   "9g5UGx": "Taip, esu tikras",
   "9SNpzs": "Išjungti suasmeninimą?",
   "dEYpSk": "Telefonas",
+  "kj8xiI": [
+    "Šis telefono numeris jau susietas su kita paskyra. Problemą ",
+    [
+      8,
+      "$link",
+      [
+        "spręsk čia"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Nepavyko pridėti telefono numerio. Bandyk dar kartą vėliau.",
   "0/ALaG": "Neatpažįstame šios vietos. Su šia paskyra susietu telefono numeriu išsiuntėme patvirtinimo kodą.",
   "w55Ocn": "Įvesk patvirtinimo kodą ir patvirtink, kad čia tu",
@@ -31640,6 +31670,7 @@
   "p9jC2t": "ĮJUNGTA",
   "PBgTSE": "Paliesk, kad išjungtum pradinio autoriaus pakibinimą.",
   "E+6SSU": "Spustelėk, kad pamatytum komandą",
+  "Xxm5i4": "Paliesk, kad matytum žinutę",
   "XAkOo6": "Užblokuota žinutė",
   "mE3KJC": "Pradinė žinutė pašalinta",
   "G7p6v7": "Ignoruota žinutė",
@@ -34513,7 +34544,6 @@
   "G2egzc": "Nėra programos garso",
   "aHOfIi": "Prasta programos garso kokybė",
   "5smP3d": "Kaip vyko transliacija?",
-  "OR6KNz": "Susidūrei su techninėmis problemomis?",
   "fxiRNj": "Transliacijos vaizdas juodas",
   "E8jTMD": "Transliacija neryški arba joje matomi pikseliai",
   "Xwv419": "Nebuvo programos garso",
@@ -34529,8 +34559,6 @@
   "KHGhHR": "Pranešti apie transliacijos problemą",
   "CqjnLC": "Papasakokite, kaip jums sekėsi stebėti transliaciją.",
   "0uxA2d": "Papasakokite savo transliacijos patirtį.",
-  "ISINlJ": "Susidūriau su techninėmis problemomis...",
-  "IySkjY": "Transliacijos kokybė buvo nepriekaištinga!",
   "kLQySE": "Rodyti visus dalyvius",
   "YSGk4O": "Kviesk žmones prisijungti!",
   "WkAgPT": "Esi vienas šiame skambutyje.",
@@ -37537,6 +37565,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Šie kodai padės prisijungti prie paskyros, jei prarasi savo saugumo raktą, saugok juos kaip savo slaptažodį. Su niekuo jais nesidalyk ir laikyk juos saugioje vietoje."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Kiekvienas kodas gali būti panaudotas vieną kartą! Jokie anksčiau sugeneruoti kodai nebeveiks!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Keisti paskyros duomenis",
   "37S9yc": "Dėl papildomo saugumo įvesk raktą, kurį išsiuntėme tavo el. pašto adresu. Turėtum jį gauti per vieną ar dvi minutes.",
   "TjGb4e": "Patvirtinimo raktas",
@@ -37594,6 +37644,7 @@
   "EA4ZEh": "Ar tikrai nori pašalinti savo Tapatybės patvirtinimo programėlę?",
   "0d1bXF": "Tavo Discord paskyra dabar apsaugota papildomu saugumo elementu",
   "Awk3Gx": "Tapatybės patvirtinimas dviem veiksniais suaktyvintas! 🎉",
+  "7wPZlp": "Saugumo raktas suaktyvintas! 🎉",
   "1u5B+P": "Oi, įvyko klaida.",
   "xZEzbm": "Rodyti atsarginius kodus",
   "PsQmzc": "Įvesk slaptažodį",
@@ -38729,6 +38780,7 @@
   "jec90t": "Dabar susikurk paskyrą",
   "KtJgIy": "Slaptažodžiai turi būti bent 8 simbolių.",
   "y7LSyc": "Gali naudoti tik raides, skaitmenis, pabraukimo brūkšnius ir taškus.",
+  "w/XiOz": "Galėsi bet kada pakeisti.",
   "EJ26Oj": "Šiame kanale būtina Push to talk funkcija norint kalbėti. Tu galėsi tik klausyti, kol nepakeisi funkcijos\nVoice Activity į Push to talk.",
   "NYklho": "Būtina Push to talk funkcija",
   "hFzI4u": "Nitro tvyro ore <3",

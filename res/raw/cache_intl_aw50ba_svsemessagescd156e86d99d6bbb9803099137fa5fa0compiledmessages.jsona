@@ -1228,9 +1228,22 @@
   ],
   "T15lqq": "Vänta en stund och försök igen!",
   "/s1xR0": "Gåvan är klar att skickas",
+  "1Qm829": "Tillämpa",
   "PHjkRE": "Appar",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
+  "eGZFws": "Aviseringar är inaktiverade för detta DM.",
+  "7Sbhqa": [
+    "Aviseringar är inaktiverade fram till ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Aviseringar är aktiverade för detta DM.",
+  "GFEn8/": "Stäng av",
+  "JFu44e": "Slå på",
   "9PUXpK": "Arg",
   "IoLVi4": "Vinterdröm",
   "nmd90t": "UwU",
@@ -1806,6 +1819,7 @@
   "yX8s2t": "Kortet nekades på grund av otillräckliga medel.",
   "3s/vDA": "Ogiltigt captcha-svar. Försök igen.",
   "+4Empq": "Det här köpet skulle innebära att saldot blir negativt och kan tyvärr därför inte genomföras. Vi vet att det är frustrerande och vi arbetar med att förbättra systemet. Kom tillbaka inom kort!",
+  "uhPY5u": "Köpet kunde inte valideras. Uppdatera din klient.",
   "3jprCQ": "Det gick inte att behandla ändringen på grund av en väntande betalning.",
   "sUWxgY": "Du har försökt göra för många köp på kort tid. Vänta en stund och försök igen!",
   "yNYvKy": "En okänd betalningskälla angavs. Välj en annan och försök igen.",
@@ -2425,12 +2439,9 @@
   "++JLLy": "Människor betedde sig toxiskt eller olämpligt",
   "tLi4cX": "Berätta om din samtalsupplevelse.",
   "C/12Tk": "Negativ",
-  "0jP8iY": "Jag stötte på tekniska problem ...",
   "Xcb4cH": "Neutral",
   "1Vyb5O": "Positiv",
-  "B81oy8": "Samtalet gick hur smidigt som helst!",
   "Ss6tlZ": "Hur gick det med samtalet?",
-  "xv0BJi": "Hade du tekniska problem?",
   "IdKo29": [
     "Du måste vara vän med ",
     [
@@ -2866,6 +2877,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Gå med i Nitro för att låsa upp åtkomst till denna avatardekoration!",
+  "e1UiOT": "Uppgradera för att låsa upp åtkomst till denna avatardekoration!",
   "zOA4a2": "Din avatardekoration har uppdaterats!",
   "V1AWw8": "Köp paket",
   "IQQYeX": [
@@ -3101,8 +3114,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Gå med i Nitro för att låsa upp åtkomst till denna avatardekoration!",
-  "dIepy8": "Uppgradera för att låsa upp åtkomst till denna avatardekoration!",
   "0hKkS0": "Kommandon",
   "5C107O": "Valfri",
   "Ocw/sL": [
@@ -4930,6 +4941,7 @@
     " mer"
   ],
   "CumH4u": "Skapa",
+  "825cFx": "Skapa konto",
   "ISN+ND": "Skapa kategori",
   "fUYU+v": "Skapa kanal",
   "qyjZub": "Skapa event",
@@ -5811,6 +5823,7 @@
   "ZPjue3": "Det bästa du åt den här veckan?",
   "40gTj4": "Längtar efter ...",
   "SWVxPD": "Välj din karaktärsklass",
+  "xaCthI": "Vad är du besatt av just nu?",
   "3XVZ0t": "Vilket är bästa pappaskämtet?",
   "4U+EJC": "Bästa emojin för att beskriva din dag?",
   "R1f9RU": "Favoritanime på sistone?",
@@ -5842,7 +5855,7 @@
   "Iuzg8f": "Ange din status",
   "zOdg0N": "Status",
   "hA60Ul": "Få din status att sticka ut med en förinställd tagg",
-  "jrzHRk": "Anpassade statustaggar",
+  "jrzHRk": "Taggar för anpassad status",
   "GQmLra": "I dag",
   "UcdRn5": "Hur är läget?",
   "xod36+": "Vad tänker du på?",
@@ -10833,6 +10846,7 @@
   "70CJbW": "OFFICIELLT",
   "q1L2v7": "Blockera ord i namn på medlemsprofiler",
   "OiCBhI": "Visa hjälpartikel om blockerade meddelanden",
+  "HHYPgI": "Märke",
   "mOWsFx": "Boost finns inte tillgängligt när din Nitro-prenumeration är pausad!",
   "CduWAg": "Du kan inte hantera serverboostar när din Nitro-prenumeration är pausad.",
   "mkXb2N": [
@@ -24242,6 +24256,22 @@
   "9g5UGx": "Ja, jag är säker",
   "9SNpzs": "Stäng av personanpassning?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Det här telefonnumret är redan kopplat till ett annat konto. ",
+    [
+      8,
+      "$link",
+      [
+        "Felsök här"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Det gick inte att lägga till telefonnumret. Försök igen lite senare.",
   "0/ALaG": "Vi känner inte igen den här platsen. Vi har skickat ett sms till det telefonnummer som är knutet till kontot.",
   "w55Ocn": "Ange bekräftelsekoden för att verifiera att det är du",
@@ -30522,6 +30552,7 @@
   "p9jC2t": "PÅ",
   "PBgTSE": "Tryck om du inte vill pinga den ursprungliga meddelandeskrivaren.",
   "E+6SSU": "Klicka för att visa kommandot",
+  "Xxm5i4": "Tryck för att se meddelandet",
   "XAkOo6": "Blockerat meddelande",
   "mE3KJC": "Originalmeddelandet har raderats",
   "G7p6v7": "Ignorerat meddelande",
@@ -33353,7 +33384,6 @@
   "G2egzc": "Inget applikationsljud",
   "aHOfIi": "Applikationsljudet har dålig kvalitet",
   "5smP3d": "Hur gick streamen?",
-  "OR6KNz": "Hade du tekniska problem?",
   "fxiRNj": "Streamen är svart",
   "E8jTMD": "Streamen är otydlig eller pixlad",
   "Xwv419": "Inget applikationsljud",
@@ -33369,8 +33399,6 @@
   "KHGhHR": "Rapportera streamproblem",
   "CqjnLC": "Berätta om din upplevelse av att titta på streamar.",
   "0uxA2d": "Berätta om din streamingupplevelse.",
-  "ISINlJ": "Jag stötte på tekniska problem ...",
-  "IySkjY": "Streamen gick hur smidigt som helst!",
   "kLQySE": "Visa alla deltagare",
   "YSGk4O": "Bjud in personer att ansluta sig!",
   "WkAgPT": "Du är ensam i det här samtalet.",
@@ -36315,6 +36343,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Dessa koder ger dig åtkomst till ditt konto om du förlorar din säkerhetsnyckel. Skydda dem på samma sätt som du skyddar ett lösenord. Dela dem inte med någon och förvara dem på ett säkert ställe."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "En kod kan endast användas en gång. Alla tidigare genererade koder blir ogiltiga!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Ändra kontouppgifter",
   "37S9yc": "Som en extra säkerhetsåtgärd vill vi att du anger nyckeln vi just skickade till din e-postadress. Den borde komma om en minut eller två.",
   "TjGb4e": "Verifieringsnyckel",
@@ -36372,6 +36422,7 @@
   "EA4ZEh": "Är du säker på att du vill ta bort din autentiseringsapp?",
   "0d1bXF": "Ditt Discord-konto är nu skyddat av ett extra lager med säkerhet",
   "Awk3Gx": "2FA har aktiverats! 🎉",
+  "7wPZlp": "Säkerhetsnyckel aktiverad! 🎉",
   "1u5B+P": "Åh nej, ett fel har inträffat.",
   "xZEzbm": "Visa reservkoder",
   "PsQmzc": "Ange ditt lösenord",
@@ -37422,6 +37473,7 @@
   "jec90t": "Nästa steg är att du skapar ett konto",
   "KtJgIy": "Lösenordet måste ha minst 8 tecken.",
   "y7LSyc": "Använd bara bokstäver, siffror, understreck och punkter.",
+  "w/XiOz": "Du kan ändra detta när som helst.",
   "EJ26Oj": "Denna kanal kräver tryck-för-tal för röstchatt. Du kommer bara att kunna lyssna tills du byter läge\ntill tryck-för-tal från röstaktivering.",
   "NYklho": "Tryck-för-tal krävs",
   "hFzI4u": "Det är Nitro i luften <3",

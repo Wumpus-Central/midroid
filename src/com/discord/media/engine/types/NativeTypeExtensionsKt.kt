@@ -39,20 +39,20 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    q.h(var0, "<this>");
+   val var5: ArrayList = new ArrayList();
    val var6: ArrayList = new ArrayList();
-   var var4: ArrayList = new ArrayList();
    val var3: Int = var0.length;
 
    for (int var1 = 0; var1 < var3; var1++) {
-      val var5: VideoInputDeviceDescription = var0[var1];
+      val var4: VideoInputDeviceDescription = var0[var1];
       if (var0[var1].getFacing() === VideoInputDeviceFacing.Front) {
-         var6.add(var5);
+         var5.add(var4);
       } else {
-         var4.add(var5);
+         var6.add(var4);
       }
    }
 
-   val var14: Pair = new Pair(var6, var4);
+   val var14: Pair = new Pair(var5, var6);
    val var8: java.util.List = i.c0(
       i.n(
          new VideoInputDeviceDescription[]{
@@ -60,7 +60,7 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
          }
       )
    );
-   var4 = new ArrayList(i.v(var8, 10));
+   val var16: ArrayList = new ArrayList(i.v(var8, 10));
    val var17: java.util.Iterator = var8.iterator();
 
    for (int var12 = 0; var17.hasNext(); var12++) {
@@ -81,10 +81,10 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
          var9 = "front";
       }
 
-      var4.add(p8.q.l(new Pair[]{w.a("name", var18.getName()), w.a("guid", var18.getGuid()), w.a("facing", var9), w.a("index", var12)}));
+      var16.add(p8.q.l(new Pair[]{w.a("name", var18.getName()), w.a("guid", var18.getGuid()), w.a("facing", var9), w.a("index", var12)}));
    }
 
-   return var4;
+   return var16;
 }
 
 internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {

@@ -1277,9 +1277,22 @@
   ],
   "T15lqq": "Za szybko! Zaczekaj chwilkę i spróbuj ponownie.",
   "/s1xR0": "Prezent gotowy do dostarczenia",
+  "1Qm829": "Zastosuj",
   "PHjkRE": "Aplikacje",
   "AKcFUl": "Katalog aplikacji",
   "LO4f0N": "Partner",
+  "eGZFws": "Powiadomienia są wyłączone dla tej PW.",
+  "7Sbhqa": [
+    "Powiadomienia są wyłączone do ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Powiadomienia są włączone dla tej PW.",
+  "GFEn8/": "Wyłącz",
+  "JFu44e": "Włącz",
   "9PUXpK": "Wściekłość",
   "IoLVi4": "Lody dla ochłody",
   "nmd90t": "ojoj~",
@@ -1869,6 +1882,7 @@
   "yX8s2t": "Karta została odrzucona z powodu niewystarczających środków.",
   "3s/vDA": "Nieprawidłowa odpowiedź na pytanie captcha. Spróbuj ponownie.",
   "+4Empq": "Ten zakup skutkuje ujemnym saldem i niestety nie może zostać ukończony. Wiemy, że to frustrujące, i aktualnie pracujemy nad poprawą tego systemu. Sprawdź niedługo ponownie!",
+  "uhPY5u": "Nie można zweryfikować zakupu. Zaktualizuj swojego klienta.",
   "3jprCQ": "Nie można zastosować zmiany z powodu oczekującej płatności.",
   "sUWxgY": "Dokonujesz zbyt wielu zakupów zbyt szybko. Zaczekaj chwilkę i spróbuj ponownie!",
   "yNYvKy": "Podano nieznane źródło płatności. Wybierz inne i spróbuj ponownie.",
@@ -2518,12 +2532,9 @@
   "++JLLy": "Ludzie byli toksyczni lub zachowywali się nieodpowiednio",
   "tLi4cX": "Opowiedz nam o swoim doświadczeniu w rozmowie.",
   "C/12Tk": "Negatywne",
-  "0jP8iY": "Wystąpiły trudności techniczne...",
   "Xcb4cH": "Neutralne",
   "1Vyb5O": "Pozytywne",
-  "B81oy8": "Połączenie było idealne, bez żadnych zakłóceń!",
   "Ss6tlZ": "Jak poszła rozmowa?",
-  "xv0BJi": "Czy wystąpiły jakiekolwiek problemy techniczne?",
   "IdKo29": [
     "Musisz być znajomymi z ",
     [
@@ -2974,6 +2985,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Dołącz do Nitro, aby odblokować dostęp do tej dekoracji awatara!",
+  "e1UiOT": "Ulepsz, aby odblokować dostęp do tej dekoracji awatara!",
   "zOA4a2": "Twoja dekoracja awatara została zaktualizowana!",
   "V1AWw8": "Kup pakiet",
   "IQQYeX": [
@@ -3211,8 +3224,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Dołącz do Nitro, aby odblokować dostęp do tej dekoracji awatara!",
-  "dIepy8": "Ulepsz, aby odblokować dostęp do tej dekoracji awatara!",
   "0hKkS0": "Komendy",
   "5C107O": "Opcjonalne",
   "Ocw/sL": [
@@ -5100,6 +5111,7 @@
     ]
   ],
   "CumH4u": "Stwórz",
+  "825cFx": "Utwórz konto",
   "ISN+ND": "Stwórz kategorię",
   "fUYU+v": "Utworzenie kanału",
   "qyjZub": "Twórz wydarzenia",
@@ -6041,6 +6053,7 @@
   "ZPjue3": "Najlepsza rzecz, którą zjadłeś(-aś) w tym tygodniu?",
   "40gTj4": "Nie mogę się doczekać...",
   "SWVxPD": "Wybierz swoją klasę postaci",
+  "xaCthI": "Czym się obecnie pasjonujesz?",
   "3XVZ0t": "Najlepszy suchar?",
   "4U+EJC": "Najlepsze emoji opisujące Twój dzień?",
   "R1f9RU": "Ulubione anime?",
@@ -6072,7 +6085,7 @@
   "Iuzg8f": "Ustaw status",
   "zOdg0N": "Status",
   "hA60Ul": "Wyróżnij swój status wstępnie skonfigurowanym tagiem",
-  "jrzHRk": "Niestandardowe tagi statusu",
+  "jrzHRk": "Tagi statusu własnego",
   "GQmLra": "Dzisiaj",
   "UcdRn5": "Co słychać?",
   "xod36+": "Co Ci chodzi po głowie?",
@@ -11301,6 +11314,7 @@
   "70CJbW": "OFICJALNE",
   "q1L2v7": "Blokuj słowa w nazwach profili członków",
   "OiCBhI": "Wyświetl artykuł pomocy dotyczący blokowania wiadomości",
+  "HHYPgI": "Odznaka",
   "mOWsFx": "Wzmacnianie nie jest dostępne przy wstrzymanej subskrypcji Nitro!",
   "CduWAg": "Nie możesz zarządzać wzmocnieniami serwera, gdy subskrypcja Nitro jest wstrzymana.",
   "mkXb2N": [
@@ -24964,6 +24978,22 @@
   "9g5UGx": "Tak, na pewno",
   "9SNpzs": "Wyłączyć personalizację?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Ten numer telefonu jest już powiązany z innym kontem. ",
+    [
+      8,
+      "$link",
+      [
+        "Aby rozwiązać problem, przejdź tutaj"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Dodawanie numeru telefonu nie powiodło się. Spróbuj ponownie później.",
   "0/ALaG": "Nie rozpoznaliśmy tej lokalizacji. Wysłaliśmy kod potwierdzający na numer telefonu powiązany z tym kontem.",
   "w55Ocn": "Wprowadź kod potwierdzający, by zweryfikować, że to Ty",
@@ -31532,6 +31562,7 @@
   "p9jC2t": "WŁ.",
   "PBgTSE": "Stuknij, by wyłączyć pingowanie oryginalnego autora.",
   "E+6SSU": "Kliknij, aby zobaczyć polecenie",
+  "Xxm5i4": "Stuknij, aby wyświetlić wiadomość",
   "XAkOo6": "Zablokowana wiadomość",
   "mE3KJC": "Oryginalna wiadomość została usunięta",
   "G7p6v7": "Zignorowano wiadomość",
@@ -34413,7 +34444,6 @@
   "G2egzc": "Nie słychać dźwięku z aplikacji",
   "aHOfIi": "Dźwięk z aplikacji jest niskiej jakości",
   "5smP3d": "Jak udał się stream?",
-  "OR6KNz": "Czy wystąpiły jakiekolwiek problemy techniczne?",
   "fxiRNj": "Nic nie widać",
   "E8jTMD": "Obraz streamu jest niewyraźny lub widać piksele",
   "Xwv419": "Nie słychać było dźwięku z aplikacji",
@@ -34429,8 +34459,6 @@
   "KHGhHR": "Zgłoś problem ze streamem",
   "CqjnLC": "Opowiedz nam o swoim doświadczeniu oglądania streamu.",
   "0uxA2d": "Opowiedz nam o swoim doświadczeniu streamowania.",
-  "ISINlJ": "Wystąpiły trudności techniczne...",
-  "IySkjY": "Stream był idealny, bez żadnych zakłóceń!",
   "kLQySE": "Pokazuj wszystkich uczestników",
   "YSGk4O": "Zaproś ludzi, by do Ciebie dołączyli!",
   "WkAgPT": "Tylko Ty jesteś w tym połączeniu.",
@@ -37436,6 +37464,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Kody te pozwalają na zalogowanie się na Twoje konto w przypadku zgubienia klucza bezpieczeństwa – chroń je jak hasło. Nie udostępniaj ich nikomu i trzymaj je w bezpiecznym miejscu."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Każdy kod może być użyty tylko raz! Wszystkie poprzednie kody nie będą już działać!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Zmień szczegóły konta",
   "37S9yc": "W ramach dodatkowego zabezpieczenia wprowadź klucz, który wysłaliśmy właśnie na Twój adres e-mail. Powinien on dotrzeć za kilka minut.",
   "TjGb4e": "Klucz weryfikacji",
@@ -37493,6 +37543,7 @@
   "EA4ZEh": "Czy na pewno chcesz usunąć swoją aplikację uwierzytelniającą?",
   "0d1bXF": "Twoje konto Discorda jest teraz chronione dodatkową warstwą zabezpieczeń",
   "Awk3Gx": "Uwierzytelnianie dwuskładnikowe jest włączone! 🎉",
+  "7wPZlp": "Klucz bezpieczeństwa aktywowany! 🎉",
   "1u5B+P": "O nie, wystąpił błąd.",
   "xZEzbm": "Pokaż zapasowe kody",
   "PsQmzc": "Wprowadź hasło",
@@ -38596,6 +38647,7 @@
   "jec90t": "Następnie utwórz konto",
   "KtJgIy": "Hasło musi mieć co najmniej 8 znaków.",
   "y7LSyc": "Używaj tylko liter, cyfr, podkreślników i kropek.",
+  "w/XiOz": "Możesz to zmienić w dowolnym momencie.",
   "EJ26Oj": "Ten kanał wymaga Naciśnij i Mów do rozmowy głosowej. Jeśli chcesz brać w niej udział, zmień tryb na\nNaciśnij i Mów z wykrywania Aktywności Głosowej.",
   "NYklho": "Wymagane Naciśnij i Mów",
   "hFzI4u": "Nitro unosi się w powietrzu <3",

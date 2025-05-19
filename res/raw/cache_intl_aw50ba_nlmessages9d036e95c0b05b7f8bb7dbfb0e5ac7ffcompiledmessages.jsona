@@ -1232,9 +1232,22 @@
   ],
   "T15lqq": "Te snel! Wacht even en probeer het opnieuw.",
   "/s1xR0": "Cadeau klaar voor verzending",
+  "1Qm829": "Toepassen",
   "PHjkRE": "Apps",
   "AKcFUl": "Appgids",
   "LO4f0N": "Partner",
+  "eGZFws": "Meldingen zijn uitgeschakeld voor dit pb.",
+  "7Sbhqa": [
+    "Meldingen zijn uitgeschakeld tot ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Meldingen zijn ingeschakeld voor deze pb.",
+  "GFEn8/": "Uitschakelen",
+  "JFu44e": "Aanzetten",
   "9PUXpK": "Woedend",
   "IoLVi4": "Droomijs",
   "nmd90t": "uwu~",
@@ -1810,6 +1823,7 @@
   "yX8s2t": "De kaart is geweigerd wegens een ontoereikend saldo.",
   "3s/vDA": "Ongeldige captcha-reactie. Probeer het opnieuw.",
   "+4Empq": "Deze aankoop zal voor een negatief saldo zorgen en kan dus niet worden voltooid. We weten dat dit frustrerend is en we werken er momenteel aan om het systeem te verbeteren. Kom binnenkort weer terug.",
+  "uhPY5u": "Aankoop kon niet worden gevalideerd. Update je client.",
   "3jprCQ": "Wijziging kan niet worden verwerkt omdat de betaling nog niet rond is.",
   "sUWxgY": "Je hebt te snel te veel aankopen proberen te doen. Gelieve even te wachten en het opnieuw te proberen!",
   "yNYvKy": "Er is een onbekende betalingsbron opgegeven. Kies een andere bron en probeer het opnieuw.",
@@ -2428,12 +2442,9 @@
   "++JLLy": "Negatief of ongepast gedrag",
   "tLi4cX": "Vertel ons hoe je het gesprek hebt beleefd.",
   "C/12Tk": "Negatief",
-  "0jP8iY": "Ik heb wat technische problemen gehad...",
   "Xcb4cH": "Neutraal",
   "1Vyb5O": "Positief",
-  "B81oy8": "Het gesprek is soepeltjes verlopen!",
   "Ss6tlZ": "Hoe ging het gesprek?",
-  "xv0BJi": "Heb je technische problemen gehad?",
   "IdKo29": [
     "Je moet bevriend zijn met ",
     [
@@ -2869,6 +2880,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Neem Nitro om toegang te ontgrendelen tot deze avatarversiering!",
+  "e1UiOT": "Upgraden om toegang te ontgrendelen tot deze avatarversiering!",
   "zOA4a2": "Je avatarversiering is bijgewerkt!",
   "V1AWw8": "Bundel kopen",
   "IQQYeX": [
@@ -3096,8 +3109,6 @@
     ],
     " verzameld!"
   ],
-  "2xIzZW": "Neem Nitro om toegang te ontgrendelen tot deze avatarversiering!",
-  "dIepy8": "Upgraden om toegang te ontgrendelen tot deze avatarversiering!",
   "0hKkS0": "Opdrachten",
   "5C107O": "Optioneel",
   "Ocw/sL": [
@@ -4933,6 +4944,7 @@
     " extra"
   ],
   "CumH4u": "Creëren",
+  "825cFx": "Account aanmaken",
   "ISN+ND": "Categorie maken",
   "fUYU+v": "Creëer kanaal",
   "qyjZub": "Evenementen creëren",
@@ -5823,6 +5835,7 @@
   "ZPjue3": "Wat is het lekkerste dat je deze week hebt gegeten?",
   "40gTj4": "Kan niet wachten op...",
   "SWVxPD": "Kies je personageklasse",
+  "xaCthI": "Waardoor ben je momenteel geobsedeerd?",
   "3XVZ0t": "Beste vadergrap?",
   "4U+EJC": "Welke emoji past het beste bij je dag?",
   "R1f9RU": "Welke anime is je favoriet de laatste tijd?",
@@ -5854,7 +5867,7 @@
   "Iuzg8f": "Je status instellen",
   "zOdg0N": "Status",
   "hA60Ul": "Laat je status opvallen met een vooraf ingestelde tag",
-  "jrzHRk": "Gepersonaliseerde statustags",
+  "jrzHRk": "Gepersonaliseerde-statustags",
   "GQmLra": "Vandaag",
   "UcdRn5": "Hoe staat het leven?",
   "xod36+": "Waar denk je aan?",
@@ -8726,9 +8739,9 @@
   "f8wNDg": "Sorteren op",
   "UIltXV": "Postdatum",
   "jOPmcH": "Recent actief",
-  "Paxaur": "Tags koppelen",
-  "FCXUu7": "Alles koppelen",
-  "rQ0ctb": "Koppelen maar",
+  "Paxaur": "Overeenkomende tags zoeken",
+  "FCXUu7": "Alle tags kloppen",
+  "rQ0ctb": "Sommige tags kloppen",
   "jPhTvb": [
     [
       1,
@@ -8784,7 +8797,7 @@
   ],
   "gePre3": "Sorteervolgorde",
   "165cVV": "Stel de standaardvolgorde in voor nieuwe posts. Leden kunnen deze opties nog steeds aan- of uitzetten.",
-  "DqOl8P": "Stel het standaard koppelgedrag voor tags in. Leden kunnen deze opties nog steeds aan- of uitzetten.",
+  "DqOl8P": "Stel tagovereenkomsten in. Leden kunnen wisselen tussen deze opties.",
   "YtsXFB": [
     "Waar wil je het over hebben in #",
     [
@@ -10870,6 +10883,7 @@
   "70CJbW": "OFFICIEEL",
   "q1L2v7": "Woorden in ledenprofielnamen blokkeren",
   "OiCBhI": "Help-artikel over geblokkeerde berichten bekijken",
+  "HHYPgI": "Badge",
   "mOWsFx": "Je kunt niet boosten als je Nitro-abonnement is gepauzeerd!",
   "CduWAg": "Je kunt serverboosts niet beheren als je Nitro-abonnement is gepauzeerd.",
   "mkXb2N": [
@@ -24300,6 +24314,22 @@
   "9g5UGx": "Ja, ik weet het zeker",
   "9SNpzs": "Personaliseren uitschakelen?",
   "dEYpSk": "Telefoon",
+  "kj8xiI": [
+    "Dit telefoonnummer is al gekoppeld aan een ander account. ",
+    [
+      8,
+      "$link",
+      [
+        "Zoek hier naar een oplossing"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Telefoonnummer toevoegen mislukt, probeer het later opnieuw",
   "0/ALaG": "We herkennen deze locatie niet. We hebben een bevestigingscode gestuurd naar het telefoonnummer dat aan dit account gekoppeld is.",
   "w55Ocn": "Voer je bevestigingscode in om te verifiëren dat jij het bent",
@@ -30589,6 +30619,7 @@
   "p9jC2t": "AAN",
   "PBgTSE": "Tik om pingen van oorspronkelijke auteur uit te schakelen.",
   "E+6SSU": "Klik om de opdracht te zien",
+  "Xxm5i4": "Tik om het bericht te zien",
   "XAkOo6": "Geblokkeerd bericht",
   "mE3KJC": "Oorspronkelijk bericht verwijderd",
   "G7p6v7": "Genegeerd bericht",
@@ -33427,7 +33458,6 @@
   "G2egzc": "Er is geen applicatie-audio",
   "aHOfIi": "De applicatie-audio is van slechte kwaliteit",
   "5smP3d": "Hoe was de stream?",
-  "OR6KNz": "Heb je technische problemen gehad?",
   "fxiRNj": "Stream is zwart",
   "E8jTMD": "Stream is onduidelijk of korrelig",
   "Xwv419": "Er was geen applicatie-audio",
@@ -33443,8 +33473,6 @@
   "KHGhHR": "Streamprobleem melden",
   "CqjnLC": "Vertel ons over je ervaring bij het bekijken van een stream.",
   "0uxA2d": "Vertel ons over je ervaring bij het streamen.",
-  "ISINlJ": "Ik heb wat technische problemen gehad...",
-  "IySkjY": "De stream is soepeltjes verlopen!",
   "kLQySE": "Toon alle deelnemers",
   "YSGk4O": "Nodig mensen uit om mee te doen!",
   "WkAgPT": "Je bent alleen in dit gesprek.",
@@ -36415,6 +36443,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Met deze codes krijg je toegang tot je account als je je beveiligingscode kwijtraakt. Beveilig ze alsof het wachtwoorden zijn. Deel ze met niemand en bewaar ze op een veilige plek."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Elke code kan maar één keer worden gebruikt! Alle eerder gegenereerde codes werken niet meer!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Accountdetails veranderen",
   "37S9yc": "Als extra veiligheidsmaatregel moet je de code invoeren die we net naar je hebben gemaild. Je ontvangt hem binnen een minuut of twee.",
   "TjGb4e": "Verificatiecode",
@@ -36472,6 +36522,7 @@
   "EA4ZEh": "Weet je zeker dat je je authenticator-app wilt verwijderen?",
   "0d1bXF": "Je Discord-account is nu beveiligd met een extra beveiligingslaag",
   "Awk3Gx": "2FA is geactiveerd! 🎉",
+  "7wPZlp": "Beveiligingscode geactiveerd! 🎉",
   "1u5B+P": "Er is een netwerkfout opgetreden.",
   "xZEzbm": "Backupcodes bekijken",
   "PsQmzc": "Voer je wachtwoord in",
@@ -37528,6 +37579,7 @@
   "jec90t": "Creëer nu een account",
   "KtJgIy": "Wachtwoord moet uit minstens 8 tekens bestaan.",
   "y7LSyc": "Gebruik alleen letters, cijfers, liggende streepjes en punten.",
+  "w/XiOz": "Je kunt dit op elk moment wijzigen.",
   "EJ26Oj": "Dit kanaal vereist push-to-talk om gebruik te maken van spraak. Tot je van spraakdetectie naar push-to-talk wisselt\nkun je alleen luisteren.",
   "NYklho": "Push to Talk vereist",
   "hFzI4u": "Heb lief met Nitro <3",

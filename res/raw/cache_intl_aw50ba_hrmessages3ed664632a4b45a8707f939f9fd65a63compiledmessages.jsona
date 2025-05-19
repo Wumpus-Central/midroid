@@ -1259,9 +1259,22 @@
   ],
   "T15lqq": "Prebrzo! Pričekaj malo i pokušaj ponovo.",
   "/s1xR0": "Dar je spreman za isporuku",
+  "1Qm829": "Primijeni",
   "PHjkRE": "Aplikacije",
   "AKcFUl": "App direktorij",
   "LO4f0N": "Partner",
+  "eGZFws": "Obavijesti su onemogućene za ovu direktnu poruku.",
+  "7Sbhqa": [
+    "Obavijesti su onemogućene do ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Obavijesti su omogućene za ovu direktnu poruku.",
+  "GFEn8/": "Isključi",
+  "JFu44e": "Uključi",
   "9PUXpK": "Ljutit",
   "IoLVi4": "Slatkiš iz snova od šerbeta",
   "nmd90t": "uwu~",
@@ -1843,6 +1856,7 @@
   "yX8s2t": "Kartica je odbijena jer nije bilo dovoljno sredstava.",
   "3s/vDA": "Neispravan odgovor na captcha test. Pokušaj ponovo.",
   "+4Empq": "Ova kupnja bi napravila negativan saldo i, nažalost, nećemo je moći provesti. Znamo da to može uzrujati čovjeka i baš zato radimo na tome da napravimo neki bolji sistem. Navrati malo kasnije, probaj ponovo!",
+  "uhPY5u": "Kupnju nije moguće potvrditi. Ažuriraj svog klijenta.",
   "3jprCQ": "Nije moguće obraditi promjenu zbog plaćanja na čekanju.",
   "sUWxgY": "Pokušao si obaviti previše kupnji u premalo vremena. Pričekaj malo i pokušaj ponovo!",
   "yNYvKy": "Naveden je izvor plaćanja koji je nepoznat. Odaberi neki drugi i pokušaj ponovo.",
@@ -2498,12 +2512,9 @@
   "++JLLy": "Ljudi su bili zlobni ili nepristojni",
   "tLi4cX": "Reci nam kako ti je prošao taj poziv.",
   "C/12Tk": "Negativno",
-  "0jP8iY": "Imao/la sam neke tehničke poteškoće...",
   "Xcb4cH": "Neutralno",
   "1Vyb5O": "Pozitivno",
-  "B81oy8": "Poziv je protekao savršeno!",
   "Ss6tlZ": "Kako je prošao poziv?",
-  "xv0BJi": "Jesi li imao/la nekih tehničkih poteškoća?",
   "IdKo29": [
     "Moraš biti prijatelj s ",
     [
@@ -2956,6 +2967,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Pridruži se u Nitro da otključaš pristup ovom ukrasu avatara!",
+  "e1UiOT": "Nadogradi da otključaš pristup ovom ukrasu avatara!",
   "zOA4a2": "Tvoj je ukras avatara ažuriran!",
   "V1AWw8": "Kupi paket",
   "IQQYeX": [
@@ -3189,8 +3202,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Pridruži se u Nitro da otključaš pristup ovom ukrasu avatara!",
-  "dIepy8": "Nadogradi da otključaš pristup ovom ukrasu avatara!",
   "0hKkS0": "Naredbe",
   "5C107O": "Neobavezno",
   "Ocw/sL": [
@@ -5074,6 +5085,7 @@
     " dodatno"
   ],
   "CumH4u": "Napravi",
+  "825cFx": "Izradi račun",
   "ISN+ND": "Napravi kategoriju",
   "fUYU+v": "Napravi kanal",
   "qyjZub": "Stvori događaje",
@@ -5997,6 +6009,7 @@
   "ZPjue3": "Najbolja stvar koju si pojeo/la ovog tjedna?",
   "40gTj4": "Ne mogu dočekati...",
   "SWVxPD": "Odaberi razred svojeg lika",
+  "xaCthI": "Što je ono što te opsjeda ovih dana?",
   "3XVZ0t": "Najbolji bazični vic?",
   "4U+EJC": "Koji emoji najbolje opisuje tvoj dan?",
   "R1f9RU": "Koji ti je omiljeni anime u posljednje vrijeme?",
@@ -9015,7 +9028,7 @@
   "jOPmcH": "Nedavno aktivno",
   "Paxaur": "Usklađivanje oznaka",
   "FCXUu7": "Uskladi sve",
-  "rQ0ctb": "Uskladi s ponekim",
+  "rQ0ctb": "Uskladi s ponekima",
   "jPhTvb": [
     [
       1,
@@ -11268,6 +11281,7 @@
   "70CJbW": "SLUŽBENO",
   "q1L2v7": "Blokiraj riječi u nazivima profila članova",
   "OiCBhI": "Prikaži članak o pomoći za blokirane poruke",
+  "HHYPgI": "Badge",
   "mOWsFx": "Boostanje nije dostupno kada je tvoja Nitro pretplata pauzirana!",
   "CduWAg": "Ne možeš upravljati Server Boostovima kada je tvoja Nitro pretplata pauzirana.",
   "mkXb2N": [
@@ -25072,6 +25086,22 @@
   "9g5UGx": "Da, siguran/na sam",
   "9SNpzs": "Želiš li isključiti personalizaciju?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Ovaj broj telefona već je povezan s drugim računom. ",
+    [
+      8,
+      "$link",
+      [
+        "Taj problem možeš riješiti ovdje"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Dodavanje broja telefona nije uspjelo, pokušaj kasnije",
   "0/ALaG": "Ne prepoznajemo ovu lokaciju. SMS je poslan na broj telefona koji je povezan s ovim računom.",
   "w55Ocn": "Unesi svoj kod za potvrdu kako bi potvrdio da si to ti",
@@ -31676,6 +31706,7 @@
   "p9jC2t": "UKLJ.",
   "PBgTSE": "Dodirni da onemogućiš pinganje izvornog autora.",
   "E+6SSU": "Klikni za prikazivanje naredbe",
+  "Xxm5i4": "Dodirni da vidiš poruku",
   "XAkOo6": "Blokirana poruka",
   "mE3KJC": "Izvorna je poruka izbrisana",
   "G7p6v7": "Zanemarena poruka",
@@ -34557,7 +34588,6 @@
   "G2egzc": "Nema zvuka aplikacije",
   "aHOfIi": "Zvuk aplikacije je loše kvalitete",
   "5smP3d": "I, kako je stream prošao?",
-  "OR6KNz": "Jesi li imao/la nekih tehničkih poteškoća?",
   "fxiRNj": "Stream je crn",
   "E8jTMD": "Stream je mutan ili zrnat",
   "Xwv419": "Nije bilo zvuka aplikacije",
@@ -34573,8 +34603,6 @@
   "KHGhHR": "Prijavi problem streaminga",
   "CqjnLC": "Reci nam kako ti se svidjelo gledanje ovog streaminga.",
   "0uxA2d": "Reci nam svoje dojmove o streamingu.",
-  "ISINlJ": "Imao/la sam neke tehničke poteškoće...",
-  "IySkjY": "Stream je protekao savršeno!",
   "kLQySE": "Prikaži sve sudionike",
   "YSGk4O": "Pozovi ljude da ti se pridruže!",
   "WkAgPT": "Ti si jedina osoba u ovom pozivu.",
@@ -37611,6 +37639,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Ovi kodovi će ti omogućiti ulazak na tvoj korisnički račun u slučaju da izgubiš sigurnosni ključ; čuvaj ih kao što čuvaš svoje lozinke. Nemoj ih nikome (o)davati i čuvaj ih na nekom sigurnom mjestu."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Svaki kôd se može koristiti samo jednom! Svi ranije generirani kodovi više neće raditi!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Promijeni detalje korisničkog računa",
   "37S9yc": "Potrebno je pojačati sigurnost i zato te molimo da upišeš ključ koji smo ti poslali na tvoju adresu e-pošte. Trebao bi stići u roku od minute ili dvije.",
   "TjGb4e": "Ključ za verifikaciju",
@@ -37668,6 +37718,7 @@
   "EA4ZEh": "Želiš li sigurno ukloniti aplikaciju za autentifikaciju?",
   "0d1bXF": "Tvoj Discord račun od sada je zaštićen dodatnim slojem sigurnosti",
   "Awk3Gx": "2FA je aktiviran! 🎉",
+  "7wPZlp": "Sigurnosni ključ je aktiviran! 🎉",
   "1u5B+P": "Eh. Dogodila se greška.",
   "xZEzbm": "Pregledaj rezervne kôdove",
   "PsQmzc": "Unesi svoju lozinku",
@@ -38767,6 +38818,7 @@
   "jec90t": "A zatim napravi račun",
   "KtJgIy": "Lozinka mora iznositi najmanje 8 znakova.",
   "y7LSyc": "Možeš upotrebljavati samo slova, brojeve, podvlake i točke.",
+  "w/XiOz": "Ovo možeš promijeniti kad poželiš.",
   "EJ26Oj": "Ovaj kanal zahtijeva opciju Push to Talk. Nećeš moći govoriti u ovom kanalu sve dok je ne omogućiš u postavkama.",
   "NYklho": "Opcija Push to Talk je obavezna",
   "hFzI4u": "Nitro je u zraku <3",

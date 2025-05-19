@@ -110,9 +110,9 @@ fun `access$appendToExistingBuilder`(var0: java.util.List, var1: RenderContext, 
 }
 
 private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>, rc: RenderContext, isOrderedList: Boolean) {
-   var var5: Int = SizeUtilsKt.getDpToPx(8);
-   val var8: Int = var2.getListNestedLevel();
-   val var14: Standard = new Standard(SizeUtilsKt.getDpToPx(var8 * 16));
+   val var6: Int = SizeUtilsKt.getDpToPx(8);
+   var var5: Int = var2.getListNestedLevel();
+   val var14: Standard = new Standard(SizeUtilsKt.getDpToPx(var5 * 16));
    val var4: Int = SizeUtilsKt.getDpToPx(2);
    val var15: VerticalPaddingSpan = new VerticalPaddingSpan(var4);
    if (var3) {
@@ -139,7 +139,7 @@ private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>
          appendToExistingBuilder(i.e(new TextContentNode(var23.toString())), var2, var0);
          appendToExistingBuilder(var1, var2, var0);
       } else {
-         val var24: OrderedListBulletSpan = new OrderedListBulletSpan(var9, var5, var11, var2.getPaint());
+         val var24: OrderedListBulletSpan = new OrderedListBulletSpan(var9, var6, var11, var2.getPaint());
          var5 = var0.length();
          appendToExistingBuilder(var1, var2, var0);
          SpannableStringBuilderExtensionsKt.ensureNewline(var0, new AbsoluteSizeSpan(var4));
@@ -162,16 +162,16 @@ private fun DraweeSpanStringBuilder.appendBulletPoint(content: List<ContentNode>
       appendToExistingBuilder(i.e(new TextContentNode(var25)), var2, var0);
       appendToExistingBuilder(var1, var2, var0);
    } else {
-      val var6: Int = SizeUtilsKt.getDpToPx(2);
-      val var7: Int = ColorUtilsKt.getThemeColor(var2.getContext(), R.color.primary_360, R.color.primary_400, var2.getTheme());
+      val var7: Int = SizeUtilsKt.getDpToPx(2);
+      val var8: Int = ColorUtilsKt.getThemeColor(var2.getContext(), R.color.primary_360, R.color.primary_400, var2.getTheme());
       val var26: Style;
-      if (var8 > 0) {
+      if (var5 > 0) {
          var26 = Style.STROKE;
       } else {
          var26 = Style.FILL;
       }
 
-      val var27: BulletSpan = new BulletSpan(var7, var5, false, var6, 0.0F, var26, 20, null);
+      val var27: BulletSpan = new BulletSpan(var8, var6, false, var7, 0.0F, var26, 20, null);
       var5 = var0.length();
       appendToExistingBuilder(var1, var2, var0);
       SpannableStringBuilderExtensionsKt.ensureNewline(var0, new AbsoluteSizeSpan(var4));
@@ -201,22 +201,22 @@ public fun DraweeSpanStringBuilder.appendImage(
    q.h(var3, "imageUrl");
    val var9: Int = var0.length();
    var0.append('\u200b');
-   val var13: com.facebook.drawee.controller.a = (R1.d.g().F(ImageRequestBuilder.x(Uri.parse(ReactAssetUtilsKt.getReactImageUrl(var1, var3))).a()) as PipelineDraweeControllerBuilder)
+   val var11: com.facebook.drawee.controller.a = (R1.d.g().F(ImageRequestBuilder.x(Uri.parse(ReactAssetUtilsKt.getReactImageUrl(var1, var3))).a()) as PipelineDraweeControllerBuilder)
       .d();
-   q.g(var13, "build(...)");
-   val var10: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var1.getResources()).w(ScalingUtils$ScaleType.e);
-   val var11: com.facebook.drawee.generic.a = com.facebook.drawee.generic.a.a(var7);
-   var11.r(var8);
-   var11.u(com.facebook.drawee.generic.a.a.k);
-   var10.K(var11);
+   q.g(var11, "build(...)");
+   val var13: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var1.getResources()).w(ScalingUtils$ScaleType.e);
+   val var10: com.facebook.drawee.generic.a = com.facebook.drawee.generic.a.b(var7);
+   var10.s(var8);
+   var10.v(com.facebook.drawee.generic.a.a.k);
+   var13.K(var10);
    if (var2.spoilerIsHidden()) {
-      var10.v(new PorterDuffColorFilter(var2.getTheme().getSpoilerHiddenBackground(), Mode.SRC_IN));
+      var13.v(new PorterDuffColorFilter(var2.getTheme().getSpoilerHiddenBackground(), Mode.SRC_IN));
    } else if (var6 != null) {
-      var10.v(new PorterDuffColorFilter(var6, Mode.SRC_IN));
+      var13.v(new PorterDuffColorFilter(var6, Mode.SRC_IN));
    }
 
-   q.g(var10, "apply(...)");
-   var0.j(var1, var10.a(), var13, var9, var4, var5, false, 2);
+   q.g(var13, "apply(...)");
+   var0.j(var1, var13.a(), var11, var9, var4, var5, false, 2);
 }
 
 @JvmSynthetic
@@ -523,9 +523,9 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
 
       label683: {
          var var26: Context = var1.getContext();
-         val var30: BackgroundColorSpan = new BackgroundColorSpan(var1.getTheme().getBackgroundSecondary());
-         var var28: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-         var var29: DiscordFontSpan = new DiscordFontSpan(var26, DiscordFont.CodeNormal);
+         val var29: BackgroundColorSpan = new BackgroundColorSpan(var1.getTheme().getBackgroundSecondary());
+         val var30: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+         var var28: DiscordFontSpan = new DiscordFontSpan(var26, DiscordFont.CodeNormal);
          val var13: Int = ColorUtilsKt.getThemeColor(
             var26, com.discord.chat.R.color.chat_mentions_background_light, com.discord.chat.R.color.chat_mentions_background_dark, var1.getTheme()
          );
@@ -565,7 +565,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                var22.append(kotlin.text.h.C((var27 as CodeBlockContentNode).getContent(), '\n', ' ', false, 4, null));
 
                for (int var88 = var6; var88 < 3; var88 += var5) {
-                  var23 = new Object[]{var30, var28, var29}[var88];
+                  var23 = new Object[]{var29, var30, var28}[var88];
                   if (var23 != null) {
                      var22.setSpan(var23, var107, var2.length(), 33);
                   }
@@ -609,7 +609,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                var22.append((var27 as InlineCodeContentNode).getContent());
 
                for (int var85 = 0; var85 < 5; var85 += var5) {
-                  var26 = (Context)new Object[]{var23, var30, var28, var29, var224}[var85];
+                  var26 = (Context)new Object[]{var23, var29, var30, var28, var224}[var85];
                   if (var26 != null) {
                      var22.setSpan(var26, var8, var2.length(), 33);
                   }
@@ -1033,9 +1033,9 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                 throw new p();
                                              }
 
-                                             val var231: BackgroundSpan = makeMentionBackgroundSpan(var1, var13);
-                                             val var135: ForegroundColorSpan = new ForegroundColorSpan(var10);
-                                             val var189: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, new Function1(var1, var27) {
+                                             val var210: BackgroundSpan = makeMentionBackgroundSpan(var1, var13);
+                                             val var189: ForegroundColorSpan = new ForegroundColorSpan(var10);
+                                             val var231: ClickableSpan = new ClickableSpan(null, -1, null, null, 0.0F, null, new Function1(var1, var27) {
                                                 final ContentNode $contentNode;
                                                 final RenderContext $rc;
 
@@ -1065,20 +1065,20 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                    this.$rc.getOnTapCommand().invoke(this.$contentNode);
                                                 }
                                              }, 61, null);
-                                             val var210: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
+                                             val var135: GGSansBoldSpan = new GGSansBoldSpan(var1.getContext());
                                              var8 = var2.length();
                                              val var109: Int = var2.length();
                                              var22.append("/");
                                              var22.append(toSpannable$default((var27 as CommandMentionContentNode).getContent(), var1, null, 2, null));
 
                                              for (int var39 = 0; var39 < 3; var39 += var65) {
-                                                var27 = (ContentNode)new Object[]{var189, var231, var135}[var39];
+                                                var27 = (ContentNode)new Object[]{var231, var210, var189}[var39];
                                                 if (var27 != null) {
                                                    var22.setSpan(var27, var109, var2.length(), 33);
                                                 }
                                              }
 
-                                             var23 = (Integer)new Object[]{var210}[0];
+                                             var23 = (Integer)new Object[]{var135}[0];
                                              var5 = var65;
                                              var130 = var22;
                                              if (var23 != null) {
@@ -1089,7 +1089,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                              break label730;
                                           }
 
-                                          val var256: ClickableSpan = new ClickableSpan(
+                                          val var134: ClickableSpan = new ClickableSpan(
                                              null,
                                              -1,
                                              null,
@@ -1121,8 +1121,8 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                              125,
                                              null
                                           );
-                                          val var188: BackgroundSpan = makeMentionBackgroundSpan(var1, var13);
-                                          val var134: ForegroundColorSpan = new ForegroundColorSpan(var10);
+                                          val var256: BackgroundSpan = makeMentionBackgroundSpan(var1, var13);
+                                          val var188: ForegroundColorSpan = new ForegroundColorSpan(var10);
                                           val var108: Int = getIconSize(null, var1.getBaselineHeightPx());
                                           var6 = var2.length();
                                           val var247: StaticChannelMentionContentNode = var27 as StaticChannelMentionContentNode;
@@ -1135,7 +1135,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                 ReactAsset.Home.getUri(var26),
                                                 var108,
                                                 var108,
-                                                var134.getForegroundColor(),
+                                                var188.getForegroundColor(),
                                                 0.0F,
                                                 0.0F,
                                                 192,
@@ -1153,7 +1153,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       ReactAsset.Link.getUri(var26),
                                                       var108,
                                                       var108,
-                                                      var134.getForegroundColor(),
+                                                      var188.getForegroundColor(),
                                                       0.0F,
                                                       0.0F,
                                                       192,
@@ -1168,7 +1168,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                    ReactAsset.ChannelBrowse.getUri(var26),
                                                    var108,
                                                    var108,
-                                                   var134.getForegroundColor(),
+                                                   var188.getForegroundColor(),
                                                    0.0F,
                                                    0.0F,
                                                    192,
@@ -1183,7 +1183,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                 ReactAsset.ChannelBrowse.getUri(var26),
                                                 var108,
                                                 var108,
-                                                var134.getForegroundColor(),
+                                                var188.getForegroundColor(),
                                                 0.0F,
                                                 0.0F,
                                                 192,
@@ -1195,7 +1195,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                           var22.append(toSpannable$default(var247.getContent(), var1, null, 2, null));
 
                                           for (int var64 = 0; var64 < 4; var64++) {
-                                             var26 = (Context)new Object[]{var209, var256, var188, var134}[var64];
+                                             var26 = (Context)new Object[]{var209, var134, var256, var188}[var64];
                                              if (var26 != null) {
                                                 var22.setSpan(var26, var5, var2.length(), 33);
                                              }
@@ -1205,7 +1205,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                           break label726;
                                        }
 
-                                       val var246: ClickableSpan = new ClickableSpan(
+                                       val var255: ClickableSpan = new ClickableSpan(
                                           null,
                                           -1,
                                           null,
@@ -1252,7 +1252,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                           null
                                        );
                                        val var187: BackgroundSpan = makeMentionBackgroundSpan(var1, var13);
-                                       val var255: ForegroundColorSpan = new ForegroundColorSpan(var10);
+                                       val var246: ForegroundColorSpan = new ForegroundColorSpan(var10);
                                        var5 = var2.length();
                                        var8 = getIconSize(null, var1.getBaselineHeightPx());
                                        appendImage$default(
@@ -1262,7 +1262,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                           ReactAsset.Attachment.getUri(var26),
                                           var8,
                                           var8,
-                                          var255.getForegroundColor(),
+                                          var246.getForegroundColor(),
                                           0.0F,
                                           0.0F,
                                           192,
@@ -1282,7 +1282,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                              break;
                                           }
 
-                                          var21 = (RenderContext)new Object[]{var209, var246, var187, var255}[var6];
+                                          var21 = (RenderContext)new Object[]{var209, var255, var187, var246}[var6];
                                           if (var21 != null) {
                                              var22.setSpan(var21, var5, var2.length(), 33);
                                           }
@@ -1348,16 +1348,16 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                 q.h(var1, "$this$changeTextSizeSp");
                                                 q.h(var2, "updatedRC");
                                                 var1 = this.$builder;
-                                                val var6: ForegroundColorSpan = this.$fontColorSpan;
-                                                val var5: ContentNode = this.$contentNode;
+                                                val var5: ForegroundColorSpan = this.$fontColorSpan;
+                                                val var6: ContentNode = this.$contentNode;
                                                 val var4: Boolean = this.$isLastContentNode;
                                                 val var3: Int = this.$builder.length();
-                                                TextUtilsKt.access$appendToExistingBuilder((var5 as SubtextContentNode).getContent(), var2, var1);
+                                                TextUtilsKt.access$appendToExistingBuilder((var6 as SubtextContentNode).getContent(), var2, var1);
                                                 if (!var4) {
                                                    SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
                                                 }
 
-                                                val var8: Any = new Object[]{var6}[0];
+                                                val var8: Any = new Object[]{var5}[0];
                                                 if (var8 != null) {
                                                    var1.setSpan(var8, var3, var1.length(), 13107233);
                                                 }
@@ -1499,9 +1499,9 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                 null
                                              );
                                              val var172: BulletListContentNode = var27 as BulletListContentNode;
-                                             val var20: Boolean = (var27 as BulletListContentNode).getOrdered();
+                                             var123 = (var27 as BulletListContentNode).getOrdered();
                                              val var119: Long;
-                                             if (var20) {
+                                             if (var123) {
                                                 val var203: java.lang.Long = var172.getStart();
                                                 if (var203 != null) {
                                                    var119 = var203;
@@ -1562,7 +1562,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                    }
 
                                                    var27 = var174 as ContentNode;
-                                                   var123 = var174 as ContentNode is BulletListContentNode;
+                                                   val var20: Boolean = var174 as ContentNode is BulletListContentNode;
                                                    val var101: Byte;
                                                    if (var55 == var117 - 1) {
                                                       var101 = var6;
@@ -1570,13 +1570,13 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       var101 = 0;
                                                    }
 
-                                                   if (!var123) {
+                                                   if (!var20) {
                                                       var217.add(var27);
                                                    }
 
-                                                   if (var123 || var101 != 0) {
+                                                   if (var20 || var101 != 0) {
                                                       var174 = var21;
-                                                      if (var20) {
+                                                      if (var123) {
                                                          var var17: Long;
                                                          if (var21.getListOrderedIndex() != null) {
                                                             var174 = var21.getListOrderedIndex();
@@ -1631,7 +1631,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       }
 
                                                       var21 = (RenderContext)var174;
-                                                      appendBulletPoint(var2, var217, (RenderContext)var174, var20);
+                                                      appendBulletPoint(var2, var217, (RenderContext)var174, var123);
                                                       if (var1.getSingleLine()) {
                                                          simulateInlineNewline(var2);
                                                       }
@@ -1639,7 +1639,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                       var217.clear();
                                                    }
 
-                                                   if (var123) {
+                                                   if (var20) {
                                                       appendToExistingBuilder(
                                                          i.e(var27),
                                                          RenderContext.copy$default(
@@ -1778,9 +1778,9 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                    } else {
                                                       if (var27 !is GuildNameContentNode) {
                                                          if (var27 is SoundmojiContentNode) {
-                                                            val var200: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-                                                            var29 = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
-                                                            val var215: ClickableSpan = new ClickableSpan(
+                                                            val var215: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+                                                            val var267: DiscordFontSpan = new DiscordFontSpan(var1.getContext(), DiscordFont.PrimarySemibold);
+                                                            val var200: ClickableSpan = new ClickableSpan(
                                                                null, null, null, null, 0.0F, null, null, new Function1(var1, var27) {
                                                                   final ContentNode $contentNode;
                                                                   final RenderContext $rc;
@@ -1825,25 +1825,25 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                                      this.$contentNode as SoundmojiContentNode
                                                                   );
                                                                   if (var7 != null) {
-                                                                     val var4: DraweeSpanStringBuilder = this.$builder;
+                                                                     val var6: DraweeSpanStringBuilder = this.$builder;
                                                                      val var5: Context = this.$context;
-                                                                     val var6: RenderContext = this.$rc;
-                                                                     val var3: java.lang.Float = this.$rc.getEmojiBaselineHeightOverridePx();
+                                                                     val var3: RenderContext = this.$rc;
+                                                                     val var4: java.lang.Float = this.$rc.getEmojiBaselineHeightOverridePx();
                                                                      val var2: Float;
-                                                                     if (var3 != null) {
-                                                                        var2 = var3;
+                                                                     if (var4 != null) {
+                                                                        var2 = var4;
                                                                      } else {
-                                                                        var2 = var6.getBaselineHeightPx();
+                                                                        var2 = var3.getBaselineHeightPx();
                                                                      }
 
                                                                      RenderableEmojiKt.renderEmojiInto$default(
-                                                                        var4,
+                                                                        var6,
                                                                         var7,
                                                                         var5,
                                                                         TextUtilsKt.getIconSize("_emoji", var2 * 0.8F),
                                                                         false,
                                                                         0,
-                                                                        new Function1(var6) {
+                                                                        new Function1(var3) {
                                                                            final RenderContext $rc;
 
                                                                            {
@@ -1859,7 +1859,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                                         32,
                                                                         null
                                                                      );
-                                                                     var4.append(" ");
+                                                                     var6.append(" ");
                                                                   }
 
                                                                   val var10: DraweeSpanStringBuilder = this.$builder;
@@ -1878,7 +1878,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                             if (var1.spoilerExists() && !var1.spoilerIsRevealed()) {
                                                                var5 = var2.length();
                                                                var161.invoke(var22);
-                                                               var21 = (RenderContext)new Object[]{var200}[0];
+                                                               var21 = (RenderContext)new Object[]{var215}[0];
                                                                if (var21 != null) {
                                                                   var22.setSpan(var21, var5, var2.length(), 33);
                                                                }
@@ -1887,7 +1887,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                                                var161.invoke(var22);
 
                                                                for (int var53 = 0; var53 < 5; var53++) {
-                                                                  var21 = (RenderContext)new Object[]{var200, var29, var215, var261, var270}[var53];
+                                                                  var21 = (RenderContext)new Object[]{var215, var267, var200, var261, var270}[var53];
                                                                   if (var21 != null) {
                                                                      var22.setSpan(var21, var8, var2.length(), 33);
                                                                   }
@@ -1981,16 +1981,16 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                           val var258: AbsoluteSizeSpan = new AbsoluteSizeSpan(var79);
                                           var79 = var2.length();
                                           var22.append("\n");
-                                          var28 = (RelativeSizeSpan)new Object[]{var258}[0];
+                                          var28 = (DiscordFontSpan)new Object[]{var258}[0];
                                           if (var28 != null) {
                                              var22.setSpan(var28, var79, var2.length(), 33);
                                           }
 
                                           var10 = var2.length();
-                                          val var260: java.util.List = var250.getContent();
+                                          val var251: java.util.List = var250.getContent();
                                           var6 = (byte)var5;
                                           var5 = var116;
-                                          val var251: RenderContext = RenderContext.copy$default(
+                                          val var260: RenderContext = RenderContext.copy$default(
                                              var1,
                                              null,
                                              null,
@@ -2028,7 +2028,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                              null
                                           );
                                           var22 = var2;
-                                          appendToExistingBuilder(var260, var251, var2);
+                                          appendToExistingBuilder(var251, var260, var2);
                                           var26 = (Context)new Object[]{var235}[0];
                                           if (var26 != null) {
                                              var2.setSpan(var26, var10, var2.length(), 33);
@@ -2119,8 +2119,8 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                  var5 = var1.getTheme().getSpoilerHiddenBackground();
                               }
 
-                              val var192: BackgroundSpan = new BackgroundSpan(new BackgroundStyle(var5, 0, 0, 6, null), null, null, 6, null);
-                              val var234: SpoilerSpan = new SpoilerSpan(var122);
+                              val var234: BackgroundSpan = new BackgroundSpan(new BackgroundStyle(var5, 0, 0, 6, null), null, null, 6, null);
+                              val var192: SpoilerSpan = new SpoilerSpan(var122);
                               var5 = var2.length();
                               appendToExistingBuilder(
                                  var211.getContent(),
@@ -2170,7 +2170,7 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
                                     break label725;
                                  }
 
-                                 var21 = (RenderContext)new Object[]{var171, var192, var234}[var6];
+                                 var21 = (RenderContext)new Object[]{var171, var234, var192}[var6];
                                  if (var21 != null) {
                                     var2.setSpan(var21, var5, var2.length(), 33);
                                  }
@@ -2210,8 +2210,8 @@ private fun List<ContentNode>.toSpannable(rc: RenderContext, builder: DraweeSpan
       }
 
       var7++;
-      var5 = var6;
       var6 = var5;
+      var5 = var6;
    }
 
    return var22;

@@ -103,24 +103,24 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.attachmentId;
-      val var4: java.lang.String = this.embedId;
+      val var5: java.lang.String = this.messageId;
+      val var6: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.attachmentId;
+      val var3: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapObscuredMediaToggleData(messageId=");
-      var5.append(var6);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", attachmentId=");
-      var5.append(var3);
-      var5.append(", embedId=");
-      var5.append(var4);
-      var5.append(", isReveal=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapObscuredMediaToggleData(messageId=");
+      var4.append(var5);
+      var4.append(", channelId=");
+      var4.append(var6);
+      var4.append(", attachmentId=");
+      var4.append(var2);
+      var4.append(", embedId=");
+      var4.append(var3);
+      var4.append(", isReveal=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public object `$serializer` : G {
@@ -154,19 +154,21 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
          var var2: Int;
          var var5: Boolean;
          var var6: java.lang.String;
-         var var7: java.lang.String;
-         val var9: java.lang.String;
+         var var8: java.lang.String;
          val var12: java.lang.String;
+         var var14: java.lang.String;
          if (var11.y()) {
-            var7 = var11.t(var10, 0);
-            var9 = var11.t(var10, 1);
+            var14 = var11.t(var10, 0);
+            val var9: java.lang.String = var11.t(var10, 1);
             var6 = var11.t(var10, 2);
             var12 = var11.t(var10, 3);
             var5 = var11.s(var10, 4);
             var2 = 31;
+            var8 = var14;
+            var14 = var9;
          } else {
-            var var8: java.lang.String = null;
-            var7 = null;
+            var8 = null;
+            var14 = null;
             var6 = null;
             var var13: java.lang.String = null;
             var var3: Boolean = true;
@@ -187,7 +189,7 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
                               var5 = var11.s(var10, 4);
                               var2 |= 16;
                            } else {
-                              var7 = var11.t(var10, 3);
+                              var14 = var11.t(var10, 3);
                               var2 |= 8;
                            }
                         } else {
@@ -207,13 +209,12 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
                }
             }
 
-            var9 = var13;
-            var12 = var7;
-            var7 = var8;
+            var12 = var14;
+            var14 = var13;
          }
 
          var11.b(var10);
-         return new TapObscuredMediaToggleData(var2, var7, var9, var6, var12, var5, null);
+         return new TapObscuredMediaToggleData(var2, var8, var14, var6, var12, var5, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapObscuredMediaToggleData) {

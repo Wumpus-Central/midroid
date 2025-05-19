@@ -1229,9 +1229,22 @@
   ],
   "T15lqq": "For fort! Vent litt og prøv igjen.",
   "/s1xR0": "Gaven kan leveres nå",
+  "1Qm829": "Bruk",
   "PHjkRE": "Apper",
   "AKcFUl": "Appkatalog",
   "LO4f0N": "Partner",
+  "eGZFws": "Varsler er deaktivert for denne DM-en.",
+  "7Sbhqa": [
+    "Varsler er deaktivert frem til ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Varsler er aktivert for denne DM-en.",
+  "GFEn8/": "Skru av",
+  "JFu44e": "Skru på",
   "9PUXpK": "Sinna",
   "IoLVi4": "Drømmeis",
   "nmd90t": "uwu~",
@@ -1798,6 +1811,7 @@
   "yX8s2t": "Kortet ble avvist på grunn av utilstrekkelige midler.",
   "3s/vDA": "Ugyldig captcha-svar. Prøv på nytt.",
   "+4Empq": "Dette kjøpet fører til en negativ balanse og kan dessverre ikke fullføres. Vi vet at dette er frustrerende og jobber for øyeblikket med å forbedre dette systemet. Sjekk på nytt snart!",
+  "uhPY5u": "Kjøpet kan ikke valideres. Oppdater klienten.",
   "3jprCQ": "Kan ikke behandles på grunn av en betaling som er satt på vent.",
   "sUWxgY": "Du har prøvd å utføre for mange kjøp for raskt. Vent litt og prøv igjen!",
   "yNYvKy": "En ukjent betalingskilde ble spesifisert. Velg en annen og prøv på nytt.",
@@ -2419,12 +2433,9 @@
   "++JLLy": "Folk oppførte seg dårlig eller upassende",
   "tLi4cX": "Fortell oss om opplevelsen din med samtalen.",
   "C/12Tk": "Negativt",
-  "0jP8iY": "Jeg fikk tekniske problemer …",
   "Xcb4cH": "Nøytralt",
   "1Vyb5O": "Positivt",
-  "B81oy8": "Samtalen gikk helt knirkefritt!",
   "Ss6tlZ": "Hvordan gikk det med samtalen?",
-  "xv0BJi": "Fikk du tekniske problemer?",
   "IdKo29": [
     "Du må være venner med ",
     [
@@ -2861,6 +2872,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Meld deg på Nitro for å låse opp tilgangen til denne avatardekorasjonen!",
+  "e1UiOT": "Oppgrader for å låse opp tilgangen til denne avatardekorasjonen!",
   "zOA4a2": "Avatardekorasjonen din er oppdatert!",
   "V1AWw8": "Kjøp pakke",
   "IQQYeX": [
@@ -3091,8 +3104,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Meld deg på Nitro for å låse opp tilgangen til denne avatardekorasjonen!",
-  "dIepy8": "Oppgrader for å låse opp tilgangen til denne avatardekorasjonen!",
   "0hKkS0": "Kommandoer",
   "5C107O": "Valgfritt",
   "Ocw/sL": [
@@ -4918,6 +4929,7 @@
     " mer"
   ],
   "CumH4u": "Opprett",
+  "825cFx": "Opprett konto",
   "ISN+ND": "Opprett kategori",
   "fUYU+v": "Opprett en Kanal",
   "qyjZub": "Opprett eventer",
@@ -5805,6 +5817,7 @@
   "ZPjue3": "Det beste du har spist denne uken?",
   "40gTj4": "Gleder meg til …",
   "SWVxPD": "Velg en karakterklasse",
+  "xaCthI": "Hva er du opphengt i for tiden?",
   "3XVZ0t": "Beste pappavits?",
   "4U+EJC": "Beste emoji for å beskrive dagen din?",
   "R1f9RU": "Animeen du liker best nå?",
@@ -5836,7 +5849,7 @@
   "Iuzg8f": "Angi status",
   "zOdg0N": "Status",
   "hA60Ul": "Få statusen din til å skille seg ut med en forhåndsinnstilt tagg",
-  "jrzHRk": "Egendefinerte statustagger",
+  "jrzHRk": "Tagger med egendefinert status",
   "GQmLra": "I dag",
   "UcdRn5": "Hva skjer?",
   "xod36+": "Hva tenker du på?",
@@ -8716,8 +8729,8 @@
   "UIltXV": "Dato for innlegg",
   "jOPmcH": "Nylig aktiv",
   "Paxaur": "Taggmatching",
-  "FCXUu7": "Match alle",
-  "rQ0ctb": "Match noen",
+  "FCXUu7": "Matcher alle",
+  "rQ0ctb": "Matcher noen",
   "jPhTvb": [
     [
       1,
@@ -10852,6 +10865,7 @@
   "70CJbW": "OFFISIELL",
   "q1L2v7": "Blokker ord i medlemmers profilnavn",
   "OiCBhI": "Vis hjelpeartikkel for blokkerte meldinger",
+  "HHYPgI": "Merke",
   "mOWsFx": "Boosting er ikke tilgjengelig mens Nitro-abonnementer er på pause.",
   "CduWAg": "Du kan ikke administrere serverbooster mens Nitro-abonnementet er på pause.",
   "mkXb2N": [
@@ -24239,6 +24253,22 @@
   "9g5UGx": "Ja, jeg er sikker",
   "9SNpzs": "Slå av tilpassing?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Telefonnummeret er tilknyttet en annen konto. Finn en løsning ",
+    [
+      8,
+      "$link",
+      [
+        "her"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Kan ikke legge til telefonnummer. Prøv senere",
   "0/ALaG": "Vi kjenner ikke igjen denne posisjonen. Vi har sendt en bekreftelseskode til telefonnummeret som er knyttet til denne kontoen.",
   "w55Ocn": "Angi bekreftelseskoden for å bekrefte identiteten din",
@@ -30515,6 +30545,7 @@
   "p9jC2t": "PÅ",
   "PBgTSE": "Trykk for å deaktivere pinging av opphavspersonen.",
   "E+6SSU": "Klikk for å se kommandoen",
+  "Xxm5i4": "Trykk for å se meldingen",
   "XAkOo6": "Blokkert melding",
   "mE3KJC": "Den opprinnelige meldingen ble slettet",
   "G7p6v7": "Ignorerte melding",
@@ -33345,7 +33376,6 @@
   "G2egzc": "Applyden er borte",
   "aHOfIi": "Applyden er av dårlig kvalitet",
   "5smP3d": "Hvordan gikk strømmen?",
-  "OR6KNz": "Fikk du tekniske problemer?",
   "fxiRNj": "Strømmen er svart",
   "E8jTMD": "Strømmen er uskarp eller piksellert",
   "Xwv419": "Applyden var borte",
@@ -33361,8 +33391,6 @@
   "KHGhHR": "Rapporter et strømmeproblem",
   "CqjnLC": "Fortell oss om hvordan du opplevde å se strømmen.",
   "0uxA2d": "Fortell oss om hvordan du opplevde strømmen.",
-  "ISINlJ": "Jeg fikk tekniske problemer …",
-  "IySkjY": "Strømmingen gikk helt knirkefritt!",
   "kLQySE": "Vis alle deltakere",
   "YSGk4O": "Inviter andre til å bli med!",
   "WkAgPT": "Du er den eneste i denne samtalen.",
@@ -36330,6 +36358,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Med disse kodene kan du få tilgang til kontoen din hvis du mister sikkerhetsnøkkelen. Beskytt dem som om de var et passord. Ikke del dem med noen, og oppbevar dem på et trygt sted."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "En kode kan bare brukes én gang! Tidligere genererte koder virker ikke lenger!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Endre kontoopplysninger",
   "37S9yc": "Som et ekstra sikkerhetstiltak må du angi nøkkelen vi nettopp sendte til e-postadressen din. Den skal være fremme om et minutt eller to.",
   "TjGb4e": "Bekreftelsesnøkkel",
@@ -36387,6 +36437,7 @@
   "EA4ZEh": "Er du sikker på at du vil fjerne autentiseringsappen?",
   "0d1bXF": "Discord-kontoen din er nå beskyttet med et ekstra sikkerhetslag",
   "Awk3Gx": "2FA er aktivert! 🎉",
+  "7wPZlp": "Sikkerhetsnøkkel aktivert! 🎉",
   "1u5B+P": "Å nei, det har oppstått en feil.",
   "xZEzbm": "Vis sikkerhetskoder",
   "PsQmzc": "Skriv inn passordet",
@@ -37440,6 +37491,7 @@
   "jec90t": "Neste steg er å opprette en konto",
   "KtJgIy": "Passord må ha 8 eller flere tegn.",
   "y7LSyc": "Bruk kun bokstaver, tall, understreker eller punktum.",
+  "w/XiOz": "Du kan endre dette når som helst.",
   "EJ26Oj": "Denne kanalen krever at du bruker Trykk og Snakk for å kunne prate. For å snakke kreves det at du skifter\nfra Stemmeaktivering til Trykk og Snakk.",
   "NYklho": "Trykk og snakk kreves",
   "hFzI4u": "Det er Nitro i luften <3",

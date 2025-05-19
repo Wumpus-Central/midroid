@@ -1230,9 +1230,22 @@
   ],
   "T15lqq": "Liian nopeaa toimintaa! Odota hetki, ja yritä sitten uudelleen.",
   "/s1xR0": "Lahja on toimitusvalmis",
+  "1Qm829": "Käytä",
   "PHjkRE": "Sovellukset",
   "AKcFUl": "App-hakemisto",
   "LO4f0N": "Kumppani",
+  "eGZFws": "Ilmoitukset ovat pois käytöstä tämän yksityisviestiketjun osalta.",
+  "7Sbhqa": [
+    "Ilmoitukset on poistettu käytöstä ",
+    [
+      1,
+      "endDate"
+    ],
+    " asti."
+  ],
+  "VeIJWl": "Ilmoitukset ovat käytössä tämän yksityisviestiketjun osalta.",
+  "GFEn8/": "Poista käytöstä",
+  "JFu44e": "Ota käyttöön",
   "9PUXpK": "Päreensä polttanut",
   "IoLVi4": "Metka mehujää",
   "nmd90t": "uwu~",
@@ -1806,6 +1819,7 @@
   "yX8s2t": "Kortti hylättiin, koska sillä ei ollut riittävästi varoja.",
   "3s/vDA": "Virheellinen captcha-vastaus. Yritä uudelleen.",
   "+4Empq": "Tämä osto vie saldon miinukselle, joten sitä ei ikävä kyllä voi suorittaa. Tämä on kovin harmillista, ja pyrimmekin parantamaan järjestelmää tältä osin. Tarkista tilanne pian uudelleen!",
+  "uhPY5u": "Ostosta ei voitu vahvistaa. Päivitä asiakassovelluksesi.",
   "3jprCQ": "Muutosta ei voida käsitellä, koska maksu on kesken.",
   "sUWxgY": "Olet yrittänyt tehdä liian monta ostosta liian nopeasti. Odota hetki, ja yritä sitten uudelleen.",
   "yNYvKy": "Tuntematon maksun lähde määritettiin. Valitse jokin muu ja yritä uudelleen.",
@@ -2428,12 +2442,9 @@
   "++JLLy": "Ihmiset olivat toksisia tai käyttäytyivät epäasiallisesti",
   "tLi4cX": "Kerro meille puhelukokemuksestasi.",
   "C/12Tk": "Negatiivinen",
-  "0jP8iY": "Minulla oli teknisiä ongelmia...",
   "Xcb4cH": "Neutraali",
   "1Vyb5O": "Positiivinen",
-  "B81oy8": "Puhelu meni täysin sulavasti!",
   "Ss6tlZ": "Miten puhelu onnistui?",
-  "xv0BJi": "Oliko sinulla teknisiä ongelmia?",
   "IdKo29": [
     "Sinun on oltava käyttäjän ",
     [
@@ -2871,6 +2882,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Tilaamalla Nitron voit avata tämän avatar-koristeen käyttöösi!",
+  "e1UiOT": "Päivittämällä voit avata tämän avatar-koristeen käyttöösi!",
   "zOA4a2": "Avatar-koristeesi on päivitetty!",
   "V1AWw8": "Osta paketti",
   "IQQYeX": [
@@ -3101,8 +3114,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Tilaamalla Nitron voit avata tämän avatar-koristeen käyttöösi!",
-  "dIepy8": "Päivittämällä voit avata tämän avatar-koristeen käyttöösi!",
   "0hKkS0": "Komennot",
   "5C107O": "Valinnainen",
   "Ocw/sL": [
@@ -4929,6 +4940,7 @@
     " muuta"
   ],
   "CumH4u": "Luo",
+  "825cFx": "Luo tili",
   "ISN+ND": "Luo luokka",
   "fUYU+v": "Luo kanava",
   "qyjZub": "Luo tapahtumia",
@@ -5821,6 +5833,7 @@
   "ZPjue3": "Paras tällä viikolla syömäsi juttu?",
   "40gTj4": "En malta odottaa tätä...",
   "SWVxPD": "Valitse hahmoluokkasi",
+  "xaCthI": "Mikä sinulla pyörii nykyään yhtenään mielessä?",
   "3XVZ0t": "Paras isävitsi?",
   "4U+EJC": "Parhaiten päivääsi kuvaava emoji?",
   "R1f9RU": "Suosikkianimesi tätä nykyä?",
@@ -10895,6 +10908,7 @@
   "70CJbW": "VIRALLINEN",
   "q1L2v7": "Estä sanoja jäsenprofiilien nimistä",
   "OiCBhI": "Näytä estettyjen viestien ohjeartikkeli",
+  "HHYPgI": "Merkki",
   "mOWsFx": "Nostatus ei ole käytettävissä, kun Nitro-tilauksesi on keskeytettynä.",
   "CduWAg": "Et voi hallita palvelimen nostatuksia, kun Nitro-tilauksesi on keskeytettynä.",
   "mkXb2N": [
@@ -24336,6 +24350,22 @@
   "9g5UGx": "Kyllä, haluan niin",
   "9SNpzs": "Poistetaanko mukautus käytöstä?",
   "dEYpSk": "Puhelin",
+  "kj8xiI": [
+    "Tämä puhelinnumero on jo liitetty toiseen tiliin. Katso vianmääritysohjeet ",
+    [
+      8,
+      "$link",
+      [
+        "täältä"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Puhelinnumeron lisäys ei onnistunut, yritä myöhemmin uudelleen",
   "0/ALaG": "Emme tunnistaneet tätä sijaintia. Lähetimme vahvistuskoodin tähän tiliin yhdistettyyn puhelinnumeroon.",
   "w55Ocn": "Vahvista henkilöllisyytesi antamalla vahvistuskoodisi",
@@ -30617,6 +30647,7 @@
   "p9jC2t": "Päällä",
   "PBgTSE": "Poista ping-ilmoitukset alkuperäiselle kirjoittajalle käytöstä napauttamalla.",
   "E+6SSU": "Katso komento napsauttamalla",
+  "Xxm5i4": "Katso viesti napauttamalla",
   "XAkOo6": "Estetty viesti",
   "mE3KJC": "Alkuperäinen viesti on poistettu",
   "G7p6v7": "Hylätty viesti",
@@ -33445,7 +33476,6 @@
   "G2egzc": "Sovelluksen äänet eivät kuulu",
   "aHOfIi": "Sovelluksen äänten laatu on heikko",
   "5smP3d": "Miten striimi sujui?",
-  "OR6KNz": "Oliko sinulla teknisiä ongelmia?",
   "fxiRNj": "Striimi näkyy mustana",
   "E8jTMD": "Striimi on sumea tai pikselöitynyt",
   "Xwv419": "Sovelluksen ääniä ei kuulunut",
@@ -33461,8 +33491,6 @@
   "KHGhHR": "Ilmoita striimin ongelmasta",
   "CqjnLC": "Kerro meille striimin katselukokemuksestasi.",
   "0uxA2d": "Kerro meille striimauskokemuksestasi.",
-  "ISINlJ": "Minulla oli teknisiä ongelmia...",
-  "IySkjY": "Striimi meni täysin sulavasti!",
   "kLQySE": "Näytä kaikki osallistujat",
   "YSGk4O": "Kutsu ihmisiä liittymään seuraasi!",
   "WkAgPT": "Olet tässä puhelussa itseksesi.",
@@ -36432,6 +36460,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "Näiden koodien avulla voit kirjautua tilillesi, jos menetät suojausavaimesi. Suojaa koodit vastaavasti kuin salasanasi. Älä jaa niitä kenellekään ja säilytä ne turvallisessa paikassa."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Jokaisen koodin voi käyttää vain kerran! Mikään aikaisemmin luotu koodi ei enää toimi!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Muuta tilin tietoja",
   "37S9yc": "Lisäturvatoimena syötä avain viestistä, jonka lähetimme juuri sähköpostiosoitteeseesi. Viestin pitäisi näkyä parin minuutin kuluessa.",
   "TjGb4e": "Vahvistusavain",
@@ -36489,6 +36539,7 @@
   "EA4ZEh": "Haluatko varmasti poistaa todentajasovelluksen?",
   "0d1bXF": "Discord-tilisi on nyt suojattu lisätietoturvalla",
   "Awk3Gx": "Kaksivaiheinen todennus käytössä! 🎉",
+  "7wPZlp": "Suojausavain aktivoitu! 🎉",
   "1u5B+P": "Voi ei, tapahtui virhe.",
   "xZEzbm": "Katso varakoodeja",
   "PsQmzc": "Anna salasanasi",
@@ -37544,6 +37595,7 @@
   "jec90t": "Luo seuraavaksi tili",
   "KtJgIy": "Salasanassa on oltava vähintään 8 merkkiä.",
   "y7LSyc": "Vain kirjaimet, numerot, alaviivat (_) ja pisteet ovat sallittuja.",
+  "w/XiOz": "Voit muuttaa tätä milloin tahansa myöhemmin.",
   "EJ26Oj": "Tämä kanava vaatii radiopuhelintilan käyttöä äänikeskustelussa. Voit ainoastaan kuunnella keskustelua,\njos et vaihda äänen tunnistustilasta radiopuhelintilaan.",
   "NYklho": "Radiopuhelintila vaadittu",
   "hFzI4u": "Nitroa ilmassa <3",

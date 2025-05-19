@@ -1289,9 +1289,22 @@
   ],
   "T15lqq": "Moc rychlé! Počkej chvilku a zkus to znovu.",
   "/s1xR0": "Dárek je připraven k doručení",
+  "1Qm829": "Použít",
   "PHjkRE": "Aplikace",
   "AKcFUl": "Adresář aplikací",
   "LO4f0N": "Partner",
+  "eGZFws": "Oznámení jsou pro tuto PZ zakázána.",
+  "7Sbhqa": [
+    "Oznámení jsou vypnutá do ",
+    [
+      1,
+      "endDate"
+    ],
+    "."
+  ],
+  "VeIJWl": "Oznámení pro tuto PZ jsou povolena.",
+  "GFEn8/": "Vypnout",
+  "JFu44e": "Zapnout",
   "9PUXpK": "Rozzuřený",
   "IoLVi4": "Zmrzlinový sorbet",
   "nmd90t": "uwu~",
@@ -1881,6 +1894,7 @@
   "yX8s2t": "Karta byla odmítnuta kvůli nedostatku prostředků.",
   "3s/vDA": "Chybná captcha. Zkus to prosím znovu.",
   "+4Empq": "Tento nákup by měl za následek negativní zůstatek a bohužel nemůže být dokončen. Víme, že je to frustrující a pracujeme na způsobech, jak tento systém zlepšit. Brzy to zkus znovu!",
+  "uhPY5u": "Nákup se nepodařilo ověřit. Aktualizuj prosím svého klienta.",
   "sUWxgY": "Nakupuješ moc rychle. Počkej prosím chvilku a zkus to znovu!",
   "yNYvKy": "Byl zadán neznámý zdroj platby. Vyber jiný a zkus to znovu.",
   "qS+yMj": "Odkaz na dárek",
@@ -2517,12 +2531,9 @@
   "++JLLy": "Lidé byli toxičtí nebo se chovali nemístně",
   "tLi4cX": "Popiš nám svůj dojem.",
   "C/12Tk": "Negativní",
-  "0jP8iY": "Došlo k technickým problémům…",
   "Xcb4cH": "Neutrální",
   "1Vyb5O": "Pozitivní",
-  "B81oy8": "Hovor byl naprosto bezproblémový!",
   "Ss6tlZ": "Jak řešení probíhalo?",
-  "xv0BJi": "Došlo k nějakým technickým problémům?",
   "IdKo29": [
     "Abys mohl/a zahájit hovor, musíte být s ",
     [
@@ -2965,6 +2976,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Přidej se k Nitru a odemkni přístup k tomuto vzhledu avataru!",
+  "e1UiOT": "Upgraduj a odemkni přístup k tomuto vzhledu avataru!",
   "zOA4a2": "Tvé vzhledy avataru jsou aktualizované!",
   "V1AWw8": "Koupit balíček",
   "IQQYeX": [
@@ -3196,8 +3209,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Přidej se k Nitru a odemkni přístup k tomuto vzhledu avataru!",
-  "dIepy8": "Upgraduj a odemkni přístup k tomuto vzhledu avataru!",
   "0hKkS0": "Příkazy",
   "5C107O": "Volitelné",
   "Ocw/sL": [
@@ -5095,6 +5106,7 @@
     " k tomu"
   ],
   "CumH4u": "Vytvořit",
+  "825cFx": "Vytvořit účet",
   "ISN+ND": "Vytvořit kategorii",
   "fUYU+v": "Vytvořit kanál",
   "qyjZub": "Vytvářet události",
@@ -6039,6 +6051,7 @@
   "ZPjue3": "Nejlepší věc, která ti tento týden skončila v žaludku?",
   "40gTj4": "Nemůžu se dočkat…",
   "SWVxPD": "Vyber si třídu své postavy",
+  "xaCthI": "Na čem aktuálně ujíždíš?",
   "3XVZ0t": "Nejlepší otcovský vtip?",
   "4U+EJC": "Který smajlík nejlépe vystihuje tvůj den?",
   "R1f9RU": "Nějaké oblíbené anime v poslední době?",
@@ -9128,7 +9141,7 @@
   ],
   "gePre3": "Pořadí řazení",
   "165cVV": "Nastav výchozí pořadí řazení nových příspěvků. Členové budou moct mezi těmito možnostmi přepínat.",
-  "DqOl8P": "Nastav výchozí chování pro párování tagů. Členové budou moct mezi těmito možnostmi přepínat.",
+  "DqOl8P": "Nastav výchozí chování pro párování štítků. Členové budou moct mezi těmito možnostmi přepínat.",
   "YtsXFB": [
     "O čem chceš psát v kanálu #",
     [
@@ -11299,6 +11312,7 @@
   "70CJbW": "OFICIÁLNÍ",
   "q1L2v7": "Blokovat slova ve jménech profilů členů",
   "OiCBhI": "Zobrazit článek nápovědy týkající se blokovaných zpráv",
+  "HHYPgI": "Odznak",
   "mOWsFx": "Vylepšení není k dispozici, protože tvoje předplatné Nitro je pozastavené!",
   "CduWAg": "Když je tvoje předplatné Nitro pozastavené, nemůžeš spravovat vylepšení serveru.",
   "mkXb2N": [
@@ -25145,6 +25159,22 @@
   "9g5UGx": "Ano, nemám pochyb!",
   "9SNpzs": "Vypnout personalizaci?",
   "dEYpSk": "Telefon",
+  "kj8xiI": [
+    "Toto telefonní číslo je již propojeno s jiným účtem. Tento problém můžeš ",
+    [
+      8,
+      "$link",
+      [
+        "vyřešit zde"
+      ],
+      [
+        [
+          1,
+          "phoneURL"
+        ]
+      ]
+    ]
+  ],
   "cCVXOT": "Nepodařilo se přidat telefonní číslo, zkus to prosím zase později",
   "0/ALaG": "Toto umístění neznáme. Na telefonní číslo propojené s tímto účtem jsme poslali ověřovací kód.",
   "w55Ocn": "Zadej svůj ověřovací kód, abychom věděli, že jsi to ty.",
@@ -31675,6 +31705,7 @@
   "p9jC2t": "ZAP",
   "PBgTSE": "Klepnutím vypneš označení původního autora.",
   "E+6SSU": "Kliknutím zobrazíš příkaz",
+  "Xxm5i4": "Klepnutím zobraz zprávu",
   "XAkOo6": "Zpráva byla zablokována",
   "mE3KJC": "Původní zpráva byla odstraněna",
   "G7p6v7": "Ignorovaná zpráva",
@@ -34573,7 +34604,6 @@
   "G2egzc": "Chybí zvuk aplikace",
   "aHOfIi": "Zvuk aplikace má špatnou kvalitu",
   "5smP3d": "Jaký byl průběh streamu?",
-  "OR6KNz": "Došlo k nějakým technickým problémům?",
   "fxiRNj": "Stream je černý",
   "E8jTMD": "Stream je rozmazaný nebo kostičkovaný",
   "Xwv419": "Chyběl zvuk aplikace",
@@ -34589,8 +34619,6 @@
   "KHGhHR": "Oznámit problém se streamem",
   "CqjnLC": "Popiš nám, jak se ti na stream koukalo.",
   "0uxA2d": "Popiš nám, jak se ti streamovalo.",
-  "ISINlJ": "Došlo k technickým problémům…",
-  "IySkjY": "Stream byl naprosto bezproblémový!",
   "kLQySE": "Zobrazit všechny účastníky",
   "YSGk4O": "Pozvi lidi, aby se k tobě přidali!",
   "WkAgPT": "V tomto hovoru jsi sám.",
@@ -37581,6 +37609,28 @@
       ]
     ]
   ],
+  "iVTs6u": [
+    [
+      8,
+      "$p",
+      [
+        "S těmito kódy se budeš moct přihlásit ke svému účtu, pokud ztratíš svůj bezpečnostní klíč. Chraň je, jako by se jednalo o tvé heslo. S nikým je nesdílej a uchovávej je v bezpečí."
+      ]
+    ],
+    [
+      8,
+      "$p",
+      [
+        [
+          8,
+          "$b",
+          [
+            "Každý kód lze použít jenom jednou! Všechny dříve vygenerované kódy přestávají platit!"
+          ]
+        ]
+      ]
+    ]
+  ],
   "clQc1d": "Změnit podrobnosti účtu",
   "37S9yc": "V zájmu vyšší bezpečnosti zadej klíč, který jsme ti právě poslali na tvůj e-mail. Zpráva by ti měla přijít každým okamžikem.",
   "TjGb4e": "Ověřovací klíč",
@@ -37638,6 +37688,7 @@
   "EA4ZEh": "Opravdu chceš odebrat své ověřovací aplikace?",
   "0d1bXF": "Tvůj účet Discord je nyní chráněn další vrstvou zabezpečení",
   "Awk3Gx": "2FA je zapnuté! 🎉",
+  "7wPZlp": "Bezpečnostní klíč aktivován! 🎉",
   "1u5B+P": "Ale ne, došlo k chybě.",
   "xZEzbm": "Zobrazit záložní kódy",
   "PsQmzc": "Zadej své heslo",
@@ -38727,6 +38778,7 @@
   "jec90t": "Teď si vytvoř účet",
   "KtJgIy": "Heslo musí mít nejméně 8 znaků.",
   "y7LSyc": "Používej pouze písmena, číslice, podtržítka a tečky.",
+  "w/XiOz": "Nastavení můžeš kdykoli změnit.",
   "EJ26Oj": "Tento kanál vyžaduje k použití hlasového chatu funkci Push to Talk. Dokud nezměníš režimy\nz Automatické detekce na Push to Talk, budeš moct jen poslouchat.",
   "NYklho": "Vyžadována funkce Push to Talk",
   "hFzI4u": "Nitro je ve vzduchu <3",
