@@ -165,13 +165,13 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.url;
-         val var1: java.lang.String = this.alt;
+         val var1: java.lang.String = this.url;
+         val var3: java.lang.String = this.alt;
          val var2: StringBuilder = new StringBuilder();
          var2.append("CustomWithUrl(url=");
-         var2.append(var3);
-         var2.append(", alt=");
          var2.append(var1);
+         var2.append(", alt=");
+         var2.append(var3);
          var2.append(")");
          return var2.toString();
       }

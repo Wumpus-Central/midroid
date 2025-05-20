@@ -64,7 +64,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = h8.l.b(new Function0(this) {
+      this.shadowView$delegate = o8.l.a(new Function0(this) {
          final MessageContentView this$0;
 
          {
@@ -86,7 +86,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var7: QuoteSpan = kotlin.collections.c.G(var6) as QuoteSpan;
+      val var7: QuoteSpan = kotlin.collections.c.I(var6) as QuoteSpan;
       val var5: Int = var1.length();
       val var8: StringBuilder = new StringBuilder();
       var8.append(" (");

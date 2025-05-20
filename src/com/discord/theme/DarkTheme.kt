@@ -3,9 +3,9 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import h8.l
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import o8.l
 
 internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -300,7 +300,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       q.h(var1, "resources");
       q.h(var2, "theme");
       super(null);
-      this.androidRipple$delegate = l.b(new Function0(var1, var2) {
+      this.androidRipple$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -314,7 +314,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.android_ripple_dark, this.$theme);
          }
       });
-      this.backgroundAccent$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundAccent$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -328,7 +328,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_530, this.$theme);
          }
       });
-      this.backgroundFloating$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundFloating$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -342,7 +342,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_800, this.$theme);
          }
       });
-      this.backgroundMessageHighlight$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMessageHighlight$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -356,7 +356,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_highlight_dark, this.$theme);
          }
       });
-      this.backgroundMobilePrimary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMobilePrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -370,7 +370,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.backgroundMobileSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundMobileSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -384,7 +384,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.backgroundModifierAccent$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierAccent$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -398,7 +398,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_accent_dark, this.$theme);
          }
       });
-      this.backgroundModifierSelected$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundModifierSelected$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -412,7 +412,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_selected_dark, this.$theme);
          }
       });
-      this.backgroundPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -426,7 +426,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.backgroundSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -440,7 +440,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.backgroundSecondaryAlt$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundSecondaryAlt$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -454,7 +454,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.backgroundTertiary$delegate = l.b(new Function0(var1, var2) {
+      this.backgroundTertiary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -468,7 +468,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.bgModStrong$delegate = l.b(new Function0(var1, var2) {
+      this.bgModStrong$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -482,7 +482,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_mod_strong_dark, this.$theme);
          }
       });
-      this.bgSurfaceOverlay$delegate = l.b(new Function0(var1, var2) {
+      this.bgSurfaceOverlay$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -496,7 +496,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_800, this.$theme);
          }
       });
-      this.borderStrong$delegate = l.b(new Function0(var1, var2) {
+      this.borderStrong$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -510,7 +510,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_strong_dark, this.$theme);
          }
       });
-      this.borderSubtle$delegate = l.b(new Function0(var1, var2) {
+      this.borderSubtle$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -524,7 +524,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_subtle_dark, this.$theme);
          }
       });
-      this.buttonSecondaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.buttonSecondaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -538,7 +538,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_500, this.$theme);
          }
       });
-      this.cardPrimaryBg$delegate = l.b(new Function0(var1, var2) {
+      this.cardPrimaryBg$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -552,7 +552,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_600, this.$theme);
          }
       });
-      this.chatSwipeToReplyBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatSwipeToReplyBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -566,7 +566,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.chatSwipeToReplyGradientBackground$delegate = l.b(new Function0(var1, var2) {
+      this.chatSwipeToReplyGradientBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -580,7 +580,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.chat_swipe_to_reply_gradient_background_dark, this.$theme);
          }
       });
-      this.embedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.embedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -594,7 +594,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_630, this.$theme);
          }
       });
-      this.headerPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.headerPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -608,7 +608,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_130, this.$theme);
          }
       });
-      this.headerSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.headerSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -622,7 +622,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_330, this.$theme);
          }
       });
-      this.infoDangerForeground$delegate = l.b(new Function0(var1, var2) {
+      this.infoDangerForeground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -636,7 +636,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.interactiveActive$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveActive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -650,7 +650,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.interactiveMuted$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -664,7 +664,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_500, this.$theme);
          }
       });
-      this.interactiveNormal$delegate = l.b(new Function0(var1, var2) {
+      this.interactiveNormal$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -678,7 +678,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_330, this.$theme);
          }
       });
-      this.redesignButtonPrimaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonPrimaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -692,7 +692,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
          }
       });
-      this.redesignButtonTertiaryBackground$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -706,7 +706,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.redesignButtonTertiaryText$delegate = l.b(new Function0(var1, var2) {
+      this.redesignButtonTertiaryText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -720,7 +720,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_230, this.$theme);
          }
       });
-      this.spoilerHiddenBackground$delegate = l.b(new Function0(var1, var2) {
+      this.spoilerHiddenBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -734,7 +734,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_700, this.$theme);
          }
       });
-      this.spoilerRevealedBackground$delegate = l.b(new Function0(var1, var2) {
+      this.spoilerRevealedBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -748,7 +748,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_660, this.$theme);
          }
       });
-      this.statusDanger$delegate = l.b(new Function0(var1, var2) {
+      this.statusDanger$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -762,7 +762,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
          }
       });
-      this.statusDangerBackground$delegate = l.b(new Function0(var1, var2) {
+      this.statusDangerBackground$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -776,7 +776,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
          }
       });
-      this.statusPositive$delegate = l.b(new Function0(var1, var2) {
+      this.statusPositive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -790,7 +790,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
          }
       });
-      this.statusPositiveText$delegate = l.b(new Function0(var1, var2) {
+      this.statusPositiveText$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -804,7 +804,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
          }
       });
-      this.statusWarning$delegate = l.b(new Function0(var1, var2) {
+      this.statusWarning$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -818,7 +818,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.textBrand$delegate = l.b(new Function0(var1, var2) {
+      this.textBrand$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -832,7 +832,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_360, this.$theme);
          }
       });
-      this.textDanger$delegate = l.b(new Function0(var1, var2) {
+      this.textDanger$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -846,7 +846,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_345, this.$theme);
          }
       });
-      this.textLink$delegate = l.b(new Function0(var1, var2) {
+      this.textLink$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -860,7 +860,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_345, this.$theme);
          }
       });
-      this.textLowContrast$delegate = l.b(new Function0(var1, var2) {
+      this.textLowContrast$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -874,7 +874,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_360, this.$theme);
          }
       });
-      this.textMuted$delegate = l.b(new Function0(var1, var2) {
+      this.textMuted$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -888,7 +888,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_360, this.$theme);
          }
       });
-      this.textNormal$delegate = l.b(new Function0(var1, var2) {
+      this.textNormal$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -902,7 +902,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_230, this.$theme);
          }
       });
-      this.textPositive$delegate = l.b(new Function0(var1, var2) {
+      this.textPositive$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -916,7 +916,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_330, this.$theme);
          }
       });
-      this.textPrimary$delegate = l.b(new Function0(var1, var2) {
+      this.textPrimary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -930,7 +930,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_230, this.$theme);
          }
       });
-      this.textSecondary$delegate = l.b(new Function0(var1, var2) {
+      this.textSecondary$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -944,7 +944,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.primary_330, this.$theme);
          }
       });
-      this.textWarning$delegate = l.b(new Function0(var1, var2) {
+      this.textWarning$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 
@@ -958,7 +958,7 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
             return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
          }
       });
-      this.white$delegate = l.b(new Function0(var1, var2) {
+      this.white$delegate = l.a(new Function0(var1, var2) {
          final Resources $resources;
          final Theme $theme;
 

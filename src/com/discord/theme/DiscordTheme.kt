@@ -15,7 +15,7 @@ public enum class DiscordTheme {
    fun {
       val var0: Array<DiscordTheme> = $values();
       $VALUES = var0;
-      $ENTRIES = o8.a.a(var0);
+      $ENTRIES = w8.a.a(var0);
    }
 
    @JvmStatic

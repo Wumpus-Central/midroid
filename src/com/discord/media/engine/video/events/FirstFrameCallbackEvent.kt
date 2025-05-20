@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.events
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.N
-import da.Y
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.N
+import ka.Y
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -138,12 +138,12 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          val var9: java.lang.String;
          if (var11.y()) {
             val var2: Int = var11.k(var10, 0);
-            var8 = var11.t(var10, 1);
+            var9 = var11.t(var10, 1);
             var6 = var11.h(var10, 2);
             val var12: java.lang.String = var11.t(var10, 3);
             var3 = 15;
             var4 = var2;
-            var9 = var12;
+            var8 = var12;
          } else {
             var var13: java.lang.String = null;
             var var16: Boolean = true;
@@ -181,14 +181,13 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
                }
             }
 
-            var9 = var8;
-            var8 = var13;
+            var9 = var13;
             var4 = var3;
             var3 = var14;
          }
 
          var11.b(var10);
-         return new FirstFrameCallbackEvent(var3, var4, var8, var6, var9, null);
+         return new FirstFrameCallbackEvent(var3, var4, var9, var6, var8, null);
       }
 
       public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {

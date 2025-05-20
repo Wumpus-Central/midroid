@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.rolecolors
 
-import aa.f
-import aa.n
-import ba.a
-import da.G
-import da.N
+import ha.f
+import ha.n
+import ia.a
+import ka.G
+import ka.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -120,23 +120,23 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          var var2: Int;
-         var var3: Int;
+         val var4: Int;
          var var6: Int;
          var var10: Int;
          if (var8.y()) {
-            var3 = var8.k(var7, 0);
+            var2 = var8.k(var7, 0);
             val var9: N = N.a;
             var6 = var8.v(var7, 1, N.a, null) as Int;
             var10 = var8.v(var7, 2, var9, null) as Int;
-            var2 = 7;
+            var4 = 7;
          } else {
-            var var4: Boolean = true;
-            var3 = 0;
+            var var12: Boolean = true;
+            var var3: Int = 0;
             var6 = null;
             var10 = null;
             var2 = 0;
 
-            while (var4) {
+            while (var12) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -156,13 +156,16 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
                      var2 |= 1;
                   }
                } else {
-                  var4 = false;
+                  var12 = false;
                }
             }
+
+            var4 = var2;
+            var2 = var3;
          }
 
          var8.b(var7);
-         return new RoleColors(var2, var3, var6, var10, null);
+         return new RoleColors(var4, var2, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: RoleColors) {
@@ -175,7 +178,7 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

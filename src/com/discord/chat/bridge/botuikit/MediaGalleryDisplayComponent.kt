@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import da.C0
-import da.G
-import da.N
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.N
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -71,15 +71,15 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.util.List = this.items;
+      val var4: java.lang.String = this.id;
+      val var3: java.util.List = this.items;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MediaGalleryDisplayComponent(type=");
       var2.append(var1);
       var2.append(", id=");
-      var2.append(var3);
-      var2.append(", items=");
       var2.append(var4);
+      var2.append(", items=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }
@@ -111,24 +111,23 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
          val var7: SerialDescriptor = this.getDescriptor();
          val var8: c = var1.c(var7);
          val var9: Array<KSerializer> = MediaGalleryDisplayComponent.access$get$childSerializers$cp();
+         var var2: Int;
          var var3: Int;
-         val var4: Int;
          var var6: java.lang.String;
          var var10: java.util.List;
          if (var8.y()) {
-            val var2: Int = var8.k(var7, 0);
+            var3 = var8.k(var7, 0);
             var6 = var8.t(var7, 1);
             var10 = var8.m(var7, 2, var9[2], null) as java.util.List;
-            var4 = 7;
-            var3 = var2;
+            var2 = 7;
          } else {
-            var var12: Boolean = true;
+            var var4: Boolean = true;
             var3 = 0;
             var6 = null;
             var10 = null;
-            var var11: Int = 0;
+            var2 = 0;
 
-            while (var12) {
+            while (var4) {
                val var5: Int = var8.x(var7);
                if (var5 != -1) {
                   if (var5 != 0) {
@@ -138,25 +137,23 @@ public data class MediaGalleryDisplayComponent(type: Int, id: String, items: Lis
                         }
 
                         var10 = var8.m(var7, 2, var9[2], var10) as java.util.List;
-                        var11 |= 4;
+                        var2 |= 4;
                      } else {
                         var6 = var8.t(var7, 1);
-                        var11 |= 2;
+                        var2 |= 2;
                      }
                   } else {
                      var3 = var8.k(var7, 0);
-                     var11 |= 1;
+                     var2 |= 1;
                   }
                } else {
-                  var12 = false;
+                  var4 = false;
                }
             }
-
-            var4 = var11;
          }
 
          var8.b(var7);
-         return new MediaGalleryDisplayComponent(var4, var3, var6, var10, null);
+         return new MediaGalleryDisplayComponent(var2, var3, var6, var10, null);
       }
 
       public open fun serialize(encoder: Encoder, value: MediaGalleryDisplayComponent) {

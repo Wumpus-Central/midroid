@@ -1,8 +1,8 @@
 package com.discord.appreview;
 
+import D5.d;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.core.review.ReviewManager;
-import w5.d;
 
 // $VF: synthetic class
 public final class a implements d {

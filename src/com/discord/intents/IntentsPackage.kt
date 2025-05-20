@@ -1,16 +1,16 @@
 package com.discord.intents
 
 import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import kotlin.jvm.internal.q
 
-public class IntentsPackage : TurboReactPackage {
-   public open fun getModule(name: String, context: ReactApplicationContext): NativeModule? {
+public class IntentsPackage : BaseReactPackage {
+   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
-      q.h(var2, "context");
+      q.h(var2, "reactContext");
       val var3: Any;
       if (q.c(var1, "NativeIntentsModule")) {
          var3 = new IntentsModule(var2);

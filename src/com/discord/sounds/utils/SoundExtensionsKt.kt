@@ -1,17 +1,15 @@
 package com.discord.sounds.utils
 
-import Q9.K
-import Q9.f
+import X9.K
+import X9.f
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import h8.s
 import java.io.File
 import java.util.Comparator
-import k8.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
@@ -20,9 +18,10 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import n8.b
+import o8.s
+import s8.a
+import v8.b
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -77,10 +76,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                s.b(var1);
             } else {
                s.b(var1);
-               val var4: Flow = FileDownloader.downloadFile$default(
+               var1 = FileDownloader.downloadFile$default(
                   FileDownloader.INSTANCE, this.$context, this.$url, this.$fileName, this.$soundDirectory, false, 16, null
                );
-               var1 = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
+               val var4: FlowCollector = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
                   final int $key;
                   final SoundManager $soundManager;
                   final Function1 $soundResIdPrepared;
@@ -277,8 +276,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            return Unit.a;
                         }
 
-                        var17 = K.c();
-                        var9 = new Function2(null) {
+                        var9 = K.c();
+                        var17 = new Function2(null) {
                            int label;
 
                            {
@@ -304,7 +303,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            }
                         };
                         ((<unrepresentable>)var14).label = 3;
-                        val var15: Any = f.g((CoroutineContext)var17, (Function2)var9, (Continuation)var14);
+                        val var15: Any = f.g((CoroutineContext)var9, (Function2)var17, (Continuation)var14);
                         var9 = var15;
                         if (var15 === var5) {
                            return var5;
@@ -315,7 +314,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                   }
                };
                this.label = 1;
-               if (var4.collect(var1, this) === var3) {
+               if (var1.collect(var4, this) === var3) {
                   return var3;
                }
             }
@@ -330,11 +329,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 
 internal fun getRemoteSoundFilename(url: String): String {
    q.h(var0, "url");
-   var0 = Uri.parse(var0).getLastPathSegment();
-   val var1: StringBuilder = new StringBuilder();
-   var1.append(var0);
-   var1.append(".mp3");
-   return var1.toString();
+   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(".mp3");
+   return var2.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {
@@ -346,13 +345,13 @@ internal fun Context.tryPruneSoundsCache() {
    q.h(var0, "<this>");
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
-      c.t(var1, new Comparator() {
+      c.v(var1, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var2 as File).lastModified(), (var1 as File).lastModified());
          }
       });
-      val var2: File = c.g0(var1) as File;
+      val var2: File = c.i0(var1) as File;
       if (var2 != null) {
          var2.delete();
       }

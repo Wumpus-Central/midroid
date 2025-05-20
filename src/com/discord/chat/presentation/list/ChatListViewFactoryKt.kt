@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list
 
-import Q9.K
-import Q9.d0
+import X9.K
+import X9.d0
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
@@ -10,13 +10,13 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.MessageAccessoriesAdapter
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import h8.s
 import java.util.ArrayList
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
+import o8.s
 
 private final val accessoriesToCreate: Map<Int, Int>
 private final val recycledViewPoolSizes: Map<out Class<out BaseChatListItemDelegate<out ChatListItem, *>>, Int>
@@ -35,18 +35,14 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
    q.h(var0, "recycler");
    q.h(var1, "accessoriesAdapter");
    q.h(var2, "accessoriesViewPool");
-   Q9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var1, var0, var2, null) {
+   X9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var1, var0, var2, null) {
       final MessageAccessoriesAdapter $accessoriesAdapter;
       final RecyclerView.RecycledViewPool $accessoriesViewPool;
       final RecyclerView $recycler;
-      int I$0;
-      int I$1;
-      int I$2;
       Object L$0;
       Object L$1;
       Object L$2;
       Object L$3;
-      Object L$4;
       int label;
 
       {
@@ -64,90 +60,64 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
-      // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var10: Any = n8.b.e();
-         var var3: Int;
-         var var4: Int;
-         var var5: RecyclerView;
+         val var9: Any = v8.b.e();
+         val var5: RecyclerView.RecycledViewPool;
          val var6: MessageAccessoriesAdapter;
-         val var7: java.util.Iterator;
-         var var8: Any;
-         var var15: Int;
+         val var7: RecyclerView;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var15 = this.I$2;
-            var3 = this.I$1;
-            var4 = this.I$0;
-            var8 = this.L$4 as java.util.List;
-            var7 = this.L$3 as java.util.Iterator;
-            val var9: RecyclerView.RecycledViewPool = this.L$2 as RecyclerView.RecycledViewPool;
-            var5 = this.L$1 as RecyclerView;
+            val var8: java.util.Iterator = this.L$3 as java.util.Iterator;
+            var5 = this.L$2 as RecyclerView.RecycledViewPool;
+            var7 = this.L$1 as RecyclerView;
             var6 = this.L$0 as MessageAccessoriesAdapter;
             s.b(var1);
-            var1 = var9;
-            var15++;
+            var1 = var8;
          } else {
             s.b(var1);
-            val var19: java.util.Map = ChatListViewFactoryKt.access$getAccessoriesToCreate$p();
+            val var13: java.util.Map = ChatListViewFactoryKt.access$getAccessoriesToCreate$p();
             var6 = this.$accessoriesAdapter;
-            val var13: RecyclerView = this.$recycler;
-            val var17: RecyclerView.RecycledViewPool = this.$accessoriesViewPool;
-            var7 = var19.entrySet().iterator();
-            if (!var7.hasNext()) {
-               return Unit.a;
-            }
-
-            var8 = var7.next() as Entry;
-            var4 = (var8.getKey() as java.lang.Number).intValue();
-            var3 = (var8.getValue() as java.lang.Number).intValue();
-            var8 = new ArrayList();
-            var15 = 0;
-            var5 = var13;
-            var1 = var17;
+            var7 = this.$recycler;
+            var5 = this.$accessoriesViewPool;
+            var1 = var13.entrySet().iterator();
          }
 
-         while (true) {
-            while (var15 >= var3) {
-               if (!var7.hasNext()) {
-                  return Unit.a;
+         while (var1.hasNext()) {
+            val var15: Entry = var1.next() as Entry;
+            val var4: Int = (var15.getKey() as java.lang.Number).intValue();
+            val var3: Int = (var15.getValue() as java.lang.Number).intValue();
+            val var16: ArrayList = new ArrayList();
+
+            for (int var14 = 0; var14 < var3; var14++) {
+               val var10: RecyclerView.ViewHolder = var6.createViewHolder(var7, var4);
+               q.g(var10, "createViewHolder(...)");
+               val var11: MessagePartViewHolder = var10 as MessagePartViewHolder;
+               val var18: View = (var10 as MessagePartViewHolder).itemView;
+               q.g((var10 as MessagePartViewHolder).itemView, "itemView");
+               if (var18 is FactoryCreatable) {
+                  (var18 as FactoryCreatable).onFactoryCreate();
                }
 
-               var8 = var7.next() as Entry;
-               var4 = (var8.getKey() as java.lang.Number).intValue();
-               var3 = (var8.getValue() as java.lang.Number).intValue();
-               var8 = new ArrayList();
-               var15 = 0;
-               var5 = var5;
-               var1 = var1;
+               var16.add(var11);
             }
 
-            val var25: RecyclerView.ViewHolder = var6.createViewHolder(var5, var4);
-            q.g(var25, "createViewHolder(...)");
-            val var11: MessagePartViewHolder = var25 as MessagePartViewHolder;
-            val var26: View = (var25 as MessagePartViewHolder).itemView;
-            q.g((var25 as MessagePartViewHolder).itemView, "itemView");
-            if (var26 is FactoryCreatable) {
-               (var26 as FactoryCreatable).onFactoryCreate();
-            }
-
-            val var27: d0 = K.c();
-            val var28: Function2 = new Function2(var1, var11, null) {
+            val var19: d0 = K.c();
+            val var17: Function2 = new Function2(var16, var5, null) {
                final RecyclerView.RecycledViewPool $accessoriesViewPool;
-               final MessagePartViewHolder $viewHolder;
+               final java.util.List<RecyclerView.ViewHolder> $items;
                int label;
 
                {
                   super(2, var3x);
-                  this.$accessoriesViewPool = var1;
-                  this.$viewHolder = var2x;
+                  this.$items = var1;
+                  this.$accessoriesViewPool = var2x;
                }
 
                public final Continuation create(Object var1, Continuation var2) {
-                  return new <anonymous constructor>(this.$accessoriesViewPool, this.$viewHolder, var2);
+                  return new <anonymous constructor>(this.$items, this.$accessoriesViewPool, var2);
                }
 
                public final Object invoke(CoroutineScope var1, Continuation var2x) {
@@ -155,31 +125,68 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
                }
 
                public final Object invokeSuspend(Object var1) {
-                  n8.b.e();
-                  if (this.label == 0) {
+                  val var3: Any = v8.b.e();
+                  if (this.label != 0) {
+                     if (this.label != 1) {
+                        throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                     }
+
                      s.b(var1);
-                     this.$accessoriesViewPool.putRecycledView(this.$viewHolder);
-                     return Unit.a;
                   } else {
-                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                     s.b(var1);
+                     var1 = this.$accessoriesViewPool;
+                     val var7: java.util.Iterator = this.$items.iterator();
+
+                     while (var7.hasNext()) {
+                        var1.putRecycledView(var7.next() as RecyclerView.ViewHolder);
+                     }
+
+                     val var8: d0 = K.c();
+                     val var6: Function2 = new Function2(null) {
+                        int label;
+
+                        {
+                           super(2, var1);
+                        }
+
+                        public final Continuation create(Object var1, Continuation var2) {
+                           return new <anonymous constructor>(var2);
+                        }
+
+                        public final Object invoke(CoroutineScope var1, Continuation var2x) {
+                           return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
+                        }
+
+                        public final Object invokeSuspend(Object var1) {
+                           v8.b.e();
+                           if (this.label == 0) {
+                              s.b(var1);
+                              return Unit.a;
+                           } else {
+                              throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                           }
+                        }
+                     };
+                     this.label = 1;
+                     if (X9.f.g(var8, var6, this) === var3) {
+                        return var3;
+                     }
                   }
+
+                  return Unit.a;
                }
             };
             this.L$0 = var6;
-            this.L$1 = var5;
-            this.L$2 = var1;
-            this.L$3 = var7;
-            this.L$4 = var8;
-            this.I$0 = var4;
-            this.I$1 = var3;
-            this.I$2 = var15;
+            this.L$1 = var7;
+            this.L$2 = var5;
+            this.L$3 = var1;
             this.label = 1;
-            if (Q9.f.g(var27, var28, this) === var10) {
-               return var10;
+            if (X9.f.g(var19, var17, this) === var9) {
+               return var9;
             }
-
-            var15++;
          }
+
+         return Unit.a;
       }
    }, 2, null);
 }
@@ -194,20 +201,16 @@ public fun fillChatList(
    q.h(var1, "chatListAdapter");
    q.h(var2, "delegateViewTypes");
    q.h(var3, "chatListViewPool");
-   Q9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var2, var1, var0, var3, null) {
+   X9.f.d(CoroutineViewUtilsKt.attachedScope(var0, false), K.a(), null, new Function2(var2, var1, var0, var3, null) {
       final BaseChatListAdapter $chatListAdapter;
       final RecyclerView.RecycledViewPool $chatListViewPool;
       final java.util.Map<Class<? extends BaseChatListItemDelegate<? extends ChatListItem, ? extends View>>, Integer> $delegateViewTypes;
       final RecyclerView $recycler;
-      int I$0;
-      int I$1;
-      int I$2;
       Object L$0;
       Object L$1;
       Object L$2;
       Object L$3;
       Object L$4;
-      Object L$5;
       int label;
 
       {
@@ -226,104 +229,69 @@ public fun fillChatList(
          return (this.create(var1, var2x) as <unrepresentable>).invokeSuspend(Unit.a);
       }
 
-      // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var12: Any = n8.b.e();
-         var var3: Int;
-         var var4: Int;
-         var var5: RecyclerView;
-         var var6: BaseChatListAdapter;
-         var var7: java.util.Map;
-         val var8: java.util.Iterator;
-         var var9: Any;
-         var var16: Int;
+         val var10: Any = v8.b.e();
+         val var5: java.util.Iterator;
+         val var6: java.util.Map;
+         val var7: BaseChatListAdapter;
+         val var8: RecyclerView.RecycledViewPool;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var16 = this.I$2;
-            var4 = this.I$1;
-            var3 = this.I$0;
-            var9 = this.L$5 as java.util.List;
-            var8 = this.L$4 as java.util.Iterator;
-            val var10: RecyclerView.RecycledViewPool = this.L$3 as RecyclerView.RecycledViewPool;
-            var5 = this.L$2 as RecyclerView;
-            var6 = this.L$1 as BaseChatListAdapter;
-            var7 = this.L$0 as java.util.Map;
+            var5 = this.L$4 as java.util.Iterator;
+            var8 = this.L$3 as RecyclerView.RecycledViewPool;
+            val var9: RecyclerView = this.L$2 as RecyclerView;
+            var7 = this.L$1 as BaseChatListAdapter;
+            var6 = this.L$0 as java.util.Map;
             s.b(var1);
-            var1 = var10;
-            var16++;
+            var1 = var9;
          } else {
             s.b(var1);
-            val var24: java.util.Map = ChatListViewFactoryKt.access$getRecycledViewPoolSizes$p();
-            val var14: java.util.Map = this.$delegateViewTypes;
-            val var18: BaseChatListAdapter = this.$chatListAdapter;
-            val var20: RecyclerView = this.$recycler;
-            val var22: RecyclerView.RecycledViewPool = this.$chatListViewPool;
-            var8 = var24.entrySet().iterator();
-            if (!var8.hasNext()) {
-               return Unit.a;
-            }
-
-            val var32: Entry = var8.next() as Entry;
-            var9 = var32.getKey() as Class;
-            var3 = (var32.getValue() as java.lang.Number).intValue();
-            var9 = var14.get(var9);
-            q.e(var9);
-            var4 = (var9 as java.lang.Number).intValue();
-            val var11: ArrayList = new ArrayList();
-            var16 = 0;
-            var7 = var14;
-            var1 = var22;
-            var9 = var11;
-            var5 = var20;
-            var6 = var18;
+            val var15: java.util.Map = ChatListViewFactoryKt.access$getRecycledViewPoolSizes$p();
+            var6 = this.$delegateViewTypes;
+            var7 = this.$chatListAdapter;
+            var1 = this.$recycler;
+            var8 = this.$chatListViewPool;
+            var5 = var15.entrySet().iterator();
          }
 
-         while (true) {
-            while (var16 >= var3) {
-               if (!var8.hasNext()) {
-                  return Unit.a;
+         while (var5.hasNext()) {
+            val var16: Entry = var5.next() as Entry;
+            val var11: Class = var16.getKey() as Class;
+            val var3: Int = (var16.getValue() as java.lang.Number).intValue();
+            var var17: java.util.List = (java.util.List)var6.get(var11);
+            q.e(var17);
+            val var4: Int = (var17 as java.lang.Number).intValue();
+            var17 = new ArrayList();
+
+            for (int var14 = 0; var14 < var3; var14++) {
+               val var12: RecyclerView.ViewHolder = var7.createViewHolder(var1, var4);
+               q.g(var12, "createViewHolder(...)");
+               val var20: View = var12.itemView;
+               q.g(var12.itemView, "itemView");
+               if (var20 is FactoryCreatable) {
+                  (var20 as FactoryCreatable).onFactoryCreate();
                }
 
-               val var35: Entry = var8.next() as Entry;
-               var9 = var35.getKey() as Class;
-               var3 = (var35.getValue() as java.lang.Number).intValue();
-               var9 = var7.get(var9);
-               q.e(var9);
-               var4 = (var9 as java.lang.Number).intValue();
-               val var39: ArrayList = new ArrayList();
-               var16 = 0;
-               var7 = var7;
-               var1 = var1;
-               var9 = var39;
-               var5 = var5;
-               var6 = var6;
+               var17.add(var12);
             }
 
-            val var40: RecyclerView.ViewHolder = var6.createViewHolder(var5, var4);
-            q.g(var40, "createViewHolder(...)");
-            val var37: View = var40.itemView;
-            q.g(var40.itemView, "itemView");
-            if (var37 is FactoryCreatable) {
-               (var37 as FactoryCreatable).onFactoryCreate();
-            }
-
-            val var38: d0 = K.c();
-            val var41: Function2 = new Function2(var1, var40, null) {
+            val var21: d0 = K.c();
+            val var19: Function2 = new Function2(var17, var8, null) {
                final RecyclerView.RecycledViewPool $chatListViewPool;
-               final RecyclerView.ViewHolder $viewHolder;
+               final java.util.List<RecyclerView.ViewHolder> $items;
                int label;
 
                {
                   super(2, var3x);
-                  this.$chatListViewPool = var1;
-                  this.$viewHolder = var2x;
+                  this.$items = var1;
+                  this.$chatListViewPool = var2x;
                }
 
                public final Continuation create(Object var1, Continuation var2) {
-                  return new <anonymous constructor>(this.$chatListViewPool, this.$viewHolder, var2);
+                  return new <anonymous constructor>(this.$items, this.$chatListViewPool, var2);
                }
 
                public final Object invoke(CoroutineScope var1, Continuation var2x) {
@@ -331,32 +299,34 @@ public fun fillChatList(
                }
 
                public final Object invokeSuspend(Object var1) {
-                  n8.b.e();
-                  if (this.label == 0) {
-                     s.b(var1);
-                     this.$chatListViewPool.putRecycledView(this.$viewHolder);
-                     return Unit.a;
-                  } else {
+                  v8.b.e();
+                  if (this.label != 0) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+                  } else {
+                     s.b(var1);
+                     var1 = this.$chatListViewPool;
+                     val var4: java.util.Iterator = this.$items.iterator();
+
+                     while (var4.hasNext()) {
+                        var1.putRecycledView(var4.next() as RecyclerView.ViewHolder);
+                     }
+
+                     return Unit.a;
                   }
                }
             };
-            this.L$0 = var7;
-            this.L$1 = var6;
-            this.L$2 = var5;
-            this.L$3 = var1;
-            this.L$4 = var8;
-            this.L$5 = var9;
-            this.I$0 = var3;
-            this.I$1 = var4;
-            this.I$2 = var16;
+            this.L$0 = var6;
+            this.L$1 = var7;
+            this.L$2 = var1;
+            this.L$3 = var8;
+            this.L$4 = var5;
             this.label = 1;
-            if (Q9.f.g(var38, var41, this) === var12) {
-               return var12;
+            if (X9.f.g(var21, var19, this) === var10) {
+               return var10;
             }
-
-            var16++;
          }
+
+         return Unit.a;
       }
    }, 2, null);
 }

@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.ephemeral
 
-import aa.f
-import aa.n
 import com.discord.chat.bridge.structurabletext.StructurableText
 import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import da.C0
-import da.G
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -77,16 +77,16 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var2: StructurableText = this.content;
+      val var3: StructurableText = this.content;
       val var1: java.lang.String = this.helpArticleLink;
-      val var3: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var2: java.lang.String = this.helpButtonAccessibilityLabel;
       val var4: StringBuilder = new StringBuilder();
       var4.append("EphemeralIndication(content=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(", helpArticleLink=");
       var4.append(var1);
       var4.append(", helpButtonAccessibilityLabel=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
@@ -120,18 +120,19 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
          val var5: Boolean = var10.y();
          var var7: StructurableText = null;
          var var2: Int;
-         val var6: StructurableText;
-         val var8: java.lang.String;
          var var11: java.lang.String;
+         var var12: java.lang.String;
          if (var5) {
-            var6 = var10.m(var9, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var8 = var10.t(var9, 1);
+            val var6: StructurableText = var10.m(var9, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
+            val var8: java.lang.String = var10.t(var9, 1);
             var11 = var10.t(var9, 2);
             var2 = 7;
+            var7 = var6;
+            var12 = var8;
          } else {
             var var3: Boolean = true;
             var2 = 0;
-            var var12: java.lang.String = null;
+            var12 = null;
             var11 = null;
 
             while (var3) {
@@ -157,13 +158,10 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
                   var3 = false;
                }
             }
-
-            var8 = var12;
-            var6 = var7;
          }
 
          var10.b(var9);
-         return new EphemeralIndication(var2, var6, var8, var11, null);
+         return new EphemeralIndication(var2, var7, var12, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: EphemeralIndication) {

@@ -1242,19 +1242,6 @@
   "PHjkRE": "Apps",
   "AKcFUl": "App Directory",
   "LO4f0N": "Partner",
-  "6IW6Wl": [
-    "in ",
-    [
-      1,
-      "guildCount"
-    ],
-    " servers"
-  ],
-  "KC1oZ2": "Add App",
-  "j4KtLS": "Oops, this link doesn't work...",
-  "0H5OT0": "Try sending another one!",
-  "NaQLEx": "Invalid Link",
-  "m9hXGR": "Resolving Application",
   "eGZFws": "Notifications are disabled for this DM.",
   "7Sbhqa": [
     "Notifications are disabled until ",
@@ -1382,7 +1369,6 @@
   "X2L3OT": "You cannot add or remove reactions in archived threads.",
   "BTs4KS": "Close Post",
   "wiIevb": "Close Thread",
-  "GTI3Bw": "Argentine Peso",
   "7lc4V1": "Compressing files...",
   "GnuJ5u": "unknown",
   "IPzNKC": "double tap to enlarge",
@@ -1409,6 +1395,26 @@
   "wOr6hI": "Too many uploads!",
   "BEWw//": "double tap to play video and enlarge",
   "3AS4UF": "Attach Files",
+  "vlj5uL": "Heads up — allowing tracking lets us personalize the content you see in your Quests & Rewards and keeps your experience as relevant as possible!",
+  "1dqa3d": "Wanna level up? Enabling tracking helps us make your experiences as rewarding and relevant as possible! You can opt out anytime in your iOS settings.",
+  "acNnra": "Just a quick ping - Allowing tracking helps us show you Quests that you’re actually into! You can opt out anytime in your iOS settings",
+  "Cq8QKS": "Player checkpoint - Allowing tracking personalizes your experience and ensures you have a rewarding experience. You can opt out anytime in your iOS settings.",
+  "y4HOMj": "Help support Discord to be your cozy home on the internet",
+  "YW0z09": "You’ll help support Discord to be your cozy home on the internet",
+  "xaXauL": "Discord continues to be your cozy home on the internet",
+  "oD52ER": "Ensure Discord continues to be your cozy home on the internet",
+  "fpfPTk": "Receive personalized Quests that are crafted to your relevant interests",
+  "ZxkYWV": "We’ll personalize Quests to reflect your relevant interests",
+  "2xEEtr": "Quests will be personalized to offer you the rewards you want",
+  "nvVy39": "Receive Quests that match your interests",
+  "mH8BIS": "You can always update your choice for this device in your iOS settings at any time. If you allow tracking, you can:",
+  "1xzDm5": "Allowing tracking means:",
+  "P9bOBQ": "If you allow tracking:",
+  "b0WurK": "Allowing tracking means you will:",
+  "UBpcNz": "Support businesses and game studios that rely on ads for discovery",
+  "TSMwsr": "You’ll back game studios who rely on ads for discovery",
+  "mE2qtL": "Businesses and game studios you love can be discovered",
+  "QNWJs7": "Back businesses and game studios who rely on ads for discovery",
   "QLMGho": [
     [
       1,
@@ -1437,7 +1443,6 @@
       "filename"
     ]
   ],
-  "ylmkMz": "Australian Dollar",
   "y+/PEx": "Authorize",
   "vTVC5e": [
     [
@@ -1827,7 +1832,6 @@
     ]
   ],
   "oW0eUV": "Beta",
-  "EhetGB": "Bulgarian Lev",
   "fHz6eX": [
     "Step ",
     [
@@ -2309,7 +2313,6 @@
   "fyE8sL": "OP",
   "uN6Emp": "Original Poster",
   "PuJGuL": "SERVER",
-  "qEyr9v": "Brazilian Real",
   "H+AjY2": "Brown",
   "MWmtj4": "All Channels",
   "/tZh0N": "Bug Reporter",
@@ -2317,7 +2320,7 @@
   "HVxmOD": "Add attachment(s)",
   "tM969v": "Attachments",
   "jB8yOD": "Bug submitted",
-  "1SplHx": "Detailed description (optional)",
+  "1SplHx": "Detailed description",
   "HewMzs": "Reddit post, Zendesk ticket, Tweet?",
   "4t1o0t": "Failed to submit report",
   "77VVd3": "Feature area",
@@ -2903,7 +2906,6 @@
   "jsvgc3": "Close DM",
   "4EGMWF": "Close Stream",
   "gaifwc": "Close Window",
-  "BK/Vam": "Chilean Peso",
   "iTcumZ": "Collapse",
   "3nWhcH": "Accept gift",
   "gW9R4O": [
@@ -2924,6 +2926,27 @@
   ],
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
+  "IQQYeX": [
+    "Avatar Decoration: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "ZI2zgY": [
+    "Nameplate: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
+  "x/MGW1": [
+    "Profile Effect: ",
+    [
+      1,
+      "itemName"
+    ]
+  ],
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
   "kAeDcH": "Buy Profile Effect",
@@ -2969,13 +2992,6 @@
   "3lv7q6": "Give your avatar a new look.",
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
-  "kWkpdH": [
-    [
-      1,
-      "price"
-    ],
-    " with Nitro"
-  ],
   "sPvyr6": [
     "Original price: ",
     [
@@ -3106,12 +3122,12 @@
       8,
       "$b",
       [
-        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the “Virtual Goods” section ",
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
         [
           8,
           "$link",
           [
-            "here"
+            "“Virtual Goods” section"
           ],
           [
             [
@@ -3141,6 +3157,7 @@
   ],
   "2NxdjY": "You have been gifted a Profile Effect!",
   "pWG4zc": "Shop",
+  "5upuq6": "Discord Shop",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -4725,7 +4742,6 @@
   "MSaeTU": "Copied!",
   "JrGD7O": "Copy Text",
   "y5MwJy": "Copy Username",
-  "/FnP7O": "Colombian Peso",
   "QJyuxc": "d",
   "1LyF1t": "h",
   "n7dksL": "m",
@@ -5844,6 +5860,25 @@
       "cardinal"
     ]
   ],
+  "np9mf3": "Current obsession",
+  "G1b309": "On repeat",
+  "iXcll5": "Playing lately",
+  "+KXSFh": [
+    "Remove custom status label: ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "mDVlTk": [
+    "Set custom status label to ",
+    [
+      1,
+      "label"
+    ]
+  ],
+  "45vlm5": "Shower thought",
+  "NcnbEx": "Watching lately",
   "TS3eJS": [
     [
       6,
@@ -5870,7 +5905,7 @@
   "ZPjue3": "Best thing you ate this week?",
   "40gTj4": "Can’t wait for...",
   "SWVxPD": "Choose your character class",
-  "ZStIVl": "Currently obsessed with...",
+  "xaCthI": "What are you currently obsessed with?",
   "3XVZ0t": "Best dad joke?",
   "4U+EJC": "Best emoji to describe your day?",
   "R1f9RU": "Favorite anime lately?",
@@ -5900,10 +5935,12 @@
   "pzz9iI": "What have you been watching?",
   "/UonHB": "Set a custom status",
   "Iuzg8f": "Set your status",
+  "zOdg0N": "Status",
+  "hA60Ul": "Make your status stand out with a preset tag",
+  "jrzHRk": "Custom status tags",
   "GQmLra": "Today",
   "UcdRn5": "What's cookin'?",
   "xod36+": "What's on your mind?",
-  "dWTAXV": "Czech Koruna",
   "BwbOAA": "Dark blue",
   "lwrNQE": "Dark grey",
   "edPgnJ": "Dark purple",
@@ -6329,7 +6366,6 @@
   "FYKGsL": "Display details on profile",
   "9AjdkJ": "Display Name",
   "f7yOAQ": "Display on profile",
-  "a9hHzs": "Danish Krone",
   "jN2DfX": "Direct Message",
   "ACgJhI": "DM",
   "5IlFpq": "Add some friends to start chatting, playing games, and more!",
@@ -7740,7 +7776,6 @@
     ],
     " in an Activity"
   ],
-  "LQx1UF": "Resolving Activity",
   "1fRDnZ": "Resume Video",
   "VOgTj4": "Your camera and incoming video streams have been paused for better device performance. If you resume video, you may experience lag or voice distortion.",
   "i+9VW1": "Unable to share empty logs",
@@ -8045,7 +8080,6 @@
   "CKsXk5": "Whoops, something went wrong. Give it another try?",
   "R0RpRU": "Oops, something went wrong...",
   "fEptJC": "An error occurred, please try again.",
-  "uhxR+f": "Euro",
   "fyBVRk": "Canceled",
   "F9On+v": "Event changes saved",
   "5HzXOz": "Event created",
@@ -19694,7 +19728,6 @@
     " is live."
   ],
   "OaloU1": "Thanks! You're on the waitlist.",
-  "abWUUF": "Hungarian Forint",
   "lTCb0d": "Resubscribe",
   "ZyXA0t": "I found the language in the menu confusing",
   "cigGCQ": "I couldn't find what I was looking for",
@@ -19783,7 +19816,6 @@
   "Vzp5BA": "Blur potentially sensitive media in DMs and servers",
   "YdZZtL": "Blur added to sensitive media",
   "5Qu1IS": "Sensitive content filter",
-  "UBrRGh": "Indonesian Rupiah",
   "ytCpKi": "Ignore",
   "tFY5ZW": "Ignored",
   "VFWjc3": [
@@ -20778,8 +20810,16 @@
   "eIi3Oj": "Join Voice",
   "PDsYAg": "Join Waitlist",
   "+H/coa": "Join with Invite Link",
-  "QKSoIi": "Japanese Yen",
   "k5WiPT": "Jump",
+  "zKNgPD": [
+    "You cannot jump to ",
+    [
+      1,
+      "name"
+    ],
+    "'s message."
+  ],
+  "6vJKFh": "This person is likely a spammer",
   "+TSRGB": "Jump to Message",
   "gpoQsL": "Jump To Present",
   "dpjpOj": "Jump To Reply",
@@ -20824,7 +20864,6 @@
     ],
     "'"
   ],
-  "20VnAw": "South Korean Won",
   "IHMsPj": "Language",
   "Dh5p5u": "Due to this server's size, you won't get mobile push notifications for non-@mention messages.",
   "FM1dHR": [
@@ -22777,8 +22816,6 @@
   "wR+Fur": "Mute this thread",
   "LxhEuL": "Mute Soundboard",
   "bUUd8v": "Mute Thread",
-  "t2RLnp": "Mexican Peso",
-  "MOaho6": "Malaysian Ringgit",
   "KLOhbG": "Go to server",
   "McYRBg": [
     [
@@ -24884,7 +24921,6 @@
   "Mh9bTk": "1 Month",
   "DRgqMj": "1 Year",
   "YCrcPD": "Subscription",
-  "sKR+OD": "Peruvian Sol",
   "xrmhRU": "Permissions",
   "OIhm0N": [
     "Permissions not synced with category: ",
@@ -24936,7 +24972,6 @@
   "64bX0N": "Phone Number",
   "WO0zBA": "Update your phone number",
   "SkfkEB": "Photo",
-  "0p6FTk": "Philippine Peso",
   "WTqQ5e": "Pick a Color",
   "vLz3Zm": "Pick Your Plan",
   "L3I0Ji": "Dismiss",
@@ -25006,7 +25041,6 @@
   "cnBQPD": "Play Here",
   "JeK1Wl": "Play in DM",
   "ZUEGFh": "Please try again later.",
-  "eAdNmZ": "Polish Złoty",
   "RgIi2N": "Poll",
   "h3Y3zc": "Polls",
   "1knDPD": [
@@ -30208,6 +30242,9 @@
   ],
   "vVcTtL": "Choose a Platform",
   "EMrUHR": "Select Platform",
+  "ABD2CA": "An avatar decoration to spruce up your Discord profile.",
+  "66YyBA": "An avatar decoration to spruce up your Discord profile. Keep it with Nitro!",
+  "maMtqK": "Nitro credits give you Nitro for a limited amount of time.",
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
@@ -32240,7 +32277,6 @@
   "vqnToa": "Say congrats!",
   "9yh+dH": "Give them a high five!",
   "piPHvb": "Welcome",
-  "C7WDXF": "Romanian Leu",
   "X8bCMT": "Open Debug Panel",
   "lunaRk": [
     "Display an alert when a possible risk to your safety is detected. ",
@@ -32897,7 +32933,6 @@
   "Am9YHh": "Security",
   "z4FcDg": "Event Details",
   "eXHkho": "See Thread ›",
-  "Z0oztb": "Swedish Krona",
   "XqMe3N": "Select",
   "3aednJ": [
     "Select component ",
@@ -36737,7 +36772,6 @@
   "nIfr0d": "Text Channels",
   "oG6WsL": "Post images, GIFs, stickers, opinions, and puns",
   "pnuRXF": "Text",
-  "9W3Gub": "Thai Baht",
   "Ksh3io": "Theme",
   "b8Cei4": "Dark",
   "K2sFfn": "Light",
@@ -37196,7 +37230,6 @@
   "TsWCdX": "Trending",
   "7qbp3N": "...more",
   "7NqTJi": "Try Again",
-  "J05KNT": "Turkish Lira",
   "EnX2Ji": "Turn Camera Off",
   "v8K+8f": "Turn Camera On",
   "ND1my8": "Turn on video anyway",
@@ -37379,14 +37412,14 @@
     " unblocked"
   ],
   "dTNNgo": [
-    "First unblock '",
+    "You'll need to unblock ",
     [
       1,
       "name"
     ],
-    "' and then you can jump to their message."
+    " before you can jump to their message."
   ],
-  "j7eA/v": "Soo... You Blocked This Person",
+  "j7eA/v": "Soo... you blocked this person",
   "GSfOoq": "Uncategorized",
   "2US87+": "Undeafen",
   "KyUKhY": "Undo",
@@ -37436,14 +37469,14 @@
     " unignored"
   ],
   "8t8doK": [
-    "First unignore '",
+    "You'll need to unignore ",
     [
       1,
       "name"
     ],
-    "' and then you can jump to their message."
+    " before you can jump to their message."
   ],
-  "XyWoKS": "Soo... You Ignored This Person",
+  "XyWoKS": "Soo... you ignored this person",
   "PrtAq6": [
     [
       8,
@@ -37627,7 +37660,6 @@
   "kYpG0t": "No, take me back!",
   "D3+rU1": "Yes, I'm sure",
   "OdPCbG": "Turn off use data to improve Discord?",
-  "kJGVtL": "United States Dollar",
   "KD6OJC": "User",
   "IEpCBQ": "Username",
   "YEOwDA": "Who would you like to add as a friend?",
@@ -38522,7 +38554,6 @@
   "DisZzM": "View Per-server Profile",
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
-  "mEwykp": "Vietnamese Dong",
   "K3lovL": "Voice",
   "EZgS+/": "Voice Call",
   "GaCMgY": "Open voice call actions",

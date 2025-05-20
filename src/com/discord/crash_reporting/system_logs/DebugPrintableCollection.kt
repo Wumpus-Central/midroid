@@ -77,20 +77,20 @@ public class DebugPrintableCollection {
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
       // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 13
+      // 5d: astore 12
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 12
-      // 64: aload 12
+      // 62: astore 13
+      // 64: aload 13
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 13
+      // 6a: aload 12
       // 6c: aload 2
-      // 6d: aload 12
+      // 6d: aload 13
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
       // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 13
+      // 79: aload 12
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -235,21 +235,21 @@ public class DebugPrintableCollection {
       // 0bf: aload 6
       // 0c1: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c6: goto 0f0
-      // 0c9: astore 8
+      // 0c9: astore 7
       // 0cb: new java/lang/StringBuilder
-      // 0ce: astore 7
-      // 0d0: aload 7
+      // 0ce: astore 8
+      // 0d0: aload 8
       // 0d2: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d5: aload 7
+      // 0d5: aload 8
       // 0d7: ldc_w "Exception: "
       // 0da: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0dd: pop
-      // 0de: aload 7
-      // 0e0: aload 8
+      // 0de: aload 8
+      // 0e0: aload 7
       // 0e2: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e5: pop
       // 0e6: aload 2
-      // 0e7: aload 7
+      // 0e7: aload 8
       // 0e9: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0ec: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ef: pop

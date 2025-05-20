@@ -1,6 +1,6 @@
 package com.discord.browser_manager
 
-import N9.j
+import U9.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -77,9 +77,9 @@ internal object BrowserManager {
       q.h(var3, "onFailure");
 
       try {
-         val var4: Uri = Uri.parse(var2);
-         q.e(var4);
-         this.openUrlWithCustomTabs(var1, var4, new Function1(var1, var2, var3) {
+         val var5: Uri = Uri.parse(var2);
+         q.e(var5);
+         this.openUrlWithCustomTabs(var1, var5, new Function1(var1, var2, var3) {
             final Context $context;
             final Function1 $onFailure;
             final java.lang.String $url;

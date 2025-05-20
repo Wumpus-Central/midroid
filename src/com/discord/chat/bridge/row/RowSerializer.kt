@@ -1,8 +1,6 @@
 package com.discord.chat.bridge.row
 
-import ea.d
-import ea.g
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
@@ -11,14 +9,16 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
+import la.d
+import la.g
 
-public object RowSerializer : d(E.b(Row.class)) {
+public object RowSerializer : d(G.b(Row.class)) {
    private const val CHANGE_TYPE_DELETE: String = "3"
    private final val rowSealedClassSerializer: SealedClassSerializer<Row> =
       new SealedClassSerializer(
          "Row",
-         E.b(Row.class),
-         new KClass[]{E.b(LoadingRow.class), E.b(MessageRow.class), E.b(SeparatorRow.class), E.b(BlockedGroupRow.class), E.b(UploadProgressRow.class)},
+         G.b(Row.class),
+         new KClass[]{G.b(LoadingRow.class), G.b(MessageRow.class), G.b(SeparatorRow.class), G.b(BlockedGroupRow.class), G.b(UploadProgressRow.class)},
          new KSerializer[]{
             LoadingRow.Companion.serializer(),
             MessageRow.Companion.serializer(),

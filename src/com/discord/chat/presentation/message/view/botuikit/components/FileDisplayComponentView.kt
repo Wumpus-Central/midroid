@@ -10,7 +10,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentContext
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -32,17 +32,17 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var10: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      var var6: java.lang.String = var3.getContainerId();
-      val var7: java.lang.String = var1.getId();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FileDisplayComponent(");
-      var5.append(var7);
-      var5.append(")");
-      val var14: SpoilerAttributes = var10.forGenericMedia(var1, var6, var5.toString(), var1.getFile().getUrl(), null);
+      val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var10: java.lang.String = var3.getContainerId();
+      var var6: java.lang.String = var1.getId();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("FileDisplayComponent(");
+      var7.append(var6);
+      var7.append(")");
+      val var14: SpoilerAttributes = var5.forGenericMedia(var1, var10, var7.toString(), var1.getFile().getUrl(), null);
       val var12: java.lang.String = var1.getName();
-      val var11: java.lang.String = var1.getSize();
-      var6 = var1.getFile().getUrl();
+      var6 = var1.getSize();
+      val var11: java.lang.String = var1.getFile().getUrl();
       val var4: Boolean = var1.isSpoiler();
       val var8: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
       var var9: SpoilerConfig = null;
@@ -50,11 +50,11 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
          var9 = SpoilerAttributes.configure$default(var14, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
       }
 
-      this.setContent(var12, var11, var6, var8, var4, var9, null, null);
+      this.setContent(var12, var6, var11, var8, var4, var9, null, null);
    }
 
    public override fun getComponentType(): KClass<FileDisplayComponent> {
-      return E.b(FileDisplayComponent.class);
+      return G.b(FileDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

@@ -10,7 +10,6 @@ import com.discord.chat.bridge.sticker.Sticker
 import com.discord.chat.presentation.list.ScrollState
 import com.discord.chat.reactevents.ViewResizeMode
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
-import com.discord.primitives.ApplicationId
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
@@ -112,12 +111,6 @@ public interface ChatEventHandler {
    }
 
    public abstract fun onStickerLongClicked(sticker: Sticker, messageId: MessageId) {
-   }
-
-   public abstract fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
-   }
-
-   public abstract fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
    }
 
    public abstract fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
@@ -457,15 +450,6 @@ public interface ChatEventHandler {
       public override fun onStickerLongClicked(sticker: Sticker, messageId: MessageId) {
          q.h(var1, "sticker");
          q.h(var2, "messageId");
-      }
-
-      public override fun onTapActivityBookmarkEmbed(applicationId: ApplicationId, channelId: ChannelId, referrerId: String, customId: String?) {
-         q.h(var5, "referrerId");
-      }
-
-      public override fun onTapActivityInstanceEmbed(applicationId: ApplicationId, channelId: ChannelId, instanceId: String, messageId: MessageId) {
-         q.h(var5, "instanceId");
-         q.h(var6, "messageId");
       }
 
       public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {

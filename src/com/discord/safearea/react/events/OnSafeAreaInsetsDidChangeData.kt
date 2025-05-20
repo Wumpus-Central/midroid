@@ -1,12 +1,12 @@
 package com.discord.safearea.react.events
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.F
-import da.G
-import da.G.a
+import ha.f
+import ha.n
+import ka.F
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -79,17 +79,17 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
    }
 
    public override fun toString(): String {
-      val var2: Float = this.top;
-      val var1: Float = this.bottom;
-      val var3: Float = this.left;
+      val var3: Float = this.top;
+      val var2: Float = this.bottom;
+      val var1: Float = this.left;
       val var4: Float = this.right;
       val var5: StringBuilder = new StringBuilder();
       var5.append("OnSafeAreaInsetsDidChangeData(top=");
-      var5.append(var2);
-      var5.append(", bottom=");
-      var5.append(var1);
-      var5.append(", left=");
       var5.append(var3);
+      var5.append(", bottom=");
+      var5.append(var2);
+      var5.append(", left=");
+      var5.append(var1);
       var5.append(", right=");
       var5.append(var4);
       var5.append(")");
@@ -131,9 +131,9 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
          val var6: Float;
          var var7: Int;
          if (var11.y()) {
-            var3 = var11.G(var10, 0);
+            var4 = var11.G(var10, 0);
             var6 = var11.G(var10, 1);
-            var4 = var11.G(var10, 2);
+            var3 = var11.G(var10, 2);
             var2 = var11.G(var10, 3);
             var7 = 15;
          } else {
@@ -175,12 +175,11 @@ internal data class OnSafeAreaInsetsDidChangeData(top: Float, bottom: Float, lef
 
             var6 = var2;
             var2 = var4;
-            var4 = var3;
-            var3 = var5;
+            var4 = var5;
          }
 
          var11.b(var10);
-         return new OnSafeAreaInsetsDidChangeData(var7, var3, var6, var4, var2, null);
+         return new OnSafeAreaInsetsDidChangeData(var7, var4, var6, var3, var2, null);
       }
 
       public open fun serialize(encoder: Encoder, value: OnSafeAreaInsetsDidChangeData) {

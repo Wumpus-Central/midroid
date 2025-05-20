@@ -30,14 +30,14 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       kotlin.jvm.internal.q.h(var1, "context");
       kotlin.jvm.internal.q.h(var2, "attrs");
       super(var1, var2);
-      val var3: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
-      this.binding = var3;
-      val var5: TextView = var3.altRemixTag;
-      kotlin.jvm.internal.q.g(var3.altRemixTag, "altRemixTag");
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      val var4: SimpleDraweeView = var3.remixIcon;
-      kotlin.jvm.internal.q.g(var3.remixIcon, "remixIcon");
+      val var5: MessageAltRemixTagViewBinding = MessageAltRemixTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var5, "inflate(...)");
+      this.binding = var5;
+      val var3: TextView = var5.altRemixTag;
+      kotlin.jvm.internal.q.g(var5.altRemixTag, "altRemixTag");
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      val var4: SimpleDraweeView = var5.remixIcon;
+      kotlin.jvm.internal.q.g(var5.remixIcon, "remixIcon");
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Remix);
    }
 
@@ -61,17 +61,17 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
       kotlin.jvm.internal.q.h(var5, "messageId");
       if (var1 != null) {
          this.binding.altRemixTag.setText(var1);
-         val var10: TextView = this.binding.altRemixTag;
+         val var11: TextView = this.binding.altRemixTag;
          var var9: Int;
          if (var2 != null) {
             var9 = var2;
          } else {
-            val var11: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var11, "getContext(...)");
-            var9 = ColorUtilsKt.getColorCompat(var11, R.color.white);
+            val var10: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var10, "getContext(...)");
+            var9 = ColorUtilsKt.getColorCompat(var10, R.color.white);
          }
 
-         var10.setTextColor(var9);
+         var11.setTextColor(var9);
          val var12: SimpleDraweeView = this.binding.remixIcon;
          kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          if (var2 != null) {

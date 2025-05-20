@@ -1,9 +1,9 @@
 package com.discord.js_watchdog
 
+import A8.b
+import A8.c
 import java.io.File
 import java.io.FileInputStream
-import s8.b
-import s8.c
 
 public object HermesSamplingProfilerUtil {
    private fun readFile(file: File): String {
@@ -39,9 +39,9 @@ public object HermesSamplingProfilerUtil {
       // 006: bipush 0
       // 007: istore 5
       // 009: bipush 0
-      // 00a: istore 3
-      // 00b: bipush 0
-      // 00c: istore 4
+      // 00a: istore 4
+      // 00c: bipush 0
+      // 00d: istore 3
       // 00e: bipush 0
       // 00f: istore 6
       // 011: aconst_null
@@ -61,410 +61,421 @@ public object HermesSamplingProfilerUtil {
       // 02c: astore 1
       // 02d: aload 9
       // 02f: invokevirtual java/io/File.getPath ()Ljava/lang/String;
-      // 032: invokestatic com/facebook/hermes/instrumentation/HermesSamplingProfiler.dumpSampledTraceToFile (Ljava/lang/String;)V
-      // 035: aload 9
-      // 037: astore 1
-      // 038: aload 0
-      // 039: aload 9
-      // 03b: invokespecial com/discord/js_watchdog/HermesSamplingProfilerUtil.readFile (Ljava/io/File;)Ljava/lang/String;
-      // 03e: astore 8
-      // 040: aload 9
-      // 042: astore 1
-      // 043: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 046: aload 8
-      // 048: invokevirtual kotlinx/serialization/json/Json.g (Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
-      // 04b: astore 11
-      // 04d: aload 9
-      // 04f: astore 1
-      // 050: aload 11
-      // 052: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 055: ldc "samples"
-      // 057: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
-      // 05a: checkcast kotlinx/serialization/json/JsonElement
-      // 05d: astore 8
-      // 05f: aload 8
-      // 061: ifnull 085
-      // 064: aload 9
-      // 066: astore 1
-      // 067: aload 8
-      // 069: invokestatic ea/g.n (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonArray;
-      // 06c: astore 8
-      // 06e: goto 088
-      // 071: astore 9
-      // 073: aload 1
-      // 074: astore 8
-      // 076: aload 9
-      // 078: astore 1
-      // 079: goto 35c
-      // 07c: astore 10
-      // 07e: aload 9
-      // 080: astore 8
-      // 082: goto 32e
-      // 085: aconst_null
-      // 086: astore 8
-      // 088: aload 8
-      // 08a: ifnull 314
-      // 08d: aload 9
-      // 08f: astore 1
-      // 090: aload 8
-      // 092: invokeinterface java/util/Collection.isEmpty ()Z 1
-      // 097: istore 7
-      // 099: iload 7
-      // 09b: ifeq 0a1
-      // 09e: goto 314
-      // 0a1: getstatic h8/r.k Lh8/r$a;
-      // 0a4: astore 1
-      // 0a5: aload 8
-      // 0a7: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
-      // 0ac: astore 10
-      // 0ae: aload 10
-      // 0b0: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 0b5: ifeq 11d
-      // 0b8: aload 10
-      // 0ba: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 0bf: checkcast kotlinx/serialization/json/JsonElement
-      // 0c2: astore 1
-      // 0c3: aload 1
-      // 0c4: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 0c7: ldc "sf"
-      // 0c9: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
-      // 0cc: checkcast kotlinx/serialization/json/JsonElement
-      // 0cf: astore 8
-      // 0d1: aload 8
-      // 0d3: ifnull 0fc
-      // 0d6: aload 8
-      // 0d8: invokestatic ea/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 0db: astore 8
-      // 0dd: aload 8
-      // 0df: ifnull 0fc
+      // 032: astore 8
+      // 034: aload 9
+      // 036: astore 1
+      // 037: aload 8
+      // 039: ldc "getPath(...)"
+      // 03b: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03e: aload 9
+      // 040: astore 1
+      // 041: aload 8
+      // 043: invokestatic com/facebook/hermes/instrumentation/HermesSamplingProfiler.dumpSampledTraceToFile (Ljava/lang/String;)V
+      // 046: aload 9
+      // 048: astore 1
+      // 049: aload 0
+      // 04a: aload 9
+      // 04c: invokespecial com/discord/js_watchdog/HermesSamplingProfilerUtil.readFile (Ljava/io/File;)Ljava/lang/String;
+      // 04f: astore 8
+      // 051: aload 9
+      // 053: astore 1
+      // 054: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
+      // 057: aload 8
+      // 059: invokevirtual kotlinx/serialization/json/Json.g (Ljava/lang/String;)Lkotlinx/serialization/json/JsonElement;
+      // 05c: astore 11
+      // 05e: aload 9
+      // 060: astore 1
+      // 061: aload 11
+      // 063: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 066: ldc "samples"
+      // 068: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 06b: checkcast kotlinx/serialization/json/JsonElement
+      // 06e: astore 8
+      // 070: aload 8
+      // 072: ifnull 096
+      // 075: aload 9
+      // 077: astore 1
+      // 078: aload 8
+      // 07a: invokestatic la/g.n (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonArray;
+      // 07d: astore 8
+      // 07f: goto 099
+      // 082: astore 8
+      // 084: aload 1
+      // 085: astore 9
+      // 087: aload 8
+      // 089: astore 1
+      // 08a: goto 373
+      // 08d: astore 10
+      // 08f: aload 9
+      // 091: astore 8
+      // 093: goto 343
+      // 096: aconst_null
+      // 097: astore 8
+      // 099: aload 8
+      // 09b: ifnull 325
+      // 09e: aload 9
+      // 0a0: astore 1
+      // 0a1: aload 8
+      // 0a3: invokeinterface java/util/Collection.isEmpty ()Z 1
+      // 0a8: istore 7
+      // 0aa: iload 7
+      // 0ac: ifeq 0b2
+      // 0af: goto 325
+      // 0b2: getstatic o8/r.k Lo8/r$a;
+      // 0b5: astore 1
+      // 0b6: aload 8
+      // 0b8: invokeinterface java/lang/Iterable.iterator ()Ljava/util/Iterator; 1
+      // 0bd: astore 10
+      // 0bf: aload 10
+      // 0c1: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 0c6: ifeq 12e
+      // 0c9: aload 10
+      // 0cb: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 0d0: checkcast kotlinx/serialization/json/JsonElement
+      // 0d3: astore 1
+      // 0d4: aload 1
+      // 0d5: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 0d8: ldc "sf"
+      // 0da: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 0dd: checkcast kotlinx/serialization/json/JsonElement
+      // 0e0: astore 8
       // 0e2: aload 8
-      // 0e4: invokestatic ea/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
-      // 0e7: astore 8
-      // 0e9: aload 8
-      // 0eb: ifnull 0fc
+      // 0e4: ifnull 10d
+      // 0e7: aload 8
+      // 0e9: invokestatic la/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 0ec: astore 8
       // 0ee: aload 8
-      // 0f0: invokevirtual java/lang/Integer.intValue ()I
-      // 0f3: istore 2
-      // 0f4: goto 0fe
-      // 0f7: astore 8
-      // 0f9: goto 13b
-      // 0fc: bipush -1
-      // 0fd: istore 2
-      // 0fe: iload 2
-      // 0ff: bipush 1
-      // 100: if_icmple 108
-      // 103: bipush 1
+      // 0f0: ifnull 10d
+      // 0f3: aload 8
+      // 0f5: invokestatic la/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
+      // 0f8: astore 8
+      // 0fa: aload 8
+      // 0fc: ifnull 10d
+      // 0ff: aload 8
+      // 101: invokevirtual java/lang/Integer.intValue ()I
       // 104: istore 2
-      // 105: goto 10a
-      // 108: bipush 0
-      // 109: istore 2
-      // 10a: iload 2
-      // 10b: ifeq 111
-      // 10e: goto 113
-      // 111: aconst_null
-      // 112: astore 1
-      // 113: aload 1
-      // 114: astore 8
-      // 116: aload 1
-      // 117: ifnonnull 120
-      // 11a: goto 0ae
-      // 11d: aconst_null
-      // 11e: astore 8
-      // 120: aload 8
-      // 122: ifnull 12f
-      // 125: aload 8
-      // 127: invokestatic h8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
-      // 12a: astore 8
-      // 12c: goto 150
-      // 12f: new java/util/NoSuchElementException
-      // 132: astore 1
-      // 133: aload 1
-      // 134: ldc "No element of the collection was transformed to a non-null value."
-      // 136: invokespecial java/util/NoSuchElementException.<init> (Ljava/lang/String;)V
-      // 139: aload 1
-      // 13a: athrow
-      // 13b: aload 9
-      // 13d: astore 1
-      // 13e: getstatic h8/r.k Lh8/r$a;
-      // 141: astore 10
-      // 143: aload 9
-      // 145: astore 1
-      // 146: aload 8
-      // 148: invokestatic h8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
-      // 14b: invokestatic h8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
-      // 14e: astore 8
-      // 150: aload 9
-      // 152: astore 1
-      // 153: aload 8
-      // 155: astore 10
-      // 157: aload 8
-      // 159: invokestatic h8/r.g (Ljava/lang/Object;)Z
-      // 15c: ifeq 162
-      // 15f: aconst_null
-      // 160: astore 10
-      // 162: aload 9
-      // 164: astore 1
-      // 165: aload 10
-      // 167: checkcast kotlinx/serialization/json/JsonElement
-      // 16a: astore 10
-      // 16c: aload 10
-      // 16e: ifnonnull 18b
-      // 171: iload 6
-      // 173: istore 2
-      // 174: aload 9
-      // 176: invokevirtual java/io/File.exists ()Z
-      // 179: bipush 1
-      // 17a: if_icmpne 17f
-      // 17d: bipush 1
-      // 17e: istore 2
-      // 17f: iload 2
-      // 180: ifeq 189
-      // 183: aload 9
-      // 185: invokevirtual java/io/File.delete ()Z
-      // 188: pop
-      // 189: aconst_null
-      // 18a: areturn
-      // 18b: aload 9
-      // 18d: astore 1
-      // 18e: aload 11
-      // 190: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 193: invokestatic i8/q.x (Ljava/util/Map;)Ljava/util/Map;
-      // 196: astore 8
-      // 198: aload 9
-      // 19a: astore 1
-      // 19b: new kotlinx/serialization/json/JsonArray
-      // 19e: astore 12
-      // 1a0: aload 9
-      // 1a2: astore 1
-      // 1a3: aload 12
-      // 1a5: aload 10
-      // 1a7: invokestatic kotlin/collections/i.e (Ljava/lang/Object;)Ljava/util/List;
-      // 1aa: invokespecial kotlinx/serialization/json/JsonArray.<init> (Ljava/util/List;)V
-      // 1ad: aload 9
-      // 1af: astore 1
-      // 1b0: aload 8
-      // 1b2: ldc "samples"
+      // 105: goto 10f
+      // 108: astore 10
+      // 10a: goto 14c
+      // 10d: bipush -1
+      // 10e: istore 2
+      // 10f: iload 2
+      // 110: bipush 1
+      // 111: if_icmple 119
+      // 114: bipush 1
+      // 115: istore 2
+      // 116: goto 11b
+      // 119: bipush 0
+      // 11a: istore 2
+      // 11b: iload 2
+      // 11c: ifeq 122
+      // 11f: goto 124
+      // 122: aconst_null
+      // 123: astore 1
+      // 124: aload 1
+      // 125: astore 8
+      // 127: aload 1
+      // 128: ifnonnull 131
+      // 12b: goto 0bf
+      // 12e: aconst_null
+      // 12f: astore 8
+      // 131: aload 8
+      // 133: ifnull 140
+      // 136: aload 8
+      // 138: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 13b: astore 8
+      // 13d: goto 161
+      // 140: new java/util/NoSuchElementException
+      // 143: astore 1
+      // 144: aload 1
+      // 145: ldc "No element of the collection was transformed to a non-null value."
+      // 147: invokespecial java/util/NoSuchElementException.<init> (Ljava/lang/String;)V
+      // 14a: aload 1
+      // 14b: athrow
+      // 14c: aload 9
+      // 14e: astore 1
+      // 14f: getstatic o8/r.k Lo8/r$a;
+      // 152: astore 8
+      // 154: aload 9
+      // 156: astore 1
+      // 157: aload 10
+      // 159: invokestatic o8/s.a (Ljava/lang/Throwable;)Ljava/lang/Object;
+      // 15c: invokestatic o8/r.b (Ljava/lang/Object;)Ljava/lang/Object;
+      // 15f: astore 8
+      // 161: aload 9
+      // 163: astore 1
+      // 164: aload 8
+      // 166: astore 10
+      // 168: aload 8
+      // 16a: invokestatic o8/r.g (Ljava/lang/Object;)Z
+      // 16d: ifeq 173
+      // 170: aconst_null
+      // 171: astore 10
+      // 173: aload 9
+      // 175: astore 1
+      // 176: aload 10
+      // 178: checkcast kotlinx/serialization/json/JsonElement
+      // 17b: astore 10
+      // 17d: aload 10
+      // 17f: ifnonnull 19c
+      // 182: iload 6
+      // 184: istore 2
+      // 185: aload 9
+      // 187: invokevirtual java/io/File.exists ()Z
+      // 18a: bipush 1
+      // 18b: if_icmpne 190
+      // 18e: bipush 1
+      // 18f: istore 2
+      // 190: iload 2
+      // 191: ifeq 19a
+      // 194: aload 9
+      // 196: invokevirtual java/io/File.delete ()Z
+      // 199: pop
+      // 19a: aconst_null
+      // 19b: areturn
+      // 19c: aload 9
+      // 19e: astore 1
+      // 19f: aload 11
+      // 1a1: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 1a4: invokestatic p8/q.x (Ljava/util/Map;)Ljava/util/Map;
+      // 1a7: astore 8
+      // 1a9: aload 9
+      // 1ab: astore 1
+      // 1ac: new kotlinx/serialization/json/JsonArray
+      // 1af: astore 12
+      // 1b1: aload 9
+      // 1b3: astore 1
       // 1b4: aload 12
-      // 1b6: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 1bb: pop
-      // 1bc: aload 9
-      // 1be: astore 1
-      // 1bf: aload 11
-      // 1c1: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 1c4: ldc "stackFrames"
-      // 1c6: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
-      // 1c9: checkcast kotlinx/serialization/json/JsonElement
-      // 1cc: astore 11
-      // 1ce: aload 11
-      // 1d0: ifnull 2c6
-      // 1d3: aload 9
-      // 1d5: astore 1
-      // 1d6: aload 11
-      // 1d8: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 1db: astore 12
-      // 1dd: aload 12
-      // 1df: ifnull 2c6
-      // 1e2: aload 9
-      // 1e4: astore 1
-      // 1e5: aload 10
-      // 1e7: invokestatic ea/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
-      // 1ea: ldc "sf"
-      // 1ec: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
-      // 1ef: astore 10
-      // 1f1: aload 9
-      // 1f3: astore 1
-      // 1f4: aload 10
-      // 1f6: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
-      // 1f9: aload 9
-      // 1fb: astore 1
-      // 1fc: aload 10
-      // 1fe: checkcast kotlinx/serialization/json/JsonElement
-      // 201: invokestatic ea/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
-      // 204: invokestatic ea/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
-      // 207: astore 11
-      // 209: aload 11
-      // 20b: ifnull 2c6
-      // 20e: aload 9
-      // 210: astore 1
-      // 211: new java/util/LinkedHashMap
-      // 214: astore 10
-      // 216: aload 9
-      // 218: astore 1
-      // 219: aload 10
-      // 21b: invokespecial java/util/LinkedHashMap.<init> ()V
-      // 21e: aload 9
-      // 220: astore 1
-      // 221: aload 12
-      // 223: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
-      // 228: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 22d: astore 14
+      // 1b6: aload 10
+      // 1b8: invokestatic kotlin/collections/i.e (Ljava/lang/Object;)Ljava/util/List;
+      // 1bb: invokespecial kotlinx/serialization/json/JsonArray.<init> (Ljava/util/List;)V
+      // 1be: aload 9
+      // 1c0: astore 1
+      // 1c1: aload 8
+      // 1c3: ldc "samples"
+      // 1c5: aload 12
+      // 1c7: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 1cc: pop
+      // 1cd: aload 9
+      // 1cf: astore 1
+      // 1d0: aload 11
+      // 1d2: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 1d5: ldc "stackFrames"
+      // 1d7: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 1da: checkcast kotlinx/serialization/json/JsonElement
+      // 1dd: astore 11
+      // 1df: aload 11
+      // 1e1: ifnull 2d7
+      // 1e4: aload 9
+      // 1e6: astore 1
+      // 1e7: aload 11
+      // 1e9: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 1ec: astore 12
+      // 1ee: aload 12
+      // 1f0: ifnull 2d7
+      // 1f3: aload 9
+      // 1f5: astore 1
+      // 1f6: aload 10
+      // 1f8: invokestatic la/g.o (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonObject;
+      // 1fb: ldc "sf"
+      // 1fd: invokevirtual kotlinx/serialization/json/JsonObject.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 200: astore 10
+      // 202: aload 9
+      // 204: astore 1
+      // 205: aload 10
+      // 207: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
+      // 20a: aload 9
+      // 20c: astore 1
+      // 20d: aload 10
+      // 20f: checkcast kotlinx/serialization/json/JsonElement
+      // 212: invokestatic la/g.p (Lkotlinx/serialization/json/JsonElement;)Lkotlinx/serialization/json/JsonPrimitive;
+      // 215: invokestatic la/g.m (Lkotlinx/serialization/json/JsonPrimitive;)Ljava/lang/Integer;
+      // 218: astore 11
+      // 21a: aload 11
+      // 21c: ifnull 2d7
+      // 21f: aload 9
+      // 221: astore 1
+      // 222: new java/util/LinkedHashMap
+      // 225: astore 10
+      // 227: aload 9
+      // 229: astore 1
+      // 22a: aload 10
+      // 22c: invokespecial java/util/LinkedHashMap.<init> ()V
       // 22f: aload 9
       // 231: astore 1
-      // 232: aload 14
-      // 234: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 239: ifeq 2a5
-      // 23c: aload 9
-      // 23e: astore 1
-      // 23f: aload 14
-      // 241: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
-      // 246: checkcast java/util/Map$Entry
-      // 249: astore 13
-      // 24b: aload 9
-      // 24d: astore 1
-      // 24e: aload 13
-      // 250: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 255: checkcast java/lang/String
-      // 258: invokestatic kotlin/text/h.m (Ljava/lang/String;)Ljava/lang/Integer;
-      // 25b: astore 12
-      // 25d: aload 12
-      // 25f: ifnull 283
-      // 262: aload 9
-      // 264: astore 1
-      // 265: aload 12
-      // 267: invokevirtual java/lang/Number.intValue ()I
-      // 26a: aload 11
-      // 26c: invokevirtual java/lang/Integer.intValue ()I
-      // 26f: if_icmpgt 277
-      // 272: bipush 1
-      // 273: istore 2
-      // 274: goto 279
-      // 277: bipush 0
-      // 278: istore 2
-      // 279: iload 2
-      // 27a: bipush 1
-      // 27b: if_icmpne 283
-      // 27e: bipush 1
-      // 27f: istore 2
-      // 280: goto 285
-      // 283: bipush 0
+      // 232: aload 12
+      // 234: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
+      // 239: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
+      // 23e: astore 14
+      // 240: aload 9
+      // 242: astore 1
+      // 243: aload 14
+      // 245: invokeinterface java/util/Iterator.hasNext ()Z 1
+      // 24a: ifeq 2b6
+      // 24d: aload 9
+      // 24f: astore 1
+      // 250: aload 14
+      // 252: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
+      // 257: checkcast java/util/Map$Entry
+      // 25a: astore 13
+      // 25c: aload 9
+      // 25e: astore 1
+      // 25f: aload 13
+      // 261: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
+      // 266: checkcast java/lang/String
+      // 269: invokestatic kotlin/text/h.m (Ljava/lang/String;)Ljava/lang/Integer;
+      // 26c: astore 12
+      // 26e: aload 12
+      // 270: ifnull 294
+      // 273: aload 9
+      // 275: astore 1
+      // 276: aload 12
+      // 278: invokevirtual java/lang/Number.intValue ()I
+      // 27b: aload 11
+      // 27d: invokevirtual java/lang/Integer.intValue ()I
+      // 280: if_icmpgt 288
+      // 283: bipush 1
       // 284: istore 2
-      // 285: iload 2
-      // 286: ifeq 22f
-      // 289: aload 9
-      // 28b: astore 1
-      // 28c: aload 10
-      // 28e: aload 13
-      // 290: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 295: aload 13
-      // 297: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
-      // 29c: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 2a1: pop
-      // 2a2: goto 22f
-      // 2a5: aload 9
-      // 2a7: astore 1
-      // 2a8: new kotlinx/serialization/json/JsonObject
-      // 2ab: astore 11
-      // 2ad: aload 9
-      // 2af: astore 1
-      // 2b0: aload 11
-      // 2b2: aload 10
-      // 2b4: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
-      // 2b7: aload 9
-      // 2b9: astore 1
-      // 2ba: aload 8
-      // 2bc: ldc "stackFrames"
-      // 2be: aload 11
-      // 2c0: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
-      // 2c5: pop
-      // 2c6: aload 9
-      // 2c8: astore 1
-      // 2c9: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 2cc: astore 10
-      // 2ce: aload 9
-      // 2d0: astore 1
-      // 2d1: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
-      // 2d4: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
-      // 2d7: astore 11
-      // 2d9: aload 9
-      // 2db: astore 1
-      // 2dc: new kotlinx/serialization/json/JsonObject
-      // 2df: astore 12
-      // 2e1: aload 9
-      // 2e3: astore 1
-      // 2e4: aload 12
-      // 2e6: aload 8
-      // 2e8: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
-      // 2eb: aload 9
-      // 2ed: astore 1
-      // 2ee: aload 10
-      // 2f0: aload 11
-      // 2f2: aload 12
-      // 2f4: invokevirtual kotlinx/serialization/json/Json.c (Laa/h;Ljava/lang/Object;)Ljava/lang/String;
-      // 2f7: astore 8
-      // 2f9: iload 5
-      // 2fb: istore 2
+      // 285: goto 28a
+      // 288: bipush 0
+      // 289: istore 2
+      // 28a: iload 2
+      // 28b: bipush 1
+      // 28c: if_icmpne 294
+      // 28f: bipush 1
+      // 290: istore 2
+      // 291: goto 296
+      // 294: bipush 0
+      // 295: istore 2
+      // 296: iload 2
+      // 297: ifeq 240
+      // 29a: aload 9
+      // 29c: astore 1
+      // 29d: aload 10
+      // 29f: aload 13
+      // 2a1: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
+      // 2a6: aload 13
+      // 2a8: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
+      // 2ad: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 2b2: pop
+      // 2b3: goto 240
+      // 2b6: aload 9
+      // 2b8: astore 1
+      // 2b9: new kotlinx/serialization/json/JsonObject
+      // 2bc: astore 11
+      // 2be: aload 9
+      // 2c0: astore 1
+      // 2c1: aload 11
+      // 2c3: aload 10
+      // 2c5: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
+      // 2c8: aload 9
+      // 2ca: astore 1
+      // 2cb: aload 8
+      // 2cd: ldc "stackFrames"
+      // 2cf: aload 11
+      // 2d1: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 2d6: pop
+      // 2d7: aload 9
+      // 2d9: astore 1
+      // 2da: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
+      // 2dd: astore 12
+      // 2df: aload 9
+      // 2e1: astore 1
+      // 2e2: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
+      // 2e5: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
+      // 2e8: astore 11
+      // 2ea: aload 9
+      // 2ec: astore 1
+      // 2ed: new kotlinx/serialization/json/JsonObject
+      // 2f0: astore 10
+      // 2f2: aload 9
+      // 2f4: astore 1
+      // 2f5: aload 10
+      // 2f7: aload 8
+      // 2f9: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 2fc: aload 9
-      // 2fe: invokevirtual java/io/File.exists ()Z
-      // 301: bipush 1
-      // 302: if_icmpne 307
-      // 305: bipush 1
-      // 306: istore 2
-      // 307: iload 2
-      // 308: ifeq 311
-      // 30b: aload 9
-      // 30d: invokevirtual java/io/File.delete ()Z
-      // 310: pop
-      // 311: aload 8
-      // 313: areturn
-      // 314: aload 9
-      // 316: invokevirtual java/io/File.exists ()Z
-      // 319: bipush 1
-      // 31a: if_icmpne 323
-      // 31d: aload 9
-      // 31f: invokevirtual java/io/File.delete ()Z
-      // 322: pop
-      // 323: aconst_null
+      // 2fe: astore 1
+      // 2ff: aload 12
+      // 301: aload 11
+      // 303: aload 10
+      // 305: invokevirtual kotlinx/serialization/json/Json.c (Lha/h;Ljava/lang/Object;)Ljava/lang/String;
+      // 308: astore 8
+      // 30a: iload 5
+      // 30c: istore 2
+      // 30d: aload 9
+      // 30f: invokevirtual java/io/File.exists ()Z
+      // 312: bipush 1
+      // 313: if_icmpne 318
+      // 316: bipush 1
+      // 317: istore 2
+      // 318: iload 2
+      // 319: ifeq 322
+      // 31c: aload 9
+      // 31e: invokevirtual java/io/File.delete ()Z
+      // 321: pop
+      // 322: aload 8
       // 324: areturn
-      // 325: astore 1
-      // 326: goto 35c
-      // 329: astore 10
-      // 32b: aconst_null
-      // 32c: astore 8
-      // 32e: aload 8
-      // 330: astore 1
-      // 331: getstatic com/discord/crash_reporting/CrashReporting.INSTANCE Lcom/discord/crash_reporting/CrashReporting;
-      // 334: aload 10
-      // 336: bipush 0
-      // 337: bipush 2
-      // 338: aconst_null
-      // 339: invokestatic com/discord/crash_reporting/CrashReporting.captureException$default (Lcom/discord/crash_reporting/CrashReporting;Ljava/lang/Throwable;ZILjava/lang/Object;)V
-      // 33c: iload 3
-      // 33d: istore 2
-      // 33e: aload 8
-      // 340: ifnull 350
-      // 343: iload 3
-      // 344: istore 2
-      // 345: aload 8
-      // 347: invokevirtual java/io/File.exists ()Z
-      // 34a: bipush 1
-      // 34b: if_icmpne 350
-      // 34e: bipush 1
-      // 34f: istore 2
-      // 350: iload 2
-      // 351: ifeq 35a
+      // 325: aload 9
+      // 327: invokevirtual java/io/File.exists ()Z
+      // 32a: bipush 1
+      // 32b: if_icmpne 334
+      // 32e: aload 9
+      // 330: invokevirtual java/io/File.delete ()Z
+      // 333: pop
+      // 334: aconst_null
+      // 335: areturn
+      // 336: astore 1
+      // 337: aload 8
+      // 339: astore 9
+      // 33b: goto 373
+      // 33e: astore 10
+      // 340: aconst_null
+      // 341: astore 8
+      // 343: aload 8
+      // 345: astore 1
+      // 346: getstatic com/discord/crash_reporting/CrashReporting.INSTANCE Lcom/discord/crash_reporting/CrashReporting;
+      // 349: aload 10
+      // 34b: bipush 0
+      // 34c: bipush 2
+      // 34d: aconst_null
+      // 34e: invokestatic com/discord/crash_reporting/CrashReporting.captureException$default (Lcom/discord/crash_reporting/CrashReporting;Ljava/lang/Throwable;ZILjava/lang/Object;)V
+      // 351: iload 4
+      // 353: istore 2
       // 354: aload 8
-      // 356: invokevirtual java/io/File.delete ()Z
-      // 359: pop
-      // 35a: aconst_null
-      // 35b: areturn
-      // 35c: iload 4
-      // 35e: istore 2
-      // 35f: aload 8
-      // 361: ifnull 372
-      // 364: iload 4
+      // 356: ifnull 367
+      // 359: iload 4
+      // 35b: istore 2
+      // 35c: aload 8
+      // 35e: invokevirtual java/io/File.exists ()Z
+      // 361: bipush 1
+      // 362: if_icmpne 367
+      // 365: bipush 1
       // 366: istore 2
-      // 367: aload 8
-      // 369: invokevirtual java/io/File.exists ()Z
-      // 36c: bipush 1
-      // 36d: if_icmpne 372
-      // 370: bipush 1
-      // 371: istore 2
-      // 372: iload 2
-      // 373: ifeq 37c
-      // 376: aload 8
-      // 378: invokevirtual java/io/File.delete ()Z
-      // 37b: pop
-      // 37c: aload 1
-      // 37d: athrow
+      // 367: iload 2
+      // 368: ifeq 371
+      // 36b: aload 8
+      // 36d: invokevirtual java/io/File.delete ()Z
+      // 370: pop
+      // 371: aconst_null
+      // 372: areturn
+      // 373: iload 3
+      // 374: istore 2
+      // 375: aload 9
+      // 377: ifnull 387
+      // 37a: iload 3
+      // 37b: istore 2
+      // 37c: aload 9
+      // 37e: invokevirtual java/io/File.exists ()Z
+      // 381: bipush 1
+      // 382: if_icmpne 387
+      // 385: bipush 1
+      // 386: istore 2
+      // 387: iload 2
+      // 388: ifeq 391
+      // 38b: aload 9
+      // 38d: invokevirtual java/io/File.delete ()Z
+      // 390: pop
+      // 391: aload 1
+      // 392: athrow
    }
 }

@@ -24,7 +24,7 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.flexbox.FlexboxLayout
 import java.util.ArrayList
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 
@@ -189,7 +189,7 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    public override fun getComponentType(): KClass<SectionComponent> {
-      return E.b(SectionComponent.class);
+      return G.b(SectionComponent.class);
    }
 
    public override fun onRecycle(componentProvider: ComponentProvider) {

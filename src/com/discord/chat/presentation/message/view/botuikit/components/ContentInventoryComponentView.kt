@@ -28,13 +28,13 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
-import h8.l
-import h8.o
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import o8.l
+import o8.o
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -60,8 +60,8 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = R1.c.g();
-      this.binding$delegate = l.a(o.l, new Function0(this) {
+      this.draweeControllerBuilder = R1.d.g();
+      this.binding$delegate = l.b(o.l, new Function0(this) {
          final ContentInventoryComponentView this$0;
 
          {
@@ -191,7 +191,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    }
 
    public override fun getComponentType(): KClass<ContentInventoryEntryComponent> {
-      return E.b(ContentInventoryEntryComponent.class);
+      return G.b(ContentInventoryEntryComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {

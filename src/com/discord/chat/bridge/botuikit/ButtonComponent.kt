@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
-import da.N
-import da.h
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
+import ka.N
+import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -147,9 +147,9 @@ public data class ButtonComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = Integer.hashCode(this.type);
+      val var8: Int = Integer.hashCode(this.type);
       val var6: Int = this.id.hashCode();
-      val var8: Int = this.state.hashCode();
+      val var7: Int = this.state.hashCode();
       var var5: Int = 0;
       val var1: Int;
       if (this.customId == null) {
@@ -185,43 +185,43 @@ public data class ButtonComponent(type: Int,
          var5 = this.skuId.hashCode();
       }
 
-      return ((((((((var7 * 31 + var6) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5;
+      return ((((((((var8 * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var10: java.lang.String = this.id;
+      val var11: java.lang.String = this.id;
       val var5: ActionComponentState = this.state;
-      val var11: java.lang.String = this.customId;
-      val var3: java.lang.String = this.label;
-      val var4: ButtonStyle = this.style;
+      val var3: java.lang.String = this.customId;
+      val var8: java.lang.String = this.label;
+      val var9: ButtonStyle = this.style;
       val var2: Boolean = this.disabled;
-      val var6: ComponentEmoji = this.emoji;
-      val var7: java.lang.String = this.url;
-      val var8: java.lang.String = this.skuId;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ButtonComponent(type=");
-      var9.append(var1);
-      var9.append(", id=");
-      var9.append(var10);
-      var9.append(", state=");
-      var9.append(var5);
-      var9.append(", customId=");
-      var9.append(var11);
-      var9.append(", label=");
-      var9.append(var3);
-      var9.append(", style=");
-      var9.append(var4);
-      var9.append(", disabled=");
-      var9.append(var2);
-      var9.append(", emoji=");
-      var9.append(var6);
-      var9.append(", url=");
-      var9.append(var7);
-      var9.append(", skuId=");
-      var9.append(var8);
-      var9.append(")");
-      return var9.toString();
+      val var10: ComponentEmoji = this.emoji;
+      val var4: java.lang.String = this.url;
+      val var6: java.lang.String = this.skuId;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ButtonComponent(type=");
+      var7.append(var1);
+      var7.append(", id=");
+      var7.append(var11);
+      var7.append(", state=");
+      var7.append(var5);
+      var7.append(", customId=");
+      var7.append(var3);
+      var7.append(", label=");
+      var7.append(var8);
+      var7.append(", style=");
+      var7.append(var9);
+      var7.append(", disabled=");
+      var7.append(var2);
+      var7.append(", emoji=");
+      var7.append(var10);
+      var7.append(", url=");
+      var7.append(var4);
+      var7.append(", skuId=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public object `$serializer` : G {
@@ -250,18 +250,18 @@ public data class ButtonComponent(type: Int,
       }
 
       public open fun childSerializers(): Array<KSerializer<*>> {
-         val var6: C0 = C0.a;
+         val var1: C0 = C0.a;
          return new KSerializer[]{
             N.a,
             C0.a,
             ActionComponentState.Serializer.INSTANCE,
             a.u(C0.a),
-            a.u(var6),
+            a.u(var1),
             ButtonStyle.Serializer.INSTANCE,
             h.a,
             a.u(ComponentEmoji.$serializer.INSTANCE),
-            a.u(var6),
-            a.u(var6)
+            a.u(var1),
+            a.u(var1)
          };
       }
 
@@ -274,28 +274,29 @@ public data class ButtonComponent(type: Int,
          var var2: Int;
          var var3: Int;
          val var4: Int;
-         var var9: Any;
          var var11: Any;
          var var12: java.lang.String;
          var var13: java.lang.String;
          var var14: java.lang.String;
-         var var15: java.lang.String;
-         val var17: Any;
+         var var15: Any;
+         val var16: Any;
          val var22: java.lang.String;
+         var var25: java.lang.String;
          if (var8) {
             var3 = var20.k(var19, 0);
-            var14 = var20.t(var19, 1);
-            var17 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
+            var12 = var20.t(var19, 1);
+            var16 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, null) as ActionComponentState;
             val var21: C0 = C0.a;
-            var12 = var20.v(var19, 3, C0.a, null) as java.lang.String;
-            var13 = var20.v(var19, 4, var21, null) as java.lang.String;
+            var13 = var20.v(var19, 3, C0.a, null) as java.lang.String;
+            var14 = var20.v(var19, 4, var21, null) as java.lang.String;
             var11 = var20.m(var19, 5, ButtonStyle.Serializer.INSTANCE, null) as ButtonStyle;
             var4 = var20.s(var19, 6);
-            var9 = var20.v(var19, 7, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
+            val var9: ComponentEmoji = var20.v(var19, 7, ComponentEmoji.$serializer.INSTANCE, null) as ComponentEmoji;
             val var10: java.lang.String = var20.v(var19, 8, var21, null) as java.lang.String;
             var22 = var20.v(var19, 9, var21, null) as java.lang.String;
             var2 = 1023;
-            var15 = var10;
+            var15 = var9;
+            var25 = var10;
          } else {
             var var24: Boolean = true;
             var3 = 0;
@@ -305,9 +306,9 @@ public data class ButtonComponent(type: Int,
             var12 = null;
             var13 = null;
             var11 = null;
-            var var26: java.lang.String = null;
+            var var27: java.lang.String = null;
             var var23: java.lang.String = null;
-            var9 = null;
+            var25 = null;
             var var5: Int = 0;
 
             while (var24) {
@@ -326,11 +327,11 @@ public data class ButtonComponent(type: Int,
                         var2 |= 2;
                         break;
                      case 2:
-                        var9 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, var9) as ActionComponentState;
+                        var25 = var20.m(var19, 2, ActionComponentState.Serializer.INSTANCE, var25) as ActionComponentState;
                         var2 |= 4;
                         break;
                      case 3:
-                        var26 = var20.v(var19, 3, C0.a, var26) as java.lang.String;
+                        var27 = var20.v(var19, 3, C0.a, var27) as java.lang.String;
                         var2 |= 8;
                         break;
                      case 4:
@@ -368,20 +369,20 @@ public data class ButtonComponent(type: Int,
                var6 = 9;
             }
 
-            var13 = (java.lang.String)var11;
-            var17 = var9;
+            var16 = var25;
             var4 = var5;
-            var22 = var15;
-            var15 = var14;
-            var9 = var13;
+            var22 = (java.lang.String)var15;
+            var25 = var14;
+            var15 = var13;
             var11 = var12;
-            var12 = var26;
-            var14 = var23;
+            var14 = (java.lang.String)var11;
+            var13 = var27;
+            var12 = var23;
          }
 
          var20.b(var19);
          return new ButtonComponent(
-            var2, var3, var14, (ActionComponentState)var17, var12, var13, (ButtonStyle)var11, (boolean)var4, (ComponentEmoji)var9, var15, var22, null
+            var2, var3, var12, (ActionComponentState)var16, var13, var14, (ButtonStyle)var11, (boolean)var4, (ComponentEmoji)var15, var25, var22, null
          );
       }
 
@@ -395,7 +396,7 @@ public data class ButtonComponent(type: Int,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

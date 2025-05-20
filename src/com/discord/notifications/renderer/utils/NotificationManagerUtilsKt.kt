@@ -13,11 +13,11 @@ import com.discord.notifications.renderer.NotificationBehaviors
 import com.discord.primitives.ChannelId
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import h8.r
-import h8.s
-import h8.r.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import o8.r
+import o8.s
+import o8.r.a
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 private final val messageRegex: Regex = new Regex("/channels/(\\d+|@me)(?:/)(\\d+)(?:/)(\\d+)")
@@ -197,16 +197,16 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
    if (var6 != null) {
       label35:
       try {
-         val var15: a = r.k;
-         var14 = r.b(var6.getActiveNotifications());
+         val var14: a = r.k;
+         var13 = r.b(var6.getActiveNotifications());
       } catch (var10: java.lang.Throwable) {
-         val var13: a = r.k;
-         var14 = r.b(s.a(var10));
+         val var15: a = r.k;
+         var13 = r.b(s.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var14;
-      if (r.g(var14)) {
+      var6 = (NotificationManager)var13;
+      if (r.g(var13)) {
          var6 = null;
       }
 

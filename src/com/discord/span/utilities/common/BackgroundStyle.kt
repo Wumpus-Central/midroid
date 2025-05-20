@@ -1,10 +1,10 @@
 package com.discord.span.utilities.common
 
-import aa.f
-import aa.n
-import da.G
-import da.N
-import da.G.a
+import ha.f
+import ha.n
+import ka.G
+import ka.N
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -64,16 +64,16 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
    }
 
    public override fun toString(): String {
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.cornerRadius;
-      val var3: Int = this.marginVertical;
+      val var3: Int = this.backgroundColor;
+      val var2: Int = this.cornerRadius;
+      val var1: Int = this.marginVertical;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BackgroundStyle(backgroundColor=");
-      var4.append(var2);
-      var4.append(", cornerRadius=");
-      var4.append(var1);
-      var4.append(", marginVertical=");
       var4.append(var3);
+      var4.append(", cornerRadius=");
+      var4.append(var2);
+      var4.append(", marginVertical=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }
@@ -110,10 +110,10 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
          val var6: Int;
          if (var9.y()) {
             var5 = var9.k(var8, 0);
-            var4 = var9.k(var8, 1);
+            var6 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var3 = 7;
-            var6 = var2;
+            var4 = 7;
+            var3 = var2;
          } else {
             var var13: Boolean = true;
             var5 = 0;
@@ -145,13 +145,13 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
                }
             }
 
-            var6 = var4;
-            var4 = var3;
-            var3 = var10;
+            var6 = var3;
+            var3 = var4;
+            var4 = var10;
          }
 
          var9.b(var8);
-         return new BackgroundStyle(var3, var5, var4, var6, null);
+         return new BackgroundStyle(var4, var5, var6, var3, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import Q2.a;
+import S2.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.common.build.ReactBuildConfig;
@@ -18,7 +18,7 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var2 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var1 = new HashSet<>(
             Arrays.asList(
@@ -34,21 +34,21 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
                "Version"
             )
          );
-         HashSet var2 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var3 = new HashSet(var4.keySet());
+         HashSet var4 = new HashSet<>(Arrays.asList("UserSettings"));
+         HashSet var3 = new HashSet(var2.keySet());
          var3.removeAll(var1);
-         var3.removeAll(var2);
+         var3.removeAll(var4);
          if (!var3.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var1.removeAll(var4.keySet());
+         var1.removeAll(var2.keySet());
          if (!var1.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 
-      return var4;
+      return var2;
    }
 
    public String getName() {

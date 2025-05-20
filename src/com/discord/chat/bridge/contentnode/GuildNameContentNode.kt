@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.contentnode
 
-import aa.f
-import aa.n
-import ba.a
-import da.C0
-import da.G
+import ha.f
+import ha.n
+import ia.a
+import ka.C0
+import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -80,16 +80,16 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.content;
-      val var4: java.lang.String = this.icon;
+      val var4: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.content;
+      val var2: java.lang.String = this.icon;
       val var3: StringBuilder = new StringBuilder();
       var3.append("GuildNameContentNode(guildId=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(", icon=");
       var3.append(var4);
+      var3.append(", content=");
+      var3.append(var1);
+      var3.append(", icon=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }
@@ -179,7 +179,7 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
       }
 
       fun typeParametersSerializers(): Array<KSerializer> {
-         return da.G.a.a(this);
+         return ka.G.a.a(this);
       }
    }
 

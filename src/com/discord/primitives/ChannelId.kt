@@ -1,11 +1,11 @@
 package com.discord.primitives
 
-import aa.f
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import da.G
-import da.Y
-import da.G.a
+import ha.f
+import ka.G
+import ka.Y
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -128,9 +128,9 @@ public inline class ChannelId : SnowflakePrimitive {
 
       public open fun serialize(encoder: Encoder, value: ChannelId) {
          q.h(var1, "encoder");
-         var1 = var1.z(this.getDescriptor());
+         var1 = var1.y(this.getDescriptor());
          if (var1 != null) {
-            var1.C(var2);
+            var1.B(var2);
          }
       }
 

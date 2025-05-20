@@ -2,10 +2,10 @@ package com.discord.misc.utilities.threading
 
 import android.os.Handler
 import android.os.Looper
-import h8.l
-import h8.o
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import o8.l
+import o8.o
 
 public final val isOnMainThread: Boolean
    public final get() {
@@ -13,7 +13,7 @@ public final val isOnMainThread: Boolean
    }
 
 
-public final val uiHandler: Handler by l.a(o.k, <unrepresentable>.INSTANCE)
+public final val uiHandler: Handler by l.b(o.k, <unrepresentable>.INSTANCE)
    public final get() {
       return uiHandler$delegate.getValue() as Handler;
    }

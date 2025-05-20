@@ -14,9 +14,9 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.w
 
 internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : BroadcastReceiver {
    private final val reactApplicationContext: ReactApplicationContext
@@ -26,7 +26,7 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       q.h(var1, "reactContext");
       super();
       this.reactApplicationContext = var1;
-      this.reactEvents = new ReactEvents(w.a("share-broadcast-receiver-app-clicked", E.b(ShareBroadcastReceiverAppClicked.class)));
+      this.reactEvents = new ReactEvents(w.a("share-broadcast-receiver-app-clicked", G.b(ShareBroadcastReceiverAppClicked.class)));
    }
 
    public open fun onReceive(context: Context?, intent: Intent?) {

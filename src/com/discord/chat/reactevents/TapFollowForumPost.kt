@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -67,13 +67,13 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapFollowForumPost(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

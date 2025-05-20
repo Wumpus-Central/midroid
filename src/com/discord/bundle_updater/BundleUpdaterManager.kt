@@ -23,13 +23,13 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
-import h8.w
 import java.io.File
 import java.lang.reflect.Field
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.w
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -40,7 +40,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", E.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", E.b(OtaCheckAttemptEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", G.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", G.b(OtaCheckAttemptEvent.class)));
    }
 
    private fun removeSpinnerView() {
@@ -191,7 +191,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new Function0(this) {
          final BundleUpdaterManager this$0;
 
@@ -248,10 +248,10 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
             });
          }
       }, 1, null);
-      val var3: ReactApplicationContext = this.reactContext;
+      val var2: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.j;
       q.g(MainActivity::class.java, "forName(...)");
-      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
+      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
    }
 
    @ReactMethod

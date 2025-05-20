@@ -21,10 +21,7 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
       kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
       val var3: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
       val var4: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
-      if (var3.getAppMessageEmbedModel() != null) {
-         var4.initAppMessageEmbed(var3.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());
-      }
-
+      this.activityInstanceEmbedView.initAppMessageEmbed(var3.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());
       val var2: java.util.List = var3.getParticipantAvatarUris();
       var var5: java.util.List = var2;
       if (var2 == null) {

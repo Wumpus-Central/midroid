@@ -5,9 +5,9 @@ import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
-import h8.w
-import kotlin.jvm.internal.E
+import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import o8.w
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec {
    private final val reactContext: ReactApplicationContext
@@ -19,7 +19,7 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("onHostDestroy", E.b(OnHostDestroyEvent.class)));
+      this.reactEvents = new ReactEvents(w.a("onHostDestroy", G.b(OnHostDestroyEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final AppLifecycleModule this$0;
 

@@ -58,23 +58,23 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
       SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
       if (var5 != null) {
          var1 = R.id.menu_bottom;
-         CardView var8 = (CardView)a.a(var0, var1);
-         if (var8 != null) {
+         CardView var12 = (CardView)a.a(var0, var1);
+         if (var12 != null) {
             var1 = R.id.menu_top;
-            CardView var9 = (CardView)a.a(var0, var1);
-            if (var9 != null) {
+            CardView var3 = (CardView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.menu_top_status_container;
-               ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-               if (var3 != null) {
+               ConstraintLayout var11 = (ConstraintLayout)a.a(var0, var1);
+               if (var11 != null) {
                   var1 = R.id.mute_toggle;
-                  SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var12 != null) {
+                  SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var10 != null) {
                      var1 = R.id.overlay_channel_name;
-                     TextView var4 = (TextView)a.a(var0, var1);
-                     if (var4 != null) {
+                     TextView var8 = (TextView)a.a(var0, var1);
+                     if (var8 != null) {
                         var1 = R.id.overlay_guild_name;
-                        TextView var10 = (TextView)a.a(var0, var1);
-                        if (var10 != null) {
+                        TextView var9 = (TextView)a.a(var0, var1);
+                        if (var9 != null) {
                            var1 = R.id.overlay_invite_link;
                            TextView var7 = (TextView)a.a(var0, var1);
                            if (var7 != null) {
@@ -82,12 +82,12 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
                               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
                               if (var6 != null) {
                                  var1 = R.id.overlay_open_app;
-                                 TextView var2 = (TextView)a.a(var0, var1);
-                                 if (var2 != null) {
+                                 TextView var4 = (TextView)a.a(var0, var1);
+                                 if (var4 != null) {
                                     var1 = R.id.overlay_switch_channels;
-                                    TextView var11 = (TextView)a.a(var0, var1);
-                                    if (var11 != null) {
-                                       return new ViewOverlayMenuBinding(var0, var5, var8, var9, var3, var12, var4, var10, var7, var6, var2, var11);
+                                    TextView var2 = (TextView)a.a(var0, var1);
+                                    if (var2 != null) {
+                                       return new ViewOverlayMenuBinding(var0, var5, var12, var3, var11, var10, var8, var9, var7, var6, var4, var2);
                                     }
                                  }
                               }

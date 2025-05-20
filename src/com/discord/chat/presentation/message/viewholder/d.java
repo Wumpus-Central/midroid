@@ -11,6 +11,6 @@ public final class d implements OnClickListener {
    public final long l;
 
    public final void onClick(View var1) {
-      AutoModerationNotificationEmbedViewHolder.c(this.j, this.k, this.l, var1);
+      AutoModerationNotificationEmbedViewHolder.b(this.j, this.k, this.l, var1);
    }
 }

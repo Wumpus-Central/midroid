@@ -61,8 +61,8 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       var8 = MessageAccessoriesView.Companion.getWidth(var8, var9);
-      val var14: java.lang.String = MessageId.toString-impl(var15);
-      val var11: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
+      val var11: java.lang.String = MessageId.toString-impl(var15);
+      val var14: GeneralEventHandlers = new GeneralEventHandlers(new Function2(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -257,7 +257,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             (super.receiver as ChatEventHandler).onTapShowAltText(var1);
          }
       }, var6);
-      val var30: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var15) {
+      val var32: ComponentActionEventHandlers = new ComponentActionEventHandlers(new Function1(var7, var15) {
          final ChatEventHandler $eventHandler;
          final java.lang.String $messageId;
 
@@ -315,7 +315,7 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
             this.$eventHandler.onTapContentInventoryEntryEmbed-tsfjtEQ(this.$messageId, var1, var3, var4);
          }
       });
-      val var32: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
+      val var30: WidthInfo = new WidthInfo(var8, SizeUtilsKt.getDpToPx(600), 0, 4, null);
       val var31: java.lang.Boolean = var12.getGifAutoPlay();
       if (var31 != null) {
          var9 = var31;
@@ -331,6 +331,6 @@ public class MessageComponentsViewHolder(messageComponentsView: MessageComponent
       }
 
       this.messageComponentsView
-         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var14, var11, var13, var35, var28, var30, var32, var9, var10, false));
+         .setComponents(var1.getMessageComponents(), var2, new ComponentContext(var11, var14, var13, var35, var28, var32, var30, var9, var10, false));
    }
 }

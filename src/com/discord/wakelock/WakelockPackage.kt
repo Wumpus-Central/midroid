@@ -1,16 +1,16 @@
 package com.discord.wakelock
 
 import com.discord.react.utilities.ReactModuleInfoProviderExtensionsKt
-import com.facebook.react.TurboReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import kotlin.jvm.internal.q
 
-public class WakelockPackage : TurboReactPackage {
-   public open fun getModule(name: String, context: ReactApplicationContext): NativeModule? {
+public class WakelockPackage : BaseReactPackage {
+   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
-      q.h(var2, "context");
+      q.h(var2, "reactContext");
       val var3: Any;
       if (q.c(var1, "NativeScreenWakeLockModule")) {
          var3 = new ScreenWakeLockModule(var2);

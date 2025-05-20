@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import aa.f
-import aa.n
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import da.C0
-import da.G
-import da.G.a
+import ha.f
+import ha.n
+import ka.C0
+import ka.G
+import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -87,21 +87,21 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.userId;
-      val var3: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.roleId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapConnectionsRoleTagData(userId=");
-      var4.append(var2);
-      var4.append(", guildId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", roleId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.userId;
+      val var4: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.roleId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapConnectionsRoleTagData(userId=");
+      var2.append(var5);
+      var2.append(", guildId=");
+      var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(", roleId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public object `$serializer` : G {
@@ -132,22 +132,22 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
          val var9: SerialDescriptor = this.getDescriptor();
          val var10: c = var1.c(var9);
          var var2: Int;
-         var var6: java.lang.String;
+         var var5: java.lang.String;
          var var7: java.lang.String;
          val var11: java.lang.String;
          var var13: java.lang.String;
          if (var10.y()) {
             var13 = var10.t(var9, 0);
             val var8: java.lang.String = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
+            var5 = var10.t(var9, 2);
             var11 = var10.t(var9, 3);
             var2 = 15;
             var7 = var13;
             var13 = var8;
          } else {
             var7 = null;
-            var6 = null;
             var13 = null;
+            var5 = null;
             var var12: java.lang.String = null;
             var var3: Boolean = true;
             var2 = 0;
@@ -162,10 +162,10 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
                               throw new n(var4);
                            }
 
-                           var6 = var10.t(var9, 3);
+                           var13 = var10.t(var9, 3);
                            var2 |= 8;
                         } else {
-                           var13 = var10.t(var9, 2);
+                           var5 = var10.t(var9, 2);
                            var2 |= 4;
                         }
                      } else {
@@ -182,12 +182,11 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
             }
 
             var13 = var12;
-            var11 = var6;
-            var6 = var13;
+            var11 = var13;
          }
 
          var10.b(var9);
-         return new TapConnectionsRoleTagData(var2, var7, var13, var6, var11, null);
+         return new TapConnectionsRoleTagData(var2, var7, var13, var5, var11, null);
       }
 
       public open fun serialize(encoder: Encoder, value: TapConnectionsRoleTagData) {

@@ -179,11 +179,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
       val var42: SpoilerViewManager = this.spoilerViewManager;
-      val var38: ConstraintLayout = this.binding.container;
+      val var35: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var41: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var35: MediaView = this.binding.mediaView;
+      val var38: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -197,7 +197,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var42.configureSpoiler(var13, var38, var41, var35, null, var11, var15, var12, var10, var16, var17);
+      var42.configureSpoiler(var13, var35, var41, var38, null, var11, var15, var12, var10, var16, var17);
       val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");

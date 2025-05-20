@@ -5,11 +5,11 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
-import i8.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import org.json.JSONArray
+import p8.n
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -168,7 +168,7 @@ public fun ReadableArray.toIntList(): List<Int> {
 
 public fun ReadableArray.toJson(): JSONArray {
    q.h(var0, "<this>");
-   val var5: JSONArray = new JSONArray();
+   val var4: JSONArray = new JSONArray();
    val var2: Int = var0.size();
 
    for (int var1 = 0; var1 < var2; var1++) {
@@ -178,23 +178,27 @@ public fun ReadableArray.toJson(): JSONArray {
             if (var3 != 4) {
                if (var3 != 5) {
                   if (var3 == 6) {
-                     var5.put(toJson(var0.getArray(var1)));
+                     val var6: ReadableArray = var0.getArray(var1);
+                     q.e(var6);
+                     var4.put(toJson(var6));
                   }
                } else {
-                  var5.put(NativeMapExtensionsKt.toJson(var0.getMap(var1)));
+                  val var7: ReadableMap = var0.getMap(var1);
+                  q.e(var7);
+                  var4.put(NativeMapExtensionsKt.toJson(var7));
                }
             } else {
-               var5.put(var0.getString(var1));
+               var4.put(var0.getString(var1));
             }
          } else {
-            var5.put(var0.getDouble(var1));
+            var4.put(var0.getDouble(var1));
          }
       } else {
-         var5.put(var0.getBoolean(var1));
+         var4.put(var0.getBoolean(var1));
       }
    }
 
-   return var5;
+   return var4;
 }
 
 public fun ReadableArray.toJsonString(): String {
@@ -272,10 +276,12 @@ public fun ReadableArray.toStringList(): List<String> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
    val var1: ArrayList = new ArrayList(i.v(var2, 10));
-   val var3: java.util.Iterator = var2.iterator();
+   val var4: java.util.Iterator = var2.iterator();
 
-   while (var3.hasNext()) {
-      var1.add(var0.getString((var3 as n).a()));
+   while (var4.hasNext()) {
+      val var3: java.lang.String = var0.getString((var4 as n).a());
+      q.e(var3);
+      var1.add(var3);
    }
 
    return var1;

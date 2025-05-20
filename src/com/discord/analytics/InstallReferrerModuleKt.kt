@@ -2,14 +2,14 @@ package com.discord.analytics
 
 import a1.a
 import com.android.installreferrer.api.InstallReferrerClient
-import h8.r
-import h8.s
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import n8.b
+import o8.r
+import o8.s
+import v8.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -38,7 +38,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(r.b(var1));
       }
    };
-   var2.e(
+   var2.f(
       new Function1(var0) {
          final InstallReferrerClient $this_await;
 
@@ -53,11 +53,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var5: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: h8.r.a = r.k;
+               val var2: o8.r.a = r.k;
                var5.a();
                r.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var2: h8.r.a = r.k;
+               val var6: o8.r.a = r.k;
                r.b(s.a(var3));
                return;
             }
@@ -67,24 +67,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var3: h8.r.a = r.k;
+      val var10: o8.r.a = r.k;
       var0.d(var4);
-      var8 = r.b(Unit.a);
+      var7 = r.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: h8.r.a = r.k;
-      var8 = r.b(s.a(var5));
+      val var3: o8.r.a = r.k;
+      var7 = r.b(s.a(var5));
       break label20;
    }
 
-   val var9: java.lang.Throwable = r.e(var8);
-   if (var9 != null) {
-      var2.resumeWith(r.b(s.a(var9)));
+   val var8: java.lang.Throwable = r.e(var7);
+   if (var8 != null) {
+      var2.resumeWith(r.b(s.a(var8)));
    }
 
-   val var10: Any = var2.z();
-   if (var10 === b.e()) {
+   val var9: Any = var2.z();
+   if (var9 === b.e()) {
       g.c(var1);
    }
 
-   return var10;
+   return var9;
 }
