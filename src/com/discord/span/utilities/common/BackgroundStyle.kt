@@ -104,26 +104,24 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
          q.h(var1, "decoder");
          val var8: SerialDescriptor = this.getDescriptor();
          val var9: c = var1.c(var8);
+         var var3: Int;
+         var var4: Int;
          var var5: Int;
          val var6: Int;
-         var var11: Int;
-         var var12: Int;
          if (var9.y()) {
-            var11 = var9.k(var8, 0);
-            var12 = var9.k(var8, 1);
+            var5 = var9.k(var8, 0);
+            var6 = var9.k(var8, 1);
             val var2: Int = var9.k(var8, 2);
-            var5 = 7;
-            var6 = var11;
-            var11 = var12;
-            var12 = var2;
+            var3 = 7;
+            var4 = var2;
          } else {
-            var var14: Boolean = true;
+            var var12: Boolean = true;
             var5 = 0;
-            var12 = 0;
-            var11 = 0;
+            var4 = 0;
+            var3 = 0;
             var var10: Int = 0;
 
-            while (var14) {
+            while (var12) {
                val var7: Int = var9.x(var8);
                if (var7 != -1) {
                   if (var7 != 0) {
@@ -132,10 +130,10 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
                            throw new n(var7);
                         }
 
-                        var12 = var9.k(var8, 2);
+                        var4 = var9.k(var8, 2);
                         var10 |= 4;
                      } else {
-                        var11 = var9.k(var8, 1);
+                        var3 = var9.k(var8, 1);
                         var10 |= 2;
                      }
                   } else {
@@ -143,16 +141,16 @@ public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, m
                      var10 |= 1;
                   }
                } else {
-                  var14 = false;
+                  var12 = false;
                }
             }
 
-            var6 = var5;
-            var5 = var10;
+            var6 = var3;
+            var3 = var10;
          }
 
          var9.b(var8);
-         return new BackgroundStyle(var5, var6, var11, var12, null);
+         return new BackgroundStyle(var3, var5, var6, var4, null);
       }
 
       public open fun serialize(encoder: Encoder, value: BackgroundStyle) {

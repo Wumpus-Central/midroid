@@ -4,14 +4,21 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
+import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactContext
+import com.facebook.react.uimanager.PixelUtil
+import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
 import kotlin.jvm.internal.q
+import o8.w
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final val fabricEnabled: Boolean
    private final val reactContext: ReactContext
    private final val runnable: Runnable
+
+   public final var stateWrapper: StateWrapper?
+      internal set
 
    fun SelfMeasuredView(var1: Context) {
       q.h(var1, "context");
@@ -32,17 +39,26 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
 
    private fun maybePostMeasuredEvent(previousMeasuredWidth: Int, newMeasuredWidth: Int, previousMeasuredHeight: Int, newMeasuredHeight: Int) {
       if (Math.abs(var4 - var3) >= 2 || Math.abs(var2 - var1) >= 2) {
-         if (!this.fabricEnabled) {
-            val var5: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
-            if (var5 != null) {
-               this.reactContext.runOnNativeModulesQueueThread(new b(var5, this));
+         if (this.fabricEnabled) {
+            if (this.stateWrapper != null) {
+               this.stateWrapper
+                  .updateState(
+                     NativeMapExtensionsKt.nativeMapOf(
+                        w.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), w.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
+                     )
+                  );
+            }
+         } else {
+            val var8: UIManagerModule = this.reactContext.getNativeModule(UIManagerModule.class) as UIManagerModule;
+            if (var8 != null) {
+               this.reactContext.runOnNativeModulesQueueThread(new b(var8, this));
             }
          }
       }
    }
 
    @JvmStatic
-   fun `maybePostMeasuredEvent$lambda$2$lambda$1`(var0: UIManagerModule, var1: SelfMeasuredView) {
+   fun `maybePostMeasuredEvent$lambda$3$lambda$2`(var0: UIManagerModule, var1: SelfMeasuredView) {
       q.h(var0, "$uiManagerModule");
       q.h(var1, "this$0");
       var0.updateNodeSize(var1.getId(), var1.getMeasuredWidth(), var1.getMeasuredHeight());

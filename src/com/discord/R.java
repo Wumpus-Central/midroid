@@ -1942,6 +1942,7 @@ public final class R {
       public static int intl_messages_untranslatedcompiledmessages;
       public static int modules_activity_privacy_activityprivacycompiledmessages;
       public static int modules_clicker_game_clickergamecompiledmessages;
+      public static int modules_client_themes_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_custom_status_images_custom_status_prompts_coachmark_art;
       public static int modules_go_live_web_modal_golivemodalcompiledmessages;

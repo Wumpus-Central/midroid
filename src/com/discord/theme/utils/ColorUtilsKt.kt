@@ -119,12 +119,12 @@ public fun rgbaToArgb(rgbaString: String?): Int {
    if (var0 != null) {
       val var5: MatchResult = rgbaPattern.f(var0);
       if (var5 != null) {
-         val var4: b = var5.a();
+         val var3: b = var5.a();
          var1 = Color.argb(
-            (int)(java.lang.Double.parseDouble(var4.a().b().get(4) as java.lang.String) * (double)255),
-            Integer.parseInt(var4.a().b().get(1) as java.lang.String),
-            Integer.parseInt(var4.a().b().get(2) as java.lang.String),
-            Integer.parseInt(var4.a().b().get(3) as java.lang.String)
+            (int)(java.lang.Double.parseDouble(var3.a().b().get(4) as java.lang.String) * (double)255),
+            Integer.parseInt(var3.a().b().get(1) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(2) as java.lang.String),
+            Integer.parseInt(var3.a().b().get(3) as java.lang.String)
          );
       } else {
          var1 = -16777216;

@@ -8381,6 +8381,7 @@
   "+Joso6": "Force Sync",
   "wWIufn": "Forgot your password?",
   "R04ENT": "Clear Server Name",
+  "/+OQEh": "Status updates from people you talk to.",
   "l3yoAQ": "You are receiving notifications from all activity in this server, but you can override it here",
   "mUbulZ": "You are receiving notifications from all messages in this server, but you can override it here",
   "GGAdHR": "You are receiving notifications from only mentions in this server, but you can override it here",
@@ -8626,6 +8627,7 @@
   "X8jMDg": "Channel Topic",
   "7qKDrK": "Confirm Password",
   "WBqMRU": "Current Password",
+  "PTtxi4": "Status Notifications",
   "bZBLBg": "Custom Twitch Emoticons",
   "23TVho": "Default Notification Settings",
   "8l3W09": "Delete Message History",
@@ -33065,6 +33067,7 @@
   "fTE74u": "Send Messages in Threads",
   "5QlVGx": "Send Messages in Threads and Posts",
   "lBLP4u": "Failed to send message. Hold for options.",
+  "+wbjMT": "Send Text Message",
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
@@ -36674,7 +36677,7 @@
     "."
   ],
   "KI+BSU": [
-    "By clicking “Create account,” you agree to Discord’s ",
+    "By clicking “Create account,” you agree to Discord's ",
     [
       8,
       "$link",
@@ -38153,6 +38156,7 @@
   "UQR+Q0": "Open your authentication app and enter the code below.",
   "hg/+aW": "Enter the 2FA Code",
   "x5CoXV": "Nameplate",
+  "RJxLnZ": "Tap to edit Nameplate",
   "OwlOS0": "Edit your Nameplate on a desktop device.",
   "najZCQ": "Suppress background noise from your mic.",
   "wkYAl5": "None",
@@ -39135,7 +39139,6 @@
   ],
   "vh+Zpq": "You can't call this user.",
   "dKhVQE": "Log In",
-  "+ohEiI": "Log in to the Discord app to enable this feature.",
   "JhDw5u": "Return to Login",
   "e4vZys": "Bulgarian",
   "JgDrx8": "Czech",
