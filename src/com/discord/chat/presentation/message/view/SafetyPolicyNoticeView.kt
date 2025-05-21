@@ -60,13 +60,11 @@ public class SafetyPolicyNoticeView  public constructor(context: Context, attrs:
    }
 
    private fun setOnClickListener(classificationId: String, callback: (String) -> Unit) {
-      this.binding.getRoot().setOnClickListener(new S(var2, var1));
+      this.binding.getRoot().setOnClickListener(new L0(var2, var1));
    }
 
    @JvmStatic
    fun `setOnClickListener$lambda$8$lambda$7`(var0: Function1, var1: java.lang.String, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$callback");
-      kotlin.jvm.internal.q.h(var1, "$classificationId");
       var0.invoke(var1);
    }
 

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import u0.a;
+import t0.a;
 
 public final class MessageComponentMediaGalleryDisplayViewBinding implements ViewBinding {
    public final RecyclerView mosaic;

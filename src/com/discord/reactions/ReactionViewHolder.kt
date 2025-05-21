@@ -19,15 +19,11 @@ internal class ReactionViewHolder(reactionView: ReactionView) : RecyclerView.Vie
 
    @JvmStatic
    fun `bind$lambda$2$lambda$0`(var0: Function1, var1: ReactionView.Reaction, var2: View) {
-      q.h(var0, "$onReactionClick");
-      q.h(var1, "$reaction");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `bind$lambda$2$lambda$1`(var0: Function1, var1: ReactionView.Reaction, var2: View): Boolean {
-      q.h(var0, "$onReactionLongPress");
-      q.h(var1, "$reaction");
       var0.invoke(var1);
       return true;
    }

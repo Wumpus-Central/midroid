@@ -32,8 +32,8 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    : LinearLayout,
    ComponentView<SectionComponent> {
    private final val binding: MessageComponentSectionViewBinding
-   private final var componentProvider: ComponentProvider?
    private final val textComponentViews: LinearLayout
+   private final var componentProvider: ComponentProvider?
 
    fun SectionComponentView(var1: Context) {
       q.h(var1, "context");
@@ -51,15 +51,15 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
       val var6: MessageComponentSectionViewBinding = MessageComponentSectionViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var6, "inflate(...)");
       this.binding = var6;
-      val var4: LinearLayout = new LinearLayout(var1);
-      this.textComponentViews = var4;
+      val var5: LinearLayout = new LinearLayout(var1);
+      this.textComponentViews = var5;
       this.setOrientation(1);
       this.setLayoutParams(new LayoutParams(-1, -2));
-      var4.setOrientation(1);
-      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var5.a(1.0F);
-      var4.setLayoutParams(var5);
-      var6.sectionLayoutBox.addView(var4);
+      var5.setOrientation(1);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.a(1.0F);
+      var5.setLayoutParams(var4);
+      var6.sectionLayoutBox.addView(var5);
    }
 
    private fun getCurrentAccessoryView(): View? {
@@ -74,11 +74,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var2: View = this.getCurrentAccessoryView();
-      if (var2 != null) {
-         this.binding.sectionLayoutBox.removeView(var2);
+      val var1: View = this.getCurrentAccessoryView();
+      if (var1 != null) {
+         this.binding.sectionLayoutBox.removeView(var1);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
          }
       }
    }
@@ -111,13 +111,13 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
          if (var1.getAccessory() !is SectionAccessory.Unknown) {
             this.setVisibility(0);
             val var9: java.util.List = var1.getComponents();
-            val var20: ArrayList = new ArrayList(i.v(var9, 10));
+            val var20: ArrayList = new ArrayList(kotlin.collections.i.v(var9, 10));
             val var22: java.util.Iterator = var9.iterator();
 
             for (int var4 = 0; var22.hasNext(); var4++) {
                var var10: Any = var22.next();
                if (var4 < 0) {
-                  i.u();
+                  kotlin.collections.i.u();
                }
 
                var10 = (var10 as SectionChildComponent).getComponent();
@@ -125,12 +125,12 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                var20.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
             }
 
-            var8 = i.c0(var20);
-            val var26: Component = var1.getAccessory().getComponent();
-            q.e(var26);
-            val var23: FlexboxLayout = this.binding.sectionLayoutBox;
+            var8 = kotlin.collections.i.c0(var20);
+            val var23: Component = var1.getAccessory().getComponent();
+            q.e(var23);
+            val var26: FlexboxLayout = this.binding.sectionLayoutBox;
             q.g(this.binding.sectionLayoutBox, "sectionLayoutBox");
-            val var24: ComponentView = var2.getConfiguredComponentView(var26, var3, var23, 1);
+            val var24: ComponentView = var2.getConfiguredComponentView(var23, var3, var26, 1);
             if (!var8.isEmpty() && var24 != null) {
                MessageComponentsViewKt.replaceViews$default(this.textComponentViews, var8, var2, SizeUtilsKt.getDpToPx(4), 0, 8, null);
                this.setAccessoryView(var24 as View);

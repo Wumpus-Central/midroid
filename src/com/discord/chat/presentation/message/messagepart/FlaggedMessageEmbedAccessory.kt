@@ -8,9 +8,9 @@ import kotlin.jvm.internal.q
 public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Message, messageContext: MessageContext) : FlaggedMessageEmbedAccessory(
       var1, var2, var3
    ) {
+   public open val messageId: MessageId
    public final val message: Message
    public final val messageContext: MessageContext
-   public open val messageId: MessageId
 
    fun FlaggedMessageEmbedAccessory(var1: java.lang.String, var2: Message, var3: MessageContext) {
       q.h(var1, "messageId");
@@ -64,16 +64,16 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Message = this.message;
-      val var4: MessageContext = this.messageContext;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("FlaggedMessageEmbedAccessory(messageId=");
-      var1.append(var2);
-      var1.append(", message=");
-      var1.append(var3);
-      var1.append(", messageContext=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var1: Message = this.message;
+      val var3: MessageContext = this.messageContext;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FlaggedMessageEmbedAccessory(messageId=");
+      var4.append(var2);
+      var4.append(", message=");
+      var4.append(var1);
+      var4.append(", messageContext=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

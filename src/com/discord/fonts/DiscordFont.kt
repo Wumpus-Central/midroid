@@ -1,5 +1,6 @@
 package com.discord.fonts
 
+import Y8.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -8,7 +9,6 @@ import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import w8.a
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -25,10 +25,10 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
    PrimarySemiboldItalic("ggsans-SemiboldItalic, NotoSans-SemiboldItalic", 600, true, false, 8, null);
 
 
-   public final val italic: Boolean
-   public final val monospace: Boolean
    public final val rawName: String
    public final val weight: Int
+   public final val italic: Boolean
+   public final val monospace: Boolean
    @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic
@@ -61,7 +61,6 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
       val var4: Typeface;
       if (typefaces.get(this) != null) {
          val var3: Any = var2.get(this);
-         q.e(var3);
          q.e(var3);
          var4 = var3 as Typeface;
       } else {

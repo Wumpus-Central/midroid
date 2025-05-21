@@ -71,7 +71,7 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       val var17: SpannedString = SpannedString.valueOf(var8);
       val var24: Array<Any> = var17.getSpans(0, var8.length(), BackgroundSpan.class);
       q.g(var24, "getSpans(...)");
-      val var18: java.util.List = c.m0(var24);
+      val var18: java.util.List = c.p0(var24);
       val var25: Layout = this.provider.getLayout();
       q.g(var25, "getLayout(...)");
 
@@ -96,29 +96,29 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
                var12 = var25.getLineRight(var11);
             }
 
-            var10 = (int)var12;
-            val var14: Int = var5 + SizeUtilsKt.getDpToPx(var20.getMarginVertical());
-            val var16: Int = var7 - SizeUtilsKt.getDpToPx(var20.getMarginVertical());
-            val var15: Int = var2.getColor();
+            val var14: Int = (int)var12;
+            val var15: Int = var5 + SizeUtilsKt.getDpToPx(var20.getMarginVertical());
+            var10 = var7 - SizeUtilsKt.getDpToPx(var20.getMarginVertical());
+            val var16: Int = var2.getColor();
             var2.setColor(var20.getBackgroundColor());
             val var31: ShadowStyle = var19.getShadow();
             if (var31 != null) {
                var2.setShadowLayer(var31.getRadius(), var31.getOffset().getWidth(), var31.getOffset().getHeight(), var31.getColor());
-               this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var14, var16, var13);
+               this.drawBackground(var1, var2, var11, var6, var9, var4, var14, var15, var10, var13);
             }
 
             var2.clearShadowLayer();
-            this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var14, var16, var13);
+            this.drawBackground(var1, var2, var11, var6, var9, var4, var14, var15, var10, var13);
             val var30: BorderStyle = var19.getBorder();
             if (var30 != null) {
                var2.setColor(var30.getColor());
                var2.setStyle(Style.STROKE);
                var2.setStrokeWidth((float)var30.getWidth());
-               this.drawBackground(var1, var2, var11, var6, var9, var4, var10, var14, var16, var13);
+               this.drawBackground(var1, var2, var11, var6, var9, var4, var14, var15, var10, var13);
             }
 
             var2.setStyle(Style.FILL);
-            var2.setColor(var15);
+            var2.setColor(var16);
          }
       }
    }

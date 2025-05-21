@@ -1,15 +1,10 @@
 package com.discord.mobile_voice_overlay;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.mobile_voice_overlay.views.OverlayVoiceBubble;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class a implements OnClickListener {
-   public final OverlayVoiceBubble j;
-   public final MobileVoiceOverlay k;
-
-   public final void onClick(View var1) {
-      <unrepresentable>.a(this.j, this.k, var1);
+public final class a implements Function0 {
+   public final Object invoke() {
+      return ConnectionQuality.b();
    }
 }

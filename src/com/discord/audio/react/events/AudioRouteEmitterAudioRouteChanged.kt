@@ -1,26 +1,15 @@
 package com.discord.audio.react.events
 
+import Ja.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.h
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
-   public final val multipleRoutesAvailable: Boolean
    public final val routeType: String
+   public final val multipleRoutesAvailable: Boolean
 
    init {
       q.h(var1, "routeType");
@@ -75,84 +64,6 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
       var3.append(var1);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: AudioRouteEmitterAudioRouteChanged.$serializer = new AudioRouteEmitterAudioRouteChanged.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.audio.react.events.AudioRouteEmitterAudioRouteChanged", var0, 2
-         );
-         var1.l("routeType", false);
-         var1.l("multipleRoutesAvailable", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): AudioRouteEmitterAudioRouteChanged {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         var var2: Int;
-         var var5: Boolean;
-         var var8: java.lang.String;
-         if (var7.y()) {
-            var8 = var7.t(var6, 0);
-            var5 = var7.s(var6, 1);
-            var2 = 3;
-         } else {
-            var var3: Boolean = true;
-            var5 = false;
-            var2 = 0;
-            var8 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        throw new n(var4);
-                     }
-
-                     var5 = var7.s(var6, 1);
-                     var2 |= 2;
-                  } else {
-                     var8 = var7.t(var6, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new AudioRouteEmitterAudioRouteChanged(var2, var8, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: AudioRouteEmitterAudioRouteChanged) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         AudioRouteEmitterAudioRouteChanged.write$Self$audio_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

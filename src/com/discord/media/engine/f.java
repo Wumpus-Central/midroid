@@ -9,6 +9,6 @@ public final class f implements NativeConnection.OnSpeakingCallback {
 
    @Override
    public final void onSpeaking(String var1, int var2) {
-      MediaEngine.y(this.a, var1, var2);
+      MediaEngine.A(this.a, var1, var2);
    }
 }

@@ -23,7 +23,6 @@ public class NativeViewMeasuringWrapper<T extends View>(view: Any, onMeasured: (
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: NativeViewMeasuringWrapper) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 

@@ -1,5 +1,6 @@
 package com.discord.bundle_updater
 
+import Q8.s
 import android.app.Activity
 import android.app.Application
 import android.view.View
@@ -25,11 +26,9 @@ import com.facebook.react.bridge.WritableNativeMap
 import com.jakewharton.processphoenix.ProcessPhoenix
 import java.io.File
 import java.lang.reflect.Field
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -40,41 +39,91 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("BundleDownloaded", G.b(BundleDownloadedEvent.class)), w.a("OtaUpdateChecked", G.b(OtaCheckAttemptEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("BundleDownloaded", G.b(BundleDownloadedEvent.class)), s.a("OtaUpdateChecked", G.b(OtaCheckAttemptEvent.class)));
+   }
+
+   @JvmStatic
+   fun `addListener$lambda$5`(var0: BundleUpdaterManager, var1: Boolean): Unit {
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new BundleDownloadedEvent(var1));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `addListener$lambda$6`(var0: BundleUpdaterManager, var1: java.util.List): Unit {
+      q.h(var1, "metrics");
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new OtaCheckAttemptEvent(var1));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `checkForUpdateAndReload$lambda$2`(var0: BundleUpdaterManager): Unit {
+      var0.removeSpinnerView();
+      var0.runOnActivity(new i(var0));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `checkForUpdateAndReload$lambda$2$lambda$1`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+      q.h(var1, "$this$runOnActivity");
+      val var6: Activity = var0.reactContext.getCurrentActivity();
+      if (var6 != null) {
+         var var7: Application = var6.getApplication();
+         if (var7 != null) {
+            if (var7 !is ReactApplication) {
+               var7 = null;
+            }
+
+            val var8: ReactApplication = var7 as ReactApplication;
+            if (var7 as ReactApplication != null) {
+               val var9: ReactNativeHost = var8.getReactNativeHost();
+               if (var9 != null) {
+                  val var4: ReactInstanceManager = var9.getReactInstanceManager();
+                  if (var4 != null) {
+                     val var5: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
+                     var var10: java.lang.String = null;
+                     if (var5 != null) {
+                        val var11: File = var5.getLocation();
+                        var10 = null;
+                        if (var11 != null) {
+                           var10 = var11.getAbsolutePath();
+                        }
+                     }
+
+                     var0.setJSBundle(var4, var10);
+                     var4.recreateReactContextInBackground();
+                  }
+               }
+            }
+         }
+      }
+
+      return Unit.a;
    }
 
    private fun removeSpinnerView() {
-      this.runOnActivity(new Function1(this) {
-         final BundleUpdaterManager this$0;
+      this.runOnActivity(new f(this));
+   }
 
-         {
-            super(1);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `removeSpinnerView$lambda$11`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+      q.h(var1, "$this$runOnActivity");
+      if (var0.progressLayout != null) {
+         var1.removeView(var0.progressLayout);
+      }
 
-         public final void invoke(ViewGroup var1) {
-            q.h(var1, "$this$runOnActivity");
-            val var2: ViewGroup = BundleUpdaterManager.access$getProgressLayout$p(this.this$0);
-            if (var2 != null) {
-               var1.removeView(var2);
-            }
-
-            BundleUpdaterManager.access$setProgressLayout$p(this.this$0, null);
-         }
-      });
+      var0.progressLayout = null;
+      return Unit.a;
    }
 
    private fun runOnActivity(callback: (ViewGroup) -> Unit) {
       val var2: Activity = this.reactContext.getCurrentActivity();
       if (var2 != null) {
-         var2.runOnUiThread(new c(var2, var1));
+         var2.runOnUiThread(new h(var2, var1));
       }
    }
 
    @JvmStatic
-   fun `runOnActivity$lambda$5$lambda$4`(var0: Activity, var1: Function1) {
-      q.h(var0, "$this_apply");
-      q.h(var1, "$callback");
+   fun `runOnActivity$lambda$13$lambda$12`(var0: Activity, var1: Function1) {
       val var2: View = ActivityExtensionsKt.getRootView(var0);
       if (var2 != null) {
          var var3: View = var2;
@@ -90,22 +139,24 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    private fun ReactInstanceManager.setJSBundle(bundleLocation: String?) {
-      val var7: JSBundleLoader;
-      if (var2 != null) {
-         try {
-            var7 = JSBundleLoader.createFileLoader(var2);
-         } catch (var6: Exception) {
-            throw new IllegalAccessException("Could not setJSBundle");
-         }
-      } else {
-         var7 = null;
-      }
+      label24: {
+         if (var2 != null) {
+            var var3: JSBundleLoader;
+            try {
+               var3 = JSBundleLoader.createFileLoader(var2);
+            } catch (var6: Exception) {
+               throw new IllegalAccessException("Could not setJSBundle");
+            }
 
-      var var3: JSBundleLoader = var7;
-      if (var7 == null) {
+            var7 = var3;
+            if (var3 != null) {
+               break label24;
+            }
+         }
+
          try {
-            var3 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
-            q.g(var3, "createAssetLoader(...)");
+            var7 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
+            q.g(var7, "createAssetLoader(...)");
          } catch (var5: Exception) {
             throw new IllegalAccessException("Could not setJSBundle");
          }
@@ -114,7 +165,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       try {
          val var8: Field = var1.getClass().getDeclaredField("mBundleLoader");
          var8.setAccessible(true);
-         var8.set(var1, var3);
+         var8.set(var1, var7);
       } catch (var4: Exception) {
          throw new IllegalAccessException("Could not setJSBundle");
       }
@@ -130,128 +181,35 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
       var1.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundModifierSelected());
       var1.setClickable(true);
       this.progressLayout = var1;
-      this.runOnActivity(new Function1(this) {
-         final BundleUpdaterManager this$0;
+      this.runOnActivity(new l(this));
+   }
 
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(ViewGroup var1) {
-            q.h(var1, "$this$runOnActivity");
-            var1.addView(BundleUpdaterManager.access$getProgressLayout$p(this.this$0));
-         }
-      });
+   @JvmStatic
+   fun `showSpinnerView$lambda$9`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+      q.h(var1, "$this$runOnActivity");
+      var1.addView(var0.progressLayout);
+      return Unit.a;
    }
 
    @ReactMethod
    public fun addListener(type: String) {
       q.h(var1, "type");
       if (q.c(var1, "BundleDownloaded")) {
-         BundleUpdater.Companion
-            .instance()
-            .setOnBundleDownloadedListener(
-               new Function1(this) {
-                  final BundleUpdaterManager this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(boolean var1) {
-                     BundleUpdaterManager.access$getReactEvents$p(this.this$0)
-                        .emitModuleEvent(BundleUpdaterManager.access$getReactContext$p(this.this$0), new BundleDownloadedEvent(var1));
-                  }
-               }
-            );
+         BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new j(this));
       } else if (q.c(var1, "OtaUpdateChecked")) {
-         BundleUpdater.Companion
-            .instance()
-            .setOnOtaUpdateCheckedListener(
-               new Function1(this) {
-                  final BundleUpdaterManager this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(java.util.List<? extends BundleUpdater.OtaMetric> var1) {
-                     q.h(var1, "metrics");
-                     BundleUpdaterManager.access$getReactEvents$p(this.this$0)
-                        .emitModuleEvent(BundleUpdaterManager.access$getReactContext$p(this.this$0), new OtaCheckAttemptEvent(var1));
-                  }
-               }
-            );
+         BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
       }
    }
 
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
-      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new Function0(this) {
-         final BundleUpdaterManager this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            BundleUpdaterManager.access$removeSpinnerView(this.this$0);
-            BundleUpdaterManager.access$runOnActivity(this.this$0, new Function1(this.this$0) {
-               final BundleUpdaterManager this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(ViewGroup var1) {
-                  q.h(var1, "$this$runOnActivity");
-                  val var7: Activity = BundleUpdaterManager.access$getReactContext$p(this.this$0).getCurrentActivity();
-                  if (var7 != null) {
-                     var var8: Application = var7.getApplication();
-                     if (var8 != null) {
-                        if (var8 !is ReactApplication) {
-                           var8 = null;
-                        }
-
-                        val var9: ReactApplication = var8 as ReactApplication;
-                        if (var8 as ReactApplication != null) {
-                           val var10: ReactNativeHost = var9.getReactNativeHost();
-                           if (var10 != null) {
-                              val var4: ReactInstanceManager = var10.getReactInstanceManager();
-                              if (var4 != null) {
-                                 val var5: BundleUpdaterManager = this.this$0;
-                                 val var6: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
-                                 var var11: java.lang.String = null;
-                                 if (var6 != null) {
-                                    val var12: File = var6.getLocation();
-                                    var11 = null;
-                                    if (var12 != null) {
-                                       var11 = var12.getAbsolutePath();
-                                    }
-                                 }
-
-                                 BundleUpdaterManager.access$setJSBundle(var5, var4, var11);
-                                 var4.recreateReactContextInBackground();
-                              }
-                           }
-                        }
-                     }
-                  }
-               }
-            });
-         }
-      }, 1, null);
-      val var2: ReactApplicationContext = this.reactContext;
+      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
+      val var3: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.j;
       q.g(MainActivity::class.java, "forName(...)");
-      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
+      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
    }
 
    @ReactMethod

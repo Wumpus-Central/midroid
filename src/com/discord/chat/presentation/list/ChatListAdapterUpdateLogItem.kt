@@ -3,15 +3,13 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import kotlin.jvm.internal.q
-import o8.p
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         q.h(var1, "chatListItemUpdate");
+         kotlin.jvm.internal.q.h(var1, "chatListItemUpdate");
          super(null);
          this.chatListItemUpdate = var1;
       }
@@ -28,7 +26,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
                for (var2 = ""; var4.hasNext(); var1++) {
                   var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
-                     i.u();
+                     kotlin.collections.i.u();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
@@ -77,19 +75,19 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          var16.append("Items: ");
          var16.append(var8);
          val var18: java.lang.String = var16.toString();
-         var var19: StringBuilder = new StringBuilder();
+         val var19: StringBuilder = new StringBuilder();
          var19.append("Operations: ");
          var19.append(var13);
-         var13 = var19.toString();
-         var19 = new StringBuilder();
-         var19.append("ChatList - ");
-         var19.append(var10);
-         var19.append(", ");
-         var19.append(var18);
-         var19.append(", ");
-         var19.append(var13);
-         var19.append(", \n");
-         return var19.toString();
+         val var20: java.lang.String = var19.toString();
+         val var14: StringBuilder = new StringBuilder();
+         var14.append("ChatList - ");
+         var14.append(var10);
+         var14.append(", ");
+         var14.append(var18);
+         var14.append(", ");
+         var14.append(var20);
+         var14.append(", \n");
+         return var14.toString();
       }
    }
 
@@ -103,7 +101,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         q.h(var1, "updateType");
+         kotlin.jvm.internal.q.h(var1, "updateType");
          super(null);
          this.updateType = var1;
       }
@@ -114,7 +112,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new p();
+                  throw new Q8.n();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

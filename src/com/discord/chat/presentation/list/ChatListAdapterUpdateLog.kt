@@ -2,7 +2,6 @@ package com.discord.chat.presentation.list
 
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
 import java.util.ArrayList
-import kotlin.jvm.internal.q
 
 internal object ChatListAdapterUpdateLog {
    private const val MAX_SIZE: Int = 5
@@ -17,7 +16,7 @@ internal object ChatListAdapterUpdateLog {
    }
 
    public fun addChatListItemUpdate(chatListItemUpdate: ChatListItemUpdate) {
-      q.h(var1, "chatListItemUpdate");
+      kotlin.jvm.internal.q.h(var1, "chatListItemUpdate");
       this.addInternal(new ChatListAdapterUpdateLogItem.ChatList(var1));
    }
 
@@ -30,7 +29,7 @@ internal object ChatListAdapterUpdateLog {
    }
 
    public fun addPortalUpdate(updateType: PortalViewUpdateType) {
-      q.h(var1, "updateType");
+      kotlin.jvm.internal.q.h(var1, "updateType");
       this.addInternal(new ChatListAdapterUpdateLogItem.PortalView(var1));
    }
 

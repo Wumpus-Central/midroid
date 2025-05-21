@@ -14,7 +14,7 @@ import kotlin.jvm.internal.q
 
 internal fun WindowInsetsCompat.getDisplayCutoutInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.b(), var1);
+   return getInsets(var0, WindowInsetsCompat.n.b(), var1);
 }
 
 @JvmSynthetic
@@ -28,7 +28,7 @@ fun `getDisplayCutoutInsets$default`(var0: WindowInsetsCompat, var1: Boolean, va
 
 internal fun WindowInsetsCompat.getImeInsets(ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
-   return getInsets(var0, WindowInsetsCompat.m.c(), var1);
+   return getInsets(var0, WindowInsetsCompat.n.c(), var1);
 }
 
 @JvmSynthetic
@@ -48,7 +48,6 @@ private fun WindowInsetsCompat.getInsets(type: Int, ignoringVisibility: Boolean 
       var3 = var0.f(var1);
    }
 
-   q.e(var3);
    return var3;
 }
 
@@ -64,8 +63,9 @@ fun `getInsets$default`(var0: WindowInsetsCompat, var1: Int, var2: Boolean, var3
 internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVisibility: Boolean = false): Insets {
    q.h(var0, "<this>");
    q.h(var1, "context");
-   val var4: Insets = getInsets(var0, WindowInsetsCompat.m.h(), var2);
+   val var4: Insets = getInsets(var0, WindowInsetsCompat.n.h(), var2);
    if (VERSION.SDK_INT > 29) {
+      q.e(var4);
       return var4;
    } else {
       var var5: Int = var1.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
@@ -100,7 +100,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
    val var1: View = ActivityExtensionsKt.getRootView(var0);
    val var2: WindowInsetsCompat;
    if (var1 != null) {
-      var2 = WindowInsetsCompat.A(var1.getRootWindowInsets());
+      var2 = WindowInsetsCompat.B(var1.getRootWindowInsets());
    } else {
       var2 = null;
    }

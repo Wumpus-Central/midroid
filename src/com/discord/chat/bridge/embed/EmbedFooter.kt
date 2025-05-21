@@ -1,19 +1,118 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "n.simpleName" is null
-  at org.vineflower.kotlin.KotlinWriter.lambda$writeClass$0(KotlinWriter.java:265)
-  at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-  at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1685)
-  at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-  at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-  at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-  at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-  at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-  at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  at java.base/java.util.stream.ReferencePipeline.findAny(ReferencePipeline.java:652)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:266)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
-*/
+package com.discord.chat.bridge.embed
+
+import Ja.f
+import Q8.j
+import c1.d
+import kotlin.jvm.internal.q
+import kotlinx.serialization.KSerializer
+
+@f
+public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = null, content: String? = null) {
+   public final val iconURL: String?
+   public final val iconProxyURL: String?
+   public final val content: String?
+
+   public final val imageUrl: String?
+      public final get() {
+         return this.imageUrl$delegate.getValue() as java.lang.String;
+      }
+
+
+   fun EmbedFooter() {
+      this(null, null, null, 7, null);
+   }
+
+   init {
+      this.iconURL = var1;
+      this.iconProxyURL = var2;
+      this.content = var3;
+      this.imageUrl$delegate = j.b(new d(this));
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$1`(var0: EmbedFooter): java.lang.String {
+      return var0.iconProxyURL;
+   }
+
+   @JvmStatic
+   fun `imageUrl_delegate$lambda$0`(var0: EmbedFooter): java.lang.String {
+      return var0.iconProxyURL;
+   }
+
+   public operator fun component1(): String? {
+      return this.iconURL;
+   }
+
+   public operator fun component2(): String? {
+      return this.iconProxyURL;
+   }
+
+   public operator fun component3(): String? {
+      return this.content;
+   }
+
+   public fun copy(iconURL: String? = var0.iconURL, iconProxyURL: String? = var0.iconProxyURL, content: String? = var0.content): EmbedFooter {
+      return new EmbedFooter(var1, var2, var3);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is EmbedFooter) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!q.c(this.iconURL, var1.iconURL)) {
+            return false;
+         } else if (!q.c(this.iconProxyURL, var1.iconProxyURL)) {
+            return false;
+         } else {
+            return q.c(this.content, var1.content);
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      var var3: Int = 0;
+      val var1: Int;
+      if (this.iconURL == null) {
+         var1 = 0;
+      } else {
+         var1 = this.iconURL.hashCode();
+      }
+
+      val var2: Int;
+      if (this.iconProxyURL == null) {
+         var2 = 0;
+      } else {
+         var2 = this.iconProxyURL.hashCode();
+      }
+
+      if (this.content != null) {
+         var3 = this.content.hashCode();
+      }
+
+      return (var1 * 31 + var2) * 31 + var3;
+   }
+
+   public override fun toString(): String {
+      val var1: java.lang.String = this.iconURL;
+      val var4: java.lang.String = this.iconProxyURL;
+      val var2: java.lang.String = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("EmbedFooter(iconURL=");
+      var3.append(var1);
+      var3.append(", iconProxyURL=");
+      var3.append(var4);
+      var3.append(", content=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
+   }
+
+   public companion object {
+      public fun serializer(): KSerializer<EmbedFooter> {
+         return EmbedFooter.$serializer.INSTANCE;
+      }
+   }
+}

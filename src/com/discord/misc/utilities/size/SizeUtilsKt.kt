@@ -1,12 +1,12 @@
 package com.discord.misc.utilities.size
 
-import E8.a
 import android.content.res.Resources
 import android.util.TypedValue
+import g9.a
 
-public final val dpToPx: Int
+public final val pxToDp: Float
    public final get() {
-      return a.c(var0 * Resources.getSystem().getDisplayMetrics().density);
+      return var0 / Resources.getSystem().getDisplayMetrics().density;
    }
 
 
@@ -16,9 +16,9 @@ public final val dpToPx: Int
    }
 
 
-public final val pxToDp: Float
+public final val dpToPx: Int
    public final get() {
-      return var0 / Resources.getSystem().getDisplayMetrics().density;
+      return a.c(var0 * Resources.getSystem().getDisplayMetrics().density);
    }
 
 

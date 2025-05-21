@@ -28,21 +28,24 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    }
 
    @JvmStatic
-   fun `bind$lambda$1$lambda$0`(var0: EmbeddedActivityInviteViewHolder, var1: EmbeddedActivityInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$embeddedActivityInviteAccessory");
+   fun `bind$lambda$2$lambda$0`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$2$lambda$1`(var0: EmbeddedActivityInviteViewHolder, var1: EmbeddedActivityInviteMessageAccessory, var2: View) {
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "embeddedActivityInviteAccessory");
-      val var11: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var2: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var11.getSplashUrl(), var1.getConstrainedWidth());
-      var2.setTitleText(var11.getTitleText());
-      var2.setHeaderText(var11.getHeaderText());
-      var2.setSubtitleText-Tu_1QLM(
-         var11.getStructurableSubtitleText(),
+      val var17: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var4: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var17.getSplashUrl(), var1.getConstrainedWidth());
+      var4.setTitleText(var17.getTitleText());
+      var4.setHeaderText(var17.getHeaderText());
+      var4.setSubtitleText-Tu_1QLM(
+         var17.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2(this.eventHandler) {
             {
@@ -164,7 +167,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
-         <unrepresentable>.INSTANCE,
+         new i(),
          new Function1(this.eventHandler) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
@@ -218,9 +221,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var2.setNoParticipantsText(var11.getNoParticipantsText());
-      var2.setLaunchButton(var11.getAcceptLabelText(), var11.getAcceptLabelBackgroundColor(), var11.getCtaEnabled());
-      var2.setAvatarUris(var11.getParticipantAvatarUris());
-      var2.setOnLaunchButtonClickListener(new i(this, var1));
+      var4.setNoParticipantsText(var17.getNoParticipantsText());
+      var4.setLaunchButton(var17.getAcceptLabelText(), var17.getAcceptLabelBackgroundColor(), var17.getCtaEnabled());
+      var4.setAvatarUris(var17.getParticipantAvatarUris());
+      var4.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

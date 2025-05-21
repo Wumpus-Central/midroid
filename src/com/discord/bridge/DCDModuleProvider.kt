@@ -19,7 +19,7 @@ public object DCDModuleProvider {
    public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: BaseReactPackage): Boolean {
       q.h(var1, "<this>");
       q.h(var2, "turboPackages");
-      return i.B(var1, var2);
+      return kotlin.collections.i.B(var1, var2);
    }
 
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
@@ -40,6 +40,7 @@ public object DCDModuleProvider {
             this.$onViewManager = var2;
          }
 
+         @Override
          public java.util.List<ReactContextBaseJavaModule> createNativeModules(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             val var3: ReactContextBaseJavaModule;
@@ -58,10 +59,11 @@ public object DCDModuleProvider {
                var4.append("\n                        ");
                throw new IllegalArgumentException(var4.toString().toString());
             } else {
-               return i.o(var3);
+               return kotlin.collections.i.o(var3);
             }
          }
 
+         @Override
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             val var3: ViewManager;
@@ -71,7 +73,7 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return i.o(var3);
+            return kotlin.collections.i.o(var3);
          }
       };
    }
@@ -88,6 +90,7 @@ public object DCDModuleProvider {
             this.$onNativeModule = var2;
          }
 
+         @Override
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             q.h(var1, "name");
             q.h(var2, "reactContext");
@@ -101,6 +104,7 @@ public object DCDModuleProvider {
             return var3;
          }
 
+         @Override
          public ReactModuleInfoProvider getReactModuleInfoProvider() {
             return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(this.$moduleName, false, 2, null);
          }
@@ -116,11 +120,13 @@ public object DCDModuleProvider {
             this.$onViewManager = var1;
          }
 
+         @Override
          public java.util.List<NativeModule> createNativeModules(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             return new ArrayList<>();
          }
 
+         @Override
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             val var5: Array<Array<Function1>> = this.$onViewManager;

@@ -1,32 +1,20 @@
 package com.discord.chat.bridge.contentnode
 
+import Ja.f
 import com.discord.chat.bridge.rolecolors.RoleColors
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
-import ka.h
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode {
    public final val content: List<ContentNode>
-   public final val isUrl: Boolean
+   public final val target: LinkContextData?
    public final val linkColor: Int?
    public final val roleColors: RoleColors?
    public final val shouldShowRoleDot: Boolean?
-   public final val target: LinkContextData?
-   public final val textContent: String?
    public final val url: String?
+   public final val isUrl: Boolean
+   public final val textContent: String?
 
    init {
       q.h(var1, "content");
@@ -143,161 +131,15 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: LinkContextData = this.target;
+      val var2: java.util.List = this.content;
+      val var1: LinkContextData = this.target;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LinkContentNode(content=");
-      var3.append(var1);
-      var3.append(", target=");
       var3.append(var2);
+      var3.append(", target=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: LinkContentNode.$serializer = new LinkContentNode.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("link", var0, 8);
-         var1.l("content", false);
-         var1.l("target", false);
-         var1.l("linkColor", true);
-         var1.l("roleColors", true);
-         var1.l("shouldShowRoleDot", true);
-         var1.l("url", true);
-         var1.l("isUrl", true);
-         var1.l("textContent", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var6: KSerializer = LinkContentNode.access$get$childSerializers$cp()[0];
-         val var5: KSerializer = a.u(LinkContextDataSerializer.INSTANCE);
-         val var7: KSerializer = a.u(N.a);
-         val var2: KSerializer = a.u(RoleColors.$serializer.INSTANCE);
-         val var4: h = h.a;
-         val var1: KSerializer = a.u(h.a);
-         val var3: C0 = C0.a;
-         return new KSerializer[]{var6, var5, var7, var2, var1, a.u(C0.a), var4, a.u(var3)};
-      }
-
-      public open fun deserialize(decoder: Decoder): LinkContentNode {
-         q.h(var1, "decoder");
-         val var15: SerialDescriptor = this.getDescriptor();
-         val var16: c = var1.c(var15);
-         val var13: Array<KSerializer> = LinkContentNode.access$get$childSerializers$cp();
-         var var6: Boolean = var16.y();
-         var var3: Byte = 7;
-         var var2: Int;
-         var var7: java.lang.String;
-         var var8: Any;
-         var var9: Any;
-         var var10: Any;
-         var var11: Any;
-         var var12: Any;
-         val var18: java.lang.String;
-         if (var6) {
-            var8 = var16.m(var15, 0, var13[0], null) as java.util.List;
-            var10 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, null) as LinkContextData;
-            var9 = var16.v(var15, 2, N.a, null) as Int;
-            var11 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, null) as RoleColors;
-            var12 = var16.v(var15, 4, h.a, null) as java.lang.Boolean;
-            val var17: C0 = C0.a;
-            var7 = var16.v(var15, 5, C0.a, null) as java.lang.String;
-            var6 = var16.s(var15, 6);
-            var18 = var16.v(var15, 7, var17, null) as java.lang.String;
-            var2 = 255;
-         } else {
-            var var4: Boolean = true;
-            var6 = false;
-            var12 = null;
-            var11 = null;
-            var10 = null;
-            var8 = null;
-            var7 = null;
-            var var19: Any = null;
-            var9 = null;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var16.x(var15);
-               switch (var5) {
-                  case -1:
-                     var4 = false;
-                     continue;
-                  case 0:
-                     var8 = var16.m(var15, 0, var13[0], var8) as java.util.List;
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var7 = var16.v(var15, 1, LinkContextDataSerializer.INSTANCE, var7) as LinkContextData;
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var19 = var16.v(var15, 2, N.a, var19) as Int;
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var9 = var16.v(var15, 3, RoleColors.$serializer.INSTANCE, var9) as RoleColors;
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var10 = var16.v(var15, 4, h.a, var10) as java.lang.Boolean;
-                     var2 |= 16;
-                     var3 = 7;
-                     continue;
-                  case 5:
-                     var11 = var16.v(var15, 5, C0.a, var11) as java.lang.String;
-                     var2 |= 32;
-                     continue;
-                  case 6:
-                     var6 = var16.s(var15, 6);
-                     var2 |= 64;
-                     continue;
-                  case 7:
-                     var12 = var16.v(var15, var3, C0.a, var12) as java.lang.String;
-                     var2 |= 128;
-                     continue;
-                  default:
-                     throw new n(var5);
-               }
-
-               var3 = 7;
-            }
-
-            var18 = (java.lang.String)var12;
-            var7 = (java.lang.String)var11;
-            var12 = var10;
-            var11 = var9;
-            var9 = var19;
-            var10 = var7;
-         }
-
-         var16.b(var15);
-         return new LinkContentNode(
-            var2, (java.util.List)var8, (LinkContextData)var10, (Integer)var9, (RoleColors)var11, (java.lang.Boolean)var12, var7, var6, var18, null
-         );
-      }
-
-      public open fun serialize(encoder: Encoder, value: LinkContentNode) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         LinkContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
    }
 
    public companion object {

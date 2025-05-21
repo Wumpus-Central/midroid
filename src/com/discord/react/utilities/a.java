@@ -1,15 +1,11 @@
 package com.discord.react.utilities;
 
-import com.facebook.react.module.model.ReactModuleInfoProvider;
-import java.util.List;
-import java.util.Map;
+import kotlin.jvm.functions.Function1;
+import kotlinx.serialization.json.JsonBuilder;
 
 // $VF: synthetic class
-public final class a implements ReactModuleInfoProvider {
-   public final List a;
-   public final boolean b;
-
-   public final Map getReactModuleInfos() {
-      return ReactModuleInfoProviderExtensionsKt.a(this.a, this.b);
+public final class a implements Function1 {
+   public final Object invoke(Object var1) {
+      return NativeMapExtensionsKt.a((JsonBuilder)var1);
    }
 }

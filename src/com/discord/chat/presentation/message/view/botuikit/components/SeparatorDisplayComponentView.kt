@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import Q8.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import o8.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
@@ -53,7 +53,7 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       if (var6 != 1) {
          if (var6 != 2) {
             if (var6 != 3) {
-               throw new p();
+               throw new n();
             }
 
             var4 = 0;

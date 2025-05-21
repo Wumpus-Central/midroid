@@ -13,9 +13,9 @@ public data class AutomodSystemMessageItem(message: Message,
       allowChildGestures: Boolean = true
    )
    : ChatListItem {
-   public final val allowChildGestures: Boolean
    public final val message: Message
    public final val messageContext: MessageContext
+   public final val allowChildGestures: Boolean
 
    init {
       q.h(var1, "message");
@@ -69,14 +69,14 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var4: Message = this.message;
-      val var3: MessageContext = this.messageContext;
+      val var3: Message = this.message;
+      val var4: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AutomodSystemMessageItem(message=");
-      var2.append(var4);
-      var2.append(", messageContext=");
       var2.append(var3);
+      var2.append(", messageContext=");
+      var2.append(var4);
       var2.append(", allowChildGestures=");
       var2.append(var1);
       var2.append(")");

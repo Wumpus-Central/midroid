@@ -10,7 +10,6 @@ import com.discord.mobile_voice_overlay.MobileVoiceOverlayDataUser
 import com.discord.mobile_voice_overlay.databinding.OverlayVoiceBubbleBinding
 import com.discord.primitives.UserId
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.q
 
 public class OverlayVoiceBubble : OverlayBubbleWrap {
    private final val binding: OverlayVoiceBubbleBinding
@@ -18,29 +17,29 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    internal final val imageView: SimpleDraweeView
       internal final get() {
          val var1: SimpleDraweeView = this.binding.overlayBubbleIv;
-         q.g(this.binding.overlayBubbleIv, "overlayBubbleIv");
+         kotlin.jvm.internal.q.g(this.binding.overlayBubbleIv, "overlayBubbleIv");
          return var1;
       }
 
 
-   public constructor(context: Context) : q.h(var1, "context") {
+   public constructor(context: Context) : kotlin.jvm.internal.q.h(var1, "context") {
       super(var1);
       val var2: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      q.g(var2, "inflate(...)");
+      kotlin.jvm.internal.q.g(var2, "inflate(...)");
       this.binding = var2;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : q.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.q.h(var1, "context") {
       super(var1, var2);
       val var3: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      q.g(var3, "inflate(...)");
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : q.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.q.h(var1, "context") {
       super(var1, var2, var3);
       val var4: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      q.g(var4, "inflate(...)");
+      kotlin.jvm.internal.q.g(var4, "inflate(...)");
       this.binding = var4;
    }
 
@@ -53,14 +52,14 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
-      q.h(var1, "user");
-      val var3: SimpleDraweeView = this.binding.overlayBubbleIv;
+      kotlin.jvm.internal.q.h(var1, "user");
+      val var4: SimpleDraweeView = this.binding.overlayBubbleIv;
       val var2: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var4: Context = this.getContext();
-      q.g(var4, "getContext(...)");
-      var3.setImageURI(
+      val var3: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var3, "getContext(...)");
+      var4.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var2, var4, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var2, var3, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {
@@ -73,7 +72,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    protected override fun onConfigurationChanged(newConfig: Configuration?) {
       var var2: Int = this.getWindowLayoutParams().x;
       val var3: Context = this.getContext();
-      q.g(var3, "getContext(...)");
+      kotlin.jvm.internal.q.g(var3, "getContext(...)");
       if (var2 > this.getAllowedAreaBounds(var3).centerX()) {
          var2 = Integer.MAX_VALUE;
       } else {
@@ -87,16 +86,16 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public override fun setData(data: MobileVoiceOverlayData) {
-      q.h(var1, "data");
-      val var2: MobileVoiceOverlayDataUser = i.h0(var1.getUsers()) as MobileVoiceOverlayDataUser;
+      kotlin.jvm.internal.q.h(var1, "data");
+      val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.h0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);
       }
    }
 
    public companion object {
-      private const val ACTIVE_DURATION_MS: Long
       private const val SETTLING_ALPHA: Float
       private const val SETTLING_DURATION_MS: Long
+      private const val ACTIVE_DURATION_MS: Long
    }
 }

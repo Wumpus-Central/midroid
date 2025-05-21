@@ -1,12 +1,12 @@
 package com.discord.billing.types
 
-import V9.a
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
 import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
 import kotlin.jvm.internal.q
+import xa.a
 
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {
@@ -107,14 +107,14 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var6: Long = this.getPriceAmountMicros(var1);
-      val var4: Long = this.getPriceAmountMicros(var2);
+      val var4: Long = this.getPriceAmountMicros(var1);
+      val var6: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       q.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       q.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
+      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
          var3 = 6;
       } else {
          var3 = 2;

@@ -1,28 +1,17 @@
 package com.discord.chat.bridge.forums
 
+import Ja.f
 import com.discord.chat.bridge.structurabletext.StructurableText
-import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
-   public final val closeIcon: String
+   public final val title: String
+   public final val subtitle: StructurableText
    public final val cta: String
    public final val icon: String
-   public final val subtitle: StructurableText
-   public final val title: String
+   public final val closeIcon: String
 
    init {
       q.h(var1, "title");
@@ -100,130 +89,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.title;
+      val var5: java.lang.String = this.title;
       val var3: StructurableText = this.subtitle;
-      val var1: java.lang.String = this.cta;
-      val var5: java.lang.String = this.icon;
-      val var2: java.lang.String = this.closeIcon;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PostSharePrompt(title=");
-      var4.append(var6);
-      var4.append(", subtitle=");
-      var4.append(var3);
-      var4.append(", cta=");
-      var4.append(var1);
-      var4.append(", icon=");
-      var4.append(var5);
-      var4.append(", closeIcon=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: PostSharePrompt.$serializer = new PostSharePrompt.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forums.PostSharePrompt", var0, 5);
-         var1.l("title", false);
-         var1.l("subtitle", false);
-         var1.l("cta", false);
-         var1.l("icon", false);
-         var1.l("closeIcon", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, StructurableTextSerializer.INSTANCE, C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): PostSharePrompt {
-         q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
-         var var9: java.lang.String = null;
-         var var2: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var8: StructurableText;
-         val var13: java.lang.String;
-         if (var5) {
-            var9 = var12.t(var11, 0);
-            var8 = var12.m(var11, 1, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var7 = var12.t(var11, 2);
-            var13 = var12.t(var11, 3);
-            var6 = var12.t(var11, 4);
-            var2 = 31;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-            var7 = null;
-            var6 = null;
-            var var14: java.lang.String = null;
-
-            while (var3) {
-               val var4: Int = var12.x(var11);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              if (var4 != 4) {
-                                 throw new n(var4);
-                              }
-
-                              var14 = var12.t(var11, 4);
-                              var2 |= 16;
-                           } else {
-                              var6 = var12.t(var11, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var7 = var12.t(var11, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var8 = var12.m(var11, 1, StructurableTextSerializer.INSTANCE, var8) as StructurableText;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var9 = var12.t(var11, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var6 = var14;
-            var13 = var6;
-         }
-
-         var12.b(var11);
-         return new PostSharePrompt(var2, var9, var8, var7, var13, var6, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: PostSharePrompt) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         PostSharePrompt.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var6: java.lang.String = this.cta;
+      val var1: java.lang.String = this.icon;
+      val var4: java.lang.String = this.closeIcon;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PostSharePrompt(title=");
+      var2.append(var5);
+      var2.append(", subtitle=");
+      var2.append(var3);
+      var2.append(", cta=");
+      var2.append(var6);
+      var2.append(", icon=");
+      var2.append(var1);
+      var2.append(", closeIcon=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

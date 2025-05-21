@@ -1,5 +1,7 @@
 package com.discord.image.fresco.postprocessors
 
+import Q8.n
+import Y8.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
@@ -8,8 +10,6 @@ import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import o8.p
-import w8.a
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -45,8 +45,8 @@ public sealed interface PostProcessor {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(i.v(var2, 10));
 
-            for (PostProcessor var6 : var2) {
-               var4.add($$INSTANCE.create(var6));
+            for (PostProcessor var3 : var2) {
+               var4.add($$INSTANCE.create(var3));
             }
 
             var5 = new CompositePostprocessor(var4);
@@ -56,7 +56,7 @@ public sealed interface PostProcessor {
             var5 = GrayscalePostprocessor.INSTANCE;
          } else {
             if (var1 !is PostProcessor.Gradient) {
-               throw new p();
+               throw new n();
             }
 
             var5 = new GradientPostprocessor(var1 as PostProcessor.Gradient);
@@ -76,7 +76,7 @@ public sealed interface PostProcessor {
       }
 
       public constructor(vararg postprocessors: PostProcessor) : q.h(var1, "postprocessors") {
-         this(c.C0(var1));
+         this(c.F0(var1));
       }
 
       public operator fun component1(): List<PostProcessor> {
@@ -132,10 +132,10 @@ public sealed interface PostProcessor {
       ) :
       PostProcessor {
       public final val direction: com.discord.image.fresco.postprocessors.PostProcessor.Gradient.Direction
-      public final val endColor: Int
-      public final val endPosition: Float
       public final val startColor: Int
+      public final val endColor: Int
       public final val startPosition: Float
+      public final val endPosition: Float
 
       init {
          q.h(var1, "direction");

@@ -1,11 +1,11 @@
 package com.discord.image
 
 import android.graphics.Bitmap
-import androidx.core.graphics.c
 import com.discord.image.color_quantizer.ColorCutQuantizer
 import com.discord.image.color_quantizer.Swatch
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import y.c
 
 public object DominantColor {
    private fun getPrimaryColorsForBitmap(bitmap: Bitmap): List<Int> {

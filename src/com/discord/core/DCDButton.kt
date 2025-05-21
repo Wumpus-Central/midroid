@@ -1,7 +1,5 @@
 package com.discord.core
 
-import T5.k
-import T5.k.b
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -21,12 +19,14 @@ import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.google.android.material.button.MaterialButton
 import kotlin.jvm.internal.q
+import v6.k
+import v6.k.b
 
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DcdButtonBinding
    private final val button: MaterialButton
-   private final val loadingDots: ProgressDots
    private final val progress: ProgressBar
+   private final val loadingDots: ProgressDots
    private final var text: CharSequence?
 
    fun DCDButton(var1: Context) {
@@ -105,10 +105,10 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
 
    public fun setBackgroundRectangle(color: Int, radiusPx: Int, strokeColor: Int? = null, strokeWidth: Int = 0) {
       this.setBackgroundColor(var1);
-      val var6: MaterialButton = this.button;
-      val var5: b = k.a();
-      var5.o((float)var2);
-      var6.setShapeAppearanceModel(var5.m());
+      val var5: MaterialButton = this.button;
+      val var6: b = k.a();
+      var6.o((float)var2);
+      var5.setShapeAppearanceModel(var6.m());
       if (var3 != null) {
          this.button.setStrokeColor(ColorStateList.valueOf(var3));
          this.button.setStrokeWidth(var4);
@@ -118,16 +118,10 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    }
 
    public fun setBorderColor(colorInt: Int?) {
-      val var3: Unit;
       if (var1 != null) {
          this.button.setStrokeColor(ColorStateList.valueOf(var1.intValue()));
          this.button.setStrokeWidth(SizeUtilsKt.getDpToPx(1));
-         var3 = Unit.a;
       } else {
-         var3 = null;
-      }
-
-      if (var3 == null) {
          this.button.setStrokeColor(null);
          this.button.setStrokeWidth(0);
       }

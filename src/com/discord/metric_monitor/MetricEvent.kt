@@ -1,24 +1,14 @@
 package com.discord.metric_monitor
 
+import Ja.f
+import Q8.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import o8.w
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -73,102 +63,25 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun serialize(): WritableMap {
-      val var2: Pair = w.a("name", this.name);
+      val var2: Pair = s.a("name", this.name);
       var var1: ReadableNativeArray = null;
       if (this.tags != null) {
          var1 = NativeArrayExtensionsKt.toNativeArray$default(this.tags, null, 1, null);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(w.a("data", NativeMapExtensionsKt.nativeMapOf(var2, w.a("tags", var1))));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("data", NativeMapExtensionsKt.nativeMapOf(var2, s.a("tags", var1))));
    }
 
    public override fun toString(): String {
       val var1: java.lang.String = this.name;
-      val var3: java.util.List = this.tags;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MetricEvent(name=");
-      var2.append(var1);
-      var2.append(", tags=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: MetricEvent.$serializer = new MetricEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.metric_monitor.MetricEvent", var0, 2);
-         var1.l("name", false);
-         var1.l("tags", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, a.u(MetricEvent.access$get$childSerializers$cp()[1])};
-      }
-
-      public open fun deserialize(decoder: Decoder): MetricEvent {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         val var8: Array<KSerializer> = MetricEvent.access$get$childSerializers$cp();
-         var var2: Int;
-         var var5: java.util.List;
-         var var9: java.lang.String;
-         if (var7.y()) {
-            var9 = var7.t(var6, 0);
-            var5 = var7.v(var6, 1, var8[1], null) as java.util.List;
-            var2 = 3;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var5 = null;
-            var9 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        throw new n(var4);
-                     }
-
-                     var5 = var7.v(var6, 1, var8[1], var5) as java.util.List;
-                     var2 |= 2;
-                  } else {
-                     var9 = var7.t(var6, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new MetricEvent(var2, var9, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: MetricEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         MetricEvent.write$Self$metric_monitor_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var2: java.util.List = this.tags;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MetricEvent(name=");
+      var3.append(var1);
+      var3.append(", tags=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

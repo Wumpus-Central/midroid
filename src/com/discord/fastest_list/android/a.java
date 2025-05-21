@@ -1,15 +1,14 @@
 package com.discord.fastest_list.android;
 
-import android.view.View;
-import android.view.View.OnLayoutChangeListener;
 import kotlin.jvm.functions.Function5;
+import kotlin.jvm.functions.Function6;
 
 // $VF: synthetic class
-public final class a implements OnLayoutChangeListener {
-   public final FastestListView j;
-   public final Function5 k;
+public final class a implements Function5 {
+   public final Function6 j;
+   public final FastestListView k;
 
-   public final void onLayoutChange(View var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8, int var9) {
-      FastestListView.O(this.j, this.k, var1, var2, var3, var4, var5, var6, var7, var8, var9);
+   public final Object m(Object var1, Object var2, Object var3, Object var4, Object var5) {
+      return FastestListView.O(this.j, this.k, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5);
    }
 }

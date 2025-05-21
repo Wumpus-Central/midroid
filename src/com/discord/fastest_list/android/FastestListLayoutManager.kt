@@ -7,21 +7,11 @@ import com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhe
 import kotlin.jvm.internal.q
 
 internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false) : LinearLayoutManager {
-   public final val extraLayoutSpace: Int
-      public final get() {
-         val var1: Float;
-         val var2: Float;
-         if (this.horizontal) {
-            var1 = this.getWidth();
-            var2 = this.renderAhead.getExtraLayoutPercent();
-         } else {
-            var1 = this.getHeight();
-            var2 = this.renderAhead.getExtraLayoutPercent();
-         }
+   public final var renderAhead: RenderAhead
+      internal set
 
-         return (int)(var1 * var2);
-      }
-
+   public final var scrollingForward: Boolean
+      internal set
 
    public final var horizontal: Boolean
       internal final set(value) {
@@ -30,11 +20,21 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
       }
 
 
-   public final var renderAhead: RenderAhead
-      internal set
+   public final val extraLayoutSpace: Int
+      public final get() {
+         val var1: Float;
+         val var2: Float;
+         if (this.horizontal) {
+            var2 = this.getWidth();
+            var1 = this.renderAhead.getExtraLayoutPercent();
+         } else {
+            var2 = this.getHeight();
+            var1 = this.renderAhead.getExtraLayoutPercent();
+         }
 
-   public final var scrollingForward: Boolean
-      internal set
+         return (int)(var2 * var1);
+      }
+
 
    init {
       q.h(var1, "renderAhead");
@@ -56,8 +56,8 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
    }
 
    public companion object {
-      private const val EXTRA_LAYOUT_SPACE_END: Int
       private const val EXTRA_LAYOUT_SPACE_START: Int
+      private const val EXTRA_LAYOUT_SPACE_END: Int
 
       private fun getOrientation(horizontal: Boolean): Int {
          return var1 xor 1;

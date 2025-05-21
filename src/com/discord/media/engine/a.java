@@ -9,6 +9,6 @@ public final class a implements NativeConnection.GetEncryptionModesCallback {
 
    @Override
    public final void onEncryptionModes(String[] var1) {
-      MediaEngine.r(this.a, var1);
+      MediaEngine.c(this.a, var1);
    }
 }

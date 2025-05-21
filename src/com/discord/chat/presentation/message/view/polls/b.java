@@ -1,18 +1,16 @@
 package com.discord.chat.presentation.message.view.polls;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.polls.PollAction;
-import kotlin.jvm.functions.Function3;
+import com.discord.chat.presentation.message.messagepart.PollMessageAccessory;
+import com.discord.chat.reactevents.ViewResizeMode;
+import kotlin.jvm.functions.Function6;
+import kotlin.jvm.functions.Function8;
 
 // $VF: synthetic class
-public final class b implements OnClickListener {
-   public final PollAction j;
-   public final Function3 k;
-   public final long l;
-   public final String m;
+public final class b implements Function6 {
+   public final Function8 j;
+   public final PollMessageAccessory k;
 
-   public final void onClick(View var1) {
-      PollActionButton.d(this.j, this.k, this.l, this.m, var1);
+   public final Object invoke(Object var1, Object var2, Object var3, Object var4, Object var5, Object var6) {
+      return BasePollWithRecyclerView.h(this.j, this.k, (String)var1, (Integer)var2, (Integer)var3, (Integer)var4, (Integer)var5, (ViewResizeMode)var6);
    }
 }

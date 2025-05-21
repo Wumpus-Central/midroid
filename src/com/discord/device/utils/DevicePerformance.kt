@@ -5,6 +5,8 @@ import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
 
 internal object DevicePerformance {
+   private final lateinit var playServicesDevicePerformance: PlayServicesDevicePerformance
+
    public final val mediaPerformanceClass: Int
       public final get() {
          var var1: PlayServicesDevicePerformance = playServicesDevicePerformance;
@@ -16,8 +18,6 @@ internal object DevicePerformance {
          return var1.h();
       }
 
-
-   private final lateinit var playServicesDevicePerformance: PlayServicesDevicePerformance
 
    public fun initializePlayServicesDevicePerformance(reactContext: ReactApplicationContext) {
       q.h(var1, "reactContext");

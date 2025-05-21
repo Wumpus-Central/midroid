@@ -1,11 +1,58 @@
 package com.discord.theme
 
+import Q8.j
+import V1.A2
+import V1.B2
+import V1.C2
+import V1.D2
+import V1.E2
+import V1.F2
+import V1.G2
+import V1.H2
+import V1.I2
+import V1.J2
+import V1.K2
+import V1.P1
+import V1.Q1
+import V1.R1
+import V1.S1
+import V1.T1
+import V1.U1
+import V1.V1
+import V1.W1
+import V1.X1
+import V1.Y1
+import V1.Z1
+import V1.a2
+import V1.b2
+import V1.c2
+import V1.d2
+import V1.e2
+import V1.f2
+import V1.g2
+import V1.h2
+import V1.i2
+import V1.j2
+import V1.k2
+import V1.l2
+import V1.m2
+import V1.n2
+import V1.o2
+import V1.p2
+import V1.q2
+import V1.r2
+import V1.s2
+import V1.t2
+import V1.u2
+import V1.v2
+import V1.w2
+import V1.x2
+import V1.y2
+import V1.z2
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import o8.l
 
 internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -300,678 +347,294 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
       q.h(var1, "resources");
       q.h(var2, "theme");
       super(null);
-      this.androidRipple$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.android_ripple_midnight, this.$theme);
-         }
-      });
-      this.backgroundAccent$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
-         }
-      });
-      this.backgroundFloating$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
-         }
-      });
-      this.backgroundMessageHighlight$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_message_highlight_midnight, this.$theme);
-         }
-      });
-      this.backgroundMobilePrimary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
-         }
-      });
-      this.backgroundMobileSecondary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
-         }
-      });
-      this.backgroundModifierAccent$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_accent_midnight, this.$theme);
-         }
-      });
-      this.backgroundModifierSelected$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.background_modifier_selected_midnight, this.$theme);
-         }
-      });
-      this.backgroundPrimary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.black, this.$theme);
-         }
-      });
-      this.backgroundSecondary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
-         }
-      });
-      this.backgroundSecondaryAlt$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_17, this.$theme);
-         }
-      });
-      this.backgroundTertiary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
-         }
-      });
-      this.bgModStrong$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.bg_mod_strong_midnight, this.$theme);
-         }
-      });
-      this.bgSurfaceOverlay$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_19, this.$theme);
-         }
-      });
-      this.borderStrong$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_strong_midnight, this.$theme);
-         }
-      });
-      this.borderSubtle$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.border_subtle_midnight, this.$theme);
-         }
-      });
-      this.buttonSecondaryBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
-         }
-      });
-      this.cardPrimaryBg$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
-         }
-      });
-      this.chatSwipeToReplyBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_22, this.$theme);
-         }
-      });
-      this.chatSwipeToReplyGradientBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.chat_swipe_to_reply_gradient_background_midnight, this.$theme);
-         }
-      });
-      this.embedBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_23, this.$theme);
-         }
-      });
-      this.headerPrimary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_2, this.$theme);
-         }
-      });
-      this.headerSecondary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_8, this.$theme);
-         }
-      });
-      this.infoDangerForeground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
-         }
-      });
-      this.interactiveActive$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_3, this.$theme);
-         }
-      });
-      this.interactiveMuted$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_13, this.$theme);
-         }
-      });
-      this.interactiveNormal$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_6, this.$theme);
-         }
-      });
-      this.redesignButtonPrimaryBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_500, this.$theme);
-         }
-      });
-      this.redesignButtonTertiaryBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.redesign_button_tertiary_background_midnight, this.$theme);
-         }
-      });
-      this.redesignButtonTertiaryText$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
-         }
-      });
-      this.spoilerHiddenBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_14, this.$theme);
-         }
-      });
-      this.spoilerRevealedBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.spoiler_revealed_background_midnight, this.$theme);
-         }
-      });
-      this.statusDanger$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_400, this.$theme);
-         }
-      });
-      this.statusDangerBackground$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_430, this.$theme);
-         }
-      });
-      this.statusPositive$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_360, this.$theme);
-         }
-      });
-      this.statusPositiveText$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
-         }
-      });
-      this.statusWarning$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
-         }
-      });
-      this.textBrand$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.brand_400, this.$theme);
-         }
-      });
-      this.textDanger$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.red_345, this.$theme);
-         }
-      });
-      this.textLink$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.blue_345, this.$theme);
-         }
-      });
-      this.textLowContrast$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_12, this.$theme);
-         }
-      });
-      this.textMuted$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_10, this.$theme);
-         }
-      });
-      this.textNormal$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
-         }
-      });
-      this.textPositive$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.green_330, this.$theme);
-         }
-      });
-      this.textPrimary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_4, this.$theme);
-         }
-      });
-      this.textSecondary$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.plum_8, this.$theme);
-         }
-      });
-      this.textWarning$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.yellow_300, this.$theme);
-         }
-      });
-      this.white$delegate = l.a(new Function0(var1, var2) {
-         final Resources $resources;
-         final Theme $theme;
-
-         {
-            super(0);
-            this.$resources = var1;
-            this.$theme = var2;
-         }
-
-         public final Integer invoke() {
-            return ColorUtilsKt.getColorCompat(this.$resources, R.color.white, this.$theme);
-         }
-      });
+      this.androidRipple$delegate = j.b(new P1(var1, var2));
+      this.backgroundAccent$delegate = j.b(new R1(var1, var2));
+      this.backgroundFloating$delegate = j.b(new d2(var1, var2));
+      this.backgroundMessageHighlight$delegate = j.b(new p2(var1, var2));
+      this.backgroundMobilePrimary$delegate = j.b(new z2(var1, var2));
+      this.backgroundMobileSecondary$delegate = j.b(new A2(var1, var2));
+      this.backgroundModifierAccent$delegate = j.b(new B2(var1, var2));
+      this.backgroundModifierSelected$delegate = j.b(new C2(var1, var2));
+      this.backgroundPrimary$delegate = j.b(new D2(var1, var2));
+      this.backgroundSecondary$delegate = j.b(new E2(var1, var2));
+      this.backgroundSecondaryAlt$delegate = j.b(new a2(var1, var2));
+      this.backgroundTertiary$delegate = j.b(new l2(var1, var2));
+      this.bgModStrong$delegate = j.b(new w2(var1, var2));
+      this.bgSurfaceOverlay$delegate = j.b(new F2(var1, var2));
+      this.borderStrong$delegate = j.b(new G2(var1, var2));
+      this.borderSubtle$delegate = j.b(new H2(var1, var2));
+      this.buttonSecondaryBackground$delegate = j.b(new I2(var1, var2));
+      this.cardPrimaryBg$delegate = j.b(new J2(var1, var2));
+      this.chatSwipeToReplyBackground$delegate = j.b(new K2(var1, var2));
+      this.chatSwipeToReplyGradientBackground$delegate = j.b(new Q1(var1, var2));
+      this.embedBackground$delegate = j.b(new S1(var1, var2));
+      this.headerPrimary$delegate = j.b(new T1(var1, var2));
+      this.headerSecondary$delegate = j.b(new U1(var1, var2));
+      this.infoDangerForeground$delegate = j.b(new V1(var1, var2));
+      this.interactiveActive$delegate = j.b(new W1(var1, var2));
+      this.interactiveMuted$delegate = j.b(new X1(var1, var2));
+      this.interactiveNormal$delegate = j.b(new Y1(var1, var2));
+      this.redesignButtonPrimaryBackground$delegate = j.b(new Z1(var1, var2));
+      this.redesignButtonTertiaryBackground$delegate = j.b(new b2(var1, var2));
+      this.redesignButtonTertiaryText$delegate = j.b(new c2(var1, var2));
+      this.spoilerHiddenBackground$delegate = j.b(new e2(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.b(new f2(var1, var2));
+      this.statusDanger$delegate = j.b(new g2(var1, var2));
+      this.statusDangerBackground$delegate = j.b(new h2(var1, var2));
+      this.statusPositive$delegate = j.b(new i2(var1, var2));
+      this.statusPositiveText$delegate = j.b(new j2(var1, var2));
+      this.statusWarning$delegate = j.b(new k2(var1, var2));
+      this.textBrand$delegate = j.b(new m2(var1, var2));
+      this.textDanger$delegate = j.b(new n2(var1, var2));
+      this.textLink$delegate = j.b(new o2(var1, var2));
+      this.textLowContrast$delegate = j.b(new q2(var1, var2));
+      this.textMuted$delegate = j.b(new r2(var1, var2));
+      this.textNormal$delegate = j.b(new s2(var1, var2));
+      this.textPositive$delegate = j.b(new t2(var1, var2));
+      this.textPrimary$delegate = j.b(new u2(var1, var2));
+      this.textSecondary$delegate = j.b(new v2(var1, var2));
+      this.textWarning$delegate = j.b(new x2(var1, var2));
+      this.white$delegate = j.b(new y2(var1, var2));
+   }
+
+   @JvmStatic
+   fun `androidRipple_delegate$lambda$0`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.android_ripple_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundAccent_delegate$lambda$1`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_17, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundFloating_delegate$lambda$2`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_23, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundMessageHighlight_delegate$lambda$3`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.background_message_highlight_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundMobilePrimary_delegate$lambda$4`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.black, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundMobileSecondary_delegate$lambda$5`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.black, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundModifierAccent_delegate$lambda$6`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.background_modifier_accent_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundModifierSelected_delegate$lambda$7`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.background_modifier_selected_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundPrimary_delegate$lambda$8`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.black, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundSecondaryAlt_delegate$lambda$10`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_17, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundSecondary_delegate$lambda$9`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_23, var1);
+   }
+
+   @JvmStatic
+   fun `backgroundTertiary_delegate$lambda$11`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_19, var1);
+   }
+
+   @JvmStatic
+   fun `bgModStrong_delegate$lambda$12`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.bg_mod_strong_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `bgSurfaceOverlay_delegate$lambda$13`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_19, var1);
+   }
+
+   @JvmStatic
+   fun `borderStrong_delegate$lambda$14`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.border_strong_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `borderSubtle_delegate$lambda$15`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.border_subtle_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `buttonSecondaryBackground_delegate$lambda$16`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_13, var1);
+   }
+
+   @JvmStatic
+   fun `cardPrimaryBg_delegate$lambda$17`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_23, var1);
+   }
+
+   @JvmStatic
+   fun `chatSwipeToReplyBackground_delegate$lambda$18`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_22, var1);
+   }
+
+   @JvmStatic
+   fun `chatSwipeToReplyGradientBackground_delegate$lambda$19`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.chat_swipe_to_reply_gradient_background_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `embedBackground_delegate$lambda$20`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_23, var1);
+   }
+
+   @JvmStatic
+   fun `headerPrimary_delegate$lambda$21`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_2, var1);
+   }
+
+   @JvmStatic
+   fun `headerSecondary_delegate$lambda$22`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_8, var1);
+   }
+
+   @JvmStatic
+   fun `infoDangerForeground_delegate$lambda$23`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_400, var1);
+   }
+
+   @JvmStatic
+   fun `interactiveActive_delegate$lambda$24`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_3, var1);
+   }
+
+   @JvmStatic
+   fun `interactiveMuted_delegate$lambda$25`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_13, var1);
+   }
+
+   @JvmStatic
+   fun `interactiveNormal_delegate$lambda$26`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_6, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonPrimaryBackground_delegate$lambda$27`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.brand_500, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonTertiaryBackground_delegate$lambda$28`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.redesign_button_tertiary_background_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `redesignButtonTertiaryText_delegate$lambda$29`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
+   }
+
+   @JvmStatic
+   fun `spoilerHiddenBackground_delegate$lambda$30`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_14, var1);
+   }
+
+   @JvmStatic
+   fun `spoilerRevealedBackground_delegate$lambda$31`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.spoiler_revealed_background_midnight, var1);
+   }
+
+   @JvmStatic
+   fun `statusDangerBackground_delegate$lambda$33`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_430, var1);
+   }
+
+   @JvmStatic
+   fun `statusDanger_delegate$lambda$32`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_400, var1);
+   }
+
+   @JvmStatic
+   fun `statusPositiveText_delegate$lambda$35`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.white, var1);
+   }
+
+   @JvmStatic
+   fun `statusPositive_delegate$lambda$34`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.green_360, var1);
+   }
+
+   @JvmStatic
+   fun `statusWarning_delegate$lambda$36`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.yellow_300, var1);
+   }
+
+   @JvmStatic
+   fun `textBrand_delegate$lambda$37`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.brand_400, var1);
+   }
+
+   @JvmStatic
+   fun `textDanger_delegate$lambda$38`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.red_345, var1);
+   }
+
+   @JvmStatic
+   fun `textLink_delegate$lambda$39`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.blue_345, var1);
+   }
+
+   @JvmStatic
+   fun `textLowContrast_delegate$lambda$40`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_12, var1);
+   }
+
+   @JvmStatic
+   fun `textMuted_delegate$lambda$41`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_10, var1);
+   }
+
+   @JvmStatic
+   fun `textNormal_delegate$lambda$42`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
+   }
+
+   @JvmStatic
+   fun `textPositive_delegate$lambda$43`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.green_330, var1);
+   }
+
+   @JvmStatic
+   fun `textPrimary_delegate$lambda$44`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_4, var1);
+   }
+
+   @JvmStatic
+   fun `textSecondary_delegate$lambda$45`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.plum_8, var1);
+   }
+
+   @JvmStatic
+   fun `textWarning_delegate$lambda$46`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.yellow_300, var1);
+   }
+
+   @JvmStatic
+   fun `white_delegate$lambda$47`(var0: Resources, var1: Theme): Int {
+      return ColorUtilsKt.getColorCompat(var0, R.color.white, var1);
    }
 
    public override fun getColor(lightColor: Int, darkColor: Int): Int {

@@ -7,8 +7,8 @@ import com.discord.chat.presentation.message.messagepart.GuildInviteMessageAcces
 import com.discord.chat.presentation.message.view.GuildInviteView
 
 public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
-   public final val eventHandler: ChatEventHandler
    private final val guildInviteView: GuildInviteView
+   public final val eventHandler: ChatEventHandler
 
    init {
       kotlin.jvm.internal.q.h(var1, "guildInviteView");
@@ -20,15 +20,11 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
 
    @JvmStatic
    fun `bind$lambda$2$lambda$0`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), null, null);
    }
 
    @JvmStatic
    fun `bind$lambda$2$lambda$1`(var0: GuildInviteViewHolder, var1: GuildInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
       var0.eventHandler.onTapInviteEmbedAccept-ntcYbpo(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex());
    }
 
@@ -37,11 +33,11 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       val var4: GuildInviteEmbedImpl = var1.getInvite();
       val var3: GuildInviteView = this.guildInviteView;
       var var2: java.lang.String = var4.getSubtitle();
-      if (var2 != null && !kotlin.text.h.d0(var2)) {
+      if (var2 != null && !kotlin.text.h.c0(var2)) {
          var2 = var4.getSubtitle();
       } else {
          var2 = var4.getChannelIcon();
-         if (var2 != null && !kotlin.text.h.d0(var2)) {
+         if (var2 != null && !kotlin.text.h.c0(var2)) {
             var2 = var4.getChannelName();
          } else {
             var2 = null;
@@ -59,7 +55,7 @@ public class GuildInviteViewHolder(guildInviteView: GuildInviteView, eventHandle
       var3.setSubtitle(var2);
       var3.setSubtitleColor(var4.getSubtitleColor());
       var3.setSubtitleIcon(var4.getChannelIcon());
-      var3.setClickListeners(var4.getCanBeAccepted(), new n(this, var1), new o(this, var1));
+      var3.setClickListeners(var4.getCanBeAccepted(), new r(this, var1), new s(this, var1));
       var3.setButtonText(var4.getAcceptLabelText());
       var3.setButtonTextColor(var4.getAcceptLabelColor());
       var3.setButtonBackgroundColor(var4.getAcceptLabelBackgroundColor());

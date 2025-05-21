@@ -8,9 +8,9 @@ import android.text.style.LeadingMarginSpan
 import kotlin.jvm.internal.q
 
 public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, largestListItemIndex: Long, paint: Paint) : LeadingMarginSpan {
-   private final val largestBulletContentWidth: Float
    private final val listItemIndex: Long
    private final val trailingMargin: Int
+   private final val largestBulletContentWidth: Float
 
    init {
       q.h(var6, "paint");

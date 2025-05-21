@@ -6,8 +6,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1000L) {
-   public final val delayedTasks: MutableList<() -> Unit>
-   private final var initStartMs: Long
+   private final val name: String
+   private final val longDispatchThresholdMs: Long
 
    public final var initialized: Boolean
       internal final set(value) {
@@ -30,9 +30,9 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
       }
 
 
-   private final val longDispatchThresholdMs: Long
-   private final val name: String
+   public final val delayedTasks: MutableList<() -> Unit>
    private final val threadChecker: AsyncInitThreadChecker
+   private final var initStartMs: Long
 
    init {
       q.h(var1, "name");
@@ -49,14 +49,14 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
       }
 
       val var2: Log = Log.INSTANCE;
-      val var4: java.lang.String = this.name;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Initializing async dispatcher for ");
-      var3.append(var4);
-      var3.append(", ");
-      var3.append(var1);
-      var3.append(" queued tasks");
-      Log.i$default(var2, var4, var3.toString(), null, 4, null);
+      val var3: java.lang.String = this.name;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Initializing async dispatcher for ");
+      var4.append(var3);
+      var4.append(", ");
+      var4.append(var1);
+      var4.append(" queued tasks");
+      Log.i$default(var2, var3, var4.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
@@ -64,14 +64,14 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          val var1: Long = System.currentTimeMillis() - this.initStartMs;
          val var3: Long = this.longDispatchThresholdMs;
          if (var1 < this.longDispatchThresholdMs) {
-            val var6: Log = Log.INSTANCE;
-            val var7: java.lang.String = this.name;
+            val var7: Log = Log.INSTANCE;
+            val var6: java.lang.String = this.name;
             val var5: StringBuilder = new StringBuilder();
-            var5.append(var7);
+            var5.append(var6);
             var5.append(": queued tasks  took ");
             var5.append(var1);
             var5.append(" ms");
-            Log.i$default(var6, var7, var5.toString(), null, 4, null);
+            Log.i$default(var7, var6, var5.toString(), null, 4, null);
          } else {
             val var9: Log = Log.INSTANCE;
             val var10: java.lang.String = this.name;
@@ -100,7 +100,6 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
             final Function0 $task;
 
             {
-               super(0);
                this.$task = var1;
             }
 

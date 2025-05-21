@@ -15,9 +15,15 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import java.util.ArrayList
-import kotlin.jvm.functions.Function0
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import q1.a
+import q1.b
+import q1.c
+import q1.d
+import q1.e
+import q1.f
+import q1.g
+import q1.h
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,
@@ -52,16 +58,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
 
    @JvmStatic
    fun `onBindViewHolder$lambda$0`(var0: AttachmentMediaMosaicAdapter, var1: ImageAttachmentMessageAccessory, var2: MessagePartViewHolder, var3: View) {
-      q.h(var0, "this$0");
-      q.h(var1, "$accessory");
-      q.h(var2, "$holder");
       var0.onItemClicked.invoke(var1, var2);
    }
 
    @JvmStatic
    fun `onBindViewHolder$lambda$1`(var0: AttachmentMediaMosaicAdapter, var1: ImageAttachmentMessageAccessory, var2: View): Boolean {
-      q.h(var0, "this$0");
-      q.h(var1, "$accessory");
       if (var0.onItemLongClicked != null) {
          var0.onItemLongClicked.invoke(var1);
       }
@@ -70,22 +71,41 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$2`(var0: AttachmentMediaMosaicAdapter, var1: VideoAttachmentMessageAccessory, var2: MessagePartViewHolder, var3: View) {
-      q.h(var0, "this$0");
-      q.h(var1, "$accessory");
-      q.h(var2, "$holder");
+   fun `onBindViewHolder$lambda$2`(var0: AttachmentMediaMosaicAdapter, var1: ImageAttachmentMessageAccessory): Unit {
+      var0.onItemSpoilerClicked.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$3`(var0: AttachmentMediaMosaicAdapter, var1: Boolean): Unit {
+      var0.onItemObscureToggle.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$4`(var0: AttachmentMediaMosaicAdapter, var1: VideoAttachmentMessageAccessory, var2: MessagePartViewHolder, var3: View) {
       var0.onItemClicked.invoke(var1, var2);
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$3`(var0: AttachmentMediaMosaicAdapter, var1: VideoAttachmentMessageAccessory, var2: View): Boolean {
-      q.h(var0, "this$0");
-      q.h(var1, "$accessory");
+   fun `onBindViewHolder$lambda$5`(var0: AttachmentMediaMosaicAdapter, var1: VideoAttachmentMessageAccessory, var2: View): Boolean {
       if (var0.onItemLongClicked != null) {
          var0.onItemLongClicked.invoke(var1);
       }
 
       return false;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$6`(var0: AttachmentMediaMosaicAdapter, var1: VideoAttachmentMessageAccessory): Unit {
+      var0.onItemSpoilerClicked.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$7`(var0: AttachmentMediaMosaicAdapter, var1: Boolean): Unit {
+      var0.onItemObscureToggle.invoke(var1);
+      return Unit.a;
    }
 
    public override fun getItemCount(): Int {
@@ -130,44 +150,22 @@ public class AttachmentMediaMosaicAdapter(context: Context,
             val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
             val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new Function0(this, (ImageAttachmentMessageAccessory)var6) {
-               final ImageAttachmentMessageAccessory $accessory;
-               final AttachmentMediaMosaicAdapter this$0;
-
-               {
-                  super(0);
-                  this.this$0 = var1;
-                  this.$accessory = var2;
-               }
-
-               public final void invoke() {
-                  AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
-               }
-            }, new Function1(this) {
-               final AttachmentMediaMosaicAdapter this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(boolean var1) {
-                  AttachmentMediaMosaicAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
-               }
-            }, var4);
+            var7.bindAttachment(
+               var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
+            );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
+               val var10: Class = var1.getClass();
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Invalid view holder type ");
+               var12.append(var10);
+               throw new IllegalStateException(var12.toString().toString());
             }
 
-            var var14: Any = this.items.get(var2);
+            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
             q.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
-            var14 = var14 as VideoAttachmentMessageAccessory;
-            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
+            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -175,39 +173,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var16.bindAttachment(
-               var5,
-               (VideoAttachmentMessageAccessory)var14,
-               var11,
-               new c(this, (VideoAttachmentMessageAccessory)var14, var1),
-               new d(this, (VideoAttachmentMessageAccessory)var14),
-               new Function0(this, (VideoAttachmentMessageAccessory)var14) {
-                  final VideoAttachmentMessageAccessory $accessory;
-                  final AttachmentMediaMosaicAdapter this$0;
-
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                     this.$accessory = var2;
-                  }
-
-                  public final void invoke() {
-                     AttachmentMediaMosaicAdapter.access$getOnItemSpoilerClicked$p(this.this$0).invoke(this.$accessory);
-                  }
-               },
-               new Function1(this) {
-                  final AttachmentMediaMosaicAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(boolean var1) {
-                     AttachmentMediaMosaicAdapter.access$getOnItemObscureToggle$p(this.this$0).invoke(var1);
-                  }
-               }
-            );
+            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
          }
       }
    }

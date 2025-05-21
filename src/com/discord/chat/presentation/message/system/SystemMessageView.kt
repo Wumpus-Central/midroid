@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.system
 
+import Q8.s
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -48,19 +49,17 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import o8.w
 
 public class SystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListConstraintLayout, SpineParentMessage {
-   private final var accessories: ArrayList<MessageAccessory>
-   private final val binding: SystemMessageViewBinding
-   private final val greenIconColor: Int
-   private final val mutedIconColor: Int
    private final val normalIconColor: Int
-   private final val pinkIconColor: Int
+   private final val greenIconColor: Int
    private final val redIconColor: Int
+   private final val warnIconColor: Int
+   private final val pinkIconColor: Int
+   private final val mutedIconColor: Int
+   private final val binding: SystemMessageViewBinding
 
    public open val spineOriginView: View
       public open get() {
@@ -70,7 +69,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
 
-   private final val warnIconColor: Int
+   private final var accessories: ArrayList<MessageAccessory>
 
    fun SystemMessageView(var1: Context) {
       q.h(var1, "context");
@@ -110,9 +109,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var20: StructurableText = var1.getContent();
-      if (var20 != null) {
-         val var13: ArrayList = this.accessories;
+      var var13: StructurableText = var1.getContent();
+      if (var13 != null) {
+         val var20: ArrayList = this.accessories;
          val var14: java.lang.String = var1.getId-3Eiw7ao();
          val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
          val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
@@ -141,10 +140,10 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var13.add(
+         var20.add(
             new MessageContentAccessory(
                var14,
-               var20,
+               var13,
                var10,
                var8,
                var11,
@@ -178,11 +177,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
          val var33: ArrayList = this.accessories;
-         val var31: java.lang.String = var1.getId-3Eiw7ao();
-         val var23: java.lang.String = var1.getUsername();
+         val var23: java.lang.String = var1.getId-3Eiw7ao();
+         val var31: java.lang.String = var1.getUsername();
          val var28: Context = this.binding.getRoot().getContext();
          q.g(var28, "getContext(...)");
-         var33.add(new RoleSubscriptionPurchaseAccessory(var31, var23, MessageKt.avatarUrl(var1, var28), var3, false, null));
+         var33.add(new RoleSubscriptionPurchaseAccessory(var23, var31, MessageKt.avatarUrl(var1, var28), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -200,7 +199,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var26: java.util.Iterator = var25.iterator();
 
             for (int var19 = 0; var26.hasNext(); var19++) {
-               val var29: Any = var26.next();
+               var13 = (StructurableText)var26.next();
                if (var19 < 0) {
                   i.u();
                }
@@ -213,7 +212,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var29 as Embed,
+                        var13 as Embed,
                         false,
                         false,
                         false,
@@ -290,83 +289,83 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          case 6:
          case 7:
          case 8:
-            var3 = w.a(ReactAsset.ArrowForward, this.greenIconColor);
+            var3 = s.a(ReactAsset.ArrowForward, this.greenIconColor);
             break;
          case 9:
          case 10:
-            var3 = w.a(ReactAsset.ArrowBack, this.redIconColor);
+            var3 = s.a(ReactAsset.ArrowBack, this.redIconColor);
             break;
          case 11:
          case 12:
          case 13:
          case 14:
-            var3 = w.a(ReactAsset.Pencil, this.normalIconColor);
+            var3 = s.a(ReactAsset.Pencil, this.normalIconColor);
             break;
          case 15:
-            var3 = w.a(ReactAsset.Pin, this.normalIconColor);
+            var3 = s.a(ReactAsset.Pin, this.normalIconColor);
             break;
          case 16:
-            var3 = w.a(ReactAsset.Ticket, this.normalIconColor);
+            var3 = s.a(ReactAsset.Ticket, this.normalIconColor);
             break;
          case 17:
          case 18:
          case 19:
          case 20:
-            var3 = w.a(ReactAsset.MemberListBadge, this.pinkIconColor);
+            var3 = s.a(ReactAsset.MemberListBadge, this.pinkIconColor);
             break;
          case 21:
-            var3 = w.a(ReactAsset.AnnouncementThread, this.normalIconColor);
+            var3 = s.a(ReactAsset.AnnouncementThread, this.normalIconColor);
             break;
          case 22:
-            var3 = w.a(ReactAsset.Close, this.redIconColor);
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
             break;
          case 23:
-            var3 = w.a(ReactAsset.Check, this.greenIconColor);
+            var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 24:
          case 25:
-            var3 = w.a(ReactAsset.Alert, this.warnIconColor);
+            var3 = s.a(ReactAsset.Alert, this.warnIconColor);
             break;
          case 26:
          case 27:
-            var3 = w.a(ReactAsset.Thread, this.normalIconColor);
+            var3 = s.a(ReactAsset.Thread, this.normalIconColor);
             break;
          case 28:
-            var3 = w.a(ReactAsset.StageChannel, this.greenIconColor);
+            var3 = s.a(ReactAsset.StageChannel, this.greenIconColor);
             break;
          case 29:
          case 30:
-            var3 = w.a(ReactAsset.StageChannel, this.normalIconColor);
+            var3 = s.a(ReactAsset.StageChannel, this.normalIconColor);
             break;
          case 31:
-            var3 = w.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
+            var3 = s.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
             break;
          case 32:
-            var3 = w.a(ReactAsset.RaisedHand, this.normalIconColor);
+            var3 = s.a(ReactAsset.RaisedHand, this.normalIconColor);
             break;
          case 33:
-            var3 = w.a(ReactAsset.LockClosed, this.normalIconColor);
+            var3 = s.a(ReactAsset.LockClosed, this.normalIconColor);
             break;
          case 34:
-            var3 = w.a(ReactAsset.LockOpen, this.normalIconColor);
+            var3 = s.a(ReactAsset.LockOpen, this.normalIconColor);
             break;
          case 35:
-            var3 = w.a(ReactAsset.PollsIcon, this.normalIconColor);
+            var3 = s.a(ReactAsset.PollsIcon, this.normalIconColor);
             break;
          case 36:
-            var3 = w.a(ReactAsset.Refresh, this.greenIconColor);
+            var3 = s.a(ReactAsset.Refresh, this.greenIconColor);
             break;
          case 37:
-            var3 = w.a(ReactAsset.GameController, this.mutedIconColor);
+            var3 = s.a(ReactAsset.GameController, this.mutedIconColor);
             break;
          case 38:
-            var3 = w.a(ReactAsset.Check, this.greenIconColor);
+            var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 39:
-            var3 = w.a(ReactAsset.Close, this.redIconColor);
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
             break;
          case 40:
-            var3 = w.a(ReactAsset.ArrowBack, this.normalIconColor);
+            var3 = s.a(ReactAsset.ArrowBack, this.normalIconColor);
             break;
          default:
             val var2: StringBuilder = new StringBuilder();
@@ -380,8 +379,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
    @JvmStatic
    fun `setMessage$lambda$0`(var0: Message, var1: ChatEventHandler, var2: View): Boolean {
-      q.h(var0, "$message");
-      q.h(var1, "$eventHandler");
       val var3: Boolean;
       if (MessageKt.isEphemeral(var0)) {
          var3 = false;
@@ -397,6 +394,17 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       return var3;
    }
 
+   @JvmStatic
+   fun `setMessage$lambda$2`(var0: SystemMessageView, var1: Message, var2: OnLongClickListener, var3: MessageContentView): Unit {
+      q.h(var3, "it");
+      a0.p0(var0, new MessageViewAccessibilityDelegate(var1, var3, new g(), var2));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `setMessage$lambda$2$lambda$1`(var0: View) {
+   }
+
    public fun setAccessoriesRecycledViewPool(recycledViewPool: RecycledViewPool) {
       q.h(var1, "recycledViewPool");
       this.binding.accessoriesView.setRecycledViewPool(var1);
@@ -406,7 +414,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       q.h(var1, "message");
       q.h(var2, "context");
       q.h(var3, "eventHandler");
-      val var5: c = new c(var1, var3);
+      val var5: e = new e(var1, var3);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var5);
       val var7: Pair = this.getIconAndColor(var1.getType());
       val var6: ReactAsset = var7.a() as ReactAsset;
@@ -431,25 +439,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       var8.setVisibility(var9);
-      this.binding.accessoriesView.setOnCurrentContentViewChanged(new Function1(this, var1, var5) {
-         final Message $message;
-         final OnLongClickListener $onLongClick;
-         final SystemMessageView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-            this.$message = var2;
-            this.$onLongClick = var3;
-         }
-
-         private static final void invoke$lambda$0(View var0) {
-         }
-
-         public final void invoke(MessageContentView var1) {
-            q.h(var1, "it");
-            a0.p0(this.this$0, new MessageViewAccessibilityDelegate(this.$message, var1, new d(), this.$onLongClick));
-         }
-      });
+      this.binding.accessoriesView.setOnCurrentContentViewChanged(new f(this, var1, var5));
    }
 }

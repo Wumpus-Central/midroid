@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.referral
 
+import Na.g
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import la.g
 
 @JvmSynthetic
 fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boolean {
@@ -21,7 +21,7 @@ private fun JsonObject.hasPrimitive(key: String): Boolean {
          var2 = false;
          if (var6 != null) {
             var2 = false;
-            if (h.d0(var6) xor true) {
+            if (h.c0(var6) xor true) {
                var2 = true;
             }
          }

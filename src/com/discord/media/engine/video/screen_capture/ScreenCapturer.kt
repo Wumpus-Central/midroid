@@ -21,18 +21,6 @@ import org.webrtc.TimestampAligner
 import org.webrtc.VideoFrame
 
 internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : ScreenCapturerAndroid {
-   private final val calculatedSize: Point
-   private final lateinit var context: Context
-   private final val currentMeasuredSize: Rect
-   private final var framerate: Int
-   private final var intervalNanos: Int
-   private final var lastFrameTimestamp: Long?
-   private final val lastMeasuredSize: Rect
-   private final var maxPixelCount: Int
-   private final lateinit var nativeObserver: NativeCapturerObserver
-   public final val soundshare: SoundshareAudioSource
-   private final lateinit var surfaceTextureHelper: SurfaceTextureHelper
-
    public final var thumbnailEmitter: ThumbnailEmitter?
       internal final set(value) {
          if (this.thumbnailEmitter != null) {
@@ -44,6 +32,17 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
 
    private final val watchdog: com.discord.media.engine.video.screen_capture.ScreenCapturer.Watchdog
+   private final lateinit var nativeObserver: NativeCapturerObserver
+   private final lateinit var surfaceTextureHelper: SurfaceTextureHelper
+   private final lateinit var context: Context
+   public final val soundshare: SoundshareAudioSource
+   private final var framerate: Int
+   private final var intervalNanos: Int
+   private final var lastFrameTimestamp: Long?
+   private final val lastMeasuredSize: Rect
+   private final val currentMeasuredSize: Rect
+   private final val calculatedSize: Point
+   private final var maxPixelCount: Int
 
    init {
       q.h(var1, "mediaProjectionPermissionResultData");
@@ -82,7 +81,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
          q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
-         var3.set(z0.c.a(d.a(var4 as WindowManager)));
+         var3.set(y0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }
@@ -431,11 +430,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    }
 
    public companion object {
-      private const val AUDIO_FORMAT: Int
-      private const val CHANNEL_CONFIG: Int
-      private const val MIN_REPEAT_FRAMERATE: Int
-      private const val SAMPLING_RATE_IN_HZ: Int
       private const val TAG: String
+      private const val SAMPLING_RATE_IN_HZ: Int
+      private const val CHANNEL_CONFIG: Int
+      private const val AUDIO_FORMAT: Int
+      private const val MIN_REPEAT_FRAMERATE: Int
 
       private fun closestMod16(n: Int): Int {
          val var2: Int = var1 % 16;

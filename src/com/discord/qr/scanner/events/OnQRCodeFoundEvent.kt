@@ -1,25 +1,15 @@
 package com.discord.qr.scanner.events
 
+import Ja.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class OnQRCodeFoundEvent(status: String, result: String? = null) : ReactEvent {
-   public final val result: String?
    public final val status: String
+   public final val result: String?
 
    init {
       q.h(var1, "status");
@@ -82,82 +72,6 @@ internal data class OnQRCodeFoundEvent(status: String, result: String? = null) :
       var3.append(var2);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: OnQRCodeFoundEvent.$serializer = new OnQRCodeFoundEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.qr.scanner.events.OnQRCodeFoundEvent", var0, 2);
-         var1.l("status", false);
-         var1.l("result", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, a.u(C0.a)};
-      }
-
-      public open fun deserialize(decoder: Decoder): OnQRCodeFoundEvent {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         var var2: Int;
-         var var5: java.lang.String;
-         var var8: java.lang.String;
-         if (var7.y()) {
-            var8 = var7.t(var6, 0);
-            var5 = var7.v(var6, 1, C0.a, null) as java.lang.String;
-            var2 = 3;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-            var5 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        throw new n(var4);
-                     }
-
-                     var5 = var7.v(var6, 1, C0.a, var5) as java.lang.String;
-                     var2 |= 2;
-                  } else {
-                     var8 = var7.t(var6, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new OnQRCodeFoundEvent(var2, var8, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: OnQRCodeFoundEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         OnQRCodeFoundEvent.write$Self$qr_scanner_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
    }
 
    public companion object {

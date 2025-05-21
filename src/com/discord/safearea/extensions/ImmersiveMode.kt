@@ -32,15 +32,14 @@ public object ImmersiveMode {
 
    @JvmStatic
    fun `fitSystemWindowsAndAdjustResize$lambda$1`(var0: ViewGroup, var1: View, var2: View, var3: WindowInsetsCompat): WindowInsetsCompat {
-      q.h(var1, "$rootViewChild");
-      q.h(var2, "<anonymous parameter 0>");
-      q.h(var3, "insets");
       var0.setFitsSystemWindows(true);
-      val var4: WindowInsetsCompat = new WindowInsetsCompat.b(var3)
-         .b(WindowInsetsCompat.m.h(), Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
+      val var5: WindowInsetsCompat.a = new WindowInsetsCompat.a(var3);
+      val var4: Int = WindowInsetsCompat.n.h();
+      q.e(var3);
+      val var6: WindowInsetsCompat = var5.b(var4, Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
-      a0.b0(var1, var4);
-      return var4;
+      a0.b0(var1, var6);
+      return var6;
    }
 
    public fun enableImmersiveMode(activity: Activity) {

@@ -1,5 +1,6 @@
 package com.discord.ads
 
+import Q8.s
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -17,7 +18,6 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicReference
 import kotlin.jvm.internal.q
-import o8.w
 
 public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleSpec {
    private final val adExecutor: ExecutorService
@@ -49,21 +49,19 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
 
    @JvmStatic
    fun `getAdvertisingIdInfoAsync$lambda$1$lambda$0`(var0: SettableFuture, var1: AdsModule) {
-      q.h(var1, "this$0");
-
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var3: java.lang.String = var4.getMessage();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Error getting google advertising ID info: ");
-         var5.append(var3);
-         var0.y(new Exception(var5.toString(), var4));
+         val var5: java.lang.String = var4.getMessage();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Error getting google advertising ID info: ");
+         var3.append(var5);
+         var0.y(new Exception(var3.toString(), var4));
       }
    }
 
    private fun resolveWithNullId(promise: Promise) {
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(w.a("googleAdvertisingId", null), w.a("isLimitAdTrackingEnabled", java.lang.Boolean.TRUE)));
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("googleAdvertisingId", null), s.a("isLimitAdTrackingEnabled", java.lang.Boolean.TRUE)));
    }
 
    public override fun getGoogleAdvertisingId(promise: Promise) {
@@ -87,12 +85,12 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
                Log.i$default(Log.INSTANCE, "AdsModule", "Google advertising ID operation was cancelled", null, 4, null);
                AdsModule.access$resolveWithNullId(this.this$0, this.$promise);
             } else {
-               val var4: Log = Log.INSTANCE;
-               val var2: java.lang.String = var1.getMessage();
-               val var3: StringBuilder = new StringBuilder();
-               var3.append("Error getting google advertising ID: ");
-               var3.append(var2);
-               var4.e("AdsModule", var3.toString(), var1);
+               val var3: Log = Log.INSTANCE;
+               val var4: java.lang.String = var1.getMessage();
+               val var2: StringBuilder = new StringBuilder();
+               var2.append("Error getting google advertising ID: ");
+               var2.append(var4);
+               var3.e("AdsModule", var2.toString(), var1);
                this.$promise.reject("err", "Failed to get google advertising ID", var1);
             }
          }
@@ -109,7 +107,7 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
                var5 = var7;
             }
 
-            val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(w.a("googleAdvertisingId", var5), w.a("isLimitAdTrackingEnabled", var2));
+            val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(s.a("googleAdvertisingId", var5), s.a("isLimitAdTrackingEnabled", var2));
             if (var2) {
                Log.i$default(Log.INSTANCE, "AdsModule", "User has limited ad tracking, returning null ID", null, 4, null);
             } else {

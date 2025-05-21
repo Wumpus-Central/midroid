@@ -18,15 +18,11 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function2, var1: java.lang.String, var2: Long, var4: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAutoModerationActions");
-      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.invoke(MessageId.box-impl(var1), ChannelId.box-impl(var2));
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function2, var1: java.lang.String, var2: Long, var4: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAutoModerationFeedback");
-      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.invoke(MessageId.box-impl(var1), ChannelId.box-impl(var2));
    }
 

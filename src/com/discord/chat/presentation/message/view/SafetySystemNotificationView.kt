@@ -45,7 +45,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setDescription(description: String) {
-      if (kotlin.text.h.d0(var1)) {
+      if (kotlin.text.h.c0(var1)) {
          this.binding.description.setVisibility(8);
       } else {
          val var2: TextView = this.binding.description;
@@ -54,12 +54,13 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
          kotlin.jvm.internal.q.e(var2);
          DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryNormal);
          var2.setVisibility(0);
+         kotlin.jvm.internal.q.e(var2);
       }
    }
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new T(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new M0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.q.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -67,15 +68,12 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    @JvmStatic
    fun `setPrimaryCta$lambda$6$lambda$5`(var0: Function2, var1: java.lang.String, var2: java.lang.String, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "$callback");
-      kotlin.jvm.internal.q.h(var1, "$primaryCtaType");
-      kotlin.jvm.internal.q.h(var2, "$primaryCtaKey");
       var0.invoke(var1, var2);
    }
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new U(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new N0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.q.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -83,14 +81,11 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    @JvmStatic
    fun `setSecondaryCta$lambda$8$lambda$7`(var0: Function2, var1: java.lang.String, var2: java.lang.String, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "$callback");
-      kotlin.jvm.internal.q.h(var1, "$secondaryCtaType");
-      kotlin.jvm.internal.q.h(var2, "$secondaryCtaKey");
       var0.invoke(var1, var2);
    }
 
    private fun setSubtitle(subtitle: String) {
-      if (kotlin.text.h.d0(var1)) {
+      if (kotlin.text.h.c0(var1)) {
          this.binding.subtitleText.setVisibility(8);
       } else {
          val var2: TextView = this.binding.subtitleText;
@@ -99,6 +94,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
          kotlin.jvm.internal.q.e(var2);
          DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryMedium);
          var2.setVisibility(0);
+         kotlin.jvm.internal.q.e(var2);
       }
    }
 
@@ -121,7 +117,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    }
 
    private fun setTitle(titleText: String) {
-      if (kotlin.text.h.d0(var1)) {
+      if (kotlin.text.h.c0(var1)) {
          this.binding.titleContainer.setVisibility(8);
       } else {
          val var2: TextView = this.binding.title;
@@ -130,6 +126,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
          kotlin.jvm.internal.q.e(var2);
          DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimarySemibold);
          var2.setVisibility(0);
+         kotlin.jvm.internal.q.e(var2);
       }
    }
 
@@ -171,11 +168,11 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
       this.setDescription(var4);
       this.setTheme(var11);
       this.setPrimaryCta(var5, var7, var6, var12);
-      if (!kotlin.text.h.d0(var8) && !kotlin.text.h.d0(var10)) {
+      if (!kotlin.text.h.c0(var8) && !kotlin.text.h.c0(var10)) {
          this.setSecondaryCta(var8, var9, var10, var12);
       }
 
-      if (!kotlin.text.h.d0(var5) && !kotlin.text.h.d0(var8)) {
+      if (!kotlin.text.h.c0(var5) && !kotlin.text.h.c0(var8)) {
          this.binding.separator.setVisibility(0);
       }
    }

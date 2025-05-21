@@ -1,5 +1,6 @@
 package com.discord.crash_reporting
 
+import Q8.s
 import com.discord.crash_reporting.react_events.CrashReportEvent
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
@@ -12,14 +13,11 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import io.sentry.react.RNSentryModule
-import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
-   private final val reactEvents: ReactEvents
 
    private final val sentryModule: RNSentryModule
       private final get() {
@@ -29,11 +27,24 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
       }
 
 
+   private final val reactEvents: ReactEvents
+
    init {
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("onCrashReportsReceived", G.b(CrashReportEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("onCrashReportsReceived", G.b(CrashReportEvent.class)));
+   }
+
+   @JvmStatic
+   fun `addListener$lambda$0`(
+      var0: CrashReportingModule, var1: HistoricalProcessExitReason.Reason, var2: SystemLogUtils.Tombstone, var3: SystemLogReport.SentryCrashData
+   ): Unit {
+      val var4: ReactEvents = var0.reactEvents;
+      val var5: ReactApplicationContext = var0.getReactApplicationContext();
+      q.g(var5, "getReactApplicationContext(...)");
+      var4.emitModuleEvent(var5, new CrashReportEvent(java.lang.Boolean.TRUE, var3, var1, var2));
+      return Unit.a;
    }
 
    @ReactMethod
@@ -43,21 +54,7 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
          val var3: SystemLogReport = SystemLogReport.INSTANCE;
          val var2: ReactApplicationContext = this.getReactApplicationContext();
          q.g(var2, "getReactApplicationContext(...)");
-         var3.reportLastCrash$crash_reporting_release(var2, new Function3(this) {
-            final CrashReportingModule this$0;
-
-            {
-               super(3);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(HistoricalProcessExitReason.Reason var1, SystemLogUtils.Tombstone var2, SystemLogReport.SentryCrashData var3) {
-               val var5: ReactEvents = CrashReportingModule.access$getReactEvents$p(this.this$0);
-               val var4: ReactApplicationContext = CrashReportingModule.access$getReactApplicationContext(this.this$0);
-               q.g(var4, "access$getReactApplicationContext(...)");
-               var5.emitModuleEvent(var4, new CrashReportEvent(java.lang.Boolean.TRUE, var3, var1, var2));
-            }
-         });
+         var3.reportLastCrash$crash_reporting_release(var2, new d(this));
       }
    }
 

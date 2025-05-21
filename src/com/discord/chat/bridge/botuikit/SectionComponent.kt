@@ -1,28 +1,17 @@
 package com.discord.chat.bridge.botuikit
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>)
    : BaseLayoutComponent {
-   public final val accessory: SectionAccessory<*>
-   public final val components: List<SectionChildComponent<*>>
-   public open val errorText: String?
-   public open val id: String
    public open val type: Int
+   public open val id: String
+   public open val errorText: String?
+   public final val components: List<SectionChildComponent<*>>
+   public final val accessory: SectionAccessory<*>
 
    init {
       q.h(var2, "id");
@@ -91,8 +80,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -100,132 +89,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var6: java.util.List = this.components;
-      val var5: SectionAccessory = this.accessory;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SectionComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(", errorText=");
-      var2.append(var4);
-      var2.append(", components=");
-      var2.append(var6);
-      var2.append(", accessory=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: SectionComponent.$serializer = new SectionComponent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("9", var0, 5);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("errorText", true);
-         var1.l("components", false);
-         var1.l("accessory", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, C0.a, a.u(C0.a), SectionComponent.access$get$childSerializers$cp()[3], SectionAccessory.Serializer.INSTANCE};
-      }
-
-      public open fun deserialize(decoder: Decoder): SectionComponent {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var11: Array<KSerializer> = SectionComponent.access$get$childSerializers$cp();
-         var var2: Int;
-         var var3: Int;
-         var var6: Any;
-         var var7: java.lang.String;
-         var var8: java.lang.String;
-         var var12: Any;
-         if (var10.y()) {
-            var3 = var10.k(var9, 0);
-            var8 = var10.t(var9, 1);
-            var7 = var10.v(var9, 2, C0.a, null) as java.lang.String;
-            var6 = var10.m(var9, 3, var11[3], null) as java.util.List;
-            var12 = var10.m(var9, 4, SectionAccessory.Serializer.INSTANCE, null) as SectionAccessory;
-            var2 = 31;
-         } else {
-            var var4: Boolean = true;
-            var3 = 0;
-            var8 = null;
-            var7 = null;
-            var6 = null;
-            var12 = null;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var10.x(var9);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           if (var5 != 3) {
-                              if (var5 != 4) {
-                                 throw new n(var5);
-                              }
-
-                              var12 = var10.m(var9, 4, SectionAccessory.Serializer.INSTANCE, var12) as SectionAccessory;
-                              var2 |= 16;
-                           } else {
-                              var6 = var10.m(var9, 3, var11[3], var6) as java.util.List;
-                              var2 |= 8;
-                           }
-                        } else {
-                           var7 = var10.v(var9, 2, C0.a, var7) as java.lang.String;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var8 = var10.t(var9, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var3 = var10.k(var9, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-         }
-
-         var10.b(var9);
-         return new SectionComponent(var2, var3, var8, var7, (java.util.List)var6, (SectionAccessory)var12, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: SectionComponent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         SectionComponent.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var4: java.lang.String = this.id;
+      val var6: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var2: SectionAccessory = this.accessory;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SectionComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", errorText=");
+      var3.append(var6);
+      var3.append(", components=");
+      var3.append(var5);
+      var3.append(", accessory=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

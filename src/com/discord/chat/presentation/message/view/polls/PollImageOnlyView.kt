@@ -152,6 +152,7 @@ public class PollImageOnlyView  public constructor(context: Context, attrs: Attr
                var16.setVisibility(0);
                var16.setText(var8.getVotes());
                var16.setTextColor(var1.getLabelColor());
+               q.e(var16);
             } else {
                val var10: TextView = (this.getBinding() as PollImageOnlyAnswerViewBinding).votePercentage;
                q.g(var10, "votePercentage");

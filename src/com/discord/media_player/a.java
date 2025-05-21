@@ -1,13 +1,10 @@
 package com.discord.media_player;
 
-import com.google.android.exoplayer2.analytics.PlaybackStats;
-import com.google.android.exoplayer2.analytics.AnalyticsListener.EventTime;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class a implements com.google.android.exoplayer2.analytics.e.a {
-   public final MediaPlayer a;
-
-   public final void a(EventTime var1, PlaybackStats var2) {
-      MediaPlayer.a(this.a, var1, var2);
+public final class a implements Function1 {
+   public final Object invoke(Object var1) {
+      return MediaPlayer.b((MediaPlayer.Event)var1);
    }
 }

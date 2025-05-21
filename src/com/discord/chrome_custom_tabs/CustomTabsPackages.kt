@@ -7,15 +7,15 @@ import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import p1.a
-import p1.b
-import p1.c
+import v1.a
+import v1.b
+import v1.c
 
 internal object CustomTabsPackages {
+   private const val CHROME_PROD_PACKAGE: String = "com.android.chrome"
    private const val CHROME_BETA_PACKAGE: String = "com.chrome.beta"
    private const val CHROME_DEV_PACKAGE: String = "com.chrome.dev"
    private const val CHROME_LOCAL_PACKAGE: String = "com.google.android.apps.chrome"
-   private const val CHROME_PROD_PACKAGE: String = "com.android.chrome"
 
    private fun Context.getCustomTabsPackages(): List<String> {
       var var2: Intent = this.getDefaultViewIntentHandler();

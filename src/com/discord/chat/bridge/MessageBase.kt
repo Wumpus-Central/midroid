@@ -1,6 +1,6 @@
 package com.discord.chat.bridge
 
-import ha.f
+import Ja.f
 import kotlinx.serialization.KSerializer
 
 @f

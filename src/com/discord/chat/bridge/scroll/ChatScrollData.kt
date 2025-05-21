@@ -1,27 +1,16 @@
 package com.discord.chat.bridge.scroll
 
-import ha.f
-import ha.n
-import ia.a
-import ka.G
-import ka.N
-import ka.h
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Boolean = false, highlight: Boolean = false, position: Int? = null) {
+   public final val type: ChatScrollType
+   public final val index: Int
    public final val animate: Boolean
    public final val highlight: Boolean
-   public final val index: Int
    public final val position: Int?
-   public final val type: ChatScrollType
 
    init {
       q.h(var1, "type");
@@ -86,10 +75,10 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.type.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
-      val var2: Int = java.lang.Boolean.hashCode(this.animate);
-      val var5: Int = java.lang.Boolean.hashCode(this.highlight);
+      val var2: Int = this.type.hashCode();
+      val var5: Int = Integer.hashCode(this.index);
+      val var3: Int = java.lang.Boolean.hashCode(this.animate);
+      val var4: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
       if (this.position == null) {
          var1 = 0;
@@ -97,137 +86,28 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var4 * 31 + var3) * 31 + var2) * 31 + var5) * 31 + var1;
+      return (((var2 * 31 + var5) * 31 + var3) * 31 + var4) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: ChatScrollType = this.type;
+      val var6: ChatScrollType = this.type;
       val var1: Int = this.index;
-      val var3: Boolean = this.animate;
-      val var2: Boolean = this.highlight;
-      val var6: Int = this.position;
+      val var2: Boolean = this.animate;
+      val var3: Boolean = this.highlight;
+      val var4: Int = this.position;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ChatScrollData(type=");
-      var5.append(var4);
+      var5.append(var6);
       var5.append(", index=");
       var5.append(var1);
       var5.append(", animate=");
-      var5.append(var3);
-      var5.append(", highlight=");
       var5.append(var2);
+      var5.append(", highlight=");
+      var5.append(var3);
       var5.append(", position=");
-      var5.append(var6);
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ChatScrollData.$serializer = new ChatScrollData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.scroll.ChatScrollData", var0, 5);
-         var1.l("type", false);
-         var1.l("index", false);
-         var1.l("animate", true);
-         var1.l("highlight", true);
-         var1.l("position", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{ChatScrollType.Serializer.INSTANCE, N.a, h.a, h.a, a.u(N.a)};
-      }
-
-      public open fun deserialize(decoder: Decoder): ChatScrollData {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var3: Int;
-         var var4: Int;
-         var var7: Boolean;
-         val var9: ChatScrollType;
-         var var13: Int;
-         if (var11.y()) {
-            val var12: ChatScrollType = var11.m(var10, 0, ChatScrollType.Serializer.INSTANCE, null) as ChatScrollType;
-            var3 = var11.k(var10, 1);
-            var2 = var11.s(var10, 2);
-            var7 = var11.s(var10, 3);
-            val var8: Int = var11.v(var10, 4, N.a, null) as Int;
-            var4 = 31;
-            var9 = var12;
-            var13 = var8;
-         } else {
-            var var5: Boolean = true;
-            var7 = false;
-            var3 = 0;
-            var2 = 0;
-            var var17: ChatScrollType = null;
-            var13 = null;
-            var4 = 0;
-
-            while (var5) {
-               val var6: Int = var11.x(var10);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        if (var6 != 2) {
-                           if (var6 != 3) {
-                              if (var6 != 4) {
-                                 throw new n(var6);
-                              }
-
-                              var13 = var11.v(var10, 4, N.a, var13) as Int;
-                              var2 |= 16;
-                           } else {
-                              var7 = var11.s(var10, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var4 = var11.s(var10, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var3 = var11.k(var10, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var17 = var11.m(var10, 0, ChatScrollType.Serializer.INSTANCE, var17) as ChatScrollType;
-                     var2 |= 1;
-                  }
-               } else {
-                  var5 = false;
-               }
-            }
-
-            var4 = var2;
-            var2 = var4;
-            var9 = var17;
-         }
-
-         var11.b(var10);
-         return new ChatScrollData(var4, var9, var3, (boolean)var2, var7, var13, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: ChatScrollData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ChatScrollData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
    }
 
    public companion object {

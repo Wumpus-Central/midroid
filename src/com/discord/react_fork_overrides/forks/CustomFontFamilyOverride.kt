@@ -21,7 +21,7 @@ internal object CustomFontFamilyOverride {
          var11 = "";
       }
 
-      val var12: Array<java.lang.String> = kotlin.text.h.C0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
+      val var12: Array<java.lang.String> = kotlin.text.h.B0(var11, new java.lang.String[]{","}, false, 0, 6, null).toArray(new java.lang.String[0]);
       val var10: Int = var12.length;
 
       for (int var6 = 0; var6 < var10; var6++) {
@@ -78,10 +78,10 @@ internal object CustomFontFamilyOverride {
          if (VERSION.SDK_INT < 29) {
             var11 = var1;
             if ((var2 and 2) != 0) {
-               var11 = kotlin.text.h.B(
-                  kotlin.text.h.B(
-                     kotlin.text.h.B(
-                        kotlin.text.h.B(kotlin.text.h.B(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
+               var11 = kotlin.text.h.A(
+                  kotlin.text.h.A(
+                     kotlin.text.h.A(
+                        kotlin.text.h.A(kotlin.text.h.A(var1, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
                         "Semibold",
                         "SemiboldItalic",
                         true
@@ -98,10 +98,10 @@ internal object CustomFontFamilyOverride {
 
             var1 = var11;
             if ((var2 and 1) != 0) {
-               var1 = kotlin.text.h.B(kotlin.text.h.B(kotlin.text.h.B(var11, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+               var1 = kotlin.text.h.A(kotlin.text.h.A(kotlin.text.h.A(var11, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
             }
 
-            var11 = kotlin.text.h.B(kotlin.text.h.B(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+            var11 = kotlin.text.h.A(kotlin.text.h.A(var1, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
          }
       }
 
@@ -109,18 +109,16 @@ internal object CustomFontFamilyOverride {
       val var22: Int = FILE_EXTENSIONS.length;
 
       for (int var21 = 0; var21 < var22; var21++) {
-         val var13: java.lang.String = var19[var21];
-         val var26: StringBuilder = new StringBuilder();
-         var26.append("fonts/");
-         var26.append(var11);
-         var26.append(var13);
-         val var27: java.lang.String = var26.toString();
+         val var26: java.lang.String = var19[var21];
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("fonts/");
+         var13.append(var11);
+         var13.append(var26);
+         val var27: java.lang.String = var13.toString();
          kotlin.jvm.internal.q.g(var27, "toString(...)");
 
          try {
-            val var28: Typeface = Typeface.createFromAsset(var3, var27);
-            kotlin.jvm.internal.q.e(var28);
-            return var28;
+            return Typeface.createFromAsset(var3, var27);
          } catch (var14: RuntimeException) {
          }
       }
@@ -138,10 +136,10 @@ internal object CustomFontFamilyOverride {
          var var10: java.lang.String = var1[var4];
          var var9: java.lang.String = var1[var4];
          if ((var2 and 2) != 0) {
-            var9 = kotlin.text.h.B(
-               kotlin.text.h.B(
-                  kotlin.text.h.B(
-                     kotlin.text.h.B(kotlin.text.h.B(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
+            var9 = kotlin.text.h.A(
+               kotlin.text.h.A(
+                  kotlin.text.h.A(
+                     kotlin.text.h.A(kotlin.text.h.A(var10, "Normal", "NormalItalic", true), "Medium", "MediumItalic", true),
                      "Semibold",
                      "SemiboldItalic",
                      true
@@ -158,19 +156,19 @@ internal object CustomFontFamilyOverride {
 
          var10 = var9;
          if ((var2 and 1) != 0) {
-            var10 = kotlin.text.h.B(kotlin.text.h.B(kotlin.text.h.B(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
+            var10 = kotlin.text.h.A(kotlin.text.h.A(kotlin.text.h.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = kotlin.text.h.B(kotlin.text.h.B(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = kotlin.text.h.A(kotlin.text.h.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var25[var5];
+            var var12: java.lang.String = var28[var5];
             val var13: StringBuilder = new StringBuilder();
             var13.append("fonts/");
-            var13.append(var10);
+            var13.append(var9);
             var13.append(var12);
             var12 = var13.toString();
             kotlin.jvm.internal.q.g(var12, "toString(...)");
@@ -206,7 +204,7 @@ internal object CustomFontFamilyOverride {
          var29 = var29.toLowerCase(var26);
          kotlin.jvm.internal.q.g(var29, "toLowerCase(...)");
          val var20: Byte;
-         if (kotlin.text.h.b0(var29, "italic", 0, false, 6, null) > -1) {
+         if (kotlin.text.h.a0(var29, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
          } else {
             var20 = 0;
@@ -217,7 +215,7 @@ internal object CustomFontFamilyOverride {
          val var17: java.lang.String = var16.toLowerCase(var26);
          kotlin.jvm.internal.q.g(var17, "toLowerCase(...)");
          var var23: Short = 0;
-         if (kotlin.text.h.b0(var17, "bold", 0, false, 6, null) > -1) {
+         if (kotlin.text.h.a0(var17, "bold", 0, false, 6, null) > -1) {
             var23 = 1;
          }
 

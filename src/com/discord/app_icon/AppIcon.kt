@@ -1,7 +1,7 @@
 package com.discord.app_icon
 
+import Y8.a
 import kotlin.enums.EnumEntries
-import w8.a
 
 public enum class AppIcon(id: String, aliasSuffix: String) {
    ANGRY("AngryIcon", "MainAngry"),
@@ -29,6 +29,8 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
    PIRATE("PirateIcon", "MainPirate"),
    SUNSET("SunsetIcon", "MainSunset"),
    Y2K("Y2KIcon", "MainY2K")
+   public final val id: String
+   private final val aliasSuffix: String
 
    public final val alias: String
       public final get() {
@@ -39,9 +41,6 @@ public enum class AppIcon(id: String, aliasSuffix: String) {
          return var2.toString();
       }
 
-
-   private final val aliasSuffix: String
-   public final val id: String
    @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic

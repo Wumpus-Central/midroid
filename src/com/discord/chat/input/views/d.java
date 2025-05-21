@@ -1,12 +1,13 @@
 package com.discord.chat.input.views;
 
-import android.content.ClipData.Item;
-import androidx.core.util.Predicate;
+import android.view.View;
+import android.view.View.OnFocusChangeListener;
 
 // $VF: synthetic class
-public final class d implements Predicate {
-   @Override
-   public final boolean test(Object var1) {
-      return ChatInputRootView.c((Item)var1);
+public final class d implements OnFocusChangeListener {
+   public final ChatInputRootView a;
+
+   public final void onFocusChange(View var1, boolean var2) {
+      ChatInputRootView.a(this.a, var1, var2);
    }
 }

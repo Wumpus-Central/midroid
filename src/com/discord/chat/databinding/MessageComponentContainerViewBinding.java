@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.SpoilerView;
-import u0.a;
+import t0.a;
 
 public final class MessageComponentContainerViewBinding implements ViewBinding {
    public final View accentBorder;

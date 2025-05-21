@@ -110,9 +110,9 @@ public class SilentNotificationManager(reactContext: Context) {
    }
 
    public companion object {
+      public const val SILENT_NOTIFICATION_CACHE_STORE_NAME: String
       public const val IDLE_TIME_TO_RECEIVE_PUSH_FROM_GDM_OR_SMALL_GUILD_MINS: Int
       public const val MAX_MESSAGES_BEFORE_THROTTLE: Int
-      public const val SILENT_NOTIFICATION_CACHE_STORE_NAME: String
       private final var instance: SilentNotificationManager?
 
       public fun get(context: Context): SilentNotificationManager {

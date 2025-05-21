@@ -9,6 +9,6 @@ public final class l implements NativeConnection.MLSProcessProposalsCallback {
 
    @Override
    public final void onMLSCommitWelcome(String var1) {
-      MediaEngine.v(this.a, var1);
+      MediaEngine.l(this.a, var1);
    }
 }

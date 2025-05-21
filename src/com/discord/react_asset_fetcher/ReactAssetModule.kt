@@ -17,15 +17,21 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
       this.reactContext = var1;
    }
 
+   @JvmStatic
+   fun `keysRequest$lambda$0`(var0: ReactAsset): Any {
+      q.h(var0, "key");
+      return var0.name();
+   }
+
    public override fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), <unrepresentable>.INSTANCE)});
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(ReactAsset.getEntries(), new a())});
    }
 
    public override fun valuesResult(values: ReadableArray) {
       q.h(var1, "values");
-      val var4: ReactAssetCache = ReactAssetCache.INSTANCE;
-      val var5: ReactApplicationContext = this.reactContext;
+      val var5: ReactAssetCache = ReactAssetCache.INSTANCE;
+      val var4: ReactApplicationContext = this.reactContext;
       val var3: HashMap = new HashMap();
       val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
 
@@ -41,6 +47,6 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
          var3.put(var7, var8);
       }
 
-      var4.set(var5, var3);
+      var5.set(var4, var3);
    }
 }

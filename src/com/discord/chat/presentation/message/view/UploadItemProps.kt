@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.message.view
 
 public class UploadItemProps(uploadProgress: Int, uploadContext: UploadContext, uploadOpacity: Float, onCancelUploadItem: () -> Unit) {
-   public final val onCancelUploadItem: () -> Unit
+   public final val uploadProgress: Int
    public final val uploadContext: UploadContext
    public final val uploadOpacity: Float
-   public final val uploadProgress: Int
+   public final val onCancelUploadItem: () -> Unit
 
    init {
       kotlin.jvm.internal.q.h(var2, "uploadContext");

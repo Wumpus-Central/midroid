@@ -1,5 +1,6 @@
 package com.discord.react.utilities
 
+import R8.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
@@ -9,7 +10,6 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import org.json.JSONArray
-import p8.n
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -124,7 +124,7 @@ public fun <V> WritableNativeArray.push(value: Any) {
 
 public fun ReadableArray.sizeRange(): IntRange {
    q.h(var0, "<this>");
-   return d.r(0, var0.size());
+   return kotlin.ranges.d.r(0, var0.size());
 }
 
 public fun ReadableArray.toBooleanList(): List<Boolean> {
@@ -168,37 +168,38 @@ public fun ReadableArray.toIntList(): List<Int> {
 
 public fun ReadableArray.toJson(): JSONArray {
    q.h(var0, "<this>");
-   val var4: JSONArray = new JSONArray();
+   val var3: JSONArray = new JSONArray();
    val var2: Int = var0.size();
 
    for (int var1 = 0; var1 < var2; var1++) {
-      val var3: Int = NativeArrayExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()];
-      if (var3 != 2) {
-         if (var3 != 3) {
-            if (var3 != 4) {
-               if (var3 != 5) {
-                  if (var3 == 6) {
-                     val var6: ReadableArray = var0.getArray(var1);
-                     q.e(var6);
-                     var4.put(toJson(var6));
-                  }
-               } else {
-                  val var7: ReadableMap = var0.getMap(var1);
-                  q.e(var7);
-                  var4.put(NativeMapExtensionsKt.toJson(var7));
-               }
-            } else {
-               var4.put(var0.getString(var1));
-            }
-         } else {
-            var4.put(var0.getDouble(var1));
-         }
-      } else {
-         var4.put(var0.getBoolean(var1));
+      switch (NativeArrayExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()]) {
+         case 1:
+            break;
+         case 2:
+            var3.put(var0.getBoolean(var1));
+            break;
+         case 3:
+            var3.put(var0.getDouble(var1));
+            break;
+         case 4:
+            var3.put(var0.getString(var1));
+            break;
+         case 5:
+            val var6: ReadableMap = var0.getMap(var1);
+            q.e(var6);
+            var3.put(NativeMapExtensionsKt.toJson(var6));
+            break;
+         case 6:
+            val var5: ReadableArray = var0.getArray(var1);
+            q.e(var5);
+            var3.put(toJson(var5));
+            break;
+         default:
+            throw new Q8.n();
       }
    }
 
-   return var4;
+   return var3;
 }
 
 public fun ReadableArray.toJsonString(): String {
@@ -276,12 +277,12 @@ public fun ReadableArray.toStringList(): List<String> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
    val var1: ArrayList = new ArrayList(i.v(var2, 10));
-   val var4: java.util.Iterator = var2.iterator();
+   val var3: java.util.Iterator = var2.iterator();
 
-   while (var4.hasNext()) {
-      val var3: java.lang.String = var0.getString((var4 as n).a());
-      q.e(var3);
-      var1.add(var3);
+   while (var3.hasNext()) {
+      val var4: java.lang.String = var0.getString((var3 as n).a());
+      q.e(var4);
+      var1.add(var4);
    }
 
    return var1;

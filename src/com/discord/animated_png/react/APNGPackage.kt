@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
 public class APNGPackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
       return i.e(new APNGViewManager());
    }
@@ -20,7 +20,7 @@ public class APNGPackage : BaseReactPackage {
       return null;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

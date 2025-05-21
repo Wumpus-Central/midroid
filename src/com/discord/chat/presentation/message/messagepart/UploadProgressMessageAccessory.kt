@@ -7,8 +7,8 @@ import kotlin.jvm.internal.q
 public data class UploadProgressMessageAccessory(messageId: MessageId, index: Int, uploadProgress: UploadProgress) : UploadProgressMessageAccessory(
       var1, var2, var3
    ) {
-   public final val index: Int
    public open val messageId: MessageId
+   public final val index: Int
    public final val uploadProgress: UploadProgress
 
    fun UploadProgressMessageAccessory(var1: java.lang.String, var2: Int, var3: UploadProgress) {

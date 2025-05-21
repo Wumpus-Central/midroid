@@ -61,15 +61,11 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
 
    @JvmStatic
    fun `bind$lambda$14`(var0: Function1, var1: GiftEmbed, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapEmbed");
-      kotlin.jvm.internal.q.h(var1, "$gift");
       var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
    }
 
    @JvmStatic
    fun `bind$lambda$17$lambda$16`(var0: Function1, var1: GiftEmbed, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAccept");
-      kotlin.jvm.internal.q.h(var1, "$gift");
       var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
    }
 
@@ -82,12 +78,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       }
 
       (this.binding.splash.getHierarchy() as GenericDraweeHierarchy).x(var3);
-      var3 = androidx.core.graphics.c.k(var1.getBackgroundColor(), E8.a.c(var1.getSplashOpacity() * (float)255));
+      var3 = y.c.k(var1.getBackgroundColor(), g9.a.c(var1.getSplashOpacity() * (float)255));
       val var4: SimpleDraweeView = this.binding.splash;
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var12: PipelineDraweeControllerBuilder = R1.d.g()
+         val var12: PipelineDraweeControllerBuilder = t2.d.g()
             .F(
                ImageRequestBuilder.b(var6)
                   .J(
@@ -193,7 +189,11 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          var14.setVisibility(0);
          var14.setAlpha(0.5F);
          this.lastState = new GiftView.Companion.State.Resolving(var1.getItemId());
-      } else if (var9 is GiftEmbed.Resolved) {
+      } else {
+         if (var9 !is GiftEmbed.Resolved) {
+            throw new Q8.n();
+         }
+
          val var7: Boolean = this.didResolve(var1.getItemId());
          var var24: LayoutTransition = this.resolvedTransition;
          if (!var7) {
@@ -218,7 +218,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var11: java.lang.CharSequence = var32.getText();
          kotlin.jvm.internal.q.g(var11, "getText(...)");
          var var20: Byte;
-         if (!kotlin.text.h.d0(var11)) {
+         if (!kotlin.text.h.c0(var11)) {
             var20 = 0;
          } else {
             var20 = 8;
@@ -231,7 +231,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          kotlin.jvm.internal.q.e(var35);
          val var33: java.lang.CharSequence = var35.getText();
          kotlin.jvm.internal.q.g(var33, "getText(...)");
-         if (!kotlin.text.h.d0(var33)) {
+         if (!kotlin.text.h.c0(var33)) {
             var20 = 0;
          } else {
             var20 = 8;
@@ -247,32 +247,37 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var16: DCDButton = this.binding.acceptButton;
             kotlin.jvm.internal.q.g(this.binding.acceptButton, "acceptButton");
             var16.setVisibility(8);
-         } else if (var27 is GiftEmbed.Resolved.Valid) {
+         } else {
+            if (var27 !is GiftEmbed.Resolved.Valid) {
+               throw new Q8.n();
+            }
+
             var8 = this.binding.content;
             kotlin.jvm.internal.q.g(this.binding.content, "content");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new H(var2, var9), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new i0(var2, var9), 1, null);
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var29: TextView = this.binding.body;
+            val var34: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var29.setTextColor(var17.getBodyTextColor());
-            kotlin.jvm.internal.q.e(var29);
-            val var34: java.lang.CharSequence = var29.getText();
-            kotlin.jvm.internal.q.g(var34, "getText(...)");
-            if (!kotlin.text.h.d0(var34)) {
+            var34.setTextColor(var17.getBodyTextColor());
+            kotlin.jvm.internal.q.e(var34);
+            val var29: java.lang.CharSequence = var34.getText();
+            kotlin.jvm.internal.q.g(var29, "getText(...)");
+            if (!kotlin.text.h.c0(var29)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var29.setVisibility(var20);
+            var34.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());
             var30.setBackgroundColor(var17.getAcceptLabelBackgroundColor());
-            var30.setOnClickButtonListener(new I(var3, var9));
+            var30.setOnClickButtonListener(new j0(var3, var9));
             var30.setEnabled(var17.getCanBeAccepted());
+            kotlin.jvm.internal.q.e(var30);
          }
 
          this.lastState = new GiftView.Companion.State.Resolved(var1.getItemId());

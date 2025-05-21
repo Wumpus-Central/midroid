@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.message.view.voicemessages
 
 public data class AudioProgressEvent(progress: Float, eventAction: Int) {
-   public final val eventAction: Int
    public final val progress: Float
+   public final val eventAction: Int
 
    init {
       this.progress = var1;

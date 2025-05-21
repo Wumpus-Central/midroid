@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.stickers
 
+import Q8.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -23,7 +24,7 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import n1.a
+import s1.a
 
 public class WelcomeStickerView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: WelcomeStickerViewBinding
@@ -56,9 +57,11 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               if (var2 == 4) {
-                  this.binding.stickerView.asGif(var1.getUrl(), 32, 32, true, var1.getAccessibilityLabel());
+               if (var2 != 4) {
+                  throw new n();
                }
+
+               this.binding.stickerView.asGif(var1.getUrl(), 32, 32, true, var1.getAccessibilityLabel());
             } else {
                this.binding.stickerView.asLottie(var1.getUrl(), 32, 32, true, var1.getAsset(), var1.getRenderMode(), var1.getAccessibilityLabel());
             }
@@ -72,9 +75,6 @@ public class WelcomeStickerView  public constructor(context: Context, attrs: Att
 
    @JvmStatic
    fun `setSticker$lambda$1`(var0: Function2, var1: Sticker, var2: Message, var3: View) {
-      q.h(var0, "$onWelcomeReplyClicked");
-      q.h(var1, "$sticker");
-      q.h(var2, "$message");
       var0.invoke(var1, MessageId.box-impl(var2.getId-3Eiw7ao()));
    }
 

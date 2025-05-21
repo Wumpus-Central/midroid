@@ -1,13 +1,10 @@
 package com.discord.security_key;
 
-import D5.f;
-import kotlin.jvm.functions.Function1;
-
 // $VF: synthetic class
-public final class c implements f {
-   public final Function1 a;
+public final class c implements f6.e {
+   public final WebAuthn a;
 
-   public final void onSuccess(Object var1) {
-      WebAuthn.a(this.a, var1);
+   public final void onFailure(Exception var1) {
+      WebAuthn.f(this.a, var1);
    }
 }

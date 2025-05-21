@@ -73,12 +73,11 @@ public class SummarySeparatorView  public constructor(context: Context, attrs: A
       ColorUtilsKt.setTintColor(var13, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var14: FrameLayout = var15.buttonWrapper;
       q.g(var15.buttonWrapper, "buttonWrapper");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new m1.a(var15), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new r1.a(var15), 1, null);
    }
 
    @JvmStatic
    fun `lambda$2$lambda$1`(var0: SeparatorSummaryViewBinding, var1: View) {
-      q.h(var0, "$this_with");
       val var2: SimpleDraweeView = var0.jumpButton;
       q.g(var0.jumpButton, "jumpButton");
       if (var2.getVisibility() == 0) {

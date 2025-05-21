@@ -1,24 +1,13 @@
 package com.discord.chat.bridge.executedcommand
 
-import ha.f
-import ha.n
-import ia.a
-import ka.G
-import ka.N
-import ka.h
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
-   public final val borderRadius: Int?
    public final val color: Int?
+   public final val borderRadius: Int?
    public final val spaceAround: Boolean?
 
    fun ExecutedCommandBackgroundStyles() {
@@ -90,105 +79,16 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    public override fun toString(): String {
       val var4: Int = this.color;
       val var3: Int = this.borderRadius;
-      val var2: java.lang.Boolean = this.spaceAround;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ExecutedCommandBackgroundStyles(color=");
-      var1.append(var4);
-      var1.append(", borderRadius=");
-      var1.append(var3);
-      var1.append(", spaceAround=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ExecutedCommandBackgroundStyles.$serializer = new ExecutedCommandBackgroundStyles.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.chat.bridge.executedcommand.ExecutedCommandBackgroundStyles", var0, 3
-         );
-         var1.l("color", true);
-         var1.l("borderRadius", true);
-         var1.l("spaceAround", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: N = N.a;
-         return new KSerializer[]{a.u(N.a), a.u(var1), a.u(h.a)};
-      }
-
-      public open fun deserialize(decoder: Decoder): ExecutedCommandBackgroundStyles {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         val var5: Boolean = var9.y();
-         var var7: Int = null;
-         var var2: Int;
-         var var6: Int;
-         var var11: java.lang.Boolean;
-         if (var5) {
-            val var10: N = N.a;
-            var7 = var9.v(var8, 0, N.a, null) as Int;
-            var6 = var9.v(var8, 1, var10, null) as Int;
-            var11 = var9.v(var8, 2, h.a, null) as java.lang.Boolean;
-            var2 = 7;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var6 = null;
-            var11 = null;
-
-            while (var3) {
-               val var4: Int = var9.x(var8);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var11 = var9.v(var8, 2, h.a, var11) as java.lang.Boolean;
-                        var2 |= 4;
-                     } else {
-                        var6 = var9.v(var8, 1, N.a, var6) as Int;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var9.v(var8, 0, N.a, var7) as Int;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var9.b(var8);
-         return new ExecutedCommandBackgroundStyles(var2, var7, var6, var11, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: ExecutedCommandBackgroundStyles) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ExecutedCommandBackgroundStyles.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var1: java.lang.Boolean = this.spaceAround;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ExecutedCommandBackgroundStyles(color=");
+      var2.append(var4);
+      var2.append(", borderRadius=");
+      var2.append(var3);
+      var2.append(", spaceAround=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

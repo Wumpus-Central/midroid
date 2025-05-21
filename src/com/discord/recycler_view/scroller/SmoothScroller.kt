@@ -1,5 +1,6 @@
 package com.discord.recycler_view.scroller
 
+import Q8.n
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.i
@@ -7,7 +8,6 @@ import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import kotlin.jvm.internal.q
-import o8.p
 
 internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i {
    private final val targetAlignment: TargetAlignment
@@ -30,7 +30,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
          var1 = var3 - var1 + (this.targetAlignment as Scroller.TargetAlignment.Top).getOffsetPx();
       } else {
          if (this.targetAlignment !is Scroller.TargetAlignment.Anywhere) {
-            throw new p();
+            throw new n();
          }
 
          var1 = super.calculateDtToFit(var1, var2, var3, var4, var5);

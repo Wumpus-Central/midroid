@@ -24,6 +24,7 @@ import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderEve
 import com.discord.chat.presentation.message.view.botuikit.MarkdownTextRenderOptions
 import com.discord.chat.presentation.textutils.LinkStyle
 import com.discord.chat.presentation.textutils.TextUtilsKt
+import com.discord.fonts.DiscordFont
 import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
@@ -37,7 +38,6 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 
 public open class MessageContentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
@@ -64,21 +64,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = o8.l.a(new Function0(this) {
-         final MessageContentView this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final SimpleDraweeSpanTextView invoke() {
-            val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.this$0.getContext());
-            var1.setBreakStrategy(this.this$0.getBreakStrategy());
-            var1.setLayoutParams(new LayoutParams(-1, -2));
-            return var1;
-         }
-      });
+      this.shadowView$delegate = Q8.j.b(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
       this.setImportantForAccessibility(4);
    }
@@ -86,7 +72,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var8: QuoteSpan = kotlin.collections.c.I(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.c.L(var6) as QuoteSpan;
       val var5: Int = var1.length();
       val var7: StringBuilder = new StringBuilder();
       var7.append(" (");
@@ -105,6 +91,26 @@ public open class MessageContentView  public constructor(context: Context, attrs
       if (var8 != null) {
          var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
+   }
+
+   @JvmStatic
+   fun `setMessageContent$lambda$1`(var0: LinkContentNode): LinkStyle {
+      kotlin.jvm.internal.q.h(var0, "it");
+      return new LinkStyle(DiscordFont.PrimaryNormal, ThemeManagerKt.getTheme().getTextLink(), null, null, 12, null);
+   }
+
+   @JvmStatic
+   fun `setMessageContent_AeCz66Y$lambda$2`(var0: LinkContentNode): LinkStyle {
+      kotlin.jvm.internal.q.h(var0, "<unused var>");
+      return new LinkStyle(null, 0, null, null, 15, null);
+   }
+
+   @JvmStatic
+   fun `shadowView_delegate$lambda$0`(var0: MessageContentView): SimpleDraweeSpanTextView {
+      val var1: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(var0.getContext());
+      var1.setBreakStrategy(var0.getBreakStrategy());
+      var1.setLayoutParams(new LayoutParams(-1, -2));
+      return var1;
    }
 
    private fun truncate(
@@ -149,26 +155,19 @@ public open class MessageContentView  public constructor(context: Context, attrs
                var3 = ThemeManagerKt.getTheme().getTextLink();
             }
 
-            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new Function1(var5, var1) {
-               final java.lang.String $messageId;
-               final Function1 $onTapSeeMore;
-
-               {
-                  super(1);
-                  this.$onTapSeeMore = var1;
-                  this.$messageId = var2;
-               }
-
-               public final void invoke(View var1) {
-                  kotlin.jvm.internal.q.h(var1, "it");
-                  this.$onTapSeeMore.invoke(MessageId.box-impl(this.$messageId));
-               }
-            }, 124, null), var7, var4.length(), 33);
+            var4.setSpan(new ClickableSpan(var20, var3, null, null, 0.0F, null, null, new D0(var5, var1), 124, null), var7, var4.length(), 33);
             var4.setSpan(new BoldSpan(), var7, var4.length(), 33);
          } else {
             var4.delete(var7, var4.length());
          }
       }
+   }
+
+   @JvmStatic
+   fun `truncate_LdU2QRA$lambda$3`(var0: Function1, var1: java.lang.String, var2: View): Unit {
+      kotlin.jvm.internal.q.h(var2, "it");
+      var0.invoke(MessageId.box-impl(var1));
+      return Unit.a;
    }
 
    public fun setMessageContent(
@@ -203,7 +202,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          var3.getOnTapEmoji(),
          <unrepresentable>.INSTANCE,
          var3.getOnTapSoundmoji(),
-         <unrepresentable>.INSTANCE,
+         new F0(),
          0,
          0,
          false,
@@ -269,12 +268,12 @@ public open class MessageContentView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var22, "linkStyleProvider");
       kotlin.jvm.internal.q.h(var29, "theme");
       val var32: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var32, "getContext(...)");
       val var33: FontMetrics = this.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var33, "getFontMetrics(...)");
       val var31: Float = TextUtilsKt.getBaselineHeightPx(var33);
       val var35: TextPaint = this.getPaint();
-      kotlin.jvm.internal.q.e(var32);
-      kotlin.jvm.internal.q.e(var35);
+      kotlin.jvm.internal.q.g(var35, "getPaint(...)");
       val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
          var1,
          var32,
@@ -306,7 +305,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          4194304,
          null
       );
-      if (var26 != null && !kotlin.text.h.d0(var26)) {
+      if (var26 != null && !kotlin.text.h.c0(var26)) {
          this.appendEditedLabel(var34, var26, var27);
       }
 
@@ -329,7 +328,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    }
 
    public companion object {
-      private const val LINE_SPACING_ADD: Float
       private const val LINE_SPACING_MULT: Float
+      private const val LINE_SPACING_ADD: Float
    }
 }

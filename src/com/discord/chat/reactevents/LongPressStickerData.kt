@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import Q8.s
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import o8.w
 
 public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) : LongPressStickerData(var1, var2), ReactEvent {
    public final val messageId: MessageId
@@ -55,20 +55,20 @@ public data class LongPressStickerData(messageId: MessageId, sticker: Sticker) :
 
    public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("messageId", this.messageId),
-         w.a("sticker", NativeMapExtensionsKt.nativeMapOf(w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())))
+         s.a("messageId", this.messageId),
+         s.a("sticker", NativeMapExtensionsKt.nativeMapOf(s.a("id", java.lang.String.valueOf(this.sticker.getId())), s.a("name", this.sticker.getName())))
       );
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Sticker = this.sticker;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LongPressStickerData(messageId=");
-      var3.append(var2);
-      var3.append(", sticker=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressStickerData(messageId=");
+      var2.append(var3);
+      var2.append(", sticker=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

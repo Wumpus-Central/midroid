@@ -1,5 +1,6 @@
 package com.discord.sticker_picker.react
 
+import R8.n
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.sticker_picker.StickerPickerRow
@@ -7,7 +8,6 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import p8.n
 
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    q.h(var0, "data");
@@ -23,11 +23,11 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var var4: Int = (var7 as n).a();
       val var15: StickerPickerRow.Sticker;
       if (!var6.isNull(var4)) {
-         val var9: ReadableMap = var6.getMap(var4);
-         q.e(var9);
-         val var10: java.lang.String = NativeMapExtensionsKt.getNonNullString(var9, "stickerId");
-         val var8: java.lang.String = NativeMapExtensionsKt.getNonNullString(var9, "stickerName");
-         var4 = var9.getInt("stickerType");
+         val var8: ReadableMap = var6.getMap(var4);
+         q.e(var8);
+         val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "stickerId");
+         val var10: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "stickerName");
+         var4 = var8.getInt("stickerType");
          val var13: StickerPickerRow.Sticker.Type;
          if (var4 != 1) {
             if (var4 != 2) {
@@ -51,13 +51,13 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          }
 
          var15 = new StickerPickerRow.Sticker(
+            var9,
             var10,
-            var8,
             var13,
-            var9.getBoolean("stickerAnimated"),
-            NativeMapExtensionsKt.getNonNullString(var9, "stickerUrl"),
-            var9.getBoolean("stickerDisabled"),
-            var9.getBoolean("stickerOpaque")
+            var8.getBoolean("stickerAnimated"),
+            NativeMapExtensionsKt.getNonNullString(var8, "stickerUrl"),
+            var8.getBoolean("stickerDisabled"),
+            var8.getBoolean("stickerOpaque")
          );
       } else {
          var15 = null;

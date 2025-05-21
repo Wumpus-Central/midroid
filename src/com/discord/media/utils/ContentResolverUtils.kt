@@ -49,7 +49,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.J(var5, "image", false, 2, null)) {
+         if (h.I(var5, "image", false, 2, null)) {
             var3 = true;
          }
       }
@@ -83,7 +83,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.J(var5, "video", false, 2, null)) {
+         if (h.I(var5, "video", false, 2, null)) {
             var3 = true;
          }
       }
@@ -116,7 +116,7 @@ internal object ContentResolverUtils {
             var9.putInt("android:query-arg-offset", var7.intValue());
          }
 
-         var10 = a.a(var1, var2, var3, var9, null);
+         var10 = c.a(var1, var2, var3, var9, null);
       } else if (VERSION.SDK_INT >= 26) {
          val var15: Int;
          if (var7 != null) {
@@ -133,11 +133,11 @@ internal object ContentResolverUtils {
          var14.append(var15);
          var10 = var1.query(var2, var3, var6, null, var14.toString(), null);
       } else {
-         val var11: Builder = var2.buildUpon();
-         val var16: StringBuilder = new StringBuilder();
-         var16.append("limit=");
-         var16.append(var4);
-         val var12: Builder = var11.encodedQuery(var16.toString());
+         val var16: Builder = var2.buildUpon();
+         val var11: StringBuilder = new StringBuilder();
+         var11.append("limit=");
+         var11.append(var4);
+         val var12: Builder = var16.encodedQuery(var11.toString());
          if (var7 != null) {
             var12.appendQueryParameter("offset", java.lang.String.valueOf(var7.intValue()));
          }

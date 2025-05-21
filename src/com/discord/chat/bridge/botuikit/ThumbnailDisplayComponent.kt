@@ -1,21 +1,10 @@
 package com.discord.chat.bridge.botuikit
 
+import Ja.f
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class ThumbnailDisplayComponent(type: Int,
@@ -31,32 +20,28 @@ public data class ThumbnailDisplayComponent(type: Int,
       obscureDescription: String?,
       verifyAge: Boolean?,
       descriptionHint: String,
-      accessibilityRole: String,
-      srcIsAnimated: Boolean = false
+      accessibilityRole: String
    )
    : Component,
    SpoilerableData {
-   public final val accessibilityRole: String
-   public final val description: String?
-   public final val descriptionHint: String
+   public open val type: Int
    public open val id: String
+   public final val media: UnfurledMediaItem
+   public final val description: String?
+   public final val isSpoiler: Boolean
+   public final val spoilerDescription: String?
    public final val isObscure: Boolean
    public final val isObscureAwaitingScan: Boolean
-   public final val isSpoiler: Boolean
-   public final val media: UnfurledMediaItem
-   public final val obscureDescription: String?
    public final val obscureHideControls: Boolean
    public final val obscureIsOpaque: Boolean
-   public open val obscureOrNull: String?
-   public final val spoilerDescription: String?
-   public open val spoilerOrNull: String?
-   public final val srcIsAnimated: Boolean
-   public open val type: Int
+   public final val obscureDescription: String?
    public final val verifyAge: Boolean?
+   public final val descriptionHint: String
+   public final val accessibilityRole: String
+   public open val spoilerOrNull: String?
+   public open val obscureOrNull: String?
 
    init {
-      var var18: java.lang.String = var6;
-      var var17: java.lang.String = var11;
       q.h(var2, "id");
       q.h(var3, "media");
       q.h(var13, "descriptionHint");
@@ -76,33 +61,32 @@ public data class ThumbnailDisplayComponent(type: Int,
       this.verifyAge = var12;
       this.descriptionHint = var13;
       this.accessibilityRole = var14;
-      this.srcIsAnimated = var15;
-      var var19: Boolean;
-      if (var6 != null && !h.d0(var6)) {
-         var19 = false;
+      var var16: Boolean;
+      if (var6 != null && !h.c0(var6)) {
+         var16 = false;
       } else {
-         var19 = true;
+         var16 = true;
       }
 
-      if (var19) {
-         var18 = null;
+      if (var16) {
+         var6 = null;
       }
 
-      this.spoilerOrNull = var18;
-      var19 = true;
+      this.spoilerOrNull = var6;
+      var16 = true;
       if (var11 != null) {
-         if (h.d0(var11)) {
-            var19 = true;
+         if (h.c0(var11)) {
+            var16 = true;
          } else {
-            var19 = false;
+            var16 = false;
          }
       }
 
-      if (var19) {
-         var17 = null;
+      if (var16) {
+         var11 = null;
       }
 
-      this.obscureOrNull = var17;
+      this.obscureOrNull = var11;
    }
 
    public operator fun component1(): Int {
@@ -127,10 +111,6 @@ public data class ThumbnailDisplayComponent(type: Int,
 
    public operator fun component14(): String {
       return this.accessibilityRole;
-   }
-
-   public operator fun component15(): Boolean {
-      return this.srcIsAnimated;
    }
 
    public operator fun component2(): String {
@@ -179,14 +159,13 @@ public data class ThumbnailDisplayComponent(type: Int,
       obscureDescription: String? = var0.obscureDescription,
       verifyAge: Boolean? = var0.verifyAge,
       descriptionHint: String = var0.descriptionHint,
-      accessibilityRole: String = var0.accessibilityRole,
-      srcIsAnimated: Boolean = var0.srcIsAnimated
+      accessibilityRole: String = var0.accessibilityRole
    ): ThumbnailDisplayComponent {
       q.h(var2, "id");
       q.h(var3, "media");
       q.h(var13, "descriptionHint");
       q.h(var14, "accessibilityRole");
-      return new ThumbnailDisplayComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15);
+      return new ThumbnailDisplayComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -222,18 +201,16 @@ public data class ThumbnailDisplayComponent(type: Int,
             return false;
          } else if (!q.c(this.descriptionHint, var1.descriptionHint)) {
             return false;
-         } else if (!q.c(this.accessibilityRole, var1.accessibilityRole)) {
-            return false;
          } else {
-            return this.srcIsAnimated == var1.srcIsAnimated;
+            return q.c(this.accessibilityRole, var1.accessibilityRole);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = Integer.hashCode(this.type);
-      val var6: Int = this.id.hashCode();
-      val var5: Int = this.media.hashCode();
+      val var5: Int = Integer.hashCode(this.type);
+      val var7: Int = this.id.hashCode();
+      val var6: Int = this.media.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.description == null) {
@@ -251,9 +228,9 @@ public data class ThumbnailDisplayComponent(type: Int,
       }
 
       val var12: Int = java.lang.Boolean.hashCode(this.isObscure);
-      val var9: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
-      val var11: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
-      val var10: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
+      val var11: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
+      val var10: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var9: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var3: Int;
       if (this.obscureDescription == null) {
          var3 = 0;
@@ -270,344 +247,72 @@ public data class ThumbnailDisplayComponent(type: Int,
                         (
                                  (
                                           (
-                                                   (
-                                                            (
-                                                                     ((((((var7 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var12)
-                                                                           * 31
-                                                                        + var9
-                                                                  )
-                                                                  * 31
-                                                               + var11
-                                                         )
+                                                   (((((((var5 * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var12) * 31 + var11)
                                                          * 31
                                                       + var10
                                                 )
                                                 * 31
-                                             + var3
+                                             + var9
                                        )
                                        * 31
-                                    + var4
+                                    + var3
                               )
                               * 31
-                           + this.descriptionHint.hashCode()
+                           + var4
                      )
                      * 31
-                  + this.accessibilityRole.hashCode()
+                  + this.descriptionHint.hashCode()
             )
             * 31
-         + java.lang.Boolean.hashCode(this.srcIsAnimated);
+         + this.accessibilityRole.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var15: java.lang.String = this.id;
-      val var13: UnfurledMediaItem = this.media;
-      val var12: java.lang.String = this.description;
+      val var10: java.lang.String = this.id;
+      val var14: UnfurledMediaItem = this.media;
+      val var9: java.lang.String = this.description;
       val var4: Boolean = this.isSpoiler;
-      val var11: java.lang.String = this.spoilerDescription;
-      val var7: Boolean = this.isObscure;
-      val var3: Boolean = this.isObscureAwaitingScan;
-      val var6: Boolean = this.obscureHideControls;
-      val var2: Boolean = this.obscureIsOpaque;
-      val var10: java.lang.String = this.obscureDescription;
-      val var16: java.lang.Boolean = this.verifyAge;
-      val var14: java.lang.String = this.descriptionHint;
-      val var9: java.lang.String = this.accessibilityRole;
-      val var5: Boolean = this.srcIsAnimated;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ThumbnailDisplayComponent(type=");
-      var8.append(var1);
-      var8.append(", id=");
-      var8.append(var15);
-      var8.append(", media=");
-      var8.append(var13);
-      var8.append(", description=");
-      var8.append(var12);
-      var8.append(", isSpoiler=");
-      var8.append(var4);
-      var8.append(", spoilerDescription=");
-      var8.append(var11);
-      var8.append(", isObscure=");
-      var8.append(var7);
-      var8.append(", isObscureAwaitingScan=");
-      var8.append(var3);
-      var8.append(", obscureHideControls=");
-      var8.append(var6);
-      var8.append(", obscureIsOpaque=");
-      var8.append(var2);
-      var8.append(", obscureDescription=");
-      var8.append(var10);
-      var8.append(", verifyAge=");
-      var8.append(var16);
-      var8.append(", descriptionHint=");
-      var8.append(var14);
-      var8.append(", accessibilityRole=");
-      var8.append(var9);
-      var8.append(", srcIsAnimated=");
-      var8.append(var5);
-      var8.append(")");
-      return var8.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ThumbnailDisplayComponent.$serializer = new ThumbnailDisplayComponent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("11", var0, 17);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("media", false);
-         var1.l("description", true);
-         var1.l("isSpoiler", false);
-         var1.l("spoilerDescription", false);
-         var1.l("isObscure", false);
-         var1.l("isObscureAwaitingScan", false);
-         var1.l("obscureHideControls", false);
-         var1.l("obscureIsOpaque", false);
-         var1.l("obscureDescription", false);
-         var1.l("verifyAge", false);
-         var1.l("descriptionHint", false);
-         var1.l("accessibilityRole", false);
-         var1.l("srcIsAnimated", true);
-         var1.l("spoilerOrNull", true);
-         var1.l("obscureOrNull", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         val var7: KSerializer = a.u(C0.a);
-         val var3: ka.h = ka.h.a;
-         return new KSerializer[]{
-            N.a,
-            var1,
-            UnfurledMediaItem.$serializer.INSTANCE,
-            var7,
-            ka.h.a,
-            a.u(var1),
-            var3,
-            var3,
-            var3,
-            var3,
-            a.u(var1),
-            a.u(var3),
-            var1,
-            var1,
-            var3,
-            a.u(var1),
-            a.u(var1)
-         };
-      }
-
-      public open fun deserialize(decoder: Decoder): ThumbnailDisplayComponent {
-         q.h(var1, "decoder");
-         val var28: SerialDescriptor = this.getDescriptor();
-         val var29: c = var1.c(var28);
-         var var9: Boolean = var29.y();
-         var var4: Byte = 11;
-         var var7: Byte = 10;
-         var var6: Int = 9;
-         var var2: Int = 0;
-         var var3: Int;
-         var var11: Boolean;
-         var var12: Boolean;
-         var var13: Boolean;
-         var var14: Boolean;
-         val var15: Boolean;
-         val var16: Boolean;
-         var var19: java.lang.String;
-         var var20: java.lang.String;
-         var var21: java.lang.String;
-         var var22: java.lang.String;
-         var var23: Any;
-         var var24: java.lang.String;
-         val var31: java.lang.String;
-         var var43: java.lang.String;
-         var var46: java.lang.String;
-         var var50: UnfurledMediaItem;
-         if (var9) {
-            var2 = var29.k(var28, 0);
-            var20 = var29.t(var28, 1);
-            val var18: UnfurledMediaItem = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, null) as UnfurledMediaItem;
-            val var25: C0 = C0.a;
-            var24 = var29.v(var28, 3, C0.a, null) as java.lang.String;
-            var14 = var29.s(var28, 4);
-            var22 = var29.v(var28, 5, var25, null) as java.lang.String;
-            var16 = var29.s(var28, 6);
-            val var10: Boolean = var29.s(var28, 7);
-            var15 = var29.s(var28, 8);
-            var9 = var29.s(var28, 9);
-            var19 = var29.v(var28, 10, var25, null) as java.lang.String;
-            var23 = var29.v(var28, 11, ka.h.a, null) as java.lang.Boolean;
-            var43 = var29.t(var28, 12);
-            val var30: java.lang.String = var29.t(var28, 13);
-            var13 = var29.s(var28, 14);
-            var21 = var29.v(var28, 15, var25, null) as java.lang.String;
-            val var26: java.lang.String = var29.v(var28, 16, var25, null) as java.lang.String;
-            var3 = 131071;
-            var50 = var18;
-            var11 = var10;
-            var12 = var9;
-            var46 = var43;
-            var43 = var30;
-            var31 = var26;
-         } else {
-            var var5: Boolean = true;
-            var50 = null;
-            var24 = null;
-            var43 = null;
-            var var32: java.lang.String = null;
-            var23 = null;
-            var22 = null;
-            var21 = null;
-            var20 = null;
-            var19 = null;
-            var46 = null;
-            var3 = 0;
-            var12 = false;
-            var14 = false;
-            var11 = false;
-            var var39: Boolean = false;
-            var9 = false;
-            var13 = false;
-
-            while (var5) {
-               label48: {
-                  label47: {
-                     label46: {
-                        val var8: Int = var29.x(var28);
-                        switch (var8) {
-                           case -1:
-                              var5 = false;
-                              continue;
-                           case 0:
-                              var3 = var29.k(var28, 0);
-                              var2 |= 1;
-                              break label46;
-                           case 1:
-                              var20 = var29.t(var28, 1);
-                              var2 |= 2;
-                              break label46;
-                           case 2:
-                              var50 = var29.m(var28, 2, UnfurledMediaItem.$serializer.INSTANCE, var50) as UnfurledMediaItem;
-                              var2 |= 4;
-                              break label46;
-                           case 3:
-                              var24 = var29.v(var28, 3, C0.a, var24) as java.lang.String;
-                              var2 |= 8;
-                              break label46;
-                           case 4:
-                              var9 = var29.s(var28, 4);
-                              var2 |= 16;
-                              break label46;
-                           case 5:
-                              var22 = var29.v(var28, 5, C0.a, var22) as java.lang.String;
-                              var2 |= 32;
-                              break label46;
-                           case 6:
-                              var39 = var29.s(var28, 6);
-                              var2 |= 64;
-                              break label47;
-                           case 7:
-                              var11 = var29.s(var28, 7);
-                              var2 |= 128;
-                              break label47;
-                           case 8:
-                              var13 = var29.s(var28, 8);
-                              var2 |= 256;
-                              var4 = 11;
-                              continue;
-                           case 9:
-                              var14 = var29.s(var28, var6);
-                              var2 |= 512;
-                              continue;
-                           case 10:
-                              var21 = var29.v(var28, var7, C0.a, var21) as java.lang.String;
-                              var2 |= 1024;
-                              break label48;
-                           case 11:
-                              var23 = var29.v(var28, var4, ka.h.a, var23) as java.lang.Boolean;
-                              var2 |= 2048;
-                              break label48;
-                           case 12:
-                              var19 = var29.t(var28, 12);
-                              var2 |= 4096;
-                              break label48;
-                           case 13:
-                              var46 = var29.t(var28, 13);
-                              var2 |= 8192;
-                              break label48;
-                           case 14:
-                              var12 = var29.s(var28, 14);
-                              var2 |= 16384;
-                              break label48;
-                           case 15:
-                              var32 = var29.v(var28, 15, C0.a, var32) as java.lang.String;
-                              var6 = 32768;
-                              break;
-                           case 16:
-                              var43 = var29.v(var28, 16, C0.a, var43) as java.lang.String;
-                              var6 = 65536;
-                              break;
-                           default:
-                              throw new n(var8);
-                        }
-
-                        var2 |= var6;
-                        break label48;
-                     }
-
-                     var4 = 11;
-                     var7 = 10;
-                     continue;
-                  }
-
-                  var4 = 11;
-                  continue;
-               }
-
-               var6 = 9;
-            }
-
-            var15 = var13;
-            var31 = var43;
-            var21 = var32;
-            var13 = var12;
-            var43 = var46;
-            var46 = var19;
-            var19 = var21;
-            var12 = var14;
-            var16 = var39;
-            var14 = var9;
-            var2 = var3;
-            var3 = var2;
-         }
-
-         var29.b(var28);
-         return new ThumbnailDisplayComponent(
-            var3, var2, var20, var50, var24, var14, var22, var16, var11, var15, var12, var19, (java.lang.Boolean)var23, var46, var43, var13, var21, var31, null
-         );
-      }
-
-      public open fun serialize(encoder: Encoder, value: ThumbnailDisplayComponent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ThumbnailDisplayComponent.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var12: java.lang.String = this.spoilerDescription;
+      val var6: Boolean = this.isObscure;
+      val var2: Boolean = this.isObscureAwaitingScan;
+      val var5: Boolean = this.obscureHideControls;
+      val var3: Boolean = this.obscureIsOpaque;
+      val var7: java.lang.String = this.obscureDescription;
+      val var15: java.lang.Boolean = this.verifyAge;
+      val var13: java.lang.String = this.descriptionHint;
+      val var8: java.lang.String = this.accessibilityRole;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("ThumbnailDisplayComponent(type=");
+      var11.append(var1);
+      var11.append(", id=");
+      var11.append(var10);
+      var11.append(", media=");
+      var11.append(var14);
+      var11.append(", description=");
+      var11.append(var9);
+      var11.append(", isSpoiler=");
+      var11.append(var4);
+      var11.append(", spoilerDescription=");
+      var11.append(var12);
+      var11.append(", isObscure=");
+      var11.append(var6);
+      var11.append(", isObscureAwaitingScan=");
+      var11.append(var2);
+      var11.append(", obscureHideControls=");
+      var11.append(var5);
+      var11.append(", obscureIsOpaque=");
+      var11.append(var3);
+      var11.append(", obscureDescription=");
+      var11.append(var7);
+      var11.append(", verifyAge=");
+      var11.append(var15);
+      var11.append(", descriptionHint=");
+      var11.append(var13);
+      var11.append(", accessibilityRole=");
+      var11.append(var8);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

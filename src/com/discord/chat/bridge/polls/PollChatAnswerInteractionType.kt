@@ -1,14 +1,12 @@
 package com.discord.chat.bridge.polls
 
+import Ja.f
+import Y8.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = PollChatAnswerInteractionType.Serializer::class)
 public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
@@ -20,8 +18,6 @@ public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private PollChatAnswerInteractionType[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public PollChatAnswerInteractionType.Companion Companion = new PollChatAnswerInteractionType.Companion(null);
 
@@ -43,7 +39,7 @@ public enum class PollChatAnswerInteractionType(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<PollChatAnswerInteractionType> {
-         return this.get$cachedSerializer();
+         return PollChatAnswerInteractionType.Serializer.INSTANCE;
       }
    }
 

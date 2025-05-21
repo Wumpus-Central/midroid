@@ -30,8 +30,8 @@ import com.facebook.drawee.view.SimpleDraweeView
 public class AutoModerationNotificationEmbedView  public constructor(context: Context, attrs: AttributeSet? = null)
    : ConstraintLayout,
    VerticalSpacingItemDecoration.SpacingProviderView {
-   private final var allowChildGestures: Boolean
    private final val binding: AutoModerationNotificationEmbedViewBinding
+   private final var allowChildGestures: Boolean
 
    fun AutoModerationNotificationEmbedView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");
@@ -223,19 +223,19 @@ public class AutoModerationNotificationEmbedView  public constructor(context: Co
          }
       }
 
-      val var33: java.lang.String = var1.getActionsIconURL();
-      val var12: java.lang.String = var1.getActionsText();
+      val var12: java.lang.String = var1.getActionsIconURL();
+      val var33: java.lang.String = var1.getActionsText();
       val var8: DCDButton = this.binding.actionsButton;
-      if (var33 != null) {
-         this.binding.actionsButton.setIcon(var33, SizeUtilsKt.getDpToPx(16));
+      if (var12 != null) {
+         this.binding.actionsButton.setIcon(var12, SizeUtilsKt.getDpToPx(16));
       }
 
-      this.binding.actionsButton.setText(var12);
+      this.binding.actionsButton.setText(var33);
       var8.setOnClickButtonListener(var2);
-      val var10: java.lang.String = var1.getFeedbackText();
-      val var9: DCDButton = this.binding.feedbackButton;
-      this.binding.feedbackButton.setText(var10);
-      var9.setOnClickButtonListener(var3);
+      val var9: java.lang.String = var1.getFeedbackText();
+      val var10: DCDButton = this.binding.feedbackButton;
+      this.binding.feedbackButton.setText(var9);
+      var10.setOnClickButtonListener(var3);
    }
 
    public open fun onInterceptTouchEvent(ev: MotionEvent): Boolean {

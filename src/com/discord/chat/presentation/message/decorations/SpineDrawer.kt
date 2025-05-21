@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.decorations
 
+import Q8.j
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
@@ -8,16 +9,15 @@ import android.view.View
 import android.view.View.MeasureSpec
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.channel_spine.ChannelSpineView
-import com.discord.channel_spine.R
+import com.discord.chat.R
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import o8.l
+import l1.d
+import l1.e
 
 public class SpineDrawer(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
-   private final val contentStartPositionPx: Int
    public final val context: Context
-   private final val itemPaddingOffset: Int
+   private final val contentStartPositionPx: Int
 
    private final val lineDrawable: PaintDrawable
       private final get() {
@@ -25,51 +25,40 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
       }
 
 
-   private final val spineRect: Rect
-
    private final val splineView: ChannelSpineView
       private final get() {
          return this.splineView$delegate.getValue() as ChannelSpineView;
       }
 
 
+   private final val itemPaddingOffset: Int
+   private final val spineRect: Rect
+
    init {
       q.h(var1, "context");
       super();
       this.context = var1;
       this.contentStartPositionPx = var2;
-      this.lineDrawable$delegate = l.a(new Function0(this) {
-         final SpineDrawer this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final PaintDrawable invoke() {
-            val var1: PaintDrawable = new PaintDrawable(ThemeManagerKt.getTheme().getBackgroundAccent());
-            var1.setIntrinsicWidth(this.this$0.getContext().getResources().getDimensionPixelSize(R.dimen.spine_width));
-            return var1;
-         }
-      });
-      this.splineView$delegate = l.a(new Function0(this) {
-         final SpineDrawer this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final ChannelSpineView invoke() {
-            val var1: ChannelSpineView = new ChannelSpineView(this.this$0.getContext(), null, 2, null);
-            var1.setVerticalPadding(0);
-            var1.setHorizontalPadding(var1.getContext().getResources().getDimensionPixelSize(com.discord.chat.R.dimen.thread_spine_end_padding));
-            var1.setNumRows(1);
-            return var1;
-         }
-      });
-      this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_accessories_vertical_spacing);
+      this.lineDrawable$delegate = j.b(new d(this));
+      this.splineView$delegate = j.b(new e(this));
+      this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
       this.spineRect = new Rect();
+   }
+
+   @JvmStatic
+   fun `lineDrawable_delegate$lambda$1`(var0: SpineDrawer): PaintDrawable {
+      val var1: PaintDrawable = new PaintDrawable(ThemeManagerKt.getTheme().getBackgroundAccent());
+      var1.setIntrinsicWidth(var0.context.getResources().getDimensionPixelSize(com.discord.channel_spine.R.dimen.spine_width));
+      return var1;
+   }
+
+   @JvmStatic
+   fun `splineView_delegate$lambda$3`(var0: SpineDrawer): ChannelSpineView {
+      val var1: ChannelSpineView = new ChannelSpineView(var0.context, null, 2, null);
+      var1.setVerticalPadding(0);
+      var1.setHorizontalPadding(var1.getContext().getResources().getDimensionPixelSize(R.dimen.thread_spine_end_padding));
+      var1.setNumRows(1);
+      return var1;
    }
 
    public fun drawSpineCurve(canvas: Canvas, parent: RecyclerView, child: View, viewToCenterSpine: View, middle: Int) {
@@ -79,11 +68,11 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
       q.h(var4, "viewToCenterSpine");
       var1.save();
       var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
+      val var7: Int = var3.getTop();
       val var9: Int = var3.getTop();
-      val var8: Int = var3.getTop();
-      val var7: Int = (var4.getBottom() - var4.getTop()) / 2;
+      val var8: Int = (var4.getBottom() - var4.getTop()) / 2;
       val var6: Int = this.itemPaddingOffset;
-      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var9, this.contentStartPositionPx, var8 + var7 + var6);
+      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var7, this.contentStartPositionPx, var9 + var8 + var6);
       val var11: ChannelSpineView = this.getSplineView();
       var11.setRowHeight((float)(var10.height() / 2));
       var11.measure(MeasureSpec.makeMeasureSpec(var10.width(), 1073741824), MeasureSpec.makeMeasureSpec(var10.height(), 1073741824));

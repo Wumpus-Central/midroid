@@ -1,5 +1,6 @@
 package com.discord.simpleast.code
 
+import Q8.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -13,7 +14,6 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
-import o8.w
 
 public object CodeRules {
    private const val CODE_BLOCK_BODY_GROUP: Int = 3
@@ -83,19 +83,19 @@ public object CodeRules {
    public fun <R, S> createCodeLanguageMap(codeStyleProviders: CodeStyleProviders<R>): Map<String, List<Rule<R, Node<R>, S>>> {
       q.h(var1, "codeStyleProviders");
       val var4: Kotlin = Kotlin.INSTANCE;
-      var var3: java.util.List = Kotlin.INSTANCE.createKotlinCodeRules$simpleast_core_release(var1);
+      var var2: java.util.List = Kotlin.INSTANCE.createKotlinCodeRules$simpleast_core_release(var1);
       val var18: Array<java.lang.String> = var4.getKEYWORDS();
-      val var14: java.util.List = this.createGenericCodeRules(
-         var1, var3, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
+      var2 = this.createGenericCodeRules(
+         var1, var2, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
       );
-      val var15: Pattern = this.createSingleLineCommentPattern("//");
+      var var15: Pattern = this.createSingleLineCommentPattern("//");
       q.g(var15, "createSingleLineCommentPattern(\"//\")");
-      val var16: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
-      val var20: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
-      q.g(var20, "Pattern.compile(\"\"\"^\"[\\s…*?(?<!\\\\)\"(?=\\W|\\s|$)\"\"\")");
-      var3 = this.createGenericCodeRules(
+      val var20: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
+      var15 = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
+      q.g(var15, "Pattern.compile(\"\"\"^\"[\\s…*?(?<!\\\\)\"(?=\\W|\\s|$)\"\"\")");
+      val var17: java.util.List = this.createGenericCodeRules(
          var1,
-         i.n(new Rule[]{var16, toMatchGroupRule$default(this, var20, 0, var1.getLiteralStyleProvider(), 1, null)}),
+         i.n(new Rule[]{var20, toMatchGroupRule$default(this, var15, 0, var1.getLiteralStyleProvider(), 1, null)}),
          new java.lang.String[]{"message|enum|extend|service"},
          new java.lang.String[]{"true|false", "string|bool|double|float|bytes", "int32|uint32|sint32|int64|unit64|sint64", "map"},
          "required|repeated|optional|option|oneof|default|reserved",
@@ -186,36 +186,36 @@ public object CodeRules {
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
-      val var37: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
+      val var41: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
       val var46: Array<java.lang.String> = var45.getKEYWORDS();
       val var38: java.util.List = this.createGenericCodeRules(
-         var1, var37, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
+         var1, var41, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
-      val var42: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
+      val var48: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
       val var52: Array<java.lang.String> = var51.getKEYWORDS();
       val var13: java.util.List = this.createGenericCodeRules(
-         var1, var42, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
+         var1, var48, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
       );
-      return p8.q.l(
+      return R8.q.l(
          new Pair[]{
-            w.a("kt", var14),
-            w.a("kotlin", var14),
-            w.a("protobuf", var3),
-            w.a("proto", var3),
-            w.a("pb", var3),
-            w.a("py", var23),
-            w.a("python", var23),
-            w.a("rs", var27),
-            w.a("rust", var27),
-            w.a("cql", var36),
-            w.a("sql", var36),
-            w.a("xml", var32),
-            w.a("http", var32),
-            w.a("cr", var38),
-            w.a("crystal", var38),
-            w.a("js", var13),
-            w.a("javascript", var13)
+            s.a("kt", var2),
+            s.a("kotlin", var2),
+            s.a("protobuf", var17),
+            s.a("proto", var17),
+            s.a("pb", var17),
+            s.a("py", var23),
+            s.a("python", var23),
+            s.a("rs", var27),
+            s.a("rust", var27),
+            s.a("cql", var36),
+            s.a("sql", var36),
+            s.a("xml", var32),
+            s.a("http", var32),
+            s.a("cr", var38),
+            s.a("crystal", var38),
+            s.a("js", var13),
+            s.a("javascript", var13)
          }
       );
    }
@@ -256,7 +256,7 @@ public object CodeRules {
             var var8: java.util.List = null;
             var var4: Boolean = false;
             if (var7 != null) {
-               var4 = h.N(var7, '\n', false, 2, null);
+               var4 = h.M(var7, '\n', false, 2, null);
             }
 
             if (var6 != null) {
@@ -286,7 +286,7 @@ public object CodeRules {
       q.h(var2, "identifiers");
       val var3: StringBuilder = new StringBuilder();
       var3.append("^\\b(");
-      var3.append(c.h0(var2, "|", null, null, 0, null, null, 62, null));
+      var3.append(c.k0(var2, "|", null, null, 0, null, null, 62, null));
       var3.append(")(\\s+\\w+)");
       val var4: Pattern = Pattern.compile(var3.toString());
       q.g(var4, "Pattern.compile(\"\"\"^\\b($…String(\"|\")})(\\s+\\w+)\"\"\")");
@@ -375,7 +375,7 @@ public object CodeRules {
       q.h(var1, "words");
       val var2: StringBuilder = new StringBuilder();
       var2.append("^\\b(?:");
-      var2.append(c.h0(var1, "|", null, null, 0, null, null, 62, null));
+      var2.append(c.k0(var1, "|", null, null, 0, null, null, 62, null));
       var2.append(")\\b");
       return Pattern.compile(var2.toString());
    }

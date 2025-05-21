@@ -83,7 +83,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
 
    private fun setCoverImage(url: String?, blurredThumbnailUrl: String?, backgroundImageUrl: String?) {
       var var4: Boolean;
-      if ((var1 == null || kotlin.text.h.d0(var1)) && (var2 == null || kotlin.text.h.d0(var2))) {
+      if ((var1 == null || kotlin.text.h.c0(var1)) && (var2 == null || kotlin.text.h.c0(var2))) {
          var4 = 0;
       } else {
          var4 = 1;
@@ -104,7 +104,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
          kotlin.jvm.internal.q.g(this.binding.backgroundImage, "backgroundImage");
          if (var4 && var3 != null) {
             var4 = (boolean)1;
-            if (!kotlin.text.h.d0(var3)) {
+            if (!kotlin.text.h.c0(var3)) {
                break label54;
             }
          }
@@ -119,8 +119,8 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       }
 
       var8.setVisibility(var4);
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
-         if (var3 != null && !kotlin.text.h.d0(var3)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
+         if (var3 != null && !kotlin.text.h.c0(var3)) {
             (this.binding.coverImage.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
             this.binding.backgroundImage.setImageURI(var3);
          } else {
@@ -128,7 +128,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
          }
 
          this.binding.coverImage.setImageURI(var1);
-      } else if (var2 != null && !kotlin.text.h.d0(var2)) {
+      } else if (var2 != null && !kotlin.text.h.c0(var2)) {
          val var9: SimpleDraweeView = this.binding.coverImage;
          kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var9, var2);
@@ -139,7 +139,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       val var4: DCDButton = this.binding.coverImageOverlayButton;
       kotlin.jvm.internal.q.e(this.binding.coverImageOverlayButton);
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;
@@ -156,20 +156,20 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    }
 
    private fun setFooter(footer: StructurableText, messageId: MessageId) {
-      val var4: SimpleDraweeSpanTextView = this.binding.footer;
+      val var5: SimpleDraweeSpanTextView = this.binding.footer;
       kotlin.jvm.internal.q.e(this.binding.footer);
-      val var5: Context = var4.getContext();
-      val var6: FontMetrics = var4.getPaint().getFontMetrics();
+      val var4: Context = var5.getContext();
+      kotlin.jvm.internal.q.g(var4, "getContext(...)");
+      val var6: FontMetrics = var5.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var6, "getFontMetrics(...)");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var6);
-      val var7: TextPaint = var4.getPaint();
-      kotlin.jvm.internal.q.e(var5);
-      kotlin.jvm.internal.q.e(var7);
+      val var7: TextPaint = var5.getPaint();
+      kotlin.jvm.internal.q.g(var7, "getPaint(...)");
       ViewUtilsKt.setOptionalText(
-         var4,
+         var5,
          TextUtilsKt.toSpannable$default(
             var1,
-            var5,
+            var4,
             var2,
             false,
             false,
@@ -199,14 +199,14 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
             null
          )
       );
-      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var4, false, 1, null);
+      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var5, false, 1, null);
    }
 
    private fun setSubtitle(subtitle: CharSequence?) {
       val var4: TextView = this.binding.subtitle;
       kotlin.jvm.internal.q.g(this.binding.subtitle, "subtitle");
       var var2: Boolean;
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
          var2 = 0;
       } else {
          var2 = 1;

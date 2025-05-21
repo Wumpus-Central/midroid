@@ -1,5 +1,6 @@
 package com.discord.external_pip
 
+import Q8.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -16,8 +17,6 @@ import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.r
-import o8.w
 
 @ReactModule(name = "ExternalPip")
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -29,11 +28,11 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       super(var1);
       this.manager = new ExternalPipManager();
       this.reactEvents = new ReactEvents(
-         w.a("onPipModeChanged", G.b(OnPipModeChangedEvent.class)), w.a("onPipModeWillChange", G.b(OnPipModeWillChangeEvent.class))
+         s.a("onPipModeChanged", G.b(OnPipModeChangedEvent.class)), s.a("onPipModeWillChange", G.b(OnPipModeWillChangeEvent.class))
       );
    }
 
-   private fun enterPipMode(force: Boolean, onResult: (r<Unit>) -> Unit) {
+   private fun enterPipMode(force: Boolean, onResult: (Result<Unit>) -> Unit) {
       if (this.manager.getEnabled(var1)) {
          ExternalPipTransitionView.Companion.tryShow(this.getCurrentActivity());
       }
@@ -49,10 +48,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
@@ -66,7 +65,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return p8.q.m(new Pair[]{w.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return R8.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {
@@ -83,22 +82,15 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
                final ExternalPipModule this$0;
 
                {
-                  super(1);
                   this.this$0 = var1;
                   this.$onResultPromise = var2;
                }
 
                public final void invoke(Object var1) {
-                  var1 = r.e(var1);
-                  val var3: Unit;
+                  var1 = Result.e(var1);
                   if (var1 != null) {
                      this.$onResultPromise.reject(var1);
-                     var3 = Unit.a;
                   } else {
-                     var3 = null;
-                  }
-
-                  if (var3 == null) {
                      this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                   }
                }
@@ -126,22 +118,15 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
                      final ExternalPipModule this$0;
 
                      {
-                        super(1);
                         this.this$0 = var1;
                         this.$onResultPromise = var2;
                      }
 
                      public final void invoke(Object var1) {
-                        var1 = r.e(var1);
-                        val var3: Unit;
+                        var1 = Result.e(var1);
                         if (var1 != null) {
                            this.$onResultPromise.reject(var1);
-                           var3 = Unit.a;
                         } else {
-                           var3 = null;
-                        }
-
-                        if (var3 == null) {
                            this.$onResultPromise.resolve(java.lang.Boolean.TRUE);
                         }
                      }
@@ -171,6 +156,18 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
          return var1.getNativeModule(ExternalPipModule.class) as ExternalPipModule;
       }
 
+      @JvmStatic
+      fun `onUserLeaveHint$lambda$0`(var0: ReactContext, var1: Result): Unit {
+         if (!Result.h(var1.j())) {
+            val var2: ExternalPipModule = ExternalPipModule.Companion.getModule(var0);
+            if (var2 != null) {
+               ExternalPipModule.access$onPipModeChanged(var2, false);
+            }
+         }
+
+         return Unit.a;
+      }
+
       public fun onPipModeChanged(reactContext: ReactContext?, isInPipMode: Boolean): Unit? {
          if (var1 != null) {
             val var3: ExternalPipModule = this.getModule(var1);
@@ -194,23 +191,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
          if (var1 != null) {
             val var3: ExternalPipModule = this.getModule(var1);
             if (var3 != null) {
-               ExternalPipModule.access$enterPipMode(var3, false, new Function1(var1) {
-                  final ReactContext $reactContext;
-
-                  {
-                     super(1);
-                     this.$reactContext = var1;
-                  }
-
-                  public final void invoke(Object var1) {
-                     if (!r.h(var1)) {
-                        var1 = ExternalPipModule.Companion.access$getModule(ExternalPipModule.Companion, this.$reactContext);
-                        if (var1 != null) {
-                           ExternalPipModule.access$onPipModeChanged(var1, false);
-                        }
-                     }
-                  }
-               });
+               ExternalPipModule.access$enterPipMode(var3, false, new h(var1));
             }
          }
       }

@@ -1,5 +1,7 @@
 package com.discord.image.dominant_color
 
+import A1.a
+import A1.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
@@ -13,7 +15,6 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -22,38 +23,47 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
       super(var1);
    }
 
+   @JvmStatic
+   fun `getAvatarBase64$lambda$0`(var0: Promise, var1: Bitmap): Unit {
+      if (var1 != null) {
+         val var2: ByteArrayOutputStream = new ByteArrayOutputStream();
+         var1.compress(CompressFormat.PNG, 90, var2);
+         var0.resolve(Base64.encodeToString(var2.toByteArray(), 0));
+      } else {
+         var0.reject(new Exception("Unable to decode image source."));
+      }
+
+      return Unit.a;
+   }
+
    private fun getDominantColors(uri: String?, promise: Promise) {
       val var3: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var3, "getReactApplicationContext(...)");
-      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new Function1(var2) {
-         final Promise $promise;
+      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new a(var2), 2, null);
+   }
 
-         {
-            super(1);
-            this.$promise = var1;
-         }
+   @JvmStatic
+   fun `getDominantColors$lambda$2`(var0: Promise, var1: Bitmap): Unit {
+      if (var1 != null) {
+         val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
+         if (var3 != null) {
+            val var4: ArrayList = new ArrayList(i.v(var3, 10));
+            val var5: java.util.Iterator = var3.iterator();
 
-         public final void invoke(Bitmap var1) {
-            if (var1 != null) {
-               val var3: java.util.List = DominantColor.INSTANCE.getRepresentativeColors(var1);
-               if (var3 != null) {
-                  val var4: ArrayList = new ArrayList(i.v(var3, 10));
-                  val var5: java.util.Iterator = var3.iterator();
-
-                  while (var5.hasNext()) {
-                     val var2: Int = (var5.next() as java.lang.Number).intValue();
-                     var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
-                  }
-
-                  this.$promise.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
-               } else {
-                  this.$promise.reject(new Exception("Unable get representative color."));
-               }
-            } else {
-               this.$promise.reject(new Exception("Unable to decode image source."));
+            while (var5.hasNext()) {
+               val var2: Int = (var5.next() as java.lang.Number).intValue();
+               var4.add(NativeArrayExtensionsKt.nativeArrayOf(var2 shr 16 and 255, var2 shr 8 and 255, var2 and 255));
             }
+
+            var0.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
+         } else {
+            var0.reject(new Exception("Unable get representative color."));
          }
-      }, 2, null);
+      } else {
+         var0.reject(new Exception("Unable to decode image source."));
+      }
+
+      return Unit.a;
    }
 
    @ReactMethod
@@ -62,24 +72,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
       q.h(var2, "promise");
       val var3: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var3, "getReactApplicationContext(...)");
-      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new Function1(var2) {
-         final Promise $promise;
-
-         {
-            super(1);
-            this.$promise = var1;
-         }
-
-         public final void invoke(Bitmap var1) {
-            if (var1 != null) {
-               val var2: ByteArrayOutputStream = new ByteArrayOutputStream();
-               var1.compress(CompressFormat.PNG, 90, var2);
-               this.$promise.resolve(Base64.encodeToString(var2.toByteArray(), 0));
-            } else {
-               this.$promise.reject(new Exception("Unable to decode image source."));
-            }
-         }
-      }, 2, null);
+      FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new b(var2), 2, null);
    }
 
    @ReactMethod

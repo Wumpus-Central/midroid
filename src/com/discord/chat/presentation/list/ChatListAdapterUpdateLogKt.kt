@@ -2,7 +2,6 @@ package com.discord.chat.presentation.list
 
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
-import o8.p
 
 @JvmSynthetic
 fun `access$label`(var0: ChatListAction): java.lang.String {
@@ -24,7 +23,7 @@ private fun ChatListAction.label(): String {
       var1 = "ScrollTo";
    } else {
       if (var0 !is ChatListAction.StickToBottomIfAtBottom) {
-         throw new p();
+         throw new Q8.n();
       }
 
       var1 = "StickToBottomIfAtBottom";
@@ -78,16 +77,16 @@ private fun ListOperation.label(): String {
       var4 = var10.toString();
    } else {
       if (var0 !is ListOperation.ChangeRange) {
-         throw new p();
+         throw new Q8.n();
       }
 
-      val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();
-      val var19: Int = (var0 as ListOperation.ChangeRange).getLast();
+      val var19: Int = (var0 as ListOperation.ChangeRange).getFirst();
+      val var17: Int = (var0 as ListOperation.ChangeRange).getLast();
       val var12: StringBuilder = new StringBuilder();
       var12.append("CRNG(");
-      var12.append(var17);
-      var12.append("-");
       var12.append(var19);
+      var12.append("-");
+      var12.append(var17);
       var12.append(")");
       var4 = var12.toString();
    }

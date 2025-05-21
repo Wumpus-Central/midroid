@@ -1,5 +1,6 @@
 package com.discord.theme
 
+import Y8.a
 import kotlin.enums.EnumEntries
 
 public enum class DiscordTheme {
@@ -15,7 +16,7 @@ public enum class DiscordTheme {
    fun {
       val var0: Array<DiscordTheme> = $values();
       $VALUES = var0;
-      $ENTRIES = w8.a.a(var0);
+      $ENTRIES = a.a(var0);
    }
 
    @JvmStatic

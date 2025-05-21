@@ -9,6 +9,7 @@ import java.util.Map.Entry
 import kotlin.jvm.internal.q
 
 public data class ContentAction(tag: String, data: Map<String, String?>) : NotificationAction {
+   public open val tag: String
    public final val data: Map<String, String?>
 
    public final val isLocal: Boolean
@@ -16,8 +17,6 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
          return q.c(this.data.get("category"), "local");
       }
 
-
-   public open val tag: String
 
    init {
       q.h(var1, "tag");
@@ -41,7 +40,7 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       return new ContentAction(var1, var2);
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -92,8 +91,8 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       return var3.toString();
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());

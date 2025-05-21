@@ -1,7 +1,6 @@
 package com.discord.recycler_view.scroll
 
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
@@ -22,19 +21,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       q.h(var4, "scrollVelocityChanged");
       super();
       this.scrollVelocityChanged = var4;
-      this.velocityEvents = new DebouncedFlow<>(var5, new Function1(this) {
-         final DebouncedVelocityTrackingScrollListener this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(DebouncedVelocityTrackingScrollListener.VelocityEvent var1) {
-            q.h(var1, "<name for destructuring parameter 0>");
-            DebouncedVelocityTrackingScrollListener.access$getScrollVelocityChanged$p(this.this$0).invoke(var1.component1(), var1.component2());
-         }
-      }, false, 4, null);
+      this.velocityEvents = new DebouncedFlow<>(var5, new c(this), false, 4, null);
       this.velocityTracker = new VelocityTrackingScrollListener(
          var1,
          var2,
@@ -86,6 +73,13 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       }
 
       this.velocityEvents.tryEmit(var7);
+   }
+
+   @JvmStatic
+   fun `velocityEvents$lambda$0`(var0: DebouncedVelocityTrackingScrollListener, var1: DebouncedVelocityTrackingScrollListener.VelocityEvent): Unit {
+      q.h(var1, "<destruct>");
+      var0.scrollVelocityChanged.invoke(var1.component1(), var1.component2());
+      return Unit.a;
    }
 
    public fun cancel() {
@@ -151,15 +145,15 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var2: RecyclerView = this.recyclerView;
+         val var3: RecyclerView = this.recyclerView;
          val var1: Float = this.velocity;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("VelocityEvent(recyclerView=");
-         var3.append(var2);
-         var3.append(", velocity=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("VelocityEvent(recyclerView=");
+         var2.append(var3);
+         var2.append(", velocity=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

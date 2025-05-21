@@ -1,28 +1,13 @@
 package com.discord.chat.bridge.postpreviewembed
 
+import Ja.f
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.chat.bridge.structurabletext.StructurableText
-import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
-import ka.p0
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import kotlinx.serialization.internal.SerializationConstructorMarker
 
 @f
 public data class PostPreviewEmbed(parentChannelId: ChannelId,
@@ -47,165 +32,28 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
       verifyAge: Boolean? = ...
    ) : PostPreviewEmbed(var1, var3, var5, var6, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19, var20, var21, var22, var23),
    SpoilerableData {
-   public final val backgroundImage: String?
-   public final val blurredCoverImage: String?
-   public final val coverImage: String?
-   public final val coverImageOverlayText: String?
-   public final val ctaButtonColor: Int
-   public final val ctaText: String
-   public final val footer: StructurableText
-   public final val guildId: GuildId
+   public final val parentChannelId: ChannelId
+   public final val threadId: ChannelId
    public final val messageId: MessageId
+   public final val guildId: GuildId
+   public final val title: String
+   public final val ctaText: String
+   public final val ctaButtonColor: Int
+   public final val footer: StructurableText
+   public final val subtitle: String?
+   public final val coverImage: String?
+   public final val blurredCoverImage: String?
+   public final val coverImageOverlayText: String?
+   public final val backgroundImage: String?
+   public final val spoiler: String?
    public final val obscure: String?
    public final val obscureAwaitingScan: Boolean?
+   public final val shouldSpoiler: Boolean
    public final val obscureHideControls: Boolean?
    public final val obscureIsOpaque: Boolean?
-   public open val obscureOrNull: String?
-   public final val parentChannelId: ChannelId
-   public final val shouldSpoiler: Boolean
-   public final val spoiler: String?
-   public open val spoilerOrNull: String?
-   public final val subtitle: String?
-   public final val threadId: ChannelId
-   public final val title: String
    public final val verifyAge: Boolean?
-
-   fun PostPreviewEmbed(
-      var1: Int,
-      var2: ChannelId,
-      var3: ChannelId,
-      var4: java.lang.String,
-      var5: GuildId,
-      var6: java.lang.String,
-      var7: java.lang.String,
-      var8: Int,
-      var9: StructurableText,
-      var10: java.lang.String,
-      var11: java.lang.String,
-      var12: java.lang.String,
-      var13: java.lang.String,
-      var14: java.lang.String,
-      var15: java.lang.String,
-      var16: java.lang.String,
-      var17: java.lang.Boolean,
-      var18: Boolean,
-      var19: java.lang.Boolean,
-      var20: java.lang.Boolean,
-      var21: java.lang.Boolean,
-      var22: java.lang.String,
-      var23: java.lang.String,
-      var24: SerializationConstructorMarker
-   ) {
-      if (255 != (var1 and 255)) {
-         p0.b(var1, 255, PostPreviewEmbed.$serializer.INSTANCE.getDescriptor());
-      }
-
-      super();
-      this.parentChannelId = var2.unbox-impl();
-      this.threadId = var3.unbox-impl();
-      this.messageId = var4;
-      this.guildId = var5.unbox-impl();
-      this.title = var6;
-      this.ctaText = var7;
-      this.ctaButtonColor = var8;
-      this.footer = var9;
-      if ((var1 and 256) == 0) {
-         this.subtitle = null;
-      } else {
-         this.subtitle = var10;
-      }
-
-      if ((var1 and 512) == 0) {
-         this.coverImage = null;
-      } else {
-         this.coverImage = var11;
-      }
-
-      if ((var1 and 1024) == 0) {
-         this.blurredCoverImage = null;
-      } else {
-         this.blurredCoverImage = var12;
-      }
-
-      if ((var1 and 2048) == 0) {
-         this.coverImageOverlayText = null;
-      } else {
-         this.coverImageOverlayText = var13;
-      }
-
-      if ((var1 and 4096) == 0) {
-         this.backgroundImage = null;
-      } else {
-         this.backgroundImage = var14;
-      }
-
-      if ((var1 and 8192) == 0) {
-         this.spoiler = null;
-      } else {
-         this.spoiler = var15;
-      }
-
-      if ((var1 and 16384) == 0) {
-         this.obscure = null;
-      } else {
-         this.obscure = var16;
-      }
-
-      if (('耀' and var1) == 0) {
-         this.obscureAwaitingScan = null;
-      } else {
-         this.obscureAwaitingScan = var17;
-      }
-
-      if ((65536 and var1) == 0) {
-         var18 = false;
-      }
-
-      this.shouldSpoiler = var18;
-      if ((131072 and var1) == 0) {
-         this.obscureHideControls = null;
-      } else {
-         this.obscureHideControls = var19;
-      }
-
-      if ((262144 and var1) == 0) {
-         this.obscureIsOpaque = null;
-      } else {
-         this.obscureIsOpaque = var20;
-      }
-
-      if ((524288 and var1) == 0) {
-         this.verifyAge = null;
-      } else {
-         this.verifyAge = var21;
-      }
-
-      var var25: java.lang.String;
-      if ((1048576 and var1) == 0) {
-         var25 = this.spoiler;
-         if (this.spoiler == null || h.d0(this.spoiler)) {
-            var25 = null;
-         }
-      } else {
-         var25 = var22;
-      }
-
-      this.spoilerOrNull = var25;
-      if ((var1 and 2097152) == 0) {
-         var4 = this.obscure;
-         var var26: java.lang.String = null;
-         if (this.obscure != null) {
-            var26 = null;
-            if (!h.d0(this.obscure)) {
-               var26 = var4;
-            }
-         }
-
-         this.obscureOrNull = var26;
-      } else {
-         this.obscureOrNull = var23;
-      }
-   }
+   public open val spoilerOrNull: String?
+   public open val obscureOrNull: String?
 
    fun PostPreviewEmbed(
       var1: Long,
@@ -255,7 +103,7 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
       this.obscureHideControls = var21;
       this.obscureIsOpaque = var22;
       this.verifyAge = var23;
-      if (var17 == null || h.d0(var17)) {
+      if (var17 == null || h.c0(var17)) {
          var24 = null;
       }
 
@@ -263,7 +111,7 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
       var5 = null;
       if (var18 != null) {
          var5 = null;
-         if (!h.d0(var18)) {
+         if (!h.c0(var18)) {
             var5 = var18;
          }
       }
@@ -434,14 +282,14 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
    }
 
    public override fun hashCode(): Int {
-      val var19: Int = ChannelId.hashCode-impl(this.parentChannelId);
-      val var12: Int = ChannelId.hashCode-impl(this.threadId);
-      val var15: Int = MessageId.hashCode-impl(this.messageId);
-      val var16: Int = GuildId.hashCode-impl(this.guildId);
-      val var17: Int = this.title.hashCode();
+      val var16: Int = ChannelId.hashCode-impl(this.parentChannelId);
+      val var17: Int = ChannelId.hashCode-impl(this.threadId);
+      val var13: Int = MessageId.hashCode-impl(this.messageId);
+      val var12: Int = GuildId.hashCode-impl(this.guildId);
+      val var15: Int = this.title.hashCode();
       val var18: Int = this.ctaText.hashCode();
       val var14: Int = Integer.hashCode(this.ctaButtonColor);
-      val var13: Int = this.footer.hashCode();
+      val var19: Int = this.footer.hashCode();
       var var11: Int = 0;
       val var1: Int;
       if (this.subtitle == null) {
@@ -536,18 +384,18 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                                                                                                                                              (
                                                                                                                                                       (
                                                                                                                                                                (
-                                                                                                                                                                        var19
+                                                                                                                                                                        var16
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var12
+                                                                                                                                                                           + var17
                                                                                                                                                                      )
                                                                                                                                                                      * 31
-                                                                                                                                                                  + var15
+                                                                                                                                                                  + var13
                                                                                                                                                             )
                                                                                                                                                             * 31
-                                                                                                                                                         + var16
+                                                                                                                                                         + var12
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var17
+                                                                                                                                                + var15
                                                                                                                                           )
                                                                                                                                           * 31
                                                                                                                                        + var18
@@ -556,7 +404,7 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
                                                                                                                               + var14
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var13
+                                                                                                                     + var19
                                                                                                                )
                                                                                                                * 31
                                                                                                             + var1
@@ -596,419 +444,69 @@ public data class PostPreviewEmbed(parentChannelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = ChannelId.toString-impl(this.parentChannelId);
-      val var9: java.lang.String = ChannelId.toString-impl(this.threadId);
-      val var10: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var20: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var7: java.lang.String = this.title;
-      val var8: java.lang.String = this.ctaText;
+      val var20: java.lang.String = ChannelId.toString-impl(this.parentChannelId);
+      val var12: java.lang.String = ChannelId.toString-impl(this.threadId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var11: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var4: java.lang.String = this.title;
+      val var3: java.lang.String = this.ctaText;
       val var1: Int = this.ctaButtonColor;
-      val var11: StructurableText = this.footer;
-      val var3: java.lang.String = this.subtitle;
-      val var18: java.lang.String = this.coverImage;
-      val var13: java.lang.String = this.blurredCoverImage;
-      val var15: java.lang.String = this.coverImageOverlayText;
-      val var21: java.lang.String = this.backgroundImage;
-      val var4: java.lang.String = this.spoiler;
-      val var12: java.lang.String = this.obscure;
-      val var19: java.lang.Boolean = this.obscureAwaitingScan;
+      val var16: StructurableText = this.footer;
+      val var14: java.lang.String = this.subtitle;
+      val var17: java.lang.String = this.coverImage;
+      val var5: java.lang.String = this.blurredCoverImage;
+      val var9: java.lang.String = this.coverImageOverlayText;
+      val var18: java.lang.String = this.backgroundImage;
+      val var10: java.lang.String = this.spoiler;
+      val var19: java.lang.String = this.obscure;
+      val var13: java.lang.Boolean = this.obscureAwaitingScan;
       val var2: Boolean = this.shouldSpoiler;
-      val var16: java.lang.Boolean = this.obscureHideControls;
-      val var17: java.lang.Boolean = this.obscureIsOpaque;
-      val var14: java.lang.Boolean = this.verifyAge;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PostPreviewEmbed(parentChannelId=");
-      var5.append(var6);
-      var5.append(", threadId=");
-      var5.append(var9);
-      var5.append(", messageId=");
-      var5.append(var10);
-      var5.append(", guildId=");
-      var5.append(var20);
-      var5.append(", title=");
-      var5.append(var7);
-      var5.append(", ctaText=");
-      var5.append(var8);
-      var5.append(", ctaButtonColor=");
-      var5.append(var1);
-      var5.append(", footer=");
-      var5.append(var11);
-      var5.append(", subtitle=");
-      var5.append(var3);
-      var5.append(", coverImage=");
-      var5.append(var18);
-      var5.append(", blurredCoverImage=");
-      var5.append(var13);
-      var5.append(", coverImageOverlayText=");
-      var5.append(var15);
-      var5.append(", backgroundImage=");
-      var5.append(var21);
-      var5.append(", spoiler=");
-      var5.append(var4);
-      var5.append(", obscure=");
-      var5.append(var12);
-      var5.append(", obscureAwaitingScan=");
-      var5.append(var19);
-      var5.append(", shouldSpoiler=");
-      var5.append(var2);
-      var5.append(", obscureHideControls=");
-      var5.append(var16);
-      var5.append(", obscureIsOpaque=");
-      var5.append(var17);
-      var5.append(", verifyAge=");
-      var5.append(var14);
-      var5.append(")");
-      return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: PostPreviewEmbed.$serializer = new PostPreviewEmbed.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.postpreviewembed.PostPreviewEmbed", var0, 22);
-         var1.l("parentChannelId", false);
-         var1.l("threadId", false);
-         var1.l("messageId", false);
-         var1.l("guildId", false);
-         var1.l("title", false);
-         var1.l("ctaText", false);
-         var1.l("ctaButtonColor", false);
-         var1.l("footer", false);
-         var1.l("subtitle", true);
-         var1.l("coverImage", true);
-         var1.l("blurredCoverImage", true);
-         var1.l("coverImageOverlayText", true);
-         var1.l("backgroundImage", true);
-         var1.l("spoiler", true);
-         var1.l("obscure", true);
-         var1.l("obscureAwaitingScan", true);
-         var1.l("shouldSpoiler", true);
-         var1.l("obscureHideControls", true);
-         var1.l("obscureIsOpaque", true);
-         var1.l("verifyAge", true);
-         var1.l("spoilerOrNull", true);
-         var1.l("obscureOrNull", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: C0 = C0.a;
-         val var10: KSerializer = a.u(C0.a);
-         val var7: KSerializer = a.u(var2);
-         val var8: KSerializer = a.u(var2);
-         val var11: KSerializer = a.u(var2);
-         val var13: KSerializer = a.u(var2);
-         val var15: KSerializer = a.u(var2);
-         val var1: KSerializer = a.u(var2);
-         val var16: ka.h = ka.h.a;
-         return new KSerializer[]{
-            ChannelId.$serializer.INSTANCE,
-            ChannelId.$serializer.INSTANCE,
-            MessageId.$serializer.INSTANCE,
-            GuildId.$serializer.INSTANCE,
-            var2,
-            var2,
-            N.a,
-            StructurableTextSerializer.INSTANCE,
-            var10,
-            var7,
-            var8,
-            var11,
-            var13,
-            var15,
-            var1,
-            a.u(ka.h.a),
-            var16,
-            a.u(var16),
-            a.u(var16),
-            a.u(var16),
-            a.u(var2),
-            a.u(var2)
-         };
-      }
-
-      public open fun deserialize(decoder: Decoder): PostPreviewEmbed {
-         q.h(var1, "decoder");
-         val var30: SerialDescriptor = this.getDescriptor();
-         val var31: c = var1.c(var30);
-         val var7: Boolean = var31.y();
-         var var23: java.lang.String = null;
-         var var2: Int;
-         var var3: Byte;
-         var var4: Int;
-         var var14: Any;
-         var var17: Any;
-         var var19: Any;
-         var var20: Any;
-         var var21: Any;
-         var var22: ChannelId;
-         var var25: Any;
-         var var26: Any;
-         val var28: Any;
-         val var29: Any;
-         var var36: Any;
-         var var42: Any;
-         var var44: java.lang.Boolean;
-         var var47: Any;
-         var var48: java.lang.Boolean;
-         var var53: Any;
-         var var56: java.lang.Boolean;
-         var var64: Any;
-         val var66: java.lang.Boolean;
-         if (var7) {
-            var36 = ChannelId.$serializer.INSTANCE;
-            var14 = var31.m(var30, 0, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            var22 = var31.m(var30, 1, (DeserializationStrategy)var36, null) as ChannelId;
-            var36 = var31.m(var30, 2, MessageId.$serializer.INSTANCE, null) as MessageId;
-            val var34: java.lang.String;
-            if (var36 != null) {
-               var34 = var36.unbox-impl();
-            } else {
-               var34 = null;
-            }
-
-            var53 = var31.m(var30, 3, GuildId.$serializer.INSTANCE, null) as GuildId;
-            var17 = var31.t(var30, 4);
-            var19 = var31.t(var30, 5);
-            var2 = var31.k(var30, 6);
-            val var63: StructurableText = var31.m(var30, 7, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var42 = C0.a;
-            var47 = var31.v(var30, 8, C0.a, null) as java.lang.String;
-            var21 = var31.v(var30, 9, (DeserializationStrategy)var42, null) as java.lang.String;
-            val var15: java.lang.String = var31.v(var30, 10, (DeserializationStrategy)var42, null) as java.lang.String;
-            val var12: java.lang.String = var31.v(var30, 11, (DeserializationStrategy)var42, null) as java.lang.String;
-            val var27: java.lang.String = var31.v(var30, 12, (DeserializationStrategy)var42, null) as java.lang.String;
-            var28 = var31.v(var30, 13, (DeserializationStrategy)var42, null) as java.lang.String;
-            var25 = var31.v(var30, 14, (DeserializationStrategy)var42, null) as java.lang.String;
-            val var9: ka.h = ka.h.a;
-            var56 = var31.v(var30, 15, ka.h.a, null) as java.lang.Boolean;
-            var3 = var31.s(var30, 16);
-            val var13: java.lang.Boolean = var31.v(var30, 17, var9, null) as java.lang.Boolean;
-            var64 = var31.v(var30, 18, var9, null) as java.lang.Boolean;
-            var44 = var31.v(var30, 19, var9, null) as java.lang.Boolean;
-            val var10: java.lang.String = var31.v(var30, 20, (DeserializationStrategy)var42, null) as java.lang.String;
-            var42 = var31.v(var30, 21, (DeserializationStrategy)var42, null) as java.lang.String;
-            var20 = var34;
-            var4 = 4194303;
-            var29 = var53;
-            var53 = var63;
-            var64 = var47;
-            var47 = var15;
-            var26 = var12;
-            var23 = var27;
-            var66 = var56;
-            var56 = var13;
-            var48 = (java.lang.Boolean)var64;
-            var36 = var10;
-         } else {
-            var var6: Boolean = true;
-            var4 = 0;
-            var var5: Byte = 0;
-            var3 = 0;
-            var var52: ChannelId = null;
-            var42 = null;
-            var36 = null;
-            var44 = null;
-            var21 = null;
-            var25 = null;
-            var64 = null;
-            var26 = null;
-            var56 = null;
-            var53 = null;
-            var19 = null;
-            var14 = null;
-            var17 = null;
-            var22 = null;
-            var20 = null;
-            var var50: Any = null;
-            var47 = null;
-            var48 = null;
-            var var46: Any = null;
-
-            while (var6) {
-               label80: {
-                  var2 = var31.x(var30);
-                  switch (var2) {
-                     case -1:
-                        var6 = false;
-                        var2 = var4;
-                        break label80;
-                     case 0:
-                        var50 = var31.m(var30, 0, ChannelId.$serializer.INSTANCE, var50) as ChannelId;
-                        var2 = var4 or 1;
-                        break label80;
-                     case 1:
-                        var52 = var31.m(var30, 1, ChannelId.$serializer.INSTANCE, var52) as ChannelId;
-                        var2 = var4 or 2;
-                        break label80;
-                     case 2:
-                        if (var20 != null) {
-                           var20 = MessageId.box-impl(var20);
-                        } else {
-                           var20 = null;
-                        }
-
-                        var20 = var31.m(var30, 2, MessageId.$serializer.INSTANCE, var20) as MessageId;
-                        if (var20 != null) {
-                           var20 = var20.unbox-impl();
-                        } else {
-                           var20 = null;
-                        }
-
-                        var2 = var4 or 4;
-                        break label80;
-                     case 3:
-                        var14 = var31.m(var30, 3, GuildId.$serializer.INSTANCE, var14) as GuildId;
-                        var2 = var4 or 8;
-                        break label80;
-                     case 4:
-                        var17 = var31.t(var30, 4);
-                        var2 = var4 or 16;
-                        break label80;
-                     case 5:
-                        var19 = var31.t(var30, 5);
-                        var2 = var4 or 32;
-                        break label80;
-                     case 6:
-                        var3 = var31.k(var30, 6);
-                        var2 = var4 or 64;
-                        break label80;
-                     case 7:
-                        var46 = var31.m(var30, 7, StructurableTextSerializer.INSTANCE, var46) as StructurableText;
-                        var2 = var4 or 128;
-                        break label80;
-                     case 8:
-                        var22 = var31.v(var30, 8, C0.a, var22) as java.lang.String;
-                        var2 = var4 or 256;
-                        break label80;
-                     case 9:
-                        var48 = var31.v(var30, 9, C0.a, var48) as java.lang.String;
-                        var2 = var4 or 512;
-                        break label80;
-                     case 10:
-                        var47 = var31.v(var30, 10, C0.a, var47) as java.lang.String;
-                        var4 |= 1024;
-                        continue;
-                     case 11:
-                        var26 = var31.v(var30, 11, C0.a, var26) as java.lang.String;
-                        var2 = var4 or 2048;
-                        break label80;
-                     case 12:
-                        var23 = var31.v(var30, 12, C0.a, var23) as java.lang.String;
-                        var2 = var4 or 4096;
-                        break label80;
-                     case 13:
-                        var64 = var31.v(var30, 13, C0.a, var64) as java.lang.String;
-                        var2 = var4 or 8192;
-                        break label80;
-                     case 14:
-                        var25 = var31.v(var30, 14, C0.a, var25) as java.lang.String;
-                        var2 = var4 or 16384;
-                        break label80;
-                     case 15:
-                        var44 = var31.v(var30, 15, ka.h.a, var44) as java.lang.Boolean;
-                        var2 = 32768;
-                        break;
-                     case 16:
-                        var5 = var31.s(var30, 16);
-                        var2 = var4 or 65536;
-                        break label80;
-                     case 17:
-                        var42 = var31.v(var30, 17, ka.h.a, var42) as java.lang.Boolean;
-                        var2 = 131072;
-                        break;
-                     case 18:
-                        var53 = var31.v(var30, 18, ka.h.a, var53) as java.lang.Boolean;
-                        var2 = 262144;
-                        break;
-                     case 19:
-                        var21 = var31.v(var30, 19, ka.h.a, var21) as java.lang.Boolean;
-                        var2 = 524288;
-                        break;
-                     case 20:
-                        var56 = var31.v(var30, 20, C0.a, var56) as java.lang.String;
-                        var2 = 1048576;
-                        break;
-                     case 21:
-                        var36 = var31.v(var30, 21, C0.a, var36) as java.lang.String;
-                        var2 = 2097152;
-                        break;
-                     default:
-                        throw new n(var2);
-                  }
-
-                  var2 = var4 or var2;
-               }
-
-               var4 = var2;
-            }
-
-            var66 = var44;
-            var2 = var3;
-            var42 = var36;
-            var36 = var56;
-            var44 = (java.lang.Boolean)var21;
-            var48 = (java.lang.Boolean)var53;
-            var56 = (java.lang.Boolean)var42;
-            var3 = var5;
-            var28 = var64;
-            var21 = var48;
-            var64 = var22;
-            var53 = var46;
-            var29 = var14;
-            var22 = var52;
-            var14 = var50;
-         }
-
-         var31.b(var30);
-         return new PostPreviewEmbed(
-            var4,
-            (ChannelId)var14,
-            var22,
-            var20,
-            (GuildId)var29,
-            (java.lang.String)var17,
-            (java.lang.String)var19,
-            var2,
-            (StructurableText)var53,
-            (java.lang.String)var64,
-            (java.lang.String)var21,
-            (java.lang.String)var47,
-            (java.lang.String)var26,
-            var23,
-            (java.lang.String)var28,
-            (java.lang.String)var25,
-            var66,
-            (boolean)var3,
-            var56,
-            var48,
-            var44,
-            var36,
-            (java.lang.String)var42,
-            null,
-            null
-         );
-      }
-
-      public open fun serialize(encoder: Encoder, value: PostPreviewEmbed) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         PostPreviewEmbed.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var8: java.lang.Boolean = this.obscureHideControls;
+      val var15: java.lang.Boolean = this.obscureIsOpaque;
+      val var6: java.lang.Boolean = this.verifyAge;
+      val var21: StringBuilder = new StringBuilder();
+      var21.append("PostPreviewEmbed(parentChannelId=");
+      var21.append(var20);
+      var21.append(", threadId=");
+      var21.append(var12);
+      var21.append(", messageId=");
+      var21.append(var7);
+      var21.append(", guildId=");
+      var21.append(var11);
+      var21.append(", title=");
+      var21.append(var4);
+      var21.append(", ctaText=");
+      var21.append(var3);
+      var21.append(", ctaButtonColor=");
+      var21.append(var1);
+      var21.append(", footer=");
+      var21.append(var16);
+      var21.append(", subtitle=");
+      var21.append(var14);
+      var21.append(", coverImage=");
+      var21.append(var17);
+      var21.append(", blurredCoverImage=");
+      var21.append(var5);
+      var21.append(", coverImageOverlayText=");
+      var21.append(var9);
+      var21.append(", backgroundImage=");
+      var21.append(var18);
+      var21.append(", spoiler=");
+      var21.append(var10);
+      var21.append(", obscure=");
+      var21.append(var19);
+      var21.append(", obscureAwaitingScan=");
+      var21.append(var13);
+      var21.append(", shouldSpoiler=");
+      var21.append(var2);
+      var21.append(", obscureHideControls=");
+      var21.append(var8);
+      var21.append(", obscureIsOpaque=");
+      var21.append(var15);
+      var21.append(", verifyAge=");
+      var21.append(var6);
+      var21.append(")");
+      return var21.toString();
    }
 
    public companion object {

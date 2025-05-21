@@ -2,10 +2,15 @@ package com.discord.sticker.sticker_types
 
 import com.discord.logging.Log
 import com.discord.rlottie.RLottie
-import t8.a
 
 public object RLottieUtils {
    internal final var initialized: Boolean
+
+   @JvmStatic
+   fun `init$lambda$0`(): Unit {
+      INSTANCE.initAsync();
+      return Unit.a;
+   }
 
    private fun initAsync() {
       try {
@@ -21,6 +26,6 @@ public object RLottieUtils {
    }
 
    public fun init() {
-      a.b(false, false, null, "RLottieLoader", 0, <unrepresentable>.INSTANCE, 23, null);
+      V8.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
    }
 }

@@ -172,7 +172,6 @@ import com.discord.primitives.MessageId
 import com.discord.reactions.ReactionView
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.sticker.StickerView
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
@@ -180,7 +179,7 @@ import kotlin.jvm.functions.Function4
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.functions.Function8
 
-public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unrepresentable>.INSTANCE) : RecyclerView.Adapter {
+public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) : RecyclerView.Adapter {
    private final val measureAndLayout: () -> Unit
    private final lateinit var eventHandler: ChatEventHandler
    private final var botComponentProvider: ComponentProvider?
@@ -201,56 +200,103 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
       super();
       this.measureAndLayout = var1;
       this.items = kotlin.collections.i.k();
-      this.onTapSpoiler = new Function1(this) {
-         final MessageAccessoriesAdapter this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(MessagePartViewHolder var1) {
-            kotlin.jvm.internal.q.h(var1, "holder");
-            this.this$0.notifyItemChanged(var1.getBindingAdapterPosition());
-            MessageAccessoriesAdapter.access$getMeasureAndLayout$p(this.this$0).invoke();
-         }
-      };
+      this.onTapSpoiler = new N(this);
       this.setHasStableIds(true);
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$10`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `_init_$lambda$0`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$10`(var0: MessageAccessoriesAdapter, var1: java.lang.String): Unit {
+      var var2: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var2 = null;
+      }
+
+      var2.onTapReferralRedeem(null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$11`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: java.lang.String): Unit {
+      kotlin.jvm.internal.q.h(var2, "giftCode");
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
          var4 = null;
       }
 
-      val var5: java.lang.String = var0.messageId;
-      kotlin.jvm.internal.q.e(var0.messageId);
-      val var3: ChannelId = var0.channelId;
-      kotlin.jvm.internal.q.e(var0.channelId);
-      var4.onTapReactionOverflow-pfaIj0E(var5, var3.unbox-impl());
+      var4.onTapGiftCodeAccept-NU4t8f8(var2, (var1 as GiftMessageAccessory).getMessageId-3Eiw7ao());
+      return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$12`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      if (var0.messageId != null) {
-         var var3: ChatEventHandler = var0.eventHandler;
-         if (var0.eventHandler == null) {
-            kotlin.jvm.internal.q.y("eventHandler");
-            var3 = null;
+   fun `onBindViewHolder$lambda$12`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$13`(var0: MessageAccessoriesAdapter, var1: Int, var2: MessageAccessory, var3: MessagePartViewHolder): Unit {
+      kotlin.jvm.internal.q.h(var2, "attachment");
+      kotlin.jvm.internal.q.h(var3, "attachmentViewHolder");
+      val var4: View = var3.itemView;
+      kotlin.jvm.internal.q.g(var3.itemView, "itemView");
+      val var7: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var6: java.lang.Double;
+      if (var2 is ImageAttachmentMessageAccessory) {
+         var6 = null;
+      } else {
+         if (var2 !is VideoAttachmentMessageAccessory) {
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("Unsupported accessory: ");
+            var5.append(var2);
+            throw new IllegalStateException(var5.toString().toString());
          }
 
-         var3.onTapDismissMediaPostSharePrompt-1xi1bu0(var0.messageId);
+         var6 = (var2 as VideoAttachmentMessageAccessory).getPortal();
       }
+
+      var0.onMediaClicked-mdVZsaY(var4, var7, "attachment", ViewResizeMode.Cover, var6, var1, null, null, null);
+      return Unit.a;
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$2`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$15$lambda$14`(var0: Function4, var1: Int): Unit {
+      var0.invoke(MediaType.Attachment, var1, null, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$16`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$17`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+      var var4: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var4 = null;
+      }
+
+      var4.onTapObscuredMediaToggle-ZQwuxwg(
+         (var1 as MediaMosaicAttachmentMessageAccessory).getMessageId-3Eiw7ao(),
+         (var1 as MediaMosaicAttachmentMessageAccessory).getChannelId-o4g7jtM(),
+         var2,
+         null,
+         null
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$18`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -263,8 +309,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$3`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$19`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -277,8 +322,39 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$4`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$20`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var var2: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var2 = null;
+      }
+
+      val var4: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var2, var4, var1, null, null, 12, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$21`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var var2: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var2 = null;
+      }
+
+      val var5: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      val var4: ChannelId = var0.channelId;
+      kotlin.jvm.internal.q.e(var0.channelId);
+      var2.onLongPressReaction-Eqy5D80(var5, var4.unbox-impl(), var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$22`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -293,9 +369,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$5`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$part");
+   fun `onBindViewHolder$lambda$23`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: View) {
       var var9: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -318,8 +392,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$6`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$24`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -334,8 +407,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$7`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$25`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
+      kotlin.jvm.internal.q.h(var2, "it");
+      var var3: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var3 = null;
+      }
+
+      var3.onStickerClicked-Ayv7vGE((var1 as StickerMessageAccessory).getSticker(), (var1 as StickerMessageAccessory).getMessageId-3Eiw7ao());
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$26`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Sticker): Unit {
+      kotlin.jvm.internal.q.h(var2, "it");
+      var var3: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var3 = null;
+      }
+
+      var3.onStickerLongClicked-Ayv7vGE((var1 as StickerMessageAccessory).getSticker(), (var1 as StickerMessageAccessory).getMessageId-3Eiw7ao());
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$27`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -350,8 +448,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$8`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$28`(var0: MessageAccessoriesAdapter, var1: View) {
       var var6: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -367,8 +464,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$9`(var0: MessageAccessoriesAdapter, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `onBindViewHolder$lambda$29`(var0: MessageAccessoriesAdapter, var1: View) {
       var var4: ChatEventHandler = var0.eventHandler;
       if (var0.eventHandler == null) {
          kotlin.jvm.internal.q.y("eventHandler");
@@ -378,6 +474,252 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
       val var3: java.lang.String = var0.messageId;
       kotlin.jvm.internal.q.e(var0.messageId);
       ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var4, var3, null, null, null, 12, null);
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$30`(var0: MessageAccessoriesAdapter, var1: View) {
+      var var4: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var4 = null;
+      }
+
+      val var5: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      val var3: ChannelId = var0.channelId;
+      kotlin.jvm.internal.q.e(var0.channelId);
+      var4.onTapReactionOverflow-pfaIj0E(var5, var3.unbox-impl());
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$31`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var var2: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var2 = null;
+      }
+
+      val var4: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var2, var4, var1, null, null, 12, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$32`(var0: MessageAccessoriesAdapter, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var var2: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var2 = null;
+      }
+
+      val var5: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      val var4: ChannelId = var0.channelId;
+      kotlin.jvm.internal.q.e(var0.channelId);
+      var2.onLongPressReaction-Eqy5D80(var5, var4.unbox-impl(), var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$34`(var0: MessageAccessoriesAdapter, var1: View) {
+      if (var0.messageId != null) {
+         var var3: ChatEventHandler = var0.eventHandler;
+         if (var0.eventHandler == null) {
+            kotlin.jvm.internal.q.y("eventHandler");
+            var3 = null;
+         }
+
+         var3.onTapDismissMediaPostSharePrompt-1xi1bu0(var0.messageId);
+      }
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$35`(var0: MessageAccessoriesAdapter, var1: java.lang.String, var2: java.lang.String): Unit {
+      kotlin.jvm.internal.q.h(var1, "url");
+      kotlin.jvm.internal.q.h(var2, "filename");
+      var var3: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var3 = null;
+      }
+
+      val var5: java.lang.String = var0.messageId;
+      kotlin.jvm.internal.q.e(var0.messageId);
+      var3.onLinkClicked-u7_MRrM(var5, var1, var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$36`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$38$lambda$37`(var0: Function4, var1: java.lang.String, var2: Int): Unit {
+      kotlin.jvm.internal.q.h(var1, "componentId");
+      var0.invoke(MediaType.Component, null, var1, var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$39`(
+      var0: MessageAccessory, var1: MessageAccessoriesAdapter, var2: View, var3: java.lang.String, var4: Int, var5: java.lang.Double
+   ): Unit {
+      kotlin.jvm.internal.q.h(var2, "view");
+      kotlin.jvm.internal.q.h(var3, "componentId");
+      var1.onMediaClicked-mdVZsaY(
+         var2, (var0 as MessageComponentsAccessory).getMessageId-3Eiw7ao(), "component", ViewResizeMode.Fill, var5, 0, null, var3, var4
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$4$lambda$3`(var0: Function6, var1: MessageAccessoriesAdapter, var2: MediaType, var3: Int, var4: java.lang.String, var5: Int): Unit {
+      kotlin.jvm.internal.q.h(var2, "mediaType");
+      val var6: java.lang.String = var1.messageId;
+      kotlin.jvm.internal.q.e(var1.messageId);
+      val var8: MessageId;
+      if (var6 != null) {
+         var8 = MessageId.box-impl(var6);
+      } else {
+         var8 = null;
+      }
+
+      val var7: ChannelId = var1.channelId;
+      kotlin.jvm.internal.q.e(var1.channelId);
+      var0.invoke(var8, var7, var3, var2, var4, var5);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$40`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$41`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+      var var4: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var4 = null;
+      }
+
+      var4.onTapObscuredMediaToggle-ZQwuxwg(
+         (var1 as MessageComponentsAccessory).getMessageId-3Eiw7ao(),
+         (var1 as MessageComponentsAccessory).getMessage().getChannelId-o4g7jtM(),
+         var2,
+         null,
+         null
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$43$lambda$42`(var0: Function4, var1: java.lang.String, var2: Int): Unit {
+      kotlin.jvm.internal.q.h(var1, "componentId");
+      var0.invoke(MediaType.Attachment, null, var1, var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$44`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$45`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+      var var4: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var4 = null;
+      }
+
+      var4.onTapObscuredMediaToggle-ZQwuxwg(
+         (var1 as PostPreviewEmbedMessageAccessory).getMessageId-3Eiw7ao(),
+         (var1 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed().getThreadId-o4g7jtM(),
+         var2,
+         null,
+         null
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$5`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$6`(var0: MessageAccessoriesAdapter, var1: MessageAccessory, var2: Boolean): Unit {
+      var var4: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var4 = null;
+      }
+
+      var4.onTapObscuredMediaToggle-ZQwuxwg(
+         (var1 as EmbedMessageAccessory).getMessageId-3Eiw7ao(),
+         (var1 as EmbedMessageAccessory).getChannelId-o4g7jtM(),
+         var2,
+         null,
+         (var1 as EmbedMessageAccessory).getEmbed().getId()
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$7`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$8`(var0: MessagePartViewHolder, var1: MessageAccessory, var2: MessageAccessoriesAdapter, var3: java.lang.Double, var4: Int): Unit {
+      val var7: View = var0.itemView;
+      kotlin.jvm.internal.q.g(var0.itemView, "itemView");
+      var2.onMediaClicked-mdVZsaY(
+         var7,
+         (var1 as EmbedMessageAccessory).getMessageId-3Eiw7ao(),
+         "embed",
+         ViewResizeMode.Fill,
+         var3,
+         (var1 as EmbedMessageAccessory).getIndex(),
+         var4,
+         null,
+         null
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$9`(var0: MessageAccessoriesAdapter, var1: MessageAccessory): Unit {
+      var var3: ChatEventHandler = var0.eventHandler;
+      if (var0.eventHandler == null) {
+         kotlin.jvm.internal.q.y("eventHandler");
+         var3 = null;
+      }
+
+      var3.onTapObscuredMediaLearnMore-8a0ehIg(
+         (var1 as InfoLinkMessageAccessory).getMessageId-3Eiw7ao(),
+         (var1 as InfoLinkMessageAccessory).getChannelId-o4g7jtM(),
+         (var1 as InfoLinkMessageAccessory).getAttachmentId(),
+         (var1 as InfoLinkMessageAccessory).getEmbedId()
+      );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onCreateViewHolder$lambda$2`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      kotlin.jvm.internal.q.h(var1, "holder");
+      var0.onTapSpoiler.invoke(var1);
+      return Unit.a;
    }
 
    private fun View.onMediaClicked(
@@ -411,6 +753,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          var8,
          var9
       );
+   }
+
+   @JvmStatic
+   fun `onTapSpoiler$lambda$1`(var0: MessageAccessoriesAdapter, var1: MessagePartViewHolder): Unit {
+      kotlin.jvm.internal.q.h(var1, "holder");
+      var0.notifyItemChanged(var1.getBindingAdapterPosition());
+      var0.measureAndLayout.invoke();
+      return Unit.a;
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
@@ -463,7 +813,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                if (var4 != 2) {
                   if (var4 != 3) {
                      if (var4 != 4) {
-                        throw new o8.p();
+                        throw new Q8.n();
                      }
 
                      var4 = 27;
@@ -528,7 +878,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
 
             if (var4 != 2) {
                if (var4 != 3) {
-                  throw new o8.p();
+                  throw new Q8.n();
                }
 
                var4 = 38;
@@ -550,7 +900,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                      throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                   }
 
-                  throw new o8.p();
+                  throw new Q8.n();
                }
 
                throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
@@ -572,35 +922,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
       }
 
       val var52: Function6 = var8.getOnMessageLongPressed();
-      val var53: Function4;
+      val var53: q;
       if (var52 != null) {
-         var53 = new Function4(var52, this) {
-            final Function6 $onLongClick;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(4);
-               this.$onLongClick = var1;
-               this.this$0 = var2;
-            }
-
-            public final void invoke(MediaType var1, Integer var2, java.lang.String var3, Integer var4) {
-               kotlin.jvm.internal.q.h(var1, "mediaType");
-               val var6: Function6 = this.$onLongClick;
-               val var5: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var5);
-               val var8: MessageId;
-               if (var5 != null) {
-                  var8 = MessageId.box-impl(var5);
-               } else {
-                  var8 = null;
-               }
-
-               val var7: ChannelId = MessageAccessoriesAdapter.access$getChannelId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var7);
-               var6.invoke(var8, var7, var2, var1, var3, var4);
-            }
-         };
+         var53 = new q(var52, this);
       } else {
          var53 = null;
       }
@@ -614,151 +938,26 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var8 = null;
          }
 
+         val var13: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
          val var5: Int = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
-         val var12: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
-         var2 = (var10 as EmbedMessageAccessory).getRadiusPx();
-         val var13: OnLongClickListener = (var10 as EmbedMessageAccessory).getOnLongClick();
-         val var98: SpoilerAttributes = var12.getSpoilerAttributes();
+         var2 = var13.getRadiusPx();
+         val var12: OnLongClickListener = var13.getOnLongClick();
+         val var98: SpoilerAttributes = var13.getSpoilerAttributes();
          val var99: SpoilerConfig;
          if (var98 != null) {
-            var99 = var98.configure(
-               new Function0(this, var1) {
-                  final MessagePartViewHolder $holder;
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                     this.$holder = var2;
-                  }
-
-                  public final void invoke() {
-                     MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-                  }
-               },
-               new Function1(this, var10) {
-                  final MessageAccessory $part;
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                     this.$part = var2;
-                  }
-
-                  public final void invoke(boolean var1) {
-                     val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                     var var2: ChatEventHandler = var3;
-                     if (var3 == null) {
-                        kotlin.jvm.internal.q.y("eventHandler");
-                        var2 = null;
-                     }
-
-                     var2.onTapObscuredMediaToggle-ZQwuxwg(
-                        this.$part.getMessageId-3Eiw7ao(),
-                        (this.$part as EmbedMessageAccessory).getChannelId-o4g7jtM(),
-                        var1,
-                        null,
-                        (this.$part as EmbedMessageAccessory).getEmbed().getId()
-                     );
-                  }
-               }
-            );
+            var99 = var98.configure(new i(this, var1), new u(this, var10));
          } else {
             var99 = null;
          }
 
-         var11.bind(var8, var12, var5, var2, new Function0(this, var1) {
-            final MessagePartViewHolder $holder;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(0);
-               this.this$0 = var1;
-               this.$holder = var2;
-            }
-
-            public final void invoke() {
-               MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-            }
-         }, var99, new Function2(var1, var10, this) {
-            final MessagePartViewHolder $holder;
-            final MessageAccessory $part;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(2);
-               this.$holder = var1;
-               this.$part = var2;
-               this.this$0 = var3;
-            }
-
-            public final void invoke(java.lang.Double var1, Integer var2) {
-               val var7: View = this.$holder.itemView;
-               val var6: java.lang.String = this.$part.getMessageId-3Eiw7ao();
-               val var3: Int = (this.$part as EmbedMessageAccessory).getIndex();
-               val var4: ViewResizeMode = ViewResizeMode.Fill;
-               val var5: MessageAccessoriesAdapter = this.this$0;
-               kotlin.jvm.internal.q.e(var7);
-               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var5, var7, var6, "embed", var4, var1, var3, var2, null, null);
-            }
-         }, var13, var12.getPortal());
+         var11.bind(var8, var13, var5, var2, new E(this, var1), var99, new F(var1, var10, this), var12, var13.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
-         (var1 as InfoLinkViewHolder)
-            .bind(
-               (var10 as InfoLinkMessageAccessory).getText(),
-               (var10 as InfoLinkMessageAccessory).getIcon(),
-               new Function0(this, var10) {
-                  final MessageAccessory $part;
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                     this.$part = var2;
-                  }
-
-                  public final void invoke() {
-                     val var2: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                     var var1: ChatEventHandler = var2;
-                     if (var2 == null) {
-                        kotlin.jvm.internal.q.y("eventHandler");
-                        var1 = null;
-                     }
-
-                     var1.onTapObscuredMediaLearnMore-8a0ehIg(
-                        this.$part.getMessageId-3Eiw7ao(),
-                        (this.$part as InfoLinkMessageAccessory).getChannelId-o4g7jtM(),
-                        (this.$part as InfoLinkMessageAccessory).getAttachmentId(),
-                        (this.$part as InfoLinkMessageAccessory).getEmbedId()
-                     );
-                  }
-               }
-            );
+         (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new G(this, var10));
       } else if (var10 is ReferralMessageAccessory) {
-         (var1 as ReferralViewHolder).bind(var10 as ReferralMessageAccessory, new Function1(this) {
+         (var1 as ReferralViewHolder).bind(var10 as ReferralMessageAccessory, new H(this), new Function2(this) {
             final MessageAccessoriesAdapter this$0;
 
             {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(java.lang.String var1) {
-               val var2: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var3: ChatEventHandler = var2;
-               if (var2 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var3 = null;
-               }
-
-               var3.onTapReferralRedeem(null);
-            }
-         }, new Function2(this) {
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(2);
                this.this$0 = var1;
             }
 
@@ -793,37 +992,17 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                kotlin.jvm.internal.q.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapGiftCodeEmbed(var1);
             }
-         }, new Function1(this, var10) {
-            final MessageAccessory $part;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-               this.$part = var2;
-            }
-
-            public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "giftCode");
-               val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var2: ChatEventHandler = var3;
-               if (var3 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var2 = null;
-               }
-
-               var2.onTapGiftCodeAccept-NU4t8f8(var1, this.$part.getMessageId-3Eiw7ao());
-            }
-         });
+         }, new I(this, var10));
       } else if (var10 is MessageContentAccessory) {
-         val var151: MessageContentViewHolder = var1 as MessageContentViewHolder;
+         val var152: MessageContentViewHolder = var1 as MessageContentViewHolder;
+         val var135: MessageContentAccessory = var10 as MessageContentAccessory;
          var8 = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var8 = null;
          }
 
-         val var161: Function2 = new Function2(var8) {
+         val var162: Function2 = new Function2(var8) {
             {
                super(
                   2,
@@ -847,7 +1026,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var8 = null;
          }
 
-         val var167: Function1 = new Function1(var8) {
+         val var168: Function1 = new Function1(var8) {
             {
                super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
             }
@@ -1063,146 +1242,74 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var8 = null;
          }
 
-         var151.bind(var10 as MessageContentAccessory, var161, var167, var14, var15, var16, var17, var18, var19, var20, new Function0(this, var1) {
-            final MessagePartViewHolder $holder;
-            final MessageAccessoriesAdapter this$0;
+         var152.bind(
+            var135,
+            var162,
+            var168,
+            var14,
+            var15,
+            var16,
+            var17,
+            var18,
+            var19,
+            var20,
+            new J(this, var1),
+            var21,
+            var22,
+            var23,
+            var24,
+            new Function1(var8) {
+               {
+                  super(
+                     1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0
+                  );
+               }
 
-            {
-               super(0);
-               this.this$0 = var1;
-               this.$holder = var2;
+               public final void invoke(SoundmojiContentNode var1) {
+                  kotlin.jvm.internal.q.h(var1, "p0");
+                  (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
+               }
             }
-
-            public final void invoke() {
-               MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-            }
-         }, var21, var22, var23, var24, new Function1(var8) {
-            {
-               super(1, var1, ChatEventHandler::class.java, "onTapSoundmoji", "onTapSoundmoji(Lcom/discord/chat/bridge/contentnode/SoundmojiContentNode;)V", 0);
-            }
-
-            public final void invoke(SoundmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
-            }
-         });
+         );
       } else if (var10 is MediaMosaicAttachmentMessageAccessory) {
-         val var152: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
+         val var153: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
          var var115: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var115 = null;
          }
 
-         val var162: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
-         val var168: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
-         val var171: Function3 = new Function3(this) {
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(3);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(int var1, MessageAccessory var2, MessagePartViewHolder var3) {
-               kotlin.jvm.internal.q.h(var2, "attachment");
-               kotlin.jvm.internal.q.h(var3, "attachmentViewHolder");
-               val var4: View = var3.itemView;
-               val var8: java.lang.String = var2.getMessageId-3Eiw7ao();
-               val var7: java.lang.Double;
-               if (var2 is ImageAttachmentMessageAccessory) {
-                  var7 = null;
-               } else {
-                  if (var2 !is VideoAttachmentMessageAccessory) {
-                     val var9: StringBuilder = new StringBuilder();
-                     var9.append("Unsupported accessory: ");
-                     var9.append(var2);
-                     throw new IllegalStateException(var9.toString().toString());
-                  }
-
-                  var7 = (var2 as VideoAttachmentMessageAccessory).getPortal();
-               }
-
-               val var6: ViewResizeMode = ViewResizeMode.Cover;
-               val var5: MessageAccessoriesAdapter = this.this$0;
-               kotlin.jvm.internal.q.e(var4);
-               MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(var5, var4, var8, "attachment", var6, var7, var1, null, null, null);
-            }
-         };
-         val var72: Function1;
+         val var163: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
+         val var169: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
+         val var173: K = new K(this);
+         val var72: B;
          if (var53 != null) {
-            var72 = new Function1(var53) {
-               final Function4 $onLongClick;
-
-               {
-                  super(1);
-                  this.$onLongClick = var1;
-               }
-
-               public final void invoke(int var1) {
-                  this.$onLongClick.invoke(MediaType.Attachment, var1, null, null);
-               }
-            };
+            var72 = new B(var53);
          } else {
             var72 = null;
          }
 
-         var152.bind(
+         var153.bind(
             var115,
-            var168,
-            var171,
+            var169,
+            var173,
             var72,
-            new Function0(this, var1) {
-               final MessagePartViewHolder $holder;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(0);
-                  this.this$0 = var1;
-                  this.$holder = var2;
-               }
-
-               public final void invoke() {
-                  MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-               }
-            },
-            new Function1(this, var10) {
-               final MessageAccessory $part;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$part = var2;
-               }
-
-               public final void invoke(boolean var1) {
-                  val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                  var var2: ChatEventHandler = var3;
-                  if (var3 == null) {
-                     kotlin.jvm.internal.q.y("eventHandler");
-                     var2 = null;
-                  }
-
-                  var2.onTapObscuredMediaToggle-ZQwuxwg(
-                     this.$part.getMessageId-3Eiw7ao(), (this.$part as MediaMosaicAttachmentMessageAccessory).getChannelId-o4g7jtM(), var1, null, null
-                  );
-               }
-            },
-            var162.isForwardedContent(),
-            var162.getShouldAutoPlayGif(),
-            var162.getConstrainedWidth()
+            new M(this, var1),
+            new O(this, var10),
+            var163.isForwardedContent(),
+            var163.getShouldAutoPlayGif(),
+            var163.getConstrainedWidth()
          );
       } else if (var10 is UploadProgressMessageAccessory) {
          val var116: UploadProgressViewHolder = var1 as UploadProgressViewHolder;
-         val var135: UploadProgress = (var10 as UploadProgressMessageAccessory).getUploadProgress();
+         val var136: UploadProgress = (var10 as UploadProgressMessageAccessory).getUploadProgress();
          var var27: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var27 = null;
          }
 
-         var116.bind(var135, var27);
+         var116.bind(var136, var27);
       } else if (var10 is ReactionsMessageAccessory) {
          (var1 as ReactionsViewHolder)
             .bind(
@@ -1213,111 +1320,25 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                (var10 as ReactionsMessageAccessory).getAddNewReactionAccessibilityLabel(),
                (var10 as ReactionsMessageAccessory).getAddNewBurstReactionAccessibilityLabel(),
                (var10 as ReactionsMessageAccessory).getReactionsTheme(),
-               new e(this),
-               new f(this),
-               new Function1(this) {
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(ReactionView.Reaction var1) {
-                     kotlin.jvm.internal.q.h(var1, "reaction");
-                     val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                     var var2: ChatEventHandler = var3;
-                     if (var3 == null) {
-                        kotlin.jvm.internal.q.y("eventHandler");
-                        var2 = null;
-                     }
-
-                     val var4: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-                     kotlin.jvm.internal.q.e(var4);
-                     ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var2, var4, var1, null, null, 12, null);
-                  }
-               },
-               new Function1(this) {
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke(ReactionView.Reaction var1) {
-                     kotlin.jvm.internal.q.h(var1, "reaction");
-                     val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                     var var2: ChatEventHandler = var3;
-                     if (var3 == null) {
-                        kotlin.jvm.internal.q.y("eventHandler");
-                        var2 = null;
-                     }
-
-                     val var5: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-                     kotlin.jvm.internal.q.e(var5);
-                     val var4: ChannelId = MessageAccessoriesAdapter.access$getChannelId$p(this.this$0);
-                     kotlin.jvm.internal.q.e(var4);
-                     var2.onLongPressReaction-Eqy5D80(var5, var4.unbox-impl(), var1);
-                  }
-               },
+               new P(this),
+               new Q(this),
+               new S(this),
+               new T(this),
                (var10 as ReactionsMessageAccessory).getTheme(),
                (var10 as ReactionsMessageAccessory).getShowReactionShortcut(),
                (var10 as ReactionsMessageAccessory).getShowReplyShortcut(),
                (var10 as ReactionsMessageAccessory).getShowForwardShortcut(),
                (var10 as ReactionsMessageAccessory).getShowThreadShortcut(),
                (var10 as ReactionsMessageAccessory).getShortcutsEnabled(),
-               new g(this),
-               new h(this, var10),
-               new i(this),
+               new U(this),
+               new g(this, var10),
+               new h(this),
                (var10 as ReactionsMessageAccessory).getReplyAccessibilityLabel(),
                (var10 as ReactionsMessageAccessory).getForwardAccessibilityLabel(),
                (var10 as ReactionsMessageAccessory).getThreadAccessibilityLabel()
             );
       } else if (var10 is StickerMessageAccessory) {
-         (var1 as StickerPartViewHolder).bind((var10 as StickerMessageAccessory).getSticker(), new Function1(this, var10) {
-            final MessageAccessory $part;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-               this.$part = var2;
-            }
-
-            public final void invoke(Sticker var1) {
-               kotlin.jvm.internal.q.h(var1, "it");
-               val var2: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var3: ChatEventHandler = var2;
-               if (var2 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var3 = null;
-               }
-
-               var3.onStickerClicked-Ayv7vGE((this.$part as StickerMessageAccessory).getSticker(), this.$part.getMessageId-3Eiw7ao());
-            }
-         }, new Function1(this, var10) {
-            final MessageAccessory $part;
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-               this.$part = var2;
-            }
-
-            public final void invoke(Sticker var1) {
-               kotlin.jvm.internal.q.h(var1, "it");
-               val var2: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var3: ChatEventHandler = var2;
-               if (var2 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var3 = null;
-               }
-
-               var3.onStickerLongClicked-Ayv7vGE((this.$part as StickerMessageAccessory).getSticker(), this.$part.getMessageId-3Eiw7ao());
-            }
-         }, 160, 160);
+         (var1 as StickerPartViewHolder).bind((var10 as StickerMessageAccessory).getSticker(), new j(this, var10), new k(this, var10), 160, 160);
       } else if (var10 is GuildInviteMessageAccessory) {
          (var1 as GuildInviteViewHolder).bind(var10 as GuildInviteMessageAccessory);
       } else if (var10 is AppMessageEmbedAccessory) {
@@ -1328,28 +1349,28 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          (var1 as EmbeddedActivityInviteViewHolder).bind(var10 as EmbeddedActivityInviteMessageAccessory);
       } else if (var10 is GuildProfileInviteMessageAccessory) {
          val var117: GuildProfileInviteViewHolder = var1 as GuildProfileInviteViewHolder;
-         val var136: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
+         val var137: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
          var var29: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var29 = null;
          }
 
-         var117.bind(var136, var29);
+         var117.bind(var137, var29);
       } else if (var10 is GuildInviteDisabledMessageAccessory) {
          (var1 as GuildInviteDisabledViewHolder).bind(var10 as GuildInviteDisabledMessageAccessory);
       } else if (var10 is GuildEventInviteMessageAccessory) {
          (var1 as GuildEventInviteViewHolder).bind(var10 as GuildEventInviteMessageAccessory);
       } else if (var10 is ThreadEmbedMessageAccessory) {
          val var118: ThreadEmbedViewHolder = var1 as ThreadEmbedViewHolder;
-         val var137: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
+         val var138: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
          var var30: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var30 = null;
          }
 
-         var118.bind(var137, new Function1(var30) {
+         var118.bind(var138, new Function1(var30) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapThreadEmbed", "onTapThreadEmbed-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1361,59 +1382,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          });
       } else if (var10 is ForumPostActionBar) {
          val var119: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
-         val var172: ForumPostActionBar = var10 as ForumPostActionBar;
-         val var153: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
-         val var138: j = new j(this);
-         val var174: k = new k(this);
-         val var163: l = new l(this);
-         val var175: m = new m(this);
-         val var176: Function1 = new Function1(this) {
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(ReactionView.Reaction var1) {
-               kotlin.jvm.internal.q.h(var1, "reaction");
-               val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var2: ChatEventHandler = var3;
-               if (var3 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var2 = null;
-               }
-
-               val var4: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var4);
-               ChatEventHandler.DefaultImpls.onTapReaction-AFFcxXc$default(var2, var4, var1, null, null, 12, null);
-            }
-         };
-         val var169: Function1 = new Function1(this) {
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(ReactionView.Reaction var1) {
-               kotlin.jvm.internal.q.h(var1, "reaction");
-               val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var2: ChatEventHandler = var3;
-               if (var3 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var2 = null;
-               }
-
-               val var5: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var5);
-               val var4: ChannelId = MessageAccessoriesAdapter.access$getChannelId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var4);
-               var2.onLongPressReaction-Eqy5D80(var5, var4.unbox-impl(), var1);
-            }
-         };
-         val var173: n = new n(this);
+         val var164: ForumPostActionBar = var10 as ForumPostActionBar;
+         val var170: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
+         val var174: l = new l(this);
+         val var177: m = new m(this);
+         val var175: n = new n(this);
+         val var178: o = new o(this);
+         val var154: p = new p(this);
+         val var176: r = new r(this);
+         val var139: s = new s(this);
          var var31: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1421,15 +1398,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          }
 
          var119.bind(
-            var172,
-            var153,
-            var138,
+            var164,
+            var170,
             var174,
-            var163,
+            var177,
             var175,
+            var178,
+            var154,
             var176,
-            var169,
-            var173,
+            var139,
             new Function2(var31) {
                {
                   super(
@@ -1452,151 +1429,45 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
       } else if (var10 is FileAttachmentMessageAccessory) {
          val var78: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
          val var120: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
-         val var139: Function2 = new Function2(this) {
-            final MessageAccessoriesAdapter this$0;
-
-            {
-               super(2);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(java.lang.String var1, java.lang.String var2) {
-               kotlin.jvm.internal.q.h(var1, "url");
-               kotlin.jvm.internal.q.h(var2, "filename");
-               val var4: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-               var var3: ChatEventHandler = var4;
-               if (var4 == null) {
-                  kotlin.jvm.internal.q.y("eventHandler");
-                  var3 = null;
-               }
-
-               val var5: java.lang.String = MessageAccessoriesAdapter.access$getMessageId$p(this.this$0);
-               kotlin.jvm.internal.q.e(var5);
-               var3.onLinkClicked-u7_MRrM(var5, var1, var2);
-            }
-         };
-         val var154: SpoilerAttributes = var120.getSpoilerAttributes();
+         val var140: t = new t(this);
+         val var155: SpoilerAttributes = var120.getSpoilerAttributes();
          val var32: SpoilerConfig;
-         if (var154 != null) {
-            var32 = SpoilerAttributes.configure$default(var154, new Function0(this, var1) {
-               final MessagePartViewHolder $holder;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(0);
-                  this.this$0 = var1;
-                  this.$holder = var2;
-               }
-
-               public final void invoke() {
-                  MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-               }
-            }, null, 2, null);
+         if (var155 != null) {
+            var32 = SpoilerAttributes.configure$default(var155, new v(this, var1), null, 2, null);
          } else {
             var32 = null;
          }
 
-         var78.bind(var120, var139, var32);
+         var78.bind(var120, var140, var32);
       } else if (var10 is MessageComponentsAccessory) {
-         val var155: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
+         val var156: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
+         val var171: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
          var var122: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var122 = null;
          }
 
-         val var79: Function2;
+         val var79: w;
          if (var53 != null) {
-            var79 = new Function2(var53) {
-               final Function4 $onLongClicked;
-
-               {
-                  super(2);
-                  this.$onLongClicked = var1;
-               }
-
-               public final void invoke(java.lang.String var1, Integer var2) {
-                  kotlin.jvm.internal.q.h(var1, "componentId");
-                  this.$onLongClicked.invoke(MediaType.Component, null, var1, var2);
-               }
-            };
+            var79 = new w(var53);
          } else {
             var79 = null;
          }
 
-         var155.bind(
-            var10 as MessageComponentsAccessory,
-            this.botComponentProvider,
-            new Function4(var10, this) {
-               final MessageAccessory $part;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(4);
-                  this.$part = var1;
-                  this.this$0 = var2;
-               }
-
-               public final void invoke(View var1, java.lang.String var2, Integer var3, java.lang.Double var4) {
-                  kotlin.jvm.internal.q.h(var1, "view");
-                  kotlin.jvm.internal.q.h(var2, "componentId");
-                  MessageAccessoriesAdapter.access$onMediaClicked-mdVZsaY(
-                     this.this$0, var1, this.$part.getMessageId-3Eiw7ao(), "component", ViewResizeMode.Fill, var4, 0, null, var2, var3
-                  );
-               }
-            },
-            var79,
-            new Function0(this, var1) {
-               final MessagePartViewHolder $holder;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(0);
-                  this.this$0 = var1;
-                  this.$holder = var2;
-               }
-
-               public final void invoke() {
-                  MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-               }
-            },
-            new Function1(this, var10) {
-               final MessageAccessory $part;
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$part = var2;
-               }
-
-               public final void invoke(boolean var1) {
-                  val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                  var var2: ChatEventHandler = var3;
-                  if (var3 == null) {
-                     kotlin.jvm.internal.q.y("eventHandler");
-                     var2 = null;
-                  }
-
-                  var2.onTapObscuredMediaToggle-ZQwuxwg(
-                     this.$part.getMessageId-3Eiw7ao(), (this.$part as MessageComponentsAccessory).getMessage().getChannelId-o4g7jtM(), var1, null, null
-                  );
-               }
-            },
-            var122
-         );
+         var156.bind(var171, this.botComponentProvider, new x(var10, this), var79, new y(this, var1), new z(this, var10), var122);
       } else if (var10 is FlaggedMessageEmbedAccessory) {
          (var1 as FlaggedMessageEmbedViewHolder).bind(var10 as FlaggedMessageEmbedAccessory);
       } else if (var10 is FlaggedMessageActionBarAccessory) {
          val var123: FlaggedMessageActionBarViewHolder = var1 as FlaggedMessageActionBarViewHolder;
-         val var140: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
+         val var141: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
          var var33: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var33 = null;
          }
 
-         val var156: Function2 = new Function2(var33) {
+         val var157: Function2 = new Function2(var33) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1612,7 +1483,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var34 = null;
          }
 
-         var123.bind(var140, var156, new Function2(var34) {
+         var123.bind(var141, var157, new Function2(var34) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1624,14 +1495,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          });
       } else if (var10 is AutoModerationNotificationEmbedAccessory) {
          val var124: AutoModerationNotificationEmbedViewHolder = var1 as AutoModerationNotificationEmbedViewHolder;
-         val var141: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
+         val var142: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
          var var35: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var35 = null;
          }
 
-         val var157: Function2 = new Function2(var35) {
+         val var158: Function2 = new Function2(var35) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1647,7 +1518,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var36 = null;
          }
 
-         var124.bind(var141, var157, new Function2(var36) {
+         var124.bind(var142, var158, new Function2(var36) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1663,14 +1534,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          (var1 as WelcomeStickerViewHolder).bind(var10 as WelcomeStickerAccessory);
       } else if (var10 is ActivityInviteEmbedMessageAccessory) {
          val var125: ActivityInviteEmbedViewHolder = var1 as ActivityInviteEmbedViewHolder;
-         val var142: ActivityInviteEmbedMessageAccessory = var10 as ActivityInviteEmbedMessageAccessory;
+         val var143: ActivityInviteEmbedMessageAccessory = var10 as ActivityInviteEmbedMessageAccessory;
          var var37: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var37 = null;
          }
 
-         var125.bind(var142, new Function1(var37) {
+         var125.bind(var143, new Function1(var37) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapJoinActivity", "onTapJoinActivity-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1698,38 +1569,26 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
       } else if (var10 is InviteToSpeakAccessory) {
          (var1 as InviteToSpeakViewHolder).bind(var10 as InviteToSpeakAccessory);
       } else if (var10 is AudioAttachmentMessageAccessory) {
-         val var158: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
-         val var143: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
+         val var159: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
+         val var144: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
          var var39: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var39 = null;
          }
 
-         val var86: Function2;
+         val var86: A;
          if (var53 != null) {
-            var86 = new Function2(var53) {
-               final Function4 $onLongClicked;
-
-               {
-                  super(2);
-                  this.$onLongClicked = var1;
-               }
-
-               public final void invoke(java.lang.String var1, Integer var2) {
-                  kotlin.jvm.internal.q.h(var1, "componentId");
-                  this.$onLongClicked.invoke(MediaType.Attachment, null, var1, var2);
-               }
-            };
+            var86 = new A(var53);
          } else {
             var86 = null;
          }
 
-         var158.bind(var143, var39, var86);
+         var159.bind(var144, var39, var86);
       } else if (var10 is PostPreviewEmbedMessageAccessory) {
-         val var165: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
-         val var170: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
-         val var159: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
+         val var166: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
+         val var172: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
+         val var160: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
          var8 = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1746,60 +1605,18 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                (super.receiver as ChatEventHandler).onTapPostPreviewEmbed-kUTrp-s(var1, var3, var5, var7);
             }
          };
-         val var128: SpoilerAttributes = var170.getSpoilerAttributes();
+         val var128: SpoilerAttributes = var172.getSpoilerAttributes();
          val var40: SpoilerConfig;
          if (var128 != null) {
-            var40 = var128.configure(
-               new Function0(this, var1) {
-                  final MessagePartViewHolder $holder;
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                     this.$holder = var2;
-                  }
-
-                  public final void invoke() {
-                     MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(this.$holder);
-                  }
-               },
-               new Function1(this, var10) {
-                  final MessageAccessory $part;
-                  final MessageAccessoriesAdapter this$0;
-
-                  {
-                     super(1);
-                     this.this$0 = var1;
-                     this.$part = var2;
-                  }
-
-                  public final void invoke(boolean var1) {
-                     val var3: ChatEventHandler = MessageAccessoriesAdapter.access$getEventHandler$p(this.this$0);
-                     var var2: ChatEventHandler = var3;
-                     if (var3 == null) {
-                        kotlin.jvm.internal.q.y("eventHandler");
-                        var2 = null;
-                     }
-
-                     var2.onTapObscuredMediaToggle-ZQwuxwg(
-                        this.$part.getMessageId-3Eiw7ao(),
-                        (this.$part as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed().getThreadId-o4g7jtM(),
-                        var1,
-                        null,
-                        null
-                     );
-                  }
-               }
-            );
+            var40 = var128.configure(new C(this, var1), new D(this, var10));
          } else {
             var40 = null;
          }
 
-         var165.bind(var159, var88, var40);
+         var166.bind(var160, var88, var40);
       } else if (var10 is ChannelPromptActionsAccessory) {
          val var129: ChannelPromptActionsViewHolder = var1 as ChannelPromptActionsViewHolder;
-         val var144: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
+         val var145: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
          var var41: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1807,7 +1624,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          }
 
          var129.bind(
-            var144,
+            var145,
             new Function3(var41) {
                {
                   super(
@@ -1829,14 +1646,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          );
       } else if (var10 is SafetyPolicyNoticeMessageAccessory) {
          val var130: SafetyPolicyNoticeViewHolder = var1 as SafetyPolicyNoticeViewHolder;
-         val var145: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
+         val var146: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
          var var42: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var42 = null;
          }
 
-         var130.bind(var145, new Function1(var42) {
+         var130.bind(var146, new Function1(var42) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapSafetyPolicyNoticeEmbed", "onTapSafetyPolicyNoticeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -1848,7 +1665,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          });
       } else if (var10 is SafetySystemNotificationMessageAccessory) {
          val var131: SafetySystemNotificationViewHolder = var1 as SafetySystemNotificationViewHolder;
-         val var146: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
+         val var147: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
          var var43: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1856,7 +1673,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          }
 
          var131.bind(
-            var146,
+            var147,
             new Function2(var43) {
                {
                   super(
@@ -1877,15 +1694,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             }
          );
       } else if (var10 is PollMessageAccessory) {
-         val var160: PollViewHolder = var1 as PollViewHolder;
-         val var147: PollMessageAccessory = var10 as PollMessageAccessory;
+         val var161: PollViewHolder = var1 as PollViewHolder;
+         val var148: PollMessageAccessory = var10 as PollMessageAccessory;
          var var44: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var44 = null;
          }
 
-         val var166: Function3 = new Function3(var44) {
+         val var167: Function3 = new Function3(var44) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapPollAnswer", "onTapPollAnswer-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1919,9 +1736,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
             var46 = null;
          }
 
-         var160.bind(
-            var147,
-            var166,
+         var161.bind(
+            var148,
+            var167,
             var94,
             new Function8(var46) {
                {
@@ -1949,15 +1766,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          val var95: CtaButtonViewHolder = var1 as CtaButtonViewHolder;
          val var47: CtaButtonMessageAccessory = var10 as CtaButtonMessageAccessory;
          val var6: Long = (var10 as CtaButtonMessageAccessory).getChannelId-o4g7jtM();
-         val var132: java.lang.String = var10.getMessageId-3Eiw7ao();
-         val var148: CtaButton = var47.getCtaButton();
+         val var132: java.lang.String = (var10 as CtaButtonMessageAccessory).getMessageId-3Eiw7ao();
+         val var149: CtaButton = var47.getCtaButton();
          var var48: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var48 = null;
          }
 
-         var95.bind-JjTCmh4(var6, var132, var148, new Function3(var48) {
+         var95.bind-JjTCmh4(var6, var132, var149, new Function3(var48) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapCtaButton", "onTapCtaButton-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1970,14 +1787,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          });
       } else if (var10 is VoiceInviteMessageAccessory) {
          val var133: VoiceInviteEmbedViewHolder = var1 as VoiceInviteEmbedViewHolder;
-         val var149: VoiceInviteEmbed = (var10 as VoiceInviteMessageAccessory).getEmbed();
+         val var150: VoiceInviteEmbed = (var10 as VoiceInviteMessageAccessory).getEmbed();
          var var49: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var49 = null;
          }
 
-         var133.bind(var149, new Function3(var49) {
+         var133.bind(var150, new Function3(var49) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1996,21 +1813,21 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                   throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                }
 
-               throw new o8.p();
+               throw new Q8.n();
             }
 
             throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
          }
 
          val var134: ForwardBreadcrumbViewHolder = var1 as ForwardBreadcrumbViewHolder;
-         val var150: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
+         val var151: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
          var var50: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var50 = null;
          }
 
-         var134.bind(var150, new Function3(var50) {
+         var134.bind(var151, new Function3(var50) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapForwardFooter", "onTapForwardFooter-SHRpUJI(IJLjava/lang/String;)V", 0);
             }
@@ -2158,19 +1975,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
                var58 = null;
             }
 
-            var17 = new GuildEventInviteViewHolder(var83, var58, new Function1(this) {
-               final MessageAccessoriesAdapter this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(MessagePartViewHolder var1) {
-                  kotlin.jvm.internal.q.h(var1, "holder");
-                  MessageAccessoriesAdapter.access$getOnTapSpoiler$p(this.this$0).invoke(var1);
-               }
-            });
+            var17 = new GuildEventInviteViewHolder(var83, var58, new L(this));
             break;
          case 16:
             val var56: Context = var1.getContext();
@@ -2207,14 +2012,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          case 21:
             val var49: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var49, "getContext(...)");
-            val var87: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var49, null, 2, null);
+            val var81: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var49, null, 2, null);
             var var50: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var50 = null;
             }
 
-            var17 = new FlaggedMessageEmbedViewHolder(var87, var50);
+            var17 = new FlaggedMessageEmbedViewHolder(var81, var50);
             break;
          case 22:
             val var48: Context = var1.getContext();
@@ -2229,26 +2034,26 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = <unreprese
          case 24:
             val var45: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var45, "getContext(...)");
-            val var81: SurveyIndicationView = new SurveyIndicationView(var45, null, 0, 6, null);
+            val var80: SurveyIndicationView = new SurveyIndicationView(var45, null, 0, 6, null);
             var var46: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var46 = null;
             }
 
-            var17 = new SurveyIndicationViewHolder(var81, var46);
+            var17 = new SurveyIndicationViewHolder(var80, var46);
             break;
          case 25:
             val var43: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var43, "getContext(...)");
-            val var80: GuildInviteDisabledView = new GuildInviteDisabledView(var43, null, 0, 6, null);
+            val var87: GuildInviteDisabledView = new GuildInviteDisabledView(var43, null, 0, 6, null);
             var var44: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var44 = null;
             }
 
-            var17 = new GuildInviteDisabledViewHolder(var80, var44);
+            var17 = new GuildInviteDisabledViewHolder(var87, var44);
             break;
          case 26:
             val var42: Context = var1.getContext();

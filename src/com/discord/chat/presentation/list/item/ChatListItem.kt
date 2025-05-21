@@ -1,9 +1,9 @@
 package com.discord.chat.presentation.list.item
 
+import Q8.j
+import Q8.m
 import com.discord.misc.utilities.ids.IdUtilsKt
-import kotlin.jvm.functions.Function0
-import o8.l
-import o8.o
+import j1.a
 
 public sealed class ChatListItem protected constructor(id: String) {
    public open val id: String
@@ -16,17 +16,11 @@ public sealed class ChatListItem protected constructor(id: String) {
 
    init {
       this.id = var1;
-      this.recyclerItemId$delegate = l.b(o.l, new Function0(this) {
-         final ChatListItem this$0;
+      this.recyclerItemId$delegate = j.a(m.l, new a(this));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final java.lang.Long invoke() {
-            return IdUtilsKt.convertToId(this.this$0.getId());
-         }
-      });
+   @JvmStatic
+   fun `recyclerItemId_delegate$lambda$0`(var0: ChatListItem): Long {
+      return IdUtilsKt.convertToId(var0.getId());
    }
 }

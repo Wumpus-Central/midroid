@@ -7,9 +7,9 @@ import kotlin.jvm.internal.q
 
 internal class OriginTracker(context: Context) {
    public final val context: Context
+   private final val scaledTouchSlopPx: Int
    private final var origin: com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin?
    private final var originSupplemental: com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin?
-   private final val scaledTouchSlopPx: Int
 
    init {
       q.h(var1, "context");
@@ -98,13 +98,13 @@ internal class OriginTracker(context: Context) {
       }
 
       public override fun toString(): String {
-         val var1: Float = this.xOrigin;
-         val var2: Float = this.yOrigin;
+         val var2: Float = this.xOrigin;
+         val var1: Float = this.yOrigin;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Origin(xOrigin=");
-         var3.append(var1);
-         var3.append(", yOrigin=");
          var3.append(var2);
+         var3.append(", yOrigin=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

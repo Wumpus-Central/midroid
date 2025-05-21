@@ -9,29 +9,7 @@ import android.graphics.Path.Direction
 import kotlin.jvm.internal.q
 
 internal class AnimatableUnderlayBorders {
-   public final var borderBottomLeftRadius: Float
-      internal final set(value) {
-         this.borderBottomLeftRadius = var1;
-         this.borderRadiusRadii[6] = var1;
-         this.borderRadiusRadii[7] = var1;
-         this.borderStrokeRadiusRadii[6] = var1 - this.borderWidth;
-         this.borderStrokeRadiusRadii[7] = var1 - this.borderWidth;
-      }
-
-
-   public final var borderBottomRightRadius: Float
-      internal final set(value) {
-         this.borderBottomRightRadius = var1;
-         this.borderRadiusRadii[4] = var1;
-         this.borderRadiusRadii[5] = var1;
-         this.borderStrokeRadiusRadii[4] = var1 - this.borderWidth;
-         this.borderStrokeRadiusRadii[5] = var1 - this.borderWidth;
-      }
-
-
-   public final var borderColor: Int
-   public final val borderRadiusRadii: FloatArray
-   private final val borderStrokeRadiusRadii: FloatArray
+   private final val path: Path = new Path()
 
    public final var borderTopLeftRadius: Float
       internal final set(value) {
@@ -53,6 +31,28 @@ internal class AnimatableUnderlayBorders {
       }
 
 
+   public final var borderBottomLeftRadius: Float
+      internal final set(value) {
+         this.borderBottomLeftRadius = var1;
+         this.borderRadiusRadii[6] = var1;
+         this.borderRadiusRadii[7] = var1;
+         this.borderStrokeRadiusRadii[6] = var1 - this.borderWidth;
+         this.borderStrokeRadiusRadii[7] = var1 - this.borderWidth;
+      }
+
+
+   public final var borderBottomRightRadius: Float
+      internal final set(value) {
+         this.borderBottomRightRadius = var1;
+         this.borderRadiusRadii[4] = var1;
+         this.borderRadiusRadii[5] = var1;
+         this.borderStrokeRadiusRadii[4] = var1 - this.borderWidth;
+         this.borderStrokeRadiusRadii[5] = var1 - this.borderWidth;
+      }
+
+
+   public final var borderColor: Int
+
    public final var borderWidth: Float
       internal final set(value) {
          this.borderWidth = var1;
@@ -67,7 +67,8 @@ internal class AnimatableUnderlayBorders {
       }
 
 
-   private final val path: Path = new Path()
+   public final val borderRadiusRadii: FloatArray
+   private final val borderStrokeRadiusRadii: FloatArray
 
    internal fun drawBorderStroke(canvas: Canvas, paint: Paint, pathRect: RectF) {
       q.h(var1, "canvas");

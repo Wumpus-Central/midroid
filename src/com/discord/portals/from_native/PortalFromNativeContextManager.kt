@@ -1,6 +1,6 @@
 package com.discord.portals.from_native
 
-import aa.w
+import Ca.w
 import android.view.View
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
@@ -12,9 +12,9 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 
 public object PortalFromNativeContextManager {
+   private final var portalContextMap: MutableMap<Double, PortalFromNativeContext> = new LinkedHashMap()
    private final var _portalContextIdsFlow: MutableStateFlow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>
    public final val portalContextIdsFlow: Flow<com.discord.portals.from_native.PortalFromNativeContextManager.Event?>
-   private final var portalContextMap: MutableMap<Double, PortalFromNativeContext> = new LinkedHashMap()
 
    @JvmStatic
    fun {
@@ -23,12 +23,24 @@ public object PortalFromNativeContextManager {
       portalContextIdsFlow = var0;
    }
 
+   @JvmStatic
+   fun `addPortal$lambda$0`(var0: View): Unit {
+      q.h(var0, "it");
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `addPortal$lambda$1`(var0: View): Unit {
+      q.h(var0, "it");
+      return Unit.a;
+   }
+
    public fun addPortal(
       portal: Double,
       view: View,
       removeViewFromParent: (View) -> Unit,
-      onViewAddedToPortal: (View) -> Unit = <unrepresentable>.INSTANCE,
-      onViewRemovedFromPortal: (View) -> Unit = <unrepresentable>.INSTANCE,
+      onViewAddedToPortal: (View) -> Unit = new a(),
+      onViewRemovedFromPortal: (View) -> Unit = new b(),
       returnViewToParent: (View) -> Unit
    ) {
       q.h(var3, "view");
@@ -70,7 +82,6 @@ public object PortalFromNativeContextManager {
       if (var5 != null) {
          val var4: View = var5.getView().get();
          if (var4 != null) {
-            q.e(var4);
             var5.getRemoveViewFromParent().invoke(var4);
             var3.addView(var4);
             ViewMeasureExtensionsKt.measureAndLayout(var3);
@@ -81,18 +92,17 @@ public object PortalFromNativeContextManager {
    }
 
    public fun unregisterView(portal: Double) {
-      val var4: PortalFromNativeContext = portalContextMap.remove(var1);
-      if (var4 != null) {
+      val var3: PortalFromNativeContext = portalContextMap.remove(var1);
+      if (var3 != null) {
          _portalContextIdsFlow.setValue(null);
-         val var3: View = var4.getView().get();
-         if (var3 == null) {
+         val var4: View = var3.getView().get();
+         if (var4 == null) {
             return;
          }
 
-         q.e(var3);
-         ViewRemoveFromParentKt.removeFromParent(var3);
-         var4.getOnViewRemovedFromPortal().invoke(var3);
-         var4.getReturnViewToParent().invoke(var3);
+         ViewRemoveFromParentKt.removeFromParent(var4);
+         var3.getOnViewRemovedFromPortal().invoke(var4);
+         var3.getReturnViewToParent().invoke(var4);
       }
    }
 

@@ -1,14 +1,14 @@
 package com.discord.media.engine.video.events
 
+import Q8.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import o8.w
 
 internal data class AudioInputInitializedEvent(timeToInitialized: Double, description: Map<String, Any>) : ReactEvent {
-   public final val description: Map<String, Any>
    public final val timeToInitialized: Double
+   public final val description: Map<String, Any>
 
    init {
       q.h(var3, "description");
@@ -51,19 +51,19 @@ internal data class AudioInputInitializedEvent(timeToInitialized: Double, descri
 
    public open fun serialize(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("timeToInitialized", this.timeToInitialized), w.a("description", NativeMapExtensionsKt.toNativeMap(this.description))
+         s.a("timeToInitialized", this.timeToInitialized), s.a("description", NativeMapExtensionsKt.toNativeMap(this.description))
       );
    }
 
    public override fun toString(): String {
       val var1: Double = this.timeToInitialized;
-      val var4: java.util.Map = this.description;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioInputInitializedEvent(timeToInitialized=");
-      var3.append(var1);
-      var3.append(", description=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.Map = this.description;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AudioInputInitializedEvent(timeToInitialized=");
+      var4.append(var1);
+      var4.append(", description=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

@@ -1,19 +1,8 @@
 package com.discord.contact_sync
 
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.h
-import ka.G.a
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class ContactSyncBlobEntry(phone: String,
@@ -23,12 +12,12 @@ public data class ContactSyncBlobEntry(phone: String,
    givenName: String,
    familyName: String
 ) {
-   public final val deviceContactId: String
-   public final val familyName: String
-   public final val givenName: String
-   public final val hasImageData: Boolean
    public final val phone: String
    public final val unencryptedName: String
+   public final val hasImageData: Boolean
+   public final val deviceContactId: String
+   public final val givenName: String
+   public final val familyName: String
 
    init {
       q.h(var1, "phone");
@@ -122,140 +111,27 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.phone;
-      val var2: java.lang.String = this.unencryptedName;
+      val var3: java.lang.String = this.phone;
+      val var4: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var6: java.lang.String = this.deviceContactId;
-      val var3: java.lang.String = this.givenName;
-      val var4: java.lang.String = this.familyName;
+      val var5: java.lang.String = this.deviceContactId;
+      val var6: java.lang.String = this.givenName;
+      val var2: java.lang.String = this.familyName;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ContactSyncBlobEntry(phone=");
-      var7.append(var5);
+      var7.append(var3);
       var7.append(", unencryptedName=");
-      var7.append(var2);
+      var7.append(var4);
       var7.append(", hasImageData=");
       var7.append(var1);
       var7.append(", deviceContactId=");
-      var7.append(var6);
+      var7.append(var5);
       var7.append(", givenName=");
-      var7.append(var3);
+      var7.append(var6);
       var7.append(", familyName=");
-      var7.append(var4);
+      var7.append(var2);
       var7.append(")");
       return var7.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ContactSyncBlobEntry.$serializer = new ContactSyncBlobEntry.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.contact_sync.ContactSyncBlobEntry", var0, 6);
-         var1.l("phone", false);
-         var1.l("unencryptedName", false);
-         var1.l("hasImageData", false);
-         var1.l("deviceContactId", false);
-         var1.l("givenName", false);
-         var1.l("familyName", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, h.a, C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): ContactSyncBlobEntry {
-         q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.c(var12);
-         var var2: Int;
-         var var5: Boolean;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var8: java.lang.String;
-         var var9: java.lang.String;
-         val var14: java.lang.String;
-         if (var13.y()) {
-            var9 = var13.t(var12, 0);
-            var8 = var13.t(var12, 1);
-            var5 = var13.s(var12, 2);
-            var6 = var13.t(var12, 3);
-            var7 = var13.t(var12, 4);
-            var14 = var13.t(var12, 5);
-            var2 = 63;
-         } else {
-            var9 = null;
-            var8 = null;
-            var7 = null;
-            var6 = null;
-            var var15: java.lang.String = null;
-            var var3: Boolean = true;
-            var5 = false;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var13.x(var12);
-               switch (var4) {
-                  case -1:
-                     var3 = false;
-                     break;
-                  case 0:
-                     var9 = var13.t(var12, 0);
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var15 = var13.t(var12, 1);
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var5 = var13.s(var12, 2);
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var7 = var13.t(var12, 3);
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var6 = var13.t(var12, 4);
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var8 = var13.t(var12, 5);
-                     var2 |= 32;
-                     break;
-                  default:
-                     throw new n(var4);
-               }
-            }
-
-            var14 = var8;
-            var7 = var6;
-            var6 = var7;
-            var8 = var15;
-         }
-
-         var13.b(var12);
-         return new ContactSyncBlobEntry(var2, var9, var8, var5, var6, var7, var14, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: ContactSyncBlobEntry) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ContactSyncBlobEntry.write$Self$contact_sync_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

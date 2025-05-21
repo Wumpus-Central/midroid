@@ -1,5 +1,6 @@
 package com.discord.tti_measurement_view
 
+import Q8.s
 import com.discord.reactevents.ReactEvents
 import com.discord.tti_measurement_view.events.OnMeasurementEvent
 import com.facebook.react.module.annotations.ReactModule
@@ -10,11 +11,10 @@ import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onMeasurement", G.b(OnMeasurementEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", G.b(OnMeasurementEvent.class)))
 
    private fun onMeasurement(view: TTIMeasurementView, timestamp: Double) {
       this.reactEvents.emitEvent(var1, new OnMeasurementEvent(var2));

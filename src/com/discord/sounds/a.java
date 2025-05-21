@@ -1,13 +1,13 @@
 package com.discord.sounds;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
+import com.facebook.react.bridge.Callback;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class a implements OnCompletionListener {
-   public final SoundPlayer a;
+public final class a implements Function1 {
+   public final Callback j;
 
-   public final void onCompletion(MediaPlayer var1) {
-      SoundPlayer.b(this.a, var1);
+   public final Object invoke(Object var1) {
+      return SoundManagerModule.b(this.j, (Integer)var1);
    }
 }

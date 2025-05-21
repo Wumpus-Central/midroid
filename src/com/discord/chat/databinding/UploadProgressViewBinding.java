@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.Barrier;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import u0.a;
+import t0.a;
 
 public final class UploadProgressViewBinding implements ViewBinding {
    public final Barrier barrier;
@@ -36,27 +36,27 @@ public final class UploadProgressViewBinding implements ViewBinding {
 
    public static UploadProgressViewBinding bind(View var0) {
       int var1 = R.id.barrier;
-      Barrier var2 = (Barrier)a.a(var0, var1);
-      if (var2 != null) {
+      Barrier var4 = (Barrier)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.progress_bar;
          View var6 = a.a(var0, var1);
          if (var6 != null) {
             var1 = R.id.progress_bg;
-            FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-            if (var3 != null) {
+            FrameLayout var2 = (FrameLayout)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.progress_cancel;
-               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.progress_file_image;
-                  SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var7 != null) {
+                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.progress_subtext;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var7 = (TextView)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.progress_text;
                         TextView var5 = (TextView)a.a(var0, var1);
                         if (var5 != null) {
-                           return new UploadProgressViewBinding(var0, var2, var6, var3, var4, var7, var8, var5);
+                           return new UploadProgressViewBinding(var0, var4, var6, var2, var3, var8, var7, var5);
                         }
                      }
                   }

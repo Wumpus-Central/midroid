@@ -76,19 +76,19 @@ public object AppIconUtil {
       q.h(var2, "id");
       val var4: AppIcon = this.getAppIconFromId(var2);
       if (var4 != null) {
-         val var6: PackageManager = var1.getPackageManager();
+         val var5: PackageManager = var1.getPackageManager();
 
-         for (AppIcon var5 : AppIcon.getEntries()) {
-            val var7: ComponentName = new ComponentName(var1, var5.getAlias());
+         for (AppIcon var6 : AppIcon.getEntries()) {
+            val var9: ComponentName = new ComponentName(var1, var6.getAlias());
             val var3: Boolean;
-            if (var5 === var4) {
+            if (var6 === var4) {
                var3 = true;
             } else {
                var3 = false;
             }
 
-            q.e(var6);
-            this.setComponentState(var6, var7, var3);
+            q.e(var5);
+            this.setComponentState(var5, var9, var3);
          }
       } else {
          val var8: StringBuilder = new StringBuilder();

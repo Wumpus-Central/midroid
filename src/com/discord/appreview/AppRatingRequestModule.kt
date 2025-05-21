@@ -1,11 +1,11 @@
 package com.discord.appreview
 
+import Y0.a
+import Y0.b
 import android.app.Activity
 import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.functions.Function0
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec {
@@ -14,36 +14,26 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
       super(var1);
    }
 
+   @JvmStatic
+   fun `requestRating$lambda$0`(var0: Promise): Unit {
+      var0.resolve(0);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `requestRating$lambda$1`(var0: Promise, var1: Exception): Unit {
+      q.h(var1, "exception");
+      var0.reject(var1);
+      return Unit.a;
+   }
+
    public override fun requestRating(promise: Promise) {
       q.h(var1, "promise");
       val var2: Activity = this.getCurrentActivity();
       if (var2 == null) {
          var1.reject(new IllegalStateException("current activity is null"));
       } else {
-         new AppRatingRequester(var2, false, new Function0(var1) {
-            final Promise $promise;
-
-            {
-               super(0);
-               this.$promise = var1;
-            }
-
-            public final void invoke() {
-               this.$promise.resolve(0);
-            }
-         }, new Function1(var1) {
-            final Promise $promise;
-
-            {
-               super(1);
-               this.$promise = var1;
-            }
-
-            public final void invoke(Exception var1) {
-               q.h(var1, "exception");
-               this.$promise.reject(var1);
-            }
-         }).executeRequest();
+         new AppRatingRequester(var2, false, new a(var1), new b(var1)).executeRequest();
       }
    }
 

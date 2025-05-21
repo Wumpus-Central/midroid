@@ -1,5 +1,6 @@
 package com.discord.nearby
 
+import Q8.s
 import android.app.Activity
 import com.discord.nearby.reactevents.OnNearbyErrorEvent
 import com.discord.nearby.reactevents.OnNearbyMessageLostEvent
@@ -8,69 +9,45 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class NearbyHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val manager: NearbyManager
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
+   private final val manager: NearbyManager
 
    init {
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         w.a("nearbyMessageReceived", G.b(OnNearbyMessageReceivedEvent.class)),
-         w.a("nearbyMessageLost", G.b(OnNearbyMessageLostEvent.class)),
-         w.a("nearbyError", G.b(OnNearbyErrorEvent.class))
+         s.a("nearbyMessageReceived", G.b(OnNearbyMessageReceivedEvent.class)),
+         s.a("nearbyMessageLost", G.b(OnNearbyMessageLostEvent.class)),
+         s.a("nearbyError", G.b(OnNearbyErrorEvent.class))
       );
-      this.manager = new NearbyManager(
-         new Function1(this) {
-            final NearbyHelperModule this$0;
+      this.manager = new NearbyManager(new a(this), new b(this), new c(this));
+   }
 
-            {
-               super(1);
-               this.this$0 = var1;
-            }
+   @JvmStatic
+   fun `manager$lambda$0`(var0: NearbyHelperModule, var1: java.lang.String): Unit {
+      q.h(var1, "it");
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new OnNearbyMessageReceivedEvent(var1));
+      return Unit.a;
+   }
 
-            public final void invoke(java.lang.String var1) {
-               q.h(var1, "it");
-               NearbyHelperModule.access$getReactEvents$p(this.this$0)
-                  .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyMessageReceivedEvent(var1));
-            }
-         },
-         new Function1(this) {
-            final NearbyHelperModule this$0;
+   @JvmStatic
+   fun `manager$lambda$1`(var0: NearbyHelperModule, var1: java.lang.String): Unit {
+      q.h(var1, "it");
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new OnNearbyMessageLostEvent(var1));
+      return Unit.a;
+   }
 
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(java.lang.String var1) {
-               q.h(var1, "it");
-               NearbyHelperModule.access$getReactEvents$p(this.this$0)
-                  .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyMessageLostEvent(var1));
-            }
-         },
-         new Function1(this) {
-            final NearbyHelperModule this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(java.lang.String var1) {
-               q.h(var1, "it");
-               NearbyHelperModule.access$getReactEvents$p(this.this$0)
-                  .emitModuleEvent(NearbyHelperModule.access$getReactContext$p(this.this$0), new OnNearbyErrorEvent(var1));
-            }
-         }
-      );
+   @JvmStatic
+   fun `manager$lambda$2`(var0: NearbyHelperModule, var1: java.lang.String): Unit {
+      q.h(var1, "it");
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new OnNearbyErrorEvent(var1));
+      return Unit.a;
    }
 
    @ReactMethod

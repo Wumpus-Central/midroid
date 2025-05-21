@@ -7,13 +7,12 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.progress_dots.databinding.ProgressDotsViewBinding
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class ProgressDots  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ProgressDotsViewBinding
-   private final val dotsAnimationStaggerTimeMs: Long
    private final val dotsAnimationTimeMs: Int
+   private final val dotsAnimationStaggerTimeMs: Long
    private final var isRunning: Boolean
 
    fun ProgressDots(var1: Context) {
@@ -36,20 +35,16 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
       this.dotsAnimationTimeMs = var3;
       this.dotsAnimationStaggerTimeMs = (long)(var3 / 1.5);
       this.setupColors();
-      var4.viewProgressDots3.setOnScaleDownCompleteListener(new Function0(this) {
-         final ProgressDots this$0;
+      var4.viewProgressDots3.setOnScaleDownCompleteListener(new c(this));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: ProgressDots): Unit {
+      if (var0.isAttachedToWindow() && var0.getVisibility() == 0) {
+         var0.start(true);
+      }
 
-         public final void invoke() {
-            if (this.this$0.isAttachedToWindow() && this.this$0.getVisibility() == 0) {
-               ProgressDots.access$start(this.this$0, true);
-            }
-         }
-      });
+      return Unit.a;
    }
 
    private fun start(isReplay: Boolean = false) {

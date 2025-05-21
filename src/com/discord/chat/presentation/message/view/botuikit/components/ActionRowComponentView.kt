@@ -54,13 +54,13 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
       val var7: java.util.List = var1.getComponents();
-      val var6: ArrayList = new ArrayList(i.v(var7, 10));
+      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
       val var20: java.util.Iterator = var7.iterator();
 
       for (int var4 = 0; var20.hasNext(); var4++) {
          var var8: Any = var20.next();
          if (var4 < 0) {
-            i.u();
+            kotlin.collections.i.u();
          }
 
          var8 = var8 as Component;
@@ -69,7 +69,7 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
          var6.add(var2.getConfiguredComponentView((Component)var8, var3, var9, var4));
       }
 
-      val var15: java.util.List = i.c0(var6);
+      val var15: java.util.List = kotlin.collections.i.c0(var6);
       val var19: FlexboxLayout = this.binding.actionRowComponentViewGroup;
       q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
       MessageComponentsViewKt.replaceViews$default(var19, var15, var2, 0, 0, 12, null);

@@ -12,6 +12,17 @@ import com.google.android.exoplayer2.ui.PlayerView
 import kotlin.jvm.internal.q
 
 public class MediaPlayerView(context: Context) {
+   public final var view: View
+      internal set
+
+   private final val playerView: PlayerView
+      private final get() {
+         val var1: View = this.view;
+         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
+         return var1 as PlayerView;
+      }
+
+
    public final var isVisible: Boolean
       public final get() {
          val var1: Boolean;
@@ -45,17 +56,6 @@ public class MediaPlayerView(context: Context) {
          this.getPlayerView().setPlayer(var1);
       }
 
-
-   private final val playerView: PlayerView
-      private final get() {
-         val var1: View = this.view;
-         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
-         return var1 as PlayerView;
-      }
-
-
-   public final var view: View
-      internal set
 
    init {
       q.h(var1, "context");
@@ -98,6 +98,8 @@ public class MediaPlayerView(context: Context) {
    }
 
    public class ControlView(context: Context) {
+      private final var playerControlView: PlayerControlView
+
       internal final var player: Player?
          internal final get() {
             return this.playerControlView.getPlayer();
@@ -107,8 +109,6 @@ public class MediaPlayerView(context: Context) {
             this.playerControlView.setPlayer(var1);
          }
 
-
-      private final var playerControlView: PlayerControlView
 
       init {
          q.h(var1, "context");

@@ -30,7 +30,6 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 
 public class EmbeddedActivityInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
@@ -81,6 +80,13 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(
          this, ColorUtilsKt.getColorCompat(var1, GetEmbedBackgroundColorKt.getEmbedBackgroundColor()), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
       );
+   }
+
+   @JvmStatic
+   fun `setSubtitleText_Tu_1QLM$lambda$8$lambda$7`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
+      kotlin.jvm.internal.q.h(var2, "node");
+      var0.invoke(MessageId.box-impl(var1), var2);
+      return Unit.a;
    }
 
    public fun setAvatarUris(avatarUris: List<String>) {
@@ -176,7 +182,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
    }
 
    public fun setSplash(splashUrl: String?, constrainedWidth: Int) {
-      var var4: SimpleDraweeView = this.binding.itemHero;
+      val var4: SimpleDraweeView = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
       var var3: Boolean;
       if (var1 != null) {
@@ -193,12 +199,12 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
-      var3 = var2 * 9 / 16;
-      val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-      var4 = this.binding.itemHero;
+      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var2 = var3 * 9 / 16;
+      val var9: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+      val var5: SimpleDraweeView = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
+      var9.resizeLayoutParams(var5, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(
@@ -236,7 +242,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       kotlin.jvm.internal.q.h(var15, "onTapEmoji");
       kotlin.jvm.internal.q.h(var16, "onTapSeeMore");
       kotlin.jvm.internal.q.h(var17, "onTapSoundmoji");
-      var var20: MessageContentView = this.binding.itemSubtitle;
+      val var19: MessageContentView = this.binding.itemSubtitle;
       kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
       var var18: Boolean;
       if (var1 != null) {
@@ -251,49 +257,33 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
          var18 = 8;
       }
 
-      var20.setVisibility(var18);
-      val var24: SimpleDraweeView = this.binding.subtitleIcon;
+      var19.setVisibility(var18);
+      val var23: SimpleDraweeView = this.binding.subtitleIcon;
       kotlin.jvm.internal.q.g(this.binding.subtitleIcon, "subtitleIcon");
-      var var22: Boolean;
+      var var21: Boolean;
       if (var1 != null) {
-         var22 = 1;
+         var21 = 1;
       } else {
-         var22 = 0;
+         var21 = 0;
       }
 
-      if (var22) {
-         var22 = 0;
+      if (var21) {
+         var21 = 0;
       } else {
-         var22 = 8;
+         var21 = 8;
       }
 
-      var24.setVisibility(var22);
+      var23.setVisibility(var21);
       if (var1 != null) {
-         var20 = this.binding.itemSubtitle;
-         kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
          MessageContentView.setMessageContent-AeCz66Y$default(
-            var20,
+            this.binding.itemSubtitle,
             var1,
             var2,
             false,
             false,
             false,
             false,
-            new Function1(var3, var2) {
-               final java.lang.String $messageId;
-               final Function2 $onTapLink;
-
-               {
-                  super(1);
-                  this.$onTapLink = var1;
-                  this.$messageId = var2;
-               }
-
-               public final void invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.q.h(var1, "node");
-                  this.$onTapLink.invoke(MessageId.box-impl(this.$messageId), var1);
-               }
-            },
+            new F(var3, var2),
             var4,
             var5,
             var6,

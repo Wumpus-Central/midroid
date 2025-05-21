@@ -11,18 +11,16 @@ internal class NotificationCache {
    private final val cache: SharedPreferences
       private final get() {
          if (this.cache == null) {
-            val var3: SharedPreferences = var1.getSharedPreferences("DiscordNotificationClient", 0);
-            q.g(var3, "getSharedPreferences(...)");
-            this.cache = var3;
+            this.cache = var1.getSharedPreferences("DiscordNotificationClient", 0);
          }
 
-         var var4: SharedPreferences = this.cache;
+         var var3: SharedPreferences = this.cache;
          if (this.cache == null) {
             q.y("cache");
-            var4 = null;
+            var3 = null;
          }
 
-         return var4;
+         return var3;
       }
 
 
@@ -149,14 +147,14 @@ internal class NotificationCache {
    public companion object {
       private const val CACHE_KEY: String
       private const val CACHE_KEY_AUTHED: String
-      private const val CACHE_KEY_CURRENT_USERNAME: String
-      private const val CACHE_KEY_CURRENT_USER_ID: String
-      private const val CACHE_KEY_FULLSCREEN_CALL_UI_ENABLED: String
-      private const val CACHE_KEY_LAST_BACKGROUND_SYNC_RAN: String
-      private const val CACHE_KEY_LIGHTS_ENABLED: String
-      private const val CACHE_KEY_MISSED_CALL_NOTIFICATIONS_ENABLED: String
-      private const val CACHE_KEY_NOTIFY_EVERY_TIME: String
       private const val CACHE_KEY_SOUNDS_ENABLED: String
       private const val CACHE_KEY_VIBRATIONS_ENABLED: String
+      private const val CACHE_KEY_LIGHTS_ENABLED: String
+      private const val CACHE_KEY_CURRENT_USERNAME: String
+      private const val CACHE_KEY_CURRENT_USER_ID: String
+      private const val CACHE_KEY_NOTIFY_EVERY_TIME: String
+      private const val CACHE_KEY_LAST_BACKGROUND_SYNC_RAN: String
+      private const val CACHE_KEY_MISSED_CALL_NOTIFICATIONS_ENABLED: String
+      private const val CACHE_KEY_FULLSCREEN_CALL_UI_ENABLED: String
    }
 }

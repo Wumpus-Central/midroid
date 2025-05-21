@@ -57,7 +57,7 @@ public class GuildView  public constructor(context: Context, attrs: AttributeSet
          this.boundIconUrl = var1;
          this.boundShortGuildName = var2;
          var var6: Int = 0;
-         if (var1 != null && !kotlin.text.h.d0(var1)) {
+         if (var1 != null && !kotlin.text.h.c0(var1)) {
             val var12: SimpleDraweeView = this.binding.guildAvatar;
             kotlin.jvm.internal.q.g(this.binding.guildAvatar, "guildAvatar");
             var12.setVisibility(0);

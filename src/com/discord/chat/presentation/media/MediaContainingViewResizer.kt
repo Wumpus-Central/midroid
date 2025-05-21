@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.media
 
+import Y8.a
 import android.view.View
 import android.view.ViewGroup.LayoutParams
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import w8.a
 
 public object MediaContainingViewResizer {
    public fun View.resizeLayoutParams(

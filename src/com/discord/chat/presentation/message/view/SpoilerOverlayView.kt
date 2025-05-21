@@ -40,7 +40,6 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
 
    @JvmStatic
    fun `configure$lambda$1`(var0: Function0, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "$onReveal");
       var0.invoke();
    }
 
@@ -50,7 +49,7 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
       this.binding.label.setText(var1);
       val var3: FrameLayout = this.binding.overlayContainer;
       kotlin.jvm.internal.q.g(this.binding.overlayContainer, "overlayContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new V(var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new O0(var2), 1, null);
    }
 
    public override fun getOverlayView(): View {

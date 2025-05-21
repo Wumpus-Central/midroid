@@ -4,8 +4,8 @@ import kotlin.enums.EnumEntries
 
 public enum class TraceTransaction(transactionName: String, operation: String) {
    NativeModuleInit("Content Appeared", "ui")
-   public final val operation: String
    public final val transactionName: String
+   public final val operation: String
    @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic
@@ -15,7 +15,7 @@ public enum class TraceTransaction(transactionName: String, operation: String) {
    fun {
       val var0: Array<TraceTransaction> = $values();
       $VALUES = var0;
-      $ENTRIES = w8.a.a(var0);
+      $ENTRIES = Y8.a.a(var0);
    }
 
    init {

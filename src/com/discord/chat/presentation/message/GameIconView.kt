@@ -34,9 +34,6 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
 
    @JvmStatic
    fun `configureGameIcon$lambda$0`(var0: ChatEventHandler, var1: java.lang.String, var2: java.lang.String, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "$eventHandler");
-      kotlin.jvm.internal.q.h(var1, "$gameApplicationId");
-      kotlin.jvm.internal.q.h(var2, "$timestamp");
       var0.onTapGameIcon(var1, var2);
    }
 
@@ -46,6 +43,6 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
       kotlin.jvm.internal.q.h(var3, "eventHandler");
       val var4: SimpleDraweeView = this.binding.gameControllerIcon;
       kotlin.jvm.internal.q.g(this.binding.gameControllerIcon, "gameControllerIcon");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new d(var3, var1, var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new e(var3, var1, var2), 1, null);
    }
 }

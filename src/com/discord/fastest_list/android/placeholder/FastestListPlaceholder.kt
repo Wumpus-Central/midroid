@@ -1,10 +1,10 @@
 package com.discord.fastest_list.android.placeholder
 
+import Q8.n
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
 import kotlin.jvm.internal.q
-import o8.p
 
 internal sealed class FastestListPlaceholder protected constructor() {
    public abstract fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
@@ -25,7 +25,7 @@ internal sealed class FastestListPlaceholder protected constructor() {
             var2 = new FastestListPlaceholderTypeShape(var1 as FastestListPlaceholderType.Shape);
          } else {
             if (var1 !is FastestListPlaceholderType.None) {
-               throw new p();
+               throw new n();
             }
 
             var2 = FastestListPlaceholderTypeNone.INSTANCE;

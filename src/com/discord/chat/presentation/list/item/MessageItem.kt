@@ -18,11 +18,11 @@ public data class MessageItem(message: Message,
       renderContentOnly: Boolean = false
    )
    : ChatListItem {
+   public final val message: Message
+   public final val messageFrame: MessageFrame?
+   public final val messageContext: MessageContext
    public final val allowChildGestures: Boolean
    public final val backgroundHighlight: BackgroundHighlight?
-   public final val message: Message
-   public final val messageContext: MessageContext
-   public final val messageFrame: MessageFrame?
    public final val reactTag: Int?
    public final val renderContentOnly: Boolean
 
@@ -116,8 +116,8 @@ public data class MessageItem(message: Message,
          var1 = this.messageFrame.hashCode();
       }
 
-      val var5: Int = this.messageContext.hashCode();
-      val var6: Int = java.lang.Boolean.hashCode(this.allowChildGestures);
+      val var6: Int = this.messageContext.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.allowChildGestures);
       val var2: Int;
       if (this.backgroundHighlight == null) {
          var2 = 0;
@@ -129,33 +129,33 @@ public data class MessageItem(message: Message,
          var3 = this.reactTag.hashCode();
       }
 
-      return (((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.renderContentOnly);
+      return (((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.renderContentOnly);
    }
 
    public override fun toString(): String {
-      val var5: Message = this.message;
-      val var8: MessageFrame = this.messageFrame;
-      val var4: MessageContext = this.messageContext;
+      val var4: Message = this.message;
+      val var6: MessageFrame = this.messageFrame;
+      val var3: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
-      val var7: Int = this.reactTag;
+      val var5: BackgroundHighlight = this.backgroundHighlight;
+      val var8: Int = this.reactTag;
       val var2: Boolean = this.renderContentOnly;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageItem(message=");
-      var6.append(var5);
-      var6.append(", messageFrame=");
-      var6.append(var8);
-      var6.append(", messageContext=");
-      var6.append(var4);
-      var6.append(", allowChildGestures=");
-      var6.append(var1);
-      var6.append(", backgroundHighlight=");
-      var6.append(var3);
-      var6.append(", reactTag=");
-      var6.append(var7);
-      var6.append(", renderContentOnly=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MessageItem(message=");
+      var7.append(var4);
+      var7.append(", messageFrame=");
+      var7.append(var6);
+      var7.append(", messageContext=");
+      var7.append(var3);
+      var7.append(", allowChildGestures=");
+      var7.append(var1);
+      var7.append(", backgroundHighlight=");
+      var7.append(var5);
+      var7.append(", reactTag=");
+      var7.append(var8);
+      var7.append(", renderContentOnly=");
+      var7.append(var2);
+      var7.append(")");
+      return var7.toString();
    }
 }

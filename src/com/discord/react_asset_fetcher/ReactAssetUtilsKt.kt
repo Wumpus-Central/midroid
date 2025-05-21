@@ -1,7 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import X9.K
-import X9.f
+import X8.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -22,8 +21,8 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import o8.s
-import v8.b
+import za.K
+import za.f
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");
@@ -46,7 +45,7 @@ public fun Context.inflateUrl(url: String?): String? {
 
 public fun SimpleDraweeView.setOptionalReactImageUrl(url: String?) {
    q.h(var0, "<this>");
-   if (var1 != null && !h.d0(var1)) {
+   if (var1 != null && !h.c0(var1)) {
       var0.setVisibility(0);
       setReactImageUrl(var0, var1);
    } else {
@@ -99,10 +98,10 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             }
 
             var4 = this.L$0 as MaterialButton;
-            s.b(var1);
+            c.b(var1);
             var3 = var1;
          } else {
-            s.b(var1);
+            c.b(var1);
             var1 = this.$this_setReactIcon;
             var3 = K.b();
             val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
@@ -127,30 +126,26 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                public final Object invokeSuspend(Object var1) {
                   b.e();
                   if (this.label == 0) {
-                     s.b(var1);
+                     c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      q.g(var1, "getContext(...)");
-                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var2x.isResource()) {
-                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var3.isResource()) {
+                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
                         q.g(var6, "getContext(...)");
-                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
+                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
+                        q.e(var1);
+                     } else if (q.c(var3.getUri().getScheme(), "file")) {
+                        var1 = Drawable.createFromPath(var3.getUri().getPath());
                         q.e(var1);
                      } else {
-                        if (q.c(var2x.getUri().getScheme(), "file")) {
-                           var1 = Drawable.createFromPath(var2x.getUri().getPath());
-                           q.e(var1);
-                        } else {
-                           val var8: URLConnection = new URL(var2x.getSource()).openConnection();
-                           q.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
-                           val var9: HttpURLConnection = var8 as HttpURLConnection;
-                           (var8 as HttpURLConnection).connect();
-                           var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));
-                        }
-
-                        q.e(var1);
+                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
+                        q.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
+                        val var9: HttpURLConnection = var8 as HttpURLConnection;
+                        (var8 as HttpURLConnection).connect();
+                        var1 = new BitmapDrawable(var1.getResources(), BitmapFactory.decodeStream(var9.getInputStream()));
                      }
 
                      return var1;

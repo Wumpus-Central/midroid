@@ -9,7 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.a
+import androidx.core.content.b
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.databinding.DeserializationErrorViewBinding
 import com.discord.chat.presentation.list.ChatListLinearLayout
@@ -17,6 +17,7 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
+import h1.a
 import kotlin.jvm.internal.q
 
 public class DeserializationErrorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout {
@@ -71,9 +72,7 @@ public class DeserializationErrorView  public constructor(context: Context, attr
 
    @JvmStatic
    fun `configure$lambda$0`(var0: DeserializationErrorView, var1: java.lang.String, var2: View) {
-      q.h(var0, "this$0");
-      q.h(var1, "$json");
-      val var3: Any = a.i(var0.getContext(), ClipboardManager.class);
+      val var3: Any = b.i(var0.getContext(), ClipboardManager.class);
       q.e(var3);
       (var3 as ClipboardManager).setPrimaryClip(ClipData.newPlainText("Error JSON", var1));
       Toast.makeText(var0.getContext(), "Copied error json to clipboard", 0).show();
@@ -86,6 +85,6 @@ public class DeserializationErrorView  public constructor(context: Context, attr
       this.binding.exception.setText(var2);
       val var3: Button = this.binding.copyButton;
       q.g(this.binding.copyButton, "copyButton");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new j1.a(this, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new a(this, var1), 1, null);
    }
 }

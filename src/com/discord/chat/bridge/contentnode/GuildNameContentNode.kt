@@ -1,23 +1,13 @@
 package com.discord.chat.bridge.contentnode
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class GuildNameContentNode(guildId: String? = null, content: String, icon: String? = null) : ContentNode {
-   public final val content: String
    public final val guildId: String?
+   public final val content: String
    public final val icon: String?
 
    init {
@@ -80,108 +70,18 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.content;
-      val var2: java.lang.String = this.icon;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GuildNameContentNode(guildId=");
-      var1.append(var4);
-      var1.append(", content=");
-      var1.append(var3);
-      var1.append(", icon=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: GuildNameContentNode.$serializer = new GuildNameContentNode.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("guild", var0, 3);
-         var1.l("guildId", true);
-         var1.l("content", false);
-         var1.l("icon", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), var1, a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): GuildNameContentNode {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
-         var var7: java.lang.String = null;
-         var var2: Int;
-         val var11: java.lang.String;
-         var var13: java.lang.String;
-         if (var5) {
-            val var6: C0 = C0.a;
-            var7 = var10.v(var9, 0, C0.a, null) as java.lang.String;
-            var11 = var10.t(var9, 1);
-            var13 = var10.v(var9, 2, var6, null) as java.lang.String;
-            var2 = 7;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var13 = null;
-            var var12: java.lang.String = null;
-
-            while (var3) {
-               val var4: Int = var10.x(var9);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var12 = var10.v(var9, 2, C0.a, var12) as java.lang.String;
-                        var2 |= 4;
-                     } else {
-                        var13 = var10.t(var9, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var10.v(var9, 0, C0.a, var7) as java.lang.String;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var13 = var12;
-            var11 = var13;
-         }
-
-         var10.b(var9);
-         return new GuildNameContentNode(var2, var7, var11, var13, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: GuildNameContentNode) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         GuildNameContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var1: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.content;
+      val var3: java.lang.String = this.icon;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("GuildNameContentNode(guildId=");
+      var2.append(var1);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(", icon=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import R1.d
+import X8.b
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -9,16 +9,14 @@ import com.facebook.datasource.DataSource
 import com.facebook.imagepipeline.core.DefaultExecutorSupplier
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import kotlin.Result.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import o8.r
-import o8.s
-import o8.r.a
-import v8.b
+import t2.d
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -31,7 +29,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
    val var6: e = new e(b.c(var4), 1);
    var6.C();
    if (var1 == null) {
-      var6.resumeWith(r.b(null));
+      var6.resumeWith(Result.b(null));
    } else {
       val var7: ImageRequestBuilder = ImageRequestBuilder.x(var1);
       var var10: BasePostprocessor = null;
@@ -40,7 +38,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.b(new B2.b(var6, var3) {
+      var8.g(new d3.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -52,12 +50,12 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
          @Override
          protected void onFailureImpl(DataSource var1) {
             q.h(var1, "dataSource");
-            this.$continuation.resumeWith(r.b(null));
+            this.$continuation.resumeWith(Result.b(null));
          }
 
          @Override
          protected void onNewResultImpl(Bitmap var1) {
-            val var2: a = r.k;
+            val var2: a = Result.k;
             var var4: Bitmap = var1;
             if (this.$copyBitmap) {
                var4 = var1;
@@ -66,14 +64,13 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
                }
             }
 
-            this.$continuation.resumeWith(r.b(var4));
+            this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
       var6.f(new Function1(var8) {
          final DataSource $imageDataSource;
 
          {
-            super(1);
             this.$imageDataSource = var1;
          }
 
@@ -94,16 +91,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var9: a = r.k;
-      var8 = r.b(Uri.parse(var1));
+      val var5: a = Result.k;
+      var9 = Result.b(Uri.parse(var1));
    } catch (var6: java.lang.Throwable) {
-      val var5: a = r.k;
-      var8 = r.b(s.a(var6));
+      val var8: a = Result.k;
+      var9 = Result.b(c.a(var6));
       break label15;
    }
 
-   var var10: Any = var8;
-   if (r.g(var8)) {
+   var var10: Any = var9;
+   if (Result.g(var9)) {
       var10 = null;
    }
 
@@ -122,7 +119,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).b(new B2.b(var3) {
+      d.a().k(var5.J(var6).a(), var0).g(new d3.b(var3) {
          final Function1 $onDecodedImage;
 
          {
@@ -149,16 +146,16 @@ public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor?
 
    label16:
    try {
-      val var4: a = r.k;
-      var8 = r.b(Uri.parse(var1));
+      val var4: a = Result.k;
+      var8 = Result.b(Uri.parse(var1));
    } catch (var5: java.lang.Throwable) {
-      val var7: a = r.k;
-      var8 = r.b(s.a(var5));
+      val var7: a = Result.k;
+      var8 = Result.b(c.a(var5));
       break label16;
    }
 
    var var9: Any = var8;
-   if (r.g(var8)) {
+   if (Result.g(var8)) {
       var9 = null;
    }
 

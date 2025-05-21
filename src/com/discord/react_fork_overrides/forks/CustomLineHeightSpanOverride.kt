@@ -6,14 +6,14 @@ import com.facebook.react.views.text.internal.span.CustomLineHeightSpan
 internal object CustomLineHeightSpanOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: Array<Any>) {
-      kotlin.jvm.internal.q.h(var0, "<name for destructuring parameter 0>");
-      var var1: Any = ((Object[])var0)[0];
-      var0 = ((Object[])var0)[1];
-      val var2: CustomLineHeightSpanOverride = INSTANCE;
+      kotlin.jvm.internal.q.h(var0, "<destruct>");
+      var var1: Any = var0[0];
+      val var2: Any = var0[1];
+      val var3: CustomLineHeightSpanOverride = INSTANCE;
       kotlin.jvm.internal.q.f(var1, "null cannot be cast to non-null type android.graphics.Paint.FontMetricsInt");
       var1 = var1 as FontMetricsInt;
-      kotlin.jvm.internal.q.f(var0, "null cannot be cast to non-null type kotlin.Int");
-      var2.overrideLineHeight((FontMetricsInt)var1, var0 as Int);
+      kotlin.jvm.internal.q.f(var2, "null cannot be cast to non-null type kotlin.Int");
+      var3.overrideLineHeight((FontMetricsInt)var1, var2 as Int);
    }
 
    private fun overrideLineHeight(fm: FontMetricsInt, mHeight: Int) {
@@ -30,7 +30,7 @@ internal object CustomLineHeightSpanOverride {
             return;
          }
 
-         val var10: Int = E8.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
+         val var10: Int = g9.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
          var1.descent = var10;
          var1.ascent = var10 - var2;
       }

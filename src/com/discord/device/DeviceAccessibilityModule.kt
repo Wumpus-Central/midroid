@@ -1,5 +1,6 @@
 package com.discord.device
 
+import R8.n
 import android.app.Activity
 import android.view.View
 import com.discord.codegen.NativeDeviceAccessibilityModuleSpec
@@ -15,7 +16,6 @@ import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import p8.n
 
 internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : NativeDeviceAccessibilityModuleSpec {
    init {
@@ -30,26 +30,24 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
 
    @JvmStatic
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
-      q.h(var0, "$nativeIds");
-      q.h(var1, "this$0");
-      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
          val var2: Int = (var8 as n).a();
-         val var6: ReactApplicationContext = var1.getReactApplicationContext();
-         q.g(var6, "getReactApplicationContext(...)");
-         val var7: java.lang.String = var0.getString(var2);
-         q.e(var7);
-         val var9: View = ReactContextFindViewKt.findView(var6, var7);
+         val var7: ReactApplicationContext = var1.getReactApplicationContext();
+         q.g(var7, "getReactApplicationContext(...)");
+         val var6: java.lang.String = var0.getString(var2);
+         q.e(var6);
+         val var9: View = ReactContextFindViewKt.findView(var7, var6);
          if (var9 != null) {
-            var3.add(var9);
+            var4.add(var9);
          }
       }
 
-      var4.enableFocusLock(var3);
+      var3.enableFocusLock(var4);
    }
 
    public override fun disableFocusLock() {
@@ -81,7 +79,6 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
             final Promise $promise;
 
             {
-               super(1);
                this.$promise = var1;
             }
 
@@ -114,7 +111,6 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
                   final Promise $promise;
 
                   {
-                     super(1);
                      this.$promise = var1;
                   }
 

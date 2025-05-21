@@ -1,5 +1,6 @@
 package com.discord.zoom_layout
 
+import Q8.s
 import com.discord.reactevents.ReactEvents
 import com.discord.zoom_layout.reactevents.OnZoomChangedEvent
 import com.facebook.react.bridge.ReadableArray
@@ -10,31 +11,24 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
    private final val delegate: DCDZoomLayoutAndroidManagerDelegate<ZoomLayoutFixed, ZoomLayoutViewManager> = new DCDZoomLayoutAndroidManagerDelegate(this)
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onZoomChanged", G.b(OnZoomChangedEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onZoomChanged", G.b(OnZoomChangedEvent.class)))
+
+   @JvmStatic
+   fun `createViewInstance$lambda$0`(var0: ZoomLayoutViewManager, var1: ZoomLayoutFixed): Unit {
+      q.h(var1, "zoomLayout");
+      var0.reactEvents.emitEvent(var1, new OnZoomChangedEvent(var1.getZoom()));
+      return Unit.a;
+   }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ZoomLayoutFixed {
       q.h(var1, "reactContext");
-      return new ZoomLayoutFixed(var1, new Function1(this) {
-         final ZoomLayoutViewManager this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(ZoomLayoutFixed var1) {
-            q.h(var1, "zoomLayout");
-            ZoomLayoutViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnZoomChangedEvent(var1.getZoom()));
-         }
-      });
+      return new ZoomLayoutFixed(var1, new c(this));
    }
 
    protected open fun getDelegate(): ViewManagerDelegate<ZoomLayoutFixed> {
@@ -92,8 +86,8 @@ internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoo
    }
 
    public companion object {
-      private const val COMMAND_UN_ZOOM: String
       private const val COMMAND_ZOOM_TO: String
+      private const val COMMAND_UN_ZOOM: String
       public const val NAME: String
    }
 }

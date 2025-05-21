@@ -1,5 +1,6 @@
 package com.discord.react_strings
 
+import N1.a
 import com.discord.codegen.NativeI18nModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
@@ -17,9 +18,15 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
       this.reactContext = var1;
    }
 
+   @JvmStatic
+   fun `keysRequest$lambda$0`(var0: I18nMessage): Any {
+      q.h(var0, "key");
+      return var0.name();
+   }
+
    public override fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), <unrepresentable>.INSTANCE)});
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), new a())});
    }
 
    public override fun valuesResult(values: ReadableArray) {

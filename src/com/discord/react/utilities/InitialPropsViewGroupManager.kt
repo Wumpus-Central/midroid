@@ -1,6 +1,5 @@
 package com.discord.react.utilities
 
-import android.view.View
 import android.view.ViewGroup
 import com.facebook.react.uimanager.ReactStylesDiffMap
 import com.facebook.react.uimanager.StateWrapper
@@ -11,8 +10,8 @@ import java.util.LinkedHashSet
 import kotlin.jvm.internal.q
 
 public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGroupManager<T> {
-   private final val consumedInitialProps: MutableMap<Int, MutableSet<String>>
    private final var delegatedInitialProps: ReactStylesDiffMap = defaultInitialProps
+   private final val consumedInitialProps: MutableMap<Int, MutableSet<String>>
 
    open fun InitialPropsViewGroupManager() {
       this.consumedInitialProps = new HashMap<>();
@@ -28,9 +27,7 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
       }
 
       this.delegatedInitialProps = var5;
-      val var6: View = super.createViewInstance(var1, var2, var3, var4);
-      q.g(var6, "createViewInstance(...)");
-      return (T)var6;
+      return (T)super.createViewInstance(var1, var2, var3, var4);
    }
 
    protected fun createViewInstance(reactContext: ThemedReactContext): Any {

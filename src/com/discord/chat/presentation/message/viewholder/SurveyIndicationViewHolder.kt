@@ -7,8 +7,8 @@ import com.discord.chat.presentation.message.view.SurveyIndicationView
 import kotlin.jvm.functions.Function2
 
 public class SurveyIndicationViewHolder(surveyIndicationView: SurveyIndicationView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
-   private final val eventHandler: ChatEventHandler
    private final val surveyIndicationView: SurveyIndicationView
+   private final val eventHandler: ChatEventHandler
 
    init {
       kotlin.jvm.internal.q.h(var1, "surveyIndicationView");

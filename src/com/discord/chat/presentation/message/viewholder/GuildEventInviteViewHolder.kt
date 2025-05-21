@@ -10,7 +10,6 @@ import com.discord.chat.bridge.contentnode.SoundmojiContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.GuildEventInviteMessageAccessory
 import com.discord.chat.presentation.message.view.GuildEventInviteView
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
@@ -36,29 +35,31 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    }
 
    @JvmStatic
-   fun `bind$lambda$3$lambda$2$lambda$0`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
+   fun `bind$lambda$4$lambda$3$lambda$0`(var0: GuildEventInviteViewHolder): Unit {
+      var0.onTapSpoiler.invoke(var0);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$4$lambda$3$lambda$1`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.TRUE, java.lang.Boolean.FALSE);
    }
 
    @JvmStatic
-   fun `bind$lambda$3$lambda$2$lambda$1`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$inviteAccessory");
+   fun `bind$lambda$4$lambda$3$lambda$2`(var0: GuildEventInviteViewHolder, var1: GuildEventInviteMessageAccessory, var2: View) {
       var0.eventHandler.onTapInviteEmbed-AFFcxXc(var1.getMessageId-3Eiw7ao(), var1.getCodedLinkIndex(), java.lang.Boolean.FALSE, java.lang.Boolean.TRUE);
    }
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "inviteAccessory");
-      val var7: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var22: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var7.getHeaderIcon(), var7.getHeaderText(), var7.getHeaderColor());
-      var22.setCreatorAvatar(var7.getCreatorAvatar());
-      var22.setBadge(var7.getBadgeIcon(), var7.getBadgeCount());
-      var22.setTitle(var7.getTitleText(), var7.getTitleColor());
-      var22.setDescription-iRUqyQU(
-         var7.getContent(),
+      val var13: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var10: GuildEventInviteView = this.guildEventInviteView;
+      this.guildEventInviteView.setHeader(var13.getHeaderIcon(), var13.getHeaderText(), var13.getHeaderColor());
+      var10.setCreatorAvatar(var13.getCreatorAvatar());
+      var10.setBadge(var13.getBadgeIcon(), var13.getBadgeCount());
+      var10.setTitle(var13.getTitleText(), var13.getTitleColor());
+      var10.setDescription-iRUqyQU(
+         var13.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
@@ -184,18 +185,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
-         new Function0(this) {
-            final GuildEventInviteViewHolder this$0;
-
-            {
-               super(0);
-               this.this$0 = var1;
-            }
-
-            public final void invoke() {
-               GuildEventInviteViewHolder.access$getOnTapSpoiler$p(this.this$0).invoke(this.this$0);
-            }
-         },
+         new n(this),
          new Function1(this.eventHandler) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapTimestamp", "onTapTimestamp(Ljava/lang/String;)V", 0);
@@ -249,16 +239,16 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var22.setGuild(var7.getGuildName(), var7.getGuildIcon());
-      var22.setChannel(var7.getChannelIcon(), var7.getChannelName());
-      var22.setAcceptButton(
-         var7.getAcceptLabelIcon(),
-         var7.getAcceptLabelText(),
-         var7.getAcceptLabelColor(),
-         var7.getAcceptLabelBorderColor(),
-         var7.getAcceptLabelBackgroundColor(),
-         new l(this, var1)
+      var10.setGuild(var13.getGuildName(), var13.getGuildIcon());
+      var10.setChannel(var13.getChannelIcon(), var13.getChannelName());
+      var10.setAcceptButton(
+         var13.getAcceptLabelIcon(),
+         var13.getAcceptLabelText(),
+         var13.getAcceptLabelColor(),
+         var13.getAcceptLabelBorderColor(),
+         var13.getAcceptLabelBackgroundColor(),
+         new o(this, var1)
       );
-      var22.setSecondaryButton(var7.getSecondaryActionIcon(), new m(this, var1));
+      var10.setSecondaryButton(var13.getSecondaryActionIcon(), new p(this, var1));
    }
 }

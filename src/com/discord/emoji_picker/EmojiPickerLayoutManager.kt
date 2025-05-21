@@ -2,15 +2,14 @@ package com.discord.emoji_picker
 
 import android.content.Context
 import androidx.recyclerview.widget.GridLayoutManager
-import kotlin.jvm.internal.q
 
 internal class EmojiPickerLayoutManager(context: Context, rowSize: Int, onGetSpanSize: (Int) -> Int) : GridLayoutManager {
    private final val onGetSpanSize: (Int) -> Int
    private final var isScrollEnabled: Boolean
 
    init {
-      q.h(var1, "context");
-      q.h(var3, "onGetSpanSize");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var3, "onGetSpanSize");
       super(var1, var2);
       this.onGetSpanSize = var3;
       this.isScrollEnabled = true;

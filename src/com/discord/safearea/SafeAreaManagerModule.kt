@@ -1,9 +1,9 @@
 package com.discord.safearea
 
+import Q8.s
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import kotlin.jvm.internal.q
-import o8.w
 
 public class SafeAreaManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -13,7 +13,7 @@ public class SafeAreaManagerModule(reactContext: ReactApplicationContext) : Reac
 
    public open fun getConstants(): MutableMap<String, Any> {
       val var1: SafeAreaEdgeInsets = SafeAreaEdgeInsets.Companion.fromRootView(this.getCurrentActivity());
-      return p8.q.m(new Pair[]{w.a("top", var1.getTopDp()), w.a("bottom", var1.getBottomDp()), w.a("left", var1.getLeftDp()), w.a("right", var1.getRightDp())});
+      return R8.q.m(new Pair[]{s.a("top", var1.getTopDp()), s.a("bottom", var1.getBottomDp()), s.a("left", var1.getLeftDp()), s.a("right", var1.getRightDp())});
    }
 
    public open fun getName(): String {

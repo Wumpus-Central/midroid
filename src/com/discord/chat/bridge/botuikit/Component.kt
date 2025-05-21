@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.botuikit
 
-import ha.f
+import Ja.f
 import kotlinx.serialization.KSerializer
 
 @f(with = ComponentSerializer::class)
 public sealed class Component protected constructor() {
-   public abstract val id: String
    public abstract val type: Int
+   public abstract val id: String
 
    public companion object {
       public fun serializer(): KSerializer<Component> {

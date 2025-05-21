@@ -1,10 +1,10 @@
 package com.discord.codegen;
 
-import S2.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.turbomodule.core.interfaces.TurboModule;
+import u3.a;
 
 public abstract class NativePortalFromNativeModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativePortalFromNativeModule";

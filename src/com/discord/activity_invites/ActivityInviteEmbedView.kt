@@ -1,7 +1,8 @@
 package com.discord.activity_invites
 
-import J1.f
-import R1.d
+import Q8.j
+import Q8.m
+import Q8.n
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -14,6 +15,7 @@ import com.discord.SetTextSizeSpKt
 import com.discord.activity_invites.databinding.ActivityInviteEmbedViewBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.image.fresco.postprocessors.PostProcessor
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
@@ -23,12 +25,13 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
+import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import o8.l
-import o8.o
+import l2.f
+import t2.d
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -55,7 +58,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = l.b(o.l, <unrepresentable>.INSTANCE);
+      this.grayscalePostprocessor$delegate = j.a(m.l, new com.discord.activity_invites.a());
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;
@@ -127,7 +130,11 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          q.g(this.binding.endImage, "endImage");
          var9.setVisibility(8);
          this.binding.startImage.setImageURI((var1 as ActivityInviteEmbedView.ImageConfig.Start).getUri());
-      } else if (var1 is ActivityInviteEmbedView.ImageConfig.End) {
+      } else {
+         if (var1 !is ActivityInviteEmbedView.ImageConfig.End) {
+            throw new n();
+         }
+
          val var10: View = this.binding.bgGradient;
          q.g(this.binding.bgGradient, "bgGradient");
          val var7: ActivityInviteEmbedView.ImageConfig.End = var1 as ActivityInviteEmbedView.ImageConfig.End;
@@ -147,6 +154,11 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          var12.setVisibility(0);
          this.setEndImage(var7.getUri(), var7.getFullSize(), var7.getGrayscale());
       }
+   }
+
+   @JvmStatic
+   fun `grayscalePostprocessor_delegate$lambda$0`(): BasePostprocessor {
+      return PostProcessor.Grayscale.INSTANCE.create();
    }
 
    private fun setAvatars(avatars: List<String?>?) {
@@ -310,9 +322,9 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
    private sealed class ImageConfig protected constructor() {
       public data class End(uri: String, fullSize: Boolean, grayscale: Boolean) : ActivityInviteEmbedView.ImageConfig {
+         public final val uri: String
          public final val fullSize: Boolean
          public final val grayscale: Boolean
-         public final val uri: String
 
          init {
             q.h(var1, "uri");
@@ -411,12 +423,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.uri;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Start(uri=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.lang.String = this.uri;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Start(uri=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
    }

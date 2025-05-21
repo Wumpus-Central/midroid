@@ -1,19 +1,26 @@
 package com.discord.react.utilities
 
+import Ja.j
+import Q8.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
-import ha.j
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.u
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONObject
 
-public final val json: Json = kotlinx.serialization.json.b.b(null, <unrepresentable>.INSTANCE, 1, null)
+public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
+
+@JvmSynthetic
+fun a(var0: JsonBuilder): Unit {
+   return json$lambda$0(var0);
+}
 
 public fun ReadableMap?.getBoolean(key: String, default: Boolean = false): Boolean {
    q.h(var1, "key");
@@ -136,6 +143,12 @@ public fun ReadableMap.getStringOrEmpty(name: String): String {
    return getNonNullString(var0, var1, "");
 }
 
+fun `json$lambda$0`(var0: JsonBuilder): Unit {
+   q.h(var0, "$this$Json");
+   var0.c(true);
+   return Unit.a;
+}
+
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
    q.h(var0, "pairs");
    val var3: WritableNativeMap = new WritableNativeMap();
@@ -207,7 +220,9 @@ public fun ReadableMap.toJson(): JSONObject {
             val var5: ReadableArray = var0.getArray(var2);
             q.e(var5);
             var1.put(var2, NativeArrayExtensionsKt.toJson(var5));
+            break;
          default:
+            throw new n();
       }
    }
 
@@ -226,10 +241,10 @@ public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    q.h(var0, "<this>");
    val var1: Json = getJson();
    val var2: java.lang.String = toJsonString(var0);
-   val var3: na.b = var1.a();
+   val var3: Pa.b = var1.a();
    q.m(6, "T");
    u.a("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(j.d(var3, null), var2);
+   return (T)var1.b(j.c(var3, null), var2);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {

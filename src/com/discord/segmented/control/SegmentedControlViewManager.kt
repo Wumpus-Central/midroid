@@ -1,5 +1,7 @@
 package com.discord.segmented.control
 
+import Q8.s
+import R8.n
 import android.annotation.SuppressLint
 import android.graphics.Color
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -15,38 +17,28 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
 import java.util.ArrayList
-import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
-import p8.n
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onValueChange", G.b(ValueChangeEvent.class)))
    private final val delegate: DCDSegmentedControlManagerDelegate<SegmentedControlView, SegmentedControlViewManager>
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onValueChange", G.b(ValueChangeEvent.class)))
+
+   @JvmStatic
+   fun `createViewInstance$lambda$1$lambda$0`(
+      var0: SegmentedControlViewManager, var1: ThemedReactContext, var2: SegmentedControlView, var3: Int, var4: java.lang.String
+   ): Unit {
+      q.h(var4, "label");
+      var0.reactEvents.emitEvent(var1, var2, new ValueChangeEvent(var4, var3));
+      return Unit.a;
+   }
 
    @SuppressLint(["InflateParams"])
    protected open fun createViewInstance(reactContext: ThemedReactContext): SegmentedControlView {
       q.h(var1, "reactContext");
       val var2: SegmentedControlView = new SegmentedControlView(var1, null, 0, 6, null);
-      var2.setOnSegmentSelected(new Function2(this, var1, var2) {
-         final ThemedReactContext $reactContext;
-         final SegmentedControlView $this_apply;
-         final SegmentedControlViewManager this$0;
-
-         {
-            super(2);
-            this.this$0 = var1;
-            this.$reactContext = var2;
-            this.$this_apply = var3;
-         }
-
-         public final void invoke(int var1, java.lang.String var2) {
-            q.h(var2, "label");
-            SegmentedControlViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$reactContext, this.$this_apply, new ValueChangeEvent(var2, var1));
-         }
-      });
+      var2.setOnSegmentSelected(new b(this, var1, var2));
       return var2;
    }
 
@@ -133,12 +125,12 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var5: java.util.Iterator = var4.iterator();
+         val var6: java.util.Iterator = var4.iterator();
 
-         while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as n).a());
-            if (var6 != null) {
-               var3.add(var6);
+         while (var6.hasNext()) {
+            val var5: java.lang.String = var2.getString((var6 as n).a());
+            if (var5 != null) {
+               var3.add(var5);
             }
          }
 

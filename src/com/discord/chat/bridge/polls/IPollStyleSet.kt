@@ -1,16 +1,6 @@
 package com.discord.chat.bridge.polls
 
 public interface IPollStyleSet {
-   public val answerBackgroundColor: Int
-      public abstract get() {
-      }
-
-
-   public val answerFillColor: Int
-      public abstract get() {
-      }
-
-
    public val borderColor: Int
       public abstract get() {
       }
@@ -18,12 +8,22 @@ public interface IPollStyleSet {
 
    public val borderWidthPx: Int
 
+   public val labelColor: Int
+      public abstract get() {
+      }
+
+
    public val fillColor: Int
       public abstract get() {
       }
 
 
-   public val labelColor: Int
+   public val answerBackgroundColor: Int
+      public abstract get() {
+      }
+
+
+   public val answerFillColor: Int
       public abstract get() {
       }
 

@@ -9,10 +9,10 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
    embeddedActivityInviteEmbed: EmbeddedActivityInviteEmbedImpl,
    constrainedWidth: Int
 ) : EmbeddedActivityInviteMessageAccessory(var1, var2, var3, var4) {
-   public final val codedLinkIndex: Int
-   public final val constrainedWidth: Int
-   public final val embeddedActivityInviteEmbed: EmbeddedActivityInviteEmbedImpl
    public open val messageId: MessageId
+   public final val codedLinkIndex: Int
+   public final val embeddedActivityInviteEmbed: EmbeddedActivityInviteEmbedImpl
+   public final val constrainedWidth: Int
 
    fun EmbeddedActivityInviteMessageAccessory(var1: java.lang.String, var2: Int, var3: EmbeddedActivityInviteEmbedImpl, var4: Int) {
       q.h(var1, "messageId");

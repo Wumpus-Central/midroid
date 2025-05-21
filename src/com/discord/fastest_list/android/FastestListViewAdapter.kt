@@ -101,8 +101,8 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public data class DataChanged(position: Int, count: Int = 1) {
-      public final val count: Int
       public final val position: Int
+      public final val count: Int
 
       init {
          this.position = var1;

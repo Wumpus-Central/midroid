@@ -1,5 +1,6 @@
 package com.discord.safearea
 
+import Q8.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -13,7 +14,6 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import o8.w
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {
@@ -23,24 +23,22 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `setNavigationBarVisible$lambda$3`(var0: SafeAreaInsetsModule, var1: Boolean) {
-      q.h(var0, "this$0");
       val var2: Activity = var0.getReactApplicationContext().getCurrentActivity();
       if (var2 != null) {
          val var3: Window = var2.getWindow();
          if (var3 != null) {
-            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.m.f(), var1);
+            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.n.f(), var1);
          }
       }
    }
 
    @JvmStatic
    fun `setStatusBarVisible$lambda$2`(var0: SafeAreaInsetsModule, var1: Boolean) {
-      q.h(var0, "this$0");
       val var2: Activity = var0.getReactApplicationContext().getCurrentActivity();
       if (var2 != null) {
          val var3: Window = var2.getWindow();
          if (var3 != null) {
-            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.m.g(), var1);
+            WindowInsetsCompatExtensionsKt.setInsetsType(var3, WindowInsetsCompat.n.g(), var1);
          }
       }
    }
@@ -58,7 +56,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       var var5: Int;
       label41: {
          if (var11 != null) {
-            val var10: Insets = var11.f(WindowInsetsCompat.m.c());
+            val var10: Insets = var11.f(WindowInsetsCompat.n.c());
             if (var10 != null) {
                var5 = var10.d;
                break label41;
@@ -102,7 +100,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    public open fun getStableSafeAreaInsets(): WritableNativeMap {
       val var1: SafeAreaEdgeInsets = SafeAreaEdgeInsets.Companion.fromRootViewAsStableInsets(this.getCurrentActivity());
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("top", var1.getTopDp()), w.a("bottom", var1.getBottomDp()), w.a("left", var1.getLeftDp()), w.a("right", var1.getRightDp())
+         s.a("top", var1.getTopDp()), s.a("bottom", var1.getBottomDp()), s.a("left", var1.getLeftDp()), s.a("right", var1.getRightDp())
       );
    }
 

@@ -1,10 +1,8 @@
 package com.discord.chat.presentation.textutils
 
-import kotlin.jvm.internal.q
-
 public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
-   public final val borderRadius: Int?
    public final val color: Int?
+   public final val borderRadius: Int?
    public final val spaceAround: Boolean?
 
    fun LinkBackgroundStyle() {
@@ -40,12 +38,12 @@ public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = n
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.color, var1.color)) {
+         if (!kotlin.jvm.internal.q.c(this.color, var1.color)) {
             return false;
-         } else if (!q.c(this.borderRadius, var1.borderRadius)) {
+         } else if (!kotlin.jvm.internal.q.c(this.borderRadius, var1.borderRadius)) {
             return false;
          } else {
-            return q.c(this.spaceAround, var1.spaceAround);
+            return kotlin.jvm.internal.q.c(this.spaceAround, var1.spaceAround);
          }
       }
    }
@@ -74,16 +72,16 @@ public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = n
    }
 
    public override fun toString(): String {
-      val var1: Int = this.color;
-      val var4: Int = this.borderRadius;
-      val var3: java.lang.Boolean = this.spaceAround;
+      val var4: Int = this.color;
+      val var3: Int = this.borderRadius;
+      val var1: java.lang.Boolean = this.spaceAround;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LinkBackgroundStyle(color=");
-      var2.append(var1);
-      var2.append(", borderRadius=");
       var2.append(var4);
-      var2.append(", spaceAround=");
+      var2.append(", borderRadius=");
       var2.append(var3);
+      var2.append(", spaceAround=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

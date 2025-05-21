@@ -1,14 +1,12 @@
 package com.discord.misc.utilities.time
 
-import X9.I
-import aa.e
+import Ca.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.time.Duration
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import o8.s
-import v8.b
+import za.I
 
 public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit> {
    return e.m(new Function2(var2, var0, null) {
@@ -35,7 +33,7 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = b.e();
+         val var6: Any = X8.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -44,11 +42,11 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
                   }
 
                   val var5: FlowCollector = this.L$0 as FlowCollector;
-                  s.b(var1);
+                  c.b(var1);
                   var1 = var5;
                } else {
                   val var11: FlowCollector = this.L$0 as FlowCollector;
-                  s.b(var1);
+                  c.b(var1);
                   val var3x: Long = this.$periodMs;
                   this.L$0 = var11;
                   this.label = 3;
@@ -59,11 +57,11 @@ public fun intervalFlow(periodMs: Long, initialDelayMs: Long = var0): Flow<Unit>
                }
             } else {
                val var12: FlowCollector = this.L$0 as FlowCollector;
-               s.b(var1);
+               c.b(var1);
                var1 = var12;
             }
          } else {
-            s.b(var1);
+            c.b(var1);
             var1 = this.L$0 as FlowCollector;
             val var9: Long = this.$initialDelayMs;
             this.L$0 = var1;
@@ -127,7 +125,7 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
 
       // $VF: Irreducible bytecode was duplicated to produce valid code
       public final Object invokeSuspend(Object var1) {
-         val var6: Any = b.e();
+         val var6: Any = X8.b.e();
          if (this.label != 0) {
             if (this.label != 1) {
                if (this.label != 2) {
@@ -136,11 +134,11 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
                   }
 
                   val var5: FlowCollector = this.L$0 as FlowCollector;
-                  s.b(var1);
+                  c.b(var1);
                   var1 = var5;
                } else {
                   val var11: FlowCollector = this.L$0 as FlowCollector;
-                  s.b(var1);
+                  c.b(var1);
                   val var3x: Long = this.$period;
                   this.L$0 = var11;
                   this.label = 3;
@@ -151,11 +149,11 @@ public fun intervalFlow(period: Duration, initialDelay: Duration = ...): Flow<Un
                }
             } else {
                val var12: FlowCollector = this.L$0 as FlowCollector;
-               s.b(var1);
+               c.b(var1);
                var1 = var12;
             }
          } else {
-            s.b(var1);
+            c.b(var1);
             var1 = this.L$0 as FlowCollector;
             val var9: Long = this.$initialDelay;
             this.L$0 = var1;

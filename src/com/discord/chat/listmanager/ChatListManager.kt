@@ -1,9 +1,8 @@
 package com.discord.chat.listmanager
 
-import X9.K
-import X9.f
-import Z9.a
-import aa.s
+import Ba.a
+import Ca.s
+import X8.b
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.row.BlockedGroupContent
 import com.discord.chat.bridge.row.BlockedGroupRow
@@ -33,13 +32,14 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import v8.b
+import za.K
+import za.f
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
+   private final val updatesFlow: MutableSharedFlow<ChatListUpdate>
+   private final var rows: MutableList<Row>?
    private final var isDisabled: Boolean
    private final val publishScope: CoroutineScope
-   private final var rows: MutableList<Row>?
-   private final val updatesFlow: MutableSharedFlow<ChatListUpdate>
 
    init {
       q.h(var1, "coroutineScope");
@@ -89,24 +89,24 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       val var6: java.util.List = this.rows;
       q.e(this.rows);
       val var5: ListOperationsBuilder = new ListOperationsBuilder();
-      val var9: ArrayList = new ArrayList();
+      val var8: ArrayList = new ArrayList();
 
-      for (Object var8 : var1) {
-         if ((var8 as Row).getChangeType() === ChangeType.INSERT) {
-            var9.add(var8);
+      for (Object var9 : var1) {
+         if ((var9 as Row).getChangeType() === ChangeType.INSERT) {
+            var8.add(var9);
          }
       }
 
-      val var15: java.util.Iterator = var9.iterator();
+      val var12: java.util.Iterator = var8.iterator();
 
       label75:
       while (true) {
          var var4: Boolean;
-         for (var4 = false; var15.hasNext(); var4 = true) {
-            val var12: Row = var15.next() as Row;
-            this.insert(var6, var12);
-            var5.add(new ListOperation.Insert(var12.getIndex()));
-            if (!var4 && var12.getIndex() != 0) {
+         for (var4 = false; var12.hasNext(); var4 = true) {
+            val var16: Row = var12.next() as Row;
+            this.insert(var6, var16);
+            var5.add(new ListOperation.Insert(var16.getIndex()));
+            if (!var4 && var16.getIndex() != 0) {
                continue label75;
             }
          }
@@ -121,21 +121,24 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
 
          for (Row var14 : i.M(var13)) {
             if (var14 is DeleteRow) {
-               var6.remove(var14.getIndex());
-               var5.add(new ListOperation.Remove(var14.getIndex()));
+               val var15: DeleteRow = var14 as DeleteRow;
+               var6.remove((var14 as DeleteRow).getIndex());
+               var5.add(new ListOperation.Remove(var15.getIndex()));
             } else {
-               val var2: Boolean;
+               var var2: Boolean;
+               label52:
                if (var14 is LoadingRow
                   && (var14 as LoadingRow).getButton().getAction().getType() === LoadingActionType.LOAD_MORE_AFTER
-                  && var14.getIndex() == 0) {
+                  && (var14 as LoadingRow).getIndex() == 0) {
                   var2 = true;
+                  break label52;
                } else {
                   var2 = false;
                }
 
-               val var17: Row = i.f0(var6) as Row;
+               val var19: Row = i.f0(var6) as Row;
                val var3: Boolean;
-               if (var17 is LoadingRow && (var17 as LoadingRow).isLoading()) {
+               if (var19 is LoadingRow && (var19 as LoadingRow).isLoading()) {
                   var3 = true;
                } else {
                   var3 = false;
@@ -184,13 +187,13 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               o8.s.b(var1);
+               c.b(var1);
             } else {
-               o8.s.b(var1);
-               val var4: MutableSharedFlow = ChatListManager.access$getUpdatesFlow$p(this.this$0);
-               var1 = this.$update;
+               c.b(var1);
+               var1 = ChatListManager.access$getUpdatesFlow$p(this.this$0);
+               val var4: ChatListUpdate = this.$update;
                this.label = 1;
-               if (var4.emit(var1, this) === var3) {
+               if (var1.emit(var4, this) === var3) {
                   return var3;
                }
             }
@@ -216,11 +219,11 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          }
 
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
-         val var7: java.lang.String = (var1 as BlockedGroupRow).getText();
-         val var8: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
+         val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
+         val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
          val var4: Int = var11.getColor();
-         val var2: Int = var11.getBackgroundColor();
-         val var3: Int = var11.getBorderColor();
+         val var3: Int = var11.getBackgroundColor();
+         val var2: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -249,7 +252,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var7, var8, var4, var2, var3, var5, i.M(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var4, var3, var2, var5, i.M(var14));
       }
 
       return (ChatListItem)var9;
@@ -330,9 +333,9 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
    }
 
    private data class RowsModificationResult(rows: List<Row>, didInsertAtBottom: Boolean, listOperations: List<ListOperation>?) {
+      public final val rows: List<Row>
       public final val didInsertAtBottom: Boolean
       public final val listOperations: List<ListOperation>?
-      public final val rows: List<Row>
 
       init {
          q.h(var1, "rows");

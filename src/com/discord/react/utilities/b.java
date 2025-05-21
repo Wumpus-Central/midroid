@@ -1,14 +1,10 @@
 package com.discord.react.utilities;
 
-import com.facebook.react.bridge.ReactContext;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class b implements Runnable {
-   public final ReactContext j;
-   public final int k;
-
-   @Override
-   public final void run() {
-      ReactViewExtensionsKt.a(this.j, this.k);
+public final class b implements Function1 {
+   public final Object invoke(Object var1) {
+      return PromiseWrapper.a(var1);
    }
 }

@@ -6,10 +6,6 @@ import kotlin.jvm.internal.q
 import kotlin.properties.a
 
 public object FontManager {
-   private const val FONT_SCALE_CHAT_CLASSIC_DEFAULT: Boolean = false
-   private const val FONT_SCALE_CHAT_CLASSIC_KEY: String = "FONT_SCALE_CHAT_CLASSIC_KEY"
-   private const val FONT_SCALE_KEY: String = "FONT_SCALE_KEY"
-
    private final var initialFontSize: Float by a.a.a()
       private final get() {
          return (initialFontSize$delegate.getValue(this, $$delegatedProperties[0]) as java.lang.Number).floatValue();
@@ -19,6 +15,10 @@ public object FontManager {
          initialFontSize$delegate.setValue(this, $$delegatedProperties[0], var1);
       }
 
+
+   private const val FONT_SCALE_KEY: String = "FONT_SCALE_KEY"
+   private const val FONT_SCALE_CHAT_CLASSIC_KEY: String = "FONT_SCALE_CHAT_CLASSIC_KEY"
+   private const val FONT_SCALE_CHAT_CLASSIC_DEFAULT: Boolean = false
 
    private fun Context.getCache(): SharedPreferences {
       return var1.getSharedPreferences("FontScaleManager", 0);

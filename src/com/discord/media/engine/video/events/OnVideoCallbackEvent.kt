@@ -1,29 +1,17 @@
 package com.discord.media.engine.video.events
 
+import Ja.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.N
-import ka.Y
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
    public final val connectionId: Int
+   public final val userId: String
    public final val ssrc: Long
    public final val streamId: String
-   public final val userId: String
    public final val videoStreamParametersJSON: String
 
    init {
@@ -104,129 +92,23 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var7: java.lang.String = this.userId;
+      val var4: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var5: java.lang.String = this.streamId;
-      val var4: java.lang.String = this.videoStreamParametersJSON;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("OnVideoCallbackEvent(connectionId=");
-      var6.append(var1);
-      var6.append(", userId=");
-      var6.append(var7);
-      var6.append(", ssrc=");
-      var6.append(var2);
-      var6.append(", streamId=");
-      var6.append(var5);
-      var6.append(", videoStreamParametersJSON=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: OnVideoCallbackEvent.$serializer = new OnVideoCallbackEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.OnVideoCallbackEvent", var0, 5);
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("ssrc", false);
-         var1.l("streamId", false);
-         var1.l("videoStreamParametersJSON", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, C0.a, Y.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): OnVideoCallbackEvent {
-         q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         var var2: Int;
-         var var3: Int;
-         var var6: Long;
-         var var8: java.lang.String;
-         var var9: java.lang.String;
-         val var13: java.lang.String;
-         if (var12.y()) {
-            var3 = var12.k(var11, 0);
-            var9 = var12.t(var11, 1);
-            var6 = var12.h(var11, 2);
-            var13 = var12.t(var11, 3);
-            var8 = var12.t(var11, 4);
-            var2 = 31;
-         } else {
-            var var14: java.lang.String = null;
-            var var4: Boolean = true;
-            var2 = 0;
-            var6 = 0L;
-            var9 = null;
-            var8 = null;
-            var3 = 0;
-
-            while (var4) {
-               val var5: Int = var12.x(var11);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           if (var5 != 3) {
-                              if (var5 != 4) {
-                                 throw new n(var5);
-                              }
-
-                              var8 = var12.t(var11, 4);
-                              var2 |= 16;
-                           } else {
-                              var9 = var12.t(var11, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var6 = var12.h(var11, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var14 = var12.t(var11, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var3 = var12.k(var11, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-
-            var13 = var9;
-            var9 = var14;
-         }
-
-         var12.b(var11);
-         return new OnVideoCallbackEvent(var2, var3, var9, var6, var13, var8, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: OnVideoCallbackEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         OnVideoCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var7: java.lang.String = this.streamId;
+      val var6: java.lang.String = this.videoStreamParametersJSON;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("OnVideoCallbackEvent(connectionId=");
+      var5.append(var1);
+      var5.append(", userId=");
+      var5.append(var4);
+      var5.append(", ssrc=");
+      var5.append(var2);
+      var5.append(", streamId=");
+      var5.append(var7);
+      var5.append(", videoStreamParametersJSON=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

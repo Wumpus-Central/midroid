@@ -36,15 +36,15 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    public open fun dispatchTouchEvent(ev: MotionEvent): Boolean {
       q.h(var1, "ev");
-      val var5: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
+      val var3: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
-      while (var5.hasNext()) {
-         val var4: Entry = var5.next() as Entry;
-         val var3: Function1 = var4.getKey() as Function1;
+      while (var3.hasNext()) {
+         val var4: Entry = var3.next() as Entry;
+         val var5: Function1 = var4.getKey() as Function1;
          if (var4.getValue() as java.lang.Boolean) {
-            var3.invoke(var1);
+            var5.invoke(var1);
          } else {
-            var5.remove();
+            var3.remove();
          }
       }
 
@@ -91,8 +91,38 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
       private fun initNestedScrollOnTouchListeners() {
          val var1: NestedScrollOnTouchListener.Companion = NestedScrollOnTouchListener.Companion;
-         NestedScrollOnTouchListener.Companion.setOnAddNativeEventListener(<unrepresentable>.INSTANCE);
-         var1.setOnRemoveNativeEventListener(<unrepresentable>.INSTANCE);
+         NestedScrollOnTouchListener.Companion.setOnAddNativeEventListener(new a());
+         var1.setOnRemoveNativeEventListener(new b());
+      }
+
+      @JvmStatic
+      fun `initNestedScrollOnTouchListeners$lambda$0`(var0: View, var1: Function1): Unit {
+         q.h(var0, "view");
+         q.h(var1, "callback");
+         val var2: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.getNullable$react_gesture_handler_release(var0);
+         if (var2 != null) {
+            val var3: java.util.Map = DiscordGestureHandlerEnabledRootView.access$getSupplementalMotionEventReceivedCallbacks$p(var2);
+            if (var3 != null) {
+               var3.put(var1, java.lang.Boolean.TRUE);
+            }
+         }
+
+         return Unit.a;
+      }
+
+      @JvmStatic
+      fun `initNestedScrollOnTouchListeners$lambda$1`(var0: View, var1: Function1): Unit {
+         q.h(var0, "view");
+         q.h(var1, "callback");
+         val var2: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.getNullable$react_gesture_handler_release(var0);
+         if (var2 != null) {
+            val var3: java.util.Map = DiscordGestureHandlerEnabledRootView.access$getSupplementalMotionEventReceivedCallbacks$p(var2);
+            if (var3 != null) {
+               var3.put(var1, java.lang.Boolean.FALSE);
+            }
+         }
+
+         return Unit.a;
       }
 
       internal fun getNullable(view: View): DiscordGestureHandlerEnabledRootView? {

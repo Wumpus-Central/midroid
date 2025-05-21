@@ -9,7 +9,6 @@ import android.view.ViewGroup.LayoutParams
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.a0
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.spoiler.SpoilerConfig
@@ -96,8 +95,8 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
                   return false;
                }
 
-               if (!kotlin.text.h.t(var2, ".gif", true) && !kotlin.text.h.t(var2, ".gifv", true) && (!kotlin.text.h.t(var2, ".webp", false) || !var3)) {
-                  if (!kotlin.text.h.t(var2, ".avif", false)) {
+               if (!kotlin.text.h.s(var2, ".gif", true) && !kotlin.text.h.s(var2, ".gifv", true) && (!kotlin.text.h.s(var2, ".webp", false) || !var3)) {
+                  if (!kotlin.text.h.s(var2, ".avif", false)) {
                      return false;
                   }
 
@@ -176,13 +175,13 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var24: SimpleDraweeView = this.binding.image;
+         val var39: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var39: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var24: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var38: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var24, var1, var39, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
+            var39, var1, var24, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var38, var5, var6)
          );
       }
 
@@ -216,10 +215,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       val var27: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var34: SpoilerViewManager = this.spoilerViewManager;
-      val var28: ConstraintLayout = this.binding.container;
+      val var28: SpoilerViewManager = this.spoilerViewManager;
+      val var31: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var31: SimpleDraweeView = this.binding.image;
+      val var34: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.q.g(this.binding.image, "image");
       if (var11 && !var15) {
          var15 = true;
@@ -233,11 +232,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var34.configureSpoiler(var8, this, var28, var31, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
+      var28.configureSpoiler(var8, this, var31, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -272,7 +271,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         a0.p0(this.binding.image, new androidx.core.view.a(var1) {
+         androidx.core.view.a0.p0(this.binding.image, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -284,7 +283,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
                kotlin.jvm.internal.q.h(var1, "host");
                kotlin.jvm.internal.q.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
-               var2.L0(this.$role);
+               var2.M0(this.$role);
             }
          });
       }
@@ -320,14 +319,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public companion object {
       public final val GIF_INDICATOR_HEIGHT: Int
-      public final val GIF_INDICATOR_PADDING: Int
       public final val GIF_INDICATOR_WIDTH: Int
+      public final val GIF_INDICATOR_PADDING: Int
    }
 
    public data class TargetSize(width: Int, height: Int, resizeMode: ResizeMode) {
+      public final val width: Int
       public final val height: Int
       public final val resizeMode: ResizeMode
-      public final val width: Int
 
       init {
          kotlin.jvm.internal.q.h(var3, "resizeMode");
@@ -378,16 +377,16 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       public override fun toString(): String {
          val var2: Int = this.width;
          val var1: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
-         var4.append(var1);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var2);
+         var3.append(", height=");
+         var3.append(var1);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

@@ -28,16 +28,16 @@ public class ConnectionsRoleTagView(context: Context, attrs: AttributeSet) : Fra
       kotlin.jvm.internal.q.h(var1, "context");
       kotlin.jvm.internal.q.h(var2, "attrs");
       super(var1, var2);
-      val var5: ConnectionsRoleTagViewBinding = ConnectionsRoleTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
-      var5.connectionsRoleTagContainer.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
-      var5.roleName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var3: TextView = var5.roleName;
-      kotlin.jvm.internal.q.g(var5.roleName, "roleName");
-      SetTextSizeSpKt.setTextSizeSp(var3, 12.0F);
-      val var4: TextView = var5.roleName;
-      kotlin.jvm.internal.q.g(var5.roleName, "roleName");
+      val var3: ConnectionsRoleTagViewBinding = ConnectionsRoleTagViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
+      var3.connectionsRoleTagContainer.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
+      var3.roleName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var5: TextView = var3.roleName;
+      kotlin.jvm.internal.q.g(var3.roleName, "roleName");
+      SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
+      val var4: TextView = var3.roleName;
+      kotlin.jvm.internal.q.g(var3.roleName, "roleName");
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
    }
 
@@ -45,8 +45,6 @@ public class ConnectionsRoleTagView(context: Context, attrs: AttributeSet) : Fra
    fun `configureConnectionsRoleTag_uESh2Cg$lambda$0`(
       var0: ChatEventHandler, var1: UserId, var2: GuildId, var3: ChannelId, var4: ConnectionsRoleTag, var5: View
    ) {
-      kotlin.jvm.internal.q.h(var0, "$eventHandler");
-      kotlin.jvm.internal.q.h(var4, "$connectionsRoleTag");
       var0.onTapConnectionsRoleTag(
          UserId.toString-impl(var1.unbox-impl()), GuildId.toString-impl(var2.unbox-impl()), ChannelId.toString-impl(var3.unbox-impl()), var4.getId()
       );

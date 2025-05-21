@@ -1,5 +1,6 @@
 package com.discord.recycler_view.scroller
 
+import Q8.n
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -10,7 +11,7 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class Scroller(recyclerView: RecyclerView) {
-   private final var currentSearch: Runnable?
+   private final val recyclerView: RecyclerView
 
    private final val layoutManager: LinearLayoutManager
       private final get() {
@@ -20,7 +21,7 @@ public class Scroller(recyclerView: RecyclerView) {
       }
 
 
-   private final val recyclerView: RecyclerView
+   private final var currentSearch: Runnable?
 
    init {
       q.h(var1, "recyclerView");
@@ -49,9 +50,35 @@ public class Scroller(recyclerView: RecyclerView) {
          this.recyclerView.scrollToPosition(var1);
       } else if (var2 is Scroller.TargetAlignment.Center) {
          RecyclerViewExtensionsKt.scrollToCenter(this.recyclerView, var1);
-      } else if (var2 is Scroller.TargetAlignment.Top) {
+      } else {
+         if (var2 !is Scroller.TargetAlignment.Top) {
+            throw new n();
+         }
+
          RecyclerViewExtensionsKt.scrollToTop(this.recyclerView, var1, (var2 as Scroller.TargetAlignment.Top).getOffsetPx());
       }
+   }
+
+   @JvmStatic
+   fun `scrollToPosition$lambda$0`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `scrollToPosition$lambda$1`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `scrollToPosition$lambda$2`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `scrollToPosition$lambda$3`(var0: Function0, var1: Function0): Unit {
+      var0.invoke();
+      var1.invoke();
+      return Unit.a;
    }
 
    private fun search(
@@ -61,38 +88,24 @@ public class Scroller(recyclerView: RecyclerView) {
       onComplete: () -> Unit,
       onScrollProgress: () -> Unit
    ) {
-      val var7: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(this.getLayoutManager(), var1);
-      if (var7 != null && !var7) {
+      val var6: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(this.getLayoutManager(), var1);
+      if (var6 != null && !var6) {
          this.doScrollToPosition(var1, var2);
          var5.invoke();
-         val var8: a = new a(this, var1, var2, var3, var4, var5);
-         this.currentSearch = var8;
-         this.recyclerView.post(var8);
+         val var7: e = new e(this, var1, var2, var3, var4, var5);
+         this.currentSearch = var7;
+         this.recyclerView.post(var7);
+      } else if (var2 !is Scroller.TargetAlignment.Center && var2 !is Scroller.TargetAlignment.Top) {
+         var4.invoke();
       } else {
-         val var6: Boolean;
-         if (var2 is Scroller.TargetAlignment.Center) {
-            var6 = true;
-         } else {
-            var6 = var2 is Scroller.TargetAlignment.Top;
-         }
-
-         if (var6) {
-            this.doScrollToPosition(var1, var2);
-            var5.invoke();
-            var4.invoke();
-         } else {
-            var4.invoke();
-         }
+         this.doScrollToPosition(var1, var2);
+         var5.invoke();
+         var4.invoke();
       }
    }
 
    @JvmStatic
-   fun `search$lambda$0`(var0: Scroller, var1: Int, var2: Scroller.TargetAlignment, var3: Function0, var4: Function0, var5: Function0) {
-      q.h(var0, "this$0");
-      q.h(var2, "$targetAlignment");
-      q.h(var3, "$onStart");
-      q.h(var4, "$onComplete");
-      q.h(var5, "$onScrollProgress");
+   fun `search$lambda$4`(var0: Scroller, var1: Int, var2: Scroller.TargetAlignment, var3: Function0, var4: Function0, var5: Function0) {
       var0.search(var1, var2, var3, var4, var5);
    }
 
@@ -107,9 +120,9 @@ public class Scroller(recyclerView: RecyclerView) {
       position: Int,
       targetAlignment: com.discord.recycler_view.scroller.Scroller.TargetAlignment,
       animate: Boolean,
-      onStart: () -> Unit = <unrepresentable>.INSTANCE,
-      onComplete: () -> Unit = <unrepresentable>.INSTANCE,
-      onScrollProgress: () -> Unit = <unrepresentable>.INSTANCE
+      onStart: () -> Unit = new b(),
+      onComplete: () -> Unit = new c(),
+      onScrollProgress: () -> Unit = new d()
    ) {
       q.h(var2, "targetAlignment");
       q.h(var4, "onStart");
@@ -118,21 +131,7 @@ public class Scroller(recyclerView: RecyclerView) {
       this.cancel();
       var4.invoke();
       if (var3) {
-         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new Function0(var6, var5) {
-            final Function0 $onComplete;
-            final Function0 $onScrollProgress;
-
-            {
-               super(0);
-               this.$onScrollProgress = var1;
-               this.$onComplete = var2;
-            }
-
-            public final void invoke() {
-               this.$onScrollProgress.invoke();
-               this.$onComplete.invoke();
-            }
-         });
+         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new a(var6, var5));
       } else {
          this.search(var1, var2, var4, var5, var6);
       }

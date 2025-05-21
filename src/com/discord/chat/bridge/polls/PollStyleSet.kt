@@ -1,22 +1,11 @@
 package com.discord.chat.bridge.polls
 
+import Ja.f
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
-import ha.f
-import ha.n
-import ia.a
-import ka.F
-import ka.G
-import ka.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class PollStyleSet(border: Int? = null,
@@ -31,37 +20,16 @@ public data class PollStyleSet(border: Int? = null,
       radioForeground: Int? = null
    ) :
    IPollStyleSet {
-   private final val answerBackground: Int?
-
-   public open val answerBackgroundColor: Int
-      public open get() {
-         val var1: Int;
-         if (this.answerBackground != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerBackground.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundSecondary();
-         }
-
-         return var1;
-      }
-
-
-   private final val answerFill: Int?
-
-   public open val answerFillColor: Int
-      public open get() {
-         val var1: Int;
-         if (this.answerFill != null) {
-            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerFill.intValue());
-         } else {
-            var1 = ThemeManagerKt.getTheme().getBackgroundTertiary();
-         }
-
-         return var1;
-      }
-
-
    private final val border: Int?
+   private final val borderWidth: Int
+   private final val fill: Int?
+   private final val label: Int?
+   public final val opacity: Float
+   private final val answerBackground: Int?
+   private final val answerFill: Int?
+   public final val radioStyle: PollRadioStyle?
+   private final val radioBackground: Int?
+   private final val radioForeground: Int?
 
    public open val borderColor: Int
       public open get() {
@@ -76,15 +44,11 @@ public data class PollStyleSet(border: Int? = null,
       }
 
 
-   private final val borderWidth: Int
-
    public open val borderWidthPx: Int
       public open get() {
          return SizeUtilsKt.getDpToPx(this.borderWidth);
       }
 
-
-   private final val fill: Int?
 
    public open val fillColor: Int
       public open get() {
@@ -99,8 +63,6 @@ public data class PollStyleSet(border: Int? = null,
       }
 
 
-   private final val label: Int?
-
    public open val labelColor: Int
       public open get() {
          val var1: Int;
@@ -114,8 +76,31 @@ public data class PollStyleSet(border: Int? = null,
       }
 
 
-   public final val opacity: Float
-   private final val radioBackground: Int?
+   public open val answerBackgroundColor: Int
+      public open get() {
+         val var1: Int;
+         if (this.answerBackground != null) {
+            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerBackground.intValue());
+         } else {
+            var1 = ThemeManagerKt.getTheme().getBackgroundSecondary();
+         }
+
+         return var1;
+      }
+
+
+   public open val answerFillColor: Int
+      public open get() {
+         val var1: Int;
+         if (this.answerFill != null) {
+            var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(this.answerFill.intValue());
+         } else {
+            var1 = ThemeManagerKt.getTheme().getBackgroundTertiary();
+         }
+
+         return var1;
+      }
+
 
    public open val radioBackgroundColor: Int
       public open get() {
@@ -130,8 +115,6 @@ public data class PollStyleSet(border: Int? = null,
       }
 
 
-   private final val radioForeground: Int?
-
    public open val radioForegroundColor: Int
       public open get() {
          val var1: Int;
@@ -144,8 +127,6 @@ public data class PollStyleSet(border: Int? = null,
          return var1;
       }
 
-
-   public final val radioStyle: PollRadioStyle?
 
    fun PollStyleSet() {
       this(null, 0, null, null, 0.0F, null, null, null, null, null, 1023, null);
@@ -162,6 +143,11 @@ public data class PollStyleSet(border: Int? = null,
       this.radioStyle = var8;
       this.radioBackground = var9;
       this.radioForeground = var10;
+   }
+
+   @JvmStatic
+   fun `DEFAULT_delegate$lambda$6`(): PollStyleSet {
+      return new PollStyleSet(null, 0, null, null, 0.0F, null, null, null, null, null, 1023, null);
    }
 
    private operator fun component1(): Int? {
@@ -313,207 +299,47 @@ public data class PollStyleSet(border: Int? = null,
    public override fun toString(): String {
       val var3: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var11: Int = this.fill;
-      val var7: Int = this.label;
+      val var7: Int = this.fill;
+      val var5: Int = this.label;
       val var1: Float = this.opacity;
-      val var4: Int = this.answerBackground;
-      val var6: Int = this.answerFill;
-      val var5: PollRadioStyle = this.radioStyle;
-      val var8: Int = this.radioBackground;
+      val var6: Int = this.answerBackground;
+      val var8: Int = this.answerFill;
+      val var9: PollRadioStyle = this.radioStyle;
+      val var4: Int = this.radioBackground;
       val var10: Int = this.radioForeground;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("PollStyleSet(border=");
-      var9.append(var3);
-      var9.append(", borderWidth=");
-      var9.append(var2);
-      var9.append(", fill=");
-      var9.append(var11);
-      var9.append(", label=");
-      var9.append(var7);
-      var9.append(", opacity=");
-      var9.append(var1);
-      var9.append(", answerBackground=");
-      var9.append(var4);
-      var9.append(", answerFill=");
-      var9.append(var6);
-      var9.append(", radioStyle=");
-      var9.append(var5);
-      var9.append(", radioBackground=");
-      var9.append(var8);
-      var9.append(", radioForeground=");
-      var9.append(var10);
-      var9.append(")");
-      return var9.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: PollStyleSet.$serializer = new PollStyleSet.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.polls.PollStyleSet", var0, 10);
-         var1.l("border", true);
-         var1.l("borderWidth", true);
-         var1.l("fill", true);
-         var1.l("label", true);
-         var1.l("opacity", true);
-         var1.l("answerBackground", true);
-         var1.l("answerFill", true);
-         var1.l("radioStyle", true);
-         var1.l("radioBackground", true);
-         var1.l("radioForeground", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var3: N = N.a;
-         return new KSerializer[]{
-            a.u(N.a), var3, a.u(var3), a.u(var3), F.a, a.u(var3), a.u(var3), a.u(PollRadioStyle.Serializer.INSTANCE), a.u(var3), a.u(var3)
-         };
-      }
-
-      public open fun deserialize(decoder: Decoder): PollStyleSet {
-         q.h(var1, "decoder");
-         val var19: SerialDescriptor = this.getDescriptor();
-         val var20: c = var1.c(var19);
-         val var8: Boolean = var20.y();
-         var var5: Byte = 9;
-         var var2: Float;
-         var var3: Int;
-         var var4: Int;
-         var var10: Int;
-         var var11: Int;
-         var var12: Int;
-         var var15: Int;
-         val var17: Int;
-         val var18: Int;
-         var var23: Any;
-         var var30: Int;
-         if (var8) {
-            val var14: N = N.a;
-            var12 = var20.v(var19, 0, N.a, null) as Int;
-            var4 = var20.k(var19, 1);
-            var11 = var20.v(var19, 2, var14, null) as Int;
-            var17 = var20.v(var19, 3, var14, null) as Int;
-            var2 = var20.G(var19, 4);
-            val var13: Int = var20.v(var19, 5, var14, null) as Int;
-            var23 = var20.v(var19, 6, var14, null) as Int;
-            val var21: PollRadioStyle = var20.v(var19, 7, PollRadioStyle.Serializer.INSTANCE, null) as PollRadioStyle;
-            var10 = var20.v(var19, 8, var14, null) as Int;
-            var15 = var20.v(var19, 9, var14, null) as Int;
-            var3 = 1023;
-            var18 = var13;
-            var30 = (Integer)var23;
-            var23 = var21;
-         } else {
-            var var6: Boolean = true;
-            var4 = 0;
-            var15 = null;
-            var30 = null;
-            var12 = null;
-            var var28: Any = null;
-            var11 = null;
-            var10 = null;
-            var var22: Int = null;
-            var23 = null;
-            var2 = 0.0F;
-            var3 = 0;
-
-            while (var6) {
-               val var7: Int = var20.x(var19);
-               switch (var7) {
-                  case -1:
-                     var6 = false;
-                     continue;
-                  case 0:
-                     var22 = var20.v(var19, 0, N.a, var22) as Int;
-                     var3 |= 1;
-                     break;
-                  case 1:
-                     var4 = var20.k(var19, 1);
-                     var3 |= 2;
-                     break;
-                  case 2:
-                     var23 = var20.v(var19, 2, N.a, var23) as Int;
-                     var3 |= 4;
-                     break;
-                  case 3:
-                     var10 = var20.v(var19, 3, N.a, var10) as Int;
-                     var3 |= 8;
-                     break;
-                  case 4:
-                     var2 = var20.G(var19, 4);
-                     var3 |= 16;
-                     break;
-                  case 5:
-                     var11 = var20.v(var19, 5, N.a, var11) as Int;
-                     var3 |= 32;
-                     break;
-                  case 6:
-                     var12 = var20.v(var19, 6, N.a, var12) as Int;
-                     var3 |= 64;
-                     break;
-                  case 7:
-                     var28 = var20.v(var19, 7, PollRadioStyle.Serializer.INSTANCE, var28) as PollRadioStyle;
-                     var3 |= 128;
-                     var5 = 9;
-                     continue;
-                  case 8:
-                     var30 = var20.v(var19, 8, N.a, var30) as Int;
-                     var3 |= 256;
-                     continue;
-                  case 9:
-                     var15 = var20.v(var19, var5, N.a, var15) as Int;
-                     var3 |= 512;
-                     continue;
-                  default:
-                     throw new n(var7);
-               }
-
-               var5 = 9;
-            }
-
-            var10 = var30;
-            var23 = var28;
-            var30 = var12;
-            var18 = var11;
-            var17 = var10;
-            var11 = (Integer)var23;
-            var12 = var22;
-         }
-
-         var20.b(var19);
-         return new PollStyleSet(var3, var12, var4, var11, var17, var2, var18, var30, (PollRadioStyle)var23, var10, var15, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: PollStyleSet) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         PollStyleSet.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("PollStyleSet(border=");
+      var11.append(var3);
+      var11.append(", borderWidth=");
+      var11.append(var2);
+      var11.append(", fill=");
+      var11.append(var7);
+      var11.append(", label=");
+      var11.append(var5);
+      var11.append(", opacity=");
+      var11.append(var1);
+      var11.append(", answerBackground=");
+      var11.append(var6);
+      var11.append(", answerFill=");
+      var11.append(var8);
+      var11.append(", radioStyle=");
+      var11.append(var9);
+      var11.append(", radioBackground=");
+      var11.append(var4);
+      var11.append(", radioForeground=");
+      var11.append(var10);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {
+      public const val DEFAULT_KEY: String
+
       public final val DEFAULT: PollStyleSet
          public final get() {
             return PollStyleSet.access$getDEFAULT$delegate$cp().getValue() as PollStyleSet;
          }
 
-
-      public const val DEFAULT_KEY: String
 
       public fun serializer(): KSerializer<PollStyleSet> {
          return PollStyleSet.$serializer.INSTANCE;

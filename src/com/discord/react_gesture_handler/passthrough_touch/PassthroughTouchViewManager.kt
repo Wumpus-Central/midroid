@@ -1,5 +1,6 @@
 package com.discord.react_gesture_handler.passthrough_touch
 
+import Q8.s
 import com.discord.react_gesture_handler.passthrough_touch.events.OnTouchDownData
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -7,36 +8,25 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerDelegate
 import com.facebook.react.viewmanagers.PassthroughTouchViewManagerInterface
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "PassthroughTouchView")
 internal class PassthroughTouchViewManager : ViewGroupManager<PassthroughTouchViewGroup>, PassthroughTouchViewManagerInterface<PassthroughTouchViewGroup> {
    private final val mDelegate: PassthroughTouchViewManagerDelegate<PassthroughTouchViewGroup, PassthroughTouchViewManager> =
       new PassthroughTouchViewManagerDelegate(this)
-      private final val reactEvents: ReactEvents = new ReactEvents(w.a("onTouchDown", G.b(OnTouchDownData.class)))
+      private final val reactEvents: ReactEvents = new ReactEvents(s.a("onTouchDown", G.b(OnTouchDownData.class)))
+
+   @JvmStatic
+   fun `createViewInstance$lambda$1$lambda$0`(var0: PassthroughTouchViewManager, var1: ThemedReactContext, var2: PassthroughTouchViewGroup): Unit {
+      var0.reactEvents.emitEvent(var1, var2, new OnTouchDownData());
+      return Unit.a;
+   }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): PassthroughTouchViewGroup {
       q.h(var1, "reactContext");
       val var2: PassthroughTouchViewGroup = new PassthroughTouchViewGroup(var1);
-      var2.setOnTouchDown(new Function0(this, var1, var2) {
-         final ThemedReactContext $reactContext;
-         final PassthroughTouchViewGroup $this_apply;
-         final PassthroughTouchViewManager this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$reactContext = var2;
-            this.$this_apply = var3;
-         }
-
-         public final void invoke() {
-            PassthroughTouchViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$reactContext, this.$this_apply, new OnTouchDownData());
-         }
-      });
+      var2.setOnTouchDown(new b(this, var1, var2));
       return var2;
    }
 

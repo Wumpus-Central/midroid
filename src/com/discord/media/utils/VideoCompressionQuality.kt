@@ -11,9 +11,9 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    Original("original", Integer.MAX_VALUE, Integer.MAX_VALUE),
    VeryHigh("very_high", 1080, 7000000),
    VeryLow("very_low", 360, 800000)
-   public final val targetBitrate: Int
-   public final val targetResolution: Int
    public final val value: String
+   public final val targetResolution: Int
+   public final val targetBitrate: Int
    @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic
@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = w8.a.a(var0);
+      $ENTRIES = Y8.a.a(var0);
    }
 
    init {

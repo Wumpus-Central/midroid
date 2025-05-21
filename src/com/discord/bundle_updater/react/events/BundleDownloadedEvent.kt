@@ -1,20 +1,9 @@
 package com.discord.bundle_updater.react.events
 
+import Ja.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.G
-import ka.h
-import ka.G.a
-import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class BundleDownloadedEvent(versionRequired: Boolean) : ReactEvent {
@@ -58,74 +47,6 @@ internal data class BundleDownloadedEvent(versionRequired: Boolean) : ReactEvent
       var2.append(var1);
       var2.append(")");
       return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: BundleDownloadedEvent.$serializer = new BundleDownloadedEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.bundle_updater.react.events.BundleDownloadedEvent", var0, 1
-         );
-         var1.l("versionRequired", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): BundleDownloadedEvent {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         var var5: Boolean = var7.y();
-         var var2: Byte = 1;
-         if (var5) {
-            var5 = var7.s(var6, 0);
-         } else {
-            var var3: Boolean = true;
-            var5 = false;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     throw new n(var4);
-                  }
-
-                  var5 = var7.s(var6, 0);
-                  var2 = 1;
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new BundleDownloadedEvent(var2, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: BundleDownloadedEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         BundleDownloadedEvent.write$Self$bundle_updater_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

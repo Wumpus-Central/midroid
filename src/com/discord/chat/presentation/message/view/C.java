@@ -1,16 +1,15 @@
 package com.discord.chat.presentation.message.view;
 
 import android.view.View;
-import android.view.View.OnClickListener;
+import android.view.View.OnLongClickListener;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class C implements OnClickListener {
-   public final FileAttachmentView j;
-   public final String k;
-   public final String l;
-   public final String m;
+public final class C implements OnLongClickListener {
+   public final Function1 j;
+   public final EmbedView k;
 
-   public final void onClick(View var1) {
-      FileAttachmentView.g(this.j, this.k, this.l, this.m, var1);
+   public final boolean onLongClick(View var1) {
+      return EmbedView.l(this.j, this.k, var1);
    }
 }

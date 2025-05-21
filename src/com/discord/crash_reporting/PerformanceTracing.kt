@@ -62,10 +62,10 @@ public class PerformanceTracing : MarkerListener {
 
    private fun getMarker(name: String, tag: String?): com.discord.crash_reporting.PerformanceTracing.TransactionMarker? {
       var var3: PerformanceTracing.TransactionMarker = null;
-      if (h.u(var1, "_START", false, 2, null)) {
-         var3 = new PerformanceTracing.TransactionMarker(h.t0(var1, "_START"), var2, PerformanceTracing.MarkerEnd.START);
-      } else if (h.u(var1, "_END", false, 2, null)) {
-         var3 = new PerformanceTracing.TransactionMarker(h.t0(var1, "_END"), var2, PerformanceTracing.MarkerEnd.END);
+      if (h.t(var1, "_START", false, 2, null)) {
+         var3 = new PerformanceTracing.TransactionMarker(h.s0(var1, "_START"), var2, PerformanceTracing.MarkerEnd.START);
+      } else if (h.t(var1, "_END", false, 2, null)) {
+         var3 = new PerformanceTracing.TransactionMarker(h.s0(var1, "_END"), var2, PerformanceTracing.MarkerEnd.END);
       }
 
       return var3;
@@ -75,12 +75,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !q.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var5: java.lang.String = var1.getTag();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append(" ");
-         var3.append(var5);
-         var4 = var3.toString();
+         val var3: java.lang.String = var1.getTag();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var2);
+         var5.append(" ");
+         var5.append(var3);
+         var4 = var5.toString();
       } else {
          var4 = var1.getName();
       }
@@ -127,7 +127,7 @@ public class PerformanceTracing : MarkerListener {
    private fun stopTransaction(transaction: TraceTransaction) {
       val var2: Y = this.ongoingTransactions.get(var1);
       if (var2 != null) {
-         var2.i();
+         var2.k();
       }
 
       this.ongoingTransactions.remove(var1);
@@ -145,7 +145,7 @@ public class PerformanceTracing : MarkerListener {
          this.logSpanForTransaction(var4, var2);
       }
 
-      if (h.w(var4, "CONTENT_APPEARED", false, 2, null)) {
+      if (h.v(var4, "CONTENT_APPEARED", false, 2, null)) {
          this.stop();
       }
    }
@@ -202,10 +202,10 @@ public class PerformanceTracing : MarkerListener {
       // 048: aload 2
       // 049: ifnull 059
       // 04c: aload 2
-      // 04d: invokeinterface io/sentry/ISpan.i ()V 1
+      // 04d: invokeinterface io/sentry/ISpan.k ()V 1
       // 052: goto 059
       // 055: astore 1
-      // 056: goto 1fd
+      // 056: goto 1fa
       // 059: aload 0
       // 05a: aconst_null
       // 05b: putfield com/discord/crash_reporting/PerformanceTracing.lastNativeModuleSetupStart Lio/sentry/ISpan;
@@ -223,7 +223,7 @@ public class PerformanceTracing : MarkerListener {
       // 079: aload 2
       // 07a: ifnull 083
       // 07d: aload 2
-      // 07e: invokeinterface io/sentry/ISpan.i ()V 1
+      // 07e: invokeinterface io/sentry/ISpan.k ()V 1
       // 083: aload 1
       // 084: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 087: ldc "PROCESS_PACKAGE_MODULE"
@@ -254,7 +254,7 @@ public class PerformanceTracing : MarkerListener {
       // 0ba: bipush 0
       // 0bb: bipush 2
       // 0bc: aconst_null
-      // 0bd: invokestatic kotlin/text/h.u (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
+      // 0bd: invokestatic kotlin/text/h.t (Ljava/lang/String;Ljava/lang/String;ZILjava/lang/Object;)Z
       // 0c0: bipush 1
       // 0c1: if_icmpne 11a
       // 0c4: aload 0
@@ -344,17 +344,17 @@ public class PerformanceTracing : MarkerListener {
       // 17a: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 17d: ldc "PROCESS_PACKAGE_MODULE"
       // 17f: invokestatic kotlin/jvm/internal/q.c (Ljava/lang/Object;Ljava/lang/Object;)Z
-      // 182: ifeq 1fa
+      // 182: ifeq 1f7
       // 185: aload 0
       // 186: getfield com/discord/crash_reporting/PerformanceTracing.currentProcessPackage Lcom/discord/crash_reporting/PackageProcessTimings;
       // 189: astore 2
       // 18a: aload 2
-      // 18b: ifnull 1fa
+      // 18b: ifnull 1f7
       // 18e: aload 2
       // 18f: invokevirtual com/discord/crash_reporting/PackageProcessTimings.getModules ()Ljava/util/List;
       // 192: astore 3
       // 193: aload 3
-      // 194: ifnull 1fa
+      // 194: ifnull 1f7
       // 197: aload 1
       // 198: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getTag ()Ljava/lang/String;
       // 19b: astore 2
@@ -368,7 +368,7 @@ public class PerformanceTracing : MarkerListener {
       // 1a7: aload 1
       // 1a8: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
       // 1ad: pop
-      // 1ae: goto 1fa
+      // 1ae: goto 1f7
       // 1b1: aload 0
       // 1b2: getfield com/discord/crash_reporting/PerformanceTracing.ongoingSpans Ljava/util/Map;
       // 1b5: aload 4
@@ -376,9 +376,9 @@ public class PerformanceTracing : MarkerListener {
       // 1bc: checkcast io/sentry/ISpan
       // 1bf: astore 2
       // 1c0: aload 2
-      // 1c1: ifnull 1fa
+      // 1c1: ifnull 1f7
       // 1c4: aload 2
-      // 1c5: invokeinterface io/sentry/ISpan.i ()V 1
+      // 1c5: invokeinterface io/sentry/ISpan.k ()V 1
       // 1ca: aload 0
       // 1cb: getfield com/discord/crash_reporting/PerformanceTracing.ongoingSpans Ljava/util/Map;
       // 1ce: aload 4
@@ -388,26 +388,25 @@ public class PerformanceTracing : MarkerListener {
       // 1d7: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 1da: ldc "PROCESS_PACKAGE"
       // 1dc: invokestatic kotlin/jvm/internal/q.c (Ljava/lang/Object;Ljava/lang/Object;)Z
-      // 1df: ifeq 1fa
+      // 1df: ifeq 1f7
       // 1e2: aload 0
       // 1e3: getfield com/discord/crash_reporting/PerformanceTracing.currentProcessPackage Lcom/discord/crash_reporting/PackageProcessTimings;
       // 1e6: astore 1
       // 1e7: aload 1
-      // 1e8: ifnonnull 1ee
-      // 1eb: goto 1f5
-      // 1ee: aload 1
-      // 1ef: invokestatic java/lang/System.currentTimeMillis ()J
-      // 1f2: invokevirtual com/discord/crash_reporting/PackageProcessTimings.setEndTime (J)V
-      // 1f5: aload 0
-      // 1f6: aconst_null
-      // 1f7: putfield com/discord/crash_reporting/PerformanceTracing.currentProcessPackage Lcom/discord/crash_reporting/PackageProcessTimings;
+      // 1e8: ifnull 1f2
+      // 1eb: aload 1
+      // 1ec: invokestatic java/lang/System.currentTimeMillis ()J
+      // 1ef: invokevirtual com/discord/crash_reporting/PackageProcessTimings.setEndTime (J)V
+      // 1f2: aload 0
+      // 1f3: aconst_null
+      // 1f4: putfield com/discord/crash_reporting/PerformanceTracing.currentProcessPackage Lcom/discord/crash_reporting/PackageProcessTimings;
+      // 1f7: aload 0
+      // 1f8: monitorexit
+      // 1f9: return
       // 1fa: aload 0
       // 1fb: monitorexit
-      // 1fc: return
-      // 1fd: aload 0
-      // 1fe: monitorexit
-      // 1ff: aload 1
-      // 200: athrow
+      // 1fc: aload 1
+      // 1fd: athrow
    }
 
    public fun logSpanForTransaction(marker: String, tag: String?) {
@@ -493,7 +492,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = w8.a.a(var0);
+         $ENTRIES = Y8.a.a(var0);
       }
 
       @JvmStatic
@@ -503,9 +502,9 @@ public class PerformanceTracing : MarkerListener {
    }
 
    public data class TransactionMarker(name: String, tag: String?, markerEnd: com.discord.crash_reporting.PerformanceTracing.MarkerEnd) {
-      public final val markerEnd: com.discord.crash_reporting.PerformanceTracing.MarkerEnd
       public final val name: String
       public final val tag: String?
+      public final val markerEnd: com.discord.crash_reporting.PerformanceTracing.MarkerEnd
 
       init {
          q.h(var1, "name");
@@ -564,18 +563,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.name;
-         val var2: java.lang.String = this.tag;
-         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TransactionMarker(name=");
-         var3.append(var4);
-         var3.append(", tag=");
-         var3.append(var2);
-         var3.append(", markerEnd=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.name;
+         val var1: java.lang.String = this.tag;
+         val var2: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TransactionMarker(name=");
+         var4.append(var3);
+         var4.append(", tag=");
+         var4.append(var1);
+         var4.append(", markerEnd=");
+         var4.append(var2);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

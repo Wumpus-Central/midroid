@@ -15,15 +15,15 @@ import org.webrtc.VideoFrame
 import org.webrtc.VideoFrameDrawer
 
 internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextThumbnail: (Bitmap) -> Unit) {
-   private final val frameDrawer: VideoFrameDrawer
+   private final val width: Int
    private final val height: Int
-   private final var lastTimestampNs: Long
    private final val onNextThumbnail: (Bitmap) -> Unit
    private final val outputByteBuffer: ByteBuffer
-   private final val periodNs: Long
    private final val rectDrawer: GlRectDrawer
+   private final val frameDrawer: VideoFrameDrawer
    private final var released: Boolean
-   private final val width: Int
+   private final val periodNs: Long
+   private final var lastTimestampNs: Long
 
    @JvmStatic
    fun {
@@ -56,18 +56,18 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
       val var2: Float = var1.getRotatedWidth();
-      val var4: Float = var1.getRotatedHeight();
-      if (var2 / var4 < (float)this.width / this.height) {
-         val var12: Float = var2 * (this.height / var4);
+      val var3: Float = var1.getRotatedHeight();
+      if (var2 / var3 < (float)this.width / this.height) {
+         val var10: Float = var2 * (this.height / var3);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, E8.a.c(((float)this.width - var2 * ((float)this.height / var4)) / 2.0F), 0, E8.a.c(var12), this.height
+               var1, this.rectDrawer, renderMatrix, g9.a.c(((float)this.width - var2 * ((float)this.height / var3)) / 2.0F), 0, g9.a.c(var10), this.height
             );
       } else {
-         val var11: Float = var4 * (this.width / var2);
+         val var13: Float = var3 * (this.width / var2);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, E8.a.c(((float)this.height - var4 * ((float)this.width / var2)) / 2.0F), this.width, E8.a.c(var11)
+               var1, this.rectDrawer, renderMatrix, 0, g9.a.c(((float)this.height - var3 * ((float)this.width / var2)) / 2.0F), this.width, g9.a.c(var13)
             );
       }
 

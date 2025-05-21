@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.codedlinks
 
 public interface GuildInviteEmbed {
-   public val badgeIconUrl: String?
    public val channelIcon: String?
    public val channelName: String?
    public val memberText: String?
    public val onlineText: String?
+   public val badgeIconUrl: String?
 }

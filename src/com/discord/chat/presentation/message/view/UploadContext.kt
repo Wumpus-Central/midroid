@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.message.view
 
 public data class UploadContext(uploaderId: String, uploadItemId: String) {
-   public final val uploadItemId: String
    public final val uploaderId: String
+   public final val uploadItemId: String
 
    init {
       kotlin.jvm.internal.q.h(var1, "uploaderId");

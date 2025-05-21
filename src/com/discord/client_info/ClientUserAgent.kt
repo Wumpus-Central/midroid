@@ -19,15 +19,13 @@ internal object ClientUserAgent {
 
    @JvmStatic
    fun `init$lambda$0`(var0: Context, var1: java.lang.String): OkHttpClient {
-      q.h(var0, "$context");
-      q.h(var1, "$userAgent");
       return OkHttpClientProvider.createClientBuilder(var0).h(INSTANCE.createDispatcher()).a(new ClientUserAgent.DiscordUserAgentInterceptor(var1)).c();
    }
 
    public fun init(context: Context, userAgent: String) {
       q.h(var1, "context");
       q.h(var2, "userAgent");
-      OkHttpClientProvider.setOkHttpClientFactory(new a(var1, var2));
+      OkHttpClientProvider.setOkHttpClientFactory(new b(var1, var2));
    }
 
    private class DiscordUserAgentInterceptor(userAgent: String) : Interceptor {

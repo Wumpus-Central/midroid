@@ -6,7 +6,6 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.MetricAffectingSpan
 import com.discord.fonts.DiscordFont
-import kotlin.jvm.internal.q
 
 public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : MetricAffectingSpan {
    private final val context: Context
@@ -14,8 +13,8 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    private final val typeface: Typeface
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "discordFont");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "discordFont");
       super();
       this.context = var1;
       this.discordFont = var2;
@@ -87,12 +86,12 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    }
 
    public open fun updateDrawState(paint: TextPaint) {
-      q.h(var1, "paint");
+      kotlin.jvm.internal.q.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      q.h(var1, "paint");
+      kotlin.jvm.internal.q.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 }

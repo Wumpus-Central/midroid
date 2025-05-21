@@ -1,27 +1,15 @@
 package com.discord.chat.bridge.botuikit
 
+import Ja.f
 import com.discord.chat.bridge.structurabletext.StructurableText
-import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.N
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class TextDisplayComponent(type: Int, id: String, content: StructurableText) : Component {
-   public final val content: StructurableText
-   public open val id: String
    public open val type: Int
+   public open val id: String
+   public final val content: StructurableText
 
    init {
       q.h(var2, "id");
@@ -84,91 +72,6 @@ public data class TextDisplayComponent(type: Int, id: String, content: Structura
       var4.append(var2);
       var4.append(")");
       return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TextDisplayComponent.$serializer = new TextDisplayComponent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("10", var0, 3);
-         var1.l("type", false);
-         var1.l("id", false);
-         var1.l("content", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, C0.a, StructurableTextSerializer.INSTANCE};
-      }
-
-      public open fun deserialize(decoder: Decoder): TextDisplayComponent {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
-         var var3: Int;
-         var var6: java.lang.String;
-         var var9: StructurableText;
-         if (var8.y()) {
-            var3 = var8.k(var7, 0);
-            var6 = var8.t(var7, 1);
-            var9 = var8.m(var7, 2, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var2 = 7;
-         } else {
-            var var4: Boolean = true;
-            var3 = 0;
-            var6 = null;
-            var9 = null;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var8.x(var7);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           throw new n(var5);
-                        }
-
-                        var9 = var8.m(var7, 2, StructurableTextSerializer.INSTANCE, var9) as StructurableText;
-                        var2 |= 4;
-                     } else {
-                        var6 = var8.t(var7, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var3 = var8.k(var7, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-         }
-
-         var8.b(var7);
-         return new TextDisplayComponent(var2, var3, var6, var9, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TextDisplayComponent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TextDisplayComponent.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

@@ -1,5 +1,6 @@
 package com.discord.animatable_underlay
 
+import Q8.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -14,34 +15,32 @@ import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import w8.a
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
+   private final var height: Float
+   private final var width: Float
+
+   public final var shapeWidth: Float
+      internal set
+
+   public final var shapeHeight: Float
+      internal set
+
    public final var clipDirectionX: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionX
       internal set
 
    public final var clipDirectionY: com.discord.animatable_underlay.AnimatableUnderlay.ClipDirectionY
       internal set
 
-   private final var height: Float
-   private final val paint: Paint
-   private final val path: Path
-   private final val pathRect: RectF
+   internal final var shapeBorderConfig: AnimatableUnderlayBorders
+   public final var shapeBackgroundColor: Int
    private final var shadowColor: String
    private final var shadowElevation: Float
+   private final val paint: Paint
    private final val shadowPaint: Paint
-   public final var shapeBackgroundColor: Int
-   internal final var shapeBorderConfig: AnimatableUnderlayBorders
-
-   public final var shapeHeight: Float
-      internal set
-
-   public final var shapeWidth: Float
-      internal set
-
-   private final var width: Float
+   private final val path: Path
+   private final val pathRect: RectF
 
    init {
       q.h(var1, "context");
@@ -68,13 +67,15 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       var var5: Int = AnimatableUnderlay.WhenMappings.$EnumSwitchMapping$0[this.clipDirectionY.ordinal()];
       if (var5 != 1) {
          if (var5 != 2) {
-            if (var5 == 3) {
-               val var15: RectF = this.pathRect;
-               val var4: Float = this.height;
-               val var2: Float = this.shapeHeight;
-               this.pathRect.top = (this.height - this.shapeHeight) / 2;
-               var15.bottom = var4 - (var4 - var2) / 2;
+            if (var5 != 3) {
+               throw new n();
             }
+
+            val var15: RectF = this.pathRect;
+            val var4: Float = this.height;
+            val var3: Float = this.shapeHeight;
+            this.pathRect.top = (this.height - this.shapeHeight) / 2;
+            var15.bottom = var4 - (var4 - var3) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -90,13 +91,15 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       var5 = AnimatableUnderlay.WhenMappings.$EnumSwitchMapping$1[this.clipDirectionX.ordinal()];
       if (var5 != 1) {
          if (var5 != 2) {
-            if (var5 == 3) {
-               val var19: RectF = this.pathRect;
-               val var12: Float = this.width;
-               val var9: Float = this.shapeWidth;
-               this.pathRect.left = (this.width - this.shapeWidth) / 2;
-               var19.right = var12 - (var12 - var9) / 2;
+            if (var5 != 3) {
+               throw new n();
             }
+
+            val var19: RectF = this.pathRect;
+            val var13: Float = this.width;
+            val var9: Float = this.shapeWidth;
+            this.pathRect.left = (this.width - this.shapeWidth) / 2;
+            var19.right = var13 - (var13 - var9) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -116,6 +119,38 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       this.shapeBorderConfig.drawBorderStroke$animatable_underlay_release(var1, this.paint, this.pathRect);
    }
 
+   @JvmStatic
+   fun `onAttachedToWindow$lambda$2`(var0: AnimatableUnderlay, var1: MotionEvent): Unit {
+      q.h(var1, "e");
+      val var2: Int = var1.getAction();
+      if (var2 != 0) {
+         if (var2 == 1 || var2 == 3) {
+            ReactViewGroupExtensionsKt.setPointerEventsInternal(var0, PointerEvents.AUTO);
+         }
+      } else {
+         var var4: Boolean;
+         if (var1.getX() >= var0.getX() && var1.getX() <= var0.getX() + var0.width) {
+            var4 = true;
+         } else {
+            var4 = false;
+         }
+
+         if (var1.getY() >= var0.getY() && var1.getY() <= var0.getY() + var0.height && var4) {
+            if (var1.getX() >= var0.getX() && var1.getX() <= var0.getX() + (var0.width - var0.shapeWidth)) {
+               var4 = true;
+            } else {
+               var4 = false;
+            }
+
+            if (var1.getY() >= var0.getY() && var1.getY() <= var0.getY() + (var0.height - var0.shapeHeight) || var4) {
+               ReactViewGroupExtensionsKt.setPointerEventsInternal(var0, PointerEvents.NONE);
+            }
+         }
+      }
+
+      return Unit.a;
+   }
+
    protected open fun dispatchDraw(canvas: Canvas) {
       q.h(var1, "canvas");
       this.drawCustomShape(var1);
@@ -125,50 +160,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      ReactRootView.Companion
-         .setOnInterceptTouchEvent(
-            this,
-            new Function1(this) {
-               final AnimatableUnderlay this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(MotionEvent var1) {
-                  q.h(var1, "e");
-                  val var2: Int = var1.getAction();
-                  if (var2 != 0) {
-                     if (var2 == 1 || var2 == 3) {
-                        ReactViewGroupExtensionsKt.setPointerEventsInternal(this.this$0, PointerEvents.AUTO);
-                     }
-                  } else {
-                     var var4: Boolean;
-                     if (var1.getX() >= this.this$0.getX() && var1.getX() <= this.this$0.getX() + AnimatableUnderlay.access$getWidth$p(this.this$0)) {
-                        var4 = true;
-                     } else {
-                        var4 = false;
-                     }
-
-                     if (var1.getY() >= this.this$0.getY() && var1.getY() <= this.this$0.getY() + AnimatableUnderlay.access$getHeight$p(this.this$0) && var4) {
-                        if (var1.getX() >= this.this$0.getX()
-                           && var1.getX() <= this.this$0.getX() + (AnimatableUnderlay.access$getWidth$p(this.this$0) - this.this$0.getShapeWidth())) {
-                           var4 = true;
-                        } else {
-                           var4 = false;
-                        }
-
-                        if (var1.getY() >= this.this$0.getY()
-                              && var1.getY() <= this.this$0.getY() + (AnimatableUnderlay.access$getHeight$p(this.this$0) - this.this$0.getShapeHeight())
-                           || var4) {
-                           ReactViewGroupExtensionsKt.setPointerEventsInternal(this.this$0, PointerEvents.NONE);
-                        }
-                     }
-                  }
-               }
-            }
-         );
+      ReactRootView.Companion.setOnInterceptTouchEvent(this, new a(this));
    }
 
    protected open fun onDetachedFromWindow() {
@@ -196,7 +188,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = a.a(var0);
+         $ENTRIES = Y8.a.a(var0);
       }
 
       @JvmStatic
@@ -243,7 +235,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = a.a(var0);
+         $ENTRIES = Y8.a.a(var0);
       }
 
       @JvmStatic

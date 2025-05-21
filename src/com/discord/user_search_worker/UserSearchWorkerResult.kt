@@ -3,10 +3,10 @@ package com.discord.user_search_worker
 import kotlin.jvm.internal.q
 
 internal data class UserSearchWorkerResult(id: String, username: String, comparator: String, score: Double) {
-   public final val comparator: String
    public final val id: String
-   public final val score: Double
    public final val username: String
+   public final val comparator: String
+   public final val score: Double
 
    init {
       q.h(var1, "id");
@@ -66,17 +66,17 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var6: java.lang.String = this.username;
-      val var5: java.lang.String = this.comparator;
+      val var5: java.lang.String = this.id;
+      val var3: java.lang.String = this.username;
+      val var6: java.lang.String = this.comparator;
       val var1: Double = this.score;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSearchWorkerResult(id=");
-      var4.append(var3);
-      var4.append(", username=");
-      var4.append(var6);
-      var4.append(", comparator=");
       var4.append(var5);
+      var4.append(", username=");
+      var4.append(var3);
+      var4.append(", comparator=");
+      var4.append(var6);
       var4.append(", score=");
       var4.append(var1);
       var4.append(")");

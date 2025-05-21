@@ -1,14 +1,13 @@
 package com.discord.misc.utilities.coroutines
 
-import X9.I
+import Q8.f
+import X8.b
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import o8.h
-import o8.s
-import v8.b
+import za.I
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -44,9 +43,9 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
       }
 
-      s.b(var7);
+      c.b(var7);
    } else {
-      s.b(var7);
+      c.b(var7);
       var3 = new FlowCollector(new LongRef(), var1, var3, var0) {
          final FlowCollector $collector;
          final MutableSharedFlow $this_collectWithLeadingDebounce;
@@ -66,12 +65,12 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                   val var10: <unrepresentable> = var2 as <unrepresentable>;
                   if (((var2 as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
                      var10.label = (var2 as <unrepresentable>).label + Integer.MIN_VALUE;
-                     var12 = var10;
+                     var13 = var10;
                      break label39;
                   }
                }
 
-               var12 = new d(this, var2) {
+               var13 = new d(this, var2) {
                   Object L$0;
                   Object L$1;
                   int label;
@@ -91,49 +90,51 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                };
             }
 
-            var var11: Any = ((<unrepresentable>)var12).result;
-            val var15: Any = b.e();
-            val var13: <unrepresentable>;
-            if (((<unrepresentable>)var12).label != 0) {
-               if (((<unrepresentable>)var12).label == 1) {
-                  s.b(var11);
+            var var11: Any = ((<unrepresentable>)var13).result;
+            var var16: Any = b.e();
+            val var14: Any;
+            if (((<unrepresentable>)var13).label != 0) {
+               if (((<unrepresentable>)var13).label == 1) {
+                  c.b(var11);
                   return Unit.a;
                }
 
-               if (((<unrepresentable>)var12).label != 2) {
+               if (((<unrepresentable>)var13).label != 2) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               var1 = ((<unrepresentable>)var12).L$1;
-               var13 = ((<unrepresentable>)var12).L$0 as <unrepresentable>;
-               s.b(var11);
+               var16 = ((<unrepresentable>)var13).L$1;
+               var1 = ((<unrepresentable>)var13).L$0 as <unrepresentable>;
+               c.b(var11);
+               var14 = var16;
             } else {
-               s.b(var11);
-               val var4: Long = System.currentTimeMillis();
-               val var8: Long = var4 - this.$timeLastEmitted.j;
-               val var6: Long = this.$timeoutMillis;
-               if (var8 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var4;
+               c.b(var11);
+               val var8: Long = System.currentTimeMillis();
+               val var6: Long = var8 - this.$timeLastEmitted.j;
+               val var4: Long = this.$timeoutMillis;
+               if (var6 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.j = var8;
                   var11 = this.$collector;
-                  ((<unrepresentable>)var12).label = 1;
-                  if (var11.emit(var1, (Continuation)var12) === var15) {
-                     return var15;
+                  ((<unrepresentable>)var13).label = 1;
+                  if (var11.emit(var1, (Continuation)var13) === var16) {
+                     return var16;
                   }
 
                   return Unit.a;
                }
 
-               ((<unrepresentable>)var12).L$0 = this;
-               ((<unrepresentable>)var12).L$1 = var1;
-               ((<unrepresentable>)var12).label = 2;
-               if (I.a(var6 - var8, (Continuation)var12) === var15) {
-                  return var15;
+               ((<unrepresentable>)var13).L$0 = this;
+               ((<unrepresentable>)var13).L$1 = var1;
+               ((<unrepresentable>)var13).label = 2;
+               if (I.a(var4 - var6, (Continuation)var13) === var16) {
+                  return var16;
                }
 
-               var13 = this;
+               var14 = var1;
+               var1 = this;
             }
 
-            var13.$this_collectWithLeadingDebounce.b(var1);
+            var1.$this_collectWithLeadingDebounce.c(var14);
             return Unit.a;
          }
       };
@@ -143,5 +144,5 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
       }
    }
 
-   throw new h();
+   throw new f();
 }

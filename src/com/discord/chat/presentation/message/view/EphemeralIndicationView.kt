@@ -66,9 +66,14 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `setEphemeralIndication_AFFcxXc$lambda$4$lambda$3`(var0: Function1, var1: EphemeralIndication, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onHelpArticleClicked");
-      kotlin.jvm.internal.q.h(var1, "$ephemeralIndication");
       var0.invoke(var1.getHelpArticleLink());
+   }
+
+   @JvmStatic
+   fun `setEphemeralIndication_AFFcxXc$lambda$7$lambda$5`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
+      kotlin.jvm.internal.q.h(var2, "node");
+      var0.invoke(MessageId.box-impl(var1), var2);
+      return Unit.a;
    }
 
    public fun setEphemeralIndication(
@@ -83,32 +88,48 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       kotlin.jvm.internal.q.h(var4, "onHelpArticleClicked");
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
-      var6.setOnClickListener(new A(var4, var2));
+      var6.setOnClickListener(new G(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
       kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
-      val var9: StructurableText = var2.getContent();
-      val var11: Context = var10.getContext();
+      val var11: StructurableText = var2.getContent();
+      val var9: Context = var10.getContext();
+      kotlin.jvm.internal.q.g(var9, "getContext(...)");
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
       val var5: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var12: TextPaint = var10.getPaint();
-      kotlin.jvm.internal.q.e(var11);
-      kotlin.jvm.internal.q.e(var12);
-      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(var9, var11, var1, false, false, false, false, var12, new Function1(var3, var1) {
-         final java.lang.String $messageId;
-         final Function2 $onLinkClicked;
-
-         {
-            super(1);
-            this.$onLinkClicked = var1;
-            this.$messageId = var2;
-         }
-
-         public final void invoke(LinkContentNode var1) {
-            kotlin.jvm.internal.q.h(var1, "node");
-            this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageId), var1);
-         }
-      }, null, null, null, null, null, null, null, null, null, null, null, null, null, null, false, null, var5, null, 50331392, null);
+      kotlin.jvm.internal.q.g(var12, "getPaint(...)");
+      val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+         var11,
+         var9,
+         var1,
+         false,
+         false,
+         false,
+         false,
+         var12,
+         new H(var3, var1),
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         null,
+         false,
+         null,
+         var5,
+         null,
+         50331392,
+         null
+      );
       SpannableExtensionsKt.coverWithSpan(var8, new BackgroundSpanDrawer(var10));
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var10, var8);
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var10, false, 1, null);

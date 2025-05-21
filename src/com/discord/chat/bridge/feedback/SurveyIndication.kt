@@ -1,20 +1,9 @@
 package com.discord.chat.bridge.feedback
 
+import Ja.f
 import com.discord.chat.bridge.structurabletext.StructurableText
-import com.discord.chat.bridge.structurabletext.StructurableTextSerializer
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -63,91 +52,15 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    }
 
    public override fun toString(): String {
-      val var2: StructurableText = this.content;
-      val var3: java.lang.String = this.feedbackIconUrl;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SurveyIndication(content=");
-      var1.append(var2);
-      var1.append(", feedbackIconUrl=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: SurveyIndication.$serializer = new SurveyIndication.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.feedback.SurveyIndication", var0, 2);
-         var1.l("content", false);
-         var1.l("feedbackIconUrl", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{StructurableTextSerializer.INSTANCE, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): SurveyIndication {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         var var2: Int;
-         var var5: java.lang.String;
-         var var8: StructurableText;
-         if (var7.y()) {
-            var8 = var7.m(var6, 0, StructurableTextSerializer.INSTANCE, null) as StructurableText;
-            var5 = var7.t(var6, 1);
-            var2 = 3;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-            var5 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        throw new n(var4);
-                     }
-
-                     var5 = var7.t(var6, 1);
-                     var2 |= 2;
-                  } else {
-                     var8 = var7.m(var6, 0, StructurableTextSerializer.INSTANCE, var8) as StructurableText;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new SurveyIndication(var2, var8, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: SurveyIndication) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         SurveyIndication.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var1: StructurableText = this.content;
+      val var2: java.lang.String = this.feedbackIconUrl;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SurveyIndication(content=");
+      var3.append(var1);
+      var3.append(", feedbackIconUrl=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -1,5 +1,7 @@
 package com.discord.chat.reactevents
 
+import Q8.n
+import Q8.s
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -8,8 +10,6 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import o8.p
-import o8.w
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
@@ -47,21 +47,21 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
+            s.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), s.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
-            throw new p();
+            throw new n();
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-            w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-            w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
+            s.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+            s.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+            s.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(w.a("node", var2));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("node", var2));
    }
 
    public override fun toString(): String {

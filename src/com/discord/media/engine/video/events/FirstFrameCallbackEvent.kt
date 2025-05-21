@@ -1,29 +1,17 @@
 package com.discord.media.engine.video.events
 
+import Ja.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.N
-import ka.Y
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
    public final val connectionId: Int
+   public final val userId: String
    public final val ssrc: Long
    public final val streamId: String
-   public final val userId: String
 
    init {
       q.h(var2, "userId");
@@ -100,106 +88,6 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
       var4.append(var5);
       var4.append(")");
       return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: FirstFrameCallbackEvent.$serializer = new FirstFrameCallbackEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.media.engine.video.events.FirstFrameCallbackEvent", var0, 4
-         );
-         var1.l("connectionId", false);
-         var1.l("userId", false);
-         var1.l("ssrc", false);
-         var1.l("streamId", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, C0.a, Y.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): FirstFrameCallbackEvent {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var3: Int;
-         var var6: Long;
-         var var8: java.lang.String;
-         val var9: java.lang.String;
-         if (var11.y()) {
-            var3 = var11.k(var10, 0);
-            var8 = var11.t(var10, 1);
-            var6 = var11.h(var10, 2);
-            val var12: java.lang.String = var11.t(var10, 3);
-            var2 = 15;
-            var9 = var12;
-         } else {
-            var var13: java.lang.String = null;
-            var var4: Boolean = true;
-            var6 = 0L;
-            var8 = null;
-            var3 = 0;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var11.x(var10);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           if (var5 != 3) {
-                              throw new n(var5);
-                           }
-
-                           var8 = var11.t(var10, 3);
-                           var2 |= 8;
-                        } else {
-                           var6 = var11.h(var10, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var13 = var11.t(var10, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var3 = var11.k(var10, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-
-            var9 = var8;
-            var8 = var13;
-         }
-
-         var11.b(var10);
-         return new FirstFrameCallbackEvent(var2, var3, var8, var6, var9, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: FirstFrameCallbackEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         FirstFrameCallbackEvent.write$Self$media_engine_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

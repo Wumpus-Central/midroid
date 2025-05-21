@@ -1,15 +1,11 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.discord.chat.bridge.contentnode.CommandMentionContentNode;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class S implements OnClickListener {
-   public final Function1 j;
-   public final String k;
-
-   public final void onClick(View var1) {
-      SafetyPolicyNoticeView.g(this.j, this.k, var1);
+public final class S implements Function1 {
+   public final Object invoke(Object var1) {
+      return FlaggedMessageEmbedView.u((CommandMentionContentNode)var1);
    }
 }

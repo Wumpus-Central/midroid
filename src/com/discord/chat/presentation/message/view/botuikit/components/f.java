@@ -1,16 +1,17 @@
 package com.discord.chat.presentation.message.view.botuikit.components;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.discord.chat.bridge.botuikit.ThumbnailDisplayComponent;
+import android.view.View.OnClickListener;
+import com.discord.chat.bridge.botuikit.ContentInventoryEntry;
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext;
 
 // $VF: synthetic class
-public final class f implements OnLongClickListener {
+public final class f implements OnClickListener {
    public final ComponentContext j;
-   public final ThumbnailDisplayComponent k;
+   public final ContentInventoryEntry k;
+   public final String l;
 
-   public final boolean onLongClick(View var1) {
-      return ThumbnailDisplayComponentView.a(this.j, this.k, var1);
+   public final void onClick(View var1) {
+      ContentInventoryComponentViewKt.a(this.j, this.k, this.l, var1);
    }
 }

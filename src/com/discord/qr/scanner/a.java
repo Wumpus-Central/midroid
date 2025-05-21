@@ -6,6 +6,6 @@ public final class a implements Runnable {
 
    @Override
    public final void run() {
-      QRScanner.a(this.j);
+      QRScanner.b(this.j);
    }
 }

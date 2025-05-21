@@ -1,14 +1,12 @@
 package com.discord.chat.bridge
 
+import Ja.f
+import Y8.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = SwipeActionsType.Serializer::class)
 public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
@@ -20,8 +18,6 @@ public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private SwipeActionsType[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public SwipeActionsType.Companion Companion = new SwipeActionsType.Companion(null);
 
@@ -43,7 +39,7 @@ public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<SwipeActionsType> {
-         return this.get$cachedSerializer();
+         return SwipeActionsType.Serializer.INSTANCE;
       }
    }
 

@@ -10,11 +10,11 @@ import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.q
 
 public class ClipView(context: Context) : ReactViewGroup {
+   private final val cutoutPath: Path
    private final val clipPath: Path
    private final val clipPathBackgroundColorPaint: Paint
    private final var clipPathRadius: Float
    private final var clipToCircle: Boolean
-   private final val cutoutPath: Path
 
    init {
       q.h(var1, "context");

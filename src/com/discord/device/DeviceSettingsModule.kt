@@ -1,5 +1,6 @@
 package com.discord.device
 
+import R8.n
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -16,7 +17,6 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import p8.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
@@ -50,8 +50,6 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
-      q.h(var0, "this$0");
-      q.h(var1, "$rects");
       val var2: ReactRootView.Companion = ReactRootView.Companion;
       val var6: ReactApplicationContext = var0.getReactApplicationContext();
       q.g(var6, "getReactApplicationContext(...)");

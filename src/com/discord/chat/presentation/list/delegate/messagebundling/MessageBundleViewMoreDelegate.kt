@@ -16,7 +16,7 @@ public class MessageBundleViewMoreDelegate(onMeasured: (View, Int, Int) -> Unit)
    init {
       q.h(var1, "onMeasured");
       super(var1);
-      this.onTapViewMoreText = new b();
+      this.onTapViewMoreText = new d();
    }
 
    @JvmStatic

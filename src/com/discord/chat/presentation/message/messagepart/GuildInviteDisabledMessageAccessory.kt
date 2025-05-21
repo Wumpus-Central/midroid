@@ -7,9 +7,9 @@ import kotlin.jvm.internal.q
 public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, codedLinkIndex: Int, invite: GuildInviteDisabledEmbedImpl) : GuildInviteDisabledMessageAccessory(
       var1, var2, var3
    ) {
+   public open val messageId: MessageId
    public final val codedLinkIndex: Int
    public final val invite: GuildInviteDisabledEmbedImpl
-   public open val messageId: MessageId
 
    fun GuildInviteDisabledMessageAccessory(var1: java.lang.String, var2: Int, var3: GuildInviteDisabledEmbedImpl) {
       q.h(var1, "messageId");
@@ -63,16 +63,16 @@ public data class GuildInviteDisabledMessageAccessory(messageId: MessageId, code
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
-      val var4: GuildInviteDisabledEmbedImpl = this.invite;
+      val var2: GuildInviteDisabledEmbedImpl = this.invite;
       val var3: StringBuilder = new StringBuilder();
       var3.append("GuildInviteDisabledMessageAccessory(messageId=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(", codedLinkIndex=");
       var3.append(var1);
       var3.append(", invite=");
-      var3.append(var4);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

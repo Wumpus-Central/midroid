@@ -15,10 +15,10 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var1, var2, var4, var5, var6
       ),
    NotificationAction {
-   private final val channelId: ChannelId
-   private final val guildId: GuildId?
-   private final val isFullscreenCallUI: Boolean
    public open val tag: String
+   private final val channelId: ChannelId
+   private final val isFullscreenCallUI: Boolean
+   private final val guildId: GuildId?
    private final val userId: UserId
 
    fun DismissCallAction(var1: java.lang.String, var2: Long, var4: Boolean, var5: GuildId, var6: Long) {
@@ -56,7 +56,7 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
       return new DismissCallAction(var1, var2, var4, var5, var6, null);
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -102,10 +102,10 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var4: Bundle = new Bundle();
-      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
-      var4.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
+      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var3: Bundle = new Bundle();
+      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var3.putBoolean("isFullscreenCallUI", this.isFullscreenCallUI);
       val var6: java.lang.Long;
       if (this.guildId != null) {
          var6 = this.guildId.unbox-impl();
@@ -113,9 +113,9 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
          var6 = null;
       }
 
-      var4.putString("guildId", java.lang.String.valueOf(var6));
-      var4.putString("userId", java.lang.String.valueOf(this.userId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "DismissCallAction", 0L, false, var4, true, 12, null);
+      var3.putString("guildId", java.lang.String.valueOf(var6));
+      var3.putString("userId", java.lang.String.valueOf(this.userId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "DismissCallAction", 0L, false, var3, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -127,28 +127,28 @@ public data class DismissCallAction(tag: String, channelId: ChannelId, isFullscr
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.tag;
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.tag;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: Boolean = this.isFullscreenCallUI;
       val var3: GuildId = this.guildId;
-      val var5: java.lang.String = UserId.toString-impl(this.userId);
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("DismissCallAction(tag=");
-      var4.append(var6);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", isFullscreenCallUI=");
-      var4.append(var1);
-      var4.append(", guildId=");
-      var4.append(var3);
-      var4.append(", userId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("DismissCallAction(tag=");
+      var6.append(var2);
+      var6.append(", channelId=");
+      var6.append(var5);
+      var6.append(", isFullscreenCallUI=");
+      var6.append(var1);
+      var6.append(", guildId=");
+      var6.append(var3);
+      var6.append(", userId=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
       var1.writeInt(this.isFullscreenCallUI);

@@ -62,7 +62,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = E8.a.c(var2.getOpacity() * (float)255);
+         var3 = g9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -70,7 +70,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          if (var2 != null) {
             val var5: java.lang.String = var2.getBackgroundColor();
             if (var5 != null) {
-               var12 = androidx.core.graphics.c.k(Color.parseColor(var5), var3);
+               var12 = y.c.k(Color.parseColor(var5), var3);
                break label41;
             }
          }
@@ -178,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -189,13 +189,13 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
+            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var5.setText(java.lang.String.valueOf(var1));
+         var4.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }
@@ -326,22 +326,25 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    public interface BurstColorPalette {
-      public val accentColor: String?
       public val backgroundColor: String?
+      public val accentColor: String?
       public val highlightColor: String?
       public val opacity: Float
    }
 
    public companion object {
-      public final val CORNER_RADIUS: Int
-      public final val EMOJI_SIZE: Int
-      public final val HORIZ_PADDING: Int
-      public final val MINIMUM_WIDTH: Int
       public final val STROKE_WIDTH: Int
+      public final val MINIMUM_WIDTH: Int
+      public final val HORIZ_PADDING: Int
       public final val VERT_PADDING: Int
+      public final val EMOJI_SIZE: Int
+      public final val CORNER_RADIUS: Int
    }
 
    public interface Emoji {
+      public val id: String?
+      public val name: String?
+      public val src: String
       public val animated: Boolean?
       public val displayName: String
 
@@ -350,15 +353,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          }
 
 
-      public val id: String?
-      public val name: String?
-
       public open val shouldAnimate: Boolean
          public open get() {
          }
 
-
-      public val src: String
 
       public open fun renderable(): RenderableEmoji {
       }
@@ -416,18 +414,17 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    public interface Reaction : ItemDiffableType {
-      public val burstCount: Int
       public val count: Int
-      public val emoji: com.discord.reactions.ReactionView.Emoji
       public val isMe: Boolean
       public val isMeBurst: Boolean
+      public val emoji: com.discord.reactions.ReactionView.Emoji
+      public val burstCount: Int
+      public val themedBurstColors: com.discord.reactions.ReactionView.ThemedBurstColorPalette?
 
       public open val itemId: Long
          public open get() {
          }
 
-
-      public val themedBurstColors: com.discord.reactions.ReactionView.ThemedBurstColorPalette?
 
       public open fun isBurstReaction(): Boolean {
       }
@@ -460,16 +457,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    public interface ReactionsTheme {
-      public val activeReactionBackgroundColor: Int?
-      public val activeReactionBorderColor: Int?
-      public val activeReactionTextColor: Int?
       public val reactionBackgroundColor: Int?
       public val reactionBorderColor: Int?
       public val reactionTextColor: Int?
+      public val activeReactionBackgroundColor: Int?
+      public val activeReactionBorderColor: Int?
+      public val activeReactionTextColor: Int?
    }
 
    public interface ThemedBurstColorPalette {
-      public val dark: com.discord.reactions.ReactionView.BurstColorPalette
       public val light: com.discord.reactions.ReactionView.BurstColorPalette
+      public val dark: com.discord.reactions.ReactionView.BurstColorPalette
    }
 }

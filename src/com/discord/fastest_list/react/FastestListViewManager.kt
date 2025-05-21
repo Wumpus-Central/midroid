@@ -1,5 +1,6 @@
 package com.discord.fastest_list.react
 
+import Q8.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
@@ -23,26 +24,69 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
-import kotlin.jvm.functions.Function2
-import kotlin.jvm.functions.Function3
-import kotlin.jvm.functions.Function5
-import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
    private final val delegate: FastestListManagerDelegate<FastestListView, FastestListViewManager> = new FastestListManagerDelegate(this)
    private final val reactEvents: ReactEvents =
       new ReactEvents(
-         w.a("onUnexpectedItemSize", G.b(OnUnexpectedItemSizeEvent.class)),
-         w.a("onLayout", G.b(OnLayoutEvent.class)),
-         w.a("onScroll", G.b(OnScrollEvent.class)),
-         w.a("onScrollBeginDrag", G.b(OnScrollBeginDragEvent.class)),
-         w.a("onScrollEndDrag", G.b(OnScrollEndDragEvent.class)),
-         w.a("onVisibleItemsChanged", G.b(OnVisibleItemsChangedEvent.class))
+         s.a("onUnexpectedItemSize", G.b(OnUnexpectedItemSizeEvent.class)),
+         s.a("onLayout", G.b(OnLayoutEvent.class)),
+         s.a("onScroll", G.b(OnScrollEvent.class)),
+         s.a("onScrollBeginDrag", G.b(OnScrollBeginDragEvent.class)),
+         s.a("onScrollEndDrag", G.b(OnScrollEndDragEvent.class)),
+         s.a("onVisibleItemsChanged", G.b(OnVisibleItemsChangedEvent.class))
       )
+
+   @JvmStatic
+   fun `createViewInstance$lambda$0`(var0: FastestListViewManager, var1: FastestListView, var2: Int, var3: Int, var4: Int, var5: Int): Unit {
+      q.h(var1, "view");
+      var0.reactEvents
+         .emitEvent(var1, new OnLayoutEvent(SizeUtilsKt.getPxToDp(var2), SizeUtilsKt.getPxToDp(var3), SizeUtilsKt.getPxToDp(var4), SizeUtilsKt.getPxToDp(var5)));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$1`(var0: FastestListViewManager, var1: FastestListView, var2: FastestListScrollOffset.Data): Unit {
+      q.h(var1, "view");
+      q.h(var2, "data");
+      var0.reactEvents.emitEvent(var1, new OnScrollEvent(var2));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$2`(var0: FastestListViewManager, var1: FastestListView, var2: FastestListScrollOffset.Data): Unit {
+      q.h(var1, "view");
+      q.h(var2, "data");
+      var0.reactEvents.emitEvent(var1, new OnScrollBeginDragEvent(var2));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$3`(var0: FastestListViewManager, var1: FastestListView, var2: FastestListScrollOffset.Data): Unit {
+      q.h(var1, "view");
+      q.h(var2, "data");
+      var0.reactEvents.emitEvent(var1, new OnScrollEndDragEvent(var2));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$4`(var0: FastestListViewManager, var1: FastestListView, var2: FastestListSections.Entry, var3: Int): Unit {
+      q.h(var1, "view");
+      q.h(var2, "entry");
+      var0.reactEvents.emitEvent(var1, new OnUnexpectedItemSizeEvent(var2, var3));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$5`(var0: FastestListViewManager, var1: FastestListView, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int): Unit {
+      q.h(var1, "view");
+      q.h(var2, "sectionsId");
+      var0.reactEvents.emitEvent(var1, new OnVisibleItemsChangedEvent(var2, var3, var4, var5, var6));
+      return Unit.a;
+   }
 
    public open fun createShadowNodeInstance(): LayoutShadowNode {
       return new FastestListShadowNode();
@@ -57,94 +101,13 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
          ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "insetEnd"),
          ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "insetStart"),
          ReactStylesDiffMapExtensionsKt.getBoolean(var2, "keyboardDismissOnDrag"),
-         new Function5(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(5);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, int var2, int var3, int var4, int var5) {
-               q.h(var1, "view");
-               FastestListViewManager.access$getReactEvents$p(this.this$0)
-                  .emitEvent(
-                     var1,
-                     new OnLayoutEvent(SizeUtilsKt.getPxToDp(var2), SizeUtilsKt.getPxToDp(var3), SizeUtilsKt.getPxToDp(var4), SizeUtilsKt.getPxToDp(var5))
-                  );
-            }
-         },
+         new b(this),
          ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "scrollEventThrottle"),
-         new Function2(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(2);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, FastestListScrollOffset.Data var2) {
-               q.h(var1, "view");
-               q.h(var2, "data");
-               FastestListViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnScrollEvent(var2));
-            }
-         },
-         new Function2(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(2);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, FastestListScrollOffset.Data var2) {
-               q.h(var1, "view");
-               q.h(var2, "data");
-               FastestListViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnScrollBeginDragEvent(var2));
-            }
-         },
-         new Function2(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(2);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, FastestListScrollOffset.Data var2) {
-               q.h(var1, "view");
-               q.h(var2, "data");
-               FastestListViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnScrollEndDragEvent(var2));
-            }
-         },
-         new Function3(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(3);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, FastestListSections.Entry var2, int var3) {
-               q.h(var1, "view");
-               q.h(var2, "entry");
-               FastestListViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnUnexpectedItemSizeEvent(var2, var3));
-            }
-         },
-         new Function6(this) {
-            final FastestListViewManager this$0;
-
-            {
-               super(6);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(FastestListView var1, java.lang.String var2, int var3, int var4, int var5, int var6) {
-               q.h(var1, "view");
-               q.h(var2, "sectionsId");
-               FastestListViewManager.access$getReactEvents$p(this.this$0).emitEvent(var1, new OnVisibleItemsChangedEvent(var2, var3, var4, var5, var6));
-            }
-         },
+         new c(this),
+         new d(this),
+         new e(this),
+         new f(this),
+         new g(this),
          FastestListDeserializerPlaceholderConfigKt.invoke(
             FastestListPlaceholderConfig.Companion, ReactStylesDiffMapExtensionsKt.getNonNullMap(var2, "placeholderConfig")
          ),
@@ -270,8 +233,8 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
    public companion object {
       internal const val NAME: String
       private const val PROP_HORIZONTAL: String
-      private const val PROP_INSET_END: String
       private const val PROP_INSET_START: String
+      private const val PROP_INSET_END: String
       private const val PROP_KEYBOARD_DISMISS_ON_DRAG: String
       private const val PROP_PLACEHOLDER_CONFIG: String
       private const val PROP_RENDER_AHEAD: String

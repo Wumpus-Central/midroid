@@ -1,14 +1,13 @@
 package com.discord.user_search_worker
 
+import Q8.s
 import com.discord.reactevents.ReactEvents
 import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents
@@ -17,27 +16,19 @@ public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext
    init {
       q.h(var1, "reactContext");
       super(var1);
-      this.reactEvents = new ReactEvents(w.a("ReturnResults", G.b(ReturnResultsEvent.class)));
-      this.worker = new UserSearchWorker(
-         new Function3(this, var1) {
-            final ReactApplicationContext $reactContext;
-            final UserSearchWorkerManagerModule this$0;
+      this.reactEvents = new ReactEvents(s.a("ReturnResults", G.b(ReturnResultsEvent.class)));
+      this.worker = new UserSearchWorker(new d(this, var1));
+   }
 
-            {
-               super(3);
-               this.this$0 = var1;
-               this.$reactContext = var2;
-            }
-
-            public final void invoke(java.util.List<UserSearchWorkerResult> var1, java.lang.String var2, java.lang.String var3) {
-               q.h(var1, "results");
-               q.h(var2, "query");
-               q.h(var3, "uuid");
-               UserSearchWorkerManagerModule.access$getReactEvents$p(this.this$0)
-                  .emitModuleEvent(this.$reactContext, new ReturnResultsEvent(var1, var2, var3, "USER_RESULTS"));
-            }
-         }
-      );
+   @JvmStatic
+   fun `worker$lambda$0`(
+      var0: UserSearchWorkerManagerModule, var1: ReactApplicationContext, var2: java.util.List, var3: java.lang.String, var4: java.lang.String
+   ): Unit {
+      q.h(var2, "results");
+      q.h(var3, "query");
+      q.h(var4, "uuid");
+      var0.reactEvents.emitModuleEvent(var1, new ReturnResultsEvent(var2, var3, var4, "USER_RESULTS"));
+      return Unit.a;
    }
 
    @ReactMethod

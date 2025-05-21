@@ -1,17 +1,24 @@
 package com.discord.chat.presentation.list
 
 import com.discord.chat.presentation.list.item.PortalViewChatListItem
-import kotlin.jvm.internal.q
 
-public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, updateId: Int) : ChannelChatListAdapterUpdate(
-      var2, <unrepresentable>.INSTANCE, <unrepresentable>.INSTANCE
-   ) {
+public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, updateId: Int) : ChannelChatListAdapterUpdate(var2, new q(), new r()) {
    public final val portalChatListItem: PortalViewChatListItem?
    public open val updateId: Int
 
    init {
       this.portalChatListItem = var1;
       this.updateId = var2;
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: Boolean): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$1`(): Unit {
+      return Unit.a;
    }
 
    public operator fun component1(): PortalViewChatListItem? {
@@ -33,7 +40,7 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.portalChatListItem, var1.portalChatListItem)) {
+         if (!kotlin.jvm.internal.q.c(this.portalChatListItem, var1.portalChatListItem)) {
             return false;
          } else {
             return this.updateId == var1.updateId;

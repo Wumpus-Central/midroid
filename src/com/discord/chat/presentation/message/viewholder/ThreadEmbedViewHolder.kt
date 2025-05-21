@@ -29,22 +29,22 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
    @JvmStatic
    fun `bind$lambda$1$lambda$0`(var0: Function1, var1: ThreadEmbedMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapThreadEmbed");
-      kotlin.jvm.internal.q.h(var1, "$threadItem");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()));
    }
 
    public fun bind(threadItem: ThreadEmbedMessageAccessory, onTapThreadEmbed: (MessageId) -> Unit) {
       kotlin.jvm.internal.q.h(var1, "threadItem");
       kotlin.jvm.internal.q.h(var2, "onTapThreadEmbed");
-      val var13: ThreadEmbed = var1.getThreadEmbed();
+      val var12: ThreadEmbed = var1.getThreadEmbed();
       val var14: ThreadEmbedView = this.threadEmbedView;
-      this.threadEmbedView.setThread(var13.getTitle(), var13.getMessageCountLabel());
-      val var9: java.lang.Boolean = var13.getArchived();
-      val var12: java.lang.Boolean = java.lang.Boolean.TRUE;
-      var14.setArchived(kotlin.jvm.internal.q.c(var9, java.lang.Boolean.TRUE), var13.getArchivedIconUrl());
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, new A(var2, var1), 1, null);
-      val var16: ThreadEmbedMessage = var13.getReferencedMessage();
+      this.threadEmbedView.setThread(var12.getTitle(), var12.getMessageCountLabel());
+      val var9: java.lang.Boolean = var12.getArchived();
+      val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
+      var14.setArchived(kotlin.jvm.internal.q.c(var9, java.lang.Boolean.TRUE), var12.getArchivedIconUrl());
+      val var15: O = new O(var2, var1);
+      var var4: Boolean = false;
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var14, false, var15, 1, null);
+      val var16: ThreadEmbedMessage = var12.getReferencedMessage();
       val var20: Message;
       if (var16 != null) {
          var20 = var16.getMessage();
@@ -54,35 +54,35 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
       var var17: Any = "";
       if (var20 == null) {
-         val var23: java.lang.String = var13.getMessagePreviewString();
-         if (var23 != null) {
-            var17 = var23;
+         val var22: java.lang.String = var12.getMessagePreviewString();
+         if (var22 != null) {
+            var17 = var22;
          }
 
          var17 = new DraweeSpanStringBuilder((java.lang.CharSequence)var17);
       } else if (var20.getContent() != null) {
-         val var24: StructurableText = var20.getContent();
-         var17 = var14.getContext();
+         var17 = var20.getContent();
+         val var23: Context = var14.getContext();
+         kotlin.jvm.internal.q.g(var23, "getContext(...)");
          val var10: java.lang.String = var20.getId-3Eiw7ao();
          val var8: Boolean = MessageKt.shouldAnimateEmoji(var20);
-         val var4: Boolean = MessageKt.shouldShowLinkDecorations(var20);
-         val var6: Boolean = var20.getShouldShowRoleDot();
-         val var7: Boolean = var20.getShouldShowRoleOnName();
+         val var5: Boolean = MessageKt.shouldShowLinkDecorations(var20);
+         val var7: Boolean = var20.getShouldShowRoleDot();
+         val var6: Boolean = var20.getShouldShowRoleOnName();
          val var11: FontMetrics = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var11, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var11);
-         val var30: TextPaint = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint();
-         kotlin.jvm.internal.q.e(var17);
-         kotlin.jvm.internal.q.e(var30);
+         val var29: TextPaint = var14.getBinding().threadEmbedMostRecentMessageContent.getPaint();
+         kotlin.jvm.internal.q.g(var29, "getPaint(...)");
          var17 = TextUtilsKt.toSpannable$default(
-            var24,
-            (Context)var17,
+            (StructurableText)var17,
+            var23,
             var10,
             var8,
-            var4,
-            var6,
+            var5,
             var7,
-            var30,
+            var6,
+            var29,
             null,
             null,
             null,
@@ -106,63 +106,55 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
             null
          );
       } else {
-         val var25: Context = var14.getContext();
-         kotlin.jvm.internal.q.g(var25, "getContext(...)");
-         val var26: java.lang.CharSequence = ThreadEmbedViewHolderKt.access$getContentlessPreviewText(var25, var20);
-         if (var26 != null) {
-            var17 = var26;
+         val var24: Context = var14.getContext();
+         kotlin.jvm.internal.q.g(var24, "getContext(...)");
+         val var25: java.lang.CharSequence = ThreadEmbedViewHolderKt.access$getContentlessPreviewText(var24, var20);
+         if (var25 != null) {
+            var17 = var25;
          }
 
          var17 = new DraweeSpanStringBuilder((java.lang.CharSequence)var17);
       }
 
+      val var27: java.lang.String;
+      if (var20 != null) {
+         val var26: Context = var14.getContext();
+         kotlin.jvm.internal.q.g(var26, "getContext(...)");
+         var27 = MessageKt.avatarUrl(var20, var26);
+      } else {
+         var27 = null;
+      }
+
       val var28: java.lang.String;
       if (var20 != null) {
-         val var27: Context = var14.getContext();
-         kotlin.jvm.internal.q.g(var27, "getContext(...)");
-         var28 = MessageKt.avatarUrl(var20, var27);
+         var28 = var20.getUsername();
       } else {
          var28 = null;
       }
 
-      val var29: java.lang.String;
+      val var30: Int;
       if (var20 != null) {
-         var29 = var20.getUsername();
+         var30 = MessageKt.usernameColor$default(var20, 0, 1, null);
       } else {
-         var29 = null;
+         var30 = null;
       }
 
-      val var31: Int;
+      if (kotlin.jvm.internal.q.c(var12.getArchived(), var13) || var20 == null || var20.getContent() == null) {
+         var4 = true;
+      }
+
+      val var31: java.lang.String;
       if (var20 != null) {
-         var31 = MessageKt.usernameColor$default(var20, 0, 1, null);
+         var31 = var20.getClanTag();
       } else {
          var31 = null;
       }
 
-      var var22: Boolean = true;
-      if (!kotlin.jvm.internal.q.c(var13.getArchived(), var12)) {
-         var22 = true;
-         if (var20 != null) {
-            if (var20.getContent() == null) {
-               var22 = true;
-            } else {
-               var22 = false;
-            }
-         }
-      }
-
       val var32: java.lang.String;
       if (var20 != null) {
-         var32 = var20.getClanTag();
+         var32 = var20.getClanBadgeUrl();
       } else {
          var32 = null;
-      }
-
-      val var33: java.lang.String;
-      if (var20 != null) {
-         var33 = var20.getClanBadgeUrl();
-      } else {
-         var33 = null;
       }
 
       val var21: GuildId;
@@ -172,6 +164,6 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          var21 = null;
       }
 
-      var14.setMessage-CKTq3AQ(var28, var29, var31, (DraweeSpanStringBuilder)var17, var22, var32, var33, var21);
+      var14.setMessage-CKTq3AQ(var27, var28, var30, (DraweeSpanStringBuilder)var17, var4, var31, var32, var21);
    }
 }

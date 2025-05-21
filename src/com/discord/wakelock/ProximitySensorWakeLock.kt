@@ -7,9 +7,9 @@ import kotlin.jvm.internal.q
 
 internal class ProximitySensorWakeLock private constructor(powerManager: PowerManager, timeout: Long, tag: String) {
    private final val powerManager: PowerManager
-   private final var systemWakeLock: WakeLock?
-   private final val tag: String
    private final val timeout: Long
+   private final val tag: String
+   private final var systemWakeLock: WakeLock?
 
    public constructor(context: Context, timeout: Long, tag: String) : q.h(var1, "context") {
       q.h(var4, "tag");

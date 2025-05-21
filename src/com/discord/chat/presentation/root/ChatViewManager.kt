@@ -13,7 +13,6 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDChatManagerDelegate
 import com.facebook.react.viewmanagers.DCDChatManagerInterface
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 @ReactModule(name = "DCDChat")
@@ -21,24 +20,18 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    private final val delegate: DCDChatManagerDelegate<ChatView, ChatViewManager> = new DCDChatManagerDelegate(this)
    private final val reactEvents: ReactEvents = CreateChatReactEventsKt.createChatReactEvents()
 
+   @JvmStatic
+   fun `createViewInstance$lambda$1$lambda$0`(var0: ChatView): Int {
+      return var0.getId();
+   }
+
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChatView {
       q.h(var1, "reactContext");
-      val var3: ChatView = new ChatView(var1);
-      val var2: Context = var3.getContext();
-      q.g(var2, "getContext(...)");
-      var3.setEventHandler(new ChatViewEventHandler(var2, this.reactEvents, new Function0(var3) {
-         final ChatView $chatView;
-
-         {
-            super(0);
-            this.$chatView = var1;
-         }
-
-         public final Integer invoke() {
-            return this.$chatView.getId();
-         }
-      }));
-      return var3;
+      val var2: ChatView = new ChatView(var1);
+      val var3: Context = var2.getContext();
+      q.g(var3, "getContext(...)");
+      var2.setEventHandler(new ChatViewEventHandler(var3, this.reactEvents, new b(var2)));
+      return var2;
    }
 
    protected open fun getDelegate(): DCDChatManagerDelegate<ChatView, ChatViewManager> {
@@ -144,9 +137,9 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
    }
 
    public companion object {
-      private const val COMMAND_SCROLL_INTO_VIEW: String
+      public const val NAME: String
       private const val COMMAND_SCROLL_TO: String
       private const val COMMAND_SCROLL_TO_BOTTOM: String
-      public const val NAME: String
+      private const val COMMAND_SCROLL_INTO_VIEW: String
    }
 }

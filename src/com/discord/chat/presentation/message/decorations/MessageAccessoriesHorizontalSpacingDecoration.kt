@@ -11,9 +11,9 @@ import com.discord.reactions.ShortcutsFlexbox
 import kotlin.jvm.internal.q
 
 public class MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx: Int, rightMarginPx: Int, isForwardedMessage: Boolean) : RecyclerView.ItemDecoration {
-   private final val isForwardedMessage: Boolean
    private final val leftMarginPx: Int
    private final val rightMarginPx: Int
+   private final val isForwardedMessage: Boolean
 
    init {
       this.leftMarginPx = var1;

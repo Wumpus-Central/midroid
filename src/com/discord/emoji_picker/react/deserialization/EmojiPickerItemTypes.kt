@@ -1,7 +1,7 @@
 package com.discord.emoji_picker.react.deserialization
 
+import Y8.a
 import kotlin.enums.EnumEntries
-import w8.a
 
 internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: Boolean = false) {
    EMOJI_ROW("Unsupported; don't send full emoji rows to native.", false, 2, null),
@@ -12,8 +12,8 @@ internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: 
    PLACEHOLDER(null, true, 1, null),
    PREMIUM_INLINE_ROADBLOCK("Unsupported; feature included in native section.", false, 2, null),
    TITLE(null, false, 3, null)
-   public final val noop: Boolean
    public final val unsupported: String
+   public final val noop: Boolean
    @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic

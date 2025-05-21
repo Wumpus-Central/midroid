@@ -21,8 +21,6 @@ public class MessageBundleConversationDelegate(onMeasured: (View, Int, Int) -> U
 
    @JvmStatic
    fun `onBindViewHolder$lambda$0`(var0: MessageBundleConversationDelegate, var1: MessageBundleItem, var2: View) {
-      q.h(var0, "this$0");
-      q.h(var1, "$item");
       var0.onTapReply.invoke(MessageId.box-impl((var1 as MessageBundleConversationItem).getMessageItem().getMessage().getId-3Eiw7ao()));
    }
 
@@ -44,10 +42,10 @@ public class MessageBundleConversationDelegate(onMeasured: (View, Int, Int) -> U
          if (var2 is MessageBundleConversationItem) {
             val var5: MessageBundleConversationView = var1 as MessageBundleConversationView;
             val var8: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
-            val var9: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
-            val var7: Context = var5.getContext();
-            q.g(var7, "getContext(...)");
-            var5.configure(var8, MessageBundleDelegateUtilsKt.getEventHandler(var9, var7));
+            val var7: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
+            val var9: Context = var5.getContext();
+            q.g(var9, "getContext(...)");
+            var5.configure(var8, MessageBundleDelegateUtilsKt.getEventHandler(var7, var9));
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var1, false, new a(this, var2), 1, null);
          }
       }

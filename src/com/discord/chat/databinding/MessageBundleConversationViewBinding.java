@@ -10,7 +10,7 @@ import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.MessageContentView;
 import com.discord.reactions.ShortcutsFlexbox;
 import com.facebook.drawee.view.SimpleDraweeView;
-import u0.a;
+import t0.a;
 
 public final class MessageBundleConversationViewBinding implements ViewBinding {
    public final Barrier barrier;
@@ -31,21 +31,21 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
 
    public static MessageBundleConversationViewBinding bind(View var0) {
       int var1 = R.id.barrier;
-      Barrier var5 = (Barrier)a.a(var0, var1);
-      if (var5 != null) {
+      Barrier var2 = (Barrier)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.reactions_view;
-         ShortcutsFlexbox var6 = (ShortcutsFlexbox)a.a(var0, var1);
-         if (var6 != null) {
+         ShortcutsFlexbox var5 = (ShortcutsFlexbox)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.reply_author_avatar;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.reply_author_name;
-               TextView var4 = (TextView)a.a(var0, var1);
-               if (var4 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.reply_text;
-                  MessageContentView var3 = (MessageContentView)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageBundleConversationViewBinding(var0, var5, var6, var2, var4, var3);
+                  MessageContentView var4 = (MessageContentView)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new MessageBundleConversationViewBinding(var0, var2, var5, var6, var3, var4);
                   }
                }
             }

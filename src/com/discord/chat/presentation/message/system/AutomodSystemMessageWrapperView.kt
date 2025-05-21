@@ -16,13 +16,12 @@ import com.discord.chat.presentation.message.decorations.BackgroundHighlightDraw
 import com.discord.chat.presentation.message.decorations.HighlightedMessageDrawer
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class AutomodSystemMessageWrapperView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DecoratedMessageViewBinding
-   private final var drawHighlight: Boolean
    private final val highlightDrawer: BackgroundHighlightDrawer
+   private final var drawHighlight: Boolean
 
    fun AutomodSystemMessageWrapperView(var1: Context) {
       q.h(var1, "context");
@@ -39,6 +38,16 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
       this.setWillNotDraw(false);
    }
 
+   @JvmStatic
+   fun `setMessage$lambda$0`(var0: ChatEventHandler): ChatEventHandler {
+      return var0;
+   }
+
+   @JvmStatic
+   fun `setMessage$lambda$1`(var0: ComponentProvider): ComponentProvider {
+      return var0;
+   }
+
    protected open fun onDraw(canvas: Canvas) {
       q.h(var1, "canvas");
       super.onDraw(var1);
@@ -51,37 +60,15 @@ public class AutomodSystemMessageWrapperView  public constructor(context: Contex
       q.h(var1, "message");
       q.h(var2, "messageContext");
       q.h(var3, "eventHandler");
-      val var4: MessageView = this.binding.messageView;
-      q.g(this.binding.messageView, "messageView");
-      MessageView.setMessage$default(var4, var1, var2, null, var3, null, null, false, false, 244, null);
-      val var6: Function0 = new Function0(var3) {
-         final ChatEventHandler $eventHandler;
-
-         {
-            super(0);
-            this.$eventHandler = var1;
-         }
-
-         public final ChatEventHandler invoke() {
-            return this.$eventHandler;
-         }
-      };
-      val var7: Context = this.getContext();
-      q.g(var7, "getContext(...)");
-      val var8: ComponentProvider = new ComponentProvider(var7, true);
+      MessageView.setMessage$default(this.binding.messageView, var1, var2, null, var3, null, null, false, false, 244, null);
+      val var6: b = new b(var3);
+      val var4: Context = this.getContext();
+      q.g(var4, "getContext(...)");
+      val var7: ComponentProvider = new ComponentProvider(var4, true);
       this.removeAllViews();
-      this.addView(new AutomodSystemMessageDelegate(var6, new Function0(var8) {
-         final ComponentProvider $dummyComponentProvider;
-
-         {
-            super(0);
-            this.$dummyComponentProvider = var1;
-         }
-
-         public final ComponentProvider invoke() {
-            return this.$dummyComponentProvider;
-         }
-      }, new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2), -1, -2);
+      this.addView(
+         new AutomodSystemMessageDelegate(var6, new c(var7), new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2), -1, -2
+      );
       this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, null, var2, false, null, null, false, 122, null)) as java.lang.Boolean;
    }
 }

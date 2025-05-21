@@ -89,12 +89,11 @@ private fun View.updateClickablity() {
 }
 
 private fun OnLongClickListener.updateWithOngoingGestureCancelling(): OnLongClickListener {
-   return new a(var0);
+   return new d(var0);
 }
 
 // $VF: Irreducible bytecode was duplicated to produce valid code
 fun `updateWithOngoingGestureCancelling$lambda$1`(var0: OnLongClickListener, var1: View): Boolean {
-   q.h(var0, "$this_updateWithOngoingGestureCancelling");
    q.e(var1);
    val var4: ArrayList = new ArrayList();
    var var2: ViewParent = var1.getParent();

@@ -1,20 +1,8 @@
 package com.discord.push_notification_monitor
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.Y
-import ka.h
+import Ja.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class PushNotificationMeta(receivedTimestamp: Long,
@@ -25,13 +13,13 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    channelId: String? = null,
    messageId: String? = null
 ) {
-   public final val channelId: String?
-   public final val content: String?
-   public final val messageId: String?
    public final val receivedTimestamp: Long
    public final val silent: Boolean
-   public final val title: String
    public final val type: String
+   public final val title: String
+   public final val content: String?
+   public final val channelId: String?
+   public final val messageId: String?
 
    init {
       q.h(var4, "type");
@@ -115,9 +103,9 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
 
    public override fun hashCode(): Int {
       val var7: Int = java.lang.Long.hashCode(this.receivedTimestamp);
-      val var5: Int = java.lang.Boolean.hashCode(this.silent);
-      val var4: Int = this.type.hashCode();
-      val var6: Int = this.title.hashCode();
+      val var6: Int = java.lang.Boolean.hashCode(this.silent);
+      val var5: Int = this.type.hashCode();
+      val var4: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -137,152 +125,34 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var7 * 31 + var5) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var7 * 31 + var6) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: Long = this.receivedTimestamp;
-      val var1: Boolean = this.silent;
-      val var4: java.lang.String = this.type;
+      val var1: Long = this.receivedTimestamp;
+      val var3: Boolean = this.silent;
+      val var8: java.lang.String = this.type;
       val var6: java.lang.String = this.title;
-      val var7: java.lang.String = this.content;
-      val var9: java.lang.String = this.channelId;
-      val var8: java.lang.String = this.messageId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PushNotificationMeta(receivedTimestamp=");
-      var5.append(var2);
-      var5.append(", silent=");
-      var5.append(var1);
-      var5.append(", type=");
-      var5.append(var4);
-      var5.append(", title=");
-      var5.append(var6);
-      var5.append(", content=");
-      var5.append(var7);
-      var5.append(", channelId=");
-      var5.append(var9);
-      var5.append(", messageId=");
-      var5.append(var8);
-      var5.append(")");
-      return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: PushNotificationMeta.$serializer = new PushNotificationMeta.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.push_notification_monitor.PushNotificationMeta", var0, 7);
-         var1.l("receivedTimestamp", false);
-         var1.l("silent", false);
-         var1.l("type", false);
-         var1.l("title", false);
-         var1.l("content", false);
-         var1.l("channelId", true);
-         var1.l("messageId", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{Y.a, h.a, C0.a, C0.a, a.u(C0.a), a.u(var1), a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): PushNotificationMeta {
-         q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.c(var12);
-         var var2: Int;
-         var var5: Long;
-         var var7: Boolean;
-         var var8: java.lang.String;
-         var var9: java.lang.String;
-         var var10: java.lang.String;
-         var var11: java.lang.String;
-         var var15: java.lang.String;
-         if (var13.y()) {
-            var5 = var13.h(var12, 0);
-            var7 = var13.s(var12, 1);
-            var11 = var13.t(var12, 2);
-            var10 = var13.t(var12, 3);
-            val var14: C0 = C0.a;
-            var9 = var13.v(var12, 4, C0.a, null) as java.lang.String;
-            var8 = var13.v(var12, 5, var14, null) as java.lang.String;
-            var15 = var13.v(var12, 6, var14, null) as java.lang.String;
-            var2 = 127;
-         } else {
-            var var3: Boolean = true;
-            var7 = false;
-            var9 = null;
-            var8 = null;
-            var15 = null;
-            var5 = 0L;
-            var11 = null;
-            var10 = null;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var13.x(var12);
-               switch (var4) {
-                  case -1:
-                     var3 = false;
-                     break;
-                  case 0:
-                     var5 = var13.h(var12, 0);
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var7 = var13.s(var12, 1);
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var11 = var13.t(var12, 2);
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var10 = var13.t(var12, 3);
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var9 = var13.v(var12, 4, C0.a, var9) as java.lang.String;
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var8 = var13.v(var12, 5, C0.a, var8) as java.lang.String;
-                     var2 |= 32;
-                     break;
-                  case 6:
-                     var15 = var13.v(var12, 6, C0.a, var15) as java.lang.String;
-                     var2 |= 64;
-                     break;
-                  default:
-                     throw new n(var4);
-               }
-            }
-         }
-
-         var13.b(var12);
-         return new PushNotificationMeta(var2, var5, var7, var11, var10, var9, var8, var15, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: PushNotificationMeta) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         PushNotificationMeta.write$Self$push_notification_monitor_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var9: java.lang.String = this.content;
+      val var7: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PushNotificationMeta(receivedTimestamp=");
+      var4.append(var1);
+      var4.append(", silent=");
+      var4.append(var3);
+      var4.append(", type=");
+      var4.append(var8);
+      var4.append(", title=");
+      var4.append(var6);
+      var4.append(", content=");
+      var4.append(var9);
+      var4.append(", channelId=");
+      var4.append(var7);
+      var4.append(", messageId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

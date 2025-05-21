@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import u0.a;
+import t0.a;
 
 public final class RoleIconViewBinding implements ViewBinding {
    public final SimpleDraweeSpanTextView roleIconViewUnicodeEmoji;

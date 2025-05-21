@@ -6,13 +6,13 @@ import android.text.style.LineHeightSpan
 import kotlin.jvm.internal.q
 
 public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
+   public final val top: Int
    public final val bottom: Int
    private final var initialized: Boolean
+   private final var origTop: Int
    private final var origAscent: Int
    private final var origBottom: Int
    private final var origDescent: Int
-   private final var origTop: Int
-   public final val top: Int
 
    public constructor(padding: Int) : this(var1, var1)
    init {
@@ -38,9 +38,9 @@ public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
 
          val var7: Spanned = var1 as Spanned;
          if ((var1 as Spanned).getSpanStart(this) == var2) {
-            var2 = this.top;
+            var4 = this.top;
             var6.top = var6.top - this.top;
-            var6.ascent -= var2;
+            var6.ascent -= var4;
          } else {
             var6.top = this.origTop;
             var6.ascent = this.origAscent;

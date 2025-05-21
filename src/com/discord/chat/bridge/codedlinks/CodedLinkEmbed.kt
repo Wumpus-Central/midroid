@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.codedlinks
 
-import ha.f
+import Ja.f
 import kotlinx.serialization.KSerializer
 
 @f(with = CodedLinkSerializer::class)
@@ -17,12 +17,12 @@ public sealed class CodedLinkEmbed protected constructor() {
    public abstract val embedCanBeTapped: Boolean?
    public abstract val headerColor: Int
    public abstract val headerText: String?
-   public abstract val inviteSplash: String?
    public abstract val resolvingGradientEnd: Int?
    public abstract val resolvingGradientStart: Int?
    public abstract val splashHasRadialGradient: Boolean?
    public abstract val splashOpacity: Int?
    public abstract val splashUrl: String?
+   public abstract val inviteSplash: String?
    public abstract val subtitle: String?
    public abstract val subtitleColor: Int?
    public abstract val thumbnailBackgroundColor: Int?

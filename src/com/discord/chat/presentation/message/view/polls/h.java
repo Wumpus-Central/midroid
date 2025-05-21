@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.message.view.polls;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory;
 import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class h implements OnClickListener {
-   public final Function0 j;
+public final class h implements Function0 {
+   public final PollAnswerAdapter j;
+   public final PollAnswerAccessory k;
 
-   public final void onClick(View var1) {
-      PollMediaView.b(this.j, var1);
+   public final Object invoke() {
+      return PollAnswerAdapter.a(this.j, this.k);
    }
 }

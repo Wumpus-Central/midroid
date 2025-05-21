@@ -18,7 +18,12 @@ internal class PassthroughTouchViewGroup(context: Context) : ReactViewGroup {
       val var2: Field = ReactViewGroup.class.getDeclaredField("mPointerEvents");
       var2.setAccessible(true);
       var2.set(this, PointerEvents.BOX_NONE);
-      this.onTouchDown = <unrepresentable>.INSTANCE;
+      this.onTouchDown = new a();
+   }
+
+   @JvmStatic
+   fun `onTouchDown$lambda$0`(): Unit {
+      return Unit.a;
    }
 
    public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {

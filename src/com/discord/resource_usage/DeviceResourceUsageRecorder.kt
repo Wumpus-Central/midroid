@@ -1,6 +1,7 @@
 package com.discord.resource_usage
 
-import Ia.e
+import P1.b
+import Q8.s
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
@@ -8,8 +9,8 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
+import kb.e
 import kotlin.jvm.internal.q
-import o8.w
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
@@ -25,25 +26,23 @@ public class DeviceResourceUsageRecorder {
    }
 
    public companion object {
-      private final val downloads: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
-      private final val fresco: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
-      private final val initialAppReceiveBytes: Long
-      private final val initialAppSendBytes: Long
-      private final var initialCellularReceiveBytes: Long
-      private final var initialCellularSendBytes: Long
-      private final var initialTotalReceiveBytes: Long
-      private final var initialTotalSendBytes: Long
+      public final var socketBytesReceived: Long
+         internal set
 
       public final var mediaPlayerBytesReceived: Long
          internal set
 
       private final val ota: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
-
-      public final var socketBytesReceived: Long
-         internal set
-
-      private final val uid: Int
       private final val xhr: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
+      private final val fresco: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
+      private final val downloads: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats
+      private final val uid: Int
+      private final var initialCellularReceiveBytes: Long
+      private final var initialCellularSendBytes: Long
+      private final var initialTotalReceiveBytes: Long
+      private final var initialTotalSendBytes: Long
+      private final val initialAppReceiveBytes: Long
+      private final val initialAppSendBytes: Long
 
       private fun requestStatsInterceptor(chain: Chain, stats: com.discord.resource_usage.DeviceResourceUsageRecorder.RequestStats): Response {
          val var4: Response = var1.a(var1.w());
@@ -51,8 +50,8 @@ public class DeviceResourceUsageRecorder {
          var2.setNumRequests(var2.getNumRequests() + 1);
          if (e.b(var4) && var3 != null) {
             val var5: BufferedSource = var3.source();
-            var5.s(java.lang.Long.MAX_VALUE);
-            var2.setBytesReceived(var2.getBytesReceived() + var5.j().X1());
+            var5.t(java.lang.Long.MAX_VALUE);
+            var2.setBytesReceived(var2.getBytesReceived() + var5.k().C1());
          }
 
          return var4;
@@ -93,7 +92,7 @@ public class DeviceResourceUsageRecorder {
                         break label48;
                      }
 
-                     var11 = a.a(var4);
+                     var11 = b.a(var4);
                   } catch (var8: Exception) {
                      var9 = new Pair(null, null);
                      break label47;
@@ -135,39 +134,39 @@ public class DeviceResourceUsageRecorder {
          }
 
          return NativeMapExtensionsKt.nativeMapOf(
-            w.a("signalStrengthLevel", var9.a() as Int),
-            w.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
-            w.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
-            w.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),
-            w.a("totalReceiveBytes", TrafficStats.getTotalRxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalReceiveBytes$cp()),
-            w.a("totalSendBytes", TrafficStats.getTotalTxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalSendBytes$cp()),
-            w.a(
+            s.a("signalStrengthLevel", var9.a() as Int),
+            s.a("isNetworkRoaming", var9.b() as java.lang.Boolean),
+            s.a("cellularReceiveBytes", TrafficStats.getMobileRxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularReceiveBytes$cp()),
+            s.a("cellularSendBytes", TrafficStats.getMobileTxBytes() - DeviceResourceUsageRecorder.access$getInitialCellularSendBytes$cp()),
+            s.a("totalReceiveBytes", TrafficStats.getTotalRxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalReceiveBytes$cp()),
+            s.a("totalSendBytes", TrafficStats.getTotalTxBytes() - DeviceResourceUsageRecorder.access$getInitialTotalSendBytes$cp()),
+            s.a(
                "uidReceiveBytes",
                TrafficStats.getUidRxBytes(DeviceResourceUsageRecorder.access$getUid$cp()) - DeviceResourceUsageRecorder.access$getInitialAppReceiveBytes$cp()
             ),
-            w.a(
+            s.a(
                "uidSendBytes",
                TrafficStats.getUidTxBytes(DeviceResourceUsageRecorder.access$getUid$cp()) - DeviceResourceUsageRecorder.access$getInitialAppSendBytes$cp()
             ),
-            w.a("socketBytesReceived", this.getSocketBytesReceived()),
-            w.a("otaBytesReceived", DeviceResourceUsageRecorder.access$getOta$cp().getBytesReceived()),
-            w.a("otaNumRequests", DeviceResourceUsageRecorder.access$getOta$cp().getNumRequests()),
-            w.a("xhrBytesReceived", DeviceResourceUsageRecorder.access$getXhr$cp().getBytesReceived()),
-            w.a("xhrNumRequests", DeviceResourceUsageRecorder.access$getXhr$cp().getNumRequests()),
-            w.a("frescoBytesReceived", DeviceResourceUsageRecorder.access$getFresco$cp().getBytesReceived()),
-            w.a("frescoNumRequests", DeviceResourceUsageRecorder.access$getFresco$cp().getNumRequests()),
-            w.a("downloadBytesReceived", DeviceResourceUsageRecorder.access$getDownloads$cp().getBytesReceived()),
-            w.a("downloadNumRequests", DeviceResourceUsageRecorder.access$getDownloads$cp().getNumRequests()),
-            w.a("mediaPlayerBytesReceived", this.getMediaPlayerBytesReceived())
+            s.a("socketBytesReceived", this.getSocketBytesReceived()),
+            s.a("otaBytesReceived", DeviceResourceUsageRecorder.access$getOta$cp().getBytesReceived()),
+            s.a("otaNumRequests", DeviceResourceUsageRecorder.access$getOta$cp().getNumRequests()),
+            s.a("xhrBytesReceived", DeviceResourceUsageRecorder.access$getXhr$cp().getBytesReceived()),
+            s.a("xhrNumRequests", DeviceResourceUsageRecorder.access$getXhr$cp().getNumRequests()),
+            s.a("frescoBytesReceived", DeviceResourceUsageRecorder.access$getFresco$cp().getBytesReceived()),
+            s.a("frescoNumRequests", DeviceResourceUsageRecorder.access$getFresco$cp().getNumRequests()),
+            s.a("downloadBytesReceived", DeviceResourceUsageRecorder.access$getDownloads$cp().getBytesReceived()),
+            s.a("downloadNumRequests", DeviceResourceUsageRecorder.access$getDownloads$cp().getNumRequests()),
+            s.a("mediaPlayerBytesReceived", this.getMediaPlayerBytesReceived())
          );
       }
    }
 
    public data class RequestStats(numRequests: Int = 0, bytesReceived: Long = 0L) {
-      public final var bytesReceived: Long
+      public final var numRequests: Int
          internal set
 
-      public final var numRequests: Int
+      public final var bytesReceived: Long
          internal set
 
       fun RequestStats() {

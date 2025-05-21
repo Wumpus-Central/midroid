@@ -7,13 +7,14 @@ import androidx.recyclerview.widget.RecyclerView.LayoutParams
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.R
+import g9.a
 import kotlin.jvm.internal.q
 
 public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager {
-   private final var availableWidth: Int
    public final val context: Context
-   private final val mediaMaxHeight: Int
    private final val spacingPx: Int
+   private final val mediaMaxHeight: Int
+   private final var availableWidth: Int
 
    init {
       q.h(var1, "context");
@@ -159,7 +160,7 @@ public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager 
                var34 = var13 - 1;
             }
 
-            var34 = E8.a.c((float)Math.ceil((double)((float)(this.availableWidth - var34 * this.spacingPx) / 6.0F * (float)var26 + (float)var20)));
+            var34 = a.c((float)Math.ceil((double)((float)(this.availableWidth - var34 * this.spacingPx) / 6.0F * (float)var26 + (float)var20)));
             this.layoutDecoratedWithMargins(var19, var34, var12, var34 + var6, var12 + var5);
             var var37: MosaicView = null;
             if (var16) {

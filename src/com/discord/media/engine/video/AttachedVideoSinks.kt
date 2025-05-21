@@ -14,14 +14,48 @@ internal object AttachedVideoSinks {
    private final val streamOutputMap: ConcurrentHashMap<String, com.discord.media.engine.video.AttachedVideoSinks.VideoOutputSinks> = new ConcurrentHashMap()
 
    @JvmStatic
-   fun `addSink$lambda$0`(var0: Function1, var1: Any): AttachedVideoSinks.VideoOutputSinks {
-      q.h(var0, "$tmp0");
+   fun `addSink$lambda$1`(var0: BooleanRef, var1: VideoSink, var2: MediaEngine, var3: java.lang.String, var4: java.lang.String): AttachedVideoSinks.VideoOutputSinks {
+      q.h(var4, "it");
+      var0.j = true;
+      val var5: AttachedVideoSinks.VideoOutputSinks = new AttachedVideoSinks.VideoOutputSinks(var1);
+      var2.setVideoOutputSink$media_engine_release(var3, new Function2(var5) {
+         {
+            super(2, var1, AttachedVideoSinks.VideoOutputSinks::class.java, "onFrame", "onFrame(Lorg/webrtc/VideoFrame;Z)Z", 0);
+         }
+
+         public final java.lang.Boolean invoke(VideoFrame var1, boolean var2) {
+            q.h(var1, "p0");
+            return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1, var2);
+         }
+      });
+      return var5;
+   }
+
+   @JvmStatic
+   fun `addSink$lambda$2`(var0: Function1, var1: Any): AttachedVideoSinks.VideoOutputSinks {
       return var0.invoke(var1) as AttachedVideoSinks.VideoOutputSinks;
    }
 
    @JvmStatic
-   fun `removeSink$lambda$1`(var0: Function2, var1: Any, var2: Any): AttachedVideoSinks.VideoOutputSinks {
-      q.h(var0, "$tmp0");
+   fun `removeSink$lambda$4`(var0: VideoSink, var1: MediaEngine, var2: java.lang.String, var3: java.lang.String, var4: AttachedVideoSinks.VideoOutputSinks): AttachedVideoSinks.VideoOutputSinks {
+      q.h(var3, "<unused var>");
+      var var6: AttachedVideoSinks.VideoOutputSinks = null;
+      if (var4 != null) {
+         var4.remove(var0);
+         var var5: AttachedVideoSinks.VideoOutputSinks = var4;
+         if (var4.isEmpty()) {
+            var1.setVideoOutputSink$media_engine_release(var2, null);
+            var5 = null;
+         }
+
+         var6 = var5;
+      }
+
+      return var6;
+   }
+
+   @JvmStatic
+   fun `removeSink$lambda$5`(var0: Function2, var1: Any, var2: Any): AttachedVideoSinks.VideoOutputSinks {
       return var0.invoke(var1, var2) as AttachedVideoSinks.VideoOutputSinks;
    }
 
@@ -30,37 +64,7 @@ internal object AttachedVideoSinks {
       q.h(var2, "sink");
       q.h(var3, "streamId");
       val var4: BooleanRef = new BooleanRef();
-      val var5: Any = streamOutputMap.computeIfAbsent(var3, new a(new Function1(var4, var2, var1, var3) {
-         final BooleanRef $isNewlyCreated;
-         final MediaEngine $mediaEngine;
-         final VideoSink $sink;
-         final java.lang.String $streamId;
-
-         {
-            super(1);
-            this.$isNewlyCreated = var1;
-            this.$sink = var2;
-            this.$mediaEngine = var3;
-            this.$streamId = var4;
-         }
-
-         public final AttachedVideoSinks.VideoOutputSinks invoke(java.lang.String var1) {
-            q.h(var1, "it");
-            this.$isNewlyCreated.j = true;
-            val var2: AttachedVideoSinks.VideoOutputSinks = new AttachedVideoSinks.VideoOutputSinks(this.$sink);
-            this.$mediaEngine.setVideoOutputSink$media_engine_release(this.$streamId, new Function2(var2) {
-               {
-                  super(2, var1, AttachedVideoSinks.VideoOutputSinks::class.java, "onFrame", "onFrame(Lorg/webrtc/VideoFrame;Z)Z", 0);
-               }
-
-               public final java.lang.Boolean invoke(VideoFrame var1, boolean var2x) {
-                  q.h(var1, "p0");
-                  return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1, var2x);
-               }
-            });
-            return var2;
-         }
-      }));
+      val var5: Any = streamOutputMap.computeIfAbsent(var3, new b(new a(var4, var2, var1, var3)));
       q.g(var5, "computeIfAbsent(...)");
       (var5 as AttachedVideoSinks.VideoOutputSinks).add(var2);
       return var4.j;
@@ -75,35 +79,7 @@ internal object AttachedVideoSinks {
       q.h(var2, "sink");
       q.h(var3, "streamId");
       val var4: Boolean;
-      if (streamOutputMap.compute(var3, new b(new Function2(var2, var1, var3) {
-         final MediaEngine $mediaEngine;
-         final VideoSink $sink;
-         final java.lang.String $streamId;
-
-         {
-            super(2);
-            this.$sink = var1;
-            this.$mediaEngine = var2;
-            this.$streamId = var3;
-         }
-
-         public final AttachedVideoSinks.VideoOutputSinks invoke(java.lang.String var1, AttachedVideoSinks.VideoOutputSinks var2) {
-            q.h(var1, "<anonymous parameter 0>");
-            var var5: AttachedVideoSinks.VideoOutputSinks = null;
-            if (var2 != null) {
-               val var3: MediaEngine = this.$mediaEngine;
-               val var4: java.lang.String = this.$streamId;
-               var2.remove(this.$sink);
-               var5 = var2;
-               if (var2.isEmpty()) {
-                  var3.setVideoOutputSink$media_engine_release(var4, null);
-                  var5 = null;
-               }
-            }
-
-            return var5;
-         }
-      })) != null) {
+      if (streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null) {
          var4 = true;
       } else {
          var4 = false;

@@ -1,5 +1,7 @@
 package com.discord.chat.bridge.row
 
+import Na.d
+import Na.g
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -9,8 +11,6 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import la.d
-import la.g
 
 public object RowSerializer : d(G.b(Row.class)) {
    private const val CHANGE_TYPE_DELETE: String = "3"

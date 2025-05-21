@@ -1,5 +1,6 @@
 package com.discord.qr.scanner
 
+import Q8.s
 import com.discord.qr.scanner.events.OnQRCodeFoundEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -7,49 +8,32 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
-import kotlin.jvm.functions.Function0
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onQRCodeFound", G.b(OnQRCodeFoundEvent.class)))
    private final val delegate: DCDQRScannerManagerDelegate<QRScanner, QRScannerViewManager>
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onQRCodeFound", G.b(OnQRCodeFoundEvent.class)))
+
+   @JvmStatic
+   fun `createViewInstance$lambda$2$lambda$0`(var0: QRScannerViewManager, var1: QRScanner, var2: java.lang.String): Unit {
+      q.h(var2, "code");
+      var0.reactEvents.emitEvent(var1, new OnQRCodeFoundEvent("SUCCEEDED", var2));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `createViewInstance$lambda$2$lambda$1`(var0: QRScannerViewManager, var1: QRScanner): Unit {
+      var0.reactEvents.emitEvent(var1, new OnQRCodeFoundEvent("FAILED", null));
+      return Unit.a;
+   }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): QRScanner {
       q.h(var1, "reactContext");
       val var2: QRScanner = new QRScanner(var1, null, 0, 6, null);
-      var2.setOnCodeFound(new Function1(this, var2) {
-         final QRScanner $scanner;
-         final QRScannerViewManager this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-            this.$scanner = var2;
-         }
-
-         public final void invoke(java.lang.String var1) {
-            q.h(var1, "code");
-            QRScannerViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$scanner, new OnQRCodeFoundEvent("SUCCEEDED", var1));
-         }
-      });
-      var2.setOnCodeNotFound(new Function0(this, var2) {
-         final QRScanner $scanner;
-         final QRScannerViewManager this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$scanner = var2;
-         }
-
-         public final void invoke() {
-            QRScannerViewManager.access$getReactEvents$p(this.this$0).emitEvent(this.$scanner, new OnQRCodeFoundEvent("FAILED", null));
-         }
-      });
+      var2.setOnCodeFound(new d(this, var2));
+      var2.setOnCodeNotFound(new e(this, var2));
       return var2;
    }
 

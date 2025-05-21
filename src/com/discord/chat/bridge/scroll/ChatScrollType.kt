@@ -1,14 +1,12 @@
 package com.discord.chat.bridge.scroll
 
+import Ja.f
+import Y8.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = ChatScrollType.Serializer::class)
 public enum class ChatScrollType(serialNumber: Int) : IntEnum {
@@ -19,8 +17,6 @@ public enum class ChatScrollType(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private ChatScrollType[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public ChatScrollType.Companion Companion = new ChatScrollType.Companion(null);
 
@@ -42,7 +38,7 @@ public enum class ChatScrollType(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<ChatScrollType> {
-         return this.get$cachedSerializer();
+         return ChatScrollType.Serializer.INSTANCE;
       }
    }
 

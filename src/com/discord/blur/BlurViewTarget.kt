@@ -2,13 +2,12 @@ package com.discord.blur
 
 import android.annotation.SuppressLint
 import android.content.Context
-import kotlin.jvm.internal.q
 
 @SuppressLint(["ViewConstructor"])
 internal class BlurViewTarget(context: Context, blurTargetNativeId: String) : BlurViewTargetBase {
    init {
-      q.h(var1, "context");
-      q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
       super(var1, var2);
    }
 

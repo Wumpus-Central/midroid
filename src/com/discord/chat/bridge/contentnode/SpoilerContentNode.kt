@@ -1,25 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
+import Ja.f
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {
    public final val content: List<ContentNode>
-   public open val obscureOrNull: String
    public open val spoilerOrNull: String
+   public open val obscureOrNull: String
 
    init {
       q.h(var1, "content");
@@ -53,104 +43,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SpoilerContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: SpoilerContentNode.$serializer = new SpoilerContentNode.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("spoiler", var0, 3);
-         var1.l("content", false);
-         var1.l("spoilerOrNull", true);
-         var1.l("obscureOrNull", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{SpoilerContentNode.access$get$childSerializers$cp()[0], C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): SpoilerContentNode {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var8: Array<KSerializer> = SpoilerContentNode.access$get$childSerializers$cp();
-         val var5: Boolean = var10.y();
-         var var7: java.util.List = null;
-         var var2: Int;
-         val var6: java.util.List;
-         var var12: java.lang.String;
-         val var15: java.lang.String;
-         if (var5) {
-            var6 = var10.m(var9, 0, var8[0], null) as java.util.List;
-            val var11: java.lang.String = var10.t(var9, 1);
-            val var14: java.lang.String = var10.t(var9, 2);
-            var2 = 7;
-            var15 = var11;
-            var12 = var14;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var var13: java.lang.String = null;
-            var12 = null;
-
-            while (var3) {
-               val var4: Int = var10.x(var9);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var12 = var10.t(var9, 2);
-                        var2 |= 4;
-                     } else {
-                        var13 = var10.t(var9, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var10.m(var9, 0, var8[0], var7) as java.util.List;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var15 = var13;
-            var6 = var7;
-         }
-
-         var10.b(var9);
-         return new SpoilerContentNode(var2, var6, var15, var12, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: SpoilerContentNode) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         SpoilerContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var2: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SpoilerContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

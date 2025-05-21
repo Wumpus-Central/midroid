@@ -1,5 +1,6 @@
 package com.discord.theme
 
+import Q8.n
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -10,16 +11,15 @@ import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
 import kotlin.jvm.internal.q
-import o8.p
 
 public object ThemeManager {
-   private final lateinit var resourceTheme: Theme
-   private final lateinit var resources: Resources
-   private final var saturationFactor: Float = 1.0F
-   private final var showSplashImage: Boolean = true
+   private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
    private final lateinit var theme: DiscordTheme
    private final var themeOverride: DiscordTheme?
-   private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
+   private final var showSplashImage: Boolean = true
+   private final var saturationFactor: Float = 1.0F
+   private final lateinit var resources: Resources
+   private final lateinit var resourceTheme: Theme
 
    private fun initThemeObject(themeType: DiscordTheme): DiscordThemeObject {
       val var2: Int = ThemeManager.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
@@ -29,7 +29,7 @@ public object ThemeManager {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new p();
+                  throw new n();
                }
 
                var var7: Resources = resources;
@@ -38,10 +38,10 @@ public object ThemeManager {
                   var7 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new MidnightTheme(var7, var3);
@@ -52,10 +52,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
+               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-               } else {
-                  var3 = resourceTheme;
+                  var3 = null;
                }
 
                var8 = new DarkerTheme(var9, var3);
@@ -136,12 +136,8 @@ public object ThemeManager {
 
    public fun init(context: Context) {
       q.h(var1, "context");
-      val var2: Resources = var1.getResources();
-      q.g(var2, "getResources(...)");
-      resources = var2;
-      val var3: Theme = var1.getTheme();
-      q.g(var3, "getTheme(...)");
-      resourceTheme = var3;
+      resources = var1.getResources();
+      resourceTheme = var1.getTheme();
       this.setTheme(DiscordTheme.DARK);
    }
 

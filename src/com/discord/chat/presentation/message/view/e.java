@@ -1,13 +1,10 @@
 package com.discord.chat.presentation.message.view;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class e implements AnimatorUpdateListener {
-   public final AttachmentUploadOverlayView a;
-
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      AttachmentUploadOverlayView.l(this.a, var1);
+public final class e implements Function0 {
+   public final Object invoke() {
+      return AttachmentUploadOverlayView.g();
    }
 }

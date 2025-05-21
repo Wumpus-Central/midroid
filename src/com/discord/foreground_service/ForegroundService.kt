@@ -8,6 +8,7 @@ import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.internal.q
+import x1.a
 
 internal class ForegroundService : Service {
    public open fun onBind(intent: Intent?): IBinder? {
@@ -28,9 +29,9 @@ internal class ForegroundService : Service {
    }
 
    public companion object {
-      internal const val EXTRA_PERMISSION_TYPE: String
       private const val MINIMUM_SERVICE_LIFETIME: Long
       private final var lastServiceStartTime: Long
+      internal const val EXTRA_PERMISSION_TYPE: String
 
       private fun getServiceIntent(context: Context): Intent {
          return new Intent(var1, ForegroundService::class.java);
@@ -38,7 +39,6 @@ internal class ForegroundService : Service {
 
       @JvmStatic
       fun `stop$lambda$0`(var0: Context, var1: Service) {
-         q.h(var0, "$context");
          ForegroundService.Companion.stopInternal(var0, var1);
       }
 

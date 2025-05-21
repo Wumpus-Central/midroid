@@ -1,14 +1,12 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
 import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class K implements OnClickListener {
-   public final Function0 j;
+public final class K implements Function0 {
+   public final FileAttachmentView j;
 
-   public final void onClick(View var1) {
-      IconButtonView.a(this.j, var1);
+   public final Object invoke() {
+      return FileAttachmentView.i(this.j);
    }
 }

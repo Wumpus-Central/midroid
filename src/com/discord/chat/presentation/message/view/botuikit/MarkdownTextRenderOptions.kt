@@ -92,8 +92,8 @@ public data class MarkdownTextRenderOptions(containerId: String,
    public override fun toString(): String {
       val var5: java.lang.String = this.containerId;
       val var1: Boolean = this.shouldAnimateEmoji;
-      val var4: Boolean = this.shouldShowLinkDecorations;
-      val var3: Boolean = this.shouldShowRoleDot;
+      val var3: Boolean = this.shouldShowLinkDecorations;
+      val var4: Boolean = this.shouldShowRoleDot;
       val var2: Boolean = this.shouldShowRoleOnName;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MarkdownTextRenderOptions(containerId=");
@@ -101,9 +101,9 @@ public data class MarkdownTextRenderOptions(containerId: String,
       var6.append(", shouldAnimateEmoji=");
       var6.append(var1);
       var6.append(", shouldShowLinkDecorations=");
-      var6.append(var4);
-      var6.append(", shouldShowRoleDot=");
       var6.append(var3);
+      var6.append(", shouldShowRoleDot=");
+      var6.append(var4);
       var6.append(", shouldShowRoleOnName=");
       var6.append(var2);
       var6.append(")");

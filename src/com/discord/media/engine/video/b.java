@@ -1,14 +1,14 @@
 package com.discord.media.engine.video;
 
-import java.util.function.BiFunction;
-import kotlin.jvm.functions.Function2;
+import java.util.function.Function;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class b implements BiFunction {
-   public final Function2 a;
+public final class b implements Function {
+   public final Function1 a;
 
    @Override
-   public final Object apply(Object var1, Object var2) {
-      return AttachedVideoSinks.a(this.a, var1, var2);
+   public final Object apply(Object var1) {
+      return AttachedVideoSinks.a(this.a, var1);
    }
 }

@@ -1,35 +1,15 @@
 package com.discord.chat.reactevents
 
+import Ja.f
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.G
-import ka.p0
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import kotlinx.serialization.internal.SerializationConstructorMarker
 
 @f
 public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), ReactEvent {
    public final val messageId: MessageId
-
-   fun TapRemixData(var1: Int, var2: java.lang.String, var3: SerializationConstructorMarker) {
-      if (1 != (var1 and 1)) {
-         p0.b(var1, 1, TapRemixData.$serializer.INSTANCE.getDescriptor());
-      }
-
-      super();
-      this.messageId = var2;
-   }
 
    fun TapRemixData(var1: java.lang.String) {
       q.h(var1, "messageId");
@@ -65,97 +45,12 @@ public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), React
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapRemixData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TapRemixData.$serializer = new TapRemixData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapRemixData", var0, 1);
-         var1.l("messageId", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{MessageId.$serializer.INSTANCE};
-      }
-
-      public open fun deserialize(decoder: Decoder): TapRemixData {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         val var5: Boolean = var7.y();
-         var var2: Byte = 1;
-         var var10: java.lang.String;
-         if (var5) {
-            val var9: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, null) as MessageId;
-            if (var9 != null) {
-               var10 = var9.unbox-impl();
-            } else {
-               var10 = null;
-            }
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var10 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     throw new n(var4);
-                  }
-
-                  val var11: MessageId;
-                  if (var10 != null) {
-                     var11 = MessageId.box-impl(var10);
-                  } else {
-                     var11 = null;
-                  }
-
-                  val var12: MessageId = var7.m(var6, 0, MessageId.$serializer.INSTANCE, var11) as MessageId;
-                  if (var12 != null) {
-                     var10 = var12.unbox-impl();
-                  } else {
-                     var10 = null;
-                  }
-
-                  var2 = 1;
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new TapRemixData(var2, var10, null, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TapRemixData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TapRemixData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapRemixData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

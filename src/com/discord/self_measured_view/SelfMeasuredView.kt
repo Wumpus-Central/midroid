@@ -1,5 +1,6 @@
 package com.discord.self_measured_view
 
+import Q8.s
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -10,15 +11,15 @@ import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
 import kotlin.jvm.internal.q
-import o8.w
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
-   private final val fabricEnabled: Boolean
    private final val reactContext: ReactContext
-   private final val runnable: Runnable
+   private final val fabricEnabled: Boolean
 
    public final var stateWrapper: StateWrapper?
       internal set
+
+   private final val runnable: Runnable
 
    fun SelfMeasuredView(var1: Context) {
       q.h(var1, "context");
@@ -44,7 +45,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
                this.stateWrapper
                   .updateState(
                      NativeMapExtensionsKt.nativeMapOf(
-                        w.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), w.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
+                        s.a("measuredViewWidth", PixelUtil.toDIPFromPixel((float)var2)), s.a("measuredViewHeight", PixelUtil.toDIPFromPixel((float)var4))
                      )
                   );
             }
@@ -59,23 +60,20 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
 
    @JvmStatic
    fun `maybePostMeasuredEvent$lambda$3$lambda$2`(var0: UIManagerModule, var1: SelfMeasuredView) {
-      q.h(var0, "$uiManagerModule");
-      q.h(var1, "this$0");
       var0.updateNodeSize(var1.getId(), var1.getMeasuredWidth(), var1.getMeasuredHeight());
    }
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: SelfMeasuredView) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      var2 = this.getMeasuredWidth();
-      val var3: Int = this.getMeasuredHeight();
+      val var3: Int = this.getMeasuredWidth();
+      var2 = this.getMeasuredHeight();
       val var4: Pair = ViewMeasureExtensionsKt.getMaximumSizeOfChildren(this, var1);
       this.setMeasuredDimension((var4.a() as java.lang.Number).intValue(), (var4.b() as java.lang.Number).intValue());
-      this.maybePostMeasuredEvent(var2, this.getMeasuredWidth(), var3, this.getMeasuredHeight());
+      this.maybePostMeasuredEvent(var3, this.getMeasuredWidth(), var2, this.getMeasuredHeight());
    }
 
    public open fun requestLayout() {

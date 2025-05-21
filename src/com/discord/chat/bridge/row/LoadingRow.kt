@@ -1,26 +1,15 @@
 package com.discord.chat.bridge.row
 
+import Ja.f
 import com.discord.chat.bridge.ChangeType
-import ha.f
-import ha.n
-import ka.G
-import ka.N
-import ka.h
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row {
-   public final val button: LoadMoreButton
-   public open val changeType: ChangeType
    public open val index: Int
+   public open val changeType: ChangeType
+   public final val button: LoadMoreButton
    public final val isLoading: Boolean
 
    init {
@@ -80,117 +69,20 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var5: ChangeType = this.changeType;
-      val var4: LoadMoreButton = this.button;
+      val var4: ChangeType = this.changeType;
+      val var5: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LoadingRow(index=");
       var3.append(var1);
       var3.append(", changeType=");
-      var3.append(var5);
-      var3.append(", button=");
       var3.append(var4);
+      var3.append(", button=");
+      var3.append(var5);
       var3.append(", isLoading=");
       var3.append(var2);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: LoadingRow.$serializer = new LoadingRow.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("4", var0, 4);
-         var1.l("index", false);
-         var1.l("changeType", false);
-         var1.l("button", false);
-         var1.l("isLoading", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, ChangeType.Serializer.INSTANCE, LoadMoreButton.$serializer.INSTANCE, h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): LoadingRow {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         var var2: Int;
-         var var3: Int;
-         var var4: Int;
-         var var7: ChangeType;
-         var var10: LoadMoreButton;
-         if (var9.y()) {
-            var4 = var9.k(var8, 0);
-            var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, null) as ChangeType;
-            var10 = var9.m(var8, 2, LoadMoreButton.$serializer.INSTANCE, null) as LoadMoreButton;
-            var2 = var9.s(var8, 3);
-            var3 = 15;
-         } else {
-            var var5: Boolean = true;
-            var4 = 0;
-            var2 = 0;
-            var7 = null;
-            var10 = null;
-            var3 = 0;
-
-            while (var5) {
-               val var6: Int = var9.x(var8);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        if (var6 != 2) {
-                           if (var6 != 3) {
-                              throw new n(var6);
-                           }
-
-                           var3 = var9.s(var8, 3);
-                           var2 |= 8;
-                        } else {
-                           var10 = var9.m(var8, 2, LoadMoreButton.$serializer.INSTANCE, var10) as LoadMoreButton;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var7 = var9.m(var8, 1, ChangeType.Serializer.INSTANCE, var7) as ChangeType;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var4 = var9.k(var8, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var5 = false;
-               }
-            }
-
-            var3 = var2;
-            var2 = var3;
-         }
-
-         var9.b(var8);
-         return new LoadingRow(var3, var4, var7, var10, (boolean)var2, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: LoadingRow) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         LoadingRow.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

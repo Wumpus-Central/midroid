@@ -1,13 +1,20 @@
 package com.discord.misc.utilities.time
 
+import Q8.j
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import o8.l
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
+   private final val startTime: Long
+
+   public final val durationMillis: Long
+      public final get() {
+         return (this.durationMillis$delegate.getValue() as java.lang.Number).longValue();
+      }
+
+
    public final val duration: String
       public final get() {
          val var1: Any = this.duration$delegate.getValue();
@@ -16,48 +23,28 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
       }
 
 
-   public final val durationMillis: Long
-      public final get() {
-         return (this.durationMillis$delegate.getValue() as java.lang.Number).longValue();
-      }
-
-
-   private final val startTime: Long
-
    fun TimeElapsed() {
       this(0L, 1, null);
    }
 
    init {
       this.startTime = var1;
-      this.durationMillis$delegate = l.a(new Function0(this) {
-         final TimeElapsed this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final java.lang.Long invoke() {
-            return System.currentTimeMillis() - TimeElapsed.access$getStartTime$p(this.this$0);
-         }
-      });
-      this.duration$delegate = l.a(new Function0(this) {
-         final TimeElapsed this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final java.lang.String invoke() {
-            return new SimpleDateFormat("mm:ss:SSS", Locale.getDefault()).format(new Date(this.this$0.getDurationMillis()));
-         }
-      });
+      this.durationMillis$delegate = j.b(new a(this));
+      this.duration$delegate = j.b(new b(this));
    }
 
    private operator fun component1(): Long {
       return this.startTime;
+   }
+
+   @JvmStatic
+   fun `durationMillis_delegate$lambda$0`(var0: TimeElapsed): Long {
+      return System.currentTimeMillis() - var0.startTime;
+   }
+
+   @JvmStatic
+   fun `duration_delegate$lambda$1`(var0: TimeElapsed): java.lang.String {
+      return new SimpleDateFormat("mm:ss:SSS", Locale.getDefault()).format(new Date(var0.getDurationMillis()));
    }
 
    public fun copy(startTime: Long = var0.startTime): TimeElapsed {

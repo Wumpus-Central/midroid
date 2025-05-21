@@ -1,17 +1,10 @@
 package com.discord.primitives
 
+import Ja.f
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import ha.f
-import ka.G
-import ka.Y
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.internal.InlineClassDescriptor
 
 @f
 public inline class UserId : SnowflakePrimitive {
@@ -23,7 +16,7 @@ public inline class UserId : SnowflakePrimitive {
    }
 
    @JvmStatic
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -71,8 +64,8 @@ public inline class UserId : SnowflakePrimitive {
    }
 
    @JvmStatic
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var2, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var2, "dest");
       var2.writeLong(var0);
    }
 
@@ -97,46 +90,8 @@ public inline class UserId : SnowflakePrimitive {
    }
 
    fun writeToParcel(var1: Parcel, var2: Int) {
-      q.h(var1, "out");
+      q.h(var1, "dest");
       writeToParcel-impl(this.snowflake, var1, var2);
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: UserId.$serializer = new UserId.$serializer();
-         INSTANCE = var0;
-         val var1: InlineClassDescriptor = new InlineClassDescriptor("com.discord.primitives.UserId", var0);
-         var1.l("snowflake", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{Y.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): UserId {
-         q.h(var1, "decoder");
-         return UserId.constructor-impl(var1.z(this.getDescriptor()).r());
-      }
-
-      public open fun serialize(encoder: Encoder, value: UserId) {
-         q.h(var1, "encoder");
-         var1 = var1.y(this.getDescriptor());
-         if (var1 != null) {
-            var1.B(var2);
-         }
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

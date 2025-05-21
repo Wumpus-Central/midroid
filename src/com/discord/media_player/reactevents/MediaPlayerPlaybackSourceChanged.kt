@@ -1,22 +1,14 @@
 package com.discord.media_player.reactevents
 
+import Ja.f
+import Ja.j
+import Q8.s
+import Qa.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.j
-import ha.n
-import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import o8.w
-import oa.a
 
 @f
 public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSource?) : ReactEvent {
@@ -58,9 +50,9 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
 
    public override fun serialize(): WritableMap {
       return if (this.source == null)
-         NativeMapExtensionsKt.toNativeMap(p8.q.h())
+         NativeMapExtensionsKt.toNativeMap(R8.q.h())
          else
-         NativeMapExtensionsKt.nativeMapOf(w.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.b(MediaPlayerPlaybackSource.class), this.source))));
+         NativeMapExtensionsKt.nativeMapOf(s.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source))));
    }
 
    public override fun toString(): String {
@@ -70,75 +62,6 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
       var2.append(var1);
       var2.append(")");
       return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: MediaPlayerPlaybackSourceChanged.$serializer = new MediaPlayerPlaybackSourceChanged.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.media_player.reactevents.MediaPlayerPlaybackSourceChanged", var0, 1
-         );
-         var1.l("source", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{ia.a.u(MediaPlayerPlaybackSource.$serializer.INSTANCE)};
-      }
-
-      public open fun deserialize(decoder: Decoder): MediaPlayerPlaybackSourceChanged {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         val var5: Boolean = var7.y();
-         var var2: Byte = 1;
-         var var8: MediaPlayerPlaybackSource;
-         if (var5) {
-            var8 = var7.v(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, null) as MediaPlayerPlaybackSource;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     throw new n(var4);
-                  }
-
-                  var8 = var7.v(var6, 0, MediaPlayerPlaybackSource.$serializer.INSTANCE, var8) as MediaPlayerPlaybackSource;
-                  var2 = 1;
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new MediaPlayerPlaybackSourceChanged(var2, var8, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: MediaPlayerPlaybackSourceChanged) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         MediaPlayerPlaybackSourceChanged.write$Self$media_player_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
    }
 
    public companion object {

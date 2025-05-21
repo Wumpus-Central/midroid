@@ -8,10 +8,12 @@ import java.util.Collections;
 import java.util.List;
 
 public class KvStoragePackage implements ReactPackage {
+   @Override
    public List<NativeModule> createNativeModules(ReactApplicationContext var1) {
       return Collections.singletonList(new KvStorageModule(var1));
    }
 
+   @Override
    public List<ViewManager> createViewManagers(ReactApplicationContext var1) {
       return Collections.emptyList();
    }
