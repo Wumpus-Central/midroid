@@ -23,16 +23,15 @@ public class NativeViewMeasuringWrapper<T extends View>(view: Any, onMeasured: (
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: NativeViewMeasuringWrapper) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
       val var3: Pair = ViewMeasureExtensionsKt.getMaximumSizeOfChildren(this, var1);
-      var2 = (var3.a() as java.lang.Number).intValue();
-      var1 = (var3.b() as java.lang.Number).intValue();
-      this.setMeasuredDimension(var2, var1);
-      this.onMeasured.invoke(this, var2, var1);
+      var1 = (var3.a() as java.lang.Number).intValue();
+      var2 = (var3.b() as java.lang.Number).intValue();
+      this.setMeasuredDimension(var1, var2);
+      this.onMeasured.invoke(this, var1, var2);
    }
 
    public open fun requestLayout() {

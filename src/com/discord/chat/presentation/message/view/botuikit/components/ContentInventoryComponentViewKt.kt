@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 
 import android.graphics.drawable.Animatable
 import android.view.View
-import androidx.core.view.a0
+import androidx.core.view.b0
 import com.discord.chat.bridge.botuikit.ContentInventoryEntry
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryClickable
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
@@ -33,7 +33,7 @@ private fun View.applyClickable(
       var0.setOnClickListener(null);
    } else {
       var0.setContentDescription(var3.getAriaDescription());
-      var0.setOnClickListener(new c(var1, var2, var4));
+      var0.setOnClickListener(new f(var1, var2, var4));
    }
 
    val var5: Boolean;
@@ -43,14 +43,11 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   a0.H0(var0, var5);
+   b0.H0(var0, var5);
    var0.setClickable(var5);
 }
 
 fun `applyClickable$lambda$0`(var0: ComponentContext, var1: ContentInventoryEntry, var2: java.lang.String, var3: View) {
-   q.h(var0, "$componentContext");
-   q.h(var1, "$entry");
-   q.h(var2, "$tappedElement");
    var0.getComponentActionEventHandlers().getOnTapContentInventoryEntry().invoke(UserId.box-impl(var1.getAuthorId-re6GcUE()), var1.getContentId(), var2);
 }
 

@@ -9,17 +9,12 @@ import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
+import g9.s
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
-import o8.w
 import okhttp3.WebSocket
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec {
-   private final var identified: Boolean
-   private final var identifyPayload: String
-   private final var identifyUserId: String?
-   private final var requiredDatabaseVersion: String?
-   private final var socketId: Int?
    private final val sockets: ConcurrentHashMap<Int, WebSocket>
 
    private final val webSocketModule: WebSocketModule?
@@ -35,6 +30,12 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
          return var2;
       }
 
+
+   private final var identified: Boolean
+   private final var socketId: Int?
+   private final var identifyUserId: String?
+   private final var identifyPayload: String
+   private final var requiredDatabaseVersion: String?
 
    init {
       q.h(var1, "reactContext");
@@ -89,11 +90,11 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return p8.q.m(
+      return h9.q.m(
          new Pair[]{
-            w.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
-            w.a("userId", var1.get().getItem("_userIdKey")),
-            w.a("token", Cache.getToken$default(var1.get(), false, 1, null))
+            s.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
+            s.a("userId", var1.get().getItem("_userIdKey")),
+            s.a("token", Cache.getToken$default(var1.get(), false, 1, null))
          }
       );
    }

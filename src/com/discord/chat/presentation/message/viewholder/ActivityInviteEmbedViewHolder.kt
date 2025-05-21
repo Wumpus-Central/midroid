@@ -18,8 +18,6 @@ public class ActivityInviteEmbedViewHolder(activityInviteEmbedView: ActivityInvi
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: ActivityInviteEmbedMessageAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapJoinActivity");
-      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()));
    }
 

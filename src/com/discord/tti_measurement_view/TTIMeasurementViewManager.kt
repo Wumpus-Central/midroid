@@ -7,14 +7,14 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
+import g9.s
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(w.a("onMeasurement", G.b(OnMeasurementEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", G.b(OnMeasurementEvent.class)))
 
    private fun onMeasurement(view: TTIMeasurementView, timestamp: Double) {
       this.reactEvents.emitEvent(var1, new OnMeasurementEvent(var2));

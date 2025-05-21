@@ -1,14 +1,18 @@
 package com.discord.media.engine.video;
 
-import java.util.function.Function;
+import com.discord.media.engine.MediaEngine;
+import com.discord.media.engine.types.VideoSink;
 import kotlin.jvm.functions.Function1;
+import kotlin.jvm.internal.Ref.BooleanRef;
 
 // $VF: synthetic class
-public final class a implements Function {
-   public final Function1 a;
+public final class a implements Function1 {
+   public final BooleanRef j;
+   public final VideoSink k;
+   public final MediaEngine l;
+   public final String m;
 
-   @Override
-   public final Object apply(Object var1) {
-      return AttachedVideoSinks.b(this.a, var1);
+   public final Object invoke(Object var1) {
+      return AttachedVideoSinks.c(this.j, this.k, this.l, this.m, (String)var1);
    }
 }

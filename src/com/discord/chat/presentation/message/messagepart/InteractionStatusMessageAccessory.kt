@@ -5,8 +5,8 @@ import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 
 public data class InteractionStatusMessageAccessory(messageId: MessageId, interactionStatus: InteractionStatus) : InteractionStatusMessageAccessory(var1, var2) {
-   public final val interactionStatus: InteractionStatus
    public open val messageId: MessageId
+   public final val interactionStatus: InteractionStatus
 
    fun InteractionStatusMessageAccessory(var1: java.lang.String, var2: InteractionStatus) {
       q.h(var1, "messageId");
@@ -50,14 +50,14 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: InteractionStatus = this.interactionStatus;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InteractionStatusMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", interactionStatus=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: InteractionStatus = this.interactionStatus;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InteractionStatusMessageAccessory(messageId=");
+      var2.append(var1);
+      var2.append(", interactionStatus=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -16,7 +16,6 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.primitives.MessageId
 import com.discord.react.FontManager
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 
 public class MessageContentViewHolder(messageContentView: MessageContentView) : MessagePartViewHolder {
@@ -26,6 +25,26 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       kotlin.jvm.internal.q.h(var1, "messageContentView");
       super(var1, null);
       this.messageContentView = var1;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$0`(var0: Function2, var1: MessageContentAccessory, var2: LinkContentNode): Unit {
+      kotlin.jvm.internal.q.h(var2, "node");
+      var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$1`(var0: MessageContentAccessory, var1: LinkContentNode): LinkStyle {
+      kotlin.jvm.internal.q.h(var1, "it");
+      val var2: DiscordFont;
+      if (var0.getBoldLinkText()) {
+         var2 = DiscordFont.PrimarySemibold;
+      } else {
+         var2 = DiscordFont.PrimaryNormal;
+      }
+
+      return new LinkStyle(var2, var0.getLinkColor(), null, null, 12, null);
    }
 
    public fun bind(
@@ -67,9 +86,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
       val var26: TextPaint = this.messageContentView.getPaint();
       kotlin.jvm.internal.q.g(var26, "getPaint(...)");
-      val var25: FontManager = FontManager.INSTANCE;
-      val var27: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.q.g(var27, "getContext(...)");
+      val var27: FontManager = FontManager.INSTANCE;
+      val var25: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.q.g(var25, "getContext(...)");
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
@@ -78,21 +97,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getShouldShowLinkDecorations(),
             var1.getShouldShowRoleDot(),
             var1.getShouldShowRoleOnName(),
-            new Function1(var2, var1) {
-               final MessageContentAccessory $messageContentItem;
-               final Function2 $onLinkClicked;
-
-               {
-                  super(1);
-                  this.$onLinkClicked = var1;
-                  this.$messageContentItem = var2;
-               }
-
-               public final void invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.q.h(var1, "node");
-                  this.$onLinkClicked.invoke(MessageId.box-impl(this.$messageContentItem.getMessageId-3Eiw7ao()), var1);
-               }
-            },
+            new B(var2, var1),
             var3,
             var4,
             var5,
@@ -107,26 +112,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var14,
             var15,
             var16,
-            new Function1(var1) {
-               final MessageContentAccessory $messageContentItem;
-
-               {
-                  super(1);
-                  this.$messageContentItem = var1;
-               }
-
-               public final LinkStyle invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.q.h(var1, "it");
-                  val var2: DiscordFont;
-                  if (this.$messageContentItem.getBoldLinkText()) {
-                     var2 = DiscordFont.PrimarySemibold;
-                  } else {
-                     var2 = DiscordFont.PrimaryNormal;
-                  }
-
-                  return new LinkStyle(var2, this.$messageContentItem.getLinkColor(), null, null, 12, null);
-               }
-            },
+            new C(var1),
             var1.getBottomSpacingPx(),
             var1.getConstrainedWidth(),
             var1.isForwardedContent(),
@@ -134,7 +120,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var26, var25.getScaledSpToPx(16, var27))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var26, var27.getScaledSpToPx(16, var25))
          );
    }
 }

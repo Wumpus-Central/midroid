@@ -5,9 +5,9 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
+import g9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import o8.w
 
 public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIconModuleSpec {
    init {
@@ -22,7 +22,7 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
       val var3: Int = var5.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         var4.add(NativeMapExtensionsKt.nativeMapOf(w.a("id", var5[var2].getId())));
+         var4.add(NativeMapExtensionsKt.nativeMapOf(s.a("id", var5[var2].getId())));
       }
 
       var1.resolve(NativeArrayExtensionsKt.toNativeArray$default(var4, null, 1, null));
@@ -33,7 +33,7 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
       val var3: AppIconUtil = AppIconUtil.INSTANCE;
       val var2: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(NativeMapExtensionsKt.nativeMapOf(w.a("id", var3.getCurrentAppIcon(var2).getId())));
+      var1.resolve(NativeMapExtensionsKt.nativeMapOf(s.a("id", var3.getCurrentAppIcon(var2).getId())));
    }
 
    public override fun setIcon(id: String, promise: Promise) {

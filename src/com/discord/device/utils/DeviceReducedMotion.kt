@@ -3,9 +3,9 @@ package com.discord.device.utils
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
+import g9.n
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import o8.p
 
 public object DeviceReducedMotion {
    private final var motionPreference: com.discord.device.utils.DeviceReducedMotion.MotionPreference = DeviceReducedMotion.MotionPreference.AUTO
@@ -54,7 +54,7 @@ public object DeviceReducedMotion {
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new p();
+               throw new n();
             }
 
             var3 = this.isSystemReducedMotionEnabled(var1);
@@ -83,7 +83,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = w8.a.a(var0);
+         $ENTRIES = o9.a.a(var0);
       }
 
       @JvmStatic

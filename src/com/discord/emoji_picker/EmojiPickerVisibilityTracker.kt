@@ -3,7 +3,6 @@ package com.discord.emoji_picker
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import kotlin.jvm.internal.q
 
 internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit) {
    private final val onShowNitroUpsell: (Boolean) -> Unit
@@ -12,7 +11,7 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
    private final var previouslyVisible: Boolean
 
    init {
-      q.h(var1, "onShowNitroUpsell");
+      kotlin.jvm.internal.q.h(var1, "onShowNitroUpsell");
       super();
       this.onShowNitroUpsell = var1;
    }
@@ -29,18 +28,18 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
    }
 
    public fun trackViewVisibilityChanged(parent: EmojiPickerView, child: View, visible: Boolean) {
-      q.h(var1, "parent");
-      q.h(var2, "child");
+      kotlin.jvm.internal.q.h(var1, "parent");
+      kotlin.jvm.internal.q.h(var2, "child");
       if (this.trackingEnabled) {
-         val var7: RecyclerView.ViewHolder = var1.getChildViewHolder(var2);
-         val var8: EmojiPickerVisibilityTracker.Companion = Companion;
-         q.e(var7);
-         val var6: Boolean = var8.isNitroSectionLocked(var7);
+         val var8: RecyclerView.ViewHolder = var1.getChildViewHolder(var2);
+         val var7: EmojiPickerVisibilityTracker.Companion = Companion;
+         kotlin.jvm.internal.q.e(var8);
+         val var6: Boolean = var7.isNitroSectionLocked(var8);
          var var4: Int;
          if (var6 && var3) {
-            var4 = this.getWidth(var7, var1);
+            var4 = this.getWidth(var8, var1);
          } else if (var6 && !var3) {
-            var4 = -this.getWidth(var7, var1);
+            var4 = -this.getWidth(var8, var1);
          } else {
             var4 = 0;
          }
@@ -63,7 +62,7 @@ internal class EmojiPickerVisibilityTracker(onShowNitroUpsell: (Boolean) -> Unit
       private const val ROWS_VISIBLE_THRESHOLD: Int
 
       public fun ViewHolder.isNitroSectionLocked(): Boolean {
-         q.h(var1, "<this>");
+         kotlin.jvm.internal.q.h(var1, "<this>");
          var var4: RecyclerView.ViewHolder = var1;
          if (var1 !is EmojiPickerViewHolder) {
             var4 = null;

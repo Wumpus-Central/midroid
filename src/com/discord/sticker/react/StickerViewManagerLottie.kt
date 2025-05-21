@@ -63,7 +63,7 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
    }
 
    public companion object {
-      public const val NAME: String
       private const val SETUP_COMMAND_ID: String
+      public const val NAME: String
    }
 }

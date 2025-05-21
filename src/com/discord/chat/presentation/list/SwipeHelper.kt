@@ -31,32 +31,31 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.internal.q
 
 internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> Unit) : ChatListCallback {
-   private final var actionType: SwipeActionType
    private final val context: Context
+   private final val onStart: () -> Unit
+   private final val onEnd: () -> Unit
+   private final var replyIcon: Drawable?
+   private final var editIcon: Drawable?
    private final var currentItemViewHolder: ViewHolder?
+   private final lateinit var mView: View
    private final var dX: Float
    private final var easterEggArrowAnimator: ValueAnimator?
+   private final var easterEggArrowScale: Float
    private final var easterEggArrowRotationAnimator: ValueAnimator?
    private final var easterEggArrowRotationDegrees: Float
-   private final var easterEggArrowScale: Float
-   private final var easterEggIsAnimating: Boolean
    private final var easterEggPullCount: Int
-   private final var editCircleScale: Float
-   private final var editCircleScaleAnimator: ValueAnimator?
-   private final var editIcon: Drawable?
-   private final val handler: Handler
-   private final var isActive: Boolean
-   private final var isCompleted: Boolean
-   private final lateinit var mView: View
-   private final val onEnd: () -> Unit
-   private final val onStart: () -> Unit
-   private final var replyIcon: Drawable?
+   private final var easterEggIsAnimating: Boolean
+   private final var swipeBack: Boolean
    private final var shouldPerformHapticFeedback: Boolean
    private final var shouldTriggerReply: Boolean
-   private final var swipeBack: Boolean
+   private final var isActive: Boolean
+   private final var isCompleted: Boolean
+   private final var actionType: SwipeActionType
+   private final var editCircleScaleAnimator: ValueAnimator?
+   private final var editCircleScale: Float
+   private final val handler: Handler
 
    @JvmStatic
    fun {
@@ -70,9 +69,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "onStart");
-      q.h(var3, "onEnd");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "onStart");
+      kotlin.jvm.internal.q.h(var3, "onEnd");
       super();
       this.context = var1;
       this.onStart = var2;
@@ -89,14 +88,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.currentItemViewHolder != null && this.dX != 0.0F) {
          var var19: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var19 = null;
          }
 
-         var var4: Float = Math.abs(var19.getTranslationX());
+         var var3: Float = Math.abs(var19.getTranslationX());
          var19 = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var19 = null;
          }
 
@@ -125,71 +124,71 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
          var1.save();
          var var2: Float = this.getSwipeProgress();
-         var var7: Float = this.getLeftBevelRadius(var2, var5);
+         var var9: Float = this.getLeftBevelRadius(var2, var5);
          var var11: Float = MAX_RIGHT_BEVEL_WIDTH * var2;
          var19 = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var19 = null;
          }
 
-         var var3: Float = var19.getMeasuredWidth();
+         var var4: Float = var19.getMeasuredWidth();
          var19 = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var19 = null;
          }
 
-         var3 = var3 + var19.getTranslationX();
-         val var10: Float = var3 - var7;
-         val var6: Float = var3 + var4;
-         val var13: Float = var3 + var4 - var11;
+         val var6: Float = var4 + var19.getTranslationX();
+         val var10: Float = var6 - var9;
+         var4 = var6 + var3;
+         val var13: Float = var6 + var3 - var11;
          var19 = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var19 = null;
          }
 
-         var var8: Float = var19.getTop();
+         var var7: Float = var19.getTop();
          var var16: Int = RIGHT_BEVEL_HEIGHT;
-         val var14: Float = var8 - RIGHT_BEVEL_HEIGHT;
-         val var9: Float = RIGHT_BEVEL_HEIGHT + (var8 - RIGHT_BEVEL_HEIGHT);
-         val var15: Float = var8 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
+         val var14: Float = var7 - RIGHT_BEVEL_HEIGHT;
+         val var8: Float = RIGHT_BEVEL_HEIGHT + (var7 - RIGHT_BEVEL_HEIGHT);
+         val var15: Float = var7 - RIGHT_BEVEL_HEIGHT + var5 + RIGHT_BEVEL_HEIGHT * 2;
          val var12: Float = var14 + var5 + RIGHT_BEVEL_HEIGHT * 2 - RIGHT_BEVEL_HEIGHT;
          val var48: Path = new Path();
          var48.moveTo(var13, var12);
-         var48.lineTo(var3, var12);
-         var48.lineTo(var3, var9 + var7);
-         var8 = 2;
-         var48.addArc(var10 - var7, var9, var3, var9 + (float)2 * var7, 0.0F, -90.0F);
-         var48.lineTo(var13, var9);
+         var48.lineTo(var6, var12);
+         var48.lineTo(var6, var8 + var9);
+         var7 = 2;
+         var48.addArc(var10 - var9, var8, var6, var8 + (float)2 * var9, 0.0F, -90.0F);
+         var48.lineTo(var13, var8);
          val var37: Float = var11 * 0.55F + var13;
-         var48.cubicTo(var11 * 0.55F + var13, var9, var6, var14 + (float)var16 * 0.55F, var6, var14);
-         var48.lineTo(var6, var15);
-         var48.cubicTo(var6, var15 - (float)var16 * 0.55F, var37, var12, var13, var12);
+         var48.cubicTo(var11 * 0.55F + var13, var8, var4, var14 + (float)var16 * 0.55F, var4, var14);
+         var48.lineTo(var4, var15);
+         var48.cubicTo(var4, var15 - (float)var16 * 0.55F, var37, var12, var13, var12);
          var1.save();
          var1.clipPath(var48);
-         var1.drawRect(var10, var14, var6, var15, var21);
+         var1.drawRect(var10, var14, var4, var15, var21);
          var1.restore();
          var1.save();
          var48.reset();
-         var11 = var12 - var7;
-         var48.addCircle(var10, var12 - var7, var7, Direction.CW);
+         var11 = var12 - var9;
+         var48.addCircle(var10, var12 - var9, var9, Direction.CW);
          if (VERSION.SDK_INT >= 26) {
-            c.a(var1, var48);
+            p.a(var1, var48);
          } else {
             var1.clipPath(var48, Op.DIFFERENCE);
          }
 
-         var1.drawRect(var10, var11, var3, var12, var21);
+         var1.drawRect(var10, var11, var6, var12, var21);
          var1.restore();
-         var7 = this.getArrowContainerBaseSize(var5) / var8;
-         var4 = var4 / var8;
-         val var17: Int = (int)(var5 / var8 + var9 - var7);
+         var9 = this.getArrowContainerBaseSize(var5) / var7;
+         var3 = var3 / var7;
+         val var17: Int = (int)(var5 / var7 + var8 - var9);
          var16 = kotlin.ranges.d.k((int)((float)192 * var2) + 64, 0, 255);
          var1.save();
-         var1.clipRect(var3, 0.0F, var6, (float)var1.getHeight());
-         var1.translate(var3 + var4 - var7 + var7, (float)var17 + var7);
+         var1.clipRect(var6, 0.0F, var4, (float)var1.getHeight());
+         var1.translate(var6 + var3 - var9 + var9, (float)var17 + var9);
          var1.scale(this.easterEggArrowScale, this.easterEggArrowScale);
          if (this.isCompleted) {
             var3 = 1.0F;
@@ -216,7 +215,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          }
 
          var21.setShadowLayer(10.0F, 0.0F, 5.0F, Color.parseColor(var49));
-         var1.drawCircle(0.0F, 0.0F, var7, var21);
+         var1.drawCircle(0.0F, 0.0F, var9, var21);
          var21.clearShadowLayer();
          if (this.editCircleScale > 0.0F) {
             var1.save();
@@ -234,7 +233,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             );
             var21.setStyle(var22);
             var21.setAlpha(255);
-            var1.drawCircle(0.0F, 0.0F, var7, var21);
+            var1.drawCircle(0.0F, 0.0F, var9, var21);
             var1.restore();
          }
 
@@ -307,27 +306,27 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!DeviceReducedMotion.INSTANCE.isReducedMotionEnabled(this.context)) {
          var var3: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var3 = null;
          }
 
-         val var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+         var var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
          val var5: ValueAnimator = new ValueAnimator();
          var5.setValues(new PropertyValuesHolder[]{var7});
          var5.setDuration(300L);
          var5.setInterpolator(new AccelerateDecelerateInterpolator());
-         var5.addUpdateListener(new d(this, var1));
+         var5.addUpdateListener(new s(this, var1));
          this.easterEggArrowAnimator = var5;
          var5.start();
-         val var6: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
-         val var8: ValueAnimator = new ValueAnimator();
-         var8.setValues(new PropertyValuesHolder[]{var6});
-         var8.setDuration(800L);
-         var8.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
-         var8.addUpdateListener(new e(this, var1));
-         var8.addListener(new AnimatorListener(this, var2, var1) {
+         var7 = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         val var6: ValueAnimator = new ValueAnimator();
+         var6.setValues(new PropertyValuesHolder[]{var7});
+         var6.setDuration(800L);
+         var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
+         var6.addUpdateListener(new t(this, var1));
+         var6.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
             final RecyclerView.ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
@@ -355,30 +354,26 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             public void onAnimationStart(Animator var1) {
             }
          });
-         this.easterEggArrowRotationAnimator = var8;
-         var8.start();
+         this.easterEggArrowRotationAnimator = var6;
+         var6.start();
          this.easterEggIsAnimating = true;
       }
    }
 
    @JvmStatic
    fun `easterEggStartAnimation$lambda$6$lambda$5`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      q.h(var0, "this$0");
-      q.h(var1, "$recyclerView");
-      q.h(var2, "it");
+      kotlin.jvm.internal.q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("arrow-scale");
-      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.easterEggArrowScale = var3 as java.lang.Float;
       var1.invalidate();
    }
 
    @JvmStatic
    fun `easterEggStartAnimation$lambda$9$lambda$7`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      q.h(var0, "this$0");
-      q.h(var1, "$recyclerView");
-      q.h(var2, "it");
+      kotlin.jvm.internal.q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("arrow-rotation");
-      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.easterEggArrowRotationDegrees = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -403,7 +398,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    private fun getSwipeProgress(): Float {
       var var1: View = this.mView;
       if (this.mView == null) {
-         q.y("mView");
+         kotlin.jvm.internal.q.y("mView");
          var1 = null;
       }
 
@@ -415,7 +410,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.actionType === SwipeActionType.Reply) {
          var var8: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var8 = null;
          }
 
@@ -449,24 +444,24 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    private fun triggerEditEntranceTransition(recyclerView: RecyclerView) {
       var var3: View = this.mView;
       if (this.mView == null) {
-         q.y("mView");
+         kotlin.jvm.internal.q.y("mView");
          var3 = null;
       }
 
-      val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
+      val var7: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
          "edit-circle-scale", new float[]{this.editCircleScale, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
       );
-      val var7: ValueAnimator = new ValueAnimator();
-      var7.setValues(new PropertyValuesHolder[]{var8});
-      var7.setDuration(300L);
-      var7.setInterpolator(new AccelerateDecelerateInterpolator());
-      var7.addUpdateListener(new g(this, var1));
-      this.editCircleScaleAnimator = var7;
-      var7.start();
+      val var8: ValueAnimator = new ValueAnimator();
+      var8.setValues(new PropertyValuesHolder[]{var7});
+      var8.setDuration(300L);
+      var8.setInterpolator(new AccelerateDecelerateInterpolator());
+      var8.addUpdateListener(new v(this, var1));
+      this.editCircleScaleAnimator = var8;
+      var8.start();
       this.actionType = SwipeActionType.Edit;
       var var6: View = this.mView;
       if (this.mView == null) {
-         q.y("mView");
+         kotlin.jvm.internal.q.y("mView");
          var6 = null;
       }
 
@@ -475,11 +470,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
    @JvmStatic
    fun `triggerEditEntranceTransition$lambda$4$lambda$3`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      q.h(var0, "this$0");
-      q.h(var1, "$recyclerView");
-      q.h(var2, "it");
+      kotlin.jvm.internal.q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("edit-circle-scale");
-      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.editCircleScale = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -490,7 +483,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       var3.setValues(new PropertyValuesHolder[]{var2});
       var3.setDuration(200L);
       var3.setInterpolator(new AccelerateDecelerateInterpolator());
-      var3.addUpdateListener(new f(this, var1));
+      var3.addUpdateListener(new u(this, var1));
       var3.addListener(new AnimatorListener(this) {
          final SwipeHelper this$0;
 
@@ -517,11 +510,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
    @JvmStatic
    fun `triggerEditExitTransition$lambda$2$lambda$0`(var0: SwipeHelper, var1: RecyclerView, var2: ValueAnimator) {
-      q.h(var0, "this$0");
-      q.h(var1, "$recyclerView");
-      q.h(var2, "it");
+      kotlin.jvm.internal.q.h(var2, "it");
       val var3: Any = var2.getAnimatedValue("edit-circle-scale");
-      q.f(var3, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Float");
       var0.editCircleScale = var3 as java.lang.Float;
       var1.invalidate();
    }
@@ -531,7 +522,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          if (this.actionType === SwipeActionType.Edit) {
             var var3: View = this.mView;
             if (this.mView == null) {
-               q.y("mView");
+               kotlin.jvm.internal.q.y("mView");
                var3 = null;
             }
 
@@ -551,14 +542,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.shouldPerformHapticFeedback) {
          var var5: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var5 = null;
          }
 
          if (var5.getTranslationX() <= HAPTIC_TRIGGER_X) {
             var5 = this.mView;
             if (this.mView == null) {
-               q.y("mView");
+               kotlin.jvm.internal.q.y("mView");
                var5 = null;
             }
 
@@ -577,7 +568,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!this.shouldPerformHapticFeedback) {
          var var9: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var9 = null;
          }
 
@@ -591,7 +582,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (this.shouldTriggerReply) {
          var var2: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var2 = null;
          }
 
@@ -604,7 +595,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       if (!this.shouldTriggerReply) {
          var var5: View = this.mView;
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
             var5 = null;
          }
 
@@ -628,7 +619,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          val var2: Float = this.getSwipeProgress();
          val var3: Float = SizeUtilsKt.getDpToPx(12);
          if (this.mView == null) {
-            q.y("mView");
+            kotlin.jvm.internal.q.y("mView");
          } else {
             var6 = this.mView;
          }
@@ -646,7 +637,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    public override fun getAnimationDuration(recyclerView: RecyclerView, animationType: Int, animateDx: Float, animateDy: Float): Long {
-      q.h(var1, "recyclerView");
+      kotlin.jvm.internal.q.h(var1, "recyclerView");
       return 300L;
    }
 
@@ -658,20 +649,19 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    public override fun getMovementFlags(recyclerView: RecyclerView, viewHolder: ViewHolder): Int {
-      q.h(var1, "recyclerView");
-      q.h(var2, "viewHolder");
+      kotlin.jvm.internal.q.h(var1, "recyclerView");
+      kotlin.jvm.internal.q.h(var2, "viewHolder");
       val var4: View = var2.itemView;
-      q.g(var2.itemView, "itemView");
-      this.mView = var4;
-      val var6: SwipeReplyInitiator;
-      if (var2.itemView is SwipeReplyInitiator) {
-         var6 = var2.itemView as SwipeReplyInitiator;
+      this.mView = var2.itemView;
+      val var5: SwipeReplyInitiator;
+      if (var4 is SwipeReplyInitiator) {
+         var5 = var4 as SwipeReplyInitiator;
       } else {
-         var6 = null;
+         var5 = null;
       }
 
       val var3: Byte;
-      if (var6 != null && var6.getEnableSwipeToReply()) {
+      if (var5 != null && var5.getEnableSwipeToReply()) {
          var3 = 4;
       } else {
          var3 = 0;
@@ -689,9 +679,9 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
       actionState: Int,
       isCurrentlyActive: Boolean
    ) {
-      q.h(var1, "c");
-      q.h(var2, "recyclerView");
-      q.h(var3, "viewHolder");
+      kotlin.jvm.internal.q.h(var1, "c");
+      kotlin.jvm.internal.q.h(var2, "recyclerView");
+      kotlin.jvm.internal.q.h(var3, "viewHolder");
       super.onChildDraw(var1, var2, var3, var4, var5, var6, var7);
       this.dX = var4;
       this.currentItemViewHolder = var3;
@@ -718,14 +708,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    public override fun onMove(recyclerView: RecyclerView, viewHolder: ViewHolder, target: ViewHolder): Boolean {
-      q.h(var1, "recyclerView");
-      q.h(var2, "viewHolder");
-      q.h(var3, "target");
+      kotlin.jvm.internal.q.h(var1, "recyclerView");
+      kotlin.jvm.internal.q.h(var2, "viewHolder");
+      kotlin.jvm.internal.q.h(var3, "target");
       return false;
    }
 
    public override fun onReleased(recyclerView: RecyclerView, viewHolder: ViewHolder?) {
-      q.h(var1, "recyclerView");
+      kotlin.jvm.internal.q.h(var1, "recyclerView");
       this.swipeBack = true;
       if (this.shouldTriggerReply) {
          val var4: View;
@@ -745,9 +735,11 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          if (var5 != null) {
             val var3: Int = SwipeHelper.WhenMappings.$EnumSwitchMapping$0[this.actionType.ordinal()];
             if (var3 != 1) {
-               if (var3 == 2) {
-                  var5.getOnInitiateEdit().invoke();
+               if (var3 != 2) {
+                  throw new g9.n();
                }
+
+               var5.getOnInitiateEdit().invoke();
             } else {
                var5.getOnInitiateReply().invoke();
             }
@@ -796,7 +788,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    public override fun onSwiped(viewHolder: ViewHolder, direction: Int) {
-      q.h(var1, "viewHolder");
+      kotlin.jvm.internal.q.h(var1, "viewHolder");
    }
 
    public override fun shouldReturnToOriginalPosition(): Boolean {
@@ -808,18 +800,18 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
    }
 
    public companion object {
-      private const val ANIM_RETURN_DURATION: Long
-      private const val ANIM_VALUE_ARROW_ROTATION: String
-      private const val ANIM_VALUE_ARROW_SCALE: String
-      private const val ANIM_VALUE_EDIT_CIRCLE_SCALE: String
-      private final val EDIT_OFFSET_X: Int
-      private final val HAPTIC_RESET_X: Int
-      private final val HAPTIC_TRIGGER_X: Int
       private final val MAX_CONTEXT_AREA_WIDTH: Int
-      private final val MAX_LEFT_BEVEL_RADIUS: Int
-      private final val MAX_RIGHT_BEVEL_WIDTH: Int
-      private final val REPLY_RESET_X: Int
-      private final val RIGHT_BEVEL_HEIGHT: Int
       private final val SWIPE_STOP_OFFSET_X: Int
+      private final val HAPTIC_TRIGGER_X: Int
+      private final val HAPTIC_RESET_X: Int
+      private final val REPLY_RESET_X: Int
+      private final val EDIT_OFFSET_X: Int
+      private final val MAX_RIGHT_BEVEL_WIDTH: Int
+      private final val RIGHT_BEVEL_HEIGHT: Int
+      private final val MAX_LEFT_BEVEL_RADIUS: Int
+      private const val ANIM_VALUE_ARROW_SCALE: String
+      private const val ANIM_VALUE_ARROW_ROTATION: String
+      private const val ANIM_RETURN_DURATION: Long
+      private const val ANIM_VALUE_EDIT_CIRCLE_SCALE: String
    }
 }

@@ -1,15 +1,12 @@
 package com.discord.chat.input.views;
 
-import android.content.Context;
-import android.content.ClipData.Item;
-import androidx.core.util.Predicate;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class c implements Predicate {
-   public final Context a;
+public final class c implements Function2 {
+   public final ChatInputRootView j;
 
-   @Override
-   public final boolean test(Object var1) {
-      return ChatInputRootView.b(this.a, (Item)var1);
+   public final Object invoke(Object var1, Object var2) {
+      return ChatInputRootView.g(this.j, (Integer)var1, (Integer)var2);
    }
 }

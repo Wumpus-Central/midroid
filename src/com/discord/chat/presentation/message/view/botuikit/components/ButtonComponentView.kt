@@ -29,27 +29,27 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import kotlin.jvm.functions.Function0
+import g9.n
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import o8.l
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
    ComponentView<ButtonComponent> {
    public final val binding: MessageComponentButtonViewBinding
-   private final var currentComponent: ButtonComponent?
-   private final var currentEmoji: ComponentEmoji?
-   private final var currentIsLoading: Boolean
-   private final var currentLabel: String?
-   private final var currentStyle: ButtonStyle
 
    private final val progressDots: ProgressDots
       private final get() {
          return this.progressDots$delegate.getValue() as ProgressDots;
       }
 
+
+   private final var currentComponent: ButtonComponent?
+   private final var currentStyle: ButtonStyle
+   private final var currentEmoji: ComponentEmoji?
+   private final var currentLabel: String?
+   private final var currentIsLoading: Boolean
 
    fun ButtonComponentView(var1: Context) {
       q.h(var1, "context");
@@ -64,38 +64,23 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
-      this.binding = var6;
-      this.progressDots$delegate = l.a(new Function0(this) {
-         final ButtonComponentView this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final ProgressDots invoke() {
-            val var1: View = this.this$0.getBinding().loadingDots.inflate();
-            q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
-            return var1 as ProgressDots;
-         }
-      });
+      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var4, "inflate(...)");
+      this.binding = var4;
+      this.progressDots$delegate = g9.j.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var4.b(0.0F);
-      this.setLayoutParams(var4);
+      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var6.b(0.0F);
+      this.setLayoutParams(var6);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var6.linkIcon;
-      q.g(var6.linkIcon, "linkIcon");
+      val var5: SimpleDraweeView = var4.linkIcon;
+      q.g(var4.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 
    @JvmStatic
-   fun `configure$lambda$1`(var0: ButtonComponent, var1: ComponentContext, var2: View) {
-      q.h(var0, "$component");
-      q.h(var1, "$componentContext");
+   fun `configure$lambda$2`(var0: ButtonComponent, var1: ComponentContext, var2: View) {
       if (var0.getUrl() != null) {
          var1.getComponentActionEventHandlers().getOnTapButtonLinkComponent().invoke(var0.getUrl());
       } else if (var0.getCustomId() != null || var0.getStyle() === ButtonStyle.PREMIUM) {
@@ -104,7 +89,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    @JvmStatic
-   fun `configure$lambda$2`(var0: View) {
+   fun `configure$lambda$3`(var0: View) {
    }
 
    private fun configureEmoji(emojiView: SimpleDraweeSpanTextView, emoji: ComponentEmoji?, isLoading: Boolean) {
@@ -186,9 +171,18 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
                break;
             case 7:
                ButtonComponentViewKt.access$setBrandColor(var1);
+               break;
             default:
+               throw new n();
          }
       }
+   }
+
+   @JvmStatic
+   fun `progressDots_delegate$lambda$0`(var0: ButtonComponentView): ProgressDots {
+      val var1: View = var0.binding.loadingDots.inflate();
+      q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
+      return var1 as ProgressDots;
    }
 
    public open fun configure(component: ButtonComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
@@ -271,13 +265,11 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          if (!var8) {
             val var21: MaterialButton = this.binding.button;
             q.g(this.binding.button, "button");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(
-               var21, false, new com.discord.chat.presentation.message.view.botuikit.components.a(var1, var3), 1, null
-            );
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new b(var1, var3), 1, null);
          } else {
             val var10: MaterialButton = this.binding.button;
             q.g(this.binding.button, "button");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new b(), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new c(), 1, null);
          }
 
          if (var8 != this.currentIsLoading) {

@@ -7,21 +7,26 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
+import g9.j
 import java.lang.reflect.Method
 import kotlin.jvm.internal.q
-import o8.l
 
 private final val viewLayoutQueued: MutableSet<Int>
 
-private final val viewOperationQueueMethod: Method by l.a(<unrepresentable>.INSTANCE)
+private final val viewOperationQueueMethod: Method by j.b(new e())
    private final get() {
       return viewOperationQueueMethod$delegate.getValue() as Method;
    }
 
 
 @JvmSynthetic
-fun a(var0: ReactContext, var1: Int) {
-   queueManualLayout$lambda$1(var0, var1);
+fun a(): Method {
+   return viewOperationQueueMethod_delegate$lambda$1();
+}
+
+@JvmSynthetic
+fun b(var0: ReactContext, var1: Int) {
+   queueManualLayout$lambda$3(var0, var1);
 }
 
 private fun ReactContext.getUIImplementation(): UIImplementation {
@@ -43,12 +48,11 @@ private fun UIImplementation.getUIViewOperationQueue(): UIViewOperationQueue? {
 public fun ReactContext.queueManualLayout(viewId: Int) {
    q.h(var0, "<this>");
    if (!viewLayoutQueued.contains(var1)) {
-      var0.runOnNativeModulesQueueThread(new b(var0, var1));
+      var0.runOnNativeModulesQueueThread(new f(var0, var1));
    }
 }
 
-fun `queueManualLayout$lambda$1`(var0: ReactContext, var1: Int) {
-   q.h(var0, "$this_queueManualLayout");
+fun `queueManualLayout$lambda$3`(var0: ReactContext, var1: Int) {
    val var2: UIImplementation = getUIImplementation(var0);
    val var4: ReactShadowNode = var2.resolveShadowNode(var1);
    if (var4 != null) {
@@ -64,4 +68,10 @@ fun `queueManualLayout$lambda$1`(var0: ReactContext, var1: Int) {
    }
 
    viewLayoutQueued.remove(var1);
+}
+
+fun `viewOperationQueueMethod_delegate$lambda$1`(): Method {
+   val var0: Method = UIImplementation.class.getDeclaredMethod("com.discord.react.utilities.getUIViewOperationQueue", null);
+   var0.setAccessible(true);
+   return var0;
 }

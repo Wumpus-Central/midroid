@@ -39,7 +39,6 @@ public class ChatLoadingView  public constructor(context: Context, attrs: Attrib
 
    @JvmStatic
    fun `showButton$lambda$0`(var0: Function0, var1: View) {
-      q.h(var0, "$onClick");
       var0.invoke();
    }
 
@@ -70,7 +69,7 @@ public class ChatLoadingView  public constructor(context: Context, attrs: Attrib
       var9.setTextColor(var3);
       val var6: Button = this.binding.button;
       q.g(this.binding.button, "button");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new l1.a(var2), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var6, false, new A1.a(var2), 1, null);
    }
 
    public fun showProgress() {

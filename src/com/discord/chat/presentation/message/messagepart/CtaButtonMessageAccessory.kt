@@ -7,8 +7,8 @@ import kotlin.jvm.internal.q
 
 public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: MessageId, ctaButton: CtaButton) : CtaButtonMessageAccessory(var1, var3, var4) {
    public final val channelId: ChannelId
-   public final val ctaButton: CtaButton
    public open val messageId: MessageId
+   public final val ctaButton: CtaButton
 
    fun CtaButtonMessageAccessory(var1: Long, var3: java.lang.String, var4: CtaButton) {
       q.h(var3, "messageId");
@@ -60,16 +60,16 @@ public data class CtaButtonMessageAccessory(channelId: ChannelId, messageId: Mes
 
    public override fun toString(): String {
       val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: CtaButton = this.ctaButton;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CtaButtonMessageAccessory(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(", ctaButton=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: CtaButton = this.ctaButton;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CtaButtonMessageAccessory(channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var2);
+      var3.append(", ctaButton=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

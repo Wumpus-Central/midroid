@@ -6,8 +6,8 @@ import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 
-internal const val ANIMATION_LENGTH_MS: Int = 500
 internal const val EMIT_EVENT_FREQUENCY_MS: Long = 50L
+internal const val ANIMATION_LENGTH_MS: Int = 500
 
 internal fun AudioAttachmentMessageAccessory.toAudioSource(): AudioSource {
    kotlin.jvm.internal.q.h(var0, "<this>");
@@ -18,22 +18,22 @@ internal fun AudioAttachmentMessageAccessory.toAudioSource(): AudioSource {
 
 internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource {
    kotlin.jvm.internal.q.h(var0, "<this>");
-   val var3: ChannelId = var0.getChannelId-qMVnFVQ();
-   val var4: java.lang.String = var0.getMessageId-3Eiw7ao();
+   val var4: ChannelId = var0.getChannelId-qMVnFVQ();
+   val var2: java.lang.String = var0.getMessageId-3Eiw7ao();
    val var5: Int = var0.getIndex();
-   val var2: java.lang.String = var0.getUrl();
+   val var3: java.lang.String = var0.getUrl();
    val var7: java.lang.String;
    if (var1 == null) {
-      val var6: java.lang.String = var0.getUrl();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("audio attachment: ");
-      var8.append(var6);
-      var7 = var8.toString();
+      var1 = var0.getUrl();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("audio attachment: ");
+      var6.append(var1);
+      var7 = var6.toString();
    } else {
       var7 = var1;
    }
 
-   return new MediaSource(var2, null, null, null, var7, MediaType.AUDIO, false, var3, var4, var5, null, null, 3150, null);
+   return new MediaSource(var3, null, null, null, var7, MediaType.AUDIO, false, var4, var2, var5, null, null, 3150, null);
 }
 
 @JvmSynthetic

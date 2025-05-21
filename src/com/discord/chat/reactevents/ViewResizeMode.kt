@@ -1,7 +1,6 @@
 package com.discord.chat.reactevents
 
 import kotlin.enums.EnumEntries
-import w8.a
 
 public enum class ViewResizeMode(value: String) {
    Cover("cover"),
@@ -16,7 +15,7 @@ public enum class ViewResizeMode(value: String) {
    fun {
       val var0: Array<ViewResizeMode> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    init {

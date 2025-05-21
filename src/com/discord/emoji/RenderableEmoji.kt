@@ -31,9 +31,9 @@ public sealed class RenderableEmoji protected constructor() {
    }
 
    public data class CustomWithEmojiId(emojiId: Long, isAnimated: Boolean, alt: String) : RenderableEmoji {
-      public final val alt: String
       public final val emojiId: Long
       public final val isAnimated: Boolean
+      public final val alt: String
 
       init {
          q.h(var4, "alt");
@@ -96,14 +96,14 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: Long = this.emojiId;
-         val var1: Boolean = this.isAnimated;
+         val var1: Long = this.emojiId;
+         val var3: Boolean = this.isAnimated;
          val var5: java.lang.String = this.alt;
          val var4: StringBuilder = new StringBuilder();
          var4.append("CustomWithEmojiId(emojiId=");
-         var4.append(var2);
-         var4.append(", isAnimated=");
          var4.append(var1);
+         var4.append(", isAnimated=");
+         var4.append(var3);
          var4.append(", alt=");
          var4.append(var5);
          var4.append(")");
@@ -112,8 +112,8 @@ public sealed class RenderableEmoji protected constructor() {
    }
 
    public data class CustomWithUrl(url: String, alt: String) : RenderableEmoji {
-      public final val alt: String
       public final val url: String
+      public final val alt: String
 
       init {
          q.h(var1, "url");
@@ -165,21 +165,21 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.url;
+         val var1: java.lang.String = this.url;
          val var3: java.lang.String = this.alt;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("CustomWithUrl(url=");
-         var1.append(var2);
-         var1.append(", alt=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("CustomWithUrl(url=");
+         var2.append(var1);
+         var2.append(", alt=");
+         var2.append(var3);
+         var2.append(")");
+         return var2.toString();
       }
    }
 
    public data class Unicode(surrogates: Surrogates) : RenderableEmoji.Unicode(var1) {
-      public final val exception: String?
       public final val surrogates: Surrogates
+      public final val exception: String?
 
       fun Unicode(var1: java.lang.String) {
          q.h(var1, "surrogates");
@@ -226,12 +226,12 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = Surrogates.toString-impl(this.surrogates);
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Unicode(surrogates=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = Surrogates.toString-impl(this.surrogates);
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Unicode(surrogates=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

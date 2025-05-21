@@ -3,26 +3,24 @@ package com.discord.blur
 import android.annotation.SuppressLint
 import android.content.Context
 import android.widget.FrameLayout
-import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
 
 @SuppressLint(["ViewConstructor"])
 internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float)
    : FrameLayout,
    BlurViewAPI {
-   private final var blurAmount: Float
-   private final val blurTargetChangeListener: () -> Unit
    private final var blurTargetNativeId: String
    private final var blurTint: Int
    private final var blurTintIOSParityCompensation: Int
-   private final var blurViewHeight: Int
-   private final var blurViewLocation: IntArray
+   private final var blurAmount: Float
    private final var blurViewPropertiesDirty: Boolean
    private final var blurViewWidth: Int
+   private final var blurViewHeight: Int
+   private final var blurViewLocation: IntArray
+   private final val blurTargetChangeListener: () -> Unit
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
@@ -32,31 +30,21 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
       this.blurViewWidth = -1;
       this.blurViewHeight = -1;
       this.blurViewLocation = new int[2];
-      val var6: Function0 = new Function0(this) {
-         final BlurViewHardwareAccelerated this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            BlurViewHardwareAccelerated.access$maybeUpdate(this.this$0);
-         }
-      };
+      val var6: e = new e(this);
       this.blurTargetChangeListener = var6;
-      BlurView.Companion.updateListener$blur_release(var6, true, new Function0(this) {
-         final BlurViewHardwareAccelerated this$0;
+      BlurView.Companion.updateListener$blur_release(var6, true, new f(this));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `_init_$lambda$1`(var0: BlurViewHardwareAccelerated): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
 
-         public final void invoke() {
-            BlurViewHardwareAccelerated.access$maybeUpdate(this.this$0);
-         }
-      });
+   @JvmStatic
+   fun `blurTargetChangeListener$lambda$0`(var0: BlurViewHardwareAccelerated): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
    }
 
    private fun maybeUpdate() {
@@ -76,36 +64,26 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
       }
    }
 
+   @JvmStatic
+   fun `onAttachedToWindow$lambda$2`(var0: BlurViewHardwareAccelerated): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onDetachedFromWindow$lambda$3`(var0: BlurViewHardwareAccelerated): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new Function0(this) {
-         final BlurViewHardwareAccelerated this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            BlurViewHardwareAccelerated.access$maybeUpdate(this.this$0);
-         }
-      });
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new h(this));
    }
 
    protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
-      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new Function0(this) {
-         final BlurViewHardwareAccelerated this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            BlurViewHardwareAccelerated.access$maybeUpdate(this.this$0);
-         }
-      });
+      BlurView.Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new g(this));
       val var1: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
       if (var1 != null) {
          var1.removeBlurRect(this.getId());
@@ -143,8 +121,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      q.h(var1, "nativeId");
-      if (!q.c(this.blurTargetNativeId, var1)) {
+      kotlin.jvm.internal.q.h(var1, "nativeId");
+      if (!kotlin.jvm.internal.q.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }

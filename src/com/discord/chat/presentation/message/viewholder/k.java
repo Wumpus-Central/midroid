@@ -1,16 +1,14 @@
 package com.discord.chat.presentation.message.viewholder;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import kotlin.jvm.functions.Function2;
+import com.discord.chat.presentation.message.messagepart.EphemeralIndicationMessageAccessory;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class k implements OnClickListener {
-   public final Function2 j;
-   public final String k;
-   public final long l;
+public final class k implements Function1 {
+   public final EphemeralIndicationViewHolder j;
+   public final EphemeralIndicationMessageAccessory k;
 
-   public final void onClick(View var1) {
-      FlaggedMessageActionBarViewHolder.c(this.j, this.k, this.l, var1);
+   public final Object invoke(Object var1) {
+      return EphemeralIndicationViewHolder.b(this.j, this.k, (String)var1);
    }
 }

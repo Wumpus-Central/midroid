@@ -7,10 +7,9 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.functions.Function0
+import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -22,7 +21,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("screenshotTaken", G.b(ScreenshotTakenEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("screenshotTaken", G.b(ScreenshotTakenEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 
@@ -49,26 +48,17 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
       };
    }
 
+   @JvmStatic
+   fun `addListener$lambda$0`(var0: ScreenshotHelperModule): Unit {
+      var0.reactEvents.emitModuleEvent(var0.reactContext, new ScreenshotTakenEvent());
+      return Unit.a;
+   }
+
    @ReactMethod
    public fun addListener(type: String) {
       q.h(var1, "type");
       if (this.screenshotDetector != null) {
-         this.screenshotDetector
-            .setScreenshotListener(
-               new Function0(this) {
-                  final ScreenshotHelperModule this$0;
-
-                  {
-                     super(0);
-                     this.this$0 = var1;
-                  }
-
-                  public final void invoke() {
-                     ScreenshotHelperModule.access$getReactEvents$p(this.this$0)
-                        .emitModuleEvent(ScreenshotHelperModule.access$getReactContext$p(this.this$0), new ScreenshotTakenEvent());
-                  }
-               }
-            );
+         this.screenshotDetector.setScreenshotListener(new b(this));
       }
    }
 

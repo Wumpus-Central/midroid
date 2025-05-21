@@ -6,6 +6,14 @@ import kotlin.jvm.internal.q
 
 public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isBeforeContent: Boolean) : ChatListItem {
    public final val color: Int
+   public final val summary: Summary
+   public final val isBeforeContent: Boolean
+
+   public final val text: String
+      public final get() {
+         return this.summary.getTopic();
+      }
+
 
    public final val currentMsgId: MessageId
       public final get() {
@@ -20,8 +28,6 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
       }
 
 
-   public final val isBeforeContent: Boolean
-
    public final val jumpToMsgId: MessageId
       public final get() {
          val var1: java.lang.String;
@@ -32,14 +38,6 @@ public data class SummarySeparatorChatListItem(color: Int, summary: Summary, isB
          }
 
          return var1;
-      }
-
-
-   public final val summary: Summary
-
-   public final val text: String
-      public final get() {
-         return this.summary.getTopic();
       }
 
 

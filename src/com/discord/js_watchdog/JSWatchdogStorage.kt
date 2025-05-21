@@ -6,6 +6,14 @@ import android.content.SharedPreferences.Editor
 import kotlin.jvm.internal.q
 
 public class JSWatchdogStorage(context: Context) {
+   public final val storage: SharedPreferences
+
+   private final val stallTime: Int
+      private final get() {
+         return this.storage.getInt("stall_time", 0);
+      }
+
+
    private final val sessionId: String
       private final get() {
          val var2: java.lang.String = this.storage.getString("session_id", null);
@@ -17,14 +25,6 @@ public class JSWatchdogStorage(context: Context) {
          return var1;
       }
 
-
-   private final val stallTime: Int
-      private final get() {
-         return this.storage.getInt("stall_time", 0);
-      }
-
-
-   public final val storage: SharedPreferences
 
    public final val trace: String?
       public final get() {

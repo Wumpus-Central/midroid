@@ -3,7 +3,6 @@ package com.discord.react_asset_fetcher
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import w8.a
 
 public enum class ReactAsset {
    Activity,
@@ -110,7 +109,7 @@ public enum class ReactAsset {
    fun {
       val var0: Array<ReactAsset> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    @JvmStatic

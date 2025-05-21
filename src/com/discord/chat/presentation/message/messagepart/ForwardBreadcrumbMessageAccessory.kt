@@ -8,9 +8,9 @@ import kotlin.jvm.internal.q
 public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channelId: ChannelId, forwardInfo: ForwardInfo) : ForwardBreadcrumbMessageAccessory(
       var1, var2, var4
    ) {
+   public open val messageId: MessageId
    public final val channelId: ChannelId
    public final val forwardInfo: ForwardInfo
-   public open val messageId: MessageId
 
    fun ForwardBreadcrumbMessageAccessory(var1: java.lang.String, var2: Long, var4: ForwardInfo) {
       q.h(var1, "messageId");
@@ -62,15 +62,15 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: ForwardInfo = this.forwardInfo;
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: ForwardInfo = this.forwardInfo;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ForwardBreadcrumbMessageAccessory(messageId=");
       var3.append(var2);
       var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", forwardInfo=");
       var3.append(var1);
+      var3.append(", forwardInfo=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

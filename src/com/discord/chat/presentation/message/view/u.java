@@ -1,17 +1,15 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.media_player.MediaSource;
+import com.discord.chat.bridge.contentnode.LinkContentNode;
+import kotlin.jvm.functions.Function1;
 import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class u implements OnClickListener {
+public final class u implements Function1 {
    public final Function2 j;
-   public final MediaSource k;
-   public final int l;
+   public final String k;
 
-   public final void onClick(View var1) {
-      EmbedView.a(this.j, this.k, this.l, var1);
+   public final Object invoke(Object var1) {
+      return EmbedView.i(this.j, this.k, (LinkContentNode)var1);
    }
 }

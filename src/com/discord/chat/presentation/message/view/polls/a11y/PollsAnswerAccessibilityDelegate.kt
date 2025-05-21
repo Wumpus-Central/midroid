@@ -5,8 +5,8 @@ import android.view.accessibility.AccessibilityEvent
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.bridge.polls.PollChatAnswerInteractionType
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
+import g9.n
 import kotlin.jvm.internal.q
-import o8.p
 
 public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : androidx.core.view.a {
    private final val accessory: PollAnswerAccessory
@@ -21,9 +21,14 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       q.h(var1, "host");
       q.h(var2, "event");
       super.onInitializeAccessibilityEvent(var1, var2);
-      val var3: Boolean = q.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
-      if (PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getInteractionType().ordinal()] == 3) {
-         var2.setChecked(var3);
+      val var4: Boolean = q.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
+      val var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getInteractionType().ordinal()];
+      if (var3 != 1 && var3 != 2) {
+         if (var3 != 3) {
+            throw new n();
+         }
+
+         var2.setChecked(var4);
       }
    }
 
@@ -38,17 +43,21 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var4 = false;
       }
 
-      var2.o0(var4);
+      var2.p0(var4);
       var4 = q.c(this.accessory.getAnswer().isSelected(), java.lang.Boolean.TRUE);
       val var6: PollChatAnswerInteractionType = this.accessory.getInteractionType();
       val var5: IntArray = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0;
       var var3: Int = PollsAnswerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[var6.ordinal()];
-      if (var3 != 2) {
-         if (var3 == 3) {
-            var2.p0(var4);
+      if (var3 != 1) {
+         if (var3 != 2) {
+            if (var3 != 3) {
+               throw new n();
+            }
+
+            var2.q0(var4);
+         } else {
+            var2.P0(var4);
          }
-      } else {
-         var2.O0(var4);
       }
 
       var3 = var5[this.accessory.getInteractionType().ordinal()];
@@ -56,7 +65,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
       if (var3 != 1) {
          if (var3 != 2) {
             if (var3 != 3) {
-               throw new p();
+               throw new n();
             }
 
             var7 = "android.widget.CheckBox";
@@ -67,7 +76,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
          var7 = "android.view.ViewGroup";
       }
 
-      var2.q0(var7);
+      var2.r0(var7);
       if (this.accessory.getTapAccessibilityLabel() != null) {
          var2.b(new AccessibilityNodeInfoCompat.a(16, this.accessory.getTapAccessibilityLabel()));
       }

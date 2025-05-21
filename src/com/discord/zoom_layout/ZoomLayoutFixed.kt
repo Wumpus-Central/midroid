@@ -16,7 +16,6 @@ import com.discord.zoom_layout.utils.ReactNativeScreensUtilsKt
 import com.facebook.react.uimanager.MeasureSpecAssertions
 import com.otaliastudios.zoom.ZoomEngine
 import com.otaliastudios.zoom.ZoomLayout
-import com.otaliastudios.zoom.ZoomEngine.c
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -36,7 +35,7 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
       this.setOverScrollHorizontal(false);
       this.setOverScrollVertical(false);
       this.setOverPinchable(false);
-      this.getEngine().l(new c(var2, this) {
+      this.getEngine().l(new com.otaliastudios.zoom.ZoomEngine.c(var2, this) {
          final Function1 $onUpdate;
          final ZoomLayoutFixed this$0;
 
@@ -61,13 +60,11 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
    fun `layoutChangeListener$lambda$0`(
       var0: ZoomLayoutFixed, var1: View, var2: Int, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int
    ) {
-      q.h(var0, "this$0");
       var0.getEngine().Z((float)var1.getWidth(), (float)var1.getHeight(), true);
    }
 
    @JvmStatic
    fun `onMeasure$lambda$1`(var0: ZoomLayoutFixed) {
-      q.h(var0, "this$0");
       var0.getViewTreeObserver().dispatchOnGlobalLayout();
    }
 

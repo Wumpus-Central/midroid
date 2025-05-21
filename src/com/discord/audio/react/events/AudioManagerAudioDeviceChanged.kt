@@ -1,22 +1,13 @@
 package com.discord.audio.react.events
 
+import Za.f
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import ha.f
-import ha.n
-import ka.G
-import ka.G.a
+import g9.s
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import o8.w
 
 @f
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
@@ -52,85 +43,16 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(w.a("device", this.device.toNativeMap()));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("device", this.device.toNativeMap()));
    }
 
    public override fun toString(): String {
-      val var2: AndroidAudioDevice = this.device;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AudioManagerAudioDeviceChanged(device=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: AudioManagerAudioDeviceChanged.$serializer = new AudioManagerAudioDeviceChanged.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.audio.react.events.AudioManagerAudioDeviceChanged", var0, 1
-         );
-         var1.l("device", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{AndroidAudioDevice.$serializer.INSTANCE};
-      }
-
-      public open fun deserialize(decoder: Decoder): AudioManagerAudioDeviceChanged {
-         q.h(var1, "decoder");
-         val var6: SerialDescriptor = this.getDescriptor();
-         val var7: c = var1.c(var6);
-         val var5: Boolean = var7.y();
-         var var2: Byte = 1;
-         var var8: AndroidAudioDevice;
-         if (var5) {
-            var8 = var7.m(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, null) as AndroidAudioDevice;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-
-            while (var3) {
-               val var4: Int = var7.x(var6);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     throw new n(var4);
-                  }
-
-                  var8 = var7.m(var6, 0, AndroidAudioDevice.$serializer.INSTANCE, var8) as AndroidAudioDevice;
-                  var2 = 1;
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var7.b(var6);
-         return new AudioManagerAudioDeviceChanged(var2, var8, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: AudioManagerAudioDeviceChanged) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         AudioManagerAudioDeviceChanged.write$Self$audio_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var1: AndroidAudioDevice = this.device;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioManagerAudioDeviceChanged(device=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

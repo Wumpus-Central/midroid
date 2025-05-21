@@ -1,7 +1,7 @@
 package com.discord.analytics
 
-import X9.f
-import X9.t0
+import Pa.f
+import Pa.t0
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.android.installreferrer.api.InstallReferrerClient
@@ -10,16 +10,14 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.concurrent.CancellationException
+import kotlin.Result.a
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import o8.r
-import o8.s
-import o8.r.a
-import v8.b
+import n9.b
 
 public class InstallReferrerModule(context: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -30,18 +28,18 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    @ReactMethod
    public fun get(promise: Promise) {
       q.h(var1, "promise");
-      val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var4: ObjectRef = new ObjectRef();
-      var4.j = var3.getString("referrer", null);
-      val var2: Int = var3.getInt("attempts", 0);
-      if (var4.j != null) {
-         var1.resolve(var4.j);
+      val var4: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
+      val var3: ObjectRef = new ObjectRef();
+      var3.j = var4.getString("referrer", null);
+      val var2: Int = var4.getInt("attempts", 0);
+      if (var3.j != null) {
+         var1.resolve(var3.j);
       } else if (var2 < 10) {
          f.d(
             g.b(),
             null,
             null,
-            new Function2(new ObjectRef(), this, var4, var3, var1, var2, null) {
+            new Function2(new ObjectRef(), this, var3, var4, var1, var2, null) {
                final int $attempts;
                final ObjectRef $client;
                final SharedPreferences $prefs;
@@ -75,9 +73,9 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                      }
 
-                     s.b(var1);
+                     c.b(var1);
                   } else {
-                     s.b(var1);
+                     c.b(var1);
                      var1 = new Function2(this.$client, this.this$0, this.$referrer, this.$prefs, this.$promise, this.$attempts, null) {
                         final int $attempts;
                         final ObjectRef $client;
@@ -139,30 +137,31 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                     var196 = this.L$0 as CoroutineScope;
 
                                     try {
-                                       s.b(var1);
+                                       c.b(var1);
                                     } catch (var21: java.lang.Throwable) {
-                                       val var177: a = r.k;
-                                       var1 = r.b(s.a(var21));
+                                       val var167: a = Result.k;
+                                       var1 = Result.b(c.a(var21));
                                        break label132;
                                     }
 
                                     var196 = var1;
                                  } else {
-                                    s.b(var1);
+                                    c.b(var1);
                                     var196 = this.L$0 as CoroutineScope;
                                     var3x = this.$client;
-                                    val var9: InstallReferrerModule = this.this$0;
+                                    val var10: InstallReferrerModule = this.this$0;
                                     var4 = this.$referrer;
                                     var5 = this.$prefs;
                                     var1 = this.$promise;
 
+                                    var var199: InstallReferrerClient;
                                     try {
-                                       val var10: a = r.k;
-                                       var199 = InstallReferrerClient.c(InstallReferrerModule.access$getReactApplicationContext(var9)).a();
+                                       val var9: a = Result.k;
+                                       var199 = InstallReferrerClient.c(InstallReferrerModule.access$getReactApplicationContext(var10)).a();
                                        var3x.j = var199;
                                     } catch (var22: java.lang.Throwable) {
-                                       val var178: a = r.k;
-                                       var1 = r.b(s.a(var22));
+                                       val var170: a = Result.k;
+                                       var1 = Result.b(c.a(var22));
                                        break label132;
                                     }
 
@@ -180,8 +179,8 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                        this.label = 1;
                                        var196 = InstallReferrerModuleKt.access$await(var199, this);
                                     } catch (var20: java.lang.Throwable) {
-                                       val var179: a = r.k;
-                                       var1 = r.b(s.a(var20));
+                                       val var171: a = Result.k;
+                                       var1 = Result.b(c.a(var20));
                                        break label132;
                                     }
 
@@ -195,8 +194,8 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                  try {
                                     var196 = var196 as Int;
                                  } catch (var19: java.lang.Throwable) {
-                                    val var180: a = r.k;
-                                    var1 = r.b(s.a(var19));
+                                    val var172: a = Result.k;
+                                    var1 = Result.b(c.a(var19));
                                     break label132;
                                  }
 
@@ -208,12 +207,12 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                  if (var195 != null) {
                                     try {
                                        if (var195 == 0) {
-                                          var183 = var3x.j as InstallReferrerClient;
+                                          var186 = var3x.j as InstallReferrerClient;
                                           break label107;
                                        }
                                     } catch (var18: java.lang.Throwable) {
-                                       val var181: a = r.k;
-                                       var1 = r.b(s.a(var18));
+                                       val var173: a = Result.k;
+                                       var1 = Result.b(c.a(var18));
                                        break label132;
                                     }
                                  }
@@ -221,95 +220,95 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                  try {
                                     throw new IllegalStateException("Check failed.");
                                  } catch (var17: java.lang.Throwable) {
-                                    val var182: a = r.k;
-                                    var1 = r.b(s.a(var17));
+                                    val var174: a = Result.k;
+                                    var1 = Result.b(c.a(var17));
                                     break label132;
                                  }
                               }
 
                               label98: {
-                                 if (var183 != null) {
+                                 if (var186 != null) {
                                     try {
-                                       var185 = var183.b();
+                                       var187 = var186.b();
                                     } catch (var16: java.lang.Throwable) {
-                                       val var184: a = r.k;
-                                       var1 = r.b(s.a(var16));
+                                       val var176: a = Result.k;
+                                       var1 = Result.b(c.a(var16));
                                        break label132;
                                     }
 
-                                    if (var185 != null) {
+                                    if (var187 != null) {
                                        try {
-                                          var186 = var185.a();
+                                          var188 = var187.a();
                                           break label98;
                                        } catch (var15: java.lang.Throwable) {
-                                          val var187: a = r.k;
-                                          var1 = r.b(s.a(var15));
+                                          val var177: a = Result.k;
+                                          var1 = Result.b(c.a(var15));
                                           break label132;
                                        }
                                     }
                                  }
 
-                                 var186 = null;
+                                 var188 = null;
                               }
 
                               label89:
                               try {
-                                 var4.j = var186;
+                                 var4.j = var188;
                                  q.e(var5);
                                  val var189: Editor = var5.edit();
                                  var189.putString("referrer", var4.j as java.lang.String);
                                  var189.apply();
                                  var1.resolve(var4.j);
-                                 var1 = r.b(Unit.a);
+                                 var1 = Result.b(Unit.a);
                               } catch (var14: java.lang.Throwable) {
-                                 val var188: a = r.k;
-                                 var1 = r.b(s.a(var14));
+                                 val var178: a = Result.k;
+                                 var1 = Result.b(c.a(var14));
                                  break label89;
                               }
                            }
 
                            val var192: SharedPreferences = this.$prefs;
                            val var190: Promise = this.$promise;
-                           val var176: Int = this.$attempts;
-                           val var170: java.lang.Throwable = r.e(var1);
-                           if (var170 != null) {
+                           val var185: Int = this.$attempts;
+                           val var179: java.lang.Throwable = Result.e(var1);
+                           if (var179 != null) {
                               q.e(var192);
                               val var193: Editor = var192.edit();
-                              var193.putInt("attempts", var176 + 1);
+                              var193.putInt("attempts", var185 + 1);
                               var193.apply();
                               var190.resolve(null);
-                              if (var170 is CancellationException) {
-                                 throw var170;
+                              if (var179 is CancellationException) {
+                                 throw var179;
                               }
                            }
 
-                           val var171: ObjectRef = this.$client;
+                           val var180: ObjectRef = this.$client;
 
                            try {
-                              var191 = var171.j as InstallReferrerClient;
+                              var191 = var180.j as InstallReferrerClient;
                            } catch (var13: java.lang.Throwable) {
-                              val var172: a = r.k;
-                              r.b(s.a(var13));
+                              val var181: a = Result.k;
+                              Result.b(c.a(var13));
                               return Unit.a;
                            }
 
-                           var var173: Unit = null;
+                           var var182: Unit = null;
                            if (var191 != null) {
                               try {
                                  var191.a();
-                                 var173 = Unit.a;
+                                 var182 = Unit.a;
                               } catch (var12: java.lang.Throwable) {
-                                 val var174: a = r.k;
-                                 r.b(s.a(var12));
+                                 val var183: a = Result.k;
+                                 Result.b(c.a(var12));
                                  return Unit.a;
                               }
                            }
 
                            try {
-                              r.b(var173);
+                              Result.b(var182);
                            } catch (var11: java.lang.Throwable) {
-                              val var175: a = r.k;
-                              r.b(s.a(var11));
+                              val var184: a = Result.k;
+                              Result.b(c.a(var11));
                               return Unit.a;
                            }
 

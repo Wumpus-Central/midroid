@@ -85,8 +85,8 @@ internal class DeleteNodeOnBackspaceTextWatcher : TextWatcher {
    }
 
    public data class DeleteEvent(start: Int, end: Int) {
-      public final val end: Int
       public final val start: Int
+      public final val end: Int
 
       init {
          this.start = var1;

@@ -1,7 +1,6 @@
 package com.discord.chat.bridge.spoiler
 
 import kotlin.enums.EnumEntries
-import w8.a
 
 public enum class SpoilerType {
    OBSCURE,
@@ -14,7 +13,7 @@ public enum class SpoilerType {
    fun {
       val var0: Array<SpoilerType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    @JvmStatic

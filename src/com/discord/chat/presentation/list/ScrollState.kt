@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.list
 
-import kotlin.jvm.internal.q
-
 public data class ScrollState(isDragging: Boolean,
    isSettling: Boolean,
    isNearBottom: Boolean,
@@ -15,18 +13,18 @@ public data class ScrollState(isDragging: Boolean,
    lastVisibleMessageIndex: Int,
    lastVisibleMessagePercentVisible: Double?
 ) {
+   public final val isDragging: Boolean
+   public final val isSettling: Boolean
+   public final val isNearBottom: Boolean
+   public final val isAtBottom: Boolean
+   public final val isNearTop: Boolean
+   public final val isAtTop: Boolean
+   public final val scrollDirection: ScrollDirection?
+   public final val isFirstMessageVisible: Boolean
    public final val firstVisibleMessageIndex: Int
    public final val firstVisibleMessagePercentVisible: Double?
-   public final val isAtBottom: Boolean
-   public final val isAtTop: Boolean
-   public final val isDragging: Boolean
-   public final val isFirstMessageVisible: Boolean
-   public final val isNearBottom: Boolean
-   public final val isNearTop: Boolean
-   public final val isSettling: Boolean
    public final val lastVisibleMessageIndex: Int
    public final val lastVisibleMessagePercentVisible: Double?
-   public final val scrollDirection: ScrollDirection?
 
    init {
       this.isDragging = var1;
@@ -133,23 +131,23 @@ public data class ScrollState(isDragging: Boolean,
             return false;
          } else if (this.firstVisibleMessageIndex != var1.firstVisibleMessageIndex) {
             return false;
-         } else if (!q.c(this.firstVisibleMessagePercentVisible, var1.firstVisibleMessagePercentVisible)) {
+         } else if (!kotlin.jvm.internal.q.c(this.firstVisibleMessagePercentVisible, var1.firstVisibleMessagePercentVisible)) {
             return false;
          } else if (this.lastVisibleMessageIndex != var1.lastVisibleMessageIndex) {
             return false;
          } else {
-            return q.c(this.lastVisibleMessagePercentVisible, var1.lastVisibleMessagePercentVisible);
+            return kotlin.jvm.internal.q.c(this.lastVisibleMessagePercentVisible, var1.lastVisibleMessagePercentVisible);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = java.lang.Boolean.hashCode(this.isDragging);
-      val var8: Int = java.lang.Boolean.hashCode(this.isSettling);
-      val var6: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var8: Int = java.lang.Boolean.hashCode(this.isDragging);
+      val var6: Int = java.lang.Boolean.hashCode(this.isSettling);
+      val var4: Int = java.lang.Boolean.hashCode(this.isNearBottom);
       val var7: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var5: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var4: Int = java.lang.Boolean.hashCode(this.isAtTop);
+      val var9: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var5: Int = java.lang.Boolean.hashCode(this.isAtTop);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollDirection == null) {
@@ -158,8 +156,8 @@ public data class ScrollState(isDragging: Boolean,
          var1 = this.scrollDirection.hashCode();
       }
 
-      val var10: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
-      val var11: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      val var11: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
+      val var10: Int = Integer.hashCode(this.firstVisibleMessageIndex);
       val var2: Int;
       if (this.firstVisibleMessagePercentVisible == null) {
          var2 = 0;
@@ -172,50 +170,50 @@ public data class ScrollState(isDragging: Boolean,
          var3 = this.lastVisibleMessagePercentVisible.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var8) * 31 + var6) * 31 + var7) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var10) * 31 + var11) * 31 + var2) * 31 + var12)
+      return ((((((((((var8 * 31 + var6) * 31 + var4) * 31 + var7) * 31 + var9) * 31 + var5) * 31 + var1) * 31 + var11) * 31 + var10) * 31 + var2) * 31 + var12)
             * 31
          + var3;
    }
 
    public override fun toString(): String {
-      val var7: Boolean = this.isDragging;
-      val var8: Boolean = this.isSettling;
-      val var6: Boolean = this.isNearBottom;
+      val var3: Boolean = this.isDragging;
+      val var6: Boolean = this.isSettling;
+      val var8: Boolean = this.isNearBottom;
       val var5: Boolean = this.isAtBottom;
-      val var4: Boolean = this.isNearTop;
+      val var7: Boolean = this.isNearTop;
       val var9: Boolean = this.isAtTop;
-      val var11: ScrollDirection = this.scrollDirection;
-      val var3: Boolean = this.isFirstMessageVisible;
+      val var13: ScrollDirection = this.scrollDirection;
+      val var4: Boolean = this.isFirstMessageVisible;
       val var2: Int = this.firstVisibleMessageIndex;
       val var10: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var1: Int = this.lastVisibleMessageIndex;
-      val var12: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ScrollState(isDragging=");
-      var13.append(var7);
-      var13.append(", isSettling=");
-      var13.append(var8);
-      var13.append(", isNearBottom=");
-      var13.append(var6);
-      var13.append(", isAtBottom=");
-      var13.append(var5);
-      var13.append(", isNearTop=");
-      var13.append(var4);
-      var13.append(", isAtTop=");
-      var13.append(var9);
-      var13.append(", scrollDirection=");
-      var13.append(var11);
-      var13.append(", isFirstMessageVisible=");
-      var13.append(var3);
-      var13.append(", firstVisibleMessageIndex=");
-      var13.append(var2);
-      var13.append(", firstVisibleMessagePercentVisible=");
-      var13.append(var10);
-      var13.append(", lastVisibleMessageIndex=");
-      var13.append(var1);
-      var13.append(", lastVisibleMessagePercentVisible=");
-      var13.append(var12);
-      var13.append(")");
-      return var13.toString();
+      val var11: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("ScrollState(isDragging=");
+      var12.append(var3);
+      var12.append(", isSettling=");
+      var12.append(var6);
+      var12.append(", isNearBottom=");
+      var12.append(var8);
+      var12.append(", isAtBottom=");
+      var12.append(var5);
+      var12.append(", isNearTop=");
+      var12.append(var7);
+      var12.append(", isAtTop=");
+      var12.append(var9);
+      var12.append(", scrollDirection=");
+      var12.append(var13);
+      var12.append(", isFirstMessageVisible=");
+      var12.append(var4);
+      var12.append(", firstVisibleMessageIndex=");
+      var12.append(var2);
+      var12.append(", firstVisibleMessagePercentVisible=");
+      var12.append(var10);
+      var12.append(", lastVisibleMessageIndex=");
+      var12.append(var1);
+      var12.append(", lastVisibleMessagePercentVisible=");
+      var12.append(var11);
+      var12.append(")");
+      return var12.toString();
    }
 }

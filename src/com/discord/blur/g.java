@@ -1,5 +1,12 @@
 package com.discord.blur;
 
+import kotlin.jvm.functions.Function0;
+
 // $VF: synthetic class
-public abstract class g {
+public final class g implements Function0 {
+   public final BlurViewHardwareAccelerated j;
+
+   public final Object invoke() {
+      return BlurViewHardwareAccelerated.c(this.j);
+   }
 }

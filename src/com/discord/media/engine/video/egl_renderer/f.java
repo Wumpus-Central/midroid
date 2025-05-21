@@ -1,12 +1,12 @@
 package com.discord.media.engine.video.egl_renderer;
 
-// $VF: synthetic class
-public final class f implements Runnable {
-   public final EglRenderer j;
-   public final long k;
+import kotlin.jvm.functions.Function1;
 
-   @Override
-   public final void run() {
-      EglRenderer.b(this.j, this.k);
+// $VF: synthetic class
+public final class f implements Function1 {
+   public final EglRenderer j;
+
+   public final Object invoke(Object var1) {
+      return EglRenderer.b(this.j, (Exception)var1);
    }
 }

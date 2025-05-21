@@ -3,6 +3,10 @@ package com.discord.chat.presentation.message.view.botuikit
 import com.discord.misc.utilities.size.SizeUtilsKt
 
 public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, widthReductions: Int = 0) {
+   public final val topLevelAvailableWidth: Int
+   public final val topLevelMaxWidth: Int
+   internal final val widthReductions: Int
+
    public final val availableWidth: Int
       public final get() {
          return this.getTopLevelWidth() - this.widthReductions;
@@ -35,16 +39,11 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
       }
 
 
-   public final val topLevelAvailableWidth: Int
-   public final val topLevelMaxWidth: Int
-
    private final val topLevelWidth: Int
       private final get() {
          return Math.min(this.topLevelAvailableWidth, this.topLevelMaxWidth);
       }
 
-
-   internal final val widthReductions: Int
 
    init {
       this.topLevelAvailableWidth = var1;
@@ -95,15 +94,15 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
 
    public override fun toString(): String {
       val var2: Int = this.topLevelAvailableWidth;
-      val var1: Int = this.topLevelMaxWidth;
-      val var3: Int = this.widthReductions;
+      val var3: Int = this.topLevelMaxWidth;
+      val var1: Int = this.widthReductions;
       val var4: StringBuilder = new StringBuilder();
       var4.append("WidthInfo(topLevelAvailableWidth=");
       var4.append(var2);
       var4.append(", topLevelMaxWidth=");
-      var4.append(var1);
-      var4.append(", widthReductions=");
       var4.append(var3);
+      var4.append(", widthReductions=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

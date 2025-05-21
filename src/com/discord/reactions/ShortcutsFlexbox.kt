@@ -17,11 +17,11 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public class ShortcutsFlexbox  public constructor(context: Context, attrs: AttributeSet? = null) : FlexboxLayout {
-   private final val addBurstReactionView: AddReactionView
    private final val addReactionView: AddReactionView
-   private final val forwardView: AddReactionView
-   private final val replyView: AddReactionView
+   private final val addBurstReactionView: AddReactionView
    private final val shortcutsView: FlexboxLayout
+   private final val replyView: AddReactionView
+   private final val forwardView: AddReactionView
    private final val threadView: AddReactionView
 
    fun ShortcutsFlexbox(var1: Context) {
@@ -146,7 +146,9 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    @JvmStatic
-   fun `setReactions$lambda$2`(var0: View) {
+   fun `setReactions$lambda$2`(var0: ReactionView.Reaction): Unit {
+      q.h(var0, "<unused var>");
+      return Unit.a;
    }
 
    @JvmStatic
@@ -158,16 +160,16 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    @JvmStatic
-   fun `setReactions$lambda$7$lambda$5`(var0: Function1, var1: ReactionView.Reaction, var2: View) {
-      q.h(var0, "$onReactionClick");
-      q.h(var1, "$reaction");
+   fun `setReactions$lambda$5`(var0: View) {
+   }
+
+   @JvmStatic
+   fun `setReactions$lambda$8$lambda$6`(var0: Function1, var1: ReactionView.Reaction, var2: View) {
       var0.invoke(var1);
    }
 
    @JvmStatic
-   fun `setReactions$lambda$7$lambda$6`(var0: Function1, var1: ReactionView.Reaction, var2: View): Boolean {
-      q.h(var0, "$onReactionLongPress");
-      q.h(var1, "$reaction");
+   fun `setReactions$lambda$8$lambda$7`(var0: Function1, var1: ReactionView.Reaction, var2: View): Boolean {
       var0.invoke(var1);
       return true;
    }
@@ -191,7 +193,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       onAddReactionClick: OnClickListener = new c(),
       onAddBurstReactionClick: OnClickListener = new d(),
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = <unrepresentable>.INSTANCE,
+      onReactionLongPress: (Reaction) -> Unit = new e(),
       theme: DiscordTheme? = null,
       showReactionShortcut: Boolean = false,
       showReplyShortcut: Boolean = false,
@@ -219,7 +221,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var29: ThemeManager = ThemeManager.INSTANCE;
       val var28: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var29.setThemeOverride(var12);
-      val var36: java.util.List = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
+      var1 = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
       val var27: Boolean;
       if (!var14 && !var15 && !var16) {
          var27 = false;
@@ -227,22 +229,22 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
          var27 = true;
       }
 
-      val var31: java.util.Iterator = var36.iterator();
+      val var36: java.util.Iterator = var1.iterator();
 
-      for (int var24 = 0; var31.hasNext(); var24++) {
-         var var41: Any = var31.next();
+      for (int var24 = 0; var36.hasNext(); var24++) {
+         var var41: Any = var36.next();
          if (var24 < 0) {
             kotlin.collections.i.u();
          }
 
          var41 = var41 as ReactionView.Reaction;
-         val var30: ReactionView = this.getOrCreateReactionView(var24, var17, var27, var36.size());
+         val var30: ReactionView = this.getOrCreateReactionView(var24, var17, var27, var1.size());
          var30.setReaction((ReactionView.Reaction)var41, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new h(var10, (ReactionView.Reaction)var41), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new i(var11, (ReactionView.Reaction)var41), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new i(var10, (ReactionView.Reaction)var41), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new j(var11, (ReactionView.Reaction)var41), 1, null);
       }
 
-      this.hideRemainingReactionsInRow(var36.size());
+      this.hideRemainingReactionsInRow(var1.size());
       var var37: Boolean;
       if (!var2 && !var13) {
          var37 = 0;

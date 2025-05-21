@@ -28,7 +28,6 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
-import o8.l
 
 public class PollMediaView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val childViews: MutableList<View>
@@ -57,50 +56,24 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = Y1.a.d(var1, var2);
+      this.hierarchyBuilder = Q2.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = l.a(new Function0(var1, this) {
-         final Context $context;
-         final PollMediaView this$0;
+      this.draweeView$delegate = g9.j.b(new k(var1, this));
+      this.textView$delegate = g9.j.b(new l(var1, this));
+   }
 
-         {
-            super(0);
-            this.$context = var1;
-            this.this$0 = var2;
-         }
-
-         public final SimpleDraweeView invoke() {
-            val var1: SimpleDraweeView = new SimpleDraweeView(this.$context);
-            val var2: PollMediaView = this.this$0;
-            var1.setHierarchy(PollMediaView.access$getHierarchyBuilder$p(this.this$0).a());
-            PollMediaView.access$getChildViews$p(var2).add(var1);
-            var2.addView(var1, new LayoutParams(-1, -1, 17));
-            return var1;
-         }
-      });
-      this.textView$delegate = l.a(new Function0(var1, this) {
-         final Context $context;
-         final PollMediaView this$0;
-
-         {
-            super(0);
-            this.$context = var1;
-            this.this$0 = var2;
-         }
-
-         public final SimpleDraweeSpanTextView invoke() {
-            val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(this.$context);
-            val var1: PollMediaView = this.this$0;
-            PollMediaView.access$getChildViews$p(this.this$0).add(var2);
-            var1.addView(var2, new LayoutParams(-2, -2, 17));
-            return var2;
-         }
-      });
+   @JvmStatic
+   fun `draweeView_delegate$lambda$2`(var0: Context, var1: PollMediaView): SimpleDraweeView {
+      val var2: SimpleDraweeView = new SimpleDraweeView(var0);
+      var2.setHierarchy(var1.hierarchyBuilder.a());
+      var1.childViews.add(var2);
+      var1.addView(var2, new LayoutParams(-1, -1, 17));
+      return var2;
    }
 
    private fun hideViews() {
@@ -125,24 +98,28 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
    }
 
    @JvmStatic
-   fun `setMedia$lambda$1`(var0: Function0, var1: View) {
-      q.h(var0, "$onTapAnswer");
+   fun `setMedia$lambda$5`(var0: Function0, var1: View) {
       var0.invoke();
    }
 
    @JvmStatic
-   fun `setMedia$lambda$2`(var0: PollMediaView, var1: Function6, var2: Attachment, var3: View): Boolean {
-      q.h(var0, "this$0");
-      q.h(var1, "$onLongPressImage");
+   fun `setMedia$lambda$6`(var0: PollMediaView, var1: Function6, var2: Attachment, var3: View): Boolean {
       val var4: Point = ViewLocationUtilsKt.getLocationInWindow(var0);
       var1.invoke(var2.getId(), var0.getWidth(), var0.getHeight(), var4.x, var4.y, ViewResizeMode.Cover);
       return true;
    }
 
    @JvmStatic
-   fun `setMedia$lambda$3`(var0: Function0, var1: View) {
-      q.h(var0, "$onTapAnswer");
+   fun `setMedia$lambda$7`(var0: Function0, var1: View) {
       var0.invoke();
+   }
+
+   @JvmStatic
+   fun `textView_delegate$lambda$4`(var0: Context, var1: PollMediaView): SimpleDraweeSpanTextView {
+      val var2: SimpleDraweeSpanTextView = new SimpleDraweeSpanTextView(var0);
+      var1.childViews.add(var2);
+      var1.addView(var2, new LayoutParams(-2, -2, 17));
+      return var2;
    }
 
    public fun setMedia(accessory: PollAnswerAccessory, onTapAnswer: () -> Unit, onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit) {
@@ -172,26 +149,26 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             this.setImageURL(var15.getUrl(), ScaleType.CENTER_CROP, var1.getShouldAutoPlayGifs());
             var4 = 1;
             if (var15.getId() != null) {
-               this.setOnClickListener(new f(var2));
-               this.setOnLongClickListener(new g(this, var3, var15));
+               this.setOnClickListener(new m(var2));
+               this.setOnLongClickListener(new n(this, var3, var15));
                var4 = 1;
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
-            val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var16.renderable();
+            val var10: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
+            val var16: RenderableEmoji = var10.renderable();
             val var9: Context = this.getContext();
             q.g(var9, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
-            if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {
+            if (var1.getShouldAnimateEmoji() && var10.getAnimated()) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var9, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var9, var4, var7, 0, null, 48, null));
             this.setImportantForAccessibility(2);
-            this.setOnClickListener(new h(var2));
+            this.setOnClickListener(new o(var2));
             var4 = 1;
          } else {
             this.hideViews();

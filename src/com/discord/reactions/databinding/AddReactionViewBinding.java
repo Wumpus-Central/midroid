@@ -1,5 +1,6 @@
 package com.discord.reactions.databinding;
 
+import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import u0.a;
 
 public final class AddReactionViewBinding implements ViewBinding {
    public final SimpleDraweeView addReactionImage;

@@ -1,7 +1,8 @@
 package com.discord.sounds.utils
 
-import X9.K
-import X9.f
+import Pa.K
+import Pa.d0
+import Pa.f
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
@@ -10,6 +11,7 @@ import com.discord.logging.Log
 import com.discord.sounds.SoundManager
 import java.io.File
 import java.util.Comparator
+import k9.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
@@ -18,11 +20,8 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import o8.s
-import s8.a
-import v8.b
+import n9.b
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -74,13 +73,13 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               s.b(var1);
+               c.b(var1);
             } else {
-               s.b(var1);
-               val var4: Flow = FileDownloader.downloadFile$default(
+               c.b(var1);
+               var1 = FileDownloader.downloadFile$default(
                   FileDownloader.INSTANCE, this.$context, this.$url, this.$fileName, this.$soundDirectory, false, 16, null
                );
-               var1 = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
+               val var4: FlowCollector = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
                   final int $key;
                   final SoundManager $soundManager;
                   final Function1 $soundResIdPrepared;
@@ -100,12 +99,12 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            val var4x: <unrepresentable> = var2x as <unrepresentable>;
                            if (((var2x as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
                               var4x.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
-                              var14 = var4x;
+                              var13 = var4x;
                               break label57;
                            }
                         }
 
-                        var14 = new d(this, var2x) {
+                        var13 = new d(this, var2x) {
                            int label;
                            Object result;
                            final <unrepresentable><T> this$0;
@@ -123,16 +122,15 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         };
                      }
 
-                     var var17: Any = ((<unrepresentable>)var14).result;
-                     val var5: Any = b.e();
-                     var var9: Any;
-                     if (((<unrepresentable>)var14).label != 0) {
-                        if (((<unrepresentable>)var14).label == 1) {
+                     var var5: Any = ((<unrepresentable>)var13).result;
+                     val var15: Any = b.e();
+                     if (((<unrepresentable>)var13).label != 0) {
+                        if (((<unrepresentable>)var13).label == 1) {
                            try {
-                              s.b(var17);
+                              c.b(var5);
                            } catch (var7: Exception) {
-                              var9 = K.c();
-                              var17 = new Function2(var7, null) {
+                              val var9: d0 = K.c();
+                              var5 = new Function2(var7, null) {
                                  final Exception $e;
                                  int label;
 
@@ -152,7 +150,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  public final Object invokeSuspend(Object var1) {
                                     b.e();
                                     if (this.label == 0) {
-                                       s.b(var1);
+                                       c.b(var1);
                                        Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to download sound.", this.$e);
                                        return Unit.a;
                                     } else {
@@ -160,32 +158,31 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                     }
                                  }
                               };
-                              ((<unrepresentable>)var14).label = 2;
-                              if (f.g((CoroutineContext)var9, (Function2)var17, (Continuation)var14) === var5) {
-                                 return var5;
+                              ((<unrepresentable>)var13).label = 2;
+                              if (f.g(var9, (Function2)var5, (Continuation)var13) === var15) {
+                                 return var15;
                               }
                            }
 
                            return Unit.a;
                         }
 
-                        if (((<unrepresentable>)var14).label == 2) {
-                           s.b(var17);
+                        if (((<unrepresentable>)var13).label == 2) {
+                           c.b(var5);
                            return Unit.a;
                         }
 
-                        if (((<unrepresentable>)var14).label != 3) {
+                        if (((<unrepresentable>)var13).label != 3) {
                            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                         }
 
-                        s.b(var17);
-                        var9 = var17;
+                        c.b(var5);
                      } else {
-                        s.b(var17);
+                        c.b(var5);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              var17 = K.c();
-                              val var6: Function2 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
+                              val var6: d0 = K.c();
+                              var5 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
                                  final DownloadState $downloadState;
                                  final int $key;
                                  final SoundManager $soundManager;
@@ -215,7 +212,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  public final Object invokeSuspend(Object var1) {
                                     b.e();
                                     if (this.label == 0) {
-                                       s.b(var1);
+                                       c.b(var1);
                                        this.$soundManager
                                           .prepare(
                                              this.$key,
@@ -230,11 +227,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                     }
                                  }
                               };
-                              ((<unrepresentable>)var14).label = 1;
-                              var9 = f.g((CoroutineContext)var17, var6, (Continuation)var14);
+                              ((<unrepresentable>)var13).label = 1;
+                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
                            } catch (var8: Exception) {
-                              var9 = K.c();
-                              var17 = new Function2(var8, null) {
+                              val var11: d0 = K.c();
+                              var5 = new Function2(var8, null) {
                                  final Exception $e;
                                  int label;
 
@@ -254,7 +251,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  public final Object invokeSuspend(Object var1) {
                                     b.e();
                                     if (this.label == 0) {
-                                       s.b(var1);
+                                       c.b(var1);
                                        Log.INSTANCE.w(SoundManager.Companion.getLogTag(), "Failed to download sound.", this.$e);
                                        return Unit.a;
                                     } else {
@@ -262,23 +259,23 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                     }
                                  }
                               };
-                              ((<unrepresentable>)var14).label = 2;
-                              if (f.g((CoroutineContext)var9, (Function2)var17, (Continuation)var14) === var5) {
-                                 return var5;
+                              ((<unrepresentable>)var13).label = 2;
+                              if (f.g(var11, (Function2)var5, (Continuation)var13) === var15) {
+                                 return var15;
                               }
 
                               return Unit.a;
                            }
 
-                           if (var9 === var5) {
-                              return var5;
+                           if (var12 === var15) {
+                              return var15;
                            }
 
                            return Unit.a;
                         }
 
-                        var17 = K.c();
-                        var9 = new Function2(null) {
+                        var5 = K.c();
+                        val var10: Function2 = new Function2(null) {
                            int label;
 
                            {
@@ -296,26 +293,24 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            public final Object invokeSuspend(Object var1) {
                               b.e();
                               if (this.label == 0) {
-                                 s.b(var1);
-                                 return null;
+                                 c.b(var1);
+                                 return Unit.a;
                               } else {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                               }
                            }
                         };
-                        ((<unrepresentable>)var14).label = 3;
-                        val var15: Any = f.g((CoroutineContext)var17, (Function2)var9, (Continuation)var14);
-                        var9 = var15;
-                        if (var15 === var5) {
-                           return var5;
+                        ((<unrepresentable>)var13).label = 3;
+                        if (f.g((CoroutineContext)var5, var10, (Continuation)var13) === var15) {
+                           return var15;
                         }
                      }
 
-                     return var9;
+                     return Unit.a;
                   }
                };
                this.label = 1;
-               if (var4.collect(var1, this) === var3) {
+               if (var1.collect(var4, this) === var3) {
                   return var3;
                }
             }
@@ -346,13 +341,13 @@ internal fun Context.tryPruneSoundsCache() {
    q.h(var0, "<this>");
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
-      c.v(var1, new Comparator() {
+      kotlin.collections.c.y(var1, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var2 as File).lastModified(), (var1 as File).lastModified());
          }
       });
-      val var2: File = c.i0(var1) as File;
+      val var2: File = kotlin.collections.c.l0(var1) as File;
       if (var2 != null) {
          var2.delete();
       }

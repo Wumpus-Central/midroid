@@ -21,18 +21,6 @@ import org.webrtc.TimestampAligner
 import org.webrtc.VideoFrame
 
 internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : ScreenCapturerAndroid {
-   private final val calculatedSize: Point
-   private final lateinit var context: Context
-   private final val currentMeasuredSize: Rect
-   private final var framerate: Int
-   private final var intervalNanos: Int
-   private final var lastFrameTimestamp: Long?
-   private final val lastMeasuredSize: Rect
-   private final var maxPixelCount: Int
-   private final lateinit var nativeObserver: NativeCapturerObserver
-   public final val soundshare: SoundshareAudioSource
-   private final lateinit var surfaceTextureHelper: SurfaceTextureHelper
-
    public final var thumbnailEmitter: ThumbnailEmitter?
       internal final set(value) {
          if (this.thumbnailEmitter != null) {
@@ -44,6 +32,17 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
 
    private final val watchdog: com.discord.media.engine.video.screen_capture.ScreenCapturer.Watchdog
+   private final lateinit var nativeObserver: NativeCapturerObserver
+   private final lateinit var surfaceTextureHelper: SurfaceTextureHelper
+   private final lateinit var context: Context
+   public final val soundshare: SoundshareAudioSource
+   private final var framerate: Int
+   private final var intervalNanos: Int
+   private final var lastFrameTimestamp: Long?
+   private final val lastMeasuredSize: Rect
+   private final val currentMeasuredSize: Rect
+   private final val calculatedSize: Point
+   private final var maxPixelCount: Int
 
    init {
       q.h(var1, "mediaProjectionPermissionResultData");
@@ -58,12 +57,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var4: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
-         q.g(var4, "build(...)");
+         val var6: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
+         q.g(var6, "build(...)");
 
          try {
             var1 = c.a(
-                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var4
+                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var6
                )
                .build();
          } catch (var5: SecurityException) {
@@ -82,7 +81,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
          q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
-         var3.set(z0.c.a(d.a(var4 as WindowManager)));
+         var3.set(F0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }
@@ -198,15 +197,15 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 39: invokevirtual android/graphics/Point.set (II)V
       // 3c: aload 0
       // 3d: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
-      // 40: astore 5
-      // 42: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
-      // 45: astore 1
-      // 46: aload 5
-      // 48: aload 1
-      // 49: aload 5
-      // 4b: getfield android/graphics/Point.x I
-      // 4e: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
-      // 51: aload 1
+      // 40: astore 1
+      // 41: getstatic com/discord/media/engine/video/screen_capture/ScreenCapturer.Companion Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;
+      // 44: astore 5
+      // 46: aload 1
+      // 47: aload 5
+      // 49: aload 1
+      // 4a: getfield android/graphics/Point.x I
+      // 4d: invokestatic com/discord/media/engine/video/screen_capture/ScreenCapturer$Companion.access$closestMod16 (Lcom/discord/media/engine/video/screen_capture/ScreenCapturer$Companion;I)I
+      // 50: aload 5
       // 52: aload 0
       // 53: getfield com/discord/media/engine/video/screen_capture/ScreenCapturer.calculatedSize Landroid/graphics/Point;
       // 56: getfield android/graphics/Point.y I
@@ -431,11 +430,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    }
 
    public companion object {
-      private const val AUDIO_FORMAT: Int
-      private const val CHANNEL_CONFIG: Int
-      private const val MIN_REPEAT_FRAMERATE: Int
-      private const val SAMPLING_RATE_IN_HZ: Int
       private const val TAG: String
+      private const val SAMPLING_RATE_IN_HZ: Int
+      private const val CHANNEL_CONFIG: Int
+      private const val AUDIO_FORMAT: Int
+      private const val MIN_REPEAT_FRAMERATE: Int
 
       private fun closestMod16(n: Int): Int {
          val var2: Int = var1 % 16;
@@ -463,11 +462,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var3 != null) {
-               val var4: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
+            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var4 != null) {
+               val var3: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
                      q.y("nativeObserver");

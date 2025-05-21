@@ -2,31 +2,47 @@ package com.discord.chat.presentation.message.view.polls
 
 import android.annotation.SuppressLint
 import android.view.View
-import androidx.core.view.a0
+import androidx.core.view.b0
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollsAnswerAccessibilityDelegate
 import com.discord.chat.reactevents.ViewResizeMode
 import com.discord.recycler_view.utils.ItemDiffer
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>> : RecyclerView.Adapter {
-   private final var items: List<PollAnswerAccessory> = i.k()
-   public final var onTapAnswer: (String) -> Unit = <unrepresentable>.INSTANCE
+   private final var items: List<PollAnswerAccessory> = kotlin.collections.i.k()
+   public final var onTapAnswer: (String) -> Unit = new i()
    private final var onLongPressImage: (String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    public final var myAvatarUrl: String?
 
    open fun PollAnswerAdapter() {
-      this.onLongPressImage = <unrepresentable>.INSTANCE;
+      this.onLongPressImage = new j();
       this.setHasStableIds(true);
    }
 
    @JvmStatic
-   fun `onBindViewHolder$lambda$1$lambda$0`(var0: PollAnswerAdapter, var1: PollAnswerAccessory, var2: View) {
-      q.h(var0, "this$0");
-      q.h(var1, "$accessory");
+   fun `onBindViewHolder$lambda$3$lambda$2`(var0: PollAnswerAdapter, var1: PollAnswerAccessory, var2: View) {
       var0.onTapAnswer.invoke(var1.getAnswer().getAnswerId());
+   }
+
+   @JvmStatic
+   fun `onBindViewHolder$lambda$4`(var0: PollAnswerAdapter, var1: PollAnswerAccessory): Unit {
+      var0.onTapAnswer.invoke(var1.getAnswer().getAnswerId());
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onLongPressImage$lambda$1`(var0: java.lang.String, var1: Int, var2: Int, var3: Int, var4: Int, var5: ViewResizeMode): Unit {
+      q.h(var0, "<unused var>");
+      q.h(var5, "<unused var>");
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onTapAnswer$lambda$0`(var0: java.lang.String): Unit {
+      q.h(var0, "<unused var>");
+      return Unit.a;
    }
 
    public override fun getItemCount(): Int {
@@ -42,23 +58,10 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       val var4: PollAnswerAccessory = this.items.get(var2);
       val var3: View = var1.getBinding().getRoot();
       var3.setEnabled(var4.getCanTapAnswers());
-      var3.setOnClickListener(new e(this, var4));
+      var3.setOnClickListener(new g(this, var4));
       var3.setImportantForAccessibility(1);
-      a0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
-      var1.bind(var4, new Function0(this, var4) {
-         final PollAnswerAccessory $accessory;
-         final PollAnswerAdapter<THolder> this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$accessory = var2;
-         }
-
-         public final void invoke() {
-            this.this$0.getOnTapAnswer().invoke(this.$accessory.getAnswer().getAnswerId());
-         }
-      }, this.onLongPressImage);
+      b0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
+      var1.bind(var4, new h(this, var4), this.onLongPressImage);
    }
 
    @SuppressLint(["NotifyDataSetChanged"])

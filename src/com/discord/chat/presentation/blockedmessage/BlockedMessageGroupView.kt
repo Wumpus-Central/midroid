@@ -60,8 +60,6 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `bind$lambda$2`(var0: ChatEventHandler, var1: BlockedGroupChatListItem, var2: View) {
-      q.h(var0, "$eventHandler");
-      q.h(var1, "$item");
       var0.onTapToggleBlockedMessages-1xi1bu0(MessageId.constructor-impl(var1.getId()));
    }
 
@@ -69,7 +67,7 @@ public class BlockedMessageGroupView  public constructor(context: Context, attrs
    public fun bind(item: BlockedGroupChatListItem, eventHandler: ChatEventHandler) {
       q.h(var1, "item");
       q.h(var2, "eventHandler");
-      this.setOnClickListener(new i1.a(var2, var1));
+      this.setOnClickListener(new w1.a(var2, var1));
       val var3: Int;
       if (var1.isRevealed()) {
          var3 = var1.getBackgroundColor();

@@ -1,29 +1,18 @@
 package com.discord.chat.reactevents
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.h
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class TapObscuredMediaToggleData(messageId: String, channelId: String, attachmentId: String, embedId: String, isReveal: Boolean) : ReactEvent {
-   public final val attachmentId: String
+   public final val messageId: String
    public final val channelId: String
+   public final val attachmentId: String
    public final val embedId: String
    public final val isReveal: Boolean
-   public final val messageId: String
 
    init {
       q.h(var1, "messageId");
@@ -103,132 +92,24 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.attachmentId;
-      val var3: java.lang.String = this.embedId;
+      val var6: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapObscuredMediaToggleData(messageId=");
-      var4.append(var5);
-      var4.append(", channelId=");
-      var4.append(var6);
-      var4.append(", attachmentId=");
-      var4.append(var2);
-      var4.append(", embedId=");
-      var4.append(var3);
-      var4.append(", isReveal=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TapObscuredMediaToggleData.$serializer = new TapObscuredMediaToggleData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapObscuredMediaToggleData", var0, 5);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
-         var1.l("attachmentId", false);
-         var1.l("embedId", false);
-         var1.l("isReveal", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a, h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): TapObscuredMediaToggleData {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var5: Boolean;
-         var var6: java.lang.String;
-         var var8: java.lang.String;
-         val var12: java.lang.String;
-         var var14: java.lang.String;
-         if (var11.y()) {
-            var14 = var11.t(var10, 0);
-            val var9: java.lang.String = var11.t(var10, 1);
-            var6 = var11.t(var10, 2);
-            var12 = var11.t(var10, 3);
-            var5 = var11.s(var10, 4);
-            var2 = 31;
-            var8 = var14;
-            var14 = var9;
-         } else {
-            var8 = null;
-            var14 = null;
-            var6 = null;
-            var var13: java.lang.String = null;
-            var var3: Boolean = true;
-            var5 = false;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var11.x(var10);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              if (var4 != 4) {
-                                 throw new n(var4);
-                              }
-
-                              var5 = var11.s(var10, 4);
-                              var2 |= 16;
-                           } else {
-                              var14 = var11.t(var10, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var6 = var11.t(var10, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var13 = var11.t(var10, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var8 = var11.t(var10, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var12 = var14;
-            var14 = var13;
-         }
-
-         var11.b(var10);
-         return new TapObscuredMediaToggleData(var2, var8, var14, var6, var12, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TapObscuredMediaToggleData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TapObscuredMediaToggleData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapObscuredMediaToggleData(messageId=");
+      var5.append(var6);
+      var5.append(", channelId=");
+      var5.append(var3);
+      var5.append(", attachmentId=");
+      var5.append(var4);
+      var5.append(", embedId=");
+      var5.append(var2);
+      var5.append(", isReveal=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

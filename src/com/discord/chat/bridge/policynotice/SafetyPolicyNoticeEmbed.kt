@@ -1,18 +1,8 @@
 package com.discord.chat.bridge.policynotice
 
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -23,11 +13,11 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    ctaText: String
 ) {
    public final val classificationId: String
-   public final val ctaText: String
-   public final val descriptionText: String
-   public final val subtitleText: String
-   public final val titleIcon: String
    public final val titleText: String
+   public final val titleIcon: String
+   public final val subtitleText: String
+   public final val descriptionText: String
+   public final val ctaText: String
 
    init {
       q.h(var1, "classificationId");
@@ -120,143 +110,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.classificationId;
-      val var6: java.lang.String = this.titleText;
-      val var2: java.lang.String = this.titleIcon;
-      val var3: java.lang.String = this.subtitleText;
-      val var1: java.lang.String = this.descriptionText;
-      val var7: java.lang.String = this.ctaText;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var4.append(var5);
-      var4.append(", titleText=");
-      var4.append(var6);
-      var4.append(", titleIcon=");
-      var4.append(var2);
-      var4.append(", subtitleText=");
-      var4.append(var3);
-      var4.append(", descriptionText=");
-      var4.append(var1);
-      var4.append(", ctaText=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: SafetyPolicyNoticeEmbed.$serializer = new SafetyPolicyNoticeEmbed.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.chat.bridge.policynotice.SafetyPolicyNoticeEmbed", var0, 6
-         );
-         var1.l("classificationId", false);
-         var1.l("titleText", false);
-         var1.l("titleIcon", false);
-         var1.l("subtitleText", false);
-         var1.l("descriptionText", false);
-         var1.l("ctaText", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): SafetyPolicyNoticeEmbed {
-         q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: c = var1.c(var12);
-         var var2: Int;
-         var var5: java.lang.String;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var8: java.lang.String;
-         val var10: java.lang.String;
-         val var14: java.lang.String;
-         if (var13.y()) {
-            var7 = var13.t(var12, 0);
-            var10 = var13.t(var12, 1);
-            var8 = var13.t(var12, 2);
-            var5 = var13.t(var12, 3);
-            var6 = var13.t(var12, 4);
-            var14 = var13.t(var12, 5);
-            var2 = 63;
-         } else {
-            var var9: java.lang.String = null;
-            var8 = null;
-            var7 = null;
-            var6 = null;
-            var5 = null;
-            var var15: java.lang.String = null;
-            var var3: Boolean = true;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var13.x(var12);
-               switch (var4) {
-                  case -1:
-                     var3 = false;
-                     break;
-                  case 0:
-                     var9 = var13.t(var12, 0);
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var15 = var13.t(var12, 1);
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var5 = var13.t(var12, 2);
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var7 = var13.t(var12, 3);
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var6 = var13.t(var12, 4);
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var8 = var13.t(var12, 5);
-                     var2 |= 32;
-                     break;
-                  default:
-                     throw new n(var4);
-               }
-            }
-
-            var14 = var8;
-            var5 = var7;
-            var8 = var5;
-            var10 = var15;
-            var7 = var9;
-         }
-
-         var13.b(var12);
-         return new SafetyPolicyNoticeEmbed(var2, var7, var10, var8, var5, var6, var14, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: SafetyPolicyNoticeEmbed) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         SafetyPolicyNoticeEmbed.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var3: java.lang.String = this.classificationId;
+      val var7: java.lang.String = this.titleText;
+      val var5: java.lang.String = this.titleIcon;
+      val var4: java.lang.String = this.subtitleText;
+      val var2: java.lang.String = this.descriptionText;
+      val var6: java.lang.String = this.ctaText;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var1.append(var3);
+      var1.append(", titleText=");
+      var1.append(var7);
+      var1.append(", titleIcon=");
+      var1.append(var5);
+      var1.append(", subtitleText=");
+      var1.append(var4);
+      var1.append(", descriptionText=");
+      var1.append(var2);
+      var1.append(", ctaText=");
+      var1.append(var6);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

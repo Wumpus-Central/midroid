@@ -14,11 +14,11 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          var1, var2, var4, var5, var6
       ),
    NotificationAction {
+   public open val tag: String
    private final val channelId: ChannelId
    private final val channelName: String?
    private final val channelType: Int?
    private final val guildName: String?
-   public open val tag: String
 
    fun DirectReplyAction(var1: java.lang.String, var2: Long, var4: java.lang.String, var5: Int, var6: java.lang.String) {
       q.h(var1, "tag");
@@ -55,7 +55,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
       return new DirectReplyAction(var1, var2, var4, var5, var6, null);
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -136,27 +136,27 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
 
    public override fun toString(): String {
       val var5: java.lang.String = this.tag;
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = this.channelName;
-      val var4: Int = this.channelType;
-      val var1: java.lang.String = this.guildName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DirectReplyAction(tag=");
-      var2.append(var5);
-      var2.append(", channelId=");
-      var2.append(var6);
-      var2.append(", channelName=");
-      var2.append(var3);
-      var2.append(", channelType=");
-      var2.append(var4);
-      var2.append(", guildName=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.channelName;
+      val var6: Int = this.channelType;
+      val var2: java.lang.String = this.guildName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DirectReplyAction(tag=");
+      var3.append(var5);
+      var3.append(", channelId=");
+      var3.append(var4);
+      var3.append(", channelName=");
+      var3.append(var1);
+      var3.append(", channelType=");
+      var3.append(var6);
+      var3.append(", guildName=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
       var1.writeString(this.channelName);
@@ -182,7 +182,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
             var var5: java.lang.CharSequence = var2.getCharSequence("remote_input_key");
             var4 = null;
             if (var5 != null) {
-               if (h.d0(var5)) {
+               if (h.c0(var5)) {
                   var5 = null;
                }
 
@@ -208,9 +208,9 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    internal class Creator : android.os.Parcelable.Creator<DirectReplyAction> {
       fun createFromParcel(var1: Parcel): DirectReplyAction {
          q.h(var1, "parcel");
-         val var6: java.lang.String = var1.readString();
-         val var2: Long = (var1.readParcelable(DirectReplyAction.class.getClassLoader()) as ChannelId).unbox-impl();
          val var5: java.lang.String = var1.readString();
+         val var2: Long = (var1.readParcelable(DirectReplyAction.class.getClassLoader()) as ChannelId).unbox-impl();
+         val var6: java.lang.String = var1.readString();
          val var4: Int;
          if (var1.readInt() == 0) {
             var4 = null;
@@ -218,7 +218,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
             var4 = var1.readInt();
          }
 
-         return new DirectReplyAction(var6, var2, var5, var4, var1.readString(), null);
+         return new DirectReplyAction(var5, var2, var6, var4, var1.readString(), null);
       }
 
       fun newArray(var1: Int): Array<DirectReplyAction> {

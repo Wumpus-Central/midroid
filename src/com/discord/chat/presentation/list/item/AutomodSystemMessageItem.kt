@@ -13,9 +13,9 @@ public data class AutomodSystemMessageItem(message: Message,
       allowChildGestures: Boolean = true
    )
    : ChatListItem {
-   public final val allowChildGestures: Boolean
    public final val message: Message
    public final val messageContext: MessageContext
+   public final val allowChildGestures: Boolean
 
    init {
       q.h(var1, "message");

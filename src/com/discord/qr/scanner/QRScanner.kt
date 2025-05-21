@@ -7,7 +7,6 @@ import android.webkit.URLUtil
 import android.widget.FrameLayout
 import com.budiyev.android.codescanner.CodeScanner
 import com.budiyev.android.codescanner.CodeScannerView
-import com.budiyev.android.codescanner.d
 import com.budiyev.android.codescanner.h
 import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
@@ -16,7 +15,10 @@ import com.discord.theme.utils.ColorUtilsKt
 import com.google.zxing.Result
 import kotlin.jvm.internal.q
 
-public class QRScanner  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout, d, h {
+public class QRScanner  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
+   : FrameLayout,
+   com.budiyev.android.codescanner.d,
+   h {
    private final val binding: QrScannerBinding
    private final val codeScanner: CodeScanner
    private final val runnable: Runnable
@@ -42,8 +44,8 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
       val var5: CodeScanner = new CodeScanner(var1, var4.qrScanner);
       this.codeScanner = var5;
       this.runnable = new a(this);
-      this.onCodeFound = <unrepresentable>.INSTANCE;
-      this.onCodeNotFound = <unrepresentable>.INSTANCE;
+      this.onCodeFound = new b();
+      this.onCodeNotFound = new c();
       var4.getRoot().setBackgroundColor(-16777216);
       val var6: CodeScannerView = var4.qrScanner;
       q.g(var4.qrScanner, "qrScanner");
@@ -56,8 +58,18 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    }
 
    @JvmStatic
+   fun `onCodeFound$lambda$1`(var0: java.lang.String): Unit {
+      q.h(var0, "it");
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onCodeNotFound$lambda$2`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
    fun `runnable$lambda$0`(var0: QRScanner) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 

@@ -1,16 +1,21 @@
 package com.discord.appreview
 
+import S6.b
+import S6.c
+import V6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import o1.d
+import o1.e
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
+   private final val useFakeReviewManager: Boolean
    private final val onComplete: () -> Unit
    private final val onFailure: (Exception) -> Unit
-   private final val useFakeReviewManager: Boolean
 
    init {
       q.h(var1, "activity");
@@ -26,9 +31,9 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    private fun createReviewManager(fake: Boolean, activity: Activity): ReviewManager {
       val var3: Any;
       if (var1) {
-         var3 = new d6.a(var2);
+         var3 = new a(var2);
       } else {
-         var3 = a6.c.a(var2);
+         var3 = c.a(var2);
          q.g(var3, "create(...)");
       }
 
@@ -37,13 +42,11 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    @JvmStatic
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
-      q.h(var0, "$reviewManager");
-      q.h(var1, "this$0");
       q.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.a(var1.activity, var2.l() as a6.b);
+         val var4: Task = var0.b(var1.activity, var2.l() as b);
          q.g(var4, "launchReviewFlow(...)");
-         var4.c(new c(var1));
+         var4.d(new e(var1));
       } else {
          val var3: Function1 = var1.onFailure;
          val var6: Exception = var2.k();
@@ -58,22 +61,20 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    @JvmStatic
    fun `executeRequest$lambda$1$lambda$0`(var0: AppRatingRequester, var1: Task) {
-      q.h(var0, "this$0");
       q.h(var1, "it");
       var0.onComplete.invoke();
    }
 
    @JvmStatic
    fun `executeRequest$lambda$2`(var0: AppRatingRequester) {
-      q.h(var0, "this$0");
       var0.onFailure.invoke(new Exception("Request was canceled"));
    }
 
    public fun executeRequest() {
-      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var1: Task = var2.b();
-      q.g(var1, "requestReviewFlow(...)");
-      var1.c(new a(var2, this));
-      var1.a(new b(this));
+      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var2: Task = var1.a();
+      q.g(var2, "requestReviewFlow(...)");
+      var2.d(new o1.c(var1, this));
+      var2.b(new d(this));
    }
 }

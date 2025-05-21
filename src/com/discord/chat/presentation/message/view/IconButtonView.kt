@@ -39,7 +39,6 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
 
    @JvmStatic
    fun `configure$lambda$1`(var0: Function0, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "$onClick");
       var0.invoke();
    }
 
@@ -53,6 +52,6 @@ public class IconButtonView  public constructor(context: Context, attributeSet: 
       I18nUtilsKt.i18nContentDescription$default(var4, var2, null, 2, null);
       val var5: FrameLayout = this.binding.iconContainer;
       kotlin.jvm.internal.q.g(this.binding.iconContainer, "iconContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new K(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new m0(var3), 1, null);
    }
 }

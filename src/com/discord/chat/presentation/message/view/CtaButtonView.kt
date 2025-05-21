@@ -31,12 +31,12 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
    }
 
    private fun setButtonCallback(channelId: ChannelId, messageId: MessageId, callback: String?, onTapCtaButton: (ChannelId, MessageId, String) -> Unit) {
-      if (var4 != null && !kotlin.text.h.d0(var4)) {
-         this.binding.ctaButton.setOnClickButtonListener(new m(var5, var1, var3, var4));
+      if (var4 != null && !kotlin.text.h.c0(var4)) {
+         this.binding.ctaButton.setOnClickButtonListener(new n(var5, var1, var3, var4));
          this.binding.ctaButton.setEnabled(true);
          this.binding.ctaButton.setAlpha(1.0F);
       } else {
-         this.binding.ctaButton.setOnClickButtonListener(new n());
+         this.binding.ctaButton.setOnClickButtonListener(new o());
          this.binding.ctaButton.setEnabled(false);
          this.binding.ctaButton.setAlpha(0.5F);
       }
@@ -44,8 +44,6 @@ public class CtaButtonView  public constructor(context: Context, attrs: Attribut
 
    @JvmStatic
    fun `setButtonCallback_JjTCmh4$lambda$0`(var0: Function3, var1: Long, var3: java.lang.String, var4: java.lang.String, var5: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapCtaButton");
-      kotlin.jvm.internal.q.h(var3, "$messageId");
       var0.invoke(ChannelId.box-impl(var1), MessageId.box-impl(var3), var4);
    }
 

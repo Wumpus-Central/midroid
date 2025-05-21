@@ -9,11 +9,11 @@ import android.view.View
 import android.view.WindowManager
 import androidx.appcompat.widget.m
 import com.discord.rlottie.RLottieDrawable.PlaybackMode
+import g9.t
 import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
-import o8.x
 
 public open class RLottieImageView : m {
    private final var layerColors: HashMap<String, Int>?
@@ -51,7 +51,7 @@ public open class RLottieImageView : m {
       } else {
          val var3: Any = var1.getSystemService("window");
          if (var3 == null) {
-            throw new x("null cannot be cast to non-null type android.view.WindowManager");
+            throw new t("null cannot be cast to non-null type android.view.WindowManager");
          }
 
          var2 = (var3 as WindowManager).getDefaultDisplay();

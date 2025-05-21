@@ -1,19 +1,38 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "n.simpleName" is null
-  at org.vineflower.kotlin.KotlinWriter.lambda$writeClass$0(KotlinWriter.java:265)
-  at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-  at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1685)
-  at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-  at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-  at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-  at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-  at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-  at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  at java.base/java.util.stream.ReferencePipeline.findAny(ReferencePipeline.java:652)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:266)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
-*/
+package com.discord.metric_monitor
+
+import T1.a
+import com.discord.codegen.NativeMetricMonitorModuleSpec
+import com.discord.reactevents.ReactEvents
+import com.facebook.react.bridge.ReactApplicationContext
+import g9.s
+import kotlin.jvm.internal.G
+import kotlin.jvm.internal.q
+
+public class MetricMonitorModule(reactContext: ReactApplicationContext) : NativeMetricMonitorModuleSpec {
+   private final val reactEvents: ReactEvents
+
+   init {
+      q.h(var1, "reactContext");
+      super(var1);
+      this.reactEvents = new ReactEvents(s.a("logMetric", G.b(MetricEvent.class)));
+      MonitoringAgent.INSTANCE.setMetricLogger$metric_monitor_release(new a(this, var1));
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: MetricMonitorModule, var1: ReactApplicationContext, var2: MetricEvent): Unit {
+      q.h(var2, "metric");
+      var0.reactEvents.emitModuleEvent(var1, var2);
+      return Unit.a;
+   }
+
+   public override fun addListener(eventType: String) {
+      q.h(var1, "eventType");
+   }
+
+   public override fun removeListeners(count: Double) {
+   }
+
+   public companion object {
+      private const val LOG_METRIC: String
+   }
+}

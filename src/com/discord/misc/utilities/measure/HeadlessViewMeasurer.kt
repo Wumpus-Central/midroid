@@ -85,8 +85,8 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
    }
 
    public data class MeasureBounds(widthPx: Int? = null, heightPx: Int? = null) {
-      public final val heightPx: Int?
       public final val widthPx: Int?
+      public final val heightPx: Int?
 
       fun MeasureBounds() {
          this(null, null, 3, null);

@@ -1,14 +1,12 @@
 package com.discord.notifications.api
 
+import Za.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
+import o9.a
 
 @f(with = StickerType.Serializer::class)
 public enum class StickerType(serialNumber: Int) : IntEnum {
@@ -20,8 +18,6 @@ public enum class StickerType(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private StickerType[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public StickerType.Companion Companion = new StickerType.Companion(null);
 
@@ -71,7 +67,7 @@ public enum class StickerType(serialNumber: Int) : IntEnum {
       }
 
       public fun serializer(): KSerializer<StickerType> {
-         return this.get$cachedSerializer();
+         return StickerType.Serializer.INSTANCE;
       }
    }
 

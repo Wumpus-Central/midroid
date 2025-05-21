@@ -17,15 +17,11 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: Sticker, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onStickerClicked");
-      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function1, var1: Sticker, var2: View): Boolean {
-      kotlin.jvm.internal.q.h(var0, "$onStickerLongClicked");
-      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
       return true;
    }
@@ -34,8 +30,8 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
       kotlin.jvm.internal.q.h(var1, "sticker");
       kotlin.jvm.internal.q.h(var2, "onStickerClicked");
       kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
-      val var8: StickerView = this.stickerView;
-      val var7: java.lang.String = var1.getUrl();
+      val var7: StickerView = this.stickerView;
+      val var8: java.lang.String = var1.getUrl();
       val var6: Boolean;
       if (var1.getRenderMode() == 0) {
          var6 = true;
@@ -43,8 +39,8 @@ public class StickerApngViewHolder(stickerView: StickerView) : StickerPartViewHo
          var6 = false;
       }
 
-      var8.asApng(var7, var4, var5, var6, var1.getAccessibilityLabel());
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new s(var2, var1), 1, null);
-      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new t(var3, var1), 1, null);
+      var7.asApng(var8, var4, var5, var6, var1.getAccessibilityLabel());
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new G(var2, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new H(var3, var1), 1, null);
    }
 }

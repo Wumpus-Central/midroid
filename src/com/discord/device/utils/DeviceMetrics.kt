@@ -6,7 +6,6 @@ import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.window.layout.WindowMetrics
 import com.discord.device.react_events.MetricsSize
-import kotlin.jvm.internal.q
 
 internal object DeviceMetrics {
    public fun getScreenSize(currentActivity: Activity?): MetricsSize? {
@@ -16,7 +15,7 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            return new MetricsSize(y0.a.a.a().a(var1));
+            return new MetricsSize(E0.a.a.a().a(var1));
          } catch (var2: Exception) {
             return null;
          }
@@ -28,10 +27,9 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            val var4: WindowMetrics = y0.a.a.a().a(var1);
+            val var4: WindowMetrics = E0.a.a.a().a(var1);
             if (VERSION.SDK_INT >= 34) {
-               val var2: Insets = var4.b().g(WindowInsetsCompat.m.h() or WindowInsetsCompat.m.b());
-               q.g(var2, "getInsetsIgnoringVisibility(...)");
+               val var2: Insets = var4.b().g(WindowInsetsCompat.n.h() or WindowInsetsCompat.n.b());
                return new MetricsSize(var4.a().width() - var2.a - var2.c, var4.a().height() - var2.b - var2.d);
             }
          } catch (var3: Exception) {

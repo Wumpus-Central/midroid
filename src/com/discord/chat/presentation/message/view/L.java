@@ -2,13 +2,15 @@ package com.discord.chat.presentation.message.view;
 
 import android.view.View;
 import android.view.View.OnClickListener;
-import kotlin.jvm.functions.Function0;
+import com.discord.chat.bridge.Message;
+import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
 public final class L implements OnClickListener {
-   public final Function0 j;
+   public final Message j;
+   public final ChatEventHandler k;
 
    public final void onClick(View var1) {
-      InfoLinkView.a(this.j, var1);
+      FlaggedMessageEmbedView.j(this.j, this.k, var1);
    }
 }

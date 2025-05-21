@@ -58,7 +58,6 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
 
    @JvmStatic
    fun `setExpandInfo$lambda$0`(var0: Function1, var1: Boolean, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onExpandChange");
       var0.invoke(var1 xor true);
    }
 
@@ -83,6 +82,6 @@ public class ErrorMessageView  public constructor(context: Context, attrs: Attri
 
       val var3: TextView = this.binding.seeMoreButton;
       kotlin.jvm.internal.q.g(this.binding.seeMoreButton, "seeMoreButton");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new c(var2, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new d(var2, var1), 1, null);
    }
 }

@@ -43,8 +43,6 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
 
    @JvmStatic
    fun `configureTagView_e2j04IU$lambda$0`(var0: ChatEventHandler, var1: java.lang.String, var2: Long, var4: java.lang.String, var5: View) {
-      kotlin.jvm.internal.q.h(var0, "$eventHandler");
-      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.onTapTag-Eqy5D80(var1, var2, var4);
    }
 
@@ -85,7 +83,7 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.q.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new o(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new X(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          kotlin.jvm.internal.q.g(this.binding.remixIcon, "remixIcon");
          var14.setVisibility(0);

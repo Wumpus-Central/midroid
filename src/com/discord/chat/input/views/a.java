@@ -1,13 +1,12 @@
 package com.discord.chat.input.views;
 
-import android.view.View;
-import android.view.View.OnFocusChangeListener;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class a implements OnFocusChangeListener {
-   public final ChatInputRootView a;
+public final class a implements Function1 {
+   public final ChatInputRootView j;
 
-   public final void onFocusChange(View var1, boolean var2) {
-      ChatInputRootView.d(this.a, var1, var2);
+   public final Object invoke(Object var1) {
+      return ChatInputRootView.b(this.j, (Integer)var1);
    }
 }

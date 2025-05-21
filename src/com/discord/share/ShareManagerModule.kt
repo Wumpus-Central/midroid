@@ -68,7 +68,7 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun share(text: String?, url: String?, chooserText: String?, location: String?) {
-      if (var1 != null && !h.d0(var1) || var2 != null && !h.d0(var2)) {
+      if (var1 != null && !h.c0(var1) || var2 != null && !h.c0(var2)) {
          val var5: Intent = new Intent("android.intent.action.SEND");
          var5.setAction("android.intent.action.SEND");
          var5.setType("text/plain");
@@ -80,10 +80,10 @@ public class ShareManagerModule(reactContext: ReactApplicationContext) : ReactCo
                var1 = "";
             }
 
-            val var10: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
-            val var6: ReactApplicationContext = this.getReactApplicationContext();
-            q.g(var6, "getReactApplicationContext(...)");
-            var8.startActivity(Intent.createChooser(var5, var1, var10.getPendingIntentSender(var6, var4)));
+            val var6: ShareBroadcastReceiver.Companion = ShareBroadcastReceiver.Companion;
+            val var10: ReactApplicationContext = this.getReactApplicationContext();
+            q.g(var10, "getReactApplicationContext(...)");
+            var8.startActivity(Intent.createChooser(var5, var1, var6.getPendingIntentSender(var10, var4)));
          }
       } else {
          val var9: StringBuilder = new StringBuilder();

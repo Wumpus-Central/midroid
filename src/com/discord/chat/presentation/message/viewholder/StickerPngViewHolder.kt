@@ -7,8 +7,8 @@ import com.discord.sticker.StickerView
 import kotlin.jvm.functions.Function1
 
 public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHolder {
-   private final var sticker: Sticker?
    private final val stickerView: StickerView
+   private final var sticker: Sticker?
 
    init {
       kotlin.jvm.internal.q.h(var1, "stickerView");
@@ -18,15 +18,11 @@ public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHol
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: Sticker, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onStickerClicked");
-      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function1, var1: Sticker, var2: View): Boolean {
-      kotlin.jvm.internal.q.h(var0, "$onStickerLongClicked");
-      kotlin.jvm.internal.q.h(var1, "$sticker");
       var0.invoke(var1);
       return true;
    }
@@ -38,8 +34,8 @@ public class StickerPngViewHolder(stickerView: StickerView) : StickerPartViewHol
       if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
          this.sticker = var1;
          this.stickerView.asPng(var1.getUrl(), var4, var5, var1.getAccessibilityLabel());
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new y(var2, var1), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new z(var3, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.stickerView, false, new M(var2, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this.stickerView, false, new N(var3, var1), 1, null);
       }
    }
 }

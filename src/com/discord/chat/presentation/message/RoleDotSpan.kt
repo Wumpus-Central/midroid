@@ -13,14 +13,14 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 
 public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 20) : DynamicDrawableSpan {
-   private final val backgroundDrawable: ColorDrawable
-   private final val borderColor: Int
-   private final val layerDrawable: LayerDrawable
-   private final val pxSize: Int
-   private final val roleDot: RoleDotDrawable
-   private final val scale: Float
    private final val spSize: Int
+   private final val scale: Float
+   private final val pxSize: Int
    private final val topPos: Int
+   private final val borderColor: Int
+   private final val roleDot: RoleDotDrawable
+   private final val backgroundDrawable: ColorDrawable
+   private final val layerDrawable: LayerDrawable
 
    init {
       kotlin.jvm.internal.q.h(var1, "context");

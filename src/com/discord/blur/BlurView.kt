@@ -1,19 +1,168 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "n.simpleName" is null
-  at org.vineflower.kotlin.KotlinWriter.lambda$writeClass$0(KotlinWriter.java:265)
-  at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-  at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1685)
-  at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-  at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-  at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-  at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-  at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-  at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  at java.base/java.util.stream.ReferencePipeline.findAny(ReferencePipeline.java:652)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:266)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
-*/
+package com.discord.blur
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.view.ViewGroup
+import com.discord.blur.BlurViewAPI.Target
+import com.discord.theme.utils.ColorUtilsKt
+import java.lang.ref.WeakReference
+
+@SuppressLint(["ViewConstructor"])
+internal class BlurView(context: Context, blurTargetNativeId: String, blurTint: Int, blurTintIOSParityCompensation: Int, blurAmount: Float)
+   : eightbitlab.com.blurview.BlurView,
+   BlurViewAPI {
+   private final var blurTargetNativeId: String
+   private final var blurTint: Int
+   private final var blurTintIOSParityCompensation: Int
+   private final var blurAmount: Float
+   private final var blurEnabled: Boolean
+   private final var blurViewPropertiesDirty: Boolean
+   private final var blurTarget: WeakReference<Target>
+   private final val blurTargetChangeListener: () -> Unit
+
+   init {
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
+      super(var1);
+      this.blurTargetNativeId = var2;
+      this.blurTint = var3;
+      this.blurTintIOSParityCompensation = var4;
+      this.blurAmount = var5;
+      this.blurEnabled = true;
+      this.blurViewPropertiesDirty = true;
+      this.blurTarget = new WeakReference<>(null);
+      val var6: c = new c(this);
+      this.blurTargetChangeListener = var6;
+      Companion.updateListener$blur_release(var6, true, new d(this));
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$1`(var0: BlurView): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `blurTargetChangeListener$lambda$0`(var0: BlurView): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
+   private fun maybeUpdate() {
+      var var1: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
+      if (var1 != null && this.blurViewPropertiesDirty) {
+         if (!kotlin.jvm.internal.q.c(this.blurTarget.get(), var1)) {
+            this.blurTarget = new WeakReference<>(var1);
+            this.setupWith(var1.getViewRef()).c(var1.getViewRef().getBackground());
+         }
+
+         this.maybeUpdateBlurEnabled();
+         val var2: BlurView.Companion = Companion;
+         this.setOverlayColor(Companion.mapBlurTint$blur_release(this.blurTintIOSParityCompensation, this.blurTint, this.blurAmount));
+         this.setBlurRadius(BlurView.Companion.mapRadius$blur_release$default(var2, this.blurAmount, 0.0F, 0.0F, 6, null));
+         var1 = this.blurTarget.get();
+         if (var1 != null) {
+            val var4: ViewGroup = var1.getViewRef();
+            if (var4 != null) {
+               var4.invalidate();
+            }
+         }
+
+         this.invalidate();
+         this.blurViewPropertiesDirty = false;
+      }
+   }
+
+   private fun maybeUpdateBlurEnabled() {
+      if (this.blurEnabled && this.blurAmount <= 0.0F) {
+         this.blurEnabled = false;
+         this.setBlurEnabled(false);
+      } else if (!this.blurEnabled && this.blurAmount > 0.0F) {
+         this.blurEnabled = true;
+         this.setBlurEnabled(true);
+      }
+   }
+
+   @JvmStatic
+   fun `onAttachedToWindow$lambda$2`(var0: BlurView): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onDetachedFromWindow$lambda$3`(var0: BlurView): Unit {
+      var0.maybeUpdate();
+      return Unit.a;
+   }
+
+   protected open fun onAttachedToWindow() {
+      super.onAttachedToWindow();
+      Companion.updateListener$blur_release(this.blurTargetChangeListener, true, new b(this));
+   }
+
+   protected open fun onDetachedFromWindow() {
+      super.onDetachedFromWindow();
+      Companion.updateListener$blur_release(this.blurTargetChangeListener, false, new a(this));
+   }
+
+   public override fun setBlurAmount(rectId: Int, blurAmount: Float) {
+      if (this.blurAmount != var2) {
+         this.blurAmount = var2;
+         this.blurViewPropertiesDirty = true;
+      }
+
+      this.maybeUpdate();
+   }
+
+   public override fun setBlurTargetNativeId(nativeId: String) {
+      kotlin.jvm.internal.q.h(var1, "nativeId");
+      if (!kotlin.jvm.internal.q.c(this.blurTargetNativeId, var1)) {
+         this.blurTargetNativeId = var1;
+         this.blurViewPropertiesDirty = true;
+      }
+
+      this.maybeUpdate();
+   }
+
+   public override fun setBlurTint(color: Int) {
+      if (this.blurTint != var1) {
+         this.blurTint = var1;
+         this.blurViewPropertiesDirty = true;
+      }
+
+      this.maybeUpdate();
+   }
+
+   public override fun setBlurTintIOSParityCompensation(color: Int) {
+      if (this.blurTintIOSParityCompensation != var1) {
+         this.blurTintIOSParityCompensation = var1;
+         this.blurViewPropertiesDirty = true;
+      }
+
+      this.maybeUpdate();
+   }
+
+   public companion object {
+      internal fun mapBlurTint(blurAmountTint: Int, blurTint: Int, blurAmount: Float): Int {
+         return y.c.g(var2, ColorUtilsKt.argbWithAdjustedAlpha(var1, var3));
+      }
+
+      internal fun mapRadius(radius: Float, maxRadius: Float = ..., minRadius: Float = ...): Float {
+         return Math.max(var3, Math.min(1.0F, var1)) * var2;
+      }
+
+      internal fun updateListener(blurTargetChangeListener: () -> Unit, attached: Boolean, maybeUpdate: () -> Unit) {
+         kotlin.jvm.internal.q.h(var1, "blurTargetChangeListener");
+         kotlin.jvm.internal.q.h(var3, "maybeUpdate");
+         if (var2) {
+            BlurViewTargetRegistry.INSTANCE.addChangeListener(var1);
+         } else {
+            BlurViewTargetRegistry.INSTANCE.removeChangeListener(var1);
+         }
+
+         if (var2) {
+            var3.invoke();
+         }
+      }
+   }
+}

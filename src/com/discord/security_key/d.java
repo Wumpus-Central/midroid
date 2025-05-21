@@ -1,12 +1,14 @@
 package com.discord.security_key;
 
-import D5.e;
+import android.app.Activity;
+import android.app.PendingIntent;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class d implements e {
-   public final WebAuthn a;
+public final class d implements Function1 {
+   public final Activity j;
 
-   public final void onFailure(Exception var1) {
-      WebAuthn.c(this.a, var1);
+   public final Object invoke(Object var1) {
+      return WebAuthn.c(this.j, (PendingIntent)var1);
    }
 }

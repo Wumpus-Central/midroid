@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 281108
-  versionName: 281.8 - Beta
+  versionCode: 281109
+  versionName: 281.9 - Beta
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -36,6 +36,7 @@ doNotCompress:
 - META-INF/androidx.core_core-ktx.version
 - META-INF/androidx.core_core-performance-play-services.version
 - META-INF/androidx.core_core-performance.version
+- META-INF/androidx.core_core-viewtree.version
 - META-INF/androidx.core_core.version
 - META-INF/androidx.credentials_credentials-play-services-auth.version
 - META-INF/androidx.credentials_credentials.version
@@ -87,9 +88,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/O8.a
-- META-INF/services/X9.z
-- META-INF/services/ca.t
+- META-INF/services/G9.b
+- META-INF/services/Pa.z
+- META-INF/services/Ua.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

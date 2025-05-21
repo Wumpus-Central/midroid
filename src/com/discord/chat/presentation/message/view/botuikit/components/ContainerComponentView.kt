@@ -22,7 +22,6 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import com.discord.theme.ThemeManagerKt
 import java.util.ArrayList
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -55,30 +54,16 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
 
    private fun configureSpoiler(component: ContainerComponent, componentContext: ComponentContext) {
       val var5: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var7: java.lang.String = var2.getContainerId();
-      val var6: java.lang.String = var1.getId();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ContainerComponent(");
-      var4.append(var6);
-      var4.append(")");
-      val var11: SpoilerAttributes = var5.forGenericMedia(var1, var7, var4.toString(), "content", null);
+      val var6: java.lang.String = var2.getContainerId();
+      val var4: java.lang.String = var1.getId();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ContainerComponent(");
+      var7.append(var4);
+      var7.append(")");
+      val var11: SpoilerAttributes = var5.forGenericMedia(var1, var6, var7.toString(), "content", null);
       var var10: SpoilerConfig = null;
       if (var11 != null) {
-         var10 = SpoilerAttributes.configure$default(var11, new Function0(var2, this) {
-            final ComponentContext $componentContext;
-            final ContainerComponentView this$0;
-
-            {
-               super(0);
-               this.$componentContext = var1;
-               this.this$0 = var2;
-            }
-
-            public final void invoke() {
-               this.$componentContext.getGeneralEventHandlers().getOnTapSpoiler().invoke();
-               this.this$0.getBinding().childrenViews.setImportantForAccessibility(0);
-            }
-         }, null, 2, null);
+         var10 = SpoilerAttributes.configure$default(var11, new d(var2, this), null, 2, null);
       }
 
       var var3: Byte;
@@ -98,6 +83,13 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
       }
 
       var9.setImportantForAccessibility(var3);
+   }
+
+   @JvmStatic
+   fun `configureSpoiler$lambda$1`(var0: ComponentContext, var1: ContainerComponentView): Unit {
+      var0.getGeneralEventHandlers().getOnTapSpoiler().invoke();
+      var1.binding.childrenViews.setImportantForAccessibility(0);
+      return Unit.a;
    }
 
    public open fun configure(component: ContainerComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
@@ -128,19 +120,19 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
       val var12: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, 511, null)
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
-      val var6: ArrayList = new ArrayList(i.v(var7, 10));
+      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
       val var15: java.util.Iterator = var7.iterator();
 
       for (int var9 = 0; var15.hasNext(); var9++) {
          val var8: Any = var15.next();
          if (var9 < 0) {
-            i.u();
+            kotlin.collections.i.u();
          }
 
          var6.add(var2.getConfiguredComponentView(var8 as Component, var12, this, var9));
       }
 
-      val var13: java.util.List = i.c0(var6);
+      val var13: java.util.List = kotlin.collections.i.c0(var6);
       val var14: LinearLayout = this.binding.childrenViews;
       q.g(this.binding.childrenViews, "childrenViews");
       MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);

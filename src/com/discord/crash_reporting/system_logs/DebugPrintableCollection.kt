@@ -9,8 +9,8 @@ import java.util.Map.Entry
 import kotlin.jvm.internal.q
 
 public class DebugPrintableCollection {
-   private final val collection: MutableMap<Long, com.discord.crash_reporting.system_logs.DebugPrintableCollection.DebugPrintableRef>
    private final var idCounter: Long = 1L
+   private final val collection: MutableMap<Long, com.discord.crash_reporting.system_logs.DebugPrintableCollection.DebugPrintableRef>
    private final val sync: Any
 
    private fun add(ref: DebugPrintable, tag: String? = null): Long {
@@ -75,22 +75,22 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 13
+      // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 14
+      // 5d: astore 13
       // 5f: new java/lang/ref/WeakReference
       // 62: astore 12
       // 64: aload 12
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 14
+      // 6a: aload 13
       // 6c: aload 2
       // 6d: aload 12
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 13
+      // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 14
+      // 79: aload 13
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -174,7 +174,7 @@ public class DebugPrintableCollection {
       // 034: astore 1
       // 035: aload 1
       // 036: invokeinterface java/util/Iterator.hasNext ()Z 1
-      // 03b: ifeq 11b
+      // 03b: ifeq 116
       // 03e: aload 1
       // 03f: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 044: checkcast java/util/Map$Entry
@@ -196,95 +196,93 @@ public class DebugPrintableCollection {
       // 070: aload 8
       // 072: ifnonnull 078
       // 075: goto 035
-      // 078: aload 8
-      // 07a: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
-      // 07d: aload 2
-      // 07e: lload 3
-      // 07f: invokevirtual java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;
-      // 082: pop
-      // 083: aload 7
-      // 085: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
-      // 088: ifnull 0a3
-      // 08b: aload 2
-      // 08c: bipush 32
-      // 08e: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-      // 091: pop
-      // 092: aload 2
-      // 093: aload 7
-      // 095: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
-      // 098: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 09b: pop
-      // 09c: goto 0a3
-      // 09f: astore 1
-      // 0a0: goto 123
-      // 0a3: aload 2
-      // 0a4: ldc ":"
-      // 0a6: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 0a9: pop
-      // 0aa: aload 2
-      // 0ab: ldc "append(...)"
-      // 0ad: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0b0: aload 2
-      // 0b1: bipush 10
-      // 0b3: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-      // 0b6: pop
-      // 0b7: aload 2
-      // 0b8: ldc "append(...)"
-      // 0ba: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0bd: aload 8
-      // 0bf: aload 6
-      // 0c1: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
-      // 0c6: goto 0f0
+      // 078: aload 2
+      // 079: lload 3
+      // 07a: invokevirtual java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;
+      // 07d: pop
+      // 07e: aload 7
+      // 080: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
+      // 083: ifnull 09e
+      // 086: aload 2
+      // 087: bipush 32
+      // 089: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
+      // 08c: pop
+      // 08d: aload 2
+      // 08e: aload 7
+      // 090: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
+      // 093: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 096: pop
+      // 097: goto 09e
+      // 09a: astore 1
+      // 09b: goto 11e
+      // 09e: aload 2
+      // 09f: ldc ":"
+      // 0a1: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 0a4: pop
+      // 0a5: aload 2
+      // 0a6: ldc "append(...)"
+      // 0a8: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0ab: aload 2
+      // 0ac: bipush 10
+      // 0ae: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
+      // 0b1: pop
+      // 0b2: aload 2
+      // 0b3: ldc "append(...)"
+      // 0b5: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0b8: aload 8
+      // 0ba: aload 6
+      // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
+      // 0c1: goto 0eb
+      // 0c4: astore 7
+      // 0c6: new java/lang/StringBuilder
       // 0c9: astore 8
-      // 0cb: new java/lang/StringBuilder
-      // 0ce: astore 7
-      // 0d0: aload 7
-      // 0d2: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d5: aload 7
-      // 0d7: ldc_w "Exception: "
-      // 0da: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 0dd: pop
-      // 0de: aload 7
-      // 0e0: aload 8
-      // 0e2: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      // 0e5: pop
-      // 0e6: aload 2
-      // 0e7: aload 7
-      // 0e9: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 0ec: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 0ef: pop
-      // 0f0: aload 2
-      // 0f1: bipush 10
-      // 0f3: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
-      // 0f6: pop
-      // 0f7: aload 2
-      // 0f8: ldc "append(...)"
-      // 0fa: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0fd: aload 2
-      // 0fe: invokevirtual java/lang/StringBuilder.length ()I
-      // 101: ldc 524288
-      // 103: if_icmple 035
-      // 106: aload 2
-      // 107: ldc 524288
-      // 109: aload 2
-      // 10a: invokevirtual java/lang/StringBuilder.length ()I
-      // 10d: bipush 1
-      // 10e: isub
-      // 10f: invokevirtual java/lang/StringBuilder.delete (II)Ljava/lang/StringBuilder;
-      // 112: pop
-      // 113: aload 2
-      // 114: ldc_w " {truncated}"
-      // 117: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 11a: pop
-      // 11b: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 11e: astore 1
-      // 11f: aload 5
-      // 121: monitorexit
-      // 122: return
-      // 123: aload 5
-      // 125: monitorexit
-      // 126: aload 1
-      // 127: athrow
+      // 0cb: aload 8
+      // 0cd: invokespecial java/lang/StringBuilder.<init> ()V
+      // 0d0: aload 8
+      // 0d2: ldc_w "Exception: "
+      // 0d5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 0d8: pop
+      // 0d9: aload 8
+      // 0db: aload 7
+      // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      // 0e0: pop
+      // 0e1: aload 2
+      // 0e2: aload 8
+      // 0e4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 0e7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 0ea: pop
+      // 0eb: aload 2
+      // 0ec: bipush 10
+      // 0ee: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
+      // 0f1: pop
+      // 0f2: aload 2
+      // 0f3: ldc "append(...)"
+      // 0f5: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0f8: aload 2
+      // 0f9: invokevirtual java/lang/StringBuilder.length ()I
+      // 0fc: ldc 524288
+      // 0fe: if_icmple 035
+      // 101: aload 2
+      // 102: ldc 524288
+      // 104: aload 2
+      // 105: invokevirtual java/lang/StringBuilder.length ()I
+      // 108: bipush 1
+      // 109: isub
+      // 10a: invokevirtual java/lang/StringBuilder.delete (II)Ljava/lang/StringBuilder;
+      // 10d: pop
+      // 10e: aload 2
+      // 10f: ldc_w " {truncated}"
+      // 112: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 115: pop
+      // 116: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 119: astore 1
+      // 11a: aload 5
+      // 11c: monitorexit
+      // 11d: return
+      // 11e: aload 5
+      // 120: monitorexit
+      // 121: aload 1
+      // 122: athrow
    }
 
    public companion object {
@@ -292,17 +290,17 @@ public class DebugPrintableCollection {
 
       public fun libdiscordVersion(context: Context): String {
          q.h(var1, "context");
-         val var3: ApplicationInfo;
+         val var2: ApplicationInfo;
          if (VERSION.SDK_INT >= 33) {
-            var3 = b.a(var1.getPackageManager(), var1.getPackageName(), a.a(128L));
+            var2 = b.a(var1.getPackageManager(), var1.getPackageName(), a.a(128L));
          } else {
-            var3 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), 128);
+            var2 = var1.getPackageManager().getApplicationInfo(var1.getPackageName(), 128);
          }
 
-         if (var3.metaData != null) {
-            val var2: java.lang.String = var3.metaData.getString("libdiscord_version");
-            if (var2 != null) {
-               return var2;
+         if (var2.metaData != null) {
+            val var4: java.lang.String = var2.metaData.getString("libdiscord_version");
+            if (var4 != null) {
+               return var4;
             }
          }
 
@@ -311,8 +309,8 @@ public class DebugPrintableCollection {
    }
 
    private data class DebugPrintableRef(tag: String?, reference: WeakReference<DebugPrintable>) {
-      public final val reference: WeakReference<DebugPrintable>
       public final val tag: String?
+      public final val reference: WeakReference<DebugPrintable>
 
       init {
          q.h(var2, "reference");

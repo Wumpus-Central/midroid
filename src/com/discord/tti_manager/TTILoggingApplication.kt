@@ -17,17 +17,6 @@ public abstract class TTILoggingApplication : Application {
    }
 
    public companion object {
-      private final var applicationInitializeTimestamp: Long
-         private final get() {
-            return (TTILoggingApplication.access$getApplicationInitializeTimestamp$delegate$cp().getValue(this, $$delegatedProperties[2]) as java.lang.Number)
-               .longValue();
-         }
-
-         private final set(<set-?>) {
-            TTILoggingApplication.access$getApplicationInitializeTimestamp$delegate$cp().setValue(this, $$delegatedProperties[2], var1);
-         }
-
-
       private final var applicationOpenedTimestampExcludingActivityLaunchGap: Long
          private final get() {
             return (TTILoggingApplication.access$getApplicationOpenedTimestampExcludingActivityLaunchGap$delegate$cp().getValue(this, $$delegatedProperties[0]) as java.lang.Number)
@@ -47,6 +36,17 @@ public abstract class TTILoggingApplication : Application {
 
          private final set(<set-?>) {
             TTILoggingApplication.access$getApplicationStartedTimestamp$delegate$cp().setValue(this, $$delegatedProperties[1], var1);
+         }
+
+
+      private final var applicationInitializeTimestamp: Long
+         private final get() {
+            return (TTILoggingApplication.access$getApplicationInitializeTimestamp$delegate$cp().getValue(this, $$delegatedProperties[2]) as java.lang.Number)
+               .longValue();
+         }
+
+         private final set(<set-?>) {
+            TTILoggingApplication.access$getApplicationInitializeTimestamp$delegate$cp().setValue(this, $$delegatedProperties[2], var1);
          }
 
 

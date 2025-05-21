@@ -38,16 +38,11 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
 
    @JvmStatic
    fun `configure$lambda$0`(var0: ComponentContext, var1: ThumbnailDisplayComponentView, var2: ThumbnailDisplayComponent, var3: View) {
-      q.h(var0, "$componentContext");
-      q.h(var1, "this$0");
-      q.h(var2, "$component");
       var0.getMediaItemEventHandlers().getOnMediaItemClicked().invoke(var1, var2.getId(), 0, null);
    }
 
    @JvmStatic
    fun `configure$lambda$1`(var0: ComponentContext, var1: ThumbnailDisplayComponent, var2: View): Boolean {
-      q.h(var0, "$componentContext");
-      q.h(var1, "$component");
       val var3: Function2 = var0.getMediaItemEventHandlers().getOnMediaItemLongClicked();
       if (var3 != null) {
          var3.invoke(var1.getId(), 0);
@@ -60,17 +55,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var12: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var11: java.lang.String = var3.getContainerId();
+      val var11: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var16: java.lang.String = var3.getContainerId();
       var var13: java.lang.String = var1.getId();
-      val var16: StringBuilder = new StringBuilder();
-      var16.append("ThumbnailDisplayComponent(");
-      var16.append(var13);
-      var16.append(")");
-      val var17: SpoilerAttributes = var12.forGenericMedia(var1, var11, var16.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("ThumbnailDisplayComponent(");
+      var12.append(var13);
+      var12.append(")");
+      val var17: SpoilerAttributes = var11.forGenericMedia(var1, var16, var12.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var21: UnfurledMediaItem = var1.getMedia();
       val var20: MediaImageViewHolder = this.imageViewHolder;
-      val var8: Boolean = var1.isSpoiler();
+      val var10: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
          var18 = SpoilerAttributes.configure$default(var17, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
@@ -78,10 +73,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var10: Boolean = var1.isObscure();
-      val var7: Boolean = var1.isObscureAwaitingScan();
-      val var9: Boolean = var1.getObscureHideControls();
-      val var6: Boolean = var1.getObscureIsOpaque();
+      val var8: Boolean = var1.isObscure();
+      val var6: Boolean = var1.isObscureAwaitingScan();
+      val var7: Boolean = var1.getObscureHideControls();
+      val var9: Boolean = var1.getObscureIsOpaque();
       var13 = var21.getProxyUrl();
       var var14: Int = var21.getWidth();
       var var4: Int;
@@ -105,12 +100,12 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var5,
          var21.getPlaceholder(),
          var21.getPlaceholderVersion(),
-         var8,
-         var18,
          var10,
+         var18,
+         var8,
+         var6,
          var7,
          var9,
-         var6,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),
@@ -119,8 +114,8 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          this.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_non_mosaic_radius),
          MediaContainingViewResizer.ResizeMode.Cover,
          false,
-         new e(var3, this, var1),
-         new f(var3, var1),
+         new k(var3, this, var1),
+         new l(var3, var1),
          null,
          var1.getAccessibilityRole(),
          var3.getShouldAutoPlayGif(),

@@ -1,6 +1,5 @@
 package com.discord.security_key
 
-import X9.f
 import android.app.Activity
 import android.content.Intent
 import android.os.Build.VERSION
@@ -17,10 +16,10 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val activityEventListener: <unrepresentable>
-   private final val credentialManager: CredentialManager
    private final var currentPromise: Promise?
    private final val webauthn: WebAuthn
+   private final val credentialManager: CredentialManager
+   private final val activityEventListener: <unrepresentable>
 
    init {
       q.h(var1, "reactContext");
@@ -100,7 +99,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         f.d(
+         Pa.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -158,7 +157,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         f.d(
+         Pa.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,

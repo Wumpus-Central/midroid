@@ -33,8 +33,8 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var3: SpoilerViewBinding = SpoilerViewBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
-      this.onReveal = <unrepresentable>.INSTANCE;
-      this.onHide = <unrepresentable>.INSTANCE;
+      this.onReveal = new U0();
+      this.onHide = new V0();
    }
 
    private fun configureObscureOverlay(label: String, parent: ViewGroup, verifyAge: Boolean?, onTapObscureToggle: (Boolean) -> Unit) {
@@ -49,29 +49,19 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var7: ObscureOverlayView = this.binding.obscure;
       kotlin.jvm.internal.q.g(this.binding.obscure, "obscure");
       var7.setVisibility(0);
-      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, new Function0(var6) {
-         final Function1 $obscureCallback;
+      this.binding.obscure.configure(var1, var2, this.isOverlayVisible, new Q0(var6), new R0(var6));
+   }
 
-         {
-            super(0);
-            this.$obscureCallback = var1;
-         }
+   @JvmStatic
+   fun `configureObscureOverlay$lambda$6`(var0: Function1): Unit {
+      var0.invoke(java.lang.Boolean.TRUE);
+      return Unit.a;
+   }
 
-         public final void invoke() {
-            this.$obscureCallback.invoke(java.lang.Boolean.TRUE);
-         }
-      }, new Function0(var6) {
-         final Function1 $obscureCallback;
-
-         {
-            super(0);
-            this.$obscureCallback = var1;
-         }
-
-         public final void invoke() {
-            this.$obscureCallback.invoke(java.lang.Boolean.FALSE);
-         }
-      });
+   @JvmStatic
+   fun `configureObscureOverlay$lambda$7`(var0: Function1): Unit {
+      var0.invoke(java.lang.Boolean.FALSE);
+      return Unit.a;
    }
 
    private fun configureSpoilerOverlay(label: String) {
@@ -79,55 +69,44 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var3: SpoilerOverlayView = this.binding.spoiler;
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
       var3.setVisibility(0);
-      this.binding.spoiler.configure(var1, new Function0(this, var2) {
-         final View $overlayView;
-         final SpoilerView this$0;
+      this.binding.spoiler.configure(var1, new P0(this, var2));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$overlayView = var2;
-         }
+   @JvmStatic
+   fun `configureSpoilerOverlay$lambda$5`(var0: SpoilerView, var1: View): Unit {
+      var0.toggleContentVisibility(true, var1);
+      return Unit.a;
+   }
 
-         public final void invoke() {
-            SpoilerView.access$toggleContentVisibility(this.this$0, true, this.$overlayView);
-         }
-      });
+   @JvmStatic
+   fun `onHide$lambda$1`(): Unit {
+      return Unit.a;
    }
 
    private fun onObscureToggleVisibilityClick(overlayView: View, onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new Function1(this, var1, var2) {
-         final Function1 $onTapObscureToggle;
-         final View $overlayView;
-         final SpoilerView this$0;
+      return new T0(this, var1, var2);
+   }
 
-         {
-            super(1);
-            this.this$0 = var1;
-            this.$overlayView = var2;
-            this.$onTapObscureToggle = var3;
-         }
-
-         public final void invoke(boolean var1) {
-            SpoilerView.access$toggleContentVisibility(this.this$0, var1, this.$overlayView);
-            this.$onTapObscureToggle.invoke(var1);
-         }
-      };
+   @JvmStatic
+   fun `onObscureToggleVisibilityClick$lambda$3`(var0: SpoilerView, var1: View, var2: Function1, var3: Boolean): Unit {
+      var0.toggleContentVisibility(var3, var1);
+      var2.invoke(var3);
+      return Unit.a;
    }
 
    private fun onObscureVerifyAgeClick(onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new Function1(var1) {
-         final Function1 $onTapObscureToggle;
+      return new S0(var1);
+   }
 
-         {
-            super(1);
-            this.$onTapObscureToggle = var1;
-         }
+   @JvmStatic
+   fun `onObscureVerifyAgeClick$lambda$4`(var0: Function1, var1: Boolean): Unit {
+      var0.invoke(var1);
+      return Unit.a;
+   }
 
-         public final void invoke(boolean var1) {
-            this.$onTapObscureToggle.invoke(var1);
-         }
-      };
+   @JvmStatic
+   fun `onReveal$lambda$0`(): Unit {
+      return Unit.a;
    }
 
    private fun resetOverlays() {

@@ -1,26 +1,15 @@
 package com.discord.chat.bridge.reaction
 
+import Za.f
 import com.discord.reactions.ReactionView
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.F
-import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) :
    ReactionView.BurstColorPalette {
-   public open val accentColor: String?
    public open val backgroundColor: String?
+   public open val accentColor: String?
    public open val highlightColor: String?
    public open val opacity: Float
 
@@ -100,117 +89,21 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.backgroundColor;
+      val var4: java.lang.String = this.backgroundColor;
       val var3: java.lang.String = this.accentColor;
-      val var4: java.lang.String = this.highlightColor;
+      val var5: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("BurstReactionColorPalette(backgroundColor=");
-      var5.append(var2);
-      var5.append(", accentColor=");
-      var5.append(var3);
-      var5.append(", highlightColor=");
-      var5.append(var4);
-      var5.append(", opacity=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: BurstReactionColorPalette.$serializer = new BurstReactionColorPalette.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.reaction.BurstReactionColorPalette", var0, 4);
-         var1.l("backgroundColor", false);
-         var1.l("accentColor", false);
-         var1.l("highlightColor", false);
-         var1.l("opacity", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), a.u(var1), a.u(var1), F.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): BurstReactionColorPalette {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         var var2: Float;
-         var var3: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var11: java.lang.String;
-         if (var9.y()) {
-            val var10: C0 = C0.a;
-            var7 = var9.v(var8, 0, C0.a, null) as java.lang.String;
-            var6 = var9.v(var8, 1, var10, null) as java.lang.String;
-            var11 = var9.v(var8, 2, var10, null) as java.lang.String;
-            var2 = var9.G(var8, 3);
-            var3 = 15;
-         } else {
-            var2 = 0.0F;
-            var var4: Boolean = true;
-            var7 = null;
-            var6 = null;
-            var11 = null;
-            var3 = 0;
-
-            while (var4) {
-               val var5: Int = var9.x(var8);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           if (var5 != 3) {
-                              throw new n(var5);
-                           }
-
-                           var2 = var9.G(var8, 3);
-                           var3 |= 8;
-                        } else {
-                           var11 = var9.v(var8, 2, C0.a, var11) as java.lang.String;
-                           var3 |= 4;
-                        }
-                     } else {
-                        var6 = var9.v(var8, 1, C0.a, var6) as java.lang.String;
-                        var3 |= 2;
-                     }
-                  } else {
-                     var7 = var9.v(var8, 0, C0.a, var7) as java.lang.String;
-                     var3 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-         }
-
-         var9.b(var8);
-         return new BurstReactionColorPalette(var3, var7, var6, var11, var2, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: BurstReactionColorPalette) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         BurstReactionColorPalette.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BurstReactionColorPalette(backgroundColor=");
+      var2.append(var4);
+      var2.append(", accentColor=");
+      var2.append(var3);
+      var2.append(", highlightColor=");
+      var2.append(var5);
+      var2.append(", opacity=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

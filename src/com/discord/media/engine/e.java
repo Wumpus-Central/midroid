@@ -10,6 +10,6 @@ public final class e implements NativeEngine.GetAudioOutputDevicesCallback {
 
    @Override
    public final void onDevices(AudioOutputDeviceDescription[] var1) {
-      MediaEngine.d(this.a, var1);
+      MediaEngine.g(this.a, var1);
    }
 }

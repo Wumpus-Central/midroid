@@ -7,8 +7,8 @@ import kotlin.jvm.internal.q
 public data class UploadProgressMessageAccessory(messageId: MessageId, index: Int, uploadProgress: UploadProgress) : UploadProgressMessageAccessory(
       var1, var2, var3
    ) {
-   public final val index: Int
    public open val messageId: MessageId
+   public final val index: Int
    public final val uploadProgress: UploadProgress
 
    fun UploadProgressMessageAccessory(var1: java.lang.String, var2: Int, var3: UploadProgress) {
@@ -63,17 +63,17 @@ public data class UploadProgressMessageAccessory(messageId: MessageId, index: In
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
       val var2: UploadProgress = this.uploadProgress;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UploadProgressMessageAccessory(messageId=");
-      var4.append(var3);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", uploadProgress=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UploadProgressMessageAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", uploadProgress=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

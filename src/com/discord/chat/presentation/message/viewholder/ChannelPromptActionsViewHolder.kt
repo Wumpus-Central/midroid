@@ -20,29 +20,21 @@ public class ChannelPromptActionsViewHolder(channelPromptActionsView: ChannelPro
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function3, var1: ChannelPromptActionsAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapChannelPromptButton");
-      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), ChannelId.box-impl(var1.getMessage().getChannelId-o4g7jtM()), "camera");
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function3, var1: ChannelPromptActionsAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapChannelPromptButton");
-      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), ChannelId.box-impl(var1.getMessage().getChannelId-o4g7jtM()), "emoji");
    }
 
    @JvmStatic
    fun `bind$lambda$2`(var0: Function3, var1: ChannelPromptActionsAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapChannelPromptButton");
-      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), ChannelId.box-impl(var1.getMessage().getChannelId-o4g7jtM()), "gaming-stats");
    }
 
    @JvmStatic
    fun `bind$lambda$3`(var0: Function3, var1: ChannelPromptActionsAccessory, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapChannelPromptButton");
-      kotlin.jvm.internal.q.h(var1, "$accessory");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), ChannelId.box-impl(var1.getMessage().getChannelId-o4g7jtM()), "gif");
    }
 

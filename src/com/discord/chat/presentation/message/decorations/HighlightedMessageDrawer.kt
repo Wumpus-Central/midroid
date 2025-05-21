@@ -14,14 +14,14 @@ public open class HighlightedMessageDrawer(context: Context,
    gutterColor: (ChatListItem) -> Int?,
    shouldRenderHighlight: (ChatListItem) -> Boolean
 ) {
-   private final val backgroundPaint: Paint
-   private final var backgroundPaintColor: Int?
    public final val cellHighlightColor: (ChatListItem) -> Int?
    public final val gutterColor: (ChatListItem) -> Int?
-   private final val gutterPaint: Paint
-   private final var gutterPaintColor: Int?
-   private final val gutterWidth: Int
    public final val shouldRenderHighlight: (ChatListItem) -> Boolean
+   private final val gutterWidth: Int
+   private final val backgroundPaint: Paint
+   private final val gutterPaint: Paint
+   private final var backgroundPaintColor: Int?
+   private final var gutterPaintColor: Int?
 
    init {
       q.h(var1, "context");
@@ -45,18 +45,18 @@ public open class HighlightedMessageDrawer(context: Context,
    public fun drawHighlight(canvas: Canvas, child: View, topSpacing: Int = 0, bottomSpacing: Int = 0) {
       q.h(var1, "canvas");
       q.h(var2, "child");
-      val var7: Float = HighlightedMessageDrawerKt.access$getTranslatedLeft(var2);
-      val var6: Float = HighlightedMessageDrawerKt.access$getTranslatedRight(var2);
-      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
-      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
+      val var8: Float = HighlightedMessageDrawerKt.access$getTranslatedLeft(var2);
+      val var7: Float = HighlightedMessageDrawerKt.access$getTranslatedRight(var2);
+      val var6: Float = HighlightedMessageDrawerKt.access$getTranslatedTop(var2) - var3;
+      val var5: Float = HighlightedMessageDrawerKt.access$getTranslatedBottom(var2) + var4;
       if (this.backgroundPaintColor != null) {
          this.backgroundPaint.setColor(this.backgroundPaintColor.intValue());
-         var1.drawRect(var7, var5, var6, var8, this.backgroundPaint);
+         var1.drawRect(var8, var6, var7, var5, this.backgroundPaint);
       }
 
       if (this.gutterPaintColor != null) {
          this.gutterPaint.setColor(this.gutterPaintColor.intValue());
-         var1.drawRect(var7, var5, var7 + (float)this.gutterWidth, var8, this.gutterPaint);
+         var1.drawRect(var8, var6, var8 + (float)this.gutterWidth, var5, this.gutterPaint);
       }
    }
 

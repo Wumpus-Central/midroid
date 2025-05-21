@@ -3,15 +3,13 @@ package com.discord.chat.presentation.list
 import com.discord.chat.listmanager.ChatListAction
 import com.discord.chat.listmanager.ListOperation
 import com.discord.chat.presentation.list.ChannelChatListAdapter.PortalViewUpdateType
-import kotlin.jvm.internal.q
-import o8.p
 
 private sealed class ChatListAdapterUpdateLogItem protected constructor() {
    public class ChatList(chatListItemUpdate: ChatListItemUpdate) : ChatListAdapterUpdateLogItem {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         q.h(var1, "chatListItemUpdate");
+         kotlin.jvm.internal.q.h(var1, "chatListItemUpdate");
          super(null);
          this.chatListItemUpdate = var1;
       }
@@ -28,7 +26,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
                for (var2 = ""; var4.hasNext(); var1++) {
                   var13 = (java.lang.String)var4.next();
                   if (var1 < 0) {
-                     i.u();
+                     kotlin.collections.i.u();
                   }
 
                   val var6: java.lang.String = ChatListAdapterUpdateLogKt.access$label(var13 as ListOperation);
@@ -103,7 +101,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         q.h(var1, "updateType");
+         kotlin.jvm.internal.q.h(var1, "updateType");
          super(null);
          this.updateType = var1;
       }
@@ -114,7 +112,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new p();
+                  throw new g9.n();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

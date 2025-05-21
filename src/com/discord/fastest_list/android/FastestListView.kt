@@ -20,7 +20,6 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
@@ -75,82 +74,15 @@ internal class FastestListView(context: Context,
       this.sections = var25;
       val var20: FastestListLayoutManager = new FastestListLayoutManager(var15, var1, var2, false, 8, null);
       this.typedLayoutManager = var20;
-      val var24: FastestListVisibleItemsTracker = new FastestListVisibleItemsTracker(var20, var25, new Function5(var13, this) {
-         final Function6 $onVisibleItemsChanged;
-         final FastestListView this$0;
-
-         {
-            super(5);
-            this.$onVisibleItemsChanged = var1;
-            this.this$0 = var2;
-         }
-
-         public final void invoke(java.lang.String var1, int var2, int var3, int var4, int var5) {
-            q.h(var1, "sectionsId");
-            this.$onVisibleItemsChanged.invoke(this.this$0, var1, var2, var3, var4, var5);
-         }
-      });
+      val var24: FastestListVisibleItemsTracker = new FastestListVisibleItemsTracker(var20, var25, new com.discord.fastest_list.android.a(var13, this));
       this.typedVisibleItemsTracker = var24;
-      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new Function2(var12, this) {
-         final Function3 $onUnexpectedItemSize;
-         final FastestListView this$0;
-
-         {
-            super(2);
-            this.$onUnexpectedItemSize = var1;
-            this.this$0 = var2;
-         }
-
-         public final void invoke(FastestListSections.Entry var1, int var2) {
-            q.h(var1, "entry");
-            this.$onUnexpectedItemSize.invoke(this.this$0, var1, var2);
-         }
-      });
+      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new b(var12, this));
       this.typedAdapter = var23;
       this.scroller = new Scroller(this);
       this.scrollOffset = new FastestListScrollOffset(var20, var25);
-      val var22: FastestListScrollListener = new FastestListScrollListener(var5, var7, new Function3(this, var9) {
-         final Function2 $onScroll;
-         final FastestListView this$0;
-
-         {
-            super(3);
-            this.this$0 = var1;
-            this.$onScroll = var2;
-         }
-
-         public final void invoke(RecyclerView var1, int var2, int var3) {
-            q.h(var1, "<anonymous parameter 0>");
-            val var4: FastestListScrollOffset.Data = FastestListView.access$getScrollOffset$p(this.this$0).compute();
-            if (var4 != null) {
-               this.$onScroll.invoke(this.this$0, var4);
-            }
-         }
-      }, new Function1(this, var10, var11) {
-         final Function2 $onScrollBeginDrag;
-         final Function2 $onScrollEndDrag;
-         final FastestListView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-            this.$onScrollBeginDrag = var2;
-            this.$onScrollEndDrag = var3;
-         }
-
-         public final void invoke(boolean var1) {
-            val var2: FastestListScrollOffset.Data = FastestListView.access$getScrollOffset$p(this.this$0).compute();
-            if (var2 != null) {
-               if (var1) {
-                  this.$onScrollBeginDrag.invoke(this.this$0, var2);
-               } else {
-                  this.$onScrollEndDrag.invoke(this.this$0, var2);
-               }
-            }
-         }
-      }, var20, var24);
+      val var22: FastestListScrollListener = new FastestListScrollListener(var5, var7, new c(this, var9), new d(this, var10, var11), var20, var24);
       this.onScrollListener = var22;
-      val var21: com.discord.fastest_list.android.a = new com.discord.fastest_list.android.a(this, var6);
+      val var21: e = new e(this, var6);
       this.onLayoutChangeListener = var21;
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -169,9 +101,9 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = i.k()) {
       if (!var1.isEmpty()) {
-         for (FastestListViewAdapter.DataChanged var5 : var1) {
-            val var3: Int = var5.component1();
-            val var2: Int = var5.component2();
+         for (FastestListViewAdapter.DataChanged var4 : var1) {
+            val var3: Int = var4.component1();
+            val var2: Int = var4.component2();
             if (var2 == 1) {
                this.typedAdapter.notifyItemChanged(var3);
             } else {
@@ -186,22 +118,59 @@ internal class FastestListView(context: Context,
    }
 
    @JvmStatic
-   fun `onLayoutChangeListener$lambda$0`(
+   fun `onLayoutChangeListener$lambda$4`(
       var0: FastestListView, var1: Function5, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
-      q.h(var0, "this$0");
-      q.h(var1, "$onLayout");
       var5 = var5 - var3;
       var6 = var6 - var4;
       if ((!var0.typedLayoutManager.getHorizontal() || var5 != 0) && (var0.typedLayoutManager.getHorizontal() || var6 - var4 != 0)) {
-         var1.invoke(var0, var3, var4, var5, var6);
+         var1.m(var0, var3, var4, var5, var6);
          var0.typedVisibleItemsTracker.updateVisibleItemPositions();
       }
+   }
+
+   @JvmStatic
+   fun `onScrollListener$lambda$2`(var0: FastestListView, var1: Function2, var2: RecyclerView, var3: Int, var4: Int): Unit {
+      q.h(var2, "<unused var>");
+      val var5: FastestListScrollOffset.Data = var0.scrollOffset.compute();
+      if (var5 != null) {
+         var1.invoke(var0, var5);
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onScrollListener$lambda$3`(var0: FastestListView, var1: Function2, var2: Function2, var3: Boolean): Unit {
+      val var4: FastestListScrollOffset.Data = var0.scrollOffset.compute();
+      if (var4 != null) {
+         if (var3) {
+            var1.invoke(var0, var4);
+         } else {
+            var2.invoke(var0, var4);
+         }
+      }
+
+      return Unit.a;
    }
 
    private fun scrollTo(position: Int, animated: Boolean, paddingStart: Int) {
       Scroller.scrollToPosition$default(this.scroller, var1, new Scroller.TargetAlignment.Top(SizeUtilsKt.getDpToPx(var3)), var2, null, null, null, 56, null);
       ViewMeasureExtensionsKt.measureAndLayout(this);
+   }
+
+   @JvmStatic
+   fun `typedAdapter$lambda$1`(var0: Function3, var1: FastestListView, var2: FastestListSections.Entry, var3: Int): Unit {
+      q.h(var2, "entry");
+      var0.invoke(var1, var2, var3);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `typedVisibleItemsTracker$lambda$0`(var0: Function6, var1: FastestListView, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int): Unit {
+      q.h(var2, "sectionsId");
+      var0.invoke(var1, var2, var3, var4, var5, var6);
+      return Unit.a;
    }
 
    public override fun fling(velocityX: Int, velocityY: Int): Boolean {

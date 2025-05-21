@@ -9,8 +9,8 @@ import com.facebook.react.uimanager.UIManagerModule
 import kotlin.jvm.internal.q
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
-   private final val fabricEnabled: Boolean
    private final val reactContext: ReactContext
+   private final val fabricEnabled: Boolean
    private final val runnable: Runnable
 
    fun SelfMeasuredView(var1: Context) {
@@ -43,14 +43,11 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
 
    @JvmStatic
    fun `maybePostMeasuredEvent$lambda$2$lambda$1`(var0: UIManagerModule, var1: SelfMeasuredView) {
-      q.h(var0, "$uiManagerModule");
-      q.h(var1, "this$0");
       var0.updateNodeSize(var1.getId(), var1.getMeasuredWidth(), var1.getMeasuredHeight());
    }
 
    @JvmStatic
    fun `runnable$lambda$0`(var0: SelfMeasuredView) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 

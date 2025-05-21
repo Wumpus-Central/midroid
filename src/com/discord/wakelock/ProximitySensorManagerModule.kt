@@ -24,7 +24,7 @@ internal class ProximitySensorManagerModule(reactContext: ReactApplicationContex
    }
 
    public companion object {
-      private const val PROXIMITY_WAKE_LOCK_TAG: String
       private const val PROXIMITY_WAKE_LOCK_TIMEOUT: Long
+      private const val PROXIMITY_WAKE_LOCK_TAG: String
    }
 }

@@ -1,62 +1,59 @@
 package com.discord.share.intent
 
-import A8.c
 import android.content.ContentResolver
 import android.database.Cursor
 import android.net.Uri
+import kotlin.Result.a
 import kotlin.jvm.internal.q
-import o8.r
-import o8.s
-import o8.r.a
 
 internal fun ContentResolver.getFileName(uri: Uri): String {
-   label45: {
+   label44: {
       q.h(var0, "<this>");
       q.h(var1, "uri");
 
-      label42:
+      label41:
       try {
-         val var3: a = r.k;
-         var18 = r.b(var0.query(var1, new java.lang.String[]{"_display_name"}, null, null, null));
-      } catch (var7: java.lang.Throwable) {
-         val var17: a = r.k;
-         var18 = r.b(s.a(var7));
-         break label42;
+         val var2: a = Result.k;
+         var15 = Result.b(var0.query(var1, new java.lang.String[]{"_display_name"}, null, null, null));
+      } catch (var5: java.lang.Throwable) {
+         val var17: a = Result.k;
+         var15 = Result.b(c.a(var5));
+         break label41;
       }
 
-      if (r.g(var18)) {
+      var var18: Any = var15;
+      if (Result.g(var15)) {
          var18 = null;
       }
 
-      val var4: Cursor = var18 as Cursor;
-      var var19: java.lang.String = null;
-      if (var4 != null) {
-         label36: {
+      val var21: Cursor = var18 as Cursor;
+      var var16: java.lang.String = "";
+      if (var21 != null) {
+         label35: {
             try {
-               if (var4.moveToFirst()) {
-                  var19 = var4.getString(0);
-                  break label36;
+               if (var21.moveToFirst()) {
+                  var16 = var21.getString(0);
+                  break label35;
                }
-            } catch (var6: java.lang.Throwable) {
-               val var21: java.lang.Throwable = var6;
+            } catch (var4: java.lang.Throwable) {
+               var18 = var4;
 
                try {
-                  throw var21;
-               } catch (var5: java.lang.Throwable) {
-                  c.a(var4, var6);
+                  throw var18;
+               } catch (var3: java.lang.Throwable) {
+                  s9.c.a(var21, var4);
                }
             }
 
-            var19 = "";
+            var16 = "";
          }
 
-         c.a(var4, null);
+         s9.c.a(var21, null);
+         if (var16 == null) {
+            var16 = "";
+         }
       }
 
-      if (var19 == null) {
-         var19 = "";
-      }
-
-      return var19;
+      return var16;
    }
 }

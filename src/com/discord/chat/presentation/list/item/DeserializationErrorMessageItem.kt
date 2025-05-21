@@ -4,8 +4,8 @@ import com.discord.chat.bridge.ErrorMessage
 import kotlin.jvm.internal.q
 
 public data class DeserializationErrorMessageItem(message: ErrorMessage, isExpanded: Boolean = false) : ChatListItem {
-   public final val isExpanded: Boolean
    public final val message: ErrorMessage
+   public final val isExpanded: Boolean
 
    init {
       q.h(var1, "message");

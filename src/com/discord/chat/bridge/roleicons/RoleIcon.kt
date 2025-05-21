@@ -1,27 +1,16 @@
 package com.discord.chat.bridge.roleicons
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
-   public final val alt: String
-   public final val name: String
-   public final val size: Int
    public final val source: String?
    public final val unicodeEmoji: String?
+   public final val name: String
+   public final val size: Int
+   public final val alt: String
 
    init {
       q.h(var3, "name");
@@ -104,133 +93,24 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.source;
-      val var5: java.lang.String = this.unicodeEmoji;
-      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.source;
+      val var3: java.lang.String = this.unicodeEmoji;
+      val var5: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var4: java.lang.String = this.alt;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("RoleIcon(source=");
-      var3.append(var2);
-      var3.append(", unicodeEmoji=");
-      var3.append(var5);
-      var3.append(", name=");
-      var3.append(var6);
-      var3.append(", size=");
-      var3.append(var1);
-      var3.append(", alt=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: RoleIcon.$serializer = new RoleIcon.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.roleicons.RoleIcon", var0, 5);
-         var1.l("source", true);
-         var1.l("unicodeEmoji", true);
-         var1.l("name", false);
-         var1.l("size", false);
-         var1.l("alt", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), a.u(var1), var1, N.a, var1};
-      }
-
-      public open fun deserialize(decoder: Decoder): RoleIcon {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var3: Int;
-         var var8: java.lang.String;
-         val var9: java.lang.String;
-         var var13: java.lang.String;
-         var var14: java.lang.String;
-         if (var11.y()) {
-            val var12: C0 = C0.a;
-            var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
-            var14 = var11.v(var10, 1, var12, null) as java.lang.String;
-            val var7: java.lang.String = var11.t(var10, 2);
-            var3 = var11.k(var10, 3);
-            var13 = var11.t(var10, 4);
-            var2 = 31;
-            var9 = var14;
-            var14 = var7;
-         } else {
-            var var4: Boolean = true;
-            var3 = 0;
-            var8 = null;
-            var var15: java.lang.String = null;
-            var14 = null;
-            var13 = null;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var11.x(var10);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           if (var5 != 3) {
-                              if (var5 != 4) {
-                                 throw new n(var5);
-                              }
-
-                              var13 = var11.t(var10, 4);
-                              var2 |= 16;
-                           } else {
-                              var3 = var11.k(var10, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var14 = var11.t(var10, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var15 = var11.v(var10, 1, C0.a, var15) as java.lang.String;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var8 = var11.v(var10, 0, C0.a, var8) as java.lang.String;
-                     var2 |= 1;
-                  }
-               } else {
-                  var4 = false;
-               }
-            }
-
-            var9 = var15;
-         }
-
-         var11.b(var10);
-         return new RoleIcon(var2, var8, var9, var14, var3, var13, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: RoleIcon) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         RoleIcon.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var2: java.lang.String = this.alt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("RoleIcon(source=");
+      var6.append(var4);
+      var6.append(", unicodeEmoji=");
+      var6.append(var3);
+      var6.append(", name=");
+      var6.append(var5);
+      var6.append(", size=");
+      var6.append(var1);
+      var6.append(", alt=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

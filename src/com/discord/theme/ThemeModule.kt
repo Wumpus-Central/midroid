@@ -5,6 +5,7 @@ import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
+import l2.L2
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec {
    init {
@@ -14,7 +15,6 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMod
 
    @JvmStatic
    fun `updateTheme$lambda$0`(var0: ThemeModule) {
-      q.h(var0, "this$0");
       val var1: Activity = var0.getCurrentActivity();
       if (var1 != null) {
          ActivityThemeUtils.INSTANCE.updateActivityTheming$theme_release(var1);
@@ -68,7 +68,7 @@ public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeMod
 
          val var3: Activity = this.getCurrentActivity();
          if (var3 != null) {
-            var3.runOnUiThread(new a(this));
+            var3.runOnUiThread(new L2(this));
          }
 
          return;

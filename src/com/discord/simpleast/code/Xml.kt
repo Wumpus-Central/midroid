@@ -6,11 +6,11 @@ import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
+import g9.s
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import o8.w
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -115,9 +115,9 @@ public object Xml {
 
             val var19: java.lang.String = this.opening.substring(var5);
             q.g(var19, "(this as java.lang.String).substring(startIndex)");
-            var17 = w.a(var7, var19);
+            var17 = s.a(var7, var19);
          } else {
-            var17 = w.a(this.opening, "");
+            var17 = s.a(this.opening, "");
          }
 
          val var9: java.lang.String = var17.a() as java.lang.String;

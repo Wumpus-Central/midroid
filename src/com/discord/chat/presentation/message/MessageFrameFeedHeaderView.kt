@@ -19,15 +19,7 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import ka.C0
-import ka.G
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 public class MessageFrameFeedHeaderView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: MessageFrameFeedHeaderBinding
@@ -68,9 +60,9 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
    public fun configure(messageFrame: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader, onOverflowClick: OnClickListener?) {
       kotlin.jvm.internal.q.h(var1, "messageFrame");
-      var var7: TextView = this.binding.feedChannelText;
+      val var6: TextView = this.binding.feedChannelText;
       kotlin.jvm.internal.q.e(this.binding.feedChannelText);
-      ViewUtilsKt.setOptionalText(var7, var1.getChannelName());
+      ViewUtilsKt.setOptionalText(var6, var1.getChannelName());
       var var3: Boolean;
       if (var1.getChannelIconURL() != null) {
          var3 = 1;
@@ -84,7 +76,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = (byte)8;
       }
 
-      var7.setVisibility(var3);
+      var6.setVisibility(var3);
       val var19: SimpleDraweeView = this.binding.feedChannelIcon;
       kotlin.jvm.internal.q.g(this.binding.feedChannelIcon, "feedChannelIcon");
       ReactAssetUtilsKt.setOptionalReactImageUrl(var19, var1.getChannelIconURL());
@@ -99,7 +91,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var3 = 0;
       }
 
-      var7 = this.binding.feedReplyCount;
+      val var23: TextView = this.binding.feedReplyCount;
       kotlin.jvm.internal.q.g(this.binding.feedReplyCount, "feedReplyCount");
       val var11: java.lang.String;
       if (var3 > 3) {
@@ -110,7 +102,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
          var11 = null;
       }
 
-      ViewUtilsKt.setOptionalText(var7, var11);
+      ViewUtilsKt.setOptionalText(var23, var11);
       val var24: OverlappingCirclesView = this.binding.feedReplyParticipants;
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
@@ -155,16 +147,16 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @ha.f
+   @Za.f
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
       channelName: String? = null
    ) {
-      public final val avatarURLs: ArrayList<String>?
       public final val channelIconURL: String?
-      public final val channelName: String?
       public final val chatIconURL: String?
+      public final val avatarURLs: ArrayList<String>?
+      public final val channelName: String?
 
       fun MessageBundleHeader() {
          this(null, null, null, null, 15, null);
@@ -252,124 +244,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.channelIconURL;
-         val var2: java.lang.String = this.chatIconURL;
-         val var4: ArrayList = this.avatarURLs;
-         val var5: java.lang.String = this.channelName;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("MessageBundleHeader(channelIconURL=");
-         var3.append(var1);
-         var3.append(", chatIconURL=");
-         var3.append(var2);
-         var3.append(", avatarURLs=");
-         var3.append(var4);
-         var3.append(", channelName=");
-         var3.append(var5);
-         var3.append(")");
-         return var3.toString();
-      }
-
-      public object `$serializer` : G {
-         public open val descriptor: SerialDescriptor
-            public open get() {
-               return descriptor;
-            }
-
-
-         @JvmStatic
-         fun {
-            val var0: MessageFrameFeedHeaderView.MessageBundleHeader.$serializer = new MessageFrameFeedHeaderView.MessageBundleHeader.$serializer();
-            INSTANCE = var0;
-            val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-               "com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader", var0, 4
-            );
-            var1.l("channelIconURL", true);
-            var1.l("chatIconURL", true);
-            var1.l("avatarURLs", true);
-            var1.l("channelName", true);
-            descriptor = var1;
-         }
-
-         public open fun childSerializers(): Array<KSerializer<*>> {
-            val var2: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var1: C0 = C0.a;
-            return new KSerializer[]{ia.a.u(C0.a), ia.a.u(var1), ia.a.u(var2[2]), ia.a.u(var1)};
-         }
-
-         public open fun deserialize(decoder: Decoder): com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader {
-            kotlin.jvm.internal.q.h(var1, "decoder");
-            val var10: SerialDescriptor = this.getDescriptor();
-            val var11: kotlinx.serialization.encoding.c = var1.c(var10);
-            val var9: Array<KSerializer> = MessageFrameFeedHeaderView.MessageBundleHeader.access$get$childSerializers$cp();
-            val var5: Boolean = var11.y();
-            var var8: java.lang.String = null;
-            var var2: Int;
-            var var7: java.lang.String;
-            val var12: ArrayList;
-            var var14: Any;
-            if (var5) {
-               var14 = C0.a;
-               var8 = var11.v(var10, 0, C0.a, null) as java.lang.String;
-               var7 = var11.v(var10, 1, (DeserializationStrategy)var14, null) as java.lang.String;
-               var12 = var11.v(var10, 2, var9[2], null) as ArrayList;
-               var14 = var11.v(var10, 3, (DeserializationStrategy)var14, null) as java.lang.String;
-               var2 = 15;
-            } else {
-               var var3: Boolean = true;
-               var2 = 0;
-               var7 = null;
-               var14 = null;
-               var var13: Any = null;
-
-               while (var3) {
-                  val var4: Int = var11.x(var10);
-                  if (var4 != -1) {
-                     if (var4 != 0) {
-                        if (var4 != 1) {
-                           if (var4 != 2) {
-                              if (var4 != 3) {
-                                 throw new ha.n(var4);
-                              }
-
-                              var13 = var11.v(var10, 3, C0.a, var13) as java.lang.String;
-                              var2 |= 8;
-                           } else {
-                              var14 = var11.v(var10, 2, var9[2], var14) as ArrayList;
-                              var2 |= 4;
-                           }
-                        } else {
-                           var7 = var11.v(var10, 1, C0.a, var7) as java.lang.String;
-                           var2 |= 2;
-                        }
-                     } else {
-                        var8 = var11.v(var10, 0, C0.a, var8) as java.lang.String;
-                        var2 |= 1;
-                     }
-                  } else {
-                     var3 = false;
-                  }
-               }
-
-               var14 = var13;
-               var12 = (ArrayList)var14;
-            }
-
-            var11.b(var10);
-            return new MessageFrameFeedHeaderView.MessageBundleHeader(var2, var8, var7, var12, (java.lang.String)var14, null);
-         }
-
-         public open fun serialize(encoder: Encoder, value: com.discord.chat.presentation.message.MessageFrameFeedHeaderView.MessageBundleHeader) {
-            kotlin.jvm.internal.q.h(var1, "encoder");
-            kotlin.jvm.internal.q.h(var2, "value");
-            val var3: SerialDescriptor = this.getDescriptor();
-            val var4: CompositeEncoder = var1.c(var3);
-            MessageFrameFeedHeaderView.MessageBundleHeader.write$Self$chat_release(var2, var4, var3);
-            var4.b(var3);
-         }
-
-         fun typeParametersSerializers(): Array<KSerializer> {
-            return ka.G.a.a(this);
-         }
+         val var4: java.lang.String = this.channelIconURL;
+         val var5: java.lang.String = this.chatIconURL;
+         val var3: ArrayList = this.avatarURLs;
+         val var2: java.lang.String = this.channelName;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundleHeader(channelIconURL=");
+         var1.append(var4);
+         var1.append(", chatIconURL=");
+         var1.append(var5);
+         var1.append(", avatarURLs=");
+         var1.append(var3);
+         var1.append(", channelName=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
 
       public companion object {

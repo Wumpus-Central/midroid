@@ -1,10 +1,12 @@
 package com.discord.foreground_service
 
+import N1.d
 import android.app.Service
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
-import androidx.core.content.b
+import androidx.core.content.c
+import com.discord.crash_reporting.CrashReporting
 import com.discord.foreground_service.service.ServiceNotificationConfiguration
 import com.discord.foreground_service.service.ServiceNotificationConfiguration.Type
 import com.discord.foreground_service.utils.Log
@@ -52,18 +54,40 @@ public class ForegroundServiceManager {
       }
    }
 
+   @JvmStatic
+   fun `startService$lambda$0`(var0: ForegroundServiceManager, var1: Context, var2: java.util.List): Unit {
+      var0.startServiceInternal(var1, var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `startService$lambda$1`(): Unit {
+      CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "Couldn't start ForegroundService", null, null, 6, null);
+      return Unit.a;
+   }
+
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
       val var5: Log = Log.INSTANCE;
-      val var4: java.lang.String = tag;
+      val var6: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Start service with ");
-      var6.append(var3);
-      var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Start service with ");
+      var4.append(var3);
+      var4.append(" configurations.");
+      Log.i$foreground_service_release$default(var5, var6, var4.toString(), null, 4, null);
       this.serviceConfigurations = var2;
-      ForegroundService.Companion.start(var1, <unrepresentable>.INSTANCE);
+      ForegroundService.Companion.start(var1, new d());
+   }
+
+   @JvmStatic
+   fun `startServiceInternal$lambda$3`(var0: Exception): Unit {
+      q.h(var0, "e");
+      val var1: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
+      q.g(tag, "tag");
+      var1.w$foreground_service_release(var2, "Unable to start service", var0);
+      return Unit.a;
    }
 
    public fun handleIntent(context: Context, intent: Intent): Unit? {
@@ -72,7 +96,7 @@ public class ForegroundServiceManager {
       val var4: NotificationAction.Companion = NotificationAction.Companion;
       val var6: NotificationAction;
       if (IntentUtilsKt.hasExtra(var2, G.b(GenericAction.class))) {
-         var6 = (b.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
+         var6 = (c.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
       } else {
          var6 = null;
       }
@@ -141,60 +165,60 @@ public class ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: aload 1
-      // 03: ldc "foregroundService"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
-      // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 3
-      // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 2
-      // 10: aload 2
-      // 11: ldc "tag"
-      // 13: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 3
-      // 17: aload 2
-      // 18: ldc "On service connected."
-      // 1a: aconst_null
-      // 1b: bipush 4
+      // 03: ldc_w "foregroundService"
+      // 06: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 09: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 0c: astore 3
+      // 0d: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 10: astore 2
+      // 11: aload 2
+      // 12: ldc "tag"
+      // 14: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 17: aload 3
+      // 18: aload 2
+      // 19: ldc_w "On service connected."
       // 1c: aconst_null
-      // 1d: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
-      // 20: aload 0
-      // 21: aload 1
-      // 22: putfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
-      // 25: aload 1
-      // 26: ifnull 5e
-      // 29: aload 0
-      // 2a: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
-      // 2d: invokeinterface java/util/Collection.isEmpty ()Z 1
-      // 32: ifne 48
-      // 35: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
-      // 38: aload 1
-      // 39: aload 1
-      // 3a: aload 0
-      // 3b: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
-      // 3e: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
-      // 41: goto 5e
-      // 44: astore 1
-      // 45: goto 61
-      // 48: aload 0
-      // 49: aload 1
-      // 4a: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4d: aload 2
-      // 4e: ldc "tag"
-      // 50: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 53: aload 3
-      // 54: aload 2
-      // 55: ldc_w "No configuration present (process liked died), stopping service."
-      // 58: aconst_null
-      // 59: bipush 4
+      // 1d: bipush 4
+      // 1e: aconst_null
+      // 1f: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 22: aload 0
+      // 23: aload 1
+      // 24: putfield com/discord/foreground_service/ForegroundServiceManager.service Landroid/app/Service;
+      // 27: aload 1
+      // 28: ifnull 60
+      // 2b: aload 0
+      // 2c: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
+      // 2f: invokeinterface java/util/Collection.isEmpty ()Z 1
+      // 34: ifne 4a
+      // 37: getstatic com/discord/foreground_service/service/ServiceNotification.INSTANCE Lcom/discord/foreground_service/service/ServiceNotification;
+      // 3a: aload 1
+      // 3b: aload 1
+      // 3c: aload 0
+      // 3d: getfield com/discord/foreground_service/ForegroundServiceManager.serviceConfigurations Ljava/util/List;
+      // 40: invokevirtual com/discord/foreground_service/service/ServiceNotification.startForegroundCompat (Landroid/app/Service;Landroid/content/Context;Ljava/util/List;)V
+      // 43: goto 60
+      // 46: astore 1
+      // 47: goto 63
+      // 4a: aload 0
+      // 4b: aload 1
+      // 4c: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
+      // 4f: aload 2
+      // 50: ldc "tag"
+      // 52: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 55: aload 3
+      // 56: aload 2
+      // 57: ldc_w "No configuration present (process liked died), stopping service."
       // 5a: aconst_null
-      // 5b: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
-      // 5e: aload 0
-      // 5f: monitorexit
-      // 60: return
-      // 61: aload 0
-      // 62: monitorexit
-      // 63: aload 1
-      // 64: athrow
+      // 5b: bipush 4
+      // 5c: aconst_null
+      // 5d: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 60: aload 0
+      // 61: monitorexit
+      // 62: return
+      // 63: aload 0
+      // 64: monitorexit
+      // 65: aload 1
+      // 66: athrow
    }
 
    internal fun onServiceCreated(context: Context) {
@@ -261,14 +285,14 @@ public class ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 2
+      // 05: astore 1
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 1
-      // 0a: aload 1
+      // 09: astore 2
+      // 0a: aload 2
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 2
-      // 11: aload 1
+      // 10: aload 1
+      // 11: aload 2
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4
@@ -313,68 +337,77 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 4
-      // 14: new com/discord/foreground_service/ForegroundServiceManager$startService$promise$1
+      // 12: astore 6
+      // 14: new N1/b
       // 17: astore 5
       // 19: aload 5
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
-      // 1e: invokespecial com/discord/foreground_service/ForegroundServiceManager$startService$promise$1.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
-      // 21: aload 4
-      // 23: aload 5
-      // 25: getstatic com/discord/foreground_service/ForegroundServiceManager$startService$promise$2.INSTANCE Lcom/discord/foreground_service/ForegroundServiceManager$startService$promise$2;
-      // 28: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
-      // 2b: astore 4
-      // 2d: aload 0
-      // 2e: aload 2
-      // 2f: invokespecial com/discord/foreground_service/ForegroundServiceManager.getTypeFromServiceConfigurationList (Ljava/util/List;)Lcom/discord/foreground_service/service/ServiceNotificationConfiguration$Type;
-      // 32: astore 2
-      // 33: aload 1
-      // 34: checkcast com/facebook/react/bridge/ReactApplicationContext
-      // 37: ldc_w com/discord/permissions/NativePermissionManagerModule
-      // 3a: invokevirtual com/facebook/react/bridge/ReactContext.getNativeModule (Ljava/lang/Class;)Lcom/facebook/react/bridge/NativeModule;
-      // 3d: astore 1
-      // 3e: aload 1
-      // 3f: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
-      // 42: aload 1
-      // 43: checkcast com/discord/permissions/NativePermissionManagerModule
+      // 1e: invokespecial N1/b.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
+      // 21: new N1/c
+      // 24: astore 4
+      // 26: aload 4
+      // 28: invokespecial N1/c.<init> ()V
+      // 2b: aload 6
+      // 2d: aload 5
+      // 2f: aload 4
+      // 31: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
+      // 34: astore 4
+      // 36: aload 0
+      // 37: aload 2
+      // 38: invokespecial com/discord/foreground_service/ForegroundServiceManager.getTypeFromServiceConfigurationList (Ljava/util/List;)Lcom/discord/foreground_service/service/ServiceNotificationConfiguration$Type;
+      // 3b: astore 2
+      // 3c: aload 1
+      // 3d: checkcast com/facebook/react/bridge/ReactApplicationContext
+      // 40: ldc_w com/discord/permissions/NativePermissionManagerModule
+      // 43: invokevirtual com/facebook/react/bridge/ReactContext.getNativeModule (Ljava/lang/Class;)Lcom/facebook/react/bridge/NativeModule;
       // 46: astore 1
-      // 47: getstatic com/discord/foreground_service/ForegroundServiceManager$WhenMappings.$EnumSwitchMapping$0 [I
-      // 4a: aload 2
-      // 4b: invokevirtual java/lang/Enum.ordinal ()I
-      // 4e: iaload
-      // 4f: istore 3
-      // 50: iload 3
-      // 51: bipush 1
-      // 52: if_icmpeq 78
-      // 55: iload 3
-      // 56: bipush 2
-      // 57: if_icmpeq 6f
-      // 5a: iload 3
-      // 5b: bipush 3
-      // 5c: if_icmpeq 62
-      // 5f: goto 7e
-      // 62: aload 1
-      // 63: aload 4
-      // 65: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
-      // 68: goto 7e
-      // 6b: astore 1
-      // 6c: goto 81
-      // 6f: aload 1
-      // 70: aload 4
-      // 72: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
-      // 75: goto 7e
-      // 78: aload 1
-      // 79: aload 4
-      // 7b: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionFileUpload (Lcom/facebook/react/bridge/Promise;)V
-      // 7e: aload 0
-      // 7f: monitorexit
-      // 80: return
-      // 81: aload 0
-      // 82: monitorexit
-      // 83: aload 1
-      // 84: athrow
+      // 47: aload 1
+      // 48: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
+      // 4b: aload 1
+      // 4c: checkcast com/discord/permissions/NativePermissionManagerModule
+      // 4f: astore 1
+      // 50: getstatic com/discord/foreground_service/ForegroundServiceManager$WhenMappings.$EnumSwitchMapping$0 [I
+      // 53: aload 2
+      // 54: invokevirtual java/lang/Enum.ordinal ()I
+      // 57: iaload
+      // 58: istore 3
+      // 59: iload 3
+      // 5a: bipush 1
+      // 5b: if_icmpeq 88
+      // 5e: iload 3
+      // 5f: bipush 2
+      // 60: if_icmpeq 7f
+      // 63: iload 3
+      // 64: bipush 3
+      // 65: if_icmpne 75
+      // 68: aload 1
+      // 69: aload 4
+      // 6b: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
+      // 6e: goto 8e
+      // 71: astore 1
+      // 72: goto 91
+      // 75: new g9/n
+      // 78: astore 1
+      // 79: aload 1
+      // 7a: invokespecial g9/n.<init> ()V
+      // 7d: aload 1
+      // 7e: athrow
+      // 7f: aload 1
+      // 80: aload 4
+      // 82: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionVoiceCall (Lcom/facebook/react/bridge/Promise;)V
+      // 85: goto 8e
+      // 88: aload 1
+      // 89: aload 4
+      // 8b: invokevirtual com/discord/permissions/NativePermissionManagerModule.requestForegroundServicePermissionFileUpload (Lcom/facebook/react/bridge/Promise;)V
+      // 8e: aload 0
+      // 8f: monitorexit
+      // 90: return
+      // 91: aload 0
+      // 92: monitorexit
+      // 93: aload 1
+      // 94: athrow
    }
 
    internal fun stopService(context: Context) {
@@ -426,7 +459,7 @@ public class ForegroundServiceManager {
    }
 
    public companion object {
-      public final val instance: ForegroundServiceManager
       private final val tag: String
+      public final val instance: ForegroundServiceManager
    }
 }

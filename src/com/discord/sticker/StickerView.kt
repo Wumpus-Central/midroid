@@ -12,8 +12,8 @@ import com.discord.sticker.sticker_types.RLottieUtils
 import kotlin.jvm.internal.q
 
 public class StickerView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : APNGImageView {
-   private final lateinit var lottieView: View
    private final lateinit var pngView: PNGStickerView
+   private final lateinit var lottieView: View
 
    fun StickerView(var1: Context) {
       q.h(var1, "context");

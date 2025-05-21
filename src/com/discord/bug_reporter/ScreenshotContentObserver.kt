@@ -12,8 +12,8 @@ import kotlin.jvm.internal.q
 
 internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScreenshot: () -> Unit) : ContentObserver {
    private final val contentResolver: ContentResolver
-   private final var lastProcessedPath: String?
    private final val onScreenshot: () -> Unit
+   private final var lastProcessedPath: String?
 
    init {
       q.h(var1, "contentResolver");
@@ -39,7 +39,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          var3 = new java.lang.String[]{"_data"};
       }
 
-      return c.t(c.t(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
+      return c.w(c.w(new java.lang.String[]{"_display_name", "date_added", "_id"}, var2), var3) as Array<java.lang.String>;
    }
 
    @SuppressLint(["Range"])
@@ -106,7 +106,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 077
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 1
@@ -135,7 +135,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 0af: aconst_null
       // 0b0: bipush 2
       // 0b1: aconst_null
-      // 0b2: invokestatic kotlin/text/h.Y0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
+      // 0b2: invokestatic kotlin/text/h.X0 (Ljava/lang/String;CLjava/lang/String;ILjava/lang/Object;)Ljava/lang/String;
       // 0b5: astore 6
       // 0b7: goto 08f
       // 0ba: aload 7
@@ -170,7 +170,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 108: astore 1
       // 109: aload 7
       // 10b: aconst_null
-      // 10c: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10c: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 10f: aload 1
       // 110: areturn
       // 111: aload 1
@@ -178,12 +178,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 113: astore 6
       // 115: aload 7
       // 117: aload 1
-      // 118: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 118: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11b: aload 6
       // 11d: athrow
       // 11e: aload 7
       // 120: aconst_null
-      // 121: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 121: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 124: aconst_null
       // 125: areturn
    }
@@ -200,12 +200,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var2 != null) {
-         if (this.lastProcessedPath == null || !h.w(this.lastProcessedPath, var2.getPath(), false, 2, null)) {
-            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
-               && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
-               this.lastProcessedPath = var2.getPath();
+      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var3 != null) {
+         if (this.lastProcessedPath == null || !h.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
+            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
+               && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
+               this.lastProcessedPath = var3.getPath();
                this.onScreenshot.invoke();
             }
          }
@@ -223,11 +223,11 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var3: java.lang.String = var2.toString();
-         q.g(var3, "toString(...)");
-         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         val var4: java.lang.String = var2.toString();
          q.g(var4, "toString(...)");
-         if (h.J(var3, var4, false, 2, null)) {
+         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         q.g(var3, "toString(...)");
+         if (h.I(var4, var3, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -238,8 +238,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    public companion object {
-      private const val DEFAULT_DETECT_WINDOW_SECONDS: Long
       public const val IS_PENDING_TRUE: Int
+      private const val DEFAULT_DETECT_WINDOW_SECONDS: Long
       private const val SORT_ORDER: String
 
       private fun String.isScreenshotPath(): Boolean {
@@ -247,17 +247,17 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
          q.g(var2, "getDefault(...)");
          var1 = var1.toLowerCase(var2);
          q.g(var1, "toLowerCase(...)");
-         return h.O(var1, "screenshots/", false, 2, null);
+         return h.N(var1, "screenshots/", false, 2, null);
       }
    }
 
    public data class ScreenshotData(id: Long, fileName: String, relativePath: String, uri: Uri, dateAdded: Long) {
-      public final val dateAdded: Long
-      public final val fileName: String
       public final val id: Long
-      public final val path: String
+      public final val fileName: String
       public final val relativePath: String
       public final val uri: Uri
+      public final val dateAdded: Long
+      public final val path: String
 
       init {
          q.h(var3, "fileName");
@@ -337,23 +337,23 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var1: Long = this.id;
-         val var7: java.lang.String = this.fileName;
-         val var8: java.lang.String = this.relativePath;
-         val var5: Uri = this.uri;
+         val var5: java.lang.String = this.fileName;
+         val var7: java.lang.String = this.relativePath;
+         val var6: Uri = this.uri;
          val var3: Long = this.dateAdded;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("ScreenshotData(id=");
-         var6.append(var1);
-         var6.append(", fileName=");
-         var6.append(var7);
-         var6.append(", relativePath=");
-         var6.append(var8);
-         var6.append(", uri=");
-         var6.append(var5);
-         var6.append(", dateAdded=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("ScreenshotData(id=");
+         var8.append(var1);
+         var8.append(", fileName=");
+         var8.append(var5);
+         var8.append(", relativePath=");
+         var8.append(var7);
+         var8.append(", uri=");
+         var8.append(var6);
+         var8.append(", dateAdded=");
+         var8.append(var3);
+         var8.append(")");
+         return var8.toString();
       }
    }
 }

@@ -9,6 +9,6 @@ public final class e implements Runnable {
 
    @Override
    public final void run() {
-      EglRenderer.d(this.j, this.k);
+      EglRenderer.e(this.j, this.k);
    }
 }

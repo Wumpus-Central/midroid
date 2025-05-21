@@ -49,7 +49,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.J(var5, "image", false, 2, null)) {
+         if (h.I(var5, "image", false, 2, null)) {
             var3 = true;
          }
       }
@@ -83,7 +83,7 @@ internal object ContentResolverUtils {
       var var3: Boolean = false;
       if (var5 != null) {
          var3 = false;
-         if (h.J(var5, "video", false, 2, null)) {
+         if (h.I(var5, "video", false, 2, null)) {
             var3 = true;
          }
       }
@@ -116,7 +116,7 @@ internal object ContentResolverUtils {
             var9.putInt("android:query-arg-offset", var7.intValue());
          }
 
-         var10 = a.a(var1, var2, var3, var9, null);
+         var10 = c.a(var1, var2, var3, var9, null);
       } else if (VERSION.SDK_INT >= 26) {
          val var15: Int;
          if (var7 != null) {

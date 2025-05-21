@@ -18,14 +18,14 @@ public class AutomodSystemMessageDelegate(eventHandlerProvider: () -> ChatEventH
       messageAccessoriesRecycledViewPool: RecycledViewPool
    )
    : BaseChatListItemDelegate<AutomodSystemMessageItem, AutomodSystemMessageView> {
+   private final val messageComponentProvider: () -> ComponentProvider
+   private final val messageAccessoriesRecycledViewPool: RecycledViewPool
+
    private final val componentProvider: ComponentProvider
       private final get() {
          return this.messageComponentProvider.invoke() as ComponentProvider;
       }
 
-
-   private final val messageAccessoriesRecycledViewPool: RecycledViewPool
-   private final val messageComponentProvider: () -> ComponentProvider
 
    init {
       q.h(var1, "eventHandlerProvider");

@@ -793,6 +793,7 @@
     <attr name="fontFamily" format="string" />
     <attr name="fontProviderAuthority" format="string" />
     <attr name="fontProviderCerts" format="reference" />
+    <attr name="fontProviderFallbackQuery" format="string" />
     <attr name="fontProviderFetchStrategy">
         <enum name="blocking" value="0" />
         <enum name="async" value="1" />

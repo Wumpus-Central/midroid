@@ -1,21 +1,10 @@
 package com.discord.chat.reactevents
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class LongPressMessageEvent(messageId: String,
@@ -26,12 +15,12 @@ internal data class LongPressMessageEvent(messageId: String,
       componentMediaIndex: Int?
    ) :
    ReactEvent {
+   public final val messageId: String
    public final val channelId: String
-   public final val componentId: String?
-   public final val componentMediaIndex: Int?
    public final val mediaIndex: Int
    public final val mediaType: String
-   public final val messageId: String
+   public final val componentId: String?
+   public final val componentMediaIndex: Int?
 
    init {
       q.h(var1, "messageId");
@@ -108,10 +97,10 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.messageId.hashCode();
+      val var4: Int = this.messageId.hashCode();
       val var5: Int = this.channelId.hashCode();
       val var6: Int = Integer.hashCode(this.mediaIndex);
-      val var4: Int = this.mediaType.hashCode();
+      val var3: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -124,7 +113,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var3 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((((var4 * 31 + var5) * 31 + var6) * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -132,136 +121,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
       val var4: java.lang.String = this.mediaType;
-      val var7: java.lang.String = this.componentId;
-      val var5: Int = this.componentMediaIndex;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressMessageEvent(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var6);
-      var2.append(", mediaIndex=");
-      var2.append(var1);
-      var2.append(", mediaType=");
-      var2.append(var4);
-      var2.append(", componentId=");
-      var2.append(var7);
-      var2.append(", componentMediaIndex=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: LongPressMessageEvent.$serializer = new LongPressMessageEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.LongPressMessageEvent", var0, 6);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
-         var1.l("mediaIndex", false);
-         var1.l("mediaType", false);
-         var1.l("componentId", false);
-         var1.l("componentMediaIndex", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: N = N.a;
-         return new KSerializer[]{C0.a, C0.a, N.a, C0.a, a.u(C0.a), a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): LongPressMessageEvent {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var3: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var8: java.lang.String;
-         var var9: java.lang.String;
-         var var12: Any;
-         if (var11.y()) {
-            var9 = var11.t(var10, 0);
-            var8 = var11.t(var10, 1);
-            var3 = var11.k(var10, 2);
-            var7 = var11.t(var10, 3);
-            var6 = var11.v(var10, 4, C0.a, null) as java.lang.String;
-            var12 = var11.v(var10, 5, N.a, null) as Int;
-            var2 = 63;
-         } else {
-            var var4: Boolean = true;
-            var3 = 0;
-            var9 = null;
-            var8 = null;
-            var7 = null;
-            var6 = null;
-            var12 = null;
-            var2 = 0;
-
-            while (var4) {
-               val var5: Int = var11.x(var10);
-               switch (var5) {
-                  case -1:
-                     var4 = false;
-                     break;
-                  case 0:
-                     var9 = var11.t(var10, 0);
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var8 = var11.t(var10, 1);
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var3 = var11.k(var10, 2);
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var7 = var11.t(var10, 3);
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var6 = var11.v(var10, 4, C0.a, var6) as java.lang.String;
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var12 = var11.v(var10, 5, N.a, var12) as Int;
-                     var2 |= 32;
-                     break;
-                  default:
-                     throw new n(var5);
-               }
-            }
-         }
-
-         var11.b(var10);
-         return new LongPressMessageEvent(var2, var9, var8, var3, var7, var6, (Integer)var12, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: LongPressMessageEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         LongPressMessageEvent.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var3: java.lang.String = this.componentId;
+      val var6: Int = this.componentMediaIndex;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("LongPressMessageEvent(messageId=");
+      var7.append(var2);
+      var7.append(", channelId=");
+      var7.append(var5);
+      var7.append(", mediaIndex=");
+      var7.append(var1);
+      var7.append(", mediaType=");
+      var7.append(var4);
+      var7.append(", componentId=");
+      var7.append(var3);
+      var7.append(", componentMediaIndex=");
+      var7.append(var6);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

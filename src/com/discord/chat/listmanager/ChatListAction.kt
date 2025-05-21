@@ -6,9 +6,9 @@ public sealed class ChatListAction protected constructor() {
    public object Noop : ChatListAction()
 
    public data class ScrollTo(position: Int, animate: Boolean, highlight: Boolean) : ChatListAction() {
+      public final val position: Int
       public final val animate: Boolean
       public final val highlight: Boolean
-      public final val position: Int
 
       init {
          this.position = var1;
@@ -55,15 +55,15 @@ public sealed class ChatListAction protected constructor() {
 
       public override fun toString(): String {
          val var1: Int = this.position;
-         val var3: Boolean = this.animate;
-         val var2: Boolean = this.highlight;
+         val var2: Boolean = this.animate;
+         val var3: Boolean = this.highlight;
          val var4: StringBuilder = new StringBuilder();
          var4.append("ScrollTo(position=");
          var4.append(var1);
          var4.append(", animate=");
-         var4.append(var3);
-         var4.append(", highlight=");
          var4.append(var2);
+         var4.append(", highlight=");
+         var4.append(var3);
          var4.append(")");
          return var4.toString();
       }

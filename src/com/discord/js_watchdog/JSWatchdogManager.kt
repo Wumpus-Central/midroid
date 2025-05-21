@@ -1,7 +1,7 @@
 package com.discord.js_watchdog
 
-import X9.U
-import X9.f
+import Pa.U
+import Pa.f
 import android.content.Context
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
@@ -16,17 +16,16 @@ import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import o8.s
-import v8.b
+import n9.b
 
 public object JSWatchdogManager {
+   private final lateinit var storage: JSWatchdogStorage
    private final lateinit var cacheDir: File
    private final var enabled: Boolean
+   private final var recentPingTS: Long?
+   private final var previousPingTS: Long?
    private final var freezeTimer: TimerTask?
    private final var pingCoroutineJob: Job?
-   private final var previousPingTS: Long?
-   private final var recentPingTS: Long?
-   private final lateinit var storage: JSWatchdogStorage
 
    private fun cancelExistingJobs() {
       if (pingCoroutineJob != null) {
@@ -123,9 +122,7 @@ public object JSWatchdogManager {
 
          try {
             storage = JSWatchdogStorage.Companion.getInstance(var1);
-            val var4: File = var1.getCacheDir();
-            q.g(var4, "getCacheDir(...)");
-            cacheDir = var4;
+            cacheDir = var1.getCacheDir();
          } catch (var2: java.lang.Throwable) {
             // $VF: monitorexit
          }
@@ -171,7 +168,7 @@ public object JSWatchdogManager {
             public final Object invokeSuspend(Object var1) {
                b.e();
                if (this.label == 0) {
-                  s.b(var1);
+                  c.b(var1);
 
                   try {
                      var1 = new BooleanRef();
@@ -212,11 +209,11 @@ public object JSWatchdogManager {
 
                      if (var16 > 1000L) {
                         try {
-                           val var7: Log = Log.INSTANCE;
-                           val var19: StringBuilder = new StringBuilder();
-                           var19.append("Exceeded JS stall threshold [based on previous ping]: ");
-                           var19.append(var16);
-                           Log.i$default(var7, "JSWatchdogManager", var19.toString(), null, 4, null);
+                           val var19: Log = Log.INSTANCE;
+                           val var7: StringBuilder = new StringBuilder();
+                           var7.append("Exceeded JS stall threshold [based on previous ping]: ");
+                           var7.append(var16);
+                           Log.i$default(var19, "JSWatchdogManager", var7.toString(), null, 4, null);
                            var1.j = true;
                            JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var16, var5, var2x);
                         } catch (var10: Exception) {
@@ -229,7 +226,7 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var21: Timer = new Timer();
+                        val var20: Timer = new Timer();
                         val var18: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
@@ -248,7 +245,7 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var21.scheduleAtFixedRate(var18, 1500L, 1000L);
+                        var20.scheduleAtFixedRate(var18, 1500L, 1000L);
                         JSWatchdogManager.access$setFreezeTimer$p(var18);
                      }
                   } catch (var9: Exception) {

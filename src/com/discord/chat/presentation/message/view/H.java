@@ -1,16 +1,15 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.gift.GiftEmbed;
+import com.discord.chat.bridge.contentnode.LinkContentNode;
 import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class H implements OnClickListener {
-   public final Function1 j;
-   public final GiftEmbed k;
+public final class H implements Function1 {
+   public final Function2 j;
+   public final String k;
 
-   public final void onClick(View var1) {
-      GiftView.b(this.j, this.k, var1);
+   public final Object invoke(Object var1) {
+      return EphemeralIndicationView.g(this.j, this.k, (LinkContentNode)var1);
    }
 }

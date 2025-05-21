@@ -1,11 +1,11 @@
 package com.discord.portals.from_native;
 
-// $VF: synthetic class
-public final class a implements Runnable {
-   public final double j;
+import android.view.View;
+import kotlin.jvm.functions.Function1;
 
-   @Override
-   public final void run() {
-      PortalFromNativeModule.a(this.j);
+// $VF: synthetic class
+public final class a implements Function1 {
+   public final Object invoke(Object var1) {
+      return PortalFromNativeContextManager.a((View)var1);
    }
 }

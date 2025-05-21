@@ -124,7 +124,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var5: DCDButton = this.binding.acceptButton;
       kotlin.jvm.internal.q.e(this.binding.acceptButton);
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -286,7 +286,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var6: ImageView = this.binding.itemInviteOnlineDot;
       kotlin.jvm.internal.q.g(this.binding.itemInviteOnlineDot, "itemInviteOnlineDot");
       var var3: Boolean;
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
          var3 = 0;
       } else {
          var3 = 1;
@@ -302,7 +302,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var16: TextView = this.binding.itemInviteOnlineText;
       kotlin.jvm.internal.q.g(this.binding.itemInviteOnlineText, "itemInviteOnlineText");
       var var10: Boolean;
-      if (var1 != null && !kotlin.text.h.d0(var1)) {
+      if (var1 != null && !kotlin.text.h.c0(var1)) {
          var10 = 0;
       } else {
          var10 = 1;
@@ -319,7 +319,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       val var7: ImageView = this.binding.itemInviteTotalMemberDot;
       kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberDot, "itemInviteTotalMemberDot");
       var var12: Boolean;
-      if (var2 != null && !kotlin.text.h.d0(var2)) {
+      if (var2 != null && !kotlin.text.h.c0(var2)) {
          var12 = 0;
       } else {
          var12 = 1;
@@ -336,7 +336,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.g(this.binding.itemInviteTotalMemberText, "itemInviteTotalMemberText");
       var var14: Byte = 1;
       if (var2 != null) {
-         if (kotlin.text.h.d0(var2)) {
+         if (kotlin.text.h.c0(var2)) {
             var14 = 1;
          } else {
             var14 = 0;

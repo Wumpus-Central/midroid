@@ -4,14 +4,14 @@ import com.discord.chat.reactevents.TapImageData.Layout
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import g9.s
 import kotlin.jvm.internal.q
-import o8.w
 
 internal data class LongPressPollImageData(channelId: String, messageId: String, attachmentId: String, layout: Layout) : ReactEvent {
-   public final val attachmentId: String
    public final val channelId: String
-   public final val layout: Layout
    public final val messageId: String
+   public final val attachmentId: String
+   public final val layout: Layout
 
    init {
       q.h(var1, "channelId");
@@ -79,25 +79,25 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
 
    public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("channelId", this.channelId), w.a("messageId", this.messageId), w.a("attachmentId", this.attachmentId), w.a("layout", this.layout.serialize())
+         s.a("channelId", this.channelId), s.a("messageId", this.messageId), s.a("attachmentId", this.attachmentId), s.a("layout", this.layout.serialize())
       );
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.attachmentId;
-      val var4: TapImageData.Layout = this.layout;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressPollImageData(channelId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var5);
-      var2.append(", attachmentId=");
-      var2.append(var1);
-      var2.append(", layout=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.attachmentId;
+      val var3: TapImageData.Layout = this.layout;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("LongPressPollImageData(channelId=");
+      var5.append(var1);
+      var5.append(", messageId=");
+      var5.append(var4);
+      var5.append(", attachmentId=");
+      var5.append(var2);
+      var5.append(", layout=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 }

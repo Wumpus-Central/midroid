@@ -1,14 +1,11 @@
 package com.discord.crash_reporting.system_logs
 
-import G0.e
-import G0.f
-import G0.g
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import o8.w
-import p8.q
+import g9.s
+import h9.q
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -21,20 +18,20 @@ internal object HistoricalProcessExitReason {
       } else {
          var0 = q.l(
             new Pair[]{
-               w.a(6, "ANR"),
-               w.a(4, "CRASH"),
-               w.a(5, "CRASH_NATIVE"),
-               w.a(12, "DEPENDENCY_DIED"),
-               w.a(9, "EXCESSIVE_RESOURCE_USAGE"),
-               w.a(1, "EXIT_SELF"),
-               w.a(7, "INITIALIZATION_FAILURE"),
-               w.a(3, "LOW_MEMORY"),
-               w.a(13, "OTHER"),
-               w.a(8, "PERMISSION_CHANGE"),
-               w.a(2, "SIGNALED"),
-               w.a(0, "UNKNOWN"),
-               w.a(10, "USER_REQUESTED"),
-               w.a(11, "USER_STOPPED")
+               s.a(6, "ANR"),
+               s.a(4, "CRASH"),
+               s.a(5, "CRASH_NATIVE"),
+               s.a(12, "DEPENDENCY_DIED"),
+               s.a(9, "EXCESSIVE_RESOURCE_USAGE"),
+               s.a(1, "EXIT_SELF"),
+               s.a(7, "INITIALIZATION_FAILURE"),
+               s.a(3, "LOW_MEMORY"),
+               s.a(13, "OTHER"),
+               s.a(8, "PERMISSION_CHANGE"),
+               s.a(2, "SIGNALED"),
+               s.a(0, "UNKNOWN"),
+               s.a(10, "USER_REQUESTED"),
+               s.a(11, "USER_STOPPED")
             }
          );
       }
@@ -57,16 +54,16 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = e.a((ActivityManager)var5, null, 0, 1);
+            var5 = M0.e.a((ActivityManager)var5, null, 0, 1);
             kotlin.jvm.internal.q.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = f.a(i.h0((java.util.List)var5));
+            val var4: ApplicationExitInfo = M0.f.a(kotlin.collections.i.h0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
-               val var3: java.lang.String = exitReasonLookup.get(g.a(var4));
+               val var3: java.lang.String = exitReasonLookup.get(M0.g.a(var4));
                var5 = var3;
                if (var3 == null) {
-                  val var2: Int = g.a(var4);
+                  val var2: Int = M0.g.a(var4);
                   var5 = new StringBuilder();
                   var5.append("Unknown ");
                   var5.append(var2);
@@ -80,8 +77,8 @@ internal object HistoricalProcessExitReason {
    }
 
    public data class Reason(reason: String, description: String?) {
-      public final val description: String?
       public final val reason: String
+      public final val description: String?
 
       init {
          kotlin.jvm.internal.q.h(var1, "reason");
@@ -131,15 +128,15 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.reason;
-         val var1: java.lang.String = this.description;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Reason(reason=");
-         var2.append(var3);
-         var2.append(", description=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var1: java.lang.String = this.reason;
+         val var2: java.lang.String = this.description;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Reason(reason=");
+         var3.append(var1);
+         var3.append(", description=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

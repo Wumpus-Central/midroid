@@ -9,6 +9,6 @@ public final class o implements NativeConnection.GetStatsCallback {
 
    @Override
    public final void onStats(String var1) {
-      MediaEngine.h(this.a, var1);
+      MediaEngine.b(this.a, var1);
    }
 }

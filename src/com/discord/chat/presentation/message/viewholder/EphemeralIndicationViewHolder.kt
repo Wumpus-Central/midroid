@@ -4,7 +4,6 @@ import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.message.messagepart.EphemeralIndicationMessageAccessory
 import com.discord.chat.presentation.message.view.EphemeralIndicationView
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 
 public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralIndicationView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
@@ -17,6 +16,13 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
       super(var1, null);
       this.ephemeralIndicationView = var1;
       this.eventHandler = var2;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$1$lambda$0`(var0: EphemeralIndicationViewHolder, var1: EphemeralIndicationMessageAccessory, var2: java.lang.String): Unit {
+      kotlin.jvm.internal.q.h(var2, "it");
+      ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(var0.eventHandler, var1.getMessageId-3Eiw7ao(), var2, null, 4, null);
+      return Unit.a;
    }
 
    public fun bind(ephemeralAccessory: EphemeralIndicationMessageAccessory) {
@@ -43,23 +49,7 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
                   (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
                }
             },
-            new Function1(this, var1) {
-               final EphemeralIndicationMessageAccessory $ephemeralAccessory;
-               final EphemeralIndicationViewHolder this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$ephemeralAccessory = var2;
-               }
-
-               public final void invoke(java.lang.String var1) {
-                  kotlin.jvm.internal.q.h(var1, "it");
-                  ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(
-                     EphemeralIndicationViewHolder.access$getEventHandler$p(this.this$0), this.$ephemeralAccessory.getMessageId-3Eiw7ao(), var1, null, 4, null
-                  );
-               }
-            }
+            new k(this, var1)
          );
    }
 }

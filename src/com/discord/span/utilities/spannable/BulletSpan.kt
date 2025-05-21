@@ -12,12 +12,12 @@ import kotlin.jvm.internal.q
 
 public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true, bulletRadius: Int = 4, strokeWidth: Float = 4.0F, style: Style = Style.FILL) :
    LeadingMarginSpan {
-   private final val mBulletRadius: Int
-   private final val mColor: Int
    private final val mGapWidth: Int
+   private final val mBulletRadius: Int
+   private final val mWantColor: Boolean
+   private final val mColor: Int
    private final val mStrokeWidth: Float
    private final val mStyle: Style
-   private final val mWantColor: Boolean
 
    init {
       q.h(var6, "style");
@@ -92,9 +92,9 @@ public class BulletSpan(color: Int, gapWidth: Int = 2, wantColor: Boolean = true
    }
 
    public companion object {
-      public const val STANDARD_BULLET_RADIUS_PX: Int
-      public const val STANDARD_GAP_WIDTH_PX: Int
-      public const val STANDARD_STROKE_WIDTH_PX: Float
       private final var sBulletPath: Path?
+      public const val STANDARD_GAP_WIDTH_PX: Int
+      public const val STANDARD_BULLET_RADIUS_PX: Int
+      public const val STANDARD_STROKE_WIDTH_PX: Float
    }
 }

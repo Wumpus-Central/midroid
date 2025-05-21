@@ -1,14 +1,12 @@
 package com.discord.emoji_picker;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class b implements OnLongClickListener {
-   public final EmojiPickerRowView j;
-   public final EmojiPickerRow.Emoji k;
+public final class b implements Function0 {
+   public final EmojiPickerItemData.CoreData j;
 
-   public final boolean onLongClick(View var1) {
-      return EmojiPickerRowView.b(this.j, this.k, var1);
+   public final Object invoke() {
+      return EmojiPickerItemData.CoreData.a(this.j);
    }
 }

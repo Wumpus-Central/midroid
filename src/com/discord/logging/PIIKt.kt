@@ -8,7 +8,7 @@ import kotlin.reflect.KClass
 
 public fun getPIIFieldNames(kClass: KClass<*>): List<String> {
    q.h(var0, "kClass");
-   val var5: java.util.Collection = var0.m();
+   val var5: java.util.Collection = var0.n();
    val var1: ArrayList = new ArrayList();
 
    for (Object var3 : var5) {

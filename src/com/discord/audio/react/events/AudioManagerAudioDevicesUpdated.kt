@@ -6,9 +6,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
+import g9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import o8.w
 
 internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDevice>) : ReactEvent {
    public final val devices: List<AndroidAudioDevice>
@@ -43,7 +43,7 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(w.a("devices", AudioManagerAudioDevicesUpdated.Companion.access$convertDevices(Companion, this.devices)));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("devices", AudioManagerAudioDevicesUpdated.Companion.access$convertDevices(Companion, this.devices)));
    }
 
    public override fun toString(): String {

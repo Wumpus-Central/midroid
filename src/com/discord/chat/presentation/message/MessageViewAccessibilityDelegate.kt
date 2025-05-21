@@ -17,7 +17,6 @@ import com.discord.react_strings.RenderContext
 import com.discord.span.utilities.spannable.EmojiAccessibilitySpan
 import com.discord.span.utilities.spannable.SpoilerSpan
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 
 internal class MessageViewAccessibilityDelegate(message: Message, contentView: MessageContentView?, onClick: OnClickListener?, onLongClick: OnLongClickListener?)
    : androidx.core.view.a {
@@ -37,92 +36,83 @@ internal class MessageViewAccessibilityDelegate(message: Message, contentView: M
 
    private fun getReferencedMessageLabel(context: Context, referencedMessage: ReferencedMessage?): CharSequence? {
       return if (var2 is LoadedReferencedMessage)
-         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new Function1((var2 as LoadedReferencedMessage).getMessage().getUsername()) {
-            final java.lang.String $username;
-
-            {
-               super(1);
-               this.$username = var1;
-            }
-
-            public final void invoke(RenderContext var1) {
-               kotlin.jvm.internal.q.h(var1, "$this$i18nFormat");
-               var1.getArgs().put("username", this.$username);
-            }
-         })
+         I18nUtilsKt.i18nFormat(var1, I18nMessage.MOBILE_REPLYING_TO_A11Y_LABEL, new u0((var2 as LoadedReferencedMessage).getMessage().getUsername()))
          else
          null;
    }
 
+   @JvmStatic
+   fun `getReferencedMessageLabel$lambda$0`(var0: java.lang.String, var1: RenderContext): Unit {
+      kotlin.jvm.internal.q.h(var1, "$this$i18nFormat");
+      var1.getArgs().put("username", var0);
+      return Unit.a;
+   }
+
    public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-      kotlin.jvm.internal.q.h(var1, "host");
-      kotlin.jvm.internal.q.h(var2, "info");
-      super.onInitializeAccessibilityNodeInfo(var1, var2);
-      val var15: java.lang.CharSequence;
-      if (this.contentView != null) {
-         var15 = this.contentView.getText();
-      } else {
-         var15 = null;
+      var var11: Any;
+      label47: {
+         kotlin.jvm.internal.q.h(var1, "host");
+         kotlin.jvm.internal.q.h(var2, "info");
+         super.onInitializeAccessibilityNodeInfo(var1, var2);
+         if (this.contentView != null) {
+            val var6: java.lang.CharSequence = this.contentView.getText();
+            var11 = var6;
+            if (var6 != null) {
+               break label47;
+            }
+         }
+
+         var11 = "";
       }
 
-      var var8: java.util.List = var15;
-      if (var15 == null) {
-         var8 = "";
-      }
+      var11 = new SpannableStringBuilder(var11);
+      var var13: java.util.Iterator = kotlin.jvm.internal.b.a(var11.getSpans(0, var11.length(), SpoilerSpan.class));
 
-      val var16: SpannableStringBuilder = new SpannableStringBuilder(var8);
-      var8 = var16.getSpans(0, var16.length(), SpoilerSpan.class);
-      kotlin.jvm.internal.q.g(var8, "getSpans(...)");
-      val var18: Array<SpoilerSpan> = var8 as Array<SpoilerSpan>;
-      var var4: Int = (var8 as Array<SpoilerSpan>).length;
-
-      for (int var3 = 0; var3 < var4; var3++) {
-         val var9: SpoilerSpan = var18[var3];
-         if (!var18[var3].isRevealed()) {
-            val var6: Int = var16.getSpanStart(var9);
-            val var5: Int = var16.getSpanEnd(var9);
-            val var23: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var23, "getContext(...)");
-            var16.replace(var6, var5, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+      while (var13.hasNext()) {
+         val var7: SpoilerSpan = var13.next() as SpoilerSpan;
+         if (!var7.isRevealed()) {
+            val var3: Int = var11.getSpanStart(var7);
+            val var4: Int = var11.getSpanEnd(var7);
+            val var17: Context = var1.getContext();
+            kotlin.jvm.internal.q.g(var17, "getContext(...)");
+            var11.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var17, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
          }
       }
 
-      var8 = var16.getSpans(0, var16.length(), EmojiAccessibilitySpan.class);
-      kotlin.jvm.internal.q.g(var8, "getSpans(...)");
-      val var24: Array<EmojiAccessibilitySpan> = var8 as Array<EmojiAccessibilitySpan>;
-      var4 = (var8 as Array<EmojiAccessibilitySpan>).length;
+      var13 = kotlin.jvm.internal.b.a(var11.getSpans(0, var11.length(), EmojiAccessibilitySpan.class));
 
-      for (int var13 = 0; var13 < var4; var13++) {
-         var16.replace(var16.getSpanStart(var24[var13]), var16.getSpanEnd(var24[var13]), var24[var13].getName());
+      while (var13.hasNext()) {
+         val var18: EmojiAccessibilitySpan = var13.next() as EmojiAccessibilitySpan;
+         var11.replace(var11.getSpanStart(var18), var11.getSpanEnd(var18), var18.getName());
       }
 
-      var8 = new ArrayList();
+      val var15: ArrayList = new ArrayList();
       if (this.message.getUsername() != null) {
-         var8.add(this.message.getUsername());
+         var15.add(this.message.getUsername());
       }
 
       if (this.message.getTimestamp() != null) {
-         var8.add(this.message.getTimestamp());
+         var15.add(this.message.getTimestamp());
       }
 
-      val var10: Context = var1.getContext();
-      kotlin.jvm.internal.q.g(var10, "getContext(...)");
-      val var11: java.lang.CharSequence = this.getReferencedMessageLabel(var10, this.message.getReferencedMessage());
-      if (var11 != null) {
-         var8.add(var11);
+      val var8: Context = var1.getContext();
+      kotlin.jvm.internal.q.g(var8, "getContext(...)");
+      val var9: java.lang.CharSequence = this.getReferencedMessageLabel(var8, this.message.getReferencedMessage());
+      if (var9 != null) {
+         var15.add(var9);
       }
 
-      if (!var8.isEmpty()) {
-         val var22: java.lang.String = kotlin.collections.i.o0(var8, ", ", null, null, 0, null, null, 62, null);
-         val var12: StringBuilder = new StringBuilder();
-         var12.append(var22);
-         var12.append(", ");
-         var16.replace(0, 0, var12.toString());
+      if (!var15.isEmpty()) {
+         val var10: java.lang.String = kotlin.collections.i.o0(var15, ", ", null, null, 0, null, null, 62, null);
+         val var16: StringBuilder = new StringBuilder();
+         var16.append(var10);
+         var16.append(", ");
+         var11.replace(0, 0, var16.toString());
       }
 
-      var2.T0(var16);
-      var2.i0(AccessibilityNodeInfoCompat.a.i);
-      var2.F0(15);
+      var2.U0(var11);
+      var2.j0(AccessibilityNodeInfoCompat.a.i);
+      var2.G0(15);
    }
 
    public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {

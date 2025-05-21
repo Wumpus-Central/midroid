@@ -13,9 +13,9 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
+import g9.s
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
-import o8.w
 
 public class ChatView(context: Context) : ReactViewGroup {
    private final lateinit var chatList: ChatListView
@@ -36,8 +36,6 @@ public class ChatView(context: Context) : ReactViewGroup {
    fun `attachPortalViewToChatList$lambda$4`(
       var0: View, var1: ChatView, var2: View, var3: Int, var4: Int, var5: Int, var6: Int, var7: Int, var8: Int, var9: Int, var10: Int
    ) {
-      q.h(var0, "$portalView");
-      q.h(var1, "this$0");
       if (var0.getMeasuredHeight() > 0 && var0.getMeasuredWidth() > 0) {
          var var14: ChatListView = var1.chatList;
          if (var1.chatList == null) {
@@ -50,7 +48,7 @@ public class ChatView(context: Context) : ReactViewGroup {
             if (var0.getMeasuredWidth() == var0.getLayoutParams().width && var0.getMeasuredHeight() == var0.getLayoutParams().height) {
                var15 = null;
             } else {
-               var15 = w.a(var0.getMeasuredWidth(), var0.getMeasuredHeight());
+               var15 = s.a(var0.getMeasuredWidth(), var0.getMeasuredHeight());
             }
 
             if (var0.getParent() is ChatView) {

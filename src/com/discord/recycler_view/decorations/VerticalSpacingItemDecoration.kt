@@ -9,13 +9,12 @@ import kotlin.jvm.internal.q
 
 public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: Int = 0, endItemSpacingPx: Int = 0, isRecyclerLayoutReversed: Boolean = false)
    : RecyclerView.ItemDecoration {
-   private final val endItemSpacingPx: Int
+   private final val spacingPx: Int
    private final val firstItemSpacingPx: Int
+   private final val endItemSpacingPx: Int
 
    public final var isRecyclerLayoutReversed: Boolean
       internal set
-
-   private final val spacingPx: Int
 
    init {
       this.spacingPx = var1;

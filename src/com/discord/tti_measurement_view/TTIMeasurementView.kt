@@ -24,7 +24,6 @@ internal class TTIMeasurementView(context: ThemedReactContext) : View {
 
    @JvmStatic
    fun `registerForNextDraw$lambda$0`(var0: TTIMeasurementView) {
-      q.h(var0, "this$0");
       if (var0.onMeasurementListener != null) {
          var0.onMeasurementListener.invoke(var0, (double)System.currentTimeMillis());
       }

@@ -6,7 +6,8 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import kotlin.jvm.functions.Function0
+import i2.c
+import i2.d
 import kotlin.jvm.internal.q
 
 public class GGSansItalicSpan(context: Context) : StyleSpan {
@@ -37,39 +38,25 @@ public class GGSansItalicSpan(context: Context) : StyleSpan {
       }
    }
 
+   @JvmStatic
+   fun `updateDrawState$lambda$0`(var0: GGSansItalicSpan, var1: TextPaint): Unit {
+      var0.updateDrawState(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `updateMeasureState$lambda$1`(var0: GGSansItalicSpan, var1: TextPaint): Unit {
+      var0.updateMeasureState(var1);
+      return Unit.a;
+   }
+
    public open fun updateDrawState(ds: TextPaint) {
       q.h(var1, "ds");
-      this.apply(var1, new Function0(this, var1) {
-         final TextPaint $ds;
-         final GGSansItalicSpan this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$ds = var2;
-         }
-
-         public final void invoke() {
-            GGSansItalicSpan.access$updateDrawState$s-485726085(this.this$0, this.$ds);
-         }
-      });
+      this.apply(var1, new d(this, var1));
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
       q.h(var1, "paint");
-      this.apply(var1, new Function0(this, var1) {
-         final TextPaint $paint;
-         final GGSansItalicSpan this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-            this.$paint = var2;
-         }
-
-         public final void invoke() {
-            GGSansItalicSpan.access$updateMeasureState$s-485726085(this.this$0, this.$paint);
-         }
-      });
+      this.apply(var1, new c(this, var1));
    }
 }

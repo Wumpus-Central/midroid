@@ -1,27 +1,17 @@
 package com.discord.chat.reactevents
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class TapAppMessageEmbedData(messageId: String, actionId: String, appId: String, embedUrl: String) : ReactEvent {
+   public final val messageId: String
    public final val actionId: String
    public final val appId: String
    public final val embedUrl: String
-   public final val messageId: String
 
    init {
       q.h(var1, "messageId");
@@ -87,120 +77,21 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var1: java.lang.String = this.actionId;
-      val var2: java.lang.String = this.appId;
-      val var3: java.lang.String = this.embedUrl;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapAppMessageEmbedData(messageId=");
-      var5.append(var4);
-      var5.append(", actionId=");
-      var5.append(var1);
-      var5.append(", appId=");
-      var5.append(var2);
-      var5.append(", embedUrl=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TapAppMessageEmbedData.$serializer = new TapAppMessageEmbedData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapAppMessageEmbedData", var0, 4);
-         var1.l("messageId", false);
-         var1.l("actionId", false);
-         var1.l("appId", false);
-         var1.l("embedUrl", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): TapAppMessageEmbedData {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         var var2: Int;
-         var var5: java.lang.String;
-         var var7: java.lang.String;
-         val var11: java.lang.String;
-         var var13: java.lang.String;
-         if (var10.y()) {
-            var13 = var10.t(var9, 0);
-            val var8: java.lang.String = var10.t(var9, 1);
-            var5 = var10.t(var9, 2);
-            var11 = var10.t(var9, 3);
-            var2 = 15;
-            var7 = var13;
-            var13 = var8;
-         } else {
-            var7 = null;
-            var13 = null;
-            var5 = null;
-            var var12: java.lang.String = null;
-            var var3: Boolean = true;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var10.x(var9);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              throw new n(var4);
-                           }
-
-                           var13 = var10.t(var9, 3);
-                           var2 |= 8;
-                        } else {
-                           var5 = var10.t(var9, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var12 = var10.t(var9, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var10.t(var9, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var13 = var12;
-            var11 = var13;
-         }
-
-         var10.b(var9);
-         return new TapAppMessageEmbedData(var2, var7, var13, var5, var11, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TapAppMessageEmbedData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TapAppMessageEmbedData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var5: java.lang.String = this.appId;
+      val var4: java.lang.String = this.embedUrl;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapAppMessageEmbedData(messageId=");
+      var3.append(var2);
+      var3.append(", actionId=");
+      var3.append(var1);
+      var3.append(", appId=");
+      var3.append(var5);
+      var3.append(", embedUrl=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

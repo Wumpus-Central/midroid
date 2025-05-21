@@ -717,12 +717,14 @@
     <item type="id" name="tag_accessibility_heading" />
     <item type="id" name="tag_accessibility_pane_title" />
     <item type="id" name="tag_chiplet" />
+    <item type="id" name="tag_compat_insets_dispatch" />
     <item type="id" name="tag_maybe_animate_elevation_to" />
     <item type="id" name="tag_on_apply_window_listener" />
     <item type="id" name="tag_on_receive_content_listener" />
     <item type="id" name="tag_on_receive_content_mime_types" />
     <item type="id" name="tag_screen_reader_focusable" />
     <item type="id" name="tag_state_description" />
+    <item type="id" name="tag_system_bar_state_monitor" />
     <item type="id" name="tag_transition_group" />
     <item type="id" name="tag_unhandled_key_event_manager" />
     <item type="id" name="tag_unhandled_key_listeners" />
@@ -826,6 +828,7 @@
     <item type="id" name="view_progress_dots_3" />
     <item type="id" name="view_tag_instance_handle" />
     <item type="id" name="view_tag_native_id" />
+    <item type="id" name="view_tree_disjoint_parent" />
     <item type="id" name="view_tree_lifecycle_owner" />
     <item type="id" name="view_tree_on_back_pressed_dispatcher_owner" />
     <item type="id" name="view_tree_saved_state_registry_owner" />

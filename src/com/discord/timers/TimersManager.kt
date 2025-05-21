@@ -7,9 +7,9 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 internal class TimersManager(context: Context) {
-   private final val intervals: ConcurrentHashMap<Int, Runnable>
    private final val timeoutHandler: Handler
    private final val timeouts: ConcurrentHashMap<Int, Runnable>
+   private final val intervals: ConcurrentHashMap<Int, Runnable>
 
    init {
       q.h(var1, "context");
@@ -21,8 +21,6 @@ internal class TimersManager(context: Context) {
 
    @JvmStatic
    fun `setTimeout$lambda$0`(var0: TimersManager, var1: Int, var2: Function0) {
-      q.h(var0, "this$0");
-      q.h(var2, "$onTimeout");
       var0.timeouts.remove(var1);
       var2.invoke();
    }

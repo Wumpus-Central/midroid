@@ -1,28 +1,16 @@
 package com.discord.chat.bridge.truncation
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
-import ka.h
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
-   public final val expandable: Boolean
-   public final val forceShow: Boolean?
    public final val numberOfLines: Int
+   public final val expandable: Boolean
    public final val seeMoreLabel: String?
    public final val seeMoreLabelColor: Int?
+   public final val forceShow: Boolean?
 
    init {
       super();
@@ -112,130 +100,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var5: java.lang.String = this.seeMoreLabel;
-      val var6: Int = this.seeMoreLabelColor;
-      val var4: java.lang.Boolean = this.forceShow;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Truncation(numberOfLines=");
-      var3.append(var1);
-      var3.append(", expandable=");
-      var3.append(var2);
-      var3.append(", seeMoreLabel=");
-      var3.append(var5);
-      var3.append(", seeMoreLabelColor=");
-      var3.append(var6);
-      var3.append(", forceShow=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: Truncation.$serializer = new Truncation.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.truncation.Truncation", var0, 5);
-         var1.l("numberOfLines", false);
-         var1.l("expandable", false);
-         var1.l("seeMoreLabel", true);
-         var1.l("seeMoreLabelColor", true);
-         var1.l("forceShow", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: N = N.a;
-         val var1: h = h.a;
-         return new KSerializer[]{N.a, h.a, a.u(C0.a), a.u(var2), a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): Truncation {
-         q.h(var1, "decoder");
-         val var10: SerialDescriptor = this.getDescriptor();
-         val var11: c = var1.c(var10);
-         var var2: Int;
-         var var3: Int;
-         var var4: Int;
-         var var7: Any;
-         var var8: java.lang.String;
-         val var12: Int;
-         if (var11.y()) {
-            var4 = var11.k(var10, 0);
-            var3 = var11.s(var10, 1);
-            var8 = var11.v(var10, 2, C0.a, null) as java.lang.String;
-            var12 = var11.v(var10, 3, N.a, null) as Int;
-            var7 = var11.v(var10, 4, h.a, null) as java.lang.Boolean;
-            var2 = 31;
-         } else {
-            var var5: Boolean = true;
-            var4 = 0;
-            var2 = 0;
-            var8 = null;
-            var7 = null;
-            var var13: Any = null;
-            var3 = 0;
-
-            while (var5) {
-               val var6: Int = var11.x(var10);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        if (var6 != 2) {
-                           if (var6 != 3) {
-                              if (var6 != 4) {
-                                 throw new n(var6);
-                              }
-
-                              var13 = var11.v(var10, 4, h.a, var13) as java.lang.Boolean;
-                              var2 |= 16;
-                           } else {
-                              var7 = var11.v(var10, 3, N.a, var7) as Int;
-                              var2 |= 8;
-                           }
-                        } else {
-                           var8 = var11.v(var10, 2, C0.a, var8) as java.lang.String;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var3 = var11.s(var10, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var4 = var11.k(var10, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var5 = false;
-               }
-            }
-
-            var7 = var13;
-            var12 = (Integer)var7;
-         }
-
-         var11.b(var10);
-         return new Truncation(var2, var4, (boolean)var3, var8, var12, (java.lang.Boolean)var7, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: Truncation) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         Truncation.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var6: java.lang.String = this.seeMoreLabel;
+      val var5: Int = this.seeMoreLabelColor;
+      val var3: java.lang.Boolean = this.forceShow;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Truncation(numberOfLines=");
+      var4.append(var1);
+      var4.append(", expandable=");
+      var4.append(var2);
+      var4.append(", seeMoreLabel=");
+      var4.append(var6);
+      var4.append(", seeMoreLabelColor=");
+      var4.append(var5);
+      var4.append(", forceShow=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

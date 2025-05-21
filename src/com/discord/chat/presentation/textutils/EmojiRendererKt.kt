@@ -14,13 +14,20 @@ import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
-import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
-import o8.p
+
+@JvmSynthetic
+fun a(var0: RenderContext, var1: EmojiContentNode, var2: View): Unit {
+   return renderEmoji$lambda$0(var0, var1, var2);
+}
+
+@JvmSynthetic
+fun b(var0: RenderContext, var1: GenericDraweeHierarchyBuilder): Unit {
+   return renderEmoji$lambda$2$lambda$1(var0, var1);
+}
 
 public fun GenericDraweeHierarchyBuilder.handleEmojiSpoiler(rc: RenderContext, revealTransparent: Boolean = false) {
-   q.h(var0, "<this>");
-   q.h(var1, "rc");
+   kotlin.jvm.internal.q.h(var0, "<this>");
+   kotlin.jvm.internal.q.h(var1, "rc");
    var var4: Int = 0;
    var0.D(new ColorDrawable(0));
    var0.z(0);
@@ -61,9 +68,9 @@ fun `handleEmojiSpoiler$default`(var0: GenericDraweeHierarchyBuilder, var1: Rend
 }
 
 public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode, rc: RenderContext) {
-   q.h(var0, "builder");
-   q.h(var1, "emoji");
-   q.h(var2, "rc");
+   kotlin.jvm.internal.q.h(var0, "builder");
+   kotlin.jvm.internal.q.h(var1, "emoji");
+   kotlin.jvm.internal.q.h(var2, "rc");
    val var7: Boolean = var1.getJumboable();
    val var4: Int;
    if (var7) {
@@ -89,35 +96,9 @@ public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode
 
    val var9: RenderableEmoji = renderable(var1);
    val var13: EmojiAccessibilitySpan = new EmojiAccessibilitySpan(var9.getContentDescription());
-   val var10: ClickableSpan = new ClickableSpan(null, null, null, null, 0.0F, null, null, new Function1(var2, var1) {
-      final EmojiContentNode $emoji;
-      final RenderContext $rc;
-
-      {
-         super(1);
-         this.$rc = var1;
-         this.$emoji = var2;
-      }
-
-      public final void invoke(View var1) {
-         q.h(var1, "it");
-         this.$rc.getOnTapEmoji().invoke(this.$emoji);
-      }
-   }, 127, null);
+   val var10: ClickableSpan = new ClickableSpan(null, null, null, null, 0.0F, null, null, new i(var2, var1), 127, null);
    val var6: Int = var0.length();
-   RenderableEmojiKt.renderEmojiInto(var0, var9, var2.getContext(), var4, var2.getAnimateEmoji(), var5, new Function1(var2) {
-      final RenderContext $rc;
-
-      {
-         super(1);
-         this.$rc = var1;
-      }
-
-      public final void invoke(GenericDraweeHierarchyBuilder var1) {
-         q.h(var1, "$this$renderEmojiInto");
-         EmojiRendererKt.handleEmojiSpoiler$default(var1, this.$rc, false, 2, null);
-      }
-   });
+   RenderableEmojiKt.renderEmojiInto(var0, var9, var2.getContext(), var4, var2.getAnimateEmoji(), var5, new j(var2));
 
    for (int var12 = 0; var12 < 2; var12++) {
       val var11: Any = new Object[]{var13, var10}[var12];
@@ -127,24 +108,36 @@ public fun renderEmoji(builder: DraweeSpanStringBuilder, emoji: EmojiContentNode
    }
 }
 
+fun `renderEmoji$lambda$0`(var0: RenderContext, var1: EmojiContentNode, var2: View): Unit {
+   kotlin.jvm.internal.q.h(var2, "it");
+   var0.getOnTapEmoji().invoke(var1);
+   return Unit.a;
+}
+
+fun `renderEmoji$lambda$2$lambda$1`(var0: RenderContext, var1: GenericDraweeHierarchyBuilder): Unit {
+   kotlin.jvm.internal.q.h(var1, "$this$renderEmojiInto");
+   handleEmojiSpoiler$default(var1, var0, false, 2, null);
+   return Unit.a;
+}
+
 public fun EmojiContentNode.renderable(): RenderableEmoji {
-   q.h(var0, "<this>");
+   kotlin.jvm.internal.q.h(var0, "<this>");
    val var6: Any;
    if (var0 is CustomEmojiContentNode) {
       val var4: RenderableEmoji.Companion = RenderableEmoji.Companion;
       val var5: CustomEmojiContentNode = var0 as CustomEmojiContentNode;
-      val var2: Long = (var0 as CustomEmojiContentNode).getId();
-      val var1: Boolean;
-      if (!kotlin.text.h.d0(var5.getSrc()) && !q.c(var5.getSrc(), var5.getFrozenSrc())) {
-         var1 = true;
+      val var1: Long = (var0 as CustomEmojiContentNode).getId();
+      val var3: Boolean;
+      if (!kotlin.text.h.c0(var5.getSrc()) && !kotlin.jvm.internal.q.c(var5.getSrc(), var5.getFrozenSrc())) {
+         var3 = true;
       } else {
-         var1 = false;
+         var3 = false;
       }
 
-      var6 = var4.customWithEmojiId(var2, var1, var5.getAlt());
+      var6 = var4.customWithEmojiId(var1, var3, var5.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
-         throw new p();
+         throw new g9.n();
       }
 
       var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());

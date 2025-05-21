@@ -5,9 +5,9 @@ import com.facebook.cache.disk.DiskCacheConfig
 import kotlin.jvm.internal.q
 
 internal object FrescoDiskCache {
+   private const val MAX_DISK_CACHE_SIZE: Long = 62914560L
    private const val CACHE_DIR: String = "app_images_cache"
    private const val CACHE_DIR_SMALL: String = "app_images_cache_small"
-   private const val MAX_DISK_CACHE_SIZE: Long = 62914560L
 
    private fun Context.newDiskCacheConfig(directoryName: String): DiskCacheConfig {
       val var3: DiskCacheConfig = DiskCacheConfig.m(var1).p(var1.getCacheDir()).o(var2).q(62914560L).n();

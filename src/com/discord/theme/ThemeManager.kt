@@ -8,18 +8,18 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
+import g9.n
 import java.util.EnumMap
 import kotlin.jvm.internal.q
-import o8.p
 
 public object ThemeManager {
-   private final lateinit var resourceTheme: Theme
-   private final lateinit var resources: Resources
-   private final var saturationFactor: Float = 1.0F
-   private final var showSplashImage: Boolean = true
+   private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
    private final lateinit var theme: DiscordTheme
    private final var themeOverride: DiscordTheme?
-   private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
+   private final var showSplashImage: Boolean = true
+   private final var saturationFactor: Float = 1.0F
+   private final lateinit var resources: Resources
+   private final lateinit var resourceTheme: Theme
 
    private fun initThemeObject(themeType: DiscordTheme): DiscordThemeObject {
       val var2: Int = ThemeManager.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
@@ -29,7 +29,7 @@ public object ThemeManager {
          if (var2 != 2) {
             if (var2 != 3) {
                if (var2 != 4) {
-                  throw new p();
+                  throw new n();
                }
 
                var var7: Resources = resources;
@@ -136,12 +136,8 @@ public object ThemeManager {
 
    public fun init(context: Context) {
       q.h(var1, "context");
-      val var2: Resources = var1.getResources();
-      q.g(var2, "getResources(...)");
-      resources = var2;
-      val var3: Theme = var1.getTheme();
-      q.g(var3, "getTheme(...)");
-      resourceTheme = var3;
+      resources = var1.getResources();
+      resourceTheme = var1.getTheme();
       this.setTheme(DiscordTheme.DARK);
    }
 

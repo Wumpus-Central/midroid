@@ -31,7 +31,6 @@ public class InfoLinkView(context: Context, attrs: AttributeSet? = null) : Frame
 
    @JvmStatic
    fun `configure$lambda$0`(var0: Function0, var1: View) {
-      kotlin.jvm.internal.q.h(var0, "$onInfoLinkClicked");
       var0.invoke();
    }
 
@@ -53,6 +52,6 @@ public class InfoLinkView(context: Context, attrs: AttributeSet? = null) : Frame
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getInteractiveNormal());
       val var7: ConstraintLayout = this.binding.infoLinkContainer;
       kotlin.jvm.internal.q.g(this.binding.infoLinkContainer, "infoLinkContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new L(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var7, false, new n0(var3), 1, null);
    }
 }

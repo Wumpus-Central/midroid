@@ -24,6 +24,7 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.chat.presentation.message.view.botuikit.ComponentViewKt
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
+import com.discord.image.fresco.postprocessors.PostProcessor
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.misc.utilities.view.ViewGroupUtilsKt
@@ -45,18 +46,21 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
-import kotlin.jvm.functions.Function0
+import g9.n
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import o8.l
-import o8.p
 
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
    ComponentView<SelectComponent> {
    public final val binding: MessageComponentSelectViewBinding
-   private final var currentIsLoading: Boolean
+
+   private final val progressDots: ProgressDots
+      private final get() {
+         return this.progressDots$delegate.getValue() as ProgressDots;
+      }
+
 
    private final val postProcessor: BasePostprocessor
       private final get() {
@@ -64,11 +68,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       }
 
 
-   private final val progressDots: ProgressDots
-      private final get() {
-         return this.progressDots$delegate.getValue() as ProgressDots;
-      }
-
+   private final var currentIsLoading: Boolean
 
    fun SelectComponentView(var1: Context) {
       q.h(var1, "context");
@@ -86,21 +86,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = l.a(new Function0(this) {
-         final SelectComponentView this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final ProgressDots invoke() {
-            val var1: View = this.this$0.getBinding().loadingDots.inflate();
-            q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
-            return var1 as ProgressDots;
-         }
-      });
-      this.postProcessor$delegate = l.a(<unrepresentable>.INSTANCE);
+      this.progressDots$delegate = g9.j.b(new h(this));
+      this.postProcessor$delegate = g9.j.b(new i());
       this.setMaxWidth(SizeUtilsKt.getDpToPx(300));
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
@@ -109,10 +96,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
    }
 
    @JvmStatic
-   fun `configure$lambda$1`(var0: ComponentContext, var1: SelectComponent, var2: View) {
-      q.h(var0, "$componentContext");
-      q.h(var1, "$component");
+   fun `configure$lambda$3`(var0: ComponentContext, var1: SelectComponent, var2: View) {
       var0.getComponentActionEventHandlers().getOnTapSelectActionComponent().invoke(var1.getId());
+   }
+
+   @JvmStatic
+   fun `postProcessor_delegate$lambda$1`(): BasePostprocessor {
+      return PostProcessor.Circle.INSTANCE.create();
+   }
+
+   @JvmStatic
+   fun `progressDots_delegate$lambda$0`(var0: SelectComponentView): ProgressDots {
+      val var1: View = var0.binding.loadingDots.inflate();
+      q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
+      return var1 as ProgressDots;
    }
 
    private fun setImage(view: SimpleDraweeSpanTextView, imageUrl: String, color: Int?, asCircle: Boolean) {
@@ -124,48 +121,26 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.J(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (R1.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
-      q.g(var9, "build(...)");
-      val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
-      q.g(var7, "setActualImageScaleType(...)");
+      val var7: com.facebook.drawee.controller.a = (J2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      q.g(var7, "build(...)");
+      val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
+      q.g(var9, "setActualImageScaleType(...)");
       if (var3 != null) {
-         var7.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
+         var9.v(new PorterDuffColorFilter(var3, Mode.SRC_IN));
       }
 
-      var6.j(this.getContext(), var7.a(), var9, 0, var5, var5, false, 1);
+      var6.j(this.getContext(), var9.a(), var7, 0, var5, var5, false, 1);
       var1.setDraweeSpanStringBuilder(var6);
    }
 
    private fun FlexboxLayout.setSelectedOptions(selectedItems: List<SelectItem>) {
-      ViewGroupUtilsKt.setUpLayoutForList(
-         var1,
-         var2.size(),
-         new Function0(LayoutInflater.from(var1.getContext())) {
-            final LayoutInflater $inflater;
-
-            {
-               super(0);
-               this.$inflater = var1;
-            }
-
-            public final View invoke() {
-               val var1: MaterialTextView = MessageComponentSelectPillViewBinding.inflate(this.$inflater).getRoot();
-               q.g(var1, "getRoot(...)");
-               DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimaryMedium);
-               ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-                  var1, ThemeManagerKt.getTheme().getBackgroundAccent(), SizeUtilsKt.getDpToPx(4), null, 0, 12, null
-               );
-               var1.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-               return var1;
-            }
-         }
-      );
+      ViewGroupUtilsKt.setUpLayoutForList(var1, var2.size(), new g(LayoutInflater.from(var1.getContext())));
       val var9: java.util.Iterator = var2.iterator();
 
       for (int var3 = 0; var9.hasNext(); var3++) {
          var var6: TextView = (TextView)var9.next();
          if (var3 < 0) {
-            i.u();
+            kotlin.collections.i.u();
          }
 
          val var5: SelectItem = var6 as SelectItem;
@@ -180,6 +155,16 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
             var6.setText(var5.getLabel());
          }
       }
+   }
+
+   @JvmStatic
+   fun `setSelectedOptions$lambda$4`(var0: LayoutInflater): View {
+      val var1: MaterialTextView = MessageComponentSelectPillViewBinding.inflate(var0).getRoot();
+      q.g(var1, "getRoot(...)");
+      DiscordFontUtilsKt.setDiscordFont(var1, DiscordFont.PrimaryMedium);
+      ViewBackgroundUtilsKt.setBackgroundRectangle$default(var1, ThemeManagerKt.getTheme().getBackgroundAccent(), SizeUtilsKt.getDpToPx(4), null, 0, 12, null);
+      var1.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
+      return var1;
    }
 
    public open fun configure(component: SelectComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
@@ -216,7 +201,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
             q.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
             var17.setVisibility(8);
             this.binding.selectComponentSelectionText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-            val var34: SelectItem = i.h0(var33) as SelectItem;
+            val var34: SelectItem = kotlin.collections.i.h0(var33) as SelectItem;
             if (var34 != null) {
                this.binding.selectComponentSelectionText.setText(var34.getLabel());
                val var18: ComponentEmoji;
@@ -224,7 +209,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                   var18 = (var34 as StringSelectItem).getEmoji();
                } else {
                   if (var34 !is SearchableSelectItem) {
-                     throw new p();
+                     throw new n();
                   }
 
                   var18 = (var34 as SearchableSelectItem).getIconEmoji();
@@ -237,20 +222,20 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                } else {
                   label71: {
                      if (var34 is SearchableSelectItem) {
-                        val var12: SearchableSelectItem = var34 as SearchableSelectItem;
+                        val var19: SearchableSelectItem = var34 as SearchableSelectItem;
                         if ((var34 as SearchableSelectItem).getIconSrc() != null) {
-                           val var13: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var12: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var36: java.lang.String = var12.getIconSrc();
-                           val var20: Int = var12.getIconColor();
+                           val var36: java.lang.String = var19.getIconSrc();
+                           val var13: Int = var19.getIconColor();
                            val var28: Boolean;
-                           if (var12.getType() === SelectOptionType.USER) {
+                           if (var19.getType() === SelectOptionType.USER) {
                               var28 = true;
                            } else {
                               var28 = false;
                            }
 
-                           this.setImage(var13, var36, var20, var28);
+                           this.setImage(var12, var36, var13, var28);
                            val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var21.setVisibility(0);
@@ -258,9 +243,9 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                         }
                      }
 
-                     val var19: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                     val var20: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                      q.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                     var19.setVisibility(8);
+                     var20.setVisibility(8);
                   }
                }
             }
@@ -327,7 +312,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       var25.setAlpha(var4);
       val var26: View = this.binding.getRoot();
       q.g(var26, "getRoot(...)");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new d(var3, var1), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new j(var3, var1), 1, null);
       val var14: View = this.binding.getRoot();
       var var9: Boolean = false;
       if (!var29) {

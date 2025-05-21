@@ -6,9 +6,9 @@ import com.discord.fastest_list.android.FastestListSections
 import kotlin.jvm.internal.q
 
 internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, sections: FastestListSections) {
-   private final var data: com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
    private final val layoutManager: FastestListLayoutManager
    private final val sections: FastestListSections
+   private final var data: com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 
    init {
       q.h(var1, "layoutManager");
@@ -83,22 +83,22 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
    }
 
    public data class Data(x: Int = 0, y: Int = 0, width: Int = 0, height: Int = 0, contentWidth: Int = 0, contentHeight: Int = 0) {
-      public final var contentHeight: Int
+      public final var x: Int
          internal set
 
-      public final var contentWidth: Int
-         internal set
-
-      public final var height: Int
+      public final var y: Int
          internal set
 
       public final var width: Int
          internal set
 
-      public final var x: Int
+      public final var height: Int
          internal set
 
-      public final var y: Int
+      public final var contentWidth: Int
+         internal set
+
+      public final var contentHeight: Int
          internal set
 
       fun Data() {
@@ -183,24 +183,24 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
 
       public override fun toString(): String {
          val var1: Int = this.x;
-         val var4: Int = this.y;
-         val var3: Int = this.width;
-         val var2: Int = this.height;
-         val var6: Int = this.contentWidth;
-         val var5: Int = this.contentHeight;
+         val var2: Int = this.y;
+         val var6: Int = this.width;
+         val var5: Int = this.height;
+         val var4: Int = this.contentWidth;
+         val var3: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Data(x=");
          var7.append(var1);
          var7.append(", y=");
-         var7.append(var4);
-         var7.append(", width=");
-         var7.append(var3);
-         var7.append(", height=");
          var7.append(var2);
-         var7.append(", contentWidth=");
+         var7.append(", width=");
          var7.append(var6);
-         var7.append(", contentHeight=");
+         var7.append(", height=");
          var7.append(var5);
+         var7.append(", contentWidth=");
+         var7.append(var4);
+         var7.append(", contentHeight=");
+         var7.append(var3);
          var7.append(")");
          return var7.toString();
       }

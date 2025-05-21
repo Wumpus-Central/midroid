@@ -1,16 +1,10 @@
 package com.discord.billing;
 
-import Y0.f;
-import com.android.billingclient.api.BillingResult;
-import java.util.List;
-import kotlinx.coroutines.CompletableDeferred;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class e implements f {
-   public final CompletableDeferred a;
-
-   @Override
-   public final void a(BillingResult var1, List var2) {
-      <unrepresentable>.e(this.a, var1, var2);
+public final class e implements Function0 {
+   public final Object invoke() {
+      return BillingManager.a();
    }
 }

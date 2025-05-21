@@ -7,6 +7,16 @@ import com.facebook.react.bridge.ReactMarker.MarkerListener
 import kotlin.properties.a
 
 public object ReactMarkerListener : MarkerListener {
+   public final var bundleStartedTimestamp: Long by a.a.a()
+      public final get() {
+         return (bundleStartedTimestamp$delegate.getValue(this, $$delegatedProperties[0]) as java.lang.Number).longValue();
+      }
+
+      public final set(<set-?>) {
+         bundleStartedTimestamp$delegate.setValue(this, $$delegatedProperties[0], var1);
+      }
+
+
    public final var bundleLoadedTimestamp: Long
       public final get() {
          return (bundleLoadedTimestamp$delegate.getValue(this, $$delegatedProperties[1]) as java.lang.Number).longValue();
@@ -24,16 +34,6 @@ public object ReactMarkerListener : MarkerListener {
 
       public final set(<set-?>) {
          bundleParsedTimestamp$delegate.setValue(this, $$delegatedProperties[2], var1);
-      }
-
-
-   public final var bundleStartedTimestamp: Long by a.a.a()
-      public final get() {
-         return (bundleStartedTimestamp$delegate.getValue(this, $$delegatedProperties[0]) as java.lang.Number).longValue();
-      }
-
-      public final set(<set-?>) {
-         bundleStartedTimestamp$delegate.setValue(this, $$delegatedProperties[0], var1);
       }
 
 

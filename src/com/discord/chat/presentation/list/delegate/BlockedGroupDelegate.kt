@@ -18,9 +18,16 @@ public class BlockedGroupDelegate(eventHandlerProvider: () -> ChatEventHandler, 
    init {
       q.h(var1, "eventHandlerProvider");
       q.h(var2, "messageComponentProvider");
-      super(var1, <unrepresentable>.INSTANCE);
+      super(var1, new b());
       this.eventHandlerProvider = var1;
       this.messageComponentProvider = var2;
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: BlockedMessageGroupView): Unit {
+      q.h(var0, "<this>");
+      BlockedGroupDelegateKt.access$setupLayout(var0);
+      return Unit.a;
    }
 
    public open fun bindView(view: BlockedMessageGroupView, item: BlockedGroupChatListItem, metadata: Metadata<BlockedMessageGroupView>) {

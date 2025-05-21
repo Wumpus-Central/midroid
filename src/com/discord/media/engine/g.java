@@ -10,6 +10,6 @@ public final class g implements NativeEngine.ConnectToServerCallback {
 
    @Override
    public final void onConnectToServer(ConnectionInfo var1, String var2) {
-      MediaEngine.t(this.a, var1, var2);
+      MediaEngine.x(this.a, var1, var2);
    }
 }

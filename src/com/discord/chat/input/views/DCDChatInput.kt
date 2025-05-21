@@ -29,24 +29,21 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    init {
       q.h(var1, "context");
       super(var1, var2);
-      this.measureAndLayoutRunnable = new f(this);
+      this.measureAndLayoutRunnable = new j(this);
       this.setupExternalKeyboardSendRequests();
    }
 
    @JvmStatic
    fun `measureAndLayoutRunnable$lambda$0`(var0: DCDChatInput) {
-      q.h(var0, "this$0");
       ViewMeasureExtensionsKt.measureAndLayout(var0);
    }
 
    private fun setupExternalKeyboardSendRequests() {
-      this.setOnKeyListener(new e(new BooleanRef(), this));
+      this.setOnKeyListener(new i(new BooleanRef(), this));
    }
 
    @JvmStatic
    fun `setupExternalKeyboardSendRequests$lambda$2`(var0: BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
-      q.h(var0, "$isEnterHeldDown");
-      q.h(var1, "this$0");
       q.h(var4, "event");
       if ((var4.getFlags() and 2) == 2) {
          return false;

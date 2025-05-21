@@ -2,8 +2,29 @@ package com.discord.media.utils
 
 import android.media.MediaFormat
 import kotlin.jvm.internal.q
-import o8.r
-import o8.s
+
+public final val mimeType: String?
+   public final get() {
+      q.h(var0, "<this>");
+
+      label16:
+      try {
+         val var5: kotlin.Result.a = Result.k;
+         var4 = Result.b(var0.getString("mime"));
+      } catch (var2: java.lang.Throwable) {
+         val var1: kotlin.Result.a = Result.k;
+         var4 = Result.b(kotlin.c.a(var2));
+         break label16;
+      }
+
+      var var6: Any = var4;
+      if (Result.g(var4)) {
+         var6 = null;
+      }
+
+      return var6 as java.lang.String;
+   }
+
 
 public final val codecType: String?
    public final get() {
@@ -63,22 +84,22 @@ public final val codecType: String?
    }
 
 
-public final val level: Int?
+public final val profile: Int?
    public final get() {
       q.h(var0, "<this>");
 
       label16:
       try {
-         val var5: o8.r.a = r.k;
-         var4 = r.b(var0.getInteger("level"));
+         val var5: kotlin.Result.a = Result.k;
+         var4 = Result.b(var0.getInteger("profile"));
       } catch (var2: java.lang.Throwable) {
-         val var1: o8.r.a = r.k;
-         var4 = r.b(s.a(var2));
+         val var1: kotlin.Result.a = Result.k;
+         var4 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
       var var6: Any = var4;
-      if (r.g(var4)) {
+      if (Result.g(var4)) {
          var6 = null;
       }
 
@@ -86,45 +107,22 @@ public final val level: Int?
    }
 
 
-public final val mimeType: String?
+public final val level: Int?
    public final get() {
       q.h(var0, "<this>");
 
       label16:
       try {
-         val var1: o8.r.a = r.k;
-         var5 = r.b(var0.getString("mime"));
+         val var1: kotlin.Result.a = Result.k;
+         var5 = Result.b(var0.getInteger("level"));
       } catch (var2: java.lang.Throwable) {
-         val var4: o8.r.a = r.k;
-         var5 = r.b(s.a(var2));
+         val var4: kotlin.Result.a = Result.k;
+         var5 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
       var var6: Any = var5;
-      if (r.g(var5)) {
-         var6 = null;
-      }
-
-      return var6 as java.lang.String;
-   }
-
-
-public final val profile: Int?
-   public final get() {
-      q.h(var0, "<this>");
-
-      label16:
-      try {
-         val var1: o8.r.a = r.k;
-         var5 = r.b(var0.getInteger("profile"));
-      } catch (var2: java.lang.Throwable) {
-         val var4: o8.r.a = r.k;
-         var5 = r.b(s.a(var2));
-         break label16;
-      }
-
-      var var6: Any = var5;
-      if (r.g(var5)) {
+      if (Result.g(var5)) {
          var6 = null;
       }
 

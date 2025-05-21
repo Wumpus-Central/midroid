@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import u0.a;
 
 public final class MessageAltRemixTagViewBinding implements ViewBinding {
    public final TextView altRemixTag;
@@ -28,12 +28,12 @@ public final class MessageAltRemixTagViewBinding implements ViewBinding {
       TextView var2 = (TextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.layout;
-         ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
-         if (var4 != null) {
+         ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.remix_icon;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
-               return new MessageAltRemixTagViewBinding(var0, var2, var4, var3);
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
+               return new MessageAltRemixTagViewBinding(var0, var2, var3, var4);
             }
          }
       }

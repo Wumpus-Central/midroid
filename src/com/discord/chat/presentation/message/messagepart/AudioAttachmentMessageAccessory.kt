@@ -15,14 +15,14 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    color: Int?,
    isVoiceMessage: Boolean
 ) : AudioAttachmentMessageAccessory(var1, var3, var4, var5, var6, var7, var8, var9) {
+   public final val channelId: ChannelId
+   public open val messageId: MessageId
    public open val attachment: Attachment
    public open val attachmentIndex: Int
    public open val attachmentsOpacity: Float?
    public final val authorId: UserId?
-   public final val channelId: ChannelId
    public final val color: Int?
    public final val isVoiceMessage: Boolean
-   public open val messageId: MessageId
 
    fun AudioAttachmentMessageAccessory(
       var1: Long, var3: java.lang.String, var4: Attachment, var5: Int, var6: java.lang.Float, var7: UserId, var8: Int, var9: Boolean
@@ -116,9 +116,9 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
 
    public override fun hashCode(): Int {
       val var5: Int = ChannelId.hashCode-impl(this.channelId);
-      val var6: Int = MessageId.hashCode-impl(this.messageId);
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
       val var7: Int = this.attachment.hashCode();
-      val var4: Int = Integer.hashCode(this.attachmentIndex);
+      val var6: Int = Integer.hashCode(this.attachmentIndex);
       var var3: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -138,36 +138,36 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
          var3 = this.color.hashCode();
       }
 
-      return ((((((var5 * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.isVoiceMessage);
+      return ((((((var5 * 31 + var4) * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.isVoiceMessage);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Attachment = this.attachment;
+      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var4: java.lang.Float = this.attachmentsOpacity;
-      val var6: UserId = this.authorId;
-      val var7: Int = this.color;
+      val var7: java.lang.Float = this.attachmentsOpacity;
+      val var9: UserId = this.authorId;
+      val var5: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("AudioAttachmentMessageAccessory(channelId=");
-      var8.append(var5);
-      var8.append(", messageId=");
-      var8.append(var9);
-      var8.append(", attachment=");
-      var8.append(var3);
-      var8.append(", attachmentIndex=");
-      var8.append(var1);
-      var8.append(", attachmentsOpacity=");
-      var8.append(var4);
-      var8.append(", authorId=");
-      var8.append(var6);
-      var8.append(", color=");
-      var8.append(var7);
-      var8.append(", isVoiceMessage=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioAttachmentMessageAccessory(channelId=");
+      var3.append(var8);
+      var3.append(", messageId=");
+      var3.append(var6);
+      var3.append(", attachment=");
+      var3.append(var4);
+      var3.append(", attachmentIndex=");
+      var3.append(var1);
+      var3.append(", attachmentsOpacity=");
+      var3.append(var7);
+      var3.append(", authorId=");
+      var3.append(var9);
+      var3.append(", color=");
+      var3.append(var5);
+      var3.append(", isVoiceMessage=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

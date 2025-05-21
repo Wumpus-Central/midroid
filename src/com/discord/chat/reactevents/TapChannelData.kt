@@ -1,27 +1,17 @@
 package com.discord.chat.reactevents
 
+import Za.f
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
+import g9.s
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import o8.w
 
 @f
 internal data class TapChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null) : ReactEvent {
-   public final val channelId: String?
    public final val guildId: String?
+   public final val channelId: String?
    public final val messageId: String?
 
    fun TapChannelData() {
@@ -92,110 +82,23 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
 
    public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("data", NativeMapExtensionsKt.nativeMapOf(w.a("guildId", this.guildId), w.a("channelId", this.channelId), w.a("messageId", this.messageId)))
+         s.a("data", NativeMapExtensionsKt.nativeMapOf(s.a("guildId", this.guildId), s.a("channelId", this.channelId), s.a("messageId", this.messageId)))
       );
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = this.guildId;
-      val var4: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapChannelData(guildId=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", messageId=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TapChannelData.$serializer = new TapChannelData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapChannelData", var0, 3);
-         var1.l("guildId", true);
-         var1.l("channelId", true);
-         var1.l("messageId", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), a.u(var1), a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): TapChannelData {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         val var5: Boolean = var9.y();
-         var var7: java.lang.String = null;
-         var var2: Int;
-         var var6: java.lang.String;
-         var var11: java.lang.String;
-         if (var5) {
-            val var10: C0 = C0.a;
-            var7 = var9.v(var8, 0, C0.a, null) as java.lang.String;
-            var6 = var9.v(var8, 1, var10, null) as java.lang.String;
-            var11 = var9.v(var8, 2, var10, null) as java.lang.String;
-            var2 = 7;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var6 = null;
-            var11 = null;
-
-            while (var3) {
-               val var4: Int = var9.x(var8);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var11 = var9.v(var8, 2, C0.a, var11) as java.lang.String;
-                        var2 |= 4;
-                     } else {
-                        var6 = var9.v(var8, 1, C0.a, var6) as java.lang.String;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var9.v(var8, 0, C0.a, var7) as java.lang.String;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var9.b(var8);
-         return new TapChannelData(var2, var7, var6, var11, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TapChannelData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TapChannelData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapChannelData(guildId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

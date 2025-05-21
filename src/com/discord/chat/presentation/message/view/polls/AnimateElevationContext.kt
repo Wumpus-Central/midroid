@@ -4,13 +4,13 @@ import android.animation.ObjectAnimator
 import kotlin.jvm.internal.q
 
 private data class AnimateElevationContext(tagValue: Any, elevation: Float, animator: ObjectAnimator? = null) {
-   public final var animator: ObjectAnimator?
-      internal set
+   public final val tagValue: Any
 
    public final var elevation: Float
       internal set
 
-   public final val tagValue: Any
+   public final var animator: ObjectAnimator?
+      internal set
 
    init {
       q.h(var1, "tagValue");
@@ -68,17 +68,17 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public override fun toString(): String {
-      val var4: Any = this.tagValue;
+      val var3: Any = this.tagValue;
       val var1: Float = this.elevation;
-      val var3: ObjectAnimator = this.animator;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AnimateElevationContext(tagValue=");
-      var2.append(var4);
-      var2.append(", elevation=");
-      var2.append(var1);
-      var2.append(", animator=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: ObjectAnimator = this.animator;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AnimateElevationContext(tagValue=");
+      var4.append(var3);
+      var4.append(", elevation=");
+      var4.append(var1);
+      var4.append(", animator=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

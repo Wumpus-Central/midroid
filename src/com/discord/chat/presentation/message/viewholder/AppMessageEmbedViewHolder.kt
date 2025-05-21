@@ -5,8 +5,8 @@ import com.discord.chat.presentation.message.messagepart.AppMessageEmbedAccessor
 import com.discord.chat.presentation.message.view.AppMessageEmbedView
 
 public class AppMessageEmbedViewHolder(view: AppMessageEmbedView, eventHandler: ChatEventHandler) : MessagePartViewHolder {
-   public final val eventHandler: ChatEventHandler
    private final val view: AppMessageEmbedView
+   public final val eventHandler: ChatEventHandler
 
    init {
       kotlin.jvm.internal.q.h(var1, "view");

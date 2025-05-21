@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.os.Parcelable
-import androidx.core.content.b
+import androidx.core.content.c
 import com.discord.misc.utilities.intent.IntentUtilsKt
 import com.discord.notifications.actions.intents.DeleteAction
 import com.discord.notifications.actions.intents.DirectReplyAction
@@ -23,7 +23,7 @@ public class NotificationActions : BroadcastReceiver {
       val var4: NotificationAction.Companion = NotificationAction.Companion;
       val var6: NotificationAction;
       if (IntentUtilsKt.hasExtra(var2, G.b(MarkAsReadAction.class))) {
-         var6 = (b.b(var2, "action_intent_arg_key", MarkAsReadAction.class) as Parcelable) as NotificationAction;
+         var6 = (c.b(var2, "action_intent_arg_key", MarkAsReadAction.class) as Parcelable) as NotificationAction;
       } else {
          var6 = null;
       }
@@ -31,7 +31,7 @@ public class NotificationActions : BroadcastReceiver {
       var var7: NotificationAction = var6 as MarkAsReadAction;
       if (var6 as MarkAsReadAction == null) {
          if (IntentUtilsKt.hasExtra(var2, G.b(MuteAction.class))) {
-            var7 = (b.b(var2, "action_intent_arg_key", MuteAction.class) as Parcelable) as NotificationAction;
+            var7 = (c.b(var2, "action_intent_arg_key", MuteAction.class) as Parcelable) as NotificationAction;
          } else {
             var7 = null;
          }
@@ -39,7 +39,7 @@ public class NotificationActions : BroadcastReceiver {
          var7 = var7 as MuteAction;
          if (var7 as MuteAction == null) {
             if (IntentUtilsKt.hasExtra(var2, G.b(DismissCallAction.class))) {
-               var7 = (b.b(var2, "action_intent_arg_key", DismissCallAction.class) as Parcelable) as NotificationAction;
+               var7 = (c.b(var2, "action_intent_arg_key", DismissCallAction.class) as Parcelable) as NotificationAction;
             } else {
                var7 = null;
             }
@@ -47,7 +47,7 @@ public class NotificationActions : BroadcastReceiver {
             var7 = var7 as DismissCallAction;
             if (var7 as DismissCallAction == null) {
                if (IntentUtilsKt.hasExtra(var2, G.b(DirectReplyAction.class))) {
-                  var7 = (b.b(var2, "action_intent_arg_key", DirectReplyAction.class) as Parcelable) as NotificationAction;
+                  var7 = (c.b(var2, "action_intent_arg_key", DirectReplyAction.class) as Parcelable) as NotificationAction;
                } else {
                   var7 = null;
                }
@@ -55,7 +55,7 @@ public class NotificationActions : BroadcastReceiver {
                var7 = var7 as DirectReplyAction;
                if (var7 as DirectReplyAction == null) {
                   if (IntentUtilsKt.hasExtra(var2, G.b(DeleteAction.class))) {
-                     var7 = (b.b(var2, "action_intent_arg_key", DeleteAction.class) as Parcelable) as NotificationAction;
+                     var7 = (c.b(var2, "action_intent_arg_key", DeleteAction.class) as Parcelable) as NotificationAction;
                   } else {
                      var7 = null;
                   }
@@ -64,7 +64,7 @@ public class NotificationActions : BroadcastReceiver {
                   if (var7 as DeleteAction == null) {
                      var7 = null;
                      if (IntentUtilsKt.hasExtra(var2, G.b(GenericAction.class))) {
-                        var7 = (b.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
+                        var7 = (c.b(var2, "action_intent_arg_key", GenericAction.class) as Parcelable) as NotificationAction;
                      }
                   }
                }

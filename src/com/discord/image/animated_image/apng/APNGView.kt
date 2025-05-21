@@ -1,9 +1,7 @@
 package com.discord.image.animated_image.apng
 
-import V9.a
-import X9.K
-import X9.d0
-import X9.f
+import Pa.K
+import Pa.d0
 import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.appcompat.widget.m
@@ -17,16 +15,12 @@ import java.security.MessageDigest
 import java.util.Arrays
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
-import kotlin.coroutines.jvm.internal.d
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import o8.s
-import v8.b
 
 public class APNGView(context: Context) : m {
    public final var onImageLoaded: ((String) -> Unit)?
@@ -35,87 +29,56 @@ public class APNGView(context: Context) : m {
    init {
       q.h(var1, "context");
       super(var1);
-      this.apngStateManager = new AnimatedImageStateManager<>(new Function0(this) {
-         final APNGView this$0;
+      this.apngStateManager = new AnimatedImageStateManager<>(new b(this), new c(this), new d(this), new e(this), new f(this), new g(this));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `apngStateManager$lambda$0`(var0: APNGView): Unit {
+      var0.playApngAnimation();
+      return Unit.a;
+   }
 
-         public final void invoke() {
-            APNGView.access$playApngAnimation(this.this$0);
-         }
-      }, new Function0(this) {
-         final APNGView this$0;
+   @JvmStatic
+   fun `apngStateManager$lambda$1`(var0: APNGView): Unit {
+      var0.pauseApngAnimation();
+      return Unit.a;
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `apngStateManager$lambda$2`(var0: APNGView): Unit {
+      var0.stopApngAnimation();
+      return Unit.a;
+   }
 
-         public final void invoke() {
-            APNGView.access$pauseApngAnimation(this.this$0);
-         }
-      }, new Function0(this) {
-         final APNGView this$0;
+   @JvmStatic
+   fun `apngStateManager$lambda$3`(var0: APNGView, var1: APNGView.Config): Unit {
+      q.h(var1, "<unused var>");
+      recycle$default(var0, false, false, 2, null);
+      return Unit.a;
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `apngStateManager$lambda$4`(var0: APNGView, var1: APNGView.Config): Boolean {
+      q.h(var1, "config");
+      val var2: Boolean;
+      if (var0.isAttachedToWindow() && APNGView.Companion.access$hasFilename(Companion, var1.getUrl())) {
+         var2 = true;
+      } else {
+         var2 = false;
+      }
 
-         public final void invoke() {
-            APNGView.access$stopApngAnimation(this.this$0);
-         }
-      }, new Function1(this) {
-         final APNGView this$0;
+      return var2;
+   }
 
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(APNGView.Config var1) {
-            q.h(var1, "<anonymous parameter 0>");
-            APNGView.recycle$default(this.this$0, false, false, 2, null);
-         }
-      }, new Function1(this) {
-         final APNGView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final java.lang.Boolean invoke(APNGView.Config var1) {
-            q.h(var1, "config");
-            val var2: Boolean;
-            if (this.this$0.isAttachedToWindow() && APNGView.Companion.access$hasFilename(APNGView.Companion, var1.getUrl())) {
-               var2 = true;
-            } else {
-               var2 = false;
-            }
-
-            return var2;
-         }
-      }, new Function1(this) {
-         final APNGView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(APNGView.Config var1) {
-            q.h(var1, "config");
-            APNGView.access$fetchAPNG(this.this$0, var1);
-         }
-      });
+   @JvmStatic
+   fun `apngStateManager$lambda$5`(var0: APNGView, var1: APNGView.Config): Unit {
+      q.h(var1, "config");
+      var0.fetchAPNG(var1);
+      return Unit.a;
    }
 
    private fun fetchAPNG(config: com.discord.image.animated_image.apng.APNGView.Config) {
-      f.d(
+      Pa.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          K.b(),
          null,
@@ -139,21 +102,21 @@ public class APNGView(context: Context) : m {
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = b.e();
+               val var3: Any = n9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  s.b(var1);
+                  kotlin.c.b(var1);
                } else {
-                  s.b(var1);
-                  var1 = FileDownloader.INSTANCE;
-                  val var4: Context = this.this$0.getContext();
-                  q.g(var4, "getContext(...)");
-                  val var6: Flow = FileDownloader.downloadFile$default(
-                     var1,
+                  kotlin.c.b(var1);
+                  val var4: FileDownloader = FileDownloader.INSTANCE;
+                  var1 = this.this$0.getContext();
+                  q.g(var1, "getContext(...)");
+                  val var7: Flow = FileDownloader.downloadFile$default(
                      var4,
+                     var1,
                      this.$config.getUrl(),
                      APNGView.Companion.access$getFilename(APNGView.Companion, this.$config.getUrl()),
                      new File(this.this$0.getContext().getCacheDir(), this.$config.getCacheDirectory()),
@@ -161,7 +124,7 @@ public class APNGView(context: Context) : m {
                      16,
                      null
                   );
-                  val var7: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+                  val var6: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                      final APNGView.Config $config;
                      final APNGView this$0;
 
@@ -181,7 +144,7 @@ public class APNGView(context: Context) : m {
                               }
                            }
 
-                           var14 = new d(this, var2x) {
+                           var14 = new kotlin.coroutines.jvm.internal.d(this, var2x) {
                               Object L$0;
                               int label;
                               Object result;
@@ -201,7 +164,7 @@ public class APNGView(context: Context) : m {
                         }
 
                         var var5: Any = ((<unrepresentable>)var14).result;
-                        val var16: Any = b.e();
+                        val var16: Any = n9.b.e();
                         val var9: <unrepresentable>;
                         if (((<unrepresentable>)var14).label != 0) {
                            if (((<unrepresentable>)var14).label != 1) {
@@ -210,24 +173,24 @@ public class APNGView(context: Context) : m {
                                     throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                                  }
 
-                                 s.b(var5);
+                                 kotlin.c.b(var5);
                                  return Unit.a;
                               }
 
-                              s.b(var5);
+                              kotlin.c.b(var5);
                               return Unit.a;
                            }
 
                            var9 = ((<unrepresentable>)var14).L$0 as <unrepresentable>;
 
                            try {
-                              s.b(var5);
+                              kotlin.c.b(var5);
                               return Unit.a;
                            } catch (var7x: Exception) {
                            }
                         } else {
                            label82: {
-                              s.b(var5);
+                              kotlin.c.b(var5);
                               if (var1 !is DownloadState.Completed) {
                                  if (var1 is DownloadState.Failure) {
                                     var5 = K.c();
@@ -249,21 +212,20 @@ public class APNGView(context: Context) : m {
                                        }
 
                                        public final Object invokeSuspend(Object var1) {
-                                          b.e();
+                                          n9.b.e();
                                           if (this.label == 0) {
-                                             s.b(var1);
-                                             return kotlin.coroutines.jvm.internal.b.a(
-                                                AnimatedImageStateManager.onFetchFinished$default(
-                                                   APNGView.access$getApngStateManager$p(this.this$0), false, false, 2, null
-                                                )
+                                             kotlin.c.b(var1);
+                                             AnimatedImageStateManager.onFetchFinished$default(
+                                                APNGView.access$getApngStateManager$p(this.this$0), false, false, 2, null
                                              );
+                                             return Unit.a;
                                           } else {
                                              throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                                           }
                                        }
                                     };
                                     ((<unrepresentable>)var14).label = 3;
-                                    if (f.g((CoroutineContext)var5, var13, (Continuation)var14) === var16) {
+                                    if (Pa.f.g((CoroutineContext)var5, var13, (Continuation)var14) === var16) {
                                        return var16;
                                     }
 
@@ -274,11 +236,9 @@ public class APNGView(context: Context) : m {
                               }
 
                               try {
-                                 val var11: ApngDrawable = com.linecorp.apng.ApngDrawable.b.c(
-                                    ApngDrawable.B, (var1 as DownloadState.Completed).getFile(), null, null, 6, null
-                                 );
+                                 var5 = com.linecorp.apng.ApngDrawable.b.c(ApngDrawable.B, (var1 as DownloadState.Completed).getFile(), null, null, 6, null);
                                  val var6x: d0 = K.c();
-                                 var5 = new Function2(this.this$0, var11, this.$config, null) {
+                                 val var11: Function2 = new Function2(this.this$0, (ApngDrawable)var5, this.$config, null) {
                                     final APNGView.Config $config;
                                     final ApngDrawable $drawable;
                                     int label;
@@ -300,9 +260,9 @@ public class APNGView(context: Context) : m {
                                     }
 
                                     public final Object invokeSuspend(Object var1) {
-                                       b.e();
+                                       n9.b.e();
                                        if (this.label == 0) {
-                                          s.b(var1);
+                                          kotlin.c.b(var1);
                                           var1 = null;
                                           this.this$0.setImageDrawable(null);
                                           this.this$0.setImageDrawable(this.$drawable);
@@ -322,7 +282,7 @@ public class APNGView(context: Context) : m {
                                  };
                                  ((<unrepresentable>)var14).L$0 = this;
                                  ((<unrepresentable>)var14).label = 1;
-                                 var12 = f.g(var6x, (Function2)var5, (Continuation)var14);
+                                 var12 = Pa.f.g(var6x, var11, (Continuation)var14);
                               } catch (var8: Exception) {
                                  var9 = this;
                                  break label82;
@@ -355,9 +315,9 @@ public class APNGView(context: Context) : m {
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              b.e();
+                              n9.b.e();
                               if (this.label == 0) {
-                                 s.b(var1);
+                                 kotlin.c.b(var1);
                                  return kotlin.coroutines.jvm.internal.b.a(
                                     AnimatedImageStateManager.onFetchFinished$default(APNGView.access$getApngStateManager$p(this.this$0), false, false, 2, null)
                                  );
@@ -368,11 +328,11 @@ public class APNGView(context: Context) : m {
                         };
                         ((<unrepresentable>)var14).L$0 = null;
                         ((<unrepresentable>)var14).label = 2;
-                        return if (f.g((CoroutineContext)var5, var10, (Continuation)var14) === var16) var16 else Unit.a;
+                        return if (Pa.f.g((CoroutineContext)var5, var10, (Continuation)var14) === var16) var16 else Unit.a;
                      }
                   };
                   this.label = 1;
-                  if (var6.collect(var7, this) === var3) {
+                  if (var7.collect(var6, this) === var3) {
                      return var3;
                   }
                }
@@ -486,7 +446,7 @@ public class APNGView(context: Context) : m {
    public companion object {
       private fun getFilename(url: String): String {
          val var4: MessageDigest = MessageDigest.getInstance("SHA-256");
-         val var7: ByteArray = var1.getBytes(a.b);
+         val var7: ByteArray = var1.getBytes(Na.a.b);
          q.g(var7, "getBytes(...)");
          val var9: ByteArray = var4.digest(var7);
          q.g(var9, "digest(...)");
@@ -494,29 +454,29 @@ public class APNGView(context: Context) : m {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            q.g(var6, "format(...)");
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var1);
-            var5.append(var6);
-            var1 = var5.toString();
+            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            q.g(var5, "format(...)");
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var1);
+            var6.append(var5);
+            var1 = var6.toString();
          }
 
          return var1;
       }
 
       private fun hasFilename(url: String): Boolean {
-         return h.d0(this.getFilename(var1)) xor true;
+         return h.c0(this.getFilename(var1)) xor true;
       }
    }
 
    public data class Config(url: String, animate: Boolean, showLoading: Boolean = true, widthDp: Int?, heightDp: Int?, cacheDirectory: String) {
-      public final val animate: Boolean
-      public final val cacheDirectory: String
-      public final val heightDp: Int?
-      public final val showLoading: Boolean
       public final val url: String
+      public final val animate: Boolean
+      public final val showLoading: Boolean
       public final val widthDp: Int?
+      public final val heightDp: Int?
+      public final val cacheDirectory: String
 
       init {
          q.h(var1, "url");
@@ -592,8 +552,8 @@ public class APNGView(context: Context) : m {
 
       public override fun hashCode(): Int {
          val var3: Int = this.url.hashCode();
-         val var5: Int = java.lang.Boolean.hashCode(this.animate);
-         val var4: Int = java.lang.Boolean.hashCode(this.showLoading);
+         val var4: Int = java.lang.Boolean.hashCode(this.animate);
+         val var5: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
          if (this.widthDp == null) {
@@ -606,31 +566,31 @@ public class APNGView(context: Context) : m {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
-         val var2: Boolean = this.animate;
-         val var1: Boolean = this.showLoading;
-         val var4: Int = this.widthDp;
+         val var4: java.lang.String = this.url;
+         val var1: Boolean = this.animate;
+         val var2: Boolean = this.showLoading;
+         val var5: Int = this.widthDp;
          val var6: Int = this.heightDp;
-         val var7: java.lang.String = this.cacheDirectory;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Config(url=");
-         var3.append(var5);
-         var3.append(", animate=");
-         var3.append(var2);
-         var3.append(", showLoading=");
-         var3.append(var1);
-         var3.append(", widthDp=");
-         var3.append(var4);
-         var3.append(", heightDp=");
-         var3.append(var6);
-         var3.append(", cacheDirectory=");
-         var3.append(var7);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.cacheDirectory;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Config(url=");
+         var7.append(var4);
+         var7.append(", animate=");
+         var7.append(var1);
+         var7.append(", showLoading=");
+         var7.append(var2);
+         var7.append(", widthDp=");
+         var7.append(var5);
+         var7.append(", heightDp=");
+         var7.append(var6);
+         var7.append(", cacheDirectory=");
+         var7.append(var3);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

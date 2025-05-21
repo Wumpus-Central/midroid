@@ -6,16 +6,24 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.Json
+import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
 
 public object NotificationMessageSerializer : KSerializer {
+   private final val json: Json = b.b(null, new W1.b(), 1, null)
+
    public open val descriptor: SerialDescriptor
       public open get() {
          return NotificationMessage.Companion.serializer().getDescriptor();
       }
 
 
-   private final val json: Json = b.b(null, <unrepresentable>.INSTANCE, 1, null)
+   @JvmStatic
+   fun `json$lambda$0`(var0: JsonBuilder): Unit {
+      q.h(var0, "$this$Json");
+      var0.c(true);
+      return Unit.a;
+   }
 
    public open fun deserialize(decoder: Decoder): NotificationMessage {
       q.h(var1, "decoder");

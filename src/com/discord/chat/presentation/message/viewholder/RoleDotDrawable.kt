@@ -13,11 +13,11 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.FontManager
 
 public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 20) : Drawable {
-   private final val borderColorPaint: Paint
+   private final val scale: Float
    private final val pxSize: Float
+   private final val borderColorPaint: Paint
    private final val roleColorAlphaPaint: Paint
    private final val roleColorPaint: Paint
-   private final val scale: Float
 
    init {
       kotlin.jvm.internal.q.h(var1, "context");

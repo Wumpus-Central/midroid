@@ -1,14 +1,10 @@
 package com.discord.chat.presentation.list;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import android.view.View;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class b implements AnimatorUpdateListener {
-   public final View a;
-
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      ChatListHighlightItemAtPositionKt.a(this.a, var1);
+public final class b implements Function0 {
+   public final Object invoke() {
+      return ChannelChatListAdapter.b();
    }
 }

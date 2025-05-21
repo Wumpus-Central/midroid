@@ -61,7 +61,6 @@ public class UploadProgressView  public constructor(context: Context, attrs: Att
 
    @JvmStatic
    fun `set$lambda$4`(var0: Function0, var1: View) {
-      q.h(var0, "$onProgressCancel");
       var0.invoke();
    }
 
@@ -108,6 +107,6 @@ public class UploadProgressView  public constructor(context: Context, attrs: Att
       this.binding.progressBar.animate().setInterpolator(this.interpolator).setDuration(var10).scaleX(var9).start();
       val var15: SimpleDraweeView = this.binding.progressCancel;
       q.g(this.binding.progressCancel, "progressCancel");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new o1.a(var8), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new J1.a(var8), 1, null);
    }
 }

@@ -13,10 +13,10 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import kotlin.jvm.internal.q
 
 public class ThreadSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
+   private final val spineDrawer: SpineDrawer
+
    public final var showThreadSpine: Boolean
       internal set
-
-   private final val spineDrawer: SpineDrawer
 
    init {
       q.h(var1, "context");

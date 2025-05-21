@@ -11,22 +11,21 @@ import android.os.Build.VERSION
 import android.util.AttributeSet
 import android.view.View
 import com.discord.misc.utilities.size.SizeUtilsKt
-import kotlin.jvm.internal.q
 
 public class MaskedShadowView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
-   private final var borderRadius: Float
-   private final val path: Path
    private final var shadowColor: String
+   private final var borderRadius: Float
    private final var shadowElevation: Float
+   private final val path: Path
    private final val shadowPaint: Paint
 
    fun MaskedShadowView(var1: Context) {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
       this.shadowColor = "#28000000";
       this.shadowElevation = SizeUtilsKt.getDpToPx(10);
@@ -39,23 +38,23 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      q.h(var1, "canvas");
+      kotlin.jvm.internal.q.h(var1, "canvas");
       super.onDraw(var1);
       if (this.getVisibility() == 0 && this.getWidth() != 0 && this.getHeight() != 0) {
          this.path.reset();
          this.path.addRoundRect(0.0F, 0.0F, (float)this.getWidth(), (float)this.getHeight(), this.borderRadius, this.borderRadius, Direction.CW);
          if (VERSION.SDK_INT >= 26) {
-            c.a(var1, this.path);
+            p.a(var1, this.path);
          } else {
             var1.clipPath(this.path, Op.DIFFERENCE);
          }
 
-         val var10: Float = this.shadowElevation / 2;
+         val var5: Float = this.shadowElevation / 2;
          var1.drawRoundRect(
             -(this.shadowElevation / (float)2),
             0.0F,
-            (float)this.getWidth() + var10,
-            (float)this.getHeight() + var10,
+            (float)this.getWidth() + var5,
+            (float)this.getHeight() + var5,
             this.borderRadius,
             this.borderRadius,
             this.shadowPaint
@@ -64,7 +63,7 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
    }
 
    public fun setParams(shadowElevation: Float, borderRadius: Float, shadowColor: String) {
-      q.h(var3, "shadowColor");
+      kotlin.jvm.internal.q.h(var3, "shadowColor");
       this.borderRadius = var2;
       this.shadowElevation = var1;
       this.shadowColor = var3;

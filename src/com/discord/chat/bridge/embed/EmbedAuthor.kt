@@ -1,19 +1,129 @@
-/*
-$VF: Unable to decompile class
-Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "n.simpleName" is null
-  at org.vineflower.kotlin.KotlinWriter.lambda$writeClass$0(KotlinWriter.java:265)
-  at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:178)
-  at java.base/java.util.ArrayList$ArrayListSpliterator.tryAdvance(ArrayList.java:1685)
-  at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129)
-  at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527)
-  at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513)
-  at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-  at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150)
-  at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-  at java.base/java.util.stream.ReferencePipeline.findAny(ReferencePipeline.java:652)
-  at org.vineflower.kotlin.KotlinWriter.writeClass(KotlinWriter.java:266)
-  at org.jetbrains.java.decompiler.main.ClassesProcessor.writeClass(ClassesProcessor.java:500)
-  at org.jetbrains.java.decompiler.main.Fernflower.getClassContent(Fernflower.java:196)
-  at org.jetbrains.java.decompiler.struct.ContextUnit.lambda$save$3(ContextUnit.java:195)
-*/
+package com.discord.chat.bridge.embed
+
+import Za.f
+import g9.j
+import kotlin.jvm.internal.q
+import kotlinx.serialization.KSerializer
+import s1.b
+
+@f
+public data class EmbedAuthor(name: String, url: String? = null, iconURL: String? = null, iconProxyURL: String? = null) {
+   public final val name: String
+   public final val url: String?
+   public final val iconURL: String?
+   public final val iconProxyURL: String?
+
+   public final val imageUrl: String?
+      public final get() {
+         return this.imageUrl$delegate.getValue() as java.lang.String;
+      }
+
+
+   init {
+      q.h(var1, "name");
+      super();
+      this.name = var1;
+      this.url = var2;
+      this.iconURL = var3;
+      this.iconProxyURL = var4;
+      this.imageUrl$delegate = j.b(new b(this));
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$1`(var0: EmbedAuthor): java.lang.String {
+      return var0.iconProxyURL;
+   }
+
+   @JvmStatic
+   fun `imageUrl_delegate$lambda$0`(var0: EmbedAuthor): java.lang.String {
+      return var0.iconProxyURL;
+   }
+
+   public operator fun component1(): String {
+      return this.name;
+   }
+
+   public operator fun component2(): String? {
+      return this.url;
+   }
+
+   public operator fun component3(): String? {
+      return this.iconURL;
+   }
+
+   public operator fun component4(): String? {
+      return this.iconProxyURL;
+   }
+
+   public fun copy(name: String = var0.name, url: String? = var0.url, iconURL: String? = var0.iconURL, iconProxyURL: String? = var0.iconProxyURL): EmbedAuthor {
+      q.h(var1, "name");
+      return new EmbedAuthor(var1, var2, var3, var4);
+   }
+
+   public override operator fun equals(other: Any?): Boolean {
+      if (this === var1) {
+         return true;
+      } else if (var1 !is EmbedAuthor) {
+         return false;
+      } else {
+         var1 = var1;
+         if (!q.c(this.name, var1.name)) {
+            return false;
+         } else if (!q.c(this.url, var1.url)) {
+            return false;
+         } else if (!q.c(this.iconURL, var1.iconURL)) {
+            return false;
+         } else {
+            return q.c(this.iconProxyURL, var1.iconProxyURL);
+         }
+      }
+   }
+
+   public override fun hashCode(): Int {
+      val var4: Int = this.name.hashCode();
+      var var3: Int = 0;
+      val var1: Int;
+      if (this.url == null) {
+         var1 = 0;
+      } else {
+         var1 = this.url.hashCode();
+      }
+
+      val var2: Int;
+      if (this.iconURL == null) {
+         var2 = 0;
+      } else {
+         var2 = this.iconURL.hashCode();
+      }
+
+      if (this.iconProxyURL != null) {
+         var3 = this.iconProxyURL.hashCode();
+      }
+
+      return ((var4 * 31 + var1) * 31 + var2) * 31 + var3;
+   }
+
+   public override fun toString(): String {
+      val var3: java.lang.String = this.name;
+      val var2: java.lang.String = this.url;
+      val var4: java.lang.String = this.iconURL;
+      val var1: java.lang.String = this.iconProxyURL;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedAuthor(name=");
+      var5.append(var3);
+      var5.append(", url=");
+      var5.append(var2);
+      var5.append(", iconURL=");
+      var5.append(var4);
+      var5.append(", iconProxyURL=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
+   }
+
+   public companion object {
+      public fun serializer(): KSerializer<EmbedAuthor> {
+         return EmbedAuthor.$serializer.INSTANCE;
+      }
+   }
+}

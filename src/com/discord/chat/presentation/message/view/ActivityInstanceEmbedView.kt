@@ -13,8 +13,8 @@ import com.discord.overlapping_circles.OverlappingItem
 import java.util.ArrayList
 
 public class ActivityInstanceEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final val appMessageEmbedView: AppMessageEmbedView
    private final var binding: AppMessageEmbedViewBinding
+   private final val appMessageEmbedView: AppMessageEmbedView
 
    fun ActivityInstanceEmbedView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");
@@ -49,7 +49,7 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
    public fun setParticipantAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var3: Boolean = var1.isEmpty();
-      val var4: OverlappingCirclesView = this.binding.participants;
+      var var4: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       val var2: Byte;
       if (!var3) {
@@ -59,15 +59,15 @@ public class ActivityInstanceEmbedView  public constructor(context: Context, att
       }
 
       var4.setVisibility(var2);
-      val var5: OverlappingCirclesView = this.binding.participants;
-      val var7: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
+      var4 = this.binding.participants;
+      val var5: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var6: java.util.Iterator = var1.iterator();
 
       while (var6.hasNext()) {
-         var7.add(new OverlappingItem(var6.next() as java.lang.String));
+         var5.add(new OverlappingItem(var6.next() as java.lang.String));
       }
 
-      var5.setItems(var7);
+      var4.setItems(var5);
    }
 
    public fun setParticipantText(text: String) {

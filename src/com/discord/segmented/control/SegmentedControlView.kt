@@ -10,7 +10,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.LinearLayout.LayoutParams
 import androidx.cardview.widget.CardView
-import androidx.core.view.a0
+import androidx.core.view.b0
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -190,7 +190,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var var3: TextView = var4;
       if (var4 == null) {
          var3 = new TextView(this.getContext());
-         a0.p0(var3, new androidx.core.view.a(var1, this) {
+         b0.p0(var3, new androidx.core.view.a(var1, this) {
             final int $index;
             final SegmentedControlView this$0;
 
@@ -205,13 +205,13 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
                q.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var var3: Boolean = true;
-               var2.B0(true);
+               var2.C0(true);
                if (this.$index != this.this$0.getSelectedIndex()) {
                   var3 = false;
                }
 
-               var2.O0(var3);
-               var2.L0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
+               var2.P0(var3);
+               var2.M0(this.this$0.getAccessibilityRoleDescriptions().get(this.$index));
             }
          });
          this.binding.segmentContainer.addView(var3, new LayoutParams(0, -1, 1.0F));
@@ -256,22 +256,22 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       val var3: java.util.Iterator = this.getLabels().iterator();
 
       for (int var2 = 0; var3.hasNext(); var2++) {
-         var var4: TextView = (TextView)var3.next();
+         var var4: Any = var3.next();
          if (var2 < 0) {
             i.u();
          }
 
-         val var5: java.lang.String = var4 as java.lang.String;
-         var4 = this.getLabelView(var2);
-         var4.setText(var5);
-         var4.setGravity(17);
-         DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
-         var4.setTextSize(this.getSegmentFontSizeSp());
-         var4.setTextColor(this.getSegmentTextColor());
-         var4.setOnClickListener(new a(this, var2, var5));
+         var4 = var4 as java.lang.String;
+         val var5: TextView = this.getLabelView(var2);
+         var5.setText((java.lang.CharSequence)var4);
+         var5.setGravity(17);
+         DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+         var5.setTextSize(this.getSegmentFontSizeSp());
+         var5.setTextColor(this.getSegmentTextColor());
+         var5.setOnClickListener(new a(this, var2, (java.lang.String)var4));
          if (var2 == this.getSelectedIndex()) {
-            var4.setTextSize(this.getSelectedSegmentFontSizeSp());
-            var4.setTextColor(this.getSelectedSegmentTextColor());
+            var5.setTextSize(this.getSelectedSegmentFontSizeSp());
+            var5.setTextColor(this.getSelectedSegmentTextColor());
          }
       }
 
@@ -281,8 +281,6 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
    @JvmStatic
    fun `updateView$lambda$3$lambda$2$lambda$1`(var0: SegmentedControlView, var1: Int, var2: java.lang.String, var3: View) {
-      q.h(var0, "this$0");
-      q.h(var2, "$label");
       if (var0.onSegmentSelected != null) {
          var0.onSegmentSelected.invoke(var1, var2);
       }

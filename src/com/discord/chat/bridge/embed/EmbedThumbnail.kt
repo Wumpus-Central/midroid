@@ -1,21 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
-import ka.h
+import Za.f
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class EmbedThumbnail(url: String,
@@ -30,17 +17,17 @@ public data class EmbedThumbnail(url: String,
       srcIsAnimated: Boolean = false
    ) :
    EmbedUrlProvider {
-   public open val embedUrl: String
-   public final val gifv: Boolean?
+   public final val url: String
+   public final val proxyURL: String?
+   public final val videoUrl: String?
    public final val height: Int
+   public final val width: Int
+   public final val gifv: Boolean?
+   public final val showPlayButton: Boolean?
    public final val placeholder: String?
    public final val placeholderVersion: Int?
-   public final val proxyURL: String?
-   public final val showPlayButton: Boolean?
    public final val srcIsAnimated: Boolean
-   public final val url: String
-   public final val videoUrl: String?
-   public final val width: Int
+   public open val embedUrl: String
 
    init {
       q.h(var1, "url");
@@ -198,238 +185,39 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.url;
-      val var9: java.lang.String = this.proxyURL;
-      val var4: java.lang.String = this.videoUrl;
-      val var1: Int = this.height;
-      val var2: Int = this.width;
-      val var7: java.lang.Boolean = this.gifv;
-      val var11: java.lang.Boolean = this.showPlayButton;
-      val var5: java.lang.String = this.placeholder;
-      val var6: Int = this.placeholderVersion;
+      val var7: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyURL;
+      val var5: java.lang.String = this.videoUrl;
+      val var2: Int = this.height;
+      val var1: Int = this.width;
+      val var10: java.lang.Boolean = this.gifv;
+      val var4: java.lang.Boolean = this.showPlayButton;
+      val var11: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("EmbedThumbnail(url=");
-      var10.append(var8);
-      var10.append(", proxyURL=");
-      var10.append(var9);
-      var10.append(", videoUrl=");
-      var10.append(var4);
-      var10.append(", height=");
-      var10.append(var1);
-      var10.append(", width=");
-      var10.append(var2);
-      var10.append(", gifv=");
-      var10.append(var7);
-      var10.append(", showPlayButton=");
-      var10.append(var11);
-      var10.append(", placeholder=");
-      var10.append(var5);
-      var10.append(", placeholderVersion=");
-      var10.append(var6);
-      var10.append(", srcIsAnimated=");
-      var10.append(var3);
-      var10.append(")");
-      return var10.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: EmbedThumbnail.$serializer = new EmbedThumbnail.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.embed.EmbedThumbnail", var0, 11);
-         var1.l("url", false);
-         var1.l("proxyURL", true);
-         var1.l("videoUrl", true);
-         var1.l("height", false);
-         var1.l("width", false);
-         var1.l("gifv", true);
-         var1.l("showPlayButton", true);
-         var1.l("placeholder", true);
-         var1.l("placeholderVersion", true);
-         var1.l("srcIsAnimated", true);
-         var1.l("embedUrl", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         val var4: KSerializer = a.u(C0.a);
-         val var2: KSerializer = a.u(var1);
-         val var3: N = N.a;
-         val var5: h = h.a;
-         return new KSerializer[]{var1, var4, var2, N.a, N.a, a.u(h.a), a.u(var5), a.u(var1), a.u(var3), var5, var1};
-      }
-
-      public open fun deserialize(decoder: Decoder): EmbedThumbnail {
-         q.h(var1, "decoder");
-         val var21: SerialDescriptor = this.getDescriptor();
-         val var22: c = var1.c(var21);
-         var var10: Boolean = var22.y();
-         var var5: Byte = 10;
-         var var7: Byte = 9;
-         var var8: Byte = 7;
-         var var2: Int = 0;
-         var var3: Int;
-         var var4: Int;
-         val var12: Int;
-         var var15: Any;
-         var var17: Any;
-         val var18: Any;
-         val var19: java.lang.Boolean;
-         var var27: Any;
-         var var31: Any;
-         var var35: java.lang.Boolean;
-         if (var10) {
-            var31 = var22.t(var21, 0);
-            val var23: C0 = C0.a;
-            val var16: java.lang.String = var22.v(var21, 1, C0.a, null) as java.lang.String;
-            var18 = var22.v(var21, 2, var23, null) as java.lang.String;
-            var4 = var22.k(var21, 3);
-            var3 = var22.k(var21, 4);
-            var27 = h.a;
-            var19 = var22.v(var21, 5, h.a, null) as java.lang.Boolean;
-            val var13: java.lang.Boolean = var22.v(var21, 6, (DeserializationStrategy)var27, null) as java.lang.Boolean;
-            var27 = var22.v(var21, 7, var23, null) as java.lang.String;
-            var12 = var22.v(var21, 8, N.a, null) as Int;
-            var10 = var22.s(var21, 9);
-            val var24: java.lang.String = var22.t(var21, 10);
-            var2 = 2047;
-            var15 = var31;
-            var31 = var16;
-            var35 = var13;
-            var17 = var24;
-         } else {
-            var var6: Boolean = true;
-            var10 = false;
-            var3 = 0;
-            var17 = null;
-            var35 = null;
-            var15 = null;
-            var var29: java.lang.Boolean = null;
-            var27 = null;
-            var var25: Any = null;
-            var var30: Any = null;
-            var31 = null;
-            var4 = 0;
-
-            while (var6) {
-               label45: {
-                  label44: {
-                     val var9: Int = var22.x(var21);
-                     switch (var9) {
-                        case -1:
-                           var6 = false;
-                           break label44;
-                        case 0:
-                           var25 = var22.t(var21, 0);
-                           var2 |= 1;
-                           break;
-                        case 1:
-                           var30 = var22.v(var21, 1, C0.a, var30) as java.lang.String;
-                           var2 |= 2;
-                           break;
-                        case 2:
-                           var27 = var22.v(var21, 2, C0.a, var27) as java.lang.String;
-                           var2 |= 4;
-                           break label44;
-                        case 3:
-                           var4 = var22.k(var21, 3);
-                           var2 |= 8;
-                           break label45;
-                        case 4:
-                           var3 = var22.k(var21, 4);
-                           var2 |= 16;
-                           break label45;
-                        case 5:
-                           var29 = var22.v(var21, 5, h.a, var29) as java.lang.Boolean;
-                           var2 |= 32;
-                           break label45;
-                        case 6:
-                           var35 = var22.v(var21, 6, h.a, var35) as java.lang.Boolean;
-                           var2 |= 64;
-                           var5 = 10;
-                           continue;
-                        case 7:
-                           var15 = var22.v(var21, var8, C0.a, var15) as java.lang.String;
-                           var2 |= 128;
-                           continue;
-                        case 8:
-                           var17 = var22.v(var21, 8, N.a, var17) as Int;
-                           var2 |= 256;
-                           continue;
-                        case 9:
-                           var10 = var22.s(var21, var7);
-                           var2 |= 512;
-                           continue;
-                        case 10:
-                           var31 = var22.t(var21, var5);
-                           var2 |= 1024;
-                           continue;
-                        default:
-                           throw new n(var9);
-                     }
-
-                     var5 = 10;
-                     var7 = 9;
-                     var8 = 7;
-                     continue;
-                  }
-
-                  var5 = 10;
-                  var7 = 9;
-                  continue;
-               }
-
-               var5 = 10;
-            }
-
-            var17 = var31;
-            var12 = (Integer)var17;
-            var27 = var15;
-            var19 = var29;
-            var18 = var27;
-            var31 = var30;
-            var15 = var25;
-         }
-
-         var22.b(var21);
-         return new EmbedThumbnail(
-            var2,
-            (java.lang.String)var15,
-            (java.lang.String)var31,
-            (java.lang.String)var18,
-            var4,
-            var3,
-            var19,
-            var35,
-            (java.lang.String)var27,
-            var12,
-            var10,
-            (java.lang.String)var17,
-            null
-         );
-      }
-
-      public open fun serialize(encoder: Encoder, value: EmbedThumbnail) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         EmbedThumbnail.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EmbedThumbnail(url=");
+      var6.append(var7);
+      var6.append(", proxyURL=");
+      var6.append(var8);
+      var6.append(", videoUrl=");
+      var6.append(var5);
+      var6.append(", height=");
+      var6.append(var2);
+      var6.append(", width=");
+      var6.append(var1);
+      var6.append(", gifv=");
+      var6.append(var10);
+      var6.append(", showPlayButton=");
+      var6.append(var4);
+      var6.append(", placeholder=");
+      var6.append(var11);
+      var6.append(", placeholderVersion=");
+      var6.append(var9);
+      var6.append(", srcIsAnimated=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

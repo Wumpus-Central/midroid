@@ -1,27 +1,17 @@
 package com.discord.bundle_updater
 
+import cb.E0
+import cb.O
+import cb.U
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.N
-import ka.T
-import ka.h
+import g9.s
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import o8.w
 
-@f
+@Za.f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -29,17 +19,17 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    allowLoggedOut: Boolean? = null,
    experiments: Map<String, Int>? = null
 ) {
-   public final val allowLoggedOut: Boolean?
-   public final val allowedVersions: List<String>?
-   public final val experiments: Map<String, Int>?
    public final val expiresAt: String?
    public final val releaseChannel: String?
    public final val validForUserIds: List<String>?
+   public final val allowedVersions: List<String>?
+   public final val allowLoggedOut: Boolean?
+   public final val experiments: Map<String, Int>?
 
    @JvmStatic
    fun {
-      val var0: C0 = C0.a;
-      $childSerializers = new KSerializer[]{null, null, new ka.f(C0.a), new ka.f(var0), null, new T(var0, N.a)};
+      val var0: E0 = E0.a;
+      $childSerializers = new KSerializer[]{null, null, new cb.f(E0.a), new cb.f(var0), null, new U(var0, O.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -158,8 +148,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var3: Pair = w.a("expiresAt", this.expiresAt);
-      val var4: Pair = w.a("releaseChannel", this.releaseChannel);
+      val var4: Pair = s.a("expiresAt", this.expiresAt);
+      val var3: Pair = s.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -167,162 +157,45 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var5: Pair = w.a("validForUserIds", var9);
+      val var5: Pair = s.a("validForUserIds", var9);
       if (this.allowedVersions != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.allowedVersions, null, 1, null);
       } else {
          var9 = null;
       }
 
-      val var6: Pair = w.a("allowedVersions", var9);
-      val var7: Pair = w.a("allowLoggedOut", this.allowLoggedOut);
+      val var6: Pair = s.a("allowedVersions", var9);
+      val var7: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var6, var7, w.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var6, var7, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.expiresAt;
-      val var1: java.lang.String = this.releaseChannel;
-      val var4: java.util.List = this.validForUserIds;
-      val var6: java.util.List = this.allowedVersions;
-      val var7: java.lang.Boolean = this.allowLoggedOut;
-      val var2: java.util.Map = this.experiments;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BuildOverrideCookieMeta(expiresAt=");
-      var3.append(var5);
-      var3.append(", releaseChannel=");
-      var3.append(var1);
-      var3.append(", validForUserIds=");
-      var3.append(var4);
-      var3.append(", allowedVersions=");
-      var3.append(var6);
-      var3.append(", allowLoggedOut=");
-      var3.append(var7);
-      var3.append(", experiments=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: BuildOverrideCookieMeta.$serializer = new BuildOverrideCookieMeta.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.bundle_updater.BuildOverrideCookieMeta", var0, 6);
-         var1.l("expiresAt", true);
-         var1.l("releaseChannel", true);
-         var1.l("validForUserIds", true);
-         var1.l("allowedVersions", true);
-         var1.l("allowLoggedOut", true);
-         var1.l("experiments", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
-         val var2: C0 = C0.a;
-         return new KSerializer[]{ia.a.u(C0.a), ia.a.u(var2), ia.a.u(var1[2]), ia.a.u(var1[3]), ia.a.u(h.a), ia.a.u(var1[5])};
-      }
-
-      public open fun deserialize(decoder: Decoder): BuildOverrideCookieMeta {
-         q.h(var1, "decoder");
-         val var12: SerialDescriptor = this.getDescriptor();
-         val var13: kotlinx.serialization.encoding.c = var1.c(var12);
-         val var11: Array<KSerializer> = BuildOverrideCookieMeta.access$get$childSerializers$cp();
-         val var5: Boolean = var13.y();
-         var var10: java.lang.String = null;
-         var var2: Int;
-         var var7: java.util.List;
-         var var8: java.util.List;
-         var var9: java.lang.String;
-         var var15: Any;
-         var var17: Any;
-         if (var5) {
-            var15 = C0.a;
-            var10 = var13.v(var12, 0, C0.a, null) as java.lang.String;
-            var9 = var13.v(var12, 1, (DeserializationStrategy)var15, null) as java.lang.String;
-            var8 = var13.v(var12, 2, var11[2], null) as java.util.List;
-            var17 = var13.v(var12, 3, var11[3], null) as java.util.List;
-            var15 = var13.v(var12, 4, h.a, null) as java.lang.Boolean;
-            val var19: java.util.Map = var13.v(var12, 5, var11[5], null) as java.util.Map;
-            var2 = 63;
-            var7 = (java.util.List)var17;
-            var17 = var19;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var9 = null;
-            var8 = null;
-            var7 = null;
-            var17 = null;
-            var15 = null;
-
-            while (var3) {
-               val var4: Int = var13.x(var12);
-               switch (var4) {
-                  case -1:
-                     var3 = false;
-                     break;
-                  case 0:
-                     var10 = var13.v(var12, 0, C0.a, var10) as java.lang.String;
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var9 = var13.v(var12, 1, C0.a, var9) as java.lang.String;
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var8 = var13.v(var12, 2, var11[2], var8) as java.util.List;
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var7 = var13.v(var12, 3, var11[3], var7) as java.util.List;
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var17 = var13.v(var12, 4, h.a, var17) as java.lang.Boolean;
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var15 = var13.v(var12, 5, var11[5], var15) as java.util.Map;
-                     var2 |= 32;
-                     break;
-                  default:
-                     throw new n(var4);
-               }
-            }
-
-            var17 = var15;
-            var15 = var17;
-         }
-
-         var13.b(var12);
-         return new BuildOverrideCookieMeta(var2, var10, var9, var8, var7, (java.lang.Boolean)var15, (java.util.Map)var17, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: BuildOverrideCookieMeta) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         BuildOverrideCookieMeta.write$Self$bundle_updater_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var2: java.lang.String = this.expiresAt;
+      val var3: java.lang.String = this.releaseChannel;
+      val var1: java.util.List = this.validForUserIds;
+      val var7: java.util.List = this.allowedVersions;
+      val var4: java.lang.Boolean = this.allowLoggedOut;
+      val var6: java.util.Map = this.experiments;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("BuildOverrideCookieMeta(expiresAt=");
+      var5.append(var2);
+      var5.append(", releaseChannel=");
+      var5.append(var3);
+      var5.append(", validForUserIds=");
+      var5.append(var1);
+      var5.append(", allowedVersions=");
+      var5.append(var7);
+      var5.append(", allowLoggedOut=");
+      var5.append(var4);
+      var5.append(", experiments=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

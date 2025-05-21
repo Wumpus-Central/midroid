@@ -9,26 +9,25 @@ import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import android.view.WindowManager.LayoutParams
 import com.discord.mobile_voice_overlay.utils.WindowUtils
-import kotlin.jvm.internal.q
 
 public abstract class OverlayDialog : OverlayBubbleWrap {
+   public final var onDialogClosed: (OverlayDialog) -> Unit
+      internal set
+
    public open var isMoving: Boolean
       public open get() {
          return false;
       }
 
-      public open set(<anonymous parameter 0>) {
+      public open set(_) {
       }
 
 
-   public final var onDialogClosed: (OverlayDialog) -> Unit
-      internal set
-
    open fun OverlayDialog(var1: Context) {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1);
-      this.onDialogClosed = <unrepresentable>.INSTANCE;
-      this.setOnClickListener(new a(this));
+      this.onDialogClosed = new b();
+      this.setOnClickListener(new c(this));
       val var2: LayoutParams = this.getWindowLayoutParams();
       var2.width = -1;
       var2.height = -1;
@@ -40,10 +39,10 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      this.onDialogClosed = <unrepresentable>.INSTANCE;
-      this.setOnClickListener(new a(this));
+      this.onDialogClosed = new b();
+      this.setOnClickListener(new c(this));
       val var3: LayoutParams = this.getWindowLayoutParams();
       var3.width = -1;
       var3.height = -1;
@@ -55,10 +54,10 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet, var3: Int) {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.onDialogClosed = <unrepresentable>.INSTANCE;
-      this.setOnClickListener(new a(this));
+      this.onDialogClosed = new b();
+      this.setOnClickListener(new c(this));
       val var4: LayoutParams = this.getWindowLayoutParams();
       var4.width = -1;
       var4.height = -1;
@@ -70,9 +69,14 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    @JvmStatic
-   fun `_init_$lambda$0`(var0: OverlayDialog, var1: View) {
-      q.h(var0, "this$0");
+   fun `_init_$lambda$1`(var0: OverlayDialog, var1: View) {
       var0.closeDialog();
+   }
+
+   @JvmStatic
+   fun `onDialogClosed$lambda$0`(var0: OverlayDialog): Unit {
+      kotlin.jvm.internal.q.h(var0, "it");
+      return Unit.a;
    }
 
    public fun closeDialog() {
@@ -109,11 +113,11 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
             }
 
             public void onViewAttachedToWindow(View var1) {
-               q.h(var1, "v");
+               kotlin.jvm.internal.q.h(var1, "v");
             }
 
             public void onViewDetachedFromWindow(View var1) {
-               q.h(var1, "v");
+               kotlin.jvm.internal.q.h(var1, "v");
                this.$closingAnimator.end();
             }
          });

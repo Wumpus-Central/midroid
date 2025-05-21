@@ -5,16 +5,16 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import g9.s
 import kotlin.jvm.internal.q
-import o8.w
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
-   private final val contentHeight: Float
-   private final val contentWidth: Float
-   private final val height: Float
-   private final val width: Float
    private final val x: Float
    private final val y: Float
+   private final val width: Float
+   private final val height: Float
+   private final val contentWidth: Float
+   private final val contentHeight: Float
 
    init {
       this.x = var1;
@@ -39,10 +39,10 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
    public override fun serialize(): WritableMap {
       val var1: Int = 0;
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("contentInset", NativeMapExtensionsKt.nativeMapOf(w.a("left", var1), w.a("top", var1), w.a("bottom", var1), w.a("right", var1))),
-         w.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(w.a("x", this.x), w.a("y", this.y))),
-         w.a("contentSize", NativeMapExtensionsKt.nativeMapOf(w.a("width", this.contentWidth), w.a("height", this.contentHeight))),
-         w.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(w.a("width", this.width), w.a("height", this.height)))
+         s.a("contentInset", NativeMapExtensionsKt.nativeMapOf(s.a("left", var1), s.a("top", var1), s.a("bottom", var1), s.a("right", var1))),
+         s.a("contentOffset", NativeMapExtensionsKt.nativeMapOf(s.a("x", this.x), s.a("y", this.y))),
+         s.a("contentSize", NativeMapExtensionsKt.nativeMapOf(s.a("width", this.contentWidth), s.a("height", this.contentHeight))),
+         s.a("layoutMeasurement", NativeMapExtensionsKt.nativeMapOf(s.a("width", this.width), s.a("height", this.height)))
       );
    }
 }

@@ -18,8 +18,8 @@ import com.discord.chat.presentation.root.MessageContext
 
 public class DecoratedMessageView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DecoratedMessageViewBinding
-   private final var drawHighlight: Boolean
    private final val highlightDrawer: BackgroundHighlightDrawer
+   private final var drawHighlight: Boolean
    private final var messageFrame: MessageFrame?
 
    fun DecoratedMessageView(var1: Context) {
@@ -37,6 +37,11 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
       this.setWillNotDraw(false);
    }
 
+   @JvmStatic
+   fun `setMessage$lambda$0`(): MessageView.ChainPart {
+      return MessageView.ChainPart.ONLY;
+   }
+
    protected open fun onDraw(canvas: Canvas) {
       kotlin.jvm.internal.q.h(var1, "canvas");
       super.onDraw(var1);
@@ -51,7 +56,7 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
       messageFrame: MessageFrame? = null,
       eventHandler: ChatEventHandler = ChatEventHandler.Empty.INSTANCE,
       componentProvider: ComponentProvider? = null,
-      onChainPart: () -> ChainPart = <unrepresentable>.INSTANCE,
+      onChainPart: () -> ChainPart = new c(),
       allowChildGestures: Boolean = true,
       renderContentOnly: Boolean = false
    ) {

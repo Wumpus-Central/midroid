@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import S2.a;
+import K3.a;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -22,18 +22,18 @@ public abstract class NativeBrowserManagerModuleSpec extends ReactContextBaseJav
    public final Map<String, Object> getConstants() {
       Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var3 = new HashSet<>(Arrays.asList("isChromeInstalled", "selectedBrowser"));
-         HashSet var1 = new HashSet();
-         HashSet var2 = new HashSet(var4.keySet());
-         var2.removeAll(var3);
-         var2.removeAll(var1);
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
+         HashSet var1 = new HashSet<>(Arrays.asList("isChromeInstalled", "selectedBrowser"));
+         HashSet var2 = new HashSet();
+         HashSet var3 = new HashSet(var4.keySet());
+         var3.removeAll(var1);
+         var3.removeAll(var2);
+         if (!var3.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var3.removeAll(var4.keySet());
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
+         var1.removeAll(var4.keySet());
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 

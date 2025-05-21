@@ -5,10 +5,10 @@ import android.content.Context
 import android.content.res.Resources
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Paint.Style
 import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
-import androidx.core.view.g0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.R
@@ -63,7 +63,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var5: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -72,12 +72,12 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var4;
-      val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var5;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = o8.l.a(<unrepresentable>.INSTANCE);
+      this.accessoriesAdapter = var5;
+      val var3: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
+      this.contentViewTracker = var3;
+      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var4;
+      this.forwardBarPaint$delegate = g9.j.b(new V());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -90,17 +90,24 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var3);
-      this.setAdapter(var4);
-      var4.setMessageContentViewLifecycleListener(var5);
+      this.setLayoutManager(var4);
+      this.setAdapter(var5);
+      var5.setMessageContentViewLifecycleListener(var3);
+   }
+
+   @JvmStatic
+   fun `forwardBarPaint_delegate$lambda$1`(): Paint {
+      val var0: Paint = new Paint();
+      var0.setStyle(Style.FILL);
+      return var0;
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : U9.j.H(g0.a(this))) {
-         val var2: View = var3.c() as View;
+      for (Pair var3 : Ma.j.I(androidx.core.view.h0.a(this))) {
+         val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var2.getBottom();
+            return var1.getBottom();
          }
       }
 
@@ -171,31 +178,31 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var11: MessageAccessoriesView.Companion = Companion;
-      val var12: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var12, "getResources(...)");
-      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
-      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var12: MessageAccessoriesView.Companion = Companion;
+      val var11: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var11, "getResources(...)");
+      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
+      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var13: java.util.Iterator = var5.iterator();
+         val var16: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var13.hasNext()) {
+            if (!var16.hasNext()) {
                break;
             }
 
-            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var16.setShowThreadSpine(var9);
+      var13.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);
@@ -217,11 +224,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    public companion object {
-      public final val FORWARD_BAR_SPACING: Int
-      public final val FORWARD_BAR_WIDTH: Int
-      private final var embedContentMarginPx: Int
       private final var leftMarginPx: Int
       private final var rightMarginPx: Int
+      private final var embedContentMarginPx: Int
+      public final val FORWARD_BAR_WIDTH: Int
+      public final val FORWARD_BAR_SPACING: Int
 
       public fun getAccessoryLeftMargin(resources: Resources, messageContext: MessageContext, renderContentOnly: Boolean): Int {
          kotlin.jvm.internal.q.h(var1, "resources");
@@ -256,8 +263,14 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private class ContentViewTracker : MessageAccessoriesAdapter.MessageContentViewLifecycleListener {
-      private final var onViewChanged: (MessageContentView) -> Unit = <unrepresentable>.INSTANCE
+      private final var onViewChanged: (MessageContentView) -> Unit = new W()
       private final var currentContentView: MessageContentView?
+
+      @JvmStatic
+      fun `onViewChanged$lambda$0`(var0: MessageContentView): Unit {
+         kotlin.jvm.internal.q.h(var0, "it");
+         return Unit.a;
+      }
 
       public override fun onAttachedToWindow(messageContentView: MessageContentView) {
          kotlin.jvm.internal.q.h(var1, "messageContentView");
