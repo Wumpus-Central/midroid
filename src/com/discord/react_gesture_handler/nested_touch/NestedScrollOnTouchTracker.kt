@@ -1,5 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
+import Aa.I
+import Aa.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -13,8 +15,6 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
-import za.I
-import za.f
 
 public class NestedScrollOnTouchTracker internal constructor(context: Context,
    onClickListener: OnClickListener?,
@@ -221,7 +221,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
 
                      public final Object invokeSuspend(Object var1) {
                         label46: {
-                           val var7: Any = X8.b.e();
+                           val var7: Any = Y8.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {

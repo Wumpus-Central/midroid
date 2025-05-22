@@ -1,8 +1,8 @@
 package com.discord.resource_usage.utils
 
 import android.os.Process
-import c9.j
-import fb.c
+import d9.j
+import gb.c
 import java.io.File
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {

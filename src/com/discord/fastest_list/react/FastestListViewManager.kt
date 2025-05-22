@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react
 
-import Q8.s
+import R8.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker

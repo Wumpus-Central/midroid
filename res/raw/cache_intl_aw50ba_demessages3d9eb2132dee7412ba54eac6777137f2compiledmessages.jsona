@@ -415,19 +415,6 @@
     ]
   ],
   "rmnkz8": "Hört Spotify",
-  "tAwI1t": [
-    "Eine Aktivitätskarte zeigt, dass @",
-    [
-      1,
-      "username"
-    ],
-    " ",
-    [
-      1,
-      "activity"
-    ],
-    " spielt"
-  ],
   "9hk2KC": "Erzähl uns von deiner Erfahrung mit dem Aktivitäten-Feature.",
   "iSv55O": "Steuerung der Aktivität ist irreführend",
   "/8psS0": "Steuerung der Aktivität war irreführend",
@@ -4575,109 +4562,6 @@
   ],
   "BC5vfH": "Deine Nachricht konnte nicht gesendet werden, da der Eigentümer der Aktivität keinen Zugriff auf diesen Kanal hat.",
   "fjcCk5": "Nachricht gesendet!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " hat und ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " haben und ",
-          [
-            1,
-            "countOthers"
-          ],
-          " weitere haben"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " gespielt"
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " spielt"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " und ",
-          [
-            1,
-            "user2"
-          ],
-          " spielen"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " und ",
-          [
-            1,
-            "countOthers"
-          ],
-          " weitere spielen"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Weiter",
   "2ixEBg": "Im Browser fortfahren",
   "79qal5": "Emoticons in deiner Nachricht automatisch in Emojis umwandeln",
@@ -21342,7 +21226,6 @@
     "-stündiger Marathon"
   ],
   "keY6mZ": "Neuer Spieler",
-  "vYuyWV": "Neuerscheinung",
   "S5F48/": [
     "Für ",
     [
@@ -21677,76 +21560,6 @@
     " Titel diese Woche"
   ],
   "/50eHh": "Am meisten gespielt",
-  "kAlUs7": "Beliebt",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " spielt ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " spielt ein neues Spiel: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " hat ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " gespielt"
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " hat ein neues Spiel gespielt: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -30161,13 +29974,6 @@
   ],
   "zUoI5O": "Sprachkanäle suchen",
   "ieCAhI": "Ungelesene Kanäle",
-  "0ZQw/f": [
-    "Nachricht an @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Durch den Konzentrationsmodus deaktiviert",
   "wCxBOT": "Konzentrationsmodus (BETA)",
   "CYVgLC": "Mit dem Konzentrationsmodus zeigt Discord keine Desktop-Benachrichtigungen mehr in der App an oder spielt Nachrichtentöne ab, genau wie bei DND. Möchtest du zum Onlinemodus wechseln?",
@@ -37416,6 +37222,7 @@
   "BwdeMz": "Namensschild ändern",
   "/6nv6O": "Profil-Effekt ändern",
   "/dRfCQ": "Effekt ändern",
+  "WfGV5+": "Deine Namensschilder",
   "TiLCg4": "Nur mit Nitro",
   "t8CdeX": "Profil-Effekt-Auswahl",
   "9x1v/v": "Deine Effekte",

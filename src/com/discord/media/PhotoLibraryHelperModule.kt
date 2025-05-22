@@ -1,6 +1,6 @@
 package com.discord.media
 
-import Q8.s
+import R8.s
 import android.database.ContentObserver
 import android.database.Cursor
 import android.net.Uri

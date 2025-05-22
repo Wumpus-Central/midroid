@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.message.view.media
 
-import Q8.j
+import R8.j
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import h6.f
+import i6.f
 import kotlin.jvm.internal.q
 import o1.a
 import o1.b

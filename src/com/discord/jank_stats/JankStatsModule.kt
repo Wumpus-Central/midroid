@@ -1,6 +1,6 @@
 package com.discord.jank_stats
 
-import Q8.s
+import R8.s
 import com.discord.codegen.NativeJankStatsModuleSpec
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext

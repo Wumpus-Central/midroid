@@ -1,6 +1,6 @@
 package com.discord.device
 
-import R8.n
+import S8.n
 import android.app.Activity
 import android.content.Context
 import android.content.Intent

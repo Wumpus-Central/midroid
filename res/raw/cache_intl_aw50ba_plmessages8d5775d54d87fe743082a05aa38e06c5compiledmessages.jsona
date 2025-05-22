@@ -420,18 +420,6 @@
     ]
   ],
   "rmnkz8": "Słucha Spotify",
-  "tAwI1t": [
-    "Karta aktywności pokazująca użytkownika @",
-    [
-      1,
-      "username"
-    ],
-    ", który gra w aktywność ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Opowiedz nam o swoich wrażeniach związanych z aktywnością",
   "iSv55O": "Sterowanie w aktywności jest skomplikowane",
   "/8psS0": "Sterowanie w aktywności było skomplikowane",
@@ -4721,111 +4709,6 @@
   ],
   "BC5vfH": "Nie można wysłać Twojej wiadomości, ponieważ właściciel aktywności nie ma dostępu do tego kanału.",
   "fjcCk5": "Wiadomość wysłana!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          "Użytkownik ",
-          [
-            1,
-            "user1"
-          ],
-          " grał"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " i ",
-          [
-            1,
-            "user2"
-          ],
-          " grali"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " i inni (",
-          [
-            1,
-            "countOthers"
-          ],
-          ") grali"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " w ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " gra w"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " i ",
-          [
-            1,
-            "user2"
-          ],
-          " grają w"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " i inni (",
-          [
-            1,
-            "countOthers"
-          ],
-          ") grają w"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Kontynuuj",
   "2ixEBg": "Kontynuuj w przeglądarce",
   "79qal5": "Automatycznie zamieniaj emotikony w Twoich wiadomościach na emoji",
@@ -21767,7 +21650,6 @@
     "-godzinny maraton"
   ],
   "keY6mZ": "Nowy gracz",
-  "vYuyWV": "Nowa gra",
   "adnLsL": "Powrót po długim czasie",
   "NXBtjI": [
     "Wraca po ",
@@ -22094,77 +21976,6 @@
     " utwory(-ów) w tym tygodniu"
   ],
   "/50eHh": "Najczęściej grane",
-  "kAlUs7": "Popularne",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " gra w ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " gra w nową grę: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    "Użytkownik ",
-    [
-      1,
-      "userName"
-    ],
-    " grał w ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    "Użytkownik ",
-    [
-      1,
-      "userName"
-    ],
-    " grał w nową grę: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "Sezon ",
     [
@@ -30862,13 +30673,6 @@
   ],
   "zUoI5O": "Wyszukiwanie kanałów głosowych",
   "ieCAhI": "Nieprzeczytane kanały",
-  "0ZQw/f": [
-    "Napisz do @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "To jest wyłączone w trybie skupienia.",
   "wCxBOT": "Tryb skupienia (BETA)",
   "CYVgLC": "W trybie skupienia Discord nie będzie już wyświetlał powiadomień w aplikacji i na pulpicie ani odtwarzał dźwięków wiadomości, tak jak w trybie Nie przeszkadzać. Czy chcesz przełączyć na tryb online?",
@@ -38342,6 +38146,7 @@
   "BwdeMz": "Zmień tabliczkę z nazwą",
   "/6nv6O": "Zmień efekt profilu",
   "/dRfCQ": "Zmień efekt",
+  "WfGV5+": "Twoje tabliczki z nazwą",
   "TiLCg4": "Tylko w Nitro",
   "t8CdeX": "Sekcja wyboru efektu profilu",
   "9x1v/v": "Twoje efekty",

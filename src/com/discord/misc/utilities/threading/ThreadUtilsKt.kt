@@ -1,7 +1,7 @@
 package com.discord.misc.utilities.threading
 
-import Q8.j
-import Q8.m
+import R8.j
+import R8.m
 import android.os.Handler
 import android.os.Looper
 import kotlin.jvm.functions.Function0
@@ -29,11 +29,11 @@ public inline fun <T> assertOnUiThread(crossinline block: () -> T): T {
    if (isOnMainThread()) {
       return (T)var0.invoke();
    } else {
-      val var1: Thread = Thread.currentThread();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Expected to be on android main thread. Current: ");
-      var2.append(var1);
-      throw new IllegalStateException(var2.toString().toString());
+      val var2: Thread = Thread.currentThread();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Expected to be on android main thread. Current: ");
+      var1.append(var2);
+      throw new IllegalStateException(var1.toString().toString());
    }
 }
 

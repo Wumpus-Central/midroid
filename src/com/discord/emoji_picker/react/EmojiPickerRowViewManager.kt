@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import Q8.s
+import R8.s
 import com.discord.emoji_picker.EmojiPickerRowView
 import com.discord.emoji_picker.react_events.OnLongPressEmojiEvent
 import com.discord.emoji_picker.react_events.OnPressEmojiEvent

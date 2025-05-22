@@ -1,52 +1,52 @@
 package com.discord.theme
 
-import Q8.j
-import V1.A
-import V1.B
-import V1.C
-import V1.D
-import V1.E
-import V1.F
-import V1.G
-import V1.H
-import V1.I
-import V1.J
-import V1.K
-import V1.L
-import V1.M
-import V1.N
-import V1.O
-import V1.P
-import V1.Q
-import V1.S
-import V1.T
-import V1.U
-import V1.V
-import V1.W
-import V1.a
-import V1.b
-import V1.c
-import V1.d
-import V1.e
-import V1.f
-import V1.g
-import V1.h
-import V1.i
-import V1.k
-import V1.l
-import V1.m
-import V1.n
-import V1.o
-import V1.p
-import V1.r
-import V1.s
-import V1.t
-import V1.u
-import V1.v
-import V1.w
-import V1.x
-import V1.y
-import V1.z
+import R8.j
+import W1.A
+import W1.B
+import W1.C
+import W1.D
+import W1.E
+import W1.F
+import W1.G
+import W1.H
+import W1.I
+import W1.J
+import W1.K
+import W1.L
+import W1.M
+import W1.N
+import W1.O
+import W1.P
+import W1.Q
+import W1.S
+import W1.T
+import W1.U
+import W1.V
+import W1.W
+import W1.a
+import W1.b
+import W1.c
+import W1.d
+import W1.e
+import W1.f
+import W1.g
+import W1.h
+import W1.i
+import W1.k
+import W1.l
+import W1.m
+import W1.n
+import W1.o
+import W1.p
+import W1.r
+import W1.s
+import W1.t
+import W1.u
+import W1.v
+import W1.w
+import W1.x
+import W1.y
+import W1.z
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
@@ -371,12 +371,12 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.infoDangerForeground$delegate = j.b(new g(var1, var2));
       this.interactiveActive$delegate = j.b(new h(var1, var2));
       this.interactiveMuted$delegate = j.b(new i(var1, var2));
-      this.interactiveNormal$delegate = j.b(new V1.j(var1, var2));
+      this.interactiveNormal$delegate = j.b(new W1.j(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = j.b(new k(var1, var2));
       this.redesignButtonTertiaryBackground$delegate = j.b(new m(var1, var2));
       this.redesignButtonTertiaryText$delegate = j.b(new n(var1, var2));
       this.spoilerHiddenBackground$delegate = j.b(new p(var1, var2));
-      this.spoilerRevealedBackground$delegate = j.b(new V1.q(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.b(new W1.q(var1, var2));
       this.statusDanger$delegate = j.b(new r(var1, var2));
       this.statusDangerBackground$delegate = j.b(new s(var1, var2));
       this.statusPositive$delegate = j.b(new t(var1, var2));

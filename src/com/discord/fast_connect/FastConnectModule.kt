@@ -1,6 +1,6 @@
 package com.discord.fast_connect
 
-import Q8.s
+import R8.s
 import com.discord.app_database.AppDatabase
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.Cache
@@ -90,7 +90,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return R8.q.m(
+      return S8.q.m(
          new Pair[]{
             s.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             s.a("userId", var1.get().getItem("_userIdKey")),

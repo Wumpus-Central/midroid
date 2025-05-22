@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import Q8.s
+import R8.s
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
@@ -41,7 +41,7 @@ public object BundleUpdaterUtils {
    public fun getManifestFromFile(file: File): AppManifest {
       q.h(var1, "file");
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = c9.j.f(var1, null, 1, null);
+      val var3: java.lang.String = d9.j.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
@@ -49,25 +49,25 @@ public object BundleUpdaterUtils {
    public fun md5(file: File): String {
       label18: {
          q.h(var1, "file");
-         val var10: BufferedSource = tb.m.d(tb.m.k(var1));
+         val var10: BufferedSource = ub.m.d(ub.m.k(var1));
 
-         var var11: java.lang.String;
+         var var12: java.lang.String;
          try {
-            val var2: tb.j = tb.j.m.a(tb.m.b());
-            var10.j1(var2);
-            var11 = var2.a().r();
+            val var11: ub.j = ub.j.m.a(ub.m.b());
+            var10.l1(var11);
+            var12 = var11.a().r();
          } catch (var5: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var5;
+            val var2: java.lang.Throwable = var5;
 
             try {
-               throw var3;
+               throw var2;
             } catch (var4: java.lang.Throwable) {
-               c9.c.a(var10, var5);
+               d9.c.a(var10, var5);
             }
          }
 
-         c9.c.a(var10, null);
-         return var11;
+         d9.c.a(var10, null);
+         return var12;
       }
    }
 }

@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Kuuntelee Spotifyta",
-  "tAwI1t": [
-    "Toimintakortti, jossa näkyy @",
-    [
-      1,
-      "username"
-    ],
-    " pelaamassa toimintaa ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Kerro meille kokemuksestasi toiminnan parissa",
   "iSv55O": "Toiminnan hallinta on sekavaa",
   "/8psS0": "Toiminnan hallinta oli sekavaa",
@@ -4552,108 +4540,6 @@
   ],
   "BC5vfH": "Viestiäsi ei voitu lähettää, koska toiminnan omistajalla ei ole pääsyä tälle kanavalle.",
   "fjcCk5": "Viesti lähetetty!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " pelasi ja ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " pelasivat ja ",
-          [
-            1,
-            "countOthers"
-          ],
-          " muuta pelasivat"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " tätä: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " pelaa peliä"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " ja ",
-          [
-            1,
-            "user2"
-          ],
-          " pelaa peliä"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " ja ",
-          [
-            1,
-            "countOthers"
-          ],
-          " muuta pelaavat peliä"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Jatka",
   "2ixEBg": "Jatka selaimessa",
   "79qal5": "Muunna viesteissä esiintyvät hymiöt automaattisesti emojeiksi",
@@ -21212,7 +21098,6 @@
     " t:n maraton"
   ],
   "keY6mZ": "Uusi pelaaja",
-  "vYuyWV": "Uusi julkaisu",
   "adnLsL": "Palaava",
   "NXBtjI": [
     "Paluu ",
@@ -21533,75 +21418,6 @@
     " kappaletta tällä viikolla"
   ],
   "/50eHh": "Eniten pelattu",
-  "kAlUs7": "Trendaava",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " pelaa parhaillaan: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " pelaa uutta peliä: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " pelasi: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " pelasi uutta peliä: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "K",
     [
@@ -29983,13 +29799,6 @@
   ],
   "zUoI5O": "Haetaan puhekanavia",
   "ieCAhI": "Lukemattomat kanavat",
-  "0ZQw/f": [
-    "Viestitä käyttäjälle @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Tämä on keskittymistilan käytöstä poistama",
   "wCxBOT": "Keskittymistila (BEETA)",
   "CYVgLC": "Keskittymistilassa Discord ei Älä häiritse ‑tilan tapaan näytä sovelluksensisäisiä ja työpöytäilmoituksia eikä toista viestien merkkiääniä. Haluatko vaihtaa online-tilaan?",
@@ -37314,6 +37123,7 @@
   "BwdeMz": "Vaihda nimikyltti",
   "/6nv6O": "Vaihda profiilitehoste",
   "/dRfCQ": "Vaihda tehoste",
+  "WfGV5+": "Omat nimikylttisi",
   "TiLCg4": "Vain Nitrossa",
   "t8CdeX": "Profiilitehosteen valintaosio",
   "9x1v/v": "Omat tehosteet",

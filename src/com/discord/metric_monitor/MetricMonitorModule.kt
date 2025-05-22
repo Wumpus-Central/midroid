@@ -1,7 +1,7 @@
 package com.discord.metric_monitor
 
 import D1.a
-import Q8.s
+import R8.s
 import com.discord.codegen.NativeMetricMonitorModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext

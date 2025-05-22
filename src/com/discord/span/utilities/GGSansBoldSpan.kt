@@ -1,7 +1,7 @@
 package com.discord.span.utilities
 
-import S1.a
-import S1.b
+import T1.a
+import T1.b
 import android.content.Context
 import android.graphics.Paint
 import android.text.TextPaint

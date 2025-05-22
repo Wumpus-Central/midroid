@@ -415,18 +415,6 @@
     ]
   ],
   "rmnkz8": "Đang Nghe Spotify",
-  "tAwI1t": [
-    "Một thẻ hoạt động hiển thị @",
-    [
-      1,
-      "username"
-    ],
-    " đang chơi ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Hãy cho chúng tôi biết trải nghiệm của bạn về hoạt động",
   "iSv55O": "Kiểm soát hoạt động đang gặp khó khăn",
   "/8psS0": "Kiểm soát hoạt động đã gặp khó khăn",
@@ -4571,108 +4559,6 @@
   ],
   "BC5vfH": "Không thể gửi tin nhắn của bạn vì chủ sở hữu hoạt động không có quyền truy cập vào kênh này.",
   "fjcCk5": "Đã gửi tin nhắn!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " và ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " và ",
-          [
-            1,
-            "countOthers"
-          ],
-          " người khác"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " đã chơi ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " đang chơi"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " và ",
-          [
-            1,
-            "user2"
-          ],
-          " đang chơi"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " và ",
-          [
-            1,
-            "countOthers"
-          ],
-          " người khác đang chơi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Tiếp tục",
   "2ixEBg": "Tiếp tục trên Trình duyệt",
   "79qal5": "Tự động biến đổi biểu tượng cảm xúc trong tin nhắn thành emoji",
@@ -21221,7 +21107,6 @@
     " giờ xem liên tục"
   ],
   "keY6mZ": "Người Chơi Mới",
-  "vYuyWV": "Mới Phát Hành",
   "adnLsL": "Đang Trở Lại",
   "NXBtjI": [
     "Trở lại sau ",
@@ -21542,75 +21427,6 @@
     " bài trong tuần này"
   ],
   "/50eHh": "Chơi nhiều nhất",
-  "kAlUs7": "Xu hướng",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " đang chơi ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " đang chơi một trò chơi mới: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " đã chơi ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " đã chơi một trò chơi mới: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29990,13 +29806,6 @@
   ],
   "zUoI5O": "Tìm Kếm Các Kênh Âm Thanh",
   "ieCAhI": "Các kênh chưa đọc",
-  "0ZQw/f": [
-    "Tin nhắn @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Chế Độ Tập Trung đã tắt tùy chọn này",
   "wCxBOT": "Chế Độ Tập Trung (BETA)",
   "CYVgLC": "Trong Chế Độ Tập Trung, Discord sẽ không còn hiện thông báo trên màn hình, trong ứng dụng hoặc phát âm thanh tin nhắn, giống như chế độ VLKLP vậy. Bạn có muốn chuyển sang Trực tuyến không?",
@@ -37338,6 +37147,7 @@
   "BwdeMz": "Thay Đổi Bảng Tên",
   "/6nv6O": "Thay đổi Hiệu Ứng Hồ Sơ",
   "/dRfCQ": "Thay đổi hiệu ứng",
+  "WfGV5+": "Bảng Tên của bạn",
   "TiLCg4": "Dành riêng cho Nitro",
   "t8CdeX": "Mục Chọn Hiệu Ứng Hồ Sơ",
   "9x1v/v": "Hiệu ứng của bạn",

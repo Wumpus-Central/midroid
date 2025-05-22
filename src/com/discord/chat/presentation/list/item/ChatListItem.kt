@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list.item
 
-import Q8.j
-import Q8.m
+import R8.j
+import R8.m
 import com.discord.misc.utilities.ids.IdUtilsKt
 import j1.a
 

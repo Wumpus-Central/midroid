@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Escuchando Spotify",
-  "tAwI1t": [
-    "Una tarjeta de actividad que muestra a @",
-    [
-      1,
-      "username"
-    ],
-    " jugando a ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Háblanos de tu experiencia con la actividad",
   "iSv55O": "Los controles de la actividad son confusos",
   "/8psS0": "Los controles de la actividad eran confusos",
@@ -4573,108 +4561,6 @@
   ],
   "BC5vfH": "No se ha podido enviar tu mensaje porque el propietario de la actividad no tiene acceso a este canal.",
   "fjcCk5": "¡Mensaje enviado!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " y ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " y ",
-          [
-            1,
-            "countOthers"
-          ],
-          " más"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " han jugado a ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " está jugando a"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " y ",
-          [
-            1,
-            "user2"
-          ],
-          " están jugando a"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " y ",
-          [
-            1,
-            "countOthers"
-          ],
-          " personas más están jugando a"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Continuar",
   "2ixEBg": "Continuar en navegador",
   "79qal5": "Convertir automáticamente los emoticonos de tus mensajes en emojis",
@@ -21178,7 +21064,6 @@
     " h"
   ],
   "keY6mZ": "Nuevo jugador",
-  "vYuyWV": "Nuevo lanzamiento",
   "S5F48/": [
     "Ha jugado durante ",
     [
@@ -21513,75 +21398,6 @@
     " canciones esta semana"
   ],
   "/50eHh": "Más jugado",
-  "kAlUs7": "De moda",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " está jugando a ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " está jugando a un nuevo juego: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " ha jugado a ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " ha jugado a un nuevo juego: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "Temporada ",
     [
@@ -29995,13 +29811,6 @@
   ],
   "zUoI5O": "Buscando canales de voz",
   "ieCAhI": "Canales no leídos",
-  "0ZQw/f": [
-    "Enviar mensaje a @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "El modo concentración lo ha deshabilitado",
   "wCxBOT": "Modo concentración (BETA)",
   "CYVgLC": "Con el modo concentración, Discord ya no mostrará notificaciones de la aplicación, ni notificaciones de escritorio, ni reproducirá sonidos de mensajes, igual que con No molestar. ¿Te gustaría cambiar a en línea?",
@@ -37292,6 +37101,7 @@
   "BwdeMz": "Cambiar la placa de nombre",
   "/6nv6O": "Cambiar efecto de perfil",
   "/dRfCQ": "Cambiar efecto",
+  "WfGV5+": "Tus placas de nombre",
   "TiLCg4": "Exclusivo de Nitro",
   "t8CdeX": "Sección de selección de efecto de perfil",
   "9x1v/v": "Tus efectos",

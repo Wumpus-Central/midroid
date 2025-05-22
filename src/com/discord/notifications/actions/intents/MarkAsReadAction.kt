@@ -90,16 +90,16 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = this.tag;
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var4: StringBuilder = new StringBuilder();
       var4.append("MarkAsReadAction(tag=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", messageId=");
       var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

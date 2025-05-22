@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.activities
 
-import Ja.f
+import Ka.f
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
 import kotlin.jvm.internal.q
@@ -84,8 +84,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = ApplicationId.hashCode-impl(this.applicationId);
-      val var3: Int = this.instanceId.hashCode();
+      val var3: Int = ApplicationId.hashCode-impl(this.applicationId);
+      val var4: Int = this.instanceId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.participantAvatarUris == null) {
@@ -99,28 +99,28 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var2 = this.participantsDescription.hashCode();
       }
 
-      return (((var4 * 31 + var3) * 31 + var1) * 31 + var5) * 31 + var2;
+      return (((var3 * 31 + var4) * 31 + var1) * 31 + var5) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var1: java.lang.String = ApplicationId.toString-impl(this.applicationId);
       val var4: java.lang.String = this.instanceId;
-      val var1: java.util.List = this.participantAvatarUris;
-      val var6: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var2: java.util.List = this.participantAvatarUris;
+      val var5: AppMessageEmbedImpl = this.appMessageEmbedModel;
       val var3: java.lang.String = this.participantsDescription;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActivityInstanceEmbed(applicationId=");
-      var2.append(var5);
-      var2.append(", instanceId=");
-      var2.append(var4);
-      var2.append(", participantAvatarUris=");
-      var2.append(var1);
-      var2.append(", appMessageEmbedModel=");
-      var2.append(var6);
-      var2.append(", participantsDescription=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ActivityInstanceEmbed(applicationId=");
+      var6.append(var1);
+      var6.append(", instanceId=");
+      var6.append(var4);
+      var6.append(", participantAvatarUris=");
+      var6.append(var2);
+      var6.append(", appMessageEmbedModel=");
+      var6.append(var5);
+      var6.append(", participantsDescription=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

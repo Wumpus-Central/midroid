@@ -1,6 +1,6 @@
 package com.discord.self_measured_view
 
-import Q8.s
+import R8.s
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout

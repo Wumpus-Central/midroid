@@ -67,20 +67,24 @@ internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVis
    if (VERSION.SDK_INT > 29) {
       q.e(var4);
       return var4;
+   } else if (var2) {
+      val var7: Insets = Insets.b(var0.i(), var0.k(), var0.j(), var0.h());
+      q.g(var7, "of(...)");
+      return var7;
    } else {
       var var5: Int = var1.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
       if (var5.intValue() <= 0) {
          var5 = null;
       }
 
-      val var7: Int;
+      val var8: Int;
       if (var5 != null) {
-         var7 = var1.getResources().getDimensionPixelSize(var5.intValue());
+         var8 = var1.getResources().getDimensionPixelSize(var5.intValue());
       } else {
-         var7 = 0;
+         var8 = 0;
       }
 
-      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var7);
+      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var8);
       q.g(var6, "of(...)");
       return var6;
    }

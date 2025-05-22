@@ -1,8 +1,8 @@
 package com.discord.appreview
 
-import C6.b
-import C6.c
-import F6.a
+import D6.b
+import D6.c
+import G6.a
 import Y0.d
 import Y0.e
 import android.app.Activity
@@ -44,7 +44,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
       q.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.a(var1.activity, var2.l() as b);
+         val var4: Task = var0.b(var1.activity, var2.l() as b);
          q.g(var4, "launchReviewFlow(...)");
          var4.c(new e(var1));
       } else {
@@ -72,7 +72,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    public fun executeRequest() {
       val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var1: Task = var2.b();
+      val var1: Task = var2.a();
       q.g(var1, "requestReviewFlow(...)");
       var1.c(new Y0.c(var2, this));
       var1.a(new d(this));

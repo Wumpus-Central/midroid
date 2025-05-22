@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import Ja.f
-import La.g
-import La.e.i
+import Ka.f
+import Ma.g
+import Ma.e.i
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -30,7 +30,7 @@ public enum class StaticChannelMentionType(id: String) {
    fun {
       val var0: Array<StaticChannelMentionType> = $values();
       $VALUES = var0;
-      $ENTRIES = Y8.a.a(var0);
+      $ENTRIES = Z8.a.a(var0);
    }
 
    init {

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import Ja.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -149,8 +149,8 @@ public data class SafetySystemNotificationEmbed(titleText: String,
 
    public override fun hashCode(): Int {
       val var9: Int = this.titleText.hashCode();
-      val var7: Int = this.titleIcon.hashCode();
-      val var8: Int = this.subtitleText.hashCode();
+      val var8: Int = this.titleIcon.hashCode();
+      val var7: Int = this.subtitleText.hashCode();
       val var10: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
@@ -192,47 +192,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var9 * 31 + var7) * 31 + var8) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var9 * 31 + var8) * 31 + var7) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.titleText;
-      val var6: java.lang.String = this.titleIcon;
-      val var4: java.lang.String = this.subtitleText;
-      val var8: java.lang.String = this.descriptionText;
-      val var1: java.lang.String = this.primaryCtaText;
-      val var9: java.lang.String = this.primaryCtaType;
-      val var5: java.lang.String = this.primaryCtaKey;
+      val var6: java.lang.String = this.titleText;
+      val var1: java.lang.String = this.titleIcon;
+      val var10: java.lang.String = this.subtitleText;
+      val var3: java.lang.String = this.descriptionText;
+      val var4: java.lang.String = this.primaryCtaText;
+      val var7: java.lang.String = this.primaryCtaType;
+      val var8: java.lang.String = this.primaryCtaKey;
       val var12: java.lang.String = this.secondaryCtaText;
-      val var3: java.lang.String = this.secondaryCtaType;
+      val var5: java.lang.String = this.secondaryCtaType;
       val var11: java.lang.String = this.secondaryCtaKey;
-      val var10: FooterTheme = this.footerTheme;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SafetySystemNotificationEmbed(titleText=");
-      var2.append(var7);
-      var2.append(", titleIcon=");
-      var2.append(var6);
-      var2.append(", subtitleText=");
-      var2.append(var4);
-      var2.append(", descriptionText=");
-      var2.append(var8);
-      var2.append(", primaryCtaText=");
-      var2.append(var1);
-      var2.append(", primaryCtaType=");
-      var2.append(var9);
-      var2.append(", primaryCtaKey=");
-      var2.append(var5);
-      var2.append(", secondaryCtaText=");
-      var2.append(var12);
-      var2.append(", secondaryCtaType=");
-      var2.append(var3);
-      var2.append(", secondaryCtaKey=");
-      var2.append(var11);
-      var2.append(", footerTheme=");
-      var2.append(var10);
-      var2.append(")");
-      return var2.toString();
+      val var2: FooterTheme = this.footerTheme;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("SafetySystemNotificationEmbed(titleText=");
+      var9.append(var6);
+      var9.append(", titleIcon=");
+      var9.append(var1);
+      var9.append(", subtitleText=");
+      var9.append(var10);
+      var9.append(", descriptionText=");
+      var9.append(var3);
+      var9.append(", primaryCtaText=");
+      var9.append(var4);
+      var9.append(", primaryCtaType=");
+      var9.append(var7);
+      var9.append(", primaryCtaKey=");
+      var9.append(var8);
+      var9.append(", secondaryCtaText=");
+      var9.append(var12);
+      var9.append(", secondaryCtaType=");
+      var9.append(var5);
+      var9.append(", secondaryCtaKey=");
+      var9.append(var11);
+      var9.append(", footerTheme=");
+      var9.append(var2);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

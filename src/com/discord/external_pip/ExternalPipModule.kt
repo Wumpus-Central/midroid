@@ -1,6 +1,6 @@
 package com.discord.external_pip
 
-import Q8.s
+import R8.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -65,7 +65,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return R8.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return S8.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

@@ -432,18 +432,6 @@
     ]
   ],
   "rmnkz8": "Poslouchá na Spotify",
-  "tAwI1t": [
-    "Karta aktivity zobrazující, jak @",
-    [
-      1,
-      "username"
-    ],
-    " hraje ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Popiš nám svůj dojem z aktivit",
   "iSv55O": "Ovládání aktivity je matoucí",
   "/8psS0": "Ovládání aktivity bylo matoucí",
@@ -4718,108 +4706,6 @@
   ],
   "BC5vfH": "Tvoji zprávu se nepodařilo odeslat, protože majitel aktivity nemá přístup k tomuto kanálu.",
   "fjcCk5": "Zpráva odeslána!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " hrál/a a ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " hráli a ",
-          [
-            1,
-            "countOthers"
-          ],
-          " k tomu hráli"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " hru ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " hraje"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " a ",
-          [
-            1,
-            "user2"
-          ],
-          " hrají"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " a dalších ",
-          [
-            1,
-            "countOthers"
-          ],
-          " hraje"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " hru ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Pokračovat",
   "2ixEBg": "Pokračovat v prohlížeči",
   "79qal5": "Automaticky ve zprávách převádět emotikony na emoji",
@@ -21919,7 +21805,6 @@
     " h"
   ],
   "keY6mZ": "Nový hráč",
-  "vYuyWV": "Právě vyšlo",
   "adnLsL": "Vrací se",
   "NXBtjI": [
     "Návrat po ",
@@ -22256,75 +22141,6 @@
     ]
   ],
   "/50eHh": "Nejhranější",
-  "kAlUs7": "Nyní v kurzu",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " hraje ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " hraje novou hru: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " hrál/a ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " hrál/a novou hru: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -31003,13 +30819,6 @@
   ],
   "zUoI5O": "Prohledávám hlasové kanály",
   "ieCAhI": "Nepřečtené kanály",
-  "0ZQw/f": [
-    "Poslat zprávu @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Tohle je v režimu soustředění vypnuté",
   "wCxBOT": "Režim soustředění (BETA VERZE)",
   "CYVgLC": "V režimu soustředění Discord nebude zobrazovat oznámení na ploše ani v aplikaci a nebude přehrávat zvuky zpráv – podobně jako v režimu Nerušit. Chceš přejít do režimu Online?",
@@ -38484,6 +38293,7 @@
   "BwdeMz": "Změnit jmenovku",
   "/6nv6O": "Změnit efekt profilu",
   "/dRfCQ": "Změnit efekt",
+  "WfGV5+": "Tvoje jmenovky",
   "TiLCg4": "Exkluzivní pro Nitro",
   "t8CdeX": "Sekce pro výběr efektu profilu",
   "9x1v/v": "Tvoje efekty",

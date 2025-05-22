@@ -427,18 +427,6 @@
     ]
   ],
   "rmnkz8": "Klausosi Spotify",
-  "tAwI1t": [
-    "Veiklos kortelė rodo @",
-    [
-      1,
-      "username"
-    ],
-    ", kuris (-i) žaidžia ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Papasakok apie savo patirtį su šia veikla",
   "iSv55O": "Veiklos valdikliai yra painūs",
   "/8psS0": "Veiklos valdikliai buvo painūs",
@@ -4699,107 +4687,6 @@
   ],
   "BC5vfH": "Tavo žinutės nebuvo galima išsiųsti, nes veiklos savininkas neturi prieigos prie šio kanalo.",
   "fjcCk5": "Žinutė išsiųsta!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " ir ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " ir dar ",
-          [
-            1,
-            "countOthers"
-          ]
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " žaidė ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " žaidžia"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " ir ",
-          [
-            1,
-            "user2"
-          ],
-          " žaidžia"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " ir dar ",
-          [
-            1,
-            "countOthers"
-          ],
-          " žaidžia"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Tęsti",
   "2ixEBg": "Tęsti naršyklėje",
   "79qal5": "Automatiškai keisti tekstinius jaustukus į grafinius tavo žinutėse",
@@ -21893,7 +21780,6 @@
     " val. maratonas"
   ],
   "keY6mZ": "Naujas žaidėjas",
-  "vYuyWV": "Naujas leidimas",
   "adnLsL": "Grįžo",
   "NXBtjI": [
     "Grįžai po ",
@@ -22219,75 +22105,6 @@
     " dainos (-ų) šią savaitę"
   ],
   "/50eHh": "Daugiausia žaistas",
-  "kAlUs7": "Populiariausi",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " žaidžia ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " žaidžia naują žaidimą: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " žaidė ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " žaidė naują žaidimą: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -30961,13 +30778,6 @@
   ],
   "zUoI5O": "Ieškomi Balso Kanalai",
   "ieCAhI": "Neperskaityti Kanalai",
-  "0ZQw/f": [
-    "Parašyti @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Šią funkciją išjungė Susikaupimo režimas",
   "wCxBOT": "Susikaupimo režimas (BETA)",
   "CYVgLC": "Įjungus Susikaupimo režimą, Discord neberodys pranešimų programėlėje, darbalaukio pranešimų ir išjungus žinučių garsus, kaip ir įjungus DND. Ar nori perjungti į Prisijungęs?",
@@ -38465,6 +38275,7 @@
   "BwdeMz": "Keisti vardo lentelę",
   "/6nv6O": "Keisti profilio efektą",
   "/dRfCQ": "Keisti efektą",
+  "WfGV5+": "Tavo vardo lentelės",
   "TiLCg4": "Tik su Nitro",
   "t8CdeX": "Profilio efektų pasirinkimo skiltis",
   "9x1v/v": "Tavo efektai",

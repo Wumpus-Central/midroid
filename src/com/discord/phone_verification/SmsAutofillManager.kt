@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.IntentFilter
 import androidx.core.content.b
 import kotlin.jvm.internal.q
-import o5.a
+import p5.a
 
 internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> Unit) {
    private final val context: Context
@@ -23,7 +23,7 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
    }
 
    public fun startSmsRetriever() {
-      val var1: o5.b = a.a(this.context);
+      val var1: p5.b = a.a(this.context);
       q.g(var1, "getClient(...)");
       var1.I();
    }

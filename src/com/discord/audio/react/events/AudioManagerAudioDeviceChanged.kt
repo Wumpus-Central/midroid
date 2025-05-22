@@ -1,7 +1,7 @@
 package com.discord.audio.react.events
 
-import Ja.f
-import Q8.s
+import Ka.f
+import R8.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -47,12 +47,12 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public override fun toString(): String {
-      val var2: AndroidAudioDevice = this.device;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AudioManagerAudioDeviceChanged(device=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: AndroidAudioDevice = this.device;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioManagerAudioDeviceChanged(device=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

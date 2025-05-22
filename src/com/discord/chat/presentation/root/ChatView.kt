@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.root
 
-import Q8.s
+import R8.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup

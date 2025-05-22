@@ -1,9 +1,9 @@
 package com.discord.media_player.reactevents
 
-import Ja.f
-import Ja.j
-import Q8.s
-import Qa.a
+import Ka.f
+import Ka.j
+import R8.s
+import Ra.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -50,7 +50,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
 
    public override fun serialize(): WritableMap {
       return if (this.source == null)
-         NativeMapExtensionsKt.toNativeMap(R8.q.h())
+         NativeMapExtensionsKt.toNativeMap(S8.q.h())
          else
          NativeMapExtensionsKt.nativeMapOf(s.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source))));
    }

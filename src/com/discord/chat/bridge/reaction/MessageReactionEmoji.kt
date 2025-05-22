@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.reaction
 
-import Ja.f
+import Ka.f
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
@@ -96,8 +96,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var1 = this.name.hashCode();
       }
 
-      val var5: Int = this.src.hashCode();
-      val var4: Int = this.displayName.hashCode();
+      val var4: Int = this.src.hashCode();
+      val var5: Int = this.displayName.hashCode();
       val var2: Int;
       if (this.id == null) {
          var2 = 0;
@@ -109,7 +109,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var3 = this.animated.hashCode();
       }
 
-      return (((var1 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var3;
+      return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
    }
 
    override fun renderable(): RenderableEmoji {
@@ -117,20 +117,20 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.name;
-      val var5: java.lang.String = this.src;
-      val var4: java.lang.String = this.displayName;
-      val var6: java.lang.String = this.id;
+      val var6: java.lang.String = this.name;
+      val var4: java.lang.String = this.src;
+      val var3: java.lang.String = this.displayName;
+      val var5: java.lang.String = this.id;
       val var1: java.lang.Boolean = this.animated;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MessageReactionEmoji(name=");
-      var2.append(var3);
-      var2.append(", src=");
-      var2.append(var5);
-      var2.append(", displayName=");
-      var2.append(var4);
-      var2.append(", id=");
       var2.append(var6);
+      var2.append(", src=");
+      var2.append(var4);
+      var2.append(", displayName=");
+      var2.append(var3);
+      var2.append(", id=");
+      var2.append(var5);
       var2.append(", animated=");
       var2.append(var1);
       var2.append(")");

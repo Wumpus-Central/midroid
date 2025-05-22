@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import V1.L2
+import W1.L2
 import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils

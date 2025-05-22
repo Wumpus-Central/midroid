@@ -1,6 +1,6 @@
 package com.discord.lifecycle
 
-import Q8.s
+import R8.s
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents

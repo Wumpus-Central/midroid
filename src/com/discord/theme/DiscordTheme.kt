@@ -1,6 +1,6 @@
 package com.discord.theme
 
-import Y8.a
+import Z8.a
 import kotlin.enums.EnumEntries
 
 public enum class DiscordTheme {

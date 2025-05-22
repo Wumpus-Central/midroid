@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.polls.a11y
 
-import Q8.n
+import R8.n
 import android.view.View
 import android.view.accessibility.AccessibilityEvent
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat

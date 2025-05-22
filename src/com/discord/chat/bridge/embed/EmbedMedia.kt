@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import Ja.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -116,8 +116,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var5: Int = Integer.hashCode(this.width);
-      val var6: Int = Integer.hashCode(this.height);
+      val var6: Int = Integer.hashCode(this.width);
+      val var5: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -129,34 +129,34 @@ public data class EmbedMedia(url: String,
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return (((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
+      return (((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var5: java.lang.String = this.proxyURL;
-      val var2: Int = this.width;
-      val var1: Int = this.height;
+      val var7: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
       val var6: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
+      val var5: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedMedia(url=");
-      var7.append(var4);
-      var7.append(", proxyURL=");
-      var7.append(var5);
-      var7.append(", width=");
-      var7.append(var2);
-      var7.append(", height=");
-      var7.append(var1);
-      var7.append(", placeholder=");
-      var7.append(var6);
-      var7.append(", placeholderVersion=");
-      var7.append(var8);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("EmbedMedia(url=");
+      var8.append(var7);
+      var8.append(", proxyURL=");
+      var8.append(var4);
+      var8.append(", width=");
+      var8.append(var1);
+      var8.append(", height=");
+      var8.append(var2);
+      var8.append(", placeholder=");
+      var8.append(var6);
+      var8.append(", placeholderVersion=");
+      var8.append(var5);
+      var8.append(", srcIsAnimated=");
+      var8.append(var3);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

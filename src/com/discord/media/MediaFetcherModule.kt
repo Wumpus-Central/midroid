@@ -1,6 +1,6 @@
 package com.discord.media
 
-import Q8.s
+import R8.s
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -62,13 +62,13 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
       var var3: Int;
       try {
-         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var6: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var6, "getReactApplicationContext(...)");
-         var16 = i.K0(i.I0(var7.getMedia(var6, var12, var4, var5), new Comparator() {
+         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var7: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var7, "getReactApplicationContext(...)");
+         var16 = i.K0(i.I0(var6.getMedia(var7, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return U8.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return V8.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();

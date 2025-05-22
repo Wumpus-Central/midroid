@@ -1,6 +1,6 @@
 package com.discord.nearby
 
-import Q8.s
+import R8.s
 import android.app.Activity
 import com.discord.nearby.reactevents.OnNearbyErrorEvent
 import com.discord.nearby.reactevents.OnNearbyMessageLostEvent

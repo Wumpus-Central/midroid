@@ -3,7 +3,7 @@ package com.discord.misc.utilities.intent
 import android.content.Intent
 import android.os.Parcelable
 import androidx.core.content.c
-import d9.a
+import e9.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass

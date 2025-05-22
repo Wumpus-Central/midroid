@@ -1,12 +1,12 @@
 package com.discord.misc.utilities.coroutines
 
+import Aa.S
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.v
-import za.S
 
 public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    public open val coroutineContext: CoroutineContext

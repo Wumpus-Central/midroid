@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.automod
 
-import Ja.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -162,8 +162,8 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun hashCode(): Int {
-      val var11: Int = this.header.hashCode();
-      val var10: Int = Integer.hashCode(this.headerColor);
+      val var10: Int = this.header.hashCode();
+      val var11: Int = Integer.hashCode(this.headerColor);
       val var9: Int = this.headerIconURL.hashCode();
       val var12: Int = Integer.hashCode(this.headerIconColor);
       var var8: Int = 0;
@@ -223,7 +223,7 @@ public data class AutoModerationNotification(header: String,
 
       return (
                (
-                        (((((((((var11 * 31 + var10) * 31 + var9) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
+                        (((((((((var10 * 31 + var11) * 31 + var9) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
                            + var6
                      )
@@ -235,48 +235,48 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun toString(): String {
-      val var13: java.lang.String = this.header;
+      val var12: java.lang.String = this.header;
       val var1: Int = this.headerColor;
-      val var5: java.lang.String = this.headerIconURL;
+      val var10: java.lang.String = this.headerIconURL;
       val var2: Int = this.headerIconColor;
-      val var6: java.lang.String = this.subtitleLeft;
-      val var14: java.lang.String = this.subtitleRight;
-      val var11: java.lang.String = this.body;
+      val var7: java.lang.String = this.subtitleLeft;
+      val var4: java.lang.String = this.subtitleRight;
+      val var5: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var7: java.lang.String = this.enabledByUsername;
-      val var4: java.lang.String = this.enabledByAvatarURL;
-      val var12: Int = this.enabledByColor;
-      val var10: java.lang.String = this.severity;
-      val var9: java.lang.String = this.startTime;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("AutoModerationNotification(header=");
-      var8.append(var13);
-      var8.append(", headerColor=");
-      var8.append(var1);
-      var8.append(", headerIconURL=");
-      var8.append(var5);
-      var8.append(", headerIconColor=");
-      var8.append(var2);
-      var8.append(", subtitleLeft=");
-      var8.append(var6);
-      var8.append(", subtitleRight=");
-      var8.append(var14);
-      var8.append(", body=");
-      var8.append(var11);
-      var8.append(", shouldShowActions=");
-      var8.append(var3);
-      var8.append(", enabledByUsername=");
-      var8.append(var7);
-      var8.append(", enabledByAvatarURL=");
-      var8.append(var4);
-      var8.append(", enabledByColor=");
-      var8.append(var12);
-      var8.append(", severity=");
-      var8.append(var10);
-      var8.append(", startTime=");
-      var8.append(var9);
-      var8.append(")");
-      return var8.toString();
+      val var8: java.lang.String = this.enabledByUsername;
+      val var14: java.lang.String = this.enabledByAvatarURL;
+      val var9: Int = this.enabledByColor;
+      val var13: java.lang.String = this.severity;
+      val var11: java.lang.String = this.startTime;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("AutoModerationNotification(header=");
+      var6.append(var12);
+      var6.append(", headerColor=");
+      var6.append(var1);
+      var6.append(", headerIconURL=");
+      var6.append(var10);
+      var6.append(", headerIconColor=");
+      var6.append(var2);
+      var6.append(", subtitleLeft=");
+      var6.append(var7);
+      var6.append(", subtitleRight=");
+      var6.append(var4);
+      var6.append(", body=");
+      var6.append(var5);
+      var6.append(", shouldShowActions=");
+      var6.append(var3);
+      var6.append(", enabledByUsername=");
+      var6.append(var8);
+      var6.append(", enabledByAvatarURL=");
+      var6.append(var14);
+      var6.append(", enabledByColor=");
+      var6.append(var9);
+      var6.append(", severity=");
+      var6.append(var13);
+      var6.append(", startTime=");
+      var6.append(var11);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

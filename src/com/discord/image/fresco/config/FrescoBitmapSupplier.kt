@@ -1,8 +1,8 @@
 package com.discord.image.fresco.config
 
-import a3.o
 import android.app.ActivityManager
 import android.content.Context
+import b3.o
 import com.facebook.imagepipeline.cache.MemoryCacheParams
 import kotlin.jvm.internal.q
 

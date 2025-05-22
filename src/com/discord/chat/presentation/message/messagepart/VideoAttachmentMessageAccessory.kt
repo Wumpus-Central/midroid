@@ -151,9 +151,9 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
 
    public override fun hashCode(): Int {
       val var4: Int = ChannelId.hashCode-impl(this.channelId);
-      val var6: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = MessageId.hashCode-impl(this.messageId);
       val var5: Int = Integer.hashCode(this.index);
-      val var3: Int = this.attachment.hashCode();
+      val var6: Int = this.attachment.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -162,14 +162,14 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
          var1 = this.attachmentsOpacity.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.constrainedWidth);
-      val var7: Int = Integer.hashCode(this.radiusPx);
+      val var7: Int = Integer.hashCode(this.constrainedWidth);
+      val var8: Int = Integer.hashCode(this.radiusPx);
       if (this.spoilerAttributes != null) {
          var2 = this.spoilerAttributes.hashCode();
       }
 
       return (
-               (((((((var4 * 31 + var6) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var8) * 31 + var7) * 31 + var2) * 31
+               (((((((var4 * 31 + var3) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31
                   + java.lang.Boolean.hashCode(this.useNewAltTextButton)
             )
             * 31
@@ -177,33 +177,33 @@ public data class VideoAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var10: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: Int = this.index;
-      val var7: Attachment = this.attachment;
-      val var9: java.lang.Float = this.attachmentsOpacity;
+      val var6: Attachment = this.attachment;
+      val var7: java.lang.Float = this.attachmentsOpacity;
       val var3: Int = this.constrainedWidth;
       val var1: Int = this.radiusPx;
-      val var6: SpoilerAttributes = this.spoilerAttributes;
+      val var8: SpoilerAttributes = this.spoilerAttributes;
       val var5: Boolean = this.useNewAltTextButton;
       val var4: Boolean = this.hideMediaPlayButton;
       val var11: StringBuilder = new StringBuilder();
       var11.append("VideoAttachmentMessageAccessory(channelId=");
-      var11.append(var8);
-      var11.append(", messageId=");
       var11.append(var10);
+      var11.append(", messageId=");
+      var11.append(var9);
       var11.append(", index=");
       var11.append(var2);
       var11.append(", attachment=");
-      var11.append(var7);
+      var11.append(var6);
       var11.append(", attachmentsOpacity=");
-      var11.append(var9);
+      var11.append(var7);
       var11.append(", constrainedWidth=");
       var11.append(var3);
       var11.append(", radiusPx=");
       var11.append(var1);
       var11.append(", spoilerAttributes=");
-      var11.append(var6);
+      var11.append(var8);
       var11.append(", useNewAltTextButton=");
       var11.append(var5);
       var11.append(", hideMediaPlayButton=");

@@ -1,9 +1,9 @@
 package com.discord.bundle_updater
 
-import Ma.E0
-import Ma.O
-import Ma.U
-import Q8.s
+import Na.E0
+import Na.O
+import Na.U
+import R8.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
@@ -11,7 +11,7 @@ import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
-@Ja.f
+@Ka.f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -29,7 +29,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new Ma.f(E0.a), new Ma.f(var0), null, new U(var0, O.a)};
+      $childSerializers = new KSerializer[]{null, null, new Na.f(E0.a), new Na.f(var0), null, new U(var0, O.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -148,8 +148,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = s.a("expiresAt", this.expiresAt);
-      val var3: Pair = s.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = s.a("expiresAt", this.expiresAt);
+      val var4: Pair = s.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -164,38 +164,38 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var6: Pair = s.a("allowedVersions", var9);
-      val var7: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
+      val var7: Pair = s.a("allowedVersions", var9);
+      val var6: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var6, var7, s.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var7, var6, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.expiresAt;
-      val var3: java.lang.String = this.releaseChannel;
-      val var5: java.util.List = this.validForUserIds;
-      val var1: java.util.List = this.allowedVersions;
-      val var4: java.lang.Boolean = this.allowLoggedOut;
-      val var2: java.util.Map = this.experiments;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("BuildOverrideCookieMeta(expiresAt=");
-      var6.append(var7);
-      var6.append(", releaseChannel=");
-      var6.append(var3);
-      var6.append(", validForUserIds=");
-      var6.append(var5);
-      var6.append(", allowedVersions=");
-      var6.append(var1);
-      var6.append(", allowLoggedOut=");
-      var6.append(var4);
-      var6.append(", experiments=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var2: java.lang.String = this.expiresAt;
+      val var4: java.lang.String = this.releaseChannel;
+      val var3: java.util.List = this.validForUserIds;
+      val var6: java.util.List = this.allowedVersions;
+      val var5: java.lang.Boolean = this.allowLoggedOut;
+      val var7: java.util.Map = this.experiments;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BuildOverrideCookieMeta(expiresAt=");
+      var1.append(var2);
+      var1.append(", releaseChannel=");
+      var1.append(var4);
+      var1.append(", validForUserIds=");
+      var1.append(var3);
+      var1.append(", allowedVersions=");
+      var1.append(var6);
+      var1.append(", allowLoggedOut=");
+      var1.append(var5);
+      var1.append(", experiments=");
+      var1.append(var7);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

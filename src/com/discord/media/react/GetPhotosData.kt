@@ -1,6 +1,6 @@
 package com.discord.media.react
 
-import Q8.s
+import R8.s
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt

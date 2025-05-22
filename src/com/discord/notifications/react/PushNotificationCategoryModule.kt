@@ -25,7 +25,7 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
       val var3: NotificationClient = NotificationClient.Companion.getInstance();
       val var2: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var2, "getReactApplicationContext(...)");
-      var3.initNotificationCategories(var2, NativeMapExtensionsKt.toStringMap(var1), R8.q.h());
+      var3.initNotificationCategories(var2, NativeMapExtensionsKt.toStringMap(var1), S8.q.h());
    }
 
    @ReactMethod
@@ -49,9 +49,9 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    @ReactMethod
    public fun setIncomingRingtone(name: String) {
       q.h(var1, "name");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var3.setIncomingRingtone(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.setIncomingRingtone(var3, var1);
    }
 }

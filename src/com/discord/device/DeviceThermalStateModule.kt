@@ -1,6 +1,6 @@
 package com.discord.device
 
-import Q8.s
+import R8.s
 import android.os.PowerManager
 import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceThermalStateModuleSpec

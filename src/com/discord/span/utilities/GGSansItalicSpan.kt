@@ -1,7 +1,7 @@
 package com.discord.span.utilities
 
-import S1.c
-import S1.d
+import T1.c
+import T1.d
 import android.content.Context
 import android.graphics.Paint
 import android.graphics.Typeface

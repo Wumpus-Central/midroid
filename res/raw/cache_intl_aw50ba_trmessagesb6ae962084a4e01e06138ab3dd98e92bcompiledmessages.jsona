@@ -412,19 +412,6 @@
     ]
   ],
   "rmnkz8": "Spotify dinliyor",
-  "tAwI1t": [
-    "@",
-    [
-      1,
-      "username"
-    ],
-    " kullanıcısının ",
-    [
-      1,
-      "activity"
-    ],
-    " oynadığını gösteren etkinlik kartı"
-  ],
   "9hk2KC": "Bize etkinlik deneyiminden bahset",
   "iSv55O": "Etkinlik kontrolleri kafa karıştırıcı",
   "/8psS0": "Etkinlik kontrolleri kafa karıştırıcıydı",
@@ -4547,57 +4534,6 @@
   ],
   "BC5vfH": "Etkinlik sahibinin bu kanala erişimi olmadığı için mesajın gönderilemedi.",
   "fjcCk5": "Mesaj gönderildi!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          ", ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " ve ",
-          [
-            1,
-            "countOthers"
-          ],
-          " diğer kişi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " oynadı"
-  ],
   "3PatS0": "Devam Et",
   "2ixEBg": "Tarayıcıda Devam Et",
   "79qal5": "Mesajındaki ifadeleri otomatik olarak emojiye dönüştür.",
@@ -21186,7 +21122,6 @@
     ],
     " Saatlik Maraton"
   ],
-  "vYuyWV": "Yeni Çıkan",
   "adnLsL": "Geri Döndü",
   "NXBtjI": [
     [
@@ -21507,77 +21442,6 @@
     " parça"
   ],
   "/50eHh": "En Çok Oynanan",
-  "kAlUs7": "Popüler",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    ", ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " oynuyor"
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " yeni bir oyun oynuyor: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    ", ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " oynadı"
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " yeni bir oyun oynadı: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29902,14 +29766,6 @@
   ],
   "zUoI5O": "Ses Kanalları Aranıyor",
   "ieCAhI": "Okunmamış Kanallar",
-  "0ZQw/f": [
-    "@",
-    [
-      1,
-      "name"
-    ],
-    " kullanıcısına mesaj gönder"
-  ],
   "cIRG0t": "Odak Modu tarafından devre dışı bırakıldı",
   "wCxBOT": "Odak Modu (BETA)",
   "CYVgLC": "Discord, Odak Modu açıkken uygulama içi veya masaüstü bildirimlerini göstermeyecek ve mesaj sesi oynatmayacak, tıpkı Rahatsız Etmeyin'deki gibi. Çevrim içine geçmek ister misin?",
@@ -37215,6 +37071,7 @@
   "BwdeMz": "İsim Plakasını Değiştir",
   "/6nv6O": "Profil Efektini Değiştir",
   "/dRfCQ": "Efekti Değiştir",
+  "WfGV5+": "İsim Plakaların",
   "TiLCg4": "Nitro'ya Özel",
   "t8CdeX": "Profil Efekti Seçim Bölümü",
   "9x1v/v": "Efektlerin",

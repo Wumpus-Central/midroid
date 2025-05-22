@@ -415,18 +415,6 @@
     ]
   ],
   "rmnkz8": "Lytter til Spotify",
-  "tAwI1t": [
-    "Et aktivitetskort som viser @",
-    [
-      1,
-      "username"
-    ],
-    " spille ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Fortell oss om opplevelsen med aktiviteten",
   "iSv55O": "Det er forvirrende kontroller i aktiviteten",
   "/8psS0": "Det var forvirrende kontroller i aktiviteten",
@@ -4541,108 +4529,6 @@
   ],
   "BC5vfH": "Meldingen din kunne ikke sendes fordi aktivitetens eier ikke har tilgang til denne kanalen.",
   "fjcCk5": "Melding sendt!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andre"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " spilte ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " spiller"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "user2"
-          ],
-          " spiller"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andre spiller"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Fortsett",
   "2ixEBg": "Fortsett i nettleser",
   "79qal5": "Oversett automatisk uttrykksikoner til emojier i meldinger",
@@ -21136,7 +21022,6 @@
     " t maraton"
   ],
   "keY6mZ": "Ny spiller",
-  "vYuyWV": "Ny utgivelse",
   "adnLsL": "Tilbakevendende",
   "NXBtjI": [
     "Tilbake etter ",
@@ -21456,75 +21341,6 @@
     " låter denne uken"
   ],
   "/50eHh": "Mest spilt",
-  "kAlUs7": "Populært",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " spiller ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " spiller et nytt spill: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " spilte ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " spilte et nytt spill: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29879,13 +29695,6 @@
   ],
   "zUoI5O": "Søker etter talekanaler",
   "ieCAhI": "Uleste kanaler",
-  "0ZQw/f": [
-    "Send melding til @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Dette blir deaktivert av Fokusmodus",
   "wCxBOT": "Fokusmodus (BETA)",
   "CYVgLC": "Når du er i Fokusmodus, viser ikke Discord deg varsler og spiller ikke meldingslyder, akkurat som med ikke forstyrr. Vil du endre til pålogget?",
@@ -37212,6 +37021,7 @@
   "BwdeMz": "Endre navneskilt",
   "/6nv6O": "Bytt profileffekt",
   "/dRfCQ": "Bytt effekt",
+  "WfGV5+": "Navneskiltene dine",
   "TiLCg4": "Eksklusivt for Nitro",
   "t8CdeX": "Del for valg av profileffekt",
   "9x1v/v": "Effektene dine",

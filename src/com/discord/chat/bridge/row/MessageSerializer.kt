@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.row
 
-import La.g
-import La.e.i
-import Q8.c
+import Ma.g
+import Ma.e.i
+import R8.c
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageBase
@@ -29,11 +29,11 @@ public object MessageSerializer : KSerializer {
          var6 = var1.C(Message.Companion.serializer()) as MessageBase;
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
-         val var5: UUID = UUID.randomUUID();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("RENDERING_ERROR_");
-         var3.append(var5);
-         var6 = new ErrorMessage(MessageId.constructor-impl(var3.toString()), c.b(var4), null);
+         val var3: UUID = UUID.randomUUID();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("RENDERING_ERROR_");
+         var5.append(var3);
+         var6 = new ErrorMessage(MessageId.constructor-impl(var5.toString()), c.b(var4), null);
       }
 
       return (MessageBase)var6;

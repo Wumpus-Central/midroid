@@ -1,7 +1,7 @@
 package com.discord.analytics
 
 import Q0.a
-import X8.b
+import Y8.b
 import com.android.installreferrer.api.InstallReferrerClient
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
@@ -36,7 +36,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.f(
+   var2.e(
       new Function1(var0) {
          final InstallReferrerClient $this_await;
 
@@ -64,24 +64,24 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var3: kotlin.Result.a = Result.k;
+      val var10: kotlin.Result.a = Result.k;
       var0.d(var4);
-      var8 = Result.b(Unit.a);
+      var7 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var7: kotlin.Result.a = Result.k;
-      var8 = Result.b(c.a(var5));
+      val var3: kotlin.Result.a = Result.k;
+      var7 = Result.b(c.a(var5));
       break label20;
    }
 
-   val var9: java.lang.Throwable = Result.e(var8);
-   if (var9 != null) {
-      var2.resumeWith(Result.b(c.a(var9)));
+   val var8: java.lang.Throwable = Result.e(var7);
+   if (var8 != null) {
+      var2.resumeWith(Result.b(c.a(var8)));
    }
 
-   val var10: Any = var2.z();
-   if (var10 === b.e()) {
+   val var9: Any = var2.z();
+   if (var9 === b.e()) {
       g.c(var1);
    }
 
-   return var10;
+   return var9;
 }

@@ -1,6 +1,6 @@
 package com.discord.device
 
-import Q8.s
+import R8.s
 import android.os.LocaleList
 import com.discord.codegen.NativeDeviceLocaleModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
@@ -21,22 +21,22 @@ internal class DeviceLocaleModule(reactContext: ReactApplicationContext) : Nativ
       var var2: Int = 10;
 
       for (int var1 = 0; var1 < var3; var1++) {
-         val var6: java.lang.String = var7.get(var1).toLanguageTag();
+         val var4: java.lang.String = var7.get(var1).toLanguageTag();
          if (var1 == 0) {
-            q.e(var6);
-            var5.add(var6);
+            q.e(var4);
+            var5.add(var4);
          } else {
-            val var4: StringBuilder = new StringBuilder();
-            var4.append(var6);
-            var4.append(";q=0.");
-            var4.append(var2);
-            var5.add(var4.toString());
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var4);
+            var6.append(";q=0.");
+            var6.append(var2);
+            var5.add(var6.toString());
          }
 
          var2 = kotlin.ranges.d.c(1, var2 - 1);
       }
 
       i.o0(var5, ",", null, null, 0, null, null, 62, null);
-      return R8.q.m(new Pair[]{s.a("Language", i.f0(var5)), s.a("Languages", var5)});
+      return S8.q.m(new Pair[]{s.a("Language", i.f0(var5)), s.a("Languages", var5)});
    }
 }

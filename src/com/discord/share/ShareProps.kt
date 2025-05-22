@@ -1,7 +1,7 @@
 package com.discord.share
 
 import D.d
-import Q8.s
+import R8.s
 import android.content.ContentResolver
 import android.content.Context
 import android.content.Intent
@@ -111,21 +111,21 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.text;
-      val var1: java.util.List = this.attachments;
+      val var3: java.lang.String = this.text;
+      val var4: java.util.List = this.attachments;
       val var5: java.lang.String = this.targetChannelId;
-      val var4: java.lang.String = this.targetUserId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ShareProps(text=");
-      var3.append(var2);
-      var3.append(", attachments=");
-      var3.append(var1);
-      var3.append(", targetChannelId=");
-      var3.append(var5);
-      var3.append(", targetUserId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.targetUserId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ShareProps(text=");
+      var2.append(var3);
+      var2.append(", attachments=");
+      var2.append(var4);
+      var2.append(", targetChannelId=");
+      var2.append(var5);
+      var2.append(", targetUserId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -195,18 +195,18 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.name;
-         val var1: java.lang.String = this.uri;
+         val var3: java.lang.String = this.name;
+         val var2: java.lang.String = this.uri;
          val var4: java.lang.String = this.mimeType;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Attachment(name=");
-         var3.append(var2);
-         var3.append(", uri=");
-         var3.append(var1);
-         var3.append(", mimeType=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Attachment(name=");
+         var1.append(var3);
+         var1.append(", uri=");
+         var1.append(var2);
+         var1.append(", mimeType=");
+         var1.append(var4);
+         var1.append(")");
+         return var1.toString();
       }
    }
 

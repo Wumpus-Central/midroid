@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list.delegate
 
-import Q8.n
+import R8.n
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton

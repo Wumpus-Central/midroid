@@ -1,7 +1,7 @@
 package com.discord.file_downloader
 
-import Ca.e
-import Q8.j
+import Da.e
+import R8.j
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
 import java.io.File
@@ -38,7 +38,7 @@ public object FileDownloader {
       }).c();
    }
 
-   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = R8.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
+   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = S8.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
       q.h(var1, "fileUrl");
       q.h(var2, "headers");
       q.h(var3, "client");

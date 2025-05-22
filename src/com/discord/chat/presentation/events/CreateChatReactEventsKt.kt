@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.events
 
-import Q8.s
+import R8.s
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.FirstLayoutData

@@ -42,7 +42,7 @@ import kotlinx.coroutines.CoroutineScope
 
 public class IncomingCallActivity : AppCompatActivity {
    private fun configureActions() {
-      za.f.f(
+      Aa.f.f(
          null,
          new Function2(this, null) {
             private Object L$0;
@@ -133,13 +133,12 @@ public class IncomingCallActivity : AppCompatActivity {
             }
 
             public final Object invokeSuspend(Object var1) {
-               var var9: Any = X8.b.e();
-               val var3x: ImageButton;
+               var var5: ImageView = (ImageView)Y8.b.e();
+               var var3x: ImageButton;
                val var4: TextView;
-               val var5: ImageButton;
-               val var6: DismissCallAction;
+               val var6: ContentAction;
                val var7: TextView;
-               var var8: Any;
+               var var9: Any;
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -149,37 +148,37 @@ public class IncomingCallActivity : AppCompatActivity {
                   var7 = this.L$4 as TextView;
                   var3x = this.L$3 as ImageButton;
                   var5 = this.L$2 as ImageButton;
-                  var6 = this.L$1 as DismissCallAction;
-                  var9 = this.L$0 as ContentAction;
+                  val var8: DismissCallAction = this.L$1 as DismissCallAction;
+                  var6 = this.L$0 as ContentAction;
                   kotlin.c.b(var1);
-                  var8 = var1;
-                  var1 = (ContentAction)var9;
+                  var9 = var1;
+                  var1 = var8;
                } else {
                   kotlin.c.b(var1);
-                  var8 = this.L$0 as CoroutineScope;
+                  var9 = this.L$0 as CoroutineScope;
                   val var15: Any = com.discord.notifications.renderer.e.a(this.this$0.getIntent(), "acceptAction", ContentAction.class);
                   q.f(var15, "null cannot be cast to non-null type com.discord.notifications.actions.intents.ContentAction");
-                  var1 = var15 as ContentAction;
+                  var6 = var15 as ContentAction;
                   val var16: Any = com.discord.notifications.renderer.e.a(this.this$0.getIntent(), "dismissAction", DismissCallAction.class);
                   q.f(var16, "null cannot be cast to non-null type com.discord.notifications.actions.intents.DismissCallAction");
-                  var6 = var16 as DismissCallAction;
-                  var5 = this.this$0.findViewById(R.id.acceptCallContainer);
-                  var3x = this.this$0.findViewById(R.id.declineCallContainer);
+                  var1 = var16 as DismissCallAction;
+                  var3x = this.this$0.findViewById(R.id.acceptCallContainer);
+                  val var20: ImageButton = this.this$0.findViewById(R.id.declineCallContainer);
                   var7 = this.this$0.findViewById(R.id.acceptCallText);
                   var4 = this.this$0.findViewById(R.id.declineCallText);
                   val var10: Context = this.this$0.getApplicationContext();
                   q.g(var10, "getApplicationContext(...)");
-                  var var12: ReactAsset = ReactAsset.CallDisconnect;
+                  val var12: ReactAsset = ReactAsset.CallDisconnect;
                   var var11: Context = this.this$0.getApplicationContext();
                   q.g(var11, "getApplicationContext(...)");
-                  val var30: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var12.getUri(var11));
-                  val var13: Context = this.this$0.getApplicationContext();
-                  q.g(var13, "getApplicationContext(...)");
-                  var12 = ReactAsset.CallConnect;
+                  val var32: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var10, var12.getUri(var11));
                   var11 = this.this$0.getApplicationContext();
                   q.g(var11, "getApplicationContext(...)");
-                  val var34: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var13, var12.getUri(var11));
-                  val var32: za.G = za.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var30, null) {
+                  val var13: ReactAsset = ReactAsset.CallConnect;
+                  val var37: Context = this.this$0.getApplicationContext();
+                  q.g(var37, "getApplicationContext(...)");
+                  val var36: java.lang.String = ReactAssetUtilsKt.getReactImageUrl(var11, var13.getUri(var37));
+                  val var34: Aa.G = Aa.f.b((CoroutineScope)var9, null, null, new Function2(this.this$0, var32, null) {
                      final java.lang.String $callDisconnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -199,7 +198,7 @@ public class IncomingCallActivity : AppCompatActivity {
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var4: Any = X8.b.e();
+                        val var4: Any = Y8.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -208,10 +207,10 @@ public class IncomingCallActivity : AppCompatActivity {
                            kotlin.c.b(var1);
                         } else {
                            kotlin.c.b(var1);
-                           var var3: IncomingCallActivity = this.this$0;
-                           var1 = this.$callDisconnectUrl;
+                           var1 = this.this$0;
+                           var var3: java.lang.String = this.$callDisconnectUrl;
                            this.label = 1;
-                           var3 = (IncomingCallActivity)IncomingCallActivity.access$fetchImage(var3, var1, this);
+                           var3 = (java.lang.String)IncomingCallActivity.access$fetchImage(var1, var3, this);
                            var1 = var3;
                            if (var3 === var4) {
                               return var4;
@@ -221,7 +220,7 @@ public class IncomingCallActivity : AppCompatActivity {
                         return var1;
                      }
                   }, 3, null);
-                  var8 = za.f.b((CoroutineScope)var8, null, null, new Function2(this.this$0, var34, null) {
+                  var9 = Aa.f.b((CoroutineScope)var9, null, null, new Function2(this.this$0, var36, null) {
                      final java.lang.String $callConnectUrl;
                      int label;
                      final IncomingCallActivity this$0;
@@ -241,7 +240,7 @@ public class IncomingCallActivity : AppCompatActivity {
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var4: Any = X8.b.e();
+                        val var4: Any = Y8.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -250,10 +249,10 @@ public class IncomingCallActivity : AppCompatActivity {
                            kotlin.c.b(var1);
                         } else {
                            kotlin.c.b(var1);
-                           var1 = this.this$0;
-                           var var3: java.lang.String = this.$callConnectUrl;
+                           var var3: IncomingCallActivity = this.this$0;
+                           var1 = this.$callConnectUrl;
                            this.label = 1;
-                           var3 = (java.lang.String)IncomingCallActivity.access$fetchImage(var1, var3, this);
+                           var3 = (IncomingCallActivity)IncomingCallActivity.access$fetchImage(var3, var1, this);
                            var1 = var3;
                            if (var3 === var4) {
                               return var4;
@@ -263,54 +262,57 @@ public class IncomingCallActivity : AppCompatActivity {
                         return var1;
                      }
                   }, 3, null);
-                  this.L$0 = var1;
-                  this.L$1 = var6;
-                  this.L$2 = var5;
-                  this.L$3 = var3x;
+                  this.L$0 = var6;
+                  this.L$1 = var1;
+                  this.L$2 = var3x;
+                  this.L$3 = var20;
                   this.L$4 = var7;
                   this.L$5 = var4;
                   this.label = 1;
-                  var8 = za.d.b(new za.G[]{var32, (za.G)var8}, this);
-                  if (var8 === var9) {
-                     return var9;
+                  var9 = Aa.d.b(new Aa.G[]{var34, (Aa.G)var9}, this);
+                  if (var9 === var5) {
+                     return var5;
                   }
+
+                  var5 = var3x;
+                  var3x = var20;
                }
 
-               var9 = (var8 as java.util.List).get(0) as Bitmap;
-               var8 = (var8 as java.util.List).get(1) as Bitmap;
-               q.e(var9);
-               var9 = Bitmap.createScaledBitmap((Bitmap)var9, 110, 110, true);
+               val var30: Bitmap = (var9 as java.util.List).get(0) as Bitmap;
+               var var22: Bitmap = (var9 as java.util.List).get(1) as Bitmap;
+               q.e(var30);
+               var9 = Bitmap.createScaledBitmap(var30, 110, 110, true);
                q.g(var9, "createScaledBitmap(...)");
                var3x.setImageBitmap((Bitmap)var9);
                var3x.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
-               q.e(var8);
-               var8 = Bitmap.createScaledBitmap((Bitmap)var8, 110, 110, true);
-               q.g(var8, "createScaledBitmap(...)");
-               var5.setImageBitmap((Bitmap)var8);
+               q.e(var22);
+               var22 = Bitmap.createScaledBitmap(var22, 110, 110, true);
+               q.g(var22, "createScaledBitmap(...)");
+               var5.setImageBitmap(var22);
                var5.setImageTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getWhite()));
-               var8 = this.this$0.getApplicationContext();
-               q.g(var8, "getApplicationContext(...)");
-               var5.setContentDescription(I18nUtilsKt.i18nFormat$default((Context)var8, I18nMessage.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT, null, 2, null));
+               val var24: Context = this.this$0.getApplicationContext();
+               q.g(var24, "getApplicationContext(...)");
+               var5.setContentDescription(I18nUtilsKt.i18nFormat$default(var24, I18nMessage.KEYBIND_DESCRIPTION_MODAL_CALL_ACCEPT, null, 2, null));
                var5.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getStatusPositive()));
-               var8 = this.this$0.getApplicationContext();
-               q.g(var8, "getApplicationContext(...)");
-               var3x.setContentDescription(I18nUtilsKt.i18nFormat$default((Context)var8, I18nMessage.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE, null, 2, null));
+               val var25: Context = this.this$0.getApplicationContext();
+               q.g(var25, "getApplicationContext(...)");
+               var3x.setContentDescription(I18nUtilsKt.i18nFormat$default(var25, I18nMessage.KEYBIND_DESCRIPTION_MODAL_CALL_DECLINE, null, 2, null));
                var3x.setBackgroundTintList(ColorStateList.valueOf(ThemeManagerKt.getTheme().getStatusDanger()));
-               var8 = this.this$0.getApplicationContext();
-               q.g(var8, "getApplicationContext(...)");
-               var7.setText(I18nUtilsKt.i18nFormat$default((Context)var8, I18nMessage.JOIN_CALL, null, 2, null));
+               val var26: Context = this.this$0.getApplicationContext();
+               q.g(var26, "getApplicationContext(...)");
+               var7.setText(I18nUtilsKt.i18nFormat$default(var26, I18nMessage.JOIN_CALL, null, 2, null));
                q.e(var7);
-               var8 = DiscordFont.PrimaryMedium;
+               val var27: DiscordFont = DiscordFont.PrimaryMedium;
                DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimaryMedium);
                var7.setTextColor(ThemeManagerKt.getTheme().getWhite());
-               val var17: Context = this.this$0.getApplicationContext();
-               q.g(var17, "getApplicationContext(...)");
-               var4.setText(I18nUtilsKt.i18nFormat$default(var17, I18nMessage.DECLINE, null, 2, null));
+               val var19: Context = this.this$0.getApplicationContext();
+               q.g(var19, "getApplicationContext(...)");
+               var4.setText(I18nUtilsKt.i18nFormat$default(var19, I18nMessage.DECLINE, null, 2, null));
                q.e(var4);
-               DiscordFontUtilsKt.setDiscordFont(var4, (DiscordFont)var8);
+               DiscordFontUtilsKt.setDiscordFont(var4, var27);
                var4.setTextColor(ThemeManagerKt.getTheme().getWhite());
-               var5.setOnClickListener(new f(this.this$0, var1));
-               var3x.setOnClickListener(new g(this.this$0, var6));
+               var5.setOnClickListener(new f(this.this$0, var6));
+               var3x.setOnClickListener(new g(this.this$0, var1));
                return Unit.a;
             }
          },
@@ -320,7 +322,7 @@ public class IncomingCallActivity : AppCompatActivity {
    }
 
    private fun configureUser() {
-      za.f.f(
+      Aa.f.f(
          null,
          new Function2(this, null) {
             private Object L$0;
@@ -343,7 +345,7 @@ public class IncomingCallActivity : AppCompatActivity {
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = X8.b.e();
+               val var5: Any = Y8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -351,12 +353,12 @@ public class IncomingCallActivity : AppCompatActivity {
 
                   kotlin.c.b(var1);
                } else {
-                  var var6: java.lang.String;
-                  var var7: CoroutineScope;
+                  var var6: CoroutineScope;
+                  var var7: java.lang.String;
                   label27: {
                      kotlin.c.b(var1);
-                     var7 = this.L$0 as CoroutineScope;
-                     var6 = this.this$0.getIntent().getStringExtra("username");
+                     var6 = this.L$0 as CoroutineScope;
+                     var7 = this.this$0.getIntent().getStringExtra("username");
                      val var11: java.lang.String = this.this$0.getIntent().getStringExtra("userId");
                      if (var11 != null) {
                         val var12: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var11);
@@ -369,8 +371,8 @@ public class IncomingCallActivity : AppCompatActivity {
                      var1 = null;
                   }
 
-                  val var9: java.lang.String = this.this$0.getIntent().getStringExtra("userAvatar");
-                  val var8: java.lang.String = this.this$0.getIntent().getStringExtra("userGuildAvatar");
+                  val var8: java.lang.String = this.this$0.getIntent().getStringExtra("userAvatar");
+                  val var9: java.lang.String = this.this$0.getIntent().getStringExtra("userGuildAvatar");
                   val var16: Int = this.this$0.getIntent().getIntExtra("userDiscriminator", 0);
                   val var10: java.lang.String = this.this$0.getIntent().getStringExtra("guildId");
                   var var3x: GuildId = null;
@@ -383,15 +385,15 @@ public class IncomingCallActivity : AppCompatActivity {
                   }
 
                   val var18: TextView = this.this$0.findViewById(R.id.userName);
-                  var18.setText(var6);
+                  var18.setText(var7);
                   q.e(var18);
                   DiscordFontUtilsKt.setDiscordFont(var18, DiscordFont.PrimaryMedium);
                   var18.setTextColor(ThemeManagerKt.getTheme().getWhite());
-                  val var14: za.G = za.f.b(
-                     var7,
+                  val var14: Aa.G = Aa.f.b(
+                     var6,
                      null,
                      null,
-                     new Function2(this.this$0, var8, var3x, var1, var9, var16, null) {
+                     new Function2(this.this$0, var9, var3x, var1, var8, var16, null) {
                         final GuildId $guildId;
                         final java.lang.String $userAvatar;
                         final int $userDiscriminator;
@@ -421,7 +423,7 @@ public class IncomingCallActivity : AppCompatActivity {
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           val var4: Any = X8.b.e();
+                           val var4: Any = Y8.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -451,7 +453,7 @@ public class IncomingCallActivity : AppCompatActivity {
                      null
                   );
                   this.label = 1;
-                  var3x = (GuildId)za.d.b(new za.G[]{var14}, this);
+                  var3x = (GuildId)Aa.d.b(new Aa.G[]{var14}, this);
                   var1 = var3x;
                   if (var3x === var5) {
                      return var5;
@@ -486,7 +488,7 @@ public class IncomingCallActivity : AppCompatActivity {
    }
 
    private fun initView() {
-      za.f.f(null, new Function2(this, null) {
+      Aa.f.f(null, new Function2(this, null) {
          int label;
          final IncomingCallActivity this$0;
 
@@ -504,7 +506,7 @@ public class IncomingCallActivity : AppCompatActivity {
          }
 
          public final Object invokeSuspend(Object var1) {
-            X8.b.e();
+            Y8.b.e();
             if (this.label == 0) {
                kotlin.c.b(var1);
                val var2x: Boolean = this.this$0.getIntent().getBooleanExtra("isDM", false);

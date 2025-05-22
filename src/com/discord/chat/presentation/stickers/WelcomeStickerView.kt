@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.stickers
 
-import Q8.n
+import R8.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater

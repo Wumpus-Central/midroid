@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Listening to Spotify",
-  "tAwI1t": [
-    "An activity card showing @",
-    [
-      1,
-      "username"
-    ],
-    " playing ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Tell us about your activity experience",
   "iSv55O": "Activity controls are confusing",
   "/8psS0": "Activity controls were confusing",
@@ -1275,7 +1263,7 @@
   "9mg7g4": "Prismatic Waves",
   "yxJB9P": "In Rainbows",
   "anqaFR": "Limited-time",
-  "c76eo6": "An error has occured. Please try again soon.",
+  "c76eo6": "An error has occurred. Please try again soon.",
   "hGBbFx": "WHAM",
   "NkshQk": "Charcoal",
   "G2W309": "Ceramic",
@@ -4607,108 +4595,6 @@
   ],
   "BC5vfH": "Your message couldn't be sent because the activity's owner does not have access to this channel.",
   "fjcCk5": "Message sent!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "countOthers"
-          ],
-          " others"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " played ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " is playing"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "user2"
-          ],
-          " are playing"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "countOthers"
-          ],
-          " others are playing"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Continue",
   "2ixEBg": "Continue in Browser",
   "79qal5": "Automatically convert emoticons in your messages to emoji",
@@ -21712,7 +21598,6 @@
     "h Marathon"
   ],
   "keY6mZ": "New Player",
-  "vYuyWV": "New Release",
   "S5F48/": [
     "Played for ",
     [
@@ -22040,75 +21925,6 @@
     " tracks this week"
   ],
   "/50eHh": "Most played",
-  "kAlUs7": "Trending",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " is playing ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " is playing a new game: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " played ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " played a new game: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -30609,13 +30425,6 @@
   ],
   "zUoI5O": "Searching Voice Channels",
   "ieCAhI": "Unread Channels",
-  "0ZQw/f": [
-    "Message @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "This is disabled by Focus Mode",
   "wCxBOT": "Focus Mode (BETA)",
   "CYVgLC": "With Focus Mode, Discord will no longer show in-app, desktop notifications or play message sounds, just like with DND. Would you like to switch to Online?",
@@ -32680,7 +32489,7 @@
   "PMeb/v": "Get local crisis support.",
   "HQ2nKi": "Visit Throughline Care",
   "9e0wLi": "Unignore",
-  "LLBnNj": "Take a break with som lofi beats",
+  "LLBnNj": "Take a break with some lofi beats",
   "syuaPD": "Vibe with Wumpus",
   "rpc2qq": "Open Safety Tools",
   "2uYViI": [
@@ -38093,6 +37902,8 @@
   "BwdeMz": "Change Nameplate",
   "/6nv6O": "Change Profile Effect",
   "/dRfCQ": "Change Effect",
+  "TV7tWF": "Nameplates Selection Section",
+  "WfGV5+": "Your Nameplates",
   "TiLCg4": "Exclusive to Nitro",
   "t8CdeX": "Profile Effect Selection Section",
   "9x1v/v": "Your Effects",
@@ -38649,7 +38460,7 @@
   "hP6+09": "Hold to record",
   "q22XnZ": "External Device",
   "CxyS19": "This Phone",
-  "uv1tVl": "Somone has a weak connection",
+  "uv1tVl": "Someone has a weak connection",
   "gQ14+v": "Some participants will be audio only.",
   "pGJ1Q0": [
     [

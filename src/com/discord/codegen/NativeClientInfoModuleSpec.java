@@ -7,7 +7,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
-import u3.a;
+import v3.a;
 
 public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeClientInfoModule";
@@ -18,7 +18,7 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var2 = new HashSet<>(
             Arrays.asList(
@@ -35,20 +35,20 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
             )
          );
          HashSet var3 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var1 = new HashSet(var4.keySet());
-         var1.removeAll(var2);
-         var1.removeAll(var3);
-         if (!var1.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
+         HashSet var4 = new HashSet(var1.keySet());
+         var4.removeAll(var2);
+         var4.removeAll(var3);
+         if (!var4.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
          }
 
-         var2.removeAll(var4.keySet());
+         var2.removeAll(var1.keySet());
          if (!var2.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var2));
          }
       }
 
-      return var4;
+      return var1;
    }
 
    public String getName() {

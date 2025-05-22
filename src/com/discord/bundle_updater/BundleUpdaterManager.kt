@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import Q8.s
+import R8.s
 import android.app.Activity
 import android.app.Application
 import android.view.View

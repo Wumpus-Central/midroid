@@ -23,7 +23,7 @@ private fun ChatListAction.label(): String {
       var1 = "ScrollTo";
    } else {
       if (var0 !is ChatListAction.StickToBottomIfAtBottom) {
-         throw new Q8.n();
+         throw new R8.n();
       }
 
       var1 = "StickToBottomIfAtBottom";
@@ -42,13 +42,13 @@ private fun ListOperation.label(): String {
       var3.append(")");
       var4 = var3.toString();
    } else if (var0 is ListOperation.InsertRange) {
-      val var2: Int = (var0 as ListOperation.InsertRange).getFirst();
-      val var13: Int = (var0 as ListOperation.InsertRange).getLast();
+      val var13: Int = (var0 as ListOperation.InsertRange).getFirst();
+      val var2: Int = (var0 as ListOperation.InsertRange).getLast();
       val var6: StringBuilder = new StringBuilder();
       var6.append("IRNG(");
-      var6.append(var2);
-      var6.append("-");
       var6.append(var13);
+      var6.append("-");
+      var6.append(var2);
       var6.append(")");
       var4 = var6.toString();
    } else if (var0 is ListOperation.Remove) {
@@ -77,7 +77,7 @@ private fun ListOperation.label(): String {
       var4 = var10.toString();
    } else {
       if (var0 !is ListOperation.ChangeRange) {
-         throw new Q8.n();
+         throw new R8.n();
       }
 
       val var19: Int = (var0 as ListOperation.ChangeRange).getFirst();

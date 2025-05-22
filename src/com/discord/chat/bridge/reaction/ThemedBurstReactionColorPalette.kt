@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.reaction
 
-import Ja.f
+import Ka.f
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer

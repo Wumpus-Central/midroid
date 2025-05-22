@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.referencedmessage
 
-import Ja.f
+import Ka.f
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.q

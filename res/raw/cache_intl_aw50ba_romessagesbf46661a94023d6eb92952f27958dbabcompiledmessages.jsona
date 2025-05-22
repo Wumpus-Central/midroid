@@ -415,18 +415,6 @@
     ]
   ],
   "rmnkz8": "Ascultă pe Spotify",
-  "tAwI1t": [
-    "O carte de activitate cu @",
-    [
-      1,
-      "username"
-    ],
-    " jucând ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Spune-ne despre experiența ta cu această activitate",
   "iSv55O": "Controalele activității nu sunt clare",
   "/8psS0": "Controalele activității nu au fost clare",
@@ -4534,108 +4522,6 @@
   ],
   "BC5vfH": "Mesajul tău nu s-a putut trimite deoarece proprietarul activității nu are acces la acest canal.",
   "fjcCk5": "Mesaj trimis!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " a jucat și ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " au jucat și încă ",
-          [
-            1,
-            "countOthers"
-          ],
-          " au jucat"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " se joacă"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " și ",
-          [
-            1,
-            "user2"
-          ],
-          " se joacă"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " și încă ",
-          [
-            1,
-            "countOthers"
-          ],
-          " se joacă"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Continuă",
   "2ixEBg": "Continuă în browser",
   "79qal5": "Transformă automat emoticon-urile din mesajele tale în emoji",
@@ -21177,7 +21063,6 @@
     " ore"
   ],
   "keY6mZ": "Jucător nou",
-  "vYuyWV": "Lansare nouă",
   "adnLsL": "Revenire",
   "NXBtjI": [
     "Revenire după ",
@@ -21503,75 +21388,6 @@
     " melodii săptămâna asta"
   ],
   "/50eHh": "Jucat cel mai mult",
-  "kAlUs7": "În tendințe",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " joacă ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " joacă un joc nou: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " a jucat ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " a jucat un joc nou: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29921,13 +29737,6 @@
   ],
   "zUoI5O": "Se caută canale de voce",
   "ieCAhI": "Canale necitite",
-  "0ZQw/f": [
-    "Trimite-i un mesaj lui @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Opțiunea este dezactivată de modul Silențios",
   "wCxBOT": "Modul Silențios (BETA)",
   "CYVgLC": "În modul Silențios, Discord nu va mai afișa notificări în aplicație și pe desktop și nici nu va mai reda sunetele mesajelor. Vrei să treci la modul online?",
@@ -37253,6 +37062,7 @@
   "BwdeMz": "Schimbă eticheta pentru nume",
   "/6nv6O": "Schimbă efectul profilului",
   "/dRfCQ": "Schimbă efectul",
+  "WfGV5+": "Etichetele tale pentru nume",
   "TiLCg4": "Exclusiv la Nitro",
   "t8CdeX": "Secțiunea de selecție a efectului pentru profil",
   "9x1v/v": "Efectele tale",

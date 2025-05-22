@@ -26,6 +26,6 @@ public object RLottieUtils {
    }
 
    public fun init() {
-      V8.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
+      W8.a.b(false, false, null, "RLottieLoader", 0, new f(), 23, null);
    }
 }

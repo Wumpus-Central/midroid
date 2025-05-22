@@ -56,15 +56,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = A2.a.d(var1, var2);
+      this.hierarchyBuilder = B2.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = Q8.j.b(new k(var1, this));
-      this.textView$delegate = Q8.j.b(new l(var1, this));
+      this.draweeView$delegate = R8.j.b(new k(var1, this));
+      this.textView$delegate = R8.j.b(new l(var1, this));
    }
 
    @JvmStatic
@@ -155,9 +155,9 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
             val var9: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var9.renderable();
-            val var16: Context = this.getContext();
-            q.g(var16, "getContext(...)");
+            val var16: RenderableEmoji = var9.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
             if (var1.getShouldAnimateEmoji() && var9.getAnimated()) {
@@ -166,7 +166,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var16, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var10, var4, var7, 0, null, 48, null));
             this.setImportantForAccessibility(2);
             this.setOnClickListener(new o(var2));
             var4 = 1;

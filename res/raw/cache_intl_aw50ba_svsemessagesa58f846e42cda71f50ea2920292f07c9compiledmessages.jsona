@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Lyssnar på Spotify",
-  "tAwI1t": [
-    "Ett aktivitetskort som visar @",
-    [
-      1,
-      "username"
-    ],
-    " som spelar ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Berätta om din upplevelse av aktiviteten",
   "iSv55O": "Aktivitetskontrollerna är förvirrande",
   "/8psS0": "Aktivitetskontrollerna var förvirrande",
@@ -4548,108 +4536,6 @@
   ],
   "BC5vfH": "Ditt meddelande kunde inte skickas eftersom aktivitetens ägare inte har åtkomst till den här kanalen.",
   "fjcCk5": "Meddelande skickat!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " och ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " och ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andra"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " spelade ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " spelar"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " och ",
-          [
-            1,
-            "user2"
-          ],
-          " spelar"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " och ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andra spelar"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Fortsätt",
   "2ixEBg": "Fortsätt i webbläsare",
   "79qal5": "Konvertera automatiskt emotikoner till emojier i dina meddelanden",
@@ -21142,7 +21028,6 @@
     "-timmarsmaraton"
   ],
   "keY6mZ": "Ny spelare",
-  "vYuyWV": "Ny release",
   "adnLsL": "Återvänder",
   "NXBtjI": [
     "Återvänder efter ",
@@ -21462,75 +21347,6 @@
     " låtar den här veckan"
   ],
   "/50eHh": "Mest spelat",
-  "kAlUs7": "Populärt",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " spelar ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " spelar ett nytt spel: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " spelade ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " spelade ett nytt spel: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29886,13 +29702,6 @@
   ],
   "zUoI5O": "Söker röstkanaler",
   "ieCAhI": "Olästa kanaler",
-  "0ZQw/f": [
-    "Skicka meddelande till @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Det här är inaktiverat av Fokuseringsläget",
   "wCxBOT": "Fokuseringsläget (BETA)",
   "CYVgLC": "Med fokuseringsläget aktiverat kommer inte Discord längre att visa app-innehåll, skrivbordsaviseringar eller spela upp ljud för meddelanden, precis som med Stör ej. Vill du byta till online?",
@@ -37189,6 +36998,7 @@
   "BwdeMz": "Byt namnskylt",
   "/6nv6O": "Ändra profileffekt",
   "/dRfCQ": "Ändra effekt",
+  "WfGV5+": "Dina namnskyltar",
   "TiLCg4": "Exklusiv för Nitro",
   "t8CdeX": "Sektion för profileffektsval",
   "9x1v/v": "Dina effekter",

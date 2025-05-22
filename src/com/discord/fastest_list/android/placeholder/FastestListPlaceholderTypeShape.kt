@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import Q8.n
+import R8.n
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup

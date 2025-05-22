@@ -415,18 +415,6 @@
     ]
   ],
   "rmnkz8": "Ouvindo Spotify",
-  "tAwI1t": [
-    "Um cartão de atividade exibindo @",
-    [
-      1,
-      "username"
-    ],
-    " jogando ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Conte-nos como foi sua experiência com a atividade",
   "iSv55O": "Os controles da atividade são confusos",
   "/8psS0": "Os controles da atividade eram confusos",
@@ -4552,108 +4540,6 @@
   ],
   "BC5vfH": "Sua mensagem não pôde ser enviada porque o dono da atividade não tem acesso a este canal.",
   "fjcCk5": "Mensagem enviada!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " jogou e ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " jogaram e ",
-          [
-            1,
-            "countOthers"
-          ],
-          " outros jogaram"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " está jogando"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " e ",
-          [
-            1,
-            "user2"
-          ],
-          " estão jogando"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " e ",
-          [
-            1,
-            "countOthers"
-          ],
-          " outros estão jogando"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Continuar",
   "2ixEBg": "Continuar no Navegador",
   "79qal5": "Converter automaticamente emoticons em suas mensagens para emojis.",
@@ -21193,7 +21079,6 @@
     "h Maratona"
   ],
   "keY6mZ": "Novo Jogador",
-  "vYuyWV": "Lançamento",
   "S5F48/": [
     "Jogado por ",
     [
@@ -21526,75 +21411,6 @@
     " faixas esta semana"
   ],
   "/50eHh": "Mais jogado",
-  "kAlUs7": "Em alta",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " está jogando ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " está jogando um novo jogo: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " jogou ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " jogou um novo jogo: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "T",
     [
@@ -29968,13 +29784,6 @@
   ],
   "zUoI5O": "Procurando canais de voz",
   "ieCAhI": "Canais não lidos",
-  "0ZQw/f": [
-    "Conversar com @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Isso é desativado pelo modo Foco",
   "wCxBOT": "Modo Foco (BETA)",
   "CYVgLC": "Com o modo Foco, o Discord não vai mais exibir notificações no app, notificação na área de trabalho ou reproduzir sons de mensagens, assim como no modo Não Perturbe. Você gostaria de mudar para o modo online?",
@@ -37322,6 +37131,7 @@
   "BwdeMz": "Alterar placa de identificação",
   "/6nv6O": "Alterar o efeito de perfil",
   "/dRfCQ": "Alterar efeito",
+  "WfGV5+": "Suas placas de identificação",
   "TiLCg4": "Exclusivo do Nitro",
   "t8CdeX": "Seção de seleção de efeito de perfil",
   "9x1v/v": "Seus efeitos",

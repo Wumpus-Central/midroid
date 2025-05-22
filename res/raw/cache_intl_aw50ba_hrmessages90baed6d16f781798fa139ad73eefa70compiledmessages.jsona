@@ -422,18 +422,6 @@
     ]
   ],
   "rmnkz8": "Sluša Spotify",
-  "tAwI1t": [
-    "Kartica aktivnosti prikazuje @",
-    [
-      1,
-      "username"
-    ],
-    " kako igra ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Reci nam svoje dojmove o aktivnostima",
   "iSv55O": "Kontrole unutar aktivnosti su konfuzne",
   "/8psS0": "Kontrole unutar aktivnosti bile su konfuzne",
@@ -4672,133 +4660,6 @@
   ],
   "BC5vfH": "Tvoju poruka nije moguće poslati jer vlasnik aktivnosti nema pristup ovom kanalu.",
   "fjcCk5": "Poruka poslana!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " je igrao/la i ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " su igrali/e"
-        ],
-        "few": [
-          "i još ",
-          [
-            1,
-            "countOthers"
-          ],
-          " igrali su",
-          [
-            1,
-            "user1"
-          ],
-          " i još ",
-          [
-            1,
-            "countOthers"
-          ],
-          " igralo je"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " igra"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " i ",
-          [
-            1,
-            "user2"
-          ],
-          " igraju"
-        ],
-        "few": [
-          [
-            1,
-            "user1"
-          ],
-          " i ",
-          [
-            1,
-            "countOthers"
-          ],
-          " druga korisnika igraju"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " i ",
-          [
-            1,
-            "countOthers"
-          ],
-          " drugih korisniska igraju"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Nastavi",
   "2ixEBg": "Nastavi u pregledniku",
   "79qal5": "Automatski pretvori emotikone u tvojim porukama u emoji",
@@ -21812,7 +21673,6 @@
     "-satni maraton"
   ],
   "keY6mZ": "Novi igrač",
-  "vYuyWV": "Novo izdanje",
   "adnLsL": "Povratnik",
   "NXBtjI": [
     "Vraća se nakon ",
@@ -22183,75 +22043,6 @@
     " pjesama ovoga tjedna"
   ],
   "/50eHh": "Najčešće igrano",
-  "kAlUs7": "U trendu",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " igra ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " igra novu igru: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " igrao/la je ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " igrao/la je novu igru: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -31009,13 +30800,6 @@
   ],
   "zUoI5O": "Pretraživanje glasovnih kanala",
   "ieCAhI": "Kanali s nepročitanim porukama",
-  "0ZQw/f": [
-    "Pošalji poruku @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Ovo je onemogućio način rada za fokusiranje",
   "wCxBOT": "Koncentriranje (BETA)",
   "CYVgLC": "Ako omogućiš koncentraciju, Discord više neće prikazivati obavijesti u aplikaciji i na desktopu ni reproducirati zvukove poruka, baš kao način rada DND (Ne ometaj). Želiš li se prebaciti na online način rada?",
@@ -38519,6 +38303,7 @@
   "BwdeMz": "Promijeni pločicu s imenom",
   "/6nv6O": "Promijeni efekt profila",
   "/dRfCQ": "Promijeni efekt",
+  "WfGV5+": "Tvoje pločice s imenom",
   "TiLCg4": "To ima samo Nitro",
   "t8CdeX": "Odjeljak za odabir efekta profila",
   "9x1v/v": "Tvoji efekti",

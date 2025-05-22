@@ -50,19 +50,19 @@ private fun ReactContext.findViewByReactTag(tag: Int): View {
 
                val var11: Field = var6.getDeclaredField("mNativeViewHierarchyManager");
                var11.setAccessible(true);
-               var6 = (Class)var11.get(var17);
-               if (var6 is NativeViewHierarchyManager) {
-                  val var13: View = (var6 as NativeViewHierarchyManager).resolveView(var1);
+               var2 = (UIImplementation)var11.get(var17);
+               if (var2 is NativeViewHierarchyManager) {
+                  val var13: View = (var2 as NativeViewHierarchyManager).resolveView(var1);
                   q.g(var13, "resolveView(...)");
                   return var13;
                } else {
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Field ");
-                  var18.append(var6);
-                  var18.append(" not instance of ");
-                  var18.append(NativeViewHierarchyManager::class.java);
-                  var18.append(".");
-                  throw new IllegalStateException(var18.toString().toString());
+                  val var12: StringBuilder = new StringBuilder();
+                  var12.append("Field ");
+                  var12.append(var2);
+                  var12.append(" not instance of ");
+                  var12.append(NativeViewHierarchyManager::class.java);
+                  var12.append(".");
+                  throw new IllegalStateException(var12.toString().toString());
                }
             } else {
                val var9: StringBuilder = new StringBuilder();

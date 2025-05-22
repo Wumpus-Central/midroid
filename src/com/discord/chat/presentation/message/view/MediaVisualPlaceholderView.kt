@@ -67,7 +67,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new Q8.n();
+               throw new R8.n();
             }
 
             this.binding.imageInvalid.setVisibility(0);
@@ -161,14 +161,14 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(", resizeMode=");
          var3.append(var4);
          var3.append(")");

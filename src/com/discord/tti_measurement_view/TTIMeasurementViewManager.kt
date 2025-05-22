@@ -1,6 +1,6 @@
 package com.discord.tti_measurement_view
 
-import Q8.s
+import R8.s
 import com.discord.reactevents.ReactEvents
 import com.discord.tti_measurement_view.events.OnMeasurementEvent
 import com.facebook.react.module.annotations.ReactModule

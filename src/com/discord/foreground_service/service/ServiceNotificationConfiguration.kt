@@ -1,6 +1,6 @@
 package com.discord.foreground_service.service
 
-import Y8.a
+import Z8.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
@@ -113,27 +113,27 @@ internal data class ServiceNotificationConfiguration(title: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.title;
-      val var1: java.lang.String = this.content;
+      val var2: java.lang.String = this.title;
+      val var5: java.lang.String = this.content;
       val var3: ServiceNotificationConfiguration.Priority = this.priority;
-      val var5: ServiceNotificationConfiguration.Action = this.contentAction;
-      val var7: java.util.List = this.auxiliaryActions;
-      val var4: ServiceNotificationConfiguration.Type = this.type;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ServiceNotificationConfiguration(title=");
-      var2.append(var6);
-      var2.append(", content=");
-      var2.append(var1);
-      var2.append(", priority=");
-      var2.append(var3);
-      var2.append(", contentAction=");
-      var2.append(var5);
-      var2.append(", auxiliaryActions=");
-      var2.append(var7);
-      var2.append(", type=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: ServiceNotificationConfiguration.Action = this.contentAction;
+      val var1: java.util.List = this.auxiliaryActions;
+      val var7: ServiceNotificationConfiguration.Type = this.type;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ServiceNotificationConfiguration(title=");
+      var6.append(var2);
+      var6.append(", content=");
+      var6.append(var5);
+      var6.append(", priority=");
+      var6.append(var3);
+      var6.append(", contentAction=");
+      var6.append(var4);
+      var6.append(", auxiliaryActions=");
+      var6.append(var1);
+      var6.append(", type=");
+      var6.append(var7);
+      var6.append(")");
+      return var6.toString();
    }
 
    public data class Action(tag: String, taskName: String, title: String?, data: Map<String, String>) {
@@ -209,19 +209,19 @@ internal data class ServiceNotificationConfiguration(title: String,
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.tag;
+         val var2: java.lang.String = this.tag;
          val var1: java.lang.String = this.taskName;
          val var4: java.lang.String = this.title;
-         val var2: java.util.Map = this.data;
+         val var3: java.util.Map = this.data;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Action(tag=");
-         var5.append(var3);
+         var5.append(var2);
          var5.append(", taskName=");
          var5.append(var1);
          var5.append(", title=");
          var5.append(var4);
          var5.append(", data=");
-         var5.append(var2);
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

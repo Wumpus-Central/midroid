@@ -21,12 +21,12 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
          break label41;
       }
 
-      var var19: Any = var16;
+      var var18: Any = var16;
       if (Result.g(var16)) {
-         var19 = null;
+         var18 = null;
       }
 
-      val var21: Cursor = var19 as Cursor;
+      val var21: Cursor = var18 as Cursor;
       var var17: java.lang.String = "";
       if (var21 != null) {
          label35: {
@@ -36,19 +36,19 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                   break label35;
                }
             } catch (var4: java.lang.Throwable) {
-               val var18: java.lang.Throwable = var4;
+               var18 = var4;
 
                try {
                   throw var18;
                } catch (var3: java.lang.Throwable) {
-                  c9.c.a(var21, var4);
+                  d9.c.a(var21, var4);
                }
             }
 
             var17 = "";
          }
 
-         c9.c.a(var21, null);
+         d9.c.a(var21, null);
          if (var17 == null) {
             var17 = "";
          }

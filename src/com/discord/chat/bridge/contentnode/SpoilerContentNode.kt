@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import Ja.f
+import Ka.f
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer

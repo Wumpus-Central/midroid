@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import Q8.m
+import R8.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -58,8 +58,8 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = t2.d.g();
-      this.binding$delegate = Q8.j.a(m.l, new e(this));
+      this.draweeControllerBuilder = u2.d.g();
+      this.binding$delegate = R8.j.a(m.l, new e(this));
    }
 
    @JvmStatic

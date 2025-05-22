@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Lytter til Spotify",
-  "tAwI1t": [
-    "Et aktivitetskort, der viser, at @",
-    [
-      1,
-      "username"
-    ],
-    " spiller ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Fortæl os om din oplevelse",
   "iSv55O": "Aktivitetskontrollerne er forvirrende",
   "/8psS0": "Aktivitetskontrollerne var forvirrende",
@@ -4560,108 +4548,6 @@
   ],
   "BC5vfH": "Din besked kunne ikke sendes, da aktivitetens ejer ikke har adgang til denne kanal.",
   "fjcCk5": "Besked sendt!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andre"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " spillede ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " spiller"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "user2"
-          ],
-          " spiller"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " og ",
-          [
-            1,
-            "countOthers"
-          ],
-          " andre spiller"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Fortsæt",
   "2ixEBg": "Fortsæt i browseren",
   "79qal5": "Konverter automatisk smileys i dine beskeder til emojier",
@@ -21219,7 +21105,6 @@
     " t maraton"
   ],
   "keY6mZ": "Ny spiller",
-  "vYuyWV": "Ny udgivelse",
   "adnLsL": "Vender tilbage",
   "NXBtjI": [
     "Vender tilbage efter ",
@@ -21540,75 +21425,6 @@
     " numre i denne uge"
   ],
   "/50eHh": "Mest spillet",
-  "kAlUs7": "Hitter",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " spiller ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " spiller et nyt spil: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " spillede ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " spillede et nyt spil: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29967,13 +29783,6 @@
   ],
   "zUoI5O": "Søger i talekanaler",
   "ieCAhI": "Ulæste kanaler",
-  "0ZQw/f": [
-    "Send besked til @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Dette er deaktiveret i Fokustilstand",
   "wCxBOT": "Fokustilstand (BETA)",
   "CYVgLC": "Når du er i Fokustilstand, viser Discord ikke længere meddelelser i appen eller på skrivebordet, og beskedlyde bliver ikke afspillet, ligesom ved DND. Vil du skifte til online?",
@@ -37315,6 +37124,7 @@
   "BwdeMz": "Skift navneskilt",
   "/6nv6O": "Skift profileffekt",
   "/dRfCQ": "Skift effekt",
+  "WfGV5+": "Dine navneskilte",
   "TiLCg4": "Eksklusivt for Nitro",
   "t8CdeX": "Afsnittet Valg af profileffekt",
   "9x1v/v": "Dine effekter",

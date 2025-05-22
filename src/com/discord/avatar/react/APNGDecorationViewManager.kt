@@ -1,6 +1,6 @@
 package com.discord.avatar.react
 
-import Q8.s
+import R8.s
 import com.discord.avatar.decoration.DecorationView
 import com.discord.avatar.react.events.OnImageLoadedEvent
 import com.discord.image.animated_image.apng.APNGImageView

@@ -121,15 +121,15 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
       val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
-      val var8: java.util.Iterator = var7.iterator();
+      val var15: java.util.Iterator = var7.iterator();
 
-      for (int var9 = 0; var8.hasNext(); var9++) {
-         val var15: Any = var8.next();
+      for (int var9 = 0; var15.hasNext(); var9++) {
+         val var8: Any = var15.next();
          if (var9 < 0) {
             kotlin.collections.i.u();
          }
 
-         var6.add(var2.getConfiguredComponentView(var15 as Component, var12, this, var9));
+         var6.add(var2.getConfiguredComponentView(var8 as Component, var12, this, var9));
       }
 
       val var13: java.util.List = kotlin.collections.i.c0(var6);

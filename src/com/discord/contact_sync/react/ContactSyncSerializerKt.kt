@@ -1,8 +1,8 @@
 package com.discord.contact_sync.react
 
-import Ma.E0
-import Ma.U
-import Ma.f
+import Na.E0
+import Na.U
+import Na.f
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider

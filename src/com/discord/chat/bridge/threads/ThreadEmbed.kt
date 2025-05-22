@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.threads
 
-import Ja.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -92,8 +92,8 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.title.hashCode();
-      val var5: Int = this.messageCountLabel.hashCode();
+      val var5: Int = this.title.hashCode();
+      val var6: Int = this.messageCountLabel.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.messagePreviewString == null) {
@@ -120,29 +120,29 @@ public data class ThreadEmbed(title: String,
          var4 = this.referencedMessage.hashCode();
       }
 
-      return ((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var6: java.lang.String = this.title;
       val var2: java.lang.String = this.messageCountLabel;
-      val var5: java.lang.String = this.messagePreviewString;
-      val var7: java.lang.Boolean = this.archived;
-      val var1: java.lang.String = this.archivedIconUrl;
-      val var3: ThreadEmbedMessage = this.referencedMessage;
+      val var7: java.lang.String = this.messagePreviewString;
+      val var3: java.lang.Boolean = this.archived;
+      val var5: java.lang.String = this.archivedIconUrl;
+      val var1: ThreadEmbedMessage = this.referencedMessage;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ThreadEmbed(title=");
       var4.append(var6);
       var4.append(", messageCountLabel=");
       var4.append(var2);
       var4.append(", messagePreviewString=");
-      var4.append(var5);
-      var4.append(", archived=");
       var4.append(var7);
-      var4.append(", archivedIconUrl=");
-      var4.append(var1);
-      var4.append(", referencedMessage=");
+      var4.append(", archived=");
       var4.append(var3);
+      var4.append(", archivedIconUrl=");
+      var4.append(var5);
+      var4.append(", referencedMessage=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

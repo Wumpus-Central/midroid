@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Spotify-t hallgat",
-  "tAwI1t": [
-    "Tevékenységkártya a következő adatokkal: @",
-    [
-      1,
-      "username"
-    ],
-    " ezzel játszik: ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Mondd el, milyen élmény volt a tevékenység",
   "iSv55O": "A tevékenység irányítása nem egyértelmű",
   "/8psS0": "A tevékenység irányítása nem volt egyértelmű",
@@ -4557,108 +4545,6 @@
   ],
   "BC5vfH": "Az üzenetedet nem lehet elküldeni, mert a tevékenység tulajdonosa nem fér hozzá ehhez a csatornához.",
   "fjcCk5": "Üzenet elküldve!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " és ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " és ",
-          [
-            1,
-            "countOthers"
-          ],
-          " további"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " játszott a következővel: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " játszik"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " és ",
-          [
-            1,
-            "user2"
-          ],
-          " játszik"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " és ",
-          [
-            1,
-            "countOthers"
-          ],
-          " további személy játszik"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Folytatás",
   "2ixEBg": "Folytatás a böngészőben",
   "79qal5": "A hangulatjelek automatikus emotikonokká alakítása az üzeneteidben",
@@ -21154,7 +21040,6 @@
     " órás maraton"
   ],
   "keY6mZ": "Új játékos",
-  "vYuyWV": "Új kiadás",
   "adnLsL": "Visszatérés",
   "NXBtjI": [
     "Visszatérés ",
@@ -21469,75 +21354,6 @@
     " dal ezen a héten"
   ],
   "/50eHh": "Leggyakrabban játszott",
-  "kAlUs7": "Népszerű",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " ezzel játszik: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " új játékkal játszik: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " ezzel játszott: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " új játékkal játszott: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "Év.",
     [
@@ -29903,13 +29719,6 @@
   ],
   "zUoI5O": "Hangcsatornák keresése",
   "ieCAhI": "Olvasatlan csatornák",
-  "0ZQw/f": [
-    "Üzenet neki: @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "A Fókusz mód letiltja ezt",
   "wCxBOT": "Fókusz mód (BÉTA)",
   "CYVgLC": "Ha bekapcsolod a Fókusz módot, a Discord nem fog megjelenni az alkalmazáson belüli és az asztali értesítéseknél, és üzenethangot sem fog lejátszani. Épp úgy, mint az Elfoglalt mód esetében. Szeretnél Online módra váltani?",
@@ -37227,6 +37036,7 @@
   "BwdeMz": "Névjelzés módosítása",
   "/6nv6O": "Profileffektus módosítása",
   "/dRfCQ": "Effektus módosítása",
+  "WfGV5+": "Saját névjelzések",
   "TiLCg4": "Kizárólag Nitro-előfizetéssel",
   "t8CdeX": "Profileffektus kiválasztására szolgáló terület",
   "9x1v/v": "Saját effektusok",

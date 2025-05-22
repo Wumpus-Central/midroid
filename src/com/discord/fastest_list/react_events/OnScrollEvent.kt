@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react_events
 
-import Q8.s
+import R8.s
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt

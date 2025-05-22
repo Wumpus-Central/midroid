@@ -415,19 +415,6 @@
     ]
   ],
   "rmnkz8": "Luistert naar Spotify",
-  "tAwI1t": [
-    "Een activiteitenkaart met '@",
-    [
-      1,
-      "username"
-    ],
-    " speelt ",
-    [
-      1,
-      "activity"
-    ],
-    "' erop"
-  ],
   "9hk2KC": "Vertel ons over je ervaring met de activiteit",
   "iSv55O": "Besturing van de activiteit is verwarrend",
   "/8psS0": "Besturing van de activiteit was verwarrend",
@@ -4555,109 +4542,6 @@
   ],
   "BC5vfH": "Je bericht kon niet worden verzonden omdat de eigenaar van de Activiteit geen toegang heeft tot dit kanaal.",
   "fjcCk5": "Bericht verstuurd!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " en ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " en ",
-          [
-            1,
-            "countOthers"
-          ],
-          " anderen"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " hebben ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " gespeeld"
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " speelt"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " en ",
-          [
-            1,
-            "user2"
-          ],
-          " spelen"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " en ",
-          [
-            1,
-            "countOthers"
-          ],
-          " anderen spelen"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Doorgaan",
   "2ixEBg": "Doorgaan in browser",
   "79qal5": "Converteer automatisch emoticons in je berichten naar emoji",
@@ -21208,7 +21092,6 @@
     "u"
   ],
   "keY6mZ": "Nieuwe speler",
-  "vYuyWV": "Nieuwe release",
   "adnLsL": "Terugkerend",
   "NXBtjI": [
     "Speelt deze game weer na ",
@@ -21511,77 +21394,6 @@
     " nummers deze week"
   ],
   "/50eHh": "Meest gespeeld",
-  "kAlUs7": "Trending",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " is ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " aan het spelen"
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " speelt een nieuwe game: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " heeft ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ],
-    " gespeeld"
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " heeft een nieuwe game gespeeld: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -29955,13 +29767,6 @@
   ],
   "zUoI5O": "Spraakkanalen zoeken",
   "ieCAhI": "Kanalen ongelezen maken",
-  "0ZQw/f": [
-    "Bericht sturen aan @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "Dit is uitgeschakeld vanwege de Focusmodus",
   "wCxBOT": "Focusmodus (BÈTA)",
   "CYVgLC": "In de Focusmodus toont Discord geen desktopvermeldingen meer in apps en worden er ook geen meldingsgeluiden meer afgespeeld. Wil je overschakelen op Online?",
@@ -37299,6 +37104,7 @@
   "BwdeMz": "Naambordje wijzigen",
   "/6nv6O": "Profieleffect wijzigen",
   "/dRfCQ": "Effect wijzigen",
+  "WfGV5+": "Je naambordjes",
   "TiLCg4": "Exclusief voor Nitro",
   "t8CdeX": "Profieleffecten-sectie",
   "9x1v/v": "Je effecten",
