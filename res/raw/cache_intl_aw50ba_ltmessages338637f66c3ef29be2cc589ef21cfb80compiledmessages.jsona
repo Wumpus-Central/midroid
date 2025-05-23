@@ -1392,26 +1392,6 @@
   "wOr6hI": "Bandyta įkelti per daug failų!",
   "BEWw//": "paliesk du kartus, kad paleistum vaizdo įrašą ir padidintum",
   "3AS4UF": "Prisegti Failus",
-  "vlj5uL": "Norime atkreipti dėmesį, kad jei sutiksi su sekimu, galėsime personalizuoti turinį, kurį matai misijų ir apdovanojimų skiltyje, kad jis tau būtų kuo aktualesnis!",
-  "1dqa3d": "Nori pakelti lygį? Įjungus sekimą, galime pasirūpinti, kad tavo patirtis būtų kuo naudingesnė ir aktualesnė! Atsisakyti iOS nustatymuose gali bet kada.",
-  "acNnra": "Tik trumpas pranešimas – leidimas sekti padeda mums tau rodyti misijas, kurios tave iš tikrųjų sudomins! Galite bet kada atsisakyti iOS nustatymuose",
-  "Cq8QKS": "Žaidėjo kontrolinis taškas – leidimas sekti suasmenina tavo patirtį ir užtikrina jos naudingumą. Atsisakyti iOS nustatymuose gali bet kada.",
-  "y4HOMj": "Padėk Discord būti tavo jaukiais namais internete",
-  "YW0z09": "Padėsi Discord būti tavo jaukiais namais internete",
-  "xaXauL": "Discord išlieka tavo jaukiais namais internete",
-  "oD52ER": "Užtikrinsi, kad Discord išliktų tavo jaukiais namais internete",
-  "fpfPTk": "Gauk personalizuotas misijas, pritaikytas tau aktualiems pomėgiams",
-  "ZxkYWV": "Pritaikysime misijas, kad jos atitiktų tau aktualius pomėgius",
-  "2xEEtr": "Misijas galima pritaikyti, kad gautum tuos apdovanojimus, kurių nori",
-  "nvVy39": "Gauk misijas, kurios atitinka tavo pomėgius",
-  "mH8BIS": "Savo pasirinkimą šiam įrenginiui gali bet kada atnaujinti iOS nustatymuose. Jei nori leisti sekimą, gali:",
-  "1xzDm5": "Sekimo leidimas reiškia, kad:",
-  "P9bOBQ": "Jei leisi sekti:",
-  "b0WurK": "Jei įjungsi sekimą, tai reikš, kad:",
-  "UBpcNz": "Padėk įmonėms ir žaidimų studijoms, kurių produktai atrandami naudojant reklamas",
-  "TSMwsr": "Padėsi žaidimų studijoms, kurių žaidimai atrandami tik per reklamas",
-  "mE2qtL": "Tavo mylimas įmones ir žaidimų studijas galima atrasti",
-  "QNWJs7": "Paremsi įmones ir žaidimų studijas, kurių žaidimai atrandami tik per reklamas",
   "QLMGho": [
     [
       1,
@@ -11878,6 +11858,7 @@
     ]
   ],
   "2Ab4IS": "Jeigu sukursi pranešimų kanalą, tavo serverio profilis bus matomas ir ne tavo serverio nariams. Profilio privatumą gali valdyti čia: Serverio nustatymai > Profilis.",
+  "cQDYRk": "Užsidėti žymę",
   "7XdMW1": "Prisijungiama pateikus paraišką",
   "4yfIDg": "Peržiūrėti paraiškos būseną",
   "IRoQXl": "Eiti į serverį",
@@ -19306,13 +19287,6 @@
       1,
       "guildName"
     ]
-  ],
-  "K+JVRk": [
-    [
-      1,
-      "guildName"
-    ],
-    " narys (-ė)"
   ],
   "m/Tc3t": [
     [

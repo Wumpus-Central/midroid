@@ -1373,26 +1373,6 @@
   "wOr6hI": "Muitos uploads!",
   "BEWw//": "toque duplo para reproduzir vídeo e ampliar",
   "3AS4UF": "Anexar arquivos",
-  "vlj5uL": "Atenção — permitir o rastreamento nos permite personalizar o conteúdo que você vê em suas missões e recompensas e otimizar a sua experiência!",
-  "1dqa3d": "Bora subir de nível? Habilitar o rastreamento nos ajuda a tornar suas experiências o mais recompensadoras e relevantes possíveis! Você pode desativar a qualquer momento nas configurações do iOS.",
-  "acNnra": "Só um aviso rápido — Permitir o rastreamento nos ajuda a mostrar as missões que você realmente está tem interesse! Você pode desativar a qualquer momento nas configurações do iOS",
-  "Cq8QKS": "Ponto de controle do jogador – O rastreamento personaliza sua experiência, tornando-as mais recompensadoras. Você pode optar por sair a qualquer momento nas configurações do iOS.",
-  "y4HOMj": "Ajudar o Discord a ser o seu canto aconchegante da internet",
-  "YW0z09": "Você vai ajudar o Discord a ser o seu canto aconchegante da internet",
-  "xaXauL": "O Discord continuará sendo o seu canto aconchegante da internet",
-  "oD52ER": "Garantir que o Discord continue sendo seu canto aconchegante da internet",
-  "fpfPTk": "Receber missões personalizadas, criadas com base nos seus interesses",
-  "ZxkYWV": "Vamos personalizar as missões para refletir seus interesses relevantes",
-  "2xEEtr": "As missões serão personalizadas e oferecerão as recompensas que você deseja",
-  "nvVy39": "Receber missões que correspondam aos seus interesses",
-  "mH8BIS": "Você pode atualizar sua escolha para este dispositivo nas configurações do iOS a qualquer momento. Caso o rastreamento esteja ativado, você pode:",
-  "1xzDm5": "Permitir rastreamento significa que:",
-  "P9bOBQ": "Se você permitir rastreamento:",
-  "b0WurK": "Permitir rastreamento significa que você vai:",
-  "UBpcNz": "Apoiar empresas e estúdios de jogos que contam com anúncios para serem descobertos",
-  "TSMwsr": "Você vai apoiar estúdios de jogos que dependem de anúncios para Descobrir",
-  "mE2qtL": "Negócios e estúdios de jogos que você ama poderão ser descobertos facilmente",
-  "QNWJs7": "Apoiar negócios e estúdios de jogos que contam com anúncios para Descobrir",
   "QLMGho": [
     [
       1,
@@ -11494,6 +11474,7 @@
     " está fazendo uma transmissão"
   ],
   "2Ab4IS": "Ao criar um canal de anúncios, o seu perfil de servidor ficará visível para outros fora dos membros do seu servidor. Você pode controlar a privacidade do perfil em Configurações do servidor > Perfil.",
+  "cQDYRk": "Adotar tag",
   "7XdMW1": "Candidatar-se para Participar",
   "4yfIDg": "Ver status da solicitação",
   "IRoQXl": "Ir para o Servidor",
@@ -18684,13 +18665,6 @@
   "DrAXIi": "Adote esta tag para exibi-la ao lado do seu nome no Discord.",
   "VFqnyc": [
     "Agora você pode usar uma tag de ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Membro de ",
     [
       1,
       "guildName"

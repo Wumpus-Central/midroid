@@ -1371,26 +1371,6 @@
   "wOr6hI": "Túl sok feltöltés!",
   "BEWw//": "koppints duplán a videó lejátszásához és a nagyításhoz",
   "3AS4UF": "Fájlok csatolása",
-  "vlj5uL": "Figyelem – ha engedélyezed a követést, személyre szabhatjuk a Küldetések és jutalmak területen látott tartalmakat, és a lehető legrelevánsabb élményben lehet részed!",
-  "1dqa3d": "Szeretnél szintet lépni? Ha engedélyezed a követést, a lehető legélvezetesebbé és legrelevánsabbá tesszük a felhasználói élményt! Bármikor letilthatod a lehetőséget az iOS-beállításaidnál.",
-  "acNnra": "Rövid pingelés – Ha engedélyezed a követést, olyan küldetéseket tudunk megjeleníteni, amelyek tényleg érdekelnek! Bármikor letilthatod a lehetőséget az iOS-beállításaidnál.",
-  "Cq8QKS": "Játékos számára megjelenített ellenőrző pont – A követés engedélyezésekor személyre szabhatjuk és élvezetesebbé tehetjük az élményt. Bármikor letilthatod a lehetőséget az iOS-beállításaidnál.",
-  "y4HOMj": "Segíthetsz a Discord támogatásában, hogy otthonos hely legyen számodra az interneten",
-  "YW0z09": "Segítesz a Discord támogatásában, hogy otthonos hely legyen számodra az interneten.",
-  "xaXauL": "A Discord továbbra is otthonos hely lesz számodra az interneten",
-  "oD52ER": "Gondoskodj róla, hogy a Discord továbbra is otthonos hely legyen számodra az interneten",
-  "fpfPTk": "A releváns érdeklődési köreid alapján kaphatsz személyre szabott küldetéseket",
-  "ZxkYWV": "Személyre szabjuk a küldetéseket, hogy a releváns érdeklődési köreidet tükrözzék.",
-  "2xEEtr": "A küldetések személyre lesznek szabva, hogy megszerezhesd a kívánt jutalmakat",
-  "nvVy39": "Az érdeklődési köreidnek megfelelő küldetéseket láthatsz",
-  "mH8BIS": "Az iOS-beállításoknál bármikor módosíthatod a döntésedet erre az eszközre vonatkozóan. A következőkre nyílik lehetőséged, ha engedélyezed a követést:",
-  "1xzDm5": "A követés engedélyezése a következőt jelenti:",
-  "P9bOBQ": "Ha engedélyezed a követést:",
-  "b0WurK": "A követés engedélyezése a következőt jelenti az esetedben:",
-  "UBpcNz": "Támogathatod azokat a vállalkozásokat és játékstúdiókat, amelyek hirdetéseken keresztül igyekeznek elérni, hogy felfedezzék őket",
-  "TSMwsr": "Olyan játékstúdiókat támogatsz, amelyek hirdetések segítségével érik el, hogy felfedezzék őket.",
-  "mE2qtL": "Könnyebb felfedezni az általad kedvelt vállalkozásokat és játékstúdiókat",
-  "QNWJs7": "Olyan vállalkozásokat és játékstúdiókat támogatsz, amelyek hirdetések segítségével érik el, hogy felfedezzék őket.",
   "QLMGho": [
     [
       1,
@@ -11461,6 +11441,7 @@
     " közvetít"
   ],
   "2Ab4IS": "Ha bejelentési csatornát hozol létre, a szerverprofilod olyanok számára is látható lesz, akik nem a szerver tagjai. A profilod adatvédelmi beállításait a következő menüpontban szabályozhatod: Szerverbeállítások > Profil.",
+  "cQDYRk": "Címke elhelyezése",
   "7XdMW1": "Csatlakozási jelentkezés",
   "4yfIDg": "Alkalmazás állapotának megtekintése",
   "IRoQXl": "Ugrás a szerverre",
@@ -18662,14 +18643,6 @@
       "guildName"
     ],
     "-címke viselésére"
-  ],
-  "K+JVRk": [
-    "A(z) ",
-    [
-      1,
-      "guildName"
-    ],
-    " tagja"
   ],
   "m/Tc3t": [
     "A(z) ",

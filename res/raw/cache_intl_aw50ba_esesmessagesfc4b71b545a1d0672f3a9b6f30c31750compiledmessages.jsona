@@ -1381,22 +1381,6 @@
   "wOr6hI": "¡Demasiadas subidas!",
   "BEWw//": "toca dos veces para reproducir el vídeo y ampliar",
   "3AS4UF": "Adjuntar archivos",
-  "1dqa3d": "¿Quieres subir de nivel? ¡Habilitar el seguimiento nos ayuda a hacer tus experiencias lo más gratificantes y relevantes posible! Puedes desactivarlo en cualquier momento en los ajustes de iOS.",
-  "acNnra": "Solo un comentario rápido: permitir el seguimiento nos ayuda a mostrarte las misiones que realmente te interesan. Puedes desactivar esta opción en cualquier momento en los ajustes de iOS.",
-  "Cq8QKS": "Punto de control de juego: permitir el seguimiento personaliza tu experiencia y te garantiza una experiencia gratificante. Puedes desactivarlo en cualquier momento en los ajustes de iOS.",
-  "YW0z09": "Contribuirás a que Discord siga siendo tu hogar acogedor en Internet",
-  "xaXauL": "Discord sigue siendo tu hogar acogedor en Internet",
-  "oD52ER": "Te asegurarás de que Discord siga siendo tu hogar acogedor en Internet",
-  "ZxkYWV": "Personalizaremos las misiones para reflejar tus intereses relevantes",
-  "2xEEtr": "Las misiones se personalizarán para ofrecerte las recompensas que quieres",
-  "nvVy39": "Recibirás misiones que coincidan con tus intereses",
-  "mH8BIS": "Puedes actualizar tu elección para este dispositivo en los ajustes de iOS en cualquier momento. Si permites el seguimiento, puedes hacer lo siguiente:",
-  "1xzDm5": "Permitir el seguimiento significa lo siguiente:",
-  "P9bOBQ": "Si permites el seguimiento:",
-  "b0WurK": "Permitir el seguimiento significa que tú:",
-  "TSMwsr": "Apoyarás a estudios de juegos que dependen de los anuncios para el descubrimiento",
-  "mE2qtL": "Los negocios y estudios de juego que te encantan se pueden descubrir",
-  "QNWJs7": "Apoyarás a los negocios y estudios de videojuegos que dependen de anuncios para el descubrimiento",
   "QLMGho": [
     [
       1,
@@ -11481,6 +11465,7 @@
     " está transmitiendo"
   ],
   "2Ab4IS": "Al crear un canal de anuncios, tu perfil de servidor será visible para los usuarios que no sean miembros de tu servidor. Puedes controlar la privacidad del perfil en Ajustes del servidor > Perfil.",
+  "cQDYRk": "Adoptar etiqueta",
   "7XdMW1": "Solicitar unirse",
   "4yfIDg": "Ver estado de solicitud",
   "IRoQXl": "Ir al servidor",
@@ -18672,13 +18657,6 @@
   "DrAXIi": "Adopta esta etiqueta para mostrarla junto a tu nombre en Discord.",
   "VFqnyc": [
     "Ya puedes llevar una etiqueta de ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Miembro de ",
     [
       1,
       "guildName"

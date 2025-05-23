@@ -1371,24 +1371,6 @@
   "wOr6hI": "Too many uploads!",
   "BEWw//": "double tap to play video and enlarge",
   "3AS4UF": "Attach Files",
-  "vlj5uL": "Heads up – allowing tracking lets us personalise the content you see in your Quests & Rewards and keeps your experience as relevant as possible!",
-  "1dqa3d": "Wanna level up? Enabling tracking helps us make your experiences as rewarding and relevant as possible! You can opt out at any time in your iOS settings.",
-  "acNnra": "Just a quick ping – Allowing tracking helps us show you Quests that you’re actually into! You can opt out at any time in your iOS settings",
-  "Cq8QKS": "Player checkpoint – Allowing tracking personalises your experience and ensures you have a rewarding experience. You can opt out at any time in your iOS settings.",
-  "y4HOMj": "Help support Discord to be your cosy home on the internet",
-  "YW0z09": "You’ll help support Discord to be your cosy home on the internet",
-  "xaXauL": "Discord continues to be your cosy home on the internet",
-  "oD52ER": "Ensure Discord continues to be your cosy home on the internet",
-  "fpfPTk": "Receive personalised Quests that are crafted to your relevant interests",
-  "ZxkYWV": "We’ll personalise Quests to reflect your relevant interests",
-  "2xEEtr": "Quests will be personalised to offer you the rewards you want",
-  "nvVy39": "Receive Quests that match your interests",
-  "1xzDm5": "Allowing tracking means:",
-  "P9bOBQ": "If you allow tracking:",
-  "b0WurK": "Allowing tracking means you will:",
-  "TSMwsr": "You’ll back game studios who rely on ads for discovery",
-  "mE2qtL": "Businesses and game studios you love can be discovered",
-  "QNWJs7": "Back businesses and game studios who rely on ads for discovery",
   "QLMGho": [
     [
       1,
@@ -11448,6 +11430,7 @@
     " is streaming"
   ],
   "2Ab4IS": "By creating an announcement channel, your server profile will be visible to others outside your server members. You can control Profile privacy in Server Settings > Profile.",
+  "cQDYRk": "Adopt Tag",
   "7XdMW1": "Apply to Join",
   "4yfIDg": "View Application Status",
   "IRoQXl": "Go to Server",
@@ -18643,13 +18626,6 @@
   "DrAXIi": "Adopt this tag to display it next to your name across Discord.",
   "VFqnyc": [
     "You can now wear a tag from ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Member of ",
     [
       1,
       "guildName"

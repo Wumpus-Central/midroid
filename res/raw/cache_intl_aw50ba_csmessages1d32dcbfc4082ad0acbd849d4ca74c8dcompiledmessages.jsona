@@ -1431,26 +1431,6 @@
   "wOr6hI": "Příliš mnoho souborů pro nahrávání!",
   "BEWw//": "poklepáním spustíš video a zvětšíš velikost",
   "3AS4UF": "Přiložit soubory",
-  "vlj5uL": "Pozor, pozor – když povolíš sledování, umožníš nám tak personalizovat obsah, který vidíš v úkolech a odměnách, a nabídnout ti co nejlepší zážitky!",
-  "1dqa3d": "Chceš postoupit na vyšší úroveň? Zapnutím sledování nám pomůžeš nabídnout ti co nejlepší a nejrelevantnější zážitek! Můžeš se kdykoliv odhlásit v nastavení iOS.",
-  "acNnra": "Jen rychlé info – Povolením sledování nám pomůžeš, abychom ti nabízeli úkoly, které tě skutečně zajímají! Můžeš se kdykoliv odhlásit v nastavení iOS",
-  "Cq8QKS": "Kontrolní bod hráče – Povolením sledování umožníš přizpůsobení tvého prostředí a zajistíš, že si ho užiješ naplno. Můžeš se kdykoliv odhlásit v nastavení iOS.",
-  "y4HOMj": "Pomoct Discordu stát se tvým oblíbeným místem na internetu",
-  "YW0z09": "Pomůžeš Discordu stát se tvým oblíbeným místem na internetu",
-  "xaXauL": "Discord je na internetu i nadále tvým pohodovým domovem",
-  "oD52ER": "Postarej se, aby Discord zůstal i nadále tvým pohodovým domovem na internetu",
-  "fpfPTk": "Dostávat personalizované úkoly odpovídající tvým zájmům",
-  "ZxkYWV": "Úkoly přizpůsobíme tak, aby odpovídaly tvým zájmům",
-  "2xEEtr": "Úkoly budou personalizovány a nabídnou ti odměny, které se ti budou líbit",
-  "nvVy39": "Dostávej úkoly, které odpovídají tvým zájmům",
-  "mH8BIS": "Svou volbu pro toto zařízení můžeš kdykoli aktualizovat v nastavení iOS. Když povolíš sledování, budeš moct:",
-  "1xzDm5": "Když povolíš sledování, znamená to následující:",
-  "P9bOBQ": "Pokud povolíš sledování:",
-  "b0WurK": "Když povolíš sledování, znamená to následující:",
-  "UBpcNz": "Podporovat firmy a herní studia spoléhající při vyhledávání na reklamy",
-  "TSMwsr": "Podpoříš herní studia, která se při vyhledávání spoléhají na reklamy",
-  "mE2qtL": "Můžeš objevovat firmy a herní studia, které (si za)miluješ",
-  "QNWJs7": "Podpoříš herní studia, která se při vyhledávání spoléhají na reklamy",
   "QLMGho": [
     [
       1,
@@ -11941,6 +11921,7 @@
     " streamuje"
   ],
   "2Ab4IS": "Po vytvoření kanálu oznámení bude tvůj profil serveru viditelný pro ostatní mimo členy tvého serveru. Ochranu osobních údajů profilu můžeš zkontrolovat v sekci Nastavení serveru > Profil.",
+  "cQDYRk": "Použít štítek",
   "7XdMW1": "Požádat o přidání",
   "4yfIDg": "Zobrazit stav žádosti",
   "IRoQXl": "Přejít na server",
@@ -19311,13 +19292,6 @@
   "DrAXIi": "Použij tento štítek, aby se zobrazoval vedle tvého jména na celém Discordu.",
   "VFqnyc": [
     "Teď se můžeš chlubit štítkem klanu ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Člen klanu ",
     [
       1,
       "guildName"

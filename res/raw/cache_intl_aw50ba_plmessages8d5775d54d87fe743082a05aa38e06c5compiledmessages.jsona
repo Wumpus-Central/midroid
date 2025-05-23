@@ -1419,26 +1419,6 @@
   "wOr6hI": "Zbyt wiele przesyłanych plików!",
   "BEWw//": "stuknij dwukrotnie, aby odtworzyć film i powiększyć",
   "3AS4UF": "Załączanie plików",
-  "vlj5uL": "Uwaga – zezwalanie na śledzenie pozwala nam personalizować zawartość, którą widzisz w sekcji zadań i nagród, i dostosować doświadczenie do Twoich zainteresowań!",
-  "1dqa3d": "Chcesz podkręcić zabawę? Włączenie śledzenia pomaga nam zapewnić Ci najbardziej satysfakcjonujące i dostosowane do zainteresowań doświadczenia! Możesz zrezygnować z niego w dowolnym momencie w ustawieniach systemu iOS.",
-  "acNnra": "Szybki ping – pozwolenie na śledzenie pomaga nam pokazywać Ci zadania dopasowane do Twoich zainteresowań! Możesz wyłączyć tę opcję w dowolnym momencie w ustawieniach systemu iOS",
-  "Cq8QKS": "Punkt kontrolny gracza – śledzenie pomaga spersonalizować i wzbogacić Twoje doświadczenie. Możesz zrezygnować z niego w dowolnym momencie w ustawieniach systemu iOS.",
-  "y4HOMj": "Pomagać wspierać Discord, aby był Twoim domem w Internecie",
-  "YW0z09": "Pomożesz wspierać Discord, aby był Twoim domem w Internecie",
-  "xaXauL": "Discord nadal jest Twoim domem w Internecie",
-  "oD52ER": "Wspierać Discord, aby był Twoim domem w Internecie",
-  "fpfPTk": "Otrzymywać spersonalizowane zadania dopasowane do Twoich zainteresowań",
-  "ZxkYWV": "Dostosujemy zadania do Twoich zainteresowań",
-  "2xEEtr": "Zadania będą spersonalizowane, aby oferować pożądane przez Ciebie nagrody",
-  "nvVy39": "Otrzymywać zadania dostosowane do Twoich zainteresowań",
-  "mH8BIS": "Możesz w każdej chwili zmienić swój wybór dla tego urządzenia w Ustawieniach systemu iOS. Jeśli zezwolisz na śledzenie, możesz:",
-  "1xzDm5": "Zezwolenie na śledzenie oznacza, że:",
-  "P9bOBQ": "Jeśli zezwolisz na śledzenie:",
-  "b0WurK": "Zezwolenie na śledzenie oznacza, że będziesz:",
-  "UBpcNz": "Wspierać firmy i studia gier, które polegają na reklamach, aby dotrzeć do odbiorców",
-  "TSMwsr": "Wesprzesz studia gier, które polegają na reklamach, aby dotrzeć do odbiorców",
-  "mE2qtL": "Twoje ulubione firmy i studia gier mogą docierać do odbiorców",
-  "QNWJs7": "Wspierać studia gier, które polegają na reklamach, aby dotrzeć do odbiorców",
   "QLMGho": [
     [
       1,
@@ -11929,6 +11909,7 @@
     " streamuje"
   ],
   "2Ab4IS": "Po stworzeniu kanału ogłoszeniowego Twój profil serwerowy będzie widoczny dla użytkowników niebędących członkami Twojego serwera. Możesz zarządzać prywatnością profilu w menu Ustawienia serwera > Profil.",
+  "cQDYRk": "Zastosuj tag",
   "7XdMW1": "Złóż wniosek o dołączenie",
   "4yfIDg": "Zobacz status aplikacji",
   "IRoQXl": "Przejdź do serwera",
@@ -19212,13 +19193,6 @@
   "DrAXIi": "Zastosuj ten tag, aby wyświetlać go obok swojej nazwy w Discordzie.",
   "VFqnyc": [
     "Możesz teraz używać tagu z ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Członek serwera ",
     [
       1,
       "guildName"

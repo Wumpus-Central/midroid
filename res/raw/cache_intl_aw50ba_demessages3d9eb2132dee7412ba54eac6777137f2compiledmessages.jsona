@@ -1377,24 +1377,6 @@
   "wOr6hI": "Zu viele Uploads!",
   "BEWw//": "zum Abspielen des Videos und Vergrößern doppelt antippen",
   "3AS4UF": "Dateien anhängen",
-  "1dqa3d": "Möchtest du eine neue Stufe erklimmen? Wenn du Nachverfolgung aktivierst, können wir deine Erfahrungen so bereichernd und relevant wie möglich gestalten! Du kannst diese Option jederzeit in deinen iOS-Einstellungen deaktivieren.",
-  "acNnra": "Nur ein schneller Ping – Das Aktivieren von Nachverfolgung hilft uns, dir Quests zu zeigen, die dich wirklich interessieren! Du kannst diese Option jederzeit in deinen iOS-Einstellungen deaktivieren",
-  "Cq8QKS": "Spieler-Checkpoint – Das Aktivieren von Nachverfolgung personalisiert dein Erlebnis und stellt sicher, dass du eine bereichernde Erfahrung hast. Du kannst diese Option jederzeit in deinen iOS-Einstellungen deaktivieren.",
-  "y4HOMj": "Mithelfen, Discord zu deinem gemütlichen Zuhause im Internet zu machen",
-  "YW0z09": "Du hilfst mit, Discord zu deinem gemütlichen Zuhause im Internet zu machen",
-  "xaXauL": "Bleibt Discord weiterhin dein gemütliches Zuhause im Internet",
-  "oD52ER": "Sicherstellst, dass Discord weiterhin dein gemütliches Zuhause im Internet bleibt",
-  "fpfPTk": "Personalisierte Quests erhalten, die auf deine relevanten Interessen zugeschnitten sind",
-  "ZxkYWV": "Wir personalisieren Quests, um deine relevanten Interessen widerzuspiegeln",
-  "2xEEtr": "Werden Quests personalisiert, um dir die Belohnungen zu bieten, die dich interessieren",
-  "nvVy39": "Quests erhältst, die deinen Interessen entsprechen",
-  "1xzDm5": "Das Erlauben von Nachverfolgung bedeutet:",
-  "P9bOBQ": "Wenn du Tracking erlaubst:",
-  "b0WurK": "Das Erlauben von Nachverfolgung bedeutet, dass du:",
-  "UBpcNz": "Unternehmen und Gamestudios unterstützen, die sich auf Werbung verlassen, um entdeckt zu werden",
-  "TSMwsr": "Du unterstützt Unternehmen und Gamestudios, die sich auf Werbung verlassen, um entdeckt zu werden",
-  "mE2qtL": "Können Unternehmen und Gamestudios, die du liebst, entdeckt werden",
-  "QNWJs7": "Unternehmen und Gamestudios unterstützt, die sich auf Werbung verlassen, um entdeckt zu werden",
   "QLMGho": [
     [
       1,
@@ -11536,6 +11518,7 @@
     " streamt"
   ],
   "2Ab4IS": "Wenn du einen Ankündigungskanal erstellst, wird dein Serverprofil für andere Personen als deine Servermitglieder sichtbar. Du kannst die Profil-Privatsphäre in den Servereinstellungen > Profil bearbeiten.",
+  "cQDYRk": "Tag übernehmen",
   "7XdMW1": "Bewerben für Beitritt",
   "4yfIDg": "Bewerbungsstatus anzeigen",
   "IRoQXl": "Zum Server",
@@ -18845,13 +18828,6 @@
       "guildName"
     ],
     " tragen"
-  ],
-  "K+JVRk": [
-    "Mitglied von ",
-    [
-      1,
-      "guildName"
-    ]
   ],
   "m/Tc3t": [
     [

@@ -1374,26 +1374,6 @@
   "wOr6hI": "Çok fazla yükleme var!",
   "BEWw//": "videoyu oynatmak ve büyütmek için çift dokun",
   "3AS4UF": "Dosya Ekle",
-  "vlj5uL": "Dikkat! İzlemeye izni vermek, görevler ve ödüller içeriklerini senin için kişiselleştirmemizi ve deneyimini sana uykun kılmamızı sağlar!",
-  "1dqa3d": "Seviye atlamak ister misin? İzleme özelliğini etkinleştirerek deneyimlerini mümkün olduğunca ödüllendirici ve alakalı hâle getirmemize yardımcı olabilirsin! iOS ayarlarından istediğin zaman bu özelliği kapatabilirsin.",
-  "acNnra": "İzleme izni vermek, gerçekten ilgilendiğin görevleri sana göstermemize yardımcı olur! İstediğin zaman iOS ayarlarından değişiklik yapabilirsin.",
-  "Cq8QKS": "Oyuncu kontrol noktası: İzleme izni, deneyimini kişiselleştirir ve ödüllendirici bir deneyim sunar. İstediğin zaman iOS ayarlarından bunu iptal edebilirsin.",
-  "y4HOMj": "Discord'un internetteki rahat evin olabilmesi için destek olabilirsin.",
-  "YW0z09": "Discord'un internetteki rahat evin olabilmesi için destek olacaksın.",
-  "xaXauL": "Discord, internetteki rahat evin olmaya devam ediyor",
-  "oD52ER": "Discord, internetteki rahat evin olmaya devam etmesini sağla",
-  "fpfPTk": "İlgi alanlarına göre hazırlanmış kişiselleştirilmiş görevler alabilirsin.",
-  "ZxkYWV": "Görevleri, ilgi alanlarını yansıtacak şekilde kişiselleştireceğiz",
-  "2xEEtr": "Görevler, istediğin ödülleri sunacak şekilde kişiselleştirilecek",
-  "nvVy39": "İlgi alanlarına uygun görevler al",
-  "mH8BIS": "Bu cihaz için tercihini istediğin zaman iOS ayarlarında güncelleyebilirsin. İzlemeye izin verirsen:",
-  "1xzDm5": "İzlemeye izin vermek şu anlamlara gelir:",
-  "P9bOBQ": "İzlemeye izin verirsen:",
-  "b0WurK": "İzlemeye izin vermek, şunları yapacağın anlamına gelir:",
-  "UBpcNz": "Keşif için reklamları kullanan işletmeleri ve oyun stüdyolarını destekleyebilirsin.",
-  "TSMwsr": "Reklamlara bağlı olan oyun stüdyolarını destekleyeceksin",
-  "mE2qtL": "Sevdiğin iş yerlerini ve oyun stüdyolarını keşfet",
-  "QNWJs7": "Keşif için reklamları kullanan işletmeleri ve oyun stüdyolarını destekleyebilirsin.",
   "QLMGho": [
     [
       1,
@@ -11422,6 +11402,7 @@
     ", yayın yapıyor"
   ],
   "2Ab4IS": "Bir duyuru kanalı oluşturarak sunucu profilini sunucu üyelerinin dışındaki kişilere de gösterebilirsin. Profil gizliliğini Sunucu Ayarları > Profil'den kontrol edebilirsin.",
+  "cQDYRk": "Etiketi Kullan",
   "7XdMW1": "Başvur ve Katıl",
   "4yfIDg": "Uygulama Durumunu Görüntüle",
   "IRoQXl": "Sunucuya git",
@@ -18740,13 +18721,6 @@
       "guildName"
     ],
     " loncasından bir etiket kullanabilirsin"
-  ],
-  "K+JVRk": [
-    [
-      1,
-      "guildName"
-    ],
-    " Üyesi"
   ],
   "m/Tc3t": [
     [

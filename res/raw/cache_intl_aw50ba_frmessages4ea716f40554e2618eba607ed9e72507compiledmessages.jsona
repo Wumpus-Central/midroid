@@ -1373,26 +1373,6 @@
   "wOr6hI": "Uploads trop nombreux !",
   "BEWw//": "Touche deux fois pour lancer la vidéo et agrandir",
   "3AS4UF": "Joindre des fichiers",
-  "vlj5uL": "Attention : autoriser le suivi nous permet de personnaliser le contenu que tu vois dans tes quêtes et récompenses et de rendre ton expérience aussi pertinente que possible !",
-  "1dqa3d": "Tu veux passer au niveau supérieur ? Activer le suivi nous aide à rendre tes expériences aussi enrichissantes et pertinentes que possible ! Tu peux désactiver cette fonctionnalité à tout moment dans tes paramètres iOS.",
-  "acNnra": "Juste pour info : autoriser le suivi nous aide à te proposer des quêtes qui t'intéressent vraiment ! Tu peux désactiver cette fonctionnalité à tout moment dans tes paramètres iOS.",
-  "Cq8QKS": "Checkpoint du joueur : autoriser le suivi te permet de profiter d'une expérience personnalisée et enrichissante. Tu peux désactiver cette fonctionnalité à tout moment dans tes paramètres iOS.",
-  "y4HOMj": "Aider Discord à être ton petit nid douillet sur Internet",
-  "YW0z09": "Tu aideras Discord à être ton petit nid douillet sur Internet",
-  "xaXauL": "Discord continue d'être ton petit nid douillet sur Internet",
-  "oD52ER": "Tu t'assureras que Discord continue d'être ton petit nid douillet sur Internet",
-  "fpfPTk": "Recevoir des quêtes personnalisées conçues pour tes propres intérêts",
-  "ZxkYWV": "Nous personnaliserons les quêtes afin qu'elles reflètent tes propres intérêts",
-  "2xEEtr": "Les quêtes seront personnalisées pour te faire gagner les récompenses que tu souhaites",
-  "nvVy39": "Reçois des quêtes qui correspondent à tes intérêts",
-  "mH8BIS": "Tu peux toujours modifier ton choix pour cet appareil dans tes paramètres iOS à tout moment. En autorisant le suivi, tu pourras :",
-  "1xzDm5": "Autoriser le suivi signifie que :",
-  "P9bOBQ": "Si tu autorises le suivi :",
-  "b0WurK": "Autoriser le suivi signifie que tu :",
-  "UBpcNz": "Soutenir les entreprises et les studios de jeux vidéo qui comptent sur la publicité pour se faire connaître",
-  "TSMwsr": "Tu soutiendras les studios de jeux qui comptent sur les publicités pour se faire découvrir",
-  "mE2qtL": "Les entreprises et les studios de jeux que tu aimes peuvent être découverts",
-  "QNWJs7": "Soutiens les studios de jeux qui comptent sur les publicités pour se faire découvrir",
   "QLMGho": [
     [
       1,
@@ -11461,6 +11441,7 @@
     " streame"
   ],
   "2Ab4IS": "En créant un salon des annonces, ton profil de serveur sera visible pour les autres personnes qui ne sont pas membres de ton serveur. Tu peux contrôler les paramètres de confidentialité du profil dans Paramètres du serveur > Profil.",
+  "cQDYRk": "Utiliser le tag",
   "7XdMW1": "Postule pour rejoindre",
   "4yfIDg": "Afficher l'état de l'Application",
   "IRoQXl": "Aller sur le serveur",
@@ -18690,13 +18671,6 @@
   "DrAXIi": "Utilise ce tag pour l'afficher à côté de ton nom partout sur Discord.",
   "VFqnyc": [
     "Tu peux désormais porter un tag de ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Membre de ",
     [
       1,
       "guildName"

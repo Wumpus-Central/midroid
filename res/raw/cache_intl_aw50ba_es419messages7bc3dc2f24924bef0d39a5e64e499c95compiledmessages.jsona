@@ -1386,24 +1386,6 @@
   "wOr6hI": "¡Demasiadas subidas!",
   "BEWw//": "toca dos veces para reproducir el video y agrandarlo",
   "3AS4UF": "Adjuntar archivos",
-  "1dqa3d": "¿Quieres subir de nivel? Al activar el seguimiento, nos ayudas a hacer tus experiencias lo más gratificantes y relevantes posible. Puedes desactivarlo en cualquier momento desde tus ajustes de iOS.",
-  "acNnra": "Solo un aviso rápido: al permitir el seguimiento, podemos mostrarte las misiones que realmente te interesan. Puedes desactivarlo en cualquier momento desde tus ajustes de iOS",
-  "Cq8QKS": "Punto de control del jugador: Al permitir el seguimiento, podemos personalizar tu experiencia y garantizar que sea gratificante. Puedes desactivarlo en cualquier momento desde tus ajustes de iOS.",
-  "y4HOMj": "Ayudar a que Discord sea tu hermoso hogar en internet",
-  "YW0z09": "Ayudarás a que Discord sea tu hermoso hogar en internet",
-  "xaXauL": "Discord sigue siendo tu hermoso hogar en internet",
-  "oD52ER": "Asegúrate de que Discord siga siendo tu hermoso hogar en internet",
-  "fpfPTk": "Recibir misiones personalizadas especialmente para ti según tus intereses relevantes",
-  "ZxkYWV": "Personalizaremos las misiones para que realmente te interesen",
-  "2xEEtr": "Las misiones estarán personalizadas para ofrecerte las recompensas que deseas",
-  "nvVy39": "Recibe misiones que realmente te interesen",
-  "1xzDm5": "Al permitir el seguimiento:",
-  "P9bOBQ": "Si permites el seguimiento:",
-  "b0WurK": "Al permitir el seguimiento:",
-  "UBpcNz": "Colaborar con las empresas y estudios de videojuegos que dependen de anuncios para expandir su público",
-  "TSMwsr": "Apoyarás a estudios de videojuegos que dependen de anuncios para expandir su público",
-  "mE2qtL": "Puedes descubrir los estudios de videojuegos y negocios que te encantan",
-  "QNWJs7": "Apoya a los negocios y estudios de videojuegos que dependen de anuncios expandir su público",
   "QLMGho": [
     [
       1,
@@ -11427,6 +11409,7 @@
     " está transmitiendo"
   ],
   "2Ab4IS": "Al crear un canal de anuncios, tu perfil de servidor será visible para otras personas externas a los miembros del servidor. Puedes controlar la privacidad del perfil en Ajustes del servidor > Perfil.",
+  "cQDYRk": "Adoptar etiqueta",
   "7XdMW1": "Solicitar unirse",
   "4yfIDg": "Ver estado de la aplicación",
   "IRoQXl": "Ir al servidor",
@@ -18626,13 +18609,6 @@
   "DrAXIi": "Adopta esta etiqueta para visualizarla junto a tu nombre en Discord.",
   "VFqnyc": [
     "Ahora puedes lucir una etiqueta de ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Miembro de ",
     [
       1,
       "guildName"

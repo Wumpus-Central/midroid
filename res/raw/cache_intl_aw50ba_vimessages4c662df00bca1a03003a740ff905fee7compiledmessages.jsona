@@ -1379,26 +1379,6 @@
   "wOr6hI": "Quá nhiều mục tải lên!",
   "BEWw//": "nhấn đúp để phát video và phóng lớn",
   "3AS4UF": "Đính kèm tập tin",
-  "vlj5uL": "Lưu ý — cho phép theo dõi giúp chúng tôi cá nhân hóa nội dung bạn thấy trong Nhiệm Vụ & Phần Thưởng và đảm bảo trải nghiệm của bạn liên quan đến nội dung nhất có thể!",
-  "1dqa3d": "Muốn lên cấp à? Bật theo dõi sẽ giúp chúng tôi cải thiện trải nghiệm của bạn thêm phần thỏa mãn và liên quan hết mức! Bạn có thể chọn không tham gia bất kỳ lúc nào trong cài đặt iOS của mình.",
-  "acNnra": "Chỉ là một thông báo nhanh thôi - Cho phép theo dõi giúp chúng tôi hiển thị Nhiệm Vụ mà bạn thực sự thích! Bạn có thể chọn không tham gia bất kỳ lúc nào trong cài đặt iOS của mình",
-  "Cq8QKS": "Điểm đánh dấu người chơi - Cho phép theo dõi sẽ cá nhân hóa trải nghiệm của bạn và đảm bảo bạn có một trải nghiệm thỏa mãn. Bạn có thể chọn không tham gia bất kỳ lúc nào trong cài đặt iOS của mình.",
-  "y4HOMj": "Giúp hỗ trợ Discord trở thành nơi trú ngụ ấm cúng của bạn trên internet",
-  "YW0z09": "Bạn sẽ giúp hỗ trợ Discord trở thành nơi trú ngụ ấm cúng của bạn trên internet",
-  "xaXauL": "Discord vẫn là mái nhà ấm cúng của bạn trên internet",
-  "oD52ER": "Hãy đảm bảo Discord vẫn là mái nhà ấm cúng của bạn trên internet",
-  "fpfPTk": "Nhận các Nhiệm Vụ được cá nhân hóa theo sở thích liên quan của bạn",
-  "ZxkYWV": "Chúng tôi sẽ cá nhân hóa Nhiệm Vụ để phản ánh các sở thích liên quan của bạn",
-  "2xEEtr": "Nhiệm vụ sẽ được cá nhân hóa để mang đến cho bạn phần thưởng theo ý muốn",
-  "nvVy39": "Nhận các Nhiệm Vụ phù hợp với sở thích của bạn",
-  "mH8BIS": "Bạn luôn có thể cập nhật lựa chọn của mình cho thiết bị này trong cài đặt iOS bất kỳ lúc nào. Nếu cho phép theo dõi, bạn có thể:",
-  "1xzDm5": "Cho phép theo dõi có nghĩa là:",
-  "P9bOBQ": "Nếu bạn cho phép theo dõi:",
-  "b0WurK": "Cho phép theo dõi có nghĩa là bạn sẽ:",
-  "UBpcNz": "Hỗ trợ các doanh nghiệp và studio game dựa vào quảng cáo để khám phá",
-  "TSMwsr": "Bạn sẽ hỗ trợ các studio game dựa vào quảng cáo để khám phá",
-  "mE2qtL": "Doanh nghiệp và studio game bạn yêu thích có thể được khám phá",
-  "QNWJs7": "Hỗ trợ các doanh nghiệp và studio game dựa vào quảng cáo để khám phá",
   "QLMGho": [
     [
       1,
@@ -11508,6 +11488,7 @@
     " đang stream"
   ],
   "2Ab4IS": "Bằng cách tạo kênh thông báo, hồ sơ của máy chủ của bạn sẽ hiển thị với những người khác không phải là thành viên máy chủ của bạn. Bạn có thể kiểm soát quyền riêng tư của Hồ Sơ trong Cài Đặt Máy Chủ > Hồ sơ.",
+  "cQDYRk": "Sử dụng tag",
   "7XdMW1": "Đăng ký tham gia",
   "4yfIDg": "Xem Trạng Thái Đăng Ký Tham Gia",
   "IRoQXl": "Đi tới Máy chủ",
@@ -18709,13 +18690,6 @@
   "DrAXIi": "Sử dụng tag này để hiển thị bên cạnh tên của bạn trên Discord.",
   "VFqnyc": [
     "Giờ bạn có thể đeo số nhận diện từ ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Thành viên của ",
     [
       1,
       "guildName"

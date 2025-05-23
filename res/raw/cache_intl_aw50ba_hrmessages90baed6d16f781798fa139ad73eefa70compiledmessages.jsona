@@ -1401,26 +1401,6 @@
   "wOr6hI": "Previše prenošenja!",
   "BEWw//": "dvaput dodirni za reprodukciju videa i povećanje",
   "3AS4UF": "Prilaganje datoteka",
-  "vlj5uL": "Imaj na umu – dopustiš li praćenje, moći ćemo personalizirati sadržaj koji vidiš u svojim misijama i nagradama, pa će i tvoj doživljaj biti potpuniji!",
-  "1dqa3d": "Želiš li prijeći na višu razinu? Dopustiš li praćenje, lakše ćemo igru urediti tako da je doživiš onako kako tebi bolje odgovara i tebi je relevantnije! Možeš se isključiti kad god poželiš u postavkama iOS-a.",
-  "acNnra": "Samo kratki podsjetnik – dopustiš li praćenje, lakše ćemo ti prikazivati one misije koje te zaista zanimaju! Možeš se isključiti kad god poželiš u postavkama iOS-a",
-  "Cq8QKS": "Igračeva kontrolna točka – dopustiš li praćenje, dojam igre bit će prilagođen tebi i sigurno će ti se isplatiti. Možeš se isključiti kad god poželiš u postavkama iOS-a.",
-  "y4HOMj": "Olakšaj Discordu posao - želi biti tvoj slatki dom na internetu",
-  "YW0z09": "Olakšat ćeš Discordu posao. Njemu je želja biti tvoj slatki dom na internetu",
-  "xaXauL": "Discord nastavlja biti tvoj slatki dom na internetu",
-  "oD52ER": "Discord želi i dalje biti tvoj slatki dom na internetu - omogući mu to",
-  "fpfPTk": "Primaj personalizirane misije koje su izrađene sukladno tvojim interesima",
-  "ZxkYWV": "Personalizirat ćemo misije kako bi odražavale tvoje relevantne interese",
-  "2xEEtr": "Misije će biti personalizirane kako bi ti nudile nagrade koje želiš",
-  "nvVy39": "Dobivaj misije koje odgovaraju tvojim interesima",
-  "mH8BIS": "Uvijek možeš ažurirati svoj izbor za ovaj uređaj u postavkama iOS-a. To možeš učiniti u svakom trenutku. Ako dopustiš praćenje, možeš:",
-  "1xzDm5": "Dopustiš li praćenje, to znači:",
-  "P9bOBQ": "Dopustiš li praćenje:",
-  "b0WurK": "Dopustiš li praćenje, to znači da ćeš:",
-  "UBpcNz": "Podrži tvrtke i studije za razvoj igara koji ovise o oglasima koji se otkrivaju",
-  "TSMwsr": "Podržat ćeš studije za razvoj igara koji ovise o oglasima koji se otkrivaju",
-  "mE2qtL": "Možeš otkriti tvrtke i studije za razvoj igara koje voliš",
-  "QNWJs7": "Podrži tvrtke i studije za razvoj igara koji publiku nastoje pridobiti glasima koje treba otkriti",
   "QLMGho": [
     [
       1,
@@ -11875,6 +11855,7 @@
     " streama"
   ],
   "2Ab4IS": "Izradiš li kanal za najave, profil tvojeg servera bit će vidljiv i drugima, a ne samo članovima tvojeg servera. Privatnošću profila možeš upravljati u izborniku Postavke servera > Profil.",
+  "cQDYRk": "Usvoji tag",
   "7XdMW1": "Prijavi se za pridruživanje",
   "4yfIDg": "Prikaži status zahtjeva",
   "IRoQXl": "Idi na server",
@@ -19218,13 +19199,6 @@
   "DrAXIi": "Usvoji ovaj tag da ga možeš prikazivati pored svog imena na cijelom Discordu.",
   "VFqnyc": [
     "Sada možeš nositi tag gilde ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Član gilde ",
     [
       1,
       "guildName"

@@ -1373,26 +1373,6 @@
   "wOr6hI": "Te veel uploads!",
   "BEWw//": "dubbeltik om video af te spelen en uit te vouwen",
   "3AS4UF": "Bestanden bijvoegen",
-  "vlj5uL": "Let op, als je traceren toestaat, kunnen we de content die je in je missies en beloningen ziet personaliseren en blijft je ervaring zo relevant mogelijk!",
-  "1dqa3d": "Wil je een niveau omhoog? Als je tracking inschakelt, kunnen we je ervaringen zo lonend en relevant mogelijk maken! Je kunt het altijd weer uitschakelen via je iOS-instellingen.",
-  "acNnra": "Even een snelle ping: als je tracking toestaat, kunnen wij makkelijker missies tonen die je echt leuk vindt! Je kunt dit op elk moment weer uitschakelen in je iOS-instellingen",
-  "Cq8QKS": "Spelerscheckpoint – Het toestaan van tracking personaliseert je ervaring en zorgt voor een lonende ervaring. Je kunt je er op elk moment voor afmelden in je iOS-instellingen.",
-  "y4HOMj": "Discord steunen, zodat je je eigen gezellige plekje hebt op internet",
-  "YW0z09": "Je Discord steunt, zodat je je eigen gezellige plekje hebt op internet",
-  "xaXauL": "Discord je gezellige plekje op het internet blijft",
-  "oD52ER": "Je ervoor zorgt dat Discord je gezellige plekje op het internet blijft",
-  "fpfPTk": "Gepersonaliseerde missies ontvangen die zijn gemaakt op basis van jouw relevante interesses",
-  "ZxkYWV": "We je missies personaliseren om je relevante interesses weer te geven",
-  "2xEEtr": "Missies worden gepersonaliseerd om je de beloningen te bieden die je wilt",
-  "nvVy39": "Je missies ontvangt die overeenkomen met je interesses",
-  "mH8BIS": "Je kunt je keuze voor dit apparaat op elk moment updaten in je iOS-instellingen. Als je traceren toestaat, kun je:",
-  "1xzDm5": "Het toestaan van tracking betekent dat:",
-  "P9bOBQ": "Als je tracking toestaat:",
-  "b0WurK": "Het toestaan van tracking betekent dat je:",
-  "UBpcNz": "Bedrijven en gamestudio's ondersteunen die afhankelijk zijn van advertenties voor ontdekking",
-  "TSMwsr": "Je gamestudio's steunt die voor Ontdekking afhankelijk zijn van advertenties",
-  "mE2qtL": "Bedrijven en gamestudio's die je leuk vindt kunnen worden ontdekt",
-  "QNWJs7": "Je bedrijven en game-studio's steunt die voor Ontdekking afhankelijk zijn van advertenties",
   "QLMGho": [
     [
       1,
@@ -11477,6 +11457,7 @@
     " is aan het streamen"
   ],
   "2Ab4IS": "Als je een aankondigingskanaal maakt, wordt je serverprofiel ook zichtbaar voor mensen die geen lid van je server zijn. Je kunt profielprivacy beheren in Serverinstellingen > Profiel.",
+  "cQDYRk": "Tag gebruiken",
   "7XdMW1": "Verzoek indienen om mee te doen",
   "4yfIDg": "Verzoekstatus bekijken",
   "IRoQXl": "Naar server",
@@ -18693,13 +18674,6 @@
       "guildName"
     ],
     " gebruiken"
-  ],
-  "K+JVRk": [
-    "Lid van ",
-    [
-      1,
-      "guildName"
-    ]
   ],
   "m/Tc3t": [
     "De servertag van ",

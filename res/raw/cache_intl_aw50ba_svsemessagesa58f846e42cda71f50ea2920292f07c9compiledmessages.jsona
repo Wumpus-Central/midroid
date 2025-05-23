@@ -1370,26 +1370,6 @@
   "wOr6hI": "För många uppladdningar!",
   "BEWw//": "dubbeltryck för att spela video och förstora",
   "3AS4UF": "Bifoga filer",
-  "vlj5uL": "Obs! Om du tillåter spårning kan vi anpassa innehållet du ser i dina uppdrag och belöningar och ge dig en så relevant upplevelse som möjligt!",
-  "1dqa3d": "Vill du nå en högre nivå? Genom att aktivera spårning kan vi göra dina upplevelser så givande och relevanta som möjligt! Du kan välja bort det när som helst i dina iOS-inställningar.",
-  "acNnra": "Bara en snabb ping - Genom att tillåta spårning kan vi visa dig uppdrag som du faktiskt är intresserad av! Du kan välja bort det när som helst i dina iOS-inställningar",
-  "Cq8QKS": "Kontrollpunkt för spelare - Genom att tillåta spårning anpassas din användning och ser till att du får en givande upplevelse. Du kan välja bort det när som helst i dina iOS-inställningar.",
-  "y4HOMj": "Hjälpa till att stötta Discord så att det kan vara ditt mysiga hem på internet",
-  "YW0z09": "Du hjälper till att stötta Discord som ditt mysiga hem på internet",
-  "xaXauL": "Discord fortsätter att vara ditt mysiga hem på internet",
-  "oD52ER": "Se till att Discord fortsätter att vara ditt mysiga hem på internet",
-  "fpfPTk": "Få personliga uppdrag som är utformade efter dina intressen",
-  "ZxkYWV": "Vi kommer att anpassa uppdrag för att återspegla dina intressen",
-  "2xEEtr": "Uppdrag kommer att anpassas för att ge dig de belöningar du vill ha",
-  "nvVy39": "Ta emot uppdrag som matchar dina intressen",
-  "mH8BIS": "Du kan alltid uppdatera ditt val för den här enheten i dina iOS-inställningar när som helst. Om du tillåter spårning kan du:",
-  "1xzDm5": "Att tillåta spårning innebär:",
-  "P9bOBQ": "Om du tillåter spårning:",
-  "b0WurK": "Att tillåta spårning innebär att du:",
-  "UBpcNz": "Stötta företag och spelstudior som är beroende av annonser för att upptäckas",
-  "TSMwsr": "Du stöttar spelstudior som är beroende av annonser för att upptäckas",
-  "mE2qtL": "Företag och spelstudior du älskar kan upptäckas",
-  "QNWJs7": "Stötta företag och spelstudior som är beroende av annonser för att upptäckas",
   "QLMGho": [
     [
       1,
@@ -11434,6 +11414,7 @@
     " streamar"
   ],
   "2Ab4IS": "Genom att skapa en meddelandekanal kommer din serverprofil att vara synlig för andra som inte är medlemmar i din server. Du kan kontrollera profilens integritet i Serverinställningar > Profil.",
+  "cQDYRk": "Använd tagg",
   "7XdMW1": "Ansök om att gå med",
   "4yfIDg": "Visa ansökningsstatus",
   "IRoQXl": "Gå till server",
@@ -18630,13 +18611,6 @@
   "DrAXIi": "Använd den här taggen för att visa den bredvid ditt namn på Discord.",
   "VFqnyc": [
     "Du kan nu bära en tagg från ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Medlem i ",
     [
       1,
       "guildName"

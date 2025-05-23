@@ -393,6 +393,8 @@ public final class R {
       public static int images_group_dms_icon5;
       public static int images_group_dms_icon6;
       public static int images_group_dms_icon7;
+      public static int images_nameplate_avatar_placeholder_dark_mode;
+      public static int images_nameplate_avatar_placeholder_light_mode;
       public static int images_native_application_streaming_img_preview_not_available_dark;
       public static int images_native_application_streaming_img_preview_not_available_light;
       public static int images_native_application_streaming_img_stream_ended_dark;
@@ -1942,7 +1944,7 @@ public final class R {
       public static int intl_messages_untranslatedcompiledmessages;
       public static int modules_activity_privacy_activityprivacycompiledmessages;
       public static int modules_clicker_game_clickergamecompiledmessages;
-      public static int modules_client_themes_clientthemescompiledmessages;
+      public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_custom_status_images_custom_status_prompts_coachmark_art;
       public static int modules_go_live_web_modal_golivemodalcompiledmessages;

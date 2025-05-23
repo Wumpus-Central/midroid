@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 282203
-  versionName: 282.3 - Alpha
+  versionCode: 282204
+  versionName: 282.4 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -414,7 +414,7 @@ doNotCompress:
 - res/raw/emojis_json.gz
 - res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
 - res/raw/modules_clicker_game_clickergamecompiledmessages.jsona
-- res/raw/modules_client_themes_clientthemescompiledmessages.jsona
+- res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
 - res/raw/modules_go_live_web_modal_golivemodalcompiledmessages.jsona
 - res/raw/modules_guild_settings_web_tags_guildsettingstagscompiledmessages.jsona

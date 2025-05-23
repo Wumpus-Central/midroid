@@ -1372,26 +1372,6 @@
   "wOr6hI": "Liian monta latausta!",
   "BEWw//": "toista video ja suurenna kaksoisnapautuksella",
   "3AS4UF": "Liitä tiedostoja",
-  "vlj5uL": "Huomautus – jos sallit seurannan, voimme mukauttaa tehtävissä ja palkinnoissa näkemääsi sisältöä ja varmistaa, että käyttökokemuksesi on mahdollisimman paljon itseäsi kiinnostava!",
-  "1dqa3d": "Haluatko parantaa käyttökokemustasi? Sallimalla seurannan autat meitä tekemään käytöstä mahdollisimman palkitsevaa ja itsellesi mukautettua. Voit perua luvan milloin tahansa iOS-asetuksista.",
-  "acNnra": "Pikainen muistutus – Jos sallit seurannan, voimme näyttää itseäsi kiinnostavia tehtäviä. Voit perua luvan milloin tahansa iOS-asetuksista",
-  "Cq8QKS": "Pelaajan välitallennuspiste – Kun sallit seurannan, pystymme mukauttamaan käyttökokemustasi ja varmistamaan, että se on palkitseva. Voit perua luvan milloin tahansa iOS-asetuksista.",
-  "y4HOMj": "Auta tukemaan Discordia ja tekemään siitä itsellesi kotoisa paikka Internetissä",
-  "YW0z09": "Autat tukemaan Discordia ja tekemään siitä itsellesi kotoisan paikan Internetissä",
-  "xaXauL": "Discord on edelleen itsellesi kotoisa paikkasi Internetissä",
-  "oD52ER": "Varmistat, että Discord on edelleen itsellesi kotoisa paikkasi Internetissä",
-  "fpfPTk": "Vastaanota kiinnostuksenaihedesi mukaan räätälöityjä tehtäviä",
-  "ZxkYWV": "Yksilöimme tehtäviä kiinnostuksenaiheidesi mukaan",
-  "2xEEtr": "Tehtäviä voidaan mukauttaa antamaan mieleisiäsi palkintoja",
-  "nvVy39": "Saat kiinnostuksen aiheitasi vastaavia tehtäviä",
-  "mH8BIS": "Voit muuttaa valintaasi tässä laitteessa milloin tahansa iOS-asetuksissa. Jos sallit seurannan, voit käyttää seuraavia ominaisuuksia:",
-  "1xzDm5": "Seurannan salliminen tarkoittaa seuraava:",
-  "P9bOBQ": "Seurannan salliminen merkitsee seuraavaa:",
-  "b0WurK": "Seurannan salliminen tarkoittaa seuraava:",
-  "UBpcNz": "Tue yrityksiä ja pelistudioita, jotka edistävät palvelimiensa löytämistä mainoksilla",
-  "TSMwsr": "Tuet pelistudioita, jotka edistävät palvelimiensa löytämistä mainoksilla",
-  "mE2qtL": "Saatat löytää itseäsi kiinnostavia yrityksiä ja pelistudioita",
-  "QNWJs7": "Tuet yrityksiä ja pelistudioita, jotka edistävät palvelimiensa löytämistä mainoksilla",
   "QLMGho": [
     [
       1,
@@ -11507,6 +11487,7 @@
     " striimaa"
   ],
   "2Ab4IS": "Jos luot tiedotekanavan, palvelinprofiilisi näkyy myös muille kuin palvelimesi jäsenille. Voit määrittää profiilin yksityisyyden tason valitsemalla Palvelinasetukset > Profiili.",
+  "cQDYRk": "Ota tunniste käyttöön",
   "7XdMW1": "Lähetä liittymishakemus",
   "4yfIDg": "Näytä hakemuksen tila",
   "IRoQXl": "Siirry palvelimelle",
@@ -18707,13 +18688,6 @@
       "guildName"
     ],
     " tarjoaa sinulle nyt tunnisteen käytettäväksesi"
-  ],
-  "K+JVRk": [
-    "Jäsen täällä: ",
-    [
-      1,
-      "guildName"
-    ]
   ],
   "m/Tc3t": [
     [

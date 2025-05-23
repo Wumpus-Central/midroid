@@ -1379,26 +1379,6 @@
   "wOr6hI": "For mange uploads!",
   "BEWw//": "tryk to gange for at afspille video og forstørre",
   "3AS4UF": "Vedhæft filer",
-  "vlj5uL": "Vær opmærksom på, at når du tillader sporing, giver du os mulighed for at tilpasse det indhold, du ser, i dine missioner og belønninger og holder din oplevelse så relevant som muligt!",
-  "1dqa3d": "Ønsker du at stige i niveau? Hvis du aktiverer sporing, hjælper det os med at gøre dine oplevelser så berigende og relevante som muligt! Du kan fravælge det når som helst i dine iOS-indstillinger.",
-  "acNnra": "Bare et hurtigt ping – Hvis du tillader sporing, hjælper det os med at vise dig missioner, som du faktisk er interesseret i! Du kan fravælge det når som helst i dine iOS-indstillinger.",
-  "Cq8QKS": "Spiller-kontrolpunkt – Tillad sporing, der tilpasser din oplevelse til dig og sikrer, at du får en berigende oplevelse. Du kan fravælge det når som helst i dine iOS-indstillinger.",
-  "y4HOMj": "Hjælp med at støtte Discord, så det bliver dit hyggelige hjem på internettet",
-  "YW0z09": "Du vil hjælpe med at støtte Discord, så det kan blive dit hyggelige hjem på internettet",
-  "xaXauL": "Discord er stadig dit hyggelige hjem på internettet",
-  "oD52ER": "Sørg for, at Discord fortsat forbliver dit hyggelige hjem på internettet",
-  "fpfPTk": "Modtag personlige missioner, der er skræddersyet til dine relevante interesser",
-  "ZxkYWV": "Vi tilpasser missioner for at afspejle dine relevante interesser",
-  "2xEEtr": "Missioner bliver tilpasset til dig for at tilbyde dig de belønninger, du ønsker",
-  "nvVy39": "Modtag missioner, der passer til dine interesser",
-  "mH8BIS": "Du kan altid ændre dit valg for denne enhed i dine iOS-indstillinger. Hvis du tillader sporing, kan du:",
-  "1xzDm5": "Når du tillader sporing, betyder det, at:",
-  "P9bOBQ": "Hvis du tillader sporing:",
-  "b0WurK": "Hvis du tillader sporing, betyder det, at du vil:",
-  "UBpcNz": "Støt virksomheder og spilstudier, der er afhængige af annoncer for at blive opdaget",
-  "TSMwsr": "Du vil støtte spilstudier, som er afhængige af reklamer for at blive opdaget",
-  "mE2qtL": "Virksomheder og spilstudier, du elsker, kan opdages",
-  "QNWJs7": "Tilbage til virksomheder og spilstudier, der er afhængige af reklamer for at blive opdaget",
   "QLMGho": [
     [
       1,
@@ -11479,6 +11459,7 @@
     " streamer"
   ],
   "2Ab4IS": "Når du opretter en bekendtgørelseskanal, bliver din serverprofil synlig for andre end dine servermedlemmer. Du kan administrere din profils privatlivsindstillinger i Serverindstillinger > Profil.",
+  "cQDYRk": "Brug tag",
   "7XdMW1": "Anvend for at deltage",
   "4yfIDg": "Se applikationsstatus",
   "IRoQXl": "Gå til serveren",
@@ -18709,13 +18690,6 @@
   "DrAXIi": "Brug dette tag til at vise det ved siden af dit navn på Discord.",
   "VFqnyc": [
     "Du kan nu bruge et tag fra ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Medlem af ",
     [
       1,
       "guildName"

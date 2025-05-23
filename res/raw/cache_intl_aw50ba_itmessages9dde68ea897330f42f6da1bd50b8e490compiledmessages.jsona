@@ -1359,26 +1359,6 @@
   "wOr6hI": "Caricati troppi file!",
   "BEWw//": "tocca due volte per riprodurre il video e ingrandirlo",
   "3AS4UF": "Allegare i file",
-  "vlj5uL": "Attenzione: consentire il monitoraggio ci permette di personalizzare il contenuto che vedi nelle missioni e ricompense e di mantenere la tua esperienza il più pertinente possibile!",
-  "1dqa3d": "Vuoi passare al livello successivo? Consenti il monitoraggio per godere al massimo di un'esperienza personalizzata e rilevante! Puoi rinunciare in qualsiasi momento nelle impostazioni di iOS.",
-  "acNnra": "Lo sapevi? Se consenti il monitoraggio, ci aiuti a mostrarti le missioni che sono per te rilevanti! Puoi rinunciare in qualsiasi momento nelle impostazioni di iOS",
-  "Cq8QKS": "Checkpoint - Consentire il monitoraggio ti permette di godere dei vantaggi di un'esperienza personalizzata. Puoi rinunciare in qualsiasi momento nelle impostazioni di iOS.",
-  "y4HOMj": "aiutare a supportare Discord, la tua accogliente casa su internet",
-  "YW0z09": "Aiuterai a supportare Discord, la tua accogliente casa su internet",
-  "xaXauL": "Discord sarà la tua accogliente casa su internet",
-  "oD52ER": "Ti assicuri che Discord continui a essere la tua accogliente casa su internet",
-  "fpfPTk": "ricevere missioni personalizzate create in base ai tuoi interessi",
-  "ZxkYWV": "Personalizzeremo le missioni perché rispecchino meglio i tuoi interessi",
-  "2xEEtr": "Le missioni saranno personalizzate per offrirti le ricompense che desideri",
-  "nvVy39": "Ricevi missioni che corrispondono ai tuoi interessi",
-  "mH8BIS": "Puoi sempre aggiornare la tua scelta per questo dispositivo in qualsiasi momento nelle Impostazioni iOS. Se acconsenti al monitoraggio, puoi:",
-  "1xzDm5": "Cosa significa consentire il monitoraggio:",
-  "P9bOBQ": "Se consenti il monitoraggio:",
-  "b0WurK": "Se acconsenti al monitoraggio, significa che:",
-  "UBpcNz": "supportare gli sviluppatori di giochi e le attività che si affidano agli annunci per essere scoperti",
-  "TSMwsr": "Supporterai case di videogiochi che si affidano agli annunci per farsi conoscere",
-  "mE2qtL": "Le aziende e le case di videogiochi che ami possono essere scoperte",
-  "QNWJs7": "Supporti aziende e case di videogiochi che si affidano agli annunci per farsi conoscere",
   "QLMGho": [
     [
       1,
@@ -11479,6 +11459,7 @@
     " sta trasmettendo in diretta"
   ],
   "2Ab4IS": "Creando un canale delle notizie, il profilo del tuo server risulterà visibile ad altri utenti di Discord, e non solo ai membri. Puoi gestire la privacy del profilo andando su Impostazioni del server > Profilo.",
+  "cQDYRk": "Adotta tag",
   "7XdMW1": "Candidati per unirti",
   "4yfIDg": "Visualizza stato della candidatura",
   "IRoQXl": "Vai al server",
@@ -18690,13 +18671,6 @@
   "DrAXIi": "Adotta questo tag per mostrarlo accanto al tuo nome su Discord.",
   "VFqnyc": [
     "Ora puoi indossare un tag da ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Membro di ",
     [
       1,
       "guildName"

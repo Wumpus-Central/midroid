@@ -1371,26 +1371,6 @@
   "wOr6hI": "For mange opplastinger!",
   "BEWw//": "dobbelttrykk for å spille av video og forstørre",
   "3AS4UF": "Legg ved filer",
-  "vlj5uL": "Obs! Hvis du tillater sporing, kan vi tilpasse det du ser i Oppdrag og belønninger, sånn at du får en opplevelse som passer deg best mulig.",
-  "1dqa3d": "Vil du opp i nivå? Hvis du slår på sporing, kan vi gi deg en mest mulig innbringende og relevant opplevelse! Du kan når som helst melde deg av igjen i innstillingene i iOS.",
-  "acNnra": "Et lite ping – hvis du tillater sporing, kan vi vise deg oppdrag du faktisk er interessert i! Du kan når som helst melde deg av igjen i innstillingene i iOS",
-  "Cq8QKS": "Sjekkpunkt for spillere – ved å tillate sporing får du en tilpasset og større opplevelse. Du kan når som helst melde deg av igjen i innstillingene i iOS.",
-  "y4HOMj": "Bidra til at Discord blir det triveligste stedet å være på nett",
-  "YW0z09": "Du bidrar til at Discord blir det triveligste stedet å være på nett",
-  "xaXauL": "Discord er fortsatt det triveligste stedet å være på nett",
-  "oD52ER": "Sørg for at Discord forblir det triveligste stedet å være på nett",
-  "fpfPTk": "Få tilbud om oppdrag som er tilpasset interessene dine",
-  "ZxkYWV": "Vi tilpasser oppdrag slik at de gjenspeiler interessene dine",
-  "2xEEtr": "Oppdrag tilpasses, slik at du tilbys premier du faktisk vil ha",
-  "nvVy39": "Motta oppdrag som gjenspeiler interessene dine",
-  "mH8BIS": "Du kan når som helst endre valget for denne enheten i iOS-innstillingene. Hvis du tillater sporing, kan du:",
-  "1xzDm5": "Det å tillate sporing betyr:",
-  "P9bOBQ": "Hvis du tillater sporing:",
-  "b0WurK": "Det å tillate sporing betyr det følgende:",
-  "UBpcNz": "Støtte selskaper og spillutviklere som er avhengig av reklame for å bli oppdaget",
-  "TSMwsr": "Du støtter spillstudioer som er avhengig av reklame for å bli oppdaget",
-  "mE2qtL": "Virksomheter og spillutviklere du liker, kan utforskes",
-  "QNWJs7": "Støtt virksomheter og spillstudioer som er avhengig av reklame for å bli oppdaget",
   "QLMGho": [
     [
       1,
@@ -11461,6 +11441,7 @@
     " strømmer"
   ],
   "2Ab4IS": "Når du oppretter en kunngjøringskanal, blir serverprofilen din synlig for andre i tillegg til servermedlemmene. Du kan styre profilens personvern i Serverinnstillinger > Profil.",
+  "cQDYRk": "Ta i bruk tagg",
   "7XdMW1": "Søk om å bli med",
   "4yfIDg": "Se søknadsstatus",
   "IRoQXl": "Gå til server",
@@ -18646,13 +18627,6 @@
   "DrAXIi": "Ta i bruk denne taggen for å vise den ved siden av navnet ditt på Discord.",
   "VFqnyc": [
     "Nå kan du bruke en tagg fra ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Medlem av ",
     [
       1,
       "guildName"
