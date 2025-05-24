@@ -171,14 +171,14 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       q.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var5: Log = Log.INSTANCE;
+         val var9: Log = Log.INSTANCE;
          val var6: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var9: StringBuilder = new StringBuilder();
-         var9.append("createEglSurface (");
-         var9.append(var2);
-         var9.append(" total)");
-         Log.i$default(var5, var6, var9.toString(), null, 4, null);
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("createEglSurface (");
+         var5.append(var2);
+         var5.append(" total)");
+         Log.i$default(var9, var6, var5.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
          val var4: Thread = Thread.currentThread();

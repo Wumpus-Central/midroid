@@ -108,7 +108,7 @@
         <meta-data android:name="com.discord.features.FLAG" android:value="1"/>
         <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
         <meta-data android:name="asset_statements" android:resource="@string/asset_statements"/>
-        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:exported="true" android:launchMode="singleTask" android:name="com.discord.share.ShareActivity" android:windowSoftInputMode="adjustResize">
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode" android:excludeFromRecents="true" android:exported="true" android:launchMode="singleTask" android:name="com.discord.share.ShareActivity" android:taskAffinity="com.discord.share" android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.SEND"/>
                 <action android:name="android.intent.action.SEND_MULTIPLE"/>

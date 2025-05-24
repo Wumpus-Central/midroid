@@ -24,21 +24,21 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var11 : var9.entrySet()) {
-            if (var11.getKey() is java.lang.String && var11.getValue() is java.lang.String) {
-               var3.put(var11.getKey(), var11.getValue());
+         for (Entry var5 : var9.entrySet()) {
+            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
+               var3.put(var5.getKey(), var5.getValue());
             }
          }
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var24 : var3.entrySet()) {
-            var var20: Any = var24.getKey();
-            val var25: Any = var24.getValue();
-            q.f(var20, "null cannot be cast to non-null type kotlin.String");
-            var20 = var20 as java.lang.String;
-            q.f(var25, "null cannot be cast to non-null type kotlin.String");
-            var12.add(s.a(var20, var25 as java.lang.String));
+         for (Entry var20 : var3.entrySet()) {
+            var var24: Any = var20.getKey();
+            val var21: Any = var20.getValue();
+            q.f(var24, "null cannot be cast to non-null type kotlin.String");
+            var24 = var24 as java.lang.String;
+            q.f(var21, "null cannot be cast to non-null type kotlin.String");
+            var12.add(s.a(var24, var21 as java.lang.String));
          }
 
          var9 = S8.q.s(var12);

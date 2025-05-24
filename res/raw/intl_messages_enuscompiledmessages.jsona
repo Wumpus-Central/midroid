@@ -2934,6 +2934,7 @@
     ],
     " has been added to your collection."
   ],
+  "IMffmp": "You did it! Put it on!",
   "fYfGgI": "Go to Shop",
   "Io7ozs": [
     [
@@ -3051,9 +3052,7 @@
       ]
     ]
   ],
-  "44b50t": "This decoration is now part of your collection and can be used anytime!",
   "SWm2am": "Your Profile Effect is updated!",
-  "f9M1YG": "This effect is now part of your collection and can be used anytime!",
   "HSX4HR": [
     "Profile effect preview: ",
     [
@@ -3123,6 +3122,14 @@
     " gifted you a Profile Effect!"
   ],
   "2NxdjY": "You have been gifted a Profile Effect!",
+  "vFiQlZ": [
+    [
+      1,
+      "sender"
+    ],
+    " gifted you a Nameplate!"
+  ],
+  "v7F239": "You have been gifted a Nameplate!",
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
   "MAS7uL": "Use Now",
@@ -16794,6 +16801,16 @@
       []
     ]
   ],
+  "WnSwLy": [
+    "Set the gradient to [",
+    [
+      8,
+      "newColorsHook",
+      []
+    ],
+    "]"
+  ],
+  "U44ttr": "With no gradient",
   "TK6E1N": "With no color",
   "UTLTx8": [
     [
@@ -33285,8 +33302,13 @@
     ]
   ],
   "F+x38P": "Spoiler",
+  "C8ci39": "Container hidden by spoiler",
+  "3Gc2XF": "File hidden by spoiler",
+  "G71b7+": "Content hidden by spoiler",
   "XpfDHx": "spoiler, hidden",
+  "sb2W2N": "Image hidden by spoiler",
   "gsI+xM": "Mark as spoiler",
+  "ehBaMT": "Video hidden by spoiler",
   "suRAp6": "Audience",
   "P/KFX1": "Just so you know, people you've blocked or ignored are in this Stage.",
   "Uzdyho": "Blocked and Ignored Accounts Present",

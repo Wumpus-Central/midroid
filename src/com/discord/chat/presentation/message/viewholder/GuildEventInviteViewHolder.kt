@@ -53,12 +53,12 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "inviteAccessory");
       val var9: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var18: GuildEventInviteView = this.guildEventInviteView;
+      val var14: GuildEventInviteView = this.guildEventInviteView;
       this.guildEventInviteView.setHeader(var9.getHeaderIcon(), var9.getHeaderText(), var9.getHeaderColor());
-      var18.setCreatorAvatar(var9.getCreatorAvatar());
-      var18.setBadge(var9.getBadgeIcon(), var9.getBadgeCount());
-      var18.setTitle(var9.getTitleText(), var9.getTitleColor());
-      var18.setDescription-iRUqyQU(
+      var14.setCreatorAvatar(var9.getCreatorAvatar());
+      var14.setBadge(var9.getBadgeIcon(), var9.getBadgeCount());
+      var14.setTitle(var9.getTitleText(), var9.getTitleColor());
+      var14.setDescription-iRUqyQU(
          var9.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
@@ -239,9 +239,9 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var18.setGuild(var9.getGuildName(), var9.getGuildIcon());
-      var18.setChannel(var9.getChannelIcon(), var9.getChannelName());
-      var18.setAcceptButton(
+      var14.setGuild(var9.getGuildName(), var9.getGuildIcon());
+      var14.setChannel(var9.getChannelIcon(), var9.getChannelName());
+      var14.setAcceptButton(
          var9.getAcceptLabelIcon(),
          var9.getAcceptLabelText(),
          var9.getAcceptLabelColor(),
@@ -249,6 +249,6 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          var9.getAcceptLabelBackgroundColor(),
          new o(this, var1)
       );
-      var18.setSecondaryButton(var9.getSecondaryActionIcon(), new p(this, var1));
+      var14.setSecondaryButton(var9.getSecondaryActionIcon(), new p(this, var1));
    }
 }

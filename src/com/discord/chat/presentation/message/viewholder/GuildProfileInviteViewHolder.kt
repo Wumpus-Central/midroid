@@ -34,8 +34,8 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
       val var10: GuildProfileInviteView = this.guildProfileInviteView;
       this.guildProfileInviteView.setHeader(var7.getHeaderText());
       val var9: java.lang.String = var7.getInviteSplash();
-      val var5: Int = var7.getBannerColor();
-      val var3: Int = var7.getBannerColorSecondary();
+      val var3: Int = var7.getBannerColor();
+      val var5: Int = var7.getBannerColorSecondary();
       val var6: Boolean;
       if (var7.getHeaderText() == null) {
          var6 = true;
@@ -43,7 +43,7 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
          var6 = false;
       }
 
-      var10.setBanner(var9, var5, var3, var6);
+      var10.setBanner(var9, var3, var5, var6);
       var10.setAvatar(var7.getThumbnailUrl(), var7.getThumbnailText());
       var10.setTitle(var7.getTitleText());
       var10.setGuildBadge(var7.getBadgeIconUrl());

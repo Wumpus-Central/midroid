@@ -42,14 +42,14 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var17 + var15 > var9) {
+            if (var11 + var13 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
@@ -63,7 +63,7 @@ public object BSDiff {
                var6.write(var21, 0, var8);
             }
 
-            var19 = this.chunkRange(var15).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -71,8 +71,8 @@ public object BSDiff {
                var6.write(var21, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var13);
-            var11 += var17 + var15;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var13 + var17;
          }
 
          var6.close();

@@ -188,47 +188,47 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
       val var4: Boolean = var1 is MosaicItemMessageAttachmentImageViewHolder;
       var var3: Boolean = false;
       if (var4) {
-         val var6: MediaGalleryItem = this.items.get(var2);
+         val var5: MediaGalleryItem = this.items.get(var2);
          val var10: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var8: ComponentContext = this.componentContext;
+         val var9: ComponentContext = this.componentContext;
          if (this.componentContext == null) {
             return;
          }
 
-         val var5: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-         val var9: java.lang.String = this.containerId;
-         val var7: java.lang.String = this.component.getId();
+         val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+         val var8: java.lang.String = this.containerId;
+         val var6: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
          } else {
             var3 = false;
          }
 
-         var5.bindGalleryItem(
-            var9,
-            var7,
+         var7.bindGalleryItem(
+            var8,
             var6,
+            var5,
             var3,
-            new a(this, var10, var6, var1),
-            new b(this, var10, var6),
-            new c(this, var6),
+            new a(this, var10, var5, var1),
+            new b(this, var10, var5),
+            new c(this, var5),
             new d(this),
-            new e(this, var6),
-            var8.getShouldAutoPlayGif()
+            new e(this, var5),
+            var9.getShouldAutoPlayGif()
          );
       } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-         val var22: MediaGalleryItem = this.items.get(var2);
-         val var20: MediaGalleryDisplayComponent = this.component;
+         val var16: MediaGalleryItem = this.items.get(var2);
+         val var21: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
-         val var21: java.lang.String = this.containerId;
+         val var20: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+         val var22: java.lang.String = this.containerId;
          val var19: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
@@ -236,8 +236,8 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             var3 = false;
          }
 
-         var16.bindGalleryItem(
-            var21, var19, var22, var3, new f(this, var20, var22, var1), new g(this, var20, var22), new h(this, var22), new i(this), new j(this, var22)
+         var20.bindGalleryItem(
+            var22, var19, var16, var3, new f(this, var21, var16, var1), new g(this, var21, var16), new h(this, var16), new i(this), new j(this, var16)
          );
       } else {
          if (var1 !is MosaicItemVisualPlaceholderViewHolder) {

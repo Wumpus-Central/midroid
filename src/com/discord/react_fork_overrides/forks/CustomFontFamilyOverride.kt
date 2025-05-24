@@ -109,12 +109,12 @@ internal object CustomFontFamilyOverride {
       val var22: Int = FILE_EXTENSIONS.length;
 
       for (int var21 = 0; var21 < var22; var21++) {
-         val var13: java.lang.String = var19[var21];
-         val var26: StringBuilder = new StringBuilder();
-         var26.append("fonts/");
-         var26.append(var11);
-         var26.append(var13);
-         val var27: java.lang.String = var26.toString();
+         val var26: java.lang.String = var19[var21];
+         val var13: StringBuilder = new StringBuilder();
+         var13.append("fonts/");
+         var13.append(var11);
+         var13.append(var26);
+         val var27: java.lang.String = var13.toString();
          kotlin.jvm.internal.q.g(var27, "toString(...)");
 
          try {
@@ -165,17 +165,17 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var28[var5];
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("fonts/");
-            var13.append(var9);
-            var13.append(var12);
-            var12 = var13.toString();
-            kotlin.jvm.internal.q.g(var12, "toString(...)");
+            val var13: java.lang.String = var28[var5];
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("fonts/");
+            var12.append(var9);
+            var12.append(var13);
+            val var31: java.lang.String = var12.toString();
+            kotlin.jvm.internal.q.g(var31, "toString(...)");
 
             try {
                b.a();
-               val var32: Font = a.a(k.a(var3, var12));
+               val var32: Font = a.a(k.a(var3, var31));
                kotlin.jvm.internal.q.g(var32, "build(...)");
                c.a();
                val var33: FontFamily = f.a(l.a(var32));

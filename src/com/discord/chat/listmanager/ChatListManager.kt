@@ -89,15 +89,15 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       val var5: java.util.List = this.rows;
       q.e(this.rows);
       val var6: ListOperationsBuilder = new ListOperationsBuilder();
-      val var9: ArrayList = new ArrayList();
+      val var8: ArrayList = new ArrayList();
 
-      for (Object var8 : var1) {
-         if ((var8 as Row).getChangeType() === ChangeType.INSERT) {
-            var9.add(var8);
+      for (Object var9 : var1) {
+         if ((var9 as Row).getChangeType() === ChangeType.INSERT) {
+            var8.add(var9);
          }
       }
 
-      val var16: java.util.Iterator = var9.iterator();
+      val var16: java.util.Iterator = var8.iterator();
 
       label75:
       while (true) {
@@ -113,9 +113,9 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
 
          val var13: ArrayList = new ArrayList();
 
-         for (Object var10 : var1) {
-            if ((var10 as Row).getChangeType() === ChangeType.DELETE || (var10 as Row).getChangeType() === ChangeType.UPDATE) {
-               var13.add(var10);
+         for (Object var17 : var1) {
+            if ((var17 as Row).getChangeType() === ChangeType.DELETE || (var17 as Row).getChangeType() === ChangeType.UPDATE) {
+               var13.add(var17);
             }
          }
 
@@ -190,10 +190,10 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                c.b(var1);
             } else {
                c.b(var1);
-               val var4: MutableSharedFlow = ChatListManager.access$getUpdatesFlow$p(this.this$0);
-               var1 = this.$update;
+               var1 = ChatListManager.access$getUpdatesFlow$p(this.this$0);
+               val var4: ChatListUpdate = this.$update;
                this.label = 1;
-               if (var4.emit(var1, this) === var3) {
+               if (var1.emit(var4, this) === var3) {
                   return var3;
                }
             }
@@ -397,18 +397,18 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.rows;
+         val var3: java.util.List = this.rows;
          val var1: Boolean = this.didInsertAtBottom;
-         val var3: java.util.List = this.listOperations;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("RowsModificationResult(rows=");
-         var4.append(var2);
-         var4.append(", didInsertAtBottom=");
-         var4.append(var1);
-         var4.append(", listOperations=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.util.List = this.listOperations;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("RowsModificationResult(rows=");
+         var2.append(var3);
+         var2.append(", didInsertAtBottom=");
+         var2.append(var1);
+         var2.append(", listOperations=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

@@ -83,17 +83,17 @@ public object CodeRules {
    public fun <R, S> createCodeLanguageMap(codeStyleProviders: CodeStyleProviders<R>): Map<String, List<Rule<R, Node<R>, S>>> {
       q.h(var1, "codeStyleProviders");
       val var4: Kotlin = Kotlin.INSTANCE;
-      var var2: java.util.List = Kotlin.INSTANCE.createKotlinCodeRules$simpleast_core_release(var1);
+      var var3: java.util.List = Kotlin.INSTANCE.createKotlinCodeRules$simpleast_core_release(var1);
       val var18: Array<java.lang.String> = var4.getKEYWORDS();
-      var2 = this.createGenericCodeRules(
-         var1, var2, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
+      val var14: java.util.List = this.createGenericCodeRules(
+         var1, var3, new java.lang.String[]{"object", "class", "interface"}, var4.getBUILT_INS(), Arrays.copyOf(var18, var18.length)
       );
       val var15: Pattern = this.createSingleLineCommentPattern("//");
       q.g(var15, "createSingleLineCommentPattern(\"//\")");
       val var16: Rule = toMatchGroupRule$default(this, var15, 0, var1.getCommentStyleProvider(), 1, null);
       val var20: Pattern = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       q.g(var20, "Pattern.compile(\"\"\"^\"[\\s…*?(?<!\\\\)\"(?=\\W|\\s|$)\"\"\")");
-      val var17: java.util.List = this.createGenericCodeRules(
+      var3 = this.createGenericCodeRules(
          var1,
          i.n(new Rule[]{var16, toMatchGroupRule$default(this, var20, 0, var1.getLiteralStyleProvider(), 1, null)}),
          new java.lang.String[]{"message|enum|extend|service"},
@@ -152,9 +152,9 @@ public object CodeRules {
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
       var var9: Rule = var34.createTagRule(var1);
-      val var8: Pattern = PATTERN_LEADING_WS_CONSUMER;
+      var7 = PATTERN_LEADING_WS_CONSUMER;
       var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
-      var7 = PATTERN_TEXT;
+      val var8: Pattern = PATTERN_TEXT;
       val var32: java.util.List = i.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       q.g(var39, "createSingleLineCommentPattern(\"#\")");
@@ -181,15 +181,15 @@ public object CodeRules {
             var50,
             toMatchGroupRule$default(this, var54, 0, var1.getKeywordStyleProvider(), 1, null),
             toMatchGroupRule$default(this, PATTERN_NUMBERS, 0, var1.getLiteralStyleProvider(), 1, null),
-            toMatchGroupRule$default(this, var8, 0, null, 3, null),
-            toMatchGroupRule$default(this, var7, 0, null, 3, null)
+            toMatchGroupRule$default(this, var7, 0, null, 3, null),
+            toMatchGroupRule$default(this, var8, 0, null, 3, null)
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
-      val var37: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
+      val var41: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
       val var46: Array<java.lang.String> = var45.getKEYWORDS();
       val var38: java.util.List = this.createGenericCodeRules(
-         var1, var37, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
+         var1, var41, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
       val var42: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);
@@ -199,11 +199,11 @@ public object CodeRules {
       );
       return S8.q.l(
          new Pair[]{
-            s.a("kt", var2),
-            s.a("kotlin", var2),
-            s.a("protobuf", var17),
-            s.a("proto", var17),
-            s.a("pb", var17),
+            s.a("kt", var14),
+            s.a("kotlin", var14),
+            s.a("protobuf", var3),
+            s.a("proto", var3),
+            s.a("pb", var3),
             s.a("py", var23),
             s.a("python", var23),
             s.a("rs", var27),

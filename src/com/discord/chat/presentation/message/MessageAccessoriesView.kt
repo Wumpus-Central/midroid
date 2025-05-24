@@ -18,7 +18,6 @@ import com.discord.chat.presentation.message.decorations.MessageAccessoriesHoriz
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
 import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAccessory
-import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.MessageContext
@@ -36,7 +35,6 @@ import kotlin.jvm.functions.Function0
 public class MessageAccessoriesView  public constructor(context: Context, attrs: AttributeSet? = null) : RecyclerView {
    private final var threadSpineDecoration: ThreadSpineItemDecoration
    private final val accessoriesAdapter: MessageAccessoriesAdapter
-   private final val contentViewTracker: com.discord.chat.presentation.message.MessageAccessoriesView.ContentViewTracker
    private final val transitionResilientLinearLayoutManager: TransitionResilientLinearLayoutManager
    private final var messageAccessoriesDecoration: MessageAccessoriesHorizontalSpacingDecoration
 
@@ -73,8 +71,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       });
       this.accessoriesAdapter = var4;
-      val var5: MessageAccessoriesView.ContentViewTracker = new MessageAccessoriesView.ContentViewTracker();
-      this.contentViewTracker = var5;
       val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
       this.transitionResilientLinearLayoutManager = var3;
       this.forwardBarPaint$delegate = R8.j.b(new V());
@@ -92,7 +88,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       );
       this.setLayoutManager(var3);
       this.setAdapter(var4);
-      var4.setMessageContentViewLifecycleListener(var5);
    }
 
    @JvmStatic
@@ -104,10 +99,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : xa.j.I(androidx.core.view.g0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -143,11 +138,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var2: Float = leftMarginPx;
          val var3: Float = leftMarginPx;
+         val var2: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -178,10 +173,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var11: MessageAccessoriesView.Companion = Companion;
-      val var12: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var12, "getResources(...)");
-      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
+      val var12: MessageAccessoriesView.Companion = Companion;
+      val var11: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var11, "getResources(...)");
+      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
@@ -206,11 +201,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);
-   }
-
-   public fun setOnCurrentContentViewChanged(onViewChanged: (MessageContentView) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "onViewChanged");
-      this.contentViewTracker.setOnViewChanged(var1);
    }
 
    public override fun setRecycledViewPool(pool: RecycledViewPool?) {
@@ -259,35 +249,6 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
       public fun getWidthForEmbedContent(constrainedWidth: Int, isForward: Boolean): Int {
          return this.getWidth(var1, var2) - MessageAccessoriesView.access$getEmbedContentMarginPx$cp() * 2;
-      }
-   }
-
-   private class ContentViewTracker : MessageAccessoriesAdapter.MessageContentViewLifecycleListener {
-      private final var onViewChanged: (MessageContentView) -> Unit = new W()
-      private final var currentContentView: MessageContentView?
-
-      @JvmStatic
-      fun `onViewChanged$lambda$0`(var0: MessageContentView): Unit {
-         kotlin.jvm.internal.q.h(var0, "it");
-         return Unit.a;
-      }
-
-      public override fun onAttachedToWindow(messageContentView: MessageContentView) {
-         kotlin.jvm.internal.q.h(var1, "messageContentView");
-         this.currentContentView = var1;
-         this.onViewChanged.invoke(var1);
-      }
-
-      public override fun onDetachedFromWindow() {
-         this.currentContentView = null;
-      }
-
-      public fun setOnViewChanged(onViewChanged: (MessageContentView) -> Unit) {
-         kotlin.jvm.internal.q.h(var1, "onViewChanged");
-         this.onViewChanged = var1;
-         if (this.currentContentView != null) {
-            var1.invoke(this.currentContentView);
-         }
       }
    }
 }

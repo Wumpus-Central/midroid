@@ -32,7 +32,7 @@ public fun chatListAdapterConfigurator(
    kotlin.jvm.internal.q.h(var3, "messageAccessoriesRecycledViewPool");
    val var4: HashMap = new HashMap();
 
-   for (BaseChatListItemDelegate var6 : kotlin.collections.i.n(
+   for (BaseChatListItemDelegate var5 : kotlin.collections.i.n(
       new BaseChatListItemDelegate[]{
          new RegularMessageDelegate(var1, var2, var3),
          new SystemMessageDelegate(var1, var3),
@@ -47,8 +47,8 @@ public fun chatListAdapterConfigurator(
          new DeserializationErrorDelegate(var1)
       }
    )) {
-      var0.c(var6);
-      var4.put(var6.getClass(), var0.f(var6));
+      var0.c(var5);
+      var4.put(var5.getClass(), var0.f(var5));
    }
 
    return var4;

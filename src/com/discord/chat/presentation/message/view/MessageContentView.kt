@@ -12,6 +12,7 @@ import android.view.View
 import android.view.View.MeasureSpec
 import android.view.View.OnClickListener
 import android.view.ViewGroup.LayoutParams
+import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
@@ -28,12 +29,16 @@ import com.discord.fonts.DiscordFont
 import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedClickableSpan
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
+import com.discord.react_strings.I18nMessage
+import com.discord.react_strings.I18nUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
 import com.discord.span.utilities.spannable.BoldSpan
 import com.discord.span.utilities.spannable.ClickableSpan
+import com.discord.span.utilities.spannable.EmojiAccessibilitySpan
 import com.discord.span.utilities.spannable.QuoteSpan
+import com.discord.span.utilities.spannable.SpoilerSpan
 import com.discord.theme.DiscordThemeObject
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
@@ -66,7 +71,6 @@ public open class MessageContentView  public constructor(context: Context, attrs
       super(var1, var2, var3);
       this.shadowView$delegate = R8.j.b(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
-      this.setImportantForAccessibility(4);
    }
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
@@ -317,6 +321,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.setDraweeSpanStringBuilder(var34);
       this.bottomSpacingPx = var23;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
+      androidx.core.view.a0.p0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
    }
 
    public open fun setOnClickListener(l: OnClickListener?) {
@@ -330,5 +335,43 @@ public open class MessageContentView  public constructor(context: Context, attrs
    public companion object {
       private const val LINE_SPACING_MULT: Float
       private const val LINE_SPACING_ADD: Float
+   }
+
+   public class MessageContentViewAccessibilityDelegate(view: MessageContentView) : androidx.core.view.a {
+      private final val view: MessageContentView
+
+      init {
+         kotlin.jvm.internal.q.h(var1, "view");
+         super();
+         this.view = var1;
+      }
+
+      public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
+         kotlin.jvm.internal.q.h(var1, "host");
+         kotlin.jvm.internal.q.h(var2, "info");
+         super.onInitializeAccessibilityNodeInfo(var1, var2);
+         val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
+         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
+
+         while (var6.hasNext()) {
+            val var7: SpoilerSpan = var6.next() as SpoilerSpan;
+            if (!var7.isRevealed()) {
+               val var3: Int = var5.getSpanStart(var7);
+               val var4: Int = var5.getSpanEnd(var7);
+               val var10: Context = var1.getContext();
+               kotlin.jvm.internal.q.g(var10, "getContext(...)");
+               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+            }
+         }
+
+         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
+
+         while (var8.hasNext()) {
+            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
+            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
+         }
+
+         var2.U0(var5);
+      }
    }
 }

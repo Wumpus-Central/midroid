@@ -150,30 +150,30 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var6: java.lang.String = this.username;
-      val var1: java.lang.Boolean = this.isBot;
-      val var7: java.lang.Boolean = this.isFriend;
-      val var2: java.lang.String = this.friendNickname;
-      val var8: java.lang.String = this.globalName;
+      val var2: java.lang.String = this.id;
+      val var8: java.lang.String = this.username;
+      val var7: java.lang.Boolean = this.isBot;
+      val var6: java.lang.Boolean = this.isFriend;
+      val var1: java.lang.String = this.friendNickname;
+      val var5: java.lang.String = this.globalName;
       val var3: java.util.Map = this.nicknames;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UserSearchTransformedUser(id=");
-      var5.append(var4);
-      var5.append(", username=");
-      var5.append(var6);
-      var5.append(", isBot=");
-      var5.append(var1);
-      var5.append(", isFriend=");
-      var5.append(var7);
-      var5.append(", friendNickname=");
-      var5.append(var2);
-      var5.append(", globalName=");
-      var5.append(var8);
-      var5.append(", nicknames=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSearchTransformedUser(id=");
+      var4.append(var2);
+      var4.append(", username=");
+      var4.append(var8);
+      var4.append(", isBot=");
+      var4.append(var7);
+      var4.append(", isFriend=");
+      var4.append(var6);
+      var4.append(", friendNickname=");
+      var4.append(var1);
+      var4.append(", globalName=");
+      var4.append(var5);
+      var4.append(", nicknames=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {
@@ -198,11 +198,11 @@ internal data class UserSearchTransformedUser(id: String,
          val var5: JsonObject = var11 as JsonObject;
          val var12: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var6 : var5.entrySet()) {
-            val var7: java.lang.String = var6.getKey() as java.lang.String;
-            val var3: JsonElement = var6.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var7) && (Oa.g.p(var3).k() || Oa.g.p(var3) is JsonNull)) {
-               var12.put(var6.getKey(), var6.getValue());
+         for (Entry var7 : var5.entrySet()) {
+            val var3: java.lang.String = var7.getKey() as java.lang.String;
+            val var6: JsonElement = var7.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var3) && (Oa.g.p(var6).k() || Oa.g.p(var6) is JsonNull)) {
+               var12.put(var7.getKey(), var7.getValue());
             }
          }
 

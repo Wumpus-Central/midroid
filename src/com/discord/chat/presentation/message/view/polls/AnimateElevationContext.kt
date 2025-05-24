@@ -55,8 +55,8 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.tagValue.hashCode();
-      val var2: Int = java.lang.Float.hashCode(this.elevation);
+      val var2: Int = this.tagValue.hashCode();
+      val var3: Int = java.lang.Float.hashCode(this.elevation);
       val var1: Int;
       if (this.animator == null) {
          var1 = 0;
@@ -64,7 +64,7 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
          var1 = this.animator.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {

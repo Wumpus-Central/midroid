@@ -121,27 +121,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var7: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var4: java.lang.String = this.mediaType;
-      val var6: java.lang.String = this.componentId;
-      val var3: Int = this.componentMediaIndex;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressMessageEvent(messageId=");
-      var2.append(var5);
-      var2.append(", channelId=");
-      var2.append(var7);
-      var2.append(", mediaIndex=");
-      var2.append(var1);
-      var2.append(", mediaType=");
-      var2.append(var4);
-      var2.append(", componentId=");
-      var2.append(var6);
-      var2.append(", componentMediaIndex=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.mediaType;
+      val var4: java.lang.String = this.componentId;
+      val var7: Int = this.componentMediaIndex;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressMessageEvent(messageId=");
+      var3.append(var6);
+      var3.append(", channelId=");
+      var3.append(var5);
+      var3.append(", mediaIndex=");
+      var3.append(var1);
+      var3.append(", mediaType=");
+      var3.append(var2);
+      var3.append(", componentId=");
+      var3.append(var4);
+      var3.append(", componentMediaIndex=");
+      var3.append(var7);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

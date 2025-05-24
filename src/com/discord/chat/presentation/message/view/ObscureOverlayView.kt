@@ -82,16 +82,18 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       this.binding.hideButton.setImportantForAccessibility(var2);
    }
 
-   public fun configure(header: String, parent: ViewGroup, isOverlayVisible: Boolean, onReveal: () -> Unit, onHide: () -> Unit) {
+   public fun configure(header: String, description: String, parent: ViewGroup, isOverlayVisible: Boolean, onReveal: () -> Unit, onHide: () -> Unit) {
       kotlin.jvm.internal.q.h(var1, "header");
-      kotlin.jvm.internal.q.h(var2, "parent");
-      kotlin.jvm.internal.q.h(var4, "onReveal");
-      kotlin.jvm.internal.q.h(var5, "onHide");
-      this.handleRevealedState(var3);
-      this.binding.blurView.setupWith(var2).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var2.getBackground()).a(true);
-      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var5, this));
-      this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var4);
+      kotlin.jvm.internal.q.h(var2, "description");
+      kotlin.jvm.internal.q.h(var3, "parent");
+      kotlin.jvm.internal.q.h(var5, "onReveal");
+      kotlin.jvm.internal.q.h(var6, "onHide");
+      this.handleRevealedState(var4);
+      this.binding.blurView.setupWith(var3).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var3.getBackground()).a(true);
+      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var6, this));
+      this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var5);
       this.binding.descriptionLabel.setText(var1);
+      this.binding.descriptionLabel.setContentDescription(var2);
    }
 
    public override fun getOverlayView(): View {

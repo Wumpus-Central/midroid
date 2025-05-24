@@ -119,24 +119,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var4: java.util.List = this.stickerItems;
-      val var6: JsonObject = this.author;
-      val var2: java.util.List = this.mentions;
-      val var5: Poll = this.poll;
-      val var1: java.util.List = this.embeds;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("NotificationMessage(stickerItems=");
-      var3.append(var4);
-      var3.append(", author=");
-      var3.append(var6);
-      var3.append(", mentions=");
-      var3.append(var2);
-      var3.append(", poll=");
-      var3.append(var5);
-      var3.append(", embeds=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.util.List = this.stickerItems;
+      val var1: JsonObject = this.author;
+      val var4: java.util.List = this.mentions;
+      val var3: Poll = this.poll;
+      val var6: java.util.List = this.embeds;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("NotificationMessage(stickerItems=");
+      var5.append(var2);
+      var5.append(", author=");
+      var5.append(var1);
+      var5.append(", mentions=");
+      var5.append(var4);
+      var5.append(", poll=");
+      var5.append(var3);
+      var5.append(", embeds=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {
