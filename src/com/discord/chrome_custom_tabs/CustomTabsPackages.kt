@@ -1,8 +1,5 @@
 package com.discord.chrome_custom_tabs
 
-import L1.a
-import L1.b
-import L1.c
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
@@ -10,6 +7,9 @@ import android.net.Uri
 import android.os.Build.VERSION
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import v1.a
+import v1.b
+import v1.c
 
 internal object CustomTabsPackages {
    private const val CHROME_PROD_PACKAGE: String = "com.android.chrome"

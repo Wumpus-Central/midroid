@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import Za.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -60,15 +60,15 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var3: java.lang.String = this.className;
-      val var2: java.util.List = this.content;
+      val var2: java.lang.String = this.className;
+      val var3: java.util.List = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LHeadingContentNode(level=");
       var4.append(var1);
       var4.append(", className=");
-      var4.append(var3);
-      var4.append(", content=");
       var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

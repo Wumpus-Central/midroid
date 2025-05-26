@@ -1,5 +1,9 @@
 package com.discord.safearea
 
+import R1.a
+import R1.b
+import R1.c
+import R8.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -11,14 +15,24 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.safearea.extensions.WindowInsetsCompatExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
+import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import g9.s
 import kotlin.jvm.internal.q
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {
       q.h(var1, "reactContext");
       super(var1);
+   }
+
+   @JvmStatic
+   fun `getStableSafeAreaInsets$lambda$1`(var0: Int, var1: Int, var2: Int, var3: Int): WritableNativeMap {
+      return NativeMapExtensionsKt.nativeMapOf(
+         s.a("left", SizeUtilsKt.getPxToDp(var0)),
+         s.a("top", SizeUtilsKt.getPxToDp(var1)),
+         s.a("right", SizeUtilsKt.getPxToDp(var2)),
+         s.a("bottom", SizeUtilsKt.getPxToDp(var3))
+      );
    }
 
    @JvmStatic
@@ -97,15 +111,26 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       }
    }
 
-   public open fun getStableSafeAreaInsets(): WritableNativeMap {
-      val var1: SafeAreaEdgeInsets = SafeAreaEdgeInsets.Companion.fromRootViewAsStableInsets(this.getCurrentActivity());
-      return NativeMapExtensionsKt.nativeMapOf(
-         s.a("top", var1.getTopDp()), s.a("bottom", var1.getBottomDp()), s.a("left", var1.getLeftDp()), s.a("right", var1.getRightDp())
-      );
+   public override fun getStableSafeAreaInsets(): WritableMap {
+      val var1: b = new b();
+      val var2: Activity = this.getCurrentActivity();
+      val var4: Int = 0;
+      if (var2 == null) {
+         return var1.invoke(var4, var4, var4, var4) as WritableMap;
+      } else {
+         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var2);
+         if (var3 == null) {
+            return var1.invoke(var4, var4, var4, var4) as WritableMap;
+         } else {
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var2, true);
+            return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
+         }
+      }
    }
 
    public override fun setNavigationBarVisible(visible: Boolean) {
-      UiThreadUtil.runOnUiThread(new b(this, var1));
+      UiThreadUtil.runOnUiThread(new c(this, var1));
    }
 
    public override fun setStatusBarVisible(visible: Boolean) {

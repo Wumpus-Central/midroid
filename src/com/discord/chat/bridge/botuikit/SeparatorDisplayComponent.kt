@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Za.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -68,20 +68,20 @@ public data class SeparatorDisplayComponent(type: Int, id: String, divider: Bool
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var2: Boolean = this.divider;
       val var5: SeparatorSpacingSize = this.spacing;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SeparatorDisplayComponent(type=");
-      var3.append(var1);
-      var3.append(", id=");
-      var3.append(var4);
-      var3.append(", divider=");
-      var3.append(var2);
-      var3.append(", spacing=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SeparatorDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", divider=");
+      var4.append(var2);
+      var4.append(", spacing=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -88,7 +88,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
       }
    }
 
-   protected override fun onDetachedFromWindow() {
+   protected open fun onDetachedFromWindow() {
       super.onDetachedFromWindow();
       this.removeCallbacks(this.measureAndLayoutRunnable);
    }

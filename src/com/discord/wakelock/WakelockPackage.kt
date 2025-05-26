@@ -8,7 +8,7 @@ import com.facebook.react.module.model.ReactModuleInfoProvider
 import kotlin.jvm.internal.q
 
 public class WakelockPackage : BaseReactPackage {
-   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
       q.h(var2, "reactContext");
       val var3: Any;
@@ -23,7 +23,7 @@ public class WakelockPackage : BaseReactPackage {
       return (NativeModule)var3;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(
          i.n(new java.lang.String[]{"NativeScreenWakeLockModule", "NativeProximitySensorManagerModule"}), false, 2, null
       );

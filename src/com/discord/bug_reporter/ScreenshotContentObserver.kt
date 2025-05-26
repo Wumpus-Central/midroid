@@ -106,7 +106,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 077
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 1
@@ -170,7 +170,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 108: astore 1
       // 109: aload 7
       // 10b: aconst_null
-      // 10c: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10c: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 10f: aload 1
       // 110: areturn
       // 111: aload 1
@@ -178,12 +178,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 113: astore 6
       // 115: aload 7
       // 117: aload 1
-      // 118: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 118: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11b: aload 6
       // 11d: athrow
       // 11e: aload 7
       // 120: aconst_null
-      // 121: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 121: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 124: aconst_null
       // 125: areturn
    }
@@ -337,23 +337,23 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
 
       public override fun toString(): String {
          val var1: Long = this.id;
-         val var5: java.lang.String = this.fileName;
-         val var7: java.lang.String = this.relativePath;
-         val var6: Uri = this.uri;
+         val var8: java.lang.String = this.fileName;
+         val var6: java.lang.String = this.relativePath;
+         val var7: Uri = this.uri;
          val var3: Long = this.dateAdded;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("ScreenshotData(id=");
-         var8.append(var1);
-         var8.append(", fileName=");
-         var8.append(var5);
-         var8.append(", relativePath=");
-         var8.append(var7);
-         var8.append(", uri=");
-         var8.append(var6);
-         var8.append(", dateAdded=");
-         var8.append(var3);
-         var8.append(")");
-         return var8.toString();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ScreenshotData(id=");
+         var5.append(var1);
+         var5.append(", fileName=");
+         var5.append(var8);
+         var5.append(", relativePath=");
+         var5.append(var6);
+         var5.append(", uri=");
+         var5.append(var7);
+         var5.append(", dateAdded=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

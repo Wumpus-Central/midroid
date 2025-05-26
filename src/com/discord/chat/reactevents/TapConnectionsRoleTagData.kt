@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Za.f
+import Ka.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -80,18 +80,18 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
       val var3: java.lang.String = this.userId;
       val var4: java.lang.String = this.guildId;
       val var2: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.roleId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapConnectionsRoleTagData(userId=");
-      var1.append(var3);
-      var1.append(", guildId=");
-      var1.append(var4);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(", roleId=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.roleId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapConnectionsRoleTagData(userId=");
+      var5.append(var3);
+      var5.append(", guildId=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var2);
+      var5.append(", roleId=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

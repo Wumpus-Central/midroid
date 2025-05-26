@@ -20,6 +20,7 @@ public class SelfMeasuredViewManager : ViewGroupManager<SelfMeasuredView> {
 
    public open fun updateState(view: SelfMeasuredView, props: ReactStylesDiffMap?, stateWrapper: StateWrapper?) {
       q.h(var1, "view");
+      var1.setStateWrapper(var3);
    }
 
    public companion object {

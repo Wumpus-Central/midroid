@@ -1,5 +1,7 @@
 package com.discord.overlapping_circles
 
+import R8.j
+import R8.m
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -16,7 +18,7 @@ import android.view.View.OnLayoutChangeListener
 import android.webkit.URLUtil
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.L
+import androidx.core.view.K
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -27,8 +29,6 @@ import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
-import g9.j
-import g9.m
 import kotlin.jvm.internal.q
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
@@ -143,12 +143,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var18: Context = this.getContext();
          q.g(var18, "getContext(...)");
-         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var11: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var11: LayoutParams = new LayoutParams(-2, -1);
-         var11.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var11);
+         val var19: LayoutParams = new LayoutParams(-2, -1);
+         var19.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var11, var19);
       }
    }
 
@@ -191,7 +191,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.setPadding(var2, 0, var9, 0);
          this.setBackgroundColor(var5);
          ViewClippingUtilsKt.clipToCircle(this);
-         L.a(this, new Runnable(this, this) {
+         K.a(this, new Runnable(this, this) {
             final View $this_doOnPreDraw;
             final OverlappingCirclesView.OverflowItem this$0;
 

@@ -10,7 +10,7 @@ public object CPUPnQManager {
 
    private fun wasteCycles() {
       if (wasteThread == null) {
-         wasteThread = l9.a.b(true, false, null, null, 0, new a(), 30, null);
+         wasteThread = W8.a.b(true, false, null, null, 0, new a(), 30, null);
       }
    }
 
@@ -18,14 +18,14 @@ public object CPUPnQManager {
    fun `wasteCycles$lambda$1`(): Unit {
       while (!backgrounded) {
          val var2: Int = (int)(cpuPercentage / 100.0 * 1000000000);
-         val var5: Long = (long)(1000 - cpuPercentage * 10);
-         val var3: Long = System.nanoTime();
+         val var3: Long = (long)(1000 - cpuPercentage * 10);
+         val var5: Long = System.nanoTime();
 
-         while (System.nanoTime() - var3 < var2) {
+         while (System.nanoTime() - var5 < var2) {
          }
 
          try {
-            Thread.sleep(var5);
+            Thread.sleep(var3);
          } catch (var8: InterruptedException) {
             break;
          }

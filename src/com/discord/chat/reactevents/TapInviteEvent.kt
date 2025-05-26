@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Za.f
+import Ka.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -63,8 +63,8 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var3: Int = Integer.hashCode(this.index);
+      val var3: Int = this.messageId.hashCode();
+      val var4: Int = Integer.hashCode(this.index);
       var var2: Int = 0;
       val var1: Int;
       if (this.primary == null) {
@@ -77,7 +77,7 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
          var2 = this.secondary.hashCode();
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -85,21 +85,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var3: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapInviteEvent(messageId=");
-      var5.append(var4);
-      var5.append(", index=");
-      var5.append(var1);
-      var5.append(", primary=");
-      var5.append(var3);
-      var5.append(", secondary=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.Boolean = this.primary;
+      val var4: java.lang.Boolean = this.secondary;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInviteEvent(messageId=");
+      var2.append(var3);
+      var2.append(", index=");
+      var2.append(var1);
+      var2.append(", primary=");
+      var2.append(var5);
+      var2.append(", secondary=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

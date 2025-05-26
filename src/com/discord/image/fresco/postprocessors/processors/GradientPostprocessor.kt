@@ -1,5 +1,7 @@
 package com.discord.image.fresco.postprocessors.processors
 
+import R8.n
+import R8.s
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.LinearGradient
@@ -7,8 +9,6 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
-import g9.n
-import g9.s
 import kotlin.jvm.internal.q
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
@@ -20,7 +20,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       this.gradient = var1;
    }
 
-   public open fun process(bitmap: Bitmap) {
+   public override fun process(bitmap: Bitmap) {
       q.h(var1, "bitmap");
       val var10: Int = GradientPostprocessor.WhenMappings.$EnumSwitchMapping$0[this.gradient.getDirection().ordinal()];
       val var17: Pair;
@@ -57,8 +57,8 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var3: Float = var1.getWidth();
-      val var6: Float = var1.getHeight();
+      val var8: Float = var1.getWidth();
+      val var3: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
          new LinearGradient(
@@ -71,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var3, var6, var15);
+      var18.drawRect(0.0F, 0.0F, var8, var3, var15);
    }
 
    public companion object {
@@ -116,13 +116,13 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
          }
 
          public override fun toString(): String {
-            val var1: Float = this.x;
-            val var2: Float = this.y;
+            val var2: Float = this.x;
+            val var1: Float = this.y;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Point(x=");
-            var3.append(var1);
-            var3.append(", y=");
             var3.append(var2);
+            var3.append(", y=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }

@@ -137,7 +137,7 @@ public fun EmojiContentNode.renderable(): RenderableEmoji {
       var6 = var4.customWithEmojiId(var1, var3, var5.getAlt());
    } else {
       if (var0 !is UnicodeEmojiContentNode) {
-         throw new g9.n();
+         throw new R8.n();
       }
 
       var6 = RenderableEmoji.Companion.unicode((var0 as UnicodeEmojiContentNode).getSurrogate());

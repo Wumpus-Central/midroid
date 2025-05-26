@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.events
 
+import R8.s
 import com.discord.chat.reactevents.ChatScrollPositionEvent
 import com.discord.chat.reactevents.CompleteFirstLayoutData
 import com.discord.chat.reactevents.FirstLayoutData
@@ -84,7 +85,6 @@ import com.discord.chat.reactevents.TapWelcomeReplyData
 import com.discord.chat.reactevents.VoiceMessagePlaybackFailedData
 import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.reactevents.ReactEvents
-import g9.s
 import kotlin.jvm.internal.G
 
 internal fun createChatReactEvents(): ReactEvents {

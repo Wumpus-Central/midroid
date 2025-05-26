@@ -1,6 +1,5 @@
 package com.discord.foreground_service
 
-import N1.a
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -9,6 +8,7 @@ import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.internal.q
+import x1.a
 
 internal class ForegroundService : Service {
    public open fun onBind(intent: Intent?): IBinder? {

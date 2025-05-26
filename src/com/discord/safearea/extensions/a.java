@@ -2,11 +2,11 @@ package com.discord.safearea.extensions;
 
 import android.view.View;
 import android.view.ViewGroup;
-import androidx.core.view.I;
+import androidx.core.view.H;
 import androidx.core.view.WindowInsetsCompat;
 
 // $VF: synthetic class
-public final class a implements I {
+public final class a implements H {
    public final ViewGroup a;
    public final View b;
 

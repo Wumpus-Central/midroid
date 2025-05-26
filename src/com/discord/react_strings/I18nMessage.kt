@@ -1,9 +1,9 @@
 package com.discord.react_strings
 
+import Z8.a
 import android.content.Context
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import o9.a
 
 public enum class I18nMessage {
    A11Y_ROLE_BUTTON,
@@ -75,6 +75,7 @@ public enum class I18nMessage {
    SENT_IMAGES,
    SOUND_MUTE,
    SOUND_UNMUTE,
+   SPOILER,
    SPOILER_HIDDEN_A11Y_LABEL,
    STAGE_START_PUSH_NOTIFICATION_BODY,
    STAGE_START_PUSH_NOTIFICATION_TITLE,

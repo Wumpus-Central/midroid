@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.feedback
 
-import Za.f
+import Ka.f
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer

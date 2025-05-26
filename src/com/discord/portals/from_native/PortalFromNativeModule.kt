@@ -1,8 +1,8 @@
 package com.discord.portals.from_native
 
-import Pa.I
-import Pa.K
-import Pa.f
+import Aa.I
+import Aa.K
+import Aa.f
 import android.app.Activity
 import android.widget.FrameLayout
 import com.discord.codegen.NativePortalFromNativeModuleSpec
@@ -78,7 +78,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = n9.b.e();
+               val var3: Any = Y8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -104,7 +104,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = n9.b.e();
+                        val var3: Any = Y8.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

@@ -1,6 +1,6 @@
 package com.discord.media.engine.video.events
 
-import Za.f
+import Ka.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -83,8 +83,8 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
       val var4: Int = this.connectionId;
       val var2: Int = this.ping;
       val var5: java.lang.String = this.server;
-      val var3: Int = this.port;
-      val var1: Int = this.seq;
+      val var1: Int = this.port;
+      val var3: Int = this.seq;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PingCallbackEvent(connectionId=");
       var6.append(var4);
@@ -93,9 +93,9 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
       var6.append(", server=");
       var6.append(var5);
       var6.append(", port=");
-      var6.append(var3);
-      var6.append(", seq=");
       var6.append(var1);
+      var6.append(", seq=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

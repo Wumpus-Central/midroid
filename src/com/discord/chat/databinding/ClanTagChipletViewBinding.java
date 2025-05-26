@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
+import t0.a;
 
 public final class ClanTagChipletViewBinding implements ViewBinding {
    public final SimpleDraweeView badge;
@@ -28,12 +28,12 @@ public final class ClanTagChipletViewBinding implements ViewBinding {
       SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.container;
-         LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-         if (var2 != null) {
+         LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.tag;
-            TextView var3 = (TextView)a.a(var0, var1);
-            if (var3 != null) {
-               return new ClanTagChipletViewBinding(var0, var4, var2, var3);
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
+               return new ClanTagChipletViewBinding(var0, var4, var3, var2);
             }
          }
       }

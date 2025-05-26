@@ -1,6 +1,8 @@
 package com.discord.foreground_service.service
 
 import D.d
+import R8.s
+import V8.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -13,9 +15,7 @@ import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
-import g9.s
 import java.util.Comparator
-import k9.a
 import kotlin.jvm.internal.q
 
 internal object ServiceNotification {
@@ -46,12 +46,12 @@ internal object ServiceNotification {
 
       val var5: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
          var5.a(
             0,
-            var8.getTitle(),
+            var7.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
+               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
             )
          );
       }

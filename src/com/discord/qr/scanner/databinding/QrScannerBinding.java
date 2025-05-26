@@ -1,12 +1,12 @@
 package com.discord.qr.scanner.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.discord.qr.scanner.R;
+import t0.a;
 
 public final class QrScannerBinding implements ViewBinding {
    public final CodeScannerView qrScanner;

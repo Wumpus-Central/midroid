@@ -1,5 +1,6 @@
 package com.discord.react.utilities
 
+import R8.j
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ReactShadowNode
@@ -7,7 +8,6 @@ import com.facebook.react.uimanager.UIImplementation
 import com.facebook.react.uimanager.UIManagerModule
 import com.facebook.react.uimanager.UIViewOperationQueue
 import com.facebook.yoga.YogaDirection
-import g9.j
 import java.lang.reflect.Method
 import kotlin.jvm.internal.q
 

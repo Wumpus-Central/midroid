@@ -67,7 +67,7 @@ private fun getShareCategories(): Set<String> {
    if (VERSION.SDK_INT < 25) {
       var0 = w.c("com.discord.intent.category.DIRECT_SHARE_TARGET");
    } else {
-      var0 = w.i(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
+      var0 = w.h(new java.lang.String[]{"com.discord.intent.category.DIRECT_SHARE_TARGET", "android.shortcut.conversation"});
    }
 
    return var0;

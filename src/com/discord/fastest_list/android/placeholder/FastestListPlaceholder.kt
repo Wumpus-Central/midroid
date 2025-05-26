@@ -1,9 +1,9 @@
 package com.discord.fastest_list.android.placeholder
 
+import R8.n
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
-import g9.n
 import kotlin.jvm.internal.q
 
 internal sealed class FastestListPlaceholder protected constructor() {

@@ -1,12 +1,12 @@
 package com.discord.chat.input.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.input.R;
 import com.discord.chat.input.views.DCDChatInput;
+import t0.a;
 
 public final class ChatInputRootViewBinding implements ViewBinding {
    public final DCDChatInput chatInputEditText;

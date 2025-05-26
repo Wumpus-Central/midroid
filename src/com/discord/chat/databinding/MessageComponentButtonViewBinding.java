@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textview.MaterialTextView;
+import t0.a;
 
 public final class MessageComponentButtonViewBinding implements ViewBinding {
    public final MaterialButton button;
@@ -39,21 +39,21 @@ public final class MessageComponentButtonViewBinding implements ViewBinding {
       MaterialButton var4 = (MaterialButton)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.emoji;
-         SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.label;
-            MaterialTextView var7 = (MaterialTextView)a.a(var0, var1);
-            if (var7 != null) {
+            MaterialTextView var6 = (MaterialTextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.label_container;
-               LinearLayout var5 = (LinearLayout)a.a(var0, var1);
-               if (var5 != null) {
+               LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.link_icon;
                   SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.loading_dots;
-                     ViewStub var2 = (ViewStub)a.a(var0, var1);
-                     if (var2 != null) {
-                        return new MessageComponentButtonViewBinding(var0, var4, var6, var7, var5, var3, var2);
+                     ViewStub var7 = (ViewStub)a.a(var0, var1);
+                     if (var7 != null) {
+                        return new MessageComponentButtonViewBinding(var0, var4, var5, var6, var2, var3, var7);
                      }
                   }
                }

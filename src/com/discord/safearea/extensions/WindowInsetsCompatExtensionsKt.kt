@@ -8,7 +8,7 @@ import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.p0
+import androidx.core.view.o0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.q
 
@@ -67,20 +67,24 @@ internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVis
    if (VERSION.SDK_INT > 29) {
       q.e(var4);
       return var4;
+   } else if (var2) {
+      val var7: Insets = Insets.b(var0.i(), var0.k(), var0.j(), var0.h());
+      q.g(var7, "of(...)");
+      return var7;
    } else {
       var var5: Int = var1.getResources().getIdentifier("navigation_bar_height", "dimen", "android");
       if (var5.intValue() <= 0) {
          var5 = null;
       }
 
-      val var7: Int;
+      val var8: Int;
       if (var5 != null) {
-         var7 = var1.getResources().getDimensionPixelSize(var5.intValue());
+         var8 = var1.getResources().getDimensionPixelSize(var5.intValue());
       } else {
-         var7 = 0;
+         var8 = 0;
       }
 
-      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var7);
+      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var8);
       q.g(var6, "of(...)");
       return var6;
    }
@@ -110,7 +114,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
    q.h(var0, "<this>");
-   val var3: WindowInsetsControllerCompat = p0.a(var0, var0.getDecorView());
+   val var3: WindowInsetsControllerCompat = o0.a(var0, var0.getDecorView());
    var3.d(2);
    if (var2) {
       var3.e(var1);

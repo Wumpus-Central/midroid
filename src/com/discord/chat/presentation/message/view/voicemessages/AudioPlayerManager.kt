@@ -41,7 +41,7 @@ public object AudioPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: MutableStateFlow = Sa.w.a(null);
+      val var0: MutableStateFlow = Da.w.a(null);
       _currentPlayerSourceFlow = var0;
       currentPlayerSourceFlow = var0;
    }
@@ -84,13 +84,13 @@ public object AudioPlayerManager {
    }
 
    private fun maybeCreateDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource, durationMs: Long): com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress? {
-      val var4: java.util.Map = currentProgressMap;
+      val var5: java.util.Map = currentProgressMap;
       if (currentProgressMap.get(var1) != null) {
          return null;
       } else {
-         val var5: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
-         var4.put(var1, var5);
-         return var5;
+         val var4: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
+         var5.put(var1, var4);
+         return var4;
       }
    }
 
@@ -412,31 +412,31 @@ public object AudioPlayerManager {
             var1 = ChannelId.hashCode-impl(this.channelId.unbox-impl());
          }
 
-         val var3: Int = MessageId.hashCode-impl(this.messageId);
-         val var4: Int = this.url.hashCode();
+         val var4: Int = MessageId.hashCode-impl(this.messageId);
+         val var3: Int = this.url.hashCode();
          if (this.index != null) {
             var2 = this.index.hashCode();
          }
 
-         return ((var1 * 31 + var3) * 31 + var4) * 31 + var2;
+         return ((var1 * 31 + var4) * 31 + var3) * 31 + var2;
       }
 
       public override fun toString(): String {
-         val var1: ChannelId = this.channelId;
-         val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-         val var2: java.lang.String = this.url;
-         val var3: Int = this.index;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("AudioSource(channelId=");
-         var4.append(var1);
-         var4.append(", messageId=");
-         var4.append(var5);
-         var4.append(", url=");
-         var4.append(var2);
-         var4.append(", index=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var5: ChannelId = this.channelId;
+         val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var3: java.lang.String = this.url;
+         val var4: Int = this.index;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("AudioSource(channelId=");
+         var2.append(var5);
+         var2.append(", messageId=");
+         var2.append(var1);
+         var2.append(", url=");
+         var2.append(var3);
+         var2.append(", index=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

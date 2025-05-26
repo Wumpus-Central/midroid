@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.root
 
+import R8.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +14,6 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
-import g9.s
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
 

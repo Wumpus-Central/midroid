@@ -1,5 +1,6 @@
 package com.discord.fast_connect
 
+import R8.s
 import com.discord.app_database.AppDatabase
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.Cache
@@ -9,7 +10,6 @@ import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
-import g9.s
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
 import okhttp3.WebSocket
@@ -90,7 +90,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return h9.q.m(
+      return S8.q.m(
          new Pair[]{
             s.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             s.a("userId", var1.get().getItem("_userIdKey")),

@@ -1,7 +1,6 @@
 package com.discord.sticker.sticker_types
 
-import Pa.K
-import Pa.d0
+import Aa.K
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
@@ -36,7 +35,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      Pa.f.d(
+      Aa.f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
          K.b(),
          null,
@@ -60,7 +59,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = n9.b.e();
+               val var3: Any = Y8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      if (this.label != 2) {
@@ -74,8 +73,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: d0 = K.c();
-                  var1 = new Function2(this.this$0, null) {
+                  var1 = K.c();
+                  val var4: Function2 = new Function2(this.this$0, null) {
                      int label;
                      final RLottieImageView this$0;
 
@@ -93,7 +92,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        n9.b.e();
+                        Y8.b.e();
                         if (this.label == 0) {
                            kotlin.c.b(var1);
                            this.this$0.clearAnimation();
@@ -104,23 +103,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (Pa.f.g(var4, var1, this) === var3) {
+                  if (Aa.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
 
-               val var6: FileDownloader = FileDownloader.INSTANCE;
-               val var7: Context = this.this$0.getContext();
-               q.g(var7, "getContext(...)");
-               val var11: java.lang.String = this.$config.getUrl();
-               val var5: java.lang.String = this.$config.getAsset();
-               val var9: StringBuilder = new StringBuilder();
-               var9.append(var5);
-               var9.append(".json");
-               val var10: Flow = FileDownloader.downloadFile$default(
-                  var6, var7, var11, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var7: FileDownloader = FileDownloader.INSTANCE;
+               val var9: Context = this.this$0.getContext();
+               q.g(var9, "getContext(...)");
+               val var6: java.lang.String = this.$config.getUrl();
+               val var11: java.lang.String = this.$config.getAsset();
+               val var5: StringBuilder = new StringBuilder();
+               var5.append(var11);
+               var5.append(".json");
+               val var12: Flow = FileDownloader.downloadFile$default(
+                  var7, var9, var6, var5.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -131,7 +130,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
                      if (var1 is DownloadState.Completed) {
-                        val var4x: Any = Pa.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
+                        val var4x: Any = Aa.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
                            final RLottieImageView.Config $config;
                            final DownloadState $downloadState;
                            int label;
@@ -153,19 +152,19 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              n9.b.e();
+                              Y8.b.e();
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
-                                 val var6: RLottieImageView = this.this$0;
-                                 val var7: Context = this.this$0.getContext();
-                                 q.g(var7, "getContext(...)");
-                                 val var5: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
-                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
-                                 val var3: Int = this.$config.getRenderMode();
-                                 if (var3 != 0) {
-                                    if (var3 != 1) {
+                                 val var7: RLottieImageView = this.this$0;
+                                 val var5: Context = this.this$0.getContext();
+                                 q.g(var5, "getContext(...)");
+                                 val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                 val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
+                                 val var2x: Int = this.$config.getRenderMode();
+                                 if (var2x != 0) {
+                                    if (var2x != 1) {
                                        var1 = RLottieDrawable.PlaybackMode.ONCE;
                                     } else {
                                        var1 = RLottieDrawable.PlaybackMode.FREEZE;
@@ -174,7 +173,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var6.setAnimation(var7, var5, var2x, var4x, var1);
+                                 var7.setAnimation(var5, var6, var4x, var3, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -183,9 +182,9 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
                            }
                         }, var2x);
-                        return if (var4x === n9.b.e()) var4x else Unit.a;
+                        return if (var4x === Y8.b.e()) var4x else Unit.a;
                      } else if (var1 is DownloadState.Failure) {
-                        val var3x: Any = Pa.f.g(
+                        val var3x: Any = Aa.f.g(
                            K.c(),
                            new Function2(this.this$0, null) {
                               int label;
@@ -205,7 +204,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
 
                               public final Object invokeSuspend(Object var1) {
-                                 n9.b.e();
+                                 Y8.b.e();
                                  if (this.label == 0) {
                                     kotlin.c.b(var1);
                                     AnimatedImageStateManager.onFetchFinished$default(
@@ -219,14 +218,14 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            },
                            var2x
                         );
-                        return if (var3x === n9.b.e()) var3x else Unit.a;
+                        return if (var3x === Y8.b.e()) var3x else Unit.a;
                      } else {
                         return Unit.a;
                      }
                   }
                };
                this.label = 2;
-               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
+               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
             }
          },
          2,
@@ -391,23 +390,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var3: Int = this.heightDp;
-         val var7: java.lang.String = this.asset;
+         val var3: Int = this.widthDp;
+         val var2: Int = this.heightDp;
+         val var5: java.lang.String = this.asset;
          val var1: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Config(url=");
-         var6.append(var5);
+         var6.append(var7);
          var6.append(", animate=");
          var6.append(var4);
          var6.append(", widthDp=");
-         var6.append(var2);
-         var6.append(", heightDp=");
          var6.append(var3);
+         var6.append(", heightDp=");
+         var6.append(var2);
          var6.append(", asset=");
-         var6.append(var7);
+         var6.append(var5);
          var6.append(", renderMode=");
          var6.append(var1);
          var6.append(")");

@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.message.view.media
 
-import E1.a
-import E1.b
-import E1.c
+import R8.j
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import g9.j
+import i6.f
 import kotlin.jvm.internal.q
-import x6.f
+import o1.a
+import o1.b
+import o1.c
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = new c()) : OnAttachStateChangeListener {
    private final val view: View
@@ -63,11 +63,11 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    public open fun onViewDetachedFromWindow(view: View) {
       q.h(var1, "view");
       var1.removeCallbacks(this.isAttachedRunnable);
-      val var2: ViewTreeObserver = var1.getViewTreeObserver();
-      if (var2 != null) {
-         val var3: ViewScrollStateListener = this.getScrollStateListener();
-         var3.reset();
-         var2.removeOnScrollChangedListener(var3);
+      val var3: ViewTreeObserver = var1.getViewTreeObserver();
+      if (var3 != null) {
+         val var2: ViewScrollStateListener = this.getScrollStateListener();
+         var2.reset();
+         var3.removeOnScrollChangedListener(var2);
       }
 
       this.viewAttached.invoke(java.lang.Boolean.FALSE);

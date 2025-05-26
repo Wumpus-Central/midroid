@@ -1,5 +1,6 @@
 package com.discord.device.react_events
 
+import R8.s
 import android.util.DisplayMetrics
 import androidx.window.layout.WindowMetrics
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -7,7 +8,6 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
-import g9.s
 import kotlin.jvm.internal.q
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {

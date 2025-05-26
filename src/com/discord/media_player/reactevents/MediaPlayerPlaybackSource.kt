@@ -1,6 +1,6 @@
 package com.discord.media_player.reactevents
 
-import Za.f
+import Ka.f
 import com.discord.media_player.MediaSource
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
@@ -125,9 +125,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var2: java.lang.String = this.assetUrl;
-      val var3: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.assetUrl;
+      val var2: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -138,11 +138,11 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       val var6: Int = this.attachmentIndex;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaPlayerPlaybackSource(id=");
-      var5.append(var4);
-      var5.append(", assetUrl=");
-      var5.append(var2);
-      var5.append(", channelId=");
       var5.append(var3);
+      var5.append(", assetUrl=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var2);
       var5.append(", messageId=");
       var5.append(var7);
       var5.append(", attachmentIndex=");

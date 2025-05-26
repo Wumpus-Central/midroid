@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.polls
 
 import android.annotation.SuppressLint
 import android.view.View
-import androidx.core.view.b0
+import androidx.core.view.a0
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
 import com.discord.chat.presentation.message.view.polls.a11y.PollsAnswerAccessibilityDelegate
@@ -60,7 +60,7 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       var3.setEnabled(var4.getCanTapAnswers());
       var3.setOnClickListener(new g(this, var4));
       var3.setImportantForAccessibility(1);
-      b0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
+      a0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
       var1.bind(var4, new h(this, var4), this.onLongPressImage);
    }
 

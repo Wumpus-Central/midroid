@@ -1,56 +1,56 @@
 package com.discord.theme
 
+import R8.j
+import W1.A
+import W1.B
+import W1.C
+import W1.D
+import W1.E
+import W1.F
+import W1.G
+import W1.H
+import W1.I
+import W1.J
+import W1.K
+import W1.L
+import W1.M
+import W1.N
+import W1.O
+import W1.P
+import W1.Q
+import W1.S
+import W1.T
+import W1.U
+import W1.V
+import W1.W
+import W1.a
+import W1.b
+import W1.c
+import W1.d
+import W1.e
+import W1.f
+import W1.g
+import W1.h
+import W1.i
+import W1.k
+import W1.l
+import W1.m
+import W1.n
+import W1.o
+import W1.p
+import W1.r
+import W1.s
+import W1.t
+import W1.u
+import W1.v
+import W1.w
+import W1.x
+import W1.y
+import W1.z
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import g9.j
 import kotlin.jvm.internal.q
-import l2.A
-import l2.B
-import l2.C
-import l2.D
-import l2.E
-import l2.F
-import l2.G
-import l2.H
-import l2.I
-import l2.J
-import l2.K
-import l2.L
-import l2.M
-import l2.N
-import l2.O
-import l2.P
-import l2.Q
-import l2.S
-import l2.T
-import l2.U
-import l2.V
-import l2.W
-import l2.a
-import l2.b
-import l2.c
-import l2.d
-import l2.e
-import l2.f
-import l2.g
-import l2.h
-import l2.i
-import l2.k
-import l2.l
-import l2.m
-import l2.n
-import l2.o
-import l2.p
-import l2.r
-import l2.s
-import l2.t
-import l2.u
-import l2.v
-import l2.w
-import l2.x
-import l2.y
-import l2.z
 
 internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -371,12 +371,12 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.infoDangerForeground$delegate = j.b(new g(var1, var2));
       this.interactiveActive$delegate = j.b(new h(var1, var2));
       this.interactiveMuted$delegate = j.b(new i(var1, var2));
-      this.interactiveNormal$delegate = j.b(new l2.j(var1, var2));
+      this.interactiveNormal$delegate = j.b(new W1.j(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = j.b(new k(var1, var2));
       this.redesignButtonTertiaryBackground$delegate = j.b(new m(var1, var2));
       this.redesignButtonTertiaryText$delegate = j.b(new n(var1, var2));
       this.spoilerHiddenBackground$delegate = j.b(new p(var1, var2));
-      this.spoilerRevealedBackground$delegate = j.b(new l2.q(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.b(new W1.q(var1, var2));
       this.statusDanger$delegate = j.b(new r(var1, var2));
       this.statusDangerBackground$delegate = j.b(new s(var1, var2));
       this.statusPositive$delegate = j.b(new t(var1, var2));

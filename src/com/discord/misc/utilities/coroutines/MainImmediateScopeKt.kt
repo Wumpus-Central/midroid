@@ -1,10 +1,10 @@
 package com.discord.misc.utilities.coroutines
 
-import Pa.K
-import Pa.k0
+import Aa.K
+import Aa.k0
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
 public fun MainImmediateScope(): CoroutineScope {
-   return g.a(k0.b(null, 1, null).R(K.c().Z1()));
+   return g.a(k0.b(null, 1, null).L(K.c().C1()));
 }

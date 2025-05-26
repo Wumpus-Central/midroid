@@ -1,5 +1,6 @@
 package com.discord.share
 
+import R8.s
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -14,7 +15,6 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 
@@ -43,11 +43,11 @@ internal class ShareBroadcastReceiver(reactContext: ReactApplicationContext) : B
       }
 
       if (var5 != null) {
-         val var7: ReactEvents = this.reactEvents;
-         val var4: ReactApplicationContext = this.reactApplicationContext;
+         val var4: ReactEvents = this.reactEvents;
+         val var7: ReactApplicationContext = this.reactApplicationContext;
          val var6: java.lang.String = var5.getPackageName();
          q.g(var6, "getPackageName(...)");
-         var7.emitModuleEvent(var4, new ShareBroadcastReceiverAppClicked(var6, var3));
+         var4.emitModuleEvent(var7, new ShareBroadcastReceiverAppClicked(var6, var3));
       }
    }
 

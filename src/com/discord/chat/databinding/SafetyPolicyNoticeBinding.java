@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
+import t0.a;
 
 public final class SafetyPolicyNoticeBinding implements ViewBinding {
    public final TextView description;
@@ -31,24 +31,24 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
 
    public static SafetyPolicyNoticeBinding bind(View var0) {
       int var1 = R.id.description;
-      TextView var6 = (TextView)a.a(var0, var1);
-      if (var6 != null) {
+      TextView var5 = (TextView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.footer;
-         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-         if (var4 != null) {
+         LinearLayout var7 = (LinearLayout)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.learn_more;
-               TextView var3 = (TextView)a.a(var0, var1);
-               if (var3 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var5 = (TextView)a.a(var0, var1);
-                  if (var5 != null) {
+                  TextView var3 = (TextView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.title;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var6, var4, var2, var3, var5, var7);
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SafetyPolicyNoticeBinding(var0, var5, var7, var4, var2, var3, var6);
                      }
                   }
                }

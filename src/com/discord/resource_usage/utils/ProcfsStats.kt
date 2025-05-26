@@ -1,9 +1,9 @@
 package com.discord.resource_usage.utils
 
 import android.os.Process
+import d9.j
+import gb.c
 import java.io.File
-import s9.j
-import vb.c
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    public final val totalTime: Long

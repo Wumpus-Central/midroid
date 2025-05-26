@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Za.f
+import Ka.f
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
@@ -81,21 +81,21 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.parentChannelId;
-      val var3: java.lang.String = this.threadId;
+      val var3: java.lang.String = this.guildId;
+      val var1: java.lang.String = this.parentChannelId;
+      val var4: java.lang.String = this.threadId;
       val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapPostPreviewEmbedData(guildId=");
-      var1.append(var4);
-      var1.append(", parentChannelId=");
-      var1.append(var2);
-      var1.append(", threadId=");
-      var1.append(var3);
-      var1.append(", messageId=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapPostPreviewEmbedData(guildId=");
+      var2.append(var3);
+      var2.append(", parentChannelId=");
+      var2.append(var1);
+      var2.append(", threadId=");
+      var2.append(var4);
+      var2.append(", messageId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

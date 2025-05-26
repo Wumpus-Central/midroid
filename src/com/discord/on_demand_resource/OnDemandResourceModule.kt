@@ -1,6 +1,6 @@
 package com.discord.on_demand_resource
 
-import b2.a
+import L1.a
 import com.discord.codegen.NativeOnDemandResourceModuleSpec
 import com.discord.play_delivery.PlayAssetDelivery
 import com.facebook.react.bridge.Promise

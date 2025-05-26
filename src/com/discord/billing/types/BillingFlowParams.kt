@@ -1,12 +1,12 @@
 package com.discord.billing.types
 
-import Na.a
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
 import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
 import kotlin.jvm.internal.q
+import ya.a
 
 internal object BillingFlowParams {
    private fun calculateStandardizedUnits(oldPeriod: String, newPeriod: String): Int {

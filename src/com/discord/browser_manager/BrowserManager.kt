@@ -1,6 +1,5 @@
 package com.discord.browser_manager
 
-import Ma.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -11,6 +10,7 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import xa.j
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {

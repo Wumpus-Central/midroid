@@ -85,10 +85,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var6: Int = GIF_INDICATOR_PADDING;
+         val var5: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var5 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -175,13 +175,13 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          }
 
          var37.x(var19);
-         val var39: SimpleDraweeView = this.binding.image;
-         kotlin.jvm.internal.q.g(this.binding.image, "image");
-         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
          val var24: SimpleDraweeView = this.binding.image;
          kotlin.jvm.internal.q.g(this.binding.image, "image");
+         val var38: java.lang.Boolean = java.lang.Boolean.TRUE;
+         val var39: SimpleDraweeView = this.binding.image;
+         kotlin.jvm.internal.q.g(this.binding.image, "image");
          SetOptionalImageUrlKt.setOptionalImageUrl(
-            var39, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var24, var5, var6)
+            var24, var1, var38, var18, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var39, var5, var6)
          );
       }
 
@@ -233,10 +233,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       var28.configureSpoiler(var8, this, var34, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var32: ConstraintLayout = this.binding.container;
+      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var29: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      var29.configureAttachmentOverlay(this, var32, var9, var10);
+      var32.configureAttachmentOverlay(this, var29, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -250,20 +250,20 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
          val var5: StringBuilder = new StringBuilder();
          var5.append(var1);
-         var5.append(" ");
+         var5.append(", ");
          var5.append(var3);
          var4.setContentDescription(var5.toString());
       }
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -271,7 +271,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.b0.p0(this.binding.image, new androidx.core.view.a(var1) {
+         androidx.core.view.a0.p0(this.binding.image, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -375,14 +375,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
+         val var2: Int = this.width;
+         val var1: Int = this.height;
          val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TargetSize(width=");
-         var4.append(var1);
-         var4.append(", height=");
          var4.append(var2);
+         var4.append(", height=");
+         var4.append(var1);
          var4.append(", resizeMode=");
          var4.append(var3);
          var4.append(")");
