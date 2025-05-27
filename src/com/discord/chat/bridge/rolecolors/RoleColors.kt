@@ -1,18 +1,8 @@
 package com.discord.chat.bridge.rolecolors
 
-import ha.f
-import ha.n
-import ia.a
-import ka.G
-import ka.N
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, tertiaryColor: Int? = null) {
@@ -80,106 +70,16 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
       val var4: Int = this.secondaryColor;
-      val var2: Int = this.tertiaryColor;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("RoleColors(primaryColor=");
-      var3.append(var1);
-      var3.append(", secondaryColor=");
-      var3.append(var4);
-      var3.append(", tertiaryColor=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: RoleColors.$serializer = new RoleColors.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.rolecolors.RoleColors", var0, 3);
-         var1.l("primaryColor", false);
-         var1.l("secondaryColor", true);
-         var1.l("tertiaryColor", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: N = N.a;
-         return new KSerializer[]{N.a, a.u(N.a), a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): RoleColors {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
-         val var4: Int;
-         var var6: Int;
-         var var10: Int;
-         if (var8.y()) {
-            var2 = var8.k(var7, 0);
-            val var9: N = N.a;
-            var6 = var8.v(var7, 1, N.a, null) as Int;
-            var10 = var8.v(var7, 2, var9, null) as Int;
-            var4 = 7;
-         } else {
-            var var12: Boolean = true;
-            var var3: Int = 0;
-            var6 = null;
-            var10 = null;
-            var2 = 0;
-
-            while (var12) {
-               val var5: Int = var8.x(var7);
-               if (var5 != -1) {
-                  if (var5 != 0) {
-                     if (var5 != 1) {
-                        if (var5 != 2) {
-                           throw new n(var5);
-                        }
-
-                        var10 = var8.v(var7, 2, N.a, var10) as Int;
-                        var2 |= 4;
-                     } else {
-                        var6 = var8.v(var7, 1, N.a, var6) as Int;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var3 = var8.k(var7, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var12 = false;
-               }
-            }
-
-            var4 = var2;
-            var2 = var3;
-         }
-
-         var8.b(var7);
-         return new RoleColors(var4, var2, var6, var10, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: RoleColors) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         RoleColors.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var3: Int = this.tertiaryColor;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("RoleColors(primaryColor=");
+      var2.append(var1);
+      var2.append(", secondaryColor=");
+      var2.append(var4);
+      var2.append(", tertiaryColor=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

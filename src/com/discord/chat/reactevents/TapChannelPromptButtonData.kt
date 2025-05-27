@@ -1,26 +1,16 @@
 package com.discord.chat.reactevents
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.G.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class TapChannelPromptButtonData(messageId: String, channelId: String, buttonType: String) : ReactEvent {
-   public final val buttonType: String
-   public final val channelId: String
    public final val messageId: String
+   public final val channelId: String
+   public final val buttonType: String
 
    init {
       q.h(var1, "messageId");
@@ -77,107 +67,18 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.buttonType;
+      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.buttonType;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapChannelPromptButtonData(messageId=");
-      var1.append(var4);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(", buttonType=");
       var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var4);
+      var1.append(", buttonType=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: TapChannelPromptButtonData.$serializer = new TapChannelPromptButtonData.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.reactevents.TapChannelPromptButtonData", var0, 3);
-         var1.l("messageId", false);
-         var1.l("channelId", false);
-         var1.l("buttonType", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): TapChannelPromptButtonData {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         var var2: Int;
-         var var5: java.lang.String;
-         val var7: java.lang.String;
-         val var10: java.lang.String;
-         if (var9.y()) {
-            var5 = var9.t(var8, 0);
-            var7 = var9.t(var8, 1);
-            var10 = var9.t(var8, 2);
-            var2 = 7;
-         } else {
-            var var6: java.lang.String = null;
-            var5 = null;
-            var var11: java.lang.String = null;
-            var var3: Boolean = true;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var9.x(var8);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var5 = var9.t(var8, 2);
-                        var2 |= 4;
-                     } else {
-                        var11 = var9.t(var8, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var6 = var9.t(var8, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var7 = var11;
-            var10 = var5;
-            var5 = var6;
-         }
-
-         var9.b(var8);
-         return new TapChannelPromptButtonData(var2, var5, var7, var10, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: TapChannelPromptButtonData) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         TapChannelPromptButtonData.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

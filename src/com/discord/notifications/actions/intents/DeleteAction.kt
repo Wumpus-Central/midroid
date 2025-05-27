@@ -15,7 +15,7 @@ public class DeleteAction(tag: String) : NotificationAction {
       this.tag = var1;
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -35,8 +35,8 @@ public class DeleteAction(tag: String) : NotificationAction {
       return NotificationAction.DefaultImpls.toPendingIntent(this, var1, var2, var3);
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
    }
 

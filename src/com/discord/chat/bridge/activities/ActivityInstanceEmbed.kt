@@ -1,22 +1,10 @@
 package com.discord.chat.bridge.activities
 
+import Za.f
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.p0
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import kotlinx.serialization.internal.SerializationConstructorMarker
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -25,41 +13,11 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    appMessageEmbedModel: AppMessageEmbedImpl,
    participantsDescription: String? = ...
 ) : ActivityInstanceEmbed(var1, var3, var4, var5, var6) {
-   public final val appMessageEmbedModel: AppMessageEmbedImpl
    public final val applicationId: ApplicationId
    public final val instanceId: String
    public final val participantAvatarUris: List<String>?
+   public final val appMessageEmbedModel: AppMessageEmbedImpl
    public final val participantsDescription: String?
-
-   fun ActivityInstanceEmbed(
-      var1: Int,
-      var2: ApplicationId,
-      var3: java.lang.String,
-      var4: MutableList<java.lang.String>,
-      var5: AppMessageEmbedImpl,
-      var6: java.lang.String,
-      var7: SerializationConstructorMarker
-   ) {
-      if (11 != (var1 and 11)) {
-         p0.b(var1, 11, ActivityInstanceEmbed.$serializer.INSTANCE.getDescriptor());
-      }
-
-      super();
-      this.applicationId = var2.unbox-impl();
-      this.instanceId = var3;
-      if ((var1 and 4) == 0) {
-         this.participantAvatarUris = null;
-      } else {
-         this.participantAvatarUris = var4;
-      }
-
-      this.appMessageEmbedModel = var5;
-      if ((var1 and 16) == 0) {
-         this.participantsDescription = null;
-      } else {
-         this.participantsDescription = var6;
-      }
-   }
 
    fun ActivityInstanceEmbed(var1: Long, var3: java.lang.String, var4: MutableList<java.lang.String>, var5: AppMessageEmbedImpl, var6: java.lang.String) {
       q.h(var3, "instanceId");
@@ -145,133 +103,24 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var4: java.lang.String = this.instanceId;
-      val var1: java.util.List = this.participantAvatarUris;
-      val var6: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var5: java.lang.String = this.participantsDescription;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActivityInstanceEmbed(applicationId=");
-      var2.append(var3);
-      var2.append(", instanceId=");
-      var2.append(var4);
-      var2.append(", participantAvatarUris=");
-      var2.append(var1);
-      var2.append(", appMessageEmbedModel=");
-      var2.append(var6);
-      var2.append(", participantsDescription=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ActivityInstanceEmbed.$serializer = new ActivityInstanceEmbed.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.activities.ActivityInstanceEmbed", var0, 5);
-         var1.l("applicationId", false);
-         var1.l("instanceId", false);
-         var1.l("participantAvatarUris", true);
-         var1.l("appMessageEmbedModel", false);
-         var1.l("participantsDescription", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var1: C0 = C0.a;
-         return new KSerializer[]{ApplicationId.$serializer.INSTANCE, C0.a, a.u(var2[2]), AppMessageEmbedImpl.$serializer.INSTANCE, a.u(var1)};
-      }
-
-      public open fun deserialize(decoder: Decoder): ActivityInstanceEmbed {
-         q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         var var10: Array<KSerializer> = ActivityInstanceEmbed.access$get$childSerializers$cp();
-         val var5: Boolean = var12.y();
-         var var9: ApplicationId = null;
-         var var2: Int;
-         var var6: Any;
-         var var8: java.lang.String;
-         val var13: java.util.List;
-         if (var5) {
-            var9 = var12.m(var11, 0, ApplicationId.$serializer.INSTANCE, null) as ApplicationId;
-            var8 = var12.t(var11, 1);
-            var13 = var12.v(var11, 2, var10[2], null) as java.util.List;
-            var6 = var12.m(var11, 3, AppMessageEmbedImpl.$serializer.INSTANCE, null) as AppMessageEmbedImpl;
-            val var7: java.lang.String = var12.v(var11, 4, C0.a, null) as java.lang.String;
-            var2 = 31;
-            var10 = var7;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-            var var15: java.util.List = null;
-            var6 = null;
-            var var14: Any = null;
-
-            while (var3) {
-               val var4: Int = var12.x(var11);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              if (var4 != 4) {
-                                 throw new n(var4);
-                              }
-
-                              var14 = var12.v(var11, 4, C0.a, var14) as java.lang.String;
-                              var2 |= 16;
-                           } else {
-                              var6 = var12.m(var11, 3, AppMessageEmbedImpl.$serializer.INSTANCE, var6) as AppMessageEmbedImpl;
-                              var2 |= 8;
-                           }
-                        } else {
-                           var15 = var12.v(var11, 2, var10[2], var15) as java.util.List;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var8 = var12.t(var11, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var9 = var12.m(var11, 0, ApplicationId.$serializer.INSTANCE, var9) as ApplicationId;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-
-            var10 = (KSerializer[])var14;
-            var13 = var15;
-         }
-
-         var12.b(var11);
-         return new ActivityInstanceEmbed(var2, var9, var8, var13, (AppMessageEmbedImpl)var6, var10, null, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: ActivityInstanceEmbed) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ActivityInstanceEmbed.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var5: java.lang.String = this.instanceId;
+      val var4: java.util.List = this.participantAvatarUris;
+      val var2: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var3: java.lang.String = this.participantsDescription;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ActivityInstanceEmbed(applicationId=");
+      var1.append(var6);
+      var1.append(", instanceId=");
+      var1.append(var5);
+      var1.append(", participantAvatarUris=");
+      var1.append(var4);
+      var1.append(", appMessageEmbedModel=");
+      var1.append(var2);
+      var1.append(", participantsDescription=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

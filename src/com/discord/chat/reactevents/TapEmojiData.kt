@@ -7,9 +7,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import g9.n
+import g9.s
 import kotlin.jvm.internal.q
-import o8.p
-import o8.w
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
@@ -47,29 +47,29 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       val var2: WritableNativeMap;
       if (this.emoji is UnicodeEmojiContentNode) {
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            w.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), w.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
+            s.a("surrogate", (this.emoji as UnicodeEmojiContentNode).getSurrogate()), s.a("content", (this.emoji as UnicodeEmojiContentNode).getContent())
          );
       } else {
          if (this.emoji !is CustomEmojiContentNode) {
-            throw new p();
+            throw new n();
          }
 
          var2 = NativeMapExtensionsKt.nativeMapOf(
-            w.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
-            w.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
-            w.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
+            s.a("id", java.lang.String.valueOf((this.emoji as CustomEmojiContentNode).getId())),
+            s.a("alt", (this.emoji as CustomEmojiContentNode).getAlt()),
+            s.a("src", (this.emoji as CustomEmojiContentNode).getSrc())
          );
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(w.a("node", var2));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("node", var2));
    }
 
    public override fun toString(): String {
-      val var2: EmojiContentNode = this.emoji;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapEmojiData(emoji=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: EmojiContentNode = this.emoji;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapEmojiData(emoji=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

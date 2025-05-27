@@ -5,6 +5,7 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
+import d2.a
 import java.util.HashMap
 import kotlin.jvm.internal.q
 
@@ -17,16 +18,22 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
       this.reactContext = var1;
    }
 
+   @JvmStatic
+   fun `keysRequest$lambda$0`(var0: I18nMessage): Any {
+      q.h(var0, "key");
+      return var0.name();
+   }
+
    public override fun keysRequest(callback: Callback) {
       q.h(var1, "callback");
-      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), <unrepresentable>.INSTANCE)});
+      var1.invoke(new Object[]{NativeArrayExtensionsKt.toNativeArray(I18nMessage.getEntries(), new a())});
    }
 
    public override fun valuesResult(values: ReadableArray) {
       q.h(var1, "values");
-      val var4: I18nCache = I18nCache.INSTANCE;
-      val var3: ReactApplicationContext = this.reactContext;
-      val var5: HashMap = new HashMap();
+      val var3: I18nCache = I18nCache.INSTANCE;
+      val var5: ReactApplicationContext = this.reactContext;
+      val var4: HashMap = new HashMap();
       val var6: java.util.Iterator = I18nMessage.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
@@ -35,12 +42,12 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
             i.u();
          }
 
-         val var8: java.lang.String = (var7 as I18nMessage).name();
-         var7 = var1.getString(var2);
-         q.e(var7);
-         var5.put(var8, var7);
+         var7 = (var7 as I18nMessage).name();
+         val var8: java.lang.String = var1.getString(var2);
+         q.e(var8);
+         var4.put(var7, var8);
       }
 
-      var4.set(var3, var5);
+      var3.set(var5, var4);
    }
 }

@@ -3,19 +3,18 @@ package com.discord.chat.presentation.list
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.jvm.internal.q
 
 internal class ChatListVisibilityCalculator {
-   public final var firstMessagePercentVisible: Double?
-      private set
-
    public final var firstMessagePosition: Int = -1
       private set
 
-   public final var lastMessagePercentVisible: Double?
+   public final var firstMessagePercentVisible: Double?
       private set
 
    public final var lastMessagePosition: Int = -1
+      private set
+
+   public final var lastMessagePercentVisible: Double?
       private set
 
    private fun floorToOneDecimal(number: Double): Double {
@@ -24,7 +23,7 @@ internal class ChatListVisibilityCalculator {
 
    private fun getItemPercentVisible(recyclerView: RecyclerView, position: Int): Double {
       val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
-      q.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+      kotlin.jvm.internal.q.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
       val var10: View = (var7 as LinearLayoutManager).findViewByPosition(var2);
       var var3: Double = 0.0;
       if (var10 == null) {
@@ -62,10 +61,10 @@ internal class ChatListVisibilityCalculator {
    }
 
    public fun updateFirstAndLastMessageVisibilityData(recyclerView: RecyclerView) {
-      q.h(var1, "recyclerView");
+      kotlin.jvm.internal.q.h(var1, "recyclerView");
       this.resetVisibilityData();
       val var7: RecyclerView.LayoutManager = var1.getLayoutManager();
-      q.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+      kotlin.jvm.internal.q.f(var7, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
       val var5: Int = (var7 as LinearLayoutManager).findFirstVisibleItemPosition();
       val var6: Int = (var7 as LinearLayoutManager).findLastVisibleItemPosition();
       if (var5 != -1 && var6 != -1) {

@@ -1,14 +1,12 @@
 package com.discord.chat.bridge.polls
 
+import Za.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
+import o9.a
 
 @f(with = PollRadioStyle.Serializer::class)
 public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
@@ -21,8 +19,6 @@ public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private PollRadioStyle[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public PollRadioStyle.Companion Companion = new PollRadioStyle.Companion(null);
 
@@ -44,7 +40,7 @@ public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<PollRadioStyle> {
-         return this.get$cachedSerializer();
+         return PollRadioStyle.Serializer.INSTANCE;
       }
    }
 

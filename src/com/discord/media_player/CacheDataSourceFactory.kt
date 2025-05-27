@@ -1,15 +1,13 @@
 package com.discord.media_player
 
-import B4.s
-import C4.h
 import android.content.Context
 import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource.Factory
 import com.google.android.exoplayer2.upstream.cache.SimpleCache
-import com.google.android.exoplayer2.upstream.cache.c
 import java.io.File
 import kotlin.jvm.internal.q
+import t5.s
 
 public class CacheDataSourceFactory private constructor(defaultDatasourceFactory: Factory = new Factory()) :
    com.google.android.exoplayer2.upstream.DataSource.Factory {
@@ -35,17 +33,17 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
          var2 = cache;
       }
 
-      return new c(var1, var4, var5, new com.google.android.exoplayer2.upstream.cache.b(var2, 104857600L), 3, null);
+      return new com.google.android.exoplayer2.upstream.cache.c(var1, var4, var5, new com.google.android.exoplayer2.upstream.cache.b(var2, 104857600L), 3, null);
    }
 
    public companion object {
-      private const val CACHE_DIR_NAME: String
-      private const val CACHE_MAX_SIZE: Long
       private final lateinit var cache: SimpleCache
       private final lateinit var factory: CacheDataSourceFactory
+      private const val CACHE_MAX_SIZE: Long
+      private const val CACHE_DIR_NAME: String
 
       private fun getSimpleCache(context: Context): SimpleCache {
-         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new h(104857600L), new F3.c(var1));
+         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new u5.h(104857600L), new x4.c(var1));
       }
 
       public fun getInstance(): CacheDataSourceFactory {

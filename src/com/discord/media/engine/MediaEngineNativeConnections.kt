@@ -27,18 +27,12 @@ internal class MediaEngineNativeConnections {
 
    public fun removeAndDispose(connectionId: Int) {
       val var2: NativeConnection = this.connections.remove(var1);
-      val var4: Unit;
       if (var2 != null) {
          System.nanoTime();
          var2.dispose();
          val var3: Debug = Debug.INSTANCE;
-         var4 = Unit.a;
       } else {
-         var4 = null;
-      }
-
-      if (var4 == null) {
-         val var5: Debug = Debug.INSTANCE;
+         val var4: Debug = Debug.INSTANCE;
       }
    }
 

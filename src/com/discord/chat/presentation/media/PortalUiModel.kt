@@ -4,8 +4,8 @@ import com.discord.misc.utilities.ids.IdUtilsKt
 import com.discord.primitives.MessageId
 
 public interface PortalUiModel {
-   public val index: Int
    public val messageId: MessageId
+   public val index: Int
 
    public open val portal: Double
       public open get() {

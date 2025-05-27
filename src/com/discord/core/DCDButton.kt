@@ -1,7 +1,7 @@
 package com.discord.core
 
-import T5.k
-import T5.k.b
+import L6.k
+import L6.k.b
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -25,8 +25,8 @@ import kotlin.jvm.internal.q
 public class DCDButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DcdButtonBinding
    private final val button: MaterialButton
-   private final val loadingDots: ProgressDots
    private final val progress: ProgressBar
+   private final val loadingDots: ProgressDots
    private final var text: CharSequence?
 
    fun DCDButton(var1: Context) {
@@ -118,16 +118,10 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
    }
 
    public fun setBorderColor(colorInt: Int?) {
-      val var3: Unit;
       if (var1 != null) {
          this.button.setStrokeColor(ColorStateList.valueOf(var1.intValue()));
          this.button.setStrokeWidth(SizeUtilsKt.getDpToPx(1));
-         var3 = Unit.a;
       } else {
-         var3 = null;
-      }
-
-      if (var3 == null) {
          this.button.setStrokeColor(null);
          this.button.setStrokeWidth(0);
       }

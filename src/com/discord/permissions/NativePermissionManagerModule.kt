@@ -14,7 +14,6 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
 import com.facebook.react.modules.permissions.PermissionsModule
 import java.util.Locale
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -37,6 +36,38 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
       val var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
       q.g(var2, "toLowerCase(...)");
       var1.resolve(var2);
+   }
+
+   @JvmStatic
+   fun `requestForegroundServicePermissionVoiceCall$lambda$3`(var0: NativePermissionManagerModule, var1: Promise, var2: Promise): Unit {
+      q.h(var2, "it");
+      var0.requestMicrophoneAuthorization(NativePermissionPromise.INSTANCE.generate(new a(var0, var1), new b(var1)));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `requestForegroundServicePermissionVoiceCall$lambda$3$lambda$1`(var0: NativePermissionManagerModule, var1: Promise): Unit {
+      var0.requireAppInForeground(var1, new d(var0, var1));
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `requestForegroundServicePermissionVoiceCall$lambda$3$lambda$1$lambda$0`(var0: NativePermissionManagerModule, var1: Promise, var2: Promise): Unit {
+      q.h(var2, "it");
+      var0.getPermissionsModule()
+         .requestPermission(
+            "android.permission.FOREGROUND_SERVICE_MICROPHONE", NativePermissionManagerModule.Companion.access$transformRequestResult(Companion, var1)
+         );
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `requestForegroundServicePermissionVoiceCall$lambda$3$lambda$2`(var0: Promise): Unit {
+      CrashReporting.addBreadcrumb$default(CrashReporting.INSTANCE, "requestForegroundServicePermissionVoiceCall: Permission Rejected", null, null, 6, null);
+      val var1: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
+      q.g(var1, "toLowerCase(...)");
+      var0.resolve(var1);
+      return Unit.a;
    }
 
    private fun requireAppInForeground(promise: Promise, withForegroundApp: (Promise) -> Unit) {
@@ -168,85 +199,7 @@ public class NativePermissionManagerModule(reactContext: ReactApplicationContext
    public fun requestForegroundServicePermissionVoiceCall(promise: Promise) {
       q.h(var1, "promise");
       if (VERSION.SDK_INT >= 34) {
-         this.requireAppInForeground(
-            var1,
-            new Function1(this, var1) {
-               final Promise $promise;
-               final NativePermissionManagerModule this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-                  this.$promise = var2;
-               }
-
-               public final void invoke(Promise var1) {
-                  q.h(var1, "it");
-                  this.this$0
-                     .requestMicrophoneAuthorization(
-                        NativePermissionPromise.INSTANCE
-                           .generate(
-                              new Function0(this.this$0, this.$promise) {
-                                 final Promise $promise;
-                                 final NativePermissionManagerModule this$0;
-
-                                 {
-                                    super(0);
-                                    this.this$0 = var1;
-                                    this.$promise = var2;
-                                 }
-
-                                 public final void invoke() {
-                                    NativePermissionManagerModule.access$requireAppInForeground(
-                                       this.this$0,
-                                       this.$promise,
-                                       new Function1(this.this$0, this.$promise) {
-                                          final Promise $promise;
-                                          final NativePermissionManagerModule this$0;
-
-                                          {
-                                             super(1);
-                                             this.this$0 = var1;
-                                             this.$promise = var2;
-                                          }
-
-                                          public final void invoke(Promise var1) {
-                                             q.h(var1, "it");
-                                             NativePermissionManagerModule.access$getPermissionsModule(this.this$0)
-                                                .requestPermission(
-                                                   "android.permission.FOREGROUND_SERVICE_MICROPHONE",
-                                                   NativePermissionManagerModule.Companion.access$transformRequestResult(
-                                                      NativePermissionManagerModule.Companion, this.$promise
-                                                   )
-                                                );
-                                          }
-                                       }
-                                    );
-                                 }
-                              },
-                              new Function0(this.$promise) {
-                                 final Promise $promise;
-
-                                 {
-                                    super(0);
-                                    this.$promise = var1;
-                                 }
-
-                                 public final void invoke() {
-                                    CrashReporting.addBreadcrumb$default(
-                                       CrashReporting.INSTANCE, "requestForegroundServicePermissionVoiceCall: Permission Rejected", null, null, 6, null
-                                    );
-                                    val var1: Promise = this.$promise;
-                                    val var2: java.lang.String = "DENIED".toLowerCase(Locale.ROOT);
-                                    q.g(var2, "toLowerCase(...)");
-                                    var1.resolve(var2);
-                                 }
-                              }
-                           )
-                     );
-               }
-            }
-         );
+         this.requireAppInForeground(var1, new c(this, var1));
       } else {
          this.requestForegroundServicePermissionPreU(var1);
       }

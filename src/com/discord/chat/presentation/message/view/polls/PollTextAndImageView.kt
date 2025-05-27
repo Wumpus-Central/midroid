@@ -132,6 +132,7 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
             var12.setVisibility(0);
             var12.setTextColor(var1.getLabelColor());
             var12.setText(var6.getVotes());
+            q.e(var12);
          } else {
             val var8: TextView = (this.getBinding() as PollTextAndImageAnswerViewBinding).votePercentage;
             q.g(var8, "votePercentage");
@@ -143,8 +144,8 @@ public class PollTextAndImageView  public constructor(context: Context, attrs: A
       }
 
       public companion object {
-         private final val BORDER_RADIUS: Int
          private const val VOTED_TRANSITION_DURATION_MS: Long
+         private final val BORDER_RADIUS: Int
       }
    }
 }

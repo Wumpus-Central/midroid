@@ -18,6 +18,20 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       this.reactionsView = var1;
    }
 
+   @JvmStatic
+   fun `bind$lambda$0`(var0: Function1, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var0.invoke(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$1`(var0: Function1, var1: ReactionView.Reaction): Unit {
+      kotlin.jvm.internal.q.h(var1, "reaction");
+      var0.invoke(var1);
+      return Unit.a;
+   }
+
    public fun bind(
       reactions: List<MessageReaction>,
       canAddNewReactions: Boolean,
@@ -54,30 +68,31 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       kotlin.jvm.internal.q.h(var18, "onReplyClick");
       kotlin.jvm.internal.q.h(var19, "onForwardClick");
       kotlin.jvm.internal.q.h(var20, "onThreadClick");
-      this.reactionsView.setReactions(var1, var2, var3, var4, var5, var6, var7, var8, var9, new Function1(var10) {
-         final Function1 $onReactionClick;
-
-         {
-            super(1);
-            this.$onReactionClick = var1;
-         }
-
-         public final void invoke(ReactionView.Reaction var1) {
-            kotlin.jvm.internal.q.h(var1, "reaction");
-            this.$onReactionClick.invoke(var1);
-         }
-      }, new Function1(var11) {
-         final Function1 $onReactionLongPress;
-
-         {
-            super(1);
-            this.$onReactionLongPress = var1;
-         }
-
-         public final void invoke(ReactionView.Reaction var1) {
-            kotlin.jvm.internal.q.h(var1, "reaction");
-            this.$onReactionLongPress.invoke(var1);
-         }
-      }, var12, var13, var14, var15, var16, var17, var18, var19, var20, var21, var22, var23);
+      this.reactionsView
+         .setReactions(
+            var1,
+            var2,
+            var3,
+            var4,
+            var5,
+            var6,
+            var7,
+            var8,
+            var9,
+            new E(var10),
+            new F(var11),
+            var12,
+            var13,
+            var14,
+            var15,
+            var16,
+            var17,
+            var18,
+            var19,
+            var20,
+            var21,
+            var22,
+            var23
+         );
    }
 }

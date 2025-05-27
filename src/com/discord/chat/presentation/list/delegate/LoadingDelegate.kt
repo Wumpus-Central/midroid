@@ -8,9 +8,9 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
+import g9.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import o8.p
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
    init {
@@ -30,7 +30,7 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
          val var6: Function0;
          if (var4 != 1) {
             if (var4 != 2) {
-               throw new p();
+               throw new n();
             }
 
             var6 = new Function0(this.getEventHandler()) {

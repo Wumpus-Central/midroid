@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,7 +8,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import u0.a;
 
 public final class RoleDotViewBinding implements ViewBinding {
    public final FrameLayout roleDotViewBackground;

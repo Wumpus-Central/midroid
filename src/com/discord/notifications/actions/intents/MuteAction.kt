@@ -11,10 +11,10 @@ import com.discord.react.headless_tasks.api.HeadlessTasks
 import kotlin.jvm.internal.q
 
 public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, muteTime: Int?) : MuteAction(var1, var2, var3, var5), NotificationAction {
-   private final val channelId: ChannelId
-   private final val guildId: GuildId?
-   private final val muteTime: Int?
    public open val tag: String
+   private final val guildId: GuildId?
+   private final val channelId: ChannelId
+   private final val muteTime: Int?
 
    fun MuteAction(var1: java.lang.String, var2: GuildId, var3: Long, var5: Int) {
       q.h(var1, "tag");
@@ -25,7 +25,7 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
       this.muteTime = var5;
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -36,18 +36,18 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
+      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
       if (this.guildId != null) {
-         var3.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var4.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
       }
 
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var4.putString("channelId", java.lang.String.valueOf(this.channelId));
       if (this.muteTime != null) {
-         var3.putInt("muteTime", this.muteTime);
+         var4.putInt("muteTime", this.muteTime);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MuteAction", 0L, false, var3, true, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -58,8 +58,8 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
       return NotificationAction.DefaultImpls.toPendingIntent(this, var1, var2, var3);
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(this.guildId, var2);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);

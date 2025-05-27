@@ -1,16 +1,18 @@
 package com.discord.mobile_voice_overlay.utils
 
+import V1.a
+import V1.b
+import V1.c
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayData
 import com.discord.mobile_voice_overlay.views.OverlayView
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayViewProvider<Any>) -> Any) {
-   private final lateinit var assets: MobileVoiceOverlayAssets
-   private final var data: MobileVoiceOverlayData?
    private final val initializer: (OverlayViewProvider<Any>) -> Any
+   private final lateinit var assets: MobileVoiceOverlayAssets
    private final var view: Any?
+   private final var data: MobileVoiceOverlayData?
 
    init {
       q.h(var1, "initializer");
@@ -40,6 +42,27 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
       }
    }
 
+   @JvmStatic
+   fun `removeViewFromOverlay$lambda$0`(var0: OverlayView): Unit {
+      q.h(var0, "v");
+      var0.removeFromWindowManager();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `setAssets$lambda$1`(var0: MobileVoiceOverlayAssets, var1: OverlayView): Unit {
+      q.h(var1, "view");
+      var1.setAssets(var0);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `setData$lambda$2`(var0: MobileVoiceOverlayData, var1: OverlayView): Unit {
+      q.h(var1, "view");
+      var1.setData(var0);
+      return Unit.a;
+   }
+
    private fun withViewOptional(operation: (Any) -> Unit) {
       if (this.view != null) {
          var1.invoke(this.view);
@@ -58,44 +81,20 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun removeViewFromOverlay() {
-      this.withViewOptional(<unrepresentable>.INSTANCE);
+      this.withViewOptional(new a());
       this.view = null;
    }
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
       q.h(var1, "assets");
       this.assets = var1;
-      this.withViewOptional(new Function1(var1) {
-         final MobileVoiceOverlayAssets $assets;
-
-         {
-            super(1);
-            this.$assets = var1;
-         }
-
-         public final void invoke(T var1) {
-            q.h(var1, "view");
-            var1.setAssets(this.$assets);
-         }
-      });
+      this.withViewOptional(new c(var1));
    }
 
    public fun setData(data: MobileVoiceOverlayData) {
       q.h(var1, "data");
       this.data = var1;
-      this.withViewOptional(new Function1(var1) {
-         final MobileVoiceOverlayData $data;
-
-         {
-            super(1);
-            this.$data = var1;
-         }
-
-         public final void invoke(T var1) {
-            q.h(var1, "view");
-            var1.setData(this.$data);
-         }
-      });
+      this.withViewOptional(new b(var1));
    }
 
    public fun showViewOnOverlay() {

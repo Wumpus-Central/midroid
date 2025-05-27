@@ -1,27 +1,15 @@
 package com.discord.chat.bridge.ctabutton
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
+import Za.f
 import kotlin.jvm.internal.q
-import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class CtaButton(text: String, textColor: Int? = null, backgroundColor: Int? = null, callback: String? = null) {
-   public final val backgroundColor: Int?
-   public final val callback: String?
    public final val text: String
    public final val textColor: Int?
+   public final val backgroundColor: Int?
+   public final val callback: String?
 
    init {
       q.h(var1, "text");
@@ -97,118 +85,21 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.text;
-      val var3: Int = this.textColor;
-      val var4: Int = this.backgroundColor;
-      val var2: java.lang.String = this.callback;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CtaButton(text=");
-      var1.append(var5);
-      var1.append(", textColor=");
-      var1.append(var3);
-      var1.append(", backgroundColor=");
-      var1.append(var4);
-      var1.append(", callback=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: CtaButton.$serializer = new CtaButton.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.ctabutton.CtaButton", var0, 4);
-         var1.l("text", false);
-         var1.l("textColor", true);
-         var1.l("backgroundColor", true);
-         var1.l("callback", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: C0 = C0.a;
-         val var1: N = N.a;
-         return new KSerializer[]{C0.a, a.u(N.a), a.u(var1), a.u(var2)};
-      }
-
-      public open fun deserialize(decoder: Decoder): CtaButton {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
-         var var8: java.lang.String = null;
-         var var2: Int;
-         var var6: Int;
-         var var7: Int;
-         var var12: Any;
-         if (var5) {
-            var8 = var10.t(var9, 0);
-            var12 = N.a;
-            var7 = var10.v(var9, 1, N.a, null) as Int;
-            var6 = var10.v(var9, 2, (DeserializationStrategy)var12, null) as Int;
-            var12 = var10.v(var9, 3, C0.a, null) as java.lang.String;
-            var2 = 15;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var7 = null;
-            var6 = null;
-            var12 = null;
-
-            while (var3) {
-               val var4: Int = var10.x(var9);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              throw new n(var4);
-                           }
-
-                           var12 = var10.v(var9, 3, C0.a, var12) as java.lang.String;
-                           var2 |= 8;
-                        } else {
-                           var6 = var10.v(var9, 2, N.a, var6) as Int;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var7 = var10.v(var9, 1, N.a, var7) as Int;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var8 = var10.t(var9, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var10.b(var9);
-         return new CtaButton(var2, var8, var7, var6, (java.lang.String)var12, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: CtaButton) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         CtaButton.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var2: java.lang.String = this.text;
+      val var1: Int = this.textColor;
+      val var3: Int = this.backgroundColor;
+      val var4: java.lang.String = this.callback;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CtaButton(text=");
+      var5.append(var2);
+      var5.append(", textColor=");
+      var5.append(var1);
+      var5.append(", backgroundColor=");
+      var5.append(var3);
+      var5.append(", callback=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

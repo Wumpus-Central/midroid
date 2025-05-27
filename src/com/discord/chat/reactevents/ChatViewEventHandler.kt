@@ -38,31 +38,11 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       q.h(var2, "reactEvents");
       q.h(var3, "reactTag");
       super();
-      this.emitReactEvent = new Function1(var2, var1, var3) {
-         final Context $context;
-         final ReactEvents $reactEvents;
-         final Function0 $reactTag;
-
-         {
-            super(1);
-            this.$reactEvents = var1;
-            this.$context = var2;
-            this.$reactTag = var3;
-         }
-
-         public final void invoke(ReactEvent var1) {
-            q.h(var1, "event");
-            val var3: ReactEvents = this.$reactEvents;
-            val var2: Context = this.$context;
-            q.f(this.$context, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
-            var3.emitEvent(var2 as ReactContext, (this.$reactTag.invoke() as java.lang.Number).intValue(), var1);
-         }
-      };
+      this.emitReactEvent = new a(var2, var1, var3);
       this.onMessageLongPressed = new Function6(this) {
          final ChatViewEventHandler this$0;
 
          {
-            super(6);
             this.this$0 = var1;
          }
 
@@ -71,8 +51,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          ) {
             q.h(var1, "messageId");
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var11: java.lang.String = MessageId.toString-impl(var1);
-            val var10: java.lang.String = ChannelId.toString-impl(var2);
+            val var10: java.lang.String = MessageId.toString-impl(var1);
+            val var11: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -92,14 +72,13 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2(this) {
          final ChatViewEventHandler this$0;
 
          {
-            super(2);
             this.this$0 = var1;
          }
 
@@ -109,6 +88,14 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                .invoke(new TapMessageData(MessageId.toString-impl(var1), ChannelId.toString-impl(var2)));
          }
       };
+   }
+
+   @JvmStatic
+   fun `emitReactEvent$lambda$0`(var0: ReactEvents, var1: Context, var2: Function0, var3: ReactEvent): Unit {
+      q.h(var3, "event");
+      q.f(var1, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
+      var0.emitEvent(var1 as ReactContext, (var2.invoke() as java.lang.Number).intValue(), var3);
+      return Unit.a;
    }
 
    public override fun mediaAttachmentPlaybackEnded(
@@ -264,9 +251,9 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var7: Boolean = var1.isAtBottom();
-      val var8: Boolean = var1.isDragging();
-      val var6: Boolean = var1.isSettling();
+      val var8: Boolean = var1.isAtBottom();
+      val var6: Boolean = var1.isDragging();
+      val var7: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -276,11 +263,11 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var7,
+            var8,
             var3,
             var4,
-            var8,
             var6,
+            var7,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),

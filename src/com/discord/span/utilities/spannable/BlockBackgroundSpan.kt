@@ -10,13 +10,13 @@ import kotlin.jvm.internal.q
 
 public class BlockBackgroundSpan(fillColor: Int, strokeColor: Int, strokeWidth: Int, strokeRadius: Int, insetStart: Int, insetTop: Int, insetBottom: Int) :
    LineBackgroundSpan {
-   private final val fillPaint: Paint
-   private final val insetBottom: Int
    private final val insetStart: Int
    private final val insetTop: Int
-   private final val radius: Float
-   private final val rect: RectF
+   private final val insetBottom: Int
+   private final val fillPaint: Paint
    private final val strokePaint: Paint
+   private final val rect: RectF
+   private final val radius: Float
 
    init {
       this.insetStart = var5;

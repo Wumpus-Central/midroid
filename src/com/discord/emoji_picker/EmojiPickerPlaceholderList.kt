@@ -3,14 +3,12 @@ package com.discord.emoji_picker
 import com.discord.emoji_picker.EmojiPickerItemData.CoreData.NativeSection
 import com.discord.misc.utilities.collections.StubbedList
 import java.util.ArrayList
-import kotlin.jvm.internal.q
-import o8.p
 
 internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, offsetId: Long) : StubbedList<EmojiPickerItem> {
-   private final val listHeaderIndices: List<Int>
-   private final val listSize: Int
    private final val nativeSection: List<NativeSection>
    private final val offsetId: Long
+   private final val listSize: Int
+   private final val listHeaderIndices: List<Int>
 
    public open val size: Int
       public open get() {
@@ -19,7 +17,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
 
 
    init {
-      q.h(var1, "nativeSection");
+      kotlin.jvm.internal.q.h(var1, "nativeSection");
       super();
       this.nativeSection = var1;
       this.offsetId = var2;
@@ -33,10 +31,10 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
       this.listSize = var4;
       val var6: java.util.List = this.nativeSection;
       var var9: Int = 0;
-      var4 = i.v(var6, 9);
+      var4 = kotlin.collections.i.v(var6, 9);
       val var10: Any;
       if (var4 == 0) {
-         var10 = i.e(var9);
+         var10 = kotlin.collections.i.e(var9);
       } else {
          val var5: ArrayList = new ArrayList(var4 + 1);
          var5.add(var9);
@@ -49,7 +47,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
          var10 = var5;
       }
 
-      this.listHeaderIndices = i.Y((java.util.List)var10, 1);
+      this.listHeaderIndices = kotlin.collections.i.Y((java.util.List)var10, 1);
    }
 
    public open operator fun get(index: Int): EmojiPickerItem {
@@ -61,7 +59,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle();
          } else {
             if (var3 !is EmojiPickerItemData.CoreData.NativeSection.Guild) {
-               throw new p();
+               throw new g9.n();
             }
 
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Guild).getGuildName();

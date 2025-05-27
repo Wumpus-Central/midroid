@@ -32,11 +32,11 @@ import com.facebook.drawee.view.SimpleDraweeView
 import java.util.Locale
 
 public class AppMessageEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final var gradientDrawable: GradientDrawable?
-   private final val textColor: Int
-
    public final var view: AppMessageEmbedViewBinding
       internal set
+
+   private final var gradientDrawable: GradientDrawable?
+   private final val textColor: Int
 
    fun AppMessageEmbedView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");
@@ -59,39 +59,29 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var5: java.lang.String = var2.getMessageId();
-      val var6: java.lang.String = var2.getAppId();
+      val var6: java.lang.String = var2.getMessageId();
+      val var5: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
+      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
    }
 
    @JvmStatic
    fun `initView$lambda$10`(var0: AppMessageEmbedView, var1: ChatEventHandler, var2: AppMessageEmbedImpl, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$eventHandler");
-      kotlin.jvm.internal.q.h(var2, "$data");
       var0.handleTap(var1, var2, "link_copied");
    }
 
    @JvmStatic
    fun `initView$lambda$13$lambda$12`(var0: AppMessageEmbedView, var1: ChatEventHandler, var2: AppMessageEmbedImpl, var3: java.lang.String, var4: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$eventHandler");
-      kotlin.jvm.internal.q.h(var2, "$data");
-      kotlin.jvm.internal.q.h(var3, "$id");
       var0.handleTap(var1, var2, var3);
    }
 
    @JvmStatic
    fun `initView$lambda$9`(var0: AppMessageEmbedView, var1: ChatEventHandler, var2: AppMessageEmbedImpl, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
-      kotlin.jvm.internal.q.h(var1, "$eventHandler");
-      kotlin.jvm.internal.q.h(var2, "$data");
       var0.handleTap(var1, var2, "link_copied");
    }
 
@@ -244,10 +234,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var3 / var4;
-         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var38: SimpleDraweeView = this.view.banner;
+         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var52: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
-         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
@@ -334,7 +324,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
             if (var31) {
                var9 = var10;
             } else {
-               var9 = androidx.core.graphics.c.k(var10, 30);
+               var9 = y.c.k(var10, 30);
             }
 
             if (var31) {

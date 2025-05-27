@@ -1,8 +1,6 @@
 package com.discord.recycler_view.scroll
 
 import androidx.recyclerview.widget.RecyclerView
-import kotlin.jvm.functions.Function1
-import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 
 public open class DebouncedScrollListener(timeoutMillis: Long,
@@ -24,25 +22,7 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       this.onScrolled = var3;
       this.onScrollStateChanged = var4;
       this.onDragStateChanged = var5;
-      this.scrollEvents = new DebouncedFlow<>(var1, new Function1(this) {
-         final DebouncedScrollListener this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(DebouncedScrollListener.ScrollEvent var1) {
-            q.h(var1, "<name for destructuring parameter 0>");
-            val var4: RecyclerView = var1.component1();
-            val var2: Int = var1.component2();
-            val var3: Int = var1.component3();
-            val var5: Function3 = DebouncedScrollListener.access$getOnScrolled$p(this.this$0);
-            if (var5 != null) {
-               var5.invoke(var4, var2, var3);
-            }
-         }
-      }, false, 4, null);
+      this.scrollEvents = new DebouncedFlow<>(var1, new a(this), false, 4, null);
    }
 
    private fun checkDragState(newState: Int) {
@@ -59,6 +39,32 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
             this.onDragStateChanged.invoke(java.lang.Boolean.TRUE);
          }
       }
+   }
+
+   @JvmStatic
+   fun `scrollEvents$lambda$0`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
+      q.h(var1, "<destruct>");
+      val var4: RecyclerView = var1.component1();
+      val var3: Int = var1.component2();
+      val var2: Int = var1.component3();
+      if (var0.onScrolled != null) {
+         var0.onScrolled.invoke(var4, var3, var2);
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `setTimeoutMillis$lambda$1`(var0: DebouncedScrollListener, var1: DebouncedScrollListener.ScrollEvent): Unit {
+      q.h(var1, "<destruct>");
+      val var4: RecyclerView = var1.component1();
+      val var3: Int = var1.component2();
+      val var2: Int = var1.component3();
+      if (var0.onScrolled != null) {
+         var0.onScrolled.invoke(var4, var3, var2);
+      }
+
+      return Unit.a;
    }
 
    public fun cancel() {
@@ -120,35 +126,17 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
    public fun setTimeoutMillis(timeoutMillis: Long) {
       this.timeoutMillis = var1;
       this.scrollEvents.cancel();
-      this.scrollEvents = new DebouncedFlow<>(var1, new Function1(this) {
-         final DebouncedScrollListener this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(DebouncedScrollListener.ScrollEvent var1) {
-            q.h(var1, "<name for destructuring parameter 0>");
-            val var4: RecyclerView = var1.component1();
-            val var3: Int = var1.component2();
-            val var2: Int = var1.component3();
-            val var5: Function3 = DebouncedScrollListener.access$getOnScrolled$p(this.this$0);
-            if (var5 != null) {
-               var5.invoke(var4, var3, var2);
-            }
-         }
-      }, false, 4, null);
+      this.scrollEvents = new DebouncedFlow<>(var1, new b(this), false, 4, null);
    }
 
    private data class ScrollEvent(recyclerView: RecyclerView, dx: Int, dy: Int) {
+      public final var recyclerView: RecyclerView
+         internal set
+
       public final var dx: Int
          internal set
 
       public final var dy: Int
-         internal set
-
-      public final var recyclerView: RecyclerView
          internal set
 
       init {
@@ -198,18 +186,18 @@ public open class DebouncedScrollListener(timeoutMillis: Long,
       }
 
       public override fun toString(): String {
-         val var4: RecyclerView = this.recyclerView;
-         val var1: Int = this.dx;
-         val var2: Int = this.dy;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScrollEvent(recyclerView=");
-         var3.append(var4);
-         var3.append(", dx=");
-         var3.append(var1);
-         var3.append(", dy=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: RecyclerView = this.recyclerView;
+         val var2: Int = this.dx;
+         val var1: Int = this.dy;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("ScrollEvent(recyclerView=");
+         var4.append(var3);
+         var4.append(", dx=");
+         var4.append(var2);
+         var4.append(", dy=");
+         var4.append(var1);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

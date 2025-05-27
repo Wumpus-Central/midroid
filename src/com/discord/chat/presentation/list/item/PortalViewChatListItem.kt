@@ -5,8 +5,8 @@ import kotlin.jvm.internal.q
 
 public data class PortalViewChatListItem(id: String, view: View, measuredDimensions: Pair<Int, Int>? = null) : ChatListItem {
    public open val id: String
-   public final val measuredDimensions: Pair<Int, Int>?
    public final val view: View
+   public final val measuredDimensions: Pair<Int, Int>?
 
    init {
       q.h(var1, "id");
@@ -53,8 +53,8 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.id.hashCode();
-      val var2: Int = this.view.hashCode();
+      val var2: Int = this.id.hashCode();
+      val var3: Int = this.view.hashCode();
       val var1: Int;
       if (this.measuredDimensions == null) {
          var1 = 0;
@@ -62,20 +62,20 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
          var1 = this.measuredDimensions.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.id;
       val var1: View = this.view;
-      val var2: Pair = this.measuredDimensions;
+      val var3: Pair = this.measuredDimensions;
       val var4: StringBuilder = new StringBuilder();
       var4.append("PortalViewChatListItem(id=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", view=");
       var4.append(var1);
       var4.append(", measuredDimensions=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

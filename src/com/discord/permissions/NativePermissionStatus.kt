@@ -27,7 +27,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = w8.a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    @JvmStatic
@@ -36,8 +36,8 @@ public enum class NativePermissionStatus {
    }
 
    public companion object {
-      private const val ANDROID_PERMISSION_DENIED: String
       private const val ANDROID_PERMISSION_GRANTED: String
+      private const val ANDROID_PERMISSION_DENIED: String
       private const val ANDROID_PERMISSION_NEVER_ASK_AGAIN: String
 
       public fun fromAndroidAuthorizationStatus(value: Any?): String {
@@ -74,14 +74,14 @@ public enum class NativePermissionStatus {
             var2 = (var1 as ReadableNativeMap).toString();
          }
 
-         if (h.O(var2, "granted", false, 2, null)) {
+         if (h.N(var2, "granted", false, 2, null)) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
             q.g(var1, "toLowerCase(...)");
-         } else if (h.O(var2, "denied", false, 2, null)) {
+         } else if (h.N(var2, "denied", false, 2, null)) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
             q.g(var1, "toLowerCase(...)");
          } else {
-            if (!h.O(var2, "never_ask_again", false, 2, null)) {
+            if (!h.N(var2, "never_ask_again", false, 2, null)) {
                val var4: StringBuilder = new StringBuilder();
                var4.append("Unknown authorization result: ");
                var4.append((Object)var1);

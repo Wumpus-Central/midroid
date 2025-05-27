@@ -1,14 +1,10 @@
 package com.discord.chat.presentation.message.view;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import kotlin.jvm.functions.Function3;
 
 // $VF: synthetic class
-public final class M implements OnClickListener {
-   public final MediaView j;
-   public final OnClickListener k;
-
-   public final void onClick(View var1) {
-      MediaView.a(this.j, this.k, var1);
+public final class M implements Function3 {
+   public final Object invoke(Object var1, Object var2, Object var3) {
+      return FlaggedMessageEmbedView.s((String)var1, (String)var2, (String)var3);
    }
 }

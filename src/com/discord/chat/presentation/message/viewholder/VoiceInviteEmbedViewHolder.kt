@@ -16,14 +16,12 @@ public class VoiceInviteEmbedViewHolder(embedView: VoiceInviteEmbedView) : Messa
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function3, var1: VoiceInviteEmbed, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapChannel");
-      kotlin.jvm.internal.q.h(var1, "$embed");
       var0.invoke(var1.getChannelId(), var1.getGuildId(), null);
    }
 
    public fun bind(embed: VoiceInviteEmbed, onTapChannel: (String, String, String?) -> Unit) {
       kotlin.jvm.internal.q.h(var1, "embed");
       kotlin.jvm.internal.q.h(var2, "onTapChannel");
-      this.embedView.setContent(var1.getTitleText(), var1.getBodyText(), var1.getJoinText(), var1.getJoinIcon(), var1.getJoinDisabled(), new B(var2, var1));
+      this.embedView.setContent(var1.getTitleText(), var1.getBodyText(), var1.getJoinText(), var1.getJoinIcon(), var1.getJoinDisabled(), new Q(var2, var1));
    }
 }

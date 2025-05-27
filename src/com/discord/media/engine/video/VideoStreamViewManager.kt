@@ -115,9 +115,9 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
    }
 
    public companion object {
-      public const val NAME: String
-      public const val WAKE_LOCK_KEY: String
       private final val reactEvents: ReactEvents
+      public const val WAKE_LOCK_KEY: String
+      public const val NAME: String
    }
 
    private class RenderListener(view: View) : RendererEvents {

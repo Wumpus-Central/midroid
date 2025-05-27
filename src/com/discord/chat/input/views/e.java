@@ -1,16 +1,17 @@
 package com.discord.chat.input.views;
 
-import android.view.KeyEvent;
+import android.content.Context;
 import android.view.View;
-import android.view.View.OnKeyListener;
-import kotlin.jvm.internal.Ref.BooleanRef;
+import androidx.core.view.ContentInfoCompat;
+import androidx.core.view.J;
 
 // $VF: synthetic class
-public final class e implements OnKeyListener {
-   public final BooleanRef j;
-   public final DCDChatInput k;
+public final class e implements J {
+   public final ChatInputRootView a;
+   public final Context b;
 
-   public final boolean onKey(View var1, int var2, KeyEvent var3) {
-      return DCDChatInput.b(this.j, this.k, var1, var2, var3);
+   @Override
+   public final ContentInfoCompat a(View var1, ContentInfoCompat var2) {
+      return ChatInputRootView.d(this.a, this.b, var1, var2);
    }
 }

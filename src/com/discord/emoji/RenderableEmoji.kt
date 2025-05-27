@@ -31,9 +31,9 @@ public sealed class RenderableEmoji protected constructor() {
    }
 
    public data class CustomWithEmojiId(emojiId: Long, isAnimated: Boolean, alt: String) : RenderableEmoji {
-      public final val alt: String
       public final val emojiId: Long
       public final val isAnimated: Boolean
+      public final val alt: String
 
       init {
          q.h(var4, "alt");
@@ -112,8 +112,8 @@ public sealed class RenderableEmoji protected constructor() {
    }
 
    public data class CustomWithUrl(url: String, alt: String) : RenderableEmoji {
-      public final val alt: String
       public final val url: String
+      public final val alt: String
 
       init {
          q.h(var1, "url");
@@ -178,8 +178,8 @@ public sealed class RenderableEmoji protected constructor() {
    }
 
    public data class Unicode(surrogates: Surrogates) : RenderableEmoji.Unicode(var1) {
-      public final val exception: String?
       public final val surrogates: Surrogates
+      public final val exception: String?
 
       fun Unicode(var1: java.lang.String) {
          q.h(var1, "surrogates");

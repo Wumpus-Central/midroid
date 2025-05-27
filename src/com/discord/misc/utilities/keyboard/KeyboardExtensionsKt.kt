@@ -1,21 +1,20 @@
 package com.discord.misc.utilities.keyboard
 
-import X9.f
+import Pa.f
 import android.app.Activity
 import android.view.View
 import android.view.Window
 import android.widget.EditText
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.o0
+import androidx.core.view.p0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import o8.s
-import v8.b
+import n9.b
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -23,7 +22,7 @@ fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControll
 }
 
 private fun Window.getInsetsController(view: View): WindowInsetsControllerCompat {
-   val var2: WindowInsetsControllerCompat = o0.a(var0, var1);
+   val var2: WindowInsetsControllerCompat = p0.a(var0, var1);
    q.g(var2, "getInsetsController(...)");
    return var2;
 }
@@ -63,8 +62,8 @@ public fun View.hideKeyboard(window: Window) {
       public final Object invokeSuspend(Object var1) {
          b.e();
          if (this.label == 0) {
-            s.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).a(WindowInsetsCompat.m.c());
+            c.b(var1);
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).a(WindowInsetsCompat.n.c());
             return Unit.a;
          } else {
             throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -108,8 +107,8 @@ public fun View.showKeyboard(window: Window) {
       public final Object invokeSuspend(Object var1) {
          b.e();
          if (this.label == 0) {
-            s.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).e(WindowInsetsCompat.m.c());
+            c.b(var1);
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).e(WindowInsetsCompat.n.c());
             if (this.$self is EditText) {
                var1 = this.$self as EditText;
             } else {

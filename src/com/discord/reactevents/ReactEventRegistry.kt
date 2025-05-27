@@ -1,30 +1,30 @@
 package com.discord.reactevents
 
+import g9.s
+import h9.q
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
-import o8.w
-import p8.q
 
 internal class ReactEventRegistry {
+   private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()
+
    public final var didExportEvents: Boolean
       private set
 
-   private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()
-
    private fun prefixWithTop(input: String): String {
-      return h.F(var1, "on", "top", false, 4, null);
+      return h.E(var1, "on", "top", false, 4, null);
    }
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var2: LinkedHashMap = new LinkedHashMap();
+      val var3: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var1 : this.events.values()) {
-         var2.put(var1, q.m(new Pair[]{w.a("registrationName", var1)}));
+      for (java.lang.String var2 : this.events.values()) {
+         var3.put(var2, q.m(new Pair[]{s.a("registrationName", var2)}));
       }
 
-      return var2;
+      return var3;
    }
 
    public fun getEventName(event: ReactEvent): String {

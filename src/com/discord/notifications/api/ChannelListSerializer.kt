@@ -1,7 +1,7 @@
 package com.discord.notifications.api
 
+import ab.a
 import com.discord.primitives.ChannelId
-import ia.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -18,10 +18,10 @@ public object ChannelListSerializer : KSerializer {
 
    private fun deserializeForCalls(channelIds: String): String {
       var var2: java.lang.String = var1;
-      if (h.J(var1, "[", false, 2, null)) {
+      if (h.I(var1, "[", false, 2, null)) {
          var2 = var1;
-         if (h.u(var1, "]", false, 2, null)) {
-            var2 = h.t0(h.s0(var1, "["), "]");
+         if (h.t(var1, "]", false, 2, null)) {
+            var2 = h.s0(h.r0(var1, "["), "]");
          }
       }
 
@@ -30,15 +30,15 @@ public object ChannelListSerializer : KSerializer {
 
    public open fun deserialize(decoder: Decoder): List<ChannelId> {
       q.h(var1, "decoder");
-      val var6: java.util.List = h.C0(this.deserializeForCalls(var1.n()), new java.lang.String[]{","}, false, 0, 6, null);
+      val var6: java.util.List = h.B0(this.deserializeForCalls(var1.n()), new java.lang.String[]{","}, false, 0, 6, null);
       val var4: ArrayList = new ArrayList();
 
       for (java.lang.String var3 : var6) {
          var var7: java.lang.String = var3;
-         if (h.J(var3, "\"", false, 2, null)) {
+         if (h.I(var3, "\"", false, 2, null)) {
             var7 = var3;
-            if (h.u(var3, "\"", false, 2, null)) {
-               var7 = h.s0(h.t0(var3, "\""), "\"");
+            if (h.t(var3, "\"", false, 2, null)) {
+               var7 = h.r0(h.s0(var3, "\""), "\"");
             }
          }
 

@@ -3,12 +3,12 @@ package com.discord.media.engine.video.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
+import g9.s
 import kotlin.jvm.internal.q
-import o8.w
 
 internal data class AudioInputInitializedEvent(timeToInitialized: Double, description: Map<String, Any>) : ReactEvent {
-   public final val description: Map<String, Any>
    public final val timeToInitialized: Double
+   public final val description: Map<String, Any>
 
    init {
       q.h(var3, "description");
@@ -51,7 +51,7 @@ internal data class AudioInputInitializedEvent(timeToInitialized: Double, descri
 
    public open fun serialize(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("timeToInitialized", this.timeToInitialized), w.a("description", NativeMapExtensionsKt.toNativeMap(this.description))
+         s.a("timeToInitialized", this.timeToInitialized), s.a("description", NativeMapExtensionsKt.toNativeMap(this.description))
       );
    }
 

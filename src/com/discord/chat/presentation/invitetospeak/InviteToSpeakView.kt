@@ -23,9 +23,9 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import k1.a
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import y1.a
 
 public class InviteToSpeakView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: InviteToSpeakViewBinding
@@ -55,8 +55,6 @@ public class InviteToSpeakView  public constructor(context: Context, attrs: Attr
 
    @JvmStatic
    fun `setProps$lambda$1`(var0: Function1, var1: Message, var2: View) {
-      q.h(var0, "$onInviteToSpeakClicked");
-      q.h(var1, "$message");
       var0.invoke(MessageId.box-impl(var1.getId-3Eiw7ao()));
    }
 

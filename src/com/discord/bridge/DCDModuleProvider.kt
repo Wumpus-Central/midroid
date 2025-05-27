@@ -19,7 +19,7 @@ public object DCDModuleProvider {
    public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: BaseReactPackage): Boolean {
       q.h(var1, "<this>");
       q.h(var2, "turboPackages");
-      return i.B(var1, var2);
+      return kotlin.collections.i.B(var1, var2);
    }
 
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {
@@ -58,7 +58,7 @@ public object DCDModuleProvider {
                var4.append("\n                        ");
                throw new IllegalArgumentException(var4.toString().toString());
             } else {
-               return i.o(var3);
+               return kotlin.collections.i.o(var3);
             }
          }
 
@@ -71,7 +71,7 @@ public object DCDModuleProvider {
                var3 = null;
             }
 
-            return i.o(var3);
+            return kotlin.collections.i.o(var3);
          }
       };
    }

@@ -1,5 +1,6 @@
 package com.discord.chat.databinding;
 
+import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,6 @@ import com.discord.chat.R;
 import com.discord.core.DCDButton;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import u0.a;
 
 public final class ReferralViewBinding implements ViewBinding {
    public final DCDButton acceptButton;
@@ -55,36 +55,36 @@ public final class ReferralViewBinding implements ViewBinding {
 
    public static ReferralViewBinding bind(View var0) {
       int var1 = R.id.acceptButton;
-      DCDButton var6 = (DCDButton)a.a(var0, var1);
-      if (var6 != null) {
+      DCDButton var3 = (DCDButton)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.content;
-         ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
-         if (var9 != null) {
+         ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.footer;
-            TextView var3 = (TextView)a.a(var0, var1);
-            if (var3 != null) {
+            TextView var11 = (TextView)a.a(var0, var1);
+            if (var11 != null) {
                var1 = R.id.imageCopy;
-               TextView var10 = (TextView)a.a(var0, var1);
-               if (var10 != null) {
+               TextView var8 = (TextView)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.nitroLogoBanner;
                   SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
                   if (var2 != null) {
                      var1 = R.id.nitroTicket;
-                     SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var7 != null) {
+                     SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.subtitle;
-                        SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                        if (var8 != null) {
+                        SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                        if (var5 != null) {
                            var1 = R.id.title;
                            TextView var4 = (TextView)a.a(var0, var1);
                            if (var4 != null) {
                               var1 = R.id.trialInfo;
-                              TextView var11 = (TextView)a.a(var0, var1);
-                              if (var11 != null) {
+                              TextView var9 = (TextView)a.a(var0, var1);
+                              if (var9 != null) {
                                  var1 = R.id.trial_info_top;
-                                 Barrier var5 = (Barrier)a.a(var0, var1);
-                                 if (var5 != null) {
-                                    return new ReferralViewBinding((LinearLayout)var0, var6, var9, var3, var10, var2, var7, var8, var4, var11, var5);
+                                 Barrier var7 = (Barrier)a.a(var0, var1);
+                                 if (var7 != null) {
+                                    return new ReferralViewBinding((LinearLayout)var0, var3, var10, var11, var8, var2, var6, var5, var4, var9, var7);
                                  }
                               }
                            }

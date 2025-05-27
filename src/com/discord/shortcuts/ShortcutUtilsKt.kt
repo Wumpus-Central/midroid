@@ -6,7 +6,7 @@ import android.graphics.Bitmap
 import android.os.Build.VERSION
 import androidx.core.app.Person
 import androidx.core.app.NotificationCompat.Builder
-import androidx.core.content.c
+import androidx.core.content.d
 import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.core.content.pm.b
 import androidx.core.graphics.drawable.IconCompat
@@ -17,7 +17,7 @@ public fun Builder.addShortcut(context: Context, shortcutInfo: ShortcutInfoCompa
    q.h(var1, "context");
    q.h(var2, "shortcutInfo");
    var0.Q(var2.g());
-   var0.I(new c(var2.g()));
+   var0.I(new d(var2.g()));
    b.g(var1, var2);
    return var0;
 }
@@ -29,7 +29,7 @@ public fun Context.createShortcut(id: String, label: CharSequence, longLabel: Ch
    q.h(var3, "longLabel");
    q.h(var5, "persons");
    q.h(var6, "intent");
-   val var10: ShortcutInfoCompat.b = new ShortcutInfoCompat.b(var0, var1).h(new c(var1)).m(var2).i(var3);
+   val var10: ShortcutInfoCompat.b = new ShortcutInfoCompat.b(var0, var1).h(new d(var1)).m(var2).i(var3);
    val var8: IconCompat;
    if (var4 != null) {
       var8 = IconCompat.h(var4);

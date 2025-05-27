@@ -3,9 +3,9 @@ package com.discord.chat.presentation.list.item
 import kotlin.jvm.internal.q
 
 public data class DeserializationErrorChatListItem(id: String, json: String, causeMessage: String) : ChatListItem {
-   public final val causeMessage: String
    public open val id: String
    public final val json: String
+   public final val causeMessage: String
 
    init {
       q.h(var1, "id");

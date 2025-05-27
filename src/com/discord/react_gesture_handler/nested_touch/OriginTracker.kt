@@ -7,9 +7,9 @@ import kotlin.jvm.internal.q
 
 internal class OriginTracker(context: Context) {
    public final val context: Context
+   private final val scaledTouchSlopPx: Int
    private final var origin: com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin?
    private final var originSupplemental: com.discord.react_gesture_handler.nested_touch.OriginTracker.Origin?
-   private final val scaledTouchSlopPx: Int
 
    init {
       q.h(var1, "context");

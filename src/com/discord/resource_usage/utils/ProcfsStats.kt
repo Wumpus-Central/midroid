@@ -1,16 +1,27 @@
 package com.discord.resource_usage.utils
 
-import A8.j
-import Da.e
+import android.os.Process
 import java.io.File
+import s9.j
+import vb.c
 
 internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
-   public final val rssPages: Long
    public final val totalTime: Long
+   public final val rssPages: Long
 
    init {
       this.totalTime = var1;
       this.rssPages = var3;
+   }
+
+   @JvmStatic
+   fun `statFile_delegate$lambda$0`(): File {
+      val var0: Int = Process.myPid();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("/proc/");
+      var1.append(var0);
+      var1.append("/stat");
+      return new File(var1.toString());
    }
 
    public operator fun component1(): Long {
@@ -45,13 +56,13 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
    }
 
    public override fun toString(): String {
-      val var1: Long = this.totalTime;
-      val var3: Long = this.rssPages;
+      val var3: Long = this.totalTime;
+      val var1: Long = this.rssPages;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ProcfsStats(totalTime=");
-      var5.append(var1);
-      var5.append(", rssPages=");
       var5.append(var3);
+      var5.append(", rssPages=");
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }
@@ -80,9 +91,9 @@ internal data class ProcfsStats(totalTime: Long, rssPages: Long) {
 
          try {
             if (var12.length() > 0) {
-               val var13: java.util.List = h.B0(var12, new char[]{' '}, false, 0, 6, null);
+               val var13: java.util.List = h.A0(var12, new char[]{' '}, false, 0, 6, null);
                var8 = new ProcfsStats(
-                  e.X(var13.get(13) as java.lang.String, 0L) + e.X(var13.get(14) as java.lang.String, 0L), e.X(var13.get(23) as java.lang.String, 0L)
+                  c.T(var13.get(13) as java.lang.String, 0L) + c.T(var13.get(14) as java.lang.String, 0L), c.T(var13.get(23) as java.lang.String, 0L)
                );
             }
          } catch (var10: Exception) {

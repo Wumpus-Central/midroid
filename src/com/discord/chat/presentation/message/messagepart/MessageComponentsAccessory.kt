@@ -8,10 +8,10 @@ import kotlin.jvm.internal.q
 public data class MessageComponentsAccessory(messageId: MessageId, message: Message, messageComponents: List<Component>, constrainedWidth: Int) : MessageComponentsAccessory(
       var1, var2, var3, var4
    ) {
-   public final val constrainedWidth: Int
+   public open val messageId: MessageId
    public final val message: Message
    public final val messageComponents: List<Component>
-   public open val messageId: MessageId
+   public final val constrainedWidth: Int
 
    fun MessageComponentsAccessory(var1: java.lang.String, var2: Message, var3: MutableList<Component>, var4: Int) {
       q.h(var1, "messageId");
@@ -73,19 +73,19 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Message = this.message;
+      val var5: Message = this.message;
       val var3: java.util.List = this.messageComponents;
       val var1: Int = this.constrainedWidth;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MessageComponentsAccessory(messageId=");
-      var5.append(var2);
-      var5.append(", message=");
-      var5.append(var4);
-      var5.append(", messageComponents=");
-      var5.append(var3);
-      var5.append(", constrainedWidth=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageComponentsAccessory(messageId=");
+      var4.append(var2);
+      var4.append(", message=");
+      var4.append(var5);
+      var4.append(", messageComponents=");
+      var4.append(var3);
+      var4.append(", constrainedWidth=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

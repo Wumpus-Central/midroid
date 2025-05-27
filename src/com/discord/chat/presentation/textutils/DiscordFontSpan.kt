@@ -6,7 +6,6 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.MetricAffectingSpan
 import com.discord.fonts.DiscordFont
-import kotlin.jvm.internal.q
 
 public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : MetricAffectingSpan {
    private final val context: Context
@@ -14,8 +13,8 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    private final val typeface: Typeface
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "discordFont");
+      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var2, "discordFont");
       super();
       this.context = var1;
       this.discordFont = var2;
@@ -33,8 +32,8 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
       }
 
       var var3: Int = var2 and this.typeface.getStyle().inv();
-      val var11: DiscordFont.Companion = DiscordFont.Companion;
-      val var8: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      val var8: DiscordFont.Companion = DiscordFont.Companion;
+      val var11: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
       val var9: Boolean;
       if (!var1.isFakeBoldText() && (var3 and 1) == 0) {
          var9 = false;
@@ -55,8 +54,8 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
          label47: {
             if (var1.getTextSkewX() == 0.0F && !this.discordFont.getItalic() && (var3 and 2) == 0) {
                val var5: Boolean;
-               if (var8 != null) {
-                  var5 = var8.getItalic();
+               if (var11 != null) {
+                  var5 = var11.getItalic();
                } else {
                   var5 = false;
                }
@@ -75,7 +74,7 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
             var3 = Math.max(700, var4);
          }
 
-         val var14: DiscordFont = DiscordFont.Companion.findByStyle$default(var11, var3, var6, false, 4, null);
+         val var14: DiscordFont = DiscordFont.Companion.findByStyle$default(var8, var3, var6, false, 4, null);
          if (var14 != null) {
             var7 = var14.typeface(this.context);
          } else {
@@ -87,12 +86,12 @@ public class DiscordFontSpan(context: Context, discordFont: DiscordFont) : Metri
    }
 
    public open fun updateDrawState(paint: TextPaint) {
-      q.h(var1, "paint");
+      kotlin.jvm.internal.q.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      q.h(var1, "paint");
+      kotlin.jvm.internal.q.h(var1, "paint");
       this.applyCustomTypeFace(var1);
    }
 }

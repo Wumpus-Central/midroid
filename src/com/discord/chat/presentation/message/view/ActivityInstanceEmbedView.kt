@@ -13,8 +13,8 @@ import com.discord.overlapping_circles.OverlappingItem
 import java.util.ArrayList
 
 public class ActivityInstanceEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
-   private final val appMessageEmbedView: AppMessageEmbedView
    private final var binding: AppMessageEmbedViewBinding
+   private final val appMessageEmbedView: AppMessageEmbedView
 
    fun ActivityInstanceEmbedView(var1: Context) {
       kotlin.jvm.internal.q.h(var1, "context");

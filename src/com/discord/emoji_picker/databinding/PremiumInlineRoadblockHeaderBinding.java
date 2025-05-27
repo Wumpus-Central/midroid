@@ -1,5 +1,6 @@
 package com.discord.emoji_picker.databinding;
 
+import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,7 +9,6 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.emoji_picker.R;
-import u0.a;
 
 public final class PremiumInlineRoadblockHeaderBinding implements ViewBinding {
    public final View gradient;

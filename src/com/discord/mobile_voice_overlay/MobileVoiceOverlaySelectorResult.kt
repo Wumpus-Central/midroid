@@ -2,50 +2,22 @@ package com.discord.mobile_voice_overlay
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.p0
-import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
-import kotlinx.serialization.internal.SerializationConstructorMarker
 
-@f
+@Za.f
 public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: ChannelId, channelName: String, guildName: String, categoryName: String) : MobileVoiceOverlaySelectorResult(
       var1, var3, var5, var6, var7
    ) {
-   public final val categoryName: String
+   public final val guildId: GuildId
    public final val channelId: ChannelId
    public final val channelName: String
-   public final val guildId: GuildId
    public final val guildName: String
-
-   fun MobileVoiceOverlaySelectorResult(
-      var1: Int, var2: GuildId, var3: ChannelId, var4: java.lang.String, var5: java.lang.String, var6: java.lang.String, var7: SerializationConstructorMarker
-   ) {
-      if (31 != (var1 and 31)) {
-         p0.b(var1, 31, MobileVoiceOverlaySelectorResult.$serializer.INSTANCE.getDescriptor());
-      }
-
-      super();
-      this.guildId = var2.unbox-impl();
-      this.channelId = var3.unbox-impl();
-      this.channelName = var4;
-      this.guildName = var5;
-      this.categoryName = var6;
-   }
+   public final val categoryName: String
 
    fun MobileVoiceOverlaySelectorResult(var1: Long, var3: Long, var5: java.lang.String, var6: java.lang.String, var7: java.lang.String) {
-      q.h(var5, "channelName");
-      q.h(var6, "guildName");
-      q.h(var7, "categoryName");
+      kotlin.jvm.internal.q.h(var5, "channelName");
+      kotlin.jvm.internal.q.h(var6, "guildName");
+      kotlin.jvm.internal.q.h(var7, "categoryName");
       super();
       this.guildId = var1;
       this.channelId = var3;
@@ -75,9 +47,9 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public fun copy(guildId: GuildId = ..., channelId: ChannelId = ..., channelName: String = ..., guildName: String = ..., categoryName: String = ...): MobileVoiceOverlaySelectorResult {
-      q.h(var5, "channelName");
-      q.h(var6, "guildName");
-      q.h(var7, "categoryName");
+      kotlin.jvm.internal.q.h(var5, "channelName");
+      kotlin.jvm.internal.q.h(var6, "guildName");
+      kotlin.jvm.internal.q.h(var7, "categoryName");
       return new MobileVoiceOverlaySelectorResult(var1, var3, var5, var6, var7, null);
    }
 
@@ -92,12 +64,12 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.channelName, var1.channelName)) {
+         } else if (!kotlin.jvm.internal.q.c(this.channelName, var1.channelName)) {
             return false;
-         } else if (!q.c(this.guildName, var1.guildName)) {
+         } else if (!kotlin.jvm.internal.q.c(this.guildName, var1.guildName)) {
             return false;
          } else {
-            return q.c(this.categoryName, var1.categoryName);
+            return kotlin.jvm.internal.q.c(this.categoryName, var1.categoryName);
          }
       }
    }
@@ -112,131 +84,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.channelName;
+      val var5: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.channelName;
       val var3: java.lang.String = this.guildName;
       val var1: java.lang.String = this.categoryName;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var5.append(var6);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", channelName=");
-      var5.append(var4);
-      var5.append(", guildName=");
-      var5.append(var3);
-      var5.append(", categoryName=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: MobileVoiceOverlaySelectorResult.$serializer = new MobileVoiceOverlaySelectorResult.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor(
-            "com.discord.mobile_voice_overlay.MobileVoiceOverlaySelectorResult", var0, 5
-         );
-         var1.l("guildId", false);
-         var1.l("channelId", false);
-         var1.l("channelName", false);
-         var1.l("guildName", false);
-         var1.l("categoryName", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{GuildId.$serializer.INSTANCE, ChannelId.$serializer.INSTANCE, C0.a, C0.a, C0.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): MobileVoiceOverlaySelectorResult {
-         q.h(var1, "decoder");
-         val var11: SerialDescriptor = this.getDescriptor();
-         val var12: c = var1.c(var11);
-         val var5: Boolean = var12.y();
-         var var9: GuildId = null;
-         var var2: Int;
-         var var6: java.lang.String;
-         var var8: ChannelId;
-         var var13: java.lang.String;
-         var var14: java.lang.String;
-         if (var5) {
-            val var7: GuildId = var12.m(var11, 0, GuildId.$serializer.INSTANCE, null) as GuildId;
-            var8 = var12.m(var11, 1, ChannelId.$serializer.INSTANCE, null) as ChannelId;
-            val var10: java.lang.String = var12.t(var11, 2);
-            var6 = var12.t(var11, 3);
-            var13 = var12.t(var11, 4);
-            var2 = 31;
-            var9 = var7;
-            var14 = var10;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var8 = null;
-            var14 = null;
-            var6 = null;
-            var13 = null;
-
-            while (var3) {
-               val var4: Int = var12.x(var11);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              if (var4 != 4) {
-                                 throw new n(var4);
-                              }
-
-                              var13 = var12.t(var11, 4);
-                              var2 |= 16;
-                           } else {
-                              var6 = var12.t(var11, 3);
-                              var2 |= 8;
-                           }
-                        } else {
-                           var14 = var12.t(var11, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var8 = var12.m(var11, 1, ChannelId.$serializer.INSTANCE, var8) as ChannelId;
-                        var2 |= 2;
-                     }
-                  } else {
-                     var9 = var12.m(var11, 0, GuildId.$serializer.INSTANCE, var9) as GuildId;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var12.b(var11);
-         return new MobileVoiceOverlaySelectorResult(var2, var9, var8, var14, var6, var13, null, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: MobileVoiceOverlaySelectorResult) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         MobileVoiceOverlaySelectorResult.write$Self$mobile_voice_overlay_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var6.append(var5);
+      var6.append(", channelId=");
+      var6.append(var4);
+      var6.append(", channelName=");
+      var6.append(var2);
+      var6.append(", guildName=");
+      var6.append(var3);
+      var6.append(", categoryName=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

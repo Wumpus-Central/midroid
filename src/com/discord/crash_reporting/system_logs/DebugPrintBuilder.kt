@@ -3,8 +3,8 @@ package com.discord.crash_reporting.system_logs
 import kotlin.jvm.internal.q
 
 private class DebugPrintBuilder(sb: StringBuilder) {
-   private final var indentation: Int
    public final val sb: StringBuilder
+   private final var indentation: Int
 
    init {
       q.h(var1, "sb");

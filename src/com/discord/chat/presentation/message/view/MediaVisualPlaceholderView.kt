@@ -64,8 +64,12 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       this.binding.container.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.binding.imageInvalid.setVisibility(8);
       var2 = MediaVisualPlaceholderView.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()];
-      if (var2 != 2) {
-         if (var2 == 3) {
+      if (var2 != 1) {
+         if (var2 != 2) {
+            if (var2 != 3) {
+               throw new g9.n();
+            }
+
             this.binding.imageInvalid.setVisibility(0);
             (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
             this.binding.imageInvalid.clearColorFilter();
@@ -79,16 +83,16 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
             }
 
             ReactAssetUtilsKt.setReactAsset(var11, var6);
+         } else {
+            this.binding.imageInvalid.setVisibility(0);
+            (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.g);
+            val var7: SimpleDraweeView = this.binding.imageInvalid;
+            kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
+            ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getBackgroundAccent());
+            val var8: SimpleDraweeView = this.binding.imageInvalid;
+            kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
+            ReactAssetUtilsKt.setReactAsset(var8, ReactAsset.BrokenImage);
          }
-      } else {
-         this.binding.imageInvalid.setVisibility(0);
-         (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.g);
-         val var7: SimpleDraweeView = this.binding.imageInvalid;
-         kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
-         ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getBackgroundAccent());
-         val var8: SimpleDraweeView = this.binding.imageInvalid;
-         kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
-         ReactAssetUtilsKt.setReactAsset(var8, ReactAsset.BrokenImage);
       }
    }
 
@@ -106,9 +110,9 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
    }
 
    public data class TargetSize(width: Int, height: Int, resizeMode: ResizeMode) {
+      public final val width: Int
       public final val height: Int
       public final val resizeMode: ResizeMode
-      public final val width: Int
 
       init {
          kotlin.jvm.internal.q.h(var3, "resizeMode");
@@ -157,18 +161,18 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var1: Int = this.width;
-         val var2: Int = this.height;
-         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetSize(width=");
-         var3.append(var1);
-         var3.append(", height=");
-         var3.append(var2);
-         var3.append(", resizeMode=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var2: Int = this.width;
+         val var1: Int = this.height;
+         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TargetSize(width=");
+         var4.append(var2);
+         var4.append(", height=");
+         var4.append(var1);
+         var4.append(", resizeMode=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

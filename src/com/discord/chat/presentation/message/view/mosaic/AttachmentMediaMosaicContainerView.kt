@@ -1,5 +1,8 @@
 package com.discord.chat.presentation.message.view.mosaic
 
+import F1.b
+import F1.c
+import F1.d
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -19,10 +22,6 @@ import com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutMa
 import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
-import kotlin.jvm.functions.Function0
-import kotlin.jvm.functions.Function1
-import kotlin.jvm.functions.Function2
-import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q
 
 public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout {
@@ -45,82 +44,62 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       val var4: AttachmentMediaMosaicContainerViewBinding = AttachmentMediaMosaicContainerViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
-      this.mosaicLayoutManager = var3;
-      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new Function2(this) {
-         final AttachmentMediaMosaicContainerView this$0;
-
-         {
-            super(2);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(MessageAttachmentAccessory var1, MessagePartViewHolder var2) {
-            q.h(var1, "item");
-            q.h(var2, "viewHolder");
-            val var3: Function3 = AttachmentMediaMosaicContainerView.access$getOnAttachmentClicked$p(this.this$0);
-            if (var3 != null) {
-               var3.invoke(AttachmentMediaMosaicContainerView.access$getAttachmentIndex(this.this$0, var1), var1, var2);
-            }
-         }
-      }, new Function1(this) {
-         final AttachmentMediaMosaicContainerView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(MessageAttachmentAccessory var1) {
-            q.h(var1, "item");
-            val var2: Function1 = AttachmentMediaMosaicContainerView.access$getOnAttachmentLongClicked$p(this.this$0);
-            if (var2 != null) {
-               var2.invoke(AttachmentMediaMosaicContainerView.access$getAttachmentIndex(this.this$0, var1));
-            }
-         }
-      }, new Function1(this) {
-         final AttachmentMediaMosaicContainerView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(MessageAttachmentAccessory var1) {
-            q.h(var1, "<anonymous parameter 0>");
-            val var2: Function0 = AttachmentMediaMosaicContainerView.access$getOnAttachmentSpoilerClicked$p(this.this$0);
-            if (var2 != null) {
-               var2.invoke();
-            }
-         }
-      }, new Function1(this) {
-         final AttachmentMediaMosaicContainerView this$0;
-
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(boolean var1) {
-            val var2: Function1 = AttachmentMediaMosaicContainerView.access$getOnAttachmentObscureToggle$p(this.this$0);
-            if (var2 != null) {
-               var2.invoke(var1);
-            }
-         }
-      });
-      this.attachmentAdapter = var5;
+      val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
+      this.mosaicLayoutManager = var5;
+      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new F1.a(this), new b(this), new c(this), new d(this));
+      this.attachmentAdapter = var3;
       val var6: RecyclerView = var4.mosaic;
       q.e(var4.mosaic);
       ViewClippingUtilsKt.clipToRoundedRectangle(var6, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var6.setRecycledViewPool(new AccessoriesViewPool());
-      var6.setLayoutManager(var3);
-      var6.setAdapter(var5);
+      var6.setLayoutManager(var5);
+      var6.setAdapter(var3);
+   }
+
+   @JvmStatic
+   fun `attachmentAdapter$lambda$0`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory, var2: MessagePartViewHolder): Unit {
+      q.h(var1, "item");
+      q.h(var2, "viewHolder");
+      if (var0.onAttachmentClicked != null) {
+         var0.onAttachmentClicked.invoke(var0.getAttachmentIndex(var1), var1, var2);
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `attachmentAdapter$lambda$1`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory): Unit {
+      q.h(var1, "item");
+      if (var0.onAttachmentLongClicked != null) {
+         var0.onAttachmentLongClicked.invoke(var0.getAttachmentIndex(var1));
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `attachmentAdapter$lambda$2`(var0: AttachmentMediaMosaicContainerView, var1: MessageAttachmentAccessory): Unit {
+      q.h(var1, "<unused var>");
+      if (var0.onAttachmentSpoilerClicked != null) {
+         var0.onAttachmentSpoilerClicked.invoke();
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `attachmentAdapter$lambda$3`(var0: AttachmentMediaMosaicContainerView, var1: Boolean): Unit {
+      if (var0.onAttachmentObscureToggle != null) {
+         var0.onAttachmentObscureToggle.invoke(var1);
+      }
+
+      return Unit.a;
    }
 
    private fun getAttachmentIndex(item: MessageAttachmentAccessory): Int {
       val var2: Int;
       if (var1 is ImageAttachmentMessageAccessory) {
-         var2 = var1.getAttachmentIndex();
+         var2 = (var1 as ImageAttachmentMessageAccessory).getAttachmentIndex();
       } else {
          if (var1 !is VideoAttachmentMessageAccessory) {
             val var3: StringBuilder = new StringBuilder();

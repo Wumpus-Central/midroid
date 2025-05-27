@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
+import g9.n
 import kotlin.jvm.internal.q
-import o8.p
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
@@ -65,14 +65,14 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
          var var5: Float;
          if (this.config.getCount() > 1) {
-            var2 = var2 - this.config.getCount() * var3;
-            var5 = this.config.getCount() - 1;
+            var5 = var2 - this.config.getCount() * var3;
+            var2 = this.config.getCount() - 1;
          } else {
-            var2 = var2 - var3;
-            var5 = 2;
+            var5 = var2 - var3;
+            var2 = 2;
          }
 
-         val var6: Float = var2 / var5;
+         val var6: Float = var5 / var2;
          val var8: Int = this.config.getCount();
 
          for (int var9 = 0; var9 < var8; var9++) {
@@ -84,24 +84,26 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
 
             var var10: Int = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$1[this.config.getType().ordinal()];
             if (var10 != 1) {
-               if (var10 == 2) {
-                  var10 = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getVerticalAlignment().ordinal()];
-                  if (var10 != 1) {
-                     if (var10 != 2) {
-                        if (var10 != 3) {
-                           throw new p();
-                        }
-
-                        var2 = var7 / 2.0F - var4 / 2.0F;
-                     } else {
-                        var2 = var7 - var4;
-                     }
-                  } else {
-                     var2 = 0.0F;
-                  }
-
-                  var1.drawRoundRect(var5, var2, var5 + var3, var2 + var4, this.config.getBorderRadius(), this.config.getBorderRadius(), this.paint);
+               if (var10 != 2) {
+                  throw new n();
                }
+
+               var10 = FastestListPlaceholderTypeShape.ShapeDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getVerticalAlignment().ordinal()];
+               if (var10 != 1) {
+                  if (var10 != 2) {
+                     if (var10 != 3) {
+                        throw new n();
+                     }
+
+                     var2 = var7 / 2.0F - var4 / 2.0F;
+                  } else {
+                     var2 = var7 - var4;
+                  }
+               } else {
+                  var2 = 0.0F;
+               }
+
+               var1.drawRoundRect(var5, var2, var5 + var3, var2 + var4, this.config.getBorderRadius(), this.config.getBorderRadius(), this.paint);
             } else {
                var1.drawCircle(var5 + var3 / 2.0F, var7 / 2.0F, var3 / 2.0F, this.paint);
             }

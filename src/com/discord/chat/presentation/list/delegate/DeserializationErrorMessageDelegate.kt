@@ -14,7 +14,6 @@ import com.discord.chat.presentation.list.item.DeserializationErrorMessageItem
 import com.discord.chat.presentation.message.ErrorMessageView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> ChatEventHandler)
@@ -22,6 +21,37 @@ public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> Cha
    init {
       q.h(var1, "eventHandlerProvider");
       super(var1, null, 2, null);
+   }
+
+   @JvmStatic
+   fun `bindView$lambda$1`(var0: BaseChatListItemDelegate.Metadata, var1: DeserializationErrorMessageItem, var2: Boolean): Unit {
+      val var5: RecyclerView.Adapter = var0.getHolder().getBindingAdapter();
+      q.f(var5, "null cannot be cast to non-null type com.discord.chat.presentation.list.BaseChatListAdapter");
+      val var13: BaseChatListAdapter = var5 as BaseChatListAdapter;
+      val var4: Int = var0.getHolder().getBindingAdapterPosition();
+      var1 = new DeserializationErrorMessageItem(var1.getMessage(), var2);
+      var var8: Any = var13.getItems();
+      q.g(var8, "getItems(...)");
+      val var6: ArrayList = new ArrayList(i.v(var8 as java.lang.Iterable, 10));
+      val var7: java.util.Iterator = (var8 as java.lang.Iterable).iterator();
+
+      for (int var3 = 0; var7.hasNext(); var3++) {
+         var8 = var7.next();
+         if (var3 < 0) {
+            i.u();
+         }
+
+         var8 = var8 as ChatListItem;
+         if (var3 == var4) {
+            var8 = var1;
+         }
+
+         var6.add(var8);
+      }
+
+      var13.setItems(var6);
+      var13.notifyItemChanged(var4);
+      return Unit.a;
    }
 
    @SuppressLint(["SetTextI18n"])
@@ -33,45 +63,7 @@ public class DeserializationErrorMessageDelegate(eventHandlerProvider: () -> Cha
       q.f(var4, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
       (var4 as MarginLayoutParams).setMargins(SizeUtilsKt.getDpToPx(16), 0, SizeUtilsKt.getDpToPx(16), 0);
       var1.setErrorMessage(var2.getMessage());
-      var1.setExpandInfo(var2.isExpanded(), new Function1(var3, var2) {
-         final DeserializationErrorMessageItem $item;
-         final BaseChatListItemDelegate.Metadata<ErrorMessageView> $metadata;
-
-         {
-            super(1);
-            this.$metadata = var1;
-            this.$item = var2;
-         }
-
-         public final void invoke(boolean var1) {
-            var var4: RecyclerView.Adapter = this.$metadata.getHolder().getBindingAdapter();
-            q.f(var4, "null cannot be cast to non-null type com.discord.chat.presentation.list.BaseChatListAdapter");
-            val var6: BaseChatListAdapter = var4 as BaseChatListAdapter;
-            val var3: Int = this.$metadata.getHolder().getBindingAdapterPosition();
-            val var5: DeserializationErrorMessageItem = new DeserializationErrorMessageItem(this.$item.getMessage(), var1);
-            var4 = (RecyclerView.Adapter)var6.getItems();
-            q.g(var4, "getItems(...)");
-            val var7: ArrayList = new ArrayList(i.v(var4 as java.lang.Iterable, 10));
-            val var8: java.util.Iterator = (var4 as java.lang.Iterable).iterator();
-
-            for (int var2 = 0; var8.hasNext(); var2++) {
-               var4 = (RecyclerView.Adapter)var8.next();
-               if (var2 < 0) {
-                  i.u();
-               }
-
-               var4 = var4 as ChatListItem;
-               if (var2 == var3) {
-                  var4 = var5;
-               }
-
-               var7.add(var4);
-            }
-
-            var6.setItems(var7);
-            var6.notifyItemChanged(var3);
-         }
-      });
+      var1.setExpandInfo(var2.isExpanded(), new c(var3, var2));
    }
 
    public open fun createView(parent: ViewGroup): ErrorMessageView {

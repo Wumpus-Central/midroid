@@ -6,7 +6,7 @@ import com.facebook.react.views.text.internal.span.CustomLineHeightSpan
 internal object CustomLineHeightSpanOverride {
    @JvmStatic
    fun `override$lambda$0`(var0: Array<Any>) {
-      kotlin.jvm.internal.q.h(var0, "<name for destructuring parameter 0>");
+      kotlin.jvm.internal.q.h(var0, "<destruct>");
       var var1: Any = var0[0];
       val var2: Any = var0[1];
       val var3: CustomLineHeightSpanOverride = INSTANCE;
@@ -25,14 +25,14 @@ internal object CustomLineHeightSpanOverride {
          var1.ascent = var1.top;
          var1.descent = var2;
       } else {
-         val var11: Int = var1.descent - var1.ascent;
+         var var9: Int = var1.descent - var1.ascent;
          if (var1.descent - var1.ascent <= 0) {
             return;
          }
 
-         val var10: Int = E8.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var11));
-         var1.descent = var10;
-         var1.ascent = var10 - var2;
+         var9 = w9.a.c((float)var1.descent * ((float)var2 * 0.75F / (float)var9));
+         var1.descent = var9;
+         var1.ascent = var9 - var2;
       }
    }
 

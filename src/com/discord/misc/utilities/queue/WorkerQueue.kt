@@ -4,9 +4,9 @@ import java.util.LinkedHashSet
 import kotlin.jvm.internal.q
 
 public class WorkerQueue<T>(popFromEnd: Boolean = true) {
-   private final var currWorker: Any?
-   private final val nextWorkers: LinkedHashSet<Any>
    private final val popFromEnd: Boolean
+   private final val nextWorkers: LinkedHashSet<Any>
+   private final var currWorker: Any?
 
    fun WorkerQueue() {
       this(false, 1, null);

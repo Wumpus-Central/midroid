@@ -3,13 +3,10 @@ package com.discord.bundle_updater;
 import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class b implements Runnable {
-   public final int j;
-   public final BundleUpdater k;
-   public final Function0 l;
+public final class b implements Function0 {
+   public final BundleUpdater j;
 
-   @Override
-   public final void run() {
-      BundleUpdater.a(this.j, this.k, this.l);
+   public final Object invoke() {
+      return BundleUpdater.b(this.j);
    }
 }

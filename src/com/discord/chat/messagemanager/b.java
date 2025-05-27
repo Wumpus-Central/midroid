@@ -1,15 +1,11 @@
 package com.discord.chat.messagemanager;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.discord.chat.presentation.list.messagebundling.MessageBundleView;
+import kotlin.jvm.functions.Function1;
+import kotlinx.serialization.json.JsonBuilder;
 
 // $VF: synthetic class
-public final class b implements OnLongClickListener {
-   public final MessageViewManagers.MessageBundleViewManager j;
-   public final MessageBundleView k;
-
-   public final boolean onLongClick(View var1) {
-      return MessageViewManagers.MessageBundleViewManager.a(this.j, this.k, var1);
+public final class b implements Function1 {
+   public final Object invoke(Object var1) {
+      return MessageViewManagers.b((JsonBuilder)var1);
    }
 }

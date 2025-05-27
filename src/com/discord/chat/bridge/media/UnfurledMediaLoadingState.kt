@@ -1,14 +1,12 @@
 package com.discord.chat.bridge.media
 
+import Za.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
+import o9.a
 
 @f(with = UnfurledMediaLoadingState.Serializer::class)
 public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
@@ -21,8 +19,6 @@ public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
    private EnumEntries $ENTRIES;
    @JvmStatic
    private UnfurledMediaLoadingState[] $VALUES;
-   @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
    @JvmStatic
    public UnfurledMediaLoadingState.Companion Companion = new UnfurledMediaLoadingState.Companion(null);
 
@@ -44,7 +40,7 @@ public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<UnfurledMediaLoadingState> {
-         return this.get$cachedSerializer();
+         return UnfurledMediaLoadingState.Serializer.INSTANCE;
       }
    }
 

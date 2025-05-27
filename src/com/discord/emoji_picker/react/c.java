@@ -1,0 +1,15 @@
+package com.discord.emoji_picker.react;
+
+import android.view.View;
+import com.facebook.react.uimanager.ThemedReactContext;
+import kotlin.jvm.functions.Function3;
+
+// $VF: synthetic class
+public final class c implements Function3 {
+   public final EmojiPickerViewManager j;
+   public final ThemedReactContext k;
+
+   public final Object invoke(Object var1, Object var2, Object var3) {
+      return EmojiPickerViewManager.e(this.j, this.k, (View)var1, (Long)var2, (String)var3);
+   }
+}

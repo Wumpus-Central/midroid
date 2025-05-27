@@ -1,17 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import ha.f
-import ja.g
-import ja.e.i
+import Za.f
+import bb.g
+import bb.e.i
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = StaticChannelMentionType.Serializer::class)
 public enum class StaticChannelMentionType(id: String) {
@@ -27,15 +24,13 @@ public enum class StaticChannelMentionType(id: String) {
    @JvmStatic
    private StaticChannelMentionType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
-   @JvmStatic
    public StaticChannelMentionType.Companion Companion = new StaticChannelMentionType.Companion(null);
 
    @JvmStatic
    fun {
       val var0: Array<StaticChannelMentionType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    init {
@@ -78,7 +73,7 @@ public enum class StaticChannelMentionType(id: String) {
       }
 
       public fun serializer(): KSerializer<StaticChannelMentionType> {
-         return this.get$cachedSerializer();
+         return StaticChannelMentionType.Serializer.INSTANCE;
       }
    }
 

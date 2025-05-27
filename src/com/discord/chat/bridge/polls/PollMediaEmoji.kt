@@ -1,26 +1,16 @@
 package com.discord.chat.bridge.polls
 
+import Za.f
 import com.discord.emoji.RenderableEmoji
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
-   public final val animated: Boolean
-   public final val displayName: String?
    public final val id: String?
    public final val name: String
+   public final val displayName: String?
+   public final val animated: Boolean
 
    init {
       q.h(var2, "name");
@@ -92,13 +82,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = h.o(this.id);
          if (var7 != null) {
-            val var1: Long = var7.longValue();
+            val var2: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -111,115 +101,19 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    public override fun toString(): String {
       val var2: java.lang.String = this.id;
       val var3: java.lang.String = this.name;
-      val var5: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMediaEmoji(id=");
-      var4.append(var2);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", displayName=");
-      var4.append(var5);
-      var4.append(", animated=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: PollMediaEmoji.$serializer = new PollMediaEmoji.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.polls.PollMediaEmoji", var0, 4);
-         var1.l("id", false);
-         var1.l("name", false);
-         var1.l("displayName", true);
-         var1.l("animated", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var1: C0 = C0.a;
-         return new KSerializer[]{a.u(C0.a), var1, a.u(var1), ka.h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): PollMediaEmoji {
-         q.h(var1, "decoder");
-         val var8: SerialDescriptor = this.getDescriptor();
-         val var9: c = var1.c(var8);
-         var var2: Int;
-         var var5: Boolean;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var11: java.lang.String;
-         if (var9.y()) {
-            val var10: C0 = C0.a;
-            var7 = var9.v(var8, 0, C0.a, null) as java.lang.String;
-            var6 = var9.t(var8, 1);
-            var11 = var9.v(var8, 2, var10, null) as java.lang.String;
-            var5 = var9.s(var8, 3);
-            var2 = 15;
-         } else {
-            var var3: Boolean = true;
-            var5 = false;
-            var7 = null;
-            var6 = null;
-            var11 = null;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var9.x(var8);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              throw new n(var4);
-                           }
-
-                           var5 = var9.s(var8, 3);
-                           var2 |= 8;
-                        } else {
-                           var11 = var9.v(var8, 2, C0.a, var11) as java.lang.String;
-                           var2 |= 4;
-                        }
-                     } else {
-                        var6 = var9.t(var8, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var7 = var9.v(var8, 0, C0.a, var7) as java.lang.String;
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var9.b(var8);
-         return new PollMediaEmoji(var2, var7, var6, var11, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: PollMediaEmoji) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         PollMediaEmoji.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMediaEmoji(id=");
+      var5.append(var2);
+      var5.append(", name=");
+      var5.append(var3);
+      var5.append(", displayName=");
+      var5.append(var4);
+      var5.append(", animated=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

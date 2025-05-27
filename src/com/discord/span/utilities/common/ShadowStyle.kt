@@ -5,8 +5,8 @@ import kotlin.jvm.internal.q
 
 public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
    public final val color: Int
-   public final val offset: SizeF
    public final val radius: Float
+   public final val offset: SizeF
 
    init {
       q.h(var3, "offset");

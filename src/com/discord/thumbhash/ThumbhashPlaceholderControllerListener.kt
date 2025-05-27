@@ -1,7 +1,7 @@
 package com.discord.thumbhash
 
-import X9.K
-import X9.f
+import Pa.K
+import Pa.f
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -16,13 +16,12 @@ import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import o8.s
-import v8.b
+import n9.b
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {
-   private final val background: Drawable
    private final val draweeView: SimpleDraweeView
+   private final val background: Drawable
    private final val placeholder: String?
    private final val placeholderVersion: Int?
 
@@ -79,12 +78,12 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      }
 
                      var3x = this.L$0 as CoroutineScope;
-                     s.b(var1);
+                     c.b(var1);
                   } else {
-                     s.b(var1);
+                     c.b(var1);
                      var3x = this.L$0 as CoroutineScope;
-                     var1 = K.a();
-                     val var5: Function2 = new Function2(this.this$0, null) {
+                     val var5: CoroutineDispatcher = K.a();
+                     var1 = new Function2(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -104,7 +103,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                         public final Object invokeSuspend(Object var1) {
                            b.e();
                            if (this.label == 0) {
-                              s.b(var1);
+                              c.b(var1);
                               return ThumbhashUtils.thumbHashToRGBA(
                                  Base64.decode(ThumbhashPlaceholderControllerListener.access$getPlaceholder$p(this.this$0), 0)
                               );
@@ -115,7 +114,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      };
                      this.L$0 = var3x;
                      this.label = 1;
-                     var1 = (CoroutineDispatcher)f.g(var1, var5, this);
+                     var1 = (Function2)f.g(var5, var1, this);
                      if (var1 === var4) {
                         return var4;
                      }

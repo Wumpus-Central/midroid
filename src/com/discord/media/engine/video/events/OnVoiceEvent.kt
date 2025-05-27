@@ -1,21 +1,9 @@
 package com.discord.media.engine.video.events
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.F
-import ka.G
-import ka.N
-import ka.G.a
-import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class OnVoiceEvent(level: Float, speaking: Int) : ReactEvent {
@@ -72,82 +60,6 @@ internal data class OnVoiceEvent(level: Float, speaking: Int) : ReactEvent {
       var3.append(var2);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: OnVoiceEvent.$serializer = new OnVoiceEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.media.engine.video.events.OnVoiceEvent", var0, 2);
-         var1.l("level", false);
-         var1.l("speaking", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{F.a, N.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): OnVoiceEvent {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Float;
-         var var3: Int;
-         var var4: Int;
-         if (var8.y()) {
-            var2 = var8.G(var7, 0);
-            var4 = var8.k(var7, 1);
-            var3 = 3;
-         } else {
-            var2 = 0.0F;
-            var var5: Boolean = true;
-            var4 = 0;
-            var3 = 0;
-
-            while (var5) {
-               val var6: Int = var8.x(var7);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        throw new n(var6);
-                     }
-
-                     var4 = var8.k(var7, 1);
-                     var3 |= 2;
-                  } else {
-                     var2 = var8.G(var7, 0);
-                     var3 |= 1;
-                  }
-               } else {
-                  var5 = false;
-               }
-            }
-         }
-
-         var8.b(var7);
-         return new OnVoiceEvent(var3, var2, var4, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: OnVoiceEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         OnVoiceEvent.write$Self$media_engine_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

@@ -40,7 +40,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       this.binding = var4;
       val var3: BlurView = var4.blurView;
       kotlin.jvm.internal.q.g(var4.blurView, "blurView");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new P(), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new H0(), 1, null);
       val var5: SimpleDraweeView = var4.mediaWarningIcon;
       kotlin.jvm.internal.q.e(var4.mediaWarningIcon);
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.MediaChannelNSFW);
@@ -54,6 +54,13 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: View) {
+   }
+
+   @JvmStatic
+   fun `configure$lambda$2`(var0: Function0, var1: ObscureOverlayView): Unit {
+      var0.invoke();
+      var1.binding.revealButton.requestFocus();
+      return Unit.a;
    }
 
    private fun handleRevealedState(isOverlayVisible: Boolean) {
@@ -82,21 +89,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       kotlin.jvm.internal.q.h(var5, "onHide");
       this.handleRevealedState(var3);
       this.binding.blurView.setupWith(var2).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var2.getBackground()).a(true);
-      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new Function0(var5, this) {
-         final Function0 $onHide;
-         final ObscureOverlayView this$0;
-
-         {
-            super(0);
-            this.$onHide = var1;
-            this.this$0 = var2;
-         }
-
-         public final void invoke() {
-            this.$onHide.invoke();
-            ObscureOverlayView.access$getBinding$p(this.this$0).revealButton.requestFocus();
-         }
-      });
+      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var5, this));
       this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var4);
       this.binding.descriptionLabel.setText(var1);
    }

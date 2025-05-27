@@ -10,9 +10,9 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    index: Int,
    spoilerAttributes: SpoilerAttributes? = ...
 ) : PostPreviewEmbedMessageAccessory(var1, var2, var3, var4) {
-   public final val index: Int
    public open val messageId: MessageId
    public final val postPreviewEmbed: PostPreviewEmbed
+   public final val index: Int
    public final val spoilerAttributes: SpoilerAttributes?
 
    fun PostPreviewEmbedMessageAccessory(var1: java.lang.String, var2: PostPreviewEmbed, var3: Int, var4: SpoilerAttributes) {
@@ -84,20 +84,20 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var5: PostPreviewEmbed = this.postPreviewEmbed;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: PostPreviewEmbed = this.postPreviewEmbed;
       val var1: Int = this.index;
-      val var4: SpoilerAttributes = this.spoilerAttributes;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PostPreviewEmbedMessageAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", postPreviewEmbed=");
-      var2.append(var5);
-      var2.append(", index=");
-      var2.append(var1);
-      var2.append(", spoilerAttributes=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var5: SpoilerAttributes = this.spoilerAttributes;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PostPreviewEmbedMessageAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", postPreviewEmbed=");
+      var3.append(var2);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", spoilerAttributes=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 }

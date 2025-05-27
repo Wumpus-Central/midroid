@@ -6,6 +6,8 @@ import android.content.SharedPreferences.Editor
 import kotlin.jvm.internal.q
 
 public object Hosts {
+   private final lateinit var prefs: SharedPreferences
+
    public final var API: String
       public final get() {
          return this.requireHost("host_api");
@@ -25,8 +27,6 @@ public object Hosts {
          this.setHost("host_cdn", var1);
       }
 
-
-   private final lateinit var prefs: SharedPreferences
 
    private fun requireHost(key: String): String {
       var var2: SharedPreferences = prefs;
@@ -62,9 +62,7 @@ public object Hosts {
    public fun init(context: Context, api: String? = null, cdn: String? = null) {
       q.h(var1, "context");
       if (prefs == null) {
-         val var4: SharedPreferences = var1.getSharedPreferences("discord_hosts", 0);
-         q.g(var4, "getSharedPreferences(...)");
-         prefs = var4;
+         prefs = var1.getSharedPreferences("discord_hosts", 0);
       }
 
       if (var2 != null) {

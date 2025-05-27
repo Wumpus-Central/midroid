@@ -7,8 +7,8 @@ import java.util.HashMap
 import kotlin.jvm.internal.q
 
 public object PortalFromJsContextManager {
-   private final val portalContexts: MutableMap<String, WeakReference<PortalFromJsContext>> = new HashMap()
    private final val portals: MutableMap<String, View> = new HashMap()
+   private final val portalContexts: MutableMap<String, WeakReference<PortalFromJsContext>> = new HashMap()
 
    private fun MutableMap<String, View>.addToContext(portalId: String) {
       val var3: WeakReference = portalContexts.get(var2);

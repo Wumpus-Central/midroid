@@ -3,7 +3,6 @@ package com.discord.chat.input.views
 import android.content.Context
 import com.discord.misc.utilities.measure.HeadlessViewMeasurer
 import com.discord.misc.utilities.measure.HeadlessViewMeasurerExtensionsKt
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, onHeightChanged: (Int) -> Unit) {
@@ -30,19 +29,17 @@ internal class ChatInputRootViewMeasurer(chatInputRootView: ChatInputRootView, o
    private fun ChatInputRootView.measureHeight(): Int {
       val var2: Context = var1.getContext();
       q.g(var2, "getContext(...)");
-      return HeadlessViewMeasurerExtensionsKt.measureHeadlessView(var2, ChatInputRootView.class, new Function1(this) {
-         final ChatInputRootViewMeasurer this$0;
+      return HeadlessViewMeasurerExtensionsKt.measureHeadlessView(
+            var2, ChatInputRootView.class, new h(this), new HeadlessViewMeasurer.MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)
+         )
+         .getHeight();
+   }
 
-         {
-            super(1);
-            this.this$0 = var1;
-         }
-
-         public final void invoke(ChatInputRootView var1) {
-            q.h(var1, "it");
-            var1.setText(ChatInputRootViewMeasurer.access$getChatInputRootView$p(this.this$0).getText());
-         }
-      }, new HeadlessViewMeasurer.MeasureBounds(this.chatInputRootView.getWidth(), null, 2, null)).getHeight();
+   @JvmStatic
+   fun `measureHeight$lambda$0`(var0: ChatInputRootViewMeasurer, var1: ChatInputRootView): Unit {
+      q.h(var1, "it");
+      var1.setText(var0.chatInputRootView.getText());
+      return Unit.a;
    }
 
    public fun measure(measureWhenInitialized: Boolean) {

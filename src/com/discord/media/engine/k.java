@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
-import com.discord.native.engine.NativeEngine;
-import kotlin.jvm.functions.Function2;
+import com.discord.native.engine.NativeConnection;
+import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
-public final class k implements NativeEngine.MLSSigningKeyCallback {
-   public final Function2 a;
+public final class k implements NativeConnection.OnVideoCallback {
+   public final Function4 a;
 
    @Override
-   public final void onMLSSigningKey(String var1, String var2) {
-      MediaEngine.p(this.a, var1, var2);
+   public final void onVideo(String var1, long var2, String var4, String var5) {
+      MediaEngine.d(this.a, var1, var2, var4, var5);
    }
 }

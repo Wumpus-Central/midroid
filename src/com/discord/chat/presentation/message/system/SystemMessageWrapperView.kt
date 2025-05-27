@@ -18,13 +18,12 @@ import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.message.decorations.BackgroundHighlightDrawer
 import com.discord.chat.presentation.message.decorations.HighlightedMessageDrawer
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class SystemMessageWrapperView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DecoratedMessageViewBinding
-   private final var drawHighlight: Boolean
    private final val highlightDrawer: BackgroundHighlightDrawer
+   private final var drawHighlight: Boolean
 
    fun SystemMessageWrapperView(var1: Context) {
       q.h(var1, "context");
@@ -41,6 +40,11 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
       this.setWillNotDraw(false);
    }
 
+   @JvmStatic
+   fun `setMessage$lambda$0`(var0: ChatEventHandler): ChatEventHandler {
+      return var0;
+   }
+
    protected open fun onDraw(canvas: Canvas) {
       q.h(var1, "canvas");
       super.onDraw(var1);
@@ -53,30 +57,17 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
       q.h(var1, "message");
       q.h(var2, "messageContext");
       q.h(var3, "eventHandler");
-      val var4: MessageView = this.binding.messageView;
-      q.g(this.binding.messageView, "messageView");
-      MessageView.setMessage$default(var4, var1, var2, null, var3, null, null, false, false, 244, null);
-      val var6: Function0 = new Function0(var3) {
-         final ChatEventHandler $eventHandler;
-
-         {
-            super(0);
-            this.$eventHandler = var1;
-         }
-
-         public final ChatEventHandler invoke() {
-            return this.$eventHandler;
-         }
-      };
+      MessageView.setMessage$default(this.binding.messageView, var1, var2, null, var3, null, null, false, false, 244, null);
+      val var5: h = new h(var3);
       this.removeAllViews();
-      val var7: Any;
+      val var6: Any;
       if (MessageKt.isCallMessage(var1)) {
-         var7 = new CallSystemMessageDelegate(var6).createAndBindStandaloneView(this, var1);
+         var6 = new CallSystemMessageDelegate(var5).createAndBindStandaloneView(this, var1);
       } else {
-         var7 = new SystemMessageDelegate(var6, new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2);
+         var6 = new SystemMessageDelegate(var5, new RecyclerView.RecycledViewPool()).createAndBindStandaloneView(this, var1, var2);
       }
 
-      this.addView((View)var7, -1, -2);
+      this.addView((View)var6, -1, -2);
       this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, null, var2, false, null, null, false, 122, null)) as java.lang.Boolean;
    }
 }

@@ -4,8 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.core.view.g0
-import kotlin.jvm.functions.Function1
+import androidx.core.view.h0
 import kotlin.jvm.internal.q
 
 public abstract class APNGImageView : FrameLayout {
@@ -30,6 +29,16 @@ public abstract class APNGImageView : FrameLayout {
       super(var1, var2, var3);
    }
 
+   @JvmStatic
+   fun `inflateApngView$lambda$0`(var0: APNGImageView, var1: java.lang.String): Unit {
+      q.h(var1, "url");
+      if (var0.eventHandler != null) {
+         var0.eventHandler.onImageLoaded(var1);
+      }
+
+      return Unit.a;
+   }
+
    public fun inflateApngView(showLoading: Boolean = true) {
       if (this.apngView == null) {
          val var2: Context = this.getContext();
@@ -37,22 +46,7 @@ public abstract class APNGImageView : FrameLayout {
          this.setApngView(new APNGView(var2));
          this.getApngView().recycle(false, var1);
          this.getApngView().setId(View.generateViewId());
-         this.getApngView().setOnImageLoaded(new Function1(this) {
-            final APNGImageView this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(java.lang.String var1) {
-               q.h(var1, "url");
-               val var2: APNGImageView.APNGImageViewEventHandler = this.this$0.getEventHandler();
-               if (var2 != null) {
-                  var2.onImageLoaded(var1);
-               }
-            }
-         });
+         this.getApngView().setOnImageLoaded(new a(this));
          this.addView(this.getApngView());
       }
    }
@@ -90,10 +84,10 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
-      for (View var6 : g0.a(this)) {
-         val var4: Boolean = q.c(var6, var1);
+      for (View var5 : h0.a(this)) {
+         val var4: Boolean = q.c(var5, var1);
          if (!var4) {
-            this.recycleChild(var6, var2);
+            this.recycleChild(var5, var2);
          }
 
          val var3: Byte;
@@ -103,7 +97,7 @@ public abstract class APNGImageView : FrameLayout {
             var3 = 8;
          }
 
-         var6.setVisibility(var3);
+         var5.setVisibility(var3);
       }
    }
 

@@ -12,6 +12,17 @@ import com.google.android.exoplayer2.ui.PlayerView
 import kotlin.jvm.internal.q
 
 public class MediaPlayerView(context: Context) {
+   public final var view: View
+      internal set
+
+   private final val playerView: PlayerView
+      private final get() {
+         val var1: View = this.view;
+         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
+         return var1 as PlayerView;
+      }
+
+
    public final var isVisible: Boolean
       public final get() {
          val var1: Boolean;
@@ -46,17 +57,6 @@ public class MediaPlayerView(context: Context) {
       }
 
 
-   private final val playerView: PlayerView
-      private final get() {
-         val var1: View = this.view;
-         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
-         return var1 as PlayerView;
-      }
-
-
-   public final var view: View
-      internal set
-
    init {
       q.h(var1, "context");
       super();
@@ -72,11 +72,11 @@ public class MediaPlayerView(context: Context) {
       val var2: View = this.getPlayerView().getVideoSurfaceView();
       if (var2 is SurfaceView) {
          if (var1 != null) {
-            var1.u(var2 as SurfaceView);
+            var1.v(var2 as SurfaceView);
          }
       } else if (var2 is TextureView) {
          if (var1 != null) {
-            var1.X(var2 as TextureView);
+            var1.Y(var2 as TextureView);
          }
       } else if (var2 != null) {
          val var3: java.lang.String;
@@ -98,6 +98,8 @@ public class MediaPlayerView(context: Context) {
    }
 
    public class ControlView(context: Context) {
+      private final var playerControlView: PlayerControlView
+
       internal final var player: Player?
          internal final get() {
             return this.playerControlView.getPlayer();
@@ -107,8 +109,6 @@ public class MediaPlayerView(context: Context) {
             this.playerControlView.setPlayer(var1);
          }
 
-
-      private final var playerControlView: PlayerControlView
 
       init {
          q.h(var1, "context");

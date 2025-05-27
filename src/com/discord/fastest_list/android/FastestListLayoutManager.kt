@@ -7,6 +7,19 @@ import com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhe
 import kotlin.jvm.internal.q
 
 internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false) : LinearLayoutManager {
+   public final var renderAhead: RenderAhead
+      internal set
+
+   public final var scrollingForward: Boolean
+      internal set
+
+   public final var horizontal: Boolean
+      internal final set(value) {
+         this.horizontal = var1;
+         this.setOrientation(FastestListLayoutManager.Companion.access$getOrientation(Companion, var1));
+      }
+
+
    public final val extraLayoutSpace: Int
       public final get() {
          val var1: Float;
@@ -22,19 +35,6 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
          return (int)(var1 * var2);
       }
 
-
-   public final var horizontal: Boolean
-      internal final set(value) {
-         this.horizontal = var1;
-         this.setOrientation(FastestListLayoutManager.Companion.access$getOrientation(Companion, var1));
-      }
-
-
-   public final var renderAhead: RenderAhead
-      internal set
-
-   public final var scrollingForward: Boolean
-      internal set
 
    init {
       q.h(var1, "renderAhead");
@@ -56,8 +56,8 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
    }
 
    public companion object {
-      private const val EXTRA_LAYOUT_SPACE_END: Int
       private const val EXTRA_LAYOUT_SPACE_START: Int
+      private const val EXTRA_LAYOUT_SPACE_END: Int
 
       private fun getOrientation(horizontal: Boolean): Int {
          return var1 xor 1;

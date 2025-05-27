@@ -7,10 +7,10 @@ import kotlin.jvm.internal.q
 public data class AppMessageEmbedAccessory(messageId: MessageId, codedLinkIndex: Int, appMessageEmbed: AppMessageEmbedImpl, constrainedWidth: Int) : AppMessageEmbedAccessory(
       var1, var2, var3, var4
    ) {
-   public final val appMessageEmbed: AppMessageEmbedImpl
-   public final val codedLinkIndex: Int
-   public final val constrainedWidth: Int
    public open val messageId: MessageId
+   public final val codedLinkIndex: Int
+   public final val appMessageEmbed: AppMessageEmbedImpl
+   public final val constrainedWidth: Int
 
    fun AppMessageEmbedAccessory(var1: java.lang.String, var2: Int, var3: AppMessageEmbedImpl, var4: Int) {
       q.h(var1, "messageId");
@@ -73,19 +73,19 @@ public data class AppMessageEmbedAccessory(messageId: MessageId, codedLinkIndex:
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Int = this.codedLinkIndex;
-      val var4: AppMessageEmbedImpl = this.appMessageEmbed;
-      val var1: Int = this.constrainedWidth;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("AppMessageEmbedAccessory(messageId=");
-      var5.append(var3);
-      var5.append(", codedLinkIndex=");
-      var5.append(var2);
-      var5.append(", appMessageEmbed=");
-      var5.append(var4);
-      var5.append(", constrainedWidth=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var1: Int = this.codedLinkIndex;
+      val var5: AppMessageEmbedImpl = this.appMessageEmbed;
+      val var2: Int = this.constrainedWidth;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AppMessageEmbedAccessory(messageId=");
+      var4.append(var3);
+      var4.append(", codedLinkIndex=");
+      var4.append(var1);
+      var4.append(", appMessageEmbed=");
+      var4.append(var5);
+      var4.append(", constrainedWidth=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

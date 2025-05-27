@@ -1,16 +1,14 @@
 package com.discord.chat.presentation.message.viewholder;
 
-import android.view.View;
-import android.view.View.OnLongClickListener;
-import com.discord.chat.bridge.sticker.Sticker;
-import kotlin.jvm.functions.Function1;
+import com.discord.chat.presentation.events.ChatEventHandler;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class v implements OnLongClickListener {
-   public final Function1 j;
-   public final Sticker k;
+public final class v implements Function2 {
+   public final ChatEventHandler j;
+   public final String k;
 
-   public final boolean onLongClick(View var1) {
-      return StickerGifViewHolder.b(this.j, this.k, var1);
+   public final Object invoke(Object var1, Object var2) {
+      return MessageComponentsViewHolder.f(this.j, this.k, (String)var1, (String)var2);
    }
 }

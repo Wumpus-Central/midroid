@@ -1,6 +1,5 @@
 package com.discord.security_key
 
-import X9.f
 import android.app.Activity
 import android.content.Intent
 import android.os.Build.VERSION
@@ -17,10 +16,10 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val activityEventListener: <unrepresentable>
-   private final val credentialManager: CredentialManager
    private final var currentPromise: Promise?
    private final val webauthn: WebAuthn
+   private final val credentialManager: CredentialManager
+   private final val activityEventListener: <unrepresentable>
 
    init {
       q.h(var1, "reactContext");
@@ -44,10 +43,10 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var2: CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      this.credentialManager = var2.a(var1);
+      val var3: CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -100,7 +99,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         f.d(
+         Pa.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -158,7 +157,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         f.d(
+         Pa.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,

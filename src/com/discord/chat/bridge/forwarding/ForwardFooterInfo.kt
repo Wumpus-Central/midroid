@@ -1,25 +1,15 @@
 package com.discord.chat.bridge.forwarding
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
+   public final val timestampLabel: String
+   public final val originLabel: String
    public final val accessibilityLabel: String
    public final val originIconUrl: String?
-   public final val originLabel: String
-   public final val timestampLabel: String
 
    init {
       q.h(var1, "timestampLabel");
@@ -94,115 +84,21 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.timestampLabel;
-      val var4: java.lang.String = this.originLabel;
-      val var2: java.lang.String = this.accessibilityLabel;
-      val var5: java.lang.String = this.originIconUrl;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForwardFooterInfo(timestampLabel=");
-      var3.append(var1);
-      var3.append(", originLabel=");
-      var3.append(var4);
-      var3.append(", accessibilityLabel=");
-      var3.append(var2);
-      var3.append(", originIconUrl=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: ForwardFooterInfo.$serializer = new ForwardFooterInfo.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.forwarding.ForwardFooterInfo", var0, 4);
-         var1.l("timestampLabel", false);
-         var1.l("originLabel", false);
-         var1.l("accessibilityLabel", false);
-         var1.l("originIconUrl", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, C0.a, a.u(C0.a)};
-      }
-
-      public open fun deserialize(decoder: Decoder): ForwardFooterInfo {
-         q.h(var1, "decoder");
-         val var9: SerialDescriptor = this.getDescriptor();
-         val var10: c = var1.c(var9);
-         val var5: Boolean = var10.y();
-         var var8: java.lang.String = null;
-         var var2: Int;
-         var var6: java.lang.String;
-         var var7: java.lang.String;
-         var var11: java.lang.String;
-         if (var5) {
-            var8 = var10.t(var9, 0);
-            var7 = var10.t(var9, 1);
-            var6 = var10.t(var9, 2);
-            var11 = var10.v(var9, 3, C0.a, null) as java.lang.String;
-            var2 = 15;
-         } else {
-            var var3: Boolean = true;
-            var2 = 0;
-            var7 = null;
-            var6 = null;
-            var11 = null;
-
-            while (var3) {
-               val var4: Int = var10.x(var9);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           if (var4 != 3) {
-                              throw new n(var4);
-                           }
-
-                           var11 = var10.v(var9, 3, C0.a, var11) as java.lang.String;
-                           var2 |= 8;
-                        } else {
-                           var6 = var10.t(var9, 2);
-                           var2 |= 4;
-                        }
-                     } else {
-                        var7 = var10.t(var9, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var8 = var10.t(var9, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var10.b(var9);
-         return new ForwardFooterInfo(var2, var8, var7, var6, var11, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: ForwardFooterInfo) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         ForwardFooterInfo.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var3: java.lang.String = this.timestampLabel;
+      val var5: java.lang.String = this.originLabel;
+      val var1: java.lang.String = this.accessibilityLabel;
+      val var4: java.lang.String = this.originIconUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ForwardFooterInfo(timestampLabel=");
+      var2.append(var3);
+      var2.append(", originLabel=");
+      var2.append(var5);
+      var2.append(", accessibilityLabel=");
+      var2.append(var1);
+      var2.append(", originIconUrl=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

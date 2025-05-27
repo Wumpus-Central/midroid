@@ -10,7 +10,6 @@ import android.view.ViewGroup.LayoutParams
 import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.a0
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.bridge.spoiler.SpoilerConfig
@@ -29,7 +28,6 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAsset
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.functions.Function0
 
 public class MediaVideoView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout, MosaicView {
    private final lateinit var targetSize: com.discord.chat.presentation.message.view.MediaVideoView.TargetSize
@@ -59,6 +57,18 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
+   }
+
+   @JvmStatic
+   fun `setContent_w__JTRs$lambda$1`(var0: Boolean, var1: MediaVideoView): Unit {
+      if (var0) {
+         val var2: SpoilerView = var1.spoilerViewManager.getSpoilerView();
+         if (var2 != null) {
+            var2.makeObscureHideButtonHidden();
+         }
+      }
+
+      return Unit.a;
    }
 
    public override fun getSingleAspectRatio(): Float {
@@ -125,7 +135,6 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
          this.targetUrl = var31;
          val var45: MediaView = this.binding.mediaView;
-         kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
          val var46: StringBuilder = new StringBuilder();
          var46.append("video attachment: ");
          var46.append(var4);
@@ -137,25 +146,29 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
             var28 = this.thumbnailFadeDuration;
          }
 
-         MediaView.setMediaData$default(var45, var32, false, false, false, null, false, null, null, var19, false, var20, var28, new Function0(var14, this) {
-            final boolean $isObscure;
-            final MediaVideoView this$0;
-
-            {
-               super(0);
-               this.$isObscure = var1;
-               this.this$0 = var2;
-            }
-
-            public final void invoke() {
-               if (this.$isObscure) {
-                  val var1: SpoilerView = MediaVideoView.access$getSpoilerViewManager$p(this.this$0).getSpoilerView();
-                  if (var1 != null) {
-                     var1.makeObscureHideButtonHidden();
-                  }
-               }
-            }
-         }, var21, var22, var23, var24, var27, 766, null);
+         MediaView.setMediaData$default(
+            var45,
+            var32,
+            false,
+            false,
+            false,
+            null,
+            false,
+            null,
+            null,
+            var19,
+            false,
+            var20,
+            var28,
+            new o0(var14, this),
+            var21,
+            var22,
+            var23,
+            var24,
+            var27,
+            766,
+            null
+         );
       }
 
       label47: {
@@ -178,12 +191,12 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var34: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var42: SpoilerViewManager = this.spoilerViewManager;
+      val var38: SpoilerViewManager = this.spoilerViewManager;
+      val var42: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var35: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var41: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var38: MediaView = this.binding.mediaView;
+      val var41: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -197,11 +210,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var42.configureSpoiler(var13, var35, var41, var38, null, var11, var15, var12, var10, var16, var17);
-      val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var39: ConstraintLayout = this.binding.container;
+      var38.configureSpoiler(var13, var42, var35, var41, null, var11, var15, var12, var10, var16, var17);
+      val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      var36.configureAttachmentOverlay(this, var39, var10, var18);
+      var39.configureAttachmentOverlay(this, var36, var10, var18);
    }
 
    public fun setDescription(description: String?, hint: String?) {
@@ -229,13 +242,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var3: ConstraintLayout = this.binding.container;
+      val var4: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var4: LayoutParams = var3.getLayoutParams();
-      if (var4 != null) {
-         var4.width = var1;
-         var4.height = var2;
-         var3.setLayoutParams(var4);
+      val var3: LayoutParams = var4.getLayoutParams();
+      if (var3 != null) {
+         var3.width = var1;
+         var3.height = var2;
+         var4.setLayoutParams(var3);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -248,7 +261,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         a0.p0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.b0.p0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -260,7 +273,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
                kotlin.jvm.internal.q.h(var1, "host");
                kotlin.jvm.internal.q.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
-               var2.L0(this.$role);
+               var2.M0(this.$role);
             }
          });
       }
@@ -295,8 +308,8 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public data class TargetSize(width: Int, height: Int) {
-      public final val height: Int
       public final val width: Int
+      public final val height: Int
 
       init {
          this.width = var1;
@@ -348,8 +361,8 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public data class TargetUrl(sourceUrl: String, previewUrl: String) {
-      public final val previewUrl: String
       public final val sourceUrl: String
+      public final val previewUrl: String
 
       init {
          kotlin.jvm.internal.q.h(var1, "sourceUrl");
@@ -393,15 +406,15 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.sourceUrl;
-         val var1: java.lang.String = this.previewUrl;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetUrl(sourceUrl=");
-         var3.append(var2);
-         var3.append(", previewUrl=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.sourceUrl;
+         val var2: java.lang.String = this.previewUrl;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("TargetUrl(sourceUrl=");
+         var1.append(var3);
+         var1.append(", previewUrl=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

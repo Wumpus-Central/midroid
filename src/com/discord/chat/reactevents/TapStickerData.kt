@@ -5,12 +5,12 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import g9.s
 import kotlin.jvm.internal.q
-import o8.w
 
 public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
-   public final val messageId: MessageId
    public final val sticker: Sticker
+   public final val messageId: MessageId
 
    fun TapStickerData(var1: Sticker, var2: java.lang.String) {
       q.h(var1, "sticker");
@@ -55,20 +55,20 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
 
    public override fun serialize(): WritableMap {
       return NativeMapExtensionsKt.nativeMapOf(
-         w.a("messageId", this.messageId),
-         w.a("sticker", NativeMapExtensionsKt.nativeMapOf(w.a("id", java.lang.String.valueOf(this.sticker.getId())), w.a("name", this.sticker.getName())))
+         s.a("messageId", this.messageId),
+         s.a("sticker", NativeMapExtensionsKt.nativeMapOf(s.a("id", java.lang.String.valueOf(this.sticker.getId())), s.a("name", this.sticker.getName())))
       );
    }
 
    public override fun toString(): String {
       val var3: Sticker = this.sticker;
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapStickerData(sticker=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapStickerData(sticker=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

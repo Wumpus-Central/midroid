@@ -6,6 +6,9 @@ import androidx.lifecycle.ProcessLifecycleOwner
 import kotlin.jvm.internal.q
 
 public object AppLifecycle {
+   public final var isForegrounded: Boolean
+      private set
+
    private final val appLifecycleObserver: <unrepresentable> = new DefaultLifecycleObserver() {
       @Override
       public void onStart(LifecycleOwner var1) {
@@ -21,9 +24,6 @@ public object AppLifecycle {
          AppLifecycle.access$setForegrounded$p(false);
       }
    }
-
-   public final var isForegrounded: Boolean
-      private set
 
    public fun init() {
       ProcessLifecycleOwner.r.a().getLifecycle().a(appLifecycleObserver);

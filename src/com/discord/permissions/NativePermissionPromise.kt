@@ -9,8 +9,6 @@ import kotlin.jvm.internal.q
 public object NativePermissionPromise {
    @JvmStatic
    fun `generate$lambda$0`(var0: Function0, var1: Function0, var2: Any) {
-      q.h(var0, "$onAuthorized");
-      q.h(var1, "$onRejected");
       q.h(var2, "result");
       var var3: Any;
       if (var2 is Array<Any>) {
@@ -41,19 +39,18 @@ public object NativePermissionPromise {
 
    @JvmStatic
    fun `generate$lambda$1`(var0: Function0, var1: Array<Any>) {
-      q.h(var0, "$onRejected");
       q.h(var1, "result");
-      val var2: CrashReporting = CrashReporting.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("NativePermissionPromise: Rejection: ");
-      var3.append(var1);
-      CrashReporting.addBreadcrumb$default(var2, var3.toString(), null, null, 6, null);
+      val var3: CrashReporting = CrashReporting.INSTANCE;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("NativePermissionPromise: Rejection: ");
+      var2.append(var1);
+      CrashReporting.addBreadcrumb$default(var3, var2.toString(), null, null, 6, null);
       var0.invoke();
    }
 
    public fun generate(onAuthorized: () -> Unit, onRejected: () -> Unit): PromiseImpl {
       q.h(var1, "onAuthorized");
       q.h(var2, "onRejected");
-      return new PromiseImpl(new a(var1, var2), new b(var2));
+      return new PromiseImpl(new e(var1, var2), new f(var2));
    }
 }

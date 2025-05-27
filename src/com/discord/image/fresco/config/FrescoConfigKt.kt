@@ -1,9 +1,9 @@
 package com.discord.image.fresco.config
 
-import I2.C
-import I2.E
-import I2.F
-import I2.o
+import A3.C
+import A3.E
+import A3.F
+import A3.o
 import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
@@ -31,35 +31,35 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var2: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var5: ImagePipelineConfig.Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var1.newSmallDiskCache(var0))
+   val var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   val var6: ImagePipelineConfig.Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var6: C.a = C.n();
-   val var3: F = o.a();
-   val var4: ImagePipelineConfig.Builder = var5.X(new E(var6.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var3: C.a = C.n();
+   val var5: F = o.a();
+   val var4: ImagePipelineConfig.Builder = var6.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var2: Builder = var1.buildUpon();
-            var2.clearQuery();
+            val var4: Builder = var1.buildUpon();
+            var4.clearQuery();
 
-            for (java.lang.String var4 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
-                  val var3: java.util.Iterator = var1.getQueryParameters(var4).iterator();
+            for (java.lang.String var2 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
+                  val var3: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
                   while (var3.hasNext()) {
-                     var2.appendQueryParameter(var4, var3.next() as java.lang.String);
+                     var4.appendQueryParameter(var2, var3.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var2.build();
+            var1 = var4.build();
             q.g(var1, "build(...)");
             return var1;
          }
@@ -73,7 +73,7 @@ private fun isSignedUrl(uri: Uri): Boolean {
    val var3: java.lang.String = var0.getPath();
    if (var3 == null) {
       return false;
-   } else if (!h.J(var3, "/attachments/", false, 2, null) && !h.J(var3, "/ephemeral-attachments/", false, 2, null)) {
+   } else if (!h.I(var3, "/attachments/", false, 2, null) && !h.I(var3, "/ephemeral-attachments/", false, 2, null)) {
       return false;
    } else {
       var var1: Boolean = false;

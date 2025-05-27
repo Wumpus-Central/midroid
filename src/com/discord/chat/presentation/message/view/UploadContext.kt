@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.message.view
 
 public data class UploadContext(uploaderId: String, uploadItemId: String) {
-   public final val uploadItemId: String
    public final val uploaderId: String
+   public final val uploadItemId: String
 
    init {
       kotlin.jvm.internal.q.h(var1, "uploaderId");
@@ -46,14 +46,14 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.uploadItemId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UploadContext(uploaderId=");
-      var3.append(var1);
-      var3.append(", uploadItemId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.uploaderId;
+      val var1: java.lang.String = this.uploadItemId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UploadContext(uploaderId=");
+      var2.append(var3);
+      var2.append(", uploadItemId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

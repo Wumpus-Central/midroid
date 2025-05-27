@@ -61,15 +61,11 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
 
    @JvmStatic
    fun `bind$lambda$14`(var0: Function1, var1: GiftEmbed, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapEmbed");
-      kotlin.jvm.internal.q.h(var1, "$gift");
       var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
    }
 
    @JvmStatic
    fun `bind$lambda$17$lambda$16`(var0: Function1, var1: GiftEmbed, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAccept");
-      kotlin.jvm.internal.q.h(var1, "$gift");
       var0.invoke((var1 as GiftEmbed.Resolved.Valid).getGiftCode());
    }
 
@@ -82,12 +78,12 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
       }
 
       (this.binding.splash.getHierarchy() as GenericDraweeHierarchy).x(var3);
-      var3 = androidx.core.graphics.c.k(var1.getBackgroundColor(), E8.a.c(var1.getSplashOpacity() * (float)255));
+      var3 = y.c.k(var1.getBackgroundColor(), w9.a.c(var1.getSplashOpacity() * (float)255));
       val var4: SimpleDraweeView = this.binding.splash;
       val var6: ImageRequest = ImageRequest.fromUri(var1.getSplashUrl());
       val var9: com.facebook.drawee.controller.a;
       if (var6 != null) {
-         val var14: PipelineDraweeControllerBuilder = R1.d.g()
+         val var12: PipelineDraweeControllerBuilder = J2.d.g()
             .F(
                ImageRequestBuilder.b(var6)
                   .J(
@@ -99,14 +95,14 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   )
                   .a()
             ) as PipelineDraweeControllerBuilder;
-         val var12: java.lang.String = var1.getGiftCode();
-         val var8: java.lang.String = var1.getSplashUrl();
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("splash-");
-         var15.append(var12);
-         var15.append("-");
-         var15.append(var8);
-         var9 = ((var14.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         val var14: java.lang.String = var1.getGiftCode();
+         val var15: java.lang.String = var1.getSplashUrl();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("splash-");
+         var8.append(var14);
+         var8.append("-");
+         var8.append(var15);
+         var9 = ((var12.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -176,16 +172,16 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             var12 = Orientation.RIGHT_LEFT;
          }
 
-         val var13: GradientDrawable = new GradientDrawable(
+         val var19: GradientDrawable = new GradientDrawable(
             var12, new int[]{(var9 as GiftEmbed.Resolving).getResolvingGradientStart(), (var9 as GiftEmbed.Resolving).getResolvingGradientEnd()}
          );
-         var13.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-         val var19: IntArray = this.binding.gradients.getReferencedIds();
-         kotlin.jvm.internal.q.g(var19, "getReferencedIds(...)");
-         val var23: Int = var19.length;
+         var19.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+         val var13: IntArray = this.binding.gradients.getReferencedIds();
+         kotlin.jvm.internal.q.g(var13, "getReferencedIds(...)");
+         val var23: Int = var13.length;
 
          for (int var4 = 0; var4 < var23; var4++) {
-            this.binding.getRoot().findViewById(var19[var4]).setBackground(var13);
+            this.binding.getRoot().findViewById(var13[var4]).setBackground(var19);
          }
 
          val var14: Group = this.binding.gradients;
@@ -193,7 +189,11 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          var14.setVisibility(0);
          var14.setAlpha(0.5F);
          this.lastState = new GiftView.Companion.State.Resolving(var1.getItemId());
-      } else if (var9 is GiftEmbed.Resolved) {
+      } else {
+         if (var9 !is GiftEmbed.Resolved) {
+            throw new g9.n();
+         }
+
          val var7: Boolean = this.didResolve(var1.getItemId());
          var var24: LayoutTransition = this.resolvedTransition;
          if (!var7) {
@@ -210,7 +210,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var31: SimpleDraweeView = this.binding.thumbnail;
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
          this.binding.thumbnail.setImageURI((var9 as GiftEmbed.Resolved).getThumbnailUrl());
-         (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.a((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
+         (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
          val var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());
          var11.setTextColor(var27.getTitleColor());
@@ -218,7 +218,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          val var32: java.lang.CharSequence = var11.getText();
          kotlin.jvm.internal.q.g(var32, "getText(...)");
          var var20: Byte;
-         if (!kotlin.text.h.d0(var32)) {
+         if (!kotlin.text.h.c0(var32)) {
             var20 = 0;
          } else {
             var20 = 8;
@@ -231,7 +231,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          kotlin.jvm.internal.q.e(var33);
          val var35: java.lang.CharSequence = var33.getText();
          kotlin.jvm.internal.q.g(var35, "getText(...)");
-         if (!kotlin.text.h.d0(var35)) {
+         if (!kotlin.text.h.c0(var35)) {
             var20 = 0;
          } else {
             var20 = 8;
@@ -247,10 +247,14 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var16: DCDButton = this.binding.acceptButton;
             kotlin.jvm.internal.q.g(this.binding.acceptButton, "acceptButton");
             var16.setVisibility(8);
-         } else if (var27 is GiftEmbed.Resolved.Valid) {
+         } else {
+            if (var27 !is GiftEmbed.Resolved.Valid) {
+               throw new g9.n();
+            }
+
             var8 = this.binding.content;
             kotlin.jvm.internal.q.g(this.binding.content, "content");
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new H(var2, var9), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new i0(var2, var9), 1, null);
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
@@ -260,7 +264,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             kotlin.jvm.internal.q.e(var34);
             val var29: java.lang.CharSequence = var34.getText();
             kotlin.jvm.internal.q.g(var29, "getText(...)");
-            if (!kotlin.text.h.d0(var29)) {
+            if (!kotlin.text.h.c0(var29)) {
                var20 = 0;
             } else {
                var20 = 8;
@@ -271,8 +275,9 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());
             var30.setBackgroundColor(var17.getAcceptLabelBackgroundColor());
-            var30.setOnClickButtonListener(new I(var3, var9));
+            var30.setOnClickButtonListener(new j0(var3, var9));
             var30.setEnabled(var17.getCanBeAccepted());
+            kotlin.jvm.internal.q.e(var30);
          }
 
          this.lastState = new GiftView.Companion.State.Resolved(var1.getItemId());

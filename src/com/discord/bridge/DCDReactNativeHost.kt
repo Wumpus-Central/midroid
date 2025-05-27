@@ -9,15 +9,15 @@ import java.util.ArrayList
 import kotlin.jvm.internal.q
 
 public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost {
-   protected open val isHermesEnabled: Boolean
-      protected open get() {
-         return java.lang.Boolean.TRUE;
-      }
-
-
    protected open val isNewArchEnabled: Boolean
       protected open get() {
          return false;
+      }
+
+
+   protected open val isHermesEnabled: Boolean
+      protected open get() {
+         return java.lang.Boolean.TRUE;
       }
 
 

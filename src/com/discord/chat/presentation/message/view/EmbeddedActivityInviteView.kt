@@ -30,7 +30,6 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 
 public class EmbeddedActivityInviteView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
@@ -83,10 +82,17 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       );
    }
 
+   @JvmStatic
+   fun `setSubtitleText_Tu_1QLM$lambda$8$lambda$7`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
+      kotlin.jvm.internal.q.h(var2, "node");
+      var0.invoke(MessageId.box-impl(var1), var2);
+      return Unit.a;
+   }
+
    public fun setAvatarUris(avatarUris: List<String>) {
       kotlin.jvm.internal.q.h(var1, "avatarUris");
       val var4: Boolean = var1.isEmpty();
-      var var5: OverlappingCirclesView = this.binding.participants;
+      val var5: OverlappingCirclesView = this.binding.participants;
       kotlin.jvm.internal.q.g(this.binding.participants, "participants");
       var var2: Byte;
       if (!var4) {
@@ -96,15 +102,15 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       }
 
       var5.setVisibility(var2);
-      var5 = this.binding.participants;
-      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
+      val var6: OverlappingCirclesView = this.binding.participants;
+      val var10: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
       val var7: java.util.Iterator = var1.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var10.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var5.setItems(var6);
+      var6.setItems(var10);
       val var8: TextView = this.binding.noParticipantsText;
       kotlin.jvm.internal.q.g(this.binding.noParticipantsText, "noParticipantsText");
       var2 = 8;
@@ -193,12 +199,12 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
 
       var4.setVisibility(var3);
       this.binding.itemHero.setImageURI(var1);
-      var3 = MessageAccessoriesView.Companion.getWidth(var2, false);
-      var2 = var3 * 9 / 16;
+      var2 = MessageAccessoriesView.Companion.getWidth(var2, false);
+      var3 = var2 * 9 / 16;
       val var5: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
       var4 = this.binding.itemHero;
       kotlin.jvm.internal.q.g(this.binding.itemHero, "itemHero");
-      var5.resizeLayoutParams(var4, var3, var2, var3, var2, MediaContainingViewResizer.ResizeMode.Fill);
+      var5.resizeLayoutParams(var4, var2, var3, var2, var3, MediaContainingViewResizer.ResizeMode.Fill);
    }
 
    public fun setSubtitleText(
@@ -236,7 +242,7 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
       kotlin.jvm.internal.q.h(var15, "onTapEmoji");
       kotlin.jvm.internal.q.h(var16, "onTapSeeMore");
       kotlin.jvm.internal.q.h(var17, "onTapSoundmoji");
-      var var20: MessageContentView = this.binding.itemSubtitle;
+      val var19: MessageContentView = this.binding.itemSubtitle;
       kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
       var var18: Boolean;
       if (var1 != null) {
@@ -251,49 +257,33 @@ public class EmbeddedActivityInviteView  public constructor(context: Context, at
          var18 = 8;
       }
 
-      var20.setVisibility(var18);
-      val var24: SimpleDraweeView = this.binding.subtitleIcon;
+      var19.setVisibility(var18);
+      val var23: SimpleDraweeView = this.binding.subtitleIcon;
       kotlin.jvm.internal.q.g(this.binding.subtitleIcon, "subtitleIcon");
-      var var22: Boolean;
+      var var21: Boolean;
       if (var1 != null) {
-         var22 = 1;
+         var21 = 1;
       } else {
-         var22 = 0;
+         var21 = 0;
       }
 
-      if (var22) {
-         var22 = 0;
+      if (var21) {
+         var21 = 0;
       } else {
-         var22 = 8;
+         var21 = 8;
       }
 
-      var24.setVisibility(var22);
+      var23.setVisibility(var21);
       if (var1 != null) {
-         var20 = this.binding.itemSubtitle;
-         kotlin.jvm.internal.q.g(this.binding.itemSubtitle, "itemSubtitle");
          MessageContentView.setMessageContent-AeCz66Y$default(
-            var20,
+            this.binding.itemSubtitle,
             var1,
             var2,
             false,
             false,
             false,
             false,
-            new Function1(var3, var2) {
-               final java.lang.String $messageId;
-               final Function2 $onTapLink;
-
-               {
-                  super(1);
-                  this.$onTapLink = var1;
-                  this.$messageId = var2;
-               }
-
-               public final void invoke(LinkContentNode var1) {
-                  kotlin.jvm.internal.q.h(var1, "node");
-                  this.$onTapLink.invoke(MessageId.box-impl(this.$messageId), var1);
-               }
-            },
+            new F(var3, var2),
             var4,
             var5,
             var6,

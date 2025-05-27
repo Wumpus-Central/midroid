@@ -14,10 +14,10 @@ import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.ComponentView
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
+import g9.n
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import o8.p
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,
@@ -53,7 +53,7 @@ public class SeparatorDisplayComponentView  public constructor(context: Context,
       if (var6 != 1) {
          if (var6 != 2) {
             if (var6 != 3) {
-               throw new p();
+               throw new n();
             }
 
             var4 = 0;

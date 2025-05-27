@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.a0
+import androidx.core.view.b0
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
@@ -20,9 +20,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.recycler_view.animator.NoMoveItemAnimator
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.functions.Function6
 import kotlin.jvm.functions.Function8
 import kotlin.jvm.internal.q
 
@@ -79,6 +77,30 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.setClipToPadding(false);
    }
 
+   @JvmStatic
+   fun `bind$lambda$3`(var0: Function3, var1: PollMessageAccessory, var2: java.lang.String): Unit {
+      q.h(var2, "answerId");
+      var0.invoke(ChannelId.box-impl(var1.getChannelId-o4g7jtM()), MessageId.box-impl(var1.getMessageId-3Eiw7ao()), var2);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `bind$lambda$4`(var0: Function8, var1: PollMessageAccessory, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int, var7: ViewResizeMode): Unit {
+      q.h(var2, "attachmentId");
+      q.h(var7, "viewResizeMode");
+      var0.invoke(
+         ChannelId.box-impl(var1.getChannelId-o4g7jtM()),
+         MessageId.box-impl(var1.getMessageId-3Eiw7ao()),
+         var2,
+         (int)SizeUtilsKt.getPxToDp(var3),
+         (int)SizeUtilsKt.getPxToDp(var4),
+         (int)SizeUtilsKt.getPxToDp(var5),
+         (int)SizeUtilsKt.getPxToDp(var6),
+         var7
+      );
+      return Unit.a;
+   }
+
    public override fun bind(
       accessory: PollMessageAccessory,
       onTapAnswer: (ChannelId, MessageId, String) -> Unit,
@@ -89,52 +111,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       q.h(var2, "onTapAnswer");
       q.h(var3, "onTapPollAction");
       q.h(var4, "onLongPressImage");
-      this.getMyAdapter()
-         .setData(
-            var1.getAnswers(),
-            new Function1(var2, var1) {
-               final PollMessageAccessory $accessory;
-               final Function3 $onTapAnswer;
-
-               {
-                  super(1);
-                  this.$onTapAnswer = var1;
-                  this.$accessory = var2;
-               }
-
-               public final void invoke(java.lang.String var1) {
-                  q.h(var1, "answerId");
-                  this.$onTapAnswer
-                     .invoke(ChannelId.box-impl(this.$accessory.getChannelId-o4g7jtM()), MessageId.box-impl(this.$accessory.getMessageId-3Eiw7ao()), var1);
-               }
-            },
-            new Function6(var4, var1) {
-               final PollMessageAccessory $accessory;
-               final Function8 $onLongPressImage;
-
-               {
-                  super(6);
-                  this.$onLongPressImage = var1;
-                  this.$accessory = var2;
-               }
-
-               public final void invoke(java.lang.String var1, int var2, int var3, int var4, int var5, ViewResizeMode var6) {
-                  q.h(var1, "attachmentId");
-                  q.h(var6, "viewResizeMode");
-                  this.$onLongPressImage
-                     .invoke(
-                        ChannelId.box-impl(this.$accessory.getChannelId-o4g7jtM()),
-                        MessageId.box-impl(this.$accessory.getMessageId-3Eiw7ao()),
-                        var1,
-                        (int)SizeUtilsKt.getPxToDp(var2),
-                        (int)SizeUtilsKt.getPxToDp(var3),
-                        (int)SizeUtilsKt.getPxToDp(var4),
-                        (int)SizeUtilsKt.getPxToDp(var5),
-                        var6
-                     );
-               }
-            }
-         );
+      this.getMyAdapter().setData(var1.getAnswers(), new com.discord.chat.presentation.message.view.polls.a(var2, var1), new b(var4, var1));
       val var11: View = this.binding.getRoot();
       q.e(var11);
       ViewBackgroundUtilsKt.setBackgroundRectangle(var11, var1.getFillColor(), SizeUtilsKt.getDpToPx(16), var1.getBorderColor(), var1.getBorderWidthPx());
@@ -142,12 +119,12 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      a0.C0(var12, 4);
+      b0.C0(var12, 4);
       var12.setImportantForAccessibility(1);
-      a0.p0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
+      b0.p0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
+      var8 = this.binding.primaryAction.hasAccessibilityFocus();
       val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       q.e(this.binding.promptText);
@@ -170,7 +147,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var10 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
@@ -183,7 +160,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
          var6 = false;
       }
 
-      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

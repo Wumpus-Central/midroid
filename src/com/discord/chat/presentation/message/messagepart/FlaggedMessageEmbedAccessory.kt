@@ -8,9 +8,9 @@ import kotlin.jvm.internal.q
 public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Message, messageContext: MessageContext) : FlaggedMessageEmbedAccessory(
       var1, var2, var3
    ) {
+   public open val messageId: MessageId
    public final val message: Message
    public final val messageContext: MessageContext
-   public open val messageId: MessageId
 
    fun FlaggedMessageEmbedAccessory(var1: java.lang.String, var2: Message, var3: MessageContext) {
       q.h(var1, "messageId");
@@ -63,14 +63,14 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Message = this.message;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: Message = this.message;
       val var1: MessageContext = this.messageContext;
       val var3: StringBuilder = new StringBuilder();
       var3.append("FlaggedMessageEmbedAccessory(messageId=");
-      var3.append(var4);
-      var3.append(", message=");
       var3.append(var2);
+      var3.append(", message=");
+      var3.append(var4);
       var3.append(", messageContext=");
       var3.append(var1);
       var3.append(")");

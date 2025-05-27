@@ -1,18 +1,8 @@
 package com.discord.chatreplay
 
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.Y
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class Replay(filename: String, lastModified: Long) {
@@ -68,82 +58,6 @@ public data class Replay(filename: String, lastModified: Long) {
       var4.append(var1);
       var4.append(")");
       return var4.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: Replay.$serializer = new Replay.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chatreplay.Replay", var0, 2);
-         var1.l("filename", false);
-         var1.l("lastModified", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, Y.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): Replay {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
-         var var5: Long;
-         var var9: java.lang.String;
-         if (var8.y()) {
-            var9 = var8.t(var7, 0);
-            var5 = var8.h(var7, 1);
-            var2 = 3;
-         } else {
-            var9 = null;
-            var5 = 0L;
-            var var3: Boolean = true;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var8.x(var7);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        throw new n(var4);
-                     }
-
-                     var5 = var8.h(var7, 1);
-                     var2 |= 2;
-                  } else {
-                     var9 = var8.t(var7, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var8.b(var7);
-         return new Replay(var2, var9, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: Replay) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         Replay.write$Self$chat_replay_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
    }
 
    public companion object {

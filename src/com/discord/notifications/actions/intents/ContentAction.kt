@@ -9,6 +9,7 @@ import java.util.Map.Entry
 import kotlin.jvm.internal.q
 
 public data class ContentAction(tag: String, data: Map<String, String?>) : NotificationAction {
+   public open val tag: String
    public final val data: Map<String, String?>
 
    public final val isLocal: Boolean
@@ -16,8 +17,6 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
          return q.c(this.data.get("category"), "local");
       }
 
-
-   public open val tag: String
 
    init {
       q.h(var1, "tag");
@@ -41,7 +40,7 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
       return new ContentAction(var1, var2);
    }
 
-   public open fun describeContents(): Int {
+   public fun describeContents(): Int {
       return 0;
    }
 
@@ -81,26 +80,26 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
+      val var3: java.lang.String = this.tag;
       val var1: java.util.Map = this.data;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ContentAction(tag=");
-      var3.append(var2);
-      var3.append(", data=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentAction(tag=");
+      var2.append(var3);
+      var2.append(", data=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
-   public open fun writeToParcel(parcel: Parcel, flags: Int) {
-      q.h(var1, "out");
+   public fun writeToParcel(dest: Parcel, flags: Int) {
+      q.h(var1, "dest");
       var1.writeString(this.tag);
       val var3: java.util.Map = this.data;
       var1.writeInt(this.data.size());
 
-      for (Entry var4 : var3.entrySet()) {
-         var1.writeString(var4.getKey() as java.lang.String);
-         var1.writeString(var4.getValue() as java.lang.String);
+      for (Entry var5 : var3.entrySet()) {
+         var1.writeString(var5.getKey() as java.lang.String);
+         var1.writeString(var5.getValue() as java.lang.String);
       }
    }
 

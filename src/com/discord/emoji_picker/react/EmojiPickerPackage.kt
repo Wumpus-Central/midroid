@@ -11,7 +11,7 @@ import kotlin.jvm.internal.q
 public class EmojiPickerPackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
-      return i.n(new ViewManager[]{new EmojiPickerViewManager(), new EmojiPickerRowViewManager()});
+      return kotlin.collections.i.n(new ViewManager[]{new EmojiPickerViewManager(), new EmojiPickerRowViewManager()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): Nothing? {

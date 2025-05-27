@@ -7,9 +7,9 @@ import kotlin.jvm.internal.q
 public data class GuildProfileInviteMessageAccessory(messageId: MessageId, codedLinkIndex: Int, invite: GuildProfileInviteEmbedImpl) : GuildProfileInviteMessageAccessory(
       var1, var2, var3
    ) {
+   public open val messageId: MessageId
    public final val codedLinkIndex: Int
    public final val invite: GuildProfileInviteEmbedImpl
-   public open val messageId: MessageId
 
    fun GuildProfileInviteMessageAccessory(var1: java.lang.String, var2: Int, var3: GuildProfileInviteEmbedImpl) {
       q.h(var1, "messageId");

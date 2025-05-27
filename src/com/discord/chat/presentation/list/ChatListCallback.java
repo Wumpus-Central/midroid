@@ -2,14 +2,14 @@ package com.discord.chat.presentation.list;
 
 import android.graphics.Canvas;
 import android.util.Pair;
-import androidx.core.view.a0;
+import androidx.core.view.b0;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 abstract class ChatListCallback extends androidx.recyclerview.widget.e {
    @Override
    final int getAbsoluteMovementFlags(RecyclerView var1, RecyclerView.ViewHolder var2) {
-      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), a0.A(var1));
+      return this.convertToAbsoluteDirection(this.getMovementFlags(var1, var2), b0.A(var1));
    }
 
    public Pair getEffectiveDxDy(float var1, float var2) {

@@ -9,6 +9,6 @@ public final class c implements NativeEngine.GetRankedRtcRegionsCallback {
 
    @Override
    public final void onRankedRtcRegions(String[] var1) {
-      MediaEngine.q(this.a, var1);
+      MediaEngine.u(this.a, var1);
    }
 }

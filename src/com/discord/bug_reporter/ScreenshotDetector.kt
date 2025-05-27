@@ -1,17 +1,9 @@
 package com.discord.bug_reporter
 
 import android.content.ContentResolver
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 internal class ScreenshotDetector(contentResolver: ContentResolver) {
-   public final var active: Boolean
-      internal final set(value) {
-         this.active = var1;
-         this.toggleScreenshotObserver();
-      }
-
-
    private final val screenshotContentObserver: ScreenshotContentObserver
 
    public final var screenshotListener: (() -> Unit)?
@@ -21,24 +13,26 @@ internal class ScreenshotDetector(contentResolver: ContentResolver) {
       }
 
 
+   public final var active: Boolean
+      internal final set(value) {
+         this.active = var1;
+         this.toggleScreenshotObserver();
+      }
+
+
    init {
       q.h(var1, "contentResolver");
       super();
-      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new Function0(this) {
-         final ScreenshotDetector this$0;
+      this.screenshotContentObserver = new ScreenshotContentObserver(var1, new a(this));
+   }
 
-         {
-            super(0);
-            this.this$0 = var1;
-         }
+   @JvmStatic
+   fun `screenshotContentObserver$lambda$0`(var0: ScreenshotDetector): Unit {
+      if (var0.screenshotListener != null) {
+         var0.screenshotListener.invoke();
+      }
 
-         public final void invoke() {
-            val var1: Function0 = this.this$0.getScreenshotListener();
-            if (var1 != null) {
-               var1.invoke();
-            }
-         }
-      });
+      return Unit.a;
    }
 
    private fun toggleScreenshotObserver() {

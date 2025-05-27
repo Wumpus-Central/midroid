@@ -21,7 +21,6 @@ import com.discord.chat.presentation.message.utils.GetMediaImagePlaceholderState
 import com.discord.chat.presentation.message.view.media.ViewAttachedListener
 import com.discord.image.fresco.R
 import com.discord.image.fresco.SetOptionalImageUrlKt
-import com.discord.image.fresco.listeners.CompoundControllerListener
 import com.discord.media_player.MediaPlayer
 import com.discord.media_player.MediaPlayerManager
 import com.discord.media_player.MediaPlayerManagerModule
@@ -48,7 +47,6 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.ThemedReactContext
 import kotlin.coroutines.Continuation
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
@@ -130,8 +128,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       this.mediaViewDetached = true;
       this.mediaCanPlayInline = true;
       this.mediaThumbnailFadeDuration = this.getResources().getInteger(R.integer.image_fade_duration);
-      this.mediaOnPlayCallback = <unrepresentable>.INSTANCE;
-      this.onMediaPlayFinishedAnalytics = <unrepresentable>.INSTANCE;
+      this.mediaOnPlayCallback = new x0();
+      this.onMediaPlayFinishedAnalytics = new y0();
       this.playerSettings = MediaPlayer.Factory.getDefaultSettings();
       val var6: Context;
       if (var1 !is ThemedReactContext) {
@@ -149,43 +147,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       }
 
       this.managerModule = var8;
-      val var9: ViewAttachedListener = new ViewAttachedListener(
-         this,
-         new Function1(this) {
-            final MediaView this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(boolean var1) {
-               if (var1) {
-                  MediaView.setMediaData$default(
-                     this.this$0, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262141, null
-                  );
-               } else {
-                  MediaView.setMediaData$default(
-                     this.this$0, null, true, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262137, null
-                  );
-               }
-            }
-         },
-         new Function1(this) {
-            final MediaView this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(boolean var1) {
-               MediaView.setMediaData$default(
-                  this.this$0, null, false, var1, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262139, null
-               );
-            }
-         }
-      );
+      val var9: ViewAttachedListener = new ViewAttachedListener(this, new z0(this), new A0(this));
       this.attachStateChangeListener = var9;
       this.lifecycleListener = new LifecycleEventListener(this) {
          final MediaView this$0;
@@ -230,6 +192,36 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       var13.z(var5);
    }
 
+   @JvmStatic
+   fun `attachStateChangeListener$lambda$2`(var0: MediaView, var1: Boolean): Unit {
+      if (var1) {
+         setMediaData$default(
+            var0, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262141, null
+         );
+      } else {
+         setMediaData$default(var0, null, true, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262137, null);
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `attachStateChangeListener$lambda$3`(var0: MediaView, var1: Boolean): Unit {
+      setMediaData$default(var0, null, false, var1, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262139, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `mediaOnPlayCallback$lambda$0`(): Unit {
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `onMediaPlayFinishedAnalytics$lambda$1`(var0: MediaPlayFinishedAnalytics): Unit {
+      kotlin.jvm.internal.q.h(var0, "it");
+      return Unit.a;
+   }
+
    private fun pause() {
       if (this.mediaPlayer != null) {
          this.mediaPlayer.pause();
@@ -269,59 +261,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             var10 = var11.acquire(var7, var12, this.playerSettings);
          }
 
-         var10.setEventListener(
-            new Function1(this) {
-               final MediaView this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(MediaPlayer.Event var1) {
-                  kotlin.jvm.internal.q.h(var1, "event");
-                  MediaView.setMediaData$default(
-                     this.this$0, null, false, false, false, var1, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262127, null
-                  );
-               }
-            }
-         );
-         var10.setVolumeListener(
-            new Function1(this) {
-               final MediaView this$0;
-
-               {
-                  super(1);
-                  this.this$0 = var1;
-               }
-
-               public final void invoke(float var1) {
-                  val var2: Boolean;
-                  if (var1 > 0.0F) {
-                     var2 = true;
-                  } else {
-                     var2 = false;
-                  }
-
-                  MediaView.setMediaData$default(
-                     this.this$0, null, false, false, false, null, var2, null, null, false, false, false, 0, null, null, null, null, null, null, 262111, null
-                  );
-               }
-            }
-         );
-         var10.setAnalyticsListener(new Function1(this) {
-            final MediaView this$0;
-
-            {
-               super(1);
-               this.this$0 = var1;
-            }
-
-            public final void invoke(MediaPlayFinishedAnalytics var1) {
-               kotlin.jvm.internal.q.h(var1, "event");
-               MediaView.access$getOnMediaPlayFinishedAnalytics$p(this.this$0).invoke(var1);
-            }
-         });
+         var10.setEventListener(new p0(this));
+         var10.setVolumeListener(new u0(this));
+         var10.setAnalyticsListener(new v0(this));
          val var3: Float;
          if (var1.isGifv()) {
             var3 = 0.0F;
@@ -336,6 +278,33 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          ViewMeasureExtensionsKt.measureAndLayout(this);
          return new Pair(var10, var4);
       }
+   }
+
+   @JvmStatic
+   fun `prepareMediaPlayer$lambda$19$lambda$16`(var0: MediaView, var1: MediaPlayer.Event): Unit {
+      kotlin.jvm.internal.q.h(var1, "event");
+      setMediaData$default(var0, null, false, false, false, var1, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262127, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `prepareMediaPlayer$lambda$19$lambda$17`(var0: MediaView, var1: Float): Unit {
+      val var2: Boolean;
+      if (var1 > 0.0F) {
+         var2 = true;
+      } else {
+         var2 = false;
+      }
+
+      setMediaData$default(var0, null, false, false, false, null, var2, null, null, false, false, false, 0, null, null, null, null, null, null, 262111, null);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `prepareMediaPlayer$lambda$19$lambda$18`(var0: MediaView, var1: MediaPlayFinishedAnalytics): Unit {
+      kotlin.jvm.internal.q.h(var1, "event");
+      var0.onMediaPlayFinishedAnalytics.invoke(var1);
+      return Unit.a;
    }
 
    private fun registerForPortal() {
@@ -365,134 +334,74 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
 
             var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(
-                  var1,
-                  (var6.b() as MediaPlayerView).getView(),
-                  new Function1(this) {
-                     final MediaView this$0;
-
-                     {
-                        super(1);
-                        this.this$0 = var1;
-                     }
-
-                     public final void invoke(View var1) {
-                        kotlin.jvm.internal.q.h(var1, "view");
-                        this.this$0.removeOnAttachStateChangeListener(MediaView.access$getAttachStateChangeListener$p(this.this$0));
-                        ViewRemoveFromParentKt.removeFromParent(var1);
-                     }
-                  },
-                  new Function1(this, var5, var4) {
-                     final MediaPlayer $mediaPlayer;
-                     final MediaSource $mediaSource;
-                     final MediaView this$0;
-
-                     {
-                        super(1);
-                        this.this$0 = var1;
-                        this.$mediaSource = var2;
-                        this.$mediaPlayer = var3;
-                     }
-
-                     public final void invoke(View var1) {
-                        kotlin.jvm.internal.q.h(var1, "it");
-                        val var2: MediaPlayerManagerModule = MediaView.access$getManagerModule$p(this.this$0);
-                        if (var2 != null) {
-                           var2.startPlayerProgressInterval(this.$mediaSource, this.$mediaPlayer);
-                        }
-
-                        MediaView.access$play(this.this$0);
-                     }
-                  },
-                  new Function1(this, var4, var5) {
-                     final MediaPlayer $mediaPlayer;
-                     final MediaSource $mediaSource;
-                     final MediaView this$0;
-
-                     {
-                        super(1);
-                        this.this$0 = var1;
-                        this.$mediaPlayer = var2;
-                        this.$mediaSource = var3;
-                     }
-
-                     public final void invoke(View var1) {
-                        kotlin.jvm.internal.q.h(var1, "it");
-                        MediaView.access$setMediaVolumeOn$p(this.this$0, this.$mediaPlayer.isMuted() xor true);
-                        val var3: MediaPlayerManagerModule = MediaView.access$getManagerModule$p(this.this$0);
-                        if (var3 != null) {
-                           var3.stopPlayerProgressInterval(this.$mediaSource);
-                        }
-
-                        val var2: java.lang.Double = this.$mediaSource.getPortal();
-                        val var4: MediaSource = MediaView.access$getMediaSource$p(this.this$0);
-                        val var5: java.lang.Double;
-                        if (var4 != null) {
-                           var5 = var4.getPortal();
-                        } else {
-                           var5 = null;
-                        }
-
-                        if (!kotlin.jvm.internal.q.a(var2, var5) || this.$mediaPlayer.hasEnded() || !this.this$0.isAttachedToWindow()) {
-                           MediaView.access$releasePlayer(this.this$0);
-                        }
-                     }
-                  },
-                  new Function1(var5, this) {
-                     final MediaSource $mediaSource;
-                     final MediaView this$0;
-
-                     {
-                        super(1);
-                        this.$mediaSource = var1;
-                        this.this$0 = var2;
-                     }
-
-                     public final void invoke(View var1) {
-                        kotlin.jvm.internal.q.h(var1, "view");
-                        val var3: java.lang.Double = this.$mediaSource.getPortal();
-                        val var2: MediaSource = MediaView.access$getMediaSource$p(this.this$0);
-                        val var5: java.lang.Double;
-                        if (var2 != null) {
-                           var5 = var2.getPortal();
-                        } else {
-                           var5 = null;
-                        }
-
-                        if (kotlin.jvm.internal.q.a(var3, var5)) {
-                           MediaView.setMediaData$default(
-                              this.this$0,
-                              null,
-                              false,
-                              false,
-                              false,
-                              null,
-                              false,
-                              null,
-                              null,
-                              false,
-                              false,
-                              false,
-                              0,
-                              null,
-                              null,
-                              null,
-                              null,
-                              null,
-                              null,
-                              262143,
-                              null
-                           );
-                           this.this$0.addView(var1, 0);
-                           ViewMeasureExtensionsKt.measureAndLayout(this.this$0);
-                        }
-
-                        this.this$0.addOnAttachStateChangeListener(MediaView.access$getAttachStateChangeListener$p(this.this$0));
-                     }
-                  }
-               );
+               .addPortal(var1, (var6.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var4), new q0(this, var4, var5), new r0(var5, this));
          }
       }
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$20`(var0: MediaView, var1: View): Unit {
+      kotlin.jvm.internal.q.h(var1, "view");
+      var0.removeOnAttachStateChangeListener(var0.attachStateChangeListener);
+      ViewRemoveFromParentKt.removeFromParent(var1);
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$21`(var0: MediaView, var1: MediaSource, var2: MediaPlayer, var3: View): Unit {
+      kotlin.jvm.internal.q.h(var3, "it");
+      if (var0.managerModule != null) {
+         var0.managerModule.startPlayerProgressInterval(var1, var2);
+      }
+
+      var0.play();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$22`(var0: MediaView, var1: MediaPlayer, var2: MediaSource, var3: View): Unit {
+      kotlin.jvm.internal.q.h(var3, "it");
+      var0.mediaVolumeOn = var1.isMuted() xor true;
+      if (var0.managerModule != null) {
+         var0.managerModule.stopPlayerProgressInterval(var2);
+      }
+
+      val var7: java.lang.Double = var2.getPortal();
+      val var5: java.lang.Double;
+      if (var0.mediaSource != null) {
+         var5 = var0.mediaSource.getPortal();
+      } else {
+         var5 = null;
+      }
+
+      if (!kotlin.jvm.internal.q.a(var7, var5) || var1.hasEnded() || !var0.isAttachedToWindow()) {
+         var0.releasePlayer();
+      }
+
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `registerForPortal$lambda$23`(var0: MediaSource, var1: MediaView, var2: View): Unit {
+      kotlin.jvm.internal.q.h(var2, "view");
+      val var3: java.lang.Double = var0.getPortal();
+      val var5: java.lang.Double;
+      if (var1.mediaSource != null) {
+         var5 = var1.mediaSource.getPortal();
+      } else {
+         var5 = null;
+      }
+
+      if (kotlin.jvm.internal.q.a(var3, var5)) {
+         setMediaData$default(
+            var1, null, false, false, false, null, false, null, null, false, false, false, 0, null, null, null, null, null, null, 262143, null
+         );
+         var1.addView(var2, 0);
+         ViewMeasureExtensionsKt.measureAndLayout(var1);
+      }
+
+      var1.addOnAttachStateChangeListener(var1.attachStateChangeListener);
+      return Unit.a;
    }
 
    private fun releasePlayer() {
@@ -529,8 +438,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    @JvmStatic
-   fun `setMediaData$lambda$3`(var0: MediaView, var1: MediaSource, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `setMediaData$lambda$7`(var0: MediaView, var1: MediaSource, var2: View) {
       if (var0.mediaPlayer != null && var0.mediaPlayerView != null) {
          var0.play();
       } else {
@@ -540,8 +448,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    @JvmStatic
-   fun `setMediaData$lambda$5`(var0: MediaView, var1: Boolean, var2: MediaSource, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `setMediaData$lambda$9`(var0: MediaView, var1: Boolean, var2: MediaSource, var3: View) {
       if (var0.mediaPlayer != null) {
          val var6: Float;
          if (var1) {
@@ -565,8 +472,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    @JvmStatic
-   fun `setOnMediaClickListeners$lambda$6`(var0: MediaView, var1: OnClickListener, var2: View) {
-      kotlin.jvm.internal.q.h(var0, "this$0");
+   fun `setOnMediaClickListeners$lambda$10`(var0: MediaView, var1: OnClickListener, var2: View) {
       var0.registerForPortal();
       var1.onClick(var0);
    }
@@ -631,7 +537,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      X9.f.d(
+      Pa.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -653,17 +559,17 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = v8.b.e();
+               val var3: Any = n9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                   }
 
-                  o8.s.b(var1);
+                  kotlin.c.b(var1);
                } else {
-                  o8.s.b(var1);
-                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  var1 = new FlowCollector(this.this$0) {
+                  kotlin.c.b(var1);
+                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  val var4: FlowCollector = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -698,7 +604,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var4.collect(var1, this) === var3) {
+                  if (var1.collect(var4, this) === var3) {
                      return var3;
                   }
                }
@@ -709,7 +615,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      X9.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      Pa.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final MediaView this$0;
 
@@ -727,20 +633,20 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = v8.b.e();
+            val var3: Any = n9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                }
 
-               o8.s.b(var1);
+               kotlin.c.b(var1);
             } else {
-               o8.s.b(var1);
+               kotlin.c.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var4: Flow = var1.getPausePlayerFlow();
-                  if (var4 != null) {
-                     val var6: FlowCollector = new FlowCollector(this.this$0) {
+                  val var6: Flow = var1.getPausePlayerFlow();
+                  if (var6 != null) {
+                     val var4: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -757,7 +663,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var4.collect(var6, this) === var3) {
+                     if (var6.collect(var4, this) === var3) {
                         return var3;
                      }
                   }
@@ -886,6 +792,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          if (!var21) {
             (this.binding.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).x(var12);
             val var25: SimpleDraweeView = this.binding.inlineMediaImagePreview;
+            kotlin.jvm.internal.q.g(this.binding.inlineMediaImagePreview, "inlineMediaImagePreview");
             val var33: java.lang.Boolean;
             if (var1 != null) {
                var33 = var1.getShouldAutoPlay();
@@ -923,9 +830,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                var23 = null;
             }
 
-            val var66: CompoundControllerListener = GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var26, var65, var23);
-            kotlin.jvm.internal.q.e(var25);
-            SetOptionalImageUrlKt.setOptionalImageUrl(var25, var61, var33, var48, var66);
+            SetOptionalImageUrlKt.setOptionalImageUrl(
+               var25, var61, var33, var48, GetMediaImagePlaceholderStatesListenerKt.getMediaImagePlaceholderStatesListener(var26, var65, var23)
+            );
          }
 
          val var34: SimpleDraweeView = this.binding.inlineMediaImagePreview;
@@ -985,9 +892,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var36.setVisibility(var54);
          val var62: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
-         val var37: N;
+         val var37: s0;
          if (this.mediaCanPlayInline && !var10 && var1 != null) {
-            var37 = new N(this, var1);
+            var37 = new s0(this, var1);
          } else {
             var37 = null;
          }
@@ -1034,7 +941,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          I18nUtilsKt.i18nContentDescription$default(var64, var41, null, 2, null);
          val var42: SimpleDraweeView = this.binding.inlineMediaVolumeToggle;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaVolumeToggle, "inlineMediaVolumeToggle");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new O(this, var6, var1), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var42, false, new t0(this, var6, var1), 1, null);
          val var43: ImageView = this.binding.inlineMediaPlayButton;
          kotlin.jvm.internal.q.g(this.binding.inlineMediaPlayButton, "inlineMediaPlayButton");
          if (var43.getVisibility() == 0 && var14 != null && var14.length() != 0) {
@@ -1096,23 +1003,19 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                var59 = true;
             }
 
-            val var46: View;
             if (this.mediaPlayerView != null) {
-               var46 = this.mediaPlayerView.getView();
-            } else {
-               var46 = null;
-            }
+               val var46: View = this.mediaPlayerView.getView();
+               if (var46 != null) {
+                  if (!kotlin.jvm.internal.q.c(var5, var49)
+                     || var59
+                     || (var1 == null || !var1.isVideo()) && !kotlin.jvm.internal.q.c(var24, java.lang.Boolean.TRUE)) {
+                     var2 = false;
+                  } else {
+                     var2 = true;
+                  }
 
-            if (var46 != null) {
-               if (!kotlin.jvm.internal.q.c(var5, var49)
-                  || var59
-                  || (var1 == null || !var1.isVideo()) && !kotlin.jvm.internal.q.c(var24, java.lang.Boolean.TRUE)) {
-                  var2 = false;
-               } else {
-                  var2 = true;
+                  var46.setKeepScreenOn(var2);
                }
-
-               var46.setKeepScreenOn(var2);
             }
 
             if (!var59 && this.mediaShouldResume) {
@@ -1133,9 +1036,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setOnMediaClickListeners(onClickListener: OnClickListener?, onLongClickListener: OnLongClickListener?) {
-      val var3: M;
+      val var3: w0;
       if (var1 != null) {
-         var3 = new M(this, var1);
+         var3 = new w0(this, var1);
       } else {
          var3 = null;
       }

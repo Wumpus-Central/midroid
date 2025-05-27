@@ -53,16 +53,12 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
 
    @JvmStatic
    fun `setName$lambda$4$lambda$3$lambda$2`(var0: Function1, var1: java.lang.String, var2: View): Boolean {
-      kotlin.jvm.internal.q.h(var0, "$onTapCopyText");
-      kotlin.jvm.internal.q.h(var1, "$rawName");
       var0.invoke(var1);
       return true;
    }
 
    @JvmStatic
    fun `setValue$lambda$8$lambda$7$lambda$6`(var0: Function1, var1: java.lang.String, var2: View): Boolean {
-      kotlin.jvm.internal.q.h(var0, "$onTapCopyText");
-      kotlin.jvm.internal.q.h(var1, "$rawValue");
       var0.invoke(var1);
       return true;
    }
@@ -73,9 +69,9 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
       val var4: SimpleDraweeSpanTextView = this.binding.name;
       kotlin.jvm.internal.q.e(this.binding.name);
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var4, var2);
-      val var5: p;
+      val var5: q;
       if (var2 != null) {
-         var5 = new p(var3, var1);
+         var5 = new q(var3, var1);
       } else {
          var5 = null;
       }
@@ -97,9 +93,9 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
       }
 
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var5, var4);
-      val var6: o;
+      val var6: p;
       if (var2 != null) {
-         var6 = new o(var3, var1);
+         var6 = new p(var3, var1);
       } else {
          var6 = null;
       }

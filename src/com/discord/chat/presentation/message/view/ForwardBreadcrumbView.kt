@@ -66,9 +66,6 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
 
    @JvmStatic
    fun `configure_JjTCmh4$lambda$0`(var0: Function3, var1: ForwardInfo, var2: Long, var4: java.lang.String, var5: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapForwardFooter");
-      kotlin.jvm.internal.q.h(var1, "$info");
-      kotlin.jvm.internal.q.h(var4, "$messageId");
       var0.invoke(var1.getSnapshotIndex(), ChannelId.box-impl(var2), MessageId.box-impl(var4));
    }
 
@@ -78,7 +75,7 @@ public class ForwardBreadcrumbView  public constructor(context: Context, attrs: 
       kotlin.jvm.internal.q.h(var5, "onTapForwardFooter");
       val var8: ForwardFooterInfo = var4.getFooterInfo();
       if (var8 != null) {
-         val var9: G = new G(var5, var4, var1, var3);
+         val var9: h0 = new h0(var5, var4, var1, var3);
          var var6: Byte = 1;
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var9, 1, null);
          val var10: SimpleDraweeView = this.binding.icon;

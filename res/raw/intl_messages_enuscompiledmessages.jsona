@@ -571,7 +571,7 @@
     ],
     ". Is that correct?"
   ],
-  "xNpFJy": "Date of birth",
+  "xNpFJy": "Date of Birth",
   "hZaF/P": "Tap to open date picker",
   "F8otRk": "Help us keep Discord safe",
   "mhUrKS": "Before you can use Family Center, we need to verify your age so we can show you the appropriate experience. We will only ask you for this once.",
@@ -2474,12 +2474,9 @@
   "++JLLy": "People were toxic or inappropriate",
   "tLi4cX": "Tell us about your call experience.",
   "C/12Tk": "Negative",
-  "0jP8iY": "I had some technical difficulties...",
   "Xcb4cH": "Neutral",
   "1Vyb5O": "Positive",
-  "B81oy8": "The call was perfectly smooth!",
   "Ss6tlZ": "How'd the call go?",
-  "xv0BJi": "Did you have any technical problems?",
   "IdKo29": [
     "You need to be friends with ",
     [
@@ -2924,6 +2921,8 @@
       "avatarDecoration"
     ]
   ],
+  "FyBDiY": "Join Nitro to unlock access to this avatar decoration!",
+  "e1UiOT": "Upgrade to unlock access to this avatar decoration!",
   "zOA4a2": "Your Avatar Decoration is updated!",
   "V1AWw8": "Buy Bundle",
   "IQQYeX": [
@@ -3168,8 +3167,6 @@
     ],
     "!"
   ],
-  "2xIzZW": "Join Nitro to unlock access to this avatar decoration!",
-  "dIepy8": "Upgrade to unlock access to this avatar decoration!",
   "0hKkS0": "Commands",
   "5C107O": "Optional",
   "Ocw/sL": [
@@ -5013,6 +5010,7 @@
     " more"
   ],
   "CumH4u": "Create",
+  "825cFx": "Create Account",
   "ISN+ND": "Create Category",
   "fUYU+v": "Create Channel",
   "qyjZub": "Create Events",
@@ -5743,6 +5741,13 @@
   "r6Vm8f": "Answer questions to get access to more channels and roles.",
   "BGkaen": "Customization Questions",
   "FHBa//": "Custom Color",
+  "7BFCRU": [
+    "Custom color, ",
+    [
+      1,
+      "color"
+    ]
+  ],
   "xalUlZ": "Custom Status",
   "pP5Aa2": [
     [
@@ -8375,6 +8380,7 @@
   "+Joso6": "Force Sync",
   "wWIufn": "Forgot your password?",
   "R04ENT": "Clear Server Name",
+  "/+OQEh": "Status updates from people you talk to.",
   "l3yoAQ": "You are receiving notifications from all activity in this server, but you can override it here",
   "mUbulZ": "You are receiving notifications from all messages in this server, but you can override it here",
   "GGAdHR": "You are receiving notifications from only mentions in this server, but you can override it here",
@@ -8620,6 +8626,7 @@
   "X8jMDg": "Channel Topic",
   "7qKDrK": "Confirm Password",
   "WBqMRU": "Current Password",
+  "PTtxi4": "Status Notifications",
   "bZBLBg": "Custom Twitch Emoticons",
   "23TVho": "Default Notification Settings",
   "8l3W09": "Delete Message History",
@@ -29541,6 +29548,7 @@
     ]
   ],
   "cfY4PD": "Claim Reward",
+  "Av9jcX": "Claim Reward!",
   "0IUT4e": [
     "Claim ",
     [
@@ -32934,6 +32942,7 @@
   "z4FcDg": "Event Details",
   "eXHkho": "See Thread ›",
   "XqMe3N": "Select",
+  "ozfa/v": "Selected color",
   "3aednJ": [
     "Select component ",
     [
@@ -34202,7 +34211,6 @@
   "G2egzc": "Application audio is absent",
   "aHOfIi": "Application audio is low quality",
   "5smP3d": "How'd the stream go?",
-  "OR6KNz": "Did you have any technical problems?",
   "fxiRNj": "Stream is black",
   "E8jTMD": "Stream is blurry or pixelated",
   "Xwv419": "Application audio was absent",
@@ -34218,8 +34226,6 @@
   "KHGhHR": "Report Stream Issue",
   "CqjnLC": "Tell us about your stream watching experience.",
   "0uxA2d": "Tell us about your streaming experience.",
-  "ISINlJ": "I had some technical difficulties...",
-  "IySkjY": "The stream was perfectly smooth!",
   "kLQySE": "Show All Participants",
   "YSGk4O": "Invite people to join you!",
   "WkAgPT": "You're alone in this call.",

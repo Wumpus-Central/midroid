@@ -41,7 +41,6 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
       var var3: Context = var1.getContext();
       val var5: ReactContext;
       if (var3 is ReactContext) {
-         q.e(var3);
          var5 = var3 as ReactContext;
       } else {
          if (var3 !is ContextWrapper) {

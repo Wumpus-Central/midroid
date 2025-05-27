@@ -1,14 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
+import Za.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = SelectOptionType.Serializer::class)
 public enum class SelectOptionType(serialNumber: Int) : IntEnum {
@@ -23,15 +20,13 @@ public enum class SelectOptionType(serialNumber: Int) : IntEnum {
    @JvmStatic
    private SelectOptionType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
-   @JvmStatic
    public SelectOptionType.Companion Companion = new SelectOptionType.Companion(null);
 
    @JvmStatic
    fun {
       val var0: Array<SelectOptionType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    init {
@@ -45,7 +40,7 @@ public enum class SelectOptionType(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<SelectOptionType> {
-         return this.get$cachedSerializer();
+         return SelectOptionType.Serializer.INSTANCE;
       }
    }
 

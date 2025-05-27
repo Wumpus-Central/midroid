@@ -8,6 +8,6 @@ public final class m implements OnClickListener {
    public final MessageAccessoriesAdapter j;
 
    public final void onClick(View var1) {
-      MessageAccessoriesAdapter.d(this.j, var1);
+      MessageAccessoriesAdapter.G(this.j, var1);
    }
 }

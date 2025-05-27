@@ -14,20 +14,20 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import o8.w
 
 public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
-   private final val listener: <unrepresentable>
    private final val reactContext: ReactApplicationContext
    private final val reactEvents: ReactEvents
+   private final val listener: <unrepresentable>
 
    init {
       q.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(w.a("photoLibraryChanged", G.b(PhotoLibraryChangedEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("photoLibraryChanged", G.b(PhotoLibraryChangedEvent.class)));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 

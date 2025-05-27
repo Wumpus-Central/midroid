@@ -6,10 +6,6 @@ import kotlin.jvm.internal.q
 import kotlin.properties.a
 
 public object FontManager {
-   private const val FONT_SCALE_CHAT_CLASSIC_DEFAULT: Boolean = false
-   private const val FONT_SCALE_CHAT_CLASSIC_KEY: String = "FONT_SCALE_CHAT_CLASSIC_KEY"
-   private const val FONT_SCALE_KEY: String = "FONT_SCALE_KEY"
-
    private final var initialFontSize: Float by a.a.a()
       private final get() {
          return (initialFontSize$delegate.getValue(this, $$delegatedProperties[0]) as java.lang.Number).floatValue();
@@ -19,6 +15,10 @@ public object FontManager {
          initialFontSize$delegate.setValue(this, $$delegatedProperties[0], var1);
       }
 
+
+   private const val FONT_SCALE_KEY: String = "FONT_SCALE_KEY"
+   private const val FONT_SCALE_CHAT_CLASSIC_KEY: String = "FONT_SCALE_CHAT_CLASSIC_KEY"
+   private const val FONT_SCALE_CHAT_CLASSIC_DEFAULT: Boolean = false
 
    private fun Context.getCache(): SharedPreferences {
       return var1.getSharedPreferences("FontScaleManager", 0);
@@ -219,13 +219,13 @@ public object FontManager {
       // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: iload 1
       // 09: i2f
-      // 0a: fstore 3
-      // 0b: aload 0
-      // 0c: aload 2
-      // 0d: invokevirtual com/discord/react/FontManager.getFontScale (Landroid/content/Context;)F
-      // 10: fstore 4
-      // 12: fload 3
-      // 13: fload 4
+      // 0a: fstore 4
+      // 0c: aload 0
+      // 0d: aload 2
+      // 0e: invokevirtual com/discord/react/FontManager.getFontScale (Landroid/content/Context;)F
+      // 11: fstore 3
+      // 12: fload 4
+      // 14: fload 3
       // 15: fmul
       // 16: f2i
       // 17: istore 1

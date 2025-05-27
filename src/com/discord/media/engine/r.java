@@ -1,14 +1,14 @@
 package com.discord.media.engine;
 
 import com.discord.native.engine.NativeConnection;
-import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
-public final class r implements NativeConnection.SecureFramesTransitionReadyCallback {
-   public final Function0 a;
+public final class r implements NativeConnection.OnPingTimeoutCallback {
+   public final Function4 a;
 
    @Override
-   public final void onTransitionReady() {
-      MediaEngine.z(this.a);
+   public final void onPingTimeout(String var1, int var2, int var3, int var4) {
+      MediaEngine.w(this.a, var1, var2, var3, var4);
    }
 }

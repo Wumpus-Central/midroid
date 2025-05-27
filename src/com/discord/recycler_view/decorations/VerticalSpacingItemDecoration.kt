@@ -9,13 +9,12 @@ import kotlin.jvm.internal.q
 
 public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: Int = 0, endItemSpacingPx: Int = 0, isRecyclerLayoutReversed: Boolean = false)
    : RecyclerView.ItemDecoration {
-   private final val endItemSpacingPx: Int
+   private final val spacingPx: Int
    private final val firstItemSpacingPx: Int
+   private final val endItemSpacingPx: Int
 
    public final var isRecyclerLayoutReversed: Boolean
       internal set
-
-   private final val spacingPx: Int
 
    init {
       this.spacingPx = var1;
@@ -68,8 +67,8 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
       q.h(var4, "state");
       val var10: RecyclerView.ViewHolder = var3.getChildViewHolder(var2);
       q.e(var10);
-      val var7: Boolean = this.isOrWasAtLastItemPosition(var10);
-      val var6: Boolean = this.isOrWasAtFirstItemPosition(var10);
+      val var6: Boolean = this.isOrWasAtLastItemPosition(var10);
+      val var7: Boolean = this.isOrWasAtFirstItemPosition(var10);
       val var8: VerticalSpacingItemDecoration.SpacingProviderView;
       if (var2 is VerticalSpacingItemDecoration.SpacingProviderView) {
          var8 = var2 as VerticalSpacingItemDecoration.SpacingProviderView;
@@ -90,12 +89,12 @@ public class VerticalSpacingItemDecoration(spacingPx: Int, firstItemSpacingPx: I
          var5 = this.spacingPx;
       }
 
-      if (var7) {
+      if (var6) {
          var5 = this.endItemSpacingPx;
       }
 
       var1.bottom = var5;
-      if (var6) {
+      if (var7) {
          var1.top = this.firstItemSpacingPx;
       }
    }

@@ -6,15 +6,14 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.Animation.AnimationListener
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class ProgressDot  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View {
+   private final val scaleAndFadeUpAnimation: Animation
+   private final val scaleAndFadeDownAnimation: Animation
+
    public final var onScaleDownCompleteListener: (() -> Unit)?
       internal set
-
-   private final val scaleAndFadeDownAnimation: Animation
-   private final val scaleAndFadeUpAnimation: Animation
 
    fun ProgressDot(var1: Context) {
       q.h(var1, "context");
@@ -37,6 +36,21 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
       this.scaleAndFadeDownAnimation = var4;
    }
 
+   @JvmStatic
+   fun `start$lambda$0`(var0: ProgressDot): Unit {
+      var0.startDownAnimation();
+      return Unit.a;
+   }
+
+   @JvmStatic
+   fun `start$lambda$1`(var0: ProgressDot): Unit {
+      if (var0.onScaleDownCompleteListener != null) {
+         var0.onScaleDownCompleteListener.invoke();
+      }
+
+      return Unit.a;
+   }
+
    private fun startDownAnimation() {
       this.startAnimation(this.scaleAndFadeDownAnimation);
    }
@@ -52,33 +66,8 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
 
    public fun start(delay: Long = 0L) {
       this.scaleAndFadeUpAnimation.setStartOffset(var1);
-      this.scaleAndFadeUpAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0(this) {
-         final ProgressDot this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            ProgressDot.access$startDownAnimation(this.this$0);
-         }
-      }));
-      this.scaleAndFadeDownAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new Function0(this) {
-         final ProgressDot this$0;
-
-         {
-            super(0);
-            this.this$0 = var1;
-         }
-
-         public final void invoke() {
-            val var1: Function0 = this.this$0.getOnScaleDownCompleteListener();
-            if (var1 != null) {
-               var1.invoke();
-            }
-         }
-      }));
+      this.scaleAndFadeUpAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new a(this)));
+      this.scaleAndFadeDownAnimation.setAnimationListener(new ProgressDot.AnimationListenerImpl(new b(this)));
       this.startUpAnimation();
    }
 

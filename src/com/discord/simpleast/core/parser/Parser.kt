@@ -2,12 +2,12 @@ package com.discord.simpleast.core.parser
 
 import android.util.Log
 import com.discord.simpleast.core.node.Node
+import g9.s
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
 import kotlin.jvm.internal.M
 import kotlin.jvm.internal.q
-import o8.w
 
 public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebugging: Boolean = false) {
    private final val enableDebugging: Boolean
@@ -83,7 +83,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
          }
 
          val var11: java.lang.CharSequence = var1.subSequence(var10.getStartIndex(), var10.getEndIndex());
-         val var5: Int = var10.getStartIndex();
+         val var4: Int = var10.getStartIndex();
          val var12: java.util.Iterator = var3.iterator();
 
          while (true) {
@@ -95,7 +95,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
                   var2 = null;
                } else {
                   this.logMatch(var18, var11);
-                  var2 = w.a(var18, var13);
+                  var2 = s.a(var18, var13);
                }
 
                if (var2 == null) {
@@ -111,16 +111,16 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
             val var21: Rule = var2.a() as Rule;
             val var20: Matcher = var2.b() as Matcher;
-            val var4: Int = var20.end() + var5;
+            val var5: Int = var20.end() + var4;
             val var23: ParseSpec = var21.parse(var20, this, (S)var10.getState());
             val var22: Node = var10.getRoot();
             var22.addChild(var23.getRoot());
-            if (var4 != var10.getEndIndex()) {
-               var9.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var4, var10.getEndIndex()));
+            if (var5 != var10.getEndIndex()) {
+               var9.push(ParseSpec.Companion.createNonterminal(var22, var10.getState(), var5, var10.getEndIndex()));
             }
 
             if (!var23.isTerminal()) {
-               var23.applyOffset(var5);
+               var23.applyOffset(var4);
                var9.push(var23);
             }
 

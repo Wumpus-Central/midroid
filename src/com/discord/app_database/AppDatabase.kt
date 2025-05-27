@@ -1,14 +1,12 @@
 package com.discord.app_database
 
 import android.content.Context
+import cb.z0
 import com.discord.kvstorage.discordapp.DiscordMobileApi
 import com.discord.logging.Log
-import ka.x0
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import kotlinx.serialization.json.Json.a
 
 public object AppDatabase {
    internal const val LAST_DATABASE_USER_ID_PREFERENCES_KEY: String = "_databaseUserId"
@@ -23,17 +21,23 @@ public object AppDatabase {
       return var2.toString();
    }
 
+   @JvmStatic
+   fun `initializeAppDatabase$lambda$0`(var0: Context): Unit {
+      INSTANCE.initializeAppDatabaseAsync(var0);
+      return Unit.a;
+   }
+
    private fun initializeAppDatabaseAsync(context: Context) {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !q.c(var4, "")) {
-         val var3: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var3);
-         val var5: Log = Log.INSTANCE;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("speculatively opening ");
-         var2.append(var3);
-         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
+         val var2: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var2);
+         val var3: Log = Log.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("speculatively opening ");
+         var5.append(var2);
+         Log.i$default(var3, "AppDatabase", var5.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -60,16 +64,16 @@ public object AppDatabase {
             val var23: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "guild_versions");
             val var7: java.lang.String = DiscordMobileApi.getGuildVersions(var1, "non_guild_versions");
             var1 = DiscordMobileApi.getGuildVersions(var1, "force_resync_version");
-            val var6: a = Json.d;
+            val var6: kotlinx.serialization.json.Json.a = Json.d;
             q.e(var23);
             var6.a();
-            var24 = var6.b(new x0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
+            var24 = var6.b(new z0(G.b(GuildVersion.class), GuildVersion.Companion.serializer()), var23) as Array<GuildVersion>;
             q.e(var7);
             var6.a();
-            var27 = var6.b(new x0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
+            var27 = var6.b(new z0(G.b(NonGuildVersion.class), NonGuildVersion.Companion.serializer()), var7) as Array<NonGuildVersion>;
             q.e(var1);
             var6.a();
-            var16 = var6.b(new x0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
+            var16 = var6.b(new z0(G.b(CacheVersion.class), CacheVersion.Companion.serializer()), var1) as Array<CacheVersion>;
             var4 = var16.length;
          } catch (var11: Exception) {
             val var12: Log = Log.INSTANCE;
@@ -126,17 +130,6 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       q.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      t8.a.b(false, false, null, "AppDatabaseLoader", 0, new Function0(var1) {
-         final Context $context;
-
-         {
-            super(0);
-            this.$context = var1;
-         }
-
-         public final void invoke() {
-            AppDatabase.access$initializeAppDatabaseAsync(AppDatabase.INSTANCE, this.$context);
-         }
-      }, 23, null);
+      l9.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
    }
 }

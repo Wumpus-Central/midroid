@@ -22,7 +22,7 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
       q.h(var1, "host");
       q.h(var2, "info");
       super.onInitializeAccessibilityNodeInfo(var1, var2);
-      var2.q0("android.view.ViewGroup");
+      var2.r0("android.view.ViewGroup");
       val var5: java.lang.String;
       if (PollAnswersRecyclerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getData().getAnswersInteraction().ordinal()] == 1) {
          var5 = var1.getContext().getString(string.radiogroup_description);
@@ -30,9 +30,9 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
          var5 = null;
       }
 
-      var2.L0(var5);
+      var2.M0(var5);
       val var4: Context = var1.getContext();
       q.g(var4, "getContext(...)");
-      var2.T0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
+      var2.U0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
    }
 }

@@ -1,20 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import ha.f
-import ha.n
-import ia.a
-import ka.C0
-import ka.G
-import ka.N
-import ka.h
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class EmbedMedia(url: String,
@@ -26,14 +14,14 @@ public data class EmbedMedia(url: String,
       srcIsAnimated: Boolean
    ) :
    EmbedUrlProvider {
-   public open val embedUrl: String
+   public final val url: String
+   public final val proxyURL: String?
+   public final val width: Int
    public final val height: Int
    public final val placeholder: String?
    public final val placeholderVersion: Int?
-   public final val proxyURL: String?
    public final val srcIsAnimated: Boolean
-   public final val url: String
-   public final val width: Int
+   public open val embedUrl: String
 
    init {
       q.h(var1, "url");
@@ -145,164 +133,30 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var6: java.lang.String = this.proxyURL;
+      val var7: java.lang.String = this.url;
+      val var5: java.lang.String = this.proxyURL;
       val var1: Int = this.width;
       val var2: Int = this.height;
       val var8: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
+      val var6: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedMedia(url=");
-      var7.append(var4);
-      var7.append(", proxyURL=");
-      var7.append(var6);
-      var7.append(", width=");
-      var7.append(var1);
-      var7.append(", height=");
-      var7.append(var2);
-      var7.append(", placeholder=");
-      var7.append(var8);
-      var7.append(", placeholderVersion=");
-      var7.append(var5);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: EmbedMedia.$serializer = new EmbedMedia.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.bridge.embed.EmbedMedia", var0, 8);
-         var1.l("url", false);
-         var1.l("proxyURL", true);
-         var1.l("width", false);
-         var1.l("height", false);
-         var1.l("placeholder", true);
-         var1.l("placeholderVersion", true);
-         var1.l("srcIsAnimated", false);
-         var1.l("embedUrl", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         val var2: C0 = C0.a;
-         val var3: KSerializer = a.u(C0.a);
-         val var1: N = N.a;
-         return new KSerializer[]{var2, var3, N.a, N.a, a.u(var2), a.u(var1), h.a, var2};
-      }
-
-      public open fun deserialize(decoder: Decoder): EmbedMedia {
-         q.h(var1, "decoder");
-         val var13: SerialDescriptor = this.getDescriptor();
-         val var14: c = var1.c(var13);
-         var var2: Int;
-         var var3: Int;
-         var var4: Int;
-         var var7: Boolean;
-         var var9: java.lang.String;
-         var var10: java.lang.String;
-         var var11: Int;
-         val var12: java.lang.String;
-         var var16: java.lang.String;
-         if (var14.y()) {
-            var9 = var14.t(var13, 0);
-            val var15: C0 = C0.a;
-            var10 = var14.v(var13, 1, C0.a, null) as java.lang.String;
-            var3 = var14.k(var13, 2);
-            var2 = var14.k(var13, 3);
-            var12 = var14.v(var13, 4, var15, null) as java.lang.String;
-            val var8: Int = var14.v(var13, 5, N.a, null) as Int;
-            var7 = var14.s(var13, 6);
-            var16 = var14.t(var13, 7);
-            var4 = 255;
-            var11 = var8;
-         } else {
-            var var5: Boolean = true;
-            var7 = false;
-            var3 = 0;
-            var2 = 0;
-            var11 = null;
-            var9 = null;
-            var var20: java.lang.String = null;
-            var16 = null;
-            var10 = null;
-            var4 = 0;
-
-            while (var5) {
-               val var6: Int = var14.x(var13);
-               switch (var6) {
-                  case -1:
-                     var5 = false;
-                     break;
-                  case 0:
-                     var9 = var14.t(var13, 0);
-                     var2 |= 1;
-                     break;
-                  case 1:
-                     var20 = var14.v(var13, 1, C0.a, var20) as java.lang.String;
-                     var2 |= 2;
-                     break;
-                  case 2:
-                     var3 = var14.k(var13, 2);
-                     var2 |= 4;
-                     break;
-                  case 3:
-                     var4 = var14.k(var13, 3);
-                     var2 |= 8;
-                     break;
-                  case 4:
-                     var10 = var14.v(var13, 4, C0.a, var10) as java.lang.String;
-                     var2 |= 16;
-                     break;
-                  case 5:
-                     var11 = var14.v(var13, 5, N.a, var11) as Int;
-                     var2 |= 32;
-                     break;
-                  case 6:
-                     var7 = var14.s(var13, 6);
-                     var2 |= 64;
-                     break;
-                  case 7:
-                     var16 = var14.t(var13, 7);
-                     var2 |= 128;
-                     break;
-                  default:
-                     throw new n(var6);
-               }
-            }
-
-            var4 = var2;
-            var12 = var10;
-            var2 = var4;
-            var10 = var20;
-         }
-
-         var14.b(var13);
-         return new EmbedMedia(var4, var9, var10, var3, var2, var12, var11, var7, var16, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: EmbedMedia) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         EmbedMedia.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return ka.G.a.a(this);
-      }
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbedMedia(url=");
+      var4.append(var7);
+      var4.append(", proxyURL=");
+      var4.append(var5);
+      var4.append(", width=");
+      var4.append(var1);
+      var4.append(", height=");
+      var4.append(var2);
+      var4.append(", placeholder=");
+      var4.append(var8);
+      var4.append(", placeholderVersion=");
+      var4.append(var6);
+      var4.append(", srcIsAnimated=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

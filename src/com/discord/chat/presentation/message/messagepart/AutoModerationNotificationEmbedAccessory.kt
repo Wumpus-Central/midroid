@@ -8,8 +8,8 @@ import kotlin.jvm.internal.q
 public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId, message: Message, moderationContext: AutoModerationContext) : AutoModerationNotificationEmbedAccessory(
       var1, var2, var3
    ) {
-   public final val message: Message
    public open val messageId: MessageId
+   public final val message: Message
    public final val moderationContext: AutoModerationContext
 
    fun AutoModerationNotificationEmbedAccessory(var1: java.lang.String, var2: Message, var3: AutoModerationContext) {
@@ -63,17 +63,17 @@ public data class AutoModerationNotificationEmbedAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Message = this.message;
-      val var3: AutoModerationContext = this.moderationContext;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AutoModerationNotificationEmbedAccessory(messageId=");
-      var4.append(var1);
-      var4.append(", message=");
-      var4.append(var2);
-      var4.append(", moderationContext=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: Message = this.message;
+      val var4: AutoModerationContext = this.moderationContext;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AutoModerationNotificationEmbedAccessory(messageId=");
+      var1.append(var2);
+      var1.append(", message=");
+      var1.append(var3);
+      var1.append(", moderationContext=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 }

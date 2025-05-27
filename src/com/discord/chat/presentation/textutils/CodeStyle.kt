@@ -21,16 +21,16 @@ import com.discord.span.utilities.spannable.VerticalPaddingSpan
 import com.discord.theme.ThemeManagerKt
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.q
-import o8.r
-import o8.s
 
 public object CodeStyle {
+   private final val staticCodeStyles: CodeStyleProviders<RenderContext> =
+      new CodeStyleProviders(null, null, new c(), new d(), new e(), new f(), new g(), new h(), 3, null)
+      private final val parsers: MutableMap<String, Parser<RenderContext, Node<RenderContext>, Any>> = new LinkedHashMap()
+
    private final val parser: Parser<RenderContext, Node<RenderContext>, Any>
       private final get() {
          val var3: java.util.Map = parsers;
          val var4: java.lang.String = ThemeManagerKt.getTheme().getClass().getSimpleName();
-         q.g(var4, "getSimpleName(...)");
          var var2: Any = var3.get(var4);
          var var1: Any = var2;
          if (var2 == null) {
@@ -48,24 +48,20 @@ public object CodeStyle {
       }
 
 
-   private final val parsers: MutableMap<String, Parser<RenderContext, Node<RenderContext>, Any>> = new LinkedHashMap()
-   private final val staticCodeStyles: CodeStyleProviders<RenderContext> =
-      new CodeStyleProviders(null, null, new c(), new d(), new e(), new f(), new g(), new h(), 3, null)
-
    @JvmStatic
    fun `_get_parser_$lambda$9$lambda$6`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(ThemeManagerKt.getTheme().getHeaderSecondary()));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(ThemeManagerKt.getTheme().getHeaderSecondary()));
    }
 
    @JvmStatic
    fun `_get_parser_$lambda$9$lambda$7`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(ThemeManagerKt.getTheme().getTextMuted()));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(ThemeManagerKt.getTheme().getTextMuted()));
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      var var3: java.lang.String = kotlin.text.h.a1(var1.getLang()).toString();
+      var var3: java.lang.String = kotlin.text.h.Z0(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -77,17 +73,17 @@ public object CodeStyle {
 
       label16:
       try {
-         val var8: o8.r.a = r.k;
-         var7 = r.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
+         val var9: kotlin.Result.a = Result.k;
+         var8 = Result.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var11: o8.r.a = r.k;
-         var7 = r.b(s.a(var4));
+         val var7: kotlin.Result.a = Result.k;
+         var8 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
-      val var12: java.util.List = i.e(new TextNode(var2));
-      var2 = (java.lang.String)var7;
-      if (r.g(var7)) {
+      val var12: java.util.List = kotlin.collections.i.e(new TextNode(var2));
+      var2 = (java.lang.String)var8;
+      if (Result.g(var8)) {
          var2 = var12;
       }
 
@@ -100,44 +96,44 @@ public object CodeStyle {
 
    @JvmStatic
    fun `staticCodeStyles$lambda$0`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#199A79")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#199A79")));
    }
 
    @JvmStatic
    fun `staticCodeStyles$lambda$1`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#7A8E00")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#7A8E00")));
    }
 
    @JvmStatic
    fun `staticCodeStyles$lambda$2`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#4C9CDF")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#4C9CDF")));
    }
 
    @JvmStatic
    fun `staticCodeStyles$lambda$3`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#AED581")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#AED581")));
    }
 
    @JvmStatic
    fun `staticCodeStyles$lambda$4`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#A77B02")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#A77B02")));
    }
 
    @JvmStatic
    fun `staticCodeStyles$lambda$5`(var0: RenderContext): java.lang.Iterable {
-      q.h(var0, "it");
-      return i.e(new ForegroundColorSpan(Color.parseColor("#AF8AF4")));
+      kotlin.jvm.internal.q.h(var0, "it");
+      return kotlin.collections.i.e(new ForegroundColorSpan(Color.parseColor("#AF8AF4")));
    }
 
    public fun renderCodeBlock(builder: DraweeSpanStringBuilder, node: CodeBlockContentNode, rc: RenderContext, isLastContentNode: Boolean) {
-      q.h(var1, "builder");
-      q.h(var2, "node");
-      q.h(var3, "rc");
+      kotlin.jvm.internal.q.h(var1, "builder");
+      kotlin.jvm.internal.q.h(var2, "node");
+      kotlin.jvm.internal.q.h(var3, "rc");
       var var5: Int;
       if (var3.spoilerIsHidden()) {
          var5 = var3.getTheme().getSpoilerHiddenBackground();
@@ -145,7 +141,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var8: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var7: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -157,8 +153,8 @@ public object CodeStyle {
       var5 = SizeUtilsKt.getDpToPx(4);
       val var9: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
       val var11: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
-      val var7: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var10: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
+      val var8: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
@@ -168,7 +164,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var8, var9, var11, var7, var10}[var14];
+         val var12: Any = new Object[]{var7, var9, var11, var10, var8}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

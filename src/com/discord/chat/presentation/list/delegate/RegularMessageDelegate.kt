@@ -14,7 +14,6 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.message.MessageView.ChainPart
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
-import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 
 public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler,
@@ -22,14 +21,14 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
       messageAccessoriesRecycledViewPool: RecycledViewPool
    )
    : BaseChatListItemDelegate<MessageItem, MessageView> {
+   private final val messageComponentProvider: () -> ComponentProvider
+   private final val messageAccessoriesRecycledViewPool: RecycledViewPool
+
    private final val componentProvider: ComponentProvider
       private final get() {
          return this.messageComponentProvider.invoke() as ComponentProvider;
       }
 
-
-   private final val messageAccessoriesRecycledViewPool: RecycledViewPool
-   private final val messageComponentProvider: () -> ComponentProvider
 
    init {
       q.h(var1, "eventHandlerProvider");
@@ -38,6 +37,11 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
       super(var1, null, 2, null);
       this.messageComponentProvider = var2;
       this.messageAccessoriesRecycledViewPool = var3;
+   }
+
+   @JvmStatic
+   fun `bindView$lambda$1`(var0: RegularMessageDelegate, var1: MessageItem, var2: BaseChatListItemDelegate.Metadata): MessageView.ChainPart {
+      return var0.getChainPart(var1, var2);
    }
 
    private fun getChainPart(item: MessageItem, metadata: Metadata<MessageView>): ChainPart {
@@ -82,22 +86,7 @@ public class RegularMessageDelegate(eventHandlerProvider: () -> ChatEventHandler
          var2.getMessageFrame(),
          this.getEventHandler(),
          this.getComponentProvider(),
-         new Function0(this, var2, var3) {
-            final MessageItem $item;
-            final BaseChatListItemDelegate.Metadata<MessageView> $metadata;
-            final RegularMessageDelegate this$0;
-
-            {
-               super(0);
-               this.this$0 = var1;
-               this.$item = var2;
-               this.$metadata = var3;
-            }
-
-            public final MessageView.ChainPart invoke() {
-               return RegularMessageDelegate.access$getChainPart(this.this$0, this.$item, this.$metadata);
-            }
-         },
+         new d(this, var2, var3),
          var2.getAllowChildGestures(),
          var2.getRenderContentOnly()
       );

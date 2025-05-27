@@ -15,8 +15,8 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
+import g9.n
 import kotlin.jvm.internal.q
-import o8.p
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,
@@ -44,7 +44,7 @@ public fun MessageBase.toChatListMessageItem(
       }
    } else {
       if (var0 !is ErrorMessage) {
-         throw new p();
+         throw new n();
       }
 
       var8 = new DeserializationErrorMessageItem(var0 as ErrorMessage, false, 2, null);
@@ -55,8 +55,8 @@ public fun MessageBase.toChatListMessageItem(
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
    q.h(var0, "<this>");
-   val var3: MessageBase = var0.getMessage();
-   val var4: MessageFrame = var0.getMessageFrame();
+   val var4: MessageBase = var0.getMessage();
+   val var3: MessageFrame = var0.getMessageFrame();
    val var2: MessageFrame = var0.getMessageFrame();
    val var5: MessageFrameType;
    if (var2 != null) {
@@ -73,7 +73,7 @@ public fun MessageRow.toChatListMessageItem(): ChatListItem {
    }
 
    return toChatListMessageItem(
-      var3, var4, MessageContextKt.getMessageContext(var0), var1, var0.getRenderContentOnly(), var0.getReactTag(), var0.getBackgroundHighlight()
+      var4, var3, MessageContextKt.getMessageContext(var0), var1, var0.getRenderContentOnly(), var0.getReactTag(), var0.getBackgroundHighlight()
    );
 }
 

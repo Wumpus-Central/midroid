@@ -7,12 +7,12 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
+import g9.s
 import kotlin.jvm.internal.q
-import o8.w
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
-   private final val heightPixels: Int
    private final val widthPixels: Int
+   private final val heightPixels: Int
 
    init {
       this.widthPixels = var1;
@@ -59,7 +59,7 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public open fun serialize(): WritableNativeMap {
-      return NativeMapExtensionsKt.nativeMapOf(w.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), w.a("height", SizeUtilsKt.getPxToDp(this.heightPixels)));
+      return NativeMapExtensionsKt.nativeMapOf(s.a("width", SizeUtilsKt.getPxToDp(this.widthPixels)), s.a("height", SizeUtilsKt.getPxToDp(this.heightPixels)));
    }
 
    public override fun toString(): String {

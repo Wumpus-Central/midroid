@@ -9,9 +9,9 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
+import h9.n
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import p8.n
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
    q.h(var0, "<this>");
@@ -52,18 +52,18 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
-   val var4: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
+   val var2: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "tag");
    val var3: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "taskName");
-   val var2: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
+   val var4: java.lang.String = NativeMapExtensionsKt.getStringOrEmpty(var1, "title");
    val var5: ReadableMap = var1.getMap("data");
    if (var5 != null) {
       val var7: java.util.Map = NativeMapExtensionsKt.toStringMap(var5);
       if (var7 != null) {
-         return new ServiceNotificationConfiguration.Action(var4, var3, var2, var7);
+         return new ServiceNotificationConfiguration.Action(var2, var3, var4, var7);
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var4, var3, var2, p8.q.h());
+   return new ServiceNotificationConfiguration.Action(var2, var3, var4, h9.q.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
@@ -75,10 +75,10 @@ internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNoti
 
    while (var4.hasNext()) {
       val var2: Int = (var4 as n).a();
-      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var7: ReadableMap = var1.getMap(var2);
-      q.e(var7);
-      var6.add(parse(var5, var7));
+      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var5: ReadableMap = var1.getMap(var2);
+      q.e(var5);
+      var6.add(parse(var7, var5));
    }
 
    return var6;

@@ -5,8 +5,8 @@ import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 
 public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: VoiceInviteEmbed) : VoiceInviteMessageAccessory(var1, var2) {
-   public final val embed: VoiceInviteEmbed
    public open val messageId: MessageId
+   public final val embed: VoiceInviteEmbed
 
    fun VoiceInviteMessageAccessory(var1: java.lang.String, var2: VoiceInviteEmbed) {
       q.h(var1, "messageId");
@@ -50,13 +50,13 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: VoiceInviteEmbed = this.embed;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: VoiceInviteEmbed = this.embed;
       val var2: StringBuilder = new StringBuilder();
       var2.append("VoiceInviteMessageAccessory(messageId=");
-      var2.append(var3);
-      var2.append(", embed=");
       var2.append(var1);
+      var2.append(", embed=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

@@ -10,7 +10,6 @@ import kotlin.jvm.internal.q
 
 public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public abstract val cacheKey: String
-   private final var reactResources: MutableMap<String, String> = new LinkedHashMap()
 
    private final val cache: SharedPreferences
       private final get() {
@@ -19,6 +18,8 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          return var2;
       }
 
+
+   private final var reactResources: MutableMap<String, String> = new LinkedHashMap()
 
    public fun get(context: Context, reactResource: Any): String {
       q.h(var1, "context");
@@ -51,14 +52,14 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public fun set(context: Context, newReactResources: Map<String, String>) {
       q.h(var1, "context");
       q.h(var2, "newReactResources");
-      val var3: Editor = this.getCache(var1).edit();
-      var3.clear();
+      val var5: Editor = this.getCache(var1).edit();
+      var5.clear();
 
-      for (Entry var4 : var2.entrySet()) {
-         var3.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+      for (Entry var3 : var2.entrySet()) {
+         var5.putString(var3.getKey() as java.lang.String, var3.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);
-      var3.apply();
+      var5.apply();
    }
 }

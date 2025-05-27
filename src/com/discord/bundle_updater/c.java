@@ -1,15 +1,12 @@
 package com.discord.bundle_updater;
 
-import android.app.Activity;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class c implements Runnable {
-   public final Activity j;
-   public final Function1 k;
+public final class c implements Function0 {
+   public final BundleUpdater j;
 
-   @Override
-   public final void run() {
-      BundleUpdaterManager.a(this.j, this.k);
+   public final Object invoke() {
+      return BundleUpdater.d(this.j);
    }
 }

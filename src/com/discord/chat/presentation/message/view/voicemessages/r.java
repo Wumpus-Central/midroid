@@ -1,14 +1,15 @@
 package com.discord.chat.presentation.message.view.voicemessages;
 
-import android.animation.ValueAnimator;
-import android.animation.ValueAnimator.AnimatorUpdateListener;
-import com.discord.chat.databinding.AudioPlayerViewBinding;
+import com.discord.react_strings.RenderContext;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class r implements AnimatorUpdateListener {
-   public final AudioPlayerViewBinding a;
+public final class r implements Function1 {
+   public final AudioPlayerView j;
+   public final int k;
+   public final int l;
 
-   public final void onAnimationUpdate(ValueAnimator var1) {
-      <unrepresentable>.a(this.a, var1);
+   public final Object invoke(Object var1) {
+      return AudioPlayerView.i(this.j, this.k, this.l, (RenderContext)var1);
    }
 }

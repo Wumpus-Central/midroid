@@ -28,8 +28,6 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
 
    @JvmStatic
    fun `configureRoleIcon$lambda$3$lambda$2`(var0: ChatEventHandler, var1: RoleIcon, var2: RenderableEmoji, var3: View) {
-      kotlin.jvm.internal.q.h(var0, "$eventHandler");
-      kotlin.jvm.internal.q.h(var1, "$roleIcon");
       var0.onTapRoleIcon(var1.getName(), var2.getUrl(true, var1.getSize()));
    }
 
@@ -76,7 +74,7 @@ public class RoleIconView(context: Context, attrs: AttributeSet) : FrameLayout {
             RenderableEmojiKt.renderEmoji$default((RenderableEmoji)var8, var6, SizeUtilsKt.getSpToPx(var1.getSize()), true, 0, null, 48, null)
          );
          kotlin.jvm.internal.q.e(var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new C(var2, var1, (RenderableEmoji)var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var5, false, new B0(var2, var1, (RenderableEmoji)var8), 1, null);
       }
    }
 }

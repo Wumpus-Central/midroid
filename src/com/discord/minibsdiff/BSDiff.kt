@@ -1,13 +1,12 @@
 package com.discord.minibsdiff
 
-import U9.j
-import V9.a
+import Ma.j
+import Na.a
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
 import java.io.RandomAccessFile
 import java.util.Arrays
-import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
 public object BSDiff {
@@ -29,8 +28,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var20: ByteArray = new byte[1000000];
       val var21: ByteArray = new byte[1000000];
+      val var20: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -43,37 +42,37 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var13 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var17 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var20[var7] += var21[var7];
+                  var21[var7] += var20[var7];
                }
 
-               var6.write(var20, 0, var8);
+               var6.write(var21, 0, var8);
             }
 
             var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
-               var6.write(var20, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
+               var6.write(var21, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var17);
-            var11 += var15 + var13;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var17 + var13;
          }
 
          var6.close();
@@ -81,18 +80,12 @@ public object BSDiff {
    }
 
    private fun chunkRange(total: Long): Sequence<Int> {
-      return j.y(i.T(d.q(d.s(0, var1), 1000000L)), new Function1(var1) {
-         final long $total;
+      return j.y(i.T(d.q(d.s(0, var1), 1000000L)), new U1.a(var1));
+   }
 
-         {
-            super(1);
-            this.$total = var1;
-         }
-
-         public final Integer invoke(long var1) {
-            return (int)Math.min(this.$total - var1, 1000000L);
-         }
-      });
+   @JvmStatic
+   fun `chunkRange$lambda$0`(var0: Long, var2: Long): Int {
+      return (int)Math.min(var0 - var2, 1000000L);
    }
 
    public fun bspatchStreaming(oldPath: File, patchPath: File, newPath: File) {
@@ -175,25 +168,25 @@ public object BSDiff {
       // 84: astore 6
       // 86: aload 3
       // 87: aconst_null
-      // 88: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 88: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8b: aload 2
       // 8c: aconst_null
-      // 8d: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8d: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 90: aload 5
       // 92: aconst_null
-      // 93: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 93: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 96: aload 4
       // 98: aconst_null
-      // 99: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 99: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 9c: aload 1
       // 9d: aconst_null
-      // 9e: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 9e: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // a1: return
       // a2: astore 3
       // a3: goto e5
-      // a6: astore 3
+      // a6: astore 2
       // a7: goto da
-      // aa: astore 3
+      // aa: astore 2
       // ab: goto cf
       // ae: astore 6
       // b0: goto c3
@@ -203,7 +196,7 @@ public object BSDiff {
       // b8: astore 6
       // ba: aload 3
       // bb: aload 7
-      // bd: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // bd: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // c0: aload 6
       // c2: athrow
       // c3: aload 6
@@ -211,31 +204,31 @@ public object BSDiff {
       // c6: astore 3
       // c7: aload 2
       // c8: aload 6
-      // ca: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ca: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cd: aload 3
       // ce: athrow
-      // cf: aload 3
+      // cf: aload 2
       // d0: athrow
-      // d1: astore 2
+      // d1: astore 3
       // d2: aload 5
-      // d4: aload 3
-      // d5: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d8: aload 2
+      // d4: aload 2
+      // d5: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // d8: aload 3
       // d9: athrow
-      // da: aload 3
+      // da: aload 2
       // db: athrow
-      // dc: astore 2
+      // dc: astore 3
       // dd: aload 4
-      // df: aload 3
-      // e0: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // e3: aload 2
+      // df: aload 2
+      // e0: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // e3: aload 3
       // e4: athrow
       // e5: aload 3
       // e6: athrow
       // e7: astore 2
       // e8: aload 1
       // e9: aload 3
-      // ea: invokestatic A8/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ea: invokestatic s9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // ed: aload 2
       // ee: athrow
    }

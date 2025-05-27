@@ -1,25 +1,14 @@
 package com.discord.chat.input.events
 
+import Za.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import ha.f
-import ha.n
-import ka.G
-import ka.N
-import ka.G.a
-import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEvent {
-   public final val height: Int
    public final val width: Int
+   public final val height: Int
 
    init {
       this.width = var1;
@@ -62,91 +51,15 @@ internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEve
    }
 
    public override fun toString(): String {
-      val var1: Int = this.width;
-      val var2: Int = this.height;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnContentSizeChangeEvent(width=");
-      var3.append(var1);
-      var3.append(", height=");
       var3.append(var2);
+      var3.append(", height=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: OnContentSizeChangeEvent.$serializer = new OnContentSizeChangeEvent.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("com.discord.chat.input.events.OnContentSizeChangeEvent", var0, 2);
-         var1.l("width", false);
-         var1.l("height", false);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{N.a, N.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): OnContentSizeChangeEvent {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
-         var var3: Int;
-         var var4: Int;
-         if (var8.y()) {
-            var3 = var8.k(var7, 0);
-            var4 = var8.k(var7, 1);
-            var2 = 3;
-         } else {
-            var var5: Boolean = true;
-            var3 = 0;
-            var4 = 0;
-            var2 = 0;
-
-            while (var5) {
-               val var6: Int = var8.x(var7);
-               if (var6 != -1) {
-                  if (var6 != 0) {
-                     if (var6 != 1) {
-                        throw new n(var6);
-                     }
-
-                     var4 = var8.k(var7, 1);
-                     var2 |= 2;
-                  } else {
-                     var3 = var8.k(var7, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var5 = false;
-               }
-            }
-         }
-
-         var8.b(var7);
-         return new OnContentSizeChangeEvent(var2, var3, var4, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: OnContentSizeChangeEvent) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         OnContentSizeChangeEvent.write$Self$chat_input_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
    }
 
    public companion object {

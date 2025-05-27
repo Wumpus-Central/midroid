@@ -3,6 +3,10 @@ package com.discord.chat.presentation.message.view.botuikit
 import com.discord.misc.utilities.size.SizeUtilsKt
 
 public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, widthReductions: Int = 0) {
+   public final val topLevelAvailableWidth: Int
+   public final val topLevelMaxWidth: Int
+   internal final val widthReductions: Int
+
    public final val availableWidth: Int
       public final get() {
          return this.getTopLevelWidth() - this.widthReductions;
@@ -35,16 +39,11 @@ public data class WidthInfo(topLevelAvailableWidth: Int, topLevelMaxWidth: Int, 
       }
 
 
-   public final val topLevelAvailableWidth: Int
-   public final val topLevelMaxWidth: Int
-
    private final val topLevelWidth: Int
       private final get() {
          return Math.min(this.topLevelAvailableWidth, this.topLevelMaxWidth);
       }
 
-
-   internal final val widthReductions: Int
 
    init {
       this.topLevelAvailableWidth = var1;

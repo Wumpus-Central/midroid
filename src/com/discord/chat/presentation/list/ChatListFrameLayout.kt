@@ -4,22 +4,21 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
-import kotlin.jvm.internal.q
 
 public open class ChatListFrameLayout  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout, ChatListChildView {
-   public open var currentKey: Any?
-      internal final set
-
    public open var lastKey: Any?
       internal final set
 
+   public open var currentKey: Any?
+      internal final set
+
    open fun ChatListFrameLayout(var1: Context) {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
    }
 

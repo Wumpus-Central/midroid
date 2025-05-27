@@ -14,9 +14,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
+import h9.n
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import p8.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
@@ -50,19 +50,17 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
-      q.h(var0, "this$0");
-      q.h(var1, "$rects");
       val var2: ReactRootView.Companion = ReactRootView.Companion;
-      val var3: ReactApplicationContext = var0.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
+      val var6: ReactApplicationContext = var0.getReactApplicationContext();
+      q.g(var6, "getReactApplicationContext(...)");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var6: ArrayList = new ArrayList(i.v(var4, 10));
+      val var3: ArrayList = new ArrayList(i.v(var4, 10));
       val var7: java.util.Iterator = var4.iterator();
 
       while (var7.hasNext()) {
          val var5: ReadableMap = var1.getMap((var7 as n).a());
          q.e(var5);
-         var6.add(
+         var3.add(
             new Rect(
                SizeUtilsKt.getDpToPx(var5.getInt("left")),
                SizeUtilsKt.getDpToPx(var5.getInt("top")),
@@ -72,7 +70,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
          );
       }
 
-      var2.setSystemGestureExclusionRects(var3, var6);
+      var2.setSystemGestureExclusionRects(var6, var3);
    }
 
    public override fun openAccessibilitySettings() {

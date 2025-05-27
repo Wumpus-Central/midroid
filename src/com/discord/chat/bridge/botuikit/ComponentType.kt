@@ -1,14 +1,11 @@
 package com.discord.chat.bridge.botuikit
 
+import Za.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import ha.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import o8.l
-import o8.o
-import w8.a
 
 @f(with = ComponentType.Serializer::class)
 public enum class ComponentType(serialNumber: Int) : IntEnum {
@@ -34,15 +31,13 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
    @JvmStatic
    private ComponentType[] $VALUES;
    @JvmStatic
-   private Lazy $cachedSerializer$delegate = l.b(o.k, <unrepresentable>.INSTANCE);
-   @JvmStatic
    public ComponentType.Companion Companion = new ComponentType.Companion(null);
 
    @JvmStatic
    fun {
       val var0: Array<ComponentType> = $values();
       $VALUES = var0;
-      $ENTRIES = a.a(var0);
+      $ENTRIES = o9.a.a(var0);
    }
 
    init {
@@ -56,7 +51,7 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
 
    public companion object {
       public fun serializer(): KSerializer<ComponentType> {
-         return this.get$cachedSerializer();
+         return ComponentType.Serializer.INSTANCE;
       }
    }
 

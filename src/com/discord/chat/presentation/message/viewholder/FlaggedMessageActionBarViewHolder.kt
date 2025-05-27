@@ -19,15 +19,11 @@ public class FlaggedMessageActionBarViewHolder(actionBarView: FlaggedMessageActi
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function2, var1: java.lang.String, var2: Long, var4: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAutoModerationActions");
-      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.invoke(MessageId.box-impl(var1), ChannelId.box-impl(var2));
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function2, var1: java.lang.String, var2: Long, var4: View) {
-      kotlin.jvm.internal.q.h(var0, "$onTapAutoModerationFeedback");
-      kotlin.jvm.internal.q.h(var1, "$messageId");
       var0.invoke(MessageId.box-impl(var1), ChannelId.box-impl(var2));
    }
 
@@ -42,6 +38,6 @@ public class FlaggedMessageActionBarViewHolder(actionBarView: FlaggedMessageActi
       val var6: AutoModerationContext = var1.getAutoModerationContext();
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var7: java.lang.String = var1.getMessage().getId-3Eiw7ao();
-      this.actionBarView.setActions(var6, new j(var2, var7, var4), new k(var3, var7, var4));
+      this.actionBarView.setActions(var6, new l(var2, var7, var4), new m(var3, var7, var4));
    }
 }

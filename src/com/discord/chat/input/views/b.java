@@ -1,17 +1,12 @@
 package com.discord.chat.input.views;
 
-import android.content.Context;
-import android.view.View;
-import androidx.core.view.ContentInfoCompat;
-import androidx.core.view.J;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class b implements J {
-   public final ChatInputRootView a;
-   public final Context b;
+public final class b implements Function0 {
+   public final ChatInputRootView j;
 
-   @Override
-   public final ContentInfoCompat a(View var1, ContentInfoCompat var2) {
-      return ChatInputRootView.a(this.a, this.b, var1, var2);
+   public final Object invoke() {
+      return ChatInputRootView.f(this.j);
    }
 }

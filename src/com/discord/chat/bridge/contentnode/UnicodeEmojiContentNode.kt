@@ -1,25 +1,14 @@
 package com.discord.chat.bridge.contentnode
 
-import ha.f
-import ha.n
-import ka.C0
-import ka.G
-import ka.h
-import ka.G.a
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import kotlinx.serialization.descriptors.SerialDescriptor
-import kotlinx.serialization.encoding.CompositeEncoder
-import kotlinx.serialization.encoding.Decoder
-import kotlinx.serialization.encoding.Encoder
-import kotlinx.serialization.encoding.c
-import kotlinx.serialization.internal.PluginGeneratedSerialDescriptor
 
 @f
 public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
    public final val content: String
-   public open val jumboable: Boolean
    public final val surrogate: String
+   public open val jumboable: Boolean
 
    init {
       q.h(var1, "content");
@@ -71,102 +60,17 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
 
    public override fun toString(): String {
       val var3: java.lang.String = this.content;
-      val var4: java.lang.String = this.surrogate;
+      val var2: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UnicodeEmojiContentNode(content=");
-      var2.append(var3);
-      var2.append(", surrogate=");
-      var2.append(var4);
-      var2.append(", jumboable=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
-   }
-
-   public object `$serializer` : G {
-      public open val descriptor: SerialDescriptor
-         public open get() {
-            return descriptor;
-         }
-
-
-      @JvmStatic
-      fun {
-         val var0: UnicodeEmojiContentNode.$serializer = new UnicodeEmojiContentNode.$serializer();
-         INSTANCE = var0;
-         val var1: PluginGeneratedSerialDescriptor = new PluginGeneratedSerialDescriptor("emoji", var0, 3);
-         var1.l("content", false);
-         var1.l("surrogate", false);
-         var1.l("jumboable", true);
-         descriptor = var1;
-      }
-
-      public open fun childSerializers(): Array<KSerializer<*>> {
-         return new KSerializer[]{C0.a, C0.a, h.a};
-      }
-
-      public open fun deserialize(decoder: Decoder): UnicodeEmojiContentNode {
-         q.h(var1, "decoder");
-         val var7: SerialDescriptor = this.getDescriptor();
-         val var8: c = var1.c(var7);
-         var var2: Int;
-         var var5: Boolean;
-         var var6: java.lang.String;
-         var var9: java.lang.String;
-         if (var8.y()) {
-            var6 = var8.t(var7, 0);
-            var9 = var8.t(var7, 1);
-            var5 = var8.s(var7, 2);
-            var2 = 7;
-         } else {
-            var6 = null;
-            var9 = null;
-            var var3: Boolean = true;
-            var5 = false;
-            var2 = 0;
-
-            while (var3) {
-               val var4: Int = var8.x(var7);
-               if (var4 != -1) {
-                  if (var4 != 0) {
-                     if (var4 != 1) {
-                        if (var4 != 2) {
-                           throw new n(var4);
-                        }
-
-                        var5 = var8.s(var7, 2);
-                        var2 |= 4;
-                     } else {
-                        var9 = var8.t(var7, 1);
-                        var2 |= 2;
-                     }
-                  } else {
-                     var6 = var8.t(var7, 0);
-                     var2 |= 1;
-                  }
-               } else {
-                  var3 = false;
-               }
-            }
-         }
-
-         var8.b(var7);
-         return new UnicodeEmojiContentNode(var2, var6, var9, var5, null);
-      }
-
-      public open fun serialize(encoder: Encoder, value: UnicodeEmojiContentNode) {
-         q.h(var1, "encoder");
-         q.h(var2, "value");
-         val var3: SerialDescriptor = this.getDescriptor();
-         val var4: CompositeEncoder = var1.c(var3);
-         UnicodeEmojiContentNode.write$Self$chat_release(var2, var4, var3);
-         var4.b(var3);
-      }
-
-      fun typeParametersSerializers(): Array<KSerializer> {
-         return a.a(this);
-      }
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UnicodeEmojiContentNode(content=");
+      var4.append(var3);
+      var4.append(", surrogate=");
+      var4.append(var2);
+      var4.append(", jumboable=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

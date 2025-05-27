@@ -82,8 +82,8 @@ public class ClanTagChipletView(context: Context, attrs: AttributeSet) : FrameLa
    }
 
    public companion object {
-      private const val BASE_BADGE_SIZE: Float
       private const val BASE_HEIGHT: Float
       private const val BASE_PADDING_HORIZONTAL: Float
+      private const val BASE_BADGE_SIZE: Float
    }
 }

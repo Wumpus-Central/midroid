@@ -14,10 +14,10 @@ import com.th3rdwave.safeareacontext.e
 import kotlin.jvm.internal.q
 
 internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0F, bottomDp: Float = 0.0F, leftDp: Float = 0.0F) {
+   public final val topDp: Float
+   public final val rightDp: Float
    public final val bottomDp: Float
    public final val leftDp: Float
-   public final val rightDp: Float
-   public final val topDp: Float
 
    fun SafeAreaEdgeInsets() {
       this(0.0F, 0.0F, 0.0F, 0.0F, 15, null);
@@ -106,7 +106,7 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
          val var12: SafeAreaEdgeInsets;
          if (VERSION.SDK_INT > 29) {
             val var5: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var11.b));
-            val var6: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var11.d));
+            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var11.d));
             val var16: Int;
             if (var3) {
                var16 = var11.a;
@@ -114,15 +114,15 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
                var16 = -1;
             }
 
-            val var4: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var16));
+            val var6: Float = SizeUtilsKt.getPxToDp(Math.max(var10.a, var16));
             if (var3) {
                var7 = var11.c;
             }
 
-            var12 = new SafeAreaEdgeInsets(var5, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var6, var4);
+            var12 = new SafeAreaEdgeInsets(var5, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var4, var6);
          } else {
-            val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var2.k()));
-            val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var2.h()));
+            val var14: Float = SizeUtilsKt.getPxToDp(Math.max(var10.b, var2.k()));
+            val var13: Float = SizeUtilsKt.getPxToDp(Math.max(var10.d, var2.h()));
             val var18: Int;
             if (var3) {
                var18 = var2.i();
@@ -135,7 +135,7 @@ internal data class SafeAreaEdgeInsets(topDp: Float = 0.0F, rightDp: Float = 0.0
                var7 = var2.j();
             }
 
-            var12 = new SafeAreaEdgeInsets(var13, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var14, var15);
+            var12 = new SafeAreaEdgeInsets(var14, SizeUtilsKt.getPxToDp(Math.max(var10.c, var7)), var13, var15);
          }
 
          return var12;

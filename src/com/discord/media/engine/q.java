@@ -4,11 +4,11 @@ import com.discord.native.engine.NativeConnection;
 import kotlin.jvm.functions.Function4;
 
 // $VF: synthetic class
-public final class q implements NativeConnection.OnPingTimeoutCallback {
+public final class q implements NativeConnection.OnPingCallback {
    public final Function4 a;
 
    @Override
-   public final void onPingTimeout(String var1, int var2, int var3, int var4) {
-      MediaEngine.s(this.a, var1, var2, var3, var4);
+   public final void onPing(int var1, String var2, int var3, int var4) {
+      MediaEngine.y(this.a, var1, var2, var3, var4);
    }
 }

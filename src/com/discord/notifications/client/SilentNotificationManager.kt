@@ -51,11 +51,11 @@ public class SilentNotificationManager(reactContext: Context) {
    }
 
    private fun ChannelId.toMessageCountKey(): String {
-      val var4: java.lang.String = ChannelId.toString-impl(var1);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var4);
-      var3.append("_num");
-      return var3.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(var1);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var3);
+      var4.append("_num");
+      return var4.toString();
    }
 
    private fun updateLastMessageReceivedForChannel(channelId: ChannelId) {
@@ -110,9 +110,9 @@ public class SilentNotificationManager(reactContext: Context) {
    }
 
    public companion object {
+      public const val SILENT_NOTIFICATION_CACHE_STORE_NAME: String
       public const val IDLE_TIME_TO_RECEIVE_PUSH_FROM_GDM_OR_SMALL_GUILD_MINS: Int
       public const val MAX_MESSAGES_BEFORE_THROTTLE: Int
-      public const val SILENT_NOTIFICATION_CACHE_STORE_NAME: String
       private final var instance: SilentNotificationManager?
 
       public fun get(context: Context): SilentNotificationManager {

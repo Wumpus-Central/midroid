@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import J1.f
+import B2.f
 import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener
@@ -14,7 +14,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
    controllerListener: ControllerListener<in Any>? = null
 ) {
    q.h(var0, "<this>");
-   if (var1 != null && !h.d0(var1)) {
+   if (var1 != null && !h.c0(var1)) {
       val var8: Uri = f.r(var1);
       if (var8 != null) {
          var var5: Boolean;
@@ -24,12 +24,12 @@ public fun SimpleDraweeView.setOptionalImageUrl(
                var7 = java.lang.Boolean.TRUE;
                if (q.c(var3, java.lang.Boolean.TRUE)) {
                   val var13: java.lang.String = var8.getLastPathSegment();
-                  if (var13 != null && h.t(var13, ".webp", true)) {
+                  if (var13 != null && h.s(var13, ".webp", true)) {
                      break label57;
                   }
 
                   val var14: java.lang.String = var8.getLastPathSegment();
-                  if (var14 != null && h.t(var14, ".avif", true)) {
+                  if (var14 != null && h.s(var14, ".avif", true)) {
                      break label57;
                   }
                }
@@ -45,7 +45,7 @@ public fun SimpleDraweeView.setOptionalImageUrl(
          label47: {
             if (!q.c(var2, var7)) {
                val var11: java.lang.String = var8.getLastPathSegment();
-               if ((var11 == null || !h.t(var11, ".gif", true)) && !var5) {
+               if ((var11 == null || !h.s(var11, ".gif", true)) && !var5) {
                   var6 = false;
                   break label47;
                }
@@ -56,11 +56,8 @@ public fun SimpleDraweeView.setOptionalImageUrl(
 
          val var12: Builder = var8.buildUpon();
          var1 = var8.getLastPathSegment();
-         if (var1 != null) {
-            q.e(var1);
-            if (h.t(var1, ".avif", true)) {
-               var12.appendQueryParameter("format", "webp");
-            }
+         if (var1 != null && h.s(var1, ".avif", true)) {
+            var12.appendQueryParameter("format", "webp");
          }
 
          if (var6 && var5) {

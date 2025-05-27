@@ -1,20 +1,20 @@
 package com.discord.foreground_service.utils
 
+import O1.a
 import android.app.Notification
 import android.app.Service
 import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.os.Build.VERSION
-import androidx.core.content.a
+import androidx.core.content.b
 import com.discord.foreground_service.service.ServiceNotificationConfiguration
 import kotlin.jvm.internal.q
-import q1.b
 
 public fun hasMicrophonePermission(context: Context): Boolean {
    q.h(var0, "context");
    val var1: Boolean;
-   if (a.a(var0, "android.permission.RECORD_AUDIO") == 0) {
+   if (b.a(var0, "android.permission.RECORD_AUDIO") == 0) {
       var1 = true;
    } else {
       var1 = false;
@@ -51,7 +51,7 @@ internal fun Service.startForegroundCompat(context: Context, notificationId: Int
          var7 = var5;
       }
 
-      q1.a.a(var0, var2, var3, var7);
+      a.a(var0, var2, var3, var7);
    } else {
       var0.startForeground(var2, var3);
    }
@@ -62,7 +62,7 @@ internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): Compon
    q.h(var1, "serviceIntent");
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = b.a(var0, var1);
+      var2 = O1.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }

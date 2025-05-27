@@ -5,9 +5,9 @@ import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 
 public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: GiftEmbed) : GiftMessageAccessory(var1, var2, var3) {
-   public final val gift: GiftEmbed
-   public final val index: Int
    public open val messageId: MessageId
+   public final val index: Int
+   public final val gift: GiftEmbed
 
    fun GiftMessageAccessory(var1: java.lang.String, var2: Int, var3: GiftEmbed) {
       q.h(var1, "messageId");
@@ -61,17 +61,17 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
-      val var2: GiftEmbed = this.gift;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GiftMessageAccessory(messageId=");
-      var3.append(var4);
-      var3.append(", index=");
-      var3.append(var1);
-      var3.append(", gift=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var4: GiftEmbed = this.gift;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("GiftMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", index=");
+      var2.append(var1);
+      var2.append(", gift=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import ha.f
+import Za.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -59,7 +59,7 @@ public sealed interface SectionAccessory<T extends Component> {
    }
 
    public companion object {
-      public fun <T0> serializer(typeSerial0: KSerializer<T0>): KSerializer<SectionAccessory<T0>> {
+      public fun <T> serializer(typeSerial0: KSerializer<T>): KSerializer<SectionAccessory<T>> {
          q.h(var1, "typeSerial0");
          return SectionAccessory.Serializer.INSTANCE;
       }

@@ -4,7 +4,7 @@ import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
-import com.facebook.yoga.e
+import g9.n
 import kotlin.jvm.internal.q
 
 internal class FastestListShadowNode : LayoutShadowNode {
@@ -36,7 +36,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
 
    public open fun setPadding(spacingType: Int, padding: Float) {
       super.setPadding(var1, var2);
-      val var4: e = e.g(var1);
+      val var4: com.facebook.yoga.e = com.facebook.yoga.e.g(var1);
       val var3: Int;
       if (var4 == null) {
          var3 = -1;
@@ -52,7 +52,7 @@ internal class FastestListShadowNode : LayoutShadowNode {
             throw new IllegalStateException(var7.toString().toString());
          case 0:
          default:
-            break;
+            throw new n();
          case 1:
             val var6: RectF = this.padding;
             this.padding.left = var2;
@@ -92,11 +92,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setPaddingPercent(spacingType: Int, percent: Float): Nothing {
-      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append(" does not support percentage based padding");
-      throw new IllegalStateException(var4.toString().toString());
+      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append(" does not support percentage based padding");
+      throw new IllegalStateException(var3.toString().toString());
    }
 
    public open fun setReactTag(reactTag: Int) {

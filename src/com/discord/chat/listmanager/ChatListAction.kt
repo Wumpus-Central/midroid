@@ -6,9 +6,9 @@ public sealed class ChatListAction protected constructor() {
    public object Noop : ChatListAction()
 
    public data class ScrollTo(position: Int, animate: Boolean, highlight: Boolean) : ChatListAction() {
+      public final val position: Int
       public final val animate: Boolean
       public final val highlight: Boolean
-      public final val position: Int
 
       init {
          this.position = var1;

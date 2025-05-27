@@ -73,7 +73,7 @@ public inline class Surrogates {
    public fun withoutDiversity(): String {
       val var1: CharArray = Character.toChars(var0.codePointAt(0));
       q.g(var1, "toChars(...)");
-      return c.f0(var1, "", null, null, 0, null, null, 62, null);
+      return kotlin.collections.c.i0(var1, "", null, null, 0, null, null, 62, null);
    }
 
    override fun equals(var1: Any): Boolean {
