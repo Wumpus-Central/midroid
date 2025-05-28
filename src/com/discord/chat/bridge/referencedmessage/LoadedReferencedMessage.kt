@@ -60,14 +60,14 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
 
    public override fun toString(): String {
       val var2: Message = this.message;
-      val var1: StructurableText = this.systemContent;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LoadedReferencedMessage(message=");
-      var3.append(var2);
-      var3.append(", systemContent=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: StructurableText = this.systemContent;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LoadedReferencedMessage(message=");
+      var1.append(var2);
+      var1.append(", systemContent=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

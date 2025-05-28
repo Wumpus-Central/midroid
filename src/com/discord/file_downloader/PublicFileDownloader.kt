@@ -82,21 +82,21 @@ public object PublicFileDownloader {
       // 49: astore 1
       // 4a: goto 89
       // 4d: new com/discord/file_downloader/DownloadState$Failure
-      // 50: astore 8
+      // 50: astore 5
       // 52: new java/lang/IllegalStateException
-      // 55: astore 5
+      // 55: astore 7
       // 57: new java/io/FileNotFoundException
-      // 5a: astore 7
-      // 5c: aload 7
+      // 5a: astore 8
+      // 5c: aload 8
       // 5e: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 61: aload 5
-      // 63: aload 7
+      // 61: aload 7
+      // 63: aload 8
       // 65: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
-      // 68: aload 8
-      // 6a: aload 5
+      // 68: aload 5
+      // 6a: aload 7
       // 6c: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 6f: aload 1
-      // 70: aload 8
+      // 70: aload 5
       // 72: invokeinterface Ca/s.g (Ljava/lang/Object;)Ljava/lang/Object; 2
       // 77: pop
       // 78: aload 1
@@ -218,13 +218,13 @@ public object PublicFileDownloader {
 
                            val var22: Any = this.$context.getSystemService("download");
                            q.f(var22, "null cannot be cast to non-null type android.app.DownloadManager");
-                           val var33: DownloadManager = var22 as DownloadManager;
+                           val var10: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.j = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var33.enqueue(
+                              var3x = var10.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.j = var3x;
@@ -238,7 +238,7 @@ public object PublicFileDownloader {
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var33, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var10, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
                                  var6 = var1;
@@ -267,8 +267,8 @@ public object PublicFileDownloader {
                               return var9;
                            }
 
-                           var1 = var23;
                            var20 = var1;
+                           var1 = var23;
                         }
 
                         var7 = var1;
@@ -288,8 +288,8 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var23 = var1;
                   var1 = var20;
+                  var23 = var1;
                }
 
                val var24: c = new c(var23);

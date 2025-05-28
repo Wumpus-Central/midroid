@@ -110,17 +110,17 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.classificationId;
-      val var4: java.lang.String = this.titleText;
+      val var4: java.lang.String = this.classificationId;
+      val var1: java.lang.String = this.titleText;
       val var5: java.lang.String = this.titleIcon;
       val var3: java.lang.String = this.subtitleText;
       val var6: java.lang.String = this.descriptionText;
       val var2: java.lang.String = this.ctaText;
       val var7: StringBuilder = new StringBuilder();
       var7.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var7.append(var1);
-      var7.append(", titleText=");
       var7.append(var4);
+      var7.append(", titleText=");
+      var7.append(var1);
       var7.append(", titleIcon=");
       var7.append(var5);
       var7.append(", subtitleText=");

@@ -84,13 +84,13 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                } else {
                   var var7: Int = (int)var2.getX() - var20.getTotalPaddingLeft() + var20.getScrollX();
                   val var30: Int = var20.getLayout().getLineForVertical((int)var2.getY() - var20.getTotalPaddingTop() + var20.getScrollY());
-                  val var5: Float = var20.getLayout().getLineRight(var30);
+                  val var4: Float = var20.getLayout().getLineRight(var30);
                   val var6: Float = var20.getLayout().getLineLeft(var30);
-                  val var4: Float = var7;
-                  if (var7 > var5 || var7 >= 0 && var7 < var6) {
+                  val var5: Float = var7;
+                  if (var7 > var4 || var7 >= 0 && var7 < var6) {
                      var14 = new NestedClickableSpan[0];
                   } else {
-                     var7 = var20.getLayout().getOffsetForHorizontal(var30, var4);
+                     var7 = var20.getLayout().getOffsetForHorizontal(var30, var5);
                      var14 = var33.getSpans(var7, var7, NestedClickableSpan.class);
                      q.g(var14, "getSpans(...)");
                   }

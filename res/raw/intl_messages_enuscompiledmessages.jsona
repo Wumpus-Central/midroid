@@ -1108,64 +1108,6 @@
   "2B/phI": "App icon",
   "HehpFR": "There was an error trying to load the application.",
   "QQsaCQ": "Free",
-  "4ZJ+7e": [
-    "You're so generous! You've given ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " month"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " months"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We hope they enjoy!"
-  ],
-  "p0pZXF": [
-    "You're so generous! You've given ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " year"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " years"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We hope they enjoy!"
-  ],
   "As9eLi": "This link is included in your confirmation email and can be found and managed in your gift inventory. Gift link expires after 48 hours.",
   "bUdTqK": [
     "You're so generous! Send this gift to a friend to give them ",
@@ -5738,9 +5680,10 @@
       "cardinal"
     ]
   ],
+  "G8dhaW": "Can’t wait for",
   "np9mf3": "Current obsession",
-  "G1b309": "On repeat",
-  "iXcll5": "Playing lately",
+  "f+PyDw": "Question of the day",
+  "Zx7N1t": "Recommendation needed",
   "+KXSFh": [
     "Remove custom status label: ",
     [
@@ -5756,7 +5699,6 @@
     ]
   ],
   "45vlm5": "Shower thought",
-  "NcnbEx": "Watching lately",
   "TS3eJS": [
     [
       6,
@@ -5797,12 +5739,15 @@
   "l3pZcn": "What’s your hot take?",
   "SluNa2": "Latest hobby?",
   "ylzor6": "What have you been listening to?",
+  "UZ5AQk": "What are you looking forward to?",
   "1TlHw8": "Most used emoji lately?",
   "45r7ub": "Pick a mythical creature as a pet",
   "/Zm5VV": "Favorite NPC companion?",
   "r5TNm5": "What have you been playing?",
+  "nLMBxM": "What do you want to ask today?",
   "nXJgjo": "Just ranked up in...",
   "pYQRnJ": "What have you been reading?",
+  "lneQf3": "What would you like recommendations for?",
   "Wf8fxM": "Shower thought?",
   "S7UJ0t": "Last song stuck in your head?",
   "Vok4QU": "If your life had a theme song...",
@@ -15275,6 +15220,29 @@
   ],
   "E1fc4u": [
     "Set system channel server setup tips to ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "newValue"
+        ]
+      ]
+    ]
+  ],
+  "ix1dnZ": [
+    [
+      8,
+      "$b",
+      [
+        "Disabled"
+      ]
+    ],
+    " the server tag"
+  ],
+  "4LKpKS": [
+    "Updated server tag to ",
     [
       8,
       "$b",
@@ -34084,6 +34052,73 @@
     " at any time."
   ],
   "o8Bypq": "Highlight Notifications",
+  "GnL3Gh": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " month"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " months"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of ",
+    [
+      1,
+      "skuName"
+    ],
+    ". We know they’ll enjoy your summer treat!"
+  ],
+  "xFKdb2": [
+    "You've gifted ",
+    [
+      6,
+      "intervalCount",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " year"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " years"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " of ",
+    [
+      1,
+      "skuName"
+    ],
+    ". We know they’ll enjoy your summer treat!"
+  ],
+  "PWaKU1": "Gift Nitro. Get a Sweet Treat.",
+  "EWn7kZ": "Send a Nitro gift and claim this free Avatar Decoration that’s yours to keep! Offer ends June 20.",
+  "Q0VMqK": "Snag this Avatar Decoration to juice up your profile. Yours to keep with a gift purchase.",
+  "VBnNJS": "Keep this free decoration with your gift purchase.",
+  "iI74ho": "Send more than just good vibes this summer. Gift Nitro and get an exclusive Avatar Decoration that’s yours to keep.",
+  "ydPofH": "Gift Nitro. Get a Sweet Reward.",
+  "lapGDw": "Offer ends June 20.",
+  "ymgFZW": "Get this sweet, free decoration. Yours to keep with a gift purchase!",
+  "Q158XV": "Keep this free decoration with a gift purchase!",
   "2Yp7dH": "You sent your first Super Reaction on mobile. Keep the hype coming, friend!",
   "NX7HIy": "Time to celebrate!",
   "eikz4+": "Hype up the chat with unlimited Super Reactions! Now available with Nitro.",
@@ -38214,13 +38249,6 @@
   "w/XiOz": "You can change this at anytime.",
   "EJ26Oj": "This channel requires Push to Talk to voice chat. You will only be able to listen until you switch modes\nto Push to Talk from Voice Activity Detection.",
   "NYklho": "Push to Talk Required",
-  "hFzI4u": "Nitro is in the air <3",
-  "B7R16u": "Spread the love with a Nitro gift, and get an exclusive avatar decoration that's yours to keep.",
-  "wxgA+v": "Snag this avatar decoration as a lil sweet treat, on us with your purchase.",
-  "d4uO8v": "Snag this sweet decoration with your gift purchase.",
-  "rbWKaW": "Whether you’re just friends or “just friends”, spread the love with a Nitro gift and get an exclusive avatar decoration that’s yours to keep.",
-  "o2XB4+": "Get this free decoration, yours for the keeping!",
-  "PCmL09": "Get this free decoration, yours for the keeping!",
   "5XZKy8": "Custom Invite Link",
   "eH/HMz": "Remember that Custom Invite Links require one text channel to be accessible to all members in order to work.",
   "tSBmIi": "Can't set vanity url for an internal employee only server",

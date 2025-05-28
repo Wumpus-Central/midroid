@@ -1097,64 +1097,6 @@
   "2B/phI": "Appikon",
   "HehpFR": "Ett fel uppstod när appen skulle laddas.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "Generöst! Du har gett ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " månad"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " månader"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Hoppas att det blir en succé!"
-  ],
-  "p0pZXF": [
-    "Generöst! Du har gett ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Hoppas att det blir en succé!"
-  ],
   "As9eLi": "Den här länken följer med i ditt bekräftelsemejl. Du kan hitta och hantera den i ditt gåvolager. Gåvolänken går ut efter 48 timmar.",
   "bUdTqK": [
     "Du är så generös! Skicka den här gåvan till en vän för att ge ",
@@ -5655,8 +5597,6 @@
     ]
   ],
   "np9mf3": "Nuvarande besatthet",
-  "G1b309": "På repeat",
-  "iXcll5": "Spelat på sistone",
   "+KXSFh": [
     "Ta bort anpassad statusetikett: ",
     [
@@ -5672,7 +5612,6 @@
     ]
   ],
   "45vlm5": "Duschfundering",
-  "NcnbEx": "Tittat på den senaste tiden",
   "TS3eJS": [
     [
       6,
@@ -37285,13 +37224,6 @@
   "w/XiOz": "Du kan ändra detta när som helst.",
   "EJ26Oj": "Denna kanal kräver tryck-för-tal för röstchatt. Du kommer bara att kunna lyssna tills du byter läge\ntill tryck-för-tal från röstaktivering.",
   "NYklho": "Tryck-för-tal krävs",
-  "hFzI4u": "Det är Nitro i luften <3",
-  "B7R16u": "Sprid kärlek med en Nitro-gåva och få en exklusiv avatardekoration som du får behålla.",
-  "wxgA+v": "Vi bjuder på den här avatardekorationen som en extragåva när du gör ett köp.",
-  "d4uO8v": "Du får den här läckra dekorationen när du köper en gåva.",
-  "rbWKaW": "Sprid kärlek med en Nitro-gåva och få en exklusiv avatardekoration som du kan behålla, även om ni \"bara är vänner\".",
-  "o2XB4+": "Du får den här gratisdekorationen. Du får behålla den!",
-  "PCmL09": "Du får den här gratisdekorationen. Du får behålla den!",
   "5XZKy8": "Personlig inbjudningslänk",
   "eH/HMz": "Kom ihåg att personliga inbjudningslänkar kräver att en textkanal är tillgänglig för alla medlemmar för att de ska fungera.",
   "tSBmIi": "Det går inte att ha en personlig URL på en server som är reserverad för internanställda",

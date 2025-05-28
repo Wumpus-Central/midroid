@@ -55,23 +55,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         val var3: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         if (!q.c(this.id, (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!q.c(this.assetUrl, var1.assetUrl)) {
+         } else if (!q.c(this.assetUrl, var3.assetUrl)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!q.c(this.channelId, var3.channelId)) {
             return false;
          } else {
             var var2: Boolean;
             label37: {
                if (this.messageId == null) {
-                  if (var1.messageId == null) {
+                  if (var3.messageId == null) {
                      var2 = true;
                      break label37;
                   }
-               } else if (var1.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+               } else if (var3.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
                   break label37;
                }
 
@@ -81,7 +81,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             if (!var2) {
                return false;
             } else {
-               return q.c(this.attachmentIndex, var1.attachmentIndex);
+               return q.c(this.attachmentIndex, var3.attachmentIndex);
             }
          }
       }
@@ -125,9 +125,9 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.assetUrl;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.id;
+      val var3: java.lang.String = this.assetUrl;
+      val var4: java.lang.String = this.channelId;
       val var7: java.lang.String;
       if (this.messageId == null) {
          var7 = "null";
@@ -138,11 +138,11 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       val var6: Int = this.attachmentIndex;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MediaPlayerPlaybackSource(id=");
-      var5.append(var3);
-      var5.append(", assetUrl=");
-      var5.append(var4);
-      var5.append(", channelId=");
       var5.append(var2);
+      var5.append(", assetUrl=");
+      var5.append(var3);
+      var5.append(", channelId=");
+      var5.append(var4);
       var5.append(", messageId=");
       var5.append(var7);
       var5.append(", attachmentIndex=");

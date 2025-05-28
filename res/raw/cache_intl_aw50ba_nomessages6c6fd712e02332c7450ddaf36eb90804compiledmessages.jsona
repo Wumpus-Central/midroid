@@ -1098,64 +1098,6 @@
   "2B/phI": "Appikon",
   "HehpFR": "Det oppstod en feil under lastingen av applikasjonen.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "Du er så sjenerøs! Du har gitt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " måned"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " måneder"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Vi håper hen liker gaven!"
-  ],
-  "p0pZXF": [
-    "Du er så sjenerøs! Du har gitt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " med ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Vi håper hen liker gaven!"
-  ],
   "As9eLi": "Lenken er å finne i e-postbekreftelsen. Gå til Gaver for å se og administrere den. Gavelenker utløper etter 48 timer.",
   "bUdTqK": [
     "Du er så sjenerøs! Send denne gaven til en venn for å gi dem ",
@@ -5654,8 +5596,6 @@
     ]
   ],
   "np9mf3": "Opphengt i",
-  "G1b309": "Gjentas",
-  "iXcll5": "Mange spiller dette for tiden",
   "+KXSFh": [
     "Fjern egendefinert statusetikett: ",
     [
@@ -5671,7 +5611,6 @@
     ]
   ],
   "45vlm5": "Dusjtanke",
-  "NcnbEx": "Mange ser på dette for tiden",
   "TS3eJS": [
     [
       6,
@@ -37308,13 +37247,6 @@
   "w/XiOz": "Du kan endre dette når som helst.",
   "EJ26Oj": "Denne kanalen krever at du bruker Trykk og Snakk for å kunne prate. For å snakke kreves det at du skifter\nfra Stemmeaktivering til Trykk og Snakk.",
   "NYklho": "Trykk og snakk kreves",
-  "hFzI4u": "Det er Nitro i luften <3",
-  "B7R16u": "Vis kjærlighet med en Nitro-gave, og få en eksklusiv avatardekorasjon til odel og eie.",
-  "wxgA+v": "Du får denne avatardekorasjonen som en søt liten bonus når du kjøper noe.",
-  "d4uO8v": "Sikre deg denne herlige dekorasjonen når du kjøper en gave.",
-  "rbWKaW": "Uansett om dere bare er venner eller «bare venner», kan du vise kjærlighet med en Nitro-gave og få en eksklusiv avatardekorasjon til odel og eie.",
-  "o2XB4+": "Få denne gratis dekorasjonen til odel og eie!",
-  "PCmL09": "Få denne gratis dekorasjonen til odel og eie!",
   "5XZKy8": "Egendefinert invitasjonslenke",
   "eH/HMz": "Husk at egendefinerte invitasjonslenker kun fungerer hvis én tekstkanal er tilgjengelig for alle medlemmer.",
   "tSBmIi": "Egendefinerte nettadresser kan ikke brukes for servere som bare er for internt ansatte",

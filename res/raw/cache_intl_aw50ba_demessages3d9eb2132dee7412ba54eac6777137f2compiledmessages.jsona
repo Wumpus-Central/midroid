@@ -1104,64 +1104,6 @@
   "2B/phI": "App-Icon",
   "HehpFR": "Beim Laden der Anwendung ist ein Fehler aufgetreten.",
   "QQsaCQ": "Kostenlos",
-  "4ZJ+7e": [
-    "Du bist so großzügig! Du hast ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " Monat"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Monate"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    " verschenkt. Wir hoffen, dass dein Geschenk gut ankommt!"
-  ],
-  "p0pZXF": [
-    "Du bist so großzügig! Du hast ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " Jahr"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Jahre"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    " verschenkt. Wir hoffen, dass dein Geschenk gut ankommt!"
-  ],
   "As9eLi": "Dieser Link ist in deiner Bestätigungs-E-Mail enthalten und du kannst ihn in deinem Geschenkinventar finden und verwalten. Der Geschenklink läuft nach 48 Stunden ab.",
   "bUdTqK": [
     "Du bist so großzügig! Schicke dieses Geschenk an einen Freund, damit er für ",
@@ -5664,8 +5606,6 @@
     ]
   ],
   "np9mf3": "Aktuelle Leidenschaft",
-  "G1b309": "In Dauerschleife",
-  "iXcll5": "In letzter Zeit gespielt",
   "+KXSFh": [
     "Personalisiertes Status-Label entfernen: ",
     [
@@ -5681,7 +5621,6 @@
     ]
   ],
   "45vlm5": "Geistesblitz",
-  "NcnbEx": "Kürzlich angeschaut",
   "TS3eJS": [
     [
       6,
@@ -37505,13 +37444,6 @@
   "w/XiOz": "Du kannst deine Auswahl jederzeit ändern.",
   "EJ26Oj": "Dieser Kanal erfordert Push-to-Talk um zu sprechen. Solange du den Modus nicht von Sprachaktivierung\nauf Push-to-Talk änderst, kannst du nur zuhören.",
   "NYklho": "Push-to-Talk erforderlich",
-  "hFzI4u": "Nitro liegt in der Luft <3",
-  "B7R16u": "Verbreite die Liebe mit einem Nitro-Geschenk und erhalte eine exklusive Avatardekoration.",
-  "wxgA+v": "Wir spendieren dir diese Avatardekoration als süßes kleines Geschenk mit deinem Kauf.",
-  "d4uO8v": "Sichere dir diese süße Dekoration mit deinem Geschenkkauf.",
-  "rbWKaW": "Egal, ob ihr nur Freunde oder „nur Freunde“ seid, verbreite die Liebe mit einem Nitro-Geschenk und erhalte eine exklusive Avatardekoration.",
-  "o2XB4+": "Hol dir diese kostenlose Dekoration – sie gehört dir!",
-  "PCmL09": "Hol dir diese kostenlose Dekoration – sie gehört dir!",
   "5XZKy8": "Personalisierter Einladungslink",
   "eH/HMz": "Denk daran: Personalisierte Einladungslinks erfordern einen Textkanal, der für alle Mitglieder zugänglich ist, um zu funktionieren.",
   "tSBmIi": "Kann keine Vanity-URL für einen internen Server nur für Mitarbeiter festlegen",

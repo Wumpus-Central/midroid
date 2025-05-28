@@ -149,31 +149,31 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var8: java.lang.String = this.followIcon;
-      val var6: java.lang.String = this.followLabel;
-      val var5: java.lang.String = this.shareIcon;
-      val var9: java.lang.String = this.shareLabel;
-      val var4: MessageReaction = this.defaultReaction;
-      val var7: PostSharePrompt = this.sharePrompt;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForumPostActions(numDisplayedReactions=");
-      var3.append(var1);
-      var3.append(", isFollowing=");
-      var3.append(var2);
-      var3.append(", followIcon=");
-      var3.append(var8);
-      var3.append(", followLabel=");
-      var3.append(var6);
-      var3.append(", shareIcon=");
-      var3.append(var5);
-      var3.append(", shareLabel=");
-      var3.append(var9);
-      var3.append(", defaultReaction=");
-      var3.append(var4);
-      var3.append(", sharePrompt=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var6: java.lang.String = this.followIcon;
+      val var5: java.lang.String = this.followLabel;
+      val var9: java.lang.String = this.shareIcon;
+      val var7: java.lang.String = this.shareLabel;
+      val var8: MessageReaction = this.defaultReaction;
+      val var3: PostSharePrompt = this.sharePrompt;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForumPostActions(numDisplayedReactions=");
+      var4.append(var1);
+      var4.append(", isFollowing=");
+      var4.append(var2);
+      var4.append(", followIcon=");
+      var4.append(var6);
+      var4.append(", followLabel=");
+      var4.append(var5);
+      var4.append(", shareIcon=");
+      var4.append(var9);
+      var4.append(", shareLabel=");
+      var4.append(var7);
+      var4.append(", defaultReaction=");
+      var4.append(var8);
+      var4.append(", sharePrompt=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

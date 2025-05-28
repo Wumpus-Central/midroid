@@ -74,18 +74,18 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var4: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var5: java.lang.String = this.streamId;
+      val var4: java.lang.String = this.streamId;
       val var6: StringBuilder = new StringBuilder();
       var6.append("FirstFrameCallbackEvent(connectionId=");
       var6.append(var1);
       var6.append(", userId=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(", ssrc=");
       var6.append(var2);
       var6.append(", streamId=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(")");
       return var6.toString();
    }

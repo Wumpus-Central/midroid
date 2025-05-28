@@ -43,6 +43,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableStateFlow
 
@@ -385,10 +386,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var18 : var4) {
+      for (ChatInputNode var7 : var4) {
          val var17: Editable = this.editText.getEditableText();
          q.g(var17, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var17, var18);
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -439,13 +440,13 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public fun clearAndApplyChatNodes(editId: String?, chatInputNodes: List<ChatInputNode>) {
       q.h(var2, "chatInputNodes");
       if (q.c(this.lastEditId, var1) || var1 == null) {
-         val var6: Editable = this.editText.getEditableText();
-         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
-         if (var5 != null) {
-            val var4: Int = var5.length;
+         val var5: Editable = this.editText.getEditableText();
+         val var6: Array<DCDInputSpan> = var5.getSpans(0, var5.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
+         if (var6 != null) {
+            val var4: Int = var6.length;
 
             for (int var3 = 0; var3 < var4; var3++) {
-               var6.removeSpan(var5[var3]);
+               var5.removeSpan(var6[var3]);
             }
          }
 
@@ -486,8 +487,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = Da.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
-               val var4: FlowCollector = new FlowCollector(this.this$0) {
+               val var4: Flow = Da.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
+               var1 = new FlowCollector(this.this$0) {
                   final ChatInputRootView this$0;
 
                   {
@@ -508,7 +509,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   }
                };
                this.label = 1;
-               if (var1.collect(var4, this) === var3) {
+               if (var4.collect(var1, this) === var3) {
                   return var3;
                }
             }
@@ -734,19 +735,19 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       public override fun toString(): String {
          val var1: Int = this.selectionStart;
          val var2: Int = this.selectionEnd;
-         val var4: java.lang.String = this.text;
+         val var5: java.lang.String = this.text;
          val var3: java.lang.String = this.editId;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CurrentTextAndSelection(selectionStart=");
-         var5.append(var1);
-         var5.append(", selectionEnd=");
-         var5.append(var2);
-         var5.append(", text=");
-         var5.append(var4);
-         var5.append(", editId=");
-         var5.append(var3);
-         var5.append(")");
-         return var5.toString();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CurrentTextAndSelection(selectionStart=");
+         var4.append(var1);
+         var4.append(", selectionEnd=");
+         var4.append(var2);
+         var4.append(", text=");
+         var4.append(var5);
+         var4.append(", editId=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

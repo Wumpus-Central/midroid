@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
 import com.discord.bundle_updater.BundleUpdater
-import com.discord.cpu_pnq.CPUPnQManager
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
 import com.discord.js_watchdog.JSWatchdogManager
@@ -66,7 +65,6 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       val var2: Window = this.getWindow();
       q.g(var2, "getWindow(...)");
       var3.initialize(var2);
-      CPUPnQManager.INSTANCE.initialize();
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -77,14 +75,12 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onPause();
       JankStatsAggregator.INSTANCE.disableTracking();
       JSWatchdogManager.INSTANCE.disable();
-      CPUPnQManager.INSTANCE.onPause();
    }
 
    protected override fun onResume() {
       super.onResume();
       JankStatsAggregator.INSTANCE.enableTracking();
       JSWatchdogManager.INSTANCE.enable();
-      CPUPnQManager.INSTANCE.onResume();
    }
 
    public open inner class ActivityDelegate(activity: ReactActivity) : ReactActivityDelegate {

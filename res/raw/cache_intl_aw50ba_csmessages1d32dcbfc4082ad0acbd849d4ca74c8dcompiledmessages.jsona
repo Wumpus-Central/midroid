@@ -1134,76 +1134,6 @@
   "2B/phI": "Ikona aplikace",
   "HehpFR": "Při pokusu o načtení této aplikace došlo k chybě.",
   "QQsaCQ": "Zdarma",
-  "4ZJ+7e": [
-    "Jsi štědrost sama! Daroval/a jsi ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " měsíc"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " měsíce"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " měsíců"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Věříme, že se bude líbit!"
-  ],
-  "p0pZXF": [
-    "Jsi štědrost sama! Daroval/a jsi ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " rok"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " roky"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " let"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Věříme, že se bude líbit!"
-  ],
   "As9eLi": "Tento odkaz je součástí tvého potvrzovacího e-mailu a můžeš ho najít a spravovat ve svém inventáři dárků. Platnost odkazu na dárek vyprší za 48 hodin.",
   "bUdTqK": [
     "Jsi štědrost sama! Pošli tento odkaz přátelům a daruj jim ",
@@ -5888,8 +5818,6 @@
     ]
   ],
   "np9mf3": "Aktuální posedlost",
-  "G1b309": "Sjíždím znovu",
-  "iXcll5": "Poslední dobou hraju",
   "+KXSFh": [
     "Odebrat štítek vlastního stavu: ",
     [
@@ -5905,7 +5833,6 @@
     ]
   ],
   "45vlm5": "Momentální nápad",
-  "NcnbEx": "Poslední dobou koukám na",
   "TS3eJS": [
     [
       6,
@@ -38595,13 +38522,6 @@
   "w/XiOz": "Nastavení můžeš kdykoli změnit.",
   "EJ26Oj": "Tento kanál vyžaduje k použití hlasového chatu funkci Push to Talk. Dokud nezměníš režimy\nz Automatické detekce na Push to Talk, budeš moct jen poslouchat.",
   "NYklho": "Vyžadována funkce Push to Talk",
-  "hFzI4u": "Nitro je ve vzduchu <3",
-  "B7R16u": "Šiř lásku tím, že daruješ Nitro, a získej exkluzivní vzhled avataru, který si můžeš nechat.",
-  "wxgA+v": "Užij si tento vzhled avataru na náš účet jako malou pozornost k tvému nákupu.",
-  "d4uO8v": "Získej tento rozkošný vzhled avataru k tvému nákupu dárku.",
-  "rbWKaW": "Ať už jste jen přátelé nebo „jen přátelé“, šiř lásku tím, že daruješ Nitro, a získej exkluzivní vzhled avataru, který si můžeš nechat.",
-  "o2XB4+": "Získej tento vzhled zdarma, bude tvůj napořád!",
-  "PCmL09": "Získej tento vzhled zdarma, bude tvůj napořád!",
   "5XZKy8": "Vlastní zvací odkaz",
   "eH/HMz": "Pamatuj, že vlastní zvací odkazy vyžadují, aby byl jeden textový kanál přístupný všem členům, jinak nebudou fungovat.",
   "tSBmIi": "Pro server určený jen interním zaměstnancům nelze nastavit vlastní URL.",

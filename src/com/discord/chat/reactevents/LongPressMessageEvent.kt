@@ -97,10 +97,10 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.messageId.hashCode();
-      val var5: Int = this.channelId.hashCode();
-      val var3: Int = Integer.hashCode(this.mediaIndex);
-      val var6: Int = this.mediaType.hashCode();
+      val var3: Int = this.messageId.hashCode();
+      val var6: Int = this.channelId.hashCode();
+      val var4: Int = Integer.hashCode(this.mediaIndex);
+      val var5: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -113,7 +113,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var4 * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2;
+      return ((((var3 * 31 + var6) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -121,27 +121,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var2: java.lang.String = this.mediaType;
-      val var4: java.lang.String = this.componentId;
-      val var7: Int = this.componentMediaIndex;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LongPressMessageEvent(messageId=");
-      var3.append(var6);
-      var3.append(", channelId=");
-      var3.append(var5);
-      var3.append(", mediaIndex=");
-      var3.append(var1);
-      var3.append(", mediaType=");
-      var3.append(var2);
-      var3.append(", componentId=");
-      var3.append(var4);
-      var3.append(", componentMediaIndex=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var7: java.lang.String = this.mediaType;
+      val var5: java.lang.String = this.componentId;
+      val var6: Int = this.componentMediaIndex;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("LongPressMessageEvent(messageId=");
+      var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var3);
+      var2.append(", mediaIndex=");
+      var2.append(var1);
+      var2.append(", mediaType=");
+      var2.append(var7);
+      var2.append(", componentId=");
+      var2.append(var5);
+      var2.append(", componentMediaIndex=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1105,64 +1105,6 @@
   "2B/phI": "App-ikon",
   "HehpFR": "Der opstod en fejl under indlæsning af applikationen.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "Du er så generøs! Du har givet et abonnenemt til ",
-    [
-      1,
-      "skuName"
-    ],
-    " på ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " måned"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " måneder"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Vi håber, de nyder det!"
-  ],
-  "p0pZXF": [
-    "Du er så generøs! Du har givet et abonnenemt til ",
-    [
-      1,
-      "skuName"
-    ],
-    " på ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " år"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " år"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Vi håber, de nyder det!"
-  ],
   "As9eLi": "Dette link er inkluderet i den e-mailbekræftelse og kan findes og administreres i dit gave inventar. Gave-link udløber efter 48 timer.",
   "bUdTqK": [
     "Du er så generøs! Send denne gave til en ven for at give dem ",
@@ -5673,8 +5615,6 @@
     ]
   ],
   "np9mf3": "Nuværende betagelse",
-  "G1b309": "Om og om igen",
-  "iXcll5": "Har for nyligt spillet",
   "+KXSFh": [
     "Fjern brugerdefineret statusmærke: ",
     [
@@ -5690,7 +5630,6 @@
     ]
   ],
   "45vlm5": "Pludselig tanke",
-  "NcnbEx": "Set for nylig",
   "TS3eJS": [
     [
       6,
@@ -37411,13 +37350,6 @@
   "w/XiOz": "Du kan ændre dette når som helst.",
   "EJ26Oj": "Denne stemmekanal kræver Tryk-og-tal. Du kan kun lytte, indtil du skifter tilstand\ntil Tryk-og-tal fra Taleaktivitetsopdagelse.",
   "NYklho": "Tryk-og-tal påkrævet",
-  "hFzI4u": "Der er Nitro i luften <3",
-  "B7R16u": "Spred kærligheden med en Nitro-gave, og få en eksklusiv Avatar-dekoration, som du er velkommen til at beholde.",
-  "wxgA+v": "Få denne Avatar-dekoration som en lille forkælelse med i købet.",
-  "d4uO8v": "Få denne søde dekoration med dit gavekøb.",
-  "rbWKaW": "Uanset om I bare er venner eller er \"bare venner\", så spred kærligheden med en Nitro-gave, og få en eksklusiv Avatar-dekoration, som du er velkommen til at beholde.",
-  "o2XB4+": "Få denne gratis dekoration, som du er velkommen til at beholde!",
-  "PCmL09": "Få denne gratis dekoration, som du er velkommen til at beholde!",
   "5XZKy8": "Tilpasset invitationslink",
   "eH/HMz": "Husk, at tilpassede invitationslinks kræver én tekstkanal, der skal være tilgængelig for alle medlemmer, for at de kan fungere.",
   "tSBmIi": "Kan ikke indstille vanity-URL for en intern server, der kun er til medarbejdere",

@@ -193,9 +193,9 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
          kotlin.jvm.internal.q.e(this.binding.sharePromptSubtitle);
-         val var10: StructurableText = var2.getSubtitle();
-         val var14: Context = var13.getContext();
-         kotlin.jvm.internal.q.g(var14, "getContext(...)");
+         val var14: StructurableText = var2.getSubtitle();
+         val var10: Context = var13.getContext();
+         kotlin.jvm.internal.q.g(var10, "getContext(...)");
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var15, "getFontMetrics(...)");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
@@ -204,8 +204,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var10,
                var14,
+               var10,
                var1,
                false,
                false,

@@ -203,7 +203,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var2.add(var1.getTurboPackageForModule("NativeClientInfoModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeCommandClipboardModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeCompressionModule", <unrepresentable>.INSTANCE));
-      var2.add(var1.getTurboPackageForModule("NativeCPUPnQModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeDateFormatUtilsModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeFileModule", <unrepresentable>.INSTANCE));
       var2.add(var1.getTurboPackageForModule("NativeI18nModule", <unrepresentable>.INSTANCE));

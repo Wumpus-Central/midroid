@@ -1105,64 +1105,6 @@
   "2B/phI": "Ícono de la aplicación",
   "HehpFR": "Hubo un error al intentar cancelar esta aplicación.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "¡Cuánta generosidad! Regalaste ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mes"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " meses"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". ¡Esperamos que lo disfrute!"
-  ],
-  "p0pZXF": [
-    "¡Cuánta generosidad! Regalaste ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " año"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " años"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". ¡Esperamos que lo disfrute!"
-  ],
   "As9eLi": "Este enlace se incluye en tu correo electrónico de confirmación y puedes encontrarlo y gestionarlo en tu inventario de regalos. El enlace del regalo caduca después de 48 horas.",
   "bUdTqK": [
     "¡Cuánta generosidad! Envía este regalo a un amigo para darle ",
@@ -5671,8 +5613,6 @@
     ]
   ],
   "np9mf3": "Obsesión actual",
-  "G1b309": "En repetición",
-  "iXcll5": "Jugando últimamente",
   "+KXSFh": [
     "Eliminar etiqueta de estado personalizado: ",
     [
@@ -5688,7 +5628,6 @@
     ]
   ],
   "45vlm5": "Pensamiento de ducha",
-  "NcnbEx": "Viendo recientemente",
   "TS3eJS": [
     [
       6,
@@ -37051,13 +36990,6 @@
   "w/XiOz": "Puedes cambiar esto en cualquier momento.",
   "EJ26Oj": "Este canal requiere la función \"Pulsar para hablar\" para el chat de voz. Solo podrás escuchar hasta que cambies el modo\na \"Pulsar para hablar\" desde \"Detección de actividad de voz\".",
   "NYklho": "Necesitas \"Pulsar para hablar\"",
-  "hFzI4u": "Nitro se siente en el aire <3",
-  "B7R16u": "Esparce amor con un regalo de Nitro y obtén una decoración de avatar exclusiva, que será tuya para siempre.",
-  "wxgA+v": "Con tu compra, te regalamos esta decoración de avatar como un pequeño obsequio encantador.",
-  "d4uO8v": "Con tu compra, obtén esta encantadora decoración de regalo.",
-  "rbWKaW": "Ya sea que solo sean amigos o \"solo amigos\", esparce el amor con un regalo de Nitro y obtén una decoración de avatar exclusiva, que será tuya para siempre.",
-  "o2XB4+": "¡Consigue esta decoración gratis, es toda tuya!",
-  "PCmL09": "¡Consigue esta decoración gratis, es toda tuya!",
   "5XZKy8": "Enlace de invitación personalizado",
   "eH/HMz": "Recuerda que, para que funcionen los enlaces de invitación personalizados, debe haber un canal de texto accesible para todos los miembros.",
   "tSBmIi": "No se puede configurar una URL personalizada para servidores exclusivos de empleados internos",

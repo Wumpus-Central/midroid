@@ -1100,64 +1100,6 @@
   "2B/phI": "Applicatiepictogram",
   "HehpFR": "Er is een fout opgetreden bij het laden van deze applicatie.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "Wat ben je gul! Je hebt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " maand"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " maanden"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " aan ",
-    [
-      1,
-      "skuName"
-    ],
-    " cadeau gedaan. Hopelijk valt het in de smaak!"
-  ],
-  "p0pZXF": [
-    "Wat ben je gul! Je hebt ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " jaar"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " jaar"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " aan ",
-    [
-      1,
-      "skuName"
-    ],
-    " cadeau gedaan. Hopelijk valt het in de smaak!"
-  ],
   "As9eLi": "Deze link staat in je bevestigingsmail en kan worden gevonden en beheerd in je cadeau-inventaris. Cadeaulink vervalt na 48 uur.",
   "bUdTqK": [
     "Wat ben je gul! Stuur dit cadeau naar een vriend om ",
@@ -5670,8 +5612,6 @@
     ]
   ],
   "np9mf3": "Huidige obsessie",
-  "G1b309": "Op herhaling",
-  "iXcll5": "Speelt de laatste tijd",
   "+KXSFh": [
     "Gepersonaliseerd statuslabel verwijderen: ",
     [
@@ -5687,7 +5627,6 @@
     ]
   ],
   "45vlm5": "Eurekamomentje onder de douche",
-  "NcnbEx": "Kijkt de laatste tijd",
   "TS3eJS": [
     [
       6,
@@ -37392,13 +37331,6 @@
   "w/XiOz": "Je kunt dit op elk moment wijzigen.",
   "EJ26Oj": "Dit kanaal vereist push-to-talk om gebruik te maken van spraak. Tot je van spraakdetectie naar push-to-talk wisselt\nkun je alleen luisteren.",
   "NYklho": "Push to Talk vereist",
-  "hFzI4u": "Heb lief met Nitro <3",
-  "B7R16u": "Verspreid de liefde door Nitro cadeau te doen en ontvang gratis een exclusieve avatarversiering.",
-  "wxgA+v": "Deze avatarversiering krijg je van ons, als dank voor je aankoop.",
-  "d4uO8v": "Scoor deze versiering met je cadeau-aankoop.",
-  "rbWKaW": "Verspreid de liefde door Nitro cadeau te doen, of jullie nu gewoon vrienden zijn of stiekem ietsje meer dan dat, en ontvang gratis een exclusieve avatarversiering.",
-  "o2XB4+": "Deze versiering krijg je gratis en voor niets!",
-  "PCmL09": "Deze versiering krijg je gratis en voor niets!",
   "5XZKy8": "Aangepaste uitnodigingslink",
   "eH/HMz": "Onthoud dat aangepaste uitnodigingslinks alleen werken als alle leden toegang hebben tot een tekstkanaal.",
   "tSBmIi": "Een persoonlijke link instellen voor een server voor interne werknemers is niet mogelijk",

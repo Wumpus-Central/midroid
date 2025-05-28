@@ -70,9 +70,9 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var4: Int = this.postPreviewEmbed.hashCode();
-      val var2: Int = Integer.hashCode(this.index);
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
+      val var2: Int = this.postPreviewEmbed.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
       val var1: Int;
       if (this.spoilerAttributes == null) {
          var1 = 0;
@@ -80,7 +80,7 @@ public data class PostPreviewEmbedMessageAccessory(messageId: MessageId,
          var1 = this.spoilerAttributes.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var2) * 31 + var1;
+      return ((var4 * 31 + var2) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {

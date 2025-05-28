@@ -1097,64 +1097,6 @@
   "2B/phI": "App icon",
   "HehpFR": "There was an error trying to load the application.",
   "QQsaCQ": "Free",
-  "4ZJ+7e": [
-    "You’re so generous! You’ve given ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " month"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " months"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We hope they enjoy!"
-  ],
-  "p0pZXF": [
-    "You’re so generous! You’ve given ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " year"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " years"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " of ",
-    [
-      1,
-      "skuName"
-    ],
-    ". We hope they enjoy!"
-  ],
   "As9eLi": "This link is included in your confirmation email and can be found and managed in your gift inventory. Gift link expires after 48 hours.",
   "bUdTqK": [
     "You're so generous! Send this gift to a friend to give them ",
@@ -5631,8 +5573,6 @@
     ]
   ],
   "np9mf3": "Current obsession",
-  "G1b309": "On repeat",
-  "iXcll5": "Playing lately",
   "+KXSFh": [
     "Remove custom status label: ",
     [
@@ -5648,7 +5588,6 @@
     ]
   ],
   "45vlm5": "Shower thought",
-  "NcnbEx": "Watching lately",
   "TS3eJS": [
     [
       6,
@@ -37272,13 +37211,6 @@
   "w/XiOz": "You can change this at any time.",
   "EJ26Oj": "This channel requires Push-to-talk to voice chat. You will only be able to listen until you switch modes\nto Push-to-talk from Voice Activity Detection.",
   "NYklho": "Push-to-talk Required",
-  "hFzI4u": "Nitro is in the air <3",
-  "B7R16u": "Spread the love with a Nitro gift and get an exclusive avatar decoration that's yours to keep.",
-  "wxgA+v": "Snag this avatar decoration as a lil’ sweet treat, on us with your purchase.",
-  "d4uO8v": "Snag this sweet decoration with your gift purchase.",
-  "rbWKaW": "Whether you’re just friends or ‘just friends’, spread the love with a Nitro gift and get an exclusive avatar decoration that’s yours to keep.",
-  "o2XB4+": "Get this free decoration, yours for the keeping!",
-  "PCmL09": "Get this free decoration, yours for the keeping!",
   "5XZKy8": "Custom Invite Link",
   "eH/HMz": "Remember that Custom Invite Links require one text channel to be accessible to all members in order to work.",
   "tSBmIi": "Can't set vanity url for an internal employee only server",

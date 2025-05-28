@@ -1100,64 +1100,6 @@
   "2B/phI": "Ícone do app",
   "HehpFR": "Ocorreu um erro ao carregar o aplicativo.",
   "QQsaCQ": "Grátis",
-  "4ZJ+7e": [
-    "Quanta generosidade! Você deu ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mês"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " meses"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Esperamos que ele(a) goste!"
-  ],
-  "p0pZXF": [
-    "Quanta generosidade! Você deu ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " ano"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " anos"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Esperamos que ele(a) goste!"
-  ],
   "As9eLi": "Esse link está incluído no seu e-mail de confirmação e pode ser encontrado e gerenciado no seu inventário de presentes. O link de presente expira após 48 horas.",
   "bUdTqK": [
     "Quanta generosidade! Envie esse presente a alguém para dar ",
@@ -5665,8 +5607,6 @@
     ]
   ],
   "np9mf3": "Obsessão atual",
-  "G1b309": "Não sai da cabeça",
-  "iXcll5": "Jogando ultimamente",
   "+KXSFh": [
     "Remover rótulo de status personalizado: ",
     [
@@ -5682,7 +5622,6 @@
     ]
   ],
   "45vlm5": "Pensamento de chuveiro",
-  "NcnbEx": "Assistindo recentemente",
   "TS3eJS": [
     [
       6,
@@ -37410,13 +37349,6 @@
   "w/XiOz": "Você pode mudar isso a qualquer momento.",
   "EJ26Oj": "Este canal requer Apertar para falar para o chat de voz. Você só poderá ouvir quando alterar\nseu modo de fala para Apertar para falar.",
   "NYklho": "Aperte para Falar obrigatório",
-  "hFzI4u": "O Nitro está no ar <3",
-  "B7R16u": "Espalhe o amor com um presente Nitro e receba uma decoração de avatar exclusiva que é toda sua.",
-  "wxgA+v": "Receba este mimo na forma de decoração de avatar, um presentinho com a sua compra.",
-  "d4uO8v": "Adquira esta doce decoração com a compra do seu presente.",
-  "rbWKaW": "Sejam vocês só amigos ou “só amigos”, espalhe o amor com um presente Nitro e receba uma decoração de avatar exclusiva que é toda sua.",
-  "o2XB4+": "Receba esta decoração gratuita, todinha sua!",
-  "PCmL09": "Receba esta decoração gratuita, todinha sua!",
   "5XZKy8": "Link de convite personalizado",
   "eH/HMz": "Lembre-se que um link de convite personalizado precisa de um canal de texto acessível a todos para funcionar.",
   "tSBmIi": "Não é possível definir uma URL personalizado para um servidor interno apenas para funcionários",

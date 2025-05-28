@@ -1102,64 +1102,6 @@
   "2B/phI": "Uygulama simgesi",
   "HehpFR": "Uygulamayı yüklemeye çalışırken bir hata oluştu.",
   "QQsaCQ": "Ücretsiz",
-  "4ZJ+7e": [
-    "Çok cömertsin! Toplamda ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " ay"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " ay"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    " verdin. Umarız bunu beğenir!"
-  ],
-  "p0pZXF": [
-    "Çok cömertsin! Toplamda ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " yıl"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " yıl"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    " verdin. Umarız bunu beğenir!"
-  ],
   "As9eLi": "Bu bağlantı onay e-postana eklenir ve hediye envanterinde bulunup yönetilebilir. Hediye bağlantısının süresi 48 saatin ardından biter.",
   "bUdTqK": [
     "Çok cömertsin! Bu hediyeyi bir arkadaşına göndererek ona ",
@@ -5647,8 +5589,6 @@
     ]
   ],
   "np9mf3": "Mevcut takıntı",
-  "G1b309": "Durmadan dinliyorum",
-  "iXcll5": "Son zamanlarda oynuyorum",
   "+KXSFh": [
     "Özel durum etiketini kaldır: ",
     [
@@ -5665,7 +5605,6 @@
     " olarak ayarla"
   ],
   "45vlm5": "Bir anda esen düşünceler",
-  "NcnbEx": "Son zamanlarda izliyorum",
   "TS3eJS": [
     [
       6,
@@ -37359,13 +37298,6 @@
   "w/XiOz": "Bunu istediğin zaman değiştirebilirsin.",
   "EJ26Oj": "Bu kanal sesli sohbet için Bas-Konuş gerektirir. Ses Etkinliği Algılama seçeneğinden\nBas-Konuş'a geçene kadar sadece sesleri duyabilirsin.",
   "NYklho": "Bas-Konuş Gereklidir",
-  "hFzI4u": "Havada Nitro kokusu var <3",
-  "B7R16u": "Bir Nitro hediyesi ile sevgiyi yay ve özel bir avatar dekorasyonu kazan.",
-  "wxgA+v": "Alışveriş yaparak bu avatar dekorasyonunu kap.",
-  "d4uO8v": "Hediye alışverişinle bu tatlı dekorasyonu kap.",
-  "rbWKaW": "İster sadece arkadaş olun ister \"sadece arkadaş\", bir Nitro hediyesiyle sevgini yay ve özel bir avatar dekorasyonu kazan.",
-  "o2XB4+": "Bu ücretsiz dekorasyonu kap!",
-  "PCmL09": "Bu ücretsiz dekorasyonu kap!",
   "5XZKy8": "Özel Davet Bağlantısı",
   "eH/HMz": "Özel Davet Bağlantılarının işe yaraması için tüm üyelerin erişebildiği bir metin kanalı olması gerektiğini unutma.",
   "tSBmIi": "Discord şirket çalışanlarına özel sunucularına özel URL koyulamaz.",

@@ -1100,64 +1100,6 @@
   "2B/phI": "Icône d'application",
   "HehpFR": "Une erreur est survenue lors de la tentative de chargement de l'application.",
   "QQsaCQ": "Gratuit",
-  "4ZJ+7e": [
-    "Quelle générosité ! Tu as offert ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mois"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mois"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". On espère que ça lui fera plaisir !"
-  ],
-  "p0pZXF": [
-    "Quelle générosité ! Tu as offert ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " an"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " ans"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". On espère que ça lui fera plaisir !"
-  ],
   "As9eLi": "Ce lien est inclus dans ton e-mail de confirmation et peut être retrouvé et géré dans ton Inventaire. Le lien du cadeau expirera après 48 heures.",
   "bUdTqK": [
     "Quelle générosité ! Envoie ce cadeau à un ami pour lui offrir ",
@@ -5673,8 +5615,6 @@
     ]
   ],
   "np9mf3": "Obsession du moment",
-  "G1b309": "J'écoute en boucle",
-  "iXcll5": "En ce moment, je joue à",
   "+KXSFh": [
     "Supprimer l'étiquette de statut personnalisé : ",
     [
@@ -5690,7 +5630,6 @@
     ]
   ],
   "45vlm5": "Pensée à partager",
-  "NcnbEx": "En ce moment, je regarde",
   "TS3eJS": [
     [
       6,
@@ -37408,13 +37347,6 @@
   "w/XiOz": "Tu peux changer ça à tout moment.",
   "EJ26Oj": "Ce salon requiert le mode Appuyer pour parler. Tu ne pourras qu'écouter jusqu'à ce que tu passes\ndu mode Détection de la voix au mode Appuyer pour parler.",
   "NYklho": "Appuyer-pour-parler requis",
-  "hFzI4u": "Il y a Nitro dans l'air <3",
-  "B7R16u": "Répands l'amour avec un cadeau Nitro et obtiens une décoration d'avatar exclusive que tu pourras conserver.",
-  "wxgA+v": "Profite de cette décoration d'avatar, offerte en cadeau avec ton achat.",
-  "d4uO8v": "Profite de cette jolie décoration avec ton achat de cadeau.",
-  "rbWKaW": "Que vous soyez juste amis ou « juste amis », répands l'amour avec un cadeau Nitro et obtiens une décoration d'avatar exclusive que tu pourras conserver.",
-  "o2XB4+": "Obtiens une décoration gratuite rien que pour toi !",
-  "PCmL09": "Obtiens une décoration gratuite rien que pour toi !",
   "5XZKy8": "Lien d'invitation personnalisé",
   "eH/HMz": "Rappelle-toi que les liens d'invitation personnalisés fonctionnent uniquement si au moins un salon textuel est accessible à tous les membres.",
   "tSBmIi": "Impossible de créer une URL personnalisée pour un serveur interne réservé aux employés",

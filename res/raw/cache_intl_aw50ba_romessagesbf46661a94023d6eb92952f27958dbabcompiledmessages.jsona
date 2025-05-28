@@ -1092,64 +1092,6 @@
   "2B/phI": "Pictograma aplicației",
   "HehpFR": "A apărut o eroare în timpul încercării de a încărca aplicația.",
   "QQsaCQ": "Gratuit",
-  "4ZJ+7e": [
-    "Câtă generozitate! Ai oferit ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " lună"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " luni"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Sperăm să-i placă!"
-  ],
-  "p0pZXF": [
-    "Câtă generozitate! Ai oferit ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " an"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " ani"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " de ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Sperăm să-i placă!"
-  ],
   "As9eLi": "Acest link este inclus în e-mail-ul tău de confirmare și poate fi găsit și gestionat în inventarul de cadouri. Link-ul cadoului expiră după 48 de ore.",
   "bUdTqK": [
     "Ești atât de generos! Trimite acest link unui prieten pentru a-i oferi ",
@@ -5646,8 +5588,6 @@
     ]
   ],
   "np9mf3": "Obsesia de azi",
-  "G1b309": "Pe repeat",
-  "iXcll5": "Joc în ultima vreme",
   "+KXSFh": [
     "Elimină eticheta cu statusul personalizat: ",
     [
@@ -5663,7 +5603,6 @@
     ]
   ],
   "45vlm5": "Idee creață de la duș",
-  "NcnbEx": "Urmăresc în ultima vreme",
   "TS3eJS": [
     [
       6,
@@ -37349,13 +37288,6 @@
   "w/XiOz": "Îl poți schimba oricând.",
   "EJ26Oj": "Acest canal necesită modul Push to Talk pentru activarea chat-ului prin voce. Până când nu vei trece de la modul\nDetectarea activității vocale la Push to Talk, vei putea doar să asculți.",
   "NYklho": "Modul Push-to-talk este necesar",
-  "hFzI4u": "Nitro plutește în aer <3",
-  "B7R16u": "Arată-ți dragostea cu un cadou Nitro și vei primi o decorațiune pentru avatar exclusivă pe care o poți păstra.",
-  "wxgA+v": "Pune mâna pe această decorațiune pentru avatar. Ți-o dăm cadou când închei cumpărăturile.",
-  "d4uO8v": "Pune mâna pe această decorațiune pentru avatar grozavă atunci când cumperi un cadou.",
-  "rbWKaW": "Fie că sunteți amici sau „doar amici”, arată-ți dragostea cu un cadou Nitro și vei primi o decorațiune pentru avatar exclusivă pe care o poți păstra.",
-  "o2XB4+": "Primește această decorațiune gratuită pe care o poți păstra!",
-  "PCmL09": "Primește această decorațiune gratuită pe care o poți păstra!",
   "5XZKy8": "Link de invitație personalizat",
   "eH/HMz": "Nu uita că, pentru a funcționa, linkurile de invitație personalizate necesită un canal de text accesibil pentru toți membrii.",
   "tSBmIi": "Nu se pot seta URL-uri personalizate pentru un server dedicat exclusiv angajaților interni",

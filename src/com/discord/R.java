@@ -43,8 +43,8 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_h6qpfodpztt27tydyao7ulk42u_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_h6qpfodpztt27tydyao7ulk42u_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_nb6vaqcai5emxips3cqyvntcdu_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_nb6vaqcai5emxips3cqyvntcdu_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -282,6 +282,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_stampicon;
       public static int design_components_icon_native_redesign_generated_images_staricon;
       public static int design_components_icon_native_redesign_generated_images_staroutlineicon;
+      public static int design_components_icon_native_redesign_generated_images_starshootingicon;
       public static int design_components_icon_native_redesign_generated_images_stickericon;
       public static int design_components_icon_native_redesign_generated_images_stickerplusicon;
       public static int design_components_icon_native_redesign_generated_images_stickerwink2icon;
@@ -1947,6 +1948,7 @@ public final class R {
       public static int modules_client_themes_intl_clientthemescompiledmessages;
       public static int modules_collectibles_web_shopexternalskuscompiledmessages;
       public static int modules_custom_status_images_custom_status_prompts_coachmark_art;
+      public static int modules_feedback_intl_feedbackcompiledmessages;
       public static int modules_go_live_web_modal_golivemodalcompiledmessages;
       public static int modules_guild_settings_web_tags_guildsettingstagscompiledmessages;
       public static int modules_holidays_assets_snowsgiving_loading_dark;

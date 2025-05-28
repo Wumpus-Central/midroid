@@ -92,24 +92,24 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
       val var2: java.lang.String = this.attachmentId;
-      val var4: java.lang.String = this.embedId;
+      val var3: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapObscuredMediaToggleData(messageId=");
-      var5.append(var3);
-      var5.append(", channelId=");
-      var5.append(var6);
-      var5.append(", attachmentId=");
-      var5.append(var2);
-      var5.append(", embedId=");
-      var5.append(var4);
-      var5.append(", isReveal=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("TapObscuredMediaToggleData(messageId=");
+      var6.append(var4);
+      var6.append(", channelId=");
+      var6.append(var5);
+      var6.append(", attachmentId=");
+      var6.append(var2);
+      var6.append(", embedId=");
+      var6.append(var3);
+      var6.append(", isReveal=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

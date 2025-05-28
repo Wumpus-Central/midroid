@@ -98,17 +98,17 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.rawName;
-      val var2: java.lang.String = this.rawValue;
-      val var4: StructurableText = this.name;
+      val var2: java.lang.String = this.rawName;
+      val var4: java.lang.String = this.rawValue;
+      val var3: StructurableText = this.name;
       val var1: StructurableText = this.value;
       val var5: StringBuilder = new StringBuilder();
       var5.append("EmbedField(rawName=");
-      var5.append(var3);
-      var5.append(", rawValue=");
       var5.append(var2);
-      var5.append(", name=");
+      var5.append(", rawValue=");
       var5.append(var4);
+      var5.append(", name=");
+      var5.append(var3);
       var5.append(", value=");
       var5.append(var1);
       var5.append(")");

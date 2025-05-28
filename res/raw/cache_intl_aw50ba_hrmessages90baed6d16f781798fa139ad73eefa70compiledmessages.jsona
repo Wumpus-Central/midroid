@@ -1116,76 +1116,6 @@
   "2B/phI": "Ikona aplikacije",
   "HehpFR": "Došlo je do pogreške prilikom učitavanja aplikacije.",
   "QQsaCQ": "Besplatno",
-  "4ZJ+7e": [
-    "Ovo je tako velikodušno s tvoje strane! Poklonio/la si ",
-    [
-      1,
-      "skuName"
-    ],
-    " na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mjesec"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " mjeseca"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mjeseci"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Nadamo se da će uživati!"
-  ],
-  "p0pZXF": [
-    "Ovo je tako velikodušno s tvoje strane! Poklonio/la si ",
-    [
-      1,
-      "skuName"
-    ],
-    " na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " godinu"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " godine"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " godina"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Nadamo se da će uživati!"
-  ],
   "As9eLi": "Ovaj link naveden je u tvojoj e-pošti potvrde i može se pronaći i njome upravljati u tvojem popisu darova. Link za darovanje istječe nakon 48 sati.",
   "bUdTqK": [
     "Ovo je tako velikodušno s tvoje strane! Pošalji ovu poveznicu prijatelju kako bi mu dao ",
@@ -5815,8 +5745,6 @@
     ]
   ],
   "np9mf3": "Trenutačna opsesija",
-  "G1b309": "Ponavlja se",
-  "iXcll5": "U posljednje vrijeme igram",
   "+KXSFh": [
     "Ukloni prilagođenu oznaku statusa: ",
     [
@@ -5832,7 +5760,6 @@
     ]
   ],
   "45vlm5": "Iznenadna ideja",
-  "NcnbEx": "U posljednje vrijeme gledam",
   "TS3eJS": [
     [
       6,
@@ -38610,13 +38537,6 @@
   "w/XiOz": "Ovo možeš promijeniti kad poželiš.",
   "EJ26Oj": "Ovaj kanal zahtijeva opciju Push to Talk. Nećeš moći govoriti u ovom kanalu sve dok je ne omogućiš u postavkama.",
   "NYklho": "Opcija Push to Talk je obavezna",
-  "hFzI4u": "Nitro je u zraku <3",
-  "B7R16u": "Širi ljubav s Nitro darom i nabavi ekskluzivni ukras za avatar koji slobodno možeš zadržati.",
-  "wxgA+v": "Zgrabi ovaj ukras avatara kao pravu poslasticu, častimo te njime uz tvoju kupnju.",
-  "d4uO8v": "Zgrabi ovaj slatki ukras pri kupnji dara.",
-  "rbWKaW": "Bez obzira jeste li prijatelji ili „samo prijatelji”, širi ljubav s Nitro darom i nabavi ekskluzivni ukras za avatar koji slobodno možeš zadržati.",
-  "o2XB4+": "Uzmi ovaj besplatan ukras i slobodno ga zadrži!",
-  "PCmL09": "Uzmi ovaj besplatan ukras i slobodno ga zadrži!",
   "5XZKy8": "Prilagođeni link pozivnice",
   "eH/HMz": "Imaj na umu da uz prilagođene linkove pozivnica moraš imati najmanje jedan tekstualni kanal koji je svim članovima dostupan.",
   "tSBmIi": "Nije moguće postaviti personalizirani URL za server namijenjen isključivo internom zaposleniku",

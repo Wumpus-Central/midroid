@@ -1105,64 +1105,6 @@
   "2B/phI": "Biểu tượng ứng dụng",
   "HehpFR": "Xảy ra lỗi khi tải ứng dụng.",
   "QQsaCQ": "Miễn phí",
-  "4ZJ+7e": [
-    "Bạn thật là hào phóng! Bạn vừa trao tặng ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " tháng"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " tháng"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Hy vọng họ sẽ thích chúng!"
-  ],
-  "p0pZXF": [
-    "Bạn thật là hào phóng! Bạn vừa trao tặng ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " năm"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " năm"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Hy vọng họ sẽ thích chúng!"
-  ],
   "As9eLi": "Đường dẫn này được gửi kèm trong email xác nhận và bạn có thể tìm thấy và quản lý đường dẫn liên kết trong kho quà tặng của mình. Đường dẫn liên kết quà tặng sẽ hết hạn sau 48 giờ.",
   "bUdTqK": [
     "Bạn thật là hào phóng! Hãy gửi món quà này đến một người bạn để tặng họ ",
@@ -5684,8 +5626,6 @@
     ]
   ],
   "np9mf3": "Sở hữu hiện tại",
-  "G1b309": "Lặp lại",
-  "iXcll5": "Đang chơi dạo gần đây",
   "+KXSFh": [
     "Xóa nhãn trạng thái tùy chỉnh: ",
     [
@@ -5701,7 +5641,6 @@
     ]
   ],
   "45vlm5": "Những suy nghĩ khi đi tắm",
-  "NcnbEx": "Đang xem dạo gần đây",
   "TS3eJS": [
     [
       6,
@@ -37434,13 +37373,6 @@
   "w/XiOz": "Bạn có thể thay đổi thông tin này bất cứ lúc nào.",
   "EJ26Oj": "Kênh này yêu cầu Push to Talk để trò chuyện thoại. Bạn chỉ có thể nghe cho đến khi bạn chuyển chế độ\ntừ Bộ Phát Hiện Giọng Nói sang Push to Talk.",
   "NYklho": "Cần có Push to Talk",
-  "hFzI4u": "Nitro đang loanh quanh đâu đây <3",
-  "B7R16u": "Hãy lan tỏa tình yêu với quà tặng Nitro và nhận một trang trí ảnh đại diện độc quyền miễn phí.",
-  "wxgA+v": "Giành lấy trang trí ảnh đại diện này, đây là một phần quà nhỏ tặng kèm giao dịch mua của bạn từ chúng tôi.",
-  "d4uO8v": "Giành lấy trang trí dễ thương này cùng với giao dịch mua quà tặng của bạn.",
-  "rbWKaW": "Cho dù chỉ là bạn bè hay \"chỉ là bạn bè\", hãy lan tỏa tình yêu với quà tặng Nitro và nhận một trang trí ảnh đại diện độc quyền miễn phí.",
-  "o2XB4+": "Hãy nhận lấy trang trí miễn phí này, của bạn đó!",
-  "PCmL09": "Hãy nhận lấy trang trí miễn phí này, của bạn đó!",
   "5XZKy8": "Liên Kết Mời Tùy Chỉnh",
   "eH/HMz": "Hãy nhớ rằng các liên kết mời tùy chỉnh chỉ hoạt động khi có một kênh văn bản mở cho tất cả các thành viên truy cập.",
   "tSBmIi": "Không thể đặt url ảo cho một máy chủ chỉ dành cho nhân viên nội bộ",

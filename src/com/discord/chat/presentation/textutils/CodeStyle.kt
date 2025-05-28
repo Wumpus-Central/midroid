@@ -61,7 +61,7 @@ public object CodeStyle {
    }
 
    private fun generateAst(node: CodeBlockContentNode): List<Node<RenderContext>> {
-      val var3: java.lang.String = kotlin.text.h.Z0(var1.getLang()).toString();
+      var var3: java.lang.String = kotlin.text.h.Z0(var1.getLang()).toString();
       var var2: java.lang.String = var1.getContent();
       val var6: StringBuilder = new StringBuilder();
       var6.append("```");
@@ -69,21 +69,21 @@ public object CodeStyle {
       var6.append("\n");
       var6.append(var2);
       var6.append("\n```");
-      val var7: java.lang.String = var6.toString();
+      var3 = var6.toString();
 
       label16:
       try {
-         val var11: kotlin.Result.a = Result.k;
-         var9 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
-      } catch (var4: java.lang.Throwable) {
          val var8: kotlin.Result.a = Result.k;
-         var9 = Result.b(kotlin.c.a(var4));
+         var7 = Result.b(Parser.parse$default(this.getParser(), var3, Unit.a, null, 4, null));
+      } catch (var4: java.lang.Throwable) {
+         val var11: kotlin.Result.a = Result.k;
+         var7 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
       val var12: java.util.List = kotlin.collections.i.e(new TextNode(var2));
-      var2 = (java.lang.String)var9;
-      if (Result.g(var9)) {
+      var2 = (java.lang.String)var7;
+      if (Result.g(var7)) {
          var2 = var12;
       }
 
@@ -141,7 +141,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var7: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var11: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -151,8 +151,8 @@ public object CodeStyle {
          var3.getInsets().getBottom()
       );
       var5 = SizeUtilsKt.getDpToPx(4);
-      val var11: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var8: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var8: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
+      val var7: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var9: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
       val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
@@ -164,7 +164,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var7, var11, var8, var9, var10}[var14];
+         val var12: Any = new Object[]{var11, var8, var7, var9, var10}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

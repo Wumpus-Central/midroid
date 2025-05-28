@@ -1086,64 +1086,6 @@
   "2B/phI": "Icona app",
   "HehpFR": "Si è verificato un errore nel tentativo di caricare l'applicazione.",
   "QQsaCQ": "Gratis",
-  "4ZJ+7e": [
-    "Che generosità! Hai regalato ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mese"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mesi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " di ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Speriamo che apprezzi!"
-  ],
-  "p0pZXF": [
-    "Che generosità! Hai regalato ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " anno"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " anni"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " di ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Speriamo che apprezzi!"
-  ],
   "As9eLi": "Questo link è incluso nella tua e-mail di conferma e può essere trovata e gestita nel tuo inventario regali. Il link regalo scade dopo 48 ore.",
   "bUdTqK": [
     "Che generosità! Invia questo regalo a un amico per offrigli ",
@@ -5668,8 +5610,6 @@
     ]
   ],
   "np9mf3": "Ossessione attuale",
-  "G1b309": "A ripetizione",
-  "iXcll5": "Giocato di recente",
   "+KXSFh": [
     "Rimuovi l'etichetta di stato personalizzata: ",
     [
@@ -5685,7 +5625,6 @@
     ]
   ],
   "45vlm5": "Idea da doccia",
-  "NcnbEx": "Guardato di recente",
   "TS3eJS": [
     [
       6,
@@ -37387,13 +37326,6 @@
   "w/XiOz": "Puoi cambiarlo in qualsiasi momento.",
   "EJ26Oj": "Per utilizzare la chat vocale in questo canale, è necessario attivare il push-to-talk. Finché non passerai dal VAD (Rilevamento attività vocale)\nal push-to-talk potrai soltanto ascoltare.",
   "NYklho": "È necessario il push-to-talk",
-  "hFzI4u": "Tira aria di Nitro <3",
-  "B7R16u": "Diffondi l'amore con un regalo Nitro e ottieni una decorazione avatar esclusiva che è tua per sempre.",
-  "wxgA+v": "Ecco una decorazione avatar in regalo, offerta da noi con il tuo acquisto.",
-  "d4uO8v": "Ecco una decorazione in regalo con il tuo acquisto.",
-  "rbWKaW": "Che siate solo amici o \"solo amici\", diffondi l'amore con un regalo Nitro e ottieni una decorazione avatar esclusiva che è tua per sempre.",
-  "o2XB4+": "Ottieni questa decorazione gratuita, è tua per sempre!",
-  "PCmL09": "Ottieni questa decorazione gratuita, è tua per sempre!",
   "5XZKy8": "Link d'invito personalizzato",
   "eH/HMz": "Ricorda che un canale testuale deve essere accessibile a tutti i membri, perché il suo link d'invito personalizzato funzioni.",
   "tSBmIi": "Impossibile impostare un vanity URL per un server interno riservato ai dipendenti",

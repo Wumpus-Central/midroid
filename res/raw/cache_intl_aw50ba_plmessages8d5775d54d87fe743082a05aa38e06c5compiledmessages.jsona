@@ -1122,76 +1122,6 @@
   "2B/phI": "Ikona aplikacji",
   "HehpFR": "Podczas próby wczytania aplikacji wystąpił błąd.",
   "QQsaCQ": "Za darmo",
-  "4ZJ+7e": [
-    "Co za szczodrość! Podarowałeś(-aś) ",
-    [
-      1,
-      "skuName"
-    ],
-    " na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " miesiąc"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " miesiące"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " miesięcy"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Mamy nadzieję, że prezent się spodoba!"
-  ],
-  "p0pZXF": [
-    "Co za szczodrość! Podarowałeś(-aś) ",
-    [
-      1,
-      "skuName"
-    ],
-    " na ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " rok"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " lata"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " lat"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    ". Mamy nadzieję, że prezent się spodoba!"
-  ],
   "As9eLi": "Ten link jest dostępny w e-mailu z potwierdzeniem i można go znaleźć i zarządzać nim w ekwipunku prezentów. Link do prezentu wygasa po 48 godzinach.",
   "bUdTqK": [
     "Co za szczodrość! Wyślij ten link znajomemu, by dać mu ",
@@ -5887,8 +5817,6 @@
     ]
   ],
   "np9mf3": "Bieżąca obsesja",
-  "G1b309": "W kółko",
-  "iXcll5": "Ostatnio grane",
   "+KXSFh": [
     "Usuń etykietę statusu własnego: ",
     [
@@ -5904,7 +5832,6 @@
     ]
   ],
   "45vlm5": "Przemyślenia pod prysznicem",
-  "NcnbEx": "Ostatnio oglądane",
   "TS3eJS": [
     [
       6,
@@ -38459,13 +38386,6 @@
   "w/XiOz": "Możesz to zmienić w dowolnym momencie.",
   "EJ26Oj": "Ten kanał wymaga Naciśnij i Mów do rozmowy głosowej. Jeśli chcesz brać w niej udział, zmień tryb na\nNaciśnij i Mów z wykrywania Aktywności Głosowej.",
   "NYklho": "Wymagane Naciśnij i Mów",
-  "hFzI4u": "Nitro unosi się w powietrzu <3",
-  "B7R16u": "Okaż miłość, dając w prezencie Nitro, i zdobądź wyjątkową dekorację awatara na własność.",
-  "wxgA+v": "Zgarnij tę piękną dekorację awatara w ramach prezentu od nas przy zakupie.",
-  "d4uO8v": "Zgarnij tę piękną dekorację przy zakupie prezentu.",
-  "rbWKaW": "Niezależnie od tego, czy jesteście tylko przyjaciółmi, czy „tylko przyjaciółmi”, okaż miłość, dając w prezencie Nitro, i zdobądź wyjątkową dekorację awatara na własność.",
-  "o2XB4+": "Zdobądź tę darmową dekorację na własność!",
-  "PCmL09": "Zdobądź tę darmową dekorację na własność!",
   "5XZKy8": "Niestandardowy link z zaproszeniem",
   "eH/HMz": "Pamiętaj, że niestandardowe linki z zaproszeniem wymagają do działania jednego kanału tekstowego dostępnego dla wszystkich członków.",
   "tSBmIi": "Nie można ustawić unikalnego adresu URL dla serwera przeznaczonego tylko dla wewnętrznych pracowników",

@@ -1115,70 +1115,6 @@
   "2B/phI": "Programėlės piktograma",
   "HehpFR": "Bandant įkelti šią programėlę įvyko klaida.",
   "QQsaCQ": "Nemokama",
-  "4ZJ+7e": [
-    "Tu labai dosnus (-i)! Suteikei galimybę naudoti ",
-    [
-      1,
-      "skuName"
-    ],
-    " ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " mėn."
-        ],
-        "other": [
-          [
-            7
-          ],
-          " mėn."
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Tikimės, kad jam (-ai) tai patiks!"
-  ],
-  "p0pZXF": [
-    "Tu labai dosnus (-i)! Suteikei galimybę naudoti ",
-    [
-      1,
-      "skuName"
-    ],
-    " ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " metus."
-        ],
-        "few": [
-          [
-            7
-          ],
-          " metus."
-        ],
-        "other": [
-          [
-            7
-          ],
-          " metų."
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " Tikimės, kad jam (-ai) tai patiks!"
-  ],
   "As9eLi": "Ši nuoroda įtraukta į patvirtinimo el. laišką, ją galima rasti ir tvarkyti dovanų atsargose. Dovanos nuoroda baigia galioti po 48 valandų.",
   "bUdTqK": [
     "Esi toks dosnus! Nusiųsk šią dovaną draugui ir suteik jam galimybę naudoti ",
@@ -5874,8 +5810,6 @@
     ]
   ],
   "np9mf3": "Dabartinė aistra",
-  "G1b309": "Pakartotinai žaista",
-  "iXcll5": "Pastaruoju metu žaista",
   "+KXSFh": [
     "Pašalinti tinkintos būsenos etiketę: ",
     [
@@ -5891,7 +5825,6 @@
     ]
   ],
   "45vlm5": "Geniali idėja",
-  "NcnbEx": "Pastaruoju metu žiūrėta",
   "TS3eJS": [
     [
       6,
@@ -38598,13 +38531,6 @@
   "w/XiOz": "Galėsi bet kada pakeisti.",
   "EJ26Oj": "Šiame kanale būtina Push to talk funkcija norint kalbėti. Tu galėsi tik klausyti, kol nepakeisi funkcijos\nVoice Activity į Push to talk.",
   "NYklho": "Būtina Push to talk funkcija",
-  "hFzI4u": "Nitro tvyro ore <3",
-  "B7R16u": "Skleisk meilę su Nitro dovana ir gauk išskirtinį pseudoportreto papuošimą, kurį galėsi pasilikti.",
-  "wxgA+v": "Čiupk šį pseudoportreto papuošimą kaip mielą dovanėlę nuo mūsų už pirkimą.",
-  "d4uO8v": "Čiupk šį mielą papuošimą, kai perki dovaną.",
-  "rbWKaW": "Ar jūs iš tikrųjų tik draugai, ar „tik draugai“, skleisk meilę su Nitro dovana ir gauk išskirtinį pseudoportreto papuošimą, kurį galėsi pasilikti.",
-  "o2XB4+": "Gauk šį nemokamą papuošimą, kurį galėsi pasilikti!",
-  "PCmL09": "Gauk šį nemokamą papuošimą, kurį galėsi pasilikti!",
   "5XZKy8": "Tinkinta pakvietimo nuoroda",
   "eH/HMz": "Nepamiršk, kad tinkintos pakvietimo nuorodos neveiks, jei nebus bent vieno visiems nariams prieinamo tekstinių pokalbių kanalo.",
   "tSBmIi": "Unikalaus adreso negalima nustatyti vidiniam serveriui, kuris skirtas tik darbuotojams",

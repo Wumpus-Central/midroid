@@ -301,42 +301,42 @@ public data class Attachment(id: String? = null,
    private fun getProxyUrlQueryParam(paramName: String): Int? {
       label38: {
          try {
-            val var19: a = Result.k;
+            val var3: a = Result.k;
             var1 = new UrlQuerySanitizer(this.url).getValue(var1);
          } catch (var6: java.lang.Throwable) {
-            val var3: a = Result.k;
-            var16 = Result.b(c.a(var6));
+            val var16: a = Result.k;
+            var17 = Result.b(c.a(var6));
             break label38;
          }
 
-         val var18: Int;
+         val var20: Int;
          if (var1 != null) {
             try {
-               var18 = h.m(var1);
+               var20 = h.m(var1);
             } catch (var5: java.lang.Throwable) {
-               val var21: a = Result.k;
-               var16 = Result.b(c.a(var5));
+               val var19: a = Result.k;
+               var17 = Result.b(c.a(var5));
                break label38;
             }
          } else {
-            var18 = null;
+            var20 = null;
          }
 
          label26:
          try {
-            var16 = Result.b(var18);
+            var17 = Result.b(var20);
          } catch (var4: java.lang.Throwable) {
-            val var22: a = Result.k;
-            var16 = Result.b(c.a(var4));
+            val var21: a = Result.k;
+            var17 = Result.b(c.a(var4));
             break label26;
          }
       }
 
-      if (Result.g(var16)) {
-         var16 = null;
+      if (Result.g(var17)) {
+         var17 = null;
       }
 
-      return var16 as Int;
+      return var17 as Int;
    }
 
    private fun hasDimensions(): Boolean {
@@ -770,8 +770,8 @@ public data class Attachment(id: String? = null,
          var2 = this.videoUrl.hashCode();
       }
 
-      val var36: Int = this.filename.hashCode();
-      val var37: Int = this.size.hashCode();
+      val var37: Int = this.filename.hashCode();
+      val var36: Int = this.size.hashCode();
       val var3: Int;
       if (this.sourceWidth == null) {
          var3 = 0;
@@ -1042,10 +1042,10 @@ public data class Attachment(id: String? = null,
                                                                                                                                                                                                                                                                                                                                                       + var2
                                                                                                                                                                                                                                                                                                                                                 )
                                                                                                                                                                                                                                                                                                                                                 * 31
-                                                                                                                                                                                                                                                                                                                                             + var36
+                                                                                                                                                                                                                                                                                                                                             + var37
                                                                                                                                                                                                                                                                                                                                        )
                                                                                                                                                                                                                                                                                                                                        * 31
-                                                                                                                                                                                                                                                                                                                                    + var37
+                                                                                                                                                                                                                                                                                                                                    + var36
                                                                                                                                                                                                                                                                                                                               )
                                                                                                                                                                                                                                                                                                                               * 31
                                                                                                                                                                                                                                                                                                                            + var3
@@ -1154,129 +1154,129 @@ public data class Attachment(id: String? = null,
    }
 
    public override fun toString(): String {
-      val var32: java.lang.String = this.id;
-      val var23: java.lang.String = this.url;
-      val var22: java.lang.String = this.videoUrl;
-      val var6: java.lang.String = this.filename;
-      val var29: java.lang.String = this.size;
-      val var17: Int = this.sourceWidth;
-      val var39: Int = this.sourceHeight;
-      val var3: Boolean = this.isSpoiler;
-      val var16: java.lang.String = this.spoiler;
-      val var9: java.lang.String = this.description;
-      val var36: java.lang.String = this.hint;
-      val var34: java.lang.String = this.role;
-      val var1: Boolean = this.showDescription;
-      val var11: Int = this.progress;
-      val var14: java.lang.String = this.uploaderId;
-      val var41: java.lang.String = this.uploaderItemId;
-      val var20: java.lang.String = this.placeholder;
-      val var24: Int = this.placeholderVersion;
-      val var7: Int = this.backgroundColor;
-      val var25: java.lang.String = this.attachmentTagText;
-      val var40: Int = this.attachmentTagBackgroundColor;
-      val var4: Int = this.attachmentTagTextColor;
-      val var31: java.lang.String = this.attachmentTagIconType;
-      val var13: java.lang.String = this.attachmentType;
-      val var12: java.lang.Boolean = this.obscure;
-      val var37: java.lang.String = this.obscureDescription;
-      val var10: java.lang.Boolean = this.obscureAwaitingScan;
-      val var30: java.lang.Boolean = this.obscureHideControls;
-      val var18: java.lang.Boolean = this.obscureIsOpaque;
-      val var38: java.lang.Boolean = this.verifyAge;
-      val var35: java.lang.Float = this.durationSecs;
-      val var26: java.lang.String = this.waveform;
-      val var2: Boolean = this.isAnimated;
-      val var5: Int = this.mediaViewerBufferForPlaybackMs;
-      val var8: Int = this.mediaViewerBufferForPlaybackAfterRebufferMs;
-      val var15: Int = this.mediaViewerMinBufferMs;
-      val var27: Int = this.mediaViewerMaxBufferMs;
-      val var21: java.lang.Boolean = this.mediaViewerEnableDecoderFallback;
-      val var33: java.lang.Boolean = this.mediaViewerEnableAsyncBufferQueueing;
-      val var28: java.lang.Boolean = this.srcIsAnimated;
-      val var19: StringBuilder = new StringBuilder();
-      var19.append("Attachment(id=");
-      var19.append(var32);
-      var19.append(", url=");
-      var19.append(var23);
-      var19.append(", videoUrl=");
-      var19.append(var22);
-      var19.append(", filename=");
-      var19.append(var6);
-      var19.append(", size=");
-      var19.append(var29);
-      var19.append(", sourceWidth=");
-      var19.append(var17);
-      var19.append(", sourceHeight=");
-      var19.append(var39);
-      var19.append(", isSpoiler=");
-      var19.append(var3);
-      var19.append(", spoiler=");
-      var19.append(var16);
-      var19.append(", description=");
-      var19.append(var9);
-      var19.append(", hint=");
-      var19.append(var36);
-      var19.append(", role=");
-      var19.append(var34);
-      var19.append(", showDescription=");
-      var19.append(var1);
-      var19.append(", progress=");
-      var19.append(var11);
-      var19.append(", uploaderId=");
-      var19.append(var14);
-      var19.append(", uploaderItemId=");
-      var19.append(var41);
-      var19.append(", placeholder=");
-      var19.append(var20);
-      var19.append(", placeholderVersion=");
-      var19.append(var24);
-      var19.append(", backgroundColor=");
-      var19.append(var7);
-      var19.append(", attachmentTagText=");
-      var19.append(var25);
-      var19.append(", attachmentTagBackgroundColor=");
-      var19.append(var40);
-      var19.append(", attachmentTagTextColor=");
-      var19.append(var4);
-      var19.append(", attachmentTagIconType=");
-      var19.append(var31);
-      var19.append(", attachmentType=");
-      var19.append(var13);
-      var19.append(", obscure=");
-      var19.append(var12);
-      var19.append(", obscureDescription=");
-      var19.append(var37);
-      var19.append(", obscureAwaitingScan=");
-      var19.append(var10);
-      var19.append(", obscureHideControls=");
-      var19.append(var30);
-      var19.append(", obscureIsOpaque=");
-      var19.append(var18);
-      var19.append(", verifyAge=");
-      var19.append(var38);
-      var19.append(", durationSecs=");
-      var19.append(var35);
-      var19.append(", waveform=");
-      var19.append(var26);
-      var19.append(", isAnimated=");
-      var19.append(var2);
-      var19.append(", mediaViewerBufferForPlaybackMs=");
-      var19.append(var5);
-      var19.append(", mediaViewerBufferForPlaybackAfterRebufferMs=");
-      var19.append(var8);
-      var19.append(", mediaViewerMinBufferMs=");
-      var19.append(var15);
-      var19.append(", mediaViewerMaxBufferMs=");
-      var19.append(var27);
-      var19.append(", mediaViewerEnableDecoderFallback=");
-      var19.append(var21);
-      var19.append(", mediaViewerEnableAsyncBufferQueueing=");
-      var19.append(var33);
-      var19.append(", srcIsAnimated=");
-      var19.append(var28);
-      var19.append(")");
-      return var19.toString();
+      val var31: java.lang.String = this.id;
+      val var24: java.lang.String = this.url;
+      val var35: java.lang.String = this.videoUrl;
+      val var28: java.lang.String = this.filename;
+      val var40: java.lang.String = this.size;
+      val var29: Int = this.sourceWidth;
+      val var13: Int = this.sourceHeight;
+      val var1: Boolean = this.isSpoiler;
+      val var19: java.lang.String = this.spoiler;
+      val var41: java.lang.String = this.description;
+      val var14: java.lang.String = this.hint;
+      val var30: java.lang.String = this.role;
+      val var2: Boolean = this.showDescription;
+      val var25: Int = this.progress;
+      val var5: java.lang.String = this.uploaderId;
+      val var11: java.lang.String = this.uploaderItemId;
+      val var27: java.lang.String = this.placeholder;
+      val var21: Int = this.placeholderVersion;
+      val var34: Int = this.backgroundColor;
+      val var12: java.lang.String = this.attachmentTagText;
+      val var26: Int = this.attachmentTagBackgroundColor;
+      val var39: Int = this.attachmentTagTextColor;
+      val var32: java.lang.String = this.attachmentTagIconType;
+      val var9: java.lang.String = this.attachmentType;
+      val var23: java.lang.Boolean = this.obscure;
+      val var18: java.lang.String = this.obscureDescription;
+      val var4: java.lang.Boolean = this.obscureAwaitingScan;
+      val var22: java.lang.Boolean = this.obscureHideControls;
+      val var7: java.lang.Boolean = this.obscureIsOpaque;
+      val var8: java.lang.Boolean = this.verifyAge;
+      val var37: java.lang.Float = this.durationSecs;
+      val var10: java.lang.String = this.waveform;
+      val var3: Boolean = this.isAnimated;
+      val var38: Int = this.mediaViewerBufferForPlaybackMs;
+      val var36: Int = this.mediaViewerBufferForPlaybackAfterRebufferMs;
+      val var16: Int = this.mediaViewerMinBufferMs;
+      val var20: Int = this.mediaViewerMaxBufferMs;
+      val var15: java.lang.Boolean = this.mediaViewerEnableDecoderFallback;
+      val var17: java.lang.Boolean = this.mediaViewerEnableAsyncBufferQueueing;
+      val var6: java.lang.Boolean = this.srcIsAnimated;
+      val var33: StringBuilder = new StringBuilder();
+      var33.append("Attachment(id=");
+      var33.append(var31);
+      var33.append(", url=");
+      var33.append(var24);
+      var33.append(", videoUrl=");
+      var33.append(var35);
+      var33.append(", filename=");
+      var33.append(var28);
+      var33.append(", size=");
+      var33.append(var40);
+      var33.append(", sourceWidth=");
+      var33.append(var29);
+      var33.append(", sourceHeight=");
+      var33.append(var13);
+      var33.append(", isSpoiler=");
+      var33.append(var1);
+      var33.append(", spoiler=");
+      var33.append(var19);
+      var33.append(", description=");
+      var33.append(var41);
+      var33.append(", hint=");
+      var33.append(var14);
+      var33.append(", role=");
+      var33.append(var30);
+      var33.append(", showDescription=");
+      var33.append(var2);
+      var33.append(", progress=");
+      var33.append(var25);
+      var33.append(", uploaderId=");
+      var33.append(var5);
+      var33.append(", uploaderItemId=");
+      var33.append(var11);
+      var33.append(", placeholder=");
+      var33.append(var27);
+      var33.append(", placeholderVersion=");
+      var33.append(var21);
+      var33.append(", backgroundColor=");
+      var33.append(var34);
+      var33.append(", attachmentTagText=");
+      var33.append(var12);
+      var33.append(", attachmentTagBackgroundColor=");
+      var33.append(var26);
+      var33.append(", attachmentTagTextColor=");
+      var33.append(var39);
+      var33.append(", attachmentTagIconType=");
+      var33.append(var32);
+      var33.append(", attachmentType=");
+      var33.append(var9);
+      var33.append(", obscure=");
+      var33.append(var23);
+      var33.append(", obscureDescription=");
+      var33.append(var18);
+      var33.append(", obscureAwaitingScan=");
+      var33.append(var4);
+      var33.append(", obscureHideControls=");
+      var33.append(var22);
+      var33.append(", obscureIsOpaque=");
+      var33.append(var7);
+      var33.append(", verifyAge=");
+      var33.append(var8);
+      var33.append(", durationSecs=");
+      var33.append(var37);
+      var33.append(", waveform=");
+      var33.append(var10);
+      var33.append(", isAnimated=");
+      var33.append(var3);
+      var33.append(", mediaViewerBufferForPlaybackMs=");
+      var33.append(var38);
+      var33.append(", mediaViewerBufferForPlaybackAfterRebufferMs=");
+      var33.append(var36);
+      var33.append(", mediaViewerMinBufferMs=");
+      var33.append(var16);
+      var33.append(", mediaViewerMaxBufferMs=");
+      var33.append(var20);
+      var33.append(", mediaViewerEnableDecoderFallback=");
+      var33.append(var15);
+      var33.append(", mediaViewerEnableAsyncBufferQueueing=");
+      var33.append(var17);
+      var33.append(", srcIsAnimated=");
+      var33.append(var6);
+      var33.append(")");
+      return var33.toString();
    }
 
    public fun type(): AttachmentType {

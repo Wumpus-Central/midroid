@@ -1098,64 +1098,6 @@
   "2B/phI": "Alkalmazásikon",
   "HehpFR": "Hiba történt, miközben megpróbáltuk betölteni az alkalmazást.",
   "QQsaCQ": "Ingyenes",
-  "4ZJ+7e": [
-    "Igazán nagylelkű vagy! ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " hónapnyi"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " hónapnyi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " hozzáférést ajándékoztál a következőből: ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Reméljük, örömét leli benne a barátod!"
-  ],
-  "p0pZXF": [
-    "Igazán nagylelkű vagy! ",
-    [
-      6,
-      "intervalCount",
-      {
-        "=1": [
-          [
-            7
-          ],
-          " évnyi"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " évnyi"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " hozzáférést ajándékoztál a következőből: ",
-    [
-      1,
-      "skuName"
-    ],
-    ". Reméljük, örömét leli benne a barátod!"
-  ],
   "As9eLi": "Ez a link szerepel a megerősítő e-mailedben, és megtalálható és kezelhető az ajándékleltáradban. Az ajándékhivatkozás 48 óra múlva lejár.",
   "bUdTqK": [
     "Annyira nagylelkű vagy! Küldd el ezt az ajándékot egy barátodnak, hogy odaadd neki ",
@@ -5678,8 +5620,6 @@
     ]
   ],
   "np9mf3": "Aktuális dili",
-  "G1b309": "Folyamatosan ez megy",
-  "iXcll5": "Ezekkel játszottál mostanában",
   "+KXSFh": [
     "Egyedi állapotcímke eltávolítása: ",
     [
@@ -5695,7 +5635,6 @@
     ]
   ],
   "45vlm5": "Magvas gondolat",
-  "NcnbEx": "Ezeket nézted mostanában",
   "TS3eJS": [
     [
       6,
@@ -37321,13 +37260,6 @@
   "w/XiOz": "Ezt bármikor megváltoztathatod.",
   "EJ26Oj": "A csatornához a Push to Talk szükséges. Csak hallgatózni tudsz, amíg nem váltasz Voice Activity-ről\nPush to Talk módra.",
   "NYklho": "Push to Talk szükséges",
-  "hFzI4u": "Mindent átjár a Nitro <3",
-  "B7R16u": "Egy Nitro-ajándékkal kifejezheted a szeretetedet, és hozzájuthatsz egy exkluzív profilkép-dekorációhoz.",
-  "wxgA+v": "Jutalmazd meg magad ezzel a profilkép-dekorációval. Ajándékba adjuk a vásárlásod mellé.",
-  "d4uO8v": "Csapj le erre a nagyszerű dekorációra, amely az ajándékvásárlásodhoz jár.",
-  "rbWKaW": "Nem számít, hogy csak barátok vagytok vagy „csak barátok” vagytok – egy Nitro-ajándékkal kifejezheted a szeretetedet, és hozzájuthatsz egy exkluzív profilkép-dekorációhoz.",
-  "o2XB4+": "Csapj le erre az ingyenes dekorációra!",
-  "PCmL09": "Csapj le erre az ingyenes dekorációra!",
   "5XZKy8": "Egyedi meghívó link",
   "eH/HMz": "Ne feledd, hogy az egyedi meghívó linkek működéséhez szükséges egy szöveges csatorna, ami minden tag számára elérhető.",
   "tSBmIi": "A kizárólag belső munkatársak számára létrehozott szervereken nem lehet kreatív URL-címet beállítani",
