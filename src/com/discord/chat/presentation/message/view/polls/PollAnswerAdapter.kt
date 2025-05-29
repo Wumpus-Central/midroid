@@ -55,13 +55,13 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
 
    public open fun onBindViewHolder(holder: Any, position: Int) {
       q.h(var1, "holder");
-      val var3: PollAnswerAccessory = this.items.get(var2);
-      val var4: View = var1.getBinding().getRoot();
-      var4.setEnabled(var3.getCanTapAnswers());
-      var4.setOnClickListener(new g(this, var3));
-      var4.setImportantForAccessibility(1);
-      a0.p0(var4, new PollsAnswerAccessibilityDelegate(var3));
-      var1.bind(var3, new h(this, var3), this.onLongPressImage);
+      val var4: PollAnswerAccessory = this.items.get(var2);
+      val var3: View = var1.getBinding().getRoot();
+      var3.setEnabled(var4.getCanTapAnswers());
+      var3.setOnClickListener(new g(this, var4));
+      var3.setImportantForAccessibility(1);
+      a0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
+      var1.bind(var4, new h(this, var4), this.onLongPressImage);
    }
 
    @SuppressLint(["NotifyDataSetChanged"])

@@ -75,11 +75,11 @@ public class OverlayTrashWrap : OverlayView {
       });
       this.showAnimator = var3;
       val var8: AnimatorSet = new AnimatorSet();
-      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var10.setTarget(this);
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var9.setTarget(var6.trashWrapTargetZone);
-      var8.playTogether(new Animator[]{var10, var9});
+      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var9.setTarget(this);
+      var10 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var10.setTarget(var6.trashWrapTargetZone);
+      var8.playTogether(new Animator[]{var9, var10});
       var8.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
@@ -191,13 +191,13 @@ public class OverlayTrashWrap : OverlayView {
       this.setBackgroundResource(R.drawable.trash_bg);
       this.setVisibility(4);
       var7.trashWrapTargetContainer.setActivated(false);
-      var var4: AnimatorSet = new AnimatorSet();
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
-      var9.setTarget(this);
-      var var12: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
+      val var9: AnimatorSet = new AnimatorSet();
+      var var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_in);
+      var4.setTarget(this);
+      val var12: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_in_bottom);
       var12.setTarget(var7.trashWrapTargetZone);
-      var4.playTogether(new Animator[]{var9, var12});
-      var4.addListener(new AnimatorListener(this) {
+      var9.playTogether(new Animator[]{var4, var12});
+      var9.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -217,14 +217,14 @@ public class OverlayTrashWrap : OverlayView {
             this.this$0.setVisibility(0);
          }
       });
-      this.showAnimator = var4;
-      var4 = new AnimatorSet();
-      var12 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var12.setTarget(this);
-      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var10.setTarget(var7.trashWrapTargetZone);
-      var4.playTogether(new Animator[]{var12, var10});
-      var4.addListener(new AnimatorListener(this) {
+      this.showAnimator = var9;
+      val var13: AnimatorSet = new AnimatorSet();
+      val var10: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var10.setTarget(this);
+      var4 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var4.setTarget(var7.trashWrapTargetZone);
+      var13.playTogether(new Animator[]{var10, var4});
+      var13.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
          {
@@ -244,7 +244,7 @@ public class OverlayTrashWrap : OverlayView {
          public void onAnimationStart(Animator var1) {
          }
       });
-      this.hideAnimator = var4;
+      this.hideAnimator = var13;
       this.trashZoneRect = new Rect();
       this.locationOnScreen = new int[]{0, 0};
    }
@@ -292,10 +292,10 @@ public class OverlayTrashWrap : OverlayView {
       super.onLayout(var1, var2, var3, var4, var5);
       if (var1) {
          this.binding.trashWrapTargetZone.getLocationOnScreen(this.locationOnScreen);
-         var2 = this.locationOnScreen[0];
-         var3 = this.locationOnScreen[1];
+         var3 = this.locationOnScreen[0];
+         var2 = this.locationOnScreen[1];
          this.trashZoneRect
-            .set(var2, this.locationOnScreen[1], this.binding.trashWrapTargetZone.getWidth() + var2, this.binding.trashWrapTargetZone.getHeight() + var3);
+            .set(var3, this.locationOnScreen[1], this.binding.trashWrapTargetZone.getWidth() + var3, this.binding.trashWrapTargetZone.getHeight() + var2);
       }
    }
 

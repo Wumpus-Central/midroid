@@ -53,13 +53,13 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
       val var5: Function1 = var3.getLabel();
-      var var6: Context = this.getContext();
+      val var6: Context = this.getContext();
       kotlin.jvm.internal.q.g(var6, "getContext(...)");
       val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
-      val var8: Function1 = var3.getDescription();
-      var6 = this.getContext();
-      kotlin.jvm.internal.q.g(var6, "getContext(...)");
-      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      val var12: Function1 = var3.getDescription();
+      val var8: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var8, "getContext(...)");
+      var10.configure(var11, var12.invoke(var8) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
    }
 
    @JvmStatic
@@ -253,19 +253,19 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
          kotlin.jvm.internal.q.h(var1, "<this>");
          val var3: Context = var1.getContext();
          kotlin.jvm.internal.q.g(var3, "getContext(...)");
-         val var4: SpoilerView = new SpoilerView(var3, null, 2, null);
-         var4.setId(View.generateViewId());
-         ViewClippingUtilsKt.clipToRoundedRectangle(var4, var2);
-         var4.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
-         var1.addView(var4);
-         val var5: ConstraintSet = new ConstraintSet();
-         var5.g(var1);
-         var5.h(var4.getId(), 6, 0, 6, 0);
-         var5.h(var4.getId(), 7, 0, 7, 0);
-         var5.h(var4.getId(), 3, 0, 3, 0);
-         var5.h(var4.getId(), 4, 0, 4, 0);
-         var5.c(var1);
-         return var4;
+         val var5: SpoilerView = new SpoilerView(var3, null, 2, null);
+         var5.setId(View.generateViewId());
+         ViewClippingUtilsKt.clipToRoundedRectangle(var5, var2);
+         var5.setLayoutParams(new ConstraintLayout.LayoutParams(0, 0));
+         var1.addView(var5);
+         val var4: ConstraintSet = new ConstraintSet();
+         var4.g(var1);
+         var4.h(var5.getId(), 6, 0, 6, 0);
+         var4.h(var5.getId(), 7, 0, 7, 0);
+         var4.h(var5.getId(), 3, 0, 3, 0);
+         var4.h(var5.getId(), 4, 0, 4, 0);
+         var4.c(var1);
+         return var5;
       }
    }
 }

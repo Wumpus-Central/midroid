@@ -27,15 +27,15 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2);
-      val var4: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var3: TextView = var4.label;
-      kotlin.jvm.internal.q.e(var4.label);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryBold);
-      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
-      ViewClippingUtilsKt.clipToCircle(var3);
-      var4.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
+      val var3: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var4: TextView = var3.label;
+      kotlin.jvm.internal.q.e(var3.label);
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
+      var4.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
+      ViewClippingUtilsKt.clipToCircle(var4);
+      var3.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
    }
 
    @JvmStatic

@@ -57,7 +57,7 @@ public class GuildProfileInviteView  public constructor(context: Context, attrs:
       var var4: TextView = var6.headerText;
       var6.headerText.setTextColor(ThemeManagerKt.getTheme().getHeaderSecondary());
       kotlin.jvm.internal.q.e(var4);
-      SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
+      SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       val var8: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4 = var6.titleText;

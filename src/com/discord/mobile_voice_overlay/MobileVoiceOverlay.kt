@@ -206,13 +206,13 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
       kotlin.jvm.internal.q.h(var1, "it");
-      val var3: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-      val var5: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var5.getInsetMargins().set(-var3, var3, -var3, var3);
-      var5.setOnClickListener(new l(var5, var0));
-      var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var5));
-      var5.setOnMovingStateChanged(new n(var0, var5));
-      return var5;
+      val var2: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
+      val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
+      var4.getInsetMargins().set(-var2, var2, -var2, var2);
+      var4.setOnClickListener(new l(var4, var0));
+      var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
+      var4.setOnMovingStateChanged(new n(var0, var4));
+      return var4;
    }
 
    @JvmStatic
@@ -377,11 +377,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

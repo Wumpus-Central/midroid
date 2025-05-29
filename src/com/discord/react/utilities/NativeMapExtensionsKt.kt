@@ -193,40 +193,40 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 
 public fun ReadableMap.toJson(): JSONObject {
    q.h(var0, "<this>");
-   val var1: JSONObject = new JSONObject();
-   val var3: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var3: JSONObject = new JSONObject();
+   val var2: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var3.hasNextKey()) {
-      val var2: java.lang.String = var3.nextKey();
-      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var2).ordinal()]) {
+   while (var2.hasNextKey()) {
+      val var1: java.lang.String = var2.nextKey();
+      switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var1).ordinal()]) {
          case 1:
-            var1.put(var2, JSONObject.NULL);
+            var3.put(var1, JSONObject.NULL);
             break;
          case 2:
-            var1.put(var2, var0.getBoolean(var2));
+            var3.put(var1, var0.getBoolean(var1));
             break;
          case 3:
-            var1.put(var2, var0.getDouble(var2));
+            var3.put(var1, var0.getDouble(var1));
             break;
          case 4:
-            var1.put(var2, var0.getString(var2));
+            var3.put(var1, var0.getString(var1));
             break;
          case 5:
-            val var6: ReadableMap = var0.getMap(var2);
+            val var6: ReadableMap = var0.getMap(var1);
             q.e(var6);
-            var1.put(var2, toJson(var6));
+            var3.put(var1, toJson(var6));
             break;
          case 6:
-            val var5: ReadableArray = var0.getArray(var2);
+            val var5: ReadableArray = var0.getArray(var1);
             q.e(var5);
-            var1.put(var2, NativeArrayExtensionsKt.toJson(var5));
+            var3.put(var1, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new n();
       }
    }
 
-   return var1;
+   return var3;
 }
 
 public fun ReadableMap.toJsonString(): String {

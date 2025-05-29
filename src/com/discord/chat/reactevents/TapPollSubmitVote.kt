@@ -57,13 +57,13 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapPollSubmitVote(channelId=");
-      var1.append(var3);
-      var1.append(", messageId=");
       var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

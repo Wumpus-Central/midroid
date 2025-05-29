@@ -32,12 +32,12 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 59
+      // 0e: ifnull 5a
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 43
+      // 17: ifnull 44
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
       // 1e: astore 4
@@ -56,25 +56,25 @@ public object ContactSyncProvider {
       // 37: bipush 0
       // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
       // 3b: astore 1
-      // 3c: goto 45
-      // 3f: astore 1
-      // 40: goto 4d
-      // 43: aconst_null
-      // 44: astore 1
-      // 45: aload 2
-      // 46: aconst_null
-      // 47: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4a: goto 59
-      // 4d: aload 1
-      // 4e: athrow
-      // 4f: astore 4
-      // 51: aload 2
-      // 52: aload 1
-      // 53: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 56: aload 4
-      // 58: athrow
-      // 59: aload 1
-      // 5a: areturn
+      // 3c: goto 46
+      // 3f: astore 4
+      // 41: goto 4e
+      // 44: aconst_null
+      // 45: astore 1
+      // 46: aload 2
+      // 47: aconst_null
+      // 48: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4b: goto 5a
+      // 4e: aload 4
+      // 50: athrow
+      // 51: astore 1
+      // 52: aload 2
+      // 53: aload 4
+      // 55: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 1
+      // 59: athrow
+      // 5a: aload 1
+      // 5b: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -151,10 +151,10 @@ public object ContactSyncProvider {
       } else {
          while (var7.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var7, "display_name");
-            val var10: java.lang.String = this.getColumnString(var7, "data4");
-            val var9: java.lang.String = this.getColumnString(var7, "_id");
+            val var9: java.lang.String = this.getColumnString(var7, "data4");
+            val var10: java.lang.String = this.getColumnString(var7, "_id");
             var var3: java.lang.String = this.getColumnString(var7, "contact_id");
-            if (var9 != null && var3 != null) {
+            if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -186,13 +186,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var10 != null) {
+               if (var9 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }
@@ -278,7 +278,7 @@ public object ContactSyncProvider {
       // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 6e: astore 1
       // 6f: goto 78
-      // 72: astore 1
+      // 72: astore 2
       // 73: goto 82
       // 76: aconst_null
       // 77: astore 1
@@ -288,13 +288,13 @@ public object ContactSyncProvider {
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
-      // 82: aload 1
+      // 82: aload 2
       // 83: athrow
-      // 84: astore 2
+      // 84: astore 1
       // 85: aload 3
-      // 86: aload 1
+      // 86: aload 2
       // 87: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 2
+      // 8a: aload 1
       // 8b: athrow
       // 8c: aload 2
       // 8d: areturn

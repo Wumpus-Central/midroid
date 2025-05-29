@@ -57,15 +57,15 @@ public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
    public override fun toString(): String {
       val var2: Int = this.color;
       val var1: Float = this.radius;
-      val var3: SizeF = this.offset;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ShadowStyle(color=");
-      var4.append(var2);
-      var4.append(", radius=");
-      var4.append(var1);
-      var4.append(", offset=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: SizeF = this.offset;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ShadowStyle(color=");
+      var3.append(var2);
+      var3.append(", radius=");
+      var3.append(var1);
+      var3.append(", offset=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

@@ -58,7 +58,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         val var7: java.util.Iterator = var1.iterator();
+         var var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -104,20 +104,20 @@ internal object SystemLogUtils {
             val var21: Sequence = xa.j.y(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new k(new Regex("classes\\d+.dex"))
             );
-            val var23: HashSet = w.e(
+            val var8: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               var7 = var21.iterator();
 
                do {
-                  if (!var8.hasNext()) {
+                  if (!var7.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var14 = var8.next();
-               } while (var23.contains((java.lang.String)var14));
+                  var14 = var7.next();
+               } while (var8.contains((java.lang.String)var14));
 
                var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
@@ -579,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.text;
-         val var3: java.lang.String = this.cause;
-         val var1: java.lang.String = this.groupBy;
-         val var2: java.lang.String = this.origin;
-         val var7: java.lang.String = this.groupHash;
-         val var4: java.lang.String = this.textHash;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Tombstone(text=");
-         var6.append(var5);
-         var6.append(", cause=");
-         var6.append(var3);
-         var6.append(", groupBy=");
-         var6.append(var1);
-         var6.append(", origin=");
-         var6.append(var2);
-         var6.append(", groupHash=");
-         var6.append(var7);
-         var6.append(", textHash=");
-         var6.append(var4);
-         var6.append(")");
-         return var6.toString();
+         val var4: java.lang.String = this.text;
+         val var6: java.lang.String = this.cause;
+         val var3: java.lang.String = this.groupBy;
+         val var1: java.lang.String = this.origin;
+         val var2: java.lang.String = this.groupHash;
+         val var7: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var4);
+         var5.append(", cause=");
+         var5.append(var6);
+         var5.append(", groupBy=");
+         var5.append(var3);
+         var5.append(", origin=");
+         var5.append(var1);
+         var5.append(", groupHash=");
+         var5.append(var2);
+         var5.append(", textHash=");
+         var5.append(var7);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

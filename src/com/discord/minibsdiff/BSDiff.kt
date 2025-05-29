@@ -42,14 +42,14 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var17 > var9) {
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var17 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
@@ -63,7 +63,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var17).iterator();
+            var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -71,8 +71,8 @@ public object BSDiff {
                var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var13);
-            var11 += var15 + var17;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var17 + var13;
          }
 
          var6.close();
@@ -186,7 +186,7 @@ public object BSDiff {
       // a3: goto e5
       // a6: astore 3
       // a7: goto da
-      // aa: astore 2
+      // aa: astore 3
       // ab: goto cf
       // ae: astore 6
       // b0: goto c3
@@ -207,13 +207,13 @@ public object BSDiff {
       // ca: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cd: aload 3
       // ce: athrow
-      // cf: aload 2
+      // cf: aload 3
       // d0: athrow
-      // d1: astore 3
+      // d1: astore 2
       // d2: aload 5
-      // d4: aload 2
+      // d4: aload 3
       // d5: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d8: aload 3
+      // d8: aload 2
       // d9: athrow
       // da: aload 3
       // db: athrow
