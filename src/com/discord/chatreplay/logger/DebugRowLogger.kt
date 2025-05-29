@@ -30,11 +30,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var4.append(var2);
       var4.append(".json");
       new File(var3, var4.toString()).delete();
-      var3 = var1.toString();
-      var4 = new StringBuilder();
-      var4.append(var2);
-      var4.append(".replay");
-      this.replayFile = new File(var3, var4.toString());
+      val var10: java.lang.String = var1.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var2);
+      var7.append(".replay");
+      this.replayFile = new File(var10, var7.toString());
       var3 = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);

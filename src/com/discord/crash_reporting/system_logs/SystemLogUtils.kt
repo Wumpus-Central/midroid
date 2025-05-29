@@ -104,24 +104,25 @@ internal object SystemLogUtils {
             val var21: Sequence = xa.j.y(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new k(new Regex("classes\\d+.dex"))
             );
-            val var13: HashSet = w.e(
+            val var23: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
+               val var8: Any;
                do {
-                  if (!var8.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var23 = var8.next();
-               } while (var13.contains((java.lang.String)var23));
+                  var8 = var14.next();
+               } while (var23.contains((java.lang.String)var8));
 
-               var14 = var23 as java.lang.String;
+               var13 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
             val var22: java.lang.String = xa.j.w(var21, "\n", null, null, 0, null, null, 62, null);
@@ -135,7 +136,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -435,8 +436,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -444,7 +445,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -579,27 +580,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
-         val var4: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
-         val var3: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var5);
-         var7.append(", cause=");
-         var7.append(var2);
-         var7.append(", groupBy=");
-         var7.append(var4);
-         var7.append(", origin=");
-         var7.append(var1);
-         var7.append(", groupHash=");
-         var7.append(var3);
-         var7.append(", textHash=");
-         var7.append(var6);
-         var7.append(")");
-         return var7.toString();
+         val var7: java.lang.String = this.text;
+         val var5: java.lang.String = this.cause;
+         val var2: java.lang.String = this.groupBy;
+         val var4: java.lang.String = this.origin;
+         val var1: java.lang.String = this.groupHash;
+         val var3: java.lang.String = this.textHash;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Tombstone(text=");
+         var6.append(var7);
+         var6.append(", cause=");
+         var6.append(var5);
+         var6.append(", groupBy=");
+         var6.append(var2);
+         var6.append(", origin=");
+         var6.append(var4);
+         var6.append(", groupHash=");
+         var6.append(var1);
+         var6.append(", textHash=");
+         var6.append(var3);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

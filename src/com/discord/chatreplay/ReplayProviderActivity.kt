@@ -25,7 +25,7 @@ public class ReplayProviderActivity : Activity {
    }
 
    private fun getReplaysList(): List<Replay> {
-      var var2: java.lang.String = this.getFilesDir().getPath();
+      val var2: java.lang.String = this.getFilesDir().getPath();
       val var1: StringBuilder = new StringBuilder();
       var1.append(var2);
       var1.append("/rows");
@@ -47,10 +47,10 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(i.v(var9, 10));
 
-      for (File var4 : var9) {
-         var2 = var4.getName();
-         q.g(var2, "getName(...)");
-         var7.add(new Replay(var2, var4.lastModified()));
+      for (File var12 : var9) {
+         val var4: java.lang.String = var12.getName();
+         q.g(var4, "getName(...)");
+         var7.add(new Replay(var4, var12.lastModified()));
       }
 
       return var7;
@@ -125,16 +125,16 @@ public class ReplayProviderActivity : Activity {
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
          q.h(var1, "activity");
          q.h(var2, "replayFilename");
-         val var5: Intent = new Intent();
-         var5.setAction("com.discord.REQUEST_REPLAY_ACCESS");
-         val var4: java.lang.String = var1.getPackageName();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("discord://request_replay?target=");
-         var6.append(var2);
-         var6.append("&toPackage=");
-         var6.append(var4);
-         var5.setData(Uri.parse(var6.toString()));
-         var1.startActivityForResult(var5, var3);
+         val var6: Intent = new Intent();
+         var6.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var5: java.lang.String = var1.getPackageName();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("discord://request_replay?target=");
+         var4.append(var2);
+         var4.append("&toPackage=");
+         var4.append(var5);
+         var6.setData(Uri.parse(var4.toString()));
+         var1.startActivityForResult(var6, var3);
       }
    }
 }

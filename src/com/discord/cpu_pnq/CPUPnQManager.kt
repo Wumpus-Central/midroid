@@ -18,14 +18,14 @@ public object CPUPnQManager {
    fun `wasteCycles$lambda$1`(): Unit {
       while (!backgrounded) {
          val var2: Int = (int)(cpuPercentage / 100.0 * 1000000000);
-         val var3: Long = (long)(1000 - cpuPercentage * 10);
-         val var5: Long = System.nanoTime();
+         val var5: Long = (long)(1000 - cpuPercentage * 10);
+         val var3: Long = System.nanoTime();
 
-         while (System.nanoTime() - var5 < var2) {
+         while (System.nanoTime() - var3 < var2) {
          }
 
          try {
-            Thread.sleep(var3);
+            Thread.sleep(var5);
          } catch (var8: InterruptedException) {
             break;
          }

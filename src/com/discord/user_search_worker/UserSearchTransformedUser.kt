@@ -118,8 +118,8 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.id.hashCode();
-      val var6: Int = this.username.hashCode();
+      val var6: Int = this.id.hashCode();
+      val var5: Int = this.username.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.isBot == null) {
@@ -146,32 +146,32 @@ internal data class UserSearchTransformedUser(id: String,
          var4 = this.globalName.hashCode();
       }
 
-      return (((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
+      return (((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var8: java.lang.String = this.username;
-      val var7: java.lang.Boolean = this.isBot;
-      val var6: java.lang.Boolean = this.isFriend;
-      val var1: java.lang.String = this.friendNickname;
-      val var5: java.lang.String = this.globalName;
-      val var3: java.util.Map = this.nicknames;
+      val var1: java.lang.String = this.id;
+      val var3: java.lang.String = this.username;
+      val var8: java.lang.Boolean = this.isBot;
+      val var7: java.lang.Boolean = this.isFriend;
+      val var6: java.lang.String = this.friendNickname;
+      val var2: java.lang.String = this.globalName;
+      val var5: java.util.Map = this.nicknames;
       val var4: StringBuilder = new StringBuilder();
       var4.append("UserSearchTransformedUser(id=");
-      var4.append(var2);
-      var4.append(", username=");
-      var4.append(var8);
-      var4.append(", isBot=");
-      var4.append(var7);
-      var4.append(", isFriend=");
-      var4.append(var6);
-      var4.append(", friendNickname=");
       var4.append(var1);
-      var4.append(", globalName=");
-      var4.append(var5);
-      var4.append(", nicknames=");
+      var4.append(", username=");
       var4.append(var3);
+      var4.append(", isBot=");
+      var4.append(var8);
+      var4.append(", isFriend=");
+      var4.append(var7);
+      var4.append(", friendNickname=");
+      var4.append(var6);
+      var4.append(", globalName=");
+      var4.append(var2);
+      var4.append(", nicknames=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }
@@ -198,11 +198,11 @@ internal data class UserSearchTransformedUser(id: String,
          val var5: JsonObject = var11 as JsonObject;
          val var12: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var7 : var5.entrySet()) {
-            val var3: java.lang.String = var7.getKey() as java.lang.String;
-            val var6: JsonElement = var7.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var3) && (Oa.g.p(var6).k() || Oa.g.p(var6) is JsonNull)) {
-               var12.put(var7.getKey(), var7.getValue());
+         for (Entry var3 : var5.entrySet()) {
+            val var6: java.lang.String = var3.getKey() as java.lang.String;
+            val var7: JsonElement = var3.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var6) && (Oa.g.p(var7).k() || Oa.g.p(var7) is JsonNull)) {
+               var12.put(var3.getKey(), var3.getValue());
             }
          }
 

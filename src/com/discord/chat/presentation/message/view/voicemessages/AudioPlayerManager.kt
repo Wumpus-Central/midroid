@@ -84,13 +84,13 @@ public object AudioPlayerManager {
    }
 
    private fun maybeCreateDuration(source: com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.AudioSource, durationMs: Long): com.discord.chat.presentation.message.view.voicemessages.AudioPlayerManager.CurrentProgress? {
-      val var5: java.util.Map = currentProgressMap;
+      val var4: java.util.Map = currentProgressMap;
       if (currentProgressMap.get(var1) != null) {
          return null;
       } else {
-         val var4: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
-         var5.put(var1, var4);
-         return var4;
+         val var5: AudioPlayerManager.CurrentProgress = new AudioPlayerManager.CurrentProgress(0L, var2);
+         var4.put(var1, var5);
+         return var5;
       }
    }
 
@@ -307,17 +307,17 @@ public object AudioPlayerManager {
          this.maybeCreateDuration(var2, var3);
          if (this.requestAudioFocus()) {
             var8.setValue(var2);
-            val var9: MediaPlayer = mediaPlayer;
+            val var6: MediaPlayer = mediaPlayer;
             kotlin.jvm.internal.q.e(mediaPlayer);
             val var7: MediaSource = AudioPlayerUtilsKt.toMediaSource$default(var2, null, 1, null);
-            val var6: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
-            if (var6 != null) {
-               var3 = var6.getCurrentProgress();
+            val var9: AudioPlayerManager.CurrentProgress = currentProgressMap.get(var2);
+            if (var9 != null) {
+               var3 = var9.getCurrentProgress();
             } else {
                var3 = 0L;
             }
 
-            MediaPlayer.preparePlayer$default(var9, var7, true, false, var3, null, null, 52, null);
+            MediaPlayer.preparePlayer$default(var6, var7, true, false, var3, null, null, 52, null);
          }
       }
 
@@ -422,21 +422,21 @@ public object AudioPlayerManager {
       }
 
       public override fun toString(): String {
-         val var5: ChannelId = this.channelId;
-         val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+         val var1: ChannelId = this.channelId;
+         val var5: java.lang.String = MessageId.toString-impl(this.messageId);
          val var3: java.lang.String = this.url;
-         val var4: Int = this.index;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("AudioSource(channelId=");
-         var2.append(var5);
-         var2.append(", messageId=");
-         var2.append(var1);
-         var2.append(", url=");
-         var2.append(var3);
-         var2.append(", index=");
-         var2.append(var4);
-         var2.append(")");
-         return var2.toString();
+         val var2: Int = this.index;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("AudioSource(channelId=");
+         var4.append(var1);
+         var4.append(", messageId=");
+         var4.append(var5);
+         var4.append(", url=");
+         var4.append(var3);
+         var4.append(", index=");
+         var4.append(var2);
+         var4.append(")");
+         return var4.toString();
       }
    }
 
@@ -483,13 +483,13 @@ public object AudioPlayerManager {
       }
 
       public override fun toString(): String {
-         val var1: Long = this.currentProgress;
-         val var3: Long = this.durationMs;
+         val var3: Long = this.currentProgress;
+         val var1: Long = this.durationMs;
          val var5: StringBuilder = new StringBuilder();
          var5.append("CurrentProgress(currentProgress=");
-         var5.append(var1);
-         var5.append(", durationMs=");
          var5.append(var3);
+         var5.append(", durationMs=");
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

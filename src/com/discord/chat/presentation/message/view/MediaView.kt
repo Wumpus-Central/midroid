@@ -644,9 +644,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                kotlin.c.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var4: Flow = var1.getPausePlayerFlow();
-                  if (var4 != null) {
-                     val var6: FlowCollector = new FlowCollector(this.this$0) {
+                  val var6: Flow = var1.getPausePlayerFlow();
+                  if (var6 != null) {
+                     val var4: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -663,7 +663,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var4.collect(var6, this) === var3) {
+                     if (var6.collect(var4, this) === var3) {
                         return var3;
                      }
                   }

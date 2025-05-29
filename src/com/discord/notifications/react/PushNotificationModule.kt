@@ -83,10 +83,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
          var1 = true;
       }
 
-      val var4: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var4.setIsAuthed(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      var3.setIsAuthed(var4, var1);
    }
 
    @ReactMethod
@@ -132,10 +132,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun getSoundsEnabled(promise: Promise) {
       q.h(var1, "promise");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(var3.isSoundsEnabled(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.resolve(var2.isSoundsEnabled(var3));
    }
 
    @ReactMethod
@@ -229,10 +229,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setCurrentUser(username: String?, userId: String?) {
-      val var4: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var4.setCurrentUser(var3, var1, var2);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      var3.setCurrentUser(var4, var1, var2);
    }
 
    @ReactMethod
@@ -245,18 +245,18 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setNotifyEveryTime(notifyEveryTime: Boolean) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.setNotifyEveryTime(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.setNotifyEveryTime(var2, var1);
    }
 
    @ReactMethod
    public fun setSoundsEnabled(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var3.setSoundsEnabled(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.setSoundsEnabled(var3, var1);
    }
 
    @ReactMethod

@@ -144,10 +144,10 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var15: Regex = messageRegex;
-                  val var8: java.lang.String = var21.getTag();
-                  q.g(var8, "getTag(...)");
-                  var16 = Regex.c(var15, var8, 0, 2, null);
+                  val var8: Regex = messageRegex;
+                  val var15: java.lang.String = var21.getTag();
+                  q.g(var15, "getTag(...)");
+                  var16 = Regex.c(var8, var15, 0, 2, null);
                   if (var16 != null) {
                      val var22: java.util.List = var16.b();
                      if (var22 != null) {
@@ -224,10 +224,10 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
                val var9: StringBuilder = new StringBuilder();
                var9.append("CALL_RING");
                var9.append(var8);
-               var8 = var9.toString();
-               val var20: java.lang.String = var18.getTag();
-               q.g(var20, "getTag(...)");
-               var5 = h.I(var20, var8, false, 2, null);
+               val var20: java.lang.String = var9.toString();
+               var8 = var18.getTag();
+               q.g(var8, "getTag(...)");
+               var5 = h.I(var8, var20, false, 2, null);
             }
 
             if (var5) {
