@@ -48,12 +48,12 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
    }
 
    public override fun toString(): String {
-      val var2: HeadlessJsTaskConfig = this.taskConfig;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("HeadlessTasks(taskConfig=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: HeadlessJsTaskConfig = this.taskConfig;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("HeadlessTasks(taskConfig=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {
@@ -90,11 +90,11 @@ public data class HeadlessTasks(taskConfig: HeadlessJsTaskConfig) {
                var5 = "";
             }
 
-            val var2: Long = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
+            val var3: Long = var1.getLongExtra("intent.discord.headless_tasks_timeout", 5000L);
             val var8: WritableMap = Arguments.fromBundle(var1.getBundleExtra("intent.discord.headless_tasks_params"));
-            val var4: Boolean = var1.getBooleanExtra("intent.discord.headless_tasks_aif", false);
+            val var2: Boolean = var1.getBooleanExtra("intent.discord.headless_tasks_aif", false);
             q.e(var8);
-            var7 = new HeadlessTasks(new HeadlessJsTaskConfig(var5, var8, var2, var4, null, 16, null));
+            var7 = new HeadlessTasks(new HeadlessJsTaskConfig(var5, var8, var3, var2, null, 16, null));
          } else {
             var7 = null;
          }

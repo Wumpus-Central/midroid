@@ -8,6 +8,7 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
    GMAIL("googlegmail", null),
    LINE("line", "jp.naver.line.android"),
    MESSENGER("fb-messenger", "com.facebook.orca"),
+   ROBLOX("roblox", "com.roblox.client"),
    TELEGRAM("tg", "org.telegram.messenger"),
    TWITTER("twitter", "com.twitter.android"),
    WHATSAPP("whatsapp", "com.whatsapp")

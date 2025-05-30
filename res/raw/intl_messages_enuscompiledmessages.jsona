@@ -6136,9 +6136,18 @@
   "DmDzZG": "Keep Editing",
   "6GQDFh": "Discard",
   "DRi46e": "You have unsaved changes, are you sure you want to discard them?",
-  "apVJu7": "Disconnecting your account might remove you from servers you joined via this account.",
+  "VgqIPj": [
+    "You will no longer be able to access features of the ",
+    "\"",
+    [
+      1,
+      "provider"
+    ],
+    "\" ",
+    "connection on your Discord account. You will also be removed from servers that require it."
+  ],
   "U5x12d": [
-    "Disconnect ",
+    "Unlink ",
     [
       1,
       "name"
@@ -27916,35 +27925,6 @@
     ],
     " trial"
   ],
-  "+2mmb2": [
-    "Unleash more fun with ",
-    [
-      1,
-      "nitroTierName"
-    ]
-  ],
-  "I1eIdX": [
-    "Enjoy ",
-    [
-      1,
-      "duration"
-    ],
-    " on us"
-  ],
-  "4LH+oa": "Add a custom app icon, super reactions, and more!",
-  "rZprQE": "Unique profile customizations and more!",
-  "DeqMaG": [
-    [
-      1,
-      "nitroTierName"
-    ],
-    " starts at ",
-    [
-      1,
-      "price"
-    ],
-    "/month"
-  ],
   "ufhQCw": "Larger File Uploads",
   "Gd/XHB": "Try Nitro for Free",
   "kbBj/v": [
@@ -31261,6 +31241,10 @@
       "channelName"
     ]
   ],
+  "DiGJy8": "Close",
+  "ItuabG": "Sign into Roblox",
+  "no96NT": "Show off your verified Roblox account information right in your profile. You can set this up later from Settings > Connections.",
+  "t3asUV": "Connect Roblox to Discord",
   "LPJmLy": "Roles",
   "3OxP4u": [
     "Select up to ",

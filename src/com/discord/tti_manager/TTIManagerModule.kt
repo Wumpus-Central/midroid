@@ -95,10 +95,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    public open fun initialize() {
       super.initialize();
       if (BuildConfig.logTTIMetrics) {
-         val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
-         var1.register(var2, this.ttiBroadcastReceiver);
+         val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+         val var1: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var1, "getReactApplicationContext(...)");
+         var2.register(var1, this.ttiBroadcastReceiver);
       }
    }
 

@@ -7,6 +7,7 @@ public final class BuildConfig {
    public static final String PACKAGE_FACEBOOK = "com.facebook.orca";
    public static final String PACKAGE_INSTAGRAM = "com.instagram.android";
    public static final String PACKAGE_LINE = "jp.naver.line.android";
+   public static final String PACKAGE_ROBLOX = "com.roblox.client";
    public static final String PACKAGE_SNAPCHAT = "com.snapchat.android";
    public static final String PACKAGE_TELEGRAM = "org.telegram.messenger";
    public static final String PACKAGE_TIKTOK = "com.zhiliaoapp.musically";

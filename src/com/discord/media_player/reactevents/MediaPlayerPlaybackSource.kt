@@ -55,23 +55,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         val var4: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
+         if (!q.c(this.id, (var1 as MediaPlayerPlaybackSource).id)) {
             return false;
-         } else if (!q.c(this.assetUrl, var1.assetUrl)) {
+         } else if (!q.c(this.assetUrl, var4.assetUrl)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!q.c(this.channelId, var4.channelId)) {
             return false;
          } else {
             var var2: Boolean;
             label37: {
                if (this.messageId == null) {
-                  if (var1.messageId == null) {
+                  if (var4.messageId == null) {
                      var2 = true;
                      break label37;
                   }
-               } else if (var1.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
+               } else if (var4.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                   break label37;
                }
 
@@ -81,7 +81,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             if (!var2) {
                return false;
             } else {
-               return q.c(this.attachmentIndex, var1.attachmentIndex);
+               return q.c(this.attachmentIndex, var4.attachmentIndex);
             }
          }
       }
