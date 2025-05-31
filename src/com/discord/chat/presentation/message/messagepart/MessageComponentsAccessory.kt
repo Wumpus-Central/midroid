@@ -72,15 +72,15 @@ public data class MessageComponentsAccessory(messageId: MessageId, message: Mess
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Message = this.message;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Message = this.message;
       val var5: java.util.List = this.messageComponents;
       val var1: Int = this.constrainedWidth;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MessageComponentsAccessory(messageId=");
-      var4.append(var2);
-      var4.append(", message=");
       var4.append(var3);
+      var4.append(", message=");
+      var4.append(var2);
       var4.append(", messageComponents=");
       var4.append(var5);
       var4.append(", constrainedWidth=");

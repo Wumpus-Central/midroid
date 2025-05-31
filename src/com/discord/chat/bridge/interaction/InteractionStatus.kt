@@ -74,13 +74,13 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var3: InteractionStatusViewState = this.state;
-      val var2: StructurableText = this.text;
+      val var2: InteractionStatusViewState = this.state;
+      val var3: StructurableText = this.text;
       val var1: StringBuilder = new StringBuilder();
       var1.append("InteractionStatus(state=");
-      var1.append(var3);
-      var1.append(", text=");
       var1.append(var2);
+      var1.append(", text=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

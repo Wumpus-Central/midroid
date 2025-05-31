@@ -10893,17 +10893,6 @@
   "GoV0ub": "L'argomento dell'evento è obbligatorio.",
   "0HbEQ0": "Argomento dell'evento",
   "6/yarq": "Di cosa tratta il tuo evento?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " alle ore ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "Vuoi davvero annullare questo evento?",
   "ZcpcyM": [
     "Annullando questo evento ",

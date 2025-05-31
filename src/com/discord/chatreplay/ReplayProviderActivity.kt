@@ -67,11 +67,11 @@ public class ReplayProviderActivity : Activity {
       super.onCreate(var1);
       if (q.c(this.getIntent().getAction(), "com.discord.GET_REPLAY_LIST")) {
          val var2: java.util.List = this.getReplaysList();
-         val var3: Intent = new Intent();
-         val var4: kotlinx.serialization.json.Json.a = Json.d;
+         val var4: Intent = new Intent();
+         val var3: kotlinx.serialization.json.Json.a = Json.d;
          Json.d.a();
-         var3.putExtra("INTENT_EXTRA_REPLAYS_LIST", var4.c(new f(Replay.Companion.serializer()), var2));
-         this.setResult(-1, var3);
+         var4.putExtra("INTENT_EXTRA_REPLAYS_LIST", var3.c(new f(Replay.Companion.serializer()), var2));
+         this.setResult(-1, var4);
          this.finish();
       } else if (q.c(this.getIntent().getAction(), "com.discord.REQUEST_REPLAY_ACCESS")) {
          val var5: Uri = this.getIntent().getData();
@@ -125,16 +125,16 @@ public class ReplayProviderActivity : Activity {
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
          q.h(var1, "activity");
          q.h(var2, "replayFilename");
-         val var6: Intent = new Intent();
-         var6.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var4: Intent = new Intent();
+         var4.setAction("com.discord.REQUEST_REPLAY_ACCESS");
          val var5: java.lang.String = var1.getPackageName();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("discord://request_replay?target=");
-         var4.append(var2);
-         var4.append("&toPackage=");
-         var4.append(var5);
-         var6.setData(Uri.parse(var4.toString()));
-         var1.startActivityForResult(var6, var3);
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("discord://request_replay?target=");
+         var6.append(var2);
+         var6.append("&toPackage=");
+         var6.append(var5);
+         var4.setData(Uri.parse(var6.toString()));
+         var1.startActivityForResult(var4, var3);
       }
    }
 }

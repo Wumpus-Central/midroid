@@ -127,8 +127,8 @@ public data class DirectReplyMessage(id: MessageId,
 
    public override fun hashCode(): Int {
       val var7: Int = MessageId.hashCode-impl(this.id);
-      val var6: Int = ChannelId.hashCode-impl(this.channelId);
-      val var8: Int = this.author.hashCode();
+      val var8: Int = ChannelId.hashCode-impl(this.channelId);
+      val var6: Int = this.author.hashCode();
       var var5: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -162,37 +162,37 @@ public data class DirectReplyMessage(id: MessageId,
          var5 = this.guildName.hashCode();
       }
 
-      return ((((((var7 * 31 + var6) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5;
+      return ((((((var7 * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5;
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = MessageId.toString-impl(this.id);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: DirectReplyUser = this.author;
-      val var9: java.lang.String = this.content;
-      val var4: Int = this.type;
+      val var6: java.lang.String = MessageId.toString-impl(this.id);
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: DirectReplyUser = this.author;
+      val var4: java.lang.String = this.content;
+      val var3: Int = this.type;
       val var1: Int = this.channelType;
-      val var5: java.lang.String = this.channelName;
-      val var6: java.lang.String = this.guildName;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("DirectReplyMessage(id=");
-      var7.append(var8);
-      var7.append(", channelId=");
-      var7.append(var2);
-      var7.append(", author=");
-      var7.append(var3);
-      var7.append(", content=");
-      var7.append(var9);
-      var7.append(", type=");
-      var7.append(var4);
-      var7.append(", channelType=");
-      var7.append(var1);
-      var7.append(", channelName=");
-      var7.append(var5);
-      var7.append(", guildName=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var9: java.lang.String = this.channelName;
+      val var5: java.lang.String = this.guildName;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("DirectReplyMessage(id=");
+      var8.append(var6);
+      var8.append(", channelId=");
+      var8.append(var7);
+      var8.append(", author=");
+      var8.append(var2);
+      var8.append(", content=");
+      var8.append(var4);
+      var8.append(", type=");
+      var8.append(var3);
+      var8.append(", channelType=");
+      var8.append(var1);
+      var8.append(", channelName=");
+      var8.append(var9);
+      var8.append(", guildName=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {
@@ -207,9 +207,9 @@ public data class DirectReplyMessage(id: MessageId,
          val var6: Json = DirectReplyMessage.access$getJson$cp();
          var6.a();
          val var12: DirectReplyMessage = var6.b(DirectReplyMessage.Companion.serializer(), var1) as DirectReplyMessage;
-         val var10: java.lang.String = var12.getId-3Eiw7ao();
-         val var9: Int = var12.getType();
-         val var8: java.lang.String = var12.getContent();
+         val var9: java.lang.String = var12.getId-3Eiw7ao();
+         val var8: Int = var12.getType();
+         val var10: java.lang.String = var12.getContent();
          val var4: Long = var12.getChannelId-o4g7jtM();
          val var7: Int = var12.getChannelType();
          val var11: java.util.List = i.k();
@@ -230,11 +230,11 @@ public data class DirectReplyMessage(id: MessageId,
 
          return new NotificationData(
             "MESSAGE_CREATE",
-            var10,
-            null,
-            null,
             var9,
+            null,
+            null,
             var8,
+            var10,
             null,
             var7,
             var12.getChannelName(),

@@ -110,15 +110,22 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       ChatModule.Companion.access$cancelCoroutineChildren(Companion);
    }
 
-   public override fun updateRows(tagValue: Double, rowsJSON: String, isLoadingAtTop: Boolean, scrollDataJSON: String?, changesetUpdateIdValue: Double) {
+   public override fun updateRows(
+      tagValue: Double,
+      rowsJSON: String,
+      isLoadingAtTop: Boolean,
+      scrollDataJSON: String?,
+      changesetUpdateIdValue: Double,
+      HACK_iOSForceAnimations: Boolean
+   ) {
       q.h(var3, "rowsJSON");
-      val var9: Int = (int)var1;
-      val var8: Int = (int)var6;
+      val var10: Int = (int)var1;
+      val var9: Int = (int)var6;
       TTIMetrics.record$default(TTIMetrics.INSTANCE, "ChatModule.updateRows() Start", 0L, null, false, 14, null);
       ChatModule.Companion.access$withChatManager(
          Companion,
-         var9,
-         new Function2(this, var9, var3, var5, var8, null) {
+         var10,
+         new Function2(this, var10, var3, var5, var9, null) {
             final int $changesetUpdateId;
             final java.lang.String $rowsJSON;
             final java.lang.String $scrollDataJSON;

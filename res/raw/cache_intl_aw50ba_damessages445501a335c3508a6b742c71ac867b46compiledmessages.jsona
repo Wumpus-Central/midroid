@@ -10892,17 +10892,6 @@
   "GoV0ub": "Der kræves et emne for en event.",
   "0HbEQ0": "Event emne",
   "6/yarq": "Hvad handler din event om?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " ved ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "Er du sikker på, at du vil annullere dette event?",
   "ZcpcyM": [
     "Annullering af denne begivenhed vil også ",

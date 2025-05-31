@@ -30,11 +30,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var4.append(var2);
       var4.append(".json");
       new File(var3, var4.toString()).delete();
-      var3 = var1.toString();
-      var4 = new StringBuilder();
-      var4.append(var2);
-      var4.append(".replay");
-      this.replayFile = new File(var3, var4.toString());
+      val var10: java.lang.String = var1.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var2);
+      var7.append(".replay");
+      this.replayFile = new File(var10, var7.toString());
       val var5: java.lang.String = var1.toString();
       val var8: StringBuilder = new StringBuilder();
       var8.append(var2);
@@ -70,17 +70,17 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    }
 
    private fun maybeInsertDelay() {
-      val var3: Long = System.currentTimeMillis();
+      val var1: Long = System.currentTimeMillis();
       if (this.lastUpdateTimestamp != null) {
-         val var1: Long = this.lastUpdateTimestamp.longValue();
+         val var3: Long = this.lastUpdateTimestamp.longValue();
          val var6: StringBuilder = new StringBuilder();
          var6.append("{\"delayMs\":");
-         var6.append(var3 - var1);
+         var6.append(var1 - var3);
          var6.append("}");
          this.appendLine(var6.toString());
       }
 
-      this.lastUpdateTimestamp = var3;
+      this.lastUpdateTimestamp = var1;
    }
 
    private fun writeJson() {

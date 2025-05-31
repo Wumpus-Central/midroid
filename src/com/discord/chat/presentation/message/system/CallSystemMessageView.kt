@@ -110,11 +110,11 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
       val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("Binding ");
-      var13.append(var9);
-      AttachedViewCoroutineScope.cancelAllWork$default(var19, var13.toString(), null, 2, null);
+      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("Binding ");
+      var9.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var19, var9.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);

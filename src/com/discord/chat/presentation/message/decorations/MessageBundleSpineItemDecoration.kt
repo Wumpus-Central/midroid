@@ -106,11 +106,11 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                         var5 = var4;
 
                         for (int var23 = var7; var26 < var23; var26++) {
-                           val var12: View = var2.getChildAt(var26);
-                           if (var12 != null) {
-                              var9 = (var12 as NativeViewMeasuringWrapper).getView();
+                           val var31: View = var2.getChildAt(var26);
+                           if (var31 != null) {
+                              var9 = (var31 as NativeViewMeasuringWrapper).getView();
                               if (var9 is MessageBundleConversationView || var9 is MessageBundleViewMoreView) {
-                                 val var31: SpineDrawer = this.spineDrawer;
+                                 val var12: SpineDrawer = this.spineDrawer;
                                  var var20: View = var9;
                                  if (var9 !is SpineParentMessage) {
                                     var20 = null;
@@ -120,9 +120,9 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                                  if (var20 as SpineParentMessage != null) {
                                     val var22: View = var21.getSpineOriginView();
                                     if (var22 != null) {
-                                       var31.drawSpineCurve(var1, var2, var12, var22, var8);
+                                       var12.drawSpineCurve(var1, var2, var31, var22, var8);
                                        if (var26 != var5) {
-                                          this.spineDrawer.drawSpinePiece(var1, var2, var12, var8, 0);
+                                          this.spineDrawer.drawSpinePiece(var1, var2, var31, var8, 0);
                                        }
                                     }
                                  }
@@ -133,9 +133,9 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                                     var7 = 0;
                                  }
 
-                                 this.spineDrawer.drawSpinePiece(var1, var2, var12, var8, var7);
+                                 this.spineDrawer.drawSpinePiece(var1, var2, var31, var8, var7);
                               } else {
-                                 SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var12, var8, 0, 16, null);
+                                 SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var31, var8, 0, 16, null);
                               }
                            }
                         }

@@ -64,10 +64,10 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
                var1, this.rectDrawer, renderMatrix, h9.a.c(((float)this.width - var2 * ((float)this.height / var3)) / 2.0F), 0, h9.a.c(var10), this.height
             );
       } else {
-         val var11: Float = var3 * (this.width / var2);
+         val var13: Float = var3 * (this.width / var2);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, h9.a.c(((float)this.height - var3 * ((float)this.width / var2)) / 2.0F), this.width, h9.a.c(var11)
+               var1, this.rectDrawer, renderMatrix, 0, h9.a.c(((float)this.height - var3 * ((float)this.width / var2)) / 2.0F), this.width, h9.a.c(var13)
             );
       }
 

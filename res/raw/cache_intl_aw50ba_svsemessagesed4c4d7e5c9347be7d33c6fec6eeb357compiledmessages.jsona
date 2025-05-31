@@ -10856,17 +10856,6 @@
   "GoV0ub": "Ett eventämne krävs.",
   "0HbEQ0": "Eventämne",
   "6/yarq": "Vad handlar ditt event om?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " kl. ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "Är du säker på att du vill avbryta det här eventet?",
   "ZcpcyM": [
     "Om eventet avbryts, ",
@@ -36801,7 +36790,7 @@
   "BXxdl5": "Öppna röst",
   "L8CBnJ": "Väntande",
   "XPQgLy": [
-    "Reagerade på statusen hos ",
+    "Reagerade på statusen för ",
     [
       1,
       "username"

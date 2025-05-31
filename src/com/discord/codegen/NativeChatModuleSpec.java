@@ -23,5 +23,5 @@ public abstract class NativeChatModuleSpec extends ReactContextBaseJavaModule im
 
    @ReactMethod
    @a
-   public abstract void updateRows(double var1, String var3, boolean var4, String var5, double var6);
+   public abstract void updateRows(double var1, String var3, boolean var4, String var5, double var6, boolean var8);
 }

@@ -295,13 +295,13 @@ public open class FileAttachmentView  public constructor(context: Context, attrs
       var16.setAlpha(var9);
       val var21: AttachmentUploadOverlayView = this.binding.uploadOverlay;
       var11 = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var22: ShapeDrawable = new ShapeDrawable();
-      val var17: Paint = var22.getPaint();
+      val var17: ShapeDrawable = new ShapeDrawable();
+      val var22: Paint = var17.getPaint();
       val var24: Context = this.getContext();
       kotlin.jvm.internal.q.g(var24, "getContext(...)");
-      var17.setColor(ColorUtilsKt.getColorCompat(var24, 17170445));
+      var22.setColor(ColorUtilsKt.getColorCompat(var24, 17170445));
       AttachmentUploadOverlayView.configureProgressView$default(
-         var21, null, var22, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
+         var21, null, var17, null, var11, null, ThemeManagerKt.getTheme().getBackgroundModifierAccent(), 21, null
       );
       if (!kotlin.jvm.internal.q.c(this.uploadContext, this.uploadContext)) {
          this.uploadContext = this.uploadContext;

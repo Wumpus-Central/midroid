@@ -10903,17 +10903,6 @@
   "GoV0ub": "Tema de evento obligatorio.",
   "0HbEQ0": "Tema del evento",
   "6/yarq": "¿De qué va tu evento?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " a las ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "¿Seguro que quieres cancelar este evento?",
   "ZcpcyM": [
     "Al cancelar este evento, también ",

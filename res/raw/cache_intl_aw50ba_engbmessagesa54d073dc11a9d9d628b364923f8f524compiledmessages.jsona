@@ -10864,17 +10864,6 @@
   "GoV0ub": "An event topic is required.",
   "0HbEQ0": "Event Topic",
   "6/yarq": "What's your event?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " at ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "Are you sure you want to cancel this event?",
   "ZcpcyM": [
     "Cancelling this event will also ",

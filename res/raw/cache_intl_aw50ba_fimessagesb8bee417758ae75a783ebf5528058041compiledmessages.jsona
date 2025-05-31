@@ -10924,17 +10924,6 @@
   "GoV0ub": "Tapahtuman aihe on pakollinen.",
   "0HbEQ0": "Tapahtuman aihe",
   "6/yarq": "Mistä tapahtumassasi on kyse?",
-  "sdRx+P": [
-    [
-      1,
-      "date"
-    ],
-    " klo ",
-    [
-      1,
-      "time"
-    ]
-  ],
   "v2GWNT": "Haluatko varmasti peruuttaa tämän tapahtuman?",
   "ZcpcyM": [
     "Jos tämä tapahtuma peruutetaan, myös kaikki ",

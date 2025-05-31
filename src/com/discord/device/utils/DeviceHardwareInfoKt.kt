@@ -30,8 +30,8 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 3
-   // 07: aload 3
+   // 06: astore 2
+   // 07: aload 2
    // 08: ldc "/proc/cpuinfo"
    // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
    // 0d: getstatic ya/a.b Ljava/nio/charset/Charset;
@@ -39,12 +39,12 @@ internal fun getSocFromProcCpuInfo(): String {
    // 12: new java/io/InputStreamReader
    // 15: astore 0
    // 16: new java/io/FileInputStream
-   // 19: astore 2
-   // 1a: aload 2
-   // 1b: aload 3
+   // 19: astore 3
+   // 1a: aload 3
+   // 1b: aload 2
    // 1c: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 1f: aload 0
-   // 20: aload 2
+   // 20: aload 3
    // 21: aload 4
    // 23: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 26: new java/io/BufferedReader
@@ -184,7 +184,7 @@ internal fun maxCpuFreq(): String {
    // 05a: lload 4
    // 05c: lstore 8
    // 05e: getstatic ya/a.b Ljava/nio/charset/Charset;
-   // 061: astore 15
+   // 061: astore 14
    // 063: lload 4
    // 065: lstore 8
    // 067: new java/io/InputStreamReader
@@ -192,17 +192,17 @@ internal fun maxCpuFreq(): String {
    // 06c: lload 4
    // 06e: lstore 8
    // 070: new java/io/FileInputStream
-   // 073: astore 14
+   // 073: astore 15
    // 075: lload 4
    // 077: lstore 8
-   // 079: aload 14
+   // 079: aload 15
    // 07b: aload 12
    // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 080: lload 4
    // 082: lstore 8
    // 084: aload 13
-   // 086: aload 14
-   // 088: aload 15
+   // 086: aload 15
+   // 088: aload 14
    // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 08d: lload 4
    // 08f: lstore 8
@@ -237,7 +237,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 13
+   // 0d8: astore 14
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -261,17 +261,17 @@ internal fun maxCpuFreq(): String {
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 13
+   // 10a: aload 14
    // 10c: athrow
-   // 10d: astore 14
+   // 10d: astore 13
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 13
+   // 115: aload 14
    // 117: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 14
+   // 11e: aload 13
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -315,12 +315,12 @@ internal fun maxCpuFreq(): String {
 
 internal fun ramSize(context: Context): String {
    q.h(var0, "context");
-   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
+   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
    q.f(var4, "null cannot be cast to non-null type android.app.ActivityManager");
-   var4 = var4;
-   val var3: MemoryInfo = new MemoryInfo();
-   var4.getMemoryInfo(var3);
-   val var1: Double = var3.totalMem / 1.0737418E9F;
+   val var3: ActivityManager = var4 as ActivityManager;
+   var4 = new MemoryInfo();
+   var3.getMemoryInfo(var4);
+   val var1: Double = var4.totalMem / 1.0737418E9F;
    val var6: L = L.a;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    q.g(var7, "format(...)");
@@ -339,13 +339,13 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var2: java.lang.String = b.a();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var0);
-      var1.append("_");
-      var1.append(var2);
-      return var1.toString();
+      val var1: java.lang.String = a.a();
+      var0 = b.a();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var1);
+      var2.append("_");
+      var2.append(var0);
+      return var2.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

@@ -51,15 +51,15 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
       val var6: MessageComponentSectionViewBinding = MessageComponentSectionViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var6, "inflate(...)");
       this.binding = var6;
-      val var4: LinearLayout = new LinearLayout(var1);
-      this.textComponentViews = var4;
+      val var5: LinearLayout = new LinearLayout(var1);
+      this.textComponentViews = var5;
       this.setOrientation(1);
       this.setLayoutParams(new LayoutParams(-1, -2));
-      var4.setOrientation(1);
-      val var5: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var5.a(1.0F);
-      var4.setLayoutParams(var5);
-      var6.sectionLayoutBox.addView(var4);
+      var5.setOrientation(1);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.a(1.0F);
+      var5.setLayoutParams(var4);
+      var6.sectionLayoutBox.addView(var5);
    }
 
    private fun getCurrentAccessoryView(): View? {
@@ -74,11 +74,11 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
    }
 
    private fun removeAndRecycleAccessoryView() {
-      val var1: View = this.getCurrentAccessoryView();
-      if (var1 != null) {
-         this.binding.sectionLayoutBox.removeView(var1);
+      val var2: View = this.getCurrentAccessoryView();
+      if (var2 != null) {
+         this.binding.sectionLayoutBox.removeView(var2);
          if (this.componentProvider != null) {
-            this.componentProvider.recycleComponentView(var1 as ComponentView<out Component>);
+            this.componentProvider.recycleComponentView(var2 as ComponentView<out Component>);
          }
       }
    }
