@@ -125,27 +125,27 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.query;
-      val var5: UserSearchQuerySetFilters = this.filters;
-      val var6: java.util.List = this.blacklist;
+      val var6: java.lang.String = this.query;
+      val var4: UserSearchQuerySetFilters = this.filters;
+      val var3: java.util.List = this.blacklist;
       val var7: java.util.List = this.whitelist;
-      val var2: java.util.Map = this.boosters;
+      val var5: java.util.Map = this.boosters;
       val var1: Int = this.limit;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSearchQuerySetPayload(query=");
-      var3.append(var4);
-      var3.append(", filters=");
-      var3.append(var5);
-      var3.append(", blacklist=");
-      var3.append(var6);
-      var3.append(", whitelist=");
-      var3.append(var7);
-      var3.append(", boosters=");
-      var3.append(var2);
-      var3.append(", limit=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UserSearchQuerySetPayload(query=");
+      var2.append(var6);
+      var2.append(", filters=");
+      var2.append(var4);
+      var2.append(", blacklist=");
+      var2.append(var3);
+      var2.append(", whitelist=");
+      var2.append(var7);
+      var2.append(", boosters=");
+      var2.append(var5);
+      var2.append(", limit=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

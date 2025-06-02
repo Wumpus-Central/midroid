@@ -74,11 +74,11 @@ public data class MarkAsReadAction(tag: String, channelId: ChannelId, messageId:
    public override fun onNotificationAction(context: Context, intent: Intent) {
       q.h(var1, "context");
       q.h(var2, "intent");
-      val var4: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
-      var3.putString("channelId", ChannelId.toString-impl(this.channelId));
-      var3.putString("messageId", MessageId.toString-impl(this.messageId));
-      HeadlessTasks.Companion.startHeadlessTask$default(var4, var1, "MarkAsRead", 0L, false, var3, true, 12, null);
+      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var4: Bundle = new Bundle();
+      var4.putString("channelId", ChannelId.toString-impl(this.channelId));
+      var4.putString("messageId", MessageId.toString-impl(this.messageId));
+      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MarkAsRead", 0L, false, var4, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {

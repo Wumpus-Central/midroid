@@ -89,8 +89,8 @@ public class Cache(reactContext: Context) {
             val var5: Editor = var2.edit();
             var5.putBoolean("initialized", true);
 
-            for (java.lang.String var4 : var3) {
-               var5.putString(var4, this.getSharedPrefs().getString(var4, null));
+            for (java.lang.String var7 : var3) {
+               var5.putString(var7, this.getSharedPrefs().getString(var7, null));
             }
 
             var5.apply();

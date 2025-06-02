@@ -60,17 +60,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var5, "inflate(...)");
+      this.binding = var5;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var5: TextView = var3.message;
-      q.e(var3.message);
-      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var3.info;
-      q.e(var3.info);
+      val var3: TextView = var5.message;
+      q.e(var5.message);
+      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var5.info;
+      q.e(var5.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -109,12 +109,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var19: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
       val var9: StringBuilder = new StringBuilder();
       var9.append("Binding ");
-      var9.append(var19);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var9.toString(), null, 2, null);
+      var9.append(var13);
+      AttachedViewCoroutineScope.cancelAllWork$default(var19, var9.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
@@ -154,8 +154,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                   } else {
                      kotlin.c.b(var1);
                      var1 = this.this$0;
-                     val var5: Lifecycle.State = Lifecycle.State.m;
-                     val var4: Function2 = new Function2(this.$start, this.this$0, this.$message, null) {
+                     val var4: Lifecycle.State = Lifecycle.State.m;
+                     val var5: Function2 = new Function2(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
                         int label;
@@ -282,27 +282,27 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
 
                                  public final Object emit_VtjQ1oo/* $VF was: emit-VtjQ1oo*/(long var1, Continuation var3x) {
-                                    val var8: CallSystemMessageView = this.this$0;
-                                    val var9: Message = this.$message;
+                                    val var9: CallSystemMessageView = this.this$0;
+                                    val var8: Message = this.$message;
                                     val var6x: Long = Duration.v(var1);
-                                    val var4x: Int = Duration.z(var1);
-                                    val var5: Int = Duration.B(var1);
+                                    val var5: Int = Duration.z(var1);
+                                    val var4x: Int = Duration.B(var1);
                                     Duration.A(var1);
-                                    val var11: TextView = CallSystemMessageView.access$getBinding$p(var8).info;
-                                    val var10: java.lang.String = java.lang.String.format(
+                                    val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
+                                    val var11: java.lang.String = java.lang.String.format(
                                        "%02d:%02d:%02d%s",
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.e(var6x),
-                                             kotlin.coroutines.jvm.internal.b.d(var4x),
                                              kotlin.coroutines.jvm.internal.b.d(var5),
-                                             var9.getDescription()
+                                             kotlin.coroutines.jvm.internal.b.d(var4x),
+                                             var8.getDescription()
                                           },
                                           4
                                        )
                                     );
-                                    q.g(var10, "format(...)");
-                                    var11.setText(var10);
+                                    q.g(var11, "format(...)");
+                                    var10.setText(var11);
                                     return Unit.a;
                                  }
                               };
@@ -316,7 +316,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var5, var4, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var4, var5, this) === var3) {
                         return var3;
                      }
                   }

@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var9: Context = this.getContext();
-               q.g(var9, "getContext(...)");
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
                val var15: Context = this.getContext();
                q.g(var15, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var10.getUri(var15));
+               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               q.g(var9, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var10.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -146,9 +146,9 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var19: LayoutParams = new LayoutParams(-2, -1);
-         var19.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var20, var19);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var20, var11);
       }
    }
 

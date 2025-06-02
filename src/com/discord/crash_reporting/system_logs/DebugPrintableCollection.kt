@@ -122,16 +122,16 @@ public class DebugPrintableCollection {
    }
 
    private fun removeDeadReferencesLocked() {
-      val var3: ArrayList = new ArrayList();
+      val var5: ArrayList = new ArrayList();
 
-      for (Entry var5 : this.collection.entrySet()) {
-         val var1: Long = (var5.getKey() as java.lang.Number).longValue();
-         if ((var5.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
-            var3.add(var1);
+      for (Entry var3 : this.collection.entrySet()) {
+         val var1: Long = (var3.getKey() as java.lang.Number).longValue();
+         if ((var3.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+            var5.add(var1);
          }
       }
 
-      val var7: java.util.Iterator = var3.iterator();
+      val var7: java.util.Iterator = var5.iterator();
 
       while (var7.hasNext()) {
          this.collection.remove((var7.next() as java.lang.Number).longValue());
@@ -359,13 +359,13 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.tag;
-         val var1: WeakReference = this.reference;
+         val var1: java.lang.String = this.tag;
+         val var2: WeakReference = this.reference;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DebugPrintableRef(tag=");
-         var3.append(var2);
-         var3.append(", reference=");
          var3.append(var1);
+         var3.append(", reference=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

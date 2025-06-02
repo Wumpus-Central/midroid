@@ -69,14 +69,14 @@ public data class AutomodSystemMessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
-      val var4: MessageContext = this.messageContext;
+      val var4: Message = this.message;
+      val var2: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
       val var3: StringBuilder = new StringBuilder();
       var3.append("AutomodSystemMessageItem(message=");
-      var3.append(var2);
-      var3.append(", messageContext=");
       var3.append(var4);
+      var3.append(", messageContext=");
+      var3.append(var2);
       var3.append(", allowChildGestures=");
       var3.append(var1);
       var3.append(")");
