@@ -1,9 +1,9 @@
 package com.discord.recycler_view.scroll
 
-import Pa.K
-import Pa.f
-import Sa.e
-import Sa.s
+import Aa.K
+import Aa.f
+import Da.e
+import Da.s
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
@@ -59,7 +59,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = n9.b.e();
+               val var5: Any = Y8.b.e();
                if (this.label != 0) {
                   if (this.label != 1 && this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -69,9 +69,9 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                } else {
                   kotlin.c.b(var1);
                   if (this.$collectWithLeadingDebounce) {
-                     var1 = DebouncedFlow.access$getEvents$p(this.this$0);
+                     val var6: MutableSharedFlow = DebouncedFlow.access$getEvents$p(this.this$0);
                      val var3: Long = this.$timeoutMillis;
-                     val var6: FlowCollector = new FlowCollector(this.$onEvent) {
+                     var1 = new FlowCollector(this.$onEvent) {
                         final Function1 $tmp0;
 
                         {
@@ -80,7 +80,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2x) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion0(this.$tmp0, var1, var2x);
-                           return if (var1 === n9.b.e()) var1 else Unit.a;
+                           return if (var1 === Y8.b.e()) var1 else Unit.a;
                         }
 
                         @Override
@@ -114,7 +114,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 1;
-                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var1, var3, var6, this) === var5) {
+                     if (CollectWithLeadingDebounceKt.collectWithLeadingDebounce(var6, var3, var1, this) === var5) {
                         return var5;
                      }
                   } else {
@@ -128,7 +128,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion1(this.$tmp0, var1, var2);
-                           return if (var1 === n9.b.e()) var1 else Unit.a;
+                           return if (var1 === Y8.b.e()) var1 else Unit.a;
                         }
 
                         @Override
@@ -186,6 +186,6 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
    public fun tryEmit(event: Any) {
       q.h(var1, "event");
-      this.events.d(var1);
+      this.events.b(var1);
    }
 }

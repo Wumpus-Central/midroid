@@ -1,13 +1,13 @@
 package com.discord.bundle_updater.react.events
 
-import Za.f
+import Ka.f
+import R8.s
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import g9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -58,12 +58,12 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.metrics;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OtaCheckAttemptEvent(metrics=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.metrics;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OtaCheckAttemptEvent(metrics=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

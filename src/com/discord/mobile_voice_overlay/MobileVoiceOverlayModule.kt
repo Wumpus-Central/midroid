@@ -24,7 +24,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    init {
       kotlin.jvm.internal.q.h(var1, "reactContext");
       super(var1);
-      this.mobileVoiceOverlay$delegate = g9.j.b(new r(this));
+      this.mobileVoiceOverlay$delegate = R8.j.b(new r(this));
    }
 
    @JvmStatic
@@ -55,10 +55,10 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
                   val var5: Promise = this.$promise;
-                  val var7: WindowUtils = WindowUtils.INSTANCE;
-                  val var6: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  kotlin.jvm.internal.q.g(var6, "access$getReactApplicationContext(...)");
-                  var5.resolve(var7.canDrawOverlay(var6));
+                  val var6: WindowUtils = WindowUtils.INSTANCE;
+                  val var7: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  kotlin.jvm.internal.q.g(var7, "access$getReactApplicationContext(...)");
+                  var5.resolve(var6.canDrawOverlay(var7));
                }
             }
 

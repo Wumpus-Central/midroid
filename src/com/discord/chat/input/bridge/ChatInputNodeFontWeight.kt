@@ -1,11 +1,11 @@
 package com.discord.chat.input.bridge
 
-import Za.f
-import g9.j
-import g9.m
+import Ka.f
+import R8.j
+import R8.m
+import f1.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import v1.a
 
 @f
 public enum class ChatInputNodeFontWeight {
@@ -22,7 +22,7 @@ public enum class ChatInputNodeFontWeight {
    fun {
       val var0: Array<ChatInputNodeFontWeight> = $values();
       $VALUES = var0;
-      $ENTRIES = o9.a.a(var0);
+      $ENTRIES = Z8.a.a(var0);
    }
 
    @JvmStatic

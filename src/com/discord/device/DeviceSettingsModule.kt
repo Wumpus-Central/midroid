@@ -1,5 +1,6 @@
 package com.discord.device
 
+import S8.n
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -14,7 +15,6 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
-import h9.n
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -51,26 +51,26 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
    @JvmStatic
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
       val var2: ReactRootView.Companion = ReactRootView.Companion;
-      val var6: ReactApplicationContext = var0.getReactApplicationContext();
-      q.g(var6, "getReactApplicationContext(...)");
+      val var3: ReactApplicationContext = var0.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
-      val var3: ArrayList = new ArrayList(i.v(var4, 10));
-      val var7: java.util.Iterator = var4.iterator();
+      val var6: ArrayList = new ArrayList(i.v(var4, 10));
+      val var5: java.util.Iterator = var4.iterator();
 
-      while (var7.hasNext()) {
-         val var5: ReadableMap = var1.getMap((var7 as n).a());
-         q.e(var5);
-         var3.add(
+      while (var5.hasNext()) {
+         val var7: ReadableMap = var1.getMap((var5 as n).a());
+         q.e(var7);
+         var6.add(
             new Rect(
-               SizeUtilsKt.getDpToPx(var5.getInt("left")),
-               SizeUtilsKt.getDpToPx(var5.getInt("top")),
-               SizeUtilsKt.getDpToPx(var5.getInt("right")),
-               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
+               SizeUtilsKt.getDpToPx(var7.getInt("left")),
+               SizeUtilsKt.getDpToPx(var7.getInt("top")),
+               SizeUtilsKt.getDpToPx(var7.getInt("right")),
+               SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
             )
          );
       }
 
-      var2.setSystemGestureExclusionRects(var6, var3);
+      var2.setSystemGestureExclusionRects(var3, var6);
    }
 
    public override fun openAccessibilitySettings() {

@@ -1,14 +1,18 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.contentnode.LinkContentNode;
-import com.discord.chat.bridge.executedcommand.ExecutedCommand;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.bridge.roleicons.RoleIcon;
+import com.discord.chat.presentation.events.ChatEventHandler;
+import com.discord.emoji.RenderableEmoji;
 
 // $VF: synthetic class
-public final class z0 implements Function1 {
-   public final ExecutedCommand j;
+public final class z0 implements OnClickListener {
+   public final ChatEventHandler j;
+   public final RoleIcon k;
+   public final RenderableEmoji l;
 
-   public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.k(this.j, (LinkContentNode)var1);
+   public final void onClick(View var1) {
+      RoleIconView.a(this.j, this.k, this.l, var1);
    }
 }

@@ -10,7 +10,7 @@ public object CPUPnQManager {
 
    private fun wasteCycles() {
       if (wasteThread == null) {
-         wasteThread = l9.a.b(true, false, null, null, 0, new a(), 30, null);
+         wasteThread = W8.a.b(true, false, null, null, 0, new a(), 30, null);
       }
    }
 

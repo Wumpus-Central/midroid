@@ -1,5 +1,6 @@
 package com.discord.nearby
 
+import R8.s
 import android.app.Activity
 import com.discord.nearby.reactevents.OnNearbyErrorEvent
 import com.discord.nearby.reactevents.OnNearbyMessageLostEvent
@@ -8,7 +9,6 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

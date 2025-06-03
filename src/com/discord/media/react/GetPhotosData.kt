@@ -1,10 +1,10 @@
 package com.discord.media.react
 
+import R8.s
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
-import g9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 

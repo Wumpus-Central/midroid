@@ -2,7 +2,7 @@ package com.discord.misc.utilities.drawable
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import e.a
+import f.a
 import kotlin.jvm.internal.q
 
 public fun Context.getDrawableCompat(drawableResId: Int): Drawable? {

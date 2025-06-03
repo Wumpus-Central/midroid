@@ -1,10 +1,10 @@
 package com.discord.chat.reactevents
 
-import Za.f
+import Ka.f
+import R8.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import g9.s
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -88,17 +88,17 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
 
    public override fun toString(): String {
       val var2: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.channelId;
       val var3: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapChannelData(guildId=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapChannelData(guildId=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var4);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

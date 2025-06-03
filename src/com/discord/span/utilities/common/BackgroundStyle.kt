@@ -1,6 +1,6 @@
 package com.discord.span.utilities.common
 
-import Za.f
+import Ka.f
 import kotlinx.serialization.KSerializer
 
 @f

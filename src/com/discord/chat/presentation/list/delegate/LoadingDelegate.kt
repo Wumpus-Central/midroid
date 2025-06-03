@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.list.delegate
 
+import R8.n
 import android.content.Context
 import android.view.ViewGroup
 import com.discord.chat.bridge.row.LoadMoreButton
@@ -8,7 +9,6 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
-import g9.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 

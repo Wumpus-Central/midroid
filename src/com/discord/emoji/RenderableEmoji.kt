@@ -165,13 +165,13 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.url;
-         val var3: java.lang.String = this.alt;
+         val var3: java.lang.String = this.url;
+         val var1: java.lang.String = this.alt;
          val var2: StringBuilder = new StringBuilder();
          var2.append("CustomWithUrl(url=");
-         var2.append(var1);
-         var2.append(", alt=");
          var2.append(var3);
+         var2.append(", alt=");
+         var2.append(var1);
          var2.append(")");
          return var2.toString();
       }
@@ -226,12 +226,12 @@ public sealed class RenderableEmoji protected constructor() {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = Surrogates.toString-impl(this.surrogates);
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Unicode(surrogates=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = Surrogates.toString-impl(this.surrogates);
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Unicode(surrogates=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Za.f
+import Ka.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
@@ -24,7 +24,7 @@ public enum class TextDisplayStyle(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<TextDisplayStyle> = $values();
       $VALUES = var0;
-      $ENTRIES = o9.a.a(var0);
+      $ENTRIES = Z8.a.a(var0);
    }
 
    init {

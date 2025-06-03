@@ -1,11 +1,17 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.presentation.message.view.MessageContentView;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
-public final class W implements Function1 {
-   public final Object invoke(Object var1) {
-      return MessageAccessoriesView.ContentViewTracker.a((MessageContentView)var1);
+public final class W implements OnClickListener {
+   public final ChatEventHandler j;
+   public final String k;
+   public final long l;
+   public final String m;
+
+   public final void onClick(View var1) {
+      MessageAltRemixTagView.a(this.j, this.k, this.l, this.m, var1);
    }
 }

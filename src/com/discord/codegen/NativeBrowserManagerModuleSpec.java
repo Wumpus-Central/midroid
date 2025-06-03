@@ -1,6 +1,5 @@
 package com.discord.codegen;
 
-import K3.a;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -10,6 +9,7 @@ import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Map;
+import v3.a;
 
 public abstract class NativeBrowserManagerModuleSpec extends ReactContextBaseJavaModule implements TurboModule {
    public static final String NAME = "NativeBrowserManagerModule";
@@ -20,24 +20,24 @@ public abstract class NativeBrowserManagerModuleSpec extends ReactContextBaseJav
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var4 = this.getTypedExportedConstants();
+      Map var3 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var1 = new HashSet<>(Arrays.asList("isChromeInstalled", "selectedBrowser"));
-         HashSet var2 = new HashSet();
-         HashSet var3 = new HashSet(var4.keySet());
-         var3.removeAll(var1);
-         var3.removeAll(var2);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var4 = new HashSet();
+         HashSet var2 = new HashSet(var3.keySet());
+         var2.removeAll(var1);
+         var2.removeAll(var4);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var1.removeAll(var4.keySet());
+         var1.removeAll(var3.keySet());
          if (!var1.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 
-      return var4;
+      return var3;
    }
 
    public String getName() {

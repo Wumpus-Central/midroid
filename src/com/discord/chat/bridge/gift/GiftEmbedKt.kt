@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.gift
 
-import db.g
+import Oa.g
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive

@@ -1,11 +1,11 @@
 package com.discord.lifecycle
 
+import R8.s
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

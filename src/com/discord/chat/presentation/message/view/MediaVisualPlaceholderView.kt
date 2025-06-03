@@ -67,7 +67,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new g9.n();
+               throw new R8.n();
             }
 
             this.binding.imageInvalid.setVisibility(0);

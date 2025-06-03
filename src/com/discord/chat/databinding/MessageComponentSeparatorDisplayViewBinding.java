@@ -1,11 +1,11 @@
 package com.discord.chat.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
+import t0.a;
 
 public final class MessageComponentSeparatorDisplayViewBinding implements ViewBinding {
    public final View divider;

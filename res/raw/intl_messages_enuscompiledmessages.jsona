@@ -414,18 +414,6 @@
     ]
   ],
   "rmnkz8": "Listening to Spotify",
-  "tAwI1t": [
-    "An activity card showing @",
-    [
-      1,
-      "username"
-    ],
-    " playing ",
-    [
-      1,
-      "activity"
-    ]
-  ],
   "9hk2KC": "Tell us about your activity experience",
   "iSv55O": "Activity controls are confusing",
   "/8psS0": "Activity controls were confusing",
@@ -1275,7 +1263,7 @@
   "9mg7g4": "Prismatic Waves",
   "yxJB9P": "In Rainbows",
   "anqaFR": "Limited-time",
-  "c76eo6": "An error has occured. Please try again soon.",
+  "c76eo6": "An error has occurred. Please try again soon.",
   "hGBbFx": "WHAM",
   "NkshQk": "Charcoal",
   "G2W309": "Ceramic",
@@ -1395,26 +1383,6 @@
   "wOr6hI": "Too many uploads!",
   "BEWw//": "double tap to play video and enlarge",
   "3AS4UF": "Attach Files",
-  "vlj5uL": "Heads up — allowing tracking lets us personalize the content you see in your Quests & Rewards and keeps your experience as relevant as possible!",
-  "1dqa3d": "Wanna level up? Enabling tracking helps us make your experiences as rewarding and relevant as possible! You can opt out anytime in your iOS settings.",
-  "acNnra": "Just a quick ping - Allowing tracking helps us show you Quests that you’re actually into! You can opt out anytime in your iOS settings",
-  "Cq8QKS": "Player checkpoint - Allowing tracking personalizes your experience and ensures you have a rewarding experience. You can opt out anytime in your iOS settings.",
-  "y4HOMj": "Help support Discord to be your cozy home on the internet",
-  "YW0z09": "You’ll help support Discord to be your cozy home on the internet",
-  "xaXauL": "Discord continues to be your cozy home on the internet",
-  "oD52ER": "Ensure Discord continues to be your cozy home on the internet",
-  "fpfPTk": "Receive personalized Quests that are crafted to your relevant interests",
-  "ZxkYWV": "We’ll personalize Quests to reflect your relevant interests",
-  "2xEEtr": "Quests will be personalized to offer you the rewards you want",
-  "nvVy39": "Receive Quests that match your interests",
-  "mH8BIS": "You can always update your choice for this device in your iOS settings at any time. If you allow tracking, you can:",
-  "1xzDm5": "Allowing tracking means:",
-  "P9bOBQ": "If you allow tracking:",
-  "b0WurK": "Allowing tracking means you will:",
-  "UBpcNz": "Support businesses and game studios that rely on ads for discovery",
-  "TSMwsr": "You’ll back game studios who rely on ads for discovery",
-  "mE2qtL": "Businesses and game studios you love can be discovered",
-  "QNWJs7": "Back businesses and game studios who rely on ads for discovery",
   "QLMGho": [
     [
       1,
@@ -2966,6 +2934,7 @@
     ],
     " has been added to your collection."
   ],
+  "IMffmp": "You did it! Put it on!",
   "fYfGgI": "Go to Shop",
   "Io7ozs": [
     [
@@ -3083,9 +3052,7 @@
       ]
     ]
   ],
-  "44b50t": "This decoration is now part of your collection and can be used anytime!",
   "SWm2am": "Your Profile Effect is updated!",
-  "f9M1YG": "This effect is now part of your collection and can be used anytime!",
   "HSX4HR": [
     "Profile effect preview: ",
     [
@@ -3155,6 +3122,14 @@
     " gifted you a Profile Effect!"
   ],
   "2NxdjY": "You have been gifted a Profile Effect!",
+  "vFiQlZ": [
+    [
+      1,
+      "sender"
+    ],
+    " gifted you a Nameplate!"
+  ],
+  "v7F239": "You have been gifted a Nameplate!",
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
   "MAS7uL": "Use Now",
@@ -4607,108 +4582,6 @@
   ],
   "BC5vfH": "Your message couldn't be sent because the activity's owner does not have access to this channel.",
   "fjcCk5": "Message sent!",
-  "7j/5mp": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ]
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "user2"
-          ]
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "countOthers"
-          ],
-          " others"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " played ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "QaUWPT": [
-    [
-      6,
-      "countOthers",
-      {
-        "=0": [
-          [
-            1,
-            "user1"
-          ],
-          " is playing"
-        ],
-        "=1": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "user2"
-          ],
-          " are playing"
-        ],
-        "other": [
-          [
-            1,
-            "user1"
-          ],
-          " and ",
-          [
-            1,
-            "countOthers"
-          ],
-          " others are playing"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "3PatS0": "Continue",
   "2ixEBg": "Continue in Browser",
   "79qal5": "Automatically convert emoticons in your messages to emoji",
@@ -11909,6 +11782,7 @@
   "mYlo/f": "This is currently not supported on this device.",
   "s2N5HR": "Thank you,",
   "2Ab4IS": "By creating an announcement channel, your server profile will be visible to others outside your server members. You can control Profile privacy in Server Settings > Profile.",
+  "cQDYRk": "Adopt Tag",
   "7XdMW1": "Apply to Join",
   "4yfIDg": "View Application Status",
   "IRoQXl": "Go to Server",
@@ -16927,6 +16801,16 @@
       []
     ]
   ],
+  "WnSwLy": [
+    "Set the gradient to [",
+    [
+      8,
+      "newColorsHook",
+      []
+    ],
+    "]"
+  ],
+  "U44ttr": "With no gradient",
   "TK6E1N": "With no color",
   "UTLTx8": [
     [
@@ -19294,13 +19178,6 @@
   "DrAXIi": "Adopt this tag to display it next to your name across Discord.",
   "VFqnyc": [
     "You can now wear a tag from ",
-    [
-      1,
-      "guildName"
-    ]
-  ],
-  "K+JVRk": [
-    "Member of ",
     [
       1,
       "guildName"
@@ -21712,7 +21589,6 @@
     "h Marathon"
   ],
   "keY6mZ": "New Player",
-  "vYuyWV": "New Release",
   "S5F48/": [
     "Played for ",
     [
@@ -22040,75 +21916,6 @@
     " tracks this week"
   ],
   "/50eHh": "Most played",
-  "kAlUs7": "Trending",
-  "lLPKY2": [
-    [
-      1,
-      "userName"
-    ],
-    " is playing ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "MHO1AQ": [
-    [
-      1,
-      "userName"
-    ],
-    " is playing a new game: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "bES+y8": [
-    [
-      1,
-      "userName"
-    ],
-    " played ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
-  "i7AOz8": [
-    [
-      1,
-      "userName"
-    ],
-    " played a new game: ",
-    [
-      8,
-      "$b",
-      [
-        [
-          1,
-          "gameName"
-        ]
-      ]
-    ]
-  ],
   "ijVm6+": [
     "S",
     [
@@ -30609,13 +30416,6 @@
   ],
   "zUoI5O": "Searching Voice Channels",
   "ieCAhI": "Unread Channels",
-  "0ZQw/f": [
-    "Message @",
-    [
-      1,
-      "name"
-    ]
-  ],
   "cIRG0t": "This is disabled by Focus Mode",
   "wCxBOT": "Focus Mode (BETA)",
   "CYVgLC": "With Focus Mode, Discord will no longer show in-app, desktop notifications or play message sounds, just like with DND. Would you like to switch to Online?",
@@ -32680,7 +32480,7 @@
   "PMeb/v": "Get local crisis support.",
   "HQ2nKi": "Visit Throughline Care",
   "9e0wLi": "Unignore",
-  "LLBnNj": "Take a break with som lofi beats",
+  "LLBnNj": "Take a break with some lofi beats",
   "syuaPD": "Vibe with Wumpus",
   "rpc2qq": "Open Safety Tools",
   "2uYViI": [
@@ -33066,6 +32866,7 @@
   "fTE74u": "Send Messages in Threads",
   "5QlVGx": "Send Messages in Threads and Posts",
   "lBLP4u": "Failed to send message. Hold for options.",
+  "+wbjMT": "Send Text Message",
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
@@ -33501,8 +33302,13 @@
     ]
   ],
   "F+x38P": "Spoiler",
+  "C8ci39": "Container hidden by spoiler",
+  "3Gc2XF": "File hidden by spoiler",
+  "G71b7+": "Content hidden by spoiler",
   "XpfDHx": "spoiler, hidden",
+  "sb2W2N": "Image hidden by spoiler",
   "gsI+xM": "Mark as spoiler",
+  "ehBaMT": "Video hidden by spoiler",
   "suRAp6": "Audience",
   "P/KFX1": "Just so you know, people you've blocked or ignored are in this Stage.",
   "Uzdyho": "Blocked and Ignored Accounts Present",
@@ -36675,7 +36481,7 @@
     "."
   ],
   "KI+BSU": [
-    "By clicking “Create account,” you agree to Discord’s ",
+    "By clicking “Create account,” you agree to Discord's ",
     [
       8,
       "$link",
@@ -38089,8 +37895,11 @@
   "w+hNj4": "Avatar Decoration Selection Section",
   "HykynZ": "Change Avatar Decoration",
   "BVcYCw": "Change Decoration",
+  "BwdeMz": "Change Nameplate",
   "/6nv6O": "Change Profile Effect",
   "/dRfCQ": "Change Effect",
+  "TV7tWF": "Nameplates Selection Section",
+  "WfGV5+": "Your Nameplates",
   "TiLCg4": "Exclusive to Nitro",
   "t8CdeX": "Profile Effect Selection Section",
   "9x1v/v": "Your Effects",
@@ -38154,6 +37963,7 @@
   "UQR+Q0": "Open your authentication app and enter the code below.",
   "hg/+aW": "Enter the 2FA Code",
   "x5CoXV": "Nameplate",
+  "RJxLnZ": "Tap to edit Nameplate",
   "OwlOS0": "Edit your Nameplate on a desktop device.",
   "najZCQ": "Suppress background noise from your mic.",
   "wkYAl5": "None",
@@ -38646,7 +38456,7 @@
   "hP6+09": "Hold to record",
   "q22XnZ": "External Device",
   "CxyS19": "This Phone",
-  "uv1tVl": "Somone has a weak connection",
+  "uv1tVl": "Someone has a weak connection",
   "gQ14+v": "Some participants will be audio only.",
   "pGJ1Q0": [
     [
@@ -39136,7 +38946,6 @@
   ],
   "vh+Zpq": "You can't call this user.",
   "dKhVQE": "Log In",
-  "+ohEiI": "Log in to the Discord app to enable this feature.",
   "JhDw5u": "Return to Login",
   "e4vZys": "Bulgarian",
   "JgDrx8": "Czech",

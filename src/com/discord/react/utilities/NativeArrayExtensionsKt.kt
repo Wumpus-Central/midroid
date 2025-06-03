@@ -1,11 +1,11 @@
 package com.discord.react.utilities
 
+import S8.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
-import h9.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -195,7 +195,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new g9.n();
+            throw new R8.n();
       }
    }
 
@@ -277,12 +277,12 @@ public fun ReadableArray.toStringList(): List<String> {
    q.h(var0, "<this>");
    val var2: IntRange = sizeRange(var0);
    val var1: ArrayList = new ArrayList(i.v(var2, 10));
-   val var4: java.util.Iterator = var2.iterator();
+   val var3: java.util.Iterator = var2.iterator();
 
-   while (var4.hasNext()) {
-      val var3: java.lang.String = var0.getString((var4 as n).a());
-      q.e(var3);
-      var1.add(var3);
+   while (var3.hasNext()) {
+      val var4: java.lang.String = var0.getString((var3 as n).a());
+      q.e(var4);
+      var1.add(var4);
    }
 
    return var1;

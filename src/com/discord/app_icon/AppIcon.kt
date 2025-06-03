@@ -1,7 +1,7 @@
 package com.discord.app_icon
 
+import Z8.a
 import kotlin.enums.EnumEntries
-import o9.a
 
 public enum class AppIcon(id: String, aliasSuffix: String) {
    ANGRY("AngryIcon", "MainAngry"),

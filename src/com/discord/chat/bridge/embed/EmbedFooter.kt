@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import Za.f
-import g9.j
+import Ka.f
+import R8.j
+import c1.d
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import s1.d
 
 @f
 public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = null, content: String? = null) {
@@ -97,17 +97,17 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
 
    public override fun toString(): String {
       val var2: java.lang.String = this.iconURL;
-      val var1: java.lang.String = this.iconProxyURL;
-      val var4: java.lang.String = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedFooter(iconURL=");
-      var3.append(var2);
-      var3.append(", iconProxyURL=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.iconProxyURL;
+      val var1: java.lang.String = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EmbedFooter(iconURL=");
+      var4.append(var2);
+      var4.append(", iconProxyURL=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

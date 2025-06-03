@@ -1,9 +1,10 @@
 package com.discord.chat.listmanager
 
-import Pa.K
-import Pa.f
-import Ra.a
-import Sa.s
+import Aa.K
+import Aa.f
+import Ca.a
+import Da.s
+import Y8.b
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.row.BlockedGroupContent
 import com.discord.chat.bridge.row.BlockedGroupRow
@@ -33,7 +34,6 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
-import n9.b
 
 public class ChatListManager(coroutineScope: CoroutineScope) {
    private final val updatesFlow: MutableSharedFlow<ChatListUpdate>
@@ -89,15 +89,15 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       val var5: java.util.List = this.rows;
       q.e(this.rows);
       val var6: ListOperationsBuilder = new ListOperationsBuilder();
-      val var9: ArrayList = new ArrayList();
+      val var8: ArrayList = new ArrayList();
 
-      for (Object var8 : var1) {
-         if ((var8 as Row).getChangeType() === ChangeType.INSERT) {
-            var9.add(var8);
+      for (Object var9 : var1) {
+         if ((var9 as Row).getChangeType() === ChangeType.INSERT) {
+            var8.add(var9);
          }
       }
 
-      val var16: java.util.Iterator = var9.iterator();
+      val var16: java.util.Iterator = var8.iterator();
 
       label75:
       while (true) {
@@ -219,11 +219,11 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          }
 
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
-         val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
-         val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
-         val var2: Int = var11.getColor();
-         val var3: Int = var11.getBackgroundColor();
-         val var4: Int = var11.getBorderColor();
+         val var7: java.lang.String = (var1 as BlockedGroupRow).getText();
+         val var8: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
+         val var4: Int = var11.getColor();
+         val var2: Int = var11.getBackgroundColor();
+         val var3: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -252,7 +252,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var2, var3, var4, var5, i.M(var14));
+         var9 = new BlockedGroupChatListItem(var7, var8, var4, var2, var3, var5, i.M(var14));
       }
 
       return (ChatListItem)var9;
@@ -384,8 +384,8 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
       }
 
       public override fun hashCode(): Int {
-         val var2: Int = this.rows.hashCode();
-         val var3: Int = java.lang.Boolean.hashCode(this.didInsertAtBottom);
+         val var3: Int = this.rows.hashCode();
+         val var2: Int = java.lang.Boolean.hashCode(this.didInsertAtBottom);
          val var1: Int;
          if (this.listOperations == null) {
             var1 = 0;
@@ -393,22 +393,22 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             var1 = this.listOperations.hashCode();
          }
 
-         return (var2 * 31 + var3) * 31 + var1;
+         return (var3 * 31 + var2) * 31 + var1;
       }
 
       public override fun toString(): String {
          val var3: java.util.List = this.rows;
          val var1: Boolean = this.didInsertAtBottom;
-         val var2: java.util.List = this.listOperations;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("RowsModificationResult(rows=");
-         var4.append(var3);
-         var4.append(", didInsertAtBottom=");
-         var4.append(var1);
-         var4.append(", listOperations=");
-         var4.append(var2);
-         var4.append(")");
-         return var4.toString();
+         val var4: java.util.List = this.listOperations;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("RowsModificationResult(rows=");
+         var2.append(var3);
+         var2.append(", didInsertAtBottom=");
+         var2.append(var1);
+         var2.append(", listOperations=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

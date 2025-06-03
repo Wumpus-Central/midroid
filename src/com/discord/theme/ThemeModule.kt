@@ -1,11 +1,11 @@
 package com.discord.theme
 
+import W1.L2
 import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import l2.L2
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec {
    init {

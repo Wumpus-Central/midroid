@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.core.view.h0
+import androidx.core.view.g0
 import kotlin.jvm.internal.q
 
 public abstract class APNGImageView : FrameLayout {
@@ -84,7 +84,7 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
-      for (View var5 : h0.a(this)) {
+      for (View var5 : g0.a(this)) {
          val var4: Boolean = q.c(var5, var1);
          if (!var4) {
             this.recycleChild(var5, var2);

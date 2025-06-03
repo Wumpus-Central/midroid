@@ -1,5 +1,6 @@
 package com.discord.channel_spine
 
+import R8.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -13,7 +14,6 @@ import android.view.View.MeasureSpec
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
-import g9.n
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
@@ -272,7 +272,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = o9.a.a(var0);
+         $ENTRIES = Z8.a.a(var0);
       }
 
       init {

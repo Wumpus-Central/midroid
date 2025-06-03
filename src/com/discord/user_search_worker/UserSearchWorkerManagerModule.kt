@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
+import R8.s
 import com.discord.reactevents.ReactEvents
 import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

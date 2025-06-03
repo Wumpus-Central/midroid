@@ -8,6 +8,6 @@ public final class O implements Function0 {
    public final Callback j;
 
    public final Object invoke() {
-      return <unrepresentable>.e(this.j);
+      return <unrepresentable>.l(this.j);
    }
 }

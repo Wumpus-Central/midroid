@@ -13,7 +13,7 @@ import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
 public class ChatPackage : BaseReactPackage {
-   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
       return i.n(
          new ViewManager[]{
@@ -28,7 +28,7 @@ public class ChatPackage : BaseReactPackage {
       );
    }
 
-   public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
+   public override fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
       q.h(var1, "name");
       q.h(var2, "reactContext");
       val var3: ChatModule;
@@ -41,7 +41,7 @@ public class ChatPackage : BaseReactPackage {
       return var3;
    }
 
-   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(i.e("NativeChatModule"), false, 2, null);
    }
 }

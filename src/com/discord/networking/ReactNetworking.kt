@@ -39,7 +39,7 @@ public object ReactNetworking {
    }
 
    public fun createReactOkHttpNetworkFetcher(): NetworkFetcher<*> {
-      var var2: OkHttpClient = OkHttpClientProvider.createClient().B().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      var var2: OkHttpClient = OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {

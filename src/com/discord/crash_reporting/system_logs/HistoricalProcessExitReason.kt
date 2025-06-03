@@ -1,11 +1,11 @@
 package com.discord.crash_reporting.system_logs
 
+import R8.s
+import S8.q
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import g9.s
-import h9.q
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -54,23 +54,23 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = M0.e.a((ActivityManager)var5, null, 0, 1);
+            var5 = c.a((ActivityManager)var5, null, 0, 1);
             kotlin.jvm.internal.q.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = M0.f.a(kotlin.collections.i.h0((java.util.List)var5));
+            val var4: ApplicationExitInfo = d.a(kotlin.collections.i.h0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
-               val var3: java.lang.String = exitReasonLookup.get(M0.g.a(var4));
+               val var3: java.lang.String = exitReasonLookup.get(e.a(var4));
                var5 = var3;
                if (var3 == null) {
-                  val var2: Int = M0.g.a(var4);
+                  val var2: Int = e.a(var4);
                   var5 = new StringBuilder();
                   var5.append("Unknown ");
                   var5.append(var2);
                   var5 = var5.toString();
                }
 
-               return new HistoricalProcessExitReason.Reason((java.lang.String)var5, c.a(var4));
+               return new HistoricalProcessExitReason.Reason((java.lang.String)var5, f.a(var4));
             }
          }
       }

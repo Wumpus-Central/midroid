@@ -1,12 +1,12 @@
 package com.discord.appreview
 
+import Y0.a
+import Y0.b
 import android.app.Activity
 import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import o1.a
-import o1.b
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec {
    init {

@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Za.f
+import Ka.f
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
@@ -132,24 +132,24 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: Float = this.totalDurationSecs;
-      val var1: Float = this.endDurationSecs;
-      val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
-      val var2: Float = this.durationListeningSecs;
+      val var2: Float = this.endDurationSecs;
+      val var8: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var1: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
       val var5: java.lang.String = this.attachmentId;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MediaAttachmentPlaybackEndedData(messageId=");
-      var6.append(var8);
+      var6.append(var7);
       var6.append(", totalDurationSecs=");
       var6.append(var3);
       var6.append(", endDurationSecs=");
-      var6.append(var1);
-      var6.append(", senderUserId=");
-      var6.append(var7);
-      var6.append(", durationListeningSecs=");
       var6.append(var2);
+      var6.append(", senderUserId=");
+      var6.append(var8);
+      var6.append(", durationListeningSecs=");
+      var6.append(var1);
       var6.append(", isVoiceMessage=");
       var6.append(var4);
       var6.append(", attachmentId=");

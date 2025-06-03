@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Za.f
+import Ka.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -138,9 +138,9 @@ public data class UserSelectComponent(type: Int,
 
    public override fun hashCode(): Int {
       val var4: Int = Integer.hashCode(this.type);
-      val var5: Int = this.id.hashCode();
-      val var3: Int = this.state.hashCode();
-      val var6: Int = this.customId.hashCode();
+      val var3: Int = this.id.hashCode();
+      val var6: Int = this.state.hashCode();
+      val var5: Int = this.customId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -155,7 +155,7 @@ public data class UserSelectComponent(type: Int,
 
       return (
                (
-                        ((((((var4 * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
+                        ((((((var4 * 31 + var3) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.minValues)) * 31
                            + Integer.hashCode(this.maxValues)
                      )
                      * 31
@@ -167,28 +167,28 @@ public data class UserSelectComponent(type: Int,
 
    public override fun toString(): String {
       val var2: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var8: ActionComponentState = this.state;
-      val var9: java.lang.String = this.customId;
-      val var6: java.lang.String = this.placeholder;
-      val var11: java.lang.String = this.accessibilityLabel;
+      val var6: java.lang.String = this.id;
+      val var5: ActionComponentState = this.state;
+      val var7: java.lang.String = this.customId;
+      val var11: java.lang.String = this.placeholder;
+      val var9: java.lang.String = this.accessibilityLabel;
       val var1: Int = this.minValues;
       val var3: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var5: java.util.List = this.selectedOptions;
+      val var8: java.util.List = this.selectedOptions;
       val var10: StringBuilder = new StringBuilder();
       var10.append("UserSelectComponent(type=");
       var10.append(var2);
       var10.append(", id=");
-      var10.append(var7);
-      var10.append(", state=");
-      var10.append(var8);
-      var10.append(", customId=");
-      var10.append(var9);
-      var10.append(", placeholder=");
       var10.append(var6);
-      var10.append(", accessibilityLabel=");
+      var10.append(", state=");
+      var10.append(var5);
+      var10.append(", customId=");
+      var10.append(var7);
+      var10.append(", placeholder=");
       var10.append(var11);
+      var10.append(", accessibilityLabel=");
+      var10.append(var9);
       var10.append(", minValues=");
       var10.append(var1);
       var10.append(", maxValues=");
@@ -196,7 +196,7 @@ public data class UserSelectComponent(type: Int,
       var10.append(", disabled=");
       var10.append(var4);
       var10.append(", selectedOptions=");
-      var10.append(var5);
+      var10.append(var8);
       var10.append(")");
       return var10.toString();
    }

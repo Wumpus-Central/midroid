@@ -1,6 +1,5 @@
 package com.discord.mobile_voice_overlay.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
+import t0.a;
 
 public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
    public final TextView channelSelect;
@@ -38,25 +38,25 @@ public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
 
    public static OverlayVoiceChannelSelectorBinding bind(View var0) {
       int var1 = R.id.channel_select;
-      TextView var5 = (TextView)a.a(var0, var1);
-      if (var5 != null) {
+      TextView var7 = (TextView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.close;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
-            CardView var6 = (CardView)var0;
+         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+         if (var5 != null) {
+            CardView var2 = (CardView)var0;
             var1 = R.id.empty_results;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var3 = (TextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.menu_container;
-               LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-               if (var7 != null) {
+               LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.overlay_channel_search;
-                  EditText var3 = (EditText)a.a(var0, var1);
-                  if (var3 != null) {
+                  EditText var6 = (EditText)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.results_rv;
-                     RecyclerView var8 = (RecyclerView)a.a(var0, var1);
-                     if (var8 != null) {
-                        return new OverlayVoiceChannelSelectorBinding(var6, var5, var4, var6, var2, var7, var3, var8);
+                     RecyclerView var4 = (RecyclerView)a.a(var0, var1);
+                     if (var4 != null) {
+                        return new OverlayVoiceChannelSelectorBinding(var2, var7, var5, var2, var3, var8, var6, var4);
                      }
                   }
                }

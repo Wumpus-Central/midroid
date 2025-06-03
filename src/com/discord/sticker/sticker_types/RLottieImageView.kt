@@ -1,7 +1,7 @@
 package com.discord.sticker.sticker_types
 
-import Pa.K
-import Pa.d0
+import Aa.K
+import Aa.d0
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
@@ -36,7 +36,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      Pa.f.d(
+      Aa.f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
          K.b(),
          null,
@@ -60,7 +60,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = n9.b.e();
+               val var3: Any = Y8.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      if (this.label != 2) {
@@ -93,7 +93,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        n9.b.e();
+                        Y8.b.e();
                         if (this.label == 0) {
                            kotlin.c.b(var1);
                            this.this$0.clearAnimation();
@@ -104,23 +104,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (Pa.f.g(var4, var1, this) === var3) {
+                  if (Aa.f.g(var4, var1, this) === var3) {
                      return var3;
                   }
                }
 
-               val var6: FileDownloader = FileDownloader.INSTANCE;
-               val var7: Context = this.this$0.getContext();
-               q.g(var7, "getContext(...)");
-               val var11: java.lang.String = this.$config.getUrl();
+               val var7: FileDownloader = FileDownloader.INSTANCE;
+               val var9: Context = this.this$0.getContext();
+               q.g(var9, "getContext(...)");
+               val var6: java.lang.String = this.$config.getUrl();
                val var5: java.lang.String = this.$config.getAsset();
-               val var9: StringBuilder = new StringBuilder();
-               var9.append(var5);
-               var9.append(".json");
-               val var10: Flow = FileDownloader.downloadFile$default(
-                  var6, var7, var11, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var11: StringBuilder = new StringBuilder();
+               var11.append(var5);
+               var11.append(".json");
+               val var12: Flow = FileDownloader.downloadFile$default(
+                  var7, var9, var6, var11.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -131,7 +131,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
                      if (var1 is DownloadState.Completed) {
-                        val var4x: Any = Pa.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
+                        val var4x: Any = Aa.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
                            final RLottieImageView.Config $config;
                            final DownloadState $downloadState;
                            int label;
@@ -153,7 +153,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              n9.b.e();
+                              Y8.b.e();
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
@@ -183,9 +183,9 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
                            }
                         }, var2x);
-                        return if (var4x === n9.b.e()) var4x else Unit.a;
+                        return if (var4x === Y8.b.e()) var4x else Unit.a;
                      } else if (var1 is DownloadState.Failure) {
-                        val var3x: Any = Pa.f.g(
+                        val var3x: Any = Aa.f.g(
                            K.c(),
                            new Function2(this.this$0, null) {
                               int label;
@@ -205,7 +205,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
 
                               public final Object invokeSuspend(Object var1) {
-                                 n9.b.e();
+                                 Y8.b.e();
                                  if (this.label == 0) {
                                     kotlin.c.b(var1);
                                     AnimatedImageStateManager.onFetchFinished$default(
@@ -219,14 +219,14 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            },
                            var2x
                         );
-                        return if (var3x === n9.b.e()) var3x else Unit.a;
+                        return if (var3x === Y8.b.e()) var3x else Unit.a;
                      } else {
                         return Unit.a;
                      }
                   }
                };
                this.label = 2;
-               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
+               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
             }
          },
          2,

@@ -1,6 +1,5 @@
 package com.discord.chat.databinding;
 
-import A0.a;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.MessageAccessoriesView;
 import com.facebook.drawee.view.SimpleDraweeView;
+import t0.a;
 
 public final class SystemMessageViewBinding implements ViewBinding {
    public final MessageAccessoriesView accessoriesView;

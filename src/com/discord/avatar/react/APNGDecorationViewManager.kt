@@ -1,5 +1,6 @@
 package com.discord.avatar.react
 
+import R8.s
 import com.discord.avatar.decoration.DecorationView
 import com.discord.avatar.react.events.OnImageLoadedEvent
 import com.discord.image.animated_image.apng.APNGImageView
@@ -10,7 +11,6 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

@@ -1,11 +1,11 @@
 package com.discord.chat.presentation.message.system
 
+import R8.s
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnLongClickListener
-import androidx.core.view.b0
+import androidx.core.view.a0
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
@@ -33,7 +33,6 @@ import com.discord.chat.presentation.message.messagepart.SafetyPolicyNoticeMessa
 import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAccessory
 import com.discord.chat.presentation.message.messagepart.TimestampMessageAccessory
 import com.discord.chat.presentation.message.messagepart.WelcomeStickerAccessory
-import com.discord.chat.presentation.message.view.MessageContentView
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.fonts.DiscordFont
@@ -47,7 +46,6 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
-import g9.s
 import java.util.ArrayList
 import kotlin.jvm.functions.Function6
 import kotlin.jvm.internal.q
@@ -111,8 +109,8 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var var13: StructurableText = var1.getContent();
       if (var13 != null) {
-         val var14: ArrayList = this.accessories;
-         val var20: java.lang.String = var1.getId-3Eiw7ao();
+         val var20: ArrayList = this.accessories;
+         val var14: java.lang.String = var1.getId-3Eiw7ao();
          val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
          val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
          val var8: Boolean = var1.getShouldShowRoleDot();
@@ -140,9 +138,9 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var14.add(
+         var20.add(
             new MessageContentAccessory(
-               var20,
+               var14,
                var13,
                var11,
                var10,
@@ -177,11 +175,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
          val var31: ArrayList = this.accessories;
-         val var28: java.lang.String = var1.getId-3Eiw7ao();
-         val var23: java.lang.String = var1.getUsername();
+         val var23: java.lang.String = var1.getId-3Eiw7ao();
+         val var28: java.lang.String = var1.getUsername();
          val var33: Context = this.binding.getRoot().getContext();
          q.g(var33, "getContext(...)");
-         var31.add(new RoleSubscriptionPurchaseAccessory(var28, var23, MessageKt.avatarUrl(var1, var33), var3, false, null));
+         var31.add(new RoleSubscriptionPurchaseAccessory(var23, var28, MessageKt.avatarUrl(var1, var33), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -395,14 +393,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
    }
 
    @JvmStatic
-   fun `setMessage$lambda$2`(var0: SystemMessageView, var1: Message, var2: OnLongClickListener, var3: MessageContentView): Unit {
-      q.h(var3, "it");
-      b0.p0(var0, new MessageViewAccessibilityDelegate(var1, var3, new g(), var2));
-      return Unit.a;
-   }
-
-   @JvmStatic
-   fun `setMessage$lambda$2$lambda$1`(var0: View) {
+   fun `setMessage$lambda$1`(var0: View) {
    }
 
    public fun setAccessoriesRecycledViewPool(recycledViewPool: RecycledViewPool) {
@@ -439,6 +430,6 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
       }
 
       var8.setVisibility(var9);
-      this.binding.accessoriesView.setOnCurrentContentViewChanged(new f(this, var1, var5));
+      a0.p0(this, new MessageViewAccessibilityDelegate(var1, new f(), var5));
    }
 }

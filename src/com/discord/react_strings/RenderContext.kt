@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import d2.g
+import N1.g
 import java.util.HashMap
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.q

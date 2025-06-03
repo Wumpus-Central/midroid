@@ -1,5 +1,6 @@
 package com.discord.share
 
+import R8.s
 import android.app.PendingIntent
 import android.content.BroadcastReceiver
 import android.content.ComponentName
@@ -14,7 +15,6 @@ import com.discord.misc.utilities.intent.PendingIntentUtils
 import com.discord.reactevents.ReactEvents
 import com.discord.share.react.events.ShareBroadcastReceiverAppClicked
 import com.facebook.react.bridge.ReactApplicationContext
-import g9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.ephemeral
 
-import Za.f
+import Ka.f
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -66,16 +66,16 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    }
 
    public override fun toString(): String {
-      val var4: StructurableText = this.content;
-      val var2: java.lang.String = this.helpArticleLink;
-      val var1: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var2: StructurableText = this.content;
+      val var1: java.lang.String = this.helpArticleLink;
+      val var4: java.lang.String = this.helpButtonAccessibilityLabel;
       val var3: StringBuilder = new StringBuilder();
       var3.append("EphemeralIndication(content=");
-      var3.append(var4);
-      var3.append(", helpArticleLink=");
       var3.append(var2);
-      var3.append(", helpButtonAccessibilityLabel=");
+      var3.append(", helpArticleLink=");
       var3.append(var1);
+      var3.append(", helpButtonAccessibilityLabel=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }
