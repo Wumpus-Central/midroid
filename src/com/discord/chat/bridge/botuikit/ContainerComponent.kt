@@ -164,32 +164,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
+      val var8: java.lang.String = this.id;
       val var7: java.lang.String = this.errorText;
       val var9: java.util.List = this.components;
-      val var4: Int = this.accentColor;
+      val var5: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
       val var3: java.lang.String = this.spoilerDescription;
-      val var8: Int = this.themedBackgroundColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ContainerComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var6);
-      var5.append(", errorText=");
-      var5.append(var7);
-      var5.append(", components=");
-      var5.append(var9);
-      var5.append(", accentColor=");
-      var5.append(var4);
-      var5.append(", isSpoiler=");
-      var5.append(var2);
-      var5.append(", spoilerDescription=");
-      var5.append(var3);
-      var5.append(", themedBackgroundColor=");
-      var5.append(var8);
-      var5.append(")");
-      return var5.toString();
+      val var6: Int = this.themedBackgroundColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContainerComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var8);
+      var4.append(", errorText=");
+      var4.append(var7);
+      var4.append(", components=");
+      var4.append(var9);
+      var4.append(", accentColor=");
+      var4.append(var5);
+      var4.append(", isSpoiler=");
+      var4.append(var2);
+      var4.append(", spoilerDescription=");
+      var4.append(var3);
+      var4.append(", themedBackgroundColor=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

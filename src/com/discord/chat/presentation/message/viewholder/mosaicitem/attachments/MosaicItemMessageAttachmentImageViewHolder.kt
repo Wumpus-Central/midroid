@@ -51,12 +51,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var21: java.lang.String = var25.getUrl();
+      val var24: java.lang.String = var25.getUrl();
       val var11: Int = var25.getWidth();
-      val var9: Int = var25.getHeight();
+      val var10: Int = var25.getHeight();
       val var23: java.lang.String = var25.getPlaceholder();
-      val var24: Int = var25.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var21: Int = var25.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -105,10 +105,10 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var15 = false;
       }
 
-      val var18: Boolean = var25.getShowDescription();
-      val var35: java.lang.String = var25.getDescription();
-      val var37: java.lang.String = var25.getHint();
-      val var19: Boolean = var2.getUseNewAltTextButton();
+      val var19: Boolean = var25.getShowDescription();
+      val var37: java.lang.String = var25.getDescription();
+      val var35: java.lang.String = var25.getHint();
+      val var18: Boolean = var2.getUseNewAltTextButton();
       val var29: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapShowAltText", "onTapShowAltText(Ljava/lang/String;)V", 0);
@@ -130,23 +130,23 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var21,
-         var11,
-         var9,
-         var23,
          var24,
+         var11,
+         var10,
+         var23,
+         var21,
          var17,
          var30,
          var12,
          var13,
          var14,
          var15,
-         var18,
-         var35,
-         var37,
          var19,
+         var37,
+         var35,
+         var18,
          var29,
-         var10,
+         var9,
          var20,
          var3 xor true,
          var4,

@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var6 : var2) {
-            val var4: Function3 = this.onPurchaseUpdated;
+         for (java.lang.String var3 : var2) {
+            val var7: Function3 = this.onPurchaseUpdated;
             val var5: java.lang.String = var1.i();
             kotlin.jvm.internal.q.g(var5, "getPurchaseToken(...)");
-            val var3: java.lang.String = var1.e();
-            kotlin.jvm.internal.q.g(var3, "getPackageName(...)");
-            kotlin.jvm.internal.q.e(var6);
-            var4.invoke(var5, var3, var6);
+            val var4: java.lang.String = var1.e();
+            kotlin.jvm.internal.q.g(var4, "getPackageName(...)");
+            kotlin.jvm.internal.q.e(var3);
+            var7.invoke(var5, var4, var3);
          }
       }
    }
@@ -503,15 +503,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
-         val var3: java.util.List = this.productDetails;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ProductDetailsResponse(billingResult=");
-         var2.append(var1);
-         var2.append(", productDetails=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var2: BillingResult = this.billingResult;
+         val var1: java.util.List = this.productDetails;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ProductDetailsResponse(billingResult=");
+         var3.append(var2);
+         var3.append(", productDetails=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

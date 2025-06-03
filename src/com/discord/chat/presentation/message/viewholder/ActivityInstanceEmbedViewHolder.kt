@@ -19,18 +19,18 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
 
    public fun bind(activityMessageAccessory: ActivityInstanceEmbedMessageAccessory) {
       kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
-      val var4: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
-      val var3: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
-      this.activityInstanceEmbedView.initAppMessageEmbed(var4.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());
-      val var2: java.util.List = var4.getParticipantAvatarUris();
+      val var3: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
+      val var4: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
+      this.activityInstanceEmbedView.initAppMessageEmbed(var3.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());
+      val var2: java.util.List = var3.getParticipantAvatarUris();
       var var5: java.util.List = var2;
       if (var2 == null) {
          var5 = kotlin.collections.i.k();
       }
 
-      var3.setParticipantAvatarUris(var5);
-      if (var4.getParticipantsDescription() != null) {
-         var3.setParticipantText(var4.getParticipantsDescription());
+      var4.setParticipantAvatarUris(var5);
+      if (var3.getParticipantsDescription() != null) {
+         var4.setParticipantText(var3.getParticipantsDescription());
       }
    }
 }

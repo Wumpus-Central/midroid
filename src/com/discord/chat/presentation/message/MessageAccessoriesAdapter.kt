@@ -243,9 +243,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
    fun `onBindViewHolder$lambda$13`(var0: MessageAccessoriesAdapter, var1: Int, var2: MessageAccessory, var3: MessagePartViewHolder): Unit {
       kotlin.jvm.internal.q.h(var2, "attachment");
       kotlin.jvm.internal.q.h(var3, "attachmentViewHolder");
-      val var7: View = var3.itemView;
+      val var4: View = var3.itemView;
       kotlin.jvm.internal.q.g(var3.itemView, "itemView");
-      val var4: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var7: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var6: java.lang.Double;
       if (var2 is ImageAttachmentMessageAccessory) {
          var6 = null;
@@ -260,7 +260,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          var6 = (var2 as VideoAttachmentMessageAccessory).getPortal();
       }
 
-      var0.onMediaClicked-mdVZsaY(var7, var4, "attachment", ViewResizeMode.Cover, var6, var1, null, null, null);
+      var0.onMediaClicked-mdVZsaY(var4, var7, "attachment", ViewResizeMode.Cover, var6, var1, null, null, null);
       return Unit.a;
    }
 
@@ -938,8 +938,8 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          }
 
          val var12: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
-         val var5: Int = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
-         var2 = var12.getRadiusPx();
+         var2 = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
+         val var5: Int = var12.getRadiusPx();
          val var13: OnLongClickListener = var12.getOnLongClick();
          val var98: SpoilerAttributes = var12.getSpoilerAttributes();
          val var99: SpoilerConfig;
@@ -949,7 +949,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var99 = null;
          }
 
-         var11.bind(var8, var12, var5, var2, new E(this, var1), var99, new F(var1, var10, this), var13, var12.getPortal());
+         var11.bind(var8, var12, var2, var5, new E(this, var1), var99, new F(var1, var10, this), var13, var12.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
          (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new G(this, var10));
       } else if (var10 is ReferralMessageAccessory) {
@@ -974,15 +974,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is GiftMessageAccessory) {
-         val var56: GiftViewHolder = var1 as GiftViewHolder;
-         val var100: GiftMessageAccessory = var10 as GiftMessageAccessory;
+         val var100: GiftViewHolder = var1 as GiftViewHolder;
+         val var56: GiftMessageAccessory = var10 as GiftMessageAccessory;
          var var26: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
             var26 = null;
          }
 
-         var56.bind(var100, new Function1(var26) {
+         var100.bind(var56, new Function1(var26) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapGiftCodeEmbed", "onTapGiftCodeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -1382,14 +1382,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is ForumPostActionBar) {
          val var119: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
          val var139: ForumPostActionBar = var10 as ForumPostActionBar;
-         val var176: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
-         val var170: l = new l(this);
-         val var154: m = new m(this);
-         val var174: n = new n(this);
-         val var164: o = new o(this);
-         val var177: p = new p(this);
-         val var178: r = new r(this);
-         val var175: s = new s(this);
+         val var164: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
+         val var174: l = new l(this);
+         val var176: m = new m(this);
+         val var170: n = new n(this);
+         val var177: o = new o(this);
+         val var154: p = new p(this);
+         val var175: r = new r(this);
+         val var178: s = new s(this);
          var var31: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1398,14 +1398,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
 
          var119.bind(
             var139,
+            var164,
+            var174,
             var176,
             var170,
-            var154,
-            var174,
-            var164,
             var177,
-            var178,
+            var154,
             var175,
+            var178,
             new Function2(var31) {
                {
                   super(
@@ -1439,8 +1439,8 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
 
          var78.bind(var140, var120, var32);
       } else if (var10 is MessageComponentsAccessory) {
-         val var171: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
-         val var165: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
+         val var165: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
+         val var156: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
          var var122: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1454,7 +1454,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var79 = null;
          }
 
-         var171.bind(var165, this.botComponentProvider, new x(var10, this), var79, new y(this, var1), new z(this, var10), var122);
+         var165.bind(var156, this.botComponentProvider, new x(var10, this), var79, new y(this, var1), new z(this, var10), var122);
       } else if (var10 is FlaggedMessageEmbedAccessory) {
          (var1 as FlaggedMessageEmbedViewHolder).bind(var10 as FlaggedMessageEmbedAccessory);
       } else if (var10 is FlaggedMessageActionBarAccessory) {
@@ -1913,14 +1913,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 11:
             val var63: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var63, "getContext(...)");
-            val var85: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
+            val var87: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
             var var64: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var64 = null;
             }
 
-            var17 = new FileAttachmentViewHolder(var85, var64);
+            var17 = new FileAttachmentViewHolder(var87, var64);
             break;
          case 12:
             val var62: Context = var1.getContext();
@@ -1935,7 +1935,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 14:
             val var59: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var59, "getContext(...)");
-            val var87: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
+            val var85: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
             var var60: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
@@ -1943,7 +1943,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
 
             var17 = new WelcomeStickerViewHolder(
-               var87,
+               var85,
                new Function2(var60) {
                   {
                      super(

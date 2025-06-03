@@ -94,14 +94,14 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: ReactionView.Reaction = this.reaction;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressReactionData(messageId=");
-      var2.append(var4);
-      var2.append(", channelId=");
       var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var4);
       var2.append(", reaction=");
       var2.append(var3);
       var2.append(")");

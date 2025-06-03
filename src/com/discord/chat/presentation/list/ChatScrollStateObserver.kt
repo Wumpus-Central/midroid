@@ -32,9 +32,9 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          val var17: Boolean = (var18 as LinearLayoutManager).getReverseLayout();
          this.chatListVisibilityCalculator.updateFirstAndLastMessageVisibilityData(var1);
          val var7: Int = this.chatListVisibilityCalculator.getFirstMessagePosition();
-         val var20: java.lang.Double = this.chatListVisibilityCalculator.getFirstMessagePercentVisible();
+         val var19: java.lang.Double = this.chatListVisibilityCalculator.getFirstMessagePercentVisible();
          val var6: Int = this.chatListVisibilityCalculator.getLastMessagePosition();
-         val var19: java.lang.Double = this.chatListVisibilityCalculator.getLastMessagePercentVisible();
+         val var20: java.lang.Double = this.chatListVisibilityCalculator.getLastMessagePercentVisible();
          var var10: Boolean;
          if (var7 == 0) {
             var10 = true;
@@ -113,9 +113,9 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
 
          val var22: ScrollState;
          if (var17) {
-            var22 = new ScrollState(var14, var15, var11, var10, var13, var12, var29, var16, var6, var19, var7, var20);
+            var22 = new ScrollState(var14, var15, var11, var10, var13, var12, var29, var16, var6, var20, var7, var19);
          } else {
-            var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var7, var20, var6, var19);
+            var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var7, var19, var6, var20);
          }
 
          var10 = kotlin.jvm.internal.q.c(this.scrollState, var22);

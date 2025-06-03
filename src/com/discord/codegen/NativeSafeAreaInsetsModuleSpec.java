@@ -32,6 +32,10 @@ public abstract class NativeSafeAreaInsetsModuleSpec extends ReactContextBaseJav
 
    @ReactMethod
    @a
+   public abstract void setNavigationBarContrastEnforced(boolean var1);
+
+   @ReactMethod
+   @a
    public abstract void setNavigationBarVisible(boolean var1);
 
    @ReactMethod

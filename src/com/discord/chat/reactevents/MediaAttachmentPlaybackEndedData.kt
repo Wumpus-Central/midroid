@@ -134,26 +134,26 @@ public data class MediaAttachmentPlaybackEndedData(messageId: MessageId,
    public override fun toString(): String {
       val var5: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Float = this.totalDurationSecs;
-      val var3: Float = this.endDurationSecs;
-      val var8: java.lang.String = UserId.toString-impl(this.senderUserId);
-      val var2: Float = this.durationListeningSecs;
+      val var2: Float = this.endDurationSecs;
+      val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var3: Float = this.durationListeningSecs;
       val var4: Boolean = this.isVoiceMessage;
-      val var6: java.lang.String = this.attachmentId;
+      val var8: java.lang.String = this.attachmentId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaAttachmentPlaybackEndedData(messageId=");
       var7.append(var5);
       var7.append(", totalDurationSecs=");
       var7.append(var1);
       var7.append(", endDurationSecs=");
-      var7.append(var3);
-      var7.append(", senderUserId=");
-      var7.append(var8);
-      var7.append(", durationListeningSecs=");
       var7.append(var2);
+      var7.append(", senderUserId=");
+      var7.append(var6);
+      var7.append(", durationListeningSecs=");
+      var7.append(var3);
       var7.append(", isVoiceMessage=");
       var7.append(var4);
       var7.append(", attachmentId=");
-      var7.append(var6);
+      var7.append(var8);
       var7.append(")");
       return var7.toString();
    }

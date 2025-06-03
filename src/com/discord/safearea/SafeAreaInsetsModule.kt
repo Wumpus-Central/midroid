@@ -3,6 +3,8 @@ package com.discord.safearea
 import R1.a
 import R1.b
 import R1.c
+import R1.d
+import R1.e
 import R8.s
 import android.app.Activity
 import android.os.Build.VERSION
@@ -33,6 +35,19 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
          s.a("right", SizeUtilsKt.getPxToDp(var2)),
          s.a("bottom", SizeUtilsKt.getPxToDp(var3))
       );
+   }
+
+   @JvmStatic
+   fun `setNavigationBarContrastEnforced$lambda$4`(var0: SafeAreaInsetsModule, var1: Boolean) {
+      if (VERSION.SDK_INT >= 29) {
+         val var2: Activity = var0.getCurrentActivity();
+         if (var2 != null) {
+            val var3: Window = var2.getWindow();
+            if (var3 != null) {
+               a.a(var3, var1);
+            }
+         }
+      }
    }
 
    @JvmStatic
@@ -112,28 +127,32 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun getStableSafeAreaInsets(): WritableMap {
-      val var1: b = new b();
-      val var2: Activity = this.getCurrentActivity();
-      val var3: Int = 0;
-      if (var2 == null) {
-         return var1.invoke(var3, var3, var3, var3) as WritableMap;
+      val var1: d = new d();
+      val var3: Activity = this.getCurrentActivity();
+      val var2: Int = 0;
+      if (var3 == null) {
+         return var1.invoke(var2, var2, var2, var2) as WritableMap;
       } else {
-         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var2);
+         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
          if (var4 == null) {
-            return var1.invoke(var3, var3, var3, var3) as WritableMap;
+            return var1.invoke(var2, var2, var2, var2) as WritableMap;
          } else {
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var2, true);
-            return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
+            return var1.invoke(Math.max(var5.a, var6.a), Math.max(var5.b, var6.b), Math.max(var5.c, var6.c), Math.max(var5.d, var6.d)) as WritableMap;
          }
       }
    }
 
+   public override fun setNavigationBarContrastEnforced(enforced: Boolean) {
+      UiThreadUtil.runOnUiThread(new b(this, var1));
+   }
+
    public override fun setNavigationBarVisible(visible: Boolean) {
-      UiThreadUtil.runOnUiThread(new c(this, var1));
+      UiThreadUtil.runOnUiThread(new e(this, var1));
    }
 
    public override fun setStatusBarVisible(visible: Boolean) {
-      UiThreadUtil.runOnUiThread(new a(this, var1));
+      UiThreadUtil.runOnUiThread(new c(this, var1));
    }
 }

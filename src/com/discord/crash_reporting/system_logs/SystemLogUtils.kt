@@ -25,12 +25,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var1: java.lang.String = Regex.k.c("libdiscord_version");
-      val var0: StringBuilder = new StringBuilder();
-      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var0.append(var1);
-      var0.append("\\].+))");
-      regexExtractTombstone = new Regex(var0.toString());
+      val var0: java.lang.String = Regex.k.c("libdiscord_version");
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var1.append(var0);
+      var1.append("\\].+))");
+      regexExtractTombstone = new Regex(var1.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -104,22 +104,22 @@ internal object SystemLogUtils {
             val var21: Sequence = xa.j.y(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new k(new Regex("classes\\d+.dex"))
             );
-            val var8: HashSet = w.e(
+            val var23: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               val var14: java.util.Iterator = var21.iterator();
+               val var8: java.util.Iterator = var21.iterator();
 
                do {
-                  if (!var14.hasNext()) {
+                  if (!var8.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var23 = var14.next();
-               } while (var8.contains((java.lang.String)var23));
+                  var14 = var8.next();
+               } while (var23.contains((java.lang.String)var14));
 
-               var13 = var23 as java.lang.String;
+               var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var13 = "Unknown";
             }
@@ -231,7 +231,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var32 = var30.listIterator(var30.size());
+                           var31 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -245,7 +245,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var32.hasPrevious()) {
+                              if (!var31.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -260,7 +260,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var31 = var32.previous();
+                              var8 = (java.lang.String)var31.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -273,7 +273,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if ((var31 as java.lang.String).length() <= 0) {
+                              if (var8.length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -288,7 +288,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var31 as java.lang.String;
+                              var7 = var8;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -435,8 +435,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -444,7 +444,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -580,26 +580,26 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var4: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
+         val var6: java.lang.String = this.cause;
          val var7: java.lang.String = this.groupBy;
          val var3: java.lang.String = this.origin;
-         val var5: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Tombstone(text=");
-         var1.append(var4);
-         var1.append(", cause=");
-         var1.append(var2);
-         var1.append(", groupBy=");
-         var1.append(var7);
-         var1.append(", origin=");
-         var1.append(var3);
-         var1.append(", groupHash=");
-         var1.append(var5);
-         var1.append(", textHash=");
-         var1.append(var6);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.groupHash;
+         val var2: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var4);
+         var5.append(", cause=");
+         var5.append(var6);
+         var5.append(", groupBy=");
+         var5.append(var7);
+         var5.append(", origin=");
+         var5.append(var3);
+         var5.append(", groupHash=");
+         var5.append(var1);
+         var5.append(", textHash=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

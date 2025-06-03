@@ -123,8 +123,8 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       var12.setImportantForAccessibility(1);
       a0.p0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
       val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       q.e(this.binding.promptText);
@@ -154,13 +154,13 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       }
 
       val var6: Boolean;
-      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var10 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      if (!var10 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 
