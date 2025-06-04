@@ -127,9 +127,9 @@ internal data class UserSearchQuerySetPayload(query: String,
    public override fun toString(): String {
       val var5: java.lang.String = this.query;
       val var3: UserSearchQuerySetFilters = this.filters;
-      val var4: java.util.List = this.blacklist;
-      val var2: java.util.List = this.whitelist;
-      val var7: java.util.Map = this.boosters;
+      val var7: java.util.List = this.blacklist;
+      val var4: java.util.List = this.whitelist;
+      val var2: java.util.Map = this.boosters;
       val var1: Int = this.limit;
       val var6: StringBuilder = new StringBuilder();
       var6.append("UserSearchQuerySetPayload(query=");
@@ -137,11 +137,11 @@ internal data class UserSearchQuerySetPayload(query: String,
       var6.append(", filters=");
       var6.append(var3);
       var6.append(", blacklist=");
-      var6.append(var4);
-      var6.append(", whitelist=");
-      var6.append(var2);
-      var6.append(", boosters=");
       var6.append(var7);
+      var6.append(", whitelist=");
+      var6.append(var4);
+      var6.append(", boosters=");
+      var6.append(var2);
       var6.append(", limit=");
       var6.append(var1);
       var6.append(")");

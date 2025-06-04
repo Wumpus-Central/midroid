@@ -85,7 +85,7 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
       var var5: Int;
       label41: {
          if (var11 != null) {
-            val var10: Insets = var11.f(WindowInsetsCompat.n.c());
+            val var10: Insets = WindowInsetsCompatExtensionsKt.getImeInsets$default(var11, false, 1, null);
             if (var10 != null) {
                var5 = var10.d;
                break label41;

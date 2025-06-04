@@ -1305,15 +1305,7 @@
   "XONG6O": "Media Selector",
   "eOB2eX": "Description (Alt Text)",
   "RNH1jo": "Add a description",
-  "1yQ2Cw": "That's a lot of bytes",
-  "5ue6h4": "Your call is very important to us",
-  "hKsCRE": "Filing that away... get it?",
-  "FeCCCw": "Gathering wood...",
-  "CGSHsb": "Constructing pylons...",
   "Dmx3f3": "Server processing...",
-  "9jhZ0N": "Not sure about this one...",
-  "SuXJy8": "How about that weather?",
-  "+q6H7+": "Wumpus is working...",
   "qqyp/f": [
     "You can only upload ",
     [
@@ -11070,9 +11062,9 @@
     ]
   ],
   "VSpdzM": "TIMED OUT",
-  "9XsExs": "DURATION",
+  "9XsExs": "Duration",
   "AeYyLy": "This is only visible to moderators and indicates this user is timed out.",
-  "ewHW19": "REASON",
+  "ewHW19": "Reason",
   "GakiHx": "Enter a reason. This will only be visible in the Audit Log and will not be shown to the member.",
   "MA1ltr": "Removed",
   "O9C3Nj": [
@@ -24028,8 +24020,9 @@
   "TPpVkJ": "Mark as not sensitive",
   "gFsTKi": "Thanks for letting us know!",
   "QVdYsL": "Blur",
-  "5mnTa2": "Explicit",
+  "5mnTa2": "Sexually Explicit",
   "N/oRIy": "Filter",
+  "K0OWPz": "Gore",
   "aWD+tr": "Sensitive Content",
   "ZUvrwM": [
     "Choose what you see when uploaded or linked media may contain sensitive content. ",
@@ -25542,6 +25535,7 @@
     ],
     "."
   ],
+  "PEjaCw": "Gift",
   "Oba8Sk": "Nitro Gifting",
   "55Ccy8": "Select a Nitro Gift",
   "Z1RnTk": "Send a gift",
@@ -32809,6 +32803,22 @@
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
+  "9BuHra": [
+    "Customize what you see when uploaded or linked media may contain gore content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
   "tCcq5u": "Sent an image",
   "p0oZm5": "Sent a GIF",
   "rtfTKi": [
@@ -33026,6 +33036,22 @@
   "w+yGQU": "Custom Invite Link requires Server Boosting Level 3, or being a partnered, verified, HypeSquad event server",
   "ETCmRU": "You need to set a text channel that is accessible to all members before setting a Custom Invite Link.",
   "uVDhqa": "Several people are typing...",
+  "0r/b7O": [
+    "Customize what you see when uploaded or linked media may contain sexually explicit content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
   "RDE0SU": "Share",
   "Aw+09/": "Share Debug Logs",
   "dA1gb2": "Share Failed",
@@ -37924,6 +37950,7 @@
   "PwknJC": "Edit Status",
   "aP91UV": "Show exact search result counts",
   "qx4chY": "When enabled, may increase the time it takes to show search results.",
+  "16/3Bg": "Gore filter",
   "7j5bMT": "Cancel Subscription",
   "93ZDWF": "Ignored accounts",
   "PYrWFR": "You don't have any ignored accounts",
@@ -38046,7 +38073,25 @@
   "XlGG9f": "Friend requests",
   "MeYuqq": "Server settings",
   "RC0kJy": "Scan QR Code",
+  "dliU4u": [
+    "Customize what you see when uploaded or linked media may contain sensitive content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
+  "Hj/Bur": "Sensitive content filters",
   "c/UOwM": "Sensitive media",
+  "wr6InJ": "Sexually explicit media filter",
   "xbMc8v": "Soundboard",
   "kbFsAA": "Soundboard Volume",
   "BPbGq6": [
