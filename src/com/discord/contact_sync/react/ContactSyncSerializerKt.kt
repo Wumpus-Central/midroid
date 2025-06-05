@@ -1,8 +1,8 @@
 package com.discord.contact_sync.react
 
-import Na.E0
-import Na.U
-import Na.f
+import ab.E0
+import ab.U
+import ab.f
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -23,16 +23,16 @@ fun a(var0: Any): Any {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var2: Locale = Locale.ROOT;
-   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   q.g(var3, "toLowerCase(...)");
+   val var3: Locale = Locale.ROOT;
+   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   q.g(var2, "toLowerCase(...)");
    val var1: Byte;
-   if (q.c(var0, var3)) {
+   if (q.c(var0, var2)) {
       var1 = 1;
    } else {
-      val var4: java.lang.String = "DENIED".toLowerCase(var2);
-      q.g(var4, "toLowerCase(...)");
-      q.c(var0, var4);
+      var2 = "DENIED".toLowerCase(var3);
+      q.g(var2, "toLowerCase(...)");
+      q.c(var0, var2);
       var1 = 0;
    }
 

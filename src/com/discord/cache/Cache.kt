@@ -1,6 +1,5 @@
 package com.discord.cache
 
-import R8.j
 import Z0.a
 import Z0.b
 import Z0.c
@@ -10,6 +9,7 @@ import android.content.SharedPreferences.Editor
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
+import e9.j
 import java.util.HashSet
 import kotlin.jvm.internal.q
 
@@ -33,7 +33,7 @@ public class Cache(reactContext: Context) {
       super();
       this.sharedPrefs$delegate = j.b(new a(var1));
       this.fastCacheSharedPrefs$delegate = j.b(new b(var1));
-      W8.a.b(false, false, null, null, 0, new c(this), 31, null);
+      j9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic

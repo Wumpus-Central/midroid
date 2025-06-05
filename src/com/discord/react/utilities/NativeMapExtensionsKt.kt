@@ -1,12 +1,12 @@
 package com.discord.react.utilities
 
-import Ka.j
-import R8.n
+import Xa.j
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
+import e9.n
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
@@ -193,40 +193,40 @@ public fun <V> WritableNativeMap.put(key: String, value: V) {
 
 public fun ReadableMap.toJson(): JSONObject {
    q.h(var0, "<this>");
-   val var1: JSONObject = new JSONObject();
-   val var2: ReadableMapKeySetIterator = var0.keySetIterator();
+   val var2: JSONObject = new JSONObject();
+   val var1: ReadableMapKeySetIterator = var0.keySetIterator();
 
-   while (var2.hasNextKey()) {
-      val var3: java.lang.String = var2.nextKey();
+   while (var1.hasNextKey()) {
+      val var3: java.lang.String = var1.nextKey();
       switch (NativeMapExtensionsKt.WhenMappings.$EnumSwitchMapping$0[var0.getType(var3).ordinal()]) {
          case 1:
-            var1.put(var3, JSONObject.NULL);
+            var2.put(var3, JSONObject.NULL);
             break;
          case 2:
-            var1.put(var3, var0.getBoolean(var3));
+            var2.put(var3, var0.getBoolean(var3));
             break;
          case 3:
-            var1.put(var3, var0.getDouble(var3));
+            var2.put(var3, var0.getDouble(var3));
             break;
          case 4:
-            var1.put(var3, var0.getString(var3));
+            var2.put(var3, var0.getString(var3));
             break;
          case 5:
             val var6: ReadableMap = var0.getMap(var3);
             q.e(var6);
-            var1.put(var3, toJson(var6));
+            var2.put(var3, toJson(var6));
             break;
          case 6:
             val var5: ReadableArray = var0.getArray(var3);
             q.e(var5);
-            var1.put(var3, NativeArrayExtensionsKt.toJson(var5));
+            var2.put(var3, NativeArrayExtensionsKt.toJson(var5));
             break;
          default:
             throw new n();
       }
    }
 
-   return var1;
+   return var2;
 }
 
 public fun ReadableMap.toJsonString(): String {
@@ -241,7 +241,7 @@ public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    q.h(var0, "<this>");
    val var1: Json = getJson();
    val var3: java.lang.String = toJsonString(var0);
-   val var2: Qa.b = var1.a();
+   val var2: db.b = var1.a();
    q.m(6, "T");
    u.a("kotlinx.serialization.serializer.withModule");
    return (T)var1.b(j.c(var2, null), var3);

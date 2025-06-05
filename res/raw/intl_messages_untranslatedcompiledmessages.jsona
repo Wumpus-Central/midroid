@@ -124,6 +124,7 @@
     ],
     "?"
   ],
+  "oBL7aG": "Thank you for your feedback!",
   "zUQ1OD": "Catch up",
   "rdt65O": "See Less",
   "Rxe3jI": "See More!",
@@ -170,6 +171,8 @@
   "HT2IlJ": "Forward",
   "xIUfJS": "Forward Message",
   "yNWCsL": "posted something you might like",
+  "CHUAYm": "in",
+  "zAa/Ex": "Share",
   "2ih63d": "posted an announcement.",
   "E0MW8P": "posted an announcement that mentioned everyone.",
   "TGrUmp": "changed their status",
@@ -182,7 +185,9 @@
   "TahE/v": "sent a message you might like.",
   "oj5yvL": "sent a link.",
   "H/2+cn": "sent a popular message.",
+  "TH0/Dw": "Pro Tip",
   "DwLrLC": "started a thread.",
+  "aDAwS0": "Trending Topic",
   "swhcPD": "sent a video.",
   "MOA2xs": "Join the community server!",
   "u0KPUV": "The more servers you join, the more interesting content you’ll find.",
@@ -269,6 +274,7 @@
     "."
   ],
   "Ac2OZG": "ALPHA",
+  "Aoo5dH": "Shared Pro Tip",
   "zQJqxM": "Recent Conversation",
   "mPPce3": "Replied to:",
   "HE3oV1": "Reply",
@@ -307,9 +313,10 @@
   "59CWHB": "Share Activity",
   "J7dBxc": "Share Conversation",
   "7TVSLC": "Share Event",
+  "DUrG8P": "Share Pro Tip",
+  "F2Smnp": "Share Trending Topic",
   "SY4sdX": "ICYMI",
   "PZT7pq": "Show negative scored content",
-  "L9TfrK": "Show NSFW content",
   "JiNPo6": [
     "and ",
     [
@@ -335,6 +342,7 @@
   "jnXV/f": "In Case You Missed It",
   "MGZsfn": "Select at least one topic for improved server recommendations.",
   "Y5d99P": "What are some topics you’re interested in?",
+  "2s7kEh": "Shared Trending Topic",
   "knxfqa": "Sourced from all your servers",
   "BnUXZm": "Only the freshest content",
   "itb1rq": "Know when you've caught up",
@@ -594,120 +602,6 @@
   "gRHGFB": "The best way to setup a server is with your buddies!",
   "kLfkNj": "Start by inviting anyone who can help you build the server!",
   "Ry1T//": "Wondering who to invite?",
-  "c6kn6O": "Oops, something went wrong",
-  "2UzQiY": "Age group",
-  "Y0A/1N": "Adult",
-  "dJOmCw": "Teen",
-  "Qdv3DA": "Unverified",
-  "3HvI8P": [
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "handleOnHelpUrlHook"
-        ]
-      ]
-    ],
-    " about age verification"
-  ],
-  "H2kKw8": "We automatically detect and filter media that may be sensitive to help protect people on Discord who are under 18. If we put you in the wrong age group, you can reverify or contact us.",
-  "VLbVho": "Get Started",
-  "Cc41tb": "We use age groups to determine access to certain experiences. This process is fast and easy - here's how it works:",
-  "FQ+YOD": "Verify age group",
-  "TYfgw8": [
-    "Want another method? ",
-    [
-      8,
-      "$link",
-      [
-        "Request a manual review"
-      ],
-      [
-        [
-          1,
-          "handleOnRequestHook"
-        ]
-      ]
-    ]
-  ],
-  "RV75dn": [
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "handleOnHelpUrlHook"
-        ]
-      ]
-    ],
-    " about age groups"
-  ],
-  "ldhmmp": "These are not stored after the verification is completed",
-  "K0z0AA": "Take a video selfie or scan your ID",
-  "rw9yFR": [
-    "You'll know it's us from the official tag. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "handleOnHelpUrlHook"
-        ]
-      ]
-    ]
-  ],
-  "Jc2+09": "We'll DM you the results",
-  "h90JkZ": "They're quick and easy",
-  "60uRDA": "Follow the steps",
-  "SFWVER": "Verify Age",
-  "NjO/s7": "This channel is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this channel?",
-  "+tEu6+": "This server is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this server?",
-  "ECL1eX": [
-    "This channel contains adult content marked as age-restricted. We determined you're in the ",
-    [
-      8,
-      "$b",
-      [
-        "teen"
-      ]
-    ],
-    " age group. If we made a mistake, you can reverify."
-  ],
-  "8yts9f": [
-    "This server contains adult content marked as age-restricted. We determined you're in the ",
-    [
-      8,
-      "$b",
-      [
-        "teen"
-      ]
-    ],
-    " age group. If we made a mistake, you can reverify."
-  ],
-  "2L5V8/": "Reverify",
-  "WiSJBA": "Retry",
-  "NpmOHx": "Contact Us",
-  "O3/wAg": "Request a manual review",
-  "bG+/SE": "We determined you're in the teen age group. If we made a mistake, you can either reverify or contact us.",
-  "Bx15q6": "Reverify age group",
-  "JrEDy8": "Reverify",
-  "tgLAxc": "Take a video selfie or scan your ID. These are not stored after the verification is completed",
-  "+2/AhI": "Reverify",
-  "EnTLDg": "Age group verified",
-  "N+j4PD": "Verify age group",
   "Aojq+P": "Other Actions",
   "yoWDXV": "Force new user onboarding flow",
   "cuSp8f": [

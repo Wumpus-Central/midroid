@@ -1,6 +1,6 @@
 package com.discord.chat.bridge
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -181,42 +181,42 @@ public data class UploadProgress(headerText: String,
    }
 
    public override fun toString(): String {
-      val var12: java.lang.String = this.headerText;
+      val var11: java.lang.String = this.headerText;
       val var5: Int = this.headerColor;
-      val var6: Int = this.backgroundColor;
+      val var8: Int = this.backgroundColor;
       val var1: Float = this.progress;
-      val var9: java.lang.String = this.fileId;
-      val var10: java.lang.String = this.fileType;
-      val var8: Int = this.progressTrackColor;
-      val var3: Int = this.progressStartColor;
-      val var2: Int = this.progressEndColor;
-      val var4: Int = this.iconTintColor;
-      val var7: Int = this.closeTintColor;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("UploadProgress(headerText=");
-      var11.append(var12);
-      var11.append(", headerColor=");
-      var11.append(var5);
-      var11.append(", backgroundColor=");
-      var11.append(var6);
-      var11.append(", progress=");
-      var11.append(var1);
-      var11.append(", fileId=");
-      var11.append(var9);
-      var11.append(", fileType=");
-      var11.append(var10);
-      var11.append(", progressTrackColor=");
-      var11.append(var8);
-      var11.append(", progressStartColor=");
-      var11.append(var3);
-      var11.append(", progressEndColor=");
-      var11.append(var2);
-      var11.append(", iconTintColor=");
-      var11.append(var4);
-      var11.append(", closeTintColor=");
-      var11.append(var7);
-      var11.append(")");
-      return var11.toString();
+      val var10: java.lang.String = this.fileId;
+      val var12: java.lang.String = this.fileType;
+      val var7: Int = this.progressTrackColor;
+      val var2: Int = this.progressStartColor;
+      val var3: Int = this.progressEndColor;
+      val var6: Int = this.iconTintColor;
+      val var4: Int = this.closeTintColor;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("UploadProgress(headerText=");
+      var9.append(var11);
+      var9.append(", headerColor=");
+      var9.append(var5);
+      var9.append(", backgroundColor=");
+      var9.append(var8);
+      var9.append(", progress=");
+      var9.append(var1);
+      var9.append(", fileId=");
+      var9.append(var10);
+      var9.append(", fileType=");
+      var9.append(var12);
+      var9.append(", progressTrackColor=");
+      var9.append(var7);
+      var9.append(", progressStartColor=");
+      var9.append(var2);
+      var9.append(", progressEndColor=");
+      var9.append(var3);
+      var9.append(", iconTintColor=");
+      var9.append(var6);
+      var9.append(", closeTintColor=");
+      var9.append(var4);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

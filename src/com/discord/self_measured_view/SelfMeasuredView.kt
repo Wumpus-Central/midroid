@@ -1,6 +1,5 @@
 package com.discord.self_measured_view
 
-import R8.s
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -10,6 +9,7 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
+import e9.s
 import kotlin.jvm.internal.q
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {

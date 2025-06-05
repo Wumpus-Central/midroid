@@ -1,6 +1,5 @@
 package com.discord.theme
 
-import R8.n
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -9,6 +8,7 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
+import e9.n
 import java.util.EnumMap
 import kotlin.jvm.internal.q
 

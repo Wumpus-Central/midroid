@@ -72,7 +72,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          val var13: Boolean;
-         if (kotlin.ranges.d.c(var9 - var23, 0) <= var8 && var8 <= var9) {
+         if (kotlin.ranges.d.d(var9 - var23, 0) <= var8 && var8 <= var9) {
             var13 = true;
          } else {
             var13 = false;
@@ -163,7 +163,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = Z8.a.a(var0);
+         $ENTRIES = m9.a.a(var0);
       }
 
       @JvmStatic

@@ -1,12 +1,12 @@
 package com.discord.fast_connect
 
-import Oa.g
-import R8.s
-import S8.q
+import bb.g
 import com.discord.app_database.DatabaseVersions
 import com.discord.app_database.GuildVersion
 import com.discord.app_database.NonGuildVersion
 import com.discord.logging.Log
+import e9.s
+import f9.q
 import java.util.LinkedHashMap
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
@@ -81,10 +81,10 @@ internal object IdentifyPayload {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         var17 = var17 as JsonObject;
-         val var12: java.util.List = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var12: JsonObject = var17 as JsonObject;
+         var17 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
          var7 = var2.getGuildVersions();
-         val var8: LinkedHashMap = new LinkedHashMap(d.c(q.d(((Object[])var7).length), 16));
+         val var8: LinkedHashMap = new LinkedHashMap(d.d(q.d(((Object[])var7).length), 16));
          var var5: Int = ((Object[])var7).length;
 
          for (int var3 = 0; var3 < var5; var3++) {
@@ -92,7 +92,7 @@ internal object IdentifyPayload {
             var8.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var17, var12, new JsonObject(var8));
+         var var13: JsonObject = this.put(var12, (java.util.List<java.lang.String>)var17, new JsonObject(var8));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 

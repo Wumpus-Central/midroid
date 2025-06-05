@@ -1,11 +1,11 @@
 package com.discord.timers
 
-import R8.s
 import com.discord.codegen.NativeTimersModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
+import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

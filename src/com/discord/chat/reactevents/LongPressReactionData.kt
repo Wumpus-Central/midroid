@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import R8.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -9,6 +8,7 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import e9.s
 import kotlin.jvm.internal.q
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
@@ -94,14 +94,14 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: ReactionView.Reaction = this.reaction;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressReactionData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
       var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var1);
       var2.append(", reaction=");
       var2.append(var3);
       var2.append(")");

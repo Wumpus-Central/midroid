@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -166,39 +166,39 @@ public data class RoleSelectComponent(type: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var11: ActionComponentState = this.state;
-      val var6: java.lang.String = this.customId;
-      val var10: java.lang.String = this.placeholder;
-      val var5: java.lang.String = this.accessibilityLabel;
-      val var2: Int = this.minValues;
-      val var1: Int = this.maxValues;
+      val var2: Int = this.type;
+      val var11: java.lang.String = this.id;
+      val var6: ActionComponentState = this.state;
+      val var7: java.lang.String = this.customId;
+      val var8: java.lang.String = this.placeholder;
+      val var9: java.lang.String = this.accessibilityLabel;
+      val var1: Int = this.minValues;
+      val var3: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var8: java.util.List = this.selectedOptions;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("RoleSelectComponent(type=");
-      var9.append(var3);
-      var9.append(", id=");
-      var9.append(var7);
-      var9.append(", state=");
-      var9.append(var11);
-      var9.append(", customId=");
-      var9.append(var6);
-      var9.append(", placeholder=");
-      var9.append(var10);
-      var9.append(", accessibilityLabel=");
-      var9.append(var5);
-      var9.append(", minValues=");
-      var9.append(var2);
-      var9.append(", maxValues=");
-      var9.append(var1);
-      var9.append(", disabled=");
-      var9.append(var4);
-      var9.append(", selectedOptions=");
-      var9.append(var8);
-      var9.append(")");
-      return var9.toString();
+      val var5: java.util.List = this.selectedOptions;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("RoleSelectComponent(type=");
+      var10.append(var2);
+      var10.append(", id=");
+      var10.append(var11);
+      var10.append(", state=");
+      var10.append(var6);
+      var10.append(", customId=");
+      var10.append(var7);
+      var10.append(", placeholder=");
+      var10.append(var8);
+      var10.append(", accessibilityLabel=");
+      var10.append(var9);
+      var10.append(", minValues=");
+      var10.append(var1);
+      var10.append(", maxValues=");
+      var10.append(var3);
+      var10.append(", disabled=");
+      var10.append(var4);
+      var10.append(", selectedOptions=");
+      var10.append(var5);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

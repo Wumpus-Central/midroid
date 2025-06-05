@@ -30,21 +30,21 @@ internal object MediaProxy {
       } else {
          var17 = (Integer)var11.next();
          if (var11.hasNext()) {
-            var var13: Int = var17.intValue();
+            var3 = var17.intValue();
             var var20: Any = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
                var17 = (Integer)var20;
-               var3 = var13;
-               if (var13 < var5) {
+               var var13: Int = var3;
+               if (var3 < var5) {
                   var17 = (Integer)var10;
-                  var3 = var5;
+                  var13 = var5;
                }
 
                var20 = var17;
-               var13 = var3;
+               var3 = var13;
             } while (var11.hasNext());
          }
       }
@@ -90,12 +90,12 @@ internal object MediaProxy {
          var5 = false;
       }
 
-      var4 = MediaExtensionKt.getMediaExtension(var5);
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var1);
-      var6.append(".");
-      var6.append(var4);
-      val var7: Builder = Uri.parse(var6.toString()).buildUpon();
+      val var6: java.lang.String = MediaExtensionKt.getMediaExtension(var5);
+      val var9: StringBuilder = new StringBuilder();
+      var9.append(var1);
+      var9.append(".");
+      var9.append(var6);
+      val var7: Builder = Uri.parse(var9.toString()).buildUpon();
       if (var3 != null && var3 > 0) {
          var7.appendQueryParameter("size", java.lang.String.valueOf(this.getMediaProxySize(var3)));
       }

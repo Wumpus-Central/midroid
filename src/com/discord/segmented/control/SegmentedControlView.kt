@@ -190,7 +190,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var var3: TextView = var4;
       if (var4 == null) {
          var3 = new TextView(this.getContext());
-         a0.p0(var3, new androidx.core.view.a(var1, this) {
+         a0.q0(var3, new androidx.core.view.a(var1, this) {
             final int $index;
             final SegmentedControlView this$0;
 

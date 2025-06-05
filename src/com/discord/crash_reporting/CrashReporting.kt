@@ -1,11 +1,11 @@
 package com.discord.crash_reporting
 
-import R8.n
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.logging.Log
+import e9.n
 import io.sentry.Hint
 import io.sentry.IScope
 import io.sentry.SentryEvent
@@ -91,7 +91,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("532f7ac2-cd5b-40a7-ba3f-a2cc52d4cae0");
+      var5.setProguardUuid("2992296f-4f44-431f-b3a1-95752aec51c7");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -104,7 +104,7 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = S8.q.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = f9.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
@@ -120,7 +120,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", R8.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", e9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
@@ -208,7 +208,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = Z8.a.a(var0);
+         $ENTRIES = m9.a.a(var0);
       }
 
       @JvmStatic

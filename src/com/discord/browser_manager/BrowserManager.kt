@@ -1,5 +1,6 @@
 package com.discord.browser_manager
 
+import Ka.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -10,7 +11,6 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import xa.j
 
 internal object BrowserManager {
    private fun openUrlExternally(context: Context, uri: Uri, onFailure: (Exception) -> Unit, forceExternal: Boolean = true) {
@@ -84,9 +84,9 @@ internal object BrowserManager {
       q.h(var3, "onFailure");
 
       try {
-         val var5: Uri = Uri.parse(var2);
-         q.e(var5);
-         this.openUrlWithCustomTabs(var1, var5, new c(var1, var2, var3));
+         val var4: Uri = Uri.parse(var2);
+         q.e(var4);
+         this.openUrlWithCustomTabs(var1, var4, new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

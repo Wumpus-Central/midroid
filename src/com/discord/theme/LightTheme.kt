@@ -1,6 +1,5 @@
 package com.discord.theme
 
-import R8.j
 import W1.A1
 import W1.B1
 import W1.C1
@@ -52,6 +51,7 @@ import W1.z1
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
+import e9.j
 import kotlin.jvm.internal.q
 
 internal class LightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {

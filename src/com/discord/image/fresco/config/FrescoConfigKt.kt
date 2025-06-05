@@ -31,15 +31,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   var var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: ImagePipelineConfig.Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var5: C.a = C.n();
-   val var6: F = o.a();
-   val var4: ImagePipelineConfig.Builder = var3.X(new E(var5.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var6: C.a = C.n();
+   val var3: F = o.a();
+   val var4: ImagePipelineConfig.Builder = var1.X(new E(var6.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
@@ -51,10 +51,10 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
 
             for (java.lang.String var3 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var3)) {
-                  val var2: java.util.Iterator = var1.getQueryParameters(var3).iterator();
+                  val var4: java.util.Iterator = var1.getQueryParameters(var3).iterator();
 
-                  while (var2.hasNext()) {
-                     var5.appendQueryParameter(var3, var2.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var5.appendQueryParameter(var3, var4.next() as java.lang.String);
                   }
                }
             }

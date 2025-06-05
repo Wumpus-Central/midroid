@@ -1,6 +1,6 @@
 package com.discord.chat.input.bridge
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -98,9 +98,9 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
-      val var3: Int = Integer.hashCode(this.location);
-      val var4: Int = Integer.hashCode(this.length);
+      val var3: Int = Integer.hashCode(this.type);
+      val var4: Int = Integer.hashCode(this.location);
+      val var5: Int = Integer.hashCode(this.length);
       var var2: Int = 0;
       val var1: Int;
       if (this.style == null) {
@@ -114,34 +114,34 @@ public data class ChatInputNode(type: Int,
          var2 = this.tapAction.hashCode();
       }
 
-      return (((((var5 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
+      return (((((var3 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
    }
 
    public override fun toString(): String {
-      val var2: Int = this.type;
-      val var1: Int = this.location;
-      val var3: Int = this.length;
-      val var7: ChatInputNodeStyle = this.style;
+      val var3: Int = this.type;
+      val var2: Int = this.location;
+      val var1: Int = this.length;
+      val var6: ChatInputNodeStyle = this.style;
       val var5: Boolean = this.deleteNodeOnBackspace;
-      val var8: TapAction = this.tapAction;
+      val var7: TapAction = this.tapAction;
       val var4: Boolean = this.editDisabled;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ChatInputNode(type=");
-      var6.append(var2);
-      var6.append(", location=");
-      var6.append(var1);
-      var6.append(", length=");
-      var6.append(var3);
-      var6.append(", style=");
-      var6.append(var7);
-      var6.append(", deleteNodeOnBackspace=");
-      var6.append(var5);
-      var6.append(", tapAction=");
-      var6.append(var8);
-      var6.append(", editDisabled=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ChatInputNode(type=");
+      var8.append(var3);
+      var8.append(", location=");
+      var8.append(var2);
+      var8.append(", length=");
+      var8.append(var1);
+      var8.append(", style=");
+      var8.append(var6);
+      var8.append(", deleteNodeOnBackspace=");
+      var8.append(var5);
+      var8.append(", tapAction=");
+      var8.append(var7);
+      var8.append(", editDisabled=");
+      var8.append(var4);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

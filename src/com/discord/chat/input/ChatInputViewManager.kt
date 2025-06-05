@@ -1,6 +1,6 @@
 package com.discord.chat.input
 
-import Na.f
+import ab.f
 import android.app.Activity
 import android.content.Context
 import android.graphics.Color
@@ -100,12 +100,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var4: ThemedReactContext = this.$reactContext;
+            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var5: ThemedReactContext = this.$reactContext;
             val var2: ChatInputRootView = this.$view;
-            val var3: java.lang.String = var1.toString();
-            q.g(var3, "toString(...)");
-            var5.emitEvent(var4, var2, new OnPasteImageEvent(var3, this.$reactContext.getContentResolver().getType(var1)));
+            val var4: java.lang.String = var1.toString();
+            q.g(var4, "toString(...)");
+            var3.emitEvent(var5, var2, new OnPasteImageEvent(var4, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

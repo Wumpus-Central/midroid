@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.system
 
-import Aa.K
+import Na.K
 import android.content.Context
 import android.os.Bundle
 import android.util.AttributeSet
@@ -60,17 +60,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var5, "inflate(...)");
+      this.binding = var5;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var5: TextView = var3.message;
-      q.e(var3.message);
-      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var3.info;
-      q.e(var3.info);
+      val var3: TextView = var5.message;
+      q.e(var5.message);
+      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
+      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var5.info;
+      q.e(var5.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -109,16 +109,16 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
-      val var13: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
+      val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
       val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var19: StringBuilder = new StringBuilder();
-      var19.append("Binding ");
-      var19.append(var9);
-      AttachedViewCoroutineScope.cancelAllWork$default(var13, var19.toString(), null, 2, null);
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var19, var13.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
-         Aa.f.d(
+         Na.f.d(
             CoroutineViewUtilsKt.getAttachedScope(this),
             null,
             null,
@@ -144,7 +144,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                }
 
                public final Object invokeSuspend(Object var1) {
-                  val var3: Any = Y8.b.e();
+                  val var3: Any = l9.b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -177,7 +177,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           val var3: Any = Y8.b.e();
+                           val var3: Any = l9.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -187,8 +187,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                            } else {
                               kotlin.c.b(var1);
                               var1 = Duration.k;
-                              val var4: Flow = Da.e.n(
-                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, za.b.n), Duration.k.c()), this.$start) {
+                              val var4: Flow = Qa.e.n(
+                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, Ma.b.n), Duration.k.c()), this.$start) {
                                     final long $start$inlined;
                                     final Flow $this_unsafeTransform$inlined;
 
@@ -240,7 +240,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                    }
 
                                                    var var5: Any = ((<unrepresentable>)var9).result;
-                                                   val var11: Any = Y8.b.e();
+                                                   val var11: Any = l9.b.e();
                                                    if (((<unrepresentable>)var9).label != 0) {
                                                       if (((<unrepresentable>)var9).label != 1) {
                                                          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -252,8 +252,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                       var5 = this.$this_unsafeFlow;
                                                       var1 = var1;
                                                       val var7: kotlin.time.Duration.a = Duration.k;
-                                                      val var8: java.lang.Comparable = kotlin.ranges.d.e(
-                                                         Duration.k(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, za.b.m)),
+                                                      val var8: java.lang.Comparable = kotlin.ranges.d.f(
+                                                         Duration.k(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, Ma.b.m)),
                                                          Duration.k(Duration.k.c())
                                                       );
                                                       ((<unrepresentable>)var9).label = 1;
@@ -267,7 +267,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                              },
                                              var2x
                                           );
-                                       return if (var3x === Y8.b.e()) var3x else Unit.a;
+                                       return if (var3x === l9.b.e()) var3x else Unit.a;
                                     }
                                  },
                                  K.a()
@@ -348,7 +348,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       var20.setItems(var18);
       val var10: d = new d(var2, var1);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(this, true, var10);
-      a0.p0(this, new androidx.core.view.a(this, var10) {
+      a0.q0(this, new androidx.core.view.a(this, var10) {
          final OnClickListener $onClickListener;
          final CallSystemMessageView this$0;
 

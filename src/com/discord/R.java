@@ -43,8 +43,8 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_7j6aghrdxwwaidhxqlbn2zebe4_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_7j6aghrdxwwaidhxqlbn2zebe4_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_kj4cp7zbfs23btlczckzmfwwyy_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_kj4cp7zbfs23btlczckzmfwwyy_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -298,6 +298,8 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_threadicon;
       public static int design_components_icon_native_redesign_generated_images_threadlockicon;
       public static int design_components_icon_native_redesign_generated_images_threadplusicon;
+      public static int design_components_icon_native_redesign_generated_images_thumbsdownicon;
+      public static int design_components_icon_native_redesign_generated_images_thumbsupicon;
       public static int design_components_icon_native_redesign_generated_images_ticketicon;
       public static int design_components_icon_native_redesign_generated_images_tiktokneutralicon;
       public static int design_components_icon_native_redesign_generated_images_timericon;
@@ -394,8 +396,6 @@ public final class R {
       public static int images_group_dms_icon5;
       public static int images_group_dms_icon6;
       public static int images_group_dms_icon7;
-      public static int images_nameplate_avatar_placeholder_dark_mode;
-      public static int images_nameplate_avatar_placeholder_light_mode;
       public static int images_native_application_streaming_img_preview_not_available_dark;
       public static int images_native_application_streaming_img_preview_not_available_light;
       public static int images_native_application_streaming_img_stream_ended_dark;
@@ -1942,6 +1942,8 @@ public final class R {
       public static int design_components_lottieicon_native_generated_lotties_servertab;
       public static int design_components_lottieicon_native_generated_lotties_youtab;
       public static int design_intl_manacompiledmessages;
+      public static int images_nameplate_avatar_placeholder_dark_mode;
+      public static int images_nameplate_avatar_placeholder_light_mode;
       public static int images_platforms_img_account_sync_battlenet_light_and_dark;
       public static int images_platforms_img_account_sync_battlenet_white;
       public static int images_platforms_img_account_sync_bluesky_light_and_dark;
@@ -2017,6 +2019,7 @@ public final class R {
       public static int modules_parent_tools_familycentercompiledmessages;
       public static int modules_premium_powerups_guildpowerupscompiledmessages;
       public static int modules_report_to_mod_reporttomodcompiledmessages;
+      public static int modules_safety_flows_safetyflowscompiledmessages;
       public static int modules_voice_filters_voicefilternamescompiledmessages;
 
       private raw() {

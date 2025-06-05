@@ -1,12 +1,12 @@
 package com.discord.recycler_view.scroller
 
-import R8.n
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
+import e9.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
 

@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Ka.f
+import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -84,17 +84,17 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    public override fun toString(): String {
       val var2: java.lang.String = this.messageId;
       val var4: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.attachmentId;
-      val var5: java.lang.String = this.embedId;
+      val var5: java.lang.String = this.attachmentId;
+      val var3: java.lang.String = this.embedId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapObscuredMediaLearnMoreData(messageId=");
       var1.append(var2);
       var1.append(", channelId=");
       var1.append(var4);
       var1.append(", attachmentId=");
-      var1.append(var3);
-      var1.append(", embedId=");
       var1.append(var5);
+      var1.append(", embedId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

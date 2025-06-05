@@ -1,12 +1,12 @@
 package com.discord.media_player.reactevents
 
-import Ka.f
-import Ka.j
-import R8.s
-import Ra.a
+import Xa.f
+import Xa.j
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import e9.s
+import eb.a
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -50,7 +50,7 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
 
    public override fun serialize(): WritableMap {
       return if (this.source == null)
-         NativeMapExtensionsKt.toNativeMap(S8.q.h())
+         NativeMapExtensionsKt.toNativeMap(f9.q.h())
          else
          NativeMapExtensionsKt.nativeMapOf(s.a("source", NativeMapExtensionsKt.toNativeMap(a.b.e(j.d(MediaPlayerPlaybackSource.class), this.source))));
    }

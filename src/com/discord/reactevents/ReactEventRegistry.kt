@@ -1,7 +1,7 @@
 package com.discord.reactevents
 
-import R8.s
-import S8.q
+import e9.s
+import f9.q
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
@@ -47,14 +47,14 @@ internal class ReactEventRegistry {
       if (!this.events.containsKey(var2)) {
          this.events.put(var2, var1);
       } else {
-         val var3: Any = this.events.get(var2);
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("event ");
-         var4.append(var3);
-         var4.append(" already registered for");
-         var4.append(var2);
-         var4.append(". using the same class for multiple events is not supported.");
-         throw new IllegalStateException(var4.toString());
+         val var4: Any = this.events.get(var2);
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("event ");
+         var3.append(var4);
+         var3.append(" already registered for");
+         var3.append(var2);
+         var3.append(". using the same class for multiple events is not supported.");
+         throw new IllegalStateException(var3.toString());
       }
    }
 }

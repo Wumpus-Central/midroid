@@ -77,20 +77,20 @@ public class DebugPrintableCollection {
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
       // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 13
+      // 5d: astore 12
       // 5f: new java/lang/ref/WeakReference
-      // 62: astore 12
-      // 64: aload 12
+      // 62: astore 13
+      // 64: aload 13
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 13
+      // 6a: aload 12
       // 6c: aload 2
-      // 6d: aload 12
+      // 6d: aload 13
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
       // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 13
+      // 79: aload 12
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -187,20 +187,20 @@ public class DebugPrintableCollection {
       // 057: aload 7
       // 059: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 05e: checkcast com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 061: astore 8
-      // 063: aload 8
+      // 061: astore 7
+      // 063: aload 7
       // 065: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getReference ()Ljava/lang/ref/WeakReference;
       // 068: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
       // 06b: checkcast com/discord/crash_reporting/system_logs/DebugPrintable
-      // 06e: astore 7
-      // 070: aload 7
+      // 06e: astore 8
+      // 070: aload 8
       // 072: ifnonnull 078
       // 075: goto 035
       // 078: aload 2
       // 079: lload 3
       // 07a: invokevirtual java/lang/StringBuilder.append (J)Ljava/lang/StringBuilder;
       // 07d: pop
-      // 07e: aload 8
+      // 07e: aload 7
       // 080: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 083: ifnull 09e
       // 086: aload 2
@@ -208,7 +208,7 @@ public class DebugPrintableCollection {
       // 089: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 08c: pop
       // 08d: aload 2
-      // 08e: aload 8
+      // 08e: aload 7
       // 090: invokevirtual com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.getTag ()Ljava/lang/String;
       // 093: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 096: pop
@@ -229,7 +229,7 @@ public class DebugPrintableCollection {
       // 0b2: aload 2
       // 0b3: ldc "append(...)"
       // 0b5: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 0b8: aload 7
+      // 0b8: aload 8
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
@@ -359,15 +359,15 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.tag;
-         val var3: WeakReference = this.reference;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("DebugPrintableRef(tag=");
-         var1.append(var2);
-         var1.append(", reference=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.tag;
+         val var2: WeakReference = this.reference;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("DebugPrintableRef(tag=");
+         var3.append(var1);
+         var3.append(", reference=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

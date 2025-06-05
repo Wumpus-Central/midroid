@@ -1,6 +1,6 @@
 package com.discord.js_watchdog
 
-import Ka.f
+import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -73,15 +73,15 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var4: java.lang.String = this.sessionId;
-      val var2: java.lang.String = this.trace;
+      val var2: java.lang.String = this.sessionId;
+      val var4: java.lang.String = this.trace;
       val var3: StringBuilder = new StringBuilder();
       var3.append("StallReport(stallTime=");
       var3.append(var1);
       var3.append(", sessionId=");
-      var3.append(var4);
-      var3.append(", trace=");
       var3.append(var2);
+      var3.append(", trace=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

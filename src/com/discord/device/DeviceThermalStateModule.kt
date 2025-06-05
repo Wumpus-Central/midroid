@@ -1,12 +1,12 @@
 package com.discord.device
 
-import R8.s
 import android.os.PowerManager
 import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceThermalStateModuleSpec
 import com.discord.device.react_events.DeviceThermalStateChangedEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
+import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

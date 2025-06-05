@@ -1,7 +1,6 @@
 package com.discord.misc.utilities.keyboard
 
-import Aa.f
-import Y8.b
+import Na.f
 import android.app.Activity
 import android.view.View
 import android.view.Window
@@ -15,6 +14,7 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
+import l9.b
 
 @JvmSynthetic
 fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControllerCompat {
@@ -63,7 +63,7 @@ public fun View.hideKeyboard(window: Window) {
          b.e();
          if (this.label == 0) {
             c.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).a(WindowInsetsCompat.n.c());
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).b(WindowInsetsCompat.n.c());
             return Unit.a;
          } else {
             throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -108,7 +108,7 @@ public fun View.showKeyboard(window: Window) {
          b.e();
          if (this.label == 0) {
             c.b(var1);
-            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).e(WindowInsetsCompat.n.c());
+            KeyboardExtensionsKt.access$getInsetsController(this.$window, this.$self).f(WindowInsetsCompat.n.c());
             if (this.$self is EditText) {
                var1 = this.$self as EditText;
             } else {

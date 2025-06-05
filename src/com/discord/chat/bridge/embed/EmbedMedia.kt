@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -116,8 +116,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var5: Int = Integer.hashCode(this.width);
-      val var6: Int = Integer.hashCode(this.height);
+      val var6: Int = Integer.hashCode(this.width);
+      val var5: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -129,30 +129,30 @@ public data class EmbedMedia(url: String,
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return (((((var4 * 31 + var1) * 31 + var5) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
+      return (((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var8: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var5: java.lang.String = this.placeholder;
-      val var7: Int = this.placeholderVersion;
+      val var8: java.lang.String = this.url;
+      val var5: java.lang.String = this.proxyURL;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var7: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
       val var6: StringBuilder = new StringBuilder();
       var6.append("EmbedMedia(url=");
-      var6.append(var4);
-      var6.append(", proxyURL=");
       var6.append(var8);
-      var6.append(", width=");
-      var6.append(var1);
-      var6.append(", height=");
-      var6.append(var2);
-      var6.append(", placeholder=");
+      var6.append(", proxyURL=");
       var6.append(var5);
-      var6.append(", placeholderVersion=");
+      var6.append(", width=");
+      var6.append(var2);
+      var6.append(", height=");
+      var6.append(var1);
+      var6.append(", placeholder=");
       var6.append(var7);
+      var6.append(", placeholderVersion=");
+      var6.append(var4);
       var6.append(", srcIsAnimated=");
       var6.append(var3);
       var6.append(")");

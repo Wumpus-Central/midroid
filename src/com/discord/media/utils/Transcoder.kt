@@ -35,7 +35,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(Y8.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(l9.b.c(var7), 1);
       var8.C();
       val var9: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0(var9, var1) {
@@ -152,7 +152,7 @@ internal object Transcoder {
             this.$onProgress.invoke(0.0F);
          }
       }, var14);
-      var8.e(new Function1(var1) {
+      var8.f(new Function1(var1) {
          final java.lang.String $requestId;
 
          {
@@ -164,7 +164,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === Y8.b.e()) {
+      if (var12 === l9.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

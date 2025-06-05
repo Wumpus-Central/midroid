@@ -1,8 +1,7 @@
 package com.discord.serialization
 
-import Ma.g
-import Ma.e.f
-import e9.a
+import Za.g
+import Za.e.f
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -10,6 +9,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import r9.a
 
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
    public final val default: Any?
@@ -22,21 +22,21 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       q.h(var1, "type");
       super();
       this.default = (T)var2;
-      val var8: java.lang.String = var1.o();
+      val var8: java.lang.String = var1.e();
       q.e(var8);
       this.serialName = var8;
       val var5: Array<Any> = a.b(var1).getEnumConstants();
       q.e(var5);
-      val var9: Array<IntEnum> = var5 as Array<IntEnum>;
+      val var6: Array<IntEnum> = var5 as Array<IntEnum>;
       this.choices = (T[])var5;
-      val var6: ArrayList = new ArrayList((var5 as Array<IntEnum>).length);
-      val var4: Int = var9.length;
+      val var9: ArrayList = new ArrayList((var5 as Array<IntEnum>).length);
+      val var4: Int = var6.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
-         var6.add(var9[var3].getSerialNumber());
+         var9.add(var6[var3].getSerialNumber());
       }
 
-      val var7: Array<Int> = var6.toArray(new Integer[0]);
+      val var7: Array<Int> = var9.toArray(new Integer[0]);
       this.choicesNumbers = var7;
       this.descriptor = g.a(this.serialName, f.a);
       if (var7.length == this.choices.length) {
@@ -85,10 +85,10 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       q.h(var2, "value");
       val var3: Int = c.W(this.choices, var2);
       if (var3 == -1 && this.default != null) {
-         var1.x(this.default.getSerialNumber());
+         var1.w(this.default.getSerialNumber());
          return;
       } else if (var3 != -1) {
-         var1.x(this.choicesNumbers[var3]);
+         var1.w(this.choicesNumbers[var3]);
       } else {
          val var6: java.lang.String = this.serialName;
          val var5: Array<IntEnum> = this.choices;
