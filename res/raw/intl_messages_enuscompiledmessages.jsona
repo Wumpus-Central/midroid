@@ -30181,7 +30181,6 @@
       "videoTitle"
     ]
   ],
-  "g8zcER": "Quest Available",
   "NIimTk": [
     "Play ",
     [
@@ -34217,9 +34216,9 @@
   "7YZ/Sk": "Switch to back camera",
   "/R1SBw": "Switch to front camera",
   "BkuOOz": "Sync",
-  "GAlmIS": "Turning this on will overwrite the above appearance settings on all other clients including desktop and browser.",
   "3340dX": "Sync across clients.",
   "p4IKEx": "Turning this on will overwrite text & image settings on all other clients including desktop and browser.",
+  "CRtkeH": "Turning this on will override your selected theme on all clients including desktop and browser.",
   "+KCMSk": "Sync friends to Discord",
   "NVwuHh": "Sync Now",
   "eW8Gy8": "Sync Permissions",
@@ -37505,6 +37504,7 @@
   "0R/Toa": "Discord failed to unpin that message for some reason. Sorry about that.",
   "xFjBys": "The Pin Is Stuck!",
   "trD8am": "Unpin Post",
+  "sRUdBw": "Unreads",
   "i4xQ5u": "The channel will now show as unread for every message so you don't miss a thing.",
   "m2Hyj4": "Unstable Internet Connection",
   "EhaK6O": "This video stream has been paused to ensure good audio quality. We'll turn it back on when the connection improves.",

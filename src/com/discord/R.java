@@ -2017,6 +2017,7 @@ public final class R {
       public static int modules_intl_messages_secondtestcompiledmessages;
       public static int modules_intl_messages_testcompiledmessages;
       public static int modules_parent_tools_familycentercompiledmessages;
+      public static int modules_premium_gifting_premiumgiftingcompiledmessages;
       public static int modules_premium_powerups_guildpowerupscompiledmessages;
       public static int modules_report_to_mod_reporttomodcompiledmessages;
       public static int modules_safety_flows_safetyflowscompiledmessages;
