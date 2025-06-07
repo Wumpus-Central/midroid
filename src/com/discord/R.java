@@ -298,6 +298,8 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_threadicon;
       public static int design_components_icon_native_redesign_generated_images_threadlockicon;
       public static int design_components_icon_native_redesign_generated_images_threadplusicon;
+      public static int design_components_icon_native_redesign_generated_images_thumbsdownicon;
+      public static int design_components_icon_native_redesign_generated_images_thumbsupicon;
       public static int design_components_icon_native_redesign_generated_images_ticketicon;
       public static int design_components_icon_native_redesign_generated_images_tiktokneutralicon;
       public static int design_components_icon_native_redesign_generated_images_timericon;

@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "build": "4150",
-    "commit": "b4aebcce71adfa04fdcd98db316942d371109004",
+    "build": "4167",
+    "commit": "3916f314ccb17f727905d312822f6fd1bdbf3d23",
     "confirm_update": false
   },
   "hashes": {
-    "app/src/main/assets/index.android.bundle": "a8ccbc2047a2d5193cfc1d04bdf224c4",
+    "app/src/main/assets/index.android.bundle": "0b05bfa0ea4dab3e9aa58c7d26220276",
     "app/src/main/res/drawable-hdpi/_node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_7j6aghrdxwwaidhxqlbn2zebe4_node_modules_reactnavigation_elements_src_assets_backicon.png": "376d6a4c7f622917c39feb23671ef71d",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_bg.png": "d24e290703f8b31b56744a69df613fcb",
     "app/src/main/res/drawable-mdpi/_discord_common_js_shared_images_flags_cs.png": "44a7840b2161275358742595c9257e76",
@@ -660,6 +660,8 @@
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_threadicon.png": "e9d6d661f897313dc05d5add6901d6c9",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_threadlockicon.png": "c34ce63931fd1706838965bb9b462388",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_threadplusicon.png": "26d87f8fd2a824df66a2e02aa42b4885",
+    "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_thumbsdownicon.png": "a6500b78a54efcc8537f486ea50eede0",
+    "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_thumbsupicon.png": "fef9ce9f4129ec3046237c26a7a63ad3",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_ticketicon.png": "fad29cddace17bdf3b61055c97988fb3",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_tiktokneutralicon.png": "458e21b1009fc48d61dd512dededdb99",
     "app/src/main/res/drawable-xhdpi/design_components_icon_native_redesign_generated_images_timericon.png": "1b50838ac18543bd137965f5d31fd769",
@@ -1930,6 +1932,8 @@
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_threadicon.png": "99da5bdd698e331230fb61db0557577b",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_threadlockicon.png": "95aebec092d72ab1a09c1f7e85690acc",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_threadplusicon.png": "afec1de74739b107d3da4a01c825d4cd",
+    "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_thumbsdownicon.png": "cdc1be9368988c07ca1158e9786fd13e",
+    "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_thumbsupicon.png": "ad57be60a226fc916d50a56487210eba",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_ticketicon.png": "b2d17cc387fae205cad810f424ecbacd",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_tiktokneutralicon.png": "186afcf454a526c94b35d8c1cb701b97",
     "app/src/main/res/drawable-xxhdpi/design_components_icon_native_redesign_generated_images_timericon.png": "fd21576fe9747bd05036e93adb0179d5",
@@ -3406,7 +3410,7 @@
     "app/src/main/res/raw/images_platforms_img_roblox_white.svg": "898dc79e0285b8e9855531eeca36bf84",
     "app/src/main/res/raw/intl_messages_enuscompiledmessages.jsona": "ff5746c320ff49d8adf6e167a3c1bf89",
     "app/src/main/res/raw/intl_messages_internationalcompiledmessages.jsona": "7826c5731011d653ad231a2c3b0d1f32",
-    "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "4ab83118ddf4f6aa30bd1e442744b016",
+    "app/src/main/res/raw/intl_messages_untranslatedcompiledmessages.jsona": "9e857fcf38b0198ddf9dddc1042b1b19",
     "app/src/main/res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_clicker_game_clickergamecompiledmessages.jsona": "99914b932bd37a50b983c5e7c90ae93b",
     "app/src/main/res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona": "546e5fc2228b1c433c46487168171f10",
