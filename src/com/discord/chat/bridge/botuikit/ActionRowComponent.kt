@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -63,8 +63,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -72,7 +72,7 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = this.errorText.hashCode();
       }
 
-      return ((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode();
+      return ((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode();
    }
 
    public override fun toString(): String {

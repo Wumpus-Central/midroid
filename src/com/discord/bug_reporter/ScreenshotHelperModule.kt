@@ -1,6 +1,5 @@
 package com.discord.bug_reporter
 
-import R8.s
 import android.content.ContentResolver
 import com.discord.bug_reporter.react.events.ScreenshotTakenEvent
 import com.discord.reactevents.ReactEvents
@@ -8,6 +7,7 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

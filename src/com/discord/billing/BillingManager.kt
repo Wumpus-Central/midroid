@@ -1,7 +1,7 @@
 package com.discord.billing
 
-import Aa.K
-import Aa.U
+import Na.K
+import Na.U
 import android.app.Activity
 import androidx.lifecycle.LifecycleOwner
 import com.android.billingclient.api.BillingClient
@@ -205,7 +205,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               Y8.b.e();
+               l9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var6 : var2) {
+         for (java.lang.String var3 : var2) {
             val var4: Function3 = this.onPurchaseUpdated;
-            val var5: java.lang.String = var1.i();
-            kotlin.jvm.internal.q.g(var5, "getPurchaseToken(...)");
-            val var3: java.lang.String = var1.e();
-            kotlin.jvm.internal.q.g(var3, "getPackageName(...)");
-            kotlin.jvm.internal.q.e(var6);
-            var4.invoke(var5, var3, var6);
+            val var7: java.lang.String = var1.i();
+            kotlin.jvm.internal.q.g(var7, "getPurchaseToken(...)");
+            val var5: java.lang.String = var1.e();
+            kotlin.jvm.internal.q.g(var5, "getPackageName(...)");
+            kotlin.jvm.internal.q.e(var3);
+            var4.invoke(var7, var5, var3);
          }
       }
    }
@@ -295,30 +295,12 @@ internal class BillingManager(isProdBuild: Boolean,
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          val var7: CoroutineScope = this.getCoroutineScope(var5);
-         Aa.f.d(
+         Na.f.d(
             var7,
             K.a(),
             null,
             new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-   // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingExprent(VarDefinitionHelper.java:1679)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1496)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1545)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.remapClashingNames(VarDefinitionHelper.java:1458)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarProcessor.rerunClashing(VarProcessor.java:99)
-   //   at org.jetbrains.java.decompiler.main.ClassWriter.invokeProcessors(ClassWriter.java:118)
-   //   at org.jetbrains.java.decompiler.main.ClassWriter.writeClass(ClassWriter.java:352)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.NewExprent.toJava(NewExprent.java:407)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.getCastedExprent(ExprProcessor.java:1014)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.appendParamList(InvocationExprent.java:1153)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.exps.InvocationExprent.toJava(InvocationExprent.java:904)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.listToJava(ExprProcessor.java:891)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.BasicBlockStatement.toJava(BasicBlockStatement.java:91)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.ExprProcessor.jmpWrapper(ExprProcessor.java:829)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.IfStatement.toJava(IfStatement.java:258)
-   //   at org.jetbrains.java.decompiler.modules.decompiler.stats.RootStatement.toJava(RootStatement.java:36)
    ,
             2,
             null
@@ -438,7 +420,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = Z8.a.a(var0);
+         $ENTRIES = m9.a.a(var0);
       }
 
       init {
@@ -503,15 +485,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
+         val var2: BillingResult = this.billingResult;
          val var3: java.util.List = this.productDetails;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ProductDetailsResponse(billingResult=");
-         var2.append(var1);
-         var2.append(", productDetails=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("ProductDetailsResponse(billingResult=");
+         var1.append(var2);
+         var1.append(", productDetails=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

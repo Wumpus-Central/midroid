@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.list.item
 
-import R8.j
-import R8.m
 import com.discord.misc.utilities.ids.IdUtilsKt
+import e9.j
+import e9.m
 import j1.a
 
 public sealed class ChatListItem protected constructor(id: String) {

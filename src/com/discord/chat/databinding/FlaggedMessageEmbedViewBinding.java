@@ -52,33 +52,33 @@ public final class FlaggedMessageEmbedViewBinding implements ViewBinding {
 
    public static FlaggedMessageEmbedViewBinding bind(View var0) {
       int var1 = R.id.author_avatar;
-      SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
-      if (var10 != null) {
+      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.author_name;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var9 = (TextView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.connections_role_tag;
-            ConnectionsRoleTagView var8 = (ConnectionsRoleTagView)a.a(var0, var1);
-            if (var8 != null) {
+            ConnectionsRoleTagView var10 = (ConnectionsRoleTagView)a.a(var0, var1);
+            if (var10 != null) {
                var1 = R.id.content_footer_view;
-               FlaggedMessageEmbedFooterView var6 = (FlaggedMessageEmbedFooterView)a.a(var0, var1);
-               if (var6 != null) {
+               FlaggedMessageEmbedFooterView var2 = (FlaggedMessageEmbedFooterView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.content_view;
-                  MessageContentView var9 = (MessageContentView)a.a(var0, var1);
-                  if (var9 != null) {
+                  MessageContentView var8 = (MessageContentView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.guild_communication_disabled_icon;
                      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
                      if (var3 != null) {
                         var1 = R.id.message_end_guideline;
-                        Guideline var2 = (Guideline)a.a(var0, var1);
-                        if (var2 != null) {
+                        Guideline var7 = (Guideline)a.a(var0, var1);
+                        if (var7 != null) {
                            var1 = R.id.message_start_guideline;
                            Guideline var4 = (Guideline)a.a(var0, var1);
                            if (var4 != null) {
                               var1 = R.id.role_icon;
-                              RoleIconView var7 = (RoleIconView)a.a(var0, var1);
-                              if (var7 != null) {
-                                 return new FlaggedMessageEmbedViewBinding(var0, var10, var5, var8, var6, var9, var3, var2, var4, var7);
+                              RoleIconView var6 = (RoleIconView)a.a(var0, var1);
+                              if (var6 != null) {
+                                 return new FlaggedMessageEmbedViewBinding(var0, var5, var9, var10, var2, var8, var3, var7, var4, var6);
                               }
                            }
                         }

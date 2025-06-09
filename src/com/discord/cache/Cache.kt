@@ -1,6 +1,5 @@
 package com.discord.cache
 
-import R8.j
 import Z0.a
 import Z0.b
 import Z0.c
@@ -10,6 +9,7 @@ import android.content.SharedPreferences.Editor
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
+import e9.j
 import java.util.HashSet
 import kotlin.jvm.internal.q
 
@@ -33,7 +33,7 @@ public class Cache(reactContext: Context) {
       super();
       this.sharedPrefs$delegate = j.b(new a(var1));
       this.fastCacheSharedPrefs$delegate = j.b(new b(var1));
-      W8.a.b(false, false, null, null, 0, new c(this), 31, null);
+      j9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic
@@ -74,11 +74,11 @@ public class Cache(reactContext: Context) {
       val var3: HashSet = FAST_CACHE_KEYS;
       if (!FAST_CACHE_KEYS.contains(var1)) {
          if (!this.sharedPrefsLoaded) {
-            val var8: TTIMetrics = TTIMetrics.INSTANCE;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("WARNING: Cache accessed before parsed ");
-            var6.append(var1);
-            TTIMetrics.record$default(var8, var6.toString(), 0L, null, false, 14, null);
+            val var6: TTIMetrics = TTIMetrics.INSTANCE;
+            val var8: StringBuilder = new StringBuilder();
+            var8.append("WARNING: Cache accessed before parsed ");
+            var8.append(var1);
+            TTIMetrics.record$default(var6, var8.toString(), 0L, null, false, 14, null);
          }
 
          return this.getSharedPrefs().getString(var1, null);
@@ -89,8 +89,8 @@ public class Cache(reactContext: Context) {
             val var5: Editor = var2.edit();
             var5.putBoolean("initialized", true);
 
-            for (java.lang.String var7 : var3) {
-               var5.putString(var7, this.getSharedPrefs().getString(var7, null));
+            for (java.lang.String var4 : var3) {
+               var5.putString(var4, this.getSharedPrefs().getString(var4, null));
             }
 
             var5.apply();

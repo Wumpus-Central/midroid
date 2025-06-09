@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import R8.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -9,6 +8,7 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import e9.s
 import kotlin.jvm.internal.q
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {

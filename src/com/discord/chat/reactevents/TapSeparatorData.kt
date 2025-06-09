@@ -1,10 +1,10 @@
 package com.discord.chat.reactevents
 
-import R8.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import e9.s
 import kotlin.jvm.internal.q
 
 public data class TapSeparatorData(type: String, context: String? = null) : ReactEvent {

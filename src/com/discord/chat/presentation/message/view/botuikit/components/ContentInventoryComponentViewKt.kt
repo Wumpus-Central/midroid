@@ -43,7 +43,7 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   a0.H0(var0, var5);
+   a0.I0(var0, var5);
    var0.setClickable(var5);
 }
 

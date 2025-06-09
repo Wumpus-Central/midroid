@@ -1,7 +1,5 @@
 package com.discord.chat.reactevents
 
-import R8.n
-import R8.s
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -9,6 +7,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
+import e9.n
+import e9.s
 import kotlin.jvm.internal.q
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {

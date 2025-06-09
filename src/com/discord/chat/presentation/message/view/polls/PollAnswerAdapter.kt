@@ -60,7 +60,7 @@ public abstract class PollAnswerAdapter<THolder extends PollAnswerViewHolder<?>>
       var3.setEnabled(var4.getCanTapAnswers());
       var3.setOnClickListener(new g(this, var4));
       var3.setImportantForAccessibility(1);
-      a0.p0(var3, new PollsAnswerAccessibilityDelegate(var4));
+      a0.q0(var3, new PollsAnswerAccessibilityDelegate(var4));
       var1.bind(var4, new h(this, var4), this.onLongPressImage);
    }
 

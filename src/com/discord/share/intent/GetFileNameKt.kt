@@ -41,14 +41,14 @@ internal fun ContentResolver.getFileName(uri: Uri): String {
                try {
                   throw var17;
                } catch (var3: java.lang.Throwable) {
-                  d9.c.a(var21, var4);
+                  q9.c.a(var21, var4);
                }
             }
 
             var16 = "";
          }
 
-         d9.c.a(var21, null);
+         q9.c.a(var21, null);
          if (var16 == null) {
             var16 = "";
          }

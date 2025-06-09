@@ -1,8 +1,5 @@
 package com.discord.activity_invites
 
-import R8.j
-import R8.m
-import R8.n
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -28,6 +25,9 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.request.BasePostprocessor
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
+import e9.j
+import e9.m
+import e9.n
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import m2.f
@@ -374,15 +374,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
 
          public override fun toString(): String {
             val var4: java.lang.String = this.uri;
-            val var2: Boolean = this.fullSize;
-            val var1: Boolean = this.grayscale;
+            val var1: Boolean = this.fullSize;
+            val var2: Boolean = this.grayscale;
             val var3: StringBuilder = new StringBuilder();
             var3.append("End(uri=");
             var3.append(var4);
             var3.append(", fullSize=");
-            var3.append(var2);
-            var3.append(", grayscale=");
             var3.append(var1);
+            var3.append(", grayscale=");
+            var3.append(var2);
             var3.append(")");
             return var3.toString();
          }
@@ -423,12 +423,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.uri;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Start(uri=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.lang.String = this.uri;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Start(uri=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

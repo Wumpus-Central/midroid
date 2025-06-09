@@ -74,8 +74,8 @@ internal class EmojiPickerView(context: Context,
       kotlin.jvm.internal.q.h(var11, "onShowNitroUpsell");
       kotlin.jvm.internal.q.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = R8.j.b(new o(var11, this));
-      this.scroller$delegate = R8.j.b(new p(this, var13, var10, var6, var7, var8));
+      this.visibilityTracker$delegate = e9.j.b(new o(var11, this));
+      this.scroller$delegate = e9.j.b(new p(this, var13, var10, var6, var7, var8));
       this.premiumUpsellGradientDecoration = new EmojiPickerPremiumUpsellGradientBackground(var1, var12);
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -153,7 +153,7 @@ internal class EmojiPickerView(context: Context,
             && var1 !is EmojiPickerItem.FooterUpsell
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
-            throw new R8.n();
+            throw new e9.n();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
@@ -378,15 +378,15 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var4: Boolean = this.animateEmoji;
-         val var2: Boolean = this.scrollFastOptimizationEnabled;
+         val var2: Boolean = this.animateEmoji;
+         val var4: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
          val var3: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var4);
-         var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var2);
+         var5.append(", scrollFastOptimizationEnabled=");
+         var5.append(var4);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");

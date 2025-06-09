@@ -1,7 +1,7 @@
 package com.discord.reactevents
 
-import R8.s
-import S8.q
+import e9.s
+import f9.q
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
@@ -18,13 +18,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var1: LinkedHashMap = new LinkedHashMap();
+      val var2: LinkedHashMap = new LinkedHashMap();
 
-      for (java.lang.String var3 : this.events.values()) {
-         var1.put(var3, q.m(new Pair[]{s.a("registrationName", var3)}));
+      for (java.lang.String var1 : this.events.values()) {
+         var2.put(var1, q.m(new Pair[]{s.a("registrationName", var1)}));
       }
 
-      return var1;
+      return var2;
    }
 
    public fun getEventName(event: ReactEvent): String {

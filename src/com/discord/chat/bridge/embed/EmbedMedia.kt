@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.embed
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -133,30 +133,30 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.url;
-      val var7: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var8: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
+      val var8: java.lang.String = this.url;
+      val var5: java.lang.String = this.proxyURL;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var7: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("EmbedMedia(url=");
-      var4.append(var6);
-      var4.append(", proxyURL=");
-      var4.append(var7);
-      var4.append(", width=");
-      var4.append(var1);
-      var4.append(", height=");
-      var4.append(var2);
-      var4.append(", placeholder=");
-      var4.append(var8);
-      var4.append(", placeholderVersion=");
-      var4.append(var5);
-      var4.append(", srcIsAnimated=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EmbedMedia(url=");
+      var6.append(var8);
+      var6.append(", proxyURL=");
+      var6.append(var5);
+      var6.append(", width=");
+      var6.append(var2);
+      var6.append(", height=");
+      var6.append(var1);
+      var6.append(", placeholder=");
+      var6.append(var7);
+      var6.append(", placeholderVersion=");
+      var6.append(var4);
+      var6.append(", srcIsAnimated=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

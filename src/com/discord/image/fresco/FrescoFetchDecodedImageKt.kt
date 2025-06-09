@@ -1,6 +1,5 @@
 package com.discord.image.fresco
 
-import Y8.b
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -16,6 +15,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import l9.b
 import u2.d
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
@@ -67,7 +67,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
-      var6.e(new Function1(var8) {
+      var6.f(new Function1(var8) {
          final DataSource $imageDataSource;
 
          {

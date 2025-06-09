@@ -1,6 +1,6 @@
 package com.discord.contact_sync
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 

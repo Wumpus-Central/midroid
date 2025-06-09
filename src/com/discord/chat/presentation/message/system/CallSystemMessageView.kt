@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.system
 
-import Aa.K
+import Na.K
 import android.content.Context
 import android.os.Bundle
 import android.util.AttributeSet
@@ -110,15 +110,15 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       ColorUtilsKt.setTintColor(var12, var3);
       this.binding.message.setText(var1.getTitle());
       val var19: AttachedViewCoroutineScope = CoroutineViewUtilsKt.getAttachedScope(this);
-      val var13: java.lang.String = CallSystemMessageView.class.getSimpleName();
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Binding ");
-      var9.append(var13);
-      AttachedViewCoroutineScope.cancelAllWork$default(var19, var9.toString(), null, 2, null);
+      val var9: java.lang.String = CallSystemMessageView.class.getSimpleName();
+      val var13: StringBuilder = new StringBuilder();
+      var13.append("Binding ");
+      var13.append(var9);
+      AttachedViewCoroutineScope.cancelAllWork$default(var19, var13.toString(), null, 2, null);
       if (q.c(var1.isCallActive(), var7)) {
          val var14: java.lang.Long = var1.getRawMilliseconds();
          q.e(var14);
-         Aa.f.d(
+         Na.f.d(
             CoroutineViewUtilsKt.getAttachedScope(this),
             null,
             null,
@@ -144,7 +144,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                }
 
                public final Object invokeSuspend(Object var1) {
-                  val var3: Any = Y8.b.e();
+                  val var3: Any = l9.b.e();
                   if (this.label != 0) {
                      if (this.label != 1) {
                         throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -153,8 +153,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                      kotlin.c.b(var1);
                   } else {
                      kotlin.c.b(var1);
-                     var1 = this.this$0;
-                     val var4: Lifecycle.State = Lifecycle.State.m;
+                     val var4: CallSystemMessageView = this.this$0;
+                     var1 = Lifecycle.State.m;
                      val var5: Function2 = new Function2(this.$start, this.this$0, this.$message, null) {
                         final Message $message;
                         final long $start;
@@ -177,7 +177,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
 
                         public final Object invokeSuspend(Object var1) {
-                           val var3: Any = Y8.b.e();
+                           val var3: Any = l9.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -187,8 +187,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                            } else {
                               kotlin.c.b(var1);
                               var1 = Duration.k;
-                              val var6: Flow = Da.e.n(
-                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, za.b.n), Duration.k.c()), this.$start) {
+                              val var4: Flow = Qa.e.n(
+                                 new Flow(IntervalFlowKt.intervalFlow-QTBD994(kotlin.time.b.s(1, Ma.b.n), Duration.k.c()), this.$start) {
                                     final long $start$inlined;
                                     final Flow $this_unsafeTransform$inlined;
 
@@ -212,10 +212,10 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                 public final Object emit(Object var1, Continuation var2x) {
                                                    label23: {
                                                       if (var2x is <unrepresentable>) {
-                                                         val var4: <unrepresentable> = var2x as <unrepresentable>;
+                                                         val var4x: <unrepresentable> = var2x as <unrepresentable>;
                                                          if (((var2x as <unrepresentable>).label and Integer.MIN_VALUE) != 0) {
-                                                            var4.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
-                                                            var9 = var4;
+                                                            var4x.label = (var2x as <unrepresentable>).label + Integer.MIN_VALUE;
+                                                            var9 = var4x;
                                                             break label23;
                                                          }
                                                       }
@@ -240,7 +240,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                    }
 
                                                    var var5: Any = ((<unrepresentable>)var9).result;
-                                                   val var11: Any = Y8.b.e();
+                                                   val var11: Any = l9.b.e();
                                                    if (((<unrepresentable>)var9).label != 0) {
                                                       if (((<unrepresentable>)var9).label != 1) {
                                                          throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -252,8 +252,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                                       var5 = this.$this_unsafeFlow;
                                                       var1 = var1;
                                                       val var7: kotlin.time.Duration.a = Duration.k;
-                                                      val var8: java.lang.Comparable = kotlin.ranges.d.e(
-                                                         Duration.k(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, za.b.m)),
+                                                      val var8: java.lang.Comparable = kotlin.ranges.d.f(
+                                                         Duration.k(kotlin.time.b.t(System.currentTimeMillis() - this.$start$inlined, Ma.b.m)),
                                                          Duration.k(Duration.k.c())
                                                       );
                                                       ((<unrepresentable>)var9).label = 1;
@@ -267,12 +267,12 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                              },
                                              var2x
                                           );
-                                       return if (var3x === Y8.b.e()) var3x else Unit.a;
+                                       return if (var3x === l9.b.e()) var3x else Unit.a;
                                     }
                                  },
                                  K.a()
                               );
-                              val var4: FlowCollector = new FlowCollector(this.this$0, this.$message) {
+                              val var6: FlowCollector = new FlowCollector(this.this$0, this.$message) {
                                  final Message $message;
                                  final CallSystemMessageView this$0;
 
@@ -307,7 +307,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                  }
                               };
                               this.label = 1;
-                              if (var6.collect(var4, this) === var3) {
+                              if (var4.collect(var6, this) === var3) {
                                  return var3;
                               }
                            }
@@ -316,7 +316,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                         }
                      };
                      this.label = 1;
-                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var1, var4, var5, this) === var3) {
+                     if (CoroutineViewUtilsKt.repeatOnLifecycleOwner(var4, var1, var5, this) === var3) {
                         return var3;
                      }
                   }
@@ -348,7 +348,7 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       var20.setItems(var18);
       val var10: d = new d(var2, var1);
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(this, true, var10);
-      a0.p0(this, new androidx.core.view.a(this, var10) {
+      a0.q0(this, new androidx.core.view.a(this, var10) {
          final OnClickListener $onClickListener;
          final CallSystemMessageView this$0;
 

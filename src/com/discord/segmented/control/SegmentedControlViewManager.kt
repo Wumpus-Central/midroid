@@ -1,7 +1,5 @@
 package com.discord.segmented.control
 
-import R8.s
-import S8.n
 import android.annotation.SuppressLint
 import android.graphics.Color
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -16,6 +14,8 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
+import e9.s
+import f9.n
 import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
@@ -125,12 +125,12 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
-         val var5: java.util.Iterator = var4.iterator();
+         val var6: java.util.Iterator = var4.iterator();
 
-         while (var5.hasNext()) {
-            val var6: java.lang.String = var2.getString((var5 as n).a());
-            if (var6 != null) {
-               var3.add(var6);
+         while (var6.hasNext()) {
+            val var5: java.lang.String = var2.getString((var6 as n).a());
+            if (var5 != null) {
+               var3.add(var5);
             }
          }
 

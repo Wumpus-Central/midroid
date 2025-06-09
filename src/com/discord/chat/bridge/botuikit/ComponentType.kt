@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Ka.f
+import Xa.f
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
@@ -37,7 +37,7 @@ public enum class ComponentType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ComponentType> = $values();
       $VALUES = var0;
-      $ENTRIES = Z8.a.a(var0);
+      $ENTRIES = m9.a.a(var0);
    }
 
    init {

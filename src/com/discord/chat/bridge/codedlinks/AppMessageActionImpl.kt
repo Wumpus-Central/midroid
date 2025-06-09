@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.codedlinks
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -68,16 +68,16 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.label;
-      val var1: java.lang.Boolean = this.disabled;
+      val var4: java.lang.String = this.id;
+      val var1: java.lang.String = this.label;
+      val var3: java.lang.Boolean = this.disabled;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AppMessageActionImpl(id=");
-      var2.append(var3);
-      var2.append(", label=");
       var2.append(var4);
-      var2.append(", disabled=");
+      var2.append(", label=");
       var2.append(var1);
+      var2.append(", disabled=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

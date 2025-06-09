@@ -22,12 +22,12 @@ public abstract class NativeAppDatabaseModuleSpec extends ReactContextBaseJavaMo
       Map var1 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var4 = new HashSet();
-         HashSet var2 = new HashSet<>(Arrays.asList("userId"));
-         HashSet var3 = new HashSet(var1.keySet());
-         var3.removeAll(var4);
-         var3.removeAll(var2);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet<>(Arrays.asList("userId"));
+         HashSet var2 = new HashSet(var1.keySet());
+         var2.removeAll(var4);
+         var2.removeAll(var3);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
          var4.removeAll(var1.keySet());

@@ -106,7 +106,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
    if (var1 != null) {
       val var2: WindowInsets = var1.getRootWindowInsets();
       if (var2 != null) {
-         return WindowInsetsCompat.B(var2);
+         return WindowInsetsCompat.C(var2);
       }
    }
 
@@ -116,10 +116,10 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
    q.h(var0, "<this>");
    val var3: WindowInsetsControllerCompat = o0.a(var0, var0.getDecorView());
-   var3.d(2);
+   var3.e(2);
    if (var2) {
-      var3.e(var1);
+      var3.f(var1);
    } else {
-      var3.a(var1);
+      var3.b(var1);
    }
 }
