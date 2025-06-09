@@ -31,15 +31,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   var var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var2.newSmallDiskCache(var0))
+   var var2: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   var2 = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var1.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var6: C.a = C.n();
-   val var3: F = o.a();
-   val var4: ImagePipelineConfig.Builder = var1.X(new E(var6.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var3: C.a = C.n();
+   val var5: F = o.a();
+   val var4: ImagePipelineConfig.Builder = var2.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");

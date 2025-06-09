@@ -6,7 +6,6 @@ import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
 import com.discord.bundle_updater.BundleUpdater
-import com.discord.cpu_pnq.CPUPnQManager
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
 import com.discord.js_watchdog.JSWatchdogManager
@@ -62,11 +61,10 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      q.g(var3, "getWindow(...)");
-      var2.initialize(var3);
-      CPUPnQManager.INSTANCE.initialize();
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      q.g(var2, "getWindow(...)");
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -77,14 +75,12 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onPause();
       JankStatsAggregator.INSTANCE.disableTracking();
       JSWatchdogManager.INSTANCE.disable();
-      CPUPnQManager.INSTANCE.onPause();
    }
 
    protected override fun onResume() {
       super.onResume();
       JankStatsAggregator.INSTANCE.enableTracking();
       JSWatchdogManager.INSTANCE.enable();
-      CPUPnQManager.INSTANCE.onResume();
    }
 
    public open inner class ActivityDelegate(activity: ReactActivity) : ReactActivityDelegate {

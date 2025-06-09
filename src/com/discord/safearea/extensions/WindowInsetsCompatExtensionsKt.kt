@@ -5,6 +5,7 @@ import android.content.Context
 import android.os.Build.VERSION
 import android.view.View
 import android.view.Window
+import android.view.WindowInsets
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
@@ -102,14 +103,14 @@ fun `getSystemBarInsets$default`(var0: WindowInsetsCompat, var1: Context, var2: 
 internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
    q.h(var0, "<this>");
    val var1: View = ActivityExtensionsKt.getRootView(var0);
-   val var2: WindowInsetsCompat;
    if (var1 != null) {
-      var2 = WindowInsetsCompat.B(var1.getRootWindowInsets());
-   } else {
-      var2 = null;
+      val var2: WindowInsets = var1.getRootWindowInsets();
+      if (var2 != null) {
+         return WindowInsetsCompat.B(var2);
+      }
    }
 
-   return var2;
+   return null;
 }
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {

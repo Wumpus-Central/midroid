@@ -47,10 +47,10 @@ public class ReplayProviderActivity : Activity {
 
       val var7: ArrayList = new ArrayList(i.v(var9, 10));
 
-      for (File var12 : var9) {
-         val var4: java.lang.String = var12.getName();
+      for (File var10 : var9) {
+         val var4: java.lang.String = var10.getName();
          q.g(var4, "getName(...)");
-         var7.add(new Replay(var4, var12.lastModified()));
+         var7.add(new Replay(var4, var10.lastModified()));
       }
 
       return var7;
@@ -66,11 +66,11 @@ public class ReplayProviderActivity : Activity {
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(var1);
       if (q.c(this.getIntent().getAction(), "com.discord.GET_REPLAY_LIST")) {
-         val var3: java.util.List = this.getReplaysList();
+         val var2: java.util.List = this.getReplaysList();
          val var4: Intent = new Intent();
-         val var2: kotlinx.serialization.json.Json.a = Json.d;
+         val var3: kotlinx.serialization.json.Json.a = Json.d;
          Json.d.a();
-         var4.putExtra("INTENT_EXTRA_REPLAYS_LIST", var2.c(new f(Replay.Companion.serializer()), var3));
+         var4.putExtra("INTENT_EXTRA_REPLAYS_LIST", var3.c(new f(Replay.Companion.serializer()), var2));
          this.setResult(-1, var4);
          this.finish();
       } else if (q.c(this.getIntent().getAction(), "com.discord.REQUEST_REPLAY_ACCESS")) {
@@ -125,16 +125,16 @@ public class ReplayProviderActivity : Activity {
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
          q.h(var1, "activity");
          q.h(var2, "replayFilename");
-         val var6: Intent = new Intent();
-         var6.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var4: Intent = new Intent();
+         var4.setAction("com.discord.REQUEST_REPLAY_ACCESS");
          val var5: java.lang.String = var1.getPackageName();
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("discord://request_replay?target=");
-         var4.append(var2);
-         var4.append("&toPackage=");
-         var4.append(var5);
-         var6.setData(Uri.parse(var4.toString()));
-         var1.startActivityForResult(var6, var3);
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("discord://request_replay?target=");
+         var6.append(var2);
+         var6.append("&toPackage=");
+         var6.append(var5);
+         var4.setData(Uri.parse(var6.toString()));
+         var1.startActivityForResult(var4, var3);
       }
    }
 }

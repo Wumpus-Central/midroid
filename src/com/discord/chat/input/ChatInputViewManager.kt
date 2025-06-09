@@ -236,11 +236,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
                val var5: Int = var3.getInt(0);
                val var4: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               q.e(var2);
-               val var6: java.lang.String = var3.getString(3);
+               val var6: java.lang.String = var3.getString(2);
                q.e(var6);
-               this.replaceRange(var1, var5, var4, var2, var6, var3.getBoolean(4), var3.getString(5));
+               var2 = var3.getString(3);
+               q.e(var2);
+               this.replaceRange(var1, var5, var4, var6, var2, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:

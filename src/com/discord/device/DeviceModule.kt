@@ -45,11 +45,11 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
 
    protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
       val var7: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
-      val var6: Pair = s.a("device", Build.DEVICE);
-      val var2: Pair = s.a("deviceModel", Build.MODEL);
-      val var3: Pair = s.a("deviceBrand", Build.BRAND);
+      val var3: Pair = s.a("device", Build.DEVICE);
+      val var5: Pair = s.a("deviceModel", Build.MODEL);
+      val var2: Pair = s.a("deviceBrand", Build.BRAND);
       val var8: Pair = s.a("deviceProduct", Build.PRODUCT);
-      val var5: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
+      val var6: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
       val var1: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
       val var9: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
       val var4: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
@@ -58,11 +58,11 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
       return S8.q.m(
          new Pair[]{
             var7,
-            var6,
-            var2,
             var3,
-            var8,
             var5,
+            var2,
+            var8,
+            var6,
             var1,
             var9,
             var4,

@@ -107,13 +107,13 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      var var13: StructurableText = var1.getContent();
-      if (var13 != null) {
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
          val var20: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var8: Boolean = var1.getShouldShowRoleDot();
+         val var13: java.lang.String = var1.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var10: Boolean = var1.getShouldShowRoleDot();
          val var9: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
@@ -140,11 +140,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var20.add(
             new MessageContentAccessory(
-               var14,
                var13,
+               var14,
+               var8,
                var11,
                var10,
-               var8,
                var9,
                var5,
                var6,
@@ -197,7 +197,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             val var26: java.util.Iterator = var25.iterator();
 
             for (int var19 = 0; var26.hasNext(); var19++) {
-               var13 = (StructurableText)var26.next();
+               val var29: Any = var26.next();
                if (var19 < 0) {
                   i.u();
                }
@@ -210,7 +210,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                         var1.getChannelId-o4g7jtM(),
                         var3,
                         16,
-                        var13 as Embed,
+                        var29 as Embed,
                         false,
                         false,
                         false,

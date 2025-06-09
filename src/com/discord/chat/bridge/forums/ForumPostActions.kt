@@ -113,8 +113,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.numDisplayedReactions);
-      val var5: Int = java.lang.Boolean.hashCode(this.isFollowing);
+      val var5: Int = Integer.hashCode(this.numDisplayedReactions);
+      val var6: Int = java.lang.Boolean.hashCode(this.isFollowing);
       var var4: Int = 0;
       val var1: Int;
       if (this.followIcon == null) {
@@ -143,37 +143,37 @@ public data class ForumPostActions(numDisplayedReactions: Int,
          var4 = this.sharePrompt.hashCode();
       }
 
-      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var8: java.lang.String = this.followIcon;
-      val var6: java.lang.String = this.followLabel;
-      val var5: java.lang.String = this.shareIcon;
-      val var9: java.lang.String = this.shareLabel;
-      val var4: MessageReaction = this.defaultReaction;
-      val var7: PostSharePrompt = this.sharePrompt;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForumPostActions(numDisplayedReactions=");
-      var3.append(var1);
-      var3.append(", isFollowing=");
-      var3.append(var2);
-      var3.append(", followIcon=");
-      var3.append(var8);
-      var3.append(", followLabel=");
-      var3.append(var6);
-      var3.append(", shareIcon=");
-      var3.append(var5);
-      var3.append(", shareLabel=");
-      var3.append(var9);
-      var3.append(", defaultReaction=");
-      var3.append(var4);
-      var3.append(", sharePrompt=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var7: java.lang.String = this.followIcon;
+      val var3: java.lang.String = this.followLabel;
+      val var9: java.lang.String = this.shareIcon;
+      val var4: java.lang.String = this.shareLabel;
+      val var5: MessageReaction = this.defaultReaction;
+      val var8: PostSharePrompt = this.sharePrompt;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ForumPostActions(numDisplayedReactions=");
+      var6.append(var1);
+      var6.append(", isFollowing=");
+      var6.append(var2);
+      var6.append(", followIcon=");
+      var6.append(var7);
+      var6.append(", followLabel=");
+      var6.append(var3);
+      var6.append(", shareIcon=");
+      var6.append(var9);
+      var6.append(", shareLabel=");
+      var6.append(var4);
+      var6.append(", defaultReaction=");
+      var6.append(var5);
+      var6.append(", sharePrompt=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -562,8 +562,8 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
          var24 = this.titleText.hashCode();
       }
 
-      val var30: Int = this.participantAvatarUris.hashCode();
-      val var29: Int = this.extendedType.hashCode();
+      val var29: Int = this.participantAvatarUris.hashCode();
+      val var30: Int = this.extendedType.hashCode();
       if (this.structurableSubtitleText != null) {
          var25 = this.structurableSubtitleText.hashCode();
       }
@@ -678,10 +678,10 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                       + var24
                                                 )
                                                 * 31
-                                             + var30
+                                             + var29
                                        )
                                        * 31
-                                    + var29
+                                    + var30
                               )
                               * 31
                            + var25
@@ -694,105 +694,105 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.backgroundColor;
-      val var2: Int = this.borderColor;
-      val var1: Int = this.headerColor;
-      val var12: java.lang.String = this.headerText;
-      val var7: InviteType = this.type;
-      val var19: Int = this.acceptLabelBackgroundColor;
-      val var17: Int = this.acceptLabelBorderColor;
-      val var8: Int = this.acceptLabelColor;
-      val var13: java.lang.String = this.acceptLabelText;
-      val var20: java.lang.String = this.bodyText;
-      val var15: Int = this.bodyTextColor;
-      val var10: java.lang.Boolean = this.canBeAccepted;
-      val var31: java.lang.Boolean = this.embedCanBeTapped;
-      val var24: Int = this.resolvingGradientEnd;
-      val var28: Int = this.resolvingGradientStart;
-      val var26: java.lang.Boolean = this.splashHasRadialGradient;
-      val var23: Int = this.splashOpacity;
-      val var6: java.lang.String = this.splashUrl;
-      val var29: java.lang.String = this.inviteSplash;
-      val var14: java.lang.String = this.subtitle;
-      val var21: Int = this.subtitleColor;
-      val var27: Int = this.thumbnailBackgroundColor;
-      val var33: Int = this.thumbnailCornerRadius;
-      val var5: java.lang.String = this.thumbnailText;
-      val var9: java.lang.String = this.thumbnailUrl;
-      val var32: Int = this.titleColor;
-      val var18: java.lang.String = this.titleText;
-      val var25: java.util.List = this.participantAvatarUris;
-      val var11: CodedLinkExtendedType = this.extendedType;
-      val var22: AnnotatedStructurableText = this.structurableSubtitleText;
-      val var16: java.lang.String = this.noParticipantsText;
+      val var1: Int = this.backgroundColor;
+      val var3: Int = this.borderColor;
+      val var2: Int = this.headerColor;
+      val var32: java.lang.String = this.headerText;
+      val var6: InviteType = this.type;
+      val var9: Int = this.acceptLabelBackgroundColor;
+      val var26: Int = this.acceptLabelBorderColor;
+      val var20: Int = this.acceptLabelColor;
+      val var17: java.lang.String = this.acceptLabelText;
+      val var23: java.lang.String = this.bodyText;
+      val var22: Int = this.bodyTextColor;
+      val var19: java.lang.Boolean = this.canBeAccepted;
+      val var16: java.lang.Boolean = this.embedCanBeTapped;
+      val var7: Int = this.resolvingGradientEnd;
+      val var5: Int = this.resolvingGradientStart;
+      val var14: java.lang.Boolean = this.splashHasRadialGradient;
+      val var15: Int = this.splashOpacity;
+      val var27: java.lang.String = this.splashUrl;
+      val var18: java.lang.String = this.inviteSplash;
+      val var21: java.lang.String = this.subtitle;
+      val var24: Int = this.subtitleColor;
+      val var33: Int = this.thumbnailBackgroundColor;
+      val var28: Int = this.thumbnailCornerRadius;
+      val var12: java.lang.String = this.thumbnailText;
+      val var31: java.lang.String = this.thumbnailUrl;
+      val var30: Int = this.titleColor;
+      val var8: java.lang.String = this.titleText;
+      val var10: java.util.List = this.participantAvatarUris;
+      val var25: CodedLinkExtendedType = this.extendedType;
+      val var13: AnnotatedStructurableText = this.structurableSubtitleText;
+      val var29: java.lang.String = this.noParticipantsText;
       val var4: Boolean = this.ctaEnabled;
-      val var30: StringBuilder = new StringBuilder();
-      var30.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
-      var30.append(var3);
-      var30.append(", borderColor=");
-      var30.append(var2);
-      var30.append(", headerColor=");
-      var30.append(var1);
-      var30.append(", headerText=");
-      var30.append(var12);
-      var30.append(", type=");
-      var30.append(var7);
-      var30.append(", acceptLabelBackgroundColor=");
-      var30.append(var19);
-      var30.append(", acceptLabelBorderColor=");
-      var30.append(var17);
-      var30.append(", acceptLabelColor=");
-      var30.append(var8);
-      var30.append(", acceptLabelText=");
-      var30.append(var13);
-      var30.append(", bodyText=");
-      var30.append(var20);
-      var30.append(", bodyTextColor=");
-      var30.append(var15);
-      var30.append(", canBeAccepted=");
-      var30.append(var10);
-      var30.append(", embedCanBeTapped=");
-      var30.append(var31);
-      var30.append(", resolvingGradientEnd=");
-      var30.append(var24);
-      var30.append(", resolvingGradientStart=");
-      var30.append(var28);
-      var30.append(", splashHasRadialGradient=");
-      var30.append(var26);
-      var30.append(", splashOpacity=");
-      var30.append(var23);
-      var30.append(", splashUrl=");
-      var30.append(var6);
-      var30.append(", inviteSplash=");
-      var30.append(var29);
-      var30.append(", subtitle=");
-      var30.append(var14);
-      var30.append(", subtitleColor=");
-      var30.append(var21);
-      var30.append(", thumbnailBackgroundColor=");
-      var30.append(var27);
-      var30.append(", thumbnailCornerRadius=");
-      var30.append(var33);
-      var30.append(", thumbnailText=");
-      var30.append(var5);
-      var30.append(", thumbnailUrl=");
-      var30.append(var9);
-      var30.append(", titleColor=");
-      var30.append(var32);
-      var30.append(", titleText=");
-      var30.append(var18);
-      var30.append(", participantAvatarUris=");
-      var30.append(var25);
-      var30.append(", extendedType=");
-      var30.append(var11);
-      var30.append(", structurableSubtitleText=");
-      var30.append(var22);
-      var30.append(", noParticipantsText=");
-      var30.append(var16);
-      var30.append(", ctaEnabled=");
-      var30.append(var4);
-      var30.append(")");
-      return var30.toString();
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
+      var11.append(var1);
+      var11.append(", borderColor=");
+      var11.append(var3);
+      var11.append(", headerColor=");
+      var11.append(var2);
+      var11.append(", headerText=");
+      var11.append(var32);
+      var11.append(", type=");
+      var11.append(var6);
+      var11.append(", acceptLabelBackgroundColor=");
+      var11.append(var9);
+      var11.append(", acceptLabelBorderColor=");
+      var11.append(var26);
+      var11.append(", acceptLabelColor=");
+      var11.append(var20);
+      var11.append(", acceptLabelText=");
+      var11.append(var17);
+      var11.append(", bodyText=");
+      var11.append(var23);
+      var11.append(", bodyTextColor=");
+      var11.append(var22);
+      var11.append(", canBeAccepted=");
+      var11.append(var19);
+      var11.append(", embedCanBeTapped=");
+      var11.append(var16);
+      var11.append(", resolvingGradientEnd=");
+      var11.append(var7);
+      var11.append(", resolvingGradientStart=");
+      var11.append(var5);
+      var11.append(", splashHasRadialGradient=");
+      var11.append(var14);
+      var11.append(", splashOpacity=");
+      var11.append(var15);
+      var11.append(", splashUrl=");
+      var11.append(var27);
+      var11.append(", inviteSplash=");
+      var11.append(var18);
+      var11.append(", subtitle=");
+      var11.append(var21);
+      var11.append(", subtitleColor=");
+      var11.append(var24);
+      var11.append(", thumbnailBackgroundColor=");
+      var11.append(var33);
+      var11.append(", thumbnailCornerRadius=");
+      var11.append(var28);
+      var11.append(", thumbnailText=");
+      var11.append(var12);
+      var11.append(", thumbnailUrl=");
+      var11.append(var31);
+      var11.append(", titleColor=");
+      var11.append(var30);
+      var11.append(", titleText=");
+      var11.append(var8);
+      var11.append(", participantAvatarUris=");
+      var11.append(var10);
+      var11.append(", extendedType=");
+      var11.append(var25);
+      var11.append(", structurableSubtitleText=");
+      var11.append(var13);
+      var11.append(", noParticipantsText=");
+      var11.append(var29);
+      var11.append(", ctaEnabled=");
+      var11.append(var4);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

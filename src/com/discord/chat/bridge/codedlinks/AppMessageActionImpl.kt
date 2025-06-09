@@ -68,18 +68,18 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.id;
-      val var2: java.lang.String = this.label;
-      val var4: java.lang.Boolean = this.disabled;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AppMessageActionImpl(id=");
-      var3.append(var1);
-      var3.append(", label=");
-      var3.append(var2);
-      var3.append(", disabled=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.label;
+      val var1: java.lang.Boolean = this.disabled;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppMessageActionImpl(id=");
+      var2.append(var3);
+      var2.append(", label=");
+      var2.append(var4);
+      var2.append(", disabled=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

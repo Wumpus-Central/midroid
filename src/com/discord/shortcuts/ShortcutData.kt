@@ -52,15 +52,15 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ShortcutData(tag=");
-      var2.append(var1);
-      var2.append(", data=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.tag;
+      val var1: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ShortcutData(tag=");
+      var3.append(var2);
+      var3.append(", data=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
@@ -78,10 +78,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            val var9: java.lang.String = var12.getKey() as java.lang.String;
+            var4 = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var9);
+               var8.add(var4);
                var8.add(var13);
             }
          }
@@ -109,11 +109,11 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var4: java.lang.String = var5.get(0) as java.lang.String;
+                        val var9: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        q.e(var4);
+                        q.e(var9);
                         q.e(var12);
-                        var11.put(var4, var12);
+                        var11.put(var9, var12);
                      }
                   }
                }

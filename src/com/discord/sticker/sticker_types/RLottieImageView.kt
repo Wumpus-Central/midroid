@@ -1,7 +1,6 @@
 package com.discord.sticker.sticker_types
 
 import Aa.K
-import Aa.d0
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
@@ -74,8 +73,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: d0 = K.c();
-                  var1 = new Function2(this.this$0, null) {
+                  var1 = K.c();
+                  val var4: Function2 = new Function2(this.this$0, null) {
                      int label;
                      final RLottieImageView this$0;
 
@@ -104,23 +103,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (Aa.f.g(var4, var1, this) === var3) {
+                  if (Aa.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
 
-               val var7: FileDownloader = FileDownloader.INSTANCE;
-               val var9: Context = this.this$0.getContext();
-               q.g(var9, "getContext(...)");
-               val var6: java.lang.String = this.$config.getUrl();
+               val var6: FileDownloader = FileDownloader.INSTANCE;
+               val var7: Context = this.this$0.getContext();
+               q.g(var7, "getContext(...)");
+               val var9: java.lang.String = this.$config.getUrl();
                val var5: java.lang.String = this.$config.getAsset();
                val var11: StringBuilder = new StringBuilder();
                var11.append(var5);
                var11.append(".json");
-               val var12: Flow = FileDownloader.downloadFile$default(
-                  var7, var9, var6, var11.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var10: Flow = FileDownloader.downloadFile$default(
+                  var6, var7, var9, var11.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -157,10 +156,10 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
-                                 val var6: RLottieImageView = this.this$0;
+                                 val var5: RLottieImageView = this.this$0;
                                  val var7: Context = this.this$0.getContext();
                                  q.g(var7, "getContext(...)");
-                                 val var5: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                 val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
                                  val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
                                  val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
                                  val var3: Int = this.$config.getRenderMode();
@@ -174,7 +173,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var6.setAnimation(var7, var5, var2x, var4x, var1);
+                                 var5.setAnimation(var7, var6, var2x, var4x, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -226,7 +225,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                };
                this.label = 2;
-               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
+               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
             }
          },
          2,
@@ -391,27 +390,27 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var3: Int = this.heightDp;
+         val var1: Int = this.widthDp;
+         val var2: Int = this.heightDp;
          val var7: java.lang.String = this.asset;
-         val var1: Int = this.renderMode;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Config(url=");
-         var6.append(var5);
-         var6.append(", animate=");
-         var6.append(var4);
-         var6.append(", widthDp=");
-         var6.append(var2);
-         var6.append(", heightDp=");
-         var6.append(var3);
-         var6.append(", asset=");
-         var6.append(var7);
-         var6.append(", renderMode=");
-         var6.append(var1);
-         var6.append(")");
-         return var6.toString();
+         val var3: Int = this.renderMode;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Config(url=");
+         var5.append(var6);
+         var5.append(", animate=");
+         var5.append(var4);
+         var5.append(", widthDp=");
+         var5.append(var1);
+         var5.append(", heightDp=");
+         var5.append(var2);
+         var5.append(", asset=");
+         var5.append(var7);
+         var5.append(", renderMode=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }
