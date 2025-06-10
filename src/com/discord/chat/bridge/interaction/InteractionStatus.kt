@@ -74,15 +74,15 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var3: InteractionStatusViewState = this.state;
-      val var1: StructurableText = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InteractionStatus(state=");
-      var2.append(var3);
-      var2.append(", text=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: InteractionStatusViewState = this.state;
+      val var2: StructurableText = this.text;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("InteractionStatus(state=");
+      var3.append(var1);
+      var3.append(", text=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -212,19 +212,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var4: NativeConnection = this.engineConnections.get(var1);
-      if (var4 == null) {
-         val var3: Log = Log.INSTANCE;
+      val var3: NativeConnection = this.engineConnections.get(var1);
+      if (var3 == null) {
+         val var4: Log = Log.INSTANCE;
          val var5: StringBuilder = new StringBuilder();
          var5.append("[");
          var5.append(var2);
          var5.append("] no NativeConnection for connectionId=");
          var5.append(var1);
          var5.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
+         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var4;
+      return var3;
    }
 
    @JvmStatic
@@ -296,10 +296,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = MediaEngine.Companion;
-               var var3: Bitmap = this.$bitmap;
+               var var3: MediaEngine.Companion = MediaEngine.Companion;
+               var1 = this.$bitmap;
                this.label = 1;
-               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
+               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -936,18 +936,18 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             kotlin.jvm.internal.q.g(var10, "getName(...)");
             val var12: Array<java.lang.String> = var9.getSupportedTypes();
             kotlin.jvm.internal.q.g(var12, "getSupportedTypes(...)");
-            val var13: ArrayList = new ArrayList();
+            val var11: ArrayList = new ArrayList();
             val var3: Int = var12.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var11: java.lang.String = var12[var2];
+               val var13: java.lang.String = var12[var2];
                kotlin.jvm.internal.q.e(var12[var2]);
-               if (kotlin.text.h.I(var11, "video", false, 2, null)) {
-                  var13.add(var11);
+               if (kotlin.text.h.I(var13, "video", false, 2, null)) {
+                  var11.add(var13);
                }
             }
 
-            for (java.lang.String var18 : var13) {
+            for (java.lang.String var18 : var11) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var9)) {
@@ -1780,15 +1780,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var2: ScreenCapturer = this.screenCapturer;
+         val var3: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScreenCapturerForConnection(screenCapturer=");
-         var3.append(var2);
-         var3.append(", connectionId=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ScreenCapturerForConnection(screenCapturer=");
+         var2.append(var3);
+         var2.append(", connectionId=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

@@ -11,7 +11,8 @@ public data class EmbedMedia(url: String,
       height: Int,
       placeholder: String? = null,
       placeholderVersion: Int? = null,
-      srcIsAnimated: Boolean
+      srcIsAnimated: Boolean,
+      contentType: String? = null
    ) :
    EmbedUrlProvider {
    public final val url: String
@@ -21,6 +22,7 @@ public data class EmbedMedia(url: String,
    public final val placeholder: String?
    public final val placeholderVersion: Int?
    public final val srcIsAnimated: Boolean
+   public final val contentType: String?
    public open val embedUrl: String
 
    init {
@@ -33,6 +35,7 @@ public data class EmbedMedia(url: String,
       this.placeholder = var5;
       this.placeholderVersion = var6;
       this.srcIsAnimated = var7;
+      this.contentType = var8;
       if (var2 != null) {
          var1 = var2;
       }
@@ -68,6 +71,10 @@ public data class EmbedMedia(url: String,
       return this.srcIsAnimated;
    }
 
+   public operator fun component8(): String? {
+      return this.contentType;
+   }
+
    public fun copy(
       url: String = var0.url,
       proxyURL: String? = var0.proxyURL,
@@ -75,10 +82,11 @@ public data class EmbedMedia(url: String,
       height: Int = var0.height,
       placeholder: String? = var0.placeholder,
       placeholderVersion: Int? = var0.placeholderVersion,
-      srcIsAnimated: Boolean = var0.srcIsAnimated
+      srcIsAnimated: Boolean = var0.srcIsAnimated,
+      contentType: String? = var0.contentType
    ): EmbedMedia {
       q.h(var1, "url");
-      return new EmbedMedia(var1, var2, var3, var4, var5, var6, var7);
+      return new EmbedMedia(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -100,15 +108,17 @@ public data class EmbedMedia(url: String,
             return false;
          } else if (!q.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
+         } else if (this.srcIsAnimated != var1.srcIsAnimated) {
+            return false;
          } else {
-            return this.srcIsAnimated == var1.srcIsAnimated;
+            return q.c(this.contentType, var1.contentType);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.url.hashCode();
-      var var3: Int = 0;
+      val var5: Int = this.url.hashCode();
+      var var4: Int = 0;
       val var1: Int;
       if (this.proxyURL == null) {
          var1 = 0;
@@ -116,8 +126,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var5: Int = Integer.hashCode(this.height);
+      val var7: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -125,38 +135,49 @@ public data class EmbedMedia(url: String,
          var2 = this.placeholder.hashCode();
       }
 
-      if (this.placeholderVersion != null) {
+      val var3: Int;
+      if (this.placeholderVersion == null) {
+         var3 = 0;
+      } else {
          var3 = this.placeholderVersion.hashCode();
       }
 
-      return (((((var4 * 31 + var1) * 31 + var6) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.srcIsAnimated);
+      val var8: Int = java.lang.Boolean.hashCode(this.srcIsAnimated);
+      if (this.contentType != null) {
+         var4 = this.contentType.hashCode();
+      }
+
+      return ((((((var5 * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var8: java.lang.String = this.url;
-      val var5: java.lang.String = this.proxyURL;
-      val var2: Int = this.width;
-      val var1: Int = this.height;
-      val var7: java.lang.String = this.placeholder;
-      val var4: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.proxyURL;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
+      val var6: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("EmbedMedia(url=");
-      var6.append(var8);
-      var6.append(", proxyURL=");
-      var6.append(var5);
-      var6.append(", width=");
-      var6.append(var2);
-      var6.append(", height=");
-      var6.append(var1);
-      var6.append(", placeholder=");
-      var6.append(var7);
-      var6.append(", placeholderVersion=");
-      var6.append(var4);
-      var6.append(", srcIsAnimated=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var5: java.lang.String = this.contentType;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("EmbedMedia(url=");
+      var7.append(var8);
+      var7.append(", proxyURL=");
+      var7.append(var4);
+      var7.append(", width=");
+      var7.append(var1);
+      var7.append(", height=");
+      var7.append(var2);
+      var7.append(", placeholder=");
+      var7.append(var6);
+      var7.append(", placeholderVersion=");
+      var7.append(var9);
+      var7.append(", srcIsAnimated=");
+      var7.append(var3);
+      var7.append(", contentType=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

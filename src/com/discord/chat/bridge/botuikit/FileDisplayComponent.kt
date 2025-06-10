@@ -124,10 +124,10 @@ public data class FileDisplayComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
+      val var7: Int = Integer.hashCode(this.type);
       val var5: Int = this.id.hashCode();
       val var6: Int = this.file.hashCode();
-      val var7: Int = this.name.hashCode();
+      val var3: Int = this.name.hashCode();
       val var4: Int = this.size.hashCode();
       val var2: Int = java.lang.Boolean.hashCode(this.isSpoiler);
       val var1: Int;
@@ -137,34 +137,34 @@ public data class FileDisplayComponent(type: Int,
          var1 = this.spoilerDescription.hashCode();
       }
 
-      return (((((var3 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var2) * 31 + var1;
+      return (((((var7 * 31 + var5) * 31 + var6) * 31 + var3) * 31 + var4) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
-      val var8: UnfurledMediaItem = this.file;
-      val var4: java.lang.String = this.name;
+      val var5: java.lang.String = this.id;
+      val var3: UnfurledMediaItem = this.file;
+      val var6: java.lang.String = this.name;
       val var7: java.lang.String = this.size;
       val var2: Boolean = this.isSpoiler;
-      val var3: java.lang.String = this.spoilerDescription;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FileDisplayComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var6);
-      var5.append(", file=");
-      var5.append(var8);
-      var5.append(", name=");
-      var5.append(var4);
-      var5.append(", size=");
-      var5.append(var7);
-      var5.append(", isSpoiler=");
-      var5.append(var2);
-      var5.append(", spoilerDescription=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.spoilerDescription;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("FileDisplayComponent(type=");
+      var8.append(var1);
+      var8.append(", id=");
+      var8.append(var5);
+      var8.append(", file=");
+      var8.append(var3);
+      var8.append(", name=");
+      var8.append(var6);
+      var8.append(", size=");
+      var8.append(var7);
+      var8.append(", isSpoiler=");
+      var8.append(var2);
+      var8.append(", spoilerDescription=");
+      var8.append(var4);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

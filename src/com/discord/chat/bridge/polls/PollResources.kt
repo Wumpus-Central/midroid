@@ -73,18 +73,18 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.selectedIcon;
-      val var3: java.lang.String = this.checkmarkIcon;
-      val var4: java.util.Map = this.styles;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollResources(selectedIcon=");
-      var2.append(var1);
-      var2.append(", checkmarkIcon=");
-      var2.append(var3);
-      var2.append(", styles=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.selectedIcon;
+      val var4: java.lang.String = this.checkmarkIcon;
+      val var3: java.util.Map = this.styles;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("PollResources(selectedIcon=");
+      var1.append(var2);
+      var1.append(", checkmarkIcon=");
+      var1.append(var4);
+      var1.append(", styles=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

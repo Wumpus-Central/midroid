@@ -160,10 +160,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                throw new IllegalStateException(var12.toString().toString());
             }
 
-            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
+            var var14: Any = this.items.get(var2);
             q.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
-            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
-            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var14 = var14 as VideoAttachmentMessageAccessory;
+            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -171,7 +171,15 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
+            var16.bindAttachment(
+               var5,
+               (VideoAttachmentMessageAccessory)var14,
+               var11,
+               new e(this, (VideoAttachmentMessageAccessory)var14, var1),
+               new f(this, (VideoAttachmentMessageAccessory)var14),
+               new g(this, (VideoAttachmentMessageAccessory)var14),
+               new h(this)
+            );
          }
       }
    }

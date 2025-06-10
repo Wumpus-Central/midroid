@@ -89,21 +89,21 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var3: Int = this.fontSize;
+      val var4: Int = this.fontSize;
       val var1: Int = this.color;
       val var5: BackgroundStyle = this.backgroundStyle;
       val var2: ChatInputNodeFontWeight = this.fontWeight;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatInputNodeStyle(fontSize=");
-      var4.append(var3);
-      var4.append(", color=");
-      var4.append(var1);
-      var4.append(", backgroundStyle=");
-      var4.append(var5);
-      var4.append(", fontWeight=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ChatInputNodeStyle(fontSize=");
+      var3.append(var4);
+      var3.append(", color=");
+      var3.append(var1);
+      var3.append(", backgroundStyle=");
+      var3.append(var5);
+      var3.append(", fontWeight=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

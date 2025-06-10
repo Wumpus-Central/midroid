@@ -43,9 +43,9 @@ public object BSDiff {
 
          while (var11 < var9) {
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var13 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var15 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
@@ -63,7 +63,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var13).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -71,8 +71,8 @@ public object BSDiff {
                var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var17);
-            var11 += var15 + var13;
+            var1.seek(var1.getFilePointer() + var13);
+            var11 += var15 + var17;
          }
 
          var6.close();
@@ -186,7 +186,7 @@ public object BSDiff {
       // a3: goto e4
       // a6: astore 2
       // a7: goto d9
-      // aa: astore 2
+      // aa: astore 3
       // ab: goto ce
       // ae: astore 3
       // af: goto c2
@@ -207,13 +207,13 @@ public object BSDiff {
       // c8: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cb: aload 6
       // cd: athrow
-      // ce: aload 2
+      // ce: aload 3
       // cf: athrow
-      // d0: astore 3
+      // d0: astore 2
       // d1: aload 5
-      // d3: aload 2
+      // d3: aload 3
       // d4: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d7: aload 3
+      // d7: aload 2
       // d8: athrow
       // d9: aload 2
       // da: athrow

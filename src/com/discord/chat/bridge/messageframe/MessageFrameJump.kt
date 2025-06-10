@@ -70,16 +70,16 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var3: MessageFrameType = this.type;
-      val var4: java.lang.String = this.guildName;
-      val var2: java.lang.String = this.channelName;
+      val var2: MessageFrameType = this.type;
+      val var3: java.lang.String = this.guildName;
+      val var4: java.lang.String = this.channelName;
       val var1: StringBuilder = new StringBuilder();
       var1.append("MessageFrameJump(type=");
-      var1.append(var3);
-      var1.append(", guildName=");
-      var1.append(var4);
-      var1.append(", channelName=");
       var1.append(var2);
+      var1.append(", guildName=");
+      var1.append(var3);
+      var1.append(", channelName=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

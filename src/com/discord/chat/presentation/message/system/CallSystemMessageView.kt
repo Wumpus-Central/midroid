@@ -60,17 +60,17 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
       this.greenIconColor = ColorUtilsKt.getColorCompat(this, R.color.green_360);
       this.redIconColor = ColorUtilsKt.getColorCompat(this, R.color.red_400);
       this.grayIconColor = ThemeManagerKt.getTheme().getInteractiveNormal();
-      val var5: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var5, "inflate(...)");
-      this.binding = var5;
+      val var3: CallSystemMessageViewBinding = CallSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var3, "inflate(...)");
+      this.binding = var3;
       AddSystemMessageCardStyleKt.addSystemMessageCardStyle(this);
-      val var3: TextView = var5.message;
-      q.e(var5.message);
-      SetTextSizeSpKt.setTextSizeSp(var3, 16.0F);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimarySemibold);
-      var3.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      val var4: TextView = var5.info;
-      q.e(var5.info);
+      val var5: TextView = var3.message;
+      q.e(var3.message);
+      SetTextSizeSpKt.setTextSizeSp(var5, 16.0F);
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
+      var5.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      val var4: TextView = var3.info;
+      q.e(var3.info);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
@@ -285,8 +285,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                     val var9: CallSystemMessageView = this.this$0;
                                     val var8: Message = this.$message;
                                     val var6x: Long = Duration.v(var1);
-                                    val var5: Int = Duration.z(var1);
-                                    val var4x: Int = Duration.B(var1);
+                                    val var4x: Int = Duration.z(var1);
+                                    val var5: Int = Duration.B(var1);
                                     Duration.A(var1);
                                     val var10: TextView = CallSystemMessageView.access$getBinding$p(var9).info;
                                     val var11: java.lang.String = java.lang.String.format(
@@ -294,8 +294,8 @@ public class CallSystemMessageView  public constructor(context: Context, attrs: 
                                        Arrays.copyOf(
                                           new Object[]{
                                              kotlin.coroutines.jvm.internal.b.e(var6x),
-                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              kotlin.coroutines.jvm.internal.b.d(var4x),
+                                             kotlin.coroutines.jvm.internal.b.d(var5),
                                              var8.getDescription()
                                           },
                                           4

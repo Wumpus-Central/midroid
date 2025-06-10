@@ -49,30 +49,30 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
 
    public static ObscureOverlayViewBinding bind(View var0) {
       int var1 = R.id.blur_view;
-      BlurView var6 = (BlurView)a.a(var0, var1);
-      if (var6 != null) {
+      BlurView var2 = (BlurView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.description_label;
-         TextView var9 = (TextView)a.a(var0, var1);
-         if (var9 != null) {
+         TextView var7 = (TextView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var7 = (IconButtonView)a.a(var0, var1);
-            if (var7 != null) {
+            IconButtonView var4 = (IconButtonView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.opaque_background;
-                  FrameLayout var3 = (FrameLayout)a.a(var0, var1);
-                  if (var3 != null) {
+                  FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.overlay_centered_container;
-                     LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-                     if (var2 != null) {
+                     LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+                     if (var3 != null) {
                         var1 = R.id.overlay_layout;
-                        ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
-                        if (var5 != null) {
+                        ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
+                        if (var6 != null) {
                            var1 = R.id.reveal_button;
                            IconButtonView var8 = (IconButtonView)a.a(var0, var1);
                            if (var8 != null) {
-                              return new ObscureOverlayViewBinding(var0, var6, var9, var7, var4, var3, var2, var5, var8);
+                              return new ObscureOverlayViewBinding(var0, var2, var7, var4, var9, var5, var3, var6, var8);
                            }
                         }
                      }

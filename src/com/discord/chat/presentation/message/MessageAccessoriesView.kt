@@ -99,10 +99,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : Ka.j.I(androidx.core.view.g0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -173,10 +173,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var11: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var11, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
+      val var11: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      kotlin.jvm.internal.q.g(var12, "getResources(...)");
+      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {

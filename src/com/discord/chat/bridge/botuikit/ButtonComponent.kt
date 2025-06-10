@@ -135,8 +135,8 @@ public data class ButtonComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = Integer.hashCode(this.type);
-      val var6: Int = this.id.hashCode();
+      val var6: Int = Integer.hashCode(this.type);
+      val var8: Int = this.id.hashCode();
       val var7: Int = this.state.hashCode();
       var var5: Int = 0;
       val var1: Int;
@@ -153,8 +153,8 @@ public data class ButtonComponent(type: Int,
          var2 = this.label.hashCode();
       }
 
-      val var10: Int = this.style.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var9: Int = this.style.hashCode();
+      val var10: Int = java.lang.Boolean.hashCode(this.disabled);
       val var3: Int;
       if (this.emoji == null) {
          var3 = 0;
@@ -173,43 +173,43 @@ public data class ButtonComponent(type: Int,
          var5 = this.skuId.hashCode();
       }
 
-      return ((((((((var8 * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5;
+      return ((((((((var6 * 31 + var8) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var3) * 31 + var4) * 31 + var5;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var8: ActionComponentState = this.state;
-      val var5: java.lang.String = this.customId;
-      val var10: java.lang.String = this.label;
-      val var3: ButtonStyle = this.style;
+      val var3: java.lang.String = this.id;
+      val var6: ActionComponentState = this.state;
+      val var8: java.lang.String = this.customId;
+      val var4: java.lang.String = this.label;
+      val var11: ButtonStyle = this.style;
       val var2: Boolean = this.disabled;
-      val var6: ComponentEmoji = this.emoji;
-      val var11: java.lang.String = this.url;
-      val var9: java.lang.String = this.skuId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ButtonComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var7);
-      var4.append(", state=");
-      var4.append(var8);
-      var4.append(", customId=");
-      var4.append(var5);
-      var4.append(", label=");
-      var4.append(var10);
-      var4.append(", style=");
-      var4.append(var3);
-      var4.append(", disabled=");
-      var4.append(var2);
-      var4.append(", emoji=");
-      var4.append(var6);
-      var4.append(", url=");
-      var4.append(var11);
-      var4.append(", skuId=");
-      var4.append(var9);
-      var4.append(")");
-      return var4.toString();
+      val var7: ComponentEmoji = this.emoji;
+      val var9: java.lang.String = this.url;
+      val var5: java.lang.String = this.skuId;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("ButtonComponent(type=");
+      var10.append(var1);
+      var10.append(", id=");
+      var10.append(var3);
+      var10.append(", state=");
+      var10.append(var6);
+      var10.append(", customId=");
+      var10.append(var8);
+      var10.append(", label=");
+      var10.append(var4);
+      var10.append(", style=");
+      var10.append(var11);
+      var10.append(", disabled=");
+      var10.append(var2);
+      var10.append(", emoji=");
+      var10.append(var7);
+      var10.append(", url=");
+      var10.append(var9);
+      var10.append(", skuId=");
+      var10.append(var5);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

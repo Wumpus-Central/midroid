@@ -57,13 +57,13 @@ public enum class StickerFormatType(intType: Int) {
       public open fun deserialize(decoder: Decoder): StickerFormatType {
          q.h(var1, "decoder");
          val var4: Int = var1.j();
-         val var6: Array<StickerFormatType> = StickerFormatType.values();
-         val var3: Int = var6.length;
+         val var5: Array<StickerFormatType> = StickerFormatType.values();
+         val var3: Int = var5.length;
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var5: StickerFormatType = var6[var2];
-            if (var6[var2].getIntType() == var4) {
-               return var5;
+            val var6: StickerFormatType = var5[var2];
+            if (var5[var2].getIntType() == var4) {
+               return var6;
             }
          }
 

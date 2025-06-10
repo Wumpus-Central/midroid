@@ -563,18 +563,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.name;
-         val var3: java.lang.String = this.tag;
-         val var4: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("TransactionMarker(name=");
-         var1.append(var2);
-         var1.append(", tag=");
-         var1.append(var3);
-         var1.append(", markerEnd=");
-         var1.append(var4);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.name;
+         val var2: java.lang.String = this.tag;
+         val var3: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TransactionMarker(name=");
+         var4.append(var1);
+         var4.append(", tag=");
+         var4.append(var2);
+         var4.append(", markerEnd=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

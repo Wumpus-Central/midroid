@@ -33,20 +33,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var2: Int = var3;
-               if (var3 < var4) {
+               var var3: Int = var2;
+               if (var2 < var4) {
                   var8 = var6;
-                  var2 = var4;
+                  var3 = var4;
                }
 
                var5 = var8;
-               var3 = var2;
+               var2 = var3;
             } while (var7.hasNext());
          }
 
@@ -67,15 +67,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var4: Log = Log.INSTANCE;
-      val var6: java.lang.String = tag;
+      val var5: Log = Log.INSTANCE;
+      val var4: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Start service with ");
-      var5.append(var3);
-      var5.append(" configurations.");
-      Log.i$foreground_service_release$default(var4, var6, var5.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Start service with ");
+      var6.append(var3);
+      var6.append(" configurations.");
+      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, new d());
    }
@@ -83,10 +83,10 @@ public class ForegroundServiceManager {
    @JvmStatic
    fun `startServiceInternal$lambda$3`(var0: Exception): Unit {
       q.h(var0, "e");
-      val var2: Log = Log.INSTANCE;
-      val var1: java.lang.String = tag;
+      val var1: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
       q.g(tag, "tag");
-      var2.w$foreground_service_release(var1, "Unable to start service", var0);
+      var1.w$foreground_service_release(var2, "Unable to start service", var0);
       return Unit.a;
    }
 
@@ -337,21 +337,21 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 4
+      // 12: astore 5
       // 14: new x1/b
-      // 17: astore 6
-      // 19: aload 6
+      // 17: astore 4
+      // 19: aload 4
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
       // 1e: invokespecial x1/b.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
       // 21: new x1/c
-      // 24: astore 5
-      // 26: aload 5
+      // 24: astore 6
+      // 26: aload 6
       // 28: invokespecial x1/c.<init> ()V
-      // 2b: aload 4
-      // 2d: aload 6
-      // 2f: aload 5
+      // 2b: aload 5
+      // 2d: aload 4
+      // 2f: aload 6
       // 31: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
       // 34: astore 4
       // 36: aload 0

@@ -39,20 +39,20 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
 
 internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    q.h(var0, "<this>");
-   var var4: ArrayList = new ArrayList();
    val var6: ArrayList = new ArrayList();
+   var var4: ArrayList = new ArrayList();
    val var3: Int = var0.length;
 
    for (int var1 = 0; var1 < var3; var1++) {
       val var5: VideoInputDeviceDescription = var0[var1];
       if (var0[var1].getFacing() === VideoInputDeviceFacing.Front) {
-         var4.add(var5);
-      } else {
          var6.add(var5);
+      } else {
+         var4.add(var5);
       }
    }
 
-   val var14: Pair = new Pair(var4, var6);
+   val var14: Pair = new Pair(var6, var4);
    val var8: java.util.List = i.c0(
       i.n(
          new VideoInputDeviceDescription[]{

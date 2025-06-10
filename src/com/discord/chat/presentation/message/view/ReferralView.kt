@@ -184,9 +184,9 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
             val var47: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var12: Context = var38.getContext();
-            kotlin.jvm.internal.q.g(var12, "getContext(...)");
-            val var11: java.lang.String = var1.getMessageId-3Eiw7ao();
+            val var11: Context = var38.getContext();
+            kotlin.jvm.internal.q.g(var11, "getContext(...)");
+            val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var13, "getFontMetrics(...)");
             val var4: Float = TextUtilsKt.getBaselineHeightPx(var13);
@@ -195,8 +195,8 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
                   var47,
-                  var12,
                   var11,
+                  var12,
                   false,
                   true,
                   false,

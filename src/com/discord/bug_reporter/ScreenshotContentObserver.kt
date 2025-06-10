@@ -200,12 +200,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    }
 
    private fun process(uri: Uri) {
-      val var3: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
-      if (var3 != null) {
-         if (this.lastProcessedPath == null || !h.v(this.lastProcessedPath, var3.getPath(), false, 2, null)) {
-            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var3.getPath())
-               && this.isWithinCurrentTimeWindow(var3.getDateAdded(), 10L)) {
-               this.lastProcessedPath = var3.getPath();
+      val var2: ScreenshotContentObserver.ScreenshotData = this.getScreenshotData(var1);
+      if (var2 != null) {
+         if (this.lastProcessedPath == null || !h.v(this.lastProcessedPath, var2.getPath(), false, 2, null)) {
+            if (ScreenshotContentObserver.Companion.access$isScreenshotPath(Companion, var2.getPath())
+               && this.isWithinCurrentTimeWindow(var2.getDateAdded(), 10L)) {
+               this.lastProcessedPath = var2.getPath();
                this.onScreenshot.invoke();
             }
          }
@@ -223,11 +223,11 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
    public open fun onChange(selfChange: Boolean, uri: Uri?) {
       super.onChange(var1, var2);
       if (var2 != null) {
-         val var4: java.lang.String = var2.toString();
-         q.g(var4, "toString(...)");
-         val var3: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         val var3: java.lang.String = var2.toString();
          q.g(var3, "toString(...)");
-         if (h.I(var4, var3, false, 2, null)) {
+         val var4: java.lang.String = Media.EXTERNAL_CONTENT_URI.toString();
+         q.g(var4, "toString(...)");
+         if (h.I(var3, var4, false, 2, null)) {
             try {
                this.process(var2);
             } catch (var5: Exception) {
@@ -336,24 +336,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var3: Long = this.id;
-         val var7: java.lang.String = this.fileName;
-         val var8: java.lang.String = this.relativePath;
-         val var5: Uri = this.uri;
-         val var1: Long = this.dateAdded;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("ScreenshotData(id=");
-         var6.append(var3);
-         var6.append(", fileName=");
-         var6.append(var7);
-         var6.append(", relativePath=");
-         var6.append(var8);
-         var6.append(", uri=");
-         var6.append(var5);
-         var6.append(", dateAdded=");
-         var6.append(var1);
-         var6.append(")");
-         return var6.toString();
+         val var1: Long = this.id;
+         val var6: java.lang.String = this.fileName;
+         val var7: java.lang.String = this.relativePath;
+         val var8: Uri = this.uri;
+         val var3: Long = this.dateAdded;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ScreenshotData(id=");
+         var5.append(var1);
+         var5.append(", fileName=");
+         var5.append(var6);
+         var5.append(", relativePath=");
+         var5.append(var7);
+         var5.append(", uri=");
+         var5.append(var8);
+         var5.append(", dateAdded=");
+         var5.append(var3);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

@@ -107,15 +107,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    internal class Creator : android.os.Parcelable.Creator<ContentAction> {
       fun createFromParcel(var1: Parcel): ContentAction {
          q.h(var1, "parcel");
-         val var4: java.lang.String = var1.readString();
+         val var5: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var5: LinkedHashMap = new LinkedHashMap(var3);
+         val var4: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var5.put(var1.readString(), var1.readString());
+            var4.put(var1.readString(), var1.readString());
          }
 
-         return new ContentAction(var4, var5);
+         return new ContentAction(var5, var4);
       }
 
       fun newArray(var1: Int): Array<ContentAction> {

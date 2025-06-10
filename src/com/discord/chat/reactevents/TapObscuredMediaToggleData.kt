@@ -92,16 +92,16 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var6: java.lang.String = this.attachmentId;
       val var4: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapObscuredMediaToggleData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
       var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var3);
       var2.append(", attachmentId=");
       var2.append(var6);
       var2.append(", embedId=");

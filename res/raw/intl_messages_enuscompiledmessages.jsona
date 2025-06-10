@@ -2894,6 +2894,71 @@
   "3lv7q6": "Give your avatar a new look.",
   "ik37ER": "Make your name stand out in servers and chats.",
   "VhJL7+": "Show this effect when others view your profile.",
+  "PpoJzs": "Your gift",
+  "VdGtwc": [
+    "By clicking ",
+    "\"",
+    [
+      1,
+      "buyButtonLabel"
+    ],
+    "\"",
+    ", you agree to the ",
+    [
+      8,
+      "$link",
+      [
+        "Paid Service Terms"
+      ],
+      [
+        [
+          1,
+          "paidServiceTermURL"
+        ]
+      ]
+    ],
+    ". ",
+    [
+      8,
+      "$b",
+      [
+        "Buying an item from the Shop means you’re buying a limited license to use this item on Discord. Learn more in the ",
+        [
+          8,
+          "$link",
+          [
+            "“Virtual Goods” section"
+          ],
+          [
+            [
+              1,
+              "paidServiceTermURL"
+            ]
+          ]
+        ]
+      ]
+    ],
+    ". This purchase is non-refundable. Note that Nitro subscriptions become non-refundable once you’ve purchased an item."
+  ],
+  "R0vK0N": "Select a friend",
+  "3YfczM": "Hey! Your friend already has this. Try sending something else.",
+  "YS2J4e": [
+    "We can’t wait for your friend to open it. You’ll be able to keep track of all your gift purchases in your ",
+    [
+      8,
+      "$link",
+      [
+        "Gift Inventory"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
+    ],
+    "."
+  ],
   "sPvyr6": [
     "Original price: ",
     [
@@ -3066,6 +3131,7 @@
   "v7F239": "You have been gifted a Nameplate!",
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
+  "JCFN//": "Send a gift",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -7882,7 +7948,7 @@
   "fHiGAw": "To minimize spam, members of the server must have a verified email before they can send messages. This does not apply to members with roles.",
   "rkA56+": "Verified email required",
   "3vPQ39": "Enable local network access",
-  "ARF2xs": "This will give Discord access to your local network to find consoles and suggest account connections like Xbox, Playstation, and more.",
+  "ARF2xs": "This will give Discord access to your local network to find consoles and suggest account connections like Xbox, PlayStation, and more.",
   "daih+f": "Enable Noise Suppression",
   "a4bgOz": "Enable Notifications",
   "5Jvu1d": "You can enable access in privacy settings.",
@@ -7894,6 +7960,8 @@
   "xc+Ps7": "Enable Video",
   "qaYzPD": "End Event",
   "o4JNrK": "Enter your confirmation code",
+  "ZLRYGR": "Enter email",
+  "j2MWLi": "Enter phone number",
   "WEdDgo": "Enter phone or email",
   "j2d6Ki": "Error",
   "CvQlAA": "We've tracked the error and will get right on it.",
@@ -28469,6 +28537,7 @@
       "premiumGuildDescription"
     ]
   ],
+  "SKNnqq": "Preview",
   "BVK71t": "Priority Speaker",
   "32u1Dw": "All servers",
   "BG7Qsb": "Request your data",
@@ -32768,7 +32837,7 @@
   "mY3Y39": "Hold Up!",
   "TXNS7e": "Send",
   "PoyOY2": "Your message could not be sent. It may contain sensitive media, which has been blocked by someone in this conversation.",
-  "bNMQVF": "Your message could not be sent. It may contain explicit media, which has been blocked by the server.",
+  "i4AbAQ": "Your message could not be sent. It may contain sensitive media, which has been blocked by the server.",
   "YrjcgY": "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
   "iS/eFB": "Unable to Mark as Not Sensitive",
   "APQGZ2": [
@@ -38344,11 +38413,13 @@
   ],
   "HO9Lf3": "Error opening survey",
   "shbR1d": "Use Application Commands",
+  "qLzvmp": "Use email instead",
   "rLSGen": "Use Activities",
   "3TzAk5": "Use External Apps",
   "BpBGZW": "Use External Emoji",
   "pwaVJy": "Use External Sounds",
   "UeRs+f": "Use External Stickers",
+  "lnOfAg": "Use phone number instead",
   "Bco7ND": "Use Soundboard",
   "CVxXDA": "Use speaker",
   "08zAV1": "Use Voice Activity",

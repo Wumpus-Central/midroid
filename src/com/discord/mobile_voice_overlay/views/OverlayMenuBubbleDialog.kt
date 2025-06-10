@@ -45,6 +45,34 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    public constructor(context: Context) : kotlin.jvm.internal.q.h(var1, "context") {
       super(var1);
+      val var2: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
+      kotlin.jvm.internal.q.g(var2, "inflate(...)");
+      this.binding = var2;
+      this.adapter = new VoiceUserAdapter();
+      this.onGetInvitePressed = new d();
+      this.onSwitchChannelsPressed = new l();
+      this.onOpenDiscordPressed = new m();
+      this.onMutePressed = new n();
+      this.onDisconnectPressed = new o();
+      this.onShowSelectorDialog = new p();
+      var2.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new q(this));
+      var2.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new r(this));
+      var2.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new s(this));
+      var2.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
+      var2.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new k(this));
+      this.setClipChildren(false);
+      val var3: TextView = var2.overlayMembersOverflowText;
+      kotlin.jvm.internal.q.e(var2.overlayMembersOverflowText);
+      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryExtraBold);
+      SetTextSizeSpKt.setTextSizeSp(var3, 20.0F);
+      val var4: TextView = var2.overlayMembersOverflowText;
+      var2.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
+      kotlin.jvm.internal.q.e(var4);
+      ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
+   }
+
+   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.q.h(var1, "context") {
+      super(var1, var2);
       val var3: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
       kotlin.jvm.internal.q.g(var3, "inflate(...)");
       this.binding = var3;
@@ -61,40 +89,12 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       var3.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
       var3.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new k(this));
       this.setClipChildren(false);
-      val var2: TextView = var3.overlayMembersOverflowText;
+      val var5: TextView = var3.overlayMembersOverflowText;
       kotlin.jvm.internal.q.e(var3.overlayMembersOverflowText);
-      DiscordFontUtilsKt.setDiscordFont(var2, DiscordFont.PrimaryExtraBold);
-      SetTextSizeSpKt.setTextSizeSp(var2, 20.0F);
+      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryExtraBold);
+      SetTextSizeSpKt.setTextSizeSp(var5, 20.0F);
       val var4: TextView = var3.overlayMembersOverflowText;
       var3.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      kotlin.jvm.internal.q.e(var4);
-      ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
-   }
-
-   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.q.h(var1, "context") {
-      super(var1, var2);
-      val var5: OverlayMenuBubbleBinding = OverlayMenuBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
-      this.binding = var5;
-      this.adapter = new VoiceUserAdapter();
-      this.onGetInvitePressed = new d();
-      this.onSwitchChannelsPressed = new l();
-      this.onOpenDiscordPressed = new m();
-      this.onMutePressed = new n();
-      this.onDisconnectPressed = new o();
-      this.onShowSelectorDialog = new p();
-      var5.overlayMenu.getBinding().overlayInviteLink.setOnClickListener(new q(this));
-      var5.overlayMenu.getBinding().overlaySwitchChannels.setOnClickListener(new r(this));
-      var5.overlayMenu.getBinding().overlayOpenApp.setOnClickListener(new s(this));
-      var5.overlayMenu.getBinding().muteToggle.setOnClickListener(new e(this));
-      var5.overlayMenu.getBinding().disconnectBtn.setOnClickListener(new k(this));
-      this.setClipChildren(false);
-      val var3: TextView = var5.overlayMembersOverflowText;
-      kotlin.jvm.internal.q.e(var5.overlayMembersOverflowText);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryExtraBold);
-      SetTextSizeSpKt.setTextSizeSp(var3, 20.0F);
-      val var4: TextView = var5.overlayMembersOverflowText;
-      var5.overlayMembersOverflowText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       kotlin.jvm.internal.q.e(var4);
       ViewBackgroundUtilsKt.setBackgroundOval$default(var4, ThemeManagerKt.getTheme().getBackgroundTertiary(), 0, 2, null);
    }
@@ -237,28 +237,28 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
    }
 
    public override fun getClosingAnimator(): Animator {
-      val var1: AnimatorSet = new AnimatorSet();
-      var1.setStartDelay((long)this.getResources().getInteger(17694720));
-      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
-      var2.setTarget(this.binding.overlayMenu);
+      val var2: AnimatorSet = new AnimatorSet();
+      var2.setStartDelay((long)this.getResources().getInteger(17694720));
+      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_down_fade_out);
+      var1.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_up_fade_out);
       var4.setTarget(this.binding.overlayHeader);
-      var1.playTogether(new Animator[]{var2, var4});
-      return var1;
+      var2.playTogether(new Animator[]{var1, var4});
+      return var2;
    }
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
       this.binding.overlayMenu.setAlpha(0.0F);
       this.binding.overlayHeader.setAlpha(0.0F);
-      val var1: AnimatorSet = new AnimatorSet();
-      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
-      var2.setTarget(this.binding.overlayMenu);
+      val var2: AnimatorSet = new AnimatorSet();
+      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
+      var1.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_down_fade_in);
       var4.setTarget(this.binding.overlayHeader);
-      var1.playTogether(new Animator[]{var2, var4});
-      var1.setStartDelay((long)this.getResources().getInteger(17694720));
-      var1.start();
+      var2.playTogether(new Animator[]{var1, var4});
+      var2.setStartDelay((long)this.getResources().getInteger(17694720));
+      var2.start();
       this.binding.overlayMembersRecycler.setAdapter(this.adapter);
    }
 

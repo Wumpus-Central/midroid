@@ -131,13 +131,13 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: LinkContextData = this.target;
+      val var1: java.util.List = this.content;
+      val var2: LinkContextData = this.target;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LinkContentNode(content=");
-      var3.append(var2);
-      var3.append(", target=");
       var3.append(var1);
+      var3.append(", target=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

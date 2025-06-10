@@ -122,8 +122,8 @@ public data class BlockedGroupChatListItem(text: String,
       val var5: java.lang.String = this.text;
       val var8: java.lang.String = this.id;
       val var1: Int = this.textColor;
-      val var2: Int = this.backgroundColor;
-      val var3: Int = this.borderColor;
+      val var3: Int = this.backgroundColor;
+      val var2: Int = this.borderColor;
       val var4: Boolean = this.isRevealed;
       val var6: java.util.List = this.content;
       val var7: StringBuilder = new StringBuilder();
@@ -134,9 +134,9 @@ public data class BlockedGroupChatListItem(text: String,
       var7.append(", textColor=");
       var7.append(var1);
       var7.append(", backgroundColor=");
-      var7.append(var2);
-      var7.append(", borderColor=");
       var7.append(var3);
+      var7.append(", borderColor=");
+      var7.append(var2);
       var7.append(", isRevealed=");
       var7.append(var4);
       var7.append(", content=");

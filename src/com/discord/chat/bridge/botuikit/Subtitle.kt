@@ -90,21 +90,21 @@ public data class Subtitle(badgeUrl: String? = null, text: String, ariaDescripti
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.badgeUrl;
-      val var3: java.lang.String = this.text;
-      val var1: java.lang.String = this.ariaDescription;
-      val var5: ContentInventoryEntryClickable = this.clickable;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Subtitle(badgeUrl=");
-      var4.append(var2);
-      var4.append(", text=");
-      var4.append(var3);
-      var4.append(", ariaDescription=");
-      var4.append(var1);
-      var4.append(", clickable=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.badgeUrl;
+      val var2: java.lang.String = this.text;
+      val var5: java.lang.String = this.ariaDescription;
+      val var3: ContentInventoryEntryClickable = this.clickable;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Subtitle(badgeUrl=");
+      var1.append(var4);
+      var1.append(", text=");
+      var1.append(var2);
+      var1.append(", ariaDescription=");
+      var1.append(var5);
+      var1.append(", clickable=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -383,8 +383,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
 
-      for (ChatInputNode var5 : var1) {
-         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var6 : var1) {
+         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
       for (ChatInputNode var18 : var4) {
@@ -734,21 +734,21 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var2: Int = this.selectionStart;
-         val var1: Int = this.selectionEnd;
-         val var4: java.lang.String = this.text;
-         val var3: java.lang.String = this.editId;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CurrentTextAndSelection(selectionStart=");
-         var5.append(var2);
-         var5.append(", selectionEnd=");
-         var5.append(var1);
-         var5.append(", text=");
-         var5.append(var4);
-         var5.append(", editId=");
-         var5.append(var3);
-         var5.append(")");
-         return var5.toString();
+         val var1: Int = this.selectionStart;
+         val var2: Int = this.selectionEnd;
+         val var3: java.lang.String = this.text;
+         val var5: java.lang.String = this.editId;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CurrentTextAndSelection(selectionStart=");
+         var4.append(var1);
+         var4.append(", selectionEnd=");
+         var4.append(var2);
+         var4.append(", text=");
+         var4.append(var3);
+         var4.append(", editId=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }
