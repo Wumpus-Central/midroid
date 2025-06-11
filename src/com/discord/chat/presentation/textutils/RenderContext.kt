@@ -439,31 +439,31 @@ public data class RenderContext(context: Context,
    }
 
    public override fun hashCode(): Int {
-      val var14: Int = this.context.hashCode();
-      val var23: Int = this.containerId.hashCode();
-      val var16: Int = this.onTapLink.hashCode();
-      val var9: Int = this.onLongTapLink.hashCode();
-      val var26: Int = this.linkStyle.hashCode();
-      val var25: Int = this.onTapChannel.hashCode();
-      val var4: Int = this.onLongPressChannel.hashCode();
-      val var13: Int = this.onTapAttachmentLink.hashCode();
-      val var10: Int = this.onLongPressAttachmentLink.hashCode();
-      val var21: Int = this.onTapMention.hashCode();
-      val var27: Int = this.onTapCommand.hashCode();
-      val var8: Int = this.onLongPressCommand.hashCode();
-      val var24: Int = this.onTapSpoiler.hashCode();
-      val var7: Int = this.onTapTimestamp.hashCode();
-      val var22: Int = this.onTapInlineCode.hashCode();
+      val var28: Int = this.context.hashCode();
+      val var20: Int = this.containerId.hashCode();
+      val var21: Int = this.onTapLink.hashCode();
+      val var12: Int = this.onLongTapLink.hashCode();
+      val var16: Int = this.linkStyle.hashCode();
+      val var13: Int = this.onTapChannel.hashCode();
+      val var7: Int = this.onLongPressChannel.hashCode();
+      val var10: Int = this.onTapAttachmentLink.hashCode();
+      val var4: Int = this.onLongPressAttachmentLink.hashCode();
+      val var22: Int = this.onTapMention.hashCode();
+      val var23: Int = this.onTapCommand.hashCode();
+      val var27: Int = this.onLongPressCommand.hashCode();
+      val var5: Int = this.onTapSpoiler.hashCode();
+      val var17: Int = this.onTapTimestamp.hashCode();
+      val var26: Int = this.onTapInlineCode.hashCode();
       val var6: Int = this.onTapEmoji.hashCode();
-      val var19: Int = this.onTapSoundmoji.hashCode();
-      val var18: Int = java.lang.Boolean.hashCode(this.animateEmoji);
-      val var20: Int = java.lang.Boolean.hashCode(this.showLinkDecorations);
+      val var25: Int = this.onTapSoundmoji.hashCode();
+      val var15: Int = java.lang.Boolean.hashCode(this.animateEmoji);
+      val var9: Int = java.lang.Boolean.hashCode(this.showLinkDecorations);
       val var11: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
-      val var28: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
-      val var5: Int = java.lang.Boolean.hashCode(this.singleLine);
-      val var17: Int = this.paint.hashCode();
-      val var12: Int = this.spoilerState.hashCode();
-      val var15: Int = Integer.hashCode(this.listNestedLevel);
+      val var18: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
+      val var14: Int = java.lang.Boolean.hashCode(this.singleLine);
+      val var24: Int = this.paint.hashCode();
+      val var19: Int = this.spoilerState.hashCode();
+      val var8: Int = Integer.hashCode(this.listNestedLevel);
       var var3: Int = 0;
       val var1: Int;
       if (this.listOrderedIndex == null) {
@@ -479,9 +479,9 @@ public data class RenderContext(context: Context,
          var2 = this.listLargestOrderedIndex.hashCode();
       }
 
-      val var30: Int = java.lang.Boolean.hashCode(this.inLink);
+      val var31: Int = java.lang.Boolean.hashCode(this.inLink);
       val var29: Int = this.insets.hashCode();
-      val var31: Int = this.theme.hashCode();
+      val var30: Int = this.theme.hashCode();
       val var32: Int = java.lang.Float.hashCode(this.baselineHeightPx);
       if (this.emojiBaselineHeightOverridePx != null) {
          var3 = this.emojiBaselineHeightOverridePx.hashCode();
@@ -517,78 +517,78 @@ public data class RenderContext(context: Context,
                                                                                                                                                                                                                                                          (
                                                                                                                                                                                                                                                                   (
                                                                                                                                                                                                                                                                            (
-                                                                                                                                                                                                                                                                                    var14
+                                                                                                                                                                                                                                                                                    var28
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var23
+                                                                                                                                                                                                                                                                                       + var20
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var16
+                                                                                                                                                                                                                                                                              + var21
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
-                                                                                                                                                                                                                                                                     + var9
+                                                                                                                                                                                                                                                                     + var12
                                                                                                                                                                                                                                                                )
                                                                                                                                                                                                                                                                * 31
-                                                                                                                                                                                                                                                            + var26
+                                                                                                                                                                                                                                                            + var16
                                                                                                                                                                                                                                                       )
                                                                                                                                                                                                                                                       * 31
-                                                                                                                                                                                                                                                   + var25
+                                                                                                                                                                                                                                                   + var13
                                                                                                                                                                                                                                              )
                                                                                                                                                                                                                                              * 31
-                                                                                                                                                                                                                                          + var4
+                                                                                                                                                                                                                                          + var7
                                                                                                                                                                                                                                     )
                                                                                                                                                                                                                                     * 31
-                                                                                                                                                                                                                                 + var13
+                                                                                                                                                                                                                                 + var10
                                                                                                                                                                                                                            )
                                                                                                                                                                                                                            * 31
-                                                                                                                                                                                                                        + var10
+                                                                                                                                                                                                                        + var4
                                                                                                                                                                                                                   )
                                                                                                                                                                                                                   * 31
-                                                                                                                                                                                                               + var21
+                                                                                                                                                                                                               + var22
                                                                                                                                                                                                          )
                                                                                                                                                                                                          * 31
-                                                                                                                                                                                                      + var27
+                                                                                                                                                                                                      + var23
                                                                                                                                                                                                 )
                                                                                                                                                                                                 * 31
-                                                                                                                                                                                             + var8
+                                                                                                                                                                                             + var27
                                                                                                                                                                                        )
                                                                                                                                                                                        * 31
-                                                                                                                                                                                    + var24
+                                                                                                                                                                                    + var5
                                                                                                                                                                               )
                                                                                                                                                                               * 31
-                                                                                                                                                                           + var7
+                                                                                                                                                                           + var17
                                                                                                                                                                      )
                                                                                                                                                                      * 31
-                                                                                                                                                                  + var22
+                                                                                                                                                                  + var26
                                                                                                                                                             )
                                                                                                                                                             * 31
                                                                                                                                                          + var6
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var19
+                                                                                                                                                + var25
                                                                                                                                           )
                                                                                                                                           * 31
-                                                                                                                                       + var18
+                                                                                                                                       + var15
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var20
+                                                                                                                              + var9
                                                                                                                         )
                                                                                                                         * 31
                                                                                                                      + var11
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var28
+                                                                                                            + var18
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var5
+                                                                                                   + var14
                                                                                              )
                                                                                              * 31
-                                                                                          + var17
+                                                                                          + var24
                                                                                     )
                                                                                     * 31
-                                                                                 + var12
+                                                                                 + var19
                                                                            )
                                                                            * 31
-                                                                        + var15
+                                                                        + var8
                                                                   )
                                                                   * 31
                                                                + var1
@@ -597,13 +597,13 @@ public data class RenderContext(context: Context,
                                                       + var2
                                                 )
                                                 * 31
-                                             + var30
+                                             + var31
                                        )
                                        * 31
                                     + var29
                               )
                               * 31
-                           + var31
+                           + var30
                      )
                      * 31
                   + var32
@@ -646,105 +646,105 @@ public data class RenderContext(context: Context,
    }
 
    public override fun toString(): String {
-      val var14: Context = this.context;
-      val var30: java.lang.String = this.containerId;
-      val var17: Function1 = this.onTapLink;
-      val var15: Function1 = this.onLongTapLink;
-      val var31: Function1 = this.linkStyle;
-      val var12: Function3 = this.onTapChannel;
-      val var20: Function4 = this.onLongPressChannel;
-      val var23: Function1 = this.onTapAttachmentLink;
-      val var27: Function2 = this.onLongPressAttachmentLink;
-      val var16: Function4 = this.onTapMention;
-      val var28: Function1 = this.onTapCommand;
-      val var9: Function1 = this.onLongPressCommand;
-      val var18: Function0 = this.onTapSpoiler;
-      val var24: Function1 = this.onTapTimestamp;
-      val var10: Function1 = this.onTapInlineCode;
-      val var32: Function1 = this.onTapEmoji;
+      val var17: Context = this.context;
+      val var12: java.lang.String = this.containerId;
+      val var27: Function1 = this.onTapLink;
+      val var29: Function1 = this.onLongTapLink;
+      val var24: Function1 = this.linkStyle;
+      val var32: Function3 = this.onTapChannel;
+      val var26: Function4 = this.onLongPressChannel;
+      val var31: Function1 = this.onTapAttachmentLink;
+      val var14: Function2 = this.onLongPressAttachmentLink;
+      val var20: Function4 = this.onTapMention;
+      val var13: Function1 = this.onTapCommand;
+      val var10: Function1 = this.onLongPressCommand;
+      val var33: Function0 = this.onTapSpoiler;
+      val var18: Function1 = this.onTapTimestamp;
+      val var19: Function1 = this.onTapInlineCode;
+      val var16: Function1 = this.onTapEmoji;
       val var21: Function1 = this.onTapSoundmoji;
-      val var3: Boolean = this.animateEmoji;
-      val var8: Boolean = this.showLinkDecorations;
-      val var7: Boolean = this.shouldShowRoleDot;
+      val var7: Boolean = this.animateEmoji;
+      val var5: Boolean = this.showLinkDecorations;
+      val var3: Boolean = this.shouldShowRoleDot;
       val var4: Boolean = this.shouldShowRoleOnName;
-      val var5: Boolean = this.singleLine;
-      val var26: Paint = this.paint;
-      val var13: RenderContext.SpoilerState = this.spoilerState;
+      val var6: Boolean = this.singleLine;
+      val var11: Paint = this.paint;
+      val var22: RenderContext.SpoilerState = this.spoilerState;
       val var2: Int = this.listNestedLevel;
-      val var25: java.lang.Long = this.listOrderedIndex;
-      val var11: java.lang.Long = this.listLargestOrderedIndex;
-      val var6: Boolean = this.inLink;
-      val var33: RenderContext.Insets = this.insets;
-      val var19: DiscordThemeObject = this.theme;
+      val var15: java.lang.Long = this.listOrderedIndex;
+      val var23: java.lang.Long = this.listLargestOrderedIndex;
+      val var8: Boolean = this.inLink;
+      val var9: RenderContext.Insets = this.insets;
+      val var25: DiscordThemeObject = this.theme;
       val var1: Float = this.baselineHeightPx;
-      val var29: java.lang.Float = this.emojiBaselineHeightOverridePx;
-      val var22: StringBuilder = new StringBuilder();
-      var22.append("RenderContext(context=");
-      var22.append(var14);
-      var22.append(", containerId=");
-      var22.append(var30);
-      var22.append(", onTapLink=");
-      var22.append(var17);
-      var22.append(", onLongTapLink=");
-      var22.append(var15);
-      var22.append(", linkStyle=");
-      var22.append(var31);
-      var22.append(", onTapChannel=");
-      var22.append(var12);
-      var22.append(", onLongPressChannel=");
-      var22.append(var20);
-      var22.append(", onTapAttachmentLink=");
-      var22.append(var23);
-      var22.append(", onLongPressAttachmentLink=");
-      var22.append(var27);
-      var22.append(", onTapMention=");
-      var22.append(var16);
-      var22.append(", onTapCommand=");
-      var22.append(var28);
-      var22.append(", onLongPressCommand=");
-      var22.append(var9);
-      var22.append(", onTapSpoiler=");
-      var22.append(var18);
-      var22.append(", onTapTimestamp=");
-      var22.append(var24);
-      var22.append(", onTapInlineCode=");
-      var22.append(var10);
-      var22.append(", onTapEmoji=");
-      var22.append(var32);
-      var22.append(", onTapSoundmoji=");
-      var22.append(var21);
-      var22.append(", animateEmoji=");
-      var22.append(var3);
-      var22.append(", showLinkDecorations=");
-      var22.append(var8);
-      var22.append(", shouldShowRoleDot=");
-      var22.append(var7);
-      var22.append(", shouldShowRoleOnName=");
-      var22.append(var4);
-      var22.append(", singleLine=");
-      var22.append(var5);
-      var22.append(", paint=");
-      var22.append(var26);
-      var22.append(", spoilerState=");
-      var22.append(var13);
-      var22.append(", listNestedLevel=");
-      var22.append(var2);
-      var22.append(", listOrderedIndex=");
-      var22.append(var25);
-      var22.append(", listLargestOrderedIndex=");
-      var22.append(var11);
-      var22.append(", inLink=");
-      var22.append(var6);
-      var22.append(", insets=");
-      var22.append(var33);
-      var22.append(", theme=");
-      var22.append(var19);
-      var22.append(", baselineHeightPx=");
-      var22.append(var1);
-      var22.append(", emojiBaselineHeightOverridePx=");
-      var22.append(var29);
-      var22.append(")");
-      return var22.toString();
+      val var30: java.lang.Float = this.emojiBaselineHeightOverridePx;
+      val var28: StringBuilder = new StringBuilder();
+      var28.append("RenderContext(context=");
+      var28.append(var17);
+      var28.append(", containerId=");
+      var28.append(var12);
+      var28.append(", onTapLink=");
+      var28.append(var27);
+      var28.append(", onLongTapLink=");
+      var28.append(var29);
+      var28.append(", linkStyle=");
+      var28.append(var24);
+      var28.append(", onTapChannel=");
+      var28.append(var32);
+      var28.append(", onLongPressChannel=");
+      var28.append(var26);
+      var28.append(", onTapAttachmentLink=");
+      var28.append(var31);
+      var28.append(", onLongPressAttachmentLink=");
+      var28.append(var14);
+      var28.append(", onTapMention=");
+      var28.append(var20);
+      var28.append(", onTapCommand=");
+      var28.append(var13);
+      var28.append(", onLongPressCommand=");
+      var28.append(var10);
+      var28.append(", onTapSpoiler=");
+      var28.append(var33);
+      var28.append(", onTapTimestamp=");
+      var28.append(var18);
+      var28.append(", onTapInlineCode=");
+      var28.append(var19);
+      var28.append(", onTapEmoji=");
+      var28.append(var16);
+      var28.append(", onTapSoundmoji=");
+      var28.append(var21);
+      var28.append(", animateEmoji=");
+      var28.append(var7);
+      var28.append(", showLinkDecorations=");
+      var28.append(var5);
+      var28.append(", shouldShowRoleDot=");
+      var28.append(var3);
+      var28.append(", shouldShowRoleOnName=");
+      var28.append(var4);
+      var28.append(", singleLine=");
+      var28.append(var6);
+      var28.append(", paint=");
+      var28.append(var11);
+      var28.append(", spoilerState=");
+      var28.append(var22);
+      var28.append(", listNestedLevel=");
+      var28.append(var2);
+      var28.append(", listOrderedIndex=");
+      var28.append(var15);
+      var28.append(", listLargestOrderedIndex=");
+      var28.append(var23);
+      var28.append(", inLink=");
+      var28.append(var8);
+      var28.append(", insets=");
+      var28.append(var9);
+      var28.append(", theme=");
+      var28.append(var25);
+      var28.append(", baselineHeightPx=");
+      var28.append(var1);
+      var28.append(", emojiBaselineHeightOverridePx=");
+      var28.append(var30);
+      var28.append(")");
+      return var28.toString();
    }
 
    public fun updateInsets(
@@ -851,19 +851,19 @@ public data class RenderContext(context: Context,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.top;
-         val var3: Int = this.bottom;
-         val var4: Int = this.start;
-         val var1: Int = this.end;
+         val var4: Int = this.top;
+         val var1: Int = this.bottom;
+         val var2: Int = this.start;
+         val var3: Int = this.end;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Insets(top=");
-         var5.append(var2);
-         var5.append(", bottom=");
-         var5.append(var3);
-         var5.append(", start=");
          var5.append(var4);
-         var5.append(", end=");
+         var5.append(", bottom=");
          var5.append(var1);
+         var5.append(", start=");
+         var5.append(var2);
+         var5.append(", end=");
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

@@ -180,16 +180,16 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
       val var11: SimpleDraweeView = var4.inlineMediaGifIndicator;
       kotlin.jvm.internal.q.g(var4.inlineMediaGifIndicator, "inlineMediaGifIndicator");
       ReactAssetUtilsKt.setReactAsset(var11, ReactAsset.Gif);
-      val var12: SimpleDraweeView = var4.inlineMediaImagePreview;
+      val var5: SimpleDraweeView = var4.inlineMediaImagePreview;
       (var4.inlineMediaImagePreview.getHierarchy() as GenericDraweeHierarchy).A(new ColorDrawable(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt()));
-      val var13: GenericDraweeHierarchy = var12.getHierarchy() as GenericDraweeHierarchy;
-      val var5: GradientDrawable = new GradientDrawable();
-      var5.setShape(0);
-      var5.setStroke(
-         var12.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
+      val var12: GenericDraweeHierarchy = var5.getHierarchy() as GenericDraweeHierarchy;
+      val var13: GradientDrawable = new GradientDrawable();
+      var13.setShape(0);
+      var13.setStroke(
+         var5.getResources().getDimensionPixelSize(com.discord.chat.R.dimen.message_media_view_stroke),
          ColorUtilsKt.getColorCompat(var1, com.discord.chat.R.color.chat_media_view_stroke)
       );
-      var13.z(var5);
+      var12.z(var13);
    }
 
    @JvmStatic
@@ -253,12 +253,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
-            val var7: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.q.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var11: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var11, "getContext(...)");
+            val var7: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.q.e(var7);
+            var10 = var12.acquire(var11, var7, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -568,8 +568,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  val var4: FlowCollector = new FlowCollector(this.this$0) {
+                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  var1 = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -604,7 +604,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var1.collect(var4, this) === var3) {
+                  if (var4.collect(var1, this) === var3) {
                      return var3;
                   }
                }
@@ -644,9 +644,9 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                kotlin.c.b(var1);
                var1 = MediaView.access$getManagerModule$p(this.this$0);
                if (var1 != null) {
-                  val var4: Flow = var1.getPausePlayerFlow();
-                  if (var4 != null) {
-                     val var6: FlowCollector = new FlowCollector(this.this$0) {
+                  val var6: Flow = var1.getPausePlayerFlow();
+                  if (var6 != null) {
+                     val var4: FlowCollector = new FlowCollector(this.this$0) {
                         final MediaView this$0;
 
                         {
@@ -663,7 +663,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                         }
                      };
                      this.label = 1;
-                     if (var4.collect(var6, this) === var3) {
+                     if (var6.collect(var4, this) === var3) {
                         return var3;
                      }
                   }

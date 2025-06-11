@@ -4,13 +4,9 @@
   "ftSvQ0": "I couldn’t hear other people at all",
   "GWypHx": "People couldn’t hear me at all",
   "4qlGrK": "I had trouble using speakerphone",
-  "J2FWpq": "I couldn’t use the correct microphone",
-  "Fx8+Ji": "I couldn’t use the correct headset or speaker",
   "anHk19": "Someone else had a lot of background noise",
   "RK9DUl": "Someone else’s voice was cutting in and out",
   "yGe0BA": "Someone else’s voice sounded like a robot",
-  "RuTscn": "Someone else’s voice was too loud",
-  "WyMQjI": "Someone else’s voice was too quiet",
   "RGRgmJ": "Audio was delayed",
   "gMHKDA": "I couldn’t connect",
   "y5k8Ji": "I had high latency while in the call",
@@ -42,7 +38,6 @@
   "Bh+02d": "My camera only showed a black screen",
   "QbC6LS": "I couldn’t find or turn on my camera",
   "k7Ido6": "Someone else’s camera feed was blurry or pixelated",
-  "9NnNHx": "Someone else’s video was desynced from their audio",
   "8I/GUF": "Someone else’s camera feed was freezing or hitching",
   "R+wqwc": "Someone else’s camera only showed a black screen"
 }

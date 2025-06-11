@@ -113,7 +113,6 @@
   "b6uC3d": "casella",
   "fKyfcX": "immagine, pulsante",
   "/SCpvr": "video, pulsante",
-  "GfRGra": "Informazioni sull'app",
   "MMlhsr": "Accetta",
   "e/6Ogo": "Accetta l'invito",
   "9sWQNT": [
@@ -2052,6 +2051,7 @@
   "4uZBRk": "È difficile capire come bloccare qualcuno",
   "YicFbG": "Altri motivi",
   "JqBqKy": "Blu",
+  "J61px8": "Riscatta l'offerta",
   "sBp+u7": "Si applicano i termini di servizio.",
   "2RUcaG": "Ottieni un esclusivo ruolo da sostenitore",
   "bJoZKS": "Mostra il tuo sostegno alla community",
@@ -28461,11 +28461,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Voglio ricevere consigli via e-mail e aggiornamenti su nuove funzionalità e offerte speciali. (Facoltativo)",
-  "ty+iOT": "Ricevi e-mail con consigli personalizzati, avvisi su nuove funzionalità e offerte speciali! (Facoltativo)",
-  "kvM3dH": "Ricevi anche tu e-mail con aggiornamenti sulle nuove funzionalità, consigli degli esperti e offerte! (Facoltativo)",
-  "0BZ8Ji": "Ricevi via e-mail raccomandazioni, aggiornamenti sulle nuove funzioni e offerte speciali prima di tutti! (Facoltativo)",
-  "7SVSLC": "Migliora la tua esperienza su Discord aggiornandoti via e-mail su tutte le nuove funzionalità e offerte! (Facoltativo)",
   "ylFCLi": "Ricevi e-mail con offerte e comunicazioni sui prodotti personalizzate in base al tuo utilizzo di Discord. (Facoltativo)",
   "O13yh4": "Riscatta",
   "z++Kz8": "C'è stato un problema nel scattare una foto, riprova",

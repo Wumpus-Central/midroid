@@ -113,7 +113,6 @@
   "b6uC3d": "checkbox",
   "fKyfcX": "image, button",
   "/SCpvr": "video, button",
-  "GfRGra": "About this App",
   "MMlhsr": "Accept",
   "e/6Ogo": "Accept Invite",
   "9sWQNT": [
@@ -2083,6 +2082,42 @@
   "4uZBRk": "It is hard to find how to block someone",
   "YicFbG": "Something else",
   "JqBqKy": "Blue",
+  "y7lJKy": [
+    "Double the Nitro. Double the Fun. Available now for a limited time when you subscribe to Nitro monthly. ",
+    [
+      8,
+      "$link",
+      [
+        "Terms Apply."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "6Jjfk5": "Buy Nitro. Get a Month On Us.",
+  "dE3+TE": [
+    "Double the Nitro. Double the Fun. Available when you subscribe to Nitro monthly. ",
+    [
+      8,
+      "$link",
+      [
+        "Terms Apply."
+      ],
+      [
+        [
+          1,
+          "helpCenterLink"
+        ]
+      ]
+    ]
+  ],
+  "QPC/eX": "Offers",
+  "iQTfW1": "1 EXTRA MONTH",
+  "J61px8": "Claim Offer",
   "sBp+u7": "Terms apply.",
   "2RUcaG": "Get an exclusive Booster role",
   "bJoZKS": "Show support for your community",
@@ -24089,7 +24124,7 @@
   "QVdYsL": "Blur",
   "5mnTa2": "Sexually Explicit",
   "N/oRIy": "Filter",
-  "K0OWPz": "Gore",
+  "K0OWPz": "Graphic media",
   "aWD+tr": "Sensitive Content",
   "ZUvrwM": [
     "Choose what you see when uploaded or linked media may contain sensitive content. ",
@@ -24112,8 +24147,10 @@
   "S49UaW": "Blur",
   "5k5OFh": "Show",
   "6k0AgI": "Direct Messages from friends",
+  "+uI23N": "Direct messages from friends",
   "FP+a4+": "Messages in server channels",
   "D2EGSk": "Direct Messages from others",
+  "Yh+HX1": "Direct messages from others",
   "UIsxU1": "Show content",
   "9D+zGR": "Go to Settings",
   "TyCVIi": "OK",
@@ -29166,11 +29203,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Provide me email updates such as new product features, recommendations, and special offers. (Optional)",
-  "ty+iOT": "Get emails with new features, personalized recommendations, and special offers! (Optional)",
-  "kvM3dH": "Join our email squad to learn about new features, pro tips, and deals! (Optional)",
-  "0BZ8Ji": "Be the first to hear about new features, recommendations, and special offers via email! (Optional)",
-  "7SVSLC": "Level up your Discord experience with emails about new features and special offers! (Optional)",
   "ylFCLi": "Receive personalized emails with product announcements and offers designed around how you use Discord! (Optional)",
   "O13yh4": "Claim",
   "z++Kz8": "There was an issue taking a photo, try again",
@@ -30919,7 +30951,9 @@
       ]
     ]
   ],
+  "PTHakp": "Create a password",
   "wC4TlZ": "Create an account",
+  "JumOYm": "Create a username",
   "Hu9dUF": "Add a user/role mention to the media",
   "3N7uLy": "Add sticker to media",
   "WpFYAg": "Add text to media",
@@ -32870,22 +32904,6 @@
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
-  "9BuHra": [
-    "Customize what you see when uploaded or linked media may contain gore content. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "tCcq5u": "Sent an image",
   "p0oZm5": "Sent a GIF",
   "rtfTKi": [
@@ -33103,22 +33121,6 @@
   "w+yGQU": "Custom Invite Link requires Server Boosting Level 3, or being a partnered, verified, HypeSquad event server",
   "ETCmRU": "You need to set a text channel that is accessible to all members before setting a Custom Invite Link.",
   "uVDhqa": "Several people are typing...",
-  "0r/b7O": [
-    "Customize what you see when uploaded or linked media may contain sexually explicit content. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "RDE0SU": "Share",
   "Aw+09/": "Share Debug Logs",
   "dA1gb2": "Share Failed",
@@ -38120,6 +38122,16 @@
   "CHf9iI": "Use Default",
   "SUnWBA": "Are you sure you want to logout?",
   "aBZ/oa": "Discovery",
+  "EUo0ys": [
+    "Some settings are customized for teens by default. ",
+    [
+      8,
+      "hook",
+      [
+        "Learn more"
+      ]
+    ]
+  ],
   "KXLX7u": "Upgrade to Unlock",
   "mr4K7O": "Unlock with Nitro",
   "LoOB1N": "Turning this off may help if your voice is not being detected by the automatic input sensitivity.",
@@ -38131,7 +38143,8 @@
   "PwknJC": "Edit Status",
   "aP91UV": "Show exact search result counts",
   "qx4chY": "When enabled, may increase the time it takes to show search results.",
-  "16/3Bg": "Gore filter",
+  "XgH9en": "This filter detects content that might contain gore, graphic violence, or other disturbing material.",
+  "16/3Bg": "Graphic media",
   "7j5bMT": "Cancel Subscription",
   "93ZDWF": "Ignored accounts",
   "PYrWFR": "You don't have any ignored accounts",
@@ -38255,7 +38268,7 @@
   "MeYuqq": "Server settings",
   "RC0kJy": "Scan QR Code",
   "dliU4u": [
-    "Customize what you see when uploaded or linked media may contain sensitive content. ",
+    "Choose how you want to see images detected by Discord’s sensitive media filters. These filters detect image-based media. ",
     [
       8,
       "$link",
@@ -38270,9 +38283,10 @@
       ]
     ]
   ],
-  "Hj/Bur": "Sensitive content filters",
+  "Hj/Bur": "Sensitive media filters",
   "c/UOwM": "Sensitive media",
-  "wr6InJ": "Sexually explicit media filter",
+  "GYpoAg": "Mature sexual media",
+  "Wnojv7": "This filter detects content that might contain nudity, graphic sex acts, or sexually explicit material.",
   "xbMc8v": "Soundboard",
   "kbFsAA": "Soundboard Volume",
   "BPbGq6": [

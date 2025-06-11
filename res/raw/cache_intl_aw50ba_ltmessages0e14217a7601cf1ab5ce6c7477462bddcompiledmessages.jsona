@@ -119,7 +119,6 @@
   "b6uC3d": "žymimasis langelis",
   "fKyfcX": "vaizdas, mygtukas",
   "/SCpvr": "vaizdo įrašas, mygtukas",
-  "GfRGra": "Apie šią Programėlę",
   "MMlhsr": "Priimti",
   "e/6Ogo": "Priimti Pakvietimą",
   "9sWQNT": [
@@ -2107,6 +2106,7 @@
   "4uZBRk": "Sunku rasti, kaip kažką užblokuoti",
   "YicFbG": "Kita priežastis",
   "JqBqKy": "Mėlynas",
+  "J61px8": "Pasinaudoti pasiūlymu",
   "sBp+u7": "Taikomos pasiūlymo sąlygos.",
   "2RUcaG": "Gauk išskirtinį stiprintojo vaidmenį",
   "bJoZKS": "Parodyk paramą savo bendruomenei",
@@ -29461,11 +29461,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Noriu gauti naujienas el. paštu apie naujas produktų funkcijas, rekomendacijas ir specialius pasiūlymus. (Pasirinktinai)",
-  "ty+iOT": "Gauk el. laiškus su naujomis funkcijomis, asmeninėmis rekomendacijomis ir specialiais pasiūlymais! (Pasirinktinai)",
-  "kvM3dH": "Junkis prie mūsų el. laiškų gavėjų komandos, kad sužinotum apie naujas funkcijas, patarimus ir akcijas! (Pasirinktinai)",
-  "0BZ8Ji": "Sužinok apie naujausias funkcijas, rekomendacijas ir specialius pasiūlymus el. paštu anksčiau už kitus! (Pasirinktinai)",
-  "7SVSLC": "Pagerink savo Discord patirtį su el. laiškais apie naujas funkcijas ir specialius pasiūlymus! (Pasirinktinai)",
   "ylFCLi": "Gauk suasmenintus el. laiškus su pranešimais apie produktus ir pasiūlymais, pritaikytais tavo Discord naudojimui! (Pasirinktinai)",
   "O13yh4": "Atsiimti",
   "z++Kz8": "Fotografuojant iškilo problema, pabandyk dar kartą",

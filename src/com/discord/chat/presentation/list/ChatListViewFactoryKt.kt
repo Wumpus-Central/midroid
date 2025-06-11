@@ -61,45 +61,45 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
       public final Object invokeSuspend(Object var1) {
          val var9: Any = l9.b.e();
          val var5: RecyclerView.RecycledViewPool;
-         val var6: MessageAccessoriesAdapter;
-         val var7: java.util.Iterator;
+         val var6: java.util.Iterator;
+         val var7: RecyclerView;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var7 = this.L$3 as java.util.Iterator;
+            var6 = this.L$3 as java.util.Iterator;
             var5 = this.L$2 as RecyclerView.RecycledViewPool;
-            val var8: RecyclerView = this.L$1 as RecyclerView;
-            var6 = this.L$0 as MessageAccessoriesAdapter;
+            var7 = this.L$1 as RecyclerView;
+            val var8: MessageAccessoriesAdapter = this.L$0 as MessageAccessoriesAdapter;
             kotlin.c.b(var1);
             var1 = var8;
          } else {
             kotlin.c.b(var1);
             val var14: java.util.Map = ChatListViewFactoryKt.access$getAccessoriesToCreate$p();
-            var6 = this.$accessoriesAdapter;
-            var1 = this.$recycler;
+            var1 = this.$accessoriesAdapter;
+            var7 = this.$recycler;
             var5 = this.$accessoriesViewPool;
-            var7 = var14.entrySet().iterator();
+            var6 = var14.entrySet().iterator();
          }
 
-         while (var7.hasNext()) {
-            val var15: Entry = var7.next() as Entry;
+         while (var6.hasNext()) {
+            val var15: Entry = var6.next() as Entry;
             val var4: Int = (var15.getKey() as java.lang.Number).intValue();
             val var3: Int = (var15.getValue() as java.lang.Number).intValue();
             val var16: ArrayList = new ArrayList();
 
             for (int var13 = 0; var13 < var3; var13++) {
-               val var10: RecyclerView.ViewHolder = var6.createViewHolder(var1, var4);
+               val var10: RecyclerView.ViewHolder = var1.createViewHolder(var7, var4);
                kotlin.jvm.internal.q.g(var10, "createViewHolder(...)");
-               val var11: MessagePartViewHolder = var10 as MessagePartViewHolder;
-               val var18: View = (var10 as MessagePartViewHolder).itemView;
+               val var18: MessagePartViewHolder = var10 as MessagePartViewHolder;
+               val var11: View = (var10 as MessagePartViewHolder).itemView;
                kotlin.jvm.internal.q.g((var10 as MessagePartViewHolder).itemView, "itemView");
-               if (var18 is FactoryCreatable) {
-                  (var18 as FactoryCreatable).onFactoryCreate();
+               if (var11 is FactoryCreatable) {
+                  (var11 as FactoryCreatable).onFactoryCreate();
                }
 
-               var16.add(var11);
+               var16.add(var18);
             }
 
             val var19: d0 = K.c();
@@ -174,10 +174,10 @@ public fun fillAccessories(recycler: RecyclerView, accessoriesAdapter: MessageAc
                   return Unit.a;
                }
             };
-            this.L$0 = var6;
-            this.L$1 = var1;
+            this.L$0 = var1;
+            this.L$1 = var7;
             this.L$2 = var5;
-            this.L$3 = var7;
+            this.L$3 = var6;
             this.label = 1;
             if (Na.f.g(var19, var17, this) === var9) {
                return var9;
@@ -230,17 +230,17 @@ public fun fillChatList(
       public final Object invokeSuspend(Object var1) {
          val var10: Any = l9.b.e();
          val var5: java.util.Map;
-         val var6: java.util.Iterator;
+         val var6: RecyclerView;
          val var7: BaseChatListAdapter;
-         val var8: RecyclerView;
+         val var8: java.util.Iterator;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var6 = this.L$4 as java.util.Iterator;
+            var8 = this.L$4 as java.util.Iterator;
             val var9: RecyclerView.RecycledViewPool = this.L$3 as RecyclerView.RecycledViewPool;
-            var8 = this.L$2 as RecyclerView;
+            var6 = this.L$2 as RecyclerView;
             var7 = this.L$1 as BaseChatListAdapter;
             var5 = this.L$0 as java.util.Map;
             kotlin.c.b(var1);
@@ -250,13 +250,13 @@ public fun fillChatList(
             val var15: java.util.Map = ChatListViewFactoryKt.access$getRecycledViewPoolSizes$p();
             var5 = this.$delegateViewTypes;
             var7 = this.$chatListAdapter;
-            var8 = this.$recycler;
+            var6 = this.$recycler;
             var1 = this.$chatListViewPool;
-            var6 = var15.entrySet().iterator();
+            var8 = var15.entrySet().iterator();
          }
 
-         while (var6.hasNext()) {
-            val var11: Entry = var6.next() as Entry;
+         while (var8.hasNext()) {
+            val var11: Entry = var8.next() as Entry;
             var var16: Class = var11.getKey() as Class;
             val var3: Int = (var11.getValue() as java.lang.Number).intValue();
             var16 = (Class)var5.get(var16);
@@ -265,14 +265,14 @@ public fun fillChatList(
             val var18: ArrayList = new ArrayList();
 
             for (int var14 = 0; var14 < var3; var14++) {
-               val var20: RecyclerView.ViewHolder = var7.createViewHolder(var8, var4);
-               val var12: View = var20.itemView;
-               kotlin.jvm.internal.q.g(var20.itemView, "itemView");
-               if (var12 is FactoryCreatable) {
-                  (var12 as FactoryCreatable).onFactoryCreate();
+               val var12: RecyclerView.ViewHolder = var7.createViewHolder(var6, var4);
+               val var20: View = var12.itemView;
+               kotlin.jvm.internal.q.g(var12.itemView, "itemView");
+               if (var20 is FactoryCreatable) {
+                  (var20 as FactoryCreatable).onFactoryCreate();
                }
 
-               var18.add(var20);
+               var18.add(var12);
             }
 
             val var21: d0 = K.c();
@@ -314,9 +314,9 @@ public fun fillChatList(
             };
             this.L$0 = var5;
             this.L$1 = var7;
-            this.L$2 = var8;
+            this.L$2 = var6;
             this.L$3 = var1;
-            this.L$4 = var6;
+            this.L$4 = var8;
             this.label = 1;
             if (Na.f.g(var21, var19, this) === var10) {
                return var10;

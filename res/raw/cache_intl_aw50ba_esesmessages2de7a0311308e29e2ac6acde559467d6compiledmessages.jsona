@@ -113,7 +113,6 @@
   "b6uC3d": "casilla",
   "fKyfcX": "imagen, botón",
   "/SCpvr": "vídeo, botón",
-  "GfRGra": "Acerca de esta aplicación",
   "MMlhsr": "Aceptar",
   "e/6Ogo": "Aceptar invitación",
   "9sWQNT": [
@@ -2075,6 +2074,7 @@
   "4uZBRk": "Es difícil encontrar cómo bloquear a alguien",
   "YicFbG": "Otra razón",
   "JqBqKy": "Azul",
+  "J61px8": "Canjear oferta",
   "sBp+u7": "Se aplican condiciones.",
   "2RUcaG": "Consigue un rol exclusivo de usuario que mejora",
   "bJoZKS": "Dale apoyo a tu comunidad",
@@ -28496,11 +28496,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Proporcióname actualizaciones de correo como nuevas funciones de productos, recomendaciones y ofertas especiales. (Opcional)",
-  "ty+iOT": "¡Recibe correos con funciones nuevas, recomendaciones personalizadas y ofertas especiales! (Opcional)",
-  "kvM3dH": "¡Únete a nuestro equipo de correo para descubrir nuevas funciones, consejos profesionales y ofertas! (Opcional)",
-  "0BZ8Ji": "¡Sé la primera persona en enterarse de las nuevas funciones, recomendaciones y ofertas especiales por correo electrónico! (Opcional)",
-  "7SVSLC": "¡Mejora tu experiencia en Discord con correos sobre funciones nuevas y ofertas especiales! (Opcional)",
   "ylFCLi": "¡Recibe correos personalizados con anuncios de productos y ofertas diseñadas en torno al uso que haces de Discord! (Opcional)",
   "O13yh4": "Obtener",
   "z++Kz8": "Ha habido un problema al hacer la foto. Inténtalo de nuevo",

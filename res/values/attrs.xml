@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="accuracy" format="float" />
     <attr name="actionBarDivider" format="reference" />
     <attr name="actionBarItemBackground" format="reference" />
     <attr name="actionBarPopupTheme" format="reference" />
@@ -92,7 +91,6 @@
     <attr name="allowFlingInOverscroll" format="boolean" />
     <attr name="allowStacking" format="boolean" />
     <attr name="alpha" format="float" />
-    <attr name="alphaColor" format="color" />
     <attr name="alphabeticModifiers">
         <flag name="META" value="0x00010000" />
         <flag name="CTRL" value="0x00001000" />
@@ -139,7 +137,6 @@
         <enum name="bottomEnd" value="3" />
     </attr>
     <attr name="autoFocusButtonVisible" format="boolean" />
-    <attr name="autoPlayAfterResume" format="boolean" />
     <attr name="autoSizeMaxTextSize" format="dimension" />
     <attr name="autoSizeMinTextSize" format="dimension" />
     <attr name="autoSizePresetSizes" format="reference" />
@@ -1204,9 +1201,6 @@
         <enum name="centerCrop" value="6" />
         <enum name="centerInside" value="7" />
     </attr>
-    <attr name="loopEndMs" format="integer" />
-    <attr name="loopSeekingMethod" format="integer" />
-    <attr name="loopStartMs" format="integer" />
     <attr name="lottieAnimationViewStyle" format="reference" />
     <attr name="lottie_asyncUpdates">
         <enum name="automatic" value="0" />
@@ -1412,7 +1406,6 @@
     <attr name="overlapAnchor" format="boolean" />
     <attr name="overlay" format="boolean" />
     <attr name="overlayImage" format="reference" />
-    <attr name="packed" format="boolean" />
     <attr name="paddingBottomNoButtons" format="dimension" />
     <attr name="paddingBottomSystemWindowInsets" format="boolean" />
     <attr name="paddingEnd" format="dimension" />
@@ -1582,7 +1575,6 @@
     <attr name="selectionDividersDistance" format="dimension" />
     <attr name="selectionRequired" format="boolean" />
     <attr name="selectorSize" format="dimension" />
-    <attr name="shader" format="string" />
     <attr name="shapeAppearance" format="reference" />
     <attr name="shapeAppearanceLargeComponent" format="reference" />
     <attr name="shapeAppearanceMediumComponent" format="reference" />

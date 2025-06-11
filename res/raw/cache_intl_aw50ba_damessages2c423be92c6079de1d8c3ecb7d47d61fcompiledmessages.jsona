@@ -113,7 +113,6 @@
   "b6uC3d": "afkrydsningsfelt",
   "fKyfcX": "billede, knap",
   "/SCpvr": "video, knap",
-  "GfRGra": "Om denne app",
   "MMlhsr": "Accepter",
   "e/6Ogo": "Acceptér invitation",
   "9sWQNT": [
@@ -2069,6 +2068,7 @@
   "4uZBRk": "Det er svært at finde ud af, hvordan man blokerer nogen",
   "YicFbG": "Noget andet",
   "JqBqKy": "Blå",
+  "J61px8": "Indløs tilbud",
   "sBp+u7": "Betingelser er gældende.",
   "2RUcaG": "Få en eksklusiv booster rolle",
   "bJoZKS": "Vis støtte til dit community",
@@ -28632,11 +28632,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Send mig e-mailopdateringer med ting som nye produktfunktioner, anbefalinger og særtilbud. (Valgfrit)",
-  "ty+iOT": "Få e-mails med nye funktioner, personlige anbefalinger og særtilbud! (Valgfrit)",
-  "kvM3dH": "Deltag i vores e-mailgruppe for at få mere at vide om nye funktioner, pro-tips og tilbud! (Valgfrit)",
-  "0BZ8Ji": "Vær den første til at høre om nye funktioner, anbefalinger og særtilbud via e-mail! (Valgfrit)",
-  "7SVSLC": "Gør din Discord-oplevelse bedre ved at modtage e-mails om nye funktioner og særtilbud! (Valgfrit)",
   "ylFCLi": "Modtag personlige e-mails med produktmeddelelser og tilbud, der er tilpasset til din brug af Discord! (Valgfrit)",
   "O13yh4": "Indløs",
   "z++Kz8": "Der var problemer med at tage et foto, prøv igen",

@@ -77,16 +77,16 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var4: Int = this.color;
-      val var1: Int = this.borderRadius;
-      val var2: java.lang.Boolean = this.spaceAround;
+      val var1: Int = this.color;
+      val var2: Int = this.borderRadius;
+      val var4: java.lang.Boolean = this.spaceAround;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ExecutedCommandBackgroundStyles(color=");
-      var3.append(var4);
-      var3.append(", borderRadius=");
       var3.append(var1);
-      var3.append(", spaceAround=");
+      var3.append(", borderRadius=");
       var3.append(var2);
+      var3.append(", spaceAround=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

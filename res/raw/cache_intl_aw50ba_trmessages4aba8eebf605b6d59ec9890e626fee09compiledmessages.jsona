@@ -112,7 +112,6 @@
   "b6uC3d": "onay kutucuğu",
   "fKyfcX": "görsel, buton",
   "/SCpvr": "video, buton",
-  "GfRGra": "Bu Uygulama Hakkında",
   "MMlhsr": "Kabul et",
   "e/6Ogo": "Daveti Kabul Et",
   "9sWQNT": [
@@ -2058,6 +2057,7 @@
   "4uZBRk": "Birini nasıl engelleyeceğini bulmak zor",
   "YicFbG": "Başka bir şey",
   "JqBqKy": "Mavi",
+  "J61px8": "Teklifi Kullan",
   "sBp+u7": "Koşullar geçerlidir.",
   "2RUcaG": "Ayrıcalıklı bir Takviye Sahibi rolü kazan",
   "bJoZKS": "Topluluğuna olan desteğini göster",
@@ -28501,11 +28501,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Bana yeni ürün özellikleri, öneriler ve özel teklifler gibi e-posta güncellemeleri gönder. (İsteğe bağlı)",
-  "ty+iOT": "Yeni özellikler, kişiselleştirilmiş öneriler ve özel teklifler içeren e-postalar al! (İsteğe bağlı)",
-  "kvM3dH": "Yeni özellikler, ipuçları ve fırsatlar hakkında bilgi edinmek için e-posta ekibimize katıl! (İsteğe bağlı)",
-  "0BZ8Ji": "Yeni özellikler, öneriler ve özel teklifler hakkında e-posta yoluyla ilk bilgileri sen al! (İsteğe bağlı)",
-  "7SVSLC": "Discord deneyimini yeni özellikler ve özel teklifler hakkında e-postalar alarak geliştir! (İsteğe bağlı)",
   "ylFCLi": "Discord'u kullanım şekline göre tasarlanmış ürün duyuruları ve teklifler içeren kişiselleştirilmiş e-postalar al! (İsteğe bağlı)",
   "O13yh4": "Al",
   "z++Kz8": "Fotoğraf çekerken bir sorun meydana geldi, yeniden dene.",

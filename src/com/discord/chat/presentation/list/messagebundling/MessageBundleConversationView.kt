@@ -119,13 +119,13 @@ public class MessageBundleConversationView  public constructor(context: Context,
       if (var12.getContent() != null) {
          val var20: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var15: StructurableText = var12.getContent();
-         val var14: Context = this.getContext();
-         q.g(var14, "getContext(...)");
+         val var14: StructurableText = var12.getContent();
+         val var15: Context = this.getContext();
+         q.g(var15, "getContext(...)");
          val var11: java.lang.String = var12.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var12);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var12);
-         val var10: Boolean = var12.getShouldShowRoleDot();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var12);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var12);
+         val var9: Boolean = var12.getShouldShowRoleDot();
          val var8: Boolean = var12.getShouldShowRoleOnName();
          val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          q.g(var16, "getFontMetrics(...)");
@@ -133,12 +133,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var37: TextPaint = this.binding.replyText.getPaint();
          q.g(var37, "getPaint(...)");
          val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-            var15,
             var14,
+            var15,
             var11,
+            var10,
             var7,
             var9,
-            var10,
             var8,
             var37,
             null,
@@ -176,12 +176,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
             var29, I18nUtilsKt.i18nFormat$default(var22, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
          );
       } else {
-         val var30: TextView = this.binding.replyAuthorName;
+         val var23: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var23: Context = this.getContext();
-         q.g(var23, "getContext(...)");
+         val var30: Context = this.getContext();
+         q.g(var30, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var30, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var23, I18nUtilsKt.i18nFormat$default(var30, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 

@@ -113,7 +113,6 @@
   "b6uC3d": "selectievakje",
   "fKyfcX": "afbeelding, knop",
   "/SCpvr": "video, knop",
-  "GfRGra": "Over deze applicatie",
   "MMlhsr": "Accepteren",
   "e/6Ogo": "Uitnodiging accepteren",
   "9sWQNT": [
@@ -2064,6 +2063,7 @@
   "4uZBRk": "Het is moeilijk om te vinden hoe je iemand blokkeert",
   "YicFbG": "Iets anders",
   "JqBqKy": "Blauw",
+  "J61px8": "Aanbieding claimen",
   "sBp+u7": "Er zijn voorwaarden van toepassing.",
   "2RUcaG": "Krijg een exclusieve boosterrol",
   "bJoZKS": "Laat zien dat je je community steunt",
@@ -28487,11 +28487,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Stuur me e-mailupdates over nieuwe productfuncties, aanbevelingen en speciale aanbiedingen. (optioneel)",
-  "ty+iOT": "Ontvang e-mails met nieuwe functies, gepersonaliseerde aanbevelingen en speciale aanbiedingen! (optioneel)",
-  "kvM3dH": "Word lid van ons e-mailteam om meer te weten te komen over nieuwe functies, professionele tips en aanbiedingen! (optioneel)",
-  "0BZ8Ji": "Word als eerste op de hoogte gesteld van nieuwe functies, aanbevelingen en speciale aanbiedingen via e-mail! (optioneel)",
-  "7SVSLC": "Til je Discord-ervaring naar een hoger niveau met e-mails over nieuwe functies en speciale aanbiedingen! (optioneel)",
   "ylFCLi": "Ontvang gepersonaliseerde e-mails met productaankondigingen en aanbiedingen die zijn afgestemd op je Discord-gebruik! (optioneel)",
   "O13yh4": "Claimen",
   "z++Kz8": "Er was een problemen met het maken van de foto, probeer het nog eens",

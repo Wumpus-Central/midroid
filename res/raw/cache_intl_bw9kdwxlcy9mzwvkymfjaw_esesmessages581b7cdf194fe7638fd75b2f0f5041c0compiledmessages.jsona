@@ -4,13 +4,9 @@
   "ftSvQ0": "No oía a las demás personas",
   "GWypHx": "La gente no me oía",
   "4qlGrK": "Tenía problemas con el altavoz",
-  "J2FWpq": "No podía usar el micrófono correcto",
-  "Fx8+Ji": "No podía usar los auriculares o los altavoces correctos",
   "anHk19": "Otra persona tenía mucho ruido de fondo",
   "RK9DUl": "La voz de otra persona se entrecortaba",
   "yGe0BA": "La voz de otra persona sonaba como un robot",
-  "RuTscn": "La voz de otra persona se oía demasiado alto",
-  "WyMQjI": "La voz de otra persona se oía demasiado bajo",
   "RGRgmJ": "El audio se retrasaba",
   "gMHKDA": "No me he podido conectar",
   "y5k8Ji": "Tenía latencia alta mientras estaba en la llamada",
@@ -42,7 +38,6 @@
   "Bh+02d": "Mi cámara solo mostraba una pantalla negra",
   "QbC6LS": "No podía encontrar o encender mi cámara",
   "k7Ido6": "Las imágenes de la cámara de otra persona se veían borrosas o pixeladas",
-  "9NnNHx": "El vídeo de otra persona estaba desincronizado con su audio",
   "8I/GUF": "Las imágenes de la cámara de otra persona se quedaban congeladas o iban a tirones",
   "R+wqwc": "La cámara de otra persona solo mostraba una pantalla negra"
 }

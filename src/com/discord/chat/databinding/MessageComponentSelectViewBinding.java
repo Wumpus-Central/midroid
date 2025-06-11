@@ -42,12 +42,12 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
             SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
             if (var4 != null) {
                var1 = R.id.select_component_selection_text;
-               MaterialTextView var5 = (MaterialTextView)a.a(var0, var1);
-               if (var5 != null) {
+               MaterialTextView var3 = (MaterialTextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new MessageComponentSelectViewBinding(var0, var2, var6, var4, var5, var3);
+                  FlexboxLayout var5 = (FlexboxLayout)a.a(var0, var1);
+                  if (var5 != null) {
+                     return new MessageComponentSelectViewBinding(var0, var2, var6, var4, var3, var5);
                   }
                }
             }

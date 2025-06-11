@@ -113,7 +113,6 @@
   "b6uC3d": "potvrdni okvir",
   "fKyfcX": "slika, gumb",
   "/SCpvr": "video, gumb",
-  "GfRGra": "O ovoj aplikaciji",
   "MMlhsr": "Prihvati",
   "e/6Ogo": "Prihvati pozivnicu",
   "9sWQNT": [
@@ -2112,6 +2111,7 @@
   "4uZBRk": "Teško je pronaći kako blokirati drugu osobu",
   "YicFbG": "Nešto drugo",
   "JqBqKy": "Plavo",
+  "J61px8": "Iskoristi ponudu",
   "sBp+u7": "Podliježe dodatnim uvjetima.",
   "2RUcaG": "Nabavi si ekskluzivnu ulogu boostera",
   "bJoZKS": "Pruži podršku svojoj zajednici",
@@ -29439,11 +29439,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Šalji mi ažuriranja e-poštom kao što su nove značajke proizvoda, preporuke i posebne ponude. (nije obavezno)",
-  "ty+iOT": "Primaj e-poštu s novim značajkama, prilagođenim preporukama i posebnim ponudama! (nije obavezno)",
-  "kvM3dH": "Pridruži se našem timu za e-poštu i saznaj više o novim značajkama, profesionalnim savjetima i ponudama! (nije obavezno)",
-  "0BZ8Ji": "Budi prva osoba koja će putem e-pošte čuti o novim značajkama, preporukama i posebnim ponudama! (nije obavezno)",
-  "7SVSLC": "Poruke e-pošte o novim značajkama i posebnim ponudama podići će tvoje iskustva na Discordu na novu razinu! (nije obavezno)",
   "ylFCLi": "Primaj prilagođene e-poruke s najavama proizvoda i ponudama osmišljenim prema tome kako koristiš Discord! (nije obavezno)",
   "O13yh4": "Uzmi",
   "z++Kz8": "Došlo je do problema prilikom fotografiranja, probaj ponovno",

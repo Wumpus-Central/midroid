@@ -25,12 +25,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var0: java.lang.String = Regex.k.c("libdiscord_version");
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var1.append(var0);
-      var1.append("\\].+))");
-      regexExtractTombstone = new Regex(var1.toString());
+      val var1: java.lang.String = Regex.k.c("libdiscord_version");
+      val var0: StringBuilder = new StringBuilder();
+      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var0.append(var1);
+      var0.append("\\].+))");
+      regexExtractTombstone = new Regex(var0.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -435,8 +435,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -444,7 +444,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -469,13 +469,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       q.h(var1, "context");
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread();
    }
 
@@ -579,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
-         val var5: java.lang.String = this.groupBy;
+         val var3: java.lang.String = this.text;
+         val var5: java.lang.String = this.cause;
+         val var1: java.lang.String = this.groupBy;
          val var7: java.lang.String = this.origin;
-         val var1: java.lang.String = this.groupHash;
-         val var3: java.lang.String = this.textHash;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Tombstone(text=");
-         var6.append(var2);
-         var6.append(", cause=");
-         var6.append(var4);
-         var6.append(", groupBy=");
-         var6.append(var5);
-         var6.append(", origin=");
-         var6.append(var7);
-         var6.append(", groupHash=");
-         var6.append(var1);
-         var6.append(", textHash=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var6: java.lang.String = this.groupHash;
+         val var2: java.lang.String = this.textHash;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Tombstone(text=");
+         var4.append(var3);
+         var4.append(", cause=");
+         var4.append(var5);
+         var4.append(", groupBy=");
+         var4.append(var1);
+         var4.append(", origin=");
+         var4.append(var7);
+         var4.append(", groupHash=");
+         var4.append(var6);
+         var4.append(", textHash=");
+         var4.append(var2);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

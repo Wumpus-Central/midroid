@@ -113,7 +113,6 @@
   "b6uC3d": "Kästchen",
   "fKyfcX": "Bild, Button",
   "/SCpvr": "Video, Button",
-  "GfRGra": "Über diese App",
   "MMlhsr": "Annehmen",
   "e/6Ogo": "Einladung annehmen",
   "9sWQNT": [
@@ -2068,6 +2067,7 @@
   "4uZBRk": "Es ist schwer herauszufinden, wie man jemanden blockiert",
   "YicFbG": "Sonstiges",
   "JqBqKy": "Blau",
+  "J61px8": "Angebot beanspruchen",
   "sBp+u7": "Nutzungsbedingungen gelten.",
   "2RUcaG": "Erhalte eine exklusive Booster-Rolle",
   "bJoZKS": "Zeig deine Unterstützung für deine Community",
@@ -28657,11 +28657,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Sendet mir E-Mail-Updates wie neue Produktfeatures, Empfehlungen und Sonderangebote zu. (Optional)",
-  "ty+iOT": "Erhalte E-Mails mit neuen Features, personalisierten Empfehlungen und Sonderangeboten! (Optional)",
-  "kvM3dH": "Schließ dich unserer E-Mail-Truppe an, um mehr über neue Features, Profi-Tipps und Angebote zu erfahren! (Optional)",
-  "0BZ8Ji": "Gehöre zu den Ersten, die per E-Mail von neuen Features, Empfehlungen und Sonderangeboten erfahren! (Optional)",
-  "7SVSLC": "Verbessere dein Discord-Erlebnis mit E-Mails zu neuen Features und Sonderangeboten! (Optional)",
   "ylFCLi": "Erhalte personalisierte E-Mails mit Produktankündigungen und Angeboten, die auf deine Nutzung von Discord zugeschnitten sind! (Optional)",
   "O13yh4": "Beanspruchen",
   "z++Kz8": "Es gab ein Problem beim Fotografieren, versuche es noch einmal.",

@@ -113,7 +113,6 @@
   "b6uC3d": "avmerkingsboks",
   "fKyfcX": "bilde, knapp",
   "/SCpvr": "video, knapp",
-  "GfRGra": "Om denne appen",
   "MMlhsr": "Godta",
   "e/6Ogo": "Godta invitasjonen",
   "9sWQNT": [
@@ -2054,6 +2053,7 @@
   "4uZBRk": "Det er vanskelig å finne ut hvordan man blokkerer noen",
   "YicFbG": "Noe annet",
   "JqBqKy": "Blå",
+  "J61px8": "Benytt tilbudet",
   "sBp+u7": "Vilkår gjelder.",
   "2RUcaG": "Få en eksklusiv boosterrolle",
   "bJoZKS": "Vis at du bryr deg om fellesskapet",
@@ -28400,11 +28400,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Send meg e-postoppdateringer om ting som produktnyheter, anbefalinger og spesialtilbud. (Valgfritt)",
-  "ty+iOT": "Motta e-post med varsler om nytt innhold, personlige anbefalinger og spesialtilbud! (Valgfritt)",
-  "kvM3dH": "Bli med på e-postlaget for få info om nytt innhold, tips og tilbud! (Valgfritt)",
-  "0BZ8Ji": "Bli den første som får høre om nytt innhold, anbefalinger og spesialtilbud via e-post! (Valgfritt)",
-  "7SVSLC": "Få en enda bedre Discord-opplevelse med e-poster om nytt innhold og spesialtilbud! (Valgfritt)",
   "ylFCLi": "Motta tilpassede e-poster med produktkunngjøringer og tilbud som bygger på hvordan du bruker Discord! (Valgfritt)",
   "O13yh4": "Hent",
   "z++Kz8": "Det oppsto et problem da bildet skulle tas – prøv på nytt",

@@ -232,56 +232,56 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
 
       public override fun draw(canvas: Canvas) {
          q.h(var1, "canvas");
-         val var14: Int = this.getBounds().width();
-         val var16: Int = this.getBounds().height();
+         val var15: Int = this.getBounds().width();
+         val var14: Int = this.getBounds().height();
          if (this.config.getBackgroundColor() != 0) {
             this.path.reset();
-            this.pathRect.set(0.0F, 0.0F, (float)var14, (float)var16);
+            this.pathRect.set(0.0F, 0.0F, (float)var15, (float)var14);
             this.path.addRoundRect(this.pathRect, this.pathCornerRadii, Direction.CW);
             this.paint.setColor(this.config.getBackgroundColor());
             var1.drawPath(this.path, this.paint);
             this.paint.setColor(this.config.getColor());
          }
 
-         val var15: Int = FastestListPlaceholderTypeFeedItem.FeedItemDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getShapeType().ordinal()];
-         if (var15 != 1) {
-            if (var15 != 2) {
+         val var16: Int = FastestListPlaceholderTypeFeedItem.FeedItemDrawable.WhenMappings.$EnumSwitchMapping$0[this.config.getShapeType().ordinal()];
+         if (var16 != 1) {
+            if (var16 != 2) {
                throw new n();
             }
 
-            val var2: Float = (var16 - this.config.getShapeSize()) / 2.0F;
+            val var2: Float = (var14 - this.config.getShapeSize()) / 2.0F;
             var1.drawRect(this.config.getPadding(), var2, this.config.getShapeSize(), this.config.getShapeSize() + var2, this.paint);
          } else {
             var1.drawCircle(
                this.config.getShapeSize() / 2.0F + this.config.getPadding(),
-               this.config.getShapeSize() / 2.0F + ((float)var16 - this.config.getShapeSize()) / 2.0F,
+               this.config.getShapeSize() / 2.0F + ((float)var14 - this.config.getShapeSize()) / 2.0F,
                this.config.getShapeSize() / 2.0F,
                this.paint
             );
          }
 
-         val var12: Float = this.config.getLabelSize();
-         val var20: Float = this.config.getLabelSecondarySize();
+         val var11: Float = this.config.getLabelSize();
+         val var5: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var21: Float = var12 / 2;
-         val var19: Float = var20 / 2;
-         val var5: Float = this.config.getLabelPaddingInnerRatio() * var12 / var6;
-         val var7: Float = this.config.getLabelPaddingInnerRatio() * var20 / var6;
-         val var8: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
-         val var13: Float = var14;
-         val var11: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
-         var6 = var16;
-         val var23: Float = (var16 - (var12 + var20)) / 2.0F + var12;
+         val var19: Float = var11 / 2;
+         val var20: Float = var5 / 2;
+         val var21: Float = this.config.getLabelPaddingInnerRatio() * var11 / var6;
+         val var12: Float = this.config.getLabelPaddingInnerRatio() * var5 / var6;
+         val var9: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
+         val var13: Float = var15;
+         val var8: Float = var15 - this.config.getPadding() - this.config.getLabelPadding();
+         var6 = var14;
+         val var23: Float = (var14 - (var11 + var5)) / 2.0F + var11;
          var1.drawRoundRect(
-            var8,
-            ((float)var16 - (var12 + var20)) / 2.0F + var5,
-            this.labelWidthRatio * var11,
-            ((float)var16 - (var12 + var20)) / 2.0F + var12 - var5,
-            var21,
-            var21,
+            var9,
+            ((float)var14 - (var11 + var5)) / 2.0F + var21,
+            this.labelWidthRatio * var8,
+            ((float)var14 - (var11 + var5)) / 2.0F + var11 - var21,
+            var19,
+            var19,
             this.paint
          );
-         var1.drawRoundRect(var8, var23 + var7, var11 * this.labelWidthRatioSecondary, var23 + var20 - var7, var19, var19, this.paint);
+         var1.drawRoundRect(var9, var23 + var12, var8 * this.labelWidthRatioSecondary, var23 + var5 - var12, var20, var20, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(

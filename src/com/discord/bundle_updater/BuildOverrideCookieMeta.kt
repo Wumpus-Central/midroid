@@ -175,27 +175,27 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.expiresAt;
-      val var7: java.lang.String = this.releaseChannel;
-      val var1: java.util.List = this.validForUserIds;
-      val var5: java.util.List = this.allowedVersions;
-      val var2: java.lang.Boolean = this.allowLoggedOut;
-      val var3: java.util.Map = this.experiments;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("BuildOverrideCookieMeta(expiresAt=");
-      var6.append(var4);
-      var6.append(", releaseChannel=");
-      var6.append(var7);
-      var6.append(", validForUserIds=");
-      var6.append(var1);
-      var6.append(", allowedVersions=");
-      var6.append(var5);
-      var6.append(", allowLoggedOut=");
-      var6.append(var2);
-      var6.append(", experiments=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var7: java.lang.String = this.expiresAt;
+      val var2: java.lang.String = this.releaseChannel;
+      val var6: java.util.List = this.validForUserIds;
+      val var4: java.util.List = this.allowedVersions;
+      val var5: java.lang.Boolean = this.allowLoggedOut;
+      val var1: java.util.Map = this.experiments;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BuildOverrideCookieMeta(expiresAt=");
+      var3.append(var7);
+      var3.append(", releaseChannel=");
+      var3.append(var2);
+      var3.append(", validForUserIds=");
+      var3.append(var6);
+      var3.append(", allowedVersions=");
+      var3.append(var4);
+      var3.append(", allowLoggedOut=");
+      var3.append(var5);
+      var3.append(", experiments=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

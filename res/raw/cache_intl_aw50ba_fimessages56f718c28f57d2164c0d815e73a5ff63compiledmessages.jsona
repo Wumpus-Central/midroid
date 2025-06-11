@@ -113,7 +113,6 @@
   "b6uC3d": "valintaruutu",
   "fKyfcX": "kuva, painike",
   "/SCpvr": "video, painike",
-  "GfRGra": "Tietoa tästä sovelluksesta",
   "MMlhsr": "Hyväksy",
   "e/6Ogo": "Hyväksy kutsu",
   "9sWQNT": [
@@ -2062,6 +2061,7 @@
   "4uZBRk": "Käyttäjän estämistoiminnon löytäminen on vaikeaa",
   "YicFbG": "Jokin muu",
   "JqBqKy": "Sininen",
+  "J61px8": "Lunasta tarjous",
   "sBp+u7": "Tarjoukseen liittyy ehtoja.",
   "2RUcaG": "Saat yksilöllisen nostattajaroolin",
   "bJoZKS": "Näytä tukesi yhteisöllesi",
@@ -28504,11 +28504,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Lähettäkää minulle sähköpostiin päivityksiä uusista tuoteominaisuuksista, suosituksista ja erikoistarjouksista. (Valinnainen)",
-  "ty+iOT": "Tilaa sähköpostiisi tietoa uusista ominaisuuksista, mukautetuista suosituksista ja erikoistarjouksista! (Valinnainen)",
-  "kvM3dH": "Liity sähköpostijoukkueeseemme, niin saat tietoa uusista ominaisuuksista, ammattilaisvinkeistä ja tarjouksista. (Valinnainen)",
-  "0BZ8Ji": "Kuule ensimmäisenä uusista ominaisuuksista, suosituksista ja erikoistarjouksista sähköpostitse! (Valinnainen)",
-  "7SVSLC": "Kehitä Discord-tietämystäsi sähköpostiisi lähetettävillä viesteillä uusista ominaisuuksista ja erikoistarjouksista! (Valinnainen)",
   "ylFCLi": "Tilaa sähköpostiisi mukautettuja viestejä tuoteilmoituksista ja Discordin käyttöösi perustuvista tarjouksista. (Valinnainen)",
   "O13yh4": "Lunasta",
   "z++Kz8": "Valokuvan ottamisessa ilmeni ongelma, yritä uudelleen",

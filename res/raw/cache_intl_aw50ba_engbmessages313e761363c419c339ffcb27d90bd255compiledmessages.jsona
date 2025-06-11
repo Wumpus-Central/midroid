@@ -113,7 +113,6 @@
   "b6uC3d": "checkbox",
   "fKyfcX": "image, button",
   "/SCpvr": "video, button",
-  "GfRGra": "About this App",
   "MMlhsr": "Accept",
   "e/6Ogo": "Accept Invite",
   "9sWQNT": [
@@ -2059,6 +2058,7 @@
   "4uZBRk": "It is hard to find how to block someone",
   "YicFbG": "Something else",
   "JqBqKy": "Blue",
+  "J61px8": "Claim Offer",
   "sBp+u7": "Terms apply.",
   "2RUcaG": "Get an exclusive Booster role",
   "bJoZKS": "Show support for your community",
@@ -28416,11 +28416,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Provide me with email updates such as new product features, recommendations and special offers. (Optional)",
-  "ty+iOT": "Get emails with new features, personalised recommendations and special offers! (Optional)",
-  "kvM3dH": "Join our email squad to learn about new features, pro tips and deals! (Optional)",
-  "0BZ8Ji": "Be the first to hear about new features, recommendations and special offers via email! (Optional)",
-  "7SVSLC": "Level up your Discord experience with emails about new features and special offers! (Optional)",
   "ylFCLi": "Receive personalised emails with product announcements and offers designed around how you use Discord! (Optional)",
   "O13yh4": "Claim",
   "z++Kz8": "There was an issue taking a photo, try again",

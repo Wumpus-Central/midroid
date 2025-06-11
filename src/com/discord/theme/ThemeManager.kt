@@ -38,10 +38,10 @@ public object ThemeManager {
                   var7 = null;
                }
 
-               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-                  var3 = null;
+               } else {
+                  var3 = resourceTheme;
                }
 
                var8 = new MidnightTheme(var7, var3);
@@ -52,10 +52,10 @@ public object ThemeManager {
                   var9 = null;
                }
 
+               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-               } else {
-                  var3 = resourceTheme;
+                  var3 = null;
                }
 
                var8 = new DarkerTheme(var9, var3);

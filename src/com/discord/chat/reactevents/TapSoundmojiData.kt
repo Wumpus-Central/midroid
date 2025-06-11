@@ -99,9 +99,9 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.soundId;
+      val var2: java.lang.String = this.soundId;
       val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.guildId;
       val var6: java.lang.String;
       if (this.messageId == null) {
          var6 = "null";
@@ -111,11 +111,11 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
 
       val var5: StringBuilder = new StringBuilder();
       var5.append("TapSoundmojiData(soundId=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(", channelId=");
       var5.append(var3);
       var5.append(", guildId=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", messageId=");
       var5.append(var6);
       var5.append(")");

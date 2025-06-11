@@ -113,7 +113,6 @@
   "b6uC3d": "hộp kiểm",
   "fKyfcX": "hình ảnh, nút",
   "/SCpvr": "video, nút",
-  "GfRGra": "Giới Thiệu Về Ứng Dụng Này",
   "MMlhsr": "Chấp nhận",
   "e/6Ogo": "Chấp nhận lời mời",
   "9sWQNT": [
@@ -2074,6 +2073,7 @@
   "4uZBRk": "Thật khó để tìm cách chặn ai đó",
   "YicFbG": "Lý do khác",
   "JqBqKy": "Xanh lam",
+  "J61px8": "Nhận Ưu Đãi",
   "sBp+u7": "Các điều khoản được áp dụng.",
   "2RUcaG": "Nhận vai trò Người Nâng Cấp độc quyền",
   "bJoZKS": "Thể hiện sự ủng hộ dành cho cộng đồng của bạn",
@@ -28510,11 +28510,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Cung cấp cho tôi cập nhật qua email như tính năng sản phẩm mới, đề xuất và ưu đãi đặc biệt. (Không bắt buộc)",
-  "ty+iOT": "Nhận email với các tính năng mới, đề xuất được cá nhân hóa và các ưu đãi đặc biệt! (Không bắt buộc)",
-  "kvM3dH": "Tham gia đội ngũ email của chúng tôi để tìm hiểu về các tính năng mới, hướng dẫn nâng cao và ưu đãi! (Không bắt buộc)",
-  "0BZ8Ji": "Hãy là người đầu tiên nhận thông báo về các tính năng mới, đề xuất và ưu đãi đặc biệt qua email! (Không bắt buộc)",
-  "7SVSLC": "Nâng tầm trải nghiệm Discord của bạn với email có thông tin các tính năng mới và ưu đãi đặc biệt! (Không bắt buộc)",
   "ylFCLi": "Nhận email cá nhân hóa có chứa thông báo sản phẩm và ưu đãi được thiết kế dựa trên cách bạn sử dụng Discord! (Không bắt buộc)",
   "O13yh4": "Nhận",
   "z++Kz8": "Đã có lỗi khi chụp ảnh, vui lòng thử lại",

@@ -120,16 +120,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
          var1.putString("exitDescription", var5.getReason());
       }
 
-      val var6: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var3: java.lang.String = var6.getCause();
-         if (var3 != null) {
-            var1.putString("tombstoneCause", var3);
+         val var6: java.lang.String = var3.getCause();
+         if (var6 != null) {
+            var1.putString("tombstoneCause", var6);
          }
 
-         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var6.getText())) {
-            var1.putString("tombstone", h.e1(var6.getText(), 6291456));
+         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var3.getText())) {
+            var1.putString("tombstone", h.e1(var3.getText(), 6291456));
          }
       }
 
@@ -137,20 +137,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var4: java.lang.Boolean = this.crashedLastRun;
+      val var1: java.lang.Boolean = this.crashedLastRun;
       val var3: SystemLogReport.SentryCrashData = this.sentryData;
-      val var5: HistoricalProcessExitReason.Reason = this.reason;
-      val var1: SystemLogUtils.Tombstone = this.tombstone;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CrashReportEvent(crashedLastRun=");
-      var2.append(var4);
-      var2.append(", sentryData=");
-      var2.append(var3);
-      var2.append(", reason=");
-      var2.append(var5);
-      var2.append(", tombstone=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: HistoricalProcessExitReason.Reason = this.reason;
+      val var4: SystemLogUtils.Tombstone = this.tombstone;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CrashReportEvent(crashedLastRun=");
+      var5.append(var1);
+      var5.append(", sentryData=");
+      var5.append(var3);
+      var5.append(", reason=");
+      var5.append(var2);
+      var5.append(", tombstone=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 }

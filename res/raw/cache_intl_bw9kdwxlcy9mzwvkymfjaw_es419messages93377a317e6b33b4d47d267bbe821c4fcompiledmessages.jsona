@@ -4,13 +4,9 @@
   "ftSvQ0": "No podía escuchar a los demás",
   "GWypHx": "Los demás no podían escucharme",
   "4qlGrK": "Tuve problemas al usar el altavoz del teléfono",
-  "J2FWpq": "No pude usar el micrófono correcto",
-  "Fx8+Ji": "No pude usar los audífonos o altavoces correctos",
   "anHk19": "Alguien tenía mucho ruido de fondo",
   "RK9DUl": "La voz de alguien se entrecortaba",
   "yGe0BA": "La voz de alguien sonaba como un robot",
-  "RuTscn": "La voz de alguien se escuchaba muy alta",
-  "WyMQjI": "La voz de alguien se escuchaba muy baja",
   "RGRgmJ": "El audio tenía retraso",
   "gMHKDA": "No pude conectarme",
   "y5k8Ji": "La llamada tuvo una latencia alta",
@@ -42,7 +38,6 @@
   "Bh+02d": "Mi cámara solo mostraba una pantalla negra",
   "QbC6LS": "No pude encontrar o activar mi cámara",
   "k7Ido6": "La cámara de alguien se veía borroso o pixelado",
-  "9NnNHx": "El video de alguien estaba desincronizado con el audio",
   "8I/GUF": "La cámara de alguien se congelaba o trababa",
   "R+wqwc": "La cámara de alguien solo mostraba una pantalla negra"
 }

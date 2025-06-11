@@ -81,79 +81,79 @@ public final class GuildInviteViewBinding implements ViewBinding {
 
    public static GuildInviteViewBinding bind(View var0) {
       int var1 = R.id.barrier_button;
-      Barrier var11 = (Barrier)a.a(var0, var1);
-      if (var11 != null) {
+      Barrier var19 = (Barrier)a.a(var0, var1);
+      if (var19 != null) {
          var1 = R.id.barrier_header;
-         Barrier var7 = (Barrier)a.a(var0, var1);
-         if (var7 != null) {
+         Barrier var8 = (Barrier)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.item_bottom_container;
-            ConstraintLayout var16 = (ConstraintLayout)a.a(var0, var1);
-            if (var16 != null) {
+            ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
+            if (var12 != null) {
                var1 = R.id.item_guild_badge;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.item_invite_header;
-                  TextView var10 = (TextView)a.a(var0, var1);
-                  if (var10 != null) {
+                  TextView var17 = (TextView)a.a(var0, var1);
+                  if (var17 != null) {
                      var1 = R.id.item_invite_hub_layout;
-                     FrameLayout var14 = (FrameLayout)a.a(var0, var1);
-                     if (var14 != null) {
+                     FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.item_invite_hub_link;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
+                        TextView var11 = (TextView)a.a(var0, var1);
+                        if (var11 != null) {
                            var1 = R.id.item_invite_image;
-                           GuildView var4 = (GuildView)a.a(var0, var1);
-                           if (var4 != null) {
+                           GuildView var15 = (GuildView)a.a(var0, var1);
+                           if (var15 != null) {
                               var1 = R.id.item_invite_joined_button;
-                              DCDButton var9 = (DCDButton)a.a(var0, var1);
-                              if (var9 != null) {
+                              DCDButton var2 = (DCDButton)a.a(var0, var1);
+                              if (var2 != null) {
                                  var1 = R.id.item_invite_member_container;
-                                 LinearLayout var13 = (LinearLayout)a.a(var0, var1);
-                                 if (var13 != null) {
+                                 LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+                                 if (var4 != null) {
                                     var1 = R.id.item_invite_online_dot;
-                                    ImageView var3 = (ImageView)a.a(var0, var1);
-                                    if (var3 != null) {
+                                    ImageView var10 = (ImageView)a.a(var0, var1);
+                                    if (var10 != null) {
                                        var1 = R.id.item_invite_online_text;
-                                       TextView var12 = (TextView)a.a(var0, var1);
-                                       if (var12 != null) {
+                                       TextView var14 = (TextView)a.a(var0, var1);
+                                       if (var14 != null) {
                                           var1 = R.id.item_invite_splash;
-                                          SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                                          if (var8 != null) {
+                                          SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+                                          if (var3 != null) {
                                              var1 = R.id.item_invite_subtitle;
-                                             TextView var6 = (TextView)a.a(var0, var1);
-                                             if (var6 != null) {
+                                             TextView var13 = (TextView)a.a(var0, var1);
+                                             if (var13 != null) {
                                                 var1 = R.id.item_invite_subtitle_icon;
-                                                SimpleDraweeView var18 = (SimpleDraweeView)a.a(var0, var1);
-                                                if (var18 != null) {
+                                                SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+                                                if (var9 != null) {
                                                    var1 = R.id.item_invite_title;
-                                                   TextView var15 = (TextView)a.a(var0, var1);
-                                                   if (var15 != null) {
+                                                   TextView var6 = (TextView)a.a(var0, var1);
+                                                   if (var6 != null) {
                                                       var1 = R.id.item_invite_total_member_dot;
-                                                      ImageView var17 = (ImageView)a.a(var0, var1);
-                                                      if (var17 != null) {
+                                                      ImageView var18 = (ImageView)a.a(var0, var1);
+                                                      if (var18 != null) {
                                                          var1 = R.id.item_invite_total_member_text;
-                                                         TextView var19 = (TextView)a.a(var0, var1);
-                                                         if (var19 != null) {
+                                                         TextView var16 = (TextView)a.a(var0, var1);
+                                                         if (var16 != null) {
                                                             return new GuildInviteViewBinding(
                                                                var0,
-                                                               var11,
+                                                               var19,
+                                                               var8,
+                                                               var12,
                                                                var7,
-                                                               var16,
+                                                               var17,
                                                                var5,
-                                                               var10,
-                                                               var14,
+                                                               var11,
+                                                               var15,
                                                                var2,
                                                                var4,
-                                                               var9,
-                                                               var13,
+                                                               var10,
+                                                               var14,
                                                                var3,
-                                                               var12,
-                                                               var8,
+                                                               var13,
+                                                               var9,
                                                                var6,
                                                                var18,
-                                                               var15,
-                                                               var17,
-                                                               var19
+                                                               var16
                                                             );
                                                          }
                                                       }

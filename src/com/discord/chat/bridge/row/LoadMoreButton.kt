@@ -78,8 +78,8 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
 
    public override fun hashCode(): Int {
       val var4: Int = this.action.hashCode();
-      val var3: Int = this.text.hashCode();
-      val var5: Int = Integer.hashCode(this.backgroundColor);
+      val var5: Int = this.text.hashCode();
+      val var3: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -92,28 +92,28 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var2;
+      return (((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
       val var5: LoadingAction = this.action;
-      val var3: java.lang.String = this.text;
+      val var2: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var2: Int = this.cornerRadius;
-      val var6: Int = this.color;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("LoadMoreButton(action=");
-      var4.append(var5);
-      var4.append(", text=");
-      var4.append(var3);
-      var4.append(", backgroundColor=");
-      var4.append(var1);
-      var4.append(", cornerRadius=");
-      var4.append(var2);
-      var4.append(", color=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var6: Int = this.cornerRadius;
+      val var4: Int = this.color;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadMoreButton(action=");
+      var3.append(var5);
+      var3.append(", text=");
+      var3.append(var2);
+      var3.append(", backgroundColor=");
+      var3.append(var1);
+      var3.append(", cornerRadius=");
+      var3.append(var6);
+      var3.append(", color=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

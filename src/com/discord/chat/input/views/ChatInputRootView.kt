@@ -308,9 +308,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var20 = 0; var20 < var21; var20++) {
                val var13: Intent = var17.c().getItemAt(var20).getIntent();
                q.g(var13, "getIntent(...)");
-               val var14: java.lang.String = var13.getStringExtra("data");
-               if (var14 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var14);
+               val var18: java.lang.String = var13.getStringExtra("data");
+               if (var18 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var18);
                }
             }
 
@@ -383,14 +383,14 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    private fun updateChatNodes(chatInputNodes: List<ChatInputNode>, offset: Int = 0) {
       val var4: ArrayList = new ArrayList(kotlin.collections.i.v(var1, 10));
 
-      for (ChatInputNode var6 : var1) {
-         var4.add(ChatInputNode.copy$default(var6, 0, var6.getLocation() + var2, 0, null, false, null, false, 125, null));
+      for (ChatInputNode var5 : var1) {
+         var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var18 : var4) {
-         val var7: Editable = this.editText.getEditableText();
-         q.g(var7, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var7, var18);
+      for (ChatInputNode var7 : var4) {
+         val var17: Editable = this.editText.getEditableText();
+         q.g(var17, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var17, var7);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -441,13 +441,13 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
    public fun clearAndApplyChatNodes(editId: String?, chatInputNodes: List<ChatInputNode>) {
       q.h(var2, "chatInputNodes");
       if (q.c(this.lastEditId, var1) || var1 == null) {
-         val var5: Editable = this.editText.getEditableText();
-         val var6: Array<DCDInputSpan> = var5.getSpans(0, var5.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
-         if (var6 != null) {
-            val var4: Int = var6.length;
+         val var6: Editable = this.editText.getEditableText();
+         val var5: Array<DCDInputSpan> = var6.getSpans(0, var6.length(), DCDInputSpan.class) as Array<DCDInputSpan>;
+         if (var5 != null) {
+            val var4: Int = var5.length;
 
             for (int var3 = 0; var3 < var4; var3++) {
-               var5.removeSpan(var6[var3]);
+               var6.removeSpan(var5[var3]);
             }
          }
 

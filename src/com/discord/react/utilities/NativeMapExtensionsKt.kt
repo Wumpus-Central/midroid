@@ -151,14 +151,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
    q.h(var0, "pairs");
-   val var3: WritableNativeMap = new WritableNativeMap();
+   val var4: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var3;
+   return var4;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {

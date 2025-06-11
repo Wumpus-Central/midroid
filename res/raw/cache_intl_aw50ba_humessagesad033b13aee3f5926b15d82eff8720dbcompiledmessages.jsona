@@ -113,7 +113,6 @@
   "b6uC3d": "jelölőnégyzet",
   "fKyfcX": "kép, gomb",
   "/SCpvr": "videó, gomb",
-  "GfRGra": "Az alkalmazás névjegye",
   "MMlhsr": "Elfogadás",
   "e/6Ogo": "Meghívó elfogadása",
   "9sWQNT": [
@@ -2065,6 +2064,7 @@
   "4uZBRk": "Nehéz megtalálni, hogyan lehet letiltani valakit",
   "YicFbG": "Valami más",
   "JqBqKy": "Kék",
+  "J61px8": "Élek az ajánlattal",
   "sBp+u7": "Az ajánlatra feltételek vonatkoznak.",
   "2RUcaG": "Szerezz be exkluzív gyorsító rangot",
   "bJoZKS": "Fejezd ki a támogatásodat a közösséged felé",
@@ -28415,11 +28415,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "E-mailes értesítéseket kérek például az új termékfunkciókról, ajánlásokról és a különleges ajánlatokról. (Nem kötelező)",
-  "ty+iOT": "E-mailt kaphatsz az új funkciókról személyre szabott ajánlásokkal és különleges ajánlatokkal! (Nem kötelező)",
-  "kvM3dH": "Csatlakozz az e-mailes csapathoz, hogy értesülj az új funkciókról, a bevált tippekről és az akciókról! (Nem kötelező)",
-  "0BZ8Ji": "Az elsők között lehetsz, akik tudomást szereznek e-mailben az új funkciókról, ajánlásokról és különleges ajánlatokról! (Nem kötelező)",
-  "7SVSLC": "Az új funkciókat és a különleges ajánlatokat ismertető e-mailekkel új szintre emelheted a Discord-élményedet! (Nem kötelező)",
   "ylFCLi": "Személyre szabott e-maileket kaphatsz termékbejelentésekkel és a Discord-használatodhoz kapcsolódó ajánlatokkal! (Nem kötelező)",
   "O13yh4": "Igénylés",
   "z++Kz8": "Probléma merült fel a fényképkészítés során. Próbáld újra",

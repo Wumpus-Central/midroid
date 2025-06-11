@@ -55,14 +55,14 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       q.h(var1, "component");
       q.h(var2, "componentProvider");
       q.h(var3, "componentContext");
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var12: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
       var var13: java.lang.String = var3.getContainerId();
-      val var12: java.lang.String = var1.getId();
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("ThumbnailDisplayComponent(");
-      var11.append(var12);
-      var11.append(")");
-      val var17: SpoilerAttributes = var16.forGenericMedia(var1, var13, var11.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var11: java.lang.String = var1.getId();
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("ThumbnailDisplayComponent(");
+      var16.append(var11);
+      var16.append(")");
+      val var17: SpoilerAttributes = var12.forGenericMedia(var1, var13, var16.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var21: UnfurledMediaItem = var1.getMedia();
       val var20: MediaImageViewHolder = this.imageViewHolder;
       val var8: Boolean = var1.isSpoiler();
@@ -73,10 +73,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var7: Boolean = var1.isObscure();
-      val var9: Boolean = var1.isObscureAwaitingScan();
+      val var6: Boolean = var1.isObscure();
+      val var7: Boolean = var1.isObscureAwaitingScan();
       val var10: Boolean = var1.getObscureHideControls();
-      val var6: Boolean = var1.getObscureIsOpaque();
+      val var9: Boolean = var1.getObscureIsOpaque();
       var13 = var21.getProxyUrl();
       var var14: Int = var21.getWidth();
       var var4: Int;
@@ -102,10 +102,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var21.getPlaceholderVersion(),
          var8,
          var18,
-         var7,
-         var9,
-         var10,
          var6,
+         var7,
+         var10,
+         var9,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),

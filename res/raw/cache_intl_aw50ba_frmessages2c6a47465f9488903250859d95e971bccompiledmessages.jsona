@@ -113,7 +113,6 @@
   "b6uC3d": "case à cocher",
   "fKyfcX": "image, bouton",
   "/SCpvr": "vidéo, bouton",
-  "GfRGra": "À propos de cette application",
   "MMlhsr": "Accepter",
   "e/6Ogo": "Accepter l'invitation",
   "9sWQNT": [
@@ -2065,6 +2064,7 @@
   "4uZBRk": "C'est compliqué de savoir comment bloquer quelqu'un",
   "YicFbG": "Autre chose",
   "JqBqKy": "Bleu",
+  "J61px8": "Profite de l'offre",
   "sBp+u7": "Des conditions s'appliquent.",
   "2RUcaG": "Obtiens un rôle exclusif de booster",
   "bJoZKS": "Montre ton soutien à ta communauté",
@@ -28491,11 +28491,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Envoyez-moi des e-mails concernant les nouvelles fonctionnalités de produits, les recommandations et les offres spéciales. (Optionnel)",
-  "ty+iOT": "Reçois des e-mails avec de nouvelles fonctionnalités, des recommandations personnalisées et des offres spéciales ! (Optionnel)",
-  "kvM3dH": "Rejoins-nous pour en savoir plus sur les nouvelles fonctionnalités et pour recevoir par e-mail des conseils de pro et des offres spéciales ! (Optionnel)",
-  "0BZ8Ji": "Sois le premier ou la première à entendre parler des nouvelles fonctionnalités, recommandations et offres spéciales par e-mail ! (Optionnel)",
-  "7SVSLC": "Améliore ton expérience Discord en recevant des e-mails sur les nouvelles fonctionnalités et les offres spéciales ! (Optionnel)",
   "ylFCLi": "Reçois des e-mails personnalisés avec des annonces de produits et des offres conçues en fonction de la façon dont tu utilises Discord ! (Optionnel)",
   "O13yh4": "Récupérer",
   "z++Kz8": "Il y a eu un problème lors de photo, essaie encore",

@@ -113,7 +113,6 @@
   "b6uC3d": "kryssruta",
   "fKyfcX": "bild, knapp",
   "/SCpvr": "video, knapp",
-  "GfRGra": "Om appen",
   "MMlhsr": "Godkänn",
   "e/6Ogo": "Acceptera inbjudan",
   "9sWQNT": [
@@ -2062,6 +2061,7 @@
   "4uZBRk": "Det är svårt att hitta hur man blockerar någon",
   "YicFbG": "Något annat",
   "JqBqKy": "Blå",
+  "J61px8": "Utnyttja erbjudandet",
   "sBp+u7": "Villkor gäller.",
   "2RUcaG": "Få en exklusiv boosterroll",
   "bJoZKS": "Visa upp ditt stöd för din community",
@@ -28416,11 +28416,6 @@
       "badgeLabel"
     ]
   ],
-  "1nwnlp": "Ge mig mejluppdateringar om nya produktfunktioner, rekommendationer och specialerbjudanden. (Valfritt)",
-  "ty+iOT": "Få mejl med nya funktioner, personliga rekommendationer och specialerbjudanden! (Valfritt)",
-  "kvM3dH": "Gå med i vår mejlgrupp för att höra om nya funktioner, proffstips och erbjudanden! (Valfritt)",
-  "0BZ8Ji": "Bli först med att höra om nya funktioner, rekommendationer och specialerbjudanden via mejl! (Valfritt)",
-  "7SVSLC": "Lyft din Discord-upplevelse med mejl om nya funktioner och specialerbjudanden! (Valfritt)",
   "ylFCLi": "Få personliga mejl med produktmeddelanden och erbjudanden utformade efter hur du använder Discord! (Valfritt)",
   "O13yh4": "Hämta",
   "z++Kz8": "Ett fel inträffade när ett foto skulle tas. Försök igen",

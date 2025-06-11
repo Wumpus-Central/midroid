@@ -36,40 +36,40 @@ internal class ExternalPipManager {
    public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (Result<Unit>) -> Unit = new f()) {
       q.h(var3, "onResult");
       if ((this.enabled || var2) && CAN_PIP) {
-         val var11: java.lang.Boolean;
+         val var10: java.lang.Boolean;
          if (var1 != null) {
             try {
                val var5: ExternalPipManager.Companion = Companion;
                e.a();
-               val var4: Builder = a.a(d.a(), this.aspectRatio);
-               q.g(var4, "setAspectRatio(...)");
-               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var4, false)));
+               val var14: Builder = a.a(d.a(), this.aspectRatio);
+               q.g(var14, "setAspectRatio(...)");
+               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var5, var14, false)));
             } catch (var8: Exception) {
-               val var10: kotlin.Result.a = Result.k;
+               val var4: kotlin.Result.a = Result.k;
                var3.invoke(Result.a(Result.b(kotlin.c.a(var8))));
                return;
             }
          } else {
-            var11 = null;
+            var10 = null;
          }
 
          try {
-            if (q.c(var11, java.lang.Boolean.TRUE)) {
-               val var16: kotlin.Result.a = Result.k;
+            if (q.c(var10, java.lang.Boolean.TRUE)) {
+               val var13: kotlin.Result.a = Result.k;
                var3.invoke(Result.a(Result.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var12: kotlin.Result.a = Result.k;
+            val var15: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(var7))));
             return;
          }
 
          try {
-            val var14: kotlin.Result.a = Result.k;
+            val var11: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var13: kotlin.Result.a = Result.k;
+            val var16: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(var6))));
          }
       } else {
