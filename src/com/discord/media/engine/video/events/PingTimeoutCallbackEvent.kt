@@ -1,10 +1,10 @@
 package com.discord.media.engine.video.events
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, port: Int, seq: Int, timeout: Int) : ReactEvent {
@@ -80,22 +80,22 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
+      val var4: Int = this.connectionId;
       val var5: java.lang.String = this.server;
       val var1: Int = this.port;
-      val var3: Int = this.seq;
-      val var4: Int = this.timeout;
+      val var2: Int = this.seq;
+      val var3: Int = this.timeout;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PingTimeoutCallbackEvent(connectionId=");
-      var6.append(var2);
+      var6.append(var4);
       var6.append(", server=");
       var6.append(var5);
       var6.append(", port=");
       var6.append(var1);
       var6.append(", seq=");
-      var6.append(var3);
+      var6.append(var2);
       var6.append(", timeout=");
-      var6.append(var4);
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

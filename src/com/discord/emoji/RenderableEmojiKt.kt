@@ -7,8 +7,8 @@ import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.span.DraweeSpanStringBuilder
 import com.facebook.imagepipeline.common.ResizeOptions
-import com.facebook.imagepipeline.request.ImageRequest
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -103,13 +103,13 @@ private fun renderEmojiInto(
 ) {
    val var8: Int = var0.length();
    var0.append('\u200b');
-   val var10: com.facebook.drawee.controller.a = (((u2.d.g().B(var5) as PipelineDraweeControllerBuilder)
-            .F(ImageRequestBuilder.x(Uri.parse(var1)).N(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).I(ImageRequest.RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
+   val var11: com.facebook.drawee.controller.a = (((J2.d.g().B(var5) as PipelineDraweeControllerBuilder)
+            .F(ImageRequestBuilder.x(Uri.parse(var1)).N(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).I(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
          .D(var2) as PipelineDraweeControllerBuilder)
       .d();
-   val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScalingUtils$ScaleType.e);
-   var7.invoke(var11);
-   var0.j(var3, var11.a(), var10, var8, var4, var4, false, var6);
+   val var10: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScalingUtils$ScaleType.e);
+   var7.invoke(var10);
+   var0.j(var3, var10.a(), var11, var8, var4, var4, false, var6);
 }
 
 @JvmSynthetic

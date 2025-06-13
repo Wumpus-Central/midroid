@@ -130,7 +130,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       return new SegmentedControlViewManager();
    }
 
-   public override fun getPackages(): ArrayList<ReactPackage> {
+   public open fun getPackages(): ArrayList<ReactPackage> {
       val var1: ArrayList = super.getPackages();
       val var2: DCDModuleProvider = DCDModuleProvider.INSTANCE;
       var1.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));

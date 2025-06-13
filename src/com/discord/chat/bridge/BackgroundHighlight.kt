@@ -1,8 +1,8 @@
 package com.discord.chat.bridge
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {

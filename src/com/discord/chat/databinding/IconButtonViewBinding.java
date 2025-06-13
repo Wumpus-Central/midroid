@@ -7,7 +7,7 @@ import android.widget.FrameLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import t0.a;
+import z0.a;
 
 public final class IconButtonViewBinding implements ViewBinding {
    public final SimpleDraweeView iconButton;

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.google.android.flexbox.FlexboxLayout;
-import t0.a;
+import z0.a;
 
 public final class MessageComponentActionRowViewBinding implements ViewBinding {
    public final FlexboxLayout actionRowComponentViewGroup;
@@ -21,12 +21,12 @@ public final class MessageComponentActionRowViewBinding implements ViewBinding {
 
    public static MessageComponentActionRowViewBinding bind(View var0) {
       int var1 = R.id.action_row_component_view_group;
-      FlexboxLayout var2 = (FlexboxLayout)a.a(var0, var1);
-      if (var2 != null) {
+      FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.action_row_component_view_group_error_row;
-         View var3 = a.a(var0, var1);
-         if (var3 != null) {
-            return new MessageComponentActionRowViewBinding(var0, var2, ComponentFailedLabelViewBinding.bind(var3));
+         View var2 = a.a(var0, var1);
+         if (var2 != null) {
+            return new MessageComponentActionRowViewBinding(var0, var3, ComponentFailedLabelViewBinding.bind(var2));
          }
       }
 

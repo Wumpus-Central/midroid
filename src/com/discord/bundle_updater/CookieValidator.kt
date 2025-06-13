@@ -24,23 +24,23 @@ public object CookieValidator {
             q.e(var2);
             val var10: ByteString = var9.b(var2);
             if (var10 != null) {
-               var2 = var10.G();
+               var2 = var10.H();
                if (var2 != null) {
                   try {
                      var11 = Json.d;
                      var14 = Json.d.g(var2);
-                  } catch (var7: Xa.g) {
+                  } catch (var7: mb.g) {
                      return null;
                   }
 
-                  val var3: JsonElement = bb.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = qb.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = bb.g.o(var14);
+                  val var15: JsonObject = qb.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {
@@ -49,14 +49,14 @@ public object CookieValidator {
                      }
                   }
 
-                  val var17: LinkedHashMap = new LinkedHashMap(f9.q.d(var18.size()));
+                  val var17: LinkedHashMap = new LinkedHashMap(u9.q.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
                      val var20: Any = var5.getKey();
-                     val var21: JsonElement = var5.getValue() as JsonElement;
-                     val var6: kotlinx.serialization.json.Json.a = Json.d;
+                     val var6: JsonElement = var5.getValue() as JsonElement;
+                     val var21: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
+                     var17.put(var20, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

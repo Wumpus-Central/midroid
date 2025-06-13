@@ -190,37 +190,37 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.containerId;
-      val var9: GeneralEventHandlers = this.generalEventHandlers;
+      val var8: java.lang.String = this.containerId;
+      val var11: GeneralEventHandlers = this.generalEventHandlers;
       val var10: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
-      val var11: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var5: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var8: ComponentActionEventHandlers = this.componentActionEventHandlers;
-      val var6: WidthInfo = this.widthInfo;
-      val var1: Boolean = this.shouldAutoPlayGif;
-      val var3: Boolean = this.isForwardedContent;
-      val var2: Boolean = this.isInContainerComponent;
+      val var5: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
+      val var9: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var6: ComponentActionEventHandlers = this.componentActionEventHandlers;
+      val var4: WidthInfo = this.widthInfo;
+      val var2: Boolean = this.shouldAutoPlayGif;
+      val var1: Boolean = this.isForwardedContent;
+      val var3: Boolean = this.isInContainerComponent;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ComponentContext(containerId=");
-      var7.append(var4);
+      var7.append(var8);
       var7.append(", generalEventHandlers=");
-      var7.append(var9);
+      var7.append(var11);
       var7.append(", markdownTextRenderOptions=");
       var7.append(var10);
       var7.append(", markdownTextRenderEventHandlers=");
-      var7.append(var11);
-      var7.append(", mediaItemEventHandlers=");
       var7.append(var5);
+      var7.append(", mediaItemEventHandlers=");
+      var7.append(var9);
       var7.append(", componentActionEventHandlers=");
-      var7.append(var8);
-      var7.append(", widthInfo=");
       var7.append(var6);
+      var7.append(", widthInfo=");
+      var7.append(var4);
       var7.append(", shouldAutoPlayGif=");
-      var7.append(var1);
-      var7.append(", isForwardedContent=");
-      var7.append(var3);
-      var7.append(", isInContainerComponent=");
       var7.append(var2);
+      var7.append(", isForwardedContent=");
+      var7.append(var1);
+      var7.append(", isInContainerComponent=");
+      var7.append(var3);
       var7.append(")");
       return var7.toString();
    }

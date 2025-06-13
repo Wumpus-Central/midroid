@@ -1,6 +1,5 @@
 package com.discord.react_activities
 
-import O3.b
 import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
@@ -17,6 +16,7 @@ import com.discord.theme.ThemeManager
 import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
+import d4.b
 import java.util.concurrent.Future
 import kotlin.jvm.internal.q
 
@@ -29,7 +29,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       q.g(ShareActivity::class.java, "forName(...)");
    }
 
-   protected override fun attachBaseContext(newBase: Context) {
+   protected open fun attachBaseContext(newBase: Context) {
       q.h(var1, "newBase");
       super.attachBaseContext(FontScaleUtilsKt.getFontScaledContext(var1));
       var1 = this.getApplicationContext();
@@ -44,40 +44,40 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public abstract fun getActivityDelegate(): com.discord.react_activities.ReactActivity.ActivityDelegate {
    }
 
-   protected override fun getMainComponentName(): String {
+   protected fun getMainComponentName(): String {
       return this.getNameOfComponent();
    }
 
    public abstract fun getNameOfComponent(): String {
    }
 
-   public override fun onConfigurationChanged(newConfig: Configuration) {
+   public open fun onConfigurationChanged(newConfig: Configuration) {
       q.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
       b.m.a(this, var1);
    }
 
-   protected override fun onCreate(savedInstanceState: Bundle?) {
+   protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      q.g(var3, "getWindow(...)");
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      q.g(var2, "getWindow(...)");
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
       var4.updateWindowBackground(this, true);
    }
 
-   protected override fun onPause() {
+   protected open fun onPause() {
       super.onPause();
       JankStatsAggregator.INSTANCE.disableTracking();
       JSWatchdogManager.INSTANCE.disable();
    }
 
-   protected override fun onResume() {
+   protected open fun onResume() {
       super.onResume();
       JankStatsAggregator.INSTANCE.enableTracking();
       JSWatchdogManager.INSTANCE.enable();
@@ -87,7 +87,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       init {
          q.h(var2, "activity");
          this.this$0 = var1;
-         super((com.facebook.react.ReactActivity)var2, var1.getNameOfComponent());
+         super(var2, var1.getNameOfComponent());
          TTILoggingApplication.Companion.trackActivityDelegateInitialized();
          val var3: CrashReporting = CrashReporting.INSTANCE;
          if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
@@ -99,7 +99,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected override fun createRootView(): com.facebook.react.ReactRootView {
+      protected open fun createRootView(): com.facebook.react.ReactRootView {
          val var1: Context = this.getContext();
          q.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
@@ -108,7 +108,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          return var2;
       }
 
-      protected override fun isFabricEnabled(): Boolean {
+      protected open fun isFabricEnabled(): Boolean {
          return DefaultNewArchitectureEntryPoint.getFabricEnabled();
       }
    }

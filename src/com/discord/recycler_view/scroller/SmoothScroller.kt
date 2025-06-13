@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.i
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
-import e9.n
 import kotlin.jvm.internal.q
+import t9.n
 
 internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i {
    private final val targetAlignment: TargetAlignment

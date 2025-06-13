@@ -51,8 +51,8 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
          ) {
             q.h(var1, "messageId");
             val var9: Function1 = ChatViewEventHandler.access$getEmitReactEvent$p(this.this$0);
-            val var11: java.lang.String = MessageId.toString-impl(var1);
-            val var10: java.lang.String = ChannelId.toString-impl(var2);
+            val var10: java.lang.String = MessageId.toString-impl(var1);
+            val var11: java.lang.String = ChannelId.toString-impl(var2);
             val var8: Int;
             if (var4 != null) {
                var8 = var4;
@@ -72,7 +72,7 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
                var1 = "";
             }
 
-            var9.invoke(new LongPressMessageEvent(var11, var10, var8, var1, var6, var7));
+            var9.invoke(new LongPressMessageEvent(var10, var11, var8, var1, var6, var7));
          }
       };
       this.onMessageTapped = new Function2(this) {
@@ -251,9 +251,9 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
       }
 
       val var9: Function1 = this.emitReactEvent;
-      val var7: Boolean = var1.isAtBottom();
-      val var6: Boolean = var1.isDragging();
-      val var8: Boolean = var1.isSettling();
+      val var6: Boolean = var1.isAtBottom();
+      val var8: Boolean = var1.isDragging();
+      val var7: Boolean = var1.isSettling();
       val var5: Boolean;
       if (!var1.isNearBottom() && !var1.isAtBottom()) {
          var5 = true;
@@ -263,11 +263,11 @@ public open class ChatViewEventHandler(context: Context, reactEvents: ReactEvent
 
       var9.invoke(
          new ChatScrollPositionEvent(
-            var7,
+            var6,
             var3,
             var4,
-            var6,
             var8,
+            var7,
             var5,
             var1.isFirstMessageVisible(),
             var1.getFirstVisibleMessageIndex(),

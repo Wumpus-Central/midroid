@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
-import Xa.f
 import com.discord.primitives.ChannelId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class CommandMentionContentNode(channelId: ChannelId, commandId: String, commandName: String, commandKey: String, content: List<ContentNode>) : CommandMentionContentNode(
@@ -84,24 +84,24 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: java.lang.String = this.commandId;
-      val var6: java.lang.String = this.commandName;
-      val var1: java.lang.String = this.commandKey;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CommandMentionContentNode(channelId=");
-      var3.append(var5);
-      var3.append(", commandId=");
-      var3.append(var4);
-      var3.append(", commandName=");
-      var3.append(var6);
-      var3.append(", commandKey=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.commandId;
+      val var5: java.lang.String = this.commandName;
+      val var6: java.lang.String = this.commandKey;
+      val var4: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CommandMentionContentNode(channelId=");
+      var2.append(var3);
+      var2.append(", commandId=");
+      var2.append(var1);
+      var2.append(", commandName=");
+      var2.append(var5);
+      var2.append(", commandKey=");
+      var2.append(var6);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

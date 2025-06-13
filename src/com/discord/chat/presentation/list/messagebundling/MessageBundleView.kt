@@ -164,10 +164,10 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var var14: Boolean;
             label61: {
                var8 = i.A0(var25, var22);
-               var30 = this.spineItemDecoration;
+               var26 = this.spineItemDecoration;
                if (var1.getReferenceMessageRows().isEmpty()) {
-                  val var26: java.lang.String = var1.getViewMoreText();
-                  if (var26 == null || var26.length() == 0) {
+                  val var30: java.lang.String = var1.getViewMoreText();
+                  if (var30 == null || var30.length() == 0) {
                      var14 = false;
                      break label61;
                   }
@@ -176,14 +176,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var14 = true;
             }
 
-            var30.setShowThreadSpine(var14);
-            val var31: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
-            val var27: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
-            if (var27 != null) {
-               var31.configure(var27, new h(var3));
+            var26.setShowThreadSpine(var14);
+            val var27: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
+            val var31: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
+            if (var31 != null) {
+               var27.configure(var31, new h(var3));
             }
 
-            q.e(var31);
+            q.e(var27);
             var var6: Boolean;
             if (var1.getMessageFrame() != null) {
                var6 = 1;
@@ -197,7 +197,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var6 = 8;
             }
 
-            var31.setVisibility(var6);
+            var27.setVisibility(var6);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
             this.adapter.setItems(i.c0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
@@ -233,7 +233,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
    }
 
-   @Xa.f
+   @mb.f
    public data class MessageBundle(messageFrame: MessageBundleHeader? = null,
       rows: List<MessageRow>,
       truncationThreshold: Float? = null,
@@ -249,7 +249,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new ab.f(MessageRow.$serializer.INSTANCE), null, new ab.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new pb.f(MessageRow.$serializer.INSTANCE), null, new pb.f(var0), null};
       }
 
       init {
@@ -342,22 +342,22 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var5: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
          val var2: java.util.List = this.rows;
-         val var6: java.lang.Float = this.truncationThreshold;
+         val var4: java.lang.Float = this.truncationThreshold;
          val var1: java.util.List = this.referenceMessageRows;
-         val var4: java.lang.String = this.viewMoreText;
+         val var5: java.lang.String = this.viewMoreText;
          val var3: StringBuilder = new StringBuilder();
          var3.append("MessageBundle(messageFrame=");
-         var3.append(var5);
+         var3.append(var6);
          var3.append(", rows=");
          var3.append(var2);
          var3.append(", truncationThreshold=");
-         var3.append(var6);
+         var3.append(var4);
          var3.append(", referenceMessageRows=");
          var3.append(var1);
          var3.append(", viewMoreText=");
-         var3.append(var4);
+         var3.append(var5);
          var3.append(")");
          return var3.toString();
       }

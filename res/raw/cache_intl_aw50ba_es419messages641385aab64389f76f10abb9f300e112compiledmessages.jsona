@@ -5535,6 +5535,7 @@
   ],
   "2p9FMz": "Cambiar estado personalizado",
   "E45wvL": "Eliminar después",
+  "+14vvb": "Eliminar todo",
   "mLs2c3": [
     "Eliminar en ",
     [
@@ -5703,6 +5704,13 @@
   "hA60Ul": "Haz que tu estado llame la atención con una etiqueta preestablecida",
   "jrzHRk": "Etiquetas para estados personalizados",
   "GQmLra": "Hoy",
+  "bI7n9v": [
+    "Mañana a las ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "¿Qué estás haciendo?",
   "xod36+": "¿En qué estás pensando?",
   "BwbOAA": "Azul oscuro",

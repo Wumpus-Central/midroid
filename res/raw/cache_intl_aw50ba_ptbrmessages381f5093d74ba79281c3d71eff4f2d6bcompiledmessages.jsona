@@ -5528,6 +5528,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Limpar em",
   "mLs2c3": [
     "Limpar em ",
     [
@@ -5696,6 +5697,13 @@
   "hA60Ul": "Faça seu status se destacar com uma tag predefinida",
   "jrzHRk": "Tags de status personalizado",
   "GQmLra": "Hoje",
+  "bI7n9v": [
+    "Amanhã às ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "Qual é a boa?",
   "xod36+": "No que você está pensando?",
   "BwbOAA": "Azul escuro",

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.forwarding
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
@@ -70,9 +70,9 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.timestampLabel.hashCode();
-      val var3: Int = this.originLabel.hashCode();
-      val var4: Int = this.accessibilityLabel.hashCode();
+      val var3: Int = this.timestampLabel.hashCode();
+      val var4: Int = this.originLabel.hashCode();
+      val var2: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
          var1 = 0;
@@ -80,25 +80,25 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var4) * 31 + var1;
+      return ((var3 * 31 + var4) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = this.timestampLabel;
-      val var3: java.lang.String = this.originLabel;
-      val var5: java.lang.String = this.accessibilityLabel;
-      val var1: java.lang.String = this.originIconUrl;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardFooterInfo(timestampLabel=");
-      var4.append(var2);
-      var4.append(", originLabel=");
-      var4.append(var3);
-      var4.append(", accessibilityLabel=");
-      var4.append(var5);
-      var4.append(", originIconUrl=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.lang.String = this.originLabel;
+      val var3: java.lang.String = this.accessibilityLabel;
+      val var4: java.lang.String = this.originIconUrl;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ForwardFooterInfo(timestampLabel=");
+      var5.append(var2);
+      var5.append(", originLabel=");
+      var5.append(var1);
+      var5.append(", accessibilityLabel=");
+      var5.append(var3);
+      var5.append(", originIconUrl=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -812,7 +812,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                if (var4 != 2) {
                   if (var4 != 3) {
                      if (var4 != 4) {
-                        throw new e9.n();
+                        throw new t9.n();
                      }
 
                      var4 = 27;
@@ -877,7 +877,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
 
             if (var4 != 2) {
                if (var4 != 3) {
-                  throw new e9.n();
+                  throw new t9.n();
                }
 
                var4 = 38;
@@ -899,7 +899,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                      throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                   }
 
-                  throw new e9.n();
+                  throw new t9.n();
                }
 
                throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
@@ -937,11 +937,11 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var8 = null;
          }
 
-         val var12: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
+         val var13: EmbedMessageAccessory = var10 as EmbedMessageAccessory;
          val var5: Int = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
-         var2 = var12.getRadiusPx();
-         val var13: OnLongClickListener = var12.getOnLongClick();
-         val var98: SpoilerAttributes = var12.getSpoilerAttributes();
+         var2 = var13.getRadiusPx();
+         val var12: OnLongClickListener = var13.getOnLongClick();
+         val var98: SpoilerAttributes = var13.getSpoilerAttributes();
          val var99: SpoilerConfig;
          if (var98 != null) {
             var99 = var98.configure(new i(this, var1), new u(this, var10));
@@ -949,7 +949,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var99 = null;
          }
 
-         var11.bind(var8, var12, var5, var2, new E(this, var1), var99, new F(var1, var10, this), var13, var12.getPortal());
+         var11.bind(var8, var13, var5, var2, new E(this, var1), var99, new F(var1, var10, this), var12, var13.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
          (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new G(this, var10));
       } else if (var10 is ReferralMessageAccessory) {
@@ -1278,9 +1278,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var115 = null;
          }
 
-         val var173: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
-         val var169: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
-         val var163: K = new K(this);
+         val var169: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
+         val var163: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
+         val var173: K = new K(this);
          val var72: B;
          if (var53 != null) {
             var72 = new B(var53);
@@ -1290,14 +1290,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
 
          var153.bind(
             var115,
-            var169,
             var163,
+            var173,
             var72,
             new M(this, var1),
             new O(this, var10),
-            var173.isForwardedContent(),
-            var173.getShouldAutoPlayGif(),
-            var173.getConstrainedWidth()
+            var169.isForwardedContent(),
+            var169.getShouldAutoPlayGif(),
+            var169.getConstrainedWidth()
          );
       } else if (var10 is UploadProgressMessageAccessory) {
          val var116: UploadProgressViewHolder = var1 as UploadProgressViewHolder;
@@ -1381,15 +1381,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          });
       } else if (var10 is ForumPostActionBar) {
          val var119: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
-         val var164: ForumPostActionBar = var10 as ForumPostActionBar;
-         val var154: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
-         val var176: l = new l(this);
-         val var170: m = new m(this);
-         val var178: n = new n(this);
-         val var174: o = new o(this);
-         val var177: p = new p(this);
-         val var175: r = new r(this);
-         val var139: s = new s(this);
+         val var178: ForumPostActionBar = var10 as ForumPostActionBar;
+         val var174: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
+         val var177: l = new l(this);
+         val var154: m = new m(this);
+         val var176: n = new n(this);
+         val var164: o = new o(this);
+         val var175: p = new p(this);
+         val var139: r = new r(this);
+         val var170: s = new s(this);
          var var31: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1397,15 +1397,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          }
 
          var119.bind(
-            var164,
-            var154,
-            var176,
-            var170,
             var178,
             var174,
             var177,
+            var154,
+            var176,
+            var164,
             var175,
             var139,
+            var170,
             new Function2(var31) {
                {
                   super(
@@ -1427,9 +1427,9 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          );
       } else if (var10 is FileAttachmentMessageAccessory) {
          val var78: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
-         val var140: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
-         val var120: t = new t(this);
-         val var155: SpoilerAttributes = var140.getSpoilerAttributes();
+         val var120: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
+         val var140: t = new t(this);
+         val var155: SpoilerAttributes = var120.getSpoilerAttributes();
          val var32: SpoilerConfig;
          if (var155 != null) {
             var32 = SpoilerAttributes.configure$default(var155, new v(this, var1), null, 2, null);
@@ -1437,10 +1437,10 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var32 = null;
          }
 
-         var78.bind(var140, var120, var32);
+         var78.bind(var120, var140, var32);
       } else if (var10 is MessageComponentsAccessory) {
          val var165: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
-         val var156: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
+         val var171: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
          var var122: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.q.y("eventHandler");
@@ -1454,7 +1454,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var79 = null;
          }
 
-         var165.bind(var156, this.botComponentProvider, new x(var10, this), var79, new y(this, var1), new z(this, var10), var122);
+         var165.bind(var171, this.botComponentProvider, new x(var10, this), var79, new y(this, var1), new z(this, var10), var122);
       } else if (var10 is FlaggedMessageEmbedAccessory) {
          (var1 as FlaggedMessageEmbedViewHolder).bind(var10 as FlaggedMessageEmbedAccessory);
       } else if (var10 is FlaggedMessageActionBarAccessory) {
@@ -1812,7 +1812,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                   throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                }
 
-               throw new e9.n();
+               throw new t9.n();
             }
 
             throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
@@ -1881,14 +1881,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 5:
             val var69: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var69, "getContext(...)");
-            val var86: GuildInviteView = new GuildInviteView(var69, null, 0, 6, null);
+            val var87: GuildInviteView = new GuildInviteView(var69, null, 0, 6, null);
             var var70: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var70 = null;
             }
 
-            var17 = new GuildInviteViewHolder(var86, var70);
+            var17 = new GuildInviteViewHolder(var87, var70);
             break;
          case 6:
             val var68: Context = var1.getContext();
@@ -1913,14 +1913,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 11:
             val var63: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var63, "getContext(...)");
-            val var85: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
+            val var86: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
             var var64: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var64 = null;
             }
 
-            var17 = new FileAttachmentViewHolder(var85, var64);
+            var17 = new FileAttachmentViewHolder(var86, var64);
             break;
          case 12:
             val var62: Context = var1.getContext();
@@ -1935,7 +1935,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 14:
             val var59: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var59, "getContext(...)");
-            val var84: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
+            val var85: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
             var var60: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
@@ -1943,7 +1943,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
 
             var17 = new WelcomeStickerViewHolder(
-               var84,
+               var85,
                new Function2(var60) {
                   {
                      super(
@@ -1967,14 +1967,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 15:
             val var57: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var57, "getContext(...)");
-            val var83: GuildEventInviteView = new GuildEventInviteView(var57, null, 0, 6, null);
+            val var84: GuildEventInviteView = new GuildEventInviteView(var57, null, 0, 6, null);
             var var58: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var58 = null;
             }
 
-            var17 = new GuildEventInviteViewHolder(var83, var58, new L(this));
+            var17 = new GuildEventInviteViewHolder(var84, var58, new L(this));
             break;
          case 16:
             val var56: Context = var1.getContext();
@@ -1989,14 +1989,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 18:
             val var53: Context = var1.getContext();
             kotlin.jvm.internal.q.g(var53, "getContext(...)");
-            val var87: EphemeralIndicationView = new EphemeralIndicationView(var53, null, 0, 6, null);
+            val var83: EphemeralIndicationView = new EphemeralIndicationView(var53, null, 0, 6, null);
             var var54: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.q.y("eventHandler");
                var54 = null;
             }
 
-            var17 = new EphemeralIndicationViewHolder(var87, var54);
+            var17 = new EphemeralIndicationViewHolder(var83, var54);
             break;
          case 19:
             val var52: Context = var1.getContext();

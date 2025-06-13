@@ -127,7 +127,7 @@ public class PerformanceTracing : MarkerListener {
    private fun stopTransaction(transaction: TraceTransaction) {
       val var2: Y = this.ongoingTransactions.get(var1);
       if (var2 != null) {
-         var2.l();
+         var2.i();
       }
 
       this.ongoingTransactions.remove(var1);
@@ -202,7 +202,7 @@ public class PerformanceTracing : MarkerListener {
       // 048: aload 2
       // 049: ifnull 059
       // 04c: aload 2
-      // 04d: invokeinterface io/sentry/ISpan.l ()V 1
+      // 04d: invokeinterface io/sentry/ISpan.i ()V 1
       // 052: goto 059
       // 055: astore 1
       // 056: goto 1fa
@@ -223,7 +223,7 @@ public class PerformanceTracing : MarkerListener {
       // 079: aload 2
       // 07a: ifnull 083
       // 07d: aload 2
-      // 07e: invokeinterface io/sentry/ISpan.l ()V 1
+      // 07e: invokeinterface io/sentry/ISpan.i ()V 1
       // 083: aload 1
       // 084: invokevirtual com/discord/crash_reporting/PerformanceTracing$TransactionMarker.getName ()Ljava/lang/String;
       // 087: ldc "PROCESS_PACKAGE_MODULE"
@@ -273,7 +273,7 @@ public class PerformanceTracing : MarkerListener {
       // 0e2: ifnull 117
       // 0e5: aload 2
       // 0e6: aload 4
-      // 0e8: invokeinterface io/sentry/ISpan.o (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 0e8: invokeinterface io/sentry/ISpan.n (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 0ed: astore 3
       // 0ee: aload 3
       // 0ef: ifnonnull 0f5
@@ -302,7 +302,7 @@ public class PerformanceTracing : MarkerListener {
       // 120: return
       // 121: aload 3
       // 122: aload 4
-      // 124: invokeinterface io/sentry/ISpan.o (Ljava/lang/String;)Lio/sentry/ISpan; 2
+      // 124: invokeinterface io/sentry/ISpan.n (Ljava/lang/String;)Lio/sentry/ISpan; 2
       // 129: astore 2
       // 12a: aload 2
       // 12b: ldc_w "startChild(...)"
@@ -378,7 +378,7 @@ public class PerformanceTracing : MarkerListener {
       // 1c0: aload 2
       // 1c1: ifnull 1f7
       // 1c4: aload 2
-      // 1c5: invokeinterface io/sentry/ISpan.l ()V 1
+      // 1c5: invokeinterface io/sentry/ISpan.i ()V 1
       // 1ca: aload 0
       // 1cb: getfield com/discord/crash_reporting/PerformanceTracing.ongoingSpans Ljava/util/Map;
       // 1ce: aload 4
@@ -492,7 +492,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = m9.a.a(var0);
+         $ENTRIES = B9.a.a(var0);
       }
 
       @JvmStatic
@@ -563,18 +563,18 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.name;
-         val var2: java.lang.String = this.tag;
-         val var4: PerformanceTracing.MarkerEnd = this.markerEnd;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TransactionMarker(name=");
-         var3.append(var1);
-         var3.append(", tag=");
-         var3.append(var2);
-         var3.append(", markerEnd=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var2: java.lang.String = this.name;
+         val var3: java.lang.String = this.tag;
+         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TransactionMarker(name=");
+         var4.append(var2);
+         var4.append(", tag=");
+         var4.append(var3);
+         var4.append(", markerEnd=");
+         var4.append(var1);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

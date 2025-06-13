@@ -5,7 +5,6 @@ import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.logging.Log
-import e9.n
 import io.sentry.Hint
 import io.sentry.IScope
 import io.sentry.SentryEvent
@@ -13,7 +12,7 @@ import io.sentry.e
 import io.sentry.e2
 import io.sentry.p1
 import io.sentry.android.core.SentryAndroidOptions
-import io.sentry.android.core.x0
+import io.sentry.android.core.w0
 import java.io.File
 import java.net.ConnectException
 import java.net.SocketException
@@ -27,6 +26,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import t9.n
 
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
@@ -50,7 +50,7 @@ public object CrashReporting {
    @JvmStatic
    fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
       q.h(var3, "sentryScope");
-      var3.t(i.e(var0));
+      var3.s(i.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: e2;
       if (var4 != 1) {
@@ -82,16 +82,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var8: File = var2.getCacheDir();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var8);
-      var6.append("/sentry");
-      var5.setCacheDirPath(var6.toString());
+      val var6: File = var2.getCacheDir();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append(var6);
+      var8.append("/sentry");
+      var5.setCacheDirPath(var8.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("cd206534-e27f-424b-bbfb-92c4f1bec9c2");
+      var5.setProguardUuid("c4b3723a-9138-4cb9-ab93-767f52957298");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -104,7 +104,7 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = f9.q.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = u9.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
@@ -120,7 +120,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", e9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", t9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
@@ -193,7 +193,7 @@ public object CrashReporting {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
       }
 
-      x0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
+      w0.g(var1, new c(var5, var2, var1, this.getSampleRate(var1)));
       isCrashedLastRun = p1.v();
    }
 
@@ -208,7 +208,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = m9.a.a(var0);
+         $ENTRIES = B9.a.a(var0);
       }
 
       @JvmStatic

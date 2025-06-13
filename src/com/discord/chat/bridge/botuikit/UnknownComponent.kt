@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component {

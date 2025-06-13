@@ -109,7 +109,7 @@ public enum class ReactAsset {
    fun {
       val var0: Array<ReactAsset> = $values();
       $VALUES = var0;
-      $ENTRIES = m9.a.a(var0);
+      $ENTRIES = B9.a.a(var0);
    }
 
    @JvmStatic

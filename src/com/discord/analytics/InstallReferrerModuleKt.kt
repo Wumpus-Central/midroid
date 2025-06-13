@@ -1,13 +1,13 @@
 package com.discord.analytics
 
-import Q0.a
+import A9.b
 import com.android.installreferrer.api.InstallReferrerClient
+import f1.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import l9.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -26,7 +26,7 @@ private suspend fun InstallReferrerClient.await(): Int {
 
       @Override
       public void onInstallReferrerServiceDisconnected() {
-         if (this.$continuation.d()) {
+         if (this.$continuation.c()) {
             kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
          }
       }
@@ -50,11 +50,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: kotlin.Result.a = Result.k;
+               val var5: kotlin.Result.a = Result.k;
                var2.a();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var5: kotlin.Result.a = Result.k;
+               val var6: kotlin.Result.a = Result.k;
                Result.b(c.a(var3));
                return;
             }
@@ -66,22 +66,22 @@ private suspend fun InstallReferrerClient.await(): Int {
    try {
       val var4: kotlin.Result.a = Result.k;
       var0.d(var3);
-      var7 = Result.b(Unit.a);
+      var8 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var10: kotlin.Result.a = Result.k;
-      var7 = Result.b(c.a(var5));
+      val var7: kotlin.Result.a = Result.k;
+      var8 = Result.b(c.a(var5));
       break label20;
    }
 
-   val var8: java.lang.Throwable = Result.e(var7);
-   if (var8 != null) {
-      var2.resumeWith(Result.b(c.a(var8)));
+   val var9: java.lang.Throwable = Result.e(var8);
+   if (var9 != null) {
+      var2.resumeWith(Result.b(c.a(var9)));
    }
 
-   val var9: Any = var2.z();
-   if (var9 === b.e()) {
+   val var10: Any = var2.z();
+   if (var10 === b.e()) {
       g.c(var1);
    }
 
-   return var9;
+   return var10;
 }

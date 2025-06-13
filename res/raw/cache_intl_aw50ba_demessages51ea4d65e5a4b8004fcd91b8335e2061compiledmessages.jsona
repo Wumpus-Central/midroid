@@ -5525,6 +5525,7 @@
   ],
   "2p9FMz": "Personalisierten Status ändern",
   "E45wvL": "Löschen nach",
+  "+14vvb": "Löschen um",
   "mLs2c3": [
     "In ",
     [
@@ -5695,6 +5696,13 @@
   "hA60Ul": "Hebe deinen Status mit einer Tag-Vorlage hervor",
   "jrzHRk": "Personalisierte Status-Tags",
   "GQmLra": "Heute",
+  "bI7n9v": [
+    "Morgen um ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "Was geht ab?",
   "xod36+": "Was geht dir durch den Kopf?",
   "BwbOAA": "Dunkelblau",

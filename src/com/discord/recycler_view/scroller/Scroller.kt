@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
-import e9.n
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
+import t9.n
 
 public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView

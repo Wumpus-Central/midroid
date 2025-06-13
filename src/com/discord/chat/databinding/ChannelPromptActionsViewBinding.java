@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import t0.a;
+import z0.a;
 
 public final class ChannelPromptActionsViewBinding implements ViewBinding {
    public final DCDButton cameraButton;
@@ -25,8 +25,8 @@ public final class ChannelPromptActionsViewBinding implements ViewBinding {
 
    public static ChannelPromptActionsViewBinding bind(View var0) {
       int var1 = R.id.camera_button;
-      DCDButton var4 = (DCDButton)a.a(var0, var1);
-      if (var4 != null) {
+      DCDButton var2 = (DCDButton)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.emoji_button;
          DCDButton var5 = (DCDButton)a.a(var0, var1);
          if (var5 != null) {
@@ -34,9 +34,9 @@ public final class ChannelPromptActionsViewBinding implements ViewBinding {
             DCDButton var3 = (DCDButton)a.a(var0, var1);
             if (var3 != null) {
                var1 = R.id.gif_button;
-               DCDButton var2 = (DCDButton)a.a(var0, var1);
-               if (var2 != null) {
-                  return new ChannelPromptActionsViewBinding(var0, var4, var5, var3, var2);
+               DCDButton var4 = (DCDButton)a.a(var0, var1);
+               if (var4 != null) {
+                  return new ChannelPromptActionsViewBinding(var0, var2, var5, var3, var4);
                }
             }
          }

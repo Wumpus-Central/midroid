@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.chat.bridge.contentnode.CommandMentionContentNode
 import com.discord.primitives.ChannelId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -88,17 +88,17 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.channelId;
       val var4: java.lang.String = this.commandId;
-      val var1: java.lang.String = this.commandName;
+      val var2: java.lang.String = this.commandName;
       val var5: java.lang.String = this.commandKey;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapCommandData(channelId=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", commandId=");
       var3.append(var4);
       var3.append(", commandName=");
-      var3.append(var1);
+      var3.append(var2);
       var3.append(", commandKey=");
       var3.append(var5);
       var3.append(")");

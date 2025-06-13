@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import ab.E0
-import ab.U
-import f9.q
 import kotlinx.serialization.KSerializer
+import pb.E0
+import pb.U
+import u9.q
 
-@Xa.f
+@mb.f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
    public final val metadata: AppManifestMetadata
    public final val hashes: Map<String, String>

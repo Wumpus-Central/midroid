@@ -5,9 +5,9 @@ import com.google.android.exoplayer2.upstream.DataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSource.Factory
 import com.google.android.exoplayer2.upstream.cache.SimpleCache
-import e5.s
 import java.io.File
 import kotlin.jvm.internal.q
+import t5.s
 
 public class CacheDataSourceFactory private constructor(defaultDatasourceFactory: Factory = new Factory()) :
    com.google.android.exoplayer2.upstream.DataSource.Factory {
@@ -43,7 +43,7 @@ public class CacheDataSourceFactory private constructor(defaultDatasourceFactory
       private const val CACHE_DIR_NAME: String
 
       private fun getSimpleCache(context: Context): SimpleCache {
-         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new f5.h(104857600L), new i4.c(var1));
+         return new SimpleCache(new File(var1.getCacheDir(), "app_media_player"), new u5.h(104857600L), new x4.c(var1));
       }
 
       public fun getInstance(): CacheDataSourceFactory {

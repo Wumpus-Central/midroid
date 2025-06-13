@@ -5536,6 +5536,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Effacer à",
   "mLs2c3": [
     "Supprimer dans ",
     [
@@ -5704,6 +5705,13 @@
   "hA60Ul": "Fais ressortir ton statut avec un tag prédéfini",
   "jrzHRk": "Tags de statut personnalisé",
   "GQmLra": "Aujourd'hui",
+  "bI7n9v": [
+    "Demain à ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "Quoi d'neuf ?",
   "xod36+": "À quoi tu penses, en ce moment ?",
   "BwbOAA": "Bleu foncé",

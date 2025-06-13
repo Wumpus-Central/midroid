@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 285205
-  versionName: 285.5 - Alpha
+  versionCode: 285206
+  versionName: 285.6 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -64,8 +64,12 @@ doNotCompress:
 - META-INF/androidx.print_print.version
 - META-INF/androidx.profileinstaller_profileinstaller.version
 - META-INF/androidx.recyclerview_recyclerview.version
+- META-INF/androidx.room_room-ktx.version
+- META-INF/androidx.room_room-runtime.version
 - META-INF/androidx.savedstate_savedstate.version
 - META-INF/androidx.sharetarget_sharetarget.version
+- META-INF/androidx.sqlite_sqlite-framework.version
+- META-INF/androidx.sqlite_sqlite.version
 - META-INF/androidx.startup_startup-runtime.version
 - META-INF/androidx.swiperefreshlayout_swiperefreshlayout.version
 - META-INF/androidx.tracing_tracing.version
@@ -78,14 +82,15 @@ doNotCompress:
 - META-INF/androidx.webkit_webkit.version
 - META-INF/androidx.window.extensions.core_core.version
 - META-INF/androidx.window_window.version
+- META-INF/androidx.work_work-runtime.version
 - META-INF/com.google.android.material_material.version
 - META-INF/kotlinx_coroutines_android.version
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/E9.b
-- META-INF/services/Na.z
-- META-INF/services/Sa.t
+- META-INF/services/T9.b
+- META-INF/services/cb.z
+- META-INF/services/hb.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

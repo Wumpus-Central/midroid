@@ -5531,6 +5531,7 @@
   ],
   "2p9FMz": "Cambiar estado personalizado",
   "E45wvL": "Borrar después de",
+  "+14vvb": "Borrar a la(s)",
   "mLs2c3": [
     "Borrar en ",
     [
@@ -5699,6 +5700,13 @@
   "hA60Ul": "Haz que tu estado destaque con una etiqueta predefinida",
   "jrzHRk": "Etiquetas de estado personalizado",
   "GQmLra": "Hoy",
+  "bI7n9v": [
+    "Mañana a la(s) ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "¿Qué se cuece?",
   "xod36+": "¿En qué piensas?",
   "BwbOAA": "Azul oscuro",

@@ -1,6 +1,5 @@
 package com.discord.notifications.api
 
-import Ya.a
 import com.discord.primitives.ChannelId
 import java.util.ArrayList
 import kotlin.jvm.internal.q
@@ -8,6 +7,7 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
+import nb.a
 
 public object ChannelListSerializer : KSerializer {
    public open val descriptor: SerialDescriptor

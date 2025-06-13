@@ -1,5 +1,13 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
+import F1.a
+import F1.b
+import F1.c
+import F1.d
+import F1.e
+import F1.f
+import F1.g
+import F1.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -16,14 +24,6 @@ import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.M
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import q1.a
-import q1.b
-import q1.c
-import q1.d
-import q1.e
-import q1.f
-import q1.g
-import q1.h
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,

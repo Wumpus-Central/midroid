@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransformedUser>) : UserSearchData {
@@ -38,12 +38,12 @@ internal data class UserSearchUpdateUsersData(payload: List<UserSearchTransforme
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.payload;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UserSearchUpdateUsersData(payload=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.payload;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UserSearchUpdateUsersData(payload=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

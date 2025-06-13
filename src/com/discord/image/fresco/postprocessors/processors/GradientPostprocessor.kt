@@ -7,9 +7,9 @@ import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import com.discord.image.fresco.postprocessors.PostProcessor.Gradient
 import com.facebook.imagepipeline.request.BasePostprocessor
-import e9.n
-import e9.s
 import kotlin.jvm.internal.q
+import t9.n
+import t9.s
 
 internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
    private final val gradient: Gradient
@@ -20,7 +20,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       this.gradient = var1;
    }
 
-   public override fun process(bitmap: Bitmap) {
+   public open fun process(bitmap: Bitmap) {
       q.h(var1, "bitmap");
       val var10: Int = GradientPostprocessor.WhenMappings.$EnumSwitchMapping$0[this.gradient.getDirection().ordinal()];
       val var17: Pair;
@@ -57,7 +57,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
       val var13: GradientPostprocessor.Companion.Point = var17.a() as GradientPostprocessor.Companion.Point;
       val var14: GradientPostprocessor.Companion.Point = var17.b() as GradientPostprocessor.Companion.Point;
       val var18: Canvas = new Canvas(var1);
-      val var6: Float = var1.getWidth();
+      val var3: Float = var1.getWidth();
       val var5: Float = var1.getHeight();
       val var15: Paint = new Paint();
       var15.setShader(
@@ -71,7 +71,7 @@ internal class GradientPostprocessor(gradient: Gradient) : BasePostprocessor {
             TileMode.CLAMP
          )
       );
-      var18.drawRect(0.0F, 0.0F, var6, var5, var15);
+      var18.drawRect(0.0F, 0.0F, var3, var5, var15);
    }
 
    public companion object {

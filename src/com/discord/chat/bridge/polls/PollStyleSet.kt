@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import Xa.f
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class PollStyleSet(border: Int? = null,
@@ -297,39 +297,39 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var4: Int = this.border;
+      val var6: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var5: Int = this.fill;
-      val var10: Int = this.label;
+      val var11: Int = this.fill;
+      val var3: Int = this.label;
       val var1: Float = this.opacity;
-      val var9: Int = this.answerBackground;
-      val var11: Int = this.answerFill;
-      val var3: PollRadioStyle = this.radioStyle;
-      val var6: Int = this.radioBackground;
-      val var7: Int = this.radioForeground;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("PollStyleSet(border=");
-      var8.append(var4);
-      var8.append(", borderWidth=");
-      var8.append(var2);
-      var8.append(", fill=");
-      var8.append(var5);
-      var8.append(", label=");
-      var8.append(var10);
-      var8.append(", opacity=");
-      var8.append(var1);
-      var8.append(", answerBackground=");
-      var8.append(var9);
-      var8.append(", answerFill=");
-      var8.append(var11);
-      var8.append(", radioStyle=");
-      var8.append(var3);
-      var8.append(", radioBackground=");
-      var8.append(var6);
-      var8.append(", radioForeground=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var5: Int = this.answerBackground;
+      val var9: Int = this.answerFill;
+      val var4: PollRadioStyle = this.radioStyle;
+      val var7: Int = this.radioBackground;
+      val var8: Int = this.radioForeground;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("PollStyleSet(border=");
+      var10.append(var6);
+      var10.append(", borderWidth=");
+      var10.append(var2);
+      var10.append(", fill=");
+      var10.append(var11);
+      var10.append(", label=");
+      var10.append(var3);
+      var10.append(", opacity=");
+      var10.append(var1);
+      var10.append(", answerBackground=");
+      var10.append(var5);
+      var10.append(", answerFill=");
+      var10.append(var9);
+      var10.append(", radioStyle=");
+      var10.append(var4);
+      var10.append(", radioBackground=");
+      var10.append(var7);
+      var10.append(", radioForeground=");
+      var10.append(var8);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

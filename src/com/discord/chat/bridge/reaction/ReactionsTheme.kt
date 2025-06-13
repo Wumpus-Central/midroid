@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.reaction
 
-import Xa.f
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -139,25 +139,25 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    public override fun toString(): String {
       val var6: Int = this.reactionBackgroundColor;
       val var2: Int = this.reactionBorderColor;
-      val var7: Int = this.reactionTextColor;
-      val var4: Int = this.activeReactionBackgroundColor;
-      val var5: Int = this.activeReactionBorderColor;
-      val var3: Int = this.activeReactionTextColor;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ReactionsTheme(reactionBackgroundColor=");
-      var1.append(var6);
-      var1.append(", reactionBorderColor=");
-      var1.append(var2);
-      var1.append(", reactionTextColor=");
-      var1.append(var7);
-      var1.append(", activeReactionBackgroundColor=");
-      var1.append(var4);
-      var1.append(", activeReactionBorderColor=");
-      var1.append(var5);
-      var1.append(", activeReactionTextColor=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var5: Int = this.reactionTextColor;
+      val var3: Int = this.activeReactionBackgroundColor;
+      val var1: Int = this.activeReactionBorderColor;
+      val var4: Int = this.activeReactionTextColor;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ReactionsTheme(reactionBackgroundColor=");
+      var7.append(var6);
+      var7.append(", reactionBorderColor=");
+      var7.append(var2);
+      var7.append(", reactionTextColor=");
+      var7.append(var5);
+      var7.append(", activeReactionBackgroundColor=");
+      var7.append(var3);
+      var7.append(", activeReactionBorderColor=");
+      var7.append(var1);
+      var7.append(", activeReactionTextColor=");
+      var7.append(var4);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

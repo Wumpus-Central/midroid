@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.reaction
 
-import Xa.f
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
@@ -117,24 +117,24 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
+      val var4: java.lang.String = this.name;
       val var3: java.lang.String = this.src;
       val var2: java.lang.String = this.displayName;
       val var5: java.lang.String = this.id;
       val var6: java.lang.Boolean = this.animated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MessageReactionEmoji(name=");
-      var4.append(var1);
-      var4.append(", src=");
-      var4.append(var3);
-      var4.append(", displayName=");
-      var4.append(var2);
-      var4.append(", id=");
-      var4.append(var5);
-      var4.append(", animated=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MessageReactionEmoji(name=");
+      var1.append(var4);
+      var1.append(", src=");
+      var1.append(var3);
+      var1.append(", displayName=");
+      var1.append(var2);
+      var1.append(", id=");
+      var1.append(var5);
+      var1.append(", animated=");
+      var1.append(var6);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

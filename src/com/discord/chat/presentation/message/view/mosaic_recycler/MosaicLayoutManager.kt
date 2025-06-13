@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
+import J9.a
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -8,7 +9,6 @@ import androidx.recyclerview.widget.RecyclerView.Recycler
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.R
 import kotlin.jvm.internal.q
-import u9.a
 
 public class MosaicLayoutManager(context: Context) : RecyclerView.LayoutManager {
    public final val context: Context

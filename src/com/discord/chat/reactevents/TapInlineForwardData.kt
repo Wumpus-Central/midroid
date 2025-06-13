@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
+import t9.s
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?, triggerHaptic: Boolean?, location: String?) :
@@ -33,7 +33,7 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
    }
 
    public override fun serialize(): WritableMap {
-      val var2: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
+      val var1: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf(
          s.a("channelId", this.channelId),
          s.a("messageId", this.messageId),
          s.a("targetKind", this.targetKind),
@@ -41,10 +41,10 @@ public class TapInlineForwardData(channelId: String, messageId: String, targetKi
          s.a("location", this.location)
       );
       if (this.embedIndex != null) {
-         NativeMapExtensionsKt.put(var2, "embedIndex", this.embedIndex);
+         NativeMapExtensionsKt.put(var1, "embedIndex", this.embedIndex);
       }
 
-      return var2;
+      return var1;
    }
 
    public companion object {

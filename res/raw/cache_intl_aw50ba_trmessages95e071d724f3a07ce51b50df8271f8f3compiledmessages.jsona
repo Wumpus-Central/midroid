@@ -5510,6 +5510,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Temizle",
   "mLs2c3": [
     [
       6,
@@ -5679,6 +5680,13 @@
   "hA60Ul": "Önceden ayarlanmış bir etiketle durumunu öne çıkar",
   "jrzHRk": "Özel durum etiketleri",
   "GQmLra": "Bugün",
+  "bI7n9v": [
+    "Yarın saat ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "N'aber?",
   "xod36+": "Aklında ne var?",
   "BwbOAA": "Lacivert",

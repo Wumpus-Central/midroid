@@ -80,13 +80,13 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
+      val var3: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ContentAction(tag=");
-      var1.append(var2);
-      var1.append(", data=");
       var1.append(var3);
+      var1.append(", data=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

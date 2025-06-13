@@ -1,13 +1,13 @@
 package com.discord.span.utilities
 
-import T1.c
-import T1.d
 import android.content.Context
 import android.graphics.Paint
 import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
+import i2.c
+import i2.d
 import kotlin.jvm.internal.q
 
 public class GGSansItalicSpan(context: Context) : StyleSpan {

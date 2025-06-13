@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.threads
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class ThreadEmbed(title: String,
@@ -124,27 +124,27 @@ public data class ThreadEmbed(title: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.title;
+      val var4: java.lang.String = this.title;
       val var7: java.lang.String = this.messageCountLabel;
-      val var5: java.lang.String = this.messagePreviewString;
-      val var1: java.lang.Boolean = this.archived;
-      val var2: java.lang.String = this.archivedIconUrl;
-      val var3: ThreadEmbedMessage = this.referencedMessage;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ThreadEmbed(title=");
-      var4.append(var6);
-      var4.append(", messageCountLabel=");
-      var4.append(var7);
-      var4.append(", messagePreviewString=");
-      var4.append(var5);
-      var4.append(", archived=");
-      var4.append(var1);
-      var4.append(", archivedIconUrl=");
-      var4.append(var2);
-      var4.append(", referencedMessage=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.messagePreviewString;
+      val var5: java.lang.Boolean = this.archived;
+      val var1: java.lang.String = this.archivedIconUrl;
+      val var6: ThreadEmbedMessage = this.referencedMessage;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ThreadEmbed(title=");
+      var3.append(var4);
+      var3.append(", messageCountLabel=");
+      var3.append(var7);
+      var3.append(", messagePreviewString=");
+      var3.append(var2);
+      var3.append(", archived=");
+      var3.append(var5);
+      var3.append(", archivedIconUrl=");
+      var3.append(var1);
+      var3.append(", referencedMessage=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

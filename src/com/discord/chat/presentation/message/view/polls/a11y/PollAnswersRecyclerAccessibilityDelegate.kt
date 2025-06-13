@@ -6,7 +6,7 @@ import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
 import com.discord.react_strings.I18nMessage
 import com.discord.react_strings.I18nUtilsKt
-import com.facebook.react.R
+import com.facebook.react.R.string
 import kotlin.jvm.internal.q
 
 public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAccessory) : androidx.core.view.a {
@@ -25,7 +25,7 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
       var2.r0("android.view.ViewGroup");
       val var5: java.lang.String;
       if (PollAnswersRecyclerAccessibilityDelegate.WhenMappings.$EnumSwitchMapping$0[this.accessory.getData().getAnswersInteraction().ordinal()] == 1) {
-         var5 = var1.getContext().getString(R.string.radiogroup_description);
+         var5 = var1.getContext().getString(string.radiogroup_description);
       } else {
          var5 = null;
       }

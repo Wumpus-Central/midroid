@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.policynotice
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -110,25 +110,25 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.classificationId;
+      val var2: java.lang.String = this.classificationId;
       val var4: java.lang.String = this.titleText;
-      val var5: java.lang.String = this.titleIcon;
-      val var7: java.lang.String = this.subtitleText;
-      val var2: java.lang.String = this.descriptionText;
-      val var3: java.lang.String = this.ctaText;
+      val var7: java.lang.String = this.titleIcon;
+      val var3: java.lang.String = this.subtitleText;
+      val var5: java.lang.String = this.descriptionText;
+      val var1: java.lang.String = this.ctaText;
       val var6: StringBuilder = new StringBuilder();
       var6.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var6.append(var1);
+      var6.append(var2);
       var6.append(", titleText=");
       var6.append(var4);
       var6.append(", titleIcon=");
-      var6.append(var5);
-      var6.append(", subtitleText=");
       var6.append(var7);
-      var6.append(", descriptionText=");
-      var6.append(var2);
-      var6.append(", ctaText=");
+      var6.append(", subtitleText=");
       var6.append(var3);
+      var6.append(", descriptionText=");
+      var6.append(var5);
+      var6.append(", ctaText=");
+      var6.append(var1);
       var6.append(")");
       return var6.toString();
    }

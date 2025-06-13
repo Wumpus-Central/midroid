@@ -5531,6 +5531,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Elimina alle ore",
   "mLs2c3": [
     "Svuota in ",
     [
@@ -5699,6 +5700,13 @@
   "hA60Ul": "Fai risaltare il tuo stato con un tag preimpostato",
   "jrzHRk": "Tag dello stato personalizzato",
   "GQmLra": "Oggi",
+  "bI7n9v": [
+    "Domani alle ore ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "Cosa bolle in pentola oggi?",
   "xod36+": "A cosa stai pensando?",
   "BwbOAA": "Blu scuro",

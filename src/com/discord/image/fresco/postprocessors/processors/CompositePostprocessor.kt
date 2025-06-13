@@ -13,7 +13,7 @@ internal class CompositePostprocessor(postprocessors: List<BasePostprocessor>) :
       this.postprocessors = var1;
    }
 
-   public override fun process(destBitmap: Bitmap, sourceBitmap: Bitmap) {
+   public open fun process(destBitmap: Bitmap, sourceBitmap: Bitmap) {
       q.h(var1, "destBitmap");
       q.h(var2, "sourceBitmap");
       val var3: java.util.Iterator = this.postprocessors.iterator();

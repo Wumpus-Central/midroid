@@ -12,9 +12,9 @@ import com.discord.device.utils.IsGestureNavigationEnabledKt
 import com.discord.device.utils.IsTabletKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
 import java.util.TimeZone
 import kotlin.jvm.internal.q
+import t9.s
 
 internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDeviceModuleSpec {
    private final val reactContext: ReactApplicationContext
@@ -44,29 +44,29 @@ internal class DeviceModule(reactContext: ReactApplicationContext) : NativeDevic
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, out Any> {
-      val var8: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
-      val var9: Pair = s.a("device", Build.DEVICE);
+      val var7: Pair = s.a("systemVersion", java.lang.String.valueOf(VERSION.SDK_INT));
+      val var10: Pair = s.a("device", Build.DEVICE);
       val var3: Pair = s.a("deviceModel", Build.MODEL);
-      val var1: Pair = s.a("deviceBrand", Build.BRAND);
-      val var7: Pair = s.a("deviceProduct", Build.PRODUCT);
-      val var5: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
-      val var4: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
-      val var2: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
+      val var4: Pair = s.a("deviceBrand", Build.BRAND);
+      val var8: Pair = s.a("deviceProduct", Build.PRODUCT);
+      val var1: Pair = s.a("deviceManufacturer", Build.MANUFACTURER);
+      val var9: Pair = s.a("isGestureNavigationEnabled", IsGestureNavigationEnabledKt.isGestureNavigationEnabled(this.reactContext));
+      val var5: Pair = s.a("smallestScreenWidth", IsTabletKt.smallestScreenWidthDp(this.reactContext));
       val var6: Pair = s.a("socName", DeviceHardwareInfoKt.socName());
-      val var10: Context = this.reactContext.getApplicationContext();
-      q.g(var10, "getApplicationContext(...)");
-      return f9.q.m(
+      val var2: Context = this.reactContext.getApplicationContext();
+      q.g(var2, "getApplicationContext(...)");
+      return u9.q.m(
          new Pair[]{
-            var8,
-            var9,
-            var3,
-            var1,
             var7,
-            var5,
+            var10,
+            var3,
             var4,
-            var2,
+            var8,
+            var1,
+            var9,
+            var5,
             var6,
-            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var10)),
+            s.a("ramSize", DeviceHardwareInfoKt.ramSize(var2)),
             s.a("maxCpuFreq", DeviceHardwareInfoKt.maxCpuFreq()),
             s.a("timeZone", TimeZone.getDefault().getID())
          }

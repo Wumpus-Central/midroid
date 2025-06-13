@@ -5687,6 +5687,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Clear at",
   "mLs2c3": [
     "Clear in ",
     [
@@ -5855,6 +5856,13 @@
   "hA60Ul": "Make your status stand out with a preset tag",
   "jrzHRk": "Custom status tags",
   "GQmLra": "Today",
+  "bI7n9v": [
+    "Tomorrow at ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "What's cookin'?",
   "xod36+": "What's on your mind?",
   "BwbOAA": "Dark blue",
@@ -7994,6 +8002,7 @@
   "7r4OKi": "Allow synced subscribers to use your Twitch Custom Emoticons in Discord.",
   "xc+Ps7": "Enable Video",
   "qaYzPD": "End Event",
+  "1LTC8P": "Enter account details",
   "o4JNrK": "Enter your confirmation code",
   "ZLRYGR": "Enter email",
   "j2MWLi": "Enter phone number",

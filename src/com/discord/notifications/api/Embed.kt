@@ -1,8 +1,8 @@
 package com.discord.notifications.api
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class Embed(fields: List<EmbedField>? = null) {

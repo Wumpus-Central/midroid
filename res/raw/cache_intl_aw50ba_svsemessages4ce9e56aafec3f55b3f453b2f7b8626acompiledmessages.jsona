@@ -5518,6 +5518,7 @@
       "time"
     ]
   ],
+  "+14vvb": "Rensa kl.",
   "mLs2c3": [
     "Rensa om ",
     [
@@ -5686,6 +5687,13 @@
   "hA60Ul": "Få din status att sticka ut med en förinställd tagg",
   "jrzHRk": "Taggar för anpassad status",
   "GQmLra": "I dag",
+  "bI7n9v": [
+    "I morgon kl. ",
+    [
+      1,
+      "time"
+    ]
+  ],
   "UcdRn5": "Hur är läget?",
   "xod36+": "Vad tänker du på?",
   "BwbOAA": "Mörkblå",

@@ -1,10 +1,10 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class TapShareForumPost(channelId: String, guildId: String) : ReactEvent {
@@ -57,13 +57,13 @@ public data class TapShareForumPost(channelId: String, guildId: String) : ReactE
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.guildId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapShareForumPost(channelId=");
-      var1.append(var3);
-      var1.append(", guildId=");
       var1.append(var2);
+      var1.append(", guildId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

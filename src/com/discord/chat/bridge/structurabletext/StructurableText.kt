@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.structurabletext
 
-import Xa.f
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f(with = StructurableTextSerializer::class)
 public sealed class StructurableText protected constructor() {

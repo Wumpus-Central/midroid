@@ -1,10 +1,10 @@
 package com.discord.emoji_picker.react_events
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {
@@ -64,14 +64,14 @@ internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null
 
    public override fun toString(): String {
       val var3: java.lang.String = this.emojiName;
-      val var1: java.lang.String = this.emojiId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnPressEmojiEvent(emojiName=");
-      var2.append(var3);
-      var2.append(", emojiId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.emojiId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPressEmojiEvent(emojiName=");
+      var1.append(var3);
+      var1.append(", emojiId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

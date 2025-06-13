@@ -11,17 +11,17 @@ internal object MediaProxy {
 
    private fun getMediaProxySize(size: Int): Int {
       var var7: Int = MEDIA_PROXY_SIZES;
-      val var9: ArrayList = new ArrayList();
+      val var8: ArrayList = new ArrayList();
       var var3: Int = ((Object[])var7).length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var8: Int = ((Object[])var7)[var2];
+         val var9: Int = ((Object[])var7)[var2];
          if (((Object[])var7)[var2].intValue() <= var1) {
-            var9.add(var8);
+            var8.add(var9);
          }
       }
 
-      val var11: java.util.Iterator = var9.iterator();
+      val var11: java.util.Iterator = var8.iterator();
       val var6: Boolean = var11.hasNext();
       val var22: Any = null;
       if (!var6) {
@@ -89,12 +89,12 @@ internal object MediaProxy {
          var5 = false;
       }
 
-      val var6: java.lang.String = MediaExtensionKt.getMediaExtension(var5);
-      val var9: StringBuilder = new StringBuilder();
-      var9.append(var1);
-      var9.append(".");
-      var9.append(var6);
-      val var7: Builder = Uri.parse(var9.toString()).buildUpon();
+      var4 = MediaExtensionKt.getMediaExtension(var5);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var1);
+      var6.append(".");
+      var6.append(var4);
+      val var7: Builder = Uri.parse(var6.toString()).buildUpon();
       if (var3 != null && var3 > 0) {
          var7.appendQueryParameter("size", java.lang.String.valueOf(this.getMediaProxySize(var3)));
       }

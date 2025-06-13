@@ -9,7 +9,7 @@ import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.progressindicator.CircularProgressIndicator;
-import t0.a;
+import z0.a;
 
 public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
    private final View rootView;
@@ -46,8 +46,8 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.upload_complete;
-         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-         if (var5 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.upload_complete_background;
             MaterialCardView var7 = (MaterialCardView)a.a(var0, var1);
             if (var7 != null) {
@@ -58,12 +58,12 @@ public final class AttachmentUploadOverlayViewBinding implements ViewBinding {
                   CircularProgressIndicator var3 = (CircularProgressIndicator)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.upload_progress_background;
-                     View var4 = a.a(var0, var1);
-                     if (var4 != null) {
+                     View var6 = a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.upload_progress_layout;
-                        ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new AttachmentUploadOverlayViewBinding(var0, var2, var5, var7, var8, var3, var4, var6);
+                        ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
+                        if (var5 != null) {
+                           return new AttachmentUploadOverlayViewBinding(var0, var2, var4, var7, var8, var3, var6, var5);
                         }
                      }
                   }

@@ -9,10 +9,10 @@ import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
-import e9.s
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.internal.q
 import okhttp3.WebSocket
+import t9.s
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec {
    private final val sockets: ConcurrentHashMap<Int, WebSocket>
@@ -90,7 +90,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return f9.q.m(
+      return u9.q.m(
          new Pair[]{
             s.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             s.a("userId", var1.get().getItem("_userIdKey")),

@@ -34,10 +34,10 @@ public object CodeStyle {
          var var2: Any = var4.get(var3);
          var var1: Any = var2;
          if (var2 == null) {
-            val var5: CodeStyleProviders = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
-            var2 = CodeRules.INSTANCE;
+            var2 = CodeStyleProviders.copy$default(staticCodeStyles, new a(), new b(), null, null, null, null, null, null, 252, null);
+            val var5: CodeRules = CodeRules.INSTANCE;
             var2 = CodeRules.createCodeRule$default(
-               CodeRules.INSTANCE, var5.getDefaultStyleProvider(), ((CodeRules)var2).createCodeLanguageMap(var5), null, 4, null
+               CodeRules.INSTANCE, ((CodeStyleProviders)var2).getDefaultStyleProvider(), var5.createCodeLanguageMap((CodeStyleProviders)var2), null, 4, null
             );
             var1 = new Parser(false, 1, null);
             ((Parser)var1).addRule((Rule)var2);
@@ -74,16 +74,16 @@ public object CodeStyle {
       label16:
       try {
          val var11: kotlin.Result.a = Result.k;
-         var8 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
+         var9 = Result.b(Parser.parse$default(this.getParser(), var7, Unit.a, null, 4, null));
       } catch (var4: java.lang.Throwable) {
-         val var10: kotlin.Result.a = Result.k;
-         var8 = Result.b(kotlin.c.a(var4));
+         val var8: kotlin.Result.a = Result.k;
+         var9 = Result.b(kotlin.c.a(var4));
          break label16;
       }
 
       val var12: java.util.List = kotlin.collections.i.e(new TextNode(var2));
-      var2 = (java.lang.String)var8;
-      if (Result.g(var8)) {
+      var2 = (java.lang.String)var9;
+      if (Result.g(var9)) {
          var2 = var12;
       }
 

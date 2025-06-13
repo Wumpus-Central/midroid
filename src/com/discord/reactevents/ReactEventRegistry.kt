@@ -1,10 +1,10 @@
 package com.discord.reactevents
 
-import e9.s
-import f9.q
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
+import t9.s
+import u9.q
 
 internal class ReactEventRegistry {
    private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()

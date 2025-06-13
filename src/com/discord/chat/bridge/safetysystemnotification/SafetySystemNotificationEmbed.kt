@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class SafetySystemNotificationEmbed(titleText: String,
@@ -148,10 +148,10 @@ public data class SafetySystemNotificationEmbed(titleText: String,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = this.titleText.hashCode();
-      val var9: Int = this.titleIcon.hashCode();
+      val var8: Int = this.titleText.hashCode();
+      val var10: Int = this.titleIcon.hashCode();
       val var7: Int = this.subtitleText.hashCode();
-      val var8: Int = this.descriptionText.hashCode();
+      val var9: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.primaryCtaText == null) {
@@ -192,47 +192,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var10 * 31 + var9) * 31 + var7) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var8 * 31 + var10) * 31 + var7) * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.titleText;
-      val var11: java.lang.String = this.titleIcon;
-      val var1: java.lang.String = this.subtitleText;
-      val var6: java.lang.String = this.descriptionText;
-      val var2: java.lang.String = this.primaryCtaText;
-      val var8: java.lang.String = this.primaryCtaType;
+      val var11: java.lang.String = this.titleText;
+      val var1: java.lang.String = this.titleIcon;
+      val var2: java.lang.String = this.subtitleText;
+      val var4: java.lang.String = this.descriptionText;
+      val var5: java.lang.String = this.primaryCtaText;
+      val var10: java.lang.String = this.primaryCtaType;
       val var7: java.lang.String = this.primaryCtaKey;
-      val var12: java.lang.String = this.secondaryCtaText;
-      val var10: java.lang.String = this.secondaryCtaType;
-      val var9: java.lang.String = this.secondaryCtaKey;
+      val var8: java.lang.String = this.secondaryCtaText;
+      val var9: java.lang.String = this.secondaryCtaType;
+      val var6: java.lang.String = this.secondaryCtaKey;
       val var3: FooterTheme = this.footerTheme;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SafetySystemNotificationEmbed(titleText=");
-      var4.append(var5);
-      var4.append(", titleIcon=");
-      var4.append(var11);
-      var4.append(", subtitleText=");
-      var4.append(var1);
-      var4.append(", descriptionText=");
-      var4.append(var6);
-      var4.append(", primaryCtaText=");
-      var4.append(var2);
-      var4.append(", primaryCtaType=");
-      var4.append(var8);
-      var4.append(", primaryCtaKey=");
-      var4.append(var7);
-      var4.append(", secondaryCtaText=");
-      var4.append(var12);
-      var4.append(", secondaryCtaType=");
-      var4.append(var10);
-      var4.append(", secondaryCtaKey=");
-      var4.append(var9);
-      var4.append(", footerTheme=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("SafetySystemNotificationEmbed(titleText=");
+      var12.append(var11);
+      var12.append(", titleIcon=");
+      var12.append(var1);
+      var12.append(", subtitleText=");
+      var12.append(var2);
+      var12.append(", descriptionText=");
+      var12.append(var4);
+      var12.append(", primaryCtaText=");
+      var12.append(var5);
+      var12.append(", primaryCtaType=");
+      var12.append(var10);
+      var12.append(", primaryCtaKey=");
+      var12.append(var7);
+      var12.append(", secondaryCtaText=");
+      var12.append(var8);
+      var12.append(", secondaryCtaType=");
+      var12.append(var9);
+      var12.append(", secondaryCtaKey=");
+      var12.append(var6);
+      var12.append(", footerTheme=");
+      var12.append(var3);
+      var12.append(")");
+      return var12.toString();
    }
 
    public companion object {

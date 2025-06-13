@@ -11,8 +11,8 @@ import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.measure.NativeViewMeasuringWrapper
 import com.discord.misc.utilities.size.SizeUtilsKt
-import f9.n
 import kotlin.jvm.internal.q
+import u9.n
 
 public class MessageBundleSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    private final val spineDrawer: SpineDrawer
