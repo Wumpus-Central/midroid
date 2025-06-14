@@ -7,7 +7,7 @@ import android.view.Window
 import android.widget.EditText
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.o0
+import androidx.core.view.m0
 import cb.f
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.misc.utilities.coroutines.MainImmediateScopeKt
@@ -22,7 +22,7 @@ fun `access$getInsetsController`(var0: Window, var1: View): WindowInsetsControll
 }
 
 private fun Window.getInsetsController(view: View): WindowInsetsControllerCompat {
-   val var2: WindowInsetsControllerCompat = o0.a(var0, var1);
+   val var2: WindowInsetsControllerCompat = m0.a(var0, var1);
    q.g(var2, "getInsetsController(...)");
    return var2;
 }

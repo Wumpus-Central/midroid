@@ -149,15 +149,14 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
                                     c.b(var1);
                                     var196 = this.L$0 as CoroutineScope;
                                     var3x = this.$client;
-                                    val var10: InstallReferrerModule = this.this$0;
+                                    val var9: InstallReferrerModule = this.this$0;
                                     var4 = this.$referrer;
                                     var5 = this.$prefs;
                                     var1 = this.$promise;
 
-                                    var var199: InstallReferrerClient;
                                     try {
-                                       val var9: a = Result.k;
-                                       var199 = InstallReferrerClient.c(InstallReferrerModule.access$getReactApplicationContext(var10)).a();
+                                       val var10: a = Result.k;
+                                       var199 = InstallReferrerClient.c(InstallReferrerModule.access$getReactApplicationContext(var9)).a();
                                        var3x.j = var199;
                                     } catch (var22: java.lang.Throwable) {
                                        val var175: a = Result.k;

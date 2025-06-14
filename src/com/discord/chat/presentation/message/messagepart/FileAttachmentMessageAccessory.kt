@@ -137,29 +137,29 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Attachment = this.attachment;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var4: java.lang.Float = this.attachmentsOpacity;
-      val var8: SpoilerAttributes = this.spoilerAttributes;
+      val var8: java.lang.Float = this.attachmentsOpacity;
+      val var7: SpoilerAttributes = this.spoilerAttributes;
       val var3: java.lang.String = this.uploaderId;
-      val var6: java.lang.String = this.uploaderItemId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("FileAttachmentMessageAccessory(messageId=");
-      var5.append(var7);
-      var5.append(", attachment=");
-      var5.append(var2);
-      var5.append(", attachmentIndex=");
-      var5.append(var1);
-      var5.append(", attachmentsOpacity=");
-      var5.append(var4);
-      var5.append(", spoilerAttributes=");
-      var5.append(var8);
-      var5.append(", uploaderId=");
-      var5.append(var3);
-      var5.append(", uploaderItemId=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.uploaderItemId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("FileAttachmentMessageAccessory(messageId=");
+      var2.append(var5);
+      var2.append(", attachment=");
+      var2.append(var6);
+      var2.append(", attachmentIndex=");
+      var2.append(var1);
+      var2.append(", attachmentsOpacity=");
+      var2.append(var8);
+      var2.append(", spoilerAttributes=");
+      var2.append(var7);
+      var2.append(", uploaderId=");
+      var2.append(var3);
+      var2.append(", uploaderItemId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

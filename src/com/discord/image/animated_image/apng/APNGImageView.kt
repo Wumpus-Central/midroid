@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
-import androidx.core.view.g0
+import androidx.core.view.e0
 import kotlin.jvm.internal.q
 
 public abstract class APNGImageView : FrameLayout {
@@ -84,10 +84,10 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
-      for (View var5 : g0.a(this)) {
-         val var4: Boolean = q.c(var5, var1);
+      for (View var6 : e0.a(this)) {
+         val var4: Boolean = q.c(var6, var1);
          if (!var4) {
-            this.recycleChild(var5, var2);
+            this.recycleChild(var6, var2);
          }
 
          val var3: Byte;
@@ -97,7 +97,7 @@ public abstract class APNGImageView : FrameLayout {
             var3 = 8;
          }
 
-         var5.setVisibility(var3);
+         var6.setVisibility(var3);
       }
    }
 

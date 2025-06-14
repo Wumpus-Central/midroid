@@ -48,15 +48,15 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          this.initStartMs = System.currentTimeMillis();
       }
 
-      val var3: Log = Log.INSTANCE;
-      val var4: java.lang.String = this.name;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Initializing async dispatcher for ");
-      var2.append(var4);
-      var2.append(", ");
-      var2.append(var1);
-      var2.append(" queued tasks");
-      Log.i$default(var3, var4, var2.toString(), null, 4, null);
+      val var2: Log = Log.INSTANCE;
+      val var3: java.lang.String = this.name;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Initializing async dispatcher for ");
+      var4.append(var3);
+      var4.append(", ");
+      var4.append(var1);
+      var4.append(" queued tasks");
+      Log.i$default(var2, var3, var4.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
@@ -64,14 +64,14 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          val var3: Long = System.currentTimeMillis() - this.initStartMs;
          val var1: Long = this.longDispatchThresholdMs;
          if (var3 < this.longDispatchThresholdMs) {
-            val var6: Log = Log.INSTANCE;
-            val var5: java.lang.String = this.name;
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var5);
-            var7.append(": queued tasks  took ");
-            var7.append(var3);
-            var7.append(" ms");
-            Log.i$default(var6, var5, var7.toString(), null, 4, null);
+            val var7: Log = Log.INSTANCE;
+            val var6: java.lang.String = this.name;
+            val var5: StringBuilder = new StringBuilder();
+            var5.append(var6);
+            var5.append(": queued tasks  took ");
+            var5.append(var3);
+            var5.append(" ms");
+            Log.i$default(var7, var6, var5.toString(), null, 4, null);
          } else {
             val var8: Log = Log.INSTANCE;
             val var9: java.lang.String = this.name;

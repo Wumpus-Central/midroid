@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var7 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
+         for (java.lang.String var5 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
             val var6: java.lang.String = var1.i();
             kotlin.jvm.internal.q.g(var6, "getPurchaseToken(...)");
             val var3: java.lang.String = var1.e();
             kotlin.jvm.internal.q.g(var3, "getPackageName(...)");
-            kotlin.jvm.internal.q.e(var7);
-            var5.invoke(var6, var3, var7);
+            kotlin.jvm.internal.q.e(var5);
+            var4.invoke(var6, var3, var5);
          }
       }
    }

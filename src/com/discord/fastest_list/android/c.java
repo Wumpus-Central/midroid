@@ -10,6 +10,6 @@ public final class c implements Function3 {
    public final Function2 k;
 
    public final Object invoke(Object var1, Object var2, Object var3) {
-      return FastestListView.P(this.j, this.k, (RecyclerView)var1, (Integer)var2, (Integer)var3);
+      return FastestListView.R(this.j, this.k, (RecyclerView)var1, (Integer)var2, (Integer)var3);
    }
 }

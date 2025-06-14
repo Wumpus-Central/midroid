@@ -160,8 +160,8 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.users.hashCode();
-      val var3: Int = Integer.hashCode(this.extraUsers);
+      val var3: Int = this.users.hashCode();
+      val var2: Int = Integer.hashCode(this.extraUsers);
       val var1: Int;
       if (this.guildId == null) {
          var1 = 0;
@@ -175,7 +175,7 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
                                  (
                                           (
                                                    (
-                                                            (((var2 * 31 + var3) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
+                                                            (((var3 * 31 + var2) * 31 + var1) * 31 + ChannelId.hashCode-impl(this.channelId)) * 31
                                                                + this.channelName.hashCode()
                                                          )
                                                          * 31
@@ -198,42 +198,42 @@ public data class MobileVoiceOverlayData(users: List<MobileVoiceOverlayDataUser>
    }
 
    public override fun toString(): String {
-      val var9: java.util.List = this.users;
+      val var8: java.util.List = this.users;
       val var1: Int = this.extraUsers;
-      val var10: GuildId = this.guildId;
-      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: java.lang.String = this.channelName;
+      val var5: GuildId = this.guildId;
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var11: java.lang.String = this.channelName;
       val var6: java.lang.String = this.guildName;
-      val var2: Boolean = this.deafened;
-      val var3: Boolean = this.muted;
-      val var11: ConnectionQuality = this.connectionQuality;
-      val var4: Boolean = this.canGenerateInvite;
-      val var12: java.util.List = this.channelSelectorResults;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MobileVoiceOverlayData(users=");
-      var5.append(var9);
-      var5.append(", extraUsers=");
-      var5.append(var1);
-      var5.append(", guildId=");
-      var5.append(var10);
-      var5.append(", channelId=");
-      var5.append(var8);
-      var5.append(", channelName=");
-      var5.append(var7);
-      var5.append(", guildName=");
-      var5.append(var6);
-      var5.append(", deafened=");
-      var5.append(var2);
-      var5.append(", muted=");
-      var5.append(var3);
-      var5.append(", connectionQuality=");
-      var5.append(var11);
-      var5.append(", canGenerateInvite=");
-      var5.append(var4);
-      var5.append(", channelSelectorResults=");
-      var5.append(var12);
-      var5.append(")");
-      return var5.toString();
+      val var4: Boolean = this.deafened;
+      val var2: Boolean = this.muted;
+      val var12: ConnectionQuality = this.connectionQuality;
+      val var3: Boolean = this.canGenerateInvite;
+      val var9: java.util.List = this.channelSelectorResults;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MobileVoiceOverlayData(users=");
+      var7.append(var8);
+      var7.append(", extraUsers=");
+      var7.append(var1);
+      var7.append(", guildId=");
+      var7.append(var5);
+      var7.append(", channelId=");
+      var7.append(var10);
+      var7.append(", channelName=");
+      var7.append(var11);
+      var7.append(", guildName=");
+      var7.append(var6);
+      var7.append(", deafened=");
+      var7.append(var4);
+      var7.append(", muted=");
+      var7.append(var2);
+      var7.append(", connectionQuality=");
+      var7.append(var12);
+      var7.append(", canGenerateInvite=");
+      var7.append(var3);
+      var7.append(", channelSelectorResults=");
+      var7.append(var9);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

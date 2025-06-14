@@ -30,9 +30,9 @@ public class PollAnswersRecyclerAccessibilityDelegate(accessory: PollMessageAcce
          var5 = null;
       }
 
-      var2.M0(var5);
+      var2.N0(var5);
       val var4: Context = var1.getContext();
       q.g(var4, "getContext(...)");
-      var2.U0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
+      var2.V0(I18nUtilsKt.i18nFormat$default(var4, I18nMessage.POLL_OPTIONS_ARIA, null, 2, null));
    }
 }

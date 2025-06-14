@@ -1552,8 +1552,6 @@
   "zFKbrK": "24 Hours",
   "TmPIZW": "3 Days",
   "H4mGfH": "Auto-hide options",
-  "479+PT": "Sticker Suggestions",
-  "r3uQUV": "Allows sticker suggestions to appear when typing messages.",
   "7eZ3jo": "Add profile picture",
   "yP28YG": "or choose a Discord avatar",
   "XyLlVl": "Please upload a JPG or PNG file.",
@@ -8156,10 +8154,13 @@
   ],
   "SEgHFh": "Content Warning: This may contain sensitive content",
   "jesz8f": "Messages will not be filtered for explicit images.",
+  "M6GNsL": "Messages will not be filtered for sensitive image-based media.",
   "VbSyAw": "Do not filter",
   "dzbET0": "All messages will be filtered for explicit images.",
+  "Z+yUWF": "All messages will be filtered for sensitive image-based media.",
   "iHuPEx": "Filter messages from all members",
   "qZ1eHh": "Messages from server members without a role will be filtered for explicit images.",
+  "3fRINz": "Messages from server members without a role will be filtered for sensitive image-based media.",
   "ynfFaG": "Filter messages from server members without roles",
   "SpxcUV": "May contain sensitive content",
   "MRdR7+": "May contain sensitive content",
@@ -8386,6 +8387,22 @@
       ]
     ]
   ],
+  "BI4ukJ": [
+    "Choose if server members can share image-based media detected by Discord’s sensitive content filters. This setting will apply to channels that are not age-restricted. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ],
   "f13az8": [
     "Pruning will kick ",
     [
@@ -8563,6 +8580,7 @@
   "tUjnxs": "Email or Phone Number",
   "uiXMo6": "Grace Period",
   "Kd6OQU": "Explicit image filter",
+  "bPgfJy": "Sensitive content filters",
   "vceJPj": "Display role members separately from online members",
   "LKCupK": "Input",
   "pS+K2N": "Input Mode",
@@ -10433,6 +10451,81 @@
   "LFFx5O": "An issue has occurred with your purchase. Please wait and try again.",
   "U+H+kZ": "Oh no!",
   "Q9OYlJ": "Unable to connect to Google Play Services. Please wait and try again.",
+  "n+HrjY": [
+    "Starting ",
+    [
+      8,
+      "$b",
+      [
+        [
+          3,
+          "changeDate",
+          "medium"
+        ]
+      ]
+    ],
+    ", the price of your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "subscriptionName"
+        ]
+      ]
+    ],
+    " subscription will increase from ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "oldPrice"
+        ]
+      ]
+    ],
+    " to ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "newPrice"
+        ]
+      ]
+    ],
+    " per ",
+    [
+      1,
+      "interval"
+    ],
+    ". You can find more information on managing your subscription, including directions to cancel, ",
+    [
+      8,
+      "$link",
+      [
+        "here"
+      ],
+      [
+        [
+          1,
+          "hc_article_url"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "x0bFvr": [
+    "Your ",
+    [
+      1,
+      "subscriptionName"
+    ],
+    " Price Is Changing"
+  ],
   "F9ktNT": "Unable to make purchase. Please wait and try again.",
   "yyDkbG": "Unable to make purchase. Please reload app and try again.",
   "z5AZKS": "Green",
@@ -24106,7 +24199,9 @@
   "PJ4dKy": "Hide content",
   "G3nQR0": "Why we hide some media",
   "XW3vjo": "We automatically detect and filter media that may be sensitive. You can manage this filter in your Privacy & Safety settings.",
+  "RUw0ZG": "We automatically detect and filter some media that may be sensitive. You can manage this filter in your Content & Social settings. You can learn more about this in our Help Center.",
   "i4daNj": "We automatically detect and filter media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
+  "E/oQYG": "We automatically detect and filter some media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
   "bmbHPD": "Dismiss",
   "Ge0HUl": [
     "Did we make a mistake? ",
@@ -24128,6 +24223,7 @@
   "2aXnfX": "Why we hide some media",
   "ZH7P2t": "Mark As Not Sensitive",
   "gg5Dp6": "Help improve our sensitive media filter by forwarding this media to Discord.",
+  "z4du/P": "Help improve our sensitive content filters by forwarding this media to Discord.",
   "TPpVkJ": "Mark as not sensitive",
   "gFsTKi": "Thanks for letting us know!",
   "QVdYsL": "Blur",
@@ -32880,7 +32976,9 @@
   "mY3Y39": "Hold Up!",
   "TXNS7e": "Send",
   "PoyOY2": "Your message could not be sent. It may contain sensitive media, which has been blocked by someone in this conversation.",
-  "i4AbAQ": "Your message could not be sent. It may contain sensitive media, which has been blocked by the server.",
+  "mktny8": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this conversation.",
+  "bNMQVF": "Your message could not be sent. It may contain explicit media, which has been blocked by the server.",
+  "i4AbAQ": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this server.",
   "YrjcgY": "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
   "iS/eFB": "Unable to Mark as Not Sensitive",
   "APQGZ2": [
@@ -33789,7 +33887,6 @@
   ],
   "Xp+X2d": "Always animate",
   "IlLT7e": "Animate on interaction",
-  "6NtAuL": "Stickers",
   "2ExvRk": "This controls when stickers animate. This is currently overridden by your reduced motion preferences.",
   "29xPVV": "Stickers in Autocomplete",
   "uferGB": [
@@ -38152,8 +38249,8 @@
   "PwknJC": "Edit Status",
   "aP91UV": "Show exact search result counts",
   "qx4chY": "When enabled, may increase the time it takes to show search results.",
-  "XgH9en": "This filter detects content that might contain gore, graphic violence, or other disturbing material.",
-  "16/3Bg": "Graphic media",
+  "XgH9en": "Helps detect image-based media that may contain violent or potentially disturbing visual content.",
+  "16/3Bg": "Graphic Media",
   "7j5bMT": "Cancel Subscription",
   "93ZDWF": "Ignored accounts",
   "PYrWFR": "You don't have any ignored accounts",
@@ -38277,7 +38374,7 @@
   "MeYuqq": "Server settings",
   "RC0kJy": "Scan QR Code",
   "dliU4u": [
-    "Choose how you want to see images detected by Discord’s sensitive media filters. These filters detect image-based media. ",
+    "Choose how you want to see image-based media detected by Discord’s sensitive content filters. ",
     [
       8,
       "$link",
@@ -38292,10 +38389,10 @@
       ]
     ]
   ],
-  "Hj/Bur": "Sensitive media filters",
+  "Hj/Bur": "Sensitive content filters",
   "c/UOwM": "Sensitive media",
-  "GYpoAg": "Mature sexual media",
-  "Wnojv7": "This filter detects content that might contain nudity, graphic sex acts, or sexually explicit material.",
+  "GYpoAg": "Mature Sexual Media",
+  "Wnojv7": "Helps detect image-based media that may contain sexually explicit or suggestive material involving adults.",
   "xbMc8v": "Soundboard",
   "kbFsAA": "Soundboard Volume",
   "BPbGq6": [

@@ -7,6 +7,6 @@ public final class v implements Function0 {
    public final EmojiPickerView j;
 
    public final Object invoke() {
-      return EmojiPickerView.P(this.j);
+      return EmojiPickerView.R(this.j);
    }
 }

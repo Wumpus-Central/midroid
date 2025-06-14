@@ -131,12 +131,12 @@ public object MarkdownRules {
 
          q.g(var4, "headerBody");
 
-         for (var4 : var2.parse(var4, var3, this.innerRules)) {
-            if (var4 == null) {
+         for (Object var12 : var2.parse(var4, var3, this.innerRules)) {
+            if (var12 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var4 as Node);
+            var5.addChild(var12 as Node);
          }
 
          label42: {

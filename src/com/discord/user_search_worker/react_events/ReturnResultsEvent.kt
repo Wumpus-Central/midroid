@@ -76,8 +76,8 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
 
    public override fun serialize(): WritableMap {
       val var2: Pair = s.a("uuid", this.uuid);
-      val var4: Pair = s.a("type", this.type);
-      val var1: Pair = s.a("query", this.query);
+      val var1: Pair = s.a("type", this.type);
+      val var4: Pair = s.a("query", this.query);
       val var5: java.util.List = this.results;
       val var3: ArrayList = new ArrayList(i.v(this.results, 10));
 
@@ -91,25 +91,25 @@ internal data class ReturnResultsEvent(results: List<UserSearchWorkerResult>, qu
 
       return NativeMapExtensionsKt.nativeMapOf(
          var2,
-         var4,
-         s.a("payload", NativeMapExtensionsKt.nativeMapOf(var1, s.a("results", NativeArrayExtensionsKt.toNativeArray$default(var3, null, 1, null))))
+         var1,
+         s.a("payload", NativeMapExtensionsKt.nativeMapOf(var4, s.a("results", NativeArrayExtensionsKt.toNativeArray$default(var3, null, 1, null))))
       );
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.results;
-      val var5: java.lang.String = this.query;
-      val var2: java.lang.String = this.uuid;
-      val var4: java.lang.String = this.type;
+      val var2: java.util.List = this.results;
+      val var4: java.lang.String = this.query;
+      val var3: java.lang.String = this.uuid;
+      val var5: java.lang.String = this.type;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ReturnResultsEvent(results=");
-      var1.append(var3);
-      var1.append(", query=");
-      var1.append(var5);
-      var1.append(", uuid=");
       var1.append(var2);
-      var1.append(", type=");
+      var1.append(", query=");
       var1.append(var4);
+      var1.append(", uuid=");
+      var1.append(var3);
+      var1.append(", type=");
+      var1.append(var5);
       var1.append(")");
       return var1.toString();
    }

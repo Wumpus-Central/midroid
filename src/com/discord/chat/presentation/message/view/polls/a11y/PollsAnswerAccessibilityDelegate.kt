@@ -56,7 +56,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
 
             var2.q0(var4);
          } else {
-            var2.P0(var4);
+            var2.Q0(var4);
          }
       }
 

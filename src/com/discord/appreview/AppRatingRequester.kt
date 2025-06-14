@@ -71,10 +71,10 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    public fun executeRequest() {
-      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var1: Task = var2.a();
-      q.g(var1, "requestReviewFlow(...)");
-      var1.d(new n1.c(var2, this));
-      var1.b(new d(this));
+      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var2: Task = var1.a();
+      q.g(var2, "requestReviewFlow(...)");
+      var2.d(new n1.c(var1, this));
+      var2.b(new d(this));
    }
 }

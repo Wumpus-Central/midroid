@@ -4,7 +4,7 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.g0
+import androidx.core.view.e0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
@@ -158,9 +158,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var2 : g0.a(this)) {
-         q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var2 as StickerView).recycle();
+      for (View var1 : e0.a(this)) {
+         q.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var1 as StickerView).recycle();
       }
    }
 

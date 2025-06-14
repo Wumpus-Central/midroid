@@ -16,7 +16,7 @@ import android.view.Window
 import android.view.View.OnLayoutChangeListener
 import android.widget.RelativeLayout
 import androidx.core.view.ContentInfoCompat
-import androidx.core.view.a0
+import androidx.core.view.Y
 import cb.I
 import cb.K
 import com.discord.SetTextSizeSpKt
@@ -179,7 +179,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       var7.setOnRequestSend(new b(this));
       var7.setOnSelectionChanged(new c(this));
       var7.setOnFocusChangeListener(new d(this));
-      a0.G0(var7, new java.lang.String[]{"image/*"}, new e(this, var1));
+      Y.G0(var7, new java.lang.String[]{"image/*"}, new e(this, var1));
       var7.addTextChangedListener(
          new TextWatcher(this) {
             final ChatInputRootView this$0;
@@ -306,9 +306,9 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             for (int var20 = 0; var20 < var21; var20++) {
                val var13: Intent = var17.c().getItemAt(var20).getIntent();
                q.g(var13, "getIntent(...)");
-               val var14: java.lang.String = var13.getStringExtra("data");
-               if (var14 != null && var0.listener != null) {
-                  var0.listener.onCommandInserted(var14);
+               val var18: java.lang.String = var13.getStringExtra("data");
+               if (var18 != null && var0.listener != null) {
+                  var0.listener.onCommandInserted(var18);
                }
             }
 
@@ -385,10 +385,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var17 : var4) {
-         val var18: Editable = this.editText.getEditableText();
-         q.g(var18, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var18, var17);
+      for (ChatInputNode var18 : var4) {
+         val var7: Editable = this.editText.getEditableText();
+         q.g(var7, "getEditableText(...)");
+         EditTextUtilsKt.setChatInputNodeStyle(var7, var18);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -732,21 +732,21 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var1: Int = this.selectionStart;
-         val var2: Int = this.selectionEnd;
-         val var3: java.lang.String = this.text;
+         val var2: Int = this.selectionStart;
+         val var1: Int = this.selectionEnd;
+         val var5: java.lang.String = this.text;
          val var4: java.lang.String = this.editId;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("CurrentTextAndSelection(selectionStart=");
-         var5.append(var1);
-         var5.append(", selectionEnd=");
-         var5.append(var2);
-         var5.append(", text=");
-         var5.append(var3);
-         var5.append(", editId=");
-         var5.append(var4);
-         var5.append(")");
-         return var5.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CurrentTextAndSelection(selectionStart=");
+         var3.append(var2);
+         var3.append(", selectionEnd=");
+         var3.append(var1);
+         var3.append(", text=");
+         var3.append(var5);
+         var3.append(", editId=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

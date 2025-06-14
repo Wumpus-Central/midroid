@@ -69,15 +69,15 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var2: Int = this.secondaryColor;
-      val var3: Int = this.tertiaryColor;
+      val var3: Int = this.secondaryColor;
+      val var2: Int = this.tertiaryColor;
       val var4: StringBuilder = new StringBuilder();
       var4.append("RoleColors(primaryColor=");
       var4.append(var1);
       var4.append(", secondaryColor=");
-      var4.append(var2);
-      var4.append(", tertiaryColor=");
       var4.append(var3);
+      var4.append(", tertiaryColor=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }
