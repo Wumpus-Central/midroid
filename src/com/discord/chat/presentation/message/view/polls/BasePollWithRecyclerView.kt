@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.a0
+import androidx.core.view.Y
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
@@ -119,12 +119,12 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      a0.D0(var12, 4);
+      Y.D0(var12, 4);
       var12.setImportantForAccessibility(1);
-      a0.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
+      Y.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
       val var10: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      val var9: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
       q.e(this.binding.promptText);
@@ -154,13 +154,13 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       }
 
       val var6: Boolean;
-      if (var9 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;
       }
 
-      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var9 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

@@ -1,6 +1,7 @@
 package com.discord.chatreplay.logger
 
-import La.a
+import F9.c
+import ab.a
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -10,7 +11,6 @@ import java.nio.charset.Charset
 import java.nio.file.Path
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.BooleanRef
-import q9.c
 
 public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    private final val replayFile: File
@@ -21,20 +21,20 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       q.h(var1, "logsFolderPath");
       super();
       var var3: java.lang.String = var1.toString();
-      val var4: StringBuilder = new StringBuilder();
+      var var4: StringBuilder = new StringBuilder();
       var4.append(var2);
       var4.append(".replay");
       new File(var3, var4.toString()).delete();
-      val var9: java.lang.String = var1.toString();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var2);
-      var6.append(".json");
-      new File(var9, var6.toString()).delete();
-      val var10: java.lang.String = var1.toString();
-      val var7: StringBuilder = new StringBuilder();
-      var7.append(var2);
-      var7.append(".replay");
-      this.replayFile = new File(var10, var7.toString());
+      var3 = var1.toString();
+      var4 = new StringBuilder();
+      var4.append(var2);
+      var4.append(".json");
+      new File(var3, var4.toString()).delete();
+      var3 = var1.toString();
+      var4 = new StringBuilder();
+      var4.append(var2);
+      var4.append(".replay");
+      this.replayFile = new File(var3, var4.toString());
       var3 = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);
@@ -92,14 +92,14 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
          try {
             var12.write("[\n");
-            q9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new u1.a(var2, var12));
+            F9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new J1.a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var7;
+            val var13: java.lang.Throwable = var7;
 
             try {
-               throw var3;
+               throw var13;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

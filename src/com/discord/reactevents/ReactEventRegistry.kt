@@ -1,10 +1,10 @@
 package com.discord.reactevents
 
-import e9.s
-import f9.q
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
+import t9.s
+import u9.q
 
 internal class ReactEventRegistry {
    private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()
@@ -33,11 +33,11 @@ internal class ReactEventRegistry {
       if (var2 != null) {
          return var2;
       } else {
-         val var3: KClass = G.b(var1.getClass());
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("No event name registered for event: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: KClass = G.b(var1.getClass());
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("No event name registered for event: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

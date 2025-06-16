@@ -1,6 +1,7 @@
 package com.discord.serialization
 
-import S1.a
+import O9.c
+import h2.a
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -9,7 +10,6 @@ import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.b
-import z9.c
 
 public object SerializerUtils {
    @JvmStatic
@@ -28,14 +28,14 @@ public object SerializerUtils {
       } else {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var7 : c.a(var2)) {
-            val var4: JsonElement = (var6 as JsonObject).get(var7.getName()) as JsonElement;
-            if (var4 == null) {
-               if (!var7.getReturnType().d()) {
-                  var3.put(var7.getName(), "null");
+         for (KProperty1 var4 : c.a(var2)) {
+            val var7: JsonElement = (var6 as JsonObject).get(var4.getName()) as JsonElement;
+            if (var7 == null) {
+               if (!var4.getReturnType().j()) {
+                  var3.put(var4.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var7, var4)) {
-               var3.put(var7.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var4, var7)) {
+               var3.put(var4.getName(), var7.toString());
             }
          }
 

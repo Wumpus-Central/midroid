@@ -1,10 +1,12 @@
 package com.discord.safearea.extensions
 
+import android.os.Build.VERSION
 import android.view.Window
 import kotlin.jvm.internal.q
 
 internal fun Window.setSystemUITransparent() {
    q.h(var0, "<this>");
-   var0.setStatusBarColor(0);
-   var0.setNavigationBarColor(0);
+   if (VERSION.SDK_INT >= 29) {
+      g2.a.a(var0, false);
+   }
 }

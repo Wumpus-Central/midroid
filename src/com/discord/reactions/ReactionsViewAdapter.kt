@@ -197,11 +197,11 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var26.bind(var11, var15, var5, this.reactionsTheme);
       } else {
          if (var1 !is AddBurstReactionViewHolder) {
-            val var13: Class = var1.getClass();
-            val var18: StringBuilder = new StringBuilder();
-            var18.append("Invalid view holder type ");
-            var18.append(var13);
-            throw new IllegalStateException(var18.toString().toString());
+            val var18: Class = var1.getClass();
+            val var13: StringBuilder = new StringBuilder();
+            var13.append("Invalid view holder type ");
+            var13.append(var18);
+            throw new IllegalStateException(var13.toString().toString());
          }
 
          val var27: AddBurstReactionViewHolder = var1 as AddBurstReactionViewHolder;

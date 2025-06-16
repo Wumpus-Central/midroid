@@ -9,7 +9,7 @@ import android.view.WindowInsets
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.o0
+import androidx.core.view.m0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.q
 
@@ -115,7 +115,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
    q.h(var0, "<this>");
-   val var3: WindowInsetsControllerCompat = o0.a(var0, var0.getDecorView());
+   val var3: WindowInsetsControllerCompat = m0.a(var0, var0.getDecorView());
    var3.e(2);
    if (var2) {
       var3.f(var1);

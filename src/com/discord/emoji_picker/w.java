@@ -9,6 +9,6 @@ public final class w implements Function2 {
    public final Function2 l;
 
    public final Object invoke(Object var1, Object var2) {
-      return EmojiPickerView.R(this.j, this.k, this.l, (EmojiPickerScroller.ScrollEvent)var1, (Boolean)var2);
+      return EmojiPickerView.T(this.j, this.k, this.l, (EmojiPickerScroller.ScrollEvent)var1, (Boolean)var2);
    }
 }

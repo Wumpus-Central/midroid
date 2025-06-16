@@ -1,7 +1,5 @@
 package com.discord.chat.bridge.messageframe
 
-import bb.d
-import bb.g
 import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
@@ -11,6 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
+import qb.d
+import qb.g
 
 public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>

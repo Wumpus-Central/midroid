@@ -4,8 +4,8 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import e9.s
 import kotlin.jvm.internal.q
+import t9.s
 
 public data class TapWelcomeReplyData(stickerId: Long, messageId: MessageId) : TapWelcomeReplyData(var1, var3), ReactEvent {
    public final val stickerId: Long

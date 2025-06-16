@@ -40,7 +40,6 @@ public object DCDModuleProvider {
             this.$onViewManager = var2;
          }
 
-         @Override
          public java.util.List<ReactContextBaseJavaModule> createNativeModules(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             val var3: ReactContextBaseJavaModule;
@@ -63,7 +62,6 @@ public object DCDModuleProvider {
             }
          }
 
-         @Override
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             val var3: ViewManager;
@@ -90,7 +88,6 @@ public object DCDModuleProvider {
             this.$onNativeModule = var2;
          }
 
-         @Override
          public NativeModule getModule(java.lang.String var1, ReactApplicationContext var2) {
             q.h(var1, "name");
             q.h(var2, "reactContext");
@@ -104,7 +101,6 @@ public object DCDModuleProvider {
             return var3;
          }
 
-         @Override
          public ReactModuleInfoProvider getReactModuleInfoProvider() {
             return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(this.$moduleName, false, 2, null);
          }
@@ -120,24 +116,22 @@ public object DCDModuleProvider {
             this.$onViewManager = var1;
          }
 
-         @Override
          public java.util.List<NativeModule> createNativeModules(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
             return new ArrayList<>();
          }
 
-         @Override
          public java.util.List<ViewManager<?, LayoutShadowNode>> createViewManagers(ReactApplicationContext var1) {
             q.h(var1, "reactContext");
-            val var5: Array<Array<Function1>> = this.$onViewManager;
-            val var4: ArrayList = new ArrayList(this.$onViewManager.length);
-            val var3: Int = var5.length;
+            val var4: Array<Array<Function1>> = this.$onViewManager;
+            val var5: ArrayList = new ArrayList(this.$onViewManager.length);
+            val var3: Int = var4.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               var4.add(var5[var2].invoke(var1) as ViewManager);
+               var5.add(var4[var2].invoke(var1) as ViewManager);
             }
 
-            return var4;
+            return var5;
          }
       };
    }

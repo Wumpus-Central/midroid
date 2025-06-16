@@ -8,9 +8,9 @@ import android.view.View
 import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
-import e9.n
 import java.util.EnumMap
 import kotlin.jvm.internal.q
+import t9.n
 
 public object ThemeManager {
    private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)

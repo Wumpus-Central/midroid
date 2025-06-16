@@ -1,6 +1,6 @@
 package com.discord.keyboard
 
-import C1.a
+import R1.a
 import android.app.Activity
 import android.view.View
 import android.view.Window

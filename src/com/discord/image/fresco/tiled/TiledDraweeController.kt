@@ -1,21 +1,22 @@
 package com.discord.image.fresco.tiled
 
-import Na.K
-import Na.f
-import Na.k0
+import A9.b
+import J2.d
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
 import android.graphics.drawable.BitmapDrawable
 import android.view.MotionEvent
+import cb.K
+import cb.f
+import cb.k0
 import com.facebook.common.references.CloseableReference
 import com.facebook.datasource.DataSource
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
 import com.facebook.imagepipeline.request.ImageRequest
-import i3.e
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
@@ -23,8 +24,7 @@ import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
-import l9.b
-import u2.d
+import x3.e
 
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
    private final val resources: Resources
@@ -46,7 +46,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.L(K.c().C1()));
+      this.scope = g.a(var4.R(K.c().Y1()));
    }
 
    private fun load() {
@@ -131,7 +131,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               b.e();
                               if (this.label == 0) {
                                  c.b(var1);
-                                 return o2.c.c(this.$dataSource);
+                                 return D2.c.c(this.$dataSource);
                               } else {
                                  throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                               }
@@ -171,7 +171,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                   val var254: e;
                   if (var1 != null) {
                      try {
-                        var254 = var1.N0() as e;
+                        var254 = var1.M0() as e;
                      } catch (var21: java.lang.Throwable) {
                         var258 = var258;
                         var7 = var21;
@@ -184,7 +184,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                   label131: {
                      label164: {
                         try {
-                           if (var254 !is i3.d) {
+                           if (var254 !is x3.d) {
                               break label164;
                            }
                         } catch (var20: java.lang.Throwable) {
@@ -194,7 +194,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                         }
 
                         try {
-                           var1 = var254 as i3.d;
+                           var1 = var254 as x3.d;
                            break label131;
                         } catch (var19: java.lang.Throwable) {
                            var258 = var258;
@@ -209,7 +209,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                   var9 = null;
                   if (var1 != null) {
                      try {
-                        var9 = var1.O0();
+                        var9 = var1.h1();
                      } catch (var18: java.lang.Throwable) {
                         var258 = var258;
                         var7 = var18;
@@ -324,7 +324,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.T0();
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.i1();
       }
    }
 

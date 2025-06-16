@@ -70,12 +70,12 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       super();
       this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = e9.j.b(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = e9.j.b(new E());
-      this.scaleAnimator$delegate = e9.j.b(new F(var2, this));
-      this.textColorAnimator$delegate = e9.j.b(new G(var2));
-      this.buttonIconColorAnimator$delegate = e9.j.b(new H(var2));
-      this.progressColorAnimator$delegate = e9.j.b(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = t9.j.a(new D(var1));
+      this.buttonContainerActiveDrawable$delegate = t9.j.a(new E());
+      this.scaleAnimator$delegate = t9.j.a(new F(var2, this));
+      this.textColorAnimator$delegate = t9.j.a(new G(var2));
+      this.buttonIconColorAnimator$delegate = t9.j.a(new H(var2));
+      this.progressColorAnimator$delegate = t9.j.a(new I(var2));
    }
 
    @JvmStatic

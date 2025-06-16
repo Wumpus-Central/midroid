@@ -8,8 +8,8 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
 import kotlin.jvm.internal.q
+import t9.s
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
    public final val messageId: MessageId
@@ -59,8 +59,8 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.reaction == null) {
          var1 = 0;
@@ -68,7 +68,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var1 = this.reaction.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun serialize(): WritableMap {
@@ -82,15 +82,15 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var7 = null;
       }
 
-      val var4: Pair = s.a("messageId", this.messageId);
-      val var3: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
+      val var3: Pair = s.a("messageId", this.messageId);
+      val var4: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
       val var5: Pair = s.a("reaction", var7);
       var var8: java.lang.Boolean = null;
       if (this.reaction != null) {
          var8 = this.reaction.isBurstReaction();
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, s.a("isBurst", var8));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, s.a("isBurst", var8));
    }
 
    public override fun toString(): String {

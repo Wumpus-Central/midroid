@@ -1,7 +1,7 @@
 package com.discord.notifications.fcm.utils
 
-import I1.a
-import I1.b
+import X1.a
+import X1.b
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
@@ -57,17 +57,17 @@ internal object FCMTokenHelper {
    }
 
    private fun Throwable.logError() {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = var1.getClass().getSimpleName();
-      q.g(var3, "getSimpleName(...)");
-      var2.w(var3, "Fetching FCM registration token failed", var1);
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = var1.getClass().getSimpleName();
+      q.g(var2, "getSimpleName(...)");
+      var3.w(var2, "Fetching FCM registration token failed", var1);
    }
 
    public fun getToken(onToken: (String) -> Unit) {
       q.h(var1, "onToken");
 
       try {
-         FirebaseMessaging.n().q().e(new a()).c(new b(var1));
+         FirebaseMessaging.n().q().f(new a()).d(new b(var1));
       } catch (var4: Exception) {
          this.logError(var4);
       }

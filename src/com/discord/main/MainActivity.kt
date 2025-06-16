@@ -43,7 +43,6 @@ public class MainActivity : ReactActivity {
             BundleUpdater.Companion.instance().handleIntent(var1);
          }
 
-         @Override
          public void onCreate(Bundle var1) {
             super.onCreate(var1);
             val var2: Intent = this.this$0.getIntent();
@@ -51,7 +50,6 @@ public class MainActivity : ReactActivity {
             this.parseIntent(var2);
          }
 
-         @Override
          public boolean onNewIntent(Intent var1) {
             q.h(var1, "intent");
             this.parseIntent(var1);
@@ -64,18 +62,18 @@ public class MainActivity : ReactActivity {
       return "Discord";
    }
 
-   public override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
+   public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean) {
       super.onPictureInPictureModeChanged(var1);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public override fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
+   public open fun onPictureInPictureModeChanged(isInPictureInPictureMode: Boolean, newConfig: Configuration) {
       q.h(var2, "newConfig");
       super.onPictureInPictureModeChanged(var1, var2);
       ExternalPipModule.Companion.onPipModeChanged(this.currentReactContext(), var1);
    }
 
-   public override fun onUserLeaveHint() {
+   public open fun onUserLeaveHint() {
       super.onUserLeaveHint();
       ExternalPipModule.Companion.onUserLeaveHint(this.currentReactContext());
    }

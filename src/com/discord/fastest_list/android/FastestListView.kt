@@ -99,7 +99,7 @@ internal class FastestListView(context: Context,
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
-   private fun onItemDataChanged(positions: List<DataChanged> = i.k()) {
+   private fun onItemDataChanged(positions: List<DataChanged> = kotlin.collections.i.k()) {
       if (!var1.isEmpty()) {
          for (FastestListViewAdapter.DataChanged var4 : var1) {
             val var3: Int = var4.component1();
@@ -124,7 +124,7 @@ internal class FastestListView(context: Context,
       var5 = var5 - var3;
       var6 = var6 - var4;
       if ((!var0.typedLayoutManager.getHorizontal() || var5 != 0) && (var0.typedLayoutManager.getHorizontal() || var6 - var4 != 0)) {
-         var1.m(var0, var3, var4, var5, var6);
+         var1.n(var0, var3, var4, var5, var6);
          var0.typedVisibleItemsTracker.updateVisibleItemPositions();
       }
    }

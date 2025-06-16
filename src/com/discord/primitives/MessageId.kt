@@ -1,10 +1,10 @@
 package com.discord.primitives
 
-import Xa.f
 import android.os.Parcel
 import android.os.Parcelable
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public inline class MessageId : Parcelable {

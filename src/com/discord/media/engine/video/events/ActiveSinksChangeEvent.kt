@@ -1,10 +1,10 @@
 package com.discord.media.engine.video.events
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : ReactEvent {
@@ -55,15 +55,15 @@ internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.streamId;
+      val var3: java.lang.String = this.streamId;
       val var1: Boolean = this.active;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ActiveSinksChangeEvent(streamId=");
-      var3.append(var2);
-      var3.append(", active=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActiveSinksChangeEvent(streamId=");
+      var2.append(var3);
+      var2.append(", active=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

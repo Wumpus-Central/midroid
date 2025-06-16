@@ -1,8 +1,7 @@
 package com.discord.core
 
-import Na.K
-import Na.d0
-import Na.f
+import A9.b
+import J2.d
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -16,6 +15,9 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.FrameLayout.LayoutParams
 import android.widget.ImageView.ScaleType
+import cb.K
+import cb.d0
+import cb.f
 import com.discord.crash_reporting.CrashReporting
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -25,13 +27,11 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import e9.s
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
-import l9.b
-import u2.d
+import t9.s
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
@@ -129,7 +129,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           f9.q.l(new Pair[]{s.a("exception", var8.toString()), s.a("url", this.$uri.toString())}),
+                           u9.q.l(new Pair[]{s.a("exception", var8.toString()), s.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -179,10 +179,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var3 != 0 && var22 != 0) {
-                     var1 = new Size(var3, var22);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var22 != 0 && var3 != 0) {
+                     var1 = new Size(var22, var3);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -197,7 +197,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           f9.q.l(new Pair[]{s.a("exception", var12.toString()), s.a("url", this.$uri.toString())}),
+                           u9.q.l(new Pair[]{s.a("exception", var12.toString()), s.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -253,7 +253,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           f9.q.l(new Pair[]{s.a("exception", var11.toString()), s.a("url", this.$uri.toString())}),
+                           u9.q.l(new Pair[]{s.a("exception", var11.toString()), s.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -308,7 +308,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,
                            "DCDLocalImageThumbnail - Failed to load thumbnail",
-                           f9.q.l(new Pair[]{s.a("exception", var10.toString()), s.a("url", this.$uri.toString())}),
+                           u9.q.l(new Pair[]{s.a("exception", var10.toString()), s.a("url", this.$uri.toString())}),
                            null,
                            4,
                            null
@@ -415,7 +415,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,
                         "DCDLocalImageThumbnail - Failed to load thumbnail",
-                        f9.q.l(new Pair[]{s.a("exception", var9.toString()), s.a("url", this.$uri.toString())}),
+                        u9.q.l(new Pair[]{s.a("exception", var9.toString()), s.a("url", this.$uri.toString())}),
                         null,
                         4,
                         null

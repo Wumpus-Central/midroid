@@ -6,8 +6,8 @@ import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
-import e9.n
 import kotlin.jvm.internal.q
+import t9.n
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable

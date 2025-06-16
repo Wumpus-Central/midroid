@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
 
 public class BlurViewPackage : BaseReactPackage {
-   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       kotlin.jvm.internal.q.h(var1, "reactContext");
       return kotlin.collections.i.n(new ViewManager[]{new BlurViewManager(), new BlurViewTargetManager()});
    }
@@ -19,7 +19,7 @@ public class BlurViewPackage : BaseReactPackage {
       return null;
    }
 
-   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

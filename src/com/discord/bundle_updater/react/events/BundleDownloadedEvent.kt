@@ -1,9 +1,9 @@
 package com.discord.bundle_updater.react.events
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class BundleDownloadedEvent(versionRequired: Boolean) : ReactEvent {

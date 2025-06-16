@@ -1,13 +1,12 @@
 package com.discord.media.utils
 
-import Na.K
 import android.annotation.SuppressLint
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap.CompressFormat
 import android.net.Uri
+import cb.K
 import com.discord.crash_reporting.CrashReporting
-import e9.s
 import id.zelory.compressor.constraint.Compression
 import java.io.File
 import java.io.InputStream
@@ -15,6 +14,7 @@ import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
+import t9.s
 
 public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
    private final val context: Context
@@ -48,7 +48,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
 
    @SuppressLint(["UsableSpace"])
    private suspend fun checkFreeSpace() {
-      val var2: Any = Na.f.g(
+      val var2: Any = cb.f.g(
          K.b(),
          new Function2(this, null) {
             int label;
@@ -68,7 +68,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
             }
 
             public final Object invokeSuspend(Object var1) {
-               l9.b.e();
+               A9.b.e();
                if (this.label != 0) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
                } else {
@@ -82,25 +82,25 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                         val var4: Int = var1.length;
 
                         for (int var2x = 0; var2x < var4; var2x++) {
-                           var var9: File = var1[var2x];
+                           val var8: File = var1[var2x];
                            if (var1[var2x].isFile()) {
-                              val var8: java.lang.String = var9.getName();
-                              q.g(var8, "getName(...)");
-                              if (h.I(var8, "temp_", false, 2, null) && var9.lastModified() < var6) {
-                                 var9.delete();
+                              val var9: java.lang.String = var8.getName();
+                              q.g(var9, "getName(...)");
+                              if (h.I(var9, "temp_", false, 2, null) && var8.lastModified() < var6) {
+                                 var8.delete();
                                  continue;
                               }
                            }
 
-                           if (var9.isDirectory() && q.c(var9.getName(), "compressor")) {
-                              val var11: Array<File> = var9.listFiles();
+                           if (var8.isDirectory() && q.c(var8.getName(), "compressor")) {
+                              val var11: Array<File> = var8.listFiles();
                               if (var11 != null) {
                                  val var5: Int = var11.length;
 
                                  for (int var3 = 0; var3 < var5; var3++) {
-                                    var9 = var11[var3];
+                                    val var12: File = var11[var3];
                                     if (var11[var3].isFile() && var11[var3].lastModified() < var6) {
-                                       var9.delete();
+                                       var12.delete();
                                     }
                                  }
                               }
@@ -115,11 +115,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
          },
          var1
       );
-      return if (var2 === l9.b.e()) var2 else Unit.a;
+      return if (var2 === A9.b.e()) var2 else Unit.a;
    }
 
    private suspend fun copyToFile(uri: Uri, targetFile: File? = ...): Uri {
-      return Na.f.g(
+      return cb.f.g(
          K.b(),
          new Function2(var2, this, var1, null) {
             final File $targetFile;
@@ -143,7 +143,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
             }
 
             public final Object invokeSuspend(Object var1) {
-               l9.b.e();
+               A9.b.e();
                label26:
                if (this.label == 0) {
                   kotlin.c.b(var1);
@@ -154,8 +154,8 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                      );
                   }
 
-                  val var11: Uri = this.$uri;
-                  val var12: InputStream = MediaResolver.access$getResolver(this.this$0).openInputStream(var11);
+                  val var3: Uri = this.$uri;
+                  val var12: InputStream = MediaResolver.access$getResolver(this.this$0).openInputStream(var3);
                   if (var12 != null) {
                      try {
                         FileUtilsKt.writeTo(var12, var1);
@@ -165,11 +165,11 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                         try {
                            throw var13;
                         } catch (var4: java.lang.Throwable) {
-                           q9.c.a(var12, var5);
+                           F9.c.a(var12, var5);
                         }
                      }
 
-                     q9.c.a(var12, null);
+                     F9.c.a(var12, null);
                   }
 
                   return Uri.fromFile(var1);
@@ -239,7 +239,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 4b: aload 9
       // 4d: invokevirtual android/os/ParcelFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 50: aload 10
-      // 52: invokestatic rb/b.a (Ljava/io/FileDescriptor;Ljava/io/File;)Z
+      // 52: invokestatic Gb/b.a (Ljava/io/FileDescriptor;Ljava/io/File;)Z
       // 55: istore 6
       // 57: iload 6
       // 59: ifeq 6f
@@ -344,7 +344,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       label111: {
          label98: {
             var19 = ((<unrepresentable>)var9).result;
-            val var11: Any = l9.b.e();
+            val var11: Any = A9.b.e();
             val var14: MediaResolver;
             if (((<unrepresentable>)var9).label != 0) {
                if (((<unrepresentable>)var9).label != 1) {
@@ -368,10 +368,10 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                kotlin.c.b(var19);
             } else {
                kotlin.c.b(var19);
-               val var20: ContentResolver = this.getResolver();
-               val var12: ContentResolverUtils = ContentResolverUtils.INSTANCE;
+               val var12: ContentResolver = this.getResolver();
+               val var20: ContentResolverUtils = ContentResolverUtils.INSTANCE;
                val var25: Boolean;
-               if (ContentResolverUtils.INSTANCE.isHeif(var20, var1) || var12.isJpeg(var20, var1) || var3 && var12.isPng(var20, var1)) {
+               if (ContentResolverUtils.INSTANCE.isHeif(var12, var1) || var20.isJpeg(var12, var1) || var3 && var20.isPng(var12, var1)) {
                   var25 = true;
                } else {
                   var25 = false;
@@ -395,7 +395,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                   return var17;
                }
 
-               val var21: L8.a = L8.a.a;
+               val var21: a9.a = a9.a.a;
                val var30: Context = this.context;
                val var13: e = new e(var2, var26, this, var1);
                ((<unrepresentable>)var9).L$0 = this;
@@ -403,7 +403,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                var3 = var4;
                ((<unrepresentable>)var9).Z$0 = var4;
                ((<unrepresentable>)var9).label = 1;
-               var19 = L8.a.b(var21, var30, var1, null, var13, (Continuation)var9, 4, null);
+               var19 = a9.a.b(var21, var30, var1, null, var13, (Continuation)var9, 4, null);
                if (var19 === var11) {
                   return var11;
                }
@@ -460,8 +460,8 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
    fun `handleImage$lambda$7`(var0: Int, var1: Boolean, var2: MediaResolver, var3: Uri, var4: Compression): Unit {
       q.h(var4, "$this$compress");
       var4.a(new QualityAndResolutionConstraint(var0, var1));
-      M8.g.a(var4, CompressFormat.JPEG);
-      M8.e.a(var4, ContentResolverUtils.createTempFile$default(ContentResolverUtils.INSTANCE, var2.getResolver(), var3, null, "jpeg", 2, null));
+      b9.g.a(var4, CompressFormat.JPEG);
+      b9.e.a(var4, ContentResolverUtils.createTempFile$default(ContentResolverUtils.INSTANCE, var2.getResolver(), var3, null, "jpeg", 2, null));
       return Unit.a;
    }
 
@@ -510,7 +510,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 03f: aload 8
       // 041: getfield com/discord/media/utils/MediaResolver$handleVideo$1.result Ljava/lang/Object;
       // 044: astore 4
-      // 046: invokestatic l9/b.e ()Ljava/lang/Object;
+      // 046: invokestatic A9/b.e ()Ljava/lang/Object;
       // 049: astore 12
       // 04b: aload 8
       // 04d: getfield com/discord/media/utils/MediaResolver$handleVideo$1.label I
@@ -606,44 +606,44 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 113: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 116: astore 7
       // 118: goto 12c
-      // 11b: astore 7
+      // 11b: astore 10
       // 11d: getstatic kotlin/Result.k Lkotlin/Result$a;
-      // 120: astore 10
-      // 122: aload 7
+      // 120: astore 7
+      // 122: aload 10
       // 124: invokestatic kotlin/c.a (Ljava/lang/Throwable;)Ljava/lang/Object;
       // 127: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 12a: astore 7
       // 12c: aload 7
       // 12e: invokestatic kotlin/Result.e (Ljava/lang/Object;)Ljava/lang/Throwable;
-      // 131: astore 11
-      // 133: aload 11
+      // 131: astore 10
+      // 133: aload 10
       // 135: ifnull 17a
-      // 138: aload 11
+      // 138: aload 10
       // 13a: invokevirtual java/lang/Throwable.getMessage ()Ljava/lang/String;
-      // 13d: astore 10
+      // 13d: astore 13
       // 13f: new java/lang/StringBuilder
       // 142: dup
       // 143: invokespecial java/lang/StringBuilder.<init> ()V
-      // 146: astore 13
-      // 148: aload 13
+      // 146: astore 11
+      // 148: aload 11
       // 14a: ldc_w "["
       // 14d: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 150: pop
-      // 151: aload 13
-      // 153: aload 11
+      // 151: aload 11
+      // 153: aload 10
       // 155: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 158: pop
-      // 159: aload 13
+      // 159: aload 11
       // 15b: ldc_w "] Error creating source: "
       // 15e: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 161: pop
-      // 162: aload 13
-      // 164: aload 10
+      // 162: aload 11
+      // 164: aload 13
       // 166: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 169: pop
       // 16a: aload 0
       // 16b: ldc_w "Media source error"
-      // 16e: aload 13
+      // 16e: aload 11
       // 170: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 173: aload 6
       // 175: aload 4
@@ -684,13 +684,13 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 1b9: aload 0
       // 1ba: aload 1
       // 1bb: invokespecial com/discord/media/utils/MediaResolver.getRequestId (Landroid/net/Uri;)Ljava/lang/String;
-      // 1be: astore 13
+      // 1be: astore 11
       // 1c0: aload 0
       // 1c1: getfield com/discord/media/utils/MediaResolver.context Landroid/content/Context;
-      // 1c4: astore 14
+      // 1c4: astore 13
       // 1c6: new com/discord/media/utils/f
-      // 1c9: astore 11
-      // 1cb: aload 11
+      // 1c9: astore 14
+      // 1cb: aload 14
       // 1cd: aload 0
       // 1ce: aload 6
       // 1d0: invokespecial com/discord/media/utils/f.<init> (Lcom/discord/media/utils/MediaResolver;Landroid/net/Uri;)V
@@ -715,12 +715,12 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 1fa: aload 4
       // 1fc: astore 1
       // 1fd: aload 10
-      // 1ff: aload 13
-      // 201: aload 14
+      // 1ff: aload 11
+      // 201: aload 13
       // 203: aload 7
       // 205: aload 4
       // 207: aload 3
-      // 208: aload 11
+      // 208: aload 14
       // 20a: aload 8
       // 20c: invokevirtual com/discord/media/utils/Transcoder.convertCompress (Ljava/lang/String;Landroid/content/Context;Lcom/discord/media/utils/DiscordVideoMediaSource;Landroid/net/Uri;Lcom/discord/media/utils/EncodingConfig;Lkotlin/jvm/functions/Function1;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;
       // 20f: astore 3
@@ -752,7 +752,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       // 23d: aload 6
       // 23f: aload 7
       // 241: aload 10
-      // 243: invokevirtual V7/a.getSize ()J
+      // 243: invokevirtual k8/a.getSize ()J
       // 246: invokespecial com/discord/media/utils/MediaResolver.createMP4FastStartUri (Landroid/net/Uri;Landroid/net/Uri;J)Landroid/net/Uri;
       // 249: astore 4
       // 24b: aload 4
@@ -904,7 +904,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
    private fun logMediaError(tag: String, message: String, inputUri: Uri, outputUri: Uri) {
       val var5: CrashReporting = CrashReporting.INSTANCE;
       CrashReporting.addBreadcrumb$default(
-         CrashReporting.INSTANCE, var2, f9.q.l(new Pair[]{s.a("inputUri", var3.toString()), s.a("outputUri", var4.toString())}), null, 4, null
+         CrashReporting.INSTANCE, var2, u9.q.l(new Pair[]{s.a("inputUri", var3.toString()), s.a("outputUri", var4.toString())}), null, 4, null
       );
       var5.captureMessage(var1, var2, CrashReporting.ErrorLevel.WARNING);
    }
@@ -932,7 +932,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
       useOriginalIfSmaller: Boolean,
       encodingConfig: EncodingConfig?
    ): Uri {
-      return Na.f.g(
+      return cb.f.g(
          K.b(),
          new Function2(this, var1, var4, var6, var2, var3, var5, null) {
             final EncodingConfig $encodingConfig;
@@ -973,7 +973,7 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var6: Any = l9.b.e();
+               val var6: Any = A9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      if (this.label == 2) {
@@ -1007,27 +1007,27 @@ public class MediaResolver(context: Context, onProgress: (Uri, Int) -> Unit) {
                val var9: ContentResolverUtils = ContentResolverUtils.INSTANCE;
                if (ContentResolverUtils.INSTANCE.isVideo(MediaResolver.access$getResolver(this.this$0), this.$inputUri)) {
                   val var7: MediaResolver = this.this$0;
-                  var var19: Uri = this.$inputUri;
+                  val var13: Uri = this.$inputUri;
                   val var15: Boolean = this.$skipVideoTranscode;
-                  val var13: EncodingConfig = this.$encodingConfig;
+                  var var19: EncodingConfig = this.$encodingConfig;
                   this.label = 2;
-                  var19 = (Uri)MediaResolver.access$handleVideo(var7, var19, var15, var13, this);
-                  return if (var19 === var6) var6 else var19;
+                  var19 = (EncodingConfig)MediaResolver.access$handleVideo(var7, var13, var15, var19, this);
+                  return if (var19 === var6) var6 else var19 as Uri;
                } else if (var9.isImage(MediaResolver.access$getResolver(this.this$0), this.$inputUri)) {
                   var var17: MediaResolver = this.this$0;
                   val var12: Uri = this.$inputUri;
                   val var14: Int = this.$imageCompressionQuality;
-                  val var3: Boolean = this.$isLowQuality;
-                  val var4: Boolean = this.$useOriginalIfSmaller;
+                  val var4: Boolean = this.$isLowQuality;
+                  val var3: Boolean = this.$useOriginalIfSmaller;
                   this.label = 3;
-                  var17 = (MediaResolver)MediaResolver.access$handleImage(var17, var12, var14, var3, var4, this);
+                  var17 = (MediaResolver)MediaResolver.access$handleImage(var17, var12, var14, var4, var3, this);
                   return if (var17 === var6) var6 else var17 as Uri;
                } else {
-                  var var5: MediaResolver = this.this$0;
-                  val var10: Uri = this.$inputUri;
+                  var1 = this.this$0;
+                  var var5: Uri = this.$inputUri;
                   this.label = 4;
-                  var5 = (MediaResolver)MediaResolver.copyToFile$default(var5, var10, null, this, 2, null);
-                  return if (var5 === var6) var6 else var5 as Uri;
+                  var5 = (Uri)MediaResolver.copyToFile$default(var1, var5, null, this, 2, null);
+                  return if (var5 === var6) var6 else var5;
                }
             }
          },

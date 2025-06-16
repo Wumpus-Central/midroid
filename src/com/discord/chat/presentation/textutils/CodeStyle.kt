@@ -141,7 +141,7 @@ public object CodeStyle {
          var5 = var3.getTheme().getBackgroundSecondary();
       }
 
-      val var7: BlockBackgroundSpan = new BlockBackgroundSpan(
+      val var9: BlockBackgroundSpan = new BlockBackgroundSpan(
          var5,
          var3.getTheme().getBackgroundSecondaryAlt(),
          SizeUtilsKt.getDpToPx(1),
@@ -152,9 +152,9 @@ public object CodeStyle {
       );
       var5 = SizeUtilsKt.getDpToPx(4);
       val var11: Standard = new Standard(SizeUtilsKt.getDpToPx(8));
-      val var9: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
+      val var10: VerticalPaddingSpan = new VerticalPaddingSpan(SizeUtilsKt.getDpToPx(4));
       val var8: RelativeSizeSpan = new RelativeSizeSpan(0.85F);
-      val var10: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
+      val var7: DiscordFontSpan = new DiscordFontSpan(var3.getContext(), DiscordFont.CodeNormal);
       SpannableStringBuilderExtensionsKt.ensureNewline$default(var1, null, 1, null);
       val var6: Int = var1.length();
       SpannableStringBuilderExtensionsKt.ensureNewline(var1, new AbsoluteSizeSpan(var5));
@@ -164,7 +164,7 @@ public object CodeStyle {
       }
 
       for (int var14 = 0; var14 < 5; var14++) {
-         val var12: Any = new Object[]{var7, var11, var9, var8, var10}[var14];
+         val var12: Any = new Object[]{var9, var11, var10, var8, var7}[var14];
          if (var12 != null) {
             var1.setSpan(var12, var6, var1.length(), 33);
          }

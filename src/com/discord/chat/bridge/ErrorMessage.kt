@@ -1,9 +1,9 @@
 package com.discord.chat.bridge
 
-import Xa.f
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {

@@ -24,7 +24,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    init {
       kotlin.jvm.internal.q.h(var1, "reactContext");
       super(var1);
-      this.mobileVoiceOverlay$delegate = e9.j.b(new r(this));
+      this.mobileVoiceOverlay$delegate = t9.j.a(new r(this));
    }
 
    @JvmStatic
@@ -54,22 +54,22 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
             public void onActivityResult(Activity var1, int var2, int var3, Intent var4) {
                if (var2 == 234780) {
                   MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0).removeActivityEventListener(this);
-                  val var6: Promise = this.$promise;
-                  val var5: WindowUtils = WindowUtils.INSTANCE;
-                  val var7: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
-                  kotlin.jvm.internal.q.g(var7, "access$getReactApplicationContext(...)");
-                  var6.resolve(var5.canDrawOverlay(var7));
+                  val var7: Promise = this.$promise;
+                  val var6: WindowUtils = WindowUtils.INSTANCE;
+                  val var5: ReactApplicationContext = MobileVoiceOverlayModule.access$getReactApplicationContext(this.this$0);
+                  kotlin.jvm.internal.q.g(var5, "access$getReactApplicationContext(...)");
+                  var7.resolve(var6.canDrawOverlay(var5));
                }
             }
 
             public void onNewIntent(Intent var1) {
             }
          };
-         val var5: java.lang.String = this.getReactApplicationContext().getPackageName();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("package:");
-         var7.append(var5);
-         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var7.toString()));
+         val var7: java.lang.String = this.getReactApplicationContext().getPackageName();
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("package:");
+         var5.append(var7);
+         val var6: Intent = new Intent("android.settings.action.MANAGE_OVERLAY_PERMISSION", Uri.parse(var5.toString()));
          this.getReactApplicationContext().addActivityEventListener(var4);
          this.getReactApplicationContext().startActivityForResult(var6, 234780, Bundle.EMPTY);
       }

@@ -1,6 +1,6 @@
 package com.discord.jank_stats
 
-import B1.a
+import Q1.a
 import android.view.Window
 import androidx.metrics.performance.FrameData
 import androidx.metrics.performance.JankStats
@@ -95,11 +95,11 @@ public object JankStatsAggregator {
       val var2: JankStats = jankStats;
       q.e(jankStats);
       var2.c(var1);
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Jank heuristic multiplier set to ");
-      var3.append(var1);
-      var3.append(".");
-      Log.i$default(var4, "JankStatsAggregator", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Jank heuristic multiplier set to ");
+      var4.append(var1);
+      var4.append(".");
+      Log.i$default(var3, "JankStatsAggregator", var4.toString(), null, 4, null);
    }
 }

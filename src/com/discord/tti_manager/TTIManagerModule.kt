@@ -8,9 +8,9 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import e9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import t9.s
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
@@ -66,7 +66,7 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    }
 
    public open fun getConstants(): MutableMap<String, Long> {
-      return f9.q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
+      return u9.q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
    }
 
    @ReactMethod
@@ -95,10 +95,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    public open fun initialize() {
       super.initialize();
       if (BuildConfig.logTTIMetrics) {
-         val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         var2.register(var1, this.ttiBroadcastReceiver);
+         val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var1.register(var2, this.ttiBroadcastReceiver);
       }
    }
 

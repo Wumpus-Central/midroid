@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.polls
 
-import Xa.f
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class PollStyleSet(border: Int? = null,
@@ -297,25 +297,25 @@ public data class PollStyleSet(border: Int? = null,
    }
 
    public override fun toString(): String {
-      val var5: Int = this.border;
+      val var4: Int = this.border;
       val var2: Int = this.borderWidth;
       val var10: Int = this.fill;
-      val var11: Int = this.label;
+      val var6: Int = this.label;
       val var1: Float = this.opacity;
       val var7: Int = this.answerBackground;
       val var8: Int = this.answerFill;
-      val var4: PollRadioStyle = this.radioStyle;
-      val var6: Int = this.radioBackground;
-      val var3: Int = this.radioForeground;
+      val var3: PollRadioStyle = this.radioStyle;
+      val var11: Int = this.radioBackground;
+      val var5: Int = this.radioForeground;
       val var9: StringBuilder = new StringBuilder();
       var9.append("PollStyleSet(border=");
-      var9.append(var5);
+      var9.append(var4);
       var9.append(", borderWidth=");
       var9.append(var2);
       var9.append(", fill=");
       var9.append(var10);
       var9.append(", label=");
-      var9.append(var11);
+      var9.append(var6);
       var9.append(", opacity=");
       var9.append(var1);
       var9.append(", answerBackground=");
@@ -323,11 +323,11 @@ public data class PollStyleSet(border: Int? = null,
       var9.append(", answerFill=");
       var9.append(var8);
       var9.append(", radioStyle=");
-      var9.append(var4);
-      var9.append(", radioBackground=");
-      var9.append(var6);
-      var9.append(", radioForeground=");
       var9.append(var3);
+      var9.append(", radioBackground=");
+      var9.append(var11);
+      var9.append(", radioForeground=");
+      var9.append(var5);
       var9.append(")");
       return var9.toString();
    }

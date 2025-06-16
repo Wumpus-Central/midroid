@@ -1,12 +1,12 @@
 package com.discord.misc.utilities.intent
 
+import G9.a
 import android.content.Intent
 import android.os.Parcelable
 import androidx.core.content.c
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import r9.a
 
 @JvmSynthetic
 public inline fun <reified T : Parcelable> Intent.getIntentParcelable(parcelableKey: String): Any {

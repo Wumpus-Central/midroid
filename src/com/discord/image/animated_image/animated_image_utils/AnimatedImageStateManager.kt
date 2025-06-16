@@ -1,10 +1,10 @@
 package com.discord.image.animated_image.animated_image_utils
 
+import O1.a
 import com.discord.misc.utilities.queue.WorkerQueue
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.q
-import z1.a
 
 public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
    handlePause: () -> Unit,
@@ -69,11 +69,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
       if (ThreadUtilsKt.isOnMainThread()) {
          access$reload(this);
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
@@ -88,11 +88,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
          access$setPausePending$p(this, false);
          return access$updateWorker(this, false);
       } else {
-         val var2: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

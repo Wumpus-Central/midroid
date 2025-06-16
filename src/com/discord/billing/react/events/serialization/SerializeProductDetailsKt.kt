@@ -4,23 +4,23 @@ import com.android.billingclient.api.ProductDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
-import e9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import t9.s
 
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    q.h(var0, "<this>");
    val var5: ArrayList = new ArrayList(i.v(var0, 10));
-   val var8: java.util.Iterator = var0.iterator();
+   val var6: java.util.Iterator = var0.iterator();
 
    val var7: ProductDetails;
    while (true) {
-      if (!var8.hasNext()) {
+      if (!var6.hasNext()) {
          return NativeArrayExtensionsKt.toNativeArray$default(var5, null, 1, null);
       }
 
-      var7 = var8.next() as ProductDetails;
-      val var6: ArrayList = new ArrayList();
+      var7 = var6.next() as ProductDetails;
+      val var8: ArrayList = new ArrayList();
       val var1: Long;
       var var3: java.lang.String;
       val var4: java.lang.String;
@@ -63,11 +63,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            val var17: java.lang.String = var7.d();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Could not find pricingPhase for product: ");
-            var21.append(var17);
-            throw new AssertionError(var21.toString());
+            var3 = var7.d();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Could not find pricingPhase for product: ");
+            var17.append(var3);
+            throw new AssertionError(var17.toString());
          }
 
          var1 = var16.d();
@@ -79,7 +79,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          while (var10.hasNext()) {
             val var23: java.lang.String = (var10.next() as ProductDetails.d).b();
             if (var23 != null) {
-               var6.add(var23);
+               var8.add(var23);
             }
          }
       } else {
@@ -98,15 +98,15 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
             s.a("currencyCode", var12),
             s.a("price", (int)(var1 / (long)10000)),
             s.a("type", var7.e()),
-            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var6, null, 1, null)),
+            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var8, null, 1, null)),
             s.a("billingPeriod", var4)
          )
       );
    }
 
-   val var22: java.lang.String = var7.d();
-   val var18: StringBuilder = new StringBuilder();
-   var18.append("Could not find subscriptionOfferDetails for product: ");
-   var18.append(var22);
-   throw new AssertionError(var18.toString());
+   val var18: java.lang.String = var7.d();
+   val var22: StringBuilder = new StringBuilder();
+   var22.append("Could not find subscriptionOfferDetails for product: ");
+   var22.append(var18);
+   throw new AssertionError(var22.toString());
 }

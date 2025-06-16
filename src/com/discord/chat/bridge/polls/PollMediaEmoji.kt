@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.polls
 
-import Xa.f
 import com.discord.emoji.RenderableEmoji
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -100,16 +100,16 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
    public override fun toString(): String {
       val var2: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
-      val var4: java.lang.String = this.displayName;
+      val var4: java.lang.String = this.name;
+      val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PollMediaEmoji(id=");
       var3.append(var2);
       var3.append(", name=");
-      var3.append(var5);
-      var3.append(", displayName=");
       var3.append(var4);
+      var3.append(", displayName=");
+      var3.append(var5);
       var3.append(", animated=");
       var3.append(var1);
       var3.append(")");

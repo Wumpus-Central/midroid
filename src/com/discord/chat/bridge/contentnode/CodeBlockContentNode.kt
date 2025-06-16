@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -59,14 +59,14 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.lang;
-      val var4: java.lang.String = this.content;
+      val var4: java.lang.String = this.lang;
+      val var3: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
       val var2: StringBuilder = new StringBuilder();
       var2.append("CodeBlockContentNode(lang=");
-      var2.append(var3);
-      var2.append(", content=");
       var2.append(var4);
+      var2.append(", content=");
+      var2.append(var3);
       var2.append(", inQuote=");
       var2.append(var1);
       var2.append(")");

@@ -93,7 +93,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new e9.n();
+                     throw new t9.n();
                   }
 
                   val var18: TextView = this.binding.actionText;

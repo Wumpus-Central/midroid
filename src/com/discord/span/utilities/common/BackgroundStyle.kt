@@ -1,7 +1,7 @@
 package com.discord.span.utilities.common
 
-import Xa.f
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, marginVertical: Int = 0) {

@@ -5,9 +5,9 @@ import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent
 import com.discord.timers.reactevents.TimerEvent
 import com.facebook.react.bridge.ReactApplicationContext
-import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import t9.s
 
 public class TimersModule(reactContext: ReactApplicationContext) : NativeTimersModuleSpec {
    private final val reactEvents: ReactEvents

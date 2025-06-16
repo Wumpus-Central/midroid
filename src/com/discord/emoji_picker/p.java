@@ -13,6 +13,6 @@ public final class p implements Function0 {
    public final Function2 o;
 
    public final Object invoke() {
-      return EmojiPickerView.W(this.j, this.k, this.l, this.m, this.n, this.o);
+      return EmojiPickerView.Y(this.j, this.k, this.l, this.m, this.n, this.o);
    }
 }

@@ -6,11 +6,11 @@ import com.discord.simpleast.core.node.StyleNode
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
-import e9.s
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
+import t9.s
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern

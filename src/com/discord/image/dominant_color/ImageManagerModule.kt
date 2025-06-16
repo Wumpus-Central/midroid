@@ -1,7 +1,7 @@
 package com.discord.image.dominant_color
 
-import A1.a
-import A1.b
+import P1.a
+import P1.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
