@@ -2,10 +2,10 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
+import kb.f
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import mb.f
-import qb.q
+import ob.q
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -20,7 +20,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    @JvmStatic
    fun {
       val var0: q = q.a;
-      $childSerializers = new KSerializer[]{new pb.f(q.a), new pb.f(var0), null, null, null};
+      $childSerializers = new KSerializer[]{new nb.f(q.a), new nb.f(var0), null, null, null};
    }
 
    fun KvMessageEntry(var1: MutableList<JsonObject>, var2: MutableList<JsonObject>, var3: JsonObject, var4: java.lang.String, var5: Long) {
@@ -91,22 +91,22 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.members;
+      val var4: java.util.List = this.members;
       val var3: java.util.List = this.users;
-      val var1: JsonObject = this.message;
-      val var4: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var6: JsonObject = this.message;
+      val var1: java.lang.String = MessageId.toString-impl(this.id);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var5: StringBuilder = new StringBuilder();
       var5.append("KvMessageEntry(members=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", users=");
       var5.append(var3);
       var5.append(", message=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var4);
-      var5.append(", channelId=");
       var5.append(var6);
+      var5.append(", id=");
+      var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }

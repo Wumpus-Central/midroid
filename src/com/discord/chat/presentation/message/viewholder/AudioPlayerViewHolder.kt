@@ -159,29 +159,29 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var3 = var7;
             } else {
                val var13: MediaPlayer = AudioPlayerManager.INSTANCE.getPlayer(this.$audioSource);
-               val var5: Long;
+               val var4: Long;
                if (var13 != null) {
-                  var5 = var13.durationMs();
+                  var4 = var13.durationMs();
                } else {
-                  var5 = 0L;
+                  var4 = 0L;
                }
 
-               var3 = (float)var5 * 1000.0F;
+               var3 = (float)var4 * 1000.0F;
             }
 
-            val var9: ChatEventHandler = this.$eventHandler;
-            val var10: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
+            val var10: ChatEventHandler = this.$eventHandler;
+            val var9: java.lang.String = this.$accessory.getMessageId-3Eiw7ao();
             val var14: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var14 != null) {
                val var11: Long = var14.unbox-impl();
-               val var4: Boolean = this.$accessory.isVoiceMessage();
+               val var6: Boolean = this.$accessory.isVoiceMessage();
                val var8: java.lang.String = this.$accessory.getAttachment().getId();
                var var15: java.lang.String = var8;
                if (var8 == null) {
                   var15 = "";
                }
 
-               var9.mediaAttachmentPlaybackEnded-O97gnAM(var10, var3, var1, var11, var2, var4, var15);
+               var10.mediaAttachmentPlaybackEnded-O97gnAM(var9, var3, var1, var11, var2, var6, var15);
             }
          }
 

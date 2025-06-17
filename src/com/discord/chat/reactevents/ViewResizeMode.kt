@@ -15,7 +15,7 @@ public enum class ViewResizeMode(value: String) {
    fun {
       val var0: Array<ViewResizeMode> = $values();
       $VALUES = var0;
-      $ENTRIES = B9.a.a(var0);
+      $ENTRIES = z9.a.a(var0);
    }
 
    init {

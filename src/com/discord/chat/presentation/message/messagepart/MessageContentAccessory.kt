@@ -239,19 +239,19 @@ public data class MessageContentAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var10: Int = MessageId.hashCode-impl(this.messageId);
-      val var15: Int = this.messageContent.hashCode();
-      val var14: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
+      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var4: Int = this.messageContent.hashCode();
+      val var10: Int = java.lang.Boolean.hashCode(this.shouldAnimateEmoji);
       val var8: Int = java.lang.Boolean.hashCode(this.shouldShowLinkDecorations);
-      val var13: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
-      val var5: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
-      val var7: Int = Integer.hashCode(this.bottomSpacingPx);
-      val var12: Int = Integer.hashCode(this.linkColor);
-      val var4: Int = Integer.hashCode(this.messageTextColor);
-      val var9: Int = this.messageFont.hashCode();
-      val var11: Int = Integer.hashCode(this.textSizeSp);
-      val var16: Int = java.lang.Boolean.hashCode(this.boldLinkText);
-      val var6: Int = Integer.hashCode(this.constrainedWidth);
+      val var14: Int = java.lang.Boolean.hashCode(this.shouldShowRoleDot);
+      val var11: Int = java.lang.Boolean.hashCode(this.shouldShowRoleOnName);
+      val var9: Int = Integer.hashCode(this.bottomSpacingPx);
+      val var7: Int = Integer.hashCode(this.linkColor);
+      val var12: Int = Integer.hashCode(this.messageTextColor);
+      val var6: Int = this.messageFont.hashCode();
+      val var13: Int = Integer.hashCode(this.textSizeSp);
+      val var15: Int = java.lang.Boolean.hashCode(this.boldLinkText);
+      val var16: Int = Integer.hashCode(this.constrainedWidth);
       var var3: Int = 0;
       val var1: Int;
       if (this.editedLabel == null) {
@@ -287,43 +287,39 @@ public data class MessageContentAccessory(messageId: MessageId,
                                                                                                                   (
                                                                                                                            (
                                                                                                                                     (
-                                                                                                                                             (
-                                                                                                                                                      var10
-                                                                                                                                                            * 31
-                                                                                                                                                         + var15
-                                                                                                                                                   )
+                                                                                                                                             (var5 * 31 + var4)
                                                                                                                                                    * 31
-                                                                                                                                                + var14
+                                                                                                                                                + var10
                                                                                                                                           )
                                                                                                                                           * 31
                                                                                                                                        + var8
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var13
+                                                                                                                              + var14
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var5
+                                                                                                                     + var11
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var7
+                                                                                                            + var9
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var12
+                                                                                                   + var7
                                                                                              )
                                                                                              * 31
-                                                                                          + var4
+                                                                                          + var12
                                                                                     )
                                                                                     * 31
-                                                                                 + var9
+                                                                                 + var6
                                                                            )
                                                                            * 31
-                                                                        + var11
+                                                                        + var13
                                                                   )
                                                                   * 31
-                                                               + var16
+                                                               + var15
                                                          )
                                                          * 31
-                                                      + var6
+                                                      + var16
                                                 )
                                                 * 31
                                              + var1
@@ -343,58 +339,58 @@ public data class MessageContentAccessory(messageId: MessageId,
 
    public override fun toString(): String {
       val var16: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var17: StructurableText = this.messageContent;
-      val var7: Boolean = this.shouldAnimateEmoji;
-      val var8: Boolean = this.shouldShowLinkDecorations;
+      val var15: StructurableText = this.messageContent;
+      val var8: Boolean = this.shouldAnimateEmoji;
+      val var7: Boolean = this.shouldShowLinkDecorations;
       val var6: Boolean = this.shouldShowRoleDot;
-      val var10: Boolean = this.shouldShowRoleOnName;
+      val var11: Boolean = this.shouldShowRoleOnName;
       val var2: Int = this.bottomSpacingPx;
       val var1: Int = this.linkColor;
-      val var3: Int = this.messageTextColor;
-      val var12: DiscordFont = this.messageFont;
-      val var5: Int = this.textSizeSp;
-      val var9: Boolean = this.boldLinkText;
-      val var4: Int = this.constrainedWidth;
-      val var14: java.lang.String = this.editedLabel;
-      val var19: Int = this.editedLabelTextColor;
-      val var11: Boolean = this.isForwardedContent;
-      val var15: Truncation = this.truncation;
+      val var4: Int = this.messageTextColor;
+      val var14: DiscordFont = this.messageFont;
+      val var3: Int = this.textSizeSp;
+      val var10: Boolean = this.boldLinkText;
+      val var5: Int = this.constrainedWidth;
+      val var19: java.lang.String = this.editedLabel;
+      val var17: Int = this.editedLabelTextColor;
+      val var9: Boolean = this.isForwardedContent;
+      val var12: Truncation = this.truncation;
       val var13: DiscordThemeObject = this.theme;
       val var18: StringBuilder = new StringBuilder();
       var18.append("MessageContentAccessory(messageId=");
       var18.append(var16);
       var18.append(", messageContent=");
-      var18.append(var17);
+      var18.append(var15);
       var18.append(", shouldAnimateEmoji=");
-      var18.append(var7);
-      var18.append(", shouldShowLinkDecorations=");
       var18.append(var8);
+      var18.append(", shouldShowLinkDecorations=");
+      var18.append(var7);
       var18.append(", shouldShowRoleDot=");
       var18.append(var6);
       var18.append(", shouldShowRoleOnName=");
-      var18.append(var10);
+      var18.append(var11);
       var18.append(", bottomSpacingPx=");
       var18.append(var2);
       var18.append(", linkColor=");
       var18.append(var1);
       var18.append(", messageTextColor=");
-      var18.append(var3);
-      var18.append(", messageFont=");
-      var18.append(var12);
-      var18.append(", textSizeSp=");
-      var18.append(var5);
-      var18.append(", boldLinkText=");
-      var18.append(var9);
-      var18.append(", constrainedWidth=");
       var18.append(var4);
-      var18.append(", editedLabel=");
+      var18.append(", messageFont=");
       var18.append(var14);
-      var18.append(", editedLabelTextColor=");
+      var18.append(", textSizeSp=");
+      var18.append(var3);
+      var18.append(", boldLinkText=");
+      var18.append(var10);
+      var18.append(", constrainedWidth=");
+      var18.append(var5);
+      var18.append(", editedLabel=");
       var18.append(var19);
+      var18.append(", editedLabelTextColor=");
+      var18.append(var17);
       var18.append(", isForwardedContent=");
-      var18.append(var11);
+      var18.append(var9);
       var18.append(", truncation=");
-      var18.append(var15);
+      var18.append(var12);
       var18.append(", theme=");
       var18.append(var13);
       var18.append(")");

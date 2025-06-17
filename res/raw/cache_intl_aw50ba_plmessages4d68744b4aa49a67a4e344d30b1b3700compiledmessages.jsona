@@ -209,14 +209,6 @@
   "0PbE/P": "Pozwala obniżyć saturację kolorów w aplikacji dla osób wrażliwych na kolory. Opcja ta nie wpływa na saturację obrazów, filmów, kolorów ról ani innej zawartości dostarczonej przez użytkownika.",
   "5PWWCQ": "Saturacja",
   "i19n5O": "Poziom przybliżenia",
-  "zR3S9/": [
-    "Poziom przybliżenia (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Konto",
   "6eNTWV": "Nie możesz go używać, gdy jest wyłączone.",
   "j3rC+f": "Konto jest wyłączone",
@@ -8358,6 +8350,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -32199,9 +32192,6 @@
   "D+qW0N": "Pozwala członkom używać poleceń aplikacji na tych kanałach, w tym poleceń z ukośnikiem i z menu kontekstowego.",
   "ReG3gI": "Pozwala członkom używać poleceń aplikacji na tym kanale, w tym poleceń z ukośnikiem i z menu kontekstowego.",
   "pJrJ39": "Pozwala członkom używać poleceń aplikacji, w tym poleceń z ukośnikiem i z menu kontekstowego.",
-  "8eeEZm": "Użyj Clyde'a",
-  "d664Fx": "Pozwala członkom na interakcję z botem Clyde AI.",
-  "Tx5TjI": "Pozwala członkom na interakcję z botem Clyde AI i jego personalizację.",
   "BEqU5O": "Pozwala członkom korzystać z aktywności.",
   "maNzCA": "Pozwala członkom na używanie aktywności na tych kanałach.",
   "qinvMT": "Pozwala członkom na używanie aktywności na tym kanale.",

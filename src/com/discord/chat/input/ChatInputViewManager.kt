@@ -30,7 +30,7 @@ import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
-import pb.f
+import nb.f
 
 @ReactModule(name = "DCDChatInput")
 public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChatInputManagerInterface<ChatInputRootView> {
@@ -100,12 +100,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             q.h(var1, "uri");
-            val var4: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var2: ThemedReactContext = this.$reactContext;
-            val var3: ChatInputRootView = this.$view;
-            val var5: java.lang.String = var1.toString();
-            q.g(var5, "toString(...)");
-            var4.emitEvent(var2, var3, new OnPasteImageEvent(var5, this.$reactContext.getContentResolver().getType(var1)));
+            val var5: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var3: ThemedReactContext = this.$reactContext;
+            val var2: ChatInputRootView = this.$view;
+            val var4: java.lang.String = var1.toString();
+            q.g(var4, "toString(...)");
+            var5.emitEvent(var3, var2, new OnPasteImageEvent(var4, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

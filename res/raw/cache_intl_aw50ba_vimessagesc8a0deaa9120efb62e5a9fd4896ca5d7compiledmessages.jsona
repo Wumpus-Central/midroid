@@ -203,14 +203,6 @@
   "0PbE/P": "Giảm độ bão hòa màu sắc trong ứng dụng với những ứng dụng nhạy cảm với màu sắc. Điều này không ảnh hưởng đến độ bão hòa của hình ảnh, video, màu vai trò hoặc nội dung khác do người dùng cung cấp theo mặc định.",
   "5PWWCQ": "Độ Bão Hòa",
   "i19n5O": "Mức độ phóng to",
-  "zR3S9/": [
-    "Mức độ thu phóng (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Tài Khoản",
   "6eNTWV": "Bạn không thể sử dụng tài khoản khi nó đã bị vô hiệu hóa.",
   "j3rC+f": "Vô Hiệu Hóa Tài Khoản",
@@ -8074,6 +8066,7 @@
     ],
     "MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
@@ -31331,9 +31324,6 @@
   "D+qW0N": "Cho phép thành viên sử dụng câu lệnh từ ứng dụng trong các kênh này, bao gồm lệnh slash và lệnh menu ngữ cảnh.",
   "ReG3gI": "Cho phép thành viên sử dụng câu lệnh từ ứng dụng trong kênh này, bao gồm lệnh slash và lệnh menu ngữ cảnh.",
   "pJrJ39": "Cho phép thành viên sử dụng câu lệnh từ ứng dụng, bao gồm lệnh slash và lệnh menu ngữ cảnh.",
-  "8eeEZm": "Sử dụng Clyde",
-  "d664Fx": "Cho phép thành viên tương tác với bot Clyde AI.",
-  "Tx5TjI": "Cho phép thành viên tương tác cùng và tùy chỉnh bot Clyde AI.",
   "BEqU5O": "Cho phép thành viên sử dụng Hoạt Động.",
   "maNzCA": "Cho phép thành viên sử dụng Hoạt Động trong các kênh này.",
   "qinvMT": "Cho phép thành viên sử dụng Hoạt Động trong kênh này.",

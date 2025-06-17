@@ -303,6 +303,7 @@
     <item type="id" name="file_attachment_icon" />
     <item type="id" name="file_attachment_name" />
     <item type="id" name="filter" />
+    <item type="id" name="firstRender" />
     <item type="id" name="flagged_message_keyword" />
     <item type="id" name="flagged_message_rule_name" />
     <item type="id" name="follow_button" />

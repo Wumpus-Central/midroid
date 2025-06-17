@@ -1,6 +1,6 @@
 package com.discord.resource_usage
 
-import Nb.e
+import Lb.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
@@ -14,7 +14,7 @@ import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import t9.s
+import r9.s
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic

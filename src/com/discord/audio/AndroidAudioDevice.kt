@@ -6,9 +6,9 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import t9.s
+import r9.s
 
-@mb.f
+@kb.f
 public class AndroidAudioDevice {
    public final var deviceType: Int
       internal set

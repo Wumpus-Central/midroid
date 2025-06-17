@@ -203,14 +203,6 @@
   "0PbE/P": "Riduce la saturazione dei colori nell'applicazione, per chi soffre di sensibilità cromatica. Non ha effetto automatico sulla saturazione di immagini, video, ruoli e altri contenuti forniti dagli utenti.",
   "5PWWCQ": "Saturazione",
   "i19n5O": "Livello di zoom",
-  "zR3S9/": [
-    "Livello zoom (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "Non puoi usarlo mentre è disattivato.",
   "j3rC+f": "Account disattivato",
@@ -8052,6 +8044,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31389,9 +31382,6 @@
   "D+qW0N": "Consente ai membri di usare comandi dalle applicazioni in questi canali, inclusi comandi slash e comandi del menu di contesto.",
   "ReG3gI": "Consente ai membri di usare comandi dalle applicazioni in questo canale, inclusi comandi slash e comandi del menu di contesto.",
   "pJrJ39": "Consente ai membri di usare comandi dalle applicazioni, inclusi comandi slash e comandi del menu di contesto.",
-  "8eeEZm": "Usa Clyde",
-  "d664Fx": "Consente ai membri di interagire con il bot IA di Clyde.",
-  "Tx5TjI": "Consente ai membri di interagire con il bot IA di Clyde e di personalizzarlo.",
   "BEqU5O": "Consente ai membri di utilizzare le Attività.",
   "maNzCA": "Consente ai membri di usare Attività in questi canali.",
   "qinvMT": "Consente ai membri di usare Attività in questo canale.",

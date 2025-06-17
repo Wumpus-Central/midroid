@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.rolecolors.RoleColors
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode {

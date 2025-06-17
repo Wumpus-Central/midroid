@@ -1,5 +1,7 @@
 package com.discord.chat.input.views
 
+import ab.I
+import ab.K
 import android.content.Context
 import android.content.Intent
 import android.content.ClipData.Item
@@ -17,8 +19,6 @@ import android.view.View.OnLayoutChangeListener
 import android.widget.RelativeLayout
 import androidx.core.view.ContentInfoCompat
 import androidx.core.view.Y
-import cb.I
-import cb.K
 import com.discord.SetTextSizeSpKt
 import com.discord.chat.input.bridge.ChatInputNode
 import com.discord.chat.input.databinding.ChatInputRootViewBinding
@@ -34,7 +34,7 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.span.utilities.BackgroundSpanDrawer
 import com.discord.span.utilities.SpannableExtensionsKt
-import fb.w
+import db.w
 import java.util.ArrayList
 import java.util.LinkedHashSet
 import java.util.UUID
@@ -385,10 +385,10 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          var4.add(ChatInputNode.copy$default(var5, 0, var5.getLocation() + var2, 0, null, false, null, false, 125, null));
       }
 
-      for (ChatInputNode var18 : var4) {
+      for (ChatInputNode var17 : var4) {
          val var7: Editable = this.editText.getEditableText();
          q.g(var7, "getEditableText(...)");
-         EditTextUtilsKt.setChatInputNodeStyle(var7, var18);
+         EditTextUtilsKt.setChatInputNodeStyle(var7, var17);
       }
 
       val var8: Editable = this.editText.getEditableText();
@@ -459,7 +459,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      cb.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
+      ab.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
          int label;
          final ChatInputRootView this$0;
 
@@ -477,7 +477,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = A9.b.e();
+            val var3: Any = y9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -486,7 +486,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = fb.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
+               var1 = db.e.f(ChatInputRootView.access$getCurrentTextFlow$p(this.this$0), 100L);
                val var4: FlowCollector = new FlowCollector(this.this$0) {
                   final ChatInputRootView this$0;
 
@@ -524,7 +524,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       if (!var1) {
-         this.blurJob = cb.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
+         this.blurJob = ab.f.d(CoroutineViewUtilsKt.getAttachedScope(this), null, null, new Function2(this, null) {
             int label;
             final ChatInputRootView this$0;
 
@@ -542,7 +542,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = A9.b.e();
+               val var3: Any = y9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -568,7 +568,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = A9.b.e();
+                        val var3: Any = y9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -587,7 +587,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (cb.f.g(var1, var4, this) === var3) {
+                  if (ab.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
@@ -732,21 +732,21 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var2: Int = this.selectionStart;
-         val var1: Int = this.selectionEnd;
+         val var1: Int = this.selectionStart;
+         val var2: Int = this.selectionEnd;
          val var5: java.lang.String = this.text;
-         val var4: java.lang.String = this.editId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("CurrentTextAndSelection(selectionStart=");
-         var3.append(var2);
-         var3.append(", selectionEnd=");
-         var3.append(var1);
-         var3.append(", text=");
-         var3.append(var5);
-         var3.append(", editId=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var3: java.lang.String = this.editId;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("CurrentTextAndSelection(selectionStart=");
+         var4.append(var1);
+         var4.append(", selectionEnd=");
+         var4.append(var2);
+         var4.append(", text=");
+         var4.append(var5);
+         var4.append(", editId=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

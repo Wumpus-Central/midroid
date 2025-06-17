@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.scroll
 
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Boolean = false, highlight: Boolean = false, position: Int? = null) {
@@ -90,14 +90,14 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    }
 
    public override fun toString(): String {
-      val var5: ChatScrollType = this.type;
+      val var6: ChatScrollType = this.type;
       val var1: Int = this.index;
       val var3: Boolean = this.animate;
       val var2: Boolean = this.highlight;
-      val var6: Int = this.position;
+      val var5: Int = this.position;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ChatScrollData(type=");
-      var4.append(var5);
+      var4.append(var6);
       var4.append(", index=");
       var4.append(var1);
       var4.append(", animate=");
@@ -105,7 +105,7 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
       var4.append(", highlight=");
       var4.append(var2);
       var4.append(", position=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

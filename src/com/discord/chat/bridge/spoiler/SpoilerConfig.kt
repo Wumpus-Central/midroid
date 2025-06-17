@@ -87,18 +87,18 @@ public data class SpoilerConfig(attributes: SpoilerAttributes,
 
    public override fun toString(): String {
       val var4: SpoilerAttributes = this.attributes;
-      val var2: Function1 = this.onTapObscureToggle;
-      val var5: Function1 = this.onReveal;
-      val var1: Function1 = this.onHide;
+      val var5: Function1 = this.onTapObscureToggle;
+      val var1: Function1 = this.onReveal;
+      val var2: Function1 = this.onHide;
       val var3: StringBuilder = new StringBuilder();
       var3.append("SpoilerConfig(attributes=");
       var3.append(var4);
       var3.append(", onTapObscureToggle=");
-      var3.append(var2);
-      var3.append(", onReveal=");
       var3.append(var5);
-      var3.append(", onHide=");
+      var3.append(", onReveal=");
       var3.append(var1);
+      var3.append(", onHide=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

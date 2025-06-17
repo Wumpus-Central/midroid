@@ -203,14 +203,6 @@
   "0PbE/P": "Reduce la saturación de los colores en la aplicación para quienes sean sensibles a los colores. Por defecto, no afecta a la saturación de imágenes, vídeos, colores de los roles u otro contenido de los usuarios.",
   "5PWWCQ": "Saturación",
   "i19n5O": "Nivel de zoom",
-  "zR3S9/": [
-    "Nivel de zoom (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Cuenta",
   "6eNTWV": "No puedes usarla mientras está deshabilitada.",
   "j3rC+f": "Cuenta deshabilitada",
@@ -8041,6 +8033,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31396,9 +31389,6 @@
   "D+qW0N": "Permite a los miembros usar los comandos de aplicaciones en estos canales, incluidos los comandos de barra diagonal y de menú contextual.",
   "ReG3gI": "Permite a los miembros usar los comandos de aplicaciones en este canal, incluidos los comandos de barra diagonal y de menú contextual.",
   "pJrJ39": "Permite a los miembros usar los comandos de aplicaciones, incluidos los comandos de barra diagonal y de menú contextual.",
-  "8eeEZm": "Usar a Clyde",
-  "d664Fx": "Permite a los miembros interactuar con el bot de IA de Clyde.",
-  "Tx5TjI": "Permite a los miembros interactuar con el bot de IA de Clyde y personalizarlo.",
   "BEqU5O": "Permite a los miembros usar actividades.",
   "maNzCA": "Permite a los miembros usar Actividades en estos canales.",
   "qinvMT": "Permite a los miembros usar Actividades en este canal.",

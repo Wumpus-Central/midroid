@@ -10,6 +10,6 @@ public final class Q implements Function1 {
    public final ContentNode k;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.g(this.j, this.k, (View)var1);
+      return TextUtilsKt.F(this.j, this.k, (View)var1);
    }
 }

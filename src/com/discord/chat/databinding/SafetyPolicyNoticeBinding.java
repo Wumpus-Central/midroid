@@ -37,18 +37,18 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
          LinearLayout var3 = (LinearLayout)a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.learn_more;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var7 = (TextView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.subtitle_text;
-                  TextView var7 = (TextView)a.a(var0, var1);
-                  if (var7 != null) {
+                  TextView var2 = (TextView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.title;
-                     TextView var4 = (TextView)a.a(var0, var1);
-                     if (var4 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var5, var3, var2, var6, var7, var4);
+                     TextView var6 = (TextView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new SafetyPolicyNoticeBinding(var0, var5, var3, var4, var7, var2, var6);
                      }
                   }
                }

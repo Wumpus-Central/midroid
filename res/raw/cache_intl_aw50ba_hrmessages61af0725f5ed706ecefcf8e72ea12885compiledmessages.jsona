@@ -203,14 +203,6 @@
   "0PbE/P": "Smanjuje zasićenost boja unutar aplikacije za one koji su osjetljivi na jarke boje. Prema zadanim postavkama, to neće utjecati na zasićenost u slikama, videu, bojama uloga ili drugim sadržajima koje doprinose korisnici.",
   "5PWWCQ": "Zasićenost",
   "i19n5O": "Razina zumiranja",
-  "zR3S9/": [
-    "Razina zumiranja (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Račun",
   "6eNTWV": "Ne možeš ga koristiti dok je onemogućen.",
   "j3rC+f": "Račun onemogućen",
@@ -8296,6 +8288,7 @@
     ],
     "MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500MB",
@@ -32329,9 +32322,6 @@
   "D+qW0N": "Članovi koji imaju ovu dozvolu mogu u ovim kanalima koristiti naredbe iz aplikacija, uključujući slash naredbe i naredbe kontekstnog izbornika.",
   "ReG3gI": "Članovi koji imaju ovu dozvolu mogu u ovom kanalu koristiti naredbe iz aplikacija, uključujući slash naredbe i naredbe kontekstnog izbornika.",
   "pJrJ39": "Članovi koji imaju ovu dozvolu mogu koristiti naredbe iz aplikacija, uključujući slash naredbe i naredbe kontekstnog izbornika.",
-  "8eeEZm": "Koristi Clydea",
-  "d664Fx": "Članovima omogućuje interakciju s umjetno inteligentnim botom Clydeom.",
-  "Tx5TjI": "Članovima omogućuje interakciju s umjetno inteligentnim botom Clydeom i njegovu prilagodbu.",
   "BEqU5O": "Članovima omogućuje korištenje aktivnosti.",
   "maNzCA": "Omogući članovima pokretanje aktivnosti u ovim kanalima.",
   "qinvMT": "Omogući članovima pokretanje aktivnosti u ovom kanalu.",

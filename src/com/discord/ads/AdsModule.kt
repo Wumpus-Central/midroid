@@ -17,7 +17,7 @@ import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 import java.util.concurrent.atomic.AtomicReference
 import kotlin.jvm.internal.q
-import t9.s
+import r9.s
 
 public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleSpec {
    private final val adExecutor: ExecutorService

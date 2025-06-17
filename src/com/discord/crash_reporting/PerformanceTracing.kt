@@ -75,12 +75,12 @@ public class PerformanceTracing : MarkerListener {
       val var4: java.lang.String;
       if (var1.getTag() != null && !q.c(var1.getName(), "CREATE_REACT_CONTEXT")) {
          val var2: java.lang.String = var1.getName();
-         val var3: java.lang.String = var1.getTag();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var2);
-         var5.append(" ");
-         var5.append(var3);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getTag();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append(var2);
+         var3.append(" ");
+         var3.append(var5);
+         var4 = var3.toString();
       } else {
          var4 = var1.getName();
       }
@@ -492,7 +492,7 @@ public class PerformanceTracing : MarkerListener {
       fun {
          val var0: Array<PerformanceTracing.MarkerEnd> = $values();
          $VALUES = var0;
-         $ENTRIES = B9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       @JvmStatic
@@ -563,16 +563,16 @@ public class PerformanceTracing : MarkerListener {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.name;
-         val var1: java.lang.String = this.tag;
-         val var2: PerformanceTracing.MarkerEnd = this.markerEnd;
+         val var2: java.lang.String = this.name;
+         val var3: java.lang.String = this.tag;
+         val var1: PerformanceTracing.MarkerEnd = this.markerEnd;
          val var4: StringBuilder = new StringBuilder();
          var4.append("TransactionMarker(name=");
-         var4.append(var3);
-         var4.append(", tag=");
-         var4.append(var1);
-         var4.append(", markerEnd=");
          var4.append(var2);
+         var4.append(", tag=");
+         var4.append(var3);
+         var4.append(", markerEnd=");
+         var4.append(var1);
          var4.append(")");
          return var4.toString();
       }

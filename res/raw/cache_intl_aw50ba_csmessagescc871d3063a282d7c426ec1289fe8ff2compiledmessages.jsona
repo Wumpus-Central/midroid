@@ -210,14 +210,6 @@
   "0PbE/P": "Umožňuje snížit sytost barev v aplikaci, což ocení uživatelé s poruchami vnímání barev. Ve výchozím nastavení úprava tohoto parametru neovlivní sytost obrázků, videí, barev rolí ani ostatního uživatelského obsahu.",
   "5PWWCQ": "Sytost",
   "i19n5O": "Úroveň přiblížení",
-  "zR3S9/": [
-    "Úroveň přiblížení (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Účet",
   "6eNTWV": "Dokud je vypnutý, nelze jej použít.",
   "j3rC+f": "Účet je vypnutý",
@@ -8365,6 +8357,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -32350,9 +32343,6 @@
   "D+qW0N": "Umožní členům používat v těchto kanálech příkazy z aplikací včetně /příkazů a příkazů kontextové nabídky.",
   "ReG3gI": "Umožní členům používat v tomto kanále příkazy z aplikací včetně /příkazů a příkazů kontextové nabídky.",
   "pJrJ39": "Umožní členům používat příkazy z aplikací včetně /příkazů a příkazů kontextové nabídky.",
-  "8eeEZm": "Používat Clyda",
-  "d664Fx": "Umožňuje členům interagovat s AI botem Clydem.",
-  "Tx5TjI": "Umožňuje členům interagovat s AI botem Clydem a upravovat ho.",
   "BEqU5O": "Umožňuje členům používat aktivity.",
   "maNzCA": "Umožní členům používat aktivity v těchto kanálech.",
   "qinvMT": "Umožní členům používat aktivity v tomto kanálu.",

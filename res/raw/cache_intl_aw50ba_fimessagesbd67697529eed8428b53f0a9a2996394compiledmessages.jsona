@@ -203,14 +203,6 @@
   "0PbE/P": "Vähennä sovelluksen värikylläisyyttä väriherkkiä käyttäjiä varten. Tämä ei oletusarvoisesti vaikuta kuvien, videoiden, roolin värien tai muun käyttäjien toimittaman sisällön värikylläisyyteen.",
   "5PWWCQ": "Värikylläisyys",
   "i19n5O": "Suurennuksen taso",
-  "zR3S9/": [
-    "Suurennuksen taso (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Tili",
   "6eNTWV": "Et voi käyttää tiliä sen ollessa poissa käytöstä.",
   "j3rC+f": "Tili poistettu käytöstä",
@@ -8059,6 +8051,7 @@
     ],
     " Mt"
   ],
+  "M6qV8v": "50 Mt",
   "yMOW8P": "100 Mt",
   "Ll40SE": "25 Mt",
   "EaBfen": "500 Mt",
@@ -31295,9 +31288,6 @@
   "D+qW0N": "Jäsenet voivat käyttää näillä kanavilla sovellusten komentoja, kuten vinoviivakomentoja ja pikavalikkojen komentoja.",
   "ReG3gI": "Jäsenet voivat käyttää tällä kanavalla sovellusten komentoja, kuten vinoviivakomentoja ja pikavalikkojen komentoja.",
   "pJrJ39": "Jäsenet voivat käyttää sovellusten komentoja, kuten vinoviivakomentoja ja pikavalikkojen komentoja.",
-  "8eeEZm": "Käytä Clydeä",
-  "d664Fx": "Jäsenet voivat käyttää AI-botti Clydea.",
-  "Tx5TjI": "Jäsenet voivat käyttää ja mukauttaa AI-botti Clydea.",
   "BEqU5O": "Jäsenet voivat käyttää toimintoja.",
   "maNzCA": "Jäsenet voivat käyttää toimintoja näillä kanavilla.",
   "qinvMT": "Jäsenet voivat käyttää toimintoja tällä kanavalla.",

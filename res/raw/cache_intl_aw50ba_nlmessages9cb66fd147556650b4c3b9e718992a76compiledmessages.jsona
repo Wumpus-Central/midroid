@@ -203,14 +203,6 @@
   "0PbE/P": "Verminder de kleurverzadiging in de applicatie als je kleurgevoelig bent. Dit heeft standaard geen invloed op de verzadiging van afbeeldingen, video's, rolkleuren of andere door de gebruiker aangeleverde content.",
   "5PWWCQ": "Verzadiging",
   "i19n5O": "Zoomniveau",
-  "zR3S9/": [
-    "Zoomniveau (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "Je kunt het niet gebruiken als het is uitgeschakeld.",
   "j3rC+f": "Account uitgeschakeld",
@@ -8050,6 +8042,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31291,9 +31284,6 @@
   "D+qW0N": "Staat leden toe om machtigingen van opdrachten te gebruiken op deze kanalen, inclusief slashopdrachten en contextmenuopdrachten.",
   "ReG3gI": "Staat leden toe om machtigingen van opdrachten te gebruiken op dit kanaal, inclusief slashopdrachten en contextmenuopdrachten.",
   "pJrJ39": "Staat leden toe om machtigingen van opdrachten te gebruiken, inclusief slashopdrachten en contextmenuopdrachten.",
-  "8eeEZm": "Clyde gebruiken",
-  "d664Fx": "Leden mogen interactie aangaan met de AI-bot Clyde.",
-  "Tx5TjI": "Leden mogen interactie aangaan met de AI-bot Clyde en Clyde aanpassen.",
   "BEqU5O": "Leden mogen activiteiten gebruiken.",
   "maNzCA": "Leden mogen activiteiten gebruiken in deze kanalen.",
   "qinvMT": "Leden mogen activiteiten gebruiken in dit kanaal.",

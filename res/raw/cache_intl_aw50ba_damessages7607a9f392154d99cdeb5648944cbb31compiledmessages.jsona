@@ -203,14 +203,6 @@
   "0PbE/P": "Reducer farvemætningen i applikationen for dem med farvefølsomhed. Dette påvirker som standard ikke mætningen af billeder, videoer, rollefarver eller andet brugerleveret indhold.",
   "5PWWCQ": "Farvemætning",
   "i19n5O": "Zoom-niveau",
-  "zR3S9/": [
-    "Zoom-niveau (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Konto",
   "6eNTWV": "Du kan ikke bruge den, så længe den er deaktiveret.",
   "j3rC+f": "Konto deaktiveret",
@@ -8059,6 +8051,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31459,9 +31452,6 @@
   "D+qW0N": "Gør medlemmer i stand til at bruge kommandoer fra applikationer i disse kanaler, herunder forhåndsvisningskommandoer og kommandoer til kontekstmenuer.",
   "ReG3gI": "Gør medlemmer i stand til at bruge kommandoer fra applikationer i denne kanal, herunder forhåndsvisningskommandoer og kommandoer til kontekstmenuer.",
   "pJrJ39": "Gør medlemmer i stand til at bruge kommandoer fra applikationer, herunder forhåndsvisningskommandoer og kommandoer til kontekstmenuer.",
-  "8eeEZm": "Brug Clyde",
-  "d664Fx": "Tillader medlemmer at interagere med Clyde AI-botten.",
-  "Tx5TjI": "Tillader medlemmer at interagere med og tilpasse Clyde AI-botten.",
   "BEqU5O": "Tillader medlemmer at bruge Aktiviteter.",
   "maNzCA": "Tillader medlemmer at bruge Aktiviteter i disse kanaler.",
   "qinvMT": "Tillader medlemmer at bruge Aktiviteter i denne kanal.",

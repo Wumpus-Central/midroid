@@ -115,10 +115,10 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          var11.setVisibility(8);
       }
 
-      val var6: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, 511, null)
+      val var12: ComponentContext = ComponentContext.copy$default(var3, null, null, null, null, null, null, null, false, false, true, 511, null)
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
-      val var12: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
+      val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
       val var8: java.util.Iterator = var7.iterator();
 
       for (int var9 = 0; var8.hasNext(); var9++) {
@@ -127,10 +127,10 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
             kotlin.collections.i.u();
          }
 
-         var12.add(var2.getConfiguredComponentView(var15 as Component, var6, this, var9));
+         var6.add(var2.getConfiguredComponentView(var15 as Component, var12, this, var9));
       }
 
-      val var13: java.util.List = kotlin.collections.i.c0(var12);
+      val var13: java.util.List = kotlin.collections.i.c0(var6);
       val var14: LinearLayout = this.binding.childrenViews;
       q.g(this.binding.childrenViews, "childrenViews");
       MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);

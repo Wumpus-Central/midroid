@@ -15,7 +15,7 @@ import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
-import t9.s
+import r9.s
 
 public class ChatView(context: Context) : ReactViewGroup {
    private final lateinit var chatList: ChatListView

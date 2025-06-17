@@ -1,6 +1,6 @@
 package com.discord.serialization
 
-import O9.c
+import M9.c
 import h2.a
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
@@ -22,24 +22,24 @@ public object SerializerUtils {
    public fun findErroringFields(jsonString: String, deserializerClass: KClass<*>): com.discord.serialization.SerializerUtils.SerializerError {
       q.h(var1, "jsonString");
       q.h(var2, "deserializerClass");
-      val var6: JsonElement = b.b(null, new a(), 1, null).g(var1);
-      if (var6 !is JsonObject) {
+      val var3: JsonElement = b.b(null, new a(), 1, null).g(var1);
+      if (var3 !is JsonObject) {
          return SerializerUtils.SerializerError.EMPTY.INSTANCE;
       } else {
-         val var3: LinkedHashMap = new LinkedHashMap();
+         val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var4 : c.a(var2)) {
-            val var7: JsonElement = (var6 as JsonObject).get(var4.getName()) as JsonElement;
+         for (KProperty1 var5 : c.a(var2)) {
+            val var7: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
             if (var7 == null) {
-               if (!var4.getReturnType().j()) {
-                  var3.put(var4.getName(), "null");
+               if (!var5.getReturnType().b()) {
+                  var6.put(var5.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var4, var7)) {
-               var3.put(var4.getName(), var7.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var5, var7)) {
+               var6.put(var5.getName(), var7.toString());
             }
          }
 
-         return new SerializerUtils.SerializerError.Data(var3);
+         return new SerializerUtils.SerializerError.Data(var6);
       }
    }
 

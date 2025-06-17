@@ -203,14 +203,6 @@
   "0PbE/P": "Reduce saturația culorilor în aplicație, pentru persoanele cu sensibilitate la culori. Setarea nu afectează saturația imaginilor, clipurilor video, culorilor pentru roluri sau a conținutului furnizat de utilizatori.",
   "5PWWCQ": "Saturație",
   "i19n5O": "Nivelul zoom-ului",
-  "zR3S9/": [
-    "Nivel de zoom (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Cont",
   "6eNTWV": "Nu îl poți folosi cât timp acesta este dezactivat.",
   "j3rC+f": "Cont dezactivat",
@@ -8017,6 +8009,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500MB",
@@ -31242,9 +31235,6 @@
   "D+qW0N": "Le permite membrilor să folosească comenzile din aplicații pe aceste canale, inclusiv comenzile cu bară oblică și cele din meniul contextual.",
   "ReG3gI": "Le permite membrilor să folosească comenzile din aplicații pe acest canal, inclusiv comenzile cu bară oblică și cele din meniul contextual.",
   "pJrJ39": "Le permite membrilor să folosească comenzile din aplicații, inclusiv comenzile cu bară oblică și cele din meniul contextual.",
-  "8eeEZm": "Folosește-l pe Clyde",
-  "d664Fx": "Le permite membrilor să interacționeze cu botul IA Clyde.",
-  "Tx5TjI": "Le permite membrilor să interacționeze cu botul IA Clyde.",
   "BEqU5O": "Le permite membrilor să folosească activitățile.",
   "maNzCA": "Le permite membrilor să folosească activitățile pe aceste canale.",
   "qinvMT": "Le permite membrilor să folosească activitățile pe acest canal.",

@@ -209,14 +209,6 @@
   "0PbE/P": "Sumažink programėlės spalvų sodrumą tiems, kurie jautrūs spalvoms. Pagal numatytuosius nustatymus tai nepaveikia vaizdų, vaizdo įrašų, vaidmenų spalvų ar kito naudotojų pateikto turinio spalvų sodrumo.",
   "5PWWCQ": "Sodrumas",
   "i19n5O": "Mastelio lygis",
-  "zR3S9/": [
-    "Mastelio lygis (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Paskyra",
   "6eNTWV": "Tu negali ja naudotis, kol ji išjungta.",
   "j3rC+f": "Paskyra Išjungta",
@@ -8342,6 +8334,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -32327,9 +32320,6 @@
   "D+qW0N": "Nariams leidžiama naudoti programėlių komandas šiuose kanaluose, įskaitant komandas su pasviruoju brūkšniu ir kontekstinio meniu komandas.",
   "ReG3gI": "Nariams leidžiama naudoti programėlių komandas šiame kanale, įskaitant komandas su pasviruoju brūkšniu ir kontekstinio meniu komandas.",
   "pJrJ39": "Nariams leidžiama naudoti programėlių komandas, įskaitant komandas su pasviruoju brūkšniu ir kontekstinio meniu komandas.",
-  "8eeEZm": "Naudoti Clyde",
-  "d664Fx": "Nariams leidžiama bendrauti su Clyde DI botu.",
-  "Tx5TjI": "Nariams leidžiama bendrauti su Clyde DI botu ir jį tinkinti.",
   "BEqU5O": "Nariams leidžiama naudoti veiklas.",
   "maNzCA": "Nariams leidžiama naudoti veiklas šiuose kanaluose.",
   "qinvMT": "Nariams leidžiama naudoti veiklas šiame kanale.",

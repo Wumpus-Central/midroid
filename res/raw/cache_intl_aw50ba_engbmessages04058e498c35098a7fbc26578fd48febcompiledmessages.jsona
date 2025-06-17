@@ -203,14 +203,6 @@
   "0PbE/P": "Reduce the colour saturation within the application for those with colour sensitivities. This does not affect the saturation of images, videos, role colours or other user-provided content by default.",
   "5PWWCQ": "Saturation",
   "i19n5O": "Zoom level",
-  "zR3S9/": [
-    "Zoom level (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "You cannot use it while it's disabled.",
   "j3rC+f": "Account Disabled",
@@ -8012,6 +8004,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31188,9 +31181,6 @@
   "D+qW0N": "Allows members to use commands from applications in these channels, including slash commands and context menu commands.",
   "ReG3gI": "Allows members to use commands from applications in this channel, including slash commands and context menu commands.",
   "pJrJ39": "Allows members to use commands from applications, including slash commands and context menu commands.",
-  "8eeEZm": "Use Clyde",
-  "d664Fx": "Allows members to interact with the Clyde AI bot.",
-  "Tx5TjI": "Allows members to interact with and customise the Clyde AI bot.",
   "BEqU5O": "Allows members to use Activities.",
   "maNzCA": "Allows members to use Activities in these channels.",
   "qinvMT": "Allows members to use Activities in this channel.",

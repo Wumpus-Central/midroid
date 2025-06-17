@@ -382,6 +382,7 @@ public final class R {
       public static int images_channel_following_light_channel_following_success_1;
       public static int images_channel_following_light_channel_following_success_2;
       public static int images_channel_following_light_channel_following_success_3;
+      public static int images_clydeavatar;
       public static int images_connectionsprofilesteamdota2;
       public static int images_connectionsprofilesteamtf2;
       public static int images_consoles_link_failure;
@@ -1193,7 +1194,6 @@ public final class R {
       public static int modules_blocked_domains_components_native_images_dangerdave;
       public static int modules_build_overrides_native_images_codeillustrationdark;
       public static int modules_build_overrides_native_images_codeillustrationlight;
-      public static int modules_clyde_ai_assets_clydeavatar;
       public static int modules_collectibles_native_images_discord_logo_black;
       public static int modules_collectibles_native_images_discord_logo_white;
       public static int modules_collectibles_native_images_premium_sparkles;

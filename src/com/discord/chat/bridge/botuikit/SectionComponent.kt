@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>)
@@ -94,23 +94,23 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var3: java.lang.String = this.errorText;
-      val var6: java.util.List = this.components;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
       val var2: SectionAccessory = this.accessory;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SectionComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var5);
-      var4.append(", errorText=");
-      var4.append(var3);
-      var4.append(", components=");
-      var4.append(var6);
-      var4.append(", accessory=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("SectionComponent(type=");
+      var6.append(var1);
+      var6.append(", id=");
+      var6.append(var3);
+      var6.append(", errorText=");
+      var6.append(var4);
+      var6.append(", components=");
+      var6.append(var5);
+      var6.append(", accessory=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -59,15 +59,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var6: java.lang.String = var2.getMessageId();
-      val var5: java.lang.String = var2.getAppId();
+      val var5: java.lang.String = var2.getMessageId();
+      val var6: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
+      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
    }
 
    @JvmStatic

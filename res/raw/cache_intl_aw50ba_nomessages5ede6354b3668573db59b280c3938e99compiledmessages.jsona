@@ -203,14 +203,6 @@
   "0PbE/P": "Reduser fargemetningen i applikasjonen for de med fargefølsomhet. Dette påvirker ikke metningen til bilder, videoer, rollefarger eller annet brukerlevert innhold som standard.",
   "5PWWCQ": "Metning",
   "i19n5O": "Zoomnivå",
-  "zR3S9/": [
-    "Zoomnivå (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Konto",
   "6eNTWV": "Du kan ikke bruke den mens den er deaktivert.",
   "j3rC+f": "Kontoen er deaktivert",
@@ -8036,6 +8028,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31202,9 +31195,6 @@
   "D+qW0N": "Lar medlemmer bruke kommandoer fra apper i disse kanalene, deriblant skråstekkommandoer og hurtigmenykommandoer.",
   "ReG3gI": "Lar medlemmer bruke kommandoer fra apper i denne kanalen, deriblant skråstekkommandoer og hurtigmenykommandoer.",
   "pJrJ39": "Lar medlemmer bruke kommandoer fra apper, deriblant skråstekkommandoer og hurtigmenykommandoer.",
-  "8eeEZm": "Bruk Clyde",
-  "d664Fx": "Lar medlemmer interagere med Clyde AI-boten.",
-  "Tx5TjI": "Lar medlemmer interagere med og tilpasse Clyde AI-boten.",
   "BEqU5O": "Tillater medlemmer å bruke aktiviteter.",
   "maNzCA": "Tillater medlemmer å bruke aktiviteter i disse kanalene.",
   "qinvMT": "Tillater medlemmer å bruke aktiviteter i denne kanalen.",

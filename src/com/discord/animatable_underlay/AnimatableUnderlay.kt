@@ -15,7 +15,7 @@ import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import t9.n
+import r9.n
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final var height: Float
@@ -188,7 +188,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = B9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       @JvmStatic
@@ -235,7 +235,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = B9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       @JvmStatic

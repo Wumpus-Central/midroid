@@ -203,14 +203,6 @@
   "0PbE/P": "Csökkentsd a színek telítettségét az alkalmazáson belül a színérzékenyek kedvéért. Ez alapértelmezés szerint nem befolyásolja a képek, videók, rangszínek vagy más, a felhasználó által megadott tartalmak telítettségét.",
   "5PWWCQ": "Telítettség",
   "i19n5O": "Nagyítás mértéke",
-  "zR3S9/": [
-    "Nagyítás mértéke (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Fiók",
   "6eNTWV": "Nem használhatod a fiókod, amíg az deaktiválva van.",
   "j3rC+f": "Fiók deaktiválva",
@@ -8050,6 +8042,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31220,9 +31213,6 @@
   "D+qW0N": "Lehetővé teszi a tagok számára az alkalmazások parancsainak használatát ezen a csatornán, beleértve a perjeles parancsokat és helyi menü parancsokat is.",
   "ReG3gI": "Lehetővé teszi, hogy a tagok alkalmazások parancsait használják ezen a csatornán, beleértve a perjeles parancsokat és helyi menü parancsokat is.",
   "pJrJ39": "Lehetővé teszi, hogy a tagok alkalmazások parancsait használják, beleértve a perjeles parancsokat és helyi menü parancsokat is.",
-  "8eeEZm": "Clyde használata",
-  "d664Fx": "Lehetővé teszi a tagok számára, hogy interakciókat folytassanak Clyde-dal, az MI-csevegőrobottal.",
-  "Tx5TjI": "Lehetővé teszi a tagok számára, hogy interakciókat folytassanak Clyde-dal, az MI-csevegőrobottal, és személyre szabják a viselkedését.",
   "BEqU5O": "Lehetővé teszi a tagok számára a tevékenységek használatát.",
   "maNzCA": "Lehetővé teszi a tagok számára a tevékenységek használatát ezeken a csatornákon.",
   "qinvMT": "Lehetővé teszi a tagok számára a tevékenységek használatát ezen a csatornán.",

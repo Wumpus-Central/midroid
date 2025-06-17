@@ -11,9 +11,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import ob.g
-import ob.e.i
-import t9.c
+import mb.g
+import mb.e.i
+import r9.c
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor

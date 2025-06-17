@@ -1,7 +1,7 @@
 package com.discord.chatreplay.logger
 
-import F9.c
-import ab.a
+import D9.c
+import Ya.a
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -30,11 +30,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var4.append(var2);
       var4.append(".json");
       new File(var3, var4.toString()).delete();
-      var3 = var1.toString();
-      var4 = new StringBuilder();
-      var4.append(var2);
-      var4.append(".replay");
-      this.replayFile = new File(var3, var4.toString());
+      val var10: java.lang.String = var1.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var2);
+      var7.append(".replay");
+      this.replayFile = new File(var10, var7.toString());
       var3 = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);
@@ -70,17 +70,17 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    }
 
    private fun maybeInsertDelay() {
-      val var1: Long = System.currentTimeMillis();
+      val var3: Long = System.currentTimeMillis();
       if (this.lastUpdateTimestamp != null) {
-         val var3: Long = this.lastUpdateTimestamp.longValue();
+         val var1: Long = this.lastUpdateTimestamp.longValue();
          val var6: StringBuilder = new StringBuilder();
          var6.append("{\"delayMs\":");
-         var6.append(var1 - var3);
+         var6.append(var3 - var1);
          var6.append("}");
          this.appendLine(var6.toString());
       }
 
-      this.lastUpdateTimestamp = var1;
+      this.lastUpdateTimestamp = var3;
    }
 
    private fun writeJson() {
@@ -92,7 +92,7 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
 
          try {
             var12.write("[\n");
-            F9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new J1.a(var2, var12));
+            D9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new J1.a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {

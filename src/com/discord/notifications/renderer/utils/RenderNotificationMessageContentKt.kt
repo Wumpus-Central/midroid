@@ -1,8 +1,8 @@
 package com.discord.notifications.renderer.utils
 
+import Ya.b
 import Z1.v
 import Z1.w
-import ab.b
 import android.text.format.DateUtils
 import java.text.DateFormat
 import java.util.Date
@@ -23,14 +23,14 @@ public fun renderNotificationMessageContent(content: String): String {
    val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
    val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var13: java.lang.String = var4.i(var3.i(var0, new v()), new w());
-   var var14: java.lang.String = var0;
+   var var14: java.lang.String = var4.i(var3.i(var0, new v()), new w());
+   var var13: java.lang.String = var0;
 
    while (true) {
       var0 = null;
-      val var6: MatchResult = Regex.c(var5, var13, 0, 2, null);
+      val var6: MatchResult = Regex.c(var5, var14, 0, 2, null);
       if (var6 == null) {
-         return var14;
+         return var13;
       }
 
       val var7: b = var6.c().get(1);
@@ -86,11 +86,11 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.d().a();
-      val var2: Int = var6.d().m();
+      val var2: Int = var6.d().a();
+      val var12: Int = var6.d().m();
       q.e(var10);
-      var14 = h.v0(var14, var12, var2 + 1, var10).toString();
-      var13 = h.v0(var13, var6.d().a(), var6.d().m() + 1, var10).toString();
+      var13 = h.v0(var13, var2, var12 + 1, var10).toString();
+      var14 = h.v0(var14, var6.d().a(), var6.d().m() + 1, var10).toString();
    }
 }
 

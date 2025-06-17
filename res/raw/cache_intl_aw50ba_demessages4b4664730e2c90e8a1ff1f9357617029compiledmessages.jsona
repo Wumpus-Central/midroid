@@ -204,14 +204,6 @@
   "0PbE/P": "Verringere die Sättigung der Farben innerhalb der Anwendung für Personen mit Farbempfindlichkeit. Dies wirkt sich nicht auf die Sättigung von Bildern, Videos, Rollenfarben oder sonstigen nutzergenerierten Inhalten aus.",
   "5PWWCQ": "Sättigung",
   "i19n5O": "Zoomstufe",
-  "zR3S9/": [
-    "Zoomstufe (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "Du kannst ihn nicht nutzen, während er deaktiviert ist.",
   "j3rC+f": "Account deaktiviert",
@@ -8070,6 +8062,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31560,9 +31553,6 @@
   "D+qW0N": "Erlaubt Mitgliedern, Befehle aus Anwendungen in diesen Kanälen zu verwenden, auch im Kontextmenü und Slash-Befehle.",
   "ReG3gI": "Erlaubt Mitgliedern, Befehle aus Anwendungen in diesem Kanal zu verwenden, auch im Kontextmenü und Slash-Befehle.",
   "pJrJ39": "Erlaubt Mitgliedern, Befehle aus Anwendungen zu verwenden, auch im Kontextmenü und Slash-Befehle.",
-  "8eeEZm": "Verwende Clyde",
-  "d664Fx": "Erlaubt Mitgliedern, mit dem KI-Bot Clyde zu interagieren.",
-  "Tx5TjI": "Ermöglicht Mitgliedern, mit dem KI-Bot Clyde zu interagieren und ihn anzupassen.",
   "BEqU5O": "Erlaubt Mitgliedern, Aktivitäten zu nutzen.",
   "maNzCA": "Erlaubt Mitgliedern, Aktivitäten in diesen Kanälen zu verwenden.",
   "qinvMT": "Erlaubt Mitgliedern, Aktivitäten in diesem Kanal zu verwenden.",

@@ -3,8 +3,8 @@ package com.discord.media.engine.video.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
+import kb.f
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 internal class OnReadyEvent : ReactEvent {

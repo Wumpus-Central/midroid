@@ -203,14 +203,6 @@
   "0PbE/P": "Réduit la saturation des couleurs dans l'application pour les personnes sensibles aux couleurs. Par défaut, ceci n'affecte pas la saturation des images, des vidéos, des couleurs de rôles ou de tout autre contenu fourni par les utilisateurs.",
   "5PWWCQ": "Saturation",
   "i19n5O": "Niveau de zoom",
-  "zR3S9/": [
-    "Niveau de zoom (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Compte",
   "6eNTWV": "Tu ne peux pas l'utiliser tant qu'il est désactivé.",
   "j3rC+f": "Compte désactivé",
@@ -8021,6 +8013,7 @@
     ],
     " Mo"
   ],
+  "M6qV8v": "50 Mo",
   "yMOW8P": "100 Mo",
   "Ll40SE": "25 Mo",
   "EaBfen": "500 Mo",
@@ -31404,9 +31397,6 @@
   "D+qW0N": "Permet aux membres d'utiliser des commandes provenant d'applications dans ces salons, comme les commandes slash et les commandes de menu contextuel.",
   "ReG3gI": "Permet aux membres d'utiliser des commandes provenant d'applications dans ce salon, comme les commandes slash et les commandes de menu contextuel.",
   "pJrJ39": "Permet aux membres d'utiliser des commandes provenant d'applications, comme les commandes slash et les commandes de menu contextuel.",
-  "8eeEZm": "Utiliser Clyde",
-  "d664Fx": "Permet aux membres d'interagir avec le bot IA Clyde.",
-  "Tx5TjI": "Permet aux membres d'interagir avec et de personnaliser Clyde, le bot IA.",
   "BEqU5O": "Permet aux membres d'utiliser les Activités.",
   "maNzCA": "Permet aux membres d'utiliser les Activités dans ces salons.",
   "qinvMT": "Permet aux membres d'utiliser les Activités dans ce salon.",

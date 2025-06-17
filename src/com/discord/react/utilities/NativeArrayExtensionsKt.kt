@@ -9,7 +9,7 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import org.json.JSONArray
-import u9.n
+import s9.n
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -195,7 +195,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new t9.n();
+            throw new r9.n();
       }
    }
 

@@ -1,16 +1,15 @@
 package com.discord.image.fresco.tiled
 
-import A9.b
 import J2.d
+import ab.K
+import ab.f
+import ab.k0
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
 import android.graphics.drawable.BitmapDrawable
 import android.view.MotionEvent
-import cb.K
-import cb.f
-import cb.k0
 import com.facebook.common.references.CloseableReference
 import com.facebook.datasource.DataSource
 import com.facebook.drawee.generic.GenericDraweeHierarchy
@@ -25,6 +24,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
 import x3.e
+import y9.b
 
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
    private final val resources: Resources
@@ -46,7 +46,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.R(K.c().Y1()));
+      this.scope = g.a(var4.Q(K.c().Y1()));
    }
 
    private fun load() {
@@ -92,12 +92,12 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
 
                      var3x = this.J$0;
                      var258 = this.L$0 as DataSource;
+                     var7 = this.L$0 as DataSource;
 
                      try {
                         c.b(var1);
                      } catch (var25: java.lang.Throwable) {
-                        var258 = this.L$0 as DataSource;
-                        var7 = var25;
+                        var258 = var25;
                         break label1440;
                      }
 
@@ -152,34 +152,39 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                      var258 = var1;
                   }
 
+                  var7 = var258;
+
                   try {
                      var1 = var9 as CloseableReference;
                   } catch (var23: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var23;
+                     var258 = var23;
                      break label1440;
                   }
+
+                  var7 = var258;
 
                   try {
                      TiledDraweeController.access$setMyImageReference$p(this.this$0, var1);
                   } catch (var22: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var22;
+                     var258 = var22;
                      break label1440;
                   }
 
                   val var254: e;
                   if (var1 != null) {
+                     var7 = var258;
+
                      try {
                         var254 = var1.M0() as e;
                      } catch (var21: java.lang.Throwable) {
-                        var258 = var258;
-                        var7 = var21;
+                        var258 = var21;
                         break label1440;
                      }
                   } else {
                      var254 = null;
                   }
+
+                  var7 = var258;
 
                   label131: {
                      label164: {
@@ -188,17 +193,17 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               break label164;
                            }
                         } catch (var20: java.lang.Throwable) {
-                           var258 = var258;
-                           var7 = var20;
+                           var258 = var20;
                            break label1440;
                         }
+
+                        var7 = var258;
 
                         try {
                            var1 = var254 as x3.d;
                            break label131;
                         } catch (var19: java.lang.Throwable) {
-                           var258 = var258;
-                           var7 = var19;
+                           var258 = var19;
                            break label1440;
                         }
                      }
@@ -208,38 +213,44 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
 
                   var9 = null;
                   if (var1 != null) {
+                     var7 = var258;
+
                      try {
-                        var9 = var1.h1();
+                        var9 = var1.i1();
                      } catch (var18: java.lang.Throwable) {
-                        var258 = var258;
-                        var7 = var18;
+                        var258 = var18;
                         break label1440;
                      }
                   }
 
+                  var7 = var258;
+
                   try {
                      var1 = new BitmapDrawable;
                   } catch (var17: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var17;
+                     var258 = var17;
                      break label1440;
                   }
+
+                  var7 = var258;
 
                   try {
                      var1./* $VF: Unable to resugar constructor */<init>(TiledDraweeController.access$getResources$p(this.this$0), (Bitmap)var9);
                   } catch (var16: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var16;
+                     var258 = var16;
                      break label1440;
                   }
+
+                  var7 = var258;
 
                   try {
                      var9 = this.this$0;
                   } catch (var15: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var15;
+                     var258 = var15;
                      break label1440;
                   }
+
+                  var7 = var258;
 
                   try {
                      var1.setTileModeXY(
@@ -247,17 +258,17 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                         TiledDraweeController.access$getTileMode$p((TiledDraweeController)var9)
                      );
                   } catch (var14: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var14;
+                     var258 = var14;
                      break label1440;
                   }
+
+                  var7 = var258;
 
                   var var5: Long;
                   try {
                      var5 = System.currentTimeMillis();
                   } catch (var13: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var13;
+                     var258 = var13;
                      break label1440;
                   }
 
@@ -266,20 +277,22 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                      var257 = true;
                   }
 
+                  var7 = var258;
+
                   try {
                      var9 = TiledDraweeController.access$getHierarchy$p(this.this$0);
                   } catch (var12: java.lang.Throwable) {
-                     var258 = var258;
-                     var7 = var12;
+                     var258 = var12;
                      break label1440;
                   }
 
                   if (var9 != null) {
+                     var7 = var258;
+
                      try {
                         var9.g(var1, 1.0F, var257 xor true);
                      } catch (var11: java.lang.Throwable) {
-                        var258 = var258;
-                        var7 = var11;
+                        var258 = var11;
                         break label1440;
                      }
                   }
@@ -288,8 +301,8 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                   return Unit.a;
                }
 
-               var258.close();
-               throw var7;
+               ((DataSource)var7).close();
+               throw var258;
             }
          },
          3,
@@ -324,7 +337,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.i1();
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.h1();
       }
    }
 

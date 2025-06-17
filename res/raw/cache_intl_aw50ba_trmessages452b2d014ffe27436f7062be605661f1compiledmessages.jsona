@@ -201,14 +201,6 @@
   "0PbE/P": "Renk duyarlılığı olanlar için uygulamadaki renklerin doygunluğunu azaltır. Bu ayar varsayılan olarak görsellerin, videoların, rol renklerinin veya kullanıcıların sağladığı diğer içeriklerin doygunluğunu etkilemez.",
   "5PWWCQ": "Doygunluk",
   "i19n5O": "Yakınlaştırma seviyesi",
-  "zR3S9/": [
-    "Yakınlaştırma seviyesi (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Hesap",
   "6eNTWV": "Devre dışıyken kullanamazsın.",
   "j3rC+f": "Hesap Devre Dışı Bırakıldı",
@@ -8015,6 +8007,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500MB",
@@ -31352,9 +31345,6 @@
   "D+qW0N": "Üyelerin eğik çizgi komutları ve içerik menüsü komutları dahil bu kanallardaki uygulamalardaki komutları kullanmasına izin verir.",
   "ReG3gI": "Üyelerin eğik çizgi komutları ve içerik menüsü komutları dahil bu kanaldaki uygulamalardaki komutları kullanmasına izin verir.",
   "pJrJ39": "Üyelerin eğik çizgi komutları ve içerik menüsü komutları dahil uygulamalardaki komutları kullanmasına izin verir.",
-  "8eeEZm": "Clyde'ı Kullan",
-  "d664Fx": "Üyelerin Clyde yapay zekâ botu ile etkileşime geçebilmelerine izin verir.",
-  "Tx5TjI": "Üyelerin Clyde yapay zekâ botu ile etkileşime geçebilmelerine ve onu özelleştirmelerine izin verir.",
   "BEqU5O": "Üyelerin Etkinlik kullanmasını sağlar.",
   "maNzCA": "Üyelerin bu kanallarda Etkinlik kullanabilmesini sağlar.",
   "qinvMT": "Üyelerin bu kanalda Etkinlik kullanabilmesini sağlar.",

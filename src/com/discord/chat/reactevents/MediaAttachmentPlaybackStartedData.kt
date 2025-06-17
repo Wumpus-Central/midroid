@@ -4,9 +4,9 @@ import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
@@ -118,15 +118,15 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Float = this.totalDurationSecs;
       val var2: Float = this.startDurationSecs;
       val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
-      val var5: java.lang.String = this.attachmentId;
+      val var4: java.lang.String = this.attachmentId;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaAttachmentPlaybackStartedData(messageId=");
-      var7.append(var4);
+      var7.append(var5);
       var7.append(", totalDurationSecs=");
       var7.append(var1);
       var7.append(", startDurationSecs=");
@@ -136,7 +136,7 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       var7.append(", isVoiceMessage=");
       var7.append(var3);
       var7.append(", attachmentId=");
-      var7.append(var5);
+      var7.append(var4);
       var7.append(")");
       return var7.toString();
    }

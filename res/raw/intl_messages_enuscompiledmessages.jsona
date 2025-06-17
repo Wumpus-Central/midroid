@@ -203,14 +203,6 @@
   "0PbE/P": "Reduce the saturation of colors within the application, for those with color sensitivities. This does not affect the saturation of images, videos, role colors or other user-provided content by default.",
   "5PWWCQ": "Saturation",
   "i19n5O": "Zoom level",
-  "zR3S9/": [
-    "Zoom level (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "You cannot use it while it's disabled.",
   "j3rC+f": "Account Disabled",
@@ -1399,6 +1391,13 @@
       "applicationName"
     ],
     " is also a Connected Account. Disconnecting will also remove it from Connected Accounts."
+  ],
+  "j4B7ER": [
+    [
+      1,
+      "applicationName"
+    ],
+    " is also a publisher that connects multiple games under a single account experience."
   ],
   "IlF6IS": [
     [
@@ -8271,6 +8270,7 @@
     ],
     "MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
@@ -32046,9 +32046,6 @@
   "D+qW0N": "Allows members to use commands from applications in these channels, including slash commands and context menu commands.",
   "ReG3gI": "Allows members to use commands from applications in this channel, including slash commands and context menu commands.",
   "pJrJ39": "Allows members to use commands from applications, including slash commands and context menu commands.",
-  "8eeEZm": "Use Clyde",
-  "d664Fx": "Allows members to interact with the Clyde AI bot.",
-  "Tx5TjI": "Allows members to interact with and customize the Clyde AI bot.",
   "BEqU5O": "Allows members to use Activities.",
   "maNzCA": "Allows members to use Activities in these channels.",
   "qinvMT": "Allows members to use Activities in this channel.",
@@ -36688,7 +36685,7 @@
     "."
   ],
   "KI+BSU": [
-    "By clicking “Create account,” you agree to Discord's ",
+    "By clicking “Create Account,” you agree to Discord's ",
     [
       8,
       "$link",

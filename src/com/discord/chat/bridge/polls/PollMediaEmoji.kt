@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -82,13 +82,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = h.o(this.id);
          if (var7 != null) {
-            val var1: Long = var7.longValue();
+            val var2: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -99,21 +99,21 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
+      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
       val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollMediaEmoji(id=");
-      var3.append(var2);
-      var3.append(", name=");
-      var3.append(var4);
-      var3.append(", displayName=");
-      var3.append(var5);
-      var3.append(", animated=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollMediaEmoji(id=");
+      var4.append(var3);
+      var4.append(", name=");
+      var4.append(var2);
+      var4.append(", displayName=");
+      var4.append(var5);
+      var4.append(", animated=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

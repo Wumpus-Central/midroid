@@ -203,14 +203,6 @@
   "0PbE/P": "Minska färgmättnaden i applikationen för de som lider av färgkänslighet. Detta påverkar inte mättnaden för bilder, videor, rollfärger eller annat användarskapat innehåll, som standard.",
   "5PWWCQ": "Färgmättnad",
   "i19n5O": "Zoomnivå",
-  "zR3S9/": [
-    "Zoomnivå (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Konto",
   "6eNTWV": "Du kan inte använda det medan det är inaktiverat.",
   "j3rC+f": "Konto inaktiverat",
@@ -8035,6 +8027,7 @@
     ],
     " MB"
   ],
+  "M6qV8v": "50 MB",
   "yMOW8P": "100 MB",
   "Ll40SE": "25 MB",
   "EaBfen": "500 MB",
@@ -31281,9 +31274,6 @@
   "D+qW0N": "Låter medlemmar använda kommandon från applikationer i de här kanalerna, t.ex. snedstrecks- och kontextmenykommandon.",
   "ReG3gI": "Låter medlemmar använda kommandon från applikationer i den här kanalen, t.ex. snedstrecks- och kontextmenykommandon.",
   "pJrJ39": "Låter medlemmar använda kommandon från applikationer, t.ex. snedstrecks- och kontextmenykommandon.",
-  "8eeEZm": "Använd Clyde",
-  "d664Fx": "Tillåter medlemmar att interagera med AI-botten Clyde.",
-  "Tx5TjI": "Låter medlemmarna interagera med och anpassa AI-botten Clyde.",
   "BEqU5O": "Ger medlemmar tillåtelse att använda aktiviteter.",
   "maNzCA": "Tillåter medlemmar att använda aktiviteter i de här kanalerna.",
   "qinvMT": "Tillåter medlemmar att använda aktiviteter i den här kanalen.",
