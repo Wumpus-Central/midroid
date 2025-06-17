@@ -27,7 +27,7 @@ public object ImmersiveMode {
       }
 
       q.e(var3);
-      a0.E0(var5, new a(var5, var3));
+      a0.F0(var5, new a(var5, var3));
    }
 
    @JvmStatic
@@ -38,7 +38,7 @@ public object ImmersiveMode {
       q.e(var3);
       val var6: WindowInsetsCompat = var5.b(var4, Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
-      a0.b0(var1, var6);
+      a0.c0(var1, var6);
       return var6;
    }
 

@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import R8.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -29,6 +28,7 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.view.SimpleDraweeView
+import e9.m
 import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
@@ -59,7 +59,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
       q.h(var1, "context");
       super(var1, var2, var3);
       this.draweeControllerBuilder = u2.d.g();
-      this.binding$delegate = R8.j.a(m.l, new e(this));
+      this.binding$delegate = e9.j.a(m.l, new e(this));
    }
 
    @JvmStatic

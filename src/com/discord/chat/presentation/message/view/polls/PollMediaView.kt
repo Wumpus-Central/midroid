@@ -63,8 +63,8 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = R8.j.b(new k(var1, this));
-      this.textView$delegate = R8.j.b(new l(var1, this));
+      this.draweeView$delegate = e9.j.b(new k(var1, this));
+      this.textView$delegate = e9.j.b(new l(var1, this));
    }
 
    @JvmStatic
@@ -155,9 +155,9 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
             val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var10: RenderableEmoji = var16.renderable();
-            val var9: Context = this.getContext();
-            q.g(var9, "getContext(...)");
+            val var9: RenderableEmoji = var16.renderable();
+            val var10: Context = this.getContext();
+            q.g(var10, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
             if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {
@@ -166,7 +166,7 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var10, var9, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var10, var4, var7, 0, null, 48, null));
             this.setImportantForAccessibility(2);
             this.setOnClickListener(new o(var2));
             var4 = 1;

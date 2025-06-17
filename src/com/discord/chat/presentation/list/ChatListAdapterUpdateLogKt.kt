@@ -23,7 +23,7 @@ private fun ChatListAction.label(): String {
       var1 = "ScrollTo";
    } else {
       if (var0 !is ChatListAction.StickToBottomIfAtBottom) {
-         throw new R8.n();
+         throw new e9.n();
       }
 
       var1 = "StickToBottomIfAtBottom";
@@ -77,7 +77,7 @@ private fun ListOperation.label(): String {
       var4 = var10.toString();
    } else {
       if (var0 !is ListOperation.ChangeRange) {
-         throw new R8.n();
+         throw new e9.n();
       }
 
       val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();

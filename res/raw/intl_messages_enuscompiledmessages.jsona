@@ -1305,15 +1305,7 @@
   "XONG6O": "Media Selector",
   "eOB2eX": "Description (Alt Text)",
   "RNH1jo": "Add a description",
-  "1yQ2Cw": "That's a lot of bytes",
-  "5ue6h4": "Your call is very important to us",
-  "hKsCRE": "Filing that away... get it?",
-  "FeCCCw": "Gathering wood...",
-  "CGSHsb": "Constructing pylons...",
   "Dmx3f3": "Server processing...",
-  "9jhZ0N": "Not sure about this one...",
-  "SuXJy8": "How about that weather?",
-  "+q6H7+": "Wumpus is working...",
   "qqyp/f": [
     "You can only upload ",
     [
@@ -11070,9 +11062,9 @@
     ]
   ],
   "VSpdzM": "TIMED OUT",
-  "9XsExs": "DURATION",
+  "9XsExs": "Duration",
   "AeYyLy": "This is only visible to moderators and indicates this user is timed out.",
-  "ewHW19": "REASON",
+  "ewHW19": "Reason",
   "GakiHx": "Enter a reason. This will only be visible in the Audit Log and will not be shown to the member.",
   "MA1ltr": "Removed",
   "O9C3Nj": [
@@ -22538,7 +22530,6 @@
     ],
     " muted"
   ],
-  "+fnDnZ": "Mute App",
   "uAmAiI": "Mute Notifications",
   "mscFJS": "This will mute all message notifications from this App until you turn them back on.",
   "pNMCg4": "Mute Category",
@@ -24028,8 +24019,9 @@
   "TPpVkJ": "Mark as not sensitive",
   "gFsTKi": "Thanks for letting us know!",
   "QVdYsL": "Blur",
-  "5mnTa2": "Explicit",
+  "5mnTa2": "Sexually Explicit",
   "N/oRIy": "Filter",
+  "K0OWPz": "Gore",
   "aWD+tr": "Sensitive Content",
   "ZUvrwM": [
     "Choose what you see when uploaded or linked media may contain sensitive content. ",
@@ -25542,6 +25534,7 @@
     ],
     "."
   ],
+  "PEjaCw": "Gift",
   "Oba8Sk": "Nitro Gifting",
   "55Ccy8": "Select a Nitro Gift",
   "Z1RnTk": "Send a gift",
@@ -30188,7 +30181,6 @@
       "videoTitle"
     ]
   ],
-  "g8zcER": "Quest Available",
   "NIimTk": [
     "Play ",
     [
@@ -32809,6 +32801,22 @@
   "Mg7bkp": "Send TTS Messages",
   "+8GStb": "Send Voice Message",
   "pJObYG": "Send a wave",
+  "9BuHra": [
+    "Customize what you see when uploaded or linked media may contain gore content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
   "tCcq5u": "Sent an image",
   "p0oZm5": "Sent a GIF",
   "rtfTKi": [
@@ -33026,6 +33034,22 @@
   "w+yGQU": "Custom Invite Link requires Server Boosting Level 3, or being a partnered, verified, HypeSquad event server",
   "ETCmRU": "You need to set a text channel that is accessible to all members before setting a Custom Invite Link.",
   "uVDhqa": "Several people are typing...",
+  "0r/b7O": [
+    "Customize what you see when uploaded or linked media may contain sexually explicit content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
   "RDE0SU": "Share",
   "Aw+09/": "Share Debug Logs",
   "dA1gb2": "Share Failed",
@@ -36883,6 +36907,120 @@
       "short"
     ]
   ],
+  "/52UY2": "Age group",
+  "XxRj7e": "Adult",
+  "sK0dmJ": "Teen",
+  "UX0OdX": "Unverified",
+  "TGqx+v": [
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ],
+    " about age verification"
+  ],
+  "f3ARDQ": "We automatically detect and filter media that may be sensitive to help protect people on Discord who are under 18. If we put you in the wrong age group, you can reverify or contact us.",
+  "c6kn6O": "Oops, something went wrong",
+  "SJMnkZ": "Get Started",
+  "+BLIGh": "We use age groups to determine access to certain experiences. This process is fast and easy - here's how it works:",
+  "JHNunp": "Verify age group",
+  "pJAxgY": [
+    "Want another method? ",
+    [
+      8,
+      "$link",
+      [
+        "Request a manual review"
+      ],
+      [
+        [
+          1,
+          "handleOnRequestHook"
+        ]
+      ]
+    ]
+  ],
+  "L+FgkZ": [
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ],
+    " about age groups"
+  ],
+  "GCZC+/": "These are not stored after the verification is completed",
+  "HphYKi": "Take a video selfie or scan your ID",
+  "n5vd1N": [
+    "You'll know it's us from the official tag. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "handleOnHelpUrlHook"
+        ]
+      ]
+    ]
+  ],
+  "aVwLfn": "We'll DM you the results",
+  "rHZFsL": "They're quick and easy",
+  "nkO4Ly": "Follow the steps",
+  "5B+npK": "Verify Age",
+  "u/xqhY": "This channel is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this channel?",
+  "akjk0d": "This server is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this server?",
+  "x1coPj": [
+    "This channel contains adult content marked as age-restricted. We determined you're in the ",
+    [
+      8,
+      "$b",
+      [
+        "teen"
+      ]
+    ],
+    " age group. If we made a mistake, you can reverify."
+  ],
+  "7uIWQE": [
+    "This server contains adult content marked as age-restricted. We determined you're in the ",
+    [
+      8,
+      "$b",
+      [
+        "teen"
+      ]
+    ],
+    " age group. If we made a mistake, you can reverify."
+  ],
+  "PBG51t": "Reverify",
+  "/nicWl": "Retry",
+  "LZO+HR": "Contact Us",
+  "ty+iWF": "Request a manual review",
+  "O7SO0N": "We determined you're in the teen age group. If we made a mistake, you can either reverify or contact us.",
+  "5l3R/v": "Reverify age group",
+  "RtOE1t": "Reverify",
+  "ecdUKC": "Take a video selfie or scan your ID. These are not stored after the verification is completed",
+  "KPGVWl": "Reverify",
+  "XwKo1t": "Age group verified",
+  "Mqtf3N": "Verify age group",
   "GOmEb2": "Time",
   "MlPTIi": "Timeout",
   "FN7NIS": [
@@ -37339,7 +37477,6 @@
     ],
     " unmuted"
   ],
-  "w7c5Vl": "Unmute App",
   "olaBeH": "Unmute Category",
   "eC+9rq": [
     "Unmute ",
@@ -37367,6 +37504,7 @@
   "0R/Toa": "Discord failed to unpin that message for some reason. Sorry about that.",
   "xFjBys": "The Pin Is Stuck!",
   "trD8am": "Unpin Post",
+  "sRUdBw": "Unreads",
   "i4xQ5u": "The channel will now show as unread for every message so you don't miss a thing.",
   "m2Hyj4": "Unstable Internet Connection",
   "EhaK6O": "This video stream has been paused to ensure good audio quality. We'll turn it back on when the connection improves.",
@@ -37924,6 +38062,7 @@
   "PwknJC": "Edit Status",
   "aP91UV": "Show exact search result counts",
   "qx4chY": "When enabled, may increase the time it takes to show search results.",
+  "16/3Bg": "Gore filter",
   "7j5bMT": "Cancel Subscription",
   "93ZDWF": "Ignored accounts",
   "PYrWFR": "You don't have any ignored accounts",
@@ -38046,7 +38185,25 @@
   "XlGG9f": "Friend requests",
   "MeYuqq": "Server settings",
   "RC0kJy": "Scan QR Code",
+  "dliU4u": [
+    "Customize what you see when uploaded or linked media may contain sensitive content. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "learnMoreLink"
+        ]
+      ]
+    ]
+  ],
+  "Hj/Bur": "Sensitive content filters",
   "c/UOwM": "Sensitive media",
+  "wr6InJ": "Sexually explicit media filter",
   "xbMc8v": "Soundboard",
   "kbFsAA": "Soundboard Volume",
   "BPbGq6": [

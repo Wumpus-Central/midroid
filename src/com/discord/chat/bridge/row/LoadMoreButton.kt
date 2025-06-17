@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.row
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -97,23 +97,23 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
 
    public override fun toString(): String {
       val var5: LoadingAction = this.action;
-      val var4: java.lang.String = this.text;
+      val var2: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
-      val var3: Int = this.cornerRadius;
-      val var6: Int = this.color;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LoadMoreButton(action=");
-      var2.append(var5);
-      var2.append(", text=");
-      var2.append(var4);
-      var2.append(", backgroundColor=");
-      var2.append(var1);
-      var2.append(", cornerRadius=");
-      var2.append(var3);
-      var2.append(", color=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var6: Int = this.cornerRadius;
+      val var3: Int = this.color;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LoadMoreButton(action=");
+      var4.append(var5);
+      var4.append(", text=");
+      var4.append(var2);
+      var4.append(", backgroundColor=");
+      var4.append(var1);
+      var4.append(", cornerRadius=");
+      var4.append(var6);
+      var4.append(", color=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

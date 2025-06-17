@@ -1,7 +1,7 @@
 package com.discord.react.utilities
 
-import R8.y
+import e9.y
 
 public fun reactColorToAndroidColor(reactColor: Int): Int {
-   return (int)y.e((long)var0);
+   return (int)y.f((long)var0);
 }

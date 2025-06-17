@@ -1,8 +1,8 @@
 package com.discord.phone_verification
 
+import Ib.f
 import M1.a
 import M1.c
-import R8.j
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -13,11 +13,11 @@ import android.os.Build.VERSION
 import android.util.Base64
 import com.discord.intents.b
 import com.discord.logging.Log
+import e9.j
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import vb.f
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
@@ -112,11 +112,11 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                q.g(var24, "toCharsString(...)");
                var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
                val var23: Log = Log.INSTANCE;
-               val var8: java.lang.String = TAG;
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Hash ");
-               var9.append(var25);
-               Log.i$default(var23, var8, var9.toString(), null, 4, null);
+               val var9: java.lang.String = TAG;
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Hash ");
+               var8.append(var25);
+               Log.i$default(var23, var9, var8.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
@@ -150,24 +150,24 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
-            val var12: java.lang.String = var3.toString();
-            val var8: MessageDigest = MessageDigest.getInstance("SHA-256");
-            q.g(var8, "getInstance(...)");
-            var8.update(f.a(var12));
-            val var9: ByteArray = var8.digest();
+            val var8: java.lang.String = var3.toString();
+            val var12: MessageDigest = MessageDigest.getInstance("SHA-256");
+            q.g(var12, "getInstance(...)");
+            var12.update(f.a(var8));
+            val var9: ByteArray = var12.digest();
             q.g(var9, "digest(...)");
             val var10: java.lang.String = Base64.encodeToString(kotlin.collections.c.n(var9, 0, 9), 3);
             q.g(var10, "encodeToString(...)");
             var2 = var10.substring(0, 11);
             q.g(var2, "substring(...)");
-            val var5: Log = Log.INSTANCE;
-            val var13: java.lang.String = this.getTAG();
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("pkg: ");
-            var4.append(var1);
-            var4.append(" -- hash: ");
-            var4.append(var2);
-            Log.i$default(var5, var13, var4.toString(), null, 4, null);
+            val var13: Log = Log.INSTANCE;
+            val var4: java.lang.String = this.getTAG();
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("pkg: ");
+            var5.append(var1);
+            var5.append(" -- hash: ");
+            var5.append(var2);
+            Log.i$default(var13, var4, var5.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

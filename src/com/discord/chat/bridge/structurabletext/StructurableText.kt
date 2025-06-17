@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.structurabletext
 
-import Ka.f
+import Xa.f
 import kotlinx.serialization.KSerializer
 
 @f(with = StructurableTextSerializer::class)

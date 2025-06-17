@@ -1,6 +1,5 @@
 package com.discord.media
 
-import R8.s
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -11,6 +10,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
+import e9.s
 import java.util.Comparator
 import kotlin.jvm.internal.q
 
@@ -68,7 +68,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var16 = i.K0(i.I0(var6.getMedia(var7, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return V8.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return i9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();

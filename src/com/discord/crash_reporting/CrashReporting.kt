@@ -1,11 +1,11 @@
 package com.discord.crash_reporting
 
-import R8.n
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.logging.Log
+import e9.n
 import io.sentry.Hint
 import io.sentry.IScope
 import io.sentry.SentryEvent
@@ -82,16 +82,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var6: File = var2.getCacheDir();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var6);
-      var8.append("/sentry");
-      var5.setCacheDirPath(var8.toString());
+      val var8: File = var2.getCacheDir();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var8);
+      var6.append("/sentry");
+      var5.setCacheDirPath(var6.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("44431bbf-d2d3-4fca-8c70-edcc779cbc51");
+      var5.setProguardUuid("77c6e2ef-ae09-48d1-882b-ce023cd68709");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -104,7 +104,7 @@ public object CrashReporting {
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = S8.q.h(), breadcrumbCategory: String? = null) {
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = f9.q.h(), breadcrumbCategory: String? = null) {
       q.h(var1, "breadcrumbMessage");
       q.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
@@ -120,7 +120,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", R8.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", e9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
@@ -173,21 +173,21 @@ public object CrashReporting {
    public fun init(context: Context, releaseName: String) {
       q.h(var1, "context");
       q.h(var2, "releaseName");
-      val var4: ClientInfo = ClientInfo.INSTANCE;
+      val var3: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var3: java.lang.String = Build.DEVICE;
+         val var4: java.lang.String = Build.DEVICE;
          q.g(Build.DEVICE, "DEVICE");
-         if (h.N(var3, "vivo", false, 2, null)) {
+         if (h.N(var4, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
+      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var4.isProdBuild()) {
+      } else if (!var3.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
@@ -208,7 +208,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = Z8.a.a(var0);
+         $ENTRIES = m9.a.a(var0);
       }
 
       @JvmStatic

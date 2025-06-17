@@ -1,6 +1,5 @@
 package com.discord.simpleast.code
 
-import R8.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -9,6 +8,7 @@ import com.discord.simpleast.core.node.StyleNode.SpanProvider
 import com.discord.simpleast.core.parser.ParseSpec
 import com.discord.simpleast.core.parser.Parser
 import com.discord.simpleast.core.parser.Rule
+import e9.s
 import java.util.Arrays
 import java.util.regex.Matcher
 import java.util.regex.Pattern
@@ -151,11 +151,11 @@ public object CodeRules {
       );
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
-      var var10: Rule = var34.createTagRule(var1);
-      val var8: Pattern = PATTERN_LEADING_WS_CONSUMER;
-      var var9: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
-      val var35: Pattern = PATTERN_TEXT;
-      val var32: java.util.List = i.n(new Rule[]{var31, var10, var9, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
+      var var9: Rule = var34.createTagRule(var1);
+      val var35: Pattern = PATTERN_LEADING_WS_CONSUMER;
+      var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
+      val var8: Pattern = PATTERN_TEXT;
+      val var32: java.util.List = i.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       q.g(var39, "createSingleLineCommentPattern(\"#\")");
       var9 = toMatchGroupRule$default(this, var39, 0, var1.getCommentStyleProvider(), 1, null);
@@ -181,8 +181,8 @@ public object CodeRules {
             var50,
             toMatchGroupRule$default(this, var54, 0, var1.getKeywordStyleProvider(), 1, null),
             toMatchGroupRule$default(this, PATTERN_NUMBERS, 0, var1.getLiteralStyleProvider(), 1, null),
-            toMatchGroupRule$default(this, var8, 0, null, 3, null),
-            toMatchGroupRule$default(this, var35, 0, null, 3, null)
+            toMatchGroupRule$default(this, var35, 0, null, 3, null),
+            toMatchGroupRule$default(this, var8, 0, null, 3, null)
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
@@ -197,7 +197,7 @@ public object CodeRules {
       val var13: java.util.List = this.createGenericCodeRules(
          var1, var48, new java.lang.String[]{"class"}, var51.getBUILT_INS(), Arrays.copyOf(var52, var52.length)
       );
-      return S8.q.l(
+      return f9.q.l(
          new Pair[]{
             s.a("kt", var2),
             s.a("kotlin", var2),

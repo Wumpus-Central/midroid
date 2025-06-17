@@ -1,12 +1,12 @@
 package com.discord.audio.react.events
 
-import R8.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
+import e9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -47,12 +47,12 @@ internal data class AudioManagerAudioDevicesUpdated(devices: List<AndroidAudioDe
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.devices;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioManagerAudioDevicesUpdated(devices=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.devices;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioManagerAudioDevicesUpdated(devices=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

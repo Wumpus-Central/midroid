@@ -1,8 +1,8 @@
 package com.discord.contact_sync.react
 
-import Na.E0
-import Na.U
-import Na.f
+import ab.E0
+import ab.U
+import ab.f
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -86,7 +86,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
    q.h(var0, "<this>");
    q.h(var1, "callback");
 
-   var var5: java.util.Iterator;
+   var var6: java.util.Iterator;
    var var11: java.lang.String;
    var var12: ArrayList;
    try {
@@ -96,7 +96,7 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
       var11 = var10.c(new U(E0.a, ContactSyncBlobEntry.Companion.serializer()), var3);
       val var4: java.util.Collection = var3.values();
       var12 = new ArrayList(i.v(var4, 10));
-      var5 = var4.iterator();
+      var6 = var4.iterator();
    } catch (var8: SecurityException) {
       var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
       return;
@@ -104,11 +104,11 @@ internal fun ReactContext.serializeSyncContactResult(callback: Callback) {
 
    while (true) {
       try {
-         if (!var5.hasNext()) {
+         if (!var6.hasNext()) {
             break;
          }
 
-         var12.add(new ContactSyncPayloadEntry((var5.next() as ContactSyncBlobEntry).getPhone()));
+         var12.add(new ContactSyncPayloadEntry((var6.next() as ContactSyncBlobEntry).getPhone()));
       } catch (var9: SecurityException) {
          var1.invoke(new Object[]{mapResultToContactSyncPermission("DENIED"), null, null});
          return;

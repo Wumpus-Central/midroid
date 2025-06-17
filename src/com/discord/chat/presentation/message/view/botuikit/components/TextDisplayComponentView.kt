@@ -42,16 +42,16 @@ public class TextDisplayComponentView(context: Context) : MessageContentView, Co
       }
 
       SetTextSizeSpKt.setTextSizeSp(this, var4);
-      val var6: TextPaint = this.getPaint();
-      q.g(var6, "getPaint(...)");
+      val var8: TextPaint = this.getPaint();
+      q.g(var8, "getPaint(...)");
       val var5: FontManager = FontManager.INSTANCE;
-      val var8: Context = this.getContext();
-      q.g(var8, "getContext(...)");
+      val var6: Context = this.getContext();
+      q.g(var6, "getContext(...)");
       this.setMessageContent(
          var1.getContent(),
          var3.getMarkdownTextRenderOptions(),
          var3.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var6, var5.getScaledSpToPx(16, var8))
+         TextUtilsKt.getBaselineHeightForFontSizePx(var8, var5.getScaledSpToPx(16, var6))
       );
    }
 

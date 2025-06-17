@@ -1,10 +1,10 @@
 package com.discord.shortcuts
 
+import Ka.j
 import android.content.Context
 import android.content.Intent
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
-import xa.j
 
 public data class ShortcutData(tag: String, data: Map<String, String>) {
    public final val tag: String
@@ -101,7 +101,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = S8.q.c();
+            val var11: java.util.Map = f9.q.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
                val var7: Sequence = c.A(var6);
@@ -109,17 +109,17 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = j.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var9: java.lang.String = var5.get(0) as java.lang.String;
+                        val var4: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        q.e(var9);
+                        q.e(var4);
                         q.e(var12);
-                        var11.put(var9, var12);
+                        var11.put(var4, var12);
                      }
                   }
                }
             }
 
-            var10 = new ShortcutData(var2, S8.q.b(var11));
+            var10 = new ShortcutData(var2, f9.q.b(var11));
          } else {
             var10 = null;
          }

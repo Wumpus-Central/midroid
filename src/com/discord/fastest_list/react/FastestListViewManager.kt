@@ -1,6 +1,5 @@
 package com.discord.fastest_list.react
 
-import R8.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
@@ -24,6 +23,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
+import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 

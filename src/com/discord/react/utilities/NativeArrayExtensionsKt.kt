@@ -1,11 +1,11 @@
 package com.discord.react.utilities
 
-import S8.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeArray
+import f9.n
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
@@ -124,7 +124,7 @@ public fun <V> WritableNativeArray.push(value: Any) {
 
 public fun ReadableArray.sizeRange(): IntRange {
    q.h(var0, "<this>");
-   return kotlin.ranges.d.r(0, var0.size());
+   return kotlin.ranges.d.s(0, var0.size());
 }
 
 public fun ReadableArray.toBooleanList(): List<Boolean> {
@@ -195,7 +195,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new R8.n();
+            throw new e9.n();
       }
    }
 

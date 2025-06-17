@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.structurabletext
 
-import Oa.d
+import bb.d
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy

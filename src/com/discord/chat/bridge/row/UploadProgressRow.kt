@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.row
 
-import Ka.f
+import Xa.f
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
 import kotlin.jvm.internal.q
@@ -72,20 +72,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var4: ChangeType = this.changeType;
-      val var5: Message = this.message;
-      val var3: java.lang.String = this.fileId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("UploadProgressRow(index=");
-      var2.append(var1);
-      var2.append(", changeType=");
-      var2.append(var4);
-      var2.append(", message=");
-      var2.append(var5);
-      var2.append(", fileId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var5: ChangeType = this.changeType;
+      val var3: Message = this.message;
+      val var2: java.lang.String = this.fileId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UploadProgressRow(index=");
+      var4.append(var1);
+      var4.append(", changeType=");
+      var4.append(var5);
+      var4.append(", message=");
+      var4.append(var3);
+      var4.append(", fileId=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

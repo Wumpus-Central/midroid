@@ -1,6 +1,5 @@
 package com.discord.ads
 
-import R8.s
 import com.discord.codegen.NativeAdsModuleSpec
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -13,6 +12,7 @@ import com.google.common.util.concurrent.ListenableFuture
 import com.google.common.util.concurrent.SettableFuture
 import com.google.common.util.concurrent.c
 import com.google.common.util.concurrent.d
+import e9.s
 import java.util.concurrent.CancellationException
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -52,11 +52,11 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var3: java.lang.String = var4.getMessage();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Error getting google advertising ID info: ");
-         var5.append(var3);
-         var0.y(new Exception(var5.toString(), var4));
+         val var5: java.lang.String = var4.getMessage();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Error getting google advertising ID info: ");
+         var2.append(var5);
+         var0.y(new Exception(var2.toString(), var4));
       }
    }
 

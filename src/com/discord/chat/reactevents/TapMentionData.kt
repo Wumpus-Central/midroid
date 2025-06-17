@@ -1,6 +1,6 @@
 package com.discord.chat.reactevents
 
-import Ka.f
+import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
@@ -96,21 +96,21 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.userId;
-      val var4: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.roleName;
-      val var5: java.lang.String = this.parsedUserId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapMentionData(userId=");
-      var3.append(var1);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", roleName=");
-      var3.append(var2);
-      var3.append(", parsedUserId=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.userId;
+      val var5: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.roleName;
+      val var1: java.lang.String = this.parsedUserId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapMentionData(userId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", roleName=");
+      var4.append(var3);
+      var4.append(", parsedUserId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

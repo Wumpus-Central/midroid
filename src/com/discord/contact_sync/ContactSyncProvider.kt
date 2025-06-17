@@ -63,14 +63,14 @@ public object ContactSyncProvider {
       // 47: astore 1
       // 48: aload 2
       // 49: aconst_null
-      // 4a: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4a: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 4d: goto 5c
       // 50: aload 4
       // 52: athrow
       // 53: astore 1
       // 54: aload 2
       // 55: aload 4
-      // 57: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 57: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 5a: aload 1
       // 5b: athrow
       // 5c: aload 1
@@ -278,23 +278,23 @@ public object ContactSyncProvider {
       // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 6e: astore 1
       // 6f: goto 78
-      // 72: astore 2
+      // 72: astore 1
       // 73: goto 82
       // 76: aconst_null
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
-      // 82: aload 2
+      // 82: aload 1
       // 83: athrow
-      // 84: astore 1
+      // 84: astore 2
       // 85: aload 3
-      // 86: aload 2
-      // 87: invokestatic d9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 1
+      // 86: aload 1
+      // 87: invokestatic q9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8a: aload 2
       // 8b: athrow
       // 8c: aload 2
       // 8d: areturn

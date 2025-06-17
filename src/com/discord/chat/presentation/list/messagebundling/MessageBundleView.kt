@@ -233,7 +233,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
    }
 
-   @Ka.f
+   @Xa.f
    public data class MessageBundle(messageFrame: MessageBundleHeader? = null,
       rows: List<MessageRow>,
       truncationThreshold: Float? = null,
@@ -249,7 +249,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new Na.f(MessageRow.$serializer.INSTANCE), null, new Na.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new ab.f(MessageRow.$serializer.INSTANCE), null, new ab.f(var0), null};
       }
 
       init {
@@ -342,24 +342,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var3: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
          val var1: java.util.List = this.rows;
          val var4: java.lang.Float = this.truncationThreshold;
          val var2: java.util.List = this.referenceMessageRows;
-         val var6: java.lang.String = this.viewMoreText;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MessageBundle(messageFrame=");
-         var5.append(var3);
-         var5.append(", rows=");
-         var5.append(var1);
-         var5.append(", truncationThreshold=");
-         var5.append(var4);
-         var5.append(", referenceMessageRows=");
-         var5.append(var2);
-         var5.append(", viewMoreText=");
-         var5.append(var6);
-         var5.append(")");
-         return var5.toString();
+         val var5: java.lang.String = this.viewMoreText;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MessageBundle(messageFrame=");
+         var3.append(var6);
+         var3.append(", rows=");
+         var3.append(var1);
+         var3.append(", truncationThreshold=");
+         var3.append(var4);
+         var3.append(", referenceMessageRows=");
+         var3.append(var2);
+         var3.append(", viewMoreText=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
 
       public companion object {

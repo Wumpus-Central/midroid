@@ -15,7 +15,7 @@ public enum class TraceTransaction(transactionName: String, operation: String) {
    fun {
       val var0: Array<TraceTransaction> = $values();
       $VALUES = var0;
-      $ENTRIES = Z8.a.a(var0);
+      $ENTRIES = m9.a.a(var0);
    }
 
    init {

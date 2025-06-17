@@ -1,6 +1,5 @@
 package com.discord.external_pip
 
-import R8.s
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -14,6 +13,7 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
+import e9.s
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
@@ -57,15 +57,15 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    private fun onPipModeWillChange() {
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
-         val var2: ReactEvents = this.reactEvents;
-         val var1: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var1, "getReactApplicationContext(...)");
-         var2.emitModuleEvent(var1, new OnPipModeWillChangeEvent());
+         val var1: ReactEvents = this.reactEvents;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return S8.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return f9.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {

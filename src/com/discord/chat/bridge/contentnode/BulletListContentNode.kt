@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.contentnode
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -64,16 +64,16 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.Long = this.start;
+      val var2: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var2: java.util.List = this.items;
+      val var4: java.util.List = this.items;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BulletListContentNode(start=");
-      var3.append(var4);
+      var3.append(var2);
       var3.append(", ordered=");
       var3.append(var1);
       var3.append(", items=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

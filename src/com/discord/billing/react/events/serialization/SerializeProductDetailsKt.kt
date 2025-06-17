@@ -1,10 +1,10 @@
 package com.discord.billing.react.events.serialization
 
-import R8.s
 import com.android.billingclient.api.ProductDetails
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
+import e9.s
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 
@@ -63,11 +63,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            var3 = var7.d();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Could not find pricingPhase for product: ");
-            var17.append(var3);
-            throw new AssertionError(var17.toString());
+            val var17: java.lang.String = var7.d();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Could not find pricingPhase for product: ");
+            var21.append(var17);
+            throw new AssertionError(var21.toString());
          }
 
          var1 = var16.d();

@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = R8.j.b(new E0(this));
+      this.shadowView$delegate = e9.j.b(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
@@ -321,7 +321,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.setDraweeSpanStringBuilder(var34);
       this.bottomSpacingPx = var23;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
-      androidx.core.view.a0.p0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
+      androidx.core.view.a0.q0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
    }
 
    public open fun setOnClickListener(l: OnClickListener?) {
@@ -351,24 +351,24 @@ public open class MessageContentView  public constructor(context: Context, attrs
          kotlin.jvm.internal.q.h(var2, "info");
          super.onInitializeAccessibilityNodeInfo(var1, var2);
          val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
-         var var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
+         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
 
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
             if (!var7.isRevealed()) {
-               val var3: Int = var5.getSpanStart(var7);
-               val var4: Int = var5.getSpanEnd(var7);
+               val var4: Int = var5.getSpanStart(var7);
+               val var3: Int = var5.getSpanEnd(var7);
                val var10: Context = var1.getContext();
                kotlin.jvm.internal.q.g(var10, "getContext(...)");
-               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+               var5.replace(var4, var3, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
             }
          }
 
-         var6 = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
+         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
 
-         while (var6.hasNext()) {
-            val var8: EmojiAccessibilitySpan = var6.next() as EmojiAccessibilitySpan;
-            var5.replace(var5.getSpanStart(var8), var5.getSpanEnd(var8), var8.getName());
+         while (var8.hasNext()) {
+            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
+            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
          }
 
          var2.U0(var5);

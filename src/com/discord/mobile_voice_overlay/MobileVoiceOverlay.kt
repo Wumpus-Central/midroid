@@ -1,6 +1,5 @@
 package com.discord.mobile_voice_overlay
 
-import R8.s
 import android.animation.Animator
 import android.animation.AnimatorInflater
 import android.animation.Animator.AnimatorListener
@@ -28,6 +27,7 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
+import e9.s
 import kotlin.jvm.functions.Function1
 
 internal class MobileVoiceOverlay(context: ReactApplicationContext) {
@@ -206,9 +206,9 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    @JvmStatic
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
       kotlin.jvm.internal.q.h(var1, "it");
-      val var3: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
+      val var2: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
       val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var4.getInsetMargins().set(-var3, var3, -var3, var3);
+      var4.getInsetMargins().set(-var2, var2, -var2, var2);
       var4.setOnClickListener(new l(var4, var0));
       var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
       var4.setOnMovingStateChanged(new n(var0, var4));

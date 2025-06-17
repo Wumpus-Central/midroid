@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.botuikit
 
-import Ka.f
+import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 
@@ -100,24 +100,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
-      val var6: java.lang.String = this.src;
+      val var6: java.lang.String = this.id;
+      val var2: java.lang.String = this.name;
+      val var5: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ComponentEmoji(id=");
-      var3.append(var2);
-      var3.append(", name=");
-      var3.append(var4);
-      var3.append(", src=");
-      var3.append(var6);
-      var3.append(", animated=");
-      var3.append(var1);
-      var3.append(", surrogates=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.surrogates;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ComponentEmoji(id=");
+      var4.append(var6);
+      var4.append(", name=");
+      var4.append(var2);
+      var4.append(", src=");
+      var4.append(var5);
+      var4.append(", animated=");
+      var4.append(var1);
+      var4.append(", surrogates=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

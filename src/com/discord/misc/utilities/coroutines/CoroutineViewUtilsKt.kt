@@ -1,6 +1,5 @@
 package com.discord.misc.utilities.coroutines
 
-import Y8.b
 import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
@@ -11,6 +10,7 @@ import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CoroutineScope
+import l9.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {
