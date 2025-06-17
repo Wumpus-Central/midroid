@@ -18,10 +18,10 @@ internal fun AudioAttachmentMessageAccessory.toAudioSource(): AudioSource {
 
 internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource {
    kotlin.jvm.internal.q.h(var0, "<this>");
-   val var2: ChannelId = var0.getChannelId-qMVnFVQ();
+   val var5: ChannelId = var0.getChannelId-qMVnFVQ();
    val var3: java.lang.String = var0.getMessageId-3Eiw7ao();
    val var4: Int = var0.getIndex();
-   val var5: java.lang.String = var0.getUrl();
+   val var2: java.lang.String = var0.getUrl();
    if (var1 == null) {
       val var6: java.lang.String = var0.getUrl();
       val var7: StringBuilder = new StringBuilder();
@@ -30,7 +30,7 @@ internal fun AudioSource.toMediaSource(featureTag: String? = null): MediaSource 
       var1 = var7.toString();
    }
 
-   return new MediaSource(var5, null, null, null, var1, MediaType.AUDIO, false, var2, var3, var4, null, null, 3150, null);
+   return new MediaSource(var2, null, null, null, var1, MediaType.AUDIO, false, var5, var3, var4, null, null, 3150, null);
 }
 
 @JvmSynthetic

@@ -63,13 +63,13 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
 
          var18 = new DraweeSpanStringBuilder((java.lang.CharSequence)var18);
       } else if (var22.getContent() != null) {
-         var18 = var22.getContent();
-         val var10: Context = var15.getContext();
-         kotlin.jvm.internal.q.g(var10, "getContext(...)");
-         val var24: java.lang.String = var22.getId-3Eiw7ao();
-         val var5: Boolean = MessageKt.shouldAnimateEmoji(var22);
-         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var22);
-         val var8: Boolean = var22.getShouldShowRoleDot();
+         val var10: StructurableText = var22.getContent();
+         val var24: Context = var15.getContext();
+         kotlin.jvm.internal.q.g(var24, "getContext(...)");
+         var18 = var22.getId-3Eiw7ao();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var22);
+         val var5: Boolean = MessageKt.shouldShowLinkDecorations(var22);
+         val var7: Boolean = var22.getShouldShowRoleDot();
          val var6: Boolean = var22.getShouldShowRoleOnName();
          val var11: FontMetrics = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var11, "getFontMetrics(...)");
@@ -77,12 +77,12 @@ public class ThreadEmbedViewHolder(threadEmbedView: ThreadEmbedView) : MessagePa
          val var30: TextPaint = var15.getBinding().threadEmbedMostRecentMessageContent.getPaint();
          kotlin.jvm.internal.q.g(var30, "getPaint(...)");
          var18 = TextUtilsKt.toSpannable$default(
-            (StructurableText)var18,
             var10,
             var24,
+            (java.lang.String)var18,
+            var8,
             var5,
             var7,
-            var8,
             var6,
             var30,
             null,

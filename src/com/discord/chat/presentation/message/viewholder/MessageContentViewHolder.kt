@@ -86,9 +86,9 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
       val var25: TextPaint = this.messageContentView.getPaint();
       kotlin.jvm.internal.q.g(var25, "getPaint(...)");
-      val var26: FontManager = FontManager.INSTANCE;
-      val var27: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.q.g(var27, "getContext(...)");
+      val var27: FontManager = FontManager.INSTANCE;
+      val var26: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.q.g(var26, "getContext(...)");
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
@@ -120,7 +120,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var26.getScaledSpToPx(16, var27))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var27.getScaledSpToPx(16, var26))
          );
    }
 }

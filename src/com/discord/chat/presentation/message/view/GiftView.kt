@@ -24,6 +24,7 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.image.fresco.postprocessors.PostProcessor
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
+import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.generic.GenericDraweeHierarchy
@@ -208,8 +209,9 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          this.binding.header.setText(var9.getHeaderText());
          var26.setTextColor(var9.getHeaderColor());
          val var31: SimpleDraweeView = this.binding.thumbnail;
+         kotlin.jvm.internal.q.e(this.binding.thumbnail);
          val var27: GiftEmbed.Resolved = var9 as GiftEmbed.Resolved;
-         this.binding.thumbnail.setImageURI((var9 as GiftEmbed.Resolved).getThumbnailUrl());
+         ReactAssetUtilsKt.setOptionalReactImageUrl(var31, (var9 as GiftEmbed.Resolved).getThumbnailUrl());
          (var31.getHierarchy() as GenericDraweeHierarchy).E(com.facebook.drawee.generic.a.b((float)SizeUtilsKt.getDpToPx(var9.getThumbnailCornerRadius())));
          var var11: TextView = this.binding.title;
          this.binding.title.setText(var27.getTitleText());

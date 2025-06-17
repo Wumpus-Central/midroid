@@ -116,11 +116,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
 
    public fun onTryFetch(config: Any) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var2: Thread = Thread.currentThread();
-         var1 = new StringBuilder();
-         var1.append("Expected to be on android main thread. Current: ");
-         var1.append(var2);
-         throw new IllegalStateException(var1.toString().toString());
+         var1 = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected to be on android main thread. Current: ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       } else {
          if (q.c(access$getAnimatedImageConfig$p(this), var1) && access$getAnimatedImageLoaded$p(this)) {
             access$updateWorker(this, false);

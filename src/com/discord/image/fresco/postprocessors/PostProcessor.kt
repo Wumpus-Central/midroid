@@ -216,8 +216,8 @@ public sealed interface PostProcessor {
          val var6: PostProcessor.Gradient.Direction = this.direction;
          val var3: Int = this.startColor;
          val var4: Int = this.endColor;
-         val var2: Float = this.startPosition;
-         val var1: Float = this.endPosition;
+         val var1: Float = this.startPosition;
+         val var2: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
@@ -226,9 +226,9 @@ public sealed interface PostProcessor {
          var5.append(", endColor=");
          var5.append(var4);
          var5.append(", startPosition=");
-         var5.append(var2);
-         var5.append(", endPosition=");
          var5.append(var1);
+         var5.append(", endPosition=");
+         var5.append(var2);
          var5.append(")");
          return var5.toString();
       }

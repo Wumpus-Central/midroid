@@ -105,13 +105,13 @@ final class Palette {
    public static Palette generate(Bitmap var0, int var1) {
       checkBitmapParam(var0);
       checkNumberColorsParam(var1);
-      Bitmap var3 = scaleBitmapDown(var0);
-      ColorCutQuantizer var2 = ColorCutQuantizer.fromBitmap(var3, var1);
-      if (var3 != var0) {
-         var3.recycle();
+      Bitmap var2 = scaleBitmapDown(var0);
+      ColorCutQuantizer var3 = ColorCutQuantizer.fromBitmap(var2, var1);
+      if (var2 != var0) {
+         var2.recycle();
       }
 
-      return new Palette(var2.getQuantizedColors());
+      return new Palette(var3.getQuantizedColors());
    }
 
    private void generateEmptySwatches() {
