@@ -55,8 +55,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -64,20 +64,20 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var2: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
-      val var4: java.util.List = this.content;
+      val var4: java.lang.String = this.attachmentName;
+      val var3: java.util.List = this.content;
       val var1: StringBuilder = new StringBuilder();
       var1.append("AttachmentLinkContentNode(attachmentUrl=");
       var1.append(var2);
       var1.append(", attachmentName=");
-      var1.append(var3);
-      var1.append(", content=");
       var1.append(var4);
+      var1.append(", content=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

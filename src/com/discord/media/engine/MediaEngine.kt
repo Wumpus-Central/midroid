@@ -934,20 +934,20 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             val var10: MediaCodecInfo = var7.next() as MediaCodecInfo;
             val var9: java.lang.String = var10.getName();
             kotlin.jvm.internal.q.g(var9, "getName(...)");
-            val var13: Array<java.lang.String> = var10.getSupportedTypes();
-            kotlin.jvm.internal.q.g(var13, "getSupportedTypes(...)");
-            val var11: ArrayList = new ArrayList();
-            val var3: Int = var13.length;
+            val var11: Array<java.lang.String> = var10.getSupportedTypes();
+            kotlin.jvm.internal.q.g(var11, "getSupportedTypes(...)");
+            val var13: ArrayList = new ArrayList();
+            val var3: Int = var11.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var12: java.lang.String = var13[var2];
-               kotlin.jvm.internal.q.e(var13[var2]);
+               val var12: java.lang.String = var11[var2];
+               kotlin.jvm.internal.q.e(var11[var2]);
                if (kotlin.text.h.I(var12, "video", false, 2, null)) {
-                  var11.add(var12);
+                  var13.add(var12);
                }
             }
 
-            for (java.lang.String var18 : var11) {
+            for (java.lang.String var18 : var13) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var10)) {
@@ -1780,15 +1780,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var3: ScreenCapturer = this.screenCapturer;
+         val var2: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ScreenCapturerForConnection(screenCapturer=");
-         var2.append(var3);
-         var2.append(", connectionId=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ScreenCapturerForConnection(screenCapturer=");
+         var3.append(var2);
+         var3.append(", connectionId=");
+         var3.append(var1);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

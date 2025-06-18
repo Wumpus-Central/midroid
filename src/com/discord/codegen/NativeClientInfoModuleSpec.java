@@ -18,9 +18,9 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var2 = this.getTypedExportedConstants();
+      Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var4 = new HashSet<>(
+         HashSet var1 = new HashSet<>(
             Arrays.asList(
                "Build",
                "DeviceVendorID",
@@ -34,21 +34,21 @@ public abstract class NativeClientInfoModuleSpec extends ReactContextBaseJavaMod
                "Version"
             )
          );
-         HashSet var1 = new HashSet<>(Arrays.asList("UserSettings"));
-         HashSet var3 = new HashSet(var2.keySet());
-         var3.removeAll(var4);
-         var3.removeAll(var1);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet<>(Arrays.asList("UserSettings"));
+         HashSet var2 = new HashSet(var4.keySet());
+         var2.removeAll(var1);
+         var2.removeAll(var3);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
-         var4.removeAll(var2.keySet());
-         if (!var4.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
+         var1.removeAll(var4.keySet());
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 
-      return var2;
+      return var4;
    }
 
    public String getName() {

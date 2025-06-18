@@ -32,49 +32,49 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 59
+      // 0e: ifnull 5b
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 43
+      // 17: ifnull 45
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 4
-      // 20: new java/io/ByteArrayOutputStream
-      // 23: astore 1
-      // 24: aload 1
-      // 25: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 28: aload 4
+      // 1e: astore 1
+      // 1f: new java/io/ByteArrayOutputStream
+      // 22: astore 4
+      // 24: aload 4
+      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 29: aload 1
       // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
       // 2d: iload 3
-      // 2e: aload 1
-      // 2f: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 32: pop
-      // 33: aload 1
-      // 34: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 37: bipush 0
-      // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
-      // 3b: astore 1
-      // 3c: goto 45
-      // 3f: astore 1
-      // 40: goto 4d
-      // 43: aconst_null
-      // 44: astore 1
-      // 45: aload 2
-      // 46: aconst_null
-      // 47: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4a: goto 59
-      // 4d: aload 1
-      // 4e: athrow
-      // 4f: astore 4
-      // 51: aload 2
-      // 52: aload 1
-      // 53: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 56: aload 4
-      // 58: athrow
-      // 59: aload 1
-      // 5a: areturn
+      // 2e: aload 4
+      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 33: pop
+      // 34: aload 4
+      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 39: bipush 0
+      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 3d: astore 1
+      // 3e: goto 47
+      // 41: astore 1
+      // 42: goto 4f
+      // 45: aconst_null
+      // 46: astore 1
+      // 47: aload 2
+      // 48: aconst_null
+      // 49: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4c: goto 5b
+      // 4f: aload 1
+      // 50: athrow
+      // 51: astore 4
+      // 53: aload 2
+      // 54: aload 1
+      // 55: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 4
+      // 5a: athrow
+      // 5b: aload 1
+      // 5c: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -151,10 +151,10 @@ public object ContactSyncProvider {
       } else {
          while (var8.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var8, "display_name");
-            val var10: java.lang.String = this.getColumnString(var8, "data4");
-            val var9: java.lang.String = this.getColumnString(var8, "_id");
+            val var9: java.lang.String = this.getColumnString(var8, "data4");
+            val var10: java.lang.String = this.getColumnString(var8, "_id");
             var var3: java.lang.String = this.getColumnString(var8, "contact_id");
-            if (var9 != null && var3 != null) {
+            if (var10 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -186,13 +186,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var10 != null) {
+               if (var9 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var7.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
+                  val var12: ContactSyncBlobEntry = var7.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
                }
             }
          }

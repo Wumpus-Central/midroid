@@ -72,20 +72,20 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var2: ChangeType = this.changeType;
-      val var3: Message = this.message;
-      val var5: java.lang.String = this.fileId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("UploadProgressRow(index=");
-      var4.append(var1);
-      var4.append(", changeType=");
-      var4.append(var2);
-      var4.append(", message=");
-      var4.append(var3);
-      var4.append(", fileId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: ChangeType = this.changeType;
+      val var4: Message = this.message;
+      val var2: java.lang.String = this.fileId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UploadProgressRow(index=");
+      var3.append(var1);
+      var3.append(", changeType=");
+      var3.append(var5);
+      var3.append(", message=");
+      var3.append(var4);
+      var3.append(", fileId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

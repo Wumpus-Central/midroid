@@ -39,12 +39,30 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `setNavigationBarContrastEnforced$lambda$4`(var0: SafeAreaInsetsModule, var1: Boolean) {
+      if (VERSION.SDK_INT < 35) {
+         var var3: Activity = var0.getCurrentActivity();
+         if (var3 != null) {
+            val var6: Window = var3.getWindow();
+            if (var6 != null) {
+               var6.setStatusBarColor(0);
+            }
+         }
+
+         var3 = var0.getCurrentActivity();
+         if (var3 != null) {
+            val var8: Window = var3.getWindow();
+            if (var8 != null) {
+               var8.setNavigationBarColor(0);
+            }
+         }
+      }
+
       if (VERSION.SDK_INT >= 29) {
-         val var2: Activity = var0.getCurrentActivity();
-         if (var2 != null) {
-            val var3: Window = var2.getWindow();
-            if (var3 != null) {
-               a.a(var3, var1);
+         val var4: Activity = var0.getCurrentActivity();
+         if (var4 != null) {
+            val var5: Window = var4.getWindow();
+            if (var5 != null) {
+               a.a(var5, var1);
             }
          }
       }

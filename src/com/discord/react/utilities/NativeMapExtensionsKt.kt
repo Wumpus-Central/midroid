@@ -240,19 +240,19 @@ public fun ReadableMap.toJsonString(): String {
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    q.h(var0, "<this>");
    val var1: Json = getJson();
-   val var2: java.lang.String = toJsonString(var0);
-   val var3: qb.b = var1.a();
+   val var3: java.lang.String = toJsonString(var0);
+   val var2: qb.b = var1.a();
    q.m(6, "T");
    u.a("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(j.d(var3, null), var2);
+   return (T)var1.b(j.d(var2, null), var3);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    q.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

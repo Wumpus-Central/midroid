@@ -1,13 +1,14 @@
 package com.discord.react
 
-import com.facebook.react.bridge.Callback
+import com.discord.codegen.NativeFontModuleSpec
+import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
+import com.facebook.react.bridge.WritableMap
 import com.jakewharton.processphoenix.ProcessPhoenix
 import kotlin.jvm.internal.q
+import r9.s
 
-public class FontModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+public class FontModule(reactContext: ReactApplicationContext) : NativeFontModuleSpec {
    private final val reactContext: ReactApplicationContext
 
    init {
@@ -16,19 +17,15 @@ public class FontModule(reactContext: ReactApplicationContext) : ReactContextBas
       this.reactContext = var1;
    }
 
-   @ReactMethod
-   public fun getFontScale(callback: Callback) {
-      q.h(var1, "callback");
-      val var2: FontManager = FontManager.INSTANCE;
-      var1.invoke(new Object[]{FontManager.INSTANCE.getFontScale(this.reactContext), var2.getIsClassicChatFontScaleEnabled(this.reactContext)});
+   public override fun getCustomFontScale(): WritableMap {
+      val var1: FontManager = FontManager.INSTANCE;
+      return NativeMapExtensionsKt.nativeMapOf(
+         s.a("fontScale", FontManager.INSTANCE.getFontScale(this.reactContext)),
+         s.a("isClassicChatFontScaleEnabled", var1.getIsClassicChatFontScaleEnabled(this.reactContext))
+      );
    }
 
-   public open fun getName(): String {
-      return "FontModule";
-   }
-
-   @ReactMethod
-   public fun setFontScale(fontScale: Double, isClassicChatFontScaleEnabled: Boolean) {
+   public override fun setCustomFontScale(fontScale: Double, isClassicChatFontScaleEnabled: Boolean) {
       FontManager.INSTANCE.setFontSize(this.reactContext, (float)var1, var3);
       ProcessPhoenix.b(this.reactContext);
    }

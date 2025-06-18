@@ -75,10 +75,10 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.type.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
-      val var3: Int = java.lang.Boolean.hashCode(this.animate);
-      val var5: Int = java.lang.Boolean.hashCode(this.highlight);
+      val var5: Int = this.type.hashCode();
+      val var3: Int = Integer.hashCode(this.index);
+      val var4: Int = java.lang.Boolean.hashCode(this.animate);
+      val var2: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
       if (this.position == null) {
          var1 = 0;
@@ -86,28 +86,28 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var2 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1;
+      return (((var5 * 31 + var3) * 31 + var4) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var6: ChatScrollType = this.type;
+      val var4: ChatScrollType = this.type;
       val var1: Int = this.index;
-      val var3: Boolean = this.animate;
-      val var2: Boolean = this.highlight;
-      val var5: Int = this.position;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatScrollData(type=");
-      var4.append(var6);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", animate=");
-      var4.append(var3);
-      var4.append(", highlight=");
-      var4.append(var2);
-      var4.append(", position=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var2: Boolean = this.animate;
+      val var3: Boolean = this.highlight;
+      val var6: Int = this.position;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ChatScrollData(type=");
+      var5.append(var4);
+      var5.append(", index=");
+      var5.append(var1);
+      var5.append(", animate=");
+      var5.append(var2);
+      var5.append(", highlight=");
+      var5.append(var3);
+      var5.append(", position=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

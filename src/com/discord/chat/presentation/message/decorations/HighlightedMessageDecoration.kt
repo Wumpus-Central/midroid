@@ -36,12 +36,12 @@ public abstract class HighlightedMessageDecoration : RecyclerView.ItemDecoration
             val var8: ChatListItem = var12.getChatListItem(var6);
             if (var8 == null) {
                val var10: Log = Log.INSTANCE;
-               val var13: java.lang.String = this.getClass().getSimpleName();
-               q.g(var13, "getSimpleName(...)");
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Missing item in position ");
-               var9.append(var6);
-               Log.e$default(var10, var13, var9.toString(), null, 4, null);
+               val var9: java.lang.String = this.getClass().getSimpleName();
+               q.g(var9, "getSimpleName(...)");
+               val var13: StringBuilder = new StringBuilder();
+               var13.append("Missing item in position ");
+               var13.append(var6);
+               Log.e$default(var10, var9, var13.toString(), null, 4, null);
                return;
             }
 

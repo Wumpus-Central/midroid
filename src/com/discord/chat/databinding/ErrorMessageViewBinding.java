@@ -26,12 +26,12 @@ public final class ErrorMessageViewBinding implements ViewBinding {
       TextView var2 = (TextView)a.a(var0, var1);
       if (var2 != null) {
          var1 = R.id.header;
-         TextView var4 = (TextView)a.a(var0, var1);
-         if (var4 != null) {
+         TextView var3 = (TextView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.see_more_button;
-            TextView var3 = (TextView)a.a(var0, var1);
-            if (var3 != null) {
-               return new ErrorMessageViewBinding(var0, var2, var4, var3);
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
+               return new ErrorMessageViewBinding(var0, var2, var3, var4);
             }
          }
       }

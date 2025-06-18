@@ -184,7 +184,7 @@ internal fun maxCpuFreq(): String {
    // 05a: lload 4
    // 05c: lstore 8
    // 05e: getstatic Ya/a.b Ljava/nio/charset/Charset;
-   // 061: astore 15
+   // 061: astore 14
    // 063: lload 4
    // 065: lstore 8
    // 067: new java/io/InputStreamReader
@@ -192,17 +192,17 @@ internal fun maxCpuFreq(): String {
    // 06c: lload 4
    // 06e: lstore 8
    // 070: new java/io/FileInputStream
-   // 073: astore 14
+   // 073: astore 15
    // 075: lload 4
    // 077: lstore 8
-   // 079: aload 14
+   // 079: aload 15
    // 07b: aload 12
    // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 080: lload 4
    // 082: lstore 8
    // 084: aload 13
-   // 086: aload 14
-   // 088: aload 15
+   // 086: aload 15
+   // 088: aload 14
    // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 08d: lload 4
    // 08f: lstore 8

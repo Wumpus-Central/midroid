@@ -239,23 +239,23 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    private fun configureLeadingIcon(message: Message) {
-      val var3: Boolean;
+      var var2: Boolean;
       if (var1.getForwardInfo() != null) {
-         var3 = true;
+         var2 = 1;
       } else {
-         var3 = false;
+         var2 = 0;
       }
 
-      var var2: Byte = 1;
+      var var3: Boolean = true;
       if (!var1.isPollResult()) {
-         if (var3) {
-            var2 = 1;
+         if (var2) {
+            var3 = true;
          } else {
-            var2 = 0;
+            var3 = false;
          }
       }
 
-      if (var2) {
+      if (var3) {
          val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
          kotlin.jvm.internal.q.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
          val var7: ReactAsset;
@@ -270,7 +270,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
 
       val var8: SimpleDraweeView = this.binding.replyLeadingIcon;
       kotlin.jvm.internal.q.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
-      if (var2) {
+      if (var3) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -370,17 +370,17 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
       val var25: MessageContentView = this.binding.replyText;
       val var26: LinearLayout = this.binding.replyLeadingViews;
       kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-      val var12: AnnotatedStructurableText = var2.getContent();
-      val var11: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var11, "getContext(...)");
+      val var11: AnnotatedStructurableText = var2.getContent();
+      val var12: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var12, "getContext(...)");
       val var13: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
       kotlin.jvm.internal.q.g(var13, "getFontMetrics(...)");
       val var8: Float = TextUtilsKt.getBaselineHeightPx(var13);
       val var27: TextPaint = this.binding.replyText.getPaint();
       kotlin.jvm.internal.q.g(var27, "getPaint(...)");
       val var14: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var12,
          var11,
+         var12,
          var1,
          var3,
          var4,
@@ -504,13 +504,13 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var28: MessageContentView = this.binding.replyText;
             val var48: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var68: StructurableText = var12.getSystemContent();
-            val var14: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var14, "getContext(...)");
-            val var74: java.lang.String = var11.getId-3Eiw7ao();
+            val var74: StructurableText = var12.getSystemContent();
+            val var68: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var68, "getContext(...)");
+            val var14: java.lang.String = var11.getId-3Eiw7ao();
             val var41: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            var2 = MessageKt.shouldShowLinkDecorations(var11);
-            val var9: Boolean = var11.getShouldShowRoleDot();
+            val var9: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            var2 = var11.getShouldShowRoleDot();
             val var8: Boolean = var11.getShouldShowRoleOnName();
             val var60: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var60, "getFontMetrics(...)");
@@ -518,12 +518,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var61: TextPaint = this.binding.replyText.getPaint();
             kotlin.jvm.internal.q.g(var61, "getPaint(...)");
             val var62: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+               var74,
                var68,
                var14,
-               var74,
                var41,
-               var2,
                var9,
+               var2,
                var8,
                var61,
                null,
@@ -556,27 +556,27 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var29: MessageContentView = this.binding.replyText;
             val var50: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.q.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var71: StructurableText = var11.getContent();
-            val var76: Context = this.getContext();
-            kotlin.jvm.internal.q.g(var76, "getContext(...)");
-            val var75: java.lang.String = var11.getId-3Eiw7ao();
-            var2 = MessageKt.shouldAnimateEmoji(var11);
-            val var44: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            val var42: Boolean = var11.getShouldShowRoleDot();
-            val var43: Boolean = var11.getShouldShowRoleOnName();
+            val var76: StructurableText = var11.getContent();
+            val var75: Context = this.getContext();
+            kotlin.jvm.internal.q.g(var75, "getContext(...)");
+            val var71: java.lang.String = var11.getId-3Eiw7ao();
+            val var42: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var43: Boolean = var11.getShouldShowRoleDot();
+            val var44: Boolean = var11.getShouldShowRoleOnName();
             val var63: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.q.g(var63, "getFontMetrics(...)");
             val var36: Float = TextUtilsKt.getBaselineHeightPx(var63);
             val var64: TextPaint = this.binding.replyText.getPaint();
             kotlin.jvm.internal.q.g(var64, "getPaint(...)");
             val var65: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var71,
                var76,
                var75,
-               var2,
-               var44,
+               var71,
                var42,
+               var2,
                var43,
+               var44,
                var64,
                null,
                null,

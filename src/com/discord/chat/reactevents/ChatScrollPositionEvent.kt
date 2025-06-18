@@ -152,13 +152,13 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
 
    public override fun hashCode(): Int {
       val var6: Int = java.lang.Boolean.hashCode(this.isAtBottom);
-      val var8: Int = java.lang.Boolean.hashCode(this.isNearBottom);
-      val var10: Int = java.lang.Boolean.hashCode(this.isNearTop);
-      val var9: Int = java.lang.Boolean.hashCode(this.dragging);
-      val var3: Int = java.lang.Boolean.hashCode(this.decelerating);
-      val var7: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
-      val var4: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
-      val var5: Int = Integer.hashCode(this.firstVisibleMessageIndex);
+      val var3: Int = java.lang.Boolean.hashCode(this.isNearBottom);
+      val var9: Int = java.lang.Boolean.hashCode(this.isNearTop);
+      val var8: Int = java.lang.Boolean.hashCode(this.dragging);
+      val var5: Int = java.lang.Boolean.hashCode(this.decelerating);
+      val var4: Int = java.lang.Boolean.hashCode(this.shouldShowJumpToPresent);
+      val var10: Int = java.lang.Boolean.hashCode(this.isFirstMessageVisible);
+      val var7: Int = Integer.hashCode(this.firstVisibleMessageIndex);
       var var2: Int = 0;
       val var1: Int;
       if (this.firstVisibleMessagePercentVisible == null) {
@@ -172,7 +172,7 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
          var2 = this.lastVisibleMessagePercentVisible.hashCode();
       }
 
-      return ((((((((((var6 * 31 + var8) * 31 + var10) * 31 + var9) * 31 + var3) * 31 + var7) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var11) * 31 + var2)
+      return ((((((((((var6 * 31 + var3) * 31 + var9) * 31 + var8) * 31 + var5) * 31 + var4) * 31 + var10) * 31 + var7) * 31 + var1) * 31 + var11) * 31 + var2)
             * 31
          + Integer.hashCode(this.changesetUpdateId);
    }
@@ -182,41 +182,41 @@ internal data class ChatScrollPositionEvent(isAtBottom: Boolean,
    }
 
    public override fun toString(): String {
-      val var8: Boolean = this.isAtBottom;
-      val var4: Boolean = this.isNearBottom;
-      val var5: Boolean = this.isNearTop;
-      val var10: Boolean = this.dragging;
-      val var7: Boolean = this.decelerating;
-      val var9: Boolean = this.shouldShowJumpToPresent;
+      val var9: Boolean = this.isAtBottom;
+      val var7: Boolean = this.isNearBottom;
+      val var10: Boolean = this.isNearTop;
+      val var5: Boolean = this.dragging;
+      val var8: Boolean = this.decelerating;
+      val var4: Boolean = this.shouldShowJumpToPresent;
       val var6: Boolean = this.isFirstMessageVisible;
       val var1: Int = this.firstVisibleMessageIndex;
-      val var13: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var12: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var3: Int = this.lastVisibleMessageIndex;
-      val var12: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var13: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var2: Int = this.changesetUpdateId;
       val var11: StringBuilder = new StringBuilder();
       var11.append("ChatScrollPositionEvent(isAtBottom=");
-      var11.append(var8);
-      var11.append(", isNearBottom=");
-      var11.append(var4);
-      var11.append(", isNearTop=");
-      var11.append(var5);
-      var11.append(", dragging=");
-      var11.append(var10);
-      var11.append(", decelerating=");
-      var11.append(var7);
-      var11.append(", shouldShowJumpToPresent=");
       var11.append(var9);
+      var11.append(", isNearBottom=");
+      var11.append(var7);
+      var11.append(", isNearTop=");
+      var11.append(var10);
+      var11.append(", dragging=");
+      var11.append(var5);
+      var11.append(", decelerating=");
+      var11.append(var8);
+      var11.append(", shouldShowJumpToPresent=");
+      var11.append(var4);
       var11.append(", isFirstMessageVisible=");
       var11.append(var6);
       var11.append(", firstVisibleMessageIndex=");
       var11.append(var1);
       var11.append(", firstVisibleMessagePercentVisible=");
-      var11.append(var13);
+      var11.append(var12);
       var11.append(", lastVisibleMessageIndex=");
       var11.append(var3);
       var11.append(", lastVisibleMessagePercentVisible=");
-      var11.append(var12);
+      var11.append(var13);
       var11.append(", changesetUpdateId=");
       var11.append(var2);
       var11.append(")");

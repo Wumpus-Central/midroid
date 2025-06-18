@@ -104,10 +104,10 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       kotlin.jvm.internal.q.h(var1, "accessory");
       kotlin.jvm.internal.q.h(var2, "eventHandler");
-      val var4: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
-      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var4, null, 1, null));
+      val var6: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
+      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var6, null, 1, null));
       val var5: Attachment = var1.getAttachment();
-      val var6: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
+      val var4: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -134,11 +134,11 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
          var7.setUnknownDuration();
       }
 
-      var7.setUploadProgress(var6);
+      var7.setUploadProgress(var4);
       var7.setOnLongPress(new b(var3, var1));
       var7.shouldAnimate(var5.isAnimated());
       var7.setContainerBackgroundColor(var1.getColor());
-      var7.setListener(new AudioPlayerView.Listener(var5, var2, var1, var4) {
+      var7.setListener(new AudioPlayerView.Listener(var5, var2, var1, var6) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;

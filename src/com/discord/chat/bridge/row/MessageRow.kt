@@ -238,8 +238,8 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var15: Int = Integer.hashCode(this.index);
-      val var16: Int = this.changeType.hashCode();
+      val var16: Int = Integer.hashCode(this.index);
+      val var15: Int = this.changeType.hashCode();
       var var14: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
@@ -356,9 +356,9 @@ public data class MessageRow(index: Int,
                                                                                                                                     (
                                                                                                                                              (
                                                                                                                                                       (
-                                                                                                                                                               var15
+                                                                                                                                                               var16
                                                                                                                                                                      * 31
-                                                                                                                                                                  + var16
+                                                                                                                                                                  + var15
                                                                                                                                                             )
                                                                                                                                                             * 31
                                                                                                                                                          + var1
@@ -414,65 +414,65 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var12: ChangeType = this.changeType;
-      val var13: java.lang.Boolean = this.jumped;
-      val var9: MessageBase = this.message;
-      val var11: java.lang.Boolean = this.canAddNewReactions;
-      val var15: java.lang.String = this.addReactionLabel;
-      val var14: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var7: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var16: ReactionsTheme = this.reactionsTheme;
+      val var7: ChangeType = this.changeType;
+      val var16: java.lang.Boolean = this.jumped;
+      val var17: MessageBase = this.message;
+      val var8: java.lang.Boolean = this.canAddNewReactions;
+      val var14: java.lang.String = this.addReactionLabel;
+      val var5: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var19: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var13: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var6: MessageFrame = this.messageFrame;
-      val var5: Int = this.reactTag;
-      val var17: Truncation = this.truncation;
-      val var19: BackgroundHighlight = this.backgroundHighlight;
-      val var8: SwipeActionsType = this.swipeActions;
+      val var20: MessageFrame = this.messageFrame;
+      val var9: Int = this.reactTag;
+      val var15: Truncation = this.truncation;
+      val var4: BackgroundHighlight = this.backgroundHighlight;
+      val var12: SwipeActionsType = this.swipeActions;
       val var18: MessageContextType = this.contextType;
-      val var10: java.lang.String = this.replyAccessibilityLabel;
+      val var11: java.lang.String = this.replyAccessibilityLabel;
       val var3: java.lang.String = this.forwardAccessibilityLabel;
-      val var20: java.lang.String = this.threadAccessibilityLabel;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MessageRow(index=");
-      var4.append(var1);
-      var4.append(", changeType=");
-      var4.append(var12);
-      var4.append(", jumped=");
-      var4.append(var13);
-      var4.append(", message=");
-      var4.append(var9);
-      var4.append(", canAddNewReactions=");
-      var4.append(var11);
-      var4.append(", addReactionLabel=");
-      var4.append(var15);
-      var4.append(", addNewReactionAccessibilityLabel=");
-      var4.append(var14);
-      var4.append(", addNewBurstReactionAccessibilityLabel=");
-      var4.append(var7);
-      var4.append(", reactionsTheme=");
-      var4.append(var16);
-      var4.append(", renderContentOnly=");
-      var4.append(var2);
-      var4.append(", messageFrame=");
-      var4.append(var6);
-      var4.append(", reactTag=");
-      var4.append(var5);
-      var4.append(", truncation=");
-      var4.append(var17);
-      var4.append(", backgroundHighlight=");
-      var4.append(var19);
-      var4.append(", swipeActions=");
-      var4.append(var8);
-      var4.append(", contextType=");
-      var4.append(var18);
-      var4.append(", replyAccessibilityLabel=");
-      var4.append(var10);
-      var4.append(", forwardAccessibilityLabel=");
-      var4.append(var3);
-      var4.append(", threadAccessibilityLabel=");
-      var4.append(var20);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = this.threadAccessibilityLabel;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MessageRow(index=");
+      var10.append(var1);
+      var10.append(", changeType=");
+      var10.append(var7);
+      var10.append(", jumped=");
+      var10.append(var16);
+      var10.append(", message=");
+      var10.append(var17);
+      var10.append(", canAddNewReactions=");
+      var10.append(var8);
+      var10.append(", addReactionLabel=");
+      var10.append(var14);
+      var10.append(", addNewReactionAccessibilityLabel=");
+      var10.append(var5);
+      var10.append(", addNewBurstReactionAccessibilityLabel=");
+      var10.append(var19);
+      var10.append(", reactionsTheme=");
+      var10.append(var13);
+      var10.append(", renderContentOnly=");
+      var10.append(var2);
+      var10.append(", messageFrame=");
+      var10.append(var20);
+      var10.append(", reactTag=");
+      var10.append(var9);
+      var10.append(", truncation=");
+      var10.append(var15);
+      var10.append(", backgroundHighlight=");
+      var10.append(var4);
+      var10.append(", swipeActions=");
+      var10.append(var12);
+      var10.append(", contextType=");
+      var10.append(var18);
+      var10.append(", replyAccessibilityLabel=");
+      var10.append(var11);
+      var10.append(", forwardAccessibilityLabel=");
+      var10.append(var3);
+      var10.append(", threadAccessibilityLabel=");
+      var10.append(var6);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

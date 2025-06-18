@@ -147,10 +147,10 @@ public data class ChannelSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
-      val var6: Int = this.id.hashCode();
-      val var4: Int = this.state.hashCode();
-      val var7: Int = this.customId.hashCode();
+      val var4: Int = Integer.hashCode(this.type);
+      val var7: Int = this.id.hashCode();
+      val var5: Int = this.state.hashCode();
+      val var6: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -166,54 +166,54 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.minValues);
-      val var11: Int = Integer.hashCode(this.maxValues);
-      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var9: Int = this.selectedOptions.hashCode();
+      val var8: Int = Integer.hashCode(this.minValues);
+      val var9: Int = Integer.hashCode(this.maxValues);
+      val var10: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var11: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var5 * 31 + var6) * 31 + var4) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var11) * 31 + var8) * 31 + var9) * 31 + var3;
+      return (((((((((var4 * 31 + var7) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var9) * 31 + var10) * 31 + var11) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: Int = this.type;
-      val var10: java.lang.String = this.id;
+      val var2: Int = this.type;
+      val var9: java.lang.String = this.id;
       val var11: ActionComponentState = this.state;
-      val var8: java.lang.String = this.customId;
-      val var7: java.lang.String = this.placeholder;
-      val var5: java.lang.String = this.accessibilityLabel;
+      val var7: java.lang.String = this.customId;
+      val var8: java.lang.String = this.placeholder;
+      val var12: java.lang.String = this.accessibilityLabel;
       val var3: Int = this.minValues;
-      val var2: Int = this.maxValues;
+      val var1: Int = this.maxValues;
       val var4: Boolean = this.disabled;
       val var6: java.util.List = this.selectedOptions;
-      val var9: java.util.List = this.channelTypes;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("ChannelSelectComponent(type=");
-      var12.append(var1);
-      var12.append(", id=");
-      var12.append(var10);
-      var12.append(", state=");
-      var12.append(var11);
-      var12.append(", customId=");
-      var12.append(var8);
-      var12.append(", placeholder=");
-      var12.append(var7);
-      var12.append(", accessibilityLabel=");
-      var12.append(var5);
-      var12.append(", minValues=");
-      var12.append(var3);
-      var12.append(", maxValues=");
-      var12.append(var2);
-      var12.append(", disabled=");
-      var12.append(var4);
-      var12.append(", selectedOptions=");
-      var12.append(var6);
-      var12.append(", channelTypes=");
-      var12.append(var9);
-      var12.append(")");
-      return var12.toString();
+      val var5: java.util.List = this.channelTypes;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("ChannelSelectComponent(type=");
+      var10.append(var2);
+      var10.append(", id=");
+      var10.append(var9);
+      var10.append(", state=");
+      var10.append(var11);
+      var10.append(", customId=");
+      var10.append(var7);
+      var10.append(", placeholder=");
+      var10.append(var8);
+      var10.append(", accessibilityLabel=");
+      var10.append(var12);
+      var10.append(", minValues=");
+      var10.append(var3);
+      var10.append(", maxValues=");
+      var10.append(var1);
+      var10.append(", disabled=");
+      var10.append(var4);
+      var10.append(", selectedOptions=");
+      var10.append(var6);
+      var10.append(", channelTypes=");
+      var10.append(var5);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

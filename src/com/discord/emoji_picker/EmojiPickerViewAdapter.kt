@@ -194,10 +194,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
    public open fun onBindViewHolder(holder: EmojiPickerViewHolder, position: Int) {
       kotlin.jvm.internal.q.h(var1, "holder");
       if (var1 is EmojiPickerViewHolder.Category) {
-         val var3: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
-         val var4: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var4, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
-         var3.onBindViewHolder(var4 as EmojiPickerItem.Category);
+         val var4: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
+         val var3: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
+         var4.onBindViewHolder(var3 as EmojiPickerItem.Category);
       } else if (var1 is EmojiPickerViewHolder.EmojiPlaceholder) {
          (var1 as EmojiPickerViewHolder.EmojiPlaceholder).onBindViewHolder(this.emojiSize, this.emojiMargin);
       } else if (var1 is EmojiPickerViewHolder.Emoji) {
@@ -208,10 +208,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
             var5 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
-         val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
-         val var9: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
-         var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
+         val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
+         val var6: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.q.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
+         var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
          val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
          val var7: EmojiPickerItem = this.getItem(var2);

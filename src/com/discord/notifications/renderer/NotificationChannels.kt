@@ -32,16 +32,16 @@ internal object NotificationChannels {
          var5 = false;
       }
 
-      var3 = var3.g(var5);
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("android.resource://");
+      val var8: NotificationChannelCompat.Builder = var3.g(var5);
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("android.resource://");
       val var7: java.lang.String = var1.getPackageName();
       val var6: StringBuilder = new StringBuilder();
       var6.append(var7);
       var6.append("/");
       var6.append(var4);
-      var8.append(var6.toString());
-      var3.h(Uri.parse(var8.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
+      var10.append(var6.toString());
+      var8.h(Uri.parse(var10.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
 
    private fun configureMediaChannel(legacyChannel: NotificationChannelCompat?, builder: Builder) {
@@ -88,9 +88,9 @@ internal object NotificationChannels {
                }
             }
 
-            val var11: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
-            val var9: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
-            var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
+            val var9: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
+            val var11: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
+            var10 = var9.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var11.defaultLabel(var5.getId())).a();
          }
 
          var6.add(var10);
@@ -320,21 +320,21 @@ internal object NotificationChannels {
       q.h(var1, "context");
       q.h(var2, "localizedCategoryNames");
       q.h(var3, "localizedGroupNames");
-      val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
+      val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var17: java.util.List = this.createNotificationChannelGroups(var1, var3);
-      val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
-      val var9: ArrayList = new ArrayList();
-      val var5: Int = var8.length;
+      val var9: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
+      val var8: ArrayList = new ArrayList();
+      val var6: Int = var9.length;
 
-      for (int var4 = 0; var4 < var5; var4++) {
-         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var6, var2, new h(var8[var4], var1));
+      for (int var4 = 0; var4 < var6; var4++) {
+         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var9[var4], var5, var2, new h(var9[var4], var1));
          if (var21 != null) {
-            var9.add(var21);
+            var8.add(var21);
          }
       }
 
       try {
-         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
+         NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var8);
       } catch (var13: Exception) {
          val var19: CrashReporting = CrashReporting.INSTANCE;
          val var20: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(s9.q.d(kotlin.collections.i.v(var17, 10)), 16));
@@ -417,12 +417,12 @@ internal object NotificationChannels {
                }
             }
 
-            val var8: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
-            val var17: java.lang.String = var8.b();
-            q.g(var17, "getId(...)");
-            if (kotlin.text.h.I(var17, "calls", false, 2, null)) {
-               q.e(var8);
-               var6.add(var8);
+            val var17: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
+            val var8: java.lang.String = var17.b();
+            q.g(var8, "getId(...)");
+            if (kotlin.text.h.I(var8, "calls", false, 2, null)) {
+               q.e(var17);
+               var6.add(var17);
             }
          }
       }

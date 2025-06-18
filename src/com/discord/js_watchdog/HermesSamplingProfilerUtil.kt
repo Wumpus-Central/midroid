@@ -10,27 +10,32 @@ public object HermesSamplingProfilerUtil {
       label18: {
          val var10: FileInputStream = new FileInputStream(var1);
 
-         var var2: ByteArray;
+         var var11: ByteArray;
          try {
-            var2 = b.c(var10);
+            var11 = b.c(var10);
          } catch (var5: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var5;
+            val var2: java.lang.Throwable = var5;
 
             try {
-               throw var3;
+               throw var2;
             } catch (var4: java.lang.Throwable) {
                c.a(var10, var5);
             }
          }
 
          c.a(var10, null);
-         return h.r(var2);
+         return h.r(var11);
       }
    }
 
    public fun findSampleTrace(cacheDir: File): String? {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.code.cfg.ExceptionRangeCFG.isCircular()" because "range" is null
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.graphToStatement(DomHelper.java:84)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:203)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.createStatement(DomHelper.java:27)
+      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:157)
       //
       // Bytecode:
       // 000: aload 1
@@ -39,9 +44,9 @@ public object HermesSamplingProfilerUtil {
       // 006: bipush 0
       // 007: istore 5
       // 009: bipush 0
-      // 00a: istore 4
-      // 00c: bipush 0
-      // 00d: istore 3
+      // 00a: istore 3
+      // 00b: bipush 0
+      // 00c: istore 4
       // 00e: bipush 0
       // 00f: istore 6
       // 011: aconst_null
@@ -108,7 +113,7 @@ public object HermesSamplingProfilerUtil {
       // 08d: astore 8
       // 08f: aload 9
       // 091: astore 1
-      // 092: goto 377
+      // 092: goto 375
       // 095: astore 10
       // 097: aload 9
       // 099: astore 8
@@ -159,7 +164,7 @@ public object HermesSamplingProfilerUtil {
       // 109: invokevirtual java/lang/Integer.intValue ()I
       // 10c: istore 2
       // 10d: goto 117
-      // 110: astore 10
+      // 110: astore 8
       // 112: goto 154
       // 115: bipush -1
       // 116: istore 2
@@ -199,10 +204,10 @@ public object HermesSamplingProfilerUtil {
       // 154: aload 9
       // 156: astore 1
       // 157: getstatic kotlin/Result.k Lkotlin/Result$a;
-      // 15a: astore 8
+      // 15a: astore 10
       // 15c: aload 9
       // 15e: astore 1
-      // 15f: aload 10
+      // 15f: aload 8
       // 161: invokestatic kotlin/c.a (Ljava/lang/Throwable;)Ljava/lang/Object;
       // 164: invokestatic kotlin/Result.b (Ljava/lang/Object;)Ljava/lang/Object;
       // 167: astore 8
@@ -387,21 +392,21 @@ public object HermesSamplingProfilerUtil {
       // 2e9: astore 1
       // 2ea: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
       // 2ed: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
-      // 2f0: astore 12
+      // 2f0: astore 10
       // 2f2: aload 9
       // 2f4: astore 1
       // 2f5: new kotlinx/serialization/json/JsonObject
-      // 2f8: astore 10
+      // 2f8: astore 12
       // 2fa: aload 9
       // 2fc: astore 1
-      // 2fd: aload 10
+      // 2fd: aload 12
       // 2ff: aload 8
       // 301: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 304: aload 9
       // 306: astore 1
       // 307: aload 11
-      // 309: aload 12
-      // 30b: aload 10
+      // 309: aload 10
+      // 30b: aload 12
       // 30d: invokevirtual kotlinx/serialization/json/Json.c (Lkb/h;Ljava/lang/Object;)Ljava/lang/String;
       // 310: astore 8
       // 312: iload 5
@@ -429,7 +434,7 @@ public object HermesSamplingProfilerUtil {
       // 33c: aconst_null
       // 33d: areturn
       // 33e: astore 1
-      // 33f: goto 377
+      // 33f: goto 375
       // 342: astore 10
       // 344: aconst_null
       // 345: astore 8
@@ -441,30 +446,30 @@ public object HermesSamplingProfilerUtil {
       // 350: bipush 2
       // 351: aconst_null
       // 352: invokestatic com/discord/crash_reporting/CrashReporting.captureException$default (Lcom/discord/crash_reporting/CrashReporting;Ljava/lang/Throwable;ZILjava/lang/Object;)V
-      // 355: iload 4
-      // 357: istore 2
-      // 358: aload 8
-      // 35a: ifnull 36b
-      // 35d: iload 4
-      // 35f: istore 2
-      // 360: aload 8
-      // 362: invokevirtual java/io/File.exists ()Z
-      // 365: bipush 1
-      // 366: if_icmpne 36b
-      // 369: bipush 1
-      // 36a: istore 2
-      // 36b: iload 2
-      // 36c: ifeq 375
-      // 36f: aload 8
-      // 371: invokevirtual java/io/File.delete ()Z
-      // 374: pop
-      // 375: aconst_null
-      // 376: areturn
-      // 377: iload 3
-      // 378: istore 2
-      // 379: aload 8
-      // 37b: ifnull 38b
-      // 37e: iload 3
+      // 355: iload 3
+      // 356: istore 2
+      // 357: aload 8
+      // 359: ifnull 369
+      // 35c: iload 3
+      // 35d: istore 2
+      // 35e: aload 8
+      // 360: invokevirtual java/io/File.exists ()Z
+      // 363: bipush 1
+      // 364: if_icmpne 369
+      // 367: bipush 1
+      // 368: istore 2
+      // 369: iload 2
+      // 36a: ifeq 373
+      // 36d: aload 8
+      // 36f: invokevirtual java/io/File.delete ()Z
+      // 372: pop
+      // 373: aconst_null
+      // 374: areturn
+      // 375: iload 4
+      // 377: istore 2
+      // 378: aload 8
+      // 37a: ifnull 38b
+      // 37d: iload 4
       // 37f: istore 2
       // 380: aload 8
       // 382: invokevirtual java/io/File.exists ()Z

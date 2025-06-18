@@ -21,6 +21,7 @@ import com.discord.media.engine.MediaEngineModule
 import com.discord.media.engine.video.VideoStreamViewManager
 import com.discord.portals.PortalsPackage
 import com.discord.qr.scanner.QRScannerViewManager
+import com.discord.react.FontPackage
 import com.discord.react_gesture_handler.DiscordGestureHandlerPackage
 import com.discord.reanimatedview.ReanimatedViewManager
 import com.discord.safearea.SafeAreaPackage
@@ -172,7 +173,6 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
-      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModuleWithViewManager(new a(), new h()));
       var1.add(var2.getViewManagers(new i(), new j(), new k(), new l(), new m(), new b(), new c(), new d(), new e(), new f()));
       var1.add(var2.getTurboPackageForModule("NativeAdsModule", <unrepresentable>.INSTANCE));
@@ -238,6 +238,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
          new EmojiPickerPackage(),
          new FastConnectPackage(),
          new FastestListPackage(),
+         new FontPackage(),
          new IntentsPackage(),
          new PortalsPackage(),
          new SafeAreaPackage(),
