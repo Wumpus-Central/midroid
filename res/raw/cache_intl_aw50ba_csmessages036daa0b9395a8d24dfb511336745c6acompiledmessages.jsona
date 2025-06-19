@@ -5823,6 +5823,7 @@
     ]
   ],
   "+14vvb": "Vymazat v",
+  "wfYTHR": "Vymazat vlastní stav",
   "mLs2c3": [
     "Vymazat za ",
     [
@@ -31449,22 +31450,6 @@
   ],
   "vwMEHR": "Fakturace je v tvojí zemi pozastavena",
   "pV8xeX": "Registruj se",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Prohlédni si naše zásady ochrany osobních údajů"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Vytvořit účet",
   "Hu9dUF": "Přidat zmínění uživatele/role k médiu",
   "3N7uLy": "Přidat samolepku",
   "WpFYAg": "Přidat text",
@@ -37037,37 +37022,6 @@
       ]
     ],
     ", kde najdeš přehled změn. Níže si pak můžeš přečíst celé zásady v platném znění."
-  ],
-  "F+0zT0": [
-    "Registrací vyjadřuješ svůj souhlas s ",
-    [
-      8,
-      "$link",
-      [
-        "Podmínkami využívání služeb"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " a ",
-    [
-      8,
-      "$link",
-      [
-        "Zásadami na ochranu osobních údajů"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " společnosti Discord."
   ],
   "KI+BSU": [
     "Kliknutím na tlačítko „Vytvořit účet“ souhlasíš s ",

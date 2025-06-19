@@ -5828,6 +5828,7 @@
     ]
   ],
   "+14vvb": "Wyczyść o",
+  "wfYTHR": "Usuń status własny",
   "mLs2c3": [
     "Wyczyść za ",
     [
@@ -31302,22 +31303,6 @@
   ],
   "vwMEHR": "Płatności wstrzymane w Twoim kraju",
   "pV8xeX": "Zarejestruj się",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Wyświetl naszą Politykę prywatności"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Załóż konto",
   "Hu9dUF": "Dodaj wzmiankę użytkownika/roli do multimediów",
   "3N7uLy": "Dodaj naklejkę do multimediów",
   "WpFYAg": "Dodaj tekst do multimediów",
@@ -36891,37 +36876,6 @@
       ]
     ],
     " aby zobaczyć podsumowanie tych zmian, oraz przeczytaj pełne polityki poniżej."
-  ],
-  "F+0zT0": [
-    "Rejestrując się, zgadzasz się na ",
-    [
-      8,
-      "$link",
-      [
-        "Warunki Korzystania z Usługi"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " oraz ",
-    [
-      8,
-      "$link",
-      [
-        "Politykę Prywatności"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " Discorda."
   ],
   "KI+BSU": [
     "Klikając „Utwórz konto”, wyrażasz zgodę na ",

@@ -5610,6 +5610,7 @@
     ]
   ],
   "+14vvb": "Temizle",
+  "wfYTHR": "Özel durumu temizle",
   "mLs2c3": [
     [
       6,
@@ -30378,22 +30379,6 @@
   ],
   "vwMEHR": "Bulunduğun ülke için faturalandırma durduruldu",
   "pV8xeX": "Kaydol",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Gizlilik Politikamıza göz at"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Bir hesap oluştur",
   "Hu9dUF": "Medyaya kullanıcı/rol bahsetmesi ekle",
   "3N7uLy": "Medyaya çıkartma ekle",
   "WpFYAg": "Medyaya metin ekle",
@@ -35856,37 +35841,6 @@
       ]
     ],
     " göz atabilir ve aşağıdan politikaların tamamını okuyabilirsin."
-  ],
-  "F+0zT0": [
-    "Kaydolarak Discord'un ",
-    [
-      8,
-      "$link",
-      [
-        "Hizmet Koşulları"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    "'nı ve ",
-    [
-      8,
-      "$link",
-      [
-        "Gizlilik Politikası"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "'nı kabul etmiş olursun."
   ],
   "KI+BSU": [
     "\"",

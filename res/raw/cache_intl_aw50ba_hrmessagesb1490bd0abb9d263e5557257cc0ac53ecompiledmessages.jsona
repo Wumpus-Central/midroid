@@ -5744,6 +5744,7 @@
     ]
   ],
   "+14vvb": "Obriši u",
+  "wfYTHR": "Obriši prilagođeni status",
   "mLs2c3": [
     "Obriši za ",
     [
@@ -31425,22 +31426,6 @@
   ],
   "vwMEHR": "Plaćanje u tvojoj državi je zaustavljeno",
   "pV8xeX": "Registriraj se",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Pogledaj naša Pravila zaštite osobnih podataka"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Napravi račun",
   "Hu9dUF": "U medije dodaj spominjanje korisnika/uloga",
   "3N7uLy": "Dodaj naljepnicu u medij",
   "WpFYAg": "Dodaj tekst u medij",
@@ -37036,37 +37021,6 @@
       ]
     ],
     " na kojem se nalazi nešto samo ukratko o tim novostima, a u nastavku donosimo cjelovite tekstove pravila."
-  ],
-  "F+0zT0": [
-    "Registracijom se slažeš s Discordovim ",
-    [
-      8,
-      "$link",
-      [
-        "Uvjetima pružanja usluge"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " i ",
-    [
-      8,
-      "$link",
-      [
-        "Pravilima o zaštiti osobnih podataka"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Klikneš li „Izradi račun”, izražavaš ujedno svoj pristanak na Discordove ",

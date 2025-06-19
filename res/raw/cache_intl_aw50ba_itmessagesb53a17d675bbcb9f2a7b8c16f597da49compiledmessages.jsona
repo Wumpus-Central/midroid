@@ -5631,6 +5631,7 @@
     ]
   ],
   "+14vvb": "Elimina alle ore",
+  "wfYTHR": "Cancella stato personalizzato",
   "mLs2c3": [
     "Svuota in ",
     [
@@ -30409,22 +30410,6 @@
   ],
   "vwMEHR": "La fatturazione non è al momento disponibile nel tuo paese",
   "pV8xeX": "Registrati",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Leggi la nostra Informativa sulla privacy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Crea un account",
   "3N7uLy": "Aggiungi adesivo a media",
   "WpFYAg": "Aggiungi testo a media",
   "ScPxn5": "4:3",
@@ -35884,37 +35869,6 @@
       ]
     ],
     " per un riepilogo di queste modifiche e leggi le norme complete qui di seguito."
-  ],
-  "F+0zT0": [
-    "Registrandoti accetti i ",
-    [
-      8,
-      "$link",
-      [
-        "Termini di Servizio"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " e l'",
-    [
-      8,
-      "$link",
-      [
-        "Informativa sulla privacy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " di Discord."
   ],
   "KI+BSU": [
     "Cliccando su ",

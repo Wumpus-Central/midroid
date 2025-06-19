@@ -5648,6 +5648,7 @@
     ]
   ],
   "+14vvb": "Xóa vào lúc",
+  "wfYTHR": "Xóa trạng thái tùy chỉnh",
   "mLs2c3": [
     "Xóa sau ",
     [
@@ -30418,22 +30419,6 @@
   ],
   "vwMEHR": "Đã dừng thanh toán ở quốc gia của bạn",
   "pV8xeX": "Đăng ký",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Xem Chính Sách Quyền Riêng Tư của Discord"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Tạo tài khoản",
   "Hu9dUF": "Thêm một đề cập người dùng/vai trò vào đa phương tiện",
   "3N7uLy": "Thêm sticker vào tệp tin đa phương tiện",
   "WpFYAg": "Thêm văn bản vào tệp tin đa phương tiện",
@@ -35931,37 +35916,6 @@
       ]
     ],
     " của chúng tôi để đọc tóm tắt các thay đổi và xem chính sách đầy đủ ở bên dưới."
-  ],
-  "F+0zT0": [
-    "Khi nhấn nút đăng ký, nghĩa là bạn đã đồng ý với ",
-    [
-      8,
-      "$link",
-      [
-        "Điều Khoản Dịch vụ"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " và ",
-    [
-      8,
-      "$link",
-      [
-        "Chính Sách Bảo Mật"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " của Discord."
   ],
   "KI+BSU": [
     "Khi nhấn vào “Tạo tài khoản”, bạn đồng ý với ",

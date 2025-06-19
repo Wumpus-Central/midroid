@@ -5827,6 +5827,7 @@
     ]
   ],
   "+14vvb": "Išvalyti",
+  "wfYTHR": "Šalinti tinkintą būseną",
   "mLs2c3": [
     "Išvalyti po ",
     [
@@ -31421,22 +31422,6 @@
   ],
   "vwMEHR": "Atsiskaitymas tavo šalyje pristabdytas",
   "pV8xeX": "Užsiregistruoti",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Peržiūrėk Discord privatumo politiką"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Sukurti paskyrą",
   "Hu9dUF": "Papildyk mediją naudotojo ar vaidmens paminėjimu",
   "3N7uLy": "Pridėti medijai lipduką",
   "WpFYAg": "Pridėti medijai tekstą",
@@ -36977,37 +36962,6 @@
       ]
     ],
     ", o išsamias politikas gali perskaityti toliau."
-  ],
-  "F+0zT0": [
-    "Registruodamasis (-i) sutinki su Discord ",
-    [
-      8,
-      "$link",
-      [
-        "Paslaugų teikimo sąlygomis"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " ir ",
-    [
-      8,
-      "$link",
-      [
-        "Privatumo politika"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Spausdamas (-a) „Sukurti paskyrą“ sutinki su Discord ",

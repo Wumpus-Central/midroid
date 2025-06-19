@@ -5637,6 +5637,7 @@
     ]
   ],
   "+14vvb": "Ryd kl.",
+  "wfYTHR": "Ryd brugerdefineret status",
   "mLs2c3": [
     "Ryd om ",
     [
@@ -30481,22 +30482,6 @@
   ],
   "vwMEHR": "Fakturering er midlertidigt sat på pause i dit land",
   "pV8xeX": "Registrer",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Se vores Fortrolighedspolitik"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Opret en konto",
   "Hu9dUF": "Føj en bruger-/rolleomtale til mediet",
   "3N7uLy": "Tilføj sticker til medier",
   "WpFYAg": "Tilføj tekst til medier",
@@ -35986,37 +35971,6 @@
       ]
     ],
     " kan du se en opsummering af ændringerne, og de fuldstændige politikker kan du læse nedenfor."
-  ],
-  "F+0zT0": [
-    "Ved at registrere dig accepterer du Discords ",
-    [
-      8,
-      "$link",
-      [
-        "Servicevilkår"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " og ",
-    [
-      8,
-      "$link",
-      [
-        "Fortrolighedspolitik"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Ved at klikke på ",

@@ -5629,6 +5629,7 @@
     ]
   ],
   "+14vvb": "Tyhjennä kaikki",
+  "wfYTHR": "Tyhjennä mukautettu tila",
   "mLs2c3": [
     "Tyhjennetään ",
     [
@@ -30404,22 +30405,6 @@
   ],
   "vwMEHR": "Laskutus on keskeytetty maassasi",
   "pV8xeX": "Rekisteröidy",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Katso tietosuojakäytäntömme"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Luo tili",
   "Hu9dUF": "Lisää käyttäjä-/roolimaininta mediasisältöön",
   "3N7uLy": "Lisää tarra mediasisältöön",
   "WpFYAg": "Lisää tekstiä mediasisältöön",
@@ -35897,37 +35882,6 @@
       ]
     ],
     " on yhteenveto näistä muutoksista ja täydet käytännöt voit lukea alta."
-  ],
-  "F+0zT0": [
-    "Rekisteröitymällä sitoudut noudattamaan Discordin ",
-    [
-      8,
-      "$link",
-      [
-        "palveluehtoja"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " ja ",
-    [
-      8,
-      "$link",
-      [
-        "tietosuojakäytäntöä"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Valitsemalla ”Luo tili” vahvistat, että hyväksyt Discordin ",

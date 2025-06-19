@@ -5634,6 +5634,7 @@
     ]
   ],
   "+14vvb": "Verdwijnt op",
+  "wfYTHR": "Gepersonaliseerde status wissen",
   "mLs2c3": [
     "Gewist over ",
     [
@@ -30388,22 +30389,6 @@
   ],
   "vwMEHR": "Facturatie is gepauzeerd in jouw land",
   "pV8xeX": "Registreren",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Lees ons Privacybeleid"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Maak een account",
   "Hu9dUF": "Een gebruiker-/rolvermelding toevoegen aan de media",
   "3N7uLy": "Sticker toevoegen aan media",
   "WpFYAg": "Tekst toevoegen aan media",
@@ -35894,37 +35879,6 @@
       ]
     ],
     " voor een overzicht van de wijzigingen. De volledige beleidslijnen staan hieronder."
-  ],
-  "F+0zT0": [
-    "Door te registreren, ga je akkoord met de Discord's ",
-    [
-      8,
-      "$link",
-      [
-        "Servicevoorwaarden"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " en ",
-    [
-      8,
-      "$link",
-      [
-        "Privacy Policy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Door op 'Account aanmaken' te klikken, ga je akkoord met de ",

@@ -5614,6 +5614,7 @@
     ]
   ],
   "+14vvb": "Rensa kl.",
+  "wfYTHR": "Rensa anpassad status",
   "mLs2c3": [
     "Rensa om ",
     [
@@ -30304,22 +30305,6 @@
   ],
   "vwMEHR": "Fakturering är uppskjuten i ditt land",
   "pV8xeX": "Registrera",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Öppna vår sekretesspolicy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Skapa ett konto",
   "Hu9dUF": "Addera en användare/rollomnämning till media",
   "3N7uLy": "Lägg till dekal på objektet",
   "WpFYAg": "Lägg till text på objektet",
@@ -35777,37 +35762,6 @@
       ]
     ],
     " kan du läsa en sammanfattning av förändringarna, och nedan kan du läsa våra policyer i sin helhet."
-  ],
-  "F+0zT0": [
-    "Genom att registrera dig samtycker du till Discords ",
-    [
-      8,
-      "$link",
-      [
-        "användarvillkor"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " och ",
-    [
-      8,
-      "$link",
-      [
-        "sekretesspolicy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Genom att klicka på ”Skapa konto” godkänner du Discords ",

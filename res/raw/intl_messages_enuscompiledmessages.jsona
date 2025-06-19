@@ -5695,6 +5695,7 @@
     ]
   ],
   "+14vvb": "Clear at",
+  "wfYTHR": "Clear custom status",
   "mLs2c3": [
     "Clear in ",
     [
@@ -31072,23 +31073,7 @@
   ],
   "vwMEHR": "Billing is paused in your country",
   "pV8xeX": "Register",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "View our Privacy Policy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
   "PTHakp": "Create a password",
-  "wC4TlZ": "Create an account",
   "JumOYm": "Create a username",
   "Hu9dUF": "Add a user/role mention to the media",
   "3N7uLy": "Add sticker to media",
@@ -36682,37 +36667,6 @@
       ]
     ],
     " for a summary of these changes, and read the full policies below."
-  ],
-  "F+0zT0": [
-    "By registering, you agree to Discord's ",
-    [
-      8,
-      "$link",
-      [
-        "Terms of Service"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " and ",
-    [
-      8,
-      "$link",
-      [
-        "Privacy Policy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "By clicking “Create Account,” you agree to Discord's ",

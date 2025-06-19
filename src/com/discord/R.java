@@ -374,6 +374,7 @@ public final class R {
       public static int images_auth_backgroundsplashmobile;
       public static int images_auth_imgauthqrcodeoverlay;
       public static int images_avatar_placeholder;
+      public static int images_avatar_placeholder_non_transparent;
       public static int images_channel_following_channelfollowingbackdropdark;
       public static int images_channel_following_channelfollowingbackdroplight;
       public static int images_channel_following_dark_channel_following_success_1;

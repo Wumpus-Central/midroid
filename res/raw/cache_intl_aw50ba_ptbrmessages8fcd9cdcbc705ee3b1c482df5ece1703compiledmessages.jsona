@@ -5624,6 +5624,7 @@
     ]
   ],
   "+14vvb": "Limpar às",
+  "wfYTHR": "Limpar status personalizado",
   "mLs2c3": [
     "Limpar em ",
     [
@@ -30400,22 +30401,6 @@
   ],
   "vwMEHR": "A cobrança está em pausa no seu país",
   "pV8xeX": "Registre-se",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Leia nossa política de privacidade"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Criar uma conta",
   "Hu9dUF": "Adicione uma menção a usuário/cargo à mídia",
   "3N7uLy": "Adicionar figurinha à mídia",
   "WpFYAg": "Adicionar texto à mídia",
@@ -35904,37 +35889,6 @@
       ]
     ],
     " para ver um resumo das alterações, e leia as políticas completas abaixo."
-  ],
-  "F+0zT0": [
-    "Ao se registrar, você concorda com os ",
-    [
-      8,
-      "$link",
-      [
-        "termos de serviço"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " e a ",
-    [
-      8,
-      "$link",
-      [
-        "política de privacidade"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " do Discord."
   ],
   "KI+BSU": [
     "Ao clicar em “Criar conta”, você concorda com os ",

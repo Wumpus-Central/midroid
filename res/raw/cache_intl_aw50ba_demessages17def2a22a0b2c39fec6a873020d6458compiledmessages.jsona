@@ -5621,6 +5621,7 @@
   "2p9FMz": "Personalisierten Status ändern",
   "E45wvL": "Löschen nach",
   "+14vvb": "Löschen um",
+  "wfYTHR": "Personalisierten Status löschen",
   "mLs2c3": [
     "In ",
     [
@@ -30600,22 +30601,6 @@
   ],
   "vwMEHR": "Abrechnungen pausieren in deinem Land",
   "pV8xeX": "Registrieren",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Lies unsere Datenschutzerklärung"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Account erstellen",
   "Hu9dUF": "Füge den Medien eine Nutzer-/Rollenerwähnung hinzu",
   "3N7uLy": "Sticker zu Medien hinzufügen",
   "WpFYAg": "Text zu Medien hinzufügen",
@@ -36021,37 +36006,6 @@
       ]
     ],
     " erhaltet ihr eine Zusammenfassung dieser Änderungen und weiter unten könnt ihr die Richtlinien in Gänze lesen."
-  ],
-  "F+0zT0": [
-    "Mit deiner Registrierung stimmst du den ",
-    [
-      8,
-      "$link",
-      [
-        "Nutzungsbedingungen"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " und der ",
-    [
-      8,
-      "$link",
-      [
-        "Datenschutzerklärung"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " von Discord zu."
   ],
   "KI+BSU": [
     "Durch Klicken auf „Account erstellen“ stimmst du den ",

@@ -5632,6 +5632,7 @@
     ]
   ],
   "+14vvb": "Effacer à",
+  "wfYTHR": "Effacer le statut personnalisé",
   "mLs2c3": [
     "Supprimer dans ",
     [
@@ -30428,22 +30429,6 @@
   ],
   "vwMEHR": "Facturation suspendue dans ton pays",
   "pV8xeX": "S'inscrire",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Voir notre Politique de Confidentialité"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Créer un compte",
   "Hu9dUF": "Ajoute une mention d'utilisateur/de rôle aux médias",
   "3N7uLy": "Ajouter un autocollant au média",
   "WpFYAg": "Ajouter du texte au média",
@@ -35930,37 +35915,6 @@
       ]
     ],
     " (en anglais uniquement) pour un récapitulatif de ces changements, ou bien lis les textes complets ci-dessous."
-  ],
-  "F+0zT0": [
-    "En t'inscrivant, tu acceptes les ",
-    [
-      8,
-      "$link",
-      [
-        "Conditions d'Utilisation"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " et la ",
-    [
-      8,
-      "$link",
-      [
-        "Politique de Confidentialité"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " de Discord."
   ],
   "KI+BSU": [
     "En cliquant sur « Créer un compte », tu confirmes avoir accepté les ",

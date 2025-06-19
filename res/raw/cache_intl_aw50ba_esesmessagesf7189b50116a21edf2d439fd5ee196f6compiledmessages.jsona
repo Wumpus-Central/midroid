@@ -5627,6 +5627,7 @@
   "2p9FMz": "Cambiar estado personalizado",
   "E45wvL": "Borrar después de",
   "+14vvb": "Borrar a la(s)",
+  "wfYTHR": "Borrar estado personalizado",
   "mLs2c3": [
     "Borrar en ",
     [
@@ -30438,22 +30439,6 @@
   ],
   "vwMEHR": "La facturación está pausada en tu país",
   "pV8xeX": "Registrarse",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Nuestra Política de privacidad"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Crear una cuenta",
   "Hu9dUF": "Añadir una mención de usuario/rol al contenido multimedia",
   "3N7uLy": "Añadir sticker al contenido multimedia",
   "WpFYAg": "Añadir texto al contenido multimedia",
@@ -35907,37 +35892,6 @@
       ]
     ],
     ". A continuación tienes las Políticas completas."
-  ],
-  "F+0zT0": [
-    "Al registrarte, aceptas las ",
-    [
-      8,
-      "$link",
-      [
-        "Condiciones del Servicio"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " y la ",
-    [
-      8,
-      "$link",
-      [
-        "Política de Privacidad"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " de Discord."
   ],
   "KI+BSU": [
     "Al hacer clic en ",

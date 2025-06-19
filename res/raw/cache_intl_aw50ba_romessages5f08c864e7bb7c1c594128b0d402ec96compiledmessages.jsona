@@ -5605,6 +5605,7 @@
     ]
   ],
   "+14vvb": "Șterge la",
+  "wfYTHR": "Elimină statusul personalizat",
   "mLs2c3": [
     "Șterge peste ",
     [
@@ -30343,22 +30344,6 @@
   ],
   "vwMEHR": "Facturarea este oprită temporar în țara ta",
   "pV8xeX": "Înregistrează-te",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Vezi Politica noastră de confidențialitate"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Creează un cont",
   "Hu9dUF": "Adaugă o menționare de utilizator/rol la fișierele media",
   "3N7uLy": "Adaugă stickere pe fișierul media",
   "WpFYAg": "Adaugă text pe fișierul media",
@@ -35833,37 +35818,6 @@
       ]
     ],
     " pentru a vedea un rezumat al schimbărilor și, mai jos, citește politicile în întregime."
-  ],
-  "F+0zT0": [
-    "Înregistrându-te, ești de acord cu ",
-    [
-      8,
-      "$link",
-      [
-        "Condițiile de prestare a serviciilor"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " și ",
-    [
-      8,
-      "$link",
-      [
-        "Politica de confidențialitate"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    " Discord."
   ],
   "KI+BSU": [
     "Dând clic pe „Creează cont”, ești de acord cu ",

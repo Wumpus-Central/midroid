@@ -5613,6 +5613,7 @@
     ]
   ],
   "+14vvb": "Tømmes",
+  "wfYTHR": "Fjern egendefinert status",
   "mLs2c3": [
     "Tøm om ",
     [
@@ -30301,22 +30302,6 @@
   ],
   "vwMEHR": "Fakturering er satt på pause i landet ditt",
   "pV8xeX": "Registrer deg",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Les personvernerklæringen vår"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Opprett en konto",
   "Hu9dUF": "Legg til en bruker/rolle for mediet",
   "3N7uLy": "Legg til klistremerke på medieinnhold",
   "WpFYAg": "Legg til tekst på medieinnhold",
@@ -35794,37 +35779,6 @@
       ]
     ],
     " for å se en oppsummering av endringene. Nedenfor kan du lese de fullstendige erklæringene."
-  ],
-  "F+0zT0": [
-    "Ved å registrere deg godtar du Discords ",
-    [
-      8,
-      "$link",
-      [
-        "bruksvilkår"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " og ",
-    [
-      8,
-      "$link",
-      [
-        "personvernerklæring"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Ved å klikke på «Opprett konto» godtar du Discords ",

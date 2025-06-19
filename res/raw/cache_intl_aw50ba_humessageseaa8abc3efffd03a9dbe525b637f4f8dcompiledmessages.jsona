@@ -5635,6 +5635,7 @@
     ]
   ],
   "+14vvb": "Törlés ekkor:",
+  "wfYTHR": "Egyéni állapot eltávolítása",
   "mLs2c3": [
     "Törlés ",
     [
@@ -30319,22 +30320,6 @@
   ],
   "vwMEHR": "Országodban szünetel a számlázás",
   "pV8xeX": "Regisztráció",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "Adatvédelmi szabályzatunk megtekintése"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
-  "wC4TlZ": "Fiók létrehozása",
   "Hu9dUF": "Felhasználó-/rangemlítés hozzáadása a médiatartalomhoz",
   "3N7uLy": "Matrica hozzáadása a médiatartalomhoz",
   "WpFYAg": "Szöveg hozzáadása a médiatartalomhoz",
@@ -35806,37 +35791,6 @@
       ]
     ],
     ", amely összefoglalja ezeket a változásokat, és olvasd el a szabályzatok teljes szövegét alább."
-  ],
-  "F+0zT0": [
-    "A regisztrációval elfogadod a Discord ",
-    [
-      8,
-      "$link",
-      [
-        "Szolgáltatási feltételeket"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " és az ",
-    [
-      8,
-      "$link",
-      [
-        "Adatvédelmi Szabályzatot"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
   ],
   "KI+BSU": [
     "Ha a „Fiók létrehozása” gombra kattintasz, azzal elfogadod a Discord ",
