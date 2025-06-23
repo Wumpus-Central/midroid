@@ -28,8 +28,8 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.q
-import t9.j
-import t9.m
+import r9.j
+import r9.m
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var maxItems: Int
@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               q.g(var15, "getContext(...)");
-               val var10: ReactAsset = ReactAsset.DefaultAvatar0;
                val var9: Context = this.getContext();
                q.g(var9, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var10.getUri(var9));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var10: Context = this.getContext();
+               q.g(var10, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
             }
 
             val var21: Context = this.getContext();
@@ -143,12 +143,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var18: Context = this.getContext();
          q.g(var18, "getContext(...)");
-         val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
          val var11: LayoutParams = new LayoutParams(-2, -1);
          var11.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var20, var11);
+         this.addView(var19, var11);
       }
    }
 

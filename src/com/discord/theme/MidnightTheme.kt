@@ -52,7 +52,7 @@ import l2.w2
 import l2.x2
 import l2.y2
 import l2.z2
-import t9.j
+import r9.j
 
 internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int

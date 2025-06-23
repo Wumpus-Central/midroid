@@ -1,6 +1,5 @@
 package com.discord.analytics
 
-import A9.b
 import com.android.installreferrer.api.InstallReferrerClient
 import f1.a
 import kotlin.coroutines.Continuation
@@ -8,6 +7,7 @@ import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import y9.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {

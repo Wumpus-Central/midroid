@@ -1,11 +1,10 @@
 package com.discord.sounds.utils
 
-import A9.b
+import ab.K
+import ab.d0
+import ab.f
 import android.content.Context
 import android.net.Uri
-import cb.K
-import cb.d0
-import cb.f
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
@@ -22,7 +21,8 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
-import x9.a
+import v9.a
+import y9.b
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    q.h(var0, "<this>");
@@ -182,8 +182,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         c.b(var5);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              val var6: d0 = K.c();
-                              var5 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
+                              var5 = K.c();
+                              val var6: Function2 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
                                  final DownloadState $downloadState;
                                  final int $key;
                                  final SoundManager $soundManager;
@@ -229,7 +229,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
+                              var12 = f.g((CoroutineContext)var5, var6, (Continuation)var13);
                            } catch (var8: Exception) {
                               val var11: d0 = K.c();
                               var5 = new Function2(var8, null) {

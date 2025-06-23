@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
+import kb.f
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f(with = RowSerializer::class)
 public sealed class Row protected constructor() {

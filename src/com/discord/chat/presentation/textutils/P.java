@@ -1,15 +1,15 @@
 package com.discord.chat.presentation.textutils;
 
-import android.view.View;
 import com.discord.chat.bridge.contentnode.ContentNode;
-import kotlin.jvm.functions.Function1;
+import com.facebook.drawee.span.DraweeSpanStringBuilder;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class P implements Function1 {
-   public final RenderContext j;
-   public final ContentNode k;
+public final class P implements Function2 {
+   public final ContentNode j;
+   public final DraweeSpanStringBuilder k;
 
-   public final Object invoke(Object var1) {
-      return TextUtilsKt.C(this.j, this.k, (View)var1);
+   public final Object invoke(Object var1, Object var2) {
+      return TextUtilsKt.E(this.j, this.k, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

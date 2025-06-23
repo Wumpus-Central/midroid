@@ -27,13 +27,13 @@ public object IconUrlUtils {
    }
 
    public fun getCustomEmojiUrl(emojiId: Long, animate: Boolean, size: Int? = null): String {
-      val var7: MediaProxy = MediaProxy.INSTANCE;
+      val var5: MediaProxy = MediaProxy.INSTANCE;
       val var6: java.lang.String = Hosts.INSTANCE.getCDN();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append(var6);
-      var5.append("/emojis/");
-      var5.append(var1);
-      return var7.withSize(var5.toString(), var3, var4, null);
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var6);
+      var7.append("/emojis/");
+      var7.append(var1);
+      return var5.withSize(var7.toString(), var3, var4, null);
    }
 
    public fun getForChannel(context: Context, id: ChannelId?, icon: String?, isGroupDM: Boolean, size: Int? = ...): String {
@@ -43,35 +43,35 @@ public object IconUrlUtils {
       } else if (var3 != null && var3.length() != 0) {
          label34:
          try {
-            val var12: a = Result.k;
-            val var7: MediaProxy = MediaProxy.INSTANCE;
-            val var13: java.lang.String = Hosts.INSTANCE.getCDN();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append(var13);
-            var17.append("/channel-icons/");
-            var17.append(var2);
-            var17.append("/");
-            var17.append(var3);
-            var11 = Result.b(var7.withSize(var17.toString(), false, var5, var3));
+            val var11: a = Result.k;
+            val var17: MediaProxy = MediaProxy.INSTANCE;
+            val var7: java.lang.String = Hosts.INSTANCE.getCDN();
+            val var12: StringBuilder = new StringBuilder();
+            var12.append(var7);
+            var12.append("/channel-icons/");
+            var12.append(var2);
+            var12.append("/");
+            var12.append(var3);
+            var10 = Result.b(var17.withSize(var12.toString(), false, var5, var3));
          } catch (var8: java.lang.Throwable) {
-            val var10: a = Result.k;
-            var11 = Result.b(c.a(var8));
+            val var15: a = Result.k;
+            var10 = Result.b(c.a(var8));
             break label34;
          }
 
-         if (Result.e(var11) != null) {
-            val var14: java.lang.String = Hosts.INSTANCE.getAPI();
-            val var16: StringBuilder = new StringBuilder();
-            var16.append(var14);
-            var16.append("/channels/");
-            var16.append(var2);
-            var16.append("/icons/");
-            var16.append(var3);
-            var16.append(".jpg");
-            var11 = var16.toString();
+         if (Result.e(var10) != null) {
+            val var16: java.lang.String = Hosts.INSTANCE.getAPI();
+            val var13: StringBuilder = new StringBuilder();
+            var13.append(var16);
+            var13.append("/channels/");
+            var13.append(var2);
+            var13.append("/icons/");
+            var13.append(var3);
+            var13.append(".jpg");
+            var10 = var13.toString();
          }
 
-         var3 = var11 as java.lang.String;
+         var3 = var10 as java.lang.String;
       } else {
          var3 = "";
          if (var4) {
@@ -152,16 +152,16 @@ public object IconUrlUtils {
 
    public fun getForGuildMember(guildMemberAvatar: String?, guildId: GuildId?, userId: UserId?, sizePx: Int? = ..., animated: Boolean = ...): String {
       if (var1 != null && !h.c0(var1) && var2 != null && GuildId.isValid-impl(var2.unbox-impl()) && var3 != null && UserId.isValid-impl(var3.unbox-impl())) {
-         val var6: java.lang.String = Hosts.INSTANCE.getCDN();
-         val var7: StringBuilder = new StringBuilder();
-         var7.append(var6);
-         var7.append("/guilds/");
-         var7.append(var2);
-         var7.append("/users/");
-         var7.append(var3);
-         var7.append("/avatars/");
-         var7.append(var1);
-         return MediaProxy.INSTANCE.withSize(var7.toString(), var5, var4, var1);
+         val var7: java.lang.String = Hosts.INSTANCE.getCDN();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var7);
+         var6.append("/guilds/");
+         var6.append(var2);
+         var6.append("/users/");
+         var6.append(var3);
+         var6.append("/avatars/");
+         var6.append(var1);
+         return MediaProxy.INSTANCE.withSize(var6.toString(), var5, var4, var1);
       } else {
          return "";
       }

@@ -10,9 +10,9 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import qb.g
-import t9.s
-import u9.q
+import ob.g
+import r9.s
+import s9.q
 
 internal object IdentifyPayload {
    private fun JsonObject.put(path: List<String>, value: JsonElement?): JsonObject {
@@ -98,9 +98,9 @@ internal object IdentifyPayload {
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var6 = var14[var15];
-            val var23: IdentifyPayload = INSTANCE;
-            var13 = INSTANCE.put(var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}), var23.toJson((NonGuildVersion)var6));
+            val var23: NonGuildVersion = var14[var15];
+            var6 = INSTANCE;
+            var13 = INSTANCE.put(var13, i.n(new java.lang.String[]{"d", "client_state", var23.getId()}), ((IdentifyPayload)var6).toJson(var23));
          }
 
          return var13.toString();

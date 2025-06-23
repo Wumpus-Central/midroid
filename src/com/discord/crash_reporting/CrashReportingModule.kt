@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReadableMap
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import t9.s
+import r9.s
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -75,10 +75,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
       q.h(var1, "callback");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
+      val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
    }
 
    public open fun getName(): String {
@@ -88,10 +88,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       q.h(var1, "callback");
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod

@@ -4,7 +4,7 @@ import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlin.jvm.internal.q
-import t9.j
+import r9.j
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    private final val startTime: Long

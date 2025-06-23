@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
 import kotlin.jvm.internal.q
-import t9.j
+import r9.j
 import x6.f
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = new c()) : OnAttachStateChangeListener {

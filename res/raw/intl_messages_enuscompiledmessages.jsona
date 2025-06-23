@@ -203,14 +203,6 @@
   "0PbE/P": "Reduce the saturation of colors within the application, for those with color sensitivities. This does not affect the saturation of images, videos, role colors or other user-provided content by default.",
   "5PWWCQ": "Saturation",
   "i19n5O": "Zoom level",
-  "zR3S9/": [
-    "Zoom level (",
-    [
-      1,
-      "value"
-    ],
-    ")"
-  ],
   "ldCE/v": "Account",
   "6eNTWV": "You cannot use it while it's disabled.",
   "j3rC+f": "Account Disabled",
@@ -1399,6 +1391,13 @@
       "applicationName"
     ],
     " is also a Connected Account. Disconnecting will also remove it from Connected Accounts."
+  ],
+  "j4B7ER": [
+    [
+      1,
+      "applicationName"
+    ],
+    " is also a publisher that connects multiple games under a single account experience."
   ],
   "IlF6IS": [
     [
@@ -5696,6 +5695,7 @@
     ]
   ],
   "+14vvb": "Clear at",
+  "wfYTHR": "Clear custom status",
   "mLs2c3": [
     "Clear in ",
     [
@@ -8281,6 +8281,7 @@
     ],
     "MB"
   ],
+  "M6qV8v": "50MB",
   "yMOW8P": "100MB",
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
@@ -9271,6 +9272,13 @@
     "."
   ],
   "Obre8v": "Nitro Credit",
+  "Cz1G9/": [
+    [
+      1,
+      "days"
+    ],
+    "-day"
+  ],
   "xQ3zuL": [
     "Nitro Credits end in ",
     [
@@ -9595,6 +9603,13 @@
       "cardinal"
     ]
   ],
+  "J9Lu4u": [
+    [
+      1,
+      "hours"
+    ],
+    "-hour"
+  ],
   "bg3jBg": [
     [
       8,
@@ -9609,6 +9624,13 @@
         ]
       ]
     ]
+  ],
+  "4SqnVF": [
+    [
+      1,
+      "time"
+    ],
+    " of Nitro"
   ],
   "3G0CTE": "Total Time Remaining",
   "+cGVV1": "Frequently Used",
@@ -31051,23 +31073,7 @@
   ],
   "vwMEHR": "Billing is paused in your country",
   "pV8xeX": "Register",
-  "PGffT0": [
-    [
-      8,
-      "$link",
-      [
-        "View our Privacy Policy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ]
-  ],
   "PTHakp": "Create a password",
-  "wC4TlZ": "Create an account",
   "JumOYm": "Create a username",
   "Hu9dUF": "Add a user/role mention to the media",
   "3N7uLy": "Add sticker to media",
@@ -32056,9 +32062,6 @@
   "D+qW0N": "Allows members to use commands from applications in these channels, including slash commands and context menu commands.",
   "ReG3gI": "Allows members to use commands from applications in this channel, including slash commands and context menu commands.",
   "pJrJ39": "Allows members to use commands from applications, including slash commands and context menu commands.",
-  "8eeEZm": "Use Clyde",
-  "d664Fx": "Allows members to interact with the Clyde AI bot.",
-  "Tx5TjI": "Allows members to interact with and customize the Clyde AI bot.",
   "BEqU5O": "Allows members to use Activities.",
   "maNzCA": "Allows members to use Activities in these channels.",
   "qinvMT": "Allows members to use Activities in this channel.",
@@ -34298,7 +34301,6 @@
   "VBnNJS": "Keep this free decoration with your gift purchase.",
   "iI74ho": "Send more than just good vibes this summer. Gift Nitro and get an exclusive Avatar Decoration that’s yours to keep.",
   "ydPofH": "Gift Nitro. Get a Sweet Reward.",
-  "lapGDw": "Offer ends June 20.",
   "ymgFZW": "Get this sweet, free decoration. Yours to keep with a gift purchase!",
   "Q158XV": "Keep this free decoration with a gift purchase!",
   "2Yp7dH": "You sent your first Super Reaction on mobile. Keep the hype coming, friend!",
@@ -36666,39 +36668,8 @@
     ],
     " for a summary of these changes, and read the full policies below."
   ],
-  "F+0zT0": [
-    "By registering, you agree to Discord's ",
-    [
-      8,
-      "$link",
-      [
-        "Terms of Service"
-      ],
-      [
-        [
-          1,
-          "termsURL"
-        ]
-      ]
-    ],
-    " and ",
-    [
-      8,
-      "$link",
-      [
-        "Privacy Policy"
-      ],
-      [
-        [
-          1,
-          "privacyURL"
-        ]
-      ]
-    ],
-    "."
-  ],
   "KI+BSU": [
-    "By clicking “Create account,” you agree to Discord's ",
+    "By clicking “Create Account,” you agree to Discord's ",
     [
       8,
       "$link",

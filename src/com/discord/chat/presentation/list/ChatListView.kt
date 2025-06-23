@@ -65,16 +65,16 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       this.chatListAdapter = var4;
       this.componentProvider = new ComponentProvider(var1, true);
       this.scroller = new Scroller(this);
-      val var6: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
-      this.linearLayoutManager = var6;
-      val var5: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
+      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
+      this.linearLayoutManager = var5;
+      val var6: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
          SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(30), false, 8, null
       );
-      this.verticalSpacingItemDecoration = var5;
+      this.verticalSpacingItemDecoration = var6;
       this.scrollStateObserver = new ChatScrollStateObserver(new m(this));
       this.isFirstLayout = true;
-      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var5);
-      this.setLayoutManager(var6);
+      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var6);
+      this.setLayoutManager(var5);
       this.setAdapter(var4);
       this.addScrollStateListener();
       this.configureRecycledViewPoolSizes();
@@ -123,15 +123,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureRecycledViewPoolSizes() {
-      var var4: Pair = t9.s.a(RegularMessageDelegate.class, 50);
-      val var3: Int = 25;
+      val var3: Pair = r9.s.a(RegularMessageDelegate.class, 50);
+      var var4: Int = 25;
 
-      for (Entry var5 : u9.q.l(new Pair[]{var4, t9.s.a(SystemMessageDelegate.class, var3), t9.s.a(SeparatorDelegate.class, var3)}).entrySet()) {
+      for (Entry var5 : s9.q.l(new Pair[]{var3, r9.s.a(SystemMessageDelegate.class, var4), r9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
          val var7: Class = var5.getKey() as Class;
          val var2: Int = (var5.getValue() as java.lang.Number).intValue();
          var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
          kotlin.jvm.internal.q.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var2);
+         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
       }
    }
 
@@ -142,15 +142,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var7: Any = var2.get(this);
-         val var3: CrashReporting = CrashReporting.INSTANCE;
-         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("About to crash because of ChatList, dumping update log:\n");
-         var4.append(var5);
-         var4.append("\n Recycler State: ");
-         var4.append(var7);
-         CrashReporting.addBreadcrumb$default(var3, var4.toString(), null, null, 6, null);
+         val var3: Any = var2.get(this);
+         val var4: CrashReporting = CrashReporting.INSTANCE;
+         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("About to crash because of ChatList, dumping update log:\n");
+         var5.append(var7);
+         var5.append("\n Recycler State: ");
+         var5.append(var3);
+         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -179,17 +179,17 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                }
 
                public final void invoke(boolean var1) {
-                  val var4: BooleanRef = this.$wasAtBottom;
-                  val var5: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
+                  val var5: BooleanRef = this.$wasAtBottom;
+                  val var4: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
                   var var2: Boolean = false;
-                  if (var5 != null) {
+                  if (var4 != null) {
                      var2 = false;
-                     if (var5.isAtBottom()) {
+                     if (var4.isAtBottom()) {
                         var2 = true;
                      }
                   }
 
-                  var4.j = var2;
+                  var5.j = var2;
                   if (this.$update.getAction() is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).stopWatching();
                      if (!var1) {
@@ -215,19 +215,19 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                      ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .updateFirstAndLastMessageVisibilityData(this.this$0);
-                     val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePosition();
                      val var6: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getFirstMessagePercentVisible();
-                     val var1: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
+                     val var2: Int = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePosition();
                      val var7: java.lang.Double = ChatListView.access$getScrollStateObserver$p(this.this$0)
                         .getChatListVisibilityCalculator$chat_release()
                         .getLastMessagePercentVisible();
-                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var2 >= 0 && var1 >= 0) {
+                     if (ChatListView.access$isFirstLayout$p(this.this$0) && var1 >= 0 && var2 >= 0) {
                         ChatListView.access$setFirstLayout$p(this.this$0, false);
                         val var3: Boolean = ChatListView.access$getLinearLayoutManager$p(this.this$0).getReverseLayout();
                         var var4: ChatEventHandler = null;
@@ -238,7 +238,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = null;
                            }
 
-                           var4.onFirstLayout(var1, var7, var2, var6);
+                           var4.onFirstLayout(var2, var7, var1, var6);
                         } else {
                            val var12: ChatEventHandler = ChatListView.access$getEventHandler$p(this.this$0);
                            if (var12 == null) {
@@ -247,7 +247,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                               var4 = var12;
                            }
 
-                           var4.onFirstLayout(var2, var6, var1, var7);
+                           var4.onFirstLayout(var1, var6, var2, var7);
                         }
                      }
                   }
@@ -282,7 +282,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                      }
                   } else if (var9 !is ChatListAction.Clear) {
                      if (var9 !is ChatListAction.Noop) {
-                        throw new t9.n();
+                        throw new r9.n();
                      }
 
                      ChatListView.access$getScrollStateObserver$p(this.this$0).startWatching(this.this$0, ChatScrollStateObserver.EmitMode.YES);
@@ -356,7 +356,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          kotlinx.coroutines.Job.a.a(this.updateSubscriptionJob, null, 1, null);
       }
 
-      this.updateSubscriptionJob = cb.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      this.updateSubscriptionJob = ab.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final ChatListView this$0;
 
@@ -374,7 +374,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = A9.b.e();
+            val var4: Any = y9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

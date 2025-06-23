@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.media
 
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class UnfurledMediaItem(url: String,
@@ -182,35 +182,35 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var3: java.lang.String = this.proxyUrl;
-      val var5: UnfurledMediaLoadingState = this.loadingState;
-      val var6: Int = this.height;
-      val var2: Int = this.width;
-      val var7: java.lang.String = this.contentType;
+      val var2: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyUrl;
+      val var4: UnfurledMediaLoadingState = this.loadingState;
+      val var5: Int = this.height;
+      val var3: Int = this.width;
+      val var11: java.lang.String = this.contentType;
       val var9: java.lang.String = this.placeholder;
-      val var8: Int = this.placeholderVersion;
-      val var11: ContentScanMetadata = this.contentScanMetadata;
+      val var6: Int = this.placeholderVersion;
+      val var7: ContentScanMetadata = this.contentScanMetadata;
       val var1: Boolean = this.srcIsAnimated;
       val var10: StringBuilder = new StringBuilder();
       var10.append("UnfurledMediaItem(url=");
-      var10.append(var4);
-      var10.append(", proxyUrl=");
-      var10.append(var3);
-      var10.append(", loadingState=");
-      var10.append(var5);
-      var10.append(", height=");
-      var10.append(var6);
-      var10.append(", width=");
       var10.append(var2);
+      var10.append(", proxyUrl=");
+      var10.append(var8);
+      var10.append(", loadingState=");
+      var10.append(var4);
+      var10.append(", height=");
+      var10.append(var5);
+      var10.append(", width=");
+      var10.append(var3);
       var10.append(", contentType=");
-      var10.append(var7);
+      var10.append(var11);
       var10.append(", placeholder=");
       var10.append(var9);
       var10.append(", placeholderVersion=");
-      var10.append(var8);
+      var10.append(var6);
       var10.append(", contentScanMetadata=");
-      var10.append(var11);
+      var10.append(var7);
       var10.append(", srcIsAnimated=");
       var10.append(var1);
       var10.append(")");

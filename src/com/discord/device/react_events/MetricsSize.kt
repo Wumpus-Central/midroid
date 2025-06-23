@@ -8,7 +8,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
 import kotlin.jvm.internal.q
-import t9.s
+import r9.s
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -63,13 +63,13 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
    }
 
    public override fun toString(): String {
-      val var2: Int = this.widthPixels;
-      val var1: Int = this.heightPixels;
+      val var1: Int = this.widthPixels;
+      val var2: Int = this.heightPixels;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MetricsSize(widthPixels=");
-      var3.append(var2);
-      var3.append(", heightPixels=");
       var3.append(var1);
+      var3.append(", heightPixels=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

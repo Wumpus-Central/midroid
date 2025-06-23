@@ -15,7 +15,7 @@ import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import u9.n
+import s9.n
 
 internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) : NativeDeviceAccessibilityModuleSpec {
    init {

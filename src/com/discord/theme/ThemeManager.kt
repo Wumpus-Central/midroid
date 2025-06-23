@@ -10,7 +10,7 @@ import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
 import kotlin.jvm.internal.q
-import t9.n
+import r9.n
 
 public object ThemeManager {
    private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
@@ -38,10 +38,10 @@ public object ThemeManager {
                   var7 = null;
                }
 
+               var3 = resourceTheme;
                if (resourceTheme == null) {
                   q.y("resourceTheme");
-               } else {
-                  var3 = resourceTheme;
+                  var3 = null;
                }
 
                var8 = new MidnightTheme(var7, var3);
@@ -82,10 +82,10 @@ public object ThemeManager {
             var11 = null;
          }
 
-         var3 = resourceTheme;
          if (resourceTheme == null) {
             q.y("resourceTheme");
-            var3 = null;
+         } else {
+            var3 = resourceTheme;
          }
 
          var8 = new DarkTheme(var11, var3);

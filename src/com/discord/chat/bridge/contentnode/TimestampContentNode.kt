@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -60,17 +60,17 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var3: java.lang.String = this.full;
+      val var5: java.lang.String = this.full;
       val var4: java.lang.String = this.formatted;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TimestampContentNode(timestamp=");
-      var5.append(var1);
-      var5.append(", full=");
-      var5.append(var3);
-      var5.append(", formatted=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TimestampContentNode(timestamp=");
+      var3.append(var1);
+      var3.append(", full=");
+      var3.append(var5);
+      var3.append(", formatted=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

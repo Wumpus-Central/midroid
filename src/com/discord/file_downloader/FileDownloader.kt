@@ -2,7 +2,7 @@ package com.discord.file_downloader
 
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
-import fb.e
+import db.e
 import java.io.File
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function2
@@ -13,7 +13,7 @@ import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
-import t9.j
+import r9.j
 
 public object FileDownloader {
    private final val defaultClient: OkHttpClient by j.a(new a())
@@ -38,7 +38,7 @@ public object FileDownloader {
       }).c();
    }
 
-   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = u9.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
+   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = s9.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
       q.h(var1, "fileUrl");
       q.h(var2, "headers");
       q.h(var3, "client");

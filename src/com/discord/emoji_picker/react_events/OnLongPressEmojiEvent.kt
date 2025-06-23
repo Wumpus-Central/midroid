@@ -2,9 +2,9 @@ package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 internal data class OnLongPressEmojiEvent(emojiName: String, emojiId: String? = null) : ReactEvent {
