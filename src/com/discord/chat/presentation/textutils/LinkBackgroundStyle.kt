@@ -72,14 +72,14 @@ public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = n
    }
 
    public override fun toString(): String {
-      val var4: Int = this.color;
-      val var2: Int = this.borderRadius;
+      val var2: Int = this.color;
+      val var4: Int = this.borderRadius;
       val var3: java.lang.Boolean = this.spaceAround;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LinkBackgroundStyle(color=");
-      var1.append(var4);
-      var1.append(", borderRadius=");
       var1.append(var2);
+      var1.append(", borderRadius=");
+      var1.append(var4);
       var1.append(", spaceAround=");
       var1.append(var3);
       var1.append(")");

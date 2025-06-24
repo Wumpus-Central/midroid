@@ -24956,22 +24956,6 @@
   "9g5UGx": "Yes, I'm sure",
   "9SNpzs": "Turn off personalization?",
   "dEYpSk": "Phone",
-  "kj8xiI": [
-    "This phone number is already associated with another account. Please ",
-    [
-      8,
-      "$link",
-      [
-        "troubleshoot here"
-      ],
-      [
-        [
-          1,
-          "phoneURL"
-        ]
-      ]
-    ]
-  ],
   "cCVXOT": "Failed to add phone number, please try again later",
   "0/ALaG": "We don’t recognize this location. We sent a confirmation code to the phone number connected to this account.",
   "w55Ocn": "Enter your confirmation code to verify it's you",
@@ -31340,15 +31324,6 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
-  "5b60go": "Resend Code",
-  "31Txs7": [
-    "Resend Code in ",
-    [
-      1,
-      "countdown"
-    ],
-    " seconds"
-  ],
   "WnX4Jy": "Resend Email",
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
@@ -38544,9 +38519,7 @@
   "LYIh7u": "What's your name?",
   "fbKwSk": "You can use emoji and special characters.",
   "jec90t": "Next, create an account",
-  "KtJgIy": "Password must be 8 or more characters.",
   "y7LSyc": "Only use letters, numbers, underscores, and periods.",
-  "w/XiOz": "You can change this at anytime.",
   "EJ26Oj": "This channel requires Push to Talk to voice chat. You will only be able to listen until you switch modes\nto Push to Talk from Voice Activity Detection.",
   "NYklho": "Push to Talk Required",
   "5XZKy8": "Custom Invite Link",

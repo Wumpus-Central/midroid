@@ -170,8 +170,8 @@ public data class Sticker(id: StickerId = ...,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = StickerId.hashCode-impl(this.id);
-      val var4: Int = this.name.hashCode();
+      val var4: Int = StickerId.hashCode-impl(this.id);
+      val var5: Int = this.name.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.packId == null) {
@@ -187,15 +187,15 @@ public data class Sticker(id: StickerId = ...,
          var2 = GuildId.hashCode-impl(this.guildId.unbox-impl());
       }
 
-      val var6: Int = this.description.hashCode();
-      val var9: Int = this.formatType.hashCode();
-      val var8: Int = this.tags.hashCode();
+      val var9: Int = this.description.hashCode();
+      val var8: Int = this.formatType.hashCode();
+      val var6: Int = this.tags.hashCode();
       val var7: Int = this.type.hashCode();
       if (this.available != null) {
          var3 = this.available.hashCode();
       }
 
-      return (((((((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var6) * 31 + var9) * 31 + var8) * 31 + var7) * 31 + var3;
+      return (((((((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var8) * 31 + var6) * 31 + var7) * 31 + var3;
    }
 
    public fun isAnimated(): Boolean {
@@ -212,34 +212,34 @@ public data class Sticker(id: StickerId = ...,
    public override fun toString(): String {
       val var5: java.lang.String = StickerId.toString-impl(this.id);
       val var6: java.lang.String = this.name;
-      val var4: java.lang.Long = this.packId;
-      val var7: GuildId = this.guildId;
-      val var2: java.lang.String = this.description;
-      val var8: StickerFormatType = this.formatType;
-      val var9: java.lang.String = this.tags;
-      val var1: StickerType = this.type;
-      val var10: java.lang.Boolean = this.available;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Sticker(id=");
-      var3.append(var5);
-      var3.append(", name=");
-      var3.append(var6);
-      var3.append(", packId=");
-      var3.append(var4);
-      var3.append(", guildId=");
-      var3.append(var7);
-      var3.append(", description=");
-      var3.append(var2);
-      var3.append(", formatType=");
-      var3.append(var8);
-      var3.append(", tags=");
-      var3.append(var9);
-      var3.append(", type=");
-      var3.append(var1);
-      var3.append(", available=");
-      var3.append(var10);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.Long = this.packId;
+      val var4: GuildId = this.guildId;
+      val var7: java.lang.String = this.description;
+      val var9: StickerFormatType = this.formatType;
+      val var8: java.lang.String = this.tags;
+      val var10: StickerType = this.type;
+      val var2: java.lang.Boolean = this.available;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("Sticker(id=");
+      var1.append(var5);
+      var1.append(", name=");
+      var1.append(var6);
+      var1.append(", packId=");
+      var1.append(var3);
+      var1.append(", guildId=");
+      var1.append(var4);
+      var1.append(", description=");
+      var1.append(var7);
+      var1.append(", formatType=");
+      var1.append(var9);
+      var1.append(", tags=");
+      var1.append(var8);
+      var1.append(", type=");
+      var1.append(var10);
+      var1.append(", available=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
@@ -287,10 +287,10 @@ public data class Sticker(id: StickerId = ...,
             var5 = var1.readLong();
          }
 
-         val var7: GuildId = var1.readParcelable(Sticker.class.getClassLoader()) as GuildId;
+         val var11: GuildId = var1.readParcelable(Sticker.class.getClassLoader()) as GuildId;
          val var8: java.lang.String = var1.readString();
-         val var10: StickerFormatType = StickerFormatType.valueOf(var1.readString());
-         val var11: java.lang.String = var1.readString();
+         val var7: StickerFormatType = StickerFormatType.valueOf(var1.readString());
+         val var10: java.lang.String = var1.readString();
          val var9: StickerType = StickerType.valueOf(var1.readString());
          val var12: java.lang.Boolean;
          if (var1.readInt() == 0) {
@@ -306,7 +306,7 @@ public data class Sticker(id: StickerId = ...,
             var12 = var2;
          }
 
-         return new Sticker(var3, var6, var5, var7, var8, var10, var11, var9, var12, null);
+         return new Sticker(var3, var6, var5, var11, var8, var7, var10, var9, var12, null);
       }
 
       fun newArray(var1: Int): Array<Sticker> {

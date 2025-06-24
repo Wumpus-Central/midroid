@@ -73,10 +73,10 @@ final class Palette {
 
       while (var12.hasNext()) {
          Swatch var11 = (Swatch)var12.next();
-         float var9 = var11.getHsl()[1];
-         float var8 = var11.getHsl()[2];
-         if (var9 >= var5 && var9 <= var6 && var8 >= var2 && var8 <= var3 && !this.isAlreadySelected(var11)) {
-            var8 = createComparisonValue(var9, var4, var8, var1, var11.getPopulation(), this.mHighestPopulation);
+         float var8 = var11.getHsl()[1];
+         float var9 = var11.getHsl()[2];
+         if (var8 >= var5 && var8 <= var6 && var9 >= var2 && var9 <= var3 && !this.isAlreadySelected(var11)) {
+            var8 = createComparisonValue(var8, var4, var9, var1, var11.getPopulation(), this.mHighestPopulation);
             if (var10 == null || var8 > var7) {
                var10 = var11;
                var7 = var8;
@@ -105,13 +105,13 @@ final class Palette {
    public static Palette generate(Bitmap var0, int var1) {
       checkBitmapParam(var0);
       checkNumberColorsParam(var1);
-      Bitmap var2 = scaleBitmapDown(var0);
-      ColorCutQuantizer var3 = ColorCutQuantizer.fromBitmap(var2, var1);
-      if (var2 != var0) {
-         var2.recycle();
+      Bitmap var3 = scaleBitmapDown(var0);
+      ColorCutQuantizer var2 = ColorCutQuantizer.fromBitmap(var3, var1);
+      if (var3 != var0) {
+         var3.recycle();
       }
 
-      return new Palette(var3.getQuantizedColors());
+      return new Palette(var2.getQuantizedColors());
    }
 
    private void generateEmptySwatches() {

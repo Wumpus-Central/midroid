@@ -79,7 +79,7 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             } else {
                c.b(var1);
-               var var6: java.lang.String = FileModule.access$getStorageDirs$p(this.this$0).get(this.$storageDir) as java.lang.String;
+               val var6: java.lang.String = FileModule.access$getStorageDirs$p(this.this$0).get(this.$storageDir) as java.lang.String;
                if (var6 != null && !h.c0(var6)) {
                   try {
                      var1 = new File(var6, this.$path);
@@ -142,15 +142,15 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
 
                   return Unit.a;
                } else {
-                  val var7: Promise = this.$promise;
-                  var6 = this.$storageDir;
+                  val var8: Promise = this.$promise;
+                  val var7: java.lang.String = this.$storageDir;
                   val var15: java.util.Set = FileModule.access$getStorageDirs$p(this.this$0).keySet();
-                  val var8: StringBuilder = new StringBuilder();
-                  var8.append("Unknown storage directory ");
-                  var8.append(var6);
-                  var8.append(". Supported storage directories: ");
-                  var8.append(var15);
-                  var7.reject("err", var8.toString());
+                  val var18: StringBuilder = new StringBuilder();
+                  var18.append("Unknown storage directory ");
+                  var18.append(var7);
+                  var18.append(". Supported storage directories: ");
+                  var18.append(var15);
+                  var8.reject("err", var18.toString());
                   return Unit.a;
                }
             }
@@ -266,13 +266,13 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                   c.b(var1);
                   var1 = this.L$0 as CoroutineScope;
                   val var4: FileModule = this.this$0;
-                  val var5: java.lang.String = this.$uri;
+                  val var6: java.lang.String = this.$uri;
                   var1 = this.$promise;
 
                   label66: {
                      try {
-                        val var6: a = Result.k;
-                        var73 = FileModule.access$getReactApplicationContext(var4).getContentResolver().openFileDescriptor(Uri.parse(var5), "r");
+                        val var5: a = Result.k;
+                        var74 = FileModule.access$getReactApplicationContext(var4).getContentResolver().openFileDescriptor(Uri.parse(var6), "r");
                      } catch (var13: java.lang.Throwable) {
                         val var65: a = Result.k;
                         var1 = Result.b(c.a(var13));
@@ -280,19 +280,19 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                      }
 
                      val var2x: Long;
-                     if (var73 != null) {
+                     if (var74 != null) {
                         try {
-                           var2x = var73.getStatSize();
+                           var2x = var74.getStatSize();
                         } catch (var12: java.lang.Throwable) {
-                           val var75: java.lang.Throwable = var12;
+                           val var67: java.lang.Throwable = var12;
 
                            try {
-                              throw var75;
+                              throw var67;
                            } catch (var9: java.lang.Throwable) {
                               try {
-                                 D9.c.a(var73, var75);
+                                 D9.c.a(var74, var67);
                               } catch (var8: java.lang.Throwable) {
-                                 val var67: a = Result.k;
+                                 val var68: a = Result.k;
                                  var1 = Result.b(c.a(var8));
                                  break label66;
                               }
@@ -300,9 +300,9 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                         }
 
                         try {
-                           D9.c.a(var73, null);
+                           D9.c.a(var74, null);
                         } catch (var11: java.lang.Throwable) {
-                           val var68: a = Result.k;
+                           val var69: a = Result.k;
                            var1 = Result.b(c.a(var11));
                            break label66;
                         }
@@ -316,7 +316,7 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                            var1.resolve(kotlin.coroutines.jvm.internal.b.c((double)var2x));
                            var1 = Result.b(Unit.a);
                         } catch (var7: java.lang.Throwable) {
-                           val var69: a = Result.k;
+                           val var70: a = Result.k;
                            var1 = Result.b(c.a(var7));
                            break label41;
                         }
@@ -325,17 +325,17 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                         try {
                            throw new IllegalArgumentException("Failed requirement.");
                         } catch (var10: java.lang.Throwable) {
-                           val var70: a = Result.k;
+                           val var71: a = Result.k;
                            var1 = Result.b(c.a(var10));
                            break label50;
                         }
                      }
                   }
 
-                  val var74: Promise = this.$promise;
-                  val var71: java.lang.Throwable = Result.e(var1);
-                  if (var71 != null) {
-                     var74.reject(var71);
+                  val var75: Promise = this.$promise;
+                  val var72: java.lang.Throwable = Result.e(var1);
+                  if (var72 != null) {
+                     var75.reject(var72);
                   }
 
                   return Unit.a;
@@ -352,10 +352,10 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
    protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
       var var1: Any = this.storageDirs.get("documents");
       q.e(var1);
-      val var2: Pair = s.a("DocumentsDirPath", var1);
-      var1 = this.storageDirs.get("cache");
-      q.e(var1);
-      return s9.q.m(new Pair[]{var2, s.a("CacheDirPath", var1)});
+      var1 = s.a("DocumentsDirPath", var1);
+      val var2: Any = this.storageDirs.get("cache");
+      q.e(var2);
+      return s9.q.m(new Pair[]{(Pair)var1, s.a("CacheDirPath", var2)});
    }
 
    public override fun moveFile(storageDir: String, sourcePath: String, destinationPath: String, promise: Promise) {
@@ -404,15 +404,15 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
 
                if (var3 == null) {
                   try {
-                     var1 = this.$promise;
-                     var3 = this.$storageDir;
-                     val var2x: java.util.Set = FileModule.access$getStorageDirs$p(this.this$0).keySet();
+                     val var2x: Promise = this.$promise;
+                     var1 = this.$storageDir;
+                     val var18: java.util.Set = FileModule.access$getStorageDirs$p(this.this$0).keySet();
                      val var4: StringBuilder = new StringBuilder();
                      var4.append("Unknown storage directory '");
-                     var4.append(var3);
+                     var4.append(var1);
                      var4.append("'. Supported storage directories: ");
-                     var4.append(var2x);
-                     var1.reject("err", var4.toString());
+                     var4.append(var18);
+                     var2x.reject("err", var4.toString());
                      return Unit.a;
                   } catch (var8: Exception) {
                      this.$promise.reject("err", "Error moving file", var8);
@@ -450,15 +450,15 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                      }
 
                      try {
-                        val var14: Promise = this.$promise;
-                        val var17: java.lang.String = this.$sourcePath;
+                        val var17: Promise = this.$promise;
+                        val var14: java.lang.String = this.$sourcePath;
                         val var21: java.lang.String = this.$destinationPath;
                         val var20: StringBuilder = new StringBuilder();
                         var20.append("Failed to move file from ");
-                        var20.append(var17);
+                        var20.append(var14);
                         var20.append(" to ");
                         var20.append(var21);
-                        var14.reject("err", var20.toString());
+                        var17.reject("err", var20.toString());
                      } catch (var5: Exception) {
                         this.$promise.reject("err", "Error moving file", var5);
                      }
@@ -632,18 +632,18 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                      }
                   }
 
-                  val var320: ByteArray;
+                  val var319: ByteArray;
                   if (var1 != null) {
                      try {
-                        var320 = D9.b.c((InputStream)var1);
+                        var319 = D9.b.c((InputStream)var1);
                      } catch (var12: java.lang.Throwable) {
-                        val var319: java.lang.Throwable = var12;
+                        val var321: java.lang.Throwable = var12;
 
                         try {
-                           throw var319;
+                           throw var321;
                         } catch (var11: java.lang.Throwable) {
                            try {
-                              D9.c.a((Closeable)var1, var319);
+                              D9.c.a((Closeable)var1, var321);
                            } catch (var10: java.lang.Throwable) {
                               this.$promise.reject(var10);
                               return Unit.a;
@@ -651,13 +651,13 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                         }
                      }
                   } else {
-                     var320 = null;
+                     var319 = null;
                   }
 
                   try {
                      D9.c.a((Closeable)var1, null);
                      if (q.c(this.$encoding, "base64")) {
-                        this.$promise.resolve(Base64.encodeToString(var320, 2));
+                        this.$promise.resolve(Base64.encodeToString(var319, 2));
                         return Unit.a;
                      }
                   } catch (var9: java.lang.Throwable) {
@@ -674,9 +674,9 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
                   }
 
                   var1 = null;
-                  if (var320 != null) {
+                  if (var319 != null) {
                      try {
-                        var1 = h.r(var320);
+                        var1 = h.r(var319);
                      } catch (var7: java.lang.Throwable) {
                         this.$promise.reject(var7);
                         return Unit.a;
@@ -824,13 +824,13 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
             b.e();
             if (this.label == 0) {
                c.b(var1);
-               val var2x: java.lang.String = FileModule.access$getStorageDirs$p(this.this$0).get(this.$storageDir) as java.lang.String;
-               if (var2x != null && !h.c0(var2x)) {
+               var1 = FileModule.access$getStorageDirs$p(this.this$0).get(this.$storageDir) as java.lang.String;
+               if (var1 != null && !h.c0(var1)) {
                   try {
-                     var1 = new File(var2x, this.$path);
-                     if (var1.exists()) {
-                        var1.delete();
-                        this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(var1.delete()));
+                     val var8: File = new File(var1, this.$path);
+                     if (var8.exists()) {
+                        var8.delete();
+                        this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(var8.delete()));
                      } else {
                         this.$promise.resolve(kotlin.coroutines.jvm.internal.b.a(false));
                      }
@@ -840,15 +840,15 @@ public class FileModule(reactContext: ReactApplicationContext) : NativeFileModul
 
                   return Unit.a;
                } else {
-                  val var6: Promise = this.$promise;
-                  val var3: java.lang.String = this.$storageDir;
-                  val var8: java.util.Set = FileModule.access$getStorageDirs$p(this.this$0).keySet();
-                  val var4: StringBuilder = new StringBuilder();
-                  var4.append("Unknown storage directory ");
-                  var4.append(var3);
-                  var4.append(". Supported storage directories: ");
-                  var4.append(var8);
-                  var6.reject("err", var4.toString());
+                  val var3: Promise = this.$promise;
+                  val var4: java.lang.String = this.$storageDir;
+                  val var7: java.util.Set = FileModule.access$getStorageDirs$p(this.this$0).keySet();
+                  val var2x: StringBuilder = new StringBuilder();
+                  var2x.append("Unknown storage directory ");
+                  var2x.append(var4);
+                  var2x.append(". Supported storage directories: ");
+                  var2x.append(var7);
+                  var3.reject("err", var2x.toString());
                   return Unit.a;
                }
             } else {

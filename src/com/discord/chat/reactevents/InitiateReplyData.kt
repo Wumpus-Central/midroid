@@ -90,19 +90,19 @@ internal data class InitiateReplyData(messageId: MessageId, channelId: ChannelId
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.Boolean = this.triggerHaptic;
-      val var4: java.lang.String = this.location;
+      val var2: java.lang.String = this.location;
       val var5: StringBuilder = new StringBuilder();
       var5.append("InitiateReplyData(messageId=");
-      var5.append(var2);
+      var5.append(var4);
       var5.append(", channelId=");
       var5.append(var1);
       var5.append(", triggerHaptic=");
       var5.append(var3);
       var5.append(", location=");
-      var5.append(var4);
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }

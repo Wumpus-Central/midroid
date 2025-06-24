@@ -1220,6 +1220,9 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
       val var11: MessageAltRemixTagView = this.binding.messageAltRemixTagView;
       kotlin.jvm.internal.q.g(this.binding.messageAltRemixTagView, "messageAltRemixTagView");
       var11.setVisibility(8);
+      val var12: SimpleDraweeView = this.binding.suppressNotificationsIcon;
+      kotlin.jvm.internal.q.g(this.binding.suppressNotificationsIcon, "suppressNotificationsIcon");
+      var12.setVisibility(8);
    }
 
    private fun initReplyView() {
@@ -1338,13 +1341,13 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
       kotlin.jvm.internal.q.h(var4, "eventHandler");
       kotlin.jvm.internal.q.h(var6, "onChainPart");
       this.bindKey(MessageId.box-impl(var1.getId-3Eiw7ao()));
-      val var13: java.lang.String = this.messageId;
-      val var14: java.lang.String = var1.getId-3Eiw7ao();
+      val var14: java.lang.String = this.messageId;
+      val var13: java.lang.String = var1.getId-3Eiw7ao();
       val var10: Boolean;
-      if (var13 == null) {
+      if (var14 == null) {
          var10 = false;
       } else {
-         var10 = MessageId.equals-impl0(var13, var14);
+         var10 = MessageId.equals-impl0(var14, var13);
       }
 
       this.messageId = var1.getId-3Eiw7ao();
@@ -1378,27 +1381,21 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
          var20.setVisibility(8);
       }
 
-      if (var2.getContextType() === MessageContextType.SEARCH) {
-         this.hideHeader();
-      } else {
-         this.configureAuthor(var1, var4, var28);
-      }
-
       this.configureDivider(var2.getShowDivider());
-      val var22: java.lang.String = var1.getThreadStarterMessageHeader();
-      if (var22 != null) {
+      val var15: java.lang.String = var1.getThreadStarterMessageHeader();
+      if (var15 != null) {
          if (this.threadStarterMessageHeaderView == null) {
             this.initThreadStarterMessageHeaderView();
          }
 
-         val var15: ThreadStarterMessageHeaderView = this.getThreadStarterMessageHeaderView();
+         val var22: ThreadStarterMessageHeaderView = this.getThreadStarterMessageHeaderView();
          if (var1.getReferencedMessage() != null) {
             var7 = true;
          } else {
             var7 = false;
          }
 
-         var15.configure(var22, var7);
+         var22.configure(var15, var7);
       } else if (this.threadStarterMessageHeaderView != null) {
          this.getThreadStarterMessageHeaderView().setVisibility(8);
       }
@@ -1443,21 +1440,27 @@ public class MessageView  public constructor(context: Context, attrs: AttributeS
 
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested(this, true, var24);
       NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested(this, true, var27);
-      val var18: java.util.List = this.generateMessageAccessories(var1, var2, var3, var4.getOnMessageLongPressed(), var28);
-      val var30: MessageAccessoriesView = this.binding.accessoriesView;
-      val var17: java.lang.String = var1.getId-3Eiw7ao();
+      val var30: java.util.List = this.generateMessageAccessories(var1, var2, var3, var4.getOnMessageLongPressed(), var28);
+      val var16: MessageAccessoriesView = this.binding.accessoriesView;
+      val var18: java.lang.String = var1.getId-3Eiw7ao();
       val var11: Long = var1.getChannelId-o4g7jtM();
-      val var16: GuildId = var1.getGuildId-qOKuAAo();
+      val var17: GuildId = var1.getGuildId-qOKuAAo();
       if (var1.getForwardInfo() != null) {
          var7 = true;
       } else {
          var7 = false;
       }
 
-      var30.setAccessories-mFdI1tY(var17, var11, var16, var18, var4, var5, var2, var8, var7);
-      this.configureAccessoriesMargin(var18);
+      var16.setAccessories-mFdI1tY(var18, var11, var17, var30, var4, var5, var2, var8, var7);
+      this.configureAccessoriesMargin(var30);
       this.configureCommunicationDisabled(kotlin.jvm.internal.q.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE), var28);
       this.configureSuppressNotifications(MessageFlagKt.hasMessageFlag(var1.getFlags(), MessageFlag.SUPPRESS_NOTIFICATIONS), var4, var28);
+      if (var2.getContextType() === MessageContextType.SEARCH) {
+         this.hideHeader();
+      } else {
+         this.configureAuthor(var1, var4, var28);
+      }
+
       androidx.core.view.Y.q0(this, new MessageViewAccessibilityDelegate(var1, var24, var27));
    }
 

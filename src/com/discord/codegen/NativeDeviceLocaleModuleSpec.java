@@ -18,24 +18,24 @@ public abstract class NativeDeviceLocaleModuleSpec extends ReactContextBaseJavaM
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var1 = this.getTypedExportedConstants();
+      Map var2 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var3 = new HashSet<>(Arrays.asList("Language", "Languages"));
-         HashSet var2 = new HashSet();
-         HashSet var4 = new HashSet(var1.keySet());
+         HashSet var1 = new HashSet();
+         HashSet var4 = new HashSet(var2.keySet());
          var4.removeAll(var3);
-         var4.removeAll(var2);
+         var4.removeAll(var1);
          if (!var4.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
          }
 
-         var3.removeAll(var1.keySet());
+         var3.removeAll(var2.keySet());
          if (!var3.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
          }
       }
 
-      return var1;
+      return var2;
    }
 
    public String getName() {

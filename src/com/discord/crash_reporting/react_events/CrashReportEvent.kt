@@ -120,16 +120,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
          var1.putString("exitDescription", var5.getReason());
       }
 
-      val var3: SystemLogUtils.Tombstone = this.tombstone;
+      val var6: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var6: java.lang.String = var3.getCause();
-         if (var6 != null) {
-            var1.putString("tombstoneCause", var6);
+         val var3: java.lang.String = var6.getCause();
+         if (var3 != null) {
+            var1.putString("tombstoneCause", var3);
          }
 
-         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var3.getText())) {
-            var1.putString("tombstone", h.e1(var3.getText(), 6291456));
+         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var6.getText())) {
+            var1.putString("tombstone", h.e1(var6.getText(), 6291456));
          }
       }
 
@@ -137,20 +137,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Boolean = this.crashedLastRun;
-      val var5: SystemLogReport.SentryCrashData = this.sentryData;
-      val var4: HistoricalProcessExitReason.Reason = this.reason;
-      val var2: SystemLogUtils.Tombstone = this.tombstone;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CrashReportEvent(crashedLastRun=");
-      var1.append(var3);
-      var1.append(", sentryData=");
-      var1.append(var5);
-      var1.append(", reason=");
-      var1.append(var4);
-      var1.append(", tombstone=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.Boolean = this.crashedLastRun;
+      val var1: SystemLogReport.SentryCrashData = this.sentryData;
+      val var5: HistoricalProcessExitReason.Reason = this.reason;
+      val var4: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CrashReportEvent(crashedLastRun=");
+      var3.append(var2);
+      var3.append(", sentryData=");
+      var3.append(var1);
+      var3.append(", reason=");
+      var3.append(var5);
+      var3.append(", tombstone=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

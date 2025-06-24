@@ -132,13 +132,13 @@ private fun createSectionItem(
 internal operator fun Companion.invoke(value: ReadableMap): Versioned {
    q.h(var0, "<this>");
    q.h(var1, "value");
-   val var19: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listId");
+   val var20: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "listId");
    val var5: Boolean = var1.getBoolean("keysAreUniform");
-   val var14: ArrayList = new ArrayList();
-   val var18: IntRef = new IntRef();
+   val var15: ArrayList = new ArrayList();
+   val var19: IntRef = new IntRef();
    val var12: ArrayList = new ArrayList();
-   val var20: java.util.List = NativeArrayExtensionsKt.toIntList(NativeMapExtensionsKt.getNonNullArray(var1, "sections"));
-   val var15: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
+   val var18: java.util.List = NativeArrayExtensionsKt.toIntList(NativeMapExtensionsKt.getNonNullArray(var1, "sections"));
+   val var14: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "sectionsId");
    val var17: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemKeys");
    val var10: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "itemSizes");
    val var6: Int;
@@ -173,7 +173,7 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
    val var25: FastestListSections.Entry.ListHeader;
    if (var2 > 0) {
       var25 = new FastestListSections.Entry.ListHeader(
-         FastestListSections.Entry.ListHeader.Companion.createKey(var19, var24), FastestListSections.Section.constructor-impl(0), var2, null
+         FastestListSections.Entry.ListHeader.Companion.createKey(var20, var24), FastestListSections.Section.constructor-impl(0), var2, null
       );
    } else {
       var25 = null;
@@ -184,8 +184,8 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
    val var29: FastestListSections.Entry.ListFooter;
    if (var2 > 0) {
       var29 = new FastestListSections.Entry.ListFooter(
-         FastestListSections.Entry.ListFooter.Companion.createKey(var19, var9),
-         FastestListSections.Section.constructor-impl(Math.max(0, i.m(var20))),
+         FastestListSections.Entry.ListFooter.Companion.createKey(var20, var9),
+         FastestListSections.Section.constructor-impl(Math.max(0, i.m(var18))),
          var2,
          null
       );
@@ -193,33 +193,33 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
       var29 = null;
    }
 
-   val var16: a = new a(var12, var14, var18);
+   val var16: a = new a(var12, var15, var19);
    var2 = 0;
    val var30: a = var16;
 
-   while (var2 <= i.m(var20)) {
+   while (var2 <= i.m(var18)) {
       if (var2 == 0) {
          var30.invoke(var25);
       }
 
-      val var4: Int = (var20.get(var2) as java.lang.Number).intValue();
+      val var4: Int = (var18.get(var2) as java.lang.Number).intValue();
       if (var4 == 0) {
-         if (var2 == i.m(var20)) {
+         if (var2 == i.m(var18)) {
             var30.invoke(var29);
          }
 
          var2++;
       } else {
-         var30.invoke(createSectionHeader(var19, var5, var2, var21, var7, var11));
+         var30.invoke(createSectionHeader(var20, var5, var2, var21, var7, var11));
 
          var var3: Int;
          for (var3 = 0; var3 < var4; var3++) {
-            var30.invoke(createSectionItem(var19, var5, var2, var4, var3, var17, var6, var10));
+            var30.invoke(createSectionItem(var20, var5, var2, var4, var3, var17, var6, var10));
          }
 
          if (var3 == var4) {
-            var30.invoke(createSectionFooter(var19, var5, var2, var22, var8, var13));
-            if (var2 == i.m(var20)) {
+            var30.invoke(createSectionFooter(var20, var5, var2, var22, var8, var13));
+            if (var2 == i.m(var18)) {
                var30.invoke(var29);
             }
          }
@@ -228,7 +228,7 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
       }
    }
 
-   return new FastestListSections.Versioned(var15, var12, var18.j, var14);
+   return new FastestListSections.Versioned(var14, var12, var19.j, var15);
 }
 
 fun `invoke$lambda$0`(var0: java.util.List, var1: java.util.List, var2: IntRef, var3: FastestListSections.Entry): Unit {
