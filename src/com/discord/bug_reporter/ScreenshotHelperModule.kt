@@ -7,9 +7,9 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import e9.s
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import t9.s
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext

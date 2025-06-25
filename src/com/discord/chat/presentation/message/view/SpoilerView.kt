@@ -80,14 +80,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
-      val var4: Function1 = var1.getAttributes().getLabel();
-      var var5: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var5, "getContext(...)");
-      val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
-      val var6: Function1 = var1.getAttributes().getDescription();
-      var5 = this.getContext();
-      kotlin.jvm.internal.q.g(var5, "getContext(...)");
-      var3.configure(var8, var6.invoke(var5) as java.lang.String, new P0(this, var2));
+      var var5: Function1 = var1.getAttributes().getLabel();
+      val var4: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var4, "getContext(...)");
+      val var8: java.lang.String = var5.invoke(var4) as java.lang.String;
+      var5 = var1.getAttributes().getDescription();
+      val var6: Context = this.getContext();
+      kotlin.jvm.internal.q.g(var6, "getContext(...)");
+      var3.configure(var8, var5.invoke(var6) as java.lang.String, new P0(this, var2));
    }
 
    @JvmStatic

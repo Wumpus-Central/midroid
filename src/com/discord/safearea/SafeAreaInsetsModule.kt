@@ -1,10 +1,5 @@
 package com.discord.safearea
 
-import R1.a
-import R1.b
-import R1.c
-import R1.d
-import R1.e
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -18,8 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
+import g2.a
+import g2.b
+import g2.c
+import g2.d
+import g2.e
 import kotlin.jvm.internal.q
+import t9.s
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {

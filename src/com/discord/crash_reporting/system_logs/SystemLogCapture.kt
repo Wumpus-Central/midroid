@@ -9,6 +9,11 @@ internal class SystemLogCapture {
    private fun start() {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.code.cfg.ExceptionRangeCFG.isCircular()" because "range" is null
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.graphToStatement(DomHelper.java:84)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:203)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.createStatement(DomHelper.java:27)
+      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:157)
       //
       // Bytecode:
       // 000: new java/io/File
@@ -23,18 +28,18 @@ internal class SystemLogCapture {
       // 015: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 018: return
       // 019: aconst_null
-      // 01a: astore 6
+      // 01a: astore 5
       // 01c: aconst_null
-      // 01d: astore 5
-      // 01f: aload 5
+      // 01d: astore 6
+      // 01f: aload 6
       // 021: astore 4
-      // 023: aload 6
+      // 023: aload 5
       // 025: astore 3
       // 026: new java/lang/ProcessBuilder
       // 029: astore 7
-      // 02b: aload 5
+      // 02b: aload 6
       // 02d: astore 4
-      // 02f: aload 6
+      // 02f: aload 5
       // 031: astore 3
       // 032: aload 7
       // 034: bipush 1
@@ -44,9 +49,9 @@ internal class SystemLogCapture {
       // 03a: ldc "/system/bin/logcat"
       // 03c: aastore
       // 03d: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-      // 040: aload 5
+      // 040: aload 6
       // 042: astore 4
-      // 044: aload 6
+      // 044: aload 5
       // 046: astore 3
       // 047: aload 7
       // 049: bipush 1
@@ -59,20 +64,20 @@ internal class SystemLogCapture {
       // 058: astore 3
       // 059: aload 5
       // 05b: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-      // 05e: astore 6
+      // 05e: astore 8
       // 060: aload 5
       // 062: astore 4
       // 064: aload 5
       // 066: astore 3
-      // 067: aload 6
+      // 067: aload 8
       // 069: ldc "getInputStream(...)"
       // 06b: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 06e: aload 5
       // 070: astore 4
       // 072: aload 5
       // 074: astore 3
-      // 075: getstatic La/a.b Ljava/nio/charset/Charset;
-      // 078: astore 8
+      // 075: getstatic ab/a.b Ljava/nio/charset/Charset;
+      // 078: astore 6
       // 07a: aload 5
       // 07c: astore 4
       // 07e: aload 5
@@ -84,8 +89,8 @@ internal class SystemLogCapture {
       // 08a: aload 5
       // 08c: astore 3
       // 08d: aload 7
-      // 08f: aload 6
-      // 091: aload 8
+      // 08f: aload 8
+      // 091: aload 6
       // 093: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
       // 096: aload 5
       // 098: astore 4
@@ -202,15 +207,15 @@ internal class SystemLogCapture {
       // 17d: astore 4
       // 17f: aload 5
       // 181: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 184: astore 6
+      // 184: astore 7
       // 186: aload 3
       // 187: astore 4
-      // 189: aload 6
+      // 189: aload 7
       // 18b: ldc "getStackTrace(...)"
       // 18d: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 190: aload 3
       // 191: astore 4
-      // 193: aload 6
+      // 193: aload 7
       // 195: arraylength
       // 196: istore 2
       // 197: bipush 0
@@ -218,39 +223,39 @@ internal class SystemLogCapture {
       // 199: iload 1
       // 19a: iload 2
       // 19b: if_icmpge 1e6
-      // 19e: aload 6
+      // 19e: aload 7
       // 1a0: iload 1
       // 1a1: aaload
-      // 1a2: astore 5
+      // 1a2: astore 6
       // 1a4: aload 3
       // 1a5: astore 4
       // 1a7: aload 0
       // 1a8: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 1ab: astore 7
+      // 1ab: astore 8
       // 1ad: aload 3
       // 1ae: astore 4
       // 1b0: new java/lang/StringBuilder
-      // 1b3: astore 8
+      // 1b3: astore 5
       // 1b5: aload 3
       // 1b6: astore 4
-      // 1b8: aload 8
+      // 1b8: aload 5
       // 1ba: invokespecial java/lang/StringBuilder.<init> ()V
       // 1bd: aload 3
       // 1be: astore 4
-      // 1c0: aload 8
+      // 1c0: aload 5
       // 1c2: ldc "    "
       // 1c4: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 1c7: pop
       // 1c8: aload 3
       // 1c9: astore 4
-      // 1cb: aload 8
-      // 1cd: aload 5
+      // 1cb: aload 5
+      // 1cd: aload 6
       // 1cf: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 1d2: pop
       // 1d3: aload 3
       // 1d4: astore 4
-      // 1d6: aload 7
-      // 1d8: aload 8
+      // 1d6: aload 8
+      // 1d8: aload 5
       // 1da: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 1dd: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 1e0: iinc 1 1
@@ -284,7 +289,7 @@ internal class SystemLogCapture {
    }
 
    public fun startThread(): Thread {
-      return j9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new g(this), 20, null);
+      return y9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new d(this), 20, null);
    }
 
    public companion object {

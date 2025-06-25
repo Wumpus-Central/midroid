@@ -1,15 +1,15 @@
 package com.discord.image.fresco.postprocessors
 
+import B9.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
 import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostprocessor
 import com.facebook.imagepipeline.request.BasePostprocessor
-import e9.n
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import m9.a
+import t9.n
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -45,8 +45,8 @@ public sealed interface PostProcessor {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(i.v(var2, 10));
 
-            for (PostProcessor var3 : var2) {
-               var4.add($$INSTANCE.create(var3));
+            for (PostProcessor var6 : var2) {
+               var4.add($$INSTANCE.create(var6));
             }
 
             var5 = new CompositePostprocessor(var4);
@@ -214,17 +214,17 @@ public sealed interface PostProcessor {
 
       public override fun toString(): String {
          val var6: PostProcessor.Gradient.Direction = this.direction;
-         val var4: Int = this.startColor;
-         val var3: Int = this.endColor;
+         val var3: Int = this.startColor;
+         val var4: Int = this.endColor;
          val var1: Float = this.startPosition;
          val var2: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
          var5.append(", startColor=");
-         var5.append(var4);
-         var5.append(", endColor=");
          var5.append(var3);
+         var5.append(", endColor=");
+         var5.append(var4);
          var5.append(", startPosition=");
          var5.append(var1);
          var5.append(", endPosition=");

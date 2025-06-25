@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {

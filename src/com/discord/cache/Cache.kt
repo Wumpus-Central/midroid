@@ -1,17 +1,17 @@
 package com.discord.cache
 
-import Z0.a
-import Z0.b
-import Z0.c
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
 import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
-import e9.j
 import java.util.HashSet
 import kotlin.jvm.internal.q
+import o1.a
+import o1.b
+import o1.c
+import t9.j
 
 public class Cache(reactContext: Context) {
    private final var sharedPrefsLoaded: Boolean
@@ -31,9 +31,9 @@ public class Cache(reactContext: Context) {
    init {
       q.h(var1, "reactContext");
       super();
-      this.sharedPrefs$delegate = j.b(new a(var1));
-      this.fastCacheSharedPrefs$delegate = j.b(new b(var1));
-      j9.a.b(false, false, null, null, 0, new c(this), 31, null);
+      this.sharedPrefs$delegate = j.a(new a(var1));
+      this.fastCacheSharedPrefs$delegate = j.a(new b(var1));
+      y9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic
@@ -74,11 +74,11 @@ public class Cache(reactContext: Context) {
       val var3: HashSet = FAST_CACHE_KEYS;
       if (!FAST_CACHE_KEYS.contains(var1)) {
          if (!this.sharedPrefsLoaded) {
-            val var6: TTIMetrics = TTIMetrics.INSTANCE;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("WARNING: Cache accessed before parsed ");
-            var8.append(var1);
-            TTIMetrics.record$default(var6, var8.toString(), 0L, null, false, 14, null);
+            val var8: TTIMetrics = TTIMetrics.INSTANCE;
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("WARNING: Cache accessed before parsed ");
+            var6.append(var1);
+            TTIMetrics.record$default(var8, var6.toString(), 0L, null, false, 14, null);
          }
 
          return this.getSharedPrefs().getString(var1, null);

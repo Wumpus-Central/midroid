@@ -37,9 +37,9 @@ public fun SimpleDraweeSpanTextView.setEmojiOrHide(componentEmoji: ComponentEmoj
       var0.setVisibility(8);
    } else {
       var0.setVisibility(0);
-      val var3: RenderableEmoji = renderable(var1);
-      val var2: Context = var0.getContext();
-      q.g(var2, "getContext(...)");
-      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var3, var2, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
+      val var2: RenderableEmoji = renderable(var1);
+      val var3: Context = var0.getContext();
+      q.g(var3, "getContext(...)");
+      var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var2, var3, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
    }
 }

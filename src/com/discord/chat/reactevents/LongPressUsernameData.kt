@@ -1,10 +1,10 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class LongPressUsernameData(messageId: String, userId: String) : ReactEvent {
@@ -57,15 +57,15 @@ public data class LongPressUsernameData(messageId: String, userId: String) : Rea
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var3: java.lang.String = this.userId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressUsernameData(messageId=");
-      var2.append(var1);
-      var2.append(", userId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LongPressUsernameData(messageId=");
+      var1.append(var2);
+      var1.append(", userId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

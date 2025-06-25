@@ -69,20 +69,20 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = e9.j.b(new E0(this));
+      this.shadowView$delegate = t9.j.a(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
       kotlin.jvm.internal.q.g(var6, "getSpans(...)");
-      val var7: QuoteSpan = kotlin.collections.c.L(var6) as QuoteSpan;
+      val var8: QuoteSpan = kotlin.collections.c.L(var6) as QuoteSpan;
       val var5: Int = var1.length();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(" (");
-      var8.append(var2);
-      var8.append(")");
-      var1.append(var8.toString());
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(" (");
+      var7.append(var2);
+      var7.append(")");
+      var1.append(var7.toString());
       var1.setSpan(new RelativeSizeSpan(0.75F), var5, var1.length(), 33);
       val var4: Int;
       if (var3 != null) {
@@ -92,8 +92,8 @@ public open class MessageContentView  public constructor(context: Context, attrs
       }
 
       var1.setSpan(new ForegroundColorSpan(var4), var5, var1.length(), 33);
-      if (var7 != null) {
-         var1.setSpan(var7, var1.getSpanStart(var7), var1.length(), var1.getSpanFlags(var7));
+      if (var8 != null) {
+         var1.setSpan(var8, var1.getSpanStart(var8), var1.length(), var1.getSpanFlags(var8));
       }
    }
 
@@ -321,7 +321,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.setDraweeSpanStringBuilder(var34);
       this.bottomSpacingPx = var23;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
-      androidx.core.view.a0.q0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
+      androidx.core.view.Y.q0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
    }
 
    public open fun setOnClickListener(l: OnClickListener?) {
@@ -371,7 +371,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
             var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
          }
 
-         var2.U0(var5);
+         var2.V0(var5);
       }
    }
 }

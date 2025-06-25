@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
+import mb.f
 
 @f
 public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
@@ -119,24 +119,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.stickerItems;
-      val var5: JsonObject = this.author;
-      val var4: java.util.List = this.mentions;
-      val var2: Poll = this.poll;
-      val var1: java.util.List = this.embeds;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("NotificationMessage(stickerItems=");
-      var6.append(var3);
-      var6.append(", author=");
-      var6.append(var5);
-      var6.append(", mentions=");
-      var6.append(var4);
-      var6.append(", poll=");
-      var6.append(var2);
-      var6.append(", embeds=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var2: java.util.List = this.stickerItems;
+      val var6: JsonObject = this.author;
+      val var3: java.util.List = this.mentions;
+      val var1: Poll = this.poll;
+      val var4: java.util.List = this.embeds;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("NotificationMessage(stickerItems=");
+      var5.append(var2);
+      var5.append(", author=");
+      var5.append(var6);
+      var5.append(", mentions=");
+      var5.append(var3);
+      var5.append(", poll=");
+      var5.append(var1);
+      var5.append(", embeds=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

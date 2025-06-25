@@ -10,7 +10,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textview.MaterialTextView;
-import t0.a;
+import z0.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
    public final ViewStub loadingDots;
@@ -33,21 +33,21 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
 
    public static MessageComponentSelectViewBinding bind(View var0) {
       int var1 = R.id.loading_dots;
-      ViewStub var5 = (ViewStub)a.a(var0, var1);
-      if (var5 != null) {
+      ViewStub var4 = (ViewStub)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.select_component_chevron;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.select_component_selection_icon;
-            SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.select_component_selection_text;
-               MaterialTextView var2 = (MaterialTextView)a.a(var0, var1);
-               if (var2 != null) {
+               MaterialTextView var3 = (MaterialTextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var6 = (FlexboxLayout)a.a(var0, var1);
-                  if (var6 != null) {
-                     return new MessageComponentSelectViewBinding(var0, var5, var3, var4, var2, var6);
+                  FlexboxLayout var5 = (FlexboxLayout)a.a(var0, var1);
+                  if (var5 != null) {
+                     return new MessageComponentSelectViewBinding(var0, var4, var2, var6, var3, var5);
                   }
                }
             }

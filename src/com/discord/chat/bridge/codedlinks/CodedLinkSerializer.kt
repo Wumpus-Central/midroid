@@ -1,13 +1,13 @@
 package com.discord.chat.bridge.codedlinks
 
-import bb.d
-import bb.g
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
+import qb.d
+import qb.g
 
 public object CodedLinkSerializer : d(G.b(CodedLinkEmbed.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<CodedLinkEmbed> {

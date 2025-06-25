@@ -11,8 +11,8 @@ import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.measure.NativeViewMeasuringWrapper
 import com.discord.misc.utilities.size.SizeUtilsKt
-import f9.n
 import kotlin.jvm.internal.q
+import u9.n
 
 public class MessageBundleSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    private final val spineDrawer: SpineDrawer
@@ -101,16 +101,14 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                            var4 = var6;
                         }
 
-                        var var7: Int = var2.getChildCount();
-                        var var26: Int = 0;
-                        var5 = var4;
+                        var5 = var2.getChildCount();
 
-                        for (int var23 = var7; var26 < var23; var26++) {
-                           val var31: View = var2.getChildAt(var26);
-                           if (var31 != null) {
-                              var9 = (var31 as NativeViewMeasuringWrapper).getView();
+                        for (int var25 = 0; var25 < var5; var25++) {
+                           val var12: View = var2.getChildAt(var25);
+                           if (var12 != null) {
+                              var9 = (var12 as NativeViewMeasuringWrapper).getView();
                               if (var9 is MessageBundleConversationView || var9 is MessageBundleViewMoreView) {
-                                 val var12: SpineDrawer = this.spineDrawer;
+                                 val var29: SpineDrawer = this.spineDrawer;
                                  var var20: View = var9;
                                  if (var9 !is SpineParentMessage) {
                                     var20 = null;
@@ -120,22 +118,23 @@ public class MessageBundleSpineItemDecoration(context: Context, contentStartPosi
                                  if (var20 as SpineParentMessage != null) {
                                     val var22: View = var21.getSpineOriginView();
                                     if (var22 != null) {
-                                       var12.drawSpineCurve(var1, var2, var31, var22, var8);
-                                       if (var26 != var5) {
-                                          this.spineDrawer.drawSpinePiece(var1, var2, var31, var8, 0);
+                                       var29.drawSpineCurve(var1, var2, var12, var22, var8);
+                                       if (var25 != var4) {
+                                          this.spineDrawer.drawSpinePiece(var1, var2, var12, var8, 0);
                                        }
                                     }
                                  }
                               } else if (var9 is MessageView) {
-                                 if (var26 == 0) {
+                                 val var7: Int;
+                                 if (var25 == 0) {
                                     var7 = var10.getTop() + var10.getHeight() + SizeUtilsKt.getDpToPx(2);
                                  } else {
                                     var7 = 0;
                                  }
 
-                                 this.spineDrawer.drawSpinePiece(var1, var2, var31, var8, var7);
+                                 this.spineDrawer.drawSpinePiece(var1, var2, var12, var8, var7);
                               } else {
-                                 SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var31, var8, 0, 16, null);
+                                 SpineDrawer.drawSpinePiece$default(this.spineDrawer, var1, var2, var12, var8, 0, 16, null);
                               }
                            }
                         }

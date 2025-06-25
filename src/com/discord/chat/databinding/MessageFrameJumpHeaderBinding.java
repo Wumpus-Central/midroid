@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
-import t0.a;
+import z0.a;
 
 public final class MessageFrameJumpHeaderBinding implements ViewBinding {
    public final TextView messageHeaderSubtitle;

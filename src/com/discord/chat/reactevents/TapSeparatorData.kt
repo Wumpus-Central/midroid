@@ -4,8 +4,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
 import kotlin.jvm.internal.q
+import t9.s
 
 public data class TapSeparatorData(type: String, context: String? = null) : ReactEvent {
    public final val type: String

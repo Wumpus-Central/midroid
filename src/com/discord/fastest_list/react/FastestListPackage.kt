@@ -9,7 +9,7 @@ import com.facebook.react.uimanager.ViewManager
 import kotlin.jvm.internal.q
 
 public class FastestListPackage : BaseReactPackage {
-   public override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
+   public open fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, LayoutShadowNode>> {
       q.h(var1, "reactContext");
       return i.e(new FastestListViewManager());
    }
@@ -20,7 +20,7 @@ public class FastestListPackage : BaseReactPackage {
       return null;
    }
 
-   public override fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
+   public open fun getReactModuleInfoProvider(): ReactModuleInfoProvider {
       return ReactModuleInfoProviderExtensionsKt.createReactModuleInfoProvider$default(null, false, 3, null);
    }
 }

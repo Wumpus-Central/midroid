@@ -5,8 +5,8 @@ import android.view.accessibility.AccessibilityEvent
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.chat.bridge.polls.PollChatAnswerInteractionType
 import com.discord.chat.presentation.message.messagepart.polls.PollAnswerAccessory
-import e9.n
 import kotlin.jvm.internal.q
+import t9.n
 
 public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : androidx.core.view.a {
    private final val accessory: PollAnswerAccessory
@@ -56,7 +56,7 @@ public class PollsAnswerAccessibilityDelegate(accessory: PollAnswerAccessory) : 
 
             var2.q0(var4);
          } else {
-            var2.P0(var4);
+            var2.Q0(var4);
          }
       }
 

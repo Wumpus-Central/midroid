@@ -1,11 +1,11 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : TapDismissMediaPostSharePromptData(var1), ReactEvent {

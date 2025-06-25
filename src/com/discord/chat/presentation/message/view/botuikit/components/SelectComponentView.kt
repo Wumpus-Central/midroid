@@ -42,14 +42,14 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.BasePostprocessor
-import com.facebook.imagepipeline.request.ImageRequest
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import com.google.android.flexbox.FlexboxLayout
 import com.google.android.material.textview.MaterialTextView
-import e9.n
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
+import t9.n
 
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -86,8 +86,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = e9.j.b(new h(this));
-      this.postProcessor$delegate = e9.j.b(new i());
+      this.progressDots$delegate = t9.j.a(new h(this));
+      this.postProcessor$delegate = t9.j.a(new i());
       this.setMaxWidth(SizeUtilsKt.getDpToPx(300));
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
@@ -116,14 +116,12 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var6: DraweeSpanStringBuilder = new DraweeSpanStringBuilder();
       val var5: Int = SizeUtilsKt.getDpToPx(20);
       var6.append('\u200b');
-      val var8: ImageRequestBuilder = ImageRequestBuilder.x(Uri.parse(var2))
-         .N(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null))
-         .I(ImageRequest.RequestLevel.k);
+      val var8: ImageRequestBuilder = ImageRequestBuilder.x(Uri.parse(var2)).N(new ResizeOptions(var5, var5, 0.0F, 0.0F, 12, null)).I(RequestLevel.k);
       if (var4) {
          var8.J(this.getPostProcessor());
       }
 
-      val var9: com.facebook.drawee.controller.a = (u2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      val var9: com.facebook.drawee.controller.a = (J2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
       q.g(var9, "build(...)");
       val var7: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
       q.g(var7, "setActualImageScaleType(...)");
@@ -252,13 +250,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                }
             }
          } else {
-            val var22: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             q.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
             q.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var39.setVisibility(8);
-            var22.setVisibility(0);
-            this.setSelectedOptions(var22, var33);
+            var22.setVisibility(8);
+            var39.setVisibility(0);
+            this.setSelectedOptions(var39, var33);
          }
       } else {
          val var37: MaterialTextView = this.binding.selectComponentSelectionText;
@@ -278,31 +276,31 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var5 = true;
       }
 
-      val var9: Boolean;
+      val var29: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var9 = true;
+         var29 = true;
       } else {
-         var9 = false;
+         var29 = false;
       }
 
       val var23: SimpleDraweeView = this.binding.selectComponentChevron;
       q.g(this.binding.selectComponentChevron, "selectComponentChevron");
-      if (!var9) {
+      if (!var29) {
          var6 = 0;
       }
 
       var23.setVisibility(var6);
-      if (var9 != this.currentIsLoading) {
+      if (var29 != this.currentIsLoading) {
          val var24: ProgressDots = this.getProgressDots();
          var6 = 8;
-         if (var9) {
+         if (var29) {
             var6 = 0;
          }
 
          var24.setVisibility(var6);
       }
 
-      this.currentIsLoading = var9;
+      this.currentIsLoading = var29;
       val var25: View = this.binding.getRoot();
       val var4: Float;
       if (var5) {
@@ -316,15 +314,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       q.g(var26, "getRoot(...)");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new j(var3, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var29: Boolean = false;
-      if (!var9) {
-         var29 = false;
+      var var9: Boolean = false;
+      if (!var29) {
+         var9 = false;
          if (!var5) {
-            var29 = true;
+            var9 = true;
          }
       }
 
-      var14.setClickable(var29);
+      var14.setClickable(var9);
       this.binding.getRoot().setEnabled(var5 xor true);
    }
 

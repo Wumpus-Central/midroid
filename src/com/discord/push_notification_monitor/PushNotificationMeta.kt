@@ -1,8 +1,8 @@
 package com.discord.push_notification_monitor
 
-import Xa.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class PushNotificationMeta(receivedTimestamp: Long,
@@ -102,10 +102,10 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = java.lang.Long.hashCode(this.receivedTimestamp);
-      val var7: Int = java.lang.Boolean.hashCode(this.silent);
+      val var6: Int = java.lang.Long.hashCode(this.receivedTimestamp);
+      val var5: Int = java.lang.Boolean.hashCode(this.silent);
       val var4: Int = this.type.hashCode();
-      val var6: Int = this.title.hashCode();
+      val var7: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -125,28 +125,28 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var5 * 31 + var7) * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var6 * 31 + var5) * 31 + var4) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: Long = this.receivedTimestamp;
-      val var3: Boolean = this.silent;
-      val var6: java.lang.String = this.type;
+      val var2: Long = this.receivedTimestamp;
+      val var1: Boolean = this.silent;
+      val var7: java.lang.String = this.type;
       val var9: java.lang.String = this.title;
-      val var7: java.lang.String = this.content;
+      val var6: java.lang.String = this.content;
       val var8: java.lang.String = this.channelId;
       val var4: java.lang.String = this.messageId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PushNotificationMeta(receivedTimestamp=");
-      var5.append(var1);
+      var5.append(var2);
       var5.append(", silent=");
-      var5.append(var3);
+      var5.append(var1);
       var5.append(", type=");
-      var5.append(var6);
+      var5.append(var7);
       var5.append(", title=");
       var5.append(var9);
       var5.append(", content=");
-      var5.append(var7);
+      var5.append(var6);
       var5.append(", channelId=");
       var5.append(var8);
       var5.append(", messageId=");

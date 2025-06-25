@@ -163,7 +163,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = m9.a.a(var0);
+         $ENTRIES = B9.a.a(var0);
       }
 
       @JvmStatic

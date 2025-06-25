@@ -1,21 +1,22 @@
 package com.discord.sticker_picker
 
-import V1.a
-import V1.b
-import V1.c
-import V1.d
 import android.content.Context
 import android.view.View
+import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.g0
+import androidx.core.view.e0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
-import e9.n
+import k2.a
+import k2.b
+import k2.c
+import k2.d
 import kotlin.jvm.internal.q
+import t9.n
 
 internal class StickerPickerRowView(context: Context) : LinearLayout {
    private final var firstRenderPass: Boolean
@@ -121,7 +122,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
       val var9: java.util.Iterator = var1.getItems().iterator();
 
       for (int var10 = 0; var9.hasNext(); var10++) {
-         var var7: View = (View)var9.next();
+         var var7: MarginLayoutParams = (MarginLayoutParams)var9.next();
          if (var10 < 0) {
             i.u();
          }
@@ -136,12 +137,12 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
 
          var7 = this.getContext();
          q.g(var7, "getContext(...)");
-         var7 = new StickerView((Context)var7, null, 0, 6, null);
-         RippleUtilsKt.addRipple$default(var7, true, 0, 2, null);
-         val var8: LayoutParams = new LayoutParams(var5, var5);
-         var8.setMargins(var3, var6, 0, var6);
-         var7.setLayoutParams(var8);
-         this.addView(var7);
+         val var8: StickerView = new StickerView((Context)var7, null, 0, 6, null);
+         RippleUtilsKt.addRipple$default(var8, true, 0, 2, null);
+         var7 = new LayoutParams(var5, var5);
+         var7.setMargins(var3, var6, 0, var6);
+         var8.setLayoutParams(var7);
+         this.addView(var8);
       }
    }
 
@@ -158,7 +159,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var2 : g0.a(this)) {
+      for (View var2 : e0.a(this)) {
          q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
          (var2 as StickerView).recycle();
       }

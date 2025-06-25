@@ -1,11 +1,11 @@
 package com.discord.notifications.react.events
 
-import Xa.f
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class LocalNotificationEvent(locationNotification: Map<String, String?>) : ReactEvent {

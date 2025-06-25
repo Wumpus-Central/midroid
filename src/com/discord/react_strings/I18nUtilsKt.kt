@@ -1,13 +1,13 @@
 package com.discord.react_strings
 
-import N1.b
-import N1.c
-import N1.d
-import N1.e
-import N1.f
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
+import c2.b
+import c2.c
+import c2.d
+import c2.e
+import c2.f
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 

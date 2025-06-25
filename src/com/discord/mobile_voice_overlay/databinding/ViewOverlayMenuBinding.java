@@ -9,7 +9,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.mobile_voice_overlay.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import t0.a;
+import z0.a;
 
 public final class ViewOverlayMenuBinding implements ViewBinding {
    public final SimpleDraweeView disconnectBtn;
@@ -55,39 +55,39 @@ public final class ViewOverlayMenuBinding implements ViewBinding {
 
    public static ViewOverlayMenuBinding bind(View var0) {
       int var1 = R.id.disconnect_btn;
-      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-      if (var6 != null) {
+      SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+      if (var11 != null) {
          var1 = R.id.menu_bottom;
-         CardView var4 = (CardView)a.a(var0, var1);
-         if (var4 != null) {
+         CardView var7 = (CardView)a.a(var0, var1);
+         if (var7 != null) {
             var1 = R.id.menu_top;
             CardView var5 = (CardView)a.a(var0, var1);
             if (var5 != null) {
                var1 = R.id.menu_top_status_container;
-               ConstraintLayout var2 = (ConstraintLayout)a.a(var0, var1);
-               if (var2 != null) {
+               ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.mute_toggle;
-                  SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var11 != null) {
+                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.overlay_channel_name;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var9 = (TextView)a.a(var0, var1);
+                     if (var9 != null) {
                         var1 = R.id.overlay_guild_name;
                         TextView var3 = (TextView)a.a(var0, var1);
                         if (var3 != null) {
                            var1 = R.id.overlay_invite_link;
-                           TextView var12 = (TextView)a.a(var0, var1);
-                           if (var12 != null) {
+                           TextView var2 = (TextView)a.a(var0, var1);
+                           if (var2 != null) {
                               var1 = R.id.overlay_network_icon;
-                              SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
-                              if (var9 != null) {
+                              SimpleDraweeView var12 = (SimpleDraweeView)a.a(var0, var1);
+                              if (var12 != null) {
                                  var1 = R.id.overlay_open_app;
-                                 TextView var10 = (TextView)a.a(var0, var1);
-                                 if (var10 != null) {
+                                 TextView var6 = (TextView)a.a(var0, var1);
+                                 if (var6 != null) {
                                     var1 = R.id.overlay_switch_channels;
-                                    TextView var8 = (TextView)a.a(var0, var1);
-                                    if (var8 != null) {
-                                       return new ViewOverlayMenuBinding(var0, var6, var4, var5, var2, var11, var7, var3, var12, var9, var10, var8);
+                                    TextView var10 = (TextView)a.a(var0, var1);
+                                    if (var10 != null) {
+                                       return new ViewOverlayMenuBinding(var0, var11, var7, var5, var4, var8, var9, var3, var2, var12, var6, var10);
                                     }
                                  }
                               }

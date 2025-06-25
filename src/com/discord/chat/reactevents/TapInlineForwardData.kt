@@ -1,13 +1,13 @@
 package com.discord.chat.reactevents
 
-import Xa.f
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e9.s
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
+import t9.s
 
 @f
 public class TapInlineForwardData(channelId: String, messageId: String, targetKind: String, embedIndex: Int?, triggerHaptic: Boolean?, location: String?) :

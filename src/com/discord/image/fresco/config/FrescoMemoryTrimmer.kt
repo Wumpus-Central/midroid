@@ -1,10 +1,10 @@
 package com.discord.image.fresco.config
 
+import J2.d
 import android.content.ComponentCallbacks2
 import android.content.Context
 import android.content.res.Configuration
 import kotlin.jvm.internal.q
-import u2.d
 
 internal object FrescoMemoryTrimmer {
    public fun initialize(context: Context) {

@@ -32,17 +32,17 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
    public fun bind(postPreviewEmbed: PostPreviewEmbed, onTapPostPreviewEmbed: (GuildId, ChannelId, ChannelId, MessageId) -> Unit, spoilerConfig: SpoilerConfig?) {
       kotlin.jvm.internal.q.h(var1, "postPreviewEmbed");
       kotlin.jvm.internal.q.h(var2, "onTapPostPreviewEmbed");
-      val var11: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var15: java.lang.String = var1.getTitle();
-      val var17: java.lang.String = var1.getSubtitle();
-      val var10: java.lang.String = var1.getCtaText();
+      val var10: PostPreviewEmbedView = this.postPreviewEmbedView;
+      val var11: java.lang.String = var1.getTitle();
+      val var16: java.lang.String = var1.getSubtitle();
+      val var9: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
       val var12: java.lang.String = var1.getCoverImage();
-      val var9: java.lang.String = var1.getBlurredCoverImage();
-      val var16: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var18: StructurableText = var1.getFooter();
-      val var13: java.lang.String = var1.getCoverImageOverlayText();
-      val var14: java.lang.String = var1.getBackgroundImage();
+      val var14: java.lang.String = var1.getBlurredCoverImage();
+      val var18: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var13: StructurableText = var1.getFooter();
+      val var17: java.lang.String = var1.getCoverImageOverlayText();
+      val var15: java.lang.String = var1.getBackgroundImage();
       val var21: D = new D(var2, var1);
       val var8: Boolean = var1.getShouldSpoiler();
       var var19: java.lang.Boolean = var1.getObscureAwaitingScan();
@@ -69,6 +69,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var7 = false;
       }
 
-      var11.setPostPreviewEmbed-4itWklQ(var15, var17, var10, var4, var18, var16, var12, var9, var13, var14, var21, var8, var5, var6, var7, var3);
+      var10.setPostPreviewEmbed-4itWklQ(var11, var16, var9, var4, var13, var18, var12, var14, var17, var15, var21, var8, var5, var6, var7, var3);
    }
 }

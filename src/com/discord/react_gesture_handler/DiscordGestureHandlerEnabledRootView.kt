@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.g0
+import androidx.core.view.e0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchListener
 import com.discord.theme.ThemeManager
@@ -39,10 +39,10 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
       val var3: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
       while (var3.hasNext()) {
-         val var5: Entry = var3.next() as Entry;
-         val var4: Function1 = var5.getKey() as Function1;
-         if (var5.getValue() as java.lang.Boolean) {
-            var4.invoke(var1);
+         val var4: Entry = var3.next() as Entry;
+         val var5: Function1 = var4.getKey() as Function1;
+         if (var4.getValue() as java.lang.Boolean) {
+            var5.invoke(var1);
          } else {
             var3.remove();
          }
@@ -60,12 +60,12 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    protected open fun onAttachedToWindow() {
       super.onAttachedToWindow();
-      val var2: ThemeManager = ThemeManager.INSTANCE;
+      val var1: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
       if (q.c(Companion.getNullable$react_gesture_handler_release(this), this)) {
-         val var1: Context = this.getContext();
-         q.g(var1, "getContext(...)");
-         var2.updateWindowBackground(var1, false);
+         val var2: Context = this.getContext();
+         q.g(var2, "getContext(...)");
+         var1.updateWindowBackground(var2, false);
       }
    }
 
@@ -77,7 +77,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
             return var1 as DiscordGestureHandlerEnabledRootView;
          } else {
             if (var1 is ViewGroup) {
-               for (View var2 : g0.a((ViewGroup)var1)) {
+               for (View var2 : e0.a((ViewGroup)var1)) {
                   val var4: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.find(var2);
                   if (var4 != null) {
                      return var4;

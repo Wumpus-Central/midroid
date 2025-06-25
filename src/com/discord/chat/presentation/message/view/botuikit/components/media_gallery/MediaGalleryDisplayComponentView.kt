@@ -1,5 +1,10 @@
 package com.discord.chat.presentation.message.view.botuikit.components.media_gallery
 
+import C1.k
+import C1.l
+import C1.m
+import C1.n
+import C1.o
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -25,11 +30,6 @@ import kotlin.jvm.functions.Function4
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import n1.k
-import n1.l
-import n1.m
-import n1.n
-import n1.o
 
 public class MediaGalleryDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,

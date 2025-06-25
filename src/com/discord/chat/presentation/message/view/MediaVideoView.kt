@@ -191,12 +191,12 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var34: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var38: SpoilerViewManager = this.spoilerViewManager;
-      val var35: ConstraintLayout = this.binding.container;
+      val var41: SpoilerViewManager = this.spoilerViewManager;
+      val var38: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
       val var42: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var41: MediaView = this.binding.mediaView;
+      val var35: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.q.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -210,7 +210,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var38.configureSpoiler(var13, var35, var42, var41, null, var11, var15, var12, var10, var16, var17);
+      var41.configureSpoiler(var13, var38, var42, var35, null, var11, var15, var12, var10, var16, var17);
       val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
@@ -261,7 +261,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.a0.q0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.Y.q0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -273,7 +273,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
                kotlin.jvm.internal.q.h(var1, "host");
                kotlin.jvm.internal.q.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
-               var2.M0(this.$role);
+               var2.N0(this.$role);
             }
          });
       }

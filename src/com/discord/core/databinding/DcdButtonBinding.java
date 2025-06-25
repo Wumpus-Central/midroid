@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.core.R;
 import com.discord.progress_dots.ProgressDots;
 import com.google.android.material.button.MaterialButton;
-import t0.a;
+import z0.a;
 
 public final class DcdButtonBinding implements ViewBinding {
    public final MaterialButton button;

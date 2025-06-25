@@ -1,13 +1,13 @@
 package com.discord.analytics
 
-import Q0.a
+import A9.b
 import com.android.installreferrer.api.InstallReferrerClient
+import f1.a
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.g
 import kotlin.jvm.functions.Function1
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
-import l9.b
 
 @JvmSynthetic
 fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
@@ -17,7 +17,7 @@ fun `access$await`(var0: InstallReferrerClient, var1: Continuation): Any {
 private suspend fun InstallReferrerClient.await(): Int {
    val var2: e = new e(b.c(var1), 1);
    var2.C();
-   val var3: a = new a(var2) {
+   val var4: a = new a(var2) {
       final CancellableContinuation $continuation;
 
       {
@@ -26,7 +26,7 @@ private suspend fun InstallReferrerClient.await(): Int {
 
       @Override
       public void onInstallReferrerServiceDisconnected() {
-         if (this.$continuation.d()) {
+         if (this.$continuation.c()) {
             kotlinx.coroutines.CancellableContinuation.a.a(this.$continuation, null, 1, null);
          }
       }
@@ -50,11 +50,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: kotlin.Result.a = Result.k;
+               val var5: kotlin.Result.a = Result.k;
                var2.a();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var5: kotlin.Result.a = Result.k;
+               val var6: kotlin.Result.a = Result.k;
                Result.b(c.a(var3));
                return;
             }
@@ -64,11 +64,11 @@ private suspend fun InstallReferrerClient.await(): Int {
 
    label20:
    try {
-      val var4: kotlin.Result.a = Result.k;
-      var0.d(var3);
+      val var10: kotlin.Result.a = Result.k;
+      var0.d(var4);
       var7 = Result.b(Unit.a);
    } catch (var5: java.lang.Throwable) {
-      val var10: kotlin.Result.a = Result.k;
+      val var3: kotlin.Result.a = Result.k;
       var7 = Result.b(c.a(var5));
       break label20;
    }

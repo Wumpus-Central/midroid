@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.a0
+import androidx.core.view.Y
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.q
 
@@ -27,7 +27,7 @@ public object ImmersiveMode {
       }
 
       q.e(var3);
-      a0.F0(var5, new a(var5, var3));
+      Y.F0(var5, new a(var5, var3));
    }
 
    @JvmStatic
@@ -38,7 +38,7 @@ public object ImmersiveMode {
       q.e(var3);
       val var6: WindowInsetsCompat = var5.b(var4, Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
-      a0.c0(var1, var6);
+      Y.c0(var1, var6);
       return var6;
    }
 

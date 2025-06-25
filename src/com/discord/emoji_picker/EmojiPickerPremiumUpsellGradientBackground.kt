@@ -6,7 +6,7 @@ import android.graphics.LinearGradient
 import android.graphics.Paint
 import android.graphics.Shader.TileMode
 import android.view.View
-import androidx.core.view.g0
+import androidx.core.view.e0
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
@@ -30,7 +30,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    private fun drawGradient(c: Canvas, parent: RecyclerView) {
-      val var9: java.util.Iterator = g0.a(var2).iterator();
+      val var9: java.util.Iterator = e0.a(var2).iterator();
       var var7: Int = 0;
       var var5: Float = -1.0F;
       var var4: Float = -1.0F;

@@ -10,6 +10,6 @@ public final class d implements Function1 {
    public final Function2 l;
 
    public final Object invoke(Object var1) {
-      return FastestListView.Q(this.j, this.k, this.l, (Boolean)var1);
+      return FastestListView.S(this.j, this.k, this.l, (Boolean)var1);
    }
 }

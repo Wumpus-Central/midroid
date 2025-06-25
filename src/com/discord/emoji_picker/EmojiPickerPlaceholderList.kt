@@ -59,7 +59,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle();
          } else {
             if (var3 !is EmojiPickerItemData.CoreData.NativeSection.Guild) {
-               throw new e9.n();
+               throw new t9.n();
             }
 
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Guild).getGuildName();

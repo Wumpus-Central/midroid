@@ -15,7 +15,7 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            return new MetricsSize(x0.a.a.a().a(var1));
+            return new MetricsSize(D0.a.a.a().a(var1));
          } catch (var2: Exception) {
             return null;
          }
@@ -27,7 +27,7 @@ internal object DeviceMetrics {
          return null;
       } else {
          try {
-            val var4: WindowMetrics = x0.a.a.a().a(var1);
+            val var4: WindowMetrics = D0.a.a.a().a(var1);
             if (VERSION.SDK_INT >= 34) {
                val var2: Insets = var4.b().g(WindowInsetsCompat.n.h() or WindowInsetsCompat.n.b());
                return new MetricsSize(var4.a().width() - var2.a - var2.c, var4.a().height() - var2.b - var2.d);

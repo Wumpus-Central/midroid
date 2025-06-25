@@ -1,5 +1,8 @@
 package com.discord.chat.presentation.message.view.mosaic
 
+import E1.b
+import E1.c
+import E1.d
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -20,9 +23,6 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.misc.utilities.view.ViewClippingUtilsKt
 import kotlin.jvm.internal.q
-import p1.b
-import p1.c
-import p1.d
 
 public class AttachmentMediaMosaicContainerView  public constructor(context: Context, attrs: AttributeSet? = null) : ConstraintLayout {
    private final val binding: AttachmentMediaMosaicContainerViewBinding
@@ -46,7 +46,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       this.binding = var4;
       val var5: MosaicLayoutManager = new MosaicLayoutManager(var1);
       this.mosaicLayoutManager = var5;
-      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new p1.a(this), new b(this), new c(this), new d(this));
+      val var3: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new E1.a(this), new b(this), new c(this), new d(this));
       this.attachmentAdapter = var3;
       val var6: RecyclerView = var4.mosaic;
       q.e(var4.mosaic);

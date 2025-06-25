@@ -16,8 +16,7 @@
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " days"
         ]
@@ -244,15 +243,13 @@
       {
         "one": [
           [
-            1,
-            "unreadsCount"
+            7
           ],
           " more mention"
         ],
         "other": [
           [
-            1,
-            "unreadsCount"
+            7
           ],
           " more mentions"
         ]
@@ -324,12 +321,14 @@
       "attachmentsCount",
       {
         "one": [
-          "1 attachment"
+          [
+            7
+          ],
+          " attachment"
         ],
         "other": [
           [
-            1,
-            "attachmentsCount"
+            7
           ],
           " attachments"
         ]
@@ -387,12 +386,14 @@
       "numDays",
       {
         "one": [
-          "1 day"
+          [
+            7
+          ],
+          " day"
         ],
         "other": [
           [
-            1,
-            "numDays"
+            7
           ],
           " days"
         ]
@@ -413,12 +414,14 @@
       "numHours",
       {
         "one": [
-          "1 hour"
+          [
+            7
+          ],
+          " hour"
         ],
         "other": [
           [
-            1,
-            "numHours"
+            7
           ],
           " hours"
         ]
@@ -439,12 +442,14 @@
       "numMinutes",
       {
         "one": [
-          "1 minute"
+          [
+            7
+          ],
+          " minute"
         ],
         "other": [
           [
-            1,
-            "numMinutes"
+            7
           ],
           " minutes"
         ]
@@ -470,8 +475,7 @@
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " months"
         ]
@@ -614,8 +618,7 @@
         ],
         "other": [
           [
-            1,
-            "count"
+            7
           ],
           " years"
         ]

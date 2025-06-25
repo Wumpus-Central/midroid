@@ -27,8 +27,8 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
-import e9.s
 import kotlin.jvm.functions.Function1
+import t9.s
 
 internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    private final val context: ReactApplicationContext
@@ -377,11 +377,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getVoiceBubbleProvider$p(this).removeViewFromOverlay();
          access$getTrashWrapProvider$p(this).removeViewFromOverlay();
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 
@@ -393,11 +393,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
          access$getSelectorDialogProvider$p(this).setData(var1);
          access$getTrashWrapProvider$p(this).setData(var1);
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

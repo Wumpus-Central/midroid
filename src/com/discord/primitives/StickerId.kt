@@ -1,10 +1,10 @@
 package com.discord.primitives
 
-import Xa.f
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public inline class StickerId : SnowflakePrimitive {

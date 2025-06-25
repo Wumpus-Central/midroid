@@ -1,10 +1,10 @@
 package com.discord.chat.input.events
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactEvent {
@@ -57,13 +57,13 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.text;
-      val var2: java.lang.String = this.requestId;
+      val var2: java.lang.String = this.text;
+      val var3: java.lang.String = this.requestId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("OnTextFlushedEvent(text=");
-      var1.append(var3);
-      var1.append(", requestId=");
       var1.append(var2);
+      var1.append(", requestId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

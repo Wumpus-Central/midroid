@@ -1,9 +1,9 @@
 package com.discord.media_player.reactevents
 
-import Xa.f
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
+import mb.f
 
 @f
 public data class MediaPlayerProgress(id: Double, time: Double, duration: Double) : ReactEvent {
@@ -59,14 +59,14 @@ public data class MediaPlayerProgress(id: Double, time: Double, duration: Double
    }
 
    public override fun toString(): String {
-      val var5: Double = this.id;
-      val var3: Double = this.time;
+      val var3: Double = this.id;
+      val var5: Double = this.time;
       val var1: Double = this.duration;
       val var7: StringBuilder = new StringBuilder();
       var7.append("MediaPlayerProgress(id=");
-      var7.append(var5);
-      var7.append(", time=");
       var7.append(var3);
+      var7.append(", time=");
+      var7.append(var5);
       var7.append(", duration=");
       var7.append(var1);
       var7.append(")");
