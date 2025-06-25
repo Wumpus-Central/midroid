@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class StrongContentNode(content: List<ContentNode>) : ContentNode {

@@ -19,7 +19,7 @@ public object DCDModuleProvider {
    public fun ArrayList<ReactPackage>.addTurboPackages(vararg turboPackages: BaseReactPackage): Boolean {
       q.h(var1, "<this>");
       q.h(var2, "turboPackages");
-      return kotlin.collections.i.B(var1, var2);
+      return kotlin.collections.i.C(var1, var2);
    }
 
    public fun getLegacyPackageForModule(onNativeModule: (ReactApplicationContext) -> ReactContextBaseJavaModule): ReactPackage {

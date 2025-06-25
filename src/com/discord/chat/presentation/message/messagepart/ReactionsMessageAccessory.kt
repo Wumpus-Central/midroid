@@ -253,12 +253,12 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var13: Int = MessageId.hashCode-impl(this.messageId);
+      val var14: Int = MessageId.hashCode-impl(this.messageId);
       val var11: Int = this.reactions.hashCode();
-      val var9: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
-      val var8: Int = java.lang.Boolean.hashCode(this.canAddNewBurstReactions);
-      val var12: Int = this.addReactionLabel.hashCode();
-      val var14: Int = this.addNewReactionAccessibilityLabel.hashCode();
+      val var12: Int = java.lang.Boolean.hashCode(this.canAddNewReactions);
+      val var9: Int = java.lang.Boolean.hashCode(this.canAddNewBurstReactions);
+      val var8: Int = this.addReactionLabel.hashCode();
+      val var13: Int = this.addNewReactionAccessibilityLabel.hashCode();
       val var10: Int = this.addNewBurstReactionAccessibilityLabel.hashCode();
       var var7: Int = 0;
       val var1: Int;
@@ -275,11 +275,11 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
          var2 = this.theme.hashCode();
       }
 
-      val var18: Int = java.lang.Boolean.hashCode(this.showReactionShortcut);
+      val var16: Int = java.lang.Boolean.hashCode(this.showReactionShortcut);
       val var15: Int = java.lang.Boolean.hashCode(this.showReplyShortcut);
-      val var16: Int = java.lang.Boolean.hashCode(this.showForwardShortcut);
+      val var17: Int = java.lang.Boolean.hashCode(this.showForwardShortcut);
       val var19: Int = java.lang.Boolean.hashCode(this.showThreadShortcut);
-      val var17: Int = java.lang.Boolean.hashCode(this.shortcutsEnabled);
+      val var18: Int = java.lang.Boolean.hashCode(this.shortcutsEnabled);
       val var3: Int;
       if (this.targetKind == null) {
          var3 = 0;
@@ -329,21 +329,21 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
                                                                                                                                     (
                                                                                                                                              (
                                                                                                                                                       (
-                                                                                                                                                               var13
+                                                                                                                                                               var14
                                                                                                                                                                      * 31
                                                                                                                                                                   + var11
                                                                                                                                                             )
                                                                                                                                                             * 31
-                                                                                                                                                         + var9
+                                                                                                                                                         + var12
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var8
+                                                                                                                                                + var9
                                                                                                                                           )
                                                                                                                                           * 31
-                                                                                                                                       + var12
+                                                                                                                                       + var8
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var14
+                                                                                                                              + var13
                                                                                                                         )
                                                                                                                         * 31
                                                                                                                      + var10
@@ -355,19 +355,19 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
                                                                                                    + var2
                                                                                              )
                                                                                              * 31
-                                                                                          + var18
+                                                                                          + var16
                                                                                     )
                                                                                     * 31
                                                                                  + var15
                                                                            )
                                                                            * 31
-                                                                        + var16
+                                                                        + var17
                                                                   )
                                                                   * 31
                                                                + var19
                                                          )
                                                          * 31
-                                                      + var17
+                                                      + var18
                                                 )
                                                 * 31
                                              + var3
@@ -386,65 +386,65 @@ public data class ReactionsMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var13: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var11: java.util.List = this.reactions;
-      val var2: Boolean = this.canAddNewReactions;
-      val var3: Boolean = this.canAddNewBurstReactions;
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var12: java.util.List = this.reactions;
+      val var1: Boolean = this.canAddNewReactions;
+      val var5: Boolean = this.canAddNewBurstReactions;
       val var9: java.lang.String = this.addReactionLabel;
-      val var16: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var12: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var15: ReactionsTheme = this.reactionsTheme;
-      val var18: DiscordTheme = this.theme;
-      val var5: Boolean = this.showReactionShortcut;
-      val var6: Boolean = this.showReplyShortcut;
-      val var1: Boolean = this.showForwardShortcut;
-      val var4: Boolean = this.showThreadShortcut;
-      val var7: Boolean = this.shortcutsEnabled;
-      val var10: java.lang.String = this.targetKind;
-      val var19: Int = this.embedIndex;
-      val var14: java.lang.String = this.replyAccessibilityLabel;
-      val var17: java.lang.String = this.forwardAccessibilityLabel;
-      val var20: java.lang.String = this.threadAccessibilityLabel;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ReactionsMessageAccessory(messageId=");
-      var8.append(var13);
-      var8.append(", reactions=");
-      var8.append(var11);
-      var8.append(", canAddNewReactions=");
-      var8.append(var2);
-      var8.append(", canAddNewBurstReactions=");
-      var8.append(var3);
-      var8.append(", addReactionLabel=");
-      var8.append(var9);
-      var8.append(", addNewReactionAccessibilityLabel=");
-      var8.append(var16);
-      var8.append(", addNewBurstReactionAccessibilityLabel=");
-      var8.append(var12);
-      var8.append(", reactionsTheme=");
-      var8.append(var15);
-      var8.append(", theme=");
-      var8.append(var18);
-      var8.append(", showReactionShortcut=");
-      var8.append(var5);
-      var8.append(", showReplyShortcut=");
-      var8.append(var6);
-      var8.append(", showForwardShortcut=");
-      var8.append(var1);
-      var8.append(", showThreadShortcut=");
-      var8.append(var4);
-      var8.append(", shortcutsEnabled=");
-      var8.append(var7);
-      var8.append(", targetKind=");
-      var8.append(var10);
-      var8.append(", embedIndex=");
-      var8.append(var19);
-      var8.append(", replyAccessibilityLabel=");
-      var8.append(var14);
-      var8.append(", forwardAccessibilityLabel=");
-      var8.append(var17);
-      var8.append(", threadAccessibilityLabel=");
-      var8.append(var20);
-      var8.append(")");
-      return var8.toString();
+      val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var16: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var10: ReactionsTheme = this.reactionsTheme;
+      val var20: DiscordTheme = this.theme;
+      val var3: Boolean = this.showReactionShortcut;
+      val var4: Boolean = this.showReplyShortcut;
+      val var6: Boolean = this.showForwardShortcut;
+      val var7: Boolean = this.showThreadShortcut;
+      val var2: Boolean = this.shortcutsEnabled;
+      val var17: java.lang.String = this.targetKind;
+      val var14: Int = this.embedIndex;
+      val var19: java.lang.String = this.replyAccessibilityLabel;
+      val var13: java.lang.String = this.forwardAccessibilityLabel;
+      val var18: java.lang.String = this.threadAccessibilityLabel;
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("ReactionsMessageAccessory(messageId=");
+      var15.append(var8);
+      var15.append(", reactions=");
+      var15.append(var12);
+      var15.append(", canAddNewReactions=");
+      var15.append(var1);
+      var15.append(", canAddNewBurstReactions=");
+      var15.append(var5);
+      var15.append(", addReactionLabel=");
+      var15.append(var9);
+      var15.append(", addNewReactionAccessibilityLabel=");
+      var15.append(var11);
+      var15.append(", addNewBurstReactionAccessibilityLabel=");
+      var15.append(var16);
+      var15.append(", reactionsTheme=");
+      var15.append(var10);
+      var15.append(", theme=");
+      var15.append(var20);
+      var15.append(", showReactionShortcut=");
+      var15.append(var3);
+      var15.append(", showReplyShortcut=");
+      var15.append(var4);
+      var15.append(", showForwardShortcut=");
+      var15.append(var6);
+      var15.append(", showThreadShortcut=");
+      var15.append(var7);
+      var15.append(", shortcutsEnabled=");
+      var15.append(var2);
+      var15.append(", targetKind=");
+      var15.append(var17);
+      var15.append(", embedIndex=");
+      var15.append(var14);
+      var15.append(", replyAccessibilityLabel=");
+      var15.append(var19);
+      var15.append(", forwardAccessibilityLabel=");
+      var15.append(var13);
+      var15.append(", threadAccessibilityLabel=");
+      var15.append(var18);
+      var15.append(")");
+      return var15.toString();
    }
 }

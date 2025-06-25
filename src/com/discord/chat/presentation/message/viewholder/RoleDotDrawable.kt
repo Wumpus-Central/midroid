@@ -71,7 +71,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
                   0.0F,
                   this.pxSize / (float)2 / (float)2 + (this.pxSize / (float)2 + (float)2),
                   0.0F,
-                  kotlin.collections.i.Q0(var5),
+                  kotlin.collections.i.S0(var5),
                   null,
                   TileMode.MIRROR
                )

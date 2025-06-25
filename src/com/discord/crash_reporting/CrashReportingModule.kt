@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReadableMap
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -51,10 +51,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun addListener(type: String) {
       q.h(var1, "type");
       if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
-         val var2: SystemLogReport = SystemLogReport.INSTANCE;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var3, "getReactApplicationContext(...)");
-         var2.reportLastCrash$crash_reporting_release(var3, new d(this));
+         val var3: SystemLogReport = SystemLogReport.INSTANCE;
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         q.g(var2, "getReactApplicationContext(...)");
+         var3.reportLastCrash$crash_reporting_release(var2, new d(this));
       }
    }
 
@@ -75,10 +75,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getIsUserStaffForCrashReporting(callback: Callback) {
       q.h(var1, "callback");
-      val var2: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var2.getInstance(var3).isStaff()});
+      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var3.getInstance(var2).isStaff()});
    }
 
    public open fun getName(): String {
@@ -88,18 +88,18 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       q.h(var1, "callback");
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var1: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      var2.initSystemLogCapture(var1);
+      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.initSystemLogCapture(var2);
    }
 
    @ReactMethod
@@ -110,9 +110,9 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun setUser(user: ReadableMap) {
       q.h(var1, "user");
       val var2: Boolean = var1.getBoolean("staff");
-      val var3: CrashReportingCache.Companion = CrashReportingCache.Companion;
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
-      var3.getInstance(var4).setStaff(var2);
+      val var4: CrashReportingCache.Companion = CrashReportingCache.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var4.getInstance(var3).setStaff(var2);
    }
 }

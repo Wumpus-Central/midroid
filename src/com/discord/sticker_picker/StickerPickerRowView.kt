@@ -4,18 +4,18 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.e0
+import androidx.core.view.f0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
-import k2.a
-import k2.b
-import k2.c
-import k2.d
+import j2.a
+import j2.b
+import j2.c
+import j2.d
 import kotlin.jvm.internal.q
-import r9.n
+import z9.n
 
 internal class StickerPickerRowView(context: Context) : LinearLayout {
    private final var firstRenderPass: Boolean
@@ -42,12 +42,12 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
          var6 = var6 as StickerPickerRow.Sticker;
          val var7: View = this.getChildAt(var3);
          q.f(var7, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         val var8: StickerView = var7 as StickerView;
+         val var10: StickerView = var7 as StickerView;
          if (var6 == null) {
-            var8.setVisibility(4);
-            var8.recycle();
+            var10.setVisibility(4);
+            var10.recycle();
          } else {
-            var8.setVisibility(0);
+            var10.setVisibility(0);
             val var2: Float;
             if (((StickerPickerRow.Sticker)var6).getOpaque()) {
                var2 = 1.0F;
@@ -55,10 +55,10 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                var2 = 0.3F;
             }
 
-            var8.setAlpha(var2);
-            var8.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new a(this, (StickerPickerRow.Sticker)var6), 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, new b(this, (StickerPickerRow.Sticker)var6), 1, null);
+            var10.setAlpha(var2);
+            var10.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new a(this, (StickerPickerRow.Sticker)var6), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var10, false, new b(this, (StickerPickerRow.Sticker)var6), 1, null);
             val var4: Int = StickerPickerRowView.WhenMappings.$EnumSwitchMapping$0[((StickerPickerRow.Sticker)var6).getType().ordinal()];
             if (var4 != 1) {
                if (var4 != 2) {
@@ -67,7 +67,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                         throw new n();
                      }
 
-                     var8.asGif(
+                     var10.asGif(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -75,7 +75,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                         ((StickerPickerRow.Sticker)var6).getName()
                      );
                   } else {
-                     var8.asLottie(
+                     var10.asLottie(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -86,7 +86,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                      );
                   }
                } else {
-                  var8.asApng(
+                  var10.asApng(
                      ((StickerPickerRow.Sticker)var6).getUrl(),
                      var1.getItemSize(),
                      var1.getItemSize(),
@@ -95,7 +95,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                   );
                }
             } else {
-               var8.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
+               var10.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
             }
          }
       }
@@ -158,7 +158,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var2 : e0.a(this)) {
+      for (View var2 : f0.a(this)) {
          q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
          (var2 as StickerView).recycle();
       }

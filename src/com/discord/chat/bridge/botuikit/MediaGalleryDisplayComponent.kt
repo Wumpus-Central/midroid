@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class MediaGalleryDisplayComponent(type: Int, id: String, items: List<MediaGalleryItem>) : Component {

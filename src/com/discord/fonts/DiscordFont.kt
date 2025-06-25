@@ -1,5 +1,6 @@
 package com.discord.fonts
 
+import H9.a
 import android.content.Context
 import android.content.res.AssetManager
 import android.graphics.Typeface
@@ -8,7 +9,6 @@ import java.util.Map.Entry
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import z9.a
 
 public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, monospace: Boolean = false) {
    CodeBold("ggmono-Bold, SourceCodePro-Bold", 700, false, true),
@@ -79,29 +79,29 @@ public enum class DiscordFont(rawName: String, weight: Int, italic: Boolean, mon
          val var6: java.lang.String = var2.getRawName();
          val var4: AssetManager = var1.getAssets();
          q.g(var4, "getAssets(...)");
-         val var7: Typeface = var3.getTypeface(var6, 0, var4);
-         if (!q.c(var7, Typeface.DEFAULT)) {
-            return var7;
+         val var5: Typeface = var3.getTypeface(var6, 0, var4);
+         if (!q.c(var5, Typeface.DEFAULT)) {
+            return var5;
          } else {
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("Cannot find typeface ");
-            var5.append(var7);
-            var5.append(".rawName");
-            throw new IllegalStateException(var5.toString().toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Cannot find typeface ");
+            var7.append(var5);
+            var7.append(".rawName");
+            throw new IllegalStateException(var7.toString().toString());
          }
       }
 
       public fun findByStyle(weight: Int, italic: Boolean, monospace: Boolean = false): DiscordFont? {
-         val var6: java.util.Iterator = DiscordFont.getEntries().iterator();
+         val var5: java.util.Iterator = DiscordFont.getEntries().iterator();
 
          var var4: Any;
          do {
-            if (!var6.hasNext()) {
+            if (!var5.hasNext()) {
                var4 = null;
                break;
             }
 
-            var4 = var6.next();
+            var4 = var5.next();
          } while (((DiscordFont)var4).getWeight() != var1 || ((DiscordFont)var4).getItalic() != var2 || ((DiscordFont)var4).getMonospace() != var3);
 
          return var4 as DiscordFont;

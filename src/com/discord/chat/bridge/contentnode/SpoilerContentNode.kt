@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {

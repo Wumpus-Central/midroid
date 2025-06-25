@@ -32,7 +32,7 @@ import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import r9.n
+import z9.n
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -64,18 +64,18 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var4, "inflate(...)");
-      this.binding = var4;
-      this.progressDots$delegate = r9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      q.g(var6, "inflate(...)");
+      this.binding = var6;
+      this.progressDots$delegate = z9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
-      q.g(var4.linkIcon, "linkIcon");
+      val var5: SimpleDraweeView = var6.linkIcon;
+      q.g(var6.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 

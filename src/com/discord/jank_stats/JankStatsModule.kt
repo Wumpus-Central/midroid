@@ -5,7 +5,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 public class JankStatsModule(reactContext: ReactApplicationContext) : NativeJankStatsModuleSpec {
    init {

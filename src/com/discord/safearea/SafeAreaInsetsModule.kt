@@ -13,13 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import g2.a
-import g2.b
-import g2.c
-import g2.d
-import g2.e
+import f2.a
+import f2.b
+import f2.c
+import f2.d
+import f2.e
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {

@@ -1,6 +1,5 @@
 package com.discord.browser_manager
 
-import Xa.j
 import android.content.ActivityNotFoundException
 import android.content.Context
 import android.content.Intent
@@ -9,6 +8,7 @@ import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
+import fb.k
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 
@@ -26,7 +26,7 @@ internal object BrowserManager {
          try {
             val var11: java.util.List = var1.getPackageManager().queryIntentActivities(var10, 0);
             q.g(var11, "queryIntentActivities(...)");
-            var10.setPackage(j.s(j.p(j.z(i.T(var11), new a()), new b(var1))) as java.lang.String);
+            var10.setPackage(k.t(k.q(k.A(i.V(var11), new a()), new b(var1))) as java.lang.String);
          } catch (var8: ActivityNotFoundException) {
             var3.invoke(var8);
             return;
@@ -84,9 +84,9 @@ internal object BrowserManager {
       q.h(var3, "onFailure");
 
       try {
-         val var4: Uri = Uri.parse(var2);
-         q.e(var4);
-         this.openUrlWithCustomTabs(var1, var4, new c(var1, var2, var3));
+         val var5: Uri = Uri.parse(var2);
+         q.e(var5);
+         this.openUrlWithCustomTabs(var1, var5, new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

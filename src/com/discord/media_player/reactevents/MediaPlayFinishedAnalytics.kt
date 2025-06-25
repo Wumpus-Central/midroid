@@ -2,9 +2,9 @@ package com.discord.media_player.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
@@ -190,29 +190,29 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
    }
 
    public override fun toString(): String {
-      val var8: Long = this.playWallTimeMs;
-      val var12: Long = this.stallMs;
+      val var12: Long = this.playWallTimeMs;
+      val var14: Long = this.stallMs;
       val var3: Int = this.stallCount;
-      val var5: Int = this.seekCount;
-      val var6: Long = this.firstPlayWaitingMs;
+      val var2: Int = this.seekCount;
+      val var8: Long = this.firstPlayWaitingMs;
       val var17: java.lang.String = this.mediaSource;
       val var1: Float = this.fileDurationSec;
       val var18: java.lang.String = this.mimeType;
       val var4: Int = this.fatalErrorCount;
-      val var2: Int = this.nonFatalErrorCount;
-      val var14: Long = this.totalDroppedFrames;
+      val var5: Int = this.nonFatalErrorCount;
+      val var6: Long = this.totalDroppedFrames;
       val var10: Long = this.totalBandwidthBytes;
       val var16: StringBuilder = new StringBuilder();
       var16.append("MediaPlayFinishedAnalytics(playWallTimeMs=");
-      var16.append(var8);
-      var16.append(", stallMs=");
       var16.append(var12);
+      var16.append(", stallMs=");
+      var16.append(var14);
       var16.append(", stallCount=");
       var16.append(var3);
       var16.append(", seekCount=");
-      var16.append(var5);
+      var16.append(var2);
       var16.append(", firstPlayWaitingMs=");
-      var16.append(var6);
+      var16.append(var8);
       var16.append(", mediaSource=");
       var16.append(var17);
       var16.append(", fileDurationSec=");
@@ -222,9 +222,9 @@ public data class MediaPlayFinishedAnalytics(playWallTimeMs: Long,
       var16.append(", fatalErrorCount=");
       var16.append(var4);
       var16.append(", nonFatalErrorCount=");
-      var16.append(var2);
+      var16.append(var5);
       var16.append(", totalDroppedFrames=");
-      var16.append(var14);
+      var16.append(var6);
       var16.append(", totalBandwidthBytes=");
       var16.append(var10);
       var16.append(")");

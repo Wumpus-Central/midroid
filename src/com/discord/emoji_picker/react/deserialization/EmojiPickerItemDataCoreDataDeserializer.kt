@@ -1,5 +1,6 @@
 package com.discord.emoji_picker.react.deserialization
 
+import A9.n
 import com.discord.emoji.UnicodeEmojis
 import com.discord.emoji_picker.EmojiPickerItem
 import com.discord.emoji_picker.EmojiPickerItemData
@@ -16,7 +17,6 @@ import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import java.util.HashSet
 import kotlin.jvm.internal.q
-import s9.n
 
 internal object EmojiPickerItemDataCoreDataDeserializer {
    private fun deserializeRowSize(data: ReadableMap): Int {
@@ -29,22 +29,22 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
    }
 
    private fun deserializeTypeEmojiRowSlim(emojisRow: ReadableArray, emojiItems: MutableList<EmojiPickerItem>, isSectionNitroLocked: Boolean) {
-      val var6: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var1).iterator();
+      val var5: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var1).iterator();
 
-      while (var6.hasNext()) {
-         val var8: ReadableMap = var1.getMap((var6 as n).a());
-         q.e(var8);
-         val var7: java.lang.String = var8.getString("id");
-         val var5: java.lang.String = NativeMapExtensionsKt.getNonNullString(var8, "name");
-         val var4: Boolean = NativeMapExtensionsKt.getBoolean(var8, "animated", false);
-         if (var7 == null) {
+      while (var5.hasNext()) {
+         val var7: ReadableMap = var1.getMap((var5 as n).a());
+         q.e(var7);
+         val var6: java.lang.String = var7.getString("id");
+         val var8: java.lang.String = NativeMapExtensionsKt.getNonNullString(var7, "name");
+         val var4: Boolean = NativeMapExtensionsKt.getBoolean(var7, "animated", false);
+         if (var6 == null) {
             var2.add(
                new EmojiPickerItem.Emoji(
-                  IdUtilsKt.convertToId(var5),
-                  var5,
+                  IdUtilsKt.convertToId(var8),
+                  var8,
                   var4,
                   null,
-                  new UnicodeEmojis.Emoji(i.e(var5), NativeMapExtensionsKt.getNonNullString(var8, "surrogates")),
+                  new UnicodeEmojis.Emoji(i.e(var8), NativeMapExtensionsKt.getNonNullString(var7, "surrogates")),
                   false,
                   40,
                   null
@@ -53,10 +53,10 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
          } else {
             var2.add(
                new EmojiPickerItem.Emoji(
-                  java.lang.Long.parseLong(var7),
-                  var5,
+                  java.lang.Long.parseLong(var6),
+                  var8,
                   var4,
-                  EmojiPickerItem.Emoji.DisabledType.Companion.create(NativeMapExtensionsKt.getBoolean(var8, "disabled", false), var3),
+                  EmojiPickerItem.Emoji.DisabledType.Companion.create(NativeMapExtensionsKt.getBoolean(var7, "disabled", false), var3),
                   null,
                   false,
                   48,
@@ -97,14 +97,14 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
       if (var6 != null) {
          val var8: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
          val var5: Int = var1.getInt("emojiCount");
-         val var11: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "emojisDisabled");
+         val var7: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var1, "emojisDisabled");
          val var10: HashSet = new HashSet();
-         val var9: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var11).iterator();
+         val var11: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var7).iterator();
 
-         while (var9.hasNext()) {
-            val var7: java.lang.String = var11.getString((var9 as n).a());
-            q.e(var7);
-            var10.add(java.lang.Long.parseLong(var7));
+         while (var11.hasNext()) {
+            val var9: java.lang.String = var7.getString((var11 as n).a());
+            q.e(var9);
+            var10.add(java.lang.Long.parseLong(var9));
          }
 
          var2.add(
@@ -127,8 +127,8 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
       val var16: EmojiPickerItem.Spacer = new EmojiPickerItem.Spacer("top", SizeUtilsKt.getDpToPx(var4));
       val var8: EmojiPickerItem.Spacer = new EmojiPickerItem.Spacer("bottom", SizeUtilsKt.getDpToPx(var3));
       val var17: java.util.List = i.q(new EmojiPickerItem[]{var16});
-      val var9: java.util.List = i.q(new EmojiPickerItem[]{var8});
-      val var12: ArrayList = new ArrayList();
+      val var12: java.util.List = i.q(new EmojiPickerItem[]{var8});
+      val var9: ArrayList = new ArrayList();
       val var10: ArrayList = new ArrayList();
       val var11: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var2, "data");
       val var19: java.util.Iterator = NativeArrayExtensionsKt.sizeRange(var11).iterator();
@@ -147,7 +147,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
                         throw new IllegalArgumentException(var14.getUnsupported());
                      }
                   } else {
-                     INSTANCE.deserializeTypeFooterUpsell(var13, var9);
+                     INSTANCE.deserializeTypeFooterUpsell(var13, var12);
                   }
                } else {
                   val var22: EmojiPickerItemDataCoreDataDeserializer = INSTANCE;
@@ -158,7 +158,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
                      var6 = true;
                   }
 
-                  var22.deserializeTypeNativeSection(var13, var12, var10, var18);
+                  var22.deserializeTypeNativeSection(var13, var9, var10, var18);
                }
             } else {
                val var21: EmojiPickerItemDataCoreDataDeserializer = INSTANCE;
@@ -178,7 +178,7 @@ internal object EmojiPickerItemDataCoreDataDeserializer {
       }
 
       return new EmojiPickerItemData.CoreData(
-         this.deserializeRowSize(var2), var2.getBoolean("hasGuildData"), var2.getBoolean("hasSearchData"), var6, var17, var9, var12, var10
+         this.deserializeRowSize(var2), var2.getBoolean("hasGuildData"), var2.getBoolean("hasSearchData"), var6, var17, var12, var9, var10
       );
    }
 }

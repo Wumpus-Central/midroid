@@ -1,7 +1,5 @@
 package com.discord.chat.presentation.message.decorations
 
-import A1.d
-import A1.e
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
@@ -13,7 +11,9 @@ import com.discord.channel_spine.ChannelSpineView
 import com.discord.chat.R
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.q
-import r9.j
+import z1.d
+import z1.e
+import z9.j
 
 public class SpineDrawer(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final val context: Context

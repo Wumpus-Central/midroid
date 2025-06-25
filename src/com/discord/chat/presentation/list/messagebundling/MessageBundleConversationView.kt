@@ -123,22 +123,22 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var15: Context = this.getContext();
          q.g(var15, "getContext(...)");
          val var11: java.lang.String = var12.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var12);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var12);
-         val var8: Boolean = var12.getShouldShowRoleDot();
+         val var8: Boolean = MessageKt.shouldAnimateEmoji(var12);
+         val var7: Boolean = MessageKt.shouldShowLinkDecorations(var12);
+         val var9: Boolean = var12.getShouldShowRoleDot();
          val var10: Boolean = var12.getShouldShowRoleOnName();
          val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          q.g(var16, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var16);
          val var37: TextPaint = this.binding.replyText.getPaint();
          q.g(var37, "getPaint(...)");
-         val var28: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+         val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var14,
             var15,
             var11,
+            var8,
             var7,
             var9,
-            var8,
             var10,
             var37,
             null,
@@ -163,25 +163,25 @@ public class MessageBundleConversationView  public constructor(context: Context,
             46137216,
             null
          );
-         val var34: MessageContentView = this.binding.replyText;
+         val var28: MessageContentView = this.binding.replyText;
          q.g(this.binding.replyText, "replyText");
-         SpannableExtensionsKt.coverWithSpan(var28, new BackgroundSpanDrawer(var34));
-         var21 = ReplyUtilsKt.createReplyContent(var20, var28);
+         SpannableExtensionsKt.coverWithSpan(var34, new BackgroundSpanDrawer(var28));
+         var21 = ReplyUtilsKt.createReplyContent(var20, var34);
       } else if (MessageFlagKt.hasMessageFlag(var12.getFlags(), MessageFlag.IS_COMPONENTS_V2)) {
-         val var29: TextView = this.binding.replyAuthorName;
+         val var22: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var22: Context = this.getContext();
-         q.g(var22, "getContext(...)");
+         val var29: Context = this.getContext();
+         q.g(var29, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var29, I18nUtilsKt.i18nFormat$default(var22, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
+            var22, I18nUtilsKt.i18nFormat$default(var29, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
          );
       } else {
-         val var23: TextView = this.binding.replyAuthorName;
+         val var30: TextView = this.binding.replyAuthorName;
          q.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var30: Context = this.getContext();
-         q.g(var30, "getContext(...)");
+         val var23: Context = this.getContext();
+         q.g(var23, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var23, I18nUtilsKt.i18nFormat$default(var30, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var30, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 

@@ -3,7 +3,7 @@ package com.discord.client_info
 import android.content.Context
 import java.util.Locale
 import kotlin.jvm.internal.q
-import r9.j
+import z9.j
 
 public object ClientInfo {
    public final lateinit var versionName: String
@@ -63,7 +63,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@287.1.0-2+287201"
+   public const val SENTRY_RELEASE: String = "discord_android@287.2.0-2+287202"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -108,7 +108,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "a5ff933b-f106-4093-b4e9-faf8435462d6"
+   public const val PROGUARD_UUID: String = "a7d48e76-3f9d-4130-ad58-9da0c31c1ea0"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {

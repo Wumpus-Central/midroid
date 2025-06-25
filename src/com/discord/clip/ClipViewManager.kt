@@ -1,5 +1,6 @@
 package com.discord.clip
 
+import A9.n
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.ReadableArray
@@ -11,7 +12,6 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
 import kotlin.jvm.internal.q
-import s9.n
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {

@@ -1,8 +1,8 @@
 package com.discord.contact_sync
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class ContactSyncBlobEntry(phone: String,
@@ -111,25 +111,25 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.phone;
-      val var4: java.lang.String = this.unencryptedName;
+      val var2: java.lang.String = this.phone;
+      val var5: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var2: java.lang.String = this.deviceContactId;
-      val var3: java.lang.String = this.givenName;
-      val var5: java.lang.String = this.familyName;
+      val var6: java.lang.String = this.deviceContactId;
+      val var4: java.lang.String = this.givenName;
+      val var3: java.lang.String = this.familyName;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ContactSyncBlobEntry(phone=");
-      var7.append(var6);
+      var7.append(var2);
       var7.append(", unencryptedName=");
-      var7.append(var4);
+      var7.append(var5);
       var7.append(", hasImageData=");
       var7.append(var1);
       var7.append(", deviceContactId=");
-      var7.append(var2);
+      var7.append(var6);
       var7.append(", givenName=");
-      var7.append(var3);
+      var7.append(var4);
       var7.append(", familyName=");
-      var7.append(var5);
+      var7.append(var3);
       var7.append(")");
       return var7.toString();
    }

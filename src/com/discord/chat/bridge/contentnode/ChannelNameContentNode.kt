@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.ChannelType
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
@@ -86,21 +86,21 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var5: ChannelType = this.channelType;
-      val var4: java.lang.String = this.iconType;
-      val var1: java.lang.String = this.icon;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChannelNameContentNode(channelType=");
-      var3.append(var5);
-      var3.append(", iconType=");
-      var3.append(var4);
-      var3.append(", icon=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: ChannelType = this.channelType;
+      val var5: java.lang.String = this.iconType;
+      val var3: java.lang.String = this.icon;
+      val var1: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChannelNameContentNode(channelType=");
+      var4.append(var2);
+      var4.append(", iconType=");
+      var4.append(var5);
+      var4.append(", icon=");
+      var4.append(var3);
+      var4.append(", content=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

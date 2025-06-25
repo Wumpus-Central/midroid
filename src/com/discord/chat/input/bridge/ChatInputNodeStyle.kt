@@ -1,9 +1,9 @@
 package com.discord.chat.input.bridge
 
 import com.discord.span.utilities.common.BackgroundStyle
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgroundStyle: BackgroundStyle?, fontWeight: ChatInputNodeFontWeight? = null) {
@@ -89,21 +89,21 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var5: Int = this.fontSize;
+      val var4: Int = this.fontSize;
       val var1: Int = this.color;
-      val var2: BackgroundStyle = this.backgroundStyle;
-      val var4: ChatInputNodeFontWeight = this.fontWeight;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChatInputNodeStyle(fontSize=");
-      var3.append(var5);
-      var3.append(", color=");
-      var3.append(var1);
-      var3.append(", backgroundStyle=");
-      var3.append(var2);
-      var3.append(", fontWeight=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: BackgroundStyle = this.backgroundStyle;
+      val var3: ChatInputNodeFontWeight = this.fontWeight;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ChatInputNodeStyle(fontSize=");
+      var2.append(var4);
+      var2.append(", color=");
+      var2.append(var1);
+      var2.append(", backgroundStyle=");
+      var2.append(var5);
+      var2.append(", fontWeight=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

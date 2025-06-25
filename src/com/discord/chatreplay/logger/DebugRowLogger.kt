@@ -1,7 +1,7 @@
 package com.discord.chatreplay.logger
 
-import D9.c
-import Ya.a
+import L9.c
+import gb.a
 import java.io.File
 import java.io.FileInputStream
 import java.io.FileOutputStream
@@ -20,26 +20,26 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    init {
       q.h(var1, "logsFolderPath");
       super();
-      var var4: java.lang.String = var1.toString();
-      var var3: StringBuilder = new StringBuilder();
-      var3.append(var2);
-      var3.append(".replay");
-      new File(var4, var3.toString()).delete();
-      val var6: java.lang.String = var1.toString();
-      val var9: StringBuilder = new StringBuilder();
-      var9.append(var2);
-      var9.append(".json");
-      new File(var6, var9.toString()).delete();
-      var4 = var1.toString();
-      var3 = new StringBuilder();
-      var3.append(var2);
-      var3.append(".replay");
-      this.replayFile = new File(var4, var3.toString());
-      val var5: java.lang.String = var1.toString();
-      var3 = new StringBuilder();
-      var3.append(var2);
-      var3.append(".json");
-      this.jsonFile = new File(var5, var3.toString());
+      var var3: java.lang.String = var1.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var2);
+      var4.append(".replay");
+      new File(var3, var4.toString()).delete();
+      val var9: java.lang.String = var1.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var2);
+      var6.append(".json");
+      new File(var9, var6.toString()).delete();
+      val var10: java.lang.String = var1.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var2);
+      var7.append(".replay");
+      this.replayFile = new File(var10, var7.toString());
+      var3 = var1.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append(var2);
+      var5.append(".json");
+      this.jsonFile = new File(var3, var5.toString());
    }
 
    private fun appendLine(line: String) {
@@ -48,16 +48,16 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
             val var2: OutputStreamWriter = new OutputStreamWriter(DebugRowLoggerKt.outputStream(this.replayFile, true), a.b);
 
             try {
-               val var11: StringBuilder = new StringBuilder();
-               var11.append(var1);
-               var11.append("\n");
-               var2.write(var11.toString());
+               val var3: StringBuilder = new StringBuilder();
+               var3.append(var1);
+               var3.append("\n");
+               var2.write(var3.toString());
                var2.flush();
             } catch (var5: java.lang.Throwable) {
-               val var3: java.lang.Throwable = var5;
+               val var10: java.lang.Throwable = var5;
 
                try {
-                  throw var3;
+                  throw var10;
                } catch (var4: java.lang.Throwable) {
                   c.a(var2, var5);
                }
@@ -87,12 +87,12 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       label18: {
          val var2: BooleanRef = new BooleanRef();
          val var1: FileOutputStream = new FileOutputStream(this.jsonFile);
-         val var4: Charset = a.b;
+         val var3: Charset = a.b;
          val var12: OutputStreamWriter = new OutputStreamWriter(var1, a.b);
 
          try {
             var12.write("[\n");
-            D9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new J1.a(var2, var12));
+            L9.q.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new I1.a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {

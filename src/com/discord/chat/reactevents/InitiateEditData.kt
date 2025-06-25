@@ -4,9 +4,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId) : InitiateEditData(var1, var2), ReactEvent {
@@ -58,14 +58,14 @@ internal data class InitiateEditData(messageId: MessageId, channelId: ChannelId)
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("InitiateEditData(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("InitiateEditData(messageId=");
+      var3.append(var2);
+      var3.append(", channelId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

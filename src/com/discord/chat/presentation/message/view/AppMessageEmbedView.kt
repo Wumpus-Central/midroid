@@ -59,15 +59,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var5: java.lang.String = var2.getMessageId();
-      val var6: java.lang.String = var2.getAppId();
+      val var6: java.lang.String = var2.getMessageId();
+      val var5: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
+      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
    }
 
    @JvmStatic
@@ -234,10 +234,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
          }
 
          var4 = var3 / var4;
-         val var52: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
-         val var38: SimpleDraweeView = this.view.banner;
+         val var38: MediaContainingViewResizer = MediaContainingViewResizer.INSTANCE;
+         val var52: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
-         var52.resizeLayoutParams(var38, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
+         var38.resizeLayoutParams(var52, var3, (int)var4, var3, (int)var4, MediaContainingViewResizer.ResizeMode.Fill);
       } else {
          val var39: SimpleDraweeView = this.view.banner;
          kotlin.jvm.internal.q.g(this.view.banner, "banner");
@@ -288,7 +288,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       if (var47 != null && !var47.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var48: java.util.Iterator = kotlin.collections.i.B0(var1.getActions()).iterator();
+         val var48: java.util.Iterator = kotlin.collections.i.D0(var1.getActions()).iterator();
 
          for (int var21 = 0; var48.hasNext(); var21++) {
             var14 = (TextView)var48.next();

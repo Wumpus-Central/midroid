@@ -1,7 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import ab.K
-import ab.f
+import G9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -14,15 +13,16 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
+import ib.K
+import ib.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
-import y9.b
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
    q.h(var0, "<this>");
@@ -90,21 +90,21 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
       }
 
       public final Object invokeSuspend(Object var1) {
-         var var3: MaterialButton = (MaterialButton)b.e();
-         var var4: Any;
+         var var4: MaterialButton = (MaterialButton)b.e();
+         var var3: Any;
          if (this.label != 0) {
             if (this.label != 1) {
                throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
             }
 
-            var3 = this.L$0 as MaterialButton;
+            var4 = this.L$0 as MaterialButton;
             c.b(var1);
-            var4 = var1;
+            var3 = var1;
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            val var5: CoroutineDispatcher = K.b();
-            var4 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            var3 = K.b();
+            val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -129,19 +129,19 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      q.g(var1, "getContext(...)");
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var3.isResource()) {
-                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var2x.isResource()) {
+                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
                         q.g(var6, "getContext(...)");
-                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
+                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
                         q.e(var1);
-                     } else if (q.c(var3.getUri().getScheme(), "file")) {
-                        var1 = Drawable.createFromPath(var3.getUri().getPath());
+                     } else if (q.c(var2x.getUri().getScheme(), "file")) {
+                        var1 = Drawable.createFromPath(var2x.getUri().getPath());
                         q.e(var1);
                      } else {
-                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var8: URLConnection = new URL(var2x.getSource()).openConnection();
                         q.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();
@@ -156,15 +156,15 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = f.g(var5, (Function2)var4, this);
-            if (var4 === var3) {
-               return var3;
+            var3 = f.g((CoroutineContext)var3, var5, this);
+            if (var3 === var4) {
+               return var4;
             }
 
-            var3 = var1;
+            var4 = var1;
          }
 
-         var3.setIcon(var4 as Drawable);
+         var4.setIcon(var3 as Drawable);
          return Unit.a;
       }
    }, 3, null);

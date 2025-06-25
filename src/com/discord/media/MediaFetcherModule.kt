@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -58,17 +58,17 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var4: Int;
       try {
-         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var12: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var6: ReactApplicationContext = this.getReactApplicationContext();
          q.g(var6, "getReactApplicationContext(...)");
-         var16 = i.K0(i.I0(var7.getMedia(var6, var12, var3, var5), new Comparator() {
+         var16 = i.M0(i.K0(var12.getMedia(var6, var7, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return v9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return D9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var3);
          var4 = var16.size();
@@ -81,8 +81,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               s.a("start_cursor", java.lang.String.valueOf((i.f0(var16) as ContentResolverMedia).getUri())),
-               s.a("end_cursor", java.lang.String.valueOf((i.q0(var16) as ContentResolverMedia).getUri())),
+               s.a("start_cursor", java.lang.String.valueOf((i.h0(var16) as ContentResolverMedia).getUri())),
+               s.a("end_cursor", java.lang.String.valueOf((i.s0(var16) as ContentResolverMedia).getUri())),
                s.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {

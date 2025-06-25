@@ -25,9 +25,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         r9.s.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
-         r9.s.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
-         r9.s.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
+         z9.s.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
+         z9.s.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
+         z9.s.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
@@ -80,10 +80,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var10: j = new j(var4);
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      kotlin.jvm.internal.q.g(var9, "getReactApplicationContext(...)");
-      var1.getProducts(var7, var3, var4, var10, var9);
+      val var9: j = new j(var4);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      kotlin.jvm.internal.q.g(var10, "getReactApplicationContext(...)");
+      var1.getProducts(var7, var3, var4, var9, var10);
    }
 
    @JvmStatic

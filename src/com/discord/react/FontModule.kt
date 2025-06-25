@@ -6,7 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
 import com.jakewharton.processphoenix.ProcessPhoenix
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 public class FontModule(reactContext: ReactApplicationContext) : NativeFontModuleSpec {
    private final val reactContext: ReactApplicationContext

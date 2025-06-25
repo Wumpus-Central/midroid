@@ -2,8 +2,8 @@ package com.discord.reactevents
 
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableMap
-import kb.j
-import rb.a
+import sb.j
+import zb.a
 
 public interface ReactEvent {
    public open fun serialize(): WritableMap {

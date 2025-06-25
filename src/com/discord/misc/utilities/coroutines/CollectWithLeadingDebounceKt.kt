@@ -1,13 +1,13 @@
 package com.discord.misc.utilities.coroutines
 
-import ab.I
+import G9.b
+import ib.I
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.internal.Ref.LongRef
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
-import r9.f
-import y9.b
+import z9.f
 
 public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMillis: Long, collector: FlowCollector<T>) {
    label23: {
@@ -108,11 +108,11 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                c.b(var11);
             } else {
                c.b(var11);
-               val var4: Long = System.currentTimeMillis();
-               val var6: Long = var4 - this.$timeLastEmitted.j;
+               val var6: Long = System.currentTimeMillis();
+               val var4: Long = var6 - this.$timeLastEmitted.j;
                val var8: Long = this.$timeoutMillis;
-               if (var6 > this.$timeoutMillis) {
-                  this.$timeLastEmitted.j = var4;
+               if (var4 > this.$timeoutMillis) {
+                  this.$timeLastEmitted.j = var6;
                   var11 = this.$collector;
                   ((<unrepresentable>)var12).label = 1;
                   if (var11.emit(var1, (Continuation)var12) === var15) {
@@ -125,14 +125,14 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var12).L$0 = this;
                ((<unrepresentable>)var12).L$1 = var1;
                ((<unrepresentable>)var12).label = 2;
-               if (I.a(var8 - var6, (Continuation)var12) === var15) {
+               if (I.a(var8 - var4, (Continuation)var12) === var15) {
                   return var15;
                }
 
                var13 = this;
             }
 
-            var13.$this_collectWithLeadingDebounce.e(var1);
+            var13.$this_collectWithLeadingDebounce.b(var1);
             return Unit.a;
          }
       };

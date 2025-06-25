@@ -1,15 +1,15 @@
 package com.discord.appreview
 
-import S6.b
-import S6.c
-import V6.a
+import W6.b
+import W6.c
+import Z6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import n1.d
-import n1.e
+import m1.d
+import m1.e
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -44,7 +44,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
       q.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.b(var1.activity, var2.l() as b);
+         val var4: Task = var0.a(var1.activity, var2.l() as b);
          q.g(var4, "launchReviewFlow(...)");
          var4.d(new e(var1));
       } else {
@@ -72,9 +72,9 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    public fun executeRequest() {
       val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.a();
+      val var2: Task = var1.b();
       q.g(var2, "requestReviewFlow(...)");
-      var2.d(new n1.c(var1, this));
+      var2.d(new m1.c(var1, this));
       var2.b(new d(this));
    }
 }

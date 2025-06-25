@@ -30,11 +30,11 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
       kotlin.jvm.internal.q.h(var2, "eventHandler");
       val var8: GuildProfileInviteEmbedImpl = var1.getInvite();
       val var7: java.lang.String = var1.getMessageId-3Eiw7ao();
-      val var5: Int = var1.getCodedLinkIndex();
+      val var3: Int = var1.getCodedLinkIndex();
       val var10: GuildProfileInviteView = this.guildProfileInviteView;
       this.guildProfileInviteView.setHeader(var8.getHeaderText());
       val var9: java.lang.String = var8.getInviteSplash();
-      val var3: Int = var8.getBannerColor();
+      val var5: Int = var8.getBannerColor();
       val var4: Int = var8.getBannerColorSecondary();
       val var6: Boolean;
       if (var8.getHeaderText() == null) {
@@ -43,7 +43,7 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
          var6 = false;
       }
 
-      var10.setBanner(var9, var3, var4, var6);
+      var10.setBanner(var9, var5, var4, var6);
       var10.setAvatar(var8.getThumbnailUrl(), var8.getThumbnailText());
       var10.setTitle(var8.getTitleText());
       var10.setGuildBadge(var8.getBadgeIconUrl());
@@ -51,6 +51,6 @@ public class GuildProfileInviteViewHolder(guildProfileInviteView: GuildProfileIn
       var10.setEstablished(var8.getEstablishedText());
       var10.setBody(var8.getBodyText(), var8.getHasProfileOverflow());
       var10.setAcceptButton(var8.getAcceptLabelText(), var8.getAcceptLabelBackgroundColor());
-      var10.setClickListeners(new t(var2, var7, var5), new u(var2, var7, var5));
+      var10.setClickListeners(new t(var2, var7, var3), new u(var2, var7, var3));
    }
 }

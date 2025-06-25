@@ -125,7 +125,7 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                var20.add(var2.getConfiguredComponentView((Component)var10, var3, this.textComponentViews, var4));
             }
 
-            var8 = kotlin.collections.i.c0(var20);
+            var8 = kotlin.collections.i.e0(var20);
             val var23: Component = var1.getAccessory().getComponent();
             q.e(var23);
             val var26: FlexboxLayout = this.binding.sectionLayoutBox;
@@ -137,15 +137,15 @@ public class SectionComponentView  public constructor(context: Context, attrs: A
                if (var3.getWidthInfo().isLargeWidthRenderingMode()) {
                   this.binding.sectionLayoutBox.setFlexDirection(0);
                } else {
-                  val var12: FlexboxLayout = this.binding.sectionLayoutBox;
-                  val var16: SectionAccessory = var1.getAccessory();
-                  val var7: Boolean = var16 is SectionAccessory.Button;
+                  val var16: FlexboxLayout = this.binding.sectionLayoutBox;
+                  val var12: SectionAccessory = var1.getAccessory();
+                  val var7: Boolean = var12 is SectionAccessory.Button;
                   var var17: Byte = 2;
-                  if (!var7 && var16 is SectionAccessory.Thumbnail) {
+                  if (!var7 && var12 is SectionAccessory.Thumbnail) {
                      var17 = 0;
                   }
 
-                  var12.setFlexDirection(var17);
+                  var16.setFlexDirection(var17);
                }
 
                val var13: ConstraintLayout = this.binding.sectionComponentViewGroupErrorRow.getRoot();

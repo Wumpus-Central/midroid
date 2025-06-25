@@ -67,7 +67,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new r9.n();
+               throw new z9.n();
             }
 
             this.binding.imageInvalid.setVisibility(0);
@@ -97,13 +97,13 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.q.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }

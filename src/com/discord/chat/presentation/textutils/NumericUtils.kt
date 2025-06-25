@@ -42,12 +42,12 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.d.e(var1 % (long)26, 1L);
-            val var11: java.lang.String = this.toLetter(var1 / (long)26);
-            val var9: java.lang.String = this.toLetter(var10);
-            val var8: StringBuilder = new StringBuilder();
-            var8.append(var11);
-            var8.append(var9);
-            return var8.toString();
+            val var8: java.lang.String = this.toLetter(var1 / (long)26);
+            val var11: java.lang.String = this.toLetter(var10);
+            val var9: StringBuilder = new StringBuilder();
+            var9.append(var8);
+            var9.append(var11);
+            return var9.toString();
          }
       } else {
          val var7: StringBuilder = new StringBuilder();
@@ -59,25 +59,24 @@ public object NumericUtils {
 
    public fun toRomanNumeral(number: Long): String {
       if (var1 >= 1L) {
-         val var8: TreeMap = romanNumeralMap;
-         var var6: StringBuilder = romanNumeralMap.floorKey(var1);
-         kotlin.jvm.internal.q.e(var6);
-         val var3: Long = (var6 as java.lang.Number).longValue();
-         val var10: java.lang.String;
+         val var6: TreeMap = romanNumeralMap;
+         var var8: java.lang.String = romanNumeralMap.floorKey(var1);
+         kotlin.jvm.internal.q.e(var8);
+         val var3: Long = (var8 as java.lang.Number).longValue();
          if (var1 == var3) {
-            val var9: Any = var8.get(var1);
-            kotlin.jvm.internal.q.e(var9);
-            var10 = var9 as java.lang.String;
+            var8 = (java.lang.String)var6.get(var1);
+            kotlin.jvm.internal.q.e(var8);
+            var8 = var8;
          } else {
-            val var11: Any = var8.get(var3);
+            val var12: Any = var6.get(var3);
             val var7: java.lang.String = this.toRomanNumeral(var1 - var3);
-            var6 = new StringBuilder();
-            var6.append(var11);
-            var6.append(var7);
-            var10 = var6.toString();
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var12);
+            var11.append(var7);
+            var8 = var11.toString();
          }
 
-         return var10;
+         return var8;
       } else {
          val var5: StringBuilder = new StringBuilder();
          var5.append("Number must be at least 1. Provided: ");

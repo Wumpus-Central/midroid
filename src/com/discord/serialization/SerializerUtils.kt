@@ -1,7 +1,7 @@
 package com.discord.serialization
 
-import M9.c
-import h2.a
+import U9.c
+import g2.a
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -31,7 +31,7 @@ public object SerializerUtils {
          for (KProperty1 var5 : c.a(var2)) {
             val var4: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
             if (var4 == null) {
-               if (!var5.getReturnType().b()) {
+               if (!var5.getReturnType().j()) {
                   var6.put(var5.getName(), "null");
                }
             } else if (!SerializerUtilsKt.access$parseProperty(var5, var4)) {
@@ -77,12 +77,12 @@ public object SerializerUtils {
          }
 
          public override fun toString(): String {
-            val var2: java.util.Map = this.data;
-            val var1: StringBuilder = new StringBuilder();
-            var1.append("Data(data=");
-            var1.append(var2);
-            var1.append(")");
-            return var1.toString();
+            val var1: java.util.Map = this.data;
+            val var2: StringBuilder = new StringBuilder();
+            var2.append("Data(data=");
+            var2.append(var1);
+            var2.append(")");
+            return var2.toString();
          }
       }
 

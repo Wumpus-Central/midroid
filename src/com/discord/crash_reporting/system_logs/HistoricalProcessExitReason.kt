@@ -1,11 +1,11 @@
 package com.discord.crash_reporting.system_logs
 
+import A9.q
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import r9.s
-import s9.q
+import z9.s
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -54,16 +54,16 @@ internal object HistoricalProcessExitReason {
          if (var5 == null) {
             return null;
          } else {
-            var5 = L0.e.a((ActivityManager)var5, null, 0, 1);
+            var5 = K0.e.a((ActivityManager)var5, null, 0, 1);
             kotlin.jvm.internal.q.g(var5, "getHistoricalProcessExitReasons(...)");
-            val var4: ApplicationExitInfo = L0.f.a(kotlin.collections.i.h0((java.util.List)var5));
+            val var4: ApplicationExitInfo = K0.f.a(kotlin.collections.i.j0((java.util.List)var5));
             if (var4 == null) {
                return null;
             } else {
-               val var3: java.lang.String = exitReasonLookup.get(L0.g.a(var4));
+               val var3: java.lang.String = exitReasonLookup.get(K0.g.a(var4));
                var5 = var3;
                if (var3 == null) {
-                  val var2: Int = L0.g.a(var4);
+                  val var2: Int = K0.g.a(var4);
                   var5 = new StringBuilder();
                   var5.append("Unknown ");
                   var5.append(var2);
@@ -128,13 +128,13 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.reason;
-         val var3: java.lang.String = this.description;
+         val var3: java.lang.String = this.reason;
+         val var2: java.lang.String = this.description;
          val var1: StringBuilder = new StringBuilder();
          var1.append("Reason(reason=");
-         var1.append(var2);
-         var1.append(", description=");
          var1.append(var3);
+         var1.append(", description=");
+         var1.append(var2);
          var1.append(")");
          return var1.toString();
       }

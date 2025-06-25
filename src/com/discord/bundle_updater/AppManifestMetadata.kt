@@ -4,9 +4,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import r9.s
+import z9.s
 
-@kb.f
+@sb.f
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -88,17 +88,17 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.build;
+      val var5: java.lang.String = this.build;
       val var2: java.lang.String = this.releaseName;
-      val var5: java.lang.String = this.commit;
+      val var3: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AppManifestMetadata(build=");
-      var4.append(var3);
+      var4.append(var5);
       var4.append(", releaseName=");
       var4.append(var2);
       var4.append(", commit=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", confirmUpdate=");
       var4.append(var1);
       var4.append(")");

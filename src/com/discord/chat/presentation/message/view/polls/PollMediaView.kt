@@ -56,15 +56,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       q.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = Q2.a.d(var1, var2);
+      this.hierarchyBuilder = P2.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       q.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = r9.j.a(new k(var1, this));
-      this.textView$delegate = r9.j.a(new l(var1, this));
+      this.draweeView$delegate = z9.j.a(new k(var1, this));
+      this.textView$delegate = z9.j.a(new l(var1, this));
    }
 
    @JvmStatic

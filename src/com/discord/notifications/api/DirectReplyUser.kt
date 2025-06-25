@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
 import com.discord.primitives.UserId
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -86,21 +86,21 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.id);
-      val var3: java.lang.String = this.username;
-      val var4: java.lang.String = this.discriminator;
-      val var1: java.lang.String = this.avatar;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DirectReplyUser(id=");
-      var2.append(var5);
-      var2.append(", username=");
-      var2.append(var3);
-      var2.append(", discriminator=");
-      var2.append(var4);
-      var2.append(", avatar=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = UserId.toString-impl(this.id);
+      val var1: java.lang.String = this.username;
+      val var5: java.lang.String = this.discriminator;
+      val var4: java.lang.String = this.avatar;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("DirectReplyUser(id=");
+      var3.append(var2);
+      var3.append(", username=");
+      var3.append(var1);
+      var3.append(", discriminator=");
+      var3.append(var5);
+      var3.append(", avatar=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -1,6 +1,7 @@
 package com.discord.phone_verification
 
-import Vb.f
+import a2.a
+import a2.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -9,15 +10,14 @@ import android.content.pm.Signature
 import android.content.pm.PackageManager.NameNotFoundException
 import android.os.Build.VERSION
 import android.util.Base64
-import b2.a
-import b2.c
 import com.discord.intents.b
 import com.discord.logging.Log
+import dc.f
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import r9.j
+import z9.j
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
@@ -64,7 +64,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var20 != null) {
             try {
-               var18 = b2.b.a(var20);
+               var18 = a2.b.a(var20);
             } catch (var15: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var15);
                i.k();
@@ -82,7 +82,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var21 != null) {
             try {
-               var18 = b2.b.a(var21);
+               var18 = a2.b.a(var21);
             } catch (var13: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var13);
                i.k();
@@ -113,11 +113,11 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                q.g(var24, "toCharsString(...)");
                var23 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
                val var25: Log = Log.INSTANCE;
-               val var9: java.lang.String = TAG;
-               val var8: StringBuilder = new StringBuilder();
-               var8.append("Hash ");
-               var8.append(var23);
-               Log.i$default(var25, var9, var8.toString(), null, 4, null);
+               val var8: java.lang.String = TAG;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var23);
+               Log.i$default(var25, var8, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
@@ -161,14 +161,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             q.g(var10, "encodeToString(...)");
             var2 = var10.substring(0, 11);
             q.g(var2, "substring(...)");
-            val var4: Log = Log.INSTANCE;
-            val var13: java.lang.String = this.getTAG();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("pkg: ");
-            var5.append(var1);
-            var5.append(" -- hash: ");
-            var5.append(var2);
-            Log.i$default(var4, var13, var5.toString(), null, 4, null);
+            val var13: Log = Log.INSTANCE;
+            val var5: java.lang.String = this.getTAG();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("pkg: ");
+            var4.append(var1);
+            var4.append(" -- hash: ");
+            var4.append(var2);
+            Log.i$default(var13, var5, var4.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

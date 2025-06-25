@@ -2,10 +2,10 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kb.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f(with = SelectOptionType.Serializer::class)
 public enum class SelectOptionType(serialNumber: Int) : IntEnum {
@@ -26,7 +26,7 @@ public enum class SelectOptionType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<SelectOptionType> = $values();
       $VALUES = var0;
-      $ENTRIES = z9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    init {

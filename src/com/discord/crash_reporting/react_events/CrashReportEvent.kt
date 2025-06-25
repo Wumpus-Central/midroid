@@ -1,6 +1,6 @@
 package com.discord.crash_reporting.react_events
 
-import I9.c
+import Q9.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.crash_reporting.system_logs.SystemLogUtils
@@ -13,7 +13,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import r9.s
+import z9.s
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: SentryCrashData?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -137,20 +137,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Boolean = this.crashedLastRun;
+      val var3: java.lang.Boolean = this.crashedLastRun;
       val var1: SystemLogReport.SentryCrashData = this.sentryData;
-      val var5: HistoricalProcessExitReason.Reason = this.reason;
-      val var4: SystemLogUtils.Tombstone = this.tombstone;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("CrashReportEvent(crashedLastRun=");
-      var3.append(var2);
-      var3.append(", sentryData=");
-      var3.append(var1);
-      var3.append(", reason=");
-      var3.append(var5);
-      var3.append(", tombstone=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: HistoricalProcessExitReason.Reason = this.reason;
+      val var2: SystemLogUtils.Tombstone = this.tombstone;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CrashReportEvent(crashedLastRun=");
+      var5.append(var3);
+      var5.append(", sentryData=");
+      var5.append(var1);
+      var5.append(", reason=");
+      var5.append(var4);
+      var5.append(", tombstone=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

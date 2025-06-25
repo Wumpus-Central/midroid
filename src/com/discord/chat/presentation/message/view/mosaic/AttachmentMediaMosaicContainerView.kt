@@ -1,8 +1,8 @@
 package com.discord.chat.presentation.message.view.mosaic
 
-import E1.b
-import E1.c
-import E1.d
+import D1.b
+import D1.c
+import D1.d
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -46,7 +46,7 @@ public class AttachmentMediaMosaicContainerView  public constructor(context: Con
       this.binding = var4;
       val var3: MosaicLayoutManager = new MosaicLayoutManager(var1);
       this.mosaicLayoutManager = var3;
-      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new E1.a(this), new b(this), new c(this), new d(this));
+      val var5: AttachmentMediaMosaicAdapter = new AttachmentMediaMosaicAdapter(var1, new D1.a(this), new b(this), new c(this), new d(this));
       this.attachmentAdapter = var5;
       val var6: RecyclerView = var4.mosaic;
       q.e(var4.mosaic);

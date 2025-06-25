@@ -1,6 +1,6 @@
 package com.discord.jank_stats
 
-import Q1.a
+import P1.a
 import android.view.Window
 import androidx.metrics.performance.FrameData
 import androidx.metrics.performance.JankStats
@@ -70,7 +70,7 @@ public object JankStatsAggregator {
       val var4: Int = numJankFrames;
       numFrames = 0;
       numJankFrames = 0;
-      val var6: Log = Log.INSTANCE;
+      val var7: Log = Log.INSTANCE;
       val var2: Double;
       if (var5 > 0) {
          var2 = (double)var4 / var5 * 100.0;
@@ -78,16 +78,16 @@ public object JankStatsAggregator {
          var2 = 0.0;
       }
 
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("*** Jank Report (");
-      var7.append(var1);
-      var7.append("), totalFrames = ");
-      var7.append(var5);
-      var7.append(", jankFrames = ");
-      var7.append(var4);
-      var7.append(", jank % = ");
-      var7.append(var2);
-      Log.i$default(var6, "JankStatsAggregator", var7.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("*** Jank Report (");
+      var6.append(var1);
+      var6.append("), totalFrames = ");
+      var6.append(var5);
+      var6.append(", jankFrames = ");
+      var6.append(var4);
+      var6.append(", jank % = ");
+      var6.append(var2);
+      Log.i$default(var7, "JankStatsAggregator", var6.toString(), null, 4, null);
       return new JankReport(var5, var4);
    }
 

@@ -5924,10 +5924,26 @@
   "MNKzys": "Use data to personalize my Discord experience",
   "XAHCgI": "Request all of my data",
   "0F5Jys": "Please try again",
+  "W1Rw3N": "Please select at least one data type for your request",
   "OjbtDg": "Oops, something went wrong...",
-  "jpVjsr": "I've changed my mind",
   "NYgNg4": "Request My Data",
-  "vtRhDA": "It may take us up to 30 days to collect your data. We will send you an email to the address you registered with when the package is ready. If you'd just like to request a subset of your data, you can do so on our web client.",
+  "vtRhDA": [
+    "Select the data that you'd like to be included in your data package below. You can learn more about each of these selections ",
+    [
+      8,
+      "$link",
+      [
+        "here"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    ". Note that some selections, like Messages, may delay the delivery of your package, and it may take us up to 30 days to collect your data. We will send you an email to the address you registered with when the package is ready."
+  ],
   "6Nmv4u": "Our privacy farmers have begun harvesting your data. This can take up to 30 days, but we'll email you when it’s done.",
   "jxXMEx": "Submit Data Request",
   "P3kNfn": [
@@ -5947,7 +5963,7 @@
     " about how getting a copy of your personal data works"
   ],
   "ZPQLHx": "Discord staff accounts cannot request data harvests",
-  "c1f88/": "Your account must be verified with an email address to request data. You can verify your account in the My Account section",
+  "i2iul5": "Request received",
   "igTSGx": [
     "Allows us to use and process your information to understand and improve our services. ",
     [
@@ -19561,6 +19577,13 @@
     ],
     "."
   ],
+  "KO88BQ": "Activities",
+  "wb7QJy": "Ads",
+  "j+d6RE": "Your Activity",
+  "JN9c39": "Servers",
+  "M4ddeX": "Programs",
+  "0dO1t7": "Messages",
+  "rfe/x8": "Account",
   "psXQHB": "Help Desk",
   "nOtPMD": "You cannot modify this permission because none of your roles have it.",
   "5MstTk": "Hide chat",
@@ -20446,6 +20469,7 @@
   "VNe8Pz": "Edit invite link.",
   "2Gbof3": "Invite Expired",
   "jfrMtr": "Full",
+  "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
   "/8czHx": [
     "Invite to Listen Along on ",
@@ -37641,7 +37665,6 @@
   "i4xQ5u": "The channel will now show as unread for every message so you don't miss a thing.",
   "m2Hyj4": "Unstable Internet Connection",
   "EhaK6O": "This video stream has been paused to ensure good audio quality. We'll turn it back on when the connection improves.",
-  "tuGzBQ": "Unverified Email",
   "VZANAA": "Update",
   "/qdhkp": "updated",
   "geta7+": "Update your password",

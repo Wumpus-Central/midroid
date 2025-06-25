@@ -1,6 +1,6 @@
 package com.discord.image.animated_image.animated_image_utils
 
-import O1.a
+import N1.a
 import com.discord.misc.utilities.queue.WorkerQueue
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.functions.Function0

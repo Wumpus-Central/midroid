@@ -1,10 +1,10 @@
 package com.discord.media.utils
 
-import ab.K
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Bitmap.Config
 import android.graphics.BitmapFactory.Options
+import ib.K
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlinx.coroutines.CoroutineScope
@@ -66,7 +66,7 @@ public object ImageQualityCalculator {
    }
 
    private fun calculateSSIMFromGrayscale(original: FloatArray, compressed: FloatArray, width: Int, height: Int): Double {
-      val var16: Int = A9.c.c(0, var4 - 8, 4);
+      val var16: Int = I9.c.c(0, var4 - 8, 4);
       var var7: Double;
       var var12: Int;
       if (var16 >= 0) {
@@ -75,7 +75,7 @@ public object ImageQualityCalculator {
          var7 = 0.0;
 
          while (true) {
-            val var13: Int = A9.c.c(0, var3 - 8, 4);
+            val var13: Int = I9.c.c(0, var3 - 8, 4);
             var var15: Int;
             if (var13 >= 0) {
                var var14: Int = 0;
@@ -137,35 +137,35 @@ public object ImageQualityCalculator {
    private fun calculateWindowSSIM(original: FloatArray, compressed: FloatArray, width: Int, startX: Int, startY: Int, windowSize: Int, c1: Float, c2: Float): Double {
       val var26: Int = var6 * var6;
       var var25: Int = 0;
-      var var13: Double = 0.0;
+      var var11: Double = 0.0;
       var var15: Double = 0.0;
       var var17: Double = 0.0;
-      var var11: Double = 0.0;
+      var var13: Double = 0.0;
 
       var var9: Double;
       for (var9 = 0.0; var25 < var6; var25++) {
          for (int var27 = 0; var27 < var6; var27++) {
             val var21: Double = var1[(var5 + var25) * var3 + var4 + var27];
             val var19: Double = var2[(var5 + var25) * var3 + var4 + var27];
-            var13 += var21;
+            var11 += var21;
             var15 += var19;
             var17 += var21 * var21;
-            var11 += var19 * var19;
+            var13 += var19 * var19;
             var9 += var21 * var19;
          }
       }
 
       val var23: Double = var26;
-      val var36: Double = var13 / var26;
-      val var37: Double = var15 / var26;
-      var17 = (var17 - var13 * var36) / var23;
-      var11 = (var11 - var15 * var37) / var23;
-      var15 = (var9 - var13 * var37) / var23;
-      var9 = var7;
-      var13 = var8;
-      var11 = (var36 * var36 + var37 * var37 + var9) * (var17 + var11 + var8);
-      if ((var36 * var36 + var37 * var37 + var9) * (var17 + var11 + var8) > 0.0) {
-         var9 = (var36 * 2.0 * var37 + var9) * (var15 * 2.0 + var13) / var11;
+      val var37: Double = var11 / var26;
+      val var36: Double = var15 / var26;
+      var17 = (var17 - var11 * var37) / var23;
+      var13 = (var13 - var15 * var36) / var23;
+      var9 = (var9 - var11 * var36) / var23;
+      var11 = var7;
+      var15 = var8;
+      var13 = (var37 * var37 + var36 * var36 + var11) * (var17 + var13 + var8);
+      if ((var37 * var37 + var36 * var36 + var11) * (var17 + var13 + var8) > 0.0) {
+         var9 = (var37 * 2.0 * var36 + var11) * (var9 * 2.0 + var15) / var13;
       } else {
          var9 = 0.0;
       }
@@ -245,7 +245,7 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalBitmap: Bitmap, compressedBitmap: Bitmap): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return ab.f.g(
+      return ib.f.g(
          K.a(),
          new Function2(var1, var2, null) {
             final Bitmap $compressedBitmap;
@@ -268,7 +268,7 @@ public object ImageQualityCalculator {
 
             // $VF: Duplicated exception handlers to handle obfuscated exceptions
             public final Object invokeSuspend(Object var1) {
-               y9.b.e();
+               G9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var14: Any = null;
@@ -286,24 +286,24 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
-                  var var6: Int;
                   var var7: Int;
+                  var var8: Int;
                   try {
-                     var7 = this.$originalBitmap.getWidth();
-                     var6 = this.$originalBitmap.getHeight();
+                     var8 = this.$originalBitmap.getWidth();
+                     var7 = this.$originalBitmap.getHeight();
                   } catch (var20: Exception) {
                      return null;
                   }
 
-                  val var8: Int = var7 * var6;
+                  val var6: Int = var8 * var7;
 
                   var var13: IntArray;
                   var var15: IntArray;
                   try {
-                     var13 = new int[var8];
-                     var15 = new int[var8];
-                     this.$originalBitmap.getPixels(var13, 0, var7, 0, 0, var7, var6);
-                     this.$compressedBitmap.getPixels(var15, 0, var7, 0, 0, var7, var6);
+                     var13 = new int[var6];
+                     var15 = new int[var6];
+                     this.$originalBitmap.getPixels(var13, 0, var8, 0, 0, var8, var7);
+                     this.$compressedBitmap.getPixels(var15, 0, var8, 0, 0, var8, var7);
                   } catch (var19: Exception) {
                      return null;
                   }
@@ -332,8 +332,8 @@ public object ImageQualityCalculator {
                      val var9: Long = System.nanoTime();
                      val var27: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      var1 = new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var7, var6),
-                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var7, var6),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var8, var7),
+                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var8, var7),
                         (System.nanoTime() - var9) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );
@@ -352,7 +352,7 @@ public object ImageQualityCalculator {
    }
 
    public suspend fun calculateQualityMetrics(originalData: ByteArray, compressedData: ByteArray): com.discord.media.utils.ImageQualityCalculator.ImageQualityMetrics? {
-      return ab.f.g(K.a(), new Function2(var1, var2, null) {
+      return ib.f.g(K.a(), new Function2(var1, var2, null) {
          final byte[] $compressedData;
          final byte[] $originalData;
          int label;
@@ -373,7 +373,7 @@ public object ImageQualityCalculator {
 
          // $VF: Duplicated exception handlers to handle obfuscated exceptions
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = y9.b.e();
+            val var4: Any = G9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -387,29 +387,29 @@ public object ImageQualityCalculator {
             } else {
                kotlin.c.b(var1);
 
-               var var3: Bitmap;
+               var var3: ImageQualityCalculator;
                var var5: Bitmap;
                try {
-                  var1 = ImageQualityCalculator.INSTANCE;
-                  var3 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(var1, this.$compressedData);
+                  var3 = ImageQualityCalculator.INSTANCE;
+                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
+                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(var3, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var3 != null && var5 != null) {
+               if (var1 != null && var5 != null) {
                   try {
                      this.label = 1;
-                     var3 = (Bitmap)var1.calculateQualityMetrics(var3, var5, this);
+                     var10 = var3.calculateQualityMetrics(var1, var5, this);
                   } catch (var6: Exception) {
                      return null;
                   }
 
-                  if (var3 === var4) {
+                  if (var10 === var4) {
                      return var4;
                   }
 
-                  return var3;
+                  return var10;
                }
             }
 
