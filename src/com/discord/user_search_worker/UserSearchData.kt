@@ -6,8 +6,8 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import sb.f
-import wb.g
+import tb.f
+import xb.g
 
 @f(with = UserSearchData.Serializer::class)
 internal sealed class UserSearchData protected constructor() {
@@ -17,7 +17,7 @@ internal sealed class UserSearchData protected constructor() {
       }
    }
 
-   internal object Serializer : wb.d(G.b(UserSearchData.class)) {
+   internal object Serializer : xb.d(G.b(UserSearchData.class)) {
       protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<UserSearchData> {
          var var6: java.lang.String;
          label34: {

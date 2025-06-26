@@ -6,7 +6,7 @@ import com.discord.logging.Log
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
-import vb.z0
+import wb.z0
 
 public object AppDatabase {
    internal const val LAST_DATABASE_USER_ID_PREFERENCES_KEY: String = "_databaseUserId"
@@ -31,13 +31,13 @@ public object AppDatabase {
       DiscordMobileApi.initialize(dataDirectory);
       val var4: java.lang.String = var1.getSharedPreferences("FastCacheStore", 0).getString("_databaseUserId", null);
       if (var4 != null && !q.c(var4, "")) {
-         val var5: java.lang.String = this.databaseName(var4);
-         DiscordMobileApi.openAsync(var5);
-         val var3: Log = Log.INSTANCE;
+         val var3: java.lang.String = this.databaseName(var4);
+         DiscordMobileApi.openAsync(var3);
+         val var5: Log = Log.INSTANCE;
          val var2: StringBuilder = new StringBuilder();
          var2.append("speculatively opening ");
-         var2.append(var5);
-         Log.i$default(var3, "AppDatabase", var2.toString(), null, 4, null);
+         var2.append(var3);
+         Log.i$default(var5, "AppDatabase", var2.toString(), null, 4, null);
       } else {
          Log.i$default(Log.INSTANCE, "AppDatabase", "speculative database open skipped: userId was empty.", null, 4, null);
       }
@@ -130,6 +130,6 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       q.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      E9.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
+      F9.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
    }
 }

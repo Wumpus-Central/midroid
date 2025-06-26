@@ -1,12 +1,12 @@
 package com.discord.emoji_picker.react_events
 
+import A9.s
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
-import z9.s
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
    private final val x: Float

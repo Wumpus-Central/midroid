@@ -3483,7 +3483,6 @@
   "3dIn2N": "Ennél a PlayStation™Network-fióknál egy fölérendelt fióknak kell engedélyeznie a kommunikációs funkciókat.",
   "YpCiMj": "Hozzákapcsolt játékok",
   "IyYqqa": "Csatlakozás másik klienshez",
-  "7LkwqK": "Csatlakozás...",
   "3fe7U1": "Kapcsolatok",
   "yQvgBA": [
     [
@@ -4263,13 +4262,6 @@
   "mGhOIi": "Nincs útvonal",
   "Gp51dn": "RTC csatlakozás",
   "M7LDmJ": "RTC leválasztva",
-  "G+vAHx": [
-    [
-      1,
-      "username"
-    ],
-    " élő közvetítésének megtekintése"
-  ],
   "HtVOdX": "Videó csatlakoztatva",
   "daXg4+": "Hang csatlakoztatva",
   "zOZh3d": "Fiókok hozzárendelése",
@@ -19774,6 +19766,26 @@
     ],
     "-fiókok"
   ],
+  "7mv59P": [
+    "Létrehozás időpontja: ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    [
+      1,
+      "user"
+    ],
+    " által létrehozva ekkor: ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
   "sE5hSU": "Integráció beállításai",
   "u2D2Ul": [
     [
@@ -22380,7 +22392,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Hálózatod limitált vagy nem elérhető.",
   "oEAioK": "Mindegy",
   "y2b7CA": "új",
   "l1dkSE": "Bejelentés csatorna",
@@ -23281,15 +23292,6 @@
   "rW5gw8": "A Discordtól leküldéses értesítéseket fogsz kapni az olyan tevékenységekről, mint az üzenetek, az említések, a barátkérelmek és az események.",
   "Gf7U1d": "Értesítéseket kaphatsz többek között az új üzenetekről, barátkérelmekről és eseményekről.",
   "3nx0b2": "Értesítések bekapcsolása",
-  "dbQxR0": "Lazuljatok videócsevegéssel és képernyőmegosztással",
-  "3wC7eH": "Kövesd a beszélgetéseket és a témákat a szöveges csevegésben",
-  "GG2T6u": "Üdv a Discordon!",
-  "FxpjsL": "Rajta!",
-  "1BryeH": "Kapcsolódj a közösségeidhez egy helyen",
-  "1K/IW1": "Kapcsolódj a közösségeidhez a szervereken",
-  "MbhY+v": "A Discordon otthonra lelnek közösségeid, barátaid, könyvklubjaid, tanulócsoportjaid és sok minden más is.",
-  "qjXn0N": "Beszélgess hanggal egyszerre több emberrel",
-  "S2fS/v": "Üdv a Discordon!",
   "eGjmy8": [
     [
       6,
@@ -24268,6 +24270,7 @@
   "0Niu/P": "Jelszó visszaállítása",
   "myKyqq": "Küldtünk egy SMS-t a fiókhoz kapcsolt telefonszámra.",
   "+xqy3d": "Írd be a megerősítő kódodat a jelszavad visszaállításához",
+  "R98xDw": "Jelszó megadása kötelező.",
   "VUUJ6e": [
     "A jelszónak legalább ",
     [
@@ -25995,6 +25998,7 @@
   "OuItFh": "Egyedi alkalmazás ikonok",
   "R2IV/f": "Még több emotikon",
   "RSXQYG": "HD videó",
+  "YCZldH": "A Nitróval tengernyi jutalomhoz férhetsz hozzá",
   "4pEwXF": "Pörgesd fel a kedvenc közösségeidet szuper jutalmakért cserébe!",
   "NyDu//": "2 szervergyorsítás + 30% kedvezmény",
   "Mt3U1d": "Használj eltérő profilképet, profiltémát, bannert és bemutatkozást minden szervereden!",
@@ -36893,6 +36897,7 @@
   "OdPCbG": "Kikapcsolod az adatok felhasználását a Discord tökéletesítéséhez?",
   "KD6OJC": "Felhasználó",
   "IEpCBQ": "Felhasználónév",
+  "GPfy3N": "Felhasználónév megadása kötelező.",
   "YEOwDA": "Kit szeretnél hozzáadni barátként?",
   "OKsSCQ": "Csatlakozás kérése",
   "OzCsIC": "Itt versenyezik:",
@@ -38184,18 +38189,6 @@
     ]
   ],
   "jp25IS": "Webhookok",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    ", ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Biztos, hogy törölni szeretnéd a(z) ",
     [

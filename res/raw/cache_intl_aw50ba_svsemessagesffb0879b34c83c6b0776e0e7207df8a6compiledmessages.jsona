@@ -3475,7 +3475,6 @@
   "3dIn2N": "På det här PlayStation™Network-kontot måste kommunikationsfunktionerna aktiveras av ett föräldrakonto.",
   "YpCiMj": "Anslutna spel",
   "IyYqqa": "Ansluten till en annan klient",
-  "7LkwqK": "Ansluter ...",
   "3fe7U1": "Anslutningar",
   "yQvgBA": [
     [
@@ -4255,14 +4254,6 @@
   "mGhOIi": "Ingen rutt",
   "Gp51dn": "RTC ansluter",
   "M7LDmJ": "RTC frånkopplad",
-  "G+vAHx": [
-    "Tittar på ",
-    [
-      1,
-      "username"
-    ],
-    "s stream"
-  ],
   "HtVOdX": "Video ansluten",
   "daXg4+": "Röst ansluten",
   "zOZh3d": "Anslut dina konton",
@@ -19747,6 +19738,27 @@
     ],
     "-konton"
   ],
+  "7mv59P": [
+    "Skapad ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Skapad ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " av ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integrationsinställningar",
   "u2D2Ul": [
     [
@@ -22369,7 +22381,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Nätverksanslutningen är begränsad eller otillgänglig.",
   "oEAioK": "Glöm det",
   "y2b7CA": "nytt",
   "l1dkSE": "Meddelandekanal",
@@ -23267,15 +23278,6 @@
   "rW5gw8": "Du kommer att få aviseringar för Discord-aktiviteter som t.ex. meddelanden, omnämningar, vänförfrågningar och event.",
   "Gf7U1d": "Få aviseringar för nya meddelanden, vänförfrågningar, event och mycket mer.",
   "3nx0b2": "Stäng av aviseringar",
-  "dbQxR0": "Umgås genom videochatt och skärmdelning",
-  "3wC7eH": "Följ konversationer och ämnen i textchatt",
-  "GG2T6u": "Välkommen till Discord!",
-  "FxpjsL": "Nu kör vi!",
-  "1BryeH": "Håll kontakten med alla dina communities på en plats",
-  "1K/IW1": "Håll kontakten med alla dina communities på servrar",
-  "MbhY+v": "Discord är ett hem för dina communities, vänner, bokklubbar, studiegrupper och annat.",
-  "qjXn0N": "Röstchatta med flera personer samtidigt",
-  "S2fS/v": "Välkommen till Discord!",
   "eGjmy8": [
     [
       6,
@@ -24251,6 +24253,7 @@
   "0Niu/P": "Återställning av lösenord",
   "myKyqq": "Ett sms skickades till det telefonnummer som är knutet till kontot.",
   "+xqy3d": "Ange bekräftelsekoden för att byta lösenord",
+  "R98xDw": "Lösenord krävs.",
   "VUUJ6e": [
     "Lösenord måste vara ",
     [
@@ -25982,6 +25985,7 @@
   "OuItFh": "Anpassade appikoner",
   "R2IV/f": "Mer emojikraft",
   "RSXQYG": "HD-video",
+  "YCZldH": "Lås upp en hel förmånsvärld med Nitro",
   "4pEwXF": "Ge dina favoritcommunities en boost och lås upp grymma förmåner.",
   "NyDu//": "Två serverboostar +30 % rabatt",
   "Mt3U1d": "Använd olika avatarer, profilteman, banners och biografier på dina servrar.",
@@ -36861,6 +36865,7 @@
   "OdPCbG": "Stäng av Använd data för att förbättra Discord?",
   "KD6OJC": "Användare",
   "IEpCBQ": "Användarnamn",
+  "GPfy3N": "Användarnamn krävs.",
   "YEOwDA": "Vem vill du lägga till som vän?",
   "OKsSCQ": "Ta med mig",
   "OzCsIC": "Tävlar i",
@@ -38152,18 +38157,6 @@
     ]
   ],
   "jp25IS": "Webhookar",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " den ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Är du säker på att du vill ta bort webhooken ",
     [

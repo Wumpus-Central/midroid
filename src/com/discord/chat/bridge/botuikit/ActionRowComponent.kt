@@ -2,7 +2,7 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent {
@@ -77,16 +77,16 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: java.lang.String = this.id;
-      val var3: java.lang.String = this.errorText;
+      val var3: java.lang.String = this.id;
+      val var2: java.lang.String = this.errorText;
       val var5: java.util.List = this.components;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ActionRowComponent(type=");
       var4.append(var1);
       var4.append(", id=");
-      var4.append(var2);
-      var4.append(", errorText=");
       var4.append(var3);
+      var4.append(", errorText=");
+      var4.append(var2);
       var4.append(", components=");
       var4.append(var5);
       var4.append(")");

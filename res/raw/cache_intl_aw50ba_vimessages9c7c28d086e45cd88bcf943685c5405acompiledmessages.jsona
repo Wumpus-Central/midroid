@@ -3502,7 +3502,6 @@
   "3dIn2N": "Tài khoản PlayStation™Network này yêu cầu một tài khoản phụ huynh bật tính năng giao tiếp.",
   "YpCiMj": "Trò Chơi Đã Kết Nối",
   "IyYqqa": "Đã kết nối trên một thiết bị khác",
-  "7LkwqK": "Đang kết nối…",
   "3fe7U1": "Kết Nối",
   "yQvgBA": [
     [
@@ -4282,13 +4281,6 @@
   "mGhOIi": "Không Có Đường Truyền",
   "Gp51dn": "Đang kết nối RTC",
   "M7LDmJ": "Đã ngắt kết nối RTC",
-  "G+vAHx": [
-    "Đang Xem Stream của ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Đã Kết Nối Video",
   "daXg4+": "Đã Kết Nối Giọng Nói",
   "zOZh3d": "Kết nối các tài khoản của bạn",
@@ -19831,6 +19823,27 @@
       "platformName"
     ]
   ],
+  "7mv59P": [
+    "Được tạo vào ngày ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Được tạo vào ngày ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " bởi ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Cài đặt tích hợp",
   "u2D2Ul": [
     [
@@ -22463,7 +22476,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Kết nối mạng bị giới hạn hoặc không khả dụng.",
   "oEAioK": "Đừng Bận Tâm",
   "y2b7CA": "mới",
   "l1dkSE": "Kênh Thông Báo",
@@ -23367,15 +23379,6 @@
   "rW5gw8": "Bạn sẽ nhận được thông báo đẩy cho các hoạt động từ Discord như tin nhắn, đề cập, yêu cầu kết bạn, và sự kiện.",
   "Gf7U1d": "Nhận thông báo khi có tin nhắn, yêu cầu kết bạn, các sự kiện mới và nhiều hoạt động khác.",
   "3nx0b2": "Bật thông báo",
-  "dbQxR0": "Giao lưu bằng trò chuyện video và chia sẻ màn hình",
-  "3wC7eH": "Theo dõi các cuộc trò chuyện và chủ đề trong trò chuyện văn bản",
-  "GG2T6u": "Chào mừng bạn đến với Discord!",
-  "FxpjsL": "Bắt đầu nào!",
-  "1BryeH": "Kết nối với tất cả các cộng đồng của bạn ở một nơi",
-  "1K/IW1": "Kết nối với tất cả cộng đồng của bạn trong máy chủ",
-  "MbhY+v": "Discord là ngôi nhà chung cho cộng đồng, bạn bè, câu lạc bộ sách, nhóm học tập của bạn và hơn thế nữa.",
-  "qjXn0N": "Trò chuyện qua kênh thoại với nhiều người cùng lúc",
-  "S2fS/v": "Chào mừng bạn đến với Discord!",
   "eGjmy8": [
     [
       6,
@@ -24360,6 +24363,7 @@
   "0Niu/P": "Khôi Phục Mật Khẩu",
   "myKyqq": "Một tin nhắn SMS đã được gửi đến số điện thoại có liên kết với tài khoản này.",
   "+xqy3d": "Nhập mã xác minh để đặt lại mật khẩu",
+  "R98xDw": "Yêu cầu mật khẩu.",
   "VUUJ6e": [
     "Mật khẩu phải có ",
     [
@@ -26092,6 +26096,7 @@
   "OuItFh": "Biểu Tượng Ứng Dụng Tùy Biến",
   "R2IV/f": "Nhiều Emoji Hơn",
   "RSXQYG": "Video HD",
+  "YCZldH": "Mở Khóa Vô Vàn Đặc Quyền Cùng Nitro",
   "4pEwXF": "Hãy nâng cấp cho những cộng đồng bạn yêu thích và mở khóa những đặc quyền cực đỉnh.",
   "NyDu//": "2 Nâng Cấp Máy Chủ + giảm giá 30%",
   "Mt3U1d": "Sử dụng ảnh đại diện, chủ đề hồ sơ, biểu ngữ và tiểu sử khác nhau trong mỗi máy chủ của bạn.",
@@ -37016,6 +37021,7 @@
   "OdPCbG": "Tắt sử dụng dữ liệu để cải thiện Discord?",
   "KD6OJC": "Người dùng",
   "IEpCBQ": "Tên đăng nhập",
+  "GPfy3N": "Yêu cầu tên đăng nhập.",
   "YEOwDA": "Bạn muốn thêm ai làm bạn bè?",
   "OKsSCQ": "Đề Nghị Tham Gia",
   "OzCsIC": "Đang chơi",
@@ -38307,18 +38313,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " mở ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Bạn có chắc muốn xóa ",
     [

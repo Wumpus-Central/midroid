@@ -1,6 +1,7 @@
 package com.discord.image.fresco.postprocessors
 
-import H9.a
+import A9.n
+import I9.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
@@ -9,7 +10,6 @@ import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import z9.n
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -45,8 +45,8 @@ public sealed interface PostProcessor {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(i.v(var2, 10));
 
-            for (PostProcessor var3 : var2) {
-               var4.add($$INSTANCE.create(var3));
+            for (PostProcessor var6 : var2) {
+               var4.add($$INSTANCE.create(var6));
             }
 
             var5 = new CompositePostprocessor(var4);

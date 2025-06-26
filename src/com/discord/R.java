@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_wqwjn3aoplk5fhlgedxha6aule_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_wqwjn3aoplk5fhlgedxha6aule_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_wqwjn3aoplk5fhlgedxha6aule_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_wqwjn3aoplk5fhlgedxha6aule_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -789,7 +789,6 @@ public final class R {
       public static int images_native_icons_ic_stamp;
       public static int images_native_icons_ic_star;
       public static int images_native_icons_ic_star_filled;
-      public static int images_native_icons_ic_start_streaming;
       public static int images_native_icons_ic_sticker_24px;
       public static int images_native_icons_ic_stop_stream_24px;
       public static int images_native_icons_ic_swipe_reply_24px;
@@ -1200,8 +1199,6 @@ public final class R {
       public static int modules_collectibles_native_images_discord_logo_black;
       public static int modules_collectibles_native_images_discord_logo_white;
       public static int modules_collectibles_native_images_premium_sparkles;
-      public static int modules_connectivity_native_images_ic_network_offline_24px;
-      public static int modules_connectivity_native_images_ic_network_offline_light_24px;
       public static int modules_contact_sync_native_images_cta;
       public static int modules_contact_sync_native_images_emptysuggestionsheader;
       public static int modules_contact_sync_native_images_graggle;
@@ -1378,11 +1375,6 @@ public final class R {
       public static int modules_nuf_channels_native_images_voice_channels;
       public static int modules_nuf_native_components_notification_notification_upsell;
       public static int modules_nuf_native_components_notification_redesign_notification_illustration;
-      public static int modules_nuf_native_components_value_props_images_valuepropcamera;
-      public static int modules_nuf_native_components_value_props_images_valuepropchat;
-      public static int modules_nuf_native_components_value_props_images_valuepropservers;
-      public static int modules_nuf_native_components_value_props_images_valuepropvoice;
-      public static int modules_nuf_native_components_value_props_images_valuepropwelcome;
       public static int modules_nuf_native_images_discoverabilityheader;
       public static int modules_nuf_native_images_educationcardchannels;
       public static int modules_nuf_native_images_educationcarddms;
@@ -1503,7 +1495,6 @@ public final class R {
       public static int modules_video_calls_native_images_fullscreen;
       public static int modules_video_calls_native_images_grid;
       public static int modules_video_calls_native_images_group;
-      public static int modules_video_calls_native_images_hide_participants;
       public static int modules_video_calls_native_images_mic;
       public static int modules_video_calls_native_images_minimize;
       public static int modules_video_calls_native_images_mobile;

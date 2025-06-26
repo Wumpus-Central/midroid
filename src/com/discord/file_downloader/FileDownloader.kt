@@ -1,5 +1,6 @@
 package com.discord.file_downloader
 
+import A9.j
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
 import java.io.File
@@ -7,16 +8,15 @@ import java.util.Map.Entry
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.flow.Flow
-import lb.e
+import mb.e
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
-import z9.j
 
 public object FileDownloader {
-   private final val defaultClient: OkHttpClient by j.a(new a())
+   private final val defaultClient: OkHttpClient by j.b(new a())
       private final get() {
          return defaultClient$delegate.getValue() as OkHttpClient;
       }
@@ -38,14 +38,14 @@ public object FileDownloader {
       }).c();
    }
 
-   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = A9.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
+   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = B9.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
       q.h(var1, "fileUrl");
       q.h(var2, "headers");
       q.h(var3, "client");
       val var4: okhttp3.Request.Builder = new okhttp3.Request.Builder();
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.a(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.a(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       return var3.b(var4.l(var1).b()).execute();

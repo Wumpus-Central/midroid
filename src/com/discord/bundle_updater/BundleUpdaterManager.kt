@@ -1,5 +1,6 @@
 package com.discord.bundle_updater
 
+import A9.s
 import android.app.Activity
 import android.app.Application
 import android.view.View
@@ -28,7 +29,6 @@ import java.lang.reflect.Field
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import z9.s
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -204,12 +204,12 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
-      val var3: ReactApplicationContext = this.reactContext;
+      val var2: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.j;
       q.g(MainActivity::class.java, "forName(...)");
-      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
+      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
    }
 
    @ReactMethod

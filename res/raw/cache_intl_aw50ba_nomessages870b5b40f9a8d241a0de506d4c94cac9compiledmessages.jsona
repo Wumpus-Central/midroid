@@ -3470,7 +3470,6 @@
   "3dIn2N": "Denne PlayStation Network-kontoen krever kommunikasjonsfunksjoner for å kunne bli aktivert av en foreldrekonto.",
   "YpCiMj": "Tilkoblede spill",
   "IyYqqa": "Koblet til en annen klient",
-  "7LkwqK": "Kobler til …",
   "3fe7U1": "Tilkoblinger",
   "yQvgBA": [
     [
@@ -4250,13 +4249,6 @@
   "mGhOIi": "Ingen rute",
   "Gp51dn": "RTC kobler til",
   "M7LDmJ": "RTC er frakoblet",
-  "G+vAHx": [
-    "Ser på strømmen til ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Video er tilkoblet",
   "daXg4+": "Tale er tilkoblet",
   "zOZh3d": "Koble til kontoene dine",
@@ -19736,6 +19728,27 @@
     ],
     "-kontoer"
   ],
+  "7mv59P": [
+    "Opprettet ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Opprettet ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " av ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Innstillinger for integrering",
   "u2D2Ul": [
     [
@@ -22371,7 +22384,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Nettverkstilkoblingen begrenset eller utilgjengelig.",
   "oEAioK": "Ikke tenk på det",
   "y2b7CA": "ny",
   "l1dkSE": "Kunngjøringskanal",
@@ -23267,15 +23279,6 @@
   "rW5gw8": "Du får push-varsler for Discord-aktiviteter som meldinger, omtaler, venneforespørsler og arrangementer.",
   "Gf7U1d": "Få varsler om nye meldinger, venneforespørsler, eventer og annet.",
   "3nx0b2": "Slå på varsler",
-  "dbQxR0": "Vær sammen ved hjelp av videochat og skjermdeling",
-  "3wC7eH": "Følg samtaler og emner i tekstchat",
-  "GG2T6u": "Velkommen til Discord!",
-  "FxpjsL": "Jeg er klar!",
-  "1BryeH": "Ha kontakt med alle fellesskapene dine på ett sted",
-  "1K/IW1": "Ha kontakt med alle fellesskapene dine i servere",
-  "MbhY+v": "På Discord finner du fellesskap, venner, bokklubber, studiegrupper og mye mer.",
-  "qjXn0N": "Bruk talechat med flere personer samtidig",
-  "S2fS/v": "Velkommen til Discord!",
   "eGjmy8": [
     [
       6,
@@ -24253,6 +24256,7 @@
   "0Niu/P": "Gjenoppretting av passord",
   "myKyqq": "En SMS ble sendt til telefonnummeret som er knyttet til denne kontoen.",
   "+xqy3d": "Angi bekreftelseskoden for å tilbakestille passordet",
+  "R98xDw": "Passord er påkrevd.",
   "VUUJ6e": [
     "Passordet må bestå av ",
     [
@@ -25983,6 +25987,7 @@
   "OuItFh": "Egendefinerte appikoner",
   "R2IV/f": "Mer emojikrefter",
   "RSXQYG": "HD-video",
+  "YCZldH": "Nitro låser opp en verden full av fordeler",
   "4pEwXF": "Gi favorittfellesskapene dine et løft, og lås opp fantastiske fordeler.",
   "NyDu//": "2 serverbooster + 30 % avslag",
   "Mt3U1d": "Bruk forskjellig avatar, profiltema, banner og bio på hver av serverne dine.",
@@ -36882,6 +36887,7 @@
   "OdPCbG": "Vil du slå av data som kan forbedre Discord?",
   "KD6OJC": "Bruker",
   "IEpCBQ": "Brukernavn",
+  "GPfy3N": "Brukernavn er påkrevd.",
   "YEOwDA": "Hvem vil du legge til som venn?",
   "OKsSCQ": "Be om å bli med",
   "OzCsIC": "Kjemper i",
@@ -38174,18 +38180,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " den ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Er du sikker på at du vil slette webhooken ",
     [

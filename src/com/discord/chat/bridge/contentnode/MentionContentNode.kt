@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public sealed class MentionContentNode protected constructor() : ContentNode() {

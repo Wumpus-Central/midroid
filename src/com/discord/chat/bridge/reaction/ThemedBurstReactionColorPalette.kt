@@ -3,7 +3,7 @@ package com.discord.chat.bridge.reaction
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalette, dark: BurstReactionColorPalette) : ReactionView.ThemedBurstColorPalette {
@@ -53,14 +53,14 @@ public data class ThemedBurstReactionColorPalette(light: BurstReactionColorPalet
 
    public override fun toString(): String {
       val var1: BurstReactionColorPalette = this.light;
-      val var3: BurstReactionColorPalette = this.dark;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThemedBurstReactionColorPalette(light=");
-      var2.append(var1);
-      var2.append(", dark=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: BurstReactionColorPalette = this.dark;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ThemedBurstReactionColorPalette(light=");
+      var3.append(var1);
+      var3.append(", dark=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

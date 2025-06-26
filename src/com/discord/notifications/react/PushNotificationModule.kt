@@ -1,5 +1,6 @@
 package com.discord.notifications.react
 
+import A9.s
 import X1.a
 import X1.b
 import X1.c
@@ -24,7 +25,6 @@ import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import z9.s
 
 public class PushNotificationModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -119,10 +119,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun getLightsEnabled(promise: Promise) {
       q.h(var1, "promise");
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var1.resolve(var2.isLightsEnabled(var3));
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var1.resolve(var3.isLightsEnabled(var2));
    }
 
    public open fun getName(): String {
@@ -150,10 +150,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun handleDirectReplySuccess(notificationString: String) {
       q.h(var1, "notificationString");
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.onDirectReplySuccess(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.onDirectReplySuccess(var2, var1);
    }
 
    @ReactMethod
@@ -186,13 +186,13 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
          }
       }
 
-      val var7: LinkedHashMap = new LinkedHashMap(A9.q.d(var2.size()));
+      val var7: LinkedHashMap = new LinkedHashMap(B9.q.d(var2.size()));
 
       for (Entry var4 : var2.entrySet()) {
-         val var8: Any = var4.getKey();
+         val var9: Any = var4.getKey();
          val var10: Any = var4.getValue();
          q.e(var10);
-         var7.put(var8, var10);
+         var7.put(var9, var10);
       }
 
       NotificationClient.Companion.getInstance().showLocalNotification(this.reactContext, var7);
@@ -237,10 +237,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setLightsEnabled(enabled: Boolean) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.setLightsEnabled(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var2, "getReactApplicationContext(...)");
+      var3.setLightsEnabled(var2, var1);
    }
 
    @ReactMethod
@@ -270,10 +270,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun shouldNotifyEveryTime(promise: Promise) {
       q.h(var1, "promise");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(var3.shouldNotifyEveryTime(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.resolve(var2.shouldNotifyEveryTime(var3));
    }
 
    public companion object {

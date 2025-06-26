@@ -1,6 +1,6 @@
 package com.discord.sticker_picker.react
 
-import A9.n
+import B9.n
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.sticker_picker.StickerPickerRow
@@ -12,8 +12,8 @@ import kotlin.jvm.internal.q
 internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRow {
    q.h(var0, "data");
    val var3: Int = var0.getInt("rowContentWidth");
-   val var1: Int = var0.getInt("rowContentPaddingVertical");
-   val var2: Int = var0.getInt("itemSize");
+   val var2: Int = var0.getInt("rowContentPaddingVertical");
+   val var1: Int = var0.getInt("itemSize");
    val var5: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var12: IntRange = NativeArrayExtensionsKt.sizeRange(var5);
    val var6: ArrayList = new ArrayList(i.v(var12, 10));
@@ -25,8 +25,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       if (!var5.isNull(var4)) {
          val var10: ReadableMap = var5.getMap(var4);
          q.e(var10);
-         val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var10, "stickerId");
-         val var8: java.lang.String = NativeMapExtensionsKt.getNonNullString(var10, "stickerName");
+         val var8: java.lang.String = NativeMapExtensionsKt.getNonNullString(var10, "stickerId");
+         val var9: java.lang.String = NativeMapExtensionsKt.getNonNullString(var10, "stickerName");
          var4 = var10.getInt("stickerType");
          val var13: StickerPickerRow.Sticker.Type;
          if (var4 != 1) {
@@ -51,8 +51,8 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
          }
 
          var15 = new StickerPickerRow.Sticker(
-            var9,
             var8,
+            var9,
             var13,
             var10.getBoolean("stickerAnimated"),
             NativeMapExtensionsKt.getNonNullString(var10, "stickerUrl"),
@@ -66,5 +66,5 @@ internal fun deserializeStickerPickerRowData(data: ReadableMap): StickerPickerRo
       var6.add(var15);
    }
 
-   return new StickerPickerRow(var3, var1, var2, var6);
+   return new StickerPickerRow(var3, var2, var1, var6);
 }

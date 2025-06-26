@@ -1,5 +1,6 @@
 package com.discord.simpleast.code
 
+import A9.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -10,7 +11,6 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
-import z9.s
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern

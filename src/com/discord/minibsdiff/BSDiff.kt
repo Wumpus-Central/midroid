@@ -1,7 +1,7 @@
 package com.discord.minibsdiff
 
-import fb.k
-import gb.a
+import gb.k
+import hb.a
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
@@ -168,68 +168,68 @@ public object BSDiff {
       // 84: astore 6
       // 86: aload 3
       // 87: aconst_null
-      // 88: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 88: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8b: aload 2
       // 8c: aconst_null
-      // 8d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8d: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 90: aload 5
       // 92: aconst_null
-      // 93: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 93: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 96: aload 4
       // 98: aconst_null
-      // 99: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 99: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 9c: aload 1
       // 9d: aconst_null
-      // 9e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 9e: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // a1: return
-      // a2: astore 2
+      // a2: astore 3
       // a3: goto e4
-      // a6: astore 2
+      // a6: astore 3
       // a7: goto d9
-      // aa: astore 3
+      // aa: astore 2
       // ab: goto ce
       // ae: astore 3
       // af: goto c2
-      // b2: astore 6
-      // b4: aload 6
+      // b2: astore 7
+      // b4: aload 7
       // b6: athrow
-      // b7: astore 7
+      // b7: astore 6
       // b9: aload 3
-      // ba: aload 6
-      // bc: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // bf: aload 7
+      // ba: aload 7
+      // bc: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // bf: aload 6
       // c1: athrow
       // c2: aload 3
       // c3: athrow
       // c4: astore 6
       // c6: aload 2
       // c7: aload 3
-      // c8: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // c8: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cb: aload 6
       // cd: athrow
-      // ce: aload 3
+      // ce: aload 2
       // cf: athrow
-      // d0: astore 2
+      // d0: astore 3
       // d1: aload 5
-      // d3: aload 3
-      // d4: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // d7: aload 2
+      // d3: aload 2
+      // d4: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // d7: aload 3
       // d8: athrow
-      // d9: aload 2
+      // d9: aload 3
       // da: athrow
-      // db: astore 3
+      // db: astore 2
       // dc: aload 4
-      // de: aload 2
-      // df: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // e2: aload 3
+      // de: aload 3
+      // df: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // e2: aload 2
       // e3: athrow
-      // e4: aload 2
+      // e4: aload 3
       // e5: athrow
-      // e6: astore 3
+      // e6: astore 2
       // e7: aload 1
-      // e8: aload 2
-      // e9: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // ec: aload 3
+      // e8: aload 3
+      // e9: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ec: aload 2
       // ed: athrow
    }
 

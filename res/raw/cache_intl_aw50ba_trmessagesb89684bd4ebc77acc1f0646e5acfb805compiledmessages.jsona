@@ -3474,7 +3474,6 @@
   "3dIn2N": "Bu PlayStation™Network hesabı, iletişim özelliklerinin bir ebeveyn hesabı tarafından etkinleştirilmesini gerektiriyor.",
   "YpCiMj": "Bağlı Oyunlar",
   "IyYqqa": "Başka bir istemciye bağlı",
-  "7LkwqK": "Bağlanıyor...",
   "3fe7U1": "Bağlantılar",
   "yQvgBA": [
     [
@@ -4259,13 +4258,6 @@
   "mGhOIi": "Hat Yok",
   "Gp51dn": "RTC Bağlanıyor",
   "M7LDmJ": "RTC Bağlantısı Kesildi",
-  "G+vAHx": [
-    [
-      1,
-      "username"
-    ],
-    " Yayınını İzliyor"
-  ],
   "HtVOdX": "Görüntülü Bağlantı Kuruldu",
   "daXg4+": "Ses Bağlantısı Kuruldu",
   "zOZh3d": "Hesaplarını bağla",
@@ -19856,6 +19848,27 @@
     ],
     " hesapları bağlandı"
   ],
+  "7mv59P": [
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " tarihinde oluşturuldu"
+  ],
+  "7EcUbm": [
+    [
+      1,
+      "user"
+    ],
+    " tarafından ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " tarihinde oluşturuldu"
+  ],
   "sE5hSU": "Entegrasyon Ayarları",
   "u2D2Ul": [
     [
@@ -22476,7 +22489,6 @@
     ],
     " üzerinden kabul ettin."
   ],
-  "1BRkQ0": "Ağ bağlantısı sınırlı veya kullanılamıyor.",
   "oEAioK": "Boş Ver",
   "y2b7CA": "yeni",
   "l1dkSE": "Duyuru Kanalı",
@@ -23382,15 +23394,6 @@
   "rW5gw8": "Mesajlar, bahsetmeler, arkadaşlık istekleri ve etkinlikler gibi Discord aktiviteleri için anlık bildirimler alacaksın.",
   "Gf7U1d": "Yeni mesajlar, arkadaşlık istekleri, etkinlikler ve daha fazlası için bildirimler al.",
   "3nx0b2": "Bildirimleri aç",
-  "dbQxR0": "Görüntülü sohbet ve ekran paylaşımını kullanarak vakit geçir",
-  "3wC7eH": "Yazılı sohbette konuşmaları ve konuları takip et",
-  "GG2T6u": "Discord'a Hoş Geldin!",
-  "FxpjsL": "Hadi!",
-  "1BryeH": "Tek bir ortamda tüm topluluklarınla bağlantı kur",
-  "1K/IW1": "Sunucularda tüm topluluklarınla bağlantı kur",
-  "MbhY+v": "Discord; toplulukların, arkadaşların, kitap kulüplerin, çalışma grupların ve daha fazlası için bir yuvadır.",
-  "qjXn0N": "Aynı anda birden fazla kişiyle sesli sohbet et",
-  "S2fS/v": "Discord'a Hoş Geldin!",
   "eGjmy8": [
     [
       6,
@@ -24369,6 +24372,7 @@
   "0Niu/P": "Şifre Kurtarma",
   "myKyqq": "Bu hesapla bağlantılı telefon numarasına SMS gönderildi.",
   "+xqy3d": "Şifreni sıfırlamak için onay kodunu gir.",
+  "R98xDw": "Şifre gerekli.",
   "VUUJ6e": [
     "Şifre ",
     [
@@ -26093,6 +26097,7 @@
   "OuItFh": "Özel Uygulama Simgeleri",
   "R2IV/f": "Daha Fazla Emoji Gücü",
   "RSXQYG": "HD Video",
+  "YCZldH": "Nitro ile Bir Dünya Dolusu Avantajın Kilidini Aç",
   "4pEwXF": "En sevdiğin topluluklara bir takviye ver ve harika avantajlar aç.",
   "NyDu//": "2 Sunucu Takviyesi + %30 indirim",
   "Mt3U1d": "Sunucularında farklı avatarlar, profil temaları, afişler ve biyografiler kullan.",
@@ -36945,6 +36950,7 @@
   "OdPCbG": "Discord'u iyileştirmek için verileri kullan ayarı kapatılsın mı?",
   "KD6OJC": "Kullanıcı",
   "IEpCBQ": "Kullanıcı Adı",
+  "GPfy3N": "Kullanıcı adı gerekli.",
   "YEOwDA": "Arkadaşın olarak kimi eklemek istersin?",
   "OKsSCQ": "Katılma İzni İste",
   "OzCsIC": "Şu yarışmada yarışıyor:",
@@ -38240,19 +38246,6 @@
     " kullanıcısına el salla"
   ],
   "jp25IS": "Webhook'lar",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " tarafından ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ],
-    " tarihinde"
-  ],
   "rIWe+/": [
     [
       8,

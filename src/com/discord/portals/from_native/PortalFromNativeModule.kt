@@ -11,9 +11,9 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import ib.I
-import ib.K
-import ib.f
+import jb.I
+import jb.K
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
@@ -78,7 +78,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = G9.b.e();
+               val var3: Any = H9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -104,7 +104,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = G9.b.e();
+                        val var3: Any = H9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

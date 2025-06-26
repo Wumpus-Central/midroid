@@ -4,7 +4,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class SoundmojiContentNode(soundId: String,
@@ -157,33 +157,33 @@ public data class SoundmojiContentNode(soundId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.soundId;
-      val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: java.lang.String = this.content;
-      val var5: java.lang.String = this.guildId;
+      val var9: java.lang.String = this.soundId;
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = this.content;
+      val var4: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var4: java.lang.String = this.emojiId;
+      val var5: java.lang.String = this.emojiId;
       val var3: java.lang.String = this.emojiName;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("SoundmojiContentNode(soundId=");
-      var8.append(var2);
-      var8.append(", channelId=");
-      var8.append(var9);
-      var8.append(", messageId=");
-      var8.append(var6);
-      var8.append(", content=");
-      var8.append(var7);
-      var8.append(", guildId=");
-      var8.append(var5);
-      var8.append(", jumboable=");
-      var8.append(var1);
-      var8.append(", emojiId=");
-      var8.append(var4);
-      var8.append(", emojiName=");
-      var8.append(var3);
-      var8.append(")");
-      return var8.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("SoundmojiContentNode(soundId=");
+      var7.append(var9);
+      var7.append(", channelId=");
+      var7.append(var2);
+      var7.append(", messageId=");
+      var7.append(var8);
+      var7.append(", content=");
+      var7.append(var6);
+      var7.append(", guildId=");
+      var7.append(var4);
+      var7.append(", jumboable=");
+      var7.append(var1);
+      var7.append(", emojiId=");
+      var7.append(var5);
+      var7.append(", emojiName=");
+      var7.append(var3);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

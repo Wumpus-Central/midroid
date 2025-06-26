@@ -3474,7 +3474,6 @@
   "3dIn2N": "This PlayStation™Network account requires communication features to be enabled by a parent account.",
   "YpCiMj": "Connected Games",
   "IyYqqa": "Connected on another client",
-  "7LkwqK": "Connecting…",
   "3fe7U1": "Connections",
   "yQvgBA": [
     [
@@ -4254,14 +4253,6 @@
   "mGhOIi": "No Route",
   "Gp51dn": "RTC Connecting",
   "M7LDmJ": "RTC Disconnected",
-  "G+vAHx": [
-    "Watching ",
-    [
-      1,
-      "username"
-    ],
-    "'s Stream"
-  ],
   "HtVOdX": "Video Connected",
   "daXg4+": "Voice Connected",
   "zOZh3d": "Connect your accounts",
@@ -19763,6 +19754,27 @@
     ],
     " accounts"
   ],
+  "7mv59P": [
+    "Created on ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Created on ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " by ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integration Settings",
   "u2D2Ul": [
     [
@@ -22388,7 +22400,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Network connectivity limited or unavailable.",
   "oEAioK": "Never Mind",
   "y2b7CA": "new",
   "l1dkSE": "Announcement Channel",
@@ -23283,15 +23294,6 @@
   "rW5gw8": "You'll receive push notifications for Discord activities like messages, mentions, friend requests and events.",
   "Gf7U1d": "Get notifications for new messages, friend requests, events and more.",
   "3nx0b2": "Turn on notifications",
-  "dbQxR0": "Hang out using video chat and Screen Share",
-  "3wC7eH": "Follow conversations and topics in text chat",
-  "GG2T6u": "Welcome to Discord!",
-  "FxpjsL": "Let's Go!",
-  "1BryeH": "Connect with all your communities in one place",
-  "1K/IW1": "Connect with all your communities in servers",
-  "MbhY+v": "Discord is a home for your communities, friends, book clubs, study groups and more.",
-  "qjXn0N": "Chat over voice with multiple people at once",
-  "S2fS/v": "Welcome to Discord!",
   "eGjmy8": [
     [
       6,
@@ -24269,6 +24271,7 @@
   "0Niu/P": "Password Recovery",
   "myKyqq": "An SMS was sent to the phone number connected to this account.",
   "+xqy3d": "Enter your confirmation code to reset your password",
+  "R98xDw": "Password is required.",
   "ZcgDJS": "Pause",
   "khEaRE": "Unable to confirm payment method",
   "ouo4FB": "Buy Gift",
@@ -25993,6 +25996,7 @@
   "OuItFh": "Custom App Icons",
   "R2IV/f": "More Emoji Power",
   "RSXQYG": "HD Video",
+  "YCZldH": "Unlock a World of Perks with Nitro",
   "4pEwXF": "Give your favourite communities a boost and unlock awesome perks.",
   "NyDu//": "2 Server Boosts + 30% off",
   "Mt3U1d": "Use a different avatar, profile theme, banner and bio in each of your servers.",
@@ -36864,6 +36868,7 @@
   "OdPCbG": "Turn off use data to improve Discord?",
   "KD6OJC": "User",
   "IEpCBQ": "Username",
+  "GPfy3N": "Username is required.",
   "YEOwDA": "Who would you like to add as a friend?",
   "OKsSCQ": "Ask to Join",
   "OzCsIC": "Competing in",
@@ -38148,18 +38153,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " on ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Are you sure you want to delete the ",
     [

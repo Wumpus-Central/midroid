@@ -231,15 +231,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var4: CardView = this.binding.selectedSegmentBg;
+         val var3: CardView = this.binding.selectedSegmentBg;
          q.g(this.binding.selectedSegmentBg, "selectedSegmentBg");
-         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
-         if (var3 == null) {
+         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
+         if (var4 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var3.width = var1;
-         var4.setLayoutParams(var3);
+         var4.width = var1;
+         var3.setLayoutParams(var4);
          ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }

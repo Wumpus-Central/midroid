@@ -1,6 +1,7 @@
 package com.discord.fast_connect
 
-import A9.q
+import A9.s
+import B9.q
 import com.discord.app_database.DatabaseVersions
 import com.discord.app_database.GuildVersion
 import com.discord.app_database.NonGuildVersion
@@ -10,8 +11,7 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import wb.g
-import z9.s
+import xb.g
 
 internal object IdentifyPayload {
    private fun JsonObject.put(path: List<String>, value: JsonElement?): JsonObject {
@@ -82,25 +82,27 @@ internal object IdentifyPayload {
          return var1;
       } else {
          val var8: JsonObject = var17 as JsonObject;
-         var17 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         var7 = var2.getGuildVersions();
-         val var12: LinkedHashMap = new LinkedHashMap(d.d(q.d(((Object[])var7).length), 16));
-         var var5: Int = ((Object[])var7).length;
+         var7 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         var17 = var2.getGuildVersions();
+         val var12: LinkedHashMap = new LinkedHashMap(d.d(q.d(((Object[])var17).length), 16));
+         var var5: Int = ((Object[])var17).length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(((GuildVersion)((Object[])var7)[var3]).getId(), g.c(((GuildVersion)((Object[])var7)[var3]).getVersion()));
+            val var24: Pair = s.a(((GuildVersion)((Object[])var17)[var3]).getId(), g.c(((GuildVersion)((Object[])var17)[var3]).getVersion()));
             var12.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put(var8, (java.util.List<java.lang.String>)var17, new JsonObject(var12));
+         var var13: JsonObject = this.put(var8, (java.util.List<java.lang.String>)var7, new JsonObject(var12));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var7 = var14[var15];
-            var17 = INSTANCE;
+            var17 = var14[var15];
+            var7 = INSTANCE;
             var13 = INSTANCE.put(
-               var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var7).getId()}), ((IdentifyPayload)var17).toJson((NonGuildVersion)var7)
+               var13,
+               i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var17).getId()}),
+               ((IdentifyPayload)var7).toJson((NonGuildVersion)var17)
             );
          }
 

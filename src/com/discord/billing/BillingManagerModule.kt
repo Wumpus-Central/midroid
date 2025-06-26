@@ -25,9 +25,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         z9.s.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
-         z9.s.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
-         z9.s.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
+         A9.s.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
+         A9.s.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
+         A9.s.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
@@ -175,10 +175,10 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      kotlin.jvm.internal.q.g(var2, "getReactApplicationContext(...)");
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      kotlin.jvm.internal.q.g(var1, "getReactApplicationContext(...)");
+      var2.open(var1);
    }
 
    @ReactMethod

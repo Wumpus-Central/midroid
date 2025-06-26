@@ -3482,7 +3482,6 @@
   "3dIn2N": "Questo account PlayStation™Network richiede che le funzionalità di comunicazione vengano abilitate da un account genitore.",
   "YpCiMj": "Giochi collegati",
   "IyYqqa": "Connesso su un altro client",
-  "7LkwqK": "Connessione in corso...",
   "3fe7U1": "Collegamenti",
   "yQvgBA": [
     "L'account ",
@@ -4263,13 +4262,6 @@
   "mGhOIi": "Non raggiungibile",
   "Gp51dn": "Connessione in corso al server RTC",
   "M7LDmJ": "Disconnesso dal server RTC",
-  "G+vAHx": [
-    "Sta guardando lo stream di ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Connesso alla videochiamata",
   "daXg4+": "Connesso al canale vocale",
   "zOZh3d": "Collega i tuoi account",
@@ -19812,6 +19804,27 @@
     ],
     " collegati"
   ],
+  "7mv59P": [
+    "Creato il ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Creato il ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " da ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Impostazioni delle integrazioni",
   "u2D2Ul": [
     [
@@ -22407,7 +22420,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Connettività di rete limitata o non disponibile.",
   "oEAioK": "Non importa",
   "y2b7CA": "novità",
   "l1dkSE": "Canale delle notizie",
@@ -23302,15 +23314,6 @@
   "rW5gw8": "Riceverai notifiche push per le attività di Discord come messaggi, menzioni, richieste di amicizia ed eventi.",
   "Gf7U1d": "Ricevi notifiche per nuovi messaggi, richieste di amicizia, eventi e altro ancora.",
   "3nx0b2": "Attiva le notifiche",
-  "dbQxR0": "Spassatela con la chat video e la condivisione schermo",
-  "3wC7eH": "Segui le conversazioni e gli argomenti nella chat testuale",
-  "GG2T6u": "Ti diamo il benvenuto su Discord!",
-  "FxpjsL": "Andiamo!",
-  "1BryeH": "Collegati a tutte le tue community in un unico posto",
-  "1K/IW1": "Collegati a tutte le tue community nei server",
-  "MbhY+v": "Discord è una casa per le tue community, i tuoi amici, i tuoi club del libro, i tuoi gruppi di studio e tanto altro.",
-  "qjXn0N": "Usa la chat vocale con più persone insieme",
-  "S2fS/v": "Ti diamo il benvenuto su Discord!",
   "eGjmy8": [
     [
       6,
@@ -24299,6 +24302,7 @@
   "0Niu/P": "Recupero password",
   "myKyqq": "È stato inviato un SMS al numero di telefono collegato a questo account.",
   "+xqy3d": "Inserisci il tuo codice di conferma per reimpostare la password",
+  "R98xDw": "Password obbligatoria.",
   "VUUJ6e": [
     "La password deve essere di almeno ",
     [
@@ -26034,6 +26038,7 @@
   "OuItFh": "Icone app personalizzate",
   "R2IV/f": "Emoji potenziati",
   "RSXQYG": "Video HD",
+  "YCZldH": "Sblocca un mondo di vantaggi con Nitro",
   "4pEwXF": "Potenzia le tue community preferite e sblocca fantastici benefici.",
   "NyDu//": "2 potenziamenti server + 30% di sconto",
   "Mt3U1d": "Usa avatar, tema del profilo, banner e informazioni diverse in ognuno dei tuoi server.",
@@ -36978,6 +36983,7 @@
   "OdPCbG": "Disattivare l'uso dei dati per migliorare Discord?",
   "KD6OJC": "Utente",
   "IEpCBQ": "Nome utente",
+  "GPfy3N": "Nome utente obbligatorio.",
   "YEOwDA": "Chi vuoi aggiungere agli amici?",
   "OKsSCQ": "Chiedi di unirti",
   "OzCsIC": "In competizione su",
@@ -38261,19 +38267,6 @@
     ]
   ],
   "jp25IS": "Webhook",
-  "YrsmBA": [
-    "Creato da ",
-    [
-      1,
-      "username"
-    ],
-    " in data ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Sei sicuro di voler eliminare il webhook ",
     [

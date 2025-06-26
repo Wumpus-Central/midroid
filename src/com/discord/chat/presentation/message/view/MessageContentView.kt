@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = z9.j.a(new E0(this));
+      this.shadowView$delegate = A9.j.b(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 

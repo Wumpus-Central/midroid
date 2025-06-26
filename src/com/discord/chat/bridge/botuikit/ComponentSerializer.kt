@@ -9,8 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import wb.d
-import wb.g
+import xb.d
+import xb.g
 
 public object ComponentSerializer : d(G.b(Component.class)) {
    private final val knownTypes: List<Int>

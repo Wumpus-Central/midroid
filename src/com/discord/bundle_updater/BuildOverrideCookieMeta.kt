@@ -1,17 +1,17 @@
 package com.discord.bundle_updater
 
+import A9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import vb.E0
-import vb.O
-import vb.U
-import z9.s
+import wb.E0
+import wb.O
+import wb.U
 
-@sb.f
+@tb.f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -29,7 +29,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new vb.f(E0.a), new vb.f(var0), null, new U(var0, O.a)};
+      $childSerializers = new KSerializer[]{null, null, new wb.f(E0.a), new wb.f(var0), null, new U(var0, O.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -148,8 +148,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = s.a("expiresAt", this.expiresAt);
-      val var3: Pair = s.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = s.a("expiresAt", this.expiresAt);
+      val var4: Pair = s.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -171,31 +171,31 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var6, var7, s.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var6, var7, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.expiresAt;
-      val var6: java.lang.String = this.releaseChannel;
-      val var3: java.util.List = this.validForUserIds;
-      val var2: java.util.List = this.allowedVersions;
-      val var7: java.lang.Boolean = this.allowLoggedOut;
-      val var4: java.util.Map = this.experiments;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("BuildOverrideCookieMeta(expiresAt=");
-      var1.append(var5);
-      var1.append(", releaseChannel=");
-      var1.append(var6);
-      var1.append(", validForUserIds=");
-      var1.append(var3);
-      var1.append(", allowedVersions=");
-      var1.append(var2);
-      var1.append(", allowLoggedOut=");
-      var1.append(var7);
-      var1.append(", experiments=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var6: java.lang.String = this.expiresAt;
+      val var7: java.lang.String = this.releaseChannel;
+      val var2: java.util.List = this.validForUserIds;
+      val var4: java.util.List = this.allowedVersions;
+      val var1: java.lang.Boolean = this.allowLoggedOut;
+      val var5: java.util.Map = this.experiments;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BuildOverrideCookieMeta(expiresAt=");
+      var3.append(var6);
+      var3.append(", releaseChannel=");
+      var3.append(var7);
+      var3.append(", validForUserIds=");
+      var3.append(var2);
+      var3.append(", allowedVersions=");
+      var3.append(var4);
+      var3.append(", allowLoggedOut=");
+      var3.append(var1);
+      var3.append(", experiments=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

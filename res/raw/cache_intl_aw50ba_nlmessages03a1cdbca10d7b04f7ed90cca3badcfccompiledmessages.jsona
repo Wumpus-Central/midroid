@@ -3479,7 +3479,6 @@
   "3dIn2N": "Een ouderaccount moet communicatiefunctionaliteit inschakelen voor dit account voor PlayStation™Network.",
   "YpCiMj": "Verbonden games",
   "IyYqqa": "Verbonden met andere client",
-  "7LkwqK": "Bezig met verbinden…",
   "3fe7U1": "Verbindingen",
   "yQvgBA": [
     [
@@ -4267,13 +4266,6 @@
   "mGhOIi": "Geen route",
   "Gp51dn": "Bezig met RTC-koppelen",
   "M7LDmJ": "RTC ontkoppeld",
-  "G+vAHx": [
-    "Bekijkt de stream van ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Videogekoppeld",
   "daXg4+": "Spraak gekoppeld",
   "zOZh3d": "Verbind je accounts",
@@ -19829,6 +19821,27 @@
     ],
     "-accounts verbonden"
   ],
+  "7mv59P": [
+    "Gecreëerd op ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Gecreëerd op ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " door ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integratie-instellingen",
   "u2D2Ul": [
     [
@@ -22440,7 +22453,6 @@
     ],
     " geaccepteerd."
   ],
-  "1BRkQ0": "Netwerkverbinding beperkt of niet beschikbaar.",
   "oEAioK": "Laat maar",
   "y2b7CA": "nieuw",
   "l1dkSE": "Aankondigingskanaal",
@@ -23339,15 +23351,6 @@
   "rW5gw8": "Je krijgt pushmeldingen voor Discord-activiteiten zoals berichten, vermeldingen, vriendschapsverzoeken en evenementen.",
   "Gf7U1d": "Krijg meldingen voor nieuwe berichten, vriendschapsverzoeken, evenementen en meer.",
   "3nx0b2": "Meldingen inschakelen",
-  "dbQxR0": "Breng samen tijd door met de videochat en scherm delen",
-  "3wC7eH": "Volg conversaties en onderwerpen in de tekstchat",
-  "GG2T6u": "Welkom bij Discord!",
-  "FxpjsL": "Aan de slag!",
-  "1BryeH": "Maak verbinding met al je community's op één plek",
-  "1K/IW1": "Maak verbinding met al je community's in servers",
-  "MbhY+v": "Discord is een thuisbasis voor je community's, vrienden, boekenclubs, studiegroepen en meer.",
-  "qjXn0N": "Chat via spraak met meerdere mensen tegelijk",
-  "S2fS/v": "Welkom bij Discord!",
   "eGjmy8": [
     [
       6,
@@ -24327,6 +24330,7 @@
   "0Niu/P": "Wachtwoord herstellen",
   "myKyqq": "Er is een sms verstuurd naar het telefoonnummer dat aan dit account gekoppeld is.",
   "+xqy3d": "Voer je bevestigingscode in om je wachtwoord opnieuw in te stellen",
+  "R98xDw": "Wachtwoord is vereist.",
   "VUUJ6e": [
     "Het wachtwoord moet ",
     [
@@ -26060,6 +26064,7 @@
   "OuItFh": "Persoonlijke applicatiepictogrammen",
   "R2IV/f": "Meer emoji-kracht",
   "RSXQYG": "HD-video",
+  "YCZldH": "Ontgrendel een wereld vol voordelen met Nitro",
   "4pEwXF": "Geef je favoriete community's een boost en ontgrendel geweldige voordelen.",
   "NyDu//": "2 serverboosts + 30% korting",
   "Mt3U1d": "Gebruik een andere avatar, profielthema, banner en biografie op elk van je servers.",
@@ -36983,6 +36988,7 @@
   "OdPCbG": "Gegevens gebruiken om Discord te verbeteren uitschakelen?",
   "KD6OJC": "Gebruiker",
   "IEpCBQ": "Gebruikersnaam",
+  "GPfy3N": "Gebruikersnaam is vereist.",
   "YEOwDA": "Wie wil je als vriend(in) toevoegen?",
   "OKsSCQ": "Vragen om deel te nemen",
   "OzCsIC": "Doet mee met",
@@ -38275,18 +38281,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " op ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Weet je zeker dat je de ",
     [

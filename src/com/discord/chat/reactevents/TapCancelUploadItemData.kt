@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : ReactEvent {
@@ -57,15 +57,15 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.itemId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapCancelUploadItemData(uploaderId=");
-      var3.append(var1);
-      var3.append(", itemId=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.uploaderId;
+      val var3: java.lang.String = this.itemId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCancelUploadItemData(uploaderId=");
+      var1.append(var2);
+      var1.append(", itemId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

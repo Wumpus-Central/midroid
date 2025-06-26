@@ -1,5 +1,6 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -12,7 +13,6 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import z9.s
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
          var1, var2, var3, var4
@@ -261,19 +261,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var2: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapLinkData(messageId=");
-      var5.append(var6);
-      var5.append(", title=");
-      var5.append(var4);
-      var5.append(", target=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.title;
+      val var4: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapLinkData(messageId=");
+      var3.append(var6);
+      var3.append(", title=");
+      var3.append(var2);
+      var3.append(", target=");
+      var3.append(var4);
+      var3.append(", content=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 }

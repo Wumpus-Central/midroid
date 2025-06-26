@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class TapObscuredMediaToggleData(messageId: String, channelId: String, attachmentId: String, embedId: String, isReveal: Boolean) : ReactEvent {
@@ -92,24 +92,24 @@ public data class TapObscuredMediaToggleData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.messageId;
-      val var6: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.attachmentId;
-      val var2: java.lang.String = this.embedId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
+      val var6: java.lang.String = this.attachmentId;
+      val var3: java.lang.String = this.embedId;
       val var1: Boolean = this.isReveal;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapObscuredMediaToggleData(messageId=");
-      var3.append(var4);
-      var3.append(", channelId=");
-      var3.append(var6);
-      var3.append(", attachmentId=");
-      var3.append(var5);
-      var3.append(", embedId=");
-      var3.append(var2);
-      var3.append(", isReveal=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapObscuredMediaToggleData(messageId=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", attachmentId=");
+      var4.append(var6);
+      var4.append(", embedId=");
+      var4.append(var3);
+      var4.append(", isReveal=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

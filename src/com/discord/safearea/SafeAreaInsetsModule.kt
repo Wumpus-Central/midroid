@@ -1,5 +1,6 @@
 package com.discord.safearea
 
+import A9.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -19,7 +20,6 @@ import f2.c
 import f2.d
 import f2.e
 import kotlin.jvm.internal.q
-import z9.s
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {

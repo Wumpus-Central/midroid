@@ -3,7 +3,7 @@ package com.discord.notifications.renderer.utils
 import Y1.v
 import Y1.w
 import android.text.format.DateUtils
-import gb.b
+import hb.b
 import java.text.DateFormat
 import java.util.Date
 import kotlin.jvm.internal.q
@@ -20,10 +20,10 @@ fun b(var0: MatchResult): java.lang.CharSequence {
 
 public fun renderNotificationMessageContent(content: String): String {
    q.h(var0, "content");
-   val var3: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
-   val var4: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
+   val var4: Regex = new Regex("(```(?:([a-z0-9_+\\-.]+?)\\n)?\\n*([^\\n].*?)\\n*```)");
+   val var3: Regex = new Regex("((`+)([\\s\\S]*?[^`])\\2(?!`))");
    val var5: Regex = new Regex("<t:(-?\\d{1,17})(?::([tTdDfFR]))?>");
-   var var14: java.lang.String = var4.i(var3.i(var0, new v()), new w());
+   var var14: java.lang.String = var3.i(var4.i(var0, new v()), new w());
    var var13: java.lang.String = var0;
 
    while (true) {
@@ -87,10 +87,10 @@ public fun renderNotificationMessageContent(content: String): String {
       }
 
       val var2: Int = var6.d().a();
-      val var12: Int = var6.d().m();
+      val var12: Int = var6.d().j();
       q.e(var10);
       var13 = h.v0(var13, var2, var12 + 1, var10).toString();
-      var14 = h.v0(var14, var6.d().a(), var6.d().m() + 1, var10).toString();
+      var14 = h.v0(var14, var6.d().a(), var6.d().j() + 1, var10).toString();
    }
 }
 

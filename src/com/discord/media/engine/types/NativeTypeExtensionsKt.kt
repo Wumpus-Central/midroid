@@ -1,5 +1,6 @@
 package com.discord.media.engine.types
 
+import A9.s
 import com.discord.native.engine.AudioInputDeviceDescription
 import com.discord.native.engine.AudioOutputDeviceDescription
 import com.discord.native.engine.ConnectionInfo
@@ -7,7 +8,6 @@ import com.discord.native.engine.VideoInputDeviceDescription
 import com.discord.native.engine.VideoInputDeviceFacing
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import z9.s
 
 internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String, Any>> {
    q.h(var0, "<this>");
@@ -16,7 +16,7 @@ internal fun Array<AudioInputDeviceDescription>.toListOfMaps(): List<Map<String,
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(A9.q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
+      var4.add(B9.q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
       var2++;
    }
 
@@ -30,7 +30,7 @@ internal fun Array<AudioOutputDeviceDescription>.toListOfMaps(): List<Map<String
    var var2: Int = 0;
 
    for (int var1 = 0; var2 < var3; var1++) {
-      var4.add(A9.q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
+      var4.add(B9.q.l(new Pair[]{s.a("name", var0[var2].getName()), s.a("guid", var0[var2].getGuid()), s.a("index", var1)}));
       var2++;
    }
 
@@ -81,7 +81,7 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
          var9 = "front";
       }
 
-      var16.add(A9.q.l(new Pair[]{s.a("name", var18.getName()), s.a("guid", var18.getGuid()), s.a("facing", var9), s.a("index", var12)}));
+      var16.add(B9.q.l(new Pair[]{s.a("name", var18.getName()), s.a("guid", var18.getGuid()), s.a("facing", var9), s.a("index", var12)}));
    }
 
    return var16;
@@ -89,12 +89,12 @@ internal fun Array<VideoInputDeviceDescription>.toListOfMaps(): List<Map<String,
 
 internal fun AudioInputDeviceDescription.toMap(): Map<String, Any> {
    q.h(var0, "<this>");
-   return A9.q.l(new Pair[]{s.a("name", var0.getName()), s.a("guid", var0.getGuid())});
+   return B9.q.l(new Pair[]{s.a("name", var0.getName()), s.a("guid", var0.getGuid())});
 }
 
 internal fun ConnectionInfo.toMap(): Map<String, Any> {
    q.h(var0, "<this>");
-   return A9.q.l(new Pair[]{s.a("protocol", var0.getProtocol()), s.a("address", var0.getLocalAddress()), s.a("port", var0.getLocalPort())});
+   return B9.q.l(new Pair[]{s.a("protocol", var0.getProtocol()), s.a("address", var0.getLocalAddress()), s.a("port", var0.getLocalPort())});
 }
 // $VF: Class flags could not be determined
 @JvmSynthetic

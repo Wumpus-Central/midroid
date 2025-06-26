@@ -32,35 +32,35 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var2: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var5: Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var1.newSmallDiskCache(var0))
+   val var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   val var6: Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var6: a = C.n();
-   val var3: F = o.a();
-   val var4: Builder = var5.X(new E(var6.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var3: a = C.n();
+   val var5: F = o.a();
+   val var4: Builder = var6.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var4: android.net.Uri.Builder = var1.buildUpon();
-            var4.clearQuery();
+            val var3: android.net.Uri.Builder = var1.buildUpon();
+            var3.clearQuery();
 
-            for (java.lang.String var5 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var5)) {
-                  val var3: java.util.Iterator = var1.getQueryParameters(var5).iterator();
+            for (java.lang.String var2 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
+                  val var4: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var3.hasNext()) {
-                     var4.appendQueryParameter(var5, var3.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var3.appendQueryParameter(var2, var4.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var4.build();
+            var1 = var3.build();
             q.g(var1, "build(...)");
             return var1;
          }

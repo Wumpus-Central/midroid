@@ -2,7 +2,7 @@ package com.discord.user_search_worker
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData {
@@ -51,15 +51,15 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uuid;
-      val var2: UserSearchQuerySetPayload = this.payload;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UserSearchQuerySetData(uuid=");
-      var3.append(var1);
-      var3.append(", payload=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = this.uuid;
+      val var3: UserSearchQuerySetPayload = this.payload;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("UserSearchQuerySetData(uuid=");
+      var1.append(var2);
+      var1.append(", payload=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import G9.b
+import H9.b
 import I2.d
 import android.content.Context
 import android.graphics.Bitmap
@@ -65,7 +65,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
-      var6.f(new Function1(var8) {
+      var6.h(new Function1(var8) {
          final DataSource $imageDataSource;
 
          {

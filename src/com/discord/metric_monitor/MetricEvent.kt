@@ -1,5 +1,6 @@
 package com.discord.metric_monitor
 
+import A9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -7,8 +8,7 @@ import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
-import z9.s
+import tb.f
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -73,15 +73,15 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
-      val var3: java.util.List = this.tags;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MetricEvent(name=");
-      var2.append(var1);
-      var2.append(", tags=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.name;
+      val var1: java.util.List = this.tags;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MetricEvent(name=");
+      var3.append(var2);
+      var3.append(", tags=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

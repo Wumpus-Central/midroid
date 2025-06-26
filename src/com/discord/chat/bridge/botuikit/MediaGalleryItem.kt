@@ -5,7 +5,7 @@ import com.discord.chat.bridge.spoiler.SpoilerableData
 import com.discord.misc.utilities.ids.IdUtilsKt
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class MediaGalleryItem(media: UnfurledMediaItem,
@@ -243,8 +243,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.media.hashCode();
-      val var7: Int = this.mediaType.hashCode();
+      val var7: Int = this.media.hashCode();
+      val var8: Int = this.mediaType.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.videoPreviewUrl == null) {
@@ -261,8 +261,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var2 = this.spoilerDescription.hashCode();
       }
 
-      val var11: Int = java.lang.Boolean.hashCode(this.isObscure);
-      val var10: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
+      val var10: Int = java.lang.Boolean.hashCode(this.isObscure);
+      val var11: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
       val var3: Int;
       if (this.obscureDescription == null) {
          var3 = 0;
@@ -270,8 +270,8 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
          var3 = this.obscureDescription.hashCode();
       }
 
-      val var12: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
-      val var13: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
+      val var13: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var12: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var4: Int;
       if (this.verifyAge == null) {
          var4 = 0;
@@ -303,21 +303,21 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
                                                                      (
                                                                               (
                                                                                        (
-                                                                                                ((((var8 * 31 + var7) * 31 + var1) * 31 + var9) * 31 + var2)
+                                                                                                ((((var7 * 31 + var8) * 31 + var1) * 31 + var9) * 31 + var2)
                                                                                                       * 31
-                                                                                                   + var11
+                                                                                                   + var10
                                                                                              )
                                                                                              * 31
-                                                                                          + var10
+                                                                                          + var11
                                                                                     )
                                                                                     * 31
                                                                                  + var3
                                                                            )
                                                                            * 31
-                                                                        + var12
+                                                                        + var13
                                                                   )
                                                                   * 31
-                                                               + var13
+                                                               + var12
                                                          )
                                                          * 31
                                                       + var4
@@ -340,56 +340,56 @@ public data class MediaGalleryItem(media: UnfurledMediaItem,
 
    public override fun toString(): String {
       val var15: UnfurledMediaItem = this.media;
-      val var12: MediaGalleryItemType = this.mediaType;
-      val var13: java.lang.String = this.videoPreviewUrl;
-      val var2: Boolean = this.isSpoiler;
-      val var14: java.lang.String = this.spoilerDescription;
-      val var1: Boolean = this.isObscure;
-      val var4: Boolean = this.isObscureAwaitingScan;
-      val var8: java.lang.String = this.obscureDescription;
-      val var3: Boolean = this.obscureHideControls;
-      val var6: Boolean = this.obscureIsOpaque;
-      val var17: java.lang.Boolean = this.verifyAge;
-      val var5: Boolean = this.showDescription;
-      val var10: java.lang.String = this.description;
-      val var7: java.lang.String = this.descriptionHint;
-      val var11: java.lang.String = this.accessibilityRole;
-      val var16: java.lang.String = this.portalIdString;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("MediaGalleryItem(media=");
-      var9.append(var15);
-      var9.append(", mediaType=");
-      var9.append(var12);
-      var9.append(", videoPreviewUrl=");
-      var9.append(var13);
-      var9.append(", isSpoiler=");
-      var9.append(var2);
-      var9.append(", spoilerDescription=");
-      var9.append(var14);
-      var9.append(", isObscure=");
-      var9.append(var1);
-      var9.append(", isObscureAwaitingScan=");
-      var9.append(var4);
-      var9.append(", obscureDescription=");
-      var9.append(var8);
-      var9.append(", obscureHideControls=");
-      var9.append(var3);
-      var9.append(", obscureIsOpaque=");
-      var9.append(var6);
-      var9.append(", verifyAge=");
-      var9.append(var17);
-      var9.append(", showDescription=");
-      var9.append(var5);
-      var9.append(", description=");
-      var9.append(var10);
-      var9.append(", descriptionHint=");
-      var9.append(var7);
-      var9.append(", accessibilityRole=");
-      var9.append(var11);
-      var9.append(", portalIdString=");
-      var9.append(var16);
-      var9.append(")");
-      return var9.toString();
+      val var16: MediaGalleryItemType = this.mediaType;
+      val var8: java.lang.String = this.videoPreviewUrl;
+      val var4: Boolean = this.isSpoiler;
+      val var7: java.lang.String = this.spoilerDescription;
+      val var3: Boolean = this.isObscure;
+      val var1: Boolean = this.isObscureAwaitingScan;
+      val var12: java.lang.String = this.obscureDescription;
+      val var6: Boolean = this.obscureHideControls;
+      val var5: Boolean = this.obscureIsOpaque;
+      val var11: java.lang.Boolean = this.verifyAge;
+      val var2: Boolean = this.showDescription;
+      val var14: java.lang.String = this.description;
+      val var9: java.lang.String = this.descriptionHint;
+      val var13: java.lang.String = this.accessibilityRole;
+      val var17: java.lang.String = this.portalIdString;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("MediaGalleryItem(media=");
+      var10.append(var15);
+      var10.append(", mediaType=");
+      var10.append(var16);
+      var10.append(", videoPreviewUrl=");
+      var10.append(var8);
+      var10.append(", isSpoiler=");
+      var10.append(var4);
+      var10.append(", spoilerDescription=");
+      var10.append(var7);
+      var10.append(", isObscure=");
+      var10.append(var3);
+      var10.append(", isObscureAwaitingScan=");
+      var10.append(var1);
+      var10.append(", obscureDescription=");
+      var10.append(var12);
+      var10.append(", obscureHideControls=");
+      var10.append(var6);
+      var10.append(", obscureIsOpaque=");
+      var10.append(var5);
+      var10.append(", verifyAge=");
+      var10.append(var11);
+      var10.append(", showDescription=");
+      var10.append(var2);
+      var10.append(", description=");
+      var10.append(var14);
+      var10.append(", descriptionHint=");
+      var10.append(var9);
+      var10.append(", accessibilityRole=");
+      var10.append(var13);
+      var10.append(", portalIdString=");
+      var10.append(var17);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

@@ -313,20 +313,20 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
          val var5: PropertyValuesHolder = PropertyValuesHolder.ofFloat(
             "arrow-scale", new float[]{1.0F, this.getArrowContainerGrowthRatio((float)var3.getMeasuredHeight()), 1.0F}
          );
-         var var7: ValueAnimator = new ValueAnimator();
+         val var7: ValueAnimator = new ValueAnimator();
          var7.setValues(new PropertyValuesHolder[]{var5});
          var7.setDuration(300L);
          var7.setInterpolator(new AccelerateDecelerateInterpolator());
          var7.addUpdateListener(new s(this, var1));
          this.easterEggArrowAnimator = var7;
          var7.start();
-         val var6: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
-         var7 = new ValueAnimator();
-         var7.setValues(new PropertyValuesHolder[]{var6});
-         var7.setDuration(800L);
-         var7.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
-         var7.addUpdateListener(new t(this, var1));
-         var7.addListener(new AnimatorListener(this, var2, var1) {
+         val var8: PropertyValuesHolder = PropertyValuesHolder.ofFloat("arrow-rotation", new float[]{720.0F, 0.0F});
+         val var6: ValueAnimator = new ValueAnimator();
+         var6.setValues(new PropertyValuesHolder[]{var8});
+         var6.setDuration(800L);
+         var6.setInterpolator(new PathInterpolator(0.0F, 0.0F, 0.25F, 1.0F));
+         var6.addUpdateListener(new t(this, var1));
+         var6.addListener(new AnimatorListener(this, var2, var1) {
             final RecyclerView $recyclerView$inlined;
             final RecyclerView.ViewHolder $viewHolder$inlined;
             final SwipeHelper this$0;
@@ -354,8 +354,8 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             public void onAnimationStart(Animator var1) {
             }
          });
-         this.easterEggArrowRotationAnimator = var7;
-         var7.start();
+         this.easterEggArrowRotationAnimator = var6;
+         var6.start();
          this.easterEggIsAnimating = true;
       }
    }
@@ -617,14 +617,14 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
 
       if (var9 != null) {
          val var3: Float = this.getSwipeProgress();
-         val var4: Float = SizeUtilsKt.getDpToPx(12);
+         val var2: Float = SizeUtilsKt.getDpToPx(12);
          if (this.mView == null) {
             kotlin.jvm.internal.q.y("mView");
          } else {
             var6 = this.mView;
          }
 
-         val var2: Float = this.getLeftBevelRadius(var3, (float)var6.getMeasuredHeight());
+         val var4: Float = this.getLeftBevelRadius(var3, (float)var6.getMeasuredHeight());
          val var10: java.lang.String;
          if (ThemeManager.INSTANCE.isThemeLight()) {
             var10 = "#1F000000";
@@ -632,7 +632,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             var10 = "#3E000000";
          }
 
-         var9.getShadowView().setParams(var4 * var3, var2, var10);
+         var9.getShadowView().setParams(var2 * var3, var4, var10);
       }
    }
 
@@ -736,7 +736,7 @@ internal class SwipeHelper(context: Context, onStart: () -> Unit, onEnd: () -> U
             val var3: Int = SwipeHelper.WhenMappings.$EnumSwitchMapping$0[this.actionType.ordinal()];
             if (var3 != 1) {
                if (var3 != 2) {
-                  throw new z9.n();
+                  throw new A9.n();
                }
 
                var5.getOnInitiateEdit().invoke();

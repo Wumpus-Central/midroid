@@ -3491,7 +3491,6 @@
   "3dIn2N": "Denne PlayStation™Network-konto kræver, at en overordnet konto har aktiveret kommunikationsfunktioner.",
   "YpCiMj": "Forbundne spil",
   "IyYqqa": "Tilsluttet på en anden klient",
-  "7LkwqK": "Tilslutter…",
   "3fe7U1": "Forbindelser",
   "yQvgBA": [
     [
@@ -4271,14 +4270,6 @@
   "mGhOIi": "Ingen rute",
   "Gp51dn": "RTC tilslutter",
   "M7LDmJ": "RTC frakoblet",
-  "G+vAHx": [
-    "Ser ",
-    [
-      1,
-      "username"
-    ],
-    "s Stream"
-  ],
   "HtVOdX": "Videotilsluttet",
   "daXg4+": "Stemmetilsluttet",
   "zOZh3d": "Forbind dine konti",
@@ -19889,6 +19880,27 @@
     ],
     "-konti"
   ],
+  "7mv59P": [
+    "Oprettet d. ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Oprettet d. ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " af ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integrationsindstillinger",
   "u2D2Ul": [
     [
@@ -22525,7 +22537,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Netværkstilslutningen er begrænset eller utilgængelig.",
   "oEAioK": "Det’ ligemeget",
   "y2b7CA": "ny",
   "l1dkSE": "Bekendtgørelseskanal",
@@ -23429,15 +23440,6 @@
   "rW5gw8": "Du modtager push-notifikationer om Discord-aktiviteter som meddelelser, omtaler, venneanmodninger og begivenheder.",
   "Gf7U1d": "Få meddelelser om nye beskeder, venneanmodninger, begivenheder og meget mere.",
   "3nx0b2": "Slå notifikationer til",
-  "dbQxR0": "Hæng ud med videochat og skærmdeling",
-  "3wC7eH": "Følg samtaler og emner i tekstchatten",
-  "GG2T6u": "Velkommen til Discord!",
-  "FxpjsL": "Lad os komme i gang!",
-  "1BryeH": "Få forbindelse med alle dine communities på ét sted",
-  "1K/IW1": "Få forbindelse med alle dine communities på servere",
-  "MbhY+v": "Discord er hjemsted for dine communities, venner, bogklubber, studiegrupper og meget mere.",
-  "qjXn0N": "Chat over tale med flere personer på én gang",
-  "S2fS/v": "Velkommen til Discord!",
   "eGjmy8": [
     [
       6,
@@ -24415,6 +24417,7 @@
   "0Niu/P": "Gendannelse af adgangskode",
   "myKyqq": "Der blev sendt en SMS til det telefonnummer, der er tilknyttet til denne konto.",
   "+xqy3d": "Indtast din bekræftelseskode for at nulstille din adgangskode",
+  "R98xDw": "Adgangskode er påkrævet.",
   "VUUJ6e": [
     "Adgangskoden skal være på ",
     [
@@ -26155,6 +26158,7 @@
   "OuItFh": "Tilpassede app-ikoner",
   "R2IV/f": "Mere Emoji Power",
   "RSXQYG": "HD-Video",
+  "YCZldH": "Lås op for en verden fyldt med ekstra fordele med Nitro",
   "4pEwXF": "Giv dine yndlings-communities et løft, og lås op for fantastiske fordele.",
   "NyDu//": "2 serverboosts + 30 % rabat",
   "Mt3U1d": "Brug en anden avatar, et andet profiltema, banner og en anden biografi på hver af dine servere.",
@@ -36970,6 +36974,7 @@
   "OdPCbG": "Slå \"Brug data for at forbedre Discord\" fra?",
   "KD6OJC": "Bruger",
   "IEpCBQ": "Brugernavn",
+  "GPfy3N": "Brugernavn er påkrævet.",
   "YEOwDA": "Hvem vil du tilføje som ven?",
   "OKsSCQ": "Spørg om at deltage",
   "OzCsIC": "Konkurrerer i",
@@ -38262,18 +38267,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " på ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Er du sikker på, at du vil slette ",
     [

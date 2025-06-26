@@ -3458,7 +3458,6 @@
   "3dIn2N": "Acest cont PlayStation Network necesită activarea funcțiilor de comunicare de către un cont de părinte.",
   "YpCiMj": "Jocuri conectate",
   "IyYqqa": "Conectat prin alt client",
-  "7LkwqK": "Se conectează…",
   "3fe7U1": "Conexiuni",
   "yQvgBA": [
     [
@@ -4242,13 +4241,6 @@
   "mGhOIi": "Nicio rută",
   "Gp51dn": "Conectare RTC",
   "M7LDmJ": "RTC deconectat",
-  "G+vAHx": [
-    "Urmărește stream-ul lui ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Video conectat",
   "daXg4+": "Voce conectată",
   "zOZh3d": "Conectează-ți conturile",
@@ -19780,6 +19772,27 @@
     ],
     " conectate"
   ],
+  "7mv59P": [
+    "Integrare creată pe ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Integrare creată pe ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " de ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Setări de integrare",
   "u2D2Ul": [
     [
@@ -22405,7 +22418,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Conexiune la rețea limitată sau indisponibilă.",
   "oEAioK": "Mai bine lasă",
   "y2b7CA": "nou",
   "l1dkSE": "Canal pentru anunţuri",
@@ -23301,15 +23313,6 @@
   "rW5gw8": "Vei primi notificări push pentru activitățile de pe Discord cum ar fi mesaje, mențiuni, cereri de prietenie și evenimente.",
   "Gf7U1d": "Primește notificări pentru mesaje, cereri de prietenie, evenimente și multe altele.",
   "3nx0b2": "Activează notificările",
-  "dbQxR0": "Stai de vorbă pe chatul video și partajează-ți ecranul",
-  "3wC7eH": "Urmărește conversații și subiecte în chatul scris",
-  "GG2T6u": "Bun venit pe Discord!",
-  "FxpjsL": "Haide!",
-  "1BryeH": "Ține legătura cu toate comunitățile tale într-un singur loc",
-  "1K/IW1": "Ține legătura cu toate comunitățile tale pe servere",
-  "MbhY+v": "Discord îți găzduiește comunitățile, prietenii, cluburile de lectură, grupuri de studii și multe altele.",
-  "qjXn0N": "Comunică prin chatul vocal cu mai multe persoane simultan",
-  "S2fS/v": "Bun venit pe Discord!",
   "eGjmy8": [
     [
       6,
@@ -24292,6 +24295,7 @@
   "0Niu/P": "Recuperare parolă",
   "myKyqq": "S-a trimis un SMS la numărul de telefon asociat contului.",
   "+xqy3d": "Introdu codul de confirmare pentru a-ți reseta parola",
+  "R98xDw": "Parola este necesară.",
   "VUUJ6e": [
     "Parola trebuie să aibă minimum ",
     [
@@ -26020,6 +26024,7 @@
   "OuItFh": "Pictograme personalizate pentru aplicații",
   "R2IV/f": "Mai multă putere emoji",
   "RSXQYG": "Video HD",
+  "YCZldH": "Deblochează o mulțime de avantaje cu Nitro",
   "4pEwXF": "Dă-le un impuls comunităților tale preferate și deblochează avantaje grozave.",
   "NyDu//": "2 boost-uri pentru server + 30% reducere",
   "Mt3U1d": "Folosește un avatar, o temă de profil, un banner și un profil diferit pe fiecare server.",
@@ -36924,6 +36929,7 @@
   "OdPCbG": "Oprești folosirea datelor pentru a îmbunătăți Discord?",
   "KD6OJC": "Utilizator",
   "IEpCBQ": "Nume de utilizator",
+  "GPfy3N": "Numele de utilizator este necesar.",
   "YEOwDA": "Pe cine vrei să adaugi ca prieten?",
   "OKsSCQ": "Cere să te alături",
   "OzCsIC": "Concurează în",
@@ -38215,18 +38221,6 @@
     ]
   ],
   "jp25IS": "Webhook-uri",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " pe ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Ești sigur că vrei să ștergi webhook-ul ",
     [

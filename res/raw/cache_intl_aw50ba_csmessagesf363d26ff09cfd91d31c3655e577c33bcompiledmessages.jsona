@@ -3556,7 +3556,6 @@
   "3dIn2N": "Účet PlayStation™Network vyžaduje, aby v nadřazeném účtu byly povoleny funkce pro komunikaci.",
   "YpCiMj": "Propojené hry",
   "IyYqqa": "Připojeno přes jiného klienta",
-  "7LkwqK": "Připojování…",
   "3fe7U1": "Propojení",
   "yQvgBA": [
     "Platforma ",
@@ -4411,13 +4410,6 @@
   "mGhOIi": "Žádná cesta",
   "Gp51dn": "Připojování RTC",
   "M7LDmJ": "RTC odpojeno",
-  "G+vAHx": [
-    "Sledování streamu ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Video připojeno",
   "daXg4+": "Hlas připojen",
   "zOZh3d": "Propoj své účty",
@@ -20474,6 +20466,27 @@
       "platformName"
     ]
   ],
+  "7mv59P": [
+    "Vytvořeno dne ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Vytvořil/a ",
+    [
+      1,
+      "user"
+    ],
+    " dne ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
   "sE5hSU": "Nastavení integrace",
   "u2D2Ul": [
     "Aplikace ",
@@ -23160,7 +23173,6 @@
     ],
     " byla přijata."
   ],
-  "1BRkQ0": "Připojení k síti je omezené nebo nedostupné.",
   "oEAioK": "Nevadí",
   "y2b7CA": "nové",
   "l1dkSE": "Kanál oznámení",
@@ -24120,15 +24132,6 @@
   "rW5gw8": "Budeš dostávat vyskakovací oznámení o dění na Discordu, jako jsou zprávy, zmínky, žádosti o přátelství a události.",
   "Gf7U1d": "Dostávej oznámení o nových zprávách, žádostech o přátelství, událostech a dalších zajímavostech.",
   "3nx0b2": "Zapnout oznámení",
-  "dbQxR0": "Bav se prostřednictvím video chatu a sdílení obrazovky",
-  "3wC7eH": "Sleduj konverzace a témata v textovém chatu",
-  "GG2T6u": "Vítej na Discordu!",
-  "FxpjsL": "Jdeme na to!",
-  "1BryeH": "Navaž kontakt se všemi svými komunitami na jednom místě",
-  "1K/IW1": "Komunikuj se všemi svými komunitami na serverech",
-  "MbhY+v": "Discord je domovem pro tvé komunity, přátele, knižní kluby, studijní skupiny a další.",
-  "qjXn0N": "Používej hlasovou komunikaci s více lidmi najednou",
-  "S2fS/v": "Vítej na Discordu!",
   "eGjmy8": [
     [
       6,
@@ -25147,6 +25150,7 @@
   "0Niu/P": "Obnovení hesla",
   "myKyqq": "Poslali jsme SMS na telefonní číslo propojené s tímto účtem.",
   "+xqy3d": "Pro obnovení hesla zadej svůj ověřovací kód",
+  "R98xDw": "Potřebujeme heslo.",
   "VUUJ6e": [
     "Heslo musí mít ",
     [
@@ -26945,6 +26949,7 @@
   "OuItFh": "Vlastní ikony aplikací",
   "R2IV/f": "Mocnější smajlíky",
   "RSXQYG": "HD video",
+  "YCZldH": "Odemkni svět výhod s Nitrem",
   "4pEwXF": "Vylepši své oblíbené komunity a odemkni pro jejich členy úžasné výhody.",
   "NyDu//": "2 vylepšení serveru + sleva 30 %",
   "Mt3U1d": "Používej vlastní avatar, motiv profilu, banner a informace o sobě na každém svém serveru.",
@@ -38142,6 +38147,7 @@
   "OdPCbG": "Chceš vypnout používání dat k vylepšování Discordu?",
   "KD6OJC": "Uživatel",
   "IEpCBQ": "Uživatelské jméno",
+  "GPfy3N": "Uživatelské jméno je povinné.",
   "YEOwDA": "Koho si chceš přidat mezi přátele?",
   "OKsSCQ": "Požádat o vstup",
   "OzCsIC": "Soutěží v",
@@ -39492,18 +39498,6 @@
     ]
   ],
   "jp25IS": "Notifikační služby (Webhooks)",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " dne ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Určitě chceš odstranit webhook ",
     [

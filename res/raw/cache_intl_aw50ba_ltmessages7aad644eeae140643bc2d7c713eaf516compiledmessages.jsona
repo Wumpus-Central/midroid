@@ -3558,7 +3558,6 @@
   "3dIn2N": "Šiai PlayStation™Network paskyrai reikia, kad tėvų paskyra įjungtų komunikacijos funkcijas.",
   "YpCiMj": "Susieti žaidimai",
   "IyYqqa": "Prisijungta prie kito kliento",
-  "7LkwqK": "Jungiamasi…",
   "3fe7U1": "Sąsajos",
   "yQvgBA": [
     [
@@ -4401,13 +4400,6 @@
   "mGhOIi": "Nėra Maršruto",
   "Gp51dn": "Jungiama RTC",
   "M7LDmJ": "RTC Atjungta",
-  "G+vAHx": [
-    "Stebi, ką transliuoja ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Vaizdas Prijungtas",
   "daXg4+": "Prisijungta Prie Pokalbio",
   "zOZh3d": "Susiek savo paskyras",
@@ -20444,6 +20436,27 @@
     ],
     " paskyros"
   ],
+  "7mv59P": [
+    "Sukurta ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Sukurta ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    ", sukūrė ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integravimo Parametrai",
   "u2D2Ul": [
     [
@@ -23127,7 +23140,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Tinklo ryšys ribotas arba nepasiekiamas.",
   "oEAioK": "Nesvarbu",
   "y2b7CA": "naujas",
   "l1dkSE": "Pranešimų kanalas",
@@ -24126,15 +24138,6 @@
   "rW5gw8": "Gausi push pranešimus apie tokias Discord veiklas, kaip žinutės, draugų užklausos ir renginiai.",
   "Gf7U1d": "Gauk pranešimus apie naujas žinutes, prašymus draugauti, renginius ir kita.",
   "3nx0b2": "Įjungti pranešimus",
-  "dbQxR0": "Leisk laiką su kitais vaizdo pokalbiuose ir bendrindamas (-a) ekraną",
-  "3wC7eH": "Sek pokalbius ir temas tekstiniuose pokalbiuose",
-  "GG2T6u": "Sveikiname pradėjus naudoti Discord!",
-  "FxpjsL": "Varom!",
-  "1BryeH": "Junkis prie visų savo bendruomenių vienoje vietoje",
-  "1K/IW1": "Junkis prie visų savo bendruomenių serveriuose",
-  "MbhY+v": "Discord – tai tavo bendruomenių, draugų, knygų klubai, mokymosi grupių ir kt. namai.",
-  "qjXn0N": "Kalbėk balsu su keliais žmonėmis tuo pačiu metu",
-  "S2fS/v": "Sveikiname pradėjus naudoti Discord!",
   "eGjmy8": [
     [
       6,
@@ -25155,6 +25158,7 @@
   "0Niu/P": "Slaptažodžio atkūrimas",
   "myKyqq": "Su šia paskyra susietu telefono numeriu išsiuntėme SMS žinutę.",
   "+xqy3d": "Įvesk patvirtinimo kodą, kad atkurtum slaptažodį",
+  "R98xDw": "Reikalingas slaptažodis.",
   "VUUJ6e": [
     "Slaptažodį privalo sudaryti ",
     [
@@ -27016,6 +27020,7 @@
   "OuItFh": "Tinkintos programėlės piktogramos",
   "R2IV/f": "Daugiau jaustukų galių",
   "RSXQYG": "Aukštosios raiškos vaizdo įrašai",
+  "YCZldH": "Gauk visą pranašumų pasaulį su Nitro",
   "4pEwXF": "Sustiprink savo mėgstamiausias bendruomenes ir gauk puikių pranašumų.",
   "NyDu//": "2 serverio stiprinimai + 30 % nuolaida",
   "Mt3U1d": "Naudok vis kitokį pseudoportretą, profilio temą, reklamjuostę ir biografiją kiekviename savo serveryje.",
@@ -38096,6 +38101,7 @@
   "OdPCbG": "Išjungti duomenų naudojimą siekiant pagerinti Discord?",
   "KD6OJC": "Naudotojas",
   "IEpCBQ": "Slapyvardis",
+  "GPfy3N": "Privaloma nurodyti naudotojo vardą.",
   "YEOwDA": "Ką norėtum pridėti į draugus?",
   "OKsSCQ": "Prašyti prisijungimo",
   "OzCsIC": "Varžosi",
@@ -39528,19 +39534,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ],
-    " dieną"
-  ],
   "rIWe+/": [
     "Ar tikrai nori pašalinti ",
     [

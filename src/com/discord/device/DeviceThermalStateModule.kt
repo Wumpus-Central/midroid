@@ -1,5 +1,6 @@
 package com.discord.device
 
+import A9.s
 import android.os.PowerManager
 import android.os.Build.VERSION
 import com.discord.codegen.NativeDeviceThermalStateModuleSpec
@@ -8,7 +9,6 @@ import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import z9.s
 
 internal class DeviceThermalStateModule(reactContext: ReactApplicationContext) : NativeDeviceThermalStateModuleSpec {
    private final val reactEvents: ReactEvents

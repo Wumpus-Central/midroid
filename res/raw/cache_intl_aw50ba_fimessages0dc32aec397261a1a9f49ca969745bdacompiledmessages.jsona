@@ -3482,7 +3482,6 @@
   "3dIn2N": "Tämän PlayStation™Network -tilin viestintäominaisuudet on otettava käyttöön vanhemman tilillä.",
   "YpCiMj": "Yhdistetyt pelit",
   "IyYqqa": "Yhdistetty toiseen asiakasohjelmaan",
-  "7LkwqK": "Yhdistetään...",
   "3fe7U1": "Yhteydet",
   "yQvgBA": [
     [
@@ -4263,14 +4262,6 @@
   "mGhOIi": "Ei reittiä",
   "Gp51dn": "Yhdistetään RTC",
   "M7LDmJ": "RTC katkaistu",
-  "G+vAHx": [
-    "Katsellaan käyttäjän ",
-    [
-      1,
-      "username"
-    ],
-    " striimiä"
-  ],
   "HtVOdX": "Videokuva yhdistetty",
   "daXg4+": "Äänet yhdistetty",
   "zOZh3d": "Yhdistä tilisi",
@@ -19825,6 +19816,27 @@
     ],
     " tilit"
   ],
+  "7mv59P": [
+    "Luotu ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Luotu ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    ", tekijä: ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integrointiasetukset",
   "u2D2Ul": [
     [
@@ -22454,7 +22466,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Verkkoyhteys on rajoitettu tai ei saatavilla.",
   "oEAioK": "Antaa olla",
   "y2b7CA": "uusi",
   "l1dkSE": "Tiedotekanava",
@@ -23362,15 +23373,6 @@
   "rW5gw8": "Saat push-ilmoituksia Discordissa tapahtuvasta, kuten viesteistä, maininnoista, kaveripyynnöistä ja tapahtumista.",
   "Gf7U1d": "Tilaa ilmoitukset uusista viesteistä, kaveripyynnöistä, tapahtumista ja muusta tähdellisestä.",
   "3nx0b2": "Ota ilmoitukset käyttöön",
-  "dbQxR0": "Hengaile yhdessä videokeskustelua ja ruudunjakoa käyttämällä",
-  "3wC7eH": "Seuraa keskusteluja ja aiheita tekstikeskustelussa",
-  "GG2T6u": "Tervetuloa Discordiin!",
-  "FxpjsL": "Aloitetaan!",
-  "1BryeH": "Kokoa kaikki yhteisösi yhteen paikkaan",
-  "1K/IW1": "Kokoa kaikki yhteisösi palvelimille",
-  "MbhY+v": "Discord on mainio koti yhteisöillesi, kavereillesi, kirjakerhoillesi, opintopiireillesi ja muille ryhmillesi.",
-  "qjXn0N": "Keskustele ääneen useiden ihmisten kanssa samanaikaisesti",
-  "S2fS/v": "Tervetuloa Discordiin!",
   "eGjmy8": [
     [
       6,
@@ -24350,6 +24352,7 @@
   "0Niu/P": "Salasanan palautus",
   "myKyqq": "Tekstiviesti on lähetetty tähän tiliin yhdistettyyn puhelinnumeroon.",
   "+xqy3d": "Nollaa salasanasi antamalla vahvistuskoodisi",
+  "R98xDw": "Salasana vaaditaan.",
   "VUUJ6e": [
     "Salasanan on oltava vähintään ",
     [
@@ -26080,6 +26083,7 @@
   "OuItFh": "Mukautetut sovelluskuvakkeet",
   "R2IV/f": "Lisää emoji-voimaa",
   "RSXQYG": "HD-videokuva",
+  "YCZldH": "Avaa itsellesi etujen maailma Nitrolla",
   "4pEwXF": "Nostata suosikkiyhteisöjäsi ja avaa mahtavia etuja.",
   "NyDu//": "2 palvelimen nostatusta ja -30 % lisänostuksista",
   "Mt3U1d": "Käytä eri avataria, profiiliteemaa, banneria ja biografiaa kullakin palvelimellasi.",
@@ -36983,6 +36987,7 @@
   "OdPCbG": "Poistetaanko datan käyttö Discordin parantamiseen käytöstä?",
   "KD6OJC": "Käyttäjä",
   "IEpCBQ": "Käyttäjänimi",
+  "GPfy3N": "Käyttäjänimi vaaditaan.",
   "YEOwDA": "Kenet haluat lisätä kaveriksi?",
   "OKsSCQ": "Pyydä liittyä mukaan",
   "OzCsIC": "Kisaamassa:",
@@ -38278,18 +38283,6 @@
     ]
   ],
   "jp25IS": "Webhookit",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    ", ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Haluatko varmasti poistaa webhookin ",
     [

@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import A9.n
+import B9.n
 import com.discord.emoji_picker.EmojiPickerRow
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -11,8 +11,8 @@ import kotlin.jvm.internal.q
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    q.h(var0, "data");
-   val var2: Int = var0.getInt("rowContentWidth");
-   val var1: Int = var0.getInt("rowContentPaddingVertical");
+   val var1: Int = var0.getInt("rowContentWidth");
+   val var2: Int = var0.getInt("rowContentPaddingVertical");
    val var3: Int = var0.getInt("itemSize");
    val var6: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var6);
@@ -38,5 +38,5 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
       var5.add(var9);
    }
 
-   return new EmojiPickerRow(var2, var1, var3, var5, var0.getBoolean("isSectionNitroLocked"));
+   return new EmojiPickerRow(var1, var2, var3, var5, var0.getBoolean("isSectionNitroLocked"));
 }

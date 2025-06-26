@@ -4,7 +4,7 @@ import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public inline class RoleId : SnowflakePrimitive {

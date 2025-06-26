@@ -7,7 +7,7 @@ import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class FlaggedMessageEmbed(id: MessageId,
@@ -168,8 +168,8 @@ public data class FlaggedMessageEmbed(id: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = MessageId.hashCode-impl(this.id);
-      val var10: Int = ChannelId.hashCode-impl(this.channelId);
+      val var10: Int = MessageId.hashCode-impl(this.id);
+      val var9: Int = ChannelId.hashCode-impl(this.channelId);
       var var8: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -226,51 +226,51 @@ public data class FlaggedMessageEmbed(id: MessageId,
          var8 = this.communicationDisabled.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
+      return ((((((((((var10 * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
             * 31
          + var8;
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = MessageId.toString-impl(this.id);
-      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: GuildId = this.guildId;
-      val var12: UserId = this.userId;
-      val var7: StructurableText = this.content;
-      val var9: java.lang.String = this.channelName;
-      val var6: java.lang.String = this.username;
+      val var7: java.lang.String = MessageId.toString-impl(this.id);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var13: GuildId = this.guildId;
+      val var10: UserId = this.userId;
+      val var4: StructurableText = this.content;
+      val var5: java.lang.String = this.channelName;
+      val var12: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var3: Int = this.roleColor;
+      val var11: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
-      val var13: java.lang.String = this.avatarURL;
-      val var4: java.lang.Boolean = this.communicationDisabled;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("FlaggedMessageEmbed(id=");
-      var11.append(var10);
-      var11.append(", channelId=");
-      var11.append(var8);
-      var11.append(", guildId=");
-      var11.append(var5);
-      var11.append(", userId=");
-      var11.append(var12);
-      var11.append(", content=");
-      var11.append(var7);
-      var11.append(", channelName=");
-      var11.append(var9);
-      var11.append(", username=");
-      var11.append(var6);
-      var11.append(", usernameColor=");
-      var11.append(var1);
-      var11.append(", roleColor=");
-      var11.append(var3);
-      var11.append(", shouldShowRoleDot=");
-      var11.append(var2);
-      var11.append(", avatarURL=");
-      var11.append(var13);
-      var11.append(", communicationDisabled=");
-      var11.append(var4);
-      var11.append(")");
-      return var11.toString();
+      val var8: java.lang.String = this.avatarURL;
+      val var6: java.lang.Boolean = this.communicationDisabled;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("FlaggedMessageEmbed(id=");
+      var9.append(var7);
+      var9.append(", channelId=");
+      var9.append(var3);
+      var9.append(", guildId=");
+      var9.append(var13);
+      var9.append(", userId=");
+      var9.append(var10);
+      var9.append(", content=");
+      var9.append(var4);
+      var9.append(", channelName=");
+      var9.append(var5);
+      var9.append(", username=");
+      var9.append(var12);
+      var9.append(", usernameColor=");
+      var9.append(var1);
+      var9.append(", roleColor=");
+      var9.append(var11);
+      var9.append(", shouldShowRoleDot=");
+      var9.append(var2);
+      var9.append(", avatarURL=");
+      var9.append(var8);
+      var9.append(", communicationDisabled=");
+      var9.append(var6);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

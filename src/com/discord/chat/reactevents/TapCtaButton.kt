@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class TapCtaButton(channelId: String, messageId: String, callback: String) : ReactEvent {
@@ -67,18 +67,18 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.channelId;
       val var3: java.lang.String = this.messageId;
       val var2: java.lang.String = this.callback;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapCtaButton(channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var3);
-      var4.append(", callback=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCtaButton(channelId=");
+      var1.append(var4);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(", callback=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

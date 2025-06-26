@@ -3556,7 +3556,6 @@
   "3dIn2N": "Za ovaj su PlayStation™Network račun potrebne komunikacije značajke koje mora omogućiti roditeljski račun.",
   "YpCiMj": "Povezane igre",
   "IyYqqa": "Spojen na drugom klijentu",
-  "7LkwqK": "Povezivanje...",
   "3fe7U1": "Veze",
   "yQvgBA": [
     "Platforma ",
@@ -4366,13 +4365,6 @@
   "mGhOIi": "Bez relacije",
   "Gp51dn": "RTC se spaja",
   "M7LDmJ": "RTC isključen",
-  "G+vAHx": [
-    "Gleda stream korisnika ",
-    [
-      1,
-      "username"
-    ]
-  ],
   "HtVOdX": "Video povezan",
   "daXg4+": "Glas povezan",
   "zOZh3d": "Poveži svoje korisničke račune",
@@ -20353,6 +20345,27 @@
     ],
     " računi"
   ],
+  "7mv59P": [
+    "Stvoreno ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Stvoreno ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    ", stvorio korisnik ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Postavke integracije",
   "u2D2Ul": [
     "Aplikacija ",
@@ -23060,7 +23073,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Mrežna povezanost ograničena ili nedostupna.",
   "oEAioK": "Zanemari",
   "y2b7CA": "novo",
   "l1dkSE": "Kanal za najave",
@@ -24025,15 +24037,6 @@
   "rW5gw8": "Primat ćeš automatske obavijesti za Discord događaje kao što su poruke, spominjanja, zahtjevi za prijateljstvo i događanja.",
   "Gf7U1d": "Dobivat ćeš obavijesti za nove poruke, zahtjeve za prijateljstvom, događaje i još toga.",
   "3nx0b2": "Uključi obavijesti",
-  "dbQxR0": "Druži se koristeći video chat i dijeljenje zaslona",
-  "3wC7eH": "Prati sadržaje rasprava i teme u tekstualnom chatu",
-  "GG2T6u": "Dobro došao/la na Discord!",
-  "FxpjsL": "Idemo!",
-  "1BryeH": "Poveži se sa svim svojim zajednicama s jednog mjesta",
-  "1K/IW1": "Poveži se sa svim svojim zajednicama na serverima",
-  "MbhY+v": "Discord je dom tvojim zajednicama, prijateljima, književnim klubovima, grupama za učenje i drugome.",
-  "qjXn0N": "Popričaj s više ljudi odjednom u glasovnom chatu",
-  "S2fS/v": "Dobro došao/la na Discord!",
   "eGjmy8": [
     [
       6,
@@ -25049,6 +25052,7 @@
   "0Niu/P": "Oporavak lozinke",
   "myKyqq": "SMS je poslan na broj telefona koji je povezan s ovim računom.",
   "+xqy3d": "Unesi svoj kod za potvrdu da ponovno postaviš svoju lozinku",
+  "R98xDw": "Potrebna je lozinka.",
   "VUUJ6e": [
     "Lozinka se mora sastojati od ",
     [
@@ -26908,6 +26912,7 @@
   "OuItFh": "Prilagođene ikone aplikacije",
   "R2IV/f": "Moćniji emoji",
   "RSXQYG": "Video visoke definicije",
+  "YCZldH": "Otključaj cijeli svijet posebnih pogodnosti uz Nitro",
   "4pEwXF": "Daj Boost svojim omiljenim zajednicama i otključaj pogodnosti, sjajne i posebne.",
   "NyDu//": "2 ServerBoosta + 30 % popusta",
   "Mt3U1d": "Na svakom od svojih servera upotrebljavaj različiti avatar, temu profila, banner i bio.",
@@ -38145,6 +38150,7 @@
   "OdPCbG": "Želiš li isključiti podatke o upotrebi kojima se služimo za poboljšanja Discorda?",
   "KD6OJC": "Korisnik",
   "IEpCBQ": "Korisničko ime",
+  "GPfy3N": "Potrebno je korisničko ime.",
   "YEOwDA": "Koga želiš dodati kao prijatelja?",
   "OKsSCQ": "Zatraži pridruživanje",
   "OzCsIC": "Natječe se u",
@@ -39516,18 +39522,6 @@
     ]
   ],
   "jp25IS": "Webhookovi",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " dana ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Jesi li siguran/na da želiš izbrisati ",
     [

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.truncation
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
@@ -73,8 +73,8 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = Integer.hashCode(this.numberOfLines);
-      val var5: Int = java.lang.Boolean.hashCode(this.expandable);
+      val var5: Int = Integer.hashCode(this.numberOfLines);
+      val var4: Int = java.lang.Boolean.hashCode(this.expandable);
       var var3: Int = 0;
       val var1: Int;
       if (this.seeMoreLabel == null) {
@@ -94,7 +94,7 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
          var3 = this.forceShow.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {

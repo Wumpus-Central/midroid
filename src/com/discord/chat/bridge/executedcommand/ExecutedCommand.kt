@@ -4,7 +4,7 @@ import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import sb.f
+import tb.f
 
 @f
 public data class ExecutedCommand(userId: UserId,
@@ -155,33 +155,33 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = UserId.toString-impl(this.userId);
-      val var1: Int = this.usernameColor;
-      val var7: java.lang.String = this.avatarURL;
-      val var2: Int = this.targetUsernameColor;
-      val var3: AnnotatedStructurableText = this.content;
-      val var5: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var6: java.lang.Boolean = this.showAppsIcon;
-      val var4: java.lang.Boolean = this.showControllerIcon;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ExecutedCommand(userId=");
-      var9.append(var8);
-      var9.append(", usernameColor=");
-      var9.append(var1);
-      var9.append(", avatarURL=");
-      var9.append(var7);
-      var9.append(", targetUsernameColor=");
-      var9.append(var2);
-      var9.append(", content=");
-      var9.append(var3);
-      var9.append(", commandNameBackgroundStyles=");
-      var9.append(var5);
-      var9.append(", showAppsIcon=");
-      var9.append(var6);
-      var9.append(", showControllerIcon=");
-      var9.append(var4);
-      var9.append(")");
-      return var9.toString();
+      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var2: Int = this.usernameColor;
+      val var9: java.lang.String = this.avatarURL;
+      val var1: Int = this.targetUsernameColor;
+      val var5: AnnotatedStructurableText = this.content;
+      val var7: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var8: java.lang.Boolean = this.showAppsIcon;
+      val var6: java.lang.Boolean = this.showControllerIcon;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ExecutedCommand(userId=");
+      var3.append(var4);
+      var3.append(", usernameColor=");
+      var3.append(var2);
+      var3.append(", avatarURL=");
+      var3.append(var9);
+      var3.append(", targetUsernameColor=");
+      var3.append(var1);
+      var3.append(", content=");
+      var3.append(var5);
+      var3.append(", commandNameBackgroundStyles=");
+      var3.append(var7);
+      var3.append(", showAppsIcon=");
+      var3.append(var8);
+      var3.append(", showControllerIcon=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

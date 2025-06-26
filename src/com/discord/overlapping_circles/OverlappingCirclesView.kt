@@ -1,5 +1,7 @@
 package com.discord.overlapping_circles
 
+import A9.j
+import A9.m
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -28,8 +30,6 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.q
-import z9.j
-import z9.m
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var maxItems: Int
@@ -115,10 +115,10 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             } else {
                val var10: Context = this.getContext();
                q.g(var10, "getContext(...)");
-               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
-               val var15: Context = this.getContext();
-               q.g(var15, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var9.getUri(var15));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               q.g(var9, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -143,12 +143,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var18: Context = this.getContext();
          q.g(var18, "getContext(...)");
-         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var20: LayoutParams = new LayoutParams(-2, -1);
-         var20.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var20);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var20, var11);
       }
    }
 
@@ -305,7 +305,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.showSeparation = var3;
          this.overlapPx = var4;
          this.radius = var6 / 2.0F;
-         this.separatorClipPath$delegate = j.b(m.l, new a(this, var5));
+         this.separatorClipPath$delegate = j.a(m.l, new a(this, var5));
          val var7: Paint = new Paint();
          var7.setColor(var2);
          var7.setAntiAlias(true);

@@ -1,11 +1,11 @@
 package com.discord.crash_reporting.system_logs
 
-import A9.q
+import A9.s
+import B9.q
 import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import z9.s
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
