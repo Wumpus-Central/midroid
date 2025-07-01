@@ -244,21 +244,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.channelIconURL;
-         val var2: java.lang.String = this.chatIconURL;
-         val var3: ArrayList = this.avatarURLs;
+         val var5: java.lang.String = this.channelIconURL;
+         val var3: java.lang.String = this.chatIconURL;
+         val var4: ArrayList = this.avatarURLs;
          val var1: java.lang.String = this.channelName;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MessageBundleHeader(channelIconURL=");
-         var5.append(var4);
-         var5.append(", chatIconURL=");
-         var5.append(var2);
-         var5.append(", avatarURLs=");
-         var5.append(var3);
-         var5.append(", channelName=");
-         var5.append(var1);
-         var5.append(")");
-         return var5.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("MessageBundleHeader(channelIconURL=");
+         var2.append(var5);
+         var2.append(", chatIconURL=");
+         var2.append(var3);
+         var2.append(", avatarURLs=");
+         var2.append(var4);
+         var2.append(", channelName=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
 
       public companion object {

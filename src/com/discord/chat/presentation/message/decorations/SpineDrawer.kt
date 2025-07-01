@@ -70,9 +70,9 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
       var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
       val var8: Int = var3.getTop();
       val var9: Int = var3.getTop();
-      val var7: Int = (var4.getBottom() - var4.getTop()) / 2;
-      val var6: Int = this.itemPaddingOffset;
-      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var8, this.contentStartPositionPx, var9 + var7 + var6);
+      val var6: Int = (var4.getBottom() - var4.getTop()) / 2;
+      val var7: Int = this.itemPaddingOffset;
+      val var10: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var8, this.contentStartPositionPx, var9 + var6 + var7);
       val var11: ChannelSpineView = this.getSplineView();
       var11.setRowHeight((float)(var10.height() / 2));
       var11.measure(MeasureSpec.makeMeasureSpec(var10.width(), 1073741824), MeasureSpec.makeMeasureSpec(var10.height(), 1073741824));

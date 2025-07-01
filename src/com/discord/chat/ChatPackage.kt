@@ -22,7 +22,6 @@ public class ChatPackage : BaseReactPackage {
             new MessageViewManagers.MessageViewManager(),
             new MessageViewManagers.MessageBundleViewManager(),
             new MessageViewManagers.SystemMessageViewManager(),
-            new MessageViewManagers.GuildMultilineSystemMessageViewManager(),
             new MessageViewManagers.AutoModerationSystemMessageViewManager()
          }
       );

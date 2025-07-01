@@ -107,13 +107,13 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var20: StructurableText = var1.getContent();
-      if (var20 != null) {
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
          val var13: ArrayList = this.accessories;
-         val var14: java.lang.String = var1.getId-3Eiw7ao();
-         val var11: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var10: Boolean = var1.getShouldShowRoleDot();
+         val var20: java.lang.String = var1.getId-3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var11: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var9: Boolean = var1.getShouldShowRoleDot();
          val var8: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
@@ -140,11 +140,11 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
          var13.add(
             new MessageContentAccessory(
-               var14,
                var20,
+               var14,
+               var10,
                var11,
                var9,
-               var10,
                var8,
                var5,
                var6,
@@ -174,12 +174,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var31: ArrayList = this.accessories;
-         val var33: java.lang.String = var1.getId-3Eiw7ao();
-         val var28: java.lang.String = var1.getUsername();
-         val var23: Context = this.binding.getRoot().getContext();
-         q.g(var23, "getContext(...)");
-         var31.add(new RoleSubscriptionPurchaseAccessory(var33, var28, MessageKt.avatarUrl(var1, var23), var3, false, null));
+         val var33: ArrayList = this.accessories;
+         val var28: java.lang.String = var1.getId-3Eiw7ao();
+         val var23: java.lang.String = var1.getUsername();
+         val var31: Context = this.binding.getRoot().getContext();
+         q.g(var31, "getContext(...)");
+         var33.add(new RoleSubscriptionPurchaseAccessory(var28, var23, MessageKt.avatarUrl(var1, var31), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -300,69 +300,72 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var3 = s.a(ReactAsset.Pencil, this.normalIconColor);
             break;
          case 15:
-            var3 = s.a(ReactAsset.Pin, this.normalIconColor);
+            var3 = s.a(ReactAsset.AddReaction, this.normalIconColor);
             break;
          case 16:
-            var3 = s.a(ReactAsset.Ticket, this.normalIconColor);
+            var3 = s.a(ReactAsset.Pin, this.normalIconColor);
             break;
          case 17:
+            var3 = s.a(ReactAsset.Ticket, this.normalIconColor);
+            break;
          case 18:
          case 19:
          case 20:
+         case 21:
             var3 = s.a(ReactAsset.MemberListBadge, this.pinkIconColor);
             break;
-         case 21:
+         case 22:
             var3 = s.a(ReactAsset.AnnouncementThread, this.normalIconColor);
             break;
-         case 22:
-            var3 = s.a(ReactAsset.Close, this.redIconColor);
-            break;
          case 23:
-            var3 = s.a(ReactAsset.Check, this.greenIconColor);
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
             break;
          case 24:
-         case 25:
-            var3 = s.a(ReactAsset.Alert, this.warnIconColor);
-            break;
-         case 26:
-         case 27:
-            var3 = s.a(ReactAsset.Thread, this.normalIconColor);
-            break;
-         case 28:
-            var3 = s.a(ReactAsset.StageChannel, this.greenIconColor);
-            break;
-         case 29:
-         case 30:
-            var3 = s.a(ReactAsset.StageChannel, this.normalIconColor);
-            break;
-         case 31:
-            var3 = s.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
-            break;
-         case 32:
-            var3 = s.a(ReactAsset.RaisedHand, this.normalIconColor);
-            break;
-         case 33:
-            var3 = s.a(ReactAsset.LockClosed, this.normalIconColor);
-            break;
-         case 34:
-            var3 = s.a(ReactAsset.LockOpen, this.normalIconColor);
-            break;
-         case 35:
-            var3 = s.a(ReactAsset.PollsIcon, this.normalIconColor);
-            break;
-         case 36:
-            var3 = s.a(ReactAsset.Refresh, this.greenIconColor);
-            break;
-         case 37:
-            var3 = s.a(ReactAsset.GameController, this.mutedIconColor);
-            break;
-         case 38:
             var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
+         case 25:
+         case 26:
+            var3 = s.a(ReactAsset.Alert, this.warnIconColor);
+            break;
+         case 27:
+         case 28:
+            var3 = s.a(ReactAsset.Thread, this.normalIconColor);
+            break;
+         case 29:
+            var3 = s.a(ReactAsset.StageChannel, this.greenIconColor);
+            break;
+         case 30:
+         case 31:
+            var3 = s.a(ReactAsset.StageChannel, this.normalIconColor);
+            break;
+         case 32:
+            var3 = s.a(ReactAsset.MoveToSpeaker, this.normalIconColor);
+            break;
+         case 33:
+            var3 = s.a(ReactAsset.RaisedHand, this.normalIconColor);
+            break;
+         case 34:
+            var3 = s.a(ReactAsset.LockClosed, this.normalIconColor);
+            break;
+         case 35:
+            var3 = s.a(ReactAsset.LockOpen, this.normalIconColor);
+            break;
+         case 36:
+            var3 = s.a(ReactAsset.PollsIcon, this.normalIconColor);
+            break;
+         case 37:
+            var3 = s.a(ReactAsset.Refresh, this.greenIconColor);
+            break;
+         case 38:
+            var3 = s.a(ReactAsset.GameController, this.mutedIconColor);
+            break;
          case 39:
-            var3 = s.a(ReactAsset.Close, this.redIconColor);
+            var3 = s.a(ReactAsset.Check, this.greenIconColor);
             break;
          case 40:
+            var3 = s.a(ReactAsset.Close, this.redIconColor);
+            break;
+         case 41:
             var3 = s.a(ReactAsset.ArrowBack, this.normalIconColor);
             break;
          default:

@@ -155,33 +155,33 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = UserId.toString-impl(this.userId);
+      val var8: java.lang.String = UserId.toString-impl(this.userId);
       val var2: Int = this.usernameColor;
-      val var9: java.lang.String = this.avatarURL;
+      val var5: java.lang.String = this.avatarURL;
       val var1: Int = this.targetUsernameColor;
-      val var5: AnnotatedStructurableText = this.content;
-      val var7: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var8: java.lang.Boolean = this.showAppsIcon;
-      val var6: java.lang.Boolean = this.showControllerIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ExecutedCommand(userId=");
-      var3.append(var4);
-      var3.append(", usernameColor=");
-      var3.append(var2);
-      var3.append(", avatarURL=");
-      var3.append(var9);
-      var3.append(", targetUsernameColor=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var5);
-      var3.append(", commandNameBackgroundStyles=");
-      var3.append(var7);
-      var3.append(", showAppsIcon=");
-      var3.append(var8);
-      var3.append(", showControllerIcon=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var9: AnnotatedStructurableText = this.content;
+      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var7: java.lang.Boolean = this.showAppsIcon;
+      val var3: java.lang.Boolean = this.showControllerIcon;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ExecutedCommand(userId=");
+      var6.append(var8);
+      var6.append(", usernameColor=");
+      var6.append(var2);
+      var6.append(", avatarURL=");
+      var6.append(var5);
+      var6.append(", targetUsernameColor=");
+      var6.append(var1);
+      var6.append(", content=");
+      var6.append(var9);
+      var6.append(", commandNameBackgroundStyles=");
+      var6.append(var4);
+      var6.append(", showAppsIcon=");
+      var6.append(var7);
+      var6.append(", showControllerIcon=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

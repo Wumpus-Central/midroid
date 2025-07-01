@@ -44,13 +44,13 @@ public object AppIconUtil {
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
       q.h(var1, "context");
-      val var4: PackageManager = var1.getPackageManager();
-      val var3: java.util.Iterator = AppIcon.getEntries().iterator();
+      val var3: PackageManager = var1.getPackageManager();
+      val var4: java.util.Iterator = AppIcon.getEntries().iterator();
 
       while (true) {
-         if (var3.hasNext()) {
-            val var2: Any = var3.next();
-            if (var4.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
+         if (var4.hasNext()) {
+            val var2: Any = var4.next();
+            if (var3.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
                continue;
             }
 

@@ -86,15 +86,24 @@ public class Scroller(recyclerView: RecyclerView) {
       targetAlignment: com.discord.recycler_view.scroller.Scroller.TargetAlignment,
       onStart: () -> Unit,
       onComplete: () -> Unit,
-      onScrollProgress: () -> Unit
+      onScrollProgress: () -> Unit,
+      iteration: Int
    ) {
-      val var6: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(this.getLayoutManager(), var1);
-      if (var6 != null && !var6) {
+      val var8: LinearLayoutManager = this.getLayoutManager();
+      val var7: Boolean;
+      if (var6 < 30) {
+         var7 = true;
+      } else {
+         var7 = false;
+      }
+
+      val var10: java.lang.Boolean = LayoutManagerUtilsKt.isPositionVisible(var8, var1, var7);
+      if (var10 != null && !var10) {
          this.doScrollToPosition(var1, var2);
          var5.invoke();
-         val var7: e = new e(this, var1, var2, var3, var4, var5);
-         this.currentSearch = var7;
-         this.recyclerView.post(var7);
+         val var9: a = new a(this, var1, var2, var3, var4, var5, var6);
+         this.currentSearch = var9;
+         this.recyclerView.post(var9);
       } else if (var2 !is Scroller.TargetAlignment.Center && var2 !is Scroller.TargetAlignment.Top) {
          var4.invoke();
       } else {
@@ -105,8 +114,8 @@ public class Scroller(recyclerView: RecyclerView) {
    }
 
    @JvmStatic
-   fun `search$lambda$4`(var0: Scroller, var1: Int, var2: Scroller.TargetAlignment, var3: Function0, var4: Function0, var5: Function0) {
-      var0.search(var1, var2, var3, var4, var5);
+   fun `search$lambda$4`(var0: Scroller, var1: Int, var2: Scroller.TargetAlignment, var3: Function0, var4: Function0, var5: Function0, var6: Int) {
+      var0.search(var1, var2, var3, var4, var5, var6 + 1);
    }
 
    public fun cancel() {
@@ -120,9 +129,9 @@ public class Scroller(recyclerView: RecyclerView) {
       position: Int,
       targetAlignment: com.discord.recycler_view.scroller.Scroller.TargetAlignment,
       animate: Boolean,
-      onStart: () -> Unit = new b(),
-      onComplete: () -> Unit = new c(),
-      onScrollProgress: () -> Unit = new d()
+      onStart: () -> Unit = new c(),
+      onComplete: () -> Unit = new d(),
+      onScrollProgress: () -> Unit = new e()
    ) {
       q.h(var2, "targetAlignment");
       q.h(var4, "onStart");
@@ -131,9 +140,9 @@ public class Scroller(recyclerView: RecyclerView) {
       this.cancel();
       var4.invoke();
       if (var3) {
-         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new a(var6, var5));
+         RecyclerViewExtensionsKt.scrollToPositionAnimated(this.recyclerView, var1, var2, new b(var6, var5));
       } else {
-         this.search(var1, var2, var4, var5, var6);
+         this.search(var1, var2, var4, var5, var6, 0);
       }
    }
 

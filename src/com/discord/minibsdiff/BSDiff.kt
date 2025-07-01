@@ -28,8 +28,8 @@ public object BSDiff {
       extraInputStream: InputStream,
       newOutputStream: OutputStream
    ) {
-      val var21: ByteArray = new byte[1000000];
       val var20: ByteArray = new byte[1000000];
+      val var21: ByteArray = new byte[1000000];
       if (!Arrays.equals(InputStreamUtilsKt.readNBytesCompat(var3, 8), BSDIFF_CONFIG_MAGIC)) {
          throw new BSDiff.BsPatchError("Bad magic config header for patch file!");
       } else {
@@ -42,37 +42,37 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var15 + var13 > var9) {
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var13 + var17 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var2, var21, 0, var8);
-               InputStreamUtilsKt.readNBytesCompat(var4, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var2, var20, 0, var8);
+               InputStreamUtilsKt.readNBytesCompat(var4, var21, 0, var8);
 
                for (int var7 = 0; var7 < var8; var7++) {
-                  var21[var7] += var20[var7];
+                  var20[var7] += var21[var7];
                }
 
-               var6.write(var21, 0, var8);
+               var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var13).iterator();
+            var19 = this.chunkRange(var17).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
-               InputStreamUtilsKt.readNBytesCompat(var5, var21, 0, var22);
-               var6.write(var21, 0, var22);
+               InputStreamUtilsKt.readNBytesCompat(var5, var20, 0, var22);
+               var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var17);
-            var11 += var15 + var13;
+            var1.seek(var1.getFilePointer() + var15);
+            var11 += var13 + var17;
          }
 
          var6.close();
@@ -182,7 +182,7 @@ public object BSDiff {
       // 9d: aconst_null
       // 9e: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // a1: return
-      // a2: astore 3
+      // a2: astore 2
       // a3: goto e4
       // a6: astore 3
       // a7: goto d9
@@ -190,14 +190,14 @@ public object BSDiff {
       // ab: goto ce
       // ae: astore 3
       // af: goto c2
-      // b2: astore 7
-      // b4: aload 7
+      // b2: astore 6
+      // b4: aload 6
       // b6: athrow
-      // b7: astore 6
+      // b7: astore 7
       // b9: aload 3
-      // ba: aload 7
+      // ba: aload 6
       // bc: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // bf: aload 6
+      // bf: aload 7
       // c1: athrow
       // c2: aload 3
       // c3: athrow
@@ -223,13 +223,13 @@ public object BSDiff {
       // df: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // e2: aload 2
       // e3: athrow
-      // e4: aload 3
+      // e4: aload 2
       // e5: athrow
-      // e6: astore 2
+      // e6: astore 3
       // e7: aload 1
-      // e8: aload 3
+      // e8: aload 2
       // e9: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // ec: aload 2
+      // ec: aload 3
       // ed: athrow
    }
 

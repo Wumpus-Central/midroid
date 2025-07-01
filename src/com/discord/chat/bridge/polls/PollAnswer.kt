@@ -165,36 +165,36 @@ public data class PollAnswer(answerId: String,
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = this.answerId;
-      val var8: PollMedia = this.pollMedia;
+      val var5: java.lang.String = this.answerId;
+      val var7: PollMedia = this.pollMedia;
       val var2: Boolean = this.didSelfVote;
-      val var4: java.lang.String = this.votes;
+      val var9: java.lang.String = this.votes;
       val var1: Int = this.votesPercentage;
-      val var9: java.lang.Boolean = this.isSelected;
-      val var5: java.lang.Boolean = this.isVictor;
-      val var6: java.lang.Boolean = this.shouldAnimateTransition;
-      val var7: java.lang.String = this.style;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollAnswer(answerId=");
-      var3.append(var10);
-      var3.append(", pollMedia=");
-      var3.append(var8);
-      var3.append(", didSelfVote=");
-      var3.append(var2);
-      var3.append(", votes=");
-      var3.append(var4);
-      var3.append(", votesPercentage=");
-      var3.append(var1);
-      var3.append(", isSelected=");
-      var3.append(var9);
-      var3.append(", isVictor=");
-      var3.append(var5);
-      var3.append(", shouldAnimateTransition=");
-      var3.append(var6);
-      var3.append(", style=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.Boolean = this.isSelected;
+      val var8: java.lang.Boolean = this.isVictor;
+      val var10: java.lang.Boolean = this.shouldAnimateTransition;
+      val var6: java.lang.String = this.style;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollAnswer(answerId=");
+      var4.append(var5);
+      var4.append(", pollMedia=");
+      var4.append(var7);
+      var4.append(", didSelfVote=");
+      var4.append(var2);
+      var4.append(", votes=");
+      var4.append(var9);
+      var4.append(", votesPercentage=");
+      var4.append(var1);
+      var4.append(", isSelected=");
+      var4.append(var3);
+      var4.append(", isVictor=");
+      var4.append(var8);
+      var4.append(", shouldAnimateTransition=");
+      var4.append(var10);
+      var4.append(", style=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

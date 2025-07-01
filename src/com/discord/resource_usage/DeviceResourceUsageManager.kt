@@ -59,7 +59,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var14 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var14 = Result.k;
+         var1 = Result.k;
          var14 = Result.b(c.a(var2));
          break label30;
       }

@@ -97,13 +97,13 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
                   .a()
             ) as PipelineDraweeControllerBuilder;
          val var12: java.lang.String = var1.getGiftCode();
-         val var8: java.lang.String = var1.getSplashUrl();
-         val var15: StringBuilder = new StringBuilder();
-         var15.append("splash-");
-         var15.append(var12);
-         var15.append("-");
-         var15.append(var8);
-         var9 = ((var14.C(var15.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
+         val var15: java.lang.String = var1.getSplashUrl();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("splash-");
+         var8.append(var12);
+         var8.append("-");
+         var8.append(var15);
+         var9 = ((var14.C(var8.toString()) as PipelineDraweeControllerBuilder).H(this.binding.splash.getController()) as PipelineDraweeControllerBuilder).d();
       } else {
          var9 = null;
       }
@@ -217,7 +217,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          this.binding.title.setText(var27.getTitleText());
          var32.setTextColor(var27.getTitleColor());
          kotlin.jvm.internal.q.e(var32);
-         var var11: java.lang.CharSequence = var32.getText();
+         val var11: java.lang.CharSequence = var32.getText();
          kotlin.jvm.internal.q.g(var11, "getText(...)");
          var var20: Byte;
          if (!kotlin.text.h.c0(var11)) {
@@ -227,19 +227,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          }
 
          var32.setVisibility(var20);
-         val var33: TextView = this.binding.subtitle;
+         val var35: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var33.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.q.e(var33);
-         var11 = var33.getText();
-         kotlin.jvm.internal.q.g(var11, "getText(...)");
-         if (!kotlin.text.h.c0(var11)) {
+         var35.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.q.e(var35);
+         val var33: java.lang.CharSequence = var35.getText();
+         kotlin.jvm.internal.q.g(var33, "getText(...)");
+         if (!kotlin.text.h.c0(var33)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var33.setVisibility(var20);
+         var35.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));

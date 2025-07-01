@@ -11,36 +11,36 @@ import kotlin.jvm.internal.q
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
    q.h(var0, "<this>");
    val var5: ArrayList = new ArrayList(i.v(var0, 10));
-   val var7: java.util.Iterator = var0.iterator();
+   val var6: java.util.Iterator = var0.iterator();
 
-   val var6: ProductDetails;
+   val var8: ProductDetails;
    while (true) {
-      if (!var7.hasNext()) {
+      if (!var6.hasNext()) {
          return NativeArrayExtensionsKt.toNativeArray$default(var5, null, 1, null);
       }
 
-      var6 = var7.next() as ProductDetails;
-      val var8: ArrayList = new ArrayList();
+      var8 = var6.next() as ProductDetails;
+      val var7: ArrayList = new ArrayList();
       val var1: Long;
-      var var3: java.lang.String;
+      val var3: java.lang.String;
       val var4: java.lang.String;
       val var12: java.lang.String;
-      if (q.c(var6.e(), "inapp")) {
-         val var11: ProductDetails.b = var6.c();
+      if (q.c(var8.e(), "inapp")) {
+         val var11: ProductDetails.b = var8.c();
          if (var11 == null) {
-            var3 = var6.d();
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("Could not find oneTimePurchaseOfferDetails for product: ");
-            var13.append(var3);
-            throw new AssertionError(var13.toString());
+            val var13: java.lang.String = var8.d();
+            val var19: StringBuilder = new StringBuilder();
+            var19.append("Could not find oneTimePurchaseOfferDetails for product: ");
+            var19.append(var13);
+            throw new AssertionError(var19.toString());
          }
 
          var1 = var11.b();
          var3 = var11.a();
          var12 = var11.c();
          var4 = null;
-      } else if (q.c(var6.e(), "subs")) {
-         val var9: java.util.List = var6.f();
+      } else if (q.c(var8.e(), "subs")) {
+         val var9: java.util.List = var8.f();
          if (var9 == null) {
             break;
          }
@@ -63,7 +63,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            val var17: java.lang.String = var6.d();
+            val var17: java.lang.String = var8.d();
             val var21: StringBuilder = new StringBuilder();
             var21.append("Could not find pricingPhase for product: ");
             var21.append(var17);
@@ -79,7 +79,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          while (var23.hasNext()) {
             val var10: java.lang.String = (var23.next() as ProductDetails.d).b();
             if (var10 != null) {
-               var8.add(var10);
+               var7.add(var10);
             }
          }
       } else {
@@ -91,22 +91,22 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
       var5.add(
          NativeMapExtensionsKt.nativeMapOf(
-            s.a("identifier", var6.d()),
-            s.a("title", var6.g()),
-            s.a("description", var6.a()),
+            s.a("identifier", var8.d()),
+            s.a("title", var8.g()),
+            s.a("description", var8.a()),
             s.a("priceString", var3),
             s.a("currencyCode", var12),
             s.a("price", (int)(var1 / (long)10000)),
-            s.a("type", var6.e()),
-            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var8, null, 1, null)),
+            s.a("type", var8.e()),
+            s.a("offerIds", NativeArrayExtensionsKt.toNativeArray$default(var7, null, 1, null)),
             s.a("billingPeriod", var4)
          )
       );
    }
 
-   val var22: java.lang.String = var6.d();
-   val var18: StringBuilder = new StringBuilder();
-   var18.append("Could not find subscriptionOfferDetails for product: ");
-   var18.append(var22);
-   throw new AssertionError(var18.toString());
+   val var18: java.lang.String = var8.d();
+   val var22: StringBuilder = new StringBuilder();
+   var22.append("Could not find subscriptionOfferDetails for product: ");
+   var22.append(var18);
+   throw new AssertionError(var22.toString());
 }

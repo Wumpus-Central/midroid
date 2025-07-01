@@ -351,7 +351,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          kotlin.jvm.internal.q.h(var2, "info");
          super.onInitializeAccessibilityNodeInfo(var1, var2);
          val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
-         var var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
+         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
 
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
             }
          }
 
-         var6 = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
+         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
 
-         while (var6.hasNext()) {
-            val var8: EmojiAccessibilitySpan = var6.next() as EmojiAccessibilitySpan;
-            var5.replace(var5.getSpanStart(var8), var5.getSpanEnd(var8), var8.getName());
+         while (var8.hasNext()) {
+            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
+            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
          }
 
          var2.V0(var5);

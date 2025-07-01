@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.q.g(var2, "getProducts(...)");
 
-         for (java.lang.String var4 : var2) {
-            val var3: Function3 = this.onPurchaseUpdated;
-            val var5: java.lang.String = var1.i();
-            kotlin.jvm.internal.q.g(var5, "getPurchaseToken(...)");
+         for (java.lang.String var3 : var2) {
+            val var5: Function3 = this.onPurchaseUpdated;
+            val var7: java.lang.String = var1.i();
+            kotlin.jvm.internal.q.g(var7, "getPurchaseToken(...)");
             val var6: java.lang.String = var1.e();
             kotlin.jvm.internal.q.g(var6, "getPackageName(...)");
-            kotlin.jvm.internal.q.e(var4);
-            var3.invoke(var5, var6, var4);
+            kotlin.jvm.internal.q.e(var3);
+            var5.invoke(var7, var6, var3);
          }
       }
    }
@@ -294,12 +294,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         val var6: CoroutineScope = this.getCoroutineScope(var5);
          jb.f.d(
-            var7,
+            var6,
             K.a(),
             null,
-            new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -503,15 +503,15 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var1: BillingResult = this.billingResult;
-         val var2: java.util.List = this.productDetails;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ProductDetailsResponse(billingResult=");
-         var3.append(var1);
-         var3.append(", productDetails=");
-         var3.append(var2);
-         var3.append(")");
-         return var3.toString();
+         val var3: BillingResult = this.billingResult;
+         val var1: java.util.List = this.productDetails;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ProductDetailsResponse(billingResult=");
+         var2.append(var3);
+         var2.append(", productDetails=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

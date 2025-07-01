@@ -3001,6 +3001,7 @@
     ],
     "."
   ],
+  "rt69oq": "Included with Nitro",
   "sPvyr6": [
     "Original price: ",
     [
@@ -3305,7 +3306,7 @@
     "."
   ],
   "fI5MTU": "Built-In",
-  "j5xUSU": "Appends ¯_(ツ)_/¯ to your message.",
+  "j5xUSU": "Appends ¯\\_(ツ)_/¯ to your message.",
   "JewOra": "Your message",
   "v0eDdX": "Marks your message as a spoiler.",
   "D13pbW": "Your message",
@@ -8501,6 +8502,22 @@
     ]
   ],
   "9eUgwc": "Users will need to confirm they are of over legal age to view in the content in this channel.\nAge-restricted channels are exempt from the explicit content filter.",
+  "iyQQ6+": [
+    "Users will need to confirm they are of over legal age to view in the content in this server. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more."
+      ],
+      [
+        [
+          1,
+          "helpArticleLink"
+        ]
+      ]
+    ]
+  ],
   "dbTs+/": "Anyone in this channel will attempt to connect to the region you set, regardless of where they live. Regions affect voice and video quality. Leave it on Automatic and Discord will figure out what works best.",
   "UfqmIS": "This image will display at the top of your channels list.",
   "/B6PR0": "Describe your community. This description will be displayed in external embeds of this server’s invite link.",
@@ -8774,6 +8791,7 @@
   "8dM4FB": "New Password",
   "CtVGyc": "Nothing",
   "Es25YW": "Age-Restricted Channel",
+  "N9xEJC": "Age-Restricted Server",
   "Yl1D8/": "Off",
   "L2hmY2": [
     "Only ",
@@ -9083,6 +9101,7 @@
   "4d4T4u": "Post Guidelines",
   "E7oO8v": "This post has been locked. Only moderators can send messages.",
   "833FDg": "This post has been closed and locked. Only moderators can reopen it.",
+  "yWK7ZG": "Post contains an ignored message",
   "8M0DrK": [
     [
       6,
@@ -9183,10 +9202,15 @@
   "3v8kZG": "Create a tag to help people organize their posts into subcategories. Maximum 20 characters.",
   "zeVg5e": "Edit Tag",
   "T8sBLC": "Failed to save tag edit",
-  "PYZlEh": "Clear all",
   "TdqRTk": "Filter by tags",
   "112vVF": "Tags",
-  "Yh05IS": "Show posts",
+  "/FzHJC": [
+    [
+      1,
+      "count"
+    ],
+    " Selected"
+  ],
   "436ZFx": "Edit Tags",
   "HPu3kp": "Select Tags",
   "huYSMj": "Remove Tag",
@@ -13098,6 +13122,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Access",
   "iPdFOj": "Update Command Permissions",
   "f72Zqa": "Create AutoMod Rule",
   "syAApa": "Cancel AutoMod Rule",
@@ -23075,7 +23100,6 @@
   "FCRiT0": "New Unreads",
   "PDTjLC": "Next",
   "621LJC": "Nickname",
-  "rX/m/f": "You're spooktacular, just like this treat. Enjoy!",
   "kMYVws": "Collect Your Reward",
   "LWsAra": "Custom Sounds Everywhere",
   "4lSyCQ": "Use custom soundboard sounds across voice channels. Only with Nitro.",
@@ -29546,13 +29570,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Claim ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Show Quest Bar",
   "ij5E//": "Quest Completed!",
   "gvCR4O": "You're so close!",
@@ -30243,15 +30260,6 @@
   "qyKLdn": "Your Reward is Ready!",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
-  "coKAb2": [
-    "Unlock reward for ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Start Play Quest",
-  "hyrGU1": "Start Stream Quest",
   "umdNio": "Start Video Quest",
   "smG9qq": [
     "Stream ",
@@ -30347,6 +30355,14 @@
       "videoTitle"
     ],
     " to win ",
+    [
+      1,
+      "rewardNameWithArticle"
+    ],
+    "!"
+  ],
+  "g+InPD": [
+    "Watch the video to win ",
     [
       1,
       "rewardNameWithArticle"
@@ -30452,63 +30468,6 @@
     "."
   ],
   "mOrpXF": "Start Playing!",
-  "goA6o6": [
-    "Play ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " for ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Play ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " for ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Watch the video",
   "dYE1p6": [
     "Find this Quest again in User Settings ",
     [
@@ -31354,6 +31313,10 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
+  "a17rBg": "Set required email field",
+  "cUVsEB": "Set required password field",
+  "wpJ1dX": "Set required phone number field",
+  "47dcUV": "Set required username field",
   "WnX4Jy": "Resend Email",
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
@@ -38529,21 +38492,6 @@
   "Bco7ND": "Use Soundboard",
   "CVxXDA": "Use speaker",
   "08zAV1": "Use Voice Activity",
-  "XOWfNj": [
-    "Update your username by ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Starting ",
-    [
-      1,
-      "date"
-    ],
-    ", Discord will begin assigning unique usernames to users who have not updated their usernames."
-  ],
   "NgL2GR": "And, how old are you?",
   "WeJZy8": "Sorry, that name can't be used.",
   "LYIh7u": "What's your name?",

@@ -166,15 +166,15 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                      var var64: java.util.List;
                      label118: {
                         try {
-                           var var43: Json = ChatModule.access$getJson$cp();
+                           val var5: Json = ChatModule.access$getJson$cp();
                            var1 = this.$rowsJSON;
-                           var43.a();
-                           var64 = var43.b(new f(Row.Companion.serializer()), var1) as java.util.List;
+                           var5.a();
+                           var64 = var5.b(new f(Row.Companion.serializer()), var1) as java.util.List;
                            if (this.$scrollDataJSON != null) {
-                              var43 = ChatModule.access$getJson$cp();
+                              val var44: Json = ChatModule.access$getJson$cp();
                               var1 = this.$scrollDataJSON;
-                              var43.a();
-                              var1 = var43.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
+                              var44.a();
+                              var1 = var44.b(ChatScrollData.Companion.serializer(), var1) as ChatScrollData;
                               break label118;
                            }
                         } catch (var19: Exception) {
@@ -401,8 +401,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               var32 = null;
                            }
 
-                           var var7: java.util.Iterator;
-                           var var9: java.util.List;
+                           var var7: java.util.List;
+                           var var9: java.util.Iterator;
                            var var67: LinkedHashMap;
                            try {
                               if (var32 !is ErrorMessage) {
@@ -414,13 +414,13 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                               val var66: java.lang.String = var6.toString();
                               q.g(var66, "toString(...)");
                               var1 = var35.findErroringFields(var66, G.b(Message.class));
-                              var9 = PIIKt.getPIIFieldNames(G.b(Message.class));
+                              var7 = PIIKt.getPIIFieldNames(G.b(Message.class));
                               var67 = new LinkedHashMap();
                               if (var1 !is SerializerUtils.SerializerError.Data) {
                                  break label127;
                               }
 
-                              var7 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
+                              var9 = (var1 as SerializerUtils.SerializerError.Data).getData().entrySet().iterator();
                            } catch (var16: Exception) {
                               val var56: CrashReporting = CrashReporting.INSTANCE;
                               CrashReporting.addBreadcrumb$default(
@@ -454,12 +454,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
                            while (true) {
                               var var8: Entry;
                               try {
-                                 if (!var7.hasNext()) {
+                                 if (!var9.hasNext()) {
                                     break;
                                  }
 
-                                 var8 = var7.next() as Entry;
-                                 if (var9.contains(var8.getKey())) {
+                                 var8 = var9.next() as Entry;
+                                 if (var7.contains(var8.getKey())) {
                                     var67.put(var8.getKey(), "<REDACTED>");
                                     continue;
                                  }
@@ -591,12 +591,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
       private final val rowUpdateLoggers: MutableMap<Int, RowLogger>
 
       private fun cancelCoroutineChildren() {
-         val var1: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
-         val var2: java.lang.String = G.b(ChatModule.class).b();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append(" invalidate()");
-         v.g(var1, new CancellationException(var3.toString()));
+         val var2: CoroutineContext = ChatModule.access$getModuleScope$cp().getCoroutineContext();
+         val var3: java.lang.String = G.b(ChatModule.class).b();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var3);
+         var1.append(" invalidate()");
+         v.g(var2, new CancellationException(var1.toString()));
       }
 
       private fun rowUpdateLoggerFor(context: Context, tag: Int): RowLogger {
@@ -672,12 +672,12 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
          // 00: aload 0
          // 01: monitorenter
          // 02: invokestatic com/discord/chat/ChatModule.access$getListManagers$cp ()Ljava/util/Map;
-         // 05: astore 4
+         // 05: astore 5
          // 07: iload 1
          // 08: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
-         // 0b: astore 5
-         // 0d: aload 4
-         // 0f: aload 5
+         // 0b: astore 4
+         // 0d: aload 5
+         // 0f: aload 4
          // 11: invokeinterface java/util/Map.get (Ljava/lang/Object;)Ljava/lang/Object; 2
          // 16: astore 3
          // 17: aload 3
@@ -689,8 +689,8 @@ public class ChatModule(reactContext: ReactApplicationContext) : NativeChatModul
          // 21: aload 2
          // 22: invokestatic com/discord/chat/ChatModule.access$getModuleScope$cp ()Lkotlinx/coroutines/CoroutineScope;
          // 25: invokespecial com/discord/chat/listmanager/ChatListManager.<init> (Lkotlinx/coroutines/CoroutineScope;)V
-         // 28: aload 4
-         // 2a: aload 5
+         // 28: aload 5
+         // 2a: aload 4
          // 2c: aload 2
          // 2d: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
          // 32: pop

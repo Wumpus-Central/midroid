@@ -79,14 +79,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       val var6: MessageBundleViewBinding = MessageBundleViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var6, "inflate(...)");
       this.binding = var6;
-      val var5: MessageBundleAdapter = new MessageBundleAdapter();
-      this.adapter = var5;
-      var3 = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
-      this.leftMarginPx = var3;
-      val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
-      this.rightMarginPx = var4;
-      val var7: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
-      this.spineItemDecoration = var7;
+      val var7: MessageBundleAdapter = new MessageBundleAdapter();
+      this.adapter = var7;
+      val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
+      this.leftMarginPx = var4;
+      var3 = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      this.rightMarginPx = var3;
+      val var5: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var4);
+      this.spineItemDecoration = var5;
       this.onTruncateMessage = <unrepresentable>.INSTANCE;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
       this.setOrientation(1);
@@ -97,11 +97,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          var9,
          var1,
          new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(8), 0, SizeUtilsKt.getDpToPx(8), false, 10, null),
-         var7,
-         new MessageBundleHorizontalSpacingDecoration(var3, var4)
+         var5,
+         new MessageBundleHorizontalSpacingDecoration(var4, var3)
       );
       var9.setLayoutManager(new LinearLayoutManager(var1));
-      var9.setAdapter(var5);
+      var9.setAdapter(var7);
       var9.setNestedScrollingEnabled(false);
    }
 
@@ -164,10 +164,10 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var var14: Boolean;
             label61: {
                var8 = i.C0(var25, var22);
-               var30 = this.spineItemDecoration;
+               var26 = this.spineItemDecoration;
                if (var1.getReferenceMessageRows().isEmpty()) {
-                  val var26: java.lang.String = var1.getViewMoreText();
-                  if (var26 == null || var26.length() == 0) {
+                  val var30: java.lang.String = var1.getViewMoreText();
+                  if (var30 == null || var30.length() == 0) {
                      var14 = false;
                      break label61;
                   }
@@ -176,7 +176,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var14 = true;
             }
 
-            var30.setShowThreadSpine(var14);
+            var26.setShowThreadSpine(var14);
             val var31: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
             val var27: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
             if (var27 != null) {
@@ -342,24 +342,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var2: java.util.List = this.rows;
-         val var1: java.lang.Float = this.truncationThreshold;
-         val var4: java.util.List = this.referenceMessageRows;
-         val var5: java.lang.String = this.viewMoreText;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("MessageBundle(messageFrame=");
-         var3.append(var6);
-         var3.append(", rows=");
-         var3.append(var2);
-         var3.append(", truncationThreshold=");
-         var3.append(var1);
-         var3.append(", referenceMessageRows=");
-         var3.append(var4);
-         var3.append(", viewMoreText=");
-         var3.append(var5);
-         var3.append(")");
-         return var3.toString();
+         val var2: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var4: java.util.List = this.rows;
+         val var5: java.lang.Float = this.truncationThreshold;
+         val var3: java.util.List = this.referenceMessageRows;
+         val var6: java.lang.String = this.viewMoreText;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundle(messageFrame=");
+         var1.append(var2);
+         var1.append(", rows=");
+         var1.append(var4);
+         var1.append(", truncationThreshold=");
+         var1.append(var5);
+         var1.append(", referenceMessageRows=");
+         var1.append(var3);
+         var1.append(", viewMoreText=");
+         var1.append(var6);
+         var1.append(")");
+         return var1.toString();
       }
 
       public companion object {

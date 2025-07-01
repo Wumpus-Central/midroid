@@ -9,42 +9,42 @@ internal object ColorUtils {
       q.h(var0, "hsl");
       val var1: Float = var0[0];
       val var8: Float = (1.0F - Math.abs((float)2 * var0[2] - 1.0F)) * var0[1];
-      val var9: Float = var0[2] - 0.5F * var8;
-      val var4: Float = (1.0F - Math.abs(var1 / 60.0F % 2.0F - 1.0F)) * var8;
+      val var4: Float = var0[2] - 0.5F * var8;
+      val var9: Float = (1.0F - Math.abs(var1 / 60.0F % 2.0F - 1.0F)) * var8;
       var var5: Int;
       var var6: Int;
       var var7: Int;
       switch ((int)var1 / 60) {
          case 0:
-            var5 = Q9.a.c((var8 + var9) * 255.0F);
-            var6 = Q9.a.c((var4 + var9) * 255.0F);
-            var7 = Q9.a.c(var9 * 255.0F);
+            var5 = Q9.a.c((var8 + var4) * 255.0F);
+            var6 = Q9.a.c((var9 + var4) * 255.0F);
+            var7 = Q9.a.c(var4 * 255.0F);
             break;
          case 1:
-            var5 = Q9.a.c((var4 + var9) * 255.0F);
-            var6 = Q9.a.c((var8 + var9) * 255.0F);
-            var7 = Q9.a.c(var9 * 255.0F);
+            var5 = Q9.a.c((var9 + var4) * 255.0F);
+            var6 = Q9.a.c((var8 + var4) * 255.0F);
+            var7 = Q9.a.c(var4 * 255.0F);
             break;
          case 2:
-            var5 = Q9.a.c(var9 * 255.0F);
-            var6 = Q9.a.c((var8 + var9) * 255.0F);
-            var7 = Q9.a.c((var4 + var9) * 255.0F);
+            var5 = Q9.a.c(var4 * 255.0F);
+            var6 = Q9.a.c((var8 + var4) * 255.0F);
+            var7 = Q9.a.c((var9 + var4) * 255.0F);
             break;
          case 3:
-            var5 = Q9.a.c(var9 * 255.0F);
-            var6 = Q9.a.c((var4 + var9) * 255.0F);
-            var7 = Q9.a.c((var8 + var9) * 255.0F);
+            var5 = Q9.a.c(var4 * 255.0F);
+            var6 = Q9.a.c((var9 + var4) * 255.0F);
+            var7 = Q9.a.c((var8 + var4) * 255.0F);
             break;
          case 4:
-            var5 = Q9.a.c((var4 + var9) * 255.0F);
-            var6 = Q9.a.c(var9 * 255.0F);
-            var7 = Q9.a.c((var8 + var9) * 255.0F);
+            var5 = Q9.a.c((var9 + var4) * 255.0F);
+            var6 = Q9.a.c(var4 * 255.0F);
+            var7 = Q9.a.c((var8 + var4) * 255.0F);
             break;
          case 5:
          case 6:
-            var5 = Q9.a.c((var8 + var9) * 255.0F);
-            var6 = Q9.a.c(var9 * 255.0F);
-            var7 = Q9.a.c((var4 + var9) * 255.0F);
+            var5 = Q9.a.c((var8 + var4) * 255.0F);
+            var6 = Q9.a.c(var4 * 255.0F);
+            var7 = Q9.a.c((var9 + var4) * 255.0F);
             break;
          default:
             var7 = 0;

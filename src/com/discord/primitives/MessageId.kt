@@ -2,6 +2,7 @@ package com.discord.primitives
 
 import android.os.Parcel
 import android.os.Parcelable
+import com.discord.snowflake.SnowflakeUtils
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import tb.f
@@ -38,6 +39,19 @@ public inline class MessageId : Parcelable {
    @JvmStatic
    public open fun hashCode(): Int {
       return var0.hashCode();
+   }
+
+   @JvmStatic
+   public fun toSnowflake(): MessageIdSnowflake? {
+      val var1: java.lang.Long = SnowflakeUtils.INSTANCE.toSnowflake(var0);
+      val var2: MessageIdSnowflake;
+      if (var1 != null) {
+         var2 = MessageIdSnowflake.box-impl(MessageIdSnowflake.constructor-impl(var1.longValue()));
+      } else {
+         var2 = null;
+      }
+
+      return var2;
    }
 
    @JvmStatic

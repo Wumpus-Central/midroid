@@ -98,11 +98,11 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.count);
-      val var5: Int = java.lang.Boolean.hashCode(this.me);
+      val var6: Int = Integer.hashCode(this.count);
+      val var3: Int = java.lang.Boolean.hashCode(this.me);
       val var2: Int = java.lang.Boolean.hashCode(this.isMeBurst);
       val var4: Int = this.emoji.hashCode();
-      val var6: Int = Integer.hashCode(this.burstCount);
+      val var5: Int = Integer.hashCode(this.burstCount);
       val var1: Int;
       if (this.themedBurstColors == null) {
          var1 = 0;
@@ -110,7 +110,7 @@ public data class MessageReaction(count: Int,
          var1 = this.themedBurstColors.hashCode();
       }
 
-      return ((((var3 * 31 + var5) * 31 + var2) * 31 + var4) * 31 + var6) * 31 + var1;
+      return ((((var6 * 31 + var3) * 31 + var2) * 31 + var4) * 31 + var5) * 31 + var1;
    }
 
    override fun isBurstReaction(): Boolean {
@@ -118,27 +118,27 @@ public data class MessageReaction(count: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.count;
-      val var4: Boolean = this.me;
-      val var3: Boolean = this.isMeBurst;
-      val var7: MessageReactionEmoji = this.emoji;
-      val var2: Int = this.burstCount;
+      val var2: Int = this.count;
+      val var3: Boolean = this.me;
+      val var4: Boolean = this.isMeBurst;
+      val var6: MessageReactionEmoji = this.emoji;
+      val var1: Int = this.burstCount;
       val var5: ThemedBurstReactionColorPalette = this.themedBurstColors;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageReaction(count=");
-      var6.append(var1);
-      var6.append(", me=");
-      var6.append(var4);
-      var6.append(", isMeBurst=");
-      var6.append(var3);
-      var6.append(", emoji=");
-      var6.append(var7);
-      var6.append(", burstCount=");
-      var6.append(var2);
-      var6.append(", themedBurstColors=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MessageReaction(count=");
+      var7.append(var2);
+      var7.append(", me=");
+      var7.append(var3);
+      var7.append(", isMeBurst=");
+      var7.append(var4);
+      var7.append(", emoji=");
+      var7.append(var6);
+      var7.append(", burstCount=");
+      var7.append(var1);
+      var7.append(", themedBurstColors=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {
