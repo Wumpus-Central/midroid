@@ -8,7 +8,7 @@ import android.graphics.Paint
 import com.facebook.cache.common.CacheKey
 import com.facebook.imagepipeline.request.BasePostprocessor
 import kotlin.jvm.internal.q
-import n2.h
+import m2.h
 
 internal object GrayscalePostprocessor : BasePostprocessor {
    public open fun getName(): String {

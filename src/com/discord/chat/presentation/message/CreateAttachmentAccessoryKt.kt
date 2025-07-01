@@ -35,7 +35,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       if (var6 != 2) {
          if (var6 != 3) {
             if (var6 != 4) {
-               throw new r9.n();
+               throw new A9.n();
             }
 
             var14 = new AudioAttachmentMessageAccessory(
@@ -55,41 +55,41 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
             );
          }
       } else {
-         val var16: Long = var1.getChannelId-o4g7jtM();
+         val var18: Long = var1.getChannelId-o4g7jtM();
          var var22: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-         val var9: Boolean;
+         val var7: Boolean;
          if (var22 != null) {
-            var9 = var22;
+            var7 = var22;
          } else {
-            var9 = false;
+            var7 = false;
          }
 
          var22 = var1.getUseAttachmentUploadPreview();
-         var var10: Boolean;
+         var var8: Boolean;
          if (var22 != null) {
-            var10 = var22;
+            var8 = var22;
          } else {
-            var10 = false;
+            var8 = false;
          }
 
-         if (var10 && var0.getProgress() != null) {
-            var10 = true;
+         if (var8 && var0.getProgress() != null) {
+            var8 = true;
          } else {
-            var10 = false;
+            var8 = false;
          }
 
-         var14 = new VideoAttachmentMessageAccessory(var16, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var9, var10, null);
+         var14 = new VideoAttachmentMessageAccessory(var18, var15, var2, var0, var1.getAttachmentsOpacity(), var3, var4, var12, var7, var8, null);
       }
    } else {
       val var24: java.lang.Boolean = var1.getUseAttachmentGridLayout();
-      val var17: Boolean;
+      val var16: Boolean;
       if (var24 != null) {
-         var17 = var24;
+         var16 = var24;
       } else {
-         var17 = false;
+         var16 = false;
       }
 
-      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var17, null);
+      var14 = new ImageAttachmentMessageAccessory(var15, var0, var2, var1.getAttachmentsOpacity(), var3, var4, var12, var16, null);
    }
 
    return (MessageAttachmentAccessory)var14;

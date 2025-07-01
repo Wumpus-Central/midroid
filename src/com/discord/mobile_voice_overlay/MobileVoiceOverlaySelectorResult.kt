@@ -4,7 +4,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlinx.serialization.KSerializer
 
-@kb.f
+@tb.f
 public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: ChannelId, channelName: String, guildName: String, categoryName: String) : MobileVoiceOverlaySelectorResult(
       var1, var3, var5, var6, var7
    ) {
@@ -84,22 +84,22 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: java.lang.String = this.channelName;
-      val var4: java.lang.String = this.guildName;
-      val var1: java.lang.String = this.categoryName;
+      val var6: java.lang.String = this.guildName;
+      val var5: java.lang.String = this.categoryName;
       val var2: StringBuilder = new StringBuilder();
       var2.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var2.append(var6);
+      var2.append(var1);
       var2.append(", channelId=");
-      var2.append(var5);
+      var2.append(var4);
       var2.append(", channelName=");
       var2.append(var3);
       var2.append(", guildName=");
-      var2.append(var4);
+      var2.append(var6);
       var2.append(", categoryName=");
-      var2.append(var1);
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

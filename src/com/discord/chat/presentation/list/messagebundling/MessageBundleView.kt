@@ -152,7 +152,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                }
             }
 
-            val var25: java.util.List = i.z0(var11, var29);
+            val var25: java.util.List = i.B0(var11, var29);
             val var21: java.lang.String = var1.getViewMoreText();
             val var22: MessageBundleViewMoreItem;
             if (var21 != null) {
@@ -163,7 +163,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
             var var14: Boolean;
             label61: {
-               var8 = i.A0(var25, var22);
+               var8 = i.C0(var25, var22);
                var30 = this.spineItemDecoration;
                if (var1.getReferenceMessageRows().isEmpty()) {
                   val var26: java.lang.String = var1.getViewMoreText();
@@ -200,7 +200,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
             var31.setVisibility(var6);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
-            this.adapter.setItems(i.c0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
+            this.adapter.setItems(i.e0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
                final Function1 $onTapReply;
 
                {
@@ -233,7 +233,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
    }
 
-   @kb.f
+   @tb.f
    public data class MessageBundle(messageFrame: MessageBundleHeader? = null,
       rows: List<MessageRow>,
       truncationThreshold: Float? = null,
@@ -249,7 +249,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new nb.f(MessageRow.$serializer.INSTANCE), null, new nb.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new wb.f(MessageRow.$serializer.INSTANCE), null, new wb.f(var0), null};
       }
 
       init {
@@ -342,24 +342,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var2: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var5: java.util.List = this.rows;
-         val var6: java.lang.Float = this.truncationThreshold;
-         val var3: java.util.List = this.referenceMessageRows;
-         val var1: java.lang.String = this.viewMoreText;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("MessageBundle(messageFrame=");
-         var4.append(var2);
-         var4.append(", rows=");
-         var4.append(var5);
-         var4.append(", truncationThreshold=");
-         var4.append(var6);
-         var4.append(", referenceMessageRows=");
-         var4.append(var3);
-         var4.append(", viewMoreText=");
-         var4.append(var1);
-         var4.append(")");
-         return var4.toString();
+         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var2: java.util.List = this.rows;
+         val var1: java.lang.Float = this.truncationThreshold;
+         val var4: java.util.List = this.referenceMessageRows;
+         val var5: java.lang.String = this.viewMoreText;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("MessageBundle(messageFrame=");
+         var3.append(var6);
+         var3.append(", rows=");
+         var3.append(var2);
+         var3.append(", truncationThreshold=");
+         var3.append(var1);
+         var3.append(", referenceMessageRows=");
+         var3.append(var4);
+         var3.append(", viewMoreText=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
 
       public companion object {

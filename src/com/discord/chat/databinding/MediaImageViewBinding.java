@@ -10,7 +10,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.AltTextButtonView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class MediaImageViewBinding implements ViewBinding {
    public final ConstraintLayout container;
@@ -41,18 +41,18 @@ public final class MediaImageViewBinding implements ViewBinding {
          SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
          if (var2 != null) {
             var1 = R.id.image;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.image_alt_text;
-               TextView var6 = (TextView)a.a(var0, var1);
-               if (var6 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.image_blur_bg;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-                  if (var4 != null) {
+                  FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.media_view_alt_text_button;
-                     AltTextButtonView var5 = (AltTextButtonView)a.a(var0, var1);
-                     if (var5 != null) {
-                        return new MediaImageViewBinding(var0, var7, var2, var3, var6, var4, var5);
+                     AltTextButtonView var6 = (AltTextButtonView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new MediaImageViewBinding(var0, var7, var2, var4, var3, var5, var6);
                      }
                   }
                }

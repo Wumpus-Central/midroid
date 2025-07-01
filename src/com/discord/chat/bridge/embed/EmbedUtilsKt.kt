@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.embed
 
+import A9.s
 import com.discord.media_player.MediaSource
 import com.discord.media_player.MediaType
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import r9.s
 
 public fun Embed.getMedia(): EmbedUrlProvider? {
    q.h(var0, "<this>");
@@ -221,20 +221,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var22: java.lang.String = var21.getEmbedUrl();
-         if (var22 == null) {
+         val var11: java.lang.String = var21.getEmbedUrl();
+         if (var11 == null) {
             return null;
          }
 
-         val var37: java.lang.String = getTag(var0);
-         val var10: MediaType = MediaType.IMAGE;
+         val var10: java.lang.String = getTag(var0);
+         val var22: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
-            var22,
+            var11,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var37,
             var10,
+            var22,
             var4,
             ChannelId.box-impl(var1),
             var3,
@@ -302,8 +302,8 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var32 = null;
       }
 
-      val var39: java.lang.String = getTag(var0);
-      val var40: MediaType = MediaType.GIFV;
+      val var40: java.lang.String = getTag(var0);
+      val var39: MediaType = MediaType.GIFV;
       val var35: EmbedMedia = var0.getVideo();
       val var36: java.lang.String;
       if (var35 != null) {
@@ -322,7 +322,7 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
          var7 = var19.getSrcIsAnimated();
       }
 
-      var17 = new MediaSource(var28, var32, var36, var12, var39, var40, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
+      var17 = new MediaSource(var28, var32, var36, var12, var40, var39, var4, ChannelId.box-impl(var1), var3, null, var5, var7, 512, null);
    }
 
    return var17;

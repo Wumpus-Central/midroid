@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class CallSystemMessageViewBinding implements ViewBinding {
    public final SimpleDraweeView icon;
@@ -27,18 +27,18 @@ public final class CallSystemMessageViewBinding implements ViewBinding {
 
    public static CallSystemMessageViewBinding bind(View var0) {
       int var1 = R.id.icon;
-      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-      if (var4 != null) {
+      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.info;
-         TextView var3 = (TextView)a.a(var0, var1);
-         if (var3 != null) {
+         TextView var2 = (TextView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.message;
-            TextView var2 = (TextView)a.a(var0, var1);
-            if (var2 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.participants;
                OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
                if (var5 != null) {
-                  return new CallSystemMessageViewBinding(var0, var4, var3, var2, var5);
+                  return new CallSystemMessageViewBinding(var0, var3, var2, var4, var5);
                }
             }
          }

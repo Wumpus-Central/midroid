@@ -130,7 +130,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          this.lastState = new ReferralView.Companion.State.Resolving(var1.getItemId());
       } else {
          if (var9 !is ReferralEmbed.Resolved) {
-            throw new r9.n();
+            throw new A9.n();
          }
 
          var var7: Boolean = this.didResolve(var1.getItemId());
@@ -144,20 +144,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          kotlin.jvm.internal.q.g(this.binding.nitroLogoBanner, "nitroLogoBanner");
          val var34: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as ReferralEmbed.Resolved).getHeaderLogoUrl());
-         val var35: TextView = this.binding.imageCopy;
+         val var43: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var34.getHeaderText());
-         var35.setTextColor(var34.getHeaderColor());
-         kotlin.jvm.internal.q.e(var35);
-         val var43: java.lang.CharSequence = var35.getText();
-         kotlin.jvm.internal.q.g(var43, "getText(...)");
+         var43.setTextColor(var34.getHeaderColor());
+         kotlin.jvm.internal.q.e(var43);
+         val var35: java.lang.CharSequence = var43.getText();
+         kotlin.jvm.internal.q.g(var35, "getText(...)");
          var var5: Byte;
-         if (!kotlin.text.h.c0(var43)) {
+         if (!kotlin.text.h.c0(var35)) {
             var5 = 0;
          } else {
             var5 = 8;
          }
 
-         var35.setVisibility(var5);
+         var43.setVisibility(var5);
          val var36: SimpleDraweeView = this.binding.nitroTicket;
          kotlin.jvm.internal.q.g(this.binding.nitroTicket, "nitroTicket");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var36, var34.getThumbnailUrl());

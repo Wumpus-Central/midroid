@@ -123,15 +123,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureRecycledViewPoolSizes() {
-      val var3: Pair = r9.s.a(RegularMessageDelegate.class, 50);
+      val var3: Pair = A9.s.a(RegularMessageDelegate.class, 50);
       var var4: Int = 25;
 
-      for (Entry var5 : s9.q.l(new Pair[]{var3, r9.s.a(SystemMessageDelegate.class, var4), r9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
-         val var7: Class = var5.getKey() as Class;
-         val var2: Int = (var5.getValue() as java.lang.Number).intValue();
-         var4 = this.chatListAdapter.getDelegateViewTypes().get(var7);
+      for (Entry var7 : B9.q.l(new Pair[]{var3, A9.s.a(SystemMessageDelegate.class, var4), A9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
+         val var5: Class = var7.getKey() as Class;
+         val var1: Int = (var7.getValue() as java.lang.Number).intValue();
+         var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
          kotlin.jvm.internal.q.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
+         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var1);
       }
    }
 
@@ -143,14 +143,14 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
          val var3: Any = var2.get(this);
-         val var4: CrashReporting = CrashReporting.INSTANCE;
-         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("About to crash because of ChatList, dumping update log:\n");
-         var5.append(var7);
-         var5.append("\n Recycler State: ");
-         var5.append(var3);
-         CrashReporting.addBreadcrumb$default(var4, var5.toString(), null, null, 6, null);
+         val var7: CrashReporting = CrashReporting.INSTANCE;
+         val var5: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("About to crash because of ChatList, dumping update log:\n");
+         var4.append(var5);
+         var4.append("\n Recycler State: ");
+         var4.append(var3);
+         CrashReporting.addBreadcrumb$default(var7, var4.toString(), null, null, 6, null);
          throw var6;
       }
    }
@@ -179,17 +179,17 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                }
 
                public final void invoke(boolean var1) {
-                  val var5: BooleanRef = this.$wasAtBottom;
-                  val var4: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
+                  val var4: BooleanRef = this.$wasAtBottom;
+                  val var5: ScrollState = ChatListView.access$getScrollStateObserver$p(this.this$0).getScrollState();
                   var var2: Boolean = false;
-                  if (var4 != null) {
+                  if (var5 != null) {
                      var2 = false;
-                     if (var4.isAtBottom()) {
+                     if (var5.isAtBottom()) {
                         var2 = true;
                      }
                   }
 
-                  var5.j = var2;
+                  var4.j = var2;
                   if (this.$update.getAction() is ChatListAction.Clear) {
                      ChatListView.access$getScrollStateObserver$p(this.this$0).stopWatching();
                      if (!var1) {
@@ -254,7 +254,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
 
                   var var9: ChatListAction = this.$update.getAction();
                   if (var9 is ChatListAction.ScrollTo) {
-                     val var10: ChatListItem = kotlin.collections.i.i0(
+                     val var10: ChatListItem = kotlin.collections.i.k0(
                         this.$update.getItems(), (this.$update.getAction() as ChatListAction.ScrollTo).getPosition()
                      ) as ChatListItem;
                      if (var10 is SeparatorChatListItem) {
@@ -282,7 +282,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
                      }
                   } else if (var9 !is ChatListAction.Clear) {
                      if (var9 !is ChatListAction.Noop) {
-                        throw new r9.n();
+                        throw new A9.n();
                      }
 
                      ChatListView.access$getScrollStateObserver$p(this.this$0).startWatching(this.this$0, ChatScrollStateObserver.EmitMode.YES);
@@ -356,7 +356,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          kotlinx.coroutines.Job.a.a(this.updateSubscriptionJob, null, 1, null);
       }
 
-      this.updateSubscriptionJob = ab.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      this.updateSubscriptionJob = jb.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final ChatListView this$0;
 
@@ -374,7 +374,7 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = y9.b.e();
+            val var4: Any = H9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

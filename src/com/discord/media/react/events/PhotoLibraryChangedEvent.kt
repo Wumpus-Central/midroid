@@ -2,8 +2,8 @@ package com.discord.media.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 internal class PhotoLibraryChangedEvent : ReactEvent {

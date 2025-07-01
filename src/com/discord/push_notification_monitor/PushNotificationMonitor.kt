@@ -11,11 +11,11 @@ public object PushNotificationMonitor {
    private const val MAX_PUSH_LOG_SIZE: Int = 100
 
    private fun writePushLog(context: Context, userId: String, pushLog: PushNotificationLog) {
-      val var4: Editor = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1).edit();
-      val var5: a = Json.d;
+      val var5: Editor = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1).edit();
+      val var4: a = Json.d;
       Json.d.a();
-      var4.putString(var2, var5.c(PushNotificationLog.Companion.serializer(), var3));
-      var4.apply();
+      var5.putString(var2, var4.c(PushNotificationLog.Companion.serializer(), var3));
+      var5.apply();
    }
 
    public fun clearPushLog(context: Context) {
@@ -57,7 +57,7 @@ public object PushNotificationMonitor {
       q.h(var1, "context");
       q.h(var2, "loggedInUserId");
       q.h(var3, "pushNotification");
-      val var4: java.util.List = i.T0(this.getPushLog(var1, var2).getPushNotifications());
+      val var4: java.util.List = i.V0(this.getPushLog(var1, var2).getPushNotifications());
       var4.add(var3);
       if (var4.size() == 100) {
          var4.remove(0);

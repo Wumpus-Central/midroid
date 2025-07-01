@@ -5,7 +5,7 @@ public final class R {
    }
 
    public static final class id {
-      public static int firstRender;
+      public static int firstRenderPerformed;
 
       private id() {
       }

@@ -1,9 +1,9 @@
 package com.discord.client_info
 
+import A9.j
 import android.content.Context
 import java.util.Locale
 import kotlin.jvm.internal.q
-import r9.j
 
 public object ClientInfo {
    public final lateinit var versionName: String
@@ -63,7 +63,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@286.9.0-1+286109"
+   public const val SENTRY_RELEASE: String = "discord_android@287.3.0-2+287203"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -89,7 +89,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by j.a(new a())
+   public final val isProdBuild: Boolean by j.b(new a())
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -108,7 +108,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "87c75d52-61ca-46ea-b7a2-266b77e0ad00"
+   public const val PROGUARD_UUID: String = "9333da93-f3ff-4de7-af08-15d0a17ac60d"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
@@ -153,11 +153,11 @@ public object ClientInfo {
       flavor = var4;
       buildType = var5;
       this.setPackageName(var1.getPackageName());
-      val var8: ClientUserAgent = ClientUserAgent.INSTANCE;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Discord-Android/");
-      var9.append(var3);
-      var9.append(";RNA");
-      var8.init(var1, var9.toString());
+      val var9: ClientUserAgent = ClientUserAgent.INSTANCE;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("Discord-Android/");
+      var8.append(var3);
+      var8.append(";RNA");
+      var9.init(var1, var8.toString());
    }
 }

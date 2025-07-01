@@ -2,8 +2,8 @@ package com.discord.media_player.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class MediaPlayerProgress(id: Double, time: Double, duration: Double) : ReactEvent {

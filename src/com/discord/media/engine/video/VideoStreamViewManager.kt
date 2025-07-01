@@ -11,12 +11,14 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerDelegate
 import com.facebook.react.viewmanagers.DCDVideoRendererManagerInterface
+import java.util.HashMap
 import kotlin.jvm.internal.q
 import org.webrtc.RendererCommon.RendererEvents
 
 @ReactModule(name = "DCDVideoRenderer")
 public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>, DCDVideoRendererManagerInterface<VideoStreamTextureView> {
    private final val delegate: DCDVideoRendererManagerDelegate<VideoStreamTextureView, VideoStreamViewManager> = new DCDVideoRendererManagerDelegate(this)
+   private final val prevStreamIdByViewId: HashMap<Int, String?> = new HashMap()
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): VideoStreamTextureView {
       q.h(var1, "reactContext");
@@ -58,60 +60,83 @@ public class VideoStreamViewManager : SimpleViewManager<VideoStreamTextureView>,
       // 00: aload 1
       // 01: ldc "view"
       // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
-      // 06: aload 2
-      // 07: ifnull 1a
+      // 06: aload 0
+      // 07: getfield com/discord/media/engine/video/VideoStreamViewManager.prevStreamIdByViewId Ljava/util/HashMap;
       // 0a: aload 1
-      // 0b: aload 2
-      // 0c: new com/discord/media/engine/video/VideoStreamViewManager$RenderListener
-      // 0f: dup
-      // 10: aload 1
-      // 11: invokespecial com/discord/media/engine/video/VideoStreamViewManager$RenderListener.<init> (Landroid/view/View;)V
-      // 14: invokevirtual com/discord/media/engine/video/texture_view/VideoStreamTextureView.startRenderingStream (Ljava/lang/String;Lorg/webrtc/RendererCommon$RendererEvents;)V
-      // 17: goto 1e
-      // 1a: aload 1
-      // 1b: invokevirtual com/discord/media/engine/video/texture_view/VideoStreamTextureView.reset ()V
-      // 1e: aload 0
-      // 1f: monitorenter
-      // 20: aload 1
-      // 21: invokevirtual android/view/View.getContext ()Landroid/content/Context;
-      // 24: astore 1
-      // 25: aload 1
-      // 26: ldc "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext"
-      // 28: invokestatic kotlin/jvm/internal/q.f (Ljava/lang/Object;Ljava/lang/String;)V
-      // 2b: aload 1
-      // 2c: checkcast com/facebook/react/bridge/ReactContext
-      // 2f: invokevirtual com/facebook/react/bridge/ReactContext.getCurrentActivity ()Landroid/app/Activity;
-      // 32: astore 1
-      // 33: aload 1
-      // 34: ifnull 62
-      // 37: getstatic com/discord/media/engine/video/AttachedVideoSinks.INSTANCE Lcom/discord/media/engine/video/AttachedVideoSinks;
-      // 3a: astore 2
-      // 3b: aload 2
-      // 3c: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
-      // 3f: ifeq 52
-      // 42: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
-      // 45: aload 1
-      // 46: ldc "DCDVideoRenderer"
-      // 48: invokevirtual com/discord/wakelock/ScreenWakeLock.requestLock (Landroid/app/Activity;Ljava/lang/String;)V
-      // 4b: goto 62
-      // 4e: astore 1
-      // 4f: goto 69
-      // 52: aload 2
-      // 53: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
-      // 56: ifne 62
-      // 59: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
+      // 0b: invokevirtual android/view/View.getId ()I
+      // 0e: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
+      // 11: invokevirtual java/util/HashMap.get (Ljava/lang/Object;)Ljava/lang/Object;
+      // 14: checkcast java/lang/String
+      // 17: astore 3
+      // 18: aload 3
+      // 19: ifnull 25
+      // 1c: aload 2
+      // 1d: aload 3
+      // 1e: invokestatic kotlin/jvm/internal/q.c (Ljava/lang/Object;Ljava/lang/Object;)Z
+      // 21: ifeq 25
+      // 24: return
+      // 25: aload 0
+      // 26: getfield com/discord/media/engine/video/VideoStreamViewManager.prevStreamIdByViewId Ljava/util/HashMap;
+      // 29: aload 1
+      // 2a: invokevirtual android/view/View.getId ()I
+      // 2d: invokestatic java/lang/Integer.valueOf (I)Ljava/lang/Integer;
+      // 30: aload 2
+      // 31: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
+      // 36: pop
+      // 37: aload 2
+      // 38: ifnull 4b
+      // 3b: aload 1
+      // 3c: aload 2
+      // 3d: new com/discord/media/engine/video/VideoStreamViewManager$RenderListener
+      // 40: dup
+      // 41: aload 1
+      // 42: invokespecial com/discord/media/engine/video/VideoStreamViewManager$RenderListener.<init> (Landroid/view/View;)V
+      // 45: invokevirtual com/discord/media/engine/video/texture_view/VideoStreamTextureView.startRenderingStream (Ljava/lang/String;Lorg/webrtc/RendererCommon$RendererEvents;)V
+      // 48: goto 4f
+      // 4b: aload 1
+      // 4c: invokevirtual com/discord/media/engine/video/texture_view/VideoStreamTextureView.reset ()V
+      // 4f: aload 0
+      // 50: monitorenter
+      // 51: aload 1
+      // 52: invokevirtual android/view/View.getContext ()Landroid/content/Context;
+      // 55: astore 1
+      // 56: aload 1
+      // 57: ldc "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext"
+      // 59: invokestatic kotlin/jvm/internal/q.f (Ljava/lang/Object;Ljava/lang/String;)V
       // 5c: aload 1
-      // 5d: ldc "DCDVideoRenderer"
-      // 5f: invokevirtual com/discord/wakelock/ScreenWakeLock.releaseLock (Landroid/app/Activity;Ljava/lang/String;)V
-      // 62: getstatic kotlin/Unit.a Lkotlin/Unit;
-      // 65: astore 1
-      // 66: aload 0
-      // 67: monitorexit
-      // 68: return
-      // 69: aload 0
-      // 6a: monitorexit
-      // 6b: aload 1
-      // 6c: athrow
+      // 5d: checkcast com/facebook/react/bridge/ReactContext
+      // 60: invokevirtual com/facebook/react/bridge/ReactContext.getCurrentActivity ()Landroid/app/Activity;
+      // 63: astore 2
+      // 64: aload 2
+      // 65: ifnull 93
+      // 68: getstatic com/discord/media/engine/video/AttachedVideoSinks.INSTANCE Lcom/discord/media/engine/video/AttachedVideoSinks;
+      // 6b: astore 1
+      // 6c: aload 1
+      // 6d: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
+      // 70: ifeq 83
+      // 73: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
+      // 76: aload 2
+      // 77: ldc "DCDVideoRenderer"
+      // 79: invokevirtual com/discord/wakelock/ScreenWakeLock.requestLock (Landroid/app/Activity;Ljava/lang/String;)V
+      // 7c: goto 93
+      // 7f: astore 1
+      // 80: goto 9a
+      // 83: aload 1
+      // 84: invokevirtual com/discord/media/engine/video/AttachedVideoSinks.anySinksActive ()Z
+      // 87: ifne 93
+      // 8a: getstatic com/discord/wakelock/ScreenWakeLock.INSTANCE Lcom/discord/wakelock/ScreenWakeLock;
+      // 8d: aload 2
+      // 8e: ldc "DCDVideoRenderer"
+      // 90: invokevirtual com/discord/wakelock/ScreenWakeLock.releaseLock (Landroid/app/Activity;Ljava/lang/String;)V
+      // 93: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 96: astore 1
+      // 97: aload 0
+      // 98: monitorexit
+      // 99: return
+      // 9a: aload 0
+      // 9b: monitorexit
+      // 9c: aload 1
+      // 9d: athrow
    }
 
    public companion object {

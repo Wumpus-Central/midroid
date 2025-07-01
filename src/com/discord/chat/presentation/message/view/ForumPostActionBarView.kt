@@ -193,9 +193,9 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
          kotlin.jvm.internal.q.e(this.binding.sharePromptSubtitle);
-         val var14: StructurableText = var2.getSubtitle();
-         val var10: Context = var13.getContext();
-         kotlin.jvm.internal.q.g(var10, "getContext(...)");
+         val var10: StructurableText = var2.getSubtitle();
+         val var14: Context = var13.getContext();
+         kotlin.jvm.internal.q.g(var14, "getContext(...)");
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          kotlin.jvm.internal.q.g(var15, "getFontMetrics(...)");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
@@ -204,8 +204,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var14,
                var10,
+               var14,
                var1,
                false,
                false,
@@ -282,7 +282,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.q.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.q.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = kotlin.collections.i.K0(var8, --var2);
+         val var23: java.util.List = kotlin.collections.i.M0(var8, --var2);
          val var35: ShortcutsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.q.g(this.binding.reactionsView, "reactionsView");
          var35.setVisibility(0);

@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import F1.a
-import F1.b
-import F1.c
-import F1.d
-import F1.e
-import F1.f
-import F1.g
-import F1.h
+import E1.a
+import E1.b
+import E1.c
+import E1.d
+import E1.e
+import E1.f
+import E1.g
+import E1.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View

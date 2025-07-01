@@ -3,8 +3,8 @@ package com.discord.chat.input.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kb.f
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 internal class OnRequestSendEvent : ReactEvent {

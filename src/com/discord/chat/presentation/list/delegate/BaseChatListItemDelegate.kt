@@ -125,15 +125,15 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
 
       public override fun toString(): String {
          val var1: ChatListItemViewHolder = this.holder;
-         val var4: java.util.List = this.items;
-         val var3: java.util.List = this.payloads;
+         val var3: java.util.List = this.items;
+         val var4: java.util.List = this.payloads;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Metadata(holder=");
          var2.append(var1);
          var2.append(", items=");
-         var2.append(var4);
-         var2.append(", payloads=");
          var2.append(var3);
+         var2.append(", payloads=");
+         var2.append(var4);
          var2.append(")");
          return var2.toString();
       }

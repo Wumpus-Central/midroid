@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.decorations
 
+import B9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.view.View
@@ -12,7 +13,6 @@ import com.discord.chat.presentation.spine.SpineParentMessage
 import com.discord.misc.utilities.measure.NativeViewMeasuringWrapper
 import com.discord.misc.utilities.size.SizeUtilsKt
 import kotlin.jvm.internal.q
-import s9.n
 
 public class MessageBundleSpineItemDecoration(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    private final val spineDrawer: SpineDrawer

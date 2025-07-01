@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import c2.a
+import b2.a
 import com.discord.codegen.NativeI18nModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback

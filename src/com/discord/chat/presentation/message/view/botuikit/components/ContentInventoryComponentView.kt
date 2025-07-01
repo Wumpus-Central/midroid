@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import A9.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -32,7 +33,6 @@ import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
-import r9.m
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -58,8 +58,8 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       q.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = J2.d.g();
-      this.binding$delegate = r9.j.b(m.l, new e(this));
+      this.draweeControllerBuilder = I2.d.g();
+      this.binding$delegate = A9.j.a(m.l, new e(this));
    }
 
    @JvmStatic
@@ -100,12 +100,12 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var8: IntArray = kotlin.collections.i.Q0(var7);
-         val var25: ContentInventoryComponentView = this.getBinding().getRoot();
-         var25.setVisibility(0);
-         q.e(var25);
-         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var25, var8, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
-         ContentInventoryComponentViewKt.access$applyClickable(var25, var3, var4, var4.getClickable(), "container");
+         val var25: IntArray = kotlin.collections.i.S0(var7);
+         val var8: ContentInventoryComponentView = this.getBinding().getRoot();
+         var8.setVisibility(0);
+         q.e(var8);
+         ViewBackgroundUtilsKt.setBackgroundRectangle$default(var8, var25, Orientation.TL_BR, SizeUtilsKt.getDpToPx(16), null, 0, 24, null);
+         ContentInventoryComponentViewKt.access$applyClickable(var8, var3, var4, var4.getClickable(), "container");
          val var9: TextView = this.getBinding().contentInventoryComponentUsername;
          var9.setText(var4.getUserActionDescription());
          q.e(var9);

@@ -3,10 +3,10 @@ package com.discord.chat.input.views;
 import android.content.Context;
 import android.view.View;
 import androidx.core.view.ContentInfoCompat;
-import androidx.core.view.G;
+import androidx.core.view.H;
 
 // $VF: synthetic class
-public final class e implements G {
+public final class e implements H {
    public final ChatInputRootView a;
    public final Context b;
 

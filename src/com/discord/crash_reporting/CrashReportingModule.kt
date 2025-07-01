@@ -1,5 +1,6 @@
 package com.discord.crash_reporting
 
+import A9.s
 import com.discord.crash_reporting.react_events.CrashReportEvent
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
@@ -14,7 +15,6 @@ import com.facebook.react.bridge.ReadableMap
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import r9.s
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -88,18 +88,18 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       q.h(var1, "callback");
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.fetch(var3)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.initSystemLogCapture(var2);
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var1, "getReactApplicationContext(...)");
+      var2.initSystemLogCapture(var1);
    }
 
    @ReactMethod

@@ -1,5 +1,6 @@
 package com.discord.channel_spine
 
+import A9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
@@ -16,7 +17,6 @@ import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import r9.n
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val spinePaint: Paint
@@ -115,9 +115,9 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    private fun createSpinePath(rowHeight: Float, rowIndex: Int, direction: com.discord.channel_spine.ChannelSpineView.SpineDirection): Path {
-      val var10: Path = new Path();
+      val var11: Path = new Path();
       val var6: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-      val var11: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
+      val var10: IntArray = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0;
       val var9: Int = ChannelSpineView.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       val var4: Float;
       if (var9 != 1) {
@@ -141,7 +141,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       val var8: Float = this.getMeasuredWidth();
       var1 = this.horizontalPadding;
       val var7: Float = this.arcPercent() * this.getMeasuredWidth();
-      var2 = var11[var3.ordinal()];
+      var2 = var10[var3.ordinal()];
       if (var2 != 1) {
          if (var2 != 2) {
             throw new n();
@@ -152,16 +152,16 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
          this.arcRect.set(var6, var5 - var7, var7 + var6, var5);
       }
 
-      var10.moveTo(var6, var4);
-      var10.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var10.lineTo(var8 - var1, var5);
-      return var10;
+      var11.moveTo(var6, var4);
+      var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
+      var11.lineTo(var8 - var1, var5);
+      return var11;
    }
 
    private fun rebuildLayout() {
       val var5: Int = this.numRows;
-      val var1: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
-      if (var5 != 0 && !(var1 <= 1.0E-4F)) {
+      val var2: Float = SizeUtilsKt.getDpToPx(this.rowHeight);
+      if (var5 != 0 && !(var2 <= 1.0E-4F)) {
          var var4: Int = 0;
          var var3: Byte = 1;
          if (var5 <= 1) {
@@ -177,17 +177,17 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
                var6 = ChannelSpineView.SpineDirection.TOP_TO_BOTTOM;
             }
 
-            var7.add(this.createSpinePath(var1, var4, var6));
+            var7.add(this.createSpinePath(var2, var4, var6));
             if (var4 < var5 - 1) {
-               var7.add(this.createSpinePath(var1, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
+               var7.add(this.createSpinePath(var2, var4, ChannelSpineView.SpineDirection.BOTTOM_TO_TOP));
             }
          }
 
          if (var3 != 0) {
             val var8: Path = new Path();
-            val var2: Float = this.spinePaint.getStrokeWidth() / 2.0F;
-            var8.moveTo(var2, (float)this.verticalPadding);
-            var8.lineTo(var2, this.yOfRow(var1, var5 - 2) + var1 / 2.0F);
+            val var1: Float = this.spinePaint.getStrokeWidth() / 2.0F;
+            var8.moveTo(var1, (float)this.verticalPadding);
+            var8.lineTo(var1, this.yOfRow(var2, var5 - 2) + var2 / 2.0F);
             var7.add(var8);
          }
 
@@ -272,7 +272,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = z9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       init {

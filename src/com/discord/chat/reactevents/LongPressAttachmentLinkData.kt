@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import r9.s
+import tb.f
 
 @f
 internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, attachmentName: String? = null) : ReactEvent {
@@ -72,15 +72,15 @@ internal data class LongPressAttachmentLinkData(attachmentUrl: String? = null, a
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("LongPressAttachmentLinkData(attachmentUrl=");
-      var1.append(var2);
-      var1.append(", attachmentName=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressAttachmentLinkData(attachmentUrl=");
+      var3.append(var1);
+      var3.append(", attachmentName=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class ThreadStarterMessageHeaderViewBinding implements ViewBinding {
    private final View rootView;

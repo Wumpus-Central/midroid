@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.rolecolors.RoleColors
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode {
@@ -67,7 +67,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
       }
 
       this.isUrl = var3;
-      val var11: ContentNode = i.h0(var1) as ContentNode;
+      val var11: ContentNode = i.j0(var1) as ContentNode;
       var var6: java.lang.String = var8;
       if (var11 != null) {
          val var7: ContentNode;
@@ -131,13 +131,13 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: LinkContextData = this.target;
+      val var2: java.util.List = this.content;
+      val var1: LinkContextData = this.target;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LinkContentNode(content=");
-      var3.append(var1);
-      var3.append(", target=");
       var3.append(var2);
+      var3.append(", target=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

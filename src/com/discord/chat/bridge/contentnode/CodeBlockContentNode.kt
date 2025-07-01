@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {

@@ -1260,35 +1260,35 @@ public final class R {
 
    public static final class styleable {
       public static int[] ActionBar = new int[]{
-         2130968665,
-         2130968673,
-         2130968674,
-         2130968856,
-         2130968857,
-         2130968858,
-         2130968859,
-         2130968860,
-         2130968861,
-         2130968900,
-         2130968917,
-         2130968918,
-         2130968952,
-         2130969084,
-         2130969091,
-         2130969100,
-         2130969101,
-         2130969106,
-         2130969119,
-         2130969146,
-         2130969273,
-         2130969395,
-         2130969461,
-         2130969473,
-         2130969474,
-         2130969611,
-         2130969615,
-         2130969732,
-         2130969745
+         2130968672,
+         2130968680,
+         2130968681,
+         2130968903,
+         2130968904,
+         2130968905,
+         2130968906,
+         2130968907,
+         2130968908,
+         2130968950,
+         2130968969,
+         2130968970,
+         2130969005,
+         2130969151,
+         2130969159,
+         2130969168,
+         2130969169,
+         2130969174,
+         2130969187,
+         2130969216,
+         2130969346,
+         2130969497,
+         2130969565,
+         2130969577,
+         2130969578,
+         2130969734,
+         2130969738,
+         2130969865,
+         2130969879
       };
       public static int[] ActionBarLayout = new int[]{16842931};
       public static int ActionBarLayout_android_layout_gravity;
@@ -1324,17 +1324,17 @@ public final class R {
       public static int[] ActionMenuItemView = new int[]{16843071};
       public static int ActionMenuItemView_android_minWidth;
       public static int[] ActionMenuView = new int[0];
-      public static int[] ActionMode = new int[]{2130968665, 2130968673, 2130968795, 2130969084, 2130969615, 2130969745};
+      public static int[] ActionMode = new int[]{2130968672, 2130968680, 2130968820, 2130969151, 2130969738, 2130969879};
       public static int ActionMode_background;
       public static int ActionMode_backgroundSplit;
       public static int ActionMode_closeItemLayout;
       public static int ActionMode_height;
       public static int ActionMode_subtitleTextStyle;
       public static int ActionMode_titleTextStyle;
-      public static int[] ActivityChooserView = new int[]{2130968975, 2130969125};
+      public static int[] ActivityChooserView = new int[]{2130969033, 2130969194};
       public static int ActivityChooserView_expandActivityOverflowButtonDrawable;
       public static int ActivityChooserView_initialActivityCount;
-      public static int[] AlertDialog = new int[]{16842994, 2130968728, 2130968729, 2130969262, 2130969263, 2130969391, 2130969550, 2130969564};
+      public static int[] AlertDialog = new int[]{16842994, 2130968749, 2130968752, 2130969335, 2130969336, 2130969493, 2130969664, 2130969682};
       public static int AlertDialog_android_layout;
       public static int AlertDialog_buttonIconDimen;
       public static int AlertDialog_buttonPanelSideLayout;
@@ -1358,12 +1358,12 @@ public final class R {
       public static int AnimatedStateListDrawableTransition_android_fromId;
       public static int AnimatedStateListDrawableTransition_android_reversible;
       public static int AnimatedStateListDrawableTransition_android_toId;
-      public static int[] AppCompatImageView = new int[]{16843033, 2130969585, 2130969730, 2130969731};
+      public static int[] AppCompatImageView = new int[]{16843033, 2130969703, 2130969862, 2130969863};
       public static int AppCompatImageView_android_src;
       public static int AppCompatImageView_srcCompat;
       public static int AppCompatImageView_tint;
       public static int AppCompatImageView_tintMode;
-      public static int[] AppCompatSeekBar = new int[]{16843074, 2130969725, 2130969726, 2130969727};
+      public static int[] AppCompatSeekBar = new int[]{16843074, 2130969855, 2130969856, 2130969857};
       public static int AppCompatSeekBar_android_thumb;
       public static int AppCompatSeekBar_tickMark;
       public static int AppCompatSeekBar_tickMarkTint;
@@ -1378,27 +1378,27 @@ public final class R {
       public static int AppCompatTextHelper_android_textAppearance;
       public static int[] AppCompatTextView = new int[]{
          16842804,
-         2130968653,
-         2130968654,
-         2130968655,
-         2130968656,
-         2130968657,
-         2130968933,
-         2130968934,
-         2130968935,
-         2130968936,
-         2130968938,
-         2130968939,
-         2130968940,
-         2130968941,
-         2130968956,
-         2130969011,
-         2130969052,
-         2130969062,
-         2130969174,
-         2130969255,
-         2130969659,
-         2130969708
+         2130968659,
+         2130968660,
+         2130968661,
+         2130968662,
+         2130968663,
+         2130968985,
+         2130968986,
+         2130968987,
+         2130968988,
+         2130968990,
+         2130968991,
+         2130968992,
+         2130968993,
+         2130969009,
+         2130969072,
+         2130969118,
+         2130969128,
+         2130969246,
+         2130969328,
+         2130969783,
+         2130969832
       };
       public static int AppCompatTextView_android_textAppearance;
       public static int AppCompatTextView_autoSizeMaxTextSize;
@@ -1423,7 +1423,7 @@ public final class R {
       public static int AppCompatTextView_textAllCaps;
       public static int AppCompatTextView_textLocale;
       public static int[] AppCompatTheme = decode_I(
-         "57000101ae0001010000047f0100047f0200047f0300047f0400047f0500047f0600047f0700047f0800047f0900047f0a00047f0b00047f0c00047f0e00047f0f00047f1000047f1100047f1200047f1300047f1400047f1500047f1600047f1700047f1800047f1900047f1a00047f1b00047f1c00047f1d00047f1e00047f1f00047f2000047f2500047f2c00047f2d00047f2e00047f2f00047f4500047f7e00047f9100047f9200047f9300047f9400047f9500047f9b00047f9c00047fac00047fb600047fe800047fe900047fea00047fec00047fed00047fee00047fef00047f0001047f0201047f0d01047f2701047f5201047f5301047f5401047f5b01047f6001047f7101047f7201047f7501047f7601047f7701047f0c02047f1d02047faa02047fab02047fac02047fad02047fb002047fb102047fb202047fb302047fb402047fb502047fb602047fb702047fb802047f5903047f5a03047f5b03047f7403047f7603047f8603047f8803047f8903047f8a03047fb303047fb603047fb703047fb803047fe703047fe803047f1804047f5204047f5404047f5504047f5604047f5804047f5904047f5a04047f5b04047f6104047f6204047f9304047f9404047f9604047f9704047fce04047fd804047fd904047fda04047fdb04047fdc04047fdd04047fde04047fdf04047fe004047fe104047f"
+         "57000101ae0001010000047f0100047f0200047f0300047f0400047f0500047f0600047f0700047f0800047f0900047f0a00047f0b00047f0c00047f0e00047f0f00047f1000047f1100047f1200047f1300047f1400047f1500047f1600047f1700047f1800047f1900047f1a00047f1b00047f1c00047f1d00047f1e00047f1f00047f2000047f2600047f2e00047f2f00047f3000047f3100047f4a00047f9100047fa500047fa600047fa700047fa800047fa900047fb200047fb300047fc400047fcf00047f0101047f0201047f0301047f0501047f0601047f0701047f0801047f2101047f2301047f3901047f5601047f8601047f8701047f8801047f8f01047f9401047fa601047fa701047faa01047fab01047fac01047f5002047f6102047ff302047ff402047ff502047ff602047ff902047ffa02047ffb02047ffc02047ffd02047ffe02047fff02047f0003047f0103047fc103047fc203047fc303047fdc03047fde03047fee03047ff003047ff103047ff203047f1d04047f2004047f2104047f2204047f5d04047f5e04047f9304047fce04047fd004047fd104047fd204047fd404047fd504047fd604047fd704047fdd04047fde04047f1a05047f1b05047f1d05047f1e05047f5b05047f6505047f6605047f6705047f6805047f6905047f6a05047f6b05047f6c05047f6d05047f6e05047f"
       );
       public static int AppCompatTheme_actionBarDivider;
       public static int AppCompatTheme_actionBarItemBackground;
@@ -1552,20 +1552,20 @@ public final class R {
       public static int AppCompatTheme_windowMinWidthMajor;
       public static int AppCompatTheme_windowMinWidthMinor;
       public static int AppCompatTheme_windowNoTitle;
-      public static int[] ButtonBarLayout = new int[]{2130968628};
+      public static int[] ButtonBarLayout = new int[]{2130968630};
       public static int ButtonBarLayout_allowStacking;
-      public static int[] ColorStateListItem = new int[]{16843173, 16843551, 16844359, 2130968629, 2130969170};
+      public static int[] ColorStateListItem = new int[]{16843173, 16843551, 16844359, 2130968631, 2130969241};
       public static int ColorStateListItem_alpha;
       public static int ColorStateListItem_android_alpha;
       public static int ColorStateListItem_android_color;
       public static int ColorStateListItem_android_lStar;
       public static int ColorStateListItem_lStar;
-      public static int[] CompoundButton = new int[]{16843015, 2130968726, 2130968733, 2130968734};
+      public static int[] CompoundButton = new int[]{16843015, 2130968746, 2130968756, 2130968757};
       public static int CompoundButton_android_button;
       public static int CompoundButton_buttonCompat;
       public static int CompoundButton_buttonTint;
       public static int CompoundButton_buttonTintMode;
-      public static int[] DrawerArrowToggle = new int[]{2130968641, 2130968642, 2130968683, 2130968807, 2130968937, 2130969077, 2130969574, 2130969712};
+      public static int[] DrawerArrowToggle = new int[]{2130968645, 2130968646, 2130968701, 2130968832, 2130968989, 2130969144, 2130969692, 2130969835};
       public static int DrawerArrowToggle_arrowHeadLength;
       public static int DrawerArrowToggle_arrowShaftLength;
       public static int DrawerArrowToggle_barLength;
@@ -1574,9 +1574,9 @@ public final class R {
       public static int DrawerArrowToggle_gapBetweenBars;
       public static int DrawerArrowToggle_spinBars;
       public static int DrawerArrowToggle_thickness;
-      public static int[] FontFamily = new int[]{2130969053, 2130969054, 2130969055, 2130969056, 2130969057, 2130969058, 2130969059, 2130969060};
+      public static int[] FontFamily = new int[]{2130969119, 2130969120, 2130969121, 2130969122, 2130969123, 2130969124, 2130969125, 2130969126};
       public static int[] FontFamilyFont = new int[]{
-         16844082, 16844083, 16844095, 16844143, 16844144, 2130969051, 2130969061, 2130969062, 2130969063, 2130969778
+         16844082, 16844083, 16844095, 16844143, 16844144, 2130969117, 2130969127, 2130969128, 2130969129, 2130969918
       };
       public static int FontFamilyFont_android_font;
       public static int FontFamilyFont_android_fontStyle;
@@ -1614,7 +1614,7 @@ public final class R {
       public static int GradientColor_android_startY;
       public static int GradientColor_android_tileMode;
       public static int GradientColor_android_type;
-      public static int[] LinearLayoutCompat = new int[]{16842927, 16842948, 16843046, 16843047, 16843048, 2130968918, 2130968926, 2130969354, 2130969546};
+      public static int[] LinearLayoutCompat = new int[]{16842927, 16842948, 16843046, 16843047, 16843048, 2130968970, 2130968978, 2130969438, 2130969659};
       public static int[] LinearLayoutCompat_Layout = new int[]{16842931, 16842996, 16842997, 16843137};
       public static int LinearLayoutCompat_Layout_android_layout_gravity;
       public static int LinearLayoutCompat_Layout_android_layout_height;
@@ -1656,13 +1656,13 @@ public final class R {
          2130968589,
          2130968609,
          2130968611,
-         2130968630,
-         2130968855,
-         2130969112,
-         2130969113,
-         2130969403,
-         2130969541,
-         2130969753
+         2130968632,
+         2130968902,
+         2130969180,
+         2130969181,
+         2130969505,
+         2130969654,
+         2130969888
       };
       public static int MenuItem_actionLayout;
       public static int MenuItem_actionProviderClass;
@@ -1687,7 +1687,7 @@ public final class R {
       public static int MenuItem_numericModifiers;
       public static int MenuItem_showAsAction;
       public static int MenuItem_tooltipText;
-      public static int[] MenuView = new int[]{16842926, 16843052, 16843053, 16843054, 16843055, 16843056, 16843057, 2130969466, 2130969605};
+      public static int[] MenuView = new int[]{16842926, 16843052, 16843053, 16843054, 16843055, 16843056, 16843057, 2130969570, 2130969728};
       public static int MenuView_android_headerBackground;
       public static int MenuView_android_horizontalDivider;
       public static int MenuView_android_itemBackground;
@@ -1697,52 +1697,76 @@ public final class R {
       public static int MenuView_android_windowAnimationStyle;
       public static int MenuView_preserveIconSpacing;
       public static int MenuView_subMenuArrow;
-      public static int[] PopupWindow = new int[]{16843126, 16843465, 2130969422};
-      public static int[] PopupWindowBackgroundState = new int[]{2130969593};
+      public static int[] PopupWindow = new int[]{16843126, 16843465, 2130969525};
+      public static int[] PopupWindowBackgroundState = new int[]{2130969713};
       public static int PopupWindowBackgroundState_state_above_anchor;
       public static int PopupWindow_android_popupAnimationStyle;
       public static int PopupWindow_android_popupBackground;
       public static int PopupWindow_overlapAnchor;
-      public static int[] RecycleListView = new int[]{2130969425, 2130969431};
+      public static int[] RecycleListView = new int[]{2130969528, 2130969535};
       public static int RecycleListView_paddingBottomNoButtons;
       public static int RecycleListView_paddingTopNoTitle;
       public static int[] SearchView = new int[]{
+         16842804,
          16842970,
          16843039,
+         16843087,
+         16843088,
          16843296,
          16843364,
-         2130968788,
-         2130968848,
-         2130968908,
-         2130969079,
-         2130969114,
-         2130969176,
-         2130969475,
-         2130969476,
-         2130969521,
-         2130969522,
-         2130969610,
-         2130969619,
-         2130969809
+         2130968635,
+         2130968636,
+         2130968658,
+         2130968671,
+         2130968682,
+         2130968813,
+         2130968894,
+         2130968959,
+         2130969146,
+         2130969150,
+         2130969158,
+         2130969182,
+         2130969248,
+         2130969579,
+         2130969580,
+         2130969626,
+         2130969627,
+         2130969628,
+         2130969733,
+         2130969742,
+         2130969938,
+         2130969950
       };
       public static int SearchView_android_focusable;
+      public static int SearchView_android_hint;
       public static int SearchView_android_imeOptions;
       public static int SearchView_android_inputType;
       public static int SearchView_android_maxWidth;
+      public static int SearchView_android_text;
+      public static int SearchView_android_textAppearance;
+      public static int SearchView_animateMenuItems;
+      public static int SearchView_animateNavigationIcon;
+      public static int SearchView_autoShowKeyboard;
+      public static int SearchView_backHandlingEnabled;
+      public static int SearchView_backgroundTint;
       public static int SearchView_closeIcon;
       public static int SearchView_commitIcon;
       public static int SearchView_defaultQueryHint;
       public static int SearchView_goIcon;
+      public static int SearchView_headerLayout;
+      public static int SearchView_hideNavigationIcon;
       public static int SearchView_iconifiedByDefault;
       public static int SearchView_layout;
       public static int SearchView_queryBackground;
       public static int SearchView_queryHint;
       public static int SearchView_searchHintIcon;
       public static int SearchView_searchIcon;
+      public static int SearchView_searchPrefixText;
       public static int SearchView_submitBackground;
       public static int SearchView_suggestionRowLayout;
+      public static int SearchView_useDrawerArrowDrawable;
       public static int SearchView_voiceIcon;
-      public static int[] Spinner = new int[]{16842930, 16843126, 16843131, 16843362, 2130969461};
+      public static int[] Spinner = new int[]{16842930, 16843126, 16843131, 16843362, 2130969565};
       public static int Spinner_android_dropDownWidth;
       public static int Spinner_android_entries;
       public static int Spinner_android_popupBackground;
@@ -1761,17 +1785,17 @@ public final class R {
          16843044,
          16843045,
          16843074,
-         2130969549,
-         2130969584,
-         2130969622,
-         2130969623,
-         2130969625,
-         2130969719,
-         2130969720,
-         2130969721,
-         2130969759,
-         2130969766,
-         2130969767
+         2130969663,
+         2130969702,
+         2130969745,
+         2130969746,
+         2130969748,
+         2130969847,
+         2130969848,
+         2130969849,
+         2130969894,
+         2130969906,
+         2130969907
       };
       public static int SwitchCompat_android_textOff;
       public static int SwitchCompat_android_textOn;
@@ -1800,10 +1824,10 @@ public final class R {
          16843108,
          16843692,
          16844165,
-         2130969052,
-         2130969062,
-         2130969659,
-         2130969708
+         2130969118,
+         2130969128,
+         2130969783,
+         2130969832
       };
       public static int TextAppearance_android_fontFamily;
       public static int TextAppearance_android_shadowColor;
@@ -1824,34 +1848,34 @@ public final class R {
       public static int[] Toolbar = new int[]{
          16842927,
          16843072,
-         2130968727,
-         2130968796,
-         2130968797,
-         2130968856,
-         2130968857,
-         2130968858,
-         2130968859,
-         2130968860,
-         2130968861,
-         2130969273,
-         2130969275,
-         2130969344,
-         2130969355,
-         2130969392,
-         2130969393,
-         2130969461,
-         2130969611,
-         2130969613,
-         2130969614,
-         2130969732,
+         2130968747,
+         2130968821,
+         2130968822,
+         2130968903,
+         2130968904,
+         2130968905,
+         2130968906,
+         2130968907,
+         2130968908,
+         2130969346,
+         2130969348,
+         2130969427,
+         2130969439,
+         2130969494,
+         2130969495,
+         2130969565,
+         2130969734,
          2130969736,
          2130969737,
-         2130969738,
-         2130969739,
-         2130969740,
-         2130969741,
-         2130969743,
-         2130969744
+         2130969865,
+         2130969869,
+         2130969870,
+         2130969871,
+         2130969872,
+         2130969873,
+         2130969874,
+         2130969876,
+         2130969877
       };
       public static int Toolbar_android_gravity;
       public static int Toolbar_android_minHeight;
@@ -1883,8 +1907,8 @@ public final class R {
       public static int Toolbar_titleMargins;
       public static int Toolbar_titleTextAppearance;
       public static int Toolbar_titleTextColor;
-      public static int[] View = new int[]{16842752, 16842970, 2130969427, 2130969430, 2130969710};
-      public static int[] ViewBackgroundHelper = new int[]{16842964, 2130968675, 2130968676};
+      public static int[] View = new int[]{16842752, 16842970, 2130969530, 2130969533, 2130969834};
+      public static int[] ViewBackgroundHelper = new int[]{16842964, 2130968682, 2130968683};
       public static int ViewBackgroundHelper_android_background;
       public static int ViewBackgroundHelper_backgroundTint;
       public static int ViewBackgroundHelper_backgroundTintMode;

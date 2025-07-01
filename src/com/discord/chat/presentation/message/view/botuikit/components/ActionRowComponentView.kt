@@ -70,7 +70,7 @@ public class ActionRowComponentView  public constructor(context: Context, attrs:
          var6.add(var2.getConfiguredComponentView(var9, var3, (ViewGroup)var8, var4));
       }
 
-      val var15: java.util.List = kotlin.collections.i.c0(var6);
+      val var15: java.util.List = kotlin.collections.i.e0(var6);
       val var19: FlexboxLayout = this.binding.actionRowComponentViewGroup;
       q.g(this.binding.actionRowComponentViewGroup, "actionRowComponentViewGroup");
       MessageComponentsViewKt.replaceViews$default(var19, var15, var2, 0, 0, 12, null);

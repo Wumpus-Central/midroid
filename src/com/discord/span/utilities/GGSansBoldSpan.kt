@@ -5,8 +5,8 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import i2.a
-import i2.b
+import h2.a
+import h2.b
 import kotlin.jvm.internal.q
 
 public class GGSansBoldSpan(context: Context) : StyleSpan {

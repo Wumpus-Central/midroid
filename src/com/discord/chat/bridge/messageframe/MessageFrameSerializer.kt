@@ -9,8 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import ob.d
-import ob.g
+import xb.d
+import xb.g
 
 public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>
@@ -53,7 +53,7 @@ public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
       }
 
       val var6: Any;
-      if (i.V(var2, var5)) {
+      if (i.X(var2, var5)) {
          var6 = messageFrameClassSerializer;
       } else {
          var6 = UnknownMessageFrame.Companion.serializer();

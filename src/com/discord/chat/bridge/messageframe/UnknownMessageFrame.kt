@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.messageframe
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
@@ -38,12 +38,12 @@ public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
    }
 
    public override fun toString(): String {
-      val var2: MessageFrameType = this.type;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UnknownMessageFrame(type=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MessageFrameType = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UnknownMessageFrame(type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

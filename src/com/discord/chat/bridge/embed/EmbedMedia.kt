@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class EmbedMedia(url: String,
@@ -151,33 +151,33 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var9: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
+      val var4: java.lang.String = this.url;
+      val var7: java.lang.String = this.proxyURL;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var5: java.lang.String = this.placeholder;
+      val var6: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var6: java.lang.String = this.contentType;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("EmbedMedia(url=");
-      var8.append(var7);
-      var8.append(", proxyURL=");
-      var8.append(var4);
-      var8.append(", width=");
-      var8.append(var1);
-      var8.append(", height=");
-      var8.append(var2);
-      var8.append(", placeholder=");
-      var8.append(var9);
-      var8.append(", placeholderVersion=");
-      var8.append(var5);
-      var8.append(", srcIsAnimated=");
-      var8.append(var3);
-      var8.append(", contentType=");
-      var8.append(var6);
-      var8.append(")");
-      return var8.toString();
+      val var8: java.lang.String = this.contentType;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("EmbedMedia(url=");
+      var9.append(var4);
+      var9.append(", proxyURL=");
+      var9.append(var7);
+      var9.append(", width=");
+      var9.append(var2);
+      var9.append(", height=");
+      var9.append(var1);
+      var9.append(", placeholder=");
+      var9.append(var5);
+      var9.append(", placeholderVersion=");
+      var9.append(var6);
+      var9.append(", srcIsAnimated=");
+      var9.append(var3);
+      var9.append(", contentType=");
+      var9.append(var8);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

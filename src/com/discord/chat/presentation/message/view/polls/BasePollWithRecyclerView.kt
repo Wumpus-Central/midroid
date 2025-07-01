@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.Y
+import androidx.core.view.Z
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
@@ -119,11 +119,11 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      Y.D0(var12, 4);
+      Z.A0(var12, 4);
       var12.setImportantForAccessibility(1);
-      Y.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
-      var8 = this.binding.secondaryActionButton.hasAccessibilityFocus();
+      Z.o0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
+      var8 = this.binding.primaryAction.hasAccessibilityFocus();
+      val var9: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
       val var10: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
@@ -147,14 +147,14 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var9 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
       }
 
       val var6: Boolean;
-      if (var8 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
+      if (var9 && !this.binding.secondaryActionButton.hasAccessibilityFocus()) {
          var6 = true;
       } else {
          var6 = false;

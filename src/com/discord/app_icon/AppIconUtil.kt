@@ -44,13 +44,13 @@ public object AppIconUtil {
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
       q.h(var1, "context");
-      val var3: PackageManager = var1.getPackageManager();
-      val var4: java.util.Iterator = AppIcon.getEntries().iterator();
+      val var4: PackageManager = var1.getPackageManager();
+      val var3: java.util.Iterator = AppIcon.getEntries().iterator();
 
       while (true) {
-         if (var4.hasNext()) {
-            val var2: Any = var4.next();
-            if (var3.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
+         if (var3.hasNext()) {
+            val var2: Any = var3.next();
+            if (var4.getComponentEnabledSetting(new ComponentName(var1, (var2 as AppIcon).getAlias())) != 1) {
                continue;
             }
 
@@ -76,7 +76,7 @@ public object AppIconUtil {
       q.h(var2, "id");
       val var4: AppIcon = this.getAppIconFromId(var2);
       if (var4 != null) {
-         val var5: PackageManager = var1.getPackageManager();
+         val var9: PackageManager = var1.getPackageManager();
 
          for (AppIcon var7 : AppIcon.getEntries()) {
             val var6: ComponentName = new ComponentName(var1, var7.getAlias());
@@ -87,8 +87,8 @@ public object AppIconUtil {
                var3 = false;
             }
 
-            q.e(var5);
-            this.setComponentState(var5, var6, var3);
+            q.e(var9);
+            this.setComponentState(var9, var6, var3);
          }
       } else {
          val var8: StringBuilder = new StringBuilder();

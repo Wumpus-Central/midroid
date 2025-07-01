@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.embed
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class EmbedField(rawName: String? = null, rawValue: String? = null, name: StructurableText? = null, value: StructurableText? = null) {
@@ -98,21 +98,21 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.rawName;
-      val var1: java.lang.String = this.rawValue;
-      val var2: StructurableText = this.name;
-      val var4: StructurableText = this.value;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedField(rawName=");
-      var3.append(var5);
-      var3.append(", rawValue=");
-      var3.append(var1);
-      var3.append(", name=");
-      var3.append(var2);
-      var3.append(", value=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.rawName;
+      val var3: java.lang.String = this.rawValue;
+      val var4: StructurableText = this.name;
+      val var2: StructurableText = this.value;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedField(rawName=");
+      var5.append(var1);
+      var5.append(", rawValue=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var4);
+      var5.append(", value=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

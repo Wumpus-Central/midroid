@@ -6,8 +6,8 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import ob.d
-import ob.g
+import xb.d
+import xb.g
 
 public object CodedLinkSerializer : d(G.b(CodedLinkEmbed.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<CodedLinkEmbed> {

@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = r9.j.a(new E0(this));
+      this.shadowView$delegate = A9.j.b(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
@@ -321,7 +321,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.setDraweeSpanStringBuilder(var34);
       this.bottomSpacingPx = var23;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
-      androidx.core.view.Y.q0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
+      androidx.core.view.Z.o0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
    }
 
    public open fun setOnClickListener(l: OnClickListener?) {

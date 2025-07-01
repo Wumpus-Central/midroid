@@ -2,8 +2,8 @@ package com.discord.tti_measurement_view.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 internal data class OnMeasurementEvent(timestamp: Double) : ReactEvent {

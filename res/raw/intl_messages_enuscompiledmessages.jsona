@@ -3522,7 +3522,6 @@
   "3dIn2N": "This PlayStation Network account requires communication features to be enabled by a parent account.",
   "YpCiMj": "Connected Games",
   "IyYqqa": "Connected on another client",
-  "7LkwqK": "Connecting…",
   "3fe7U1": "Connections",
   "yQvgBA": [
     [
@@ -4302,14 +4301,6 @@
   "mGhOIi": "No Route",
   "Gp51dn": "RTC Connecting",
   "M7LDmJ": "RTC Disconnected",
-  "G+vAHx": [
-    "Watching ",
-    [
-      1,
-      "username"
-    ],
-    "'s Stream"
-  ],
   "HtVOdX": "Video Connected",
   "daXg4+": "Voice Connected",
   "zOZh3d": "Connect your accounts",
@@ -5924,10 +5915,26 @@
   "MNKzys": "Use data to personalize my Discord experience",
   "XAHCgI": "Request all of my data",
   "0F5Jys": "Please try again",
+  "W1Rw3N": "Please select at least one data type for your request",
   "OjbtDg": "Oops, something went wrong...",
-  "jpVjsr": "I've changed my mind",
   "NYgNg4": "Request My Data",
-  "vtRhDA": "It may take us up to 30 days to collect your data. We will send you an email to the address you registered with when the package is ready. If you'd just like to request a subset of your data, you can do so on our web client.",
+  "vtRhDA": [
+    "Select the data that you'd like to be included in your data package below. You can learn more about each of these selections ",
+    [
+      8,
+      "$link",
+      [
+        "here"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    ". Note that some selections, like Messages, may delay the delivery of your package, and it may take us up to 30 days to collect your data. We will send you an email to the address you registered with when the package is ready."
+  ],
   "6Nmv4u": "Our privacy farmers have begun harvesting your data. This can take up to 30 days, but we'll email you when it’s done.",
   "jxXMEx": "Submit Data Request",
   "P3kNfn": [
@@ -5947,7 +5954,7 @@
     " about how getting a copy of your personal data works"
   ],
   "ZPQLHx": "Discord staff accounts cannot request data harvests",
-  "c1f88/": "Your account must be verified with an email address to request data. You can verify your account in the My Account section",
+  "i2iul5": "Request received",
   "igTSGx": [
     "Allows us to use and process your information to understand and improve our services. ",
     [
@@ -19561,6 +19568,13 @@
     ],
     "."
   ],
+  "KO88BQ": "Activities",
+  "wb7QJy": "Ads",
+  "j+d6RE": "Your Activity",
+  "JN9c39": "Servers",
+  "M4ddeX": "Programs",
+  "0dO1t7": "Messages",
+  "rfe/x8": "Account",
   "psXQHB": "Help Desk",
   "nOtPMD": "You cannot modify this permission because none of your roles have it.",
   "5MstTk": "Hide chat",
@@ -20292,6 +20306,27 @@
     ],
     " accounts"
   ],
+  "7mv59P": [
+    "Created on ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ]
+  ],
+  "7EcUbm": [
+    "Created on ",
+    [
+      3,
+      "timestamp",
+      "medium"
+    ],
+    " by ",
+    [
+      1,
+      "user"
+    ]
+  ],
   "sE5hSU": "Integration Settings",
   "u2D2Ul": [
     [
@@ -20446,6 +20481,7 @@
   "VNe8Pz": "Edit invite link.",
   "2Gbof3": "Invite Expired",
   "jfrMtr": "Full",
+  "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
   "/8czHx": [
     "Invite to Listen Along on ",
@@ -22952,7 +22988,6 @@
     ],
     "."
   ],
-  "1BRkQ0": "Network connectivity limited or unavailable.",
   "oEAioK": "Never Mind",
   "y2b7CA": "new",
   "l1dkSE": "Announcement Channel",
@@ -23932,15 +23967,6 @@
   "rW5gw8": "You’ll receive push notifications for Discord activities like messages, mentions, friend requests, and events.",
   "Gf7U1d": "Get notifications for new messages, friend requests, events, and more.",
   "3nx0b2": "Turn on notifications",
-  "dbQxR0": "Hang out using video chat and screenshare",
-  "3wC7eH": "Follow conversations and topics in text chat",
-  "GG2T6u": "Welcome to Discord!",
-  "FxpjsL": "Let's Go!",
-  "1BryeH": "Connect with all your communities in one place",
-  "1K/IW1": "Connect with all your communities in servers",
-  "MbhY+v": "Discord is a home for your communities, friends, book clubs, study groups, and more.",
-  "qjXn0N": "Chat over voice with multiple people at once",
-  "S2fS/v": "Welcome to Discord!",
   "eGjmy8": [
     [
       6,
@@ -24918,6 +24944,7 @@
   "0Niu/P": "Password Recovery",
   "myKyqq": "An SMS was sent to the phone number connected to this account.",
   "+xqy3d": "Enter your confirmation code to reset your password",
+  "R98xDw": "Password is required.",
   "VUUJ6e": [
     "Password must be ",
     [
@@ -24956,22 +24983,6 @@
   "9g5UGx": "Yes, I'm sure",
   "9SNpzs": "Turn off personalization?",
   "dEYpSk": "Phone",
-  "kj8xiI": [
-    "This phone number is already associated with another account. Please ",
-    [
-      8,
-      "$link",
-      [
-        "troubleshoot here"
-      ],
-      [
-        [
-          1,
-          "phoneURL"
-        ]
-      ]
-    ]
-  ],
   "cCVXOT": "Failed to add phone number, please try again later",
   "0/ALaG": "We don’t recognize this location. We sent a confirmation code to the phone number connected to this account.",
   "w55Ocn": "Enter your confirmation code to verify it's you",
@@ -26679,6 +26690,9 @@
   "OuItFh": "Custom App Icons",
   "R2IV/f": "More Emoji Power",
   "RSXQYG": "HD Video",
+  "YCZldH": "Unlock a World of Perks with Nitro",
+  "EW+VIS": "Discord's Rocket Fuel",
+  "eG+cW1": "Supercharge Your World",
   "4pEwXF": "Give your favorite communities a boost and unlock awesome perks.",
   "NyDu//": "2 Server Boosts + 30% off",
   "Mt3U1d": "Use a different avatar, profile theme, banner, and bio in each of your servers.",
@@ -31340,15 +31354,6 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
-  "5b60go": "Resend Code",
-  "31Txs7": [
-    "Resend Code in ",
-    [
-      1,
-      "countdown"
-    ],
-    " seconds"
-  ],
   "WnX4Jy": "Resend Email",
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
@@ -37666,7 +37671,6 @@
   "i4xQ5u": "The channel will now show as unread for every message so you don't miss a thing.",
   "m2Hyj4": "Unstable Internet Connection",
   "EhaK6O": "This video stream has been paused to ensure good audio quality. We'll turn it back on when the connection improves.",
-  "tuGzBQ": "Unverified Email",
   "VZANAA": "Update",
   "/qdhkp": "updated",
   "geta7+": "Update your password",
@@ -37776,6 +37780,7 @@
   "OdPCbG": "Turn off use data to improve Discord?",
   "KD6OJC": "User",
   "IEpCBQ": "Username",
+  "GPfy3N": "Username is required.",
   "YEOwDA": "Who would you like to add as a friend?",
   "OKsSCQ": "Ask to Join",
   "OzCsIC": "Competing in",
@@ -38544,9 +38549,7 @@
   "LYIh7u": "What's your name?",
   "fbKwSk": "You can use emoji and special characters.",
   "jec90t": "Next, create an account",
-  "KtJgIy": "Password must be 8 or more characters.",
   "y7LSyc": "Only use letters, numbers, underscores, and periods.",
-  "w/XiOz": "You can change this at anytime.",
   "EJ26Oj": "This channel requires Push to Talk to voice chat. You will only be able to listen until you switch modes\nto Push to Talk from Voice Activity Detection.",
   "NYklho": "Push to Talk Required",
   "5XZKy8": "Custom Invite Link",
@@ -39077,18 +39080,6 @@
     ]
   ],
   "jp25IS": "Webhooks",
-  "YrsmBA": [
-    [
-      1,
-      "username"
-    ],
-    " on ",
-    [
-      3,
-      "timestamp",
-      "medium"
-    ]
-  ],
   "rIWe+/": [
     "Are you sure you want to delete the ",
     [

@@ -1,6 +1,6 @@
 package com.discord.foreground_service
 
-import M1.d
+import L1.d
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -33,20 +33,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -68,14 +68,14 @@ public class ForegroundServiceManager {
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
       val var4: Log = Log.INSTANCE;
-      val var6: java.lang.String = tag;
+      val var5: java.lang.String = tag;
       q.g(tag, "tag");
       val var3: Int = var2.size();
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Start service with ");
-      var5.append(var3);
-      var5.append(" configurations.");
-      Log.i$foreground_service_release$default(var4, var6, var5.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Start service with ");
+      var6.append(var3);
+      var6.append(" configurations.");
+      Log.i$foreground_service_release$default(var4, var5, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, new d());
    }
@@ -338,17 +338,17 @@ public class ForegroundServiceManager {
       // 0c: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
       // 12: astore 4
-      // 14: new M1/b
+      // 14: new L1/b
       // 17: astore 5
       // 19: aload 5
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
-      // 1e: invokespecial M1/b.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
-      // 21: new M1/c
+      // 1e: invokespecial L1/b.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
+      // 21: new L1/c
       // 24: astore 6
       // 26: aload 6
-      // 28: invokespecial M1/c.<init> ()V
+      // 28: invokespecial L1/c.<init> ()V
       // 2b: aload 4
       // 2d: aload 5
       // 2f: aload 6
@@ -388,10 +388,10 @@ public class ForegroundServiceManager {
       // 6e: goto 8e
       // 71: astore 1
       // 72: goto 91
-      // 75: new r9/n
+      // 75: new A9/n
       // 78: astore 1
       // 79: aload 1
-      // 7a: invokespecial r9/n.<init> ()V
+      // 7a: invokespecial A9/n.<init> ()V
       // 7d: aload 1
       // 7e: athrow
       // 7f: aload 1

@@ -5,8 +5,8 @@ import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import n1.a
-import n1.b
+import m1.a
+import m1.b
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec {
    init {

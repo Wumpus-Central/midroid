@@ -2,9 +2,9 @@ package com.discord.primitives
 
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public inline class RoleId : SnowflakePrimitive {

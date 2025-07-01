@@ -1,5 +1,6 @@
 package com.discord.self_measured_view
 
+import A9.s
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.FrameLayout
@@ -10,7 +11,6 @@ import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
 import kotlin.jvm.internal.q
-import r9.s
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final val reactContext: ReactContext
@@ -69,11 +69,11 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-      val var3: Int = this.getMeasuredWidth();
-      var2 = this.getMeasuredHeight();
+      var2 = this.getMeasuredWidth();
+      val var3: Int = this.getMeasuredHeight();
       val var4: Pair = ViewMeasureExtensionsKt.getMaximumSizeOfChildren(this, var1);
       this.setMeasuredDimension((var4.a() as java.lang.Number).intValue(), (var4.b() as java.lang.Number).intValue());
-      this.maybePostMeasuredEvent(var3, this.getMeasuredWidth(), var2, this.getMeasuredHeight());
+      this.maybePostMeasuredEvent(var2, this.getMeasuredWidth(), var3, this.getMeasuredHeight());
    }
 
    public open fun requestLayout() {

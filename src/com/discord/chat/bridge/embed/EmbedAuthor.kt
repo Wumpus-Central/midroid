@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import kb.f
+import A9.j
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import r1.b
-import r9.j
+import q1.b
+import tb.f
 
 @f
 public data class EmbedAuthor(name: String, url: String? = null, iconURL: String? = null, iconProxyURL: String? = null) {
@@ -26,7 +26,7 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
       this.url = var2;
       this.iconURL = var3;
       this.iconProxyURL = var4;
-      this.imageUrl$delegate = j.a(new b(this));
+      this.imageUrl$delegate = j.b(new b(this));
    }
 
    @JvmStatic
@@ -104,17 +104,17 @@ public data class EmbedAuthor(name: String, url: String? = null, iconURL: String
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
+      val var4: java.lang.String = this.name;
       val var5: java.lang.String = this.url;
-      val var4: java.lang.String = this.iconURL;
+      val var2: java.lang.String = this.iconURL;
       val var1: java.lang.String = this.iconProxyURL;
       val var3: StringBuilder = new StringBuilder();
       var3.append("EmbedAuthor(name=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(", url=");
       var3.append(var5);
       var3.append(", iconURL=");
-      var3.append(var4);
+      var3.append(var2);
       var3.append(", iconProxyURL=");
       var3.append(var1);
       var3.append(")");

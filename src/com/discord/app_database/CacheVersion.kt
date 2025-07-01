@@ -1,8 +1,8 @@
 package com.discord.app_database
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class CacheVersion(version: String) {

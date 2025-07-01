@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class ForwardBreadcrumbViewBinding implements ViewBinding {
    public final SimpleDraweeView arrow;
@@ -34,15 +34,15 @@ public final class ForwardBreadcrumbViewBinding implements ViewBinding {
          SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.label;
-            TextView var4 = (TextView)a.a(var0, var1);
-            if (var4 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.separator;
-               TextView var2 = (TextView)a.a(var0, var1);
-               if (var2 != null) {
+               TextView var3 = (TextView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.timestamp;
-                  TextView var3 = (TextView)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new ForwardBreadcrumbViewBinding(var0, var6, var5, var4, var2, var3);
+                  TextView var4 = (TextView)a.a(var0, var1);
+                  if (var4 != null) {
+                     return new ForwardBreadcrumbViewBinding(var0, var6, var5, var2, var3, var4);
                   }
                }
             }

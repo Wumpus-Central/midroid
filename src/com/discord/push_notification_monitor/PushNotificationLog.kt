@@ -1,8 +1,8 @@
 package com.discord.push_notification_monitor
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import tb.f
 
 @f
 public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = i.k()) {

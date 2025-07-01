@@ -1,5 +1,6 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -9,7 +10,6 @@ import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import r9.s
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
    public final val messageId: MessageId
@@ -82,28 +82,28 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var7 = null;
       }
 
-      val var3: Pair = s.a("messageId", this.messageId);
-      val var4: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
+      val var4: Pair = s.a("messageId", this.messageId);
+      val var3: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
       val var5: Pair = s.a("reaction", var7);
       var var8: java.lang.Boolean = null;
       if (this.reaction != null) {
          var8 = this.reaction.isBurstReaction();
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, s.a("isBurst", var8));
+      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, s.a("isBurst", var8));
    }
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: ReactionView.Reaction = this.reaction;
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: ReactionView.Reaction = this.reaction;
       val var2: StringBuilder = new StringBuilder();
       var2.append("LongPressReactionData(messageId=");
       var2.append(var1);
       var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(", reaction=");
       var2.append(var4);
+      var2.append(", reaction=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

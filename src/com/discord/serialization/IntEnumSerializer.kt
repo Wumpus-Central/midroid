@@ -1,6 +1,6 @@
 package com.discord.serialization
 
-import E9.a
+import N9.a
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
@@ -8,8 +8,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import mb.g
-import mb.e.f
+import vb.g
+import vb.e.f
 
 public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, default: Any? = ...) : KSerializer {
    public final val default: Any?
@@ -22,7 +22,7 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       q.h(var1, "type");
       super();
       this.default = (T)var2;
-      val var8: java.lang.String = var1.e();
+      val var8: java.lang.String = var1.b();
       q.e(var8);
       this.serialName = var8;
       val var5: Array<Any> = a.b(var1).getEnumConstants();
@@ -71,12 +71,12 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
             throw new IllegalStateException(var8.toString().toString());
          }
       } else {
-         val var4: java.lang.String = this.serialName;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var3);
-         var6.append(" is not a valid serial value of ");
-         var6.append(var4);
-         throw new IllegalStateException(var6.toString().toString());
+         val var6: java.lang.String = this.serialName;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append(var3);
+         var4.append(" is not a valid serial value of ");
+         var4.append(var6);
+         throw new IllegalStateException(var4.toString().toString());
       }
    }
 
@@ -85,10 +85,10 @@ public open class IntEnumSerializer<T extends IntEnum>(type: KClass<Any>, defaul
       q.h(var2, "value");
       val var3: Int = c.W(this.choices, var2);
       if (var3 == -1 && this.default != null) {
-         var1.y(this.default.getSerialNumber());
+         var1.x(this.default.getSerialNumber());
          return;
       } else if (var3 != -1) {
-         var1.y(this.choicesNumbers[var3]);
+         var1.x(this.choicesNumbers[var3]);
       } else {
          val var7: java.lang.String = this.serialName;
          val var5: Array<IntEnum> = this.choices;

@@ -1,7 +1,7 @@
 package com.discord.minibsdiff
 
-import Xa.j
-import Ya.a
+import gb.k
+import hb.a
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
@@ -42,14 +42,14 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
-            val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            var13 = InputStreamUtilsKt.readOffset(var3);
             val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var17 + var13 > var9) {
+            var13 = InputStreamUtilsKt.readOffset(var3);
+            val var17: Long = InputStreamUtilsKt.readOffset(var3);
+            if (var11 + var15 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var17).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
@@ -71,8 +71,8 @@ public object BSDiff {
                var6.write(var21, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var15);
-            var11 += var17 + var13;
+            var1.seek(var1.getFilePointer() + var17);
+            var11 += var15 + var13;
          }
 
          var6.close();
@@ -80,7 +80,7 @@ public object BSDiff {
    }
 
    private fun chunkRange(total: Long): Sequence<Int> {
-      return j.y(i.T(d.r(d.t(0, var1), 1000000L)), new T1.a(var1));
+      return k.z(i.V(d.r(d.t(0, var1), 1000000L)), new S1.a(var1));
    }
 
    @JvmStatic
@@ -168,43 +168,43 @@ public object BSDiff {
       // 84: astore 6
       // 86: aload 3
       // 87: aconst_null
-      // 88: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 88: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 8b: aload 2
       // 8c: aconst_null
-      // 8d: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8d: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 90: aload 5
       // 92: aconst_null
-      // 93: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 93: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 96: aload 4
       // 98: aconst_null
-      // 99: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 99: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 9c: aload 1
       // 9d: aconst_null
-      // 9e: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 9e: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // a1: return
-      // a2: astore 2
+      // a2: astore 3
       // a3: goto e4
-      // a6: astore 2
+      // a6: astore 3
       // a7: goto d9
       // aa: astore 2
       // ab: goto ce
       // ae: astore 3
       // af: goto c2
-      // b2: astore 6
-      // b4: aload 6
+      // b2: astore 7
+      // b4: aload 7
       // b6: athrow
-      // b7: astore 7
+      // b7: astore 6
       // b9: aload 3
-      // ba: aload 6
-      // bc: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // bf: aload 7
+      // ba: aload 7
+      // bc: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // bf: aload 6
       // c1: athrow
       // c2: aload 3
       // c3: athrow
       // c4: astore 6
       // c6: aload 2
       // c7: aload 3
-      // c8: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // c8: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // cb: aload 6
       // cd: athrow
       // ce: aload 2
@@ -212,24 +212,24 @@ public object BSDiff {
       // d0: astore 3
       // d1: aload 5
       // d3: aload 2
-      // d4: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // d4: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // d7: aload 3
       // d8: athrow
-      // d9: aload 2
+      // d9: aload 3
       // da: athrow
-      // db: astore 3
+      // db: astore 2
       // dc: aload 4
-      // de: aload 2
-      // df: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // e2: aload 3
+      // de: aload 3
+      // df: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // e2: aload 2
       // e3: athrow
-      // e4: aload 2
+      // e4: aload 3
       // e5: athrow
-      // e6: astore 3
+      // e6: astore 2
       // e7: aload 1
-      // e8: aload 2
-      // e9: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // ec: aload 3
+      // e8: aload 3
+      // e9: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // ec: aload 2
       // ed: athrow
    }
 

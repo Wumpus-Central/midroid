@@ -1,5 +1,7 @@
 package com.discord.overlapping_circles
 
+import A9.j
+import A9.m
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.res.TypedArray
@@ -16,7 +18,7 @@ import android.view.View.OnLayoutChangeListener
 import android.webkit.URLUtil
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.I
+import androidx.core.view.J
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -28,8 +30,6 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.q
-import r9.j
-import r9.m
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var maxItems: Int
@@ -92,7 +92,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var8: java.util.Iterator = i.K0(var1, var3).iterator();
+      val var8: java.util.Iterator = i.M0(var1, var3).iterator();
 
       for (int var12 = 0; var8.hasNext(); var12++) {
          var var7: OverlappingItem = (OverlappingItem)var8.next();
@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var9: Context = this.getContext();
-               q.g(var9, "getContext(...)");
-               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
                val var10: Context = this.getContext();
                q.g(var10, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               q.g(var9, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -143,12 +143,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
       if (var2) {
          val var18: Context = this.getContext();
          q.g(var18, "getContext(...)");
-         val var19: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
+         val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
          val var11: LayoutParams = new LayoutParams(-2, -1);
          var11.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var19, var11);
+         this.addView(var20, var11);
       }
    }
 
@@ -191,7 +191,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.setPadding(var2, 0, var9, 0);
          this.setBackgroundColor(var5);
          ViewClippingUtilsKt.clipToCircle(this);
-         I.a(this, new Runnable(this, this) {
+         J.a(this, new Runnable(this, this) {
             final View $this_doOnPreDraw;
             final OverlappingCirclesView.OverflowItem this$0;
 
@@ -202,13 +202,13 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
             @Override
             public final void run() {
-               val var1: View = this.$this_doOnPreDraw;
-               val var2: OverlappingCirclesView.OverflowItem = this.this$0;
+               val var2: View = this.$this_doOnPreDraw;
+               val var1: OverlappingCirclesView.OverflowItem = this.this$0;
                val var3: android.view.ViewGroup.LayoutParams = this.this$0.getLayoutParams();
                if (var3 != null) {
                   val var4: LayoutParams = var3 as LayoutParams;
-                  (var3 as LayoutParams).width = d.d(var1.getWidth(), var1.getHeight());
-                  var2.setLayoutParams(var4);
+                  (var3 as LayoutParams).width = d.d(var2.getWidth(), var2.getHeight());
+                  var1.setLayoutParams(var4);
                } else {
                   throw new NullPointerException("null cannot be cast to non-null type android.widget.LinearLayout.LayoutParams");
                }
@@ -305,7 +305,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.showSeparation = var3;
          this.overlapPx = var4;
          this.radius = var6 / 2.0F;
-         this.separatorClipPath$delegate = j.b(m.l, new a(this, var5));
+         this.separatorClipPath$delegate = j.a(m.l, new a(this, var5));
          val var7: Paint = new Paint();
          var7.setColor(var2);
          var7.setAntiAlias(true);
