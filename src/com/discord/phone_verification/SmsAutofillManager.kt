@@ -1,6 +1,6 @@
 package com.discord.phone_verification
 
-import D5.a
+import E5.a
 import android.content.Context
 import android.content.IntentFilter
 import androidx.core.content.b
@@ -23,7 +23,7 @@ internal class SmsAutofillManager(context: Context, onSMSRetrieved: (String) -> 
    }
 
    public fun startSmsRetriever() {
-      val var1: D5.b = a.a(this.context);
+      val var1: E5.b = a.a(this.context);
       q.g(var1, "getClient(...)");
       var1.I();
    }

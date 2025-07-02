@@ -2979,6 +2979,7 @@
     ],
     "."
   ],
+  "rt69oq": "Đã bao gồm trong Nitro",
   "sPvyr6": [
     "Giá gốc: ",
     [
@@ -12795,6 +12796,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Truy cập",
   "iPdFOj": "Cập nhật quyền sử dụng lệnh",
   "f72Zqa": "Tạo Quy Tắc AutoMod",
   "syAApa": "Hủy Quy Tắc AutoMod",
@@ -22563,7 +22565,6 @@
   "FCRiT0": "Tin nhắn chưa đọc",
   "PDTjLC": "Tiếp theo",
   "621LJC": "Biệt danh",
-  "rX/m/f": "Bạn thật tuyệt vời, giống như món quà của bạn vậy. Hãy tận hưởng nhé!",
   "kMYVws": "Thu Thập Phần Thưởng Của Bạn",
   "LWsAra": "Tùy Biến Âm Thanh Ở Bất Cứ Nơi Đâu",
   "4lSyCQ": "Sử dụng âm thanh biểu cảm tiếng tùy chỉnh ở tất cả kênh thoại. Chỉ có khi đăng ký Nitro.",
@@ -28949,13 +28950,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Nhận ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Hiện Thanh Nhiệm Vụ",
   "ij5E//": "Đã hoàn thành Nhiệm Vụ!",
   "gvCR4O": "Gần được rồi!",
@@ -29615,15 +29609,6 @@
   "qyKLdn": "Phần Thưởng của Bạn đã Sẵn Sàng!",
   "GYGb3N": "Duy trì đặc quyền lâu hơn với Nitro!",
   "hh7Rb2": "Tùy ý sử dụng với Nitro!",
-  "coKAb2": [
-    "Mở khóa phần thưởng trong ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Bắt Đầu Nhiệm Vụ Chơi",
-  "hyrGU1": "Bắt Đầu Nhiệm Vụ Stream",
   "umdNio": "Bắt Đầu Nhiệm Vụ Video",
   "smG9qq": [
     "Stream ",
@@ -29824,63 +29809,6 @@
     "."
   ],
   "mOrpXF": "Bắt Đầu Chơi!",
-  "goA6o6": [
-    "Chơi ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " trong ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " phút"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " phút"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Chơi ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " trong ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " phút"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " phút"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Xem video",
   "dYE1p6": [
     "Tìm lại Nhiệm Vụ này trong Thiết Lập Người Dùng ",
     [
@@ -37766,21 +37694,6 @@
   "Bco7ND": "Dùng Biểu Cảm Tiếng",
   "CVxXDA": "Dùng loa ngoài",
   "08zAV1": "Sử dụng chế độ tự động nhận diện giọng nói",
-  "XOWfNj": [
-    "Cập nhật tên người dùng của bạn trước ngày ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Bắt đầu từ ",
-    [
-      1,
-      "date"
-    ],
-    ", Discord sẽ bắt đầu chỉ định tên người dùng duy nhất cho những người dùng chưa cập nhật tên người dùng của họ."
-  ],
   "NgL2GR": "Và, bạn bao nhiêu tuổi?",
   "WeJZy8": "Xin lỗi, không thể sử dụng tên đó.",
   "LYIh7u": "Tên của bạn là gì?",

@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 internal data class TapSummaryData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -67,16 +67,16 @@ internal data class TapSummaryData(channelId: String, messageId: String, summary
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.summaryId;
+      val var3: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.summaryId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapSummaryData(channelId=");
-      var4.append(var2);
-      var4.append(", messageId=");
-      var4.append(var1);
-      var4.append(", summaryId=");
       var4.append(var3);
+      var4.append(", messageId=");
+      var4.append(var2);
+      var4.append(", summaryId=");
+      var4.append(var1);
       var4.append(")");
       return var4.toString();
    }

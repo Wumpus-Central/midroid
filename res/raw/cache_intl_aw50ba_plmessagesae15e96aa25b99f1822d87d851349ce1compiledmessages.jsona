@@ -3057,6 +3057,7 @@
     ],
     "."
   ],
+  "rt69oq": "Dostępne w ramach Nitro",
   "sPvyr6": [
     "Oryginalna cena: ",
     [
@@ -13212,6 +13213,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Dostęp",
   "iPdFOj": "Zaktualizuj uprawnienia poleceń",
   "f72Zqa": "Utwórz zasadę systemu AutoMod",
   "syAApa": "Anuluj zasadę systemu AutoMod",
@@ -23105,7 +23107,6 @@
   "FCRiT0": "Nowe nieprzeczyt. wiad.",
   "PDTjLC": "Dalej",
   "621LJC": "Pseudonim",
-  "rX/m/f": "Wyglądasz strasznie fajnie, tak jak ten cukierek. Na zdrowie!",
   "kMYVws": "Odbierz swoją nagrodę",
   "LWsAra": "Niestandardowe dźwięki w każdym miejscu",
   "4lSyCQ": "Używaj niestandardowych dźwięków z panelu na wszystkich kanałach głosowych. Tylko z Nitro.",
@@ -29790,13 +29791,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Odbierz nagrodę ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Pokaż pasek zadania",
   "ij5E//": "Zadanie ukończone!",
   "gvCR4O": "Już prawie koniec!",
@@ -30458,15 +30452,6 @@
   "qyKLdn": "Twoja nagroda jest gotowa!",
   "GYGb3N": "Zatrzymaj na dłużej dzięki Nitro!",
   "hh7Rb2": "Należy do Ciebie, gdy masz Nitro!",
-  "coKAb2": [
-    "Odblokuj nagrodę przez ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Rozpocznij zadanie grania",
-  "hyrGU1": "Rozpocznij zadanie streamowania",
   "umdNio": "Rozpocznij zadanie wideo",
   "smG9qq": [
     "Streamuj ",
@@ -30667,63 +30652,6 @@
     "."
   ],
   "mOrpXF": "Zacznij grać!",
-  "goA6o6": [
-    "Graj w ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " przez ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutę"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " min"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Graj w ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " przez ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutę"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " min"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Obejrzyj film",
   "dYE1p6": [
     "Znajdź to zadanie ponownie w menu Ustawienia użytkownika ",
     [
@@ -38785,21 +38713,6 @@
   "Bco7ND": "Użyj panelu dźwięków",
   "CVxXDA": "Użyj głośników",
   "08zAV1": "Używanie Aktywności Głosowej",
-  "XOWfNj": [
-    "Zaktualizuj swoją nazwę użytkownika do ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Od ",
-    [
-      1,
-      "date"
-    ],
-    " Discord zacznie przypisywać unikalne nazwy użytkownika użytkownikom, którzy ich nie zaktualizowali."
-  ],
   "NgL2GR": "Ile masz lat?",
   "WeJZy8": "Przepraszamy, nie możesz użyć tej nazwy.",
   "LYIh7u": "Jak masz na imię?",

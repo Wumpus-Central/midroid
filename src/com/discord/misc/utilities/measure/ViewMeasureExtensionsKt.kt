@@ -1,10 +1,10 @@
 package com.discord.misc.utilities.measure
 
-import B9.n
 import android.view.View
 import android.view.ViewGroup
 import android.view.View.MeasureSpec
 import kotlin.jvm.internal.q
+import t9.n
 
 public fun ViewGroup.getMaximumSizeOfChildren(widthMeasureSpec: Int): Pair<Int, Int> {
    q.h(var0, "<this>");

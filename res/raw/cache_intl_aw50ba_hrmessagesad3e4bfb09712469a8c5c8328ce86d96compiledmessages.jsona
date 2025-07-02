@@ -3038,6 +3038,7 @@
     ],
     "."
   ],
+  "rt69oq": "Uključeno u Nitro",
   "sPvyr6": [
     "Izvorna cijena: ",
     [
@@ -13153,6 +13154,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Pristup",
   "iPdFOj": "Ažuriraj dozvole naredbi",
   "f72Zqa": "Stvori AutoMod pravilo",
   "syAApa": "Otkaži AutoMod pravilo",
@@ -23178,7 +23180,6 @@
   "FCRiT0": "Novo nepročitano",
   "PDTjLC": "Dalje",
   "621LJC": "Nadimak",
-  "rX/m/f": "Jezovit si, baš kao ova poslastica. Uživaj!",
   "kMYVws": "Prikupi svoju nagradu",
   "LWsAra": "Prilagođeni zvukovi svugdje",
   "4lSyCQ": "Koristi prilagođene zvukove na zvučnoj ploči na raznim glasovnim kanalima. Samo uz Nitro.",
@@ -29878,13 +29879,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Uzmi ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Prikaži traku misije",
   "ij5E//": "Misija je dovršena!",
   "gvCR4O": "Još malo!",
@@ -30571,15 +30565,6 @@
   "qyKLdn": "Tvoja nagrada je spremna!",
   "GYGb3N": "Zadrži dulje uz Nitro!",
   "hh7Rb2": "Ostaje tvoj uz Nitro!",
-  "coKAb2": [
-    "Otključaj nagradu na ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Počni misiju iz igre",
-  "hyrGU1": "Započni stream misije",
   "umdNio": "Započni video misiju",
   "smG9qq": [
     "Streamaj ",
@@ -30780,75 +30765,6 @@
     "."
   ],
   "mOrpXF": "Počni igrati!",
-  "goA6o6": [
-    "Igraj ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutu"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuta"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Igraj ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutu"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuta"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Pogledaj video",
   "dYE1p6": [
     "Želiš li ponovno vidjeti ovu misiju, idi u izbornik Korisničke postavke ",
     [
@@ -38935,21 +38851,6 @@
   "Bco7ND": "Koristi zvučnu ploču",
   "CVxXDA": "Upotrijebi zvučnik",
   "08zAV1": "Korištenje glasovne aktivnosti",
-  "XOWfNj": [
-    "Ažuriraj svoje korisničko ime do ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Počevši od ",
-    [
-      1,
-      "date"
-    ],
-    ", Discord će dodjeljivati jedinstvena korisnička imena korisnicima koji nisu ažurirali svoja korisnička imena."
-  ],
   "NgL2GR": "A koliko ti je godina?",
   "WeJZy8": "Žao nam je, to ime nije moguće koristiti.",
   "LYIh7u": "Kako se zoveš?",

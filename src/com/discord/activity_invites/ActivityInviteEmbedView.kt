@@ -1,10 +1,7 @@
 package com.discord.activity_invites
 
-import A2.f
-import A9.j
-import A9.m
-import A9.n
-import I2.d
+import B2.f
+import J2.d
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -32,6 +29,9 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import s9.j
+import s9.m
+import s9.n
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -58,7 +58,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       q.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = j.a(m.l, new com.discord.activity_invites.a());
+      this.grayscalePostprocessor$delegate = j.b(m.l, new com.discord.activity_invites.a());
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;

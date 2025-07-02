@@ -12,7 +12,7 @@ import kotlin.jvm.internal.q
 
 public object PlayAssetDelivery {
    private const val TAG: String = "PlayAssetDelivery"
-   private final lateinit var assetPackManagerWeakRef: WeakReference<R6.a>
+   private final lateinit var assetPackManagerWeakRef: WeakReference<N6.a>
    private final var assetDeliveryAvailable: Boolean = true
    private final val pendingCallbacks: MutableMap<String, MutableList<(Boolean) -> Unit>> = new LinkedHashMap()
    private final val assetPackLocations: MutableMap<String, AssetPackLocation> = new LinkedHashMap()
@@ -27,7 +27,7 @@ public object PlayAssetDelivery {
          var1 = null;
       }
 
-      val var7: R6.a = var1.get() as R6.a;
+      val var7: N6.a = var1.get() as N6.a;
       if (var7 != null) {
          val var11: java.lang.String = var0.h();
          q.g(var11, "name(...)");
@@ -54,12 +54,12 @@ public object PlayAssetDelivery {
                   }
                }
 
-               val var10: Log = Log.INSTANCE;
-               val var6: StringBuilder = new StringBuilder();
-               var6.append("Download of ");
-               var6.append(var11);
-               var6.append(" Asset failed");
-               Log.i$default(var10, "PlayAssetDelivery", var6.toString(), null, 4, null);
+               val var6: Log = Log.INSTANCE;
+               val var10: StringBuilder = new StringBuilder();
+               var10.append("Download of ");
+               var10.append(var11);
+               var10.append(" Asset failed");
+               Log.i$default(var6, "PlayAssetDelivery", var10.toString(), null, 4, null);
                var9 = java.lang.Boolean.FALSE;
             }
          }
@@ -98,13 +98,13 @@ public object PlayAssetDelivery {
       // 016: astore 3
       // 017: aload 3
       // 018: invokevirtual java/lang/ref/Reference.get ()Ljava/lang/Object;
-      // 01b: checkcast R6/a
+      // 01b: checkcast N6/a
       // 01e: astore 6
       // 020: aload 6
       // 022: ifnull 031
       // 025: aload 6
       // 027: aload 1
-      // 028: invokeinterface R6/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
+      // 028: invokeinterface N6/a.c (Ljava/lang/String;)Lcom/google/android/play/core/assetpacks/AssetPackLocation; 2
       // 02d: astore 3
       // 02e: goto 033
       // 031: aconst_null
@@ -191,12 +191,12 @@ public object PlayAssetDelivery {
       // 0d4: aload 6
       // 0d6: aload 1
       // 0d7: invokestatic kotlin/collections/i.e (Ljava/lang/Object;)Ljava/util/List;
-      // 0da: invokeinterface R6/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
+      // 0da: invokeinterface N6/a.b (Ljava/util/List;)Lcom/google/android/gms/tasks/Task; 2
       // 0df: new com/discord/play_delivery/b
       // 0e2: dup
       // 0e3: aload 1
       // 0e4: invokespecial com/discord/play_delivery/b.<init> (Ljava/lang/String;)V
-      // 0e7: invokevirtual com/google/android/gms/tasks/Task.d (Lu6/d;)Lcom/google/android/gms/tasks/Task;
+      // 0e7: invokevirtual com/google/android/gms/tasks/Task.d (Lv6/d;)Lcom/google/android/gms/tasks/Task;
       // 0ea: pop
       // 0eb: aload 4
       // 0ed: astore 1
@@ -316,7 +316,7 @@ public object PlayAssetDelivery {
 
    public fun initialize(applicationContext: Context) {
       q.h(var1, "applicationContext");
-      val var2: R6.a = com.google.android.play.core.assetpacks.b.a(var1);
+      val var2: N6.a = com.google.android.play.core.assetpacks.b.a(var1);
       q.g(var2, "getInstance(...)");
       var2.a(assetPackStateUpdateListener);
       assetPackManagerWeakRef = new WeakReference<>(var2);

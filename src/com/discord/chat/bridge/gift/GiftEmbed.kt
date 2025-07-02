@@ -2,7 +2,7 @@ package com.discord.chat.bridge.gift
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f(with = GiftEmbedSerializer::class)
 public sealed interface GiftEmbed {
@@ -190,37 +190,37 @@ public sealed interface GiftEmbed {
          }
 
          public override fun toString(): String {
-            val var9: java.lang.String = this.headerText;
-            val var2: Int = this.headerColor;
-            val var5: Int = this.backgroundColor;
+            val var8: java.lang.String = this.headerText;
+            val var6: Int = this.headerColor;
+            val var2: Int = this.backgroundColor;
             val var1: Int = this.thumbnailCornerRadius;
-            val var8: java.lang.String = this.thumbnailUrl;
+            val var10: java.lang.String = this.thumbnailUrl;
             val var7: java.lang.String = this.titleText;
-            val var6: Int = this.titleColor;
-            val var10: java.lang.String = this.subtitle;
-            val var4: Int = this.subtitleColor;
-            val var3: Int = this.thumbnailBackgroundColor;
+            val var5: Int = this.titleColor;
+            val var9: java.lang.String = this.subtitle;
+            val var3: Int = this.subtitleColor;
+            val var4: Int = this.thumbnailBackgroundColor;
             val var11: StringBuilder = new StringBuilder();
             var11.append("Invalid(headerText=");
-            var11.append(var9);
+            var11.append(var8);
             var11.append(", headerColor=");
-            var11.append(var2);
+            var11.append(var6);
             var11.append(", backgroundColor=");
-            var11.append(var5);
+            var11.append(var2);
             var11.append(", thumbnailCornerRadius=");
             var11.append(var1);
             var11.append(", thumbnailUrl=");
-            var11.append(var8);
+            var11.append(var10);
             var11.append(", titleText=");
             var11.append(var7);
             var11.append(", titleColor=");
-            var11.append(var6);
+            var11.append(var5);
             var11.append(", subtitle=");
-            var11.append(var10);
+            var11.append(var9);
             var11.append(", subtitleColor=");
-            var11.append(var4);
-            var11.append(", thumbnailBackgroundColor=");
             var11.append(var3);
+            var11.append(", thumbnailBackgroundColor=");
+            var11.append(var4);
             var11.append(")");
             return var11.toString();
          }
@@ -443,10 +443,10 @@ public sealed interface GiftEmbed {
          }
 
          public override fun hashCode(): Int {
-            val var7: Int = this.headerText.hashCode();
+            val var10: Int = this.headerText.hashCode();
             val var8: Int = Integer.hashCode(this.headerColor);
-            val var9: Int = Integer.hashCode(this.backgroundColor);
-            val var10: Int = Integer.hashCode(this.thumbnailCornerRadius);
+            val var7: Int = Integer.hashCode(this.backgroundColor);
+            val var9: Int = Integer.hashCode(this.thumbnailCornerRadius);
             var var6: Int = 0;
             val var1: Int;
             if (this.thumbnailUrl == null) {
@@ -508,15 +508,15 @@ public sealed interface GiftEmbed {
                                                                                                                                  (
                                                                                                                                           (
                                                                                                                                                    (
-                                                                                                                                                            var7
+                                                                                                                                                            var10
                                                                                                                                                                   * 31
                                                                                                                                                                + var8
                                                                                                                                                          )
                                                                                                                                                          * 31
-                                                                                                                                                      + var9
+                                                                                                                                                      + var7
                                                                                                                                                 )
                                                                                                                                                 * 31
-                                                                                                                                             + var10
+                                                                                                                                             + var9
                                                                                                                                        )
                                                                                                                                        * 31
                                                                                                                                     + var1
@@ -562,63 +562,63 @@ public sealed interface GiftEmbed {
          }
 
          public override fun toString(): String {
-            val var15: java.lang.String = this.headerText;
-            val var4: Int = this.headerColor;
-            val var8: Int = this.backgroundColor;
-            val var7: Int = this.thumbnailCornerRadius;
-            val var12: java.lang.String = this.thumbnailUrl;
-            val var17: java.lang.String = this.titleText;
-            val var6: Int = this.titleColor;
-            val var14: java.lang.String = this.subtitle;
-            val var2: Int = this.subtitleColor;
-            val var16: java.lang.String = this.bodyText;
-            val var5: Int = this.bodyTextColor;
-            val var11: java.lang.String = this.acceptLabelText;
-            val var9: Int = this.acceptLabelColor;
-            val var3: Int = this.acceptLabelBackgroundColor;
+            val var19: java.lang.String = this.headerText;
+            val var2: Int = this.headerColor;
+            val var7: Int = this.backgroundColor;
+            val var3: Int = this.thumbnailCornerRadius;
+            val var16: java.lang.String = this.thumbnailUrl;
+            val var14: java.lang.String = this.titleText;
+            val var8: Int = this.titleColor;
+            val var13: java.lang.String = this.subtitle;
+            val var6: Int = this.subtitleColor;
+            val var11: java.lang.String = this.bodyText;
+            val var9: Int = this.bodyTextColor;
+            val var17: java.lang.String = this.acceptLabelText;
+            val var5: Int = this.acceptLabelColor;
+            val var4: Int = this.acceptLabelBackgroundColor;
             val var18: java.lang.String = this.splashUrl;
             val var1: Float = this.splashOpacity;
             val var10: Boolean = this.canBeAccepted;
-            val var13: java.lang.String = this.giftCode;
-            val var19: StringBuilder = new StringBuilder();
-            var19.append("Valid(headerText=");
-            var19.append(var15);
-            var19.append(", headerColor=");
-            var19.append(var4);
-            var19.append(", backgroundColor=");
-            var19.append(var8);
-            var19.append(", thumbnailCornerRadius=");
-            var19.append(var7);
-            var19.append(", thumbnailUrl=");
-            var19.append(var12);
-            var19.append(", titleText=");
-            var19.append(var17);
-            var19.append(", titleColor=");
-            var19.append(var6);
-            var19.append(", subtitle=");
-            var19.append(var14);
-            var19.append(", subtitleColor=");
-            var19.append(var2);
-            var19.append(", bodyText=");
-            var19.append(var16);
-            var19.append(", bodyTextColor=");
-            var19.append(var5);
-            var19.append(", acceptLabelText=");
-            var19.append(var11);
-            var19.append(", acceptLabelColor=");
-            var19.append(var9);
-            var19.append(", acceptLabelBackgroundColor=");
-            var19.append(var3);
-            var19.append(", splashUrl=");
-            var19.append(var18);
-            var19.append(", splashOpacity=");
-            var19.append(var1);
-            var19.append(", canBeAccepted=");
-            var19.append(var10);
-            var19.append(", giftCode=");
-            var19.append(var13);
-            var19.append(")");
-            return var19.toString();
+            val var15: java.lang.String = this.giftCode;
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("Valid(headerText=");
+            var12.append(var19);
+            var12.append(", headerColor=");
+            var12.append(var2);
+            var12.append(", backgroundColor=");
+            var12.append(var7);
+            var12.append(", thumbnailCornerRadius=");
+            var12.append(var3);
+            var12.append(", thumbnailUrl=");
+            var12.append(var16);
+            var12.append(", titleText=");
+            var12.append(var14);
+            var12.append(", titleColor=");
+            var12.append(var8);
+            var12.append(", subtitle=");
+            var12.append(var13);
+            var12.append(", subtitleColor=");
+            var12.append(var6);
+            var12.append(", bodyText=");
+            var12.append(var11);
+            var12.append(", bodyTextColor=");
+            var12.append(var9);
+            var12.append(", acceptLabelText=");
+            var12.append(var17);
+            var12.append(", acceptLabelColor=");
+            var12.append(var5);
+            var12.append(", acceptLabelBackgroundColor=");
+            var12.append(var4);
+            var12.append(", splashUrl=");
+            var12.append(var18);
+            var12.append(", splashOpacity=");
+            var12.append(var1);
+            var12.append(", canBeAccepted=");
+            var12.append(var10);
+            var12.append(", giftCode=");
+            var12.append(var15);
+            var12.append(")");
+            return var12.toString();
          }
 
          public companion object {
@@ -730,24 +730,24 @@ public sealed interface GiftEmbed {
 
       public override fun toString(): String {
          val var6: java.lang.String = this.headerText;
-         val var1: Int = this.headerColor;
-         val var2: Int = this.backgroundColor;
-         val var4: Int = this.thumbnailCornerRadius;
+         val var4: Int = this.headerColor;
+         val var5: Int = this.backgroundColor;
+         val var2: Int = this.thumbnailCornerRadius;
          val var3: Int = this.resolvingGradientStart;
-         val var5: Int = this.resolvingGradientEnd;
+         val var1: Int = this.resolvingGradientEnd;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Resolving(headerText=");
          var7.append(var6);
          var7.append(", headerColor=");
-         var7.append(var1);
-         var7.append(", backgroundColor=");
-         var7.append(var2);
-         var7.append(", thumbnailCornerRadius=");
          var7.append(var4);
+         var7.append(", backgroundColor=");
+         var7.append(var5);
+         var7.append(", thumbnailCornerRadius=");
+         var7.append(var2);
          var7.append(", resolvingGradientStart=");
          var7.append(var3);
          var7.append(", resolvingGradientEnd=");
-         var7.append(var5);
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

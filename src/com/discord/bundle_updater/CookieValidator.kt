@@ -15,7 +15,7 @@ public object CookieValidator {
       if (var1 == null) {
          return null;
       } else {
-         val var8: java.lang.String = kotlin.collections.i.k0(kotlin.text.h.B0(var1.i(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
+         val var8: java.lang.String = kotlin.collections.i.i0(kotlin.text.h.B0(var1.i(), new java.lang.String[]{"."}, false, 0, 6, null), 1) as java.lang.String;
          if (var8 == null) {
             return null;
          } else {
@@ -29,34 +29,34 @@ public object CookieValidator {
                   try {
                      var11 = Json.d;
                      var14 = Json.d.g(var13);
-                  } catch (var7: tb.g) {
+                  } catch (var7: lb.g) {
                      return null;
                   }
 
-                  var var3: JsonElement = xb.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = pb.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = xb.g.o(var14);
+                  val var15: JsonObject = pb.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
-                  for (Entry var16 : var15.entrySet()) {
-                     if (!q.c(var16.getKey() as java.lang.String, "$meta")) {
-                        var18.put(var16.getKey(), var16.getValue());
+                  for (Entry var4 : var15.entrySet()) {
+                     if (!q.c(var4.getKey() as java.lang.String, "$meta")) {
+                        var18.put(var4.getKey(), var4.getValue());
                      }
                   }
 
-                  val var17: LinkedHashMap = new LinkedHashMap(B9.q.d(var18.size()));
+                  val var17: LinkedHashMap = new LinkedHashMap(t9.q.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     var3 = (JsonElement)var5.getKey();
-                     val var6: JsonElement = var5.getValue() as JsonElement;
-                     val var21: kotlinx.serialization.json.Json.a = Json.d;
+                     val var20: Any = var5.getKey();
+                     val var21: JsonElement = var5.getValue() as JsonElement;
+                     val var6: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var3, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
+                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

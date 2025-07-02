@@ -2,7 +2,7 @@ package com.discord.app_database
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {
@@ -66,18 +66,18 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var1: Long = this.version;
-      val var3: java.lang.String = this.versionString;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NonGuildVersion(id=");
-      var4.append(var5);
-      var4.append(", version=");
-      var4.append(var1);
-      var4.append(", versionString=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.versionString;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("NonGuildVersion(id=");
+      var3.append(var4);
+      var3.append(", version=");
+      var3.append(var1);
+      var3.append(", versionString=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

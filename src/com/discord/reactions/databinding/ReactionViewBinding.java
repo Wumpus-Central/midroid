@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import y0.a;
+import z0.a;
 
 public final class ReactionViewBinding implements ViewBinding {
    public final TextView reactionCount1;

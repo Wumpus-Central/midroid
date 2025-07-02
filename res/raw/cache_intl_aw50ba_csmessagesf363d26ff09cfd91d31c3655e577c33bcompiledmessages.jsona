@@ -3046,6 +3046,7 @@
     ],
     "."
   ],
+  "rt69oq": "Součást Nitra",
   "sPvyr6": [
     "Původní cena: ",
     [
@@ -13222,6 +13223,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Přístup",
   "iPdFOj": "Aktualizace oprávnění pro příkazy",
   "f72Zqa": "Vytvořit pravidlo AutoMod",
   "syAApa": "Zrušit pravidlo AutoMod",
@@ -23274,7 +23276,6 @@
   "FCRiT0": "Nové nepřečtené",
   "PDTjLC": "Další",
   "621LJC": "Přezdívka",
-  "rX/m/f": "Jsi děsivě famózní, stejně jako tento dárek. Užij si ho!",
   "kMYVws": "Vyzvedni si svou odměnu",
   "LWsAra": "Vlastní zvuky kdekoli",
   "4lSyCQ": "Používej vlastní zvuky ze soundboardu ve všech hlasových kanálech. Pouze s Nitrem.",
@@ -29934,13 +29935,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Vyzvedni si ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Zobrazit panel úkolu",
   "ij5E//": "Úkol dokončen!",
   "gvCR4O": "Zbývá jen kousíček!",
@@ -30602,15 +30596,6 @@
   "qyKLdn": "Tvá odměna je připravena!",
   "GYGb3N": "S Nitrem si budeš moct užít ještě déle!",
   "hh7Rb2": "S Nitrem je to tvoje napořád!",
-  "coKAb2": [
-    "Odemkni odměnu na ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Zahájit herní úkol",
-  "hyrGU1": "Zahájit úkol streamování",
   "umdNio": "Zahájit video úkol",
   "smG9qq": [
     "Streamuj hru ",
@@ -30811,63 +30796,6 @@
     "."
   ],
   "mOrpXF": "Začít hrát!",
-  "goA6o6": [
-    "Hraj ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " po dobu ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuty"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minut"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Hraj ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " po dobu ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuty"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minut"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Sleduj video",
   "dYE1p6": [
     "Později tento úkol najdeš v části Uživatelská nastavení ",
     [
@@ -38921,21 +38849,6 @@
   "Bco7ND": "Použít soundboard",
   "CVxXDA": "Použít reproduktor",
   "08zAV1": "Používat hlasovou aktivitu",
-  "XOWfNj": [
-    "Aktualizuj své uživatelské jméno do ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Od ",
-    [
-      1,
-      "date"
-    ],
-    " Discord začne uživatelům, kteří si dosud neaktualizovali své uživatelské jméno, přiřazovat jedinečná uživatelská jména."
-  ],
   "NgL2GR": "Kolik je ti let?",
   "WeJZy8": "Je nám líto, toto jméno nelze použít.",
   "LYIh7u": "Jaké je tvé jméno?",

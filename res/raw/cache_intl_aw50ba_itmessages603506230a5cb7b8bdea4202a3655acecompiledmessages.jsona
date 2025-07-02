@@ -2959,6 +2959,7 @@
     ],
     "."
   ],
+  "rt69oq": "Incluso con Nitro",
   "sPvyr6": [
     "Prezzo originale: ",
     [
@@ -12759,6 +12760,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Accesso",
   "iPdFOj": "Aggiorna permessi comando",
   "f72Zqa": "Crea regola di AutoMod",
   "syAApa": "Annulla regola di AutoMod",
@@ -22508,7 +22510,6 @@
   "FCRiT0": "Nuovi messaggi non letti",
   "PDTjLC": "Avanti",
   "621LJC": "Nickname",
-  "rX/m/f": "Sei da urlo, proprio come questo regalino. Goditelo!",
   "kMYVws": "Riscatta la tua ricompensa",
   "LWsAra": "Suoni personalizzati da tutte le parti",
   "4lSyCQ": "Usa suoni personalizzati della soundboard nei canali vocali. Solo con Nitro.",
@@ -28891,13 +28892,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Riscatta ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Mostra la barra della missione",
   "ij5E//": "Missione completata!",
   "gvCR4O": "Ci sei quasi!",
@@ -29592,15 +29586,6 @@
   "qyKLdn": "La tua ricompensa è pronta!",
   "GYGb3N": "Tienila più a lungo con Nitro!",
   "hh7Rb2": "Tua per sempre con Nitro!",
-  "coKAb2": [
-    "Sblocca la ricompensa per ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Inizia la missione di gioco",
-  "hyrGU1": "Inizia la missione di streaming",
   "umdNio": "Inizia la missione video",
   "smG9qq": [
     "Fai lo streaming di ",
@@ -29801,63 +29786,6 @@
     "."
   ],
   "mOrpXF": "Inizia a giocare!",
-  "goA6o6": [
-    "Gioca a ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " per ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuto"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuti"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Gioca a ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " per ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuto"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuti"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Guarda il video",
   "dYE1p6": [
     "Ritrova questa missione in Impostazioni utente ",
     [
@@ -37728,13 +37656,6 @@
   "Bco7ND": "Usa Soundboard",
   "CVxXDA": "Utilizza casse",
   "08zAV1": "Usare l'attivazione vocale",
-  "XOWfNj": [
-    "Aggiorna il tuo nome utente entro la data ",
-    [
-      1,
-      "date"
-    ]
-  ],
   "NgL2GR": "Quanti anni hai?",
   "WeJZy8": "Purtroppo questo nome non può essere utilizzato.",
   "LYIh7u": "Qual è il tuo nome?",

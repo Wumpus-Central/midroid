@@ -2954,6 +2954,7 @@
     ],
     "."
   ],
+  "rt69oq": "Følger med Nitro",
   "sPvyr6": [
     "Opprinnelig pris: ",
     [
@@ -12735,6 +12736,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Tilgang",
   "iPdFOj": "Oppdater kommandotillatelser",
   "f72Zqa": "Opprett AutoMod-regel",
   "syAApa": "Avslutt AutoMod-regel",
@@ -22471,7 +22473,6 @@
   "FCRiT0": "Nye uleste meldinger",
   "PDTjLC": "Neste",
   "621LJC": "Kallenavn",
-  "rX/m/f": "Du er spøktakulær, akkurat som dette knasket. Gru fornøyelse!",
   "kMYVws": "Hent premien din",
   "LWsAra": "Egne lyder overalt",
   "4lSyCQ": "Bruk egne lyder fra lydkatalogen på tvers av talekanaler. Bare med Nitro.",
@@ -28831,13 +28832,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Hent ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Vis oppdragslinjen",
   "ij5E//": "Oppdraget er fullført!",
   "gvCR4O": "Du er så nær!",
@@ -29497,15 +29491,6 @@
   "qyKLdn": "Belønningen din er klar!",
   "GYGb3N": "Med Nitro får du beholde dette lenger!",
   "hh7Rb2": "Til odel og eie med Nitro!",
-  "coKAb2": [
-    "Lås opp premie i ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Start spilloppgave",
-  "hyrGU1": "Start strømmeoppgave",
   "umdNio": "Start videooppgave",
   "smG9qq": [
     "Strøm ",
@@ -29706,63 +29691,6 @@
     "."
   ],
   "mOrpXF": "Begynn å spille!",
-  "goA6o6": [
-    "Spill ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutt"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Spill ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutt"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Se videoen",
   "dYE1p6": [
     "Du finner tilbake til oppdraget i Brukerinnstillinger ",
     [
@@ -37633,21 +37561,6 @@
   "Bco7ND": "Bruk lydkatalog",
   "CVxXDA": "Bruk høyttaler",
   "08zAV1": "Bruk taleaktivitet",
-  "XOWfNj": [
-    "Oppdater brukernavnet innen ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Fra og med ",
-    [
-      1,
-      "date"
-    ],
-    " begynner Discord å tildele brukere som ikke har oppdatert brukernavnet, nye unike brukernavn."
-  ],
   "NgL2GR": "Og hvor gammel er du?",
   "WeJZy8": "Beklager, det navnet kan ikke brukes.",
   "LYIh7u": "Hva heter du?",

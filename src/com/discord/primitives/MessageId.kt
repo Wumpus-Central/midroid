@@ -4,7 +4,7 @@ import android.os.Parcel
 import android.os.Parcelable
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public inline class MessageId : Parcelable {

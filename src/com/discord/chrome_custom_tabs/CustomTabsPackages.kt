@@ -1,8 +1,8 @@
 package com.discord.chrome_custom_tabs
 
-import J1.a
-import J1.b
-import J1.c
+import K1.a
+import K1.b
+import K1.c
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo
@@ -126,7 +126,7 @@ internal object CustomTabsPackages {
                var3 = var10 as java.lang.String;
                var7 = var10 as java.lang.String;
                if (var3 == null) {
-                  var7 = i.j0(var5) as java.lang.String;
+                  var7 = i.h0(var5) as java.lang.String;
                }
             }
          }

@@ -2966,6 +2966,7 @@
     ],
     "."
   ],
+  "rt69oq": "Sisältyy Nitroon",
   "sPvyr6": [
     "Alkuperäinen hinta: ",
     [
@@ -12779,6 +12780,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Käyttöoikeus",
   "iPdFOj": "Komentojen oikeuksien päivitys",
   "f72Zqa": "Luo AutoMod-sääntö",
   "syAApa": "Peruuta AutoMod-sääntö",
@@ -22557,7 +22559,6 @@
   "FCRiT0": "Uusia lukemattomia",
   "PDTjLC": "Seuraava",
   "621LJC": "Nimimerkki",
-  "rX/m/f": "Olet aavemaisen upea, niin kuin tämä yllärikin. Pidä hauskaa!",
   "kMYVws": "Lunasta palkintosi",
   "LWsAra": "Mukautetut äänet kaikkialla",
   "4lSyCQ": "Käytä mukautettuja äänipankin äänitehosteita kaikilla puhekanavilla. Vain Nitrolla.",
@@ -28937,13 +28938,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Lunasta ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Näytä tehtäväpalkki",
   "ij5E//": "Tehtävä suoritettu!",
   "gvCR4O": "Olet tosi lähellä!",
@@ -29599,16 +29593,6 @@
   "qyKLdn": "Palkintosi on valmis!",
   "GYGb3N": "Pidä käytössä pidempään Nitro-tilauksella!",
   "hh7Rb2": "Ikiomaksi Nitro-tilauksella!",
-  "coKAb2": [
-    "Avaa palkinto käyttöön ",
-    [
-      1,
-      "rewardsDuration"
-    ],
-    " ajaksi"
-  ],
-  "Y7LIPT": "Aloita pelitehtävä",
-  "hyrGU1": "Aloita striimaustehtävä",
   "umdNio": "Aloita videotehtävä",
   "smG9qq": [
     "Striimaa peliä ",
@@ -29809,63 +29793,6 @@
     "."
   ],
   "mOrpXF": "Ala pelata!",
-  "goA6o6": [
-    "Pelaa peliä ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuutti"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuuttia"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Pelaa peliä ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuutti"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuuttia"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Katso video",
   "dYE1p6": [
     "Etsi tämä tehtävä uudelleen valitsemalla Käyttäjäasetukset ",
     [
@@ -37735,22 +37662,6 @@
   "Bco7ND": "Käytä äänipankkia",
   "CVxXDA": "Käytä kaiutinta",
   "08zAV1": "Käytä puheentunnistusta",
-  "XOWfNj": [
-    "Päivitä käyttäjänimesi ",
-    [
-      1,
-      "date"
-    ],
-    " mennessä"
-  ],
-  "g/gkAw": [
-    "Päivitä käyttäjänimesi. ",
-    [
-      1,
-      "date"
-    ],
-    " alkaen Discord alkaa määrittää yksilöllisiä käyttäjänimiä käyttäjille, jotka eivät ole päivittäneet käyttäjänimiään."
-  ],
   "NgL2GR": "Ja kuinka vanha olet?",
   "WeJZy8": "Pahoittelut, mutta kyseistä nimeä ei voi käyttää.",
   "LYIh7u": "Mikä on nimesi?",

@@ -1,11 +1,11 @@
 package com.discord.bundle_updater
 
-import A9.s
 import java.io.File
 import java.util.ArrayList
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import okio.BufferedSource
+import s9.s
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
@@ -35,13 +35,13 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return kotlin.collections.i.T0(var5);
+      return kotlin.collections.i.R0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {
       q.h(var1, "file");
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = M9.j.f(var1, null, 1, null);
+      val var3: java.lang.String = E9.j.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
@@ -49,25 +49,25 @@ public object BundleUpdaterUtils {
    public fun md5(file: File): String {
       label18: {
          q.h(var1, "file");
-         val var10: BufferedSource = dc.m.d(dc.m.k(var1));
+         val var10: BufferedSource = Vb.m.d(Vb.m.k(var1));
 
-         var var12: java.lang.String;
+         var var11: java.lang.String;
          try {
-            val var11: dc.j = dc.j.m.a(dc.m.b());
-            var10.G1(var11);
-            var12 = var11.a().s();
+            val var2: Vb.j = Vb.j.m.a(Vb.m.b());
+            var10.E1(var2);
+            var11 = var2.a().s();
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
-               M9.c.a(var10, var5);
+               E9.c.a(var10, var5);
             }
          }
 
-         M9.c.a(var10, null);
-         return var12;
+         E9.c.a(var10, null);
+         return var11;
       }
    }
 }

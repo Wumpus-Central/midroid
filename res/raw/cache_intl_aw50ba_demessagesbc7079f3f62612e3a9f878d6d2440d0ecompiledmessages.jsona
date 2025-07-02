@@ -2974,6 +2974,7 @@
     ],
     " behältst du all deine Geschenkkäufe im Blick."
   ],
+  "rt69oq": "Mit Nitro inbegriffen",
   "sPvyr6": [
     "Ursprünglicher Preis: ",
     [
@@ -12814,6 +12815,7 @@
     ],
     " erkannt"
   ],
+  "YJlvBA": "Zugriff",
   "iPdFOj": "Berechtigungen für Befehle aktualisieren",
   "f72Zqa": "AutoMod-Regel erstellen",
   "syAApa": "AutoMod-Regel abbrechen",
@@ -22700,7 +22702,6 @@
   "FCRiT0": "Neue ungelesene Nachrichten",
   "PDTjLC": "Weiter",
   "621LJC": "Nickname",
-  "rX/m/f": "Du bist spuktakulär, genau wie diese Süßigkeit. Viel Spaß!",
   "kMYVws": "Hol dir deine Belohnung",
   "LWsAra": "Personalisierte Sounds überall",
   "4lSyCQ": "Nutze benutzerdefinierte Soundboard-Klänge über Sprachkanäle. Nur mit Nitro.",
@@ -29082,13 +29083,6 @@
     ],
     " beanspruchen"
   ],
-  "W8/b3d": [
-    [
-      1,
-      "rewardName"
-    ],
-    " beanspruchen"
-  ],
   "GQ+4bm": "Questleiste anzeigen",
   "ij5E//": "Quest abgeschlossen!",
   "gvCR4O": "Du bist so nah dran!",
@@ -29777,16 +29771,6 @@
   "qyKLdn": "Deine Belohnung ist bereit!",
   "GYGb3N": "Hab länger Freude dran mit Nitro!",
   "hh7Rb2": "Deins mit Nitro!",
-  "coKAb2": [
-    "Belohnung für ",
-    [
-      1,
-      "rewardsDuration"
-    ],
-    " freischalten"
-  ],
-  "Y7LIPT": "Spielquest starten",
-  "hyrGU1": "Stream-Quest starten",
   "umdNio": "Video-Quest starten",
   "smG9qq": [
     "Streame ",
@@ -29988,63 +29972,6 @@
     "."
   ],
   "mOrpXF": "Fang an zu spielen!",
-  "goA6o6": [
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " Minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Minuten"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " lang spielen"
-  ],
-  "NmzoDg": [
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " Minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " Minuten"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " lang spielen"
-  ],
-  "f/J8v7": "Schau dir das Video an",
   "dYE1p6": [
     "Finde diese Quest erneut in den Benutzereinstellungen ",
     [
@@ -37870,14 +37797,6 @@
   "Bco7ND": "Soundboard verwenden",
   "CVxXDA": "Lautsprecher verwenden",
   "08zAV1": "Sprachaktivierung verwenden",
-  "XOWfNj": [
-    "Aktualisiere bis zum ",
-    [
-      1,
-      "date"
-    ],
-    " deinen Benutzernamen"
-  ],
   "NgL2GR": "Und wie alt bist du?",
   "WeJZy8": "Sorry, der Name kann nicht verwendet werden.",
   "LYIh7u": "Wie lautet dein Name?",

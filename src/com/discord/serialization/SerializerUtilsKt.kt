@@ -1,12 +1,12 @@
 package com.discord.serialization
 
-import W9.b
+import O9.b
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
-import xb.g
+import pb.g
 
 @JvmSynthetic
 fun `access$parseProperty`(var0: KProperty1, var1: JsonElement): Boolean {
@@ -33,7 +33,7 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
 
          g.k(g.p(var1));
       }
-   } catch (IllegalArgumentException | var3: tb.g) {
+   } catch (IllegalArgumentException | var3: lb.g) {
       return false;
    }
 

@@ -1,6 +1,5 @@
 package com.discord.react.utilities
 
-import A9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableMapKeySetIterator
@@ -12,8 +11,9 @@ import kotlin.jvm.internal.q
 import kotlin.jvm.internal.u
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
+import lb.j
 import org.json.JSONObject
-import tb.j
+import s9.n
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
 
@@ -240,19 +240,19 @@ public fun ReadableMap.toJsonString(): String {
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    q.h(var0, "<this>");
    val var1: Json = getJson();
-   val var2: java.lang.String = toJsonString(var0);
-   val var3: zb.b = var1.a();
+   val var3: java.lang.String = toJsonString(var0);
+   val var2: rb.b = var1.a();
    q.m(6, "T");
    u.a("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(j.d(var3, null), var2);
+   return (T)var1.b(j.d(var2, null), var3);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    q.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var2 : var0.entrySet()) {
-      put(var1, var2.getKey() as java.lang.String, var2.getValue());
+   for (Entry var3 : var0.entrySet()) {
+      put(var1, var3.getKey() as java.lang.String, var3.getValue());
    }
 
    return var1;

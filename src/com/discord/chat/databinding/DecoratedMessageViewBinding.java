@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.MessageView;
-import y0.a;
+import z0.a;
 
 public final class DecoratedMessageViewBinding implements ViewBinding {
    public final MessageView messageView;

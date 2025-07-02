@@ -2960,6 +2960,7 @@
     ],
     " görebilirsin."
   ],
+  "rt69oq": "Nitro'ya dâhil",
   "sPvyr6": [
     "Asıl fiyat: ",
     [
@@ -12699,6 +12700,7 @@
     ],
     " sunucusunda sıra dışı etkinlik tespit edildi"
   ],
+  "YJlvBA": "Erişim",
   "iPdFOj": "Komut İzinlerini Güncelle",
   "f72Zqa": "AutoMod Kuralı Oluştur",
   "syAApa": "AutoMod Kuralı İptal Et",
@@ -22577,7 +22579,6 @@
   "FCRiT0": "Yeni Okunmamışlar",
   "PDTjLC": "İleri",
   "621LJC": "Takma ad",
-  "rX/m/f": "Tıpkı bu ödül gibi harikasın. Keyfini çıkar!",
   "kMYVws": "Ödülünü Al",
   "LWsAra": "Her Yerde Özel Sesler Kullan",
   "4lSyCQ": "Ses kanallarında özel ses panelli seslerini kullan. Sadece Nitro ile mümkün.",
@@ -28931,13 +28932,6 @@
     ],
     " ödülünü al"
   ],
-  "W8/b3d": [
-    [
-      1,
-      "rewardName"
-    ],
-    " Al"
-  ],
   "GQ+4bm": "Görev Çubuğunu göster",
   "ij5E//": "Görev Tamamlandı!",
   "gvCR4O": "Çok yakınsın!",
@@ -29586,15 +29580,6 @@
   "qyKLdn": "Ödülün Hazır!",
   "GYGb3N": "Nitro ile daha uzun süre devam et!",
   "hh7Rb2": "Nitro ile senin olacak!",
-  "coKAb2": [
-    [
-      1,
-      "rewardsDuration"
-    ],
-    " boyunca ödülü aç"
-  ],
-  "Y7LIPT": "Oynama Görevini Başlat",
-  "hyrGU1": "Yayın Görevine Başla",
   "umdNio": "Video Görevi'ni başlat",
   "smG9qq": [
     "Bir arkadaşına ",
@@ -29787,63 +29772,6 @@
     " kazan."
   ],
   "mOrpXF": "Oynamaya Başla!",
-  "goA6o6": [
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " dakika"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " dakika"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " boyunca ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " oyna"
-  ],
-  "NmzoDg": [
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " dakika"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " dakika"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " boyunca ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " oyna"
-  ],
-  "f/J8v7": "Videoyu izle",
   "dYE1p6": [
     "Bu Görevi Kullanıcı Ayarları ",
     [
@@ -37693,22 +37621,6 @@
   "Bco7ND": "Ses Panelini Kullan",
   "CVxXDA": "Hoparlör kullan",
   "08zAV1": "Ses Eylemini Kullan",
-  "XOWfNj": [
-    "Kullanıcı adını ",
-    [
-      1,
-      "date"
-    ],
-    " tarihine kadar güncelle"
-  ],
-  "g/gkAw": [
-    "Discord ",
-    [
-      1,
-      "date"
-    ],
-    " tarihinden itibaren kullanıcı adlarını güncellememiş olan kullanıcılara özel kullanıcı adları atamaya başlayacaktır."
-  ],
   "NgL2GR": "Peki kaç yaşındasın?",
   "WeJZy8": "Üzgünüz, bu isim kullanılamıyor.",
   "LYIh7u": "Adın ne?",

@@ -1,6 +1,6 @@
 package com.discord.sticker_picker
 
-import I9.a
+import A9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 
@@ -74,17 +74,17 @@ internal data class StickerPickerRow(rowContentWidth: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.rowContentWidth;
+      val var3: Int = this.rowContentWidth;
       val var1: Int = this.rowContentPaddingVertical;
-      val var3: Int = this.itemSize;
+      val var2: Int = this.itemSize;
       val var5: java.util.List = this.items;
       val var4: StringBuilder = new StringBuilder();
       var4.append("StickerPickerRow(rowContentWidth=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(", rowContentPaddingVertical=");
       var4.append(var1);
       var4.append(", itemSize=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", items=");
       var4.append(var5);
       var4.append(")");
@@ -206,30 +206,30 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.id;
-         val var4: java.lang.String = this.name;
+         val var4: java.lang.String = this.id;
+         val var7: java.lang.String = this.name;
          val var5: StickerPickerRow.Sticker.Type = this.type;
-         val var1: Boolean = this.animated;
-         val var8: java.lang.String = this.url;
-         val var3: Boolean = this.disabled;
+         val var3: Boolean = this.animated;
+         val var6: java.lang.String = this.url;
+         val var1: Boolean = this.disabled;
          val var2: Boolean = this.opaque;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Sticker(id=");
-         var7.append(var6);
-         var7.append(", name=");
-         var7.append(var4);
-         var7.append(", type=");
-         var7.append(var5);
-         var7.append(", animated=");
-         var7.append(var1);
-         var7.append(", url=");
-         var7.append(var8);
-         var7.append(", disabled=");
-         var7.append(var3);
-         var7.append(", opaque=");
-         var7.append(var2);
-         var7.append(")");
-         return var7.toString();
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Sticker(id=");
+         var8.append(var4);
+         var8.append(", name=");
+         var8.append(var7);
+         var8.append(", type=");
+         var8.append(var5);
+         var8.append(", animated=");
+         var8.append(var3);
+         var8.append(", url=");
+         var8.append(var6);
+         var8.append(", disabled=");
+         var8.append(var1);
+         var8.append(", opaque=");
+         var8.append(var2);
+         var8.append(")");
+         return var8.toString();
       }
 
       public enum class Type {

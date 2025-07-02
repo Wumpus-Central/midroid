@@ -1,9 +1,9 @@
 package com.discord.client_info
 
-import A9.j
 import android.content.Context
 import java.util.Locale
 import kotlin.jvm.internal.q
+import s9.j
 
 public object ClientInfo {
    public final lateinit var versionName: String
@@ -63,7 +63,7 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@287.3.0-2+287203"
+   public const val SENTRY_RELEASE: String = "discord_android@287.10.0-4+287410"
 
    public final val isDebugBuild: Boolean
       public final get() {
@@ -89,7 +89,7 @@ public object ClientInfo {
       }
 
 
-   public final val isProdBuild: Boolean by j.b(new a())
+   public final val isProdBuild: Boolean by j.a(new a())
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -108,7 +108,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "9333da93-f3ff-4de7-af08-15d0a17ac60d"
+   public const val PROGUARD_UUID: String = "50586e51-7a97-4191-8d47-48c09bff27cf"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {

@@ -2959,6 +2959,7 @@
     ],
     "."
   ],
+  "rt69oq": "Ingår i Nitro",
   "sPvyr6": [
     "Originalpris: ",
     [
@@ -12708,6 +12709,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Åtkomst",
   "iPdFOj": "Uppdatera kommandobehörigheter",
   "f72Zqa": "Skapa AutoMod-regel",
   "syAApa": "Avbryt AutoMod-regel",
@@ -22468,7 +22470,6 @@
   "FCRiT0": "Olästa meddelanden",
   "PDTjLC": "Nästa",
   "621LJC": "Smeknamn",
-  "rX/m/f": "Du är spöktakulär, precis som den här gåvan. Hoppas du gillar den!",
   "kMYVws": "Hämta din belöning",
   "LWsAra": "Anpassade ljud överallt",
   "4lSyCQ": "Använd anpassade ljudskärmsljud i röstkanaler. Endast med Nitro.",
@@ -28839,13 +28840,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Hämta ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Visa uppdragsfält",
   "ij5E//": "Uppdrag slutfört!",
   "gvCR4O": "Du är så nära!",
@@ -29504,15 +29498,6 @@
   "qyKLdn": "Din belöning är redo!",
   "GYGb3N": "Behåll det längre med Nitro!",
   "hh7Rb2": "Du får behålla det om du har Nitro!",
-  "coKAb2": [
-    "Lås upp belöning i ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Starta speluppdrag",
-  "hyrGU1": "Starta streama uppdrag",
   "umdNio": "Starta videouppdrag",
   "smG9qq": [
     "Streama ",
@@ -29713,63 +29698,6 @@
     "."
   ],
   "mOrpXF": "Börja spela!",
-  "goA6o6": [
-    "Spela ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Spela ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Titta på videon",
   "dYE1p6": [
     "Du hittar det här uppdraget igen i Användarinställningar ",
     [
@@ -37610,21 +37538,6 @@
   "Bco7ND": "Använd ljudskärm",
   "CVxXDA": "Använd högtalare",
   "08zAV1": "Använd röstaktivering",
-  "XOWfNj": [
-    "Uppdatera ditt användarnamn senast ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Från och med ",
-    [
-      1,
-      "date"
-    ],
-    " börjar Discord ge unika användarnamn till de användare som inte har uppdaterat sina användarnamn."
-  ],
   "NgL2GR": "Och hur gammal är du?",
   "WeJZy8": "Tyvärr kan inte det namnet användas.",
   "LYIh7u": "Vad heter du?",

@@ -25,17 +25,17 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
       val var3: ReactApplicationContext = this.getReactApplicationContext();
       q.g(var3, "getReactApplicationContext(...)");
-      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), B9.q.h());
+      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), t9.q.h());
    }
 
    @ReactMethod
    public fun registerNotificationCategoriesAndGroups(localizedCategoryNames: ReadableMap, localizedGroupNames: ReadableMap) {
       q.h(var1, "localizedCategoryNames");
       q.h(var2, "localizedGroupNames");
-      val var4: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var4.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var4, "getReactApplicationContext(...)");
+      var3.initNotificationCategories(var4, NativeMapExtensionsKt.toStringMap(var1), NativeMapExtensionsKt.toStringMap(var2));
    }
 
    @ReactMethod
@@ -49,9 +49,9 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    @ReactMethod
    public fun setIncomingRingtone(name: String) {
       q.h(var1, "name");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var3.setIncomingRingtone(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      q.g(var3, "getReactApplicationContext(...)");
+      var2.setIncomingRingtone(var3, var1);
    }
 }

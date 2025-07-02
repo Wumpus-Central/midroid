@@ -2966,6 +2966,7 @@
     ],
     "."
   ],
+  "rt69oq": "Tartalmazza a Nitro",
   "sPvyr6": [
     "Eredeti ár: ",
     [
@@ -12730,6 +12731,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Hozzáférés",
   "iPdFOj": "Parancsjogosultságok frissítése",
   "f72Zqa": "AutoMod-szabály létrehozása",
   "syAApa": "AutoMod-szabály visszavonása",
@@ -22481,7 +22483,6 @@
   "FCRiT0": "Új olvasatlanok",
   "PDTjLC": "Következő",
   "621LJC": "Becenév",
-  "rX/m/f": "Haláli jól nézel ki – épp, mint ez a jutalom. Szívesen!",
   "kMYVws": "Váltsd be a jutalmadat",
   "LWsAra": "Egyedi hangok mindenütt",
   "4lSyCQ": "Egyedi Soundboard-hangokat használhatsz a hangcsatornákon. Kizárólag a Nitróval.",
@@ -28848,13 +28849,6 @@
     ],
     " beváltása"
   ],
-  "W8/b3d": [
-    [
-      1,
-      "rewardName"
-    ],
-    " beváltása"
-  ],
   "GQ+4bm": "Küldetéssáv megjelenítése",
   "ij5E//": "Küldetés teljesítve!",
   "gvCR4O": "Nagyon közel jársz!",
@@ -29518,16 +29512,6 @@
   "qyKLdn": "A jutalmad készen áll!",
   "GYGb3N": "Hosszabb ideig a tiéd maradhat a Nitróval!",
   "hh7Rb2": "A tiéd maradhat a Nitróval!",
-  "coKAb2": [
-    "Jutalom feloldása ",
-    [
-      1,
-      "rewardsDuration"
-    ],
-    " időre"
-  ],
-  "Y7LIPT": "Játékküldetés elindítása",
-  "hyrGU1": "Közvetítési küldetés elindítása",
   "umdNio": "Videós küldetés elindítása",
   "smG9qq": [
     "Ha ",
@@ -29728,63 +29712,6 @@
     "."
   ],
   "mOrpXF": "Vágj bele a játékba!",
-  "goA6o6": [
-    "Játssz ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " percig"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " percig"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Játssz ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " percig"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " percig"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Nézd meg a videót",
   "dYE1p6": [
     "Ismét megtalálhatod ezt a küldetést a Felhasználói beállítások ",
     [
@@ -37643,20 +37570,6 @@
   "Bco7ND": "A Soundboard használata",
   "CVxXDA": "Hangszóró használata",
   "08zAV1": "Voice Activity használata",
-  "XOWfNj": [
-    "Módosítsd a felhasználónevedet legkésőbb eddig: ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    [
-      1,
-      "date"
-    ],
-    " dátummal a Discord elkezd egyedi felhasználóneveket rendelni azokhoz a felhasználókhoz, akik nem módosították a felhasználónevüket."
-  ],
   "NgL2GR": "És hány éves vagy?",
   "WeJZy8": "Sajnos nem használhatod ezt a nevet.",
   "LYIh7u": "Mi a neved?",

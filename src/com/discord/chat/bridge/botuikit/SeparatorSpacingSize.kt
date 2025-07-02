@@ -5,7 +5,7 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f(with = SeparatorSpacingSize.Serializer::class)
 public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
@@ -24,7 +24,7 @@ public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<SeparatorSpacingSize> = $values();
       $VALUES = var0;
-      $ENTRIES = I9.a.a(var0);
+      $ENTRIES = A9.a.a(var0);
    }
 
    init {

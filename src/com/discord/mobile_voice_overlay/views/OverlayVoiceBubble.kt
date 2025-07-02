@@ -87,7 +87,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public override fun setData(data: MobileVoiceOverlayData) {
       kotlin.jvm.internal.q.h(var1, "data");
-      val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.j0(var1.getUsers()) as MobileVoiceOverlayDataUser;
+      val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.h0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);
       }

@@ -7,7 +7,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.ObscureOverlayView;
 import com.discord.chat.presentation.message.view.SpoilerOverlayView;
-import y0.a;
+import z0.a;
 
 public final class SpoilerViewBinding implements ViewBinding {
    public final ObscureOverlayView obscure;

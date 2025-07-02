@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.f0
+import androidx.core.view.e0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchListener
 import com.discord.theme.ThemeManager
@@ -36,15 +36,15 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
    public open fun dispatchTouchEvent(ev: MotionEvent): Boolean {
       q.h(var1, "ev");
-      val var5: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
+      val var4: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
-      while (var5.hasNext()) {
-         val var4: Entry = var5.next() as Entry;
-         val var3: Function1 = var4.getKey() as Function1;
-         if (var4.getValue() as java.lang.Boolean) {
+      while (var4.hasNext()) {
+         val var5: Entry = var4.next() as Entry;
+         val var3: Function1 = var5.getKey() as Function1;
+         if (var5.getValue() as java.lang.Boolean) {
             var3.invoke(var1);
          } else {
-            var5.remove();
+            var4.remove();
          }
       }
 
@@ -77,7 +77,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
             return var1 as DiscordGestureHandlerEnabledRootView;
          } else {
             if (var1 is ViewGroup) {
-               for (View var2 : f0.a((ViewGroup)var1)) {
+               for (View var2 : e0.a((ViewGroup)var1)) {
                   val var4: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.find(var2);
                   if (var4 != null) {
                      return var4;

@@ -1,7 +1,7 @@
 package com.discord.core
 
-import O6.k
-import O6.k.b
+import L6.k
+import L6.k.b
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable

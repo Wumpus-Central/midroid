@@ -1,6 +1,5 @@
 package com.discord.chat.messagemanager
 
-import A9.s
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
@@ -49,6 +48,7 @@ import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
+import s9.s
 
 public object MessageViewManagers {
    private final val json: Json = kotlinx.serialization.json.b.b(null, new b(), 1, null)
@@ -126,10 +126,10 @@ public object MessageViewManagers {
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var8: Message = var4 as Message;
-            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var5: Context = var1.getContext();
-            q.g(var5, "getContext(...)");
-            var1.setMessage(var8, var6, MessageViewManagers.access$getEventHandler(var3, var7, var5));
+            val var5: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var6: Context = var1.getContext();
+            q.g(var6, "getContext(...)");
+            var1.setMessage(var8, var5, MessageViewManagers.access$getEventHandler(var3, var7, var6));
          }
       }
 
@@ -401,10 +401,10 @@ public object MessageViewManagers {
             val var4: MessageBase = var7.getMessage();
             q.f(var4, "null cannot be cast to non-null type com.discord.chat.bridge.Message");
             val var5: Message = var4 as Message;
-            val var8: MessageContext = MessageContextKt.getMessageContext(var7);
-            val var6: Context = var1.getContext();
-            q.g(var6, "getContext(...)");
-            var1.setMessage(var5, var8, MessageViewManagers.access$getEventHandler(var3, var7, var6));
+            val var6: MessageContext = MessageContextKt.getMessageContext(var7);
+            val var8: Context = var1.getContext();
+            q.g(var8, "getContext(...)");
+            var1.setMessage(var5, var6, MessageViewManagers.access$getEventHandler(var3, var7, var8));
          }
       }
 

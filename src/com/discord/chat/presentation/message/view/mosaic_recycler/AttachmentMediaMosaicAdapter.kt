@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import E1.a
-import E1.b
-import E1.c
-import E1.d
-import E1.e
-import E1.f
-import E1.g
-import E1.h
+import F1.a
+import F1.b
+import F1.c
+import F1.d
+import F1.e
+import F1.f
+import F1.g
+import F1.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -136,10 +136,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
       val var5: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-            var var6: MosaicItemMessageAttachmentImageViewHolder = this.items.get(var2);
+            var var6: Any = this.items.get(var2);
             q.f(var6, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
-            val var7: ImageAttachmentMessageAccessory = var6 as ImageAttachmentMessageAccessory;
-            var6 = var1 as MosaicItemMessageAttachmentImageViewHolder;
+            var6 = var6 as ImageAttachmentMessageAccessory;
+            val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var3: Boolean;
             if (this.getItemCount() == 1) {
                var3 = true;
@@ -147,10 +147,12 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var9: a = new a(this, var7, var1);
-            val var8: b = new b(this, var7);
+            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
-            var6.bindAttachment(var5, var7, var3, var9, var8, new c(this, var7), new d(this), var4);
+            var7.bindAttachment(
+               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
+            );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
                val var12: Class = var1.getClass();

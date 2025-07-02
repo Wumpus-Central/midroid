@@ -9,8 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import xb.d
-import xb.g
+import pb.d
+import pb.g
 
 public object ComponentSerializer : d(G.b(Component.class)) {
    private final val knownTypes: List<Int>
@@ -87,7 +87,7 @@ public object ComponentSerializer : d(G.b(Component.class)) {
       }
 
       val var6: Any;
-      if (i.X(var2, var5)) {
+      if (i.V(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();

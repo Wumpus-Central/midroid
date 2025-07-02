@@ -1,6 +1,6 @@
 package com.discord.foreground_service.utils
 
-import M1.a
+import N1.a
 import android.app.Notification
 import android.app.Service
 import android.content.ComponentName
@@ -62,7 +62,7 @@ internal fun Context.startForegroundServiceCompat(serviceIntent: Intent): Compon
    q.h(var1, "serviceIntent");
    val var2: ComponentName;
    if (VERSION.SDK_INT >= 26) {
-      var2 = M1.b.a(var0, var1);
+      var2 = N1.b.a(var0, var1);
    } else {
       var2 = var0.startService(var1);
    }

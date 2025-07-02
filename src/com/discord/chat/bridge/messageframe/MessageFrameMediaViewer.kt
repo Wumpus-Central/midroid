@@ -2,7 +2,7 @@ package com.discord.chat.bridge.messageframe
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame {

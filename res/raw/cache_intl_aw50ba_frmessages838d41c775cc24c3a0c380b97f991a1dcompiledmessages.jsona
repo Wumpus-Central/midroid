@@ -2970,6 +2970,7 @@
     ],
     "."
   ],
+  "rt69oq": "Inclus avec Nitro",
   "sPvyr6": [
     "Prix initial : ",
     [
@@ -12731,6 +12732,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Accès",
   "iPdFOj": "Mise à jour des permissions de commande",
   "f72Zqa": "Créer une règle d'AutoMod",
   "syAApa": "Annuler une règle d'AutoMod",
@@ -22539,7 +22541,6 @@
   "FCRiT0": "Nouveaux messages non lus",
   "PDTjLC": "Suivant",
   "621LJC": "Pseudo",
-  "rX/m/f": "Voilà un cadeau qui fera un effet monstre ! Profites-en bien !",
   "kMYVws": "Récupère ta récompense",
   "LWsAra": "Des sons personnalisés partout",
   "4lSyCQ": "Utilise des sons de Soundboard personnalisés dans tous les salons vocaux. Uniquement avec Nitro.",
@@ -28915,13 +28916,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Récupérer ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Afficher la barre de quête",
   "ij5E//": "Quête terminée !",
   "gvCR4O": "Tu y es presque !",
@@ -29611,15 +29605,6 @@
   "qyKLdn": "Ta récompense est prête !",
   "GYGb3N": "Garde tes récompenses plus longtemps avec Nitro !",
   "hh7Rb2": "Rien qu'à toi avec Nitro !",
-  "coKAb2": [
-    "Déverrouille la récompense pendant ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Commencer la quête de jeu",
-  "hyrGU1": "Commence la quête de streaming",
   "umdNio": "Commencer la quête vidéo",
   "smG9qq": [
     "Streame ",
@@ -29820,63 +29805,6 @@
     "."
   ],
   "mOrpXF": "Commence à jouer !",
-  "goA6o6": [
-    "Joue à ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " pendant ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Joue à ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " pendant ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Regarde la vidéo",
   "dYE1p6": [
     "Retrouve cette quête dans les Paramètres utilisateur ",
     [
@@ -37772,13 +37700,6 @@
   "Bco7ND": "Utiliser Soundboard",
   "CVxXDA": "Activer le haut-parleur",
   "08zAV1": "Utiliser la Détection de la voix",
-  "XOWfNj": [
-    "Mets à jour ton nom d'utilisateur avant le ",
-    [
-      1,
-      "date"
-    ]
-  ],
   "NgL2GR": "Quel âge as-tu ?",
   "WeJZy8": "Désolé, tu ne peux pas utiliser ce nom.",
   "LYIh7u": "Quel est ton nom ?",

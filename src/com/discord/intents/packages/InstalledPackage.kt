@@ -1,6 +1,6 @@
 package com.discord.intents.packages
 
-import I9.a
+import A9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
 

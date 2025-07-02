@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import A9.s
-import Ab.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
-import tb.j
+import lb.f
+import lb.j
+import s9.s
+import sb.a
 
 @f
 public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSource?, rate: Double) : ReactEvent {
@@ -70,15 +70,15 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
    }
 
    public override fun toString(): String {
-      val var4: MediaPlayerPlaybackSource = this.source;
+      val var3: MediaPlayerPlaybackSource = this.source;
       val var1: Double = this.rate;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MediaPlayerPlaybackRateChanged(source=");
-      var3.append(var4);
-      var3.append(", rate=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaPlayerPlaybackRateChanged(source=");
+      var4.append(var3);
+      var4.append(", rate=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

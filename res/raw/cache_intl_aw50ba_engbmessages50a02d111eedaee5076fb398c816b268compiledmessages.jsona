@@ -2956,6 +2956,7 @@
     ],
     "."
   ],
+  "rt69oq": "Included with Nitro",
   "sPvyr6": [
     "Original price: ",
     [
@@ -12725,6 +12726,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Access",
   "iPdFOj": "Update Command Permissions",
   "f72Zqa": "Create AutoMod Rule",
   "syAApa": "Cancel AutoMod Rule",
@@ -22487,7 +22489,6 @@
   "FCRiT0": "New Unreads",
   "PDTjLC": "Next",
   "621LJC": "Nickname",
-  "rX/m/f": "You’re spooktacular, just like this treat. Enjoy!",
   "kMYVws": "Collect Your Reward",
   "LWsAra": "Custom Sounds Everywhere",
   "4lSyCQ": "Use custom soundboard sounds across voice channels. Only with Nitro.",
@@ -28849,13 +28850,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Claim ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Show Quest Bar",
   "ij5E//": "Quest Completed!",
   "gvCR4O": "You’re so close!",
@@ -29513,15 +29507,6 @@
   "maMtqK": "Nitro credits give you Nitro for a limited amount of time.",
   "GYGb3N": "Keep for longer with Nitro!",
   "hh7Rb2": "Yours to keep with Nitro!",
-  "coKAb2": [
-    "Unlock reward for ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Start Play Quest",
-  "hyrGU1": "Start Stream Quest",
   "umdNio": "Start Video Quest",
   "smG9qq": [
     "Stream ",
@@ -29722,63 +29707,6 @@
     "."
   ],
   "mOrpXF": "Start Playing!",
-  "goA6o6": [
-    "Play ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " for ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Play ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " for ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minute"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutes"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Watch the video",
   "dYE1p6": [
     "Find this Quest again in User Settings ",
     [
@@ -37606,21 +37534,6 @@
   "Bco7ND": "Use Soundboard",
   "CVxXDA": "Use speaker",
   "08zAV1": "Use Voice Activity",
-  "XOWfNj": [
-    "Update your username by ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Starting ",
-    [
-      1,
-      "date"
-    ],
-    ", Discord will begin assigning unique usernames to users who have not updated their usernames."
-  ],
   "NgL2GR": "And how old are you?",
   "WeJZy8": "Sorry, that name can’t be used.",
   "LYIh7u": "What’s your name?",

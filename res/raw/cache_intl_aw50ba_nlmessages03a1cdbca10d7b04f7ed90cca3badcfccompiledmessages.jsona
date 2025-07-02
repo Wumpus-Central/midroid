@@ -2962,6 +2962,7 @@
     ],
     "."
   ],
+  "rt69oq": "Inbegrepen bij Nitro",
   "sPvyr6": [
     "Oorspronkelijke prijs: ",
     [
@@ -12767,6 +12768,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Toegang",
   "iPdFOj": "Opdrachtmachtigingen updaten",
   "f72Zqa": "AutoMod-regel instellen",
   "syAApa": "AutoMod-regel annuleren",
@@ -22540,7 +22542,6 @@
   "FCRiT0": "Nieuw ongelezen",
   "PDTjLC": "Volgende",
   "621LJC": "Bijnaam",
-  "rX/m/f": "Je bent spooktaculair, net als dit cadeautje. Veel plezier ermee!",
   "kMYVws": "Claim je beloning",
   "LWsAra": "Overal persoonlijke geluiden",
   "4lSyCQ": "Gebruik je eigen soundboardgeluiden in alle spraakkanalen. Alleen met Nitro.",
@@ -28920,13 +28921,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Claim ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Missiebalk tonen",
   "ij5E//": "Missie voltooid!",
   "gvCR4O": "Je bent zo dichtbij!",
@@ -29584,15 +29578,6 @@
   "qyKLdn": "Je beloning staat klaar!",
   "GYGb3N": "Geniet er langer van met Nitro!",
   "hh7Rb2": "Helemaal voor jou, met Nitro!",
-  "coKAb2": [
-    "Beloning ontgrendelen voor ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Start gamemissie",
-  "hyrGU1": "Streammissie starten",
   "umdNio": "Videomissie starten",
   "smG9qq": [
     "Stream ",
@@ -29793,65 +29778,6 @@
     " te winnen."
   ],
   "mOrpXF": "Spelen maar!",
-  "goA6o6": [
-    "Speel ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuten"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " lang"
-  ],
-  "NmzoDg": [
-    "Speel ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minuut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minuten"
-        ]
-      },
-      0,
-      "cardinal"
-    ],
-    " lang"
-  ],
-  "f/J8v7": "Kijk de video",
   "dYE1p6": [
     "Je kunt deze missie altijd opzoeken in Gebruikersinstellingen ",
     [
@@ -37734,21 +37660,6 @@
   "Bco7ND": "Soundboard gebruiken",
   "CVxXDA": "Speaker gebruiken",
   "08zAV1": "Spraakactivatie gebruiken",
-  "XOWfNj": [
-    "Update je gebruikersnaam voor ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Vanaf ",
-    [
-      1,
-      "date"
-    ],
-    " begint Discord met het toewijzen van unieke gebruikersnamen aan gebruikers die hun gebruikersnaam niet hebben geüpdatet."
-  ],
   "NgL2GR": "En hoe oud ben je?",
   "WeJZy8": "Sorry, die naam mag je niet gebruiken.",
   "LYIh7u": "Hoe heet je?",

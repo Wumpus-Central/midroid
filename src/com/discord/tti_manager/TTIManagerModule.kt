@@ -1,6 +1,5 @@
 package com.discord.tti_manager
 
-import A9.s
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -11,6 +10,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
 import kotlin.jvm.internal.q
+import s9.s
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
@@ -66,7 +66,7 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    }
 
    public open fun getConstants(): MutableMap<String, Long> {
-      return B9.q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
+      return t9.q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
    }
 
    @ReactMethod

@@ -3,7 +3,6 @@ package com.discord.crash_reporting.system_logs
 import android.annotation.SuppressLint
 import android.content.Context
 import android.util.Log
-import gb.k
 import java.io.BufferedReader
 import java.io.File
 import java.security.MessageDigest
@@ -50,7 +49,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         F9.a.b(false, false, null, null, 0, new g(var4, var1, var3, var2), 31, null);
+         x9.a.b(false, false, null, null, 0, new g(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -59,7 +58,7 @@ internal object SystemLogUtils {
          return null;
       } else {
          val var6: StringBuilder = new StringBuilder();
-         var var7: java.util.Iterator = var1.iterator();
+         val var7: java.util.Iterator = var1.iterator();
          var var3: java.lang.String = null;
          var var10: java.lang.String = null;
 
@@ -100,31 +99,32 @@ internal object SystemLogUtils {
          if (kotlin.text.h.c0(var19)) {
             return null;
          } else {
-            val var11: hb.d = hb.d.m;
-            val var17: Regex = new Regex("^Cause: (.+)$", hb.d.m);
-            val var21: Sequence = k.z(Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new h(new Regex("classes\\d+.dex")));
-            val var13: HashSet = w.e(
+            val var11: Za.d = Za.d.m;
+            val var17: Regex = new Regex("^Cause: (.+)$", Za.d.m);
+            val var21: Sequence = Ya.j.y(
+               Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new h(new Regex("classes\\d+.dex"))
+            );
+            val var23: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               var7 = var21.iterator();
+               val var8: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var7.hasNext()) {
+                  if (!var8.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var7.next();
-               } while (var13.contains((java.lang.String)var8));
+                  var14 = var8.next();
+               } while (var23.contains((java.lang.String)var14));
 
-               var14 = var8 as java.lang.String;
+               var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var14 = "Unknown";
+               var13 = "Unknown";
             }
 
-            val var22: java.lang.String = k.x(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = Ya.j.w(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -135,7 +135,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -155,7 +155,7 @@ internal object SystemLogUtils {
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(hb.a.b);
+      val var3: ByteArray = var1.getBytes(Za.a.b);
       q.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       q.e(var4);
@@ -435,8 +435,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -444,7 +444,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -580,26 +580,26 @@ internal object SystemLogUtils {
 
       public override fun toString(): String {
          val var6: java.lang.String = this.text;
-         val var2: java.lang.String = this.cause;
-         val var3: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
+         val var4: java.lang.String = this.cause;
+         val var7: java.lang.String = this.groupBy;
+         val var2: java.lang.String = this.origin;
          val var1: java.lang.String = this.groupHash;
-         val var7: java.lang.String = this.textHash;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Tombstone(text=");
-         var4.append(var6);
-         var4.append(", cause=");
-         var4.append(var2);
-         var4.append(", groupBy=");
-         var4.append(var3);
-         var4.append(", origin=");
-         var4.append(var5);
-         var4.append(", groupHash=");
-         var4.append(var1);
-         var4.append(", textHash=");
-         var4.append(var7);
-         var4.append(")");
-         return var4.toString();
+         val var5: java.lang.String = this.textHash;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Tombstone(text=");
+         var3.append(var6);
+         var3.append(", cause=");
+         var3.append(var4);
+         var3.append(", groupBy=");
+         var3.append(var7);
+         var3.append(", origin=");
+         var3.append(var2);
+         var3.append(", groupHash=");
+         var3.append(var1);
+         var3.append(", textHash=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

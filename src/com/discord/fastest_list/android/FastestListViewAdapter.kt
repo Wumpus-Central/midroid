@@ -141,13 +141,13 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.position;
-         val var2: Int = this.count;
+         val var2: Int = this.position;
+         val var1: Int = this.count;
          val var3: StringBuilder = new StringBuilder();
          var3.append("DataChanged(position=");
-         var3.append(var1);
-         var3.append(", count=");
          var3.append(var2);
+         var3.append(", count=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

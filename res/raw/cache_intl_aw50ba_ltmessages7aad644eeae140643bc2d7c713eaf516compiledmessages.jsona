@@ -3040,6 +3040,7 @@
     ],
     "."
   ],
+  "rt69oq": "Gauni su Nitro",
   "sPvyr6": [
     "Originali kaina: ",
     [
@@ -13170,6 +13171,7 @@
     ],
     " aptikta neįprasta veikla"
   ],
+  "YJlvBA": "Prieiga",
   "iPdFOj": "Atnaujinti kanalo leidimus",
   "f72Zqa": "Sukurti AutoMod taisyklę",
   "syAApa": "Atšaukti AutoMod taisyklę",
@@ -23241,7 +23243,6 @@
   "FCRiT0": "Nauji neperžiūrėti",
   "PDTjLC": "Toliau",
   "621LJC": "Slapyvardis",
-  "rX/m/f": "Esi bauginančiai nuostabus (-i), kaip ir ši dovanėlė. Smagaus naudojimo!",
   "kMYVws": "Atsiimk savo apdovanojimą",
   "LWsAra": "Tinkinti garsai visur",
   "4lSyCQ": "Visuose balso kanaluose naudok tinkinto garsų grotuvo garsus. Tik su Nitro.",
@@ -29893,13 +29894,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Panaudoti ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Rodyti misijos juostą",
   "ij5E//": "Misija atlikta!",
   "gvCR4O": "Liko taip nedaug!",
@@ -30563,15 +30557,6 @@
   "qyKLdn": "Tavo apdovanojimas paruoštas!",
   "GYGb3N": "Turėk ilgiau su Nitro!",
   "hh7Rb2": "Turėsi visam laikui su Nitro!",
-  "coKAb2": [
-    "Gauk apdovanojimą, galiosiantį ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Pradėti grojimo misiją",
-  "hyrGU1": "Pradėti transliavimo misiją",
   "umdNio": "Pradėti vaizdo įrašo misiją",
   "smG9qq": [
     "Transliuok ",
@@ -30772,75 +30757,6 @@
     "."
   ],
   "mOrpXF": "Pradėk žaisti!",
-  "goA6o6": [
-    "Žaisk ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutę"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " minutes"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minučių"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Žaisk ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minutę"
-        ],
-        "few": [
-          [
-            7
-          ],
-          " minutes"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minučių"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Stebėk vaizdo įrašą",
   "dYE1p6": [
     "Rask šią misiją dar kartą Naudotojo nustatymuse ",
     [
@@ -38917,21 +38833,6 @@
   "Bco7ND": "Naudoti garsų grotuvą",
   "CVxXDA": "Naudoti garsiakalbį",
   "08zAV1": "Naudoti Balso Veiklą",
-  "XOWfNj": [
-    "Atnaujink savo naudotojo vardą iki ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Nuo ",
-    [
-      1,
-      "date"
-    ],
-    " Discord pradės priskirinėti naudotojo vardus tiems naudotojams, kurie jų neatnaujino."
-  ],
   "NgL2GR": "O kiek tau metų?",
   "WeJZy8": "Apgailestaujame, šio vardo naudoti negalima.",
   "LYIh7u": "Koks tavo vardas?",

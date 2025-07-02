@@ -2945,6 +2945,7 @@
     ],
     "."
   ],
+  "rt69oq": "Inclus cu Nitro",
   "sPvyr6": [
     "Preț inițial: ",
     [
@@ -12726,6 +12727,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Acces",
   "iPdFOj": "Actualizează permisiuni comenzi",
   "f72Zqa": "Creează o regulă pentru AutoMod",
   "syAApa": "Anulează regula pentru AutoMod",
@@ -22505,7 +22507,6 @@
   "FCRiT0": "Necitite noi",
   "PDTjLC": "Următorul",
   "621LJC": "Poreclă",
-  "rX/m/f": "Stilul tău extraordinar ne înfricoșează. La fel cum ne înfricoșează și cadoul ăsta. Distracție plăcută!",
   "kMYVws": "Primește-ți recompensa",
   "LWsAra": "Sunete personalizate oriunde vrei",
   "4lSyCQ": "Folosește sunete personalizate din Soundboard în canalele de voce. Doar cu Nitro.",
@@ -28874,13 +28875,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Revendică ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Arată bara misiunii",
   "ij5E//": "Misiune încheiată!",
   "gvCR4O": "Aproape ai terminat!",
@@ -29539,15 +29533,6 @@
   "qyKLdn": "E gata recompensa!",
   "GYGb3N": "Păstrează recompensa mai mult timp cu Nitro!",
   "hh7Rb2": "Poți păstra articolul cu Nitro!",
-  "coKAb2": [
-    "Deblochează recompensa timp de ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Începe misiunea de jucat",
-  "hyrGU1": "Începe misiunea de streaming",
   "umdNio": "Începe misiunea video",
   "smG9qq": [
     "Fă streaming la ",
@@ -29748,63 +29733,6 @@
     "."
   ],
   "mOrpXF": "Începe să joci!",
-  "goA6o6": [
-    "Joacă ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " timp de ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minute"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Joacă ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " timp de ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minute"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Urmărește clipul video",
   "dYE1p6": [
     "Poți găsi din nou această misiune în Setări utilizator ",
     [
@@ -37674,21 +37602,6 @@
   "Bco7ND": "Folosire Soundboard",
   "CVxXDA": "Folosește difuzorul",
   "08zAV1": "Folosește activitatea vocală",
-  "XOWfNj": [
-    "Actualizează-ți numele de utilizator până la ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Începând de pe ",
-    [
-      1,
-      "date"
-    ],
-    ", Discord le va atribui nume de utilizator unice celor care nu și-au actualizat numele de utilizator."
-  ],
   "NgL2GR": "Câți ani ai?",
   "WeJZy8": "Ne pare rău, însă acest nume nu poate fi folosit.",
   "LYIh7u": "Cum te cheamă?",

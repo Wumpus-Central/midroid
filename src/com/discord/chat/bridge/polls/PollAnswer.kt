@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public data class PollAnswer(answerId: String,
@@ -139,8 +139,8 @@ public data class PollAnswer(answerId: String,
    public override fun hashCode(): Int {
       val var6: Int = this.answerId.hashCode();
       val var7: Int = this.pollMedia.hashCode();
-      val var8: Int = java.lang.Boolean.hashCode(this.didSelfVote);
-      val var5: Int = this.votes.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.didSelfVote);
+      val var8: Int = this.votes.hashCode();
       val var4: Int = Integer.hashCode(this.votesPercentage);
       var var3: Int = 0;
       val var1: Int;
@@ -161,40 +161,40 @@ public data class PollAnswer(answerId: String,
          var3 = this.shouldAnimateTransition.hashCode();
       }
 
-      return (((((((var6 * 31 + var7) * 31 + var8) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
+      return (((((((var6 * 31 + var7) * 31 + var5) * 31 + var8) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = this.answerId;
-      val var8: PollMedia = this.pollMedia;
+      val var5: java.lang.String = this.answerId;
+      val var7: PollMedia = this.pollMedia;
       val var2: Boolean = this.didSelfVote;
-      val var4: java.lang.String = this.votes;
+      val var8: java.lang.String = this.votes;
       val var1: Int = this.votesPercentage;
-      val var9: java.lang.Boolean = this.isSelected;
-      val var5: java.lang.Boolean = this.isVictor;
-      val var6: java.lang.Boolean = this.shouldAnimateTransition;
-      val var7: java.lang.String = this.style;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollAnswer(answerId=");
-      var3.append(var10);
-      var3.append(", pollMedia=");
-      var3.append(var8);
-      var3.append(", didSelfVote=");
-      var3.append(var2);
-      var3.append(", votes=");
-      var3.append(var4);
-      var3.append(", votesPercentage=");
-      var3.append(var1);
-      var3.append(", isSelected=");
-      var3.append(var9);
-      var3.append(", isVictor=");
-      var3.append(var5);
-      var3.append(", shouldAnimateTransition=");
-      var3.append(var6);
-      var3.append(", style=");
-      var3.append(var7);
-      var3.append(")");
-      return var3.toString();
+      val var10: java.lang.Boolean = this.isSelected;
+      val var6: java.lang.Boolean = this.isVictor;
+      val var4: java.lang.Boolean = this.shouldAnimateTransition;
+      val var3: java.lang.String = this.style;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("PollAnswer(answerId=");
+      var9.append(var5);
+      var9.append(", pollMedia=");
+      var9.append(var7);
+      var9.append(", didSelfVote=");
+      var9.append(var2);
+      var9.append(", votes=");
+      var9.append(var8);
+      var9.append(", votesPercentage=");
+      var9.append(var1);
+      var9.append(", isSelected=");
+      var9.append(var10);
+      var9.append(", isVictor=");
+      var9.append(var6);
+      var9.append(", shouldAnimateTransition=");
+      var9.append(var4);
+      var9.append(", style=");
+      var9.append(var3);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

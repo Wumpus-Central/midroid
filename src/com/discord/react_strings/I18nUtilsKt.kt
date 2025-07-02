@@ -3,11 +3,11 @@ package com.discord.react_strings
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
-import b2.b
-import b2.c
-import b2.d
-import b2.e
-import b2.f
+import c2.b
+import c2.c
+import c2.d
+import c2.e
+import c2.f
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 

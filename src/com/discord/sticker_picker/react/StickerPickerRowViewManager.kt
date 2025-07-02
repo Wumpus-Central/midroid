@@ -1,6 +1,5 @@
 package com.discord.sticker_picker.react
 
-import A9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.sticker_picker.StickerPickerRowView
 import com.discord.sticker_picker.react_events.OnLongPressStickerEvent
@@ -14,6 +13,7 @@ import com.facebook.react.viewmanagers.StickerPickerRowViewManagerDelegate
 import com.facebook.react.viewmanagers.StickerPickerRowViewManagerInterface
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import s9.s
 
 @ReactModule(name = "StickerPickerRowView")
 internal class StickerPickerRowViewManager : SimpleViewManager<StickerPickerRowView>, StickerPickerRowViewManagerInterface<StickerPickerRowView> {

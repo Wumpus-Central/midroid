@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import A9.j
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import q1.d
-import tb.f
+import lb.f
+import r1.d
+import s9.j
 
 @f
 public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = null, content: String? = null) {
@@ -26,7 +26,7 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
       this.iconURL = var1;
       this.iconProxyURL = var2;
       this.content = var3;
-      this.imageUrl$delegate = j.b(new d(this));
+      this.imageUrl$delegate = j.a(new d(this));
    }
 
    @JvmStatic

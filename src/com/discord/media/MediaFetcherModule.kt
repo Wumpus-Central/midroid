@@ -1,6 +1,5 @@
 package com.discord.media
 
-import A9.s
 import com.discord.media.react.GetPhotosData
 import com.discord.media.utils.ContentResolverMedia
 import com.discord.media.utils.ContentResolverMedia.QueryType
@@ -13,6 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.q
+import s9.s
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -58,17 +58,17 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var3: Int;
       try {
-         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
          val var12: ReactApplicationContext = this.getReactApplicationContext();
          q.g(var12, "getReactApplicationContext(...)");
-         var16 = i.M0(i.K0(var7.getMedia(var12, var6, var4, var5), new Comparator() {
+         var16 = i.K0(i.I0(var6.getMedia(var12, var7, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return E9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return w9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();
@@ -81,8 +81,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
       if (var3 == var4) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               s.a("start_cursor", java.lang.String.valueOf((i.h0(var16) as ContentResolverMedia).getUri())),
-               s.a("end_cursor", java.lang.String.valueOf((i.s0(var16) as ContentResolverMedia).getUri())),
+               s.a("start_cursor", java.lang.String.valueOf((i.f0(var16) as ContentResolverMedia).getUri())),
+               s.a("end_cursor", java.lang.String.valueOf((i.q0(var16) as ContentResolverMedia).getUri())),
                s.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {

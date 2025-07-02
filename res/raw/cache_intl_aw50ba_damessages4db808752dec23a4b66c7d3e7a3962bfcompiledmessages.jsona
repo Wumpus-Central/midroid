@@ -2973,6 +2973,7 @@
     ],
     "."
   ],
+  "rt69oq": "Inkluderet med Nitro",
   "sPvyr6": [
     "Normalpris: ",
     [
@@ -12727,6 +12728,7 @@
       "guildName"
     ]
   ],
+  "YJlvBA": "Adgang",
   "iPdFOj": "Opdater tilladelser for kommandoer",
   "f72Zqa": "Opret AutoMod-regel",
   "syAApa": "Annuller AutoMod-regel",
@@ -22624,7 +22626,6 @@
   "FCRiT0": "Nye ulæste",
   "PDTjLC": "Næste",
   "621LJC": "Kælenavn",
-  "rX/m/f": "Du er uhyggelig og fantastisk, ligesom denne godte. Hyg dig!",
   "kMYVws": "Få din belønning",
   "LWsAra": "Brugerdefinerede lyde hvor som helst",
   "4lSyCQ": "Brug de brugerdefinerede lyde fra soundboard i alle talekanaler. Kun med Nitro.",
@@ -28991,13 +28992,6 @@
       ]
     ]
   ],
-  "W8/b3d": [
-    "Indløs ",
-    [
-      1,
-      "rewardName"
-    ]
-  ],
   "GQ+4bm": "Vis missionsbjælke",
   "ij5E//": "Mission gennemført!",
   "gvCR4O": "Du er så tæt på!",
@@ -29678,15 +29672,6 @@
   "qyKLdn": "Din belønning er klar!",
   "GYGb3N": "Behold længere med Nitro!",
   "hh7Rb2": "Værsgo, den er til dig med Nitro!",
-  "coKAb2": [
-    "Lås op for belønning til ",
-    [
-      1,
-      "rewardsDuration"
-    ]
-  ],
-  "Y7LIPT": "Start Spilmission",
-  "hyrGU1": "Start Stream-mission",
   "umdNio": "Start videomissionen",
   "smG9qq": [
     "Stream ",
@@ -29887,63 +29872,6 @@
     "."
   ],
   "mOrpXF": "Begynd at spille!",
-  "goA6o6": [
-    "Spil ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "NmzoDg": [
-    "Spil ",
-    [
-      1,
-      "gameTitle"
-    ],
-    " i ",
-    [
-      6,
-      "targetMinutes",
-      {
-        "one": [
-          [
-            7
-          ],
-          " minut"
-        ],
-        "other": [
-          [
-            7
-          ],
-          " minutter"
-        ]
-      },
-      0,
-      "cardinal"
-    ]
-  ],
-  "f/J8v7": "Se videoen",
   "dYE1p6": [
     "Find denne mission igen i Brugerindstillinger ",
     [
@@ -37720,21 +37648,6 @@
   "Bco7ND": "Brug Soundboard",
   "CVxXDA": "Anvend højtaler",
   "08zAV1": "Brug stemmeaktivitet",
-  "XOWfNj": [
-    "Opdater dit brugernavn inden ",
-    [
-      1,
-      "date"
-    ]
-  ],
-  "g/gkAw": [
-    "Fra den ",
-    [
-      1,
-      "date"
-    ],
-    " vil Discord tildele et unikt brugernavn til alle brugere, der endnu ikke har opdateret deres brugernavn."
-  ],
   "NgL2GR": "Og hvor gammel er du?",
   "WeJZy8": "Beklager, men det navn kan ikke anvendes.",
   "LYIh7u": "Hvad er dit navn?",

@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.core.DCDButton;
-import y0.a;
+import z0.a;
 
 public final class CtaButtonBinding implements ViewBinding {
    public final DCDButton ctaButton;

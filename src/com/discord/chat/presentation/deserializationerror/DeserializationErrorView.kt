@@ -18,7 +18,7 @@ import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.q
-import v1.a
+import w1.a
 
 public class DeserializationErrorView  public constructor(context: Context, attrs: AttributeSet? = null) : ChatListLinearLayout {
    private final val binding: DeserializationErrorViewBinding

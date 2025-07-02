@@ -4,7 +4,7 @@ import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.Message
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public data class UploadProgressRow(index: Int, changeType: ChangeType, message: Message, fileId: String) : Row {
@@ -74,18 +74,18 @@ public data class UploadProgressRow(index: Int, changeType: ChangeType, message:
       val var1: Int = this.index;
       val var3: ChangeType = this.changeType;
       val var4: Message = this.message;
-      val var2: java.lang.String = this.fileId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UploadProgressRow(index=");
-      var5.append(var1);
-      var5.append(", changeType=");
-      var5.append(var3);
-      var5.append(", message=");
-      var5.append(var4);
-      var5.append(", fileId=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.fileId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UploadProgressRow(index=");
+      var2.append(var1);
+      var2.append(", changeType=");
+      var2.append(var3);
+      var2.append(", message=");
+      var2.append(var4);
+      var2.append(", fileId=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

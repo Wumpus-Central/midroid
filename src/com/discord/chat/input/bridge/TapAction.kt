@@ -2,7 +2,7 @@ package com.discord.chat.input.bridge
 
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f
 public data class TapAction(action: String, channelId: String, optionName: String) {

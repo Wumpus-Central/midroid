@@ -68,16 +68,16 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public override fun toString(): String {
-      val var2: Any = this.tagValue;
+      val var3: Any = this.tagValue;
       val var1: Float = this.elevation;
-      val var3: ObjectAnimator = this.animator;
+      val var2: ObjectAnimator = this.animator;
       val var4: StringBuilder = new StringBuilder();
       var4.append("AnimateElevationContext(tagValue=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(", elevation=");
       var4.append(var1);
       var4.append(", animator=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

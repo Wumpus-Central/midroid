@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.scroll
 
-import I9.a
+import A9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.G
 import kotlinx.serialization.KSerializer
-import tb.f
+import lb.f
 
 @f(with = ChatScrollType.Serializer::class)
 public enum class ChatScrollType(serialNumber: Int) : IntEnum {

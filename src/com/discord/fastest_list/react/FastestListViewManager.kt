@@ -1,6 +1,5 @@
 package com.discord.fastest_list.react
 
-import A9.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker
@@ -26,6 +25,7 @@ import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
+import s9.s
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
