@@ -5806,8 +5806,13 @@
   ],
   "AHoLf3": "Twój status",
   "Vq4UmZ": "Dodaj status",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Bieżący: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5882,8 +5887,13 @@
     ]
   ],
   "2OyT5O": "Wyczyść jutro",
-  "UpF5QU": [
+  "xRGqo6": [
     "Status własny: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11423,13 +11433,6 @@
   "edQ5vb": "Tylko pracownicy Discorda będą mogli dołączyć do tego serwera.",
   "5HZu09": "Stwórz własny serwer",
   "DWB2YW": "Prześlij ikonę serwera",
-  "WphZ6e": [
-    "Odkrywaj serwery z kategorii ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Gry, muzyka, nauka – znajdziesz tu miejsce dla siebie.",
   "OlDfzM": "Znajdź swoją społeczność na Discordzie",
   "4z5PU1": "Śledź aktualizacje",
@@ -19611,7 +19614,6 @@
   "x87gam": "Zaczekaj",
   "Ym2Ri4": "Strona główna",
   "fuTmEB": "Jak zalogować się na konto",
-  "dsAxQk": "Wybierz kategorię",
   "Olo8FB": "Kategoria",
   "VzuITE": "Co to za serwer? Czym zajmują się jego użytkownicy?",
   "FFFAGh": "Opis serwera",
@@ -19664,6 +19666,7 @@
   "5PoYtr": "Od klubów, przez grupy wspólnej nauki, po wieczory gier, każdy znajdzie tu coś dla siebie.",
   "IT7qoK": "Znajdź swoich znajomych",
   "jjUTLy": "Centrum szkolne",
+  "+MWrWl": "Edytuj profil centrum",
   "8vmKOz": "Dołącz do centrum",
   "H1jCHB": "Znajdź grupy wspólnej nauki, koła naukowe i znajomych w centrum szkolnym swojej szkoły/uczelni!",
   "K/7rLC": "Oficjalny adres e-mail szkoły/uczelni",
@@ -31481,6 +31484,7 @@
   ],
   "0ox7Hh": "Wybrany serwer",
   "Rsth7+": "Wybrany użytkownik",
+  "n5EBAA": "Zgłoś do Discorda",
   "IBA5wc": "Zgłoś wydarzenie",
   "nTe4HB": "Wybrany serwer",
   "BDYHSU": "Zacznij wysyłać wiadomości",

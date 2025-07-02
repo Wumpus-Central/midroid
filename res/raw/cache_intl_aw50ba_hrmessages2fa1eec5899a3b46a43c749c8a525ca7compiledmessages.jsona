@@ -5722,8 +5722,13 @@
   ],
   "AHoLf3": "Tvoj status",
   "Vq4UmZ": "Dodaj status",
-  "GE7Qzc": [
-    "Sadašnji: ",
+  "bnVRrq": [
+    "Trenutačno: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5804,8 +5809,13 @@
     ]
   ],
   "2OyT5O": "Obriši sutra",
-  "UpF5QU": [
+  "xRGqo6": [
     "Prilagođeni status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11369,13 +11379,6 @@
   "edQ5vb": "Samo će se zaposlenici Discorda moći pridružiti ovom serveru.",
   "5HZu09": "Napravi svoj server",
   "DWB2YW": "Prenesi ikonu servera",
-  "WphZ6e": [
-    "Istraži servere iz kategorije ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Od igranja, preko glazbe pa do učenja – za sve što trebaš ima ponešto.",
   "OlDfzM": "Pronađi svoju zajednicu na Discordu",
   "4z5PU1": "Prati ažuriranja",
@@ -19611,7 +19614,6 @@
   "x87gam": "Pričekaj",
   "Ym2Ri4": "Početna",
   "fuTmEB": "Kako se prijavljuješ u svoj račun",
-  "dsAxQk": "Odaberi kategoriju",
   "Olo8FB": "Kategorija",
   "VzuITE": "Čemu služi ovaj server? Čime se ljudi tu bave?",
   "FFFAGh": "Opis servera",
@@ -19665,6 +19667,7 @@
   "5PoYtr": "Od klubova, do grupa za učenje, do tuluma za gledanje tekmi, negdje ćeš već naći nešto za sebe.",
   "IT7qoK": "Pronađi svoje ljude",
   "jjUTLy": "Učenički Hub",
+  "+MWrWl": "Uredi profil za Hub",
   "8vmKOz": "Pridruži se Hubu",
   "H1jCHB": "Pronađi grupe za učenje, klubove i prijatelje u Učeničkom Hubu svoje škole!",
   "K/7rLC": "Službena adresa e-pošte tvoje škole",
@@ -31593,6 +31596,7 @@
   ],
   "0ox7Hh": "Odabrani server",
   "Rsth7+": "Odabrani korisnik",
+  "n5EBAA": "Prijavi Discordu",
   "IBA5wc": "Prijavi događaj",
   "nTe4HB": "Odabrani server",
   "BDYHSU": "Počni se tekstati",

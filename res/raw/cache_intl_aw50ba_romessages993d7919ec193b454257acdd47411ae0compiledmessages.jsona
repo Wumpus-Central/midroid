@@ -5583,8 +5583,13 @@
   ],
   "AHoLf3": "Statusul tău",
   "Vq4UmZ": "Adaugă stare",
-  "GE7Qzc": [
-    "Versiune actuală: ",
+  "bnVRrq": [
+    "Actual: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5653,8 +5658,13 @@
     ]
   ],
   "2OyT5O": "Șterge mâine",
-  "UpF5QU": [
+  "xRGqo6": [
     "Status personalizat: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10983,13 +10993,6 @@
   "edQ5vb": "Doar angajații Discord se pot alătura acestui server.",
   "5HZu09": "Creează-ți propriul server",
   "DWB2YW": "Încarcă o pictogramă de server",
-  "WphZ6e": [
-    "Explorează serverele din categoria ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Avem locul perfect pentru tine, indiferent dacă te interesează jocurile, muzica sau studiile.",
   "OlDfzM": "Găsește-ți comunitatea pe Discord",
   "4z5PU1": "Urmărește actualizările",
@@ -19062,7 +19065,6 @@
   "x87gam": "Stai puțin",
   "Ym2Ri4": "Acasă",
   "fuTmEB": "Cum te poți conecta la contul tău",
-  "dsAxQk": "Alege o categorie",
   "Olo8FB": "Categorie",
   "VzuITE": "Care e treaba cu serverul tău? Ce face lumea acolo?",
   "FFFAGh": "Descrierea serverului",
@@ -19116,6 +19118,7 @@
   "5PoYtr": "Fie că e vorba de un club, de un grup de studii sau de o seară de gaming, locul pe care ți-l dorești există.",
   "IT7qoK": "Găsește-ți locul ideal",
   "jjUTLy": "Hub studențesc",
+  "+MWrWl": "Editează profil hub",
   "8vmKOz": "Alătură-te hub-ului",
   "H1jCHB": "Găsește grupuri de studii, cluburi și prieteni în hub-ul studențesc pentru instituția ta de învățământ!",
   "K/7rLC": "Adresa de e-mail oficială a școlii",
@@ -30522,6 +30525,7 @@
   ],
   "0ox7Hh": "Serverul selectat",
   "Rsth7+": "Utilizatorul selectat",
+  "n5EBAA": "Raportează către Discord",
   "IBA5wc": "Raportează evenimentul",
   "nTe4HB": "Serverul selectat",
   "BDYHSU": "Începe să scrii",

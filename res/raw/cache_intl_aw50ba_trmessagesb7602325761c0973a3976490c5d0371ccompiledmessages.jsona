@@ -5588,8 +5588,13 @@
   ],
   "AHoLf3": "Durumun",
   "Vq4UmZ": "Durum Ekle",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Mevcut: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5658,8 +5663,13 @@
     " içinde temizle"
   ],
   "2OyT5O": "Yarın temizle",
-  "UpF5QU": [
+  "xRGqo6": [
     "Özel durum: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10963,13 +10973,6 @@
   "edQ5vb": "Bu sunucuya yalnızca Discord çalışanları katılabilir.",
   "5HZu09": "Sunucunu Oluştur",
   "DWB2YW": "Bir Sunucu Simgesi Yükle",
-  "WphZ6e": [
-    [
-      1,
-      "categoryName"
-    ],
-    " sunucularını keşfet"
-  ],
   "SdMhrq": "Oyundan müziğe ve eğitime kadar burada senin için bir yer var.",
   "OlDfzM": "Topluluğunu Discord'da bul",
   "4z5PU1": "Güncellemeleri Takip Et",
@@ -19141,7 +19144,6 @@
   "x87gam": "Bekle",
   "Ym2Ri4": "Ana Sayfa",
   "fuTmEB": "Hesabına nasıl giriş yapıyorsun",
-  "dsAxQk": "Kategori seç",
   "Olo8FB": "Kategori",
   "VzuITE": "Sunucun ne için? İnsanlar burada ne yapacak?",
   "FFFAGh": "Sunucu Açıklaması",
@@ -19194,6 +19196,7 @@
   "5PoYtr": "Kulüplerden, ders çalışma gruplarına ve oyun gecelerine, senin için bir ortam var.",
   "IT7qoK": "Toplumunu bul",
   "jjUTLy": "Öğrenci Merkezi",
+  "+MWrWl": "Merkez Profili Düzenle",
   "8vmKOz": "Merkeze Katıl",
   "H1jCHB": "Okulunun Öğrenci Merkezi'nde çalışma gruplarını, kulüpleri ve arkadaşlarını bul!",
   "K/7rLC": "Resmi Okul E-Posta Adresi",
@@ -30557,6 +30560,7 @@
   ],
   "0ox7Hh": "Seçili Sunucu",
   "Rsth7+": "Seçili Kullanıcı",
+  "n5EBAA": "Discord'a Bildir",
   "IBA5wc": "Etkinliği Bildir",
   "nTe4HB": "Seçili Sunucu",
   "BDYHSU": "Yazmaya Başla",

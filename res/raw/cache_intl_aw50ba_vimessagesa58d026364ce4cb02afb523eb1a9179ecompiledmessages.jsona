@@ -5626,8 +5626,13 @@
   ],
   "AHoLf3": "Trạng Thái Của Bạn",
   "Vq4UmZ": "Thêm trạng thái",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Hiện tại: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5696,8 +5701,13 @@
     ]
   ],
   "2OyT5O": "Xóa vào ngày mai",
-  "UpF5QU": [
+  "xRGqo6": [
     "Trạng thái tùy chỉnh: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11038,13 +11048,6 @@
   "edQ5vb": "Chỉ có nhân viên Discord mới có thể tham gia máy chủ này.",
   "5HZu09": "Tạo Máy Chủ Của Bạn",
   "DWB2YW": "Tải Lên Biểu Tượng Máy Chủ",
-  "WphZ6e": [
-    "Khám phá máy chủ ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Từ game cho đến âm nhạc và giáo dục, sẽ luôn có một nơi phù hợp với bạn trên Discord.",
   "OlDfzM": "Tìm những cộng đồng dành cho bạn trên Discord",
   "4z5PU1": "Theo dõi Cập Nhật",
@@ -19114,7 +19117,6 @@
   "x87gam": "Chờ Đã",
   "Ym2Ri4": "Trang chủ",
   "fuTmEB": "Cách bạn đăng nhập vào tài khoản của mình",
-  "dsAxQk": "Chọn danh mục",
   "Olo8FB": "Danh Mục",
   "VzuITE": "Mục đích của máy chủ này là gì? Mọi người thường làm gì ở đây?",
   "FFFAGh": "Mô Tả Máy Chủ",
@@ -19167,6 +19169,7 @@
   "5PoYtr": "Từ câu lạc bộ cho tới nhóm học tập, đến các buổi tối chơi game, đây chính là nơi dành cho bạn.",
   "IT7qoK": "Tìm bạn bè của bạn",
   "jjUTLy": "Student Hub",
+  "+MWrWl": "Chỉnh sửa Hồ sơ Hub",
   "8vmKOz": "Tham gia Hub",
   "H1jCHB": "Tìm nhóm học tập, câu lạc bộ và bạn bè trong Student Hub cho trường học của bạn!",
   "K/7rLC": "Địa chỉ email chính thức của trường học",
@@ -30597,6 +30600,7 @@
   ],
   "0ox7Hh": "Máy chủ đã chọn",
   "Rsth7+": "Người Dùng Đã Chọn",
+  "n5EBAA": "Báo cáo cho Discord",
   "IBA5wc": "Báo cáo Sự Kiện",
   "nTe4HB": "Máy chủ đã chọn",
   "BDYHSU": "Bắt đầu nhắn tin",

@@ -5609,8 +5609,13 @@
   ],
   "AHoLf3": "Il tuo stato",
   "Vq4UmZ": "Aggiungi stato",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Attuale: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5679,8 +5684,13 @@
     ]
   ],
   "2OyT5O": "Svuota domani",
-  "UpF5QU": [
+  "xRGqo6": [
     "Stato personalizzato: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11009,13 +11019,6 @@
   "edQ5vb": "Solo i dipendenti di Discord potrebbero unirsi a questo server.",
   "5HZu09": "Crea il tuo server",
   "DWB2YW": "Carica un'icona per il server",
-  "WphZ6e": [
-    "Esplora server di ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Dai giochi, alla musica, fino all'apprendimento: c'è un posto per te.",
   "OlDfzM": "Trova la tua community su Discord",
   "4z5PU1": "Segui aggiornamenti",
@@ -19094,7 +19097,6 @@
   "x87gam": "Un momento",
   "Ym2Ri4": "Pagina principale",
   "fuTmEB": "Come fai l'accesso al tuo conto",
-  "dsAxQk": "Scegli categoria",
   "Olo8FB": "Categoria",
   "VzuITE": "Cosa succede nel tuo server? Cosa fa la gente qui?",
   "FFFAGh": "Descrizione del server",
@@ -19147,6 +19149,7 @@
   "5PoYtr": "Da locali, a gruppi studio, a serate di giochi, troverai di sicuro il posto che fa per te.",
   "IT7qoK": "Trova persone come te",
   "jjUTLy": "Hub studenti",
+  "+MWrWl": "Modifica profilo dell'hub",
   "8vmKOz": "Unisciti all'hub",
   "H1jCHB": "Trova gruppi di studio, club e amici nell'hub studenti del tuo istituto!",
   "K/7rLC": "Indirizzo e-mail ufficiale dell'istituto",
@@ -30591,6 +30594,7 @@
   ],
   "0ox7Hh": "Server selezionato",
   "Rsth7+": "Utente selezionato",
+  "n5EBAA": "Segnala a Discord",
   "IBA5wc": "Segnala evento",
   "nTe4HB": "Server selezionato",
   "BDYHSU": "Inizia a scrivere messaggi",

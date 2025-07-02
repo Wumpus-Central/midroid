@@ -5805,8 +5805,13 @@
   ],
   "AHoLf3": "Tavo būsena",
   "Vq4UmZ": "Pridėti būseną",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Dabartinė: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5875,8 +5880,13 @@
     ]
   ],
   "2OyT5O": "Išvalyti rytoj",
-  "UpF5QU": [
-    "Pritaikyta būsena: ",
+  "xRGqo6": [
+    "Tinkinta būsena: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11367,13 +11377,6 @@
   "edQ5vb": "Prisijungti prie šio serverio galės tik Discord darbuotojai.",
   "5HZu09": "Sukurti savo serverį",
   "DWB2YW": "Įkelti serverio piktogramą",
-  "WphZ6e": [
-    "Naršyk serverius: ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Nuo žaidimų iki muzikos ir mokymosi – rasi savo vietą.",
   "OlDfzM": "Rask savo bendruomenę Discord",
   "4z5PU1": "Stebėti atnaujinimus",
@@ -19709,7 +19712,6 @@
   "x87gam": "Palaukite",
   "Ym2Ri4": "Pradžia",
   "fuTmEB": "Kaip prisijungti prie savo paskyros",
-  "dsAxQk": "Pasirinkti kategoriją",
   "Olo8FB": "Kategorija",
   "VzuITE": "Kam skirtas tavo serveris? Ką žmonės čia daro?",
   "FFFAGh": "Serverio aprašas",
@@ -19764,6 +19766,7 @@
   "5PoYtr": "Ar tai būtų klubai, ar mokymosi grupės, ar žaidimų vakarai – visada rasi, kur nori būti.",
   "IT7qoK": "Rask žmones",
   "jjUTLy": "Student Hub",
+  "+MWrWl": "Redaguoti Hub serverio profilį",
   "8vmKOz": "Prisijungti prie Hub",
   "H1jCHB": "Rask savo mokymosi grupes, klubus ir draugus savo mokyklos / universiteto Student Hub serveryje!",
   "K/7rLC": "Oficialus mokyklos / universiteto el. pašto adresas",
@@ -31588,6 +31591,7 @@
   ],
   "0ox7Hh": "Pasirinktas serveris",
   "Rsth7+": "Pasirinktas naudotojas",
+  "n5EBAA": "Pranešti Discord",
   "IBA5wc": "Pranešti apie renginį",
   "nTe4HB": "Pasirinktas serveris",
   "BDYHSU": "Pradėti žinutę",

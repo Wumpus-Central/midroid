@@ -5574,8 +5574,13 @@
   ],
   "AHoLf3": "Your Status",
   "Vq4UmZ": "Add Status",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Current: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5637,8 +5642,13 @@
     ]
   ],
   "2OyT5O": "Clear tomorrow",
-  "UpF5QU": [
+  "xRGqo6": [
     "Custom status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10973,14 +10983,6 @@
   "edQ5vb": "Only Discord employees would be able to join this server.",
   "5HZu09": "Create Your Server",
   "DWB2YW": "Upload a Server Icon",
-  "WphZ6e": [
-    "Explore ",
-    [
-      1,
-      "categoryName"
-    ],
-    " servers"
-  ],
   "SdMhrq": "From gaming, to music, to learning, there's a place for you.",
   "OlDfzM": "Find your community on Discord",
   "4z5PU1": "Follow Updates",
@@ -19043,7 +19045,6 @@
   "x87gam": "Hang On",
   "Ym2Ri4": "Home",
   "fuTmEB": "How you sign into your account",
-  "dsAxQk": "Choose category",
   "Olo8FB": "Category",
   "VzuITE": "What's your server about? What do people do there?",
   "FFFAGh": "Server Description",
@@ -19097,6 +19098,7 @@
   "5PoYtr": "From clubs, to study groups, to game nights, there's a place for you.",
   "IT7qoK": "Find your people",
   "jjUTLy": "Student Hub",
+  "+MWrWl": "Edit Hub Profile",
   "8vmKOz": "Join Hub",
   "H1jCHB": "Find study groups, clubs and friends in the Student Hub for your school or university!",
   "K/7rLC": "Official School/UNI Email Address",
@@ -30490,6 +30492,7 @@
   ],
   "0ox7Hh": "Selected Server",
   "Rsth7+": "Selected User",
+  "n5EBAA": "Report to Discord",
   "IBA5wc": "Report Event",
   "nTe4HB": "Selected Server",
   "BDYHSU": "Start Texting",

@@ -48,7 +48,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       var2 = var2.toLowerCase(var9);
       q.g(var2, "toLowerCase(...)");
       val var6: Int = var2.length();
-      val var3: Int = var1.length();
+      var var3: Int = var1.length();
       if (var3 > var6) {
          return false;
       } else if (var3 == var6) {
@@ -56,28 +56,32 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       } else {
          val var7: Int = var1.length();
          var var5: Int = 0;
+         var3 = 0;
 
-         for (int var12 = 0; var5 < var7; var5++) {
+         while (var5 < var7) {
             val var8: Char = var1.charAt(var5);
-            var var4: Int = var12;
 
+            var var4: Int;
             while (true) {
-               var12 = var4;
-               if (var4 >= var6) {
+               var4 = var3;
+               if (var3 >= var6) {
                   break;
                }
 
-               var12 = var4 + 1;
-               if (var2.charAt(var4) == var8) {
+               var4 = var3 + 1;
+               if (var2.charAt(var3) == var8) {
                   break;
                }
 
-               var4 = var12;
+               var3 = var4;
             }
 
-            if (var12 == var6) {
+            if (var4 == var6) {
                return false;
             }
+
+            var5++;
+            var3 = var4;
          }
 
          return true;
@@ -201,11 +205,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
          val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
          val var28: UserSearchQuerySetFilters = var24.getFilters();
          if (var28 == null || q.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
-            this.searchUsers(var16, var24);
+            this.searchUsers(var20, var24);
          }
       }
    }
@@ -263,8 +267,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var30: java.util.List;
                   if (var5) {
-                     val var32: java.lang.String = var27.getUsername();
-                     val var10: java.lang.String = var27.getGlobalName();
+                     val var10: java.lang.String = var27.getUsername();
+                     val var32: java.lang.String = var27.getGlobalName();
                      val var12: java.lang.String = var27.getFriendNickname();
                      val var17: java.util.Map = var27.getNicknames();
                      val var28: UserSearchQuerySetFilters = var2.getFilters();
@@ -275,7 +279,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var29 = null;
                      }
 
-                     var30 = i.n(new java.lang.String[]{var32, var10, var12, (java.lang.String)var17.get(var29)});
+                     var30 = i.n(new java.lang.String[]{var10, var32, var12, (java.lang.String)var17.get(var29)});
                   } else {
                      if (var5) {
                         throw new n();

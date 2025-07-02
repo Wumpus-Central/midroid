@@ -5606,8 +5606,13 @@
   ],
   "AHoLf3": "Oma tila",
   "Vq4UmZ": "Lisää tila",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Nykyinen: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5678,8 +5683,13 @@
     " kuluttua"
   ],
   "2OyT5O": "Tyhjennä huomenna",
-  "UpF5QU": [
+  "xRGqo6": [
     "Mukautettu tila: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11032,14 +11042,6 @@
   "edQ5vb": "Vain Discordin työntekijät voisivat liittyä tälle palvelimelle.",
   "5HZu09": "Luo oma palvelin",
   "DWB2YW": "Lataa palvelimen kuvake",
-  "WphZ6e": [
-    "Tutustu aihetta ",
-    [
-      1,
-      "categoryName"
-    ],
-    " käsitteleviin palvelimiin"
-  ],
   "SdMhrq": "Aiheita pelaamisesta musiikkiin, oppimiseen ja kaikkeen muuhun. Löydä oma paikkasi.",
   "OlDfzM": "Etsi oma yhteisösi Discordista",
   "4z5PU1": "Seuraa päivityksiä",
@@ -19101,7 +19103,6 @@
   "x87gam": "Odotas hetki",
   "Ym2Ri4": "Aloitussivu",
   "fuTmEB": "Tilillesi kirjautuminen",
-  "dsAxQk": "Valitse luokka",
   "Olo8FB": "Luokka",
   "VzuITE": "Mistä palvelimessasi oikein on kyse? Mitä ihmiset tekevät siellä?",
   "FFFAGh": "Palvelimen kuvaus",
@@ -19156,6 +19157,7 @@
   "5PoYtr": "Seuroista opintopiireihin ja peli-iltoihin – löydä itsellesi sopiva paikka.",
   "IT7qoK": "Etsi tutut ihmiset",
   "jjUTLy": "Oppilaskeskus",
+  "+MWrWl": "Muokkaa keskuksen profiilia",
   "8vmKOz": "Liity keskukseen",
   "H1jCHB": "Etsi opintopiirejä, seuroja ja opiskelukavereitasi oppilaitoksesi oppilaskeskuksesta!",
   "K/7rLC": "Virallinen oppilaitoksen sähköpostiosoite",
@@ -30579,6 +30581,7 @@
   ],
   "0ox7Hh": "Valittu palvelin",
   "Rsth7+": "Valittu käyttäjä",
+  "n5EBAA": "Tee ilmoitus Discordille",
   "IBA5wc": "Ilmianna tapahtuma",
   "nTe4HB": "Valittu palvelin",
   "BDYHSU": "Aloita viestiminen",

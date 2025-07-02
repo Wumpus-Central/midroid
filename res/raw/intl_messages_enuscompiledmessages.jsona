@@ -5665,8 +5665,13 @@
   ],
   "AHoLf3": "Your Status",
   "Vq4UmZ": "Add Status",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Current: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5735,8 +5740,13 @@
     ]
   ],
   "2OyT5O": "Clear tomorrow",
-  "UpF5QU": [
+  "xRGqo6": [
     "Custom status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -7586,7 +7596,7 @@
   "tYBBW1": "The activity was closed because it tried to open a disallowed web page.",
   "xAW71d": "Start a casual game or watch party with your closest friends!",
   "HOPqzc": "Activities in DMs",
-  "JBnc7O": "Activity has ended.",
+  "JBnc7O": "Game has ended.",
   "hbiAOz": [
     "Error ",
     [
@@ -7606,7 +7616,7 @@
     " for the first time."
   ],
   "E0gf5u": "Learn more about private apps.",
-  "cX9uLS": "Activity ended. Start a new one?",
+  "cX9uLS": "Game ended. Start a new one?",
   "Etp6uL": "You cannot join Activities in this channel.",
   "oQn0h4": "Activity started",
   "w5SApq": "You do not have permissions to join this Voice Channel.",
@@ -7823,6 +7833,61 @@
   "G99XFh": "an Activity",
   "969dEB": "Embed Links",
   "sMOuub": "Emoji",
+  "SYlkPj": [
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "username"
+        ]
+      ],
+      [
+        [
+          1,
+          "usernameOnClick"
+        ]
+      ]
+    ],
+    " added a new emoji, :",
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "emojiName"
+        ]
+      ],
+      [
+        [
+          1,
+          "emojiOnClick"
+        ]
+      ]
+    ],
+    ":"
+  ],
+  "7NBgIS": [
+    [
+      8,
+      "$link",
+      [
+        [
+          1,
+          "username"
+        ]
+      ],
+      [
+        [
+          1,
+          "usernameOnClick"
+        ]
+      ]
+    ],
+    " added a new emoji."
+  ],
   "yZFibW": "Add to Favorites",
   "O783tb": "Activities",
   "vvaizs": "Flags",
@@ -11353,14 +11418,6 @@
   "edQ5vb": "Only Discord employees would be able to join this server.",
   "5HZu09": "Create Your Server",
   "DWB2YW": "Upload a Server Icon",
-  "WphZ6e": [
-    "Explore ",
-    [
-      1,
-      "categoryName"
-    ],
-    " servers"
-  ],
   "SdMhrq": "From gaming, to music, to learning, there's a place for you.",
   "OlDfzM": "Find your community on Discord",
   "4z5PU1": "Follow Updates",
@@ -19616,7 +19673,6 @@
   "x87gam": "Hold Up",
   "Ym2Ri4": "Home",
   "fuTmEB": "How you sign into your account",
-  "dsAxQk": "Choose category",
   "Olo8FB": "Category",
   "VzuITE": "What's your server about? What do people do there?",
   "FFFAGh": "Server Description",
@@ -19670,6 +19726,7 @@
   "5PoYtr": "From clubs, to study groups, to game nights, there’s a place for you.",
   "IT7qoK": "Find your people",
   "jjUTLy": "Student Hub",
+  "+MWrWl": "Edit Hub Profile",
   "8vmKOz": "Join Hub",
   "H1jCHB": "Find study groups, clubs, and friends in the Student Hub for your school!",
   "K/7rLC": "Official School Email Address",
@@ -19752,7 +19809,7 @@
     ],
     " from this Student Hub?"
   ],
-  "XnuOvL": "Edit settings",
+  "XnuOvL": "Edit Settings",
   "w9tsNj": [
     "Edit Settings for ",
     [
@@ -31260,6 +31317,7 @@
   ],
   "0ox7Hh": "Selected Server",
   "Rsth7+": "Selected User",
+  "n5EBAA": "Report to Discord",
   "IBA5wc": "Report Event",
   "nTe4HB": "Selected Server",
   "BDYHSU": "Start Texting",

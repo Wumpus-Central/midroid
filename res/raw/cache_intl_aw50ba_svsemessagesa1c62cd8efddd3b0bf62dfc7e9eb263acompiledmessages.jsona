@@ -5591,8 +5591,13 @@
   ],
   "AHoLf3": "Din status",
   "Vq4UmZ": "Lägg till status",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Nuvarande: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5661,8 +5666,13 @@
     ]
   ],
   "2OyT5O": "Rensa i morgon",
-  "UpF5QU": [
+  "xRGqo6": [
     "Anpassad status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10964,14 +10974,6 @@
   "edQ5vb": "Endast Discord-personal kommer att kunna ansluta sig till den här servern.",
   "5HZu09": "Skapa din server",
   "DWB2YW": "Ladda upp en serverikon",
-  "WphZ6e": [
-    "Utforska ",
-    [
-      1,
-      "categoryName"
-    ],
-    "-servrar"
-  ],
   "SdMhrq": "Här finns allt från gaming till musik och utbildning.",
   "OlDfzM": "Hitta ditt community på Discord",
   "4z5PU1": "Följ uppdateringar",
@@ -19027,7 +19029,6 @@
   "x87gam": "Vänta",
   "Ym2Ri4": "Start",
   "fuTmEB": "Så här loggar du in på ditt konto",
-  "dsAxQk": "Välj kategori",
   "Olo8FB": "Kategori",
   "VzuITE": "Vad handlar din server om? Vad gör man där?",
   "FFFAGh": "Serverbeskrivning",
@@ -19082,6 +19083,7 @@
   "5PoYtr": "Allt från klubbar till studiegrupper och spelnätter, det finns en plats för dig.",
   "IT7qoK": "Hitta ditt folk",
   "jjUTLy": "Studenthubb",
+  "+MWrWl": "Redigera hubbprofil",
   "8vmKOz": "Gå med i hubben",
   "H1jCHB": "Hitta studiegrupper, klubbar och vänner i din skolas studenthubb!",
   "K/7rLC": "Officiell studentmejl",
@@ -30482,6 +30484,7 @@
   ],
   "0ox7Hh": "Vald server",
   "Rsth7+": "Vald användare",
+  "n5EBAA": "Anmäl till Discord",
   "IBA5wc": "Anmäl event",
   "nTe4HB": "Vald server",
   "BDYHSU": "Börja texta",

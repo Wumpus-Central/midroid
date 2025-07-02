@@ -2,7 +2,6 @@ package com.discord.user_search_worker
 
 import A9.s
 import java.util.ArrayList
-import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
@@ -10,7 +9,6 @@ import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
-import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
 import tb.f
@@ -151,29 +149,29 @@ internal data class UserSearchTransformedUser(id: String,
 
    public override fun toString(): String {
       val var1: java.lang.String = this.id;
-      val var4: java.lang.String = this.username;
-      val var2: java.lang.Boolean = this.isBot;
-      val var8: java.lang.Boolean = this.isFriend;
-      val var6: java.lang.String = this.friendNickname;
+      val var5: java.lang.String = this.username;
+      val var7: java.lang.Boolean = this.isBot;
+      val var2: java.lang.Boolean = this.isFriend;
+      val var4: java.lang.String = this.friendNickname;
       val var3: java.lang.String = this.globalName;
-      val var7: java.util.Map = this.nicknames;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("UserSearchTransformedUser(id=");
-      var5.append(var1);
-      var5.append(", username=");
-      var5.append(var4);
-      var5.append(", isBot=");
-      var5.append(var2);
-      var5.append(", isFriend=");
-      var5.append(var8);
-      var5.append(", friendNickname=");
-      var5.append(var6);
-      var5.append(", globalName=");
-      var5.append(var3);
-      var5.append(", nicknames=");
-      var5.append(var7);
-      var5.append(")");
-      return var5.toString();
+      val var8: java.util.Map = this.nicknames;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("UserSearchTransformedUser(id=");
+      var6.append(var1);
+      var6.append(", username=");
+      var6.append(var5);
+      var6.append(", isBot=");
+      var6.append(var7);
+      var6.append(", isFriend=");
+      var6.append(var2);
+      var6.append(", friendNickname=");
+      var6.append(var4);
+      var6.append(", globalName=");
+      var6.append(var3);
+      var6.append(", nicknames=");
+      var6.append(var8);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {
@@ -183,8 +181,6 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    internal object Serializer : KSerializer {
-      private final val TRANSFORMED_USER_KEYS: Set<String> = w.i(new java.lang.String[]{"id", "username", "isBot", "isFriend", "friendNickname", "globalName"})
-
       public open val descriptor: SerialDescriptor
          public open get() {
             return g.a("UserSearchTransformedUser", i.a);
@@ -192,105 +188,114 @@ internal data class UserSearchTransformedUser(id: String,
 
 
       public open fun deserialize(decoder: Decoder): UserSearchTransformedUser {
-         q.h(var1, "decoder");
-         val var11: JsonElement = (var1 as e).i();
-         q.f(var11, "null cannot be cast to non-null type kotlinx.serialization.json.JsonObject");
-         val var5: JsonObject = var11 as JsonObject;
-         val var12: LinkedHashMap = new LinkedHashMap();
+         var var5: JsonObject;
+         var var26: java.util.Map;
+         label73: {
+            q.h(var1, "decoder");
+            val var10: JsonElement = (var1 as e).i();
+            q.f(var10, "null cannot be cast to non-null type kotlinx.serialization.json.JsonObject");
+            var5 = var10 as JsonObject;
+            val var11: JsonElement = (var10 as JsonObject).get("nicknames") as JsonElement;
+            if (var11 != null) {
+               val var16: java.util.Map;
+               if (var11 !is JsonObject) {
+                  var16 = B9.q.h();
+               } else {
+                  val var12: java.util.Map = var11 as java.util.Map;
+                  val var2: ArrayList = new ArrayList((var11 as java.util.Map).size());
 
-         for (Entry var4 : var5.entrySet()) {
-            val var3: java.lang.String = var4.getKey() as java.lang.String;
-            val var6: JsonElement = var4.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var3) && (xb.g.p(var6).j() || xb.g.p(var6) is JsonNull)) {
-               var12.put(var4.getKey(), var4.getValue());
+                  for (Entry var13 : var12.entrySet()) {
+                     val var3: java.lang.String = var13.getKey() as java.lang.String;
+                     val var14: JsonElement = var13.getValue() as JsonElement;
+                     val var15: java.lang.String;
+                     if (xb.g.p(var14).j()) {
+                        var15 = xb.g.p(var14).a();
+                     } else {
+                        var15 = null;
+                     }
+
+                     var2.add(s.a(var3, var15));
+                  }
+
+                  var16 = B9.q.t(var2);
+               }
+
+               var26 = var16;
+               if (var16 != null) {
+                  break label73;
+               }
+            }
+
+            var26 = B9.q.h();
+         }
+
+         var var7: java.lang.String;
+         var var8: java.lang.String;
+         var var27: java.lang.Boolean;
+         label58: {
+            var var17: Any = var5.get("id");
+            q.e(var17);
+            var7 = xb.g.p(var17 as JsonElement).a();
+            var17 = var5.get("username");
+            q.e(var17);
+            var8 = xb.g.p(var17 as JsonElement).a();
+            var17 = var5.get("isBot") as JsonElement;
+            if (var17 != null) {
+               var17 = xb.g.p((JsonElement)var17);
+               if (var17 != null) {
+                  var27 = xb.g.f((JsonPrimitive)var17);
+                  break label58;
+               }
+            }
+
+            var27 = null;
+         }
+
+         var var28: java.lang.Boolean;
+         label53: {
+            val var21: JsonElement = var5.get("isFriend") as JsonElement;
+            if (var21 != null) {
+               val var22: JsonPrimitive = xb.g.p(var21);
+               if (var22 != null) {
+                  var28 = xb.g.f(var22);
+                  break label53;
+               }
+            }
+
+            var28 = null;
+         }
+
+         label48: {
+            val var23: JsonElement = var5.get("friendNickname") as JsonElement;
+            if (var23 != null) {
+               val var24: JsonPrimitive = xb.g.p(var23);
+               if (var24 != null) {
+                  if (var24.j()) {
+                     var25 = var24.a();
+                  } else {
+                     var25 = null;
+                  }
+                  break label48;
+               }
+            }
+
+            var25 = null;
+         }
+
+         val var9: JsonElement = var5.get("globalName") as JsonElement;
+         var var29: java.lang.String = null;
+         if (var9 != null) {
+            val var30: JsonPrimitive = xb.g.p(var9);
+            var29 = null;
+            if (var30 != null) {
+               var29 = null;
+               if (var30.j()) {
+                  var29 = var30.a();
+               }
             }
          }
 
-         val var23: ArrayList = new ArrayList(var12.size());
-         val var25: java.util.Iterator = var12.entrySet().iterator();
-
-         while (true) {
-            val var2: Boolean = var25.hasNext();
-            var var13: java.lang.String = null;
-            if (!var2) {
-               var var8: java.lang.String;
-               var var9: java.lang.String;
-               var var32: java.util.Map;
-               label55: {
-                  var32 = B9.q.t(var23);
-                  var var14: Any = var5.get("id");
-                  q.e(var14);
-                  var8 = xb.g.p(var14 as JsonElement).a();
-                  var14 = var5.get("username");
-                  q.e(var14);
-                  var9 = xb.g.p(var14 as JsonElement).a();
-                  var14 = var5.get("isBot") as JsonElement;
-                  if (var14 != null) {
-                     var14 = xb.g.p((JsonElement)var14);
-                     if (var14 != null) {
-                        var24 = xb.g.f((JsonPrimitive)var14);
-                        break label55;
-                     }
-                  }
-
-                  var24 = null;
-               }
-
-               label50: {
-                  val var18: JsonElement = var5.get("isFriend") as JsonElement;
-                  if (var18 != null) {
-                     val var19: JsonPrimitive = xb.g.p(var18);
-                     if (var19 != null) {
-                        var26 = xb.g.f(var19);
-                        break label50;
-                     }
-                  }
-
-                  var26 = null;
-               }
-
-               label45: {
-                  val var20: JsonElement = var5.get("friendNickname") as JsonElement;
-                  if (var20 != null) {
-                     val var21: JsonPrimitive = xb.g.p(var20);
-                     if (var21 != null) {
-                        if (var21.j()) {
-                           var22 = var21.a();
-                        } else {
-                           var22 = null;
-                        }
-                        break label45;
-                     }
-                  }
-
-                  var22 = null;
-               }
-
-               val var10: JsonElement = var5.get("globalName") as JsonElement;
-               var var27: java.lang.String = null;
-               if (var10 != null) {
-                  val var33: JsonPrimitive = xb.g.p(var10);
-                  var27 = null;
-                  if (var33 != null) {
-                     var27 = null;
-                     if (var33.j()) {
-                        var27 = var33.a();
-                     }
-                  }
-               }
-
-               return new UserSearchTransformedUser(var8, var9, var24, var26, var22, var27, var32);
-            }
-
-            val var30: Entry = var25.next() as Entry;
-            val var29: java.lang.String = var30.getKey() as java.lang.String;
-            val var31: JsonElement = var30.getValue() as JsonElement;
-            if (xb.g.p(var31).j()) {
-               var13 = xb.g.p(var31).a();
-            }
-
-            var23.add(s.a(var29, var13));
-         }
+         return new UserSearchTransformedUser(var7, var8, var27, var28, var25, var29, var26);
       }
 
       public open fun serialize(encoder: Encoder, value: UserSearchTransformedUser) {

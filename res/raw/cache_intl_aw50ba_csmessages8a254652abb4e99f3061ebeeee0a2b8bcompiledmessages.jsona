@@ -5801,8 +5801,13 @@
   ],
   "AHoLf3": "Tvůj stav",
   "Vq4UmZ": "Přidat stav",
-  "GE7Qzc": [
-    "Aktuální: ",
+  "bnVRrq": [
+    "Aktuálně: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5883,8 +5888,13 @@
     ]
   ],
   "2OyT5O": "Vymazat zítra",
-  "UpF5QU": [
+  "xRGqo6": [
     "Vlastní stav: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11424,13 +11434,6 @@
   "edQ5vb": "K tomuto serveru se budou moct připojit pouze zaměstnanci Discordu.",
   "5HZu09": "Vytvoř si svůj server",
   "DWB2YW": "Nahrát ikonu serveru",
-  "WphZ6e": [
-    "Prozkoumej servery zaměřené na ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Od hraní přes hudbu po vzdělávání – i ty zde najdeš své místo.",
   "OlDfzM": "Najdi na Discordu svou komunitu",
   "4z5PU1": "Sledovat aktualizace",
@@ -19747,7 +19750,6 @@
   "x87gam": "Vydrž",
   "Ym2Ri4": "Úvod",
   "fuTmEB": "Jak se přihlašuješ ke svému účtu",
-  "dsAxQk": "Vyber kategorii",
   "Olo8FB": "Kategorie",
   "VzuITE": "O čem tvůj server je? Co tam lidé dělají?",
   "FFFAGh": "Popis serveru",
@@ -19800,6 +19802,7 @@
   "5PoYtr": "Od klubů přes studijní skupiny až po herní večery – místo se pro tebe vždy najde.",
   "IT7qoK": "Najdi své lidi",
   "jjUTLy": "Studentské centrum",
+  "+MWrWl": "Upravit profil centra",
   "8vmKOz": "Připojit se k centru",
   "H1jCHB": "Najdi si studijní skupiny, kluby i kamarády ve studentském centru své školy!",
   "K/7rLC": "Oficiální e-mailová adresa školy",
@@ -31629,6 +31632,7 @@
   ],
   "0ox7Hh": "Vybraný server",
   "Rsth7+": "Vybraný uživatel",
+  "n5EBAA": "Nahlásit Discordu",
   "IBA5wc": "Nahlásit událost",
   "nTe4HB": "Vybraný server",
   "BDYHSU": "Začni psát",

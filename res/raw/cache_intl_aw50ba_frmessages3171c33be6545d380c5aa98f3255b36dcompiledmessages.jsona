@@ -5610,8 +5610,13 @@
   ],
   "AHoLf3": "Ton statut",
   "Vq4UmZ": "Ajouter un statut",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Actuel : ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5680,8 +5685,13 @@
     ]
   ],
   "2OyT5O": "Supprimer demain",
-  "UpF5QU": [
+  "xRGqo6": [
     "Statut personnalisé : ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10989,13 +10999,6 @@
   "edQ5vb": "Seuls les employés de Discord seraient en mesure de rejoindre ce serveur.",
   "5HZu09": "Crée ton serveur",
   "DWB2YW": "Ajouter une icône de serveur",
-  "WphZ6e": [
-    "Explore les serveurs de ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Des jeux vidéo à la pédagogie, en passant par la musique, tu trouveras toujours chaussure à ton pied.",
   "OlDfzM": "Trouve ta communauté sur Discord",
   "4z5PU1": "Suivre les mises à jour",
@@ -19088,7 +19091,6 @@
   "x87gam": "Attends !",
   "Ym2Ri4": "Accueil",
   "fuTmEB": "Comment tu te connectes à ton compte",
-  "dsAxQk": "Choisir une catégorie",
   "Olo8FB": "Catégorie",
   "VzuITE": "Quel est l'objectif de ce serveur ? Que peut-on y faire ?",
   "FFFAGh": "Description du serveur",
@@ -19141,6 +19143,7 @@
   "5PoYtr": "Des clubs, aux groupes de travail, aux soirées jeux, il y a une place pour toi.",
   "IT7qoK": "Trouve ta communauté",
   "jjUTLy": "Pôle étudiant",
+  "+MWrWl": "Modifier le profil du Pôle",
   "8vmKOz": "Rejoindre Pôle",
   "H1jCHB": "Trouve des groupes d'étude, des clubs et des amis sur le Pôle étudiant de ton établissement scolaire !",
   "K/7rLC": "Adresse e-mail officielle de ton établissement scolaire",
@@ -30607,6 +30610,7 @@
   ],
   "0ox7Hh": "Serveur sélectionné",
   "Rsth7+": "Utilisateur sélectionné",
+  "n5EBAA": "Signaler à Discord",
   "IBA5wc": "Signaler l'événement",
   "nTe4HB": "Serveur sélectionné",
   "BDYHSU": "Commence à envoyer des messages",

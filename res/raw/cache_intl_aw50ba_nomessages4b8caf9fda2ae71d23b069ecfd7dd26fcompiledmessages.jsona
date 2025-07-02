@@ -5591,8 +5591,13 @@
   ],
   "AHoLf3": "Din status",
   "Vq4UmZ": "Legg til status",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Gjeldende: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5661,8 +5666,13 @@
     ]
   ],
   "2OyT5O": "Tøm i morgen",
-  "UpF5QU": [
+  "xRGqo6": [
     "Egendefinert status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -10989,14 +10999,6 @@
   "edQ5vb": "Bare Discord-ansatte kan være med i denne serveren.",
   "5HZu09": "Opprett serveren din",
   "DWB2YW": "Last opp et serverikon",
-  "WphZ6e": [
-    "Utforsk ",
-    [
-      1,
-      "categoryName"
-    ],
-    "-servere"
-  ],
   "SdMhrq": "Fra spill til musikk til kunnskapsformidling – det finnes et sted for deg.",
   "OlDfzM": "Finn et fellesskap på Discord",
   "4z5PU1": "Følg oppdateringer",
@@ -19017,7 +19019,6 @@
   "x87gam": "Stopp en hal",
   "Ym2Ri4": "Hjem",
   "fuTmEB": "Slik logger du på kontoen din",
-  "dsAxQk": "Velg kategori",
   "Olo8FB": "Kategori",
   "VzuITE": "Hva handler serveren din om? Hva gjør folk der?",
   "FFFAGh": "Serverbeskrivelse",
@@ -19071,6 +19072,7 @@
   "5PoYtr": "Fra klubber til studiegrupper og spillkvelder – det finnes et sted for deg.",
   "IT7qoK": "Finn folkene dine",
   "jjUTLy": "Skolehub",
+  "+MWrWl": "Rediger hubprofil",
   "8vmKOz": "Bli med i hub",
   "H1jCHB": "Finn studiegrupper, klubber og venner i skolehuben for skolen din!",
   "K/7rLC": "Offisiell skole-e-post",
@@ -30480,6 +30482,7 @@
   ],
   "0ox7Hh": "Valgt server",
   "Rsth7+": "Valgt bruker",
+  "n5EBAA": "Meld fra til Discord",
   "IBA5wc": "Rapporter event",
   "nTe4HB": "Valgt server",
   "BDYHSU": "Begynn å tekste",

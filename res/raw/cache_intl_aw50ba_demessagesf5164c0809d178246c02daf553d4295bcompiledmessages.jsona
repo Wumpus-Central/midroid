@@ -5606,8 +5606,13 @@
   ],
   "AHoLf3": "Dein Status",
   "Vq4UmZ": "Status hinzufügen",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Aktuell: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5671,8 +5676,13 @@
     " löschen"
   ],
   "2OyT5O": "Morgen löschen",
-  "UpF5QU": [
+  "xRGqo6": [
     "Personalisierter Status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11057,14 +11067,6 @@
   "edQ5vb": "Nur Discord-Mitarbeiter können diesem Server beitreten.",
   "5HZu09": "Deinen Server erstellen",
   "DWB2YW": "Server-Icon hochladen",
-  "WphZ6e": [
-    "Entdecke Server der Kategorie „",
-    [
-      1,
-      "categoryName"
-    ],
-    "“"
-  ],
   "SdMhrq": "Von Videospielen über Musik bis hin zu Lerngruppen – hier ist für jeden was dabei.",
   "OlDfzM": "Finde deine Community auf Discord",
   "4z5PU1": "Updates abonnieren",
@@ -19242,7 +19244,6 @@
   "x87gam": "Warte",
   "Ym2Ri4": "Home",
   "fuTmEB": "Wie du dich mit deinem Account anmeldest",
-  "dsAxQk": "Kategorie wählen",
   "Olo8FB": "Kategorie",
   "VzuITE": "Worum geht es auf diesem Server? Was tun Mitglieder hier?",
   "FFFAGh": "Serverbeschreibung",
@@ -19297,6 +19298,7 @@
   "5PoYtr": "Ob Interessengemeinschaften, Lerngruppen oder Spieleabende – hier bekommst du einen Ort dafür.",
   "IT7qoK": "Hol andere Leute dazu",
   "jjUTLy": "Bildungshub",
+  "+MWrWl": "Hub-Profil bearbeiten",
   "8vmKOz": "Hub beitreten",
   "H1jCHB": "Finde Lerngruppen, Interessengemeinschaften und Freunde auf dem Bildungshub für deine Schule!",
   "K/7rLC": "Offizielle E-Mail-Adresse der Bildungsstätte",
@@ -30777,6 +30779,7 @@
   ],
   "0ox7Hh": "Ausgewählter Server",
   "Rsth7+": "Ausgewählter Benutzer",
+  "n5EBAA": "An Discord melden",
   "IBA5wc": "Event melden",
   "nTe4HB": "Ausgewählter Server",
   "BDYHSU": "Losschreiben",

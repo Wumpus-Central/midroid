@@ -5612,8 +5612,13 @@
   ],
   "AHoLf3": "Tu estado",
   "Vq4UmZ": "Añadir estado",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Actual: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5675,8 +5680,13 @@
     ]
   ],
   "2OyT5O": "Borrar mañana",
-  "UpF5QU": [
+  "xRGqo6": [
     "Estado personalizado: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11012,13 +11022,6 @@
   "edQ5vb": "Solo los empleados de Discord podrían unirse a este servidor.",
   "5HZu09": "Crea tu servidor",
   "DWB2YW": "Subir un icono de servidor",
-  "WphZ6e": [
-    "Explora servidores de ",
-    [
-      1,
-      "categoryName"
-    ]
-  ],
   "SdMhrq": "Desde juegos, a música y enseñanza, aquí encontrarás tu sitio.",
   "OlDfzM": "Encuentra tu comunidad en Discord",
   "4z5PU1": "Seguir actualizaciones",
@@ -19074,7 +19077,6 @@
   "x87gam": "Espera",
   "Ym2Ri4": "Inicio",
   "fuTmEB": "Cómo iniciar sesión en tu cuenta",
-  "dsAxQk": "Elegir categoría",
   "Olo8FB": "Categoría",
   "VzuITE": "¿De qué trata tu servidor? ¿A qué se dedica la gente que hay aquí?",
   "FFFAGh": "Descripción del servidor",
@@ -19127,6 +19129,7 @@
   "5PoYtr": "Desde clubes y grupos de estudio hasta noches de juegos, hay un lugar para ti.",
   "IT7qoK": "Encuentra a tu gente",
   "jjUTLy": "Centro de Estudiantes",
+  "+MWrWl": "Editar perfil del centro",
   "8vmKOz": "Unirse a Centro",
   "H1jCHB": "¡Encuentra grupos de estudio, clubs y amigos en el Centro de Estudiantes de tu escuela!",
   "K/7rLC": "Correo electrónico oficial de tu centro educativo",
@@ -30616,6 +30619,7 @@
   ],
   "0ox7Hh": "Servidor seleccionado",
   "Rsth7+": "Usuario seleccionado",
+  "n5EBAA": "Denunciar ante Discord",
   "IBA5wc": "Denunciar evento",
   "nTe4HB": "Servidor seleccionado",
   "BDYHSU": "Comienza a escribir",

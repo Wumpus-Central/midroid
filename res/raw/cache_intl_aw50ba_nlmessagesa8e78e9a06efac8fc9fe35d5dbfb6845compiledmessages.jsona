@@ -5612,8 +5612,13 @@
   ],
   "AHoLf3": "Je status",
   "Vq4UmZ": "Status toevoegen",
-  "GE7Qzc": [
+  "bnVRrq": [
     "Momenteel: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5682,8 +5687,13 @@
     ]
   ],
   "2OyT5O": "Morgen gewist",
-  "UpF5QU": [
+  "xRGqo6": [
     "Gepersonaliseerde status: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11015,14 +11025,6 @@
   "edQ5vb": "Alleen medewerkers van Discord kunnen lid worden van deze server.",
   "5HZu09": "Maak je server",
   "DWB2YW": "Upload een servericoon",
-  "WphZ6e": [
-    "Verken ",
-    [
-      1,
-      "categoryName"
-    ],
-    "-servers"
-  ],
   "SdMhrq": "Of het nu gaat om gamen, muziek of leren, er is altijd wel een plek voor je.",
   "OlDfzM": "Vind jouw community op Discord",
   "4z5PU1": "Updates volgen",
@@ -19105,7 +19107,6 @@
   "x87gam": "Ho even",
   "Ym2Ri4": "Startpagina",
   "fuTmEB": "Zo log je in op je account",
-  "dsAxQk": "Categorie kiezen",
   "Olo8FB": "Categorie",
   "VzuITE": "Wat is dit voor server? Wat doen mensen daar?",
   "FFFAGh": "Serverbeschrijving",
@@ -19160,6 +19161,7 @@
   "5PoYtr": "Van clubs tot studiegroepjes en game-avonden; er is een plek voor jou.",
   "IT7qoK": "Vind jouw soort mensen",
   "jjUTLy": "Studentenhub",
+  "+MWrWl": "Hubprofiel bewerken",
   "8vmKOz": "Aansluiten bij hub",
   "H1jCHB": "Vind studiegroepen, clubs en vrienden in de studentenhub van je onderwijsinstelling!",
   "K/7rLC": "Officieel e-mailadres van je onderwijsinstelling",
@@ -30565,6 +30567,7 @@
   ],
   "0ox7Hh": "Geselecteerde server",
   "Rsth7+": "Geselecteerde gebruiker",
+  "n5EBAA": "Rapporteren aan Discord",
   "IBA5wc": "Evenement rapporteren",
   "nTe4HB": "Geselecteerde server",
   "BDYHSU": "Stuur tekstberichten",

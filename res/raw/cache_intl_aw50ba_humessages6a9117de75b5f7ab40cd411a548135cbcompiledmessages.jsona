@@ -5614,8 +5614,13 @@
   ],
   "AHoLf3": "Saját állapot",
   "Vq4UmZ": "Állapot hozzáadása",
-  "GE7Qzc": [
-    "Jelenleg: ",
+  "bnVRrq": [
+    "Aktuális: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -5686,8 +5691,13 @@
     " belül"
   ],
   "2OyT5O": "Törlés holnap",
-  "UpF5QU": [
+  "xRGqo6": [
     "Egyéni állapot: ",
+    [
+      1,
+      "label"
+    ],
+    " ",
     [
       1,
       "emoji"
@@ -11005,13 +11015,6 @@
   "edQ5vb": "Csak Discord-munkatársak tudnának csatlakozni ehhez a szerverhez.",
   "5HZu09": "Hozd létre a szerveredet!",
   "DWB2YW": "Szerverikon feltöltése",
-  "WphZ6e": [
-    [
-      1,
-      "categoryName"
-    ],
-    " szerverek felfedezése"
-  ],
   "SdMhrq": "A videojátékoktól a zenén át a tanulásig, mindenhez megtalálod a megfelelő helyet.",
   "OlDfzM": "Találd meg a saját közösségedet a Discordon!",
   "4z5PU1": "Frissítések követése",
@@ -19058,7 +19061,6 @@
   "x87gam": "Hé",
   "Ym2Ri4": "Kezdőlap",
   "fuTmEB": "Hogyan jelentkezel be a fiókodba?",
-  "dsAxQk": "Kategória kiválasztása",
   "Olo8FB": "Kategória",
   "VzuITE": "Miről szól a szervered? Mit csinálnak itt az emberek?",
   "FFFAGh": "Szerver leírása",
@@ -19113,6 +19115,7 @@
   "5PoYtr": "A kluboktól a tanulócsoportokon át a játszós estékig, valahol biztosan megtalálod a helyed.",
   "IT7qoK": "Személyek keresése",
   "jjUTLy": "Diákcsomópont",
+  "+MWrWl": "Csomópont profiljának szerkesztése",
   "8vmKOz": "Csatlakozás a csomóponthoz",
   "H1jCHB": "Keress tanulócsoportokat, klubokat és barátokat iskolád Diákcsomópontján!",
   "K/7rLC": "Hivatalos iskolai e-mail-cím",
@@ -30497,6 +30500,7 @@
   ],
   "0ox7Hh": "Választott szerver",
   "Rsth7+": "Kiválasztott felhasználó",
+  "n5EBAA": "Jelentés a Discordnak",
   "IBA5wc": "Esemény jelentése",
   "nTe4HB": "Választott szerver",
   "BDYHSU": "Kezdj el csevegni",
