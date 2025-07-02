@@ -3,6 +3,7 @@ package com.discord.user_search_worker
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
@@ -12,11 +13,10 @@ import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonNull
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import mb.f
-import ob.g
-import ob.e.i
-import qb.e
-import t9.s
+import mb.g
+import mb.e.i
+import ob.e
+import r9.s
 
 @f(with = UserSearchTransformedUser.Serializer::class)
 internal data class UserSearchTransformedUser(id: String,
@@ -118,8 +118,8 @@ internal data class UserSearchTransformedUser(id: String,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.id.hashCode();
-      val var5: Int = this.username.hashCode();
+      val var5: Int = this.id.hashCode();
+      val var6: Int = this.username.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.isBot == null) {
@@ -146,32 +146,32 @@ internal data class UserSearchTransformedUser(id: String,
          var4 = this.globalName.hashCode();
       }
 
-      return (((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
+      return (((((var5 * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + this.nicknames.hashCode();
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
-      val var8: java.lang.String = this.username;
-      val var6: java.lang.Boolean = this.isBot;
-      val var3: java.lang.Boolean = this.isFriend;
-      val var1: java.lang.String = this.friendNickname;
-      val var2: java.lang.String = this.globalName;
-      val var4: java.util.Map = this.nicknames;
+      val var1: java.lang.String = this.id;
+      val var2: java.lang.String = this.username;
+      val var4: java.lang.Boolean = this.isBot;
+      val var8: java.lang.Boolean = this.isFriend;
+      val var6: java.lang.String = this.friendNickname;
+      val var3: java.lang.String = this.globalName;
+      val var5: java.util.Map = this.nicknames;
       val var7: StringBuilder = new StringBuilder();
       var7.append("UserSearchTransformedUser(id=");
-      var7.append(var5);
-      var7.append(", username=");
-      var7.append(var8);
-      var7.append(", isBot=");
-      var7.append(var6);
-      var7.append(", isFriend=");
-      var7.append(var3);
-      var7.append(", friendNickname=");
       var7.append(var1);
-      var7.append(", globalName=");
+      var7.append(", username=");
       var7.append(var2);
-      var7.append(", nicknames=");
+      var7.append(", isBot=");
       var7.append(var4);
+      var7.append(", isFriend=");
+      var7.append(var8);
+      var7.append(", friendNickname=");
+      var7.append(var6);
+      var7.append(", globalName=");
+      var7.append(var3);
+      var7.append(", nicknames=");
+      var7.append(var5);
       var7.append(")");
       return var7.toString();
    }
@@ -198,11 +198,11 @@ internal data class UserSearchTransformedUser(id: String,
          val var5: JsonObject = var11 as JsonObject;
          val var12: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var6 : var5.entrySet()) {
-            val var3: java.lang.String = var6.getKey() as java.lang.String;
-            val var7: JsonElement = var6.getValue() as JsonElement;
-            if (!TRANSFORMED_USER_KEYS.contains(var3) && (qb.g.p(var7).m() || qb.g.p(var7) is JsonNull)) {
-               var12.put(var6.getKey(), var6.getValue());
+         for (Entry var4 : var5.entrySet()) {
+            val var6: java.lang.String = var4.getKey() as java.lang.String;
+            val var7: JsonElement = var4.getValue() as JsonElement;
+            if (!TRANSFORMED_USER_KEYS.contains(var6) && (ob.g.p(var7).m() || ob.g.p(var7) is JsonNull)) {
+               var12.put(var4.getKey(), var4.getValue());
             }
          }
 
@@ -217,18 +217,18 @@ internal data class UserSearchTransformedUser(id: String,
                var var9: java.lang.String;
                var var32: java.util.Map;
                label55: {
-                  var32 = u9.q.t(var23);
+                  var32 = s9.q.t(var23);
                   var var14: Any = var5.get("id");
                   q.e(var14);
-                  var8 = qb.g.p(var14 as JsonElement).a();
+                  var8 = ob.g.p(var14 as JsonElement).a();
                   var14 = var5.get("username");
                   q.e(var14);
-                  var9 = qb.g.p(var14 as JsonElement).a();
+                  var9 = ob.g.p(var14 as JsonElement).a();
                   var14 = var5.get("isBot") as JsonElement;
                   if (var14 != null) {
-                     var14 = qb.g.p((JsonElement)var14);
+                     var14 = ob.g.p((JsonElement)var14);
                      if (var14 != null) {
-                        var24 = qb.g.f((JsonPrimitive)var14);
+                        var24 = ob.g.f((JsonPrimitive)var14);
                         break label55;
                      }
                   }
@@ -239,9 +239,9 @@ internal data class UserSearchTransformedUser(id: String,
                label50: {
                   val var18: JsonElement = var5.get("isFriend") as JsonElement;
                   if (var18 != null) {
-                     val var19: JsonPrimitive = qb.g.p(var18);
+                     val var19: JsonPrimitive = ob.g.p(var18);
                      if (var19 != null) {
-                        var26 = qb.g.f(var19);
+                        var26 = ob.g.f(var19);
                         break label50;
                      }
                   }
@@ -252,7 +252,7 @@ internal data class UserSearchTransformedUser(id: String,
                label45: {
                   val var20: JsonElement = var5.get("friendNickname") as JsonElement;
                   if (var20 != null) {
-                     val var21: JsonPrimitive = qb.g.p(var20);
+                     val var21: JsonPrimitive = ob.g.p(var20);
                      if (var21 != null) {
                         if (var21.m()) {
                            var22 = var21.a();
@@ -269,7 +269,7 @@ internal data class UserSearchTransformedUser(id: String,
                val var10: JsonElement = var5.get("globalName") as JsonElement;
                var var27: java.lang.String = null;
                if (var10 != null) {
-                  val var33: JsonPrimitive = qb.g.p(var10);
+                  val var33: JsonPrimitive = ob.g.p(var10);
                   var27 = null;
                   if (var33 != null) {
                      var27 = null;
@@ -285,8 +285,8 @@ internal data class UserSearchTransformedUser(id: String,
             val var30: Entry = var25.next() as Entry;
             val var29: java.lang.String = var30.getKey() as java.lang.String;
             val var31: JsonElement = var30.getValue() as JsonElement;
-            if (qb.g.p(var31).m()) {
-               var13 = qb.g.p(var31).a();
+            if (ob.g.p(var31).m()) {
+               var13 = ob.g.p(var31).a();
             }
 
             var23.add(s.a(var29, var13));

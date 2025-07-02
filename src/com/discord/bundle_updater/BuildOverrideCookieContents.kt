@@ -53,10 +53,10 @@ public data class BuildOverrideCookieContents(meta: BuildOverrideCookieMeta, bui
 
    public fun toNativeMap(): WritableNativeMap {
       val var2: java.util.Map = this.builds;
-      val var1: LinkedHashMap = new LinkedHashMap(u9.q.d(this.builds.size()));
+      val var1: LinkedHashMap = new LinkedHashMap(s9.q.d(this.builds.size()));
 
-      for (Entry var3 : var2.entrySet()) {
-         var1.put(var3.getKey(), (var3.getValue() as BuildOverrideCookieBuild).toNativeMap());
+      for (Entry var5 : var2.entrySet()) {
+         var1.put(var5.getKey(), (var5.getValue() as BuildOverrideCookieBuild).toNativeMap());
       }
 
       val var4: WritableNativeMap = NativeMapExtensionsKt.toNativeMap(var1);

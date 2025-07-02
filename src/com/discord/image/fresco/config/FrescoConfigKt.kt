@@ -32,15 +32,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    q.h(var0, "<this>");
-   val var2: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var5: ImagePipelineConfig.Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var1.newSmallDiskCache(var0))
+   var var1: ImagePipelineConfig.Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var6: a = C.n();
-   val var3: F = o.a();
-   val var4: ImagePipelineConfig.Builder = var5.X(new E(var6.n(new F(var3.b, var3.a * 2, var3.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var3: a = C.n();
+   val var6: F = o.a();
+   val var4: ImagePipelineConfig.Builder = var1.X(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          q.h(var1, "sourceUri");
@@ -50,12 +50,12 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             val var3: Builder = var1.buildUpon();
             var3.clearQuery();
 
-            for (java.lang.String var4 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var4).iterator();
+            for (java.lang.String var2 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
+                  val var4: java.util.Iterator = var1.getQueryParameters(var2).iterator();
 
-                  while (var5.hasNext()) {
-                     var3.appendQueryParameter(var4, var5.next() as java.lang.String);
+                  while (var4.hasNext()) {
+                     var3.appendQueryParameter(var2, var4.next() as java.lang.String);
                   }
                }
             }

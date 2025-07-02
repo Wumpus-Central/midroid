@@ -1,6 +1,6 @@
 package com.discord.compression
 
-import ab.a
+import Ya.a
 import com.discord.codegen.NativeCompressionModuleSpec
 import com.discord.logging.Log
 import com.discord.misc.utilities.time.TimeElapsed
@@ -18,7 +18,7 @@ import java.util.zip.Inflater
 import java.util.zip.InflaterOutputStream
 import kotlin.jvm.internal.q
 import okio.ByteString
-import t9.s
+import r9.s
 
 public class CompressionModule(reactContext: ReactApplicationContext) : NativeCompressionModuleSpec {
    private final val zlibInflaters: MutableMap<Int, Inflater>
@@ -63,42 +63,42 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
 
    public override fun enableZlibStreamSupport(socketId: Double) {
       val var3: Int = (int)var1;
-      val var6: java.util.Map = this.zlibInflaters;
-      val var7: Int = var3;
-      var var5: Any = var6.get(var7);
-      var var4: WebSocketModule = (WebSocketModule)var5;
+      val var7: java.util.Map = this.zlibInflaters;
+      val var6: Int = var3;
+      var var5: WebSocketModule = (WebSocketModule)var7.get(var6);
+      var var4: Any = var5;
       if (var5 == null) {
          var4 = new Inflater();
-         var6.put(var7, var4);
+         var7.put(var6, var4);
       }
 
-      var5 = var4 as Inflater;
-      var4 = this.getWebSocketModule();
-      if (var4 != null) {
-         var4.setContentHandler(var3, new CompressionModule.ZlibContentHandler((Inflater)var5));
+      var4 = var4 as Inflater;
+      var5 = this.getWebSocketModule();
+      if (var5 != null) {
+         var5.setContentHandler(var3, new CompressionModule.ZlibContentHandler((Inflater)var4));
       }
    }
 
    public override fun enableZstdStreamSupport(socketId: Double) {
       val var3: Int = (int)var1;
-      val var6: java.util.Map = this.zstdInflaters;
-      val var7: Int = var3;
-      var var5: Any = var6.get(var7);
-      var var4: WebSocketModule = (WebSocketModule)var5;
+      val var7: java.util.Map = this.zstdInflaters;
+      val var6: Int = var3;
+      var var5: WebSocketModule = (WebSocketModule)var7.get(var6);
+      var var4: Any = var5;
       if (var5 == null) {
          var4 = new CompressionModule.ZstdInflater();
-         var6.put(var7, var4);
+         var7.put(var6, var4);
       }
 
-      var5 = var4 as CompressionModule.ZstdInflater;
-      var4 = this.getWebSocketModule();
-      if (var4 != null) {
-         var4.setContentHandler(var3, new CompressionModule.ZstdContentHandler((CompressionModule.ZstdInflater)var5));
+      var4 = var4 as CompressionModule.ZstdInflater;
+      var5 = this.getWebSocketModule();
+      if (var5 != null) {
+         var5.setContentHandler(var3, new CompressionModule.ZstdContentHandler((CompressionModule.ZstdInflater)var4));
       }
    }
 
    protected override fun getTypedExportedConstants(): MutableMap<String, Any> {
-      return u9.q.m(new Pair[]{s.a("supportsZstd", java.lang.Boolean.TRUE)});
+      return s9.q.m(new Pair[]{s.a("supportsZstd", java.lang.Boolean.TRUE)});
    }
 
    public companion object {
@@ -127,14 +127,14 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
          val var6: TimeElapsed = new TimeElapsed(0L, 1, null);
          val var3: java.lang.String = new CompressionModule.ZlibContentHandler.ZLibByteStream(var1, this.inflater).toDecodedString();
          if (var6.getDurationMillis() > 100L) {
-            val var4: Log = Log.INSTANCE;
-            val var5: java.lang.String = CompressionModule.access$getLogTag$cp();
-            q.g(var5, "access$getLogTag$cp(...)");
+            val var5: Log = Log.INSTANCE;
+            val var4: java.lang.String = CompressionModule.access$getLogTag$cp();
+            q.g(var4, "access$getLogTag$cp(...)");
             val var7: java.lang.String = var6.getDuration();
             val var9: StringBuilder = new StringBuilder();
             var9.append("Decompressed ZLib message in ");
             var9.append(var7);
-            Log.i$default(var4, var5, var9.toString(), null, 4, null);
+            Log.i$default(var5, var4, var9.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
@@ -191,11 +191,11 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
             val var4: Log = Log.INSTANCE;
             val var5: java.lang.String = CompressionModule.access$getLogTag$cp();
             q.g(var5, "access$getLogTag$cp(...)");
-            val var9: java.lang.String = var6.getDuration();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Decompressed ZLib message in ");
-            var7.append(var9);
-            Log.i$default(var4, var5, var7.toString(), null, 4, null);
+            val var7: java.lang.String = var6.getDuration();
+            val var9: StringBuilder = new StringBuilder();
+            var9.append("Decompressed ZLib message in ");
+            var9.append(var7);
+            Log.i$default(var4, var5, var9.toString(), null, 4, null);
          }
 
          var2.putString("type", "text");
@@ -217,19 +217,19 @@ public class CompressionModule(reactContext: ReactApplicationContext) : NativeCo
          if (this.read(var8) != 0) {
             throw new UnsupportedOperationException("Error in zstd: still had data when trying to refill buffer");
          } else {
-            var var4: Int = 1;
+            var var3: Int = 1;
 
-            for (int var3 = 0; var4 < 51; var4++) {
+            for (int var4 = 0; var3 < 51; var3++) {
                val var5: Int = this.read(var8);
-               var3 += var5;
+               var4 += var5;
                if (var5 == 0) {
                   if (var6.size() == 1) {
                      val var11: ByteArray = (var6.get(0) as ByteBuffer).array();
                      q.g(var11, "array(...)");
-                     return new java.lang.String(var11, 0, var3, a.b);
+                     return new java.lang.String(var11, 0, var4, a.b);
                   }
 
-                  val var9: ByteBuffer = ByteBuffer.allocate(var3);
+                  val var9: ByteBuffer = ByteBuffer.allocate(var4);
 
                   for (ByteBuffer var12 : var6) {
                      ((Buffer)var12).flip();

@@ -1,6 +1,5 @@
 package com.discord.image.fresco
 
-import A9.b
 import J2.d
 import android.content.Context
 import android.graphics.Bitmap
@@ -17,6 +16,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.q
 import kotlinx.coroutines.CancellableContinuation
 import kotlinx.coroutines.e
+import y9.b
 
 private final val executorSupplier: DefaultExecutorSupplier = new DefaultExecutorSupplier(3)
 
@@ -91,16 +91,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var5: a = Result.k;
-      var9 = Result.b(Uri.parse(var1));
+      val var9: a = Result.k;
+      var8 = Result.b(Uri.parse(var1));
    } catch (var6: java.lang.Throwable) {
-      val var8: a = Result.k;
-      var9 = Result.b(c.a(var6));
+      val var5: a = Result.k;
+      var8 = Result.b(c.a(var6));
       break label15;
    }
 
-   var var10: Any = var9;
-   if (Result.g(var9)) {
+   var var10: Any = var8;
+   if (Result.g(var8)) {
       var10 = null;
    }
 

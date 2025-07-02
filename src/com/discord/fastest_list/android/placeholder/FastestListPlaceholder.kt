@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry
 import kotlin.jvm.internal.q
-import t9.n
+import r9.n
 
 internal sealed class FastestListPlaceholder protected constructor() {
    public abstract fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {

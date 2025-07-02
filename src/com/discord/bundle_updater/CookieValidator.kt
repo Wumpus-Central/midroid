@@ -19,28 +19,28 @@ public object CookieValidator {
          if (var8 == null) {
             return null;
          } else {
-            var var2: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var9: okio.ByteString.a = ByteString.n;
-            q.e(var2);
-            val var10: ByteString = var9.b(var2);
+            val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
+            val var2: okio.ByteString.a = ByteString.n;
+            q.e(var9);
+            val var10: ByteString = var2.b(var9);
             if (var10 != null) {
-               var2 = var10.H();
-               if (var2 != null) {
+               val var13: java.lang.String = var10.H();
+               if (var13 != null) {
                   try {
                      var11 = Json.d;
-                     var14 = Json.d.g(var2);
-                  } catch (var7: mb.g) {
+                     var14 = Json.d.g(var13);
+                  } catch (var7: kb.g) {
                      return null;
                   }
 
-                  var var3: JsonElement = qb.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = ob.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = qb.g.o(var14);
+                  val var15: JsonObject = ob.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {
@@ -49,14 +49,14 @@ public object CookieValidator {
                      }
                   }
 
-                  val var17: LinkedHashMap = new LinkedHashMap(u9.q.d(var18.size()));
+                  val var17: LinkedHashMap = new LinkedHashMap(s9.q.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     var3 = (JsonElement)var5.getKey();
+                     val var20: Any = var5.getKey();
                      val var6: JsonElement = var5.getValue() as JsonElement;
                      val var21: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var3, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
+                     var17.put(var20, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

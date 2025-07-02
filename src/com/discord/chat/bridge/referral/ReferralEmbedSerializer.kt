@@ -5,8 +5,8 @@ import kotlin.jvm.internal.q
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
-import qb.d
-import qb.g
+import ob.d
+import ob.g
 
 public object ReferralEmbedSerializer : d(G.b(ReferralEmbed.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<ReferralEmbed> {

@@ -28,7 +28,7 @@ import java.lang.reflect.Field
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import t9.s
+import r9.s
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext

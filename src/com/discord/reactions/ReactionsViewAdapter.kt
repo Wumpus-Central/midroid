@@ -152,9 +152,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       q.h(var1, "holder");
-      val var8: ThemeManager = ThemeManager.INSTANCE;
-      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var8.setThemeOverride(this.theme);
+      val var7: ThemeManager = ThemeManager.INSTANCE;
+      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var7.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -188,10 +188,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var15 = null;
          }
 
+         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             q.y("onAddReactionClick");
-         } else {
-            var5 = this.onAddReactionClick;
+            var5 = null;
          }
 
          var26.bind(var11, var15, var5, this.reactionsTheme);
@@ -217,24 +217,24 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var17 = null;
          }
 
-         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             q.y("onAddBurstReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddBurstReactionClick;
          }
 
          var27.bind(var12, var17, var5, this.reactionsTheme);
       }
 
-      var8.setThemeOverride(var7);
+      var7.setThemeOverride(var8);
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       q.h(var1, "parent");
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var3: ThemeManager = ThemeManager.INSTANCE;
-      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var3.setThemeOverride(this.theme);
+      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var4.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
          case 46:
@@ -265,7 +265,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             throw new IllegalStateException(var6.toString().toString());
       }
 
-      var3.setThemeOverride(var4);
+      var4.setThemeOverride(var3);
       return (RecyclerView.ViewHolder)var9;
    }
 

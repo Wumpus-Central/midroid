@@ -5,6 +5,6 @@ import kotlin.jvm.functions.Function3;
 // $VF: synthetic class
 public final class D implements Function3 {
    public final Object invoke(Object var1, Object var2, Object var3) {
-      return TextUtilsKt.p((String)var1, (String)var2, (String)var3);
+      return TextUtilsKt.o((String)var1, (String)var2, (String)var3);
    }
 }

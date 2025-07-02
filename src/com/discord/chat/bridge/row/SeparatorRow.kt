@@ -2,9 +2,9 @@ package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
 import com.discord.chat.bridge.summaries.Summary
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class SeparatorRow(changeType: ChangeType,
@@ -117,11 +117,11 @@ public data class SeparatorRow(changeType: ChangeType,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.changeType.hashCode();
+      val var4: Int = this.changeType.hashCode();
       val var5: Int = Integer.hashCode(this.index);
-      val var6: Int = this.text.hashCode();
-      val var7: Int = this.id.hashCode();
-      val var4: Int = Integer.hashCode(this.color);
+      val var7: Int = this.text.hashCode();
+      val var8: Int = this.id.hashCode();
+      val var6: Int = Integer.hashCode(this.color);
       var var3: Int = 0;
       val var1: Int;
       if (this.scrollTo == null) {
@@ -141,35 +141,35 @@ public data class SeparatorRow(changeType: ChangeType,
          var3 = this.summary.hashCode();
       }
 
-      return ((((((var8 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((((var4 * 31 + var5) * 31 + var7) * 31 + var8) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var5: ChangeType = this.changeType;
+      val var3: ChangeType = this.changeType;
       val var2: Int = this.index;
-      val var3: java.lang.String = this.text;
-      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.text;
+      val var9: java.lang.String = this.id;
       val var1: Int = this.color;
-      val var6: java.lang.Boolean = this.scrollTo;
-      val var9: java.lang.Boolean = this.isBeforeContent;
-      val var7: Summary = this.summary;
+      val var7: java.lang.Boolean = this.scrollTo;
+      val var6: java.lang.Boolean = this.isBeforeContent;
+      val var4: Summary = this.summary;
       val var8: StringBuilder = new StringBuilder();
       var8.append("SeparatorRow(changeType=");
-      var8.append(var5);
+      var8.append(var3);
       var8.append(", index=");
       var8.append(var2);
       var8.append(", text=");
-      var8.append(var3);
+      var8.append(var5);
       var8.append(", id=");
-      var8.append(var4);
+      var8.append(var9);
       var8.append(", color=");
       var8.append(var1);
       var8.append(", scrollTo=");
-      var8.append(var6);
-      var8.append(", isBeforeContent=");
-      var8.append(var9);
-      var8.append(", summary=");
       var8.append(var7);
+      var8.append(", isBeforeContent=");
+      var8.append(var6);
+      var8.append(", summary=");
+      var8.append(var4);
       var8.append(")");
       return var8.toString();
    }

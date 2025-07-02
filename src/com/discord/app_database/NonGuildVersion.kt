@@ -1,8 +1,8 @@
 package com.discord.app_database
 
+import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import mb.f
 
 @f
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {

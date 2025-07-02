@@ -4,8 +4,8 @@ import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
-import t9.s
-import u9.q
+import r9.s
+import s9.q
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
    q.l(

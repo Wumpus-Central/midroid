@@ -7,7 +7,7 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import t9.s
+import r9.s
 
 public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIconModuleSpec {
    init {

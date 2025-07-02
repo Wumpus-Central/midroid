@@ -30,21 +30,21 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 4
-   // 08: aload 4
-   // 0a: ldc "/proc/cpuinfo"
-   // 0c: invokespecial java/io/File.<init> (Ljava/lang/String;)V
-   // 0f: getstatic ab/a.b Ljava/nio/charset/Charset;
-   // 12: astore 3
-   // 13: new java/io/InputStreamReader
-   // 16: astore 0
-   // 17: new java/io/FileInputStream
-   // 1a: astore 2
-   // 1b: aload 2
-   // 1c: aload 4
-   // 1e: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
-   // 21: aload 0
-   // 22: aload 2
+   // 06: astore 2
+   // 07: aload 2
+   // 08: ldc "/proc/cpuinfo"
+   // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 0d: getstatic Ya/a.b Ljava/nio/charset/Charset;
+   // 10: astore 3
+   // 11: new java/io/InputStreamReader
+   // 14: astore 0
+   // 15: new java/io/FileInputStream
+   // 18: astore 4
+   // 1a: aload 4
+   // 1c: aload 2
+   // 1d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 20: aload 0
+   // 21: aload 4
    // 23: aload 3
    // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 27: new java/io/BufferedReader
@@ -54,7 +54,7 @@ internal fun getSocFromProcCpuInfo(): String {
    // 2d: sipush 8192
    // 30: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
    // 33: aload 2
-   // 34: invokestatic F9/q.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
+   // 34: invokestatic D9/q.d (Ljava/io/BufferedReader;)Lkotlin/sequences/Sequence;
    // 37: invokeinterface kotlin/sequences/Sequence.iterator ()Ljava/util/Iterator; 1
    // 3c: astore 3
    // 3d: aload 3
@@ -104,14 +104,14 @@ internal fun getSocFromProcCpuInfo(): String {
    // 95: astore 0
    // 96: aload 2
    // 97: aconst_null
-   // 98: invokestatic F9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 98: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 9b: goto a8
    // 9e: aload 3
    // 9f: athrow
    // a0: astore 0
    // a1: aload 2
    // a2: aload 3
-   // a3: invokestatic F9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // a3: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // a6: aload 0
    // a7: athrow
    // a8: aload 0
@@ -183,8 +183,8 @@ internal fun maxCpuFreq(): String {
    // 057: invokespecial java/io/File.<init> (Ljava/lang/String;)V
    // 05a: lload 4
    // 05c: lstore 8
-   // 05e: getstatic ab/a.b Ljava/nio/charset/Charset;
-   // 061: astore 15
+   // 05e: getstatic Ya/a.b Ljava/nio/charset/Charset;
+   // 061: astore 14
    // 063: lload 4
    // 065: lstore 8
    // 067: new java/io/InputStreamReader
@@ -192,17 +192,17 @@ internal fun maxCpuFreq(): String {
    // 06c: lload 4
    // 06e: lstore 8
    // 070: new java/io/FileInputStream
-   // 073: astore 14
+   // 073: astore 15
    // 075: lload 4
    // 077: lstore 8
-   // 079: aload 14
+   // 079: aload 15
    // 07b: aload 12
    // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 080: lload 4
    // 082: lstore 8
    // 084: aload 13
-   // 086: aload 14
-   // 088: aload 15
+   // 086: aload 15
+   // 088: aload 14
    // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 08d: lload 4
    // 08f: lstore 8
@@ -237,7 +237,7 @@ internal fun maxCpuFreq(): String {
    // 0d0: invokevirtual java/lang/Long.longValue ()J
    // 0d3: lstore 8
    // 0d5: goto 0e0
-   // 0d8: astore 13
+   // 0d8: astore 14
    // 0da: goto 10a
    // 0dd: lconst_0
    // 0de: lstore 8
@@ -257,21 +257,21 @@ internal fun maxCpuFreq(): String {
    // 0fb: lstore 8
    // 0fd: aload 12
    // 0ff: aconst_null
-   // 100: invokestatic F9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 100: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 103: lload 6
    // 105: lstore 4
    // 107: goto 121
-   // 10a: aload 13
+   // 10a: aload 14
    // 10c: athrow
-   // 10d: astore 14
+   // 10d: astore 13
    // 10f: lload 10
    // 111: lstore 8
    // 113: aload 12
-   // 115: aload 13
-   // 117: invokestatic F9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+   // 115: aload 14
+   // 117: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
    // 11a: lload 10
    // 11c: lstore 8
-   // 11e: aload 14
+   // 11e: aload 13
    // 120: athrow
    // 121: iinc 2 1
    // 124: goto 009
@@ -315,12 +315,12 @@ internal fun maxCpuFreq(): String {
 
 internal fun ramSize(context: Context): String {
    q.h(var0, "context");
-   var var4: MemoryInfo = (MemoryInfo)var0.getSystemService("activity");
+   var var4: ActivityManager = (ActivityManager)var0.getSystemService("activity");
    q.f(var4, "null cannot be cast to non-null type android.app.ActivityManager");
-   val var3: ActivityManager = var4 as ActivityManager;
-   var4 = new MemoryInfo();
-   var3.getMemoryInfo(var4);
-   val var1: Double = var4.totalMem / 1.0737418E9F;
+   var4 = var4;
+   val var3: MemoryInfo = new MemoryInfo();
+   var4.getMemoryInfo(var3);
+   val var1: Double = var3.totalMem / 1.0737418E9F;
    val var6: L = L.a;
    val var7: java.lang.String = java.lang.String.format(Locale.getDefault(), "%.2f", Arrays.copyOf(new Object[]{var1}, 1));
    q.g(var7, "format(...)");
@@ -339,13 +339,13 @@ internal fun socName(): String {
          }
       }
 
-      val var1: java.lang.String = a.a();
-      var0 = b.a();
-      val var2: StringBuilder = new StringBuilder();
-      var2.append(var1);
-      var2.append("_");
-      var2.append(var0);
-      return var2.toString();
+      val var2: java.lang.String = a.a();
+      val var1: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var2);
+      var4.append("_");
+      var4.append(var1);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

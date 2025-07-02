@@ -4,7 +4,7 @@ import android.view.View
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.portals.utils.ViewRemoveFromParentKt
-import fb.w
+import db.w
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q

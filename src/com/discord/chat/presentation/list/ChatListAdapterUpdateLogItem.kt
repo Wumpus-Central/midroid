@@ -112,7 +112,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new t9.n();
+                  throw new r9.n();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

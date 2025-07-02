@@ -1,6 +1,6 @@
 package com.discord.shortcuts
 
-import Za.j
+import Xa.j
 import android.content.Context
 import android.content.Intent
 import java.util.Map.Entry
@@ -74,19 +74,19 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          q.h(var3, "clazz");
          q.h(var4, "tag");
          q.h(var5, "data");
-         val var8: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
-         val var6: java.util.List = i.c();
+         val var6: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
+         val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
             val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var6.add(var9);
-               var6.add(var13);
+               var8.add(var9);
+               var8.add(var13);
             }
          }
 
-         val var7: Intent = var8.putExtra("discord_shortcut_data", i.a(var6).toArray(new java.lang.String[0]));
+         val var7: Intent = var6.putExtra("discord_shortcut_data", i.a(var8).toArray(new java.lang.String[0]));
          q.g(var7, "putExtra(...)");
          return var7;
       }
@@ -101,7 +101,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                var2 = "";
             }
 
-            val var11: java.util.Map = u9.q.c();
+            val var11: java.util.Map = s9.q.c();
             val var6: Array<java.lang.String> = var1.getStringArrayExtra("discord_shortcut_data");
             if (var6 != null) {
                val var7: Sequence = c.A(var6);
@@ -119,7 +119,7 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                }
             }
 
-            var10 = new ShortcutData(var2, u9.q.b(var11));
+            var10 = new ShortcutData(var2, s9.q.b(var11));
          } else {
             var10 = null;
          }

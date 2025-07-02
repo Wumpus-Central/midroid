@@ -113,25 +113,25 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
    }
 
    public override fun toString(): String {
-      val var7: java.util.List = this.items;
-      val var6: java.util.List = this.listOperations;
+      val var3: java.util.List = this.items;
+      val var4: java.util.List = this.listOperations;
       val var5: ChatListAction = this.chatListAction;
       val var1: Int = this.updateId;
-      val var3: Function1 = this.preCommit;
-      val var4: Function0 = this.postCommit;
+      val var6: Function1 = this.preCommit;
+      val var7: Function0 = this.postCommit;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ChatListItemUpdate(items=");
-      var2.append(var7);
+      var2.append(var3);
       var2.append(", listOperations=");
-      var2.append(var6);
+      var2.append(var4);
       var2.append(", chatListAction=");
       var2.append(var5);
       var2.append(", updateId=");
       var2.append(var1);
       var2.append(", preCommit=");
-      var2.append(var3);
+      var2.append(var6);
       var2.append(", postCommit=");
-      var2.append(var4);
+      var2.append(var7);
       var2.append(")");
       return var2.toString();
    }

@@ -4,9 +4,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import t9.s
+import r9.s
 
-@mb.f
+@kb.f
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -88,21 +88,21 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.build;
+      val var3: java.lang.String = this.build;
       val var2: java.lang.String = this.releaseName;
       val var5: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AppManifestMetadata(build=");
-      var3.append(var4);
-      var3.append(", releaseName=");
-      var3.append(var2);
-      var3.append(", commit=");
-      var3.append(var5);
-      var3.append(", confirmUpdate=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AppManifestMetadata(build=");
+      var4.append(var3);
+      var4.append(", releaseName=");
+      var4.append(var2);
+      var4.append(", commit=");
+      var4.append(var5);
+      var4.append(", confirmUpdate=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {
