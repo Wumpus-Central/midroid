@@ -92,7 +92,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("c8b682e4-2d12-4e8c-8096-ea131c0384cb");
+      var5.setProguardUuid("a9b0bd8e-a8b6-45ef-8f9b-1d2cb6d3d53f");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
