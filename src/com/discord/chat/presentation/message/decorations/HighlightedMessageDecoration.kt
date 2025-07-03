@@ -7,25 +7,25 @@ import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.chat.presentation.list.ChatListAdapter
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.logging.Log
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class HighlightedMessageDecoration : RecyclerView.ItemDecoration {
    private final val drawer: HighlightedMessageDrawer
 
    open fun HighlightedMessageDecoration(var1: HighlightedMessageDrawer) {
-      q.h(var1, "drawer");
+      r.h(var1, "drawer");
       super();
       this.drawer = var1;
    }
 
    public override fun onDraw(canvas: Canvas, parent: RecyclerView, state: State) {
-      q.h(var1, "canvas");
-      q.h(var2, "parent");
-      q.h(var3, "state");
+      r.h(var1, "canvas");
+      r.h(var2, "parent");
+      r.h(var3, "state");
       super.onDraw(var1, var2, var3);
       var1.save();
       val var11: RecyclerView.Adapter = var2.getAdapter();
-      q.f(var11, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChatListAdapter");
+      r.f(var11, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChatListAdapter");
       val var7: ChatListAdapter = var11 as ChatListAdapter;
       val var5: Int = var2.getChildCount();
 
@@ -36,19 +36,19 @@ public abstract class HighlightedMessageDecoration : RecyclerView.ItemDecoration
             val var8: ChatListItem = var7.getChatListItem(var6);
             if (var8 == null) {
                val var13: Log = Log.INSTANCE;
-               val var10: java.lang.String = this.getClass().getSimpleName();
-               q.g(var10, "getSimpleName(...)");
-               val var9: StringBuilder = new StringBuilder();
-               var9.append("Missing item in position ");
-               var9.append(var6);
-               Log.e$default(var13, var10, var9.toString(), null, 4, null);
+               val var9: java.lang.String = this.getClass().getSimpleName();
+               r.g(var9, "getSimpleName(...)");
+               val var10: StringBuilder = new StringBuilder();
+               var10.append("Missing item in position ");
+               var10.append(var6);
+               Log.e$default(var13, var9, var10.toString(), null, 4, null);
                return;
             }
 
             if (this.drawer.getShouldRenderHighlight().invoke(var8) as java.lang.Boolean) {
                this.drawer.setPaintStyles(var8);
                val var14: HighlightedMessageDrawer = this.drawer;
-               q.e(var12);
+               r.e(var12);
                var14.drawHighlight(var1, var12, 0, 0);
             }
          }

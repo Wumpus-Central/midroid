@@ -11,8 +11,8 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
    private final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.q.h(var1, "ephemeralIndicationView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
+      kotlin.jvm.internal.r.h(var1, "ephemeralIndicationView");
+      kotlin.jvm.internal.r.h(var2, "eventHandler");
       super(var1, null);
       this.ephemeralIndicationView = var1;
       this.eventHandler = var2;
@@ -20,13 +20,13 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
 
    @JvmStatic
    fun `bind$lambda$1$lambda$0`(var0: EphemeralIndicationViewHolder, var1: EphemeralIndicationMessageAccessory, var2: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var2, "it");
+      kotlin.jvm.internal.r.h(var2, "it");
       ChatEventHandler.DefaultImpls.onLinkClicked-u7_MRrM$default(var0.eventHandler, var1.getMessageId-3Eiw7ao(), var2, null, 4, null);
       return Unit.a;
    }
 
    public fun bind(ephemeralAccessory: EphemeralIndicationMessageAccessory) {
-      kotlin.jvm.internal.q.h(var1, "ephemeralAccessory");
+      kotlin.jvm.internal.r.h(var1, "ephemeralAccessory");
       this.ephemeralIndicationView
          .setEphemeralIndication-AFFcxXc(
             var1.getMessageId-3Eiw7ao(),
@@ -44,8 +44,8 @@ public class EphemeralIndicationViewHolder(ephemeralIndicationView: EphemeralInd
                }
 
                public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
-                  kotlin.jvm.internal.q.h(var1, "p0");
-                  kotlin.jvm.internal.q.h(var2, "p1");
+                  kotlin.jvm.internal.r.h(var1, "p0");
+                  kotlin.jvm.internal.r.h(var2, "p1");
                   (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
                }
             },

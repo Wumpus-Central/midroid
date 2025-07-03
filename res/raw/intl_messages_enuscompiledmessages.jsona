@@ -7850,7 +7850,12 @@
         ]
       ]
     ],
-    " added a new emoji, :",
+    " added a new emoji, ",
+    [
+      1,
+      "emojiPreview"
+    ],
+    " :",
     [
       8,
       "$link",
@@ -10814,6 +10819,13 @@
   "f4gmra": "You received a guest invite to join a voice channel",
   "mJyBio": "You sent a guest invite to join a voice channel",
   "pFO/Pj": "(Guest)",
+  "wt3ZUF": [
+    "Activity alerts are now enabled in ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "j5V0io": "Resolved: DM spam",
   "qhaRbG": "Resolved: Join raid",
   "riQ+HB": "Resolved: No action",
@@ -10875,6 +10887,13 @@
   "yjpDQ0": "You've been sending too many Guild applications.",
   "XNGT1N": "Enter the chill zone",
   "MmIrpa": "WOAH THERE. WAY TOO SPICY",
+  "AkqI0t": [
+    "App interaction blocked in ",
+    [
+      1,
+      "guildName"
+    ]
+  ],
   "d1ab8v": "Block message",
   "Y+Vmvb": "Send alert",
   "792QKS": [
@@ -20561,12 +20580,21 @@
   ],
   "3XVNys": "Copy Invite Link",
   "VNe8Pz": "Edit invite link.",
+  "Ckxb6u": "Ask to Join",
   "2Gbof3": "Invite Expired",
   "jfrMtr": "Full",
+  "x1UXGR": "Game has ended. Start a new one?",
   "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
   "/8czHx": [
     "Invite to Listen Along on ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Invite to Watch ",
     [
       1,
       "name"
@@ -20579,7 +20607,136 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
+  "OAB5TE": "Join from a supported device",
+  "pwEQoq": "Play from a supported device",
+  "sTo7s7": "Listen from a supported device",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " asked to join your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " is asking to join your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
   "B9kbnZ": "The watching party is over!",
+  "IA6uDQ": [
+    "You are asking to join a ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "gYVkSU": [
+    "You are asking to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    "'s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "2N1kNT": [
+    "You asked to join a ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "JddpNz": [
+    "You asked to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    "'s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
   "DXgdcH": "Share this link with friends and they'll automatically join your server.",
   "tQc0l5": "Invite a friend to your server!",
   "TfuB9P": [
@@ -31210,7 +31367,9 @@
     ],
     "'"
   ],
+  "6+b8aW": "Remove from Post",
   "n5zMIy": "Remove From Group",
+  "at1yY2": "Remove from Thread",
   "RLcE6+": "Remove Game Friend",
   "dsU5bm": [
     "Are you sure you want to remove ",
@@ -31272,6 +31431,37 @@
     ],
     "' as game friend"
   ],
+  "6UGfn5": [
+    "Are you sure you want to remove ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "user"
+        ]
+      ]
+    ],
+    " from this Post?"
+  ],
+  "8sKSjo": "Remove from Post?",
+  "hL+ZnZ": [
+    "Are you sure you want to remove ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "user"
+        ]
+      ]
+    ],
+    " from this Thread?"
+  ],
+  "ZPm8jI": "Remove from Thread?",
+  "yNbncX": "Nevermind",
   "xX0ZTE": "Show embeds and preview website links pasted into chat",
   "PWZOn5": "Embeds and Link Previews",
   "Iv24sr": "Show emoji reactions on messages",
@@ -31371,6 +31561,7 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
+  "EkokLy": "Required",
   "a17rBg": "Set required email field",
   "cUVsEB": "Set required password field",
   "wpJ1dX": "Set required phone number field",
@@ -34431,9 +34622,9 @@
   "7YZ/Sk": "Switch to back camera",
   "/R1SBw": "Switch to front camera",
   "BkuOOz": "Sync",
-  "GAlmIS": "Turning this on will overwrite the above appearance settings on all other clients including desktop and browser.",
   "3340dX": "Sync across clients.",
   "p4IKEx": "Turning this on will overwrite text & image settings on all other clients including desktop and browser.",
+  "CRtkeH": "Turning this on will override your selected theme on all clients including desktop and browser.",
   "+KCMSk": "Sync friends to Discord",
   "NVwuHh": "Sync Now",
   "eW8Gy8": "Sync Permissions",
@@ -37815,8 +38006,127 @@
   "FMbL3t": "Clear failed",
   "2TbM/P": "Playing a game",
   "kUEnxM": "Listening",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Listening"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Listening"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Listening"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Listening"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Listening to",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nby ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Playing",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Playing"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Playing"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Playing"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Playing"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Play on ",
     [

@@ -1,6 +1,5 @@
 package com.discord.bundle_updater.react.events
 
-import A9.s
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.bundle_updater.BundleUpdater.OtaMetric
 import com.discord.react.utilities.NativeArrayExtensionsKt
@@ -8,16 +7,17 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
+import z9.s
 
 @f
 internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent {
    public final val metrics: List<OtaMetric>
 
    init {
-      q.h(var1, "metrics");
+      r.h(var1, "metrics");
       super();
       this.metrics = var1;
    }
@@ -27,7 +27,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public fun copy(metrics: List<OtaMetric> = var0.metrics): OtaCheckAttemptEvent {
-      q.h(var1, "metrics");
+      r.h(var1, "metrics");
       return new OtaCheckAttemptEvent(var1);
    }
 
@@ -37,7 +37,7 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
       } else if (var1 !is OtaCheckAttemptEvent) {
          return false;
       } else {
-         return q.c(this.metrics, (var1 as OtaCheckAttemptEvent).metrics);
+         return r.c(this.metrics, (var1 as OtaCheckAttemptEvent).metrics);
       }
    }
 
@@ -58,12 +58,12 @@ internal data class OtaCheckAttemptEvent(metrics: List<OtaMetric>) : ReactEvent 
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.metrics;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OtaCheckAttemptEvent(metrics=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.metrics;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OtaCheckAttemptEvent(metrics=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

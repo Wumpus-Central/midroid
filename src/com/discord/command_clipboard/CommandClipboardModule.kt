@@ -7,11 +7,11 @@ import android.content.ClipData.Item
 import androidx.core.content.b
 import com.discord.codegen.NativeCommandClipboardModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class CommandClipboardModule(reactContext: ReactApplicationContext) : NativeCommandClipboardModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 

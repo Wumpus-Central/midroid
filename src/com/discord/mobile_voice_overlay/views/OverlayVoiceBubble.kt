@@ -17,29 +17,29 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    internal final val imageView: SimpleDraweeView
       internal final get() {
          val var1: SimpleDraweeView = this.binding.overlayBubbleIv;
-         kotlin.jvm.internal.q.g(this.binding.overlayBubbleIv, "overlayBubbleIv");
+         kotlin.jvm.internal.r.g(this.binding.overlayBubbleIv, "overlayBubbleIv");
          return var1;
       }
 
 
-   public constructor(context: Context) : kotlin.jvm.internal.q.h(var1, "context") {
+   public constructor(context: Context) : kotlin.jvm.internal.r.h(var1, "context") {
       super(var1);
       val var2: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.q.g(var2, "inflate(...)");
+      kotlin.jvm.internal.r.g(var2, "inflate(...)");
       this.binding = var2;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.q.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.r.h(var1, "context") {
       super(var1, var2);
       val var3: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.q.h(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?, attributeSetId: Int) : kotlin.jvm.internal.r.h(var1, "context") {
       super(var1, var2, var3);
       val var4: OverlayVoiceBubbleBinding = OverlayVoiceBubbleBinding.inflate(LayoutInflater.from(this.getContext()), this, true);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
    }
 
@@ -52,14 +52,14 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
-      kotlin.jvm.internal.q.h(var1, "user");
-      val var2: SimpleDraweeView = this.binding.overlayBubbleIv;
+      kotlin.jvm.internal.r.h(var1, "user");
+      val var3: SimpleDraweeView = this.binding.overlayBubbleIv;
       val var4: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var3: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var3, "getContext(...)");
-      var2.setImageURI(
+      val var2: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var2, "getContext(...)");
+      var3.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var4, var3, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var4, var2, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {
@@ -72,7 +72,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    protected override fun onConfigurationChanged(newConfig: Configuration?) {
       var var2: Int = this.getWindowLayoutParams().x;
       val var3: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var3, "getContext(...)");
+      kotlin.jvm.internal.r.g(var3, "getContext(...)");
       if (var2 > this.getAllowedAreaBounds(var3).centerX()) {
          var2 = Integer.MAX_VALUE;
       } else {
@@ -86,7 +86,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
    }
 
    public override fun setData(data: MobileVoiceOverlayData) {
-      kotlin.jvm.internal.q.h(var1, "data");
+      kotlin.jvm.internal.r.h(var1, "data");
       val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.j0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);

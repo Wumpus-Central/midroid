@@ -19906,12 +19906,21 @@
   ],
   "3XVNys": "Kopiera inbjudningslänk",
   "VNe8Pz": "Ändra inbjudningslänk.",
+  "Ckxb6u": "Ta med mig",
   "2Gbof3": "Inbjudan har gått ut",
   "jfrMtr": "Fullt",
+  "x1UXGR": "Spelet har avslutats. Starta ett nytt?",
   "pkq6Vl": "Spelinbjudan",
   "hC/Ze3": "Inbjudan att delta",
   "/8czHx": [
     "Inbjudan att lyssna tillsammans på ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Inbjudan att titta på ",
     [
       1,
       "name"
@@ -19924,7 +19933,121 @@
   "/ak8Mj": "Gå med via PlayStation",
   "HEY5dX": "Gå med via Xbox",
   "84qx9v": "Lyssnandet är över!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " bad om att få gå med i din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ber om att få gå med i din ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
   "B9kbnZ": "Filmstunden är över!",
+  "IA6uDQ": [
+    "Du ber om att få gå med i en ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
+  "gYVkSU": [
+    "Du ber om att få gå med i **",
+    [
+      1,
+      "username"
+    ],
+    "**s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
+  "2N1kNT": [
+    "Du bad om att få gå med i en ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
+  "JddpNz": [
+    "Du bad om att få gå med i **",
+    [
+      1,
+      "username"
+    ],
+    "**s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-grupp"
+  ],
   "DXgdcH": "Dela den här länken med vänner så går de automatisk med i din server.",
   "tQc0l5": "Bjud in en vän till din server!",
   "TfuB9P": [
@@ -30538,6 +30661,7 @@
   "IKE48v": "Ny medlem",
   "VaCdhY": "Ny på Discord",
   "CQmziY": "Besökare (icke-medlem)",
+  "EkokLy": "Obligatorisk",
   "WnX4Jy": "Mejla meddelandet igen",
   "lm1UKi": "Skicka nytt verifieringsmejl",
   "yBZMsb": "Återställ",
@@ -33532,9 +33656,9 @@
   "7YZ/Sk": "Byt till bakre kamera",
   "/R1SBw": "Byt till främre kameran",
   "BkuOOz": "Synka",
-  "GAlmIS": "Aktivera detta för att skriva över utseendeinställningarna ovan på alla andra klienter, inklusive skrivbord och webbläsare.",
   "3340dX": "Synka mellan klienter.",
   "p4IKEx": "Aktivera detta för att skriva över text- och bildinställningar på alla andra klienter, inklusive skrivbord och webbläsare.",
+  "CRtkeH": "Aktiveras detta kommer ditt valda tema på alla klienter, inklusive dator och webbläsare, att åsidosättas.",
   "+KCMSk": "Synka vänner till Discord",
   "NVwuHh": "Synka nu",
   "eW8Gy8": "Synka behörigheter",
@@ -36819,8 +36943,127 @@
   ],
   "FMbL3t": "Rensning misslyckades",
   "2TbM/P": "Spelar ett spel",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " lyssnar"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " lyssnar"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " lyssnar"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " lyssnar"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Lyssnar på",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nav ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Spelar",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " spelar"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " spelar"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " spelar"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " spelar"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Spela på ",
     [

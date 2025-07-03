@@ -7,7 +7,7 @@ import android.os.Bundle
 import com.discord.react_activities.ReactActivity
 import com.discord.react_activities.ReactActivity.ActivityDelegate
 import com.facebook.react.ReactRootView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ShareActivity : ReactActivity {
    public override fun getActivityDelegate(): ActivityDelegate {
@@ -25,20 +25,20 @@ public class ShareActivity : ReactActivity {
             if (var1 != null) {
                val var2: ShareProps.Companion = ShareProps.Companion;
                val var3: Context = this.getContext();
-               q.g(var3, "getContext(...)");
+               r.g(var3, "getContext(...)");
                val var6: ShareProps = var2.createShareProps(var1, var3);
                this.shareProps = var6;
                var var4: ShareProps = var6;
                if (var6 == null) {
-                  q.y("shareProps");
+                  r.y("shareProps");
                   var4 = null;
                }
 
                val var7: java.util.List = var4.getAttachments();
                val var5: ShareActivity = this.this$0;
 
-               for (ShareProps.Attachment var9 : var7) {
-                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var9.getUri()), 1);
+               for (ShareProps.Attachment var8 : var7) {
+                  var5.grantUriPermission(var5.getPackageName(), Uri.parse(var8.getUri()), 1);
                }
             }
          }
@@ -49,7 +49,7 @@ public class ShareActivity : ReactActivity {
             this.rootView = var2;
             var var1: ReactRootView = var2;
             if (var2 == null) {
-               q.y("rootView");
+               r.y("rootView");
                var1 = null;
             }
 
@@ -59,7 +59,7 @@ public class ShareActivity : ReactActivity {
          protected Bundle getLaunchOptions() {
             var var1: ShareProps = this.shareProps;
             if (this.shareProps == null) {
-               q.y("shareProps");
+               r.y("shareProps");
                var1 = null;
             }
 
@@ -77,12 +77,12 @@ public class ShareActivity : ReactActivity {
                var var3: ShareProps = null;
                var var2: ReactRootView = this.rootView;
                if (this.rootView == null) {
-                  q.y("rootView");
+                  r.y("rootView");
                   var2 = null;
                }
 
                if (this.shareProps == null) {
-                  q.y("shareProps");
+                  r.y("shareProps");
                } else {
                   var3 = this.shareProps;
                }

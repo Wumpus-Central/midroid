@@ -4,14 +4,14 @@ import android.content.Context
 import android.util.Size
 import android.view.View
 import android.view.View.MeasureSpec
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
    private final val clazz: Class<Any>
    private final lateinit var shadowView: Any
 
    init {
-      q.h(var1, "clazz");
+      r.h(var1, "clazz");
       super();
       this.clazz = var1;
    }
@@ -48,13 +48,13 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
 
    internal fun measure(context: Context, configureView: (Any) -> Unit, measureBounds: com.discord.misc.utilities.measure.HeadlessViewMeasurer.MeasureBounds): Size {
       label23: {
-         q.h(var1, "context");
-         q.h(var2, "configureView");
-         q.h(var3, "measureBounds");
+         r.h(var1, "context");
+         r.h(var2, "configureView");
+         r.h(var3, "measureBounds");
          if (this.shadowView != null) {
             var var4: View = this.shadowView;
             if (this.shadowView == null) {
-               q.y("shadowView");
+               r.y("shadowView");
                var4 = null;
             }
 
@@ -64,20 +64,20 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
          }
 
          val var7: Any = this.clazz.getDeclaredConstructor(Context.class).newInstance(var1);
-         q.f(var7, "null cannot be cast to non-null type T of com.discord.misc.utilities.measure.HeadlessViewMeasurer");
+         r.f(var7, "null cannot be cast to non-null type T of com.discord.misc.utilities.measure.HeadlessViewMeasurer");
          this.shadowView = (T)var7;
       }
 
       var var8: View = this.shadowView;
       if (this.shadowView == null) {
-         q.y("shadowView");
+         r.y("shadowView");
          var8 = null;
       }
 
       var2.invoke(var8);
       var var9: View = this.shadowView;
       if (this.shadowView == null) {
-         q.y("shadowView");
+         r.y("shadowView");
          var9 = null;
       }
 
@@ -116,10 +116,10 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.widthPx, var1.widthPx)) {
+            if (!r.c(this.widthPx, var1.widthPx)) {
                return false;
             } else {
-               return q.c(this.heightPx, var1.heightPx);
+               return r.c(this.heightPx, var1.heightPx);
             }
          }
       }
@@ -141,13 +141,13 @@ public class HeadlessViewMeasurer<T extends View>(clazz: Class<Any>) {
       }
 
       public override fun toString(): String {
-         val var2: Int = this.widthPx;
-         val var1: Int = this.heightPx;
+         val var1: Int = this.widthPx;
+         val var2: Int = this.heightPx;
          val var3: StringBuilder = new StringBuilder();
          var3.append("MeasureBounds(widthPx=");
-         var3.append(var2);
-         var3.append(", heightPx=");
          var3.append(var1);
+         var3.append(", heightPx=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }

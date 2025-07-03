@@ -1,24 +1,24 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.chat.bridge.contentnode.InlineCodeContentNode
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
+import z9.s
 
 @f
 public data class TapInlineCodeEvent(content: String) : ReactEvent {
    public final val content: String
 
-   public constructor(node: InlineCodeContentNode) : q.h(var1, "node") {
+   public constructor(node: InlineCodeContentNode) : r.h(var1, "node") {
       this(var1.getContent());
    }
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super();
       this.content = var1;
    }
@@ -28,7 +28,7 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
    }
 
    public fun copy(content: String = var0.content): TapInlineCodeEvent {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new TapInlineCodeEvent(var1);
    }
 
@@ -38,7 +38,7 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
       } else if (var1 !is TapInlineCodeEvent) {
          return false;
       } else {
-         return q.c(this.content, (var1 as TapInlineCodeEvent).content);
+         return r.c(this.content, (var1 as TapInlineCodeEvent).content);
       }
    }
 
@@ -51,12 +51,12 @@ public data class TapInlineCodeEvent(content: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapInlineCodeEvent(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapInlineCodeEvent(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

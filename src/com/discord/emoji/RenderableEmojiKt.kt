@@ -10,7 +10,7 @@ import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.ImageRequest.RequestLevel
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @JvmSynthetic
 fun a(var0: GenericDraweeHierarchyBuilder): Unit {
@@ -35,9 +35,9 @@ public fun renderEmoji(
    verticalAlignment: Int = 2,
    additionalBuilderActions: (GenericDraweeHierarchyBuilder) -> Unit = new a()
 ): DraweeSpanStringBuilder {
-   q.h(var0, "emoji");
-   q.h(var1, "context");
-   q.h(var5, "additionalBuilderActions");
+   r.h(var0, "emoji");
+   r.h(var1, "context");
+   r.h(var5, "additionalBuilderActions");
    val var6: DraweeSpanStringBuilder = new DraweeSpanStringBuilder();
    renderEmojiInto(var6, var0, var1, var2, var3, var4, var5);
    return var6;
@@ -57,7 +57,7 @@ fun `renderEmoji$default`(var0: RenderableEmoji, var1: Context, var2: Int, var3:
 }
 
 fun `renderEmoji$lambda$2`(var0: GenericDraweeHierarchyBuilder): Unit {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return Unit.a;
 }
 
@@ -70,10 +70,10 @@ public fun renderEmojiInto(
    verticalAlignment: Int = 2,
    additionalBuilderActions: (GenericDraweeHierarchyBuilder) -> Unit = new b()
 ) {
-   q.h(var0, "builder");
-   q.h(var1, "emoji");
-   q.h(var2, "context");
-   q.h(var6, "additionalBuilderActions");
+   r.h(var0, "builder");
+   r.h(var1, "emoji");
+   r.h(var2, "context");
+   r.h(var6, "additionalBuilderActions");
    val var7: RenderableEmoji.Unicode;
    if (var1 is RenderableEmoji.Unicode) {
       var7 = var1 as RenderableEmoji.Unicode;
@@ -103,13 +103,13 @@ private fun renderEmojiInto(
 ) {
    val var8: Int = var0.length();
    var0.append('\u200b');
-   val var10: com.facebook.drawee.controller.a = (((I2.d.g().B(var5) as PipelineDraweeControllerBuilder)
+   val var11: com.facebook.drawee.controller.a = (((H2.d.g().B(var5) as PipelineDraweeControllerBuilder)
             .F(ImageRequestBuilder.x(Uri.parse(var1)).N(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).I(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
          .D(var2) as PipelineDraweeControllerBuilder)
       .d();
-   val var11: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScalingUtils$ScaleType.e);
-   var7.invoke(var11);
-   var0.j(var3, var11.a(), var10, var8, var4, var4, false, var6);
+   val var10: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(var3.getResources()).w(ScalingUtils$ScaleType.e);
+   var7.invoke(var10);
+   var0.j(var3, var10.a(), var11, var8, var4, var4, false, var6);
 }
 
 @JvmSynthetic
@@ -152,11 +152,11 @@ fun `renderEmojiInto$default`(
 }
 
 fun `renderEmojiInto$lambda$0`(var0: GenericDraweeHierarchyBuilder): Unit {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return Unit.a;
 }
 
 fun `renderEmojiInto$lambda$4`(var0: GenericDraweeHierarchyBuilder): Unit {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return Unit.a;
 }

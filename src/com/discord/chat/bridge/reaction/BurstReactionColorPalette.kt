@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.reaction
 
 import com.discord.reactions.ReactionView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class BurstReactionColorPalette(backgroundColor: String?, accentColor: String?, highlightColor: String?, opacity: Float) :
@@ -53,11 +53,11 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.backgroundColor, var1.backgroundColor)) {
+         if (!r.c(this.backgroundColor, var1.backgroundColor)) {
             return false;
-         } else if (!q.c(this.accentColor, var1.accentColor)) {
+         } else if (!r.c(this.accentColor, var1.accentColor)) {
             return false;
-         } else if (!q.c(this.highlightColor, var1.highlightColor)) {
+         } else if (!r.c(this.highlightColor, var1.highlightColor)) {
             return false;
          } else {
             return java.lang.Float.compare(this.opacity, var1.opacity) == 0;
@@ -89,21 +89,21 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.backgroundColor;
-      val var2: java.lang.String = this.accentColor;
-      val var5: java.lang.String = this.highlightColor;
+      val var5: java.lang.String = this.backgroundColor;
+      val var3: java.lang.String = this.accentColor;
+      val var4: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BurstReactionColorPalette(backgroundColor=");
-      var4.append(var3);
-      var4.append(", accentColor=");
-      var4.append(var2);
-      var4.append(", highlightColor=");
-      var4.append(var5);
-      var4.append(", opacity=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BurstReactionColorPalette(backgroundColor=");
+      var2.append(var5);
+      var2.append(", accentColor=");
+      var2.append(var3);
+      var2.append(", highlightColor=");
+      var2.append(var4);
+      var2.append(", opacity=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -11,7 +11,7 @@ private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : RecyclerVi
    private final var results: List<MobileVoiceOverlaySelectorResult>
 
    init {
-      kotlin.jvm.internal.q.h(var1, "onChannelSelected");
+      kotlin.jvm.internal.r.h(var1, "onChannelSelected");
       super();
       this.onChannelSelected = var1;
       this.results = kotlin.collections.i.k();
@@ -22,18 +22,18 @@ private class ResultAdapter(onChannelSelected: (ChannelId) -> Unit) : RecyclerVi
    }
 
    public open fun onBindViewHolder(holder: ResultViewHolder, position: Int) {
-      kotlin.jvm.internal.q.h(var1, "holder");
+      kotlin.jvm.internal.r.h(var1, "holder");
       var1.bind(this.results.get(var2));
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ResultViewHolder {
-      kotlin.jvm.internal.q.h(var1, "parent");
+      kotlin.jvm.internal.r.h(var1, "parent");
       return new ResultViewHolder(var1, this.onChannelSelected, null, 4, null);
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setResults(results: List<MobileVoiceOverlaySelectorResult>) {
-      kotlin.jvm.internal.q.h(var1, "results");
+      kotlin.jvm.internal.r.h(var1, "results");
       this.results = var1;
       this.notifyDataSetChanged();
    }

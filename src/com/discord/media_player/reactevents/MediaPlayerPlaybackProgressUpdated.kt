@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import A9.s
-import Ab.a
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
-import tb.j
+import sb.f
+import sb.j
+import z9.s
+import zb.a
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -47,7 +47,7 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.source, var1.source)) {
+         if (!r.c(this.source, var1.source)) {
             return false;
          } else if (this.time != var1.time) {
             return false;

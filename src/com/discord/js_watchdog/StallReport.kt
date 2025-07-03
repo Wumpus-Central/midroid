@@ -2,9 +2,9 @@ package com.discord.js_watchdog
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {
@@ -13,7 +13,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    public final val trace: String?
 
    init {
-      q.h(var2, "sessionId");
+      r.h(var2, "sessionId");
       super();
       this.stallTime = var1;
       this.sessionId = var2;
@@ -33,7 +33,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public fun copy(stallTime: Int = var0.stallTime, sessionId: String = var0.sessionId, trace: String? = var0.trace): StallReport {
-      q.h(var2, "sessionId");
+      r.h(var2, "sessionId");
       return new StallReport(var1, var2, var3);
    }
 
@@ -46,17 +46,17 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = var1;
          if (this.stallTime != var1.stallTime) {
             return false;
-         } else if (!q.c(this.sessionId, var1.sessionId)) {
+         } else if (!r.c(this.sessionId, var1.sessionId)) {
             return false;
          } else {
-            return q.c(this.trace, var1.trace);
+            return r.c(this.trace, var1.trace);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.stallTime);
-      val var2: Int = this.sessionId.hashCode();
+      val var2: Int = Integer.hashCode(this.stallTime);
+      val var3: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -64,7 +64,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -73,17 +73,17 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var2: java.lang.String = this.sessionId;
-      val var4: java.lang.String = this.trace;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("StallReport(stallTime=");
-      var3.append(var1);
-      var3.append(", sessionId=");
-      var3.append(var2);
-      var3.append(", trace=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.sessionId;
+      val var2: java.lang.String = this.trace;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("StallReport(stallTime=");
+      var4.append(var1);
+      var4.append(", sessionId=");
+      var4.append(var3);
+      var4.append(", trace=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -7,14 +7,14 @@ import android.content.Intent
 import android.os.Bundle
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
    private final val onReceiveCallback: (String) -> Unit
    private final var handled: Boolean
 
    init {
-      q.h(var1, "onReceiveCallback");
+      r.h(var1, "onReceiveCallback");
       super();
       this.onReceiveCallback = var1;
    }
@@ -38,7 +38,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             }
 
             var1 = var8.toString();
-            q.g(var1, "toString(...)");
+            r.g(var1, "toString(...)");
          }
       }
 
@@ -77,8 +77,8 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
    }
 
    public open fun onReceive(context: Context, intent: Intent) {
-      q.h(var1, "context");
-      q.h(var2, "intent");
+      r.h(var1, "context");
+      r.h(var2, "intent");
       if (!this.handled) {
          val var4: Bundle = var2.getExtras();
          val var5: Status;

@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class LongPressLinkData(url: String?) : ReactEvent {
@@ -29,7 +29,7 @@ public data class LongPressLinkData(url: String?) : ReactEvent {
       } else if (var1 !is LongPressLinkData) {
          return false;
       } else {
-         return q.c(this.url, (var1 as LongPressLinkData).url);
+         return r.c(this.url, (var1 as LongPressLinkData).url);
       }
    }
 

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.executedcommand
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
@@ -43,12 +43,12 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.color, var1.color)) {
+         if (!r.c(this.color, var1.color)) {
             return false;
-         } else if (!q.c(this.borderRadius, var1.borderRadius)) {
+         } else if (!r.c(this.borderRadius, var1.borderRadius)) {
             return false;
          } else {
-            return q.c(this.spaceAround, var1.spaceAround);
+            return r.c(this.spaceAround, var1.spaceAround);
          }
       }
    }
@@ -77,16 +77,16 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var2: Int = this.color;
-      val var4: Int = this.borderRadius;
-      val var3: java.lang.Boolean = this.spaceAround;
+      val var3: Int = this.color;
+      val var2: Int = this.borderRadius;
+      val var4: java.lang.Boolean = this.spaceAround;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ExecutedCommandBackgroundStyles(color=");
-      var1.append(var2);
-      var1.append(", borderRadius=");
-      var1.append(var4);
-      var1.append(", spaceAround=");
       var1.append(var3);
+      var1.append(", borderRadius=");
+      var1.append(var2);
+      var1.append(", spaceAround=");
+      var1.append(var4);
       var1.append(")");
       return var1.toString();
    }

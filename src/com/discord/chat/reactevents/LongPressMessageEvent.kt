@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class LongPressMessageEvent(messageId: String,
@@ -23,9 +23,9 @@ internal data class LongPressMessageEvent(messageId: String,
    public final val componentMediaIndex: Int?
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
-      q.h(var4, "mediaType");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
+      r.h(var4, "mediaType");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -67,9 +67,9 @@ internal data class LongPressMessageEvent(messageId: String,
       componentId: String? = var0.componentId,
       componentMediaIndex: Int? = var0.componentMediaIndex
    ): LongPressMessageEvent {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
-      q.h(var4, "mediaType");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
+      r.h(var4, "mediaType");
       return new LongPressMessageEvent(var1, var2, var3, var4, var5, var6);
    }
 
@@ -80,27 +80,27 @@ internal data class LongPressMessageEvent(messageId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else if (this.mediaIndex != var1.mediaIndex) {
             return false;
-         } else if (!q.c(this.mediaType, var1.mediaType)) {
+         } else if (!r.c(this.mediaType, var1.mediaType)) {
             return false;
-         } else if (!q.c(this.componentId, var1.componentId)) {
+         } else if (!r.c(this.componentId, var1.componentId)) {
             return false;
          } else {
-            return q.c(this.componentMediaIndex, var1.componentMediaIndex);
+            return r.c(this.componentMediaIndex, var1.componentMediaIndex);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = this.messageId.hashCode();
-      val var3: Int = this.channelId.hashCode();
-      val var5: Int = Integer.hashCode(this.mediaIndex);
-      val var4: Int = this.mediaType.hashCode();
+      val var5: Int = this.messageId.hashCode();
+      val var4: Int = this.channelId.hashCode();
+      val var3: Int = Integer.hashCode(this.mediaIndex);
+      val var6: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.componentId == null) {
@@ -113,7 +113,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var6 * 31 + var3) * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((((var5 * 31 + var4) * 31 + var3) * 31 + var6) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -121,25 +121,25 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.messageId;
       val var6: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var4: java.lang.String = this.mediaType;
-      val var2: java.lang.String = this.componentId;
-      val var5: Int = this.componentMediaIndex;
+      val var7: java.lang.String = this.mediaType;
+      val var4: java.lang.String = this.componentId;
+      val var2: Int = this.componentMediaIndex;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LongPressMessageEvent(messageId=");
-      var3.append(var7);
+      var3.append(var5);
       var3.append(", channelId=");
       var3.append(var6);
       var3.append(", mediaIndex=");
       var3.append(var1);
       var3.append(", mediaType=");
-      var3.append(var4);
+      var3.append(var7);
       var3.append(", componentId=");
-      var3.append(var2);
+      var3.append(var4);
       var3.append(", componentMediaIndex=");
-      var3.append(var5);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

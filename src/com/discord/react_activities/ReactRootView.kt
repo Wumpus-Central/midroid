@@ -11,21 +11,21 @@ import com.facebook.react.bridge.ReactContext
 import java.util.WeakHashMap
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ReactRootView(context: Context) : com.facebook.react.ReactRootView {
    internal final var exclusionRects: List<Rect>
    internal final val onInterceptTouchEventListeners: WeakHashMap<View, ((MotionEvent) -> Unit)?>
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       this.exclusionRects = EMPTY_EXCLUSION_RECTS;
       this.onInterceptTouchEventListeners = new WeakHashMap<>();
    }
 
    protected open fun dispatchDraw(canvas: Canvas) {
-      q.h(var1, "canvas");
+      r.h(var1, "canvas");
       super.dispatchDraw(var1);
       if (VERSION.SDK_INT >= 29) {
          a.a(this, this.exclusionRects);
@@ -33,13 +33,13 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
    }
 
    public open fun onInterceptTouchEvent(e: MotionEvent): Boolean {
-      q.h(var1, "e");
-      val var2: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
+      r.h(var1, "e");
+      val var3: java.util.Iterator = this.onInterceptTouchEventListeners.entrySet().iterator();
 
-      while (var2.hasNext()) {
-         val var3: Function1 = (var2.next() as Entry).getValue() as Function1;
-         if (var3 != null) {
-            var3.invoke(var1);
+      while (var3.hasNext()) {
+         val var2: Function1 = (var3.next() as Entry).getValue() as Function1;
+         if (var2 != null) {
+            var2.invoke(var1);
          }
       }
 
@@ -71,12 +71,12 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
 
       private fun View.getReactRootView(): ReactRootView? {
          val var2: Context = var1.getContext();
-         q.g(var2, "getContext(...)");
+         r.g(var2, "getContext(...)");
          return this.getReactRootView(var2);
       }
 
       public fun setOnInterceptTouchEvent(view: View, callback: ((MotionEvent) -> Unit)?) {
-         q.h(var1, "view");
+         r.h(var1, "view");
          val var3: ReactRootView = this.getReactRootView(var1);
          if (var3 != null) {
             var3.getOnInterceptTouchEventListeners$react_activity_release().put(var1, var2);
@@ -84,8 +84,8 @@ public class ReactRootView(context: Context) : com.facebook.react.ReactRootView 
       }
 
       public fun setSystemGestureExclusionRects(context: Context, exclusionRects: List<Rect>) {
-         q.h(var1, "context");
-         q.h(var2, "exclusionRects");
+         r.h(var1, "context");
+         r.h(var2, "exclusionRects");
          val var3: ReactRootView = this.getReactRootView(var1);
          if (var3 != null) {
             if (var2.isEmpty()) {

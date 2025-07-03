@@ -11,8 +11,8 @@ import com.discord.billing.types.QueryProductDetailsParams
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import jb.K
-import jb.U
+import ib.K
+import ib.U
 import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -39,9 +39,9 @@ internal class BillingManager(isProdBuild: Boolean,
    private final val backoff: ExponentialBackoff
 
    init {
-      kotlin.jvm.internal.q.h(var2, "onConnectionUpdated");
-      kotlin.jvm.internal.q.h(var3, "onPurchaseStateUpdated");
-      kotlin.jvm.internal.q.h(var4, "onPurchaseUpdated");
+      kotlin.jvm.internal.r.h(var2, "onConnectionUpdated");
+      kotlin.jvm.internal.r.h(var3, "onPurchaseStateUpdated");
+      kotlin.jvm.internal.r.h(var4, "onPurchaseUpdated");
       super();
       this.isProdBuild = var1;
       this.onConnectionUpdated = var2;
@@ -63,7 +63,7 @@ internal class BillingManager(isProdBuild: Boolean,
             val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
             var var1: BillingClient = var2;
             if (var2 == null) {
-               kotlin.jvm.internal.q.y("billingClient");
+               kotlin.jvm.internal.r.y("billingClient");
                var1 = null;
             }
 
@@ -74,7 +74,7 @@ internal class BillingManager(isProdBuild: Boolean,
 
          @Override
          public void onBillingSetupFinished(BillingResult var1) {
-            kotlin.jvm.internal.q.h(var1, "billingResult");
+            kotlin.jvm.internal.r.h(var1, "billingResult");
             if (BillingManager.access$isNotOk(this.this$0, var1)) {
                BillingManager.access$reconnect(this.this$0);
             } else {
@@ -89,8 +89,8 @@ internal class BillingManager(isProdBuild: Boolean,
 
    @JvmStatic
    fun `consumePurchase$lambda$3`(var0: BillingManager, var1: Function1, var2: Function0, var3: BillingResult, var4: java.lang.String) {
-      kotlin.jvm.internal.q.h(var3, "billingResult");
-      kotlin.jvm.internal.q.h(var4, "<unused var>");
+      kotlin.jvm.internal.r.h(var3, "billingResult");
+      kotlin.jvm.internal.r.h(var4, "<unused var>");
       if (var0.isNotOk(var3)) {
          var1.invoke(BillingManagerException.Companion.fromBillingResult(var3.b()));
       } else {
@@ -132,7 +132,7 @@ internal class BillingManager(isProdBuild: Boolean,
    }
 
    private operator fun ((Exception) -> Unit).invoke(errorMessage: String) {
-      kotlin.jvm.internal.q.h(var1, "<this>");
+      kotlin.jvm.internal.r.h(var1, "<this>");
       var1.invoke(new IllegalStateException(var2));
    }
 
@@ -140,7 +140,7 @@ internal class BillingManager(isProdBuild: Boolean,
       if (this.billingClient != null) {
          var var2: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var2 = null;
          }
 
@@ -181,7 +181,7 @@ internal class BillingManager(isProdBuild: Boolean,
 
    @JvmStatic
    fun `loadPurchases$lambda$5`(var0: Exception): Unit {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -205,13 +205,13 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               H9.b.e();
+               G9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
                   var1 = var2;
                   if (var2 == null) {
-                     kotlin.jvm.internal.q.y("billingClient");
+                     kotlin.jvm.internal.r.y("billingClient");
                      var1 = null;
                   }
 
@@ -231,16 +231,16 @@ internal class BillingManager(isProdBuild: Boolean,
    private fun verifyPurchase(purchase: Purchase) {
       if (var1.g() == 1 && !var1.k() && this.allowedPackageNames.contains(var1.e())) {
          val var2: java.util.List = var1.f();
-         kotlin.jvm.internal.q.g(var2, "getProducts(...)");
+         kotlin.jvm.internal.r.g(var2, "getProducts(...)");
 
-         for (java.lang.String var3 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var7: java.lang.String = var1.i();
-            kotlin.jvm.internal.q.g(var7, "getPurchaseToken(...)");
-            val var6: java.lang.String = var1.e();
-            kotlin.jvm.internal.q.g(var6, "getPackageName(...)");
-            kotlin.jvm.internal.q.e(var3);
-            var5.invoke(var7, var6, var3);
+         for (java.lang.String var6 : var2) {
+            val var7: Function3 = this.onPurchaseUpdated;
+            val var4: java.lang.String = var1.i();
+            kotlin.jvm.internal.r.g(var4, "getPurchaseToken(...)");
+            val var3: java.lang.String = var1.e();
+            kotlin.jvm.internal.r.g(var3, "getPackageName(...)");
+            kotlin.jvm.internal.r.e(var6);
+            var7.invoke(var4, var3, var6);
          }
       }
    }
@@ -249,7 +249,7 @@ internal class BillingManager(isProdBuild: Boolean,
       if (this.billingClient != null) {
          var var1: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var1 = null;
          }
 
@@ -261,17 +261,17 @@ internal class BillingManager(isProdBuild: Boolean,
    }
 
    public fun consumePurchase(purchaseToken: String, onSuccess: () -> Unit, onError: (BillingManagerException) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "purchaseToken");
-      kotlin.jvm.internal.q.h(var2, "onSuccess");
-      kotlin.jvm.internal.q.h(var3, "onError");
+      kotlin.jvm.internal.r.h(var1, "purchaseToken");
+      kotlin.jvm.internal.r.h(var2, "onSuccess");
+      kotlin.jvm.internal.r.h(var3, "onError");
       if (!this.isBillingClientReady()) {
          var3.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          val var5: c1.d = c1.d.b().b(var1).a();
-         kotlin.jvm.internal.q.g(var5, "build(...)");
+         kotlin.jvm.internal.r.g(var5, "build(...)");
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var6 = null;
          }
 
@@ -286,20 +286,20 @@ internal class BillingManager(isProdBuild: Boolean,
       onError: (BillingManagerException) -> Unit,
       context: ReactApplicationContext
    ) {
-      kotlin.jvm.internal.q.h(var1, "productIds");
-      kotlin.jvm.internal.q.h(var2, "productType");
-      kotlin.jvm.internal.q.h(var3, "reactPromise");
-      kotlin.jvm.internal.q.h(var4, "onError");
-      kotlin.jvm.internal.q.h(var5, "context");
+      kotlin.jvm.internal.r.h(var1, "productIds");
+      kotlin.jvm.internal.r.h(var2, "productType");
+      kotlin.jvm.internal.r.h(var3, "reactPromise");
+      kotlin.jvm.internal.r.h(var4, "onError");
+      kotlin.jvm.internal.r.h(var5, "context");
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var6: CoroutineScope = this.getCoroutineScope(var5);
-         jb.f.d(
-            var6,
+         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         ib.f.d(
+            var7,
             K.a(),
             null,
-            new Function2(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -327,21 +327,21 @@ internal class BillingManager(isProdBuild: Boolean,
    }
 
    public fun loadPurchases(onSuccess: () -> Unit = new e(), onError: (Exception) -> Unit = new f()) {
-      kotlin.jvm.internal.q.h(var1, "onSuccess");
-      kotlin.jvm.internal.q.h(var2, "onError");
+      kotlin.jvm.internal.r.h(var1, "onSuccess");
+      kotlin.jvm.internal.r.h(var2, "onError");
       if (!this.isBillingClientReady()) {
          var2.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          var var5: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var5 = null;
          }
 
          var5.j(c1.k.a().b("subs").a(), new a(this));
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var6 = null;
          }
 
@@ -351,12 +351,12 @@ internal class BillingManager(isProdBuild: Boolean,
    }
 
    public fun open(context: ReactApplicationContext) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       val var3: BillingClient = BillingClient.g(var1).c(com.android.billingclient.api.c.c().b().a()).d(new b(this)).a();
       this.billingClient = var3;
       var var7: BillingClient = var3;
       if (var3 == null) {
-         kotlin.jvm.internal.q.y("billingClient");
+         kotlin.jvm.internal.r.y("billingClient");
          var7 = null;
       }
 
@@ -370,7 +370,7 @@ internal class BillingManager(isProdBuild: Boolean,
 
          if (var8 == null) {
             try {
-               kotlin.jvm.internal.q.y("billingClient");
+               kotlin.jvm.internal.r.y("billingClient");
             } catch (var5: Exception) {
                this.onConnectionUpdated.invoke(BillingManager.ConnectionState.ERROR.getValue());
                return;
@@ -399,11 +399,11 @@ internal class BillingManager(isProdBuild: Boolean,
       onSuccess: () -> Unit,
       onError: (BillingManagerException) -> Unit
    ) {
-      kotlin.jvm.internal.q.h(var2, "productId");
-      kotlin.jvm.internal.q.h(var3, "productType");
-      kotlin.jvm.internal.q.h(var4, "userId");
-      kotlin.jvm.internal.q.h(var8, "onSuccess");
-      kotlin.jvm.internal.q.h(var9, "onError");
+      kotlin.jvm.internal.r.h(var2, "productId");
+      kotlin.jvm.internal.r.h(var3, "productType");
+      kotlin.jvm.internal.r.h(var4, "userId");
+      kotlin.jvm.internal.r.h(var8, "onSuccess");
+      kotlin.jvm.internal.r.h(var9, "onError");
       if (!this.isBillingClientReady()) {
          var9.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else if (var1 == null) {
@@ -412,7 +412,7 @@ internal class BillingManager(isProdBuild: Boolean,
          val var12: BooleanRef = new BooleanRef();
          var var10: BillingClient = this.billingClient;
          if (this.billingClient == null) {
-            kotlin.jvm.internal.q.y("billingClient");
+            kotlin.jvm.internal.r.y("billingClient");
             var10 = null;
          }
 
@@ -438,7 +438,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       init {
@@ -456,7 +456,7 @@ internal class BillingManager(isProdBuild: Boolean,
       public final val productDetails: List<ProductDetails>?
 
       init {
-         kotlin.jvm.internal.q.h(var1, "billingResult");
+         kotlin.jvm.internal.r.h(var1, "billingResult");
          super();
          this.billingResult = var1;
          this.productDetails = var2;
@@ -471,7 +471,7 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public fun copy(billingResult: BillingResult = var0.billingResult, productDetails: List<ProductDetails>? = var0.productDetails): com.discord.billing.BillingManager.ProductDetailsResponse {
-         kotlin.jvm.internal.q.h(var1, "billingResult");
+         kotlin.jvm.internal.r.h(var1, "billingResult");
          return new BillingManager.ProductDetailsResponse(var1, var2);
       }
 
@@ -482,10 +482,10 @@ internal class BillingManager(isProdBuild: Boolean,
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.q.c(this.billingResult, var1.billingResult)) {
+            if (!kotlin.jvm.internal.r.c(this.billingResult, var1.billingResult)) {
                return false;
             } else {
-               return kotlin.jvm.internal.q.c(this.productDetails, var1.productDetails);
+               return kotlin.jvm.internal.r.c(this.productDetails, var1.productDetails);
             }
          }
       }
@@ -503,13 +503,13 @@ internal class BillingManager(isProdBuild: Boolean,
       }
 
       public override fun toString(): String {
-         val var3: BillingResult = this.billingResult;
-         val var1: java.util.List = this.productDetails;
+         val var1: BillingResult = this.billingResult;
+         val var3: java.util.List = this.productDetails;
          val var2: StringBuilder = new StringBuilder();
          var2.append("ProductDetailsResponse(billingResult=");
-         var2.append(var3);
-         var2.append(", productDetails=");
          var2.append(var1);
+         var2.append(", productDetails=");
+         var2.append(var3);
          var2.append(")");
          return var2.toString();
       }

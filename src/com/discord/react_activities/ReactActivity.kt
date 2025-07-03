@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
-import c4.b
+import b4.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
@@ -18,22 +18,22 @@ import com.discord.tti_manager.TTILoggingApplication
 import com.facebook.react.ReactActivityDelegate
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint
 import java.util.concurrent.Future
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
    internal final lateinit var rootView: ReactRootView
 
    @JvmStatic
    fun {
-      q.g(MainActivity::class.java, "forName(...)");
-      q.g(ShareActivity::class.java, "forName(...)");
+      r.g(MainActivity::class.java, "forName(...)");
+      r.g(ShareActivity::class.java, "forName(...)");
    }
 
    protected open fun attachBaseContext(newBase: Context) {
-      q.h(var1, "newBase");
+      r.h(var1, "newBase");
       super.attachBaseContext(FontScaleUtilsKt.getFontScaledContext(var1));
       var1 = this.getApplicationContext();
-      q.g(var1, "getApplicationContext(...)");
+      r.g(var1, "getApplicationContext(...)");
       FontScaleUtilsKt.setFontScaleDeprecated(var1);
    }
 
@@ -52,7 +52,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    }
 
    public open fun onConfigurationChanged(newConfig: Configuration) {
-      q.h(var1, "newConfig");
+      r.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
       b.m.a(this, var1);
    }
@@ -61,10 +61,10 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      q.g(var2, "getWindow(...)");
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var3: Window = this.getWindow();
+      r.g(var3, "getWindow(...)");
+      var2.initialize(var3);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
@@ -85,12 +85,12 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
    public open inner class ActivityDelegate(activity: ReactActivity) : ReactActivityDelegate {
       init {
-         q.h(var2, "activity");
+         r.h(var2, "activity");
          this.this$0 = var1;
          super(var2, var1.getNameOfComponent());
          TTILoggingApplication.Companion.trackActivityDelegateInitialized();
          val var3: CrashReporting = CrashReporting.INSTANCE;
-         if (q.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
+         if (r.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
             CrashReporting.addBreadcrumb$default(var3, "Checking for blocking OTA update", null, null, 6, null);
             val var4: Future = BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, null, 2, null);
             if (var4 != null) {
@@ -101,7 +101,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
 
       protected open fun createRootView(): com.facebook.react.ReactRootView {
          val var1: Context = this.getContext();
-         q.g(var1, "getContext(...)");
+         r.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
          var2.setIsFabric(DefaultNewArchitectureEntryPoint.getFabricEnabled());
          this.this$0.setRootView$react_activity_release(var2);

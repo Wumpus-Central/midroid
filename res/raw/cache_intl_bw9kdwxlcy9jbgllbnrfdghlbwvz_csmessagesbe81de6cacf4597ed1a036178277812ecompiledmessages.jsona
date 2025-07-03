@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Vlastní motivy [Beta] nejsou na mobilu dostupné."
+  "v15Ipq": [
+    "Když je zapnutá synchronizace, mohou vlastní motivy [Beta verze] vytvořené na počítači ovlivnit tvůj motiv na mobilním zařízení. ",
+    [
+      8,
+      "$link",
+      [
+        "Další informace najdeš zde."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

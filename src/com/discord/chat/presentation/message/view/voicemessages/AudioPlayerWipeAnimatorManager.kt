@@ -65,17 +65,17 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
    private final var animatorSet: AnimatorSet?
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "binding");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "binding");
       super();
       this.brand500 = var1.getColor(R.color.brand_500);
       this.argbEvaluator = new ArgbEvaluator();
-      this.buttonContainerDefaultDrawable$delegate = A9.j.b(new D(var1));
-      this.buttonContainerActiveDrawable$delegate = A9.j.b(new E());
-      this.scaleAnimator$delegate = A9.j.b(new F(var2, this));
-      this.textColorAnimator$delegate = A9.j.b(new G(var2));
-      this.buttonIconColorAnimator$delegate = A9.j.b(new H(var2));
-      this.progressColorAnimator$delegate = A9.j.b(new I(var2));
+      this.buttonContainerDefaultDrawable$delegate = z9.j.a(new D(var1));
+      this.buttonContainerActiveDrawable$delegate = z9.j.a(new E());
+      this.scaleAnimator$delegate = z9.j.a(new F(var2, this));
+      this.textColorAnimator$delegate = z9.j.a(new G(var2));
+      this.buttonIconColorAnimator$delegate = z9.j.a(new H(var2));
+      this.progressColorAnimator$delegate = z9.j.a(new I(var2));
    }
 
    @JvmStatic
@@ -106,11 +106,11 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `buttonIconColorAnimator_delegate$lambda$13$lambda$12$lambda$11`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.q.h(var1, "it");
+      kotlin.jvm.internal.r.h(var1, "it");
       val var2: SimpleDraweeView = var0.button;
-      kotlin.jvm.internal.q.g(var0.button, "button");
+      kotlin.jvm.internal.r.g(var0.button, "button");
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Int");
+      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       ColorUtilsKt.setTintColor(var2, var3 as Int);
    }
 
@@ -212,10 +212,10 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `progressColorAnimator_delegate$lambda$17$lambda$16$lambda$15`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.q.h(var1, "it");
+      kotlin.jvm.internal.r.h(var1, "it");
       val var2: AudioWaveView = var0.wave;
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Int");
+      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       var2.setAudioProgressPaintColor(var3 as Int);
    }
 
@@ -228,9 +228,9 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `scaleAnimator_delegate$lambda$5$lambda$4$lambda$3`(var0: AudioPlayerViewBinding, var1: AudioPlayerWipeAnimatorManager, var2: ValueAnimator) {
-      kotlin.jvm.internal.q.h(var2, "it");
+      kotlin.jvm.internal.r.h(var2, "it");
       var var7: Drawable = (Drawable)var2.getAnimatedValue();
-      kotlin.jvm.internal.q.f(var7, "null cannot be cast to non-null type kotlin.Float");
+      kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type kotlin.Float");
       val var4: Float = var7 as java.lang.Float;
       val var3: Float;
       if (var0.playerContainer.getWidth() > 0 && var0.wipe.getWidth() > 0) {
@@ -251,7 +251,7 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
       var1.getButtonContainerActiveDrawable().setAlpha((int)(var4 * (float)255));
       var0.buttonContainer.setBackground(new LayerDrawable(new Drawable[]{var1.getButtonContainerDefaultDrawable(), var1.getButtonContainerActiveDrawable()}));
       val var6: View = var0.buttonContainer;
-      kotlin.jvm.internal.q.g(var0.buttonContainer, "buttonContainer");
+      kotlin.jvm.internal.r.g(var0.buttonContainer, "buttonContainer");
       ViewClippingUtilsKt.clipToCircle(var6);
    }
 
@@ -264,61 +264,61 @@ public class AudioPlayerWipeAnimatorManager(context: Context, binding: AudioPlay
 
    @JvmStatic
    fun `textColorAnimator_delegate$lambda$9$lambda$8$lambda$7`(var0: AudioPlayerViewBinding, var1: ValueAnimator) {
-      kotlin.jvm.internal.q.h(var1, "it");
+      kotlin.jvm.internal.r.h(var1, "it");
       val var2: SimpleDraweeSpanTextView = var0.text;
       val var3: Any = var1.getAnimatedValue();
-      kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type kotlin.Int");
+      kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type kotlin.Int");
       var2.setTextColor(var3 as Int);
    }
 
    public fun startAnimator(animateToPlay: Boolean, shouldAnimate: Boolean) {
-      var var7: Long = 0L;
+      var var8: Long = 0L;
       if (var2) {
          if (this.animateToPlay == var1) {
             return;
          }
 
-         var7 = 0L;
+         var8 = 0L;
          if (this.animateToPlay != var1) {
-            var7 = 0L;
+            var8 = 0L;
             if (this.animatorSet != null) {
-               var var3: Long = 0L;
+               var var4: Long = 0L;
                if (VERSION.SDK_INT >= 26) {
                   if (this.animatorSet != null) {
-                     var3 = this.animatorSet.getDuration();
+                     var4 = this.animatorSet.getDuration();
                   } else {
-                     var3 = 0L;
+                     var4 = 0L;
                   }
 
                   if (this.animatorSet != null) {
-                     var7 = y.a(this.animatorSet);
+                     var8 = y.a(this.animatorSet);
                   } else {
-                     var7 = 0L;
+                     var8 = 0L;
                   }
 
-                  var var15: java.lang.Long = var3 - var7;
-                  var3 = var15.longValue();
-                  if (0L > var3 || var3 >= 201L) {
+                  var var15: java.lang.Long = var4 - var8;
+                  var4 = var15.longValue();
+                  if (0L > var4 || var4 >= 201L) {
                      var15 = null;
                   }
 
-                  var3 = 0L;
+                  var4 = 0L;
                   if (var15 != null) {
-                     var3 = var15;
+                     var4 = var15;
                   }
                }
 
-               var7 = var3;
+               var8 = var4;
                if (this.animatorSet != null) {
                   this.animatorSet.cancel();
-                  var7 = var3;
+                  var8 = var4;
                }
             }
          }
       }
 
       this.animateToPlay = var1;
-      val var17: AnimatorSet = this.getAnimatorSet(var1, var7, var2);
+      val var17: AnimatorSet = this.getAnimatorSet(var1, var8, var2);
       var17.start();
       this.animatorSet = var17;
    }

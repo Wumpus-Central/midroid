@@ -1,6 +1,6 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
@@ -10,7 +10,7 @@ import kotlinx.serialization.json.JsonBuilder
 import kotlinx.serialization.json.b
 
 public object NotificationMessageSerializer : KSerializer {
-   private final val json: Json = b.b(null, new U1.b(), 1, null)
+   private final val json: Json = b.b(null, new T1.b(), 1, null)
 
    public open val descriptor: SerialDescriptor
       public open get() {
@@ -20,19 +20,19 @@ public object NotificationMessageSerializer : KSerializer {
 
    @JvmStatic
    fun `json$lambda$0`(var0: JsonBuilder): Unit {
-      q.h(var0, "$this$Json");
+      r.h(var0, "$this$Json");
       var0.c(true);
       return Unit.a;
    }
 
    public open fun deserialize(decoder: Decoder): NotificationMessage {
-      q.h(var1, "decoder");
+      r.h(var1, "decoder");
       return json.b(NotificationMessage.Companion.serializer(), var1.n()) as NotificationMessage;
    }
 
    public open fun serialize(encoder: Encoder, value: NotificationMessage) {
-      q.h(var1, "encoder");
-      q.h(var2, "value");
+      r.h(var1, "encoder");
+      r.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

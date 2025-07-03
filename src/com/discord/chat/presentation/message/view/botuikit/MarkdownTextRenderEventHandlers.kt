@@ -10,7 +10,7 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function4
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class MarkdownTextRenderEventHandlers(onLinkClicked: (LinkContentNode) -> Unit,
    onLinkLongClicked: (LinkContentNode) -> Unit,
@@ -43,20 +43,20 @@ public data class MarkdownTextRenderEventHandlers(onLinkClicked: (LinkContentNod
    public final val onTapSoundmoji: (SoundmojiContentNode) -> Unit
 
    init {
-      q.h(var1, "onLinkClicked");
-      q.h(var2, "onLinkLongClicked");
-      q.h(var3, "onTapChannel");
-      q.h(var4, "onLongPressChannel");
-      q.h(var5, "onTapAttachmentLink");
-      q.h(var6, "onLongPressAttachmentLink");
-      q.h(var7, "onTapMention");
-      q.h(var8, "onTapCommand");
-      q.h(var9, "onLongPressCommand");
-      q.h(var10, "onTapSpoiler");
-      q.h(var11, "onTapTimestamp");
-      q.h(var12, "onTapInlineCode");
-      q.h(var13, "onTapEmoji");
-      q.h(var14, "onTapSoundmoji");
+      r.h(var1, "onLinkClicked");
+      r.h(var2, "onLinkLongClicked");
+      r.h(var3, "onTapChannel");
+      r.h(var4, "onLongPressChannel");
+      r.h(var5, "onTapAttachmentLink");
+      r.h(var6, "onLongPressAttachmentLink");
+      r.h(var7, "onTapMention");
+      r.h(var8, "onTapCommand");
+      r.h(var9, "onLongPressCommand");
+      r.h(var10, "onTapSpoiler");
+      r.h(var11, "onTapTimestamp");
+      r.h(var12, "onTapInlineCode");
+      r.h(var13, "onTapEmoji");
+      r.h(var14, "onTapSoundmoji");
       super();
       this.onLinkClicked = var1;
       this.onLinkLongClicked = var2;
@@ -146,20 +146,20 @@ public data class MarkdownTextRenderEventHandlers(onLinkClicked: (LinkContentNod
       onTapEmoji: (EmojiContentNode) -> Unit = var0.onTapEmoji,
       onTapSoundmoji: (SoundmojiContentNode) -> Unit = var0.onTapSoundmoji
    ): MarkdownTextRenderEventHandlers {
-      q.h(var1, "onLinkClicked");
-      q.h(var2, "onLinkLongClicked");
-      q.h(var3, "onTapChannel");
-      q.h(var4, "onLongPressChannel");
-      q.h(var5, "onTapAttachmentLink");
-      q.h(var6, "onLongPressAttachmentLink");
-      q.h(var7, "onTapMention");
-      q.h(var8, "onTapCommand");
-      q.h(var9, "onLongPressCommand");
-      q.h(var10, "onTapSpoiler");
-      q.h(var11, "onTapTimestamp");
-      q.h(var12, "onTapInlineCode");
-      q.h(var13, "onTapEmoji");
-      q.h(var14, "onTapSoundmoji");
+      r.h(var1, "onLinkClicked");
+      r.h(var2, "onLinkLongClicked");
+      r.h(var3, "onTapChannel");
+      r.h(var4, "onLongPressChannel");
+      r.h(var5, "onTapAttachmentLink");
+      r.h(var6, "onLongPressAttachmentLink");
+      r.h(var7, "onTapMention");
+      r.h(var8, "onTapCommand");
+      r.h(var9, "onLongPressCommand");
+      r.h(var10, "onTapSpoiler");
+      r.h(var11, "onTapTimestamp");
+      r.h(var12, "onTapInlineCode");
+      r.h(var13, "onTapEmoji");
+      r.h(var14, "onTapSoundmoji");
       return new MarkdownTextRenderEventHandlers(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14);
    }
 
@@ -170,34 +170,34 @@ public data class MarkdownTextRenderEventHandlers(onLinkClicked: (LinkContentNod
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.onLinkClicked, var1.onLinkClicked)) {
+         if (!r.c(this.onLinkClicked, var1.onLinkClicked)) {
             return false;
-         } else if (!q.c(this.onLinkLongClicked, var1.onLinkLongClicked)) {
+         } else if (!r.c(this.onLinkLongClicked, var1.onLinkLongClicked)) {
             return false;
-         } else if (!q.c(this.onTapChannel, var1.onTapChannel)) {
+         } else if (!r.c(this.onTapChannel, var1.onTapChannel)) {
             return false;
-         } else if (!q.c(this.onLongPressChannel, var1.onLongPressChannel)) {
+         } else if (!r.c(this.onLongPressChannel, var1.onLongPressChannel)) {
             return false;
-         } else if (!q.c(this.onTapAttachmentLink, var1.onTapAttachmentLink)) {
+         } else if (!r.c(this.onTapAttachmentLink, var1.onTapAttachmentLink)) {
             return false;
-         } else if (!q.c(this.onLongPressAttachmentLink, var1.onLongPressAttachmentLink)) {
+         } else if (!r.c(this.onLongPressAttachmentLink, var1.onLongPressAttachmentLink)) {
             return false;
-         } else if (!q.c(this.onTapMention, var1.onTapMention)) {
+         } else if (!r.c(this.onTapMention, var1.onTapMention)) {
             return false;
-         } else if (!q.c(this.onTapCommand, var1.onTapCommand)) {
+         } else if (!r.c(this.onTapCommand, var1.onTapCommand)) {
             return false;
-         } else if (!q.c(this.onLongPressCommand, var1.onLongPressCommand)) {
+         } else if (!r.c(this.onLongPressCommand, var1.onLongPressCommand)) {
             return false;
-         } else if (!q.c(this.onTapSpoiler, var1.onTapSpoiler)) {
+         } else if (!r.c(this.onTapSpoiler, var1.onTapSpoiler)) {
             return false;
-         } else if (!q.c(this.onTapTimestamp, var1.onTapTimestamp)) {
+         } else if (!r.c(this.onTapTimestamp, var1.onTapTimestamp)) {
             return false;
-         } else if (!q.c(this.onTapInlineCode, var1.onTapInlineCode)) {
+         } else if (!r.c(this.onTapInlineCode, var1.onTapInlineCode)) {
             return false;
-         } else if (!q.c(this.onTapEmoji, var1.onTapEmoji)) {
+         } else if (!r.c(this.onTapEmoji, var1.onTapEmoji)) {
             return false;
          } else {
-            return q.c(this.onTapSoundmoji, var1.onTapSoundmoji);
+            return r.c(this.onTapSoundmoji, var1.onTapSoundmoji);
          }
       }
    }
@@ -256,50 +256,50 @@ public data class MarkdownTextRenderEventHandlers(onLinkClicked: (LinkContentNod
    }
 
    public override fun toString(): String {
-      val var6: Function1 = this.onLinkClicked;
-      val var11: Function1 = this.onLinkLongClicked;
-      val var8: Function3 = this.onTapChannel;
-      val var4: Function4 = this.onLongPressChannel;
-      val var14: Function1 = this.onTapAttachmentLink;
-      val var13: Function2 = this.onLongPressAttachmentLink;
-      val var1: Function4 = this.onTapMention;
+      val var5: Function1 = this.onLinkClicked;
+      val var6: Function1 = this.onLinkLongClicked;
+      val var3: Function3 = this.onTapChannel;
+      val var14: Function4 = this.onLongPressChannel;
+      val var8: Function1 = this.onTapAttachmentLink;
+      val var9: Function2 = this.onLongPressAttachmentLink;
+      val var13: Function4 = this.onTapMention;
       val var2: Function1 = this.onTapCommand;
-      val var3: Function1 = this.onLongPressCommand;
+      val var1: Function1 = this.onLongPressCommand;
       val var12: Function0 = this.onTapSpoiler;
-      val var10: Function1 = this.onTapTimestamp;
-      val var7: Function1 = this.onTapInlineCode;
-      val var9: Function1 = this.onTapEmoji;
-      val var5: Function1 = this.onTapSoundmoji;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("MarkdownTextRenderEventHandlers(onLinkClicked=");
-      var15.append(var6);
-      var15.append(", onLinkLongClicked=");
-      var15.append(var11);
-      var15.append(", onTapChannel=");
-      var15.append(var8);
-      var15.append(", onLongPressChannel=");
-      var15.append(var4);
-      var15.append(", onTapAttachmentLink=");
-      var15.append(var14);
-      var15.append(", onLongPressAttachmentLink=");
-      var15.append(var13);
-      var15.append(", onTapMention=");
-      var15.append(var1);
-      var15.append(", onTapCommand=");
-      var15.append(var2);
-      var15.append(", onLongPressCommand=");
-      var15.append(var3);
-      var15.append(", onTapSpoiler=");
-      var15.append(var12);
-      var15.append(", onTapTimestamp=");
-      var15.append(var10);
-      var15.append(", onTapInlineCode=");
-      var15.append(var7);
-      var15.append(", onTapEmoji=");
-      var15.append(var9);
-      var15.append(", onTapSoundmoji=");
-      var15.append(var5);
-      var15.append(")");
-      return var15.toString();
+      val var15: Function1 = this.onTapTimestamp;
+      val var4: Function1 = this.onTapInlineCode;
+      val var10: Function1 = this.onTapEmoji;
+      val var7: Function1 = this.onTapSoundmoji;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("MarkdownTextRenderEventHandlers(onLinkClicked=");
+      var11.append(var5);
+      var11.append(", onLinkLongClicked=");
+      var11.append(var6);
+      var11.append(", onTapChannel=");
+      var11.append(var3);
+      var11.append(", onLongPressChannel=");
+      var11.append(var14);
+      var11.append(", onTapAttachmentLink=");
+      var11.append(var8);
+      var11.append(", onLongPressAttachmentLink=");
+      var11.append(var9);
+      var11.append(", onTapMention=");
+      var11.append(var13);
+      var11.append(", onTapCommand=");
+      var11.append(var2);
+      var11.append(", onLongPressCommand=");
+      var11.append(var1);
+      var11.append(", onTapSpoiler=");
+      var11.append(var12);
+      var11.append(", onTapTimestamp=");
+      var11.append(var15);
+      var11.append(", onTapInlineCode=");
+      var11.append(var4);
+      var11.append(", onTapEmoji=");
+      var11.append(var10);
+      var11.append(", onTapSoundmoji=");
+      var11.append(var7);
+      var11.append(")");
+      return var11.toString();
    }
 }

@@ -20,7 +20,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    private final val roleColorPaint: Paint
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super();
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
@@ -38,7 +38,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    }
 
    public open fun draw(canvas: Canvas) {
-      kotlin.jvm.internal.q.h(var1, "canvas");
+      kotlin.jvm.internal.r.h(var1, "canvas");
       val var2: Float = 2;
       val var3: Float = (this.pxSize / 2 + 2) / 2;
       var1.drawCircle(this.pxSize / (float)2, this.pxSize / (float)2, (this.pxSize / (float)2 + (float)2) / (float)2, this.borderColorPaint);
@@ -57,7 +57,7 @@ public class RoleDotDrawable(context: Context, borderColor: Int, spSize: Int = 2
    }
 
    public fun setColors(roleColors: RoleColors) {
-      kotlin.jvm.internal.q.h(var1, "roleColors");
+      kotlin.jvm.internal.r.h(var1, "roleColors");
       if (var1.getSecondaryColor() != null) {
          val var5: java.util.List = kotlin.collections.i.q(new Integer[]{var1.getPrimaryColor(), var1.getSecondaryColor()});
          if (var1.getTertiaryColor() != null) {

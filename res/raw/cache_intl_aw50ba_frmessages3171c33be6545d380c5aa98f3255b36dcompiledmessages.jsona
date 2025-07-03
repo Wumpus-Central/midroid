@@ -19968,12 +19968,21 @@
   ],
   "3XVNys": "Copier le lien d'invitation",
   "VNe8Pz": "Modifier le lien d'invitation.",
+  "Ckxb6u": "Demander à rejoindre",
   "2Gbof3": "Invitation expirée",
   "jfrMtr": "Complet",
+  "x1UXGR": "La partie est terminée. En lancer une autre ?",
   "pkq6Vl": "Invitation de jeu",
   "hC/Ze3": "Invitation à rejoindre",
   "/8czHx": [
     "Invitation à écouter ensemble sur ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Invitation à regarder ",
     [
       1,
       "name"
@@ -19986,7 +19995,127 @@
   "/ak8Mj": "Rejoindre via PlayStation",
   "HEY5dX": "Rejoindre via Xbox",
   "84qx9v": "La session d'écoute est terminée !",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " a demandé à rejoindre ton groupe dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " demande à rejoindre ton groupe dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "B9kbnZ": "La session de visionnage est terminée !",
+  "IA6uDQ": [
+    "Tu demandes à rejoindre un groupe dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Tu demandes à rejoindre le groupe de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Tu as demandé à rejoindre un groupe dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "JddpNz": [
+    "Tu as demandé à rejoindre le groupe de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " dans ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Envoie ce lien à tes amis. Cela leur permettra de rejoindre automatiquement ton serveur.",
   "tQc0l5": "Invite un ami sur ton serveur !",
   "TfuB9P": [
@@ -30664,6 +30793,7 @@
   "IKE48v": "Nouveau membre",
   "VaCdhY": "Nouveau sur Discord",
   "CQmziY": "Visiteur (non-membre)",
+  "EkokLy": "Requis",
   "WnX4Jy": "Renvoyer l'e-mail",
   "lm1UKi": "Renvoyer un e-mail de vérification",
   "yBZMsb": "Réinitialiser",
@@ -33664,9 +33794,9 @@
   "7YZ/Sk": "Passer à la caméra arrière",
   "/R1SBw": "Passer à la caméra avant",
   "BkuOOz": "Synchroniser",
-  "GAlmIS": "Activer cette option remplacera les paramètres d'apparence sur tous les autres clients, y compris ceux du bureau et du navigateur.",
   "3340dX": "Synchronisation des clients.",
   "p4IKEx": "Activer cette option remplacera les paramètres de textes et d'images sur tous les autres clients, y compris les versions pour bureau et navigateur.",
+  "CRtkeH": "Activer cette option remplacera ton thème sélectionné sur tous les clients, y compris l'application de bureau et le navigateur web.",
   "+KCMSk": "Synchroniser les amis vers Discord",
   "NVwuHh": "Synchroniser maintenant",
   "eW8Gy8": "Synchroniser les permissions",
@@ -36982,8 +37112,127 @@
   ],
   "FMbL3t": "Échec de l'effacement",
   "2TbM/P": "En train de jouer",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " auditeur"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " auditeurs"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " auditeur"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " auditeurs"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Écoute",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\npar ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Joue à",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " joueur"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " joueurs"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " joueur"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " joueurs"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Écouter sur ",
     [

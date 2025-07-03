@@ -1,6 +1,6 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal data class UserSearchWorkerResult(id: String, username: String, comparator: String, score: Double) {
    public final val id: String
@@ -9,9 +9,9 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    public final val score: Double
 
    init {
-      q.h(var1, "id");
-      q.h(var2, "username");
-      q.h(var3, "comparator");
+      r.h(var1, "id");
+      r.h(var2, "username");
+      r.h(var3, "comparator");
       super();
       this.id = var1;
       this.username = var2;
@@ -36,9 +36,9 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
    }
 
    public fun copy(id: String = var0.id, username: String = var0.username, comparator: String = var0.comparator, score: Double = var0.score): UserSearchWorkerResult {
-      q.h(var1, "id");
-      q.h(var2, "username");
-      q.h(var3, "comparator");
+      r.h(var1, "id");
+      r.h(var2, "username");
+      r.h(var3, "comparator");
       return new UserSearchWorkerResult(var1, var2, var3, var4);
    }
 
@@ -49,11 +49,11 @@ internal data class UserSearchWorkerResult(id: String, username: String, compara
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.username, var1.username)) {
+         } else if (!r.c(this.username, var1.username)) {
             return false;
-         } else if (!q.c(this.comparator, var1.comparator)) {
+         } else if (!r.c(this.comparator, var1.comparator)) {
             return false;
          } else {
             return java.lang.Double.compare(this.score, var1.score) == 0;

@@ -1,6 +1,6 @@
 package com.discord.keyboard
 
-import Q1.a
+import P1.a
 import android.app.Activity
 import android.view.View
 import android.view.Window
@@ -8,11 +8,11 @@ import com.discord.codegen.NativeKeyboardModuleSpec
 import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class KeyboardModule(reactContext: ReactApplicationContext) : NativeKeyboardModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 

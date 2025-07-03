@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -9,7 +8,8 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
    public final val messageId: MessageId
@@ -17,7 +17,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    public final val reaction: Reaction?
 
    fun LongPressReactionData(var1: java.lang.String, var2: Long, var4: ReactionView.Reaction) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -37,7 +37,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
    }
 
    public fun copy(messageId: MessageId = ..., channelId: ChannelId = ..., reaction: Reaction? = ...): LongPressReactionData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new LongPressReactionData(var1, var2, var4, null);
    }
 
@@ -53,14 +53,14 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.reaction, var1.reaction);
+            return r.c(this.reaction, var1.reaction);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.reaction == null) {
          var1 = 0;
@@ -68,7 +68,7 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var1 = this.reaction.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun serialize(): WritableMap {
@@ -82,15 +82,15 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
          var7 = null;
       }
 
-      val var3: Pair = s.a("messageId", this.messageId);
-      val var4: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
+      val var4: Pair = s.a("messageId", this.messageId);
+      val var3: Pair = s.a("channelId", ChannelId.toString-impl(this.channelId));
       val var5: Pair = s.a("reaction", var7);
       var var8: java.lang.Boolean = null;
       if (this.reaction != null) {
          var8 = this.reaction.isBurstReaction();
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, s.a("isBurst", var8));
+      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, s.a("isBurst", var8));
    }
 
    public override fun toString(): String {

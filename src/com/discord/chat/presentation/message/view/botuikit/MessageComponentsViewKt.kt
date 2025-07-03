@@ -5,15 +5,15 @@ import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams
 import android.view.ViewGroup.MarginLayoutParams
 import com.discord.chat.bridge.botuikit.Component
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun ViewGroup.recycleChildComponents(componentProvider: ComponentProvider?) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
 
    for (int var2 = var0.getChildCount() - 1; -1 < var2; var2--) {
       if (var1 != null) {
          val var3: View = var0.getChildAt(var2);
-         q.f(
+         r.f(
             var3,
             "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
          );
@@ -30,8 +30,8 @@ public fun ViewGroup.replaceViews(
    paddingBottom: Int = 0,
    paddingRight: Int = 0
 ) {
-   q.h(var0, "<this>");
-   q.h(var1, "views");
+   r.h(var0, "<this>");
+   r.h(var1, "views");
    val var8: java.util.Iterator = var1.iterator();
 
    for (int var5 = 0; var8.hasNext(); var5++) {
@@ -41,7 +41,7 @@ public fun ViewGroup.replaceViews(
       }
 
       val var10: ComponentView = var6 as ComponentView;
-      q.f(var6 as ComponentView, "null cannot be cast to non-null type android.view.View");
+      r.f(var6 as ComponentView, "null cannot be cast to non-null type android.view.View");
       val var9: View = var10 as View;
       val var7: LayoutParams = (var10 as View).getLayoutParams();
       var6 = var7;
@@ -74,7 +74,7 @@ public fun ViewGroup.replaceViews(
          if (var0.getChildAt(var5) != var10) {
             if (var2 != null) {
                var6 = var0.getChildAt(var5);
-               q.f(
+               r.f(
                   var6,
                   "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
                );
@@ -97,7 +97,7 @@ public fun ViewGroup.replaceViews(
             if (var0.getChildAt(var3) != null) {
                val var11: View = var0.getChildAt(var3);
                if (var2 != null) {
-                  q.f(
+                  r.f(
                      var11,
                      "null cannot be cast to non-null type com.discord.chat.presentation.message.view.botuikit.ComponentView<out com.discord.chat.bridge.botuikit.Component>"
                   );

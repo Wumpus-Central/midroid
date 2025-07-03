@@ -15,37 +15,37 @@ import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.Result.a
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private const val NOTIFICATION_LIGHT_PERIOD: Int = 1500
 private final val messageRegex: Regex = new Regex("/channels/(\\d+|@me)(?:/)(\\d+)(?:/)(\\d+)")
 
 internal final val notificationManager: NotificationManager?
    internal final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       return var0.getSystemService("notification") as NotificationManager;
    }
 
 
 internal final val notificationManagerCompat: NotificationManagerCompat
    internal final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       val var1: NotificationManagerCompat = NotificationManagerCompat.g(var0);
-      q.g(var1, "from(...)");
+      r.g(var1, "from(...)");
       return var1;
    }
 
 
 internal final val messagingStyle: MessagingStyle?
    internal final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       return NotificationCompat.MessagingStyle.p(var0);
    }
 
 
 internal fun Context.getActiveNotification(tag: String): Notification? {
-   q.h(var0, "<this>");
-   q.h(var1, "tag");
+   r.h(var0, "<this>");
+   r.h(var1, "tag");
    var var4: NotificationManager = getNotificationManager(var0);
    var var8: Notification = null;
    if (var4 != null) {
@@ -77,7 +77,7 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
             }
 
             val var12: StatusBarNotification = var15[var2];
-            if (q.c(var15[var2].getTag(), var1)) {
+            if (r.c(var15[var2].getTag(), var1)) {
                var13 = var12;
                break;
             }
@@ -96,8 +96,8 @@ internal fun Context.getActiveNotification(tag: String): Notification? {
 }
 
 internal fun Context.getActiveNotificationMessageCount(tag: String): Int {
-   q.h(var0, "<this>");
-   q.h(var1, "tag");
+   r.h(var0, "<this>");
+   r.h(var1, "tag");
    val var3: Notification = getActiveNotification(var0, var1);
    if (var3 != null) {
       val var4: NotificationCompat.MessagingStyle = getMessagingStyle(var3);
@@ -113,23 +113,23 @@ internal fun Context.getActiveNotificationMessageCount(tag: String): Int {
 }
 
 internal fun Context.getActiveReactionNotifications(channelId: String): List<StatusBarNotification>? {
-   q.h(var0, "<this>");
-   q.h(var1, "channelId");
+   r.h(var0, "<this>");
+   r.h(var1, "channelId");
    var var5: NotificationManager = getNotificationManager(var0);
    var var11: ArrayList = null;
    if (var5 != null) {
       label58:
       try {
-         val var14: a = Result.k;
-         var13 = Result.b(var5.getActiveNotifications());
+         val var13: a = Result.k;
+         var12 = Result.b(var5.getActiveNotifications());
       } catch (var9: java.lang.Throwable) {
-         val var12: a = Result.k;
-         var13 = Result.b(c.a(var9));
+         val var18: a = Result.k;
+         var12 = Result.b(c.a(var9));
          break label58;
       }
 
-      var5 = (NotificationManager)var13;
-      if (Result.g(var13)) {
+      var5 = (NotificationManager)var12;
+      if (Result.g(var12)) {
          var5 = null;
       }
 
@@ -144,12 +144,12 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var8: Regex = messageRegex;
-                  val var15: java.lang.String = var21.getTag();
-                  q.g(var15, "getTag(...)");
-                  var16 = Regex.c(var8, var15, 0, 2, null);
-                  if (var16 != null) {
-                     val var22: java.util.List = var16.b();
+                  val var14: Regex = messageRegex;
+                  val var8: java.lang.String = var21.getTag();
+                  r.g(var8, "getTag(...)");
+                  var15 = Regex.c(var14, var8, 0, 2, null);
+                  if (var15 != null) {
+                     val var22: java.util.List = var15.b();
                      if (var22 != null) {
                         var3 = var22.size();
                         break label45;
@@ -160,21 +160,21 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
                }
 
                val var23: java.lang.String = var21.getTag();
-               q.g(var23, "getTag(...)");
+               r.g(var23, "getTag(...)");
                if (h.I(var23, "GENERIC_PUSH_NOTIFICATION_SENT", false, 2, null) && var3 == 4) {
                   label38: {
-                     if (var16 != null) {
-                        val var17: java.util.List = var16.b();
-                        if (var17 != null) {
-                           var18 = var17.get(2) as java.lang.String;
+                     if (var15 != null) {
+                        val var16: java.util.List = var15.b();
+                        if (var16 != null) {
+                           var17 = var16.get(2) as java.lang.String;
                            break label38;
                         }
                      }
 
-                     var18 = null;
+                     var17 = null;
                   }
 
-                  if (q.c(var18, var1)) {
+                  if (r.c(var17, var1)) {
                      var20.add(var21);
                   }
                }
@@ -189,22 +189,22 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
 }
 
 internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarNotification>? {
-   q.h(var0, "$this$getCallNotifications");
+   r.h(var0, "$this$getCallNotifications");
    var var6: NotificationManager = getNotificationManager(var0);
    var var12: ArrayList = null;
    if (var6 != null) {
       label35:
       try {
-         val var15: a = Result.k;
-         var14 = Result.b(var6.getActiveNotifications());
+         val var14: a = Result.k;
+         var13 = Result.b(var6.getActiveNotifications());
       } catch (var10: java.lang.Throwable) {
-         val var13: a = Result.k;
-         var14 = Result.b(c.a(var10));
+         val var15: a = Result.k;
+         var13 = Result.b(c.a(var10));
          break label35;
       }
 
-      var6 = (NotificationManager)var14;
-      if (Result.g(var14)) {
+      var6 = (NotificationManager)var13;
+      if (Result.g(var13)) {
          var6 = null;
       }
 
@@ -226,7 +226,7 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
                var9.append(var8);
                val var20: java.lang.String = var9.toString();
                var8 = var18.getTag();
-               q.g(var8, "getTag(...)");
+               r.g(var8, "getTag(...)");
                var5 = h.I(var8, var20, false, 2, null);
             }
 
@@ -241,8 +241,8 @@ internal fun Context.getCallNotifications(channelId: ChannelId): List<StatusBarN
 }
 
 internal fun Context.getNotificationBuilderOrCreate(notificationChannelId: String, notificationExisting: Notification?): Builder {
-   q.h(var0, "<this>");
-   q.h(var1, "notificationChannelId");
+   r.h(var0, "<this>");
+   r.h(var1, "notificationChannelId");
    val var3: NotificationCompat.Builder;
    if (var2 != null) {
       var3 = new NotificationCompat.Builder(var0, var2);
@@ -254,9 +254,9 @@ internal fun Context.getNotificationBuilderOrCreate(notificationChannelId: Strin
 }
 
 internal fun NotificationManagerCompat.notify(tag: String, notificationBuilder: Builder, additionalFlags: Int = 0) {
-   q.h(var0, "<this>");
-   q.h(var1, "tag");
-   q.h(var2, "notificationBuilder");
+   r.h(var0, "<this>");
+   r.h(var1, "tag");
+   r.h(var2, "notificationBuilder");
    val var4: Notification = var2.g();
    var4.flags |= var3;
    var0.o(var1, 0, var4);
@@ -272,8 +272,8 @@ fun `notify$default`(var0: NotificationManagerCompat, var1: java.lang.String, va
 }
 
 internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors: NotificationBehaviors?, sound: Uri?): Builder {
-   q.h(var0, "<this>");
-   q.h(var1, "context");
+   r.h(var0, "<this>");
+   r.h(var1, "context");
    if (var2 == null) {
       return var0;
    } else {
@@ -289,10 +289,10 @@ internal fun Builder.setLegacyNotificationBehaviors(context: Context, behaviors:
 
       if (var2.getSoundsEnabled() && var3 != null) {
          var0 = var0.W(var3).y(var4 and -2);
-         q.e(var0);
+         r.e(var0);
       } else {
          var0 = var0.y(var4);
-         q.e(var0);
+         r.e(var0);
       }
 
       return var0;

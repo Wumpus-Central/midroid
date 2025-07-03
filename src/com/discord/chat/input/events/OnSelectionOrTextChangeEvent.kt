@@ -2,9 +2,9 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: String, editId: String) : ReactEvent {
@@ -14,8 +14,8 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    public final val editId: String
 
    init {
-      q.h(var3, "text");
-      q.h(var4, "editId");
+      r.h(var3, "text");
+      r.h(var4, "editId");
       super();
       this.start = var1;
       this.end = var2;
@@ -40,8 +40,8 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    }
 
    public fun copy(start: Int = var0.start, end: Int = var0.end, text: String = var0.text, editId: String = var0.editId): OnSelectionOrTextChangeEvent {
-      q.h(var3, "text");
-      q.h(var4, "editId");
+      r.h(var3, "text");
+      r.h(var4, "editId");
       return new OnSelectionOrTextChangeEvent(var1, var2, var3, var4);
    }
 
@@ -56,10 +56,10 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
             return false;
          } else if (this.end != var1.end) {
             return false;
-         } else if (!q.c(this.text, var1.text)) {
+         } else if (!r.c(this.text, var1.text)) {
             return false;
          } else {
-            return q.c(this.editId, var1.editId);
+            return r.c(this.editId, var1.editId);
          }
       }
    }
@@ -73,21 +73,21 @@ internal data class OnSelectionOrTextChangeEvent(start: Int, end: Int, text: Str
    }
 
    public override fun toString(): String {
-      val var2: Int = this.start;
-      val var1: Int = this.end;
+      val var1: Int = this.start;
+      val var2: Int = this.end;
       val var5: java.lang.String = this.text;
-      val var3: java.lang.String = this.editId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("OnSelectionOrTextChangeEvent(start=");
-      var4.append(var2);
-      var4.append(", end=");
-      var4.append(var1);
-      var4.append(", text=");
-      var4.append(var5);
-      var4.append(", editId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.editId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("OnSelectionOrTextChangeEvent(start=");
+      var3.append(var1);
+      var3.append(", end=");
+      var3.append(var2);
+      var3.append(", text=");
+      var3.append(var5);
+      var3.append(", editId=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

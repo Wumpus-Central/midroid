@@ -4,26 +4,26 @@ import android.content.Context
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.react_asset_fetcher.ReactAssetUtilsKt
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun Message.avatarUrl(context: Context): String? {
-   q.h(var0, "<this>");
-   q.h(var1, "context");
+   r.h(var0, "<this>");
+   r.h(var1, "context");
    return ReactAssetUtilsKt.inflateUrl(var1, var0.getAvatarURL$chat_release());
 }
 
 public fun Message.isAutomodSystemMessage(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return var0.getType().isAutomodSystem();
 }
 
 public fun Message.isCallMessage(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return var0.getType().isCall();
 }
 
 public fun Message.isEphemeral(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Boolean;
    if (var0.getEphemeralIndication() != null) {
       var1 = true;
@@ -35,7 +35,7 @@ public fun Message.isEphemeral(): Boolean {
 }
 
 public fun Message.isSurvey(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Boolean;
    if (var0.getSurveyIndication() != null) {
       var1 = true;
@@ -47,12 +47,12 @@ public fun Message.isSurvey(): Boolean {
 }
 
 public fun Message.isSystemMessage(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return var0.getType().isSystem();
 }
 
 public fun Message.roleDotColor(defaultColor: Int = ThemeManagerKt.getTheme().getInteractiveActive()): Int {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: Int = var0.getRoleColor();
    if (var2 != null) {
       var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue());
@@ -71,7 +71,7 @@ fun `roleDotColor$default`(var0: Message, var1: Int, var2: Int, var3: Any): Int 
 }
 
 public fun Message.shouldAnimateEmoji(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: java.lang.Boolean = var0.getAnimateEmoji();
    val var1: Boolean;
    if (var2 != null) {
@@ -84,7 +84,7 @@ public fun Message.shouldAnimateEmoji(): Boolean {
 }
 
 public fun Message.shouldAutoPlayGifs(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: java.lang.Boolean = var0.getGifAutoPlay();
    val var1: Boolean;
    if (var2 != null) {
@@ -97,7 +97,7 @@ public fun Message.shouldAutoPlayGifs(): Boolean {
 }
 
 public fun Message.shouldShowLinkDecorations(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: java.lang.Boolean = var0.getShowLinkDecorations();
    val var1: Boolean;
    if (var2 != null) {
@@ -110,7 +110,7 @@ public fun Message.shouldShowLinkDecorations(): Boolean {
 }
 
 public fun Message.usernameColor(defaultColor: Int = ThemeManagerKt.getTheme().getTextNormal()): Int {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: Int = var0.getUsernameColor();
    if (var2 != null) {
       var1 = ReactColorToAndroidColorKt.reactColorToAndroidColor(var2.intValue());

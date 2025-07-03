@@ -2,7 +2,7 @@ package com.discord.mobile_voice_overlay
 
 import kotlinx.serialization.KSerializer
 
-@tb.f
+@sb.f
 public data class MobileVoiceOverlayAssets(useSpeaker: String,
    mute: String,
    disconnectFromVoice: String,
@@ -28,17 +28,17 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
    public final val noResults: String
 
    init {
-      kotlin.jvm.internal.q.h(var1, "useSpeaker");
-      kotlin.jvm.internal.q.h(var2, "mute");
-      kotlin.jvm.internal.q.h(var3, "disconnectFromVoice");
-      kotlin.jvm.internal.q.h(var4, "getInvite");
-      kotlin.jvm.internal.q.h(var5, "switchChannels");
-      kotlin.jvm.internal.q.h(var6, "openDiscord");
-      kotlin.jvm.internal.q.h(var7, "inviteLinkCopied");
-      kotlin.jvm.internal.q.h(var8, "channelSelect");
-      kotlin.jvm.internal.q.h(var9, "closeWindow");
-      kotlin.jvm.internal.q.h(var10, "searchChannels");
-      kotlin.jvm.internal.q.h(var11, "noResults");
+      kotlin.jvm.internal.r.h(var1, "useSpeaker");
+      kotlin.jvm.internal.r.h(var2, "mute");
+      kotlin.jvm.internal.r.h(var3, "disconnectFromVoice");
+      kotlin.jvm.internal.r.h(var4, "getInvite");
+      kotlin.jvm.internal.r.h(var5, "switchChannels");
+      kotlin.jvm.internal.r.h(var6, "openDiscord");
+      kotlin.jvm.internal.r.h(var7, "inviteLinkCopied");
+      kotlin.jvm.internal.r.h(var8, "channelSelect");
+      kotlin.jvm.internal.r.h(var9, "closeWindow");
+      kotlin.jvm.internal.r.h(var10, "searchChannels");
+      kotlin.jvm.internal.r.h(var11, "noResults");
       super();
       this.useSpeaker = var1;
       this.mute = var2;
@@ -110,17 +110,17 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
       searchChannels: String = var0.searchChannels,
       noResults: String = var0.noResults
    ): MobileVoiceOverlayAssets {
-      kotlin.jvm.internal.q.h(var1, "useSpeaker");
-      kotlin.jvm.internal.q.h(var2, "mute");
-      kotlin.jvm.internal.q.h(var3, "disconnectFromVoice");
-      kotlin.jvm.internal.q.h(var4, "getInvite");
-      kotlin.jvm.internal.q.h(var5, "switchChannels");
-      kotlin.jvm.internal.q.h(var6, "openDiscord");
-      kotlin.jvm.internal.q.h(var7, "inviteLinkCopied");
-      kotlin.jvm.internal.q.h(var8, "channelSelect");
-      kotlin.jvm.internal.q.h(var9, "closeWindow");
-      kotlin.jvm.internal.q.h(var10, "searchChannels");
-      kotlin.jvm.internal.q.h(var11, "noResults");
+      kotlin.jvm.internal.r.h(var1, "useSpeaker");
+      kotlin.jvm.internal.r.h(var2, "mute");
+      kotlin.jvm.internal.r.h(var3, "disconnectFromVoice");
+      kotlin.jvm.internal.r.h(var4, "getInvite");
+      kotlin.jvm.internal.r.h(var5, "switchChannels");
+      kotlin.jvm.internal.r.h(var6, "openDiscord");
+      kotlin.jvm.internal.r.h(var7, "inviteLinkCopied");
+      kotlin.jvm.internal.r.h(var8, "channelSelect");
+      kotlin.jvm.internal.r.h(var9, "closeWindow");
+      kotlin.jvm.internal.r.h(var10, "searchChannels");
+      kotlin.jvm.internal.r.h(var11, "noResults");
       return new MobileVoiceOverlayAssets(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
    }
 
@@ -131,28 +131,28 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.useSpeaker, var1.useSpeaker)) {
+         if (!kotlin.jvm.internal.r.c(this.useSpeaker, var1.useSpeaker)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.mute, var1.mute)) {
+         } else if (!kotlin.jvm.internal.r.c(this.mute, var1.mute)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.disconnectFromVoice, var1.disconnectFromVoice)) {
+         } else if (!kotlin.jvm.internal.r.c(this.disconnectFromVoice, var1.disconnectFromVoice)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.getInvite, var1.getInvite)) {
+         } else if (!kotlin.jvm.internal.r.c(this.getInvite, var1.getInvite)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.switchChannels, var1.switchChannels)) {
+         } else if (!kotlin.jvm.internal.r.c(this.switchChannels, var1.switchChannels)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.openDiscord, var1.openDiscord)) {
+         } else if (!kotlin.jvm.internal.r.c(this.openDiscord, var1.openDiscord)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.inviteLinkCopied, var1.inviteLinkCopied)) {
+         } else if (!kotlin.jvm.internal.r.c(this.inviteLinkCopied, var1.inviteLinkCopied)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.channelSelect, var1.channelSelect)) {
+         } else if (!kotlin.jvm.internal.r.c(this.channelSelect, var1.channelSelect)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.closeWindow, var1.closeWindow)) {
+         } else if (!kotlin.jvm.internal.r.c(this.closeWindow, var1.closeWindow)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.searchChannels, var1.searchChannels)) {
+         } else if (!kotlin.jvm.internal.r.c(this.searchChannels, var1.searchChannels)) {
             return false;
          } else {
-            return kotlin.jvm.internal.q.c(this.noResults, var1.noResults);
+            return kotlin.jvm.internal.r.c(this.noResults, var1.noResults);
          }
       }
    }
@@ -195,42 +195,42 @@ public data class MobileVoiceOverlayAssets(useSpeaker: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.useSpeaker;
-      val var2: java.lang.String = this.mute;
-      val var5: java.lang.String = this.disconnectFromVoice;
-      val var11: java.lang.String = this.getInvite;
-      val var10: java.lang.String = this.switchChannels;
-      val var7: java.lang.String = this.openDiscord;
-      val var4: java.lang.String = this.inviteLinkCopied;
-      val var8: java.lang.String = this.channelSelect;
-      val var12: java.lang.String = this.closeWindow;
-      val var3: java.lang.String = this.searchChannels;
-      val var6: java.lang.String = this.noResults;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MobileVoiceOverlayAssets(useSpeaker=");
-      var1.append(var9);
-      var1.append(", mute=");
-      var1.append(var2);
-      var1.append(", disconnectFromVoice=");
-      var1.append(var5);
-      var1.append(", getInvite=");
-      var1.append(var11);
-      var1.append(", switchChannels=");
-      var1.append(var10);
-      var1.append(", openDiscord=");
-      var1.append(var7);
-      var1.append(", inviteLinkCopied=");
-      var1.append(var4);
-      var1.append(", channelSelect=");
-      var1.append(var8);
-      var1.append(", closeWindow=");
-      var1.append(var12);
-      var1.append(", searchChannels=");
-      var1.append(var3);
-      var1.append(", noResults=");
-      var1.append(var6);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.useSpeaker;
+      val var3: java.lang.String = this.mute;
+      val var11: java.lang.String = this.disconnectFromVoice;
+      val var12: java.lang.String = this.getInvite;
+      val var6: java.lang.String = this.switchChannels;
+      val var4: java.lang.String = this.openDiscord;
+      val var8: java.lang.String = this.inviteLinkCopied;
+      val var5: java.lang.String = this.channelSelect;
+      val var1: java.lang.String = this.closeWindow;
+      val var9: java.lang.String = this.searchChannels;
+      val var10: java.lang.String = this.noResults;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("MobileVoiceOverlayAssets(useSpeaker=");
+      var7.append(var2);
+      var7.append(", mute=");
+      var7.append(var3);
+      var7.append(", disconnectFromVoice=");
+      var7.append(var11);
+      var7.append(", getInvite=");
+      var7.append(var12);
+      var7.append(", switchChannels=");
+      var7.append(var6);
+      var7.append(", openDiscord=");
+      var7.append(var4);
+      var7.append(", inviteLinkCopied=");
+      var7.append(var8);
+      var7.append(", channelSelect=");
+      var7.append(var5);
+      var7.append(", closeWindow=");
+      var7.append(var1);
+      var7.append(", searchChannels=");
+      var7.append(var9);
+      var7.append(", noResults=");
+      var7.append(var10);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

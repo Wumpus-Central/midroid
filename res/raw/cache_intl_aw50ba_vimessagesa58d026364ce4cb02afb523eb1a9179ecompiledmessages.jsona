@@ -19992,12 +19992,21 @@
   ],
   "3XVNys": "Sao Chép Liên Kết Mời",
   "VNe8Pz": "Chỉnh sửa link mời.",
+  "Ckxb6u": "Đề Nghị Tham Gia",
   "2Gbof3": "Thư mời đã hết hạn",
   "jfrMtr": "Hết Chỗ",
+  "x1UXGR": "Trò chơi đã kết thúc. Bắt đầu trò chơi mới?",
   "pkq6Vl": "Lời Mời Trò Chơi",
   "hC/Ze3": "Mời Tham Gia",
   "/8czHx": [
     "Mời Cùng Nghe trên ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Mời vào Xem ",
     [
       1,
       "name"
@@ -20010,7 +20019,123 @@
   "/ak8Mj": "Tham gia qua PlayStation",
   "HEY5dX": "Tham gia trên Xbox",
   "84qx9v": "Nhóm nghe đã kết thúc!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " đã yêu cầu tham gia tổ đội ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " của bạn"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " đang yêu cầu tham gia tổ đội**",
+    [
+      1,
+      "appName"
+    ],
+    "** của bạn"
+  ],
   "B9kbnZ": "Nhóm xem đã kết thúc!",
+  "IA6uDQ": [
+    "Bạn đang yêu cầu gia nhập một tổ đội của ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Bạn đang yêu cầu tham gia vào tổ đội ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " của ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Bạn đã yêu cầu tham gia vào tổ đội của ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "JddpNz": [
+    "Bạn đã yêu cầu tham giatổ đội ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " của ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Hãy chia sẻ đường dẫn với bạn bè để họ tự động tham gia máy chủ của bạn.",
   "tQc0l5": "Mời một người bạn vào máy chủ của bạn!",
   "TfuB9P": [
@@ -30654,6 +30779,7 @@
   "IKE48v": "Thành viên Mới",
   "VaCdhY": "Chào mừng đến với Discord",
   "CQmziY": "Khách Truy Cập (Không phải là Thành Viên)",
+  "EkokLy": "Yêu cầu",
   "WnX4Jy": "Gửi Lại Email",
   "lm1UKi": "Gửi Lại Xác Nhận Email",
   "yBZMsb": "Đặt lại",
@@ -33664,9 +33790,9 @@
   "7YZ/Sk": "Đổi lại về camera sau",
   "/R1SBw": "Đổi sang camera trước",
   "BkuOOz": "Đồng bộ",
-  "GAlmIS": "Bật tính năng này sẽ ghi đè cài đặt giao diện ở trên đối với tất cả các ứng dụng máy khách bao gồm ứng dụng trên máy tính để bàn và trình duyệt.",
   "3340dX": "Đồng bộ trên mọi thiết bị.",
   "p4IKEx": "Bật tính năng này sẽ ghi đè lên cài đặt văn bản và hình ảnh trên tất cả các ứng dụng máy khách bao gồm cả máy tính bàn và trình duyệt.",
+  "CRtkeH": "Bật cài đặt này sẽ ghi đè chủ đề mà bạn đã chọn trên tất cả các ứng dụng khách, bao gồm cả máy tính bàn và trình duyệt.",
   "+KCMSk": "Đồng bộ bạn bè vào Discord",
   "NVwuHh": "Đồng Bộ Ngay",
   "eW8Gy8": "Đồng bộ các quyền",
@@ -36976,8 +37102,127 @@
   ],
   "FMbL3t": "Xóa thất bại",
   "2TbM/P": "Chơi game",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Đang nghe"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Đang nghe"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Đang nghe"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Đang nghe"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Đang nghe",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nbởi ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Đang chơi",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Đang chơi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Đang chơi"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Đang chơi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Đang chơi"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Chơi trên ",
     [

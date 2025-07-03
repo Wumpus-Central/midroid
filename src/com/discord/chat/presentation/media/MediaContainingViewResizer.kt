@@ -1,10 +1,10 @@
 package com.discord.chat.presentation.media
 
-import I9.a
+import H9.a
 import android.view.View
 import android.view.ViewGroup.LayoutParams
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object MediaContainingViewResizer {
    public fun View.resizeLayoutParams(
@@ -14,8 +14,8 @@ public object MediaContainingViewResizer {
       maxHeightPx: Int,
       resizeMode: com.discord.chat.presentation.media.MediaContainingViewResizer.ResizeMode = MediaContainingViewResizer.ResizeMode.Fill
    ) {
-      q.h(var1, "<this>");
-      q.h(var6, "resizeMode");
+      r.h(var1, "<this>");
+      r.h(var6, "resizeMode");
       val var11: Boolean;
       if (var6 != MediaContainingViewResizer.ResizeMode.Fill && var6 != MediaContainingViewResizer.ResizeMode.Cover && var2 <= var4 && var3 <= var5) {
          var11 = false;

@@ -15,7 +15,7 @@ import java.util.ArrayList
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object MarkdownRules {
    public final val PATTERN_HEADER_ITEM: Pattern
@@ -27,20 +27,20 @@ public object MarkdownRules {
    @JvmStatic
    fun {
       var var0: Pattern = Pattern.compile("^\\*[ \\t](.*)(?=\\n|$)", 0);
-      q.g(var0, "java.util.regex.Pattern.compile(this, flags)");
+      r.g(var0, "java.util.regex.Pattern.compile(this, flags)");
       PATTERN_LIST_ITEM = var0;
       var0 = Pattern.compile("^\\s*(#+)[ \\t](.*) *(?=\\n|$)", 0);
-      q.g(var0, "java.util.regex.Pattern.compile(this, flags)");
+      r.g(var0, "java.util.regex.Pattern.compile(this, flags)");
       PATTERN_HEADER_ITEM = var0;
       var0 = Pattern.compile("^\\s*(.+)\\n *(=|-){3,} *(?=\\n|$)", 0);
-      q.g(var0, "java.util.regex.Pattern.compile(this, flags)");
+      r.g(var0, "java.util.regex.Pattern.compile(this, flags)");
       PATTERN_HEADER_ITEM_ALT = var0;
    }
 
    @JvmStatic
    public fun <R, S> createHeaderRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
-      q.h(var0, "context");
-      q.h(var1, "headerStyles");
+      r.h(var0, "context");
+      r.h(var1, "headerStyles");
       val var2: Function1 = new Function1(var0, var1) {
          final Context $context;
          final java.util.List $headerStyles;
@@ -91,8 +91,8 @@ public object MarkdownRules {
 
    @JvmStatic
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
-      q.h(var0, "context");
-      q.h(var1, "headerStyles");
+      r.h(var0, "context");
+      r.h(var1, "headerStyles");
       return i.C0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
@@ -104,39 +104,39 @@ public object MarkdownRules {
       public final val classSpanProvider: (String) -> Any?
       protected final val innerRules: List<Rule<Any, Node<Any>, Any>>
 
-      public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : q.h(var1, "styleSpanProvider") {
-         q.h(var2, "classSpanProvider");
+      public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : r.h(var1, "styleSpanProvider") {
+         r.h(var2, "classSpanProvider");
          this(var1, var2, i.C0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
       }
 
       init {
-         q.h(var1, "styleSpanProvider");
-         q.h(var2, "classSpanProvider");
-         q.h(var3, "innerRules");
+         r.h(var1, "styleSpanProvider");
+         r.h(var2, "classSpanProvider");
+         r.h(var3, "innerRules");
          super(MarkdownRules.INSTANCE.getPATTERN_HEADER_ITEM_ALT_CLASSED(), var1);
          this.classSpanProvider = var2;
          this.innerRules = var3;
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         q.h(var1, "matcher");
-         q.h(var2, "parser");
+         r.h(var1, "matcher");
+         r.h(var2, "parser");
          var var4: java.lang.String = var1.group(4);
-         q.g(var4, "matcher.group(4)");
+         r.g(var4, "matcher.group(4)");
          val var5: StyleNode = this.createHeaderStyleNode(var4);
          var4 = var1.group(1);
          if (var4 == null) {
             var4 = var1.group(3);
          }
 
-         q.g(var4, "headerBody");
+         r.g(var4, "headerBody");
 
-         for (var4 : var2.parse(var4, var3, this.innerRules)) {
-            if (var4 == null) {
+         for (Object var12 : var2.parse(var4, var3, this.innerRules)) {
+            if (var12 == null) {
                throw new NullPointerException("null cannot be cast to non-null type com.discord.simpleast.core.node.Node<RC>");
             }
 
-            var5.addChild(var4 as Node);
+            var5.addChild(var12 as Node);
          }
 
          label42: {
@@ -185,13 +185,13 @@ public object MarkdownRules {
    public open class HeaderLineRule<R, S>(pattern: Pattern = MarkdownRules.INSTANCE.getPATTERN_HEADER_ITEM_ALT(), styleSpanProvider: (Int) -> CharacterStyle)
       : MarkdownRules.HeaderRule<R, S> {
       init {
-         q.h(var1, "pattern");
-         q.h(var2, "styleSpanProvider");
+         r.h(var1, "pattern");
+         r.h(var2, "styleSpanProvider");
          super(var1, var2);
       }
 
       protected override fun createHeaderStyleNode(headerStyleGroup: String): StyleNode<Any, CharacterStyle> {
-         q.h(var1, "headerStyleGroup");
+         r.h(var1, "headerStyleGroup");
          val var2: Byte;
          if (var1.hashCode() == 61 && var1.equals("=")) {
             var2 = 1;
@@ -203,12 +203,12 @@ public object MarkdownRules {
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         q.h(var1, "matcher");
-         q.h(var2, "parser");
-         val var4: ParseSpec.Companion = ParseSpec.Companion;
-         val var5: java.lang.String = var1.group(2);
-         q.g(var5, "matcher.group(2)");
-         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(1), var1.end(1));
+         r.h(var1, "matcher");
+         r.h(var2, "parser");
+         val var5: ParseSpec.Companion = ParseSpec.Companion;
+         val var4: java.lang.String = var1.group(2);
+         r.g(var4, "matcher.group(2)");
+         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(1), var1.end(1));
       }
    }
 
@@ -216,27 +216,27 @@ public object MarkdownRules {
       protected final val styleSpanProvider: (Int) -> CharacterStyle
 
       init {
-         q.h(var1, "pattern");
-         q.h(var2, "styleSpanProvider");
+         r.h(var1, "pattern");
+         r.h(var2, "styleSpanProvider");
          super(var1);
          this.styleSpanProvider = var2;
       }
 
-      public constructor(styleSpanProvider: (Int) -> CharacterStyle) : q.h(var1, "styleSpanProvider") {
+      public constructor(styleSpanProvider: (Int) -> CharacterStyle) : r.h(var1, "styleSpanProvider") {
          this(MarkdownRules.INSTANCE.getPATTERN_HEADER_ITEM(), var1);
       }
 
       protected open fun createHeaderStyleNode(headerStyleGroup: String): StyleNode<Any, CharacterStyle> {
-         q.h(var1, "headerStyleGroup");
+         r.h(var1, "headerStyleGroup");
          return new StyleNode<>(i.e(this.styleSpanProvider.invoke(var1.length())));
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         q.h(var1, "matcher");
-         q.h(var2, "parser");
+         r.h(var1, "matcher");
+         r.h(var2, "parser");
          val var5: ParseSpec.Companion = ParseSpec.Companion;
          val var4: java.lang.String = var1.group(1);
-         q.g(var4, "matcher.group(1)");
+         r.g(var4, "matcher.group(1)");
          return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
       }
    }
@@ -245,14 +245,14 @@ public object MarkdownRules {
       private final val bulletSpanProvider: () -> BulletSpan
 
       init {
-         q.h(var1, "bulletSpanProvider");
+         r.h(var1, "bulletSpanProvider");
          super(MarkdownRules.INSTANCE.getPATTERN_LIST_ITEM());
          this.bulletSpanProvider = var1;
       }
 
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
-         q.h(var1, "matcher");
-         q.h(var2, "parser");
+         r.h(var1, "matcher");
+         r.h(var2, "parser");
          return ParseSpec.Companion.createNonterminal(new MarkdownListItemNode<>(this.bulletSpanProvider), (S)var3, var1.start(1), var1.end(1));
       }
    }

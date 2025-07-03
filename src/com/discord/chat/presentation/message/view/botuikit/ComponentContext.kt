@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ComponentContext(containerId: String,
    generalEventHandlers: GeneralEventHandlers,
@@ -25,13 +25,13 @@ public data class ComponentContext(containerId: String,
    public final val isInContainerComponent: Boolean
 
    init {
-      q.h(var1, "containerId");
-      q.h(var2, "generalEventHandlers");
-      q.h(var3, "markdownTextRenderOptions");
-      q.h(var4, "markdownTextRenderEventHandlers");
-      q.h(var5, "mediaItemEventHandlers");
-      q.h(var6, "componentActionEventHandlers");
-      q.h(var7, "widthInfo");
+      r.h(var1, "containerId");
+      r.h(var2, "generalEventHandlers");
+      r.h(var3, "markdownTextRenderOptions");
+      r.h(var4, "markdownTextRenderEventHandlers");
+      r.h(var5, "mediaItemEventHandlers");
+      r.h(var6, "componentActionEventHandlers");
+      r.h(var7, "widthInfo");
       super();
       this.containerId = var1;
       this.generalEventHandlers = var2;
@@ -97,13 +97,13 @@ public data class ComponentContext(containerId: String,
       isForwardedContent: Boolean = var0.isForwardedContent,
       isInContainerComponent: Boolean = var0.isInContainerComponent
    ): ComponentContext {
-      q.h(var1, "containerId");
-      q.h(var2, "generalEventHandlers");
-      q.h(var3, "markdownTextRenderOptions");
-      q.h(var4, "markdownTextRenderEventHandlers");
-      q.h(var5, "mediaItemEventHandlers");
-      q.h(var6, "componentActionEventHandlers");
-      q.h(var7, "widthInfo");
+      r.h(var1, "containerId");
+      r.h(var2, "generalEventHandlers");
+      r.h(var3, "markdownTextRenderOptions");
+      r.h(var4, "markdownTextRenderEventHandlers");
+      r.h(var5, "mediaItemEventHandlers");
+      r.h(var6, "componentActionEventHandlers");
+      r.h(var7, "widthInfo");
       return new ComponentContext(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -114,19 +114,19 @@ public data class ComponentContext(containerId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.containerId, var1.containerId)) {
+         if (!r.c(this.containerId, var1.containerId)) {
             return false;
-         } else if (!q.c(this.generalEventHandlers, var1.generalEventHandlers)) {
+         } else if (!r.c(this.generalEventHandlers, var1.generalEventHandlers)) {
             return false;
-         } else if (!q.c(this.markdownTextRenderOptions, var1.markdownTextRenderOptions)) {
+         } else if (!r.c(this.markdownTextRenderOptions, var1.markdownTextRenderOptions)) {
             return false;
-         } else if (!q.c(this.markdownTextRenderEventHandlers, var1.markdownTextRenderEventHandlers)) {
+         } else if (!r.c(this.markdownTextRenderEventHandlers, var1.markdownTextRenderEventHandlers)) {
             return false;
-         } else if (!q.c(this.mediaItemEventHandlers, var1.mediaItemEventHandlers)) {
+         } else if (!r.c(this.mediaItemEventHandlers, var1.mediaItemEventHandlers)) {
             return false;
-         } else if (!q.c(this.componentActionEventHandlers, var1.componentActionEventHandlers)) {
+         } else if (!r.c(this.componentActionEventHandlers, var1.componentActionEventHandlers)) {
             return false;
-         } else if (!q.c(this.widthInfo, var1.widthInfo)) {
+         } else if (!r.c(this.widthInfo, var1.widthInfo)) {
             return false;
          } else if (this.shouldAutoPlayGif != var1.shouldAutoPlayGif) {
             return false;
@@ -190,38 +190,38 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.containerId;
-      val var7: GeneralEventHandlers = this.generalEventHandlers;
-      val var10: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var7: java.lang.String = this.containerId;
+      val var4: GeneralEventHandlers = this.generalEventHandlers;
+      val var11: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
       val var5: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
-      val var4: MediaItemEventHandlers = this.mediaItemEventHandlers;
-      val var8: ComponentActionEventHandlers = this.componentActionEventHandlers;
-      val var11: WidthInfo = this.widthInfo;
-      val var2: Boolean = this.shouldAutoPlayGif;
-      val var3: Boolean = this.isForwardedContent;
-      val var1: Boolean = this.isInContainerComponent;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ComponentContext(containerId=");
-      var9.append(var6);
-      var9.append(", generalEventHandlers=");
-      var9.append(var7);
-      var9.append(", markdownTextRenderOptions=");
-      var9.append(var10);
-      var9.append(", markdownTextRenderEventHandlers=");
-      var9.append(var5);
-      var9.append(", mediaItemEventHandlers=");
-      var9.append(var4);
-      var9.append(", componentActionEventHandlers=");
-      var9.append(var8);
-      var9.append(", widthInfo=");
-      var9.append(var11);
-      var9.append(", shouldAutoPlayGif=");
-      var9.append(var2);
-      var9.append(", isForwardedContent=");
-      var9.append(var3);
-      var9.append(", isInContainerComponent=");
-      var9.append(var1);
-      var9.append(")");
-      return var9.toString();
+      val var9: MediaItemEventHandlers = this.mediaItemEventHandlers;
+      val var6: ComponentActionEventHandlers = this.componentActionEventHandlers;
+      val var8: WidthInfo = this.widthInfo;
+      val var1: Boolean = this.shouldAutoPlayGif;
+      val var2: Boolean = this.isForwardedContent;
+      val var3: Boolean = this.isInContainerComponent;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("ComponentContext(containerId=");
+      var10.append(var7);
+      var10.append(", generalEventHandlers=");
+      var10.append(var4);
+      var10.append(", markdownTextRenderOptions=");
+      var10.append(var11);
+      var10.append(", markdownTextRenderEventHandlers=");
+      var10.append(var5);
+      var10.append(", mediaItemEventHandlers=");
+      var10.append(var9);
+      var10.append(", componentActionEventHandlers=");
+      var10.append(var6);
+      var10.append(", widthInfo=");
+      var10.append(var8);
+      var10.append(", shouldAutoPlayGif=");
+      var10.append(var1);
+      var10.append(", isForwardedContent=");
+      var10.append(var2);
+      var10.append(", isInContainerComponent=");
+      var10.append(var3);
+      var10.append(")");
+      return var10.toString();
    }
 }

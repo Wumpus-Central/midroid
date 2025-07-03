@@ -1,7 +1,7 @@
 package com.discord.play_delivery;
 
 import com.google.android.gms.tasks.Task;
-import u6.d;
+import t6.d;
 
 // $VF: synthetic class
 public final class b implements d {

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class SafetySystemNotificationEmbed(titleText: String,
@@ -30,11 +30,11 @@ public data class SafetySystemNotificationEmbed(titleText: String,
    public final val footerTheme: FooterTheme
 
    init {
-      q.h(var1, "titleText");
-      q.h(var2, "titleIcon");
-      q.h(var3, "subtitleText");
-      q.h(var4, "descriptionText");
-      q.h(var11, "footerTheme");
+      r.h(var1, "titleText");
+      r.h(var2, "titleIcon");
+      r.h(var3, "subtitleText");
+      r.h(var4, "descriptionText");
+      r.h(var11, "footerTheme");
       super();
       this.titleText = var1;
       this.titleIcon = var2;
@@ -106,11 +106,11 @@ public data class SafetySystemNotificationEmbed(titleText: String,
       secondaryCtaKey: String? = var0.secondaryCtaKey,
       footerTheme: FooterTheme = var0.footerTheme
    ): SafetySystemNotificationEmbed {
-      q.h(var1, "titleText");
-      q.h(var2, "titleIcon");
-      q.h(var3, "subtitleText");
-      q.h(var4, "descriptionText");
-      q.h(var11, "footerTheme");
+      r.h(var1, "titleText");
+      r.h(var2, "titleIcon");
+      r.h(var3, "subtitleText");
+      r.h(var4, "descriptionText");
+      r.h(var11, "footerTheme");
       return new SafetySystemNotificationEmbed(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11);
    }
 
@@ -121,25 +121,25 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.titleText, var1.titleText)) {
+         if (!r.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!q.c(this.titleIcon, var1.titleIcon)) {
+         } else if (!r.c(this.titleIcon, var1.titleIcon)) {
             return false;
-         } else if (!q.c(this.subtitleText, var1.subtitleText)) {
+         } else if (!r.c(this.subtitleText, var1.subtitleText)) {
             return false;
-         } else if (!q.c(this.descriptionText, var1.descriptionText)) {
+         } else if (!r.c(this.descriptionText, var1.descriptionText)) {
             return false;
-         } else if (!q.c(this.primaryCtaText, var1.primaryCtaText)) {
+         } else if (!r.c(this.primaryCtaText, var1.primaryCtaText)) {
             return false;
-         } else if (!q.c(this.primaryCtaType, var1.primaryCtaType)) {
+         } else if (!r.c(this.primaryCtaType, var1.primaryCtaType)) {
             return false;
-         } else if (!q.c(this.primaryCtaKey, var1.primaryCtaKey)) {
+         } else if (!r.c(this.primaryCtaKey, var1.primaryCtaKey)) {
             return false;
-         } else if (!q.c(this.secondaryCtaText, var1.secondaryCtaText)) {
+         } else if (!r.c(this.secondaryCtaText, var1.secondaryCtaText)) {
             return false;
-         } else if (!q.c(this.secondaryCtaType, var1.secondaryCtaType)) {
+         } else if (!r.c(this.secondaryCtaType, var1.secondaryCtaType)) {
             return false;
-         } else if (!q.c(this.secondaryCtaKey, var1.secondaryCtaKey)) {
+         } else if (!r.c(this.secondaryCtaKey, var1.secondaryCtaKey)) {
             return false;
          } else {
             return this.footerTheme === var1.footerTheme;
@@ -148,10 +148,10 @@ public data class SafetySystemNotificationEmbed(titleText: String,
    }
 
    public override fun hashCode(): Int {
-      val var8: Int = this.titleText.hashCode();
-      val var7: Int = this.titleIcon.hashCode();
+      val var10: Int = this.titleText.hashCode();
+      val var8: Int = this.titleIcon.hashCode();
       val var9: Int = this.subtitleText.hashCode();
-      val var10: Int = this.descriptionText.hashCode();
+      val var7: Int = this.descriptionText.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.primaryCtaText == null) {
@@ -192,47 +192,47 @@ public data class SafetySystemNotificationEmbed(titleText: String,
          var6 = this.secondaryCtaKey.hashCode();
       }
 
-      return (((((((((var8 * 31 + var7) * 31 + var9) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return (((((((((var10 * 31 + var8) * 31 + var9) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + this.footerTheme.hashCode();
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.titleText;
-      val var8: java.lang.String = this.titleIcon;
-      val var9: java.lang.String = this.subtitleText;
-      val var10: java.lang.String = this.descriptionText;
-      val var6: java.lang.String = this.primaryCtaText;
-      val var3: java.lang.String = this.primaryCtaType;
-      val var4: java.lang.String = this.primaryCtaKey;
-      val var5: java.lang.String = this.secondaryCtaText;
-      val var2: java.lang.String = this.secondaryCtaType;
-      val var11: java.lang.String = this.secondaryCtaKey;
-      val var7: FooterTheme = this.footerTheme;
-      val var12: StringBuilder = new StringBuilder();
-      var12.append("SafetySystemNotificationEmbed(titleText=");
-      var12.append(var1);
-      var12.append(", titleIcon=");
-      var12.append(var8);
-      var12.append(", subtitleText=");
-      var12.append(var9);
-      var12.append(", descriptionText=");
-      var12.append(var10);
-      var12.append(", primaryCtaText=");
-      var12.append(var6);
-      var12.append(", primaryCtaType=");
-      var12.append(var3);
-      var12.append(", primaryCtaKey=");
-      var12.append(var4);
-      var12.append(", secondaryCtaText=");
-      var12.append(var5);
-      var12.append(", secondaryCtaType=");
-      var12.append(var2);
-      var12.append(", secondaryCtaKey=");
-      var12.append(var11);
-      var12.append(", footerTheme=");
-      var12.append(var7);
-      var12.append(")");
-      return var12.toString();
+      val var9: java.lang.String = this.titleText;
+      val var3: java.lang.String = this.titleIcon;
+      val var7: java.lang.String = this.subtitleText;
+      val var4: java.lang.String = this.descriptionText;
+      val var12: java.lang.String = this.primaryCtaText;
+      val var6: java.lang.String = this.primaryCtaType;
+      val var8: java.lang.String = this.primaryCtaKey;
+      val var11: java.lang.String = this.secondaryCtaText;
+      val var1: java.lang.String = this.secondaryCtaType;
+      val var5: java.lang.String = this.secondaryCtaKey;
+      val var2: FooterTheme = this.footerTheme;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("SafetySystemNotificationEmbed(titleText=");
+      var10.append(var9);
+      var10.append(", titleIcon=");
+      var10.append(var3);
+      var10.append(", subtitleText=");
+      var10.append(var7);
+      var10.append(", descriptionText=");
+      var10.append(var4);
+      var10.append(", primaryCtaText=");
+      var10.append(var12);
+      var10.append(", primaryCtaType=");
+      var10.append(var6);
+      var10.append(", primaryCtaKey=");
+      var10.append(var8);
+      var10.append(", secondaryCtaText=");
+      var10.append(var11);
+      var10.append(", secondaryCtaType=");
+      var10.append(var1);
+      var10.append(", secondaryCtaKey=");
+      var10.append(var5);
+      var10.append(", footerTheme=");
+      var10.append(var2);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

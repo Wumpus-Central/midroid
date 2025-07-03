@@ -10,6 +10,7 @@ import com.facebook.react.views.text.CreateTypefaceObject
 import com.facebook.react.views.text.ReactFontManager
 import java.util.ArrayList
 import java.util.Locale
+import kotlin.jvm.internal.r
 
 internal object CustomFontFamilyOverride {
    private final val FILE_EXTENSIONS: Array<String>
@@ -39,7 +40,7 @@ internal object CustomFontFamilyOverride {
             }
 
             val var23: Boolean;
-            if (kotlin.jvm.internal.q.j(var1.charAt(var8), 32) <= 0) {
+            if (r.j(var1.charAt(var8), 32) <= 0) {
                var23 = true;
             } else {
                var23 = false;
@@ -115,7 +116,7 @@ internal object CustomFontFamilyOverride {
          var13.append(var11);
          var13.append(var26);
          val var27: java.lang.String = var13.toString();
-         kotlin.jvm.internal.q.g(var27, "toString(...)");
+         r.g(var27, "toString(...)");
 
          try {
             return Typeface.createFromAsset(var3, var27);
@@ -124,7 +125,7 @@ internal object CustomFontFamilyOverride {
       }
 
       val var20: Typeface = Typeface.create(var11, var2);
-      kotlin.jvm.internal.q.g(var20, "create(...)");
+      r.g(var20, "create(...)");
       return var20;
    }
 
@@ -159,27 +160,27 @@ internal object CustomFontFamilyOverride {
             var10 = kotlin.text.h.A(kotlin.text.h.A(kotlin.text.h.A(var9, "Normal", "Bold", true), "Medium", "Bold", true), "Semibold", "Bold", true);
          }
 
-         var10 = kotlin.text.h.A(kotlin.text.h.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
-         val var25: Array<java.lang.String> = FILE_EXTENSIONS;
+         var9 = kotlin.text.h.A(kotlin.text.h.A(var10, "ItalicItalic", "Italic", true), "BoldBold", "Bold", true);
+         val var28: Array<java.lang.String> = FILE_EXTENSIONS;
          val var8: Int = FILE_EXTENSIONS.length;
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            var var12: java.lang.String = var25[var5];
-            val var13: StringBuilder = new StringBuilder();
-            var13.append("fonts/");
-            var13.append(var10);
-            var13.append(var12);
-            var12 = var13.toString();
-            kotlin.jvm.internal.q.g(var12, "toString(...)");
+            val var13: java.lang.String = var28[var5];
+            val var12: StringBuilder = new StringBuilder();
+            var12.append("fonts/");
+            var12.append(var9);
+            var12.append(var13);
+            val var31: java.lang.String = var12.toString();
+            r.g(var31, "toString(...)");
 
             try {
                b.a();
-               val var32: Font = a.a(k.a(var3, var12));
-               kotlin.jvm.internal.q.g(var32, "build(...)");
+               val var32: Font = a.a(k.a(var3, var31));
+               r.g(var32, "build(...)");
                c.a();
                val var33: FontFamily = f.a(l.a(var32));
-               kotlin.jvm.internal.q.g(var33, "build(...)");
+               r.g(var33, "build(...)");
                var11.add(var33);
             } catch (var14: java.lang.Throwable) {
                continue;
@@ -200,9 +201,9 @@ internal object CustomFontFamilyOverride {
 
          var var29: java.lang.String = var1[0];
          val var26: Locale = Locale.ROOT;
-         kotlin.jvm.internal.q.g(Locale.ROOT, "ROOT");
+         r.g(Locale.ROOT, "ROOT");
          var29 = var29.toLowerCase(var26);
-         kotlin.jvm.internal.q.g(var29, "toLowerCase(...)");
+         r.g(var29, "toLowerCase(...)");
          val var20: Byte;
          if (kotlin.text.h.a0(var29, "italic", 0, false, 6, null) > -1) {
             var20 = 1;
@@ -211,9 +212,9 @@ internal object CustomFontFamilyOverride {
          }
 
          val var16: java.lang.String = var1[0];
-         kotlin.jvm.internal.q.g(var26, "ROOT");
+         r.g(var26, "ROOT");
          val var17: java.lang.String = var16.toLowerCase(var26);
-         kotlin.jvm.internal.q.g(var17, "toLowerCase(...)");
+         r.g(var17, "toLowerCase(...)");
          var var23: Short = 0;
          if (kotlin.text.h.a0(var17, "bold", 0, false, 6, null) > -1) {
             var23 = 1;
@@ -228,7 +229,7 @@ internal object CustomFontFamilyOverride {
 
          i.a(var21, n.a(var23, var20));
          val var18: Typeface = j.a(var21);
-         kotlin.jvm.internal.q.g(var18, "build(...)");
+         r.g(var18, "build(...)");
          return var18;
       }
    }

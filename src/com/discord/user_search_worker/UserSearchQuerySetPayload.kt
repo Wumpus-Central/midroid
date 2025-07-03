@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
-import wb.E0
-import wb.U
-import wb.y
+import sb.f
+import vb.E0
+import vb.U
+import vb.y
 
 @f
 internal data class UserSearchQuerySetPayload(query: String,
@@ -25,12 +25,12 @@ internal data class UserSearchQuerySetPayload(query: String,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new wb.f(E0.a), new wb.f(var0), new U(var0, y.a), null};
+      $childSerializers = new KSerializer[]{null, null, new vb.f(E0.a), new vb.f(var0), new U(var0, y.a), null};
    }
 
    init {
-      q.h(var1, "query");
-      q.h(var5, "boosters");
+      r.h(var1, "query");
+      r.h(var5, "boosters");
       super();
       this.query = var1;
       this.filters = var2;
@@ -72,8 +72,8 @@ internal data class UserSearchQuerySetPayload(query: String,
       boosters: Map<String, Double> = var0.boosters,
       limit: Int = var0.limit
    ): UserSearchQuerySetPayload {
-      q.h(var1, "query");
-      q.h(var5, "boosters");
+      r.h(var1, "query");
+      r.h(var5, "boosters");
       return new UserSearchQuerySetPayload(var1, var2, var3, var4, var5, var6);
    }
 
@@ -84,15 +84,15 @@ internal data class UserSearchQuerySetPayload(query: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.query, var1.query)) {
+         if (!r.c(this.query, var1.query)) {
             return false;
-         } else if (!q.c(this.filters, var1.filters)) {
+         } else if (!r.c(this.filters, var1.filters)) {
             return false;
-         } else if (!q.c(this.blacklist, var1.blacklist)) {
+         } else if (!r.c(this.blacklist, var1.blacklist)) {
             return false;
-         } else if (!q.c(this.whitelist, var1.whitelist)) {
+         } else if (!r.c(this.whitelist, var1.whitelist)) {
             return false;
-         } else if (!q.c(this.boosters, var1.boosters)) {
+         } else if (!r.c(this.boosters, var1.boosters)) {
             return false;
          } else {
             return this.limit == var1.limit;
@@ -125,23 +125,23 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.query;
-      val var5: UserSearchQuerySetFilters = this.filters;
-      val var4: java.util.List = this.blacklist;
+      val var4: java.lang.String = this.query;
+      val var2: UserSearchQuerySetFilters = this.filters;
+      val var5: java.util.List = this.blacklist;
       val var6: java.util.List = this.whitelist;
-      val var2: java.util.Map = this.boosters;
+      val var3: java.util.Map = this.boosters;
       val var1: Int = this.limit;
       val var7: StringBuilder = new StringBuilder();
       var7.append("UserSearchQuerySetPayload(query=");
-      var7.append(var3);
-      var7.append(", filters=");
-      var7.append(var5);
-      var7.append(", blacklist=");
       var7.append(var4);
+      var7.append(", filters=");
+      var7.append(var2);
+      var7.append(", blacklist=");
+      var7.append(var5);
       var7.append(", whitelist=");
       var7.append(var6);
       var7.append(", boosters=");
-      var7.append(var2);
+      var7.append(var3);
       var7.append(", limit=");
       var7.append(var1);
       var7.append(")");

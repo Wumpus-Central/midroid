@@ -15,7 +15,7 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
    private final val view: MediaVideoView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
@@ -57,11 +57,11 @@ public open class MediaVideoViewHolder(view: MediaVideoView) : MessagePartViewHo
       onMediaPlayFinishedAnalytics: (MediaPlayFinishedAnalytics) -> Unit,
       playerSettings: PlayerSettings
    ) {
-      kotlin.jvm.internal.q.h(var4, "url");
-      kotlin.jvm.internal.q.h(var5, "previewUrl");
-      kotlin.jvm.internal.q.h(var33, "onClicked");
-      kotlin.jvm.internal.q.h(var35, "onMediaPlayFinishedAnalytics");
-      kotlin.jvm.internal.q.h(var36, "playerSettings");
+      kotlin.jvm.internal.r.h(var4, "url");
+      kotlin.jvm.internal.r.h(var5, "previewUrl");
+      kotlin.jvm.internal.r.h(var33, "onClicked");
+      kotlin.jvm.internal.r.h(var35, "onMediaPlayFinishedAnalytics");
+      kotlin.jvm.internal.r.h(var36, "playerSettings");
       this.view
          .setContent-w--JTRs(
             var1,

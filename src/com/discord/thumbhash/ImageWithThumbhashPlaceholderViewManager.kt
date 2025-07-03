@@ -5,14 +5,14 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDImageWithThumbhashPlaceholderViewManagerInterface
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "DCDImageWithThumbhashPlaceholderView")
 internal class ImageWithThumbhashPlaceholderViewManager
    : SimpleViewManager<ImageWithThumbhashPlaceholderView>,
    DCDImageWithThumbhashPlaceholderViewManagerInterface<ImageWithThumbhashPlaceholderView> {
    protected open fun createViewInstance(reactContext: ThemedReactContext): ImageWithThumbhashPlaceholderView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new ImageWithThumbhashPlaceholderView(var1, null, 2, null);
    }
 
@@ -29,19 +29,19 @@ internal class ImageWithThumbhashPlaceholderViewManager
 
    @ReactProp(name = "placeholder")
    public open fun setPlaceholder(view: ImageWithThumbhashPlaceholderView, placeholder: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setPlaceholder(var2);
    }
 
    @ReactProp(name = "placeholderVersion")
    public open fun setPlaceholderVersion(view: ImageWithThumbhashPlaceholderView, placeholderVersion: Int) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setPlaceholderVersion(var2);
    }
 
    @ReactProp(name = "uri")
    public open fun setUri(view: ImageWithThumbhashPlaceholderView, uri: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setUri(var2);
    }
 

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.automod
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class AutoModerationContext(headerText: String,
@@ -26,11 +26,11 @@ public data class AutoModerationContext(headerText: String,
    public final val notification: AutoModerationNotification?
 
    init {
-      q.h(var1, "headerText");
-      q.h(var2, "headerBadgeText");
-      q.h(var6, "actionsText");
-      q.h(var7, "feedbackText");
-      q.h(var8, "message");
+      r.h(var1, "headerText");
+      r.h(var2, "headerBadgeText");
+      r.h(var6, "actionsText");
+      r.h(var7, "feedbackText");
+      r.h(var8, "message");
       super();
       this.headerText = var1;
       this.headerBadgeText = var2;
@@ -90,11 +90,11 @@ public data class AutoModerationContext(headerText: String,
       message: FlaggedMessageEmbed = var0.message,
       notification: AutoModerationNotification? = var0.notification
    ): AutoModerationContext {
-      q.h(var1, "headerText");
-      q.h(var2, "headerBadgeText");
-      q.h(var6, "actionsText");
-      q.h(var7, "feedbackText");
-      q.h(var8, "message");
+      r.h(var1, "headerText");
+      r.h(var2, "headerBadgeText");
+      r.h(var6, "actionsText");
+      r.h(var7, "feedbackText");
+      r.h(var8, "message");
       return new AutoModerationContext(var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 
@@ -105,24 +105,24 @@ public data class AutoModerationContext(headerText: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.headerText, var1.headerText)) {
+         if (!r.c(this.headerText, var1.headerText)) {
             return false;
-         } else if (!q.c(this.headerBadgeText, var1.headerBadgeText)) {
+         } else if (!r.c(this.headerBadgeText, var1.headerBadgeText)) {
             return false;
-         } else if (!q.c(this.ruleDisplayText, var1.ruleDisplayText)) {
+         } else if (!r.c(this.ruleDisplayText, var1.ruleDisplayText)) {
             return false;
-         } else if (!q.c(this.keywordDisplayText, var1.keywordDisplayText)) {
+         } else if (!r.c(this.keywordDisplayText, var1.keywordDisplayText)) {
             return false;
-         } else if (!q.c(this.actionsIconURL, var1.actionsIconURL)) {
+         } else if (!r.c(this.actionsIconURL, var1.actionsIconURL)) {
             return false;
-         } else if (!q.c(this.actionsText, var1.actionsText)) {
+         } else if (!r.c(this.actionsText, var1.actionsText)) {
             return false;
-         } else if (!q.c(this.feedbackText, var1.feedbackText)) {
+         } else if (!r.c(this.feedbackText, var1.feedbackText)) {
             return false;
-         } else if (!q.c(this.message, var1.message)) {
+         } else if (!r.c(this.message, var1.message)) {
             return false;
          } else {
-            return q.c(this.notification, var1.notification);
+            return r.c(this.notification, var1.notification);
          }
       }
    }
@@ -153,46 +153,46 @@ public data class AutoModerationContext(headerText: String,
       }
 
       val var9: Int = this.actionsText.hashCode();
-      val var7: Int = this.feedbackText.hashCode();
-      val var8: Int = this.message.hashCode();
+      val var8: Int = this.feedbackText.hashCode();
+      val var7: Int = this.message.hashCode();
       if (this.notification != null) {
          var4 = this.notification.hashCode();
       }
 
-      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var9) * 31 + var7) * 31 + var8) * 31 + var4;
+      return (((((((var6 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var9) * 31 + var8) * 31 + var7) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.headerText;
-      val var9: java.lang.String = this.headerBadgeText;
-      val var8: java.lang.String = this.ruleDisplayText;
-      val var3: java.lang.String = this.keywordDisplayText;
+      val var10: java.lang.String = this.headerText;
+      val var4: java.lang.String = this.headerBadgeText;
+      val var6: java.lang.String = this.ruleDisplayText;
+      val var7: java.lang.String = this.keywordDisplayText;
       val var5: java.lang.String = this.actionsIconURL;
-      val var2: java.lang.String = this.actionsText;
-      val var1: java.lang.String = this.feedbackText;
-      val var6: FlaggedMessageEmbed = this.message;
-      val var7: AutoModerationNotification = this.notification;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("AutoModerationContext(headerText=");
-      var10.append(var4);
-      var10.append(", headerBadgeText=");
-      var10.append(var9);
-      var10.append(", ruleDisplayText=");
-      var10.append(var8);
-      var10.append(", keywordDisplayText=");
-      var10.append(var3);
-      var10.append(", actionsIconURL=");
-      var10.append(var5);
-      var10.append(", actionsText=");
-      var10.append(var2);
-      var10.append(", feedbackText=");
-      var10.append(var1);
-      var10.append(", message=");
-      var10.append(var6);
-      var10.append(", notification=");
-      var10.append(var7);
-      var10.append(")");
-      return var10.toString();
+      val var9: java.lang.String = this.actionsText;
+      val var3: java.lang.String = this.feedbackText;
+      val var2: FlaggedMessageEmbed = this.message;
+      val var1: AutoModerationNotification = this.notification;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("AutoModerationContext(headerText=");
+      var8.append(var10);
+      var8.append(", headerBadgeText=");
+      var8.append(var4);
+      var8.append(", ruleDisplayText=");
+      var8.append(var6);
+      var8.append(", keywordDisplayText=");
+      var8.append(var7);
+      var8.append(", actionsIconURL=");
+      var8.append(var5);
+      var8.append(", actionsText=");
+      var8.append(var9);
+      var8.append(", feedbackText=");
+      var8.append(var3);
+      var8.append(", message=");
+      var8.append(var2);
+      var8.append(", notification=");
+      var8.append(var1);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

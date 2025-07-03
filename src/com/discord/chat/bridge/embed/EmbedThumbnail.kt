@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class EmbedThumbnail(url: String,
@@ -30,7 +30,7 @@ public data class EmbedThumbnail(url: String,
    public open val embedUrl: String
 
    init {
-      q.h(var1, "url");
+      r.h(var1, "url");
       super();
       this.url = var1;
       this.proxyURL = var2;
@@ -101,7 +101,7 @@ public data class EmbedThumbnail(url: String,
       placeholderVersion: Int? = var0.placeholderVersion,
       srcIsAnimated: Boolean = var0.srcIsAnimated
    ): EmbedThumbnail {
-      q.h(var1, "url");
+      r.h(var1, "url");
       return new EmbedThumbnail(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -112,23 +112,23 @@ public data class EmbedThumbnail(url: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.url, var1.url)) {
+         if (!r.c(this.url, var1.url)) {
             return false;
-         } else if (!q.c(this.proxyURL, var1.proxyURL)) {
+         } else if (!r.c(this.proxyURL, var1.proxyURL)) {
             return false;
-         } else if (!q.c(this.videoUrl, var1.videoUrl)) {
+         } else if (!r.c(this.videoUrl, var1.videoUrl)) {
             return false;
          } else if (this.height != var1.height) {
             return false;
          } else if (this.width != var1.width) {
             return false;
-         } else if (!q.c(this.gifv, var1.gifv)) {
+         } else if (!r.c(this.gifv, var1.gifv)) {
             return false;
-         } else if (!q.c(this.showPlayButton, var1.showPlayButton)) {
+         } else if (!r.c(this.showPlayButton, var1.showPlayButton)) {
             return false;
-         } else if (!q.c(this.placeholder, var1.placeholder)) {
+         } else if (!r.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!q.c(this.placeholderVersion, var1.placeholderVersion)) {
+         } else if (!r.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
          } else {
             return this.srcIsAnimated == var1.srcIsAnimated;
@@ -153,8 +153,8 @@ public data class EmbedThumbnail(url: String,
          var2 = this.videoUrl.hashCode();
       }
 
-      val var8: Int = Integer.hashCode(this.height);
-      val var9: Int = Integer.hashCode(this.width);
+      val var9: Int = Integer.hashCode(this.height);
+      val var8: Int = Integer.hashCode(this.width);
       val var3: Int;
       if (this.gifv == null) {
          var3 = 0;
@@ -180,44 +180,44 @@ public data class EmbedThumbnail(url: String,
          var6 = this.placeholderVersion.hashCode();
       }
 
-      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
+      return ((((((((var7 * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var8) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var6) * 31
          + java.lang.Boolean.hashCode(this.srcIsAnimated);
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.url;
-      val var6: java.lang.String = this.proxyURL;
+      val var7: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
       val var11: java.lang.String = this.videoUrl;
-      val var2: Int = this.height;
-      val var1: Int = this.width;
-      val var10: java.lang.Boolean = this.gifv;
-      val var7: java.lang.Boolean = this.showPlayButton;
-      val var5: java.lang.String = this.placeholder;
-      val var9: Int = this.placeholderVersion;
+      val var1: Int = this.height;
+      val var2: Int = this.width;
+      val var5: java.lang.Boolean = this.gifv;
+      val var6: java.lang.Boolean = this.showPlayButton;
+      val var9: java.lang.String = this.placeholder;
+      val var10: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("EmbedThumbnail(url=");
-      var4.append(var8);
-      var4.append(", proxyURL=");
-      var4.append(var6);
-      var4.append(", videoUrl=");
-      var4.append(var11);
-      var4.append(", height=");
-      var4.append(var2);
-      var4.append(", width=");
-      var4.append(var1);
-      var4.append(", gifv=");
-      var4.append(var10);
-      var4.append(", showPlayButton=");
-      var4.append(var7);
-      var4.append(", placeholder=");
-      var4.append(var5);
-      var4.append(", placeholderVersion=");
-      var4.append(var9);
-      var4.append(", srcIsAnimated=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("EmbedThumbnail(url=");
+      var8.append(var7);
+      var8.append(", proxyURL=");
+      var8.append(var4);
+      var8.append(", videoUrl=");
+      var8.append(var11);
+      var8.append(", height=");
+      var8.append(var1);
+      var8.append(", width=");
+      var8.append(var2);
+      var8.append(", gifv=");
+      var8.append(var5);
+      var8.append(", showPlayButton=");
+      var8.append(var6);
+      var8.append(", placeholder=");
+      var8.append(var9);
+      var8.append(", placeholderVersion=");
+      var8.append(var10);
+      var8.append(", srcIsAnimated=");
+      var8.append(var3);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

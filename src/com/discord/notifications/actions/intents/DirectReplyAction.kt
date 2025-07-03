@@ -8,7 +8,7 @@ import android.os.Parcel
 import androidx.core.app.RemoteInput
 import com.discord.primitives.ChannelId
 import com.discord.react.headless_tasks.api.HeadlessTasks
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class DirectReplyAction(tag: String, channelId: ChannelId, channelName: String?, channelType: Int?, guildName: String?) : DirectReplyAction(
          var1, var2, var4, var5, var6
@@ -21,7 +21,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    private final val guildName: String?
 
    fun DirectReplyAction(var1: java.lang.String, var2: Long, var4: java.lang.String, var5: Int, var6: java.lang.String) {
-      q.h(var1, "tag");
+      r.h(var1, "tag");
       super();
       this.tag = var1;
       this.channelId = var2;
@@ -51,7 +51,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public fun copy(tag: String = ..., channelId: ChannelId = ..., channelName: String? = ..., channelType: Int? = ..., guildName: String? = ...): DirectReplyAction {
-      q.h(var1, "tag");
+      r.h(var1, "tag");
       return new DirectReplyAction(var1, var2, var4, var5, var6, null);
    }
 
@@ -66,16 +66,16 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.tag, var1.tag)) {
+         if (!r.c(this.tag, var1.tag)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.channelName, var1.channelName)) {
+         } else if (!r.c(this.channelName, var1.channelName)) {
             return false;
-         } else if (!q.c(this.channelType, var1.channelType)) {
+         } else if (!r.c(this.channelType, var1.channelType)) {
             return false;
          } else {
-            return q.c(this.guildName, var1.guildName);
+            return r.c(this.guildName, var1.guildName);
          }
       }
    }
@@ -85,8 +85,8 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.tag.hashCode();
-      val var4: Int = ChannelId.hashCode-impl(this.channelId);
+      val var4: Int = this.tag.hashCode();
+      val var5: Int = ChannelId.hashCode-impl(this.channelId);
       var var3: Int = 0;
       val var1: Int;
       if (this.channelName == null) {
@@ -106,12 +106,12 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
          var3 = this.guildName.hashCode();
       }
 
-      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun onNotificationAction(context: Context, intent: Intent) {
-      q.h(var1, "context");
-      q.h(var2, "intent");
+      r.h(var1, "context");
+      r.h(var2, "intent");
       val var4: java.lang.String = DirectReplyAction.Companion.access$getReplyText(Companion, var2);
       val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
       val var3: Bundle = new Bundle();
@@ -127,7 +127,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun onNotificationActionComplete(context: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
    }
 
    override fun toPendingIntent(var1: Context, var2: Int, var3: Boolean): PendingIntent {
@@ -135,28 +135,28 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.tag;
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var6: java.lang.String = this.channelName;
-      val var5: Int = this.channelType;
-      val var3: java.lang.String = this.guildName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("DirectReplyAction(tag=");
-      var4.append(var1);
-      var4.append(", channelId=");
-      var4.append(var2);
-      var4.append(", channelName=");
-      var4.append(var6);
-      var4.append(", channelType=");
-      var4.append(var5);
-      var4.append(", guildName=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: Int = this.channelType;
+      val var5: java.lang.String = this.guildName;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("DirectReplyAction(tag=");
+      var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
+      var1.append(", channelName=");
+      var1.append(var6);
+      var1.append(", channelType=");
+      var1.append(var4);
+      var1.append(", guildName=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      q.h(var1, "dest");
+      r.h(var1, "dest");
       var1.writeString(this.tag);
       var1.writeParcelable(ChannelId.box-impl(this.channelId), var2);
       var1.writeString(this.channelName);
@@ -197,9 +197,9 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
       }
 
       public fun toRemoteInput(label: String): RemoteInput {
-         q.h(var1, "label");
+         r.h(var1, "label");
          val var2: RemoteInput = new RemoteInput.d("remote_input_key").g(var1).b();
-         q.g(var2, "build(...)");
+         r.g(var2, "build(...)");
          return var2;
       }
    }
@@ -207,10 +207,10 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<DirectReplyAction> {
       fun createFromParcel(var1: Parcel): DirectReplyAction {
-         q.h(var1, "parcel");
-         val var6: java.lang.String = var1.readString();
-         val var2: Long = (var1.readParcelable(DirectReplyAction.class.getClassLoader()) as ChannelId).unbox-impl();
+         r.h(var1, "parcel");
          val var5: java.lang.String = var1.readString();
+         val var2: Long = (var1.readParcelable(DirectReplyAction.class.getClassLoader()) as ChannelId).unbox-impl();
+         val var6: java.lang.String = var1.readString();
          val var4: Int;
          if (var1.readInt() == 0) {
             var4 = null;
@@ -218,7 +218,7 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
             var4 = var1.readInt();
          }
 
-         return new DirectReplyAction(var6, var2, var5, var4, var1.readString(), null);
+         return new DirectReplyAction(var5, var2, var6, var4, var1.readString(), null);
       }
 
       fun newArray(var1: Int): Array<DirectReplyAction> {

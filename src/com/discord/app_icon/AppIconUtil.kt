@@ -3,7 +3,7 @@ package com.discord.app_icon
 import android.content.ComponentName
 import android.content.Context
 import android.content.pm.PackageManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object AppIconUtil {
    private fun getAppIconFromId(id: String): AppIcon? {
@@ -12,7 +12,7 @@ public object AppIconUtil {
       while (true) {
          if (var3.hasNext()) {
             val var2: Any = var3.next();
-            if (!q.c((var2 as AppIcon).getId(), var1)) {
+            if (!r.c((var2 as AppIcon).getId(), var1)) {
                continue;
             }
 
@@ -43,7 +43,7 @@ public object AppIconUtil {
    }
 
    public fun getCurrentAppIcon(context: Context): AppIcon {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var3: PackageManager = var1.getPackageManager();
       val var4: java.util.Iterator = AppIcon.getEntries().iterator();
 
@@ -72,8 +72,8 @@ public object AppIconUtil {
    }
 
    public fun setAppIcon(context: Context, id: String) {
-      q.h(var1, "context");
-      q.h(var2, "id");
+      r.h(var1, "context");
+      r.h(var2, "id");
       val var4: AppIcon = this.getAppIconFromId(var2);
       if (var4 != null) {
          val var9: PackageManager = var1.getPackageManager();
@@ -87,7 +87,7 @@ public object AppIconUtil {
                var3 = false;
             }
 
-            q.e(var9);
+            r.e(var9);
             this.setComponentState(var9, var6, var3);
          }
       } else {

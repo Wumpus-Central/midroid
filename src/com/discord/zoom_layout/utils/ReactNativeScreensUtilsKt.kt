@@ -4,7 +4,7 @@ import android.view.ViewGroup
 import android.view.ViewParent
 import com.otaliastudios.zoom.ZoomLayout
 import com.swmansion.rnscreens.s
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private fun ZoomLayout.isInReactNativeScreensScreenBeingRemoved(): Boolean {
    for (ViewParent var1 = var0.getParent(); var1 instanceof ViewGroup; var1 = ((ViewGroup)var1).getParent()) {
@@ -17,7 +17,7 @@ private fun ZoomLayout.isInReactNativeScreensScreenBeingRemoved(): Boolean {
 }
 
 internal fun ZoomLayout.maybeApplyReactNativeScreensFix() {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (isInReactNativeScreensScreenBeingRemoved(var0) && var0.getChildCount() != 0) {
       var0.removeAllViews();
    }

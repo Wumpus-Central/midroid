@@ -6,14 +6,14 @@ import android.view.MotionEvent
 import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import java.lang.reflect.Field
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class PassthroughTouchViewGroup(context: Context) : ReactViewGroup {
    public final var onTouchDown: () -> Unit
       internal set
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       val var2: Field = ReactViewGroup.class.getDeclaredField("mPointerEvents");
       var2.setAccessible(true);
@@ -27,13 +27,13 @@ internal class PassthroughTouchViewGroup(context: Context) : ReactViewGroup {
    }
 
    public open fun onInterceptTouchEvent(event: MotionEvent): Boolean {
-      q.h(var1, "event");
+      r.h(var1, "event");
       return false;
    }
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(ev: MotionEvent): Boolean {
-      q.h(var1, "ev");
+      r.h(var1, "ev");
       if (var1.getAction() == 0) {
          this.onTouchDown.invoke();
       }

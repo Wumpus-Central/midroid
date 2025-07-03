@@ -1,16 +1,16 @@
 package com.discord.chat.bridge.threads
 
 import com.discord.chat.bridge.Message
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ThreadEmbedMessage(message: Message) {
    public final val message: Message
 
    init {
-      q.h(var1, "message");
+      r.h(var1, "message");
       super();
       this.message = var1;
    }
@@ -20,7 +20,7 @@ public data class ThreadEmbedMessage(message: Message) {
    }
 
    public fun copy(message: Message = var0.message): ThreadEmbedMessage {
-      q.h(var1, "message");
+      r.h(var1, "message");
       return new ThreadEmbedMessage(var1);
    }
 
@@ -30,7 +30,7 @@ public data class ThreadEmbedMessage(message: Message) {
       } else if (var1 !is ThreadEmbedMessage) {
          return false;
       } else {
-         return q.c(this.message, (var1 as ThreadEmbedMessage).message);
+         return r.c(this.message, (var1 as ThreadEmbedMessage).message);
       }
    }
 
@@ -39,12 +39,12 @@ public data class ThreadEmbedMessage(message: Message) {
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ThreadEmbedMessage(message=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: Message = this.message;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ThreadEmbedMessage(message=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

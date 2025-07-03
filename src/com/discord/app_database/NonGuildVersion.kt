@@ -1,8 +1,8 @@
 package com.discord.app_database
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {
@@ -11,7 +11,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    public final val versionString: String?
 
    init {
-      q.h(var1, "id");
+      r.h(var1, "id");
       super();
       this.id = var1;
       this.version = var2;
@@ -31,7 +31,7 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public fun copy(id: String = var0.id, version: Long = var0.version, versionString: String? = var0.versionString): NonGuildVersion {
-      q.h(var1, "id");
+      r.h(var1, "id");
       return new NonGuildVersion(var1, var2, var4);
    }
 
@@ -42,19 +42,19 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
          } else if (this.version != var1.version) {
             return false;
          } else {
-            return q.c(this.versionString, var1.versionString);
+            return r.c(this.versionString, var1.versionString);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.id.hashCode();
-      val var2: Int = java.lang.Long.hashCode(this.version);
+      val var2: Int = this.id.hashCode();
+      val var3: Int = java.lang.Long.hashCode(this.version);
       val var1: Int;
       if (this.versionString == null) {
          var1 = 0;
@@ -62,22 +62,22 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          var1 = this.versionString.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.id;
       val var1: Long = this.version;
       val var5: java.lang.String = this.versionString;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("NonGuildVersion(id=");
-      var3.append(var4);
-      var3.append(", version=");
-      var3.append(var1);
-      var3.append(", versionString=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("NonGuildVersion(id=");
+      var4.append(var3);
+      var4.append(", version=");
+      var4.append(var1);
+      var4.append(", versionString=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

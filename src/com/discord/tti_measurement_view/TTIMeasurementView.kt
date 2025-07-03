@@ -3,7 +3,7 @@ package com.discord.tti_measurement_view
 import android.annotation.SuppressLint
 import android.view.View
 import com.facebook.react.uimanager.ThemedReactContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @SuppressLint(["ViewConstructor"])
 internal class TTIMeasurementView(context: ThemedReactContext) : View {
@@ -11,7 +11,7 @@ internal class TTIMeasurementView(context: ThemedReactContext) : View {
    private final var measurementSent: Boolean
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
    }
 
@@ -30,7 +30,7 @@ internal class TTIMeasurementView(context: ThemedReactContext) : View {
    }
 
    public fun setOnMeasurementListener(listener: (TTIMeasurementView, Double) -> Unit) {
-      q.h(var1, "listener");
+      r.h(var1, "listener");
       this.onMeasurementListener = var1;
       this.registerForNextDraw();
    }

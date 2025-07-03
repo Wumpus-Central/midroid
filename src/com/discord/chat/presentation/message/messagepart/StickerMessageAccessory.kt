@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class StickerMessageAccessory(messageId: MessageId, sticker: Sticker) : StickerMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val sticker: Sticker
 
    fun StickerMessageAccessory(var1: java.lang.String, var2: Sticker) {
-      q.h(var1, "messageId");
-      q.h(var2, "sticker");
+      r.h(var1, "messageId");
+      r.h(var2, "sticker");
       val var3: Long = var2.getId();
       val var5: StringBuilder = new StringBuilder();
       var5.append("sticker-");
@@ -29,8 +29,8 @@ public data class StickerMessageAccessory(messageId: MessageId, sticker: Sticker
    }
 
    public fun copy(messageId: MessageId = ..., sticker: Sticker = ...): StickerMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "sticker");
+      r.h(var1, "messageId");
+      r.h(var2, "sticker");
       return new StickerMessageAccessory(var1, var2, null);
    }
 
@@ -44,7 +44,7 @@ public data class StickerMessageAccessory(messageId: MessageId, sticker: Sticker
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.sticker, var1.sticker);
+            return r.c(this.sticker, var1.sticker);
          }
       }
    }
@@ -54,14 +54,14 @@ public data class StickerMessageAccessory(messageId: MessageId, sticker: Sticker
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Sticker = this.sticker;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("StickerMessageAccessory(messageId=");
-      var3.append(var1);
-      var3.append(", sticker=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Sticker = this.sticker;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("StickerMessageAccessory(messageId=");
+      var2.append(var3);
+      var2.append(", sticker=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.forwarding
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
@@ -12,9 +12,9 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    public final val originIconUrl: String?
 
    init {
-      q.h(var1, "timestampLabel");
-      q.h(var2, "originLabel");
-      q.h(var3, "accessibilityLabel");
+      r.h(var1, "timestampLabel");
+      r.h(var2, "originLabel");
+      r.h(var3, "accessibilityLabel");
       super();
       this.timestampLabel = var1;
       this.originLabel = var2;
@@ -44,9 +44,9 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
       accessibilityLabel: String = var0.accessibilityLabel,
       originIconUrl: String? = var0.originIconUrl
    ): ForwardFooterInfo {
-      q.h(var1, "timestampLabel");
-      q.h(var2, "originLabel");
-      q.h(var3, "accessibilityLabel");
+      r.h(var1, "timestampLabel");
+      r.h(var2, "originLabel");
+      r.h(var3, "accessibilityLabel");
       return new ForwardFooterInfo(var1, var2, var3, var4);
    }
 
@@ -57,22 +57,22 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.timestampLabel, var1.timestampLabel)) {
+         if (!r.c(this.timestampLabel, var1.timestampLabel)) {
             return false;
-         } else if (!q.c(this.originLabel, var1.originLabel)) {
+         } else if (!r.c(this.originLabel, var1.originLabel)) {
             return false;
-         } else if (!q.c(this.accessibilityLabel, var1.accessibilityLabel)) {
+         } else if (!r.c(this.accessibilityLabel, var1.accessibilityLabel)) {
             return false;
          } else {
-            return q.c(this.originIconUrl, var1.originIconUrl);
+            return r.c(this.originIconUrl, var1.originIconUrl);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.timestampLabel.hashCode();
-      val var2: Int = this.originLabel.hashCode();
-      val var4: Int = this.accessibilityLabel.hashCode();
+      val var4: Int = this.timestampLabel.hashCode();
+      val var3: Int = this.originLabel.hashCode();
+      val var2: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
          var1 = 0;
@@ -80,25 +80,25 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var3 * 31 + var2) * 31 + var4) * 31 + var1;
+      return ((var4 * 31 + var3) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.timestampLabel;
-      val var5: java.lang.String = this.originLabel;
-      val var3: java.lang.String = this.accessibilityLabel;
-      val var2: java.lang.String = this.originIconUrl;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardFooterInfo(timestampLabel=");
-      var4.append(var1);
-      var4.append(", originLabel=");
-      var4.append(var5);
-      var4.append(", accessibilityLabel=");
-      var4.append(var3);
-      var4.append(", originIconUrl=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.timestampLabel;
+      val var4: java.lang.String = this.originLabel;
+      val var5: java.lang.String = this.accessibilityLabel;
+      val var1: java.lang.String = this.originIconUrl;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ForwardFooterInfo(timestampLabel=");
+      var2.append(var3);
+      var2.append(", originLabel=");
+      var2.append(var4);
+      var2.append(", accessibilityLabel=");
+      var2.append(var5);
+      var2.append(", originIconUrl=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

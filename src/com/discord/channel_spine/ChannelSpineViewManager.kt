@@ -6,14 +6,14 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ChannelSpineManagerDelegate
 import com.facebook.react.viewmanagers.ChannelSpineManagerInterface
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "ChannelSpine")
 public class ChannelSpineViewManager : SimpleViewManager<ChannelSpineView>, ChannelSpineManagerInterface<ChannelSpineView> {
    private final val mDelegate: ChannelSpineManagerDelegate<ChannelSpineView, ChannelSpineViewManager> = new ChannelSpineManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ChannelSpineView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return ChannelSpineViewManagerImpl.INSTANCE.createViewInstance(var1);
    }
 
@@ -27,13 +27,13 @@ public class ChannelSpineViewManager : SimpleViewManager<ChannelSpineView>, Chan
 
    @ReactProp(name = "numRows")
    public open fun setNumRows(view: ChannelSpineView, numRows: Int) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       ChannelSpineViewManagerImpl.INSTANCE.numRows(var1, var2);
    }
 
    @ReactProp(name = "rowHeight")
    public open fun setRowHeight(view: ChannelSpineView, height: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       ChannelSpineViewManagerImpl.INSTANCE.rowHeight(var1, var2);
    }
 }

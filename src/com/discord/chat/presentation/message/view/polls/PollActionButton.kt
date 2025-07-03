@@ -20,21 +20,21 @@ import com.discord.theme.R
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class PollActionButton  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: PollActionButtonBinding
 
    fun PollActionButton(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       val var3: PollActionButtonBinding = PollActionButtonBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
+      r.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
@@ -67,10 +67,10 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
    }
 
    public fun bind(action: PollAction?, channelId: ChannelId, messageId: MessageId, onTapPollAction: (ChannelId, MessageId, String) -> Unit) {
-      q.h(var4, "messageId");
-      q.h(var5, "onTapPollAction");
+      r.h(var4, "messageId");
+      r.h(var5, "onTapPollAction");
       val var9: View = this.binding.getRoot();
-      q.g(var9, "getRoot(...)");
+      r.g(var9, "getRoot(...)");
       var var8: Boolean = true;
       var var7: Boolean;
       if (var1 != null) {
@@ -93,11 +93,11 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new A9.n();
+                     throw new z9.n();
                   }
 
                   val var18: TextView = this.binding.actionText;
-                  q.g(this.binding.actionText, "actionText");
+                  r.g(this.binding.actionText, "actionText");
                   var18.setVisibility(8);
                   val var19: DCDButton = this.binding.actionButton;
                   DCDButton.setBackgroundRectangle$default(
@@ -106,30 +106,30 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   var19.setTextColor(ThemeManagerKt.getTheme().getRedesignButtonTertiaryText());
                   var19.setText(var1.getLabel());
                   var19.setOnClickButtonListener(new f(var1, var5, var2, var4));
-                  q.e(var19);
+                  r.e(var19);
                   var11 = var19;
                } else {
                   val var20: TextView = this.binding.actionText;
-                  q.g(this.binding.actionText, "actionText");
+                  r.g(this.binding.actionText, "actionText");
                   var20.setVisibility(8);
                   val var21: DCDButton = this.binding.actionButton;
                   DCDButton.setBackgroundRectangle$default(
                      this.binding.actionButton, ThemeManagerKt.getTheme().getRedesignButtonPrimaryBackground(), SizeUtilsKt.getDpToPx(20), null, 0, 12, null
                   );
-                  q.e(var21);
+                  r.e(var21);
                   var21.setTextColor(ColorUtilsKt.getColorCompat(var21, R.color.white));
                   var21.setText(var1.getLabel());
                   var21.setOnClickButtonListener(new e(var1, var5, var2, var4));
-                  q.e(var21);
+                  r.e(var21);
                   var11 = var21;
                }
             } else {
                val var24: DCDButton = this.binding.actionButton;
-               q.g(this.binding.actionButton, "actionButton");
+               r.g(this.binding.actionButton, "actionButton");
                var24.setVisibility(8);
                val var25: TextView = this.binding.actionText;
                this.binding.actionText.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-               q.e(var25);
+               r.e(var25);
                DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimarySemibold);
                var25.setText(var1.getLabel());
                var25.setClickable(true);
@@ -140,15 +140,15 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                }
 
                var25.setAccessibilityDelegate(var12);
-               q.e(var25);
+               r.e(var25);
                var11 = var25;
             }
          } else {
             val var22: DCDButton = this.binding.actionButton;
-            q.g(this.binding.actionButton, "actionButton");
+            r.g(this.binding.actionButton, "actionButton");
             var22.setVisibility(8);
             val var23: TextView = this.binding.actionText;
-            q.e(this.binding.actionText);
+            r.e(this.binding.actionText);
             var23.setVisibility(0);
             var23.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
             DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
@@ -165,7 +165,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             }
 
             var23.setAccessibilityDelegate(var13);
-            q.e(var23);
+            r.e(var23);
             var11 = var23;
          }
 

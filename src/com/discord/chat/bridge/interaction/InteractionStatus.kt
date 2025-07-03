@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -11,8 +11,8 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    public final val text: StructurableText
 
    init {
-      q.h(var1, "state");
-      q.h(var2, "text");
+      r.h(var1, "state");
+      r.h(var2, "text");
       super();
       this.state = var1;
       this.text = var2;
@@ -27,8 +27,8 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public fun copy(state: InteractionStatusViewState = var0.state, text: StructurableText = var0.text): InteractionStatus {
-      q.h(var1, "state");
-      q.h(var2, "text");
+      r.h(var1, "state");
+      r.h(var2, "text");
       return new InteractionStatus(var1, var2);
    }
 
@@ -42,7 +42,7 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
          if (this.state != var1.state) {
             return false;
          } else {
-            return q.c(this.text, var1.text);
+            return r.c(this.text, var1.text);
          }
       }
    }

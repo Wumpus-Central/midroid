@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.activities.ActivityInstanceEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, activityInstanceEmbed: ActivityInstanceEmbed, constrainedWidth: Int) : ActivityInstanceEmbedMessageAccessory(
       var1, var2, var3
@@ -12,8 +12,8 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    public final val constrainedWidth: Int
 
    fun ActivityInstanceEmbedMessageAccessory(var1: java.lang.String, var2: ActivityInstanceEmbed, var3: Int) {
-      q.h(var1, "messageId");
-      q.h(var2, "activityInstanceEmbed");
+      r.h(var1, "messageId");
+      r.h(var2, "activityInstanceEmbed");
       val var5: java.lang.String = var2.getInstanceId();
       val var4: StringBuilder = new StringBuilder();
       var4.append("activity instance ");
@@ -37,8 +37,8 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    }
 
    public fun copy(messageId: MessageId = ..., activityInstanceEmbed: ActivityInstanceEmbed = ..., constrainedWidth: Int = ...): ActivityInstanceEmbedMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "activityInstanceEmbed");
+      r.h(var1, "messageId");
+      r.h(var2, "activityInstanceEmbed");
       return new ActivityInstanceEmbedMessageAccessory(var1, var2, var3, null);
    }
 
@@ -51,7 +51,7 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
+         } else if (!r.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
             return false;
          } else {
             return this.constrainedWidth == var1.constrainedWidth;
@@ -64,17 +64,17 @@ public data class ActivityInstanceEmbedMessageAccessory(messageId: MessageId, ac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: ActivityInstanceEmbed = this.activityInstanceEmbed;
       val var1: Int = this.constrainedWidth;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ActivityInstanceEmbedMessageAccessory(messageId=");
-      var4.append(var2);
-      var4.append(", activityInstanceEmbed=");
-      var4.append(var3);
-      var4.append(", constrainedWidth=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActivityInstanceEmbedMessageAccessory(messageId=");
+      var2.append(var4);
+      var2.append(", activityInstanceEmbed=");
+      var2.append(var3);
+      var2.append(", constrainedWidth=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Tùy chỉnh chủ đề [Beta] không hoạt động trên di động."
+  "v15Ipq": [
+    "Khi bật đồng bộ, các chủ đề tùy chỉnh [Beta] được tạo trên máy tính bàn có thể ảnh hưởng đến chủ đề di động của bạn. ",
+    [
+      8,
+      "$link",
+      [
+        "Tìm hiểu thêm tại đây."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

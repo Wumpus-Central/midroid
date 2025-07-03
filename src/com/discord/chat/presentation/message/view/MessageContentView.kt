@@ -57,25 +57,25 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
 
    open fun MessageContentView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    open fun MessageContentView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = A9.j.b(new E0(this));
+      this.shadowView$delegate = z9.j.a(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
    private fun appendEditedLabel(spannableStringBuilder: SpannableStringBuilder, editedLabel: String, editedLabelTextColor: Int?) {
       val var6: Array<Any> = var1.getSpans(var1.length(), var1.length(), QuoteSpan.class);
-      kotlin.jvm.internal.q.g(var6, "getSpans(...)");
+      kotlin.jvm.internal.r.g(var6, "getSpans(...)");
       val var8: QuoteSpan = kotlin.collections.c.L(var6) as QuoteSpan;
       val var5: Int = var1.length();
       val var7: StringBuilder = new StringBuilder();
@@ -99,13 +99,13 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `setMessageContent$lambda$1`(var0: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return new LinkStyle(DiscordFont.PrimaryNormal, ThemeManagerKt.getTheme().getTextLink(), null, null, 12, null);
    }
 
    @JvmStatic
    fun `setMessageContent_AeCz66Y$lambda$2`(var0: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.q.h(var0, "<unused var>");
+      kotlin.jvm.internal.r.h(var0, "<unused var>");
       return new LinkStyle(null, 0, null, null, 15, null);
    }
 
@@ -125,7 +125,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var9: Boolean = kotlin.jvm.internal.r.c(var2.getForceShow(), java.lang.Boolean.TRUE);
       var var7: Int = var2.getNumberOfLines();
       val var8: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
@@ -169,7 +169,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `truncate_LdU2QRA$lambda$3`(var0: Function1, var1: java.lang.String, var2: View): Unit {
-      kotlin.jvm.internal.q.h(var2, "it");
+      kotlin.jvm.internal.r.h(var2, "it");
       var0.invoke(MessageId.box-impl(var1));
       return Unit.a;
    }
@@ -180,9 +180,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       eventHandlers: MarkdownTextRenderEventHandlers,
       emojiBaselineHeightOverridePx: Float? = null
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageContent");
-      kotlin.jvm.internal.q.h(var2, "options");
-      kotlin.jvm.internal.q.h(var3, "eventHandlers");
+      kotlin.jvm.internal.r.h(var1, "messageContent");
+      kotlin.jvm.internal.r.h(var2, "options");
+      kotlin.jvm.internal.r.h(var3, "eventHandlers");
       setMessageContent-AeCz66Y$default(
          this,
          var1,
@@ -252,32 +252,32 @@ public open class MessageContentView  public constructor(context: Context, attrs
       theme: DiscordThemeObject = ...,
       emojiBaselineHeightOverridePx: Float? = ...
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageContent");
-      kotlin.jvm.internal.q.h(var2, "messageId");
-      kotlin.jvm.internal.q.h(var7, "onTapLink");
-      kotlin.jvm.internal.q.h(var8, "onLongTapLink");
-      kotlin.jvm.internal.q.h(var9, "onTapChannel");
-      kotlin.jvm.internal.q.h(var10, "onLongPressChannel");
-      kotlin.jvm.internal.q.h(var11, "onTapAttachmentLink");
-      kotlin.jvm.internal.q.h(var12, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.q.h(var13, "onTapMention");
-      kotlin.jvm.internal.q.h(var14, "onTapCommand");
-      kotlin.jvm.internal.q.h(var15, "onLongPressCommand");
-      kotlin.jvm.internal.q.h(var16, "onTapSpoiler");
-      kotlin.jvm.internal.q.h(var17, "onTapTimestamp");
-      kotlin.jvm.internal.q.h(var18, "onTapInlineCode");
-      kotlin.jvm.internal.q.h(var19, "onTapEmoji");
-      kotlin.jvm.internal.q.h(var20, "onTapSeeMore");
-      kotlin.jvm.internal.q.h(var21, "onTapSoundmoji");
-      kotlin.jvm.internal.q.h(var22, "linkStyleProvider");
-      kotlin.jvm.internal.q.h(var29, "theme");
+      kotlin.jvm.internal.r.h(var1, "messageContent");
+      kotlin.jvm.internal.r.h(var2, "messageId");
+      kotlin.jvm.internal.r.h(var7, "onTapLink");
+      kotlin.jvm.internal.r.h(var8, "onLongTapLink");
+      kotlin.jvm.internal.r.h(var9, "onTapChannel");
+      kotlin.jvm.internal.r.h(var10, "onLongPressChannel");
+      kotlin.jvm.internal.r.h(var11, "onTapAttachmentLink");
+      kotlin.jvm.internal.r.h(var12, "onLongPressAttachmentLink");
+      kotlin.jvm.internal.r.h(var13, "onTapMention");
+      kotlin.jvm.internal.r.h(var14, "onTapCommand");
+      kotlin.jvm.internal.r.h(var15, "onLongPressCommand");
+      kotlin.jvm.internal.r.h(var16, "onTapSpoiler");
+      kotlin.jvm.internal.r.h(var17, "onTapTimestamp");
+      kotlin.jvm.internal.r.h(var18, "onTapInlineCode");
+      kotlin.jvm.internal.r.h(var19, "onTapEmoji");
+      kotlin.jvm.internal.r.h(var20, "onTapSeeMore");
+      kotlin.jvm.internal.r.h(var21, "onTapSoundmoji");
+      kotlin.jvm.internal.r.h(var22, "linkStyleProvider");
+      kotlin.jvm.internal.r.h(var29, "theme");
       val var32: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var32, "getContext(...)");
+      kotlin.jvm.internal.r.g(var32, "getContext(...)");
       val var33: FontMetrics = this.getPaint().getFontMetrics();
-      kotlin.jvm.internal.q.g(var33, "getFontMetrics(...)");
+      kotlin.jvm.internal.r.g(var33, "getFontMetrics(...)");
       val var31: Float = TextUtilsKt.getBaselineHeightPx(var33);
       val var35: TextPaint = this.getPaint();
-      kotlin.jvm.internal.q.g(var35, "getPaint(...)");
+      kotlin.jvm.internal.r.g(var35, "getPaint(...)");
       val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
          var1,
          var32,
@@ -341,14 +341,14 @@ public open class MessageContentView  public constructor(context: Context, attrs
       private final val view: MessageContentView
 
       init {
-         kotlin.jvm.internal.q.h(var1, "view");
+         kotlin.jvm.internal.r.h(var1, "view");
          super();
          this.view = var1;
       }
 
       public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-         kotlin.jvm.internal.q.h(var1, "host");
-         kotlin.jvm.internal.q.h(var2, "info");
+         kotlin.jvm.internal.r.h(var1, "host");
+         kotlin.jvm.internal.r.h(var2, "info");
          super.onInitializeAccessibilityNodeInfo(var1, var2);
          val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
          val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
@@ -356,11 +356,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
             if (!var7.isRevealed()) {
-               val var4: Int = var5.getSpanStart(var7);
-               val var3: Int = var5.getSpanEnd(var7);
+               val var3: Int = var5.getSpanStart(var7);
+               val var4: Int = var5.getSpanEnd(var7);
                val var10: Context = var1.getContext();
-               kotlin.jvm.internal.q.g(var10, "getContext(...)");
-               var5.replace(var4, var3, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+               kotlin.jvm.internal.r.g(var10, "getContext(...)");
+               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
             }
          }
 

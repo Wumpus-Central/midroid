@@ -8,8 +8,8 @@ internal class EmojiPickerLayoutManager(context: Context, rowSize: Int, onGetSpa
    private final var isScrollEnabled: Boolean
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var3, "onGetSpanSize");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var3, "onGetSpanSize");
       super(var1, var2);
       this.onGetSpanSize = var3;
       this.isScrollEnabled = true;

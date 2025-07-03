@@ -2,7 +2,7 @@ package com.discord.simpleast.core.node
 
 import android.text.SpannableStringBuilder
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    private final var children: MutableCollection<Node<Any>>?
@@ -16,7 +16,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public fun addChild(child: Node<Any>) {
-      q.h(var1, "child");
+      r.h(var1, "child");
       var var2: Any = this.children;
       if (this.children == null) {
          var2 = new ArrayList();
@@ -35,12 +35,12 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
    }
 
    public open fun render(builder: SpannableStringBuilder, renderContext: Any) {
-      q.h(var1, "builder");
+      r.h(var1, "builder");
    }
 
    public open class Parent<R>(vararg children: Node<Any>?) : Node<R> {
       init {
-         q.h(var1, "children");
+         r.h(var1, "children");
          val var5: ArrayList = new ArrayList();
          val var3: Int = var1.length;
 
@@ -55,7 +55,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         q.h(var1, "builder");
+         r.h(var1, "builder");
          val var3: java.util.Collection = this.getChildren();
          if (var3 != null) {
             val var4: java.util.Iterator = var3.iterator();

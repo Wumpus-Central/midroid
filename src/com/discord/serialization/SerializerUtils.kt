@@ -1,9 +1,9 @@
 package com.discord.serialization
 
-import V9.c
-import g2.a
+import U9.c
+import f2.a
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonBuilder
@@ -14,28 +14,28 @@ import kotlinx.serialization.json.b
 public object SerializerUtils {
    @JvmStatic
    fun `findErroringFields$lambda$0`(var0: JsonBuilder): Unit {
-      q.h(var0, "$this$Json");
+      r.h(var0, "$this$Json");
       var0.c(true);
       return Unit.a;
    }
 
    public fun findErroringFields(jsonString: String, deserializerClass: KClass<*>): com.discord.serialization.SerializerUtils.SerializerError {
-      q.h(var1, "jsonString");
-      q.h(var2, "deserializerClass");
+      r.h(var1, "jsonString");
+      r.h(var2, "deserializerClass");
       val var3: JsonElement = b.b(null, new a(), 1, null).g(var1);
       if (var3 !is JsonObject) {
          return SerializerUtils.SerializerError.EMPTY.INSTANCE;
       } else {
          val var6: LinkedHashMap = new LinkedHashMap();
 
-         for (KProperty1 var5 : c.a(var2)) {
-            val var4: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
-            if (var4 == null) {
-               if (!var5.getReturnType().j()) {
-                  var6.put(var5.getName(), "null");
+         for (KProperty1 var4 : c.a(var2)) {
+            val var7: JsonElement = (var3 as JsonObject).get(var4.getName()) as JsonElement;
+            if (var7 == null) {
+               if (!var4.getReturnType().j()) {
+                  var6.put(var4.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var5, var4)) {
-               var6.put(var5.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var4, var7)) {
+               var6.put(var4.getName(), var7.toString());
             }
          }
 
@@ -48,7 +48,7 @@ public object SerializerUtils {
          public final val data: Map<String, String>
 
          init {
-            q.h(var1, "data");
+            r.h(var1, "data");
             super(null);
             this.data = var1;
          }
@@ -58,7 +58,7 @@ public object SerializerUtils {
          }
 
          public fun copy(data: Map<String, String> = var0.data): com.discord.serialization.SerializerUtils.SerializerError.Data {
-            q.h(var1, "data");
+            r.h(var1, "data");
             return new SerializerUtils.SerializerError.Data(var1);
          }
 
@@ -68,7 +68,7 @@ public object SerializerUtils {
             } else if (var1 !is SerializerUtils.SerializerError.Data) {
                return false;
             } else {
-               return q.c(this.data, (var1 as SerializerUtils.SerializerError.Data).data);
+               return r.c(this.data, (var1 as SerializerUtils.SerializerError.Data).data);
             }
          }
 

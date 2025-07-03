@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class CommandMentionContentNode(channelId: ChannelId, commandId: String, commandName: String, commandKey: String, content: List<ContentNode>) : CommandMentionContentNode(
@@ -16,10 +16,10 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    public open val content: List<ContentNode>
 
    fun CommandMentionContentNode(var1: Long, var3: java.lang.String, var4: java.lang.String, var5: java.lang.String, var6: MutableList<ContentNode>) {
-      q.h(var3, "commandId");
-      q.h(var4, "commandName");
-      q.h(var5, "commandKey");
-      q.h(var6, "content");
+      r.h(var3, "commandId");
+      r.h(var4, "commandName");
+      r.h(var5, "commandKey");
+      r.h(var6, "content");
       super(null);
       this.channelId = var1;
       this.commandId = var3;
@@ -49,10 +49,10 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public fun copy(channelId: ChannelId = ..., commandId: String = ..., commandName: String = ..., commandKey: String = ..., content: List<ContentNode> = ...): CommandMentionContentNode {
-      q.h(var3, "commandId");
-      q.h(var4, "commandName");
-      q.h(var5, "commandKey");
-      q.h(var6, "content");
+      r.h(var3, "commandId");
+      r.h(var4, "commandName");
+      r.h(var5, "commandKey");
+      r.h(var6, "content");
       return new CommandMentionContentNode(var1, var3, var4, var5, var6, null);
    }
 
@@ -65,14 +65,14 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
          var1 = var1;
          if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.commandId, var1.commandId)) {
+         } else if (!r.c(this.commandId, var1.commandId)) {
             return false;
-         } else if (!q.c(this.commandName, var1.commandName)) {
+         } else if (!r.c(this.commandName, var1.commandName)) {
             return false;
-         } else if (!q.c(this.commandKey, var1.commandKey)) {
+         } else if (!r.c(this.commandKey, var1.commandKey)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
@@ -84,24 +84,24 @@ public data class CommandMentionContentNode(channelId: ChannelId, commandId: Str
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = this.commandId;
-      val var3: java.lang.String = this.commandName;
-      val var6: java.lang.String = this.commandKey;
-      val var1: java.util.List = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CommandMentionContentNode(channelId=");
-      var4.append(var2);
-      var4.append(", commandId=");
-      var4.append(var5);
-      var4.append(", commandName=");
-      var4.append(var3);
-      var4.append(", commandKey=");
-      var4.append(var6);
-      var4.append(", content=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = this.commandId;
+      val var2: java.lang.String = this.commandName;
+      val var3: java.lang.String = this.commandKey;
+      val var4: java.util.List = this.content;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CommandMentionContentNode(channelId=");
+      var5.append(var6);
+      var5.append(", commandId=");
+      var5.append(var1);
+      var5.append(", commandName=");
+      var5.append(var2);
+      var5.append(", commandKey=");
+      var5.append(var3);
+      var5.append(", content=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

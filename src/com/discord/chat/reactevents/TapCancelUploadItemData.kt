@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    public final val itemId: String
 
    init {
-      q.h(var1, "uploaderId");
-      q.h(var2, "itemId");
+      r.h(var1, "uploaderId");
+      r.h(var2, "itemId");
       super();
       this.uploaderId = var1;
       this.itemId = var2;
@@ -28,8 +28,8 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public fun copy(uploaderId: String = var0.uploaderId, itemId: String = var0.itemId): TapCancelUploadItemData {
-      q.h(var1, "uploaderId");
-      q.h(var2, "itemId");
+      r.h(var1, "uploaderId");
+      r.h(var2, "itemId");
       return new TapCancelUploadItemData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.uploaderId, var1.uploaderId)) {
+         if (!r.c(this.uploaderId, var1.uploaderId)) {
             return false;
          } else {
-            return q.c(this.itemId, var1.itemId);
+            return r.c(this.itemId, var1.itemId);
          }
       }
    }
@@ -57,15 +57,15 @@ public data class TapCancelUploadItemData(uploaderId: String, itemId: String) : 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.itemId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapCancelUploadItemData(uploaderId=");
-      var1.append(var3);
-      var1.append(", itemId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.uploaderId;
+      val var3: java.lang.String = this.itemId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapCancelUploadItemData(uploaderId=");
+      var2.append(var1);
+      var2.append(", itemId=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

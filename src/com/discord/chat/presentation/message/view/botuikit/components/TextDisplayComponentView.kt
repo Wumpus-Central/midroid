@@ -15,21 +15,21 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.react.FontManager
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
 public class TextDisplayComponentView(context: Context) : MessageContentView, ComponentView<TextDisplayComponent> {
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, null, 0, 6, null);
       this.setLayoutParams(new LayoutParams(-1, -2));
    }
 
    public open fun configure(component: TextDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      q.h(var1, "component");
-      q.h(var2, "componentProvider");
-      q.h(var3, "componentContext");
+      r.h(var1, "component");
+      r.h(var2, "componentProvider");
+      r.h(var3, "componentContext");
       this.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
       DiscordFontUtilsKt.setDiscordFont(this, DiscordFont.PrimaryMedium);
       val var4: Float;
@@ -37,26 +37,26 @@ public class TextDisplayComponentView(context: Context) : MessageContentView, Co
          var4 = 14.0F;
       } else {
          val var7: Context = this.getContext();
-         q.g(var7, "getContext(...)");
+         r.g(var7, "getContext(...)");
          var4 = MessageUtilsKt.getChatTextSizeSp(var7);
       }
 
       SetTextSizeSpKt.setTextSizeSp(this, var4);
-      val var5: TextPaint = this.getPaint();
-      q.g(var5, "getPaint(...)");
+      val var8: TextPaint = this.getPaint();
+      r.g(var8, "getPaint(...)");
       val var6: FontManager = FontManager.INSTANCE;
-      val var8: Context = this.getContext();
-      q.g(var8, "getContext(...)");
+      val var5: Context = this.getContext();
+      r.g(var5, "getContext(...)");
       this.setMessageContent(
          var1.getContent(),
          var3.getMarkdownTextRenderOptions(),
          var3.getMarkdownTextRenderEventHandlers(),
-         TextUtilsKt.getBaselineHeightForFontSizePx(var5, var6.getScaledSpToPx(16, var8))
+         TextUtilsKt.getBaselineHeightForFontSizePx(var8, var6.getScaledSpToPx(16, var5))
       );
    }
 
    public override fun getComponentType(): KClass<TextDisplayComponent> {
-      return G.b(TextDisplayComponent.class);
+      return H.b(TextDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {
@@ -65,7 +65,7 @@ public class TextDisplayComponentView(context: Context) : MessageContentView, Co
 
    public companion object {
       public fun inflateComponent(context: Context): TextDisplayComponentView {
-         q.h(var1, "context");
+         r.h(var1, "context");
          return new TextDisplayComponentView(var1);
       }
    }

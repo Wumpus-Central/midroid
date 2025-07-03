@@ -1,11 +1,11 @@
 package com.discord.misc.utilities.collections
 
-import P9.a
+import O9.a
 import java.util.Comparator
 import java.util.function.UnaryOperator
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 import kotlin.jvm.internal.i
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public open class StubbedList<T> : java.util.List<T>, a {
    public open val size: Int
@@ -47,7 +47,7 @@ public open class StubbedList<T> : java.util.List<T>, a {
    }
 
    public override fun containsAll(elements: Collection<Any>): Boolean {
-      q.h(var1, "elements");
+      r.h(var1, "elements");
       throw new UnsupportedOperationException(StubbedList.Companion.access$unsupported(Companion, "containsAll"));
    }
 
@@ -131,13 +131,13 @@ public open class StubbedList<T> : java.util.List<T>, a {
    }
 
    override fun <T> toArray(var1: Array<T>): Array<T> {
-      q.h(var1, "array");
+      r.h(var1, "array");
       return (T[])i.b(this, var1);
    }
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var2: java.lang.String = G.b(StubbedList.class).b();
+         val var2: java.lang.String = H.b(StubbedList.class).b();
          val var3: StringBuilder = new StringBuilder();
          var3.append(var2);
          var3.append(" did not implement ");

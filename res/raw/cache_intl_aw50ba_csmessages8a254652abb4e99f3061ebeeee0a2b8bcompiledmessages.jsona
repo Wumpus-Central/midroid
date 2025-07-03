@@ -20636,12 +20636,21 @@
   ],
   "3XVNys": "Kopírovat zvací odkaz",
   "VNe8Pz": "Upravit zvací odkaz.",
+  "Ckxb6u": "Požádat o vstup",
   "2Gbof3": "Platnost pozvánky vypršela",
   "jfrMtr": "Plno",
+  "x1UXGR": "Hra skončila. Chceš začít novou?",
   "pkq6Vl": "Pozvánka do hry",
   "hC/Ze3": "Pozvat k připojení",
   "/8czHx": [
     "Pozvat k poslechu na ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Pozvat ke sledování ",
     [
       1,
       "name"
@@ -20654,7 +20663,129 @@
   "/ak8Mj": "Přidat se přes PlayStation",
   "HEY5dX": "Přidat se přes Xbox",
   "84qx9v": "Skupina k poslechu skončila!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " žádá o připojení se k tvojí party v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " se chce připojit k tvojí party v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "B9kbnZ": "Skupina ke sledování skončila!",
+  "IA6uDQ": [
+    "Chceš se připojit k party v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Žádáš o připojení k party uživatele ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Tvoje žádost o připojení se k party v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " byla odeslána"
+  ],
+  "JddpNz": [
+    "Tvoje žádost o připojení se k party uživatele ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " v aplikaci ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " byla odeslána"
+  ],
   "DXgdcH": "Sdílej tento odkaz s přáteli a oni se automaticky přidají na tvůj server.",
   "tQc0l5": "Pozvi přítele na svůj server!",
   "TfuB9P": [
@@ -31683,6 +31814,7 @@
   "IKE48v": "Nový člen",
   "VaCdhY": "Nováček na Discordu",
   "CQmziY": "Návštěvník (není členem)",
+  "EkokLy": "Povinné",
   "WnX4Jy": "Odeslat e-mail znovu",
   "lm1UKi": "Znovu poslat ověřovací e-mail",
   "yBZMsb": "Obnovit",
@@ -34772,9 +34904,9 @@
   "7YZ/Sk": "Přepnout na zadní kameru",
   "/R1SBw": "Přepnout na přední kameru",
   "BkuOOz": "Synchronizovat",
-  "GAlmIS": "Po zapnutí této funkce se ve všech ostatních klientech včetně počítače a prohlížeče přepíšou výše uvedená nastavení zobrazení.",
   "3340dX": "Synchronizovat napříč klienty.",
   "p4IKEx": "Zapnutí této možnosti přepíše nastavení textu a obrázků na všech ostatních klientech včetně počítače a prohlížeče.",
+  "CRtkeH": "Zapnutí této funkce přepíše tvůj vybraný motiv ve všech klientech včetně počítače a prohlížeče.",
   "+KCMSk": "Synchronizace přátel na Discordu",
   "NVwuHh": "Synchronizovat",
   "eW8Gy8": "Synchronizovat oprávnění",
@@ -38102,8 +38234,130 @@
   ],
   "FMbL3t": "Vymazání se nezdařilo",
   "2TbM/P": "Hraje hru",
+  "Zogooq": [
+    "Počet posluchačů ",
+    [
+      2,
+      "partySize"
+    ],
+    "/",
+    [
+      2,
+      "maxPartySize"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " poslouchá"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " poslouchají"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " poslouchá"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Poslouchá hudbu",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nod ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Hraje",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " hraje"
+        ],
+        "few": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " hrají"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " hraje"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " hraje"
+        ],
+        "few": [
+          [
+            7
+          ],
+          " hrají"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " hraje"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Hrát na ",
     [

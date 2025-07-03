@@ -1,8 +1,8 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class EmbedField(name: String? = null, value: String? = null) {
@@ -37,10 +37,10 @@ public data class EmbedField(name: String? = null, value: String? = null) {
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.name, var1.name)) {
+         if (!r.c(this.name, var1.name)) {
             return false;
          } else {
-            return q.c(this.value, var1.value);
+            return r.c(this.value, var1.value);
          }
       }
    }
@@ -63,14 +63,14 @@ public data class EmbedField(name: String? = null, value: String? = null) {
 
    public override fun toString(): String {
       val var2: java.lang.String = this.name;
-      val var1: java.lang.String = this.value;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedField(name=");
-      var3.append(var2);
-      var3.append(", value=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.value;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("EmbedField(name=");
+      var1.append(var2);
+      var1.append(", value=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

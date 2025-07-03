@@ -2,16 +2,16 @@ package com.discord.notifications.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class RegisterEvent(token: String) : ReactEvent {
    public final val token: String
 
    init {
-      q.h(var1, "token");
+      r.h(var1, "token");
       super();
       this.token = var1;
    }
@@ -21,7 +21,7 @@ internal data class RegisterEvent(token: String) : ReactEvent {
    }
 
    public fun copy(token: String = var0.token): RegisterEvent {
-      q.h(var1, "token");
+      r.h(var1, "token");
       return new RegisterEvent(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class RegisterEvent(token: String) : ReactEvent {
       } else if (var1 !is RegisterEvent) {
          return false;
       } else {
-         return q.c(this.token, (var1 as RegisterEvent).token);
+         return r.c(this.token, (var1 as RegisterEvent).token);
       }
    }
 
@@ -44,12 +44,12 @@ internal data class RegisterEvent(token: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.token;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("RegisterEvent(token=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.token;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("RegisterEvent(token=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

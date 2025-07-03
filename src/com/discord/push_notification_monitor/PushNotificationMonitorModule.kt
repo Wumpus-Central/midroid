@@ -5,7 +5,7 @@ import android.content.SharedPreferences
 import com.discord.codegen.NativePushNotificationMonitorModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
 
@@ -13,7 +13,7 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
    private final val reactContext: ReactApplicationContext
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }
@@ -23,8 +23,8 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
    }
 
    public override fun getPushNotificationLogs(userId: String, promise: Promise) {
-      q.h(var1, "userId");
-      q.h(var2, "promise");
+      r.h(var1, "userId");
+      r.h(var2, "promise");
       val var3: a = Json.d;
       val var4: PushNotificationLog = PushNotificationMonitor.INSTANCE.getPushLog(this.reactContext, var1);
       var3.a();
@@ -33,9 +33,9 @@ public class PushNotificationMonitorModule(reactContext: ReactApplicationContext
 
    public companion object {
       public fun getPushNotificationLogStorage(context: Context): SharedPreferences {
-         q.h(var1, "context");
+         r.h(var1, "context");
          val var2: SharedPreferences = var1.getSharedPreferences("push_notification_monitor", 0);
-         q.g(var2, "getSharedPreferences(...)");
+         r.g(var2, "getSharedPreferences(...)");
          return var2;
       }
    }

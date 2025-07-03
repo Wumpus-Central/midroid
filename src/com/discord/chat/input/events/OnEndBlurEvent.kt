@@ -2,16 +2,16 @@ package com.discord.chat.input.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class OnEndBlurEvent(text: String) : ReactEvent {
    public final val text: String
 
    init {
-      q.h(var1, "text");
+      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -21,7 +21,7 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
    }
 
    public fun copy(text: String = var0.text): OnEndBlurEvent {
-      q.h(var1, "text");
+      r.h(var1, "text");
       return new OnEndBlurEvent(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
       } else if (var1 !is OnEndBlurEvent) {
          return false;
       } else {
-         return q.c(this.text, (var1 as OnEndBlurEvent).text);
+         return r.c(this.text, (var1 as OnEndBlurEvent).text);
       }
    }
 
@@ -44,12 +44,12 @@ internal data class OnEndBlurEvent(text: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnEndBlurEvent(text=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnEndBlurEvent(text=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

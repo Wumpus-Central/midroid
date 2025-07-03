@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, port: Int, seq: Int, timeout: Int) : ReactEvent {
@@ -15,7 +15,7 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    public final val timeout: Int
 
    init {
-      q.h(var2, "server");
+      r.h(var2, "server");
       super();
       this.connectionId = var1;
       this.server = var2;
@@ -45,7 +45,7 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public fun copy(connectionId: Int = var0.connectionId, server: String = var0.server, port: Int = var0.port, seq: Int = var0.seq, timeout: Int = var0.timeout): PingTimeoutCallbackEvent {
-      q.h(var2, "server");
+      r.h(var2, "server");
       return new PingTimeoutCallbackEvent(var1, var2, var3, var4, var5);
    }
 
@@ -58,7 +58,7 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!q.c(this.server, var1.server)) {
+         } else if (!r.c(this.server, var1.server)) {
             return false;
          } else if (this.port != var1.port) {
             return false;
@@ -80,24 +80,24 @@ internal data class PingTimeoutCallbackEvent(connectionId: Int, server: String, 
    }
 
    public override fun toString(): String {
-      val var4: Int = this.connectionId;
-      val var5: java.lang.String = this.server;
-      val var3: Int = this.port;
-      val var1: Int = this.seq;
-      val var2: Int = this.timeout;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PingTimeoutCallbackEvent(connectionId=");
-      var6.append(var4);
-      var6.append(", server=");
-      var6.append(var5);
-      var6.append(", port=");
-      var6.append(var3);
-      var6.append(", seq=");
-      var6.append(var1);
-      var6.append(", timeout=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var3: Int = this.connectionId;
+      val var6: java.lang.String = this.server;
+      val var4: Int = this.port;
+      val var2: Int = this.seq;
+      val var1: Int = this.timeout;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PingTimeoutCallbackEvent(connectionId=");
+      var5.append(var3);
+      var5.append(", server=");
+      var5.append(var6);
+      var5.append(", port=");
+      var5.append(var4);
+      var5.append(", seq=");
+      var5.append(var2);
+      var5.append(", timeout=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

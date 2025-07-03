@@ -19920,12 +19920,21 @@
   ],
   "3XVNys": "Copy Invite Link",
   "VNe8Pz": "Edit invite link.",
+  "Ckxb6u": "Ask to Join",
   "2Gbof3": "Invite Expired",
   "jfrMtr": "Full",
+  "x1UXGR": "Game has ended. Start a new one?",
   "pkq6Vl": "Game Invitation",
   "hC/Ze3": "Invite to Join",
   "/8czHx": [
     "Invite to Listen Along on ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Invite to Watch ",
     [
       1,
       "name"
@@ -19938,7 +19947,133 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " asked to join your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " is asking to join your ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
   "B9kbnZ": "The watching party is over!",
+  "IA6uDQ": [
+    "You are asking to join a(n) ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "gYVkSU": [
+    "You are asking to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    "’s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "2N1kNT": [
+    "You asked to join a(n) ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
+  "JddpNz": [
+    "You asked to join ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    "’s ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " party"
+  ],
   "DXgdcH": "Share this link with friends and they'll join your server automatically.",
   "tQc0l5": "Invite a friend to your server!",
   "TfuB9P": [
@@ -30546,6 +30681,7 @@
   "IKE48v": "New Member",
   "VaCdhY": "New to Discord",
   "CQmziY": "Visitor (Non-Member)",
+  "EkokLy": "Required",
   "WnX4Jy": "Resend Email",
   "lm1UKi": "Resend Verification Email",
   "yBZMsb": "Reset",
@@ -33515,9 +33651,9 @@
   "7YZ/Sk": "Switch to back camera",
   "/R1SBw": "Switch to front camera",
   "BkuOOz": "Sync",
-  "GAlmIS": "Turning this on will overwrite the above appearance settings on all other clients, including desktop and browser.",
   "3340dX": "Sync across clients.",
   "p4IKEx": "Turning this on will overwrite text & image settings on all other clients, including desktop and browser.",
+  "CRtkeH": "Turning this on will override your selected theme on all clients, including desktop and browser.",
   "+KCMSk": "Sync friends to Discord",
   "NVwuHh": "Sync Now",
   "eW8Gy8": "Sync Permissions",
@@ -36821,8 +36957,127 @@
   ],
   "FMbL3t": "Clear failed",
   "2TbM/P": "Playing a game",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Listening"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Listening"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Listening"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Listening"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Listening to",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nby ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Playing",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Playing"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Playing"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Playing"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Playing"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Play on ",
     [

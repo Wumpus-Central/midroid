@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.AnimatableUnderlayViewManagerDelegate
 import com.facebook.react.viewmanagers.AnimatableUnderlayViewManagerInterface
 import com.facebook.react.views.view.ReactClippingViewManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "AnimatableUnderlayView")
 public class AnimatableUnderlayViewManager : ReactClippingViewManager<AnimatableUnderlay>, AnimatableUnderlayViewManagerInterface<AnimatableUnderlay> {
@@ -16,7 +16,7 @@ public class AnimatableUnderlayViewManager : ReactClippingViewManager<Animatable
       new AnimatableUnderlayViewManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): AnimatableUnderlay {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new AnimatableUnderlay(var1);
    }
 
@@ -30,7 +30,7 @@ public class AnimatableUnderlayViewManager : ReactClippingViewManager<Animatable
 
    @ReactProp(name = "animatedBackgroundColorRgba")
    public open fun setAnimatedBackgroundColorRgba(view: AnimatableUnderlay, backgroundColor: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setShapeBackgroundColor(ColorUtilsKt.rgbaToArgb(var2));
          var1.invalidate();
@@ -39,7 +39,7 @@ public class AnimatableUnderlayViewManager : ReactClippingViewManager<Animatable
 
    @ReactProp(name = "animatedBorderColorRgba")
    public open fun setAnimatedBorderColorRgba(view: AnimatableUnderlay, borderColor: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.getShapeBorderConfig$animatable_underlay_release().setBorderColor(ColorUtilsKt.rgbaToArgb(var2));
          var1.invalidate();
@@ -48,63 +48,63 @@ public class AnimatableUnderlayViewManager : ReactClippingViewManager<Animatable
 
    @ReactProp(name = "animatedBorderWidth")
    public open fun setAnimatedBorderWidth(view: AnimatableUnderlay, borderWidth: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.getShapeBorderConfig$animatable_underlay_release().setBorderWidth((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedBottomLeftRadius")
    public open fun setAnimatedBottomLeftRadius(view: AnimatableUnderlay, bottomLeftRadius: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.getShapeBorderConfig$animatable_underlay_release().setBorderBottomLeftRadius((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedBottomRightRadius")
    public open fun setAnimatedBottomRightRadius(view: AnimatableUnderlay, bottomRightRadius: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.getShapeBorderConfig$animatable_underlay_release().setBorderBottomRightRadius((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedHeight")
    public open fun setAnimatedHeight(view: AnimatableUnderlay, height: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setShapeHeight((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedTopLeftRadius")
    public open fun setAnimatedTopLeftRadius(view: AnimatableUnderlay, topLeftRadius: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.getShapeBorderConfig$animatable_underlay_release().setBorderTopLeftRadius((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedTopRightRadius")
    public open fun setAnimatedTopRightRadius(view: AnimatableUnderlay, topRightRadius: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.getShapeBorderConfig$animatable_underlay_release().setBorderTopRightRadius((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "animatedWidth")
    public open fun setAnimatedWidth(view: AnimatableUnderlay, width: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setShapeWidth((float)SizeUtilsKt.getDpToPx(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "clipDirectionX")
    public open fun setClipDirectionX(view: AnimatableUnderlay, value: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setClipDirectionX(AnimatableUnderlay.ClipDirectionX.Companion.parse(var2));
       var1.invalidate();
    }
 
    @ReactProp(name = "clipDirectionY")
    public open fun setClipDirectionY(view: AnimatableUnderlay, value: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setClipDirectionY(AnimatableUnderlay.ClipDirectionY.Companion.parse(var2));
       var1.invalidate();
    }

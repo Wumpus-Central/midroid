@@ -5,14 +5,14 @@ import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SafeAreaPackage : BaseReactPackage {
    public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-      q.h(var1, "name");
-      q.h(var2, "reactContext");
+      r.h(var1, "name");
+      r.h(var2, "reactContext");
       val var3: SafeAreaInsetsModule;
-      if (q.c(var1, "NativeSafeAreaInsetsModule")) {
+      if (r.c(var1, "NativeSafeAreaInsetsModule")) {
          var3 = new SafeAreaInsetsModule(var2);
       } else {
          var3 = null;

@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ParagraphContentNode(content: List<ContentNode>) : ContentNode {
    public final val content: List<ContentNode>
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
    }
@@ -19,7 +19,7 @@ public data class ParagraphContentNode(content: List<ContentNode>) : ContentNode
    }
 
    public fun copy(content: List<ContentNode> = var0.content): ParagraphContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new ParagraphContentNode(var1);
    }
 
@@ -29,7 +29,7 @@ public data class ParagraphContentNode(content: List<ContentNode>) : ContentNode
       } else if (var1 !is ParagraphContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as ParagraphContentNode).content);
+         return r.c(this.content, (var1 as ParagraphContentNode).content);
       }
    }
 

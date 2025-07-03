@@ -2,9 +2,9 @@ package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class SoundmojiContentNode(soundId: String,
@@ -35,8 +35,8 @@ public data class SoundmojiContentNode(soundId: String,
       var8: java.lang.String,
       var9: java.lang.String
    ) {
-      q.h(var1, "soundId");
-      q.h(var4, "messageId");
+      r.h(var1, "soundId");
+      r.h(var4, "messageId");
       super(null);
       this.soundId = var1;
       this.channelId = var2;
@@ -90,8 +90,8 @@ public data class SoundmojiContentNode(soundId: String,
       emojiId: String? = ...,
       emojiName: String? = ...
    ): SoundmojiContentNode {
-      q.h(var1, "soundId");
-      q.h(var4, "messageId");
+      r.h(var1, "soundId");
+      r.h(var4, "messageId");
       return new SoundmojiContentNode(var1, var2, var4, var5, var6, var7, var8, var9, null);
    }
 
@@ -102,30 +102,30 @@ public data class SoundmojiContentNode(soundId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.soundId, var1.soundId)) {
+         if (!r.c(this.soundId, var1.soundId)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.guildId, var1.guildId)) {
+         } else if (!r.c(this.guildId, var1.guildId)) {
             return false;
          } else if (this.jumboable != var1.jumboable) {
             return false;
-         } else if (!q.c(this.emojiId, var1.emojiId)) {
+         } else if (!r.c(this.emojiId, var1.emojiId)) {
             return false;
          } else {
-            return q.c(this.emojiName, var1.emojiName);
+            return r.c(this.emojiName, var1.emojiName);
          }
       }
    }
 
    public override fun hashCode(): Int {
       val var7: Int = this.soundId.hashCode();
-      val var6: Int = ChannelId.hashCode-impl(this.channelId);
-      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       var var4: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -153,33 +153,33 @@ public data class SoundmojiContentNode(soundId: String,
          var4 = this.emojiName.hashCode();
       }
 
-      return ((((((var7 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var7 * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.soundId;
-      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.content;
-      val var2: java.lang.String = this.guildId;
+      val var8: java.lang.String = this.soundId;
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var9: java.lang.String = this.content;
+      val var5: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var8: java.lang.String = this.emojiId;
+      val var7: java.lang.String = this.emojiId;
       val var6: java.lang.String = this.emojiName;
       val var4: StringBuilder = new StringBuilder();
       var4.append("SoundmojiContentNode(soundId=");
-      var4.append(var9);
+      var4.append(var8);
       var4.append(", channelId=");
-      var4.append(var7);
-      var4.append(", messageId=");
-      var4.append(var5);
-      var4.append(", content=");
       var4.append(var3);
-      var4.append(", guildId=");
+      var4.append(", messageId=");
       var4.append(var2);
+      var4.append(", content=");
+      var4.append(var9);
+      var4.append(", guildId=");
+      var4.append(var5);
       var4.append(", jumboable=");
       var4.append(var1);
       var4.append(", emojiId=");
-      var4.append(var8);
+      var4.append(var7);
       var4.append(", emojiName=");
       var4.append(var6);
       var4.append(")");

@@ -19941,12 +19941,21 @@
   ],
   "3XVNys": "Copiază link-ul de invitație",
   "VNe8Pz": "Editează link-ul de invitație.",
+  "Ckxb6u": "Cere să te alături",
   "2Gbof3": "Invitație expirată",
   "jfrMtr": "Plin",
+  "x1UXGR": "Jocul s-a încheiat. Vrei să începi unul nou?",
   "pkq6Vl": "Invitație la joc",
   "hC/Ze3": "Invită să se alăture",
   "/8czHx": [
     "Invitație de a asculta împreună pe ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Invită pentru a urmări ",
     [
       1,
       "name"
@@ -19959,7 +19968,127 @@
   "/ak8Mj": "Alătură-te de pe PlayStation",
   "HEY5dX": "Alătură-te prin Xbox",
   "84qx9v": "Ascultarea a luat sfârșit!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " a cerut să se alăture grupului tău de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " cere să se alăture grupului tău de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "B9kbnZ": "Vizionarea a luat sfârșit!",
+  "IA6uDQ": [
+    "Ceri să te alături unui grup de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Ceri să te alături grupului de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " al lui ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Ai cerut să te alături unui grup de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "JddpNz": [
+    "Ai cerut să te alături grupului de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " al lui ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Partajează acest link cu prietenii și aceștia se vor alătura automat serverului tău.",
   "tQc0l5": "Invită un prieten pe server-ul tău!",
   "TfuB9P": [
@@ -30579,6 +30708,7 @@
   "IKE48v": "Membru nou",
   "VaCdhY": "Nou pe Discord",
   "CQmziY": "Vizitator (Non-membru)",
+  "EkokLy": "Obligatoriu",
   "WnX4Jy": "Retrimite e-mail-ul",
   "lm1UKi": "Retrimite e-mail-ul de verificare",
   "yBZMsb": "Resetează",
@@ -33564,9 +33694,9 @@
   "7YZ/Sk": "Treci la camera din spate",
   "/R1SBw": "Treci la camera din față",
   "BkuOOz": "Sincronizează",
-  "GAlmIS": "Activarea acestei funcții va suprascrie setările de aspect de mai sus pe toți ceilalți clienți, inclusiv pe desktop și în browser.",
   "3340dX": "Sincronizează între clienți.",
   "p4IKEx": "Activarea acestei funcții va suprascrie setările de text și imagine pe toți ceilalți clienți, inclusiv desktop și browser.",
+  "CRtkeH": "Activarea acestei opțiuni îți va suprascrie tema selectată pe toți clienții, inclusiv pe desktop și în browser.",
   "+KCMSk": "Sincronizează prietenii cu Discord",
   "NVwuHh": "Sincronizează acum",
   "eW8Gy8": "Sincronizează permisiunile",
@@ -36884,8 +37014,127 @@
   ],
   "FMbL3t": "Eliminarea nu a reușit",
   "2TbM/P": "Joacă un joc",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " ascultă"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " ascultă"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " ascultă"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " ascultă"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Ascultă",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nde ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Joacă",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " joacă"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " joacă"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " joacă"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " joacă"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Pornește pe ",
     [

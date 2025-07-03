@@ -1,7 +1,7 @@
 package com.discord.misc.utilities.queue
 
 import java.util.LinkedHashSet
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class WorkerQueue<T>(popFromEnd: Boolean = true) {
    private final val popFromEnd: Boolean
@@ -18,14 +18,14 @@ public class WorkerQueue<T>(popFromEnd: Boolean = true) {
    }
 
    public fun updateWorker(worker: Any, active: Boolean, onWorkerActive: (Any) -> Unit): Boolean {
-      q.h(var3, "onWorkerActive");
+      r.h(var3, "onWorkerActive");
       if (var2) {
-         if (this.currWorker != null && !q.c(this.currWorker, var1)) {
+         if (this.currWorker != null && !r.c(this.currWorker, var1)) {
             this.nextWorkers.add((T)var1);
          } else {
             this.currWorker = (T)var1;
          }
-      } else if (q.c(this.currWorker, var1)) {
+      } else if (r.c(this.currWorker, var1)) {
          val var4: Any;
          if (this.popFromEnd) {
             var4 = i.t0(this.nextWorkers);
@@ -42,6 +42,6 @@ public class WorkerQueue<T>(popFromEnd: Boolean = true) {
          this.nextWorkers.remove(var1);
       }
 
-      return q.c(this.currWorker, var1);
+      return r.c(this.currWorker, var1);
    }
 }

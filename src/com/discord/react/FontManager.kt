@@ -2,7 +2,7 @@ package com.discord.react
 
 import android.content.Context
 import android.content.SharedPreferences
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.properties.a
 
 public object FontManager {
@@ -42,7 +42,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: aload 1
       // 0a: invokespecial com/discord/react/FontManager.getCache (Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -79,7 +79,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: aload 1
       // 0a: invokespecial com/discord/react/FontManager.getCache (Landroid/content/Context;)Landroid/content/SharedPreferences;
@@ -92,7 +92,7 @@ public object FontManager {
       // 1c: astore 3
       // 1d: aload 3
       // 1e: ldc "getCache(...)"
-      // 20: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 20: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 23: aload 3
       // 24: invokeinterface android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor; 1
       // 29: astore 3
@@ -141,7 +141,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 2
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: iload 1
       // 0a: invokestatic com/discord/misc/utilities/size/SizeUtilsKt.getDpToPx (I)I
@@ -177,7 +177,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: invokespecial com/discord/react/FontManager.getInitialFontSize ()F
       // 0c: fstore 3
@@ -216,7 +216,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 2
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: iload 1
       // 09: i2f
       // 0a: fstore 3
@@ -258,7 +258,7 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 2
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: iload 1
       // 0a: invokestatic com/discord/misc/utilities/size/SizeUtilsKt.getSpToPx (I)I
@@ -277,7 +277,7 @@ public object FontManager {
    }
 
    public fun init(context: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this.setInitialFontSize(var1.getResources().getConfiguration().fontScale);
    }
 
@@ -303,14 +303,14 @@ public object FontManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "context"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: aload 1
       // 0a: invokespecial com/discord/react/FontManager.getCache (Landroid/content/Context;)Landroid/content/SharedPreferences;
       // 0d: astore 1
       // 0e: aload 1
       // 0f: ldc "getCache(...)"
-      // 11: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 11: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 14: aload 1
       // 15: invokeinterface android/content/SharedPreferences.edit ()Landroid/content/SharedPreferences$Editor; 1
       // 1a: astore 1

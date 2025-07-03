@@ -1,27 +1,27 @@
 package com.discord.notifications.api
 
 import kotlin.jvm.internal.c
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import ub.a
+import tb.a
 
 public object CanReplySerializer : KSerializer {
    public open val descriptor: SerialDescriptor
       public open get() {
-         return a.A(c.a).getDescriptor();
+         return a.w(c.a).getDescriptor();
       }
 
 
    public open fun deserialize(decoder: Decoder): Boolean {
-      q.h(var1, "decoder");
-      return q.c(var1.n(), "can_reply");
+      r.h(var1, "decoder");
+      return r.c(var1.n(), "can_reply");
    }
 
    public open fun serialize(encoder: Encoder, value: Boolean) {
-      q.h(var1, "encoder");
+      r.h(var1, "encoder");
       throw new UnsupportedOperationException();
    }
 }

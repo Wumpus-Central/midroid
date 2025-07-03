@@ -1,12 +1,12 @@
 package com.discord.recycler_view.utils
 
 import androidx.recyclerview.widget.LinearLayoutManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal fun LinearLayoutManager.isPositionVisible(position: Int, prioritizeCompletelyVisible: Boolean): Boolean? {
    var var3: Int;
    label48: {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       if (var2) {
          var var4: Int = var0.findFirstCompletelyVisibleItemPosition();
          if (var4.intValue() == -1) {

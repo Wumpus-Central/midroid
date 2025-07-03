@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class InlineCodeContentNode(content: String) : ContentNode {
    public final val content: String
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
    }
@@ -19,7 +19,7 @@ public data class InlineCodeContentNode(content: String) : ContentNode {
    }
 
    public fun copy(content: String = var0.content): InlineCodeContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new InlineCodeContentNode(var1);
    }
 
@@ -29,7 +29,7 @@ public data class InlineCodeContentNode(content: String) : ContentNode {
       } else if (var1 !is InlineCodeContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as InlineCodeContentNode).content);
+         return r.c(this.content, (var1 as InlineCodeContentNode).content);
       }
    }
 

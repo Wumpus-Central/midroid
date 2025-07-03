@@ -1,8 +1,8 @@
 package com.discord.push_notification_monitor
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PushNotificationLog(pushNotifications: List<PushNotificationMeta> = i.k()) {
@@ -13,7 +13,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    init {
-      q.h(var1, "pushNotifications");
+      r.h(var1, "pushNotifications");
       super();
       this.pushNotifications = var1;
    }
@@ -23,7 +23,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
    }
 
    public fun copy(pushNotifications: List<PushNotificationMeta> = var0.pushNotifications): PushNotificationLog {
-      q.h(var1, "pushNotifications");
+      r.h(var1, "pushNotifications");
       return new PushNotificationLog(var1);
    }
 
@@ -33,7 +33,7 @@ public data class PushNotificationLog(pushNotifications: List<PushNotificationMe
       } else if (var1 !is PushNotificationLog) {
          return false;
       } else {
-         return q.c(this.pushNotifications, (var1 as PushNotificationLog).pushNotifications);
+         return r.c(this.pushNotifications, (var1 as PushNotificationLog).pushNotifications);
       }
    }
 

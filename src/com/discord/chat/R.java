@@ -335,13 +335,7 @@ public final class R {
       public static int primary_action;
       public static int primary_cta;
       public static int progress;
-      public static int progress_bar;
-      public static int progress_bg;
-      public static int progress_cancel;
-      public static int progress_file_image;
       public static int progress_spinner;
-      public static int progress_subtext;
-      public static int progress_text;
       public static int prompt_text;
       public static int provider;
       public static int question_text;
@@ -561,7 +555,6 @@ public final class R {
       public static int thread_embed_view;
       public static int thread_starter_message_header_view;
       public static int timestamp_view;
-      public static int upload_progress_view;
       public static int video_attachment_view;
       public static int voice_invite_embed;
       public static int welcome_sticker_view;

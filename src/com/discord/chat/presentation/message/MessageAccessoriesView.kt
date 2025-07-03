@@ -54,14 +54,14 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    fun MessageAccessoriesView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -70,10 +70,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var4;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
-      this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = A9.j.b(new V());
+      this.accessoriesAdapter = var3;
+      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      this.transitionResilientLinearLayoutManager = var4;
+      this.forwardBarPaint$delegate = z9.j.a(new V());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -86,8 +86,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var3);
-      this.setAdapter(var4);
+      this.setLayoutManager(var4);
+      this.setAdapter(var3);
    }
 
    @JvmStatic
@@ -98,7 +98,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : gb.k.J(androidx.core.view.f0.a(this))) {
+      for (Pair var3 : fb.k.J(androidx.core.view.f0.a(this))) {
          val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
@@ -134,7 +134,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    public override fun onDraw(c: Canvas) {
-      kotlin.jvm.internal.q.h(var1, "c");
+      kotlin.jvm.internal.r.h(var1, "c");
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
@@ -164,10 +164,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       renderContentOnly: Boolean,
       drawForward: Boolean
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageId");
-      kotlin.jvm.internal.q.h(var5, "items");
-      kotlin.jvm.internal.q.h(var6, "eventHandler");
-      kotlin.jvm.internal.q.h(var8, "messageContext");
+      kotlin.jvm.internal.r.h(var1, "messageId");
+      kotlin.jvm.internal.r.h(var5, "items");
+      kotlin.jvm.internal.r.h(var6, "eventHandler");
+      kotlin.jvm.internal.r.h(var8, "messageContext");
       this.setItemAnimator(null);
       if (this.showingForwardBar != var10) {
          this.showingForwardBar = var10;
@@ -175,7 +175,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
       val var11: MessageAccessoriesView.Companion = Companion;
       val var12: Resources = this.getResources();
-      kotlin.jvm.internal.q.g(var12, "getResources(...)");
+      kotlin.jvm.internal.r.g(var12, "getResources(...)");
       this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
@@ -221,8 +221,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       public final val FORWARD_BAR_SPACING: Int
 
       public fun getAccessoryLeftMargin(resources: Resources, messageContext: MessageContext, renderContentOnly: Boolean): Int {
-         kotlin.jvm.internal.q.h(var1, "resources");
-         kotlin.jvm.internal.q.h(var2, "messageContext");
+         kotlin.jvm.internal.r.h(var1, "resources");
+         kotlin.jvm.internal.r.h(var2, "messageContext");
          if (var2.getContextType() === MessageContextType.SEARCH) {
             return 0;
          } else {

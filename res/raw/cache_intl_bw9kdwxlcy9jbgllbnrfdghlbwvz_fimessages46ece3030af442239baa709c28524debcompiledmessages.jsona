@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Mukautetut teemat [beetaominaisuus] eivät ole käytettävissä mobiilisovelluksessa."
+  "v15Ipq": [
+    "Kun synkronointi on käytössä, työpöytäversiossa luodut mukautetut teemat [beetaominaisuus] voivat vaikuttaa mobiiliversiosi teemaan. ",
+    [
+      8,
+      "$link",
+      [
+        "Lue lisää täältä."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

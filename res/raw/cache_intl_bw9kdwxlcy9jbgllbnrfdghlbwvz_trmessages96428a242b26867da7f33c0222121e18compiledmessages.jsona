@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Özel temalar [Beta], mobilde mevcut değil."
+  "v15Ipq": [
+    "Senkronizasyon açıkken masaüstünde oluşturulan özel temalar [Beta] mobil temanı etkileyebilir. ",
+    [
+      8,
+      "$link",
+      [
+        "Buradan daha fazla bilgi edin."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

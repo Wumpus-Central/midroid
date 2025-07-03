@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f(with = SectionAccessory.Serializer::class)
 public sealed interface SectionAccessory<T extends Component> {
@@ -13,7 +13,7 @@ public sealed interface SectionAccessory<T extends Component> {
 
       @JvmStatic
       fun `constructor-impl`(var0: ButtonComponent): ButtonComponent {
-         q.h(var0, "component");
+         r.h(var0, "component");
          return var0;
       }
 
@@ -22,13 +22,13 @@ public sealed interface SectionAccessory<T extends Component> {
          if (var1 !is SectionAccessory.Button) {
             return false;
          } else {
-            return q.c(var0, (var1 as SectionAccessory.Button).unbox-impl());
+            return r.c(var0, (var1 as SectionAccessory.Button).unbox-impl());
          }
       }
 
       @JvmStatic
       fun `equals-impl0`(var0: ButtonComponent, var1: ButtonComponent): Boolean {
-         return q.c(var0, var1);
+         return r.c(var0, var1);
       }
 
       @JvmStatic
@@ -60,7 +60,7 @@ public sealed interface SectionAccessory<T extends Component> {
 
    public companion object {
       public fun <T> serializer(typeSerial0: KSerializer<T>): KSerializer<SectionAccessory<T>> {
-         q.h(var1, "typeSerial0");
+         r.h(var1, "typeSerial0");
          return SectionAccessory.Serializer.INSTANCE;
       }
    }
@@ -69,12 +69,12 @@ public sealed interface SectionAccessory<T extends Component> {
       public open val unionName: String = "SectionAccessory"
 
       public open fun fromValue(value: SectionAccessory<*>): Component? {
-         q.h(var1, "value");
+         r.h(var1, "value");
          return var1.getComponent();
       }
 
       public open fun toValue(component: Component): SectionAccessory<*> {
-         q.h(var1, "component");
+         r.h(var1, "component");
          val var2: Any;
          if (var1 is ButtonComponent) {
             var2 = SectionAccessory.Button.box-impl(SectionAccessory.Button.constructor-impl(var1 as ButtonComponent));
@@ -93,7 +93,7 @@ public sealed interface SectionAccessory<T extends Component> {
 
       @JvmStatic
       fun `constructor-impl`(var0: ThumbnailDisplayComponent): ThumbnailDisplayComponent {
-         q.h(var0, "component");
+         r.h(var0, "component");
          return var0;
       }
 
@@ -102,13 +102,13 @@ public sealed interface SectionAccessory<T extends Component> {
          if (var1 !is SectionAccessory.Thumbnail) {
             return false;
          } else {
-            return q.c(var0, (var1 as SectionAccessory.Thumbnail).unbox-impl());
+            return r.c(var0, (var1 as SectionAccessory.Thumbnail).unbox-impl());
          }
       }
 
       @JvmStatic
       fun `equals-impl0`(var0: ThumbnailDisplayComponent, var1: ThumbnailDisplayComponent): Boolean {
-         return q.c(var0, var1);
+         return r.c(var0, var1);
       }
 
       @JvmStatic

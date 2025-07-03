@@ -1,6 +1,5 @@
 package com.discord.qr.scanner
 
-import A9.s
 import com.discord.qr.scanner.events.OnQRCodeFoundEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.module.annotations.ReactModule
@@ -8,17 +7,18 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onQRCodeFound", G.b(OnQRCodeFoundEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onQRCodeFound", H.b(OnQRCodeFoundEvent.class)))
    private final val delegate: DCDQRScannerManagerDelegate<QRScanner, QRScannerViewManager>
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$0`(var0: QRScannerViewManager, var1: QRScanner, var2: java.lang.String): Unit {
-      q.h(var2, "code");
+      r.h(var2, "code");
       var0.reactEvents.emitEvent(var1, new OnQRCodeFoundEvent("SUCCEEDED", var2));
       return Unit.a;
    }
@@ -30,7 +30,7 @@ public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerMan
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): QRScanner {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       val var2: QRScanner = new QRScanner(var1, null, 0, 6, null);
       var2.setOnCodeFound(new d(this, var2));
       var2.setOnCodeNotFound(new e(this, var2));

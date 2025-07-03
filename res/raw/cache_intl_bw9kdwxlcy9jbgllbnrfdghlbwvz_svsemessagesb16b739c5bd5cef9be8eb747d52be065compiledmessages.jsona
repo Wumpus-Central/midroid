@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Anpassade teman [beta] är inte tillgängligt på mobilen."
+  "v15Ipq": [
+    "När synkronisering är aktiverad kan anpassade teman som [Beta] skapade på datorn påverka ditt mobiltema. ",
+    [
+      8,
+      "$link",
+      [
+        "Läs mer här."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

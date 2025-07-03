@@ -1,9 +1,9 @@
 package com.discord.client_info
 
-import A9.j
 import android.content.Context
 import java.util.Locale
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.j
 
 public object ClientInfo {
    public final lateinit var versionName: String
@@ -29,12 +29,12 @@ public object ClientInfo {
          var var1: java.lang.String = null;
          var var2: java.lang.String = flavor;
          if (flavor == null) {
-            q.y("flavor");
+            r.y("flavor");
             var2 = null;
          }
 
          if (buildType == null) {
-            q.y("buildType");
+            r.y("buildType");
          } else {
             var1 = buildType;
          }
@@ -43,12 +43,12 @@ public object ClientInfo {
          if (var1.length() > 0) {
             val var9: StringBuilder = new StringBuilder();
             var var4: java.lang.String = java.lang.String.valueOf(var1.charAt(0));
-            q.f(var4, "null cannot be cast to non-null type java.lang.String");
+            r.f(var4, "null cannot be cast to non-null type java.lang.String");
             var4 = var4.toUpperCase(Locale.ROOT);
-            q.g(var4, "toUpperCase(...)");
+            r.g(var4, "toUpperCase(...)");
             var9.append((Object)var4);
             var1 = var1.substring(1);
-            q.g(var1, "substring(...)");
+            r.g(var1, "substring(...)");
             var9.append(var1);
             var8 = var9.toString();
          }
@@ -63,17 +63,17 @@ public object ClientInfo {
    public const val SENTRY_DSN: String = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_STAFF_DSN: String = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375"
    public const val SENTRY_ALPHA_BETA_DSN: String = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375"
-   public const val SENTRY_RELEASE: String = "discord_android@288.3.0-2+288203"
+   public const val SENTRY_RELEASE: String = "discord_android@288.4.0-2+288204"
 
    public final val isDebugBuild: Boolean
       public final get() {
          var var1: java.lang.String = buildType;
          if (buildType == null) {
-            q.y("buildType");
+            r.y("buildType");
             var1 = null;
          }
 
-         return q.c(var1, "debug");
+         return r.c(var1, "debug");
       }
 
 
@@ -81,15 +81,15 @@ public object ClientInfo {
       public final get() {
          var var1: java.lang.String = flavor;
          if (flavor == null) {
-            q.y("flavor");
+            r.y("flavor");
             var1 = null;
          }
 
-         return q.c(var1, "developer");
+         return r.c(var1, "developer");
       }
 
 
-   public final val isProdBuild: Boolean by j.b(new a())
+   public final val isProdBuild: Boolean by j.a(new a())
       public final get() {
          return isProdBuild$delegate.getValue() as java.lang.Boolean;
       }
@@ -98,7 +98,7 @@ public object ClientInfo {
    public final val isPreProdRelease: Boolean
       public final get() {
          val var1: Boolean;
-         if (!q.c(this.getReleaseChannel(), "canaryRelease") && !q.c(this.getReleaseChannel(), "betaRelease")) {
+         if (!r.c(this.getReleaseChannel(), "canaryRelease") && !r.c(this.getReleaseChannel(), "betaRelease")) {
             var1 = false;
          } else {
             var1 = true;
@@ -108,7 +108,7 @@ public object ClientInfo {
       }
 
 
-   public const val PROGUARD_UUID: String = "85ef3bc7-5a14-4fbf-8384-901946a86d1c"
+   public const val PROGUARD_UUID: String = "c8b682e4-2d12-4e8c-8096-ea131c0384cb"
 
    @JvmStatic
    fun `isProdBuild_delegate$lambda$1`(): Boolean {
@@ -117,7 +117,7 @@ public object ClientInfo {
       if (!var2) {
          var var3: java.lang.String = flavor;
          if (flavor == null) {
-            q.y("flavor");
+            r.y("flavor");
             var3 = null;
          }
 
@@ -125,7 +125,7 @@ public object ClientInfo {
          if (!h.N(var3, "beta", false, 2, null)) {
             var3 = flavor;
             if (flavor == null) {
-               q.y("flavor");
+               r.y("flavor");
                var3 = null;
             }
 
@@ -140,12 +140,12 @@ public object ClientInfo {
    }
 
    public fun init(context: Context, versionName: String, versionCode: Int, flavor: String, buildType: String, otaManifest: String, otaVersion: String) {
-      q.h(var1, "context");
-      q.h(var2, "versionName");
-      q.h(var4, "flavor");
-      q.h(var5, "buildType");
-      q.h(var6, "otaManifest");
-      q.h(var7, "otaVersion");
+      r.h(var1, "context");
+      r.h(var2, "versionName");
+      r.h(var4, "flavor");
+      r.h(var5, "buildType");
+      r.h(var6, "otaManifest");
+      r.h(var7, "otaVersion");
       this.setVersionName(var2);
       this.setVersionCode(java.lang.String.valueOf(var3));
       this.setOtaManifestETag(var6);

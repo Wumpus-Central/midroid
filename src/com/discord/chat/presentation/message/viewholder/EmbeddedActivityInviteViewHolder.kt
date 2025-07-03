@@ -20,8 +20,8 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    public final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.q.h(var1, "embeddedActivityInviteView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
+      kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteView");
+      kotlin.jvm.internal.r.h(var2, "eventHandler");
       super(var1, null);
       this.embeddedActivityInviteView = var1;
       this.eventHandler = var2;
@@ -38,14 +38,14 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
    }
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
-      kotlin.jvm.internal.q.h(var1, "embeddedActivityInviteAccessory");
-      val var10: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var11: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var10.getSplashUrl(), var1.getConstrainedWidth());
-      var11.setTitleText(var10.getTitleText());
-      var11.setHeaderText(var10.getHeaderText());
-      var11.setSubtitleText-Tu_1QLM(
-         var10.getStructurableSubtitleText(),
+      kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
+      val var13: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var7: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var13.getSplashUrl(), var1.getConstrainedWidth());
+      var7.setTitleText(var13.getTitleText());
+      var7.setHeaderText(var13.getHeaderText());
+      var7.setSubtitleText-Tu_1QLM(
+         var13.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2(this.eventHandler) {
             {
@@ -60,8 +60,8 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
             }
          },
@@ -71,7 +71,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
             }
          },
@@ -81,7 +81,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          },
@@ -98,7 +98,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLongPressChannel(var1, var2, var3, var4);
             }
          },
@@ -108,7 +108,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapAttachmentLink(var1);
             }
          },
@@ -118,8 +118,8 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onLongPressAttachmentLink(var1, var2);
             }
          },
@@ -136,7 +136,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
             }
          },
@@ -146,7 +146,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(CommandMentionContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapCommand(var1);
             }
          },
@@ -163,7 +163,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(CommandMentionContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
@@ -174,7 +174,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapTimestamp(var1);
             }
          },
@@ -186,7 +186,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(InlineCodeContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapInlineCode(var1);
             }
          },
@@ -196,7 +196,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(EmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapEmoji(var1);
             }
          },
@@ -206,7 +206,7 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
          },
@@ -216,14 +216,14 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
 
             public final void invoke(SoundmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
             }
          }
       );
-      var11.setNoParticipantsText(var10.getNoParticipantsText());
-      var11.setLaunchButton(var10.getAcceptLabelText(), var10.getAcceptLabelBackgroundColor(), var10.getCtaEnabled());
-      var11.setAvatarUris(var10.getParticipantAvatarUris());
-      var11.setOnLaunchButtonClickListener(new j(this, var1));
+      var7.setNoParticipantsText(var13.getNoParticipantsText());
+      var7.setLaunchButton(var13.getAcceptLabelText(), var13.getAcceptLabelBackgroundColor(), var13.getCtaEnabled());
+      var7.setAvatarUris(var13.getParticipantAvatarUris());
+      var7.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

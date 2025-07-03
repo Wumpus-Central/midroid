@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapGameIconData(gameApplicationId: String, timestamp: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    public final val timestamp: String
 
    init {
-      q.h(var1, "gameApplicationId");
-      q.h(var2, "timestamp");
+      r.h(var1, "gameApplicationId");
+      r.h(var2, "timestamp");
       super();
       this.gameApplicationId = var1;
       this.timestamp = var2;
@@ -28,8 +28,8 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    }
 
    public fun copy(gameApplicationId: String = var0.gameApplicationId, timestamp: String = var0.timestamp): TapGameIconData {
-      q.h(var1, "gameApplicationId");
-      q.h(var2, "timestamp");
+      r.h(var1, "gameApplicationId");
+      r.h(var2, "timestamp");
       return new TapGameIconData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.gameApplicationId, var1.gameApplicationId)) {
+         if (!r.c(this.gameApplicationId, var1.gameApplicationId)) {
             return false;
          } else {
-            return q.c(this.timestamp, var1.timestamp);
+            return r.c(this.timestamp, var1.timestamp);
          }
       }
    }
@@ -57,13 +57,13 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.gameApplicationId;
-      val var1: java.lang.String = this.timestamp;
+      val var1: java.lang.String = this.gameApplicationId;
+      val var3: java.lang.String = this.timestamp;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapGameIconData(gameApplicationId=");
-      var2.append(var3);
-      var2.append(", timestamp=");
       var2.append(var1);
+      var2.append(", timestamp=");
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

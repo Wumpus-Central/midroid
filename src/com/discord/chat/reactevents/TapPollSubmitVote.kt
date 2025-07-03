@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapPollSubmitVote(channelId: String, messageId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    public final val messageId: String
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -28,8 +28,8 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId): TapPollSubmitVote {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
       return new TapPollSubmitVote(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.messageId, var1.messageId);
+            return r.c(this.messageId, var1.messageId);
          }
       }
    }
@@ -57,15 +57,15 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var3: java.lang.String = this.messageId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapPollSubmitVote(channelId=");
-      var1.append(var2);
-      var1.append(", messageId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapPollSubmitVote(channelId=");
+      var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

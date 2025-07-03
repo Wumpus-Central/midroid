@@ -7,10 +7,10 @@ import com.discord.chat.bridge.messageframe.MessageFrameType
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.bridge.row.MessageRow
 import com.discord.chat.bridge.truncation.Truncation
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun MessageRow.getMessageContext(): MessageContext {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var9: MessageFrame = var0.getMessageFrame();
    val var18: MessageFrameType;
    if (var9 != null) {
@@ -28,7 +28,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
 
    val var19: java.lang.Boolean = var0.getCanAddNewReactions();
    val var13: java.lang.Boolean = java.lang.Boolean.TRUE;
-   val var8: Boolean = q.c(var19, java.lang.Boolean.TRUE);
+   val var8: Boolean = r.c(var19, java.lang.Boolean.TRUE);
    var var10: java.lang.String = var0.getAddReactionLabel();
    var var20: java.lang.String = var10;
    if (var10 == null) {
@@ -47,24 +47,24 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var11 = "";
    }
 
-   val var16: ReactionsTheme = var0.getReactionsTheme();
+   val var15: ReactionsTheme = var0.getReactionsTheme();
    val var2: Boolean;
-   if (var0.getMessage() is Message && q.c((var0.getMessage() as Message).getUsingGradientTheme(), var13)) {
+   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUsingGradientTheme(), var13)) {
       var2 = true;
    } else {
       var2 = false;
    }
 
-   val var15: Truncation = var0.getTruncation();
+   val var16: Truncation = var0.getTruncation();
    val var3: Boolean;
-   if (var0.getMessage() is Message && q.c((var0.getMessage() as Message).getUseAttachmentGridLayout(), var13)) {
+   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAttachmentGridLayout(), var13)) {
       var3 = true;
    } else {
       var3 = false;
    }
 
    val var4: Boolean;
-   if (var0.getMessage() is Message && q.c((var0.getMessage() as Message).getUseAttachmentUploadPreview(), var13)) {
+   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAttachmentUploadPreview(), var13)) {
       var4 = true;
    } else {
       var4 = false;
@@ -85,7 +85,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
    }
 
    val var7: Boolean;
-   if (var0.getMessage() is Message && q.c((var0.getMessage() as Message).getUseAddBurstReaction(), var13)) {
+   if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAddBurstReaction(), var13)) {
       var7 = true;
    } else {
       var7 = false;
@@ -112,5 +112,5 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var17 = "";
    }
 
-   return new MessageContext(var1, var8, var20, var10, var11, var16, var2, var15, var3, var4, var5, var6, var7, null, var23, var25, var14, var17, 8192, null);
+   return new MessageContext(var1, var8, var20, var10, var11, var15, var2, var16, var3, var4, var5, var6, var7, null, var23, var25, var14, var17, 8192, null);
 }

@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "[Beta] verzija prilagođenih verzija nije dostupna na mobilnim uređajima."
+  "v15Ipq": [
+    "Kada je sinkronizacija uključena, prilagođene teme [Beta] koje napraviš na računalu mogu utjecati na tvoju mobilnu temu. ",
+    [
+      8,
+      "$link",
+      [
+        "Doznaj više ovdje."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

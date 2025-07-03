@@ -1,6 +1,6 @@
 package com.discord.notifications.api
 
-import A9.s
+import A9.q
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -8,11 +8,12 @@ import com.discord.snowflake.SnowflakeUtils
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
-   q.h(var0, "<this>");
-   q.h(var1, "notification");
+   r.h(var0, "<this>");
+   r.h(var1, "notification");
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
    if (var9 is java.util.Map) {
       var9 = var9;
@@ -32,22 +33,22 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var20 : var3.entrySet()) {
-            var var24: Any = var20.getKey();
-            val var21: Any = var20.getValue();
-            q.f(var24, "null cannot be cast to non-null type kotlin.String");
-            var24 = var24 as java.lang.String;
-            q.f(var21, "null cannot be cast to non-null type kotlin.String");
-            var12.add(s.a(var24, var21 as java.lang.String));
+         for (Entry var24 : var3.entrySet()) {
+            var var20: Any = var24.getKey();
+            val var25: Any = var24.getValue();
+            r.f(var20, "null cannot be cast to non-null type kotlin.String");
+            var20 = var20 as java.lang.String;
+            r.f(var25, "null cannot be cast to non-null type kotlin.String");
+            var12.add(s.a(var20, var25 as java.lang.String));
          }
 
-         var9 = B9.q.t(var12);
+         var9 = q.t(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = B9.q.h();
+      var9 = q.h();
    }
 
    var var19: ChannelId;

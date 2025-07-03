@@ -13,7 +13,7 @@ public sealed class BillingManagerException protected constructor(reason: String
 
    public class BillingException(message: String) : BillingManagerException {
       init {
-         kotlin.jvm.internal.q.h(var1, "message");
+         kotlin.jvm.internal.r.h(var1, "message");
          super(var1, "5000", null);
       }
    }

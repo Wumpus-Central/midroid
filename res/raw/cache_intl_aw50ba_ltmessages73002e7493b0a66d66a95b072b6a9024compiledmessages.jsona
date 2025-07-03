@@ -20604,12 +20604,21 @@
   ],
   "3XVNys": "Kopijuoti pakvietimo nuorodą",
   "VNe8Pz": "Redaguoti pakvietimo nuorodą.",
+  "Ckxb6u": "Prašyti prisijungimo",
   "2Gbof3": "Pakvietimo Laikas Baigėsi",
   "jfrMtr": "Pilna",
+  "x1UXGR": "Žaidimas baigėsi. Pradėti naują?",
   "pkq6Vl": "Kvietimas žaisti",
   "hC/Ze3": "Kviečiame prisijungti prie",
   "/8czHx": [
     "Pakviesk, kad galėtumėte klausytis kartu ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Pakviesti žiūrėti ",
     [
       1,
       "name"
@@ -20622,7 +20631,133 @@
   "/ak8Mj": "Prisijungti per PlayStation",
   "HEY5dX": "Prisijungti per Xbox",
   "84qx9v": "Klausymosi vakarėlis baigtas!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " paprašė prisijungti prie tavo ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " prašo prisijungti prie tavo ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
   "B9kbnZ": "Žiūrėjimo vakarėlis baigtas!",
+  "IA6uDQ": [
+    "Prašai prisijungti prie ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
+  "gYVkSU": [
+    "Prašai prisijungti prie ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
+  "2N1kNT": [
+    "Prašei prisijungti prie ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
+  "JddpNz": [
+    "Prašei prisijungti prie ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " vakarėlio"
+  ],
   "DXgdcH": "Pasidalyk šia nuoroda su draugais ir jie automatiškai prisijungs prie serverio.",
   "tQc0l5": "Pakviesk draugą į savo serverį!",
   "TfuB9P": [
@@ -31650,6 +31785,7 @@
   "IKE48v": "Naujas narys",
   "VaCdhY": "Pirmą kartą Discord",
   "CQmziY": "Lankytojas (ne narys)",
+  "EkokLy": "Būtina nurodyti",
   "WnX4Jy": "Dar kartą siųsti el. laišką",
   "lm1UKi": "Persiųsti patvirtinimo el. laišką",
   "yBZMsb": "Atstatyti",
@@ -34695,9 +34831,9 @@
   "7YZ/Sk": "Perjungti į galinę kamerą",
   "/R1SBw": "Perjungti į priekinę kamerą",
   "BkuOOz": "Sinchronizuoti",
-  "GAlmIS": "Įjungus bus perrašyti ankstesni išvaizdos nustatymai visuose klientuose įskaitant darbalaukyje ir naršyklėje.",
   "3340dX": "Sinchronizuok pas visus klientus.",
   "p4IKEx": "Įjungus bus perrašytas tekstas ir paveikslėlio nustatymai visuose klientuose įskaitant darbalaukyje ir naršyklėje.",
+  "CRtkeH": "Įjungus pasirinkta tema bus pakeista visuose klientuose, įskaitant kompiuterio ir naršyklės versijas.",
   "+KCMSk": "Sinchronizuoti draugus su Discord",
   "NVwuHh": "Sinchronizuoti Dabar",
   "eW8Gy8": "Sinchronizuoti Leidimus",
@@ -38044,8 +38180,128 @@
   ],
   "FMbL3t": "Nepavyko pašalinti",
   "2TbM/P": "Žaidžia žaidimą",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " klausosi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " klausosi"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " klausosi"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " klausosi"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Klausosi",
+  "JCvHt7": [
+    "Daina: ",
+    [
+      1,
+      "track"
+    ],
+    ",\natliekama ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Žaidžia",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " žaidžia"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " žaidžia"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " žaidžia"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " žaidžia"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Klausytis per ",
     [

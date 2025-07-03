@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.discord.logging.Log
 import com.msc.sa.aidl.ISACallback
 import com.msc.sa.aidl.ISACallback.Stub
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SamsungConnectActivity : AppCompatActivity {
    private final lateinit var samsungAccountServiceCallback: ISACallback
@@ -44,7 +44,7 @@ public class SamsungConnectActivity : AppCompatActivity {
             var var37: ISACallback = var40;
             if (var40 == null) {
                try {
-                  q.y("samsungAccountServiceCallback");
+                  r.y("samsungAccountServiceCallback");
                } catch (var10: java.lang.Throwable) {
                   Log.INSTANCE.e("Samsung", "Unable to connect to Samsung", var10);
                   SamsungConnectActivity.access$finishWithResult(this.this$0, null, null);
@@ -55,7 +55,7 @@ public class SamsungConnectActivity : AppCompatActivity {
             }
 
             try {
-               var38 = var5.P("97t47j218f", "dummy", "com.discord", var37);
+               var38 = var5.J("97t47j218f", "dummy", "com.discord", var37);
                val var41: StringBuilder = new StringBuilder();
                var41.append("Samsung Account service connection established: ");
                var41.append(var38);
@@ -79,7 +79,7 @@ public class SamsungConnectActivity : AppCompatActivity {
                try {
                   val var42: Bundle = new Bundle();
                   var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.b0(1221, var38, var42);
+                  val var3: Boolean = var5.X(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
@@ -102,7 +102,7 @@ public class SamsungConnectActivity : AppCompatActivity {
    @JvmStatic
    fun {
       val var0: Intent = new Intent("com.msc.action.samsungaccount.REQUEST_SERVICE").setPackage("com.osp.app.signin");
-      q.g(var0, "setPackage(...)");
+      r.g(var0, "setPackage(...)");
       serviceIntent = var0;
    }
 
@@ -169,7 +169,7 @@ public class SamsungConnectActivity : AppCompatActivity {
                var10.append(var11);
                var9.append(var10.toString());
                val var12: java.lang.String = var9.toString();
-               q.g(var12, "toString(...)");
+               r.g(var12, "toString(...)");
                Log.w$default(var8, "Samsung", var12, null, 4, null);
             }
 
@@ -233,14 +233,14 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var1: Log = Log.INSTANCE;
+      val var2: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var2: Intent = serviceIntent;
+      val var1: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var2, this.serviceConnection, 1)) {
-            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var1, this.serviceConnection, 1)) {
+            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }
@@ -272,9 +272,9 @@ public class SamsungConnectActivity : AppCompatActivity {
       private final val serviceIntent: Intent
 
       public fun getIntent(context: Context, attemptCount: Int = 0): Intent {
-         q.h(var1, "context");
+         r.h(var1, "context");
          val var3: Intent = new Intent(var1, SamsungConnectActivity.class).putExtra("com.discord.samsung.intent.extra.ATTEMPT_COUNT", var2).addFlags(65536);
-         q.g(var3, "addFlags(...)");
+         r.g(var3, "addFlags(...)");
          return var3;
       }
    }
@@ -338,8 +338,8 @@ public class SamsungConnectActivity : AppCompatActivity {
          public final val serverUrl: String
 
          init {
-            q.h(var1, "authCode");
-            q.h(var2, "serverUrl");
+            r.h(var1, "authCode");
+            r.h(var2, "serverUrl");
             super(null);
             this.authCode = var1;
             this.serverUrl = var2;
@@ -354,8 +354,8 @@ public class SamsungConnectActivity : AppCompatActivity {
          }
 
          public fun copy(authCode: String = var0.authCode, serverUrl: String = var0.serverUrl): com.discord.samsung.SamsungConnectActivity.Result.Success {
-            q.h(var1, "authCode");
-            q.h(var2, "serverUrl");
+            r.h(var1, "authCode");
+            r.h(var2, "serverUrl");
             return new SamsungConnectActivity.Result.Success(var1, var2);
          }
 
@@ -366,10 +366,10 @@ public class SamsungConnectActivity : AppCompatActivity {
                return false;
             } else {
                var1 = var1;
-               if (!q.c(this.authCode, var1.authCode)) {
+               if (!r.c(this.authCode, var1.authCode)) {
                   return false;
                } else {
-                  return q.c(this.serverUrl, var1.serverUrl);
+                  return r.c(this.serverUrl, var1.serverUrl);
                }
             }
          }
@@ -379,13 +379,13 @@ public class SamsungConnectActivity : AppCompatActivity {
          }
 
          public override fun toString(): String {
-            val var2: java.lang.String = this.authCode;
-            val var1: java.lang.String = this.serverUrl;
+            val var1: java.lang.String = this.authCode;
+            val var2: java.lang.String = this.serverUrl;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Success(authCode=");
-            var3.append(var2);
-            var3.append(", serverUrl=");
             var3.append(var1);
+            var3.append(", serverUrl=");
+            var3.append(var2);
             var3.append(")");
             return var3.toString();
          }

@@ -1,6 +1,6 @@
 package com.discord.fast_connect
 
-import A9.s
+import A9.q
 import com.discord.app_database.AppDatabase
 import com.discord.app_database.DatabaseVersions
 import com.discord.cache.Cache
@@ -11,8 +11,9 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.websocket.WebSocketModule
 import com.facebook.react.modules.websocket.WebSocketModule.OnOpenHandler
 import java.util.concurrent.ConcurrentHashMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import okhttp3.WebSocket
+import z9.s
 
 internal class FastConnectModule(reactContext: ReactApplicationContext) : NativeFastConnectModuleSpec {
    private final val sockets: ConcurrentHashMap<Int, WebSocket>
@@ -38,7 +39,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
    private final var requiredDatabaseVersion: String?
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.sockets = new ConcurrentHashMap<>();
       this.identifyPayload = "";
@@ -61,7 +62,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
             var7 = this.identifyPayload;
          }
 
-         if (!q.c(this.identifyPayload, var7)) {
+         if (!r.c(this.identifyPayload, var7)) {
             val var5: Log = Log.INSTANCE;
             var2 = var4.getGuildVersions().length;
             val var9: StringBuilder = new StringBuilder();
@@ -90,7 +91,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
 
    protected override fun getTypedExportedConstants(): MutableMap<String, String?> {
       val var1: Cache.Companion = Cache.Companion;
-      return B9.q.m(
+      return q.m(
          new Pair[]{
             s.a("clientState", Cache.Companion.get().getItem("_clientStateKey")),
             s.a("userId", var1.get().getItem("_userIdKey")),
@@ -111,7 +112,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
             }
 
             public void onOpen(WebSocket var1, int var2) {
-               q.h(var1, "webSocket");
+               r.h(var1, "webSocket");
                FastConnectModule.access$handleWebSocketOpen(this.this$0, var1, var2);
             }
          });
@@ -127,7 +128,7 @@ internal class FastConnectModule(reactContext: ReactApplicationContext) : Native
    }
 
    public override fun prepareIdentify(userId: String?, payload: String, socketId: Double, requiredDatabaseVersion: String?) {
-      q.h(var2, "payload");
+      r.h(var2, "payload");
       val var6: Int = (int)var3;
       this.socketId = (int)var3;
       this.identifyUserId = var1;

@@ -22,9 +22,9 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
    public open val postCommit: () -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "items");
-      kotlin.jvm.internal.q.h(var5, "preCommit");
-      kotlin.jvm.internal.q.h(var6, "postCommit");
+      kotlin.jvm.internal.r.h(var1, "items");
+      kotlin.jvm.internal.r.h(var5, "preCommit");
+      kotlin.jvm.internal.r.h(var6, "postCommit");
       super(var4, var5, var6, null);
       this.items = var1;
       this.listOperations = var2;
@@ -66,9 +66,9 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
       preCommit: (Boolean) -> Unit = var0.preCommit,
       postCommit: () -> Unit = var0.postCommit
    ): ChatListItemUpdate {
-      kotlin.jvm.internal.q.h(var1, "items");
-      kotlin.jvm.internal.q.h(var5, "preCommit");
-      kotlin.jvm.internal.q.h(var6, "postCommit");
+      kotlin.jvm.internal.r.h(var1, "items");
+      kotlin.jvm.internal.r.h(var5, "preCommit");
+      kotlin.jvm.internal.r.h(var6, "postCommit");
       return new ChatListItemUpdate(var1, var2, var3, var4, var5, var6);
    }
 
@@ -79,18 +79,18 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.items, var1.items)) {
+         if (!kotlin.jvm.internal.r.c(this.items, var1.items)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.listOperations, var1.listOperations)) {
+         } else if (!kotlin.jvm.internal.r.c(this.listOperations, var1.listOperations)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.chatListAction, var1.chatListAction)) {
+         } else if (!kotlin.jvm.internal.r.c(this.chatListAction, var1.chatListAction)) {
             return false;
          } else if (this.updateId != var1.updateId) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.preCommit, var1.preCommit)) {
+         } else if (!kotlin.jvm.internal.r.c(this.preCommit, var1.preCommit)) {
             return false;
          } else {
-            return kotlin.jvm.internal.q.c(this.postCommit, var1.postCommit);
+            return kotlin.jvm.internal.r.c(this.postCommit, var1.postCommit);
          }
       }
    }
@@ -113,26 +113,26 @@ public data class ChatListItemUpdate(items: List<ChatListItem>,
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.items;
-      val var6: java.util.List = this.listOperations;
-      val var5: ChatListAction = this.chatListAction;
+      val var7: java.util.List = this.items;
+      val var4: java.util.List = this.listOperations;
+      val var2: ChatListAction = this.chatListAction;
       val var1: Int = this.updateId;
-      val var2: Function1 = this.preCommit;
-      val var7: Function0 = this.postCommit;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ChatListItemUpdate(items=");
-      var4.append(var3);
-      var4.append(", listOperations=");
-      var4.append(var6);
-      var4.append(", chatListAction=");
-      var4.append(var5);
-      var4.append(", updateId=");
-      var4.append(var1);
-      var4.append(", preCommit=");
-      var4.append(var2);
-      var4.append(", postCommit=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var5: Function1 = this.preCommit;
+      val var6: Function0 = this.postCommit;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ChatListItemUpdate(items=");
+      var3.append(var7);
+      var3.append(", listOperations=");
+      var3.append(var4);
+      var3.append(", chatListAction=");
+      var3.append(var2);
+      var3.append(", updateId=");
+      var3.append(var1);
+      var3.append(", preCommit=");
+      var3.append(var5);
+      var3.append(", postCommit=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 }

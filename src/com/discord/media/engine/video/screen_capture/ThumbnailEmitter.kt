@@ -6,7 +6,7 @@ import android.graphics.Bitmap.Config
 import android.opengl.GLES20
 import java.nio.Buffer
 import java.nio.ByteBuffer
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import org.webrtc.GlRectDrawer
 import org.webrtc.GlTextureFrameBuffer
 import org.webrtc.GlUtil
@@ -35,7 +35,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
    }
 
    init {
-      q.h(var5, "onNextThumbnail");
+      r.h(var5, "onNextThumbnail");
       super();
       this.width = var1;
       this.height = var2;
@@ -55,19 +55,19 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       GlUtil.checkNoGLES2Error("glBindFramebuffer");
       GLES20.glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
       GLES20.glClear(16384);
-      val var4: Float = var1.getRotatedWidth();
-      val var3: Float = var1.getRotatedHeight();
-      if (var4 / var3 < (float)this.width / this.height) {
-         val var12: Float = var4 * (this.height / var3);
+      val var2: Float = var1.getRotatedWidth();
+      val var4: Float = var1.getRotatedHeight();
+      if (var2 / var4 < (float)this.width / this.height) {
+         val var10: Float = var2 * (this.height / var4);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, Q9.a.c(((float)this.width - var4 * ((float)this.height / var3)) / 2.0F), 0, Q9.a.c(var12), this.height
+               var1, this.rectDrawer, renderMatrix, P9.a.c(((float)this.width - var2 * ((float)this.height / var4)) / 2.0F), 0, P9.a.c(var10), this.height
             );
       } else {
-         val var11: Float = var3 * (this.width / var4);
+         val var11: Float = var4 * (this.width / var2);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, Q9.a.c(((float)this.height - var3 * ((float)this.width / var4)) / 2.0F), this.width, Q9.a.c(var11)
+               var1, this.rectDrawer, renderMatrix, 0, P9.a.c(((float)this.height - var4 * ((float)this.width / var2)) / 2.0F), this.width, P9.a.c(var11)
             );
       }
 
@@ -77,7 +77,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       var8.release();
       ((Buffer)this.outputByteBuffer).rewind();
       val var9: Bitmap = Bitmap.createBitmap(this.width, this.height, Config.ARGB_8888);
-      q.g(var9, "createBitmap(...)");
+      r.g(var9, "createBitmap(...)");
       var9.copyPixelsFromBuffer(this.outputByteBuffer);
       return var9;
    }
@@ -100,7 +100,7 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "frame"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: getfield com/discord/media/engine/video/screen_capture/ThumbnailEmitter.released Z
       // 0c: istore 4

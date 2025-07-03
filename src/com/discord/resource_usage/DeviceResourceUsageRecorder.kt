@@ -1,20 +1,20 @@
 package com.discord.resource_usage
 
-import A9.s
-import Ub.e
+import Tb.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
 import android.telephony.TelephonyManager
+import c2.b
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import d2.b
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
+import z9.s
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic
@@ -58,27 +58,27 @@ public class DeviceResourceUsageRecorder {
       }
 
       public fun bundleUpdaterInterceptor(chain: Chain): Response {
-         q.h(var1, "chain");
+         r.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getOta$cp());
       }
 
       public fun clientXHRInterceptor(chain: Chain): Response {
-         q.h(var1, "chain");
+         r.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getXhr$cp());
       }
 
       public fun downloadInterceptor(chain: Chain): Response {
-         q.h(var1, "chain");
+         r.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getDownloads$cp());
       }
 
       public fun frescoInterceptor(chain: Chain): Response {
-         q.h(var1, "chain");
+         r.h(var1, "chain");
          return this.requestStatsInterceptor(var1, DeviceResourceUsageRecorder.access$getFresco$cp());
       }
 
       public fun getNetworkUsage(reactApplicationContext: ReactApplicationContext): WritableNativeMap {
-         q.h(var1, "reactApplicationContext");
+         r.h(var1, "reactApplicationContext");
 
          label47: {
             var var4: TelephonyManager;
@@ -86,7 +86,7 @@ public class DeviceResourceUsageRecorder {
                label48: {
                   try {
                      val var10: Any = var1.getSystemService("phone");
-                     q.f(var10, "null cannot be cast to non-null type android.telephony.TelephonyManager");
+                     r.f(var10, "null cannot be cast to non-null type android.telephony.TelephonyManager");
                      var4 = var10 as TelephonyManager;
                      if (VERSION.SDK_INT < 28) {
                         break label48;

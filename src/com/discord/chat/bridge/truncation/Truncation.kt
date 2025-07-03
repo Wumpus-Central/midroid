@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.truncation
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
@@ -62,12 +62,12 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             return false;
          } else if (this.expandable != var1.expandable) {
             return false;
-         } else if (!q.c(this.seeMoreLabel, var1.seeMoreLabel)) {
+         } else if (!r.c(this.seeMoreLabel, var1.seeMoreLabel)) {
             return false;
-         } else if (!q.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
+         } else if (!r.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
             return false;
          } else {
-            return q.c(this.forceShow, var1.forceShow);
+            return r.c(this.forceShow, var1.forceShow);
          }
       }
    }
@@ -100,22 +100,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var5: java.lang.String = this.seeMoreLabel;
-      val var3: Int = this.seeMoreLabelColor;
+      val var6: java.lang.String = this.seeMoreLabel;
+      val var5: Int = this.seeMoreLabelColor;
       val var4: java.lang.Boolean = this.forceShow;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Truncation(numberOfLines=");
-      var6.append(var1);
-      var6.append(", expandable=");
-      var6.append(var2);
-      var6.append(", seeMoreLabel=");
-      var6.append(var5);
-      var6.append(", seeMoreLabelColor=");
-      var6.append(var3);
-      var6.append(", forceShow=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Truncation(numberOfLines=");
+      var3.append(var1);
+      var3.append(", expandable=");
+      var3.append(var2);
+      var3.append(", seeMoreLabel=");
+      var3.append(var6);
+      var3.append(", seeMoreLabelColor=");
+      var3.append(var5);
+      var3.append(", forceShow=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

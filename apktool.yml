@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 288203
-  versionName: 288.3 - Alpha
+  versionCode: 288204
+  versionName: 288.4 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -91,9 +91,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/aa.b
-- META-INF/services/jb.z
-- META-INF/services/ob.t
+- META-INF/services/Z9.b
+- META-INF/services/ib.z
+- META-INF/services/nb.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
@@ -305,26 +305,7 @@ doNotCompress:
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_vimessages0c6f358ef2734a5db0ebdc4f2c7ef135compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_zhcnmessages05ca260ddc3690c8f23eea8ea1704185compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_zhtwmessages87baeefdf7c0d9a1502798941428fe60compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_csmessagesbe81de6cacf4597ed1a036178277812ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_damessagesb9e177ba3822e11109dc764a2a727671compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_demessages0be2e4636fe8c961397c40a0e47c2212compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_engbmessagesfc254075f995eb11f21f00288e32309ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_es419messages7dfdf66562073c8371132ab1aca9faafcompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_esesmessagesf03b3b65d29b415140806e8b74f7e22acompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_fimessages46ece3030af442239baa709c28524debcompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_frmessages7b010744b4bff057bd2e7b0043614ab9compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_hrmessages01cf4d7e37c75681ae799eb9103c1788compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_humessagesf7e304bfa8e45c10ecdc46713935ec83compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_itmessagesb7611e1d8531bb6d3526ddcf120b97c0compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_jamessagesc3aa3d850e4f54c6b5e4aee6dfe5c97fcompiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_komessages7200139ed8661e7f0dfd146218597cd1compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_nlmessages79658b433ca1bbbc3ad31d6d5ab3a79acompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_nomessages1f4ecbee1dbd6bab695599cedea9c145compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_plmessages8ce32a9c781c0114d7d4b8ce14856a09compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_ptbrmessagesaa7e9add93e603e36c76325f5e206ddecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_romessagesddc35a5d26662a2b3ab0512e8aee398bcompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_svsemessagesb16b739c5bd5cef9be8eb747d52be065compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_trmessages96428a242b26867da7f33c0222121e18compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhcnmessages3dbb014b3e908692a7ecc54d743f0597compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhtwmessages56ab8e87fff666e7ef4bf1ba98825ce7compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9nb19saxzll3dlyg_bgmessages5f121e397ffc76de8b9fd907ef6908c1compiledmessages.jsona
@@ -445,7 +426,6 @@ doNotCompress:
 - res/raw/emojis_json.gz
 - res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
 - res/raw/modules_clicker_game_clickergamecompiledmessages.jsona
-- res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
 - res/raw/modules_go_live_web_modal_golivemodalcompiledmessages.jsona
 - res/raw/modules_guild_settings_web_tags_guildsettingstagscompiledmessages.jsona

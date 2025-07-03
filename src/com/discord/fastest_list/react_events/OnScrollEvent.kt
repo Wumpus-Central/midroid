@@ -1,12 +1,12 @@
 package com.discord.fastest_list.react_events
 
-import A9.s
 import com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 internal open class OnScrollEvent private constructor(x: Float, y: Float, width: Float, height: Float, contentWidth: Float, contentHeight: Float) : ReactEvent {
    private final val x: Float
@@ -25,7 +25,7 @@ internal open class OnScrollEvent private constructor(x: Float, y: Float, width:
       this.contentHeight = var6;
    }
 
-   public constructor(data: Data) : q.h(var1, "data") {
+   public constructor(data: Data) : r.h(var1, "data") {
       this(
          SizeUtilsKt.getPxToDp(var1.getX()),
          SizeUtilsKt.getPxToDp(var1.getY()),

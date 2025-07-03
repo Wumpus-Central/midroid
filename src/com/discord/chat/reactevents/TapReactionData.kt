@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
@@ -8,7 +7,8 @@ import com.discord.reactions.ReactionView
 import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ..., location: String?) : TapReactionData(
          var1, var2, var3, var4
@@ -20,7 +20,7 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    public final val location: String?
 
    fun TapReactionData(var1: java.lang.String, var2: ReactionView.Reaction, var3: java.lang.Boolean, var4: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.reaction = var2;
@@ -45,7 +45,7 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public fun copy(messageId: MessageId = ..., reaction: Reaction? = ..., isBurst: Boolean? = ..., location: String? = ...): TapReactionData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new TapReactionData(var1, var2, var3, var4, null);
    }
 
@@ -58,12 +58,12 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.reaction, var1.reaction)) {
+         } else if (!r.c(this.reaction, var1.reaction)) {
             return false;
-         } else if (!q.c(this.isBurst, var1.isBurst)) {
+         } else if (!r.c(this.isBurst, var1.isBurst)) {
             return false;
          } else {
-            return q.c(this.location, var1.location);
+            return r.c(this.location, var1.location);
          }
       }
    }
@@ -117,20 +117,20 @@ internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, i
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: ReactionView.Reaction = this.reaction;
-      val var3: java.lang.Boolean = this.isBurst;
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: ReactionView.Reaction = this.reaction;
+      val var2: java.lang.Boolean = this.isBurst;
       val var5: java.lang.String = this.location;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapReactionData(messageId=");
-      var1.append(var4);
-      var1.append(", reaction=");
-      var1.append(var2);
-      var1.append(", isBurst=");
-      var1.append(var3);
-      var1.append(", location=");
-      var1.append(var5);
-      var1.append(")");
-      return var1.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapReactionData(messageId=");
+      var4.append(var3);
+      var4.append(", reaction=");
+      var4.append(var1);
+      var4.append(", isBurst=");
+      var4.append(var2);
+      var4.append(", location=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 }

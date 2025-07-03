@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.polls
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PollAction(label: String,
@@ -20,8 +20,8 @@ public data class PollAction(label: String,
    public final val accessibilityHint: String?
 
    init {
-      q.h(var1, "label");
-      q.h(var2, "presentation");
+      r.h(var1, "label");
+      r.h(var2, "presentation");
       super();
       this.label = var1;
       this.presentation = var2;
@@ -63,8 +63,8 @@ public data class PollAction(label: String,
       secondaryLabel: String? = var0.secondaryLabel,
       accessibilityHint: String? = var0.accessibilityHint
    ): PollAction {
-      q.h(var1, "label");
-      q.h(var2, "presentation");
+      r.h(var1, "label");
+      r.h(var2, "presentation");
       return new PollAction(var1, var2, var3, var4, var5, var6);
    }
 
@@ -75,40 +75,40 @@ public data class PollAction(label: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.label, var1.label)) {
+         if (!r.c(this.label, var1.label)) {
             return false;
          } else if (this.presentation != var1.presentation) {
             return false;
          } else if (this.enabled != var1.enabled) {
             return false;
-         } else if (!q.c(this.type, var1.type)) {
+         } else if (!r.c(this.type, var1.type)) {
             return false;
-         } else if (!q.c(this.secondaryLabel, var1.secondaryLabel)) {
+         } else if (!r.c(this.secondaryLabel, var1.secondaryLabel)) {
             return false;
          } else {
-            return q.c(this.accessibilityHint, var1.accessibilityHint);
+            return r.c(this.accessibilityHint, var1.accessibilityHint);
          }
       }
    }
 
    public fun getFullTextLabel(): String {
-      val var2: java.lang.String = this.secondaryLabel;
+      val var1: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var1: java.lang.String = this.label;
+         val var2: java.lang.String = this.label;
          val var3: StringBuilder = new StringBuilder();
-         var3.append(var1);
-         var3.append("  •  ");
          var3.append(var2);
+         var3.append("  •  ");
+         var3.append(var1);
          return var3.toString();
       }
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.presentation.hashCode();
-      val var6: Int = java.lang.Boolean.hashCode(this.enabled);
+      val var6: Int = this.label.hashCode();
+      val var4: Int = this.presentation.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.enabled);
       var var3: Int = 0;
       val var1: Int;
       if (this.type == null) {
@@ -128,29 +128,29 @@ public data class PollAction(label: String,
          var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var4 * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.label;
-      val var3: PollActionPresentation = this.presentation;
+      val var5: java.lang.String = this.label;
+      val var4: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
       val var7: java.lang.String = this.type;
-      val var5: java.lang.String = this.secondaryLabel;
-      val var4: java.lang.String = this.accessibilityHint;
+      val var3: java.lang.String = this.secondaryLabel;
+      val var6: java.lang.String = this.accessibilityHint;
       val var2: StringBuilder = new StringBuilder();
       var2.append("PollAction(label=");
-      var2.append(var6);
+      var2.append(var5);
       var2.append(", presentation=");
-      var2.append(var3);
+      var2.append(var4);
       var2.append(", enabled=");
       var2.append(var1);
       var2.append(", type=");
       var2.append(var7);
       var2.append(", secondaryLabel=");
-      var2.append(var5);
+      var2.append(var3);
       var2.append(", accessibilityHint=");
-      var2.append(var4);
+      var2.append(var6);
       var2.append(")");
       return var2.toString();
    }

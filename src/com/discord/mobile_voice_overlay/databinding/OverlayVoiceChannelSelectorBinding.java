@@ -43,20 +43,20 @@ public final class OverlayVoiceChannelSelectorBinding implements ViewBinding {
          var1 = R.id.close;
          SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
          if (var3 != null) {
-            CardView var4 = (CardView)var0;
+            CardView var7 = (CardView)var0;
             var1 = R.id.empty_results;
-            TextView var7 = (TextView)a.a(var0, var1);
-            if (var7 != null) {
+            TextView var4 = (TextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.menu_container;
-               LinearLayout var6 = (LinearLayout)a.a(var0, var1);
-               if (var6 != null) {
+               LinearLayout var8 = (LinearLayout)a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.overlay_channel_search;
                   EditText var5 = (EditText)a.a(var0, var1);
                   if (var5 != null) {
                      var1 = R.id.results_rv;
-                     RecyclerView var8 = (RecyclerView)a.a(var0, var1);
-                     if (var8 != null) {
-                        return new OverlayVoiceChannelSelectorBinding(var4, var2, var3, var4, var7, var6, var5, var8);
+                     RecyclerView var6 = (RecyclerView)a.a(var0, var1);
+                     if (var6 != null) {
+                        return new OverlayVoiceChannelSelectorBinding(var7, var2, var3, var7, var4, var8, var5, var6);
                      }
                   }
                }

@@ -2,7 +2,7 @@ package com.discord.recycler_view.scroll
 
 import androidx.recyclerview.widget.RecyclerView
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       recyclerViewIncludesFlings: Boolean = true,
@@ -17,8 +17,8 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
    private final val velocityTracker: VelocityTrackingScrollListener
 
    init {
-      q.h(var1, "recyclerView");
-      q.h(var4, "scrollVelocityChanged");
+      r.h(var1, "recyclerView");
+      r.h(var4, "scrollVelocityChanged");
       super();
       this.scrollVelocityChanged = var4;
       this.velocityEvents = new DebouncedFlow<>(var5, new c(this), false, 4, null);
@@ -39,7 +39,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
             }
 
             public final void invoke(RecyclerView var1, float var2) {
-               q.h(var1, "p0");
+               r.h(var1, "p0");
                DebouncedVelocityTrackingScrollListener.access$onScrollVelocityChanged(super.receiver as DebouncedVelocityTrackingScrollListener, var1, var2);
             }
          }
@@ -52,14 +52,14 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       } else {
          var var3: DebouncedVelocityTrackingScrollListener.VelocityEvent = this.lastVelocityEvent;
          if (this.lastVelocityEvent == null) {
-            q.y("lastVelocityEvent");
+            r.y("lastVelocityEvent");
             var3 = null;
          }
 
          var3.setRecyclerView(var1);
          var var6: DebouncedVelocityTrackingScrollListener.VelocityEvent = this.lastVelocityEvent;
          if (this.lastVelocityEvent == null) {
-            q.y("lastVelocityEvent");
+            r.y("lastVelocityEvent");
             var6 = null;
          }
 
@@ -68,7 +68,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
 
       var var7: DebouncedVelocityTrackingScrollListener.VelocityEvent = this.lastVelocityEvent;
       if (this.lastVelocityEvent == null) {
-         q.y("lastVelocityEvent");
+         r.y("lastVelocityEvent");
          var7 = null;
       }
 
@@ -77,7 +77,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
 
    @JvmStatic
    fun `velocityEvents$lambda$0`(var0: DebouncedVelocityTrackingScrollListener, var1: DebouncedVelocityTrackingScrollListener.VelocityEvent): Unit {
-      q.h(var1, "<destruct>");
+      r.h(var1, "<destruct>");
       var0.scrollVelocityChanged.invoke(var1.component1(), var1.component2());
       return Unit.a;
    }
@@ -87,13 +87,13 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
    }
 
    public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-      q.h(var1, "recyclerView");
+      r.h(var1, "recyclerView");
       super.onScrollStateChanged(var1, var2);
       this.velocityTracker.onScrollStateChanged(var1, var2);
    }
 
    public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-      q.h(var1, "recyclerView");
+      r.h(var1, "recyclerView");
       super.onScrolled(var1, var2, var3);
       this.velocityTracker.onScrolled(var1, var2, var3);
    }
@@ -106,7 +106,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
          internal set
 
       init {
-         q.h(var1, "recyclerView");
+         r.h(var1, "recyclerView");
          super();
          this.recyclerView = var1;
          this.velocity = var2;
@@ -121,7 +121,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       }
 
       public fun copy(recyclerView: RecyclerView = var0.recyclerView, velocity: Float = var0.velocity): com.discord.recycler_view.scroll.DebouncedVelocityTrackingScrollListener.VelocityEvent {
-         q.h(var1, "recyclerView");
+         r.h(var1, "recyclerView");
          return new DebouncedVelocityTrackingScrollListener.VelocityEvent(var1, var2);
       }
 
@@ -132,7 +132,7 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.recyclerView, var1.recyclerView)) {
+            if (!r.c(this.recyclerView, var1.recyclerView)) {
                return false;
             } else {
                return java.lang.Float.compare(this.velocity, var1.velocity) == 0;
@@ -145,15 +145,15 @@ public class DebouncedVelocityTrackingScrollListener(recyclerView: RecyclerView,
       }
 
       public override fun toString(): String {
-         val var2: RecyclerView = this.recyclerView;
+         val var3: RecyclerView = this.recyclerView;
          val var1: Float = this.velocity;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("VelocityEvent(recyclerView=");
-         var3.append(var2);
-         var3.append(", velocity=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("VelocityEvent(recyclerView=");
+         var2.append(var3);
+         var2.append(", velocity=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

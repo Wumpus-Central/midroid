@@ -23,7 +23,7 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,
@@ -43,10 +43,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    public final val items: MutableList<MessageAttachmentAccessory>
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "onItemClicked");
-      q.h(var4, "onItemSpoilerClicked");
-      q.h(var5, "onItemObscureToggle");
+      r.h(var1, "context");
+      r.h(var2, "onItemClicked");
+      r.h(var4, "onItemSpoilerClicked");
+      r.h(var5, "onItemObscureToggle");
       super();
       this.context = var1;
       this.onItemClicked = var2;
@@ -132,14 +132,14 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
-      q.h(var1, "holder");
+      r.h(var1, "holder");
       val var5: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
-            var var6: Any = this.items.get(var2);
-            q.f(var6, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
-            var6 = var6 as ImageAttachmentMessageAccessory;
-            val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+            var var6: MosaicItemMessageAttachmentImageViewHolder = this.items.get(var2);
+            r.f(var6, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
+            val var7: ImageAttachmentMessageAccessory = var6 as ImageAttachmentMessageAccessory;
+            var6 = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var3: Boolean;
             if (this.getItemCount() == 1) {
                var3 = true;
@@ -147,25 +147,23 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var9: a = new a(this, var7, var1);
+            val var8: b = new b(this, var7);
             val var4: Boolean = this.shouldAutoPlayGifs;
-            var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
-            );
+            var6.bindAttachment(var5, var7, var3, var9, var8, new c(this, var7), new d(this), var4);
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var12: Class = var1.getClass();
-               val var10: StringBuilder = new StringBuilder();
-               var10.append("Invalid view holder type ");
-               var10.append(var12);
-               throw new IllegalStateException(var10.toString().toString());
+               val var10: Class = var1.getClass();
+               val var12: StringBuilder = new StringBuilder();
+               var12.append("Invalid view holder type ");
+               var12.append(var10);
+               throw new IllegalStateException(var12.toString().toString());
             }
 
-            var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
-            q.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
-            val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
-            var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+            var var14: Any = this.items.get(var2);
+            r.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
+            var14 = var14 as VideoAttachmentMessageAccessory;
+            val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
             if (this.getItemCount() == 1) {
                var11 = true;
@@ -173,13 +171,21 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var11 = false;
             }
 
-            var14.bindAttachment(var5, var16, var11, new e(this, var16, var1), new f(this, var16), new g(this, var16), new h(this));
+            var16.bindAttachment(
+               var5,
+               (VideoAttachmentMessageAccessory)var14,
+               var11,
+               new e(this, (VideoAttachmentMessageAccessory)var14, var1),
+               new f(this, (VideoAttachmentMessageAccessory)var14),
+               new g(this, (VideoAttachmentMessageAccessory)var14),
+               new h(this)
+            );
          }
       }
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessagePartViewHolder {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var3: Any;
       if (var2 != 49) {
          if (var2 != 50) {
@@ -198,7 +204,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    public fun setChatEventHandler(eventHandler: ChatEventHandler) {
-      q.h(var1, "eventHandler");
+      r.h(var1, "eventHandler");
       this.eventHandler = var1;
    }
 
@@ -208,7 +214,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setMediaItems(items: List<MessageAttachmentAccessory>, shouldAutoPlayGifs: Boolean) {
-      q.h(var1, "items");
+      r.h(var1, "items");
       this.items.clear();
       this.items.addAll(var1);
       this.shouldAutoPlayGifs = var2;

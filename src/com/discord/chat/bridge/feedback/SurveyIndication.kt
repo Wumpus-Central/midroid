@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.feedback
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class SurveyIndication(content: StructurableText, feedbackIconUrl: String) {
@@ -11,8 +11,8 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    public final val feedbackIconUrl: String
 
    init {
-      q.h(var1, "content");
-      q.h(var2, "feedbackIconUrl");
+      r.h(var1, "content");
+      r.h(var2, "feedbackIconUrl");
       super();
       this.content = var1;
       this.feedbackIconUrl = var2;
@@ -27,8 +27,8 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
    }
 
    public fun copy(content: StructurableText = var0.content, feedbackIconUrl: String = var0.feedbackIconUrl): SurveyIndication {
-      q.h(var1, "content");
-      q.h(var2, "feedbackIconUrl");
+      r.h(var1, "content");
+      r.h(var2, "feedbackIconUrl");
       return new SurveyIndication(var1, var2);
    }
 
@@ -39,10 +39,10 @@ public data class SurveyIndication(content: StructurableText, feedbackIconUrl: S
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.content, var1.content)) {
+         if (!r.c(this.content, var1.content)) {
             return false;
          } else {
-            return q.c(this.feedbackIconUrl, var1.feedbackIconUrl);
+            return r.c(this.feedbackIconUrl, var1.feedbackIconUrl);
          }
       }
    }

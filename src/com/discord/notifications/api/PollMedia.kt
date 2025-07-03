@@ -1,15 +1,15 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PollMedia(text: String) {
    public final val text: String
 
    init {
-      q.h(var1, "text");
+      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -19,7 +19,7 @@ public data class PollMedia(text: String) {
    }
 
    public fun copy(text: String = var0.text): PollMedia {
-      q.h(var1, "text");
+      r.h(var1, "text");
       return new PollMedia(var1);
    }
 
@@ -29,7 +29,7 @@ public data class PollMedia(text: String) {
       } else if (var1 !is PollMedia) {
          return false;
       } else {
-         return q.c(this.text, (var1 as PollMedia).text);
+         return r.c(this.text, (var1 as PollMedia).text);
       }
    }
 

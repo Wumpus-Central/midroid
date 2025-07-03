@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuerySetPayload) : UserSearchData {
@@ -10,8 +10,8 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    public final val payload: UserSearchQuerySetPayload
 
    init {
-      q.h(var1, "uuid");
-      q.h(var2, "payload");
+      r.h(var1, "uuid");
+      r.h(var2, "payload");
       super(null);
       this.uuid = var1;
       this.payload = var2;
@@ -26,8 +26,8 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
    }
 
    public fun copy(uuid: String = var0.uuid, payload: UserSearchQuerySetPayload = var0.payload): UserSearchQuerySetData {
-      q.h(var1, "uuid");
-      q.h(var2, "payload");
+      r.h(var1, "uuid");
+      r.h(var2, "payload");
       return new UserSearchQuerySetData(var1, var2);
    }
 
@@ -38,10 +38,10 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.uuid, var1.uuid)) {
+         if (!r.c(this.uuid, var1.uuid)) {
             return false;
          } else {
-            return q.c(this.payload, var1.payload);
+            return r.c(this.payload, var1.payload);
          }
       }
    }
@@ -52,14 +52,14 @@ internal data class UserSearchQuerySetData(uuid: String, payload: UserSearchQuer
 
    public override fun toString(): String {
       val var2: java.lang.String = this.uuid;
-      val var3: UserSearchQuerySetPayload = this.payload;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserSearchQuerySetData(uuid=");
-      var1.append(var2);
-      var1.append(", payload=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: UserSearchQuerySetPayload = this.payload;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("UserSearchQuerySetData(uuid=");
+      var3.append(var2);
+      var3.append(", payload=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -4,9 +4,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelId) : InitiateThreadData(var1, var2), ReactEvent {
@@ -14,7 +14,7 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
    public final val channelId: ChannelId
 
    fun InitiateThreadData(var1: java.lang.String, var2: Long) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -29,7 +29,7 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
    }
 
    public fun copy(messageId: MessageId = ..., channelId: ChannelId = ...): InitiateThreadData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new InitiateThreadData(var1, var2, null);
    }
 
@@ -57,13 +57,13 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var3: StringBuilder = new StringBuilder();
       var3.append("InitiateThreadData(messageId=");
-      var3.append(var2);
-      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class BlockedGroupContent(message: MessageBase) {
@@ -13,7 +13,7 @@ public data class BlockedGroupContent(message: MessageBase) {
    public final val message: MessageBase
 
    init {
-      q.h(var1, "message");
+      r.h(var1, "message");
       super();
       this.message = var1;
    }
@@ -23,7 +23,7 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public fun copy(message: MessageBase = var0.message): BlockedGroupContent {
-      q.h(var1, "message");
+      r.h(var1, "message");
       return new BlockedGroupContent(var1);
    }
 
@@ -33,7 +33,7 @@ public data class BlockedGroupContent(message: MessageBase) {
       } else if (var1 !is BlockedGroupContent) {
          return false;
       } else {
-         return q.c(this.message, (var1 as BlockedGroupContent).message);
+         return r.c(this.message, (var1 as BlockedGroupContent).message);
       }
    }
 
@@ -42,12 +42,12 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public override fun toString(): String {
-      val var1: MessageBase = this.message;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BlockedGroupContent(message=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: MessageBase = this.message;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BlockedGroupContent(message=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

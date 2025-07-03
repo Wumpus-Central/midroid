@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.ephemeral
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class EphemeralIndication(content: StructurableText, helpArticleLink: String, helpButtonAccessibilityLabel: String) {
@@ -12,9 +12,9 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
    public final val helpButtonAccessibilityLabel: String
 
    init {
-      q.h(var1, "content");
-      q.h(var2, "helpArticleLink");
-      q.h(var3, "helpButtonAccessibilityLabel");
+      r.h(var1, "content");
+      r.h(var2, "helpArticleLink");
+      r.h(var3, "helpButtonAccessibilityLabel");
       super();
       this.content = var1;
       this.helpArticleLink = var2;
@@ -38,9 +38,9 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
       helpArticleLink: String = var0.helpArticleLink,
       helpButtonAccessibilityLabel: String = var0.helpButtonAccessibilityLabel
    ): EphemeralIndication {
-      q.h(var1, "content");
-      q.h(var2, "helpArticleLink");
-      q.h(var3, "helpButtonAccessibilityLabel");
+      r.h(var1, "content");
+      r.h(var2, "helpArticleLink");
+      r.h(var3, "helpButtonAccessibilityLabel");
       return new EphemeralIndication(var1, var2, var3);
    }
 
@@ -51,12 +51,12 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.content, var1.content)) {
+         if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.helpArticleLink, var1.helpArticleLink)) {
+         } else if (!r.c(this.helpArticleLink, var1.helpArticleLink)) {
             return false;
          } else {
-            return q.c(this.helpButtonAccessibilityLabel, var1.helpButtonAccessibilityLabel);
+            return r.c(this.helpButtonAccessibilityLabel, var1.helpButtonAccessibilityLabel);
          }
       }
    }
@@ -67,17 +67,17 @@ public data class EphemeralIndication(content: StructurableText, helpArticleLink
 
    public override fun toString(): String {
       val var1: StructurableText = this.content;
-      val var3: java.lang.String = this.helpArticleLink;
-      val var4: java.lang.String = this.helpButtonAccessibilityLabel;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("EphemeralIndication(content=");
-      var2.append(var1);
-      var2.append(", helpArticleLink=");
-      var2.append(var3);
-      var2.append(", helpButtonAccessibilityLabel=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.helpArticleLink;
+      val var3: java.lang.String = this.helpButtonAccessibilityLabel;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("EphemeralIndication(content=");
+      var4.append(var1);
+      var4.append(", helpArticleLink=");
+      var4.append(var2);
+      var4.append(", helpButtonAccessibilityLabel=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

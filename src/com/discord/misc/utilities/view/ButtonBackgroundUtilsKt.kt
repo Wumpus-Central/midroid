@@ -4,10 +4,10 @@ import android.content.res.ColorStateList
 import android.widget.Button
 import androidx.core.view.Z
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun Button.setBackgroundColors(color: Int, disabledColor: Int? = null) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var4: ArrayList = new ArrayList(2);
    val var3: ArrayList = new ArrayList(2);
    if (var2 != null) {

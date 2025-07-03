@@ -1,9 +1,9 @@
 package com.discord.chat.bridge
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
@@ -11,8 +11,8 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    public final val stackTrace: String
 
    fun ErrorMessage(var1: java.lang.String, var2: java.lang.String) {
-      q.h(var1, "id");
-      q.h(var2, "stackTrace");
+      r.h(var1, "id");
+      r.h(var2, "stackTrace");
       super(null);
       this.id = var1;
       this.stackTrace = var2;
@@ -27,8 +27,8 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public fun copy(id: MessageId = ..., stackTrace: String = ...): ErrorMessage {
-      q.h(var1, "id");
-      q.h(var2, "stackTrace");
+      r.h(var1, "id");
+      r.h(var2, "stackTrace");
       return new ErrorMessage(var1, var2, null);
    }
 
@@ -42,7 +42,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
          } else {
-            return q.c(this.stackTrace, var1.stackTrace);
+            return r.c(this.stackTrace, var1.stackTrace);
          }
       }
    }

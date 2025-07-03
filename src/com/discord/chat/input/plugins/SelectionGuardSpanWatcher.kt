@@ -4,7 +4,7 @@ import android.text.Selection
 import android.text.SpanWatcher
 import android.text.Spannable
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SelectionGuardSpanWatcher : SpanWatcher {
    private fun checkSelections(text: Spannable, selectionStart: Int?, selectionEnd: Int?) {
@@ -27,8 +27,8 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
             var5 = 0;
          }
 
-         val var14: Array<DCDNoSelectionSpan> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class) as Array<DCDNoSelectionSpan>;
-         if (var14.length != 0) {
+         val var13: Array<DCDNoSelectionSpan> = var1.getSpans(var4, var5, DCDNoSelectionSpan.class) as Array<DCDNoSelectionSpan>;
+         if (var13.length != 0) {
             if (var2 != null) {
                var4 = var2;
             } else if (var3 != null) {
@@ -37,14 +37,14 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
                var4 = 0;
             }
 
-            val var12: Int = var14.length;
+            val var12: Int = var13.length;
             var var7: Int = 0;
             var var6: Boolean = false;
             var5 = var4;
 
             while (var7 < var12) {
-               val var11: Int = var1.getSpanEnd(var14[var7]);
-               val var10: Int = var1.getSpanStart(var14[var7]);
+               val var11: Int = var1.getSpanEnd(var13[var7]);
+               val var10: Int = var1.getSpanStart(var13[var7]);
                var var8: Int = var5;
                var var16: Int = var6;
                if (var5 > var10) {
@@ -98,9 +98,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
    public open fun onSpanChanged(text: Spannable?, what: Any?, ostart: Int, oend: Int, nstart: Int, nend: Int) {
       if (var1 != null) {
-         if (q.c(var2, Selection.SELECTION_START)) {
+         if (r.c(var2, Selection.SELECTION_START)) {
             this.checkSelections(var1, var5, null);
-         } else if (q.c(var2, Selection.SELECTION_END)) {
+         } else if (r.c(var2, Selection.SELECTION_END)) {
             this.checkSelections(var1, null, var5);
          }
       }

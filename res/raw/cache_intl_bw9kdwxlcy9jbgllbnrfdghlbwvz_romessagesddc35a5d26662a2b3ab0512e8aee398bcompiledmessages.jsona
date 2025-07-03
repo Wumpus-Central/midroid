@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Temele personalizate [Beta] nu sunt disponibile pe mobil."
+  "v15Ipq": [
+    "Cât timp este activată sincronizarea, temele personalizate [Beta] create pe desktop îți pot afecta tema de pe mobil. ",
+    [
+      8,
+      "$link",
+      [
+        "Află mai multe de aici."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

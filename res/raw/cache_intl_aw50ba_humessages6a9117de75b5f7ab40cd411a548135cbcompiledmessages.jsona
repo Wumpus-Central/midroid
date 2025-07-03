@@ -19934,12 +19934,21 @@
   ],
   "3XVNys": "Meghívó link másolása",
   "VNe8Pz": "Meghívó link szerkesztése.",
+  "Ckxb6u": "Csatlakozás kérése",
   "2Gbof3": "Meghívó lejárt",
   "jfrMtr": "Tele",
+  "x1UXGR": "A játék véget ért. Szeretnél újat indítani?",
   "pkq6Vl": "Játékmeghívó",
   "hC/Ze3": "Meghívás csatlakozásra",
   "/8czHx": [
     "Meghívás zenehallgatásra itt: ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Meghívás ezt nézni: ",
     [
       1,
       "name"
@@ -19952,7 +19961,133 @@
   "/ak8Mj": "Csatlakozás PlayStation felületén keresztül",
   "HEY5dX": "Csatlakozás Xbox segítségével",
   "84qx9v": "A zenehallgatásnak vége!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " jelezte, hogy csatlakozni szeretne a(z) ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partidhoz"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " szeretne csatlakozni a(z) ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partidhoz"
+  ],
   "B9kbnZ": "A megnézésnek vége!",
+  "IA6uDQ": [
+    "Jelzed a csatlakozási szándékodat egy ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partihoz"
+  ],
+  "gYVkSU": [
+    "Jelzed, hogy csatlakozni szeretnél ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partijához"
+  ],
+  "2N1kNT": [
+    "Jelezted a csatlakozási szándékodat egy ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partihoz"
+  ],
+  "JddpNz": [
+    "Jelezted a csatlakozási szándékodat ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-partijához"
+  ],
   "DXgdcH": "Oszd meg ezt a hivatkozást a barátaiddal, és automatikusan csatlakoznak a szerveredhez.",
   "tQc0l5": "Hívd meg egy barátodat a szerveredre!",
   "TfuB9P": [
@@ -30554,6 +30689,7 @@
   "IKE48v": "Új tag",
   "VaCdhY": "Új a Discordon",
   "CQmziY": "Látogató (nem tag)",
+  "EkokLy": "Kötelező",
   "WnX4Jy": "E-mail újraküldése",
   "lm1UKi": "Megerősítő e-mail újraküldése",
   "yBZMsb": "Visszaállítás",
@@ -33551,9 +33687,9 @@
   "7YZ/Sk": "Hátsó kamerára váltás",
   "/R1SBw": "Elülső kamerára váltás",
   "BkuOOz": "Szinkronizálás",
-  "GAlmIS": "Ezt bekapcsolva a megjelenésre vonatkozó fenti beállítások felülírásra kerülnek minden kliensen, beleértve az asztali alkalmazást és a böngészőt.",
   "3340dX": "Szinkronizálás kliensek között.",
   "p4IKEx": "Ha ezt bekapcsolja, a szöveg és kép beállítások felülíródnak minden kliensen, beleértve az asztali és böngésző beállításokat is.",
+  "CRtkeH": "Ha bekapcsolod, a rendszer minden kliensen felülírja a kiválasztott témádat, számítógépen és a böngésződben is.",
   "+KCMSk": "Barátok szinkronizálása a Discordhoz",
   "NVwuHh": "Szinkronizálás most",
   "eW8Gy8": "Jogosultságok szinkronizálása",
@@ -36851,8 +36987,128 @@
   ],
   "FMbL3t": "Sikertelen eltávolítás",
   "2TbM/P": "Játékban",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " hallgatja"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " hallgatja"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " hallgatja"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " hallgatja"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Ezt hallgatja:",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\n",
+    [
+      1,
+      "artist"
+    ],
+    " előadótól"
+  ],
   "BMTj29": "Ezzel játszik:",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " játszik"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " játszik"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " játszik"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " játszik"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Lejátszás itt: ",
     [

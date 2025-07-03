@@ -8,9 +8,9 @@ import com.discord.chat.bridge.messageframe.MessageFrame
 import com.discord.chat.bridge.reaction.ReactionsTheme
 import com.discord.chat.bridge.truncation.Truncation
 import com.discord.chat.presentation.root.MessageContextType
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class MessageRow(index: Int,
@@ -60,9 +60,9 @@ public data class MessageRow(index: Int,
    public final val threadAccessibilityLabel: String?
 
    init {
-      q.h(var2, "changeType");
-      q.h(var4, "message");
-      q.h(var15, "swipeActions");
+      r.h(var2, "changeType");
+      r.h(var4, "message");
+      r.h(var15, "swipeActions");
       super(null);
       this.index = var1;
       this.changeType = var2;
@@ -182,9 +182,9 @@ public data class MessageRow(index: Int,
       forwardAccessibilityLabel: String? = var0.forwardAccessibilityLabel,
       threadAccessibilityLabel: String? = var0.threadAccessibilityLabel
    ): MessageRow {
-      q.h(var2, "changeType");
-      q.h(var4, "message");
-      q.h(var15, "swipeActions");
+      r.h(var2, "changeType");
+      r.h(var4, "message");
+      r.h(var15, "swipeActions");
       return new MessageRow(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
    }
 
@@ -199,40 +199,40 @@ public data class MessageRow(index: Int,
             return false;
          } else if (this.changeType != var1.changeType) {
             return false;
-         } else if (!q.c(this.jumped, var1.jumped)) {
+         } else if (!r.c(this.jumped, var1.jumped)) {
             return false;
-         } else if (!q.c(this.message, var1.message)) {
+         } else if (!r.c(this.message, var1.message)) {
             return false;
-         } else if (!q.c(this.canAddNewReactions, var1.canAddNewReactions)) {
+         } else if (!r.c(this.canAddNewReactions, var1.canAddNewReactions)) {
             return false;
-         } else if (!q.c(this.addReactionLabel, var1.addReactionLabel)) {
+         } else if (!r.c(this.addReactionLabel, var1.addReactionLabel)) {
             return false;
-         } else if (!q.c(this.addNewReactionAccessibilityLabel, var1.addNewReactionAccessibilityLabel)) {
+         } else if (!r.c(this.addNewReactionAccessibilityLabel, var1.addNewReactionAccessibilityLabel)) {
             return false;
-         } else if (!q.c(this.addNewBurstReactionAccessibilityLabel, var1.addNewBurstReactionAccessibilityLabel)) {
+         } else if (!r.c(this.addNewBurstReactionAccessibilityLabel, var1.addNewBurstReactionAccessibilityLabel)) {
             return false;
-         } else if (!q.c(this.reactionsTheme, var1.reactionsTheme)) {
+         } else if (!r.c(this.reactionsTheme, var1.reactionsTheme)) {
             return false;
          } else if (this.renderContentOnly != var1.renderContentOnly) {
             return false;
-         } else if (!q.c(this.messageFrame, var1.messageFrame)) {
+         } else if (!r.c(this.messageFrame, var1.messageFrame)) {
             return false;
-         } else if (!q.c(this.reactTag, var1.reactTag)) {
+         } else if (!r.c(this.reactTag, var1.reactTag)) {
             return false;
-         } else if (!q.c(this.truncation, var1.truncation)) {
+         } else if (!r.c(this.truncation, var1.truncation)) {
             return false;
-         } else if (!q.c(this.backgroundHighlight, var1.backgroundHighlight)) {
+         } else if (!r.c(this.backgroundHighlight, var1.backgroundHighlight)) {
             return false;
          } else if (this.swipeActions != var1.swipeActions) {
             return false;
          } else if (this.contextType != var1.contextType) {
             return false;
-         } else if (!q.c(this.replyAccessibilityLabel, var1.replyAccessibilityLabel)) {
+         } else if (!r.c(this.replyAccessibilityLabel, var1.replyAccessibilityLabel)) {
             return false;
-         } else if (!q.c(this.forwardAccessibilityLabel, var1.forwardAccessibilityLabel)) {
+         } else if (!r.c(this.forwardAccessibilityLabel, var1.forwardAccessibilityLabel)) {
             return false;
          } else {
-            return q.c(this.threadAccessibilityLabel, var1.threadAccessibilityLabel);
+            return r.c(this.threadAccessibilityLabel, var1.threadAccessibilityLabel);
          }
       }
    }
@@ -414,65 +414,65 @@ public data class MessageRow(index: Int,
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var9: ChangeType = this.changeType;
-      val var14: java.lang.Boolean = this.jumped;
-      val var19: MessageBase = this.message;
-      val var18: java.lang.Boolean = this.canAddNewReactions;
-      val var6: java.lang.String = this.addReactionLabel;
-      val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var16: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var12: ReactionsTheme = this.reactionsTheme;
+      val var7: ChangeType = this.changeType;
+      val var16: java.lang.Boolean = this.jumped;
+      val var3: MessageBase = this.message;
+      val var15: java.lang.Boolean = this.canAddNewReactions;
+      val var5: java.lang.String = this.addReactionLabel;
+      val var10: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var19: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
+      val var11: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var3: MessageFrame = this.messageFrame;
-      val var5: Int = this.reactTag;
-      val var10: Truncation = this.truncation;
-      val var17: BackgroundHighlight = this.backgroundHighlight;
-      val var4: SwipeActionsType = this.swipeActions;
-      val var15: MessageContextType = this.contextType;
-      val var20: java.lang.String = this.replyAccessibilityLabel;
-      val var13: java.lang.String = this.forwardAccessibilityLabel;
-      val var8: java.lang.String = this.threadAccessibilityLabel;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MessageRow(index=");
-      var7.append(var1);
-      var7.append(", changeType=");
-      var7.append(var9);
-      var7.append(", jumped=");
-      var7.append(var14);
-      var7.append(", message=");
-      var7.append(var19);
-      var7.append(", canAddNewReactions=");
-      var7.append(var18);
-      var7.append(", addReactionLabel=");
-      var7.append(var6);
-      var7.append(", addNewReactionAccessibilityLabel=");
-      var7.append(var11);
-      var7.append(", addNewBurstReactionAccessibilityLabel=");
-      var7.append(var16);
-      var7.append(", reactionsTheme=");
-      var7.append(var12);
-      var7.append(", renderContentOnly=");
-      var7.append(var2);
-      var7.append(", messageFrame=");
-      var7.append(var3);
-      var7.append(", reactTag=");
-      var7.append(var5);
-      var7.append(", truncation=");
-      var7.append(var10);
-      var7.append(", backgroundHighlight=");
-      var7.append(var17);
-      var7.append(", swipeActions=");
-      var7.append(var4);
-      var7.append(", contextType=");
-      var7.append(var15);
-      var7.append(", replyAccessibilityLabel=");
-      var7.append(var20);
-      var7.append(", forwardAccessibilityLabel=");
-      var7.append(var13);
-      var7.append(", threadAccessibilityLabel=");
-      var7.append(var8);
-      var7.append(")");
-      return var7.toString();
+      val var9: MessageFrame = this.messageFrame;
+      val var18: Int = this.reactTag;
+      val var8: Truncation = this.truncation;
+      val var20: BackgroundHighlight = this.backgroundHighlight;
+      val var12: SwipeActionsType = this.swipeActions;
+      val var17: MessageContextType = this.contextType;
+      val var13: java.lang.String = this.replyAccessibilityLabel;
+      val var4: java.lang.String = this.forwardAccessibilityLabel;
+      val var14: java.lang.String = this.threadAccessibilityLabel;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("MessageRow(index=");
+      var6.append(var1);
+      var6.append(", changeType=");
+      var6.append(var7);
+      var6.append(", jumped=");
+      var6.append(var16);
+      var6.append(", message=");
+      var6.append(var3);
+      var6.append(", canAddNewReactions=");
+      var6.append(var15);
+      var6.append(", addReactionLabel=");
+      var6.append(var5);
+      var6.append(", addNewReactionAccessibilityLabel=");
+      var6.append(var10);
+      var6.append(", addNewBurstReactionAccessibilityLabel=");
+      var6.append(var19);
+      var6.append(", reactionsTheme=");
+      var6.append(var11);
+      var6.append(", renderContentOnly=");
+      var6.append(var2);
+      var6.append(", messageFrame=");
+      var6.append(var9);
+      var6.append(", reactTag=");
+      var6.append(var18);
+      var6.append(", truncation=");
+      var6.append(var8);
+      var6.append(", backgroundHighlight=");
+      var6.append(var20);
+      var6.append(", swipeActions=");
+      var6.append(var12);
+      var6.append(", contextType=");
+      var6.append(var17);
+      var6.append(", replyAccessibilityLabel=");
+      var6.append(var13);
+      var6.append(", forwardAccessibilityLabel=");
+      var6.append(var4);
+      var6.append(", threadAccessibilityLabel=");
+      var6.append(var14);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

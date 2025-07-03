@@ -1,6 +1,5 @@
 package com.discord.recycler_view.scroller
 
-import A9.n
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -8,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.n
 
 public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView
@@ -16,7 +16,7 @@ public class Scroller(recyclerView: RecyclerView) {
    private final val layoutManager: LinearLayoutManager
       private final get() {
          val var1: RecyclerView.LayoutManager = this.recyclerView.getLayoutManager();
-         q.f(var1, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+         r.f(var1, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
          return var1 as LinearLayoutManager;
       }
 
@@ -24,7 +24,7 @@ public class Scroller(recyclerView: RecyclerView) {
    private final var currentSearch: Runnable?
 
    init {
-      q.h(var1, "recyclerView");
+      r.h(var1, "recyclerView");
       super();
       this.recyclerView = var1;
       var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this) {
@@ -35,11 +35,11 @@ public class Scroller(recyclerView: RecyclerView) {
          }
 
          public void onViewAttachedToWindow(View var1) {
-            q.h(var1, "v");
+            r.h(var1, "v");
          }
 
          public void onViewDetachedFromWindow(View var1) {
-            q.h(var1, "v");
+            r.h(var1, "v");
             this.this$0.cancel();
          }
       });
@@ -133,10 +133,10 @@ public class Scroller(recyclerView: RecyclerView) {
       onComplete: () -> Unit = new d(),
       onScrollProgress: () -> Unit = new e()
    ) {
-      q.h(var2, "targetAlignment");
-      q.h(var4, "onStart");
-      q.h(var5, "onComplete");
-      q.h(var6, "onScrollProgress");
+      r.h(var2, "targetAlignment");
+      r.h(var4, "onStart");
+      r.h(var5, "onComplete");
+      r.h(var6, "onScrollProgress");
       this.cancel();
       var4.invoke();
       if (var3) {

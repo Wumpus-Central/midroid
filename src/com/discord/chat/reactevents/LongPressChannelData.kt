@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
+import z9.s
 
 @f
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
@@ -59,14 +59,14 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.guildId, var1.guildId)) {
+         if (!r.c(this.guildId, var1.guildId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.messageId, var1.messageId)) {
+         } else if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.originalLink, var1.originalLink);
+            return r.c(this.originalLink, var1.originalLink);
          }
       }
    }
@@ -113,19 +113,19 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.originalLink;
+      val var2: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.originalLink;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LongPressChannelData(guildId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var2);
-      var1.append(", messageId=");
+      var1.append(", channelId=");
       var1.append(var4);
-      var1.append(", originalLink=");
+      var1.append(", messageId=");
       var1.append(var5);
+      var1.append(", originalLink=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: String, attachmentId: String, embedId: String) : ReactEvent {
@@ -14,10 +14,10 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    public final val embedId: String
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
-      q.h(var3, "attachmentId");
-      q.h(var4, "embedId");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
+      r.h(var3, "attachmentId");
+      r.h(var4, "embedId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -47,10 +47,10 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
       attachmentId: String = var0.attachmentId,
       embedId: String = var0.embedId
    ): TapObscuredMediaLearnMoreData {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
-      q.h(var3, "attachmentId");
-      q.h(var4, "embedId");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
+      r.h(var3, "attachmentId");
+      r.h(var4, "embedId");
       return new TapObscuredMediaLearnMoreData(var1, var2, var3, var4);
    }
 
@@ -61,14 +61,14 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
             return false;
          } else {
-            return q.c(this.embedId, var1.embedId);
+            return r.c(this.embedId, var1.embedId);
          }
       }
    }
@@ -82,19 +82,19 @@ public data class TapObscuredMediaLearnMoreData(messageId: String, channelId: St
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var4: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
       val var3: java.lang.String = this.attachmentId;
-      val var1: java.lang.String = this.embedId;
+      val var5: java.lang.String = this.embedId;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapObscuredMediaLearnMoreData(messageId=");
-      var2.append(var5);
-      var2.append(", channelId=");
       var2.append(var4);
+      var2.append(", channelId=");
+      var2.append(var1);
       var2.append(", attachmentId=");
       var2.append(var3);
       var2.append(", embedId=");
-      var2.append(var1);
+      var2.append(var5);
       var2.append(")");
       return var2.toString();
    }

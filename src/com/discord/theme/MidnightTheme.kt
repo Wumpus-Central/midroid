@@ -1,58 +1,58 @@
 package com.discord.theme
 
-import A9.j
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import k2.A2
-import k2.B2
-import k2.C2
-import k2.D2
-import k2.E2
-import k2.F2
-import k2.G2
-import k2.H2
-import k2.I2
-import k2.J2
-import k2.K2
-import k2.P1
-import k2.Q1
-import k2.R1
-import k2.S1
-import k2.T1
-import k2.U1
-import k2.V1
-import k2.W1
-import k2.X1
-import k2.Y1
-import k2.Z1
-import k2.a2
-import k2.b2
-import k2.c2
-import k2.d2
-import k2.e2
-import k2.f2
-import k2.g2
-import k2.h2
-import k2.i2
-import k2.j2
-import k2.k2
-import k2.l2
-import k2.m2
-import k2.n2
-import k2.o2
-import k2.p2
-import k2.q2
-import k2.r2
-import k2.s2
-import k2.t2
-import k2.u2
-import k2.v2
-import k2.w2
-import k2.x2
-import k2.y2
-import k2.z2
-import kotlin.jvm.internal.q
+import j2.A2
+import j2.B2
+import j2.C2
+import j2.D2
+import j2.E2
+import j2.F2
+import j2.G2
+import j2.H2
+import j2.I2
+import j2.J2
+import j2.K2
+import j2.P1
+import j2.Q1
+import j2.R1
+import j2.S1
+import j2.T1
+import j2.U1
+import j2.V1
+import j2.W1
+import j2.X1
+import j2.Y1
+import j2.Z1
+import j2.a2
+import j2.b2
+import j2.c2
+import j2.d2
+import j2.e2
+import j2.f2
+import j2.g2
+import j2.h2
+import j2.i2
+import j2.j2
+import j2.k2
+import j2.l2
+import j2.m2
+import j2.n2
+import j2.o2
+import j2.p2
+import j2.q2
+import j2.r2
+import j2.s2
+import j2.t2
+import j2.u2
+import j2.v2
+import j2.w2
+import j2.x2
+import j2.y2
+import j2.z2
+import kotlin.jvm.internal.r
+import z9.j
 
 internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -344,57 +344,57 @@ internal class MidnightTheme(resources: Resources, theme: Theme) : DiscordThemeO
 
 
    init {
-      q.h(var1, "resources");
-      q.h(var2, "theme");
+      r.h(var1, "resources");
+      r.h(var2, "theme");
       super(null);
-      this.androidRipple$delegate = j.b(new P1(var1, var2));
-      this.backgroundAccent$delegate = j.b(new R1(var1, var2));
-      this.backgroundFloating$delegate = j.b(new d2(var1, var2));
-      this.backgroundMessageHighlight$delegate = j.b(new p2(var1, var2));
-      this.backgroundMobilePrimary$delegate = j.b(new z2(var1, var2));
-      this.backgroundMobileSecondary$delegate = j.b(new A2(var1, var2));
-      this.backgroundModifierAccent$delegate = j.b(new B2(var1, var2));
-      this.backgroundModifierSelected$delegate = j.b(new C2(var1, var2));
-      this.backgroundPrimary$delegate = j.b(new D2(var1, var2));
-      this.backgroundSecondary$delegate = j.b(new E2(var1, var2));
-      this.backgroundSecondaryAlt$delegate = j.b(new a2(var1, var2));
-      this.backgroundTertiary$delegate = j.b(new l2(var1, var2));
-      this.bgModStrong$delegate = j.b(new w2(var1, var2));
-      this.bgSurfaceOverlay$delegate = j.b(new F2(var1, var2));
-      this.borderStrong$delegate = j.b(new G2(var1, var2));
-      this.borderSubtle$delegate = j.b(new H2(var1, var2));
-      this.buttonSecondaryBackground$delegate = j.b(new I2(var1, var2));
-      this.cardPrimaryBg$delegate = j.b(new J2(var1, var2));
-      this.chatSwipeToReplyBackground$delegate = j.b(new K2(var1, var2));
-      this.chatSwipeToReplyGradientBackground$delegate = j.b(new Q1(var1, var2));
-      this.embedBackground$delegate = j.b(new S1(var1, var2));
-      this.headerPrimary$delegate = j.b(new T1(var1, var2));
-      this.headerSecondary$delegate = j.b(new U1(var1, var2));
-      this.infoDangerForeground$delegate = j.b(new V1(var1, var2));
-      this.interactiveActive$delegate = j.b(new W1(var1, var2));
-      this.interactiveMuted$delegate = j.b(new X1(var1, var2));
-      this.interactiveNormal$delegate = j.b(new Y1(var1, var2));
-      this.redesignButtonPrimaryBackground$delegate = j.b(new Z1(var1, var2));
-      this.redesignButtonTertiaryBackground$delegate = j.b(new b2(var1, var2));
-      this.redesignButtonTertiaryText$delegate = j.b(new c2(var1, var2));
-      this.spoilerHiddenBackground$delegate = j.b(new e2(var1, var2));
-      this.spoilerRevealedBackground$delegate = j.b(new f2(var1, var2));
-      this.statusDanger$delegate = j.b(new g2(var1, var2));
-      this.statusDangerBackground$delegate = j.b(new h2(var1, var2));
-      this.statusPositive$delegate = j.b(new i2(var1, var2));
-      this.statusPositiveText$delegate = j.b(new j2(var1, var2));
-      this.statusWarning$delegate = j.b(new k2(var1, var2));
-      this.textBrand$delegate = j.b(new m2(var1, var2));
-      this.textDanger$delegate = j.b(new n2(var1, var2));
-      this.textLink$delegate = j.b(new o2(var1, var2));
-      this.textLowContrast$delegate = j.b(new q2(var1, var2));
-      this.textMuted$delegate = j.b(new r2(var1, var2));
-      this.textNormal$delegate = j.b(new s2(var1, var2));
-      this.textPositive$delegate = j.b(new t2(var1, var2));
-      this.textPrimary$delegate = j.b(new u2(var1, var2));
-      this.textSecondary$delegate = j.b(new v2(var1, var2));
-      this.textWarning$delegate = j.b(new x2(var1, var2));
-      this.white$delegate = j.b(new y2(var1, var2));
+      this.androidRipple$delegate = j.a(new P1(var1, var2));
+      this.backgroundAccent$delegate = j.a(new R1(var1, var2));
+      this.backgroundFloating$delegate = j.a(new d2(var1, var2));
+      this.backgroundMessageHighlight$delegate = j.a(new p2(var1, var2));
+      this.backgroundMobilePrimary$delegate = j.a(new z2(var1, var2));
+      this.backgroundMobileSecondary$delegate = j.a(new A2(var1, var2));
+      this.backgroundModifierAccent$delegate = j.a(new B2(var1, var2));
+      this.backgroundModifierSelected$delegate = j.a(new C2(var1, var2));
+      this.backgroundPrimary$delegate = j.a(new D2(var1, var2));
+      this.backgroundSecondary$delegate = j.a(new E2(var1, var2));
+      this.backgroundSecondaryAlt$delegate = j.a(new a2(var1, var2));
+      this.backgroundTertiary$delegate = j.a(new l2(var1, var2));
+      this.bgModStrong$delegate = j.a(new w2(var1, var2));
+      this.bgSurfaceOverlay$delegate = j.a(new F2(var1, var2));
+      this.borderStrong$delegate = j.a(new G2(var1, var2));
+      this.borderSubtle$delegate = j.a(new H2(var1, var2));
+      this.buttonSecondaryBackground$delegate = j.a(new I2(var1, var2));
+      this.cardPrimaryBg$delegate = j.a(new J2(var1, var2));
+      this.chatSwipeToReplyBackground$delegate = j.a(new K2(var1, var2));
+      this.chatSwipeToReplyGradientBackground$delegate = j.a(new Q1(var1, var2));
+      this.embedBackground$delegate = j.a(new S1(var1, var2));
+      this.headerPrimary$delegate = j.a(new T1(var1, var2));
+      this.headerSecondary$delegate = j.a(new U1(var1, var2));
+      this.infoDangerForeground$delegate = j.a(new V1(var1, var2));
+      this.interactiveActive$delegate = j.a(new W1(var1, var2));
+      this.interactiveMuted$delegate = j.a(new X1(var1, var2));
+      this.interactiveNormal$delegate = j.a(new Y1(var1, var2));
+      this.redesignButtonPrimaryBackground$delegate = j.a(new Z1(var1, var2));
+      this.redesignButtonTertiaryBackground$delegate = j.a(new b2(var1, var2));
+      this.redesignButtonTertiaryText$delegate = j.a(new c2(var1, var2));
+      this.spoilerHiddenBackground$delegate = j.a(new e2(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.a(new f2(var1, var2));
+      this.statusDanger$delegate = j.a(new g2(var1, var2));
+      this.statusDangerBackground$delegate = j.a(new h2(var1, var2));
+      this.statusPositive$delegate = j.a(new i2(var1, var2));
+      this.statusPositiveText$delegate = j.a(new j2(var1, var2));
+      this.statusWarning$delegate = j.a(new k2(var1, var2));
+      this.textBrand$delegate = j.a(new m2(var1, var2));
+      this.textDanger$delegate = j.a(new n2(var1, var2));
+      this.textLink$delegate = j.a(new o2(var1, var2));
+      this.textLowContrast$delegate = j.a(new q2(var1, var2));
+      this.textMuted$delegate = j.a(new r2(var1, var2));
+      this.textNormal$delegate = j.a(new s2(var1, var2));
+      this.textPositive$delegate = j.a(new t2(var1, var2));
+      this.textPrimary$delegate = j.a(new u2(var1, var2));
+      this.textSecondary$delegate = j.a(new v2(var1, var2));
+      this.textWarning$delegate = j.a(new x2(var1, var2));
+      this.white$delegate = j.a(new y2(var1, var2));
    }
 
    @JvmStatic

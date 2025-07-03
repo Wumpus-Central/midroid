@@ -1,6 +1,6 @@
 package com.discord.crash_reporting
 
-import A9.n
+import A9.q
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -24,9 +24,10 @@ import java.util.Map.Entry
 import javax.net.ssl.SSLException
 import javax.net.ssl.SSLHandshakeException
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
+import z9.n
 
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
@@ -35,13 +36,13 @@ public object CrashReporting {
    private final val ignoreNetworkExceptionList: List<KClass<out Throwable>> =
       i.n(
          new KClass[]{
-            G.b(UnknownHostException.class),
-            G.b(SocketTimeoutException.class),
-            G.b(SocketException.class),
-            G.b(ConnectException.class),
-            G.b(SSLException.class),
-            G.b(CertPathValidatorException.class),
-            G.b(SSLHandshakeException.class)
+            H.b(UnknownHostException.class),
+            H.b(SocketTimeoutException.class),
+            H.b(SocketException.class),
+            H.b(ConnectException.class),
+            H.b(SSLException.class),
+            H.b(CertPathValidatorException.class),
+            H.b(SSLHandshakeException.class)
          }
       )
       private const val TAG_BUILD_NUMBER: String = "buildNumber"
@@ -49,7 +50,7 @@ public object CrashReporting {
 
    @JvmStatic
    fun `captureMessage$lambda$2`(var0: java.lang.String, var1: java.lang.String, var2: CrashReporting.ErrorLevel, var3: IScope) {
-      q.h(var3, "sentryScope");
+      r.h(var3, "sentryScope");
       var3.s(i.e(var0));
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var2.ordinal()];
       val var5: e2;
@@ -76,7 +77,7 @@ public object CrashReporting {
 
    @JvmStatic
    fun `init$lambda$1`(var0: java.lang.String, var1: java.lang.String, var2: Context, var3: Double, var5: SentryAndroidOptions) {
-      q.h(var5, "options");
+      r.h(var5, "options");
       var5.setDsn(var0);
       val var7: ClientInfo = ClientInfo.INSTANCE;
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
@@ -91,7 +92,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("85ef3bc7-5a14-4fbf-8384-901946a86d1c");
+      var5.setProguardUuid("c8b682e4-2d12-4e8c-8096-ea131c0384cb");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -99,18 +100,18 @@ public object CrashReporting {
 
    @JvmStatic
    fun `init$lambda$1$lambda$0`(var0: Context, var1: SentryEvent, var2: Hint): SentryEvent {
-      q.h(var1, "event");
-      q.h(var2, "<unused var>");
+      r.h(var1, "event");
+      r.h(var2, "<unused var>");
       return INSTANCE.handleBeforeSend(var0, var1);
    }
 
-   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = B9.q.h(), breadcrumbCategory: String? = null) {
-      q.h(var1, "breadcrumbMessage");
-      q.h(var2, "breadcrumbData");
+   public fun addBreadcrumb(breadcrumbMessage: String, breadcrumbData: Map<String, String> = q.h(), breadcrumbCategory: String? = null) {
+      r.h(var1, "breadcrumbMessage");
+      r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.n(var3);
@@ -119,18 +120,18 @@ public object CrashReporting {
    }
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
-      q.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", A9.c.b(var1), null, 4, null);
+      r.h(var1, "throwable");
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", z9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
-      } else if (!ignoreNetworkExceptionList.contains(G.b(var1.getClass()))) {
+      } else if (!ignoreNetworkExceptionList.contains(H.b(var1.getClass()))) {
          p1.i(var1);
       }
    }
 
    public fun captureMessage(tag: String, exception: Exception) {
-      q.h(var1, "tag");
-      q.h(var2, "exception");
+      r.h(var1, "tag");
+      r.h(var2, "exception");
       val var3: java.lang.String = var2.getMessage();
       var var4: java.lang.String = var3;
       if (var3 == null) {
@@ -141,9 +142,9 @@ public object CrashReporting {
    }
 
    public fun captureMessage(tag: String, message: String, errorLevel: com.discord.crash_reporting.CrashReporting.ErrorLevel = CrashReporting.ErrorLevel.INFO) {
-      q.h(var1, "tag");
-      q.h(var2, "message");
-      q.h(var3, "errorLevel");
+      r.h(var1, "tag");
+      r.h(var2, "message");
+      r.h(var3, "errorLevel");
       val var4: Int = CrashReporting.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
       if (var4 != 1) {
          if (var4 != 2) {
@@ -159,7 +160,7 @@ public object CrashReporting {
    }
 
    public fun getSampleRate(context: Context): Double {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var2: Double;
       if (!CrashReportingCache.Companion.getInstance(var1).isStaff() && ClientInfo.INSTANCE.isProdBuild()) {
          var2 = 0.05;
@@ -171,12 +172,12 @@ public object CrashReporting {
    }
 
    public fun init(context: Context, releaseName: String) {
-      q.h(var1, "context");
-      q.h(var2, "releaseName");
+      r.h(var1, "context");
+      r.h(var2, "releaseName");
       val var3: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
          val var4: java.lang.String = Build.DEVICE;
-         q.g(Build.DEVICE, "DEVICE");
+         r.g(Build.DEVICE, "DEVICE");
          if (h.N(var4, "vivo", false, 2, null)) {
             return;
          }
@@ -208,7 +209,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = I9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

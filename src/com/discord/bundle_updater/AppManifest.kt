@@ -1,11 +1,12 @@
 package com.discord.bundle_updater
 
-import B9.q
+import A9.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import wb.E0
-import wb.U
+import vb.E0
+import vb.U
 
-@tb.f
+@sb.f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
    public final val metadata: AppManifestMetadata
    public final val hashes: Map<String, String>
@@ -18,9 +19,9 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "metadata");
-      kotlin.jvm.internal.q.h(var2, "hashes");
-      kotlin.jvm.internal.q.h(var3, "patches");
+      r.h(var1, "metadata");
+      r.h(var2, "hashes");
+      r.h(var3, "patches");
       super();
       this.metadata = var1;
       this.hashes = var2;
@@ -40,9 +41,9 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public fun copy(metadata: AppManifestMetadata = var0.metadata, hashes: Map<String, String> = var0.hashes, patches: Map<String, String> = var0.patches): AppManifest {
-      kotlin.jvm.internal.q.h(var1, "metadata");
-      kotlin.jvm.internal.q.h(var2, "hashes");
-      kotlin.jvm.internal.q.h(var3, "patches");
+      r.h(var1, "metadata");
+      r.h(var2, "hashes");
+      r.h(var3, "patches");
       return new AppManifest(var1, var2, var3);
    }
 
@@ -53,12 +54,12 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.metadata, var1.metadata)) {
+         if (!r.c(this.metadata, var1.metadata)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.hashes, var1.hashes)) {
+         } else if (!r.c(this.hashes, var1.hashes)) {
             return false;
          } else {
-            return kotlin.jvm.internal.q.c(this.patches, var1.patches);
+            return r.c(this.patches, var1.patches);
          }
       }
    }
@@ -68,18 +69,18 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var1: AppManifestMetadata = this.metadata;
-      val var2: java.util.Map = this.hashes;
-      val var3: java.util.Map = this.patches;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifest(metadata=");
-      var4.append(var1);
-      var4.append(", hashes=");
-      var4.append(var2);
-      var4.append(", patches=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: AppManifestMetadata = this.metadata;
+      val var4: java.util.Map = this.hashes;
+      val var1: java.util.Map = this.patches;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AppManifest(metadata=");
+      var3.append(var2);
+      var3.append(", hashes=");
+      var3.append(var4);
+      var3.append(", patches=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

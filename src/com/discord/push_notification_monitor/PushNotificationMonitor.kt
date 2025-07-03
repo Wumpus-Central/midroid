@@ -3,7 +3,7 @@ package com.discord.push_notification_monitor
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.Json.a
 
@@ -19,7 +19,7 @@ public object PushNotificationMonitor {
    }
 
    public fun clearPushLog(context: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var2: SharedPreferences = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1);
       val var3: Editor = var2.edit();
       val var4: java.util.Iterator = var2.getAll().keySet().iterator();
@@ -32,8 +32,8 @@ public object PushNotificationMonitor {
    }
 
    public fun getPushLog(context: Context, userId: String): PushNotificationLog {
-      q.h(var1, "context");
-      q.h(var2, "userId");
+      r.h(var1, "context");
+      r.h(var2, "userId");
       val var4: SharedPreferences = PushNotificationMonitorModule.Companion.getPushNotificationLogStorage(var1);
       val var6: PushNotificationLog;
       if (var4.getString(var2, null) != null) {
@@ -54,9 +54,9 @@ public object PushNotificationMonitor {
    }
 
    public fun logPushNotification(context: Context, loggedInUserId: String, pushNotification: PushNotificationMeta) {
-      q.h(var1, "context");
-      q.h(var2, "loggedInUserId");
-      q.h(var3, "pushNotification");
+      r.h(var1, "context");
+      r.h(var2, "loggedInUserId");
+      r.h(var3, "pushNotification");
       val var4: java.util.List = i.V0(this.getPushLog(var1, var2).getPushNotifications());
       var4.add(var3);
       if (var4.size() == 100) {

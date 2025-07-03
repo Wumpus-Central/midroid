@@ -1,20 +1,20 @@
 package com.discord.audio.react.events
 
-import A9.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
+import z9.s
 
 @f
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
    public final val device: AndroidAudioDevice
 
    init {
-      q.h(var1, "device");
+      r.h(var1, "device");
       super();
       this.device = var1;
    }
@@ -24,7 +24,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public fun copy(device: AndroidAudioDevice = var0.device): AudioManagerAudioDeviceChanged {
-      q.h(var1, "device");
+      r.h(var1, "device");
       return new AudioManagerAudioDeviceChanged(var1);
    }
 
@@ -34,7 +34,7 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
       } else if (var1 !is AudioManagerAudioDeviceChanged) {
          return false;
       } else {
-         return q.c(this.device, (var1 as AudioManagerAudioDeviceChanged).device);
+         return r.c(this.device, (var1 as AudioManagerAudioDeviceChanged).device);
       }
    }
 
@@ -47,12 +47,12 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public override fun toString(): String {
-      val var2: AndroidAudioDevice = this.device;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AudioManagerAudioDeviceChanged(device=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: AndroidAudioDevice = this.device;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AudioManagerAudioDeviceChanged(device=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

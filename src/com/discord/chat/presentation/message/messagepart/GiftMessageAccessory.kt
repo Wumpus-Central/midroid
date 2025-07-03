@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.gift.GiftEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: GiftEmbed) : GiftMessageAccessory(var1, var2, var3) {
    public open val messageId: MessageId
@@ -10,8 +10,8 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    public final val gift: GiftEmbed
 
    fun GiftMessageAccessory(var1: java.lang.String, var2: Int, var3: GiftEmbed) {
-      q.h(var1, "messageId");
-      q.h(var3, "gift");
+      r.h(var1, "messageId");
+      r.h(var3, "gift");
       val var4: StringBuilder = new StringBuilder();
       var4.append("gift ");
       var4.append(var2);
@@ -34,8 +34,8 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    }
 
    public fun copy(messageId: MessageId = ..., index: Int = ..., gift: GiftEmbed = ...): GiftMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var3, "gift");
+      r.h(var1, "messageId");
+      r.h(var3, "gift");
       return new GiftMessageAccessory(var1, var2, var3, null);
    }
 
@@ -51,7 +51,7 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
          } else if (this.index != var1.index) {
             return false;
          } else {
-            return q.c(this.gift, var1.gift);
+            return r.c(this.gift, var1.gift);
          }
       }
    }
@@ -61,17 +61,17 @@ public data class GiftMessageAccessory(messageId: MessageId, index: Int, gift: G
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.index;
-      val var2: GiftEmbed = this.gift;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("GiftMessageAccessory(messageId=");
-      var3.append(var4);
-      var3.append(", index=");
-      var3.append(var1);
-      var3.append(", gift=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: GiftEmbed = this.gift;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("GiftMessageAccessory(messageId=");
+      var4.append(var2);
+      var4.append(", index=");
+      var4.append(var1);
+      var4.append(", gift=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

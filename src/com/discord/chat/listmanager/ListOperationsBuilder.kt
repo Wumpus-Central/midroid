@@ -4,7 +4,7 @@ import com.discord.chat.listmanager.ListOperation.Change
 import com.discord.chat.listmanager.ListOperation.Insert
 import com.discord.chat.listmanager.ListOperation.Remove
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ListOperationsBuilder {
    private final val listOperations: MutableList<ListOperation> = new ArrayList()
@@ -88,7 +88,7 @@ public class ListOperationsBuilder {
    }
 
    public fun add(newOperation: ListOperation) {
-      q.h(var1, "newOperation");
+      r.h(var1, "newOperation");
       if (this.listOperations.isEmpty()) {
          this.listOperations.add(var1);
       } else {

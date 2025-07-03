@@ -1,15 +1,15 @@
 package com.discord.chat.presentation.list.delegate;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.presentation.list.item.SummarySeparatorChatListItem;
+import com.discord.chat.presentation.list.item.MessageItem;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class e implements OnClickListener {
-   public final SummarySeparatorDelegate j;
-   public final SummarySeparatorChatListItem k;
+public final class e implements Function0 {
+   public final RegularMessageDelegate j;
+   public final MessageItem k;
+   public final BaseChatListItemDelegate.Metadata l;
 
-   public final void onClick(View var1) {
-      SummarySeparatorDelegate.b(this.j, this.k, var1);
+   public final Object invoke() {
+      return RegularMessageDelegate.b(this.j, this.k, this.l);
    }
 }

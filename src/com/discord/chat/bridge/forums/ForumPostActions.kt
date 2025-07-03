@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.reaction.MessageReaction
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ForumPostActions(numDisplayedReactions: Int,
@@ -25,8 +25,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    public final val sharePrompt: PostSharePrompt?
 
    init {
-      q.h(var4, "followLabel");
-      q.h(var6, "shareLabel");
+      r.h(var4, "followLabel");
+      r.h(var6, "shareLabel");
       super();
       this.numDisplayedReactions = var1;
       this.isFollowing = var2;
@@ -80,8 +80,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       defaultReaction: MessageReaction? = var0.defaultReaction,
       sharePrompt: PostSharePrompt? = var0.sharePrompt
    ): ForumPostActions {
-      q.h(var4, "followLabel");
-      q.h(var6, "shareLabel");
+      r.h(var4, "followLabel");
+      r.h(var6, "shareLabel");
       return new ForumPostActions(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -96,18 +96,18 @@ public data class ForumPostActions(numDisplayedReactions: Int,
             return false;
          } else if (this.isFollowing != var1.isFollowing) {
             return false;
-         } else if (!q.c(this.followIcon, var1.followIcon)) {
+         } else if (!r.c(this.followIcon, var1.followIcon)) {
             return false;
-         } else if (!q.c(this.followLabel, var1.followLabel)) {
+         } else if (!r.c(this.followLabel, var1.followLabel)) {
             return false;
-         } else if (!q.c(this.shareIcon, var1.shareIcon)) {
+         } else if (!r.c(this.shareIcon, var1.shareIcon)) {
             return false;
-         } else if (!q.c(this.shareLabel, var1.shareLabel)) {
+         } else if (!r.c(this.shareLabel, var1.shareLabel)) {
             return false;
-         } else if (!q.c(this.defaultReaction, var1.defaultReaction)) {
+         } else if (!r.c(this.defaultReaction, var1.defaultReaction)) {
             return false;
          } else {
-            return q.c(this.sharePrompt, var1.sharePrompt);
+            return r.c(this.sharePrompt, var1.sharePrompt);
          }
       }
    }
@@ -149,31 +149,31 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var3: java.lang.String = this.followIcon;
+      val var9: java.lang.String = this.followIcon;
       val var7: java.lang.String = this.followLabel;
-      val var5: java.lang.String = this.shareIcon;
-      val var6: java.lang.String = this.shareLabel;
-      val var8: MessageReaction = this.defaultReaction;
-      val var4: PostSharePrompt = this.sharePrompt;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("ForumPostActions(numDisplayedReactions=");
-      var9.append(var1);
-      var9.append(", isFollowing=");
-      var9.append(var2);
-      var9.append(", followIcon=");
-      var9.append(var3);
-      var9.append(", followLabel=");
-      var9.append(var7);
-      var9.append(", shareIcon=");
-      var9.append(var5);
-      var9.append(", shareLabel=");
-      var9.append(var6);
-      var9.append(", defaultReaction=");
-      var9.append(var8);
-      var9.append(", sharePrompt=");
-      var9.append(var4);
-      var9.append(")");
-      return var9.toString();
+      val var6: java.lang.String = this.shareIcon;
+      val var3: java.lang.String = this.shareLabel;
+      val var5: MessageReaction = this.defaultReaction;
+      val var8: PostSharePrompt = this.sharePrompt;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForumPostActions(numDisplayedReactions=");
+      var4.append(var1);
+      var4.append(", isFollowing=");
+      var4.append(var2);
+      var4.append(", followIcon=");
+      var4.append(var9);
+      var4.append(", followLabel=");
+      var4.append(var7);
+      var4.append(", shareIcon=");
+      var4.append(var6);
+      var4.append(", shareLabel=");
+      var4.append(var3);
+      var4.append(", defaultReaction=");
+      var4.append(var5);
+      var4.append(", sharePrompt=");
+      var4.append(var8);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

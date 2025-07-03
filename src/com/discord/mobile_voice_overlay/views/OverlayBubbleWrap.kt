@@ -54,7 +54,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
 
    open fun OverlayBubbleWrap(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1);
       val var2: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
       var2.gravity = 51;
@@ -73,7 +73,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
          }
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
-            kotlin.jvm.internal.q.h(var1, "property");
+            kotlin.jvm.internal.r.h(var1, "property");
             val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
@@ -107,7 +107,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    open fun OverlayBubbleWrap(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
       val var3: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
       var3.gravity = 51;
@@ -126,7 +126,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
          }
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
-            kotlin.jvm.internal.q.h(var1, "property");
+            kotlin.jvm.internal.r.h(var1, "property");
             val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
@@ -160,7 +160,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    open fun OverlayBubbleWrap(var1: Context, var2: AttributeSet, var3: Int) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       val var4: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
       var4.gravity = 51;
@@ -179,7 +179,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
          }
 
          protected void afterChange(KProperty var1, java.lang.Boolean var2, java.lang.Boolean var3) {
-            kotlin.jvm.internal.q.h(var1, "property");
+            kotlin.jvm.internal.r.h(var1, "property");
             val var5: java.lang.Boolean = var3 as java.lang.Boolean;
             val var4: Boolean = var3 as java.lang.Boolean;
             if (var2 as java.lang.Boolean != var4) {
@@ -242,7 +242,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    @JvmStatic
    fun `touchDispatchSideEffectHandler$lambda$1`(var0: MotionEvent): Unit {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -253,32 +253,32 @@ public abstract class OverlayBubbleWrap : OverlayView {
       if (var1) {
          animateToCoordinate$default(this, this.actualPosition.x, this.actualPosition.y, null, 4, null);
       } else {
-         val var3: LayoutParams = this.windowLayoutParams;
-         val var4: Point = this.actualPosition;
+         val var4: LayoutParams = this.windowLayoutParams;
+         val var3: Point = this.actualPosition;
          this.windowLayoutParams.x = this.actualPosition.x;
-         var3.y = var4.y;
+         var4.y = var3.y;
          this.updateViewLayout();
       }
    }
 
    public open fun anchorOn(targetView: View) {
-      kotlin.jvm.internal.q.h(var1, "targetView");
-      val var4: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
-      val var5: Point = this.setAnchorAround(var4[0] - this.screenOffset[0], var4[1] - this.screenOffset[1]);
+      kotlin.jvm.internal.r.h(var1, "targetView");
+      val var3: IntArray = WindowUtils.INSTANCE.getCenterPointOnScreen(var1, new int[2]);
+      val var5: Point = this.setAnchorAround(var3[0] - this.screenOffset[0], var3[1] - this.screenOffset[1]);
       animateToCoordinate$default(this, var5.x, var5.y, null, 4, null);
    }
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
-      kotlin.jvm.internal.q.h(var3, "screenBounds");
-      val var5: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
+      kotlin.jvm.internal.r.h(var3, "screenBounds");
+      var var6: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var6 - this.getWidth()));
       val var10: Int = this.screenOffset[1];
-      val var12: Int = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var10, var2), var12 - this.getHeight()));
+      var6 = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var10, var2), var6 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
-      kotlin.jvm.internal.q.h(var1, "motionEvent");
+      kotlin.jvm.internal.r.h(var1, "motionEvent");
       val var2: Int = var1.getAction();
       if (var2 != 0) {
          if (var2 != 1) {
@@ -291,10 +291,10 @@ public abstract class OverlayBubbleWrap : OverlayView {
                   this.actualPosition.x = (int)var1.getRawX() - this.deltaX;
                   this.actualPosition.y = (int)var1.getRawY() - this.deltaY;
                   if (this.isAttachedToWindow() && this.anchorPosition == null) {
-                     val var4: LayoutParams = this.windowLayoutParams;
-                     val var3: Point = this.actualPosition;
+                     val var3: LayoutParams = this.windowLayoutParams;
+                     val var4: Point = this.actualPosition;
                      this.windowLayoutParams.x = this.actualPosition.x;
-                     var4.y = var3.y;
+                     var3.y = var4.y;
                      this.updateViewLayout();
                   }
                }
@@ -312,14 +312,14 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    protected fun getAllowedAreaBounds(context: Context): Rect {
-      kotlin.jvm.internal.q.h(var1, "context");
-      val var3: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
-      val var4: Rect = this.insetMargins;
-      var3.left = var3.left + this.insetMargins.left;
-      var3.right = var3.right - var4.right;
-      var3.top = var3.top + var4.top;
-      var3.bottom = var3.bottom - var4.bottom;
-      return var3;
+      kotlin.jvm.internal.r.h(var1, "context");
+      val var4: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
+      val var3: Rect = this.insetMargins;
+      var4.left = var4.left + this.insetMargins.left;
+      var4.right = var4.right - var3.right;
+      var4.top = var4.top + var3.top;
+      var4.bottom = var4.bottom - var3.bottom;
+      return var4;
    }
 
    public override fun getInitialLayoutParams(): LayoutParams {
@@ -369,7 +369,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
    }
 
    public open fun onInterceptTouchEvent(motionEvent: MotionEvent): Boolean {
-      kotlin.jvm.internal.q.h(var1, "motionEvent");
+      kotlin.jvm.internal.r.h(var1, "motionEvent");
       val var2: Boolean;
       if (var1.getAction() == 2) {
          var2 = this.isMoving();
@@ -405,7 +405,7 @@ public abstract class OverlayBubbleWrap : OverlayView {
    protected fun updateViewLayout() {
       if (this.isAttachedToWindow() && this.isManagedByWindow()) {
          val var1: Any = this.getContext().getSystemService("window");
-         kotlin.jvm.internal.q.f(var1, "null cannot be cast to non-null type android.view.WindowManager");
+         kotlin.jvm.internal.r.f(var1, "null cannot be cast to non-null type android.view.WindowManager");
          (var1 as WindowManager).updateViewLayout(this, this.windowLayoutParams);
       }
    }

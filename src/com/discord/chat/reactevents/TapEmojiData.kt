@@ -1,7 +1,5 @@
 package com.discord.chat.reactevents
 
-import A9.n
-import A9.s
 import com.discord.chat.bridge.contentnode.CustomEmojiContentNode
 import com.discord.chat.bridge.contentnode.EmojiContentNode
 import com.discord.chat.bridge.contentnode.UnicodeEmojiContentNode
@@ -9,13 +7,15 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.n
+import z9.s
 
 internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    private final val emoji: EmojiContentNode
 
    init {
-      q.h(var1, "emoji");
+      r.h(var1, "emoji");
       super();
       this.emoji = var1;
    }
@@ -25,7 +25,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
    }
 
    public fun copy(emoji: EmojiContentNode = var0.emoji): TapEmojiData {
-      q.h(var1, "emoji");
+      r.h(var1, "emoji");
       return new TapEmojiData(var1);
    }
 
@@ -35,7 +35,7 @@ internal data class TapEmojiData(emoji: EmojiContentNode) : ReactEvent {
       } else if (var1 !is TapEmojiData) {
          return false;
       } else {
-         return q.c(this.emoji, (var1 as TapEmojiData).emoji);
+         return r.c(this.emoji, (var1 as TapEmojiData).emoji);
       }
    }
 

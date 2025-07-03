@@ -1,6 +1,5 @@
 package com.discord.rlottie
 
-import A9.t
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION
@@ -13,7 +12,8 @@ import com.discord.rlottie.RLottieDrawable.PlaybackMode
 import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.t
 
 public open class RLottieImageView : m {
    private final var layerColors: HashMap<String, Int>?
@@ -23,17 +23,17 @@ public open class RLottieImageView : m {
    private final var playing: Boolean
    private final var startOnAttach: Boolean
 
-   public constructor(context: Context) : q.i(var1, "context") {
+   public constructor(context: Context) : r.i(var1, "context") {
       super(var1);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?) : q.i(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?) : r.i(var1, "context") {
       super(var1, var2);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
 
-   public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : q.i(var1, "context") {
+   public constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int = 0) : r.i(var1, "context") {
       super(var1, var2, var3);
       this.playbackMode = RLottieDrawable.PlaybackMode.FREEZE;
    }
@@ -44,10 +44,10 @@ public open class RLottieImageView : m {
       if (VERSION.SDK_INT >= 30) {
          var2 = a.a(var1);
          if (var2 == null) {
-            q.s();
+            r.s();
          }
 
-         q.d(var2, "display!!");
+         r.d(var2, "display!!");
       } else {
          val var3: Any = var1.getSystemService("window");
          if (var3 == null) {
@@ -55,7 +55,7 @@ public open class RLottieImageView : m {
          }
 
          var2 = (var3 as WindowManager).getDefaultDisplay();
-         q.d(var2, "(getSystemService(Contex…owManager).defaultDisplay");
+         r.d(var2, "(getSystemService(Contex…owManager).defaultDisplay");
       }
 
       return var2;
@@ -143,13 +143,13 @@ public open class RLottieImageView : m {
       colorReplacement: IntArray? = null,
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
-      q.i(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      q.d(var6, "context");
+      r.i(var5, "playbackMode");
       val var7: Context = this.getContext();
-      q.d(var7, "context");
+      r.d(var7, "context");
+      val var6: Context = this.getContext();
+      r.d(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;
@@ -180,9 +180,9 @@ public open class RLottieImageView : m {
    }
 
    public fun setAnimation(context: Context, file: File, width: Int, height: Int, playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP) {
-      q.i(var1, "context");
-      q.i(var2, "file");
-      q.i(var5, "playbackMode");
+      r.i(var1, "context");
+      r.i(var2, "file");
+      r.i(var5, "playbackMode");
       val var6: RLottieDrawable = new RLottieDrawable(var2, var3, var4, false, true, this.getDisplayCompat(var1).getRefreshRate(), null, 64, null);
       this.drawable = var6;
       this.playbackMode = var5;
@@ -195,13 +195,13 @@ public open class RLottieImageView : m {
    }
 
    public fun setLayerColor(layer: String, color: Int) {
-      q.i(var1, "layer");
+      r.i(var1, "layer");
       if (this.layerColors == null) {
          this.layerColors = new HashMap<>();
       }
 
       if (this.layerColors == null) {
-         q.s();
+         r.s();
       }
 
       this.layerColors.put(var1, var2);
@@ -211,7 +211,7 @@ public open class RLottieImageView : m {
    }
 
    public fun setPlaybackMode(playbackMode: PlaybackMode) {
-      q.i(var1, "playbackMode");
+      r.i(var1, "playbackMode");
       this.playbackMode = var1;
       if (this.drawable != null) {
          this.drawable.setPlaybackMode(var1);

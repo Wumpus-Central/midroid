@@ -19984,12 +19984,21 @@
   ],
   "3XVNys": "Kopioi kutsulinkki",
   "VNe8Pz": "Muokkaa kutsulinkkiä.",
+  "Ckxb6u": "Lähetä liittymispyyntö",
   "2Gbof3": "Kutsu vanhentunut",
   "jfrMtr": "Täynnä",
+  "x1UXGR": "Peli on päättynyt. Aloitetaanko uusi?",
   "pkq6Vl": "Pelikutsu",
   "hC/Ze3": "Kutsu liittymään",
   "/8czHx": [
     "Kutsu kuuntelemaan palvelussa ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Kutsu katsomaan tätä: ",
     [
       1,
       "name"
@@ -20002,7 +20011,127 @@
   "/ak8Mj": "Liity PlayStationilla",
   "HEY5dX": "Liity Xboxin kautta",
   "84qx9v": "Ryhmäkuuntelu on ohi!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " pyytää liittyä ryhmääsi sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " pyytää päästä liittymään ryhmääsi sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "B9kbnZ": "Ryhmäkatselu on ohi!",
+  "IA6uDQ": [
+    "Olet lähettämässä pyynnön liittyä ryhmään sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Pyydät lupaa liittyä käyttäjän ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ryhmään sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Lähetit pyynnön liittyä ryhmään sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "JddpNz": [
+    "Lähetit pyynnön liittyä käyttäjän ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " ryhmään sovelluksessa ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Jaa tämä linkki kavereillesi, niin he liittyvät palvelimelle automaattisesti.",
   "tQc0l5": "Kutsu kaveri palvelimellesi!",
   "TfuB9P": [
@@ -30635,6 +30764,7 @@
   "IKE48v": "Uusi jäsen",
   "VaCdhY": "Uusi Discord-käyttäjä",
   "CQmziY": "Vierailija (ei jäsen)",
+  "EkokLy": "Pakollinen",
   "WnX4Jy": "Lähetä sähköposti uudelleen",
   "lm1UKi": "Lähetä vahvistussähköposti uudelleen",
   "yBZMsb": "Palauta",
@@ -33626,9 +33756,9 @@
   "7YZ/Sk": "Vaihda takakameraan",
   "/R1SBw": "Vaihda etukameraan",
   "BkuOOz": "Synkronoi",
-  "GAlmIS": "Tämän ottaminen käyttöön korvaa edellä olevat muiden sovellusten (työpöytäsovellus ja selain mukaan lukien) ulkoasuasetukset.",
   "3340dX": "Synkronoi ohjelmien välillä.",
   "p4IKEx": "Tämän ottaminen käyttöön korvaa muiden sovellusten (työpöytäsovellus ja selain mukaan lukien) teksti- ja kuva-asetukset.",
+  "CRtkeH": "Tämän asetuksen ottaminen käyttöön korvaa valitsemasi teeman kaikissa sovelluksissa, myös työpöytä- ja selainversioissa.",
   "+KCMSk": "Synkronoi kaverit Discordiin",
   "NVwuHh": "Synkronoi nyt",
   "eW8Gy8": "Synkronoi käyttöoikeudet",
@@ -36939,8 +37069,127 @@
   ],
   "FMbL3t": "Tyhjennys epäonnistui",
   "2TbM/P": "Pelaa peliä",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " kuuntelee"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " kuuntelee"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " kuuntelee"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " kuuntelee"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Kuuntelee:",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    ",\n",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Pelaa:",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " pelaa"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " pelaa"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " pelaa"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " pelaa"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Toista palvelussa ",
     [

@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.messageframe
 
-import I9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f(with = MessageFrameType.Serializer::class)
 public enum class MessageFrameType(serialNumber: Int) : IntEnum {
@@ -43,5 +43,5 @@ public enum class MessageFrameType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(G.b(MessageFrameType.class), MessageFrameType.UNKNOWN)
+   public object Serializer : IntEnumSerializer(H.b(MessageFrameType.class), MessageFrameType.UNKNOWN)
 }

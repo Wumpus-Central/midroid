@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_egyugbedwsr2zcdfx62cmu2msq_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -299,6 +299,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_thememidnighticon;
       public static int design_components_icon_native_redesign_generated_images_threadicon;
       public static int design_components_icon_native_redesign_generated_images_threadlockicon;
+      public static int design_components_icon_native_redesign_generated_images_threadminusicon;
       public static int design_components_icon_native_redesign_generated_images_threadplusicon;
       public static int design_components_icon_native_redesign_generated_images_thumbsdownicon;
       public static int design_components_icon_native_redesign_generated_images_thumbsupicon;
@@ -662,7 +663,6 @@ public final class R {
       public static int images_native_icons_ic_controller_24px;
       public static int images_native_icons_ic_crop;
       public static int images_native_icons_ic_crown_16px;
-      public static int images_native_icons_ic_discoverable_globe_guild_badge_light;
       public static int images_native_icons_ic_discoverable_guild_badge_dark_24px;
       public static int images_native_icons_ic_discoverable_guild_badge_light_24px;
       public static int images_native_icons_ic_discoverable_guild_badge_premium_24px;

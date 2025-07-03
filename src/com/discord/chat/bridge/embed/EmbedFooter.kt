@@ -1,10 +1,10 @@
 package com.discord.chat.bridge.embed
 
-import A9.j
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import q1.d
-import tb.f
+import sb.f
+import z9.j
 
 @f
 public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = null, content: String? = null) {
@@ -26,7 +26,7 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
       this.iconURL = var1;
       this.iconProxyURL = var2;
       this.content = var3;
-      this.imageUrl$delegate = j.b(new d(this));
+      this.imageUrl$delegate = j.a(new d(this));
    }
 
    @JvmStatic
@@ -62,12 +62,12 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.iconURL, var1.iconURL)) {
+         if (!r.c(this.iconURL, var1.iconURL)) {
             return false;
-         } else if (!q.c(this.iconProxyURL, var1.iconProxyURL)) {
+         } else if (!r.c(this.iconProxyURL, var1.iconProxyURL)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
@@ -96,18 +96,18 @@ public data class EmbedFooter(iconURL: String? = null, iconProxyURL: String? = n
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.iconURL;
-      val var2: java.lang.String = this.iconProxyURL;
-      val var1: java.lang.String = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EmbedFooter(iconURL=");
-      var3.append(var4);
-      var3.append(", iconProxyURL=");
-      var3.append(var2);
-      var3.append(", content=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.iconURL;
+      val var1: java.lang.String = this.iconProxyURL;
+      val var4: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("EmbedFooter(iconURL=");
+      var2.append(var3);
+      var2.append(", iconProxyURL=");
+      var2.append(var1);
+      var2.append(", content=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1,6 +1,5 @@
 package com.discord.media
 
-import A9.s
 import android.database.ContentObserver
 import android.database.Cursor
 import android.net.Uri
@@ -15,8 +14,9 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -24,10 +24,10 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
    private final val listener: <unrepresentable>
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("photoLibraryChanged", G.b(PhotoLibraryChangedEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("photoLibraryChanged", H.b(PhotoLibraryChangedEvent.class)));
       this.listener = new ContentObserver(this, new Handler(Looper.getMainLooper())) {
          final PhotoLibraryHelperModule this$0;
 
@@ -59,16 +59,16 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun addListener(type: String) {
-      q.h(var1, "type");
-      if (q.c(var1, "photoLibraryChanged")) {
+      r.h(var1, "type");
+      if (r.c(var1, "photoLibraryChanged")) {
          this.register();
       }
    }
 
    @ReactMethod
    public fun doesAttachmentExist(uri: String, promise: Promise) {
-      q.h(var1, "uri");
-      q.h(var2, "promise");
+      r.h(var1, "uri");
+      r.h(var2, "promise");
       val var5: Cursor = this.reactContext.getContentResolver().query(Uri.parse(var1), new java.lang.String[]{"_id"}, null, null, null, null);
       var var4: Boolean = false;
       val var3: Int;
@@ -94,16 +94,16 @@ public class PhotoLibraryHelperModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun registerEventListener(type: String) {
-      q.h(var1, "type");
-      if (q.c(var1, "photoLibraryChanged")) {
+      r.h(var1, "type");
+      if (r.c(var1, "photoLibraryChanged")) {
          this.register();
       }
    }
 
    @ReactMethod
    public fun removeEventListener(type: String) {
-      q.h(var1, "type");
-      if (q.c(var1, "photoLibraryChanged")) {
+      r.h(var1, "type");
+      if (r.c(var1, "photoLibraryChanged")) {
          this.unregister();
       }
    }

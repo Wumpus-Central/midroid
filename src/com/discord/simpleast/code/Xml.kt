@@ -1,6 +1,5 @@
 package com.discord.simpleast.code
 
-import A9.s
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -10,7 +9,8 @@ import com.discord.simpleast.core.parser.Rule
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 public object Xml {
    public final val PATTERN_XML_COMMENT: Pattern
@@ -22,15 +22,15 @@ public object Xml {
    @JvmStatic
    fun {
       var var0: Pattern = Pattern.compile("^<!--[\\s\\S]*?-->", 32);
-      q.g(var0, "Pattern.compile(\"\"\"^<!--…*?-->\"\"\", Pattern.DOTALL)");
+      r.g(var0, "Pattern.compile(\"\"\"^<!--…*?-->\"\"\", Pattern.DOTALL)");
       PATTERN_XML_COMMENT = var0;
       var0 = Pattern.compile("^<([\\s\\S]+?)(?:>(.*?)<\\/([\\s\\S]+?))?>", 32);
-      q.g(var0, "Pattern.compile(\n      \"…?))?>\"\"\", Pattern.DOTALL)");
+      r.g(var0, "Pattern.compile(\n      \"…?))?>\"\"\", Pattern.DOTALL)");
       PATTERN_XML_TAG = var0;
    }
 
    public fun <RC, S> createTagRule(codeStyleProviders: CodeStyleProviders<RC>): Rule<RC, Node<RC>, S> {
-      q.h(var1, "codeStyleProviders");
+      r.h(var1, "codeStyleProviders");
       return new Rule<RC, Node<RC>, S>(this, var1, PATTERN_XML_TAG) {
          final CodeStyleProviders $codeStyleProviders;
          final Xml this$0;
@@ -43,10 +43,10 @@ public object Xml {
 
          @Override
          public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
-            q.h(var1, "matcher");
-            q.h(var2, "parser");
+            r.h(var1, "matcher");
+            r.h(var2, "parser");
             val var4: java.lang.String = var1.group(1);
-            q.e(var4);
+            r.e(var4);
             val var6: java.lang.String = var1.group(3);
             val var5: ParseSpec;
             if (var1.group(2) != null) {
@@ -66,8 +66,8 @@ public object Xml {
       public final val opening: String
 
       init {
-         q.h(var1, "opening");
-         q.h(var3, "codeStyleProviders");
+         r.h(var1, "opening");
+         r.h(var3, "codeStyleProviders");
          super();
          this.opening = var1;
          this.closing = var2;
@@ -75,7 +75,7 @@ public object Xml {
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {
-         q.h(var1, "builder");
+         r.h(var1, "builder");
          var var7: java.lang.String = this.opening;
          val var6: Int = this.opening.length();
          var var4: Int = 0;
@@ -108,13 +108,13 @@ public object Xml {
             }
 
             var7 = this.opening.substring(0, var5);
-            q.g(var7, "(this as java.lang.Strin…ing(startIndex, endIndex)");
+            r.g(var7, "(this as java.lang.Strin…ing(startIndex, endIndex)");
             if (this.opening == null) {
                throw new NullPointerException("null cannot be cast to non-null type java.lang.String");
             }
 
             val var19: java.lang.String = this.opening.substring(var5);
-            q.g(var19, "(this as java.lang.String).substring(startIndex)");
+            r.g(var19, "(this as java.lang.String).substring(startIndex)");
             var17 = s.a(var7, var19);
          } else {
             var17 = s.a(this.opening, "");

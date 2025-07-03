@@ -1,20 +1,20 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
    public final val sticker: Sticker
    public final val messageId: MessageId
 
    fun TapStickerData(var1: Sticker, var2: java.lang.String) {
-      q.h(var1, "sticker");
-      q.h(var2, "messageId");
+      r.h(var1, "sticker");
+      r.h(var2, "messageId");
       super();
       this.sticker = var1;
       this.messageId = var2;
@@ -29,8 +29,8 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
    }
 
    public fun copy(sticker: Sticker = ..., messageId: MessageId = ...): TapStickerData {
-      q.h(var1, "sticker");
-      q.h(var2, "messageId");
+      r.h(var1, "sticker");
+      r.h(var2, "messageId");
       return new TapStickerData(var1, var2, null);
    }
 
@@ -41,7 +41,7 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.sticker, var1.sticker)) {
+         if (!r.c(this.sticker, var1.sticker)) {
             return false;
          } else {
             return MessageId.equals-impl0(this.messageId, var1.messageId);
@@ -61,13 +61,13 @@ public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapSt
    }
 
    public override fun toString(): String {
-      val var1: Sticker = this.sticker;
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Sticker = this.sticker;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapStickerData(sticker=");
-      var3.append(var1);
-      var3.append(", messageId=");
       var3.append(var2);
+      var3.append(", messageId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class StrikethroughContentNode(content: List<ContentNode>) : ContentNode {
    public final val content: List<ContentNode>
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
    }
@@ -19,7 +19,7 @@ public data class StrikethroughContentNode(content: List<ContentNode>) : Content
    }
 
    public fun copy(content: List<ContentNode> = var0.content): StrikethroughContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new StrikethroughContentNode(var1);
    }
 
@@ -29,7 +29,7 @@ public data class StrikethroughContentNode(content: List<ContentNode>) : Content
       } else if (var1 !is StrikethroughContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as StrikethroughContentNode).content);
+         return r.c(this.content, (var1 as StrikethroughContentNode).content);
       }
    }
 
@@ -38,12 +38,12 @@ public data class StrikethroughContentNode(content: List<ContentNode>) : Content
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("StrikethroughContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("StrikethroughContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

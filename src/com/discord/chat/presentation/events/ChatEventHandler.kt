@@ -15,7 +15,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import com.discord.reactions.ReactionView.Reaction
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public interface ChatEventHandler {
    public val onMessageLongPressed: ((MessageId, ChannelId, Int?, MediaType?, String?, Int?) -> Unit)?
@@ -313,9 +313,6 @@ public interface ChatEventHandler {
    public abstract fun onTapToggleBlockedMessages(messageId: MessageId) {
    }
 
-   public abstract fun onTapUploadProgressClose(fileId: String) {
-   }
-
    public abstract fun onTapUsername(messageId: MessageId, userId: UserId) {
    }
 
@@ -341,8 +338,8 @@ public interface ChatEventHandler {
          isVoiceMessage: Boolean,
          attachmentId: String
       ) {
-         q.h(var1, "messageId");
-         q.h(var8, "attachmentId");
+         r.h(var1, "messageId");
+         r.h(var8, "attachmentId");
       }
 
       public override fun mediaAttachmentPlaybackStarted(
@@ -353,8 +350,8 @@ public interface ChatEventHandler {
          isVoiceMessage: Boolean,
          attachmentId: String
       ) {
-         q.h(var1, "messageId");
-         q.h(var7, "attachmentId");
+         r.h(var1, "messageId");
+         r.h(var7, "attachmentId");
       }
 
       public override fun onCompleteFirstLayout() {
@@ -369,46 +366,46 @@ public interface ChatEventHandler {
       }
 
       public override fun onInitiateEdit(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onInitiateReply(messageId: MessageId, channelId: ChannelId, triggerHaptic: Boolean?, location: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onInitiateThread(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onLinkClicked(messageId: MessageId, node: LinkContentNode) {
-         q.h(var1, "messageId");
-         q.h(var2, "node");
+         r.h(var1, "messageId");
+         r.h(var2, "node");
       }
 
       public override fun onLinkClicked(messageId: MessageId, url: String, title: String?) {
-         q.h(var1, "messageId");
-         q.h(var2, "url");
+         r.h(var1, "messageId");
+         r.h(var2, "url");
       }
 
       public override fun onLinkLongClicked(node: LinkContentNode) {
-         q.h(var1, "node");
+         r.h(var1, "node");
       }
 
       public override fun onLongPressAttachmentLink(attachmentUrl: String, attachmentName: String) {
-         q.h(var1, "attachmentUrl");
-         q.h(var2, "attachmentName");
+         r.h(var1, "attachmentUrl");
+         r.h(var2, "attachmentName");
       }
 
       public override fun onLongPressAvatar(messageId: MessageId, userId: UserId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onLongPressChannel(channelId: String, guildId: String?, messageId: String?, originalLink: String?) {
-         q.h(var1, "channelId");
+         r.h(var1, "channelId");
       }
 
       public override fun onLongPressCommand(node: CommandMentionContentNode) {
-         q.h(var1, "node");
+         r.h(var1, "node");
       }
 
       public override fun onLongPressPollImage(
@@ -421,139 +418,139 @@ public interface ChatEventHandler {
          viewY: Int,
          viewResizeMode: ViewResizeMode
       ) {
-         q.h(var3, "messageId");
-         q.h(var4, "attachmentId");
-         q.h(var9, "viewResizeMode");
+         r.h(var3, "messageId");
+         r.h(var4, "attachmentId");
+         r.h(var9, "viewResizeMode");
       }
 
       public override fun onLongPressReaction(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onLongPressUsername(messageId: MessageId, userId: UserId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onMediaPlayFinishedAnalytics(analytics: MediaPlayFinishedAnalytics) {
-         q.h(var1, "analytics");
+         r.h(var1, "analytics");
       }
 
       public override fun onScrollStateChanged(scrollState: ScrollState, changesetUpdateId: Int) {
-         q.h(var1, "scrollState");
+         r.h(var1, "scrollState");
       }
 
       public override fun onStickerClicked(sticker: Sticker, messageId: MessageId) {
-         q.h(var1, "sticker");
-         q.h(var2, "messageId");
+         r.h(var1, "sticker");
+         r.h(var2, "messageId");
       }
 
       public override fun onStickerLongClicked(sticker: Sticker, messageId: MessageId) {
-         q.h(var1, "sticker");
-         q.h(var2, "messageId");
+         r.h(var1, "sticker");
+         r.h(var2, "messageId");
       }
 
       public override fun onTapAppMessageEmbed(messageId: String, actionId: String, appId: String, embedUrl: String) {
-         q.h(var1, "messageId");
-         q.h(var2, "actionId");
-         q.h(var3, "appId");
-         q.h(var4, "embedUrl");
+         r.h(var1, "messageId");
+         r.h(var2, "actionId");
+         r.h(var3, "appId");
+         r.h(var4, "embedUrl");
       }
 
       public override fun onTapAttachmentLink(attachmentUrl: String) {
-         q.h(var1, "attachmentUrl");
+         r.h(var1, "attachmentUrl");
       }
 
       public override fun onTapAutoModerationActions(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapAutoModerationFeedback(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapAvatar(messageId: MessageId, userId: UserId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapButtonActionComponent(messageId: MessageId, componentId: String) {
-         q.h(var1, "messageId");
-         q.h(var2, "componentId");
+         r.h(var1, "messageId");
+         r.h(var2, "componentId");
       }
 
       public override fun onTapCall(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapCancelUploadItem(uploaderId: String, itemId: String) {
-         q.h(var1, "uploaderId");
-         q.h(var2, "itemId");
+         r.h(var1, "uploaderId");
+         r.h(var2, "itemId");
       }
 
       public override fun onTapChannel(channelId: String, guildId: String?, messageId: String?) {
-         q.h(var1, "channelId");
+         r.h(var1, "channelId");
       }
 
       public override fun onTapChannelPromptButton(messageId: MessageId, channelId: ChannelId, buttonType: String) {
-         q.h(var1, "messageId");
-         q.h(var4, "buttonType");
+         r.h(var1, "messageId");
+         r.h(var4, "buttonType");
       }
 
       public override fun onTapClanTagChiplet(guildId: GuildId) {
       }
 
       public override fun onTapCommand(node: CommandMentionContentNode) {
-         q.h(var1, "node");
+         r.h(var1, "node");
       }
 
       public override fun onTapConnectionsRoleTag(userId: String, guildId: String, channelId: String, roleId: String) {
-         q.h(var1, "userId");
-         q.h(var2, "guildId");
-         q.h(var3, "channelId");
-         q.h(var4, "roleId");
+         r.h(var1, "userId");
+         r.h(var2, "guildId");
+         r.h(var3, "channelId");
+         r.h(var4, "roleId");
       }
 
       public override fun onTapContentInventoryEntryEmbed(messageId: MessageId, authorId: UserId, contentId: String, tappedElement: String) {
-         q.h(var1, "messageId");
-         q.h(var4, "contentId");
-         q.h(var5, "tappedElement");
+         r.h(var1, "messageId");
+         r.h(var4, "contentId");
+         r.h(var5, "tappedElement");
       }
 
       public override fun onTapCopyText(text: CharSequence) {
-         q.h(var1, "text");
+         r.h(var1, "text");
       }
 
       public override fun onTapCtaButton(channelId: ChannelId, messageId: MessageId, callback: String) {
-         q.h(var3, "messageId");
-         q.h(var4, "callback");
+         r.h(var3, "messageId");
+         r.h(var4, "callback");
       }
 
       public override fun onTapDismissMediaPostSharePrompt(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapEmoji(emoji: EmojiContentNode) {
-         q.h(var1, "emoji");
+         r.h(var1, "emoji");
       }
 
       public override fun onTapFollowForumPost(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapForwardFooter(snapshotIndex: Int, channelId: ChannelId, messageId: MessageId) {
-         q.h(var4, "messageId");
+         r.h(var4, "messageId");
       }
 
       public override fun onTapGameIcon(gameApplicationId: String, timestamp: String) {
-         q.h(var1, "gameApplicationId");
-         q.h(var2, "timestamp");
+         r.h(var1, "gameApplicationId");
+         r.h(var2, "timestamp");
       }
 
       public override fun onTapGiftCodeAccept(giftCode: String, messageId: MessageId?) {
-         q.h(var1, "giftCode");
+         r.h(var1, "giftCode");
       }
 
       public override fun onTapGiftCodeEmbed(giftCode: String) {
-         q.h(var1, "giftCode");
+         r.h(var1, "giftCode");
       }
 
       public override fun onTapImage(
@@ -570,13 +567,13 @@ public interface ChatEventHandler {
          componentId: String?,
          componentMediaIndex: Int?
       ) {
-         q.h(var1, "messageId");
-         q.h(var3, "type");
-         q.h(var8, "viewResizeMode");
+         r.h(var1, "messageId");
+         r.h(var3, "type");
+         r.h(var8, "viewResizeMode");
       }
 
       public override fun onTapInlineCode(node: InlineCodeContentNode) {
-         q.h(var1, "node");
+         r.h(var1, "node");
       }
 
       public override fun onTapInlineForward(
@@ -587,24 +584,24 @@ public interface ChatEventHandler {
          triggerHaptic: Boolean?,
          location: String?
       ) {
-         q.h(var3, "messageId");
-         q.h(var4, "targetKind");
+         r.h(var3, "messageId");
+         r.h(var4, "targetKind");
       }
 
       public override fun onTapInviteEmbed(messageId: MessageId, index: Int, primary: Boolean?, secondary: Boolean?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapInviteEmbedAccept(messageId: MessageId, index: Int) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapInviteToSpeak(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapJoinActivity(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapLoadMessagesAfter() {
@@ -614,135 +611,131 @@ public interface ChatEventHandler {
       }
 
       public override fun onTapMention(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) {
-         q.h(var2, "channelId");
+         r.h(var2, "channelId");
       }
 
       public override fun onTapMessageReply(channelId: ChannelId, originId: MessageId) {
-         q.h(var3, "originId");
+         r.h(var3, "originId");
       }
 
       public override fun onTapObscuredMediaLearnMore(messageId: MessageId, channelId: ChannelId, attachmentId: String?, embedId: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapObscuredMediaToggle(messageId: MessageId, channelId: ChannelId, isReveal: Boolean, attachmentId: String?, embedId: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapOpTag() {
       }
 
       public override fun onTapPollAction(channelId: ChannelId, messageId: MessageId, type: String) {
-         q.h(var3, "messageId");
-         q.h(var4, "type");
+         r.h(var3, "messageId");
+         r.h(var4, "type");
       }
 
       public override fun onTapPollAnswer(channelId: ChannelId, messageId: MessageId, answerId: String) {
-         q.h(var3, "messageId");
-         q.h(var4, "answerId");
+         r.h(var3, "messageId");
+         r.h(var4, "answerId");
       }
 
       public override fun onTapPollSubmitVote(channelId: ChannelId, messageId: MessageId) {
-         q.h(var3, "messageId");
+         r.h(var3, "messageId");
       }
 
       public override fun onTapPostPreviewEmbed(guildId: GuildId, parentChannelId: ChannelId, threadId: ChannelId, messageId: MessageId) {
-         q.h(var7, "messageId");
+         r.h(var7, "messageId");
       }
 
       public override fun onTapReaction(messageId: MessageId, reaction: Reaction?, isBurst: Boolean?, location: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapReactionOverflow(messageId: MessageId, channelId: ChannelId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapReferralRedeem(referralId: String?) {
       }
 
       public override fun onTapRemix(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapRoleIcon(roleName: String, roleIconSource: String) {
-         q.h(var1, "roleName");
-         q.h(var2, "roleIconSource");
+         r.h(var1, "roleName");
+         r.h(var2, "roleIconSource");
       }
 
       public override fun onTapSafetyPolicyNoticeEmbed(classificationId: String) {
-         q.h(var1, "classificationId");
+         r.h(var1, "classificationId");
       }
 
       public override fun onTapSafetySystemNotificationCta(ctaType: String, ctaKey: String) {
-         q.h(var1, "ctaType");
-         q.h(var2, "ctaKey");
+         r.h(var1, "ctaType");
+         r.h(var2, "ctaKey");
       }
 
       public override fun onTapSeeMore(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapSelectActionComponent(messageId: MessageId, componentId: String) {
-         q.h(var1, "messageId");
-         q.h(var2, "componentId");
+         r.h(var1, "messageId");
+         r.h(var2, "componentId");
       }
 
       public override fun onTapShareForumPost(channelId: ChannelId, guildId: GuildId) {
       }
 
       public override fun onTapShowAltText(description: String) {
-         q.h(var1, "description");
+         r.h(var1, "description");
       }
 
       public override fun onTapSoundmoji(node: SoundmojiContentNode) {
-         q.h(var1, "node");
+         r.h(var1, "node");
       }
 
       public override fun onTapSummary(channelId: ChannelId, messageId: MessageId, summaryId: String) {
-         q.h(var3, "messageId");
-         q.h(var4, "summaryId");
+         r.h(var3, "messageId");
+         r.h(var4, "summaryId");
       }
 
       public override fun onTapSummaryJump(channelId: ChannelId, messageId: MessageId, summaryId: String) {
-         q.h(var3, "messageId");
-         q.h(var4, "summaryId");
+         r.h(var3, "messageId");
+         r.h(var4, "summaryId");
       }
 
       public override fun onTapSuppressNotificationsIcon() {
       }
 
       public override fun onTapTag(messageId: MessageId, channelId: ChannelId, tagType: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapThreadEmbed(messageId: MessageId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapTimestamp(timestamp: String) {
-         q.h(var1, "timestamp");
+         r.h(var1, "timestamp");
       }
 
       public override fun onTapToggleBlockedMessages(messageId: MessageId) {
-         q.h(var1, "messageId");
-      }
-
-      public override fun onTapUploadProgressClose(fileId: String) {
-         q.h(var1, "fileId");
+         r.h(var1, "messageId");
       }
 
       public override fun onTapUsername(messageId: MessageId, userId: UserId) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
 
       public override fun onWelcomeReplyClicked(sticker: Sticker, messageId: MessageId) {
-         q.h(var1, "sticker");
-         q.h(var2, "messageId");
+         r.h(var1, "sticker");
+         r.h(var2, "messageId");
       }
 
       public override fun voiceMessagePlaybackFailed(messageId: MessageId, errorMessage: String?) {
-         q.h(var1, "messageId");
+         r.h(var1, "messageId");
       }
    }
 }

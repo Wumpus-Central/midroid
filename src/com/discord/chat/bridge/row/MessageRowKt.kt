@@ -1,6 +1,5 @@
 package com.discord.chat.bridge.row
 
-import A9.n
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
@@ -16,7 +15,8 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.n
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,
@@ -26,8 +26,8 @@ public fun MessageBase.toChatListMessageItem(
    reactTag: Int? = null,
    backgroundHighlight: BackgroundHighlight? = null
 ): ChatListItem {
-   q.h(var0, "<this>");
-   q.h(var2, "messageContext");
+   r.h(var0, "<this>");
+   r.h(var2, "messageContext");
    val var8: Any;
    if (var0 is Message) {
       val var7: Message = var0 as Message;
@@ -54,7 +54,7 @@ public fun MessageBase.toChatListMessageItem(
 }
 
 public fun MessageRow.toChatListMessageItem(): ChatListItem {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var3: MessageBase = var0.getMessage();
    val var4: MessageFrame = var0.getMessageFrame();
    val var2: MessageFrame = var0.getMessageFrame();

@@ -21,42 +21,42 @@ public class RoleSubscriptionPurchaseView  public constructor(context: Context, 
    private final val binding: RoleSubscriptionPurchaseViewBinding
 
    fun RoleSubscriptionPurchaseView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun RoleSubscriptionPurchaseView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       val var5: RoleSubscriptionPurchaseViewBinding = RoleSubscriptionPurchaseViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
+      kotlin.jvm.internal.r.g(var5, "inflate(...)");
       this.binding = var5;
       var var4: TextView = var5.roleSubscriptionWelcome;
-      kotlin.jvm.internal.q.e(var5.roleSubscriptionWelcome);
+      kotlin.jvm.internal.r.e(var5.roleSubscriptionWelcome);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getStatusPositiveText());
       var4 = var5.roleSubscriptionPurchaserUsername;
-      kotlin.jvm.internal.q.e(var5.roleSubscriptionPurchaserUsername);
+      kotlin.jvm.internal.r.e(var5.roleSubscriptionPurchaserUsername);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryExtraBold);
       SetTextSizeSpKt.setTextSizeSp(var4, 20.0F);
       var4.setTextColor(ThemeManagerKt.getTheme().getStatusPositiveText());
       val var7: SimpleDraweeView = var5.roleSubscriptionPurchaseBadge;
-      kotlin.jvm.internal.q.g(var5.roleSubscriptionPurchaseBadge, "roleSubscriptionPurchaseBadge");
+      kotlin.jvm.internal.r.g(var5.roleSubscriptionPurchaseBadge, "roleSubscriptionPurchaseBadge");
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.RoleSubscriptionBadge);
       val var8: SimpleDraweeView = var5.roleSubscriptionPurchaseLanyard;
-      kotlin.jvm.internal.q.g(var5.roleSubscriptionPurchaseLanyard, "roleSubscriptionPurchaseLanyard");
+      kotlin.jvm.internal.r.g(var5.roleSubscriptionPurchaseLanyard, "roleSubscriptionPurchaseLanyard");
       ReactAssetUtilsKt.setReactAsset(var8, ReactAsset.RoleSubscriptionLanyard);
       val var9: SimpleDraweeView = var5.roleSubscriptionPurchaseCardBg;
-      kotlin.jvm.internal.q.g(var5.roleSubscriptionPurchaseCardBg, "roleSubscriptionPurchaseCardBg");
+      kotlin.jvm.internal.r.g(var5.roleSubscriptionPurchaseCardBg, "roleSubscriptionPurchaseCardBg");
       ReactAssetUtilsKt.setReactAsset(var9, ReactAsset.RoleSubscriptionPurchaseCardBg);
       val var10: SimpleDraweeView = var5.roleSubscriptionPurchaserAvatar;
-      kotlin.jvm.internal.q.g(var5.roleSubscriptionPurchaserAvatar, "roleSubscriptionPurchaserAvatar");
+      kotlin.jvm.internal.r.g(var5.roleSubscriptionPurchaserAvatar, "roleSubscriptionPurchaserAvatar");
       ViewClippingUtilsKt.clipToCircle(var10);
       var5.roleSubscriptionWelcome.setText(I18nUtilsKt.i18nFormat$default(var1, I18nMessage.ROLE_SUBSCRIPTION_WELCOME_LABEL, null, 2, null));
    }

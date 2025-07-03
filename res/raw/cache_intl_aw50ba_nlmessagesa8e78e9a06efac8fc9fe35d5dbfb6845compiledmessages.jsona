@@ -19990,8 +19990,10 @@
   ],
   "3XVNys": "Kopieer uitnodigingslink",
   "VNe8Pz": "Bewerk uitnodigingslink.",
+  "Ckxb6u": "Vragen om deel te nemen",
   "2Gbof3": "Uitnodiging vervallen",
   "jfrMtr": "Vol",
+  "x1UXGR": "Het spel is geëindigd. Een nieuw spel starten?",
   "pkq6Vl": "Game-uitnodiging",
   "hC/Ze3": "Uitnodiging om mee te doen",
   "/8czHx": [
@@ -20001,6 +20003,14 @@
       "name"
     ]
   ],
+  "BBJXVl": [
+    "Uitnodiging om ",
+    [
+      1,
+      "name"
+    ],
+    " te bekijken"
+  ],
   "KC26NT": "Lid geworden",
   "5crb4u": "Deelnemen via Android",
   "c3EWuL": "Deelnemen via desktop-app",
@@ -20008,7 +20018,131 @@
   "/ak8Mj": "Deelnemen via PlayStation",
   "HEY5dX": "Deelnemen via Xbox",
   "84qx9v": "Het luisterfeest is voorbij!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " vroeg om deel te nemen aan je ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " vraagt om deel te nemen aan je ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party"
+  ],
   "B9kbnZ": "Het meekijkfeest is voorbij!",
+  "IA6uDQ": [
+    "Je vraagt om deel te nemen aan een ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party"
+  ],
+  "gYVkSU": [
+    "Je vraagt om mee te doen met de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party van ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Je hebt gevraagd om deel te nemen aan een ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party"
+  ],
+  "JddpNz": [
+    "Je hebt gevraagd om deel te nemen aan de ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    "-party van ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Deel deze link met je vrienden, dan worden ze automatisch lid van je server.",
   "tQc0l5": "Nodig een vriend(in) uit voor je server!",
   "TfuB9P": [
@@ -30621,6 +30755,7 @@
   "IKE48v": "Nieuw lid",
   "VaCdhY": "Nieuw op Discord",
   "CQmziY": "Bezoeker (geen lid)",
+  "EkokLy": "Vereist",
   "WnX4Jy": "E-mail opnieuw sturen",
   "lm1UKi": "Verificatiemail opnieuw sturen",
   "yBZMsb": "Resetten",
@@ -33622,9 +33757,9 @@
   "7YZ/Sk": "Overschakelen naar de camera aan de achterkant",
   "/R1SBw": "Overschakelen naar de camera aan de voorkant",
   "BkuOOz": "Synchroniseren",
-  "GAlmIS": "Als je dit inschakelt, worden de bovenstaande weergave-instellingen op alle andere clients, inclusief desktop en browser, overschreven.",
   "3340dX": "Synchroniseren tussen clients.",
   "p4IKEx": "Als je dit inschakelt, worden de tekst- en afbeeldingsinstellingen op alle andere clients, inclusief het bureaublad en de browser, overschreven.",
+  "CRtkeH": "Als je dit inschakelt, wordt het gekozen thema toegepast op alle versies van Discord, inclusief de browser- en de pc-versie.",
   "+KCMSk": "Synchroniseer vrienden met Discord",
   "NVwuHh": "Nu synchroniseren",
   "eW8Gy8": "Machtigingen synchroniseren",
@@ -36940,8 +37075,127 @@
   ],
   "FMbL3t": "Mislukkingen wissen",
   "2TbM/P": "Speelt een game",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " aan het luisteren"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " aan het luisteren"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " aan het luisteren"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " aan het luisteren"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Luistert naar",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nvan ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Speelt",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " aan het spelen"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " aan het spelen"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " aan het spelen"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " aan het spelen"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Speel op ",
     [

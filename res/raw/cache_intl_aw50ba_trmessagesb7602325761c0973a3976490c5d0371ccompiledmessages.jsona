@@ -20018,8 +20018,10 @@
   ],
   "3XVNys": "Davet Bağlantısını Kopyala",
   "VNe8Pz": "Davet bağlantısını düzenle.",
+  "Ckxb6u": "Katılma İzni İste",
   "2Gbof3": "Davetin Geçerliliği Bitti",
   "jfrMtr": "Dolu",
+  "x1UXGR": "Oyun sona erdi. Yeni bir taneye başlamak ister misin?",
   "pkq6Vl": "Oyun Daveti",
   "hC/Ze3": "Katılmaya Davet Et",
   "/8czHx": [
@@ -20029,6 +20031,13 @@
     ],
     " Üzerinden Birlikte Dinlemek İçin Davet Et"
   ],
+  "BBJXVl": [
+    [
+      1,
+      "name"
+    ],
+    " İzlemeye Davet Et"
+  ],
   "KC26NT": "Katıldın",
   "5crb4u": "Android ile katıl",
   "c3EWuL": "Masaüstü Uygulaması ile Katıl",
@@ -20036,7 +20045,131 @@
   "/ak8Mj": "PlayStation üzerinden katıl",
   "HEY5dX": "Xbox ile katıl",
   "84qx9v": "Dinleme partisi sona erdi!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " adlı kullanıcı ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partine katılmak istedi"
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " adlı kullanıcı ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partine katılmak istiyor"
+  ],
   "B9kbnZ": "İzleme partisi sona erdi!",
+  "IA6uDQ": [
+    "Bir ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partisine katılmak istiyorsun"
+  ],
+  "gYVkSU": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " adlı kullanıcının ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partisine katılmak istiyorsun"
+  ],
+  "2N1kNT": [
+    "Bir ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partisine katılmak istedin"
+  ],
+  "JddpNz": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " adlı kullanıcının ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ],
+    " partisine katılmak istedin"
+  ],
   "DXgdcH": "Sunucuna otomatik olarak katılmaları için bu bağlantıyı arkadaşlarınla paylaş.",
   "tQc0l5": "Bir arkadaşını sunucuna davet et!",
   "TfuB9P": [
@@ -30614,6 +30747,7 @@
   "IKE48v": "Yeni Üye",
   "VaCdhY": "Discord'da Yeni",
   "CQmziY": "Ziyaretçi (Üye Değil)",
+  "EkokLy": "Gerekli",
   "WnX4Jy": "E-postayı Yeniden Gönder",
   "lm1UKi": "Doğrulama e-postasını yeniden gönder",
   "yBZMsb": "Sıfırla",
@@ -33594,9 +33728,9 @@
   "7YZ/Sk": "Arka kameraya geç",
   "/R1SBw": "Ön kameraya geç",
   "BkuOOz": "Senkronize Et",
-  "GAlmIS": "Bunu açmak masaüstü ve tarayıcı dahil bütün diğer istemcilerde yukarıdaki görünüm ayarlarının üzerine yazacaktır.",
   "3340dX": "Oturumlar arasında senkronize et.",
   "p4IKEx": "Bu seçeneği aktif hale getirmek; masaüstü ve tarayıcı oturumları dahil tüm resim ve metin ayarlarının üzerine yazacaktır.",
+  "CRtkeH": "Bunu açmak seçtiğin temayı masaüstü ve tarayıcı dahil tüm istemcilerde geçersiz kılacak.",
   "+KCMSk": "Arkadaşlarını Discord'a senkronize et",
   "NVwuHh": "Şimdi Senkronize Et",
   "eW8Gy8": "İzinleri Senkronize Et",
@@ -36905,8 +37039,127 @@
   ],
   "FMbL3t": "Temizleme başarısız oldu",
   "2TbM/P": "Bir oyun oynuyor",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Dinliyor"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Dinliyor"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Dinliyor"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Dinliyor"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Dinliyor",
+  "JCvHt7": [
+    [
+      1,
+      "artist"
+    ],
+    "\nadlı sanatçıdan ",
+    [
+      1,
+      "track"
+    ]
+  ],
   "BMTj29": "Oynuyor",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Oynuyor"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " Oynuyor"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " Oynuyor"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " Oynuyor"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     [
       1,

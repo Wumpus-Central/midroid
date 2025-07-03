@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PostSharePrompt(title: String, subtitle: StructurableText, cta: String, icon: String, closeIcon: String) {
@@ -14,11 +14,11 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    public final val closeIcon: String
 
    init {
-      q.h(var1, "title");
-      q.h(var2, "subtitle");
-      q.h(var3, "cta");
-      q.h(var4, "icon");
-      q.h(var5, "closeIcon");
+      r.h(var1, "title");
+      r.h(var2, "subtitle");
+      r.h(var3, "cta");
+      r.h(var4, "icon");
+      r.h(var5, "closeIcon");
       super();
       this.title = var1;
       this.subtitle = var2;
@@ -54,11 +54,11 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
       icon: String = var0.icon,
       closeIcon: String = var0.closeIcon
    ): PostSharePrompt {
-      q.h(var1, "title");
-      q.h(var2, "subtitle");
-      q.h(var3, "cta");
-      q.h(var4, "icon");
-      q.h(var5, "closeIcon");
+      r.h(var1, "title");
+      r.h(var2, "subtitle");
+      r.h(var3, "cta");
+      r.h(var4, "icon");
+      r.h(var5, "closeIcon");
       return new PostSharePrompt(var1, var2, var3, var4, var5);
    }
 
@@ -69,16 +69,16 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.title, var1.title)) {
+         if (!r.c(this.title, var1.title)) {
             return false;
-         } else if (!q.c(this.subtitle, var1.subtitle)) {
+         } else if (!r.c(this.subtitle, var1.subtitle)) {
             return false;
-         } else if (!q.c(this.cta, var1.cta)) {
+         } else if (!r.c(this.cta, var1.cta)) {
             return false;
-         } else if (!q.c(this.icon, var1.icon)) {
+         } else if (!r.c(this.icon, var1.icon)) {
             return false;
          } else {
-            return q.c(this.closeIcon, var1.closeIcon);
+            return r.c(this.closeIcon, var1.closeIcon);
          }
       }
    }
@@ -89,24 +89,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.title;
-      val var2: StructurableText = this.subtitle;
-      val var5: java.lang.String = this.cta;
-      val var6: java.lang.String = this.icon;
-      val var1: java.lang.String = this.closeIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PostSharePrompt(title=");
-      var3.append(var4);
-      var3.append(", subtitle=");
-      var3.append(var2);
-      var3.append(", cta=");
-      var3.append(var5);
-      var3.append(", icon=");
-      var3.append(var6);
-      var3.append(", closeIcon=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.title;
+      val var6: StructurableText = this.subtitle;
+      val var1: java.lang.String = this.cta;
+      val var4: java.lang.String = this.icon;
+      val var2: java.lang.String = this.closeIcon;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PostSharePrompt(title=");
+      var5.append(var3);
+      var5.append(", subtitle=");
+      var5.append(var6);
+      var5.append(", cta=");
+      var5.append(var1);
+      var5.append(", icon=");
+      var5.append(var4);
+      var5.append(", closeIcon=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

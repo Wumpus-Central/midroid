@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.messagepart
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ForwardHeaderMessageAccessory(messageId: MessageId) : ForwardHeaderMessageAccessory(var1) {
    public open val messageId: MessageId
 
    fun ForwardHeaderMessageAccessory(var1: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super(var1, "forwarded message header", false, 4, null);
       this.messageId = var1;
    }
@@ -17,7 +17,7 @@ public data class ForwardHeaderMessageAccessory(messageId: MessageId) : ForwardH
    }
 
    public fun copy(messageId: MessageId = ...): ForwardHeaderMessageAccessory {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new ForwardHeaderMessageAccessory(var1, null);
    }
 

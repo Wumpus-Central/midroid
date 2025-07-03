@@ -23,15 +23,15 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
    private final var messageFrame: MessageFrame?
 
    fun DecoratedMessageView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
       val var3: DecoratedMessageViewBinding = DecoratedMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       this.highlightDrawer = new BackgroundHighlightDrawer(var1);
       this.setWillNotDraw(false);
@@ -43,7 +43,7 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      kotlin.jvm.internal.q.h(var1, "canvas");
+      kotlin.jvm.internal.r.h(var1, "canvas");
       super.onDraw(var1);
       if (this.drawHighlight) {
          HighlightedMessageDrawer.drawHighlight$default(this.highlightDrawer, var1, this, 0, 0, 12, null);
@@ -60,10 +60,10 @@ public class DecoratedMessageView  public constructor(context: Context, attrs: A
       allowChildGestures: Boolean = true,
       renderContentOnly: Boolean = false
    ) {
-      kotlin.jvm.internal.q.h(var1, "message");
-      kotlin.jvm.internal.q.h(var2, "messageContext");
-      kotlin.jvm.internal.q.h(var4, "eventHandler");
-      kotlin.jvm.internal.q.h(var6, "onChainPart");
+      kotlin.jvm.internal.r.h(var1, "message");
+      kotlin.jvm.internal.r.h(var2, "messageContext");
+      kotlin.jvm.internal.r.h(var4, "eventHandler");
+      kotlin.jvm.internal.r.h(var6, "onChainPart");
       this.binding.messageView.setMessage(var1, var2, var3, var4, var5, var6, var7, var8);
       this.drawHighlight = this.highlightDrawer.getShouldRenderHighlight().invoke(new MessageItem(var1, var3, var2, var7, null, null, var8, 48, null)) as java.lang.Boolean;
       this.messageFrame = var3;

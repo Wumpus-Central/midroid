@@ -12,11 +12,11 @@ import com.discord.chat.input.spans.DCDColorSpan
 import com.discord.chat.input.spans.DCDDeleteOnBackspaceSpan
 import com.discord.chat.input.spans.DCDInputSpan
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal fun EditText.addEllipsizedHint(hint: CharSequence?, hintTruncateAt: TruncateAt = TruncateAt.END) {
-   q.h(var0, "<this>");
-   q.h(var2, "hintTruncateAt");
+   r.h(var0, "<this>");
+   r.h(var2, "hintTruncateAt");
    if (var0.getMaxLines() != 1) {
       var0.setMaxLines(1);
    }
@@ -35,16 +35,16 @@ fun `addEllipsizedHint$default`(var0: EditText, var1: java.lang.CharSequence, va
 }
 
 internal fun Editable.applyDCDSpan(span: DCDInputSpan, node: ChatInputNode) {
-   q.h(var0, "<this>");
-   q.h(var1, "span");
-   q.h(var2, "node");
+   r.h(var0, "<this>");
+   r.h(var1, "span");
+   r.h(var2, "node");
    if (var2.getLocation() <= var0.length() && var2.getLocation() + var2.getLength() <= var0.length()) {
       var0.setSpan(var1, var2.getLocation(), var2.getLocation() + var2.getLength(), 33);
    }
 }
 
 internal fun EditText.removeEllipsizedHint(maxLines: Int) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (var0.getMaxLines() != var1) {
       var0.setMaxLines(var1);
    }
@@ -54,8 +54,8 @@ internal fun EditText.removeEllipsizedHint(maxLines: Int) {
 }
 
 internal fun Editable.setChatInputNodeStyle(node: ChatInputNode) {
-   q.h(var0, "<this>");
-   q.h(var1, "node");
+   r.h(var0, "<this>");
+   r.h(var1, "node");
    val var3: ChatInputNodeStyle = var1.getStyle();
    if (var3 != null) {
       applyDCDSpan(var0, new DCDColorSpan(var3.getColor()), var1);
@@ -92,13 +92,13 @@ internal class WhenMappings {
 
    @JvmStatic
    fun {
-      val var1: IntArray = new int[ChatInputNodeFontWeight.values().length];
+      val var0: IntArray = new int[ChatInputNodeFontWeight.values().length];
 
       try {
-         var1[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
+         var0[ChatInputNodeFontWeight.Bold.ordinal()] = 1;
       } catch (var2: NoSuchFieldError) {
       }
 
-      $EnumSwitchMapping$0 = var1;
+      $EnumSwitchMapping$0 = var0;
    }
 }

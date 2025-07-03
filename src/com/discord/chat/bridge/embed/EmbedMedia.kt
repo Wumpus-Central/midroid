@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class EmbedMedia(url: String,
@@ -26,7 +26,7 @@ public data class EmbedMedia(url: String,
    public open val embedUrl: String
 
    init {
-      q.h(var1, "url");
+      r.h(var1, "url");
       super();
       this.url = var1;
       this.proxyURL = var2;
@@ -85,7 +85,7 @@ public data class EmbedMedia(url: String,
       srcIsAnimated: Boolean = var0.srcIsAnimated,
       contentType: String? = var0.contentType
    ): EmbedMedia {
-      q.h(var1, "url");
+      r.h(var1, "url");
       return new EmbedMedia(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -96,22 +96,22 @@ public data class EmbedMedia(url: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.url, var1.url)) {
+         if (!r.c(this.url, var1.url)) {
             return false;
-         } else if (!q.c(this.proxyURL, var1.proxyURL)) {
+         } else if (!r.c(this.proxyURL, var1.proxyURL)) {
             return false;
          } else if (this.width != var1.width) {
             return false;
          } else if (this.height != var1.height) {
             return false;
-         } else if (!q.c(this.placeholder, var1.placeholder)) {
+         } else if (!r.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!q.c(this.placeholderVersion, var1.placeholderVersion)) {
+         } else if (!r.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
          } else if (this.srcIsAnimated != var1.srcIsAnimated) {
             return false;
          } else {
-            return q.c(this.contentType, var1.contentType);
+            return r.c(this.contentType, var1.contentType);
          }
       }
    }
@@ -126,8 +126,8 @@ public data class EmbedMedia(url: String,
          var1 = this.proxyURL.hashCode();
       }
 
-      val var6: Int = Integer.hashCode(this.width);
-      val var7: Int = Integer.hashCode(this.height);
+      val var7: Int = Integer.hashCode(this.width);
+      val var6: Int = Integer.hashCode(this.height);
       val var2: Int;
       if (this.placeholder == null) {
          var2 = 0;
@@ -147,37 +147,37 @@ public data class EmbedMedia(url: String,
          var4 = this.contentType.hashCode();
       }
 
-      return ((((((var5 * 31 + var1) * 31 + var6) * 31 + var7) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
+      return ((((((var5 * 31 + var1) * 31 + var7) * 31 + var6) * 31 + var2) * 31 + var3) * 31 + var8) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyURL;
+      val var6: java.lang.String = this.url;
+      val var9: java.lang.String = this.proxyURL;
       val var1: Int = this.width;
       val var2: Int = this.height;
-      val var6: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
+      val var7: java.lang.String = this.placeholder;
+      val var4: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
       val var8: java.lang.String = this.contentType;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedMedia(url=");
-      var7.append(var9);
-      var7.append(", proxyURL=");
-      var7.append(var4);
-      var7.append(", width=");
-      var7.append(var1);
-      var7.append(", height=");
-      var7.append(var2);
-      var7.append(", placeholder=");
-      var7.append(var6);
-      var7.append(", placeholderVersion=");
-      var7.append(var5);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(", contentType=");
-      var7.append(var8);
-      var7.append(")");
-      return var7.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedMedia(url=");
+      var5.append(var6);
+      var5.append(", proxyURL=");
+      var5.append(var9);
+      var5.append(", width=");
+      var5.append(var1);
+      var5.append(", height=");
+      var5.append(var2);
+      var5.append(", placeholder=");
+      var5.append(var7);
+      var5.append(", placeholderVersion=");
+      var5.append(var4);
+      var5.append(", srcIsAnimated=");
+      var5.append(var3);
+      var5.append(", contentType=");
+      var5.append(var8);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

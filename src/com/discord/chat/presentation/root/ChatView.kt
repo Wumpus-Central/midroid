@@ -1,6 +1,5 @@
 package com.discord.chat.presentation.root
 
-import A9.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +13,9 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
+import z9.s
 
 public class ChatView(context: Context) : ReactViewGroup {
    private final lateinit var chatList: ChatListView
@@ -23,7 +23,7 @@ public class ChatView(context: Context) : ReactViewGroup {
    private final var inverted: Boolean
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
    }
 
@@ -39,7 +39,7 @@ public class ChatView(context: Context) : ReactViewGroup {
       if (var0.getMeasuredHeight() > 0 && var0.getMeasuredWidth() > 0) {
          var var14: ChatListView = var1.chatList;
          if (var1.chatList == null) {
-            q.y("chatList");
+            r.y("chatList");
             var14 = null;
          }
 
@@ -53,13 +53,13 @@ public class ChatView(context: Context) : ReactViewGroup {
 
             if (var0.getParent() is ChatView) {
                val var16: ViewParent = var0.getParent();
-               q.f(var16, "null cannot be cast to non-null type android.view.ViewGroup");
+               r.f(var16, "null cannot be cast to non-null type android.view.ViewGroup");
                (var16 as ViewGroup).removeView(var0);
             }
 
             var var13: ChatListView = var1.chatList;
             if (var1.chatList == null) {
-               q.y("chatList");
+               r.y("chatList");
                var13 = null;
             }
 
@@ -69,7 +69,7 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams?) {
-      q.h(var1, "child");
+      r.h(var1, "child");
       super.addView(var1, var2, var3);
       if (var2 != 0) {
          if (var2 == 2) {
@@ -84,7 +84,7 @@ public class ChatView(context: Context) : ReactViewGroup {
          val var4: ChatListView = var1 as ChatListView;
          var var5: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
-            q.y("eventHandler");
+            r.y("eventHandler");
             var5 = null;
          }
 
@@ -107,27 +107,27 @@ public class ChatView(context: Context) : ReactViewGroup {
    }
 
    public fun scrollTo(index: Int, targetScreenLocation: TargetAlignment, animated: Boolean, highlight: Boolean) {
-      q.h(var2, "targetScreenLocation");
+      r.h(var2, "targetScreenLocation");
       if (ThreadUtilsKt.isOnMainThread()) {
          val var6: ChatListView = access$getChatList$p(this);
          var var8: ChatListView = var6;
          if (var6 == null) {
-            q.y("chatList");
+            r.y("chatList");
             var8 = null;
          }
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 
    public fun setEventHandler(eventHandler: ChatEventHandler) {
-      q.h(var1, "eventHandler");
+      r.h(var1, "eventHandler");
       if (ThreadUtilsKt.isOnMainThread()) {
          access$setEventHandler$p(this, var1);
       } else {

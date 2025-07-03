@@ -2,9 +2,9 @@ package com.discord.chat.bridge.referencedmessage
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -12,7 +12,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    public final val systemContent: StructurableText?
 
    init {
-      q.h(var1, "message");
+      r.h(var1, "message");
       super(null);
       this.message = var1;
       this.systemContent = var2;
@@ -27,7 +27,7 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public fun copy(message: Message = var0.message, systemContent: StructurableText? = var0.systemContent): LoadedReferencedMessage {
-      q.h(var1, "message");
+      r.h(var1, "message");
       return new LoadedReferencedMessage(var1, var2);
    }
 
@@ -38,10 +38,10 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.message, var1.message)) {
+         if (!r.c(this.message, var1.message)) {
             return false;
          } else {
-            return q.c(this.systemContent, var1.systemContent);
+            return r.c(this.systemContent, var1.systemContent);
          }
       }
    }
@@ -59,15 +59,15 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var3: Message = this.message;
+      val var2: Message = this.message;
       val var1: StructurableText = this.systemContent;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LoadedReferencedMessage(message=");
-      var2.append(var3);
-      var2.append(", systemContent=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LoadedReferencedMessage(message=");
+      var3.append(var2);
+      var3.append(", systemContent=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

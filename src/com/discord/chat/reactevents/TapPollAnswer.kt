@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapPollAnswer(channelId: String, messageId: String, answerId: String) : ReactEvent {
@@ -13,9 +13,9 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    public final val answerId: String
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "answerId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "answerId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -35,9 +35,9 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, answerId: String = var0.answerId): TapPollAnswer {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "answerId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "answerId");
       return new TapPollAnswer(var1, var2, var3);
    }
 
@@ -48,12 +48,12 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.messageId, var1.messageId)) {
+         } else if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.answerId, var1.answerId);
+            return r.c(this.answerId, var1.answerId);
          }
       }
    }
@@ -67,18 +67,18 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
       val var1: java.lang.String = this.answerId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPollAnswer(channelId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(", answerId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapPollAnswer(channelId=");
+      var4.append(var2);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(", answerId=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

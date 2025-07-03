@@ -20515,12 +20515,21 @@
   ],
   "3XVNys": "Kopiraj poveznicu na pozivnicu",
   "VNe8Pz": "Uredi pozivnicu.",
+  "Ckxb6u": "Pozovi na pridruživanje",
   "2Gbof3": "Pozivnica je istekla",
   "jfrMtr": "Popunjeno",
+  "x1UXGR": "Igra je završila. Želiš li pokrenuti neku drugu?",
   "pkq6Vl": "Pozivnica za igru",
   "hC/Ze3": "Pozovi da se pridruži",
   "/8czHx": [
     "Pozivnica na zajedničko slušanje na ",
+    [
+      1,
+      "name"
+    ]
+  ],
+  "BBJXVl": [
+    "Pozovi na gledanje ",
     [
       1,
       "name"
@@ -20533,7 +20542,127 @@
   "/ak8Mj": "Pridruži se putem PlayStationa",
   "HEY5dX": "Pridruži se preko Xboxa",
   "84qx9v": "Zabava slušanja je završena!",
+  "XE8axM": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " poslao/la je zahtjev za pridruživanjem tvojoj zabavi u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "hgcjOj": [
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " šalje zahtjev za pridruživanjem tvojoj zabavi u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "B9kbnZ": "Zabava gledanja je gotova!",
+  "IA6uDQ": [
+    "Šalješ zahtjev za pridruživanjem zabavi u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "gYVkSU": [
+    "Šalješ zahtjev za pridruživanjem zabavi korisnika ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "2N1kNT": [
+    "Poslao/la si zahtjev za pridruživanjem zabavi u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
+  "JddpNz": [
+    "Poslao/la si zahtjev za pridruživanjem zabavi korisnika ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ],
+    " u aplikaciji ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "appName"
+        ]
+      ]
+    ]
+  ],
   "DXgdcH": "Podijeli ovu poveznicu prijateljima i oni će se automatski pridružiti tvojem serveru.",
   "tQc0l5": "Pozovi prijatelja na svoj server!",
   "TfuB9P": [
@@ -31650,6 +31779,7 @@
   "IKE48v": "Novi član",
   "VaCdhY": "Novo u Discordu",
   "CQmziY": "Posjetitelj (nije član)",
+  "EkokLy": "Obavezno",
   "WnX4Jy": "Ponovno pošalji e-poštu",
   "lm1UKi": "Ponovno pošalji potvrdni e-mail",
   "yBZMsb": "Vrati izvorno",
@@ -34719,9 +34849,9 @@
   "7YZ/Sk": "Prijeđi na stražnji fotoaparat",
   "/R1SBw": "Prijeđi na prednji fotoaparat",
   "BkuOOz": "Sinkroniziraj",
-  "GAlmIS": "Uključenje toga će promijeniti postavke načina prikaza na svim drugim klijentima, uključujući desktop i preglednik.",
   "3340dX": "Sinkroniziraj diljem klijenata.",
   "p4IKEx": "Uključenje ove opcije će promijeniti postavke teksta i slika svih drugih klijenata, uključujući desktop i preglednik.",
+  "CRtkeH": "Uključiš li ovo, nadjačat ćeš odabranu temu na svim klijentima, uključujući desktop i preglednik.",
   "+KCMSk": "Sinkroniziraj prijatelje na Discordu",
   "NVwuHh": "Sinkroniziraj odmah",
   "eW8Gy8": "Sinkroniziraj dozvole",
@@ -38093,8 +38223,127 @@
   ],
   "FMbL3t": "Brisanje nije uspjelo",
   "2TbM/P": "Igra",
+  "Zogooq": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " sluša"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " sluša"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "UGei0t": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " sluša"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " sluša"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "dBISa2": "Sluša",
+  "JCvHt7": [
+    [
+      1,
+      "track"
+    ],
+    "\nizvođača ",
+    [
+      1,
+      "artist"
+    ]
+  ],
   "BMTj29": "Igra",
+  "gLu7NT": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " igra"
+        ],
+        "other": [
+          [
+            7
+          ],
+          "/",
+          [
+            2,
+            "maxPartySize"
+          ],
+          " igra"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "65JnWF": [
+    [
+      6,
+      "partySize",
+      {
+        "=1": [
+          [
+            7
+          ],
+          " igra"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " igra"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "LEgD7u": [
     "Koristi ",
     [

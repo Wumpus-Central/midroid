@@ -4,11 +4,11 @@ import com.discord.codegen.NativeCacheModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class CacheModule(reactContext: ReactApplicationContext) : NativeCacheModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -17,8 +17,8 @@ public class CacheModule(reactContext: ReactApplicationContext) : NativeCacheMod
    }
 
    public override fun getItem(key: String, promise: Promise) {
-      q.h(var1, "key");
-      q.h(var2, "promise");
+      r.h(var1, "key");
+      r.h(var2, "promise");
 
       try {
          var2.resolve(Cache.Companion.get().getItem(var1));
@@ -29,8 +29,8 @@ public class CacheModule(reactContext: ReactApplicationContext) : NativeCacheMod
    }
 
    public override fun refresh(exclude: ReadableArray, promise: Promise) {
-      q.h(var1, "exclude");
-      q.h(var2, "promise");
+      r.h(var1, "exclude");
+      r.h(var2, "promise");
 
       try {
          var2.resolve(Cache.Companion.get().refresh(var1));
@@ -41,13 +41,13 @@ public class CacheModule(reactContext: ReactApplicationContext) : NativeCacheMod
    }
 
    public override fun removeItem(key: String) {
-      q.h(var1, "key");
+      r.h(var1, "key");
       Cache.Companion.get().removeItem(var1);
    }
 
    public override fun setItem(key: String, value: String) {
-      q.h(var1, "key");
-      q.h(var2, "value");
+      r.h(var1, "key");
+      r.h(var2, "value");
       Cache.Companion.get().setItem(var1, var2);
    }
 }

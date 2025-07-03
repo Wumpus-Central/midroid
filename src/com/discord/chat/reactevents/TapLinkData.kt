@@ -1,6 +1,5 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -12,7 +11,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.s
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
          var1, var2, var3, var4
@@ -24,8 +24,8 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    public final val content: String
 
    fun TapLinkData(var1: java.lang.String, var2: LinkContentNode) {
-      q.h(var1, "messageId");
-      q.h(var2, "node");
+      r.h(var1, "messageId");
+      r.h(var2, "node");
       val var4: LinkContextData = var2.getTarget();
       val var3: java.lang.String = var2.getTextContent();
       var var5: java.lang.String = var3;
@@ -37,7 +37,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    fun TapLinkData(var1: java.lang.String, var2: java.lang.String, var3: LinkContextData, var4: java.lang.String) {
-      q.h(var4, "content");
+      r.h(var4, "content");
       super();
       this.messageId = var1;
       this.title = var2;
@@ -47,7 +47,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
    private fun LinkContextData.toMap(): WritableNativeMap {
       val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
-      val var2: LinkContextData = this.target;
+      val var3: LinkContextData = this.target;
       if (this.target is LinkContextData.LinkUrl) {
          NativeMapExtensionsKt.put(var5, "url", (this.target as LinkContextData.LinkUrl).getUrl());
       } else if (this.target is LinkContextData.BindOpenThreadChannel) {
@@ -56,9 +56,9 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       } else if (this.target is LinkContextData.BindUserMenu) {
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindUserMenu).getAction());
          NativeMapExtensionsKt.put(var5, "userId", UserId.toString-impl((this.target as LinkContextData.BindUserMenu).getUserId-re6GcUE()));
-         val var6: ChannelId = (this.target as LinkContextData.BindUserMenu).getMessageChannelId-qMVnFVQ();
-         if (var6 != null) {
-            NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl(var6.unbox-impl()));
+         val var2: ChannelId = (this.target as LinkContextData.BindUserMenu).getMessageChannelId-qMVnFVQ();
+         if (var2 != null) {
+            NativeMapExtensionsKt.put(var5, "messageChannelId", ChannelId.toString-impl(var2.unbox-impl()));
          }
       } else if (this.target is LinkContextData.BindTapCommandName) {
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindTapCommandName).getAction());
@@ -78,17 +78,17 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          );
       } else if (this.target is LinkContextData.BindGuildMenu) {
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindGuildMenu).getAction());
-         val var3: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
-         if (var3 != null) {
-            val var7: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
-            NativeMapExtensionsKt.put(var7, "channel_id", ChannelId.toString-impl(var3.getChannelId-o4g7jtM()));
-            val var8: GuildId = var3.getGuildId-qOKuAAo();
-            if (var8 != null) {
-               var8.unbox-impl();
-               NativeMapExtensionsKt.put(var7, "guild_id", (this.target as LinkContextData.BindGuildMenu).toString());
+         val var8: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
+         if (var8 != null) {
+            val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
+            NativeMapExtensionsKt.put(var6, "channel_id", ChannelId.toString-impl(var8.getChannelId-o4g7jtM()));
+            val var9: GuildId = var8.getGuildId-qOKuAAo();
+            if (var9 != null) {
+               var9.unbox-impl();
+               NativeMapExtensionsKt.put(var6, "guild_id", (this.target as LinkContextData.BindGuildMenu).toString());
             }
 
-            NativeMapExtensionsKt.put(var5, "messageReference", var7);
+            NativeMapExtensionsKt.put(var5, "messageReference", var6);
          }
       } else if (this.target is LinkContextData.BindDismissMessage) {
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindDismissMessage).getAction());
@@ -138,10 +138,10 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          NativeMapExtensionsKt.put(var5, "linkColor", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getLinkColor());
       } else {
          val var4: Log = Log.INSTANCE;
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("Missing target type data: ");
-         var10.append(var2);
-         Log.e$default(var4, "TapLink", var10.toString(), null, 4, null);
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Missing target type data: ");
+         var7.append(var3);
+         Log.e$default(var4, "TapLink", var7.toString(), null, 4, null);
       }
 
       return var5;
@@ -164,7 +164,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
    }
 
    public fun copy(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...): TapLinkData {
-      q.h(var4, "content");
+      r.h(var4, "content");
       return new TapLinkData(var1, var2, var3, var4, null);
    }
 
@@ -192,12 +192,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!q.c(this.title, var1.title)) {
+         } else if (!r.c(this.title, var1.title)) {
             return false;
-         } else if (!q.c(this.target, var1.target)) {
+         } else if (!r.c(this.target, var1.target)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
@@ -260,19 +260,19 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var4: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var2: java.lang.String = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapLinkData(messageId=");
-      var3.append(var6);
-      var3.append(", title=");
-      var3.append(var4);
-      var3.append(", target=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.title;
+      val var4: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapLinkData(messageId=");
+      var2.append(var6);
+      var2.append(", title=");
+      var2.append(var3);
+      var2.append(", target=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 }

@@ -2,9 +2,9 @@ package com.discord.chat.bridge.executedcommand
 
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ExecutedCommand(userId: UserId,
@@ -35,7 +35,7 @@ public data class ExecutedCommand(userId: UserId,
       var8: java.lang.Boolean,
       var9: java.lang.Boolean
    ) {
-      q.h(var6, "content");
+      r.h(var6, "content");
       super();
       this.userId = var1;
       this.usernameColor = var3;
@@ -89,7 +89,7 @@ public data class ExecutedCommand(userId: UserId,
       showAppsIcon: Boolean? = ...,
       showControllerIcon: Boolean? = ...
    ): ExecutedCommand {
-      q.h(var6, "content");
+      r.h(var6, "content");
       return new ExecutedCommand(var1, var3, var4, var5, var6, var7, var8, var9, null);
    }
 
@@ -104,18 +104,18 @@ public data class ExecutedCommand(userId: UserId,
             return false;
          } else if (this.usernameColor != var1.usernameColor) {
             return false;
-         } else if (!q.c(this.avatarURL, var1.avatarURL)) {
+         } else if (!r.c(this.avatarURL, var1.avatarURL)) {
             return false;
          } else if (this.targetUsernameColor != var1.targetUsernameColor) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.commandNameBackgroundStyles, var1.commandNameBackgroundStyles)) {
+         } else if (!r.c(this.commandNameBackgroundStyles, var1.commandNameBackgroundStyles)) {
             return false;
-         } else if (!q.c(this.showAppsIcon, var1.showAppsIcon)) {
+         } else if (!r.c(this.showAppsIcon, var1.showAppsIcon)) {
             return false;
          } else {
-            return q.c(this.showControllerIcon, var1.showControllerIcon);
+            return r.c(this.showControllerIcon, var1.showControllerIcon);
          }
       }
    }
@@ -155,31 +155,31 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = UserId.toString-impl(this.userId);
-      val var2: Int = this.usernameColor;
+      val var7: java.lang.String = UserId.toString-impl(this.userId);
+      val var1: Int = this.usernameColor;
       val var5: java.lang.String = this.avatarURL;
-      val var1: Int = this.targetUsernameColor;
-      val var9: AnnotatedStructurableText = this.content;
-      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var7: java.lang.Boolean = this.showAppsIcon;
-      val var3: java.lang.Boolean = this.showControllerIcon;
+      val var2: Int = this.targetUsernameColor;
+      val var3: AnnotatedStructurableText = this.content;
+      val var9: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var4: java.lang.Boolean = this.showAppsIcon;
+      val var8: java.lang.Boolean = this.showControllerIcon;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ExecutedCommand(userId=");
-      var6.append(var8);
+      var6.append(var7);
       var6.append(", usernameColor=");
-      var6.append(var2);
+      var6.append(var1);
       var6.append(", avatarURL=");
       var6.append(var5);
       var6.append(", targetUsernameColor=");
-      var6.append(var1);
+      var6.append(var2);
       var6.append(", content=");
-      var6.append(var9);
-      var6.append(", commandNameBackgroundStyles=");
-      var6.append(var4);
-      var6.append(", showAppsIcon=");
-      var6.append(var7);
-      var6.append(", showControllerIcon=");
       var6.append(var3);
+      var6.append(", commandNameBackgroundStyles=");
+      var6.append(var9);
+      var6.append(", showAppsIcon=");
+      var6.append(var4);
+      var6.append(", showControllerIcon=");
+      var6.append(var8);
       var6.append(")");
       return var6.toString();
    }

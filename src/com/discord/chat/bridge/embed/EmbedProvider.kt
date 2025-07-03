@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class EmbedProvider(name: String) {
    public final val name: String
 
    init {
-      q.h(var1, "name");
+      r.h(var1, "name");
       super();
       this.name = var1;
    }
@@ -19,7 +19,7 @@ public data class EmbedProvider(name: String) {
    }
 
    public fun copy(name: String = var0.name): EmbedProvider {
-      q.h(var1, "name");
+      r.h(var1, "name");
       return new EmbedProvider(var1);
    }
 
@@ -29,7 +29,7 @@ public data class EmbedProvider(name: String) {
       } else if (var1 !is EmbedProvider) {
          return false;
       } else {
-         return q.c(this.name, (var1 as EmbedProvider).name);
+         return r.c(this.name, (var1 as EmbedProvider).name);
       }
    }
 

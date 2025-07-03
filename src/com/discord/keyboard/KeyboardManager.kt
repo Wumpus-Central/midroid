@@ -23,7 +23,7 @@ public object KeyboardManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "listener"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
       // 0b: aload 1
       // 0c: invokeinterface java/util/List.add (Ljava/lang/Object;)Z 2
@@ -95,7 +95,7 @@ public object KeyboardManager {
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc "listener"
-      // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/keyboard/KeyboardManager.keyboardListeners Ljava/util/List;
       // 0b: aload 1
       // 0c: invokeinterface java/util/List.remove (Ljava/lang/Object;)Z 2

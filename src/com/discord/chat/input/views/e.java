@@ -12,6 +12,6 @@ public final class e implements H {
 
    @Override
    public final ContentInfoCompat a(View var1, ContentInfoCompat var2) {
-      return ChatInputRootView.d(this.a, this.b, var1, var2);
+      return ChatInputRootView.e(this.a, this.b, var1, var2);
    }
 }

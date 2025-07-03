@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class TapAvatarData(messageId: String, userId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
    public final val userId: String
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "userId");
+      r.h(var1, "messageId");
+      r.h(var2, "userId");
       super();
       this.messageId = var1;
       this.userId = var2;
@@ -28,8 +28,8 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
    }
 
    public fun copy(messageId: String = var0.messageId, userId: String = var0.userId): TapAvatarData {
-      q.h(var1, "messageId");
-      q.h(var2, "userId");
+      r.h(var1, "messageId");
+      r.h(var2, "userId");
       return new TapAvatarData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapAvatarData(messageId: String, userId: String) : ReactEvent 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.userId, var1.userId);
+            return r.c(this.userId, var1.userId);
          }
       }
    }

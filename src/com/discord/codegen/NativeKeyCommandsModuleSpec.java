@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import J3.a;
+import I3.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.common.build.ReactBuildConfig;
@@ -25,12 +25,12 @@ public abstract class NativeKeyCommandsModuleSpec extends ReactContextBaseJavaMo
                "keyModifierAlphaShift", "keyModifierAlternate", "keyModifierCommand", "keyModifierControl", "keyModifierNumericPad", "keyModifierShift"
             )
          );
-         HashSet var2 = new HashSet();
-         HashSet var3 = new HashSet(var4.keySet());
-         var3.removeAll(var1);
-         var3.removeAll(var2);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet();
+         HashSet var2 = new HashSet(var4.keySet());
+         var2.removeAll(var1);
+         var2.removeAll(var3);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
          var1.removeAll(var4.keySet());

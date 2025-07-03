@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class LoadingAction(type: LoadingActionType) {
    public final val type: LoadingActionType
 
    init {
-      q.h(var1, "type");
+      r.h(var1, "type");
       super();
       this.type = var1;
    }
@@ -19,7 +19,7 @@ public data class LoadingAction(type: LoadingActionType) {
    }
 
    public fun copy(type: LoadingActionType = var0.type): LoadingAction {
-      q.h(var1, "type");
+      r.h(var1, "type");
       return new LoadingAction(var1);
    }
 

@@ -1,6 +1,6 @@
 package com.discord.crash_reporting.system_logs
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class SystemLogCapture {
    private final val buffer: FixedSizeLineBuffer = new FixedSizeLineBuffer(524288)
@@ -28,18 +28,18 @@ internal class SystemLogCapture {
       // 015: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 018: return
       // 019: aconst_null
-      // 01a: astore 5
+      // 01a: astore 6
       // 01c: aconst_null
-      // 01d: astore 6
-      // 01f: aload 6
+      // 01d: astore 5
+      // 01f: aload 5
       // 021: astore 4
-      // 023: aload 5
+      // 023: aload 6
       // 025: astore 3
       // 026: new java/lang/ProcessBuilder
       // 029: astore 7
-      // 02b: aload 6
+      // 02b: aload 5
       // 02d: astore 4
-      // 02f: aload 5
+      // 02f: aload 6
       // 031: astore 3
       // 032: aload 7
       // 034: bipush 1
@@ -49,9 +49,9 @@ internal class SystemLogCapture {
       // 03a: ldc "/system/bin/logcat"
       // 03c: aastore
       // 03d: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-      // 040: aload 6
+      // 040: aload 5
       // 042: astore 4
-      // 044: aload 5
+      // 044: aload 6
       // 046: astore 3
       // 047: aload 7
       // 049: bipush 1
@@ -64,56 +64,56 @@ internal class SystemLogCapture {
       // 058: astore 3
       // 059: aload 5
       // 05b: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-      // 05e: astore 8
+      // 05e: astore 7
       // 060: aload 5
       // 062: astore 4
       // 064: aload 5
       // 066: astore 3
-      // 067: aload 8
+      // 067: aload 7
       // 069: ldc "getInputStream(...)"
-      // 06b: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 06b: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 06e: aload 5
       // 070: astore 4
       // 072: aload 5
       // 074: astore 3
-      // 075: getstatic hb/a.b Ljava/nio/charset/Charset;
-      // 078: astore 6
+      // 075: getstatic gb/a.b Ljava/nio/charset/Charset;
+      // 078: astore 8
       // 07a: aload 5
       // 07c: astore 4
       // 07e: aload 5
       // 080: astore 3
       // 081: new java/io/InputStreamReader
-      // 084: astore 7
+      // 084: astore 6
       // 086: aload 5
       // 088: astore 4
       // 08a: aload 5
       // 08c: astore 3
-      // 08d: aload 7
-      // 08f: aload 8
-      // 091: aload 6
+      // 08d: aload 6
+      // 08f: aload 7
+      // 091: aload 8
       // 093: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
       // 096: aload 5
       // 098: astore 4
       // 09a: aload 5
       // 09c: astore 3
       // 09d: new java/io/BufferedReader
-      // 0a0: astore 6
+      // 0a0: astore 7
       // 0a2: aload 5
       // 0a4: astore 4
       // 0a6: aload 5
       // 0a8: astore 3
-      // 0a9: aload 6
-      // 0ab: aload 7
+      // 0a9: aload 7
+      // 0ab: aload 6
       // 0ad: sipush 8192
       // 0b0: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
       // 0b3: aload 5
       // 0b5: astore 4
       // 0b7: aload 5
       // 0b9: astore 3
-      // 0ba: aload 6
+      // 0ba: aload 7
       // 0bc: invokevirtual java/io/BufferedReader.readLine ()Ljava/lang/String;
-      // 0bf: astore 7
-      // 0c1: aload 7
+      // 0bf: astore 6
+      // 0c1: aload 6
       // 0c3: ifnonnull 0c9
       // 0c6: goto 11f
       // 0c9: aload 5
@@ -121,7 +121,7 @@ internal class SystemLogCapture {
       // 0cd: aload 5
       // 0cf: astore 3
       // 0d0: getstatic com/discord/crash_reporting/system_logs/SystemLogCapture.Companion Lcom/discord/crash_reporting/system_logs/SystemLogCapture$Companion;
-      // 0d3: aload 7
+      // 0d3: aload 6
       // 0d5: invokevirtual com/discord/crash_reporting/system_logs/SystemLogCapture$Companion.shouldIncludeLogLine$crash_reporting_release (Ljava/lang/String;)Z
       // 0d8: ifeq 0f7
       // 0db: aload 5
@@ -130,12 +130,12 @@ internal class SystemLogCapture {
       // 0e1: astore 3
       // 0e2: aload 0
       // 0e3: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 0e6: aload 7
+      // 0e6: aload 6
       // 0e8: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 0eb: goto 0f7
       // 0ee: astore 3
       // 0ef: goto 1f6
-      // 0f2: astore 5
+      // 0f2: astore 6
       // 0f4: goto 135
       // 0f7: aload 5
       // 0f9: astore 4
@@ -143,7 +143,7 @@ internal class SystemLogCapture {
       // 0fd: astore 3
       // 0fe: getstatic com/discord/crash_reporting/system_logs/SystemLogUtils.INSTANCE Lcom/discord/crash_reporting/system_logs/SystemLogUtils;
       // 101: invokevirtual com/discord/crash_reporting/system_logs/SystemLogUtils.getRegexExtractTombstone$crash_reporting_release ()Lkotlin/text/Regex;
-      // 104: aload 7
+      // 104: aload 6
       // 106: invokevirtual kotlin/text/Regex.g (Ljava/lang/CharSequence;)Z
       // 109: ifeq 0b3
       // 10c: aload 5
@@ -152,14 +152,14 @@ internal class SystemLogCapture {
       // 112: astore 3
       // 113: aload 0
       // 114: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.tombstoneBuffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 117: aload 7
+      // 117: aload 6
       // 119: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 11c: goto 0b3
       // 11f: aload 5
       // 121: astore 4
       // 123: aload 5
       // 125: astore 3
-      // 126: aload 6
+      // 126: aload 7
       // 128: invokevirtual java/io/BufferedReader.close ()V
       // 12b: aload 5
       // 12d: astore 3
@@ -170,7 +170,7 @@ internal class SystemLogCapture {
       // 136: astore 4
       // 138: aload 0
       // 139: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 13c: astore 6
+      // 13c: astore 5
       // 13e: aload 3
       // 13f: astore 4
       // 141: new java/lang/StringBuilder
@@ -188,7 +188,7 @@ internal class SystemLogCapture {
       // 159: aload 3
       // 15a: astore 4
       // 15c: aload 7
-      // 15e: aload 5
+      // 15e: aload 6
       // 160: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 163: pop
       // 164: aload 3
@@ -199,23 +199,23 @@ internal class SystemLogCapture {
       // 16e: pop
       // 16f: aload 3
       // 170: astore 4
-      // 172: aload 6
+      // 172: aload 5
       // 174: aload 7
       // 176: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 179: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 17c: aload 3
       // 17d: astore 4
-      // 17f: aload 5
+      // 17f: aload 6
       // 181: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 184: astore 6
+      // 184: astore 5
       // 186: aload 3
       // 187: astore 4
-      // 189: aload 6
+      // 189: aload 5
       // 18b: ldc "getStackTrace(...)"
-      // 18d: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 18d: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 190: aload 3
       // 191: astore 4
-      // 193: aload 6
+      // 193: aload 5
       // 195: arraylength
       // 196: istore 2
       // 197: bipush 0
@@ -223,39 +223,39 @@ internal class SystemLogCapture {
       // 199: iload 1
       // 19a: iload 2
       // 19b: if_icmpge 1e6
-      // 19e: aload 6
+      // 19e: aload 5
       // 1a0: iload 1
       // 1a1: aaload
-      // 1a2: astore 5
+      // 1a2: astore 8
       // 1a4: aload 3
       // 1a5: astore 4
       // 1a7: aload 0
       // 1a8: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 1ab: astore 7
+      // 1ab: astore 6
       // 1ad: aload 3
       // 1ae: astore 4
       // 1b0: new java/lang/StringBuilder
-      // 1b3: astore 8
+      // 1b3: astore 7
       // 1b5: aload 3
       // 1b6: astore 4
-      // 1b8: aload 8
+      // 1b8: aload 7
       // 1ba: invokespecial java/lang/StringBuilder.<init> ()V
       // 1bd: aload 3
       // 1be: astore 4
-      // 1c0: aload 8
+      // 1c0: aload 7
       // 1c2: ldc "    "
       // 1c4: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 1c7: pop
       // 1c8: aload 3
       // 1c9: astore 4
-      // 1cb: aload 8
-      // 1cd: aload 5
+      // 1cb: aload 7
+      // 1cd: aload 8
       // 1cf: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 1d2: pop
       // 1d3: aload 3
       // 1d4: astore 4
-      // 1d6: aload 7
-      // 1d8: aload 8
+      // 1d6: aload 6
+      // 1d8: aload 7
       // 1da: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 1dd: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
       // 1e0: iinc 1 1
@@ -283,18 +283,18 @@ internal class SystemLogCapture {
    }
 
    public fun appendOutput(sb: StringBuilder) {
-      q.h(var1, "sb");
+      r.h(var1, "sb");
       this.tombstoneBuffer.appendString(var1);
       this.buffer.appendString(var1);
    }
 
    public fun startThread(): Thread {
-      return F9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new d(this), 20, null);
+      return E9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new d(this), 20, null);
    }
 
    public companion object {
       internal fun shouldIncludeLogLine(line: String): Boolean {
-         q.h(var1, "line");
+         r.h(var1, "line");
          return kotlin.text.h.N(var1, "chatty  : uid=", false, 2, null) xor true;
       }
    }

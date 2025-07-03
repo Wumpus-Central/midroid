@@ -25,9 +25,9 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    private final val onTapSpoiler: (MessagePartViewHolder) -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "guildEventInviteView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
-      kotlin.jvm.internal.q.h(var3, "onTapSpoiler");
+      kotlin.jvm.internal.r.h(var1, "guildEventInviteView");
+      kotlin.jvm.internal.r.h(var2, "eventHandler");
+      kotlin.jvm.internal.r.h(var3, "onTapSpoiler");
       super(var1, null);
       this.guildEventInviteView = var1;
       this.eventHandler = var2;
@@ -51,15 +51,15 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    }
 
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
-      kotlin.jvm.internal.q.h(var1, "inviteAccessory");
-      val var19: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var21: GuildEventInviteView = this.guildEventInviteView;
-      this.guildEventInviteView.setHeader(var19.getHeaderIcon(), var19.getHeaderText(), var19.getHeaderColor());
-      var21.setCreatorAvatar(var19.getCreatorAvatar());
-      var21.setBadge(var19.getBadgeIcon(), var19.getBadgeCount());
-      var21.setTitle(var19.getTitleText(), var19.getTitleColor());
-      var21.setDescription-iRUqyQU(
-         var19.getContent(),
+      kotlin.jvm.internal.r.h(var1, "inviteAccessory");
+      val var11: GuildEventInviteEmbedImpl = var1.getInvite();
+      val var20: GuildEventInviteView = this.guildEventInviteView;
+      this.guildEventInviteView.setHeader(var11.getHeaderIcon(), var11.getHeaderText(), var11.getHeaderColor());
+      var20.setCreatorAvatar(var11.getCreatorAvatar());
+      var20.setBadge(var11.getBadgeIcon(), var11.getBadgeCount());
+      var20.setTitle(var11.getTitleText(), var11.getTitleColor());
+      var20.setDescription-iRUqyQU(
+         var11.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
          var1.getShouldShowLinkDecorations(),
@@ -78,8 +78,8 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke_ntcYbpo/* $VF was: invoke-ntcYbpo*/(java.lang.String var1, LinkContentNode var2) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
             }
          },
@@ -89,7 +89,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(LinkContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
             }
          },
@@ -99,7 +99,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          },
@@ -116,7 +116,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLongPressChannel(var1, var2, var3, var4);
             }
          },
@@ -126,7 +126,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapAttachmentLink(var1);
             }
          },
@@ -136,8 +136,8 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2) {
-               kotlin.jvm.internal.q.h(var1, "p0");
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onLongPressAttachmentLink(var1, var2);
             }
          },
@@ -154,7 +154,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3, java.lang.String var4) {
-               kotlin.jvm.internal.q.h(var2, "p1");
+               kotlin.jvm.internal.r.h(var2, "p1");
                (super.receiver as ChatEventHandler).onTapMention(var1, var2, var3, var4);
             }
          },
@@ -164,7 +164,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(CommandMentionContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapCommand(var1);
             }
          },
@@ -181,7 +181,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(CommandMentionContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onLongPressCommand(var1);
             }
          },
@@ -192,7 +192,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapTimestamp(var1);
             }
          },
@@ -204,7 +204,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(InlineCodeContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapInlineCode(var1);
             }
          },
@@ -214,7 +214,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(EmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapEmoji(var1);
             }
          },
@@ -224,7 +224,7 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke_1xi1bu0/* $VF was: invoke-1xi1bu0*/(java.lang.String var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSeeMore-1xi1bu0(var1);
             }
          },
@@ -234,21 +234,21 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
 
             public final void invoke(SoundmojiContentNode var1) {
-               kotlin.jvm.internal.q.h(var1, "p0");
+               kotlin.jvm.internal.r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapSoundmoji(var1);
             }
          }
       );
-      var21.setGuild(var19.getGuildName(), var19.getGuildIcon());
-      var21.setChannel(var19.getChannelIcon(), var19.getChannelName());
-      var21.setAcceptButton(
-         var19.getAcceptLabelIcon(),
-         var19.getAcceptLabelText(),
-         var19.getAcceptLabelColor(),
-         var19.getAcceptLabelBorderColor(),
-         var19.getAcceptLabelBackgroundColor(),
+      var20.setGuild(var11.getGuildName(), var11.getGuildIcon());
+      var20.setChannel(var11.getChannelIcon(), var11.getChannelName());
+      var20.setAcceptButton(
+         var11.getAcceptLabelIcon(),
+         var11.getAcceptLabelText(),
+         var11.getAcceptLabelColor(),
+         var11.getAcceptLabelBorderColor(),
+         var11.getAcceptLabelBackgroundColor(),
          new o(this, var1)
       );
-      var21.setSecondaryButton(var19.getSecondaryActionIcon(), new p(this, var1));
+      var20.setSecondaryButton(var11.getSecondaryActionIcon(), new p(this, var1));
    }
 }

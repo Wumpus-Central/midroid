@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -13,8 +13,8 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    public final val reason: String
 
    init {
-      q.h(var2, "source");
-      q.h(var3, "reason");
+      r.h(var2, "source");
+      r.h(var3, "reason");
       super();
       this.connectionId = var1;
       this.source = var2;
@@ -34,8 +34,8 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    }
 
    public fun copy(connectionId: Int = var0.connectionId, source: String = var0.source, reason: String = var0.reason): MlsFailureCallbackEvent {
-      q.h(var2, "source");
-      q.h(var3, "reason");
+      r.h(var2, "source");
+      r.h(var3, "reason");
       return new MlsFailureCallbackEvent(var1, var2, var3);
    }
 
@@ -48,10 +48,10 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!q.c(this.source, var1.source)) {
+         } else if (!r.c(this.source, var1.source)) {
             return false;
          } else {
-            return q.c(this.reason, var1.reason);
+            return r.c(this.reason, var1.reason);
          }
       }
    }

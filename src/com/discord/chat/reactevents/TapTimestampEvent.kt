@@ -1,19 +1,19 @@
 package com.discord.chat.reactevents
 
-import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
+import z9.s
 
 @f
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    public final val timestamp: String
 
    init {
-      q.h(var1, "timestamp");
+      r.h(var1, "timestamp");
       super();
       this.timestamp = var1;
    }
@@ -23,7 +23,7 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    }
 
    public fun copy(timestamp: String = var0.timestamp): TapTimestampEvent {
-      q.h(var1, "timestamp");
+      r.h(var1, "timestamp");
       return new TapTimestampEvent(var1);
    }
 
@@ -33,7 +33,7 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
       } else if (var1 !is TapTimestampEvent) {
          return false;
       } else {
-         return q.c(this.timestamp, (var1 as TapTimestampEvent).timestamp);
+         return r.c(this.timestamp, (var1 as TapTimestampEvent).timestamp);
       }
    }
 

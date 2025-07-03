@@ -8,7 +8,7 @@ import com.discord.ripple.RippleUtilsKt
 
 public abstract class StickerPartViewHolder : MessagePartViewHolder {
    open fun StickerPartViewHolder(var1: View) {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super(var1, null);
       var1.setLayoutParams(new RecyclerView.LayoutParams(SizeUtilsKt.getDpToPx(160), SizeUtilsKt.getDpToPx(160)));
       var1.setPadding(DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX, DEFAULT_STICKER_PADDING_PX);

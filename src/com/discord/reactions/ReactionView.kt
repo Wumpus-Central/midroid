@@ -20,7 +20,7 @@ import com.discord.theme.ThemeManager
 import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ReactionView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final val binding: ReactionViewBinding
@@ -29,32 +29,32 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private final var currentShouldAnimate: Boolean?
 
    fun ReactionView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       val var6: ReactionViewBinding = ReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
+      r.g(var6, "inflate(...)");
       this.binding = var6;
       this.setOrientation(0);
       this.setGravity(16);
       this.setMinimumWidth(MINIMUM_WIDTH);
       this.setPadding(HORIZ_PADDING, VERT_PADDING, HORIZ_PADDING, VERT_PADDING);
       var var5: TextView = var6.reactionCount1;
-      q.g(var6.reactionCount1, "reactionCount1");
+      r.g(var6.reactionCount1, "reactionCount1");
       val var7: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
       var5 = var6.reactionCount1;
-      q.g(var6.reactionCount1, "reactionCount1");
+      r.g(var6.reactionCount1, "reactionCount1");
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
       var5 = var6.reactionCount2;
-      q.g(var6.reactionCount2, "reactionCount2");
+      r.g(var6.reactionCount2, "reactionCount2");
       DiscordFontUtilsKt.setDiscordFont(var5, var7);
       val var8: TextView = var6.reactionCount2;
-      q.g(var6.reactionCount2, "reactionCount2");
+      r.g(var6.reactionCount2, "reactionCount2");
       SetTextSizeSpKt.setTextSizeSp(var8, 14.0F, 14.0F);
       var6.reactionCountSwitcher.setMeasureAllChildren(false);
    }
@@ -62,7 +62,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = Q9.a.c(var2.getOpacity() * (float)255);
+         var3 = P9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -94,7 +94,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var3 = var12;
       } else if (var1) {
          val var13: Context = this.getContext();
-         q.g(var13, "getContext(...)");
+         r.g(var13, "getContext(...)");
          var3 = ColorUtilsKt.getColorCompat(var13, com.discord.theme.R.color.brand_new_500_alpha_20);
       } else {
          var3 = ThemeManagerKt.getTheme().getBackgroundSecondary();
@@ -107,7 +107,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             var4 = var8;
          } else {
             val var9: Context = this.getContext();
-            q.g(var9, "getContext(...)");
+            r.g(var9, "getContext(...)");
             var4 = ColorUtilsKt.getColorCompat(var9, com.discord.theme.R.color.brand_560);
          }
 
@@ -130,7 +130,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             val var12: Context = this.getContext();
-            q.g(var12, "getContext(...)");
+            r.g(var12, "getContext(...)");
             var3 = ColorUtilsKt.getColorCompat(var12, com.discord.theme.R.color.brand_new_500_alpha_20);
          }
 
@@ -147,7 +147,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             val var8: Context = this.getContext();
-            q.g(var8, "getContext(...)");
+            r.g(var8, "getContext(...)");
             var4 = ColorUtilsKt.getColorCompat(var8, com.discord.theme.R.color.brand_560);
          }
 
@@ -178,7 +178,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean) {
-      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var2) {
          val var3: Int;
          if (this.currentCount != null) {
@@ -189,13 +189,13 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
          if (var1 > var3) {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
          } else {
             this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
+            var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
          }
 
-         var4.setText(java.lang.String.valueOf(var1));
+         var5.setText(java.lang.String.valueOf(var1));
       } else {
          this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
       }
@@ -257,10 +257,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    public fun setReaction(reaction: com.discord.reactions.ReactionView.Reaction, reactionsTheme: com.discord.reactions.ReactionView.ReactionsTheme?) {
-      q.h(var1, "reaction");
+      r.h(var1, "reaction");
       this.binding.getRoot().setContentDescription(var1.getEmoji().getDisplayName());
       val var3: Boolean;
-      if (q.c(this.currentEmojiId, var1.getEmoji().getEmojiId()) && q.c(this.currentShouldAnimate, var1.getEmoji().getShouldAnimate())) {
+      if (r.c(this.currentEmojiId, var1.getEmoji().getEmojiId()) && r.c(this.currentShouldAnimate, var1.getEmoji().getShouldAnimate())) {
          var3 = true;
       } else {
          var3 = false;
@@ -317,10 +317,10 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
          val var10: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var15: RenderableEmoji = var1.getEmoji().renderable();
-         val var8: Context = this.getContext();
-         q.g(var8, "getContext(...)");
-         var10.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var15, var8, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var8: RenderableEmoji = var1.getEmoji().renderable();
+         val var15: Context = this.getContext();
+         r.g(var15, "getContext(...)");
+         var10.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var8, var15, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

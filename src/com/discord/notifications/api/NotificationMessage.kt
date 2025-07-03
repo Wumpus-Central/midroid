@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import tb.f
+import sb.f
 
 @f
 public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
@@ -35,9 +35,9 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    init {
-      q.h(var1, "stickerItems");
-      q.h(var3, "mentions");
-      q.h(var5, "embeds");
+      r.h(var1, "stickerItems");
+      r.h(var3, "mentions");
+      r.h(var5, "embeds");
       super();
       this.stickerItems = var1;
       this.author = var2;
@@ -73,9 +73,9 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
       poll: Poll? = var0.poll,
       embeds: List<Embed> = var0.embeds
    ): NotificationMessage {
-      q.h(var1, "stickerItems");
-      q.h(var3, "mentions");
-      q.h(var5, "embeds");
+      r.h(var1, "stickerItems");
+      r.h(var3, "mentions");
+      r.h(var5, "embeds");
       return new NotificationMessage(var1, var2, var3, var4, var5);
    }
 
@@ -86,16 +86,16 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.stickerItems, var1.stickerItems)) {
+         if (!r.c(this.stickerItems, var1.stickerItems)) {
             return false;
-         } else if (!q.c(this.author, var1.author)) {
+         } else if (!r.c(this.author, var1.author)) {
             return false;
-         } else if (!q.c(this.mentions, var1.mentions)) {
+         } else if (!r.c(this.mentions, var1.mentions)) {
             return false;
-         } else if (!q.c(this.poll, var1.poll)) {
+         } else if (!r.c(this.poll, var1.poll)) {
             return false;
          } else {
-            return q.c(this.embeds, var1.embeds);
+            return r.c(this.embeds, var1.embeds);
          }
       }
    }
@@ -119,24 +119,24 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.stickerItems;
-      val var1: JsonObject = this.author;
+      val var4: java.util.List = this.stickerItems;
+      val var6: JsonObject = this.author;
       val var5: java.util.List = this.mentions;
-      val var6: Poll = this.poll;
+      val var3: Poll = this.poll;
       val var2: java.util.List = this.embeds;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NotificationMessage(stickerItems=");
-      var4.append(var3);
-      var4.append(", author=");
-      var4.append(var1);
-      var4.append(", mentions=");
-      var4.append(var5);
-      var4.append(", poll=");
-      var4.append(var6);
-      var4.append(", embeds=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("NotificationMessage(stickerItems=");
+      var1.append(var4);
+      var1.append(", author=");
+      var1.append(var6);
+      var1.append(", mentions=");
+      var1.append(var5);
+      var1.append(", poll=");
+      var1.append(var3);
+      var1.append(", embeds=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

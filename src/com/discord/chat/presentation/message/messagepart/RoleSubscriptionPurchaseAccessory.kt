@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.message.messagepart
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    authorUsername: String?,
@@ -16,7 +16,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    public final val isForwardedContent: Boolean
 
    fun RoleSubscriptionPurchaseAccessory(var1: java.lang.String, var2: java.lang.String, var3: java.lang.String, var4: Int, var5: Boolean) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super(var1, "role subscription purchase", false, 4, null);
       this.messageId = var1;
       this.authorUsername = var2;
@@ -52,7 +52,7 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
       constrainedWidth: Int = ...,
       isForwardedContent: Boolean = ...
    ): RoleSubscriptionPurchaseAccessory {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new RoleSubscriptionPurchaseAccessory(var1, var2, var3, var4, var5, null);
    }
 
@@ -65,9 +65,9 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.authorUsername, var1.authorUsername)) {
+         } else if (!r.c(this.authorUsername, var1.authorUsername)) {
             return false;
-         } else if (!q.c(this.authorAvatar, var1.authorAvatar)) {
+         } else if (!r.c(this.authorAvatar, var1.authorAvatar)) {
             return false;
          } else if (this.constrainedWidth != var1.constrainedWidth) {
             return false;
@@ -95,23 +95,23 @@ public data class RoleSubscriptionPurchaseAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
       val var4: java.lang.String = this.authorUsername;
       val var6: java.lang.String = this.authorAvatar;
       val var1: Int = this.constrainedWidth;
       val var2: Boolean = this.isForwardedContent;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("RoleSubscriptionPurchaseAccessory(messageId=");
-      var5.append(var3);
-      var5.append(", authorUsername=");
-      var5.append(var4);
-      var5.append(", authorAvatar=");
-      var5.append(var6);
-      var5.append(", constrainedWidth=");
-      var5.append(var1);
-      var5.append(", isForwardedContent=");
-      var5.append(var2);
-      var5.append(")");
-      return var5.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleSubscriptionPurchaseAccessory(messageId=");
+      var3.append(var5);
+      var3.append(", authorUsername=");
+      var3.append(var4);
+      var3.append(", authorAvatar=");
+      var3.append(var6);
+      var3.append(", constrainedWidth=");
+      var3.append(var1);
+      var3.append(", isForwardedContent=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

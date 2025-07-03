@@ -1,8 +1,8 @@
 package com.discord.push_notification_monitor
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PushNotificationMeta(receivedTimestamp: Long,
@@ -22,8 +22,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    public final val messageId: String?
 
    init {
-      q.h(var4, "type");
-      q.h(var5, "title");
+      r.h(var4, "type");
+      r.h(var5, "title");
       super();
       this.receivedTimestamp = var1;
       this.silent = var3;
@@ -71,8 +71,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       channelId: String? = var0.channelId,
       messageId: String? = var0.messageId
    ): PushNotificationMeta {
-      q.h(var4, "type");
-      q.h(var5, "title");
+      r.h(var4, "type");
+      r.h(var5, "title");
       return new PushNotificationMeta(var1, var3, var4, var5, var6, var7, var8);
    }
 
@@ -87,25 +87,25 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
             return false;
          } else if (this.silent != var1.silent) {
             return false;
-         } else if (!q.c(this.type, var1.type)) {
+         } else if (!r.c(this.type, var1.type)) {
             return false;
-         } else if (!q.c(this.title, var1.title)) {
+         } else if (!r.c(this.title, var1.title)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.messageId, var1.messageId);
+            return r.c(this.messageId, var1.messageId);
          }
       }
    }
 
    public override fun hashCode(): Int {
       val var4: Int = java.lang.Long.hashCode(this.receivedTimestamp);
-      val var7: Int = java.lang.Boolean.hashCode(this.silent);
-      val var6: Int = this.type.hashCode();
-      val var5: Int = this.title.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.silent);
+      val var7: Int = this.type.hashCode();
+      val var6: Int = this.title.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.content == null) {
@@ -125,32 +125,32 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
          var3 = this.messageId.hashCode();
       }
 
-      return (((((var4 * 31 + var7) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((((var4 * 31 + var5) * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var1: Long = this.receivedTimestamp;
-      val var3: Boolean = this.silent;
-      val var4: java.lang.String = this.type;
-      val var7: java.lang.String = this.title;
-      val var8: java.lang.String = this.content;
-      val var9: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
+      val var2: Long = this.receivedTimestamp;
+      val var1: Boolean = this.silent;
+      val var7: java.lang.String = this.type;
+      val var5: java.lang.String = this.title;
+      val var4: java.lang.String = this.content;
+      val var8: java.lang.String = this.channelId;
+      val var9: java.lang.String = this.messageId;
       val var6: StringBuilder = new StringBuilder();
       var6.append("PushNotificationMeta(receivedTimestamp=");
-      var6.append(var1);
+      var6.append(var2);
       var6.append(", silent=");
-      var6.append(var3);
+      var6.append(var1);
       var6.append(", type=");
-      var6.append(var4);
-      var6.append(", title=");
       var6.append(var7);
-      var6.append(", content=");
-      var6.append(var8);
-      var6.append(", channelId=");
-      var6.append(var9);
-      var6.append(", messageId=");
+      var6.append(", title=");
       var6.append(var5);
+      var6.append(", content=");
+      var6.append(var4);
+      var6.append(", channelId=");
+      var6.append(var8);
+      var6.append(", messageId=");
+      var6.append(var9);
       var6.append(")");
       return var6.toString();
    }

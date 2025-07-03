@@ -1,7 +1,6 @@
 package com.discord.segmented.control
 
-import A9.s
-import B9.n
+import A9.n
 import android.annotation.SuppressLint
 import android.graphics.Color
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -17,26 +16,27 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerDelegate
 import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
 import java.util.ArrayList
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onValueChange", G.b(ValueChangeEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onValueChange", H.b(ValueChangeEvent.class)))
    private final val delegate: DCDSegmentedControlManagerDelegate<SegmentedControlView, SegmentedControlViewManager>
 
    @JvmStatic
    fun `createViewInstance$lambda$1$lambda$0`(
       var0: SegmentedControlViewManager, var1: ThemedReactContext, var2: SegmentedControlView, var3: Int, var4: java.lang.String
    ): Unit {
-      q.h(var4, "label");
+      r.h(var4, "label");
       var0.reactEvents.emitEvent(var1, var2, new ValueChangeEvent(var4, var3));
       return Unit.a;
    }
 
    @SuppressLint(["InflateParams"])
    protected open fun createViewInstance(reactContext: ThemedReactContext): SegmentedControlView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       val var2: SegmentedControlView = new SegmentedControlView(var1, null, 0, 6, null);
       var2.setOnSegmentSelected(new b(this, var1, var2));
       return var2;
@@ -56,7 +56,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "accessibilityRoleDescriptions")
    public open fun setAccessibilityRoleDescriptions(view: SegmentedControlView, value: ReadableArray?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();
@@ -75,7 +75,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "backgroundColor")
    public open fun setBackgroundColor(view: SegmentedControlView, value: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setContainerBgColor(Color.parseColor(var2));
       }
@@ -83,13 +83,13 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "cornerRadius")
    public open fun setCornerRadius(view: SegmentedControlView, value: Int) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setCornerRadiusPx((float)SizeUtilsKt.getDpToPx(var2));
    }
 
    @ReactProp(name = "customSelectedTintColor")
    public open fun setCustomSelectedTintColor(view: SegmentedControlView, value: String?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setSelectedSegmentBgColor(Color.parseColor(var2));
       }
@@ -97,13 +97,13 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "selectedSegmentIndex")
    public open fun setSelectedSegmentIndex(view: SegmentedControlView, value: Int) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setSelectedIndex(var2);
    }
 
    @ReactProp(name = "selectedTitleAttributes")
    public open fun setSelectedTitleAttributes(view: SegmentedControlView, value: ReadableMap?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setSelectedSegmentTextColor(var2.getInt("textColor"));
          var1.setSelectedSegmentFontSizeSp((float)var2.getInt("fontSize"));
@@ -112,7 +112,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "titleAttributes")
    public open fun setTitleAttributes(view: SegmentedControlView, value: ReadableMap?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setSegmentTextColor(var2.getInt("textColor"));
          var1.setSegmentFontSizeSp((float)var2.getInt("fontSize"));
@@ -121,7 +121,7 @@ public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlVie
 
    @ReactProp(name = "values")
    public open fun setValues(view: SegmentedControlView, value: ReadableArray?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          val var3: ArrayList = new ArrayList();

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.sticker
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class Sticker(id: Long,
@@ -26,11 +26,11 @@ public data class Sticker(id: Long,
    public final val accessibilityLabel: String
 
    init {
-      q.h(var3, "formatType");
-      q.h(var4, "name");
-      q.h(var5, "asset");
-      q.h(var6, "url");
-      q.h(var10, "accessibilityLabel");
+      r.h(var3, "formatType");
+      r.h(var4, "name");
+      r.h(var5, "asset");
+      r.h(var6, "url");
+      r.h(var10, "accessibilityLabel");
       super();
       this.id = var1;
       this.formatType = var3;
@@ -90,11 +90,11 @@ public data class Sticker(id: Long,
       renderMode: Int = var0.renderMode,
       accessibilityLabel: String = var0.accessibilityLabel
    ): Sticker {
-      q.h(var3, "formatType");
-      q.h(var4, "name");
-      q.h(var5, "asset");
-      q.h(var6, "url");
-      q.h(var10, "accessibilityLabel");
+      r.h(var3, "formatType");
+      r.h(var4, "name");
+      r.h(var5, "asset");
+      r.h(var6, "url");
+      r.h(var10, "accessibilityLabel");
       return new Sticker(var1, var3, var4, var5, var6, var7, var8, var9, var10);
    }
 
@@ -109,29 +109,29 @@ public data class Sticker(id: Long,
             return false;
          } else if (this.formatType != var1.formatType) {
             return false;
-         } else if (!q.c(this.name, var1.name)) {
+         } else if (!r.c(this.name, var1.name)) {
             return false;
-         } else if (!q.c(this.asset, var1.asset)) {
+         } else if (!r.c(this.asset, var1.asset)) {
             return false;
-         } else if (!q.c(this.url, var1.url)) {
+         } else if (!r.c(this.url, var1.url)) {
             return false;
-         } else if (!q.c(this.width, var1.width)) {
+         } else if (!r.c(this.width, var1.width)) {
             return false;
-         } else if (!q.c(this.height, var1.height)) {
+         } else if (!r.c(this.height, var1.height)) {
             return false;
          } else if (this.renderMode != var1.renderMode) {
             return false;
          } else {
-            return q.c(this.accessibilityLabel, var1.accessibilityLabel);
+            return r.c(this.accessibilityLabel, var1.accessibilityLabel);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = java.lang.Long.hashCode(this.id);
-      val var7: Int = this.formatType.hashCode();
-      val var4: Int = this.name.hashCode();
-      val var5: Int = this.asset.hashCode();
+      val var4: Int = java.lang.Long.hashCode(this.id);
+      val var5: Int = this.formatType.hashCode();
+      val var6: Int = this.name.hashCode();
+      val var7: Int = this.asset.hashCode();
       val var3: Int = this.url.hashCode();
       var var2: Int = 0;
       val var1: Int;
@@ -145,41 +145,41 @@ public data class Sticker(id: Long,
          var2 = this.height.hashCode();
       }
 
-      return (((((((var6 * 31 + var7) * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
+      return (((((((var4 * 31 + var5) * 31 + var6) * 31 + var7) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
          + this.accessibilityLabel.hashCode();
    }
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var10: StickerFormatType = this.formatType;
-      val var4: java.lang.String = this.name;
+      val var9: StickerFormatType = this.formatType;
+      val var6: java.lang.String = this.name;
       val var5: java.lang.String = this.asset;
-      val var8: java.lang.String = this.url;
-      val var6: Int = this.width;
-      val var11: Int = this.height;
+      val var4: java.lang.String = this.url;
+      val var7: Int = this.width;
+      val var8: Int = this.height;
       val var1: Int = this.renderMode;
-      val var7: java.lang.String = this.accessibilityLabel;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("Sticker(id=");
-      var9.append(var2);
-      var9.append(", formatType=");
-      var9.append(var10);
-      var9.append(", name=");
-      var9.append(var4);
-      var9.append(", asset=");
-      var9.append(var5);
-      var9.append(", url=");
-      var9.append(var8);
-      var9.append(", width=");
-      var9.append(var6);
-      var9.append(", height=");
-      var9.append(var11);
-      var9.append(", renderMode=");
-      var9.append(var1);
-      var9.append(", accessibilityLabel=");
-      var9.append(var7);
-      var9.append(")");
-      return var9.toString();
+      val var10: java.lang.String = this.accessibilityLabel;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("Sticker(id=");
+      var11.append(var2);
+      var11.append(", formatType=");
+      var11.append(var9);
+      var11.append(", name=");
+      var11.append(var6);
+      var11.append(", asset=");
+      var11.append(var5);
+      var11.append(", url=");
+      var11.append(var4);
+      var11.append(", width=");
+      var11.append(var7);
+      var11.append(", height=");
+      var11.append(var8);
+      var11.append(", renderMode=");
+      var11.append(var1);
+      var11.append(", accessibilityLabel=");
+      var11.append(var10);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

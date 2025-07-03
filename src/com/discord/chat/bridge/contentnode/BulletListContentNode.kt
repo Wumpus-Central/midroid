@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class BulletListContentNode(start: Long? = null, ordered: Boolean = false, items: List<List<ContentNode>>) : ContentNode {
@@ -11,7 +11,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    public final val items: List<List<ContentNode>>
 
    init {
-      q.h(var3, "items");
+      r.h(var3, "items");
       super(null);
       this.start = var1;
       this.ordered = var2;
@@ -31,7 +31,7 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    }
 
    public fun copy(start: Long? = var0.start, ordered: Boolean = var0.ordered, items: List<List<ContentNode>> = var0.items): BulletListContentNode {
-      q.h(var3, "items");
+      r.h(var3, "items");
       return new BulletListContentNode(var1, var2, var3);
    }
 
@@ -42,12 +42,12 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.start, var1.start)) {
+         if (!r.c(this.start, var1.start)) {
             return false;
          } else if (this.ordered != var1.ordered) {
             return false;
          } else {
-            return q.c(this.items, var1.items);
+            return r.c(this.items, var1.items);
          }
       }
    }
@@ -66,16 +66,16 @@ public data class BulletListContentNode(start: Long? = null, ordered: Boolean = 
    public override fun toString(): String {
       val var4: java.lang.Long = this.start;
       val var1: Boolean = this.ordered;
-      val var3: java.util.List = this.items;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BulletListContentNode(start=");
-      var2.append(var4);
-      var2.append(", ordered=");
-      var2.append(var1);
-      var2.append(", items=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.items;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("BulletListContentNode(start=");
+      var3.append(var4);
+      var3.append(", ordered=");
+      var3.append(var1);
+      var3.append(", items=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

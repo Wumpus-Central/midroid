@@ -2,16 +2,16 @@ package com.discord.sticker_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
    public final val stickerId: String
 
    init {
-      q.h(var1, "stickerId");
+      r.h(var1, "stickerId");
       super();
       this.stickerId = var1;
    }
@@ -21,7 +21,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
    }
 
    public fun copy(stickerId: String = var0.stickerId): OnLongPressStickerEvent {
-      q.h(var1, "stickerId");
+      r.h(var1, "stickerId");
       return new OnLongPressStickerEvent(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
       } else if (var1 !is OnLongPressStickerEvent) {
          return false;
       } else {
-         return q.c(this.stickerId, (var1 as OnLongPressStickerEvent).stickerId);
+         return r.c(this.stickerId, (var1 as OnLongPressStickerEvent).stickerId);
       }
    }
 
@@ -44,12 +44,12 @@ internal data class OnLongPressStickerEvent(stickerId: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.stickerId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("OnLongPressStickerEvent(stickerId=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.stickerId;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("OnLongPressStickerEvent(stickerId=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -9,15 +9,15 @@ public class AppMessageEmbedViewHolder(view: AppMessageEmbedView, eventHandler: 
    public final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.q.h(var1, "view");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
+      kotlin.jvm.internal.r.h(var1, "view");
+      kotlin.jvm.internal.r.h(var2, "eventHandler");
       super(var1, null);
       this.view = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(accessory: AppMessageEmbedAccessory) {
-      kotlin.jvm.internal.q.h(var1, "accessory");
+      kotlin.jvm.internal.r.h(var1, "accessory");
       this.view.initView(var1.getAppMessageEmbed(), this.eventHandler, var1.getConstrainedWidth());
    }
 }

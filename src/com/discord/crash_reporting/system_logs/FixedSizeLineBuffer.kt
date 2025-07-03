@@ -28,7 +28,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // Bytecode:
       // 00: aload 1
       // 01: ldc "line"
-      // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 0
       // 07: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.sync Ljava/lang/Object;
       // 0a: astore 2
@@ -100,7 +100,7 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // Bytecode:
       // 00: aload 1
       // 01: ldc "sb"
-      // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 0
       // 07: getfield com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.sync Ljava/lang/Object;
       // 0a: astore 2
@@ -121,14 +121,14 @@ internal class FixedSizeLineBuffer(maxCharacterCount: Int) {
       // 2b: pop
       // 2c: aload 1
       // 2d: ldc "append(...)"
-      // 2f: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 2f: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 32: aload 1
       // 33: bipush 10
       // 35: invokevirtual java/lang/StringBuilder.append (C)Ljava/lang/StringBuilder;
       // 38: pop
       // 39: aload 1
       // 3a: ldc "append(...)"
-      // 3c: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 3c: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 3f: goto 15
       // 42: astore 1
       // 43: goto 4d

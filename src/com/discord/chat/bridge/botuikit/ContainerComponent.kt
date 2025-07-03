@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class ContainerComponent(type: Int,
@@ -29,8 +29,8 @@ public data class ContainerComponent(type: Int,
    public open val obscureOrNull: Nothing?
 
    init {
-      q.h(var2, "id");
-      q.h(var4, "components");
+      r.h(var2, "id");
+      r.h(var4, "components");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -96,8 +96,8 @@ public data class ContainerComponent(type: Int,
       spoilerDescription: String? = var0.spoilerDescription,
       themedBackgroundColor: Int? = var0.themedBackgroundColor
    ): ContainerComponent {
-      q.h(var2, "id");
-      q.h(var4, "components");
+      r.h(var2, "id");
+      r.h(var4, "components");
       return new ContainerComponent(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -110,20 +110,20 @@ public data class ContainerComponent(type: Int,
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.id, var1.id)) {
+         } else if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.errorText, var1.errorText)) {
+         } else if (!r.c(this.errorText, var1.errorText)) {
             return false;
-         } else if (!q.c(this.components, var1.components)) {
+         } else if (!r.c(this.components, var1.components)) {
             return false;
-         } else if (!q.c(this.accentColor, var1.accentColor)) {
+         } else if (!r.c(this.accentColor, var1.accentColor)) {
             return false;
          } else if (this.isSpoiler != var1.isSpoiler) {
             return false;
-         } else if (!q.c(this.spoilerDescription, var1.spoilerDescription)) {
+         } else if (!r.c(this.spoilerDescription, var1.spoilerDescription)) {
             return false;
          } else {
-            return q.c(this.themedBackgroundColor, var1.themedBackgroundColor);
+            return r.c(this.themedBackgroundColor, var1.themedBackgroundColor);
          }
       }
    }
@@ -164,32 +164,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var8: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var9: java.util.List = this.components;
-      val var7: Int = this.accentColor;
+      val var5: java.lang.String = this.id;
+      val var8: java.lang.String = this.errorText;
+      val var7: java.util.List = this.components;
+      val var9: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var3: java.lang.String = this.spoilerDescription;
-      val var6: Int = this.themedBackgroundColor;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ContainerComponent(type=");
-      var5.append(var1);
-      var5.append(", id=");
-      var5.append(var8);
-      var5.append(", errorText=");
-      var5.append(var4);
-      var5.append(", components=");
-      var5.append(var9);
-      var5.append(", accentColor=");
-      var5.append(var7);
-      var5.append(", isSpoiler=");
-      var5.append(var2);
-      var5.append(", spoilerDescription=");
-      var5.append(var3);
-      var5.append(", themedBackgroundColor=");
-      var5.append(var6);
-      var5.append(")");
-      return var5.toString();
+      val var6: java.lang.String = this.spoilerDescription;
+      val var3: Int = this.themedBackgroundColor;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ContainerComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var5);
+      var4.append(", errorText=");
+      var4.append(var8);
+      var4.append(", components=");
+      var4.append(var7);
+      var4.append(", accentColor=");
+      var4.append(var9);
+      var4.append(", isSpoiler=");
+      var4.append(var2);
+      var4.append(", spoilerDescription=");
+      var4.append(var6);
+      var4.append(", themedBackgroundColor=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -1,31 +1,31 @@
 package com.discord.fastest_list.android.placeholder
 
-import A9.n
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.view.ViewGroup
 import com.discord.fastest_list.android.FastestListSections.Entry
 import com.discord.fastest_list.android.placeholder.FastestListPlaceholderType.Shape
 import com.discord.misc.utilities.drawable.CustomDrawDrawable
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.n
 
 internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlaceholder {
    private final val placeholder: com.discord.fastest_list.android.placeholder.FastestListPlaceholderTypeShape.ShapeDrawable
 
    init {
-      q.h(var1, "config");
+      r.h(var1, "config");
       super(null);
       this.placeholder = new FastestListPlaceholderTypeShape.ShapeDrawable(var1);
    }
 
    public override fun onPlaceholderShouldBind(view: ViewGroup, item: Entry) {
-      q.h(var1, "view");
-      q.h(var2, "item");
+      r.h(var1, "view");
+      r.h(var2, "item");
       var1.setBackground(this.placeholder);
    }
 
    public override fun onPlaceholderShouldUnbind(view: ViewGroup) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setBackground(null);
    }
 
@@ -34,7 +34,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
       private final val paint: Paint
 
       init {
-         q.h(var1, "config");
+         r.h(var1, "config");
          super();
          this.config = var1;
          val var2: Paint = new Paint();
@@ -44,7 +44,7 @@ internal class FastestListPlaceholderTypeShape(config: Shape) : FastestListPlace
       }
 
       public override fun draw(canvas: Canvas) {
-         q.h(var1, "canvas");
+         r.h(var1, "canvas");
          var var2: Float = this.getBounds().width();
          val var7: Float = this.getBounds().height();
          var var11: java.lang.Float = this.config.getWidth();

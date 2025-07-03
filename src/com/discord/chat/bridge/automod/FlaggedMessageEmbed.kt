@@ -5,9 +5,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class FlaggedMessageEmbed(id: MessageId,
@@ -50,7 +50,7 @@ public data class FlaggedMessageEmbed(id: MessageId,
       var12: java.lang.String,
       var13: java.lang.Boolean
    ) {
-      q.h(var1, "id");
+      r.h(var1, "id");
       super();
       this.id = var1;
       this.channelId = var2;
@@ -128,7 +128,7 @@ public data class FlaggedMessageEmbed(id: MessageId,
       avatarURL: String? = ...,
       communicationDisabled: Boolean? = ...
    ): FlaggedMessageEmbed {
-      q.h(var1, "id");
+      r.h(var1, "id");
       return new FlaggedMessageEmbed(var1, var2, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, null);
    }
 
@@ -143,33 +143,33 @@ public data class FlaggedMessageEmbed(id: MessageId,
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.guildId, var1.guildId)) {
+         } else if (!r.c(this.guildId, var1.guildId)) {
             return false;
-         } else if (!q.c(this.userId, var1.userId)) {
+         } else if (!r.c(this.userId, var1.userId)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.channelName, var1.channelName)) {
+         } else if (!r.c(this.channelName, var1.channelName)) {
             return false;
-         } else if (!q.c(this.username, var1.username)) {
+         } else if (!r.c(this.username, var1.username)) {
             return false;
          } else if (this.usernameColor != var1.usernameColor) {
             return false;
-         } else if (!q.c(this.roleColor, var1.roleColor)) {
+         } else if (!r.c(this.roleColor, var1.roleColor)) {
             return false;
          } else if (this.shouldShowRoleDot != var1.shouldShowRoleDot) {
             return false;
-         } else if (!q.c(this.avatarURL, var1.avatarURL)) {
+         } else if (!r.c(this.avatarURL, var1.avatarURL)) {
             return false;
          } else {
-            return q.c(this.communicationDisabled, var1.communicationDisabled);
+            return r.c(this.communicationDisabled, var1.communicationDisabled);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = MessageId.hashCode-impl(this.id);
-      val var10: Int = ChannelId.hashCode-impl(this.channelId);
+      val var10: Int = MessageId.hashCode-impl(this.id);
+      val var9: Int = ChannelId.hashCode-impl(this.channelId);
       var var8: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -226,49 +226,49 @@ public data class FlaggedMessageEmbed(id: MessageId,
          var8 = this.communicationDisabled.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
+      return ((((((((((var10 * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
             * 31
          + var8;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.id);
-      val var12: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: GuildId = this.guildId;
-      val var4: UserId = this.userId;
-      val var5: StructurableText = this.content;
-      val var3: java.lang.String = this.channelName;
-      val var11: java.lang.String = this.username;
+      val var13: java.lang.String = MessageId.toString-impl(this.id);
+      val var10: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: GuildId = this.guildId;
+      val var3: UserId = this.userId;
+      val var11: StructurableText = this.content;
+      val var7: java.lang.String = this.channelName;
+      val var8: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var10: Int = this.roleColor;
+      val var6: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
-      val var6: java.lang.String = this.avatarURL;
-      val var13: java.lang.Boolean = this.communicationDisabled;
+      val var5: java.lang.String = this.avatarURL;
+      val var12: java.lang.Boolean = this.communicationDisabled;
       val var9: StringBuilder = new StringBuilder();
       var9.append("FlaggedMessageEmbed(id=");
-      var9.append(var7);
+      var9.append(var13);
       var9.append(", channelId=");
-      var9.append(var12);
+      var9.append(var10);
       var9.append(", guildId=");
-      var9.append(var8);
-      var9.append(", userId=");
       var9.append(var4);
-      var9.append(", content=");
-      var9.append(var5);
-      var9.append(", channelName=");
+      var9.append(", userId=");
       var9.append(var3);
-      var9.append(", username=");
+      var9.append(", content=");
       var9.append(var11);
+      var9.append(", channelName=");
+      var9.append(var7);
+      var9.append(", username=");
+      var9.append(var8);
       var9.append(", usernameColor=");
       var9.append(var1);
       var9.append(", roleColor=");
-      var9.append(var10);
+      var9.append(var6);
       var9.append(", shouldShowRoleDot=");
       var9.append(var2);
       var9.append(", avatarURL=");
-      var9.append(var6);
+      var9.append(var5);
       var9.append(", communicationDisabled=");
-      var9.append(var13);
+      var9.append(var12);
       var9.append(")");
       return var9.toString();
    }

@@ -3,7 +3,7 @@ package com.discord.span.utilities.spannable
 import android.graphics.Paint.FontMetricsInt
 import android.text.Spanned
 import android.text.style.LineHeightSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
    public final val top: Int
@@ -25,8 +25,8 @@ public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
    }
 
    public open fun chooseHeight(text: CharSequence, start: Int, end: Int, spanstartv: Int, v: Int, fontMetrics: FontMetricsInt) {
-      q.h(var1, "text");
-      q.h(var6, "fontMetrics");
+      r.h(var1, "text");
+      r.h(var6, "fontMetrics");
       if (var1 is Spanned) {
          if (!this.initialized) {
             this.origTop = var6.top;
@@ -47,9 +47,9 @@ public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
          }
 
          if (var7.getSpanEnd(this) == var3) {
-            var3 = this.bottom;
+            var2 = this.bottom;
             var6.bottom = var6.bottom + this.bottom;
-            var6.descent += var3;
+            var6.descent += var2;
          } else {
             var6.bottom = this.origBottom;
             var6.descent = this.origDescent;

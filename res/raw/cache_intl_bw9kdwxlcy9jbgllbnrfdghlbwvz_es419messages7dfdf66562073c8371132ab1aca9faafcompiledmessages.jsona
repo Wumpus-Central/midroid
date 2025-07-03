@@ -1,3 +1,18 @@
 {
-  "xRdYAQ": "Los temas personalizados [Beta] no están disponibles en dispositivos móviles."
+  "v15Ipq": [
+    "Al activar la sincronización, los temas [Beta] creados en el escritorio pueden afectar tu tema en dispositivos móviles. ",
+    [
+      8,
+      "$link",
+      [
+        "Más información aquí."
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ]
+  ]
 }

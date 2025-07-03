@@ -8,24 +8,24 @@ import android.widget.LinearLayout.LayoutParams
 import com.discord.chat.bridge.botuikit.Component
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MessageComponentsView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : LinearLayout {
    public final var componentContext: ComponentContext?
       internal set
 
    fun MessageComponentsView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MessageComponentsView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       this.setOrientation(1);
       this.setLayoutParams(new LayoutParams(-1, -2));
@@ -43,8 +43,8 @@ public class MessageComponentsView  public constructor(context: Context, attrs: 
    }
 
    public fun setComponents(components: List<Component>, componentProvider: ComponentProvider?, componentContext: ComponentContext) {
-      q.h(var1, "components");
-      q.h(var3, "componentContext");
+      r.h(var1, "components");
+      r.h(var3, "componentContext");
       this.componentContext = var3;
       val var5: ArrayList = new ArrayList(i.v(var1, 10));
       val var6: java.util.Iterator = var1.iterator();

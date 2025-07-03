@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.ephemeral.EphemeralIndication
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephemeralIndication: EphemeralIndication) : EphemeralIndicationMessageAccessory(
       var1, var2
@@ -11,8 +11,8 @@ public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephe
    public final val ephemeralIndication: EphemeralIndication
 
    fun EphemeralIndicationMessageAccessory(var1: java.lang.String, var2: EphemeralIndication) {
-      q.h(var1, "messageId");
-      q.h(var2, "ephemeralIndication");
+      r.h(var1, "messageId");
+      r.h(var2, "ephemeralIndication");
       super(var1, "ephemeral indication", false, 4, null);
       this.messageId = var1;
       this.ephemeralIndication = var2;
@@ -27,8 +27,8 @@ public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephe
    }
 
    public fun copy(messageId: MessageId = ..., ephemeralIndication: EphemeralIndication = ...): EphemeralIndicationMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "ephemeralIndication");
+      r.h(var1, "messageId");
+      r.h(var2, "ephemeralIndication");
       return new EphemeralIndicationMessageAccessory(var1, var2, null);
    }
 
@@ -42,7 +42,7 @@ public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephe
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.ephemeralIndication, var1.ephemeralIndication);
+            return r.c(this.ephemeralIndication, var1.ephemeralIndication);
          }
       }
    }
@@ -53,13 +53,13 @@ public data class EphemeralIndicationMessageAccessory(messageId: MessageId, ephe
 
    public override fun toString(): String {
       val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: EphemeralIndication = this.ephemeralIndication;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("EphemeralIndicationMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", ephemeralIndication=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: EphemeralIndication = this.ephemeralIndication;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("EphemeralIndicationMessageAccessory(messageId=");
+      var1.append(var2);
+      var1.append(", ephemeralIndication=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 }

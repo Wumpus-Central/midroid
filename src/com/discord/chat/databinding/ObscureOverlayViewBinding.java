@@ -52,17 +52,17 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
       BlurView var7 = (BlurView)a.a(var0, var1);
       if (var7 != null) {
          var1 = R.id.description_label;
-         TextView var5 = (TextView)a.a(var0, var1);
-         if (var5 != null) {
+         TextView var9 = (TextView)a.a(var0, var1);
+         if (var9 != null) {
             var1 = R.id.hide_button;
-            IconButtonView var6 = (IconButtonView)a.a(var0, var1);
-            if (var6 != null) {
+            IconButtonView var2 = (IconButtonView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.media_warning_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.opaque_background;
-                  FrameLayout var8 = (FrameLayout)a.a(var0, var1);
-                  if (var8 != null) {
+                  FrameLayout var5 = (FrameLayout)a.a(var0, var1);
+                  if (var5 != null) {
                      var1 = R.id.overlay_centered_container;
                      LinearLayout var4 = (LinearLayout)a.a(var0, var1);
                      if (var4 != null) {
@@ -70,9 +70,9 @@ public final class ObscureOverlayViewBinding implements ViewBinding {
                         ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
                         if (var3 != null) {
                            var1 = R.id.reveal_button;
-                           IconButtonView var9 = (IconButtonView)a.a(var0, var1);
-                           if (var9 != null) {
-                              return new ObscureOverlayViewBinding(var0, var7, var5, var6, var2, var8, var4, var3, var9);
+                           IconButtonView var8 = (IconButtonView)a.a(var0, var1);
+                           if (var8 != null) {
+                              return new ObscureOverlayViewBinding(var0, var7, var9, var2, var6, var5, var4, var3, var8);
                            }
                         }
                      }

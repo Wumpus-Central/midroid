@@ -1,15 +1,15 @@
 package com.discord.media.utils
 
-import dc.m
+import cc.m
 import java.io.File
 import java.io.InputStream
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import okio.BufferedSink
 
 internal fun InputStream.writeTo(outputFile: File): File {
    label18: {
-      q.h(var0, "<this>");
-      q.h(var1, "outputFile");
+      r.h(var0, "<this>");
+      r.h(var1, "outputFile");
       val var2: BufferedSink = m.c(m.j(var1, false, 1, null));
 
       try {
@@ -20,11 +20,11 @@ internal fun InputStream.writeTo(outputFile: File): File {
          try {
             throw var9;
          } catch (var3: java.lang.Throwable) {
-            M9.c.a(var2, var4);
+            L9.c.a(var2, var4);
          }
       }
 
-      M9.c.a(var2, null);
+      L9.c.a(var2, null);
       return var1;
    }
 }

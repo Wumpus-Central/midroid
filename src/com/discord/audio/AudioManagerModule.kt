@@ -11,25 +11,25 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeAudioManagerModuleSpec {
    private final lateinit var audioManager: DiscordAudioManagerInterface
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
    public override fun addListener(eventType: String) {
-      q.h(var1, "eventType");
+      r.h(var1, "eventType");
    }
 
    public override fun getActiveAudioDevice(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         q.y("audioManager");
+         r.y("audioManager");
          var2 = null;
       }
 
@@ -37,10 +37,10 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
    }
 
    public override fun getAudioDevices(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         q.y("audioManager");
+         r.y("audioManager");
          var2 = null;
       }
 
@@ -59,11 +59,11 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
    }
 
    public override fun setActiveAudioDevice(deviceMap: ReadableMap) {
-      q.h(var1, "deviceMap");
+      r.h(var1, "deviceMap");
       val var3: AndroidAudioDevice = AndroidAudioDevice.Companion.fromReadableMap(var1);
       var var4: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         q.y("audioManager");
+         r.y("audioManager");
          var4 = null;
       }
 
@@ -73,7 +73,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
    public override fun setCommunicationModeOn(on: Boolean) {
       var var2: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         q.y("audioManager");
+         r.y("audioManager");
          var2 = null;
       }
 
@@ -83,7 +83,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
    public override fun setSCORetryCount(count: Double) {
       var var3: DiscordAudioManagerInterface = this.audioManager;
       if (this.audioManager == null) {
-         q.y("audioManager");
+         r.y("audioManager");
          var3 = null;
       }
 
@@ -94,7 +94,7 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
       private final val reactEvents: ReactEvents
 
       public fun create(reactContext: ReactApplicationContext): NativeModule {
-         q.h(var1, "reactContext");
+         r.h(var1, "reactContext");
          val var3: AudioManagerModule = new AudioManagerModule(var1);
          if (VERSION.SDK_INT >= 33) {
             AudioManagerModule.access$setAudioManager$p(var3, DiscordAudioManager2.Companion.getInstance(var1));
@@ -111,20 +111,20 @@ public class AudioManagerModule(reactContext: ReactApplicationContext) : NativeA
 
             @Override
             public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
-               q.h(var1, "activeAudioDevice");
+               r.h(var1, "activeAudioDevice");
                AudioManagerModule.access$getReactEvents$cp().emitModuleEvent(this.$reactContext, new AudioManagerAudioDeviceChanged(var1));
             }
 
             @Override
             public void onAudioDevicesUpdated(java.util.List<AndroidAudioDevice> var1) {
-               q.h(var1, "audioDevices");
+               r.h(var1, "audioDevices");
                AudioManagerModule.access$getReactEvents$cp().emitModuleEvent(this.$reactContext, new AudioManagerAudioDevicesUpdated(var1));
             }
          };
          val var2: DiscordAudioManagerInterface = AudioManagerModule.access$getAudioManager$p(var3);
          var var5: DiscordAudioManagerInterface = var2;
          if (var2 == null) {
-            q.y("audioManager");
+            r.y("audioManager");
             var5 = null;
          }
 

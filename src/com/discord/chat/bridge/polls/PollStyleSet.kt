@@ -3,9 +3,9 @@ package com.discord.chat.bridge.polls
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.ReactColorToAndroidColorKt
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 public data class PollStyleSet(border: Int? = null,
@@ -212,26 +212,26 @@ public data class PollStyleSet(border: Int? = null,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.border, var1.border)) {
+         if (!r.c(this.border, var1.border)) {
             return false;
          } else if (this.borderWidth != var1.borderWidth) {
             return false;
-         } else if (!q.c(this.fill, var1.fill)) {
+         } else if (!r.c(this.fill, var1.fill)) {
             return false;
-         } else if (!q.c(this.label, var1.label)) {
+         } else if (!r.c(this.label, var1.label)) {
             return false;
          } else if (java.lang.Float.compare(this.opacity, var1.opacity) != 0) {
             return false;
-         } else if (!q.c(this.answerBackground, var1.answerBackground)) {
+         } else if (!r.c(this.answerBackground, var1.answerBackground)) {
             return false;
-         } else if (!q.c(this.answerFill, var1.answerFill)) {
+         } else if (!r.c(this.answerFill, var1.answerFill)) {
             return false;
          } else if (this.radioStyle != var1.radioStyle) {
             return false;
-         } else if (!q.c(this.radioBackground, var1.radioBackground)) {
+         } else if (!r.c(this.radioBackground, var1.radioBackground)) {
             return false;
          } else {
-            return q.c(this.radioForeground, var1.radioForeground);
+            return r.c(this.radioForeground, var1.radioForeground);
          }
       }
    }
@@ -299,37 +299,37 @@ public data class PollStyleSet(border: Int? = null,
    public override fun toString(): String {
       val var5: Int = this.border;
       val var2: Int = this.borderWidth;
-      val var7: Int = this.fill;
-      val var4: Int = this.label;
+      val var8: Int = this.fill;
+      val var6: Int = this.label;
       val var1: Float = this.opacity;
-      val var8: Int = this.answerBackground;
+      val var7: Int = this.answerBackground;
       val var9: Int = this.answerFill;
-      val var6: PollRadioStyle = this.radioStyle;
-      val var3: Int = this.radioBackground;
+      val var3: PollRadioStyle = this.radioStyle;
+      val var10: Int = this.radioBackground;
       val var11: Int = this.radioForeground;
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("PollStyleSet(border=");
-      var10.append(var5);
-      var10.append(", borderWidth=");
-      var10.append(var2);
-      var10.append(", fill=");
-      var10.append(var7);
-      var10.append(", label=");
-      var10.append(var4);
-      var10.append(", opacity=");
-      var10.append(var1);
-      var10.append(", answerBackground=");
-      var10.append(var8);
-      var10.append(", answerFill=");
-      var10.append(var9);
-      var10.append(", radioStyle=");
-      var10.append(var6);
-      var10.append(", radioBackground=");
-      var10.append(var3);
-      var10.append(", radioForeground=");
-      var10.append(var11);
-      var10.append(")");
-      return var10.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollStyleSet(border=");
+      var4.append(var5);
+      var4.append(", borderWidth=");
+      var4.append(var2);
+      var4.append(", fill=");
+      var4.append(var8);
+      var4.append(", label=");
+      var4.append(var6);
+      var4.append(", opacity=");
+      var4.append(var1);
+      var4.append(", answerBackground=");
+      var4.append(var7);
+      var4.append(", answerFill=");
+      var4.append(var9);
+      var4.append(", radioStyle=");
+      var4.append(var3);
+      var4.append(", radioBackground=");
+      var4.append(var10);
+      var4.append(", radioForeground=");
+      var4.append(var11);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

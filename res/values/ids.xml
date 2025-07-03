@@ -577,15 +577,9 @@
     <item type="id" name="primary_action" />
     <item type="id" name="primary_cta" />
     <item type="id" name="progress" />
-    <item type="id" name="progress_bar" />
-    <item type="id" name="progress_bg" />
-    <item type="id" name="progress_cancel" />
     <item type="id" name="progress_circular" />
-    <item type="id" name="progress_file_image" />
     <item type="id" name="progress_horizontal" />
     <item type="id" name="progress_spinner" />
-    <item type="id" name="progress_subtext" />
-    <item type="id" name="progress_text" />
     <item type="id" name="prompt_text" />
     <item type="id" name="provider" />
     <item type="id" name="qr_scanner" />

@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.PictureInPictureParams.Builder
 import android.os.Build.VERSION
 import android.util.Rational
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class ExternalPipManager {
    private final var enabled: Boolean
@@ -34,42 +34,42 @@ internal class ExternalPipManager {
    }
 
    public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (Result<Unit>) -> Unit = new f()) {
-      q.h(var3, "onResult");
+      r.h(var3, "onResult");
       if ((this.enabled || var2) && CAN_PIP) {
-         val var10: java.lang.Boolean;
+         val var11: java.lang.Boolean;
          if (var1 != null) {
             try {
-               val var14: ExternalPipManager.Companion = Companion;
+               val var4: ExternalPipManager.Companion = Companion;
                e.a();
                val var5: Builder = a.a(d.a(), this.aspectRatio);
-               q.g(var5, "setAspectRatio(...)");
-               var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var14, var5, false)));
+               r.g(var5, "setAspectRatio(...)");
+               var11 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var4, var5, false)));
             } catch (var8: Exception) {
-               val var4: kotlin.Result.a = Result.k;
+               val var10: kotlin.Result.a = Result.k;
                var3.invoke(Result.a(Result.b(kotlin.c.a(var8))));
                return;
             }
          } else {
-            var10 = null;
+            var11 = null;
          }
 
          try {
-            if (q.c(var10, java.lang.Boolean.TRUE)) {
-               val var13: kotlin.Result.a = Result.k;
+            if (r.c(var11, java.lang.Boolean.TRUE)) {
+               val var16: kotlin.Result.a = Result.k;
                var3.invoke(Result.a(Result.b(Unit.a)));
                return;
             }
          } catch (var7: Exception) {
-            val var15: kotlin.Result.a = Result.k;
+            val var12: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(var7))));
             return;
          }
 
          try {
-            val var11: kotlin.Result.a = Result.k;
+            val var14: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(new Exception("Unable to enter picture in picture mode.")))));
          } catch (var6: Exception) {
-            val var16: kotlin.Result.a = Result.k;
+            val var13: kotlin.Result.a = Result.k;
             var3.invoke(Result.a(Result.b(kotlin.c.a(var6))));
          }
       } else {
@@ -94,7 +94,7 @@ internal class ExternalPipManager {
 
    public fun setPipAspectRatio(activity: Activity?, numerator: Int, denominator: Int) {
       val var4: Rational = new Rational(var2, var3);
-      if (!q.c(this.aspectRatio, var4)) {
+      if (!r.c(this.aspectRatio, var4)) {
          this.aspectRatio = var4;
          this.refreshPipMode(var1);
       }
@@ -109,7 +109,7 @@ internal class ExternalPipManager {
             var3 = g.a(var1, var2);
          }
 
-         q.e(var3);
+         r.e(var3);
          return var3;
       }
 

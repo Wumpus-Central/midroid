@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import tb.f
+import sb.f
 
 @f
 internal data class TapMentionData(userId: String?, channelId: String, roleName: String?, parsedUserId: String?) : ReactEvent {
@@ -14,7 +14,7 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    public final val parsedUserId: String?
 
    init {
-      q.h(var2, "channelId");
+      r.h(var2, "channelId");
       super();
       this.userId = var1;
       this.channelId = var2;
@@ -44,7 +44,7 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
       roleName: String? = var0.roleName,
       parsedUserId: String? = var0.parsedUserId
    ): TapMentionData {
-      q.h(var2, "channelId");
+      r.h(var2, "channelId");
       return new TapMentionData(var1, var2, var3, var4);
    }
 
@@ -55,14 +55,14 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.userId, var1.userId)) {
+         if (!r.c(this.userId, var1.userId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.roleName, var1.roleName)) {
+         } else if (!r.c(this.roleName, var1.roleName)) {
             return false;
          } else {
-            return q.c(this.parsedUserId, var1.parsedUserId);
+            return r.c(this.parsedUserId, var1.parsedUserId);
          }
       }
    }
@@ -96,21 +96,21 @@ internal data class TapMentionData(userId: String?, channelId: String, roleName:
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.userId;
-      val var4: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.roleName;
-      val var5: java.lang.String = this.parsedUserId;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapMentionData(userId=");
-      var3.append(var2);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(", roleName=");
-      var3.append(var1);
-      var3.append(", parsedUserId=");
-      var3.append(var5);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.userId;
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.roleName;
+      val var2: java.lang.String = this.parsedUserId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapMentionData(userId=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var1);
+      var5.append(", roleName=");
+      var5.append(var3);
+      var5.append(", parsedUserId=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

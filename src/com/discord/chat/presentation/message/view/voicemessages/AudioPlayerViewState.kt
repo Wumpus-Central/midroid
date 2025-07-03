@@ -61,7 +61,7 @@ public data class AudioPlayerViewState(accessory: AudioAttachmentMessageAccessor
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.accessory, var1.accessory)) {
+         if (!kotlin.jvm.internal.r.c(this.accessory, var1.accessory)) {
             return false;
          } else {
             return this.attached == var1.attached;
