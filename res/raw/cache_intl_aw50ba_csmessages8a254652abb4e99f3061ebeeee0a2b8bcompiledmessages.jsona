@@ -1595,6 +1595,8 @@
   "zFKbrK": "24 hodin",
   "TmPIZW": "3 dny",
   "H4mGfH": "Možnosti automatického skrývání",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Přidat profilový obrázek",
   "yP28YG": "nebo si vyber avatara Discordu",
   "XyLlVl": "Nahraj prosím soubor JPG nebo PNG.",
@@ -1616,6 +1618,9 @@
   "nhJ8OD": "Zatím přeskočit",
   "1EPySE": "Profilový obrázek můžeš nahrát kdykoliv jindy v Nastavení.",
   "DnKHub": "Přeskočit nahrávání obrázku?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Michal",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Chyba: ",
     [
@@ -2933,13 +2938,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Jmenovka: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efekt profilu: ",
     [
@@ -2949,6 +2947,7 @@
   ],
   "BEjTio": "Balíček není dostupný",
   "AQ0Ven": "Koupit vzhled",
+  "H3vhqa": "Koupit jmenovku",
   "kAeDcH": "Koupit efekt profilu",
   "hEsdAw": [
     "Kategorie: ",
@@ -3214,7 +3213,9 @@
   "v7F239": "Dostáváš darem jmenovku!",
   "pWG4zc": "Obchod",
   "5upuq6": "Obchod Discord",
+  "yzW/fX": "Správci",
   "JCFN//": "Odeslat dárek",
+  "NG43//": "Online",
   "MAS7uL": "Použít teď",
   "eZrmtr": "Tento vzhled je odteď součástí tvojí sbírky a můžeš ho kdykoli použít!",
   "YNaxMj": [
@@ -7930,6 +7931,7 @@
     ]
   ],
   "w33hIC": "Cestování",
+  "KUzI7+": "Vyžaduje vyšší úroveň vylepšení serveru",
   "ksAVYm": [
     "Smajlíci odpovídající ",
     [

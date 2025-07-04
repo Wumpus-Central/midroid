@@ -67,7 +67,7 @@ internal class BillingManager(isProdBuild: Boolean,
                var1 = null;
             }
 
-            if (!var1.e()) {
+            if (!var1.f()) {
                BillingManager.access$reconnect(this.this$0);
             }
          }
@@ -144,7 +144,7 @@ internal class BillingManager(isProdBuild: Boolean,
             var2 = null;
          }
 
-         if (var2.e()) {
+         if (var2.f()) {
             return true;
          }
       }
@@ -215,7 +215,7 @@ internal class BillingManager(isProdBuild: Boolean,
                      var1 = null;
                   }
 
-                  var1.k(BillingManager.access$getBillingClientStateListener$p(this.this$0));
+                  var1.l(BillingManager.access$getBillingClientStateListener$p(this.this$0));
                   this.this$0.getOnConnectionUpdated().invoke(kotlin.coroutines.jvm.internal.b.d(BillingManager.ConnectionState.CONNECTING.getValue()));
                   return Unit.a;
                } else {
@@ -234,13 +234,13 @@ internal class BillingManager(isProdBuild: Boolean,
          kotlin.jvm.internal.r.g(var2, "getProducts(...)");
 
          for (java.lang.String var6 : var2) {
-            val var7: Function3 = this.onPurchaseUpdated;
-            val var4: java.lang.String = var1.i();
-            kotlin.jvm.internal.r.g(var4, "getPurchaseToken(...)");
-            val var3: java.lang.String = var1.e();
-            kotlin.jvm.internal.r.g(var3, "getPackageName(...)");
+            val var4: Function3 = this.onPurchaseUpdated;
+            val var5: java.lang.String = var1.i();
+            kotlin.jvm.internal.r.g(var5, "getPurchaseToken(...)");
+            val var7: java.lang.String = var1.e();
+            kotlin.jvm.internal.r.g(var7, "getPackageName(...)");
             kotlin.jvm.internal.r.e(var6);
-            var7.invoke(var4, var3, var6);
+            var4.invoke(var5, var7, var6);
          }
       }
    }
@@ -267,7 +267,7 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var3.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var5: c1.d = c1.d.b().b(var1).a();
+         val var5: c1.e = c1.e.b().b(var1).a();
          kotlin.jvm.internal.r.g(var5, "build(...)");
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
@@ -294,12 +294,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var7: CoroutineScope = this.getCoroutineScope(var5);
+         val var6: CoroutineScope = this.getCoroutineScope(var5);
          ib.f.d(
-            var7,
+            var6,
             K.a(),
             null,
-            new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)
@@ -338,21 +338,21 @@ internal class BillingManager(isProdBuild: Boolean,
             var5 = null;
          }
 
-         var5.j(c1.k.a().b("subs").a(), new a(this));
+         var5.k(c1.m.a().b("subs").a(), new a(this));
          var var6: BillingClient = this.billingClient;
          if (this.billingClient == null) {
             kotlin.jvm.internal.r.y("billingClient");
             var6 = null;
          }
 
-         var6.j(c1.k.a().b("inapp").a(), new a(this));
+         var6.k(c1.m.a().b("inapp").a(), new a(this));
          var1.invoke();
       }
    }
 
    public fun open(context: ReactApplicationContext) {
       kotlin.jvm.internal.r.h(var1, "context");
-      val var3: BillingClient = BillingClient.g(var1).c(com.android.billingclient.api.c.c().b().a()).d(new b(this)).a();
+      val var3: BillingClient = BillingClient.h(var1).c(com.android.billingclient.api.d.c().b().a()).d(new b(this)).a();
       this.billingClient = var3;
       var var7: BillingClient = var3;
       if (var3 == null) {
@@ -360,7 +360,7 @@ internal class BillingManager(isProdBuild: Boolean,
          var7 = null;
       }
 
-      if (!var7.e()) {
+      if (!var7.f()) {
          try {
             var8 = this.billingClient;
          } catch (var6: Exception) {
@@ -380,7 +380,7 @@ internal class BillingManager(isProdBuild: Boolean,
          }
 
          try {
-            var8.k(this.billingClientStateListener);
+            var8.l(this.billingClientStateListener);
             this.onConnectionUpdated.invoke(BillingManager.ConnectionState.CONNECTING.getValue());
          } catch (var4: Exception) {
             this.onConnectionUpdated.invoke(BillingManager.ConnectionState.ERROR.getValue());
@@ -416,7 +416,7 @@ internal class BillingManager(isProdBuild: Boolean,
             var10 = null;
          }
 
-         var10.h(
+         var10.i(
             QueryProductDetailsParams.INSTANCE.create(var3, kotlin.collections.i.p(new java.lang.String[]{var2, var5})),
             new c(this, var9, var2, var5, var6, var4, var7, var1, var8, var12)
          );
@@ -504,14 +504,14 @@ internal class BillingManager(isProdBuild: Boolean,
 
       public override fun toString(): String {
          val var1: BillingResult = this.billingResult;
-         val var3: java.util.List = this.productDetails;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("ProductDetailsResponse(billingResult=");
-         var2.append(var1);
-         var2.append(", productDetails=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.util.List = this.productDetails;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("ProductDetailsResponse(billingResult=");
+         var3.append(var1);
+         var3.append(", productDetails=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

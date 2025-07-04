@@ -202,11 +202,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var20: java.lang.String = var23.getKey() as java.lang.String;
+         val var16: java.lang.String = var23.getKey() as java.lang.String;
          val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
          val var24: UserSearchQuerySetFilters = var28.getFilters();
          if (var24 == null || r.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
-            this.searchUsers(var20, var28);
+            this.searchUsers(var16, var28);
          }
       }
    }
@@ -264,9 +264,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var30: java.util.List;
                   if (var5) {
-                     val var12: java.lang.String = var27.getUsername();
-                     val var32: java.lang.String = var27.getGlobalName();
-                     val var10: java.lang.String = var27.getFriendNickname();
+                     val var32: java.lang.String = var27.getUsername();
+                     val var10: java.lang.String = var27.getGlobalName();
+                     val var12: java.lang.String = var27.getFriendNickname();
                      val var17: java.util.Map = var27.getNicknames();
                      val var28: UserSearchQuerySetFilters = var2.getFilters();
                      val var29: java.lang.String;
@@ -276,7 +276,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var29 = null;
                      }
 
-                     var30 = i.n(new java.lang.String[]{var12, var32, var10, (java.lang.String)var17.get(var29)});
+                     var30 = i.n(new java.lang.String[]{var32, var10, var12, (java.lang.String)var17.get(var29)});
                   } else {
                      if (var5) {
                         throw new n();

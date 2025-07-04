@@ -1561,6 +1561,8 @@
   "zFKbrK": "24 valandų",
   "TmPIZW": "3 dienų",
   "H4mGfH": "Automatinio slėpimo parinktys",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Pridėti profilio paveikslėlį",
   "yP28YG": "arba gali rinktis Discord pseudoportretą",
   "XyLlVl": "Prašome įkelti JPG ar PNG failą.",
@@ -1582,6 +1584,9 @@
   "nhJ8OD": "Kol kas praleisti",
   "1EPySE": "Profilio paveikslėlį galėsi įkelti bet kada vėliau nustatymų skiltyje.",
   "DnKHub": "Praleisti paveikslėlio įkėlimą?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Klaida: ",
     [
@@ -2926,13 +2931,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Vardo lentelė: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profilio efektas: ",
     [
@@ -2942,6 +2940,7 @@
   ],
   "BEjTio": "Paketas neprieinamas",
   "AQ0Ven": "Pirkti papuošimą",
+  "H3vhqa": "Pirkti vardo lentelę",
   "kAeDcH": "Pirkti profilio efektą",
   "hEsdAw": [
     "Kategorija: ",
@@ -3210,7 +3209,9 @@
   "v7F239": "Gavai dovanų vardo lentelę!",
   "pWG4zc": "Parduotuvė",
   "5upuq6": "Discord parduotuvė",
+  "yzW/fX": "Administratoriai",
   "JCFN//": "Siųsti dovaną",
+  "NG43//": "Prisijungęs",
   "MAS7uL": "Naudoti dabar",
   "eZrmtr": "Šis papuošimas papildė tavo kolekciją, jį gali naudoti bet kada!",
   "YNaxMj": [
@@ -7899,6 +7900,7 @@
     ]
   ],
   "w33hIC": "Kelionės",
+  "KUzI7+": "Reikia aukštesnio serverio stiprinimo lygio",
   "ksAVYm": [
     "Jaustukų atitikmenys ",
     [

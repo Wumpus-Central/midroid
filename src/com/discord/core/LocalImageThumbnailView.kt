@@ -367,8 +367,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
 
                   try {
-                     val var29: d0 = K.c();
-                     val var7: Function2 = new Function2(this.this$0, var4, this.$uri, var1, null) {
+                     val var7: d0 = K.c();
+                     val var29: Function2 = new Function2(this.this$0, var4, this.$uri, var1, null) {
                         final Bitmap $bitmap;
                         final boolean $isBitmapEmpty;
                         final Uri $uri;
@@ -411,7 +411,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 1;
-                     var1 = f.g(var29, var7, this);
+                     var1 = f.g(var7, var29, this);
                   } catch (var9: Exception) {
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,

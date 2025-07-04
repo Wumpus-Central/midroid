@@ -1539,6 +1539,8 @@
   "zFKbrK": "24 tuntia",
   "TmPIZW": "3 päivää",
   "H4mGfH": "Piilota vaihtoehdot automaattisesti",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Lisää profiilikuva",
   "yP28YG": "Voit myös käyttää Discord-avataria",
   "XyLlVl": "Lataa JPG- tai PNG-tiedosto.",
@@ -1560,6 +1562,9 @@
   "nhJ8OD": "Ohita toistaiseksi",
   "1EPySE": "Voit ladata profiilikuvan palvelimelle koska tahansa asetuksista.",
   "DnKHub": "Ohitetaanko kuvan lataus palvelimelle?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Virhe: ",
     [
@@ -2853,13 +2858,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Nimikyltti: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profiilitehoste: ",
     [
@@ -2869,6 +2867,7 @@
   ],
   "BEjTio": "Paketti ei ole saatavana",
   "AQ0Ven": "Osta koriste",
+  "H3vhqa": "Osta nimikyltti",
   "kAeDcH": "Osta profiilitehoste",
   "hEsdAw": [
     "Luokka: ",
@@ -3133,7 +3132,9 @@
   "v7F239": "Olet saanut nimikyltin lahjaksi!",
   "pWG4zc": "Kauppa",
   "5upuq6": "Discordin kauppa",
+  "yzW/fX": "Ylläpitäjät",
   "JCFN//": "Lähetä lahja",
+  "NG43//": "Paikalla",
   "MAS7uL": "Käytä nyt",
   "eZrmtr": "Tämä koriste on nyt osa kokoelmaasi, ja sitä voi käyttää milloin tahansa.",
   "YNaxMj": [
@@ -7626,6 +7627,7 @@
     " suosituimmat emojit"
   ],
   "w33hIC": "Matkailu",
+  "KUzI7+": "Edellyttää palvelimen korkeinta nostatustasoa",
   "ksAVYm": [
     "Emojit, joita vastaa ",
     [

@@ -150,11 +150,11 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
       val var9: java.lang.String = this.followIcon;
-      val var7: java.lang.String = this.followLabel;
-      val var6: java.lang.String = this.shareIcon;
-      val var3: java.lang.String = this.shareLabel;
+      val var6: java.lang.String = this.followLabel;
+      val var8: java.lang.String = this.shareIcon;
+      val var7: java.lang.String = this.shareLabel;
       val var5: MessageReaction = this.defaultReaction;
-      val var8: PostSharePrompt = this.sharePrompt;
+      val var3: PostSharePrompt = this.sharePrompt;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ForumPostActions(numDisplayedReactions=");
       var4.append(var1);
@@ -163,15 +163,15 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       var4.append(", followIcon=");
       var4.append(var9);
       var4.append(", followLabel=");
-      var4.append(var7);
-      var4.append(", shareIcon=");
       var4.append(var6);
+      var4.append(", shareIcon=");
+      var4.append(var8);
       var4.append(", shareLabel=");
-      var4.append(var3);
+      var4.append(var7);
       var4.append(", defaultReaction=");
       var4.append(var5);
       var4.append(", sharePrompt=");
-      var4.append(var8);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

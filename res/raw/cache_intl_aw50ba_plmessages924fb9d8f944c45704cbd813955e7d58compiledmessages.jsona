@@ -1583,6 +1583,8 @@
   "zFKbrK": "24 godz.",
   "TmPIZW": "3 dniach",
   "H4mGfH": "Opcje automatycznego ukrywania",
+  "ncsliY": "Bum",
+  "p5Z3Oj": "Wiśnia",
   "7eZ3jo": "Dodaj zdjęcie profilowe",
   "yP28YG": "lub wybierz awatar Discorda",
   "XyLlVl": "Prześlij plik JPG lub PNG.",
@@ -1604,6 +1606,9 @@
   "nhJ8OD": "Na razie pomiń",
   "1EPySE": "Zawsze możesz przesłać zdjęcie profilowe później w sekcji Ustawienia.",
   "DnKHub": "Pominąć przesyłanie zdjęcia?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Tomek",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Błąd: ",
     [
@@ -2942,13 +2947,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Tabliczka z nazwą: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efekt profilu: ",
     [
@@ -2958,6 +2956,7 @@
   ],
   "BEjTio": "Pakiet niedostępny",
   "AQ0Ven": "Kup dekorację",
+  "H3vhqa": "Kup tabliczkę z nazwą",
   "kAeDcH": "Kup efekt profilu",
   "hEsdAw": [
     "Kategoria: ",
@@ -3229,7 +3228,9 @@
   "v7F239": "Otrzymujesz w prezencie tabliczkę z nazwą!",
   "pWG4zc": "Sklep",
   "5upuq6": "Sklep Discorda",
+  "yzW/fX": "Administratorzy",
   "JCFN//": "Wyślij prezent",
+  "NG43//": "Online",
   "MAS7uL": "Użyj teraz",
   "eZrmtr": "Ta dekoracja jest teraz częścią Twojej kolekcji i może być używana w dowolnym momencie!",
   "YNaxMj": [
@@ -7924,6 +7925,7 @@
     ]
   ],
   "w33hIC": "Podróże i miejsca",
+  "KUzI7+": "Wymaga wyższego poziomu ulepszenia serwera",
   "ksAVYm": [
     "Emoji pasujące do ",
     [

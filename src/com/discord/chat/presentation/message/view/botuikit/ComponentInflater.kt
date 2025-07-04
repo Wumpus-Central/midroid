@@ -40,12 +40,12 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
       this.viewCache = new LinkedHashMap<>();
       if (var2) {
          val var5: Byte = 0;
-         var var4: Int = 0;
+         var var3: Int = 0;
 
          while (true) {
-            var var3: Int = var5;
-            if (var4 >= 20) {
-               while (var3 < 10) {
+            var var4: Int = var5;
+            if (var3 >= 20) {
+               while (var4 < 10) {
                   val var12: java.util.Map = this.viewCache;
                   val var13: java.lang.String = ActionRowComponent.class.getSimpleName();
                   val var11: Any = var12.get(var13);
@@ -56,7 +56,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
                   }
 
                   (var10 as java.util.List).add(ActionRowComponentView.Companion.inflateComponent(this.context));
-                  var3++;
+                  var4++;
                }
                break;
             }
@@ -71,7 +71,7 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
             }
 
             (var9 as java.util.List).add(ButtonComponentView.Companion.inflateComponent(this.context));
-            var4++;
+            var3++;
          }
       }
    }
@@ -115,21 +115,21 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
    public fun <T : Component> getComponent(component: T, root: ViewGroup): ComponentView<T>? {
       r.h(var1, "component");
       r.h(var2, "root");
-      val var5: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
-      var var4: ComponentView = null;
+      val var4: java.util.List = this.viewCache.get(var1.getClass().getSimpleName());
+      var var5: ComponentView = null;
       val var6: ComponentView;
-      if (var5 != null) {
-         var6 = i.H(var5) as ComponentView;
+      if (var4 != null) {
+         var6 = i.H(var4) as ComponentView;
       } else {
          var6 = null;
       }
 
       if (var6 != null) {
-         var4 = var6;
+         var5 = var6;
       }
 
-      var var7: ComponentView = var4;
-      if (var4 == null) {
+      var var7: ComponentView = var5;
+      if (var5 == null) {
          var7 = this.inflateComponent(var1, var2);
       }
 
@@ -138,14 +138,14 @@ public class ComponentInflater(context: Context, preInflateRecycledViews: Boolea
 
    public fun <T : Component> recycleComponent(componentView: ComponentView<T>) {
       r.h(var1, "componentView");
-      val var4: java.lang.String = var1.getComponentType().b();
-      if (var4 != null) {
-         val var5: java.util.Map = this.viewCache;
-         val var3: Any = this.viewCache.get(var4);
+      val var5: java.lang.String = var1.getComponentType().b();
+      if (var5 != null) {
+         val var4: java.util.Map = this.viewCache;
+         val var3: Any = this.viewCache.get(var5);
          var var2: Any = var3;
          if (var3 == null) {
             var2 = new ArrayList();
-            var5.put(var4, var2);
+            var4.put(var5, var2);
          }
 
          (var2 as java.util.List).add(var1);

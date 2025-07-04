@@ -19,8 +19,25 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
    }
 
    @JvmStatic
-   fun `bindView$lambda$2`(var0: ChatListFrameLayout, var1: PortalViewChatListItem) {
-      var0.addView(var1.getView());
+   fun `bindView$lambda$2`(var0: PortalViewChatListItem, var1: ChatListFrameLayout) {
+      ViewRemoveFromParentKt.removeFromParent(var0.getView());
+      if (var0.getMeasuredDimensions() != null) {
+         val var4: Pair = var0.getMeasuredDimensions();
+         val var3: Int = (var4.a() as java.lang.Number).intValue();
+         val var2: Int = (var4.b() as java.lang.Number).intValue();
+         val var5: View = var0.getView();
+         val var6: LayoutParams = var5.getLayoutParams();
+         if (var6 == null) {
+            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
+         }
+
+         var6.width = var3;
+         var6.height = var2;
+         var5.setLayoutParams(var6);
+      }
+
+      var1.removeAllViews();
+      var1.addView(var0.getView());
    }
 
    public open fun bindView(view: ChatListFrameLayout, item: PortalViewChatListItem, metadata: Metadata<ChatListFrameLayout>) {
@@ -28,28 +45,7 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
       r.h(var2, "item");
       r.h(var3, "metadata");
       var2.getView().setVisibility(0);
-      ViewRemoveFromParentKt.removeFromParent(var2.getView());
-      if (var2.getMeasuredDimensions() != null) {
-         val var7: Pair = var2.getMeasuredDimensions();
-         val var4: Int = (var7.a() as java.lang.Number).intValue();
-         val var5: Int = (var7.b() as java.lang.Number).intValue();
-         val var8: View = var2.getView();
-         val var6: LayoutParams = var8.getLayoutParams();
-         if (var6 == null) {
-            throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
-         }
-
-         var6.width = var4;
-         var6.height = var5;
-         var8.setLayoutParams(var6);
-      }
-
-      var1.removeAllViews();
-      if (var2.getView().getParent() != null) {
-         var1.post(new d(var1, var2));
-      } else {
-         var1.addView(var2.getView());
-      }
+      var1.post(new d(var2, var1));
    }
 
    public open fun createView(parent: ViewGroup): ChatListFrameLayout {

@@ -38,10 +38,10 @@ public object MediaPlayerManager {
 
    @JvmStatic
    fun {
-      val var0: CompletableJob = k0.b(null, 1, null);
-      val var1: ExecutorService = Executors.newSingleThreadExecutor();
-      r.g(var1, "newSingleThreadExecutor(...)");
-      scope = kotlinx.coroutines.g.a(var0.R(T.b(var1)));
+      val var1: CompletableJob = k0.b(null, 1, null);
+      val var0: ExecutorService = Executors.newSingleThreadExecutor();
+      r.g(var0, "newSingleThreadExecutor(...)");
+      scope = kotlinx.coroutines.g.a(var1.R(T.b(var0)));
    }
 
    private fun startProgressMonitor(playerRef: WeakReference<MediaPlayer>): Job {
@@ -259,12 +259,12 @@ public object MediaPlayerManager {
                            return Unit.a;
                         }
 
-                        val var26: MutableStateFlow = var14.getPlaybackRateFlow$media_player_release();
+                        var5 = var14.getPlaybackRateFlow$media_player_release();
 
                         do {
-                           var5 = var26.getValue();
-                           val var19: Pair = var5 as Pair;
-                        } while (!var26.a(var5, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
+                           var15 = (MediaSource)var5.getValue();
+                           val var26: Pair = var15 as Pair;
+                        } while (!var5.a(var15, s.a(var1, kotlin.coroutines.jvm.internal.b.c(0.0))));
 
                         return Unit.a;
                      }
@@ -326,8 +326,8 @@ public object MediaPlayerManager {
                         break label85;
                      }
 
-                     val var7: d0 = K.c();
-                     val var16: Function2 = new Function2(var24, null) {
+                     val var16: d0 = K.c();
+                     val var7: Function2 = new Function2(var24, null) {
                         final MediaPlayer $prevMediaPlayer;
                         int label;
 
@@ -358,7 +358,7 @@ public object MediaPlayerManager {
                      this.L$0 = var1;
                      this.L$1 = var24;
                      this.label = 1;
-                     if (ib.f.g(var7, var16, this) === var5) {
+                     if (ib.f.g(var16, var7, this) === var5) {
                         return var5;
                      }
                   }

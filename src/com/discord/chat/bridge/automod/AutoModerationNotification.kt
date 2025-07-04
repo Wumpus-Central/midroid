@@ -162,10 +162,10 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun hashCode(): Int {
-      val var12: Int = this.header.hashCode();
-      val var9: Int = Integer.hashCode(this.headerColor);
-      val var11: Int = this.headerIconURL.hashCode();
-      val var10: Int = Integer.hashCode(this.headerIconColor);
+      val var11: Int = this.header.hashCode();
+      val var10: Int = Integer.hashCode(this.headerColor);
+      val var9: Int = this.headerIconURL.hashCode();
+      val var12: Int = Integer.hashCode(this.headerIconColor);
       var var8: Int = 0;
       val var1: Int;
       if (this.subtitleLeft == null) {
@@ -223,7 +223,7 @@ public data class AutoModerationNotification(header: String,
 
       return (
                (
-                        (((((((((var12 * 31 + var9) * 31 + var11) * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
+                        (((((((((var11 * 31 + var10) * 31 + var9) * 31 + var12) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var13) * 31 + var4) * 31 + var5)
                               * 31
                            + var6
                      )
@@ -235,46 +235,46 @@ public data class AutoModerationNotification(header: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.header;
+      val var13: java.lang.String = this.header;
       val var2: Int = this.headerColor;
-      val var12: java.lang.String = this.headerIconURL;
+      val var9: java.lang.String = this.headerIconURL;
       val var1: Int = this.headerIconColor;
-      val var4: java.lang.String = this.subtitleLeft;
-      val var8: java.lang.String = this.subtitleRight;
-      val var14: java.lang.String = this.body;
+      val var14: java.lang.String = this.subtitleLeft;
+      val var11: java.lang.String = this.subtitleRight;
+      val var8: java.lang.String = this.body;
       val var3: Boolean = this.shouldShowActions;
-      val var5: java.lang.String = this.enabledByUsername;
-      val var10: java.lang.String = this.enabledByAvatarURL;
-      val var9: Int = this.enabledByColor;
-      val var11: java.lang.String = this.severity;
-      val var13: java.lang.String = this.startTime;
+      val var4: java.lang.String = this.enabledByUsername;
+      val var12: java.lang.String = this.enabledByAvatarURL;
+      val var7: Int = this.enabledByColor;
+      val var10: java.lang.String = this.severity;
+      val var5: java.lang.String = this.startTime;
       val var6: StringBuilder = new StringBuilder();
       var6.append("AutoModerationNotification(header=");
-      var6.append(var7);
+      var6.append(var13);
       var6.append(", headerColor=");
       var6.append(var2);
       var6.append(", headerIconURL=");
-      var6.append(var12);
+      var6.append(var9);
       var6.append(", headerIconColor=");
       var6.append(var1);
       var6.append(", subtitleLeft=");
-      var6.append(var4);
-      var6.append(", subtitleRight=");
-      var6.append(var8);
-      var6.append(", body=");
       var6.append(var14);
+      var6.append(", subtitleRight=");
+      var6.append(var11);
+      var6.append(", body=");
+      var6.append(var8);
       var6.append(", shouldShowActions=");
       var6.append(var3);
       var6.append(", enabledByUsername=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(", enabledByAvatarURL=");
-      var6.append(var10);
+      var6.append(var12);
       var6.append(", enabledByColor=");
-      var6.append(var9);
+      var6.append(var7);
       var6.append(", severity=");
-      var6.append(var11);
+      var6.append(var10);
       var6.append(", startTime=");
-      var6.append(var13);
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }

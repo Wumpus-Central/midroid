@@ -1542,6 +1542,8 @@
   "zFKbrK": "24 heures",
   "TmPIZW": "3 jours",
   "H4mGfH": "Options de masquage automatique",
+  "ncsliY": "Boum",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Ajouter une image de profil",
   "yP28YG": "ou choisis un avatar Discord",
   "XyLlVl": "Enregistre un fichier JPG ou PNG.",
@@ -1563,6 +1565,9 @@
   "nhJ8OD": "Passer pour le moment",
   "1EPySE": "Tu pourras toujours enregistrer une image de profil plus tard dans les paramètres.",
   "DnKHub": "Tu veux passer cette étape et ne pas uploader d'image ?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Erreur : ",
     [
@@ -2856,13 +2861,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Plaque nominative : ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Effet de profil : ",
     [
@@ -2872,6 +2870,7 @@
   ],
   "BEjTio": "Pack indisponible",
   "AQ0Ven": "Acheter de la décoration",
+  "H3vhqa": "Acheter une plaque nominative",
   "kAeDcH": "Acheter l'effet de profil",
   "hEsdAw": [
     "Catégorie : ",
@@ -3137,7 +3136,9 @@
   "v7F239": "Quelqu'un t'a offert une plaque nominative !",
   "pWG4zc": "Boutique",
   "5upuq6": "Boutique Discord",
+  "yzW/fX": "Administrateurs",
   "JCFN//": "Envoyer un cadeau",
+  "NG43//": "En ligne",
   "MAS7uL": "Utiliser maintenant",
   "eZrmtr": "Cette décoration fait maintenant partie de ta collection et peut être utilisée à tout moment !",
   "YNaxMj": [
@@ -7593,6 +7594,7 @@
     ]
   ],
   "w33hIC": "Voyage",
+  "KUzI7+": "Nécessite un niveau de boost de serveur supérieur",
   "ksAVYm": [
     "Émoji(s) correspondant à ",
     [

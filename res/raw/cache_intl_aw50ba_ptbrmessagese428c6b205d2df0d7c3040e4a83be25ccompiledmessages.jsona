@@ -1541,6 +1541,8 @@
   "zFKbrK": "24 horas",
   "TmPIZW": "3 dias",
   "H4mGfH": "Opções de Auto-ocultar",
+  "ncsliY": "CABUM",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Adicionar uma imagem de perfil",
   "yP28YG": "ou escolha um avatar Discord",
   "XyLlVl": "Envie um arquivo JPG ou PNG.",
@@ -1562,6 +1564,9 @@
   "nhJ8OD": "Pular por enquanto",
   "1EPySE": "Você sempre pode escolher uma imagem de perfil mais tarde, nas Configurações.",
   "DnKHub": "Pular escolha de imagem?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Erro: ",
     [
@@ -2852,13 +2857,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Placa de identificação: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efeito de perfil: ",
     [
@@ -2868,6 +2866,7 @@
   ],
   "BEjTio": "Pacote indisponível",
   "AQ0Ven": "Comprar decoração",
+  "H3vhqa": "Comprar placa de identificação",
   "kAeDcH": "Comprar efeito de perfil",
   "hEsdAw": [
     "Categoria: ",
@@ -3133,7 +3132,9 @@
   "v7F239": "Você ganhou uma placa de identificação!",
   "pWG4zc": "Loja",
   "5upuq6": "Loja do Discord",
+  "yzW/fX": "Administradores",
   "JCFN//": "Enviar um presente",
+  "NG43//": "Disponível",
   "MAS7uL": "Usar agora",
   "eZrmtr": "Essa decoração entrou na sua coleção e pode ser usada a qualquer momento.",
   "YNaxMj": [
@@ -7618,6 +7619,7 @@
     ]
   ],
   "w33hIC": "Viagem",
+  "KUzI7+": "Requer um nível mais alto de impulso de servidor",
   "ksAVYm": [
     "Resultados de emojis para ",
     [

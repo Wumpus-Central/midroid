@@ -63,13 +63,13 @@ internal data class OnPressEmojiEvent(emojiName: String, emojiId: String? = null
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.emojiName;
-      val var1: java.lang.String = this.emojiId;
+      val var1: java.lang.String = this.emojiName;
+      val var2: java.lang.String = this.emojiId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnPressEmojiEvent(emojiName=");
-      var3.append(var2);
-      var3.append(", emojiId=");
       var3.append(var1);
+      var3.append(", emojiId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

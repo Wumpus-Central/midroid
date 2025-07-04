@@ -92,16 +92,16 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var1: java.lang.String = this.secondaryLabel;
+      val var2: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
-         val var2: java.lang.String = this.label;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append("  •  ");
-         var3.append(var1);
-         return var3.toString();
+         val var3: java.lang.String = this.label;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var3);
+         var1.append("  •  ");
+         var1.append(var2);
+         return var1.toString();
       }
    }
 
@@ -137,22 +137,22 @@ public data class PollAction(label: String,
       val var1: Boolean = this.enabled;
       val var7: java.lang.String = this.type;
       val var3: java.lang.String = this.secondaryLabel;
-      val var6: java.lang.String = this.accessibilityHint;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollAction(label=");
-      var2.append(var5);
-      var2.append(", presentation=");
-      var2.append(var4);
-      var2.append(", enabled=");
-      var2.append(var1);
-      var2.append(", type=");
-      var2.append(var7);
-      var2.append(", secondaryLabel=");
-      var2.append(var3);
-      var2.append(", accessibilityHint=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.accessibilityHint;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PollAction(label=");
+      var6.append(var5);
+      var6.append(", presentation=");
+      var6.append(var4);
+      var6.append(", enabled=");
+      var6.append(var1);
+      var6.append(", type=");
+      var6.append(var7);
+      var6.append(", secondaryLabel=");
+      var6.append(var3);
+      var6.append(", accessibilityHint=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

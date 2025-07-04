@@ -1543,6 +1543,8 @@
   "zFKbrK": "24 óra",
   "TmPIZW": "3 nap",
   "H4mGfH": "Automatikus elrejtési lehetőségek",
+  "ncsliY": "Bumm",
+  "p5Z3Oj": "Cseresznye",
   "7eZ3jo": "Profilkép hozzáadása",
   "yP28YG": "vagy válassz egy Discord-profilképet",
   "XyLlVl": "Kérjük, tölts fel egy JPG- vagy PNG-fájlt.",
@@ -1564,6 +1566,9 @@
   "nhJ8OD": "Most kihagyás",
   "1EPySE": "Később is feltölthetsz profilképet a Beállításokból.",
   "DnKHub": "Kihagyod a fénykép feltöltését?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Virág",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Hiba: ",
     [
@@ -2852,13 +2857,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Névjelzés: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profileffektus: ",
     [
@@ -2868,6 +2866,7 @@
   ],
   "BEjTio": "A csomag nem érhető el",
   "AQ0Ven": "Dekoráció megvásárlása",
+  "H3vhqa": "Névjelzés megvásárlása",
   "kAeDcH": "Profileffektus megvásárlása",
   "hEsdAw": [
     "Kategória: ",
@@ -3135,7 +3134,9 @@
   "v7F239": "Névjelzést ajándékoztak neked!",
   "pWG4zc": "Vásárlás",
   "5upuq6": "Discord-áruház",
+  "yzW/fX": "Adminok",
   "JCFN//": "Ajándék küldése",
+  "NG43//": "Online",
   "MAS7uL": "Most használom",
   "eZrmtr": "Ez a dekoráció már része a gyűjteményednek, és bármikor használhatod!",
   "YNaxMj": [
@@ -7622,6 +7623,7 @@
     ]
   ],
   "w33hIC": "Utazás",
+  "KUzI7+": "Magasabb szervergyorsítás szintet igényel",
   "ksAVYm": [
     "Emotikonok, amelyek egyeznek ezzel: ",
     [

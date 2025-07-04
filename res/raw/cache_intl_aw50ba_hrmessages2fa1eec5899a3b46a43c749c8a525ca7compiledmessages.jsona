@@ -1563,6 +1563,8 @@
   "zFKbrK": "24 sata",
   "TmPIZW": "3 dana",
   "H4mGfH": "Opcije autoskrivanja",
+  "ncsliY": "Bum",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Dodaj sliku za profil",
   "yP28YG": "ili odaberi Discord avatar",
   "XyLlVl": "Prenesi ili JPG ili PNG.",
@@ -1584,6 +1586,9 @@
   "nhJ8OD": "Za sada ne",
   "1EPySE": "Fotografiju uvijek možeš naknadno dostaviti kroz Postavke.",
   "DnKHub": "Preskočiti prijenos slike?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Sljez",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Greška: ",
     [
@@ -2924,13 +2929,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Pločica s imenom: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efekt profila: ",
     [
@@ -2940,6 +2938,7 @@
   ],
   "BEjTio": "Komplet nije dostupan",
   "AQ0Ven": "Kupi ukras",
+  "H3vhqa": "Kupi pločicu s imenom",
   "kAeDcH": "Kupi efekt profila",
   "hEsdAw": [
     "Kategorija: ",
@@ -3207,7 +3206,9 @@
   "v7F239": "Dobio/la si na dar pločicu s imenom!",
   "pWG4zc": "Trgovina",
   "5upuq6": "Discord Shop",
+  "yzW/fX": "Administratori",
   "JCFN//": "Pošalji poklon",
+  "NG43//": "Na mreži",
   "MAS7uL": "Koristi sada",
   "eZrmtr": "Ovaj je ukras sada dio tvoje kolekcije i možeš ga koristiti kada god poželiš!",
   "YNaxMj": [
@@ -7847,6 +7848,7 @@
     ]
   ],
   "w33hIC": "Putovanja",
+  "KUzI7+": "Za ovo je potrebna viša razina server boosta",
   "ksAVYm": [
     "Emoji koji odgovara ",
     [

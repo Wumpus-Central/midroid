@@ -1541,6 +1541,8 @@
   "zFKbrK": "24 saat",
   "TmPIZW": "3 gün",
   "H4mGfH": "Otomatik Gizleme seçenekleri",
+  "ncsliY": "Bum",
+  "p5Z3Oj": "Kiraz",
   "7eZ3jo": "Profil resmi ekle",
   "yP28YG": "ya da bir Discord avatarı seç",
   "XyLlVl": "Lütfen bir JPG ya da PNG dosyası yükle.",
@@ -1562,6 +1564,9 @@
   "nhJ8OD": "Şimdilik geç",
   "1EPySE": "Daha sonra istediğin zaman Ayarlar'dan bir profil resmi yükleyebilirsin.",
   "DnKHub": "Resim yükleme geçilsin mi?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Hata: ",
     [
@@ -2842,13 +2847,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "İsim Plakası: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profil Efekti: ",
     [
@@ -2858,6 +2856,7 @@
   ],
   "BEjTio": "Paket mevcut değil",
   "AQ0Ven": "Dekorasyon Satın Al",
+  "H3vhqa": "İsim plakası satın al",
   "kAeDcH": "Profil Efekti Satın Al",
   "hEsdAw": [
     "Kategori: ",
@@ -3134,7 +3133,9 @@
   "v7F239": "Sana bir isim plakası hediye edildi!",
   "pWG4zc": "Mağaza",
   "5upuq6": "Discord Mağazası",
+  "yzW/fX": "Yöneticiler",
   "JCFN//": "Bir hediye gönder",
+  "NG43//": "Çevrim içi",
   "MAS7uL": "Şimdi Kullan",
   "eZrmtr": "Bu dekorasyon artık koleksiyonunun bir parçası oldu ve dilediğin zaman kullanabilirsin!",
   "YNaxMj": [
@@ -7591,6 +7592,7 @@
     " Emojileri"
   ],
   "w33hIC": "Seyahat",
+  "KUzI7+": "Daha yüksek Sunucu Takviyesi Seviyesi gerekir",
   "ksAVYm": [
     [
       8,

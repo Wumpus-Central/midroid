@@ -1538,6 +1538,8 @@
   "zFKbrK": "24 timmars",
   "TmPIZW": "3 dagars",
   "H4mGfH": "Autodölj alternativ",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Lägg till profilbild",
   "yP28YG": "eller välj en Discord-avatar",
   "XyLlVl": "Ladda upp en JPG- eller PNG-fil.",
@@ -1559,6 +1561,9 @@
   "nhJ8OD": "Hoppa över så länge",
   "1EPySE": "Du kan alltid ladda upp en profilbild senare i Inställningar.",
   "DnKHub": "Hoppa över uppladdning av bild?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Fel: ",
     [
@@ -2846,13 +2851,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Namnskylt: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profileffekt: ",
     [
@@ -2862,6 +2860,7 @@
   ],
   "BEjTio": "Paket otillgängligt",
   "AQ0Ven": "Köp dekoration",
+  "H3vhqa": "Köp namnskylt",
   "kAeDcH": "Köp profileffekt",
   "hEsdAw": [
     "Kategori: ",
@@ -3126,7 +3125,9 @@
   "v7F239": "Du har fått en namnskylt!",
   "pWG4zc": "Butik",
   "5upuq6": "Discords butik",
+  "yzW/fX": "Administratörer",
   "JCFN//": "Skicka en gåva",
+  "NG43//": "Online",
   "MAS7uL": "Använd nu",
   "eZrmtr": "Den här dekorationen är nu en del av din samling och kan användas när som helst!",
   "YNaxMj": [
@@ -7605,6 +7606,7 @@
     ]
   ],
   "w33hIC": "Resor",
+  "KUzI7+": "Kräver högre boostnivå för servern",
   "ksAVYm": [
     "Emoji som matchar ",
     [

@@ -1536,6 +1536,8 @@
   "zFKbrK": "24 de ore",
   "TmPIZW": "3 zile",
   "H4mGfH": "Ascunde automat opțiunile",
+  "ncsliY": "Bum",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Adaugă o poză de profil",
   "yP28YG": "sau alege un avatar Discord",
   "XyLlVl": "Încarcă un fișier JPG sau PNG.",
@@ -1557,6 +1559,9 @@
   "nhJ8OD": "Nu acum",
   "1EPySE": "Poți oricând să încarci o poză de profil din Setări.",
   "DnKHub": "Sari peste încărcarea pozei?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Marius",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Eroare: ",
     [
@@ -2831,13 +2836,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Etichetă pentru nume: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efect pentru profil: ",
     [
@@ -2847,6 +2845,7 @@
   ],
   "BEjTio": "Pachet indisponibil",
   "AQ0Ven": "Cumpără decorațiuni",
+  "H3vhqa": "Cumpără eticheta pentru nume",
   "kAeDcH": "Cumpără un efect pentru profil",
   "hEsdAw": [
     "Categorie: ",
@@ -3114,7 +3113,9 @@
   "v7F239": "Ai primit cadou o etichetă pentru nume!",
   "pWG4zc": "Magazin",
   "5upuq6": "Magazin Discord",
+  "yzW/fX": "Administratori",
   "JCFN//": "Trimite un cadou",
+  "NG43//": "Online",
   "MAS7uL": "Folosește acum",
   "eZrmtr": "Această decorațiune face acum parte din colecția ta și poate fi folosită oricând!",
   "YNaxMj": [
@@ -7589,6 +7590,7 @@
     ]
   ],
   "w33hIC": "Călătorie",
+  "KUzI7+": "Este necesar un nivel boost server mai ridicat",
   "ksAVYm": [
     "Emoji-uri care corespund cu ",
     [

@@ -135,10 +135,10 @@ public data class MessageItem(message: Message,
    public override fun toString(): String {
       val var8: Message = this.message;
       val var7: MessageFrame = this.messageFrame;
-      val var3: MessageContext = this.messageContext;
+      val var5: MessageContext = this.messageContext;
       val var2: Boolean = this.allowChildGestures;
-      val var4: BackgroundHighlight = this.backgroundHighlight;
-      val var5: Int = this.reactTag;
+      val var3: BackgroundHighlight = this.backgroundHighlight;
+      val var4: Int = this.reactTag;
       val var1: Boolean = this.renderContentOnly;
       val var6: StringBuilder = new StringBuilder();
       var6.append("MessageItem(message=");
@@ -146,13 +146,13 @@ public data class MessageItem(message: Message,
       var6.append(", messageFrame=");
       var6.append(var7);
       var6.append(", messageContext=");
-      var6.append(var3);
+      var6.append(var5);
       var6.append(", allowChildGestures=");
       var6.append(var2);
       var6.append(", backgroundHighlight=");
-      var6.append(var4);
+      var6.append(var3);
       var6.append(", reactTag=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(", renderContentOnly=");
       var6.append(var1);
       var6.append(")");

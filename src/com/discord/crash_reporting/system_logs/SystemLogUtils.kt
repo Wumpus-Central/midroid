@@ -103,22 +103,22 @@ internal object SystemLogUtils {
             val var11: gb.d = gb.d.m;
             val var17: Regex = new Regex("^Cause: (.+)$", gb.d.m);
             val var21: Sequence = k.z(Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new h(new Regex("classes\\d+.dex")));
-            val var23: HashSet = w.e(
+            val var8: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
-               val var8: java.util.Iterator = var21.iterator();
+               val var14: java.util.Iterator = var21.iterator();
 
                do {
-                  if (!var8.hasNext()) {
+                  if (!var14.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var14 = var8.next();
-               } while (var23.contains((java.lang.String)var14));
+                  var23 = var14.next();
+               } while (var8.contains((java.lang.String)var23));
 
-               var13 = var14 as java.lang.String;
+               var13 = var23 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var13 = "Unknown";
             }
@@ -230,7 +230,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var32 = var30.listIterator(var30.size());
+                           var31 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -244,7 +244,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var32.hasPrevious()) {
+                              if (!var31.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -259,7 +259,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var31 = var32.previous();
+                              var8 = (java.lang.String)var31.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -272,7 +272,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if ((var31 as java.lang.String).length() <= 0) {
+                              if (var8.length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -287,7 +287,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var31 as java.lang.String;
+                              var7 = var8;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -468,13 +468,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       r.h(var1, "context");
-      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("[");
-      var3.append("libdiscord_version");
-      var3.append("]: ");
-      var3.append(var2);
-      Log.v("Discord", var3.toString());
+      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("[");
+      var2.append("libdiscord_version");
+      var2.append("]: ");
+      var2.append(var3);
+      Log.v("Discord", var2.toString());
       systemLogCapture.startThread();
    }
 
@@ -578,27 +578,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
-         val var3: java.lang.String = this.groupBy;
+         val var6: java.lang.String = this.text;
+         val var3: java.lang.String = this.cause;
+         val var4: java.lang.String = this.groupBy;
          val var7: java.lang.String = this.origin;
          val var5: java.lang.String = this.groupHash;
-         val var6: java.lang.String = this.textHash;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Tombstone(text=");
-         var2.append(var1);
-         var2.append(", cause=");
-         var2.append(var4);
-         var2.append(", groupBy=");
-         var2.append(var3);
-         var2.append(", origin=");
-         var2.append(var7);
-         var2.append(", groupHash=");
-         var2.append(var5);
-         var2.append(", textHash=");
-         var2.append(var6);
-         var2.append(")");
-         return var2.toString();
+         val var2: java.lang.String = this.textHash;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Tombstone(text=");
+         var1.append(var6);
+         var1.append(", cause=");
+         var1.append(var3);
+         var1.append(", groupBy=");
+         var1.append(var4);
+         var1.append(", origin=");
+         var1.append(var7);
+         var1.append(", groupHash=");
+         var1.append(var5);
+         var1.append(", textHash=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

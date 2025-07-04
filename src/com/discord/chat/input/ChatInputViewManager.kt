@@ -102,10 +102,10 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
             r.h(var1, "uri");
             val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
             val var4: ThemedReactContext = this.$reactContext;
-            val var2: ChatInputRootView = this.$view;
-            val var5: java.lang.String = var1.toString();
-            r.g(var5, "toString(...)");
-            var3.emitEvent(var4, var2, new OnPasteImageEvent(var5, this.$reactContext.getContentResolver().getType(var1)));
+            val var5: ChatInputRootView = this.$view;
+            val var2: java.lang.String = var1.toString();
+            r.g(var2, "toString(...)");
+            var3.emitEvent(var4, var5, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override

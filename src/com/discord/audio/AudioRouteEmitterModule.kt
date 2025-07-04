@@ -29,13 +29,13 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          @Override
          public void onActiveAudioDeviceChanged(AndroidAudioDevice var1) {
             r.h(var1, "activeAudioDevice");
-            val var4: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
+            val var2: AudioRouteEmitterAudioRouteChanged = new AudioRouteEmitterAudioRouteChanged(
                AudioRouteEmitterModule.Companion.access$toRouteTypeString(AudioRouteEmitterModule.Companion, var1), false
             );
-            val var2: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
-            val var3: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
-            r.g(var3, "access$getReactApplicationContext(...)");
-            var2.emitModuleEvent(var3, var4);
+            val var3: ReactEvents = AudioRouteEmitterModule.access$getReactEvents$p(this.this$0);
+            val var4: ReactApplicationContext = AudioRouteEmitterModule.access$getReactApplicationContext(this.this$0);
+            r.g(var4, "access$getReactApplicationContext(...)");
+            var3.emitModuleEvent(var4, var2);
          }
 
          @Override
@@ -76,10 +76,10 @@ public class AudioRouteEmitterModule(reactContext: ReactApplicationContext) : Na
          r.g(var2, "getReactApplicationContext(...)");
          var3 = var3.getInstance(var2);
       } else {
-         val var5: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
-         val var4: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var4, "getReactApplicationContext(...)");
-         var3 = var5.getInstance(var4);
+         val var4: DiscordAudioManager.Companion = DiscordAudioManager.Companion;
+         val var5: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var5, "getReactApplicationContext(...)");
+         var3 = var4.getInstance(var5);
       }
 
       this.audioManager = var3;

@@ -1555,6 +1555,8 @@
   "zFKbrK": "24 horas",
   "TmPIZW": "3 días",
   "H4mGfH": "Opciones de ocultar automáticamente",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cereza",
   "7eZ3jo": "Añadir foto de perfil",
   "yP28YG": "o selecciona un avatar de Discord",
   "XyLlVl": "Sube un archivo JPG o PNG.",
@@ -1576,6 +1578,9 @@
   "nhJ8OD": "Ahora no",
   "1EPySE": "Siempre puedes subir una foto de perfil más adelante desde los ajustes.",
   "DnKHub": "¿Prefieres no subir una imagen?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Error ",
     [
@@ -2875,13 +2880,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Placa de nombre: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Efecto de perfil: ",
     [
@@ -2891,6 +2889,7 @@
   ],
   "BEjTio": "Paquete no disponible",
   "AQ0Ven": "Comprar decoración",
+  "H3vhqa": "Comprar placa de nombre",
   "kAeDcH": "Comprar efecto de perfil",
   "hEsdAw": [
     "Categoría: ",
@@ -3173,7 +3172,9 @@
   "v7F239": "¡Te regalaron una placa de nombre!",
   "pWG4zc": "Tienda",
   "5upuq6": "Tienda de Discord",
+  "yzW/fX": "Administradores",
   "JCFN//": "Enviar un regalo",
+  "NG43//": "En línea",
   "MAS7uL": "Usar ahora",
   "eZrmtr": "¡Ahora esta decoración es parte de tu colección y puedes usarla cuando quieras!",
   "YNaxMj": [
@@ -7621,6 +7622,7 @@
     ]
   ],
   "w33hIC": "Viajes",
+  "KUzI7+": "Requiere un nivel de mejora del servidor más alto",
   "ksAVYm": [
     "Emojis que coinciden con ",
     [

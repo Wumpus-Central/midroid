@@ -1546,6 +1546,8 @@
   "zFKbrK": "24 Stunden",
   "TmPIZW": "3 Tagen",
   "H4mGfH": "Optionen automatisch ausblenden",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Profilbild hinzufügen",
   "yP28YG": "Oder wähle einen Discord-Avatar",
   "XyLlVl": "Bitte lade ein JPG oder PNG hoch.",
@@ -1567,6 +1569,9 @@
   "nhJ8OD": "Vorerst überspringen",
   "1EPySE": "Du kannst in den Einstellungen jederzeit ein Profilbild hochladen.",
   "DnKHub": "Bild hochladen überspringen?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Fehler: ",
     [
@@ -2860,13 +2865,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Namensschild: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profil-Effekt: ",
     [
@@ -2876,6 +2874,7 @@
   ],
   "BEjTio": "Paket nicht verfügbar",
   "AQ0Ven": "Dekoration kaufen",
+  "H3vhqa": "Namensschild kaufen",
   "kAeDcH": "Profil-Effekt kaufen",
   "hEsdAw": [
     "Kategorie: ",
@@ -3145,7 +3144,9 @@
   "v7F239": "Du hast ein Namensschild geschenkt bekommen!",
   "pWG4zc": "Shop",
   "5upuq6": "Discord-Shop",
+  "yzW/fX": "Administratoren",
   "JCFN//": "Ein Geschenk senden",
+  "NG43//": "Online",
   "MAS7uL": "Jetzt verwenden",
   "eZrmtr": "Diese Dekoration ist jetzt Teil deiner Sammlung und kann jederzeit verwendet werden!",
   "YNaxMj": [
@@ -7635,6 +7636,7 @@
     ]
   ],
   "w33hIC": "Reisen",
+  "KUzI7+": "Höheres Server-Boost-Level erforderlich",
   "ksAVYm": [
     "Emojis mit ",
     [

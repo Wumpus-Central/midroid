@@ -19,9 +19,9 @@ import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
@@ -103,8 +103,8 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            var3 = K.b();
-            val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            val var5: CoroutineDispatcher = K.b();
+            var3 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -156,7 +156,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var3 = f.g((CoroutineContext)var3, var5, this);
+            var3 = f.g(var5, (Function2)var3, this);
             if (var3 === var4) {
                return var4;
             }

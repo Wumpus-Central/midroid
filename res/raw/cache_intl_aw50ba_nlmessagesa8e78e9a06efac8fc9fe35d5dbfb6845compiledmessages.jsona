@@ -1541,6 +1541,8 @@
   "zFKbrK": "24 uur",
   "TmPIZW": "3 dagen",
   "H4mGfH": "Opties automatisch verbergen",
+  "ncsliY": "Boem",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Profielafbeelding toevoegen",
   "yP28YG": "of kies een Discord-avatar",
   "XyLlVl": "Upload een JPG- of PNG-bestand.",
@@ -1562,6 +1564,9 @@
   "nhJ8OD": "Nu overslaan",
   "1EPySE": "In de instellingen kun je later alsnog een profielafbeelding kiezen.",
   "DnKHub": "Afbeelding uploaden overslaan?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Fout: ",
     [
@@ -2848,13 +2853,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Naambordje: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profieleffect: ",
     [
@@ -2864,6 +2862,7 @@
   ],
   "BEjTio": "Bundel niet beschikbaar",
   "AQ0Ven": "Versiering kopen",
+  "H3vhqa": "Naambordje kopen",
   "kAeDcH": "Profieleffect kopen",
   "hEsdAw": [
     "Categorie: ",
@@ -3130,7 +3129,9 @@
   "v7F239": "Je hebt een naambordje cadeau gekregen!",
   "pWG4zc": "Winkel",
   "5upuq6": "Discord-winkel",
+  "yzW/fX": "Beheerders",
   "JCFN//": "Verstuur een cadeau",
+  "NG43//": "Online",
   "MAS7uL": "Nu gebruiken",
   "eZrmtr": "Deze versiering maakt nu deel uit van je collectie en is altijd beschikbaar!",
   "YNaxMj": [
@@ -7620,6 +7621,7 @@
     ]
   ],
   "w33hIC": "Reizen",
+  "KUzI7+": "Hoger serverboostniveau vereist",
   "ksAVYm": [
     "Emoji's die overeenkomen met ",
     [

@@ -1527,6 +1527,8 @@
   "zFKbrK": "24 ore",
   "TmPIZW": "3 giorni",
   "H4mGfH": "Opzioni di archiviazione automatica",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Aggiungi immagine del profilo",
   "yP28YG": "o scegli un avatar di Discord",
   "XyLlVl": "Carica un file JPG o PNG.",
@@ -1548,6 +1550,9 @@
   "nhJ8OD": "Salta per ora",
   "1EPySE": "Puoi sempre caricare un'immagine del profilo più tardi dalle impostazioni.",
   "DnKHub": "Non vuoi caricare un'immagine?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Errore: ",
     [
@@ -2840,13 +2845,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Targhetta nome: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Effetto del profilo: ",
     [
@@ -2856,6 +2854,7 @@
   ],
   "BEjTio": "Bundle non disponibile",
   "AQ0Ven": "Acquista decorazione",
+  "H3vhqa": "Acquista targhetta del nome",
   "kAeDcH": "Acquista l'effetto del profilo",
   "hEsdAw": [
     "Categoria: ",
@@ -3133,7 +3132,9 @@
   "v7F239": "Hai ricevuto una targhetta del nome in regalo!",
   "pWG4zc": "Negozio",
   "5upuq6": "Negozio di Discord",
+  "yzW/fX": "Amministratori",
   "JCFN//": "Invia un regalo",
+  "NG43//": "Online",
   "MAS7uL": "Usa ora",
   "eZrmtr": "Questa decorazione ora fa parte della tua collezione e può essere utilizzata in qualsiasi momento!",
   "YNaxMj": [
@@ -7623,6 +7624,7 @@
     ]
   ],
   "w33hIC": "Viaggi",
+  "KUzI7+": "Richiede un livello di potenziamento del server più alto",
   "ksAVYm": [
     "Emoji trovati per ",
     [

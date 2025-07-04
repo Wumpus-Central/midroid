@@ -1538,6 +1538,8 @@
   "zFKbrK": "24 timer",
   "TmPIZW": "3 dager",
   "H4mGfH": "Skjul valg automatisk",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Legg til profilbilde",
   "yP28YG": "eller velg en Discord-avatar",
   "XyLlVl": "Last opp en JPG- eller PNG-fil.",
@@ -1559,6 +1561,9 @@
   "nhJ8OD": "Hopp over",
   "1EPySE": "Du kan laste opp et profilbilde senere i innstillingene.",
   "DnKHub": "Vil du ikke laste opp et bilde nå?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Malve",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Feil: ",
     [
@@ -2841,13 +2846,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Navneskilt: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Profileffekt: ",
     [
@@ -2857,6 +2855,7 @@
   ],
   "BEjTio": "Bundelen er ikke tilgjengelig",
   "AQ0Ven": "Kjøp dekorasjon",
+  "H3vhqa": "Kjøp navneskilt",
   "kAeDcH": "Kjøp profileffekt",
   "hEsdAw": [
     "Kategori: ",
@@ -3121,7 +3120,9 @@
   "v7F239": "Du har fått et navneskilt i gave!",
   "pWG4zc": "Butikk",
   "5upuq6": "Discord-butikken",
+  "yzW/fX": "Administratorer",
   "JCFN//": "Send en gave",
+  "NG43//": "Pålogget",
   "MAS7uL": "Bruk nå",
   "eZrmtr": "Nå har du fått denne dekorasjonen i samlingen. Du kan bruke den når som helst!",
   "YNaxMj": [
@@ -7607,6 +7608,7 @@
     ]
   ],
   "w33hIC": "Reise",
+  "KUzI7+": "Krever høyere Server Boost-nivå",
   "ksAVYm": [
     "Emoji samsvarer ",
     [

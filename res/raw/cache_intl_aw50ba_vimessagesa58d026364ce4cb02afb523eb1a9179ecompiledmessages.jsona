@@ -1547,6 +1547,8 @@
   "zFKbrK": "24 Giờ",
   "TmPIZW": "3 Ngày",
   "H4mGfH": "Tự động ẩn các tùy chọn",
+  "ncsliY": "Đùng",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Thêm ảnh đại diện",
   "yP28YG": "hoặc chọn một ảnh đại diện của Discord",
   "XyLlVl": "Vui lòng tải lên tệp JPG hoặc PNG.",
@@ -1568,6 +1570,9 @@
   "nhJ8OD": "Tạm thời bỏ qua",
   "1EPySE": "Bạn có thể tải ảnh đại diện lên sau trong phần Cài Đặt.",
   "DnKHub": "Bỏ qua tải lên ảnh?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Lỗi: ",
     [
@@ -2861,13 +2866,6 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
-    "Bảng tên: ",
-    [
-      1,
-      "itemName"
-    ]
-  ],
   "x/MGW1": [
     "Hiệu ứng hồ sơ: ",
     [
@@ -2877,6 +2875,7 @@
   ],
   "BEjTio": "Gói không khả dụng",
   "AQ0Ven": "Mua trang trí",
+  "H3vhqa": "Mua Bảng Tên",
   "kAeDcH": "Mua Hiệu Ứng Hồ Sơ",
   "hEsdAw": [
     "Danh Mục: ",
@@ -3153,7 +3152,9 @@
   "v7F239": "Bạn đã được tặng một Bảng Tên!",
   "pWG4zc": "Cửa hàng",
   "5upuq6": "Cửa Hàng Discord",
+  "yzW/fX": "Quản trị viên",
   "JCFN//": "Tặng một món quà",
+  "NG43//": "Trực tuyến",
   "MAS7uL": "Dùng ngay",
   "eZrmtr": "Trang trí này hiện đã nằm trong bộ sưu tập của bạn và có thể được sử dụng bất kỳ lúc nào!",
   "YNaxMj": [
@@ -7643,6 +7644,7 @@
     ]
   ],
   "w33hIC": "Du lịch",
+  "KUzI7+": "Yêu cầu Cấp Tăng Cường Máy Chủ cao hơn",
   "ksAVYm": [
     "Tìm thấy Emoji ",
     [

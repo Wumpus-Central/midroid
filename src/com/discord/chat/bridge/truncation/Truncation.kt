@@ -100,22 +100,22 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var6: java.lang.String = this.seeMoreLabel;
-      val var5: Int = this.seeMoreLabelColor;
-      val var4: java.lang.Boolean = this.forceShow;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Truncation(numberOfLines=");
-      var3.append(var1);
-      var3.append(", expandable=");
-      var3.append(var2);
-      var3.append(", seeMoreLabel=");
-      var3.append(var6);
-      var3.append(", seeMoreLabelColor=");
-      var3.append(var5);
-      var3.append(", forceShow=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var4: java.lang.String = this.seeMoreLabel;
+      val var6: Int = this.seeMoreLabelColor;
+      val var3: java.lang.Boolean = this.forceShow;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Truncation(numberOfLines=");
+      var5.append(var1);
+      var5.append(", expandable=");
+      var5.append(var2);
+      var5.append(", seeMoreLabel=");
+      var5.append(var4);
+      var5.append(", seeMoreLabelColor=");
+      var5.append(var6);
+      var5.append(", forceShow=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

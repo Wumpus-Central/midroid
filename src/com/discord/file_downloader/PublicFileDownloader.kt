@@ -221,57 +221,57 @@ public object PublicFileDownloader {
 
                            val var22: Any = this.$context.getSystemService("download");
                            r.f(var22, "null cannot be cast to non-null type android.app.DownloadManager");
-                           val var26: DownloadManager = var22 as DownloadManager;
+                           val var31: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.j = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var26.enqueue(
+                              var3x = var31.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.j = var3x;
                            } catch (var15: Exception) {
+                              var7 = var23;
                               var6 = var1;
                               var1 = var15;
-                              var7 = var23;
                               break label86;
                            }
 
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var26, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var31, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
+                                 var7 = var23;
                                  var6 = var1;
                                  var1 = var12;
-                                 var7 = var23;
                                  break label86;
                               }
                            }
 
                            try {
-                              val var31: DownloadState.Failure = new DownloadState.Failure(
+                              val var32: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var23;
                               this.label = 2;
-                              var28 = var1.k(var31, this);
+                              var27 = var1.k(var32, this);
                            } catch (var14: Exception) {
+                              var7 = var23;
                               var6 = var1;
                               var1 = var14;
-                              var7 = var23;
                               break label86;
                            }
 
-                           if (var28 === var9) {
+                           if (var27 === var9) {
                               return var9;
                            }
 
-                           var20 = var1;
                            var1 = var23;
+                           var20 = var1;
                         }
 
                         var7 = var1;
@@ -291,8 +291,8 @@ public object PublicFileDownloader {
                      var20 = var6;
                   }
 
-                  var1 = var20;
                   var23 = var1;
+                  var1 = var20;
                }
 
                val var24: c = new c(var23);

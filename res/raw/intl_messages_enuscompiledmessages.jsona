@@ -1551,6 +1551,8 @@
   "zFKbrK": "24 Hours",
   "TmPIZW": "3 Days",
   "H4mGfH": "Auto-hide options",
+  "ncsliY": "Boom",
+  "p5Z3Oj": "Cherry",
   "7eZ3jo": "Add profile picture",
   "yP28YG": "or choose a Discord avatar",
   "XyLlVl": "Please upload a JPG or PNG file.",
@@ -1572,6 +1574,9 @@
   "nhJ8OD": "Skip for now",
   "1EPySE": "You can always upload a profile picture later within Settings.",
   "DnKHub": "Skip uploading a picture?",
+  "g5Dump": "Locke",
+  "SbKDHh": "Mallow",
+  "LMSo+P": "Phibi",
   "ejOT9/": [
     "Error: ",
     [
@@ -2876,7 +2881,7 @@
       "itemName"
     ]
   ],
-  "ZI2zgY": [
+  "eVNt6O": [
     "Nameplate: ",
     [
       1,
@@ -2892,6 +2897,7 @@
   ],
   "BEjTio": "Bundle unavailable",
   "AQ0Ven": "Buy Decoration",
+  "H3vhqa": "Buy Nameplate",
   "kAeDcH": "Buy Profile Effect",
   "hEsdAw": [
     "Category: ",
@@ -3072,6 +3078,13 @@
       "price"
     ]
   ],
+  "D6zVpq": [
+    "Nameplate preview: ",
+    [
+      1,
+      "nameplate"
+    ]
+  ],
   "gOzMv7": "Your Nameplate is updated!",
   "W3gIWF": [
     [
@@ -3174,7 +3187,9 @@
   "v7F239": "You have been gifted a Nameplate!",
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
+  "yzW/fX": "Admins",
   "JCFN//": "Send a gift",
+  "NG43//": "Online",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -7911,6 +7926,7 @@
     ]
   ],
   "w33hIC": "Travel",
+  "KUzI7+": "Requires higher Server Boost Level",
   "ksAVYm": [
     "Emoji matching ",
     [

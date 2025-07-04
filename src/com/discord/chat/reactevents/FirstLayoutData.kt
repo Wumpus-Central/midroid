@@ -94,20 +94,20 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
 
    public override fun toString(): String {
       val var2: Int = this.firstVisibleMessageIndex;
-      val var5: java.lang.Double = this.firstVisibleMessagePercentVisible;
+      val var3: java.lang.Double = this.firstVisibleMessagePercentVisible;
       val var1: Int = this.lastVisibleMessageIndex;
-      val var4: java.lang.Double = this.lastVisibleMessagePercentVisible;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var2);
-      var3.append(", firstVisibleMessagePercentVisible=");
-      var3.append(var5);
-      var3.append(", lastVisibleMessageIndex=");
-      var3.append(var1);
-      var3.append(", lastVisibleMessagePercentVisible=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FirstLayoutData(firstVisibleMessageIndex=");
+      var4.append(var2);
+      var4.append(", firstVisibleMessagePercentVisible=");
+      var4.append(var3);
+      var4.append(", lastVisibleMessageIndex=");
+      var4.append(var1);
+      var4.append(", lastVisibleMessagePercentVisible=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

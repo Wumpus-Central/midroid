@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               r.g(var15, "getContext(...)");
-               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               r.g(var9, "getContext(...)");
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
                val var10: Context = this.getContext();
                r.g(var10, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var9.getUri(var10));
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
             }
 
             val var21: Context = this.getContext();

@@ -85,21 +85,21 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var1: Int = this.index;
-      val var3: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapInviteEvent(messageId=");
-      var4.append(var5);
-      var4.append(", index=");
-      var4.append(var1);
-      var4.append(", primary=");
-      var4.append(var3);
-      var4.append(", secondary=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.Boolean = this.primary;
+      val var4: java.lang.Boolean = this.secondary;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapInviteEvent(messageId=");
+      var3.append(var2);
+      var3.append(", index=");
+      var3.append(var1);
+      var3.append(", primary=");
+      var3.append(var5);
+      var3.append(", secondary=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

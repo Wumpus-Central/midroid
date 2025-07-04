@@ -157,16 +157,16 @@ public object ImageQualityCalculator {
       }
 
       val var23: Double = var26;
-      val var36: Double = var11 / var26;
-      val var37: Double = var15 / var26;
-      var17 = (var17 - var11 * var36) / var23;
-      var13 = (var13 - var15 * var37) / var23;
-      var9 = (var9 - var11 * var37) / var23;
+      val var37: Double = var11 / var26;
+      val var36: Double = var15 / var26;
+      var17 = (var17 - var11 * var37) / var23;
+      var13 = (var13 - var15 * var36) / var23;
+      var9 = (var9 - var11 * var36) / var23;
       var15 = var7;
       var11 = var8;
-      var13 = (var36 * var36 + var37 * var37 + var15) * (var17 + var13 + var8);
-      if ((var36 * var36 + var37 * var37 + var15) * (var17 + var13 + var8) > 0.0) {
-         var9 = (var36 * 2.0 * var37 + var15) * (var9 * 2.0 + var11) / var13;
+      var13 = (var37 * var37 + var36 * var36 + var15) * (var17 + var13 + var8);
+      if ((var37 * var37 + var36 * var36 + var15) * (var17 + var13 + var8) > 0.0) {
+         var9 = (var37 * 2.0 * var36 + var15) * (var9 * 2.0 + var11) / var13;
       } else {
          var9 = 0.0;
       }
@@ -287,24 +287,24 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
+                  var var6: Int;
                   var var7: Int;
-                  var var8: Int;
                   try {
-                     var7 = this.$originalBitmap.getWidth();
-                     var8 = this.$originalBitmap.getHeight();
+                     var6 = this.$originalBitmap.getWidth();
+                     var7 = this.$originalBitmap.getHeight();
                   } catch (var20: Exception) {
                      return null;
                   }
 
-                  val var6: Int = var7 * var8;
+                  val var8: Int = var6 * var7;
 
                   var var13: IntArray;
                   var var15: IntArray;
                   try {
-                     var13 = new int[var6];
-                     var15 = new int[var6];
-                     this.$originalBitmap.getPixels(var13, 0, var7, 0, 0, var7, var8);
-                     this.$compressedBitmap.getPixels(var15, 0, var7, 0, 0, var7, var8);
+                     var13 = new int[var8];
+                     var15 = new int[var8];
+                     this.$originalBitmap.getPixels(var13, 0, var6, 0, 0, var6, var7);
+                     this.$compressedBitmap.getPixels(var15, 0, var6, 0, 0, var6, var7);
                   } catch (var19: Exception) {
                      return null;
                   }
@@ -333,8 +333,8 @@ public object ImageQualityCalculator {
                      val var9: Long = System.nanoTime();
                      val var27: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      var1 = new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var7, var8),
-                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var7, var8),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var6, var7),
+                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var6, var7),
                         (System.nanoTime() - var9) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );

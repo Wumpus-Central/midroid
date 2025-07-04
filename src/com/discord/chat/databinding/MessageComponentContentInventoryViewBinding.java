@@ -51,18 +51,18 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
             SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
             if (var5 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
-               SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-               if (var8 != null) {
+               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.content_inventory_component_subtitle;
-                  TextView var7 = (TextView)a.a(var0, var1);
-                  if (var7 != null) {
+                  TextView var8 = (TextView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.content_inventory_component_title;
-                     TextView var4 = (TextView)a.a(var0, var1);
-                     if (var4 != null) {
+                     TextView var7 = (TextView)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.content_inventory_component_username;
                         TextView var2 = (TextView)a.a(var0, var1);
                         if (var2 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var3, var6, var5, var8, var7, var4, var2);
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var3, var6, var5, var4, var8, var7, var2);
                         }
                      }
                   }

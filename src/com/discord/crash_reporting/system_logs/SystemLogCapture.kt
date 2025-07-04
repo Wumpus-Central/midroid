@@ -64,12 +64,12 @@ internal class SystemLogCapture {
       // 058: astore 3
       // 059: aload 5
       // 05b: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-      // 05e: astore 7
+      // 05e: astore 8
       // 060: aload 5
       // 062: astore 4
       // 064: aload 5
       // 066: astore 3
-      // 067: aload 7
+      // 067: aload 8
       // 069: ldc "getInputStream(...)"
       // 06b: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 06e: aload 5
@@ -77,7 +77,7 @@ internal class SystemLogCapture {
       // 072: aload 5
       // 074: astore 3
       // 075: getstatic gb/a.b Ljava/nio/charset/Charset;
-      // 078: astore 8
+      // 078: astore 7
       // 07a: aload 5
       // 07c: astore 4
       // 07e: aload 5
@@ -89,8 +89,8 @@ internal class SystemLogCapture {
       // 08a: aload 5
       // 08c: astore 3
       // 08d: aload 6
-      // 08f: aload 7
-      // 091: aload 8
+      // 08f: aload 8
+      // 091: aload 7
       // 093: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
       // 096: aload 5
       // 098: astore 4
@@ -207,15 +207,15 @@ internal class SystemLogCapture {
       // 17d: astore 4
       // 17f: aload 6
       // 181: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 184: astore 5
+      // 184: astore 6
       // 186: aload 3
       // 187: astore 4
-      // 189: aload 5
+      // 189: aload 6
       // 18b: ldc "getStackTrace(...)"
       // 18d: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 190: aload 3
       // 191: astore 4
-      // 193: aload 5
+      // 193: aload 6
       // 195: arraylength
       // 196: istore 2
       // 197: bipush 0
@@ -223,7 +223,7 @@ internal class SystemLogCapture {
       // 199: iload 1
       // 19a: iload 2
       // 19b: if_icmpge 1e6
-      // 19e: aload 5
+      // 19e: aload 6
       // 1a0: iload 1
       // 1a1: aaload
       // 1a2: astore 8
@@ -231,7 +231,7 @@ internal class SystemLogCapture {
       // 1a5: astore 4
       // 1a7: aload 0
       // 1a8: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 1ab: astore 6
+      // 1ab: astore 5
       // 1ad: aload 3
       // 1ae: astore 4
       // 1b0: new java/lang/StringBuilder
@@ -254,7 +254,7 @@ internal class SystemLogCapture {
       // 1d2: pop
       // 1d3: aload 3
       // 1d4: astore 4
-      // 1d6: aload 6
+      // 1d6: aload 5
       // 1d8: aload 7
       // 1da: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 1dd: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V

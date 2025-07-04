@@ -40,13 +40,13 @@ public class BackgroundSpanDrawer(provider: TextView) : LineBackgroundSpan {
       if (var4 == var5) {
          var1.drawRoundRect((float)var6, (float)var8, (float)var7, (float)var9, var10, var10, var2);
       } else if (var4 == var3) {
-         val var15: Path = new Path();
-         var15.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{var10, var10, 0.0F, 0.0F, 0.0F, 0.0F, var10, var10}, Direction.CW);
-         var1.drawPath(var15, var2);
+         val var16: Path = new Path();
+         var16.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{var10, var10, 0.0F, 0.0F, 0.0F, 0.0F, var10, var10}, Direction.CW);
+         var1.drawPath(var16, var2);
       } else if (var5 == var3) {
-         val var22: Path = new Path();
-         var22.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{0.0F, 0.0F, var10, var10, var10, var10, 0.0F, 0.0F}, Direction.CW);
-         var1.drawPath(var22, var2);
+         val var21: Path = new Path();
+         var21.addRoundRect((float)var6, (float)var8, (float)var7, (float)var9, new float[]{0.0F, 0.0F, var10, var10, var10, var10, 0.0F, 0.0F}, Direction.CW);
+         var1.drawPath(var21, var2);
       } else {
          var1.drawRect((float)var6, (float)var8, (float)var7, (float)var9, var2);
       }

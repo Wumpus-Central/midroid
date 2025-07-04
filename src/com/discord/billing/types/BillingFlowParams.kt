@@ -38,12 +38,12 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         r.g(var6, "format(...)");
-         val var5: StringBuilder = new StringBuilder();
-         var5.append(var1);
-         var5.append(var6);
-         var1 = var5.toString();
+         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         r.g(var5, "format(...)");
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var1);
+         var6.append(var5);
+         var1 = var6.toString();
       }
 
       return var1;
@@ -171,7 +171,7 @@ internal object BillingFlowParams {
             .e(i.e(com.android.billingclient.api.BillingFlowParams.b.a().c(var11).a()))
             .c(this.getObfuscatedUserId(var5));
          if (var9 != null && var4 != null) {
-            var12.f(com.android.billingclient.api.BillingFlowParams.SubscriptionUpdateParams.a().b(var4).d(INSTANCE.getReplacementMode(var9, var11)).a());
+            var12.f(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).d(INSTANCE.getReplacementMode(var9, var11)).a());
          }
 
          return var12.a();
@@ -277,13 +277,13 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  var2 = var20.d();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Could not find offer token for productId: ");
-                  var18.append(var2);
-                  var18.append(" offerId: ");
-                  var18.append(var6);
-                  throw new AssertionError(var18.toString());
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
                var25.b(var13);
@@ -297,7 +297,7 @@ internal object BillingFlowParams {
                .c(this.getObfuscatedUserId(var5))
                .b(false);
             if (var24 != null && var4 != null) {
-               var17.f(com.android.billingclient.api.BillingFlowParams.SubscriptionUpdateParams.a().b(var4).d(INSTANCE.getReplacementMode(var24, var20)).a());
+               var17.f(com.android.billingclient.api.BillingFlowParams.c.a().b(var4).d(INSTANCE.getReplacementMode(var24, var20)).a());
             }
 
             return var17.a();
