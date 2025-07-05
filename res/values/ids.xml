@@ -590,6 +590,8 @@
     <item type="id" name="reaction_count_2" />
     <item type="id" name="reaction_count_switcher" />
     <item type="id" name="reaction_emoji" />
+    <item type="id" name="reaction_label_left" />
+    <item type="id" name="reaction_label_right" />
     <item type="id" name="reactions_view" />
     <item type="id" name="remix_icon" />
     <item type="id" name="reply_author_avatar" />

@@ -14,6 +14,9 @@ import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.ids.IdUtilsKt
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
+import com.discord.react_strings.I18nMessage
+import com.discord.react_strings.I18nUtilsKt
+import com.discord.react_strings.RenderContext
 import com.discord.reactions.databinding.ReactionViewBinding
 import com.discord.recycler_view.utils.ItemDiffableType
 import com.discord.theme.ThemeManager
@@ -53,8 +56,20 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       var5 = var6.reactionCount2;
       r.g(var6.reactionCount2, "reactionCount2");
       DiscordFontUtilsKt.setDiscordFont(var5, var7);
-      val var8: TextView = var6.reactionCount2;
+      var5 = var6.reactionCount2;
       r.g(var6.reactionCount2, "reactionCount2");
+      SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
+      var5 = var6.reactionLabelLeft;
+      r.g(var6.reactionLabelLeft, "reactionLabelLeft");
+      DiscordFontUtilsKt.setDiscordFont(var5, var7);
+      var5 = var6.reactionLabelLeft;
+      r.g(var6.reactionLabelLeft, "reactionLabelLeft");
+      SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
+      var5 = var6.reactionLabelRight;
+      r.g(var6.reactionLabelRight, "reactionLabelRight");
+      DiscordFontUtilsKt.setDiscordFont(var5, var7);
+      val var8: TextView = var6.reactionLabelRight;
+      r.g(var6.reactionLabelRight, "reactionLabelRight");
       SetTextSizeSpKt.setTextSizeSp(var8, 14.0F, 14.0F);
       var6.reactionCountSwitcher.setMeasureAllChildren(false);
    }
@@ -177,36 +192,86 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
       }
    }
 
-   private fun configureCount(count: Int, animate: Boolean) {
-      val var4: TextSwitcher = this.binding.reactionCountSwitcher;
-      if (var2) {
-         val var3: Int;
-         if (this.currentCount != null) {
-            var3 = this.currentCount;
-         } else {
-            var3 = 0;
-         }
-
-         if (var1 > var3) {
-            this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_up);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_up);
-         } else {
-            this.binding.reactionCountSwitcher.setInAnimation(this.binding.reactionCountSwitcher.getContext(), R.anim.anim_slide_in_down);
-            var4.setOutAnimation(var4.getContext(), R.anim.anim_slide_out_down);
-         }
-
-         var4.setText(java.lang.String.valueOf(var1));
+   private fun configureCount(count: Int, animate: Boolean, showingFullLabel: Boolean) {
+      val var6: TextSwitcher = this.binding.reactionCountSwitcher;
+      if (var3) {
+         this.binding.reactionCountSwitcher.setVisibility(8);
       } else {
-         this.binding.reactionCountSwitcher.setCurrentText(java.lang.String.valueOf(var1));
-      }
+         var var4: Int = 0;
+         this.binding.reactionCountSwitcher.setVisibility(0);
+         if (var2) {
+            if (this.currentCount != null) {
+               var4 = this.currentCount;
+            }
 
-      this.currentCount = var1;
+            if (var1 > var4) {
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_up);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_up);
+            } else {
+               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_down);
+               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_down);
+            }
+
+            var6.setText(java.lang.String.valueOf(var1));
+         } else {
+            var6.setCurrentText(java.lang.String.valueOf(var1));
+         }
+
+         this.currentCount = var1;
+      }
+   }
+
+   private fun configureLabels(showingFullLabel: Boolean) {
+      if (!var1) {
+         this.binding.reactionLabelLeft.setVisibility(8);
+         this.binding.reactionLabelRight.setVisibility(8);
+      } else {
+         val var2: Context = this.getContext();
+         r.g(var2, "getContext(...)");
+         val var5: java.util.List = kotlin.text.h.B0(
+            I18nUtilsKt.i18nFormat(var2, I18nMessage.REACT_PILL_FULL_LABEL, new a()).toString(), new java.lang.String[]{"{emojiPreview}"}, false, 0, 6, null
+         );
+         var var4: java.lang.String = kotlin.collections.i.k0(var5, 0) as java.lang.String;
+         var var3: java.lang.String = "";
+         var var6: java.lang.String = var4;
+         if (var4 == null) {
+            var6 = "";
+         }
+
+         var4 = kotlin.collections.i.k0(var5, 1) as java.lang.String;
+         if (var4 != null) {
+            var3 = var4;
+         }
+
+         if (var6.length() > 0) {
+            this.binding.reactionLabelLeft.setText(var6);
+            this.binding.reactionLabelLeft.setVisibility(0);
+         } else {
+            this.binding.reactionLabelLeft.setVisibility(8);
+         }
+
+         if (var3.length() > 0) {
+            this.binding.reactionLabelRight.setText(var3);
+            this.binding.reactionLabelRight.setVisibility(0);
+         } else {
+            this.binding.reactionLabelRight.setVisibility(8);
+         }
+      }
+   }
+
+   @JvmStatic
+   fun `configureLabels$lambda$0`(var0: RenderContext): Unit {
+      r.h(var0, "$this$i18nFormat");
+      var0.getArgs().put("emojiPreview", "{emojiPreview}");
+      return Unit.a;
    }
 
    private fun configureTextColor(color: Int) {
       this.binding.reactionEmoji.setTextColor(var1);
       this.binding.reactionCount1.setTextColor(var1);
       this.binding.reactionCount2.setTextColor(var1);
+      this.binding.reactionLabelLeft.setTextColor(var1);
+      this.binding.reactionLabelRight.setTextColor(var1);
    }
 
    private fun configureTextColor(palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
@@ -273,42 +338,50 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          var4 = var1.getCount();
       }
 
-      var var11: Boolean = false;
+      var var12: Boolean;
+      if (var4 == 0) {
+         var12 = true;
+      } else {
+         var12 = false;
+      }
+
+      this.configureLabels(var12);
+      var var6: Boolean = false;
       if (var3) {
-         var11 = false;
-         label41:
+         var6 = false;
+         label46:
          if (this.currentCount != null) {
             if (this.currentCount != null) {
-               var11 = false;
+               var6 = false;
                if (var4 == this.currentCount) {
-                  break label41;
+                  break label46;
                }
             }
 
-            var11 = true;
+            var6 = true;
          }
       }
 
-      this.configureCount(var4, var11);
+      this.configureCount(var4, var6, var12);
       this.configureBackground(var1.isMe(), var2);
       this.configureTextColor(var1.isMe(), var2);
       if (var1.isBurstReaction()) {
-         var11 = ThemeManager.INSTANCE.isThemeDark();
-         var var9: ReactionView.BurstColorPalette = null;
-         if (var11) {
-            val var13: ReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
-            if (var13 != null) {
-               var9 = var13.getDark();
-            }
-         } else {
+         var12 = ThemeManager.INSTANCE.isThemeDark();
+         var var10: ReactionView.BurstColorPalette = null;
+         if (var12) {
             val var14: ReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
             if (var14 != null) {
-               var9 = var14.getLight();
+               var10 = var14.getDark();
+            }
+         } else {
+            val var15: ReactionView.ThemedBurstColorPalette = var1.getThemedBurstColors();
+            if (var15 != null) {
+               var10 = var15.getLight();
             }
          }
 
-         this.configureBackground(var1.isMeBurst(), var9);
-         this.configureTextColor(var9);
+         this.configureBackground(var1.isMeBurst(), var10);
+         this.configureTextColor(var10);
       } else {
          this.configureBackground(var1.isMe(), var2);
          this.configureTextColor(var1.isMe(), var2);
@@ -316,11 +389,11 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var8: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var15: RenderableEmoji = var1.getEmoji().renderable();
-         val var10: Context = this.getContext();
-         r.g(var10, "getContext(...)");
-         var8.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var15, var10, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var11: RenderableEmoji = var1.getEmoji().renderable();
+         val var16: Context = this.getContext();
+         r.g(var16, "getContext(...)");
+         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

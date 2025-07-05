@@ -33,44 +33,44 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
          break label42;
       }
 
-      var var19: Any = var0;
+      var var17: Any = var0;
       if (Result.g(var0)) {
-         var19 = 100L;
+         var17 = 100L;
       }
 
-      SC_CLK_TCK = (var19 as java.lang.Number).longValue();
+      SC_CLK_TCK = (var17 as java.lang.Number).longValue();
 
       label36:
       try {
          var0 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var0 = Result.k;
+         var17 = Result.k;
          var0 = Result.b(c.a(var3));
          break label36;
       }
 
-      var19 = var0;
+      var17 = var0;
       if (Result.g(var0)) {
-         var19 = 4096L;
+         var17 = 4096L;
       }
 
-      SC_PAGE_SIZE = (var19 as java.lang.Number).longValue();
+      SC_PAGE_SIZE = (var17 as java.lang.Number).longValue();
 
       label30:
       try {
          var0 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var0 = Result.k;
+         var17 = Result.k;
          var0 = Result.b(c.a(var2));
          break label30;
       }
 
-      var19 = var0;
+      var17 = var0;
       if (Result.g(var0)) {
-         var19 = 1;
+         var17 = 1;
       }
 
-      SC_CPU_CORE_COUNT = (var19 as java.lang.Number).intValue();
+      SC_CPU_CORE_COUNT = (var17 as java.lang.Number).intValue();
    }
 
    fun DeviceResourceUsageManager() {

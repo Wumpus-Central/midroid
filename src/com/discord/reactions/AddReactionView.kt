@@ -33,9 +33,9 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
    init {
       r.h(var1, "context");
       super(var1, var2);
-      val var6: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var6, "inflate(...)");
-      this.binding = var6;
+      val var5: AddReactionViewBinding = AddReactionViewBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var5, "inflate(...)");
+      this.binding = var5;
       this.setOrientation(0);
       this.setGravity(16);
       val var8: ReactionView.Companion = ReactionView.Companion;
@@ -43,14 +43,14 @@ public class AddReactionView  public constructor(context: Context, attrs: Attrib
       val var4: Int = VERTICAL_PADDING;
       this.setPadding(var3, VERTICAL_PADDING, var8.getHORIZ_PADDING(), var4);
       ViewBackgroundUtilsKt.setBackgroundRectangle$default(this, ThemeManagerKt.getTheme().getBackgroundSecondary(), var8.getCORNER_RADIUS(), null, 0, 12, null);
-      val var5: TextView = var6.addReactionText;
-      r.e(var6.addReactionText);
-      DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimarySemibold);
-      SetTextSizeSpKt.setTextSizeSp(var5, 14.0F, 14.0F);
-      var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      var5.setPadding(var8.getHORIZ_PADDING(), 0, var8.getHORIZ_PADDING(), 0);
-      val var7: SimpleDraweeView = var6.addReactionImage;
-      r.e(var6.addReactionImage);
+      val var6: TextView = var5.addReactionText;
+      r.e(var5.addReactionText);
+      DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
+      SetTextSizeSpKt.setTextSizeSp(var6, 14.0F, 14.0F);
+      var6.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
+      var6.setPadding(var8.getHORIZ_PADDING(), 0, var8.getHORIZ_PADDING(), 0);
+      val var7: SimpleDraweeView = var5.addReactionImage;
+      r.e(var5.addReactionImage);
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.AddReaction);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getInteractiveNormal());
       var7.setScaleType(ScaleType.FIT_CENTER);

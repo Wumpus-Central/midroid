@@ -190,10 +190,10 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       addNewReactionAccessibilityLabel: String,
       addNewBurstReactionAccessibilityLabel: String,
       reactionsTheme: ReactionsTheme?,
-      onAddReactionClick: OnClickListener = new c(),
-      onAddBurstReactionClick: OnClickListener = new d(),
+      onAddReactionClick: OnClickListener = new d(),
+      onAddBurstReactionClick: OnClickListener = new e(),
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new e(),
+      onReactionLongPress: (Reaction) -> Unit = new f(),
       theme: DiscordTheme? = null,
       showReactionShortcut: Boolean = false,
       showReplyShortcut: Boolean = false,
@@ -240,8 +240,8 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
          val var30: ReactionView.Reaction = var41 as ReactionView.Reaction;
          var41 = this.getOrCreateReactionView(var24, var17, var27, var1.size());
          var41.setReaction(var30, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var41, false, new i(var10, var30), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var41, false, new j(var11, var30), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var41, false, new j(var10, var30), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var41, false, new k(var11, var30), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var1.size());

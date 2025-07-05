@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge android:layout_width="wrap_content" android:layout_height="wrap_content"
   xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.facebook.drawee.span.SimpleDraweeSpanTextView android:gravity="center_vertical" android:id="@id/reaction_emoji" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="3.0dip" />
-    <TextSwitcher android:id="@id/reaction_count_switcher" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginStart="3.0dip">
+    <TextView android:gravity="center_vertical" android:id="@id/reaction_label_left" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="4.0dip" />
+    <com.facebook.drawee.span.SimpleDraweeSpanTextView android:gravity="center_vertical" android:id="@id/reaction_emoji" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <TextSwitcher android:id="@id/reaction_count_switcher" android:layout_width="wrap_content" android:layout_height="18.0dip" android:layout_marginStart="6.0dip">
         <TextView android:gravity="center_vertical" android:id="@id/reaction_count_1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
         <TextView android:gravity="center_vertical" android:id="@id/reaction_count_2" android:layout_width="wrap_content" android:layout_height="wrap_content" />
     </TextSwitcher>
+    <TextView android:gravity="center_vertical" android:id="@id/reaction_label_right" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginStart="4.0dip" />
 </merge>
