@@ -5,10 +5,10 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import sb.f
+import z9.s
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -16,7 +16,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    public final val tags: List<String>?
 
    init {
-      q.h(var1, "name");
+      r.h(var1, "name");
       super();
       this.name = var1;
       this.tags = var2;
@@ -31,7 +31,7 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public fun copy(name: String = var0.name, tags: List<String>? = var0.tags): MetricEvent {
-      q.h(var1, "name");
+      r.h(var1, "name");
       return new MetricEvent(var1, var2);
    }
 
@@ -42,10 +42,10 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.name, var1.name)) {
+         if (!r.c(this.name, var1.name)) {
             return false;
          } else {
-            return q.c(this.tags, var1.tags);
+            return r.c(this.tags, var1.tags);
          }
       }
    }

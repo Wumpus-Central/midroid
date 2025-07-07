@@ -22,21 +22,21 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
    public final val messageContentView: MessageContentView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "messageContentView");
+      kotlin.jvm.internal.r.h(var1, "messageContentView");
       super(var1, null);
       this.messageContentView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function2, var1: MessageContentAccessory, var2: LinkContentNode): Unit {
-      kotlin.jvm.internal.q.h(var2, "node");
+      kotlin.jvm.internal.r.h(var2, "node");
       var0.invoke(MessageId.box-impl(var1.getMessageId-3Eiw7ao()), var2);
       return Unit.a;
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: MessageContentAccessory, var1: LinkContentNode): LinkStyle {
-      kotlin.jvm.internal.q.h(var1, "it");
+      kotlin.jvm.internal.r.h(var1, "it");
       val var2: DiscordFont;
       if (var0.getBoldLinkText()) {
          var2 = DiscordFont.PrimarySemibold;
@@ -65,30 +65,30 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
       onTapSeeMore: (MessageId) -> Unit,
       onTapSoundmoji: (SoundmojiContentNode) -> Unit
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageContentItem");
-      kotlin.jvm.internal.q.h(var2, "onLinkClicked");
-      kotlin.jvm.internal.q.h(var3, "onLinkLongClicked");
-      kotlin.jvm.internal.q.h(var4, "onTapChannel");
-      kotlin.jvm.internal.q.h(var5, "onLongPressChannel");
-      kotlin.jvm.internal.q.h(var6, "onTapAttachmentLink");
-      kotlin.jvm.internal.q.h(var7, "onLongPressAttachmentLink");
-      kotlin.jvm.internal.q.h(var8, "onTapMention");
-      kotlin.jvm.internal.q.h(var9, "onTapCommand");
-      kotlin.jvm.internal.q.h(var10, "onLongPressCommand");
-      kotlin.jvm.internal.q.h(var11, "onTapSpoiler");
-      kotlin.jvm.internal.q.h(var12, "onTapTimestamp");
-      kotlin.jvm.internal.q.h(var13, "onTapInlineCode");
-      kotlin.jvm.internal.q.h(var14, "onTapEmoji");
-      kotlin.jvm.internal.q.h(var15, "onTapSeeMore");
-      kotlin.jvm.internal.q.h(var16, "onTapSoundmoji");
+      kotlin.jvm.internal.r.h(var1, "messageContentItem");
+      kotlin.jvm.internal.r.h(var2, "onLinkClicked");
+      kotlin.jvm.internal.r.h(var3, "onLinkLongClicked");
+      kotlin.jvm.internal.r.h(var4, "onTapChannel");
+      kotlin.jvm.internal.r.h(var5, "onLongPressChannel");
+      kotlin.jvm.internal.r.h(var6, "onTapAttachmentLink");
+      kotlin.jvm.internal.r.h(var7, "onLongPressAttachmentLink");
+      kotlin.jvm.internal.r.h(var8, "onTapMention");
+      kotlin.jvm.internal.r.h(var9, "onTapCommand");
+      kotlin.jvm.internal.r.h(var10, "onLongPressCommand");
+      kotlin.jvm.internal.r.h(var11, "onTapSpoiler");
+      kotlin.jvm.internal.r.h(var12, "onTapTimestamp");
+      kotlin.jvm.internal.r.h(var13, "onTapInlineCode");
+      kotlin.jvm.internal.r.h(var14, "onTapEmoji");
+      kotlin.jvm.internal.r.h(var15, "onTapSeeMore");
+      kotlin.jvm.internal.r.h(var16, "onTapSoundmoji");
       this.messageContentView.setTextColor(var1.getMessageTextColor());
       DiscordFontUtilsKt.setDiscordFont(this.messageContentView, var1.getMessageFont());
       SetTextSizeSpKt.setTextSizeSp(this.messageContentView, (float)var1.getTextSizeSp());
       val var25: TextPaint = this.messageContentView.getPaint();
-      kotlin.jvm.internal.q.g(var25, "getPaint(...)");
-      val var26: FontManager = FontManager.INSTANCE;
-      val var27: Context = this.messageContentView.getContext();
-      kotlin.jvm.internal.q.g(var27, "getContext(...)");
+      kotlin.jvm.internal.r.g(var25, "getPaint(...)");
+      val var27: FontManager = FontManager.INSTANCE;
+      val var26: Context = this.messageContentView.getContext();
+      kotlin.jvm.internal.r.g(var26, "getContext(...)");
       this.messageContentView
          .setMessageContent-AeCz66Y(
             var1.getMessageContent(),
@@ -120,7 +120,7 @@ public class MessageContentViewHolder(messageContentView: MessageContentView) : 
             var1.getEditedLabelTextColor(),
             var1.getTruncation(),
             var1.getTheme(),
-            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var26.getScaledSpToPx(16, var27))
+            TextUtilsKt.getBaselineHeightForFontSizePx(var25, var27.getScaledSpToPx(16, var26))
          );
    }
 }

@@ -1,12 +1,12 @@
 package com.discord.image.color_quantizer
 
 import android.graphics.Color
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal object ColorUtils {
    @JvmStatic
    public fun HSLtoRGB(hsl: FloatArray): Int {
-      q.h(var0, "hsl");
+      r.h(var0, "hsl");
       val var1: Float = var0[0];
       val var8: Float = (1.0F - Math.abs((float)2 * var0[2] - 1.0F)) * var0[1];
       val var4: Float = var0[2] - 0.5F * var8;
@@ -16,35 +16,35 @@ internal object ColorUtils {
       var var7: Int;
       switch ((int)var1 / 60) {
          case 0:
-            var5 = I9.a.c((var8 + var4) * 255.0F);
-            var6 = I9.a.c((var9 + var4) * 255.0F);
-            var7 = I9.a.c(var4 * 255.0F);
+            var5 = P9.a.c((var8 + var4) * 255.0F);
+            var6 = P9.a.c((var9 + var4) * 255.0F);
+            var7 = P9.a.c(var4 * 255.0F);
             break;
          case 1:
-            var5 = I9.a.c((var9 + var4) * 255.0F);
-            var6 = I9.a.c((var8 + var4) * 255.0F);
-            var7 = I9.a.c(var4 * 255.0F);
+            var5 = P9.a.c((var9 + var4) * 255.0F);
+            var6 = P9.a.c((var8 + var4) * 255.0F);
+            var7 = P9.a.c(var4 * 255.0F);
             break;
          case 2:
-            var5 = I9.a.c(var4 * 255.0F);
-            var6 = I9.a.c((var8 + var4) * 255.0F);
-            var7 = I9.a.c((var9 + var4) * 255.0F);
+            var5 = P9.a.c(var4 * 255.0F);
+            var6 = P9.a.c((var8 + var4) * 255.0F);
+            var7 = P9.a.c((var9 + var4) * 255.0F);
             break;
          case 3:
-            var5 = I9.a.c(var4 * 255.0F);
-            var6 = I9.a.c((var9 + var4) * 255.0F);
-            var7 = I9.a.c((var8 + var4) * 255.0F);
+            var5 = P9.a.c(var4 * 255.0F);
+            var6 = P9.a.c((var9 + var4) * 255.0F);
+            var7 = P9.a.c((var8 + var4) * 255.0F);
             break;
          case 4:
-            var5 = I9.a.c((var9 + var4) * 255.0F);
-            var6 = I9.a.c(var4 * 255.0F);
-            var7 = I9.a.c((var8 + var4) * 255.0F);
+            var5 = P9.a.c((var9 + var4) * 255.0F);
+            var6 = P9.a.c(var4 * 255.0F);
+            var7 = P9.a.c((var8 + var4) * 255.0F);
             break;
          case 5:
          case 6:
-            var5 = I9.a.c((var8 + var4) * 255.0F);
-            var6 = I9.a.c(var4 * 255.0F);
-            var7 = I9.a.c((var9 + var4) * 255.0F);
+            var5 = P9.a.c((var8 + var4) * 255.0F);
+            var6 = P9.a.c(var4 * 255.0F);
+            var7 = P9.a.c((var9 + var4) * 255.0F);
             break;
          default:
             var7 = 0;
@@ -57,12 +57,12 @@ internal object ColorUtils {
 
    @JvmStatic
    public fun RGBtoHSL(r: Int, g: Int, b: Int, hsl: FloatArray) {
-      q.h(var3, "hsl");
+      r.h(var3, "hsl");
       val var9: Float = var0 / 255.0F;
-      val var7: Float = var1 / 255.0F;
-      val var10: Float = var2 / 255.0F;
-      val var8: Float = Math.max(var9, Math.max(var7, (float)var2 / 255.0F));
-      var var4: Float = Math.min(var9, Math.min(var7, (float)var2 / 255.0F));
+      val var10: Float = var1 / 255.0F;
+      val var7: Float = var2 / 255.0F;
+      val var8: Float = Math.max(var9, Math.max(var10, (float)var2 / 255.0F));
+      var var4: Float = Math.min(var9, Math.min(var10, (float)var2 / 255.0F));
       var var5: Float = var8 - var4;
       val var6: Float = (var8 + var4) / 2.0F;
       if (var8 == var4) {
@@ -70,11 +70,11 @@ internal object ColorUtils {
          var5 = 0.0F;
       } else {
          if (var8 == var9) {
-            var4 = (var7 - var10) / var5 % 6.0F;
-         } else if (var8 == var7) {
-            var4 = (var10 - var9) / var5 + 2.0F;
+            var4 = (var10 - var7) / var5 % 6.0F;
+         } else if (var8 == var10) {
+            var4 = (var7 - var9) / var5 + 2.0F;
          } else {
-            var4 = (var9 - var7) / var5 + 4.0F;
+            var4 = (var9 - var10) / var5 + 4.0F;
          }
 
          var5 = var5 / (1.0F - Math.abs(2.0F * var6 - 1.0F));

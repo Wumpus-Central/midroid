@@ -6,15 +6,15 @@ import android.view.View
 import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.UIManagerHelper
 import com.facebook.react.uimanager.events.EventDispatcher
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
 public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
    private final val eventRegistry: ReactEventRegistry
 
    init {
-      q.h(var1, "events");
+      r.h(var1, "events");
       super();
       this.eventRegistry = new ReactEventRegistry();
       val var3: Int = var1.length;
@@ -26,18 +26,18 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
 
    private fun ReactEvent.requireEventExporting() {
       if (!this.eventRegistry.getDidExportEvents()) {
-         val var2: KClass = G.b(var1.getClass());
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("attempting to emit event: ");
-         var3.append(var2);
-         var3.append(" before exporting event constants. see usages of exportEventConstants");
-         throw new IllegalStateException(var3.toString());
+         val var3: KClass = H.b(var1.getClass());
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("attempting to emit event: ");
+         var2.append(var3);
+         var2.append(" before exporting event constants. see usages of exportEventConstants");
+         throw new IllegalStateException(var2.toString());
       }
    }
 
    public fun emitEvent(view: View, event: ReactEvent) {
-      q.h(var1, "view");
-      q.h(var2, "event");
+      r.h(var1, "view");
+      r.h(var2, "event");
       var var3: Context = var1.getContext();
       val var5: ReactContext;
       if (var3 is ReactContext) {
@@ -52,7 +52,7 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
          }
 
          var3 = (var3 as ContextWrapper).getBaseContext();
-         q.f(var3, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
+         r.f(var3, "null cannot be cast to non-null type com.facebook.react.bridge.ReactContext");
          var5 = var3 as ReactContext;
       }
 
@@ -60,8 +60,8 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
    }
 
    public fun emitEvent(context: ReactContext, reactTag: Int, event: ReactEvent) {
-      q.h(var1, "context");
-      q.h(var3, "event");
+      r.h(var1, "context");
+      r.h(var3, "event");
       val var4: EventDispatcher = UIManagerHelper.getEventDispatcherForReactTag(var1, var2);
       if (var4 != null) {
          this.requireEventExporting(var3);
@@ -70,15 +70,15 @@ public class ReactEvents(vararg events: Pair<String, KClass<out ReactEvent>>) {
    }
 
    public fun emitEvent(context: ReactContext, view: View, event: ReactEvent) {
-      q.h(var1, "context");
-      q.h(var2, "view");
-      q.h(var3, "event");
+      r.h(var1, "context");
+      r.h(var2, "view");
+      r.h(var3, "event");
       this.emitEvent(var1, var2.getId(), var3);
    }
 
    public fun emitModuleEvent(context: Context, event: ReactEvent) {
-      q.h(var1, "context");
-      q.h(var2, "event");
+      r.h(var1, "context");
+      r.h(var2, "event");
       EventEmitterUtilsKt.emitReactNativeEvent(var1, this.eventRegistry.getEventName(var2), var2.serialize());
    }
 

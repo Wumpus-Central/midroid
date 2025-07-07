@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.react_asset_fetcher.ReactAsset
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: ChannelId, attachmentId: String?, embedId: String?, text: String, icon: ReactAsset) : InfoLinkMessageAccessory(
       var1, var2, var4, var5, var6, var7
@@ -16,9 +16,9 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
    public final val icon: ReactAsset
 
    fun InfoLinkMessageAccessory(var1: java.lang.String, var2: Long, var4: java.lang.String, var5: java.lang.String, var6: java.lang.String, var7: ReactAsset) {
-      q.h(var1, "messageId");
-      q.h(var6, "text");
-      q.h(var7, "icon");
+      r.h(var1, "messageId");
+      r.h(var6, "text");
+      r.h(var7, "icon");
       val var8: StringBuilder = new StringBuilder();
       var8.append("info link ");
       var8.append(var4);
@@ -63,9 +63,9 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
       text: String = ...,
       icon: ReactAsset = ...
    ): InfoLinkMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var6, "text");
-      q.h(var7, "icon");
+      r.h(var1, "messageId");
+      r.h(var6, "text");
+      r.h(var7, "icon");
       return new InfoLinkMessageAccessory(var1, var2, var4, var5, var6, var7, null);
    }
 
@@ -80,11 +80,11 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.attachmentId, var1.attachmentId)) {
+         } else if (!r.c(this.attachmentId, var1.attachmentId)) {
             return false;
-         } else if (!q.c(this.embedId, var1.embedId)) {
+         } else if (!r.c(this.embedId, var1.embedId)) {
             return false;
-         } else if (!q.c(this.text, var1.text)) {
+         } else if (!r.c(this.text, var1.text)) {
             return false;
          } else {
             return this.icon === var1.icon;
@@ -93,8 +93,8 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var4: Int = ChannelId.hashCode-impl(this.channelId);
+      val var4: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       var var2: Int = 0;
       val var1: Int;
       if (this.attachmentId == null) {
@@ -107,30 +107,30 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
          var2 = this.embedId.hashCode();
       }
 
-      return ((((var3 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + this.text.hashCode()) * 31 + this.icon.hashCode();
+      return ((((var4 * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.text.hashCode()) * 31 + this.icon.hashCode();
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = this.attachmentId;
-      val var6: java.lang.String = this.embedId;
-      val var2: java.lang.String = this.text;
-      val var1: ReactAsset = this.icon;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("InfoLinkMessageAccessory(messageId=");
-      var7.append(var3);
-      var7.append(", channelId=");
-      var7.append(var4);
-      var7.append(", attachmentId=");
-      var7.append(var5);
-      var7.append(", embedId=");
-      var7.append(var6);
-      var7.append(", text=");
-      var7.append(var2);
-      var7.append(", icon=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.embedId;
+      val var5: java.lang.String = this.text;
+      val var4: ReactAsset = this.icon;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("InfoLinkMessageAccessory(messageId=");
+      var6.append(var7);
+      var6.append(", channelId=");
+      var6.append(var1);
+      var6.append(", attachmentId=");
+      var6.append(var3);
+      var6.append(", embedId=");
+      var6.append(var2);
+      var6.append(", text=");
+      var6.append(var5);
+      var6.append(", icon=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 }

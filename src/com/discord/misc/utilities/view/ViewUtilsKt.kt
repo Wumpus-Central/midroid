@@ -9,11 +9,11 @@ import android.view.ViewParent
 import android.view.Window
 import android.widget.TextView
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @JvmSynthetic
 public inline fun <reified T : ViewGroup> View.findParentView(): T? {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: ViewParent = var0.getParent();
    val var2: ViewGroup;
    if (var1 is ViewGroup) {
@@ -23,7 +23,7 @@ public inline fun <reified T : ViewGroup> View.findParentView(): T? {
    }
 
    if (var2 != null) {
-      q.m(2, "T");
+      r.m(2, "T");
       return (T)var2;
    } else {
       return null;
@@ -32,7 +32,7 @@ public inline fun <reified T : ViewGroup> View.findParentView(): T? {
 
 @JvmSynthetic
 public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: ArrayList = new ArrayList();
    val var2: ViewParent = var0.getParent();
    var var3: ViewGroup;
@@ -43,7 +43,7 @@ public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
    }
 
    if (var3 != null) {
-      q.m(2, "T");
+      r.m(2, "T");
    } else {
       var3 = null;
    }
@@ -58,7 +58,7 @@ public inline fun <reified T : ViewGroup> View.findParentViews(): List<T> {
       }
 
       if (var3 != null) {
-         q.m(2, "T");
+         r.m(2, "T");
       } else {
          var3 = null;
       }
@@ -98,7 +98,7 @@ public tailrec fun getWindow(context: Context?): Window? {
 }
 
 public fun View.isLtr(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Boolean;
    if (var0.getLayoutDirection() == 0) {
       var1 = true;
@@ -110,7 +110,7 @@ public fun View.isLtr(): Boolean {
 }
 
 public fun TextView.setOptionalText(text: CharSequence?) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    var0.setText(var1);
    var var2: Boolean;
    if (var1 != null && !h.c0(var1)) {

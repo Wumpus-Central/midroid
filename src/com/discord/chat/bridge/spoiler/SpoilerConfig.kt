@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.spoiler
 
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class SpoilerConfig(attributes: SpoilerAttributes,
    onTapObscureToggle: (Boolean) -> Unit,
@@ -14,10 +14,10 @@ public data class SpoilerConfig(attributes: SpoilerAttributes,
    private final val onHide: (SpoilerIdentifier) -> Unit
 
    init {
-      q.h(var1, "attributes");
-      q.h(var2, "onTapObscureToggle");
-      q.h(var3, "onReveal");
-      q.h(var4, "onHide");
+      r.h(var1, "attributes");
+      r.h(var2, "onTapObscureToggle");
+      r.h(var3, "onReveal");
+      r.h(var4, "onHide");
       super();
       this.attributes = var1;
       this.onTapObscureToggle = var2;
@@ -47,10 +47,10 @@ public data class SpoilerConfig(attributes: SpoilerAttributes,
       onReveal: (SpoilerIdentifier) -> Unit = var0.onReveal,
       onHide: (SpoilerIdentifier) -> Unit = var0.onHide
    ): SpoilerConfig {
-      q.h(var1, "attributes");
-      q.h(var2, "onTapObscureToggle");
-      q.h(var3, "onReveal");
-      q.h(var4, "onHide");
+      r.h(var1, "attributes");
+      r.h(var2, "onTapObscureToggle");
+      r.h(var3, "onReveal");
+      r.h(var4, "onHide");
       return new SpoilerConfig(var1, var2, var3, var4);
    }
 
@@ -61,14 +61,14 @@ public data class SpoilerConfig(attributes: SpoilerAttributes,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.attributes, var1.attributes)) {
+         if (!r.c(this.attributes, var1.attributes)) {
             return false;
-         } else if (!q.c(this.onTapObscureToggle, var1.onTapObscureToggle)) {
+         } else if (!r.c(this.onTapObscureToggle, var1.onTapObscureToggle)) {
             return false;
-         } else if (!q.c(this.onReveal, var1.onReveal)) {
+         } else if (!r.c(this.onReveal, var1.onReveal)) {
             return false;
          } else {
-            return q.c(this.onHide, var1.onHide);
+            return r.c(this.onHide, var1.onHide);
          }
       }
    }
@@ -86,19 +86,19 @@ public data class SpoilerConfig(attributes: SpoilerAttributes,
    }
 
    public override fun toString(): String {
-      val var5: SpoilerAttributes = this.attributes;
-      val var3: Function1 = this.onTapObscureToggle;
-      val var1: Function1 = this.onReveal;
-      val var2: Function1 = this.onHide;
+      val var1: SpoilerAttributes = this.attributes;
+      val var5: Function1 = this.onTapObscureToggle;
+      val var2: Function1 = this.onReveal;
+      val var3: Function1 = this.onHide;
       val var4: StringBuilder = new StringBuilder();
       var4.append("SpoilerConfig(attributes=");
-      var4.append(var5);
-      var4.append(", onTapObscureToggle=");
-      var4.append(var3);
-      var4.append(", onReveal=");
       var4.append(var1);
-      var4.append(", onHide=");
+      var4.append(", onTapObscureToggle=");
+      var4.append(var5);
+      var4.append(", onReveal=");
       var4.append(var2);
+      var4.append(", onHide=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

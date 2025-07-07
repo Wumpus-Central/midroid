@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.view.botuikit.components
 
 import android.graphics.drawable.Animatable
 import android.view.View
-import androidx.core.view.Y
+import androidx.core.view.Z
 import com.discord.chat.bridge.botuikit.ContentInventoryEntry
 import com.discord.chat.bridge.botuikit.ContentInventoryEntryClickable
 import com.discord.chat.presentation.message.view.botuikit.ComponentContext
@@ -11,7 +11,7 @@ import com.discord.primitives.UserId
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.image.ImageInfo
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @JvmSynthetic
 fun a(var0: ComponentContext, var1: ContentInventoryEntry, var2: java.lang.String, var3: View) {
@@ -43,7 +43,7 @@ private fun View.applyClickable(
       var5 = false;
    }
 
-   Y.I0(var0, var5);
+   Z.G0(var0, var5);
    var0.setClickable(var5);
 }
 
@@ -52,7 +52,7 @@ fun `applyClickable$lambda$0`(var0: ComponentContext, var1: ContentInventoryEntr
 }
 
 public fun getContentControllerListener(imageView: SimpleDraweeView): ControllerListener<ImageInfo> {
-   q.h(var0, "imageView");
+   r.h(var0, "imageView");
    return new ControllerListener(var0) {
       final SimpleDraweeView $imageView;
 

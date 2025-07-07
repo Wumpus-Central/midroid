@@ -7,9 +7,9 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -18,10 +18,10 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
    private final var screenshotDetector: ScreenshotDetector?
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("screenshotTaken", G.b(ScreenshotTakenEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("screenshotTaken", H.b(ScreenshotTakenEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final ScreenshotHelperModule this$0;
 
@@ -56,7 +56,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun addListener(type: String) {
-      q.h(var1, "type");
+      r.h(var1, "type");
       if (this.screenshotDetector != null) {
          this.screenshotDetector.setScreenshotListener(new b(this));
       }
@@ -69,7 +69,7 @@ public class ScreenshotHelperModule(reactContext: ReactApplicationContext) : Rea
    public open fun initialize() {
       super.initialize();
       val var1: ContentResolver = this.reactContext.getContentResolver();
-      q.g(var1, "getContentResolver(...)");
+      r.g(var1, "getContentResolver(...)");
       this.screenshotDetector = new ScreenshotDetector(var1);
       this.reactContext.addLifecycleEventListener(this.reactLifecycleEventListener);
    }

@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.messageframe
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame {
    public open val type: MessageFrameType
 
    init {
-      q.h(var1, "type");
+      r.h(var1, "type");
       super(null);
       this.type = var1;
    }
@@ -19,7 +19,7 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
    }
 
    public fun copy(type: MessageFrameType = var0.type): MessageFrameMediaViewer {
-      q.h(var1, "type");
+      r.h(var1, "type");
       return new MessageFrameMediaViewer(var1);
    }
 
@@ -38,12 +38,12 @@ public data class MessageFrameMediaViewer(type: MessageFrameType) : MessageFrame
    }
 
    public override fun toString(): String {
-      val var2: MessageFrameType = this.type;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MessageFrameMediaViewer(type=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: MessageFrameType = this.type;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("MessageFrameMediaViewer(type=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

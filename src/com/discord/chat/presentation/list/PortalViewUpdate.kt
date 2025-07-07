@@ -40,7 +40,7 @@ public data class PortalViewUpdate(portalChatListItem: PortalViewChatListItem?, 
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.portalChatListItem, var1.portalChatListItem)) {
+         if (!kotlin.jvm.internal.r.c(this.portalChatListItem, var1.portalChatListItem)) {
             return false;
          } else {
             return this.updateId == var1.updateId;

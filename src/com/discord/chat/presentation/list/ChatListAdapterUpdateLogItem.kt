@@ -9,7 +9,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val chatListItemUpdate: ChatListItemUpdate
 
       init {
-         kotlin.jvm.internal.q.h(var1, "chatListItemUpdate");
+         kotlin.jvm.internal.r.h(var1, "chatListItemUpdate");
          super(null);
          this.chatListItemUpdate = var1;
       }
@@ -101,7 +101,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
       public final val updateType: PortalViewUpdateType
 
       init {
-         kotlin.jvm.internal.q.h(var1, "updateType");
+         kotlin.jvm.internal.r.h(var1, "updateType");
          super(null);
          this.updateType = var1;
       }
@@ -112,7 +112,7 @@ private sealed class ChatListAdapterUpdateLogItem protected constructor() {
          if (var1 != 1) {
             if (var1 != 2) {
                if (var1 != 3) {
-                  throw new s9.n();
+                  throw new z9.n();
                }
 
                var4 = "PortalViewUpdateType.REMOVE";

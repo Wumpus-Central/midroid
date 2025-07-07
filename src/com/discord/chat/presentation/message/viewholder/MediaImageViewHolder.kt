@@ -12,7 +12,7 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
    private final val view: MediaImageView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
@@ -45,8 +45,8 @@ public open class MediaImageViewHolder(view: MediaImageView) : MessagePartViewHo
       filename: String?,
       srcIsAnimated: Boolean
    ) {
-      kotlin.jvm.internal.q.h(var1, "url");
-      kotlin.jvm.internal.q.h(var18, "resizeMode");
+      kotlin.jvm.internal.r.h(var1, "url");
+      kotlin.jvm.internal.r.h(var18, "resizeMode");
       this.view.setContent(var1, var2, var3, var18, var4, var5, var6, var7, var17, var22, var8, var9, var10, var11, var19, var24, var25, var26);
       if (var20 != null) {
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.view, false, var20, 1, null);

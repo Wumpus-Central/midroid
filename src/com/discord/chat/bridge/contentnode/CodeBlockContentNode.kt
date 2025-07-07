@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class CodeBlockContentNode(lang: String, content: String, inQuote: Boolean) : ContentNode {
@@ -11,8 +11,8 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    public final val inQuote: Boolean
 
    init {
-      q.h(var1, "lang");
-      q.h(var2, "content");
+      r.h(var1, "lang");
+      r.h(var2, "content");
       super(null);
       this.lang = var1;
       this.content = var2;
@@ -32,8 +32,8 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
    }
 
    public fun copy(lang: String = var0.lang, content: String = var0.content, inQuote: Boolean = var0.inQuote): CodeBlockContentNode {
-      q.h(var1, "lang");
-      q.h(var2, "content");
+      r.h(var1, "lang");
+      r.h(var2, "content");
       return new CodeBlockContentNode(var1, var2, var3);
    }
 
@@ -44,9 +44,9 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.lang, var1.lang)) {
+         if (!r.c(this.lang, var1.lang)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
          } else {
             return this.inQuote == var1.inQuote;
@@ -60,17 +60,17 @@ public data class CodeBlockContentNode(lang: String, content: String, inQuote: B
 
    public override fun toString(): String {
       val var4: java.lang.String = this.lang;
-      val var3: java.lang.String = this.content;
+      val var2: java.lang.String = this.content;
       val var1: Boolean = this.inQuote;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("CodeBlockContentNode(lang=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var3);
-      var2.append(", inQuote=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("CodeBlockContentNode(lang=");
+      var3.append(var4);
+      var3.append(", content=");
+      var3.append(var2);
+      var3.append(", inQuote=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

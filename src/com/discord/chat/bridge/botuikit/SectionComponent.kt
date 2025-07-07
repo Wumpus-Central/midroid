@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>)
@@ -14,9 +14,9 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    public final val accessory: SectionAccessory<*>
 
    init {
-      q.h(var2, "id");
-      q.h(var4, "components");
-      q.h(var5, "accessory");
+      r.h(var2, "id");
+      r.h(var4, "components");
+      r.h(var5, "accessory");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -52,9 +52,9 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
       components: List<SectionChildComponent<*>> = var0.components,
       accessory: SectionAccessory<*> = var0.accessory
    ): SectionComponent {
-      q.h(var2, "id");
-      q.h(var4, "components");
-      q.h(var5, "accessory");
+      r.h(var2, "id");
+      r.h(var4, "components");
+      r.h(var5, "accessory");
       return new SectionComponent(var1, var2, var3, var4, var5);
    }
 
@@ -67,14 +67,14 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.id, var1.id)) {
+         } else if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.errorText, var1.errorText)) {
+         } else if (!r.c(this.errorText, var1.errorText)) {
             return false;
-         } else if (!q.c(this.components, var1.components)) {
+         } else if (!r.c(this.components, var1.components)) {
             return false;
          } else {
-            return q.c(this.accessory, var1.accessory);
+            return r.c(this.accessory, var1.accessory);
          }
       }
    }
@@ -95,22 +95,22 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    public override fun toString(): String {
       val var1: Int = this.type;
       val var3: java.lang.String = this.id;
-      val var2: java.lang.String = this.errorText;
-      val var5: java.util.List = this.components;
+      val var6: java.lang.String = this.errorText;
+      val var2: java.util.List = this.components;
       val var4: SectionAccessory = this.accessory;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SectionComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var3);
-      var6.append(", errorText=");
-      var6.append(var2);
-      var6.append(", components=");
-      var6.append(var5);
-      var6.append(", accessory=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SectionComponent(type=");
+      var5.append(var1);
+      var5.append(", id=");
+      var5.append(var3);
+      var5.append(", errorText=");
+      var5.append(var6);
+      var5.append(", components=");
+      var5.append(var2);
+      var5.append(", accessory=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

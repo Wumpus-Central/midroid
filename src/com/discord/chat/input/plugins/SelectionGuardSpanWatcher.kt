@@ -4,7 +4,7 @@ import android.text.Selection
 import android.text.SpanWatcher
 import android.text.Spannable
 import com.discord.chat.input.spans.DCDNoSelectionSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SelectionGuardSpanWatcher : SpanWatcher {
    private fun checkSelections(text: Spannable, selectionStart: Int?, selectionEnd: Int?) {
@@ -98,9 +98,9 @@ public class SelectionGuardSpanWatcher : SpanWatcher {
 
    public open fun onSpanChanged(text: Spannable?, what: Any?, ostart: Int, oend: Int, nstart: Int, nend: Int) {
       if (var1 != null) {
-         if (q.c(var2, Selection.SELECTION_START)) {
+         if (r.c(var2, Selection.SELECTION_START)) {
             this.checkSelections(var1, var5, null);
-         } else if (q.c(var2, Selection.SELECTION_END)) {
+         } else if (r.c(var2, Selection.SELECTION_END)) {
             this.checkSelections(var1, null, var5);
          }
       }

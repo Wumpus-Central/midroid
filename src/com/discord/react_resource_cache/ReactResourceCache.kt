@@ -6,7 +6,7 @@ import android.content.SharedPreferences.Editor
 import java.util.HashMap
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    public abstract val cacheKey: String
@@ -14,7 +14,7 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final val cache: SharedPreferences
       private final get() {
          val var2: SharedPreferences = var1.getSharedPreferences(this.getCacheKey(), 0);
-         q.g(var2, "getSharedPreferences(...)");
+         r.g(var2, "getSharedPreferences(...)");
          return var2;
       }
 
@@ -22,8 +22,8 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    private final var reactResources: MutableMap<String, String> = new LinkedHashMap()
 
    public fun get(context: Context, reactResource: Any): String {
-      q.h(var1, "context");
-      q.h(var2, "reactResource");
+      r.h(var1, "context");
+      r.h(var2, "reactResource");
       val var4: java.lang.String = this.reactResources.get(var2.name());
       var var3: java.lang.String = var4;
       if (var4 == null) {
@@ -35,12 +35,12 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
          }
 
          if (var5 == null) {
-            val var6: java.lang.String = var2.name();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Unable to access ");
-            var7.append(var6);
-            var7.append(" as it has not yet been provided.");
-            throw new IllegalAccessException(var7.toString());
+            val var7: java.lang.String = var2.name();
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Unable to access ");
+            var6.append(var7);
+            var6.append(" as it has not yet been provided.");
+            throw new IllegalAccessException(var6.toString());
          }
 
          var3 = var5;
@@ -50,16 +50,16 @@ public abstract class ReactResourceCache<T extends java.lang.Enum<?>> {
    }
 
    public fun set(context: Context, newReactResources: Map<String, String>) {
-      q.h(var1, "context");
-      q.h(var2, "newReactResources");
-      val var3: Editor = this.getCache(var1).edit();
-      var3.clear();
+      r.h(var1, "context");
+      r.h(var2, "newReactResources");
+      val var4: Editor = this.getCache(var1).edit();
+      var4.clear();
 
       for (Entry var5 : var2.entrySet()) {
-         var3.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+         var4.putString(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       this.reactResources = new HashMap<>(var2);
-      var3.apply();
+      var4.apply();
    }
 }

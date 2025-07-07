@@ -6,8 +6,8 @@ import android.content.Context
 @SuppressLint(["ViewConstructor"])
 internal class BlurViewTarget(context: Context, blurTargetNativeId: String) : BlurViewTargetBase {
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
       super(var1, var2);
    }
 

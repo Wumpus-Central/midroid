@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
@@ -12,7 +12,7 @@ internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
       internal set
 
    init {
-      q.h(var1, "imgdata");
+      r.h(var1, "imgdata");
       super();
       this.imgdata = var1;
    }
@@ -22,7 +22,7 @@ internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
    }
 
    public fun copy(imgdata: String = var0.imgdata): OnBroadcastThumbnailEvent {
-      q.h(var1, "imgdata");
+      r.h(var1, "imgdata");
       return new OnBroadcastThumbnailEvent(var1);
    }
 
@@ -32,7 +32,7 @@ internal data class OnBroadcastThumbnailEvent(imgdata: String) : ReactEvent {
       } else if (var1 !is OnBroadcastThumbnailEvent) {
          return false;
       } else {
-         return q.c(this.imgdata, (var1 as OnBroadcastThumbnailEvent).imgdata);
+         return r.c(this.imgdata, (var1 as OnBroadcastThumbnailEvent).imgdata);
       }
    }
 

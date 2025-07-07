@@ -4,12 +4,12 @@ import android.app.Activity
 import android.os.Build.VERSION
 import android.view.View
 import android.view.WindowInsetsController
-import androidx.core.view.M
+import androidx.core.view.N
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.m0
+import androidx.core.view.n0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private fun WindowInsetsControllerCompat.setLightTheme(isLightTheme: Boolean) {
    var0.d(var1);
@@ -17,29 +17,29 @@ private fun WindowInsetsControllerCompat.setLightTheme(isLightTheme: Boolean) {
 }
 
 internal fun Activity.updateSystemUi() {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: ThemeManager = ThemeManager.INSTANCE;
    if (ThemeManager.INSTANCE.isInitialized()) {
       val var1: Boolean = var2.isThemeLight();
       val var4: View = ActivityExtensionsKt.getRootView(var0);
       if (var4 != null) {
-         val var3: WindowInsetsControllerCompat = m0.a(var0.getWindow(), var4);
-         q.g(var3, "getInsetsController(...)");
+         val var3: WindowInsetsControllerCompat = n0.a(var0.getWindow(), var4);
+         r.g(var3, "getInsetsController(...)");
          setLightTheme(var3, var1);
       }
    }
 }
 
 internal fun View.updateSystemUi() {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: ThemeManager = ThemeManager.INSTANCE;
    if (ThemeManager.INSTANCE.isInitialized()) {
       val var1: Boolean = var2.isThemeLight();
       if (VERSION.SDK_INT >= 30) {
-         val var3: WindowInsetsController = M.a(var0);
+         val var3: WindowInsetsController = N.a(var0);
          if (var3 != null) {
             val var4: WindowInsetsControllerCompat = WindowInsetsControllerCompat.g(var3);
-            q.g(var4, "toWindowInsetsControllerCompat(...)");
+            r.g(var4, "toWindowInsetsControllerCompat(...)");
             setLightTheme(var4, var1);
          }
       }

@@ -9,19 +9,19 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.LoadingChatListItem
 import com.discord.chat.presentation.loading.ChatLoadingView
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import z9.n
 
 public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<LoadingChatListItem, ChatLoadingView> {
    init {
-      q.h(var1, "eventHandlerProvider");
+      r.h(var1, "eventHandlerProvider");
       super(var1, null, 2, null);
    }
 
    public open fun bindView(view: ChatLoadingView, item: LoadingChatListItem, metadata: Metadata<ChatLoadingView>) {
-      q.h(var1, "view");
-      q.h(var2, "item");
-      q.h(var3, "metadata");
+      r.h(var1, "view");
+      r.h(var2, "item");
+      r.h(var3, "metadata");
       if (var2.isLoading()) {
          var1.showProgress();
       } else {
@@ -59,14 +59,14 @@ public class LoadingDelegate(eventHandlerProvider: () -> ChatEventHandler) : Bas
    }
 
    public open fun createView(parent: ViewGroup): ChatLoadingView {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      q.g(var2, "getContext(...)");
+      r.g(var2, "getContext(...)");
       return new ChatLoadingView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      q.h(var1, "item");
+      r.h(var1, "item");
       return var1 is LoadingChatListItem;
    }
 }

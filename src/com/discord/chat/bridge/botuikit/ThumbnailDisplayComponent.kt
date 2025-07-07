@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ThumbnailDisplayComponent(type: Int,
@@ -42,10 +42,10 @@ public data class ThumbnailDisplayComponent(type: Int,
    public open val obscureOrNull: String?
 
    init {
-      q.h(var2, "id");
-      q.h(var3, "media");
-      q.h(var13, "descriptionHint");
-      q.h(var14, "accessibilityRole");
+      r.h(var2, "id");
+      r.h(var3, "media");
+      r.h(var13, "descriptionHint");
+      r.h(var14, "accessibilityRole");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -161,10 +161,10 @@ public data class ThumbnailDisplayComponent(type: Int,
       descriptionHint: String = var0.descriptionHint,
       accessibilityRole: String = var0.accessibilityRole
    ): ThumbnailDisplayComponent {
-      q.h(var2, "id");
-      q.h(var3, "media");
-      q.h(var13, "descriptionHint");
-      q.h(var14, "accessibilityRole");
+      r.h(var2, "id");
+      r.h(var3, "media");
+      r.h(var13, "descriptionHint");
+      r.h(var14, "accessibilityRole");
       return new ThumbnailDisplayComponent(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14);
    }
 
@@ -177,15 +177,15 @@ public data class ThumbnailDisplayComponent(type: Int,
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.id, var1.id)) {
+         } else if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.media, var1.media)) {
+         } else if (!r.c(this.media, var1.media)) {
             return false;
-         } else if (!q.c(this.description, var1.description)) {
+         } else if (!r.c(this.description, var1.description)) {
             return false;
          } else if (this.isSpoiler != var1.isSpoiler) {
             return false;
-         } else if (!q.c(this.spoilerDescription, var1.spoilerDescription)) {
+         } else if (!r.c(this.spoilerDescription, var1.spoilerDescription)) {
             return false;
          } else if (this.isObscure != var1.isObscure) {
             return false;
@@ -195,22 +195,22 @@ public data class ThumbnailDisplayComponent(type: Int,
             return false;
          } else if (this.obscureIsOpaque != var1.obscureIsOpaque) {
             return false;
-         } else if (!q.c(this.obscureDescription, var1.obscureDescription)) {
+         } else if (!r.c(this.obscureDescription, var1.obscureDescription)) {
             return false;
-         } else if (!q.c(this.verifyAge, var1.verifyAge)) {
+         } else if (!r.c(this.verifyAge, var1.verifyAge)) {
             return false;
-         } else if (!q.c(this.descriptionHint, var1.descriptionHint)) {
+         } else if (!r.c(this.descriptionHint, var1.descriptionHint)) {
             return false;
          } else {
-            return q.c(this.accessibilityRole, var1.accessibilityRole);
+            return r.c(this.accessibilityRole, var1.accessibilityRole);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
-      val var7: Int = this.id.hashCode();
-      val var6: Int = this.media.hashCode();
+      val var7: Int = Integer.hashCode(this.type);
+      val var6: Int = this.id.hashCode();
+      val var5: Int = this.media.hashCode();
       var var4: Int = 0;
       val var1: Int;
       if (this.description == null) {
@@ -227,10 +227,10 @@ public data class ThumbnailDisplayComponent(type: Int,
          var2 = this.spoilerDescription.hashCode();
       }
 
-      val var11: Int = java.lang.Boolean.hashCode(this.isObscure);
-      val var10: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
-      val var9: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
-      val var12: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
+      val var9: Int = java.lang.Boolean.hashCode(this.isObscure);
+      val var11: Int = java.lang.Boolean.hashCode(this.isObscureAwaitingScan);
+      val var12: Int = java.lang.Boolean.hashCode(this.obscureHideControls);
+      val var10: Int = java.lang.Boolean.hashCode(this.obscureIsOpaque);
       val var3: Int;
       if (this.obscureDescription == null) {
          var3 = 0;
@@ -246,9 +246,9 @@ public data class ThumbnailDisplayComponent(type: Int,
                (
                         (
                                  (
-                                          ((((((((var5 * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var11) * 31 + var10) * 31 + var9)
+                                          ((((((((var7 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var8) * 31 + var2) * 31 + var9) * 31 + var11) * 31 + var12)
                                                 * 31
-                                             + var12
+                                             + var10
                                        )
                                        * 31
                                     + var3
@@ -265,50 +265,50 @@ public data class ThumbnailDisplayComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var9: java.lang.String = this.id;
-      val var13: UnfurledMediaItem = this.media;
-      val var10: java.lang.String = this.description;
-      val var2: Boolean = this.isSpoiler;
-      val var11: java.lang.String = this.spoilerDescription;
+      val var13: java.lang.String = this.id;
+      val var8: UnfurledMediaItem = this.media;
+      val var14: java.lang.String = this.description;
+      val var4: Boolean = this.isSpoiler;
+      val var12: java.lang.String = this.spoilerDescription;
       val var5: Boolean = this.isObscure;
-      val var6: Boolean = this.isObscureAwaitingScan;
-      val var4: Boolean = this.obscureHideControls;
-      val var3: Boolean = this.obscureIsOpaque;
-      val var7: java.lang.String = this.obscureDescription;
-      val var14: java.lang.Boolean = this.verifyAge;
-      val var15: java.lang.String = this.descriptionHint;
-      val var12: java.lang.String = this.accessibilityRole;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ThumbnailDisplayComponent(type=");
-      var8.append(var1);
-      var8.append(", id=");
-      var8.append(var9);
-      var8.append(", media=");
-      var8.append(var13);
-      var8.append(", description=");
-      var8.append(var10);
-      var8.append(", isSpoiler=");
-      var8.append(var2);
-      var8.append(", spoilerDescription=");
-      var8.append(var11);
-      var8.append(", isObscure=");
-      var8.append(var5);
-      var8.append(", isObscureAwaitingScan=");
-      var8.append(var6);
-      var8.append(", obscureHideControls=");
-      var8.append(var4);
-      var8.append(", obscureIsOpaque=");
-      var8.append(var3);
-      var8.append(", obscureDescription=");
-      var8.append(var7);
-      var8.append(", verifyAge=");
-      var8.append(var14);
-      var8.append(", descriptionHint=");
-      var8.append(var15);
-      var8.append(", accessibilityRole=");
-      var8.append(var12);
-      var8.append(")");
-      return var8.toString();
+      val var3: Boolean = this.isObscureAwaitingScan;
+      val var6: Boolean = this.obscureHideControls;
+      val var2: Boolean = this.obscureIsOpaque;
+      val var10: java.lang.String = this.obscureDescription;
+      val var7: java.lang.Boolean = this.verifyAge;
+      val var9: java.lang.String = this.descriptionHint;
+      val var11: java.lang.String = this.accessibilityRole;
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("ThumbnailDisplayComponent(type=");
+      var15.append(var1);
+      var15.append(", id=");
+      var15.append(var13);
+      var15.append(", media=");
+      var15.append(var8);
+      var15.append(", description=");
+      var15.append(var14);
+      var15.append(", isSpoiler=");
+      var15.append(var4);
+      var15.append(", spoilerDescription=");
+      var15.append(var12);
+      var15.append(", isObscure=");
+      var15.append(var5);
+      var15.append(", isObscureAwaitingScan=");
+      var15.append(var3);
+      var15.append(", obscureHideControls=");
+      var15.append(var6);
+      var15.append(", obscureIsOpaque=");
+      var15.append(var2);
+      var15.append(", obscureDescription=");
+      var15.append(var10);
+      var15.append(", verifyAge=");
+      var15.append(var7);
+      var15.append(", descriptionHint=");
+      var15.append(var9);
+      var15.append(", accessibilityRole=");
+      var15.append(var11);
+      var15.append(")");
+      return var15.toString();
    }
 
    public companion object {

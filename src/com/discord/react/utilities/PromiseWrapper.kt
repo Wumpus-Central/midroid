@@ -2,7 +2,7 @@ package com.discord.react.utilities
 
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class PromiseWrapper(promise: Promise,
       resolveTransform: (Any?) -> Any? = new b(),
@@ -14,9 +14,9 @@ public class PromiseWrapper(promise: Promise,
    private final val rejectTransform: (com.discord.react.utilities.PromiseWrapper.Rejection) -> com.discord.react.utilities.PromiseWrapper.Rejection
 
    init {
-      q.h(var1, "promise");
-      q.h(var2, "resolveTransform");
-      q.h(var3, "rejectTransform");
+      r.h(var1, "promise");
+      r.h(var2, "resolveTransform");
+      r.h(var3, "rejectTransform");
       super();
       this.promise = var1;
       this.resolveTransform = var2;
@@ -30,60 +30,60 @@ public class PromiseWrapper(promise: Promise,
 
    @JvmStatic
    fun `_init_$lambda$1`(var0: PromiseWrapper.Rejection): PromiseWrapper.Rejection {
-      q.h(var0, "it");
+      r.h(var0, "it");
       return var0;
    }
 
    public open fun reject(message: String) {
-      q.h(var1, "message");
+      r.h(var1, "message");
       val var2: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(null, var1, null, null)) as PromiseWrapper.Rejection;
       val var4: Promise = this.promise;
       val var5: java.lang.String = var2.getMessage();
-      q.e(var5);
+      r.e(var5);
       var4.reject(var5);
    }
 
    public open fun reject(code: String, userInfo: WritableMap) {
-      q.h(var1, "code");
-      q.h(var2, "userInfo");
+      r.h(var1, "code");
+      r.h(var2, "userInfo");
       val var3: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, null, var2)) as PromiseWrapper.Rejection;
       val var5: Promise = this.promise;
       val var6: java.lang.String = var3.getCode();
-      q.e(var6);
+      r.e(var6);
       val var7: WritableMap = var3.getUserInfo();
-      q.e(var7);
+      r.e(var7);
       var5.reject(var6, var7);
    }
 
    public open fun reject(code: String, message: String?) {
-      q.h(var1, "code");
+      r.h(var1, "code");
       val var6: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, var2, null, null)) as PromiseWrapper.Rejection;
       val var3: Promise = this.promise;
       var1 = var6.getCode();
-      q.e(var1);
+      r.e(var1);
       var3.reject(var1, var6.getMessage());
    }
 
    public open fun reject(code: String, message: String?, userInfo: WritableMap) {
-      q.h(var1, "code");
-      q.h(var3, "userInfo");
+      r.h(var1, "code");
+      r.h(var3, "userInfo");
       val var4: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(null, var2, null, var3)) as PromiseWrapper.Rejection;
       val var8: Promise = this.promise;
-      var2 = var4.getCode();
-      q.e(var2);
-      var1 = var4.getMessage();
+      var1 = var4.getCode();
+      r.e(var1);
+      var2 = var4.getMessage();
       val var9: WritableMap = var4.getUserInfo();
-      q.e(var9);
-      var8.reject(var2, var1, var9);
+      r.e(var9);
+      var8.reject(var1, var2, var9);
    }
 
    public open fun reject(code: String, message: String?, throwable: Throwable?) {
-      q.h(var1, "code");
-      val var5: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, var2, var3, null)) as PromiseWrapper.Rejection;
-      val var6: Promise = this.promise;
-      val var7: java.lang.String = var5.getCode();
-      q.e(var7);
-      var6.reject(var7, var5.getMessage(), var5.getThrowable());
+      r.h(var1, "code");
+      val var7: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, var2, var3, null)) as PromiseWrapper.Rejection;
+      val var5: Promise = this.promise;
+      var2 = var7.getCode();
+      r.e(var2);
+      var5.reject(var2, var7.getMessage(), var7.getThrowable());
    }
 
    public open fun reject(code: String?, message: String?, throwable: Throwable?, userInfo: WritableMap?) {
@@ -92,46 +92,46 @@ public class PromiseWrapper(promise: Promise,
    }
 
    public open fun reject(code: String, throwable: Throwable?) {
-      q.h(var1, "code");
+      r.h(var1, "code");
       val var3: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, var2, null)) as PromiseWrapper.Rejection;
-      val var5: Promise = this.promise;
-      val var6: java.lang.String = var3.getCode();
-      q.e(var6);
-      var5.reject(var6, var3.getThrowable());
+      val var6: Promise = this.promise;
+      var1 = var3.getCode();
+      r.e(var1);
+      var6.reject(var1, var3.getThrowable());
    }
 
    public open fun reject(code: String, throwable: Throwable?, userInfo: WritableMap) {
-      q.h(var1, "code");
-      q.h(var3, "userInfo");
+      r.h(var1, "code");
+      r.h(var3, "userInfo");
       val var4: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(var1, null, var2, var3)) as PromiseWrapper.Rejection;
-      val var6: Promise = this.promise;
+      val var7: Promise = this.promise;
       val var8: java.lang.String = var4.getCode();
-      q.e(var8);
-      var2 = var4.getThrowable();
+      r.e(var8);
+      val var6: java.lang.Throwable = var4.getThrowable();
       val var9: WritableMap = var4.getUserInfo();
-      q.e(var9);
-      var6.reject(var8, var2, var9);
+      r.e(var9);
+      var7.reject(var8, var6, var9);
    }
 
    public open fun reject(throwable: Throwable) {
-      q.h(var1, "throwable");
+      r.h(var1, "throwable");
       val var2: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(null, null, var1, null)) as PromiseWrapper.Rejection;
       val var4: Promise = this.promise;
       val var5: java.lang.Throwable = var2.getThrowable();
-      q.e(var5);
+      r.e(var5);
       var4.reject(var5);
    }
 
    public open fun reject(throwable: Throwable, userInfo: WritableMap) {
-      q.h(var1, "throwable");
-      q.h(var2, "userInfo");
+      r.h(var1, "throwable");
+      r.h(var2, "userInfo");
       val var3: PromiseWrapper.Rejection = this.rejectTransform.invoke(new PromiseWrapper.Rejection(null, null, var1, var2)) as PromiseWrapper.Rejection;
-      val var6: Promise = this.promise;
-      var1 = var3.getThrowable();
-      q.e(var1);
+      val var5: Promise = this.promise;
+      val var6: java.lang.Throwable = var3.getThrowable();
+      r.e(var6);
       val var7: WritableMap = var3.getUserInfo();
-      q.e(var7);
-      var6.reject(var1, var7);
+      r.e(var7);
+      var5.reject(var6, var7);
    }
 
    public open fun resolve(value: Any?) {
@@ -183,14 +183,14 @@ public class PromiseWrapper(promise: Promise,
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.code, var1.code)) {
+            if (!r.c(this.code, var1.code)) {
                return false;
-            } else if (!q.c(this.message, var1.message)) {
+            } else if (!r.c(this.message, var1.message)) {
                return false;
-            } else if (!q.c(this.throwable, var1.throwable)) {
+            } else if (!r.c(this.throwable, var1.throwable)) {
                return false;
             } else {
-               return q.c(this.userInfo, var1.userInfo);
+               return r.c(this.userInfo, var1.userInfo);
             }
          }
       }
@@ -226,19 +226,19 @@ public class PromiseWrapper(promise: Promise,
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.code;
-         val var2: java.lang.String = this.message;
-         val var5: java.lang.Throwable = this.throwable;
-         val var4: WritableMap = this.userInfo;
+         val var4: java.lang.String = this.code;
+         val var1: java.lang.String = this.message;
+         val var2: java.lang.Throwable = this.throwable;
+         val var5: WritableMap = this.userInfo;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Rejection(code=");
-         var3.append(var1);
-         var3.append(", message=");
-         var3.append(var2);
-         var3.append(", throwable=");
-         var3.append(var5);
-         var3.append(", userInfo=");
          var3.append(var4);
+         var3.append(", message=");
+         var3.append(var1);
+         var3.append(", throwable=");
+         var3.append(var2);
+         var3.append(", userInfo=");
+         var3.append(var5);
          var3.append(")");
          return var3.toString();
       }

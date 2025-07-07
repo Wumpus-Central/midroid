@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.GuildEventInviteEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class GuildEventInviteMessageAccessory(messageId: MessageId,
    codedLinkIndex: Int,
@@ -23,8 +23,8 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
    fun GuildEventInviteMessageAccessory(
       var1: java.lang.String, var2: Int, var3: GuildEventInviteEmbedImpl, var4: Boolean, var5: Boolean, var6: Boolean, var7: Boolean
    ) {
-      q.h(var1, "messageId");
-      q.h(var3, "invite");
+      r.h(var1, "messageId");
+      r.h(var3, "invite");
       val var8: StringBuilder = new StringBuilder();
       var8.append("guild scheduled event invite ");
       var8.append(var2);
@@ -75,8 +75,8 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
       shouldShowRoleDot: Boolean = ...,
       shouldShowRoleOnName: Boolean = ...
    ): GuildEventInviteMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var3, "invite");
+      r.h(var1, "messageId");
+      r.h(var3, "invite");
       return new GuildEventInviteMessageAccessory(var1, var2, var3, var4, var5, var6, var7, null);
    }
 
@@ -91,7 +91,7 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
             return false;
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
-         } else if (!q.c(this.invite, var1.invite)) {
+         } else if (!r.c(this.invite, var1.invite)) {
             return false;
          } else if (this.shouldAnimateEmoji != var1.shouldAnimateEmoji) {
             return false;
@@ -125,27 +125,27 @@ public data class GuildEventInviteMessageAccessory(messageId: MessageId,
    public override fun toString(): String {
       val var8: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Int = this.codedLinkIndex;
-      val var7: GuildEventInviteEmbedImpl = this.invite;
-      val var3: Boolean = this.shouldAnimateEmoji;
-      val var4: Boolean = this.shouldShowLinkDecorations;
-      val var5: Boolean = this.shouldShowRoleDot;
-      val var2: Boolean = this.shouldShowRoleOnName;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("GuildEventInviteMessageAccessory(messageId=");
-      var6.append(var8);
-      var6.append(", codedLinkIndex=");
-      var6.append(var1);
-      var6.append(", invite=");
-      var6.append(var7);
-      var6.append(", shouldAnimateEmoji=");
-      var6.append(var3);
-      var6.append(", shouldShowLinkDecorations=");
-      var6.append(var4);
-      var6.append(", shouldShowRoleDot=");
-      var6.append(var5);
-      var6.append(", shouldShowRoleOnName=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var6: GuildEventInviteEmbedImpl = this.invite;
+      val var4: Boolean = this.shouldAnimateEmoji;
+      val var2: Boolean = this.shouldShowLinkDecorations;
+      val var3: Boolean = this.shouldShowRoleDot;
+      val var5: Boolean = this.shouldShowRoleOnName;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("GuildEventInviteMessageAccessory(messageId=");
+      var7.append(var8);
+      var7.append(", codedLinkIndex=");
+      var7.append(var1);
+      var7.append(", invite=");
+      var7.append(var6);
+      var7.append(", shouldAnimateEmoji=");
+      var7.append(var4);
+      var7.append(", shouldShowLinkDecorations=");
+      var7.append(var2);
+      var7.append(", shouldShowRoleDot=");
+      var7.append(var3);
+      var7.append(", shouldShowRoleOnName=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 }

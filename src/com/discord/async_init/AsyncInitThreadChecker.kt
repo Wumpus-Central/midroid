@@ -1,13 +1,13 @@
 package com.discord.async_init
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AsyncInitThreadChecker(name: String) {
    private final val name: String
    private final var thread: Thread?
 
    init {
-      q.h(var1, "name");
+      r.h(var1, "name");
       super();
       this.name = var1;
    }
@@ -18,17 +18,17 @@ public class AsyncInitThreadChecker(name: String) {
       }
 
       if (Thread.currentThread() != this.thread) {
-         val var2: java.lang.String = this.name;
-         val var3: Thread = this.thread;
-         val var4: Thread = Thread.currentThread();
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Expected all calls to async-initialized component: ");
-         var1.append(var2);
-         var1.append(" to be from the same thread: ");
-         var1.append(var3);
-         var1.append(", called on ");
-         var1.append(var4);
-         throw new IllegalStateException(var1.toString().toString());
+         val var3: java.lang.String = this.name;
+         val var4: Thread = this.thread;
+         val var1: Thread = Thread.currentThread();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Expected all calls to async-initialized component: ");
+         var2.append(var3);
+         var2.append(" to be from the same thread: ");
+         var2.append(var4);
+         var2.append(", called on ");
+         var2.append(var1);
+         throw new IllegalStateException(var2.toString().toString());
       }
    }
 

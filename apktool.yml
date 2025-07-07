@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 287412
-  versionName: 287.12 - Beta
+  versionCode: 288108
+  versionName: 288.8 - Beta
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -25,6 +25,7 @@ doNotCompress:
 - png
 - webm
 - webp
+- META-INF/androidx.activity_activity-ktx.version
 - META-INF/androidx.activity_activity.version
 - META-INF/androidx.annotation_annotation-experimental.version
 - META-INF/androidx.appcompat_appcompat-resources.version
@@ -53,6 +54,7 @@ doNotCompress:
 - META-INF/androidx.emoji2_emoji2-views-helper.version
 - META-INF/androidx.emoji2_emoji2.version
 - META-INF/androidx.exifinterface_exifinterface.version
+- META-INF/androidx.fragment_fragment-ktx.version
 - META-INF/androidx.fragment_fragment.version
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
@@ -66,6 +68,7 @@ doNotCompress:
 - META-INF/androidx.recyclerview_recyclerview.version
 - META-INF/androidx.room_room-ktx.version
 - META-INF/androidx.room_room-runtime.version
+- META-INF/androidx.savedstate_savedstate-ktx.version
 - META-INF/androidx.savedstate_savedstate.version
 - META-INF/androidx.sharetarget_sharetarget.version
 - META-INF/androidx.sqlite_sqlite-framework.version
@@ -88,9 +91,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/S9.b
-- META-INF/services/bb.z
-- META-INF/services/gb.t
+- META-INF/services/Z9.b
+- META-INF/services/ib.z
+- META-INF/services/nb.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
@@ -302,28 +305,9 @@ doNotCompress:
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_vimessages0c6f358ef2734a5db0ebdc4f2c7ef135compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_zhcnmessages05ca260ddc3690c8f23eea8ea1704185compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9jb2xszwn0awjszxmvd2vi_zhtwmessages87baeefdf7c0d9a1502798941428fe60compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_csmessages0620489a82b46a5966299bd60f02bd7ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_damessagesa067fde263744a7b3005e1cfe7b1781ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_demessages7f37e854e0b8aaf058bf8115ad59c8cacompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_engbmessages89f023d3be506ad0d6f9b265fd31bd18compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_es419messages385a5557ece3db2ce6ba7f0c69cb63a3compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_esesmessages128021ec675762837bdbd5dfa59fb24ccompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_fimessages2c2b9bc670584e0fd50f1768550c70c7compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_frmessagesd51454d0cbb5dbfe05093be5ec37e45fcompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_hrmessages60661c6195dbca046bb267300f1780a3compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_humessagesf42778f012361e353c92e193bd5e49e0compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_itmessages6f45f4a8d691ba44392cc3c9aa3a1bb7compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_jamessagescabf8ca01e93695a3e14dd22a5331f13compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_komessagesc8561f6a9f8ad1e7b779f826caafa4fccompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_nlmessages9c6bd02068312ccc2d32b61cffebdf9acompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_nomessagese85884730c99e1ecedee1456366e1ee2compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_plmessagesefd7eb39363cad1a105ff1a718daa6b1compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_ptbrmessagesb18dacc7171478961834ffa0c40ef256compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_romessages24ca6682d2824d444424061b58b3879ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_svsemessages8fd1e82cf0913a44a8fedc39b800f92bcompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_trmessages811ae6ccb1a71511a6c04b9516c07c0ecompiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhcnmessages281a1615ef204093bf4373bacf458261compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhtwmessagesf6720b7a1e29d3adf840affa0e3222a8compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_komessages7200139ed8661e7f0dfd146218597cd1compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhcnmessages3dbb014b3e908692a7ecc54d743f0597compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9jbgllbnrfdghlbwvz_zhtwmessages56ab8e87fff666e7ef4bf1ba98825ce7compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9nb19saxzll3dlyg_bgmessages5f121e397ffc76de8b9fd907ef6908c1compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9nb19saxzll3dlyg_csmessagesc7afc4fa131eb46e946139c8173421c3compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9nb19saxzll3dlyg_damessages50a3f3f7b574d89c6a505f72be7df693compiledmessages.jsona
@@ -385,9 +369,9 @@ doNotCompress:
 - res/raw/cache_intl_bw9kdwxlcy9ndwlszf9zzxr0aw5ncy93zwivdgfncw_zhcnmessagesb79573b91885edda097f54d45fec0d89compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9ndwlszf9zzxr0aw5ncy93zwivdgfncw_zhtwmessagesc8d8cf269634903ee97b21bedc62e5d0compiledmessages.jsona
 - res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl2dpznrpbmc_damessages28219054ff110ba92bb0e4f73810cd86compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_komessageseae269e8a5496508320f9bff1fd3a2a6compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_zhcnmessages18ca45f58ab771971e1577e6caca9ff1compiledmessages.jsona
-- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_zhtwmessages5bd059aaa20ec91b7b0d3953c53a9ef3compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_komessages2598b7df2f99f565a12ad9e1738a999ccompiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_zhcnmessages88c7594063aef79ef0d078d2d9515ac3compiledmessages.jsona
+- res/raw/cache_intl_bw9kdwxlcy9wcmvtaxvtl3bvd2vydxbz_zhtwmessages53718482e5e78a5c9c130d2e94f0f67bcompiledmessages.jsona
 - res/raw/cache_intl_zgvzawdu_bgmessages201fcbaa81d12d4860ff6f28d56aba98compiledmessages.jsona
 - res/raw/cache_intl_zgvzawdu_csmessagesb346e7a5d9541b96b7dddc9259b0c07ccompiledmessages.jsona
 - res/raw/cache_intl_zgvzawdu_damessages2e0ca023ad5b07e41157326d96648749compiledmessages.jsona
@@ -442,7 +426,6 @@ doNotCompress:
 - res/raw/emojis_json.gz
 - res/raw/modules_activity_privacy_activityprivacycompiledmessages.jsona
 - res/raw/modules_clicker_game_clickergamecompiledmessages.jsona
-- res/raw/modules_client_themes_intl_clientthemescompiledmessages.jsona
 - res/raw/modules_collectibles_web_shopexternalskuscompiledmessages.jsona
 - res/raw/modules_go_live_web_modal_golivemodalcompiledmessages.jsona
 - res/raw/modules_guild_settings_web_tags_guildsettingstagscompiledmessages.jsona

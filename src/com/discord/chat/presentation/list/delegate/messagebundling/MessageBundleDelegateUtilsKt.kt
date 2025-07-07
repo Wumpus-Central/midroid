@@ -6,7 +6,7 @@ import com.discord.chat.reactevents.ChatViewEventHandler
 import com.discord.reactevents.ReactEvents
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private final val reactEvents: ReactEvents
 
@@ -16,8 +16,8 @@ fun a(var0: MessageItem): Int {
 }
 
 internal fun MessageItem.getEventHandler(context: Context): ChatViewEventHandler {
-   q.h(var0, "<this>");
-   q.h(var1, "context");
+   r.h(var0, "<this>");
+   r.h(var1, "context");
    return new ChatViewEventHandler(var1, reactEvents, new b(var0)) {
       private final Function6 onMessageLongPressed;
       private final Function2 onMessageTapped;
@@ -40,6 +40,6 @@ internal fun MessageItem.getEventHandler(context: Context): ChatViewEventHandler
 
 fun `getEventHandler$lambda$1`(var0: MessageItem): Int {
    val var1: Int = var0.getReactTag();
-   q.e(var1);
+   r.e(var1);
    return var1;
 }

@@ -18,7 +18,7 @@ import com.discord.chat.presentation.message.MessageView
 import com.discord.chat.presentation.message.decorations.BackgroundHighlightDrawer
 import com.discord.chat.presentation.message.decorations.HighlightedMessageDrawer
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SystemMessageWrapperView  public constructor(context: Context, attrs: AttributeSet? = null) : FrameLayout {
    private final val binding: DecoratedMessageViewBinding
@@ -26,15 +26,15 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
    private final var drawHighlight: Boolean
 
    fun SystemMessageWrapperView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       val var3: DecoratedMessageViewBinding = DecoratedMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var3, "inflate(...)");
+      r.g(var3, "inflate(...)");
       this.binding = var3;
       this.highlightDrawer = new BackgroundHighlightDrawer(var1);
       this.setWillNotDraw(false);
@@ -46,7 +46,7 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      q.h(var1, "canvas");
+      r.h(var1, "canvas");
       super.onDraw(var1);
       if (this.drawHighlight) {
          HighlightedMessageDrawer.drawHighlight$default(this.highlightDrawer, var1, this, 0, 0, 12, null);
@@ -54,9 +54,9 @@ public class SystemMessageWrapperView  public constructor(context: Context, attr
    }
 
    public fun setMessage(message: Message, messageContext: MessageContext, eventHandler: ChatEventHandler) {
-      q.h(var1, "message");
-      q.h(var2, "messageContext");
-      q.h(var3, "eventHandler");
+      r.h(var1, "message");
+      r.h(var2, "messageContext");
+      r.h(var3, "eventHandler");
       MessageView.setMessage$default(this.binding.messageView, var1, var2, null, var3, null, null, false, false, 244, null);
       val var5: g = new g(var3);
       this.removeAllViews();

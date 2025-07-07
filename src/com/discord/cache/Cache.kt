@@ -7,11 +7,11 @@ import com.discord.tti_manager.TTIMetrics
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
 import java.util.HashSet
-import kotlin.jvm.internal.q
-import o1.a
-import o1.b
-import o1.c
-import s9.j
+import kotlin.jvm.internal.r
+import n1.a
+import n1.b
+import n1.c
+import z9.j
 
 public class Cache(reactContext: Context) {
    private final var sharedPrefsLoaded: Boolean
@@ -29,11 +29,11 @@ public class Cache(reactContext: Context) {
 
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super();
       this.sharedPrefs$delegate = j.a(new a(var1));
       this.fastCacheSharedPrefs$delegate = j.a(new b(var1));
-      x9.a.b(false, false, null, null, 0, new c(this), 31, null);
+      E9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic
@@ -58,39 +58,39 @@ public class Cache(reactContext: Context) {
 
    public fun clear() {
       var var1: SharedPreferences = this.getSharedPrefs();
-      q.g(var1, "<get-sharedPrefs>(...)");
+      r.g(var1, "<get-sharedPrefs>(...)");
       val var2: Editor = var1.edit();
       var2.clear();
       var2.apply();
       var1 = this.getFastCacheSharedPrefs();
-      q.g(var1, "<get-fastCacheSharedPrefs>(...)");
+      r.g(var1, "<get-fastCacheSharedPrefs>(...)");
       val var4: Editor = var1.edit();
       var4.clear();
       var4.apply();
    }
 
    public fun getItem(key: String): String? {
-      q.h(var1, "key");
+      r.h(var1, "key");
       val var3: HashSet = FAST_CACHE_KEYS;
       if (!FAST_CACHE_KEYS.contains(var1)) {
          if (!this.sharedPrefsLoaded) {
-            val var8: TTIMetrics = TTIMetrics.INSTANCE;
-            val var6: StringBuilder = new StringBuilder();
-            var6.append("WARNING: Cache accessed before parsed ");
-            var6.append(var1);
-            TTIMetrics.record$default(var8, var6.toString(), 0L, null, false, 14, null);
+            val var6: TTIMetrics = TTIMetrics.INSTANCE;
+            val var8: StringBuilder = new StringBuilder();
+            var8.append("WARNING: Cache accessed before parsed ");
+            var8.append(var1);
+            TTIMetrics.record$default(var6, var8.toString(), 0L, null, false, 14, null);
          }
 
          return this.getSharedPrefs().getString(var1, null);
       } else {
          if (!this.getFastCacheSharedPrefs().getBoolean("initialized", false)) {
             val var2: SharedPreferences = this.getFastCacheSharedPrefs();
-            q.g(var2, "<get-fastCacheSharedPrefs>(...)");
+            r.g(var2, "<get-fastCacheSharedPrefs>(...)");
             val var5: Editor = var2.edit();
             var5.putBoolean("initialized", true);
 
-            for (java.lang.String var7 : var3) {
-               var5.putString(var7, this.getSharedPrefs().getString(var7, null));
+            for (java.lang.String var4 : var3) {
+               var5.putString(var4, this.getSharedPrefs().getString(var4, null));
             }
 
             var5.apply();
@@ -132,7 +132,7 @@ public class Cache(reactContext: Context) {
       // Bytecode:
       // 00: aload 1
       // 01: ldc_w "exclude"
-      // 04: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 04: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 07: getstatic com/discord/tti_manager/TTIMetrics.INSTANCE Lcom/discord/tti_manager/TTIMetrics;
       // 0a: ldc_w "Storage.refresh() Start"
       // 0d: lconst_0
@@ -147,7 +147,7 @@ public class Cache(reactContext: Context) {
       // 1b: invokespecial com/facebook/react/bridge/WritableNativeMap.<init> ()V
       // 1e: aload 1
       // 1f: invokeinterface com/facebook/react/bridge/ReadableArray.toArrayList ()Ljava/util/ArrayList; 1
-      // 24: invokestatic kotlin/collections/i.V0 (Ljava/lang/Iterable;)Ljava/util/Set;
+      // 24: invokestatic kotlin/collections/i.X0 (Ljava/lang/Iterable;)Ljava/util/Set;
       // 27: astore 1
       // 28: aload 0
       // 29: invokespecial com/discord/cache/Cache.getSharedPrefs ()Landroid/content/SharedPreferences;
@@ -155,7 +155,7 @@ public class Cache(reactContext: Context) {
       // 31: astore 3
       // 32: aload 3
       // 33: ldc_w "getAll(...)"
-      // 36: invokestatic kotlin/jvm/internal/q.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 36: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
       // 39: aload 3
       // 3a: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 3f: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
@@ -179,10 +179,10 @@ public class Cache(reactContext: Context) {
       // 71: invokeinterface java/util/Set.contains (Ljava/lang/Object;)Z 2
       // 76: ifne 45
       // 79: aload 4
-      // 7b: invokestatic kotlin/jvm/internal/q.e (Ljava/lang/Object;)V
+      // 7b: invokestatic kotlin/jvm/internal/r.e (Ljava/lang/Object;)V
       // 7e: aload 5
       // 80: ldc_w "null cannot be cast to non-null type kotlin.String"
-      // 83: invokestatic kotlin/jvm/internal/q.f (Ljava/lang/Object;Ljava/lang/String;)V
+      // 83: invokestatic kotlin/jvm/internal/r.f (Ljava/lang/Object;Ljava/lang/String;)V
       // 86: aload 2
       // 87: aload 4
       // 89: aload 5
@@ -214,15 +214,15 @@ public class Cache(reactContext: Context) {
    }
 
    public fun removeItem(key: String) {
-      q.h(var1, "key");
+      r.h(var1, "key");
       var var2: SharedPreferences = this.getSharedPrefs();
-      q.g(var2, "<get-sharedPrefs>(...)");
+      r.g(var2, "<get-sharedPrefs>(...)");
       val var3: Editor = var2.edit();
       var3.remove(var1);
       var3.apply();
       if (FAST_CACHE_KEYS.contains(var1)) {
          var2 = this.getFastCacheSharedPrefs();
-         q.g(var2, "<get-fastCacheSharedPrefs>(...)");
+         r.g(var2, "<get-fastCacheSharedPrefs>(...)");
          val var5: Editor = var2.edit();
          var5.remove(var1);
          var5.apply();
@@ -230,16 +230,16 @@ public class Cache(reactContext: Context) {
    }
 
    public fun setItem(key: String, value: String) {
-      q.h(var1, "key");
-      q.h(var2, "value");
+      r.h(var1, "key");
+      r.h(var2, "value");
       var var3: SharedPreferences = this.getSharedPrefs();
-      q.g(var3, "<get-sharedPrefs>(...)");
+      r.g(var3, "<get-sharedPrefs>(...)");
       val var4: Editor = var3.edit();
       var4.putString(var1, var2);
       var4.apply();
       if (FAST_CACHE_KEYS.contains(var1)) {
          var3 = this.getFastCacheSharedPrefs();
-         q.g(var3, "<get-fastCacheSharedPrefs>(...)");
+         r.g(var3, "<get-fastCacheSharedPrefs>(...)");
          val var6: Editor = var3.edit();
          var6.putString(var1, var2);
          var6.apply();
@@ -255,7 +255,7 @@ public class Cache(reactContext: Context) {
          val var2: Cache = Cache.access$getCacheInstance$cp();
          var var1: Cache = var2;
          if (var2 == null) {
-            q.y("cacheInstance");
+            r.y("cacheInstance");
             var1 = null;
          }
 
@@ -263,7 +263,7 @@ public class Cache(reactContext: Context) {
       }
 
       public fun quickInitCache(applicationContext: Context) {
-         q.h(var1, "applicationContext");
+         r.h(var1, "applicationContext");
          Cache.access$setCacheInstance$cp(new Cache(var1));
       }
    }

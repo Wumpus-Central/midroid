@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final var currentPromise: Promise?
@@ -22,7 +22,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
    private final val activityEventListener: <unrepresentable>
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.webauthn = new WebAuthn(new Function1(this) {
          {
@@ -30,7 +30,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final void invoke(java.lang.String var1) {
-            q.h(var1, "p0");
+            r.h(var1, "p0");
             SecurityKeyManagerModule.access$resolve(super.receiver as SecurityKeyManagerModule, var1);
          }
       }, new Function1(this) {
@@ -39,14 +39,14 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          }
 
          public final void invoke(java.lang.String var1) {
-            q.h(var1, "p0");
+            r.h(var1, "p0");
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var2: CredentialManager.a = CredentialManager.a;
-      var1 = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
-      this.credentialManager = var2.a(var1);
+      val var3: CredentialManager.a = CredentialManager.a;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "getReactApplicationContext(...)");
+      this.credentialManager = var3.a(var2);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -82,15 +82,15 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun authenticate(data: String, promise: Promise) {
-      q.h(var1, "data");
-      q.h(var2, "promise");
+      r.h(var1, "data");
+      r.h(var2, "promise");
       this.authenticateSecurityKey(var1, var2);
    }
 
    @ReactMethod
    public fun authenticatePasskey(requestJson: String, promise: Promise) {
-      q.h(var1, "requestJson");
-      q.h(var2, "promise");
+      r.h(var1, "requestJson");
+      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else if (VERSION.SDK_INT < 28) {
@@ -98,8 +98,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         bb.f.d(
+         r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
+         ib.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -114,8 +114,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun authenticateSecurityKey(data: String, promise: Promise) {
-      q.h(var1, "data");
-      q.h(var2, "promise");
+      r.h(var1, "data");
+      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else {
@@ -140,15 +140,15 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun register(data: String, promise: Promise) {
-      q.h(var1, "data");
-      q.h(var2, "promise");
+      r.h(var1, "data");
+      r.h(var2, "promise");
       this.registerSecurityKey(var1, var2);
    }
 
    @ReactMethod
    public fun registerPasskey(requestJson: String, promise: Promise) {
-      q.h(var1, "requestJson");
-      q.h(var2, "promise");
+      r.h(var1, "requestJson");
+      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else if (VERSION.SDK_INT < 28) {
@@ -156,8 +156,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
       } else {
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
-         q.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         bb.f.d(
+         r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
+         ib.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -172,8 +172,8 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
 
    @ReactMethod
    public fun registerSecurityKey(data: String, promise: Promise) {
-      q.h(var1, "data");
-      q.h(var2, "promise");
+      r.h(var1, "data");
+      r.h(var2, "promise");
       if (this.currentPromise != null) {
          var2.reject(new java.lang.Throwable("already running"));
       } else {

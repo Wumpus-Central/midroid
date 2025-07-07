@@ -1,22 +1,22 @@
 package com.discord.span.utilities
 
 import android.text.Spannable
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun Spannable.coverWithSpan(what: Any) {
-   q.h(var0, "<this>");
-   q.h(var1, "what");
+   r.h(var0, "<this>");
+   r.h(var1, "what");
    var0.setSpan(var1, 0, var0.length(), 18);
 }
 
 @JvmSynthetic
 public inline fun <reified T> Spannable.hasSpan(): Boolean {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var2: Int = var0.length();
-   q.m(4, "T");
+   r.m(4, "T");
    var var1: Boolean = false;
    val var3: Array<Any> = var0.getSpans(0, var2, Object.class);
-   q.g(var3, "getSpans(...)");
+   r.g(var3, "getSpans(...)");
    if (var3.length == 0) {
       var1 = true;
    }

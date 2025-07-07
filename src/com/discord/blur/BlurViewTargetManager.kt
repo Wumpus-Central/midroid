@@ -14,8 +14,8 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
       new DCDVisualEffectViewTargetManagerDelegate(this)
 
    public open fun createViewInstance(reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap): ReactViewGroup {
-      kotlin.jvm.internal.q.h(var1, "reactContext");
-      kotlin.jvm.internal.q.h(var2, "initialProps");
+      kotlin.jvm.internal.r.h(var1, "reactContext");
+      kotlin.jvm.internal.r.h(var2, "initialProps");
       val var4: java.lang.String = var2.getString("nativeID");
       if (var4 != null) {
          val var3: Any;
@@ -40,7 +40,7 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
    }
 
    public open fun onDropViewInstance(view: ReactViewGroup) {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super.onDropViewInstance(var1);
       if (var1 !is BlurViewAPI.Target) {
          throw new IllegalArgumentException("Failed requirement.");
@@ -48,7 +48,7 @@ internal class BlurViewTargetManager : InitialPropsViewGroupManager<ReactViewGro
    }
 
    public open fun setNativeId(view: ReactViewGroup, nativeId: String?) {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super.setNativeId(var1, var2);
       if (var1 is BlurViewAPI.Target) {
          if (var2 != null) {

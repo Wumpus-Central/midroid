@@ -10,14 +10,14 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.LinearLayout.LayoutParams
 import androidx.cardview.widget.CardView
-import androidx.core.view.Y
+import androidx.core.view.Z
 import androidx.core.view.accessibility.AccessibilityNodeInfoCompat
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.segmented.control.databinding.SegmentedControlBinding
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.properties.ReadWriteProperty
 import kotlin.properties.c
 import kotlin.reflect.KProperty
@@ -112,7 +112,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       }
 
       public final set(<set-?>) {
-         q.h(var1, "<set-?>");
+         r.h(var1, "<set-?>");
          this.labels$delegate.setValue(this, $$delegatedProperties[8], var1);
       }
 
@@ -123,7 +123,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       }
 
       public final set(<set-?>) {
-         q.h(var1, "<set-?>");
+         r.h(var1, "<set-?>");
          this.accessibilityRoleDescriptions$delegate.setValue(this, $$delegatedProperties[9], var1);
       }
 
@@ -131,35 +131,35 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
    private final var segmentWidth: Int
 
    fun SegmentedControlView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SegmentedControlView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       val var6: SegmentedControlBinding = SegmentedControlBinding.inflate(LayoutInflater.from(var1), this, true);
-      q.g(var6, "inflate(...)");
+      r.g(var6, "inflate(...)");
       this.binding = var6;
       val var4: Float = var1.getResources().getDisplayMetrics().density * 2.0F;
       var6.selectedSegmentBg.setElevation(var4);
       var6.segmentContainer.setElevation(var4);
       var6.segmentContainer.setOutlineProvider(null);
-      val var5: Int = 0;
-      this.containerBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      val var7: Int = 0;
+      this.containerBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentBgColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
       this.cornerRadiusPx$delegate = updateViewOnChange$default(this, (float)SizeUtilsKt.getDpToPx(4), false, 2, null);
-      this.selectedIndex$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.segmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      val var7: java.lang.Float = 0.0F;
-      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
-      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var5, false, 2, null);
-      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedIndex$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.segmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      val var5: java.lang.Float = 0.0F;
+      this.segmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
+      this.selectedSegmentTextColor$delegate = updateViewOnChange$default(this, var7, false, 2, null);
+      this.selectedSegmentFontSizeSp$delegate = updateViewOnChange$default(this, var5, false, 2, null);
       this.labels$delegate = this.updateViewOnChange(i.k(), true);
       this.accessibilityRoleDescriptions$delegate = this.updateViewOnChange(i.k(), true);
    }
@@ -190,7 +190,7 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
       var var3: TextView = var4;
       if (var4 == null) {
          var3 = new TextView(this.getContext());
-         Y.q0(var3, new androidx.core.view.a(var1, this) {
+         Z.o0(var3, new androidx.core.view.a(var1, this) {
             final int $index;
             final SegmentedControlView this$0;
 
@@ -201,8 +201,8 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
             @Override
             public void onInitializeAccessibilityNodeInfo(View var1, AccessibilityNodeInfoCompat var2) {
-               q.h(var1, "host");
-               q.h(var2, "info");
+               r.h(var1, "host");
+               r.h(var2, "info");
                super.onInitializeAccessibilityNodeInfo(var1, var2);
                var var3: Boolean = true;
                var2.D0(true);
@@ -231,15 +231,15 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
 
       if (this.segmentWidth != var1) {
          this.segmentWidth = var1;
-         val var3: CardView = this.binding.selectedSegmentBg;
-         q.g(this.binding.selectedSegmentBg, "selectedSegmentBg");
-         val var4: android.view.ViewGroup.LayoutParams = var3.getLayoutParams();
-         if (var4 == null) {
+         val var4: CardView = this.binding.selectedSegmentBg;
+         r.g(this.binding.selectedSegmentBg, "selectedSegmentBg");
+         val var3: android.view.ViewGroup.LayoutParams = var4.getLayoutParams();
+         if (var3 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var4.width = var1;
-         var3.setLayoutParams(var4);
+         var3.width = var1;
+         var4.setLayoutParams(var3);
          ViewMeasureExtensionsKt.measureAndLayout(this);
          updateView$default(this, false, 1, null);
       }
@@ -299,8 +299,8 @@ public class SegmentedControlView  public constructor(context: Context, attrs: A
          }
 
          protected void afterChange(KProperty var1, T var2, T var3) {
-            q.h(var1, "property");
-            if (!q.c(var3, var2)) {
+            r.h(var1, "property");
+            if (!r.c(var3, var2)) {
                SegmentedControlView.access$updateView(this.this$0, this.$labelsChanged$inlined);
             }
          }

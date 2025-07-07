@@ -2,10 +2,10 @@ package com.discord.cache.legacy
 
 import android.content.Context
 import android.content.SharedPreferences
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun Context.getLegacyAuthToken(): String? {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return getLegacySharedPrefs(var0).getString("STORE_AUTHED_TOKEN", null);
 }
 
@@ -15,6 +15,6 @@ private fun Context.getLegacySharedPrefs(): SharedPreferences {
    var1.append(var2);
    var1.append("_preferences");
    val var3: SharedPreferences = var0.getSharedPreferences(var1.toString(), 0);
-   q.g(var3, "getSharedPreferences(...)");
+   r.g(var3, "getSharedPreferences(...)");
    return var3;
 }

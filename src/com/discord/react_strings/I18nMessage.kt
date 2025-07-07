@@ -1,9 +1,9 @@
 package com.discord.react_strings
 
-import A9.a
+import H9.a
 import android.content.Context
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public enum class I18nMessage {
    A11Y_ROLE_BUTTON,
@@ -63,6 +63,7 @@ public enum class I18nMessage {
    POLL_OPTIONS_ARIA,
    POLL_RESULTS_NOTIFICATION,
    POLL_SENT_NOTIFICATION,
+   REACT_PILL_FULL_LABEL,
    REMIXING_TITLE,
    REPLY_QUOTE_COMPONENTS_V2_MOBILE,
    REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE,
@@ -115,7 +116,7 @@ public enum class I18nMessage {
    }
 
    internal fun format(context: Context): String {
-      q.h(var1, "context");
+      r.h(var1, "context");
       return I18nCache.INSTANCE.get(var1, this);
    }
 }

@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.CopyOnWriteArraySet
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.jvm.internal.Ref.BooleanRef
 import org.webrtc.VideoFrame
 
@@ -15,7 +15,7 @@ internal object AttachedVideoSinks {
 
    @JvmStatic
    fun `addSink$lambda$1`(var0: BooleanRef, var1: VideoSink, var2: MediaEngine, var3: java.lang.String, var4: java.lang.String): AttachedVideoSinks.VideoOutputSinks {
-      q.h(var4, "it");
+      r.h(var4, "it");
       var0.j = true;
       val var5: AttachedVideoSinks.VideoOutputSinks = new AttachedVideoSinks.VideoOutputSinks(var1);
       var2.setVideoOutputSink$media_engine_release(var3, new Function2(var5) {
@@ -24,7 +24,7 @@ internal object AttachedVideoSinks {
          }
 
          public final java.lang.Boolean invoke(VideoFrame var1, boolean var2) {
-            q.h(var1, "p0");
+            r.h(var1, "p0");
             return (super.receiver as AttachedVideoSinks.VideoOutputSinks).onFrame(var1, var2);
          }
       });
@@ -38,7 +38,7 @@ internal object AttachedVideoSinks {
 
    @JvmStatic
    fun `removeSink$lambda$4`(var0: VideoSink, var1: MediaEngine, var2: java.lang.String, var3: java.lang.String, var4: AttachedVideoSinks.VideoOutputSinks): AttachedVideoSinks.VideoOutputSinks {
-      q.h(var3, "<unused var>");
+      r.h(var3, "<unused var>");
       var var6: AttachedVideoSinks.VideoOutputSinks = null;
       if (var4 != null) {
          var4.remove(var0);
@@ -60,12 +60,12 @@ internal object AttachedVideoSinks {
    }
 
    public fun addSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      q.h(var1, "mediaEngine");
-      q.h(var2, "sink");
-      q.h(var3, "streamId");
+      r.h(var1, "mediaEngine");
+      r.h(var2, "sink");
+      r.h(var3, "streamId");
       val var4: BooleanRef = new BooleanRef();
       val var5: Any = streamOutputMap.computeIfAbsent(var3, new b(new a(var4, var2, var1, var3)));
-      q.g(var5, "computeIfAbsent(...)");
+      r.g(var5, "computeIfAbsent(...)");
       (var5 as AttachedVideoSinks.VideoOutputSinks).add(var2);
       return var4.j;
    }
@@ -75,9 +75,9 @@ internal object AttachedVideoSinks {
    }
 
    public fun removeSink(mediaEngine: MediaEngine, sink: VideoSink, streamId: String): Boolean {
-      q.h(var1, "mediaEngine");
-      q.h(var2, "sink");
-      q.h(var3, "streamId");
+      r.h(var1, "mediaEngine");
+      r.h(var2, "sink");
+      r.h(var3, "streamId");
       val var4: Boolean;
       if (streamOutputMap.compute(var3, new d(new c(var2, var1, var3))) != null) {
          var4 = true;
@@ -92,7 +92,7 @@ internal object AttachedVideoSinks {
       private final val sinks: MutableSet<VideoSink>
 
       init {
-         q.h(var1, "sink");
+         r.h(var1, "sink");
          super();
          val var2: CopyOnWriteArraySet = new CopyOnWriteArraySet();
          this.sinks = var2;
@@ -100,7 +100,7 @@ internal object AttachedVideoSinks {
       }
 
       public fun add(sink: VideoSink): Boolean {
-         q.h(var1, "sink");
+         r.h(var1, "sink");
          return this.sinks.add(var1);
       }
 
@@ -109,7 +109,7 @@ internal object AttachedVideoSinks {
       }
 
       public fun onFrame(frame: VideoFrame, mirror: Boolean): Boolean {
-         q.h(var1, "frame");
+         r.h(var1, "frame");
          val var3: java.util.Iterator = this.sinks.iterator();
 
          while (var3.hasNext()) {
@@ -121,7 +121,7 @@ internal object AttachedVideoSinks {
       }
 
       public fun remove(sink: VideoSink): Boolean {
-         q.h(var1, "sink");
+         r.h(var1, "sink");
          return this.sinks.remove(var1);
       }
    }

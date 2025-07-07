@@ -9,15 +9,15 @@ public class ReferralViewHolder(referralView: ReferralView) : MessagePartViewHol
    private final val referralView: ReferralView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "referralView");
+      kotlin.jvm.internal.r.h(var1, "referralView");
       super(var1, null);
       this.referralView = var1;
    }
 
    public fun bind(accessory: ReferralMessageAccessory, onTapAccept: (String?) -> Unit, onTapLink: (MessageId, LinkContentNode) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "accessory");
-      kotlin.jvm.internal.q.h(var2, "onTapAccept");
-      kotlin.jvm.internal.q.h(var3, "onTapLink");
+      kotlin.jvm.internal.r.h(var1, "accessory");
+      kotlin.jvm.internal.r.h(var2, "onTapAccept");
+      kotlin.jvm.internal.r.h(var3, "onTapLink");
       this.referralView.bind(var1, var2, var3);
    }
 }

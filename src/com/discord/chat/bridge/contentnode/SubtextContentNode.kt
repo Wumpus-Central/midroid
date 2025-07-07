@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class SubtextContentNode(content: List<ContentNode>) : ContentNode {
    public final val content: List<ContentNode>
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
    }
@@ -19,7 +19,7 @@ public data class SubtextContentNode(content: List<ContentNode>) : ContentNode {
    }
 
    public fun copy(content: List<ContentNode> = var0.content): SubtextContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new SubtextContentNode(var1);
    }
 
@@ -29,7 +29,7 @@ public data class SubtextContentNode(content: List<ContentNode>) : ContentNode {
       } else if (var1 !is SubtextContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as SubtextContentNode).content);
+         return r.c(this.content, (var1 as SubtextContentNode).content);
       }
    }
 

@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
    public final val ctaKey: String
 
    init {
-      q.h(var1, "ctaType");
-      q.h(var2, "ctaKey");
+      r.h(var1, "ctaType");
+      r.h(var2, "ctaKey");
       super();
       this.ctaType = var1;
       this.ctaKey = var2;
@@ -28,8 +28,8 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
    }
 
    public fun copy(ctaType: String = var0.ctaType, ctaKey: String = var0.ctaKey): TapSafetySystemNotificationCta {
-      q.h(var1, "ctaType");
-      q.h(var2, "ctaKey");
+      r.h(var1, "ctaType");
+      r.h(var2, "ctaKey");
       return new TapSafetySystemNotificationCta(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.ctaType, var1.ctaType)) {
+         if (!r.c(this.ctaType, var1.ctaType)) {
             return false;
          } else {
-            return q.c(this.ctaKey, var1.ctaKey);
+            return r.c(this.ctaKey, var1.ctaKey);
          }
       }
    }
@@ -58,14 +58,14 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
 
    public override fun toString(): String {
       val var2: java.lang.String = this.ctaType;
-      val var3: java.lang.String = this.ctaKey;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapSafetySystemNotificationCta(ctaType=");
-      var1.append(var2);
-      var1.append(", ctaKey=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.ctaKey;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSafetySystemNotificationCta(ctaType=");
+      var3.append(var2);
+      var3.append(", ctaKey=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

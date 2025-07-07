@@ -3,56 +3,56 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.internal.q
-import l2.A0
-import l2.B0
-import l2.C0
-import l2.D0
-import l2.E0
-import l2.F0
-import l2.G0
-import l2.H0
-import l2.I0
-import l2.J0
-import l2.K0
-import l2.L0
-import l2.M0
-import l2.N0
-import l2.O0
-import l2.P0
-import l2.Q0
-import l2.R0
-import l2.S0
-import l2.X
-import l2.Y
-import l2.Z
-import l2.a0
-import l2.b0
-import l2.c0
-import l2.d0
-import l2.e0
-import l2.f0
-import l2.g0
-import l2.h0
-import l2.i0
-import l2.j0
-import l2.k0
-import l2.l0
-import l2.m0
-import l2.n0
-import l2.o0
-import l2.p0
-import l2.q0
-import l2.r0
-import l2.s0
-import l2.t0
-import l2.u0
-import l2.v0
-import l2.w0
-import l2.x0
-import l2.y0
-import l2.z0
-import s9.j
+import j2.A0
+import j2.B0
+import j2.C0
+import j2.D0
+import j2.E0
+import j2.F0
+import j2.G0
+import j2.H0
+import j2.I0
+import j2.J0
+import j2.K0
+import j2.L0
+import j2.M0
+import j2.N0
+import j2.O0
+import j2.P0
+import j2.Q0
+import j2.R0
+import j2.S0
+import j2.X
+import j2.Y
+import j2.Z
+import j2.a0
+import j2.b0
+import j2.c0
+import j2.d0
+import j2.e0
+import j2.f0
+import j2.g0
+import j2.h0
+import j2.i0
+import j2.j0
+import j2.k0
+import j2.l0
+import j2.m0
+import j2.n0
+import j2.o0
+import j2.p0
+import j2.q0
+import j2.r0
+import j2.s0
+import j2.t0
+import j2.u0
+import j2.v0
+import j2.w0
+import j2.x0
+import j2.y0
+import j2.z0
+import kotlin.jvm.internal.r
+import z9.j
 
 internal class DarkerTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -344,8 +344,8 @@ internal class DarkerTheme(resources: Resources, theme: Theme) : DiscordThemeObj
 
 
    init {
-      q.h(var1, "resources");
-      q.h(var2, "theme");
+      r.h(var1, "resources");
+      r.h(var2, "theme");
       super(null);
       this.androidRipple$delegate = j.a(new X(var1, var2));
       this.backgroundAccent$delegate = j.a(new Z(var1, var2));

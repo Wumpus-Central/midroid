@@ -5,31 +5,30 @@ import android.graphics.Paint
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import i2.a
-import i2.b
-import kotlin.jvm.internal.q
+import g2.a
+import g2.b
+import kotlin.jvm.internal.r
 
 public class GGSansBoldSpan(context: Context) : StyleSpan {
    private final val context: Context
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(1);
       this.context = var1;
    }
 
    private fun apply(paint: Paint, fallback: () -> Unit) {
-      val var3: DiscordFont.Companion = DiscordFont.Companion;
-      val var4: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
-      val var5: DiscordFont;
-      if (var4 != null) {
-         var5 = var3.findByStyle(DiscordFont.PrimaryBold.getWeight(), var4.getItalic(), var4.getMonospace());
+      val var4: DiscordFont.Companion = DiscordFont.Companion;
+      var var3: DiscordFont = DiscordFont.Companion.fromTypeface(var1.getTypeface());
+      if (var3 != null) {
+         var3 = var4.findByStyle(DiscordFont.PrimaryBold.getWeight(), var3.getItalic(), var3.getMonospace());
       } else {
-         var5 = null;
+         var3 = null;
       }
 
-      if (var5 != null) {
-         var1.setTypeface(var5.typeface(this.context));
+      if (var3 != null) {
+         var1.setTypeface(var3.typeface(this.context));
       } else {
          var2.invoke();
       }
@@ -48,12 +47,12 @@ public class GGSansBoldSpan(context: Context) : StyleSpan {
    }
 
    public open fun updateDrawState(ds: TextPaint) {
-      q.h(var1, "ds");
+      r.h(var1, "ds");
       this.apply(var1, new a(this, var1));
    }
 
    public open fun updateMeasureState(paint: TextPaint) {
-      q.h(var1, "paint");
+      r.h(var1, "paint");
       this.apply(var1, new b(this, var1));
    }
 }

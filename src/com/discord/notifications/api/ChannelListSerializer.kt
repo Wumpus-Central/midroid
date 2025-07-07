@@ -2,12 +2,12 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import mb.a
+import tb.a
 
 public object ChannelListSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -29,7 +29,7 @@ public object ChannelListSerializer : KSerializer {
    }
 
    public open fun deserialize(decoder: Decoder): List<ChannelId> {
-      q.h(var1, "decoder");
+      r.h(var1, "decoder");
       val var6: java.util.List = h.B0(this.deserializeForCalls(var1.n()), new java.lang.String[]{","}, false, 0, 6, null);
       val var4: ArrayList = new ArrayList();
 
@@ -57,8 +57,8 @@ public object ChannelListSerializer : KSerializer {
    }
 
    public open fun serialize(encoder: Encoder, value: List<ChannelId>) {
-      q.h(var1, "encoder");
-      q.h(var2, "value");
+      r.h(var1, "encoder");
+      r.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

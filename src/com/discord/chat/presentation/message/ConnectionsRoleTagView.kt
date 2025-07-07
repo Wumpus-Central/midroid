@@ -25,19 +25,19 @@ public class ConnectionsRoleTagView(context: Context, attrs: AttributeSet) : Fra
    private final val binding: ConnectionsRoleTagViewBinding
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "attrs");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "attrs");
       super(var1, var2);
       val var3: ConnectionsRoleTagViewBinding = ConnectionsRoleTagViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
       var3.connectionsRoleTagContainer.setCardBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       var3.roleName.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
       val var5: TextView = var3.roleName;
-      kotlin.jvm.internal.q.g(var3.roleName, "roleName");
+      kotlin.jvm.internal.r.g(var3.roleName, "roleName");
       SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
       val var4: TextView = var3.roleName;
-      kotlin.jvm.internal.q.g(var3.roleName, "roleName");
+      kotlin.jvm.internal.r.g(var3.roleName, "roleName");
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
    }
 
@@ -57,18 +57,18 @@ public class ConnectionsRoleTagView(context: Context, attrs: AttributeSet) : Fra
       connectionsRoleTag: ConnectionsRoleTag,
       eventHandler: ChatEventHandler
    ) {
-      kotlin.jvm.internal.q.h(var4, "connectionsRoleTag");
-      kotlin.jvm.internal.q.h(var5, "eventHandler");
+      kotlin.jvm.internal.r.h(var4, "connectionsRoleTag");
+      kotlin.jvm.internal.r.h(var5, "eventHandler");
       var var6: ImageView = this.binding.verifiedCheckIconBackground;
-      kotlin.jvm.internal.q.g(this.binding.verifiedCheckIconBackground, "verifiedCheckIconBackground");
+      kotlin.jvm.internal.r.g(this.binding.verifiedCheckIconBackground, "verifiedCheckIconBackground");
       ColorUtilsKt.setTintColor(var6, var4.getBackgroundColor());
       var6 = this.binding.verifiedCheckIcon;
-      kotlin.jvm.internal.q.g(this.binding.verifiedCheckIcon, "verifiedCheckIcon");
+      kotlin.jvm.internal.r.g(this.binding.verifiedCheckIcon, "verifiedCheckIcon");
       ColorUtilsKt.setTintColor(var6, var4.getIconColor());
       this.binding.roleName.setText(var4.getName());
       if (var1 != null && var2 != null && var3 != null) {
          val var8: CardView = this.binding.connectionsRoleTagContainer;
-         kotlin.jvm.internal.q.g(this.binding.connectionsRoleTagContainer, "connectionsRoleTagContainer");
+         kotlin.jvm.internal.r.g(this.binding.connectionsRoleTagContainer, "connectionsRoleTagContainer");
          NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new b(var5, var1, var2, var3, var4), 1, null);
       }
    }

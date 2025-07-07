@@ -38,12 +38,12 @@ public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = n
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.color, var1.color)) {
+         if (!kotlin.jvm.internal.r.c(this.color, var1.color)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.borderRadius, var1.borderRadius)) {
+         } else if (!kotlin.jvm.internal.r.c(this.borderRadius, var1.borderRadius)) {
             return false;
          } else {
-            return kotlin.jvm.internal.q.c(this.spaceAround, var1.spaceAround);
+            return kotlin.jvm.internal.r.c(this.spaceAround, var1.spaceAround);
          }
       }
    }
@@ -74,15 +74,15 @@ public data class LinkBackgroundStyle(color: Int? = null, borderRadius: Int? = n
    public override fun toString(): String {
       val var1: Int = this.color;
       val var2: Int = this.borderRadius;
-      val var4: java.lang.Boolean = this.spaceAround;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("LinkBackgroundStyle(color=");
-      var3.append(var1);
-      var3.append(", borderRadius=");
-      var3.append(var2);
-      var3.append(", spaceAround=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.Boolean = this.spaceAround;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LinkBackgroundStyle(color=");
+      var4.append(var1);
+      var4.append(", borderRadius=");
+      var4.append(var2);
+      var4.append(", spaceAround=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

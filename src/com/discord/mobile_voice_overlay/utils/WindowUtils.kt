@@ -6,16 +6,16 @@ import android.os.Build.VERSION
 import android.provider.Settings
 import android.view.View
 import android.view.WindowManager.LayoutParams
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal object WindowUtils {
    public fun LayoutParams.addFlag(flag: Int) {
-      q.h(var1, "<this>");
+      r.h(var1, "<this>");
       var1.flags |= var2;
    }
 
    public fun canDrawOverlay(context: Context): Boolean {
-      q.h(var1, "context");
+      r.h(var1, "context");
       return Settings.canDrawOverlays(var1);
    }
 
@@ -31,8 +31,8 @@ internal object WindowUtils {
    }
 
    public fun getCenterPointOnScreen(view: View, outLocation: IntArray): IntArray {
-      q.h(var1, "view");
-      q.h(var2, "outLocation");
+      r.h(var1, "view");
+      r.h(var2, "outLocation");
       var1.getLocationOnScreen(var2);
       var2[0] += var1.getWidth() / 2;
       var2[1] += var1.getHeight() / 2;
@@ -40,17 +40,17 @@ internal object WindowUtils {
    }
 
    public fun getScreenSize(context: Context): Rect {
-      q.h(var1, "context");
+      r.h(var1, "context");
       return new Rect(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
    }
 
    public fun LayoutParams.removeFlag(flag: Int) {
-      q.h(var1, "<this>");
+      r.h(var1, "<this>");
       var1.flags &= var2.inv();
    }
 
    public fun LayoutParams.setFlagTouchable(isTouchable: Boolean) {
-      q.h(var1, "<this>");
+      r.h(var1, "<this>");
       if (var2) {
          this.removeFlag(var1, 16);
       } else {

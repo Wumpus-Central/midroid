@@ -3,16 +3,16 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : TapDismissMediaPostSharePromptData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapDismissMediaPostSharePromptData(var1: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -22,7 +22,7 @@ public data class TapDismissMediaPostSharePromptData(messageId: MessageId) : Tap
    }
 
    public fun copy(messageId: MessageId = ...): TapDismissMediaPostSharePromptData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new TapDismissMediaPostSharePromptData(var1, null);
    }
 

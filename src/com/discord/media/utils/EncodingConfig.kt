@@ -1,6 +1,6 @@
 package com.discord.media.utils
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal data class EncodingConfig(targetWidth: Int,
    targetHeight: Int,
@@ -23,10 +23,10 @@ internal data class EncodingConfig(targetWidth: Int,
    public final val progressUpdateGranularity: Int
 
    init {
-      q.h(var3, "frameRate");
-      q.h(var4, "keyFrameIntervalSeconds");
-      q.h(var5, "targetBitrate");
-      q.h(var8, "rotationDegrees");
+      r.h(var3, "frameRate");
+      r.h(var4, "keyFrameIntervalSeconds");
+      r.h(var5, "targetBitrate");
+      r.h(var8, "rotationDegrees");
       super();
       this.targetWidth = var1;
       this.targetHeight = var2;
@@ -86,10 +86,10 @@ internal data class EncodingConfig(targetWidth: Int,
       rotationDegrees: Number = var0.rotationDegrees,
       progressUpdateGranularity: Int = var0.progressUpdateGranularity
    ): EncodingConfig {
-      q.h(var3, "frameRate");
-      q.h(var4, "keyFrameIntervalSeconds");
-      q.h(var5, "targetBitrate");
-      q.h(var8, "rotationDegrees");
+      r.h(var3, "frameRate");
+      r.h(var4, "keyFrameIntervalSeconds");
+      r.h(var5, "targetBitrate");
+      r.h(var8, "rotationDegrees");
       return new EncodingConfig(var1, var2, var3, var4, var5, var6, var7, var8, var9);
    }
 
@@ -104,17 +104,17 @@ internal data class EncodingConfig(targetWidth: Int,
             return false;
          } else if (this.targetHeight != var1.targetHeight) {
             return false;
-         } else if (!q.c(this.frameRate, var1.frameRate)) {
+         } else if (!r.c(this.frameRate, var1.frameRate)) {
             return false;
-         } else if (!q.c(this.keyFrameIntervalSeconds, var1.keyFrameIntervalSeconds)) {
+         } else if (!r.c(this.keyFrameIntervalSeconds, var1.keyFrameIntervalSeconds)) {
             return false;
-         } else if (!q.c(this.targetBitrate, var1.targetBitrate)) {
+         } else if (!r.c(this.targetBitrate, var1.targetBitrate)) {
             return false;
          } else if (this.useHEVC != var1.useHEVC) {
             return false;
          } else if (this.createHDR != var1.createHDR) {
             return false;
-         } else if (!q.c(this.rotationDegrees, var1.rotationDegrees)) {
+         } else if (!r.c(this.rotationDegrees, var1.rotationDegrees)) {
             return false;
          } else {
             return this.progressUpdateGranularity == var1.progressUpdateGranularity;
@@ -152,35 +152,35 @@ internal data class EncodingConfig(targetWidth: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.targetWidth;
-      val var1: Int = this.targetHeight;
-      val var6: java.lang.Number = this.frameRate;
-      val var9: java.lang.Number = this.keyFrameIntervalSeconds;
-      val var10: java.lang.Number = this.targetBitrate;
-      val var4: Boolean = this.useHEVC;
-      val var5: Boolean = this.createHDR;
-      val var7: java.lang.Number = this.rotationDegrees;
+      val var1: Int = this.targetWidth;
+      val var3: Int = this.targetHeight;
+      val var9: java.lang.Number = this.frameRate;
+      val var10: java.lang.Number = this.keyFrameIntervalSeconds;
+      val var7: java.lang.Number = this.targetBitrate;
+      val var5: Boolean = this.useHEVC;
+      val var4: Boolean = this.createHDR;
+      val var8: java.lang.Number = this.rotationDegrees;
       val var2: Int = this.progressUpdateGranularity;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("EncodingConfig(targetWidth=");
-      var8.append(var3);
-      var8.append(", targetHeight=");
-      var8.append(var1);
-      var8.append(", frameRate=");
-      var8.append(var6);
-      var8.append(", keyFrameIntervalSeconds=");
-      var8.append(var9);
-      var8.append(", targetBitrate=");
-      var8.append(var10);
-      var8.append(", useHEVC=");
-      var8.append(var4);
-      var8.append(", createHDR=");
-      var8.append(var5);
-      var8.append(", rotationDegrees=");
-      var8.append(var7);
-      var8.append(", progressUpdateGranularity=");
-      var8.append(var2);
-      var8.append(")");
-      return var8.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("EncodingConfig(targetWidth=");
+      var6.append(var1);
+      var6.append(", targetHeight=");
+      var6.append(var3);
+      var6.append(", frameRate=");
+      var6.append(var9);
+      var6.append(", keyFrameIntervalSeconds=");
+      var6.append(var10);
+      var6.append(", targetBitrate=");
+      var6.append(var7);
+      var6.append(", useHEVC=");
+      var6.append(var5);
+      var6.append(", createHDR=");
+      var6.append(var4);
+      var6.append(", rotationDegrees=");
+      var6.append(var8);
+      var6.append(", progressUpdateGranularity=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 }

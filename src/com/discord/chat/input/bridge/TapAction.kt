@@ -1,8 +1,8 @@
 package com.discord.chat.input.bridge
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapAction(action: String, channelId: String, optionName: String) {
@@ -11,9 +11,9 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
    public final val optionName: String
 
    init {
-      q.h(var1, "action");
-      q.h(var2, "channelId");
-      q.h(var3, "optionName");
+      r.h(var1, "action");
+      r.h(var2, "channelId");
+      r.h(var3, "optionName");
       super();
       this.action = var1;
       this.channelId = var2;
@@ -33,9 +33,9 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
    }
 
    public fun copy(action: String = var0.action, channelId: String = var0.channelId, optionName: String = var0.optionName): TapAction {
-      q.h(var1, "action");
-      q.h(var2, "channelId");
-      q.h(var3, "optionName");
+      r.h(var1, "action");
+      r.h(var2, "channelId");
+      r.h(var3, "optionName");
       return new TapAction(var1, var2, var3);
    }
 
@@ -46,12 +46,12 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.action, var1.action)) {
+         if (!r.c(this.action, var1.action)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.optionName, var1.optionName);
+            return r.c(this.optionName, var1.optionName);
          }
       }
    }
@@ -61,18 +61,18 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.action;
-      val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.optionName;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapAction(action=");
-      var1.append(var3);
-      var1.append(", channelId=");
-      var1.append(var2);
-      var1.append(", optionName=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var2: java.lang.String = this.action;
+      val var1: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.optionName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapAction(action=");
+      var4.append(var2);
+      var4.append(", channelId=");
+      var4.append(var1);
+      var4.append(", optionName=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

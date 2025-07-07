@@ -1,5 +1,6 @@
 package com.discord.external_pip
 
+import A9.q
 import android.app.Activity
 import android.content.Intent
 import com.discord.external_pip.react_events.OnPipModeChangedEvent
@@ -14,9 +15,9 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.module.annotations.ReactModule
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 @ReactModule(name = "ExternalPip")
 public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
@@ -24,11 +25,11 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    private final val reactEvents: ReactEvents
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.manager = new ExternalPipManager();
       this.reactEvents = new ReactEvents(
-         s.a("onPipModeChanged", G.b(OnPipModeChangedEvent.class)), s.a("onPipModeWillChange", G.b(OnPipModeWillChangeEvent.class))
+         s.a("onPipModeChanged", H.b(OnPipModeChangedEvent.class)), s.a("onPipModeWillChange", H.b(OnPipModeWillChangeEvent.class))
       );
    }
 
@@ -48,10 +49,10 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
    }
 
    private fun onPipModeChanged(isInPipMode: Boolean) {
-      val var2: ReactEvents = this.reactEvents;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
-      var2.emitModuleEvent(var3, new OnPipModeChangedEvent(var1));
+      val var3: ReactEvents = this.reactEvents;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "getReactApplicationContext(...)");
+      var3.emitModuleEvent(var2, new OnPipModeChangedEvent(var1));
       ExternalPipTransitionView.Companion.tryHide(this.getCurrentActivity(), var1);
    }
 
@@ -59,13 +60,13 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
       if (ExternalPipManager.getEnabled$default(this.manager, false, 1, null)) {
          val var1: ReactEvents = this.reactEvents;
          val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
+         r.g(var2, "getReactApplicationContext(...)");
          var1.emitModuleEvent(var2, new OnPipModeWillChangeEvent());
       }
    }
 
    public open fun getConstants(): MutableMap<String, Boolean> {
-      return t9.q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
+      return q.m(new Pair[]{s.a("isSupported", ExternalPipManager.Companion.isSupported())});
    }
 
    public open fun getName(): String {
@@ -74,7 +75,7 @@ public class ExternalPipModule(reactContext: ReactApplicationContext) : ReactCon
 
    @ReactMethod
    public fun setActive(active: Boolean, onResultPromise: Promise) {
-      q.h(var2, "onResultPromise");
+      r.h(var2, "onResultPromise");
       if (ThreadUtilsKt.isOnMainThread()) {
          if (var1) {
             access$enterPipMode(this, true, new Function1(this, var2) {

@@ -3,9 +3,9 @@ package com.discord.misc.utilities.threading
 import android.os.Handler
 import android.os.Looper
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
-import s9.j
-import s9.m
+import kotlin.jvm.internal.r
+import z9.j
+import z9.m
 
 public final val uiHandler: Handler by j.b(m.k, new a())
    public final get() {
@@ -15,7 +15,7 @@ public final val uiHandler: Handler by j.b(m.k, new a())
 
 public final val isOnMainThread: Boolean
    public final get() {
-      return q.c(Looper.myLooper(), Looper.getMainLooper());
+      return r.c(Looper.myLooper(), Looper.getMainLooper());
    }
 
 
@@ -25,7 +25,7 @@ fun a(): Handler {
 }
 
 public inline fun <T> assertOnUiThread(crossinline block: () -> T): T {
-   q.h(var0, "block");
+   r.h(var0, "block");
    if (isOnMainThread()) {
       return (T)var0.invoke();
    } else {
@@ -38,7 +38,7 @@ public inline fun <T> assertOnUiThread(crossinline block: () -> T): T {
 }
 
 public inline fun postOrRunOnMainThread(crossinline block: () -> Unit) {
-   q.h(var0, "block");
+   r.h(var0, "block");
    if (isOnMainThread()) {
       var0.invoke();
    } else {

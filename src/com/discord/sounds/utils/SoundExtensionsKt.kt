@@ -1,14 +1,16 @@
 package com.discord.sounds.utils
 
+import D9.a
+import G9.b
 import android.content.Context
 import android.net.Uri
-import bb.K
-import bb.d0
-import bb.f
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
+import ib.K
+import ib.d0
+import ib.f
 import java.io.File
 import java.util.Comparator
 import kotlin.coroutines.Continuation
@@ -16,18 +18,16 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.FlowCollector
-import w9.a
-import z9.b
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
-   q.h(var0, "<this>");
-   q.h(var1, "url");
-   q.h(var2, "soundManager");
-   q.h(var5, "soundResIdPrepared");
+   r.h(var0, "<this>");
+   r.h(var1, "url");
+   r.h(var2, "soundManager");
+   r.h(var5, "soundResIdPrepared");
    tryPruneSoundsCache(var0);
    f.d(
       g.b(),
@@ -324,7 +324,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 }
 
 internal fun getRemoteSoundFilename(url: String): String {
-   q.h(var0, "url");
+   r.h(var0, "url");
    var0 = Uri.parse(var0).getLastPathSegment();
    val var1: StringBuilder = new StringBuilder();
    var1.append(var0);
@@ -333,12 +333,12 @@ internal fun getRemoteSoundFilename(url: String): String {
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    return new File(var0.getCacheDir(), "sounds");
 }
 
 internal fun Context.tryPruneSoundsCache() {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Array<File> = getSoundsCacheDirectory(var0).listFiles();
    if (var1 != null && var1.length >= 20) {
       kotlin.collections.c.y(var1, new Comparator() {

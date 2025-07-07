@@ -1,8 +1,8 @@
 package com.discord.chat.input.bridge
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ChatInputNode(type: Int,
@@ -85,11 +85,11 @@ public data class ChatInputNode(type: Int,
             return false;
          } else if (this.length != var1.length) {
             return false;
-         } else if (!q.c(this.style, var1.style)) {
+         } else if (!r.c(this.style, var1.style)) {
             return false;
          } else if (this.deleteNodeOnBackspace != var1.deleteNodeOnBackspace) {
             return false;
-         } else if (!q.c(this.tapAction, var1.tapAction)) {
+         } else if (!r.c(this.tapAction, var1.tapAction)) {
             return false;
          } else {
             return this.editDisabled == var1.editDisabled;
@@ -119,27 +119,27 @@ public data class ChatInputNode(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var2: Int = this.location;
-      val var3: Int = this.length;
+      val var3: Int = this.location;
+      val var2: Int = this.length;
       val var7: ChatInputNodeStyle = this.style;
-      val var5: Boolean = this.deleteNodeOnBackspace;
+      val var4: Boolean = this.deleteNodeOnBackspace;
       val var8: TapAction = this.tapAction;
-      val var4: Boolean = this.editDisabled;
+      val var5: Boolean = this.editDisabled;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ChatInputNode(type=");
       var6.append(var1);
       var6.append(", location=");
-      var6.append(var2);
-      var6.append(", length=");
       var6.append(var3);
+      var6.append(", length=");
+      var6.append(var2);
       var6.append(", style=");
       var6.append(var7);
       var6.append(", deleteNodeOnBackspace=");
-      var6.append(var5);
+      var6.append(var4);
       var6.append(", tapAction=");
       var6.append(var8);
       var6.append(", editDisabled=");
-      var6.append(var4);
+      var6.append(var5);
       var6.append(")");
       return var6.toString();
    }

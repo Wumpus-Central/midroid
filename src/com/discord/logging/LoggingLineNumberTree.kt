@@ -1,7 +1,7 @@
 package com.discord.logging
 
 import java.util.NoSuchElementException
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import timber.log.a
 import timber.log.a.b
 import timber.log.a.c
@@ -16,13 +16,13 @@ internal class LoggingLineNumberTree : c {
 
    private fun getCalleStackTraceElement(): StackTraceElement {
       val var3: Array<StackTraceElement> = new java.lang.Throwable().getStackTrace();
-      q.g(var3, "getStackTrace(...)");
+      r.g(var3, "getStackTrace(...)");
       val var2: Int = var3.length;
 
       for (int var1 = 0; var1 < var2; var1++) {
          val var4: StackTraceElement = var3[var1];
          if (!this.ignoreClasses.contains(var3[var1].getClassName())) {
-            q.g(var4, "first(...)");
+            r.g(var4, "first(...)");
             return var4;
          }
       }
@@ -31,7 +31,7 @@ internal class LoggingLineNumberTree : c {
    }
 
    protected open fun log(priority: Int, tag: String?, message: String, t: Throwable?) {
-      q.h(var3, "message");
+      r.h(var3, "message");
       val var6: StackTraceElement = this.getCalleStackTraceElement();
       val var7: java.lang.String = var6.getFileName();
       val var5: Int = var6.getLineNumber();

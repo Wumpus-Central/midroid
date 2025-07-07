@@ -17,34 +17,34 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    public final val delegateViewTypes: Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int>
 
    init {
-      kotlin.jvm.internal.q.h(var1, "eventHandlerProvider");
-      kotlin.jvm.internal.q.h(var2, "messageComponentProvider");
+      kotlin.jvm.internal.r.h(var1, "eventHandlerProvider");
+      kotlin.jvm.internal.r.h(var2, "messageComponentProvider");
       super();
       val var3: AccessoriesViewPool = new AccessoriesViewPool();
       this.messageAccessoriesRecycledViewPool = var3;
       this.chatListItems = kotlin.collections.i.k();
       val var4: AdapterDelegatesManager = this.delegatesManager;
-      kotlin.jvm.internal.q.g(this.delegatesManager, "delegatesManager");
+      kotlin.jvm.internal.r.g(this.delegatesManager, "delegatesManager");
       this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
       this.setHasStableIds(true);
    }
 
    public fun fillAdapter(recyclerView: RecyclerView) {
-      kotlin.jvm.internal.q.h(var1, "recyclerView");
-      val var3: java.util.Map = this.delegateViewTypes;
-      val var2: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
-      kotlin.jvm.internal.q.g(var2, "getRecycledViewPool(...)");
-      ChatListViewFactoryKt.fillChatList(var1, this, var3, var2);
+      kotlin.jvm.internal.r.h(var1, "recyclerView");
+      val var2: java.util.Map = this.delegateViewTypes;
+      val var3: RecyclerView.RecycledViewPool = var1.getRecycledViewPool();
+      kotlin.jvm.internal.r.g(var3, "getRecycledViewPool(...)");
+      ChatListViewFactoryKt.fillChatList(var1, this, var2, var3);
       ChatListViewFactoryKt.fillAccessories(var1, new MessageAccessoriesAdapter(null, 1, null), this.messageAccessoriesRecycledViewPool);
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {
-      return kotlin.collections.i.i0(this.chatListItems, var1) as ChatListItem;
+      return kotlin.collections.i.k0(this.chatListItems, var1) as ChatListItem;
    }
 
    public override fun getChatListItems(): List<ChatListItem> {
       val var1: Any = this.items;
-      kotlin.jvm.internal.q.g(this.items, "items");
+      kotlin.jvm.internal.r.g(this.items, "items");
       return var1 as MutableList<ChatListItem>;
    }
 

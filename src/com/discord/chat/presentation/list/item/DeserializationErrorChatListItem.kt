@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class DeserializationErrorChatListItem(id: String, json: String, causeMessage: String) : ChatListItem {
    public open val id: String
@@ -8,9 +8,9 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
    public final val causeMessage: String
 
    init {
-      q.h(var1, "id");
-      q.h(var2, "json");
-      q.h(var3, "causeMessage");
+      r.h(var1, "id");
+      r.h(var2, "json");
+      r.h(var3, "causeMessage");
       super(var1, null);
       this.id = var1;
       this.json = var2;
@@ -30,9 +30,9 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
    }
 
    public fun copy(id: String = var0.id, json: String = var0.json, causeMessage: String = var0.causeMessage): DeserializationErrorChatListItem {
-      q.h(var1, "id");
-      q.h(var2, "json");
-      q.h(var3, "causeMessage");
+      r.h(var1, "id");
+      r.h(var2, "json");
+      r.h(var3, "causeMessage");
       return new DeserializationErrorChatListItem(var1, var2, var3);
    }
 
@@ -43,12 +43,12 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.json, var1.json)) {
+         } else if (!r.c(this.json, var1.json)) {
             return false;
          } else {
-            return q.c(this.causeMessage, var1.causeMessage);
+            return r.c(this.causeMessage, var1.causeMessage);
          }
       }
    }
@@ -58,17 +58,17 @@ public data class DeserializationErrorChatListItem(id: String, json: String, cau
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.json;
-      val var1: java.lang.String = this.causeMessage;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DeserializationErrorChatListItem(id=");
-      var2.append(var3);
-      var2.append(", json=");
-      var2.append(var4);
-      var2.append(", causeMessage=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.id;
+      val var1: java.lang.String = this.json;
+      val var3: java.lang.String = this.causeMessage;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("DeserializationErrorChatListItem(id=");
+      var4.append(var2);
+      var4.append(", json=");
+      var4.append(var1);
+      var4.append(", causeMessage=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

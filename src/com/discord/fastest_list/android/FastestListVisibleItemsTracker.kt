@@ -1,7 +1,7 @@
 package com.discord.fastest_list.android
 
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutManager,
    sections: FastestListSections,
@@ -35,9 +35,9 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
 
    init {
-      q.h(var1, "layoutManager");
-      q.h(var2, "sections");
-      q.h(var3, "onVisibleItemsChanged");
+      r.h(var1, "layoutManager");
+      r.h(var2, "sections");
+      r.h(var3, "onVisibleItemsChanged");
       super();
       this.layoutManager = var1;
       this.sections = var2;
@@ -53,14 +53,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       this.sectionsId = this.sections.getId();
       this.positionStartPrev = var2;
       this.positionEndPrev = var1;
-      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
-      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
-      this.onVisibleItemsChanged.m(this.sectionsId, var3.getSection-sZRFyWU(), var4.getSection-sZRFyWU(), var3.getItem-JXkbwXs(), var4.getItem-JXkbwXs());
+      val var4: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var2, false);
+      val var3: FastestListSections.Entry.SectionItem = this.sections.getItemAtPosition(var1, true);
+      this.onVisibleItemsChanged.m(this.sectionsId, var4.getSection-sZRFyWU(), var3.getSection-sZRFyWU(), var4.getItem-JXkbwXs(), var3.getItem-JXkbwXs());
    }
 
    private fun isUnchanged(itemEndPosition: Int, itemStartPosition: Int): Boolean {
       val var3: Boolean;
-      if (q.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
+      if (r.c(this.sectionsId, this.sections.getId()) && var1 == this.positionEndPrev && var2 == this.positionStartPrev) {
          var3 = true;
       } else {
          var3 = false;
@@ -73,7 +73,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       var var1: Int = this.layoutManager.findFirstVisibleItemPosition();
       var var2: Int = this.layoutManager.findLastVisibleItemPosition();
       if (var2 != -1 && var1 != -1) {
-         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var1 && q.c(this.sectionsId, this.sections.getId())) {
+         if (this.positionEndPrevRaw == var2 && this.positionStartPrevRaw == var1 && r.c(this.sectionsId, this.sections.getId())) {
             return;
          }
 
@@ -99,8 +99,8 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
          val var6: Int = this.positionEndPrev - this.positionStartPrev;
          var var5: Int = this.positionEndPrev - this.positionStartPrev - (var2 - var1);
-         var var4: Int = var1;
-         var var3: Int = var2;
+         var var3: Int = var1;
+         var var4: Int = var2;
          if (var5 > 0) {
             var5 = Math.min(this.getLastItemPosition(), var2 + var5);
             var3 = var6 - (var5 - var1);
@@ -109,14 +109,14 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
                var2 = Math.max(0, var1 - var3);
             }
 
-            var4 = var2;
-            var3 = var5;
+            var3 = var2;
+            var4 = var5;
             if (this.isUnchanged(var5, var2)) {
                return;
             }
          }
 
-         this.computeVisibleItems(var3, var4);
+         this.computeVisibleItems(var4, var3);
       }
    }
 
@@ -136,7 +136,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
       fun {
          val var0: Array<FastestListVisibleItemsTracker.RenderAhead> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       init {
@@ -150,7 +150,7 @@ internal class FastestListVisibleItemsTracker(layoutManager: FastestListLayoutMa
 
       public companion object {
          public fun create(value: String): com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead {
-            q.h(var1, "value");
+            r.h(var1, "value");
             val var2: Int = var1.hashCode();
             if (var2 != 3154575) {
                if (var2 != 3194931) {

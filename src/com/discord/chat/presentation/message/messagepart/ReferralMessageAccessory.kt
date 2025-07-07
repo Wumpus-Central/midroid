@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.referral.ReferralEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ReferralMessageAccessory(messageId: MessageId, referral: ReferralEmbed) : ReferralMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val referral: ReferralEmbed
 
    fun ReferralMessageAccessory(var1: java.lang.String, var2: ReferralEmbed) {
-      q.h(var1, "messageId");
-      q.h(var2, "referral");
+      r.h(var1, "messageId");
+      r.h(var2, "referral");
       super(var1, "referral", false, 4, null);
       this.messageId = var1;
       this.referral = var2;
@@ -25,8 +25,8 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
    }
 
    public fun copy(messageId: MessageId = ..., referral: ReferralEmbed = ...): ReferralMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "referral");
+      r.h(var1, "messageId");
+      r.h(var2, "referral");
       return new ReferralMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +40,7 @@ public data class ReferralMessageAccessory(messageId: MessageId, referral: Refer
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.referral, var1.referral);
+            return r.c(this.referral, var1.referral);
          }
       }
    }

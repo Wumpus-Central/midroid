@@ -24,7 +24,7 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
 import kotlin.jvm.functions.Function6
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @SuppressLint(["ViewConstructor"])
 internal class FastestListView(context: Context,
@@ -57,16 +57,16 @@ internal class FastestListView(context: Context,
    private final val onLayoutChangeListener: OnLayoutChangeListener
 
    init {
-      q.h(var1, "context");
-      q.h(var6, "onLayout");
-      q.h(var9, "onScroll");
-      q.h(var10, "onScrollBeginDrag");
-      q.h(var11, "onScrollEndDrag");
-      q.h(var12, "onUnexpectedItemSize");
-      q.h(var13, "onVisibleItemsChanged");
-      q.h(var14, "placeholderConfig");
-      q.h(var15, "renderAhead");
-      q.h(var16, "sectionsVersioned");
+      r.h(var1, "context");
+      r.h(var6, "onLayout");
+      r.h(var9, "onScroll");
+      r.h(var10, "onScrollBeginDrag");
+      r.h(var11, "onScrollEndDrag");
+      r.h(var12, "onUnexpectedItemSize");
+      r.h(var13, "onVisibleItemsChanged");
+      r.h(var14, "placeholderConfig");
+      r.h(var15, "renderAhead");
+      r.h(var16, "sectionsVersioned");
       super(FastestListView.Companion.access$withThemeWrapper(Companion, var1, var2));
       val var19: FastestListInsetDecorator = new FastestListInsetDecorator(var2, var3, var4);
       this.insetDecorator = var19;
@@ -131,7 +131,7 @@ internal class FastestListView(context: Context,
 
    @JvmStatic
    fun `onScrollListener$lambda$2`(var0: FastestListView, var1: Function2, var2: RecyclerView, var3: Int, var4: Int): Unit {
-      q.h(var2, "<unused var>");
+      r.h(var2, "<unused var>");
       val var5: FastestListScrollOffset.Data = var0.scrollOffset.compute();
       if (var5 != null) {
          var1.invoke(var0, var5);
@@ -161,14 +161,14 @@ internal class FastestListView(context: Context,
 
    @JvmStatic
    fun `typedAdapter$lambda$1`(var0: Function3, var1: FastestListView, var2: FastestListSections.Entry, var3: Int): Unit {
-      q.h(var2, "entry");
+      r.h(var2, "entry");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
 
    @JvmStatic
    fun `typedVisibleItemsTracker$lambda$0`(var0: Function6, var1: FastestListView, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int): Unit {
-      q.h(var2, "sectionsId");
+      r.h(var2, "sectionsId");
       var0.invoke(var1, var2, var3, var4, var5, var6);
       return Unit.a;
    }
@@ -248,14 +248,14 @@ internal class FastestListView(context: Context,
    }
 
    public fun setPlaceholderConfig(placeholderConfig: FastestListPlaceholderConfig) {
-      q.h(var1, "placeholderConfig");
+      r.h(var1, "placeholderConfig");
       if (this.typedAdapter.setPlaceholderConfig(var1)) {
          onItemDataChanged$default(this, null, 1, null);
       }
    }
 
    public fun setRenderAhead(renderAhead: RenderAhead) {
-      q.h(var1, "renderAhead");
+      r.h(var1, "renderAhead");
       if (this.typedLayoutManager.getRenderAhead() != var1) {
          this.typedLayoutManager.setRenderAhead(var1);
          onItemDataChanged$default(this, null, 1, null);
@@ -269,7 +269,7 @@ internal class FastestListView(context: Context,
    }
 
    public fun setSectionsVersioned(sectionsVersioned: Versioned) {
-      q.h(var1, "sectionsVersioned");
+      r.h(var1, "sectionsVersioned");
       if (this.sections.setSectionsVersioned(var1)) {
          onItemDataChanged$default(this, null, 1, null);
       }

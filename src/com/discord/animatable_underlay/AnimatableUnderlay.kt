@@ -14,8 +14,8 @@ import com.facebook.react.uimanager.PointerEvents
 import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import z9.n
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final var height: Float
@@ -43,7 +43,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final val pathRect: RectF
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       this.clipDirectionX = AnimatableUnderlay.ClipDirectionX.CENTERED;
       this.clipDirectionY = AnimatableUnderlay.ClipDirectionY.CENTERED;
@@ -72,10 +72,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var15: RectF = this.pathRect;
-            val var4: Float = this.height;
-            val var3: Float = this.shapeHeight;
+            val var2: Float = this.height;
+            val var4: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var4 - (var4 - var3) / 2;
+            var15.bottom = var2 - (var2 - var4) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -96,10 +96,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var19: RectF = this.pathRect;
-            val var12: Float = this.width;
-            val var13: Float = this.shapeWidth;
+            val var9: Float = this.width;
+            val var12: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var12 - (var12 - var13) / 2;
+            var19.right = var9 - (var9 - var12) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -121,7 +121,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
 
    @JvmStatic
    fun `onAttachedToWindow$lambda$2`(var0: AnimatableUnderlay, var1: MotionEvent): Unit {
-      q.h(var1, "e");
+      r.h(var1, "e");
       val var2: Int = var1.getAction();
       if (var2 != 0) {
          if (var2 == 1 || var2 == 3) {
@@ -152,7 +152,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    }
 
    protected open fun dispatchDraw(canvas: Canvas) {
-      q.h(var1, "canvas");
+      r.h(var1, "canvas");
       this.drawCustomShape(var1);
       var1.clipPath(this.path);
       super.dispatchDraw(var1);
@@ -188,7 +188,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic
@@ -235,7 +235,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

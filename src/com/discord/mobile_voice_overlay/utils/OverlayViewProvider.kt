@@ -1,12 +1,12 @@
 package com.discord.mobile_voice_overlay.utils
 
-import U1.a
-import U1.b
-import U1.c
+import S1.a
+import S1.b
+import S1.c
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayAssets
 import com.discord.mobile_voice_overlay.MobileVoiceOverlayData
 import com.discord.mobile_voice_overlay.views.OverlayView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayViewProvider<Any>) -> Any) {
    private final val initializer: (OverlayViewProvider<Any>) -> Any
@@ -15,7 +15,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    private final var data: MobileVoiceOverlayData?
 
    init {
-      q.h(var1, "initializer");
+      r.h(var1, "initializer");
       super();
       this.initializer = var1;
    }
@@ -27,7 +27,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
          val var3: OverlayView = this.initializer.invoke(this) as OverlayView;
          var var4: MobileVoiceOverlayAssets = this.assets;
          if (this.assets == null) {
-            q.y("assets");
+            r.y("assets");
             var4 = null;
          }
 
@@ -44,21 +44,21 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
 
    @JvmStatic
    fun `removeViewFromOverlay$lambda$0`(var0: OverlayView): Unit {
-      q.h(var0, "v");
+      r.h(var0, "v");
       var0.removeFromWindowManager();
       return Unit.a;
    }
 
    @JvmStatic
    fun `setAssets$lambda$1`(var0: MobileVoiceOverlayAssets, var1: OverlayView): Unit {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setAssets(var0);
       return Unit.a;
    }
 
    @JvmStatic
    fun `setData$lambda$2`(var0: MobileVoiceOverlayData, var1: OverlayView): Unit {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setData(var0);
       return Unit.a;
    }
@@ -86,13 +86,13 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun setAssets(assets: MobileVoiceOverlayAssets) {
-      q.h(var1, "assets");
+      r.h(var1, "assets");
       this.assets = var1;
       this.withViewOptional(new c(var1));
    }
 
    public fun setData(data: MobileVoiceOverlayData) {
-      q.h(var1, "data");
+      r.h(var1, "data");
       this.data = var1;
       this.withViewOptional(new b(var1));
    }
@@ -102,7 +102,7 @@ internal class OverlayViewProvider<T extends OverlayView>(initializer: (OverlayV
    }
 
    public fun withView(operation: (Any) -> Unit) {
-      q.h(var1, "operation");
+      r.h(var1, "operation");
       var1.invoke(this.ensureView());
    }
 }

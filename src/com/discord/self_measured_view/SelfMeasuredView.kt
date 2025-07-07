@@ -9,8 +9,8 @@ import com.facebook.react.bridge.ReactContext
 import com.facebook.react.uimanager.PixelUtil
 import com.facebook.react.uimanager.StateWrapper
 import com.facebook.react.uimanager.UIManagerModule
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 public class SelfMeasuredView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final val reactContext: ReactContext
@@ -22,19 +22,20 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
    private final val runnable: Runnable
 
    fun SelfMeasuredView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun SelfMeasuredView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       this.reactContext = var1 as ReactContext;
+      this.fabricEnabled = true;
       this.runnable = new a(this);
    }
 

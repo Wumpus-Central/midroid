@@ -29,10 +29,10 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import s9.n
+import z9.n
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -52,30 +52,30 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    private final var currentIsLoading: Boolean
 
    fun ButtonComponentView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ButtonComponentView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
-      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
-      this.binding = var6;
-      this.progressDots$delegate = s9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var4, "inflate(...)");
+      this.binding = var4;
+      this.progressDots$delegate = z9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var4.b(0.0F);
-      this.setLayoutParams(var4);
+      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var6.b(0.0F);
+      this.setLayoutParams(var6);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var6.linkIcon;
-      q.g(var6.linkIcon, "linkIcon");
+      val var5: SimpleDraweeView = var4.linkIcon;
+      r.g(var4.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 
@@ -93,7 +93,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    private fun configureEmoji(emojiView: SimpleDraweeSpanTextView, emoji: ComponentEmoji?, isLoading: Boolean) {
-      if (!q.c(var2, this.currentEmoji) || var3 != this.currentIsLoading) {
+      if (!r.c(var2, this.currentEmoji) || var3 != this.currentIsLoading) {
          this.currentEmoji = var2;
          if (var2 != null && var3) {
             var1.setVisibility(4);
@@ -104,7 +104,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    private fun configureLabelPadding(label: TextView, messageComponent: ButtonComponent) {
-      if (q.c(this.currentLabel, var2.getLabel())) {
+      if (r.c(this.currentLabel, var2.getLabel())) {
          var var5: ButtonComponent = this.currentComponent;
          if (this.currentComponent != null && ButtonComponentViewKt.access$hasEmoji(var2) == ButtonComponentViewKt.access$hasEmoji(var5)) {
             var5 = this.currentComponent;
@@ -181,15 +181,15 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    @JvmStatic
    fun `progressDots_delegate$lambda$0`(var0: ButtonComponentView): ProgressDots {
       val var1: View = var0.binding.loadingDots.inflate();
-      q.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
+      r.f(var1, "null cannot be cast to non-null type com.discord.progress_dots.ProgressDots");
       return var1 as ProgressDots;
    }
 
    public open fun configure(component: ButtonComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      q.h(var1, "component");
-      q.h(var2, "componentProvider");
-      q.h(var3, "componentContext");
-      if (!q.c(var1, this.currentComponent)) {
+      r.h(var1, "component");
+      r.h(var2, "componentProvider");
+      r.h(var3, "componentContext");
+      if (!r.c(var1, this.currentComponent)) {
          var var6: Boolean;
          if (var1.getState() != ActionComponentState.DISABLED && !var1.getDisabled()) {
             var6 = 0;
@@ -205,13 +205,13 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          }
 
          val var13: MaterialButton = this.binding.button;
-         q.g(this.binding.button, "button");
+         r.g(this.binding.button, "button");
          this.configureStyle(var13, var1.getStyle());
          val var14: SimpleDraweeSpanTextView = this.binding.emoji;
-         q.g(this.binding.emoji, "emoji");
+         r.g(this.binding.emoji, "emoji");
          this.configureEmoji(var14, var1.getEmoji(), var8);
          val var15: MaterialTextView = this.binding.label;
-         q.g(this.binding.label, "label");
+         r.g(this.binding.label, "label");
          this.configureLabelPadding(var15, var1);
          var var4: Float;
          if (var6) {
@@ -236,7 +236,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          this.binding.linkIcon.setAlpha(var4);
          this.binding.button.setEnabled((boolean)(var6 xor true));
          val var19: SimpleDraweeView = this.binding.linkIcon;
-         q.g(this.binding.linkIcon, "linkIcon");
+         r.g(this.binding.linkIcon, "linkIcon");
          if (var1.getStyle() === ButtonStyle.LINK) {
             var6 = (boolean)1;
          } else {
@@ -252,7 +252,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          var19.setVisibility(var6);
          val var20: MaterialTextView = this.binding.label;
          this.binding.label.setText(var1.getLabel());
-         q.e(var20);
+         r.e(var20);
          if (var8) {
             var6 = 4;
          } else {
@@ -264,11 +264,11 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
          var20.setTextColor(ColorUtilsKt.getColorCompat(var20, R.color.white));
          if (!var8) {
             val var21: MaterialButton = this.binding.button;
-            q.g(this.binding.button, "button");
+            r.g(this.binding.button, "button");
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var21, false, new b(var1, var3), 1, null);
          } else {
             val var10: MaterialButton = this.binding.button;
-            q.g(this.binding.button, "button");
+            r.g(this.binding.button, "button");
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new c(), 1, null);
          }
 
@@ -288,7 +288,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    }
 
    public override fun getComponentType(): KClass<ButtonComponent> {
-      return G.b(ButtonComponent.class);
+      return H.b(ButtonComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {
@@ -297,7 +297,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
 
    public companion object {
       public fun inflateComponent(context: Context): ButtonComponentView {
-         q.h(var1, "context");
+         r.h(var1, "context");
          return new ButtonComponentView(var1, null, 0, 6, null);
       }
    }

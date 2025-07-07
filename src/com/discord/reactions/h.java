@@ -6,6 +6,6 @@ import android.view.View.OnClickListener;
 // $VF: synthetic class
 public final class h implements OnClickListener {
    public final void onClick(View var1) {
-      ShortcutsFlexbox.q(var1);
+      ShortcutsFlexbox.p(var1);
    }
 }

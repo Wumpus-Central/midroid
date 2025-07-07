@@ -2,16 +2,16 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
    public final val giftCode: String
 
    init {
-      q.h(var1, "giftCode");
+      r.h(var1, "giftCode");
       super();
       this.giftCode = var1;
    }
@@ -21,7 +21,7 @@ public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
    }
 
    public fun copy(giftCode: String = var0.giftCode): TapGiftCodeEmbedData {
-      q.h(var1, "giftCode");
+      r.h(var1, "giftCode");
       return new TapGiftCodeEmbedData(var1);
    }
 
@@ -31,7 +31,7 @@ public data class TapGiftCodeEmbedData(giftCode: String) : ReactEvent {
       } else if (var1 !is TapGiftCodeEmbedData) {
          return false;
       } else {
-         return q.c(this.giftCode, (var1 as TapGiftCodeEmbedData).giftCode);
+         return r.c(this.giftCode, (var1 as TapGiftCodeEmbedData).giftCode);
       }
    }
 

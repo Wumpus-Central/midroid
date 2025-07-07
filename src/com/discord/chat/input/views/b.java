@@ -7,6 +7,6 @@ public final class b implements Function0 {
    public final ChatInputRootView j;
 
    public final Object invoke() {
-      return ChatInputRootView.f(this.j);
+      return ChatInputRootView.g(this.j);
    }
 }

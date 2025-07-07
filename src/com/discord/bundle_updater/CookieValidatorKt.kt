@@ -2,13 +2,13 @@ package com.discord.bundle_updater
 
 import android.webkit.CookieManager
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import okhttp3.Cookie
 import okhttp3.HttpUrl
 
 public fun CookieManager.getCookiesForUrl(url: String): List<Cookie> {
-   q.h(var0, "<this>");
-   q.h(var1, "url");
+   r.h(var0, "<this>");
+   r.h(var1, "url");
    val var4: java.lang.String = var0.getCookie(var1);
    if (var4 == null) {
       return kotlin.collections.i.k();

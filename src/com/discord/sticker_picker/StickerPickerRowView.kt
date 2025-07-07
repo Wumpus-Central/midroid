@@ -4,18 +4,18 @@ import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.e0
+import androidx.core.view.f0
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
-import k2.a
-import k2.b
-import k2.c
-import k2.d
-import kotlin.jvm.internal.q
-import s9.n
+import i2.a
+import i2.b
+import i2.c
+import i2.d
+import kotlin.jvm.internal.r
+import z9.n
 
 internal class StickerPickerRowView(context: Context) : LinearLayout {
    private final var firstRenderPass: Boolean
@@ -23,7 +23,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    public final var onLongPressSticker: (String) -> Unit
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       this.onPressSticker = new c();
       this.onLongPressSticker = new d();
@@ -41,7 +41,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
 
          var6 = var6 as StickerPickerRow.Sticker;
          val var7: View = this.getChildAt(var3);
-         q.f(var7, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         r.f(var7, "null cannot be cast to non-null type com.discord.sticker.StickerView");
          val var8: StickerView = var7 as StickerView;
          if (var6 == null) {
             var8.setVisibility(4);
@@ -135,7 +135,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
          }
 
          var7 = this.getContext();
-         q.g(var7, "getContext(...)");
+         r.g(var7, "getContext(...)");
          var7 = new StickerView((Context)var7, null, 0, 6, null);
          RippleUtilsKt.addRipple$default(var7, true, 0, 2, null);
          val var8: LayoutParams = new LayoutParams(var5, var5);
@@ -147,25 +147,25 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
 
    @JvmStatic
    fun `onLongPressSticker$lambda$1`(var0: java.lang.String): Unit {
-      q.h(var0, "it");
+      r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `onPressSticker$lambda$0`(var0: java.lang.String): Unit {
-      q.h(var0, "it");
+      r.h(var0, "it");
       return Unit.a;
    }
 
    public fun clean() {
-      for (View var1 : e0.a(this)) {
-         q.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var1 as StickerView).recycle();
+      for (View var2 : f0.a(this)) {
+         r.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var2 as StickerView).recycle();
       }
    }
 
    public fun setRowData(rowData: StickerPickerRow) {
-      q.h(var1, "rowData");
+      r.h(var1, "rowData");
       if (var1.getItems().size() != this.getChildCount()) {
          this.createRowStickerViews(var1);
       }

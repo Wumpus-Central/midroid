@@ -2,9 +2,9 @@ package com.discord.chat.bridge.contentnode
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class SoundmojiContentNode(soundId: String,
@@ -35,8 +35,8 @@ public data class SoundmojiContentNode(soundId: String,
       var8: java.lang.String,
       var9: java.lang.String
    ) {
-      q.h(var1, "soundId");
-      q.h(var4, "messageId");
+      r.h(var1, "soundId");
+      r.h(var4, "messageId");
       super(null);
       this.soundId = var1;
       this.channelId = var2;
@@ -90,8 +90,8 @@ public data class SoundmojiContentNode(soundId: String,
       emojiId: String? = ...,
       emojiName: String? = ...
    ): SoundmojiContentNode {
-      q.h(var1, "soundId");
-      q.h(var4, "messageId");
+      r.h(var1, "soundId");
+      r.h(var4, "messageId");
       return new SoundmojiContentNode(var1, var2, var4, var5, var6, var7, var8, var9, null);
    }
 
@@ -102,22 +102,22 @@ public data class SoundmojiContentNode(soundId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.soundId, var1.soundId)) {
+         if (!r.c(this.soundId, var1.soundId)) {
             return false;
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.guildId, var1.guildId)) {
+         } else if (!r.c(this.guildId, var1.guildId)) {
             return false;
          } else if (this.jumboable != var1.jumboable) {
             return false;
-         } else if (!q.c(this.emojiId, var1.emojiId)) {
+         } else if (!r.c(this.emojiId, var1.emojiId)) {
             return false;
          } else {
-            return q.c(this.emojiName, var1.emojiName);
+            return r.c(this.emojiName, var1.emojiName);
          }
       }
    }
@@ -157,33 +157,33 @@ public data class SoundmojiContentNode(soundId: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.soundId;
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var9: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = this.content;
-      val var8: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.soundId;
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var6: java.lang.String = this.content;
+      val var9: java.lang.String = this.guildId;
       val var1: Boolean = this.jumboable;
-      val var7: java.lang.String = this.emojiId;
-      val var5: java.lang.String = this.emojiName;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("SoundmojiContentNode(soundId=");
-      var6.append(var3);
-      var6.append(", channelId=");
-      var6.append(var2);
-      var6.append(", messageId=");
-      var6.append(var9);
-      var6.append(", content=");
-      var6.append(var4);
-      var6.append(", guildId=");
-      var6.append(var8);
-      var6.append(", jumboable=");
-      var6.append(var1);
-      var6.append(", emojiId=");
-      var6.append(var7);
-      var6.append(", emojiName=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: java.lang.String = this.emojiId;
+      val var3: java.lang.String = this.emojiName;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SoundmojiContentNode(soundId=");
+      var5.append(var2);
+      var5.append(", channelId=");
+      var5.append(var7);
+      var5.append(", messageId=");
+      var5.append(var8);
+      var5.append(", content=");
+      var5.append(var6);
+      var5.append(", guildId=");
+      var5.append(var9);
+      var5.append(", jumboable=");
+      var5.append(var1);
+      var5.append(", emojiId=");
+      var5.append(var4);
+      var5.append(", emojiName=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

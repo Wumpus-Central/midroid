@@ -5,9 +5,9 @@ import com.discord.simpleast.core.node.Node
 import java.util.ArrayList
 import java.util.Stack
 import java.util.regex.Matcher
-import kotlin.jvm.internal.M
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.N
+import kotlin.jvm.internal.r
+import z9.s
 
 public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebugging: Boolean = false) {
    private final val enableDebugging: Boolean
@@ -45,19 +45,19 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    }
 
    public fun addRule(rule: Rule<Any, out Any, Any>): Parser<Any, Any, Any> {
-      q.h(var1, "rule");
+      r.h(var1, "rule");
       this.rules.add(var1);
       return this;
    }
 
    public fun addRules(newRules: Collection<Rule<Any, out Any, Any>>): Parser<Any, Any, Any> {
-      q.h(var1, "newRules");
+      r.h(var1, "newRules");
       this.rules.addAll(var1);
       return this;
    }
 
    public fun addRules(vararg newRules: Rule<Any, out Any, Any>): Parser<Any, Any, Any> {
-      q.h(var1, "newRules");
+      r.h(var1, "newRules");
       return this.addRules(c.e(var1));
    }
 
@@ -66,8 +66,8 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
    }
 
    public fun parse(source: CharSequence, initialState: Any, rules: List<Rule<Any, out Any, Any>> = var0.rules): MutableList<Any> {
-      q.h(var1, "source");
-      q.h(var3, "rules");
+      r.h(var1, "source");
+      r.h(var3, "rules");
       val var8: Stack = new Stack();
       val var9: Node = new Node(null, 1, null);
       if (var1.length() > 0) {
@@ -136,12 +136,12 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
       val var16: java.util.Collection = var9.getChildren();
       var var17: Any;
       if (var16 != null) {
-         var17 = i.T0(var16);
+         var17 = i.V0(var16);
       } else {
          var17 = null;
       }
 
-      if (!M.j(var17)) {
+      if (!N.j(var17)) {
          var17 = null;
       }
 
@@ -158,7 +158,7 @@ public open class Parser<R, T extends Node<R>, S>  public constructor(enableDebu
 
    public class ParseException(message: String, source: CharSequence?, cause: Throwable? = null) : RuntimeException {
       init {
-         q.h(var1, "message");
+         r.h(var1, "message");
          val var4: StringBuilder = new StringBuilder();
          var4.append("Error while parsing: ");
          var4.append(var1);

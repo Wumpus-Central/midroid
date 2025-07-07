@@ -8,13 +8,13 @@ import com.discord.chat.presentation.list.item.MessageItem
 import com.discord.chat.presentation.list.messagebundling.MessageBundleConversationView
 import com.discord.primitives.MessageId
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MessageBundleConversationDelegate(onMeasured: (View, Int, Int) -> Unit) : MessageBundleBaseDelegate {
    public final var onTapReply: (MessageId) -> Unit
 
    init {
-      q.h(var1, "onMeasured");
+      r.h(var1, "onMeasured");
       super(var1);
       this.onTapReply = <unrepresentable>.INSTANCE;
    }
@@ -25,26 +25,26 @@ public class MessageBundleConversationDelegate(onMeasured: (View, Int, Int) -> U
    }
 
    public open fun createView(context: Context): MessageBundleConversationView {
-      q.h(var1, "context");
+      r.h(var1, "context");
       return new MessageBundleConversationView(var1, null, 0, 6, null);
    }
 
    protected open fun isForViewType(items: List<MessageBundleItem>, position: Int): Boolean {
-      q.h(var1, "items");
+      r.h(var1, "items");
       return var1.get(var2) is MessageBundleConversationItem;
    }
 
    public override fun onBindViewHolder(view: View, item: MessageBundleItem, items: List<MessageBundleItem>, position: Int) {
-      q.h(var1, "view");
-      q.h(var2, "item");
-      q.h(var3, "items");
+      r.h(var1, "view");
+      r.h(var2, "item");
+      r.h(var3, "items");
       if (var1 is MessageBundleConversationView) {
          if (var2 is MessageBundleConversationItem) {
             val var8: MessageBundleConversationView = var1 as MessageBundleConversationView;
             val var5: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
             val var9: MessageItem = (var2 as MessageBundleConversationItem).getMessageItem();
             val var7: Context = var8.getContext();
-            q.g(var7, "getContext(...)");
+            r.g(var7, "getContext(...)");
             var8.configure(var5, MessageBundleDelegateUtilsKt.getEventHandler(var9, var7));
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var1, false, new a(this, var2), 1, null);
          }

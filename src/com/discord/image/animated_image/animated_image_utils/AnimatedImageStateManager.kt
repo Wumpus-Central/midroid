@@ -1,10 +1,10 @@
 package com.discord.image.animated_image.animated_image_utils
 
-import O1.a
+import M1.a
 import com.discord.misc.utilities.queue.WorkerQueue
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
    handlePause: () -> Unit,
@@ -26,11 +26,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
    private final var pausePending: Boolean
 
    init {
-      q.h(var1, "handlePlay");
-      q.h(var2, "handlePause");
-      q.h(var4, "handleRecycle");
-      q.h(var5, "handleConfigIsValid");
-      q.h(var6, "handleFetchAnimatedImage");
+      r.h(var1, "handlePlay");
+      r.h(var2, "handlePause");
+      r.h(var4, "handleRecycle");
+      r.h(var5, "handleConfigIsValid");
+      r.h(var6, "handleFetchAnimatedImage");
       super();
       this.handlePlay = var1;
       this.handlePause = var2;
@@ -60,7 +60,7 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
 
    @JvmStatic
    fun `updateWorker$lambda$5`(var0: AnimatedImageStateManager): Unit {
-      q.h(var0, "stateManager");
+      r.h(var0, "stateManager");
       var0.reload();
       return Unit.a;
    }
@@ -98,11 +98,11 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
 
    public fun onFetchFinished(animatedImageLoaded: Boolean, animate: Boolean = false): Boolean {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var4: Thread = Thread.currentThread();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Expected to be on android main thread. Current: ");
-         var3.append(var4);
-         throw new IllegalStateException(var3.toString().toString());
+         val var3: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var3);
+         throw new IllegalStateException(var4.toString().toString());
       } else {
          access$setAnimatedImageLoaded$p(this, var1);
          access$setAutoplay$p(this, var2);
@@ -122,7 +122,7 @@ public class AnimatedImageStateManager<T>(handlePlay: () -> Unit,
          var1.append(var2);
          throw new IllegalStateException(var1.toString().toString());
       } else {
-         if (q.c(access$getAnimatedImageConfig$p(this), var1) && access$getAnimatedImageLoaded$p(this)) {
+         if (r.c(access$getAnimatedImageConfig$p(this), var1) && access$getAnimatedImageLoaded$p(this)) {
             access$updateWorker(this, false);
          } else {
             access$setImageConfig(this, var1);

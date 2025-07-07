@@ -35,13 +35,13 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
    private final var firstHeaderPosition: Int
 
    init {
-      kotlin.jvm.internal.q.h(var1, "recyclerView");
-      kotlin.jvm.internal.q.h(var2, "emojiPickerViewAdapter");
-      kotlin.jvm.internal.q.h(var3, "emojiPickerLayoutManager");
-      kotlin.jvm.internal.q.h(var5, "onScrolled");
-      kotlin.jvm.internal.q.h(var6, "onScrollStateChanged");
-      kotlin.jvm.internal.q.h(var7, "onDragStateChanged");
-      kotlin.jvm.internal.q.h(var8, "onStickyHeaderRender");
+      kotlin.jvm.internal.r.h(var1, "recyclerView");
+      kotlin.jvm.internal.r.h(var2, "emojiPickerViewAdapter");
+      kotlin.jvm.internal.r.h(var3, "emojiPickerLayoutManager");
+      kotlin.jvm.internal.r.h(var5, "onScrolled");
+      kotlin.jvm.internal.r.h(var6, "onScrollStateChanged");
+      kotlin.jvm.internal.r.h(var7, "onDragStateChanged");
+      kotlin.jvm.internal.r.h(var8, "onStickyHeaderRender");
       super();
       this.recyclerView = var1;
       this.emojiPickerViewAdapter = var2;
@@ -57,7 +57,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
          @Override
          public void onScrolled(RecyclerView var1, int var2, int var3) {
-            kotlin.jvm.internal.q.h(var1, "recyclerView");
+            kotlin.jvm.internal.r.h(var1, "recyclerView");
             if (var2 != 0 || var3 != 0) {
                super.onScrolled(var1, var2, var3);
             }
@@ -129,7 +129,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    @JvmStatic
    fun `scrollListenerDebounced$lambda$2`(var0: Function1, var1: EmojiPickerScroller, var2: Function2, var3: RecyclerView, var4: Int, var5: Int): Unit {
-      kotlin.jvm.internal.q.h(var3, "<unused var>");
+      kotlin.jvm.internal.r.h(var3, "<unused var>");
       var0.invoke(var1.computeScrollEvent(var1.recyclerView));
       var1.findFirstHeaderIndex(new g(var2, var1));
       return Unit.a;
@@ -149,7 +149,7 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
    @JvmStatic
    fun `scrollListenerVelocityTracker$lambda$0`(var0: EmojiPickerScroller, var1: Function0, var2: RecyclerView, var3: Float): Unit {
-      kotlin.jvm.internal.q.h(var2, "<unused var>");
+      kotlin.jvm.internal.r.h(var2, "<unused var>");
       var0.onScrollVelocityChanged(var3);
       var1.invoke();
       return Unit.a;
@@ -329,24 +329,24 @@ internal class EmojiPickerScroller(recyclerView: RecyclerView,
 
       public override fun toString(): String {
          val var2: Int = this.x;
-         val var3: Int = this.y;
-         val var4: Int = this.width;
-         val var1: Int = this.height;
-         val var6: Int = this.contentWidth;
-         val var5: Int = this.contentHeight;
+         val var5: Int = this.y;
+         val var6: Int = this.width;
+         val var3: Int = this.height;
+         val var4: Int = this.contentWidth;
+         val var1: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ScrollEvent(x=");
          var7.append(var2);
          var7.append(", y=");
-         var7.append(var3);
-         var7.append(", width=");
-         var7.append(var4);
-         var7.append(", height=");
-         var7.append(var1);
-         var7.append(", contentWidth=");
-         var7.append(var6);
-         var7.append(", contentHeight=");
          var7.append(var5);
+         var7.append(", width=");
+         var7.append(var6);
+         var7.append(", height=");
+         var7.append(var3);
+         var7.append(", contentWidth=");
+         var7.append(var4);
+         var7.append(", contentHeight=");
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

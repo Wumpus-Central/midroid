@@ -3,16 +3,16 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMessageData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun OnTruncateMessageData(var1: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -22,7 +22,7 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
    }
 
    public fun copy(messageId: MessageId = ...): OnTruncateMessageData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new OnTruncateMessageData(var1, null);
    }
 
@@ -45,12 +45,12 @@ internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMess
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnTruncateMessageData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnTruncateMessageData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

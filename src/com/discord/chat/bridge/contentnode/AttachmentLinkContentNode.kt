@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -11,8 +11,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    public open val content: List<ContentNode>?
 
    init {
-      q.h(var1, "attachmentUrl");
-      q.h(var2, "attachmentName");
+      r.h(var1, "attachmentUrl");
+      r.h(var2, "attachmentName");
       super(null);
       this.attachmentUrl = var1;
       this.attachmentName = var2;
@@ -32,8 +32,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public fun copy(attachmentUrl: String = var0.attachmentUrl, attachmentName: String = var0.attachmentName, content: List<ContentNode>? = var0.content): AttachmentLinkContentNode {
-      q.h(var1, "attachmentUrl");
-      q.h(var2, "attachmentName");
+      r.h(var1, "attachmentUrl");
+      r.h(var2, "attachmentName");
       return new AttachmentLinkContentNode(var1, var2, var3);
    }
 
@@ -44,19 +44,19 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.attachmentUrl, var1.attachmentUrl)) {
+         if (!r.c(this.attachmentUrl, var1.attachmentUrl)) {
             return false;
-         } else if (!q.c(this.attachmentName, var1.attachmentName)) {
+         } else if (!r.c(this.attachmentName, var1.attachmentName)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -64,22 +64,22 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.attachmentUrl;
-      val var3: java.lang.String = this.attachmentName;
-      val var2: java.util.List = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AttachmentLinkContentNode(attachmentUrl=");
-      var4.append(var1);
-      var4.append(", attachmentName=");
-      var4.append(var3);
-      var4.append(", content=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.attachmentUrl;
+      val var4: java.lang.String = this.attachmentName;
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AttachmentLinkContentNode(attachmentUrl=");
+      var2.append(var3);
+      var2.append(", attachmentName=");
+      var2.append(var4);
+      var2.append(", content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

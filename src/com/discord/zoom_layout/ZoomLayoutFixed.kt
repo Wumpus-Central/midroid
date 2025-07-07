@@ -17,7 +17,7 @@ import com.facebook.react.uimanager.MeasureSpecAssertions
 import com.otaliastudios.zoom.ZoomEngine
 import com.otaliastudios.zoom.ZoomLayout
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @SuppressLint(["ViewConstructor"])
 internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> Unit) : ZoomLayout {
@@ -26,8 +26,8 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
    private final val layoutChangeListener: OnLayoutChangeListener
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "onUpdate");
+      r.h(var1, "context");
+      r.h(var2, "onUpdate");
       super(var1, null, 0, 6, null);
       this.pinchDetector = new ScaleGestureDetector(var1, new SimpleOnScaleGestureListener());
       this.gestureEnabled = true;
@@ -45,12 +45,12 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
          }
 
          public void onIdle(ZoomEngine var1) {
-            q.h(var1, "engine");
+            r.h(var1, "engine");
          }
 
          public void onUpdate(ZoomEngine var1, Matrix var2) {
-            q.h(var1, "engine");
-            q.h(var2, "matrix");
+            r.h(var1, "engine");
+            r.h(var2, "matrix");
             this.$onUpdate.invoke(this.this$0);
          }
       });
@@ -69,8 +69,8 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
    }
 
    public open fun addView(child: View, index: Int, params: LayoutParams) {
-      q.h(var1, "child");
-      q.h(var3, "params");
+      r.h(var1, "child");
+      r.h(var3, "params");
       ReactNativeScreensUtilsKt.maybeApplyReactNativeScreensFix(this);
       super.addView(var1, var2, var3);
    }
@@ -99,7 +99,7 @@ internal class ZoomLayoutFixed(context: Context, onUpdate: (ZoomLayoutFixed) -> 
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(ev: MotionEvent): Boolean {
-      q.h(var1, "ev");
+      r.h(var1, "ev");
       if (!this.gestureEnabled) {
          return true;
       } else {

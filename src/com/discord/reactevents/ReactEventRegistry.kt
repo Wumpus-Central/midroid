@@ -1,10 +1,11 @@
 package com.discord.reactevents
 
+import A9.q
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import s9.s
-import t9.q
+import z9.s
 
 internal class ReactEventRegistry {
    private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()
@@ -18,22 +19,22 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var3: LinkedHashMap = new LinkedHashMap();
+      val var2: LinkedHashMap = new LinkedHashMap();
 
       for (java.lang.String var1 : this.events.values()) {
-         var3.put(var1, q.m(new Pair[]{s.a("registrationName", var1)}));
+         var2.put(this.prefixWithTop(var1), q.m(new Pair[]{s.a("registrationName", var1)}));
       }
 
-      return var3;
+      return var2;
    }
 
    public fun getEventName(event: ReactEvent): String {
-      kotlin.jvm.internal.q.h(var1, "event");
-      val var2: java.lang.String = this.events.get(G.b(var1.getClass()));
+      r.h(var1, "event");
+      val var2: java.lang.String = this.events.get(H.b(var1.getClass()));
       if (var2 != null) {
          return var2;
       } else {
-         val var4: KClass = G.b(var1.getClass());
+         val var4: KClass = H.b(var1.getClass());
          val var3: StringBuilder = new StringBuilder();
          var3.append("No event name registered for event: ");
          var3.append(var4);
@@ -42,19 +43,19 @@ internal class ReactEventRegistry {
    }
 
    public fun registerEvent(eventName: String, eventClass: KClass<out ReactEvent>) {
-      kotlin.jvm.internal.q.h(var1, "eventName");
-      kotlin.jvm.internal.q.h(var2, "eventClass");
+      r.h(var1, "eventName");
+      r.h(var2, "eventClass");
       if (!this.events.containsKey(var2)) {
          this.events.put(var2, var1);
       } else {
-         val var3: Any = this.events.get(var2);
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("event ");
-         var4.append(var3);
-         var4.append(" already registered for");
-         var4.append(var2);
-         var4.append(". using the same class for multiple events is not supported.");
-         throw new IllegalStateException(var4.toString());
+         val var4: Any = this.events.get(var2);
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("event ");
+         var3.append(var4);
+         var3.append(" already registered for");
+         var3.append(var2);
+         var3.append(". using the same class for multiple events is not supported.");
+         throw new IllegalStateException(var3.toString());
       }
    }
 }

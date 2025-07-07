@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.i
 import androidx.recyclerview.widget.RecyclerView.State
 import androidx.recyclerview.widget.RecyclerView.SmoothScroller.Action
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import z9.n
 
 internal class SmoothScroller(context: Context, targetPosition: Int, targetAlignment: TargetAlignment, onStopScroll: (() -> Unit)?) : i {
    private final val targetAlignment: TargetAlignment
@@ -15,8 +15,8 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
    private final var targetView: View?
 
    init {
-      q.h(var1, "context");
-      q.h(var3, "targetAlignment");
+      r.h(var1, "context");
+      r.h(var3, "targetAlignment");
       super(var1);
       this.targetAlignment = var3;
       this.onStopScroll = var4;
@@ -40,7 +40,7 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
    }
 
    protected override fun onChildAttachedToWindow(child: View) {
-      q.h(var1, "child");
+      r.h(var1, "child");
       super.onChildAttachedToWindow(var1);
       if (this.targetView == null && this.getChildPosition(var1) == this.getTargetPosition()) {
          this.targetView = var1;
@@ -48,8 +48,8 @@ internal class SmoothScroller(context: Context, targetPosition: Int, targetAlign
    }
 
    protected override fun onSeekTargetStep(dx: Int, dy: Int, state: State, action: Action) {
-      q.h(var3, "state");
-      q.h(var4, "action");
+      r.h(var3, "state");
+      r.h(var4, "action");
       if (this.targetView != null) {
          this.onTargetFound(this.targetView, var3, var4);
       } else {

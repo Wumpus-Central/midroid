@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Handler
 import java.util.concurrent.ConcurrentHashMap
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class TimersManager(context: Context) {
    private final val timeoutHandler: Handler
@@ -12,7 +12,7 @@ internal class TimersManager(context: Context) {
    private final val intervals: ConcurrentHashMap<Int, Runnable>
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super();
       this.timeoutHandler = new Handler(var1.getMainLooper());
       this.timeouts = new ConcurrentHashMap<>();
@@ -46,7 +46,7 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setInterval(id: Int, timeout: Double, onInterval: () -> Unit) {
-      q.h(var4, "onInterval");
+      r.h(var4, "onInterval");
       val var5: Long = (long)var2;
       val var7: Runnable = new Runnable(var4, this, (long)var2) {
          final Function0 $onInterval;
@@ -70,7 +70,7 @@ internal class TimersManager(context: Context) {
    }
 
    public fun setTimeout(id: Int, timeout: Double, onTimeout: () -> Unit) {
-      q.h(var4, "onTimeout");
+      r.h(var4, "onTimeout");
       val var5: Long = (long)var2;
       val var7: a = new a(this, var1, var4);
       this.timeouts.put(var1, var7);

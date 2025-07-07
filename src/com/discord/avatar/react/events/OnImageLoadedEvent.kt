@@ -2,16 +2,16 @@ package com.discord.avatar.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class OnImageLoadedEvent(url: String) : ReactEvent {
    public final val url: String
 
    init {
-      q.h(var1, "url");
+      r.h(var1, "url");
       super();
       this.url = var1;
    }
@@ -21,7 +21,7 @@ internal data class OnImageLoadedEvent(url: String) : ReactEvent {
    }
 
    public fun copy(url: String = var0.url): OnImageLoadedEvent {
-      q.h(var1, "url");
+      r.h(var1, "url");
       return new OnImageLoadedEvent(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class OnImageLoadedEvent(url: String) : ReactEvent {
       } else if (var1 !is OnImageLoadedEvent) {
          return false;
       } else {
-         return q.c(this.url, (var1 as OnImageLoadedEvent).url);
+         return r.c(this.url, (var1 as OnImageLoadedEvent).url);
       }
    }
 

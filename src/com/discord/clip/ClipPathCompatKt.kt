@@ -5,12 +5,12 @@ import android.graphics.Path
 import android.graphics.Region.Op
 import android.os.Build.VERSION
 import com.discord.chat.presentation.list.p
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal fun Canvas.clipPathCompat(path: Path, op: Op): Boolean {
-   q.h(var0, "<this>");
-   q.h(var1, "path");
-   q.h(var2, "op");
+   r.h(var0, "<this>");
+   r.h(var1, "path");
+   r.h(var2, "op");
    val var3: Boolean;
    if (VERSION.SDK_INT >= 26) {
       if (var2 === Op.DIFFERENCE) {

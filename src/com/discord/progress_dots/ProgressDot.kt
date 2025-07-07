@@ -6,7 +6,7 @@ import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
 import android.view.animation.Animation.AnimationListener
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ProgressDot  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : View {
    private final val scaleAndFadeUpAnimation: Animation
@@ -16,23 +16,23 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
       internal set
 
    fun ProgressDot(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ProgressDot(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       val var5: Animation = AnimationUtils.loadAnimation(var1, R.anim.anim_progress_dots_scale_up);
-      q.g(var5, "loadAnimation(...)");
+      r.g(var5, "loadAnimation(...)");
       this.scaleAndFadeUpAnimation = var5;
       val var4: Animation = AnimationUtils.loadAnimation(var1, R.anim.anim_progress_dots_scale_down);
-      q.g(var4, "loadAnimation(...)");
+      r.g(var4, "loadAnimation(...)");
       this.scaleAndFadeDownAnimation = var4;
    }
 
@@ -80,7 +80,7 @@ public class ProgressDot  public constructor(context: Context, attrs: AttributeS
       public final val onComplete: () -> Unit
 
       init {
-         q.h(var1, "onComplete");
+         r.h(var1, "onComplete");
          super();
          this.onComplete = var1;
       }

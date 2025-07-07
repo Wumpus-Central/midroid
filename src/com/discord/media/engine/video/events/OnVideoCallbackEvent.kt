@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
@@ -15,9 +15,9 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
    public final val videoStreamParametersJSON: String
 
    init {
-      q.h(var2, "userId");
-      q.h(var5, "streamId");
-      q.h(var6, "videoStreamParametersJSON");
+      r.h(var2, "userId");
+      r.h(var5, "streamId");
+      r.h(var6, "videoStreamParametersJSON");
       super();
       this.connectionId = var1;
       this.userId = var2;
@@ -53,9 +53,9 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
       streamId: String = var0.streamId,
       videoStreamParametersJSON: String = var0.videoStreamParametersJSON
    ): OnVideoCallbackEvent {
-      q.h(var2, "userId");
-      q.h(var5, "streamId");
-      q.h(var6, "videoStreamParametersJSON");
+      r.h(var2, "userId");
+      r.h(var5, "streamId");
+      r.h(var6, "videoStreamParametersJSON");
       return new OnVideoCallbackEvent(var1, var2, var3, var5, var6);
    }
 
@@ -68,14 +68,14 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!q.c(this.userId, var1.userId)) {
+         } else if (!r.c(this.userId, var1.userId)) {
             return false;
          } else if (this.ssrc != var1.ssrc) {
             return false;
-         } else if (!q.c(this.streamId, var1.streamId)) {
+         } else if (!r.c(this.streamId, var1.streamId)) {
             return false;
          } else {
-            return q.c(this.videoStreamParametersJSON, var1.videoStreamParametersJSON);
+            return r.c(this.videoStreamParametersJSON, var1.videoStreamParametersJSON);
          }
       }
    }

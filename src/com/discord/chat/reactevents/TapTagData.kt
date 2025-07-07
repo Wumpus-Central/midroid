@@ -4,9 +4,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType: String?) : TapTagData(var1, var2, var4), ReactEvent {
@@ -15,7 +15,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    public final val tagType: String?
 
    fun TapTagData(var1: java.lang.String, var2: Long, var4: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -35,7 +35,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public fun copy(messageId: MessageId = ..., channelId: ChannelId = ..., tagType: String? = ...): TapTagData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new TapTagData(var1, var2, var4, null);
    }
 
@@ -51,7 +51,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.tagType, var1.tagType);
+            return r.c(this.tagType, var1.tagType);
          }
       }
    }
@@ -74,16 +74,16 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: java.lang.String = this.tagType;
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = this.tagType;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapTagData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var4);
-      var1.append(", tagType=");
+      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", tagType=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

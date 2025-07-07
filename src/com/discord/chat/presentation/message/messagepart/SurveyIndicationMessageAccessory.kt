@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.feedback.SurveyIndication
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class SurveyIndicationMessageAccessory(messageId: MessageId, surveyIndication: SurveyIndication) : SurveyIndicationMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val surveyIndication: SurveyIndication
 
    fun SurveyIndicationMessageAccessory(var1: java.lang.String, var2: SurveyIndication) {
-      q.h(var1, "messageId");
-      q.h(var2, "surveyIndication");
+      r.h(var1, "messageId");
+      r.h(var2, "surveyIndication");
       super(var1, "survey indication message", false, 4, null);
       this.messageId = var1;
       this.surveyIndication = var2;
@@ -25,8 +25,8 @@ public data class SurveyIndicationMessageAccessory(messageId: MessageId, surveyI
    }
 
    public fun copy(messageId: MessageId = ..., surveyIndication: SurveyIndication = ...): SurveyIndicationMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "surveyIndication");
+      r.h(var1, "messageId");
+      r.h(var2, "surveyIndication");
       return new SurveyIndicationMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +40,7 @@ public data class SurveyIndicationMessageAccessory(messageId: MessageId, surveyI
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.surveyIndication, var1.surveyIndication);
+            return r.c(this.surveyIndication, var1.surveyIndication);
          }
       }
    }

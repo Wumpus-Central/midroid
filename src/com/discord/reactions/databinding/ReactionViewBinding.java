@@ -8,37 +8,49 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.reactions.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
-import z0.a;
+import y0.a;
 
 public final class ReactionViewBinding implements ViewBinding {
    public final TextView reactionCount1;
    public final TextView reactionCount2;
    public final TextSwitcher reactionCountSwitcher;
    public final SimpleDraweeSpanTextView reactionEmoji;
+   public final TextView reactionLabelLeft;
+   public final TextView reactionLabelRight;
    private final View rootView;
 
-   private ReactionViewBinding(View var1, TextView var2, TextView var3, TextSwitcher var4, SimpleDraweeSpanTextView var5) {
+   private ReactionViewBinding(View var1, TextView var2, TextView var3, TextSwitcher var4, SimpleDraweeSpanTextView var5, TextView var6, TextView var7) {
       this.rootView = var1;
       this.reactionCount1 = var2;
       this.reactionCount2 = var3;
       this.reactionCountSwitcher = var4;
       this.reactionEmoji = var5;
+      this.reactionLabelLeft = var6;
+      this.reactionLabelRight = var7;
    }
 
    public static ReactionViewBinding bind(View var0) {
       int var1 = R.id.reaction_count_1;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var6 = (TextView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.reaction_count_2;
          TextView var4 = (TextView)a.a(var0, var1);
          if (var4 != null) {
             var1 = R.id.reaction_count_switcher;
-            TextSwitcher var3 = (TextSwitcher)a.a(var0, var1);
-            if (var3 != null) {
+            TextSwitcher var5 = (TextSwitcher)a.a(var0, var1);
+            if (var5 != null) {
                var1 = R.id.reaction_emoji;
-               SimpleDraweeSpanTextView var5 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-               if (var5 != null) {
-                  return new ReactionViewBinding(var0, var2, var4, var3, var5);
+               SimpleDraweeSpanTextView var7 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+               if (var7 != null) {
+                  var1 = R.id.reaction_label_left;
+                  TextView var2 = (TextView)a.a(var0, var1);
+                  if (var2 != null) {
+                     var1 = R.id.reaction_label_right;
+                     TextView var3 = (TextView)a.a(var0, var1);
+                     if (var3 != null) {
+                        return new ReactionViewBinding(var0, var6, var4, var5, var7, var2, var3);
+                     }
+                  }
                }
             }
          }

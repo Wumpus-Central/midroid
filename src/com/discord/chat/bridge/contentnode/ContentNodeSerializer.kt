@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import nb.g
-import nb.e.i
-import pb.e
+import ub.g
+import ub.e.i
+import wb.e
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -19,7 +19,7 @@ public object ContentNodeSerializer : KSerializer {
 
 
    public open fun deserialize(decoder: Decoder): ContentNode {
-      q.h(var1, "decoder");
+      r.h(var1, "decoder");
 
       try {
          if (var1 !is e) {
@@ -40,8 +40,8 @@ public object ContentNodeSerializer : KSerializer {
    }
 
    public open fun serialize(encoder: Encoder, value: ContentNode) {
-      q.h(var1, "encoder");
-      q.h(var2, "value");
+      r.h(var1, "encoder");
+      r.h(var2, "value");
       throw new UnsupportedOperationException();
    }
 }

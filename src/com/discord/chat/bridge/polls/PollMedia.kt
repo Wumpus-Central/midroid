@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.polls
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w.d(), emoji: PollMediaEmoji? = null, stickerId: Long? = null) {
@@ -16,7 +16,7 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    init {
-      q.h(var2, "attachmentIds");
+      r.h(var2, "attachmentIds");
       super();
       this.text = var1;
       this.attachmentIds = var2;
@@ -46,7 +46,7 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
       emoji: PollMediaEmoji? = var0.emoji,
       stickerId: Long? = var0.stickerId
    ): PollMedia {
-      q.h(var2, "attachmentIds");
+      r.h(var2, "attachmentIds");
       return new PollMedia(var1, var2, var3, var4);
    }
 
@@ -57,14 +57,14 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.text, var1.text)) {
+         if (!r.c(this.text, var1.text)) {
             return false;
-         } else if (!q.c(this.attachmentIds, var1.attachmentIds)) {
+         } else if (!r.c(this.attachmentIds, var1.attachmentIds)) {
             return false;
-         } else if (!q.c(this.emoji, var1.emoji)) {
+         } else if (!r.c(this.emoji, var1.emoji)) {
             return false;
          } else {
-            return q.c(this.stickerId, var1.stickerId);
+            return r.c(this.stickerId, var1.stickerId);
          }
       }
    }
@@ -95,18 +95,18 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
 
    public override fun toString(): String {
       val var1: java.lang.String = this.text;
-      val var2: java.util.Set = this.attachmentIds;
-      val var3: PollMediaEmoji = this.emoji;
-      val var4: java.lang.Long = this.stickerId;
+      val var4: java.util.Set = this.attachmentIds;
+      val var2: PollMediaEmoji = this.emoji;
+      val var3: java.lang.Long = this.stickerId;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PollMedia(text=");
       var5.append(var1);
       var5.append(", attachmentIds=");
-      var5.append(var2);
-      var5.append(", emoji=");
-      var5.append(var3);
-      var5.append(", stickerId=");
       var5.append(var4);
+      var5.append(", emoji=");
+      var5.append(var2);
+      var5.append(", stickerId=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }

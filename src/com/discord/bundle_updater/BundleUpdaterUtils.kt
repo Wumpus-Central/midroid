@@ -2,26 +2,26 @@ package com.discord.bundle_updater
 
 import java.io.File
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
 import okio.BufferedSource
-import s9.s
+import z9.s
 
 public object BundleUpdaterUtils {
    public fun compareJSONData(apkManifest: AppManifest, oldManifest: AppManifest?, newManifest: AppManifest): List<Pair<String, AssetStatus>> {
-      q.h(var1, "apkManifest");
-      q.h(var3, "newManifest");
+      r.h(var1, "apkManifest");
+      r.h(var3, "newManifest");
       val var4: java.util.Set = var3.getHashes().keySet();
       val var5: ArrayList = new ArrayList();
 
       for (java.lang.String var7 : var4) {
          val var8: java.lang.String = var3.getHashes().get(var7);
          val var9: Pair;
-         if (q.c(var8, var1.getHashes().get(var7))) {
+         if (r.c(var8, var1.getHashes().get(var7))) {
             var9 = null;
          } else {
             val var10: AssetStatus;
-            if (var2 != null && q.c(var8, var2.getHashes().get(var7))) {
+            if (var2 != null && r.c(var8, var2.getHashes().get(var7))) {
                var10 = AssetStatus.CopyFromPrevious;
             } else {
                var10 = AssetStatus.Download;
@@ -35,26 +35,26 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return kotlin.collections.i.R0(var5);
+      return kotlin.collections.i.T0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {
-      q.h(var1, "file");
+      r.h(var1, "file");
       val var2: Json = BundleUpdaterUtilsKt.getJson();
-      val var3: java.lang.String = E9.j.f(var1, null, 1, null);
+      val var3: java.lang.String = L9.j.f(var1, null, 1, null);
       var2.a();
       return var2.b(AppManifest.Companion.serializer(), var3) as AppManifest;
    }
 
    public fun md5(file: File): String {
       label18: {
-         q.h(var1, "file");
-         val var10: BufferedSource = Vb.m.d(Vb.m.k(var1));
+         r.h(var1, "file");
+         val var10: BufferedSource = cc.m.d(cc.m.k(var1));
 
          var var11: java.lang.String;
          try {
-            val var2: Vb.j = Vb.j.m.a(Vb.m.b());
-            var10.E1(var2);
+            val var2: cc.j = cc.j.m.a(cc.m.b());
+            var10.F1(var2);
             var11 = var2.a().s();
          } catch (var5: java.lang.Throwable) {
             val var3: java.lang.Throwable = var5;
@@ -62,11 +62,11 @@ public object BundleUpdaterUtils {
             try {
                throw var3;
             } catch (var4: java.lang.Throwable) {
-               E9.c.a(var10, var5);
+               L9.c.a(var10, var5);
             }
          }
 
-         E9.c.a(var10, null);
+         L9.c.a(var10, null);
          return var11;
       }
    }

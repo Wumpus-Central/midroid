@@ -20,12 +20,12 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
    private final val shadowPaint: Paint
 
    fun MaskedShadowView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
       this.shadowColor = "#28000000";
       this.shadowElevation = SizeUtilsKt.getDpToPx(10);
@@ -38,7 +38,7 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      kotlin.jvm.internal.q.h(var1, "canvas");
+      kotlin.jvm.internal.r.h(var1, "canvas");
       super.onDraw(var1);
       if (this.getVisibility() == 0 && this.getWidth() != 0 && this.getHeight() != 0) {
          this.path.reset();
@@ -63,7 +63,7 @@ public class MaskedShadowView  public constructor(context: Context, attrs: Attri
    }
 
    public fun setParams(shadowElevation: Float, borderRadius: Float, shadowColor: String) {
-      kotlin.jvm.internal.q.h(var3, "shadowColor");
+      kotlin.jvm.internal.r.h(var3, "shadowColor");
       this.borderRadius = var2;
       this.shadowElevation = var1;
       this.shadowColor = var3;

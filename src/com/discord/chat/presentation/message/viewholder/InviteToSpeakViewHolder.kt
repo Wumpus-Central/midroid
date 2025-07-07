@@ -10,8 +10,8 @@ public class InviteToSpeakViewHolder(inviteToSpeakView: InviteToSpeakView, onInv
    private final val onInviteToSpeakClicked: (MessageId) -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "inviteToSpeakView");
-      kotlin.jvm.internal.q.h(var2, "onInviteToSpeakClicked");
+      kotlin.jvm.internal.r.h(var1, "inviteToSpeakView");
+      kotlin.jvm.internal.r.h(var2, "onInviteToSpeakClicked");
       super(var1, null);
       this.inviteToSpeakView = var1;
       this.onInviteToSpeakClicked = var2;
@@ -19,7 +19,7 @@ public class InviteToSpeakViewHolder(inviteToSpeakView: InviteToSpeakView, onInv
    }
 
    public fun bind(inviteToSpeakAccessory: InviteToSpeakAccessory) {
-      kotlin.jvm.internal.q.h(var1, "inviteToSpeakAccessory");
+      kotlin.jvm.internal.r.h(var1, "inviteToSpeakAccessory");
       this.inviteToSpeakView.setProps(var1.getMessage(), this.onInviteToSpeakClicked);
    }
 }

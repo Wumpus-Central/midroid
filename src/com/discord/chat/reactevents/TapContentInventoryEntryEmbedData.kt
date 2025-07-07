@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -14,10 +14,10 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    public final val tappedElement: String
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "authorId");
-      q.h(var3, "contentId");
-      q.h(var4, "tappedElement");
+      r.h(var1, "messageId");
+      r.h(var2, "authorId");
+      r.h(var3, "contentId");
+      r.h(var4, "tappedElement");
       super();
       this.messageId = var1;
       this.authorId = var2;
@@ -47,10 +47,10 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
       contentId: String = var0.contentId,
       tappedElement: String = var0.tappedElement
    ): TapContentInventoryEntryEmbedData {
-      q.h(var1, "messageId");
-      q.h(var2, "authorId");
-      q.h(var3, "contentId");
-      q.h(var4, "tappedElement");
+      r.h(var1, "messageId");
+      r.h(var2, "authorId");
+      r.h(var3, "contentId");
+      r.h(var4, "tappedElement");
       return new TapContentInventoryEntryEmbedData(var1, var2, var3, var4);
    }
 
@@ -61,14 +61,14 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.authorId, var1.authorId)) {
+         } else if (!r.c(this.authorId, var1.authorId)) {
             return false;
-         } else if (!q.c(this.contentId, var1.contentId)) {
+         } else if (!r.c(this.contentId, var1.contentId)) {
             return false;
          } else {
-            return q.c(this.tappedElement, var1.tappedElement);
+            return r.c(this.tappedElement, var1.tappedElement);
          }
       }
    }
@@ -82,19 +82,19 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.authorId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.authorId;
       val var4: java.lang.String = this.contentId;
-      val var2: java.lang.String = this.tappedElement;
+      val var1: java.lang.String = this.tappedElement;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapContentInventoryEntryEmbedData(messageId=");
-      var3.append(var5);
+      var3.append(var2);
       var3.append(", authorId=");
-      var3.append(var1);
+      var3.append(var5);
       var3.append(", contentId=");
       var3.append(var4);
       var3.append(", tappedElement=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

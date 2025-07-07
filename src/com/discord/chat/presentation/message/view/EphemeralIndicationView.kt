@@ -34,32 +34,32 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
    private final var binding: EphemeralActionViewBinding
 
    fun EphemeralIndicationView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun EphemeralIndicationView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       val var4: EphemeralActionViewBinding = EphemeralActionViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       val var5: SimpleDraweeSpanTextView = var4.chatListAdapterItemTextDismiss;
-      kotlin.jvm.internal.q.e(var4.chatListAdapterItemTextDismiss);
+      kotlin.jvm.internal.r.e(var4.chatListAdapterItemTextDismiss);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       SetTextSizeSpKt.setTextSizeSp(var5, 12.0F);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
-      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemIconHelp);
+      kotlin.jvm.internal.r.e(this.binding.chatListAdapterItemIconHelp);
       ReactAssetUtilsKt.setReactAsset(var6, ReactAsset.Help);
       ColorUtilsKt.setTintColor(var6, ThemeManagerKt.getTheme().getTextMuted());
       val var7: SimpleDraweeView = this.binding.chatListAdapterItemVisibilityIcon;
-      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemVisibilityIcon);
+      kotlin.jvm.internal.r.e(this.binding.chatListAdapterItemVisibilityIcon);
       ReactAssetUtilsKt.setReactAsset(var7, ReactAsset.ShowPassword);
       ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getTextMuted());
    }
@@ -71,7 +71,7 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
 
    @JvmStatic
    fun `setEphemeralIndication_AFFcxXc$lambda$7$lambda$5`(var0: Function2, var1: java.lang.String, var2: LinkContentNode): Unit {
-      kotlin.jvm.internal.q.h(var2, "node");
+      kotlin.jvm.internal.r.h(var2, "node");
       var0.invoke(MessageId.box-impl(var1), var2);
       return Unit.a;
    }
@@ -82,23 +82,23 @@ public class EphemeralIndicationView  public constructor(context: Context, attrs
       onLinkClicked: (MessageId, LinkContentNode) -> Unit,
       onHelpArticleClicked: (String) -> Unit
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageId");
-      kotlin.jvm.internal.q.h(var2, "ephemeralIndication");
-      kotlin.jvm.internal.q.h(var3, "onLinkClicked");
-      kotlin.jvm.internal.q.h(var4, "onHelpArticleClicked");
+      kotlin.jvm.internal.r.h(var1, "messageId");
+      kotlin.jvm.internal.r.h(var2, "ephemeralIndication");
+      kotlin.jvm.internal.r.h(var3, "onLinkClicked");
+      kotlin.jvm.internal.r.h(var4, "onHelpArticleClicked");
       val var6: SimpleDraweeView = this.binding.chatListAdapterItemIconHelp;
       this.binding.chatListAdapterItemIconHelp.setContentDescription(var2.getHelpButtonAccessibilityLabel());
       var6.setOnClickListener(new G(var4, var2));
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextDismiss;
-      kotlin.jvm.internal.q.e(this.binding.chatListAdapterItemTextDismiss);
+      kotlin.jvm.internal.r.e(this.binding.chatListAdapterItemTextDismiss);
       val var9: StructurableText = var2.getContent();
       val var11: Context = var10.getContext();
-      kotlin.jvm.internal.q.g(var11, "getContext(...)");
+      kotlin.jvm.internal.r.g(var11, "getContext(...)");
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
-      kotlin.jvm.internal.q.g(var7, "getFontMetrics(...)");
+      kotlin.jvm.internal.r.g(var7, "getFontMetrics(...)");
       val var5: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var12: TextPaint = var10.getPaint();
-      kotlin.jvm.internal.q.g(var12, "getPaint(...)");
+      kotlin.jvm.internal.r.g(var12, "getPaint(...)");
       val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
          var9,
          var11,

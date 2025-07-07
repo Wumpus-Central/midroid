@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.scroll
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Boolean = false, highlight: Boolean = false, position: Int? = null) {
@@ -13,7 +13,7 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    public final val position: Int?
 
    init {
-      q.h(var1, "type");
+      r.h(var1, "type");
       super();
       this.type = var1;
       this.index = var2;
@@ -49,7 +49,7 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
       highlight: Boolean = var0.highlight,
       position: Int? = var0.position
    ): ChatScrollData {
-      q.h(var1, "type");
+      r.h(var1, "type");
       return new ChatScrollData(var1, var2, var3, var4, var5);
    }
 
@@ -69,15 +69,15 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          } else if (this.highlight != var1.highlight) {
             return false;
          } else {
-            return q.c(this.position, var1.position);
+            return r.c(this.position, var1.position);
          }
       }
    }
 
    public override fun hashCode(): Int {
       val var2: Int = this.type.hashCode();
-      val var4: Int = Integer.hashCode(this.index);
-      val var3: Int = java.lang.Boolean.hashCode(this.animate);
+      val var3: Int = Integer.hashCode(this.index);
+      val var4: Int = java.lang.Boolean.hashCode(this.animate);
       val var5: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
       if (this.position == null) {
@@ -86,26 +86,26 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var2 * 31 + var4) * 31 + var3) * 31 + var5) * 31 + var1;
+      return (((var2 * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var5: ChatScrollType = this.type;
+      val var6: ChatScrollType = this.type;
       val var1: Int = this.index;
-      val var3: Boolean = this.animate;
-      val var2: Boolean = this.highlight;
-      val var6: Int = this.position;
+      val var2: Boolean = this.animate;
+      val var3: Boolean = this.highlight;
+      val var5: Int = this.position;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ChatScrollData(type=");
-      var4.append(var5);
+      var4.append(var6);
       var4.append(", index=");
       var4.append(var1);
       var4.append(", animate=");
-      var4.append(var3);
-      var4.append(", highlight=");
       var4.append(var2);
+      var4.append(", highlight=");
+      var4.append(var3);
       var4.append(", position=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

@@ -6,15 +6,15 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 internal class OnUnexpectedItemSizeEvent(entry: Entry, size: Int) : ReactEvent {
    private final val entry: Entry
    private final val size: Int
 
    init {
-      q.h(var1, "entry");
+      r.h(var1, "entry");
       super();
       this.entry = var1;
       this.size = var2;

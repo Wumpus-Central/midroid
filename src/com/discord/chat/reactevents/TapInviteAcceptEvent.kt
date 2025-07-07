@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEvent {
@@ -12,7 +12,7 @@ public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEve
    public final val index: Int
 
    init {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
       this.index = var2;
@@ -27,7 +27,7 @@ public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEve
    }
 
    public fun copy(messageId: String = var0.messageId, index: Int = var0.index): TapInviteAcceptEvent {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new TapInviteAcceptEvent(var1, var2);
    }
 
@@ -38,7 +38,7 @@ public data class TapInviteAcceptEvent(messageId: String, index: Int) : ReactEve
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
             return this.index == var1.index;

@@ -1,6 +1,6 @@
 package com.discord.crash_reporting.react_events
 
-import J9.c
+import Q9.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.crash_reporting.system_logs.SystemLogUtils
@@ -12,8 +12,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: SentryCrashData?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -60,14 +60,14 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.crashedLastRun, var1.crashedLastRun)) {
+         if (!r.c(this.crashedLastRun, var1.crashedLastRun)) {
             return false;
-         } else if (!q.c(this.sentryData, var1.sentryData)) {
+         } else if (!r.c(this.sentryData, var1.sentryData)) {
             return false;
-         } else if (!q.c(this.reason, var1.reason)) {
+         } else if (!r.c(this.reason, var1.reason)) {
             return false;
          } else {
-            return q.c(this.tombstone, var1.tombstone);
+            return r.c(this.tombstone, var1.tombstone);
          }
       }
    }
@@ -137,20 +137,20 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var3: java.lang.Boolean = this.crashedLastRun;
+      val var5: java.lang.Boolean = this.crashedLastRun;
       val var1: SystemLogReport.SentryCrashData = this.sentryData;
-      val var2: HistoricalProcessExitReason.Reason = this.reason;
-      val var5: SystemLogUtils.Tombstone = this.tombstone;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("CrashReportEvent(crashedLastRun=");
-      var4.append(var3);
-      var4.append(", sentryData=");
-      var4.append(var1);
-      var4.append(", reason=");
-      var4.append(var2);
-      var4.append(", tombstone=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var3: HistoricalProcessExitReason.Reason = this.reason;
+      val var4: SystemLogUtils.Tombstone = this.tombstone;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CrashReportEvent(crashedLastRun=");
+      var2.append(var5);
+      var2.append(", sentryData=");
+      var2.append(var1);
+      var2.append(", reason=");
+      var2.append(var3);
+      var2.append(", tombstone=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 }

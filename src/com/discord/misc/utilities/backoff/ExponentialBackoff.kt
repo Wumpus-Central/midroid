@@ -1,15 +1,15 @@
 package com.discord.misc.utilities.backoff
 
-import bb.I
-import bb.f
+import G9.b
+import ib.I
+import ib.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import z9.b
 
 public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000L, maxDelay: Long = 300000L, maxAttempts: Int = 10) {
    private final val scope: CoroutineScope
@@ -21,7 +21,7 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    private final var job: Job?
 
    init {
-      q.h(var1, "scope");
+      r.h(var1, "scope");
       super();
       this.scope = var1;
       this.initialDelay = var2;
@@ -47,7 +47,7 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
    }
 
    public fun fail(action: (Continuation<Unit>) -> Any?) {
-      q.h(var1, "action");
+      r.h(var1, "action");
       this.cancelCurrentJob();
       if (this.currentAttempt <= this.maxAttempts) {
          val var4: Long;
@@ -145,10 +145,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
 
       var var26: Any = ((<unrepresentable>)var22).result;
       val var11: Any = b.e();
-      val var8: ExponentialBackoff;
+      var var8: ExponentialBackoff;
       var var13: Function2;
       var var18: Function1;
-      var var32: Any;
+      var var33: Any;
       if (((<unrepresentable>)var22).label != 0) {
          if (((<unrepresentable>)var22).label != 1) {
             if (((<unrepresentable>)var22).label != 2) {
@@ -172,9 +172,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                   ((<unrepresentable>)var22).L$1 = var1;
                   ((<unrepresentable>)var22).L$2 = var2;
                   ((<unrepresentable>)var22).label = 4;
-                  var32 = var1.invoke(var22);
-                  var26 = var32;
-                  if (var32 === var11) {
+                  var33 = var1.invoke(var22);
+                  var8 = var8;
+                  var26 = var33;
+                  if (var33 === var11) {
                      return var11;
                   }
 
@@ -188,13 +189,13 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
                ((<unrepresentable>)var22).L$3 = var26;
                ((<unrepresentable>)var22).label = 2;
                val var10: Any = var13.invoke(var26, var22);
-               var32 = var26;
+               var33 = var26;
                var26 = var10;
                if (var10 === var11) {
                   return var11;
                }
             } else {
-               var32 = ((<unrepresentable>)var22).L$3;
+               var33 = ((<unrepresentable>)var22).L$3;
                var13 = ((<unrepresentable>)var22).L$2 as Function2;
                var18 = ((<unrepresentable>)var22).L$1 as Function1;
                var8 = ((<unrepresentable>)var22).L$0 as ExponentialBackoff;
@@ -212,10 +213,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
             ((<unrepresentable>)var22).L$2 = var2;
             ((<unrepresentable>)var22).L$3 = var26;
             ((<unrepresentable>)var22).label = 2;
-            val var37: Any = var2.invoke(var26, var22);
-            var32 = var26;
-            var26 = var37;
-            if (var37 === var11) {
+            val var38: Any = var2.invoke(var26, var22);
+            var33 = var26;
+            var26 = var38;
+            if (var38 === var11) {
                return var11;
             }
          }
@@ -238,10 +239,10 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var22).L$2 = var2;
          ((<unrepresentable>)var22).L$3 = var26;
          ((<unrepresentable>)var22).label = 2;
-         val var38: Any = var2.invoke(var26, var22);
-         var32 = var26;
-         var26 = var38;
-         if (var38 === var11) {
+         val var39: Any = var2.invoke(var26, var22);
+         var33 = var26;
+         var26 = var39;
+         if (var39 === var11) {
             return var11;
          }
       }
@@ -274,28 +275,29 @@ public class ExponentialBackoff(scope: CoroutineScope, initialDelay: Long = 1000
          ((<unrepresentable>)var22).L$1 = var18;
          ((<unrepresentable>)var22).L$2 = var13;
          ((<unrepresentable>)var22).label = 4;
-         var32 = var18.invoke(var22);
-         if (var32 === var11) {
+         var33 = var18.invoke(var22);
+         var8 = var8;
+         if (var33 === var11) {
             return var11;
          }
 
-         val var36: Function1 = var18;
+         val var37: Function1 = var18;
          var13 = var13;
          var18 = var18;
          ((<unrepresentable>)var22).L$0 = var8;
-         ((<unrepresentable>)var22).L$1 = var36;
+         ((<unrepresentable>)var22).L$1 = var37;
          ((<unrepresentable>)var22).L$2 = var13;
-         ((<unrepresentable>)var22).L$3 = var32;
+         ((<unrepresentable>)var22).L$3 = var33;
          ((<unrepresentable>)var22).label = 2;
-         val var39: Any = var13.invoke(var32, var22);
-         var32 = var32;
-         var26 = var39;
-         if (var39 === var11) {
+         val var40: Any = var13.invoke(var33, var22);
+         var33 = var33;
+         var26 = var40;
+         if (var40 === var11) {
             return var11;
          }
       }
 
-      return var32;
+      return var33;
    }
 
    public fun succeed() {

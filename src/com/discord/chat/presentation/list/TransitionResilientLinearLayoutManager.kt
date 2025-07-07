@@ -10,7 +10,7 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    private final var disableRecycling: Boolean
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -19,7 +19,7 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleAllViews(recycler: Recycler) {
-      kotlin.jvm.internal.q.h(var1, "recycler");
+      kotlin.jvm.internal.r.h(var1, "recycler");
 
       try {
          if (this.disableRecycling) {
@@ -33,8 +33,8 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleView(child: View, recycler: Recycler) {
-      kotlin.jvm.internal.q.h(var1, "child");
-      kotlin.jvm.internal.q.h(var2, "recycler");
+      kotlin.jvm.internal.r.h(var1, "child");
+      kotlin.jvm.internal.r.h(var2, "recycler");
 
       try {
          if (this.disableRecycling) {
@@ -48,7 +48,7 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
-      kotlin.jvm.internal.q.h(var2, "recycler");
+      kotlin.jvm.internal.r.h(var2, "recycler");
 
       try {
          if (this.disableRecycling) {

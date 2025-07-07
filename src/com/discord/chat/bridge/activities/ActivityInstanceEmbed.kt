@@ -2,9 +2,9 @@ package com.discord.chat.bridge.activities
 
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -20,8 +20,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    public final val participantsDescription: String?
 
    fun ActivityInstanceEmbed(var1: Long, var3: java.lang.String, var4: MutableList<java.lang.String>, var5: AppMessageEmbedImpl, var6: java.lang.String) {
-      q.h(var3, "instanceId");
-      q.h(var5, "appMessageEmbedModel");
+      r.h(var3, "instanceId");
+      r.h(var5, "appMessageEmbedModel");
       super();
       this.applicationId = var1;
       this.instanceId = var3;
@@ -57,8 +57,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       appMessageEmbedModel: AppMessageEmbedImpl = ...,
       participantsDescription: String? = ...
    ): ActivityInstanceEmbed {
-      q.h(var3, "instanceId");
-      q.h(var5, "appMessageEmbedModel");
+      r.h(var3, "instanceId");
+      r.h(var5, "appMessageEmbedModel");
       return new ActivityInstanceEmbed(var1, var3, var4, var5, var6, null);
    }
 
@@ -71,14 +71,14 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var1 = var1;
          if (!ApplicationId.equals-impl0(this.applicationId, var1.applicationId)) {
             return false;
-         } else if (!q.c(this.instanceId, var1.instanceId)) {
+         } else if (!r.c(this.instanceId, var1.instanceId)) {
             return false;
-         } else if (!q.c(this.participantAvatarUris, var1.participantAvatarUris)) {
+         } else if (!r.c(this.participantAvatarUris, var1.participantAvatarUris)) {
             return false;
-         } else if (!q.c(this.appMessageEmbedModel, var1.appMessageEmbedModel)) {
+         } else if (!r.c(this.appMessageEmbedModel, var1.appMessageEmbedModel)) {
             return false;
          } else {
-            return q.c(this.participantsDescription, var1.participantsDescription);
+            return r.c(this.participantsDescription, var1.participantsDescription);
          }
       }
    }
@@ -103,24 +103,24 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var1: java.lang.String = this.instanceId;
-      val var4: java.util.List = this.participantAvatarUris;
-      val var5: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var2: java.lang.String = this.participantsDescription;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ActivityInstanceEmbed(applicationId=");
-      var3.append(var6);
-      var3.append(", instanceId=");
-      var3.append(var1);
-      var3.append(", participantAvatarUris=");
-      var3.append(var4);
-      var3.append(", appMessageEmbedModel=");
-      var3.append(var5);
-      var3.append(", participantsDescription=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var2: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var3: java.lang.String = this.instanceId;
+      val var5: java.util.List = this.participantAvatarUris;
+      val var1: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var4: java.lang.String = this.participantsDescription;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ActivityInstanceEmbed(applicationId=");
+      var6.append(var2);
+      var6.append(", instanceId=");
+      var6.append(var3);
+      var6.append(", participantAvatarUris=");
+      var6.append(var5);
+      var6.append(", appMessageEmbedModel=");
+      var6.append(var1);
+      var6.append(", participantsDescription=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

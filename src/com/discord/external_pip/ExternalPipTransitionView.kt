@@ -10,11 +10,11 @@ import android.view.ViewGroup.LayoutParams
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ExternalPipTransitionView(context: Context) : View {
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.setTag(transitionViewTag);
@@ -39,7 +39,7 @@ public class ExternalPipTransitionView(context: Context) : View {
          }
 
          public void onAnimationEnd(Animator var1) {
-            q.h(var1, "animation");
+            r.h(var1, "animation");
             this.$onComplete.invoke();
          }
       });
@@ -95,7 +95,7 @@ public class ExternalPipTransitionView(context: Context) : View {
 
          if (var4 != null) {
             val var5: Context = var4.getContext();
-            q.g(var5, "getContext(...)");
+            r.g(var5, "getContext(...)");
             var4.addView(new ExternalPipTransitionView(var5));
          }
       }

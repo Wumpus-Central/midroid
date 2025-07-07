@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
@@ -11,7 +11,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    public final val contentInventoryEntry: ContentInventoryEntry?
 
    init {
-      q.h(var2, "id");
+      r.h(var2, "id");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -31,7 +31,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, contentInventoryEntry: ContentInventoryEntry? = var0.contentInventoryEntry): ContentInventoryEntryComponent {
-      q.h(var2, "id");
+      r.h(var2, "id");
       return new ContentInventoryEntryComponent(var1, var2, var3);
    }
 
@@ -44,17 +44,17 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.id, var1.id)) {
+         } else if (!r.c(this.id, var1.id)) {
             return false;
          } else {
-            return q.c(this.contentInventoryEntry, var1.contentInventoryEntry);
+            return r.c(this.contentInventoryEntry, var1.contentInventoryEntry);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -62,7 +62,7 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.ChannelType
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ChannelNameContentNode(channelType: ChannelType? = null, iconType: String, icon: String? = null, content: List<ContentNode>) : ContentNode {
@@ -13,8 +13,8 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    public final val content: List<ContentNode>
 
    init {
-      q.h(var2, "iconType");
-      q.h(var4, "content");
+      r.h(var2, "iconType");
+      r.h(var4, "content");
       super(null);
       this.channelType = var1;
       this.iconType = var2;
@@ -44,8 +44,8 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
       icon: String? = var0.icon,
       content: List<ContentNode> = var0.content
    ): ChannelNameContentNode {
-      q.h(var2, "iconType");
-      q.h(var4, "content");
+      r.h(var2, "iconType");
+      r.h(var4, "content");
       return new ChannelNameContentNode(var1, var2, var3, var4);
    }
 
@@ -58,12 +58,12 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
          var1 = var1;
          if (this.channelType != var1.channelType) {
             return false;
-         } else if (!q.c(this.iconType, var1.iconType)) {
+         } else if (!r.c(this.iconType, var1.iconType)) {
             return false;
-         } else if (!q.c(this.icon, var1.icon)) {
+         } else if (!r.c(this.icon, var1.icon)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
@@ -87,20 +87,20 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
 
    public override fun toString(): String {
       val var3: ChannelType = this.channelType;
-      val var1: java.lang.String = this.iconType;
-      val var2: java.lang.String = this.icon;
-      val var4: java.util.List = this.content;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ChannelNameContentNode(channelType=");
-      var5.append(var3);
-      var5.append(", iconType=");
-      var5.append(var1);
-      var5.append(", icon=");
-      var5.append(var2);
-      var5.append(", content=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.iconType;
+      val var1: java.lang.String = this.icon;
+      val var5: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChannelNameContentNode(channelType=");
+      var4.append(var3);
+      var4.append(", iconType=");
+      var4.append(var2);
+      var4.append(", icon=");
+      var4.append(var1);
+      var4.append(", content=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

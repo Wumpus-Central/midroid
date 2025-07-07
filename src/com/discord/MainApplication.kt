@@ -30,7 +30,7 @@ import com.facebook.react.defaults.DefaultReactHost
 import com.facebook.react.modules.i18nmanager.I18nUtil
 import com.facebook.react.uimanager.UIManagerConstantsCache
 import java.util.concurrent.CountDownLatch
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MainApplication : TTILoggingApplication, ReactApplication {
    public open val reactNativeHost: ReactNativeHost = new DCDReactNativeHost(this)
@@ -38,7 +38,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    public open val reactHost: ReactHost
       public open get() {
          val var1: Context = this.getApplicationContext();
-         q.g(var1, "getApplicationContext(...)");
+         r.g(var1, "getApplicationContext(...)");
          return DefaultReactHost.getDefaultReactHost(var1, this.getReactNativeHost());
       }
 
@@ -48,7 +48,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    @JvmStatic
    fun `initialize$lambda$0`(var0: MainApplication): Unit {
       SoLoaderUtils.INSTANCE.init(var0);
-      DefaultNewArchitectureEntryPoint.load(false, false, false);
+      DefaultNewArchitectureEntryPoint.load(true, true, false);
       var0.initializeReactNativeLatch.countDown();
       HermesExecutor.loadLibrary();
       return Unit.a;
@@ -58,7 +58,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
       var var3: TTIMetrics;
       var var5: java.lang.String;
       label11: {
-         x9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
+         E9.a.b(false, false, null, "ReactNativeLoader", 10, new b(this), 7, null);
          var3 = TTIMetrics.INSTANCE;
          TTIMetrics.record$default(TTIMetrics.INSTANCE, "Start MainApplication.initialize()", 0L, null, false, 14, null);
          ReactMarkerListener.INSTANCE.start();
@@ -71,7 +71,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "287.12", 287412, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "288.8", 288108, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -84,7 +84,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@287.12.0-4+287412";
+         var5 = "discord_android@288.8.0-1+288108";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

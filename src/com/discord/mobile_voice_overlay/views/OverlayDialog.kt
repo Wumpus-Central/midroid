@@ -24,7 +24,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
 
    open fun OverlayDialog(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1);
       this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
@@ -39,7 +39,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
       this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
@@ -54,7 +54,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
    }
 
    open fun OverlayDialog(var1: Context, var2: AttributeSet, var3: Int) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       this.onDialogClosed = new b();
       this.setOnClickListener(new c(this));
@@ -75,7 +75,7 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
 
    @JvmStatic
    fun `onDialogClosed$lambda$0`(var0: OverlayDialog): Unit {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
@@ -113,11 +113,11 @@ public abstract class OverlayDialog : OverlayBubbleWrap {
             }
 
             public void onViewAttachedToWindow(View var1) {
-               kotlin.jvm.internal.q.h(var1, "v");
+               kotlin.jvm.internal.r.h(var1, "v");
             }
 
             public void onViewDetachedFromWindow(View var1) {
-               kotlin.jvm.internal.q.h(var1, "v");
+               kotlin.jvm.internal.r.h(var1, "v");
                this.$closingAnimator.end();
             }
          });

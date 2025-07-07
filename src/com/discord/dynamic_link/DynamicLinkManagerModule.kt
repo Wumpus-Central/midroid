@@ -4,17 +4,17 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class DynamicLinkManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
    @ReactMethod
    public fun getInitialURL(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var1.resolve(null);
    }
 

@@ -4,11 +4,11 @@ import com.discord.codegen.NativeJSWatchdogModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSWatchdogModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -29,27 +29,27 @@ public class JSWatchdogModule(reactContext: ReactApplicationContext) : NativeJSW
    }
 
    public override fun ping(sentTimestamp: Double, sessionId: String?, resetTimestamps: Boolean?, enableTrace: Boolean?, promise: Promise) {
-      q.h(var6, "promise");
-      val var7: Boolean;
+      r.h(var6, "promise");
+      val var9: Boolean;
       if (var4 != null) {
-         var7 = var4;
+         var9 = var4;
       } else {
-         var7 = false;
+         var9 = false;
       }
 
-      val var9: Long = (long)var1;
+      val var7: Long = (long)var1;
       var var12: java.lang.String = var3;
       if (var3 == null) {
          var12 = "";
       }
 
-      val var8: Boolean;
+      val var10: Boolean;
       if (var5 != null) {
-         var8 = var5;
+         var10 = var5;
       } else {
-         var8 = false;
+         var10 = false;
       }
 
-      JSWatchdogManager.INSTANCE.ping(var7, var9, var12, var8, var6);
+      JSWatchdogManager.INSTANCE.ping(var9, var7, var12, var10, var6);
    }
 }

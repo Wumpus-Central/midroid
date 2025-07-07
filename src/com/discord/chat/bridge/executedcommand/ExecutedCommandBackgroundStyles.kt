@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.executedcommand
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
@@ -43,12 +43,12 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.color, var1.color)) {
+         if (!r.c(this.color, var1.color)) {
             return false;
-         } else if (!q.c(this.borderRadius, var1.borderRadius)) {
+         } else if (!r.c(this.borderRadius, var1.borderRadius)) {
             return false;
          } else {
-            return q.c(this.spaceAround, var1.spaceAround);
+            return r.c(this.spaceAround, var1.spaceAround);
          }
       }
    }
@@ -77,18 +77,18 @@ public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadi
    }
 
    public override fun toString(): String {
-      val var1: Int = this.color;
-      val var4: Int = this.borderRadius;
-      val var3: java.lang.Boolean = this.spaceAround;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ExecutedCommandBackgroundStyles(color=");
-      var2.append(var1);
-      var2.append(", borderRadius=");
-      var2.append(var4);
-      var2.append(", spaceAround=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var3: Int = this.color;
+      val var2: Int = this.borderRadius;
+      val var1: java.lang.Boolean = this.spaceAround;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ExecutedCommandBackgroundStyles(color=");
+      var4.append(var3);
+      var4.append(", borderRadius=");
+      var4.append(var2);
+      var4.append(", spaceAround=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

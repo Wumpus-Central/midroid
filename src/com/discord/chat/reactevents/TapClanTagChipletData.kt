@@ -2,16 +2,16 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapClanTagChipletData(guildId: String) : ReactEvent {
    public final val guildId: String
 
    init {
-      q.h(var1, "guildId");
+      r.h(var1, "guildId");
       super();
       this.guildId = var1;
    }
@@ -21,7 +21,7 @@ public data class TapClanTagChipletData(guildId: String) : ReactEvent {
    }
 
    public fun copy(guildId: String = var0.guildId): TapClanTagChipletData {
-      q.h(var1, "guildId");
+      r.h(var1, "guildId");
       return new TapClanTagChipletData(var1);
    }
 
@@ -31,7 +31,7 @@ public data class TapClanTagChipletData(guildId: String) : ReactEvent {
       } else if (var1 !is TapClanTagChipletData) {
          return false;
       } else {
-         return q.c(this.guildId, (var1 as TapClanTagChipletData).guildId);
+         return r.c(this.guildId, (var1 as TapClanTagChipletData).guildId);
       }
    }
 

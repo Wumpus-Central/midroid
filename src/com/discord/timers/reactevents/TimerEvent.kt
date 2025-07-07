@@ -3,7 +3,7 @@ package com.discord.timers.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class TimerEvent(id: Int) : ReactEvent {

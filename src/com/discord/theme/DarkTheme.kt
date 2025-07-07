@@ -3,54 +3,54 @@ package com.discord.theme
 import android.content.res.Resources
 import android.content.res.Resources.Theme
 import com.discord.theme.utils.ColorUtilsKt
-import kotlin.jvm.internal.q
-import l2.A
-import l2.B
-import l2.C
-import l2.D
-import l2.E
-import l2.F
-import l2.G
-import l2.H
-import l2.I
-import l2.J
-import l2.K
-import l2.L
-import l2.M
-import l2.N
-import l2.O
-import l2.P
-import l2.Q
-import l2.S
-import l2.T
-import l2.U
-import l2.V
-import l2.W
-import l2.a
-import l2.b
-import l2.c
-import l2.d
-import l2.e
-import l2.f
-import l2.g
-import l2.h
-import l2.i
-import l2.k
-import l2.l
-import l2.m
-import l2.n
-import l2.o
-import l2.p
-import l2.r
-import l2.s
-import l2.t
-import l2.u
-import l2.v
-import l2.w
-import l2.x
-import l2.y
-import l2.z
-import s9.j
+import j2.A
+import j2.B
+import j2.C
+import j2.D
+import j2.E
+import j2.F
+import j2.G
+import j2.H
+import j2.I
+import j2.J
+import j2.K
+import j2.L
+import j2.M
+import j2.N
+import j2.O
+import j2.P
+import j2.Q
+import j2.S
+import j2.T
+import j2.U
+import j2.V
+import j2.W
+import j2.a
+import j2.b
+import j2.c
+import j2.d
+import j2.e
+import j2.f
+import j2.g
+import j2.h
+import j2.i
+import j2.k
+import j2.l
+import j2.m
+import j2.n
+import j2.o
+import j2.p
+import j2.q
+import j2.s
+import j2.t
+import j2.u
+import j2.v
+import j2.w
+import j2.x
+import j2.y
+import j2.z
+import kotlin.jvm.internal.r
+import z9.j
 
 internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int
@@ -342,8 +342,8 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
 
 
    init {
-      q.h(var1, "resources");
-      q.h(var2, "theme");
+      r.h(var1, "resources");
+      r.h(var2, "theme");
       super(null);
       this.androidRipple$delegate = j.a(new a(var1, var2));
       this.backgroundAccent$delegate = j.a(new c(var1, var2));
@@ -371,13 +371,13 @@ internal class DarkTheme(resources: Resources, theme: Theme) : DiscordThemeObjec
       this.infoDangerForeground$delegate = j.a(new g(var1, var2));
       this.interactiveActive$delegate = j.a(new h(var1, var2));
       this.interactiveMuted$delegate = j.a(new i(var1, var2));
-      this.interactiveNormal$delegate = j.a(new l2.j(var1, var2));
+      this.interactiveNormal$delegate = j.a(new j2.j(var1, var2));
       this.redesignButtonPrimaryBackground$delegate = j.a(new k(var1, var2));
       this.redesignButtonTertiaryBackground$delegate = j.a(new m(var1, var2));
       this.redesignButtonTertiaryText$delegate = j.a(new n(var1, var2));
       this.spoilerHiddenBackground$delegate = j.a(new p(var1, var2));
-      this.spoilerRevealedBackground$delegate = j.a(new l2.q(var1, var2));
-      this.statusDanger$delegate = j.a(new r(var1, var2));
+      this.spoilerRevealedBackground$delegate = j.a(new q(var1, var2));
+      this.statusDanger$delegate = j.a(new j2.r(var1, var2));
       this.statusDangerBackground$delegate = j.a(new s(var1, var2));
       this.statusPositive$delegate = j.a(new t(var1, var2));
       this.statusPositiveText$delegate = j.a(new u(var1, var2));

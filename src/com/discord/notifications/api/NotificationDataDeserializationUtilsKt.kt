@@ -1,5 +1,6 @@
 package com.discord.notifications.api
 
+import A9.q
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -7,12 +8,12 @@ import com.discord.snowflake.SnowflakeUtils
 import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
-   q.h(var0, "<this>");
-   q.h(var1, "notification");
+   r.h(var0, "<this>");
+   r.h(var1, "notification");
    var var9: java.util.Map = (java.util.Map)var1.get("userInfo");
    if (var9 is java.util.Map) {
       var9 = var9;
@@ -24,9 +25,9 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var5 : var9.entrySet()) {
-            if (var5.getKey() is java.lang.String && var5.getValue() is java.lang.String) {
-               var3.put(var5.getKey(), var5.getValue());
+         for (Entry var11 : var9.entrySet()) {
+            if (var11.getKey() is java.lang.String && var11.getValue() is java.lang.String) {
+               var3.put(var11.getKey(), var11.getValue());
             }
          }
 
@@ -35,19 +36,19 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
          for (Entry var24 : var3.entrySet()) {
             var var20: Any = var24.getKey();
             val var25: Any = var24.getValue();
-            q.f(var20, "null cannot be cast to non-null type kotlin.String");
+            r.f(var20, "null cannot be cast to non-null type kotlin.String");
             var20 = var20 as java.lang.String;
-            q.f(var25, "null cannot be cast to non-null type kotlin.String");
+            r.f(var25, "null cannot be cast to non-null type kotlin.String");
             var12.add(s.a(var20, var25 as java.lang.String));
          }
 
-         var9 = t9.q.t(var12);
+         var9 = q.t(var12);
          if (var9 != null) {
             break label72;
          }
       }
 
-      var9 = t9.q.h();
+      var9 = q.h();
    }
 
    var var19: ChannelId;

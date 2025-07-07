@@ -1,22 +1,22 @@
 package com.discord.js_watchdog
 
+import G9.b
 import android.content.Context
-import bb.U
-import bb.f
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
+import ib.U
+import ib.f
 import java.io.File
 import java.util.Timer
 import java.util.TimerTask
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import z9.b
 
 public object JSWatchdogManager {
    private final lateinit var storage: JSWatchdogStorage
@@ -49,7 +49,7 @@ public object JSWatchdogManager {
             if (var3) {
                var var4: JSWatchdogStorage = storage;
                if (storage == null) {
-                  q.y("storage");
+                  r.y("storage");
                   var4 = null;
                }
 
@@ -57,7 +57,7 @@ public object JSWatchdogManager {
                if (var9 == null || var9.length() == 0) {
                   var var10: File = cacheDir;
                   if (cacheDir == null) {
-                     q.y("cacheDir");
+                     r.y("cacheDir");
                      var10 = null;
                   }
 
@@ -70,7 +70,7 @@ public object JSWatchdogManager {
          }
 
          if (storage == null) {
-            q.y("storage");
+            r.y("storage");
          } else {
             var5 = storage;
          }
@@ -94,7 +94,7 @@ public object JSWatchdogManager {
       if (storage != null) {
          var var3: JSWatchdogStorage = storage;
          if (storage == null) {
-            q.y("storage");
+            r.y("storage");
             var3 = null;
          }
 
@@ -117,7 +117,7 @@ public object JSWatchdogManager {
 
    public fun initialize(context: Context) {
       label13: {
-         q.h(var1, "context");
+         r.h(var1, "context");
          synchronized (this){} // $VF: monitorenter 
 
          try {
@@ -132,8 +132,8 @@ public object JSWatchdogManager {
    }
 
    public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
-      q.h(var4, "sessionId");
-      q.h(var6, "promise");
+      r.h(var4, "sessionId");
+      r.h(var6, "promise");
       this.cancelExistingJobs();
       pingCoroutineJob = f.d(
          U.j,
@@ -226,7 +226,7 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var18: Timer = new Timer();
+                        val var21: Timer = new Timer();
                         val var20: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
@@ -245,7 +245,7 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var18.scheduleAtFixedRate(var20, 1500L, 1000L);
+                        var21.scheduleAtFixedRate(var20, 1500L, 1000L);
                         JSWatchdogManager.access$setFreezeTimer$p(var20);
                      }
                   } catch (var9: Exception) {

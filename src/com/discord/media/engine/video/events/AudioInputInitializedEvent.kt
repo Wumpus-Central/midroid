@@ -3,15 +3,15 @@ package com.discord.media.engine.video.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 internal data class AudioInputInitializedEvent(timeToInitialized: Double, description: Map<String, Any>) : ReactEvent {
    public final val timeToInitialized: Double
    public final val description: Map<String, Any>
 
    init {
-      q.h(var3, "description");
+      r.h(var3, "description");
       super();
       this.timeToInitialized = var1;
       this.description = var3;
@@ -26,7 +26,7 @@ internal data class AudioInputInitializedEvent(timeToInitialized: Double, descri
    }
 
    public fun copy(timeToInitialized: Double = var0.timeToInitialized, description: Map<String, Any> = var0.description): AudioInputInitializedEvent {
-      q.h(var3, "description");
+      r.h(var3, "description");
       return new AudioInputInitializedEvent(var1, var3);
    }
 
@@ -40,7 +40,7 @@ internal data class AudioInputInitializedEvent(timeToInitialized: Double, descri
          if (java.lang.Double.compare(this.timeToInitialized, var1.timeToInitialized) != 0) {
             return false;
          } else {
-            return q.c(this.description, var1.description);
+            return r.c(this.description, var1.description);
          }
       }
    }

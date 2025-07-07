@@ -1,6 +1,6 @@
 package com.discord.foreground_service
 
-import M1.a
+import K1.a
 import android.app.Service
 import android.content.Context
 import android.content.Intent
@@ -8,7 +8,7 @@ import android.os.IBinder
 import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class ForegroundService : Service {
    public open fun onBind(intent: Intent?): IBinder? {
@@ -56,8 +56,8 @@ internal class ForegroundService : Service {
       }
 
       public fun start(context: Context, onError: (Exception) -> Unit) {
-         q.h(var1, "context");
-         q.h(var2, "onError");
+         r.h(var1, "context");
+         r.h(var2, "onError");
 
          try {
             ForegroundServiceUtilsKt.startForegroundServiceCompat(var1, this.getServiceIntent(var1));
@@ -68,7 +68,7 @@ internal class ForegroundService : Service {
       }
 
       public fun stop(context: Context, service: Service?) {
-         q.h(var1, "context");
+         r.h(var1, "context");
          val var3: Long = System.currentTimeMillis() - ForegroundService.access$getLastServiceStartTime$cp();
          if (var3 > 3000L) {
             this.stopInternal(var1, var2);

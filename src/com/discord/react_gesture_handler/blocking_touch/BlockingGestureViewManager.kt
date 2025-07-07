@@ -5,7 +5,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.BlockingGestureViewManagerDelegate
 import com.facebook.react.viewmanagers.BlockingGestureViewManagerInterface
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "BlockingGestureView")
 internal class BlockingGestureViewManager : ViewGroupManager<BlockingGestureViewGroup>, BlockingGestureViewManagerInterface<BlockingGestureViewGroup> {
@@ -13,7 +13,7 @@ internal class BlockingGestureViewManager : ViewGroupManager<BlockingGestureView
       new BlockingGestureViewManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): BlockingGestureViewGroup {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new BlockingGestureViewGroup(var1);
    }
 

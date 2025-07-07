@@ -1,6 +1,6 @@
 package com.discord.image.fresco.postprocessors
 
-import A9.a
+import H9.a
 import com.discord.image.fresco.postprocessors.processors.CompositePostprocessor
 import com.discord.image.fresco.postprocessors.processors.GradientPostprocessor
 import com.discord.image.fresco.postprocessors.processors.GrayscalePostprocessor
@@ -8,8 +8,8 @@ import com.discord.image.fresco.postprocessors.processors.SafeRoundAsCirclePostp
 import com.facebook.imagepipeline.request.BasePostprocessor
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import z9.n
 
 public sealed interface PostProcessor {
    public open fun create(): BasePostprocessor {
@@ -39,14 +39,14 @@ public sealed interface PostProcessor {
 
    public companion object {
       public fun create(processor: PostProcessor): BasePostprocessor {
-         q.h(var1, "processor");
+         r.h(var1, "processor");
          val var5: Any;
          if (var1 is PostProcessor.Composite) {
             val var2: java.util.List = (var1 as PostProcessor.Composite).getPostprocessors();
             val var4: ArrayList = new ArrayList(i.v(var2, 10));
 
-            for (PostProcessor var6 : var2) {
-               var4.add($$INSTANCE.create(var6));
+            for (PostProcessor var3 : var2) {
+               var4.add($$INSTANCE.create(var3));
             }
 
             var5 = new CompositePostprocessor(var4);
@@ -70,12 +70,12 @@ public sealed interface PostProcessor {
       public final val postprocessors: List<PostProcessor>
 
       init {
-         q.h(var1, "postprocessors");
+         r.h(var1, "postprocessors");
          super();
          this.postprocessors = var1;
       }
 
-      public constructor(vararg postprocessors: PostProcessor) : q.h(var1, "postprocessors") {
+      public constructor(vararg postprocessors: PostProcessor) : r.h(var1, "postprocessors") {
          this(c.F0(var1));
       }
 
@@ -84,7 +84,7 @@ public sealed interface PostProcessor {
       }
 
       public fun copy(postprocessors: List<PostProcessor> = var0.postprocessors): com.discord.image.fresco.postprocessors.PostProcessor.Composite {
-         q.h(var1, "postprocessors");
+         r.h(var1, "postprocessors");
          return new PostProcessor.Composite(var1);
       }
 
@@ -98,7 +98,7 @@ public sealed interface PostProcessor {
          } else if (var1 !is PostProcessor.Composite) {
             return false;
          } else {
-            return q.c(this.postprocessors, (var1 as PostProcessor.Composite).postprocessors);
+            return r.c(this.postprocessors, (var1 as PostProcessor.Composite).postprocessors);
          }
       }
 
@@ -138,7 +138,7 @@ public sealed interface PostProcessor {
       public final val endPosition: Float
 
       init {
-         q.h(var1, "direction");
+         r.h(var1, "direction");
          super();
          this.direction = var1;
          this.startColor = var2;
@@ -174,7 +174,7 @@ public sealed interface PostProcessor {
          startPosition: Float = var0.startPosition,
          endPosition: Float = var0.endPosition
       ): com.discord.image.fresco.postprocessors.PostProcessor.Gradient {
-         q.h(var1, "direction");
+         r.h(var1, "direction");
          return new PostProcessor.Gradient(var1, var2, var3, var4, var5);
       }
 
@@ -214,17 +214,17 @@ public sealed interface PostProcessor {
 
       public override fun toString(): String {
          val var6: PostProcessor.Gradient.Direction = this.direction;
-         val var4: Int = this.startColor;
-         val var3: Int = this.endColor;
+         val var3: Int = this.startColor;
+         val var4: Int = this.endColor;
          val var2: Float = this.startPosition;
          val var1: Float = this.endPosition;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Gradient(direction=");
          var5.append(var6);
          var5.append(", startColor=");
-         var5.append(var4);
-         var5.append(", endColor=");
          var5.append(var3);
+         var5.append(", endColor=");
+         var5.append(var4);
          var5.append(", startPosition=");
          var5.append(var2);
          var5.append(", endPosition=");

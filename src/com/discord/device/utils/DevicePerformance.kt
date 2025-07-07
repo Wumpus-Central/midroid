@@ -2,7 +2,7 @@ package com.discord.device.utils
 
 import androidx.core.performance.play.services.PlayServicesDevicePerformance
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal object DevicePerformance {
    private final lateinit var playServicesDevicePerformance: PlayServicesDevicePerformance
@@ -11,7 +11,7 @@ internal object DevicePerformance {
       public final get() {
          var var1: PlayServicesDevicePerformance = playServicesDevicePerformance;
          if (playServicesDevicePerformance == null) {
-            q.y("playServicesDevicePerformance");
+            r.y("playServicesDevicePerformance");
             var1 = null;
          }
 
@@ -20,7 +20,7 @@ internal object DevicePerformance {
 
 
    public fun initializePlayServicesDevicePerformance(reactContext: ReactApplicationContext) {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       if (playServicesDevicePerformance == null) {
          playServicesDevicePerformance = new PlayServicesDevicePerformance(var1);
       }

@@ -2,7 +2,7 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.codedlinks.EmbeddedActivityInviteEmbedImpl
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
    codedLinkIndex: Int,
@@ -15,8 +15,8 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
    public final val constrainedWidth: Int
 
    fun EmbeddedActivityInviteMessageAccessory(var1: java.lang.String, var2: Int, var3: EmbeddedActivityInviteEmbedImpl, var4: Int) {
-      q.h(var1, "messageId");
-      q.h(var3, "embeddedActivityInviteEmbed");
+      r.h(var1, "messageId");
+      r.h(var3, "embeddedActivityInviteEmbed");
       val var5: StringBuilder = new StringBuilder();
       var5.append("embedded activity invite ");
       var5.append(var2);
@@ -49,8 +49,8 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
       embeddedActivityInviteEmbed: EmbeddedActivityInviteEmbedImpl = ...,
       constrainedWidth: Int = ...
    ): EmbeddedActivityInviteMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var3, "embeddedActivityInviteEmbed");
+      r.h(var1, "messageId");
+      r.h(var3, "embeddedActivityInviteEmbed");
       return new EmbeddedActivityInviteMessageAccessory(var1, var2, var3, var4, null);
    }
 
@@ -65,7 +65,7 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
             return false;
          } else if (this.codedLinkIndex != var1.codedLinkIndex) {
             return false;
-         } else if (!q.c(this.embeddedActivityInviteEmbed, var1.embeddedActivityInviteEmbed)) {
+         } else if (!r.c(this.embeddedActivityInviteEmbed, var1.embeddedActivityInviteEmbed)) {
             return false;
          } else {
             return this.constrainedWidth == var1.constrainedWidth;
@@ -80,18 +80,18 @@ public data class EmbeddedActivityInviteMessageAccessory(messageId: MessageId,
 
    public override fun toString(): String {
       val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Int = this.codedLinkIndex;
+      val var1: Int = this.codedLinkIndex;
       val var3: EmbeddedActivityInviteEmbedImpl = this.embeddedActivityInviteEmbed;
-      val var1: Int = this.constrainedWidth;
+      val var2: Int = this.constrainedWidth;
       val var5: StringBuilder = new StringBuilder();
       var5.append("EmbeddedActivityInviteMessageAccessory(messageId=");
       var5.append(var4);
       var5.append(", codedLinkIndex=");
-      var5.append(var2);
+      var5.append(var1);
       var5.append(", embeddedActivityInviteEmbed=");
       var5.append(var3);
       var5.append(", constrainedWidth=");
-      var5.append(var1);
+      var5.append(var2);
       var5.append(")");
       return var5.toString();
    }

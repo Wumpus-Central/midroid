@@ -15,10 +15,10 @@ import com.discord.primitives.MessageFlagKt
 internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, constrainedWidth: Int, radiusPx: Int, verifyAge: Boolean?): MessageAttachmentAccessory {
    var var12: SpoilerAttributes;
    label50: {
-      kotlin.jvm.internal.q.h(var0, "<this>");
-      kotlin.jvm.internal.q.h(var1, "message");
+      kotlin.jvm.internal.r.h(var0, "<this>");
+      kotlin.jvm.internal.r.h(var1, "message");
       var12 = SpoilerAttributes.Companion.forAttachment(var0, var1, var2, var5);
-      if (kotlin.jvm.internal.q.c(var1.isCurrentUserMessageAuthor(), java.lang.Boolean.TRUE)) {
+      if (kotlin.jvm.internal.r.c(var1.isCurrentUserMessageAuthor(), java.lang.Boolean.TRUE)) {
          val var11: java.lang.String = var1.getNonce-N_6c4I0();
          var15 = var11;
          if (var11 != null) {
@@ -35,7 +35,7 @@ internal fun Attachment.createAttachmentAccessory(message: Message, index: Int, 
       if (var6 != 2) {
          if (var6 != 3) {
             if (var6 != 4) {
-               throw new s9.n();
+               throw new z9.n();
             }
 
             var14 = new AudioAttachmentMessageAccessory(

@@ -11,7 +11,7 @@ import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.message.system.AutomodSystemMessageView
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AutomodSystemMessageDelegate(eventHandlerProvider: () -> ChatEventHandler,
       messageComponentProvider: () -> ComponentProvider,
@@ -28,25 +28,25 @@ public class AutomodSystemMessageDelegate(eventHandlerProvider: () -> ChatEventH
 
 
    init {
-      q.h(var1, "eventHandlerProvider");
-      q.h(var2, "messageComponentProvider");
-      q.h(var3, "messageAccessoriesRecycledViewPool");
+      r.h(var1, "eventHandlerProvider");
+      r.h(var2, "messageComponentProvider");
+      r.h(var3, "messageAccessoriesRecycledViewPool");
       super(var1, null, 2, null);
       this.messageComponentProvider = var2;
       this.messageAccessoriesRecycledViewPool = var3;
    }
 
    public open fun bindView(view: AutomodSystemMessageView, item: AutomodSystemMessageItem, metadata: Metadata<AutomodSystemMessageView>) {
-      q.h(var1, "view");
-      q.h(var2, "item");
-      q.h(var3, "metadata");
+      r.h(var1, "view");
+      r.h(var2, "item");
+      r.h(var3, "metadata");
       var1.setMessage(var2.getMessage(), var2.getMessageContext(), this.getEventHandler(), this.getComponentProvider(), var2.getAllowChildGestures());
    }
 
    public fun createAndBindStandaloneView(parent: ViewGroup, message: Message, messageContext: MessageContext): AutomodSystemMessageView {
-      q.h(var1, "parent");
-      q.h(var2, "message");
-      q.h(var3, "messageContext");
+      r.h(var1, "parent");
+      r.h(var2, "message");
+      r.h(var3, "messageContext");
       val var4: AutomodSystemMessageView = this.createView(var1);
       val var5: AutomodSystemMessageItem = new AutomodSystemMessageItem(var2, var3, false, 4, null);
       AutomodSystemMessageView.setMessage$default(var4, var5.getMessage(), var5.getMessageContext(), this.getEventHandler(), null, false, 24, null);
@@ -54,16 +54,16 @@ public class AutomodSystemMessageDelegate(eventHandlerProvider: () -> ChatEventH
    }
 
    public open fun createView(parent: ViewGroup): AutomodSystemMessageView {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      q.g(var2, "getContext(...)");
+      r.g(var2, "getContext(...)");
       val var3: AutomodSystemMessageView = new AutomodSystemMessageView(var2, null, 2, null);
       var3.setAccessoriesRecycledViewPool(this.messageAccessoriesRecycledViewPool);
       return var3;
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      q.h(var1, "item");
+      r.h(var1, "item");
       return var1 is AutomodSystemMessageItem;
    }
 }

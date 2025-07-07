@@ -3,7 +3,7 @@ package com.discord.async_init
 import com.discord.logging.Log
 import java.util.ArrayList
 import kotlin.jvm.functions.Function0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1000L) {
    private final val name: String
@@ -35,7 +35,7 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
    private final var initStartMs: Long
 
    init {
-      q.h(var1, "name");
+      r.h(var1, "name");
       super();
       this.name = var1;
       this.longDispatchThresholdMs = var2;
@@ -48,15 +48,15 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
          this.initStartMs = System.currentTimeMillis();
       }
 
-      val var3: Log = Log.INSTANCE;
-      val var2: java.lang.String = this.name;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Initializing async dispatcher for ");
-      var4.append(var2);
-      var4.append(", ");
-      var4.append(var1);
-      var4.append(" queued tasks");
-      Log.i$default(var3, var2, var4.toString(), null, 4, null);
+      val var2: Log = Log.INSTANCE;
+      val var4: java.lang.String = this.name;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Initializing async dispatcher for ");
+      var3.append(var4);
+      var3.append(", ");
+      var3.append(var1);
+      var3.append(" queued tasks");
+      Log.i$default(var2, var4, var3.toString(), null, 4, null);
    }
 
    private fun onInitFinish() {
@@ -88,7 +88,7 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
    }
 
    public inline fun post(validate: Boolean = true, crossinline task: () -> Unit) {
-      q.h(var2, "task");
+      r.h(var2, "task");
       if (var1) {
          this.validateState();
       }
@@ -111,8 +111,8 @@ public class AsyncInitDispatcher(name: String, longDispatchThresholdMs: Long = 1
    }
 
    public inline fun postOrElse(task: () -> Unit, fallback: () -> Unit) {
-      q.h(var1, "task");
-      q.h(var2, "fallback");
+      r.h(var1, "task");
+      r.h(var2, "fallback");
       this.validateState();
       if (this.getInitialized()) {
          var1.invoke();

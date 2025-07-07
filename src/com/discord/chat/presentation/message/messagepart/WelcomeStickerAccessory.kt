@@ -2,21 +2,21 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.sticker.Sticker
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : MessageAccessory {
    public final val message: Message
    public final val sticker: Sticker
 
    init {
-      q.h(var1, "message");
-      q.h(var2, "sticker");
-      val var5: java.lang.String = var1.getId-3Eiw7ao();
+      r.h(var1, "message");
+      r.h(var2, "sticker");
+      val var6: java.lang.String = var1.getId-3Eiw7ao();
       val var3: Long = var2.getId();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("welcome sticker ");
-      var6.append(var3);
-      super(var5, var6.toString(), false, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("welcome sticker ");
+      var5.append(var3);
+      super(var6, var5.toString(), false, 4, null);
       this.message = var1;
       this.sticker = var2;
    }
@@ -30,8 +30,8 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
    }
 
    public fun copy(message: Message = var0.message, sticker: Sticker = var0.sticker): WelcomeStickerAccessory {
-      q.h(var1, "message");
-      q.h(var2, "sticker");
+      r.h(var1, "message");
+      r.h(var2, "sticker");
       return new WelcomeStickerAccessory(var1, var2);
    }
 
@@ -42,10 +42,10 @@ public data class WelcomeStickerAccessory(message: Message, sticker: Sticker) : 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.message, var1.message)) {
+         if (!r.c(this.message, var1.message)) {
             return false;
          } else {
-            return q.c(this.sticker, var1.sticker);
+            return r.c(this.sticker, var1.sticker);
          }
       }
    }

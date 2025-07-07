@@ -3,7 +3,7 @@ package com.discord.span.utilities.spannable
 import com.discord.span.utilities.common.BackgroundStyle
 import com.discord.span.utilities.common.BorderStyle
 import com.discord.span.utilities.common.ShadowStyle
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public open class BackgroundSpan(background: BackgroundStyle, border: BorderStyle? = null, shadow: ShadowStyle? = null) {
    public final val background: BackgroundStyle
@@ -11,7 +11,7 @@ public open class BackgroundSpan(background: BackgroundStyle, border: BorderStyl
    public final val shadow: ShadowStyle?
 
    init {
-      q.h(var1, "background");
+      r.h(var1, "background");
       super();
       this.background = var1;
       this.border = var2;

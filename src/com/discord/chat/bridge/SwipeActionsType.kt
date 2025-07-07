@@ -1,12 +1,12 @@
 package com.discord.chat.bridge
 
-import A9.a
+import H9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f(with = SwipeActionsType.Serializer::class)
 public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
@@ -43,5 +43,5 @@ public enum class SwipeActionsType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(G.b(SwipeActionsType.class), null, 2)
+   public object Serializer : IntEnumSerializer(H.b(SwipeActionsType.class), null, 2)
 }

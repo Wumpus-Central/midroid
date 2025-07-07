@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import com.discord.image.color_quantizer.ColorCutQuantizer
 import com.discord.image.color_quantizer.Swatch
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import y.c
 
 public object DominantColor {
@@ -25,7 +25,7 @@ public object DominantColor {
    }
 
    public fun getRepresentativeColors(bitmap: Bitmap): List<Int>? {
-      q.h(var1, "bitmap");
+      r.h(var1, "bitmap");
 
       var var3: java.util.List;
       try {

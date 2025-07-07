@@ -8,7 +8,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class SafetyPolicyNoticeBinding implements ViewBinding {
    public final TextView description;
@@ -31,11 +31,11 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
 
    public static SafetyPolicyNoticeBinding bind(View var0) {
       int var1 = R.id.description;
-      TextView var4 = (TextView)a.a(var0, var1);
-      if (var4 != null) {
+      TextView var6 = (TextView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.footer;
-         LinearLayout var6 = (LinearLayout)a.a(var0, var1);
-         if (var6 != null) {
+         LinearLayout var4 = (LinearLayout)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.icon;
             SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
             if (var7 != null) {
@@ -48,7 +48,7 @@ public final class SafetyPolicyNoticeBinding implements ViewBinding {
                      var1 = R.id.title;
                      TextView var2 = (TextView)a.a(var0, var1);
                      if (var2 != null) {
-                        return new SafetyPolicyNoticeBinding(var0, var4, var6, var7, var5, var3, var2);
+                        return new SafetyPolicyNoticeBinding(var0, var6, var4, var7, var5, var3, var2);
                      }
                   }
                }

@@ -19,7 +19,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "font");
+      kotlin.jvm.internal.r.h(var1, "font");
       super();
       this.font = var1;
       this.linkColor = var2;
@@ -49,7 +49,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
       backgroundStyle: LinkBackgroundStyle? = var0.backgroundStyle,
       icon: ReactAsset? = var0.icon
    ): LinkStyle {
-      kotlin.jvm.internal.q.h(var1, "font");
+      kotlin.jvm.internal.r.h(var1, "font");
       return new LinkStyle(var1, var2, var3, var4);
    }
 
@@ -64,7 +64,7 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
             return false;
          } else if (this.linkColor != var1.linkColor) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.backgroundStyle, var1.backgroundStyle)) {
+         } else if (!kotlin.jvm.internal.r.c(this.backgroundStyle, var1.backgroundStyle)) {
             return false;
          } else {
             return this.icon === var1.icon;
@@ -73,8 +73,8 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.font.hashCode();
-      val var4: Int = Integer.hashCode(this.linkColor);
+      val var4: Int = this.font.hashCode();
+      val var3: Int = Integer.hashCode(this.linkColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.backgroundStyle == null) {
@@ -87,21 +87,21 @@ public data class LinkStyle(font: DiscordFont = DiscordFont.PrimaryNormal,
          var2 = this.icon.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var4: DiscordFont = this.font;
+      val var3: DiscordFont = this.font;
       val var1: Int = this.linkColor;
-      val var3: LinkBackgroundStyle = this.backgroundStyle;
+      val var4: LinkBackgroundStyle = this.backgroundStyle;
       val var2: ReactAsset = this.icon;
       val var5: StringBuilder = new StringBuilder();
       var5.append("LinkStyle(font=");
-      var5.append(var4);
+      var5.append(var3);
       var5.append(", linkColor=");
       var5.append(var1);
       var5.append(", backgroundStyle=");
-      var5.append(var3);
+      var5.append(var4);
       var5.append(", icon=");
       var5.append(var2);
       var5.append(")");

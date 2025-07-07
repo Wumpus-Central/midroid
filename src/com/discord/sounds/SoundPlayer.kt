@@ -8,7 +8,7 @@ import android.net.Uri
 import com.discord.logging.Log
 import java.io.IOException
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usage: Int, soundResIdPrepared: (Int) -> Unit) {
    private final var mediaPlayer: MediaPlayer?
@@ -16,13 +16,13 @@ internal class SoundPlayer  internal constructor(mediaPlayer: MediaPlayer?, usag
    private final var volume: Float
    public final var numberOfLoops: Int
 
-   public constructor(context: Context, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) : q.h(var1, "context") {
-      q.h(var5, "soundResIdPrepared");
+   public constructor(context: Context, usage: Int, soundResId: Int?, filePath: String?, soundResIdPrepared: (Int) -> Unit) : r.h(var1, "context") {
+      r.h(var5, "soundResIdPrepared");
       this(SoundPlayer.Companion.access$createMediaPlayer(Companion, var1, var2, var3, var4), var2, var5);
    }
 
    init {
-      q.h(var3, "soundResIdPrepared");
+      r.h(var3, "soundResIdPrepared");
       super();
       this.mediaPlayer = var1;
       this.usage = var2;

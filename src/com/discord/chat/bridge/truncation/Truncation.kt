@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.truncation
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
@@ -62,19 +62,19 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             return false;
          } else if (this.expandable != var1.expandable) {
             return false;
-         } else if (!q.c(this.seeMoreLabel, var1.seeMoreLabel)) {
+         } else if (!r.c(this.seeMoreLabel, var1.seeMoreLabel)) {
             return false;
-         } else if (!q.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
+         } else if (!r.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
             return false;
          } else {
-            return q.c(this.forceShow, var1.forceShow);
+            return r.c(this.forceShow, var1.forceShow);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = Integer.hashCode(this.numberOfLines);
-      val var5: Int = java.lang.Boolean.hashCode(this.expandable);
+      val var5: Int = Integer.hashCode(this.numberOfLines);
+      val var4: Int = java.lang.Boolean.hashCode(this.expandable);
       var var3: Int = 0;
       val var1: Int;
       if (this.seeMoreLabel == null) {
@@ -94,28 +94,28 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
          var3 = this.forceShow.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var5: java.lang.String = this.seeMoreLabel;
+      val var4: java.lang.String = this.seeMoreLabel;
       val var6: Int = this.seeMoreLabelColor;
       val var3: java.lang.Boolean = this.forceShow;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Truncation(numberOfLines=");
-      var4.append(var1);
-      var4.append(", expandable=");
-      var4.append(var2);
-      var4.append(", seeMoreLabel=");
-      var4.append(var5);
-      var4.append(", seeMoreLabelColor=");
-      var4.append(var6);
-      var4.append(", forceShow=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Truncation(numberOfLines=");
+      var5.append(var1);
+      var5.append(", expandable=");
+      var5.append(var2);
+      var5.append(", seeMoreLabel=");
+      var5.append(var4);
+      var5.append(", seeMoreLabelColor=");
+      var5.append(var6);
+      var5.append(", forceShow=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

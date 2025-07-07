@@ -19,8 +19,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    private final val blurTargetChangeListener: () -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
@@ -99,10 +99,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var7 = true;
       }
 
-      var3 = this.blurViewLocation[0];
-      var4 = this.blurViewLocation[1];
+      var4 = this.blurViewLocation[0];
+      var3 = this.blurViewLocation[1];
       this.getLocationInWindow(this.blurViewLocation);
-      if (this.blurViewLocation[0] != var3 || this.blurViewLocation[1] != var4 || var7) {
+      if (this.blurViewLocation[0] != var4 || this.blurViewLocation[1] != var3 || var7) {
          this.blurViewWidth = this.getWidth();
          this.blurViewHeight = this.getHeight();
          this.blurViewPropertiesDirty = true;
@@ -121,8 +121,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      kotlin.jvm.internal.q.h(var1, "nativeId");
-      if (!kotlin.jvm.internal.q.c(this.blurTargetNativeId, var1)) {
+      kotlin.jvm.internal.r.h(var1, "nativeId");
+      if (!kotlin.jvm.internal.r.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }

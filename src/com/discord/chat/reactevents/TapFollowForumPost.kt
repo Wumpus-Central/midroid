@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapFollowForumPost(messageId: String, channelId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
    public final val channelId: String
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
       super();
       this.messageId = var1;
       this.channelId = var2;
@@ -28,8 +28,8 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
    }
 
    public fun copy(messageId: String = var0.messageId, channelId: String = var0.channelId): TapFollowForumPost {
-      q.h(var1, "messageId");
-      q.h(var2, "channelId");
+      r.h(var1, "messageId");
+      r.h(var2, "channelId");
       return new TapFollowForumPost(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.channelId, var1.channelId);
+            return r.c(this.channelId, var1.channelId);
          }
       }
    }
@@ -57,15 +57,15 @@ public data class TapFollowForumPost(messageId: String, channelId: String) : Rea
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.channelId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapFollowForumPost(messageId=");
-      var1.append(var2);
-      var1.append(", channelId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.channelId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapFollowForumPost(messageId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

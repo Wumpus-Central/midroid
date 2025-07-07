@@ -13,7 +13,7 @@ import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.qr.scanner.databinding.QrScannerBinding
 import com.discord.theme.utils.ColorUtilsKt
 import com.google.zxing.Result
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class QRScanner  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : FrameLayout,
@@ -26,40 +26,40 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    public final var onCodeNotFound: () -> Unit
 
    fun QRScanner(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun QRScanner(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
-      val var6: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
-      this.binding = var6;
-      val var5: CodeScanner = new CodeScanner(var1, var6.qrScanner);
-      this.codeScanner = var5;
+      val var5: QrScannerBinding = QrScannerBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var5, "inflate(...)");
+      this.binding = var5;
+      val var4: CodeScanner = new CodeScanner(var1, var5.qrScanner);
+      this.codeScanner = var4;
       this.runnable = new a(this);
       this.onCodeFound = new b();
       this.onCodeNotFound = new c();
-      var6.getRoot().setBackgroundColor(-16777216);
-      val var4: CodeScannerView = var6.qrScanner;
-      q.g(var6.qrScanner, "qrScanner");
-      var4.setVisibility(0);
-      var6.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
-      var5.a0(-1);
-      var5.f0(CodeScanner.K);
-      var5.b0(this);
-      var5.c0(this);
+      var5.getRoot().setBackgroundColor(-16777216);
+      val var6: CodeScannerView = var5.qrScanner;
+      r.g(var5.qrScanner, "qrScanner");
+      var6.setVisibility(0);
+      var5.qrScanner.setFrameColor(ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand));
+      var4.a0(-1);
+      var4.f0(CodeScanner.K);
+      var4.b0(this);
+      var4.c0(this);
    }
 
    @JvmStatic
    fun `onCodeFound$lambda$1`(var0: java.lang.String): Unit {
-      q.h(var0, "it");
+      r.h(var0, "it");
       return Unit.a;
    }
 
@@ -79,7 +79,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    }
 
    public override fun onDecoded(result: Result) {
-      q.h(var1, "result");
+      r.h(var1, "result");
       val var2: java.lang.String = var1.f();
       if (var2 != null && URLUtil.isValidUrl(var2)) {
          this.onCodeFound.invoke(var2);
@@ -94,7 +94,7 @@ public class QRScanner  public constructor(context: Context, attrs: AttributeSet
    }
 
    public override fun onError(thrown: Throwable) {
-      q.h(var1, "thrown");
+      r.h(var1, "thrown");
       CrashReporting.captureException$default(CrashReporting.INSTANCE, var1, false, 2, null);
       this.onCodeNotFound.invoke();
    }

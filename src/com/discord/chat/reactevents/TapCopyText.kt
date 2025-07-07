@@ -3,17 +3,17 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import sb.f
+import z9.s
 
 @f
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
    public final val text: CharSequence
 
    init {
-      q.h(var1, "text");
+      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -23,7 +23,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public fun copy(text: CharSequence = var0.text): TapCopyText {
-      q.h(var1, "text");
+      r.h(var1, "text");
       return new TapCopyText(var1);
    }
 
@@ -33,7 +33,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
       } else if (var1 !is TapCopyText) {
          return false;
       } else {
-         return q.c(this.text, (var1 as TapCopyText).text);
+         return r.c(this.text, (var1 as TapCopyText).text);
       }
    }
 
@@ -46,12 +46,12 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.CharSequence = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapCopyText(text=");
-      var2.append((Object)var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.CharSequence = this.text;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCopyText(text=");
+      var1.append((Object)var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

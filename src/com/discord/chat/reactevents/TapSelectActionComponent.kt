@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapSelectActionComponent(messageId: MessageId, componentId: String) : TapSelectActionComponent(var1, var2), ReactEvent {
@@ -13,8 +13,8 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    public final val componentId: String
 
    fun TapSelectActionComponent(var1: java.lang.String, var2: java.lang.String) {
-      q.h(var1, "messageId");
-      q.h(var2, "componentId");
+      r.h(var1, "messageId");
+      r.h(var2, "componentId");
       super();
       this.messageId = var1;
       this.componentId = var2;
@@ -29,8 +29,8 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    }
 
    public fun copy(messageId: MessageId = ..., componentId: String = ...): TapSelectActionComponent {
-      q.h(var1, "messageId");
-      q.h(var2, "componentId");
+      r.h(var1, "messageId");
+      r.h(var2, "componentId");
       return new TapSelectActionComponent(var1, var2, null);
    }
 
@@ -44,7 +44,7 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.componentId, var1.componentId);
+            return r.c(this.componentId, var1.componentId);
          }
       }
    }
@@ -58,15 +58,15 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = this.componentId;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapSelectActionComponent(messageId=");
-      var1.append(var2);
-      var1.append(", componentId=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.componentId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSelectActionComponent(messageId=");
+      var3.append(var1);
+      var3.append(", componentId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class ComponentEmoji(id: String? = null, name: String, src: String? = null, animated: Boolean = false, surrogates: String? = null) {
@@ -13,7 +13,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    public final val surrogates: String?
 
    init {
-      q.h(var2, "name");
+      r.h(var2, "name");
       super();
       this.id = var1;
       this.name = var2;
@@ -49,7 +49,7 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
       animated: Boolean = var0.animated,
       surrogates: String? = var0.surrogates
    ): ComponentEmoji {
-      q.h(var2, "name");
+      r.h(var2, "name");
       return new ComponentEmoji(var1, var2, var3, var4, var5);
    }
 
@@ -60,16 +60,16 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.name, var1.name)) {
+         } else if (!r.c(this.name, var1.name)) {
             return false;
-         } else if (!q.c(this.src, var1.src)) {
+         } else if (!r.c(this.src, var1.src)) {
             return false;
          } else if (this.animated != var1.animated) {
             return false;
          } else {
-            return q.c(this.surrogates, var1.surrogates);
+            return r.c(this.surrogates, var1.surrogates);
          }
       }
    }
@@ -100,24 +100,24 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
-      val var2: java.lang.String = this.src;
+      val var2: java.lang.String = this.id;
+      val var6: java.lang.String = this.name;
+      val var5: java.lang.String = this.src;
       val var1: Boolean = this.animated;
-      val var5: java.lang.String = this.surrogates;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ComponentEmoji(id=");
-      var6.append(var3);
-      var6.append(", name=");
-      var6.append(var4);
-      var6.append(", src=");
-      var6.append(var2);
-      var6.append(", animated=");
-      var6.append(var1);
-      var6.append(", surrogates=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var3: java.lang.String = this.surrogates;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ComponentEmoji(id=");
+      var4.append(var2);
+      var4.append(", name=");
+      var4.append(var6);
+      var4.append(", src=");
+      var4.append(var5);
+      var4.append(", animated=");
+      var4.append(var1);
+      var4.append(", surrogates=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

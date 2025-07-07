@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row {
@@ -11,7 +11,7 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
    public open val changeType: ChangeType
 
    init {
-      q.h(var2, "changeType");
+      r.h(var2, "changeType");
       super(null);
       this.index = var1;
       this.changeType = var2;
@@ -26,7 +26,7 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
    }
 
    public fun copy(index: Int = var0.index, changeType: ChangeType = var0.changeType): DeleteRow {
-      q.h(var2, "changeType");
+      r.h(var2, "changeType");
       return new DeleteRow(var1, var2);
    }
 
@@ -51,14 +51,14 @@ public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELE
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var2: ChangeType = this.changeType;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("DeleteRow(index=");
-      var3.append(var1);
-      var3.append(", changeType=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: ChangeType = this.changeType;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DeleteRow(index=");
+      var2.append(var1);
+      var2.append(", changeType=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

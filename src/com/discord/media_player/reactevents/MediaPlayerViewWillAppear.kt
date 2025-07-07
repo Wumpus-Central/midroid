@@ -4,10 +4,10 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import sb.f
+import z9.s
 
 @f
 public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -15,8 +15,8 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    public final val mediaItemIds: List<String>
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "mediaItemIds");
+      r.h(var1, "channelId");
+      r.h(var2, "mediaItemIds");
       super();
       this.channelId = var1;
       this.mediaItemIds = var2;
@@ -31,8 +31,8 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    }
 
    public fun copy(channelId: String = var0.channelId, mediaItemIds: List<String> = var0.mediaItemIds): MediaPlayerViewWillAppear {
-      q.h(var1, "channelId");
-      q.h(var2, "mediaItemIds");
+      r.h(var1, "channelId");
+      r.h(var2, "mediaItemIds");
       return new MediaPlayerViewWillAppear(var1, var2);
    }
 
@@ -43,10 +43,10 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.mediaItemIds, var1.mediaItemIds);
+            return r.c(this.mediaItemIds, var1.mediaItemIds);
          }
       }
    }
@@ -63,14 +63,14 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.util.List = this.mediaItemIds;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MediaPlayerViewWillAppear(channelId=");
-      var1.append(var2);
-      var1.append(", mediaItemIds=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.mediaItemIds;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerViewWillAppear(channelId=");
+      var3.append(var2);
+      var3.append(", mediaItemIds=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

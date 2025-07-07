@@ -2,9 +2,9 @@ package com.discord.misc.utilities.coroutines
 
 import android.view.View
 import android.view.View.OnAttachStateChangeListener
-import bb.S
+import ib.S
 import kotlin.coroutines.CoroutineContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.v
 
@@ -12,7 +12,7 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    public open val coroutineContext: CoroutineContext
 
    init {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super();
       this.$$delegate_0 = MainImmediateScopeKt.MainImmediateScope();
       var1.addOnAttachStateChangeListener(new OnAttachStateChangeListener(this) {
@@ -23,11 +23,11 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
          }
 
          public void onViewAttachedToWindow(View var1) {
-            q.h(var1, "view");
+            r.h(var1, "view");
          }
 
          public void onViewDetachedFromWindow(View var1) {
-            q.h(var1, "view");
+            r.h(var1, "view");
             val var3: AttachedViewCoroutineScope = this.this$0;
             val var2: StringBuilder = new StringBuilder();
             var2.append(var1);
@@ -38,7 +38,7 @@ public class AttachedViewCoroutineScope(view: View) : CoroutineScope {
    }
 
    public fun cancelAllWork(message: String, cause: Throwable? = null) {
-      q.h(var1, "message");
+      r.h(var1, "message");
       v.g(this.getCoroutineContext(), S.a(var1, var2));
    }
 }

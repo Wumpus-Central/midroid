@@ -29,11 +29,11 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
    private final var scrollingFast: Boolean
 
    init {
-      kotlin.jvm.internal.q.h(var1, "coreData");
-      kotlin.jvm.internal.q.h(var4, "onItemsChanged");
-      kotlin.jvm.internal.q.h(var5, "onPressEmoji");
-      kotlin.jvm.internal.q.h(var6, "onLongPressEmoji");
-      kotlin.jvm.internal.q.h(var8, "config");
+      kotlin.jvm.internal.r.h(var1, "coreData");
+      kotlin.jvm.internal.r.h(var4, "onItemsChanged");
+      kotlin.jvm.internal.r.h(var5, "onPressEmoji");
+      kotlin.jvm.internal.r.h(var6, "onLongPressEmoji");
+      kotlin.jvm.internal.r.h(var8, "config");
       super();
       this.emojiSize = var2;
       this.emojiMargin = var3;
@@ -111,14 +111,14 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          var4 = kotlin.ranges.d.n(var1, var2);
       }
 
-      val var8: java.util.Iterator = var4.iterator();
+      val var5: java.util.Iterator = var4.iterator();
       var2 = 0;
       var1 = 0;
 
-      while (var8.hasNext()) {
-         val var5: EmojiPickerItem = this.getItem((var8 as t9.n).a());
-         if (var5 !is EmojiPickerItem.Emoji && var5 !is EmojiPickerItem.EmojiPlaceholder) {
-            if (var5 !is EmojiPickerItem.Category) {
+      while (var5.hasNext()) {
+         val var8: EmojiPickerItem = this.getItem((var5 as A9.n).a());
+         if (var8 !is EmojiPickerItem.Emoji && var8 !is EmojiPickerItem.EmojiPlaceholder) {
+            if (var8 !is EmojiPickerItem.Category) {
                continue;
             }
          } else {
@@ -166,7 +166,7 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
       val var5: java.util.Iterator = new IntRange(0, var4).iterator();
 
       while (var5.hasNext()) {
-         var4 = (var5 as t9.n).a();
+         var4 = (var5 as A9.n).a();
          if (this.getItem(var4).itemType() == var2) {
             if (var3 == var1) {
                return var4;
@@ -192,36 +192,36 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
    }
 
    public open fun onBindViewHolder(holder: EmojiPickerViewHolder, position: Int) {
-      kotlin.jvm.internal.q.h(var1, "holder");
+      kotlin.jvm.internal.r.h(var1, "holder");
       if (var1 is EmojiPickerViewHolder.Category) {
          val var4: EmojiPickerViewHolder.Category = var1 as EmojiPickerViewHolder.Category;
          val var3: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
+         kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Category");
          var4.onBindViewHolder(var3 as EmojiPickerItem.Category);
       } else if (var1 is EmojiPickerViewHolder.EmojiPlaceholder) {
          (var1 as EmojiPickerViewHolder.EmojiPlaceholder).onBindViewHolder(this.emojiSize, this.emojiMargin);
       } else if (var1 is EmojiPickerViewHolder.Emoji) {
-         val var8: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
-         val var5: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var5, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Emoji");
-         var8.onBindViewHolder(
-            var5 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
+         val var5: EmojiPickerViewHolder.Emoji = var1 as EmojiPickerViewHolder.Emoji;
+         val var8: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.r.f(var8, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Emoji");
+         var5.onBindViewHolder(
+            var8 as EmojiPickerItem.Emoji, this.config.getAnimateEmoji(), this.emojiSize, this.emojiMargin, this.scrolling, this.scrollingFast
          );
       } else if (var1 is EmojiPickerViewHolder.Spacer) {
-         val var6: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
-         val var9: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
-         var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
+         val var9: EmojiPickerViewHolder.Spacer = var1 as EmojiPickerViewHolder.Spacer;
+         val var6: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.r.f(var6, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
+         var9.onBindViewHolder(var6 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var7: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.q.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
+         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var10: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.r.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else {
          if (var1 !is EmojiPickerViewHolder.PremiumInlineRoadblockHeader) {
-            throw new s9.n();
+            throw new z9.n();
          }
 
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockHeader).onBindViewHolder(this.useTier0UpsellContent);
@@ -229,54 +229,54 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmojiPickerViewHolder {
-      kotlin.jvm.internal.q.h(var1, "parent");
+      kotlin.jvm.internal.r.h(var1, "parent");
       var var5: Any;
       switch (EmojiPickerViewAdapter.WhenMappings.$EnumSwitchMapping$0[EmojiPickerItem.ItemType.Companion.create(var2).ordinal()]) {
          case 1:
             val var11: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var11, "getContext(...)");
+            kotlin.jvm.internal.r.g(var11, "getContext(...)");
             var5 = new EmojiPickerViewHolder.Emoji(var11, this.onPressEmoji, this.onLongPressEmoji);
             break;
          case 2:
             val var10: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var10, "getContext(...)");
+            kotlin.jvm.internal.r.g(var10, "getContext(...)");
             var5 = new EmojiPickerViewHolder.EmojiPlaceholder(var10);
             break;
          case 3:
             val var9: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var9, "getContext(...)");
+            kotlin.jvm.internal.r.g(var9, "getContext(...)");
             var5 = new EmojiPickerViewHolder.Category(var9);
             break;
          case 4:
             val var8: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var8, "getContext(...)");
+            kotlin.jvm.internal.r.g(var8, "getContext(...)");
             var5 = new EmojiPickerViewHolder.Spacer(var8);
             break;
          case 5:
             val var7: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var7, "getContext(...)");
+            kotlin.jvm.internal.r.g(var7, "getContext(...)");
             var5 = new EmojiPickerViewHolder.FooterUpsell(var7);
             break;
          case 6:
             val var6: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var6, "getContext(...)");
+            kotlin.jvm.internal.r.g(var6, "getContext(...)");
             var5 = new EmojiPickerViewHolder.PremiumInlineRoadblockHeader(var6, null, 2, null);
             break;
          case 7:
             val var4: Context = var1.getContext();
-            kotlin.jvm.internal.q.g(var4, "getContext(...)");
+            kotlin.jvm.internal.r.g(var4, "getContext(...)");
             var5 = new EmojiPickerViewHolder.PremiumInlineRoadblockFooter(var4, null, 2, null);
             break;
          default:
-            throw new s9.n();
+            throw new z9.n();
       }
 
       return (EmojiPickerViewHolder)var5;
    }
 
    public fun setConfig(config: Config) {
-      kotlin.jvm.internal.q.h(var1, "config");
-      if (!kotlin.jvm.internal.q.c(this.config, var1)) {
+      kotlin.jvm.internal.r.h(var1, "config");
+      if (!kotlin.jvm.internal.r.c(this.config, var1)) {
          this.config = var1;
          this.onItemsChanged.invoke(null, null);
       }
@@ -284,7 +284,7 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setCoreData(coreData: CoreData) {
-      kotlin.jvm.internal.q.h(var1, "coreData");
+      kotlin.jvm.internal.r.h(var1, "coreData");
       this.itemData.setCoreData(var1, new z(this));
    }
 
@@ -306,8 +306,8 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setEmojis(emojis: List<EmojiPickerItem>, emojisUnicode: List<EmojiPickerItem>) {
-      kotlin.jvm.internal.q.h(var1, "emojis");
-      kotlin.jvm.internal.q.h(var2, "emojisUnicode");
+      kotlin.jvm.internal.r.h(var1, "emojis");
+      kotlin.jvm.internal.r.h(var2, "emojisUnicode");
       this.itemData.setEmojis(var1, var2, new x(this));
    }
 

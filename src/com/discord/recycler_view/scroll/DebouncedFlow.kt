@@ -1,22 +1,22 @@
 package com.discord.recycler_view.scroll
 
-import bb.K
-import bb.f
 import com.discord.misc.utilities.coroutines.CollectWithLeadingDebounceKt
-import eb.e
-import eb.s
+import ib.K
+import ib.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.l
 import kotlin.jvm.internal.o
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.g
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 import kotlinx.coroutines.flow.MutableSharedFlow
+import lb.e
+import lb.t
 
 internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, collectWithLeadingDebounce: Boolean = true) {
    private final val eventCoroutineScope: CoroutineScope
@@ -25,12 +25,12 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    private final val events: MutableSharedFlow<Any>
 
    init {
-      q.h(var3, "onEvent");
+      r.h(var3, "onEvent");
       super();
       val var5: CoroutineScope = g.a(K.c());
       this.eventCoroutineScope = var5;
       this.eventDetectorActive = true;
-      this.events = s.b(0, 1, null, 4, null);
+      this.events = t.b(0, 1, null, 4, null);
       this.eventDetectorJob = f.d(
          var5,
          null,
@@ -59,7 +59,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var5: Any = z9.b.e();
+               val var5: Any = G9.b.e();
                if (this.label != 0) {
                   if (this.label != 1 && this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -80,7 +80,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2x) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion0(this.$tmp0, var1, var2x);
-                           return if (var1 === z9.b.e()) var1 else Unit.a;
+                           return if (var1 === G9.b.e()) var1 else Unit.a;
                         }
 
                         @Override
@@ -90,7 +90,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            if (var4) {
                               var2x = false;
                               if (var1 is l) {
-                                 var2x = q.c(this.getFunctionDelegate(), (var1 as l).getFunctionDelegate());
+                                 var2x = r.c(this.getFunctionDelegate(), (var1 as l).getFunctionDelegate());
                               }
                            }
 
@@ -101,7 +101,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            return new o(
                               2,
                               this.$tmp0,
-                              kotlin.jvm.internal.q.a::class.java,
+                              kotlin.jvm.internal.r.a::class.java,
                               "suspendConversion0",
                               "invokeSuspend$suspendConversion0(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
                               0
@@ -118,8 +118,8 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         return var5;
                      }
                   } else {
-                     val var8: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
-                     val var9: FlowCollector = new FlowCollector(this.$onEvent) {
+                     val var9: Flow = e.f(DebouncedFlow.access$getEvents$p(this.this$0), this.$timeoutMillis);
+                     val var8: FlowCollector = new FlowCollector(this.$onEvent) {
                         final Function1 $tmp0;
 
                         {
@@ -128,7 +128,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
 
                         public final Object emit(T var1, Continuation var2) {
                            var1 = <unrepresentable>.access$invokeSuspend$suspendConversion1(this.$tmp0, var1, var2);
-                           return if (var1 === z9.b.e()) var1 else Unit.a;
+                           return if (var1 === G9.b.e()) var1 else Unit.a;
                         }
 
                         @Override
@@ -138,7 +138,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            if (var4) {
                               var2 = false;
                               if (var1 is l) {
-                                 var2 = q.c(this.getFunctionDelegate(), (var1 as l).getFunctionDelegate());
+                                 var2 = r.c(this.getFunctionDelegate(), (var1 as l).getFunctionDelegate());
                               }
                            }
 
@@ -149,7 +149,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                            return new o(
                               2,
                               this.$tmp0,
-                              kotlin.jvm.internal.q.a::class.java,
+                              kotlin.jvm.internal.r.a::class.java,
                               "suspendConversion1",
                               "invokeSuspend$suspendConversion1(Lkotlin/jvm/functions/Function1;Ljava/lang/Object;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;",
                               0
@@ -162,7 +162,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
                         }
                      };
                      this.label = 2;
-                     if (var8.collect(var9, this) === var5) {
+                     if (var9.collect(var8, this) === var5) {
                         return var5;
                      }
                   }
@@ -185,7 +185,7 @@ internal class DebouncedFlow<T>(timeoutMillis: Long, onEvent: (Any) -> Unit, col
    }
 
    public fun tryEmit(event: Any) {
-      q.h(var1, "event");
-      this.events.e(var1);
+      r.h(var1, "event");
+      this.events.b(var1);
    }
 }

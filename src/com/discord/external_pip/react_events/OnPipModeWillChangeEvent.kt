@@ -3,7 +3,7 @@ package com.discord.external_pip.react_events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal class OnPipModeWillChangeEvent : ReactEvent {

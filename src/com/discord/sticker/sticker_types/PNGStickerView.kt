@@ -8,13 +8,13 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilder
 import com.facebook.drawee.drawable.ScalingUtils$ScaleType
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class PNGStickerView(context: Context) : SimpleDraweeView {
    private final val placeholder: ShapeDrawable
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       val var2: ShapeDrawable = new ShapeDrawable();
       var2.setShape(new OvalShape());
@@ -23,8 +23,8 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView {
    }
 
    public fun loadGifImage(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
-      q.h(var1, "url");
-      this.setController((J2.d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
+      r.h(var1, "url");
+      this.setController((H2.d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
       var var5: Int;
       if (var2 != null) {
          var5 = var2;
@@ -42,7 +42,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView {
    }
 
    public fun loadImage(url: String, widthDp: Int?, heightDp: Int?) {
-      q.h(var1, "url");
+      r.h(var1, "url");
       this.setImageURI(var1);
       (this.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
       (this.getHierarchy() as GenericDraweeHierarchy).A(this.placeholder);

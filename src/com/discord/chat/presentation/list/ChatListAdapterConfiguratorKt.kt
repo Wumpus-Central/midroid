@@ -26,10 +26,10 @@ public fun chatListAdapterConfigurator(
    messageComponentProvider: () -> ComponentProvider,
    messageAccessoriesRecycledViewPool: RecycledViewPool
 ): Map<Class<out BaseChatListItemDelegate<out ChatListItem, out View>>, Int> {
-   kotlin.jvm.internal.q.h(var0, "delegatesManager");
-   kotlin.jvm.internal.q.h(var1, "eventHandlerProvider");
-   kotlin.jvm.internal.q.h(var2, "messageComponentProvider");
-   kotlin.jvm.internal.q.h(var3, "messageAccessoriesRecycledViewPool");
+   kotlin.jvm.internal.r.h(var0, "delegatesManager");
+   kotlin.jvm.internal.r.h(var1, "eventHandlerProvider");
+   kotlin.jvm.internal.r.h(var2, "messageComponentProvider");
+   kotlin.jvm.internal.r.h(var3, "messageAccessoriesRecycledViewPool");
    val var4: HashMap = new HashMap();
 
    for (BaseChatListItemDelegate var6 : kotlin.collections.i.n(

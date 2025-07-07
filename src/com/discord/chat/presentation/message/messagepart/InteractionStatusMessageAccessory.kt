@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.interaction.InteractionStatus
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class InteractionStatusMessageAccessory(messageId: MessageId, interactionStatus: InteractionStatus) : InteractionStatusMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val interactionStatus: InteractionStatus
 
    fun InteractionStatusMessageAccessory(var1: java.lang.String, var2: InteractionStatus) {
-      q.h(var1, "messageId");
-      q.h(var2, "interactionStatus");
+      r.h(var1, "messageId");
+      r.h(var2, "interactionStatus");
       super(var1, "interaction status", false, 4, null);
       this.messageId = var1;
       this.interactionStatus = var2;
@@ -25,8 +25,8 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public fun copy(messageId: MessageId = ..., interactionStatus: InteractionStatus = ...): InteractionStatusMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "interactionStatus");
+      r.h(var1, "messageId");
+      r.h(var2, "interactionStatus");
       return new InteractionStatusMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +40,7 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.interactionStatus, var1.interactionStatus);
+            return r.c(this.interactionStatus, var1.interactionStatus);
          }
       }
    }
@@ -50,14 +50,14 @@ public data class InteractionStatusMessageAccessory(messageId: MessageId, intera
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: InteractionStatus = this.interactionStatus;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("InteractionStatusMessageAccessory(messageId=");
-      var3.append(var2);
-      var3.append(", interactionStatus=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: InteractionStatus = this.interactionStatus;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InteractionStatusMessageAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", interactionStatus=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

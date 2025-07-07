@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.polls
 
 import com.discord.emoji.RenderableEmoji
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class PollMediaEmoji(id: String?, name: String, displayName: String? = null, animated: Boolean = false) {
@@ -13,7 +13,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    public final val animated: Boolean
 
    init {
-      q.h(var2, "name");
+      r.h(var2, "name");
       super();
       this.id = var1;
       this.name = var2;
@@ -38,7 +38,7 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public fun copy(id: String? = var0.id, name: String = var0.name, displayName: String? = var0.displayName, animated: Boolean = var0.animated): PollMediaEmoji {
-      q.h(var2, "name");
+      r.h(var2, "name");
       return new PollMediaEmoji(var1, var2, var3, var4);
    }
 
@@ -49,11 +49,11 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.name, var1.name)) {
+         } else if (!r.c(this.name, var1.name)) {
             return false;
-         } else if (!q.c(this.displayName, var1.displayName)) {
+         } else if (!r.c(this.displayName, var1.displayName)) {
             return false;
          } else {
             return this.animated == var1.animated;
@@ -100,20 +100,20 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
 
    public override fun toString(): String {
       val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
-      val var3: java.lang.String = this.displayName;
+      val var2: java.lang.String = this.name;
+      val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("PollMediaEmoji(id=");
-      var2.append(var4);
-      var2.append(", name=");
-      var2.append(var5);
-      var2.append(", displayName=");
-      var2.append(var3);
-      var2.append(", animated=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMediaEmoji(id=");
+      var3.append(var4);
+      var3.append(", name=");
+      var3.append(var2);
+      var3.append(", displayName=");
+      var3.append(var5);
+      var3.append(", animated=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

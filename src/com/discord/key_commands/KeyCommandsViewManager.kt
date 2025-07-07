@@ -6,14 +6,14 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerDelegate
 import com.facebook.react.viewmanagers.KeyCommandsViewManagerInterface
 import com.facebook.react.views.view.ReactViewGroup
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "KeyCommandsView")
 public class KeyCommandsViewManager : ViewGroupManager<ReactViewGroup>, KeyCommandsViewManagerInterface<ReactViewGroup> {
    private final val delegate: KeyCommandsViewManagerDelegate<ReactViewGroup, KeyCommandsViewManager> = new KeyCommandsViewManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ReactViewGroup {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new ReactViewGroup(var1);
    }
 

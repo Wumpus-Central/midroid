@@ -8,7 +8,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDLocalImageThumbnailManagerDelegate
 import com.facebook.react.viewmanagers.DCDLocalImageThumbnailManagerInterface
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "DCDLocalImageThumbnail")
 public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbnailView>, DCDLocalImageThumbnailManagerInterface<LocalImageThumbnailView> {
@@ -16,7 +16,7 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
       new DCDLocalImageThumbnailManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): LocalImageThumbnailView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new LocalImageThumbnailView(var1, null, 0, 6, null);
    }
 
@@ -30,12 +30,12 @@ public class LocalImageThumbnailViewManager : SimpleViewManager<LocalImageThumbn
 
    @ReactProp(name = "localImageSource")
    public open fun setLocalImageSource(view: LocalImageThumbnailView, source: ReadableMap?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          val var5: Uri = Uri.parse(var2.getString("uri"));
          val var3: Int = (int)var2.getDouble("width");
          val var4: Int = (int)var2.getDouble("height");
-         q.e(var5);
+         r.e(var5);
          var1.setLocalImageSource(var5, var3, var4);
       }
    }

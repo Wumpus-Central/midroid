@@ -3,14 +3,14 @@ package com.discord.image.fresco.config
 import android.app.ActivityManager
 import android.content.Context
 import com.facebook.imagepipeline.cache.MemoryCacheParams
-import kotlin.jvm.internal.q
-import q3.o
+import kotlin.jvm.internal.r
+import o3.o
 
 internal class FrescoBitmapSupplier(context: Context) : o {
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var2: Any = var1.getSystemService("activity");
-      q.f(var2, "null cannot be cast to non-null type android.app.ActivityManager");
+      r.f(var2, "null cannot be cast to non-null type android.app.ActivityManager");
       super(var2 as ActivityManager);
    }
 

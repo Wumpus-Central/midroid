@@ -2,9 +2,9 @@ package com.discord.share.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class ShareBroadcastReceiverAppClicked(app: String, location: String?) : ReactEvent {
@@ -12,7 +12,7 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    public final val location: String?
 
    init {
-      q.h(var1, "app");
+      r.h(var1, "app");
       super();
       this.app = var1;
       this.location = var2;
@@ -27,7 +27,7 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public fun copy(app: String = var0.app, location: String? = var0.location): ShareBroadcastReceiverAppClicked {
-      q.h(var1, "app");
+      r.h(var1, "app");
       return new ShareBroadcastReceiverAppClicked(var1, var2);
    }
 
@@ -38,10 +38,10 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.app, var1.app)) {
+         if (!r.c(this.app, var1.app)) {
             return false;
          } else {
-            return q.c(this.location, var1.location);
+            return r.c(this.location, var1.location);
          }
       }
    }

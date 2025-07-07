@@ -1,14 +1,14 @@
 package com.discord.file_downloader
 
 import java.io.File
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public sealed class DownloadState protected constructor() {
    public data class Completed(file: File) : DownloadState {
       public final val file: File
 
       init {
-         q.h(var1, "file");
+         r.h(var1, "file");
          super(null);
          this.file = var1;
       }
@@ -18,7 +18,7 @@ public sealed class DownloadState protected constructor() {
       }
 
       public fun copy(file: File = var0.file): com.discord.file_downloader.DownloadState.Completed {
-         q.h(var1, "file");
+         r.h(var1, "file");
          return new DownloadState.Completed(var1);
       }
 
@@ -28,7 +28,7 @@ public sealed class DownloadState protected constructor() {
          } else if (var1 !is DownloadState.Completed) {
             return false;
          } else {
-            return q.c(this.file, (var1 as DownloadState.Completed).file);
+            return r.c(this.file, (var1 as DownloadState.Completed).file);
          }
       }
 
@@ -50,7 +50,7 @@ public sealed class DownloadState protected constructor() {
       public final val exception: Exception
 
       init {
-         q.h(var1, "exception");
+         r.h(var1, "exception");
          super(null);
          this.exception = var1;
       }
@@ -60,7 +60,7 @@ public sealed class DownloadState protected constructor() {
       }
 
       public fun copy(exception: Exception = var0.exception): com.discord.file_downloader.DownloadState.Failure {
-         q.h(var1, "exception");
+         r.h(var1, "exception");
          return new DownloadState.Failure(var1);
       }
 
@@ -70,7 +70,7 @@ public sealed class DownloadState protected constructor() {
          } else if (var1 !is DownloadState.Failure) {
             return false;
          } else {
-            return q.c(this.exception, (var1 as DownloadState.Failure).exception);
+            return r.c(this.exception, (var1 as DownloadState.Failure).exception);
          }
       }
 

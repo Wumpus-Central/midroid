@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class TapSummaryJumpData(channelId: String, messageId: String, summaryId: String) : ReactEvent {
@@ -13,9 +13,9 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    public final val summaryId: String
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "summaryId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "summaryId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -35,9 +35,9 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, summaryId: String = var0.summaryId): TapSummaryJumpData {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "summaryId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "summaryId");
       return new TapSummaryJumpData(var1, var2, var3);
    }
 
@@ -48,12 +48,12 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.messageId, var1.messageId)) {
+         } else if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.summaryId, var1.summaryId);
+            return r.c(this.summaryId, var1.summaryId);
          }
       }
    }
@@ -68,15 +68,15 @@ internal data class TapSummaryJumpData(channelId: String, messageId: String, sum
 
    public override fun toString(): String {
       val var1: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.summaryId;
+      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.summaryId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapSummaryJumpData(channelId=");
       var3.append(var1);
       var3.append(", messageId=");
-      var3.append(var4);
-      var3.append(", summaryId=");
       var3.append(var2);
+      var3.append(", summaryId=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

@@ -21,19 +21,19 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    private final val layerDrawable: LayerDrawable
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super();
       val var4: Float = FontManager.INSTANCE.getFontScale(var1);
       this.scale = var4;
       this.pxSize = (int)(SizeUtilsKt.getSpToPx(var3) * var4);
       val var5: Int = ColorUtilsKt.getThemeColor(var1, R.color.black, R.color.white);
       this.borderColor = var5;
-      val var6: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
-      this.roleDot = var6;
-      val var7: PaintDrawable = new PaintDrawable(var2);
-      var7.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-      this.backgroundDrawable = var7;
-      this.layerDrawable = new LayerDrawable(new Drawable[]{var7, var6});
+      val var7: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
+      this.roleDot = var7;
+      val var6: PaintDrawable = new PaintDrawable(var2);
+      var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+      this.backgroundDrawable = var6;
+      this.layerDrawable = new LayerDrawable(new Drawable[]{var6, var7});
    }
 
    public open fun getDrawable(): Drawable {
@@ -42,7 +42,7 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
    }
 
    public fun setColors(roleColors: RoleColors) {
-      kotlin.jvm.internal.q.h(var1, "roleColors");
+      kotlin.jvm.internal.r.h(var1, "roleColors");
       this.roleDot.setColors(var1);
    }
 }

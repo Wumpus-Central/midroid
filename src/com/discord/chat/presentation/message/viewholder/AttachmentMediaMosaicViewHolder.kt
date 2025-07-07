@@ -9,7 +9,7 @@ public class AttachmentMediaMosaicViewHolder(view: AttachmentMediaMosaicContaine
    private final val view: AttachmentMediaMosaicContainerView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "view");
+      kotlin.jvm.internal.r.h(var1, "view");
       super(var1, null);
       this.view = var1;
    }
@@ -25,11 +25,11 @@ public class AttachmentMediaMosaicViewHolder(view: AttachmentMediaMosaicContaine
       shouldAutoPlayGif: Boolean,
       constrainedWidth: Int
    ) {
-      kotlin.jvm.internal.q.h(var1, "eventHandler");
-      kotlin.jvm.internal.q.h(var2, "attachments");
-      kotlin.jvm.internal.q.h(var3, "onAttachmentClicked");
-      kotlin.jvm.internal.q.h(var5, "onAttachmentSpoilerClicked");
-      kotlin.jvm.internal.q.h(var6, "onAttachmentObscureToggle");
+      kotlin.jvm.internal.r.h(var1, "eventHandler");
+      kotlin.jvm.internal.r.h(var2, "attachments");
+      kotlin.jvm.internal.r.h(var3, "onAttachmentClicked");
+      kotlin.jvm.internal.r.h(var5, "onAttachmentSpoilerClicked");
+      kotlin.jvm.internal.r.h(var6, "onAttachmentObscureToggle");
       this.view.setAttachments(var2, var1, var3, var4, var5, var6, var7, var9, var8);
    }
 }

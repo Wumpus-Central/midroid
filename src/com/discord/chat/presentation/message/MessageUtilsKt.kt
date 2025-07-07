@@ -10,8 +10,8 @@ import com.discord.chat.bridge.rolecolors.RoleColorsKt
 import com.discord.react.FontManager
 
 public fun TextView.clearOrSetRoleColors(message: Message) {
-   kotlin.jvm.internal.q.h(var0, "<this>");
-   kotlin.jvm.internal.q.h(var1, "message");
+   kotlin.jvm.internal.r.h(var0, "<this>");
+   kotlin.jvm.internal.r.h(var1, "message");
    val var2: RoleColors = RoleColorsKt.toAndroidColors(var1.getRoleColors());
    if (!var1.getShouldShowRoleDot() && var1.getShouldShowRoleOnName()) {
       val var3: Int;
@@ -29,7 +29,7 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
                   0.0F,
                   150.0F,
                   0.0F,
-                  kotlin.collections.i.Q0(kotlin.collections.i.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
+                  kotlin.collections.i.S0(kotlin.collections.i.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
                   null,
                   TileMode.MIRROR
                )
@@ -42,7 +42,7 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
 }
 
 public fun Context.getChatTextSizeSp(): Int {
-   kotlin.jvm.internal.q.h(var0, "<this>");
+   kotlin.jvm.internal.r.h(var0, "<this>");
    val var1: Byte;
    if (FontManager.INSTANCE.getIsClassicChatFontScaleEnabled(var0)) {
       var1 = 14;

@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.list.item
 
 import android.view.View
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class PortalViewChatListItem(id: String, view: View, measuredDimensions: Pair<Int, Int>? = null) : ChatListItem {
    public open val id: String
@@ -9,8 +9,8 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    public final val measuredDimensions: Pair<Int, Int>?
 
    init {
-      q.h(var1, "id");
-      q.h(var2, "view");
+      r.h(var1, "id");
+      r.h(var2, "view");
       super(var1, null);
       this.id = var1;
       this.view = var2;
@@ -30,8 +30,8 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public fun copy(id: String = var0.id, view: View = var0.view, measuredDimensions: Pair<Int, Int>? = var0.measuredDimensions): PortalViewChatListItem {
-      q.h(var1, "id");
-      q.h(var2, "view");
+      r.h(var1, "id");
+      r.h(var2, "view");
       return new PortalViewChatListItem(var1, var2, var3);
    }
 
@@ -42,12 +42,12 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.view, var1.view)) {
+         } else if (!r.c(this.view, var1.view)) {
             return false;
          } else {
-            return q.c(this.measuredDimensions, var1.measuredDimensions);
+            return r.c(this.measuredDimensions, var1.measuredDimensions);
          }
       }
    }
@@ -66,17 +66,17 @@ public data class PortalViewChatListItem(id: String, view: View, measuredDimensi
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var1: View = this.view;
-      val var3: Pair = this.measuredDimensions;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PortalViewChatListItem(id=");
-      var4.append(var2);
-      var4.append(", view=");
-      var4.append(var1);
-      var4.append(", measuredDimensions=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.id;
+      val var4: View = this.view;
+      val var1: Pair = this.measuredDimensions;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PortalViewChatListItem(id=");
+      var2.append(var3);
+      var2.append(", view=");
+      var2.append(var4);
+      var2.append(", measuredDimensions=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

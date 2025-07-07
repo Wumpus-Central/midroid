@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.roleicons
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null, name: String, size: Int, alt: String) {
@@ -13,8 +13,8 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
    public final val alt: String
 
    init {
-      q.h(var3, "name");
-      q.h(var5, "alt");
+      r.h(var3, "name");
+      r.h(var5, "alt");
       super();
       this.source = var1;
       this.unicodeEmoji = var2;
@@ -50,8 +50,8 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
       size: Int = var0.size,
       alt: String = var0.alt
    ): RoleIcon {
-      q.h(var3, "name");
-      q.h(var5, "alt");
+      r.h(var3, "name");
+      r.h(var5, "alt");
       return new RoleIcon(var1, var2, var3, var4, var5);
    }
 
@@ -62,16 +62,16 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.source, var1.source)) {
+         if (!r.c(this.source, var1.source)) {
             return false;
-         } else if (!q.c(this.unicodeEmoji, var1.unicodeEmoji)) {
+         } else if (!r.c(this.unicodeEmoji, var1.unicodeEmoji)) {
             return false;
-         } else if (!q.c(this.name, var1.name)) {
+         } else if (!r.c(this.name, var1.name)) {
             return false;
          } else if (this.size != var1.size) {
             return false;
          } else {
-            return q.c(this.alt, var1.alt);
+            return r.c(this.alt, var1.alt);
          }
       }
    }
@@ -94,23 +94,23 @@ public data class RoleIcon(source: String? = null, unicodeEmoji: String? = null,
 
    public override fun toString(): String {
       val var2: java.lang.String = this.source;
-      val var5: java.lang.String = this.unicodeEmoji;
-      val var3: java.lang.String = this.name;
+      val var3: java.lang.String = this.unicodeEmoji;
+      val var6: java.lang.String = this.name;
       val var1: Int = this.size;
-      val var6: java.lang.String = this.alt;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("RoleIcon(source=");
-      var4.append(var2);
-      var4.append(", unicodeEmoji=");
-      var4.append(var5);
-      var4.append(", name=");
-      var4.append(var3);
-      var4.append(", size=");
-      var4.append(var1);
-      var4.append(", alt=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.alt;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("RoleIcon(source=");
+      var5.append(var2);
+      var5.append(", unicodeEmoji=");
+      var5.append(var3);
+      var5.append(", name=");
+      var5.append(var6);
+      var5.append(", size=");
+      var5.append(var1);
+      var5.append(", alt=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

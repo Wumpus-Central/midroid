@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.voiceinviteembed
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class VoiceInviteEmbed(guildId: String,
@@ -24,11 +24,11 @@ public data class VoiceInviteEmbed(guildId: String,
    public final val isInactive: Boolean
 
    init {
-      q.h(var1, "guildId");
-      q.h(var2, "channelId");
-      q.h(var3, "titleText");
-      q.h(var4, "bodyText");
-      q.h(var5, "joinText");
+      r.h(var1, "guildId");
+      r.h(var2, "channelId");
+      r.h(var3, "titleText");
+      r.h(var4, "bodyText");
+      r.h(var5, "joinText");
       super();
       this.guildId = var1;
       this.channelId = var2;
@@ -82,11 +82,11 @@ public data class VoiceInviteEmbed(guildId: String,
       joinDisabled: Boolean = var0.joinDisabled,
       isInactive: Boolean = var0.isInactive
    ): VoiceInviteEmbed {
-      q.h(var1, "guildId");
-      q.h(var2, "channelId");
-      q.h(var3, "titleText");
-      q.h(var4, "bodyText");
-      q.h(var5, "joinText");
+      r.h(var1, "guildId");
+      r.h(var2, "channelId");
+      r.h(var3, "titleText");
+      r.h(var4, "bodyText");
+      r.h(var5, "joinText");
       return new VoiceInviteEmbed(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -97,17 +97,17 @@ public data class VoiceInviteEmbed(guildId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.guildId, var1.guildId)) {
+         if (!r.c(this.guildId, var1.guildId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.titleText, var1.titleText)) {
+         } else if (!r.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!q.c(this.bodyText, var1.bodyText)) {
+         } else if (!r.c(this.bodyText, var1.bodyText)) {
             return false;
-         } else if (!q.c(this.joinText, var1.joinText)) {
+         } else if (!r.c(this.joinText, var1.joinText)) {
             return false;
-         } else if (!q.c(this.joinIcon, var1.joinIcon)) {
+         } else if (!r.c(this.joinIcon, var1.joinIcon)) {
             return false;
          } else if (this.joinDisabled != var1.joinDisabled) {
             return false;
@@ -119,10 +119,10 @@ public data class VoiceInviteEmbed(guildId: String,
 
    public override fun hashCode(): Int {
       val var3: Int = this.guildId.hashCode();
-      val var2: Int = this.channelId.hashCode();
-      val var6: Int = this.titleText.hashCode();
-      val var4: Int = this.bodyText.hashCode();
-      val var5: Int = this.joinText.hashCode();
+      val var5: Int = this.channelId.hashCode();
+      val var4: Int = this.titleText.hashCode();
+      val var2: Int = this.bodyText.hashCode();
+      val var6: Int = this.joinText.hashCode();
       val var1: Int;
       if (this.joinIcon == null) {
          var1 = 0;
@@ -130,38 +130,38 @@ public data class VoiceInviteEmbed(guildId: String,
          var1 = this.joinIcon.hashCode();
       }
 
-      return ((((((var3 * 31 + var2) * 31 + var6) * 31 + var4) * 31 + var5) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.joinDisabled)) * 31
+      return ((((((var3 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var6) * 31 + var1) * 31 + java.lang.Boolean.hashCode(this.joinDisabled)) * 31
          + java.lang.Boolean.hashCode(this.isInactive);
    }
 
    public override fun toString(): String {
-      val var8: java.lang.String = this.guildId;
-      val var3: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.titleText;
-      val var9: java.lang.String = this.bodyText;
-      val var7: java.lang.String = this.joinText;
-      val var6: java.lang.String = this.joinIcon;
+      val var3: java.lang.String = this.guildId;
+      val var6: java.lang.String = this.channelId;
+      val var9: java.lang.String = this.titleText;
+      val var7: java.lang.String = this.bodyText;
+      val var4: java.lang.String = this.joinText;
+      val var5: java.lang.String = this.joinIcon;
       val var1: Boolean = this.joinDisabled;
       val var2: Boolean = this.isInactive;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("VoiceInviteEmbed(guildId=");
-      var4.append(var8);
-      var4.append(", channelId=");
-      var4.append(var3);
-      var4.append(", titleText=");
-      var4.append(var5);
-      var4.append(", bodyText=");
-      var4.append(var9);
-      var4.append(", joinText=");
-      var4.append(var7);
-      var4.append(", joinIcon=");
-      var4.append(var6);
-      var4.append(", joinDisabled=");
-      var4.append(var1);
-      var4.append(", isInactive=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("VoiceInviteEmbed(guildId=");
+      var8.append(var3);
+      var8.append(", channelId=");
+      var8.append(var6);
+      var8.append(", titleText=");
+      var8.append(var9);
+      var8.append(", bodyText=");
+      var8.append(var7);
+      var8.append(", joinText=");
+      var8.append(var4);
+      var8.append(", joinIcon=");
+      var8.append(var5);
+      var8.append(", joinDisabled=");
+      var8.append(var1);
+      var8.append(", isInactive=");
+      var8.append(var2);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

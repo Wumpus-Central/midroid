@@ -1,5 +1,6 @@
 package com.discord.misc.utilities.coroutines
 
+import G9.b
 import android.content.Context
 import android.content.ContextWrapper
 import android.view.View
@@ -8,19 +9,18 @@ import androidx.lifecycle.RepeatOnLifecycleKt
 import androidx.lifecycle.Lifecycle.State
 import com.discord.misc.utilities.R
 import kotlin.coroutines.Continuation
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
-import z9.b
 
 public final val attachedScope: AttachedViewCoroutineScope
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       return attachedScope(var0, false);
    }
 
 
 public fun View.attachedScope(verifyAttached: Boolean): AttachedViewCoroutineScope {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (var1 && !var0.isAttachedToWindow()) {
       val var5: StringBuilder = new StringBuilder();
       var5.append("View not attached to window: ");
@@ -50,7 +50,7 @@ public suspend fun View.repeatOnLifecycleOwner(state: State, block: (CoroutineSc
 }
 
 public fun View.requireLifecycleOwner(): LifecycleOwner {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
 
    for (Context var1 = var0.getContext(); var1 != null; var1 = ((ContextWrapper)var1).getBaseContext()) {
       if (var1 is LifecycleOwner) {

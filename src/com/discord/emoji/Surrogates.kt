@@ -1,13 +1,13 @@
 package com.discord.emoji
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public inline class Surrogates {
    public final val value: String
 
    @JvmStatic
    fun `constructor-impl`(var0: java.lang.String): java.lang.String {
-      q.h(var0, "value");
+      r.h(var0, "value");
       return var0;
    }
 
@@ -16,13 +16,13 @@ public inline class Surrogates {
       if (var1 !is Surrogates) {
          return false;
       } else {
-         return q.c(var0, (var1 as Surrogates).unbox-impl());
+         return r.c(var0, (var1 as Surrogates).unbox-impl());
       }
    }
 
    @JvmStatic
    fun `equals-impl0`(var0: java.lang.String, var1: java.lang.String): Boolean {
-      return q.c(var0, var1);
+      return r.c(var0, var1);
    }
 
    @JvmStatic
@@ -32,12 +32,12 @@ public inline class Surrogates {
 
    @JvmStatic
    public fun toAssetUrl(): String {
-      val var1: java.lang.String = toCodePoints-impl(var0);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("asset:///emoji-");
-      var2.append(var1);
-      var2.append(".png");
-      return var2.toString();
+      var0 = toCodePoints-impl(var0);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("asset:///emoji-");
+      var1.append(var0);
+      var1.append(".png");
+      return var1.toString();
    }
 
    @JvmStatic
@@ -56,7 +56,7 @@ public inline class Surrogates {
       }
 
       var0 = var3.toString();
-      q.g(var0, "toString(...)");
+      r.g(var0, "toString(...)");
       return var0;
    }
 
@@ -72,7 +72,7 @@ public inline class Surrogates {
    @JvmStatic
    public fun withoutDiversity(): String {
       val var1: CharArray = Character.toChars(var0.codePointAt(0));
-      q.g(var1, "toChars(...)");
+      r.g(var1, "toChars(...)");
       return kotlin.collections.c.i0(var1, "", null, null, 0, null, null, 62, null);
    }
 

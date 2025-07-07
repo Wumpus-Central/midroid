@@ -12,7 +12,7 @@ internal class MediaEngineNativeConnections {
    }
 
    public fun register(connectionId: Int, connection: NativeConnection) {
-      kotlin.jvm.internal.q.h(var2, "connection");
+      kotlin.jvm.internal.r.h(var2, "connection");
       if (!this.connections.containsKey(var1)) {
          if (!this.connections.containsValue(var2)) {
             this.connections.put(var1, var2);

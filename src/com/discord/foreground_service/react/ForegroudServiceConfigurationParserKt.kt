@@ -1,5 +1,7 @@
 package com.discord.foreground_service.react
 
+import A9.n
+import A9.q
 import com.discord.foreground_service.service.ServiceNotificationConfiguration
 import com.discord.foreground_service.service.ServiceNotificationConfiguration.Action
 import com.discord.foreground_service.service.ServiceNotificationConfiguration.Companion
@@ -10,12 +12,11 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
-import kotlin.jvm.internal.q
-import t9.n
+import kotlin.jvm.internal.r
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
-   q.h(var0, "<this>");
-   q.h(var1, "readableMap");
+   r.h(var0, "<this>");
+   r.h(var1, "readableMap");
    val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
    val var5: java.lang.String = var1.getString("content");
    var0 = ServiceNotificationConfiguration.Companion;
@@ -41,7 +42,7 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
          }
 
          var2 = var7.getMap((var8 as n).a());
-         q.e(var2);
+         r.e(var2);
          var3.add(parseAction(ServiceNotificationConfiguration.Companion, var2));
       }
    } else {
@@ -63,22 +64,22 @@ private fun Companion.parseAction(readableMap: ReadableMap): Action {
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var2, var3, var4, t9.q.h());
+   return new ServiceNotificationConfiguration.Action(var2, var3, var4, q.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
-   q.h(var0, "<this>");
-   q.h(var1, "readableArray");
+   r.h(var0, "<this>");
+   r.h(var1, "readableArray");
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
    val var6: ArrayList = new ArrayList(i.v(var3, 10));
-   val var4: java.util.Iterator = var3.iterator();
+   val var7: java.util.Iterator = var3.iterator();
 
-   while (var4.hasNext()) {
-      val var2: Int = (var4 as n).a();
-      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var5: ReadableMap = var1.getMap(var2);
-      q.e(var5);
-      var6.add(parse(var7, var5));
+   while (var7.hasNext()) {
+      val var2: Int = (var7 as n).a();
+      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var4: ReadableMap = var1.getMap(var2);
+      r.e(var4);
+      var6.add(parse(var5, var4));
    }
 
    return var6;

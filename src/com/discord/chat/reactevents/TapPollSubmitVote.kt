@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapPollSubmitVote(channelId: String, messageId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    public final val messageId: String
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -28,8 +28,8 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId): TapPollSubmitVote {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
       return new TapPollSubmitVote(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.messageId, var1.messageId);
+            return r.c(this.messageId, var1.messageId);
          }
       }
    }

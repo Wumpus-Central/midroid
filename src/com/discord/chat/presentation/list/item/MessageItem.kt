@@ -5,7 +5,7 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.messageframe.MessageFrame
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class MessageItem(message: Message,
       messageFrame: MessageFrame? = null,
@@ -27,8 +27,8 @@ public data class MessageItem(message: Message,
    public final val renderContentOnly: Boolean
 
    init {
-      q.h(var1, "message");
-      q.h(var3, "messageContext");
+      r.h(var1, "message");
+      r.h(var3, "messageContext");
       super(MessageId.toString-impl(var1.getId-3Eiw7ao()), null);
       this.message = var1;
       this.messageFrame = var2;
@@ -76,8 +76,8 @@ public data class MessageItem(message: Message,
       reactTag: Int? = var0.reactTag,
       renderContentOnly: Boolean = var0.renderContentOnly
    ): MessageItem {
-      q.h(var1, "message");
-      q.h(var3, "messageContext");
+      r.h(var1, "message");
+      r.h(var3, "messageContext");
       return new MessageItem(var1, var2, var3, var4, var5, var6, var7);
    }
 
@@ -88,17 +88,17 @@ public data class MessageItem(message: Message,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.message, var1.message)) {
+         if (!r.c(this.message, var1.message)) {
             return false;
-         } else if (!q.c(this.messageFrame, var1.messageFrame)) {
+         } else if (!r.c(this.messageFrame, var1.messageFrame)) {
             return false;
-         } else if (!q.c(this.messageContext, var1.messageContext)) {
+         } else if (!r.c(this.messageContext, var1.messageContext)) {
             return false;
          } else if (this.allowChildGestures != var1.allowChildGestures) {
             return false;
-         } else if (!q.c(this.backgroundHighlight, var1.backgroundHighlight)) {
+         } else if (!r.c(this.backgroundHighlight, var1.backgroundHighlight)) {
             return false;
-         } else if (!q.c(this.reactTag, var1.reactTag)) {
+         } else if (!r.c(this.reactTag, var1.reactTag)) {
             return false;
          } else {
             return this.renderContentOnly == var1.renderContentOnly;
@@ -134,28 +134,28 @@ public data class MessageItem(message: Message,
 
    public override fun toString(): String {
       val var5: Message = this.message;
-      val var6: MessageFrame = this.messageFrame;
-      val var4: MessageContext = this.messageContext;
+      val var7: MessageFrame = this.messageFrame;
+      val var6: MessageContext = this.messageContext;
       val var2: Boolean = this.allowChildGestures;
-      val var8: BackgroundHighlight = this.backgroundHighlight;
-      val var3: Int = this.reactTag;
+      val var3: BackgroundHighlight = this.backgroundHighlight;
+      val var8: Int = this.reactTag;
       val var1: Boolean = this.renderContentOnly;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("MessageItem(message=");
-      var7.append(var5);
-      var7.append(", messageFrame=");
-      var7.append(var6);
-      var7.append(", messageContext=");
-      var7.append(var4);
-      var7.append(", allowChildGestures=");
-      var7.append(var2);
-      var7.append(", backgroundHighlight=");
-      var7.append(var8);
-      var7.append(", reactTag=");
-      var7.append(var3);
-      var7.append(", renderContentOnly=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageItem(message=");
+      var4.append(var5);
+      var4.append(", messageFrame=");
+      var4.append(var7);
+      var4.append(", messageContext=");
+      var4.append(var6);
+      var4.append(", allowChildGestures=");
+      var4.append(var2);
+      var4.append(", backgroundHighlight=");
+      var4.append(var3);
+      var4.append(", reactTag=");
+      var4.append(var8);
+      var4.append(", renderContentOnly=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 }

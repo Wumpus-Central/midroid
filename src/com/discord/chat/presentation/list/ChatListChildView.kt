@@ -41,7 +41,7 @@ public interface ChatListChildView {
    internal class DefaultImpls {
       @JvmStatic
       fun bindKey(var0: ChatListChildView, var1: Any) {
-         kotlin.jvm.internal.q.h(var1, "key");
+         kotlin.jvm.internal.r.h(var1, "key");
          var0.setCurrentKey(var1);
       }
 
@@ -61,7 +61,7 @@ public interface ChatListChildView {
             var0.superOnMeasure(
                MeasureSpec.makeMeasureSpec(var0.getMeasuredWidth(), 1073741824), MeasureSpec.makeMeasureSpec(var0.getMeasuredHeight(), 1073741824)
             );
-            if (!kotlin.jvm.internal.q.c(var4, var0.getCurrentKey())) {
+            if (!kotlin.jvm.internal.r.c(var4, var0.getCurrentKey())) {
                var0.post(new c(var0));
             }
          } else {

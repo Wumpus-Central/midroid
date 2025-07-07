@@ -8,21 +8,21 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDTTIMeasurementViewManagerInterface
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 @ReactModule(name = "DCDTTIMeasurementView")
 internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>, DCDTTIMeasurementViewManagerInterface<TTIMeasurementView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", G.b(OnMeasurementEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onMeasurement", H.b(OnMeasurementEvent.class)))
 
    private fun onMeasurement(view: TTIMeasurementView, timestamp: Double) {
       this.reactEvents.emitEvent(var1, new OnMeasurementEvent(var2));
    }
 
    protected open fun addEventEmitters(reactContext: ThemedReactContext, view: TTIMeasurementView) {
-      q.h(var1, "reactContext");
-      q.h(var2, "view");
+      r.h(var1, "reactContext");
+      r.h(var2, "view");
       super.addEventEmitters(var1, var2);
       var2.setOnMeasurementListener(new Function2(this) {
          {
@@ -30,14 +30,14 @@ internal class TTIMeasurementViewManager : SimpleViewManager<TTIMeasurementView>
          }
 
          public final void invoke(TTIMeasurementView var1, double var2) {
-            q.h(var1, "p0");
+            r.h(var1, "p0");
             TTIMeasurementViewManager.access$onMeasurement(super.receiver as TTIMeasurementViewManager, var1, var2);
          }
       });
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): TTIMeasurementView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new TTIMeasurementView(var1);
    }
 

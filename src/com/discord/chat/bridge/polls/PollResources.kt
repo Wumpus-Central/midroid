@@ -1,8 +1,9 @@
 package com.discord.chat.bridge.polls
 
+import A9.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import t9.q
+import sb.f
 
 @f
 public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = q.h()) {
@@ -23,9 +24,9 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
 
 
    init {
-      kotlin.jvm.internal.q.h(var1, "selectedIcon");
-      kotlin.jvm.internal.q.h(var2, "checkmarkIcon");
-      kotlin.jvm.internal.q.h(var3, "styles");
+      r.h(var1, "selectedIcon");
+      r.h(var2, "checkmarkIcon");
+      r.h(var3, "styles");
       super();
       this.selectedIcon = var1;
       this.checkmarkIcon = var2;
@@ -45,9 +46,9 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public fun copy(selectedIcon: String = var0.selectedIcon, checkmarkIcon: String = var0.checkmarkIcon, styles: Map<String, PollStyleSet> = var0.styles): PollResources {
-      kotlin.jvm.internal.q.h(var1, "selectedIcon");
-      kotlin.jvm.internal.q.h(var2, "checkmarkIcon");
-      kotlin.jvm.internal.q.h(var3, "styles");
+      r.h(var1, "selectedIcon");
+      r.h(var2, "checkmarkIcon");
+      r.h(var3, "styles");
       return new PollResources(var1, var2, var3);
    }
 
@@ -58,12 +59,12 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.selectedIcon, var1.selectedIcon)) {
+         if (!r.c(this.selectedIcon, var1.selectedIcon)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.checkmarkIcon, var1.checkmarkIcon)) {
+         } else if (!r.c(this.checkmarkIcon, var1.checkmarkIcon)) {
             return false;
          } else {
-            return kotlin.jvm.internal.q.c(this.styles, var1.styles);
+            return r.c(this.styles, var1.styles);
          }
       }
    }
@@ -73,18 +74,18 @@ public data class PollResources(selectedIcon: String, checkmarkIcon: String, sty
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.selectedIcon;
+      val var3: java.lang.String = this.selectedIcon;
       val var2: java.lang.String = this.checkmarkIcon;
       val var1: java.util.Map = this.styles;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollResources(selectedIcon=");
-      var3.append(var4);
-      var3.append(", checkmarkIcon=");
-      var3.append(var2);
-      var3.append(", styles=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("PollResources(selectedIcon=");
+      var4.append(var3);
+      var4.append(", checkmarkIcon=");
+      var4.append(var2);
+      var4.append(", styles=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

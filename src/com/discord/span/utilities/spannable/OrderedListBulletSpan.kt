@@ -5,7 +5,7 @@ import android.graphics.Paint
 import android.text.Layout
 import android.text.Spanned
 import android.text.style.LeadingMarginSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, largestListItemIndex: Long, paint: Paint) : LeadingMarginSpan {
    private final val listItemIndex: Long
@@ -13,7 +13,7 @@ public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, lar
    private final val largestBulletContentWidth: Float
 
    init {
-      q.h(var6, "paint");
+      r.h(var6, "paint");
       super();
       this.listItemIndex = var1;
       this.trailingMargin = var3;
@@ -43,10 +43,10 @@ public class OrderedListBulletSpan(listItemIndex: Long, trailingMargin: Int, lar
       first: Boolean,
       layout: Layout
    ) {
-      q.h(var1, "canvas");
-      q.h(var2, "paint");
-      q.h(var8, "text");
-      q.h(var12, "layout");
+      r.h(var1, "canvas");
+      r.h(var2, "paint");
+      r.h(var8, "text");
+      r.h(var12, "layout");
       if ((var8 as Spanned).getSpanStart(this) == var9) {
          val var17: java.lang.String = var2.getFontFeatureSettings();
          var2.setFontFeatureSettings("tnum");

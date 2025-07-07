@@ -3,7 +3,7 @@ package com.discord.permissions
 import com.facebook.react.bridge.ReadableNativeMap
 import java.util.Locale
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public enum class NativePermissionStatus {
    AUTHORIZED,
@@ -27,7 +27,7 @@ public enum class NativePermissionStatus {
    fun {
       val var0: Array<NativePermissionStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = A9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    @JvmStatic
@@ -41,11 +41,11 @@ public enum class NativePermissionStatus {
       private const val ANDROID_PERMISSION_NEVER_ASK_AGAIN: String
 
       public fun fromAndroidAuthorizationStatus(value: Any?): String {
-         if (q.c(var1, java.lang.Boolean.TRUE)) {
+         if (r.c(var1, java.lang.Boolean.TRUE)) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
-            q.g(var1, "toLowerCase(...)");
+            r.g(var1, "toLowerCase(...)");
          } else {
-            if (!q.c(var1, java.lang.Boolean.FALSE)) {
+            if (!r.c(var1, java.lang.Boolean.FALSE)) {
                val var2: StringBuilder = new StringBuilder();
                var2.append("Unknown authorization result: ");
                var2.append((Object)var1);
@@ -53,7 +53,7 @@ public enum class NativePermissionStatus {
             }
 
             var1 = "DENIED".toLowerCase(Locale.ROOT);
-            q.g(var1, "toLowerCase(...)");
+            r.g(var1, "toLowerCase(...)");
          }
 
          return var1;
@@ -76,10 +76,10 @@ public enum class NativePermissionStatus {
 
          if (h.N(var2, "granted", false, 2, null)) {
             var1 = "AUTHORIZED".toLowerCase(Locale.ROOT);
-            q.g(var1, "toLowerCase(...)");
+            r.g(var1, "toLowerCase(...)");
          } else if (h.N(var2, "denied", false, 2, null)) {
             var1 = "DENIED".toLowerCase(Locale.ROOT);
-            q.g(var1, "toLowerCase(...)");
+            r.g(var1, "toLowerCase(...)");
          } else {
             if (!h.N(var2, "never_ask_again", false, 2, null)) {
                val var4: StringBuilder = new StringBuilder();
@@ -89,7 +89,7 @@ public enum class NativePermissionStatus {
             }
 
             var1 = "DENIED".toLowerCase(Locale.ROOT);
-            q.g(var1, "toLowerCase(...)");
+            r.g(var1, "toLowerCase(...)");
          }
 
          return var1;

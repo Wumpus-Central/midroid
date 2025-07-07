@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import F1.a
-import F1.b
-import F1.c
-import F1.d
-import F1.e
-import F1.f
-import F1.g
-import F1.h
+import E1.a
+import E1.b
+import E1.c
+import E1.d
+import E1.e
+import E1.f
+import E1.g
+import E1.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -23,7 +23,7 @@ import com.discord.chat.presentation.message.viewholder.MessagePartViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AttachmentMediaMosaicAdapter(context: Context,
       onItemClicked: (MessageAttachmentAccessory, MessagePartViewHolder) -> Unit,
@@ -43,10 +43,10 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    public final val items: MutableList<MessageAttachmentAccessory>
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "onItemClicked");
-      q.h(var4, "onItemSpoilerClicked");
-      q.h(var5, "onItemObscureToggle");
+      r.h(var1, "context");
+      r.h(var2, "onItemClicked");
+      r.h(var4, "onItemSpoilerClicked");
+      r.h(var5, "onItemObscureToggle");
       super();
       this.context = var1;
       this.onItemClicked = var2;
@@ -132,12 +132,12 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
-      q.h(var1, "holder");
+      r.h(var1, "holder");
       val var5: ChatEventHandler = this.eventHandler;
       if (this.eventHandler != null) {
          if (var1 is MosaicItemMessageAttachmentImageViewHolder) {
             var var6: Any = this.items.get(var2);
-            q.f(var6, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
+            r.f(var6, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.ImageAttachmentMessageAccessory");
             var6 = var6 as ImageAttachmentMessageAccessory;
             val var7: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
             val var3: Boolean;
@@ -163,7 +163,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
             }
 
             var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);
-            q.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
+            r.f(var14, "null cannot be cast to non-null type com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory");
             val var16: VideoAttachmentMessageAccessory = var14 as VideoAttachmentMessageAccessory;
             var14 = var1 as MosaicItemMessageAttachmentVideoViewHolder;
             val var11: Boolean;
@@ -179,7 +179,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessagePartViewHolder {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var3: Any;
       if (var2 != 49) {
          if (var2 != 50) {
@@ -198,7 +198,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
    }
 
    public fun setChatEventHandler(eventHandler: ChatEventHandler) {
-      q.h(var1, "eventHandler");
+      r.h(var1, "eventHandler");
       this.eventHandler = var1;
    }
 
@@ -208,7 +208,7 @@ public class AttachmentMediaMosaicAdapter(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setMediaItems(items: List<MessageAttachmentAccessory>, shouldAutoPlayGifs: Boolean) {
-      q.h(var1, "items");
+      r.h(var1, "items");
       this.items.clear();
       this.items.addAll(var1);
       this.shouldAutoPlayGifs = var2;

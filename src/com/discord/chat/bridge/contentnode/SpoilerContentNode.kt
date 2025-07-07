@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {
@@ -12,7 +12,7 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    public open val obscureOrNull: String
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
       this.spoilerOrNull = "";
@@ -24,7 +24,7 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public fun copy(content: List<ContentNode> = var0.content): SpoilerContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new SpoilerContentNode(var1);
    }
 
@@ -34,7 +34,7 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
       } else if (var1 !is SpoilerContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as SpoilerContentNode).content);
+         return r.c(this.content, (var1 as SpoilerContentNode).content);
       }
    }
 
@@ -43,12 +43,12 @@ public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, 
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.content;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("SpoilerContentNode(content=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("SpoilerContentNode(content=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -1,15 +1,15 @@
 package com.discord.app_database
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class CacheVersion(version: String) {
    public final val version: String
 
    init {
-      q.h(var1, "version");
+      r.h(var1, "version");
       super();
       this.version = var1;
    }
@@ -19,7 +19,7 @@ public data class CacheVersion(version: String) {
    }
 
    public fun copy(version: String = var0.version): CacheVersion {
-      q.h(var1, "version");
+      r.h(var1, "version");
       return new CacheVersion(var1);
    }
 
@@ -29,7 +29,7 @@ public data class CacheVersion(version: String) {
       } else if (var1 !is CacheVersion) {
          return false;
       } else {
-         return q.c(this.version, (var1 as CacheVersion).version);
+         return r.c(this.version, (var1 as CacheVersion).version);
       }
    }
 

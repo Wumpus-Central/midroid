@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?) : TapGiftCodeAcceptData(var1, var2), ReactEvent {
@@ -13,7 +13,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
    public final val messageId: MessageId?
 
    fun TapGiftCodeAcceptData(var1: java.lang.String, var2: java.lang.String) {
-      q.h(var1, "giftCode");
+      r.h(var1, "giftCode");
       super();
       this.giftCode = var1;
       this.messageId = var2;
@@ -28,7 +28,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
    }
 
    public fun copy(giftCode: String = ..., messageId: MessageId? = ...): TapGiftCodeAcceptData {
-      q.h(var1, "giftCode");
+      r.h(var1, "giftCode");
       return new TapGiftCodeAcceptData(var1, var2, null);
    }
 
@@ -39,7 +39,7 @@ public data class TapGiftCodeAcceptData(giftCode: String, messageId: MessageId?)
          return false;
       } else {
          val var3: TapGiftCodeAcceptData = var1 as TapGiftCodeAcceptData;
-         if (!q.c(this.giftCode, (var1 as TapGiftCodeAcceptData).giftCode)) {
+         if (!r.c(this.giftCode, (var1 as TapGiftCodeAcceptData).giftCode)) {
             return false;
          } else {
             if (this.messageId == null) {

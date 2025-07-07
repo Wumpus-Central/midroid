@@ -2,16 +2,16 @@ package com.discord.phone_verification.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
    public final val code: String
 
    init {
-      q.h(var1, "code");
+      r.h(var1, "code");
       super();
       this.code = var1;
    }
@@ -21,7 +21,7 @@ internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
    }
 
    public fun copy(code: String = var0.code): VerificationCodeReceivedEvent {
-      q.h(var1, "code");
+      r.h(var1, "code");
       return new VerificationCodeReceivedEvent(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class VerificationCodeReceivedEvent(code: String) : ReactEvent {
       } else if (var1 !is VerificationCodeReceivedEvent) {
          return false;
       } else {
-         return q.c(this.code, (var1 as VerificationCodeReceivedEvent).code);
+         return r.c(this.code, (var1 as VerificationCodeReceivedEvent).code);
       }
    }
 

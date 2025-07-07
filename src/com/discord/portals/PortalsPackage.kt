@@ -9,19 +9,19 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import com.facebook.react.uimanager.LayoutShadowNode
 import com.facebook.react.uimanager.ViewManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class PortalsPackage : BaseReactPackage {
    public open fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, LayoutShadowNode>> {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return i.q(new ViewManager[]{new PortalFromNativeModule.ViewManager(), new PortalFromJsViewManager()});
    }
 
    public open fun getModule(name: String, reactContext: ReactApplicationContext): NativeModule? {
-      q.h(var1, "name");
-      q.h(var2, "reactContext");
+      r.h(var1, "name");
+      r.h(var2, "reactContext");
       val var3: PortalFromNativeModule;
-      if (q.c(var1, "NativePortalFromNativeModule")) {
+      if (r.c(var1, "NativePortalFromNativeModule")) {
          var3 = new PortalFromNativeModule(var2);
       } else {
          var3 = null;

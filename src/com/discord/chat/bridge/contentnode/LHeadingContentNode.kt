@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class LHeadingContentNode(level: Int, className: String, content: List<ContentNode>) : ContentNode {
@@ -11,8 +11,8 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
    public final val content: List<ContentNode>
 
    init {
-      q.h(var2, "className");
-      q.h(var3, "content");
+      r.h(var2, "className");
+      r.h(var3, "content");
       super(null);
       this.level = var1;
       this.className = var2;
@@ -32,8 +32,8 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
    }
 
    public fun copy(level: Int = var0.level, className: String = var0.className, content: List<ContentNode> = var0.content): LHeadingContentNode {
-      q.h(var2, "className");
-      q.h(var3, "content");
+      r.h(var2, "className");
+      r.h(var3, "content");
       return new LHeadingContentNode(var1, var2, var3);
    }
 
@@ -46,10 +46,10 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
          var1 = var1;
          if (this.level != var1.level) {
             return false;
-         } else if (!q.c(this.className, var1.className)) {
+         } else if (!r.c(this.className, var1.className)) {
             return false;
          } else {
-            return q.c(this.content, var1.content);
+            return r.c(this.content, var1.content);
          }
       }
    }
@@ -60,15 +60,15 @@ public data class LHeadingContentNode(level: Int, className: String, content: Li
 
    public override fun toString(): String {
       val var1: Int = this.level;
-      val var4: java.lang.String = this.className;
-      val var2: java.util.List = this.content;
+      val var2: java.lang.String = this.className;
+      val var4: java.util.List = this.content;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LHeadingContentNode(level=");
       var3.append(var1);
       var3.append(", className=");
-      var3.append(var4);
-      var3.append(", content=");
       var3.append(var2);
+      var3.append(", content=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

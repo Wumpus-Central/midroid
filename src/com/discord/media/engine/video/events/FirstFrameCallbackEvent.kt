@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
@@ -14,8 +14,8 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
    public final val streamId: String
 
    init {
-      q.h(var2, "userId");
-      q.h(var5, "streamId");
+      r.h(var2, "userId");
+      r.h(var5, "streamId");
       super();
       this.connectionId = var1;
       this.userId = var2;
@@ -40,8 +40,8 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
    }
 
    public fun copy(connectionId: Int = var0.connectionId, userId: String = var0.userId, ssrc: Long = var0.ssrc, streamId: String = var0.streamId): FirstFrameCallbackEvent {
-      q.h(var2, "userId");
-      q.h(var5, "streamId");
+      r.h(var2, "userId");
+      r.h(var5, "streamId");
       return new FirstFrameCallbackEvent(var1, var2, var3, var5);
    }
 
@@ -54,12 +54,12 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!q.c(this.userId, var1.userId)) {
+         } else if (!r.c(this.userId, var1.userId)) {
             return false;
          } else if (this.ssrc != var1.ssrc) {
             return false;
          } else {
-            return q.c(this.streamId, var1.streamId);
+            return r.c(this.streamId, var1.streamId);
          }
       }
    }

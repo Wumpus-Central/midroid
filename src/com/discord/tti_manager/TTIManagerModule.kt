@@ -1,5 +1,6 @@
 package com.discord.tti_manager
 
+import A9.q
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -9,21 +10,21 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.ttiBroadcastReceiver = new TTIBroadcastReceiver();
    }
 
    @ReactMethod
    public fun getAllNativeTimestamps(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
 
       var var2: ArrayList;
       var var17: java.util.Iterator;
@@ -66,12 +67,12 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
    }
 
    public open fun getConstants(): MutableMap<String, Long> {
-      return t9.q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
+      return q.m(new Pair[]{s.a("AppOpenedTimestamp", TTILoggingApplication.Companion.getAppOpenedTimestamp$tti_manager_release())});
    }
 
    @ReactMethod
    public fun getJSBundleTimestamps(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
 
       try {
          val var2: ReactMarkerListener = ReactMarkerListener.INSTANCE;
@@ -97,7 +98,7 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
       if (BuildConfig.logTTIMetrics) {
          val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
          val var2: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var2, "getReactApplicationContext(...)");
+         r.g(var2, "getReactApplicationContext(...)");
          var1.register(var2, this.ttiBroadcastReceiver);
       }
    }
@@ -107,10 +108,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
       try {
          if (BuildConfig.logTTIMetrics) {
-            val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-            val var1: ReactApplicationContext = this.getReactApplicationContext();
-            q.g(var1, "getReactApplicationContext(...)");
-            var2.unregister(var1, this.ttiBroadcastReceiver);
+            val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+            val var2: ReactApplicationContext = this.getReactApplicationContext();
+            r.g(var2, "getReactApplicationContext(...)");
+            var1.unregister(var2, this.ttiBroadcastReceiver);
          }
       } catch (var3: Exception) {
       }
@@ -118,20 +119,20 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
    @ReactMethod
    public fun logToDevice(value: String) {
-      q.h(var1, "value");
+      r.h(var1, "value");
       Log.i$default(Log.INSTANCE, "ttidata", var1, null, 4, null);
    }
 
    @ReactMethod
    public fun logToDeviceEnabled(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var1.resolve(BuildConfig.logTTIMetrics);
    }
 
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun runningTTIAutomation(): Boolean {
       val var1: java.lang.Boolean = BuildConfig.logTTIMetrics;
-      q.g(BuildConfig.logTTIMetrics, "logTTIMetrics");
+      r.g(BuildConfig.logTTIMetrics, "logTTIMetrics");
       return var1;
    }
 

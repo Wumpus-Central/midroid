@@ -10,24 +10,24 @@ import com.facebook.react.uimanager.ViewManagerDelegate
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerDelegate
 import com.facebook.react.viewmanagers.DCDZoomLayoutAndroidManagerInterface
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import z9.s
 
 @ReactModule(name = "DCDZoomLayoutAndroid")
 internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoomLayoutAndroidManagerInterface<ZoomLayoutFixed> {
    private final val delegate: DCDZoomLayoutAndroidManagerDelegate<ZoomLayoutFixed, ZoomLayoutViewManager> = new DCDZoomLayoutAndroidManagerDelegate(this)
-   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onZoomChanged", G.b(OnZoomChangedEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(s.a("onZoomChanged", H.b(OnZoomChangedEvent.class)))
 
    @JvmStatic
    fun `createViewInstance$lambda$0`(var0: ZoomLayoutViewManager, var1: ZoomLayoutFixed): Unit {
-      q.h(var1, "zoomLayout");
+      r.h(var1, "zoomLayout");
       var0.reactEvents.emitEvent(var1, new OnZoomChangedEvent(var1.getZoom()));
       return Unit.a;
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): ZoomLayoutFixed {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return new ZoomLayoutFixed(var1, new c(this));
    }
 
@@ -44,44 +44,44 @@ internal class ZoomLayoutViewManager : ViewGroupManager<ZoomLayoutFixed>, DCDZoo
    }
 
    public open fun receiveCommand(zoomLayout: ZoomLayoutFixed, commandId: String, args: ReadableArray?) {
-      q.h(var1, "zoomLayout");
-      q.h(var2, "commandId");
-      if (q.c(var2, "zoomTo")) {
+      r.h(var1, "zoomLayout");
+      r.h(var2, "commandId");
+      if (r.c(var2, "zoomTo")) {
          if (var3 == null) {
             return;
          }
 
          this.zoomTo(var1, (float)var3.getDouble(0), (float)var3.getDouble(1));
-      } else if (q.c(var2, "unzoom")) {
+      } else if (r.c(var2, "unzoom")) {
          this.unzoom(var1);
       }
    }
 
    @ReactProp(name = "gestureEnabled")
    public open fun setGestureEnabled(view: ZoomLayoutFixed, value: Boolean) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setGestureEnabled(var2);
    }
 
    @ReactProp(name = "maximumZoomScale")
    public open fun setMaximumZoomScale(view: ZoomLayoutFixed, value: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setMaxZoom(var2);
    }
 
    @ReactProp(name = "minimumZoomScale")
    public open fun setMinimumZoomScale(view: ZoomLayoutFixed, value: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.setMinZoom(var2);
    }
 
    public open fun unzoom(view: ZoomLayoutFixed) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.moveToCenter(1.0F, true);
    }
 
    public open fun zoomTo(view: ZoomLayoutFixed, x: Float, y: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.moveTo(2.0F, var2, var3, true);
    }
 

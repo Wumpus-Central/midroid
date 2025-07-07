@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.view.Window
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.Y
+import androidx.core.view.Z
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object ImmersiveMode {
    private fun Activity.fitSystemWindowsAndAdjustResize() {
@@ -26,8 +26,8 @@ public object ImmersiveMode {
          var3 = var5.getChildAt(0);
       }
 
-      q.e(var3);
-      Y.F0(var5, new a(var5, var3));
+      r.e(var3);
+      Z.D0(var5, new a(var5, var3));
    }
 
    @JvmStatic
@@ -35,17 +35,17 @@ public object ImmersiveMode {
       var0.setFitsSystemWindows(true);
       val var5: WindowInsetsCompat.a = new WindowInsetsCompat.a(var3);
       val var4: Int = WindowInsetsCompat.n.h();
-      q.e(var3);
-      val var6: WindowInsetsCompat = var5.b(var4, Insets.b(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
+      r.e(var3);
+      val var6: WindowInsetsCompat = var5.b(var4, Insets.c(0, 0, 0, Math.max(WindowInsetsCompatExtensionsKt.getImeInsets$default(var3, false, 1, null).d, 0)))
          .a();
-      Y.c0(var1, var6);
+      Z.a0(var1, var6);
       return var6;
    }
 
    public fun enableImmersiveMode(activity: Activity) {
-      q.h(var1, "activity");
+      r.h(var1, "activity");
       val var2: Window = var1.getWindow();
-      q.g(var2, "getWindow(...)");
+      r.g(var2, "getWindow(...)");
       WindowExtensionsKt.setSystemUITransparent(var2);
       this.fitSystemWindowsAndAdjustResize(var1);
    }

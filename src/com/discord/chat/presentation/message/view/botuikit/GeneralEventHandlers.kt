@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.view.botuikit
 
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class GeneralEventHandlers(onLinkClicked: (String, String) -> Unit, onTapSpoiler: () -> Unit) {
    public final val onLinkClicked: (String, String) -> Unit
    public final val onTapSpoiler: () -> Unit
 
    init {
-      q.h(var1, "onLinkClicked");
-      q.h(var2, "onTapSpoiler");
+      r.h(var1, "onLinkClicked");
+      r.h(var2, "onTapSpoiler");
       super();
       this.onLinkClicked = var1;
       this.onTapSpoiler = var2;
@@ -25,8 +25,8 @@ public data class GeneralEventHandlers(onLinkClicked: (String, String) -> Unit, 
    }
 
    public fun copy(onLinkClicked: (String, String) -> Unit = var0.onLinkClicked, onTapSpoiler: () -> Unit = var0.onTapSpoiler): GeneralEventHandlers {
-      q.h(var1, "onLinkClicked");
-      q.h(var2, "onTapSpoiler");
+      r.h(var1, "onLinkClicked");
+      r.h(var2, "onTapSpoiler");
       return new GeneralEventHandlers(var1, var2);
    }
 
@@ -37,10 +37,10 @@ public data class GeneralEventHandlers(onLinkClicked: (String, String) -> Unit, 
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.onLinkClicked, var1.onLinkClicked)) {
+         if (!r.c(this.onLinkClicked, var1.onLinkClicked)) {
             return false;
          } else {
-            return q.c(this.onTapSpoiler, var1.onTapSpoiler);
+            return r.c(this.onTapSpoiler, var1.onTapSpoiler);
          }
       }
    }
@@ -50,14 +50,14 @@ public data class GeneralEventHandlers(onLinkClicked: (String, String) -> Unit, 
    }
 
    public override fun toString(): String {
-      val var2: Function2 = this.onLinkClicked;
-      val var3: Function0 = this.onTapSpoiler;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("GeneralEventHandlers(onLinkClicked=");
-      var1.append(var2);
-      var1.append(", onTapSpoiler=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: Function2 = this.onLinkClicked;
+      val var1: Function0 = this.onTapSpoiler;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("GeneralEventHandlers(onLinkClicked=");
+      var2.append(var3);
+      var2.append(", onTapSpoiler=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 }

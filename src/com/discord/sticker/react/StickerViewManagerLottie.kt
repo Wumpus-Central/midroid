@@ -7,14 +7,14 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.viewmanagers.NativeLottieNodeManagerDelegate
 import com.facebook.react.viewmanagers.NativeLottieNodeManagerInterface
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "NativeLottieNode")
 internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, NativeLottieNodeManagerInterface<StickerView> {
    private final val delegate: NativeLottieNodeManagerDelegate<StickerView, StickerViewManagerLottie> = new NativeLottieNodeManagerDelegate(this)
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): StickerView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       val var2: StickerView = new StickerView(var1, null, 0, 6, null);
       var2.inflateLottieView();
       return var2;
@@ -29,15 +29,15 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
    }
 
    public open fun onDropViewInstance(view: StickerView) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super.onDropViewInstance(var1);
       var1.recycle();
    }
 
    public open fun receiveCommand(node: StickerView, commandId: String, args: ReadableArray?) {
-      q.h(var1, "node");
-      q.h(var2, "commandId");
-      if (q.c(var2, "setup")) {
+      r.h(var1, "node");
+      r.h(var2, "commandId");
+      if (r.c(var2, "setup")) {
          if (var3 == null) {
             return;
          }
@@ -56,7 +56,7 @@ internal class StickerViewManagerLottie : SimpleViewManager<StickerView>, Native
       animating: Boolean,
       accessibilityLabel: String?
    ) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null && var3 != null) {
          var1.asLottie(var3, var4, var5, var7, var2, var6, var8);
       }

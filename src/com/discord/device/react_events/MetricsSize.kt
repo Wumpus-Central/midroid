@@ -7,8 +7,8 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import com.facebook.react.uimanager.DisplayMetricsHolder
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import z9.s
 
 internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEvent {
    private final val widthPixels: Int
@@ -19,11 +19,11 @@ internal data class MetricsSize(widthPixels: Int, heightPixels: Int) : ReactEven
       this.heightPixels = var2;
    }
 
-   public constructor(metrics: DisplayMetrics) : q.h(var1, "metrics") {
+   public constructor(metrics: DisplayMetrics) : r.h(var1, "metrics") {
       this(var1.widthPixels, var1.heightPixels);
    }
 
-   public constructor(metrics: WindowMetrics) : q.h(var1, "metrics") {
+   public constructor(metrics: WindowMetrics) : r.h(var1, "metrics") {
       this(var1.a().width(), var1.a().height());
    }
 

@@ -3,7 +3,7 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import lb.f
+import sb.f
 
 @f
 public data class MediaPlayerPause(id: Double, paused: Boolean) : ReactEvent {

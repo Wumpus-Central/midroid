@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react.deserialization
 
-import A9.a
+import H9.a
 import kotlin.enums.EnumEntries
 
 internal enum class EmojiPickerItemTypes(unsupported: String = Companion, noop: Boolean = false) {

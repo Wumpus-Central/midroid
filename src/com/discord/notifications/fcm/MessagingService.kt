@@ -5,19 +5,19 @@ import com.discord.notifications.fcm.utils.FCMTokenHelper
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MessagingService : FirebaseMessagingService {
    public open fun onMessageReceived(remoteMessage: RemoteMessage) {
-      q.h(var1, "remoteMessage");
+      r.h(var1, "remoteMessage");
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: java.util.Map = var1.l();
-      q.g(var3, "getData(...)");
+      val var3: java.util.Map = var1.p();
+      r.g(var3, "getData(...)");
       var2.onNotificationReceived(this, var3);
    }
 
    public open fun onNewToken(token: String) {
-      q.h(var1, "token");
+      r.h(var1, "token");
       NotificationClient.Companion.getInstance().setToken(var1);
    }
 
@@ -29,7 +29,7 @@ public class MessagingService : FirebaseMessagingService {
             }
 
             public final void invoke(java.lang.String var1) {
-               q.h(var1, "p0");
+               r.h(var1, "p0");
                (super.receiver as NotificationClient).setToken(var1);
             }
          });

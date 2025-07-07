@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.overlapping_circles.OverlappingCirclesView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class MessageFrameFeedHeaderBinding implements ViewBinding {
    public final SimpleDraweeView feedChannelIcon;
@@ -29,8 +29,8 @@ public final class MessageFrameFeedHeaderBinding implements ViewBinding {
 
    public static MessageFrameFeedHeaderBinding bind(View var0) {
       int var1 = R.id.feed_channel_icon;
-      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-      if (var2 != null) {
+      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.feed_channel_text;
          TextView var3 = (TextView)a.a(var0, var1);
          if (var3 != null) {
@@ -38,12 +38,12 @@ public final class MessageFrameFeedHeaderBinding implements ViewBinding {
             TextView var4 = (TextView)a.a(var0, var1);
             if (var4 != null) {
                var1 = R.id.feed_reply_icon;
-               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-               if (var6 != null) {
+               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.feed_reply_participants;
                   OverlappingCirclesView var5 = (OverlappingCirclesView)a.a(var0, var1);
                   if (var5 != null) {
-                     return new MessageFrameFeedHeaderBinding(var0, var2, var3, var4, var6, var5);
+                     return new MessageFrameFeedHeaderBinding(var0, var6, var3, var4, var2, var5);
                   }
                }
             }
