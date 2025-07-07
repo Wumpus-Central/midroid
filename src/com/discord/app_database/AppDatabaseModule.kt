@@ -4,7 +4,7 @@ import com.discord.cache.Cache
 import com.discord.codegen.NativeAppDatabaseModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.q
-import r9.s
+import s9.s
 
 public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAppDatabaseModuleSpec {
    init {
@@ -13,7 +13,7 @@ public class AppDatabaseModule(reactContext: ReactApplicationContext) : NativeAp
    }
 
    protected override fun getTypedExportedConstants(): Map<String, String?> {
-      return s9.q.e(s.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
+      return t9.q.e(s.a("userId", Cache.Companion.get().getItem("_databaseUserId")));
    }
 
    public override fun setUserId(userId: String?) {

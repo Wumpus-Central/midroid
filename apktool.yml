@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 286015
-  versionName: 286.15 - Stable
+  versionCode: 287013
+  versionName: 287.13 - Stable
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -88,9 +88,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/R9.b
-- META-INF/services/ab.z
-- META-INF/services/fb.t
+- META-INF/services/S9.b
+- META-INF/services/bb.z
+- META-INF/services/gb.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm
@@ -447,3 +447,4 @@ doNotCompress:
 - res/raw/modules_go_live_web_modal_golivemodalcompiledmessages.jsona
 - res/raw/modules_guild_settings_web_tags_guildsettingstagscompiledmessages.jsona
 - res/raw/modules_intl_messages_secondtestcompiledmessages.jsona
+- res/raw/modules_notifications_inbox_notificationsinboxcompiledmessages.jsona

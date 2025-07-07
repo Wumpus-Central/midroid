@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -74,15 +74,15 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var3: InteractionStatusViewState = this.state;
-      val var2: StructurableText = this.text;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("InteractionStatus(state=");
-      var1.append(var3);
-      var1.append(", text=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: InteractionStatusViewState = this.state;
+      val var3: StructurableText = this.text;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("InteractionStatus(state=");
+      var2.append(var1);
+      var2.append(", text=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

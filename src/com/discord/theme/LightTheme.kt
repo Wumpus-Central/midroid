@@ -52,7 +52,7 @@ import l2.w1
 import l2.x1
 import l2.y1
 import l2.z1
-import r9.j
+import s9.j
 
 internal class LightTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int

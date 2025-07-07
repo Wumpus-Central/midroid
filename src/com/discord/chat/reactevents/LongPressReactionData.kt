@@ -9,7 +9,7 @@ import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import r9.s
+import s9.s
 
 internal data class LongPressReactionData(messageId: MessageId, channelId: ChannelId, reaction: Reaction?) : LongPressReactionData(var1, var2, var4), ReactEvent {
    public final val messageId: MessageId
@@ -95,16 +95,16 @@ internal data class LongPressReactionData(messageId: MessageId, channelId: Chann
 
    public override fun toString(): String {
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var4: ReactionView.Reaction = this.reaction;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressReactionData(messageId=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var3);
-      var2.append(", reaction=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: ReactionView.Reaction = this.reaction;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("LongPressReactionData(messageId=");
+      var4.append(var1);
+      var4.append(", channelId=");
+      var4.append(var2);
+      var4.append(", reaction=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 }

@@ -15,7 +15,7 @@ import k2.b
 import k2.c
 import k2.d
 import kotlin.jvm.internal.q
-import r9.n
+import s9.n
 
 internal class StickerPickerRowView(context: Context) : LinearLayout {
    private final var firstRenderPass: Boolean
@@ -158,9 +158,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var2 : e0.a(this)) {
-         q.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var2 as StickerView).recycle();
+      for (View var1 : e0.a(this)) {
+         q.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var1 as StickerView).recycle();
       }
    }
 

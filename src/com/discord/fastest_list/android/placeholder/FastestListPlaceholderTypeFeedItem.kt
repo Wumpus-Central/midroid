@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import I9.c
+import J9.c
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
@@ -13,7 +13,7 @@ import com.discord.misc.utilities.drawable.CustomDrawDrawable
 import com.discord.misc.utilities.size.SizeUtilsKt
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.q
-import r9.n
+import s9.n
 
 internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestListPlaceholder {
    private final val config: FeedItem
@@ -249,8 +249,8 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
                throw new n();
             }
 
-            val var3: Float = (var16 - this.config.getShapeSize()) / 2.0F;
-            var1.drawRect(this.config.getPadding(), var3, this.config.getShapeSize(), this.config.getShapeSize() + var3, this.paint);
+            val var2: Float = (var16 - this.config.getShapeSize()) / 2.0F;
+            var1.drawRect(this.config.getPadding(), var2, this.config.getShapeSize(), this.config.getShapeSize() + var2, this.paint);
          } else {
             var1.drawCircle(
                this.config.getShapeSize() / 2.0F + this.config.getPadding(),
@@ -260,32 +260,32 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
             );
          }
 
-         val var10: Float = this.config.getLabelSize();
-         val var21: Float = this.config.getLabelSecondarySize();
+         val var13: Float = this.config.getLabelSize();
+         val var19: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var5: Float = var10 / 2;
-         val var20: Float = var21 / 2;
-         val var19: Float = this.config.getLabelPaddingInnerRatio() * var10 / var6;
-         val var8: Float = this.config.getLabelPaddingInnerRatio() * var21 / var6;
-         val var9: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
-         val var12: Float = var15;
-         val var11: Float = var15 - this.config.getPadding() - this.config.getLabelPadding();
-         var6 = var16;
-         val var23: Float = (var16 - (var10 + var21)) / 2.0F + var10;
+         val var21: Float = var13 / 2;
+         val var5: Float = var19 / 2;
+         val var20: Float = this.config.getLabelPaddingInnerRatio() * var13 / var6;
+         val var9: Float = this.config.getLabelPaddingInnerRatio() * var19 / var6;
+         val var11: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
+         var6 = var15;
+         val var10: Float = var15 - this.config.getPadding() - this.config.getLabelPadding();
+         val var8: Float = var16;
+         val var23: Float = (var16 - (var13 + var19)) / 2.0F + var13;
          var1.drawRoundRect(
-            var9,
-            ((float)var16 - (var10 + var21)) / 2.0F + var19,
-            this.labelWidthRatio * var11,
-            ((float)var16 - (var10 + var21)) / 2.0F + var10 - var19,
-            var5,
-            var5,
+            var11,
+            ((float)var16 - (var13 + var19)) / 2.0F + var20,
+            this.labelWidthRatio * var10,
+            ((float)var16 - (var13 + var19)) / 2.0F + var13 - var20,
+            var21,
+            var21,
             this.paint
          );
-         var1.drawRoundRect(var9, var23 + var8, var11 * this.labelWidthRatioSecondary, var23 + var21 - var8, var20, var20, this.paint);
+         var1.drawRoundRect(var11, var23 + var9, var10 * this.labelWidthRatioSecondary, var23 + var19 - var9, var5, var5, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(
-               this.config.getDividerPaddingLeft(), var6 - (float)SizeUtilsKt.getDpToPx(1), var12 - this.config.getDividerPaddingRight(), var6, this.paint
+               this.config.getDividerPaddingLeft(), var8 - (float)SizeUtilsKt.getDpToPx(1), var6 - this.config.getDividerPaddingRight(), var8, this.paint
             );
             this.paint.setColor(this.config.getColor());
          }

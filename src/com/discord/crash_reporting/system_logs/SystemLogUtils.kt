@@ -49,7 +49,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         w9.a.b(false, false, null, null, 0, new g(var4, var1, var3, var2), 31, null);
+         x9.a.b(false, false, null, null, 0, new g(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -99,9 +99,9 @@ internal object SystemLogUtils {
          if (kotlin.text.h.c0(var19)) {
             return null;
          } else {
-            val var11: Ya.d = Ya.d.m;
-            val var17: Regex = new Regex("^Cause: (.+)$", Ya.d.m);
-            val var21: Sequence = Xa.j.y(
+            val var11: Za.d = Za.d.m;
+            val var17: Regex = new Regex("^Cause: (.+)$", Za.d.m);
+            val var21: Sequence = Ya.j.y(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new h(new Regex("classes\\d+.dex"))
             );
             val var23: HashSet = w.e(
@@ -109,23 +109,22 @@ internal object SystemLogUtils {
             );
 
             try {
-               val var14: java.util.Iterator = var21.iterator();
+               val var8: java.util.Iterator = var21.iterator();
 
-               val var8: Any;
                do {
-                  if (!var14.hasNext()) {
+                  if (!var8.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var8 = var14.next();
-               } while (var23.contains((java.lang.String)var8));
+                  var14 = var8.next();
+               } while (var23.contains((java.lang.String)var14));
 
-               var13 = var8 as java.lang.String;
+               var13 = var14 as java.lang.String;
             } catch (var9: NoSuchElementException) {
                var13 = "Unknown";
             }
 
-            val var22: java.lang.String = Xa.j.w(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = Ya.j.w(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -156,7 +155,7 @@ internal object SystemLogUtils {
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(Ya.a.b);
+      val var3: ByteArray = var1.getBytes(Za.a.b);
       q.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       q.e(var4);
@@ -580,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.text;
+         val var6: java.lang.String = this.text;
          val var4: java.lang.String = this.cause;
-         val var6: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
-         val var7: java.lang.String = this.groupHash;
-         val var2: java.lang.String = this.textHash;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Tombstone(text=");
-         var1.append(var3);
-         var1.append(", cause=");
-         var1.append(var4);
-         var1.append(", groupBy=");
-         var1.append(var6);
-         var1.append(", origin=");
-         var1.append(var5);
-         var1.append(", groupHash=");
-         var1.append(var7);
-         var1.append(", textHash=");
-         var1.append(var2);
-         var1.append(")");
-         return var1.toString();
+         val var7: java.lang.String = this.groupBy;
+         val var2: java.lang.String = this.origin;
+         val var1: java.lang.String = this.groupHash;
+         val var5: java.lang.String = this.textHash;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Tombstone(text=");
+         var3.append(var6);
+         var3.append(", cause=");
+         var3.append(var4);
+         var3.append(", groupBy=");
+         var3.append(var7);
+         var3.append(", origin=");
+         var3.append(var2);
+         var3.append(", groupHash=");
+         var3.append(var1);
+         var3.append(", textHash=");
+         var3.append(var5);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

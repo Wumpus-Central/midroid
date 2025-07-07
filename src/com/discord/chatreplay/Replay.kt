@@ -1,8 +1,8 @@
 package com.discord.chatreplay
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class Replay(filename: String, lastModified: Long) {

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class EmphasisContentNode(content: List<ContentNode>) : ContentNode {

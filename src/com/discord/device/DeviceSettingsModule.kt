@@ -16,7 +16,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import s9.n
+import t9.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
@@ -55,17 +55,17 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
       q.g(var6, "getReactApplicationContext(...)");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
       val var3: ArrayList = new ArrayList(i.v(var4, 10));
-      val var7: java.util.Iterator = var4.iterator();
+      val var5: java.util.Iterator = var4.iterator();
 
-      while (var7.hasNext()) {
-         val var5: ReadableMap = var1.getMap((var7 as n).a());
-         q.e(var5);
+      while (var5.hasNext()) {
+         val var7: ReadableMap = var1.getMap((var5 as n).a());
+         q.e(var7);
          var3.add(
             new Rect(
-               SizeUtilsKt.getDpToPx(var5.getInt("left")),
-               SizeUtilsKt.getDpToPx(var5.getInt("top")),
-               SizeUtilsKt.getDpToPx(var5.getInt("right")),
-               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
+               SizeUtilsKt.getDpToPx(var7.getInt("left")),
+               SizeUtilsKt.getDpToPx(var7.getInt("top")),
+               SizeUtilsKt.getDpToPx(var7.getInt("right")),
+               SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
             )
          );
       }

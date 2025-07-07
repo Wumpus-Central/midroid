@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -66,15 +66,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var2: java.lang.String = this.source;
-      val var4: java.lang.String = this.reason;
+      val var4: java.lang.String = this.source;
+      val var2: java.lang.String = this.reason;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MlsFailureCallbackEvent(connectionId=");
       var3.append(var1);
       var3.append(", source=");
-      var3.append(var2);
-      var3.append(", reason=");
       var3.append(var4);
+      var3.append(", reason=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

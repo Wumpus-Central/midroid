@@ -2,10 +2,10 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kb.f
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import ob.q
+import lb.f
+import pb.q
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -20,7 +20,7 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    @JvmStatic
    fun {
       val var0: q = q.a;
-      $childSerializers = new KSerializer[]{new nb.f(q.a), new nb.f(var0), null, null, null};
+      $childSerializers = new KSerializer[]{new ob.f(q.a), new ob.f(var0), null, null, null};
    }
 
    fun KvMessageEntry(var1: MutableList<JsonObject>, var2: MutableList<JsonObject>, var3: JsonObject, var4: java.lang.String, var5: Long) {
@@ -91,24 +91,24 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var1: java.util.List = this.members;
-      val var2: java.util.List = this.users;
-      val var5: JsonObject = this.message;
-      val var6: java.lang.String = MessageId.toString-impl(this.id);
+      val var3: java.util.List = this.members;
+      val var6: java.util.List = this.users;
+      val var1: JsonObject = this.message;
+      val var5: java.lang.String = MessageId.toString-impl(this.id);
       val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("KvMessageEntry(members=");
-      var3.append(var1);
-      var3.append(", users=");
-      var3.append(var2);
-      var3.append(", message=");
-      var3.append(var5);
-      var3.append(", id=");
-      var3.append(var6);
-      var3.append(", channelId=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("KvMessageEntry(members=");
+      var2.append(var3);
+      var2.append(", users=");
+      var2.append(var6);
+      var2.append(", message=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

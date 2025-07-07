@@ -57,15 +57,15 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
                View var2 = a.a(var0, var1);
                if (var2 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var6 = (FrameLayout)a.a(var0, var1);
-                  if (var6 != null) {
+                  FrameLayout var8 = (FrameLayout)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.vote_counts;
-                     TextView var8 = (TextView)a.a(var0, var1);
-                     if (var8 != null) {
+                     TextView var3 = (TextView)a.a(var0, var1);
+                     if (var3 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var3 = (TextView)a.a(var0, var1);
-                        if (var3 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var5, var4, var7, var2, var6, var8, var3);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var5, var4, var7, var2, var8, var3, var6);
                         }
                      }
                   }

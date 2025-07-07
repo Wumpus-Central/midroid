@@ -2,9 +2,9 @@ package com.discord.media.react.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 internal data class CompressionProgressEvent(uri: String, progress: Int) : ReactEvent {

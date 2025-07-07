@@ -17,8 +17,8 @@ import com.facebook.react.viewmanagers.DCDSegmentedControlManagerInterface
 import java.util.ArrayList
 import kotlin.jvm.internal.G
 import kotlin.jvm.internal.q
-import r9.s
-import s9.n
+import s9.s
+import t9.n
 
 @ReactModule(name = "DCDSegmentedControl")
 public class SegmentedControlViewManager : SimpleViewManager<SegmentedControlView>, DCDSegmentedControlManagerInterface<SegmentedControlView> {

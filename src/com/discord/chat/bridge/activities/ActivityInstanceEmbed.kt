@@ -2,9 +2,9 @@ package com.discord.chat.bridge.activities
 
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -84,8 +84,8 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = ApplicationId.hashCode-impl(this.applicationId);
-      val var3: Int = this.instanceId.hashCode();
+      val var3: Int = ApplicationId.hashCode-impl(this.applicationId);
+      val var4: Int = this.instanceId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.participantAvatarUris == null) {
@@ -99,18 +99,18 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
          var2 = this.participantsDescription.hashCode();
       }
 
-      return (((var4 * 31 + var3) * 31 + var1) * 31 + var5) * 31 + var2;
+      return (((var3 * 31 + var4) * 31 + var1) * 31 + var5) * 31 + var2;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = ApplicationId.toString-impl(this.applicationId);
+      val var6: java.lang.String = ApplicationId.toString-impl(this.applicationId);
       val var1: java.lang.String = this.instanceId;
       val var4: java.util.List = this.participantAvatarUris;
       val var5: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var6: java.lang.String = this.participantsDescription;
+      val var2: java.lang.String = this.participantsDescription;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ActivityInstanceEmbed(applicationId=");
-      var3.append(var2);
+      var3.append(var6);
       var3.append(", instanceId=");
       var3.append(var1);
       var3.append(", participantAvatarUris=");
@@ -118,7 +118,7 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
       var3.append(", appMessageEmbedModel=");
       var3.append(var5);
       var3.append(", participantsDescription=");
-      var3.append(var6);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

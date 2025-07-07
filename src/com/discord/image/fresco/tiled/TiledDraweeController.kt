@@ -1,12 +1,12 @@
 package com.discord.image.fresco.tiled
 
-import ab.K
-import ab.f
-import ab.k0
 import android.content.res.Resources
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
 import android.view.MotionEvent
+import bb.K
+import bb.f
+import bb.k0
 import com.facebook.common.references.CloseableReference
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
@@ -82,7 +82,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.h1();
+         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.i1();
       }
    }
 

@@ -4,8 +4,8 @@ import android.app.ActivityManager
 import android.app.ApplicationExitInfo
 import android.content.Context
 import android.os.Build.VERSION
-import r9.s
-import s9.q
+import s9.s
+import t9.q
 
 internal object HistoricalProcessExitReason {
    private final val exitReasonLookup: Map<Int, String>
@@ -128,13 +128,13 @@ internal object HistoricalProcessExitReason {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.reason;
-         val var1: java.lang.String = this.description;
+         val var1: java.lang.String = this.reason;
+         val var3: java.lang.String = this.description;
          val var2: StringBuilder = new StringBuilder();
          var2.append("Reason(reason=");
-         var2.append(var3);
-         var2.append(", description=");
          var2.append(var1);
+         var2.append(", description=");
+         var2.append(var3);
          var2.append(")");
          return var2.toString();
       }

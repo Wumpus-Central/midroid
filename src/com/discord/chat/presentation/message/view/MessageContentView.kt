@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.q.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = r9.j.a(new E0(this));
+      this.shadowView$delegate = s9.j.a(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
@@ -125,9 +125,9 @@ public open class MessageContentView  public constructor(context: Context, attrs
       onTapSeeMore: (MessageId) -> Unit,
       isForwardedContent: Boolean
    ) {
-      val var9: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
+      val var8: Boolean = kotlin.jvm.internal.q.c(var2.getForceShow(), java.lang.Boolean.TRUE);
       var var7: Int = var2.getNumberOfLines();
-      val var8: Boolean = var2.getExpandable();
+      val var9: Boolean = var2.getExpandable();
       var3 = MessageAccessoriesView.Companion.getWidth(var3, var6);
       this.getShadowView().setTypeface(this.getTypeface());
       this.getShadowView().setTextSize(0, this.getTextSize());
@@ -137,15 +137,15 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.getShadowView().layout(0, 0, this.getShadowView().getMeasuredWidth(), this.getShadowView().getMeasuredHeight());
       val var10: Layout = this.getShadowView().getLayout();
       var3 = this.getShadowView().getLineCount();
-      if (var3 > var7 || var9) {
-         if (var9) {
+      if (var3 > var7 || var8) {
+         if (var8) {
             var3--;
          } else {
             var3 = var7 - 1;
          }
 
          var7 = var10.getLineVisibleEnd(var3);
-         if (var8) {
+         if (var9) {
             val var18: java.lang.String = var2.getSeeMoreLabel();
             val var12: Int = var2.getSeeMoreLabelColor();
             val var11: StringBuilder = new StringBuilder();
@@ -351,24 +351,24 @@ public open class MessageContentView  public constructor(context: Context, attrs
          kotlin.jvm.internal.q.h(var2, "info");
          super.onInitializeAccessibilityNodeInfo(var1, var2);
          val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
-         var var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
+         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
 
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
             if (!var7.isRevealed()) {
-               val var4: Int = var5.getSpanStart(var7);
-               val var3: Int = var5.getSpanEnd(var7);
+               val var3: Int = var5.getSpanStart(var7);
+               val var4: Int = var5.getSpanEnd(var7);
                val var10: Context = var1.getContext();
                kotlin.jvm.internal.q.g(var10, "getContext(...)");
-               var5.replace(var4, var3, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
+               var5.replace(var3, var4, I18nUtilsKt.i18nFormat$default(var10, I18nMessage.SPOILER_HIDDEN_A11Y_LABEL, null, 2, null));
             }
          }
 
-         var6 = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
+         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
 
-         while (var6.hasNext()) {
-            val var8: EmojiAccessibilitySpan = var6.next() as EmojiAccessibilitySpan;
-            var5.replace(var5.getSpanStart(var8), var5.getSpanEnd(var8), var8.getName());
+         while (var8.hasNext()) {
+            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
+            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
          }
 
          var2.V0(var5);

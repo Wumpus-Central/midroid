@@ -3,7 +3,7 @@ package com.discord.mobile_voice_overlay
 import com.discord.primitives.UserId
 import kotlinx.serialization.KSerializer
 
-@kb.f
+@lb.f
 public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, speaking: Boolean, discriminator: Int) : MobileVoiceOverlayDataUser(
       var1, var3, var4, var5
    ) {
@@ -72,15 +72,15 @@ public data class MobileVoiceOverlayDataUser(userId: UserId, avatar: String?, sp
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = UserId.toString-impl(this.userId);
-      val var5: java.lang.String = this.avatar;
+      val var5: java.lang.String = UserId.toString-impl(this.userId);
+      val var3: java.lang.String = this.avatar;
       val var2: Boolean = this.speaking;
       val var1: Int = this.discriminator;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MobileVoiceOverlayDataUser(userId=");
-      var4.append(var3);
-      var4.append(", avatar=");
       var4.append(var5);
+      var4.append(", avatar=");
+      var4.append(var3);
       var4.append(", speaking=");
       var4.append(var2);
       var4.append(", discriminator=");

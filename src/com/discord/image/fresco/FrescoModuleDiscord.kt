@@ -9,6 +9,8 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
    init {
       q.h(var1, "reactContext");
       super(var1, false, null, 6, null);
+      Companion.initializeFresco(var1);
+      this.initializeSkinny();
    }
 
    private fun initializeSkinny() {
@@ -17,14 +19,6 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
 
    public open fun canOverrideExistingModule(): Boolean {
       return true;
-   }
-
-   public open fun initialize() {
-      val var1: FrescoModuleDiscord.Companion = Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var2, "getReactApplicationContext(...)");
-      var1.initializeFresco(var2);
-      this.initializeSkinny();
    }
 
    public companion object {

@@ -2,8 +2,8 @@ package com.discord.timers.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 internal data class IntervalEvent(id: Int) : ReactEvent {

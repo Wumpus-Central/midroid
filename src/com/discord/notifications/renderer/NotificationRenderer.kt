@@ -1,6 +1,5 @@
 package com.discord.notifications.renderer
 
-import ab.G
 import android.app.Notification
 import android.app.PendingIntent
 import android.content.Context
@@ -12,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.app.Person
+import bb.G
 import com.discord.icons.IconUrlUtils
 import com.discord.image.fresco.FrescoFetchDecodedImageKt
 import com.discord.image.fresco.FrescoModuleDiscord
@@ -36,16 +36,16 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.q
 import kotlin.jvm.internal.Ref.ObjectRef
 import kotlinx.coroutines.CoroutineScope
-import r9.s
+import s9.s
 
 public class NotificationRenderer {
    public final var fullscreenIntent: PendingIntent?
       internal set
 
    private fun getFullscreenIntent(context: Context, notification: NotificationData, notificationDataMap: Map<String, String>): PendingIntent? {
-      val var10: Intent = new Intent(var1, IncomingCallActivity.class).addFlags(268468224);
-      q.g(var10, "addFlags(...)");
-      val var9: Pair = s.a("username", var2.getUserUsername());
+      val var9: Intent = new Intent(var1, IncomingCallActivity.class).addFlags(268468224);
+      q.g(var9, "addFlags(...)");
+      val var10: Pair = s.a("username", var2.getUserUsername());
       var var8: java.lang.String;
       if (NotificationDataUtilsKt.isCall(var2)) {
          var8 = var2.getChannelName();
@@ -74,17 +74,17 @@ public class NotificationRenderer {
          var5 = false;
       }
 
-      val var14: Pair = s.a("isDM", var5);
-      val var13: Pair = s.a("userAvatar", var2.getUserAvatar());
-      val var16: Pair = s.a("userDiscriminator", var2.getUserDiscriminator());
-      val var15: Pair = s.a("userId", java.lang.String.valueOf(var2.getUserId-wUX8bhU()));
-      val var26: Pair = s.a("guildId", java.lang.String.valueOf(var2.getGuildId-qOKuAAo()));
-      val var25: Pair = s.a("userGuildAvatar", var2.getUserGuildAvatar());
+      val var25: Pair = s.a("isDM", var5);
+      val var26: Pair = s.a("userAvatar", var2.getUserAvatar());
+      val var14: Pair = s.a("userDiscriminator", var2.getUserDiscriminator());
+      val var16: Pair = s.a("userId", java.lang.String.valueOf(var2.getUserId-wUX8bhU()));
+      val var15: Pair = s.a("guildId", java.lang.String.valueOf(var2.getGuildId-qOKuAAo()));
+      val var13: Pair = s.a("userGuildAvatar", var2.getUserGuildAvatar());
       var var17: java.lang.String = NotificationDataUtilsKt.getTag(var2);
-      val var18: java.util.Map = s9.q.x(var3);
-      var18.put("type", "CALL_CONNECT");
-      var18.put("is_fullscreen_call_ui", "true");
-      val var21: Pair = s.a("acceptAction", new ContentAction(var17, var18));
+      var3 = t9.q.x(var3);
+      var3.put("type", "CALL_CONNECT");
+      var3.put("is_fullscreen_call_ui", "true");
+      val var21: Pair = s.a("acceptAction", new ContentAction(var17, var3));
       var17 = NotificationDataUtilsKt.getTag(var2);
       val var28: ChannelId = var2.getChannelId-qMVnFVQ();
       q.e(var28);
@@ -92,21 +92,21 @@ public class NotificationRenderer {
       val var29: GuildId = var2.getGuildId-qOKuAAo();
       val var19: UserId = var2.getUserId-wUX8bhU();
       q.e(var19);
-      var10.putExtras(
+      var9.putExtras(
          D.d.a(
-            var9,
+            var10,
             var23,
+            var25,
+            var26,
             var14,
-            var13,
             var16,
             var15,
-            var26,
-            var25,
+            var13,
             var21,
             s.a("dismissAction", new DismissCallAction(var17, var6, true, var29, var19.unbox-impl(), null))
          )
       );
-      return PendingIntent.getActivity(var1, 0, var10, 335544320);
+      return PendingIntent.getActivity(var1, 0, var9, 335544320);
    }
 
    public fun clear(context: Context, notificationTag: String) {
@@ -133,7 +133,7 @@ public class NotificationRenderer {
       q.h(var1, "context");
       q.h(var2, "notification");
       q.h(var4, "notificationDataMap");
-      ab.f.f(
+      bb.f.f(
          null,
          new Function2(var2, var1, var7, var4, var5, var8, this, var3, var6, null) {
             final NotificationBehaviors $behaviors;
@@ -187,7 +187,7 @@ public class NotificationRenderer {
             }
 
             public final Object invokeSuspend(Object var1) {
-               var var7: NotificationCompat.Builder = (NotificationCompat.Builder)y9.b.e();
+               var var7: NotificationCompat.Builder = (NotificationCompat.Builder)z9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -196,9 +196,9 @@ public class NotificationRenderer {
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var8: CoroutineScope = this.L$0 as CoroutineScope;
-                  val var9: ObjectRef = new ObjectRef();
-                  var9.j = PostProcessor.Circle.INSTANCE;
+                  val var9: CoroutineScope = this.L$0 as CoroutineScope;
+                  val var8: ObjectRef = new ObjectRef();
+                  var8.j = PostProcessor.Circle.INSTANCE;
                   val var10: ObjectRef = new ObjectRef();
                   var10.j = NotificationDataUtilsKt.getIconUrl(this.$notification, this.$context);
                   if (this.$notification.getImageAttachmentUrl() != null) {
@@ -209,10 +209,10 @@ public class NotificationRenderer {
                      }
 
                      var10.j = var1;
-                     var9.j = null;
+                     var8.j = null;
                   }
 
-                  var1 = ab.f.b(var8, null, null, new Function2(var10, this.$context, var9, null) {
+                  var1 = bb.f.b(var9, null, null, new Function2(var10, this.$context, var8, null) {
                      final Context $context;
                      final ObjectRef $iconUrl;
                      final ObjectRef $postProcessor;
@@ -234,7 +234,7 @@ public class NotificationRenderer {
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var4: Any = y9.b.e();
+                        val var4: Any = z9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -243,11 +243,11 @@ public class NotificationRenderer {
                            kotlin.c.b(var1);
                         } else {
                            kotlin.c.b(var1);
-                           var1 = this.$context;
-                           val var5: ObjectRef = this.$postProcessor;
+                           val var5: Context = this.$context;
+                           var1 = this.$postProcessor;
                            var var3: java.lang.String = this.$iconUrl.j as java.lang.String;
                            this.label = 1;
-                           var3 = (java.lang.String)<unrepresentable>.access$invokeSuspend$fetchImage(var1, var5, var3, this);
+                           var3 = (java.lang.String)<unrepresentable>.access$invokeSuspend$fetchImage(var5, var1, var3, this);
                            var1 = var3;
                            if (var3 === var4) {
                               return var4;
@@ -257,7 +257,7 @@ public class NotificationRenderer {
                         return var1;
                      }
                   }, 3, null);
-                  var var32: G = ab.f.b(var8, null, null, new Function2(this.$notification, this.$context, var9, null) {
+                  var var32: G = bb.f.b(var9, null, null, new Function2(this.$notification, this.$context, var8, null) {
                      final Context $context;
                      final NotificationData $notification;
                      final ObjectRef $postProcessor;
@@ -279,7 +279,7 @@ public class NotificationRenderer {
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var4: Any = y9.b.e();
+                        val var4: Any = z9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -288,11 +288,11 @@ public class NotificationRenderer {
                            kotlin.c.b(var1);
                         } else {
                            kotlin.c.b(var1);
-                           var var3: Context = this.$context;
-                           val var5: ObjectRef = this.$postProcessor;
-                           var1 = NotificationDataUtilsKt.getIconUrlForAvatar(this.$notification, this.$context);
+                           var1 = this.$context;
+                           var var3: ObjectRef = this.$postProcessor;
+                           val var5: java.lang.String = NotificationDataUtilsKt.getIconUrlForAvatar(this.$notification, this.$context);
                            this.label = 1;
-                           var3 = (Context)<unrepresentable>.access$invokeSuspend$fetchImage(var3, var5, var1, this);
+                           var3 = (ObjectRef)<unrepresentable>.access$invokeSuspend$fetchImage(var1, var3, var5, this);
                            var1 = var3;
                            if (var3 === var4) {
                               return var4;
@@ -303,7 +303,7 @@ public class NotificationRenderer {
                      }
                   }, 3, null);
                   this.label = 1;
-                  var32 = (G)ab.d.b(new G[]{var1, var32}, this);
+                  var32 = (G)bb.d.b(new G[]{var1, var32}, this);
                   var1 = var32;
                   if (var32 === var7) {
                      return var7;
@@ -315,7 +315,7 @@ public class NotificationRenderer {
                val var48: java.lang.CharSequence = NotificationDataUtilsKt.getContent(this.$notification, this.$context, false);
                val var3x: Int = NotificationManagerUtilsKt.getActiveNotificationMessageCount(this.$context, NotificationDataUtilsKt.getTag(this.$notification))
                   + 1;
-               val var21: NotificationCompat.Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
+               val var34: NotificationCompat.Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
                      this.$context,
                      NotificationChannels.INSTANCE.getNotificationChannelId(this.$notification, this.$context),
                      NotificationManagerUtilsKt.getActiveNotification(this.$context, NotificationDataUtilsKt.getTag(this.$notification))
@@ -332,9 +332,9 @@ public class NotificationRenderer {
                   .F(var45)
                   .z(NotificationDataUtilsKt.getDeletePendingIntent(this.$notification, this.$context))
                   .v(NotificationDataUtilsKt.getContentPendingIntent(this.$notification, this.$context, this.$notificationDataMap));
-               q.g(var21, "setContentIntent(...)");
+               q.g(var34, "setContentIntent(...)");
                var7 = NotificationManagerUtilsKt.setLegacyNotificationBehaviors(
-                     var21, this.$context, this.$behaviors, NotificationDataUtilsKt.getSound(this.$notification, this.$context)
+                     var34, this.$context, this.$behaviors, NotificationDataUtilsKt.getSound(this.$notification, this.$context)
                   )
                   .h();
                val var12: NotificationData = this.$notification;
@@ -408,13 +408,13 @@ public class NotificationRenderer {
                   var7.Y(new NotificationCompat.f().o(var48));
                }
 
-               val var40: NotificationCompat.Action = NotificationDataUtilsKt.getMarkAsReadAction(var12, var11);
-               val var27: NotificationCompat.Action = NotificationDataUtilsKt.getDirectReplyAction(var12, var11);
+               val var27: NotificationCompat.Action = NotificationDataUtilsKt.getMarkAsReadAction(var12, var11);
+               val var40: NotificationCompat.Action = NotificationDataUtilsKt.getDirectReplyAction(var12, var11);
                var var30: Byte = 0;
                val var41: java.util.List = kotlin.collections.i.n(
                   new NotificationCompat.Action[]{
-                     var40,
                      var27,
+                     var40,
                      NotificationDataUtilsKt.getCallAction(var12, var11, false, var13),
                      NotificationDataUtilsKt.getCallAction(var12, var11, true, var13),
                      NotificationDataUtilsKt.getTimedMuteAction(var12, var11, var3x),
@@ -422,12 +422,12 @@ public class NotificationRenderer {
                   }
                );
                val var28: ArrayList = new ArrayList();
-               val var46: java.util.Iterator = var41.iterator();
+               val var42: java.util.Iterator = var41.iterator();
 
-               while (var46.hasNext()) {
-                  val var42: NotificationCompat.Builder = var7.b(var46.next() as NotificationCompat.Action);
-                  if (var42 != null) {
-                     var28.add(var42);
+               while (var42.hasNext()) {
+                  val var46: NotificationCompat.Builder = var7.b(var42.next() as NotificationCompat.Action);
+                  if (var46 != null) {
+                     var28.add(var46);
                   }
                }
 
@@ -450,7 +450,7 @@ public class NotificationRenderer {
    public fun displayLocal(context: Context, notification: Map<String, Any>) {
       q.h(var1, "context");
       q.h(var2, "notification");
-      ab.f.f(
+      bb.f.f(
          null,
          new Function2(var2, var1, null) {
             final Context $context;
@@ -472,11 +472,11 @@ public class NotificationRenderer {
             }
 
             public final Object invokeSuspend(Object var1) {
-               y9.b.e();
+               z9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   var1 = NotificationDataDeserializationUtilsKt.localNotificationData(NotificationData.Companion, this.$notification);
-                  val var2x: java.util.Map = s9.q.x(var1.getUserInfo());
+                  val var2x: java.util.Map = t9.q.x(var1.getUserInfo());
 
                   for (Entry var5 : this.$notification.entrySet()) {
                      val var4: java.lang.String = var5.getKey() as java.lang.String;
@@ -486,7 +486,7 @@ public class NotificationRenderer {
                      }
                   }
 
-                  val var8: NotificationCompat.Builder = new NotificationCompat.Builder(
+                  val var10: NotificationCompat.Builder = new NotificationCompat.Builder(
                         this.$context, NotificationChannels.INSTANCE.getNotificationChannelId(var1, this.$context)
                      )
                      .T(NotificationDataUtilsKt.getSmallIcon(var1))
@@ -499,10 +499,10 @@ public class NotificationRenderer {
                      .M(0)
                      .v(NotificationDataUtilsKt.getContentPendingIntent(var1, this.$context, var2x))
                      .m(true);
-                  val var10: NotificationManagerCompat = NotificationManagerUtilsKt.getNotificationManagerCompat(this.$context);
+                  val var8: NotificationManagerCompat = NotificationManagerUtilsKt.getNotificationManagerCompat(this.$context);
                   val var7: java.lang.String = NotificationDataUtilsKt.getTag(var1);
-                  q.e(var8);
-                  NotificationManagerUtilsKt.notify$default(var10, var7, var8, 0, 4, null);
+                  q.e(var10);
+                  NotificationManagerUtilsKt.notify$default(var8, var7, var10, 0, 4, null);
                   return Unit.a;
                } else {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -520,20 +520,20 @@ public class NotificationRenderer {
       val var3: java.util.Iterator = var2.getAckChannelIds().iterator();
 
       while (var3.hasNext()) {
-         var var4: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MESSAGE_CREATE");
-         var5.append(var4);
-         var4 = var5.toString();
+         val var5: java.lang.String = ChannelId.toString-impl((var3.next() as ChannelId).unbox-impl());
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("MESSAGE_CREATE");
+         var4.append(var5);
+         val var6: java.lang.String = var4.toString();
          val var7: NotificationChannels = NotificationChannels.INSTANCE;
          if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(
-               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var4)
+               var1, NotificationChannels.INSTANCE.getNotificationChannelId(var2, var1), NotificationManagerUtilsKt.getActiveNotification(var1, var6)
             )
             .i()
             .getBoolean("ignoreAck", false)) {
-            this.clear(var1, var4);
+            this.clear(var1, var6);
          } else {
-            this.markNotificationAsDirectReply(var1, var4, var7.getNotificationChannelId(var2, var1), false);
+            this.markNotificationAsDirectReply(var1, var6, var7.getNotificationChannelId(var2, var1), false);
          }
       }
    }
@@ -546,12 +546,12 @@ public class NotificationRenderer {
             if (var3 != null) {
                val var6: java.util.List = NotificationManagerUtilsKt.getCallNotifications-mJqaSGE(var1, var3.unbox-impl());
                if (var6 != null) {
-                  val var7: java.util.Iterator = var6.iterator();
+                  val var4: java.util.Iterator = var6.iterator();
 
-                  while (var7.hasNext()) {
-                     val var4: java.lang.String = (var7.next() as StatusBarNotification).getTag();
-                     q.g(var4, "getTag(...)");
-                     this.clear(var1, var4);
+                  while (var4.hasNext()) {
+                     val var7: java.lang.String = (var4.next() as StatusBarNotification).getTag();
+                     q.g(var7, "getTag(...)");
+                     this.clear(var1, var7);
                   }
                }
 
@@ -574,25 +574,25 @@ public class NotificationRenderer {
             if (var9 != null) {
                var2 = NotificationManagerUtilsKt.getCallNotifications-mJqaSGE(var1, var9.unbox-impl());
                if (var2 != null) {
-                  for (StatusBarNotification var6 : var2) {
-                     var var3: java.lang.String = var6.getNotification().extras.getString("username");
-                     if (var3 == null) {
+                  for (StatusBarNotification var7 : var2) {
+                     var var11: java.lang.String = var7.getNotification().extras.getString("username");
+                     if (var11 == null) {
                         return;
                      }
 
-                     var var11: java.lang.String = var6.getNotification().extras.getString("channelName");
-                     val var8: java.lang.String = NotificationDataUtilsKt.getMissedCallText(var1, var3, var6.getNotification().extras.getBoolean("isDM"));
-                     val var7: java.lang.String = j.a(var6.getNotification());
-                     q.g(var7, "getChannelId(...)");
-                     val var16: NotificationCompat.Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var7, var6.getNotification());
+                     var var3: java.lang.String = var7.getNotification().extras.getString("channelName");
+                     val var8: java.lang.String = NotificationDataUtilsKt.getMissedCallText(var1, var11, var7.getNotification().extras.getBoolean("isDM"));
+                     val var6: java.lang.String = j.a(var7.getNotification());
+                     q.g(var6, "getChannelId(...)");
+                     val var16: NotificationCompat.Builder = NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var6, var7.getNotification());
                      val var17: NotificationCompat.Builder = var16.q(NotificationChannels.INSTANCE.getSilenceCallChannelId()).w(var8);
-                     if (var11 == null) {
+                     if (var3 != null) {
                         var11 = var3;
                      }
 
                      var17.x(var11).h();
                      val var12: NotificationManagerCompat = NotificationManagerUtilsKt.getNotificationManagerCompat(var1);
-                     var3 = var6.getTag();
+                     var3 = var7.getTag();
                      q.g(var3, "getTag(...)");
                      NotificationManagerUtilsKt.notify$default(var12, var3, var16, 0, 4, null);
                   }
@@ -615,13 +615,13 @@ public class NotificationRenderer {
       if (VERSION.SDK_INT >= 26) {
          val var5: java.util.List = NotificationManagerUtilsKt.getActiveReactionNotifications(var1, var2);
          if (var5 != null) {
-            for (StatusBarNotification var4 : var5) {
-               var var3: java.lang.String = j.a(var4.getNotification());
-               q.g(var3, "getChannelId(...)");
-               if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var3, var4.getNotification()).i().getBoolean("ignoreAck", false)) {
-                  var3 = var4.getTag();
-                  q.g(var3, "getTag(...)");
-                  this.clear(var1, var3);
+            for (StatusBarNotification var3 : var5) {
+               val var4: java.lang.String = j.a(var3.getNotification());
+               q.g(var4, "getChannelId(...)");
+               if (!NotificationManagerUtilsKt.getNotificationBuilderOrCreate(var1, var4, var3.getNotification()).i().getBoolean("ignoreAck", false)) {
+                  val var7: java.lang.String = var3.getTag();
+                  q.g(var7, "getTag(...)");
+                  this.clear(var1, var7);
                }
             }
          }

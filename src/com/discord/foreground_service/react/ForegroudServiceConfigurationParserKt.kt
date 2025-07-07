@@ -11,15 +11,15 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import s9.n
+import t9.n
 
 internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfiguration {
    q.h(var0, "<this>");
    q.h(var1, "readableMap");
    val var6: java.lang.String = NativeMapExtensionsKt.getNonNullString(var1, "title");
-   val var4: java.lang.String = var1.getString("content");
+   val var5: java.lang.String = var1.getString("content");
    var0 = ServiceNotificationConfiguration.Companion;
-   val var5: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
+   val var4: ServiceNotificationConfiguration.Priority = parsePriority(ServiceNotificationConfiguration.Companion, var1.getInt("priority"));
    var var2: ReadableMap = var1.getMap("contentAction");
    val var10: ServiceNotificationConfiguration.Action;
    if (var2 != null) {
@@ -48,7 +48,7 @@ internal fun Companion.parse(readableMap: ReadableMap): ServiceNotificationConfi
       var2 = i.k();
    }
 
-   return new ServiceNotificationConfiguration(var6, var4, var5, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
+   return new ServiceNotificationConfiguration(var6, var5, var4, var10, var2, parseType(ServiceNotificationConfiguration.Companion, var1.getInt("type")));
 }
 
 private fun Companion.parseAction(readableMap: ReadableMap): Action {
@@ -63,7 +63,7 @@ private fun Companion.parseAction(readableMap: ReadableMap): Action {
       }
    }
 
-   return new ServiceNotificationConfiguration.Action(var2, var3, var4, s9.q.h());
+   return new ServiceNotificationConfiguration.Action(var2, var3, var4, t9.q.h());
 }
 
 internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNotificationConfiguration> {
@@ -71,14 +71,14 @@ internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNoti
    q.h(var1, "readableArray");
    val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
    val var6: ArrayList = new ArrayList(i.v(var3, 10));
-   val var7: java.util.Iterator = var3.iterator();
+   val var4: java.util.Iterator = var3.iterator();
 
-   while (var7.hasNext()) {
-      val var2: Int = (var7 as n).a();
-      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var4: ReadableMap = var1.getMap(var2);
-      q.e(var4);
-      var6.add(parse(var5, var4));
+   while (var4.hasNext()) {
+      val var2: Int = (var4 as n).a();
+      val var7: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var5: ReadableMap = var1.getMap(var2);
+      q.e(var5);
+      var6.add(parse(var7, var5));
    }
 
    return var6;

@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.q
-import r9.s
+import s9.s
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -68,7 +68,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var16 = i.K0(i.I0(var6.getMedia(var12, var7, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return v9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return w9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();

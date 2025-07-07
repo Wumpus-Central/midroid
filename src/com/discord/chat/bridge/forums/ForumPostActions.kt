@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.reaction.MessageReaction
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class ForumPostActions(numDisplayedReactions: Int,
@@ -150,10 +150,10 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
       val var3: java.lang.String = this.followIcon;
-      val var4: java.lang.String = this.followLabel;
-      val var9: java.lang.String = this.shareIcon;
-      val var6: java.lang.String = this.shareLabel;
-      val var5: MessageReaction = this.defaultReaction;
+      val var6: java.lang.String = this.followLabel;
+      val var5: java.lang.String = this.shareIcon;
+      val var4: java.lang.String = this.shareLabel;
+      val var9: MessageReaction = this.defaultReaction;
       val var7: PostSharePrompt = this.sharePrompt;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ForumPostActions(numDisplayedReactions=");
@@ -163,13 +163,13 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       var8.append(", followIcon=");
       var8.append(var3);
       var8.append(", followLabel=");
-      var8.append(var4);
-      var8.append(", shareIcon=");
-      var8.append(var9);
-      var8.append(", shareLabel=");
       var8.append(var6);
-      var8.append(", defaultReaction=");
+      var8.append(", shareIcon=");
       var8.append(var5);
+      var8.append(", shareLabel=");
+      var8.append(var4);
+      var8.append(", defaultReaction=");
+      var8.append(var9);
       var8.append(", sharePrompt=");
       var8.append(var7);
       var8.append(")");

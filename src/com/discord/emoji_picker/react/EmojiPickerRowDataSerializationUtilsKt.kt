@@ -7,12 +7,12 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import s9.n
+import t9.n
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    q.h(var0, "data");
-   val var1: Int = var0.getInt("rowContentWidth");
-   val var2: Int = var0.getInt("rowContentPaddingVertical");
+   val var2: Int = var0.getInt("rowContentWidth");
+   val var1: Int = var0.getInt("rowContentPaddingVertical");
    val var3: Int = var0.getInt("itemSize");
    val var5: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
    val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var5);
@@ -38,5 +38,5 @@ internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
       var6.add(var9);
    }
 
-   return new EmojiPickerRow(var1, var2, var3, var6, var0.getBoolean("isSectionNitroLocked"));
+   return new EmojiPickerRow(var2, var1, var3, var6, var0.getBoolean("isSectionNitroLocked"));
 }

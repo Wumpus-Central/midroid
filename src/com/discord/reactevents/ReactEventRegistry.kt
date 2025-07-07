@@ -3,8 +3,8 @@ package com.discord.reactevents
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.G
 import kotlin.reflect.KClass
-import r9.s
-import s9.q
+import s9.s
+import t9.q
 
 internal class ReactEventRegistry {
    private final val events: MutableMap<KClass<out ReactEvent>, String> = new LinkedHashMap()
@@ -18,13 +18,13 @@ internal class ReactEventRegistry {
 
    public fun exportEventConstants(): MutableMap<String, Any> {
       this.didExportEvents = true;
-      val var2: LinkedHashMap = new LinkedHashMap();
+      val var3: LinkedHashMap = new LinkedHashMap();
 
       for (java.lang.String var1 : this.events.values()) {
-         var2.put(var1, q.m(new Pair[]{s.a("registrationName", var1)}));
+         var3.put(var1, q.m(new Pair[]{s.a("registrationName", var1)}));
       }
 
-      return var2;
+      return var3;
    }
 
    public fun getEventName(event: ReactEvent): String {
@@ -33,11 +33,11 @@ internal class ReactEventRegistry {
       if (var2 != null) {
          return var2;
       } else {
-         val var3: KClass = G.b(var1.getClass());
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("No event name registered for event: ");
-         var4.append(var3);
-         throw new IllegalStateException(var4.toString().toString());
+         val var4: KClass = G.b(var1.getClass());
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("No event name registered for event: ");
+         var3.append(var4);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

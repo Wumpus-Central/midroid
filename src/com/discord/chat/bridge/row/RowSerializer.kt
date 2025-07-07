@@ -9,8 +9,8 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import ob.d
-import ob.g
+import pb.d
+import pb.g
 
 public object RowSerializer : d(G.b(Row.class)) {
    private const val CHANGE_TYPE_DELETE: String = "3"

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class StringSelectItem(label: String,
@@ -83,8 +83,8 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.label.hashCode();
-      val var5: Int = this.value.hashCode();
+      val var5: Int = this.label.hashCode();
+      val var4: Int = this.value.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.emoji == null) {
@@ -104,28 +104,28 @@ public data class StringSelectItem(label: String,
          var3 = this.default.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
+      return (((var5 * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.label;
-      val var3: java.lang.String = this.value;
-      val var1: ComponentEmoji = this.emoji;
-      val var6: java.lang.String = this.description;
-      val var4: java.lang.Boolean = this.default;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("StringSelectItem(label=");
-      var5.append(var2);
-      var5.append(", value=");
-      var5.append(var3);
-      var5.append(", emoji=");
-      var5.append(var1);
-      var5.append(", description=");
-      var5.append(var6);
-      var5.append(", default=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.label;
+      val var1: java.lang.String = this.value;
+      val var3: ComponentEmoji = this.emoji;
+      val var2: java.lang.String = this.description;
+      val var5: java.lang.Boolean = this.default;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("StringSelectItem(label=");
+      var6.append(var4);
+      var6.append(", value=");
+      var6.append(var1);
+      var6.append(", emoji=");
+      var6.append(var3);
+      var6.append(", description=");
+      var6.append(var2);
+      var6.append(", default=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

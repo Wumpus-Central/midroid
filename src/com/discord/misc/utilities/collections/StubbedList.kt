@@ -1,6 +1,6 @@
 package com.discord.misc.utilities.collections
 
-import G9.a
+import H9.a
 import java.util.Comparator
 import java.util.function.UnaryOperator
 import kotlin.jvm.internal.G
@@ -137,7 +137,7 @@ public open class StubbedList<T> : java.util.List<T>, a {
 
    public companion object {
       private fun unsupported(methodName: String): String {
-         val var2: java.lang.String = G.b(StubbedList.class).e();
+         val var2: java.lang.String = G.b(StubbedList.class).b();
          val var3: StringBuilder = new StringBuilder();
          var3.append(var2);
          var3.append(" did not implement ");

@@ -67,12 +67,12 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       if (var9 == null) {
-         val var12: java.util.Map = this.blurRectRenderNodes;
+         val var10: java.util.Map = this.blurRectRenderNodes;
          l.a();
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("blur-");
-         var10.append(var1);
-         var12.putIfAbsent(var1, k.a(var10.toString()));
+         val var12: StringBuilder = new StringBuilder();
+         var12.append("blur-");
+         var12.append(var1);
+         var10.putIfAbsent(var1, k.a(var12.toString()));
          this.blurRects.put(var1, new BlurViewTargetHardwareAccelerated.BlurRect(var2, var3, var4, var5));
          this.invalidate();
       }
@@ -82,10 +82,10 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       kotlin.jvm.internal.q.h(var1, "canvas");
       val var8: java.util.Map = this.blurRects;
       val var7: LinkedHashMap = new LinkedHashMap();
-      val var10: java.util.Iterator = var8.entrySet().iterator();
+      val var13: java.util.Iterator = var8.entrySet().iterator();
 
       while (true) {
-         val var6: Boolean = var10.hasNext();
+         val var6: Boolean = var13.hasNext();
          var var4: Boolean = false;
          if (!var6) {
             if (var7.isEmpty()) {
@@ -123,11 +123,11 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
             return;
          }
 
-         val var13: Entry = var10.next() as Entry;
-         val var5: Int = (var13.getKey() as java.lang.Number).intValue();
-         val var9: BlurViewTargetHardwareAccelerated.BlurRect = var13.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
+         val var9: Entry = var13.next() as Entry;
+         val var5: Int = (var9.getKey() as java.lang.Number).intValue();
+         val var10: BlurViewTargetHardwareAccelerated.BlurRect = var9.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
          val var3: Boolean;
-         if (var9.getWidth() != 0 && var9.getHeight() != 0) {
+         if (var10.getWidth() != 0 && var10.getHeight() != 0) {
             var3 = true;
          } else {
             var3 = false;
@@ -138,7 +138,7 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
          }
 
          if (var3 && var4) {
-            var7.put(var13.getKey(), var13.getValue());
+            var7.put(var9.getKey(), var9.getValue());
          }
       }
    }
@@ -245,19 +245,19 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       public override fun toString(): String {
-         val var2: Int = this.windowX;
-         val var4: Int = this.windowY;
-         val var1: Int = this.width;
-         val var3: Int = this.height;
+         val var4: Int = this.windowX;
+         val var2: Int = this.windowY;
+         val var3: Int = this.width;
+         val var1: Int = this.height;
          val var5: StringBuilder = new StringBuilder();
          var5.append("BlurRect(windowX=");
-         var5.append(var2);
-         var5.append(", windowY=");
          var5.append(var4);
+         var5.append(", windowY=");
+         var5.append(var2);
          var5.append(", width=");
-         var5.append(var1);
-         var5.append(", height=");
          var5.append(var3);
+         var5.append(", height=");
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

@@ -1,8 +1,8 @@
 package com.discord.chat.input.bridge
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class ChatInputNode(type: Int,
@@ -121,27 +121,27 @@ public data class ChatInputNode(type: Int,
       val var1: Int = this.type;
       val var2: Int = this.location;
       val var3: Int = this.length;
-      val var6: ChatInputNodeStyle = this.style;
-      val var4: Boolean = this.deleteNodeOnBackspace;
-      val var7: TapAction = this.tapAction;
-      val var5: Boolean = this.editDisabled;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ChatInputNode(type=");
-      var8.append(var1);
-      var8.append(", location=");
-      var8.append(var2);
-      var8.append(", length=");
-      var8.append(var3);
-      var8.append(", style=");
-      var8.append(var6);
-      var8.append(", deleteNodeOnBackspace=");
-      var8.append(var4);
-      var8.append(", tapAction=");
-      var8.append(var7);
-      var8.append(", editDisabled=");
-      var8.append(var5);
-      var8.append(")");
-      return var8.toString();
+      val var7: ChatInputNodeStyle = this.style;
+      val var5: Boolean = this.deleteNodeOnBackspace;
+      val var8: TapAction = this.tapAction;
+      val var4: Boolean = this.editDisabled;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChatInputNode(type=");
+      var6.append(var1);
+      var6.append(", location=");
+      var6.append(var2);
+      var6.append(", length=");
+      var6.append(var3);
+      var6.append(", style=");
+      var6.append(var7);
+      var6.append(", deleteNodeOnBackspace=");
+      var6.append(var5);
+      var6.append(", tapAction=");
+      var6.append(var8);
+      var6.append(", editDisabled=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

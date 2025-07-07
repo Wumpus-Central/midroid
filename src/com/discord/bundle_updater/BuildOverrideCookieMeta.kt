@@ -6,12 +6,12 @@ import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import nb.E0
-import nb.O
-import nb.U
-import r9.s
+import ob.E0
+import ob.O
+import ob.U
+import s9.s
 
-@kb.f
+@lb.f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -29,7 +29,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new nb.f(E0.a), new nb.f(var0), null, new U(var0, O.a)};
+      $childSerializers = new KSerializer[]{null, null, new ob.f(E0.a), new ob.f(var0), null, new U(var0, O.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -148,8 +148,8 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public fun toNativeMap(): WritableNativeMap {
-      val var4: Pair = s.a("expiresAt", this.expiresAt);
-      val var3: Pair = s.a("releaseChannel", this.releaseChannel);
+      val var3: Pair = s.a("expiresAt", this.expiresAt);
+      val var4: Pair = s.a("releaseChannel", this.releaseChannel);
       var var9: ReadableNativeArray;
       if (this.validForUserIds != null) {
          var9 = NativeArrayExtensionsKt.toNativeArray$default(this.validForUserIds, null, 1, null);
@@ -164,36 +164,36 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var6: Pair = s.a("allowedVersions", var9);
-      val var7: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
+      val var7: Pair = s.a("allowedVersions", var9);
+      val var6: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var4, var3, var5, var6, var7, s.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var7, var6, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
       val var6: java.lang.String = this.expiresAt;
-      val var3: java.lang.String = this.releaseChannel;
-      val var7: java.util.List = this.validForUserIds;
-      val var5: java.util.List = this.allowedVersions;
-      val var2: java.lang.Boolean = this.allowLoggedOut;
-      val var1: java.util.Map = this.experiments;
+      val var7: java.lang.String = this.releaseChannel;
+      val var5: java.util.List = this.validForUserIds;
+      val var2: java.util.List = this.allowedVersions;
+      val var1: java.lang.Boolean = this.allowLoggedOut;
+      val var3: java.util.Map = this.experiments;
       val var4: StringBuilder = new StringBuilder();
       var4.append("BuildOverrideCookieMeta(expiresAt=");
       var4.append(var6);
       var4.append(", releaseChannel=");
-      var4.append(var3);
-      var4.append(", validForUserIds=");
       var4.append(var7);
-      var4.append(", allowedVersions=");
+      var4.append(", validForUserIds=");
       var4.append(var5);
-      var4.append(", allowLoggedOut=");
+      var4.append(", allowedVersions=");
       var4.append(var2);
-      var4.append(", experiments=");
+      var4.append(", allowLoggedOut=");
       var4.append(var1);
+      var4.append(", experiments=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

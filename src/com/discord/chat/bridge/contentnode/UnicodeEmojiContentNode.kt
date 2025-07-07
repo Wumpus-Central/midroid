@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class UnicodeEmojiContentNode(content: String, surrogate: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -59,14 +59,14 @@ public data class UnicodeEmojiContentNode(content: String, surrogate: String, ju
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.content;
-      val var4: java.lang.String = this.surrogate;
+      val var4: java.lang.String = this.content;
+      val var3: java.lang.String = this.surrogate;
       val var1: Boolean = this.jumboable;
       val var2: StringBuilder = new StringBuilder();
       var2.append("UnicodeEmojiContentNode(content=");
-      var2.append(var3);
-      var2.append(", surrogate=");
       var2.append(var4);
+      var2.append(", surrogate=");
+      var2.append(var3);
       var2.append(", jumboable=");
       var2.append(var1);
       var2.append(")");

@@ -1,6 +1,6 @@
 package com.discord.crash_reporting.react_events
 
-import I9.c
+import J9.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.crash_reporting.system_logs.SystemLogUtils
@@ -13,7 +13,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.q
-import r9.s
+import s9.s
 
 internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: SentryCrashData?, reason: Reason?, tombstone: Tombstone?) : ReactEvent {
    private final val crashedLastRun: Boolean?
@@ -138,19 +138,19 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
 
    public override fun toString(): String {
       val var3: java.lang.Boolean = this.crashedLastRun;
-      val var5: SystemLogReport.SentryCrashData = this.sentryData;
-      val var4: HistoricalProcessExitReason.Reason = this.reason;
-      val var2: SystemLogUtils.Tombstone = this.tombstone;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CrashReportEvent(crashedLastRun=");
-      var1.append(var3);
-      var1.append(", sentryData=");
-      var1.append(var5);
-      var1.append(", reason=");
-      var1.append(var4);
-      var1.append(", tombstone=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: SystemLogReport.SentryCrashData = this.sentryData;
+      val var2: HistoricalProcessExitReason.Reason = this.reason;
+      val var5: SystemLogUtils.Tombstone = this.tombstone;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("CrashReportEvent(crashedLastRun=");
+      var4.append(var3);
+      var4.append(", sentryData=");
+      var4.append(var1);
+      var4.append(", reason=");
+      var4.append(var2);
+      var4.append(", tombstone=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 }

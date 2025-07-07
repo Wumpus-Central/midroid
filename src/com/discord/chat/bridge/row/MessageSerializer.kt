@@ -11,9 +11,9 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import mb.g
-import mb.e.i
-import r9.c
+import nb.g
+import nb.e.i
+import s9.c
 
 public object MessageSerializer : KSerializer {
    public open val descriptor: SerialDescriptor
@@ -26,17 +26,17 @@ public object MessageSerializer : KSerializer {
       q.h(var1, "decoder");
 
       try {
-         var6 = var1.C(Message.Companion.serializer()) as MessageBase;
+         var5 = var1.C(Message.Companion.serializer()) as MessageBase;
       } catch (var4: Exception) {
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var4, false, 2, null);
-         val var2: UUID = UUID.randomUUID();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("RENDERING_ERROR_");
-         var5.append(var2);
-         var6 = new ErrorMessage(MessageId.constructor-impl(var5.toString()), c.b(var4), null);
+         val var3: UUID = UUID.randomUUID();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("RENDERING_ERROR_");
+         var2.append(var3);
+         var5 = new ErrorMessage(MessageId.constructor-impl(var2.toString()), c.b(var4), null);
       }
 
-      return (MessageBase)var6;
+      return (MessageBase)var5;
    }
 
    public open fun serialize(encoder: Encoder, value: MessageBase) {

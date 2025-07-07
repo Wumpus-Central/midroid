@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.media.UnfurledMediaItem
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class FileDisplayComponent(type: Int,
@@ -124,12 +124,12 @@ public data class FileDisplayComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var4: Int = this.id.hashCode();
-      val var7: Int = this.file.hashCode();
-      val var5: Int = this.name.hashCode();
-      val var2: Int = this.size.hashCode();
-      val var3: Int = java.lang.Boolean.hashCode(this.isSpoiler);
+      val var7: Int = Integer.hashCode(this.type);
+      val var5: Int = this.id.hashCode();
+      val var3: Int = this.file.hashCode();
+      val var6: Int = this.name.hashCode();
+      val var4: Int = this.size.hashCode();
+      val var2: Int = java.lang.Boolean.hashCode(this.isSpoiler);
       val var1: Int;
       if (this.spoilerDescription == null) {
          var1 = 0;
@@ -137,34 +137,34 @@ public data class FileDisplayComponent(type: Int,
          var1 = this.spoilerDescription.hashCode();
       }
 
-      return (((((var6 * 31 + var4) * 31 + var7) * 31 + var5) * 31 + var2) * 31 + var3) * 31 + var1;
+      return (((((var7 * 31 + var5) * 31 + var3) * 31 + var6) * 31 + var4) * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
+      val var6: java.lang.String = this.id;
       val var3: UnfurledMediaItem = this.file;
-      val var8: java.lang.String = this.name;
-      val var6: java.lang.String = this.size;
+      val var7: java.lang.String = this.name;
+      val var8: java.lang.String = this.size;
       val var2: Boolean = this.isSpoiler;
-      val var4: java.lang.String = this.spoilerDescription;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("FileDisplayComponent(type=");
-      var7.append(var1);
-      var7.append(", id=");
-      var7.append(var5);
-      var7.append(", file=");
-      var7.append(var3);
-      var7.append(", name=");
-      var7.append(var8);
-      var7.append(", size=");
-      var7.append(var6);
-      var7.append(", isSpoiler=");
-      var7.append(var2);
-      var7.append(", spoilerDescription=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var5: java.lang.String = this.spoilerDescription;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FileDisplayComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var6);
+      var4.append(", file=");
+      var4.append(var3);
+      var4.append(", name=");
+      var4.append(var7);
+      var4.append(", size=");
+      var4.append(var8);
+      var4.append(", isSpoiler=");
+      var4.append(var2);
+      var4.append(", spoilerDescription=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -52,7 +52,7 @@ import l2.w0
 import l2.x0
 import l2.y0
 import l2.z0
-import r9.j
+import s9.j
 
 internal class DarkerTheme(resources: Resources, theme: Theme) : DiscordThemeObject {
    public open val androidRipple: Int

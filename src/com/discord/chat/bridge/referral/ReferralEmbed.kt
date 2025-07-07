@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.referral
 
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f(with = ReferralEmbedSerializer::class)
 public sealed interface ReferralEmbed {
@@ -268,10 +268,10 @@ public sealed interface ReferralEmbed {
       }
 
       public override fun hashCode(): Int {
-         val var22: Int = this.headerText.hashCode();
-         val var21: Int = Integer.hashCode(this.headerColor);
-         val var20: Int = Integer.hashCode(this.backgroundColor);
-         val var19: Int = Integer.hashCode(this.thumbnailCornerRadius);
+         val var19: Int = this.headerText.hashCode();
+         val var20: Int = Integer.hashCode(this.headerColor);
+         val var21: Int = Integer.hashCode(this.backgroundColor);
+         val var22: Int = Integer.hashCode(this.thumbnailCornerRadius);
          var var18: Int = 0;
          val var1: Int;
          if (this.headerLogoUrl == null) {
@@ -416,15 +416,15 @@ public sealed interface ReferralEmbed {
                                                                                                                                                                   (
                                                                                                                                                                            (
                                                                                                                                                                                     (
-                                                                                                                                                                                             var22
+                                                                                                                                                                                             var19
                                                                                                                                                                                                    * 31
-                                                                                                                                                                                                + var21
+                                                                                                                                                                                                + var20
                                                                                                                                                                                           )
                                                                                                                                                                                           * 31
-                                                                                                                                                                                       + var20
+                                                                                                                                                                                       + var21
                                                                                                                                                                                  )
                                                                                                                                                                                  * 31
-                                                                                                                                                                              + var19
+                                                                                                                                                                              + var22
                                                                                                                                                                         )
                                                                                                                                                                         * 31
                                                                                                                                                                      + var1
@@ -482,75 +482,75 @@ public sealed interface ReferralEmbed {
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.headerText;
+         val var19: java.lang.String = this.headerText;
          val var1: Int = this.headerColor;
          val var3: Int = this.backgroundColor;
          val var2: Int = this.thumbnailCornerRadius;
-         val var5: java.lang.String = this.headerLogoUrl;
-         val var7: java.lang.String = this.headerUrl;
-         val var18: java.lang.String = this.thumbnailUrl;
-         val var6: java.lang.String = this.titleText;
-         val var8: Int = this.titleColor;
+         val var13: java.lang.String = this.headerLogoUrl;
+         val var14: java.lang.String = this.headerUrl;
+         val var10: java.lang.String = this.thumbnailUrl;
+         val var11: java.lang.String = this.titleText;
+         val var5: Int = this.titleColor;
          val var16: java.lang.String = this.bodyText;
-         val var11: AnnotatedStructurableText = this.structuredBodyText;
-         val var21: Int = this.bodyTextColor;
-         val var19: AnnotatedStructurableText = this.linkButtonLabel;
-         val var22: Int = this.linkButtonColor;
+         val var7: AnnotatedStructurableText = this.structuredBodyText;
+         val var20: Int = this.bodyTextColor;
+         val var23: AnnotatedStructurableText = this.linkButtonLabel;
+         val var6: Int = this.linkButtonColor;
          val var15: java.lang.String = this.subText;
-         val var9: Int = this.subTextColor;
-         val var13: java.lang.String = this.footerText;
-         val var14: Int = this.footerTextColor;
-         val var17: java.lang.String = this.acceptLabelText;
+         val var8: Int = this.subTextColor;
+         val var21: java.lang.String = this.footerText;
+         val var22: Int = this.footerTextColor;
+         val var9: java.lang.String = this.acceptLabelText;
          val var12: Int = this.acceptLabelColor;
-         val var10: java.lang.String = this.acceptLabelIconUrl;
-         val var20: java.lang.Boolean = this.canBeAccepted;
-         val var23: StringBuilder = new StringBuilder();
-         var23.append("Resolved(headerText=");
-         var23.append(var4);
-         var23.append(", headerColor=");
-         var23.append(var1);
-         var23.append(", backgroundColor=");
-         var23.append(var3);
-         var23.append(", thumbnailCornerRadius=");
-         var23.append(var2);
-         var23.append(", headerLogoUrl=");
-         var23.append(var5);
-         var23.append(", headerUrl=");
-         var23.append(var7);
-         var23.append(", thumbnailUrl=");
-         var23.append(var18);
-         var23.append(", titleText=");
-         var23.append(var6);
-         var23.append(", titleColor=");
-         var23.append(var8);
-         var23.append(", bodyText=");
-         var23.append(var16);
-         var23.append(", structuredBodyText=");
-         var23.append(var11);
-         var23.append(", bodyTextColor=");
-         var23.append(var21);
-         var23.append(", linkButtonLabel=");
-         var23.append(var19);
-         var23.append(", linkButtonColor=");
-         var23.append(var22);
-         var23.append(", subText=");
-         var23.append(var15);
-         var23.append(", subTextColor=");
-         var23.append(var9);
-         var23.append(", footerText=");
-         var23.append(var13);
-         var23.append(", footerTextColor=");
-         var23.append(var14);
-         var23.append(", acceptLabelText=");
-         var23.append(var17);
-         var23.append(", acceptLabelColor=");
-         var23.append(var12);
-         var23.append(", acceptLabelIconUrl=");
-         var23.append(var10);
-         var23.append(", canBeAccepted=");
-         var23.append(var20);
-         var23.append(")");
-         return var23.toString();
+         val var4: java.lang.String = this.acceptLabelIconUrl;
+         val var17: java.lang.Boolean = this.canBeAccepted;
+         val var18: StringBuilder = new StringBuilder();
+         var18.append("Resolved(headerText=");
+         var18.append(var19);
+         var18.append(", headerColor=");
+         var18.append(var1);
+         var18.append(", backgroundColor=");
+         var18.append(var3);
+         var18.append(", thumbnailCornerRadius=");
+         var18.append(var2);
+         var18.append(", headerLogoUrl=");
+         var18.append(var13);
+         var18.append(", headerUrl=");
+         var18.append(var14);
+         var18.append(", thumbnailUrl=");
+         var18.append(var10);
+         var18.append(", titleText=");
+         var18.append(var11);
+         var18.append(", titleColor=");
+         var18.append(var5);
+         var18.append(", bodyText=");
+         var18.append(var16);
+         var18.append(", structuredBodyText=");
+         var18.append(var7);
+         var18.append(", bodyTextColor=");
+         var18.append(var20);
+         var18.append(", linkButtonLabel=");
+         var18.append(var23);
+         var18.append(", linkButtonColor=");
+         var18.append(var6);
+         var18.append(", subText=");
+         var18.append(var15);
+         var18.append(", subTextColor=");
+         var18.append(var8);
+         var18.append(", footerText=");
+         var18.append(var21);
+         var18.append(", footerTextColor=");
+         var18.append(var22);
+         var18.append(", acceptLabelText=");
+         var18.append(var9);
+         var18.append(", acceptLabelColor=");
+         var18.append(var12);
+         var18.append(", acceptLabelIconUrl=");
+         var18.append(var4);
+         var18.append(", canBeAccepted=");
+         var18.append(var17);
+         var18.append(")");
+         return var18.toString();
       }
 
       public companion object {
@@ -657,10 +657,10 @@ public sealed interface ReferralEmbed {
       }
 
       public override fun hashCode(): Int {
-         val var4: Int = this.headerText.hashCode();
-         val var2: Int = Integer.hashCode(this.headerColor);
-         val var3: Int = Integer.hashCode(this.backgroundColor);
-         val var5: Int = Integer.hashCode(this.thumbnailCornerRadius);
+         val var2: Int = this.headerText.hashCode();
+         val var4: Int = Integer.hashCode(this.headerColor);
+         val var5: Int = Integer.hashCode(this.backgroundColor);
+         val var3: Int = Integer.hashCode(this.thumbnailCornerRadius);
          val var1: Int;
          if (this.headerLogoUrl == null) {
             var1 = 0;
@@ -668,35 +668,35 @@ public sealed interface ReferralEmbed {
             var1 = this.headerLogoUrl.hashCode();
          }
 
-         return (((((var4 * 31 + var2) * 31 + var3) * 31 + var5) * 31 + var1) * 31 + Integer.hashCode(this.resolvingGradientStart)) * 31
+         return (((((var2 * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + Integer.hashCode(this.resolvingGradientStart)) * 31
             + Integer.hashCode(this.resolvingGradientEnd);
       }
 
       public override fun toString(): String {
-         val var8: java.lang.String = this.headerText;
-         val var5: Int = this.headerColor;
+         val var7: java.lang.String = this.headerText;
+         val var3: Int = this.headerColor;
          val var4: Int = this.backgroundColor;
-         val var2: Int = this.thumbnailCornerRadius;
-         val var7: java.lang.String = this.headerLogoUrl;
+         val var5: Int = this.thumbnailCornerRadius;
+         val var6: java.lang.String = this.headerLogoUrl;
          val var1: Int = this.resolvingGradientStart;
-         val var3: Int = this.resolvingGradientEnd;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Resolving(headerText=");
-         var6.append(var8);
-         var6.append(", headerColor=");
-         var6.append(var5);
-         var6.append(", backgroundColor=");
-         var6.append(var4);
-         var6.append(", thumbnailCornerRadius=");
-         var6.append(var2);
-         var6.append(", headerLogoUrl=");
-         var6.append(var7);
-         var6.append(", resolvingGradientStart=");
-         var6.append(var1);
-         var6.append(", resolvingGradientEnd=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var2: Int = this.resolvingGradientEnd;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Resolving(headerText=");
+         var8.append(var7);
+         var8.append(", headerColor=");
+         var8.append(var3);
+         var8.append(", backgroundColor=");
+         var8.append(var4);
+         var8.append(", thumbnailCornerRadius=");
+         var8.append(var5);
+         var8.append(", headerLogoUrl=");
+         var8.append(var6);
+         var8.append(", resolvingGradientStart=");
+         var8.append(var1);
+         var8.append(", resolvingGradientEnd=");
+         var8.append(var2);
+         var8.append(")");
+         return var8.toString();
       }
 
       public companion object {

@@ -76,23 +76,23 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       q.h(var1, "message");
       super.onFound(var1);
       val var2: Function1 = this.onFoundUser;
-      val var3: ByteArray = var1.q();
+      val var3: ByteArray = var1.l();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, Ya.a.b));
+      var2.invoke(new java.lang.String(var3, Za.a.b));
    }
 
    public open fun onLost(message: Message) {
       q.h(var1, "message");
       super.onLost(var1);
       val var2: Function1 = this.onLostUser;
-      val var3: ByteArray = var1.q();
+      val var3: ByteArray = var1.l();
       q.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, Ya.a.b));
+      var2.invoke(new java.lang.String(var3, Za.a.b));
    }
 
    public fun setOutboundMessage(message: String) {
       q.h(var1, "message");
-      val var2: ByteArray = var1.getBytes(Ya.a.b);
+      val var2: ByteArray = var1.getBytes(Za.a.b);
       q.g(var2, "getBytes(...)");
       this.outboundMessage = new Message(var2);
    }

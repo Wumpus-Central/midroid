@@ -1,8 +1,8 @@
 package com.discord.fastest_list.android.placeholder
 
+import A9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.q
-import z9.a
 
 internal object FastestListPlaceholderAlignment {
    public enum class Horizontal {

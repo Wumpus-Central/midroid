@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f(with = SectionChildComponent.Serializer::class)
 public sealed interface SectionChildComponent<T extends Component> {

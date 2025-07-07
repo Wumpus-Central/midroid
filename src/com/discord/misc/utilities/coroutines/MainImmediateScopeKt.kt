@@ -1,7 +1,7 @@
 package com.discord.misc.utilities.coroutines
 
-import ab.K
-import ab.k0
+import bb.K
+import bb.k0
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 

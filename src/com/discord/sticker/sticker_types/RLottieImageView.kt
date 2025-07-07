@@ -1,11 +1,10 @@
 package com.discord.sticker.sticker_types
 
-import ab.K
-import ab.d0
 import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
+import bb.K
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.image.animated_image.animated_image_utils.AnimatedImageStateManager
@@ -36,7 +35,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
    }
 
    private fun fetchSticker(config: com.discord.sticker.sticker_types.RLottieImageView.Config) {
-      ab.f.d(
+      bb.f.d(
          CoroutineViewUtilsKt.getAttachedScope(this),
          K.b(),
          null,
@@ -60,7 +59,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = y9.b.e();
+               val var3: Any = z9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      if (this.label != 2) {
@@ -74,8 +73,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: d0 = K.c();
-                  var1 = new Function2(this.this$0, null) {
+                  var1 = K.c();
+                  val var4: Function2 = new Function2(this.this$0, null) {
                      int label;
                      final RLottieImageView this$0;
 
@@ -93,7 +92,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        y9.b.e();
+                        z9.b.e();
                         if (this.label == 0) {
                            kotlin.c.b(var1);
                            this.this$0.clearAnimation();
@@ -104,23 +103,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (ab.f.g(var4, var1, this) === var3) {
+                  if (bb.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
 
                val var7: FileDownloader = FileDownloader.INSTANCE;
-               val var6: Context = this.this$0.getContext();
-               q.g(var6, "getContext(...)");
-               val var5: java.lang.String = this.$config.getUrl();
+               val var5: Context = this.this$0.getContext();
+               q.g(var5, "getContext(...)");
+               val var6: java.lang.String = this.$config.getUrl();
                val var11: java.lang.String = this.$config.getAsset();
                val var9: StringBuilder = new StringBuilder();
                var9.append(var11);
                var9.append(".json");
-               val var10: Flow = FileDownloader.downloadFile$default(
-                  var7, var6, var5, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var12: Flow = FileDownloader.downloadFile$default(
+                  var7, var5, var6, var9.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -131,7 +130,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
 
                   public final Object emit(DownloadState var1, Continuation var2x) {
                      if (var1 is DownloadState.Completed) {
-                        val var4x: Any = ab.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
+                        val var4x: Any = bb.f.g(K.c(), new Function2(this.this$0, var1, this.$config, null) {
                            final RLottieImageView.Config $config;
                            final DownloadState $downloadState;
                            int label;
@@ -153,7 +152,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            }
 
                            public final Object invokeSuspend(Object var1) {
-                              y9.b.e();
+                              z9.b.e();
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
@@ -183,9 +182,9 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
                            }
                         }, var2x);
-                        return if (var4x === y9.b.e()) var4x else Unit.a;
+                        return if (var4x === z9.b.e()) var4x else Unit.a;
                      } else if (var1 is DownloadState.Failure) {
-                        val var3x: Any = ab.f.g(
+                        val var3x: Any = bb.f.g(
                            K.c(),
                            new Function2(this.this$0, null) {
                               int label;
@@ -205,7 +204,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               }
 
                               public final Object invokeSuspend(Object var1) {
-                                 y9.b.e();
+                                 z9.b.e();
                                  if (this.label == 0) {
                                     kotlin.c.b(var1);
                                     AnimatedImageStateManager.onFetchFinished$default(
@@ -219,14 +218,14 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                            },
                            var2x
                         );
-                        return if (var3x === y9.b.e()) var3x else Unit.a;
+                        return if (var3x === z9.b.e()) var3x else Unit.a;
                      } else {
                         return Unit.a;
                      }
                   }
                };
                this.label = 2;
-               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
+               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
             }
          },
          2,
@@ -391,15 +390,15 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var7: java.lang.String = this.url;
          val var4: Boolean = this.animate;
          val var1: Int = this.widthDp;
          val var2: Int = this.heightDp;
-         val var7: java.lang.String = this.asset;
+         val var5: java.lang.String = this.asset;
          val var3: Int = this.renderMode;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Config(url=");
-         var6.append(var5);
+         var6.append(var7);
          var6.append(", animate=");
          var6.append(var4);
          var6.append(", widthDp=");
@@ -407,7 +406,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
          var6.append(", heightDp=");
          var6.append(var2);
          var6.append(", asset=");
-         var6.append(var7);
+         var6.append(var5);
          var6.append(", renderMode=");
          var6.append(var3);
          var6.append(")");

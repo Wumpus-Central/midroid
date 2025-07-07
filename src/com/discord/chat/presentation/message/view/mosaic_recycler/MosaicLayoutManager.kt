@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import H9.a
+import I9.a
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

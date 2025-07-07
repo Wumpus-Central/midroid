@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
+import lb.f
 
 @f
 public data class ComponentEmoji(id: String? = null, name: String, src: String? = null, animated: Boolean = false, surrogates: String? = null) {
@@ -100,16 +100,16 @@ public data class ComponentEmoji(id: String? = null, name: String, src: String? 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var3: java.lang.String = this.name;
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.name;
       val var2: java.lang.String = this.src;
       val var1: Boolean = this.animated;
       val var5: java.lang.String = this.surrogates;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ComponentEmoji(id=");
-      var6.append(var4);
-      var6.append(", name=");
       var6.append(var3);
+      var6.append(", name=");
+      var6.append(var4);
       var6.append(", src=");
       var6.append(var2);
       var6.append(", animated=");

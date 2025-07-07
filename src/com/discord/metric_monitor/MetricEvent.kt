@@ -5,10 +5,10 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.q
 import kotlinx.serialization.KSerializer
-import r9.s
+import lb.f
+import s9.s
 
 @f
 public data class MetricEvent(name: String, tags: List<String>? = null) : ReactEvent {
@@ -73,13 +73,13 @@ public data class MetricEvent(name: String, tags: List<String>? = null) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
-      val var2: java.util.List = this.tags;
+      val var2: java.lang.String = this.name;
+      val var1: java.util.List = this.tags;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MetricEvent(name=");
-      var3.append(var1);
-      var3.append(", tags=");
       var3.append(var2);
+      var3.append(", tags=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

@@ -1,6 +1,6 @@
 package com.discord.phone_verification
 
-import Vb.f
+import Wb.f
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -17,7 +17,7 @@ import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import kotlin.jvm.internal.q
-import r9.j
+import s9.j
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
@@ -105,28 +105,28 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var8: java.lang.String;
+            var var9: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                q.e(var4);
                val var24: java.lang.String = var7.toCharsString();
                q.g(var24, "toCharsString(...)");
-               var8 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var23: Log = Log.INSTANCE;
-               val var9: java.lang.String = TAG;
-               val var25: StringBuilder = new StringBuilder();
-               var25.append("Hash ");
-               var25.append(var8);
-               Log.i$default(var23, var9, var25.toString(), null, 4, null);
+               var9 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var25: Log = Log.INSTANCE;
+               val var23: java.lang.String = TAG;
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Hash ");
+               var8.append(var9);
+               Log.i$default(var25, var23, var8.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
                break;
             }
 
-            if (var8 != null) {
+            if (var9 != null) {
                try {
-                  var22.add(var8);
+                  var22.add(var9);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   i.k();
