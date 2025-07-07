@@ -117,26 +117,26 @@ public data class ForumPostActionBar(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var6: ForumPostActions = this.postActions;
-      val var3: java.util.List = this.reactions;
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: ForumPostActions = this.postActions;
+      val var5: java.util.List = this.reactions;
       val var1: Boolean = this.canAddNewReactions;
-      val var4: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var5: ReactionsTheme = this.reactionsTheme;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ForumPostActionBar(messageId=");
-      var2.append(var7);
-      var2.append(", postActions=");
-      var2.append(var6);
-      var2.append(", reactions=");
-      var2.append(var3);
-      var2.append(", canAddNewReactions=");
-      var2.append(var1);
-      var2.append(", addNewReactionAccessibilityLabel=");
-      var2.append(var4);
-      var2.append(", reactionsTheme=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var6: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var7: ReactionsTheme = this.reactionsTheme;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ForumPostActionBar(messageId=");
+      var4.append(var2);
+      var4.append(", postActions=");
+      var4.append(var3);
+      var4.append(", reactions=");
+      var4.append(var5);
+      var4.append(", canAddNewReactions=");
+      var4.append(var1);
+      var4.append(", addNewReactionAccessibilityLabel=");
+      var4.append(var6);
+      var4.append(", reactionsTheme=");
+      var4.append(var7);
+      var4.append(")");
+      return var4.toString();
    }
 }

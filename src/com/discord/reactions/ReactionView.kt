@@ -193,7 +193,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureCount(count: Int, animate: Boolean, showingFullLabel: Boolean) {
-      val var6: TextSwitcher = this.binding.reactionCountSwitcher;
+      val var5: TextSwitcher = this.binding.reactionCountSwitcher;
       if (var3) {
          this.binding.reactionCountSwitcher.setVisibility(8);
       } else {
@@ -205,16 +205,16 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
             }
 
             if (var1 > var4) {
-               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_up);
-               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_up);
+               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_up);
+               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_up);
             } else {
-               var6.setInAnimation(var6.getContext(), R.anim.anim_slide_in_down);
-               var6.setOutAnimation(var6.getContext(), R.anim.anim_slide_out_down);
+               var5.setInAnimation(var5.getContext(), R.anim.anim_slide_in_down);
+               var5.setOutAnimation(var5.getContext(), R.anim.anim_slide_out_down);
             }
 
-            var6.setText(java.lang.String.valueOf(var1));
+            var5.setText(java.lang.String.valueOf(var1));
          } else {
-            var6.setCurrentText(java.lang.String.valueOf(var1));
+            var5.setCurrentText(java.lang.String.valueOf(var1));
          }
 
          this.currentCount = var1;
@@ -389,11 +389,11 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
          val var11: RenderableEmoji = var1.getEmoji().renderable();
-         val var16: Context = this.getContext();
-         r.g(var16, "getContext(...)");
-         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var16, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         val var9: Context = this.getContext();
+         r.g(var9, "getContext(...)");
+         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var11, var9, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

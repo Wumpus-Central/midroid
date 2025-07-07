@@ -53,12 +53,12 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "inviteAccessory");
       val var22: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var15: GuildEventInviteView = this.guildEventInviteView;
+      val var9: GuildEventInviteView = this.guildEventInviteView;
       this.guildEventInviteView.setHeader(var22.getHeaderIcon(), var22.getHeaderText(), var22.getHeaderColor());
-      var15.setCreatorAvatar(var22.getCreatorAvatar());
-      var15.setBadge(var22.getBadgeIcon(), var22.getBadgeCount());
-      var15.setTitle(var22.getTitleText(), var22.getTitleColor());
-      var15.setDescription-iRUqyQU(
+      var9.setCreatorAvatar(var22.getCreatorAvatar());
+      var9.setBadge(var22.getBadgeIcon(), var22.getBadgeCount());
+      var9.setTitle(var22.getTitleText(), var22.getTitleColor());
+      var9.setDescription-iRUqyQU(
          var22.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
@@ -239,9 +239,9 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var15.setGuild(var22.getGuildName(), var22.getGuildIcon());
-      var15.setChannel(var22.getChannelIcon(), var22.getChannelName());
-      var15.setAcceptButton(
+      var9.setGuild(var22.getGuildName(), var22.getGuildIcon());
+      var9.setChannel(var22.getChannelIcon(), var22.getChannelName());
+      var9.setAcceptButton(
          var22.getAcceptLabelIcon(),
          var22.getAcceptLabelText(),
          var22.getAcceptLabelColor(),
@@ -249,6 +249,6 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          var22.getAcceptLabelBackgroundColor(),
          new o(this, var1)
       );
-      var15.setSecondaryButton(var22.getSecondaryActionIcon(), new p(this, var1));
+      var9.setSecondaryButton(var22.getSecondaryActionIcon(), new p(this, var1));
    }
 }

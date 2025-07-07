@@ -21,12 +21,12 @@ public class GridGapItemDecoration(spanCount: Int, gapPx: Int) : RecyclerView.It
       r.h(var3, "parent");
       r.h(var4, "state");
       val var5: Int = var3.getChildAdapterPosition(var2);
-      val var6: Int = this.spanCount;
-      val var7: Int = var5 % this.spanCount;
+      val var7: Int = this.spanCount;
+      val var6: Int = var5 % this.spanCount;
       val var8: Int = this.gapPx;
-      var1.left = var7 * this.gapPx / this.spanCount;
-      var1.right = var8 - (var7 + 1) * var8 / var6;
-      if (var5 >= var6) {
+      var1.left = var6 * this.gapPx / this.spanCount;
+      var1.right = var8 - (var6 + 1) * var8 / var7;
+      if (var5 >= var7) {
          var1.top = var8;
       }
    }

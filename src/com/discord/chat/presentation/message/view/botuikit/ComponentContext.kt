@@ -190,38 +190,38 @@ public data class ComponentContext(containerId: String,
    }
 
    public override fun toString(): String {
-      val var10: java.lang.String = this.containerId;
+      val var5: java.lang.String = this.containerId;
       val var6: GeneralEventHandlers = this.generalEventHandlers;
-      val var5: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
+      val var4: MarkdownTextRenderOptions = this.markdownTextRenderOptions;
       val var7: MarkdownTextRenderEventHandlers = this.markdownTextRenderEventHandlers;
       val var8: MediaItemEventHandlers = this.mediaItemEventHandlers;
       val var9: ComponentActionEventHandlers = this.componentActionEventHandlers;
-      val var4: WidthInfo = this.widthInfo;
+      val var11: WidthInfo = this.widthInfo;
       val var2: Boolean = this.shouldAutoPlayGif;
-      val var1: Boolean = this.isForwardedContent;
-      val var3: Boolean = this.isInContainerComponent;
-      val var11: StringBuilder = new StringBuilder();
-      var11.append("ComponentContext(containerId=");
-      var11.append(var10);
-      var11.append(", generalEventHandlers=");
-      var11.append(var6);
-      var11.append(", markdownTextRenderOptions=");
-      var11.append(var5);
-      var11.append(", markdownTextRenderEventHandlers=");
-      var11.append(var7);
-      var11.append(", mediaItemEventHandlers=");
-      var11.append(var8);
-      var11.append(", componentActionEventHandlers=");
-      var11.append(var9);
-      var11.append(", widthInfo=");
-      var11.append(var4);
-      var11.append(", shouldAutoPlayGif=");
-      var11.append(var2);
-      var11.append(", isForwardedContent=");
-      var11.append(var1);
-      var11.append(", isInContainerComponent=");
-      var11.append(var3);
-      var11.append(")");
-      return var11.toString();
+      val var3: Boolean = this.isForwardedContent;
+      val var1: Boolean = this.isInContainerComponent;
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("ComponentContext(containerId=");
+      var10.append(var5);
+      var10.append(", generalEventHandlers=");
+      var10.append(var6);
+      var10.append(", markdownTextRenderOptions=");
+      var10.append(var4);
+      var10.append(", markdownTextRenderEventHandlers=");
+      var10.append(var7);
+      var10.append(", mediaItemEventHandlers=");
+      var10.append(var8);
+      var10.append(", componentActionEventHandlers=");
+      var10.append(var9);
+      var10.append(", widthInfo=");
+      var10.append(var11);
+      var10.append(", shouldAutoPlayGif=");
+      var10.append(var2);
+      var10.append(", isForwardedContent=");
+      var10.append(var3);
+      var10.append(", isInContainerComponent=");
+      var10.append(var1);
+      var10.append(")");
+      return var10.toString();
    }
 }

@@ -60,18 +60,18 @@ public class MessageBundleMessageDelegate(onMeasured: (View, Int, Int) -> Unit) 
          if (var2 is MessageBundleMessageItem) {
             val var11: MessageView = var1 as MessageView;
             val var8: MessageBundleMessageItem = var2 as MessageBundleMessageItem;
-            val var7: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
-            val var12: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
+            val var12: Message = (var2 as MessageBundleMessageItem).getMessageItem().getMessage();
+            val var7: MessageContext = (var2 as MessageBundleMessageItem).getMessageItem().getMessageContext();
             val var6: MessageFrame = var8.getMessageItem().getMessageFrame();
-            val var10: MessageItem = var8.getMessageItem();
-            val var9: Context = var11.getContext();
-            r.g(var9, "getContext(...)");
+            val var9: MessageItem = var8.getMessageItem();
+            val var10: Context = var11.getContext();
+            r.g(var10, "getContext(...)");
             MessageView.setMessage$default(
                var11,
-               var7,
                var12,
+               var7,
                var6,
-               MessageBundleDelegateUtilsKt.getEventHandler(var10, var9),
+               MessageBundleDelegateUtilsKt.getEventHandler(var9, var10),
                null,
                new c(this, var3, var4),
                false,

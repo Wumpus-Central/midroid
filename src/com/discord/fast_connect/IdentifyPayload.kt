@@ -83,28 +83,26 @@ internal object IdentifyPayload {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         val var12: JsonObject = var6 as JsonObject;
-         var6 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         var21 = var2.getGuildVersions();
-         val var8: LinkedHashMap = new LinkedHashMap(d.d(q.d(((Object[])var21).length), 16));
-         var var5: Int = ((Object[])var21).length;
+         var6 = var6 as JsonObject;
+         var21 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var8: Array<GuildVersion> = var2.getGuildVersions();
+         val var12: LinkedHashMap = new LinkedHashMap(d.d(q.d(var8.length), 16));
+         var var5: Int = var8.length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(((GuildVersion)((Object[])var21)[var3]).getId(), g.c(((GuildVersion)((Object[])var21)[var3]).getVersion()));
-            var8.put(var24.c(), var24.d());
+            val var24: Pair = s.a(var8[var3].getId(), g.c(var8[var3].getVersion()));
+            var12.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put(var12, (java.util.List<java.lang.String>)var6, new JsonObject(var8));
+         var var13: JsonObject = this.put((JsonObject)var6, (java.util.List<java.lang.String>)var21, new JsonObject(var12));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
-            var21 = var14[var15];
-            var6 = INSTANCE;
+            var6 = var14[var15];
+            var21 = INSTANCE;
             var13 = INSTANCE.put(
-               var13,
-               i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var21).getId()}),
-               ((IdentifyPayload)var6).toJson((NonGuildVersion)var21)
+               var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}), ((IdentifyPayload)var21).toJson((NonGuildVersion)var6)
             );
          }
 
