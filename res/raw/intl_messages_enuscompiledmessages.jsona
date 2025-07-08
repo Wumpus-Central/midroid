@@ -10924,12 +10924,26 @@
   "QRN+Sk": "Your \"About Me\" violates this server's guidelines. You'll have to update your per-server profile before you can start chatting.",
   "bU6o09": "This message can't be edited because it contains content blocked by this community. The message may also be viewed by the community owners.",
   "zQ69pq": "This message can't be posted because it contains content blocked by this community. The message may also be viewed by the community owners.",
+  "ml72ZW": "Your profile contains words that are not allowed.",
   "8HW7r6": "Your per-server profile contains words that are not allowed.",
   "LnGhZm": "Block Commonly Flagged Words",
   "UsD2YG": "User is no longer a member of this server.",
   "t+gj5e": "Please add at least one action to this rule.",
   "Q+68IS": "Member join or update",
   "NlQW4O": "Message Send",
+  "c8TwbG": [
+    "Your profile contains words that are not allowed in ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "guildName"
+        ]
+      ]
+    ]
+  ],
   "rbRvGR": [
     [
       1,
@@ -11382,9 +11396,11 @@
   "PAM+JS": "Tell us what happened",
   "K3UWeX": "Other",
   "ZQr92N": "Enforce Server Rules (AI)",
+  "EJJLHh": "Your Server Tag violates this server's guidelines. You'll have to update your profile before you can start chatting.",
   "Z6DZZ2": "Submit Issue",
   "SP9BBw": "Unknown",
   "WikgZ2": "Update Username",
+  "Viksoq": "Update Profile",
   "/PGQf3": "Update Per-server Profile",
   "hG1StL": "AutoMod",
   "SpDXIy": "Your \"Username\" violates this server's guidelines. You'll have to update your per-server profile before you can start chatting.",
@@ -20623,9 +20639,9 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
-  "OAB5TE": "Join from a supported device",
-  "pwEQoq": "Play from a supported device",
-  "sTo7s7": "Listen from a supported device",
+  "OAB5TE": "Join From a Supported Device",
+  "pwEQoq": "Play From a Supported Device",
+  "sTo7s7": "Listen From a Supported Device",
   "XE8axM": [
     [
       8,
@@ -26993,21 +27009,33 @@
     " character count limit. Speak your mind with 2x longer messages, send larger file uploads, and more with Discord Nitro!"
   ],
   "8cjmTk": "Your message is too long",
-  "MQ9MVF": [
-    "Nitro Basic: ",
-    [
-      1,
-      "accessibilityLabel"
-    ]
-  ],
-  "q8AHZm": [
-    "Nitro: ",
-    [
-      1,
-      "accessibilityLabel"
-    ]
-  ],
   "HdFLQ0": "Plan comparison table",
+  "EZjXNz": [
+    [
+      1,
+      "accessibilityLabel"
+    ],
+    ", row ",
+    [
+      1,
+      "rowNumber"
+    ],
+    ", row name ",
+    [
+      1,
+      "rowName"
+    ],
+    ", column ",
+    [
+      1,
+      "columnNumber"
+    ],
+    ", column name ",
+    [
+      1,
+      "columnName"
+    ]
+  ],
   "qVcfa2": "Free Trial",
   "+FgdjI": [
     "Free Trial (",
