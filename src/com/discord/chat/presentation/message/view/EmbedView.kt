@@ -503,22 +503,22 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var29 = "";
          }
 
-         var var22: StructurableText = var21.getName();
+         var var23: StructurableText = var21.getName();
          var var31: DraweeSpanStringBuilder;
-         if (var22 != null) {
-            val var23: Context = var20.getContext();
-            kotlin.jvm.internal.r.g(var23, "getContext(...)");
-            val var18: TextPaint = var20.getBinding().name.getPaint();
-            kotlin.jvm.internal.r.g(var18, "getPaint(...)");
+         if (var23 != null) {
+            val var18: Context = var20.getContext();
+            kotlin.jvm.internal.r.g(var18, "getContext(...)");
+            val var22: TextPaint = var20.getBinding().name.getPaint();
+            kotlin.jvm.internal.r.g(var22, "getPaint(...)");
             var31 = TextUtilsKt.toSpannable$default(
-               var22,
                var23,
+               var18,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var18,
+               var22,
                var24,
                var8,
                var12,
@@ -551,23 +551,23 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             var30 = "";
          }
 
-         var22 = var21.getValue();
-         if (var22 != null) {
-            val var34: Context = var20.getContext();
-            kotlin.jvm.internal.r.g(var34, "getContext(...)");
-            val var32: TextPaint = var20.getBinding().value.getPaint();
-            kotlin.jvm.internal.r.g(var32, "getPaint(...)");
-            val var36: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
-            kotlin.jvm.internal.r.g(var36, "getFontMetrics(...)");
+         var23 = var21.getValue();
+         if (var23 != null) {
+            val var32: Context = var20.getContext();
+            kotlin.jvm.internal.r.g(var32, "getContext(...)");
+            val var34: TextPaint = var20.getBinding().value.getPaint();
+            kotlin.jvm.internal.r.g(var34, "getPaint(...)");
+            val var35: FontMetrics = var20.getBinding().value.getPaint().getFontMetrics();
+            kotlin.jvm.internal.r.g(var35, "getFontMetrics(...)");
             var31 = TextUtilsKt.toSpannable$default(
-               var22,
-               var34,
+               var23,
+               var32,
                var2,
                var3,
                var4,
                var5,
                var6,
-               var32,
+               var34,
                var24,
                var8,
                var12,
@@ -585,7 +585,7 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
                null,
                false,
                null,
-               TextUtilsKt.getBaselineHeightPx(var36),
+               TextUtilsKt.getBaselineHeightPx(var35),
                null,
                49011712,
                null
@@ -882,22 +882,22 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
             }
          }
       } else {
-         val var78: StructurableText = var1.getTitle();
+         val var34: StructurableText = var1.getTitle();
          val var79: DraweeSpanStringBuilder;
-         if (var78 != null) {
-            val var35: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var35, "getContext(...)");
-            val var34: TextPaint = this.binding.title.getPaint();
-            kotlin.jvm.internal.r.g(var34, "getPaint(...)");
+         if (var34 != null) {
+            val var78: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var78, "getContext(...)");
+            val var35: TextPaint = this.binding.title.getPaint();
+            kotlin.jvm.internal.r.g(var35, "getPaint(...)");
             var79 = TextUtilsKt.toSpannable$default(
+               var34,
                var78,
-               var35,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var34,
+               var35,
                null,
                null,
                var22,
@@ -955,21 +955,21 @@ public class EmbedView  public constructor(context: Context, attrs: AttributeSet
          val var87: StructurableText = var1.getDescription();
          val var72: DraweeSpanStringBuilder;
          if (var87 != null) {
-            val var81: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var81, "getContext(...)");
-            val var83: TextPaint = this.binding.description.getPaint();
-            kotlin.jvm.internal.r.g(var83, "getPaint(...)");
+            val var83: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var83, "getContext(...)");
+            val var81: TextPaint = this.binding.description.getPaint();
+            kotlin.jvm.internal.r.g(var81, "getPaint(...)");
             val var86: FontMetrics = this.binding.description.getPaint().getFontMetrics();
             kotlin.jvm.internal.r.g(var86, "getFontMetrics(...)");
             var72 = TextUtilsKt.toSpannable$default(
                var87,
-               var81,
+               var83,
                var4,
                var9,
                var10,
                var11,
                var12,
-               var83,
+               var81,
                new y(var17, var4),
                var18,
                var22,

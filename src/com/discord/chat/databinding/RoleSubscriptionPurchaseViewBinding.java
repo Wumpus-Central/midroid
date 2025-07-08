@@ -34,27 +34,27 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
 
    public static RoleSubscriptionPurchaseViewBinding bind(View var0) {
       int var1 = R.id.role_subscription_badge_dummy_view;
-      View var5 = a.a(var0, var1);
-      if (var5 != null) {
+      View var4 = a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.role_subscription_purchase_badge;
          SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
          if (var7 != null) {
             var1 = R.id.role_subscription_purchase_card_bg;
-            SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-            if (var8 != null) {
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.role_subscription_purchase_lanyard;
                SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
                if (var3 != null) {
                   var1 = R.id.role_subscription_purchaser_avatar;
-                  SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var2 != null) {
+                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.role_subscription_purchaser_username;
-                     TextView var6 = (TextView)a.a(var0, var1);
-                     if (var6 != null) {
+                     TextView var5 = (TextView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var4 = (TextView)a.a(var0, var1);
-                        if (var4 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var5, var7, var8, var3, var2, var6, var4);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var4, var7, var2, var3, var8, var5, var6);
                         }
                      }
                   }

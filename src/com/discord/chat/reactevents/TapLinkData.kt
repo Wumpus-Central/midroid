@@ -47,7 +47,7 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
    private fun LinkContextData.toMap(): WritableNativeMap {
       val var5: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
-      val var4: LinkContextData = this.target;
+      val var3: LinkContextData = this.target;
       if (this.target is LinkContextData.LinkUrl) {
          NativeMapExtensionsKt.put(var5, "url", (this.target as LinkContextData.LinkUrl).getUrl());
       } else if (this.target is LinkContextData.BindOpenThreadChannel) {
@@ -78,13 +78,13 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          );
       } else if (this.target is LinkContextData.BindGuildMenu) {
          NativeMapExtensionsKt.put(var5, "action", (this.target as LinkContextData.BindGuildMenu).getAction());
-         val var3: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
-         if (var3 != null) {
+         val var8: LinkContextData.BindGuildMenu.MessageReference = (this.target as LinkContextData.BindGuildMenu).getMessageReference();
+         if (var8 != null) {
             val var6: WritableNativeMap = NativeMapExtensionsKt.nativeMapOf();
-            NativeMapExtensionsKt.put(var6, "channel_id", ChannelId.toString-impl(var3.getChannelId-o4g7jtM()));
-            val var8: GuildId = var3.getGuildId-qOKuAAo();
-            if (var8 != null) {
-               var8.unbox-impl();
+            NativeMapExtensionsKt.put(var6, "channel_id", ChannelId.toString-impl(var8.getChannelId-o4g7jtM()));
+            val var9: GuildId = var8.getGuildId-qOKuAAo();
+            if (var9 != null) {
+               var9.unbox-impl();
                NativeMapExtensionsKt.put(var6, "guild_id", (this.target as LinkContextData.BindGuildMenu).toString());
             }
 
@@ -138,10 +138,10 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          NativeMapExtensionsKt.put(var5, "linkColor", (this.target as LinkContextData.BindOpenGdmCustomizeActionSheet).getLinkColor());
       } else {
          val var7: Log = Log.INSTANCE;
-         val var10: StringBuilder = new StringBuilder();
-         var10.append("Missing target type data: ");
-         var10.append(var4);
-         Log.e$default(var7, "TapLink", var10.toString(), null, 4, null);
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Missing target type data: ");
+         var4.append(var3);
+         Log.e$default(var7, "TapLink", var4.toString(), null, 4, null);
       }
 
       return var5;
@@ -262,18 +262,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
       }
 
       val var2: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapLinkData(messageId=");
-      var4.append(var6);
-      var4.append(", title=");
-      var4.append(var2);
-      var4.append(", target=");
-      var4.append(var5);
-      var4.append(", content=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: LinkContextData = this.target;
+      val var4: java.lang.String = this.content;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("TapLinkData(messageId=");
+      var5.append(var6);
+      var5.append(", title=");
+      var5.append(var2);
+      var5.append(", target=");
+      var5.append(var3);
+      var5.append(", content=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 }

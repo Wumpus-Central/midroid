@@ -64,18 +64,18 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
    init {
       r.h(var1, "context");
       super(var1, var2, var3);
-      val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
-      r.g(var4, "inflate(...)");
-      this.binding = var4;
+      val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
+      r.g(var6, "inflate(...)");
+      this.binding = var6;
       this.progressDots$delegate = z9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
-      val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
-      var6.b(0.0F);
-      this.setLayoutParams(var6);
+      val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
+      var4.b(0.0F);
+      this.setLayoutParams(var4);
       this.setMinWidth(SizeUtilsKt.getDpToPx(52));
       this.setMinimumWidth(this.getMinWidth());
-      val var5: SimpleDraweeView = var4.linkIcon;
-      r.g(var4.linkIcon, "linkIcon");
+      val var5: SimpleDraweeView = var6.linkIcon;
+      r.g(var6.linkIcon, "linkIcon");
       this.configureLinkIcon(var5);
    }
 

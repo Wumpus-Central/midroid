@@ -37,12 +37,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
       r.h(var1, "onCancelUploadItem");
-      val var4: java.lang.String = this.getAttachment().getUploaderId();
-      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
+      val var5: java.lang.String = this.getAttachment().getUploaderId();
+      val var4: java.lang.String = this.getAttachment().getUploaderItemId();
       val var2: Int = this.getAttachment().getProgress();
       val var3: java.lang.Float = this.getAttachmentsOpacity();
-      if (var4 != null && var5 != null && var2 != null && var3 != null) {
-         val var6: UploadContext = new UploadContext(var4, var5);
+      if (var5 != null && var4 != null && var2 != null && var3 != null) {
+         val var6: UploadContext = new UploadContext(var5, var4);
          return new UploadItemProps(var2, var6, var3, new a(var1, var6));
       } else {
          return null;
@@ -64,12 +64,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
             var3 = java.lang.String.valueOf(var2);
          }
 
-         val var6: java.lang.String = var1.type().getIndexLabel();
-         val var8: StringBuilder = new StringBuilder();
-         var8.append(var6);
-         var8.append(" ");
-         var8.append(var3);
-         return var8.toString();
+         val var8: java.lang.String = var1.type().getIndexLabel();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append(var8);
+         var6.append(" ");
+         var6.append(var3);
+         return var6.toString();
       }
    }
 }

@@ -30,18 +30,18 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
       r.h(var1, "view");
       r.h(var2, "item");
       val var3: Int = Math.floorMod(var2.getKey().hashCode(), 20);
-      val var6: java.util.Map = this.placeholders;
-      val var5: Int = var3;
-      val var4: Any = var6.get(var5);
+      val var5: java.util.Map = this.placeholders;
+      val var6: Int = var3;
+      var var4: Any = var5.get(var6);
       var var7: Any = var4;
       if (var4 == null) {
-         val var8: FastestListPlaceholderTypeFeedItem.Companion = Companion;
+         var4 = Companion;
          var7 = new FastestListPlaceholderTypeFeedItem.FeedItemDrawable(
             this.config,
             FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(Companion, 0.0F, 0.0F, 3, null),
-            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(var8, 0.0F, 0.0F, 3, null)
+            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default((FastestListPlaceholderTypeFeedItem.Companion)var4, 0.0F, 0.0F, 3, null)
          );
-         var6.put(var5, var7);
+         var5.put(var6, var7);
       }
 
       var1.setBackground(var7 as CustomDrawDrawable);
@@ -260,32 +260,32 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
             );
          }
 
-         val var7: Float = this.config.getLabelSize();
+         val var9: Float = this.config.getLabelSize();
          val var21: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var19: Float = var7 / 2;
-         val var5: Float = var21 / 2;
-         val var20: Float = this.config.getLabelPaddingInnerRatio() * var7 / var6;
-         val var13: Float = this.config.getLabelPaddingInnerRatio() * var21 / var6;
-         var6 = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
-         val var11: Float = var14;
-         val var10: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
-         val var12: Float = var15;
-         val var23: Float = (var15 - (var7 + var21)) / 2.0F + var7;
+         val var20: Float = var9 / 2;
+         val var19: Float = var21 / 2;
+         val var5: Float = this.config.getLabelPaddingInnerRatio() * var9 / var6;
+         var6 = this.config.getLabelPaddingInnerRatio() * var21 / var6;
+         val var7: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
+         val var13: Float = var14;
+         val var11: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
+         val var8: Float = var15;
+         val var23: Float = (var15 - (var9 + var21)) / 2.0F + var9;
          var1.drawRoundRect(
-            var6,
-            ((float)var15 - (var7 + var21)) / 2.0F + var20,
-            this.labelWidthRatio * var10,
-            ((float)var15 - (var7 + var21)) / 2.0F + var7 - var20,
-            var19,
-            var19,
+            var7,
+            ((float)var15 - (var9 + var21)) / 2.0F + var5,
+            this.labelWidthRatio * var11,
+            ((float)var15 - (var9 + var21)) / 2.0F + var9 - var5,
+            var20,
+            var20,
             this.paint
          );
-         var1.drawRoundRect(var6, var23 + var13, var10 * this.labelWidthRatioSecondary, var23 + var21 - var13, var5, var5, this.paint);
+         var1.drawRoundRect(var7, var23 + var6, var11 * this.labelWidthRatioSecondary, var23 + var21 - var6, var19, var19, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(
-               this.config.getDividerPaddingLeft(), var12 - (float)SizeUtilsKt.getDpToPx(1), var11 - this.config.getDividerPaddingRight(), var12, this.paint
+               this.config.getDividerPaddingLeft(), var8 - (float)SizeUtilsKt.getDpToPx(1), var13 - this.config.getDividerPaddingRight(), var8, this.paint
             );
             this.paint.setColor(this.config.getColor());
          }

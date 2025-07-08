@@ -42,27 +42,27 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
 
    public static MessageComponentContentInventoryViewBinding bind(View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-      if (var3 != null) {
+      SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+      if (var8 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
-         SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-         if (var6 != null) {
+         SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.content_inventory_component_media_image;
-            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
                SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
                if (var4 != null) {
                   var1 = R.id.content_inventory_component_subtitle;
-                  TextView var8 = (TextView)a.a(var0, var1);
-                  if (var8 != null) {
+                  TextView var3 = (TextView)a.a(var0, var1);
+                  if (var3 != null) {
                      var1 = R.id.content_inventory_component_title;
                      TextView var7 = (TextView)a.a(var0, var1);
                      if (var7 != null) {
                         var1 = R.id.content_inventory_component_username;
                         TextView var2 = (TextView)a.a(var0, var1);
                         if (var2 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var3, var6, var5, var4, var8, var7, var2);
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var8, var5, var6, var4, var3, var7, var2);
                         }
                      }
                   }

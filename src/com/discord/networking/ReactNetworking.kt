@@ -60,13 +60,13 @@ public object ReactNetworking {
          if (var2 is NetworkFetcher) {
             return var2 as NetworkFetcher;
          } else {
-            val var7: StringBuilder = new StringBuilder();
-            var7.append("Field ");
-            var7.append(ReactOkHttpNetworkFetcher::class.java);
-            var7.append(" not instance of ");
-            var7.append(NetworkFetcher::class.java);
-            var7.append(".");
-            throw new IllegalStateException(var7.toString().toString());
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("Field ");
+            var6.append(ReactOkHttpNetworkFetcher::class.java);
+            var6.append(" not instance of ");
+            var6.append(NetworkFetcher::class.java);
+            var6.append(".");
+            throw new IllegalStateException(var6.toString().toString());
          }
       } catch (var4: Exception) {
          Log.INSTANCE.e("ReactNetworking", "Failed to instantiate com.facebook.react.modules.fresco.ReactOkHttpNetworkFetcher", var4);

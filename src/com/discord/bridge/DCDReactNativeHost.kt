@@ -11,7 +11,7 @@ import kotlin.jvm.internal.r
 public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost {
    protected open val isNewArchEnabled: Boolean
       protected open get() {
-         return true;
+         return false;
       }
 
 

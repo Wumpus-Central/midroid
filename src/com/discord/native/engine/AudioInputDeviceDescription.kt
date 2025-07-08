@@ -48,14 +48,14 @@ public data class AudioInputDeviceDescription(name: String, guid: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
+      val var3: java.lang.String = this.name;
       val var2: java.lang.String = this.guid;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AudioInputDeviceDescription(name=");
-      var3.append(var1);
-      var3.append(", guid=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioInputDeviceDescription(name=");
+      var1.append(var3);
+      var1.append(", guid=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 }

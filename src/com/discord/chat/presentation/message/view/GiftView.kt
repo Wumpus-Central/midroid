@@ -260,19 +260,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var34: TextView = this.binding.body;
+            val var29: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var34.setTextColor(var17.getBodyTextColor());
-            kotlin.jvm.internal.r.e(var34);
-            val var29: java.lang.CharSequence = var34.getText();
-            kotlin.jvm.internal.r.g(var29, "getText(...)");
-            if (!kotlin.text.h.c0(var29)) {
+            var29.setTextColor(var17.getBodyTextColor());
+            kotlin.jvm.internal.r.e(var29);
+            val var34: java.lang.CharSequence = var29.getText();
+            kotlin.jvm.internal.r.g(var34, "getText(...)");
+            if (!kotlin.text.h.c0(var34)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var34.setVisibility(var20);
+            var29.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());

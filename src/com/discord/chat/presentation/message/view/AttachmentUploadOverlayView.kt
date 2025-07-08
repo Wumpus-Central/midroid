@@ -48,17 +48,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       this.transitionOutDuration = 175L;
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
-      val var3: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var5, "inflate(...)");
+      this.binding = var5;
       this.onAnimationComplete = new e();
-      val var5: SimpleDraweeView = var3.uploadCancel;
-      kotlin.jvm.internal.r.e(var3.uploadCancel);
-      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.Cancel);
-      ColorUtilsKt.setTintColor(var5, Color.argb(255, 255, 255, 255));
-      I18nUtilsKt.i18nContentDescription$default(var5, I18nMessage.CANCEL, null, 2, null);
-      val var4: SimpleDraweeView = var3.uploadComplete;
-      kotlin.jvm.internal.r.e(var3.uploadComplete);
+      val var3: SimpleDraweeView = var5.uploadCancel;
+      kotlin.jvm.internal.r.e(var5.uploadCancel);
+      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
+      ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
+      I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
+      val var4: SimpleDraweeView = var5.uploadComplete;
+      kotlin.jvm.internal.r.e(var5.uploadComplete);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -575,25 +575,25 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.backgroundSize;
-         val var2: Drawable = this.backgroundDrawable;
-         val var4: Int = this.cancelButtonSize;
-         val var6: Int = this.primaryColor;
-         val var5: Int = this.progressIndicatorSize;
-         val var3: Int = this.trackColor;
+         val var5: Int = this.backgroundSize;
+         val var3: Drawable = this.backgroundDrawable;
+         val var2: Int = this.cancelButtonSize;
+         val var1: Int = this.primaryColor;
+         val var4: Int = this.progressIndicatorSize;
+         val var6: Int = this.trackColor;
          val var7: StringBuilder = new StringBuilder();
          var7.append("ProgressViewConfig(backgroundSize=");
-         var7.append(var1);
-         var7.append(", backgroundDrawable=");
-         var7.append(var2);
-         var7.append(", cancelButtonSize=");
-         var7.append(var4);
-         var7.append(", primaryColor=");
-         var7.append(var6);
-         var7.append(", progressIndicatorSize=");
          var7.append(var5);
-         var7.append(", trackColor=");
+         var7.append(", backgroundDrawable=");
          var7.append(var3);
+         var7.append(", cancelButtonSize=");
+         var7.append(var2);
+         var7.append(", primaryColor=");
+         var7.append(var1);
+         var7.append(", progressIndicatorSize=");
+         var7.append(var4);
+         var7.append(", trackColor=");
+         var7.append(var6);
          var7.append(")");
          return var7.toString();
       }

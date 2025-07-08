@@ -21,8 +21,8 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    init {
       r.h(var1, "logsFolderPath");
       super();
-      val var4: java.lang.String = var1.toString();
-      val var3: StringBuilder = new StringBuilder();
+      var var4: java.lang.String = var1.toString();
+      var var3: StringBuilder = new StringBuilder();
       var3.append(var2);
       var3.append(".replay");
       new File(var4, var3.toString()).delete();
@@ -31,11 +31,11 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var9.append(var2);
       var9.append(".json");
       new File(var6, var9.toString()).delete();
-      val var7: java.lang.String = var1.toString();
-      val var10: StringBuilder = new StringBuilder();
-      var10.append(var2);
-      var10.append(".replay");
-      this.replayFile = new File(var7, var10.toString());
+      var4 = var1.toString();
+      var3 = new StringBuilder();
+      var3.append(var2);
+      var3.append(".replay");
+      this.replayFile = new File(var4, var3.toString());
       val var8: java.lang.String = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);

@@ -122,10 +122,10 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          ColorUtilsKt.setTintColor(var21, -1);
       } else if (var5 != null) {
          this.binding.tag.setText(var5);
-         val var22: TextView = this.binding.tag;
-         val var26: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var26, "getContext(...)");
-         var22.setTextColor(ColorUtilsKt.getColorCompat(var26, R.color.brand_560));
+         val var26: TextView = this.binding.tag;
+         val var22: Context = this.getContext();
+         kotlin.jvm.internal.r.g(var22, "getContext(...)");
+         var26.setTextColor(ColorUtilsKt.getColorCompat(var22, R.color.brand_560));
          val var23: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
          val var27: Context = this.getContext();
