@@ -1,6 +1,5 @@
 package com.discord.clip
 
-import A9.n
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.ReadableArray
@@ -12,6 +11,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
 import kotlin.jvm.internal.r
+import s9.n
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
@@ -55,19 +55,19 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
       if (var2 != null) {
          val var3: IntRange = NativeArrayExtensionsKt.sizeRange(var2);
          if (var3 != null) {
-            val var6: java.util.Iterator = var3.iterator();
+            val var4: java.util.Iterator = var3.iterator();
 
-            while (var6.hasNext()) {
-               val var5: ReadableMap = var2.getMap((var6 as n).a());
+            while (var4.hasNext()) {
+               val var5: ReadableMap = var2.getMap((var4 as n).a());
                r.e(var5);
-               val var4: java.lang.String = var5.getString("shape");
-               if (r.c(var4, "circle")) {
+               val var6: java.lang.String = var5.getString("shape");
+               if (r.c(var6, "circle")) {
                   var1.addCircleCutout(
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("size"))
                   );
-               } else if (r.c(var4, "rounded-rect")) {
+               } else if (r.c(var6, "rounded-rect")) {
                   var1.addRoundedRectCutout(
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
                      (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),

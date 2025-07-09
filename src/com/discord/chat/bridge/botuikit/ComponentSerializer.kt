@@ -9,8 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import wb.d
-import wb.g
+import ob.d
+import ob.g
 
 public object ComponentSerializer : d(H.b(Component.class)) {
    private final val knownTypes: List<Int>
@@ -18,15 +18,15 @@ public object ComponentSerializer : d(H.b(Component.class)) {
 
    @JvmStatic
    fun {
-      val var2: Array<ComponentType> = ComponentType.values();
-      val var3: ArrayList = new ArrayList(var2.length);
-      val var1: Int = var2.length;
+      val var3: Array<ComponentType> = ComponentType.values();
+      val var2: ArrayList = new ArrayList(var3.length);
+      val var1: Int = var3.length;
 
       for (int var0 = 0; var0 < var1; var0++) {
-         var3.add(var2[var0].getSerialNumber());
+         var2.add(var3[var0].getSerialNumber());
       }
 
-      knownTypes = var3;
+      knownTypes = var2;
       componentClassSerializer = new SealedClassSerializer(
          "Component",
          H.b(Component.class),
@@ -87,7 +87,7 @@ public object ComponentSerializer : d(H.b(Component.class)) {
       }
 
       val var6: Any;
-      if (i.X(var2, var5)) {
+      if (i.V(var2, var5)) {
          var6 = componentClassSerializer;
       } else {
          var6 = UnknownComponent.Companion.serializer();

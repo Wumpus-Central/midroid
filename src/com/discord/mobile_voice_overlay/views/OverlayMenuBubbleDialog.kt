@@ -185,10 +185,10 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    @JvmStatic
    fun `setData$lambda$21`(var0: OverlayMenuBubbleDialog, var1: MobileVoiceOverlayData): Unit {
-      val var3: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
-      val var2: Context = var0.getContext();
-      kotlin.jvm.internal.r.g(var2, "getContext(...)");
-      var3.startHeadlessTask(var2, "GenerateInvite", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      val var2: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
+      val var3: Context = var0.getContext();
+      kotlin.jvm.internal.r.g(var3, "getContext(...)");
+      var2.startHeadlessTask(var3, "GenerateInvite", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       val var4: MobileVoiceOverlayAssets = var0.getOverlayAssets();
       if (var4 != null) {
          Toast.makeText(var0.getContext(), var4.getInviteLinkCopied(), 0).show();
@@ -206,15 +206,15 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
 
    @JvmStatic
    fun `setData$lambda$24`(var0: OverlayMenuBubbleDialog, var1: MobileVoiceOverlayData): Unit {
-      val var2: Context = var0.getContext();
-      val var3: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
-      var3.addCategory("android.intent.category.HOME");
-      var3.addFlags(268435456);
-      var2.startActivity(var3);
+      val var3: Context = var0.getContext();
+      val var2: Intent = new Intent("android.intent.action.VIEW", null, var0.getContext(), ReactActivity.Registry.getMainActivity());
+      var2.addCategory("android.intent.category.HOME");
+      var2.addFlags(268435456);
+      var3.startActivity(var2);
       val var5: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var4: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var4, "getContext(...)");
-      var5.startHeadlessTask(var4, "SelectChannel", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      var5.startHeadlessTask(var4, "SelectChannel", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       return Unit.a;
    }
 
@@ -232,7 +232,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       val var2: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var3: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var3, "getContext(...)");
-      var2.startHeadlessTask(var3, "Disconnect", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      var2.startHeadlessTask(var3, "Disconnect", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       return Unit.a;
    }
 
@@ -279,7 +279,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       if (var3.size() < 2) {
          var3 = kotlin.collections.i.k();
       } else {
-         var3 = kotlin.collections.i.I0(var3, kotlin.ranges.d.s(1, var3.size()));
+         var3 = kotlin.collections.i.G0(var3, kotlin.ranges.d.s(1, var3.size()));
       }
 
       this.adapter.setData(var3);

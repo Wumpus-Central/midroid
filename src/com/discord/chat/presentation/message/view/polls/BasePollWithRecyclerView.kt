@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.Z
+import androidx.core.view.Y
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.chat.databinding.PollRecyclerViewBinding
 import com.discord.chat.presentation.message.messagepart.PollMessageAccessory
@@ -119,9 +119,9 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
       var var7: Boolean = true;
       var12.setFocusableInTouchMode(var8 xor true);
-      Z.A0(var12, 4);
+      Y.D0(var12, 4);
       var12.setImportantForAccessibility(1);
-      Z.o0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
+      Y.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
       var8 = this.binding.primaryAction.hasAccessibilityFocus();
       val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
       val var9: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();

@@ -1,13 +1,13 @@
 package com.discord.browser_manager
 
-import A9.q
 import android.content.Context
 import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.r
-import z9.s
+import r9.s
+import s9.q
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec {
    init {
@@ -57,10 +57,10 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
    public override fun openInChromeURL(url: String, promise: Promise) {
       r.h(var1, "url");
       r.h(var2, "promise");
-      val var4: BrowserManager = BrowserManager.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
-      var4.tryOpenUrlExternally(var3, var1, new d(var2));
+      val var3: BrowserManager = BrowserManager.INSTANCE;
+      val var4: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var4, "getReactApplicationContext(...)");
+      var3.tryOpenUrlExternally(var4, var1, new d(var2));
    }
 
    public override fun selectBrowser(browser: Double) {

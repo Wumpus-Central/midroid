@@ -99,7 +99,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         ib.f.d(
+         ab.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -157,7 +157,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         ib.f.d(
+         ab.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,

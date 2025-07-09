@@ -2,9 +2,9 @@ package com.discord.chat.bridge.referencedmessage
 
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {

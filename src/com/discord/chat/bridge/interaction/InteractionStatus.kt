@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.interaction
 
 import com.discord.chat.bridge.structurabletext.StructurableText
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {

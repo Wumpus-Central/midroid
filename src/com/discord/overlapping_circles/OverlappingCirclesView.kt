@@ -16,7 +16,7 @@ import android.view.View.OnLayoutChangeListener
 import android.webkit.URLUtil
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.J
+import androidx.core.view.I
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -28,8 +28,8 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.r
-import z9.j
-import z9.m
+import r9.j
+import r9.m
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var maxItems: Int
@@ -92,7 +92,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var8: java.util.Iterator = i.M0(var1, var3).iterator();
+      val var8: java.util.Iterator = i.K0(var1, var3).iterator();
 
       for (int var12 = 0; var8.hasNext(); var12++) {
          var var7: OverlappingItem = (OverlappingItem)var8.next();
@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var15: Context = this.getContext();
-               r.g(var15, "getContext(...)");
-               val var9: ReactAsset = ReactAsset.DefaultAvatar0;
                val var10: Context = this.getContext();
                r.g(var10, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var15, var9.getUri(var10));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var9: Context = this.getContext();
+               r.g(var9, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
             }
 
             val var21: Context = this.getContext();
@@ -146,9 +146,9 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          val var20: OverlappingCirclesView.OverflowItem = new OverlappingCirclesView.OverflowItem(
             var18, var1.size() - var3, this.overflowTextSizePx, this.overflowTextColor, this.overflowBgColor, this.getLayoutParams().height
          );
-         val var19: LayoutParams = new LayoutParams(-2, -1);
-         var19.setMarginStart(this.overlapNegativeMargin);
-         this.addView(var20, var19);
+         val var11: LayoutParams = new LayoutParams(-2, -1);
+         var11.setMarginStart(this.overlapNegativeMargin);
+         this.addView(var20, var11);
       }
    }
 
@@ -191,7 +191,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.setPadding(var2, 0, var9, 0);
          this.setBackgroundColor(var5);
          ViewClippingUtilsKt.clipToCircle(this);
-         J.a(this, new Runnable(this, this) {
+         I.a(this, new Runnable(this, this) {
             final View $this_doOnPreDraw;
             final OverlappingCirclesView.OverflowItem this$0;
 
@@ -202,13 +202,13 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
 
             @Override
             public final void run() {
-               val var2: View = this.$this_doOnPreDraw;
-               val var1: OverlappingCirclesView.OverflowItem = this.this$0;
+               val var1: View = this.$this_doOnPreDraw;
+               val var2: OverlappingCirclesView.OverflowItem = this.this$0;
                val var3: android.view.ViewGroup.LayoutParams = this.this$0.getLayoutParams();
                if (var3 != null) {
                   val var4: LayoutParams = var3 as LayoutParams;
-                  (var3 as LayoutParams).width = d.d(var2.getWidth(), var2.getHeight());
-                  var1.setLayoutParams(var4);
+                  (var3 as LayoutParams).width = d.d(var1.getWidth(), var1.getHeight());
+                  var2.setLayoutParams(var4);
                } else {
                   throw new NullPointerException("null cannot be cast to non-null type android.widget.LinearLayout.LayoutParams");
                }

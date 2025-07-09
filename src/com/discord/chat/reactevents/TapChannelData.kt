@@ -3,10 +3,10 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
-import z9.s
+import r9.s
 
 @f
 internal data class TapChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null) : ReactEvent {
@@ -87,16 +87,16 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.guildId;
       val var2: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.messageId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapChannelData(guildId=");
-      var1.append(var3);
+      var1.append(var4);
       var1.append(", channelId=");
       var1.append(var2);
       var1.append(", messageId=");
-      var1.append(var4);
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

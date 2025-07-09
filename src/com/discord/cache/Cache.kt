@@ -8,10 +8,10 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.WritableMap
 import java.util.HashSet
 import kotlin.jvm.internal.r
-import n1.a
-import n1.b
-import n1.c
-import z9.j
+import o1.a
+import o1.b
+import o1.c
+import r9.j
 
 public class Cache(reactContext: Context) {
    private final var sharedPrefsLoaded: Boolean
@@ -33,7 +33,7 @@ public class Cache(reactContext: Context) {
       super();
       this.sharedPrefs$delegate = j.a(new a(var1));
       this.fastCacheSharedPrefs$delegate = j.a(new b(var1));
-      E9.a.b(false, false, null, null, 0, new c(this), 31, null);
+      w9.a.b(false, false, null, null, 0, new c(this), 31, null);
    }
 
    @JvmStatic
@@ -89,8 +89,8 @@ public class Cache(reactContext: Context) {
             val var5: Editor = var2.edit();
             var5.putBoolean("initialized", true);
 
-            for (java.lang.String var4 : var3) {
-               var5.putString(var4, this.getSharedPrefs().getString(var4, null));
+            for (java.lang.String var7 : var3) {
+               var5.putString(var7, this.getSharedPrefs().getString(var7, null));
             }
 
             var5.apply();
@@ -147,7 +147,7 @@ public class Cache(reactContext: Context) {
       // 1b: invokespecial com/facebook/react/bridge/WritableNativeMap.<init> ()V
       // 1e: aload 1
       // 1f: invokeinterface com/facebook/react/bridge/ReadableArray.toArrayList ()Ljava/util/ArrayList; 1
-      // 24: invokestatic kotlin/collections/i.X0 (Ljava/lang/Iterable;)Ljava/util/Set;
+      // 24: invokestatic kotlin/collections/i.V0 (Ljava/lang/Iterable;)Ljava/util/Set;
       // 27: astore 1
       // 28: aload 0
       // 29: invokespecial com/discord/cache/Cache.getSharedPrefs ()Landroid/content/SharedPreferences;

@@ -4,7 +4,7 @@ import com.discord.codegen.NativeApplicationReadyModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.r
-import l1.a
+import m1.a
 
 public class ApplicationReadyModule(reactContext: ReactApplicationContext) : NativeApplicationReadyModuleSpec {
    init {

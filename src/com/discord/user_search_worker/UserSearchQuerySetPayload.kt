@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
-import vb.E0
-import vb.U
-import vb.y
+import nb.E0
+import nb.U
+import nb.y
 
 @f
 internal data class UserSearchQuerySetPayload(query: String,
@@ -25,7 +25,7 @@ internal data class UserSearchQuerySetPayload(query: String,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new vb.f(E0.a), new vb.f(var0), new U(var0, y.a), null};
+      $childSerializers = new KSerializer[]{null, null, new nb.f(E0.a), new nb.f(var0), new U(var0, y.a), null};
    }
 
    init {
@@ -125,23 +125,23 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.query;
+      val var5: java.lang.String = this.query;
       val var3: UserSearchQuerySetFilters = this.filters;
-      val var5: java.util.List = this.blacklist;
-      val var6: java.util.List = this.whitelist;
-      val var2: java.util.Map = this.boosters;
+      val var6: java.util.List = this.blacklist;
+      val var2: java.util.List = this.whitelist;
+      val var4: java.util.Map = this.boosters;
       val var1: Int = this.limit;
       val var7: StringBuilder = new StringBuilder();
       var7.append("UserSearchQuerySetPayload(query=");
-      var7.append(var4);
+      var7.append(var5);
       var7.append(", filters=");
       var7.append(var3);
       var7.append(", blacklist=");
-      var7.append(var5);
-      var7.append(", whitelist=");
       var7.append(var6);
-      var7.append(", boosters=");
+      var7.append(", whitelist=");
       var7.append(var2);
+      var7.append(", boosters=");
+      var7.append(var4);
       var7.append(", limit=");
       var7.append(var1);
       var7.append(")");

@@ -192,11 +192,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       kotlin.jvm.internal.r.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
       val var41: SpoilerViewManager = this.spoilerViewManager;
+      val var42: ConstraintLayout = this.binding.container;
+      kotlin.jvm.internal.r.g(this.binding.container, "container");
       val var35: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var38: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var42: MediaView = this.binding.mediaView;
+      val var38: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.r.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -210,7 +210,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var41.configureSpoiler(var13, var35, var38, var42, null, var11, var15, var12, var10, var16, var17);
+      var41.configureSpoiler(var13, var42, var35, var38, null, var11, var15, var12, var10, var16, var17);
       val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var39: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
@@ -242,13 +242,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
    }
 
    public override fun setMosaicSize(width: Int, height: Int) {
-      val var4: ConstraintLayout = this.binding.container;
+      val var3: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var3: LayoutParams = var4.getLayoutParams();
-      if (var3 != null) {
-         var3.width = var1;
-         var3.height = var2;
-         var4.setLayoutParams(var3);
+      val var4: LayoutParams = var3.getLayoutParams();
+      if (var4 != null) {
+         var4.width = var1;
+         var4.height = var2;
+         var3.setLayoutParams(var4);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
       }
@@ -261,7 +261,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.Z.o0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.Y.q0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -406,15 +406,15 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.sourceUrl;
-         val var3: java.lang.String = this.previewUrl;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("TargetUrl(sourceUrl=");
-         var2.append(var1);
-         var2.append(", previewUrl=");
-         var2.append(var3);
-         var2.append(")");
-         return var2.toString();
+         val var3: java.lang.String = this.sourceUrl;
+         val var2: java.lang.String = this.previewUrl;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("TargetUrl(sourceUrl=");
+         var1.append(var3);
+         var1.append(", previewUrl=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

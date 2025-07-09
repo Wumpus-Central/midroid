@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 288110
-  versionName: 288.10 - Beta
+  versionCode: 288111
+  versionName: 288.11 - Beta
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
@@ -25,7 +25,6 @@ doNotCompress:
 - png
 - webm
 - webp
-- META-INF/androidx.activity_activity-ktx.version
 - META-INF/androidx.activity_activity.version
 - META-INF/androidx.annotation_annotation-experimental.version
 - META-INF/androidx.appcompat_appcompat-resources.version
@@ -54,7 +53,6 @@ doNotCompress:
 - META-INF/androidx.emoji2_emoji2-views-helper.version
 - META-INF/androidx.emoji2_emoji2.version
 - META-INF/androidx.exifinterface_exifinterface.version
-- META-INF/androidx.fragment_fragment-ktx.version
 - META-INF/androidx.fragment_fragment.version
 - META-INF/androidx.interpolator_interpolator.version
 - META-INF/androidx.legacy_legacy-support-core-utils.version
@@ -68,7 +66,6 @@ doNotCompress:
 - META-INF/androidx.recyclerview_recyclerview.version
 - META-INF/androidx.room_room-ktx.version
 - META-INF/androidx.room_room-runtime.version
-- META-INF/androidx.savedstate_savedstate-ktx.version
 - META-INF/androidx.savedstate_savedstate.version
 - META-INF/androidx.sharetarget_sharetarget.version
 - META-INF/androidx.sqlite_sqlite-framework.version
@@ -91,9 +88,9 @@ doNotCompress:
 - META-INF/kotlinx_coroutines_core.version
 - META-INF/kotlinx_coroutines_play_services.version
 - META-INF/native-image/io.sentry/sentry/native-image.properties
-- META-INF/services/Z9.b
-- META-INF/services/ib.z
-- META-INF/services/nb.t
+- META-INF/services/R9.b
+- META-INF/services/ab.z
+- META-INF/services/fb.t
 - META-INF/version-control-info.textproto
 - assets/dexopt/baseline.prof
 - assets/dexopt/baseline.profm

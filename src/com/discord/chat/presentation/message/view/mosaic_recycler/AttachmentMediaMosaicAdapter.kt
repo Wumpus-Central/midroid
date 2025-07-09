@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message.view.mosaic_recycler
 
-import E1.a
-import E1.b
-import E1.c
-import E1.d
-import E1.e
-import E1.f
-import E1.g
-import E1.h
+import F1.a
+import F1.b
+import F1.c
+import F1.d
+import F1.e
+import F1.f
+import F1.g
+import F1.h
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.View
@@ -147,19 +147,19 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
             var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
+               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
             );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {
-               val var10: Class = var1.getClass();
-               val var12: StringBuilder = new StringBuilder();
-               var12.append("Invalid view holder type ");
-               var12.append(var10);
-               throw new IllegalStateException(var12.toString().toString());
+               val var12: Class = var1.getClass();
+               val var10: StringBuilder = new StringBuilder();
+               var10.append("Invalid view holder type ");
+               var10.append(var12);
+               throw new IllegalStateException(var10.toString().toString());
             }
 
             var var14: MosaicItemMessageAttachmentVideoViewHolder = this.items.get(var2);

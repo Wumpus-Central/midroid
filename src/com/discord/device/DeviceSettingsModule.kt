@@ -1,6 +1,5 @@
 package com.discord.device
 
-import A9.n
 import android.app.Activity
 import android.content.Context
 import android.content.Intent
@@ -17,6 +16,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import java.util.ArrayList
 import kotlin.jvm.internal.r
+import s9.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {

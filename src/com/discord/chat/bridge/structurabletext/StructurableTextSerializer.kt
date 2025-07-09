@@ -6,7 +6,7 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import wb.d
+import ob.d
 
 internal object StructurableTextSerializer : d(H.b(StructurableText.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<StructurableText> {

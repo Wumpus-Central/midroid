@@ -4,7 +4,7 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
-import b4.b
+import c4.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
@@ -61,10 +61,10 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var2: Window = this.getWindow();
-      r.g(var2, "getWindow(...)");
-      var3.initialize(var2);
+      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var3: Window = this.getWindow();
+      r.g(var3, "getWindow(...)");
+      var2.initialize(var3);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);

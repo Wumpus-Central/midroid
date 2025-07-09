@@ -2,9 +2,9 @@ package com.discord.chat.bridge.reaction
 
 import com.discord.emoji.RenderableEmoji
 import com.discord.reactions.ReactionView
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 public data class MessageReactionEmoji(name: String? = null, src: String, displayName: String, id: String? = null, animated: Boolean? = null) :
@@ -96,8 +96,8 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var1 = this.name.hashCode();
       }
 
-      val var4: Int = this.src.hashCode();
-      val var5: Int = this.displayName.hashCode();
+      val var5: Int = this.src.hashCode();
+      val var4: Int = this.displayName.hashCode();
       val var2: Int;
       if (this.id == null) {
          var2 = 0;
@@ -109,7 +109,7 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
          var3 = this.animated.hashCode();
       }
 
-      return (((var1 * 31 + var4) * 31 + var5) * 31 + var2) * 31 + var3;
+      return (((var1 * 31 + var5) * 31 + var4) * 31 + var2) * 31 + var3;
    }
 
    override fun renderable(): RenderableEmoji {
@@ -117,20 +117,20 @@ public data class MessageReactionEmoji(name: String? = null, src: String, displa
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.name;
+      val var6: java.lang.String = this.name;
       val var2: java.lang.String = this.src;
       val var5: java.lang.String = this.displayName;
-      val var6: java.lang.String = this.id;
+      val var1: java.lang.String = this.id;
       val var3: java.lang.Boolean = this.animated;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MessageReactionEmoji(name=");
-      var4.append(var1);
+      var4.append(var6);
       var4.append(", src=");
       var4.append(var2);
       var4.append(", displayName=");
       var4.append(var5);
       var4.append(", id=");
-      var4.append(var6);
+      var4.append(var1);
       var4.append(", animated=");
       var4.append(var3);
       var4.append(")");

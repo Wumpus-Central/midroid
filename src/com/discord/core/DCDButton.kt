@@ -1,7 +1,7 @@
 package com.discord.core
 
-import N6.k
-import N6.k.b
+import K6.k
+import K6.k.b
 import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
@@ -40,22 +40,22 @@ public class DCDButton  public constructor(context: Context, attrs: AttributeSet
       val var3: DcdButtonBinding = DcdButtonBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var3, "inflate(...)");
       this.binding = var3;
-      val var4: MaterialButton = var3.button;
+      val var5: MaterialButton = var3.button;
       r.g(var3.button, "button");
-      this.button = var4;
-      val var5: ProgressBar = var3.progress;
+      this.button = var5;
+      val var4: ProgressBar = var3.progress;
       r.g(var3.progress, "progress");
-      this.progress = var5;
+      this.progress = var4;
       val var6: ProgressDots = var3.loadingDots;
       r.g(var3.loadingDots, "loadingDots");
       this.loadingDots = var6;
-      var4.setStateListAnimator(null);
-      var4.setMinimumHeight(var5.getHeight());
-      var4.setMinHeight(var5.getHeight());
-      var4.setMinimumWidth(var5.getWidth());
-      var4.setMinWidth(var5.getWidth());
-      var4.setInsetTop(0);
-      var4.setInsetBottom(0);
+      var5.setStateListAnimator(null);
+      var5.setMinimumHeight(var4.getHeight());
+      var5.setMinHeight(var4.getHeight());
+      var5.setMinimumWidth(var4.getWidth());
+      var5.setMinWidth(var4.getWidth());
+      var5.setInsetTop(0);
+      var5.setInsetBottom(0);
       this.setTextSizeSp(14.0F);
       this.setDiscordFont(DiscordFont.PrimarySemibold);
       this.setButtonPadding();

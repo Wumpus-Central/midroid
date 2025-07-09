@@ -23,17 +23,17 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun getItem(position: Int): EmojiPickerItem {
-      val var6: Array<java.util.List> = this.dataSets;
+      val var5: Array<java.util.List> = this.dataSets;
       val var4: Int = this.dataSets.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var3++) {
-         val var5: java.util.List = var6[var3];
-         if (var1 < var6[var3].size() + var2) {
-            return var5.get(var1 - var2) as EmojiPickerItem;
+         val var6: java.util.List = var5[var3];
+         if (var1 < var5[var3].size() + var2) {
+            return var6.get(var1 - var2) as EmojiPickerItem;
          }
 
-         var2 += var5.size();
+         var2 += var6.size();
       }
 
       val var7: StringBuilder = new StringBuilder();
@@ -75,14 +75,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
       kotlin.jvm.internal.r.h(var1, "coreData");
       kotlin.jvm.internal.r.h(var2, "onChanged");
-      val var3: Array<java.util.List> = this.dataSets;
-      val var5: java.util.List = var1.getLeading();
-      var5.set(0, this.coreData.getLeading().get(0));
-      var3[0] = var5;
-      val var8: Array<java.util.List> = this.dataSets;
-      val var6: java.util.List = var1.getTrailing();
-      var6.set(kotlin.collections.i.m(var6), kotlin.collections.i.s0(this.coreData.getTrailing()));
-      var8[3] = var6;
+      var var3: Array<java.util.List> = this.dataSets;
+      var var4: java.util.List = var1.getLeading();
+      var4.set(0, this.coreData.getLeading().get(0));
+      var3[0] = var4;
+      var3 = this.dataSets;
+      var4 = var1.getTrailing();
+      var4.set(kotlin.collections.i.m(var4), kotlin.collections.i.q0(this.coreData.getTrailing()));
+      var3[3] = var4;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = kotlin.collections.i.k();
          this.dataSets[2] = kotlin.collections.i.k();
@@ -112,7 +112,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
    public fun setSpacerBottomHeight(spacerBottomHeight: Int, onChanged: (Int) -> Unit) {
       kotlin.jvm.internal.r.h(var2, "onChanged");
-      val var3: Any = kotlin.collections.i.s0(this.coreData.getTrailing());
+      val var3: Any = kotlin.collections.i.q0(this.coreData.getTrailing());
       kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
       if ((var3 as EmojiPickerItem.Spacer).getHeight() != var1) {
          this.coreData.getTrailing().set(kotlin.collections.i.m(this.coreData.getTrailing()), new EmojiPickerItem.Spacer("bottom", var1));
@@ -122,7 +122,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
    public fun setSpacerTopHeight(spacerTopHeight: Int, onChanged: (Int) -> Unit) {
       kotlin.jvm.internal.r.h(var2, "onChanged");
-      val var3: Any = kotlin.collections.i.h0(this.coreData.getLeading());
+      val var3: Any = kotlin.collections.i.f0(this.coreData.getLeading());
       kotlin.jvm.internal.r.f(var3, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
       if ((var3 as EmojiPickerItem.Spacer).getHeight() != var1) {
          this.coreData.getLeading().set(0, new EmojiPickerItem.Spacer("top", var1));
@@ -187,7 +187,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
          this.trailing = var6;
          this.nativeSectionsEmojis = var7;
          this.nativeSectionsEmojisUnicode = var8;
-         this.categoryIndices$delegate = z9.j.a(new b(this));
+         this.categoryIndices$delegate = r9.j.a(new b(this));
       }
 
       @JvmStatic
@@ -325,28 +325,28 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
 
       public override fun toString(): String {
          val var1: Int = this.rowSize;
-         val var4: Boolean = this.hasGuildData;
-         val var2: Boolean = this.hasSearchData;
-         val var3: Boolean = this.hasPremiumInlineRoadblock;
-         val var8: java.util.List = this.leading;
-         val var6: java.util.List = this.trailing;
-         val var5: java.util.List = this.nativeSectionsEmojis;
+         val var2: Boolean = this.hasGuildData;
+         val var3: Boolean = this.hasSearchData;
+         val var4: Boolean = this.hasPremiumInlineRoadblock;
+         val var5: java.util.List = this.leading;
+         val var8: java.util.List = this.trailing;
+         val var6: java.util.List = this.nativeSectionsEmojis;
          val var9: java.util.List = this.nativeSectionsEmojisUnicode;
          val var7: StringBuilder = new StringBuilder();
          var7.append("CoreData(rowSize=");
          var7.append(var1);
          var7.append(", hasGuildData=");
-         var7.append(var4);
-         var7.append(", hasSearchData=");
          var7.append(var2);
-         var7.append(", hasPremiumInlineRoadblock=");
+         var7.append(", hasSearchData=");
          var7.append(var3);
+         var7.append(", hasPremiumInlineRoadblock=");
+         var7.append(var4);
          var7.append(", leading=");
-         var7.append(var8);
-         var7.append(", trailing=");
-         var7.append(var6);
-         var7.append(", nativeSectionsEmojis=");
          var7.append(var5);
+         var7.append(", trailing=");
+         var7.append(var8);
+         var7.append(", nativeSectionsEmojis=");
+         var7.append(var6);
          var7.append(", nativeSectionsEmojisUnicode=");
          var7.append(var9);
          var7.append(")");
@@ -362,7 +362,7 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
                var1 = (this as EmojiPickerItemData.CoreData.NativeSection.Guild).getEmojiCount();
             } else {
                if (this !is EmojiPickerItemData.CoreData.NativeSection.Unicode) {
-                  throw new z9.n();
+                  throw new r9.n();
                }
 
                var1 = (this as EmojiPickerItemData.CoreData.NativeSection.Unicode).getEmojiCount();

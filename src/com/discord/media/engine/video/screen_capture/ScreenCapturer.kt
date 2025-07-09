@@ -81,7 +81,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
          r.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
-         var3.set(D0.c.a(d.a(var4 as WindowManager)));
+         var3.set(E0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
       }
@@ -462,11 +462,11 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
 
       public override fun run() {
          if (ScreenCapturer.access$getFramerate$p(this.this$0) > 0) {
-            val var4: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
-            if (var4 != null) {
-               val var3: ScreenCapturer = this.this$0;
-               if (TimestampAligner.getRtcTimeNanos() - var4.longValue() > ScreenCapturer.access$getIntervalNanos$p(var3)) {
-                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var3);
+            val var3: java.lang.Long = ScreenCapturer.access$getLastFrameTimestamp$p(this.this$0);
+            if (var3 != null) {
+               val var4: ScreenCapturer = this.this$0;
+               if (TimestampAligner.getRtcTimeNanos() - var3.longValue() > ScreenCapturer.access$getIntervalNanos$p(var4)) {
+                  val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
                      r.y("nativeObserver");

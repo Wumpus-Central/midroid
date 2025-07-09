@@ -12,7 +12,7 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import z9.s
+import r9.s
 
 @ReactModule(name = "EmojiPickerRowView")
 internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>, EmojiPickerRowViewManagerInterface<EmojiPickerRowView> {

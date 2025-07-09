@@ -2,8 +2,8 @@ package com.discord.emoji_picker.react_events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 internal data class OnStickyHeaderRenderEvent(index: Int) : ReactEvent {

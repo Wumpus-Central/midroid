@@ -6,8 +6,8 @@ import android.graphics.Typeface
 import android.text.TextPaint
 import android.text.style.StyleSpan
 import com.discord.fonts.DiscordFont
-import g2.c
-import g2.d
+import h2.c
+import h2.d
 import kotlin.jvm.internal.r
 
 public class GGSansItalicSpan(context: Context) : StyleSpan {

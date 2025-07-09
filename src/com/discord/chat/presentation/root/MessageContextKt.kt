@@ -47,7 +47,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var11 = "";
    }
 
-   val var16: ReactionsTheme = var0.getReactionsTheme();
+   val var15: ReactionsTheme = var0.getReactionsTheme();
    val var2: Boolean;
    if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUsingGradientTheme(), var13)) {
       var2 = true;
@@ -55,7 +55,7 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var2 = false;
    }
 
-   val var15: Truncation = var0.getTruncation();
+   val var16: Truncation = var0.getTruncation();
    val var3: Boolean;
    if (var0.getMessage() is Message && r.c((var0.getMessage() as Message).getUseAttachmentGridLayout(), var13)) {
       var3 = true;
@@ -112,5 +112,5 @@ public fun MessageRow.getMessageContext(): MessageContext {
       var17 = "";
    }
 
-   return new MessageContext(var1, var8, var20, var10, var11, var16, var2, var15, var3, var4, var5, var6, var7, null, var23, var25, var14, var17, 8192, null);
+   return new MessageContext(var1, var8, var20, var10, var11, var15, var2, var16, var3, var4, var5, var6, var7, null, var23, var25, var14, var17, 8192, null);
 }

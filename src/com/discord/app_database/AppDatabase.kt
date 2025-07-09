@@ -6,7 +6,7 @@ import com.discord.logging.Log
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
-import vb.z0
+import nb.z0
 
 public object AppDatabase {
    internal const val LAST_DATABASE_USER_ID_PREFERENCES_KEY: String = "_databaseUserId"
@@ -130,6 +130,6 @@ public object AppDatabase {
    public fun initializeAppDatabase(context: Context) {
       r.h(var1, "context");
       dataDirectory = var1.getFilesDir().getAbsolutePath();
-      E9.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
+      w9.a.b(false, false, null, "AppDatabaseLoader", 0, new a(var1), 23, null);
    }
 }

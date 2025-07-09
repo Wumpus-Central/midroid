@@ -45,8 +45,6 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_zhtw;
       public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backicon;
       public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_il4hxka5xiyabahie234omum2u_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;

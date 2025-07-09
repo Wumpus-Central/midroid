@@ -93,7 +93,7 @@ public object MarkdownRules {
    public fun <R, S> createMarkdownRules(context: Context, headerStyles: List<Int>): List<Rule<R, Node<R>, S>> {
       r.h(var0, "context");
       r.h(var1, "headerStyles");
-      return i.C0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
+      return i.A0(createHeaderRules(var0, var1), new MarkdownRules.ListItemRule(<unrepresentable>.INSTANCE));
    }
 
    public open class HeaderLineClassedRule<RC, T, S>(styleSpanProvider: (Int) -> CharacterStyle,
@@ -106,7 +106,7 @@ public object MarkdownRules {
 
       public constructor(styleSpanProvider: (Int) -> CharacterStyle, classSpanProvider: (String) -> Any?) : r.h(var1, "styleSpanProvider") {
          r.h(var2, "classSpanProvider");
-         this(var1, var2, i.C0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
+         this(var1, var2, i.A0(SimpleMarkdownRules.createSimpleMarkdownRules$default(false, false, 2, null), SimpleMarkdownRules.INSTANCE.createTextRule()));
       }
 
       init {
@@ -234,10 +234,10 @@ public object MarkdownRules {
       public override fun parse(matcher: Matcher, parser: Parser<Any, in Node<Any>, Any>, state: Any): ParseSpec<Any, Any> {
          r.h(var1, "matcher");
          r.h(var2, "parser");
-         val var5: ParseSpec.Companion = ParseSpec.Companion;
-         val var4: java.lang.String = var1.group(1);
-         r.g(var4, "matcher.group(1)");
-         return var5.createNonterminal(this.createHeaderStyleNode(var4), (S)var3, var1.start(2), var1.end(2));
+         val var4: ParseSpec.Companion = ParseSpec.Companion;
+         val var5: java.lang.String = var1.group(1);
+         r.g(var5, "matcher.group(1)");
+         return var4.createNonterminal(this.createHeaderStyleNode(var5), (S)var3, var1.start(2), var1.end(2));
       }
    }
 

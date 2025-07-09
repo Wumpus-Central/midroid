@@ -245,10 +245,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var1.getTitle() != null) {
-         val var40: TextView = this.view.title;
-         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         kotlin.jvm.internal.r.g(var53, "toUpperCase(...)");
-         var40.setText(var53);
+         var14 = this.view.title;
+         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         kotlin.jvm.internal.r.g(var40, "toUpperCase(...)");
+         var14.setText(var40);
       } else {
          val var41: TextView = this.view.title;
          kotlin.jvm.internal.r.g(this.view.title, "title");
@@ -288,7 +288,7 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       if (var47 != null && !var47.isEmpty()) {
          this.view.actionsContainer.removeAllViews();
          val var6: Float = 1.0F / var1.getActions().size();
-         val var48: java.util.Iterator = kotlin.collections.i.D0(var1.getActions()).iterator();
+         val var48: java.util.Iterator = kotlin.collections.i.B0(var1.getActions()).iterator();
 
          for (int var21 = 0; var48.hasNext(); var21++) {
             var14 = (TextView)var48.next();

@@ -61,7 +61,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
          var3.add(var5);
       }
 
-      var2.V0(kotlin.collections.i.q0(var3, ", ", null, null, 0, null, null, 62, null));
+      var2.V0(kotlin.collections.i.o0(var3, ", ", null, null, 0, null, null, 62, null));
       var2.j0(AccessibilityNodeInfoCompat.a.i);
       var2.H0(15);
    }

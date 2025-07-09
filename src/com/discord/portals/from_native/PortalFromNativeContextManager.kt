@@ -4,12 +4,12 @@ import android.view.View
 import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.portals.utils.ViewRemoveFromParentKt
+import db.x
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
-import lb.x
 
 public object PortalFromNativeContextManager {
    private final var portalContextMap: MutableMap<Double, PortalFromNativeContext> = new LinkedHashMap()

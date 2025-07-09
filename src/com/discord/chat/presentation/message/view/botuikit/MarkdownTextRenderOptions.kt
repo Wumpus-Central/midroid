@@ -93,8 +93,8 @@ public data class MarkdownTextRenderOptions(containerId: String,
       val var6: java.lang.String = this.containerId;
       val var2: Boolean = this.shouldAnimateEmoji;
       val var4: Boolean = this.shouldShowLinkDecorations;
-      val var3: Boolean = this.shouldShowRoleDot;
-      val var1: Boolean = this.shouldShowRoleOnName;
+      val var1: Boolean = this.shouldShowRoleDot;
+      val var3: Boolean = this.shouldShowRoleOnName;
       val var5: StringBuilder = new StringBuilder();
       var5.append("MarkdownTextRenderOptions(containerId=");
       var5.append(var6);
@@ -103,9 +103,9 @@ public data class MarkdownTextRenderOptions(containerId: String,
       var5.append(", shouldShowLinkDecorations=");
       var5.append(var4);
       var5.append(", shouldShowRoleDot=");
-      var5.append(var3);
-      var5.append(", shouldShowRoleOnName=");
       var5.append(var1);
+      var5.append(", shouldShowRoleOnName=");
+      var5.append(var3);
       var5.append(")");
       return var5.toString();
    }

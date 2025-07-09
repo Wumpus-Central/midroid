@@ -5,10 +5,10 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
-import z9.s
+import r9.s
 
 @f
 internal data class TapCallData(messageId: MessageId, channelId: ChannelId) : TapCallData(var1, var2), ReactEvent {

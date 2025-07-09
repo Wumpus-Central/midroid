@@ -50,19 +50,19 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
          val var7: EmojiPickerRow.Emoji = var10 as EmojiPickerRow.Emoji;
          var10 = this.getChildAt(var3);
          kotlin.jvm.internal.r.f(var10, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
-         val var8: SimpleDraweeView = var10 as SimpleDraweeView;
+         val var9: SimpleDraweeView = var10 as SimpleDraweeView;
          var10 = null;
          if (var7 == null) {
-            var8.setImageURI(null);
-            var8.setVisibility(4);
+            var9.setImageURI(null);
+            var9.setVisibility(4);
          } else {
-            SetOptionalImageUrlKt.setOptionalImageUrl$default(var8, var7.getUrl(), var7.getAnimated(), null, null, 12, null);
-            var8.setVisibility(0);
-            var8.setContentDescription(var7.getName());
-            val var9: e = new e(this, var7);
+            SetOptionalImageUrlKt.setOptionalImageUrl$default(var9, var7.getUrl(), var7.getAnimated(), null, null, 12, null);
+            var9.setVisibility(0);
+            var9.setContentDescription(var7.getName());
+            val var8: e = new e(this, var7);
             var var4: Boolean = true;
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, var9, 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, new f(this, var7), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var9, false, var8, 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var9, false, new f(this, var7), 1, null);
             if (!var7.getDisabled() || var2) {
                var4 = false;
             }
@@ -74,8 +74,8 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
                var5 = 0;
             }
 
-            ViewClippingUtilsKt.clipToRoundedRectangle(var8, var5);
-            val var14: GenericDraweeHierarchy = var8.getHierarchy() as GenericDraweeHierarchy;
+            ViewClippingUtilsKt.clipToRoundedRectangle(var9, var5);
+            val var14: GenericDraweeHierarchy = var9.getHierarchy() as GenericDraweeHierarchy;
             if (var4) {
                var10 = this.getContext();
                kotlin.jvm.internal.r.g(var10, "getContext(...)");

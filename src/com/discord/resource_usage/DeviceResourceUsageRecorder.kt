@@ -1,20 +1,20 @@
 package com.discord.resource_usage
 
-import Tb.e
+import Lb.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
 import android.telephony.TelephonyManager
-import c2.b
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
+import d2.b
 import kotlin.jvm.internal.r
 import okhttp3.Response
 import okhttp3.ResponseBody
 import okhttp3.Interceptor.Chain
 import okio.BufferedSource
-import z9.s
+import r9.s
 
 public class DeviceResourceUsageRecorder {
    @JvmStatic

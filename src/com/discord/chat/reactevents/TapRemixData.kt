@@ -3,9 +3,9 @@ package com.discord.chat.reactevents
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), ReactEvent {
@@ -45,12 +45,12 @@ public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), React
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapRemixData(messageId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapRemixData(messageId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

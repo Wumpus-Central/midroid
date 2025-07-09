@@ -282,7 +282,7 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.r.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.r.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = kotlin.collections.i.M0(var8, --var2);
+         val var35: java.util.List = kotlin.collections.i.K0(var8, --var2);
          val var23: ShortcutsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
          var23.setVisibility(0);

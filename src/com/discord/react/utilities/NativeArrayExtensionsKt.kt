@@ -1,6 +1,5 @@
 package com.discord.react.utilities
 
-import A9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
@@ -10,6 +9,7 @@ import java.util.ArrayList
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.r
 import org.json.JSONArray
+import s9.n
 
 public inline fun ReadableArray.forEach(action: (Int) -> Unit) {
    r.h(var0, "<this>");
@@ -195,7 +195,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new z9.n();
+            throw new r9.n();
       }
    }
 

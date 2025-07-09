@@ -1,6 +1,6 @@
 package com.discord.jank_stats
 
-import O1.a
+import P1.a
 import android.view.Window
 import androidx.metrics.performance.FrameData
 import androidx.metrics.performance.JankStats

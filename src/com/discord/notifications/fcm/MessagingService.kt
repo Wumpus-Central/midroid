@@ -11,7 +11,7 @@ public class MessagingService : FirebaseMessagingService {
    public open fun onMessageReceived(remoteMessage: RemoteMessage) {
       r.h(var1, "remoteMessage");
       val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: java.util.Map = var1.p();
+      val var3: java.util.Map = var1.q();
       r.g(var3, "getData(...)");
       var2.onNotificationReceived(this, var3);
    }

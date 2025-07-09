@@ -8,7 +8,7 @@ import com.discord.reactions.ReactionView.Reaction
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.r
-import z9.s
+import r9.s
 
 internal data class TapReactionData(messageId: MessageId, reaction: Reaction?, isBurst: Boolean? = ..., location: String?) : TapReactionData(
          var1, var2, var3, var4

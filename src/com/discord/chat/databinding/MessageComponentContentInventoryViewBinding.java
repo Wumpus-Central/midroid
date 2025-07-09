@@ -8,7 +8,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.chat.presentation.message.view.botuikit.components.ContentInventoryComponentView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import z0.a;
 
 public final class MessageComponentContentInventoryViewBinding implements ViewBinding {
    public final SimpleDraweeView contentInventoryComponentAvatarImage;
@@ -48,21 +48,21 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
          SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.content_inventory_component_media_image;
-            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
-               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.content_inventory_component_subtitle;
                   TextView var3 = (TextView)a.a(var0, var1);
                   if (var3 != null) {
                      var1 = R.id.content_inventory_component_title;
-                     TextView var7 = (TextView)a.a(var0, var1);
-                     if (var7 != null) {
+                     TextView var4 = (TextView)a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.content_inventory_component_username;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var8, var5, var6, var4, var3, var7, var2);
+                        TextView var7 = (TextView)a.a(var0, var1);
+                        if (var7 != null) {
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var8, var5, var2, var6, var3, var4, var7);
                         }
                      }
                   }

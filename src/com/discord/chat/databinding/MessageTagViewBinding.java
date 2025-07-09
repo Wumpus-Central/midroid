@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.view.SimpleDraweeView;
-import y0.a;
+import z0.a;
 
 public final class MessageTagViewBinding implements ViewBinding {
    public final ConstraintLayout layout;

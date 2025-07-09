@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
 
 @f
 public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String) : ReactEvent {
@@ -57,15 +57,15 @@ public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.ctaType;
-      val var1: java.lang.String = this.ctaKey;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapSafetySystemNotificationCta(ctaType=");
-      var2.append(var3);
-      var2.append(", ctaKey=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var1: java.lang.String = this.ctaType;
+      val var2: java.lang.String = this.ctaKey;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapSafetySystemNotificationCta(ctaType=");
+      var3.append(var1);
+      var3.append(", ctaKey=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {
