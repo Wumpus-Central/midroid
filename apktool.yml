@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 288111
-  versionName: 288.11 - Beta
+  versionCode: 288112
+  versionName: 288.12 - Beta
 sharedLibrary: false
 sparseResources: false
 compactEntries: false
