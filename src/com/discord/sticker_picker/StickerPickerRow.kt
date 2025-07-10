@@ -206,20 +206,20 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.id;
-         val var4: java.lang.String = this.name;
-         val var7: StickerPickerRow.Sticker.Type = this.type;
+         val var4: java.lang.String = this.id;
+         val var7: java.lang.String = this.name;
+         val var5: StickerPickerRow.Sticker.Type = this.type;
          val var1: Boolean = this.animated;
          val var8: java.lang.String = this.url;
          val var3: Boolean = this.disabled;
          val var2: Boolean = this.opaque;
          val var6: StringBuilder = new StringBuilder();
          var6.append("Sticker(id=");
-         var6.append(var5);
-         var6.append(", name=");
          var6.append(var4);
-         var6.append(", type=");
+         var6.append(", name=");
          var6.append(var7);
+         var6.append(", type=");
+         var6.append(var5);
          var6.append(", animated=");
          var6.append(var1);
          var6.append(", url=");

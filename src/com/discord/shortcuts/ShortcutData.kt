@@ -79,10 +79,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            var4 = var12.getKey() as java.lang.String;
+            val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var4);
+               var8.add(var9);
                var8.add(var13);
             }
          }
