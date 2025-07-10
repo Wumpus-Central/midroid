@@ -4053,6 +4053,9 @@
     <style name="Theme.ReactNative.TextInput.DefaultBackground" parent="@android:style/Widget.EditText">
         <item name="android:editTextBackground">@drawable/abc_edit_text_material</item>
     </style>
+    <style name="Theme.UCropNoEdgeToEdge" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
+    </style>
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat" />
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />
     <style name="ThemeOverlay.AppCompat.Dark" parent="@style/Base.ThemeOverlay.AppCompat.Dark" />

@@ -3188,8 +3188,18 @@
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
   "yzW/fX": "Admins",
+  "xFcotb": "Shop All",
+  "LuhKs7": "Hmmm, we weren't able to load the Shop. Check back later.",
+  "xNiB/P": "Featured Page",
+  "zMqLHx": "Discord Shop Featured Page",
+  "AfrvRE": "Shop the whole Shop",
+  "Yr70c3": "There's so much more",
   "JCFN//": "Send a gift",
+  "nSFuCw": "Shop Menu",
+  "P0DpSU": "Discord Shop Menu",
   "NG43//": "Online",
+  "RSyoZm": "Shop All",
+  "bG3n/v": "Discord Shop All",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -8380,6 +8390,7 @@
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
   "pEasFR": "Filter",
+  "+B9e19": "Filter Options",
   "C6S5jY": "Find consoles",
   "8SuVoK": "Finish",
   "i0nsoa": "Disables in-app notifications & message sounds.",
@@ -18882,6 +18893,8 @@
   "RHhk+P": "No Logs Yet",
   "tzkaDw": "We broke something. Come back later.",
   "Ww5Tj4": "This is Awkward",
+  "eoXe0t": "Sort by: Newest",
+  "mmeWUF": "Sort by: Oldest",
   "K/i3iY": "Read the rules",
   "A65CaW": "The server owner must enable monetization before you can get started!",
   "AY/rYm": "Monetization not enabled",
@@ -25331,7 +25344,6 @@
   "QCw1oa": "Transferring to PS5…",
   "ZBjOVV": "Double tap to play or pause.",
   "uGxMJS": "Play Full Video",
-  "cnBQPD": "Play Here",
   "JeK1Wl": "Play in DM",
   "ZUEGFh": "Please try again later.",
   "RgIi2N": "Poll",
@@ -28724,6 +28736,218 @@
     "!"
   ],
   "hz78hI": "Try Nitro Basic for Free",
+  "cR9if3": [
+    [
+      6,
+      "days",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " day for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " days for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "8FZfNj": [
+    [
+      6,
+      "months",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " month for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " months for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "C6i5Ji": [
+    [
+      6,
+      "weeks",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " week for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " weeks for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "xzAcSU": [
+    [
+      6,
+      "years",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " year for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " years for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "kLnKcX": [
+    [
+      6,
+      "days",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " day free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " days free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "azyIQ0": [
+    [
+      6,
+      "months",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " month free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " months free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "3GVMLi": [
+    [
+      6,
+      "weeks",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " week free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " weeks free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "sqDHKC": [
+    [
+      6,
+      "years",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " year free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " years free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "TkTvBw": "Sweet!",
   "tQh+gI": "You can't have a dancing avatar (yet)!",
   "Tso/Fh": [

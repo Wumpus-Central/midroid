@@ -10,9 +10,9 @@ public final class BuildConfig {
    public static final boolean IS_HERMES_ENABLED = true;
    public static final boolean IS_NEW_ARCHITECTURE_ENABLED = true;
    public static final String MAIN_MODULE = "index.native";
-   public static final String USER_AGENT = "Discord-Android/289201";
-   public static final int VERSION_CODE = 289201;
-   public static final String VERSION_NAME = "289.1 - Alpha";
-   public static final String VERSION_NAME_RNA = "289.1";
+   public static final String USER_AGENT = "Discord-Android/289206";
+   public static final int VERSION_CODE = 289206;
+   public static final String VERSION_NAME = "289.6 - Alpha";
+   public static final String VERSION_NAME_RNA = "289.6";
    public static final Boolean logTTIMetrics = Boolean.FALSE;
 }
