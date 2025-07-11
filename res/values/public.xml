@@ -1061,13 +1061,13 @@
     <public type="drawable" name="modules_app_launcher_native_images_applauncherlearnmore" id="0x7f0805d5" />
     <public type="drawable" name="modules_auth_native_images_registerbackgrounddark" id="0x7f0805d6" />
     <public type="drawable" name="modules_auth_native_images_registerbackgroundlight" id="0x7f0805d7" />
-    <public type="drawable" name="modules_avatar_decorations_images_native_img_collectibles_shop" id="0x7f0805d8" />
-    <public type="drawable" name="modules_avatar_decorations_images_native_img_none" id="0x7f0805d9" />
-    <public type="drawable" name="modules_billing_native_images_blockedpurchasesdark" id="0x7f0805da" />
-    <public type="drawable" name="modules_billing_native_images_blockedpurchaseslight" id="0x7f0805db" />
-    <public type="drawable" name="modules_blocked_domains_components_native_images_dangerdave" id="0x7f0805dc" />
-    <public type="drawable" name="modules_build_overrides_native_images_codeillustrationdark" id="0x7f0805dd" />
-    <public type="drawable" name="modules_build_overrides_native_images_codeillustrationlight" id="0x7f0805de" />
+    <public type="drawable" name="modules_billing_native_images_blockedpurchasesdark" id="0x7f0805d8" />
+    <public type="drawable" name="modules_billing_native_images_blockedpurchaseslight" id="0x7f0805d9" />
+    <public type="drawable" name="modules_blocked_domains_components_native_images_dangerdave" id="0x7f0805da" />
+    <public type="drawable" name="modules_build_overrides_native_images_codeillustrationdark" id="0x7f0805db" />
+    <public type="drawable" name="modules_build_overrides_native_images_codeillustrationlight" id="0x7f0805dc" />
+    <public type="drawable" name="modules_collectibles_native_images_img_collectibles_shop" id="0x7f0805e1" />
+    <public type="drawable" name="modules_collectibles_native_images_img_none" id="0x7f0805e2" />
     <public type="drawable" name="modules_collectibles_native_images_premium_sparkles" id="0x7f0805e3" />
     <public type="drawable" name="modules_contact_sync_native_images_cta" id="0x7f0805e4" />
     <public type="drawable" name="modules_contact_sync_native_images_emptysuggestionsheader" id="0x7f0805e5" />

@@ -672,9 +672,11 @@
   "i9IRUV": "Kaikki albumit",
   "MSYhgo": "kaikki kanavat",
   "wxbhER": "Kaikki palvelimet",
+  "iWyjNj": "Kaikki",
   "S6yQr6": "Ja paljon muuta!",
   "wWjQyc": "Animoidut emojit",
   "iIaOlZ": "Toista animoidut emojit",
+  "jR39HB": "Tiedotteet",
   "qoxdQE": [
     "Jotta tiedotteet toimisivat nopeasti, julkaistuja viestejä voi muokata kolme kertaa tunnissa. Yritä uudelleen ",
     [
@@ -21968,6 +21970,7 @@
   "QtJ1c3": "Muokkaa napauttamalla",
   "DQjes7": "Kirjamerkki lisätty.",
   "5KOMiY": "Kirjamerkki poistettu.",
+  "+rlGYW": "Kirjamerkit",
   "P7yvbm": "Liitteet on poistettu käytöstä tällä kanavalla.",
   "Wr4RIS": "Upotukset on poistettu käytöstä tällä kanavalla.",
   "0Yyrub": "Ulkoiset tarrat on poistettu käytöstä tällä kanavalla.",
@@ -23909,6 +23912,7 @@
   "9D+zGR": "Siirry asetuksiin",
   "TyCVIi": "OK",
   "BddRzc": "OK",
+  "exrPZm": "Vanhemmat",
   "Zaz+ur": [
     "Tämän muutoksen tekeminen johtaa siihen, että yhteisöperehdytys ei toimi palvelimella. Määritä korvaava oletuskanava valitsemalla ",
     [
@@ -36537,6 +36541,7 @@
   "FHVR//": "Käyttäjänimi kopioitu",
   "gI8ISU": "Koodi lähetetty!",
   "cEK+1t": "Video tallennettu",
+  "F4jZQk": "Tänään",
   "HK4JIi": "Vaihda kameran tilaa",
   "iZ7Mz8": "Vaihda emoji-näppäimistön tila",
   "aDZSu7": "Vaihda medianäppäimistön tila",
@@ -38629,6 +38634,7 @@
   "2okkZW": "Lähetä Discordin äänet Xbox-konsoliisi!",
   "/Q4HRE": "Vuosittain",
   "H9jz+f": "Keltainen",
+  "gnv4pK": "Eilinen",
   "p89ACg": "Kyllä",
   "LuZzxs": "Sinä",
   "CAqwXl": "Kaverisi",

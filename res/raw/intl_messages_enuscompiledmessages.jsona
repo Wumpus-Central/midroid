@@ -573,6 +573,7 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
+  "ZtuRtr": "This server contains adult content marked as age-restricted. Do you wish to proceed?",
   "2kHZen": [
     "You need to be 18 or older in order to view age-restricted channels on Discord. ",
     [
@@ -674,9 +675,11 @@
   "i9IRUV": "All Albums",
   "MSYhgo": "all channels",
   "wxbhER": "All Servers",
+  "iWyjNj": "All",
   "S6yQr6": "And more!",
   "wWjQyc": "Animated Emoji",
   "iIaOlZ": "Play animated emoji",
+  "jR39HB": "Announcements",
   "qoxdQE": [
     "To keep announcements speedy, published messages can only be edited 3 times per hour. Please try again in ",
     [
@@ -8432,6 +8435,7 @@
   "GGAdHR": "You are receiving notifications from only mentions in this server, but you can override it here",
   "t0mEt7": "You can’t get notifications from this channel nor change settings until you unmute this channel.",
   "oWF6eX": "Receive notifications when your messages are reacted to.",
+  "rngMNz": "Receive a notification when your closest friends join voice channels in servers with 200 members or fewer.",
   "aTVNen": [
     "Oops! You've caught an ultra rare error. This is probably our fault, so please try again or check ",
     [
@@ -22592,6 +22596,7 @@
   "QtJ1c3": "Tap to modify",
   "DQjes7": "Bookmark added.",
   "5KOMiY": "Bookmark removed.",
+  "+rlGYW": "Bookmarks",
   "P7yvbm": "Attachments are disabled in this channel.",
   "Wr4RIS": "Embeds are disabled in this channel.",
   "0Yyrub": "External stickers are disabled in this channel.",
@@ -24601,6 +24606,7 @@
   "9D+zGR": "Go to Settings",
   "TyCVIi": "OK",
   "BddRzc": "Okay",
+  "exrPZm": "Older",
   "Zaz+ur": [
     "Making this change will make your server incompatible with Community Onboarding. You must designate a replacement Default Channel in ",
     [
@@ -37705,6 +37711,7 @@
   "FHVR//": "Username Copied",
   "gI8ISU": "Code sent!",
   "cEK+1t": "Video Saved",
+  "F4jZQk": "Today",
   "HK4JIi": "Toggle camera",
   "iZ7Mz8": "Toggle emoji keyboard",
   "aDZSu7": "Toggle media keyboard",
@@ -39293,6 +39300,7 @@
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
   "K3lovL": "Voice",
+  "wtk08f": "Voice Activity Notifications",
   "EZgS+/": "Voice Call",
   "GaCMgY": "Open voice call actions",
   "8bn8Bg": [
@@ -39805,6 +39813,7 @@
   "2okkZW": "Send Discord audio to your Xbox!",
   "/Q4HRE": "Yearly",
   "H9jz+f": "Yellow",
+  "gnv4pK": "Yesterday",
   "p89ACg": "Yes",
   "LuZzxs": "You",
   "CAqwXl": "Your Friends",

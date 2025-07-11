@@ -671,9 +671,11 @@
   "i9IRUV": "Összes album",
   "MSYhgo": "összes csatorna",
   "wxbhER": "Összes szerver",
+  "iWyjNj": "Összes",
   "S6yQr6": "És még sok minden más!",
   "wWjQyc": "Animált emotikon",
   "iIaOlZ": "Animált emotikon lejátszása",
+  "jR39HB": "Bejelentések",
   "qoxdQE": [
     "A bejelentések azonnalisága érdekében a közzétett üzenetek óránként csak 3 alkalommal szerkeszthetők. Próbáld meg ",
     [
@@ -21906,6 +21908,7 @@
   "QtJ1c3": "Koppints a módosításhoz",
   "DQjes7": "Könyvjelző hozzáadva.",
   "5KOMiY": "Könyvjelző eltávolítva.",
+  "+rlGYW": "Könyvjelzők",
   "P7yvbm": "Ezen a csatornán le vannak tiltva a mellékletek.",
   "Wr4RIS": "Ezen a csatornán le vannak tiltva a beágyazások.",
   "0Yyrub": "Ezen a csatornán le vannak tiltva a külső matricák.",
@@ -23831,6 +23834,7 @@
   "9D+zGR": "Ugrás a beállításokra",
   "TyCVIi": "OK",
   "BddRzc": "Oké",
+  "exrPZm": "Régebbi",
   "Zaz+ur": [
     "Ha törlöd a csatornát, a szervered nem lesz kompatibilis a közösségi beléptetéssel. A csatorna törlése előtt másik alapértelmezett csatornát kell kijelölnöd a ",
     [
@@ -36451,6 +36455,7 @@
   "FHVR//": "Felhasználónév másolása megtörtént",
   "gI8ISU": "Kód elküldve!",
   "cEK+1t": "Elmentetted a videót",
+  "F4jZQk": "Ma",
   "HK4JIi": "Kamera ki/be",
   "iZ7Mz8": "Emotikon billentyűzet ki/be",
   "aDZSu7": "Médiabillentyűzet ki/be",
@@ -38548,6 +38553,7 @@
   "2okkZW": "Küldd a Discord hangját az Xboxodra!",
   "/Q4HRE": "Évente",
   "H9jz+f": "Sárga",
+  "gnv4pK": "Tegnap",
   "p89ACg": "Igen",
   "LuZzxs": "Te",
   "CAqwXl": "A barátaid",

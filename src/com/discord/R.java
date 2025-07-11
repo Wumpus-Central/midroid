@@ -1192,8 +1192,6 @@ public final class R {
       public static int modules_app_launcher_native_images_applauncherlearnmore;
       public static int modules_auth_native_images_registerbackgrounddark;
       public static int modules_auth_native_images_registerbackgroundlight;
-      public static int modules_avatar_decorations_images_native_img_collectibles_shop;
-      public static int modules_avatar_decorations_images_native_img_none;
       public static int modules_billing_native_images_blockedpurchasesdark;
       public static int modules_billing_native_images_blockedpurchaseslight;
       public static int modules_blocked_domains_components_native_images_dangerdave;
@@ -1203,6 +1201,8 @@ public final class R {
       public static int modules_collectibles_native_images_discord_logo_white;
       public static int modules_collectibles_native_images_featured_page_footer_dark;
       public static int modules_collectibles_native_images_featured_page_footer_light;
+      public static int modules_collectibles_native_images_img_collectibles_shop;
+      public static int modules_collectibles_native_images_img_none;
       public static int modules_collectibles_native_images_premium_sparkles;
       public static int modules_contact_sync_native_images_cta;
       public static int modules_contact_sync_native_images_emptysuggestionsheader;

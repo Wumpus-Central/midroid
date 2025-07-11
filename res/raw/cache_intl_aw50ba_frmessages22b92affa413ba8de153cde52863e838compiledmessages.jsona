@@ -675,9 +675,11 @@
   "i9IRUV": "Tous les albums",
   "MSYhgo": "tous les salons",
   "wxbhER": "Tous les serveurs",
+  "iWyjNj": "Tous",
   "S6yQr6": "Et bien plus encore !",
   "wWjQyc": "Émojis animés",
   "iIaOlZ": "Afficher les émojis animés",
+  "jR39HB": "Annonces",
   "qoxdQE": [
     "Afin que les annonces restent rapides, les messages publiés ne peuvent être modifiés que trois fois par heure. Réessaie dans ",
     [
@@ -21965,6 +21967,7 @@
   "QtJ1c3": "Touche pour modifier",
   "DQjes7": "Message marqué.",
   "5KOMiY": "Ce message n'est plus marqué.",
+  "+rlGYW": "Messages marqués",
   "P7yvbm": "Les pièces jointes sont désactivées dans ce salon.",
   "Wr4RIS": "Les intégrations sont désactivées dans ce salon.",
   "0Yyrub": "Les autocollants externes sont désactivés dans ce salon.",
@@ -23882,6 +23885,7 @@
   "9D+zGR": "Aller dans les paramètres",
   "TyCVIi": "OK",
   "BddRzc": "OK",
+  "exrPZm": "Ancien",
   "Zaz+ur": [
     "Ce changement rendra ce serveur incompatible avec le processus d'accueil de la communauté. Tu dois désigner un autre salon par défaut dans ",
     [
@@ -36577,6 +36581,7 @@
   "FHVR//": "Nom d'utilisateur copié",
   "gI8ISU": "Code envoyé !",
   "cEK+1t": "Vidéo sauvegardée",
+  "F4jZQk": "Aujourd'hui",
   "HK4JIi": "Activer/désactiver la caméra",
   "iZ7Mz8": "Afficher/masquer le clavier d'émojis",
   "aDZSu7": "Afficher/masquer la barre de médias",
@@ -38667,6 +38672,7 @@
   "2okkZW": "Envoie le son de Discord sur ta Xbox !",
   "/Q4HRE": "Annuel",
   "H9jz+f": "Jaune",
+  "gnv4pK": "Hier",
   "p89ACg": "Oui",
   "LuZzxs": "Toi",
   "CAqwXl": "Tes amis",
