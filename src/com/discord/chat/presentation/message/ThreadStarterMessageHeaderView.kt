@@ -9,6 +9,7 @@ import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.discord.SetTextSizeSpKt
+import com.discord.chat.R
 import com.discord.chat.databinding.ThreadStarterMessageHeaderViewBinding
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
@@ -50,35 +51,37 @@ public class ThreadStarterMessageHeaderView  public constructor(context: Context
    }
 
    public fun configure(headerText: String?, hasMessageReference: Boolean) {
-      val var5: View = this.binding.getRoot();
-      kotlin.jvm.internal.r.g(var5, "getRoot(...)");
-      var var3: Boolean;
-      if (var1 != null) {
-         var3 = 1;
-      } else {
-         var3 = 0;
-      }
-
-      if (var3) {
-         var3 = (byte)0;
-      } else {
-         var3 = (byte)8;
-      }
-
-      var5.setVisibility(var3);
-      this.binding.threadStarterHeaderText.setText(var1);
       val var6: View = this.binding.getRoot();
       kotlin.jvm.internal.r.g(var6, "getRoot(...)");
-      val var9: LayoutParams = var6.getLayoutParams();
-      if (var9 != null) {
-         val var10: MarginLayoutParams = var9 as MarginLayoutParams;
-         var3 = 0;
+      var var4: Boolean;
+      if (var1 != null) {
+         var4 = 1;
+      } else {
+         var4 = 0;
+      }
+
+      if (var4) {
+         var4 = (byte)0;
+      } else {
+         var4 = (byte)8;
+      }
+
+      var6.setVisibility(var4);
+      this.binding.threadStarterHeaderText.setText(var1);
+      val var3: Float = this.getResources().getDimension(R.dimen.message_start_guideline);
+      val var7: View = this.binding.getRoot();
+      kotlin.jvm.internal.r.g(var7, "getRoot(...)");
+      val var10: LayoutParams = var7.getLayoutParams();
+      if (var10 != null) {
+         val var11: MarginLayoutParams = var10 as MarginLayoutParams;
+         (var10 as MarginLayoutParams).setMarginStart((int)var3);
+         var4 = 0;
          if (var2) {
-            var3 = SizeUtilsKt.getDpToPx(4);
+            var4 = SizeUtilsKt.getDpToPx(4);
          }
 
-         var10.bottomMargin = var3;
-         var6.setLayoutParams(var10);
+         var11.bottomMargin = var4;
+         var7.setLayoutParams(var11);
       } else {
          throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
       }

@@ -18,7 +18,6 @@ import ib.K
 import ib.f
 import ib.k0
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CompletableJob
@@ -105,13 +104,14 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                      var9 = var1;
                   } else {
                      c.b(var1);
-                     var258 = this.L$0 as CoroutineScope;
+                     var1 = this.L$0 as CoroutineScope;
                      var3x = System.currentTimeMillis();
-                     var1 = d.a().k(ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0)), var258);
+                     var258 = ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0));
+                     val var252: DataSource = d.a().k(var258, var1);
 
                      try {
-                        var9 = K.b();
-                        var258 = new Function2(var1, null) {
+                        var258 = K.b();
+                        var9 = new Function2(var252, null) {
                            final DataSource $dataSource;
                            int label;
 
@@ -138,10 +138,10 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               }
                            }
                         };
-                        this.L$0 = var1;
+                        this.L$0 = var252;
                         this.J$0 = var3x;
                         this.label = 1;
-                        var9 = (GenericDraweeHierarchy)f.g((CoroutineContext)var9, var258, this);
+                        var9 = (GenericDraweeHierarchy)f.g(var258, (Function2)var9, this);
                      } catch (var24: java.lang.Throwable) {
                         break label1440;
                      }
@@ -150,7 +150,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                         return var7;
                      }
 
-                     var258 = var1;
+                     var258 = var252;
                   }
 
                   try {

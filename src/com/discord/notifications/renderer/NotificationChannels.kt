@@ -33,16 +33,16 @@ internal object NotificationChannels {
          var5 = false;
       }
 
-      var3 = var3.g(var5);
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("android.resource://");
+      val var8: NotificationChannelCompat.Builder = var3.g(var5);
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("android.resource://");
       val var7: java.lang.String = var1.getPackageName();
       val var6: StringBuilder = new StringBuilder();
       var6.append(var7);
       var6.append("/");
       var6.append(var4);
-      var8.append(var6.toString());
-      var3.h(Uri.parse(var8.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
+      var10.append(var6.toString());
+      var8.h(Uri.parse(var10.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
 
    private fun configureMediaChannel(legacyChannel: NotificationChannelCompat?, builder: Builder) {
@@ -70,15 +70,15 @@ internal object NotificationChannels {
    }
 
    private fun createNotificationChannelGroups(context: Context, localizedGroupNames: Map<String, String>): List<androidx.core.app.j> {
-      val var7: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
-      val var6: ArrayList = new ArrayList(var7.length);
-      val var4: Int = var7.length;
+      val var6: Array<NotificationChannels.ChannelGroup> = NotificationChannels.ChannelGroup.values();
+      val var7: ArrayList = new ArrayList(var6.length);
+      val var4: Int = var6.length;
 
       for (int var3 = 0; var3 < var4; var3++) {
          var var10: androidx.core.app.j;
          label20: {
-            val var5: NotificationChannels.ChannelGroup = var7[var3];
-            if (var2.containsKey(var7[var3].getId())) {
+            val var5: NotificationChannels.ChannelGroup = var6[var3];
+            if (var2.containsKey(var6[var3].getId())) {
                val var8: java.lang.CharSequence = var2.get(var5.getId()) as java.lang.CharSequence;
                if (var8 != null && !kotlin.text.h.c0(var8)) {
                   var10 = new androidx.core.app.j.c(var5.getGroupId())
@@ -94,11 +94,11 @@ internal object NotificationChannels {
             var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
          }
 
-         var6.add(var10);
+         var7.add(var10);
       }
 
-      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var6);
-      return var6;
+      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).d(var7);
+      return var7;
    }
 
    private fun com.discord.notifications.renderer.NotificationChannels.Category.getAndDeleteLegacyNotificationChannel(context: Context): NotificationChannelCompat? {
@@ -130,11 +130,11 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var3 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var4: java.lang.String = var3.b();
-         r.g(var4, "getId(...)");
-         if (kotlin.text.h.I(var4, "calls", false, 2, null)) {
-            return var3;
+      for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var3: java.lang.String = var2.b();
+         r.g(var3, "getId(...)");
+         if (kotlin.text.h.I(var3, "calls", false, 2, null)) {
+            return var2;
          }
       }
 
@@ -156,17 +156,17 @@ internal object NotificationChannels {
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
       val var4: java.lang.String;
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var2: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("calls_");
-         var3.append(var2);
-         var4 = var3.toString();
+         val var3: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("calls_");
+         var2.append(var3);
+         var4 = var2.toString();
       } else {
-         val var6: java.lang.String = var1.getId();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("calls_");
-         var5.append(var6);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getId();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("calls_");
+         var6.append(var5);
+         var4 = var6.toString();
       }
 
       return var4;
@@ -321,16 +321,16 @@ internal object NotificationChannels {
       r.h(var1, "context");
       r.h(var2, "localizedCategoryNames");
       r.h(var3, "localizedGroupNames");
-      val var5: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
+      val var6: Int = ColorUtilsKt.getColorCompat(var1, com.discord.theme.R.color.brand);
       val var17: java.util.List = this.createNotificationChannelGroups(var1, var3);
       val var8: Array<NotificationChannels.Category> = NotificationChannels.Category.values();
       val var9: ArrayList = new ArrayList();
-      val var6: Int = var8.length;
+      val var5: Int = var8.length;
 
-      for (int var4 = 0; var4 < var6; var4++) {
-         val var20: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var5, var2, new h(var8[var4], var1));
-         if (var20 != null) {
-            var9.add(var20);
+      for (int var4 = 0; var4 < var5; var4++) {
+         val var21: NotificationChannelCompat = INSTANCE.migrateOrCreateNotificationChannel(var1, var8[var4], var6, var2, new h(var8[var4], var1));
+         if (var21 != null) {
+            var9.add(var21);
          }
       }
 
@@ -338,7 +338,7 @@ internal object NotificationChannels {
          NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
       } catch (var13: Exception) {
          val var19: CrashReporting = CrashReporting.INSTANCE;
-         val var21: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(q.d(kotlin.collections.i.v(var17, 10)), 16));
+         val var20: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(q.d(kotlin.collections.i.v(var17, 10)), 16));
 
          for (androidx.core.app.j var12 : var17) {
             label32: {
@@ -362,10 +362,10 @@ internal object NotificationChannels {
             }
 
             val var16: Pair = s.a(var15, java.lang.String.valueOf(var7));
-            var21.put(var16.c(), var16.d());
+            var20.put(var16.c(), var16.d());
          }
 
-         CrashReporting.addBreadcrumb$default(var19, "Failed to create notification group or channel", var21, null, 4, null);
+         CrashReporting.addBreadcrumb$default(var19, "Failed to create notification group or channel", var20, null, 4, null);
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
       }
    }
@@ -418,12 +418,12 @@ internal object NotificationChannels {
                }
             }
 
-            val var17: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
-            val var8: java.lang.String = var17.b();
-            r.g(var8, "getId(...)");
-            if (kotlin.text.h.I(var8, "calls", false, 2, null)) {
-               r.e(var17);
-               var6.add(var17);
+            val var8: NotificationChannelCompat = var11.next() as NotificationChannelCompat;
+            val var17: java.lang.String = var8.b();
+            r.g(var17, "getId(...)");
+            if (kotlin.text.h.I(var17, "calls", false, 2, null)) {
+               r.e(var8);
+               var6.add(var8);
             }
          }
       }

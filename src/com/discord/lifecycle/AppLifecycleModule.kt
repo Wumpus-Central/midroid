@@ -29,10 +29,10 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
 
          public void onHostDestroy() {
             if (AppLifecycleModule.access$getReactListenerCount$p(this.this$0) != 0) {
-               val var1: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
-               val var2: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
-               r.g(var2, "access$getReactApplicationContext(...)");
-               var1.emitModuleEvent(var2, new OnHostDestroyEvent());
+               val var2: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
+               val var1: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
+               r.g(var1, "access$getReactApplicationContext(...)");
+               var2.emitModuleEvent(var1, new OnHostDestroyEvent());
             }
          }
 

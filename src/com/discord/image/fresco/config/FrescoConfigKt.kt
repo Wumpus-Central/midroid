@@ -32,15 +32,15 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    r.h(var0, "<this>");
-   val var2: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
-   val var1: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   val var3: Builder = var2.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
-      .Z(var1.newSmallDiskCache(var0))
+   var var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
+   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+      .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
-   val var5: a = C.n();
+   val var3: a = C.n();
    val var6: F = o.a();
-   val var4: Builder = var3.X(new E(var5.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var4: Builder = var1.X(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          r.h(var1, "sourceUri");
@@ -50,12 +50,12 @@ internal fun Context.frescoConfig(): ImagePipelineConfig {
             val var4: android.net.Uri.Builder = var1.buildUpon();
             var4.clearQuery();
 
-            for (java.lang.String var2 : var1.getQueryParameterNames()) {
-               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var2)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var2).iterator();
+            for (java.lang.String var5 : var1.getQueryParameterNames()) {
+               if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var5)) {
+                  val var2: java.util.Iterator = var1.getQueryParameters(var5).iterator();
 
-                  while (var5.hasNext()) {
-                     var4.appendQueryParameter(var2, var5.next() as java.lang.String);
+                  while (var2.hasNext()) {
+                     var4.appendQueryParameter(var5, var2.next() as java.lang.String);
                   }
                }
             }

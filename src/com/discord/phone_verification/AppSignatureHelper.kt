@@ -112,12 +112,12 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                val var24: java.lang.String = var7.toCharsString();
                r.g(var24, "toCharsString(...)");
                var8 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var9: Log = Log.INSTANCE;
-               val var23: java.lang.String = TAG;
+               val var23: Log = Log.INSTANCE;
+               val var9: java.lang.String = TAG;
                val var25: StringBuilder = new StringBuilder();
                var25.append("Hash ");
                var25.append(var8);
-               Log.i$default(var9, var23, var25.toString(), null, 4, null);
+               Log.i$default(var23, var9, var25.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
@@ -147,7 +147,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
       private fun hash(packageName: String, signature: String): String? {
          try {
-            val var3: StringBuilder = new StringBuilder();
+            var var3: StringBuilder = new StringBuilder();
             var3.append(var1);
             var3.append(" ");
             var3.append(var2);
@@ -161,14 +161,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             r.g(var10, "encodeToString(...)");
             var2 = var10.substring(0, 11);
             r.g(var2, "substring(...)");
-            val var4: Log = Log.INSTANCE;
-            val var13: java.lang.String = this.getTAG();
-            val var5: StringBuilder = new StringBuilder();
-            var5.append("pkg: ");
-            var5.append(var1);
-            var5.append(" -- hash: ");
-            var5.append(var2);
-            Log.i$default(var4, var13, var5.toString(), null, 4, null);
+            val var5: Log = Log.INSTANCE;
+            val var4: java.lang.String = this.getTAG();
+            var3 = new StringBuilder();
+            var3.append("pkg: ");
+            var3.append(var1);
+            var3.append(" -- hash: ");
+            var3.append(var2);
+            Log.i$default(var5, var4, var3.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

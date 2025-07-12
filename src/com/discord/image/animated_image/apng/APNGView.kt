@@ -193,8 +193,8 @@ public class APNGView(context: Context) : m {
                               kotlin.c.b(var5);
                               if (var1 !is DownloadState.Completed) {
                                  if (var1 is DownloadState.Failure) {
-                                    var5 = K.c();
-                                    val var13: Function2 = new Function2(this.this$0, null) {
+                                    val var13: d0 = K.c();
+                                    var5 = new Function2(this.this$0, null) {
                                        int label;
                                        final APNGView this$0;
 
@@ -225,7 +225,7 @@ public class APNGView(context: Context) : m {
                                        }
                                     };
                                     ((<unrepresentable>)var14).label = 3;
-                                    if (ib.f.g((CoroutineContext)var5, var13, (Continuation)var14) === var16) {
+                                    if (ib.f.g(var13, (Function2)var5, (Continuation)var14) === var16) {
                                        return var16;
                                     }
 
@@ -454,12 +454,12 @@ public class APNGView(context: Context) : m {
          var1 = "";
 
          for (int var2 = 0; var2 < var3; var2++) {
-            val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-            r.g(var6, "format(...)");
-            val var5: StringBuilder = new StringBuilder();
-            var5.append(var1);
-            var5.append(var6);
-            var1 = var5.toString();
+            val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+            r.g(var5, "format(...)");
+            val var6: StringBuilder = new StringBuilder();
+            var6.append(var1);
+            var6.append(var5);
+            var1 = var6.toString();
          }
 
          return var1;
@@ -551,8 +551,8 @@ public class APNGView(context: Context) : m {
       }
 
       public override fun hashCode(): Int {
-         val var5: Int = this.url.hashCode();
-         val var4: Int = java.lang.Boolean.hashCode(this.animate);
+         val var4: Int = this.url.hashCode();
+         val var5: Int = java.lang.Boolean.hashCode(this.animate);
          val var3: Int = java.lang.Boolean.hashCode(this.showLoading);
          var var2: Int = 0;
          val var1: Int;
@@ -566,29 +566,29 @@ public class APNGView(context: Context) : m {
             var2 = this.heightDp.hashCode();
          }
 
-         return ((((var5 * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
+         return ((((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + this.cacheDirectory.hashCode();
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.url;
-         val var2: Boolean = this.animate;
-         val var1: Boolean = this.showLoading;
-         val var3: Int = this.widthDp;
-         val var7: Int = this.heightDp;
-         val var6: java.lang.String = this.cacheDirectory;
+         val var3: java.lang.String = this.url;
+         val var1: Boolean = this.animate;
+         val var2: Boolean = this.showLoading;
+         val var4: Int = this.widthDp;
+         val var6: Int = this.heightDp;
+         val var7: java.lang.String = this.cacheDirectory;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(url=");
-         var5.append(var4);
-         var5.append(", animate=");
-         var5.append(var2);
-         var5.append(", showLoading=");
-         var5.append(var1);
-         var5.append(", widthDp=");
          var5.append(var3);
+         var5.append(", animate=");
+         var5.append(var1);
+         var5.append(", showLoading=");
+         var5.append(var2);
+         var5.append(", widthDp=");
+         var5.append(var4);
          var5.append(", heightDp=");
-         var5.append(var7);
-         var5.append(", cacheDirectory=");
          var5.append(var6);
+         var5.append(", cacheDirectory=");
+         var5.append(var7);
          var5.append(")");
          return var5.toString();
       }
