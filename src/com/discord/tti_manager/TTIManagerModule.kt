@@ -1,5 +1,6 @@
 package com.discord.tti_manager
 
+import A9.q
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -10,8 +11,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.util.ArrayList
 import kotlin.jvm.internal.r
-import r9.s
-import s9.q
+import z9.s
 
 public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val ttiBroadcastReceiver: TTIBroadcastReceiver
@@ -108,10 +108,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
       try {
          if (BuildConfig.logTTIMetrics) {
-            val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-            val var2: ReactApplicationContext = this.getReactApplicationContext();
-            r.g(var2, "getReactApplicationContext(...)");
-            var1.unregister(var2, this.ttiBroadcastReceiver);
+            val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+            val var1: ReactApplicationContext = this.getReactApplicationContext();
+            r.g(var1, "getReactApplicationContext(...)");
+            var2.unregister(var1, this.ttiBroadcastReceiver);
          }
       } catch (var3: Exception) {
       }

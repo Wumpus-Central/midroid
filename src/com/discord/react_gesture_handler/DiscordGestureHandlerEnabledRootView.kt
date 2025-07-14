@@ -5,7 +5,7 @@ import android.content.Context
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.e0
+import androidx.core.view.f0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchListener
 import com.discord.theme.ThemeManager
@@ -77,7 +77,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
             return var1 as DiscordGestureHandlerEnabledRootView;
          } else {
             if (var1 is ViewGroup) {
-               for (View var2 : e0.a((ViewGroup)var1)) {
+               for (View var2 : f0.a((ViewGroup)var1)) {
                   val var4: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.find(var2);
                   if (var4 != null) {
                      return var4;

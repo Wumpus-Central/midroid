@@ -9,7 +9,7 @@ import android.view.WindowInsets
 import androidx.core.graphics.Insets
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
-import androidx.core.view.m0
+import androidx.core.view.n0
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import kotlin.jvm.internal.r
 
@@ -69,7 +69,7 @@ internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVis
       r.e(var4);
       return var4;
    } else if (var2) {
-      val var7: Insets = Insets.b(var0.i(), var0.k(), var0.j(), var0.h());
+      val var7: Insets = Insets.c(var0.i(), var0.k(), var0.j(), var0.h());
       r.g(var7, "of(...)");
       return var7;
    } else {
@@ -85,7 +85,7 @@ internal fun WindowInsetsCompat.getSystemBarInsets(context: Context, ignoringVis
          var8 = 0;
       }
 
-      val var6: Insets = Insets.b(var4.a, var4.b, var4.c, var8);
+      val var6: Insets = Insets.c(var4.a, var4.b, var4.c, var8);
       r.g(var6, "of(...)");
       return var6;
    }
@@ -115,7 +115,7 @@ internal fun Activity.getWindowInsetsCompat(): WindowInsetsCompat? {
 
 internal fun Window.setInsetsType(insetType: Int, visible: Boolean) {
    r.h(var0, "<this>");
-   val var3: WindowInsetsControllerCompat = m0.a(var0, var0.getDecorView());
+   val var3: WindowInsetsControllerCompat = n0.a(var0, var0.getDecorView());
    var3.e(2);
    if (var2) {
       var3.f(var1);

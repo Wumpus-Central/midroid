@@ -7,7 +7,7 @@ import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import java.util.ArrayList
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIconModuleSpec {
    init {
@@ -41,10 +41,10 @@ public class AppIconModule(reactContext: ReactApplicationContext) : NativeAppIco
       r.h(var2, "promise");
 
       try {
-         val var4: AppIconUtil = AppIconUtil.INSTANCE;
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var3, "getReactApplicationContext(...)");
-         var4.setAppIcon(var3, var1);
+         val var3: AppIconUtil = AppIconUtil.INSTANCE;
+         val var4: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var4, "getReactApplicationContext(...)");
+         var3.setAppIcon(var4, var1);
          var2.resolve(java.lang.Boolean.TRUE);
       } catch (var5: Exception) {
          var2.reject(var5);

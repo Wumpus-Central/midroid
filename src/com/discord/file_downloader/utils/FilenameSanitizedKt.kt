@@ -1,12 +1,12 @@
 package com.discord.file_downloader.utils
 
+import A9.q
 import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
 import kotlin.jvm.internal.r
-import r9.s
-import s9.q
+import z9.s
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
    q.l(

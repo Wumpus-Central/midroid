@@ -191,12 +191,12 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       val var34: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.r.g(this.binding.mediaView, "mediaView");
       ViewClippingUtilsKt.clipToRoundedRectangle(var34, var10);
-      val var41: SpoilerViewManager = this.spoilerViewManager;
-      val var42: ConstraintLayout = this.binding.container;
+      val var35: SpoilerViewManager = this.spoilerViewManager;
+      val var41: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var35: ConstraintLayout = this.binding.container;
+      val var38: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var38: MediaView = this.binding.mediaView;
+      val var42: MediaView = this.binding.mediaView;
       kotlin.jvm.internal.r.g(this.binding.mediaView, "mediaView");
       if (var14 && !var11) {
          var11 = true;
@@ -210,11 +210,11 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
          var12 = true;
       }
 
-      var41.configureSpoiler(var13, var42, var35, var38, null, var11, var15, var12, var10, var16, var17);
-      val var36: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var39: ConstraintLayout = this.binding.container;
+      var35.configureSpoiler(var13, var41, var38, var42, null, var11, var15, var12, var10, var16, var17);
+      val var39: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var36: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      var36.configureAttachmentOverlay(this, var39, var10, var18);
+      var39.configureAttachmentOverlay(this, var36, var10, var18);
    }
 
    public fun setDescription(description: String?, hint: String?) {
@@ -261,7 +261,7 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
 
    public fun setRole(role: String?) {
       if (var1 != null) {
-         androidx.core.view.Y.q0(this.binding.mediaView, new androidx.core.view.a(var1) {
+         androidx.core.view.Z.o0(this.binding.mediaView, new androidx.core.view.a(var1) {
             final java.lang.String $role;
 
             {
@@ -406,13 +406,13 @@ public class MediaVideoView  public constructor(context: Context, attrs: Attribu
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.sourceUrl;
-         val var2: java.lang.String = this.previewUrl;
+         val var2: java.lang.String = this.sourceUrl;
+         val var3: java.lang.String = this.previewUrl;
          val var1: StringBuilder = new StringBuilder();
          var1.append("TargetUrl(sourceUrl=");
-         var1.append(var3);
-         var1.append(", previewUrl=");
          var1.append(var2);
+         var1.append(", previewUrl=");
+         var1.append(var3);
          var1.append(")");
          return var1.toString();
       }

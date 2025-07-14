@@ -20,12 +20,12 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
       kotlin.jvm.internal.r.h(var1, "eventHandlerProvider");
       kotlin.jvm.internal.r.h(var2, "messageComponentProvider");
       super();
-      val var4: AccessoriesViewPool = new AccessoriesViewPool();
-      this.messageAccessoriesRecycledViewPool = var4;
+      val var3: AccessoriesViewPool = new AccessoriesViewPool();
+      this.messageAccessoriesRecycledViewPool = var3;
       this.chatListItems = kotlin.collections.i.k();
-      val var3: AdapterDelegatesManager = this.delegatesManager;
+      val var4: AdapterDelegatesManager = this.delegatesManager;
       kotlin.jvm.internal.r.g(this.delegatesManager, "delegatesManager");
-      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var3, var1, var2, var4);
+      this.delegateViewTypes = ChatListAdapterConfiguratorKt.chatListAdapterConfigurator(var4, var1, var2, var3);
       this.setHasStableIds(true);
    }
 
@@ -39,7 +39,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {
-      return kotlin.collections.i.i0(this.chatListItems, var1) as ChatListItem;
+      return kotlin.collections.i.k0(this.chatListItems, var1) as ChatListItem;
    }
 
    public override fun getChatListItems(): List<ChatListItem> {

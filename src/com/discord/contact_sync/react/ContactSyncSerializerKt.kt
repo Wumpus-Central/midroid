@@ -1,6 +1,6 @@
 package com.discord.contact_sync.react
 
-import K1.a
+import J1.a
 import com.discord.contact_sync.ContactSyncBlobEntry
 import com.discord.contact_sync.ContactSyncPayloadEntry
 import com.discord.contact_sync.ContactSyncProvider
@@ -13,9 +13,9 @@ import java.util.ArrayList
 import java.util.Locale
 import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
-import nb.E0
-import nb.U
-import nb.f
+import vb.E0
+import vb.U
+import vb.f
 
 @JvmSynthetic
 fun a(var0: Any): Any {
@@ -23,16 +23,16 @@ fun a(var0: Any): Any {
 }
 
 private fun String.mapResultToContactSyncPermission(): Int {
-   val var3: Locale = Locale.ROOT;
-   var var2: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
-   r.g(var2, "toLowerCase(...)");
+   val var2: Locale = Locale.ROOT;
+   val var3: java.lang.String = "AUTHORIZED".toLowerCase(Locale.ROOT);
+   r.g(var3, "toLowerCase(...)");
    val var1: Byte;
-   if (r.c(var0, var2)) {
+   if (r.c(var0, var3)) {
       var1 = 1;
    } else {
-      var2 = "DENIED".toLowerCase(var3);
-      r.g(var2, "toLowerCase(...)");
-      r.c(var0, var2);
+      val var4: java.lang.String = "DENIED".toLowerCase(var2);
+      r.g(var4, "toLowerCase(...)");
+      r.c(var0, var4);
       var1 = 0;
    }
 

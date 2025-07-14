@@ -9,7 +9,6 @@ import android.os.IBinder
 import androidx.appcompat.app.AppCompatActivity
 import com.discord.logging.Log
 import com.msc.sa.aidl.ISACallback
-import com.msc.sa.aidl.a
 import com.msc.sa.aidl.ISACallback.Stub
 import kotlin.jvm.internal.r
 
@@ -30,7 +29,7 @@ public class SamsungConnectActivity : AppCompatActivity {
          // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
          public void onServiceConnected(ComponentName var1, IBinder var2) {
             SamsungConnectActivity.access$setServiceBound$p(this.this$0, true);
-            val var5: a = com.msc.sa.aidl.a.a.e(var2);
+            val var5: com.msc.sa.aidl.a = com.msc.sa.aidl.a.a.e(var2);
             val var4: Log = Log.INSTANCE;
             Log.i$default(Log.INSTANCE, "Samsung", "Samsung Account service connection established", null, 4, null);
 
@@ -56,7 +55,7 @@ public class SamsungConnectActivity : AppCompatActivity {
             }
 
             try {
-               var38 = var5.R("97t47j218f", "dummy", "com.discord", var37);
+               var38 = var5.J("97t47j218f", "dummy", "com.discord", var37);
                val var41: StringBuilder = new StringBuilder();
                var41.append("Samsung Account service connection established: ");
                var41.append(var38);
@@ -78,9 +77,9 @@ public class SamsungConnectActivity : AppCompatActivity {
                }
             } else {
                try {
-                  val var6: Bundle = new Bundle();
-                  var6.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
-                  val var3: Boolean = var5.f0(1221, var38, var6);
+                  val var42: Bundle = new Bundle();
+                  var42.putStringArray("additional", new java.lang.String[]{"api_server_url", "auth_server_url"});
+                  val var3: Boolean = var5.Y(1221, var38, var42);
                   val var39: StringBuilder = new StringBuilder();
                   var39.append("Samsung Account service connection established: isReqSucc? ");
                   var39.append(var3);
@@ -234,14 +233,14 @@ public class SamsungConnectActivity : AppCompatActivity {
    }
 
    private fun startAndBindSamsungAuthService() {
-      val var1: Log = Log.INSTANCE;
+      val var2: Log = Log.INSTANCE;
       Log.i$default(Log.INSTANCE, "Samsung", "Samsung starting SA Service", null, 4, null);
-      val var2: Intent = serviceIntent;
+      val var1: Intent = serviceIntent;
       if (this.startService(serviceIntent) == null) {
-         Log.e$default(var1, "Samsung", "Samsung Account service could not be started", null, 4, null);
+         Log.e$default(var2, "Samsung", "Samsung Account service could not be started", null, 4, null);
       } else {
-         if (!this.bindService(var2, this.serviceConnection, 1)) {
-            Log.e$default(var1, "Samsung", "Samsung Account service could not be bound", null, 4, null);
+         if (!this.bindService(var1, this.serviceConnection, 1)) {
+            Log.e$default(var2, "Samsung", "Samsung Account service could not be bound", null, 4, null);
          }
       }
    }

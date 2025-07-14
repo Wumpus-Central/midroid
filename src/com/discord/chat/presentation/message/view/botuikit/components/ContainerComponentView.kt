@@ -119,18 +119,18 @@ public class ContainerComponentView  public constructor(context: Context, attrs:
          .reduceAvailableWidth(this.binding.childrenViews.getPaddingLeft() + this.binding.childrenViews.getPaddingRight());
       val var7: java.util.List = var1.getComponents();
       val var12: ArrayList = new ArrayList(kotlin.collections.i.v(var7, 10));
-      val var15: java.util.Iterator = var7.iterator();
+      val var8: java.util.Iterator = var7.iterator();
 
-      for (int var9 = 0; var15.hasNext(); var9++) {
-         val var8: Any = var15.next();
+      for (int var9 = 0; var8.hasNext(); var9++) {
+         val var15: Any = var8.next();
          if (var9 < 0) {
             kotlin.collections.i.u();
          }
 
-         var12.add(var2.getConfiguredComponentView(var8 as Component, var6, this, var9));
+         var12.add(var2.getConfiguredComponentView(var15 as Component, var6, this, var9));
       }
 
-      val var13: java.util.List = kotlin.collections.i.c0(var12);
+      val var13: java.util.List = kotlin.collections.i.e0(var12);
       val var14: LinearLayout = this.binding.childrenViews;
       r.g(this.binding.childrenViews, "childrenViews");
       MessageComponentsViewKt.replaceViews$default(var14, var13, var2, SizeUtilsKt.getDpToPx(8), 0, 8, null);

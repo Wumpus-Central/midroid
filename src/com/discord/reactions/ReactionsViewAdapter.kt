@@ -75,28 +75,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun getItemId(position: Int): Long {
       val var2: Int = this.getAddBurstReactionIndex();
-      var var7: java.lang.String = null;
       var var6: java.lang.String = null;
+      var var7: java.lang.String = null;
       val var3: Long;
       if (var1 == var2) {
-         var6 = this.messageId;
-         if (this.messageId == null) {
-            r.y("messageId");
-            var6 = null;
-         }
-
-         var7 = this.addReactionLabel;
-         if (this.addReactionLabel == null) {
-            r.y("addReactionLabel");
-            var7 = null;
-         }
-
-         val var15: StringBuilder = new StringBuilder();
-         var15.append(var6);
-         var15.append("_add_burst_reactions_");
-         var15.append(var7);
-         var3 = IdUtilsKt.convertToId(var15.toString());
-      } else if (var1 == this.getAddReactionIndex()) {
          var6 = this.messageId;
          if (this.messageId == null) {
             r.y("messageId");
@@ -107,6 +89,24 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             r.y("addReactionLabel");
          } else {
             var7 = this.addReactionLabel;
+         }
+
+         val var17: StringBuilder = new StringBuilder();
+         var17.append(var6);
+         var17.append("_add_burst_reactions_");
+         var17.append(var7);
+         var3 = IdUtilsKt.convertToId(var17.toString());
+      } else if (var1 == this.getAddReactionIndex()) {
+         var6 = this.messageId;
+         if (this.messageId == null) {
+            r.y("messageId");
+            var6 = null;
+         }
+
+         var7 = this.addReactionLabel;
+         if (this.addReactionLabel == null) {
+            r.y("addReactionLabel");
+            var7 = null;
          }
 
          val var18: StringBuilder = new StringBuilder();
@@ -152,9 +152,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
 
    public override fun onBindViewHolder(holder: ViewHolder, position: Int) {
       r.h(var1, "holder");
-      val var7: ThemeManager = ThemeManager.INSTANCE;
-      val var8: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var7.setThemeOverride(this.theme);
+      val var8: ThemeManager = ThemeManager.INSTANCE;
+      val var7: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var8.setThemeOverride(this.theme);
       val var3: Boolean = var1 is ReactionViewHolder;
       var var5: OnClickListener = null;
       var var4: Function1 = null;
@@ -226,7 +226,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
          var27.bind(var12, var17, var5, this.reactionsTheme);
       }
 
-      var7.setThemeOverride(var8);
+      var8.setThemeOverride(var7);
    }
 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

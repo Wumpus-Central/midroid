@@ -253,12 +253,12 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var4.setVisible(true);
          var var10: MediaPlayer = this.mediaPlayer;
          if (this.mediaPlayer == null) {
-            val var11: MediaPlayerManager = MediaPlayerManager.INSTANCE;
+            val var12: MediaPlayerManager = MediaPlayerManager.INSTANCE;
             val var7: Context = this.getContext();
             kotlin.jvm.internal.r.g(var7, "getContext(...)");
-            val var12: java.lang.Double = var1.getPortal();
-            kotlin.jvm.internal.r.e(var12);
-            var10 = var11.acquire(var7, var12, this.playerSettings);
+            val var11: java.lang.Double = var1.getPortal();
+            kotlin.jvm.internal.r.e(var11);
+            var10 = var12.acquire(var7, var11, this.playerSettings);
          }
 
          var10.setEventListener(new p0(this));
@@ -313,28 +313,28 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          val var3: java.lang.Double = this.mediaSource.getPortal();
          if (var3 != null) {
             val var1: Double = var3;
-            val var6: MediaPlayer = this.mediaPlayer;
-            val var7: Pair;
+            var var4: MediaPlayer = this.mediaPlayer;
+            val var6: Pair;
             if (this.mediaPlayer != null && this.mediaPlayerView != null) {
                kotlin.jvm.internal.r.e(this.mediaPlayer);
-               val var9: MediaPlayerView = this.mediaPlayerView;
+               val var7: MediaPlayerView = this.mediaPlayerView;
                kotlin.jvm.internal.r.e(this.mediaPlayerView);
-               var7 = new Pair(var6, var9);
+               var6 = new Pair(var4, var7);
             } else {
                if (!var5.isValid()) {
                   return;
                }
 
-               val var4: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
-               var7 = var4;
-               if (var4 == null) {
+               val var9: Pair = this.prepareMediaPlayer(var5, var5.isGifv());
+               var6 = var9;
+               if (var9 == null) {
                   return;
                }
             }
 
-            val var10: MediaPlayer = var7.a() as MediaPlayer;
+            var4 = var6.a() as MediaPlayer;
             PortalFromNativeContextManager.INSTANCE
-               .addPortal(var1, (var7.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var10), new q0(this, var10, var5), new r0(var5, this));
+               .addPortal(var1, (var6.b() as MediaPlayerView).getView(), new B0(this), new C0(this, var5, var4), new q0(this, var4, var5), new r0(var5, this));
          }
       }
    }
@@ -537,7 +537,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          var1.addLifecycleEventListener(this.lifecycleListener);
       }
 
-      ab.f.d(
+      ib.f.d(
          CoroutineViewUtilsKt.attachedScope(this, true),
          null,
          null,
@@ -559,7 +559,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = y9.b.e();
+               val var3: Any = G9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -568,8 +568,8 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
-                  val var4: FlowCollector = new FlowCollector(this.this$0) {
+                  val var4: Flow = PortalFromNativeContextManager.INSTANCE.getPortalContextIdsFlow();
+                  var1 = new FlowCollector(this.this$0) {
                      final MediaView this$0;
 
                      {
@@ -604,7 +604,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
                      }
                   };
                   this.label = 1;
-                  if (var1.collect(var4, this) === var3) {
+                  if (var4.collect(var1, this) === var3) {
                      return var3;
                   }
                }
@@ -615,7 +615,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          3,
          null
       );
-      ab.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
+      ib.f.d(CoroutineViewUtilsKt.attachedScope(this, true), null, null, new Function2(this, null) {
          int label;
          final MediaView this$0;
 
@@ -633,7 +633,7 @@ public open class MediaView  public constructor(context: Context, attrs: Attribu
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var3: Any = y9.b.e();
+            val var3: Any = G9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");

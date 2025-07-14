@@ -13,7 +13,7 @@ public enum class SwipeActionType {
    fun {
       val var0: Array<SwipeActionType> = $values();
       $VALUES = var0;
-      $ENTRIES = z9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    @JvmStatic

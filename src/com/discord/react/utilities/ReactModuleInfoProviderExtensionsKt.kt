@@ -1,10 +1,10 @@
 package com.discord.react.utilities
 
+import A9.q
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
-import s9.q
 
 @JvmSynthetic
 fun a(var0: java.util.List, var1: Boolean): java.util.Map {

@@ -1,9 +1,8 @@
 package com.discord.core
 
-import I2.d
-import ab.K
-import ab.d0
-import ab.f
+import A9.q
+import G9.b
+import H2.d
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -26,13 +25,14 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
+import ib.K
+import ib.d0
+import ib.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
-import r9.s
-import s9.q
-import y9.b
+import z9.s
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
@@ -180,10 +180,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var3 != 0 && var22 != 0) {
-                     var1 = new Size(var3, var22);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var22 != 0 && var3 != 0) {
+                     var1 = new Size(var22, var3);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -246,10 +246,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                      }
 
                      try {
-                        val var17: ContentResolver = this.this$0.getContext().getContentResolver();
-                        val var26: java.lang.String = this.$uri.getLastPathSegment();
-                        r.e(var26);
-                        var1 = Thumbnails.getThumbnail(var17, java.lang.Long.parseLong(var26), 1, null);
+                        val var26: ContentResolver = this.this$0.getContext().getContentResolver();
+                        val var17: java.lang.String = this.$uri.getLastPathSegment();
+                        r.e(var17);
+                        var1 = Thumbnails.getThumbnail(var26, java.lang.Long.parseLong(var17), 1, null);
                      } catch (var11: Exception) {
                         CrashReporting.addBreadcrumb$default(
                            CrashReporting.INSTANCE,

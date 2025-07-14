@@ -1,8 +1,8 @@
 package com.discord.chat.bridge
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor: Int? = null) {
@@ -62,13 +62,13 @@ public data class BackgroundHighlight(backgroundColor: Int? = null, gutterColor:
    }
 
    public override fun toString(): String {
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.gutterColor;
+      val var1: Int = this.backgroundColor;
+      val var2: Int = this.gutterColor;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BackgroundHighlight(backgroundColor=");
-      var3.append(var2);
-      var3.append(", gutterColor=");
       var3.append(var1);
+      var3.append(", gutterColor=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

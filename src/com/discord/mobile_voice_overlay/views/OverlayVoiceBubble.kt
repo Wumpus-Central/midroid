@@ -53,13 +53,13 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public fun configureUI(user: MobileVoiceOverlayDataUser) {
       kotlin.jvm.internal.r.h(var1, "user");
-      val var3: SimpleDraweeView = this.binding.overlayBubbleIv;
-      val var2: IconUrlUtils = IconUrlUtils.INSTANCE;
-      val var4: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var4, "getContext(...)");
-      var3.setImageURI(
+      val var4: SimpleDraweeView = this.binding.overlayBubbleIv;
+      val var3: IconUrlUtils = IconUrlUtils.INSTANCE;
+      val var2: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var2, "getContext(...)");
+      var4.setImageURI(
          IconUrlUtils.getForUser-_fRzTXg$default(
-            var2, var4, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
+            var3, var2, UserId.box-impl(var1.getUserId-re6GcUE()), var1.getAvatar(), var1.getDiscriminator(), false, null, 48, null
          )
       );
       if (var1.getSpeaking()) {
@@ -87,7 +87,7 @@ public class OverlayVoiceBubble : OverlayBubbleWrap {
 
    public override fun setData(data: MobileVoiceOverlayData) {
       kotlin.jvm.internal.r.h(var1, "data");
-      val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.h0(var1.getUsers()) as MobileVoiceOverlayDataUser;
+      val var2: MobileVoiceOverlayDataUser = kotlin.collections.i.j0(var1.getUsers()) as MobileVoiceOverlayDataUser;
       if (var2 != null) {
          this.configureUI(var2);
       }

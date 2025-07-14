@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -55,8 +55,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = this.attachmentUrl.hashCode();
-      val var3: Int = this.attachmentName.hashCode();
+      val var3: Int = this.attachmentUrl.hashCode();
+      val var2: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -64,20 +64,20 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.attachmentUrl;
+      val var3: java.lang.String = this.attachmentUrl;
       val var4: java.lang.String = this.attachmentName;
-      val var3: java.util.List = this.content;
+      val var1: java.util.List = this.content;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AttachmentLinkContentNode(attachmentUrl=");
-      var2.append(var1);
+      var2.append(var3);
       var2.append(", attachmentName=");
       var2.append(var4);
       var2.append(", content=");
-      var2.append(var3);
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

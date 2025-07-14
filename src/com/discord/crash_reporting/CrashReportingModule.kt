@@ -14,7 +14,7 @@ import com.facebook.react.bridge.ReadableMap
 import io.sentry.react.RNSentryModule
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 public class CrashReportingModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    public final val reactContext: ReactApplicationContext
@@ -88,18 +88,18 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       r.h(var1, "callback");
-      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var3.fetch(var2)});
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.fetch(var3)});
    }
 
    @ReactMethod
    public fun initializeManager() {
-      val var1: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.initSystemLogCapture(var2);
+      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var1, "getReactApplicationContext(...)");
+      var2.initSystemLogCapture(var1);
    }
 
    @ReactMethod

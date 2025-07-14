@@ -16,7 +16,7 @@ import android.view.View.OnLayoutChangeListener
 import android.webkit.URLUtil
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
-import androidx.core.view.I
+import androidx.core.view.J
 import com.discord.fonts.DiscordFont
 import com.discord.fonts.DiscordFontUtilsKt
 import com.discord.misc.utilities.size.SizeUtilsKt
@@ -28,8 +28,8 @@ import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder
 import com.facebook.drawee.view.SimpleDraweeView
 import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.r
-import r9.j
-import r9.m
+import z9.j
+import z9.m
 
 public class OverlappingCirclesView  public constructor(context: Context, attrs: AttributeSet? = null) : LinearLayout {
    private final var maxItems: Int
@@ -92,7 +92,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          var3 = this.maxItems - 1;
       }
 
-      val var8: java.util.Iterator = i.K0(var1, var3).iterator();
+      val var8: java.util.Iterator = i.M0(var1, var3).iterator();
 
       for (int var12 = 0; var8.hasNext(); var12++) {
          var var7: OverlappingItem = (OverlappingItem)var8.next();
@@ -113,12 +113,12 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
             if (URLUtil.isValidUrl(var7.getImageUri())) {
                var14 = var7.getImageUri();
             } else {
-               val var10: Context = this.getContext();
-               r.g(var10, "getContext(...)");
-               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
                val var9: Context = this.getContext();
                r.g(var9, "getContext(...)");
-               var14 = ReactAssetUtilsKt.getReactImageUrl(var10, var15.getUri(var9));
+               val var15: ReactAsset = ReactAsset.DefaultAvatar0;
+               val var10: Context = this.getContext();
+               r.g(var10, "getContext(...)");
+               var14 = ReactAssetUtilsKt.getReactImageUrl(var9, var15.getUri(var10));
             }
 
             val var21: Context = this.getContext();
@@ -191,7 +191,7 @@ public class OverlappingCirclesView  public constructor(context: Context, attrs:
          this.setPadding(var2, 0, var9, 0);
          this.setBackgroundColor(var5);
          ViewClippingUtilsKt.clipToCircle(this);
-         I.a(this, new Runnable(this, this) {
+         J.a(this, new Runnable(this, this) {
             final View $this_doOnPreDraw;
             final OverlappingCirclesView.OverflowItem this$0;
 

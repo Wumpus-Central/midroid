@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class GuildNameContentNode(guildId: String? = null, content: String, icon: String? = null) : ContentNode {

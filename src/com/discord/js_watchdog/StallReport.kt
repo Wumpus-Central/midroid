@@ -2,9 +2,9 @@ package com.discord.js_watchdog
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {

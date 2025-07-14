@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.messagepart
 
-import B1.a
+import A1.a
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.presentation.message.view.UploadContext
 import com.discord.chat.presentation.message.view.UploadItemProps
@@ -37,12 +37,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public fun getUploadItemProps(onCancelUploadItem: (String, String) -> Unit): UploadItemProps? {
       r.h(var1, "onCancelUploadItem");
-      val var5: java.lang.String = this.getAttachment().getUploaderId();
-      val var4: java.lang.String = this.getAttachment().getUploaderItemId();
+      val var4: java.lang.String = this.getAttachment().getUploaderId();
+      val var5: java.lang.String = this.getAttachment().getUploaderItemId();
       val var3: Int = this.getAttachment().getProgress();
       val var2: java.lang.Float = this.getAttachmentsOpacity();
-      if (var5 != null && var4 != null && var3 != null && var2 != null) {
-         val var6: UploadContext = new UploadContext(var5, var4);
+      if (var4 != null && var5 != null && var3 != null && var2 != null) {
+         val var6: UploadContext = new UploadContext(var4, var5);
          return new UploadItemProps(var3, var6, var2, new a(var1, var6));
       } else {
          return null;
@@ -53,12 +53,12 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
          var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            var3 = var1.getUploaderId();
-            val var5: java.lang.String = var1.getUploaderItemId();
+            val var5: java.lang.String = var1.getUploaderId();
+            var3 = var1.getUploaderItemId();
             val var4: StringBuilder = new StringBuilder();
-            var4.append(var3);
-            var4.append(" ");
             var4.append(var5);
+            var4.append(" ");
+            var4.append(var3);
             var3 = var4.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);

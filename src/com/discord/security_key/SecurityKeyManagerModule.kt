@@ -43,10 +43,10 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
             SecurityKeyManagerModule.access$reject(super.receiver as SecurityKeyManagerModule, var1);
          }
       });
-      val var3: CredentialManager.a = CredentialManager.a;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      this.credentialManager = var3.a(var2);
+      val var2: CredentialManager.a = CredentialManager.a;
+      var1 = this.getReactApplicationContext();
+      r.g(var1, "getReactApplicationContext(...)");
+      this.credentialManager = var2.a(var1);
       this.activityEventListener = new BaseActivityEventListener(this) {
          final SecurityKeyManagerModule this$0;
 
@@ -99,7 +99,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         ab.f.d(
+         ib.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,
@@ -157,7 +157,7 @@ public class SecurityKeyManagerModule(reactContext: ReactApplicationContext) : R
          this.currentPromise = var2;
          val var3: Activity = this.getCurrentActivity();
          r.f(var3, "null cannot be cast to non-null type androidx.lifecycle.LifecycleOwner");
-         ab.f.d(
+         ib.f.d(
             m.a(var3 as LifecycleOwner),
             null,
             null,

@@ -49,7 +49,7 @@ import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import r9.n
+import z9.n
 
 public class SelectComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -86,8 +86,8 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentSelectViewBinding = MessageComponentSelectViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = r9.j.a(new h(this));
-      this.postProcessor$delegate = r9.j.a(new i());
+      this.progressDots$delegate = z9.j.a(new h(this));
+      this.postProcessor$delegate = z9.j.a(new i());
       this.setMaxWidth(SizeUtilsKt.getDpToPx(300));
       this.setMinHeight(SizeUtilsKt.getDpToPx(40));
       var3 = SizeUtilsKt.getDpToPx(8);
@@ -121,7 +121,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var8.J(this.getPostProcessor());
       }
 
-      val var7: com.facebook.drawee.controller.a = (I2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
+      val var7: com.facebook.drawee.controller.a = (H2.d.g().F(var8.a()) as PipelineDraweeControllerBuilder).d();
       r.g(var7, "build(...)");
       val var9: GenericDraweeHierarchyBuilder = GenericDraweeHierarchyBuilder.u(this.getContext().getResources()).w(ScalingUtils$ScaleType.e);
       r.g(var9, "setActualImageScaleType(...)");
@@ -201,7 +201,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
             var17.setVisibility(8);
             this.binding.selectComponentSelectionText.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-            val var34: SelectItem = kotlin.collections.i.h0(var33) as SelectItem;
+            val var34: SelectItem = kotlin.collections.i.j0(var33) as SelectItem;
             if (var34 != null) {
                this.binding.selectComponentSelectionText.setText(var34.getLabel());
                val var18: ComponentEmoji;
@@ -250,13 +250,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                }
             }
          } else {
-            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var22: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var22.setVisibility(8);
-            var39.setVisibility(0);
-            this.setSelectedOptions(var39, var33);
+            var39.setVisibility(8);
+            var22.setVisibility(0);
+            this.setSelectedOptions(var22, var33);
          }
       } else {
          val var37: MaterialTextView = this.binding.selectComponentSelectionText;

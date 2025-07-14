@@ -9,7 +9,7 @@ import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
-import z0.a;
+import y0.a;
 
 public final class SurveyActionViewBinding implements ViewBinding {
    public final SimpleDraweeSpanTextView chatListAdapterItemTextFeedback;
@@ -34,12 +34,12 @@ public final class SurveyActionViewBinding implements ViewBinding {
          SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.survey_background;
-            LinearLayout var4 = (LinearLayout)a.a(var0, var1);
-            if (var4 != null) {
+            LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.survey_card;
-               CardView var3 = (CardView)a.a(var0, var1);
-               if (var3 != null) {
-                  return new SurveyActionViewBinding(var0, var2, var5, var4, var3);
+               CardView var4 = (CardView)a.a(var0, var1);
+               if (var4 != null) {
+                  return new SurveyActionViewBinding(var0, var2, var5, var3, var4);
                }
             }
          }

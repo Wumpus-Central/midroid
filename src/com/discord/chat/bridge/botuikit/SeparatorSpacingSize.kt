@@ -2,10 +2,10 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
-import kb.f
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f(with = SeparatorSpacingSize.Serializer::class)
 public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
@@ -24,7 +24,7 @@ public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<SeparatorSpacingSize> = $values();
       $VALUES = var0;
-      $ENTRIES = z9.a.a(var0);
+      $ENTRIES = H9.a.a(var0);
    }
 
    init {

@@ -1,5 +1,6 @@
 package com.discord.crash_reporting
 
+import A9.q
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -26,8 +27,7 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import r9.n
-import s9.q
+import z9.n
 
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
@@ -83,16 +83,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var6: File = var2.getCacheDir();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var6);
-      var8.append("/sentry");
-      var5.setCacheDirPath(var8.toString());
+      val var8: File = var2.getCacheDir();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var8);
+      var6.append("/sentry");
+      var5.setCacheDirPath(var6.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("58d8f6a2-2689-443d-bfa4-71eb56f4c110");
+      var5.setProguardUuid("b405fd37-90ed-4592-8e5d-fe98bfc31e81");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -121,7 +121,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       r.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", r9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", z9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(H.b(var1.getClass()))) {
@@ -174,21 +174,21 @@ public object CrashReporting {
    public fun init(context: Context, releaseName: String) {
       r.h(var1, "context");
       r.h(var2, "releaseName");
-      val var3: ClientInfo = ClientInfo.INSTANCE;
+      val var4: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var4: java.lang.String = Build.DEVICE;
+         val var3: java.lang.String = Build.DEVICE;
          r.g(Build.DEVICE, "DEVICE");
-         if (h.N(var4, "vivo", false, 2, null)) {
+         if (h.N(var3, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
+      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var3.isProdBuild()) {
+      } else if (!var4.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";
@@ -209,7 +209,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = z9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

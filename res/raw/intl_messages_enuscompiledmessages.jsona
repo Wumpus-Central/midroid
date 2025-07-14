@@ -573,6 +573,7 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
+  "ZtuRtr": "This server contains adult content marked as age-restricted. Do you wish to proceed?",
   "2kHZen": [
     "You need to be 18 or older in order to view age-restricted channels on Discord. ",
     [
@@ -3188,8 +3189,18 @@
   "pWG4zc": "Shop",
   "5upuq6": "Discord Shop",
   "yzW/fX": "Admins",
+  "xFcotb": "Shop All",
+  "LuhKs7": "Hmmm, we weren't able to load the Shop. Check back later.",
+  "xNiB/P": "Featured Page",
+  "zMqLHx": "Discord Shop Featured Page",
+  "AfrvRE": "Shop the whole Shop",
+  "Yr70c3": "There's so much more",
   "JCFN//": "Send a gift",
+  "nSFuCw": "Shop Menu",
+  "P0DpSU": "Discord Shop Menu",
   "NG43//": "Online",
+  "RSyoZm": "Shop All",
+  "bG3n/v": "Discord Shop All",
   "MAS7uL": "Use Now",
   "eZrmtr": "This decoration is now part of your collection and can be used at anytime!",
   "YNaxMj": [
@@ -8380,6 +8391,7 @@
   "Ll40SE": "25MB",
   "EaBfen": "500MB",
   "pEasFR": "Filter",
+  "+B9e19": "Filter Options",
   "C6S5jY": "Find consoles",
   "8SuVoK": "Finish",
   "i0nsoa": "Disables in-app notifications & message sounds.",
@@ -8421,6 +8433,7 @@
   "GGAdHR": "You are receiving notifications from only mentions in this server, but you can override it here",
   "t0mEt7": "You can’t get notifications from this channel nor change settings until you unmute this channel.",
   "oWF6eX": "Receive notifications when your messages are reacted to.",
+  "rngMNz": "Receive a notification when your closest friends join voice channels in servers with 200 members or fewer.",
   "aTVNen": [
     "Oops! You've caught an ultra rare error. This is probably our fault, so please try again or check ",
     [
@@ -10924,12 +10937,26 @@
   "QRN+Sk": "Your \"About Me\" violates this server's guidelines. You'll have to update your per-server profile before you can start chatting.",
   "bU6o09": "This message can't be edited because it contains content blocked by this community. The message may also be viewed by the community owners.",
   "zQ69pq": "This message can't be posted because it contains content blocked by this community. The message may also be viewed by the community owners.",
+  "ml72ZW": "Your profile contains words that are not allowed.",
   "8HW7r6": "Your per-server profile contains words that are not allowed.",
   "LnGhZm": "Block Commonly Flagged Words",
   "UsD2YG": "User is no longer a member of this server.",
   "t+gj5e": "Please add at least one action to this rule.",
   "Q+68IS": "Member join or update",
   "NlQW4O": "Message Send",
+  "c8TwbG": [
+    "Your profile contains words that are not allowed in ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "guildName"
+        ]
+      ]
+    ]
+  ],
   "rbRvGR": [
     [
       1,
@@ -11382,9 +11409,11 @@
   "PAM+JS": "Tell us what happened",
   "K3UWeX": "Other",
   "ZQr92N": "Enforce Server Rules (AI)",
+  "EJJLHh": "Your Server Tag violates this server's guidelines. You'll have to update your profile before you can start chatting.",
   "Z6DZZ2": "Submit Issue",
   "SP9BBw": "Unknown",
   "WikgZ2": "Update Username",
+  "Viksoq": "Update Profile",
   "/PGQf3": "Update Per-server Profile",
   "hG1StL": "AutoMod",
   "SpDXIy": "Your \"Username\" violates this server's guidelines. You'll have to update your per-server profile before you can start chatting.",
@@ -18866,6 +18895,8 @@
   "RHhk+P": "No Logs Yet",
   "tzkaDw": "We broke something. Come back later.",
   "Ww5Tj4": "This is Awkward",
+  "eoXe0t": "Sort by: Newest",
+  "mmeWUF": "Sort by: Oldest",
   "K/i3iY": "Read the rules",
   "A65CaW": "The server owner must enable monetization before you can get started!",
   "AY/rYm": "Monetization not enabled",
@@ -20623,9 +20654,9 @@
   "/ak8Mj": "Join via PlayStation",
   "HEY5dX": "Join via Xbox",
   "84qx9v": "The listening party is over!",
-  "OAB5TE": "Join from a supported device",
-  "pwEQoq": "Play from a supported device",
-  "sTo7s7": "Listen from a supported device",
+  "OAB5TE": "Join From a Supported Device",
+  "pwEQoq": "Play From a Supported Device",
+  "sTo7s7": "Listen From a Supported Device",
   "XE8axM": [
     [
       8,
@@ -25315,7 +25346,6 @@
   "QCw1oa": "Transferring to PS5…",
   "ZBjOVV": "Double tap to play or pause.",
   "uGxMJS": "Play Full Video",
-  "cnBQPD": "Play Here",
   "JeK1Wl": "Play in DM",
   "ZUEGFh": "Please try again later.",
   "RgIi2N": "Poll",
@@ -26993,21 +27023,33 @@
     " character count limit. Speak your mind with 2x longer messages, send larger file uploads, and more with Discord Nitro!"
   ],
   "8cjmTk": "Your message is too long",
-  "MQ9MVF": [
-    "Nitro Basic: ",
-    [
-      1,
-      "accessibilityLabel"
-    ]
-  ],
-  "q8AHZm": [
-    "Nitro: ",
-    [
-      1,
-      "accessibilityLabel"
-    ]
-  ],
   "HdFLQ0": "Plan comparison table",
+  "EZjXNz": [
+    [
+      1,
+      "accessibilityLabel"
+    ],
+    ", row ",
+    [
+      1,
+      "rowNumber"
+    ],
+    ", row name ",
+    [
+      1,
+      "rowName"
+    ],
+    ", column ",
+    [
+      1,
+      "columnNumber"
+    ],
+    ", column name ",
+    [
+      1,
+      "columnName"
+    ]
+  ],
   "qVcfa2": "Free Trial",
   "+FgdjI": [
     "Free Trial (",
@@ -28696,6 +28738,218 @@
     "!"
   ],
   "hz78hI": "Try Nitro Basic for Free",
+  "cR9if3": [
+    [
+      6,
+      "days",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " day for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " days for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "8FZfNj": [
+    [
+      6,
+      "months",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " month for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " months for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "C6i5Ji": [
+    [
+      6,
+      "weeks",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " week for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " weeks for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "xzAcSU": [
+    [
+      6,
+      "years",
+      {
+        "=1": [
+          "Try ",
+          [
+            7
+          ],
+          " year for"
+        ],
+        "other": [
+          "Try ",
+          [
+            7
+          ],
+          " years for"
+        ]
+      },
+      0,
+      "cardinal"
+    ],
+    " ",
+    [
+      1,
+      "price"
+    ]
+  ],
+  "kLnKcX": [
+    [
+      6,
+      "days",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " day free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " days free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "azyIQ0": [
+    [
+      6,
+      "months",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " month free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " months free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "3GVMLi": [
+    [
+      6,
+      "weeks",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " week free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " weeks free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "sqDHKC": [
+    [
+      6,
+      "years",
+      {
+        "=1": [
+          "Start my ",
+          [
+            7
+          ],
+          " year free"
+        ],
+        "other": [
+          "Start my ",
+          [
+            7
+          ],
+          " years free"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
   "TkTvBw": "Sweet!",
   "tQh+gI": "You can't have a dancing avatar (yet)!",
   "Tso/Fh": [
@@ -39041,6 +39295,7 @@
   "hl1V+f": "View spectators",
   "39d0Wl": "View Thread",
   "K3lovL": "Voice",
+  "wtk08f": "Voice Activity Notifications",
   "EZgS+/": "Voice Call",
   "GaCMgY": "Open voice call actions",
   "8bn8Bg": [

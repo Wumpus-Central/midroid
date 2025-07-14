@@ -1,9 +1,9 @@
 package com.discord.notifications.api
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
+import sb.f
 
 @f
 public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
@@ -20,13 +20,13 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
 
    public final val sticker: Sticker?
       public final get() {
-         return i.h0(this.stickerItems) as Sticker;
+         return i.j0(this.stickerItems) as Sticker;
       }
 
 
    public final val embed: Embed?
       public final get() {
-         return i.h0(this.embeds) as Embed;
+         return i.j0(this.embeds) as Embed;
       }
 
 
@@ -120,23 +120,23 @@ public data class NotificationMessage(stickerItems: List<Sticker> = i.k(),
 
    public override fun toString(): String {
       val var3: java.util.List = this.stickerItems;
-      val var6: JsonObject = this.author;
-      val var5: java.util.List = this.mentions;
-      val var1: Poll = this.poll;
-      val var2: java.util.List = this.embeds;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NotificationMessage(stickerItems=");
-      var4.append(var3);
-      var4.append(", author=");
-      var4.append(var6);
-      var4.append(", mentions=");
-      var4.append(var5);
-      var4.append(", poll=");
-      var4.append(var1);
-      var4.append(", embeds=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var1: JsonObject = this.author;
+      val var4: java.util.List = this.mentions;
+      val var5: Poll = this.poll;
+      val var6: java.util.List = this.embeds;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("NotificationMessage(stickerItems=");
+      var2.append(var3);
+      var2.append(", author=");
+      var2.append(var1);
+      var2.append(", mentions=");
+      var2.append(var4);
+      var2.append(", poll=");
+      var2.append(var5);
+      var2.append(", embeds=");
+      var2.append(var6);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

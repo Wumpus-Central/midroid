@@ -135,24 +135,24 @@ public data class DirectReplyAction(tag: String, channelId: ChannelId, channelNa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: java.lang.String = this.tag;
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var6: java.lang.String = this.channelName;
-      val var1: Int = this.channelType;
-      val var3: java.lang.String = this.guildName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("DirectReplyAction(tag=");
-      var4.append(var2);
-      var4.append(", channelId=");
-      var4.append(var5);
-      var4.append(", channelName=");
-      var4.append(var6);
-      var4.append(", channelType=");
-      var4.append(var1);
-      var4.append(", guildName=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: Int = this.channelType;
+      val var1: java.lang.String = this.guildName;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DirectReplyAction(tag=");
+      var2.append(var5);
+      var2.append(", channelId=");
+      var2.append(var4);
+      var2.append(", channelName=");
+      var2.append(var6);
+      var2.append(", channelType=");
+      var2.append(var3);
+      var2.append(", guildName=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {

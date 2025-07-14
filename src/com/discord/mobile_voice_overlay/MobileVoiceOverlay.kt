@@ -28,7 +28,7 @@ import com.facebook.react.bridge.CatalystInstance
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeArray
 import kotlin.jvm.functions.Function1
-import r9.s
+import z9.s
 
 internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    private final val context: ReactApplicationContext
@@ -207,12 +207,12 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
    fun `voiceBubbleProvider$lambda$9`(var0: MobileVoiceOverlay, var1: OverlayViewProvider): OverlayVoiceBubble {
       kotlin.jvm.internal.r.h(var1, "it");
       val var2: Int = var0.context.getResources().getDimensionPixelOffset(R.dimen.overlay_safe_margin);
-      val var5: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
-      var5.getInsetMargins().set(-var2, var2, -var2, var2);
-      var5.setOnClickListener(new l(var5, var0));
-      var5.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var5));
-      var5.setOnMovingStateChanged(new n(var0, var5));
-      return var5;
+      val var4: OverlayVoiceBubble = new OverlayVoiceBubble(var0.context);
+      var4.getInsetMargins().set(-var2, var2, -var2, var2);
+      var4.setOnClickListener(new l(var4, var0));
+      var4.setTouchDispatchSideEffectHandler$mobile_voice_overlay_release(new m(var0, var4));
+      var4.setOnMovingStateChanged(new n(var0, var4));
+      return var4;
    }
 
    @JvmStatic
@@ -423,11 +423,11 @@ internal class MobileVoiceOverlay(context: ReactApplicationContext) {
             });
          }
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

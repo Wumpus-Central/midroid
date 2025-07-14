@@ -4,9 +4,9 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelId) : InitiateThreadData(var1, var2), ReactEvent {

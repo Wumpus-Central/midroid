@@ -1,6 +1,7 @@
 package com.discord.networking.okhttp
 
-import Fb.l
+import D9.a
+import Nb.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -8,8 +9,7 @@ import java.util.ArrayList
 import java.util.Comparator
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
-import r9.n
-import v9.a
+import z9.n
 
 internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode) : l {
    private final val mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode
@@ -64,7 +64,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
                }
             }
          } else {
-            var5 = i.I0((java.lang.Iterable)var5, new Comparator() {
+            var5 = i.K0((java.lang.Iterable)var5, new Comparator() {
                @Override
                public final int compare(T var1, T var2) {
                   return a.d(Inet6Address.class.isInstance(var1 as InetAddress), Inet6Address.class.isInstance(var2 as InetAddress));
@@ -72,7 +72,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
             });
          }
       } else {
-         var5 = i.I0((java.lang.Iterable)var5, new Comparator() {
+         var5 = i.K0((java.lang.Iterable)var5, new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
                return a.d(Inet4Address.class.isInstance(var1 as InetAddress), Inet4Address.class.isInstance(var2 as InetAddress));
@@ -99,7 +99,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = z9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       init {

@@ -8,7 +8,7 @@ import com.discord.recycler_view.utils.LayoutManagerUtilsKt
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.r
-import r9.n
+import z9.n
 
 public class Scroller(recyclerView: RecyclerView) {
    private final val recyclerView: RecyclerView

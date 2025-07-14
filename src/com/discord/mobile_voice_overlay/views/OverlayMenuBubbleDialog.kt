@@ -188,7 +188,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       val var2: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var3: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var3, "getContext(...)");
-      var2.startHeadlessTask(var3, "GenerateInvite", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      var2.startHeadlessTask(var3, "GenerateInvite", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       val var4: MobileVoiceOverlayAssets = var0.getOverlayAssets();
       if (var4 != null) {
          Toast.makeText(var0.getContext(), var4.getInviteLinkCopied(), 0).show();
@@ -214,7 +214,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       val var5: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var4: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var4, "getContext(...)");
-      var5.startHeadlessTask(var4, "SelectChannel", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      var5.startHeadlessTask(var4, "SelectChannel", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       return Unit.a;
    }
 
@@ -232,7 +232,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       val var2: MobileVoiceOverlay.Companion = MobileVoiceOverlay.Companion;
       val var3: Context = var0.getContext();
       kotlin.jvm.internal.r.g(var3, "getContext(...)");
-      var2.startHeadlessTask(var3, "Disconnect", D.d.a(r9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
+      var2.startHeadlessTask(var3, "Disconnect", D.d.a(z9.s.a("channelId", java.lang.String.valueOf(var1.getChannelId-o4g7jtM()))));
       return Unit.a;
    }
 
@@ -251,14 +251,14 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       super.onAttachedToWindow();
       this.binding.overlayMenu.setAlpha(0.0F);
       this.binding.overlayHeader.setAlpha(0.0F);
-      val var1: AnimatorSet = new AnimatorSet();
-      val var2: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
-      var2.setTarget(this.binding.overlayMenu);
+      val var2: AnimatorSet = new AnimatorSet();
+      val var1: Animator = AnimatorInflater.loadAnimator(this.binding.overlayMenu.getContext(), R.animator.overlay_slide_up_fade_in);
+      var1.setTarget(this.binding.overlayMenu);
       val var4: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.overlay_slide_down_fade_in);
       var4.setTarget(this.binding.overlayHeader);
-      var1.playTogether(new Animator[]{var2, var4});
-      var1.setStartDelay((long)this.getResources().getInteger(17694720));
-      var1.start();
+      var2.playTogether(new Animator[]{var1, var4});
+      var2.setStartDelay((long)this.getResources().getInteger(17694720));
+      var2.start();
       this.binding.overlayMembersRecycler.setAdapter(this.adapter);
    }
 
@@ -279,7 +279,7 @@ public class OverlayMenuBubbleDialog : OverlayDialog {
       if (var3.size() < 2) {
          var3 = kotlin.collections.i.k();
       } else {
-         var3 = kotlin.collections.i.G0(var3, kotlin.ranges.d.s(1, var3.size()));
+         var3 = kotlin.collections.i.I0(var3, kotlin.ranges.d.s(1, var3.size()));
       }
 
       this.adapter.setData(var3);

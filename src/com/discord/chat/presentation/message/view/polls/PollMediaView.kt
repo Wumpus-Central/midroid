@@ -56,15 +56,15 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
       r.h(var1, "context");
       super(var1, var2);
       this.childViews = new ArrayList<>();
-      this.hierarchyBuilder = P2.a.d(var1, var2);
+      this.hierarchyBuilder = O2.a.d(var1, var2);
       this.emojiSize = DEFAULT_EMOJI_SIZE;
       val var3: IntArray = R.styleable.PollMediaView;
       r.g(R.styleable.PollMediaView, "PollMediaView");
       val var4: TypedArray = var1.obtainStyledAttributes(var2, var3, 0, 0);
       this.emojiSize = var4.getDimensionPixelSize(R.styleable.PollMediaView_emojiSize, this.emojiSize);
       var4.recycle();
-      this.draweeView$delegate = r9.j.a(new k(var1, this));
-      this.textView$delegate = r9.j.a(new l(var1, this));
+      this.draweeView$delegate = z9.j.a(new k(var1, this));
+      this.textView$delegate = z9.j.a(new l(var1, this));
    }
 
    @JvmStatic
@@ -154,19 +154,19 @@ public class PollMediaView  public constructor(context: Context, attrs: Attribut
                var4 = 1;
             }
          } else if (var1.getAnswer().getPollMedia().getEmoji() != null) {
-            val var16: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
-            val var9: RenderableEmoji = var16.renderable();
-            val var10: Context = this.getContext();
-            r.g(var10, "getContext(...)");
+            val var10: PollMediaEmoji = var1.getAnswer().getPollMedia().getEmoji();
+            val var9: RenderableEmoji = var10.renderable();
+            val var16: Context = this.getContext();
+            r.g(var16, "getContext(...)");
             var4 = this.emojiSize;
             val var7: Boolean;
-            if (var1.getShouldAnimateEmoji() && var16.getAnimated()) {
+            if (var1.getShouldAnimateEmoji() && var10.getAnimated()) {
                var7 = true;
             } else {
                var7 = false;
             }
 
-            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var10, var4, var7, 0, null, 48, null));
+            this.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var16, var4, var7, 0, null, 48, null));
             this.setImportantForAccessibility(2);
             this.setOnClickListener(new o(var2));
             var4 = 1;

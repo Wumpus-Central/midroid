@@ -123,9 +123,9 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var15: Context = this.getContext();
          r.g(var15, "getContext(...)");
          val var11: java.lang.String = var12.getId-3Eiw7ao();
-         val var10: Boolean = MessageKt.shouldAnimateEmoji(var12);
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var12);
          val var8: Boolean = MessageKt.shouldShowLinkDecorations(var12);
-         val var9: Boolean = var12.getShouldShowRoleDot();
+         val var10: Boolean = var12.getShouldShowRoleDot();
          val var7: Boolean = var12.getShouldShowRoleOnName();
          val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          r.g(var16, "getFontMetrics(...)");
@@ -136,9 +136,9 @@ public class MessageBundleConversationView  public constructor(context: Context,
             var14,
             var15,
             var11,
-            var10,
-            var8,
             var9,
+            var8,
+            var10,
             var7,
             var37,
             null,
@@ -168,12 +168,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
          SpannableExtensionsKt.coverWithSpan(var28, new BackgroundSpanDrawer(var34));
          var21 = ReplyUtilsKt.createReplyContent(var20, var28);
       } else if (MessageFlagKt.hasMessageFlag(var12.getFlags(), MessageFlag.IS_COMPONENTS_V2)) {
-         val var22: TextView = this.binding.replyAuthorName;
+         val var29: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var29: Context = this.getContext();
-         r.g(var29, "getContext(...)");
+         val var22: Context = this.getContext();
+         r.g(var22, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var22, I18nUtilsKt.i18nFormat$default(var29, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
+            var29, I18nUtilsKt.i18nFormat$default(var22, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
          );
       } else {
          val var30: TextView = this.binding.replyAuthorName;

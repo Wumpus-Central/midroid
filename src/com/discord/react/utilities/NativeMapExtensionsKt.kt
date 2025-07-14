@@ -7,13 +7,13 @@ import com.facebook.react.bridge.ReadableType
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.HashMap
 import java.util.Map.Entry
-import kb.j
 import kotlin.jvm.internal.r
 import kotlin.jvm.internal.v
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
 import org.json.JSONObject
-import r9.n
+import sb.j
+import z9.n
 
 public final val json: Json = kotlinx.serialization.json.b.b(null, new a(), 1, null)
 
@@ -241,7 +241,7 @@ public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    r.h(var0, "<this>");
    val var1: Json = getJson();
    val var3: java.lang.String = toJsonString(var0);
-   val var2: qb.b = var1.a();
+   val var2: yb.b = var1.a();
    r.m(6, "T");
    v.a("kotlinx.serialization.serializer.withModule");
    return (T)var1.b(j.d(var2, null), var3);
@@ -251,8 +251,8 @@ public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    r.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;

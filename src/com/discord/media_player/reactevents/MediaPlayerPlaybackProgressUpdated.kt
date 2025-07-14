@@ -4,12 +4,12 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kb.f
-import kb.j
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import r9.s
-import rb.a
+import sb.f
+import sb.j
+import z9.s
+import zb.a
 
 @f
 public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlaybackSource?, time: Long, duration: Long) : ReactEvent {
@@ -78,18 +78,18 @@ public data class MediaPlayerPlaybackProgressUpdated(source: MediaPlayerPlayback
    }
 
    public override fun toString(): String {
-      val var5: MediaPlayerPlaybackSource = this.source;
+      val var6: MediaPlayerPlaybackSource = this.source;
       val var1: Long = this.time;
       val var3: Long = this.duration;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MediaPlayerPlaybackProgressUpdated(source=");
-      var6.append(var5);
-      var6.append(", time=");
-      var6.append(var1);
-      var6.append(", duration=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MediaPlayerPlaybackProgressUpdated(source=");
+      var5.append(var6);
+      var5.append(", time=");
+      var5.append(var1);
+      var5.append(", duration=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -1,5 +1,6 @@
 package com.discord.clip
 
+import A9.n
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.ReadableArray
@@ -11,7 +12,6 @@ import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.ClipViewManagerDelegate
 import com.facebook.react.viewmanagers.ClipViewManagerInterface
 import kotlin.jvm.internal.r
-import s9.n
 
 @ReactModule(name = "ClipView")
 public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterface<ClipView> {
@@ -58,22 +58,22 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
             val var4: java.util.Iterator = var3.iterator();
 
             while (var4.hasNext()) {
-               val var5: ReadableMap = var2.getMap((var4 as n).a());
-               r.e(var5);
-               val var6: java.lang.String = var5.getString("shape");
-               if (r.c(var6, "circle")) {
+               val var6: ReadableMap = var2.getMap((var4 as n).a());
+               r.e(var6);
+               val var5: java.lang.String = var6.getString("shape");
+               if (r.c(var5, "circle")) {
                   var1.addCircleCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("size"))
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("size"))
                   );
-               } else if (r.c(var6, "rounded-rect")) {
+               } else if (r.c(var5, "rounded-rect")) {
                   var1.addRoundedRectCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("width")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("height")),
-                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("cornerRadius"))
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("width")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("height")),
+                     (float)SizeUtilsKt.getDpToPx((float)var6.getDouble("cornerRadius"))
                   );
                }
             }

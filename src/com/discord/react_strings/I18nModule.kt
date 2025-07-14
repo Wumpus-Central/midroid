@@ -1,6 +1,6 @@
 package com.discord.react_strings
 
-import b2.a
+import a2.a
 import com.discord.codegen.NativeI18nModuleSpec
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.facebook.react.bridge.Callback
@@ -32,8 +32,8 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
    public override fun valuesResult(values: ReadableArray) {
       r.h(var1, "values");
       val var4: I18nCache = I18nCache.INSTANCE;
-      val var3: ReactApplicationContext = this.reactContext;
-      val var5: HashMap = new HashMap();
+      val var5: ReactApplicationContext = this.reactContext;
+      val var3: HashMap = new HashMap();
       val var6: java.util.Iterator = I18nMessage.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
@@ -45,9 +45,9 @@ public class I18nModule(reactContext: ReactApplicationContext) : NativeI18nModul
          var7 = (var7 as I18nMessage).name();
          val var8: java.lang.String = var1.getString(var2);
          r.e(var8);
-         var5.put(var7, var8);
+         var3.put(var7, var8);
       }
 
-      var4.set(var3, var5);
+      var4.set(var5, var3);
    }
 }

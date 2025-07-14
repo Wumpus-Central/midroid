@@ -44,7 +44,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = Result.b(Os.sysconf(OsConstants._SC_PAGE_SIZE));
       } catch (var3: java.lang.Throwable) {
-         var0 = Result.k;
+         var18 = Result.k;
          var0 = Result.b(c.a(var3));
          break label36;
       }
@@ -60,7 +60,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var0 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var18 = Result.k;
+         var0 = Result.k;
          var0 = Result.b(c.a(var2));
          break label30;
       }
@@ -103,9 +103,9 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       //
       // Bytecode:
       // 00: aconst_null
-      // 01: astore 8
+      // 01: astore 7
       // 03: aconst_null
-      // 04: astore 7
+      // 04: astore 8
       // 06: aload 0
       // 07: getfield com/discord/resource_usage/DeviceResourceUsageManager.threadSync Ljava/lang/Object;
       // 0a: astore 9
@@ -116,15 +116,15 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 13: astore 10
       // 15: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
       // 18: invokevirtual java/lang/Thread.getId ()J
-      // 1b: lstore 3
-      // 1c: aload 10
-      // 1e: ifnonnull 24
-      // 21: goto 32
-      // 24: aload 10
-      // 26: invokevirtual java/lang/Long.longValue ()J
-      // 29: lstore 5
-      // 2b: lload 5
-      // 2d: lload 3
+      // 1b: lstore 5
+      // 1d: aload 10
+      // 1f: ifnonnull 25
+      // 22: goto 32
+      // 25: aload 10
+      // 27: invokevirtual java/lang/Long.longValue ()J
+      // 2a: lstore 3
+      // 2b: lload 3
+      // 2c: lload 5
       // 2e: lcmp
       // 2f: ifeq 36
       // 32: aload 9
@@ -142,14 +142,14 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 4b: astore 9
       // 4d: invokestatic java/lang/System.currentTimeMillis ()J
       // 50: lstore 3
-      // 51: aload 8
+      // 51: aload 7
       // 53: ifnull a5
-      // 56: aload 7
+      // 56: aload 8
       // 58: ifnull a5
       // 5b: aload 9
       // 5d: ifnull a5
       // 60: lload 3
-      // 61: aload 7
+      // 61: aload 8
       // 63: invokevirtual java/lang/Long.longValue ()J
       // 66: lsub
       // 67: l2d
@@ -159,7 +159,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 6d: aload 0
       // 6e: aload 9
       // 70: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
-      // 73: aload 8
+      // 73: aload 7
       // 75: invokevirtual com/discord/resource_usage/utils/ProcfsStats.getTotalTime ()J
       // 78: lsub
       // 79: bipush 100
@@ -190,12 +190,12 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // a2: putfield com/discord/resource_usage/DeviceResourceUsageManager.memoryRssKB I
       // a5: lload 3
       // a6: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // a9: astore 7
+      // a9: astore 8
       // ab: aload 0
       // ac: getfield com/discord/resource_usage/DeviceResourceUsageManager.timeSpanMillis J
       // af: invokestatic java/lang/Thread.sleep (J)V
       // b2: aload 9
-      // b4: astore 8
+      // b4: astore 7
       // b6: goto 06
       // b9: astore 7
       // bb: aload 9
@@ -233,11 +233,11 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 07: aload 0
       // 08: getfield com/discord/resource_usage/DeviceResourceUsageManager.thread Ljava/lang/Thread;
       // 0b: astore 2
-      // 0c: new d2/a
+      // 0c: new c2/a
       // 0f: astore 3
       // 10: aload 3
       // 11: aload 0
-      // 12: invokespecial d2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
+      // 12: invokespecial c2/a.<init> (Lcom/discord/resource_usage/DeviceResourceUsageManager;)V
       // 15: bipush 1
       // 16: bipush 1
       // 17: aconst_null
@@ -246,7 +246,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 1b: aload 3
       // 1c: bipush 4
       // 1d: aconst_null
-      // 1e: invokestatic w9/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
+      // 1e: invokestatic E9/a.b (ZZLjava/lang/ClassLoader;Ljava/lang/String;ILkotlin/jvm/functions/Function0;ILjava/lang/Object;)Ljava/lang/Thread;
       // 21: astore 3
       // 22: aload 0
       // 23: aload 3

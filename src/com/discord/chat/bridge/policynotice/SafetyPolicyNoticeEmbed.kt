@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.policynotice
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -110,27 +110,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.classificationId;
-      val var1: java.lang.String = this.titleText;
-      val var5: java.lang.String = this.titleIcon;
-      val var3: java.lang.String = this.subtitleText;
-      val var7: java.lang.String = this.descriptionText;
-      val var6: java.lang.String = this.ctaText;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var4.append(var2);
-      var4.append(", titleText=");
-      var4.append(var1);
-      var4.append(", titleIcon=");
-      var4.append(var5);
-      var4.append(", subtitleText=");
-      var4.append(var3);
-      var4.append(", descriptionText=");
-      var4.append(var7);
-      var4.append(", ctaText=");
-      var4.append(var6);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.classificationId;
+      val var3: java.lang.String = this.titleText;
+      val var7: java.lang.String = this.titleIcon;
+      val var1: java.lang.String = this.subtitleText;
+      val var6: java.lang.String = this.descriptionText;
+      val var2: java.lang.String = this.ctaText;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var5.append(var4);
+      var5.append(", titleText=");
+      var5.append(var3);
+      var5.append(", titleIcon=");
+      var5.append(var7);
+      var5.append(", subtitleText=");
+      var5.append(var1);
+      var5.append(", descriptionText=");
+      var5.append(var6);
+      var5.append(", ctaText=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -1,7 +1,6 @@
 package com.discord.thumbhash
 
-import ab.K
-import ab.f
+import G9.b
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.graphics.drawable.Drawable
@@ -10,13 +9,14 @@ import com.discord.image.fresco.listeners.ControllerListener
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
+import ib.K
+import ib.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import y9.b
 
 public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView, background: Drawable, placeholder: String?, placeholderVersion: Int?)
    : ControllerListener {
@@ -82,8 +82,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                   } else {
                      c.b(var1);
                      var3x = this.L$0 as CoroutineScope;
-                     val var5: CoroutineDispatcher = K.a();
-                     var1 = new Function2(this.this$0, null) {
+                     var1 = K.a();
+                     val var5: Function2 = new Function2(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -114,7 +114,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      };
                      this.L$0 = var3x;
                      this.label = 1;
-                     var1 = (Function2)f.g(var5, var1, this);
+                     var1 = (CoroutineDispatcher)f.g(var1, var5, this);
                      if (var1 === var4) {
                         return var4;
                      }
