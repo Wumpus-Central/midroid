@@ -296,10 +296,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var var3: MediaEngine.Companion = MediaEngine.Companion;
-               var1 = this.$bitmap;
+               var1 = MediaEngine.Companion;
+               var var3: Bitmap = this.$bitmap;
                this.label = 1;
-               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
+               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -925,29 +925,29 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       val var4: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var4.getInitialized()) {
-         val var7: JSONObject = new JSONObject();
+         val var8: JSONObject = new JSONObject();
          var var6: Array<java.lang.String> = new java.lang.String[0];
          var var5: Array<java.lang.String> = new java.lang.String[0];
-         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(new MediaCodecList(0).getCodecInfos());
+         val var7: java.util.Iterator = kotlin.jvm.internal.b.a(new MediaCodecList(0).getCodecInfos());
 
-         while (var8.hasNext()) {
-            val var10: MediaCodecInfo = var8.next() as MediaCodecInfo;
+         while (var7.hasNext()) {
+            val var10: MediaCodecInfo = var7.next() as MediaCodecInfo;
             val var9: java.lang.String = var10.getName();
             kotlin.jvm.internal.r.g(var9, "getName(...)");
             val var12: Array<java.lang.String> = var10.getSupportedTypes();
             kotlin.jvm.internal.r.g(var12, "getSupportedTypes(...)");
-            val var11: ArrayList = new ArrayList();
+            val var13: ArrayList = new ArrayList();
             val var3: Int = var12.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var13: java.lang.String = var12[var2];
+               val var11: java.lang.String = var12[var2];
                kotlin.jvm.internal.r.e(var12[var2]);
-               if (kotlin.text.h.I(var13, "video", false, 2, null)) {
-                  var11.add(var13);
+               if (kotlin.text.h.I(var11, "video", false, 2, null)) {
+                  var13.add(var11);
                }
             }
 
-            for (java.lang.String var18 : var11) {
+            for (java.lang.String var18 : var13) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var10)) {
@@ -970,9 +970,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
          }
 
-         var7.put("available_video_encoders", new JSONArray(var6));
-         var7.put("available_video_decoders", new JSONArray(var5));
-         val var16: java.lang.String = var7.toString();
+         var8.put("available_video_encoders", new JSONArray(var6));
+         var8.put("available_video_decoders", new JSONArray(var5));
+         val var16: java.lang.String = var8.toString();
          kotlin.jvm.internal.r.g(var16, "toString(...)");
          var1.invoke(var16);
       } else {
@@ -1780,15 +1780,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var2: ScreenCapturer = this.screenCapturer;
+         val var3: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScreenCapturerForConnection(screenCapturer=");
-         var3.append(var2);
-         var3.append(", connectionId=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ScreenCapturerForConnection(screenCapturer=");
+         var2.append(var3);
+         var2.append(", connectionId=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

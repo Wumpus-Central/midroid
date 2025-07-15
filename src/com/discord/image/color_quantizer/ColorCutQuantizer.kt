@@ -28,12 +28,12 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
    private fun generateAverageColors(vboxes: Collection<com.discord.image.color_quantizer.ColorCutQuantizer.Vbox>): MutableList<Swatch> {
       val var2: ArrayList = new ArrayList(var1.size());
-      val var3: java.util.Iterator = var1.iterator();
+      val var4: java.util.Iterator = var1.iterator();
 
-      while (var3.hasNext()) {
-         val var4: Swatch = (var3.next() as ColorCutQuantizer.Vbox).getAverageColor();
-         if (!ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, var4)) {
-            var2.add(var4);
+      while (var4.hasNext()) {
+         val var3: Swatch = (var4.next() as ColorCutQuantizer.Vbox).getAverageColor();
+         if (!ColorCutQuantizer.Companion.access$shouldIgnoreColor(Companion, var3)) {
+            var2.add(var3);
          }
       }
 
@@ -154,10 +154,10 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public fun fromBitmap(bitmap: Bitmap, maxColors: Int): ColorCutQuantizer {
          r.h(var1, "bitmap");
-         val var4: Int = var1.getWidth();
-         val var3: Int = var1.getHeight();
-         val var5: IntArray = new int[var4 * var3];
-         var1.getPixels(var5, 0, var4, 0, 0, var4, var3);
+         val var3: Int = var1.getWidth();
+         val var4: Int = var1.getHeight();
+         val var5: IntArray = new int[var3 * var4];
+         var1.getPixels(var5, 0, var3, 0, 0, var3, var4);
          return new ColorCutQuantizer(new ColorHistogram(var5), var2, null);
       }
    }
@@ -260,20 +260,20 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
          ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
          Arrays.sort(ColorCutQuantizer.access$getMColors$p(this.this$0), this.lowerIndex, this.upperIndex + 1);
          ColorCutQuantizer.access$modifySignificantOctet(this.this$0, var2, this.lowerIndex, this.upperIndex);
-         val var3: Int = this.midPoint(var2);
+         val var4: Int = this.midPoint(var2);
          var var1: Int = this.lowerIndex;
 
-         for (int var4 = this.upperIndex; var1 < var4; var1++) {
+         for (int var3 = this.upperIndex; var1 < var3; var1++) {
             val var5: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var1];
             if (var2 != -3) {
                if (var2 != -2) {
-                  if (var2 == -1 && Color.blue(var5) > var3) {
+                  if (var2 == -1 && Color.blue(var5) > var4) {
                      return var1;
                   }
-               } else if (Color.green(var5) >= var3) {
+               } else if (Color.green(var5) >= var4) {
                   return var1;
                }
-            } else if (Color.red(var5) >= var3) {
+            } else if (Color.red(var5) >= var4) {
                return var1;
             }
          }

@@ -2,6 +2,7 @@ package com.discord.fastest_list.android
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.view.MotionEvent
 import android.view.View
 import android.view.View.OnLayoutChangeListener
 import androidx.appcompat.view.ContextThemeWrapper
@@ -20,6 +21,7 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.recycler_view.scroll.RecyclerViewScrollLimiter
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
+import com.facebook.react.uimanager.events.NativeGestureUtil
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function5
@@ -182,6 +184,16 @@ internal class FastestListView(context: Context,
       this.removeItemDecoration(this.insetDecorator);
       this.removeOnScrollListener(this.onScrollListener);
       this.removeOnLayoutChangeListener(this.onLayoutChangeListener);
+   }
+
+   public override fun onInterceptTouchEvent(e: MotionEvent): Boolean {
+      r.h(var1, "e");
+      val var2: Boolean = super.onInterceptTouchEvent(var1);
+      if (var2) {
+         NativeGestureUtil.notifyNativeGestureStarted(this, var1);
+      }
+
+      return var2;
    }
 
    public override fun scrollTo(x: Int, y: Int) {

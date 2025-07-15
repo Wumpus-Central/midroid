@@ -11,6 +11,8 @@ public final class R {
       public static int activity_user_left;
       public static int call_calling;
       public static int call_ringing;
+      public static int camera_off;
+      public static int camera_on;
       public static int deafen;
       public static int disconnect;
       public static int halloween_call_ringing;

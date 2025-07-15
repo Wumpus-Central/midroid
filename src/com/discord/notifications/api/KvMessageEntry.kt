@@ -93,21 +93,21 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
 
    public override fun toString(): String {
       val var3: java.util.List = this.members;
-      val var5: java.util.List = this.users;
-      val var1: JsonObject = this.message;
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: java.util.List = this.users;
+      val var2: JsonObject = this.message;
+      val var6: java.lang.String = MessageId.toString-impl(this.id);
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var4: StringBuilder = new StringBuilder();
       var4.append("KvMessageEntry(members=");
       var4.append(var3);
       var4.append(", users=");
-      var4.append(var5);
-      var4.append(", message=");
       var4.append(var1);
-      var4.append(", id=");
+      var4.append(", message=");
       var4.append(var2);
-      var4.append(", channelId=");
+      var4.append(", id=");
       var4.append(var6);
+      var4.append(", channelId=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

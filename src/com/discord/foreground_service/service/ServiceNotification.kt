@@ -46,12 +46,12 @@ internal object ServiceNotification {
 
       val var7: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
          var7.a(
             0,
-            var5.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }

@@ -53,13 +53,13 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
+      val var3: java.lang.String = this.tag;
+      val var2: java.util.Map = this.data;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ShortcutData(tag=");
-      var1.append(var2);
-      var1.append(", data=");
       var1.append(var3);
+      var1.append(", data=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }
@@ -79,10 +79,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            val var9: java.lang.String = var12.getKey() as java.lang.String;
+            var4 = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var9);
+               var8.add(var4);
                var8.add(var13);
             }
          }
@@ -110,11 +110,11 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = k.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var4: java.lang.String = var5.get(0) as java.lang.String;
+                        val var9: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        r.e(var4);
+                        r.e(var9);
                         r.e(var12);
-                        var11.put(var4, var12);
+                        var11.put(var9, var12);
                      }
                   }
                }
