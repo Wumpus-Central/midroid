@@ -16,7 +16,7 @@ import java.util.LinkedHashMap
 import java.util.WeakHashMap
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestureHandlerRootView {
    private final val supplementalMotionEventReceivedCallbacks: MutableMap<(MotionEvent) -> Unit, Boolean>
@@ -29,22 +29,22 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       this.supplementalMotionEventReceivedCallbacks = new LinkedHashMap<>();
    }
 
    public open fun dispatchTouchEvent(ev: MotionEvent): Boolean {
-      q.h(var1, "ev");
-      val var4: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
+      r.h(var1, "ev");
+      val var3: java.util.Iterator = this.supplementalMotionEventReceivedCallbacks.entrySet().iterator();
 
-      while (var4.hasNext()) {
-         val var5: Entry = var4.next() as Entry;
-         val var3: Function1 = var5.getKey() as Function1;
+      while (var3.hasNext()) {
+         val var5: Entry = var3.next() as Entry;
+         val var4: Function1 = var5.getKey() as Function1;
          if (var5.getValue() as java.lang.Boolean) {
-            var3.invoke(var1);
+            var4.invoke(var1);
          } else {
-            var4.remove();
+            var3.remove();
          }
       }
 
@@ -62,9 +62,9 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
       super.onAttachedToWindow();
       val var1: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);
-      if (q.c(Companion.getNullable$react_gesture_handler_release(this), this)) {
+      if (r.c(Companion.getNullable$react_gesture_handler_release(this), this)) {
          val var2: Context = this.getContext();
-         q.g(var2, "getContext(...)");
+         r.g(var2, "getContext(...)");
          var1.updateWindowBackground(var2, false);
       }
    }
@@ -97,8 +97,8 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
       @JvmStatic
       fun `initNestedScrollOnTouchListeners$lambda$0`(var0: View, var1: Function1): Unit {
-         q.h(var0, "view");
-         q.h(var1, "callback");
+         r.h(var0, "view");
+         r.h(var1, "callback");
          val var2: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.getNullable$react_gesture_handler_release(var0);
          if (var2 != null) {
             val var3: java.util.Map = DiscordGestureHandlerEnabledRootView.access$getSupplementalMotionEventReceivedCallbacks$p(var2);
@@ -112,8 +112,8 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
 
       @JvmStatic
       fun `initNestedScrollOnTouchListeners$lambda$1`(var0: View, var1: Function1): Unit {
-         q.h(var0, "view");
-         q.h(var1, "callback");
+         r.h(var0, "view");
+         r.h(var1, "callback");
          val var2: DiscordGestureHandlerEnabledRootView = DiscordGestureHandlerEnabledRootView.Companion.getNullable$react_gesture_handler_release(var0);
          if (var2 != null) {
             val var3: java.util.Map = DiscordGestureHandlerEnabledRootView.access$getSupplementalMotionEventReceivedCallbacks$p(var2);
@@ -126,7 +126,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
       }
 
       internal fun getNullable(view: View): DiscordGestureHandlerEnabledRootView? {
-         q.h(var1, "view");
+         r.h(var1, "view");
          val var3: Context = var1.getContext();
          val var9: ReactContext;
          if (var3 is ReactContext) {
@@ -171,7 +171,7 @@ internal class DiscordGestureHandlerEnabledRootView(context: Context) : RNGestur
          }
 
          DiscordGestureHandlerEnabledRootView.access$getGestureHandlersToRootView$cp().remove(var7);
-         q.e(var4);
+         r.e(var4);
          val var8: DiscordGestureHandlerEnabledRootView = this.find(var4);
          var var13: DiscordGestureHandlerEnabledRootView = var8;
          if (var8 != null) {

@@ -23,7 +23,7 @@ private fun ChatListAction.label(): String {
       var1 = "ScrollTo";
    } else {
       if (var0 !is ChatListAction.StickToBottomIfAtBottom) {
-         throw new s9.n();
+         throw new r9.n();
       }
 
       var1 = "StickToBottomIfAtBottom";
@@ -42,13 +42,13 @@ private fun ListOperation.label(): String {
       var3.append(")");
       var4 = var3.toString();
    } else if (var0 is ListOperation.InsertRange) {
-      val var13: Int = (var0 as ListOperation.InsertRange).getFirst();
-      val var2: Int = (var0 as ListOperation.InsertRange).getLast();
+      val var2: Int = (var0 as ListOperation.InsertRange).getFirst();
+      val var13: Int = (var0 as ListOperation.InsertRange).getLast();
       val var6: StringBuilder = new StringBuilder();
       var6.append("IRNG(");
-      var6.append(var13);
-      var6.append("-");
       var6.append(var2);
+      var6.append("-");
+      var6.append(var13);
       var6.append(")");
       var4 = var6.toString();
    } else if (var0 is ListOperation.Remove) {
@@ -59,13 +59,13 @@ private fun ListOperation.label(): String {
       var7.append(")");
       var4 = var7.toString();
    } else if (var0 is ListOperation.RemoveRange) {
-      val var15: Int = (var0 as ListOperation.RemoveRange).getFirst();
-      val var18: Int = (var0 as ListOperation.RemoveRange).getLast();
+      val var18: Int = (var0 as ListOperation.RemoveRange).getFirst();
+      val var15: Int = (var0 as ListOperation.RemoveRange).getLast();
       val var9: StringBuilder = new StringBuilder();
       var9.append("RRNG(");
-      var9.append(var15);
-      var9.append("-");
       var9.append(var18);
+      var9.append("-");
+      var9.append(var15);
       var9.append(")");
       var4 = var9.toString();
    } else if (var0 is ListOperation.Change) {
@@ -77,16 +77,16 @@ private fun ListOperation.label(): String {
       var4 = var10.toString();
    } else {
       if (var0 !is ListOperation.ChangeRange) {
-         throw new s9.n();
+         throw new r9.n();
       }
 
-      val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();
-      val var19: Int = (var0 as ListOperation.ChangeRange).getLast();
+      val var19: Int = (var0 as ListOperation.ChangeRange).getFirst();
+      val var17: Int = (var0 as ListOperation.ChangeRange).getLast();
       val var12: StringBuilder = new StringBuilder();
       var12.append("CRNG(");
-      var12.append(var17);
-      var12.append("-");
       var12.append(var19);
+      var12.append("-");
+      var12.append(var17);
       var12.append(")");
       var4 = var12.toString();
    }

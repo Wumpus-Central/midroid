@@ -20,7 +20,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
    private final val onLongClick: OnLongClickListener?
 
    init {
-      kotlin.jvm.internal.q.h(var1, "message");
+      kotlin.jvm.internal.r.h(var1, "message");
       super();
       this.message = var1;
       this.onClick = var2;
@@ -36,14 +36,14 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
 
    @JvmStatic
    fun `getReferencedMessageLabel$lambda$0`(var0: java.lang.String, var1: RenderContext): Unit {
-      kotlin.jvm.internal.q.h(var1, "$this$i18nFormat");
+      kotlin.jvm.internal.r.h(var1, "$this$i18nFormat");
       var1.getArgs().put("username", var0);
       return Unit.a;
    }
 
    public override fun onInitializeAccessibilityNodeInfo(host: View, info: AccessibilityNodeInfoCompat) {
-      kotlin.jvm.internal.q.h(var1, "host");
-      kotlin.jvm.internal.q.h(var2, "info");
+      kotlin.jvm.internal.r.h(var1, "host");
+      kotlin.jvm.internal.r.h(var2, "info");
       super.onInitializeAccessibilityNodeInfo(var1, var2);
       val var3: ArrayList = new ArrayList();
       if (this.message.getUsername() != null) {
@@ -55,7 +55,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
       }
 
       val var4: Context = var1.getContext();
-      kotlin.jvm.internal.q.g(var4, "getContext(...)");
+      kotlin.jvm.internal.r.g(var4, "getContext(...)");
       val var5: java.lang.CharSequence = this.getReferencedMessageLabel(var4, this.message.getReferencedMessage());
       if (var5 != null) {
          var3.add(var5);
@@ -67,7 +67,7 @@ internal class MessageViewAccessibilityDelegate(message: Message, onClick: OnCli
    }
 
    public override fun performAccessibilityAction(host: View, action: Int, args: Bundle?): Boolean {
-      kotlin.jvm.internal.q.h(var1, "host");
+      kotlin.jvm.internal.r.h(var1, "host");
       if (var2 != 16) {
          if (var2 == 32 && this.onLongClick != null) {
             this.onLongClick.onLongClick(var1);

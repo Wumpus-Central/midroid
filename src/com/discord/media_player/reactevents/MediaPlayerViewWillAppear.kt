@@ -4,10 +4,10 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import r9.s
 
 @f
 public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -15,8 +15,8 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    public final val mediaItemIds: List<String>
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "mediaItemIds");
+      r.h(var1, "channelId");
+      r.h(var2, "mediaItemIds");
       super();
       this.channelId = var1;
       this.mediaItemIds = var2;
@@ -31,8 +31,8 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
    }
 
    public fun copy(channelId: String = var0.channelId, mediaItemIds: List<String> = var0.mediaItemIds): MediaPlayerViewWillAppear {
-      q.h(var1, "channelId");
-      q.h(var2, "mediaItemIds");
+      r.h(var1, "channelId");
+      r.h(var2, "mediaItemIds");
       return new MediaPlayerViewWillAppear(var1, var2);
    }
 
@@ -43,10 +43,10 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.mediaItemIds, var1.mediaItemIds);
+            return r.c(this.mediaItemIds, var1.mediaItemIds);
          }
       }
    }

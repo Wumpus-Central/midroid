@@ -7,7 +7,7 @@ public class AudioPlayerModule(reactContext: ReactApplicationContext) : NativeAu
    private final val reactContext: ReactApplicationContext
 
    init {
-      kotlin.jvm.internal.q.h(var1, "reactContext");
+      kotlin.jvm.internal.r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }

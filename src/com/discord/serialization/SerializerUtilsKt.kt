@@ -1,12 +1,12 @@
 package com.discord.serialization
 
-import O9.b
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import N9.b
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
-import pb.g
+import ob.g
 
 @JvmSynthetic
 fun `access$parseProperty`(var0: KProperty1, var1: JsonElement): Boolean {
@@ -16,24 +16,24 @@ fun `access$parseProperty`(var0: KProperty1, var1: JsonElement): Boolean {
 private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement): Boolean {
    try {
       val var4: KClass = b.b(var0.getReturnType());
-      if (q.c(var4, G.b(java.lang.String.class))) {
+      if (r.c(var4, H.b(java.lang.String.class))) {
          g.p(var1).a();
-      } else if (q.c(var4, G.b(int.class))) {
+      } else if (r.c(var4, H.b(int.class))) {
          g.l(g.p(var1));
-      } else if (q.c(var4, G.b(double.class))) {
+      } else if (r.c(var4, H.b(double.class))) {
          g.i(g.p(var1));
-      } else if (q.c(var4, G.b(boolean.class))) {
+      } else if (r.c(var4, H.b(boolean.class))) {
          g.f(g.p(var1));
-      } else if (q.c(var4, G.b(long.class))) {
+      } else if (r.c(var4, H.b(long.class))) {
          g.r(g.p(var1));
       } else {
-         if (!q.c(var4, G.b(float.class))) {
+         if (!r.c(var4, H.b(float.class))) {
             return true;
          }
 
          g.k(g.p(var1));
       }
-   } catch (IllegalArgumentException | var3: lb.g) {
+   } catch (IllegalArgumentException | var3: kb.g) {
       return false;
    }
 

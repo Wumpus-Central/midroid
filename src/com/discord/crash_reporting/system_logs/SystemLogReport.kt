@@ -8,16 +8,17 @@ import com.discord.crash_reporting.system_logs.SystemLogUtils.Tombstone
 import com.discord.logging.Log
 import io.sentry.SentryEvent
 import io.sentry.protocol.SentryStackFrame
+import io.sentry.protocol.q
 import io.sentry.protocol.v
 import kotlin.jvm.functions.Function3
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal object SystemLogReport {
    private final val TAG: String = SystemLogReport.class.getSimpleName()
 
    private fun checkHashChanged(context: Context, hash: String): Boolean {
       val var3: SystemLogReport.LastStoredTombstoneCache = SystemLogReport.LastStoredTombstoneCache.INSTANCE;
-      if (q.c(SystemLogReport.LastStoredTombstoneCache.INSTANCE.get(var1), var2)) {
+      if (r.c(SystemLogReport.LastStoredTombstoneCache.INSTANCE.get(var1), var2)) {
          return false;
       } else {
          var3.set(var1, var2);
@@ -26,27 +27,27 @@ internal object SystemLogReport {
    }
 
    private fun recordBreadcrumb(msg: String, category: String) {
-      val var4: Log = Log.INSTANCE;
-      val var3: java.lang.String = TAG;
-      q.g(TAG, "TAG");
+      val var3: Log = Log.INSTANCE;
+      val var4: java.lang.String = TAG;
+      r.g(TAG, "TAG");
       val var5: StringBuilder = new StringBuilder();
       var5.append("Breadcrumb, [");
       var5.append(var2);
       var5.append("]: ");
       var5.append(var1);
-      Log.i$default(var4, var3, var5.toString(), null, 4, null);
+      Log.i$default(var3, var4, var5.toString(), null, 4, null);
    }
 
    @JvmStatic
    fun `recordSentryCrash$lambda$3`(var0: SentryStackFrame): java.lang.CharSequence {
-      val var2: java.lang.String = var0.u();
-      val var3: java.lang.String = var0.s();
+      val var3: java.lang.String = var0.u();
+      val var2: java.lang.String = var0.s();
       val var1: java.lang.String = var0.r();
       val var5: Int = var0.t();
       val var4: StringBuilder = new StringBuilder();
-      var4.append(var2);
-      var4.append(".");
       var4.append(var3);
+      var4.append(".");
+      var4.append(var2);
       var4.append("(");
       var4.append(var1);
       var4.append(":");
@@ -70,24 +71,24 @@ internal object SystemLogReport {
          var3 = false;
       }
 
-      val var6: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-      val var8: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
+      val var8: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+      val var6: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
       val var9: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
       if (!var3) {
          var2 = null;
       }
 
-      var1.invoke(var9, var2, var8);
-      var6.clear(var0);
+      var1.invoke(var9, var2, var6);
+      var8.clear(var0);
       return Unit.a;
    }
 
    public fun recordSentryCrash(context: Context, event: SentryEvent) {
       var var14: java.lang.String;
       label35: {
-         q.h(var1, "context");
-         q.h(var2, "event");
-         val var3: io.sentry.protocol.q = var2.w0();
+         r.h(var1, "context");
+         r.h(var2, "event");
+         val var3: q = var2.w0();
          if (var3 != null) {
             val var11: v = var3.i();
             if (var11 != null) {
@@ -105,7 +106,7 @@ internal object SystemLogReport {
          var14 = null;
       }
 
-      val var4: io.sentry.protocol.q = var2.w0();
+      val var4: q = var2.w0();
       val var15: java.lang.String;
       if (var4 != null) {
          var15 = var4.h();
@@ -113,7 +114,7 @@ internal object SystemLogReport {
          var15 = null;
       }
 
-      val var5: io.sentry.protocol.q = var2.w0();
+      val var5: q = var2.w0();
       val var17: java.lang.String;
       if (var5 != null) {
          var17 = var5.k();
@@ -121,7 +122,7 @@ internal object SystemLogReport {
          var17 = null;
       }
 
-      val var8: io.sentry.protocol.q = var2.w0();
+      val var8: q = var2.w0();
       val var9: java.lang.String;
       if (var8 != null) {
          var9 = var8.l();
@@ -145,8 +146,8 @@ internal object SystemLogReport {
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?, com.discord.crash_reporting.system_logs.SystemLogReport.SentryCrashData?) -> Unit) {
-      q.h(var1, "context");
-      q.h(var2, "cb");
+      r.h(var1, "context");
+      r.h(var2, "cb");
       SystemLogUtils.INSTANCE.fetchLastTombstone(new e(var1, var2));
    }
 
@@ -156,26 +157,26 @@ internal object SystemLogReport {
       private final val cache: SharedPreferences
          private final get() {
             val var2: SharedPreferences = var1.getSharedPreferences("LastSentryCrashCache", 0);
-            q.g(var2, "getSharedPreferences(...)");
+            r.g(var2, "getSharedPreferences(...)");
             return var2;
          }
 
 
       public fun clear(context: Context) {
-         q.h(var1, "context");
+         r.h(var1, "context");
          val var2: Editor = this.getCache(var1).edit();
          var2.clear();
          var2.apply();
       }
 
       public fun get(context: Context): com.discord.crash_reporting.system_logs.SystemLogReport.SentryCrashData {
-         q.h(var1, "context");
+         r.h(var1, "context");
          return new SystemLogReport.SentryCrashData(this.getCache(var1).getString("message", null), this.getCache(var1).getString("callStack", null));
       }
 
       public fun set(context: Context, data: com.discord.crash_reporting.system_logs.SystemLogReport.SentryCrashData) {
-         q.h(var1, "context");
-         q.h(var2, "data");
+         r.h(var1, "context");
+         r.h(var2, "data");
          val var3: Editor = this.getCache(var1).edit();
          var3.putString("message", var2.getMessage());
          var3.putString("callStack", var2.getCallStackTrace());
@@ -189,19 +190,19 @@ internal object SystemLogReport {
       private final val cache: SharedPreferences
          private final get() {
             val var2: SharedPreferences = var1.getSharedPreferences("LastStoredTombstoneCache", 0);
-            q.g(var2, "getSharedPreferences(...)");
+            r.g(var2, "getSharedPreferences(...)");
             return var2;
          }
 
 
       public fun get(context: Context): String? {
-         q.h(var1, "context");
+         r.h(var1, "context");
          return this.getCache(var1).getString("LastStoredTombstoneCache", null);
       }
 
       public fun set(context: Context, hash: String) {
-         q.h(var1, "context");
-         q.h(var2, "hash");
+         r.h(var1, "context");
+         r.h(var2, "hash");
          val var3: Editor = this.getCache(var1).edit();
          var3.putString("LastStoredTombstoneCache", var2);
          var3.apply();
@@ -236,10 +237,10 @@ internal object SystemLogReport {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.message, var1.message)) {
+            if (!r.c(this.message, var1.message)) {
                return false;
             } else {
-               return q.c(this.callStackTrace, var1.callStackTrace);
+               return r.c(this.callStackTrace, var1.callStackTrace);
             }
          }
       }
@@ -261,15 +262,15 @@ internal object SystemLogReport {
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.message;
-         val var3: java.lang.String = this.callStackTrace;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("SentryCrashData(message=");
-         var1.append(var2);
-         var1.append(", callStackTrace=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var1: java.lang.String = this.message;
+         val var2: java.lang.String = this.callStackTrace;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("SentryCrashData(message=");
+         var3.append(var1);
+         var3.append(", callStackTrace=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

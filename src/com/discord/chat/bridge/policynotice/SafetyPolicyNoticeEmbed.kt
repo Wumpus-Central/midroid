@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.policynotice
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class SafetyPolicyNoticeEmbed(classificationId: String,
@@ -20,12 +20,12 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    public final val ctaText: String
 
    init {
-      q.h(var1, "classificationId");
-      q.h(var2, "titleText");
-      q.h(var3, "titleIcon");
-      q.h(var4, "subtitleText");
-      q.h(var5, "descriptionText");
-      q.h(var6, "ctaText");
+      r.h(var1, "classificationId");
+      r.h(var2, "titleText");
+      r.h(var3, "titleIcon");
+      r.h(var4, "subtitleText");
+      r.h(var5, "descriptionText");
+      r.h(var6, "ctaText");
       super();
       this.classificationId = var1;
       this.titleText = var2;
@@ -67,12 +67,12 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
       descriptionText: String = var0.descriptionText,
       ctaText: String = var0.ctaText
    ): SafetyPolicyNoticeEmbed {
-      q.h(var1, "classificationId");
-      q.h(var2, "titleText");
-      q.h(var3, "titleIcon");
-      q.h(var4, "subtitleText");
-      q.h(var5, "descriptionText");
-      q.h(var6, "ctaText");
+      r.h(var1, "classificationId");
+      r.h(var2, "titleText");
+      r.h(var3, "titleIcon");
+      r.h(var4, "subtitleText");
+      r.h(var5, "descriptionText");
+      r.h(var6, "ctaText");
       return new SafetyPolicyNoticeEmbed(var1, var2, var3, var4, var5, var6);
    }
 
@@ -83,18 +83,18 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.classificationId, var1.classificationId)) {
+         if (!r.c(this.classificationId, var1.classificationId)) {
             return false;
-         } else if (!q.c(this.titleText, var1.titleText)) {
+         } else if (!r.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!q.c(this.titleIcon, var1.titleIcon)) {
+         } else if (!r.c(this.titleIcon, var1.titleIcon)) {
             return false;
-         } else if (!q.c(this.subtitleText, var1.subtitleText)) {
+         } else if (!r.c(this.subtitleText, var1.subtitleText)) {
             return false;
-         } else if (!q.c(this.descriptionText, var1.descriptionText)) {
+         } else if (!r.c(this.descriptionText, var1.descriptionText)) {
             return false;
          } else {
-            return q.c(this.ctaText, var1.ctaText);
+            return r.c(this.ctaText, var1.ctaText);
          }
       }
    }
@@ -110,27 +110,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.classificationId;
-      val var3: java.lang.String = this.titleText;
-      val var6: java.lang.String = this.titleIcon;
-      val var4: java.lang.String = this.subtitleText;
-      val var5: java.lang.String = this.descriptionText;
-      val var7: java.lang.String = this.ctaText;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var2.append(var1);
-      var2.append(", titleText=");
-      var2.append(var3);
-      var2.append(", titleIcon=");
-      var2.append(var6);
-      var2.append(", subtitleText=");
-      var2.append(var4);
-      var2.append(", descriptionText=");
-      var2.append(var5);
-      var2.append(", ctaText=");
-      var2.append(var7);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.classificationId;
+      val var1: java.lang.String = this.titleText;
+      val var5: java.lang.String = this.titleIcon;
+      val var3: java.lang.String = this.subtitleText;
+      val var7: java.lang.String = this.descriptionText;
+      val var6: java.lang.String = this.ctaText;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var4.append(var2);
+      var4.append(", titleText=");
+      var4.append(var1);
+      var4.append(", titleIcon=");
+      var4.append(var5);
+      var4.append(", subtitleText=");
+      var4.append(var3);
+      var4.append(", descriptionText=");
+      var4.append(var7);
+      var4.append(", ctaText=");
+      var4.append(var6);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -5,11 +5,11 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import java.io.File
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
 
       try {
@@ -25,7 +25,7 @@ public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactCont
 
       try {
          val var5: java.lang.String = var4.getAbsolutePath();
-         q.g(var5, "getAbsolutePath(...)");
+         r.g(var5, "getAbsolutePath(...)");
          this.jniInitLibDiscore(var5);
       } catch (var2: Exception) {
          var2.printStackTrace();
@@ -41,11 +41,11 @@ public class LibDiscoreModule(reactContext: ReactApplicationContext) : ReactCont
    @ReactMethod(isBlockingSynchronousMethod = true)
    public fun bridgeJSIFunctions(): Boolean {
       try {
-         val var3: ReactApplicationContext = this.getReactApplicationContext();
-         q.e(var3);
-         val var2: JavaScriptContextHolder = var3.getJavaScriptContextHolder();
-         q.e(var2);
-         this.jniBridgeJSIFunctions(var3, var2.get());
+         val var2: ReactApplicationContext = this.getReactApplicationContext();
+         r.e(var2);
+         val var3: JavaScriptContextHolder = var2.getJavaScriptContextHolder();
+         r.e(var3);
+         this.jniBridgeJSIFunctions(var2, var3.get());
       } catch (var4: Exception) {
          return false;
       }

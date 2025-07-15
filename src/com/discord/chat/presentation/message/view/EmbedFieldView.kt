@@ -24,28 +24,28 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
    public final val binding: EmbedFieldViewBinding
 
    fun EmbedFieldView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun EmbedFieldView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       val var4: EmbedFieldViewBinding = EmbedFieldViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var4, "inflate(...)");
+      kotlin.jvm.internal.r.g(var4, "inflate(...)");
       this.binding = var4;
       this.setOrientation(1);
       val var6: SimpleDraweeSpanTextView = var4.name;
       var4.name.setTextColor(ColorUtilsKt.getThemeColor(var1, R.color.primary_500, R.color.primary_100));
-      kotlin.jvm.internal.q.e(var6);
+      kotlin.jvm.internal.r.e(var6);
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimarySemibold);
       val var5: SimpleDraweeSpanTextView = var4.value;
-      kotlin.jvm.internal.q.e(var4.value);
+      kotlin.jvm.internal.r.e(var4.value);
       SetTextSizeSpKt.setTextSizeSp(var5, 14.0F);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
@@ -64,10 +64,10 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setName(rawName: String, name: DraweeSpanStringBuilder?, onTapCopyText: (CharSequence) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "rawName");
-      kotlin.jvm.internal.q.h(var3, "onTapCopyText");
+      kotlin.jvm.internal.r.h(var1, "rawName");
+      kotlin.jvm.internal.r.h(var3, "onTapCopyText");
       val var4: SimpleDraweeSpanTextView = this.binding.name;
-      kotlin.jvm.internal.q.e(this.binding.name);
+      kotlin.jvm.internal.r.e(this.binding.name);
       SimpleDraweeSpanTextViewUtilsKt.setOptionalText(var4, var2);
       val var5: q;
       if (var2 != null) {
@@ -80,10 +80,10 @@ public class EmbedFieldView  public constructor(context: Context, attrs: Attribu
    }
 
    public fun setValue(rawValue: String, value: DraweeSpanStringBuilder?, onTapCopyText: (CharSequence) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "rawValue");
-      kotlin.jvm.internal.q.h(var3, "onTapCopyText");
+      kotlin.jvm.internal.r.h(var1, "rawValue");
+      kotlin.jvm.internal.r.h(var3, "onTapCopyText");
       val var5: SimpleDraweeSpanTextView = this.binding.value;
-      kotlin.jvm.internal.q.e(this.binding.value);
+      kotlin.jvm.internal.r.e(this.binding.value);
       val var4: DraweeSpanStringBuilder;
       if (var2 != null) {
          SpannableExtensionsKt.coverWithSpan(var2, new BackgroundSpanDrawer(var5));

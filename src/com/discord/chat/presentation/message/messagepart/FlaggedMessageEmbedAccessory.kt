@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.Message
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Message, messageContext: MessageContext) : FlaggedMessageEmbedAccessory(
       var1, var2, var3
@@ -13,9 +13,9 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    public final val messageContext: MessageContext
 
    fun FlaggedMessageEmbedAccessory(var1: java.lang.String, var2: Message, var3: MessageContext) {
-      q.h(var1, "messageId");
-      q.h(var2, "message");
-      q.h(var3, "messageContext");
+      r.h(var1, "messageId");
+      r.h(var2, "message");
+      r.h(var3, "messageContext");
       super(var1, "flagged-message-embed", false, 4, null);
       this.messageId = var1;
       this.message = var2;
@@ -35,9 +35,9 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    }
 
    public fun copy(messageId: MessageId = ..., message: Message = ..., messageContext: MessageContext = ...): FlaggedMessageEmbedAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "message");
-      q.h(var3, "messageContext");
+      r.h(var1, "messageId");
+      r.h(var2, "message");
+      r.h(var3, "messageContext");
       return new FlaggedMessageEmbedAccessory(var1, var2, var3, null);
    }
 
@@ -50,10 +50,10 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.message, var1.message)) {
+         } else if (!r.c(this.message, var1.message)) {
             return false;
          } else {
-            return q.c(this.messageContext, var1.messageContext);
+            return r.c(this.messageContext, var1.messageContext);
          }
       }
    }
@@ -63,17 +63,17 @@ public data class FlaggedMessageEmbedAccessory(messageId: MessageId, message: Me
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var4: Message = this.message;
-      val var2: MessageContext = this.messageContext;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("FlaggedMessageEmbedAccessory(messageId=");
-      var1.append(var3);
-      var1.append(", message=");
-      var1.append(var4);
-      var1.append(", messageContext=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Message = this.message;
+      val var1: MessageContext = this.messageContext;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("FlaggedMessageEmbedAccessory(messageId=");
+      var3.append(var4);
+      var3.append(", message=");
+      var3.append(var2);
+      var3.append(", messageContext=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

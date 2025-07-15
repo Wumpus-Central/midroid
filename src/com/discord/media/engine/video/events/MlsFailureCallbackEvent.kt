@@ -2,9 +2,9 @@ package com.discord.media.engine.video.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
@@ -13,8 +13,8 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    public final val reason: String
 
    init {
-      q.h(var2, "source");
-      q.h(var3, "reason");
+      r.h(var2, "source");
+      r.h(var3, "reason");
       super();
       this.connectionId = var1;
       this.source = var2;
@@ -34,8 +34,8 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
    }
 
    public fun copy(connectionId: Int = var0.connectionId, source: String = var0.source, reason: String = var0.reason): MlsFailureCallbackEvent {
-      q.h(var2, "source");
-      q.h(var3, "reason");
+      r.h(var2, "source");
+      r.h(var3, "reason");
       return new MlsFailureCallbackEvent(var1, var2, var3);
    }
 
@@ -48,10 +48,10 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
          var1 = var1;
          if (this.connectionId != var1.connectionId) {
             return false;
-         } else if (!q.c(this.source, var1.source)) {
+         } else if (!r.c(this.source, var1.source)) {
             return false;
          } else {
-            return q.c(this.reason, var1.reason);
+            return r.c(this.reason, var1.reason);
          }
       }
    }
@@ -66,15 +66,15 @@ internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, r
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var4: java.lang.String = this.source;
-      val var2: java.lang.String = this.reason;
+      val var2: java.lang.String = this.source;
+      val var4: java.lang.String = this.reason;
       val var3: StringBuilder = new StringBuilder();
       var3.append("MlsFailureCallbackEvent(connectionId=");
       var3.append(var1);
       var3.append(", source=");
-      var3.append(var4);
-      var3.append(", reason=");
       var3.append(var2);
+      var3.append(", reason=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

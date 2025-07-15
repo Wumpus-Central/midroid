@@ -3,7 +3,7 @@ package com.discord.fastest_list.android.scroll
 import android.view.View
 import com.discord.fastest_list.android.FastestListLayoutManager
 import com.discord.fastest_list.android.FastestListSections
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, sections: FastestListSections) {
    private final val layoutManager: FastestListLayoutManager
@@ -11,8 +11,8 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
    private final var data: com.discord.fastest_list.android.scroll.FastestListScrollOffset.Data
 
    init {
-      q.h(var1, "layoutManager");
-      q.h(var2, "sections");
+      r.h(var1, "layoutManager");
+      r.h(var2, "sections");
       super();
       this.layoutManager = var1;
       this.sections = var2;
@@ -182,25 +182,25 @@ internal class FastestListScrollOffset(layoutManager: FastestListLayoutManager, 
       }
 
       public override fun toString(): String {
-         val var1: Int = this.x;
-         val var3: Int = this.y;
-         val var5: Int = this.width;
-         val var2: Int = this.height;
-         val var4: Int = this.contentWidth;
-         val var6: Int = this.contentHeight;
+         val var3: Int = this.x;
+         val var1: Int = this.y;
+         val var4: Int = this.width;
+         val var6: Int = this.height;
+         val var2: Int = this.contentWidth;
+         val var5: Int = this.contentHeight;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Data(x=");
-         var7.append(var1);
-         var7.append(", y=");
          var7.append(var3);
+         var7.append(", y=");
+         var7.append(var1);
          var7.append(", width=");
-         var7.append(var5);
-         var7.append(", height=");
-         var7.append(var2);
-         var7.append(", contentWidth=");
          var7.append(var4);
-         var7.append(", contentHeight=");
+         var7.append(", height=");
          var7.append(var6);
+         var7.append(", contentWidth=");
+         var7.append(var2);
+         var7.append(", contentHeight=");
+         var7.append(var5);
          var7.append(")");
          return var7.toString();
       }

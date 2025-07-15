@@ -5,7 +5,7 @@ import android.util.AttributeSet
 import android.view.View
 import android.widget.FrameLayout
 import androidx.core.view.e0
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class APNGImageView : FrameLayout {
    protected final lateinit var apngView: APNGView
@@ -15,23 +15,23 @@ public abstract class APNGImageView : FrameLayout {
       internal set
 
    open fun APNGImageView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    open fun APNGImageView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    open fun APNGImageView(var1: Context, var2: AttributeSet, var3: Int) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
    }
 
    @JvmStatic
    fun `inflateApngView$lambda$0`(var0: APNGImageView, var1: java.lang.String): Unit {
-      q.h(var1, "url");
+      r.h(var1, "url");
       if (var0.eventHandler != null) {
          var0.eventHandler.onImageLoaded(var1);
       }
@@ -42,7 +42,7 @@ public abstract class APNGImageView : FrameLayout {
    public fun inflateApngView(showLoading: Boolean = true) {
       if (this.apngView == null) {
          val var2: Context = this.getContext();
-         q.g(var2, "getContext(...)");
+         r.g(var2, "getContext(...)");
          this.setApngView(new APNGView(var2));
          this.getApngView().recycle(false, var1);
          this.getApngView().setId(View.generateViewId());
@@ -56,7 +56,7 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    public open fun recycleChild(child: View) {
-      q.h(var1, "child");
+      r.h(var1, "child");
       val var2: APNGView;
       if (var1 is APNGView) {
          var2 = var1 as APNGView;
@@ -70,7 +70,7 @@ public abstract class APNGImageView : FrameLayout {
    }
 
    public open fun recycleChild(child: View, showLoading: Boolean = true) {
-      q.h(var1, "child");
+      r.h(var1, "child");
       val var3: APNGView;
       if (var1 is APNGView) {
          var3 = var1 as APNGView;
@@ -85,7 +85,7 @@ public abstract class APNGImageView : FrameLayout {
 
    protected open fun resetViews(visibleView: View? = null, showLoading: Boolean = true) {
       for (View var6 : e0.a(this)) {
-         val var4: Boolean = q.c(var6, var1);
+         val var4: Boolean = r.c(var6, var1);
          if (!var4) {
             this.recycleChild(var6, var2);
          }

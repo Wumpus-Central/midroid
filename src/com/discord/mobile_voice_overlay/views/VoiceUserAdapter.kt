@@ -14,20 +14,20 @@ private class VoiceUserAdapter : RecyclerView.Adapter {
    }
 
    public open fun onBindViewHolder(holder: VoiceUserViewHolder, position: Int) {
-      kotlin.jvm.internal.q.h(var1, "holder");
+      kotlin.jvm.internal.r.h(var1, "holder");
       var1.bind(this.data.get(var2));
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VoiceUserViewHolder {
-      kotlin.jvm.internal.q.h(var1, "parent");
+      kotlin.jvm.internal.r.h(var1, "parent");
       val var3: Context = var1.getContext();
-      kotlin.jvm.internal.q.g(var3, "getContext(...)");
+      kotlin.jvm.internal.r.g(var3, "getContext(...)");
       return new VoiceUserViewHolder(new OverlayVoiceBubble(var3));
    }
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setData(data: List<MobileVoiceOverlayDataUser>) {
-      kotlin.jvm.internal.q.h(var1, "data");
+      kotlin.jvm.internal.r.h(var1, "data");
       this.data = var1;
       this.notifyDataSetChanged();
    }

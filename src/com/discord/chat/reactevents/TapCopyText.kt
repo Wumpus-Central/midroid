@@ -3,17 +3,17 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import r9.s
 
 @f
 internal data class TapCopyText(text: CharSequence) : ReactEvent {
    public final val text: CharSequence
 
    init {
-      q.h(var1, "text");
+      r.h(var1, "text");
       super();
       this.text = var1;
    }
@@ -23,7 +23,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
    }
 
    public fun copy(text: CharSequence = var0.text): TapCopyText {
-      q.h(var1, "text");
+      r.h(var1, "text");
       return new TapCopyText(var1);
    }
 
@@ -33,7 +33,7 @@ internal data class TapCopyText(text: CharSequence) : ReactEvent {
       } else if (var1 !is TapCopyText) {
          return false;
       } else {
-         return q.c(this.text, (var1 as TapCopyText).text);
+         return r.c(this.text, (var1 as TapCopyText).text);
       }
    }
 

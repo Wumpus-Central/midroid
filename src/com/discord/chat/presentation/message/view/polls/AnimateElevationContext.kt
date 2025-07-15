@@ -1,7 +1,7 @@
 package com.discord.chat.presentation.message.view.polls
 
 import android.animation.ObjectAnimator
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private data class AnimateElevationContext(tagValue: Any, elevation: Float, animator: ObjectAnimator? = null) {
    public final val tagValue: Any
@@ -13,7 +13,7 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
       internal set
 
    init {
-      q.h(var1, "tagValue");
+      r.h(var1, "tagValue");
       super();
       this.tagValue = var1;
       this.elevation = var2;
@@ -33,7 +33,7 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public fun copy(tagValue: Any = var0.tagValue, elevation: Float = var0.elevation, animator: ObjectAnimator? = var0.animator): AnimateElevationContext {
-      q.h(var1, "tagValue");
+      r.h(var1, "tagValue");
       return new AnimateElevationContext(var1, var2, var3);
    }
 
@@ -44,12 +44,12 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.tagValue, var1.tagValue)) {
+         if (!r.c(this.tagValue, var1.tagValue)) {
             return false;
          } else if (java.lang.Float.compare(this.elevation, var1.elevation) != 0) {
             return false;
          } else {
-            return q.c(this.animator, var1.animator);
+            return r.c(this.animator, var1.animator);
          }
       }
    }
@@ -68,17 +68,17 @@ private data class AnimateElevationContext(tagValue: Any, elevation: Float, anim
    }
 
    public override fun toString(): String {
-      val var3: Any = this.tagValue;
+      val var2: Any = this.tagValue;
       val var1: Float = this.elevation;
-      val var2: ObjectAnimator = this.animator;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AnimateElevationContext(tagValue=");
-      var4.append(var3);
-      var4.append(", elevation=");
-      var4.append(var1);
-      var4.append(", animator=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var4: ObjectAnimator = this.animator;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AnimateElevationContext(tagValue=");
+      var3.append(var2);
+      var3.append(", elevation=");
+      var3.append(var1);
+      var3.append(", animator=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

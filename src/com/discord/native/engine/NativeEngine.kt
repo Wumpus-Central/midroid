@@ -3,7 +3,7 @@ package com.discord.native.engine
 import android.content.Context
 import co.discord.media_engine.CameraEnumeratorProvider
 import co.discord.media_engine.SharedEglBaseContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import org.webrtc.VideoFrame
 
 public class NativeEngine(context: Context, logLevel: Int) {
@@ -16,16 +16,16 @@ public class NativeEngine(context: Context, logLevel: Int) {
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super();
       this.logLevel = var2;
       val var3: Context = var1.getApplicationContext();
-      q.g(var3, "getApplicationContext(...)");
+      r.g(var3, "getApplicationContext(...)");
       CameraEnumeratorProvider.maybeInit(var3);
       var1 = var1.getApplicationContext();
-      q.g(var1, "getApplicationContext(...)");
+      r.g(var1, "getApplicationContext(...)");
       val var5: org.webrtc.EglBase.Context = SharedEglBaseContext.getEglContext();
-      q.g(var5, "getEglContext(...)");
+      r.g(var5, "getEglContext(...)");
       this.nativeInstance = this.nativeCreateInstance(var1, var5, var2);
    }
 

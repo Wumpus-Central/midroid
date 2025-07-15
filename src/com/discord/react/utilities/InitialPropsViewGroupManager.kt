@@ -7,7 +7,7 @@ import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.ViewGroupManager
 import java.util.HashMap
 import java.util.LinkedHashSet
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGroupManager<T> {
    private final var delegatedInitialProps: ReactStylesDiffMap = defaultInitialProps
@@ -18,7 +18,7 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun createViewInstance(reactTag: Int, reactContext: ThemedReactContext, initialProps: ReactStylesDiffMap?, stateWrapper: StateWrapper?): Any {
-      q.h(var2, "reactContext");
+      r.h(var2, "reactContext");
       val var5: ReactStylesDiffMap;
       if (var3 == null) {
          var5 = this.delegatedInitialProps;
@@ -31,7 +31,7 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun createViewInstance(reactContext: ThemedReactContext): Any {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       return this.createViewInstance(var1, this.delegatedInitialProps);
    }
 
@@ -39,8 +39,8 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    protected fun Any.isInitialProp(propName: String): Boolean {
-      q.h(var1, "<this>");
-      q.h(var2, "propName");
+      r.h(var1, "<this>");
+      r.h(var2, "propName");
       val var5: java.util.Map = this.consumedInitialProps;
       val var6: Int = var1.getId();
       val var4: Any = var5.get(var6);
@@ -63,7 +63,7 @@ public abstract class InitialPropsViewGroupManager<T extends ViewGroup> : ViewGr
    }
 
    public open fun onDropViewInstance(view: Any) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super.onDropViewInstance(var1);
       this.consumedInitialProps.remove(var1.getId());
    }

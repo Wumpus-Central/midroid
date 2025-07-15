@@ -1,8 +1,8 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Boolean? = null, strict: Boolean? = null) {
@@ -43,12 +43,12 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.guild, var1.guild)) {
+         if (!r.c(this.guild, var1.guild)) {
             return false;
-         } else if (!q.c(this.friends, var1.friends)) {
+         } else if (!r.c(this.friends, var1.friends)) {
             return false;
          } else {
-            return q.c(this.strict, var1.strict);
+            return r.c(this.strict, var1.strict);
          }
       }
    }
@@ -77,18 +77,18 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guild;
-      val var2: java.lang.Boolean = this.friends;
-      val var4: java.lang.Boolean = this.strict;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("UserSearchQuerySetFilters(guild=");
-      var1.append(var3);
-      var1.append(", friends=");
-      var1.append(var2);
-      var1.append(", strict=");
-      var1.append(var4);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.guild;
+      val var1: java.lang.Boolean = this.friends;
+      val var3: java.lang.Boolean = this.strict;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("UserSearchQuerySetFilters(guild=");
+      var2.append(var4);
+      var2.append(", friends=");
+      var2.append(var1);
+      var2.append(", strict=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

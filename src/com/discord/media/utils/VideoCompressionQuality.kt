@@ -1,7 +1,7 @@
 package com.discord.media.utils
 
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public enum class VideoCompressionQuality(value: String, targetResolution: Int, targetBitrate: Int) {
    High("high", 720, 2500000),
@@ -25,7 +25,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
    fun {
       val var0: Array<VideoCompressionQuality> = $values();
       $VALUES = var0;
-      $ENTRIES = A9.a.a(var0);
+      $ENTRIES = z9.a.a(var0);
    }
 
    init {
@@ -46,7 +46,7 @@ public enum class VideoCompressionQuality(value: String, targetResolution: Int, 
          while (true) {
             if (var3.hasNext()) {
                val var2: Any = var3.next();
-               if (!q.c((var2 as VideoCompressionQuality).getValue(), var1)) {
+               if (!r.c((var2 as VideoCompressionQuality).getValue(), var1)) {
                   continue;
                }
 

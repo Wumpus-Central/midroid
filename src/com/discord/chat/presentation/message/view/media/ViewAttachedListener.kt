@@ -6,9 +6,9 @@ import D1.c
 import android.view.View
 import android.view.ViewTreeObserver
 import android.view.View.OnAttachStateChangeListener
-import kotlin.jvm.internal.q
-import s9.j
-import x6.f
+import kotlin.jvm.internal.r
+import r9.j
+import w6.f
 
 public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, viewScrolling: (Boolean) -> Unit = new c()) : OnAttachStateChangeListener {
    private final val view: View
@@ -24,9 +24,9 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
 
 
    init {
-      q.h(var1, "view");
-      q.h(var2, "viewAttached");
-      q.h(var3, "viewScrolling");
+      r.h(var1, "view");
+      r.h(var2, "viewAttached");
+      r.h(var3, "viewScrolling");
       super();
       this.view = var1;
       this.viewAttached = var2;
@@ -52,7 +52,7 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    }
 
    public open fun onViewAttachedToWindow(view: View) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.postDelayed(this.isAttachedRunnable, this.isAttachedDelay);
       val var2: ViewTreeObserver = var1.getViewTreeObserver();
       if (var2 != null) {
@@ -61,13 +61,13 @@ public class ViewAttachedListener(view: View, viewAttached: (Boolean) -> Unit, v
    }
 
    public open fun onViewDetachedFromWindow(view: View) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       var1.removeCallbacks(this.isAttachedRunnable);
-      val var3: ViewTreeObserver = var1.getViewTreeObserver();
-      if (var3 != null) {
-         val var2: ViewScrollStateListener = this.getScrollStateListener();
-         var2.reset();
-         var3.removeOnScrollChangedListener(var2);
+      val var2: ViewTreeObserver = var1.getViewTreeObserver();
+      if (var2 != null) {
+         val var3: ViewScrollStateListener = this.getScrollStateListener();
+         var3.reset();
+         var2.removeOnScrollChangedListener(var3);
       }
 
       this.viewAttached.invoke(java.lang.Boolean.FALSE);

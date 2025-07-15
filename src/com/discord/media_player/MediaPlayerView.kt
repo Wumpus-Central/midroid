@@ -9,7 +9,7 @@ import com.discord.media_player.databinding.PlayerViewWithSurfaceViewBinding
 import com.google.android.exoplayer2.Player
 import com.google.android.exoplayer2.ui.PlayerControlView
 import com.google.android.exoplayer2.ui.PlayerView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MediaPlayerView(context: Context) {
    public final var view: View
@@ -18,7 +18,7 @@ public class MediaPlayerView(context: Context) {
    private final val playerView: PlayerView
       private final get() {
          val var1: View = this.view;
-         q.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
+         r.f(this.view, "null cannot be cast to non-null type com.google.android.exoplayer2.ui.PlayerView");
          return var1 as PlayerView;
       }
 
@@ -58,10 +58,10 @@ public class MediaPlayerView(context: Context) {
 
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super();
       val var2: PlayerView = PlayerViewWithSurfaceViewBinding.inflate(LayoutInflater.from(var1)).getRoot();
-      q.g(var2, "getRoot(...)");
+      r.g(var2, "getRoot(...)");
       this.view = var2;
       this.getPlayerView().setResizeMode(3);
       this.getPlayerView().setUseController(false);
@@ -111,7 +111,7 @@ public class MediaPlayerView(context: Context) {
 
 
       init {
-         q.h(var1, "context");
+         r.h(var1, "context");
          super();
          this.playerControlView = new PlayerControlView(var1);
       }

@@ -1,13 +1,13 @@
 package com.discord.jank_stats
 
-import Q1.a
+import P1.a
 import android.view.Window
 import androidx.metrics.performance.FrameData
 import androidx.metrics.performance.JankStats
 import androidx.metrics.performance.JankStats.OnFrameListener
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object JankStatsAggregator {
    private final val listener: OnFrameListener = new a()
@@ -17,7 +17,7 @@ public object JankStatsAggregator {
 
    @JvmStatic
    fun `listener$lambda$0`(var0: FrameData) {
-      q.h(var0, "frameData");
+      r.h(var0, "frameData");
       if (numFrames != Integer.MAX_VALUE && numJankFrames != Integer.MAX_VALUE) {
          numFrames += 1;
          if (var0.d()) {
@@ -33,7 +33,7 @@ public object JankStatsAggregator {
    public fun disableTracking() {
       val var1: JankStats = jankStats;
       if (jankStats != null) {
-         q.e(jankStats);
+         r.e(jankStats);
          var1.d(false);
          Log.i$default(Log.INSTANCE, "JankStatsAggregator", "Jank tracking disabled.", null, 4, null);
       }
@@ -42,7 +42,7 @@ public object JankStatsAggregator {
    public fun enableTracking() {
       val var1: JankStats = jankStats;
       if (jankStats != null) {
-         q.e(jankStats);
+         r.e(jankStats);
          var1.d(true);
          Log.i$default(Log.INSTANCE, "JankStatsAggregator", "Jank tracking enabled.", null, 4, null);
       }
@@ -50,7 +50,7 @@ public object JankStatsAggregator {
 
    public fun initialize(window: Window) {
       label13: {
-         q.h(var1, "window");
+         r.h(var1, "window");
          synchronized (this){} // $VF: monitorenter 
 
          try {
@@ -65,7 +65,7 @@ public object JankStatsAggregator {
    }
 
    public fun issueJankReport(reason: String = ""): JankReport {
-      q.h(var1, "reason");
+      r.h(var1, "reason");
       val var5: Int = numFrames;
       val var4: Int = numJankFrames;
       numFrames = 0;
@@ -93,13 +93,13 @@ public object JankStatsAggregator {
 
    public fun setJankHeuristicMultiplier(jankHeuristicMultiplier: Float) {
       val var2: JankStats = jankStats;
-      q.e(jankStats);
+      r.e(jankStats);
       var2.c(var1);
-      val var4: Log = Log.INSTANCE;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("Jank heuristic multiplier set to ");
-      var3.append(var1);
-      var3.append(".");
-      Log.i$default(var4, "JankStatsAggregator", var3.toString(), null, 4, null);
+      val var3: Log = Log.INSTANCE;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Jank heuristic multiplier set to ");
+      var4.append(var1);
+      var4.append(".");
+      Log.i$default(var3, "JankStatsAggregator", var4.toString(), null, 4, null);
    }
 }

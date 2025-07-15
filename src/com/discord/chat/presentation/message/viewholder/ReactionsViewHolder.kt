@@ -13,21 +13,21 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
    private final val reactionsView: ShortcutsFlexbox
 
    init {
-      kotlin.jvm.internal.q.h(var1, "reactionsView");
+      kotlin.jvm.internal.r.h(var1, "reactionsView");
       super(var1, null);
       this.reactionsView = var1;
    }
 
    @JvmStatic
    fun `bind$lambda$0`(var0: Function1, var1: ReactionView.Reaction): Unit {
-      kotlin.jvm.internal.q.h(var1, "reaction");
+      kotlin.jvm.internal.r.h(var1, "reaction");
       var0.invoke(var1);
       return Unit.a;
    }
 
    @JvmStatic
    fun `bind$lambda$1`(var0: Function1, var1: ReactionView.Reaction): Unit {
-      kotlin.jvm.internal.q.h(var1, "reaction");
+      kotlin.jvm.internal.r.h(var1, "reaction");
       var0.invoke(var1);
       return Unit.a;
    }
@@ -57,17 +57,17 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       forwardAccessibilityLabel: String? = ...,
       threadAccessibilityLabel: String? = null
    ) {
-      kotlin.jvm.internal.q.h(var1, "reactions");
-      kotlin.jvm.internal.q.h(var4, "addReactionLabel");
-      kotlin.jvm.internal.q.h(var5, "addNewReactionAccessibilityLabel");
-      kotlin.jvm.internal.q.h(var6, "addNewBurstReactionAccessibilityLabel");
-      kotlin.jvm.internal.q.h(var8, "onAddReactionClick");
-      kotlin.jvm.internal.q.h(var9, "onAddBurstReactionClick");
-      kotlin.jvm.internal.q.h(var10, "onReactionClick");
-      kotlin.jvm.internal.q.h(var11, "onReactionLongPress");
-      kotlin.jvm.internal.q.h(var18, "onReplyClick");
-      kotlin.jvm.internal.q.h(var19, "onForwardClick");
-      kotlin.jvm.internal.q.h(var20, "onThreadClick");
+      kotlin.jvm.internal.r.h(var1, "reactions");
+      kotlin.jvm.internal.r.h(var4, "addReactionLabel");
+      kotlin.jvm.internal.r.h(var5, "addNewReactionAccessibilityLabel");
+      kotlin.jvm.internal.r.h(var6, "addNewBurstReactionAccessibilityLabel");
+      kotlin.jvm.internal.r.h(var8, "onAddReactionClick");
+      kotlin.jvm.internal.r.h(var9, "onAddBurstReactionClick");
+      kotlin.jvm.internal.r.h(var10, "onReactionClick");
+      kotlin.jvm.internal.r.h(var11, "onReactionLongPress");
+      kotlin.jvm.internal.r.h(var18, "onReplyClick");
+      kotlin.jvm.internal.r.h(var19, "onForwardClick");
+      kotlin.jvm.internal.r.h(var20, "onThreadClick");
       this.reactionsView
          .setReactions(
             var1,

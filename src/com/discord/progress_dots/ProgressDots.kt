@@ -7,7 +7,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.discord.misc.utilities.view.ViewBackgroundUtilsKt
 import com.discord.progress_dots.databinding.ProgressDotsViewBinding
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ProgressDots  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ProgressDotsViewBinding
@@ -16,20 +16,20 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
    private final var isRunning: Boolean
 
    fun ProgressDots(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun ProgressDots(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       val var4: ProgressDotsViewBinding = ProgressDotsViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var4, "inflate(...)");
+      r.g(var4, "inflate(...)");
       this.binding = var4;
       var3 = this.getResources().getInteger(R.integer.progress_dots_animation_time);
       this.dotsAnimationTimeMs = var3;
@@ -99,13 +99,13 @@ public class ProgressDots  public constructor(context: Context, attrs: Attribute
 
    public fun setupColors() {
       var var1: ProgressDot = this.binding.viewProgressDots1;
-      q.g(this.binding.viewProgressDots1, "viewProgressDots1");
+      r.g(this.binding.viewProgressDots1, "viewProgressDots1");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
       var1 = this.binding.viewProgressDots2;
-      q.g(this.binding.viewProgressDots2, "viewProgressDots2");
+      r.g(this.binding.viewProgressDots2, "viewProgressDots2");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
       var1 = this.binding.viewProgressDots3;
-      q.g(this.binding.viewProgressDots3, "viewProgressDots3");
+      r.g(this.binding.viewProgressDots3, "viewProgressDots3");
       ViewBackgroundUtilsKt.setBackgroundOval$default(var1, ThemeManagerKt.getTheme().getTextNormal(), 0, 2, null);
    }
 }

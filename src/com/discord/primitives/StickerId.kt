@@ -2,9 +2,9 @@ package com.discord.primitives
 
 import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public inline class StickerId : SnowflakePrimitive {
@@ -65,7 +65,7 @@ public inline class StickerId : SnowflakePrimitive {
 
    @JvmStatic
    public fun writeToParcel(dest: Parcel, flags: Int) {
-      q.h(var2, "dest");
+      r.h(var2, "dest");
       var2.writeLong(var0);
    }
 
@@ -90,7 +90,7 @@ public inline class StickerId : SnowflakePrimitive {
    }
 
    fun writeToParcel(var1: Parcel, var2: Int) {
-      q.h(var1, "dest");
+      r.h(var1, "dest");
       writeToParcel-impl(this.snowflake, var1, var2);
    }
 
@@ -103,7 +103,7 @@ public inline class StickerId : SnowflakePrimitive {
    // $VF: Class flags could not be determined
    internal class Creator : android.os.Parcelable.Creator<StickerId> {
       fun `createFromParcel-aEuejx8`(var1: Parcel): Long {
-         q.h(var1, "parcel");
+         r.h(var1, "parcel");
          return StickerId.constructor-impl(var1.readLong());
       }
 

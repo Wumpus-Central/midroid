@@ -1,24 +1,25 @@
 package com.discord.emoji
 
+import ab.K
+import ab.f
 import android.content.Context
-import bb.K
-import bb.f
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import s9.s
+import r9.s
+import s9.q
 
 public object UnicodeEmojis {
    private final val emojiJsonParser: Json = kotlinx.serialization.json.b.b(null, new d(), 1, null)
-   private final val emojiLoadingMutex: Mutex = kb.b.b(false, 1, null)
+   private final val emojiLoadingMutex: Mutex = jb.b.b(false, 1, null)
    private final lateinit var emojis: Map<String, List<com.discord.emoji.UnicodeEmojis.Emoji>>
 
    @JvmStatic
    fun `emojiJsonParser$lambda$0`(var0: JsonBuilder): Unit {
-      q.h(var0, "$this$Json");
+      r.h(var0, "$this$Json");
       var0.c(true);
       return Unit.a;
    }
@@ -77,7 +78,7 @@ public object UnicodeEmojis {
       // 033: aload 2
       // 034: getfield com/discord/emoji/UnicodeEmojis$load$1.result Ljava/lang/Object;
       // 037: astore 4
-      // 039: invokestatic z9/b.e ()Ljava/lang/Object;
+      // 039: invokestatic y9/b.e ()Ljava/lang/Object;
       // 03c: astore 6
       // 03e: aload 2
       // 03f: getfield com/discord/emoji/UnicodeEmojis$load$1.label I
@@ -191,7 +192,7 @@ public object UnicodeEmojis {
       // 114: aload 2
       // 115: astore 1
       // 116: ldc "emojis"
-      // 118: invokestatic kotlin/jvm/internal/q.y (Ljava/lang/String;)V
+      // 118: invokestatic kotlin/jvm/internal/r.y (Ljava/lang/String;)V
       // 11b: aconst_null
       // 11c: astore 1
       // 11d: aload 2
@@ -206,14 +207,14 @@ public object UnicodeEmojis {
       // 12e: athrow
    }
 
-   @lb.f
+   @kb.f
    public data class Emoji(names: List<String>, surrogates: String) {
       public final val names: List<String>
       public final val surrogates: String
 
       init {
-         q.h(var1, "names");
-         q.h(var2, "surrogates");
+         r.h(var1, "names");
+         r.h(var2, "surrogates");
          super();
          this.names = var1;
          this.surrogates = var2;
@@ -228,8 +229,8 @@ public object UnicodeEmojis {
       }
 
       public fun copy(names: List<String> = var0.names, surrogates: String = var0.surrogates): com.discord.emoji.UnicodeEmojis.Emoji {
-         q.h(var1, "names");
-         q.h(var2, "surrogates");
+         r.h(var1, "names");
+         r.h(var2, "surrogates");
          return new UnicodeEmojis.Emoji(var1, var2);
       }
 
@@ -240,10 +241,10 @@ public object UnicodeEmojis {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.names, var1.names)) {
+            if (!r.c(this.names, var1.names)) {
                return false;
             } else {
-               return q.c(this.surrogates, var1.surrogates);
+               return r.c(this.surrogates, var1.surrogates);
             }
          }
       }
@@ -253,15 +254,15 @@ public object UnicodeEmojis {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.names;
-         val var3: java.lang.String = this.surrogates;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("Emoji(names=");
-         var1.append(var2);
-         var1.append(", surrogates=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var3: java.util.List = this.names;
+         val var1: java.lang.String = this.surrogates;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Emoji(names=");
+         var2.append(var3);
+         var2.append(", surrogates=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
 
       public companion object {
@@ -271,7 +272,7 @@ public object UnicodeEmojis {
       }
    }
 
-   @lb.f
+   @kb.f
    public data class EmojiCategories(people: List<com.discord.emoji.UnicodeEmojis.Emoji>,
       nature: List<com.discord.emoji.UnicodeEmojis.Emoji>,
       food: List<com.discord.emoji.UnicodeEmojis.Emoji>,
@@ -294,26 +295,26 @@ public object UnicodeEmojis {
       fun {
          val var0: UnicodeEmojis.Emoji.$serializer = UnicodeEmojis.Emoji.$serializer.INSTANCE;
          $childSerializers = new KSerializer[]{
-            new ob.f(UnicodeEmojis.Emoji.$serializer.INSTANCE),
-            new ob.f(var0),
-            new ob.f(var0),
-            new ob.f(var0),
-            new ob.f(var0),
-            new ob.f(var0),
-            new ob.f(var0),
-            new ob.f(var0)
+            new nb.f(UnicodeEmojis.Emoji.$serializer.INSTANCE),
+            new nb.f(var0),
+            new nb.f(var0),
+            new nb.f(var0),
+            new nb.f(var0),
+            new nb.f(var0),
+            new nb.f(var0),
+            new nb.f(var0)
          };
       }
 
       init {
-         q.h(var1, "people");
-         q.h(var2, "nature");
-         q.h(var3, "food");
-         q.h(var4, "activity");
-         q.h(var5, "travel");
-         q.h(var6, "objects");
-         q.h(var7, "symbols");
-         q.h(var8, "flags");
+         r.h(var1, "people");
+         r.h(var2, "nature");
+         r.h(var3, "food");
+         r.h(var4, "activity");
+         r.h(var5, "travel");
+         r.h(var6, "objects");
+         r.h(var7, "symbols");
+         r.h(var8, "flags");
          super();
          this.people = var1;
          this.nature = var2;
@@ -367,14 +368,14 @@ public object UnicodeEmojis {
          symbols: List<com.discord.emoji.UnicodeEmojis.Emoji> = var0.symbols,
          flags: List<com.discord.emoji.UnicodeEmojis.Emoji> = var0.flags
       ): com.discord.emoji.UnicodeEmojis.EmojiCategories {
-         q.h(var1, "people");
-         q.h(var2, "nature");
-         q.h(var3, "food");
-         q.h(var4, "activity");
-         q.h(var5, "travel");
-         q.h(var6, "objects");
-         q.h(var7, "symbols");
-         q.h(var8, "flags");
+         r.h(var1, "people");
+         r.h(var2, "nature");
+         r.h(var3, "food");
+         r.h(var4, "activity");
+         r.h(var5, "travel");
+         r.h(var6, "objects");
+         r.h(var7, "symbols");
+         r.h(var8, "flags");
          return new UnicodeEmojis.EmojiCategories(var1, var2, var3, var4, var5, var6, var7, var8);
       }
 
@@ -385,22 +386,22 @@ public object UnicodeEmojis {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.people, var1.people)) {
+            if (!r.c(this.people, var1.people)) {
                return false;
-            } else if (!q.c(this.nature, var1.nature)) {
+            } else if (!r.c(this.nature, var1.nature)) {
                return false;
-            } else if (!q.c(this.food, var1.food)) {
+            } else if (!r.c(this.food, var1.food)) {
                return false;
-            } else if (!q.c(this.activity, var1.activity)) {
+            } else if (!r.c(this.activity, var1.activity)) {
                return false;
-            } else if (!q.c(this.travel, var1.travel)) {
+            } else if (!r.c(this.travel, var1.travel)) {
                return false;
-            } else if (!q.c(this.objects, var1.objects)) {
+            } else if (!r.c(this.objects, var1.objects)) {
                return false;
-            } else if (!q.c(this.symbols, var1.symbols)) {
+            } else if (!r.c(this.symbols, var1.symbols)) {
                return false;
             } else {
-               return q.c(this.flags, var1.flags);
+               return r.c(this.flags, var1.flags);
             }
          }
       }
@@ -423,7 +424,7 @@ public object UnicodeEmojis {
       }
 
       public fun toMap(): Map<String, List<com.discord.emoji.UnicodeEmojis.Emoji>> {
-         return t9.q.l(
+         return q.l(
             new Pair[]{
                s.a("people", this.people),
                s.a("nature", this.nature),
@@ -439,30 +440,30 @@ public object UnicodeEmojis {
 
       public override fun toString(): String {
          val var1: java.util.List = this.people;
-         val var2: java.util.List = this.nature;
-         val var5: java.util.List = this.food;
-         val var3: java.util.List = this.activity;
-         val var9: java.util.List = this.travel;
-         val var8: java.util.List = this.objects;
-         val var6: java.util.List = this.symbols;
-         val var7: java.util.List = this.flags;
+         val var6: java.util.List = this.nature;
+         val var7: java.util.List = this.food;
+         val var5: java.util.List = this.activity;
+         val var3: java.util.List = this.travel;
+         val var9: java.util.List = this.objects;
+         val var2: java.util.List = this.symbols;
+         val var8: java.util.List = this.flags;
          val var4: StringBuilder = new StringBuilder();
          var4.append("EmojiCategories(people=");
          var4.append(var1);
          var4.append(", nature=");
-         var4.append(var2);
-         var4.append(", food=");
-         var4.append(var5);
-         var4.append(", activity=");
-         var4.append(var3);
-         var4.append(", travel=");
-         var4.append(var9);
-         var4.append(", objects=");
-         var4.append(var8);
-         var4.append(", symbols=");
          var4.append(var6);
-         var4.append(", flags=");
+         var4.append(", food=");
          var4.append(var7);
+         var4.append(", activity=");
+         var4.append(var5);
+         var4.append(", travel=");
+         var4.append(var3);
+         var4.append(", objects=");
+         var4.append(var9);
+         var4.append(", symbols=");
+         var4.append(var2);
+         var4.append(", flags=");
+         var4.append(var8);
          var4.append(")");
          return var4.toString();
       }

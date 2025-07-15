@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class CustomEmojiContentNode(id: Long, alt: String, src: String, frozenSrc: String, jumboable: Boolean = false) : EmojiContentNode {
@@ -13,9 +13,9 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    public open val jumboable: Boolean
 
    init {
-      q.h(var3, "alt");
-      q.h(var4, "src");
-      q.h(var5, "frozenSrc");
+      r.h(var3, "alt");
+      r.h(var4, "src");
+      r.h(var5, "frozenSrc");
       super(null);
       this.id = var1;
       this.alt = var3;
@@ -45,9 +45,9 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    }
 
    public fun copy(id: Long = var0.id, alt: String = var0.alt, src: String = var0.src, frozenSrc: String = var0.frozenSrc, jumboable: Boolean = var0.jumboable): CustomEmojiContentNode {
-      q.h(var3, "alt");
-      q.h(var4, "src");
-      q.h(var5, "frozenSrc");
+      r.h(var3, "alt");
+      r.h(var4, "src");
+      r.h(var5, "frozenSrc");
       return new CustomEmojiContentNode(var1, var3, var4, var5, var6);
    }
 
@@ -60,11 +60,11 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
          var1 = var1;
          if (this.id != var1.id) {
             return false;
-         } else if (!q.c(this.alt, var1.alt)) {
+         } else if (!r.c(this.alt, var1.alt)) {
             return false;
-         } else if (!q.c(this.src, var1.src)) {
+         } else if (!r.c(this.src, var1.src)) {
             return false;
-         } else if (!q.c(this.frozenSrc, var1.frozenSrc)) {
+         } else if (!r.c(this.frozenSrc, var1.frozenSrc)) {
             return false;
          } else {
             return this.jumboable == var1.jumboable;
@@ -78,24 +78,24 @@ public data class CustomEmojiContentNode(id: Long, alt: String, src: String, fro
    }
 
    public override fun toString(): String {
-      val var1: Long = this.id;
+      val var2: Long = this.id;
       val var7: java.lang.String = this.alt;
-      val var5: java.lang.String = this.src;
-      val var4: java.lang.String = this.frozenSrc;
-      val var3: Boolean = this.jumboable;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("CustomEmojiContentNode(id=");
-      var6.append(var1);
-      var6.append(", alt=");
-      var6.append(var7);
-      var6.append(", src=");
-      var6.append(var5);
-      var6.append(", frozenSrc=");
-      var6.append(var4);
-      var6.append(", jumboable=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var4: java.lang.String = this.src;
+      val var6: java.lang.String = this.frozenSrc;
+      val var1: Boolean = this.jumboable;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("CustomEmojiContentNode(id=");
+      var5.append(var2);
+      var5.append(", alt=");
+      var5.append(var7);
+      var5.append(", src=");
+      var5.append(var4);
+      var5.append(", frozenSrc=");
+      var5.append(var6);
+      var5.append(", jumboable=");
+      var5.append(var1);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

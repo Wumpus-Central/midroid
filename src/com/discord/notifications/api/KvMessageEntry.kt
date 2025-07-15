@@ -2,10 +2,11 @@ package com.discord.notifications.api
 
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonObject
-import lb.f
-import pb.q
+import ob.q
 
 @f
 public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject, id: MessageId, channelId: ChannelId) : KvMessageEntry(
@@ -20,14 +21,14 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    @JvmStatic
    fun {
       val var0: q = q.a;
-      $childSerializers = new KSerializer[]{new ob.f(q.a), new ob.f(var0), null, null, null};
+      $childSerializers = new KSerializer[]{new nb.f(q.a), new nb.f(var0), null, null, null};
    }
 
    fun KvMessageEntry(var1: MutableList<JsonObject>, var2: MutableList<JsonObject>, var3: JsonObject, var4: java.lang.String, var5: Long) {
-      kotlin.jvm.internal.q.h(var1, "members");
-      kotlin.jvm.internal.q.h(var2, "users");
-      kotlin.jvm.internal.q.h(var3, "message");
-      kotlin.jvm.internal.q.h(var4, "id");
+      r.h(var1, "members");
+      r.h(var2, "users");
+      r.h(var3, "message");
+      r.h(var4, "id");
       super();
       this.members = var1;
       this.users = var2;
@@ -57,10 +58,10 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public fun copy(members: List<JsonObject> = ..., users: List<JsonObject> = ..., message: JsonObject = ..., id: MessageId = ..., channelId: ChannelId = ...): KvMessageEntry {
-      kotlin.jvm.internal.q.h(var1, "members");
-      kotlin.jvm.internal.q.h(var2, "users");
-      kotlin.jvm.internal.q.h(var3, "message");
-      kotlin.jvm.internal.q.h(var4, "id");
+      r.h(var1, "members");
+      r.h(var2, "users");
+      r.h(var3, "message");
+      r.h(var4, "id");
       return new KvMessageEntry(var1, var2, var3, var4, var5, null);
    }
 
@@ -71,11 +72,11 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
          return false;
       } else {
          var1 = var1;
-         if (!kotlin.jvm.internal.q.c(this.members, var1.members)) {
+         if (!r.c(this.members, var1.members)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.users, var1.users)) {
+         } else if (!r.c(this.users, var1.users)) {
             return false;
-         } else if (!kotlin.jvm.internal.q.c(this.message, var1.message)) {
+         } else if (!r.c(this.message, var1.message)) {
             return false;
          } else if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
@@ -91,24 +92,24 @@ public data class KvMessageEntry(members: List<JsonObject> = ..., users: List<Js
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.members;
-      val var6: java.util.List = this.users;
-      val var1: JsonObject = this.message;
-      val var5: java.lang.String = MessageId.toString-impl(this.id);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("KvMessageEntry(members=");
-      var2.append(var3);
-      var2.append(", users=");
-      var2.append(var6);
-      var2.append(", message=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var5);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var6: java.util.List = this.members;
+      val var1: java.util.List = this.users;
+      val var2: JsonObject = this.message;
+      val var4: java.lang.String = MessageId.toString-impl(this.id);
+      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("KvMessageEntry(members=");
+      var5.append(var6);
+      var5.append(", users=");
+      var5.append(var1);
+      var5.append(", message=");
+      var5.append(var2);
+      var5.append(", id=");
+      var5.append(var4);
+      var5.append(", channelId=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

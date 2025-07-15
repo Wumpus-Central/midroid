@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.embed
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class EmbedMedia(url: String,
@@ -26,7 +26,7 @@ public data class EmbedMedia(url: String,
    public open val embedUrl: String
 
    init {
-      q.h(var1, "url");
+      r.h(var1, "url");
       super();
       this.url = var1;
       this.proxyURL = var2;
@@ -85,7 +85,7 @@ public data class EmbedMedia(url: String,
       srcIsAnimated: Boolean = var0.srcIsAnimated,
       contentType: String? = var0.contentType
    ): EmbedMedia {
-      q.h(var1, "url");
+      r.h(var1, "url");
       return new EmbedMedia(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -96,22 +96,22 @@ public data class EmbedMedia(url: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.url, var1.url)) {
+         if (!r.c(this.url, var1.url)) {
             return false;
-         } else if (!q.c(this.proxyURL, var1.proxyURL)) {
+         } else if (!r.c(this.proxyURL, var1.proxyURL)) {
             return false;
          } else if (this.width != var1.width) {
             return false;
          } else if (this.height != var1.height) {
             return false;
-         } else if (!q.c(this.placeholder, var1.placeholder)) {
+         } else if (!r.c(this.placeholder, var1.placeholder)) {
             return false;
-         } else if (!q.c(this.placeholderVersion, var1.placeholderVersion)) {
+         } else if (!r.c(this.placeholderVersion, var1.placeholderVersion)) {
             return false;
          } else if (this.srcIsAnimated != var1.srcIsAnimated) {
             return false;
          } else {
-            return q.c(this.contentType, var1.contentType);
+            return r.c(this.contentType, var1.contentType);
          }
       }
    }
@@ -151,31 +151,31 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var6: java.lang.String = this.proxyURL;
-      val var1: Int = this.width;
-      val var2: Int = this.height;
-      val var5: java.lang.String = this.placeholder;
+      val var4: java.lang.String = this.url;
+      val var9: java.lang.String = this.proxyURL;
+      val var2: Int = this.width;
+      val var1: Int = this.height;
+      val var6: java.lang.String = this.placeholder;
       val var7: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var4: java.lang.String = this.contentType;
+      val var5: java.lang.String = this.contentType;
       val var8: StringBuilder = new StringBuilder();
       var8.append("EmbedMedia(url=");
-      var8.append(var9);
+      var8.append(var4);
       var8.append(", proxyURL=");
-      var8.append(var6);
+      var8.append(var9);
       var8.append(", width=");
-      var8.append(var1);
-      var8.append(", height=");
       var8.append(var2);
+      var8.append(", height=");
+      var8.append(var1);
       var8.append(", placeholder=");
-      var8.append(var5);
+      var8.append(var6);
       var8.append(", placeholderVersion=");
       var8.append(var7);
       var8.append(", srcIsAnimated=");
       var8.append(var3);
       var8.append(", contentType=");
-      var8.append(var4);
+      var8.append(var5);
       var8.append(")");
       return var8.toString();
    }

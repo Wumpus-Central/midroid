@@ -1,16 +1,16 @@
 package com.discord.chat.bridge.structurabletext
 
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import pb.d
+import ob.d
 
-internal object StructurableTextSerializer : d(G.b(StructurableText.class)) {
+internal object StructurableTextSerializer : d(H.b(StructurableText.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<StructurableText> {
-      q.h(var1, "element");
+      r.h(var1, "element");
       val var3: Any;
       if (var1 is JsonPrimitive) {
          var3 = PrimitiveStructurableTextSerializer.INSTANCE;

@@ -13,7 +13,7 @@ import android.view.WindowManager
 import co.discord.media_engine.NativeCapturerObserver
 import co.discord.media_engine.SoundshareAudioSource
 import com.discord.logging.Log
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import org.webrtc.CapturerObserver
 import org.webrtc.ScreenCapturerAndroid
 import org.webrtc.SurfaceTextureHelper
@@ -45,7 +45,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private final var maxPixelCount: Int
 
    init {
-      q.h(var1, "mediaProjectionPermissionResultData");
+      r.h(var1, "mediaProjectionPermissionResultData");
       super(var1, ScreenCapturer.MediaProjectionObserver.INSTANCE);
       this.watchdog = new ScreenCapturer.Watchdog(this);
       this.soundshare = new SoundshareAudioSource();
@@ -58,7 +58,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
          val var7: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
-         q.g(var7, "build(...)");
+         r.g(var7, "build(...)");
 
          try {
             var1 = c.a(
@@ -80,7 +80,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
          this.currentMeasuredSize.set(ScreenCapturer.MediaProjectionObserver.INSTANCE.getCurrentCaptureSize());
       } else if (VERSION.SDK_INT >= 30) {
          val var4: Any = var1.getSystemService("window");
-         q.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
+         r.f(var4, "null cannot be cast to non-null type android.view.WindowManager");
          var3.set(E0.c.a(d.a(var4 as WindowManager)));
       } else {
          this.currentMeasuredSize.set(0, 0, var1.getResources().getDisplayMetrics().widthPixels, var1.getResources().getDisplayMetrics().heightPixels);
@@ -162,7 +162,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc_w "measuredSize"
-      // 06: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 06: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 09: aload 1
       // 0a: invokevirtual android/graphics/Rect.width ()I
       // 0d: aload 1
@@ -257,13 +257,13 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       // 01: monitorenter
       // 02: aload 1
       // 03: ldc_w "surfaceTextureHelper"
-      // 06: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 06: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 09: aload 2
       // 0a: ldc_w "applicationContext"
-      // 0d: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 0d: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 10: aload 3
       // 11: ldc_w "capturerObserver"
-      // 14: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 14: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 17: aload 0
       // 18: aload 1
       // 19: putfield com/discord/media/engine/video/screen_capture/ScreenCapturer.surfaceTextureHelper Lorg/webrtc/SurfaceTextureHelper;
@@ -293,12 +293,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       if (var1 != null) {
          var var2: Context = this.context;
          if (this.context == null) {
-            q.y("context");
+            r.y("context");
             var2 = null;
          }
 
          val var4: Rect = this.getScreenSize(var2);
-         if (!q.c(var4, this.lastMeasuredSize)) {
+         if (!r.c(var4, this.lastMeasuredSize)) {
             this.lastMeasuredSize.set(var4);
             this.changeCaptureFormatInternal(var4, this.maxPixelCount);
          }
@@ -322,7 +322,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
       if (this.framerate > 0) {
          var var1: SurfaceTextureHelper = this.surfaceTextureHelper;
          if (this.surfaceTextureHelper == null) {
-            q.y("surfaceTextureHelper");
+            r.y("surfaceTextureHelper");
             var1 = null;
          }
 
@@ -469,7 +469,7 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
                   val var6: NativeCapturerObserver = ScreenCapturer.access$getNativeObserver$p(var4);
                   var var5: NativeCapturerObserver = var6;
                   if (var6 == null) {
-                     q.y("nativeObserver");
+                     r.y("nativeObserver");
                      var5 = null;
                   }
 

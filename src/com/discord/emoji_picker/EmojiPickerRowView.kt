@@ -4,7 +4,6 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.view.View
-import android.view.ViewGroup.MarginLayoutParams
 import android.widget.LinearLayout
 import android.widget.LinearLayout.LayoutParams
 import com.discord.emoji_picker.EmojiPickerRow.Emoji
@@ -32,7 +31,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1);
       this.onPressEmoji = new c();
       this.onLongPressEmoji = new d();
@@ -50,7 +49,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
 
          val var7: EmojiPickerRow.Emoji = var10 as EmojiPickerRow.Emoji;
          var10 = this.getChildAt(var3);
-         kotlin.jvm.internal.q.f(var10, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
+         kotlin.jvm.internal.r.f(var10, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var9: SimpleDraweeView = var10 as SimpleDraweeView;
          var10 = null;
          if (var7 == null) {
@@ -79,7 +78,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
             val var14: GenericDraweeHierarchy = var9.getHierarchy() as GenericDraweeHierarchy;
             if (var4) {
                var10 = this.getContext();
-               kotlin.jvm.internal.q.g(var10, "getContext(...)");
+               kotlin.jvm.internal.r.g(var10, "getContext(...)");
                var10 = GetDrawableCompatKt.getDrawableCompat((Context)var10, R.drawable.lock_overlay);
             }
 
@@ -108,7 +107,7 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
       val var9: java.util.Iterator = var1.getItems().iterator();
 
       for (int var10 = 0; var9.hasNext(); var10++) {
-         var var7: MarginLayoutParams = (MarginLayoutParams)var9.next();
+         var var7: View = (View)var9.next();
          if (var10 < 0) {
             kotlin.collections.i.u();
          }
@@ -121,31 +120,31 @@ internal class EmojiPickerRowView(context: Context) : LinearLayout {
             var3 = var4;
          }
 
-         val var8: SimpleDraweeView = new SimpleDraweeView(this.getContext());
-         RippleUtilsKt.addCircleRipple$default(var8, false, 1, null);
-         (var8.getHierarchy() as GenericDraweeHierarchy).A(placeholder);
-         (var8.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
-         var7 = new LayoutParams(var5, var5);
-         var7.setMargins(var3, var6, 0, var6);
-         var8.setLayoutParams(var7);
-         this.addView(var8);
+         var7 = new SimpleDraweeView(this.getContext());
+         RippleUtilsKt.addCircleRipple$default(var7, false, 1, null);
+         (var7.getHierarchy() as GenericDraweeHierarchy).A(placeholder);
+         (var7.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
+         val var8: LayoutParams = new LayoutParams(var5, var5);
+         var8.setMargins(var3, var6, 0, var6);
+         var7.setLayoutParams(var8);
+         this.addView(var7);
       }
    }
 
    @JvmStatic
    fun `onLongPressEmoji$lambda$1`(var0: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    @JvmStatic
    fun `onPressEmoji$lambda$0`(var0: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var0, "it");
+      kotlin.jvm.internal.r.h(var0, "it");
       return Unit.a;
    }
 
    public fun setRowData(rowData: EmojiPickerRow) {
-      kotlin.jvm.internal.q.h(var1, "rowData");
+      kotlin.jvm.internal.r.h(var1, "rowData");
       if (var1.getItems().size() != this.getChildCount()) {
          this.createRowEmojiViews(var1);
       }

@@ -6,7 +6,7 @@ import android.net.Uri
 import android.provider.ContactsContract.Data
 import android.provider.ContactsContract.CommonDataKinds.Phone
 import java.util.LinkedHashMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public object ContactSyncProvider {
    private fun Uri.asBase64BitmapString(context: Context, quality: Int = 100): String? {
@@ -32,49 +32,49 @@ public object ContactSyncProvider {
       // 0b: aconst_null
       // 0c: astore 1
       // 0d: aload 2
-      // 0e: ifnull 59
+      // 0e: ifnull 5b
       // 11: aload 2
       // 12: invokevirtual android/content/res/AssetFileDescriptor.getFileDescriptor ()Ljava/io/FileDescriptor;
       // 15: astore 1
       // 16: aload 1
-      // 17: ifnull 43
+      // 17: ifnull 45
       // 1a: aload 1
       // 1b: invokestatic android/graphics/BitmapFactory.decodeFileDescriptor (Ljava/io/FileDescriptor;)Landroid/graphics/Bitmap;
-      // 1e: astore 4
-      // 20: new java/io/ByteArrayOutputStream
-      // 23: astore 1
-      // 24: aload 1
-      // 25: invokespecial java/io/ByteArrayOutputStream.<init> ()V
-      // 28: aload 4
+      // 1e: astore 1
+      // 1f: new java/io/ByteArrayOutputStream
+      // 22: astore 4
+      // 24: aload 4
+      // 26: invokespecial java/io/ByteArrayOutputStream.<init> ()V
+      // 29: aload 1
       // 2a: getstatic android/graphics/Bitmap$CompressFormat.JPEG Landroid/graphics/Bitmap$CompressFormat;
       // 2d: iload 3
-      // 2e: aload 1
-      // 2f: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
-      // 32: pop
-      // 33: aload 1
-      // 34: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
-      // 37: bipush 0
-      // 38: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
-      // 3b: astore 1
-      // 3c: goto 45
-      // 3f: astore 1
-      // 40: goto 4d
-      // 43: aconst_null
-      // 44: astore 1
-      // 45: aload 2
-      // 46: aconst_null
-      // 47: invokestatic E9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 4a: goto 59
-      // 4d: aload 1
-      // 4e: athrow
-      // 4f: astore 4
-      // 51: aload 2
-      // 52: aload 1
-      // 53: invokestatic E9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 56: aload 4
-      // 58: athrow
-      // 59: aload 1
-      // 5a: areturn
+      // 2e: aload 4
+      // 30: invokevirtual android/graphics/Bitmap.compress (Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+      // 33: pop
+      // 34: aload 4
+      // 36: invokevirtual java/io/ByteArrayOutputStream.toByteArray ()[B
+      // 39: bipush 0
+      // 3a: invokestatic android/util/Base64.encodeToString ([BI)Ljava/lang/String;
+      // 3d: astore 1
+      // 3e: goto 47
+      // 41: astore 1
+      // 42: goto 4f
+      // 45: aconst_null
+      // 46: astore 1
+      // 47: aload 2
+      // 48: aconst_null
+      // 49: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 4c: goto 5b
+      // 4f: aload 1
+      // 50: athrow
+      // 51: astore 4
+      // 53: aload 2
+      // 54: aload 1
+      // 55: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 58: aload 4
+      // 5a: athrow
+      // 5b: aload 1
+      // 5c: areturn
    }
 
    private fun Cursor.getColumnString(columnName: String): String? {
@@ -142,7 +142,7 @@ public object ContactSyncProvider {
    }
 
    public fun getContactsMap(context: Context): Map<String, ContactSyncBlobEntry> {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var8: LinkedHashMap = new LinkedHashMap();
       val var7: Cursor = var1.getContentResolver()
          .query(Phone.CONTENT_URI, new java.lang.String[]{"_id", "data4", "display_name", "photo_file_id", "contact_id"}, null, null, null);
@@ -218,10 +218,10 @@ public object ContactSyncProvider {
       // Bytecode:
       // 00: aload 1
       // 01: ldc "context"
-      // 03: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 03: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 06: aload 2
       // 07: ldc "deviceContactId"
-      // 09: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 09: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0c: aload 1
       // 0d: invokevirtual android/content/Context.getContentResolver ()Landroid/content/ContentResolver;
       // 10: getstatic android/provider/ContactsContract$CommonDataKinds$Phone.CONTENT_URI Landroid/net/Uri;
@@ -278,23 +278,23 @@ public object ContactSyncProvider {
       // 6b: invokestatic com/discord/contact_sync/ContactSyncProvider.asBase64BitmapString$default (Lcom/discord/contact_sync/ContactSyncProvider;Landroid/net/Uri;Landroid/content/Context;IILjava/lang/Object;)Ljava/lang/String;
       // 6e: astore 1
       // 6f: goto 78
-      // 72: astore 2
+      // 72: astore 1
       // 73: goto 82
       // 76: aconst_null
       // 77: astore 1
       // 78: aload 3
       // 79: aconst_null
-      // 7a: invokestatic E9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 7a: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 7d: aload 1
       // 7e: astore 2
       // 7f: goto 8c
-      // 82: aload 2
+      // 82: aload 1
       // 83: athrow
-      // 84: astore 1
+      // 84: astore 2
       // 85: aload 3
-      // 86: aload 2
-      // 87: invokestatic E9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // 8a: aload 1
+      // 86: aload 1
+      // 87: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 8a: aload 2
       // 8b: athrow
       // 8c: aload 2
       // 8d: areturn

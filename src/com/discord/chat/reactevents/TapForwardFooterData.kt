@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public class TapForwardFooterData(snapshotIndex: Int, channelId: String, messageId: String) : ReactEvent {
@@ -13,8 +13,8 @@ public class TapForwardFooterData(snapshotIndex: Int, channelId: String, message
    public final val messageId: String
 
    init {
-      q.h(var2, "channelId");
-      q.h(var3, "messageId");
+      r.h(var2, "channelId");
+      r.h(var3, "messageId");
       super();
       this.snapshotIndex = var1;
       this.channelId = var2;

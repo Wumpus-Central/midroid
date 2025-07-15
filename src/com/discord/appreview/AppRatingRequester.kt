@@ -1,13 +1,13 @@
 package com.discord.appreview
 
-import S6.b
-import S6.c
-import V6.a
+import R6.b
+import R6.c
+import U6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import n1.d
 import n1.e
 
@@ -18,9 +18,9 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    private final val onFailure: (Exception) -> Unit
 
    init {
-      q.h(var1, "activity");
-      q.h(var3, "onComplete");
-      q.h(var4, "onFailure");
+      r.h(var1, "activity");
+      r.h(var3, "onComplete");
+      r.h(var4, "onFailure");
       super();
       this.activity = var1;
       this.useFakeReviewManager = var2;
@@ -34,7 +34,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
          var3 = new a(var2);
       } else {
          var3 = c.a(var2);
-         q.g(var3, "create(...)");
+         r.g(var3, "create(...)");
       }
 
       return (ReviewManager)var3;
@@ -42,10 +42,10 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    @JvmStatic
    fun `executeRequest$lambda$1`(var0: ReviewManager, var1: AppRatingRequester, var2: Task) {
-      q.h(var2, "task");
+      r.h(var2, "task");
       if (var2.p()) {
-         val var4: Task = var0.b(var1.activity, var2.l() as b);
-         q.g(var4, "launchReviewFlow(...)");
+         val var4: Task = var0.a(var1.activity, var2.l() as b);
+         r.g(var4, "launchReviewFlow(...)");
          var4.d(new e(var1));
       } else {
          val var3: Function1 = var1.onFailure;
@@ -61,7 +61,7 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
 
    @JvmStatic
    fun `executeRequest$lambda$1$lambda$0`(var0: AppRatingRequester, var1: Task) {
-      q.h(var1, "it");
+      r.h(var1, "it");
       var0.onComplete.invoke();
    }
 
@@ -71,10 +71,10 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    public fun executeRequest() {
-      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var1: Task = var2.a();
-      q.g(var1, "requestReviewFlow(...)");
-      var1.d(new n1.c(var2, this));
-      var1.b(new d(this));
+      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var2: Task = var1.b();
+      r.g(var2, "requestReviewFlow(...)");
+      var2.d(new n1.c(var1, this));
+      var2.b(new d(this));
    }
 }

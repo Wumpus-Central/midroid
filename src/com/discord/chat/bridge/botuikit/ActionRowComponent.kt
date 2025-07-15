@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent {
@@ -12,8 +12,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    public final val components: List<Component>
 
    init {
-      q.h(var2, "id");
-      q.h(var4, "components");
+      r.h(var2, "id");
+      r.h(var4, "components");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -38,8 +38,8 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id, errorText: String? = var0.errorText, components: List<Component> = var0.components): ActionRowComponent {
-      q.h(var2, "id");
-      q.h(var4, "components");
+      r.h(var2, "id");
+      r.h(var4, "components");
       return new ActionRowComponent(var1, var2, var3, var4);
    }
 
@@ -52,19 +52,19 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = var1;
          if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.id, var1.id)) {
+         } else if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.errorText, var1.errorText)) {
+         } else if (!r.c(this.errorText, var1.errorText)) {
             return false;
          } else {
-            return q.c(this.components, var1.components);
+            return r.c(this.components, var1.components);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -72,25 +72,25 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
          var1 = this.errorText.hashCode();
       }
 
-      return ((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode();
+      return ((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
+      val var2: java.lang.String = this.errorText;
       val var5: java.util.List = this.components;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ActionRowComponent(type=");
-      var2.append(var1);
-      var2.append(", id=");
-      var2.append(var3);
-      var2.append(", errorText=");
-      var2.append(var4);
-      var2.append(", components=");
-      var2.append(var5);
-      var2.append(")");
-      return var2.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ActionRowComponent(type=");
+      var4.append(var1);
+      var4.append(", id=");
+      var4.append(var3);
+      var4.append(", errorText=");
+      var4.append(var2);
+      var4.append(", components=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

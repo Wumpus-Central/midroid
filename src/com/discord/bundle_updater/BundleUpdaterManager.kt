@@ -26,9 +26,9 @@ import com.jakewharton.processphoenix.ProcessPhoenix
 import java.io.File
 import java.lang.reflect.Field
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import r9.s
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -36,10 +36,10 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    private final var progressLayout: ViewGroup?
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("BundleDownloaded", G.b(BundleDownloadedEvent.class)), s.a("OtaUpdateChecked", G.b(OtaCheckAttemptEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("BundleDownloaded", H.b(BundleDownloadedEvent.class)), s.a("OtaUpdateChecked", H.b(OtaCheckAttemptEvent.class)));
    }
 
    @JvmStatic
@@ -50,7 +50,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `addListener$lambda$6`(var0: BundleUpdaterManager, var1: java.util.List): Unit {
-      q.h(var1, "metrics");
+      r.h(var1, "metrics");
       var0.reactEvents.emitModuleEvent(var0.reactContext, new OtaCheckAttemptEvent(var1));
       return Unit.a;
    }
@@ -64,7 +64,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `checkForUpdateAndReload$lambda$2$lambda$1`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
-      q.h(var1, "$this$runOnActivity");
+      r.h(var1, "$this$runOnActivity");
       val var6: Activity = var0.reactContext.getCurrentActivity();
       if (var6 != null) {
          var var7: Application = var6.getApplication();
@@ -106,7 +106,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `removeSpinnerView$lambda$11`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
-      q.h(var1, "$this$runOnActivity");
+      r.h(var1, "$this$runOnActivity");
       if (var0.progressLayout != null) {
          var1.removeView(var0.progressLayout);
       }
@@ -156,7 +156,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
          try {
             var7 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
-            q.g(var7, "createAssetLoader(...)");
+            r.g(var7, "createAssetLoader(...)");
          } catch (var5: Exception) {
             throw new IllegalAccessException("Could not setJSBundle");
          }
@@ -186,17 +186,17 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `showSpinnerView$lambda$9`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
-      q.h(var1, "$this$runOnActivity");
+      r.h(var1, "$this$runOnActivity");
       var1.addView(var0.progressLayout);
       return Unit.a;
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      q.h(var1, "type");
-      if (q.c(var1, "BundleDownloaded")) {
+      r.h(var1, "type");
+      if (r.c(var1, "BundleDownloaded")) {
          BundleUpdater.Companion.instance().setOnBundleDownloadedListener(new j(this));
-      } else if (q.c(var1, "OtaUpdateChecked")) {
+      } else if (r.c(var1, "OtaUpdateChecked")) {
          BundleUpdater.Companion.instance().setOnOtaUpdateCheckedListener(new k(this));
       }
    }
@@ -204,17 +204,17 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun checkForUpdateAndReload() {
       this.showSpinnerView();
-      val var2: BundleUpdater.Companion = BundleUpdater.Companion;
+      val var3: BundleUpdater.Companion = BundleUpdater.Companion;
       BundleUpdater.checkForUpdate$default(BundleUpdater.Companion.instance(), 0, new g(this), 1, null);
-      val var3: ReactApplicationContext = this.reactContext;
+      val var2: ReactApplicationContext = this.reactContext;
       val var1: Int = MainActivity.j;
-      q.g(MainActivity::class.java, "forName(...)");
-      var2.addClearBuildOverrideShortcut(var3, MainActivity::class.java);
+      r.g(MainActivity::class.java, "forName(...)");
+      var3.addClearBuildOverrideShortcut(var2, MainActivity::class.java);
    }
 
    @ReactMethod
    public fun getBuildOverrideCookieContents(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       val var2: BuildOverrideCookieContents = CookieValidator.INSTANCE.parseBuildOverrideCookie(BundleUpdater.Companion.instance().getBuildOverrideCookie());
       val var3: WritableNativeMap;
       if (var2 != null) {
@@ -228,19 +228,19 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getInitialBundleDownloaded(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var1.resolve(new BundleDownloadedEvent(BundleUpdater.Companion.instance().isVersionRequired()).serialize());
    }
 
    @ReactMethod
    public fun getInitialOtaUpdateChecked(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var1.resolve(new OtaCheckAttemptEvent(BundleUpdater.Companion.instance().getOtaMetrics()).serialize());
    }
 
    @ReactMethod
    public fun getManifestInfo(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       val var2: BundleUpdater.ManifestInfo = BundleUpdater.Companion.instance().manifestInfo();
       val var3: WritableNativeMap;
       if (var2 != null) {
@@ -258,7 +258,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getOtaRootPath(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       var1.resolve(BundleUpdater.Companion.instance().getOtasRootDirectory().getAbsolutePath());
    }
 
@@ -273,7 +273,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun setBuildOverrideCookieHeader(cookieHeader: String) {
-      q.h(var1, "cookieHeader");
+      r.h(var1, "cookieHeader");
       BundleUpdater.Companion.instance().setBuildOverrideCookieHeader(var1);
    }
 

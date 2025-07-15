@@ -6,16 +6,16 @@ import com.discord.chat.presentation.media.MediaContainingViewResizer
 import com.discord.chat.presentation.message.view.MediaVisualPlaceholderView
 import com.discord.chat.presentation.message.view.VisualPlaceholderState
 import com.discord.chat.presentation.message.viewholder.MediaVisualPlaceholderViewHolder
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MosaicItemVisualPlaceholderViewHolder(view: MediaVisualPlaceholderView) : MediaVisualPlaceholderViewHolder {
    init {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super(var1);
    }
 
    public fun bindGalleryItem(mediaGalleryItem: MediaGalleryItem, isSingleItemMosaic: Boolean) {
-      q.h(var1, "mediaGalleryItem");
+      r.h(var1, "mediaGalleryItem");
       var var3: Int = MosaicItemVisualPlaceholderViewHolder.WhenMappings.$EnumSwitchMapping$0[var1.getMedia().getLoadingState().ordinal()];
       val var6: VisualPlaceholderState;
       if (var3 != 1) {

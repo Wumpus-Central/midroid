@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class TextContentNode(content: String? = null) : ContentNode() {
@@ -30,7 +30,7 @@ public data class TextContentNode(content: String? = null) : ContentNode() {
       } else if (var1 !is TextContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as TextContentNode).content);
+         return r.c(this.content, (var1 as TextContentNode).content);
       }
    }
 

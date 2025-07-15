@@ -28,8 +28,8 @@ import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.M
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemVisualPlaceholderViewHolder
 import java.util.ArrayList
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import r9.n
 
 public class MediaGalleryDisplayComponentAdapter(context: Context,
       onItemClicked: (MediaGalleryDisplayComponent, MediaGalleryItem, MessagePartViewHolder) -> Unit,
@@ -51,11 +51,11 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
    public final val items: MutableList<MediaGalleryItem>
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "onItemClicked");
-      q.h(var4, "onItemSpoilerClicked");
-      q.h(var5, "onItemObscureToggle");
-      q.h(var6, "onAltText");
+      r.h(var1, "context");
+      r.h(var2, "onItemClicked");
+      r.h(var4, "onItemSpoilerClicked");
+      r.h(var5, "onItemObscureToggle");
+      r.h(var6, "onAltText");
       super();
       this.context = var1;
       this.onItemClicked = var2;
@@ -97,7 +97,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
 
    @JvmStatic
    fun `onBindViewHolder$lambda$4`(var0: MediaGalleryDisplayComponentAdapter, var1: MediaGalleryItem, var2: java.lang.String): Unit {
-      q.h(var2, "it");
+      r.h(var2, "it");
       val var5: Function1 = var0.onAltText;
       val var4: java.lang.String = var1.getDescription();
       var var3: java.lang.String = var4;
@@ -139,7 +139,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
 
    @JvmStatic
    fun `onBindViewHolder$lambda$9`(var0: MediaGalleryDisplayComponentAdapter, var1: MediaGalleryItem, var2: java.lang.String): Unit {
-      q.h(var2, "it");
+      r.h(var2, "it");
       val var5: Function1 = var0.onAltText;
       val var4: java.lang.String = var1.getDescription();
       var var3: java.lang.String = var4;
@@ -184,11 +184,11 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
    }
 
    public open fun onBindViewHolder(holder: MessagePartViewHolder, position: Int) {
-      q.h(var1, "holder");
+      r.h(var1, "holder");
       val var4: Boolean = var1 is MosaicItemMessageAttachmentImageViewHolder;
       var var3: Boolean = false;
       if (var4) {
-         val var6: MediaGalleryItem = this.items.get(var2);
+         val var8: MediaGalleryItem = this.items.get(var2);
          val var10: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
@@ -199,8 +199,8 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             return;
          }
 
-         val var5: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
-         val var8: java.lang.String = this.containerId;
+         val var6: MosaicItemMessageAttachmentImageViewHolder = var1 as MosaicItemMessageAttachmentImageViewHolder;
+         val var5: java.lang.String = this.containerId;
          val var7: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
@@ -208,36 +208,36 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
             var3 = false;
          }
 
-         var5.bindGalleryItem(
-            var8,
+         var6.bindGalleryItem(
+            var5,
             var7,
-            var6,
+            var8,
             var3,
-            new a(this, var10, var6, var1),
-            new b(this, var10, var6),
-            new c(this, var6),
+            new a(this, var10, var8, var1),
+            new b(this, var10, var8),
+            new c(this, var8),
             new d(this),
-            new e(this, var6),
+            new e(this, var8),
             var9.getShouldAutoPlayGif()
          );
       } else if (var1 is MosaicItemMessageAttachmentVideoViewHolder) {
-         val var20: MediaGalleryItem = this.items.get(var2);
-         val var19: MediaGalleryDisplayComponent = this.component;
+         val var22: MediaGalleryItem = this.items.get(var2);
+         val var20: MediaGalleryDisplayComponent = this.component;
          if (this.component == null) {
             return;
          }
 
-         val var16: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
-         val var22: java.lang.String = this.containerId;
-         val var21: java.lang.String = this.component.getId();
+         val var21: MosaicItemMessageAttachmentVideoViewHolder = var1 as MosaicItemMessageAttachmentVideoViewHolder;
+         val var16: java.lang.String = this.containerId;
+         val var19: java.lang.String = this.component.getId();
          if (this.getItemCount() == 1) {
             var3 = true;
          } else {
             var3 = false;
          }
 
-         var16.bindGalleryItem(
-            var22, var21, var20, var3, new f(this, var19, var20, var1), new g(this, var19, var20), new h(this, var20), new i(this), new j(this, var20)
+         var21.bindGalleryItem(
+            var16, var19, var22, var3, new f(this, var20, var22, var1), new g(this, var20, var22), new h(this, var22), new i(this), new j(this, var22)
          );
       } else {
          if (var1 !is MosaicItemVisualPlaceholderViewHolder) {
@@ -258,7 +258,7 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
    }
 
    public open fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MessagePartViewHolder {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       var var4: Any;
       switch (var2) {
          case 49:
@@ -282,9 +282,9 @@ public class MediaGalleryDisplayComponentAdapter(context: Context,
 
    @SuppressLint(["NotifyDataSetChanged"])
    public fun setMediaItems(containerId: String, component: MediaGalleryDisplayComponent, componentContext: ComponentContext) {
-      q.h(var1, "containerId");
-      q.h(var2, "component");
-      q.h(var3, "componentContext");
+      r.h(var1, "containerId");
+      r.h(var2, "component");
+      r.h(var3, "componentContext");
       this.containerId = var1;
       this.component = var2;
       this.componentContext = var3;

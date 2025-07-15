@@ -1,7 +1,7 @@
 package com.discord.span.utilities.common
 
 import android.util.SizeF
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
    public final val color: Int
@@ -9,7 +9,7 @@ public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
    public final val offset: SizeF
 
    init {
-      q.h(var3, "offset");
+      r.h(var3, "offset");
       super();
       this.color = var1;
       this.radius = var2;
@@ -29,7 +29,7 @@ public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
    }
 
    public fun copy(color: Int = var0.color, radius: Float = var0.radius, offset: SizeF = var0.offset): ShadowStyle {
-      q.h(var3, "offset");
+      r.h(var3, "offset");
       return new ShadowStyle(var1, var2, var3);
    }
 
@@ -45,7 +45,7 @@ public data class ShadowStyle(color: Int, radius: Float, offset: SizeF) {
          } else if (java.lang.Float.compare(this.radius, var1.radius) != 0) {
             return false;
          } else {
-            return q.c(this.offset, var1.offset);
+            return r.c(this.offset, var1.offset);
          }
       }
    }

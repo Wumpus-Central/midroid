@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.truncation
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
@@ -62,12 +62,12 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
             return false;
          } else if (this.expandable != var1.expandable) {
             return false;
-         } else if (!q.c(this.seeMoreLabel, var1.seeMoreLabel)) {
+         } else if (!r.c(this.seeMoreLabel, var1.seeMoreLabel)) {
             return false;
-         } else if (!q.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
+         } else if (!r.c(this.seeMoreLabelColor, var1.seeMoreLabelColor)) {
             return false;
          } else {
-            return q.c(this.forceShow, var1.forceShow);
+            return r.c(this.forceShow, var1.forceShow);
          }
       }
    }
@@ -100,8 +100,8 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
    public override fun toString(): String {
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
-      val var5: java.lang.String = this.seeMoreLabel;
-      val var6: Int = this.seeMoreLabelColor;
+      val var6: java.lang.String = this.seeMoreLabel;
+      val var5: Int = this.seeMoreLabelColor;
       val var3: java.lang.Boolean = this.forceShow;
       val var4: StringBuilder = new StringBuilder();
       var4.append("Truncation(numberOfLines=");
@@ -109,9 +109,9 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       var4.append(", expandable=");
       var4.append(var2);
       var4.append(", seeMoreLabel=");
-      var4.append(var5);
-      var4.append(", seeMoreLabelColor=");
       var4.append(var6);
+      var4.append(", seeMoreLabelColor=");
+      var4.append(var5);
       var4.append(", forceShow=");
       var4.append(var3);
       var4.append(")");

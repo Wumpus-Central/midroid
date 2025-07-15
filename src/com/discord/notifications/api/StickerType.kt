@@ -1,12 +1,12 @@
 package com.discord.notifications.api
 
-import A9.a
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kb.f
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import lb.f
+import z9.a
 
 @f(with = StickerType.Serializer::class)
 public enum class StickerType(serialNumber: Int) : IntEnum {
@@ -71,5 +71,5 @@ public enum class StickerType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(G.b(StickerType.class), null, 2)
+   public object Serializer : IntEnumSerializer(H.b(StickerType.class), null, 2)
 }

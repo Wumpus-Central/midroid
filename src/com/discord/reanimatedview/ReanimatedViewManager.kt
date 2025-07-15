@@ -11,20 +11,20 @@ import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewManager
 import com.swmansion.reanimated.NodesManager
 import com.swmansion.reanimated.ReanimatedModule
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 @ReactModule(name = "ReanimatedView")
 public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInterface<ReactViewGroup> {
    private final var nodesManager: NodesManager?
 
    public fun allowUpdating(view: ReactViewGroup): Boolean {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var1.getTag(R.id.firstRenderPerformed) == null) {
          return true;
       } else {
          val var2: NodesManager = this.nodesManager;
          if (this.nodesManager != null) {
-            q.e(this.nodesManager);
+            r.e(this.nodesManager);
             if (!var2.isPerformOperationsActive()) {
                return false;
             }
@@ -35,7 +35,7 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
    }
 
    public open fun createViewInstance(context: ThemedReactContext): ReactViewGroup {
-      q.h(var1, "context");
+      r.h(var1, "context");
       if (this.nodesManager == null) {
          val var2: ReanimatedModule = var1.getNativeModule(ReanimatedModule.class) as ReanimatedModule;
          val var3: NodesManager;
@@ -56,22 +56,22 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
    }
 
    protected open fun onAfterUpdateTransaction(view: ReactViewGroup) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super.onAfterUpdateTransaction(var1);
       var1.setTag(R.id.firstRenderPerformed, java.lang.Boolean.TRUE);
    }
 
    protected open fun prepareToRecycleView(reactContext: ThemedReactContext, view: ReactViewGroup): ReactViewGroup {
-      q.h(var1, "reactContext");
-      q.h(var2, "view");
+      r.h(var1, "reactContext");
+      r.h(var2, "view");
       var2.setTag(R.id.firstRenderPerformed, null);
       return super.prepareToRecycleView(var1, var2);
    }
 
    @ReactPropGroup(names = ["borderRadius", "borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius", "borderTopStartRadius", "borderTopEndRadius", "borderBottomStartRadius", "borderBottomEndRadius", "borderEndEndRadius", "borderEndStartRadius", "borderStartEndRadius", "borderStartStartRadius"])
    public open fun setBorderRadius(view: ReactViewGroup, index: Int, rawBorderRadius: Dynamic) {
-      q.h(var1, "view");
-      q.h(var3, "rawBorderRadius");
+      r.h(var1, "view");
+      r.h(var3, "rawBorderRadius");
       if (this.allowUpdating(var1)) {
          super.setBorderRadius(var1, var2, var3);
       }
@@ -79,7 +79,7 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
 
    @ReactProp(name = "opacity")
    public open fun setOpacity(view: ReactViewGroup, value: Float) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (this.allowUpdating(var1)) {
          super.setOpacity(var1, var2);
       }
@@ -87,7 +87,7 @@ public class ReanimatedViewManager : ReactViewManager, ReanimatedViewManagerInte
 
    @ReactProp(name = "transform")
    public open fun setTransform(view: ReactViewGroup, matrix: ReadableArray?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (this.allowUpdating(var1)) {
          super.setTransform(var1, var2);
       }

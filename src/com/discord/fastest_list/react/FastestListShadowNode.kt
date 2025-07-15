@@ -4,8 +4,8 @@ import android.graphics.RectF
 import com.discord.fastest_list.android.FastestListView
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.facebook.react.uimanager.LayoutShadowNode
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import r9.n
 
 internal class FastestListShadowNode : LayoutShadowNode {
    private final var isDirty: Boolean
@@ -27,11 +27,11 @@ internal class FastestListShadowNode : LayoutShadowNode {
    }
 
    public open fun setDefaultPadding(spacingType: Int, padding: Float) {
-      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append(" does not support default padding");
-      throw new IllegalStateException(var4.toString().toString());
+      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append(" does not support default padding");
+      throw new IllegalStateException(var3.toString().toString());
    }
 
    public open fun setPadding(spacingType: Int, padding: Float) {
@@ -85,18 +85,18 @@ internal class FastestListShadowNode : LayoutShadowNode {
             this.padding.right = var2;
       }
 
-      if (!q.c(this.paddingPrev, this.padding)) {
+      if (!r.c(this.paddingPrev, this.padding)) {
          this.paddingPrev.set(this.padding);
          this.isDirty = true;
       }
    }
 
    public open fun setPaddingPercent(spacingType: Int, percent: Float): Nothing {
-      val var3: java.lang.String = FastestListShadowNode.class.getSimpleName();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append(var3);
-      var4.append(" does not support percentage based padding");
-      throw new IllegalStateException(var4.toString().toString());
+      val var4: java.lang.String = FastestListShadowNode.class.getSimpleName();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append(var4);
+      var3.append(" does not support percentage based padding");
+      throw new IllegalStateException(var3.toString().toString());
    }
 
    public open fun setReactTag(reactTag: Int) {
@@ -108,12 +108,12 @@ internal class FastestListShadowNode : LayoutShadowNode {
       private final val activeShadowNodes: MutableMap<Int, FastestListShadowNode>
 
       public fun FastestListView.dropShadowNode() {
-         q.h(var1, "<this>");
+         r.h(var1, "<this>");
          FastestListShadowNode.access$getActiveShadowNodes$cp().remove(var1.getId());
       }
 
       public fun FastestListView.updateFromShadowNode() {
-         q.h(var1, "<this>");
+         r.h(var1, "<this>");
          val var2: FastestListShadowNode = FastestListShadowNode.access$getActiveShadowNodes$cp().get(var1.getId()) as FastestListShadowNode;
          if (var2 != null) {
             FastestListShadowNode.access$flushChanges(var2, var1);

@@ -14,7 +14,7 @@ import com.discord.theme.DiscordTheme
 import com.discord.theme.ThemeManager
 import com.google.android.flexbox.FlexboxLayout
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ShortcutsFlexbox  public constructor(context: Context, attrs: AttributeSet? = null) : FlexboxLayout {
    private final val addReactionView: AddReactionView
@@ -25,12 +25,12 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    private final val threadView: AddReactionView
 
    fun ShortcutsFlexbox(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       this.addReactionView = new AddReactionView(var1, null, 2, null);
       this.addBurstReactionView = new AddReactionView(var1, null, 2, null);
@@ -62,7 +62,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
 
    private fun createAndAddReactionView(index: Int, shortcutsEnabled: Boolean, nonReactionShortcutsVisible: Boolean, processedReactionsCount: Int): ReactionView {
       val var5: Context = this.getContext();
-      q.g(var5, "getContext(...)");
+      r.g(var5, "getContext(...)");
       val var9: ReactionView = new ReactionView(var5, null, 2, null);
       this.addView(var9, var1);
       var var7: Byte;
@@ -74,7 +74,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
 
       var7 = SizeUtilsKt.getDpToPx(var7);
       val var6: LayoutParams = var9.getLayoutParams();
-      q.f(var6, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
+      r.f(var6, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
       val var10: com.google.android.flexbox.FlexboxLayout.LayoutParams = var6 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
       if (!var2) {
          var7 = SizeUtilsKt.getDpToPx(4);
@@ -89,10 +89,10 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var12: ReactionView;
       if (var1 < this.getChildCount() - 1) {
          val var7: View = this.getChildAt(var1);
-         q.f(var7, "null cannot be cast to non-null type com.discord.reactions.ReactionView");
+         r.f(var7, "null cannot be cast to non-null type com.discord.reactions.ReactionView");
          var12 = var7 as ReactionView;
          val var8: LayoutParams = (var7 as ReactionView).getLayoutParams();
-         q.f(var8, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
+         r.f(var8, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
          val var13: com.google.android.flexbox.FlexboxLayout.LayoutParams = var8 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
          if (var2) {
             var var9: Boolean;
@@ -147,7 +147,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
 
    @JvmStatic
    fun `setReactions$lambda$2`(var0: ReactionView.Reaction): Unit {
-      q.h(var0, "<unused var>");
+      r.h(var0, "<unused var>");
       return Unit.a;
    }
 
@@ -176,7 +176,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
 
    private fun setShortcutMargins(shortcutView: AddReactionView) {
       val var2: LayoutParams = var1.getLayoutParams();
-      q.f(var2, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
+      r.f(var2, "null cannot be cast to non-null type com.google.android.flexbox.FlexboxLayout.LayoutParams");
       val var3: com.google.android.flexbox.FlexboxLayout.LayoutParams = var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams;
       (var2 as com.google.android.flexbox.FlexboxLayout.LayoutParams).setMargins(0, 0, SizeUtilsKt.getDpToPx(6), SizeUtilsKt.getDpToPx(4));
       var1.setLayoutParams(var3);
@@ -190,10 +190,10 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       addNewReactionAccessibilityLabel: String,
       addNewBurstReactionAccessibilityLabel: String,
       reactionsTheme: ReactionsTheme?,
-      onAddReactionClick: OnClickListener = new c(),
-      onAddBurstReactionClick: OnClickListener = new d(),
+      onAddReactionClick: OnClickListener = new d(),
+      onAddBurstReactionClick: OnClickListener = new e(),
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new e(),
+      onReactionLongPress: (Reaction) -> Unit = new f(),
       theme: DiscordTheme? = null,
       showReactionShortcut: Boolean = false,
       showReplyShortcut: Boolean = false,
@@ -207,17 +207,17 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       forwardAccessibilityLabel: String? = ...,
       threadAccessibilityLabel: String? = null
    ) {
-      q.h(var1, "reactions");
-      q.h(var4, "addReactionLabel");
-      q.h(var5, "addNewReactionAccessibilityLabel");
-      q.h(var6, "addNewBurstReactionAccessibilityLabel");
-      q.h(var8, "onAddReactionClick");
-      q.h(var9, "onAddBurstReactionClick");
-      q.h(var10, "onReactionClick");
-      q.h(var11, "onReactionLongPress");
-      q.h(var18, "onReplyClick");
-      q.h(var19, "onForwardClick");
-      q.h(var20, "onThreadClick");
+      r.h(var1, "reactions");
+      r.h(var4, "addReactionLabel");
+      r.h(var5, "addNewReactionAccessibilityLabel");
+      r.h(var6, "addNewBurstReactionAccessibilityLabel");
+      r.h(var8, "onAddReactionClick");
+      r.h(var9, "onAddBurstReactionClick");
+      r.h(var10, "onReactionClick");
+      r.h(var11, "onReactionLongPress");
+      r.h(var18, "onReplyClick");
+      r.h(var19, "onForwardClick");
+      r.h(var20, "onThreadClick");
       val var29: ThemeManager = ThemeManager.INSTANCE;
       val var28: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var29.setThemeOverride(var12);
@@ -240,8 +240,8 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
          var41 = var41 as ReactionView.Reaction;
          val var30: ReactionView = this.getOrCreateReactionView(var24, var17, var27, var36.size());
          var30.setReaction((ReactionView.Reaction)var41, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new i(var10, (ReactionView.Reaction)var41), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new j(var11, (ReactionView.Reaction)var41), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new j(var10, (ReactionView.Reaction)var41), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new k(var11, (ReactionView.Reaction)var41), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var36.size());

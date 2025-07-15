@@ -9,8 +9,8 @@ import com.discord.theme.utils.ActivityThemeUtils
 import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import r9.n
 
 public object ThemeManager {
    private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)
@@ -34,13 +34,13 @@ public object ThemeManager {
 
                var var7: Resources = resources;
                if (resources == null) {
-                  q.y("resources");
+                  r.y("resources");
                   var7 = null;
                }
 
                var3 = resourceTheme;
                if (resourceTheme == null) {
-                  q.y("resourceTheme");
+                  r.y("resourceTheme");
                   var3 = null;
                }
 
@@ -48,13 +48,13 @@ public object ThemeManager {
             } else {
                var var9: Resources = resources;
                if (resources == null) {
-                  q.y("resources");
+                  r.y("resources");
                   var9 = null;
                }
 
                var3 = resourceTheme;
                if (resourceTheme == null) {
-                  q.y("resourceTheme");
+                  r.y("resourceTheme");
                   var3 = null;
                }
 
@@ -63,13 +63,13 @@ public object ThemeManager {
          } else {
             var var10: Resources = resources;
             if (resources == null) {
-               q.y("resources");
+               r.y("resources");
                var10 = null;
             }
 
             var3 = resourceTheme;
             if (resourceTheme == null) {
-               q.y("resourceTheme");
+               r.y("resourceTheme");
                var3 = null;
             }
 
@@ -78,12 +78,12 @@ public object ThemeManager {
       } else {
          var var11: Resources = resources;
          if (resources == null) {
-            q.y("resources");
+            r.y("resources");
             var11 = null;
          }
 
          if (resourceTheme == null) {
-            q.y("resourceTheme");
+            r.y("resourceTheme");
          } else {
             var3 = resourceTheme;
          }
@@ -111,7 +111,7 @@ public object ThemeManager {
       if (theme != null) {
          var1 = theme;
          if (theme == null) {
-            q.y("theme");
+            r.y("theme");
             var1 = null;
          }
       } else {
@@ -126,7 +126,7 @@ public object ThemeManager {
          var4.put(var1, var5);
       }
 
-      q.g(var5, "getOrPut(...)");
+      r.g(var5, "getOrPut(...)");
       return var5 as DiscordThemeObject;
    }
 
@@ -135,7 +135,7 @@ public object ThemeManager {
    }
 
    public fun init(context: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       resources = var1.getResources();
       resourceTheme = var1.getTheme();
       this.setTheme(DiscordTheme.DARK);
@@ -155,7 +155,7 @@ public object ThemeManager {
    public fun isThemeDark(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         q.y("theme");
+         r.y("theme");
          var2 = null;
       }
 
@@ -172,7 +172,7 @@ public object ThemeManager {
    public fun isThemeLight(): Boolean {
       var var2: DiscordTheme = theme;
       if (theme == null) {
-         q.y("theme");
+         r.y("theme");
          var2 = null;
       }
 
@@ -220,17 +220,17 @@ public object ThemeManager {
    }
 
    public fun updateSystemUi(activity: Activity) {
-      q.h(var1, "activity");
+      r.h(var1, "activity");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateSystemUi(view: View) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       UpdateSystemUiKt.updateSystemUi(var1);
    }
 
    public fun updateWindowBackground(context: Context, showSplashImage: Boolean) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       showSplashImage = var2;
       val var3: Activity;
       if (var1 is Activity) {

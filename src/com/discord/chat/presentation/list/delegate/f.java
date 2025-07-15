@@ -10,6 +10,6 @@ public final class f implements OnClickListener {
    public final SummarySeparatorChatListItem k;
 
    public final void onClick(View var1) {
-      SummarySeparatorDelegate.c(this.j, this.k, var1);
+      SummarySeparatorDelegate.b(this.j, this.k, var1);
    }
 }

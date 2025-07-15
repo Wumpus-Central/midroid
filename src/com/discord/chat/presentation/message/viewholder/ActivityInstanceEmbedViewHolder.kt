@@ -10,15 +10,15 @@ public class ActivityInstanceEmbedViewHolder(activityInstanceEmbedView: Activity
    public final val eventHandler: ChatEventHandler
 
    init {
-      kotlin.jvm.internal.q.h(var1, "activityInstanceEmbedView");
-      kotlin.jvm.internal.q.h(var2, "eventHandler");
+      kotlin.jvm.internal.r.h(var1, "activityInstanceEmbedView");
+      kotlin.jvm.internal.r.h(var2, "eventHandler");
       super(var1, null);
       this.activityInstanceEmbedView = var1;
       this.eventHandler = var2;
    }
 
    public fun bind(activityMessageAccessory: ActivityInstanceEmbedMessageAccessory) {
-      kotlin.jvm.internal.q.h(var1, "activityMessageAccessory");
+      kotlin.jvm.internal.r.h(var1, "activityMessageAccessory");
       val var4: ActivityInstanceEmbed = var1.getActivityInstanceEmbed();
       val var3: ActivityInstanceEmbedView = this.activityInstanceEmbedView;
       this.activityInstanceEmbedView.initAppMessageEmbed(var4.getAppMessageEmbedModel(), this.eventHandler, var1.getConstrainedWidth());

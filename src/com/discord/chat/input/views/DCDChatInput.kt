@@ -13,7 +13,7 @@ import com.discord.misc.utilities.keyboard.KeyboardExtensionsKt
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
 import com.discord.misc.utilities.view.ViewUtilsKt
 import com.discord.react_gesture_handler.GetDiscordGestureHandlerEnabledRootViewKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.jvm.internal.Ref.BooleanRef
 
 public class DCDChatInput  public constructor(context: Context, attrs: AttributeSet? = null) : AppCompatEditText {
@@ -22,14 +22,14 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    private final val measureAndLayoutRunnable: Runnable
 
    fun DCDChatInput(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
-      this.measureAndLayoutRunnable = new j(this);
+      this.measureAndLayoutRunnable = new k(this);
       this.setupExternalKeyboardSendRequests();
    }
 
@@ -39,12 +39,12 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    private fun setupExternalKeyboardSendRequests() {
-      this.setOnKeyListener(new i(new BooleanRef(), this));
+      this.setOnKeyListener(new j(new BooleanRef(), this));
    }
 
    @JvmStatic
    fun `setupExternalKeyboardSendRequests$lambda$2`(var0: BooleanRef, var1: DCDChatInput, var2: View, var3: Int, var4: KeyEvent): Boolean {
-      q.h(var4, "event");
+      r.h(var4, "event");
       if ((var4.getFlags() and 2) == 2) {
          return false;
       } else {
@@ -111,7 +111,7 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
 
    @SuppressLint(["ClickableViewAccessibility"])
    public open fun onTouchEvent(event: MotionEvent): Boolean {
-      q.h(var1, "event");
+      r.h(var1, "event");
       if (var1.getAction() == 0) {
          val var2: ViewGroup = GetDiscordGestureHandlerEnabledRootViewKt.getDiscordGestureHandlerEnabledRootView(this);
          if (var2 != null) {
@@ -142,12 +142,12 @@ public class DCDChatInput  public constructor(context: Context, attrs: Attribute
    }
 
    public fun setOnRequestSend(onRequestSend: () -> Unit) {
-      q.h(var1, "onRequestSend");
+      r.h(var1, "onRequestSend");
       this.onRequestSend = var1;
    }
 
    public fun setOnSelectionChanged(onSelectionChanged: (Int, Int) -> Unit) {
-      q.h(var1, "onSelectionChanged");
+      r.h(var1, "onSelectionChanged");
       this.onSelectionChanged = var1;
    }
 }

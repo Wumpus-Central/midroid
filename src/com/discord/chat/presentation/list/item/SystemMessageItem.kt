@@ -4,7 +4,7 @@ import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.MessageKt
 import com.discord.chat.presentation.root.MessageContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class SystemMessageItem(message: Message, messageContext: MessageContext, backgroundHighlight: BackgroundHighlight? = null) : ChatListItem {
    public final val message: Message
@@ -12,8 +12,8 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    public final val backgroundHighlight: BackgroundHighlight?
 
    init {
-      q.h(var1, "message");
-      q.h(var2, "messageContext");
+      r.h(var1, "message");
+      r.h(var2, "messageContext");
       super(var1.getId-3Eiw7ao(), null);
       this.message = var1;
       this.messageContext = var2;
@@ -40,8 +40,8 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
       messageContext: MessageContext = var0.messageContext,
       backgroundHighlight: BackgroundHighlight? = var0.backgroundHighlight
    ): SystemMessageItem {
-      q.h(var1, "message");
-      q.h(var2, "messageContext");
+      r.h(var1, "message");
+      r.h(var2, "messageContext");
       return new SystemMessageItem(var1, var2, var3);
    }
 
@@ -52,12 +52,12 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.message, var1.message)) {
+         if (!r.c(this.message, var1.message)) {
             return false;
-         } else if (!q.c(this.messageContext, var1.messageContext)) {
+         } else if (!r.c(this.messageContext, var1.messageContext)) {
             return false;
          } else {
-            return q.c(this.backgroundHighlight, var1.backgroundHighlight);
+            return r.c(this.backgroundHighlight, var1.backgroundHighlight);
          }
       }
    }
@@ -76,16 +76,16 @@ public data class SystemMessageItem(message: Message, messageContext: MessageCon
    }
 
    public override fun toString(): String {
-      val var1: Message = this.message;
+      val var4: Message = this.message;
       val var3: MessageContext = this.messageContext;
-      val var4: BackgroundHighlight = this.backgroundHighlight;
+      val var1: BackgroundHighlight = this.backgroundHighlight;
       val var2: StringBuilder = new StringBuilder();
       var2.append("SystemMessageItem(message=");
-      var2.append(var1);
+      var2.append(var4);
       var2.append(", messageContext=");
       var2.append(var3);
       var2.append(", backgroundHighlight=");
-      var2.append(var4);
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

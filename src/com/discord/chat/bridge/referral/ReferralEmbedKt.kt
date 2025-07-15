@@ -3,7 +3,7 @@ package com.discord.chat.bridge.referral
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import pb.g
+import ob.g
 
 @JvmSynthetic
 fun `access$hasPrimitives`(var0: JsonObject, vararg var1: java.lang.String): Boolean {

@@ -1,15 +1,15 @@
 package com.discord.chat.presentation.list.delegate;
 
-import com.discord.chat.presentation.list.item.MessageItem;
-import kotlin.jvm.functions.Function0;
+import com.discord.chat.presentation.list.ChatListFrameLayout;
+import com.discord.chat.presentation.list.item.PortalViewChatListItem;
 
 // $VF: synthetic class
-public final class d implements Function0 {
-   public final RegularMessageDelegate j;
-   public final MessageItem k;
-   public final BaseChatListItemDelegate.Metadata l;
+public final class d implements Runnable {
+   public final PortalViewChatListItem j;
+   public final ChatListFrameLayout k;
 
-   public final Object invoke() {
-      return RegularMessageDelegate.b(this.j, this.k, this.l);
+   @Override
+   public final void run() {
+      PortalViewDelegate.b(this.j, this.k);
    }
 }

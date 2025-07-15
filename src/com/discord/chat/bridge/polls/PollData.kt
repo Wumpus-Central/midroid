@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.polls
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class PollData(resources: PollResources,
@@ -42,12 +42,12 @@ public data class PollData(resources: PollResources,
    public final val promptLabel: String?
 
    init {
-      q.h(var1, "resources");
-      q.h(var2, "question");
-      q.h(var3, "answers");
-      q.h(var4, "answersInteraction");
-      q.h(var6, "layoutType");
-      q.h(var12, "containerStyle");
+      r.h(var1, "resources");
+      r.h(var2, "question");
+      r.h(var3, "answers");
+      r.h(var4, "answersInteraction");
+      r.h(var6, "layoutType");
+      r.h(var12, "containerStyle");
       super();
       this.resources = var1;
       this.question = var2;
@@ -155,12 +155,12 @@ public data class PollData(resources: PollResources,
       tertiaryAction: PollAction? = var0.tertiaryAction,
       promptLabel: String? = var0.promptLabel
    ): PollData {
-      q.h(var1, "resources");
-      q.h(var2, "question");
-      q.h(var3, "answers");
-      q.h(var4, "answersInteraction");
-      q.h(var6, "layoutType");
-      q.h(var12, "containerStyle");
+      r.h(var1, "resources");
+      r.h(var2, "question");
+      r.h(var3, "answers");
+      r.h(var4, "answersInteraction");
+      r.h(var6, "layoutType");
+      r.h(var12, "containerStyle");
       return new PollData(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17);
    }
 
@@ -171,15 +171,15 @@ public data class PollData(resources: PollResources,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.resources, var1.resources)) {
+         if (!r.c(this.resources, var1.resources)) {
             return false;
-         } else if (!q.c(this.question, var1.question)) {
+         } else if (!r.c(this.question, var1.question)) {
             return false;
-         } else if (!q.c(this.answers, var1.answers)) {
+         } else if (!r.c(this.answers, var1.answers)) {
             return false;
          } else if (this.answersInteraction != var1.answersInteraction) {
             return false;
-         } else if (!q.c(this.answerTapAccessibilityLabel, var1.answerTapAccessibilityLabel)) {
+         } else if (!r.c(this.answerTapAccessibilityLabel, var1.answerTapAccessibilityLabel)) {
             return false;
          } else if (this.layoutType != var1.layoutType) {
             return false;
@@ -193,27 +193,27 @@ public data class PollData(resources: PollResources,
             return false;
          } else if (this.isExpired != var1.isExpired) {
             return false;
-         } else if (!q.c(this.containerStyle, var1.containerStyle)) {
+         } else if (!r.c(this.containerStyle, var1.containerStyle)) {
             return false;
-         } else if (!q.c(this.myAvatarUrl, var1.myAvatarUrl)) {
+         } else if (!r.c(this.myAvatarUrl, var1.myAvatarUrl)) {
             return false;
-         } else if (!q.c(this.secondaryAction, var1.secondaryAction)) {
+         } else if (!r.c(this.secondaryAction, var1.secondaryAction)) {
             return false;
-         } else if (!q.c(this.primaryAction, var1.primaryAction)) {
+         } else if (!r.c(this.primaryAction, var1.primaryAction)) {
             return false;
-         } else if (!q.c(this.tertiaryAction, var1.tertiaryAction)) {
+         } else if (!r.c(this.tertiaryAction, var1.tertiaryAction)) {
             return false;
          } else {
-            return q.c(this.promptLabel, var1.promptLabel);
+            return r.c(this.promptLabel, var1.promptLabel);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = this.resources.hashCode();
-      val var10: Int = this.question.hashCode();
-      val var7: Int = this.answers.hashCode();
-      val var8: Int = this.answersInteraction.hashCode();
+      val var10: Int = this.resources.hashCode();
+      val var8: Int = this.question.hashCode();
+      val var9: Int = this.answers.hashCode();
+      val var7: Int = this.answersInteraction.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.answerTapAccessibilityLabel == null) {
@@ -222,13 +222,13 @@ public data class PollData(resources: PollResources,
          var1 = this.answerTapAccessibilityLabel.hashCode();
       }
 
-      val var16: Int = this.layoutType.hashCode();
-      val var17: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
+      val var11: Int = this.layoutType.hashCode();
+      val var16: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
       val var12: Int = java.lang.Boolean.hashCode(this.canTapAnswers);
-      val var15: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
-      val var14: Int = java.lang.Boolean.hashCode(this.hasVoted);
-      val var13: Int = java.lang.Boolean.hashCode(this.isExpired);
-      val var11: Int = this.containerStyle.hashCode();
+      val var13: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
+      val var15: Int = java.lang.Boolean.hashCode(this.hasVoted);
+      val var14: Int = java.lang.Boolean.hashCode(this.isExpired);
+      val var17: Int = this.containerStyle.hashCode();
       val var2: Int;
       if (this.myAvatarUrl == null) {
          var2 = 0;
@@ -274,33 +274,33 @@ public data class PollData(resources: PollResources,
                                                                                                 (
                                                                                                          (
                                                                                                                   (
-                                                                                                                           ((var9 * 31 + var10) * 31 + var7)
+                                                                                                                           ((var10 * 31 + var8) * 31 + var9)
                                                                                                                                  * 31
-                                                                                                                              + var8
+                                                                                                                              + var7
                                                                                                                         )
                                                                                                                         * 31
                                                                                                                      + var1
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var16
+                                                                                                            + var11
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var17
+                                                                                                   + var16
                                                                                              )
                                                                                              * 31
                                                                                           + var12
                                                                                     )
                                                                                     * 31
-                                                                                 + var15
+                                                                                 + var13
                                                                            )
                                                                            * 31
-                                                                        + var14
+                                                                        + var15
                                                                   )
                                                                   * 31
-                                                               + var13
+                                                               + var14
                                                          )
                                                          * 31
-                                                      + var11
+                                                      + var17
                                                 )
                                                 * 31
                                              + var2
@@ -320,59 +320,59 @@ public data class PollData(resources: PollResources,
 
    public override fun toString(): String {
       val var16: PollResources = this.resources;
-      val var12: PollMedia = this.question;
-      val var10: java.util.List = this.answers;
-      val var18: PollChatAnswerInteractionType = this.answersInteraction;
-      val var7: java.lang.String = this.answerTapAccessibilityLabel;
-      val var8: PollLayoutType = this.layoutType;
-      val var1: Boolean = this.canSelectMultipleAnswers;
-      val var4: Boolean = this.canTapAnswers;
-      val var3: Boolean = this.canShowVoteCounts;
+      val var8: PollMedia = this.question;
+      val var11: java.util.List = this.answers;
+      val var17: PollChatAnswerInteractionType = this.answersInteraction;
+      val var12: java.lang.String = this.answerTapAccessibilityLabel;
+      val var9: PollLayoutType = this.layoutType;
+      val var4: Boolean = this.canSelectMultipleAnswers;
+      val var3: Boolean = this.canTapAnswers;
+      val var1: Boolean = this.canShowVoteCounts;
       val var5: Boolean = this.hasVoted;
       val var2: Boolean = this.isExpired;
       val var6: java.lang.String = this.containerStyle;
-      val var15: java.lang.String = this.myAvatarUrl;
-      val var11: PollAction = this.secondaryAction;
-      val var9: PollAction = this.primaryAction;
-      val var14: PollAction = this.tertiaryAction;
-      val var17: java.lang.String = this.promptLabel;
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("PollData(resources=");
-      var13.append(var16);
-      var13.append(", question=");
-      var13.append(var12);
-      var13.append(", answers=");
-      var13.append(var10);
-      var13.append(", answersInteraction=");
-      var13.append(var18);
-      var13.append(", answerTapAccessibilityLabel=");
-      var13.append(var7);
-      var13.append(", layoutType=");
-      var13.append(var8);
-      var13.append(", canSelectMultipleAnswers=");
-      var13.append(var1);
-      var13.append(", canTapAnswers=");
-      var13.append(var4);
-      var13.append(", canShowVoteCounts=");
-      var13.append(var3);
-      var13.append(", hasVoted=");
-      var13.append(var5);
-      var13.append(", isExpired=");
-      var13.append(var2);
-      var13.append(", containerStyle=");
-      var13.append(var6);
-      var13.append(", myAvatarUrl=");
-      var13.append(var15);
-      var13.append(", secondaryAction=");
-      var13.append(var11);
-      var13.append(", primaryAction=");
-      var13.append(var9);
-      var13.append(", tertiaryAction=");
-      var13.append(var14);
-      var13.append(", promptLabel=");
-      var13.append(var17);
-      var13.append(")");
-      return var13.toString();
+      val var10: java.lang.String = this.myAvatarUrl;
+      val var13: PollAction = this.secondaryAction;
+      val var7: PollAction = this.primaryAction;
+      val var15: PollAction = this.tertiaryAction;
+      val var14: java.lang.String = this.promptLabel;
+      val var18: StringBuilder = new StringBuilder();
+      var18.append("PollData(resources=");
+      var18.append(var16);
+      var18.append(", question=");
+      var18.append(var8);
+      var18.append(", answers=");
+      var18.append(var11);
+      var18.append(", answersInteraction=");
+      var18.append(var17);
+      var18.append(", answerTapAccessibilityLabel=");
+      var18.append(var12);
+      var18.append(", layoutType=");
+      var18.append(var9);
+      var18.append(", canSelectMultipleAnswers=");
+      var18.append(var4);
+      var18.append(", canTapAnswers=");
+      var18.append(var3);
+      var18.append(", canShowVoteCounts=");
+      var18.append(var1);
+      var18.append(", hasVoted=");
+      var18.append(var5);
+      var18.append(", isExpired=");
+      var18.append(var2);
+      var18.append(", containerStyle=");
+      var18.append(var6);
+      var18.append(", myAvatarUrl=");
+      var18.append(var10);
+      var18.append(", secondaryAction=");
+      var18.append(var13);
+      var18.append(", primaryAction=");
+      var18.append(var7);
+      var18.append(", tertiaryAction=");
+      var18.append(var15);
+      var18.append(", promptLabel=");
+      var18.append(var14);
+      var18.append(")");
+      return var18.toString();
    }
 
    public companion object {

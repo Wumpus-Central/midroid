@@ -8,7 +8,7 @@ import java.nio.ByteBuffer
 import java.util.LinkedHashMap
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CancellableContinuation
 
 internal object Transcoder {
@@ -20,7 +20,7 @@ internal object Transcoder {
    }
 
    public fun cancel(requestId: String) {
-      q.h(var1, "requestId");
+      r.h(var1, "requestId");
       val var2: Function0 = cancelCallbacks.remove(var1);
       if (var2 != null) {
          var2.invoke();
@@ -35,7 +35,7 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(z9.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(y9.b.c(var7), 1);
       var8.C();
       val var9: MediaTransformer = new MediaTransformer(var2);
       access$getCancelCallbacks$p().put(var1, new Function0(var9, var1) {
@@ -95,8 +95,8 @@ internal object Transcoder {
       }
 
       val var14: com.linkedin.android.litr.d = new com.linkedin.android.litr.d.b().c(true).b(var5.getProgressUpdateGranularity()).a();
-      q.g(var14, "build(...)");
-      var9.h(var1, var3.getInputUri(), var4, var13, var3.getAudioFormat(), new c8.a(var6, var9, var1, var8, var4) {
+      r.g(var14, "build(...)");
+      var9.h(var1, var3.getInputUri(), var4, var13, var3.getAudioFormat(), new b8.a(var6, var9, var1, var8, var4) {
          final CancellableContinuation $continuation;
          final Function1 $onProgress;
          final Uri $outputUri;
@@ -111,8 +111,8 @@ internal object Transcoder {
             this.$outputUri = var5;
          }
 
-         public void onCancelled(java.lang.String var1, java.util.List<d8.a> var2) {
-            q.h(var1, "id");
+         public void onCancelled(java.lang.String var1, java.util.List<c8.a> var2) {
+            r.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             if (this.$continuation.c()) {
@@ -120,8 +120,8 @@ internal object Transcoder {
             }
          }
 
-         public void onCompleted(java.lang.String var1, java.util.List<d8.a> var2) {
-            q.h(var1, "id");
+         public void onCompleted(java.lang.String var1, java.util.List<c8.a> var2) {
+            r.h(var1, "id");
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
@@ -129,8 +129,8 @@ internal object Transcoder {
             this.$continuation.resumeWith(Result.b(this.$outputUri));
          }
 
-         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<d8.a> var3) {
-            q.h(var1, "id");
+         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<c8.a> var3) {
+            r.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
             val var4: kotlin.Result.a = Result.k;
@@ -143,12 +143,12 @@ internal object Transcoder {
          }
 
          public void onProgress(java.lang.String var1, float var2) {
-            q.h(var1, "id");
+            r.h(var1, "id");
             this.$onProgress.invoke(var2);
          }
 
          public void onStarted(java.lang.String var1) {
-            q.h(var1, "id");
+            r.h(var1, "id");
             this.$onProgress.invoke(0.0F);
          }
       }, var14);
@@ -164,7 +164,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === z9.b.e()) {
+      if (var12 === y9.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

@@ -1,19 +1,19 @@
 package com.discord.crash_reporting.system_logs
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 private class DebugPrintBuilder(sb: StringBuilder) {
    public final val sb: StringBuilder
    private final var indentation: Int
 
    init {
-      q.h(var1, "sb");
+      r.h(var1, "sb");
       super();
       this.sb = var1;
    }
 
    public fun appendKeyValue(key: String, value: Any?) {
-      q.h(var1, "key");
+      r.h(var1, "key");
       val var4: Int = this.indentation;
 
       for (int var3 = 0; var3 < var4; var3++) {
@@ -38,14 +38,14 @@ private class DebugPrintBuilder(sb: StringBuilder) {
       this.sb.append(var1);
       val var7: StringBuilder = this.sb;
       this.sb.append('\n');
-      q.g(var7, "append(...)");
+      r.g(var7, "append(...)");
    }
 
    public fun appendLine(s: String? = null) {
       val var2: StringBuilder = this.sb;
       this.sb.append(var1);
-      q.g(var2, "append(...)");
+      r.g(var2, "append(...)");
       var2.append('\n');
-      q.g(var2, "append(...)");
+      r.g(var2, "append(...)");
    }
 }

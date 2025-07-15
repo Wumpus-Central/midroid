@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component {
@@ -14,7 +14,7 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
    }
 
    init {
-      q.h(var2, "id");
+      r.h(var2, "id");
       super(null);
       this.type = var1;
       this.id = var2;
@@ -29,7 +29,7 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
    }
 
    public fun copy(type: Int = var0.type, id: String = var0.id): UnknownComponent {
-      q.h(var2, "id");
+      r.h(var2, "id");
       return new UnknownComponent(var1, var2);
    }
 
@@ -43,7 +43,7 @@ public data class UnknownComponent(type: Int = 0, id: String = "-1") : Component
          if (this.type != var1.type) {
             return false;
          } else {
-            return q.c(this.id, var1.id);
+            return r.c(this.id, var1.id);
          }
       }
    }

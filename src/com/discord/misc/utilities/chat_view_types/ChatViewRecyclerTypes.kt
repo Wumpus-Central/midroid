@@ -3,7 +3,6 @@ package com.discord.misc.utilities.chat_view_types
 public object ChatViewRecyclerTypes {
    public const val CONTENT: Int = 0
    public const val EMBED: Int = 1
-   public const val UPLOAD_PROGRESS: Int = 3
    public const val REACTIONS: Int = 4
    public const val GUILD_INVITE: Int = 5
    public const val STICKER_PNG: Int = 6

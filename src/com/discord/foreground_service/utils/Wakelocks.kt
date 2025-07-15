@@ -7,7 +7,7 @@ import android.os.PowerManager
 import android.os.Build.VERSION
 import android.os.PowerManager.WakeLock
 import androidx.core.content.b
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
    private final val tag: String
@@ -16,14 +16,14 @@ internal class Wakelocks(tag: String, timeout: Long = 3600000L) {
    private final var wakeLockWifi: WifiLock?
 
    init {
-      q.h(var1, "tag");
+      r.h(var1, "tag");
       super();
       this.tag = var1;
       this.timeout = var2;
    }
 
    public fun acquire(context: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       val var2: WifiManager = b.i(var1, WifiManager.class) as WifiManager;
       if (var2 != null) {
          if (VERSION.SDK_INT >= 34) {

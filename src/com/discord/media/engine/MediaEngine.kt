@@ -1,5 +1,6 @@
 package com.discord.media.engine
 
+import ab.x0
 import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
@@ -9,7 +10,6 @@ import android.media.MediaCodecList
 import android.os.Build
 import android.os.Build.VERSION
 import android.util.Base64
-import bb.x0
 import com.discord.async_init.AsyncInitDispatcher
 import com.discord.logging.Log
 import com.discord.media.engine.types.Debug
@@ -37,7 +37,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.webrtc.VideoFrame
 
-public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = bb.K.a()) {
+public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = ab.K.a()) {
    private final val context: Context
    private final val instanceCreationNs: Long
    private final val engineConnections: MediaEngineNativeConnections
@@ -74,49 +74,49 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "coroutineDispatcher");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "coroutineDispatcher");
       super();
       this.context = var1;
       this.instanceCreationNs = System.nanoTime();
       this.engineConnections = new MediaEngineNativeConnections();
       this.dispatcher = new AsyncInitDispatcher("MediaEngine", 0L, 2, null);
-      this.coroutineScope = kotlinx.coroutines.g.a(var2.Q(new bb.B("MediaEngine")));
+      this.coroutineScope = kotlinx.coroutines.g.a(var2.R(new ab.B("MediaEngine")));
    }
 
    @JvmStatic
    fun `connectionInstanceGetEncryptionModes$lambda$58`(var0: Function1, var1: Array<java.lang.String>) {
-      kotlin.jvm.internal.q.h(var1, "modes");
+      kotlin.jvm.internal.r.h(var1, "modes");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstanceGetFilteredStats$lambda$60`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "stats");
+      kotlin.jvm.internal.r.h(var1, "stats");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstanceGetMLSKeyPackageB64$lambda$62`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "keyPackageB64");
+      kotlin.jvm.internal.r.h(var1, "keyPackageB64");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstanceGetMLSPairwiseFingerprintB64$lambda$66`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "fingerprint");
+      kotlin.jvm.internal.r.h(var1, "fingerprint");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstanceGetStats$lambda$59`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "stats");
+      kotlin.jvm.internal.r.h(var1, "stats");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstancePrepareMLSCommitTransitionB64$lambda$64`(var0: Function3, var1: Boolean, var2: Int, var3: java.lang.String) {
-      kotlin.jvm.internal.q.h(var3, "rosterChange");
+      kotlin.jvm.internal.r.h(var3, "rosterChange");
       var0.invoke(var1, var2, var3);
    }
 
@@ -127,73 +127,73 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
    @JvmStatic
    fun `connectionInstanceProcessMLSProposalsB64$lambda$63`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "commitWelcome");
+      kotlin.jvm.internal.r.h(var1, "commitWelcome");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `connectionInstanceProcessMLSWelcomeB64$lambda$65`(var0: Function3, var1: Boolean, var2: Int, var3: java.lang.String) {
-      kotlin.jvm.internal.q.h(var3, "rosterChange");
+      kotlin.jvm.internal.r.h(var3, "rosterChange");
       var0.invoke(var1, var2, var3);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnFirstFrameCallback$lambda$51`(var0: Function3, var1: java.lang.String, var2: Long, var4: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "userId");
-      kotlin.jvm.internal.q.h(var4, "streamId");
+      kotlin.jvm.internal.r.h(var1, "userId");
+      kotlin.jvm.internal.r.h(var4, "streamId");
       var0.invoke(var1, var2, var4);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnMLSFailureCallback$lambda$53`(var0: Function2, var1: java.lang.String, var2: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "source");
-      kotlin.jvm.internal.q.h(var2, "reason");
+      kotlin.jvm.internal.r.h(var1, "source");
+      kotlin.jvm.internal.r.h(var2, "reason");
       var0.invoke(var1, var2);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnPingCallback$lambda$49`(var0: Function4, var1: Int, var2: java.lang.String, var3: Int, var4: Int) {
-      kotlin.jvm.internal.q.h(var2, "server");
+      kotlin.jvm.internal.r.h(var2, "server");
       var0.invoke(var1, var2, var3, var4);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnPingTimeoutCallback$lambda$50`(var0: Function4, var1: java.lang.String, var2: Int, var3: Int, var4: Int) {
-      kotlin.jvm.internal.q.h(var1, "server");
+      kotlin.jvm.internal.r.h(var1, "server");
       var0.invoke(var1, var2, var3, var4);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnSpeakingCallback$lambda$48`(var0: Function2, var1: java.lang.String, var2: Int) {
-      kotlin.jvm.internal.q.h(var1, "userId");
+      kotlin.jvm.internal.r.h(var1, "userId");
       var0.invoke(var1, var2);
    }
 
    @JvmStatic
    fun `connectionInstanceSetOnVideoCallback$lambda$52`(var0: Function4, var1: java.lang.String, var2: Long, var4: java.lang.String, var5: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "userId");
-      kotlin.jvm.internal.q.h(var4, "streamId");
-      kotlin.jvm.internal.q.h(var5, "videoStreamParametersJSON");
+      kotlin.jvm.internal.r.h(var1, "userId");
+      kotlin.jvm.internal.r.h(var4, "streamId");
+      kotlin.jvm.internal.r.h(var5, "videoStreamParametersJSON");
       var0.invoke(var1, var2, var4, var5);
    }
 
    @JvmStatic
    fun `connectionInstanceSetSecureFramesStateUpdateCallback$lambda$54`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "stateUpdateJSON");
+      kotlin.jvm.internal.r.h(var1, "stateUpdateJSON");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `createVoiceConnection$lambda$46`(var0: Function2, var1: ConnectionInfo, var2: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "connectionInfo");
-      kotlin.jvm.internal.q.h(var2, "errorMessage");
-      val var3: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("On created with ");
-      var4.append(var1);
-      var4.append(", ");
-      var4.append(var2);
-      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+      kotlin.jvm.internal.r.h(var1, "connectionInfo");
+      kotlin.jvm.internal.r.h(var2, "errorMessage");
+      val var4: Log = Log.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("On created with ");
+      var3.append(var1);
+      var3.append(", ");
+      var3.append(var2);
+      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -207,67 +207,67 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
    @JvmStatic
    fun `getCodecCapabilities$lambda$33$lambda$32`(var0: Function1, var1: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "codecs");
+      kotlin.jvm.internal.r.h(var1, "codecs");
       var0.invoke(var1);
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var4: NativeConnection = this.engineConnections.get(var1);
-      if (var4 == null) {
-         val var3: Log = Log.INSTANCE;
+      val var3: NativeConnection = this.engineConnections.get(var1);
+      if (var3 == null) {
+         val var4: Log = Log.INSTANCE;
          val var5: StringBuilder = new StringBuilder();
          var5.append("[");
          var5.append(var2);
          var5.append("] no NativeConnection for connectionId=");
          var5.append(var1);
          var5.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var5.toString(), null, 4, null);
+         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
       }
 
-      return var4;
+      return var3;
    }
 
    @JvmStatic
    fun `getInputDevices$lambda$10$lambda$9`(var0: Function1, var1: Array<AudioInputDeviceDescription>) {
-      kotlin.jvm.internal.q.h(var1, "devices");
+      kotlin.jvm.internal.r.h(var1, "devices");
       var0.invoke(NativeTypeExtensionsKt.toListOfMaps(var1));
    }
 
    @JvmStatic
    fun `getMLSSigningKeyB64$lambda$67`(var0: Function2, var1: java.lang.String, var2: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "key");
-      kotlin.jvm.internal.q.h(var2, "signature");
+      kotlin.jvm.internal.r.h(var1, "key");
+      kotlin.jvm.internal.r.h(var2, "signature");
       var0.invoke(var1, var2);
    }
 
    @JvmStatic
    fun `getOutputDevices$lambda$15$lambda$14`(var0: Function1, var1: Array<AudioOutputDeviceDescription>) {
-      kotlin.jvm.internal.q.h(var1, "devices");
+      kotlin.jvm.internal.r.h(var1, "devices");
       var0.invoke(NativeTypeExtensionsKt.toListOfMaps(var1));
    }
 
    @JvmStatic
    fun `getSupportedVideoCodecs$lambda$30$lambda$29`(var0: Function1, var1: Array<java.lang.String>) {
-      kotlin.jvm.internal.q.h(var1, "codecs");
+      kotlin.jvm.internal.r.h(var1, "codecs");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `getVideoInputDevices$lambda$20$lambda$19`(var0: Function1, var1: Array<VideoInputDeviceDescription>) {
-      kotlin.jvm.internal.q.h(var1, "videoInputDevices");
+      kotlin.jvm.internal.r.h(var1, "videoInputDevices");
       var0.invoke(NativeTypeExtensionsKt.toListOfMaps(var1));
    }
 
    @JvmStatic
    fun `rankRtcRegions$lambda$39$lambda$38`(var0: Function1, var1: Array<java.lang.String>) {
-      kotlin.jvm.internal.q.h(var1, "regions");
+      kotlin.jvm.internal.r.h(var1, "regions");
       var0.invoke(var1);
    }
 
    @JvmStatic
    fun `setBroadcastThumbnailParams$lambda$57$lambda$56`(var0: MediaEngine, var1: Function1, var2: Bitmap): Unit {
-      kotlin.jvm.internal.q.h(var2, "bitmap");
-      bb.f.d(var0.coroutineScope, null, null, new Function2(var2, var1, null) {
+      kotlin.jvm.internal.r.h(var2, "bitmap");
+      ab.f.d(var0.coroutineScope, null, null, new Function2(var2, var1, null) {
          final Bitmap $bitmap;
          final Function1 $callback;
          int label;
@@ -287,7 +287,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = z9.b.e();
+            val var4: Any = y9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -320,7 +320,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
    @JvmStatic
    fun `stopLocalAudioRecording$lambda$43$lambda$42`(var0: Function2, var1: java.lang.String, var2: Int) {
-      kotlin.jvm.internal.q.h(var1, "fileName");
+      kotlin.jvm.internal.r.h(var1, "fileName");
       var0.invoke(var1, var2);
    }
 
@@ -335,7 +335,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun activeSinksChanged(streamId: String, active: Boolean): Unit? {
-      kotlin.jvm.internal.q.h(var1, "streamId");
+      kotlin.jvm.internal.r.h(var1, "streamId");
       val var4: Unit;
       if (this.activeSinksChangeCallback != null) {
          this.activeSinksChangeCallback.invoke(var1, var2);
@@ -366,7 +366,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceDestroyUser(connectionId: Int, userId: String): Unit? {
-      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var2, "userId");
       val var3: NativeConnection = this.getConnection(var1, "destroyUser");
       val var4: Unit;
       if (var3 != null) {
@@ -406,7 +406,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceGetEncryptionModes(connectionId: Int, callback: (Array<String>) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "callback");
+      kotlin.jvm.internal.r.h(var2, "callback");
       val var3: NativeConnection = this.getConnection(var1, "getEncryptionModes");
       val var4: Unit;
       if (var3 != null) {
@@ -420,7 +420,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceGetFilteredStats(connectionId: Int, filter: Int, callback: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var3, "callback");
+      kotlin.jvm.internal.r.h(var3, "callback");
       val var4: NativeConnection = this.getConnection(var1, "getFilteredStats");
       val var5: Unit;
       if (var4 != null) {
@@ -434,7 +434,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceGetMLSKeyPackageB64(connectionId: Int, callback: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "callback");
+      kotlin.jvm.internal.r.h(var2, "callback");
       val var3: NativeConnection = this.getConnection(var1, "getMLSKeyPackageB64");
       val var4: Unit;
       if (var3 != null) {
@@ -448,8 +448,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceGetMLSPairwiseFingerprintB64(connectionId: Int, version: Int, userId: String, callback: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var3, "userId");
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var3, "userId");
+      kotlin.jvm.internal.r.h(var4, "callback");
       val var5: NativeConnection = this.getConnection(var1, "getMLSPairwiseFingerprintB64");
       val var6: Unit;
       if (var5 != null) {
@@ -463,7 +463,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceGetStats(connectionId: Int, callback: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "callback");
+      kotlin.jvm.internal.r.h(var2, "callback");
       val var3: NativeConnection = this.getConnection(var1, "getStats");
       val var4: Unit;
       if (var3 != null) {
@@ -477,7 +477,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceMergeUsers(connectionId: Int, usersJSON: String): Unit? {
-      kotlin.jvm.internal.q.h(var2, "usersJSON");
+      kotlin.jvm.internal.r.h(var2, "usersJSON");
       val var3: NativeConnection = this.getConnection(var1, "mergeUsers");
       val var4: Unit;
       if (var3 != null) {
@@ -491,8 +491,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstancePrepareMLSCommitTransitionB64(connectionId: Int, transitionId: Int, commit: String, callback: (Boolean, Int, String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var3, "commit");
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var3, "commit");
+      kotlin.jvm.internal.r.h(var4, "callback");
       val var5: NativeConnection = this.getConnection(var1, "prepareMLSCommitTransitionB64");
       val var6: Unit;
       if (var5 != null) {
@@ -506,8 +506,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstancePrepareSecureFramesEpoch(connectionId: Int, epoch: String, transitionId: Int, groupId: String): Unit? {
-      kotlin.jvm.internal.q.h(var2, "epoch");
-      kotlin.jvm.internal.q.h(var4, "groupId");
+      kotlin.jvm.internal.r.h(var2, "epoch");
+      kotlin.jvm.internal.r.h(var4, "groupId");
       val var5: NativeConnection = this.getConnection(var1, "prepareSecureFramesEpoch");
       val var6: Unit;
       if (var5 != null) {
@@ -521,7 +521,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstancePrepareSecureFramesTransition(connectionId: Int, transitionId: Int, protocolVersion: Int, callback: () -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var4, "callback");
       val var5: NativeConnection = this.getConnection(var1, "prepareSecureFramesTransition");
       val var6: Unit;
       if (var5 != null) {
@@ -535,8 +535,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceProcessMLSProposalsB64(connectionId: Int, proposals: String, callback: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "proposals");
-      kotlin.jvm.internal.q.h(var3, "callback");
+      kotlin.jvm.internal.r.h(var2, "proposals");
+      kotlin.jvm.internal.r.h(var3, "callback");
       val var4: NativeConnection = this.getConnection(var1, "processMLSProposalsB64");
       val var5: Unit;
       if (var4 != null) {
@@ -550,8 +550,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceProcessMLSWelcomeB64(connectionId: Int, transitionId: Int, welcome: String, callback: (Boolean, Int, String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var3, "welcome");
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var3, "welcome");
+      kotlin.jvm.internal.r.h(var4, "callback");
       val var5: NativeConnection = this.getConnection(var1, "processMLSWelcomeB64");
       val var6: Unit;
       if (var5 != null) {
@@ -565,7 +565,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetLocalMute(connectionId: Int, userId: String, mute: Boolean): Unit? {
-      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var2, "userId");
       val var4: NativeConnection = this.getConnection(var1, "setLocalMute");
       val var5: Unit;
       if (var4 != null) {
@@ -579,7 +579,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetLocalPan(connectionId: Int, userId: String, left: Float, right: Float): Unit? {
-      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var2, "userId");
       val var5: NativeConnection = this.getConnection(var1, "setLocalPan");
       val var6: Unit;
       if (var5 != null) {
@@ -593,7 +593,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetLocalVolume(connectionId: Int, userId: String, volume: Float): Unit? {
-      kotlin.jvm.internal.q.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var2, "userId");
       val var4: NativeConnection = this.getConnection(var1, "setLocalVolume");
       val var5: Unit;
       if (var4 != null) {
@@ -633,7 +633,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnFirstFrameCallback(connectionId: Int, cb: (String, Long, String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnFirstFrameCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -647,7 +647,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnMLSFailureCallback(connectionId: Int, cb: (String, String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnMLSFailureCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -661,7 +661,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnPingCallback(connectionId: Int, cb: (Int, String, Int, Int) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnPingCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -675,7 +675,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnPingTimeoutCallback(connectionId: Int, cb: (String, Int, Int, Int) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnPingTimeoutCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -689,7 +689,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnSpeakingCallback(connectionId: Int, cb: (String, Int) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnSpeakingCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -703,7 +703,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetOnVideoCallback(connectionId: Int, cb: (String, Long, String, String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setOnVideoCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -743,7 +743,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetSecureFramesStateUpdateCallback(connectionId: Int, cb: (String) -> Unit): Unit? {
-      kotlin.jvm.internal.q.h(var2, "cb");
+      kotlin.jvm.internal.r.h(var2, "cb");
       val var3: NativeConnection = this.getConnection(var1, "setSecureFramesStateUpdateCallback");
       val var4: Unit;
       if (var3 != null) {
@@ -783,7 +783,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceSetTransportOptions(connectionId: Int, optionsJSON: String): Unit? {
-      kotlin.jvm.internal.q.h(var2, "optionsJSON");
+      kotlin.jvm.internal.r.h(var2, "optionsJSON");
       val var3: NativeConnection = this.getConnection(var1, "setTransportOptions");
       val var4: Unit;
       if (var3 != null) {
@@ -810,7 +810,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceStartBroadcast(connectionId: Int, permissions: Intent) {
-      kotlin.jvm.internal.q.h(var2, "permissions");
+      kotlin.jvm.internal.r.h(var2, "permissions");
       val var3: NativeConnection = this.getConnection(var1, "startBroadcast");
       if (var3 != null) {
          this.forceStopScreenCapturer();
@@ -830,7 +830,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceStopBroadcastWithError(connectionId: Int, errorCode: Int, errorMessage: String) {
-      kotlin.jvm.internal.q.h(var3, "errorMessage");
+      kotlin.jvm.internal.r.h(var3, "errorMessage");
       val var4: NativeConnection = this.getConnection(var1, "stopBroadcastWithError");
       if (var4 != null) {
          var4.stopBroadcast();
@@ -840,7 +840,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun connectionInstanceUpdateMLSExternalSenderB64(connectionId: Int, externalSender: String): Unit? {
-      kotlin.jvm.internal.q.h(var2, "externalSender");
+      kotlin.jvm.internal.r.h(var2, "externalSender");
       val var3: NativeConnection = this.getConnection(var1, "updateMLSExternalSenderB64");
       val var4: Unit;
       if (var3 != null) {
@@ -854,14 +854,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    public fun createVoiceConnection(connectionId: Int, userId: String, connectionOptionsJSON: String, callback: (String, Map<String, Any>) -> Unit) {
-      kotlin.jvm.internal.q.h(var2, "userId");
-      kotlin.jvm.internal.q.h(var3, "connectionOptionsJSON");
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var3, "connectionOptionsJSON");
+      kotlin.jvm.internal.r.h(var4, "callback");
       this.engineConnections.register(var1, this.getEngine().createVoiceConnection(var2, var3, new g(var4)));
    }
 
    internal fun getAudioSubsystem(cb: (String, String) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "cb");
+      kotlin.jvm.internal.r.h(var1, "cb");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -874,8 +874,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
             @Override
             public final void onAudioSubsystem(java.lang.String var1, java.lang.String var2) {
-               kotlin.jvm.internal.q.h(var1, "subsystem");
-               kotlin.jvm.internal.q.h(var2, "audioLayer");
+               kotlin.jvm.internal.r.h(var1, "subsystem");
+               kotlin.jvm.internal.r.h(var2, "audioLayer");
                this.$cb.invoke(var1, var2);
             }
          });
@@ -899,8 +899,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
                   @Override
                   public final void onAudioSubsystem(java.lang.String var1, java.lang.String var2) {
-                     kotlin.jvm.internal.q.h(var1, "subsystem");
-                     kotlin.jvm.internal.q.h(var2, "audioLayer");
+                     kotlin.jvm.internal.r.h(var1, "subsystem");
+                     kotlin.jvm.internal.r.h(var2, "audioLayer");
                      this.$cb.invoke(var1, var2);
                   }
                });
@@ -910,7 +910,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getCodecCapabilities(callback: (String) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -921,7 +921,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getCodecSurvey(callback: (String) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var4: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var4.getInitialized()) {
@@ -931,26 +931,26 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var8: java.util.Iterator = kotlin.jvm.internal.b.a(new MediaCodecList(0).getCodecInfos());
 
          while (var8.hasNext()) {
-            val var10: MediaCodecInfo = var8.next() as MediaCodecInfo;
-            val var9: java.lang.String = var10.getName();
-            kotlin.jvm.internal.q.g(var9, "getName(...)");
-            val var11: Array<java.lang.String> = var10.getSupportedTypes();
-            kotlin.jvm.internal.q.g(var11, "getSupportedTypes(...)");
-            val var13: ArrayList = new ArrayList();
-            val var3: Int = var11.length;
+            val var9: MediaCodecInfo = var8.next() as MediaCodecInfo;
+            val var10: java.lang.String = var9.getName();
+            kotlin.jvm.internal.r.g(var10, "getName(...)");
+            val var13: Array<java.lang.String> = var9.getSupportedTypes();
+            kotlin.jvm.internal.r.g(var13, "getSupportedTypes(...)");
+            val var11: ArrayList = new ArrayList();
+            val var3: Int = var13.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var12: java.lang.String = var11[var2];
-               kotlin.jvm.internal.q.e(var11[var2]);
+               val var12: java.lang.String = var13[var2];
+               kotlin.jvm.internal.r.e(var13[var2]);
                if (kotlin.text.h.I(var12, "video", false, 2, null)) {
-                  var13.add(var12);
+                  var11.add(var12);
                }
             }
 
-            for (java.lang.String var18 : var13) {
+            for (java.lang.String var18 : var11) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var10)) {
+                  if (com.discord.a.a(var9)) {
                      var14 = "(HW)";
                   } else {
                      var14 = "(SW)";
@@ -960,9 +960,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var15: java.lang.String = kotlin.collections.i.o0(
-                  kotlin.collections.i.n(new java.lang.String[]{var18, var9, var14}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.n(new java.lang.String[]{var18, var10, var14}), " ", null, null, 0, null, null, 62, null
                );
-               if (var10.isEncoder()) {
+               if (var9.isEncoder()) {
                   var6 = kotlin.collections.c.v(var6, var15) as Array<java.lang.String>;
                } else {
                   var5 = kotlin.collections.c.v(var5, var15) as Array<java.lang.String>;
@@ -973,7 +973,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          var7.put("available_video_encoders", new JSONArray(var6));
          var7.put("available_video_decoders", new JSONArray(var5));
          val var16: java.lang.String = var7.toString();
-         kotlin.jvm.internal.q.g(var16, "toString(...)");
+         kotlin.jvm.internal.r.g(var16, "toString(...)");
          var1.invoke(var16);
       } else {
          var1.invoke("{}");
@@ -981,7 +981,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getInputDevices(callback: (List<Map<String, Any>>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -992,13 +992,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getMLSSigningKeyB64(sessionId: String, signatureVersion: Int, callback: (String, String) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "sessionId");
-      kotlin.jvm.internal.q.h(var3, "callback");
+      kotlin.jvm.internal.r.h(var1, "sessionId");
+      kotlin.jvm.internal.r.h(var3, "callback");
       this.getEngine().getMLSSigningKeyB64(var1, var2, new m(var3));
    }
 
    internal fun getOutputDevices(callback: (List<Map<String, Any>>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1009,7 +1009,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getSupportedVideoCodecs(callback: (Array<String>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1020,7 +1020,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun getVideoInputDevices(callback: (List<Map<String, Any>>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1031,8 +1031,8 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun rankRtcRegions(regionsWithIpsJSON: String, callback: (Array<String>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "regionsWithIpsJSON");
-      kotlin.jvm.internal.q.h(var2, "callback");
+      kotlin.jvm.internal.r.h(var1, "regionsWithIpsJSON");
+      kotlin.jvm.internal.r.h(var2, "callback");
       val var3: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var3.getInitialized()) {
@@ -1057,7 +1057,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setActiveSinksChangeCallback(cb: (String, Boolean) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "cb");
+      kotlin.jvm.internal.r.h(var1, "cb");
       this.activeSinksChangeCallback = var1;
    }
 
@@ -1084,7 +1084,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setAudioInputInitializationCallback(callback: (Double, Map<String, Any>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1097,7 +1097,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
             @Override
             public final void onAudioInputInitialized(AudioInputInitializationInfo var1) {
-               kotlin.jvm.internal.q.h(var1, "info");
+               kotlin.jvm.internal.r.h(var1, "info");
                this.$callback.invoke((double)var1.getTimeToInitializedNanos() / 1.0E9, NativeTypeExtensionsKt.toMap(var1.getDescription()));
             }
          });
@@ -1124,7 +1124,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
                            @Override
                            public final void onAudioInputInitialized(AudioInputInitializationInfo var1) {
-                              kotlin.jvm.internal.q.h(var1, "info");
+                              kotlin.jvm.internal.r.h(var1, "info");
                               this.$callback.invoke((double)var1.getTimeToInitializedNanos() / 1.0E9, NativeTypeExtensionsKt.toMap(var1.getDescription()));
                            }
                         });
@@ -1135,14 +1135,14 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setBroadcastThumbnailParams(width: Int, height: Int, intervalSeconds: Int, callback: (String) -> Unit) {
-      kotlin.jvm.internal.q.h(var4, "callback");
+      kotlin.jvm.internal.r.h(var4, "callback");
       if (this.screenCapturer != null) {
          this.screenCapturer.component1().setThumbnailEmitter(new ThumbnailEmitter(var1, var2, (long)var3 * 1000L, new i(this, var4)));
       }
    }
 
    internal fun setDeviceChangeCallback(callback: (List<Map<String, Any>>, List<Map<String, Any>>, List<Map<String, Any>>) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1157,9 +1157,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
                   @Override
                   public final void onChange(AudioInputDeviceDescription[] var1, AudioOutputDeviceDescription[] var2, VideoInputDeviceDescription[] var3) {
-                     kotlin.jvm.internal.q.h(var1, "inputDevices");
-                     kotlin.jvm.internal.q.h(var2, "outputDevices");
-                     kotlin.jvm.internal.q.h(var3, "videoInputDevices");
+                     kotlin.jvm.internal.r.h(var1, "inputDevices");
+                     kotlin.jvm.internal.r.h(var2, "outputDevices");
+                     kotlin.jvm.internal.r.h(var3, "videoInputDevices");
                      this.$callback
                         .invoke(NativeTypeExtensionsKt.toListOfMaps(var1), NativeTypeExtensionsKt.toListOfMaps(var2), NativeTypeExtensionsKt.toListOfMaps(var3));
                   }
@@ -1191,9 +1191,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                               public final void onChange(
                                  AudioInputDeviceDescription[] var1, AudioOutputDeviceDescription[] var2, VideoInputDeviceDescription[] var3
                               ) {
-                                 kotlin.jvm.internal.q.h(var1, "inputDevices");
-                                 kotlin.jvm.internal.q.h(var2, "outputDevices");
-                                 kotlin.jvm.internal.q.h(var3, "videoInputDevices");
+                                 kotlin.jvm.internal.r.h(var1, "inputDevices");
+                                 kotlin.jvm.internal.r.h(var2, "outputDevices");
+                                 kotlin.jvm.internal.r.h(var3, "videoInputDevices");
                                  this.$callback
                                     .invoke(
                                        NativeTypeExtensionsKt.toListOfMaps(var1),
@@ -1276,7 +1276,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setInputDevice(deviceIndex: String) {
-      kotlin.jvm.internal.q.h(var1, "deviceIndex");
+      kotlin.jvm.internal.r.h(var1, "deviceIndex");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1343,7 +1343,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setOnNoInputCallback(cb: (Boolean) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "cb");
+      kotlin.jvm.internal.r.h(var1, "cb");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1388,7 +1388,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setOnVoiceCallback(cb: (Float, Int) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "cb");
+      kotlin.jvm.internal.r.h(var1, "cb");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1455,7 +1455,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setOutputDevice(deviceIndex: String) {
-      kotlin.jvm.internal.q.h(var1, "deviceIndex");
+      kotlin.jvm.internal.r.h(var1, "deviceIndex");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1504,7 +1504,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setTransportOptions(optionsJSON: String) {
-      kotlin.jvm.internal.q.h(var1, "optionsJSON");
+      kotlin.jvm.internal.r.h(var1, "optionsJSON");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1549,7 +1549,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setVideoInputDevice(deviceName: String) {
-      kotlin.jvm.internal.q.h(var1, "deviceName");
+      kotlin.jvm.internal.r.h(var1, "deviceName");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1572,7 +1572,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun setVideoOutputSink(streamIdentifier: String, callback: ((VideoFrame, Boolean) -> Boolean)?) {
-      kotlin.jvm.internal.q.h(var1, "streamIdentifier");
+      kotlin.jvm.internal.r.h(var1, "streamIdentifier");
       val var3: AsyncInitDispatcher = this.dispatcher;
       if (this.dispatcher.getInitialized()) {
          if (var2 == null) {
@@ -1587,7 +1587,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
                @Override
                public final boolean onFrame(VideoFrame var1, boolean var2) {
-                  kotlin.jvm.internal.q.h(var1, "videoFrame");
+                  kotlin.jvm.internal.r.h(var1, "videoFrame");
                   return this.$callback.invoke(var1, var2) as java.lang.Boolean;
                }
             });
@@ -1620,7 +1620,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
                               @Override
                               public final boolean onFrame(VideoFrame var1, boolean var2) {
-                                 kotlin.jvm.internal.q.h(var1, "videoFrame");
+                                 kotlin.jvm.internal.r.h(var1, "videoFrame");
                                  return this.$callback.invoke(var1, var2) as java.lang.Boolean;
                               }
                            });
@@ -1632,13 +1632,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    internal fun startLocalAudioRecording(optionsJSON: String, callback: (Boolean) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "optionsJSON");
-      kotlin.jvm.internal.q.h(var2, "callback");
+      kotlin.jvm.internal.r.h(var1, "optionsJSON");
+      kotlin.jvm.internal.r.h(var2, "callback");
       this.getEngine().startLocalAudioRecording(var1, new u(var2));
    }
 
    internal fun stopLocalAudioRecording(callback: (String, Int) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "callback");
+      kotlin.jvm.internal.r.h(var1, "callback");
       val var2: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var2.getInitialized()) {
@@ -1658,7 +1658,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          val var2: ByteArrayOutputStream = new ByteArrayOutputStream();
          var1.compress(CompressFormat.JPEG, 92, var2);
          val var3: ByteArray = var2.toByteArray();
-         kotlin.jvm.internal.q.g(var3, "toByteArray(...)");
+         kotlin.jvm.internal.r.g(var3, "toByteArray(...)");
          return var3;
       }
 
@@ -1694,7 +1694,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = z9.b.e();
+            val var10: Any = y9.b.e();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {
@@ -1727,7 +1727,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
          }
 
-         kotlin.jvm.internal.q.e(var7);
+         kotlin.jvm.internal.r.e(var7);
          return var7;
       }
    }
@@ -1737,7 +1737,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       public final val connectionId: Int
 
       init {
-         kotlin.jvm.internal.q.h(var1, "screenCapturer");
+         kotlin.jvm.internal.r.h(var1, "screenCapturer");
          super();
          this.screenCapturer = var1;
          this.connectionId = var2;
@@ -1752,7 +1752,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public fun copy(screenCapturer: ScreenCapturer = var0.screenCapturer, connectionId: Int = var0.connectionId): com.discord.media.engine.MediaEngine.ScreenCapturerForConnection {
-         kotlin.jvm.internal.q.h(var1, "screenCapturer");
+         kotlin.jvm.internal.r.h(var1, "screenCapturer");
          return new MediaEngine.ScreenCapturerForConnection(var1, var2);
       }
 
@@ -1763,7 +1763,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             return false;
          } else {
             var1 = var1;
-            if (!kotlin.jvm.internal.q.c(this.screenCapturer, var1.screenCapturer)) {
+            if (!kotlin.jvm.internal.r.c(this.screenCapturer, var1.screenCapturer)) {
                return false;
             } else {
                return this.connectionId == var1.connectionId;
@@ -1780,15 +1780,15 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       }
 
       public override fun toString(): String {
-         val var2: ScreenCapturer = this.screenCapturer;
+         val var3: ScreenCapturer = this.screenCapturer;
          val var1: Int = this.connectionId;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("ScreenCapturerForConnection(screenCapturer=");
-         var3.append(var2);
-         var3.append(", connectionId=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ScreenCapturerForConnection(screenCapturer=");
+         var2.append(var3);
+         var2.append(", connectionId=");
+         var2.append(var1);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

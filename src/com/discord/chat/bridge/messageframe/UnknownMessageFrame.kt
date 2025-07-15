@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.messageframe
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
    public open val type: MessageFrameType
 
    init {
-      q.h(var1, "type");
+      r.h(var1, "type");
       super(null);
       this.type = var1;
    }
@@ -19,7 +19,7 @@ public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {
    }
 
    public fun copy(type: MessageFrameType = var0.type): UnknownMessageFrame {
-      q.h(var1, "type");
+      r.h(var1, "type");
       return new UnknownMessageFrame(var1);
    }
 

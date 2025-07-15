@@ -1,5 +1,7 @@
 package com.discord.react_gesture_handler.nested_touch
 
+import ab.I
+import ab.f
 import android.content.Context
 import android.text.Spannable
 import android.view.MotionEvent
@@ -7,12 +9,10 @@ import android.view.View
 import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
-import bb.I
-import bb.f
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 
@@ -32,7 +32,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    private final var spanBeingTouched: NestedClickableSpan?
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super();
       this.onClickListener = var2;
       this.onLongClickListener = var3;
@@ -55,8 +55,8 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
    }
 
    internal fun handleTouch(view: View, event: MotionEvent, isSupplementalEvent: Boolean): Boolean {
-      q.h(var1, "view");
-      q.h(var2, "event");
+      r.h(var1, "view");
+      r.h(var2, "event");
       if (!var1.isAttachedToWindow()) {
          return false;
       } else {
@@ -92,7 +92,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   } else {
                      var7 = var20.getLayout().getOffsetForHorizontal(var30, var5);
                      var14 = var33.getSpans(var7, var7, NestedClickableSpan.class);
-                     q.g(var14, "getSpans(...)");
+                     r.g(var14, "getSpans(...)");
                   }
                }
 
@@ -138,7 +138,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                   }
                }
 
-               q.e(var15);
+               r.e(var15);
                this.spanBeingTouched = (NestedClickableSpan)var15;
                if (var15 != null) {
                   ((NestedClickableSpan)var15).enableHighlight(var20);
@@ -221,7 +221,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
 
                      public final Object invokeSuspend(Object var1) {
                         label46: {
-                           val var7: Any = z9.b.e();
+                           val var7: Any = y9.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {
@@ -263,7 +263,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
                            var9 = null;
                         }
 
-                        if (q.c(var9, kotlin.coroutines.jvm.internal.b.a(true))) {
+                        if (r.c(var9, kotlin.coroutines.jvm.internal.b.a(true))) {
                            NestedScrollOnTouchTracker.access$setDoClickOnUp$p(this.this$0, false);
                         } else {
                            val var10: OnLongClickListener = NestedScrollOnTouchTracker.access$getOnLongClickListener$p(this.this$0);

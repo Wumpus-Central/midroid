@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import com.discord.chat.bridge.rolecolors.RoleColors
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class LinkContentNode(content: List<ContentNode>, target: LinkContextData?) : ContentNode {
@@ -17,7 +17,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    public final val textContent: String?
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
       this.target = var2;
@@ -99,7 +99,7 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public fun copy(content: List<ContentNode> = var0.content, target: LinkContextData? = var0.target): LinkContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new LinkContentNode(var1, var2);
    }
 
@@ -110,10 +110,10 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.content, var1.content)) {
+         if (!r.c(this.content, var1.content)) {
             return false;
          } else {
-            return q.c(this.target, var1.target);
+            return r.c(this.target, var1.target);
          }
       }
    }
@@ -131,15 +131,15 @@ public data class LinkContentNode(content: List<ContentNode>, target: LinkContex
    }
 
    public override fun toString(): String {
-      val var3: java.util.List = this.content;
-      val var1: LinkContextData = this.target;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LinkContentNode(content=");
-      var2.append(var3);
-      var2.append(", target=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.List = this.content;
+      val var3: LinkContextData = this.target;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LinkContentNode(content=");
+      var1.append(var2);
+      var1.append(", target=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -3,16 +3,16 @@ package com.discord.crash_reporting
 import android.content.Context
 import android.content.SharedPreferences
 import android.content.SharedPreferences.Editor
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class CrashReportingCache(context: Context) {
    public final val cache: SharedPreferences
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super();
       val var2: SharedPreferences = var1.getSharedPreferences("crash_reporting", 0);
-      q.g(var2, "getSharedPreferences(...)");
+      r.g(var2, "getSharedPreferences(...)");
       this.cache = var2;
    }
 
@@ -30,13 +30,13 @@ public class CrashReportingCache(context: Context) {
       private final var instance: CrashReportingCache?
 
       public fun getInstance(context: Context): CrashReportingCache {
-         q.h(var1, "context");
+         r.h(var1, "context");
          if (CrashReportingCache.access$getInstance$cp() == null) {
             CrashReportingCache.access$setInstance$cp(new CrashReportingCache(var1));
          }
 
          val var2: CrashReportingCache = CrashReportingCache.access$getInstance$cp();
-         q.e(var2);
+         r.e(var2);
          return var2;
       }
    }

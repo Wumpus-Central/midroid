@@ -19,8 +19,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    private final val blurTargetChangeListener: () -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       this.blurTint = var3;
@@ -55,10 +55,10 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
          var1 = true;
       }
 
-      val var3: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
-      if (var3 != null && !var1 && this.blurViewPropertiesDirty) {
-         var3.setBlurAmount(this.getId(), this.blurAmount);
-         var3.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
+      val var2: BlurViewAPI.Target = BlurViewTargetRegistry.INSTANCE.get(this.blurTargetNativeId);
+      if (var2 != null && !var1 && this.blurViewPropertiesDirty) {
+         var2.setBlurAmount(this.getId(), this.blurAmount);
+         var2.addBlurRect(this.getId(), this.blurViewLocation[0], this.blurViewLocation[1], this.blurViewWidth, this.blurViewHeight);
          this.setBackgroundColor(BlurView.Companion.mapBlurTint$blur_release(this.blurTintIOSParityCompensation, this.blurTint, this.blurAmount));
          this.blurViewPropertiesDirty = false;
       }
@@ -121,8 +121,8 @@ internal class BlurViewHardwareAccelerated(context: Context, blurTargetNativeId:
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      kotlin.jvm.internal.q.h(var1, "nativeId");
-      if (!kotlin.jvm.internal.q.c(this.blurTargetNativeId, var1)) {
+      kotlin.jvm.internal.r.h(var1, "nativeId");
+      if (!kotlin.jvm.internal.r.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          this.blurViewPropertiesDirty = true;
       }

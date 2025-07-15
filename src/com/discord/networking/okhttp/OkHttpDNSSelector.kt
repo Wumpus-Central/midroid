@@ -1,27 +1,27 @@
 package com.discord.networking.okhttp
 
-import Gb.l
+import Fb.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
 import java.util.ArrayList
 import java.util.Comparator
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
-import s9.n
-import w9.a
+import kotlin.jvm.internal.r
+import r9.n
+import v9.a
 
 internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode) : l {
    private final val mode: com.discord.networking.okhttp.OkHttpDNSSelector.IPvMode
 
    init {
-      q.h(var1, "mode");
+      r.h(var1, "mode");
       super();
       this.mode = var1;
    }
 
    public open fun lookup(hostname: String): List<InetAddress> {
-      q.h(var1, "hostname");
+      r.h(var1, "hostname");
       var var5: Any = l.a.lookup(var1);
       val var2: Int = OkHttpDNSSelector.WhenMappings.$EnumSwitchMapping$0[this.mode.ordinal()];
       if (var2 != 1) {
@@ -99,7 +99,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       init {

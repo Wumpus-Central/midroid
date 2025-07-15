@@ -25,29 +25,29 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
    private final lateinit var targetSize: com.discord.chat.presentation.message.view.MediaVisualPlaceholderView.TargetSize
 
    fun MediaVisualPlaceholderView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
       val var3: MediaVisualPlaceholderViewBinding = MediaVisualPlaceholderViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var3, "inflate(...)");
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
    }
 
    public override fun getSingleAspectRatio(): Float {
       var var2: MediaVisualPlaceholderView.TargetSize = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.q.y("targetSize");
+         kotlin.jvm.internal.r.y("targetSize");
          var2 = null;
       }
 
       val var1: Float = var2.getWidth();
       var2 = this.targetSize;
       if (this.targetSize == null) {
-         kotlin.jvm.internal.q.y("targetSize");
+         kotlin.jvm.internal.r.y("targetSize");
          var2 = null;
       }
 
@@ -55,11 +55,11 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
    }
 
    public fun setContent(state: VisualPlaceholderState, width: Int, height: Int, resizeMode: ResizeMode, radiusPx: Int) {
-      kotlin.jvm.internal.q.h(var1, "state");
-      kotlin.jvm.internal.q.h(var4, "resizeMode");
+      kotlin.jvm.internal.r.h(var1, "state");
+      kotlin.jvm.internal.r.h(var4, "resizeMode");
       this.targetSize = new MediaVisualPlaceholderView.TargetSize(var2, var3, var4);
       val var10: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.q.g(this.binding.container, "container");
+      kotlin.jvm.internal.r.g(this.binding.container, "container");
       ViewClippingUtilsKt.clipToRoundedRectangle(var10, var5);
       this.binding.container.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondaryAlt());
       this.binding.imageInvalid.setVisibility(8);
@@ -67,14 +67,14 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       if (var2 != 1) {
          if (var2 != 2) {
             if (var2 != 3) {
-               throw new s9.n();
+               throw new r9.n();
             }
 
             this.binding.imageInvalid.setVisibility(0);
             (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.e);
             this.binding.imageInvalid.clearColorFilter();
             val var11: SimpleDraweeView = this.binding.imageInvalid;
-            kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
+            kotlin.jvm.internal.r.g(this.binding.imageInvalid, "imageInvalid");
             val var6: ReactAsset;
             if (ThemeManager.INSTANCE.isThemeDark()) {
                var6 = ReactAsset.PoopDark;
@@ -87,10 +87,10 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
             this.binding.imageInvalid.setVisibility(0);
             (this.binding.imageInvalid.getHierarchy() as GenericDraweeHierarchy).u(ScalingUtils$ScaleType.g);
             val var7: SimpleDraweeView = this.binding.imageInvalid;
-            kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
+            kotlin.jvm.internal.r.g(this.binding.imageInvalid, "imageInvalid");
             ColorUtilsKt.setTintColor(var7, ThemeManagerKt.getTheme().getBackgroundAccent());
             val var8: SimpleDraweeView = this.binding.imageInvalid;
-            kotlin.jvm.internal.q.g(this.binding.imageInvalid, "imageInvalid");
+            kotlin.jvm.internal.r.g(this.binding.imageInvalid, "imageInvalid");
             ReactAssetUtilsKt.setReactAsset(var8, ReactAsset.BrokenImage);
          }
       }
@@ -98,7 +98,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
 
    public override fun setMosaicSize(width: Int, height: Int) {
       val var3: ConstraintLayout = this.binding.container;
-      kotlin.jvm.internal.q.g(this.binding.container, "container");
+      kotlin.jvm.internal.r.g(this.binding.container, "container");
       val var4: LayoutParams = var3.getLayoutParams();
       if (var4 != null) {
          var4.width = var1;
@@ -115,7 +115,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       public final val resizeMode: ResizeMode
 
       init {
-         kotlin.jvm.internal.q.h(var3, "resizeMode");
+         kotlin.jvm.internal.r.h(var3, "resizeMode");
          super();
          this.width = var1;
          this.height = var2;
@@ -135,7 +135,7 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public fun copy(width: Int = var0.width, height: Int = var0.height, resizeMode: ResizeMode = var0.resizeMode): com.discord.chat.presentation.message.view.MediaVisualPlaceholderView.TargetSize {
-         kotlin.jvm.internal.q.h(var3, "resizeMode");
+         kotlin.jvm.internal.r.h(var3, "resizeMode");
          return new MediaVisualPlaceholderView.TargetSize(var1, var2, var3);
       }
 
@@ -161,18 +161,18 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
-         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("TargetSize(width=");
-         var4.append(var2);
-         var4.append(", height=");
-         var4.append(var1);
-         var4.append(", resizeMode=");
-         var4.append(var3);
-         var4.append(")");
-         return var4.toString();
+         val var1: Int = this.width;
+         val var2: Int = this.height;
+         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("TargetSize(width=");
+         var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
+         var3.append(", resizeMode=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

@@ -3,16 +3,16 @@ package com.discord.notifications.react.events
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class LocalNotificationEvent(locationNotification: Map<String, String?>) : ReactEvent {
    public final val locationNotification: Map<String, String?>
 
    init {
-      q.h(var1, "locationNotification");
+      r.h(var1, "locationNotification");
       super();
       this.locationNotification = var1;
    }
@@ -22,7 +22,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public fun copy(locationNotification: Map<String, String?> = var0.locationNotification): LocalNotificationEvent {
-      q.h(var1, "locationNotification");
+      r.h(var1, "locationNotification");
       return new LocalNotificationEvent(var1);
    }
 
@@ -32,7 +32,7 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
       } else if (var1 !is LocalNotificationEvent) {
          return false;
       } else {
-         return q.c(this.locationNotification, (var1 as LocalNotificationEvent).locationNotification);
+         return r.c(this.locationNotification, (var1 as LocalNotificationEvent).locationNotification);
       }
    }
 
@@ -45,12 +45,12 @@ internal data class LocalNotificationEvent(locationNotification: Map<String, Str
    }
 
    public override fun toString(): String {
-      val var1: java.util.Map = this.locationNotification;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LocalNotificationEvent(locationNotification=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.util.Map = this.locationNotification;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("LocalNotificationEvent(locationNotification=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

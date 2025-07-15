@@ -4,7 +4,7 @@ import android.app.Activity
 import android.app.PictureInPictureParams.Builder
 import android.os.Build.VERSION
 import android.util.Rational
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class ExternalPipManager {
    private final var enabled: Boolean
@@ -34,7 +34,7 @@ internal class ExternalPipManager {
    }
 
    public fun enterPipMode(activity: Activity?, force: Boolean = false, onResult: (Result<Unit>) -> Unit = new f()) {
-      q.h(var3, "onResult");
+      r.h(var3, "onResult");
       if ((this.enabled || var2) && CAN_PIP) {
          val var10: java.lang.Boolean;
          if (var1 != null) {
@@ -42,7 +42,7 @@ internal class ExternalPipManager {
                val var14: ExternalPipManager.Companion = Companion;
                e.a();
                val var5: Builder = a.a(d.a(), this.aspectRatio);
-               q.g(var5, "setAspectRatio(...)");
+               r.g(var5, "setAspectRatio(...)");
                var10 = c.a(var1, b.a(ExternalPipManager.Companion.access$setSeamlessResizeEnabledCompat(var14, var5, false)));
             } catch (var8: Exception) {
                val var4: kotlin.Result.a = Result.k;
@@ -54,7 +54,7 @@ internal class ExternalPipManager {
          }
 
          try {
-            if (q.c(var10, java.lang.Boolean.TRUE)) {
+            if (r.c(var10, java.lang.Boolean.TRUE)) {
                val var13: kotlin.Result.a = Result.k;
                var3.invoke(Result.a(Result.b(Unit.a)));
                return;
@@ -94,7 +94,7 @@ internal class ExternalPipManager {
 
    public fun setPipAspectRatio(activity: Activity?, numerator: Int, denominator: Int) {
       val var4: Rational = new Rational(var2, var3);
-      if (!q.c(this.aspectRatio, var4)) {
+      if (!r.c(this.aspectRatio, var4)) {
          this.aspectRatio = var4;
          this.refreshPipMode(var1);
       }
@@ -109,7 +109,7 @@ internal class ExternalPipManager {
             var3 = g.a(var1, var2);
          }
 
-         q.e(var3);
+         r.e(var3);
          return var3;
       }
 

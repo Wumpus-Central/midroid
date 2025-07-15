@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.rolecolors
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, tertiaryColor: Int? = null) {
@@ -42,10 +42,10 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
          var1 = var1;
          if (this.primaryColor != var1.primaryColor) {
             return false;
-         } else if (!q.c(this.secondaryColor, var1.secondaryColor)) {
+         } else if (!r.c(this.secondaryColor, var1.secondaryColor)) {
             return false;
          } else {
-            return q.c(this.tertiaryColor, var1.tertiaryColor);
+            return r.c(this.tertiaryColor, var1.tertiaryColor);
          }
       }
    }
@@ -69,17 +69,17 @@ public data class RoleColors(primaryColor: Int, secondaryColor: Int? = null, ter
 
    public override fun toString(): String {
       val var1: Int = this.primaryColor;
-      val var3: Int = this.secondaryColor;
+      val var2: Int = this.secondaryColor;
       val var4: Int = this.tertiaryColor;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("RoleColors(primaryColor=");
-      var2.append(var1);
-      var2.append(", secondaryColor=");
-      var2.append(var3);
-      var2.append(", tertiaryColor=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("RoleColors(primaryColor=");
+      var3.append(var1);
+      var3.append(", secondaryColor=");
+      var3.append(var2);
+      var3.append(", tertiaryColor=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

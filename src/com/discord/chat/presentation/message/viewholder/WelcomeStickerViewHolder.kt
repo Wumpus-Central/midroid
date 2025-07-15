@@ -11,8 +11,8 @@ public class WelcomeStickerViewHolder(welcomeStickerView: WelcomeStickerView, on
    private final val onWelcomeReplyClicked: (Sticker, MessageId) -> Unit
 
    init {
-      kotlin.jvm.internal.q.h(var1, "welcomeStickerView");
-      kotlin.jvm.internal.q.h(var2, "onWelcomeReplyClicked");
+      kotlin.jvm.internal.r.h(var1, "welcomeStickerView");
+      kotlin.jvm.internal.r.h(var2, "onWelcomeReplyClicked");
       super(var1, null);
       this.welcomeStickerView = var1;
       this.onWelcomeReplyClicked = var2;
@@ -20,7 +20,7 @@ public class WelcomeStickerViewHolder(welcomeStickerView: WelcomeStickerView, on
    }
 
    public fun bind(welcomeStickerAccessory: WelcomeStickerAccessory) {
-      kotlin.jvm.internal.q.h(var1, "welcomeStickerAccessory");
+      kotlin.jvm.internal.r.h(var1, "welcomeStickerAccessory");
       this.welcomeStickerView.setSticker(var1.getSticker(), var1.getMessage(), this.onWelcomeReplyClicked);
    }
 }

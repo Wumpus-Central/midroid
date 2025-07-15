@@ -7,14 +7,14 @@ import android.content.Intent
 import android.os.Bundle
 import com.discord.logging.Log
 import com.google.android.gms.common.api.Status
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) : BroadcastReceiver {
    private final val onReceiveCallback: (String) -> Unit
    private final var handled: Boolean
 
    init {
-      q.h(var1, "onReceiveCallback");
+      r.h(var1, "onReceiveCallback");
       super();
       this.onReceiveCallback = var1;
    }
@@ -38,7 +38,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             }
 
             var1 = var8.toString();
-            q.g(var1, "toString(...)");
+            r.g(var1, "toString(...)");
          }
       }
 
@@ -64,11 +64,11 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
       }
 
       if (var5 != null && var5.length() != 0) {
-         val var7: Log = Log.INSTANCE;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Successfully extracted code from SMS: ");
-         var6.append(var5);
-         Log.i$default(var7, "SmsAuthCodeBroadcastReceiver", var6.toString(), null, 4, null);
+         val var6: Log = Log.INSTANCE;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Successfully extracted code from SMS: ");
+         var7.append(var5);
+         Log.i$default(var6, "SmsAuthCodeBroadcastReceiver", var7.toString(), null, 4, null);
          this.onReceiveCallback.invoke(var5);
          this.handled = true;
       } else {
@@ -77,8 +77,8 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
    }
 
    public open fun onReceive(context: Context, intent: Intent) {
-      q.h(var1, "context");
-      q.h(var2, "intent");
+      r.h(var1, "context");
+      r.h(var2, "intent");
       if (!this.handled) {
          val var4: Bundle = var2.getExtras();
          val var5: Status;
@@ -90,7 +90,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
 
          val var7: Int;
          if (var5 != null) {
-            var7 = var5.p();
+            var7 = var5.u();
          } else {
             var7 = null;
          }
@@ -104,7 +104,7 @@ public class SmsAuthCodeBroadcastReceiver(onReceiveCallback: (String) -> Unit) :
             val var9: Log = Log.INSTANCE;
             var var8: Int = null;
             if (var5 != null) {
-               var8 = var5.p();
+               var8 = var5.u();
             }
 
             val var6: StringBuilder = new StringBuilder();

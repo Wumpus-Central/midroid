@@ -33,37 +33,37 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    private final val binding: PostPreviewEmbedViewBinding
 
    fun PostPreviewEmbedView(var1: Context) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun PostPreviewEmbedView(var1: Context, var2: AttributeSet) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
       val var5: PostPreviewEmbedViewBinding = PostPreviewEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.q.g(var5, "inflate(...)");
+      kotlin.jvm.internal.r.g(var5, "inflate(...)");
       this.binding = var5;
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var7: TextView = var5.title;
       var5.title.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      kotlin.jvm.internal.q.e(var7);
+      kotlin.jvm.internal.r.e(var7);
       SetTextSizeSpKt.setTextSizeSp(var7, 16.0F);
       DiscordFontUtilsKt.setDiscordFont(var7, DiscordFont.PrimarySemibold);
       val var4: TextView = var5.subtitle;
       var5.subtitle.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      kotlin.jvm.internal.q.e(var4);
+      kotlin.jvm.internal.r.e(var4);
       SetTextSizeSpKt.setTextSizeSp(var4, 14.0F);
       val var8: DiscordFont = DiscordFont.PrimaryNormal;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       val var9: SimpleDraweeSpanTextView = var5.footer;
       var5.footer.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
-      kotlin.jvm.internal.q.e(var9);
+      kotlin.jvm.internal.r.e(var9);
       SetTextSizeSpKt.setTextSizeSp(var9, 12.0F);
       DiscordFontUtilsKt.setDiscordFont(var9, var8);
       val var6: DCDButton = var5.coverImageOverlayButton;
@@ -90,7 +90,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       }
 
       var var8: SimpleDraweeView = this.binding.coverImage;
-      kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
+      kotlin.jvm.internal.r.g(this.binding.coverImage, "coverImage");
       val var5: Byte;
       if (var4) {
          var5 = 0;
@@ -101,7 +101,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       label54: {
          var8.setVisibility(var5);
          var8 = this.binding.backgroundImage;
-         kotlin.jvm.internal.q.g(this.binding.backgroundImage, "backgroundImage");
+         kotlin.jvm.internal.r.g(this.binding.backgroundImage, "backgroundImage");
          if (var4 && var3 != null) {
             var4 = (boolean)1;
             if (!kotlin.text.h.c0(var3)) {
@@ -130,14 +130,14 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
          this.binding.coverImage.setImageURI(var1);
       } else if (var2 != null && !kotlin.text.h.c0(var2)) {
          val var9: SimpleDraweeView = this.binding.coverImage;
-         kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
+         kotlin.jvm.internal.r.g(this.binding.coverImage, "coverImage");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var9, var2);
       }
    }
 
    private fun setCoverImageButtonText(coverImageOverlayText: String?) {
       val var4: DCDButton = this.binding.coverImageOverlayButton;
-      kotlin.jvm.internal.q.e(this.binding.coverImageOverlayButton);
+      kotlin.jvm.internal.r.e(this.binding.coverImageOverlayButton);
       var var2: Boolean;
       if (var1 != null && !kotlin.text.h.c0(var1)) {
          var2 = 0;
@@ -156,20 +156,20 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    }
 
    private fun setFooter(footer: StructurableText, messageId: MessageId) {
-      val var5: SimpleDraweeSpanTextView = this.binding.footer;
-      kotlin.jvm.internal.q.e(this.binding.footer);
-      val var4: Context = var5.getContext();
-      kotlin.jvm.internal.q.g(var4, "getContext(...)");
-      val var6: FontMetrics = var5.getPaint().getFontMetrics();
-      kotlin.jvm.internal.q.g(var6, "getFontMetrics(...)");
+      val var4: SimpleDraweeSpanTextView = this.binding.footer;
+      kotlin.jvm.internal.r.e(this.binding.footer);
+      val var5: Context = var4.getContext();
+      kotlin.jvm.internal.r.g(var5, "getContext(...)");
+      val var6: FontMetrics = var4.getPaint().getFontMetrics();
+      kotlin.jvm.internal.r.g(var6, "getFontMetrics(...)");
       val var3: Float = TextUtilsKt.getBaselineHeightPx(var6);
-      val var7: TextPaint = var5.getPaint();
-      kotlin.jvm.internal.q.g(var7, "getPaint(...)");
+      val var7: TextPaint = var4.getPaint();
+      kotlin.jvm.internal.r.g(var7, "getPaint(...)");
       ViewUtilsKt.setOptionalText(
-         var5,
+         var4,
          TextUtilsKt.toSpannable$default(
             var1,
-            var4,
+            var5,
             var2,
             false,
             false,
@@ -199,12 +199,12 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
             null
          )
       );
-      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var5, false, 1, null);
+      NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener$default(var4, false, 1, null);
    }
 
    private fun setSubtitle(subtitle: CharSequence?) {
       val var4: TextView = this.binding.subtitle;
-      kotlin.jvm.internal.q.g(this.binding.subtitle, "subtitle");
+      kotlin.jvm.internal.r.g(this.binding.subtitle, "subtitle");
       var var2: Boolean;
       if (var1 != null && !kotlin.text.h.c0(var1)) {
          var2 = 0;
@@ -235,18 +235,18 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
    ) {
       this.binding.spoiler.configure(var1, this);
       val var6: SpoilerView = this.binding.spoiler;
-      kotlin.jvm.internal.q.g(this.binding.spoiler, "spoiler");
+      kotlin.jvm.internal.r.g(this.binding.spoiler, "spoiler");
       if (var6.getVisibility() == 0) {
          this.binding.spoiler.handleObscureAwaitingScan(var3);
          this.binding.spoiler.setRevealButtonVisible(var4 xor true);
          this.binding.spoiler.setOpaqueBackgroundVisible(var5);
          val var7: FrameLayout = this.binding.imageBlurBg;
-         kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
+         kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "imageBlurBg");
          var7.setVisibility(0);
          this.binding.coverImage.setImportantForAccessibility(4);
       } else {
          val var8: FrameLayout = this.binding.imageBlurBg;
-         kotlin.jvm.internal.q.g(this.binding.imageBlurBg, "imageBlurBg");
+         kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "imageBlurBg");
          var8.setVisibility(8);
          this.binding.coverImage.setImportantForAccessibility(0);
          if (var2) {
@@ -273,11 +273,11 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       obscureIsOpaque: Boolean,
       spoilerConfig: SpoilerConfig?
    ) {
-      kotlin.jvm.internal.q.h(var1, "title");
-      kotlin.jvm.internal.q.h(var3, "ctaCopy");
-      kotlin.jvm.internal.q.h(var5, "footer");
-      kotlin.jvm.internal.q.h(var6, "messageId");
-      kotlin.jvm.internal.q.h(var11, "onButtonClickListener");
+      kotlin.jvm.internal.r.h(var1, "title");
+      kotlin.jvm.internal.r.h(var3, "ctaCopy");
+      kotlin.jvm.internal.r.h(var5, "footer");
+      kotlin.jvm.internal.r.h(var6, "messageId");
+      kotlin.jvm.internal.r.h(var11, "onButtonClickListener");
       this.setButtonText(var3);
       this.setButtonColor(var4);
       this.setTitle(var1);
@@ -287,7 +287,7 @@ public class PostPreviewEmbedView  public constructor(context: Context, attrs: A
       this.setCoverImageButtonText(var9);
       this.binding.cta.setOnClickButtonListener(var11);
       val var17: SimpleDraweeView = this.binding.coverImage;
-      kotlin.jvm.internal.q.g(this.binding.coverImage, "coverImage");
+      kotlin.jvm.internal.r.g(this.binding.coverImage, "coverImage");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var17, false, var11, 1, null);
       this.binding.coverImageOverlayButton.setOnClickButtonListener(var11);
       this.setupSpoilerView(var16, var12, var13, var14, var15);

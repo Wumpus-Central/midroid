@@ -3,10 +3,10 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import r9.s
 
 @f
 internal data class TapChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null) : ReactEvent {
@@ -47,12 +47,12 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.guildId, var1.guildId)) {
+         if (!r.c(this.guildId, var1.guildId)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.messageId, var1.messageId);
+            return r.c(this.messageId, var1.messageId);
          }
       }
    }
@@ -87,18 +87,18 @@ internal data class TapChannelData(guildId: String? = null, channelId: String? =
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("TapChannelData(guildId=");
-      var4.append(var3);
-      var4.append(", channelId=");
-      var4.append(var1);
-      var4.append(", messageId=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.messageId;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapChannelData(guildId=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", messageId=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.list.item
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem {
    public final val color: Int
    public final val text: String
 
    init {
-      q.h(var2, "text");
+      r.h(var2, "text");
       val var3: StringBuilder = new StringBuilder();
       var3.append("separator: ");
       var3.append(var2);
@@ -25,7 +25,7 @@ public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem
    }
 
    public fun copy(color: Int = var0.color, text: String = var0.text): SeparatorChatListItem {
-      q.h(var2, "text");
+      r.h(var2, "text");
       return new SeparatorChatListItem(var1, var2);
    }
 
@@ -39,7 +39,7 @@ public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem
          if (this.color != var1.color) {
             return false;
          } else {
-            return q.c(this.text, var1.text);
+            return r.c(this.text, var1.text);
          }
       }
    }
@@ -50,13 +50,13 @@ public data class SeparatorChatListItem(color: Int, text: String) : ChatListItem
 
    public override fun toString(): String {
       val var1: Int = this.color;
-      val var3: java.lang.String = this.text;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("SeparatorChatListItem(color=");
-      var2.append(var1);
-      var2.append(", text=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.text;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SeparatorChatListItem(color=");
+      var3.append(var1);
+      var3.append(", text=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 }

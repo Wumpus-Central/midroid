@@ -4,7 +4,7 @@ import com.discord.chat.bridge.attachment.Attachment
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    messageId: MessageId,
@@ -27,8 +27,8 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    fun AudioAttachmentMessageAccessory(
       var1: Long, var3: java.lang.String, var4: Attachment, var5: Int, var6: java.lang.Float, var7: UserId, var8: Int, var9: Boolean
    ) {
-      q.h(var3, "messageId");
-      q.h(var4, "attachment");
+      r.h(var3, "messageId");
+      r.h(var4, "attachment");
       super(var3, var4, var5, var6, null);
       this.channelId = var1;
       this.messageId = var3;
@@ -82,8 +82,8 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
       color: Int? = ...,
       isVoiceMessage: Boolean = ...
    ): AudioAttachmentMessageAccessory {
-      q.h(var3, "messageId");
-      q.h(var4, "attachment");
+      r.h(var3, "messageId");
+      r.h(var4, "attachment");
       return new AudioAttachmentMessageAccessory(var1, var3, var4, var5, var6, var7, var8, var9, null);
    }
 
@@ -98,15 +98,15 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
             return false;
          } else if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.attachment, var1.attachment)) {
+         } else if (!r.c(this.attachment, var1.attachment)) {
             return false;
          } else if (this.attachmentIndex != var1.attachmentIndex) {
             return false;
-         } else if (!q.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
+         } else if (!r.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
             return false;
-         } else if (!q.c(this.authorId, var1.authorId)) {
+         } else if (!r.c(this.authorId, var1.authorId)) {
             return false;
-         } else if (!q.c(this.color, var1.color)) {
+         } else if (!r.c(this.color, var1.color)) {
             return false;
          } else {
             return this.isVoiceMessage == var1.isVoiceMessage;
@@ -142,32 +142,32 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: Attachment = this.attachment;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var8: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var3: java.lang.Float = this.attachmentsOpacity;
-      val var6: UserId = this.authorId;
-      val var8: Int = this.color;
+      val var7: java.lang.Float = this.attachmentsOpacity;
+      val var9: UserId = this.authorId;
+      val var6: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("AudioAttachmentMessageAccessory(channelId=");
-      var9.append(var4);
-      var9.append(", messageId=");
-      var9.append(var5);
-      var9.append(", attachment=");
-      var9.append(var7);
-      var9.append(", attachmentIndex=");
-      var9.append(var1);
-      var9.append(", attachmentsOpacity=");
-      var9.append(var3);
-      var9.append(", authorId=");
-      var9.append(var6);
-      var9.append(", color=");
-      var9.append(var8);
-      var9.append(", isVoiceMessage=");
-      var9.append(var2);
-      var9.append(")");
-      return var9.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("AudioAttachmentMessageAccessory(channelId=");
+      var4.append(var5);
+      var4.append(", messageId=");
+      var4.append(var3);
+      var4.append(", attachment=");
+      var4.append(var8);
+      var4.append(", attachmentIndex=");
+      var4.append(var1);
+      var4.append(", attachmentsOpacity=");
+      var4.append(var7);
+      var4.append(", authorId=");
+      var4.append(var9);
+      var4.append(", color=");
+      var4.append(var6);
+      var4.append(", isVoiceMessage=");
+      var4.append(var2);
+      var4.append(")");
+      return var4.toString();
    }
 }

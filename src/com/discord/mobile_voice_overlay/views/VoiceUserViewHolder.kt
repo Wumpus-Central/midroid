@@ -7,13 +7,13 @@ private class VoiceUserViewHolder(overlayVoiceBubble: OverlayVoiceBubble) : Recy
    public final val overlayVoiceBubble: OverlayVoiceBubble
 
    init {
-      kotlin.jvm.internal.q.h(var1, "overlayVoiceBubble");
+      kotlin.jvm.internal.r.h(var1, "overlayVoiceBubble");
       super(var1);
       this.overlayVoiceBubble = var1;
    }
 
    public fun bind(user: MobileVoiceOverlayDataUser) {
-      kotlin.jvm.internal.q.h(var1, "user");
+      kotlin.jvm.internal.r.h(var1, "user");
       this.overlayVoiceBubble.configureUI(var1);
    }
 }

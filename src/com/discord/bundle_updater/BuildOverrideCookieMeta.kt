@@ -4,14 +4,14 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ob.E0
-import ob.O
-import ob.U
-import s9.s
+import nb.E0
+import nb.O
+import nb.U
+import r9.s
 
-@lb.f
+@kb.f
 public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    releaseChannel: String? = null,
    validForUserIds: List<String>? = null,
@@ -29,7 +29,7 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new ob.f(E0.a), new ob.f(var0), null, new U(var0, O.a)};
+      $childSerializers = new KSerializer[]{null, null, new nb.f(E0.a), new nb.f(var0), null, new U(var0, O.a)};
    }
 
    fun BuildOverrideCookieMeta() {
@@ -87,18 +87,18 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.expiresAt, var1.expiresAt)) {
+         if (!r.c(this.expiresAt, var1.expiresAt)) {
             return false;
-         } else if (!q.c(this.releaseChannel, var1.releaseChannel)) {
+         } else if (!r.c(this.releaseChannel, var1.releaseChannel)) {
             return false;
-         } else if (!q.c(this.validForUserIds, var1.validForUserIds)) {
+         } else if (!r.c(this.validForUserIds, var1.validForUserIds)) {
             return false;
-         } else if (!q.c(this.allowedVersions, var1.allowedVersions)) {
+         } else if (!r.c(this.allowedVersions, var1.allowedVersions)) {
             return false;
-         } else if (!q.c(this.allowLoggedOut, var1.allowLoggedOut)) {
+         } else if (!r.c(this.allowLoggedOut, var1.allowLoggedOut)) {
             return false;
          } else {
-            return q.c(this.experiments, var1.experiments);
+            return r.c(this.experiments, var1.experiments);
          }
       }
    }
@@ -175,27 +175,27 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.expiresAt;
-      val var7: java.lang.String = this.releaseChannel;
-      val var5: java.util.List = this.validForUserIds;
-      val var2: java.util.List = this.allowedVersions;
-      val var1: java.lang.Boolean = this.allowLoggedOut;
-      val var3: java.util.Map = this.experiments;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BuildOverrideCookieMeta(expiresAt=");
-      var4.append(var6);
-      var4.append(", releaseChannel=");
-      var4.append(var7);
-      var4.append(", validForUserIds=");
-      var4.append(var5);
-      var4.append(", allowedVersions=");
-      var4.append(var2);
-      var4.append(", allowLoggedOut=");
-      var4.append(var1);
-      var4.append(", experiments=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.expiresAt;
+      val var1: java.lang.String = this.releaseChannel;
+      val var2: java.util.List = this.validForUserIds;
+      val var5: java.util.List = this.allowedVersions;
+      val var7: java.lang.Boolean = this.allowLoggedOut;
+      val var4: java.util.Map = this.experiments;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("BuildOverrideCookieMeta(expiresAt=");
+      var6.append(var3);
+      var6.append(", releaseChannel=");
+      var6.append(var1);
+      var6.append(", validForUserIds=");
+      var6.append(var2);
+      var6.append(", allowedVersions=");
+      var6.append(var5);
+      var6.append(", allowLoggedOut=");
+      var6.append(var7);
+      var6.append(", experiments=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

@@ -2,18 +2,19 @@ package com.discord.file_downloader
 
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
-import eb.e
+import db.e
 import java.io.File
 import java.util.Map.Entry
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
 import okhttp3.Interceptor.Chain
 import okhttp3.OkHttpClient.Builder
-import s9.j
+import r9.j
+import s9.q
 
 public object FileDownloader {
    private final val defaultClient: OkHttpClient by j.a(new a())
@@ -32,16 +33,16 @@ public object FileDownloader {
          }
 
          public final Response intercept(Chain var1) {
-            q.h(var1, "chain");
+            r.h(var1, "chain");
             return this.$receiver$inlined.downloadInterceptor(var1);
          }
       }).c();
    }
 
-   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = t9.q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
-      q.h(var1, "fileUrl");
-      q.h(var2, "headers");
-      q.h(var3, "client");
+   public fun downloadBlob(fileUrl: String, headers: Map<String, String> = q.h(), client: OkHttpClient = var0.getDefaultClient()): Response {
+      r.h(var1, "fileUrl");
+      r.h(var2, "headers");
+      r.h(var3, "client");
       val var4: okhttp3.Request.Builder = new okhttp3.Request.Builder();
 
       for (Entry var5 : var2.entrySet()) {
@@ -54,10 +55,10 @@ public object FileDownloader {
    public fun downloadFile(context: Context, fileUrl: String, fileName: String, downloadDirectory: File = var1.getCacheDir(), logErrors: Boolean = false): Flow<
          DownloadState
       > {
-      q.h(var1, "context");
-      q.h(var2, "fileUrl");
-      q.h(var3, "fileName");
-      q.h(var4, "downloadDirectory");
+      r.h(var1, "context");
+      r.h(var2, "fileUrl");
+      r.h(var3, "fileName");
+      r.h(var4, "downloadDirectory");
       return e.m(
          new Function2(var4, var3, var2, var5, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)

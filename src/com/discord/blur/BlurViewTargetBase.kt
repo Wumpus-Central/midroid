@@ -21,8 +21,8 @@ internal abstract class BlurViewTargetBase : ReactViewGroup, BlurViewAPI.Target 
 
 
    open fun BlurViewTargetBase(var1: Context, var2: java.lang.String) {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var2, "blurTargetNativeId");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var2, "blurTargetNativeId");
       super(var1);
       this.blurTargetNativeId = var2;
       BlurViewTargetRegistry.INSTANCE.add(var2, this.getSelf());
@@ -39,8 +39,8 @@ internal abstract class BlurViewTargetBase : ReactViewGroup, BlurViewAPI.Target 
    }
 
    public override fun setBlurTargetNativeId(nativeId: String) {
-      kotlin.jvm.internal.q.h(var1, "nativeId");
-      if (!kotlin.jvm.internal.q.c(this.blurTargetNativeId, var1)) {
+      kotlin.jvm.internal.r.h(var1, "nativeId");
+      if (!kotlin.jvm.internal.r.c(this.blurTargetNativeId, var1)) {
          this.blurTargetNativeId = var1;
          BlurViewTargetRegistry.INSTANCE.add(var1, this.getSelf());
       }

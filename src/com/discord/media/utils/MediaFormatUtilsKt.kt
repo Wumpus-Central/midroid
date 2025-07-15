@@ -1,24 +1,24 @@
 package com.discord.media.utils
 
 import android.media.MediaFormat
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public final val mimeType: String?
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
 
       label16:
       try {
-         val var1: kotlin.Result.a = Result.k;
-         var5 = Result.b(var0.getString("mime"));
+         val var5: kotlin.Result.a = Result.k;
+         var4 = Result.b(var0.getString("mime"));
       } catch (var2: java.lang.Throwable) {
-         val var4: kotlin.Result.a = Result.k;
-         var5 = Result.b(kotlin.c.a(var2));
+         val var1: kotlin.Result.a = Result.k;
+         var4 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
-      var var6: Any = var5;
-      if (Result.g(var5)) {
+      var var6: Any = var4;
+      if (Result.g(var4)) {
          var6 = null;
       }
 
@@ -28,7 +28,7 @@ public final val mimeType: String?
 
 public final val codecType: String?
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       val var1: java.lang.String = getMimeType(var0);
       if (var1 != null) {
          switch (var1.hashCode()) {
@@ -86,20 +86,20 @@ public final val codecType: String?
 
 public final val profile: Int?
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
 
       label16:
       try {
-         val var5: kotlin.Result.a = Result.k;
-         var4 = Result.b(var0.getInteger("profile"));
-      } catch (var2: java.lang.Throwable) {
          val var1: kotlin.Result.a = Result.k;
-         var4 = Result.b(kotlin.c.a(var2));
+         var5 = Result.b(var0.getInteger("profile"));
+      } catch (var2: java.lang.Throwable) {
+         val var4: kotlin.Result.a = Result.k;
+         var5 = Result.b(kotlin.c.a(var2));
          break label16;
       }
 
-      var var6: Any = var4;
-      if (Result.g(var4)) {
+      var var6: Any = var5;
+      if (Result.g(var5)) {
          var6 = null;
       }
 
@@ -109,7 +109,7 @@ public final val profile: Int?
 
 public final val level: Int?
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
 
       label16:
       try {
@@ -132,9 +132,9 @@ public final val level: Int?
 
 public final val profileName: String?
    public final get() {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       val var3: java.lang.String = getMimeType(var0);
-      if (q.c(var3, "video/avc")) {
+      if (r.c(var3, "video/avc")) {
          val var6: Int = getProfile(var0);
          if (var6 != null && var6 == 1) {
             return "baseline";
@@ -162,7 +162,7 @@ public final val profileName: String?
             return var12;
          }
       } else {
-         if (!q.c(var3, "video/hevc")) {
+         if (!r.c(var3, "video/hevc")) {
             return null;
          }
 
@@ -199,6 +199,6 @@ public final val profileName: String?
 
 
 public fun MediaFormat.isHevcVideo(): Boolean {
-   q.h(var0, "<this>");
-   return q.c(getMimeType(var0), "video/hevc");
+   r.h(var0, "<this>");
+   return r.c(getMimeType(var0), "video/hevc");
 }

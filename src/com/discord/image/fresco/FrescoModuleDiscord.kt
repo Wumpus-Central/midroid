@@ -3,11 +3,11 @@ package com.discord.image.fresco
 import android.content.Context
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.modules.fresco.FrescoModule
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : FrescoModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1, false, null, 6, null);
       Companion.initializeFresco(var1);
       this.initializeSkinny();
@@ -83,7 +83,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 01: monitorenter
          // 02: aload 1
          // 03: ldc "context"
-         // 05: invokestatic kotlin/jvm/internal/q.h (Ljava/lang/Object;Ljava/lang/String;)V
+         // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
          // 08: aload 0
          // 09: invokespecial com/discord/image/fresco/FrescoModuleDiscord$Companion.isFrescoInitialized ()Z
          // 0c: ifne 29
@@ -92,7 +92,7 @@ public class FrescoModuleDiscord(reactContext: ReactApplicationContext) : Fresco
          // 13: aload 1
          // 14: aload 1
          // 15: invokestatic com/discord/image/fresco/config/FrescoConfigKt.frescoConfig (Landroid/content/Context;)Lcom/facebook/imagepipeline/core/ImagePipelineConfig;
-         // 18: invokestatic J2/d.c (Landroid/content/Context;Lcom/facebook/imagepipeline/core/ImagePipelineConfig;)V
+         // 18: invokestatic I2/d.c (Landroid/content/Context;Lcom/facebook/imagepipeline/core/ImagePipelineConfig;)V
          // 1b: getstatic com/discord/image/fresco/config/FrescoMemoryTrimmer.INSTANCE Lcom/discord/image/fresco/config/FrescoMemoryTrimmer;
          // 1e: aload 1
          // 1f: invokevirtual com/discord/image/fresco/config/FrescoMemoryTrimmer.initialize (Landroid/content/Context;)V

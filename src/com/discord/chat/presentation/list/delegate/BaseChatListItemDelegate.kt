@@ -8,7 +8,7 @@ import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.list.item.ChatListItem
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends View> : com.hannesdorfmann.adapterdelegates4.b {
    private final val eventHandlerProvider: () -> ChatEventHandler
@@ -21,8 +21,8 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
 
 
    open fun BaseChatListItemDelegate(var1: Function0, var2: Function1) {
-      q.h(var1, "eventHandlerProvider");
-      q.h(var2, "initBlock");
+      r.h(var1, "eventHandlerProvider");
+      r.h(var2, "initBlock");
       super();
       this.eventHandlerProvider = var1;
       this.initBlock = var2;
@@ -30,7 +30,7 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: View): Unit {
-      q.h(var0, "<this>");
+      r.h(var0, "<this>");
       var0.setLayoutParams(new RecyclerView.LayoutParams(-1, -2));
       return Unit.a;
    }
@@ -45,22 +45,22 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
    }
 
    protected fun isForViewType(items: List<ChatListItem>, position: Int): Boolean {
-      q.h(var1, "items");
+      r.h(var1, "items");
       return this.isForItem(var1.get(var2) as ChatListItem, var2);
    }
 
    protected fun onBindViewHolder(items: List<ChatListItem>, position: Int, holder: ViewHolder, payloads: List<Any>) {
-      q.h(var1, "items");
-      q.h(var3, "holder");
-      q.h(var4, "payloads");
+      r.h(var1, "items");
+      r.h(var3, "holder");
+      r.h(var4, "payloads");
       val var7: ChatListItemViewHolder = var3 as ChatListItemViewHolder;
       val var5: Any = var1.get(var2);
-      q.f(var5, "null cannot be cast to non-null type T of com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate");
+      r.f(var5, "null cannot be cast to non-null type T of com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate");
       this.bindView((V)var7.getView(), (T)var5, new BaseChatListItemDelegate.Metadata<>(var7, var1, var4));
    }
 
    protected fun onCreateViewHolder(parent: ViewGroup): ViewHolder {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var2: View = this.createView(var1);
       this.initBlock.invoke(var2);
       return new ChatListItemViewHolder<>(var2);
@@ -72,9 +72,9 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
       public final val payloads: List<Any>
 
       init {
-         q.h(var1, "holder");
-         q.h(var2, "items");
-         q.h(var3, "payloads");
+         r.h(var1, "holder");
+         r.h(var2, "items");
+         r.h(var3, "payloads");
          super();
          this.holder = var1;
          this.items = var2;
@@ -96,9 +96,9 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
       public fun copy(holder: ChatListItemViewHolder<Any> = var0.holder, items: List<ChatListItem> = var0.items, payloads: List<Any> = var0.payloads): com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Metadata<
             Any
          > {
-         q.h(var1, "holder");
-         q.h(var2, "items");
-         q.h(var3, "payloads");
+         r.h(var1, "holder");
+         r.h(var2, "items");
+         r.h(var3, "payloads");
          return new BaseChatListItemDelegate.Metadata<>(var1, var2, var3);
       }
 
@@ -109,12 +109,12 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.holder, var1.holder)) {
+            if (!r.c(this.holder, var1.holder)) {
                return false;
-            } else if (!q.c(this.items, var1.items)) {
+            } else if (!r.c(this.items, var1.items)) {
                return false;
             } else {
-               return q.c(this.payloads, var1.payloads);
+               return r.c(this.payloads, var1.payloads);
             }
          }
       }
@@ -124,18 +124,18 @@ public abstract class BaseChatListItemDelegate<T extends ChatListItem, V extends
       }
 
       public override fun toString(): String {
-         val var3: ChatListItemViewHolder = this.holder;
-         val var2: java.util.List = this.items;
-         val var1: java.util.List = this.payloads;
-         val var4: StringBuilder = new StringBuilder();
-         var4.append("Metadata(holder=");
-         var4.append(var3);
-         var4.append(", items=");
-         var4.append(var2);
-         var4.append(", payloads=");
-         var4.append(var1);
-         var4.append(")");
-         return var4.toString();
+         val var2: ChatListItemViewHolder = this.holder;
+         val var1: java.util.List = this.items;
+         val var4: java.util.List = this.payloads;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Metadata(holder=");
+         var3.append(var2);
+         var3.append(", items=");
+         var3.append(var1);
+         var3.append(", payloads=");
+         var3.append(var4);
+         var3.append(")");
+         return var3.toString();
       }
    }
 }

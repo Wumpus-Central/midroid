@@ -1,15 +1,15 @@
 package com.discord.notifications.api
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class Poll(question: PollMedia) {
    public final val question: PollMedia
 
    init {
-      q.h(var1, "question");
+      r.h(var1, "question");
       super();
       this.question = var1;
    }
@@ -19,7 +19,7 @@ public data class Poll(question: PollMedia) {
    }
 
    public fun copy(question: PollMedia = var0.question): Poll {
-      q.h(var1, "question");
+      r.h(var1, "question");
       return new Poll(var1);
    }
 
@@ -29,7 +29,7 @@ public data class Poll(question: PollMedia) {
       } else if (var1 !is Poll) {
          return false;
       } else {
-         return q.c(this.question, (var1 as Poll).question);
+         return r.c(this.question, (var1 as Poll).question);
       }
    }
 
@@ -38,12 +38,12 @@ public data class Poll(question: PollMedia) {
    }
 
    public override fun toString(): String {
-      val var2: PollMedia = this.question;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("Poll(question=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: PollMedia = this.question;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Poll(question=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

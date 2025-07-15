@@ -10,31 +10,31 @@ import com.facebook.react.uimanager.SimpleViewManager
 import com.facebook.react.uimanager.ThemedReactContext
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.EmojiPickerRowViewManagerInterface
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import r9.s
 
 @ReactModule(name = "EmojiPickerRowView")
 internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>, EmojiPickerRowViewManagerInterface<EmojiPickerRowView> {
    private final val reactEvents: ReactEvents =
-      new ReactEvents(s.a("onPressEmoji", G.b(OnPressEmojiEvent.class)), s.a("onLongPressEmoji", G.b(OnLongPressEmojiEvent.class)))
+      new ReactEvents(s.a("onPressEmoji", H.b(OnPressEmojiEvent.class)), s.a("onLongPressEmoji", H.b(OnLongPressEmojiEvent.class)))
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$0`(var0: EmojiPickerRowViewManager, var1: ThemedReactContext, var2: EmojiPickerRowView, var3: java.lang.String): Unit {
-      q.h(var3, "emojiName");
+      r.h(var3, "emojiName");
       var0.reactEvents.emitEvent(var1, var2, new OnPressEmojiEvent(var3, null, 2, null));
       return Unit.a;
    }
 
    @JvmStatic
    fun `createViewInstance$lambda$2$lambda$1`(var0: EmojiPickerRowViewManager, var1: ThemedReactContext, var2: EmojiPickerRowView, var3: java.lang.String): Unit {
-      q.h(var3, "emojiName");
+      r.h(var3, "emojiName");
       var0.reactEvents.emitEvent(var1, var2, new OnLongPressEmojiEvent(var3, null, 2, null));
       return Unit.a;
    }
 
    protected open fun createViewInstance(reactContext: ThemedReactContext): EmojiPickerRowView {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       val var2: EmojiPickerRowView = new EmojiPickerRowView(var1);
       var2.setOnPressEmoji(new a(this, var1, var2));
       var2.setOnLongPressEmoji(new b(this, var1, var2));
@@ -51,7 +51,7 @@ internal class EmojiPickerRowViewManager : SimpleViewManager<EmojiPickerRowView>
 
    @ReactProp(name = "rowData")
    public open fun setRowData(view: EmojiPickerRowView, data: ReadableMap?) {
-      q.h(var1, "view");
+      r.h(var1, "view");
       if (var2 != null) {
          var1.setRowData(EmojiPickerRowDataSerializationUtilsKt.deserializeEmojiPickerRowData(var2));
       }

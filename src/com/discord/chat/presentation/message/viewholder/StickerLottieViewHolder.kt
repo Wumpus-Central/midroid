@@ -11,7 +11,7 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
    private final var sticker: Sticker?
 
    init {
-      kotlin.jvm.internal.q.h(var1, "stickerView");
+      kotlin.jvm.internal.r.h(var1, "stickerView");
       super(var1);
       this.stickerView = var1;
    }
@@ -28,10 +28,10 @@ public class StickerLottieViewHolder(stickerView: StickerView) : StickerPartView
    }
 
    public override fun bind(sticker: Sticker, onStickerClicked: (Sticker) -> Unit, onStickerLongClicked: (Sticker) -> Unit, widthDp: Int, heightDp: Int) {
-      kotlin.jvm.internal.q.h(var1, "sticker");
-      kotlin.jvm.internal.q.h(var2, "onStickerClicked");
-      kotlin.jvm.internal.q.h(var3, "onStickerLongClicked");
-      if (!kotlin.jvm.internal.q.c(var1, this.sticker)) {
+      kotlin.jvm.internal.r.h(var1, "sticker");
+      kotlin.jvm.internal.r.h(var2, "onStickerClicked");
+      kotlin.jvm.internal.r.h(var3, "onStickerLongClicked");
+      if (!kotlin.jvm.internal.r.c(var1, this.sticker)) {
          this.sticker = var1;
          val var8: StickerView = this.stickerView;
          val var7: java.lang.String = var1.getUrl();

@@ -10,18 +10,25 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.PortalViewChatListItem
 import com.discord.portals.utils.ViewRemoveFromParentKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : BaseChatListItemDelegate<PortalViewChatListItem, ChatListFrameLayout> {
    init {
-      q.h(var1, "eventHandlerProvider");
+      r.h(var1, "eventHandlerProvider");
       super(var1, null, 2, null);
    }
 
+   @JvmStatic
+   fun `bindView$lambda$2`(var0: PortalViewChatListItem, var1: ChatListFrameLayout) {
+      if (var0.getView().getParent() == null) {
+         var1.addView(var0.getView());
+      }
+   }
+
    public open fun bindView(view: ChatListFrameLayout, item: PortalViewChatListItem, metadata: Metadata<ChatListFrameLayout>) {
-      q.h(var1, "view");
-      q.h(var2, "item");
-      q.h(var3, "metadata");
+      r.h(var1, "view");
+      r.h(var2, "item");
+      r.h(var3, "metadata");
       var2.getView().setVisibility(0);
       ViewRemoveFromParentKt.removeFromParent(var2.getView());
       if (var2.getMeasuredDimensions() != null) {
@@ -40,18 +47,22 @@ public class PortalViewDelegate(eventHandlerProvider: () -> ChatEventHandler) : 
       }
 
       var1.removeAllViews();
-      var1.addView(var2.getView());
+      if (var2.getView().getParent() == null) {
+         var1.addView(var2.getView());
+      } else {
+         var1.post(new d(var2, var1));
+      }
    }
 
    public open fun createView(parent: ViewGroup): ChatListFrameLayout {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      q.g(var2, "getContext(...)");
+      r.g(var2, "getContext(...)");
       return new ChatListFrameLayout(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      q.h(var1, "item");
+      r.h(var1, "item");
       return var1 is PortalViewChatListItem;
    }
 }

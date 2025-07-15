@@ -1,18 +1,18 @@
 package com.discord.chat.bridge.messageframe
 
 import java.util.ArrayList
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import pb.d
-import pb.g
+import ob.d
+import ob.g
 
-public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
+public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>
    private final val messageFrameClassSerializer: SealedClassSerializer<MessageFrame>
 
@@ -29,8 +29,8 @@ public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
       knownTypes = var2;
       messageFrameClassSerializer = new SealedClassSerializer(
          "MessageFrame",
-         G.b(MessageFrame.class),
-         new KClass[]{G.b(UnknownMessageFrame.class), G.b(MessageFrameJump.class), G.b(MessageFrameMediaViewer.class)},
+         H.b(MessageFrame.class),
+         new KClass[]{H.b(UnknownMessageFrame.class), H.b(MessageFrameJump.class), H.b(MessageFrameMediaViewer.class)},
          new KSerializer[]{UnknownMessageFrame.Companion.serializer(), MessageFrameJump.Companion.serializer(), MessageFrameMediaViewer.Companion.serializer()}
       );
    }
@@ -38,7 +38,7 @@ public object MessageFrameSerializer : d(G.b(MessageFrame.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<MessageFrame> {
       var var2: java.util.List;
       label17: {
-         q.h(var1, "element");
+         r.h(var1, "element");
          var2 = knownTypes;
          var1 = g.o(var1).get("type") as JsonElement;
          if (var1 != null) {

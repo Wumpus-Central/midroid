@@ -2,16 +2,16 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class TapShowAltTextData(description: String) : ReactEvent {
    public final val description: String
 
    init {
-      q.h(var1, "description");
+      r.h(var1, "description");
       super();
       this.description = var1;
    }
@@ -21,7 +21,7 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
    }
 
    public fun copy(description: String = var0.description): TapShowAltTextData {
-      q.h(var1, "description");
+      r.h(var1, "description");
       return new TapShowAltTextData(var1);
    }
 
@@ -31,7 +31,7 @@ internal data class TapShowAltTextData(description: String) : ReactEvent {
       } else if (var1 !is TapShowAltTextData) {
          return false;
       } else {
-         return q.c(this.description, (var1 as TapShowAltTextData).description);
+         return r.c(this.description, (var1 as TapShowAltTextData).description);
       }
    }
 

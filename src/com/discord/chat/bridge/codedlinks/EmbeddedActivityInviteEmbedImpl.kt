@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.codedlinks
 
 import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
@@ -75,9 +75,9 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
    public open val ctaEnabled: Boolean
 
    init {
-      q.h(var28, "participantAvatarUris");
-      q.h(var29, "extendedType");
-      q.h(var31, "noParticipantsText");
+      r.h(var28, "participantAvatarUris");
+      r.h(var29, "extendedType");
+      r.h(var31, "noParticipantsText");
       super(null);
       this.backgroundColor = var1;
       this.borderColor = var2;
@@ -275,9 +275,9 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
       noParticipantsText: String = ...,
       ctaEnabled: Boolean = ...
    ): EmbeddedActivityInviteEmbedImpl {
-      q.h(var28, "participantAvatarUris");
-      q.h(var29, "extendedType");
-      q.h(var31, "noParticipantsText");
+      r.h(var28, "participantAvatarUris");
+      r.h(var29, "extendedType");
+      r.h(var31, "noParticipantsText");
       return new EmbeddedActivityInviteEmbedImpl(
          var1,
          var2,
@@ -327,61 +327,61 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
             return false;
          } else if (this.headerColor != var1.headerColor) {
             return false;
-         } else if (!q.c(this.headerText, var1.headerText)) {
+         } else if (!r.c(this.headerText, var1.headerText)) {
             return false;
          } else if (this.type != var1.type) {
             return false;
-         } else if (!q.c(this.acceptLabelBackgroundColor, var1.acceptLabelBackgroundColor)) {
+         } else if (!r.c(this.acceptLabelBackgroundColor, var1.acceptLabelBackgroundColor)) {
             return false;
-         } else if (!q.c(this.acceptLabelBorderColor, var1.acceptLabelBorderColor)) {
+         } else if (!r.c(this.acceptLabelBorderColor, var1.acceptLabelBorderColor)) {
             return false;
-         } else if (!q.c(this.acceptLabelColor, var1.acceptLabelColor)) {
+         } else if (!r.c(this.acceptLabelColor, var1.acceptLabelColor)) {
             return false;
-         } else if (!q.c(this.acceptLabelText, var1.acceptLabelText)) {
+         } else if (!r.c(this.acceptLabelText, var1.acceptLabelText)) {
             return false;
-         } else if (!q.c(this.bodyText, var1.bodyText)) {
+         } else if (!r.c(this.bodyText, var1.bodyText)) {
             return false;
-         } else if (!q.c(this.bodyTextColor, var1.bodyTextColor)) {
+         } else if (!r.c(this.bodyTextColor, var1.bodyTextColor)) {
             return false;
-         } else if (!q.c(this.canBeAccepted, var1.canBeAccepted)) {
+         } else if (!r.c(this.canBeAccepted, var1.canBeAccepted)) {
             return false;
-         } else if (!q.c(this.embedCanBeTapped, var1.embedCanBeTapped)) {
+         } else if (!r.c(this.embedCanBeTapped, var1.embedCanBeTapped)) {
             return false;
-         } else if (!q.c(this.resolvingGradientEnd, var1.resolvingGradientEnd)) {
+         } else if (!r.c(this.resolvingGradientEnd, var1.resolvingGradientEnd)) {
             return false;
-         } else if (!q.c(this.resolvingGradientStart, var1.resolvingGradientStart)) {
+         } else if (!r.c(this.resolvingGradientStart, var1.resolvingGradientStart)) {
             return false;
-         } else if (!q.c(this.splashHasRadialGradient, var1.splashHasRadialGradient)) {
+         } else if (!r.c(this.splashHasRadialGradient, var1.splashHasRadialGradient)) {
             return false;
-         } else if (!q.c(this.splashOpacity, var1.splashOpacity)) {
+         } else if (!r.c(this.splashOpacity, var1.splashOpacity)) {
             return false;
-         } else if (!q.c(this.splashUrl, var1.splashUrl)) {
+         } else if (!r.c(this.splashUrl, var1.splashUrl)) {
             return false;
-         } else if (!q.c(this.inviteSplash, var1.inviteSplash)) {
+         } else if (!r.c(this.inviteSplash, var1.inviteSplash)) {
             return false;
-         } else if (!q.c(this.subtitle, var1.subtitle)) {
+         } else if (!r.c(this.subtitle, var1.subtitle)) {
             return false;
-         } else if (!q.c(this.subtitleColor, var1.subtitleColor)) {
+         } else if (!r.c(this.subtitleColor, var1.subtitleColor)) {
             return false;
-         } else if (!q.c(this.thumbnailBackgroundColor, var1.thumbnailBackgroundColor)) {
+         } else if (!r.c(this.thumbnailBackgroundColor, var1.thumbnailBackgroundColor)) {
             return false;
-         } else if (!q.c(this.thumbnailCornerRadius, var1.thumbnailCornerRadius)) {
+         } else if (!r.c(this.thumbnailCornerRadius, var1.thumbnailCornerRadius)) {
             return false;
-         } else if (!q.c(this.thumbnailText, var1.thumbnailText)) {
+         } else if (!r.c(this.thumbnailText, var1.thumbnailText)) {
             return false;
-         } else if (!q.c(this.thumbnailUrl, var1.thumbnailUrl)) {
+         } else if (!r.c(this.thumbnailUrl, var1.thumbnailUrl)) {
             return false;
-         } else if (!q.c(this.titleColor, var1.titleColor)) {
+         } else if (!r.c(this.titleColor, var1.titleColor)) {
             return false;
-         } else if (!q.c(this.titleText, var1.titleText)) {
+         } else if (!r.c(this.titleText, var1.titleText)) {
             return false;
-         } else if (!q.c(this.participantAvatarUris, var1.participantAvatarUris)) {
+         } else if (!r.c(this.participantAvatarUris, var1.participantAvatarUris)) {
             return false;
          } else if (this.extendedType != var1.extendedType) {
             return false;
-         } else if (!q.c(this.structurableSubtitleText, var1.structurableSubtitleText)) {
+         } else if (!r.c(this.structurableSubtitleText, var1.structurableSubtitleText)) {
             return false;
-         } else if (!q.c(this.noParticipantsText, var1.noParticipantsText)) {
+         } else if (!r.c(this.noParticipantsText, var1.noParticipantsText)) {
             return false;
          } else {
             return this.ctaEnabled == var1.ctaEnabled;
@@ -391,8 +391,8 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
 
    public override fun hashCode(): Int {
       val var28: Int = Integer.hashCode(this.backgroundColor);
-      val var26: Int = Integer.hashCode(this.borderColor);
-      val var27: Int = Integer.hashCode(this.headerColor);
+      val var27: Int = Integer.hashCode(this.borderColor);
+      val var26: Int = Integer.hashCode(this.headerColor);
       var var25: Int = 0;
       val var1: Int;
       if (this.headerText == null) {
@@ -600,10 +600,10 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                                            (
                                                                                                                                                                                                                                                                                     var28
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var26
+                                                                                                                                                                                                                                                                                       + var27
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var27
+                                                                                                                                                                                                                                                                              + var26
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
                                                                                                                                                                                                                                                                      + var1
@@ -697,102 +697,102 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
       val var1: Int = this.backgroundColor;
       val var2: Int = this.borderColor;
       val var3: Int = this.headerColor;
-      val var21: java.lang.String = this.headerText;
-      val var30: InviteType = this.type;
-      val var23: Int = this.acceptLabelBackgroundColor;
-      val var7: Int = this.acceptLabelBorderColor;
-      val var14: Int = this.acceptLabelColor;
-      val var12: java.lang.String = this.acceptLabelText;
-      val var13: java.lang.String = this.bodyText;
-      val var6: Int = this.bodyTextColor;
+      val var30: java.lang.String = this.headerText;
+      val var19: InviteType = this.type;
+      val var5: Int = this.acceptLabelBackgroundColor;
+      val var31: Int = this.acceptLabelBorderColor;
+      val var33: Int = this.acceptLabelColor;
+      val var20: java.lang.String = this.acceptLabelText;
+      val var22: java.lang.String = this.bodyText;
+      val var14: Int = this.bodyTextColor;
       val var25: java.lang.Boolean = this.canBeAccepted;
-      val var16: java.lang.Boolean = this.embedCanBeTapped;
-      val var8: Int = this.resolvingGradientEnd;
-      val var24: Int = this.resolvingGradientStart;
-      val var31: java.lang.Boolean = this.splashHasRadialGradient;
-      val var20: Int = this.splashOpacity;
-      val var22: java.lang.String = this.splashUrl;
-      val var17: java.lang.String = this.inviteSplash;
-      val var9: java.lang.String = this.subtitle;
-      val var27: Int = this.subtitleColor;
-      val var10: Int = this.thumbnailBackgroundColor;
-      val var26: Int = this.thumbnailCornerRadius;
+      val var28: java.lang.Boolean = this.embedCanBeTapped;
+      val var32: Int = this.resolvingGradientEnd;
+      val var16: Int = this.resolvingGradientStart;
+      val var27: java.lang.Boolean = this.splashHasRadialGradient;
+      val var8: Int = this.splashOpacity;
+      val var9: java.lang.String = this.splashUrl;
+      val var26: java.lang.String = this.inviteSplash;
+      val var7: java.lang.String = this.subtitle;
+      val var21: Int = this.subtitleColor;
+      val var13: Int = this.thumbnailBackgroundColor;
+      val var17: Int = this.thumbnailCornerRadius;
       val var15: java.lang.String = this.thumbnailText;
-      val var11: java.lang.String = this.thumbnailUrl;
-      val var33: Int = this.titleColor;
-      val var29: java.lang.String = this.titleText;
-      val var18: java.util.List = this.participantAvatarUris;
-      val var32: CodedLinkExtendedType = this.extendedType;
-      val var5: AnnotatedStructurableText = this.structurableSubtitleText;
-      val var28: java.lang.String = this.noParticipantsText;
+      val var6: java.lang.String = this.thumbnailUrl;
+      val var12: Int = this.titleColor;
+      val var24: java.lang.String = this.titleText;
+      val var29: java.util.List = this.participantAvatarUris;
+      val var10: CodedLinkExtendedType = this.extendedType;
+      val var23: AnnotatedStructurableText = this.structurableSubtitleText;
+      val var18: java.lang.String = this.noParticipantsText;
       val var4: Boolean = this.ctaEnabled;
-      val var19: StringBuilder = new StringBuilder();
-      var19.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
-      var19.append(var1);
-      var19.append(", borderColor=");
-      var19.append(var2);
-      var19.append(", headerColor=");
-      var19.append(var3);
-      var19.append(", headerText=");
-      var19.append(var21);
-      var19.append(", type=");
-      var19.append(var30);
-      var19.append(", acceptLabelBackgroundColor=");
-      var19.append(var23);
-      var19.append(", acceptLabelBorderColor=");
-      var19.append(var7);
-      var19.append(", acceptLabelColor=");
-      var19.append(var14);
-      var19.append(", acceptLabelText=");
-      var19.append(var12);
-      var19.append(", bodyText=");
-      var19.append(var13);
-      var19.append(", bodyTextColor=");
-      var19.append(var6);
-      var19.append(", canBeAccepted=");
-      var19.append(var25);
-      var19.append(", embedCanBeTapped=");
-      var19.append(var16);
-      var19.append(", resolvingGradientEnd=");
-      var19.append(var8);
-      var19.append(", resolvingGradientStart=");
-      var19.append(var24);
-      var19.append(", splashHasRadialGradient=");
-      var19.append(var31);
-      var19.append(", splashOpacity=");
-      var19.append(var20);
-      var19.append(", splashUrl=");
-      var19.append(var22);
-      var19.append(", inviteSplash=");
-      var19.append(var17);
-      var19.append(", subtitle=");
-      var19.append(var9);
-      var19.append(", subtitleColor=");
-      var19.append(var27);
-      var19.append(", thumbnailBackgroundColor=");
-      var19.append(var10);
-      var19.append(", thumbnailCornerRadius=");
-      var19.append(var26);
-      var19.append(", thumbnailText=");
-      var19.append(var15);
-      var19.append(", thumbnailUrl=");
-      var19.append(var11);
-      var19.append(", titleColor=");
-      var19.append(var33);
-      var19.append(", titleText=");
-      var19.append(var29);
-      var19.append(", participantAvatarUris=");
-      var19.append(var18);
-      var19.append(", extendedType=");
-      var19.append(var32);
-      var19.append(", structurableSubtitleText=");
-      var19.append(var5);
-      var19.append(", noParticipantsText=");
-      var19.append(var28);
-      var19.append(", ctaEnabled=");
-      var19.append(var4);
-      var19.append(")");
-      return var19.toString();
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
+      var11.append(var1);
+      var11.append(", borderColor=");
+      var11.append(var2);
+      var11.append(", headerColor=");
+      var11.append(var3);
+      var11.append(", headerText=");
+      var11.append(var30);
+      var11.append(", type=");
+      var11.append(var19);
+      var11.append(", acceptLabelBackgroundColor=");
+      var11.append(var5);
+      var11.append(", acceptLabelBorderColor=");
+      var11.append(var31);
+      var11.append(", acceptLabelColor=");
+      var11.append(var33);
+      var11.append(", acceptLabelText=");
+      var11.append(var20);
+      var11.append(", bodyText=");
+      var11.append(var22);
+      var11.append(", bodyTextColor=");
+      var11.append(var14);
+      var11.append(", canBeAccepted=");
+      var11.append(var25);
+      var11.append(", embedCanBeTapped=");
+      var11.append(var28);
+      var11.append(", resolvingGradientEnd=");
+      var11.append(var32);
+      var11.append(", resolvingGradientStart=");
+      var11.append(var16);
+      var11.append(", splashHasRadialGradient=");
+      var11.append(var27);
+      var11.append(", splashOpacity=");
+      var11.append(var8);
+      var11.append(", splashUrl=");
+      var11.append(var9);
+      var11.append(", inviteSplash=");
+      var11.append(var26);
+      var11.append(", subtitle=");
+      var11.append(var7);
+      var11.append(", subtitleColor=");
+      var11.append(var21);
+      var11.append(", thumbnailBackgroundColor=");
+      var11.append(var13);
+      var11.append(", thumbnailCornerRadius=");
+      var11.append(var17);
+      var11.append(", thumbnailText=");
+      var11.append(var15);
+      var11.append(", thumbnailUrl=");
+      var11.append(var6);
+      var11.append(", titleColor=");
+      var11.append(var12);
+      var11.append(", titleText=");
+      var11.append(var24);
+      var11.append(", participantAvatarUris=");
+      var11.append(var29);
+      var11.append(", extendedType=");
+      var11.append(var10);
+      var11.append(", structurableSubtitleText=");
+      var11.append(var23);
+      var11.append(", noParticipantsText=");
+      var11.append(var18);
+      var11.append(", ctaEnabled=");
+      var11.append(var4);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

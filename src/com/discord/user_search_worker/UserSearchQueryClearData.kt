@@ -1,15 +1,15 @@
 package com.discord.user_search_worker
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
    public final val uuid: String
 
    init {
-      q.h(var1, "uuid");
+      r.h(var1, "uuid");
       super(null);
       this.uuid = var1;
    }
@@ -19,7 +19,7 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
    }
 
    public fun copy(uuid: String = var0.uuid): UserSearchQueryClearData {
-      q.h(var1, "uuid");
+      r.h(var1, "uuid");
       return new UserSearchQueryClearData(var1);
    }
 
@@ -29,7 +29,7 @@ internal data class UserSearchQueryClearData(uuid: String) : UserSearchData {
       } else if (var1 !is UserSearchQueryClearData) {
          return false;
       } else {
-         return q.c(this.uuid, (var1 as UserSearchQueryClearData).uuid);
+         return r.c(this.uuid, (var1 as UserSearchQueryClearData).uuid);
       }
    }
 

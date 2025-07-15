@@ -22,6 +22,8 @@ public final class R {
       public static int reaction_count_2;
       public static int reaction_count_switcher;
       public static int reaction_emoji;
+      public static int reaction_label_left;
+      public static int reaction_label_right;
 
       private id() {
       }

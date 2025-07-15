@@ -8,7 +8,7 @@ import com.discord.chat.presentation.message.MessageAccessoriesView
 import com.discord.chat.presentation.message.view.ForumPostActionBarView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
 import com.discord.reactions.ShortcutsFlexbox
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx: Int, rightMarginPx: Int, isForwardedMessage: Boolean) : RecyclerView.ItemDecoration {
    private final val leftMarginPx: Int
@@ -36,10 +36,10 @@ public class MessageAccessoriesHorizontalSpacingDecoration(leftMarginPx: Int, ri
    }
 
    public override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: State) {
-      q.h(var1, "outRect");
-      q.h(var2, "view");
-      q.h(var3, "parent");
-      q.h(var4, "state");
+      r.h(var1, "outRect");
+      r.h(var2, "view");
+      r.h(var3, "parent");
+      r.h(var4, "state");
       if (var2 !is ForumPostActionBarView) {
          var1.left = this.computeLeftMarginPx(var2);
          var1.right = this.rightMarginPx;

@@ -20,7 +20,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    private final var attached: Boolean
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       super();
       this.useTier0UpsellContent = var2;
       this.linearGradientColors = EmojiPickerPremiumUpsellGradientBackground.Companion.access$getColors(Companion, var1, var2);
@@ -46,7 +46,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
          var var3: Float;
          var var6: Float;
          if (var5 == -1.0F) {
-            kotlin.jvm.internal.q.e(var11);
+            kotlin.jvm.internal.r.e(var11);
             var3 = var5;
             var6 = var4;
             if (this.isInsidePremiumRoadblock(var11)) {
@@ -63,7 +63,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
             var6 = var4;
             label38:
             if (var4 == -1.0F) {
-               kotlin.jvm.internal.q.e(var11);
+               kotlin.jvm.internal.r.e(var11);
                val var8: Int;
                if (!this.isInsidePremiumRoadblock(var11)) {
                   var8 = var12.getTop();
@@ -121,9 +121,9 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    public override fun onDraw(c: Canvas, parent: RecyclerView, state: State) {
-      kotlin.jvm.internal.q.h(var1, "c");
-      kotlin.jvm.internal.q.h(var2, "parent");
-      kotlin.jvm.internal.q.h(var3, "state");
+      kotlin.jvm.internal.r.h(var1, "c");
+      kotlin.jvm.internal.r.h(var2, "parent");
+      kotlin.jvm.internal.r.h(var3, "state");
       super.onDraw(var1, var2, var3);
       if (this.linearGradientWidth != var2.getWidth()) {
          val var4: Int = var2.getWidth();
@@ -141,7 +141,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    public fun setEnabled(enabled: Boolean, recyclerView: RecyclerView) {
-      kotlin.jvm.internal.q.h(var2, "recyclerView");
+      kotlin.jvm.internal.r.h(var2, "recyclerView");
       if (var1) {
          if (!this.attached) {
             var2.addItemDecoration(this);
@@ -154,7 +154,7 @@ public class EmojiPickerPremiumUpsellGradientBackground(context: Context, useTie
    }
 
    public fun setUseTier0UpsellContent(context: Context, useTier0UpsellContent: Boolean) {
-      kotlin.jvm.internal.q.h(var1, "context");
+      kotlin.jvm.internal.r.h(var1, "context");
       if (this.useTier0UpsellContent != var2) {
          this.useTier0UpsellContent = var2;
          val var3: EmojiPickerPremiumUpsellGradientBackground.Companion = Companion;

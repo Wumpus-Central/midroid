@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class LongPressAvatarData(messageId: String, userId: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    public final val userId: String
 
    init {
-      q.h(var1, "messageId");
-      q.h(var2, "userId");
+      r.h(var1, "messageId");
+      r.h(var2, "userId");
       super();
       this.messageId = var1;
       this.userId = var2;
@@ -28,8 +28,8 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    }
 
    public fun copy(messageId: String = var0.messageId, userId: String = var0.userId): LongPressAvatarData {
-      q.h(var1, "messageId");
-      q.h(var2, "userId");
+      r.h(var1, "messageId");
+      r.h(var2, "userId");
       return new LongPressAvatarData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.messageId, var1.messageId)) {
+         if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.userId, var1.userId);
+            return r.c(this.userId, var1.userId);
          }
       }
    }
@@ -57,15 +57,15 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.userId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LongPressAvatarData(messageId=");
-      var2.append(var1);
-      var2.append(", userId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.userId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("LongPressAvatarData(messageId=");
+      var3.append(var2);
+      var3.append(", userId=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

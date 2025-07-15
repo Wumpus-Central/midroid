@@ -18,17 +18,17 @@ import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics
 import com.discord.primitives.ChannelId
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : MediaVideoViewHolder {
    init {
-      q.h(var1, "view");
+      r.h(var1, "view");
       super(var1);
    }
 
    @JvmStatic
    fun `bindGalleryItem$lambda$0`(var0: MediaPlayFinishedAnalytics): Unit {
-      q.h(var0, "it");
+      r.h(var0, "it");
       return Unit.a;
    }
 
@@ -41,34 +41,34 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       onTapSpoiler: () -> Unit,
       onTapObscureToggle: (Boolean) -> Unit
    ) {
-      q.h(var1, "eventHandler");
-      q.h(var2, "item");
-      q.h(var4, "onClicked");
-      q.h(var6, "onTapSpoiler");
-      q.h(var7, "onTapObscureToggle");
+      r.h(var1, "eventHandler");
+      r.h(var2, "item");
+      r.h(var4, "onClicked");
+      r.h(var6, "onTapSpoiler");
+      r.h(var7, "onTapObscureToggle");
       val var30: Attachment = var2.getAttachment();
-      val var24: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
+      val var28: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
 
          public final void invoke(java.lang.String var1, java.lang.String var2) {
-            q.h(var1, "p0");
-            q.h(var2, "p1");
+            r.h(var1, "p0");
+            r.h(var2, "p1");
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
       val var22: Long = var2.getChannelId-o4g7jtM();
-      val var27: java.lang.String = var2.getMessageId-3Eiw7ao();
-      val var11: Int = var2.getAttachmentIndex();
-      val var28: java.lang.String = var30.getVideoUrl();
-      q.e(var28);
+      val var25: java.lang.String = var2.getMessageId-3Eiw7ao();
+      val var13: Int = var2.getAttachmentIndex();
+      val var27: java.lang.String = var30.getVideoUrl();
+      r.e(var27);
       val var26: java.lang.String = var30.getUrl();
       val var10: Int = var30.getWidth();
-      val var13: Int = var30.getHeight();
-      val var29: java.lang.String = var30.getPlaceholder();
-      val var25: Int = var30.getPlaceholderVersion();
-      val var12: Int = var2.getRadiusPx();
+      val var12: Int = var30.getHeight();
+      val var24: java.lang.String = var30.getPlaceholder();
+      val var29: Int = var30.getPlaceholderVersion();
+      val var11: Int = var2.getRadiusPx();
       val var18: Boolean = var30.isSpoiler();
       val var31: SpoilerAttributes = var2.getSpoilerAttributes();
       val var40: SpoilerConfig;
@@ -112,14 +112,14 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
 
       super.bind-l_cVQvE(
          ChannelId.box-impl(var22),
-         var27,
-         var11,
-         var28,
-         var26,
-         var13,
-         var10,
-         var29,
          var25,
+         var13,
+         var27,
+         var26,
+         var12,
+         var10,
+         var24,
+         var29,
          var18,
          var40,
          var14,
@@ -136,13 +136,13 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
             }
 
             public final void invoke(java.lang.String var1) {
-               q.h(var1, "p0");
+               r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onTapShowAltText(var1);
             }
          },
-         var12,
+         var11,
          var3 xor true,
-         var24,
+         var28,
          var3,
          var2.getHideMediaPlayButton(),
          var30.getAttachmentTagText(),
@@ -166,7 +166,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
             }
 
             public final void invoke(MediaPlayFinishedAnalytics var1) {
-               q.h(var1, "p0");
+               r.h(var1, "p0");
                (super.receiver as ChatEventHandler).onMediaPlayFinishedAnalytics(var1);
             }
          },
@@ -185,23 +185,23 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       onTapObscureToggle: (Boolean) -> Unit,
       onAltTextButtonClicked: (String) -> Unit
    ) {
-      q.h(var1, "containerId");
-      q.h(var2, "componentId");
-      q.h(var3, "mediaGalleryItem");
-      q.h(var5, "onClicked");
-      q.h(var7, "onTapSpoiler");
-      q.h(var8, "onTapObscureToggle");
-      q.h(var9, "onAltTextButtonClicked");
+      r.h(var1, "containerId");
+      r.h(var2, "componentId");
+      r.h(var3, "mediaGalleryItem");
+      r.h(var5, "onClicked");
+      r.h(var7, "onTapSpoiler");
+      r.h(var8, "onTapObscureToggle");
+      r.h(var9, "onAltTextButtonClicked");
       val var24: UnfurledMediaItem = var3.getMedia();
-      val var22: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var23: StringBuilder = new StringBuilder();
-      var23.append("MediaGalleryDisplayComponent(");
-      var23.append(var2);
-      var23.append(").item[image]");
-      val var26: SpoilerAttributes = var22.forGenericMedia(var3, var1, var23.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
-      var2 = var24.getProxyUrl();
-      val var33: java.lang.String = var3.getVideoPreviewUrl();
-      q.e(var33);
+      val var23: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var22: StringBuilder = new StringBuilder();
+      var22.append("MediaGalleryDisplayComponent(");
+      var22.append(var2);
+      var22.append(").item[image]");
+      val var26: SpoilerAttributes = var23.forGenericMedia(var3, var1, var22.toString(), var3.getMedia().getProxyUrl(), var3.getVerifyAge());
+      val var33: java.lang.String = var24.getProxyUrl();
+      var2 = var3.getVideoPreviewUrl();
+      r.e(var2);
       val var34: Int = var24.getWidth();
       val var12: Int;
       if (var34 != null) {
@@ -230,22 +230,22 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
       }
 
       val var16: Boolean = var3.isObscure();
-      val var15: Boolean = var3.isObscureAwaitingScan();
+      val var21: Boolean = var3.isObscureAwaitingScan();
       val var19: Boolean = var3.getObscureHideControls();
       val var17: Boolean = var3.getObscureIsOpaque();
-      val var21: Boolean = var3.getShowDescription();
-      val var25: java.lang.String = var3.getDescription();
-      val var32: java.lang.String = var3.getDescriptionHint();
       val var18: Boolean = var3.getShowDescription();
-      val var31: java.lang.String = var3.getAccessibilityRole();
+      val var31: java.lang.String = var3.getDescription();
+      val var32: java.lang.String = var3.getDescriptionHint();
+      val var15: Boolean = var3.getShowDescription();
+      val var25: java.lang.String = var3.getAccessibilityRole();
       val var29: java.lang.Double = var3.getPortalId();
-      q.e(var29);
+      r.e(var29);
       super.bind-l_cVQvE(
          null,
          null,
          null,
-         var2,
          var33,
+         var2,
          var13,
          var12,
          var36,
@@ -253,13 +253,13 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          var20,
          var27,
          var16,
-         var15,
+         var21,
          var19,
          var17,
-         var21,
-         var25,
-         var32,
          var18,
+         var31,
+         var32,
+         var15,
          var9,
          var14,
          var4 xor true,
@@ -270,7 +270,7 @@ public class MosaicItemMessageAttachmentVideoViewHolder(view: MediaVideoView) : 
          null,
          null,
          null,
-         var31,
+         var25,
          var29,
          var5,
          var6,

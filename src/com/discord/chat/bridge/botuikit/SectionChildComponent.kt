@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f(with = SectionChildComponent.Serializer::class)
 public sealed interface SectionChildComponent<T extends Component> {
@@ -10,7 +10,7 @@ public sealed interface SectionChildComponent<T extends Component> {
 
    public companion object {
       public fun <T> serializer(typeSerial0: KSerializer<T>): KSerializer<SectionChildComponent<T>> {
-         q.h(var1, "typeSerial0");
+         r.h(var1, "typeSerial0");
          return SectionChildComponent.Serializer.INSTANCE;
       }
    }
@@ -19,12 +19,12 @@ public sealed interface SectionChildComponent<T extends Component> {
       public open val unionName: String = "SectionAccessory"
 
       public open fun fromValue(value: SectionChildComponent<*>): Component? {
-         q.h(var1, "value");
+         r.h(var1, "value");
          return var1.getComponent();
       }
 
       public open fun toValue(component: Component): SectionChildComponent<*> {
-         q.h(var1, "component");
+         r.h(var1, "component");
          val var2: Any;
          if (var1 is TextDisplayComponent) {
             var2 = SectionChildComponent.TextDisplay.box-impl(SectionChildComponent.TextDisplay.constructor-impl(var1 as TextDisplayComponent));
@@ -41,7 +41,7 @@ public sealed interface SectionChildComponent<T extends Component> {
 
       @JvmStatic
       fun `constructor-impl`(var0: TextDisplayComponent): TextDisplayComponent {
-         q.h(var0, "component");
+         r.h(var0, "component");
          return var0;
       }
 
@@ -50,13 +50,13 @@ public sealed interface SectionChildComponent<T extends Component> {
          if (var1 !is SectionChildComponent.TextDisplay) {
             return false;
          } else {
-            return q.c(var0, (var1 as SectionChildComponent.TextDisplay).unbox-impl());
+            return r.c(var0, (var1 as SectionChildComponent.TextDisplay).unbox-impl());
          }
       }
 
       @JvmStatic
       fun `equals-impl0`(var0: TextDisplayComponent, var1: TextDisplayComponent): Boolean {
-         return q.c(var0, var1);
+         return r.c(var0, var1);
       }
 
       @JvmStatic

@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class TapRoleIconData(roleName: String, roleIconSource: String) : ReactEvent {
@@ -12,8 +12,8 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    public final val roleIconSource: String
 
    init {
-      q.h(var1, "roleName");
-      q.h(var2, "roleIconSource");
+      r.h(var1, "roleName");
+      r.h(var2, "roleIconSource");
       super();
       this.roleName = var1;
       this.roleIconSource = var2;
@@ -28,8 +28,8 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    }
 
    public fun copy(roleName: String = var0.roleName, roleIconSource: String = var0.roleIconSource): TapRoleIconData {
-      q.h(var1, "roleName");
-      q.h(var2, "roleIconSource");
+      r.h(var1, "roleName");
+      r.h(var2, "roleIconSource");
       return new TapRoleIconData(var1, var2);
    }
 
@@ -40,10 +40,10 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.roleName, var1.roleName)) {
+         if (!r.c(this.roleName, var1.roleName)) {
             return false;
          } else {
-            return q.c(this.roleIconSource, var1.roleIconSource);
+            return r.c(this.roleIconSource, var1.roleIconSource);
          }
       }
    }
@@ -57,15 +57,15 @@ public data class TapRoleIconData(roleName: String, roleIconSource: String) : Re
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.roleName;
-      val var2: java.lang.String = this.roleIconSource;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapRoleIconData(roleName=");
-      var1.append(var3);
-      var1.append(", roleIconSource=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.roleName;
+      val var3: java.lang.String = this.roleIconSource;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapRoleIconData(roleName=");
+      var2.append(var1);
+      var2.append(", roleIconSource=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -2,8 +2,8 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
+import kb.f
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public class OnTapViewMoreTextData : ReactEvent {

@@ -49,7 +49,7 @@ internal class EmojiPickerView(context: Context,
    private final val typedAdapter: EmojiPickerViewAdapter
       private final get() {
          val var1: RecyclerView.Adapter = this.getAdapter();
-         kotlin.jvm.internal.q.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerViewAdapter");
+         kotlin.jvm.internal.r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerViewAdapter");
          return var1 as EmojiPickerViewAdapter;
       }
 
@@ -57,25 +57,25 @@ internal class EmojiPickerView(context: Context,
    private final val typedLayoutManager: EmojiPickerLayoutManager
       private final get() {
          val var1: RecyclerView.LayoutManager = this.getLayoutManager();
-         kotlin.jvm.internal.q.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerLayoutManager");
+         kotlin.jvm.internal.r.f(var1, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerLayoutManager");
          return var1 as EmojiPickerLayoutManager;
       }
 
 
    init {
-      kotlin.jvm.internal.q.h(var1, "context");
-      kotlin.jvm.internal.q.h(var4, "coreData");
-      kotlin.jvm.internal.q.h(var5, "onPressEmoji");
-      kotlin.jvm.internal.q.h(var6, "onScroll");
-      kotlin.jvm.internal.q.h(var7, "onScrollBeginDrag");
-      kotlin.jvm.internal.q.h(var8, "onScrollEndDrag");
-      kotlin.jvm.internal.q.h(var9, "onLongPressEmoji");
-      kotlin.jvm.internal.q.h(var10, "onStickyHeaderRender");
-      kotlin.jvm.internal.q.h(var11, "onShowNitroUpsell");
-      kotlin.jvm.internal.q.h(var13, "config");
+      kotlin.jvm.internal.r.h(var1, "context");
+      kotlin.jvm.internal.r.h(var4, "coreData");
+      kotlin.jvm.internal.r.h(var5, "onPressEmoji");
+      kotlin.jvm.internal.r.h(var6, "onScroll");
+      kotlin.jvm.internal.r.h(var7, "onScrollBeginDrag");
+      kotlin.jvm.internal.r.h(var8, "onScrollEndDrag");
+      kotlin.jvm.internal.r.h(var9, "onLongPressEmoji");
+      kotlin.jvm.internal.r.h(var10, "onStickyHeaderRender");
+      kotlin.jvm.internal.r.h(var11, "onShowNitroUpsell");
+      kotlin.jvm.internal.r.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = s9.j.a(new o(var11, this));
-      this.scroller$delegate = s9.j.a(new p(this, var13, var10, var6, var7, var8));
+      this.visibilityTracker$delegate = r9.j.a(new o(var11, this));
+      this.scroller$delegate = r9.j.a(new p(this, var13, var10, var6, var7, var8));
       this.premiumUpsellGradientDecoration = new EmojiPickerPremiumUpsellGradientBackground(var1, var12);
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -105,14 +105,14 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `_init_$lambda$8`(var0: Function3, var1: EmojiPickerView, var2: java.lang.Long, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var3, "emojiName");
+      kotlin.jvm.internal.r.h(var3, "emojiName");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
 
    @JvmStatic
    fun `_init_$lambda$9`(var0: Function3, var1: EmojiPickerView, var2: java.lang.Long, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var3, "emojiName");
+      kotlin.jvm.internal.r.h(var3, "emojiName");
       var0.invoke(var1, var2, var3);
       return Unit.a;
    }
@@ -153,7 +153,7 @@ internal class EmojiPickerView(context: Context,
             && var1 !is EmojiPickerItem.FooterUpsell
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
-            throw new s9.n();
+            throw new r9.n();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
@@ -195,7 +195,7 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `scroller_delegate$lambda$5$lambda$2`(var0: Function2, var1: EmojiPickerView, var2: EmojiPickerScroller.ScrollEvent): Unit {
-      kotlin.jvm.internal.q.h(var2, "scrollEvent");
+      kotlin.jvm.internal.r.h(var2, "scrollEvent");
       var0.invoke(var1, var2);
       return Unit.a;
    }
@@ -208,7 +208,7 @@ internal class EmojiPickerView(context: Context,
 
    @JvmStatic
    fun `scroller_delegate$lambda$5$lambda$4`(var0: Function2, var1: EmojiPickerView, var2: Function2, var3: EmojiPickerScroller.ScrollEvent, var4: Boolean): Unit {
-      kotlin.jvm.internal.q.h(var3, "scrollEvent");
+      kotlin.jvm.internal.r.h(var3, "scrollEvent");
       if (var4) {
          var0.invoke(var1, var3);
       } else {
@@ -235,21 +235,21 @@ internal class EmojiPickerView(context: Context,
    }
 
    public override fun onChildAttachedToWindow(child: View) {
-      kotlin.jvm.internal.q.h(var1, "child");
+      kotlin.jvm.internal.r.h(var1, "child");
       super.onChildAttachedToWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, true);
       this.configureMountedChild(var1);
    }
 
    public override fun onChildDetachedFromWindow(child: View) {
-      kotlin.jvm.internal.q.h(var1, "child");
+      kotlin.jvm.internal.r.h(var1, "child");
       super.onChildDetachedFromWindow(var1);
       this.getVisibilityTracker().trackViewVisibilityChanged(this, var1, false);
    }
 
    public override fun onContext(): Context {
       val var1: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var1, "getContext(...)");
+      kotlin.jvm.internal.r.g(var1, "getContext(...)");
       return var1;
    }
 
@@ -258,13 +258,13 @@ internal class EmojiPickerView(context: Context,
    }
 
    public override fun onEmojisUpdated(emojis: List<EmojiPickerItem>, emojisUnicode: List<EmojiPickerItem>) {
-      kotlin.jvm.internal.q.h(var1, "emojis");
-      kotlin.jvm.internal.q.h(var2, "emojisUnicode");
+      kotlin.jvm.internal.r.h(var1, "emojis");
+      kotlin.jvm.internal.r.h(var2, "emojisUnicode");
       this.getTypedAdapter().setEmojis(var1, var2);
    }
 
    public fun scrollToItemAtIndex(index: Int, animated: Boolean, itemType: ItemType) {
-      kotlin.jvm.internal.q.h(var3, "itemType");
+      kotlin.jvm.internal.r.h(var3, "itemType");
       this.getScroller().scrollToItemAtIndex(var1, var2, var3.ordinal());
    }
 
@@ -273,7 +273,7 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setConfig(config: com.discord.emoji_picker.EmojiPickerView.Config) {
-      kotlin.jvm.internal.q.h(var1, "config");
+      kotlin.jvm.internal.r.h(var1, "config");
       this.getTypedAdapter().setConfig(var1);
       this.getScroller().setScrollFastVelocity(var1.getScrollFastVelocity());
    }
@@ -287,7 +287,7 @@ internal class EmojiPickerView(context: Context,
    }
 
    public fun setCoreData(coreData: CoreData) {
-      kotlin.jvm.internal.q.h(var1, "coreData");
+      kotlin.jvm.internal.r.h(var1, "coreData");
       this.getTypedAdapter().setCoreData(var1);
       this.getTypedLayoutManager().setSpanCount(var1.getRowSize());
       this.getVisibilityTracker().setTrackingEnabled(var1.getHasPremiumInlineRoadblock());
@@ -305,10 +305,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      kotlin.jvm.internal.q.g(var2, "getContext(...)");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {

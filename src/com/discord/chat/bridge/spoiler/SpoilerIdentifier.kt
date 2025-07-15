@@ -1,14 +1,14 @@
 package com.discord.chat.bridge.spoiler
 
 import com.discord.chat.bridge.contentnode.SpoilerContentNode
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public inline class SpoilerIdentifier {
    public final val id: String
 
    @JvmStatic
    fun `constructor-impl`(var0: java.lang.String): java.lang.String {
-      q.h(var0, "id");
+      r.h(var0, "id");
       return var0;
    }
 
@@ -17,13 +17,13 @@ public inline class SpoilerIdentifier {
       if (var1 !is SpoilerIdentifier) {
          return false;
       } else {
-         return q.c(var0, (var1 as SpoilerIdentifier).unbox-impl());
+         return r.c(var0, (var1 as SpoilerIdentifier).unbox-impl());
       }
    }
 
    @JvmStatic
    fun `equals-impl0`(var0: java.lang.String, var1: java.lang.String): Boolean {
-      return q.c(var0, var1);
+      return r.c(var0, var1);
    }
 
    @JvmStatic
@@ -54,8 +54,8 @@ public inline class SpoilerIdentifier {
 
    public companion object {
       public fun forNode(node: SpoilerContentNode, containerId: String, index: Int): SpoilerIdentifier {
-         q.h(var1, "node");
-         q.h(var2, "containerId");
+         r.h(var1, "node");
+         r.h(var2, "containerId");
          val var4: Int = var1.hashCode();
          val var5: StringBuilder = new StringBuilder();
          var5.append("spoiler:");

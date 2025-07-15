@@ -1,9 +1,9 @@
 package com.discord.chat.bridge
 
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
@@ -11,8 +11,8 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    public final val stackTrace: String
 
    fun ErrorMessage(var1: java.lang.String, var2: java.lang.String) {
-      q.h(var1, "id");
-      q.h(var2, "stackTrace");
+      r.h(var1, "id");
+      r.h(var2, "stackTrace");
       super(null);
       this.id = var1;
       this.stackTrace = var2;
@@ -27,8 +27,8 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public fun copy(id: MessageId = ..., stackTrace: String = ...): ErrorMessage {
-      q.h(var1, "id");
-      q.h(var2, "stackTrace");
+      r.h(var1, "id");
+      r.h(var2, "stackTrace");
       return new ErrorMessage(var1, var2, null);
    }
 
@@ -42,7 +42,7 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
          if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
          } else {
-            return q.c(this.stackTrace, var1.stackTrace);
+            return r.c(this.stackTrace, var1.stackTrace);
          }
       }
    }
@@ -52,15 +52,15 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = this.stackTrace;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ErrorMessage(id=");
-      var3.append(var2);
-      var3.append(", stackTrace=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = MessageId.toString-impl(this.id);
+      val var3: java.lang.String = this.stackTrace;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ErrorMessage(id=");
+      var2.append(var1);
+      var2.append(", stackTrace=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

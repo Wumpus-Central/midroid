@@ -48,7 +48,7 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import com.facebook.drawee.view.SimpleDraweeView
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class AutomodSystemMessageView  public constructor(context: Context, attrs: AttributeSet? = null)
    : ChatListConstraintLayout,
@@ -59,7 +59,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
    public open val spineOriginView: View
       public open get() {
          val var1: SimpleDraweeView = this.binding.authorAvatar;
-         q.g(this.binding.authorAvatar, "authorAvatar");
+         r.g(this.binding.authorAvatar, "authorAvatar");
          return var1;
       }
 
@@ -68,50 +68,50 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
    private final var accessories: ArrayList<MessageAccessory>
 
    fun AutomodSystemMessageView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       val var6: AutomodSystemMessageViewBinding = AutomodSystemMessageViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var6, "inflate(...)");
+      r.g(var6, "inflate(...)");
       this.binding = var6;
       this.allowChildGestures = true;
       RippleUtilsKt.addRipple$default(this, false, SizeUtilsKt.getDpToPx(4), 1, null);
       var6.messageHeaderDivider.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, R.color.message_divider_light, R.color.message_divider_dark));
       var var4: TextView = var6.messageHeaderTitle;
       var6.messageHeaderTitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      q.e(var4);
+      r.e(var4);
       val var3: DiscordFont = DiscordFont.PrimarySemibold;
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimarySemibold);
       var4 = var6.messageHeaderSubtitle;
       var6.messageHeaderSubtitle.setTextColor(ThemeManagerKt.getTheme().getTextNormal());
-      q.e(var4);
+      r.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryNormal);
       var4 = var6.authorName;
       var6.authorName.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-      q.e(var4);
+      r.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var3);
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
       val var9: SimpleDraweeView = var6.authorAvatar;
-      q.g(var6.authorAvatar, "authorAvatar");
+      r.g(var6.authorAvatar, "authorAvatar");
       ViewClippingUtilsKt.clipToCircle(var9);
       var4 = var6.automodMessageContextHeader;
-      q.e(var6.automodMessageContextHeader);
+      r.e(var6.automodMessageContextHeader);
       DiscordFontUtilsKt.setDiscordFont(var4, var3);
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var4, 16.0F, 20.0F);
       var4 = var6.automodMessageChannel;
       var6.automodMessageChannel.setBackgroundColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.brand_500, com.discord.theme.R.color.brand_600));
       var4.setTextColor(ColorUtilsKt.getThemeColor(var1, com.discord.theme.R.color.white_100, com.discord.theme.R.color.white_160));
-      q.e(var4);
+      r.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, var3);
       SetTextSizeSpKt.setTextSizeSp(var4, 12.0F, 15.0F);
       ViewClippingUtilsKt.clipToRoundedRectangle(var4, SizeUtilsKt.getDpToPx(4));
       val var5: TextView = var6.timestamp;
-      q.e(var6.timestamp);
+      r.e(var6.timestamp);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
       var5.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       SetTextSizeSpKt.setTextSizeSp(var5, 12.0F, 15.0F);
@@ -120,10 +120,10 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    @SuppressLint(["SetTextI18n"])
    private fun configureAuthor(message: Message, automodContext: AutoModerationContext, eventHandler: ChatEventHandler) {
-      val var6: SimpleDraweeView = this.binding.authorAvatar;
-      val var5: Context = this.getContext();
-      q.g(var5, "getContext(...)");
-      var6.setImageURI(MessageKt.avatarUrl(var1, var5));
+      val var5: SimpleDraweeView = this.binding.authorAvatar;
+      val var6: Context = this.getContext();
+      r.g(var6, "getContext(...)");
+      var5.setImageURI(MessageKt.avatarUrl(var1, var6));
       this.binding.authorName.setText(var1.getUsername());
       MessageTagView.configureTagView-Ul7AT2Q$default(
          this.binding.messageTagView,
@@ -153,7 +153,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
       var10.append("#");
       var10.append(var7);
       var11.setText(var10.toString());
-      q.e(var11);
+      r.e(var11);
       var var4: Boolean;
       if (var2.getMessage().getChannelName() != null) {
          var4 = 1;
@@ -187,7 +187,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    private fun configureCommunicationDisabled(isCommunicationDisabled: Boolean) {
       val var4: SimpleDraweeView = this.binding.guildCommunicationDisabledIcon;
-      q.e(this.binding.guildCommunicationDisabledIcon);
+      r.e(this.binding.guildCommunicationDisabledIcon);
       val var3: Byte;
       if (var1) {
          var3 = 0;
@@ -212,7 +212,7 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
    private fun configureDivider(showDivider: Boolean) {
       val var3: View = this.binding.messageHeaderDivider;
-      q.g(this.binding.messageHeaderDivider, "messageHeaderDivider");
+      r.g(this.binding.messageHeaderDivider, "messageHeaderDivider");
       val var2: Byte;
       if (var1) {
          var2 = 0;
@@ -231,13 +231,13 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
       } else {
          val var17: FlaggedMessageEmbed = var8.getMessage();
          val var10: MessageType = MessageType.DEFAULT;
-         val var11: java.lang.String = var17.getId-3Eiw7ao();
+         val var15: java.lang.String = var17.getId-3Eiw7ao();
          val var6: Long = var17.getChannelId-o4g7jtM();
-         val var9: GuildId = var17.getGuildId-qOKuAAo();
-         val var15: UserId = var17.getUserId-wUX8bhU();
-         val var14: java.lang.String = var17.getUsername();
-         val var16: java.lang.String = var17.getAvatarURL();
-         val var13: StructurableText = var17.getContent();
+         val var11: GuildId = var17.getGuildId-qOKuAAo();
+         val var16: UserId = var17.getUserId-wUX8bhU();
+         val var13: java.lang.String = var17.getUsername();
+         val var9: java.lang.String = var17.getAvatarURL();
+         val var14: StructurableText = var17.getContent();
          val var3: Int = var17.getUsernameColor();
          val var12: Int = var17.getRoleColor();
          val var5: Boolean = var17.getShouldShowRoleDot();
@@ -251,12 +251,12 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
 
          val var20: Message = new Message(
             var10,
-            var11,
+            var15,
             null,
             var6,
-            var9,
+            var11,
             null,
-            var15,
+            var16,
             0L,
             null,
             null,
@@ -265,20 +265,19 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             null,
             null,
             null,
-            var14,
+            var13,
             var3,
             var12,
             null,
             var5,
             false,
             null,
-            var16,
+            var9,
             null,
             null,
             null,
             null,
-            var13,
-            null,
+            var14,
             null,
             null,
             null,
@@ -350,9 +349,9 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
             false,
             false,
             -139165788,
-            -8229,
-            -1025,
-            7,
+            -4115,
+            -513,
+            3,
             null
          );
          if (var8.getNotification() != null) {
@@ -402,12 +401,12 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
    }
 
    public open fun onInterceptTouchEvent(ev: MotionEvent): Boolean {
-      q.h(var1, "ev");
+      r.h(var1, "ev");
       return this.allowChildGestures xor true;
    }
 
    public fun setAccessoriesRecycledViewPool(recycledViewPool: RecycledViewPool) {
-      q.h(var1, "recycledViewPool");
+      r.h(var1, "recycledViewPool");
       this.binding.accessoriesView.setRecycledViewPool(var1);
    }
 
@@ -418,24 +417,24 @@ public class AutomodSystemMessageView  public constructor(context: Context, attr
       componentProvider: ComponentProvider? = null,
       allowChildGestures: Boolean = true
    ) {
-      q.h(var1, "message");
-      q.h(var2, "messageContext");
-      q.h(var3, "eventHandler");
+      r.h(var1, "message");
+      r.h(var2, "messageContext");
+      r.h(var3, "eventHandler");
       this.allowChildGestures = var5;
       val var8: AutoModerationContext = var1.getAutoModerationContext();
       if (var8 != null) {
          this.configureAuthor(var1, var8, var3);
-         this.configureCommunicationDisabled(q.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE));
+         this.configureCommunicationDisabled(r.c(var1.getCommunicationDisabled(), java.lang.Boolean.TRUE));
          this.configureDivider(var2.getShowDivider());
-         val var14: java.lang.String = var1.getThreadStarterMessageHeader();
-         val var9: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
+         val var9: java.lang.String = var1.getThreadStarterMessageHeader();
+         val var14: ThreadStarterMessageHeaderView = this.binding.threadStarterHeader;
          if (var1.getReferencedMessage() != null) {
             var5 = true;
          } else {
             var5 = false;
          }
 
-         var9.configure(var14, var5);
+         var14.configure(var9, var5);
          this.binding.replyPreview.clear();
          val var16: java.util.List = this.generateMessageAccessories(var1, var2);
          val var11: MessageAccessoriesView = this.binding.accessoriesView;

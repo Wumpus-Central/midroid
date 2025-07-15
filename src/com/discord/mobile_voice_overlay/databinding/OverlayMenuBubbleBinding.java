@@ -33,18 +33,18 @@ public final class OverlayMenuBubbleBinding implements ViewBinding {
       LinearLayout var4 = (LinearLayout)a.a(var0, var1);
       if (var4 != null) {
          var1 = R.id.overlay_linked_anchor_view;
-         View var6 = a.a(var0, var1);
-         if (var6 != null) {
+         View var5 = a.a(var0, var1);
+         if (var5 != null) {
             var1 = R.id.overlay_members_overflow_text;
-            TextView var5 = (TextView)a.a(var0, var1);
-            if (var5 != null) {
+            TextView var2 = (TextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.overlay_members_recycler;
-               RecyclerView var2 = (RecyclerView)a.a(var0, var1);
-               if (var2 != null) {
+               RecyclerView var3 = (RecyclerView)a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.overlay_menu;
-                  OverlayMenuView var3 = (OverlayMenuView)a.a(var0, var1);
-                  if (var3 != null) {
-                     return new OverlayMenuBubbleBinding((LinearLayout)var0, var4, var6, var5, var2, var3);
+                  OverlayMenuView var6 = (OverlayMenuView)a.a(var0, var1);
+                  if (var6 != null) {
+                     return new OverlayMenuBubbleBinding((LinearLayout)var0, var4, var5, var2, var3, var6);
                   }
                }
             }

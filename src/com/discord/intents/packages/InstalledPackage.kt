@@ -1,8 +1,8 @@
 package com.discord.intents.packages
 
-import A9.a
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
+import z9.a
 
 internal enum class InstalledPackage(appName: String, appPackage: String?) {
    GMAIL("googlegmail", null),
@@ -40,7 +40,7 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
 
    public companion object {
       public fun parse(appName: String): InstalledPackage {
-         q.h(var1, "appName");
+         r.h(var1, "appName");
          val var3: java.util.Iterator = InstalledPackage.getEntries().iterator();
 
          var var2: Any;
@@ -51,7 +51,7 @@ internal enum class InstalledPackage(appName: String, appPackage: String?) {
             }
 
             var2 = (InstalledPackage)var3.next();
-         } while (!q.c(InstalledPackage.access$getAppName$p(var2), var1));
+         } while (!r.c(InstalledPackage.access$getAppName$p(var2), var1));
 
          var2 = var2;
          if (var2 != null) {

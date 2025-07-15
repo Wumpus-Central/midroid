@@ -1,24 +1,24 @@
 package com.discord.notifications.fcm.utils
 
-import X1.a
-import X1.b
+import W1.a
+import W1.b
 import com.discord.logging.Log
 import com.google.android.gms.tasks.Task
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlin.jvm.functions.Function1
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal object FCMTokenHelper {
    @JvmStatic
    fun `getToken$lambda$0`(var0: Exception) {
-      q.h(var0, "e");
+      r.h(var0, "e");
       INSTANCE.logError(var0);
    }
 
    // $VF: Duplicated exception handlers to handle obfuscated exceptions
    @JvmStatic
    fun `getToken$lambda$1`(var0: Function1, var1: Task) {
-      q.h(var1, "task");
+      r.h(var1, "task");
 
       var var2: java.lang.String;
       try {
@@ -59,12 +59,12 @@ internal object FCMTokenHelper {
    private fun Throwable.logError() {
       val var2: Log = Log.INSTANCE;
       val var3: java.lang.String = var1.getClass().getSimpleName();
-      q.g(var3, "getSimpleName(...)");
+      r.g(var3, "getSimpleName(...)");
       var2.w(var3, "Fetching FCM registration token failed", var1);
    }
 
    public fun getToken(onToken: (String) -> Unit) {
-      q.h(var1, "onToken");
+      r.h(var1, "onToken");
 
       try {
          FirebaseMessaging.n().q().f(new a()).d(new b(var1));

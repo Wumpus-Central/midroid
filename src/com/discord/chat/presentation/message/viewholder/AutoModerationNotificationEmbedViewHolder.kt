@@ -11,7 +11,7 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
    private final val notificationEmbedView: AutoModerationNotificationEmbedView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "notificationEmbedView");
+      kotlin.jvm.internal.r.h(var1, "notificationEmbedView");
       super(var1, null);
       this.notificationEmbedView = var1;
    }
@@ -31,9 +31,9 @@ public class AutoModerationNotificationEmbedViewHolder(notificationEmbedView: Au
       onTapAutoModerationActions: (MessageId, ChannelId) -> Unit,
       onTapAutoModerationFeedback: (MessageId, ChannelId) -> Unit
    ) {
-      kotlin.jvm.internal.q.h(var1, "notificationEmbedAccessory");
-      kotlin.jvm.internal.q.h(var2, "onTapAutoModerationActions");
-      kotlin.jvm.internal.q.h(var3, "onTapAutoModerationFeedback");
+      kotlin.jvm.internal.r.h(var1, "notificationEmbedAccessory");
+      kotlin.jvm.internal.r.h(var2, "onTapAutoModerationActions");
+      kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var6: java.lang.String = var1.getMessage().getId-3Eiw7ao();
       this.notificationEmbedView.configure(var1.getModerationContext(), new c(var2, var6, var4), new d(var3, var6, var4));

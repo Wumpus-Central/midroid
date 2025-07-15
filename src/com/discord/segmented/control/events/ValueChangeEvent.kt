@@ -2,9 +2,9 @@ package com.discord.segmented.control.events
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) : ReactEvent {
@@ -12,7 +12,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    public final val selectedSegmentIndex: Int
 
    init {
-      q.h(var1, "value");
+      r.h(var1, "value");
       super();
       this.value = var1;
       this.selectedSegmentIndex = var2;
@@ -27,7 +27,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
    }
 
    public fun copy(value: String = var0.value, selectedSegmentIndex: Int = var0.selectedSegmentIndex): ValueChangeEvent {
-      q.h(var1, "value");
+      r.h(var1, "value");
       return new ValueChangeEvent(var1, var2);
    }
 
@@ -38,7 +38,7 @@ internal data class ValueChangeEvent(value: String, selectedSegmentIndex: Int) :
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.value, var1.value)) {
+         if (!r.c(this.value, var1.value)) {
             return false;
          } else {
             return this.selectedSegmentIndex == var1.selectedSegmentIndex;

@@ -4,14 +4,14 @@ import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import r9.s
 
 public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakData(var1), ReactEvent {
    public final val messageId: MessageId
 
    fun TapInviteToSpeakData(var1: java.lang.String) {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       super();
       this.messageId = var1;
    }
@@ -21,7 +21,7 @@ public data class TapInviteToSpeakData(messageId: MessageId) : TapInviteToSpeakD
    }
 
    public fun copy(messageId: MessageId = ...): TapInviteToSpeakData {
-      q.h(var1, "messageId");
+      r.h(var1, "messageId");
       return new TapInviteToSpeakData(var1, null);
    }
 

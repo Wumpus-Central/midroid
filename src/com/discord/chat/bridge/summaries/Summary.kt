@@ -3,9 +3,9 @@ package com.discord.chat.bridge.summaries
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class Summary(id: String,
@@ -36,12 +36,12 @@ public data class Summary(id: String,
       var7: Int,
       var8: Long
    ) {
-      q.h(var1, "id");
-      q.h(var2, "topic");
-      q.h(var3, "summShort");
-      q.h(var4, "people");
-      q.h(var5, "startId");
-      q.h(var6, "endId");
+      r.h(var1, "id");
+      r.h(var2, "topic");
+      r.h(var3, "summShort");
+      r.h(var4, "people");
+      r.h(var5, "startId");
+      r.h(var6, "endId");
       super();
       this.id = var1;
       this.topic = var2;
@@ -95,12 +95,12 @@ public data class Summary(id: String,
       count: Int = ...,
       channelId: ChannelId = ...
    ): Summary {
-      q.h(var1, "id");
-      q.h(var2, "topic");
-      q.h(var3, "summShort");
-      q.h(var4, "people");
-      q.h(var5, "startId");
-      q.h(var6, "endId");
+      r.h(var1, "id");
+      r.h(var2, "topic");
+      r.h(var3, "summShort");
+      r.h(var4, "people");
+      r.h(var5, "startId");
+      r.h(var6, "endId");
       return new Summary(var1, var2, var3, var4, var5, var6, var7, var8, null);
    }
 
@@ -111,13 +111,13 @@ public data class Summary(id: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.id, var1.id)) {
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!q.c(this.topic, var1.topic)) {
+         } else if (!r.c(this.topic, var1.topic)) {
             return false;
-         } else if (!q.c(this.summShort, var1.summShort)) {
+         } else if (!r.c(this.summShort, var1.summShort)) {
             return false;
-         } else if (!q.c(this.people, var1.people)) {
+         } else if (!r.c(this.people, var1.people)) {
             return false;
          } else if (!MessageId.equals-impl0(this.startId, var1.startId)) {
             return false;
@@ -149,33 +149,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.id;
-      val var8: java.lang.String = this.topic;
-      val var4: java.lang.String = this.summShort;
-      val var3: java.util.List = this.people;
-      val var6: java.lang.String = MessageId.toString-impl(this.startId);
-      val var5: java.lang.String = MessageId.toString-impl(this.endId);
+      val var4: java.lang.String = this.id;
+      val var7: java.lang.String = this.topic;
+      val var6: java.lang.String = this.summShort;
+      val var2: java.util.List = this.people;
+      val var3: java.lang.String = MessageId.toString-impl(this.startId);
+      val var9: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var9: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("Summary(id=");
-      var2.append(var7);
-      var2.append(", topic=");
-      var2.append(var8);
-      var2.append(", summShort=");
-      var2.append(var4);
-      var2.append(", people=");
-      var2.append(var3);
-      var2.append(", startId=");
-      var2.append(var6);
-      var2.append(", endId=");
-      var2.append(var5);
-      var2.append(", count=");
-      var2.append(var1);
-      var2.append(", channelId=");
-      var2.append(var9);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("Summary(id=");
+      var8.append(var4);
+      var8.append(", topic=");
+      var8.append(var7);
+      var8.append(", summShort=");
+      var8.append(var6);
+      var8.append(", people=");
+      var8.append(var2);
+      var8.append(", startId=");
+      var8.append(var3);
+      var8.append(", endId=");
+      var8.append(var9);
+      var8.append(", count=");
+      var8.append(var1);
+      var8.append(", channelId=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

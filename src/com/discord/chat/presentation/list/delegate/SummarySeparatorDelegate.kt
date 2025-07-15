@@ -8,12 +8,12 @@ import com.discord.chat.presentation.list.delegate.BaseChatListItemDelegate.Meta
 import com.discord.chat.presentation.list.item.ChatListItem
 import com.discord.chat.presentation.list.item.SummarySeparatorChatListItem
 import com.discord.chat.presentation.separator.SummarySeparatorView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandler)
    : BaseChatListItemDelegate<SummarySeparatorChatListItem, SummarySeparatorView> {
    init {
-      q.h(var1, "eventHandlerProvider");
+      r.h(var1, "eventHandlerProvider");
       super(var1, null, 2, null);
    }
 
@@ -28,25 +28,25 @@ public class SummarySeparatorDelegate(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public open fun bindView(view: SummarySeparatorView, item: SummarySeparatorChatListItem, metadata: Metadata<SummarySeparatorView>) {
-      q.h(var1, "view");
-      q.h(var2, "item");
-      q.h(var3, "metadata");
+      r.h(var1, "view");
+      r.h(var2, "item");
+      r.h(var3, "metadata");
       var1.setDividerColor(var2.getColor());
       var1.setText(var2.getText());
       var1.setIsBeforeContent(var2.isBeforeContent());
-      var1.setMoreActionsHandler(new e(this, var2));
-      var1.setJumpToBottomHandler(new f(this, var2));
+      var1.setMoreActionsHandler(new f(this, var2));
+      var1.setJumpToBottomHandler(new g(this, var2));
    }
 
    public open fun createView(parent: ViewGroup): SummarySeparatorView {
-      q.h(var1, "parent");
+      r.h(var1, "parent");
       val var2: Context = var1.getContext();
-      q.g(var2, "getContext(...)");
+      r.g(var2, "getContext(...)");
       return new SummarySeparatorView(var2, null, 2, null);
    }
 
    public override fun isForItem(item: ChatListItem, position: Int): Boolean {
-      q.h(var1, "item");
+      r.h(var1, "item");
       return var1 is SummarySeparatorChatListItem;
    }
 }

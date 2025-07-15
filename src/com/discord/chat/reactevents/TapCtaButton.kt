@@ -2,9 +2,9 @@ package com.discord.chat.reactevents
 
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class TapCtaButton(channelId: String, messageId: String, callback: String) : ReactEvent {
@@ -13,9 +13,9 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
    public final val callback: String
 
    init {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "callback");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "callback");
       super();
       this.channelId = var1;
       this.messageId = var2;
@@ -35,9 +35,9 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
    }
 
    public fun copy(channelId: String = var0.channelId, messageId: String = var0.messageId, callback: String = var0.callback): TapCtaButton {
-      q.h(var1, "channelId");
-      q.h(var2, "messageId");
-      q.h(var3, "callback");
+      r.h(var1, "channelId");
+      r.h(var2, "messageId");
+      r.h(var3, "callback");
       return new TapCtaButton(var1, var2, var3);
    }
 
@@ -48,12 +48,12 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.channelId, var1.channelId)) {
+         if (!r.c(this.channelId, var1.channelId)) {
             return false;
-         } else if (!q.c(this.messageId, var1.messageId)) {
+         } else if (!r.c(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.callback, var1.callback);
+            return r.c(this.callback, var1.callback);
          }
       }
    }
@@ -68,17 +68,17 @@ public data class TapCtaButton(channelId: String, messageId: String, callback: S
 
    public override fun toString(): String {
       val var3: java.lang.String = this.channelId;
-      val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.callback;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapCtaButton(channelId=");
-      var2.append(var3);
-      var2.append(", messageId=");
-      var2.append(var4);
-      var2.append(", callback=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.messageId;
+      val var4: java.lang.String = this.callback;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapCtaButton(channelId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(", callback=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

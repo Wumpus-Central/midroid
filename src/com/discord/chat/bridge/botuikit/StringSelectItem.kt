@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class StringSelectItem(label: String,
@@ -19,8 +19,8 @@ public data class StringSelectItem(label: String,
    public final val default: Boolean?
 
    init {
-      q.h(var1, "label");
-      q.h(var2, "value");
+      r.h(var1, "label");
+      r.h(var2, "value");
       super(null);
       this.label = var1;
       this.value = var2;
@@ -56,8 +56,8 @@ public data class StringSelectItem(label: String,
       description: String? = var0.description,
       default: Boolean? = var0.default
    ): StringSelectItem {
-      q.h(var1, "label");
-      q.h(var2, "value");
+      r.h(var1, "label");
+      r.h(var2, "value");
       return new StringSelectItem(var1, var2, var3, var4, var5);
    }
 
@@ -68,16 +68,16 @@ public data class StringSelectItem(label: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.label, var1.label)) {
+         if (!r.c(this.label, var1.label)) {
             return false;
-         } else if (!q.c(this.value, var1.value)) {
+         } else if (!r.c(this.value, var1.value)) {
             return false;
-         } else if (!q.c(this.emoji, var1.emoji)) {
+         } else if (!r.c(this.emoji, var1.emoji)) {
             return false;
-         } else if (!q.c(this.description, var1.description)) {
+         } else if (!r.c(this.description, var1.description)) {
             return false;
          } else {
-            return q.c(this.default, var1.default);
+            return r.c(this.default, var1.default);
          }
       }
    }
@@ -108,22 +108,22 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.label;
-      val var1: java.lang.String = this.value;
-      val var3: ComponentEmoji = this.emoji;
-      val var2: java.lang.String = this.description;
-      val var5: java.lang.Boolean = this.default;
+      val var3: java.lang.String = this.label;
+      val var5: java.lang.String = this.value;
+      val var2: ComponentEmoji = this.emoji;
+      val var4: java.lang.String = this.description;
+      val var1: java.lang.Boolean = this.default;
       val var6: StringBuilder = new StringBuilder();
       var6.append("StringSelectItem(label=");
-      var6.append(var4);
-      var6.append(", value=");
-      var6.append(var1);
-      var6.append(", emoji=");
       var6.append(var3);
-      var6.append(", description=");
-      var6.append(var2);
-      var6.append(", default=");
+      var6.append(", value=");
       var6.append(var5);
+      var6.append(", emoji=");
+      var6.append(var2);
+      var6.append(", description=");
+      var6.append(var4);
+      var6.append(", default=");
+      var6.append(var1);
       var6.append(")");
       return var6.toString();
    }

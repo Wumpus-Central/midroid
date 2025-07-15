@@ -15,12 +15,12 @@ import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.UiThreadUtil
 import java.util.ArrayList
-import kotlin.jvm.internal.q
-import t9.n
+import kotlin.jvm.internal.r
+import s9.n
 
 internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : NativeDeviceSettingsModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -52,20 +52,20 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
    fun `setSystemGestureExclusionRects$lambda$2`(var0: DeviceSettingsModule, var1: ReadableArray) {
       val var2: ReactRootView.Companion = ReactRootView.Companion;
       val var6: ReactApplicationContext = var0.getReactApplicationContext();
-      q.g(var6, "getReactApplicationContext(...)");
+      r.g(var6, "getReactApplicationContext(...)");
       val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var1);
       val var3: ArrayList = new ArrayList(i.v(var4, 10));
-      val var5: java.util.Iterator = var4.iterator();
+      val var7: java.util.Iterator = var4.iterator();
 
-      while (var5.hasNext()) {
-         val var7: ReadableMap = var1.getMap((var5 as n).a());
-         q.e(var7);
+      while (var7.hasNext()) {
+         val var5: ReadableMap = var1.getMap((var7 as n).a());
+         r.e(var5);
          var3.add(
             new Rect(
-               SizeUtilsKt.getDpToPx(var7.getInt("left")),
-               SizeUtilsKt.getDpToPx(var7.getInt("top")),
-               SizeUtilsKt.getDpToPx(var7.getInt("right")),
-               SizeUtilsKt.getDpToPx(var7.getInt("bottom"))
+               SizeUtilsKt.getDpToPx(var5.getInt("left")),
+               SizeUtilsKt.getDpToPx(var5.getInt("top")),
+               SizeUtilsKt.getDpToPx(var5.getInt("right")),
+               SizeUtilsKt.getDpToPx(var5.getInt("bottom"))
             )
          );
       }
@@ -95,7 +95,7 @@ internal class DeviceSettingsModule(reactContext: ReactApplicationContext) : Nat
    }
 
    public override fun setSystemGestureExclusionRects(rects: ReadableArray) {
-      q.h(var1, "rects");
+      r.h(var1, "rects");
       UiThreadUtil.runOnUiThread(new c(this, var1));
    }
 }

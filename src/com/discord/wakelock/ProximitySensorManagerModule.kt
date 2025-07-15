@@ -2,16 +2,16 @@ package com.discord.wakelock
 
 import com.discord.codegen.NativeProximitySensorManagerModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class ProximitySensorManagerModule(reactContext: ReactApplicationContext) : NativeProximitySensorManagerModuleSpec {
    private final val proximityWakeLock: ProximitySensorWakeLock
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       var1 = this.getReactApplicationContext();
-      q.g(var1, "getReactApplicationContext(...)");
+      r.g(var1, "getReactApplicationContext(...)");
       this.proximityWakeLock = new ProximitySensorWakeLock(var1, 600000L, "discord:proximitywakelock");
    }
 

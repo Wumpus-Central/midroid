@@ -1,23 +1,23 @@
 package com.discord.image.fresco.tiled
 
+import ab.K
+import ab.f
+import ab.k0
 import android.content.res.Resources
 import android.graphics.Shader.TileMode
 import android.graphics.drawable.Animatable
 import android.view.MotionEvent
-import bb.K
-import bb.f
-import bb.k0
 import com.facebook.common.references.CloseableReference
 import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.interfaces.DraweeController
 import com.facebook.drawee.interfaces.DraweeHierarchy
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlinx.coroutines.CompletableJob
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
-import x3.e
+import w3.e
 
 public class TiledDraweeController(resources: Resources, url: String, tileMode: TileMode = TileMode.REPEAT) : DraweeController {
    private final val resources: Resources
@@ -30,16 +30,16 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
    private final var contentDescription: String?
 
    init {
-      q.h(var1, "resources");
-      q.h(var2, "url");
-      q.h(var3, "tileMode");
+      r.h(var1, "resources");
+      r.h(var2, "url");
+      r.h(var3, "tileMode");
       super();
       this.resources = var1;
       this.url = var2;
       this.tileMode = var3;
       val var4: CompletableJob = k0.b(null, 1, null);
       this.job = var4;
-      this.scope = g.a(var4.Q(K.c().Y1()));
+      this.scope = g.a(var4.R(K.c().Y1()));
    }
 
    private fun load() {
@@ -82,7 +82,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
             var4 = var5.url;
          }
 
-         return q.c(var4, this.url) && this.myImageReference != null && this.myImageReference.i1();
+         return r.c(var4, this.url) && this.myImageReference != null && this.myImageReference.g1();
       }
    }
 

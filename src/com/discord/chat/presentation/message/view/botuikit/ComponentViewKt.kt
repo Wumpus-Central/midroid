@@ -6,10 +6,10 @@ import com.discord.emoji.RenderableEmoji
 import com.discord.emoji.RenderableEmojiKt
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.facebook.drawee.span.SimpleDraweeSpanTextView
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun ComponentEmoji.renderable(): RenderableEmoji {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    var var3: java.lang.String = var0.getId();
    if (var3 != null) {
       val var7: java.lang.Long = h.o(var3);
@@ -32,14 +32,14 @@ public fun ComponentEmoji.renderable(): RenderableEmoji {
 }
 
 public fun SimpleDraweeSpanTextView.setEmojiOrHide(componentEmoji: ComponentEmoji?) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (var1 == null) {
       var0.setVisibility(8);
    } else {
       var0.setVisibility(0);
       val var3: RenderableEmoji = renderable(var1);
       val var2: Context = var0.getContext();
-      q.g(var2, "getContext(...)");
+      r.g(var2, "getContext(...)");
       var0.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var3, var2, SizeUtilsKt.getDpToPx(20), var1.getAnimated(), 1, null, 32, null));
    }
 }

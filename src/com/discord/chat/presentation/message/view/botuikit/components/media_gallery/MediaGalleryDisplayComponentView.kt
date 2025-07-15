@@ -27,8 +27,8 @@ import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.functions.Function4
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 
 public class MediaGalleryDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
@@ -40,20 +40,20 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
    private final var eventHandler: MediaItemEventHandlers?
 
    fun MediaGalleryDisplayComponentView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    fun MediaGalleryDisplayComponentView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       val var5: MessageComponentMediaGalleryDisplayViewBinding = MessageComponentMediaGalleryDisplayViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var5, "inflate(...)");
+      r.g(var5, "inflate(...)");
       this.binding = var5;
       val var4: MosaicLayoutManager = new MosaicLayoutManager(var1);
       this.mosaicLayoutManager = var4;
@@ -62,7 +62,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
       );
       this.mediaGalleryAdapter = var6;
       val var7: RecyclerView = var5.mosaic;
-      q.e(var5.mosaic);
+      r.e(var5.mosaic);
       ViewClippingUtilsKt.clipToRoundedRectangle(var7, var1.getResources().getDimensionPixelSize(R.dimen.message_media_radius));
       var7.setLayoutManager(var4);
       var7.setAdapter(var6);
@@ -71,14 +71,14 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    @JvmStatic
    fun `_init_$lambda$0`(var0: MediaGalleryDisplayComponentView, var1: MediaGalleryDisplayComponent, var2: MediaGalleryItem, var3: MessagePartViewHolder): Unit {
-      q.h(var1, "component");
-      q.h(var2, "item");
-      q.h(var3, "viewHolder");
+      r.h(var1, "component");
+      r.h(var2, "item");
+      r.h(var3, "viewHolder");
       if (var0.eventHandler != null) {
          val var5: Function4 = var0.eventHandler.getOnMediaItemClicked();
          if (var5 != null) {
             val var6: View = var3.itemView;
-            q.g(var3.itemView, "itemView");
+            r.g(var3.itemView, "itemView");
             var5.invoke(var6, var1.getId(), var1.getItems().indexOf(var2), var2.getPortalId());
          }
       }
@@ -88,8 +88,8 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    @JvmStatic
    fun `_init_$lambda$1`(var0: MediaGalleryDisplayComponentView, var1: MediaGalleryDisplayComponent, var2: MediaGalleryItem): Unit {
-      q.h(var1, "component");
-      q.h(var2, "item");
+      r.h(var1, "component");
+      r.h(var2, "item");
       if (var0.eventHandler != null) {
          val var4: Function2 = var0.eventHandler.getOnMediaItemLongClicked();
          if (var4 != null) {
@@ -102,7 +102,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    @JvmStatic
    fun `_init_$lambda$2`(var0: MediaGalleryDisplayComponentView, var1: MediaGalleryItem): Unit {
-      q.h(var1, "<unused var>");
+      r.h(var1, "<unused var>");
       if (var0.eventHandler != null) {
          val var3: Function0 = var0.eventHandler.getOnMediaItemSpoilerClicked();
          if (var3 != null) {
@@ -127,7 +127,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    @JvmStatic
    fun `_init_$lambda$4`(var0: MediaGalleryDisplayComponentView, var1: java.lang.String): Unit {
-      q.h(var1, "altText");
+      r.h(var1, "altText");
       if (var0.eventHandler != null) {
          val var3: Function1 = var0.eventHandler.getOnMediaItemAltTextButtonClicked();
          if (var3 != null) {
@@ -139,18 +139,18 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
    }
 
    public open fun configure(component: MediaGalleryDisplayComponent, componentProvider: ComponentProvider, componentContext: ComponentContext) {
-      q.h(var1, "component");
-      q.h(var2, "componentProvider");
-      q.h(var3, "componentContext");
+      r.h(var1, "component");
+      r.h(var2, "componentProvider");
+      r.h(var3, "componentContext");
       this.eventHandler = var3.getMediaItemEventHandlers();
       val var4: RecyclerView.LayoutManager = this.binding.mosaic.getLayoutManager();
-      q.f(var4, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
+      r.f(var4, "null cannot be cast to non-null type com.discord.chat.presentation.message.view.mosaic_recycler.MosaicLayoutManager");
       (var4 as MosaicLayoutManager).setAvailableWidth(var3.getWidthInfo().getAvailableWidth());
       this.mediaGalleryAdapter.setMediaItems(var3.getContainerId(), var1, var3);
    }
 
    public override fun getComponentType(): KClass<MediaGalleryDisplayComponent> {
-      return G.b(MediaGalleryDisplayComponent.class);
+      return H.b(MediaGalleryDisplayComponent.class);
    }
 
    override fun onRecycle(var1: ComponentProvider) {
@@ -159,7 +159,7 @@ public class MediaGalleryDisplayComponentView  public constructor(context: Conte
 
    public companion object {
       public fun inflateComponent(context: Context): MediaGalleryDisplayComponentView {
-         q.h(var1, "context");
+         r.h(var1, "context");
          return new MediaGalleryDisplayComponentView(var1, null, 0, 6, null);
       }
    }

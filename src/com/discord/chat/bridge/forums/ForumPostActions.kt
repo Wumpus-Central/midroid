@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.forums
 
 import com.discord.chat.bridge.reaction.MessageReaction
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class ForumPostActions(numDisplayedReactions: Int,
@@ -25,8 +25,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
    public final val sharePrompt: PostSharePrompt?
 
    init {
-      q.h(var4, "followLabel");
-      q.h(var6, "shareLabel");
+      r.h(var4, "followLabel");
+      r.h(var6, "shareLabel");
       super();
       this.numDisplayedReactions = var1;
       this.isFollowing = var2;
@@ -80,8 +80,8 @@ public data class ForumPostActions(numDisplayedReactions: Int,
       defaultReaction: MessageReaction? = var0.defaultReaction,
       sharePrompt: PostSharePrompt? = var0.sharePrompt
    ): ForumPostActions {
-      q.h(var4, "followLabel");
-      q.h(var6, "shareLabel");
+      r.h(var4, "followLabel");
+      r.h(var6, "shareLabel");
       return new ForumPostActions(var1, var2, var3, var4, var5, var6, var7, var8);
    }
 
@@ -96,25 +96,25 @@ public data class ForumPostActions(numDisplayedReactions: Int,
             return false;
          } else if (this.isFollowing != var1.isFollowing) {
             return false;
-         } else if (!q.c(this.followIcon, var1.followIcon)) {
+         } else if (!r.c(this.followIcon, var1.followIcon)) {
             return false;
-         } else if (!q.c(this.followLabel, var1.followLabel)) {
+         } else if (!r.c(this.followLabel, var1.followLabel)) {
             return false;
-         } else if (!q.c(this.shareIcon, var1.shareIcon)) {
+         } else if (!r.c(this.shareIcon, var1.shareIcon)) {
             return false;
-         } else if (!q.c(this.shareLabel, var1.shareLabel)) {
+         } else if (!r.c(this.shareLabel, var1.shareLabel)) {
             return false;
-         } else if (!q.c(this.defaultReaction, var1.defaultReaction)) {
+         } else if (!r.c(this.defaultReaction, var1.defaultReaction)) {
             return false;
          } else {
-            return q.c(this.sharePrompt, var1.sharePrompt);
+            return r.c(this.sharePrompt, var1.sharePrompt);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.numDisplayedReactions);
-      val var6: Int = java.lang.Boolean.hashCode(this.isFollowing);
+      val var6: Int = Integer.hashCode(this.numDisplayedReactions);
+      val var5: Int = java.lang.Boolean.hashCode(this.isFollowing);
       var var4: Int = 0;
       val var1: Int;
       if (this.followIcon == null) {
@@ -143,37 +143,37 @@ public data class ForumPostActions(numDisplayedReactions: Int,
          var4 = this.sharePrompt.hashCode();
       }
 
-      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
+      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var2) * 31 + var8) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var1: Int = this.numDisplayedReactions;
       val var2: Boolean = this.isFollowing;
-      val var3: java.lang.String = this.followIcon;
-      val var6: java.lang.String = this.followLabel;
-      val var5: java.lang.String = this.shareIcon;
+      val var5: java.lang.String = this.followIcon;
+      val var7: java.lang.String = this.followLabel;
+      val var3: java.lang.String = this.shareIcon;
       val var4: java.lang.String = this.shareLabel;
-      val var9: MessageReaction = this.defaultReaction;
-      val var7: PostSharePrompt = this.sharePrompt;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("ForumPostActions(numDisplayedReactions=");
-      var8.append(var1);
-      var8.append(", isFollowing=");
-      var8.append(var2);
-      var8.append(", followIcon=");
-      var8.append(var3);
-      var8.append(", followLabel=");
-      var8.append(var6);
-      var8.append(", shareIcon=");
-      var8.append(var5);
-      var8.append(", shareLabel=");
-      var8.append(var4);
-      var8.append(", defaultReaction=");
-      var8.append(var9);
-      var8.append(", sharePrompt=");
-      var8.append(var7);
-      var8.append(")");
-      return var8.toString();
+      val var6: MessageReaction = this.defaultReaction;
+      val var8: PostSharePrompt = this.sharePrompt;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ForumPostActions(numDisplayedReactions=");
+      var9.append(var1);
+      var9.append(", isFollowing=");
+      var9.append(var2);
+      var9.append(", followIcon=");
+      var9.append(var5);
+      var9.append(", followLabel=");
+      var9.append(var7);
+      var9.append(", shareIcon=");
+      var9.append(var3);
+      var9.append(", shareLabel=");
+      var9.append(var4);
+      var9.append(", defaultReaction=");
+      var9.append(var6);
+      var9.append(", sharePrompt=");
+      var9.append(var8);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

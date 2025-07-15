@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.attachment.Attachment
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class FileAttachmentMessageAccessory(messageId: MessageId,
    attachment: Attachment,
@@ -24,8 +24,8 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
    fun FileAttachmentMessageAccessory(
       var1: java.lang.String, var2: Attachment, var3: Int, var4: java.lang.Float, var5: SpoilerAttributes, var6: java.lang.String, var7: java.lang.String
    ) {
-      q.h(var1, "messageId");
-      q.h(var2, "attachment");
+      r.h(var1, "messageId");
+      r.h(var2, "attachment");
       super(var1, var2, var3, var4, null);
       this.messageId = var1;
       this.attachment = var2;
@@ -73,8 +73,8 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
       uploaderId: String? = ...,
       uploaderItemId: String? = ...
    ): FileAttachmentMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "attachment");
+      r.h(var1, "messageId");
+      r.h(var2, "attachment");
       return new FileAttachmentMessageAccessory(var1, var2, var3, var4, var5, var6, var7, null);
    }
 
@@ -87,26 +87,26 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
          var1 = var1;
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
-         } else if (!q.c(this.attachment, var1.attachment)) {
+         } else if (!r.c(this.attachment, var1.attachment)) {
             return false;
          } else if (this.attachmentIndex != var1.attachmentIndex) {
             return false;
-         } else if (!q.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
+         } else if (!r.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
             return false;
-         } else if (!q.c(this.spoilerAttributes, var1.spoilerAttributes)) {
+         } else if (!r.c(this.spoilerAttributes, var1.spoilerAttributes)) {
             return false;
-         } else if (!q.c(this.uploaderId, var1.uploaderId)) {
+         } else if (!r.c(this.uploaderId, var1.uploaderId)) {
             return false;
          } else {
-            return q.c(this.uploaderItemId, var1.uploaderItemId);
+            return r.c(this.uploaderItemId, var1.uploaderItemId);
          }
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = MessageId.hashCode-impl(this.messageId);
+      val var6: Int = MessageId.hashCode-impl(this.messageId);
       val var7: Int = this.attachment.hashCode();
-      val var6: Int = Integer.hashCode(this.attachmentIndex);
+      val var5: Int = Integer.hashCode(this.attachmentIndex);
       var var4: Int = 0;
       val var1: Int;
       if (this.attachmentsOpacity == null) {
@@ -133,33 +133,33 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
          var4 = this.uploaderItemId.hashCode();
       }
 
-      return (((((var5 * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
+      return (((((var6 * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var6: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var5: java.lang.Float = this.attachmentsOpacity;
-      val var8: SpoilerAttributes = this.spoilerAttributes;
-      val var4: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.uploaderItemId;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("FileAttachmentMessageAccessory(messageId=");
-      var7.append(var3);
-      var7.append(", attachment=");
-      var7.append(var6);
-      var7.append(", attachmentIndex=");
-      var7.append(var1);
-      var7.append(", attachmentsOpacity=");
-      var7.append(var5);
-      var7.append(", spoilerAttributes=");
-      var7.append(var8);
-      var7.append(", uploaderId=");
-      var7.append(var4);
-      var7.append(", uploaderItemId=");
-      var7.append(var2);
-      var7.append(")");
-      return var7.toString();
+      val var4: java.lang.Float = this.attachmentsOpacity;
+      val var7: SpoilerAttributes = this.spoilerAttributes;
+      val var2: java.lang.String = this.uploaderId;
+      val var5: java.lang.String = this.uploaderItemId;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("FileAttachmentMessageAccessory(messageId=");
+      var8.append(var3);
+      var8.append(", attachment=");
+      var8.append(var6);
+      var8.append(", attachmentIndex=");
+      var8.append(var1);
+      var8.append(", attachmentsOpacity=");
+      var8.append(var4);
+      var8.append(", spoilerAttributes=");
+      var8.append(var7);
+      var8.append(", uploaderId=");
+      var8.append(var2);
+      var8.append(", uploaderItemId=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 }

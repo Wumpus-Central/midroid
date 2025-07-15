@@ -1,8 +1,8 @@
 package com.discord.js_watchdog
 
+import ab.U
+import ab.f
 import android.content.Context
-import bb.U
-import bb.f
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
@@ -11,12 +11,12 @@ import java.util.Timer
 import java.util.TimerTask
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import kotlin.jvm.internal.Ref.BooleanRef
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.Job.a
-import z9.b
+import y9.b
 
 public object JSWatchdogManager {
    private final lateinit var storage: JSWatchdogStorage
@@ -49,7 +49,7 @@ public object JSWatchdogManager {
             if (var3) {
                var var4: JSWatchdogStorage = storage;
                if (storage == null) {
-                  q.y("storage");
+                  r.y("storage");
                   var4 = null;
                }
 
@@ -57,7 +57,7 @@ public object JSWatchdogManager {
                if (var9 == null || var9.length() == 0) {
                   var var10: File = cacheDir;
                   if (cacheDir == null) {
-                     q.y("cacheDir");
+                     r.y("cacheDir");
                      var10 = null;
                   }
 
@@ -70,7 +70,7 @@ public object JSWatchdogManager {
          }
 
          if (storage == null) {
-            q.y("storage");
+            r.y("storage");
          } else {
             var5 = storage;
          }
@@ -81,11 +81,11 @@ public object JSWatchdogManager {
 
    private fun updateStallTime(sentTimestamp: Long, sessionId: String, enableTrace: Boolean) {
       var1 = System.currentTimeMillis() - var1 - 500;
-      val var5: Log = Log.INSTANCE;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("updateStallTime: ");
-      var6.append(var1);
-      Log.i$default(var5, "JSWatchdogManager", var6.toString(), null, 4, null);
+      val var6: Log = Log.INSTANCE;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("updateStallTime: ");
+      var5.append(var1);
+      Log.i$default(var6, "JSWatchdogManager", var5.toString(), null, 4, null);
       this.saveStallReport((int)var1, var3, var4);
    }
 
@@ -94,7 +94,7 @@ public object JSWatchdogManager {
       if (storage != null) {
          var var3: JSWatchdogStorage = storage;
          if (storage == null) {
-            q.y("storage");
+            r.y("storage");
             var3 = null;
          }
 
@@ -117,7 +117,7 @@ public object JSWatchdogManager {
 
    public fun initialize(context: Context) {
       label13: {
-         q.h(var1, "context");
+         r.h(var1, "context");
          synchronized (this){} // $VF: monitorenter 
 
          try {
@@ -132,8 +132,8 @@ public object JSWatchdogManager {
    }
 
    public fun ping(resetTimestamps: Boolean, sentTimestamp: Long, sessionId: String, enableTrace: Boolean, promise: Promise) {
-      q.h(var4, "sessionId");
-      q.h(var6, "promise");
+      r.h(var4, "sessionId");
+      r.h(var6, "promise");
       this.cancelExistingJobs();
       pingCoroutineJob = f.d(
          U.j,
@@ -226,8 +226,8 @@ public object JSWatchdogManager {
 
                   try {
                      if (JSWatchdogManager.access$getEnabled$p()) {
-                        val var18: Timer = new Timer();
-                        val var20: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
+                        val var20: Timer = new Timer();
+                        val var21: TimerTask = new TimerTask(this.$sentTimestamp, this.$sessionId, this.$enableTrace) {
                            final boolean $enableTrace$inlined;
                            final long $sentTimestamp$inlined;
                            final java.lang.String $sessionId$inlined;
@@ -245,8 +245,8 @@ public object JSWatchdogManager {
                               );
                            }
                         };
-                        var18.scheduleAtFixedRate(var20, 1500L, 1000L);
-                        JSWatchdogManager.access$setFreezeTimer$p(var20);
+                        var20.scheduleAtFixedRate(var21, 1500L, 1000L);
+                        JSWatchdogManager.access$setFreezeTimer$p(var21);
                      }
                   } catch (var9: Exception) {
                      CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var9);

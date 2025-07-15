@@ -1,8 +1,8 @@
 package com.discord.push_notification_monitor
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class PushNotificationMeta(receivedTimestamp: Long,
@@ -22,8 +22,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    public final val messageId: String?
 
    init {
-      q.h(var4, "type");
-      q.h(var5, "title");
+      r.h(var4, "type");
+      r.h(var5, "title");
       super();
       this.receivedTimestamp = var1;
       this.silent = var3;
@@ -71,8 +71,8 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
       channelId: String? = var0.channelId,
       messageId: String? = var0.messageId
    ): PushNotificationMeta {
-      q.h(var4, "type");
-      q.h(var5, "title");
+      r.h(var4, "type");
+      r.h(var5, "title");
       return new PushNotificationMeta(var1, var3, var4, var5, var6, var7, var8);
    }
 
@@ -87,16 +87,16 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
             return false;
          } else if (this.silent != var1.silent) {
             return false;
-         } else if (!q.c(this.type, var1.type)) {
+         } else if (!r.c(this.type, var1.type)) {
             return false;
-         } else if (!q.c(this.title, var1.title)) {
+         } else if (!r.c(this.title, var1.title)) {
             return false;
-         } else if (!q.c(this.content, var1.content)) {
+         } else if (!r.c(this.content, var1.content)) {
             return false;
-         } else if (!q.c(this.channelId, var1.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.messageId, var1.messageId);
+            return r.c(this.messageId, var1.messageId);
          }
       }
    }
@@ -129,30 +129,30 @@ public data class PushNotificationMeta(receivedTimestamp: Long,
    }
 
    public override fun toString(): String {
-      val var2: Long = this.receivedTimestamp;
-      val var1: Boolean = this.silent;
-      val var6: java.lang.String = this.type;
-      val var7: java.lang.String = this.title;
-      val var8: java.lang.String = this.content;
-      val var9: java.lang.String = this.channelId;
-      val var5: java.lang.String = this.messageId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PushNotificationMeta(receivedTimestamp=");
-      var4.append(var2);
-      var4.append(", silent=");
-      var4.append(var1);
-      var4.append(", type=");
-      var4.append(var6);
-      var4.append(", title=");
-      var4.append(var7);
-      var4.append(", content=");
-      var4.append(var8);
-      var4.append(", channelId=");
-      var4.append(var9);
-      var4.append(", messageId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var1: Long = this.receivedTimestamp;
+      val var3: Boolean = this.silent;
+      val var7: java.lang.String = this.type;
+      val var6: java.lang.String = this.title;
+      val var4: java.lang.String = this.content;
+      val var5: java.lang.String = this.channelId;
+      val var8: java.lang.String = this.messageId;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("PushNotificationMeta(receivedTimestamp=");
+      var9.append(var1);
+      var9.append(", silent=");
+      var9.append(var3);
+      var9.append(", type=");
+      var9.append(var7);
+      var9.append(", title=");
+      var9.append(var6);
+      var9.append(", content=");
+      var9.append(var4);
+      var9.append(", channelId=");
+      var9.append(var5);
+      var9.append(", messageId=");
+      var9.append(var8);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

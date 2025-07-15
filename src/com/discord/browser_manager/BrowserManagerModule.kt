@@ -5,25 +5,26 @@ import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import r9.s
+import s9.q
 
 public class BrowserManagerModule(reactContext: ReactApplicationContext) : NativeBrowserManagerModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
    @JvmStatic
    fun `openInAppURL$lambda$1`(var0: Promise, var1: Exception): Unit {
-      q.h(var1, "e");
+      r.h(var1, "e");
       var0.reject(null, var1.getMessage(), var1, null);
       return Unit.a;
    }
 
    @JvmStatic
    fun `openInChromeURL$lambda$0`(var0: Promise, var1: Exception): Unit {
-      q.h(var1, "e");
+      r.h(var1, "e");
       var0.reject(null, var1.getMessage(), var1, null);
       return Unit.a;
    }
@@ -33,32 +34,32 @@ public class BrowserManagerModule(reactContext: ReactApplicationContext) : Nativ
       if (var2 != null) {
          val var3: Int = h.m(var2);
          if (var3 != null) {
-            return t9.q.m(new Pair[]{s.a("selectedBrowser", var3), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+            return q.m(new Pair[]{s.a("selectedBrowser", var3), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
          }
       }
 
-      return t9.q.m(new Pair[]{s.a("selectedBrowser", 1), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
+      return q.m(new Pair[]{s.a("selectedBrowser", 1), s.a("isChromeInstalled", java.lang.Boolean.TRUE)});
    }
 
    public override fun openInAppURL(url: String, promise: Promise) {
-      q.h(var1, "url");
-      q.h(var2, "promise");
+      r.h(var1, "url");
+      r.h(var2, "promise");
       val var4: BrowserManager = BrowserManager.INSTANCE;
       var var3: Any = this.getCurrentActivity();
       if (var3 == null) {
          var3 = this.getReactApplicationContext();
       }
 
-      q.e(var3);
+      r.e(var3);
       var4.tryOpenUrlWithCustomTabs((Context)var3, var1, new e(var2));
    }
 
    public override fun openInChromeURL(url: String, promise: Promise) {
-      q.h(var1, "url");
-      q.h(var2, "promise");
+      r.h(var1, "url");
+      r.h(var2, "promise");
       val var3: BrowserManager = BrowserManager.INSTANCE;
       val var4: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var4, "getReactApplicationContext(...)");
+      r.g(var4, "getReactApplicationContext(...)");
       var3.tryOpenUrlExternally(var4, var1, new d(var2));
    }
 

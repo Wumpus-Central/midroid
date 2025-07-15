@@ -9,7 +9,7 @@ import com.facebook.react.modules.network.NetworkingModule
 import com.facebook.react.modules.network.OkHttpClientProvider
 import com.facebook.react.modules.websocket.WebSocketModule
 import java.lang.reflect.Constructor
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
@@ -27,7 +27,7 @@ public object ReactNetworking {
          }
 
          public final Response intercept(Chain var1) {
-            q.h(var1, "chain");
+            r.h(var1, "chain");
             return this.$receiver$inlined.clientXHRInterceptor(var1);
          }
       });
@@ -39,7 +39,7 @@ public object ReactNetworking {
    }
 
    public fun createReactOkHttpNetworkFetcher(): NetworkFetcher<*> {
-      val var3: OkHttpClient = OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
+      var var2: OkHttpClient = OkHttpClientProvider.createClient().C().b(new Interceptor(DeviceResourceUsageRecorder.Companion) {
          final DeviceResourceUsageRecorder.Companion $receiver$inlined;
 
          {
@@ -47,26 +47,26 @@ public object ReactNetworking {
          }
 
          public final Response intercept(Chain var1) {
-            q.h(var1, "chain");
+            r.h(var1, "chain");
             return this.$receiver$inlined.frescoInterceptor(var1);
          }
       }).c();
 
       try {
          val var1: Int = ReactOkHttpNetworkFetcher.a;
-         val var2: Constructor = ReactOkHttpNetworkFetcher.class.getDeclaredConstructor(OkHttpClient.class);
-         var2.setAccessible(true);
-         var var5: StringBuilder = (StringBuilder)var2.newInstance(var3);
-         if (var5 is NetworkFetcher) {
-            return var5 as NetworkFetcher;
+         val var3: Constructor = ReactOkHttpNetworkFetcher.class.getDeclaredConstructor(OkHttpClient.class);
+         var3.setAccessible(true);
+         var2 = (OkHttpClient)var3.newInstance(var2);
+         if (var2 is NetworkFetcher) {
+            return var2 as NetworkFetcher;
          } else {
-            var5 = new StringBuilder();
-            var5.append("Field ");
-            var5.append(ReactOkHttpNetworkFetcher::class.java);
-            var5.append(" not instance of ");
-            var5.append(NetworkFetcher::class.java);
-            var5.append(".");
-            throw new IllegalStateException(var5.toString().toString());
+            val var7: StringBuilder = new StringBuilder();
+            var7.append("Field ");
+            var7.append(ReactOkHttpNetworkFetcher::class.java);
+            var7.append(" not instance of ");
+            var7.append(NetworkFetcher::class.java);
+            var7.append(".");
+            throw new IllegalStateException(var7.toString().toString());
          }
       } catch (var4: Exception) {
          Log.INSTANCE.e("ReactNetworking", "Failed to instantiate com.facebook.react.modules.fresco.ReactOkHttpNetworkFetcher", var4);

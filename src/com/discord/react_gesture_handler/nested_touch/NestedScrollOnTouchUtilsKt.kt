@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import java.util.ArrayList
 import java.util.WeakHashMap
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal final var viewClickListeners: WeakHashMap<View, OnClickListener> = new WeakHashMap()
 internal final var viewLongClickListeners: WeakHashMap<View, OnLongClickListener> = new WeakHashMap()
@@ -21,7 +21,7 @@ fun a(var0: OnLongClickListener, var1: View): Boolean {
 }
 
 public fun TextView.enableNestedSpanClickListener(viewManagesAccessibility: Boolean = false) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    var0.setOnTouchListener(new NestedScrollOnTouchListener(var0, var1));
 }
 
@@ -35,7 +35,7 @@ fun `enableNestedSpanClickListener$default`(var0: TextView, var1: Boolean, var2:
 }
 
 public fun View.setOnClickListenerNested(viewManagesAccessibility: Boolean = false, onClickListener: OnClickListener?) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (var2 == null) {
       viewClickListeners.remove(var0);
    } else {
@@ -56,7 +56,7 @@ fun `setOnClickListenerNested$default`(var0: View, var1: Boolean, var2: OnClickL
 }
 
 public fun View.setOnLongClickListenerNested(viewManagesAccessibility: Boolean = false, onLongPress: OnLongClickListener?) {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    if (var2 == null) {
       viewLongClickListeners.remove(var0);
    } else {
@@ -94,7 +94,7 @@ private fun OnLongClickListener.updateWithOngoingGestureCancelling(): OnLongClic
 
 // $VF: Irreducible bytecode was duplicated to produce valid code
 fun `updateWithOngoingGestureCancelling$lambda$1`(var0: OnLongClickListener, var1: View): Boolean {
-   q.e(var1);
+   r.e(var1);
    val var4: ArrayList = new ArrayList();
    var var2: ViewParent = var1.getParent();
    var var5: ViewGroup;

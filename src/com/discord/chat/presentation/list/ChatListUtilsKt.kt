@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView.ItemDecoration
 import com.discord.chat.presentation.message.decorations.BackgroundHighlightDecoration
 
 public fun RecyclerView.configureMessageRecyclerView(context: Context, vararg decorations: ItemDecoration) {
-   kotlin.jvm.internal.q.h(var0, "<this>");
-   kotlin.jvm.internal.q.h(var1, "context");
-   kotlin.jvm.internal.q.h(var2, "decorations");
+   kotlin.jvm.internal.r.h(var0, "<this>");
+   kotlin.jvm.internal.r.h(var1, "context");
+   kotlin.jvm.internal.r.h(var2, "decorations");
    var0.addItemDecoration(new BackgroundHighlightDecoration(var1));
    var0.setItemViewCacheSize(5);
    val var4: Int = var2.length;

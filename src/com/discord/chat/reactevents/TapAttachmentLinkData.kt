@@ -3,10 +3,10 @@ package com.discord.chat.reactevents
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import s9.s
+import r9.s
 
 @f
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {
@@ -34,7 +34,7 @@ internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : React
       } else if (var1 !is TapAttachmentLinkData) {
          return false;
       } else {
-         return q.c(this.attachmentUrl, (var1 as TapAttachmentLinkData).attachmentUrl);
+         return r.c(this.attachmentUrl, (var1 as TapAttachmentLinkData).attachmentUrl);
       }
    }
 

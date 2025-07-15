@@ -1,15 +1,15 @@
 package com.discord.app_database
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class CacheVersion(version: String) {
    public final val version: String
 
    init {
-      q.h(var1, "version");
+      r.h(var1, "version");
       super();
       this.version = var1;
    }
@@ -19,7 +19,7 @@ public data class CacheVersion(version: String) {
    }
 
    public fun copy(version: String = var0.version): CacheVersion {
-      q.h(var1, "version");
+      r.h(var1, "version");
       return new CacheVersion(var1);
    }
 
@@ -29,7 +29,7 @@ public data class CacheVersion(version: String) {
       } else if (var1 !is CacheVersion) {
          return false;
       } else {
-         return q.c(this.version, (var1 as CacheVersion).version);
+         return r.c(this.version, (var1 as CacheVersion).version);
       }
    }
 
@@ -38,12 +38,12 @@ public data class CacheVersion(version: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.version;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("CacheVersion(version=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.version;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("CacheVersion(version=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

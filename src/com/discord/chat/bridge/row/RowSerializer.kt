@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.row
 
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
@@ -9,27 +9,23 @@ import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import pb.d
-import pb.g
+import ob.d
+import ob.g
 
-public object RowSerializer : d(G.b(Row.class)) {
+public object RowSerializer : d(H.b(Row.class)) {
    private const val CHANGE_TYPE_DELETE: String = "3"
    private final val rowSealedClassSerializer: SealedClassSerializer<Row> =
       new SealedClassSerializer(
          "Row",
-         G.b(Row.class),
-         new KClass[]{G.b(LoadingRow.class), G.b(MessageRow.class), G.b(SeparatorRow.class), G.b(BlockedGroupRow.class), G.b(UploadProgressRow.class)},
+         H.b(Row.class),
+         new KClass[]{H.b(LoadingRow.class), H.b(MessageRow.class), H.b(SeparatorRow.class), H.b(BlockedGroupRow.class)},
          new KSerializer[]{
-            LoadingRow.Companion.serializer(),
-            MessageRow.Companion.serializer(),
-            SeparatorRow.Companion.serializer(),
-            BlockedGroupRow.Companion.serializer(),
-            UploadProgressRow.Companion.serializer()
+            LoadingRow.Companion.serializer(), MessageRow.Companion.serializer(), SeparatorRow.Companion.serializer(), BlockedGroupRow.Companion.serializer()
          }
       )
 
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<Row> {
-      q.h(var1, "element");
+      r.h(var1, "element");
       val var2: JsonObject = g.o(var1);
       val var3: Any;
       if (var2.containsKey("type")) {
@@ -48,7 +44,7 @@ public object RowSerializer : d(G.b(Row.class)) {
             var6 = null;
          }
 
-         if (!q.c(var6, "3")) {
+         if (!r.c(var6, "3")) {
             val var7: StringBuilder = new StringBuilder();
             var7.append("unsupported row json: ");
             var7.append(var1);

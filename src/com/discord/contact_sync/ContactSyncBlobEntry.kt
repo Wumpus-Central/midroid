@@ -1,8 +1,8 @@
 package com.discord.contact_sync
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class ContactSyncBlobEntry(phone: String,
@@ -20,11 +20,11 @@ public data class ContactSyncBlobEntry(phone: String,
    public final val familyName: String
 
    init {
-      q.h(var1, "phone");
-      q.h(var2, "unencryptedName");
-      q.h(var4, "deviceContactId");
-      q.h(var5, "givenName");
-      q.h(var6, "familyName");
+      r.h(var1, "phone");
+      r.h(var2, "unencryptedName");
+      r.h(var4, "deviceContactId");
+      r.h(var5, "givenName");
+      r.h(var6, "familyName");
       super();
       this.phone = var1;
       this.unencryptedName = var2;
@@ -66,11 +66,11 @@ public data class ContactSyncBlobEntry(phone: String,
       givenName: String = var0.givenName,
       familyName: String = var0.familyName
    ): ContactSyncBlobEntry {
-      q.h(var1, "phone");
-      q.h(var2, "unencryptedName");
-      q.h(var4, "deviceContactId");
-      q.h(var5, "givenName");
-      q.h(var6, "familyName");
+      r.h(var1, "phone");
+      r.h(var2, "unencryptedName");
+      r.h(var4, "deviceContactId");
+      r.h(var5, "givenName");
+      r.h(var6, "familyName");
       return new ContactSyncBlobEntry(var1, var2, var3, var4, var5, var6);
    }
 
@@ -81,18 +81,18 @@ public data class ContactSyncBlobEntry(phone: String,
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.phone, var1.phone)) {
+         if (!r.c(this.phone, var1.phone)) {
             return false;
-         } else if (!q.c(this.unencryptedName, var1.unencryptedName)) {
+         } else if (!r.c(this.unencryptedName, var1.unencryptedName)) {
             return false;
          } else if (this.hasImageData != var1.hasImageData) {
             return false;
-         } else if (!q.c(this.deviceContactId, var1.deviceContactId)) {
+         } else if (!r.c(this.deviceContactId, var1.deviceContactId)) {
             return false;
-         } else if (!q.c(this.givenName, var1.givenName)) {
+         } else if (!r.c(this.givenName, var1.givenName)) {
             return false;
          } else {
-            return q.c(this.familyName, var1.familyName);
+            return r.c(this.familyName, var1.familyName);
          }
       }
    }
@@ -112,26 +112,26 @@ public data class ContactSyncBlobEntry(phone: String,
 
    public override fun toString(): String {
       val var7: java.lang.String = this.phone;
-      val var5: java.lang.String = this.unencryptedName;
+      val var2: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var4: java.lang.String = this.deviceContactId;
-      val var3: java.lang.String = this.givenName;
-      val var6: java.lang.String = this.familyName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ContactSyncBlobEntry(phone=");
-      var2.append(var7);
-      var2.append(", unencryptedName=");
-      var2.append(var5);
-      var2.append(", hasImageData=");
-      var2.append(var1);
-      var2.append(", deviceContactId=");
-      var2.append(var4);
-      var2.append(", givenName=");
-      var2.append(var3);
-      var2.append(", familyName=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var3: java.lang.String = this.deviceContactId;
+      val var4: java.lang.String = this.givenName;
+      val var5: java.lang.String = this.familyName;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ContactSyncBlobEntry(phone=");
+      var6.append(var7);
+      var6.append(", unencryptedName=");
+      var6.append(var2);
+      var6.append(", hasImageData=");
+      var6.append(var1);
+      var6.append(", deviceContactId=");
+      var6.append(var3);
+      var6.append(", givenName=");
+      var6.append(var4);
+      var6.append(", familyName=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

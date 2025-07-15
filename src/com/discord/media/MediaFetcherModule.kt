@@ -11,12 +11,12 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import r9.s
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -48,8 +48,8 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getPhotos(params: ReadableMap, promise: Promise) {
-      q.h(var1, "params");
-      q.h(var2, "promise");
+      r.h(var1, "params");
+      r.h(var2, "promise");
       val var4: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
@@ -58,17 +58,17 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var7: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
       var var3: Int;
       try {
          val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var12: ReactApplicationContext = this.getReactApplicationContext();
-         q.g(var12, "getReactApplicationContext(...)");
-         var16 = i.K0(i.I0(var6.getMedia(var12, var7, var4, var5), new Comparator() {
+         val var7: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var7, "getReactApplicationContext(...)");
+         var16 = i.K0(i.I0(var6.getMedia(var7, var12, var4, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return w9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return v9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
          }), var4);
          var3 = var16.size();

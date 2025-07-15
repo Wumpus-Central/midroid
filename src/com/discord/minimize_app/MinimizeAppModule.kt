@@ -4,11 +4,11 @@ import android.content.Intent
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class MinimizeAppModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 

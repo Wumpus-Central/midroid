@@ -1,7 +1,7 @@
 package com.discord.image.dominant_color
 
-import P1.a
-import P1.b
+import O1.a
+import O1.b
 import android.graphics.Bitmap
 import android.graphics.Bitmap.CompressFormat
 import android.util.Base64
@@ -15,11 +15,11 @@ import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -38,7 +38,7 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    private fun getDominantColors(uri: String?, promise: Promise) {
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
+      r.g(var3, "getReactApplicationContext(...)");
       FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1, null, new a(var2), 2, null);
    }
 
@@ -68,24 +68,24 @@ public class ImageManagerModule(reactContext: ReactApplicationContext) : ReactCo
 
    @ReactMethod
    public fun getAvatarBase64(imageSource: ReadableMap, promise: Promise) {
-      q.h(var1, "imageSource");
-      q.h(var2, "promise");
+      r.h(var1, "imageSource");
+      r.h(var2, "promise");
       val var3: ReactApplicationContext = this.getReactApplicationContext();
-      q.g(var3, "getReactApplicationContext(...)");
+      r.g(var3, "getReactApplicationContext(...)");
       FrescoFetchDecodedImageKt.fetchDecodedImage$default(var3, var1.getString("uri"), null, new b(var2), 2, null);
    }
 
    @ReactMethod
    public fun getDominantColors(imageSource: ReadableMap, promise: Promise) {
-      q.h(var1, "imageSource");
-      q.h(var2, "promise");
+      r.h(var1, "imageSource");
+      r.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 
    @ReactMethod
    public fun getDominantColorsLocalAsset(imageSource: ReadableMap, promise: Promise) {
-      q.h(var1, "imageSource");
-      q.h(var2, "promise");
+      r.h(var1, "imageSource");
+      r.h(var2, "promise");
       this.getDominantColors(var1.getString("uri"), var2);
    }
 

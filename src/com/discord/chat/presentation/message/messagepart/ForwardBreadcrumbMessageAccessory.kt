@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.messagepart
 import com.discord.chat.bridge.forwarding.ForwardInfo
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channelId: ChannelId, forwardInfo: ForwardInfo) : ForwardBreadcrumbMessageAccessory(
       var1, var2, var4
@@ -13,8 +13,8 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
    public final val forwardInfo: ForwardInfo
 
    fun ForwardBreadcrumbMessageAccessory(var1: java.lang.String, var2: Long, var4: ForwardInfo) {
-      q.h(var1, "messageId");
-      q.h(var4, "forwardInfo");
+      r.h(var1, "messageId");
+      r.h(var4, "forwardInfo");
       super(var1, "forwarded message breadcrumb", false, 4, null);
       this.messageId = var1;
       this.channelId = var2;
@@ -34,8 +34,8 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
    }
 
    public fun copy(messageId: MessageId = ..., channelId: ChannelId = ..., forwardInfo: ForwardInfo = ...): ForwardBreadcrumbMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var4, "forwardInfo");
+      r.h(var1, "messageId");
+      r.h(var4, "forwardInfo");
       return new ForwardBreadcrumbMessageAccessory(var1, var2, var4, null);
    }
 
@@ -51,7 +51,7 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
          } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
             return false;
          } else {
-            return q.c(this.forwardInfo, var1.forwardInfo);
+            return r.c(this.forwardInfo, var1.forwardInfo);
          }
       }
    }
@@ -61,17 +61,17 @@ public data class ForwardBreadcrumbMessageAccessory(messageId: MessageId, channe
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
       val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: ForwardInfo = this.forwardInfo;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ForwardBreadcrumbMessageAccessory(messageId=");
-      var3.append(var4);
-      var3.append(", channelId=");
-      var3.append(var2);
-      var3.append(", forwardInfo=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var4: ForwardInfo = this.forwardInfo;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ForwardBreadcrumbMessageAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(", forwardInfo=");
+      var1.append(var4);
+      var1.append(")");
+      return var1.toString();
    }
 }

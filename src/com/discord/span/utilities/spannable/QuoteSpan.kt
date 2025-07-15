@@ -7,7 +7,7 @@ import android.graphics.Paint.Style
 import android.text.Layout
 import android.text.Spanned
 import android.text.style.LeadingMarginSpan
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class QuoteSpan(stripeColor: Int, stripeWidth: Int, gapWidth: Int) : LeadingMarginSpan {
    public final val stripeColor: Int
@@ -53,10 +53,10 @@ public class QuoteSpan(stripeColor: Int, stripeWidth: Int, gapWidth: Int) : Lead
       first: Boolean,
       layout: Layout
    ) {
-      q.h(var1, "c");
-      q.h(var2, "p");
-      q.h(var8, "text");
-      q.h(var12, "layout");
+      r.h(var1, "c");
+      r.h(var2, "p");
+      r.h(var8, "text");
+      r.h(var12, "layout");
       if (var8 is Spanned) {
          val var15: Spanned = var8 as Spanned;
          if ((var8 as Spanned).getSpanStart(this) == var9) {

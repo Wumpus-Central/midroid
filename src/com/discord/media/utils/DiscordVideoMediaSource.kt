@@ -9,11 +9,12 @@ import android.os.Build.VERSION
 import java.nio.ByteBuffer
 import java.util.ArrayList
 import java.util.concurrent.TimeUnit
-import kotlin.jvm.internal.q
-import s9.s
-import t9.n
+import kotlin.jvm.internal.r
+import r9.s
+import s9.n
+import s9.q
 
-internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
+internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : j8.a {
    public final val inputUri: Uri
    private final val srcTrackFormats: List<MediaFormat>
    private final val srcVideoFormat: MediaFormat?
@@ -32,8 +33,8 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
    public final val audioFormat: MediaFormat?
 
    init {
-      q.h(var1, "context");
-      q.h(var2, "inputUri");
+      r.h(var1, "context");
+      r.h(var2, "inputUri");
       super(var1, var2);
       this.inputUri = var2;
       val var6: IntRange = kotlin.ranges.d.s(0, this.getTrackCount());
@@ -58,7 +59,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
 
          var150 = var7.next();
          val var8: MediaFormat = var150 as MediaFormat;
-         q.e(var150 as MediaFormat);
+         r.e(var150 as MediaFormat);
          var179 = MediaFormatUtilsKt.getMimeType(var8);
       } while (var179 == null || !h.I(var179, "video", false, 2, null));
 
@@ -73,7 +74,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
 
          var151 = var7.next();
          val var180: MediaFormat = var151 as MediaFormat;
-         q.e(var151 as MediaFormat);
+         r.e(var151 as MediaFormat);
          var179 = MediaFormatUtilsKt.getMimeType(var180);
       } while (var179 == null || !h.I(var179, "audio", false, 2, null));
 
@@ -184,7 +185,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
          }
 
          this.frameRate = (var171 as java.lang.Number).intValue();
-         this.bitRate = n8.h.a(this, this.srcTrackFormats.indexOf(var182));
+         this.bitRate = m8.h.a(this, this.srcTrackFormats.indexOf(var182));
 
          label138:
          try {
@@ -294,22 +295,22 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
    }
 
    private fun getAVCBitrate(width: Int, height: Int, frameRate: Int): Int {
-      var var5: Int = -1;
-      var var4: Int = 0;
+      var var4: Int = -1;
+      var var5: Int = 0;
 
-      while (var4 < 2) {
+      while (var5 < 2) {
          var var6: Int = 0;
 
          var var7: Int;
          while (true) {
-            var7 = var5;
+            var7 = var4;
             if (var6 >= 5) {
                break;
             }
 
             var7 = new int[]{8, 6, 5, 4, 0}[var6];
-            if (CamcorderProfile.hasProfile(var4, var7)) {
-               val var10: CamcorderProfile = CamcorderProfile.get(var4, var7);
+            if (CamcorderProfile.hasProfile(var5, var7)) {
+               val var10: CamcorderProfile = CamcorderProfile.get(var5, var7);
                var var8: Boolean = true;
                val var14: Boolean;
                if (var1 == var10.videoFrameWidth && var2 == var10.videoFrameHeight) {
@@ -323,8 +324,8 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
                }
 
                if ((var14 || var8) && var3 == var10.videoFrameRate && var10.videoCodec == 2) {
-                  var7 = var5;
-                  if (var5 < var10.videoBitRate) {
+                  var7 = var4;
+                  if (var4 < var10.videoBitRate) {
                      var7 = var10.videoBitRate;
                   }
                   break;
@@ -334,11 +335,11 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
             var6++;
          }
 
-         var4++;
-         var5 = var7;
+         var5++;
+         var4 = var7;
       }
 
-      var var15: Int = var5;
+      var var15: Int = var4;
       if (var15.intValue() == -1) {
          var15 = null;
       }
@@ -406,7 +407,7 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
    }
 
    public fun getMetadata(): Map<String, Any> {
-      return t9.q.l(
+      return q.l(
          new Pair[]{
             s.a("width", this.width),
             s.a("height", this.height),
@@ -467,14 +468,14 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
             return false;
          } else {
             var1 = var1;
-            if (!q.c(this.colorTransfer, var1.colorTransfer)) {
+            if (!r.c(this.colorTransfer, var1.colorTransfer)) {
                return false;
-            } else if (!q.c(this.colorStandard, var1.colorStandard)) {
+            } else if (!r.c(this.colorStandard, var1.colorStandard)) {
                return false;
-            } else if (!q.c(this.colorRange, var1.colorRange)) {
+            } else if (!r.c(this.colorRange, var1.colorRange)) {
                return false;
             } else {
-               return q.c(this.hdrStaticInfo, var1.hdrStaticInfo);
+               return r.c(this.hdrStaticInfo, var1.hdrStaticInfo);
             }
          }
       }
@@ -510,19 +511,19 @@ internal class DiscordVideoMediaSource(context: Context, inputUri: Uri) : k8.a {
       }
 
       public override fun toString(): String {
-         val var1: Int = this.colorTransfer;
+         val var5: Int = this.colorTransfer;
          val var4: Int = this.colorStandard;
          val var2: Int = this.colorRange;
-         val var5: ByteBuffer = this.hdrStaticInfo;
+         val var1: ByteBuffer = this.hdrStaticInfo;
          val var3: StringBuilder = new StringBuilder();
          var3.append("ColorFormatSettings(colorTransfer=");
-         var3.append(var1);
+         var3.append(var5);
          var3.append(", colorStandard=");
          var3.append(var4);
          var3.append(", colorRange=");
          var3.append(var2);
          var3.append(", hdrStaticInfo=");
-         var3.append(var5);
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }

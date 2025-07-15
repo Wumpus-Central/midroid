@@ -17,7 +17,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
 
 
    init {
-      kotlin.jvm.internal.q.h(var1, "nativeSection");
+      kotlin.jvm.internal.r.h(var1, "nativeSection");
       super();
       this.nativeSection = var1;
       this.offsetId = var2;
@@ -59,7 +59,7 @@ internal class EmojiPickerPlaceholderList(nativeSection: List<NativeSection>, of
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle();
          } else {
             if (var3 !is EmojiPickerItemData.CoreData.NativeSection.Guild) {
-               throw new s9.n();
+               throw new r9.n();
             }
 
             var4 = (var3 as EmojiPickerItemData.CoreData.NativeSection.Guild).getGuildName();

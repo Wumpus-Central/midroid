@@ -4,12 +4,12 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import kotlin.jvm.internal.q
+import kb.f
+import kb.j
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
-import lb.j
-import s9.s
-import sb.a
+import r9.s
+import rb.a
 
 @f
 public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSource?, rate: Double) : ReactEvent {
@@ -41,7 +41,7 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.source, var1.source)) {
+         if (!r.c(this.source, var1.source)) {
             return false;
          } else {
             return java.lang.Double.compare(this.rate, var1.rate) == 0;
@@ -70,15 +70,15 @@ public data class MediaPlayerPlaybackRateChanged(source: MediaPlayerPlaybackSour
    }
 
    public override fun toString(): String {
-      val var3: MediaPlayerPlaybackSource = this.source;
+      val var4: MediaPlayerPlaybackSource = this.source;
       val var1: Double = this.rate;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("MediaPlayerPlaybackRateChanged(source=");
-      var4.append(var3);
-      var4.append(", rate=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerPlaybackRateChanged(source=");
+      var3.append(var4);
+      var3.append(", rate=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

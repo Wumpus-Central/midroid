@@ -4,13 +4,13 @@ import android.app.Activity
 import com.discord.codegen.NativeAppRatingRequestModuleSpec
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 import n1.a
 import n1.b
 
 public class AppRatingRequestModule(reactContext: ReactApplicationContext) : NativeAppRatingRequestModuleSpec {
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
    }
 
@@ -22,13 +22,13 @@ public class AppRatingRequestModule(reactContext: ReactApplicationContext) : Nat
 
    @JvmStatic
    fun `requestRating$lambda$1`(var0: Promise, var1: Exception): Unit {
-      q.h(var1, "exception");
+      r.h(var1, "exception");
       var0.reject(var1);
       return Unit.a;
    }
 
    public override fun requestRating(promise: Promise) {
-      q.h(var1, "promise");
+      r.h(var1, "promise");
       val var2: Activity = this.getCurrentActivity();
       if (var2 == null) {
          var1.reject(new IllegalStateException("current activity is null"));

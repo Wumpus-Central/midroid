@@ -12,7 +12,7 @@ public class ChannelPromptActionsViewHolder(channelPromptActionsView: ChannelPro
    private final val channelPromptActionsView: ChannelPromptActionsView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "channelPromptActionsView");
+      kotlin.jvm.internal.r.h(var1, "channelPromptActionsView");
       super(var1, null);
       this.channelPromptActionsView = var1;
       var1.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
@@ -39,8 +39,8 @@ public class ChannelPromptActionsViewHolder(channelPromptActionsView: ChannelPro
    }
 
    public fun bind(accessory: ChannelPromptActionsAccessory, onTapChannelPromptButton: (MessageId, ChannelId, String) -> Unit) {
-      kotlin.jvm.internal.q.h(var1, "accessory");
-      kotlin.jvm.internal.q.h(var2, "onTapChannelPromptButton");
+      kotlin.jvm.internal.r.h(var1, "accessory");
+      kotlin.jvm.internal.r.h(var2, "onTapChannelPromptButton");
       this.channelPromptActionsView.configure(var1.getMessage(), new e(var2, var1), new f(var2, var1), new g(var2, var1), new h(var2, var1));
    }
 }

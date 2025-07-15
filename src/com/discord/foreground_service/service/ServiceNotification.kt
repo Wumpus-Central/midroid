@@ -14,9 +14,9 @@ import com.discord.notifications.actions.intents.GenericAction
 import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
 import java.util.Comparator
-import kotlin.jvm.internal.q
-import s9.s
-import w9.a
+import kotlin.jvm.internal.r
+import r9.s
+import v9.a
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -27,13 +27,13 @@ internal object ServiceNotification {
    private final val notificationManagerCompat: NotificationManagerCompat
       private final get() {
          val var2: NotificationManagerCompat = NotificationManagerCompat.g(var1);
-         q.g(var2, "from(...)");
+         r.g(var2, "from(...)");
          return var2;
       }
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      var var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      val var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var6: PendingIntent;
       if (var3 != null) {
@@ -44,23 +44,23 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      var4 = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var7: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
-         var4.a(
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+         var7.a(
             0,
-            var7.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      return var4.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
+      return var7.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {
-      q.h(var1, "<this>");
+      r.h(var1, "<this>");
 
       for (int var2 = 0; var2 < 6; var2++) {
          this.getNotificationManagerCompat(var1).b("FOREGROUND_NOTIFICATION_TAG", var2);
@@ -68,9 +68,9 @@ internal object ServiceNotification {
    }
 
    public fun Service.startForegroundCompat(context: Context, serviceNotificationConfigurations: List<ServiceNotificationConfiguration>) {
-      q.h(var1, "<this>");
-      q.h(var2, "context");
-      q.h(var3, "serviceNotificationConfigurations");
+      r.h(var1, "<this>");
+      r.h(var2, "context");
+      r.h(var3, "serviceNotificationConfigurations");
       var3 = i.I0(var3, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
@@ -80,7 +80,7 @@ internal object ServiceNotification {
       var var5: ServiceNotificationConfiguration = i.f0(var3) as ServiceNotificationConfiguration;
       var3 = i.X(var3, 1);
       val var8: Notification = this.buildNotification(var2, var5);
-      q.g(var8, "buildNotification(...)");
+      r.g(var8, "buildNotification(...)");
       ForegroundServiceUtilsKt.startForegroundCompat(var1, var2, 8761, var8);
 
       for (int var4 = 0; var4 < 6; var4++) {

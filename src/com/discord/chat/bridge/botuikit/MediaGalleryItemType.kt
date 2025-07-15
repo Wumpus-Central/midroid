@@ -2,10 +2,10 @@ package com.discord.chat.bridge.botuikit
 
 import com.discord.serialization.IntEnum
 import com.discord.serialization.IntEnumSerializer
+import kb.f
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f(with = MediaGalleryItemType.Serializer::class)
 public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
@@ -25,7 +25,7 @@ public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<MediaGalleryItemType> = $values();
       $VALUES = var0;
-      $ENTRIES = A9.a.a(var0);
+      $ENTRIES = z9.a.a(var0);
    }
 
    init {
@@ -43,5 +43,5 @@ public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
       }
    }
 
-   public object Serializer : IntEnumSerializer(G.b(MediaGalleryItemType.class), MediaGalleryItemType.UNKNOWN)
+   public object Serializer : IntEnumSerializer(H.b(MediaGalleryItemType.class), MediaGalleryItemType.UNKNOWN)
 }

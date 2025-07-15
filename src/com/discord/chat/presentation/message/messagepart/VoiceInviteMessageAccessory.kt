@@ -2,15 +2,15 @@ package com.discord.chat.presentation.message.messagepart
 
 import com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed
 import com.discord.primitives.MessageId
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: VoiceInviteEmbed) : VoiceInviteMessageAccessory(var1, var2) {
    public open val messageId: MessageId
    public final val embed: VoiceInviteEmbed
 
    fun VoiceInviteMessageAccessory(var1: java.lang.String, var2: VoiceInviteEmbed) {
-      q.h(var1, "messageId");
-      q.h(var2, "embed");
+      r.h(var1, "messageId");
+      r.h(var2, "embed");
       super(var1, "safety policy notice embed", false, 4, null);
       this.messageId = var1;
       this.embed = var2;
@@ -25,8 +25,8 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
    }
 
    public fun copy(messageId: MessageId = ..., embed: VoiceInviteEmbed = ...): VoiceInviteMessageAccessory {
-      q.h(var1, "messageId");
-      q.h(var2, "embed");
+      r.h(var1, "messageId");
+      r.h(var2, "embed");
       return new VoiceInviteMessageAccessory(var1, var2, null);
    }
 
@@ -40,7 +40,7 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
          if (!MessageId.equals-impl0(this.messageId, var1.messageId)) {
             return false;
          } else {
-            return q.c(this.embed, var1.embed);
+            return r.c(this.embed, var1.embed);
          }
       }
    }
@@ -50,14 +50,14 @@ public data class VoiceInviteMessageAccessory(messageId: MessageId, embed: Voice
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: VoiceInviteEmbed = this.embed;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("VoiceInviteMessageAccessory(messageId=");
-      var2.append(var1);
-      var2.append(", embed=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: VoiceInviteEmbed = this.embed;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("VoiceInviteMessageAccessory(messageId=");
+      var3.append(var2);
+      var3.append(", embed=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 }

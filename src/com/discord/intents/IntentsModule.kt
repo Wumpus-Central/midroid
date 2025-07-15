@@ -10,13 +10,13 @@ import com.discord.codegen.NativeIntentsModuleSpec
 import com.discord.intents.packages.InstalledPackage
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReadableArray
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class IntentsModule(reactContext: ReactApplicationContext) : NativeIntentsModuleSpec {
    private final val reactContext: ReactApplicationContext
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
    }
@@ -83,7 +83,7 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    public override fun canOpenUrlScheme(urlScheme: String): Boolean {
-      q.h(var1, "urlScheme");
+      r.h(var1, "urlScheme");
       var1 = InstalledPackage.Companion.parse(var1).getAppPackage();
       val var2: PackageManager = this.reactContext.getPackageManager();
       if (var1 != null) {
@@ -111,15 +111,15 @@ internal class IntentsModule(reactContext: ReactApplicationContext) : NativeInte
    }
 
    public override fun sendMail(subject: String, body: String, recipients: ReadableArray): Boolean {
-      q.h(var1, "subject");
-      q.h(var2, "body");
-      q.h(var3, "recipients");
+      r.h(var1, "subject");
+      r.h(var2, "body");
+      r.h(var3, "recipients");
       return this.startActivityWithIntent(this.createEmailIntent(var1, var2));
    }
 
    public override fun sendSMS(body: String, recipients: ReadableArray): Boolean {
-      q.h(var1, "body");
-      q.h(var2, "recipients");
+      r.h(var1, "body");
+      r.h(var2, "recipients");
       return this.startActivityWithIntent(this.createSmsIntent(var1));
    }
 }

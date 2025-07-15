@@ -6,7 +6,7 @@ import com.facebook.react.ReactPackage
 import com.facebook.react.defaults.DefaultReactNativeHost
 import java.io.File
 import java.util.ArrayList
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public class DCDReactNativeHost(application: Application) : DefaultReactNativeHost {
    protected open val isNewArchEnabled: Boolean
@@ -22,7 +22,7 @@ public class DCDReactNativeHost(application: Application) : DefaultReactNativeHo
 
 
    init {
-      q.h(var1, "application");
+      r.h(var1, "application");
       super(var1);
    }
 

@@ -22,56 +22,56 @@ import com.discord.recycler_view.animator.NoMoveItemAnimator
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.functions.Function8
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter {
    protected final val binding: PollRecyclerViewBinding
    protected abstract val myAdapter: PollAnswerAdapter<*>
 
    open fun BasePollWithRecyclerView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 0, 6, null);
    }
 
    open fun BasePollWithRecyclerView(var1: Context, var2: AttributeSet) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, var2, 0, 4, null);
    }
 
    open fun BasePollWithRecyclerView(var1: Context, var2: AttributeSet, var3: Int) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
       val var5: PollRecyclerViewBinding = PollRecyclerViewBinding.inflate(LayoutInflater.from(var1), this);
-      q.g(var5, "inflate(...)");
+      r.g(var5, "inflate(...)");
       this.binding = var5;
-      val var7: RecyclerView = var5.answers;
-      val var4: NoMoveItemAnimator = new NoMoveItemAnimator() {
+      val var4: RecyclerView = var5.answers;
+      val var7: NoMoveItemAnimator = new NoMoveItemAnimator() {
          {
             super(null, null, 3, null);
          }
 
          @Override
          public void endAnimation(RecyclerView.ViewHolder var1) {
-            q.h(var1, "item");
+            r.h(var1, "item");
             super.endAnimation(var1);
             val var2: View = var1.itemView;
-            q.g(var1.itemView, "itemView");
+            r.g(var1.itemView, "itemView");
             MaybeAnimateElevationToKt.maybeEndAnimation(var2);
          }
       };
-      var4.setSupportsChangeAnimations(false);
-      var7.setItemAnimator(var4);
+      var7.setSupportsChangeAnimations(false);
+      var4.setItemAnimator(var7);
       val var8: View = var5.getRoot();
-      q.g(var8, "getRoot(...)");
+      r.g(var8, "getRoot(...)");
       var3 = SizeUtilsKt.getDpToPx(16);
       var8.setPadding(var3, var3, var3, var3);
       val var9: TextView = var5.questionText;
       var5.questionText.setTextColor(ThemeManagerKt.getTheme().getHeaderPrimary());
-      q.e(var9);
+      r.e(var9);
       DiscordFontUtilsKt.setDiscordFont(var9, DiscordFont.PrimarySemibold);
       val var6: TextView = var5.promptText;
       var5.promptText.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-      q.e(var6);
+      r.e(var6);
       DiscordFontUtilsKt.setDiscordFont(var6, DiscordFont.PrimaryNormal);
       this.setClipChildren(false);
       this.setClipToPadding(false);
@@ -79,15 +79,15 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
 
    @JvmStatic
    fun `bind$lambda$3`(var0: Function3, var1: PollMessageAccessory, var2: java.lang.String): Unit {
-      q.h(var2, "answerId");
+      r.h(var2, "answerId");
       var0.invoke(ChannelId.box-impl(var1.getChannelId-o4g7jtM()), MessageId.box-impl(var1.getMessageId-3Eiw7ao()), var2);
       return Unit.a;
    }
 
    @JvmStatic
    fun `bind$lambda$4`(var0: Function8, var1: PollMessageAccessory, var2: java.lang.String, var3: Int, var4: Int, var5: Int, var6: Int, var7: ViewResizeMode): Unit {
-      q.h(var2, "attachmentId");
-      q.h(var7, "viewResizeMode");
+      r.h(var2, "attachmentId");
+      r.h(var7, "viewResizeMode");
       var0.invoke(
          ChannelId.box-impl(var1.getChannelId-o4g7jtM()),
          MessageId.box-impl(var1.getMessageId-3Eiw7ao()),
@@ -107,13 +107,13 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       onTapPollAction: (ChannelId, MessageId, String) -> Unit,
       onLongPressImage: (ChannelId, MessageId, String, Int, Int, Int, Int, ViewResizeMode) -> Unit
    ) {
-      q.h(var1, "accessory");
-      q.h(var2, "onTapAnswer");
-      q.h(var3, "onTapPollAction");
-      q.h(var4, "onLongPressImage");
+      r.h(var1, "accessory");
+      r.h(var2, "onTapAnswer");
+      r.h(var3, "onTapPollAction");
+      r.h(var4, "onLongPressImage");
       this.getMyAdapter().setData(var1.getAnswers(), new com.discord.chat.presentation.message.view.polls.a(var2, var1), new b(var4, var1));
       val var11: View = this.binding.getRoot();
-      q.e(var11);
+      r.e(var11);
       ViewBackgroundUtilsKt.setBackgroundRectangle(var11, var1.getFillColor(), SizeUtilsKt.getDpToPx(16), var1.getBorderColor(), var1.getBorderWidthPx());
       val var12: RecyclerView = this.binding.answers;
       var var8: Boolean = var1.getData().getCanSelectMultipleAnswers();
@@ -122,12 +122,12 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       Y.D0(var12, 4);
       var12.setImportantForAccessibility(1);
       Y.q0(var12, new PollAnswersRecyclerAccessibilityDelegate(var1));
-      val var9: Boolean = this.binding.primaryAction.hasAccessibilityFocus();
+      var8 = this.binding.primaryAction.hasAccessibilityFocus();
       val var10: Boolean = this.binding.secondaryActionButton.hasAccessibilityFocus();
-      var8 = this.binding.tertiaryActionButton.hasAccessibilityFocus();
+      val var9: Boolean = this.binding.tertiaryActionButton.hasAccessibilityFocus();
       this.binding.questionText.setText(var1.getData().getQuestion().getText());
       val var13: TextView = this.binding.promptText;
-      q.e(this.binding.promptText);
+      r.e(this.binding.promptText);
       var var5: Boolean;
       if (var1.getData().getPromptLabel() != null) {
          var5 = 1;
@@ -147,7 +147,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
       this.binding.secondaryActionButton.bind-urJ__Hs(var1.getData().getSecondaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       this.binding.tertiaryActionButton.bind-urJ__Hs(var1.getData().getTertiaryAction(), var1.getChannelId-o4g7jtM(), var1.getMessageId-3Eiw7ao(), var3);
       val var15: Boolean;
-      if (var9 && !this.binding.primaryAction.hasAccessibilityFocus()) {
+      if (var8 && !this.binding.primaryAction.hasAccessibilityFocus()) {
          var15 = true;
       } else {
          var15 = false;
@@ -160,7 +160,7 @@ public abstract class BasePollWithRecyclerView : ConstraintLayout, PollPresenter
          var6 = false;
       }
 
-      if (!var8 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
+      if (!var9 || this.binding.tertiaryActionButton.hasAccessibilityFocus()) {
          var7 = false;
       }
 

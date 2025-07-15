@@ -5,9 +5,9 @@ import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
 import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
-import kotlin.jvm.internal.G
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.H
+import kotlin.jvm.internal.r
+import r9.s
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec {
    private final val reactContext: ReactApplicationContext
@@ -16,10 +16,10 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
    private final val reactLifecycleEventListener: <unrepresentable>
 
    init {
-      q.h(var1, "reactContext");
+      r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
-      this.reactEvents = new ReactEvents(s.a("onHostDestroy", G.b(OnHostDestroyEvent.class)));
+      this.reactEvents = new ReactEvents(s.a("onHostDestroy", H.b(OnHostDestroyEvent.class)));
       this.reactLifecycleEventListener = new LifecycleEventListener(this) {
          final AppLifecycleModule this$0;
 
@@ -29,10 +29,10 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
 
          public void onHostDestroy() {
             if (AppLifecycleModule.access$getReactListenerCount$p(this.this$0) != 0) {
-               val var2: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
-               val var1: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
-               q.g(var1, "access$getReactApplicationContext(...)");
-               var2.emitModuleEvent(var1, new OnHostDestroyEvent());
+               val var1: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
+               val var2: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
+               r.g(var2, "access$getReactApplicationContext(...)");
+               var1.emitModuleEvent(var2, new OnHostDestroyEvent());
             }
          }
 
@@ -45,7 +45,7 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
    }
 
    public override fun addListener(type: String) {
-      q.h(var1, "type");
+      r.h(var1, "type");
       this.reactListenerCount++;
    }
 

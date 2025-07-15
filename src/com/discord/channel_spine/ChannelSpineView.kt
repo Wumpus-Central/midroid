@@ -15,8 +15,8 @@ import com.discord.theme.ThemeManagerKt
 import com.discord.theme.utils.ColorUtilsKt
 import java.util.ArrayList
 import kotlin.enums.EnumEntries
-import kotlin.jvm.internal.q
-import s9.n
+import kotlin.jvm.internal.r
+import r9.n
 
 public class ChannelSpineView  public constructor(context: Context, attrs: AttributeSet? = null) : View {
    private final val spinePaint: Paint
@@ -68,12 +68,12 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
 
    fun ChannelSpineView(var1: Context) {
-      q.h(var1, "context");
+      r.h(var1, "context");
       this(var1, null, 2, null);
    }
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2);
       val var4: Paint = new Paint();
       val var3: Int;
@@ -138,8 +138,8 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       }
 
       var1 = this.yOfRow(var1, var2) - this.verticalPadding - var6 + var5;
-      val var7: Float = this.getMeasuredWidth();
-      var5 = this.horizontalPadding;
+      var5 = this.getMeasuredWidth();
+      val var7: Float = this.horizontalPadding;
       val var8: Float = this.arcPercent() * this.getMeasuredWidth();
       var2 = var10[var3.ordinal()];
       if (var2 != 1) {
@@ -154,7 +154,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
 
       var11.moveTo(var6, var4);
       var11.arcTo(this.arcRect, 180.0F, var3.getArcSweepAngle(), false);
-      var11.lineTo(var7 - var5, var1);
+      var11.lineTo(var5 - var7, var1);
       return var11;
    }
 
@@ -210,7 +210,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
    }
 
    protected open fun onDraw(canvas: Canvas) {
-      q.h(var1, "canvas");
+      r.h(var1, "canvas");
       super.onDraw(var1);
       val var2: Int = var1.save();
       val var3: java.util.Iterator = this.paths.iterator();
@@ -272,7 +272,7 @@ public class ChannelSpineView  public constructor(context: Context, attrs: Attri
       fun {
          val var0: Array<ChannelSpineView.SpineDirection> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       init {

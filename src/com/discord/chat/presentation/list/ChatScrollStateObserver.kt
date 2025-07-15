@@ -12,7 +12,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
    internal final val chatListVisibilityCalculator: ChatListVisibilityCalculator
 
    init {
-      kotlin.jvm.internal.q.h(var1, "scrollStateUpdated");
+      kotlin.jvm.internal.r.h(var1, "scrollStateUpdated");
       super();
       this.scrollStateUpdated = var1;
       this.chatListVisibilityCalculator = new ChatListVisibilityCalculator();
@@ -27,7 +27,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       if (this.isWatching) {
          this.scrollStateInt = var2;
          val var18: RecyclerView.LayoutManager = var1.getLayoutManager();
-         kotlin.jvm.internal.q.f(var18, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
+         kotlin.jvm.internal.r.f(var18, "null cannot be cast to non-null type androidx.recyclerview.widget.LinearLayoutManager");
          val var28: LinearLayoutManager = var18 as LinearLayoutManager;
          val var17: Boolean = (var18 as LinearLayoutManager).getReverseLayout();
          this.chatListVisibilityCalculator.updateFirstAndLastMessageVisibilityData(var1);
@@ -102,7 +102,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
          }
 
          val var21: RecyclerView.Adapter = var1.getAdapter();
-         kotlin.jvm.internal.q.f(var21, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChannelChatListAdapter");
+         kotlin.jvm.internal.r.f(var21, "null cannot be cast to non-null type com.discord.chat.presentation.list.ChannelChatListAdapter");
          var23 = (var21 as ChannelChatListAdapter).getFirstMessageItemPosition();
          val var16: Boolean;
          if (var7 <= var23 && var23 <= var8) {
@@ -118,7 +118,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
             var22 = new ScrollState(var14, var15, var13, var12, var11, var10, var29, var16, var7, var20, var6, var19);
          }
 
-         var10 = kotlin.jvm.internal.q.c(this.scrollState, var22);
+         var10 = kotlin.jvm.internal.r.c(this.scrollState, var22);
          this.scrollState = var22;
          if (var4 === ChatScrollStateObserver.EmitMode.YES || var4 === ChatScrollStateObserver.EmitMode.IF_CHANGED && !var10) {
             this.scrollStateUpdated.invoke(var22);
@@ -131,18 +131,18 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
    }
 
    public override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-      kotlin.jvm.internal.q.h(var1, "recyclerView");
+      kotlin.jvm.internal.r.h(var1, "recyclerView");
       this.computeScrollState(var1, var2, 0, ChatScrollStateObserver.EmitMode.IF_CHANGED);
    }
 
    public override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-      kotlin.jvm.internal.q.h(var1, "recyclerView");
+      kotlin.jvm.internal.r.h(var1, "recyclerView");
       this.computeScrollState(var1, this.scrollStateInt, var3, ChatScrollStateObserver.EmitMode.IF_CHANGED);
    }
 
    public fun startWatching(recyclerView: RecyclerView, emitMode: com.discord.chat.presentation.list.ChatScrollStateObserver.EmitMode) {
-      kotlin.jvm.internal.q.h(var1, "recyclerView");
-      kotlin.jvm.internal.q.h(var2, "emitMode");
+      kotlin.jvm.internal.r.h(var1, "recyclerView");
+      kotlin.jvm.internal.r.h(var2, "emitMode");
       this.isWatching = true;
       this.computeScrollState(var1, this.scrollStateInt, 0, var2);
    }
@@ -163,7 +163,7 @@ public class ChatScrollStateObserver(scrollStateUpdated: (ScrollState) -> Unit) 
       fun {
          val var0: Array<ChatScrollStateObserver.EmitMode> = $values();
          $VALUES = var0;
-         $ENTRIES = A9.a.a(var0);
+         $ENTRIES = z9.a.a(var0);
       }
 
       @JvmStatic

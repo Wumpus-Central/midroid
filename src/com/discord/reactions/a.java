@@ -1,15 +1,11 @@
 package com.discord.reactions;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.discord.react_strings.RenderContext;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class a implements OnClickListener {
-   public final Function1 j;
-   public final ReactionView.Reaction k;
-
-   public final void onClick(View var1) {
-      ReactionViewHolder.b(this.j, this.k, var1);
+public final class a implements Function1 {
+   public final Object invoke(Object var1) {
+      return ReactionView.a((RenderContext)var1);
    }
 }

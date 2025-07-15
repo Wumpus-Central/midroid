@@ -5,11 +5,11 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReadableNativeArray
 import java.util.ArrayList
-import kotlin.jvm.internal.q
-import s9.s
+import kotlin.jvm.internal.r
+import r9.s
 
 internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var5: ArrayList = new ArrayList(i.v(var0, 10));
    val var8: java.util.Iterator = var0.iterator();
 
@@ -22,10 +22,10 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       var7 = var8.next() as ProductDetails;
       val var6: ArrayList = new ArrayList();
       val var1: Long;
-      var var3: java.lang.String;
+      val var3: java.lang.String;
       val var4: java.lang.String;
       val var12: java.lang.String;
-      if (q.c(var7.e(), "inapp")) {
+      if (r.c(var7.e(), "inapp")) {
          val var11: ProductDetails.b = var7.c();
          if (var11 == null) {
             val var13: java.lang.String = var7.d();
@@ -39,7 +39,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
          var3 = var11.a();
          var12 = var11.c();
          var4 = null;
-      } else if (q.c(var7.e(), "subs")) {
+      } else if (r.c(var7.e(), "subs")) {
          val var9: java.util.List = var7.f();
          if (var9 == null) {
             break;
@@ -63,11 +63,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            var3 = var7.d();
-            val var17: StringBuilder = new StringBuilder();
-            var17.append("Could not find pricingPhase for product: ");
-            var17.append(var3);
-            throw new AssertionError(var17.toString());
+            val var17: java.lang.String = var7.d();
+            val var21: StringBuilder = new StringBuilder();
+            var21.append("Could not find pricingPhase for product: ");
+            var21.append(var17);
+            throw new AssertionError(var21.toString());
          }
 
          var1 = var16.d();

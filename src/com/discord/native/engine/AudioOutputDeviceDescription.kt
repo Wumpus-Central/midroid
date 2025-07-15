@@ -1,14 +1,14 @@
 package com.discord.native.engine
 
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public data class AudioOutputDeviceDescription(name: String, guid: String) {
    public final val guid: String
    public final val name: String
 
    init {
-      q.h(var1, "name");
-      q.h(var2, "guid");
+      r.h(var1, "name");
+      r.h(var2, "guid");
       super();
       this.name = var1;
       this.guid = var2;
@@ -23,8 +23,8 @@ public data class AudioOutputDeviceDescription(name: String, guid: String) {
    }
 
    public fun copy(name: String = var0.name, guid: String = var0.guid): AudioOutputDeviceDescription {
-      q.h(var1, "name");
-      q.h(var2, "guid");
+      r.h(var1, "name");
+      r.h(var2, "guid");
       return new AudioOutputDeviceDescription(var1, var2);
    }
 
@@ -35,10 +35,10 @@ public data class AudioOutputDeviceDescription(name: String, guid: String) {
          return false;
       } else {
          var1 = var1;
-         if (!q.c(this.name, var1.name)) {
+         if (!r.c(this.name, var1.name)) {
             return false;
          } else {
-            return q.c(this.guid, var1.guid);
+            return r.c(this.guid, var1.guid);
          }
       }
    }
@@ -48,13 +48,13 @@ public data class AudioOutputDeviceDescription(name: String, guid: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.name;
-      val var3: java.lang.String = this.guid;
+      val var3: java.lang.String = this.name;
+      val var2: java.lang.String = this.guid;
       val var1: StringBuilder = new StringBuilder();
       var1.append("AudioOutputDeviceDescription(name=");
-      var1.append(var2);
-      var1.append(", guid=");
       var1.append(var3);
+      var1.append(", guid=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

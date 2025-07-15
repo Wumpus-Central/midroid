@@ -1,15 +1,15 @@
 package com.discord.chat.bridge.contentnode
 
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class InlineCodeContentNode(content: String) : ContentNode {
    public final val content: String
 
    init {
-      q.h(var1, "content");
+      r.h(var1, "content");
       super(null);
       this.content = var1;
    }
@@ -19,7 +19,7 @@ public data class InlineCodeContentNode(content: String) : ContentNode {
    }
 
    public fun copy(content: String = var0.content): InlineCodeContentNode {
-      q.h(var1, "content");
+      r.h(var1, "content");
       return new InlineCodeContentNode(var1);
    }
 
@@ -29,7 +29,7 @@ public data class InlineCodeContentNode(content: String) : ContentNode {
       } else if (var1 !is InlineCodeContentNode) {
          return false;
       } else {
-         return q.c(this.content, (var1 as InlineCodeContentNode).content);
+         return r.c(this.content, (var1 as InlineCodeContentNode).content);
       }
    }
 
@@ -38,12 +38,12 @@ public data class InlineCodeContentNode(content: String) : ContentNode {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InlineCodeContentNode(content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InlineCodeContentNode(content=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

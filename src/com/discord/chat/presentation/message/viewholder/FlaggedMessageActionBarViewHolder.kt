@@ -12,7 +12,7 @@ public class FlaggedMessageActionBarViewHolder(actionBarView: FlaggedMessageActi
    private final val actionBarView: FlaggedMessageActionBarView
 
    init {
-      kotlin.jvm.internal.q.h(var1, "actionBarView");
+      kotlin.jvm.internal.r.h(var1, "actionBarView");
       super(var1, null);
       this.actionBarView = var1;
    }
@@ -32,9 +32,9 @@ public class FlaggedMessageActionBarViewHolder(actionBarView: FlaggedMessageActi
       onTapAutoModerationActions: (MessageId, ChannelId) -> Unit,
       onTapAutoModerationFeedback: (MessageId, ChannelId) -> Unit
    ) {
-      kotlin.jvm.internal.q.h(var1, "messageActionBarAccessory");
-      kotlin.jvm.internal.q.h(var2, "onTapAutoModerationActions");
-      kotlin.jvm.internal.q.h(var3, "onTapAutoModerationFeedback");
+      kotlin.jvm.internal.r.h(var1, "messageActionBarAccessory");
+      kotlin.jvm.internal.r.h(var2, "onTapAutoModerationActions");
+      kotlin.jvm.internal.r.h(var3, "onTapAutoModerationFeedback");
       val var6: AutoModerationContext = var1.getAutoModerationContext();
       val var4: Long = var1.getMessage().getChannelId-o4g7jtM();
       val var7: java.lang.String = var1.getMessage().getId-3Eiw7ao();

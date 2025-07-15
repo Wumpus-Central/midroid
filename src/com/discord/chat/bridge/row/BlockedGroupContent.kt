@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.MessageBase
-import kotlin.jvm.internal.q
+import kb.f
+import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import lb.f
 
 @f
 public data class BlockedGroupContent(message: MessageBase) {
@@ -13,7 +13,7 @@ public data class BlockedGroupContent(message: MessageBase) {
    public final val message: MessageBase
 
    init {
-      q.h(var1, "message");
+      r.h(var1, "message");
       super();
       this.message = var1;
    }
@@ -23,7 +23,7 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public fun copy(message: MessageBase = var0.message): BlockedGroupContent {
-      q.h(var1, "message");
+      r.h(var1, "message");
       return new BlockedGroupContent(var1);
    }
 
@@ -33,7 +33,7 @@ public data class BlockedGroupContent(message: MessageBase) {
       } else if (var1 !is BlockedGroupContent) {
          return false;
       } else {
-         return q.c(this.message, (var1 as BlockedGroupContent).message);
+         return r.c(this.message, (var1 as BlockedGroupContent).message);
       }
    }
 

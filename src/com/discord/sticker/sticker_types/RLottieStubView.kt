@@ -5,13 +5,13 @@ import android.graphics.drawable.ShapeDrawable
 import android.graphics.drawable.shapes.OvalShape
 import android.view.View
 import com.discord.theme.ThemeManagerKt
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 internal class RLottieStubView(context: Context) : View {
    private final val placeholder: ShapeDrawable
 
    init {
-      q.h(var1, "context");
+      r.h(var1, "context");
       super(var1);
       val var2: ShapeDrawable = new ShapeDrawable();
       var2.setShape(new OvalShape());

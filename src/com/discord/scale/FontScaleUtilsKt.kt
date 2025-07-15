@@ -4,14 +4,14 @@ import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
 import com.discord.react.FontManager
-import kotlin.jvm.internal.q
+import kotlin.jvm.internal.r
 
 public fun Context.getFontScaledContext(): Context {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Configuration = var0.getResources().getConfiguration();
-   q.g(var1, "getConfiguration(...)");
+   r.g(var1, "getConfiguration(...)");
    var0 = var0.createConfigurationContext(modifyFontScale(var1, var0));
-   q.g(var0, "createConfigurationContext(...)");
+   r.g(var0, "createConfigurationContext(...)");
    return var0;
 }
 
@@ -21,9 +21,9 @@ private fun Configuration.modifyFontScale(context: Context): Configuration {
 }
 
 public fun Context.setFontScaleDeprecated() {
-   q.h(var0, "<this>");
+   r.h(var0, "<this>");
    val var1: Resources = var0.getResources();
    val var2: Configuration = var0.getResources().getConfiguration();
-   q.g(var2, "getConfiguration(...)");
+   r.g(var2, "getConfiguration(...)");
    var1.updateConfiguration(modifyFontScale(var2, var0), var0.getResources().getDisplayMetrics());
 }

@@ -13,7 +13,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableArray
 import java.util.ArrayList
-import kotlin.jvm.internal.G
+import kotlin.jvm.internal.H
 
 public class BillingManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -21,13 +21,13 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
    private final val billingManager: BillingManager
 
    init {
-      kotlin.jvm.internal.q.h(var1, "reactContext");
+      kotlin.jvm.internal.r.h(var1, "reactContext");
       super(var1);
       this.reactContext = var1;
       this.reactEvents = new ReactEvents(
-         s9.s.a("billing-manager-connection-state-updated", G.b(BillingManagerConnectionStateUpdated.class)),
-         s9.s.a("billing-manager-purchase-updated", G.b(BillingManagerPurchaseUpdated.class)),
-         s9.s.a("billing-manager-purchase-state-updated", G.b(BillingManagerPurchaseStateUpdated.class))
+         r9.s.a("billing-manager-connection-state-updated", H.b(BillingManagerConnectionStateUpdated.class)),
+         r9.s.a("billing-manager-purchase-updated", H.b(BillingManagerPurchaseUpdated.class)),
+         r9.s.a("billing-manager-purchase-state-updated", H.b(BillingManagerPurchaseStateUpdated.class))
       );
       this.billingManager = new BillingManager(ClientInfo.INSTANCE.isProdBuild(), new n(this), new o(this), new p(this));
    }
@@ -46,9 +46,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `billingManager$lambda$2`(var0: BillingManagerModule, var1: java.lang.String, var2: java.lang.String, var3: java.lang.String): Unit {
-      kotlin.jvm.internal.q.h(var1, "purchaseToken");
-      kotlin.jvm.internal.q.h(var2, "packageName");
-      kotlin.jvm.internal.q.h(var3, "product");
+      kotlin.jvm.internal.r.h(var1, "purchaseToken");
+      kotlin.jvm.internal.r.h(var2, "packageName");
+      kotlin.jvm.internal.r.h(var3, "product");
       var0.emitEvent(new BillingManagerPurchaseUpdated(var1, var2, var3));
       return Unit.a;
    }
@@ -61,7 +61,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `consumePurchase$lambda$8`(var0: Promise, var1: BillingManagerException): Unit {
-      kotlin.jvm.internal.q.h(var1, "e");
+      kotlin.jvm.internal.r.h(var1, "e");
       var0.reject(var1.getErrorCode(), var1.getReason(), var1);
       return Unit.a;
    }
@@ -80,22 +80,22 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
          }
       }
 
-      val var10: j = new j(var4);
-      val var9: ReactApplicationContext = this.getReactApplicationContext();
-      kotlin.jvm.internal.q.g(var9, "getReactApplicationContext(...)");
-      var1.getProducts(var7, var3, var4, var10, var9);
+      val var9: j = new j(var4);
+      val var10: ReactApplicationContext = this.getReactApplicationContext();
+      kotlin.jvm.internal.r.g(var10, "getReactApplicationContext(...)");
+      var1.getProducts(var7, var3, var4, var9, var10);
    }
 
    @JvmStatic
    fun `getProducts$lambda$11`(var0: Promise, var1: BillingManagerException): Unit {
-      kotlin.jvm.internal.q.h(var1, "e");
+      kotlin.jvm.internal.r.h(var1, "e");
       var0.reject(var1.getErrorCode(), var1.getReason(), var1);
       return Unit.a;
    }
 
    @JvmStatic
    fun `loadPurchases$lambda$10`(var0: Promise, var1: Exception): Unit {
-      kotlin.jvm.internal.q.h(var1, "e");
+      kotlin.jvm.internal.r.h(var1, "e");
       var0.reject(var1);
       return Unit.a;
    }
@@ -114,7 +114,7 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `purchase$lambda$4`(var0: Promise, var1: BillingManagerException): Unit {
-      kotlin.jvm.internal.q.h(var1, "e");
+      kotlin.jvm.internal.r.h(var1, "e");
       var0.reject(var1.getErrorCode(), var1.getReason(), var1);
       return Unit.a;
    }
@@ -127,14 +127,14 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @JvmStatic
    fun `subscribe$lambda$6`(var0: Promise, var1: BillingManagerException): Unit {
-      kotlin.jvm.internal.q.h(var1, "e");
+      kotlin.jvm.internal.r.h(var1, "e");
       var0.reject(var1.getErrorCode(), var1.getReason(), var1);
       return Unit.a;
    }
 
    @ReactMethod
    public fun addListener(type: String) {
-      kotlin.jvm.internal.q.h(var1, "type");
+      kotlin.jvm.internal.r.h(var1, "type");
    }
 
    @ReactMethod
@@ -144,15 +144,15 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun consumePurchase(purchaseToken: String, promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "purchaseToken");
-      kotlin.jvm.internal.q.h(var2, "promise");
+      kotlin.jvm.internal.r.h(var1, "purchaseToken");
+      kotlin.jvm.internal.r.h(var2, "promise");
       this.billingManager.consumePurchase(var1, new l(var2), new m(var2));
    }
 
    @ReactMethod
    public fun getIAPSkus(productIds: ReadableArray, promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "productIds");
-      kotlin.jvm.internal.q.h(var2, "promise");
+      kotlin.jvm.internal.r.h(var1, "productIds");
+      kotlin.jvm.internal.r.h(var2, "promise");
       this.getProducts(this.billingManager, var1, ProductType.IAP, var2);
    }
 
@@ -162,30 +162,30 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun getSubscriptionSkus(productIds: ReadableArray, promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "productIds");
-      kotlin.jvm.internal.q.h(var2, "promise");
+      kotlin.jvm.internal.r.h(var1, "productIds");
+      kotlin.jvm.internal.r.h(var2, "promise");
       this.getProducts(this.billingManager, var1, ProductType.SUBSCRIPTIONS, var2);
    }
 
    @ReactMethod
    public fun loadPurchases(promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "promise");
+      kotlin.jvm.internal.r.h(var1, "promise");
       this.billingManager.loadPurchases(new s(var1), new i(var1));
    }
 
    @ReactMethod
    public fun open() {
-      val var1: BillingManager = this.billingManager;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      kotlin.jvm.internal.q.g(var2, "getReactApplicationContext(...)");
-      var1.open(var2);
+      val var2: BillingManager = this.billingManager;
+      val var1: ReactApplicationContext = this.getReactApplicationContext();
+      kotlin.jvm.internal.r.g(var1, "getReactApplicationContext(...)");
+      var2.open(var1);
    }
 
    @ReactMethod
    public fun purchase(productId: String, userId: String, promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "productId");
-      kotlin.jvm.internal.q.h(var2, "userId");
-      kotlin.jvm.internal.q.h(var3, "promise");
+      kotlin.jvm.internal.r.h(var1, "productId");
+      kotlin.jvm.internal.r.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var3, "promise");
       BillingManager.purchase$default(
          this.billingManager, this.getCurrentActivity(), var1, ProductType.IAP, var2, null, null, null, new q(var3), new r(var3), 112, null
       );
@@ -197,9 +197,9 @@ public class BillingManagerModule(reactContext: ReactApplicationContext) : React
 
    @ReactMethod
    public fun subscribe(productId: String, userId: String, oldProductId: String?, purchaseToken: String?, offerId: String?, promise: Promise) {
-      kotlin.jvm.internal.q.h(var1, "productId");
-      kotlin.jvm.internal.q.h(var2, "userId");
-      kotlin.jvm.internal.q.h(var6, "promise");
+      kotlin.jvm.internal.r.h(var1, "productId");
+      kotlin.jvm.internal.r.h(var2, "userId");
+      kotlin.jvm.internal.r.h(var6, "promise");
       this.billingManager.purchase(this.getCurrentActivity(), var1, ProductType.SUBSCRIPTIONS, var2, var3, var4, var5, new h(var6), new k(var6));
    }
 }
