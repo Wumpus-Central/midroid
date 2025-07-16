@@ -4,9 +4,9 @@ import com.discord.media_player.MediaSource
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, channelId: String?, messageId: MessageId?, attachmentIndex: Int?) : MediaPlayerPlaybackSource(
       var1, var2, var3, var4, var5
    ) {
@@ -55,23 +55,23 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
       } else if (var1 !is MediaPlayerPlaybackSource) {
          return false;
       } else {
-         val var3: MediaPlayerPlaybackSource = var1 as MediaPlayerPlaybackSource;
-         if (!r.c(this.id, (var1 as MediaPlayerPlaybackSource).id)) {
+         var1 = var1;
+         if (!r.c(this.id, var1.id)) {
             return false;
-         } else if (!r.c(this.assetUrl, var3.assetUrl)) {
+         } else if (!r.c(this.assetUrl, var1.assetUrl)) {
             return false;
-         } else if (!r.c(this.channelId, var3.channelId)) {
+         } else if (!r.c(this.channelId, var1.channelId)) {
             return false;
          } else {
             var var2: Boolean;
             label37: {
                if (this.messageId == null) {
-                  if (var3.messageId == null) {
+                  if (var1.messageId == null) {
                      var2 = true;
                      break label37;
                   }
-               } else if (var3.messageId != null) {
-                  var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+               } else if (var1.messageId != null) {
+                  var2 = MessageId.equals-impl0(this.messageId, var1.messageId);
                   break label37;
                }
 
@@ -81,7 +81,7 @@ public data class MediaPlayerPlaybackSource(id: String?, assetUrl: String?, chan
             if (!var2) {
                return false;
             } else {
-               return r.c(this.attachmentIndex, var3.attachmentIndex);
+               return r.c(this.attachmentIndex, var1.attachmentIndex);
             }
          }
       }

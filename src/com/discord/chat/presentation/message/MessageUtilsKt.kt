@@ -29,7 +29,7 @@ public fun TextView.clearOrSetRoleColors(message: Message) {
                   0.0F,
                   150.0F,
                   0.0F,
-                  kotlin.collections.i.S0(kotlin.collections.i.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
+                  kotlin.collections.i.T0(kotlin.collections.i.p(new Integer[]{var2.getPrimaryColor(), var2.getSecondaryColor(), var2.getTertiaryColor()})),
                   null,
                   TileMode.MIRROR
                )

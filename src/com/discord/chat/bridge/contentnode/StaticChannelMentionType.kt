@@ -6,11 +6,10 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import sb.f
-import ub.g
+import sb.g
 import ub.e.i
 
-@f(with = StaticChannelMentionType.Serializer::class)
+@g(with = StaticChannelMentionType.Serializer::class)
 public enum class StaticChannelMentionType(id: String) {
    Browse("browse"),
    Customize("customize"),
@@ -80,7 +79,7 @@ public enum class StaticChannelMentionType(id: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("StaticChannelMentionType", i.a);
+            return ub.g.a("StaticChannelMentionType", i.a);
          }
 
 

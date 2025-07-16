@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = SeparatorSpacingSize.Serializer::class)
+@g(with = SeparatorSpacingSize.Serializer::class)
 public enum class SeparatorSpacingSize(serialNumber: Int) : IntEnum {
    LARGE(2),
    SMALL(1),

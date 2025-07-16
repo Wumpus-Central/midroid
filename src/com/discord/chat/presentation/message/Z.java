@@ -10,6 +10,6 @@ public final class Z implements Function0 {
    public final Message k;
 
    public final Object invoke() {
-      return MessageView.d(this.j, this.k);
+      return MessageView.c(this.j, this.k);
    }
 }

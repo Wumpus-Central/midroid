@@ -18,10 +18,10 @@ import ib.K
 import ib.f
 import ib.k0
 import kotlin.coroutines.Continuation
-import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CompletableJob
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 import kotlinx.coroutines.v
@@ -103,14 +103,13 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                      }
                   } else {
                      c.b(var1);
-                     var1 = this.L$0 as CoroutineScope;
+                     var7 = this.L$0 as CoroutineScope;
                      var3x = System.currentTimeMillis();
-                     var7 = ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0));
-                     val var252: DataSource = d.a().k((ImageRequest)var7, var1);
+                     var1 = d.a().k(ImageRequest.fromUri(TiledDraweeController.access$getUrl$p(this.this$0)), var7);
 
                      try {
-                        var7 = K.b();
-                        val var10: Function2 = new Function2(var252, null) {
+                        val var10: CoroutineDispatcher = K.b();
+                        var7 = new Function2(var1, null) {
                            final DataSource $dataSource;
                            int label;
 
@@ -137,10 +136,10 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                               }
                            }
                         };
-                        this.L$0 = var252;
+                        this.L$0 = var1;
                         this.J$0 = var3x;
                         this.label = 1;
-                        var7 = f.g((CoroutineContext)var7, var10, this);
+                        var7 = f.g(var10, (Function2)var7, this);
                      } catch (var24: java.lang.Throwable) {
                         break label1424;
                      }
@@ -149,7 +148,7 @@ public class TiledDraweeController(resources: Resources, url: String, tileMode: 
                         return var8;
                      }
 
-                     var8 = var252;
+                     var8 = var1;
                      var1 = (BitmapDrawable)var7;
                   }
 

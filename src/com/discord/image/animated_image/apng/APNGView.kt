@@ -114,7 +114,7 @@ public class APNGView(context: Context) : m {
                   var1 = FileDownloader.INSTANCE;
                   val var4: Context = this.this$0.getContext();
                   r.g(var4, "getContext(...)");
-                  val var6: Flow = FileDownloader.downloadFile$default(
+                  val var7: Flow = FileDownloader.downloadFile$default(
                      var1,
                      var4,
                      this.$config.getUrl(),
@@ -124,7 +124,7 @@ public class APNGView(context: Context) : m {
                      16,
                      null
                   );
-                  val var7: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+                  val var6: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                      final APNGView.Config $config;
                      final APNGView this$0;
 
@@ -193,8 +193,8 @@ public class APNGView(context: Context) : m {
                               kotlin.c.b(var5);
                               if (var1 !is DownloadState.Completed) {
                                  if (var1 is DownloadState.Failure) {
-                                    val var13: d0 = K.c();
-                                    var5 = new Function2(this.this$0, null) {
+                                    var5 = K.c();
+                                    val var13: Function2 = new Function2(this.this$0, null) {
                                        int label;
                                        final APNGView this$0;
 
@@ -225,7 +225,7 @@ public class APNGView(context: Context) : m {
                                        }
                                     };
                                     ((<unrepresentable>)var14).label = 3;
-                                    if (ib.f.g(var13, (Function2)var5, (Continuation)var14) === var16) {
+                                    if (ib.f.g((CoroutineContext)var5, var13, (Continuation)var14) === var16) {
                                        return var16;
                                     }
 
@@ -236,11 +236,11 @@ public class APNGView(context: Context) : m {
                               }
 
                               try {
-                                 val var11: ApngDrawable = com.linecorp.apng.ApngDrawable.b.c(
+                                 val var6x: ApngDrawable = com.linecorp.apng.ApngDrawable.b.c(
                                     ApngDrawable.B, (var1 as DownloadState.Completed).getFile(), null, null, 6, null
                                  );
-                                 var5 = K.c();
-                                 val var6x: Function2 = new Function2(this.this$0, var11, this.$config, null) {
+                                 val var11: d0 = K.c();
+                                 var5 = new Function2(this.this$0, var6x, this.$config, null) {
                                     final APNGView.Config $config;
                                     final ApngDrawable $drawable;
                                     int label;
@@ -284,7 +284,7 @@ public class APNGView(context: Context) : m {
                                  };
                                  ((<unrepresentable>)var14).L$0 = this;
                                  ((<unrepresentable>)var14).label = 1;
-                                 var12 = ib.f.g((CoroutineContext)var5, var6x, (Continuation)var14);
+                                 var12 = ib.f.g(var11, (Function2)var5, (Continuation)var14);
                               } catch (var8: Exception) {
                                  var9 = this;
                                  break label82;
@@ -334,7 +334,7 @@ public class APNGView(context: Context) : m {
                      }
                   };
                   this.label = 1;
-                  if (var6.collect(var7, this) === var3) {
+                  if (var7.collect(var6, this) === var3) {
                      return var3;
                   }
                }
@@ -572,27 +572,27 @@ public class APNGView(context: Context) : m {
       }
 
       public override fun toString(): String {
-         val var7: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var1: Boolean = this.animate;
          val var2: Boolean = this.showLoading;
-         val var4: Int = this.widthDp;
-         val var5: Int = this.heightDp;
+         val var7: Int = this.widthDp;
+         val var6: Int = this.heightDp;
          val var3: java.lang.String = this.cacheDirectory;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Config(url=");
-         var6.append(var7);
-         var6.append(", animate=");
-         var6.append(var1);
-         var6.append(", showLoading=");
-         var6.append(var2);
-         var6.append(", widthDp=");
-         var6.append(var4);
-         var6.append(", heightDp=");
-         var6.append(var5);
-         var6.append(", cacheDirectory=");
-         var6.append(var3);
-         var6.append(")");
-         return var6.toString();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Config(url=");
+         var4.append(var5);
+         var4.append(", animate=");
+         var4.append(var1);
+         var4.append(", showLoading=");
+         var4.append(var2);
+         var4.append(", widthDp=");
+         var4.append(var7);
+         var4.append(", heightDp=");
+         var4.append(var6);
+         var4.append(", cacheDirectory=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

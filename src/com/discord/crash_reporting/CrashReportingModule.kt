@@ -51,10 +51,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    public fun addListener(type: String) {
       r.h(var1, "type");
       if (r.c(CrashReporting.INSTANCE.isCrashedLastRun(), java.lang.Boolean.TRUE)) {
-         val var3: SystemLogReport = SystemLogReport.INSTANCE;
-         val var2: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var2, "getReactApplicationContext(...)");
-         var3.reportLastCrash$crash_reporting_release(var2, new d(this));
+         val var2: SystemLogReport = SystemLogReport.INSTANCE;
+         val var3: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var3, "getReactApplicationContext(...)");
+         var2.reportLastCrash$crash_reporting_release(var3, new d(this));
       }
    }
 
@@ -88,10 +88,10 @@ public class CrashReportingModule(reactContext: ReactApplicationContext) : React
    @ReactMethod
    public fun getSystemLog(callback: Callback) {
       r.h(var1, "callback");
-      val var2: SystemLogUtils = SystemLogUtils.INSTANCE;
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var2.fetch(var3)});
+      val var3: SystemLogUtils = SystemLogUtils.INSTANCE;
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var3.fetch(var2)});
    }
 
    @ReactMethod

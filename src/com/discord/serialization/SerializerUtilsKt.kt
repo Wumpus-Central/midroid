@@ -6,6 +6,7 @@ import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
 import kotlin.reflect.KProperty1
 import kotlinx.serialization.json.JsonElement
+import sb.h
 import wb.g
 
 @JvmSynthetic
@@ -33,7 +34,7 @@ private fun parseProperty(property: KProperty1<*, *>, jsonProperty: JsonElement)
 
          g.k(g.p(var1));
       }
-   } catch (IllegalArgumentException | var3: sb.g) {
+   } catch (IllegalArgumentException | var3: h) {
       return false;
    }
 

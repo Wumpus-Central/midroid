@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ContentInventoryEntryClickable(ariaDescription: String? = null) {
    public final val ariaDescription: String?
 

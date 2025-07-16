@@ -17,7 +17,7 @@ public fun Button.setBackgroundColors(color: Int, disabledColor: Int? = null) {
 
    var3.add(new int[0]);
    var4.add(var1);
-   Z.t0(var0, new ColorStateList(var3.toArray(new int[0][]), i.S0(var4)));
+   Z.t0(var0, new ColorStateList(var3.toArray(new int[0][]), i.T0(var4)));
 }
 
 @JvmSynthetic

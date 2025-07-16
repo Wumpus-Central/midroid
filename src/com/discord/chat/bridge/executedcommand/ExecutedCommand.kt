@@ -4,9 +4,9 @@ import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ExecutedCommand(userId: UserId,
    usernameColor: Int,
    avatarURL: String? = ...,
@@ -121,8 +121,8 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = UserId.hashCode-impl(this.userId);
-      val var6: Int = Integer.hashCode(this.usernameColor);
+      val var6: Int = UserId.hashCode-impl(this.userId);
+      val var5: Int = Integer.hashCode(this.usernameColor);
       var var4: Int = 0;
       val var1: Int;
       if (this.avatarURL == null) {
@@ -151,37 +151,37 @@ public data class ExecutedCommand(userId: UserId,
          var4 = this.showControllerIcon.hashCode();
       }
 
-      return ((((((var5 * 31 + var6) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31 + var3) * 31 + var4;
+      return ((((((var6 * 31 + var5) * 31 + var1) * 31 + var7) * 31 + var8) * 31 + var2) * 31 + var3) * 31 + var4;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = UserId.toString-impl(this.userId);
-      val var2: Int = this.usernameColor;
-      val var4: java.lang.String = this.avatarURL;
-      val var1: Int = this.targetUsernameColor;
-      val var7: AnnotatedStructurableText = this.content;
-      val var6: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var8: java.lang.Boolean = this.showAppsIcon;
-      val var9: java.lang.Boolean = this.showControllerIcon;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ExecutedCommand(userId=");
-      var3.append(var5);
-      var3.append(", usernameColor=");
-      var3.append(var2);
-      var3.append(", avatarURL=");
-      var3.append(var4);
-      var3.append(", targetUsernameColor=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var7);
-      var3.append(", commandNameBackgroundStyles=");
-      var3.append(var6);
-      var3.append(", showAppsIcon=");
-      var3.append(var8);
-      var3.append(", showControllerIcon=");
-      var3.append(var9);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = UserId.toString-impl(this.userId);
+      val var1: Int = this.usernameColor;
+      val var7: java.lang.String = this.avatarURL;
+      val var2: Int = this.targetUsernameColor;
+      val var5: AnnotatedStructurableText = this.content;
+      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var9: java.lang.Boolean = this.showAppsIcon;
+      val var6: java.lang.Boolean = this.showControllerIcon;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("ExecutedCommand(userId=");
+      var8.append(var3);
+      var8.append(", usernameColor=");
+      var8.append(var1);
+      var8.append(", avatarURL=");
+      var8.append(var7);
+      var8.append(", targetUsernameColor=");
+      var8.append(var2);
+      var8.append(", content=");
+      var8.append(var5);
+      var8.append(", commandNameBackgroundStyles=");
+      var8.append(var4);
+      var8.append(", showAppsIcon=");
+      var8.append(var9);
+      var8.append(", showControllerIcon=");
+      var8.append(var6);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

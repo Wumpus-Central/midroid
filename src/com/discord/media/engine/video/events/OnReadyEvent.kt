@@ -4,9 +4,9 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal class OnReadyEvent : ReactEvent {
    public open fun serialize(): WritableNativeMap {
       return NativeMapExtensionsKt.nativeMapOf();

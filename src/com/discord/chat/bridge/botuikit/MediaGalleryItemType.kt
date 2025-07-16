@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = MediaGalleryItemType.Serializer::class)
+@g(with = MediaGalleryItemType.Serializer::class)
 public enum class MediaGalleryItemType(serialNumber: Int) : IntEnum {
    IMAGE(1),
    UNKNOWN(0),

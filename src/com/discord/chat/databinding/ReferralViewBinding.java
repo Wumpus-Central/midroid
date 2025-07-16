@@ -55,36 +55,36 @@ public final class ReferralViewBinding implements ViewBinding {
 
    public static ReferralViewBinding bind(View var0) {
       int var1 = R.id.acceptButton;
-      DCDButton var3 = (DCDButton)a.a(var0, var1);
-      if (var3 != null) {
+      DCDButton var5 = (DCDButton)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.content;
-         ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
-         if (var5 != null) {
+         ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
+         if (var10 != null) {
             var1 = R.id.footer;
             TextView var6 = (TextView)a.a(var0, var1);
             if (var6 != null) {
                var1 = R.id.imageCopy;
-               TextView var11 = (TextView)a.a(var0, var1);
-               if (var11 != null) {
+               TextView var9 = (TextView)a.a(var0, var1);
+               if (var9 != null) {
                   var1 = R.id.nitroLogoBanner;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var11 != null) {
                      var1 = R.id.nitroTicket;
-                     SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var2 != null) {
+                     SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var4 != null) {
                         var1 = R.id.subtitle;
-                        SimpleDraweeSpanTextView var9 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                        if (var9 != null) {
+                        SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                        if (var3 != null) {
                            var1 = R.id.title;
-                           TextView var4 = (TextView)a.a(var0, var1);
-                           if (var4 != null) {
+                           TextView var7 = (TextView)a.a(var0, var1);
+                           if (var7 != null) {
                               var1 = R.id.trialInfo;
-                              TextView var7 = (TextView)a.a(var0, var1);
-                              if (var7 != null) {
+                              TextView var8 = (TextView)a.a(var0, var1);
+                              if (var8 != null) {
                                  var1 = R.id.trial_info_top;
-                                 Barrier var10 = (Barrier)a.a(var0, var1);
-                                 if (var10 != null) {
-                                    return new ReferralViewBinding((LinearLayout)var0, var3, var5, var6, var11, var8, var2, var9, var4, var7, var10);
+                                 Barrier var2 = (Barrier)a.a(var0, var1);
+                                 if (var2 != null) {
+                                    return new ReferralViewBinding((LinearLayout)var0, var5, var10, var6, var9, var11, var4, var3, var7, var8, var2);
                                  }
                               }
                            }

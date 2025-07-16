@@ -11,13 +11,12 @@ import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.JsonPrimitive
-import sb.f
-import ub.g
+import sb.g
 import ub.e.i
 import wb.e
 import z9.s
 
-@f(with = UserSearchTransformedUser.Serializer::class)
+@g(with = UserSearchTransformedUser.Serializer::class)
 internal data class UserSearchTransformedUser(id: String,
    username: String,
    isBot: Boolean? = null,
@@ -150,29 +149,29 @@ internal data class UserSearchTransformedUser(id: String,
 
    public override fun toString(): String {
       val var4: java.lang.String = this.id;
-      val var8: java.lang.String = this.username;
+      val var6: java.lang.String = this.username;
       val var5: java.lang.Boolean = this.isBot;
       val var1: java.lang.Boolean = this.isFriend;
-      val var6: java.lang.String = this.friendNickname;
-      val var2: java.lang.String = this.globalName;
-      val var3: java.util.Map = this.nicknames;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("UserSearchTransformedUser(id=");
-      var7.append(var4);
-      var7.append(", username=");
-      var7.append(var8);
-      var7.append(", isBot=");
-      var7.append(var5);
-      var7.append(", isFriend=");
-      var7.append(var1);
-      var7.append(", friendNickname=");
-      var7.append(var6);
-      var7.append(", globalName=");
-      var7.append(var2);
-      var7.append(", nicknames=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var2: java.lang.String = this.friendNickname;
+      val var3: java.lang.String = this.globalName;
+      val var7: java.util.Map = this.nicknames;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("UserSearchTransformedUser(id=");
+      var8.append(var4);
+      var8.append(", username=");
+      var8.append(var6);
+      var8.append(", isBot=");
+      var8.append(var5);
+      var8.append(", isFriend=");
+      var8.append(var1);
+      var8.append(", friendNickname=");
+      var8.append(var2);
+      var8.append(", globalName=");
+      var8.append(var3);
+      var8.append(", nicknames=");
+      var8.append(var7);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {
@@ -184,7 +183,7 @@ internal data class UserSearchTransformedUser(id: String,
    internal object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("UserSearchTransformedUser", i.a);
+            return ub.g.a("UserSearchTransformedUser", i.a);
          }
 
 

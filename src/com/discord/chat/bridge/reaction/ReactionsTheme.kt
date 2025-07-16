@@ -3,9 +3,9 @@ package com.discord.chat.bridge.reaction
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
       reactionBorderColor: Int? = null,
       reactionTextColor: Int? = null,
@@ -137,25 +137,25 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var7: Int = this.reactionBackgroundColor;
+      val var6: Int = this.reactionBackgroundColor;
       val var2: Int = this.reactionBorderColor;
-      val var1: Int = this.reactionTextColor;
-      val var3: Int = this.activeReactionBackgroundColor;
+      val var7: Int = this.reactionTextColor;
+      val var1: Int = this.activeReactionBackgroundColor;
       val var5: Int = this.activeReactionBorderColor;
-      val var6: Int = this.activeReactionTextColor;
+      val var3: Int = this.activeReactionTextColor;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ReactionsTheme(reactionBackgroundColor=");
-      var4.append(var7);
+      var4.append(var6);
       var4.append(", reactionBorderColor=");
       var4.append(var2);
       var4.append(", reactionTextColor=");
-      var4.append(var1);
+      var4.append(var7);
       var4.append(", activeReactionBackgroundColor=");
-      var4.append(var3);
+      var4.append(var1);
       var4.append(", activeReactionBorderColor=");
       var4.append(var5);
       var4.append(", activeReactionTextColor=");
-      var4.append(var6);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

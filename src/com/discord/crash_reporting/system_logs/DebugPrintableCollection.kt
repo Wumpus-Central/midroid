@@ -75,22 +75,22 @@ public class DebugPrintableCollection {
       // 51: goto 8b
       // 54: aload 0
       // 55: getfield com/discord/crash_reporting/system_logs/DebugPrintableCollection.collection Ljava/util/Map;
-      // 58: astore 13
+      // 58: astore 14
       // 5a: new com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef
-      // 5d: astore 14
+      // 5d: astore 13
       // 5f: new java/lang/ref/WeakReference
       // 62: astore 12
       // 64: aload 12
       // 66: aload 1
       // 67: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 6a: aload 14
+      // 6a: aload 13
       // 6c: aload 2
       // 6d: aload 12
       // 6f: invokespecial com/discord/crash_reporting/system_logs/DebugPrintableCollection$DebugPrintableRef.<init> (Ljava/lang/String;Ljava/lang/ref/WeakReference;)V
-      // 72: aload 13
+      // 72: aload 14
       // 74: lload 7
       // 76: invokestatic java/lang/Long.valueOf (J)Ljava/lang/Long;
-      // 79: aload 14
+      // 79: aload 13
       // 7b: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 80: pop
       // 81: aload 0
@@ -122,16 +122,16 @@ public class DebugPrintableCollection {
    }
 
    private fun removeDeadReferencesLocked() {
-      val var3: ArrayList = new ArrayList();
+      val var4: ArrayList = new ArrayList();
 
-      for (Entry var4 : this.collection.entrySet()) {
-         val var1: Long = (var4.getKey() as java.lang.Number).longValue();
-         if ((var4.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
-            var3.add(var1);
+      for (Entry var5 : this.collection.entrySet()) {
+         val var1: Long = (var5.getKey() as java.lang.Number).longValue();
+         if ((var5.getValue() as DebugPrintableCollection.DebugPrintableRef).getReference().get() == null) {
+            var4.add(var1);
          }
       }
 
-      val var7: java.util.Iterator = var3.iterator();
+      val var7: java.util.Iterator = var4.iterator();
 
       while (var7.hasNext()) {
          this.collection.remove((var7.next() as java.lang.Number).longValue());
@@ -233,21 +233,21 @@ public class DebugPrintableCollection {
       // 0ba: aload 6
       // 0bc: invokeinterface com/discord/crash_reporting/system_logs/DebugPrintable.debugPrint (Lcom/discord/crash_reporting/system_logs/DebugPrintBuilder;)V 2
       // 0c1: goto 0eb
-      // 0c4: astore 8
+      // 0c4: astore 7
       // 0c6: new java/lang/StringBuilder
-      // 0c9: astore 7
-      // 0cb: aload 7
+      // 0c9: astore 8
+      // 0cb: aload 8
       // 0cd: invokespecial java/lang/StringBuilder.<init> ()V
-      // 0d0: aload 7
+      // 0d0: aload 8
       // 0d2: ldc_w "Exception: "
       // 0d5: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0d8: pop
-      // 0d9: aload 7
-      // 0db: aload 8
+      // 0d9: aload 8
+      // 0db: aload 7
       // 0dd: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
       // 0e0: pop
       // 0e1: aload 2
-      // 0e2: aload 7
+      // 0e2: aload 8
       // 0e4: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
       // 0e7: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
       // 0ea: pop
@@ -359,13 +359,13 @@ public class DebugPrintableCollection {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.tag;
-         val var1: WeakReference = this.reference;
+         val var1: java.lang.String = this.tag;
+         val var3: WeakReference = this.reference;
          val var2: StringBuilder = new StringBuilder();
          var2.append("DebugPrintableRef(tag=");
-         var2.append(var3);
-         var2.append(", reference=");
          var2.append(var1);
+         var2.append(", reference=");
+         var2.append(var3);
          var2.append(")");
          return var2.toString();
       }

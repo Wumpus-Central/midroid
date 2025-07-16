@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String, videoStreamParametersJSON: String) : ReactEvent {
    public final val connectionId: Int
    public final val userId: String
@@ -92,21 +92,21 @@ internal data class OnVideoCallbackEvent(connectionId: Int, userId: String, ssrc
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var6: java.lang.String = this.userId;
+      val var5: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
-      val var4: java.lang.String = this.streamId;
-      val var5: java.lang.String = this.videoStreamParametersJSON;
+      val var6: java.lang.String = this.streamId;
+      val var4: java.lang.String = this.videoStreamParametersJSON;
       val var7: StringBuilder = new StringBuilder();
       var7.append("OnVideoCallbackEvent(connectionId=");
       var7.append(var1);
       var7.append(", userId=");
-      var7.append(var6);
+      var7.append(var5);
       var7.append(", ssrc=");
       var7.append(var2);
       var7.append(", streamId=");
-      var7.append(var4);
+      var7.append(var6);
       var7.append(", videoStreamParametersJSON=");
-      var7.append(var5);
+      var7.append(var4);
       var7.append(")");
       return var7.toString();
    }

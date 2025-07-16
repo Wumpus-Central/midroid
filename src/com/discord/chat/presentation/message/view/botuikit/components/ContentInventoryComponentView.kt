@@ -100,7 +100,7 @@ public class ContentInventoryComponentView  public constructor(context: Context,
             var7.add(ContentInventoryEntryComponentKt.toColorInt(var24.next() as GradientColor));
          }
 
-         val var25: IntArray = kotlin.collections.i.S0(var7);
+         val var25: IntArray = kotlin.collections.i.T0(var7);
          val var8: ContentInventoryComponentView = this.getBinding().getRoot();
          var8.setVisibility(0);
          r.e(var8);

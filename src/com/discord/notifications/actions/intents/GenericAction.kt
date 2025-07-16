@@ -81,15 +81,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
 
    public fun onNotificationAction(context: Context, taskInvokingFromBroadcastReceiver: Boolean) {
       r.h(var1, "context");
-      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var6: java.lang.String = this.taskName;
-      val var7: Bundle = new Bundle();
+      val var7: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var5: java.lang.String = this.taskName;
+      val var6: Bundle = new Bundle();
 
       for (Entry var4 : this.data.entrySet()) {
-         var7.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
+         var6.putString(var4.getKey() as java.lang.String, var4.getValue() as java.lang.String);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, var6, 0L, false, var7, var2, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var7, var1, var5, 0L, false, var6, var2, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {
@@ -103,16 +103,16 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
    public override fun toString(): String {
       val var1: java.lang.String = this.tag;
       val var2: java.lang.String = this.taskName;
-      val var3: java.util.Map = this.data;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("GenericAction(tag=");
-      var4.append(var1);
-      var4.append(", taskName=");
-      var4.append(var2);
-      var4.append(", data=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.Map = this.data;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("GenericAction(tag=");
+      var3.append(var1);
+      var3.append(", taskName=");
+      var3.append(var2);
+      var3.append(", data=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
@@ -133,15 +133,15 @@ public data class GenericAction(tag: String, taskName: String, data: Map<String,
       fun createFromParcel(var1: Parcel): GenericAction {
          r.h(var1, "parcel");
          val var6: java.lang.String = var1.readString();
-         val var5: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new GenericAction(var6, var5, var4);
+         return new GenericAction(var6, var4, var5);
       }
 
       fun newArray(var1: Int): Array<GenericAction> {

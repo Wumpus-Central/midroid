@@ -3,11 +3,11 @@ package com.discord.chat.bridge.row
 import com.discord.chat.bridge.MessageBase
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class BlockedGroupContent(message: MessageBase) {
-   @f(
+   @g(
       with = MessageSerializer.class
    )
    public final val message: MessageBase

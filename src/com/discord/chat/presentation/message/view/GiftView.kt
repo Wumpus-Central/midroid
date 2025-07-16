@@ -217,7 +217,7 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          this.binding.title.setText(var27.getTitleText());
          var32.setTextColor(var27.getTitleColor());
          kotlin.jvm.internal.r.e(var32);
-         val var11: java.lang.CharSequence = var32.getText();
+         var var11: java.lang.CharSequence = var32.getText();
          kotlin.jvm.internal.r.g(var11, "getText(...)");
          var var20: Byte;
          if (!kotlin.text.h.c0(var11)) {
@@ -227,19 +227,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
          }
 
          var32.setVisibility(var20);
-         val var35: TextView = this.binding.subtitle;
+         val var33: TextView = this.binding.subtitle;
          this.binding.subtitle.setText(var27.getSubtitle());
-         var35.setTextColor(var27.getSubtitleColor());
-         kotlin.jvm.internal.r.e(var35);
-         val var33: java.lang.CharSequence = var35.getText();
-         kotlin.jvm.internal.r.g(var33, "getText(...)");
-         if (!kotlin.text.h.c0(var33)) {
+         var33.setTextColor(var27.getSubtitleColor());
+         kotlin.jvm.internal.r.e(var33);
+         var11 = var33.getText();
+         kotlin.jvm.internal.r.g(var11, "getText(...)");
+         if (!kotlin.text.h.c0(var11)) {
             var20 = 0;
          } else {
             var20 = 8;
          }
 
-         var35.setVisibility(var20);
+         var33.setVisibility(var20);
          if (var27 is GiftEmbed.Resolved.Invalid) {
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy)
                .v(new ColorDrawable((var9 as GiftEmbed.Resolved.Invalid).getThumbnailBackgroundColor()));
@@ -260,19 +260,19 @@ public class GiftView  public constructor(context: Context, attrs: AttributeSet?
             val var17: GiftEmbed.Resolved.Valid = var9 as GiftEmbed.Resolved.Valid;
             this.bindSplash(var9 as GiftEmbed.Resolved.Valid, var7);
             (this.binding.thumbnail.getHierarchy() as GenericDraweeHierarchy).v(null);
-            val var29: TextView = this.binding.body;
+            val var34: TextView = this.binding.body;
             this.binding.body.setText(var17.getBodyText());
-            var29.setTextColor(var17.getBodyTextColor());
-            kotlin.jvm.internal.r.e(var29);
-            val var34: java.lang.CharSequence = var29.getText();
-            kotlin.jvm.internal.r.g(var34, "getText(...)");
-            if (!kotlin.text.h.c0(var34)) {
+            var34.setTextColor(var17.getBodyTextColor());
+            kotlin.jvm.internal.r.e(var34);
+            val var29: java.lang.CharSequence = var34.getText();
+            kotlin.jvm.internal.r.g(var29, "getText(...)");
+            if (!kotlin.text.h.c0(var29)) {
                var20 = 0;
             } else {
                var20 = 8;
             }
 
-            var29.setVisibility(var20);
+            var34.setVisibility(var20);
             val var30: DCDButton = this.binding.acceptButton;
             this.binding.acceptButton.setText(var17.getAcceptLabelText());
             var30.setTextColor(var17.getAcceptLabelColor());

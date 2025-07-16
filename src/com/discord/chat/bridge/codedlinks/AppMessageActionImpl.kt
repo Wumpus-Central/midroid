@@ -2,9 +2,9 @@ package com.discord.chat.bridge.codedlinks
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class AppMessageActionImpl(id: String, label: String, disabled: Boolean? = null) : AppMessageEmbedAction {
    public open val id: String
    public open val label: String
@@ -68,18 +68,18 @@ public data class AppMessageActionImpl(id: String, label: String, disabled: Bool
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
+      val var1: java.lang.String = this.id;
       val var3: java.lang.String = this.label;
-      val var2: java.lang.Boolean = this.disabled;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("AppMessageActionImpl(id=");
-      var1.append(var4);
-      var1.append(", label=");
-      var1.append(var3);
-      var1.append(", disabled=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.Boolean = this.disabled;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppMessageActionImpl(id=");
+      var2.append(var1);
+      var2.append(", label=");
+      var2.append(var3);
+      var2.append(", disabled=");
+      var2.append(var4);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

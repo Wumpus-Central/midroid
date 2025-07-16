@@ -2,9 +2,9 @@ package com.discord.chat.bridge.row
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class BlockedGroupButtonAction(type: String, context: String) {
    public final val type: String
    public final val context: String
@@ -51,15 +51,15 @@ public data class BlockedGroupButtonAction(type: String, context: String) {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.type;
-      val var1: java.lang.String = this.context;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("BlockedGroupButtonAction(type=");
-      var3.append(var2);
-      var3.append(", context=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.type;
+      val var3: java.lang.String = this.context;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("BlockedGroupButtonAction(type=");
+      var2.append(var1);
+      var2.append(", context=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

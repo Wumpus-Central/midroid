@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, ssrc: Long, streamId: String) : ReactEvent {
    public final val connectionId: Int
    public final val userId: String
@@ -74,20 +74,20 @@ internal data class FirstFrameCallbackEvent(connectionId: Int, userId: String, s
 
    public override fun toString(): String {
       val var1: Int = this.connectionId;
-      val var4: java.lang.String = this.userId;
+      val var6: java.lang.String = this.userId;
       val var2: Long = this.ssrc;
       val var5: java.lang.String = this.streamId;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("FirstFrameCallbackEvent(connectionId=");
-      var6.append(var1);
-      var6.append(", userId=");
-      var6.append(var4);
-      var6.append(", ssrc=");
-      var6.append(var2);
-      var6.append(", streamId=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FirstFrameCallbackEvent(connectionId=");
+      var4.append(var1);
+      var4.append(", userId=");
+      var4.append(var6);
+      var4.append(", ssrc=");
+      var4.append(var2);
+      var4.append(", streamId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -74,11 +74,11 @@ public class Cache(reactContext: Context) {
       val var3: HashSet = FAST_CACHE_KEYS;
       if (!FAST_CACHE_KEYS.contains(var1)) {
          if (!this.sharedPrefsLoaded) {
-            val var6: TTIMetrics = TTIMetrics.INSTANCE;
-            val var8: StringBuilder = new StringBuilder();
-            var8.append("WARNING: Cache accessed before parsed ");
-            var8.append(var1);
-            TTIMetrics.record$default(var6, var8.toString(), 0L, null, false, 14, null);
+            val var8: TTIMetrics = TTIMetrics.INSTANCE;
+            val var6: StringBuilder = new StringBuilder();
+            var6.append("WARNING: Cache accessed before parsed ");
+            var6.append(var1);
+            TTIMetrics.record$default(var8, var6.toString(), 0L, null, false, 14, null);
          }
 
          return this.getSharedPrefs().getString(var1, null);
@@ -147,7 +147,7 @@ public class Cache(reactContext: Context) {
       // 1b: invokespecial com/facebook/react/bridge/WritableNativeMap.<init> ()V
       // 1e: aload 1
       // 1f: invokeinterface com/facebook/react/bridge/ReadableArray.toArrayList ()Ljava/util/ArrayList; 1
-      // 24: invokestatic kotlin/collections/i.X0 (Ljava/lang/Iterable;)Ljava/util/Set;
+      // 24: invokestatic kotlin/collections/i.Y0 (Ljava/lang/Iterable;)Ljava/util/Set;
       // 27: astore 1
       // 28: aload 0
       // 29: invokespecial com/discord/cache/Cache.getSharedPrefs ()Landroid/content/SharedPreferences;

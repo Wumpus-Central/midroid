@@ -1,9 +1,9 @@
 package com.discord.span.utilities.common
 
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class BackgroundStyle(backgroundColor: Int, cornerRadius: Int = 0, marginVertical: Int = 0) {
    public final val backgroundColor: Int
    public final val cornerRadius: Int

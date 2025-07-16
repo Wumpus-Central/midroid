@@ -3,9 +3,9 @@ package com.discord.chat.bridge.botuikit
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ContainerComponent(type: Int,
       id: String,
       errorText: String? = null,
@@ -164,30 +164,30 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var4: java.lang.String = this.errorText;
-      val var6: java.util.List = this.components;
-      val var9: Int = this.accentColor;
+      val var6: java.lang.String = this.id;
+      val var3: java.lang.String = this.errorText;
+      val var9: java.util.List = this.components;
+      val var5: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var5: java.lang.String = this.spoilerDescription;
-      val var3: Int = this.themedBackgroundColor;
+      val var4: java.lang.String = this.spoilerDescription;
+      val var7: Int = this.themedBackgroundColor;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ContainerComponent(type=");
       var8.append(var1);
       var8.append(", id=");
-      var8.append(var7);
-      var8.append(", errorText=");
-      var8.append(var4);
-      var8.append(", components=");
       var8.append(var6);
-      var8.append(", accentColor=");
+      var8.append(", errorText=");
+      var8.append(var3);
+      var8.append(", components=");
       var8.append(var9);
+      var8.append(", accentColor=");
+      var8.append(var5);
       var8.append(", isSpoiler=");
       var8.append(var2);
       var8.append(", spoilerDescription=");
-      var8.append(var5);
+      var8.append(var4);
       var8.append(", themedBackgroundColor=");
-      var8.append(var3);
+      var8.append(var7);
       var8.append(")");
       return var8.toString();
    }

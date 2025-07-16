@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = ActionComponentState.Serializer::class)
+@g(with = ActionComponentState.Serializer::class)
 public enum class ActionComponentState(serialNumber: Int) : IntEnum {
    DISABLED(2),
    LOADING(1),

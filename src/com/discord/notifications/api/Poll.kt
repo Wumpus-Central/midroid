@@ -2,9 +2,9 @@ package com.discord.notifications.api
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class Poll(question: PollMedia) {
    public final val question: PollMedia
 

@@ -188,10 +188,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var15 = null;
          }
 
+         var5 = this.onAddReactionClick;
          if (this.onAddReactionClick == null) {
             r.y("onAddReactionClick");
-         } else {
-            var5 = this.onAddReactionClick;
+            var5 = null;
          }
 
          var26.bind(var11, var15, var5, this.reactionsTheme);
@@ -217,10 +217,10 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             var17 = null;
          }
 
-         var5 = this.onAddBurstReactionClick;
          if (this.onAddBurstReactionClick == null) {
             r.y("onAddBurstReactionClick");
-            var5 = null;
+         } else {
+            var5 = this.onAddBurstReactionClick;
          }
 
          var27.bind(var12, var17, var5, this.reactionsTheme);
@@ -232,9 +232,9 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
    public override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       r.h(var1, "parent");
       val var5: com.google.android.flexbox.FlexboxLayoutManager.c = new com.google.android.flexbox.FlexboxLayoutManager.c(-2, this.reactionHeight);
-      val var3: ThemeManager = ThemeManager.INSTANCE;
-      val var4: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var3.setThemeOverride(this.theme);
+      val var4: ThemeManager = ThemeManager.INSTANCE;
+      val var3: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var4.setThemeOverride(this.theme);
       var var9: Any;
       switch (var2) {
          case 46:
@@ -265,7 +265,7 @@ internal class ReactionsViewAdapter(reactionHeight: Int) : RecyclerView.Adapter 
             throw new IllegalStateException(var6.toString().toString());
       }
 
-      var3.setThemeOverride(var4);
+      var4.setThemeOverride(var3);
       return (RecyclerView.ViewHolder)var9;
    }
 

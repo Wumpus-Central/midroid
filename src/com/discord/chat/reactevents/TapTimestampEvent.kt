@@ -5,10 +5,10 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 import z9.s
 
-@f
+@g
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    public final val timestamp: String
 
@@ -46,12 +46,12 @@ public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.timestamp;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("TapTimestampEvent(timestamp=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.lang.String = this.timestamp;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapTimestampEvent(timestamp=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

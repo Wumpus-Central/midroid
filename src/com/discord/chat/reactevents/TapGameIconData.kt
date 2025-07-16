@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapGameIconData(gameApplicationId: String, timestamp: String) : ReactEvent {
    public final val gameApplicationId: String
    public final val timestamp: String
@@ -57,15 +57,15 @@ public data class TapGameIconData(gameApplicationId: String, timestamp: String) 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.gameApplicationId;
-      val var2: java.lang.String = this.timestamp;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("TapGameIconData(gameApplicationId=");
-      var3.append(var1);
-      var3.append(", timestamp=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.gameApplicationId;
+      val var1: java.lang.String = this.timestamp;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("TapGameIconData(gameApplicationId=");
+      var2.append(var3);
+      var2.append(", timestamp=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

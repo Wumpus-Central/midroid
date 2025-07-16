@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeaking: Int) : ReactEvent {
    public final val connectionId: Int
    public final val userId: String
@@ -63,16 +63,16 @@ internal data class UserSpeakingEvent(connectionId: Int, userId: String, isSpeak
    }
 
    public override fun toString(): String {
-      val var2: Int = this.connectionId;
+      val var1: Int = this.connectionId;
       val var4: java.lang.String = this.userId;
-      val var1: Int = this.isSpeaking;
+      val var2: Int = this.isSpeaking;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UserSpeakingEvent(connectionId=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", userId=");
       var3.append(var4);
       var3.append(", isSpeaking=");
-      var3.append(var1);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

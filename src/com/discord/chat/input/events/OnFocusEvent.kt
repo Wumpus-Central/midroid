@@ -3,9 +3,9 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class OnFocusEvent(start: Int, end: Int, target: Int = 0) : ReactEvent {
    public final val start: Int
    public final val end: Int

@@ -22,12 +22,12 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
       r.h(var1, "component");
       r.h(var2, "componentContext");
       r.h(var3, "root");
-      val var6: View = var3.getChildAt(var4);
-      val var5: Boolean = var6 is ComponentView;
-      var var7: ComponentView = null;
+      val var7: View = var3.getChildAt(var4);
+      val var5: Boolean = var7 is ComponentView;
+      var var6: ComponentView = null;
       val var8: ComponentView;
       if (var5) {
-         var8 = var6 as ComponentView;
+         var8 = var7 as ComponentView;
       } else {
          var8 = null;
       }
@@ -35,11 +35,11 @@ public class ComponentProvider(context: Context, preInflateRecycledViews: Boolea
       label23: {
          if (var8 != null) {
             if (r.c(var8.getComponentType(), H.b(var1.getClass()))) {
-               var7 = var8;
+               var6 = var8;
             }
 
-            var9 = var7;
-            if (var7 != null) {
+            var9 = var6;
+            if (var6 != null) {
                break label23;
             }
          }

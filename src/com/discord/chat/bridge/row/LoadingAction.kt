@@ -2,9 +2,9 @@ package com.discord.chat.bridge.row
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class LoadingAction(type: LoadingActionType) {
    public final val type: LoadingActionType
 

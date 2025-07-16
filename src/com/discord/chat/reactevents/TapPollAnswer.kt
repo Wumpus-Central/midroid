@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapPollAnswer(channelId: String, messageId: String, answerId: String) : ReactEvent {
    public final val channelId: String
    public final val messageId: String
@@ -69,16 +69,16 @@ public data class TapPollAnswer(channelId: String, messageId: String, answerId: 
    public override fun toString(): String {
       val var4: java.lang.String = this.channelId;
       val var1: java.lang.String = this.messageId;
-      val var3: java.lang.String = this.answerId;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapPollAnswer(channelId=");
-      var2.append(var4);
-      var2.append(", messageId=");
-      var2.append(var1);
-      var2.append(", answerId=");
-      var2.append(var3);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.answerId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapPollAnswer(channelId=");
+      var3.append(var4);
+      var3.append(", messageId=");
+      var3.append(var1);
+      var3.append(", answerId=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

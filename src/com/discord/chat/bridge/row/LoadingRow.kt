@@ -3,9 +3,9 @@ package com.discord.chat.bridge.row
 import com.discord.chat.bridge.ChangeType
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMoreButton, isLoading: Boolean) : Row {
    public open val index: Int
    public open val changeType: ChangeType

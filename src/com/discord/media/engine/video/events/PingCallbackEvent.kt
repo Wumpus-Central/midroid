@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: String, port: Int, seq: Int) : ReactEvent {
    public final val connectionId: Int
    public final val ping: Int
@@ -80,14 +80,14 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    }
 
    public override fun toString(): String {
-      val var1: Int = this.connectionId;
+      val var2: Int = this.connectionId;
       val var4: Int = this.ping;
       val var6: java.lang.String = this.server;
       val var3: Int = this.port;
-      val var2: Int = this.seq;
+      val var1: Int = this.seq;
       val var5: StringBuilder = new StringBuilder();
       var5.append("PingCallbackEvent(connectionId=");
-      var5.append(var1);
+      var5.append(var2);
       var5.append(", ping=");
       var5.append(var4);
       var5.append(", server=");
@@ -95,7 +95,7 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
       var5.append(", port=");
       var5.append(var3);
       var5.append(", seq=");
-      var5.append(var2);
+      var5.append(var1);
       var5.append(")");
       return var5.toString();
    }

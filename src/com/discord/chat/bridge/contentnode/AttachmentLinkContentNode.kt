@@ -2,9 +2,9 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
    public final val attachmentUrl: String
    public final val attachmentName: String
@@ -55,8 +55,8 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.attachmentUrl.hashCode();
-      val var2: Int = this.attachmentName.hashCode();
+      val var2: Int = this.attachmentUrl.hashCode();
+      val var3: Int = this.attachmentName.hashCode();
       val var1: Int;
       if (this.content == null) {
          var1 = 0;
@@ -64,22 +64,22 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
          var1 = this.content.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.attachmentUrl;
+      val var2: java.lang.String = this.attachmentUrl;
       val var4: java.lang.String = this.attachmentName;
       val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AttachmentLinkContentNode(attachmentUrl=");
-      var2.append(var3);
-      var2.append(", attachmentName=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AttachmentLinkContentNode(attachmentUrl=");
+      var3.append(var2);
+      var3.append(", attachmentName=");
+      var3.append(var4);
+      var3.append(", content=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -51,7 +51,7 @@ public open class Node<R>(children: MutableCollection<Node<Any>>? = null) {
             }
          }
 
-         super(i.V0(var5));
+         super(i.W0(var5));
       }
 
       public override fun render(builder: SpannableStringBuilder, renderContext: Any) {

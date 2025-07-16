@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public sealed class MentionContentNode protected constructor() : ContentNode() {
    public abstract val content: List<ContentNode>?
 

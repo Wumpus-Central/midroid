@@ -5,10 +5,10 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 import z9.s
 
-@f
+@g
 internal data class LongPressChannelData(guildId: String? = null, channelId: String? = null, messageId: String? = null, originalLink: String? = null) :
    ReactEvent {
    public final val guildId: String?
@@ -113,17 +113,17 @@ internal data class LongPressChannelData(guildId: String? = null, channelId: Str
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
       val var3: java.lang.String = this.originalLink;
       val var5: StringBuilder = new StringBuilder();
       var5.append("LongPressChannelData(guildId=");
-      var5.append(var4);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", messageId=");
       var5.append(var1);
+      var5.append(", channelId=");
+      var5.append(var4);
+      var5.append(", messageId=");
+      var5.append(var2);
       var5.append(", originalLink=");
       var5.append(var3);
       var5.append(")");

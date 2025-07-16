@@ -6,7 +6,7 @@ import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import z9.s
 
-@sb.f
+@sb.g
 public data class AppManifestMetadata(build: String, releaseName: String? = null, commit: String, confirmUpdate: Boolean = false) {
    public final val build: String
    public final val releaseName: String?
@@ -88,15 +88,15 @@ public data class AppManifestMetadata(build: String, releaseName: String? = null
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.build;
-      val var5: java.lang.String = this.releaseName;
+      val var5: java.lang.String = this.build;
+      val var2: java.lang.String = this.releaseName;
       val var4: java.lang.String = this.commit;
       val var1: Boolean = this.confirmUpdate;
       val var3: StringBuilder = new StringBuilder();
       var3.append("AppManifestMetadata(build=");
-      var3.append(var2);
-      var3.append(", releaseName=");
       var3.append(var5);
+      var3.append(", releaseName=");
+      var3.append(var2);
       var3.append(", commit=");
       var3.append(var4);
       var3.append(", confirmUpdate=");

@@ -6,7 +6,7 @@ import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import z9.s
 
-@sb.f
+@sb.g
 public data class BuildOverrideCookieBuild(type: String, id: String) {
    public final val type: String
    public final val id: String

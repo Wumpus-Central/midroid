@@ -52,4 +52,5 @@ public object ChatViewRecyclerTypes {
    public const val REFERRAL: Int = 52
    public const val GUILD_PROFILE_INVITE: Int = 53
    public const val APP_MESSAGE_EMBED: Int = 54
+   public const val ACTIVITY_RICH_PRESENCE_INVITE_EMBED: Int = 55
 }

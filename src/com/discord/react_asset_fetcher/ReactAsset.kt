@@ -70,11 +70,13 @@ public enum class ReactAsset {
    MicMutedDark,
    More,
    MoveToSpeaker,
+   Music,
    Pause,
    Pencil,
    PersonShield,
    Pin,
    Play,
+   PlaystationNeutral,
    PollsIcon,
    PoopDark,
    PoopLight,
@@ -86,6 +88,7 @@ public enum class ReactAsset {
    RoleSubscriptionBadge,
    RoleSubscriptionLanyard,
    RoleSubscriptionPurchaseCardBg,
+   Screen,
    ShowMedia,
    ShowPassword,
    Speaker,
@@ -100,7 +103,8 @@ public enum class ReactAsset {
    Volume,
    VolumeMute,
    Warning,
-   WarningTriangle   @JvmStatic
+   WarningTriangle,
+   XboxNeutral   @JvmStatic
    private EnumEntries $ENTRIES;
    @JvmStatic
    private ReactAsset[] $VALUES;

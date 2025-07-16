@@ -3,9 +3,9 @@ package com.discord.emoji_picker.react_events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class OnShowNitroUpsell(showNitroUpsell: Boolean) : ReactEvent {
    public final val showNitroUpsell: Boolean
 

@@ -42,12 +42,12 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.d.e(var1 % (long)26, 1L);
-            val var9: java.lang.String = this.toLetter(var1 / (long)26);
-            val var8: java.lang.String = this.toLetter(var10);
-            val var11: StringBuilder = new StringBuilder();
-            var11.append(var9);
-            var11.append(var8);
-            return var11.toString();
+            val var11: java.lang.String = this.toLetter(var1 / (long)26);
+            val var9: java.lang.String = this.toLetter(var10);
+            val var8: StringBuilder = new StringBuilder();
+            var8.append(var11);
+            var8.append(var9);
+            return var8.toString();
          }
       } else {
          val var7: StringBuilder = new StringBuilder();
@@ -69,11 +69,11 @@ public object NumericUtils {
             var8 = var8;
          } else {
             val var7: Any = var6.get(var3);
-            val var12: java.lang.String = this.toRomanNumeral(var1 - var3);
-            val var11: StringBuilder = new StringBuilder();
-            var11.append(var7);
-            var11.append(var12);
-            var8 = var11.toString();
+            var8 = this.toRomanNumeral(var1 - var3);
+            val var12: StringBuilder = new StringBuilder();
+            var12.append(var7);
+            var12.append(var8);
+            var8 = var12.toString();
          }
 
          return var8;

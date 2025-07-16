@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = ButtonStyle.Serializer::class)
+@g(with = ButtonStyle.Serializer::class)
 public enum class ButtonStyle(serialNumber: Int) : IntEnum {
    DANGER(4),
    LINK(5),

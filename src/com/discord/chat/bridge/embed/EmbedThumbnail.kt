@@ -2,9 +2,9 @@ package com.discord.chat.bridge.embed
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class EmbedThumbnail(url: String,
       proxyURL: String? = null,
       videoUrl: String? = null,
@@ -185,35 +185,35 @@ public data class EmbedThumbnail(url: String,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.url;
-      val var10: java.lang.String = this.proxyURL;
-      val var8: java.lang.String = this.videoUrl;
+      val var6: java.lang.String = this.url;
+      val var4: java.lang.String = this.proxyURL;
+      val var10: java.lang.String = this.videoUrl;
       val var1: Int = this.height;
       val var2: Int = this.width;
-      val var4: java.lang.Boolean = this.gifv;
-      val var7: java.lang.Boolean = this.showPlayButton;
-      val var6: java.lang.String = this.placeholder;
-      val var11: Int = this.placeholderVersion;
+      val var9: java.lang.Boolean = this.gifv;
+      val var11: java.lang.Boolean = this.showPlayButton;
+      val var8: java.lang.String = this.placeholder;
+      val var7: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
       val var5: StringBuilder = new StringBuilder();
       var5.append("EmbedThumbnail(url=");
-      var5.append(var9);
+      var5.append(var6);
       var5.append(", proxyURL=");
-      var5.append(var10);
+      var5.append(var4);
       var5.append(", videoUrl=");
-      var5.append(var8);
+      var5.append(var10);
       var5.append(", height=");
       var5.append(var1);
       var5.append(", width=");
       var5.append(var2);
       var5.append(", gifv=");
-      var5.append(var4);
+      var5.append(var9);
       var5.append(", showPlayButton=");
-      var5.append(var7);
-      var5.append(", placeholder=");
-      var5.append(var6);
-      var5.append(", placeholderVersion=");
       var5.append(var11);
+      var5.append(", placeholder=");
+      var5.append(var8);
+      var5.append(", placeholderVersion=");
+      var5.append(var7);
       var5.append(", srcIsAnimated=");
       var5.append(var3);
       var5.append(")");

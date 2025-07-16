@@ -2,9 +2,9 @@ package com.discord.chat.bridge.structurabletext
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = PrimitiveStructurableTextSerializer::class)
+@g(with = PrimitiveStructurableTextSerializer::class)
 public data class PrimitiveStructurableText(content: String) : StructurableText {
    public final val content: String
    public open val hasContent: Boolean

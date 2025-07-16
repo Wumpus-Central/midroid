@@ -239,23 +239,23 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
    }
 
    private fun configureLeadingIcon(message: Message) {
-      var var2: Boolean;
+      val var3: Boolean;
       if (var1.getForwardInfo() != null) {
-         var2 = 1;
+         var3 = true;
       } else {
-         var2 = 0;
+         var3 = false;
       }
 
-      var var3: Boolean = true;
+      var var2: Byte = 1;
       if (!var1.isPollResult()) {
-         if (var2) {
-            var3 = true;
+         if (var3) {
+            var2 = 1;
          } else {
-            var3 = false;
+            var2 = 0;
          }
       }
 
-      if (var3) {
+      if (var2) {
          val var10: SimpleDraweeView = this.binding.replyLeadingIcon;
          kotlin.jvm.internal.r.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
          val var7: ReactAsset;
@@ -270,7 +270,7 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
 
       val var8: SimpleDraweeView = this.binding.replyLeadingIcon;
       kotlin.jvm.internal.r.g(this.binding.replyLeadingIcon, "replyLeadingIcon");
-      if (var3) {
+      if (var2) {
          var2 = 0;
       } else {
          var2 = 8;
@@ -504,12 +504,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var28: MessageContentView = this.binding.replyText;
             val var48: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var74: StructurableText = var12.getSystemContent();
-            val var14: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var14, "getContext(...)");
+            val var14: StructurableText = var12.getSystemContent();
+            val var74: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var74, "getContext(...)");
             val var68: java.lang.String = var11.getId-3Eiw7ao();
-            var2 = MessageKt.shouldAnimateEmoji(var11);
-            val var9: Boolean = MessageKt.shouldShowLinkDecorations(var11);
+            val var9: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
             val var41: Boolean = var11.getShouldShowRoleDot();
             val var8: Boolean = var11.getShouldShowRoleOnName();
             val var60: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
@@ -518,11 +518,11 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var61: TextPaint = this.binding.replyText.getPaint();
             kotlin.jvm.internal.r.g(var61, "getPaint(...)");
             val var62: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var74,
                var14,
+               var74,
                var68,
-               var2,
                var9,
+               var2,
                var41,
                var8,
                var61,
@@ -556,13 +556,13 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var29: MessageContentView = this.binding.replyText;
             val var50: LinearLayout = this.binding.replyLeadingViews;
             kotlin.jvm.internal.r.g(this.binding.replyLeadingViews, "replyLeadingViews");
-            val var71: StructurableText = var11.getContent();
-            val var76: Context = this.getContext();
-            kotlin.jvm.internal.r.g(var76, "getContext(...)");
+            val var76: StructurableText = var11.getContent();
+            val var71: Context = this.getContext();
+            kotlin.jvm.internal.r.g(var71, "getContext(...)");
             val var75: java.lang.String = var11.getId-3Eiw7ao();
-            val var42: Boolean = MessageKt.shouldAnimateEmoji(var11);
-            val var43: Boolean = MessageKt.shouldShowLinkDecorations(var11);
-            var2 = var11.getShouldShowRoleDot();
+            val var43: Boolean = MessageKt.shouldAnimateEmoji(var11);
+            var2 = MessageKt.shouldShowLinkDecorations(var11);
+            val var42: Boolean = var11.getShouldShowRoleDot();
             val var44: Boolean = var11.getShouldShowRoleOnName();
             val var63: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
             kotlin.jvm.internal.r.g(var63, "getFontMetrics(...)");
@@ -570,12 +570,12 @@ public class MessageViewReplyPreview  public constructor(context: Context, attrs
             val var64: TextPaint = this.binding.replyText.getPaint();
             kotlin.jvm.internal.r.g(var64, "getPaint(...)");
             val var65: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-               var71,
                var76,
+               var71,
                var75,
-               var42,
                var43,
                var2,
+               var42,
                var44,
                var64,
                null,

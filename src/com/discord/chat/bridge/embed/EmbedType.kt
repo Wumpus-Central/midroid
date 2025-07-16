@@ -4,11 +4,11 @@ import H9.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 import q1.e
-import sb.f
+import sb.g
 import z9.j
 import z9.m
 
-@f
+@g
 public enum class EmbedType {
    ApplicationNews,
    Article,
