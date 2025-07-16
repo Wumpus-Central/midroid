@@ -94,21 +94,21 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var4: java.util.Set = this.attachmentIds;
-      val var2: PollMediaEmoji = this.emoji;
-      val var3: java.lang.Long = this.stickerId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PollMedia(text=");
-      var5.append(var1);
-      var5.append(", attachmentIds=");
-      var5.append(var4);
-      var5.append(", emoji=");
-      var5.append(var2);
-      var5.append(", stickerId=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var4: java.lang.String = this.text;
+      val var2: java.util.Set = this.attachmentIds;
+      val var1: PollMediaEmoji = this.emoji;
+      val var5: java.lang.Long = this.stickerId;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("PollMedia(text=");
+      var3.append(var4);
+      var3.append(", attachmentIds=");
+      var3.append(var2);
+      var3.append(", emoji=");
+      var3.append(var1);
+      var3.append(", stickerId=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -166,17 +166,17 @@ internal object CustomFontFamilyOverride {
          val var5: Byte = 0;
 
          while (var5 < var8) {
-            val var13: java.lang.String = var25[var5];
-            val var12: StringBuilder = new StringBuilder();
-            var12.append("fonts/");
-            var12.append(var10);
-            var12.append(var13);
-            val var31: java.lang.String = var12.toString();
-            r.g(var31, "toString(...)");
+            var var12: java.lang.String = var25[var5];
+            val var13: StringBuilder = new StringBuilder();
+            var13.append("fonts/");
+            var13.append(var10);
+            var13.append(var12);
+            var12 = var13.toString();
+            r.g(var12, "toString(...)");
 
             try {
                b.a();
-               val var32: Font = a.a(k.a(var3, var31));
+               val var32: Font = a.a(k.a(var3, var12));
                r.g(var32, "build(...)");
                c.a();
                val var33: FontFamily = f.a(l.a(var32));

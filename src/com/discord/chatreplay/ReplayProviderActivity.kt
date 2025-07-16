@@ -17,11 +17,11 @@ import vb.f
 
 public class ReplayProviderActivity : Activity {
    private fun getReplayFile(replayName: String): File {
-      val var2: java.lang.String = this.getFilesDir().getPath();
-      val var3: StringBuilder = new StringBuilder();
-      var3.append(var2);
-      var3.append("/rows");
-      return new File(a.a(var3.toString(), new java.lang.String[0]).toString(), var1);
+      val var3: java.lang.String = this.getFilesDir().getPath();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append(var3);
+      var2.append("/rows");
+      return new File(a.a(var2.toString(), new java.lang.String[0]).toString(), var1);
    }
 
    private fun getReplaysList(): List<Replay> {
@@ -125,16 +125,16 @@ public class ReplayProviderActivity : Activity {
       public fun requestUriPermission(activity: Activity, replayFilename: String, requestCode: Int) {
          r.h(var1, "activity");
          r.h(var2, "replayFilename");
-         val var4: Intent = new Intent();
-         var4.setAction("com.discord.REQUEST_REPLAY_ACCESS");
+         val var5: Intent = new Intent();
+         var5.setAction("com.discord.REQUEST_REPLAY_ACCESS");
          val var6: java.lang.String = var1.getPackageName();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("discord://request_replay?target=");
-         var5.append(var2);
-         var5.append("&toPackage=");
-         var5.append(var6);
-         var4.setData(Uri.parse(var5.toString()));
-         var1.startActivityForResult(var4, var3);
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("discord://request_replay?target=");
+         var4.append(var2);
+         var4.append("&toPackage=");
+         var4.append(var6);
+         var5.setData(Uri.parse(var4.toString()));
+         var1.startActivityForResult(var5, var3);
       }
    }
 }

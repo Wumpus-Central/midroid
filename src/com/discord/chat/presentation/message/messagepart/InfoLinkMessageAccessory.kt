@@ -111,26 +111,26 @@ public data class InfoLinkMessageAccessory(messageId: MessageId, channelId: Chan
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var5: java.lang.String = this.attachmentId;
-      val var6: java.lang.String = this.embedId;
-      val var4: java.lang.String = this.text;
-      val var1: ReactAsset = this.icon;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("InfoLinkMessageAccessory(messageId=");
-      var7.append(var2);
-      var7.append(", channelId=");
-      var7.append(var3);
-      var7.append(", attachmentId=");
-      var7.append(var5);
-      var7.append(", embedId=");
-      var7.append(var6);
-      var7.append(", text=");
-      var7.append(var4);
-      var7.append(", icon=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var2: java.lang.String = this.attachmentId;
+      val var5: java.lang.String = this.embedId;
+      val var7: java.lang.String = this.text;
+      val var6: ReactAsset = this.icon;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InfoLinkMessageAccessory(messageId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var4);
+      var1.append(", attachmentId=");
+      var1.append(var2);
+      var1.append(", embedId=");
+      var1.append(var5);
+      var1.append(", text=");
+      var1.append(var7);
+      var1.append(", icon=");
+      var1.append(var6);
+      var1.append(")");
+      return var1.toString();
    }
 }

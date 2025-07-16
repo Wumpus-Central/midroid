@@ -101,21 +101,21 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
       val var4: java.lang.String = this.seeMoreLabel;
-      val var6: Int = this.seeMoreLabelColor;
-      val var3: java.lang.Boolean = this.forceShow;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Truncation(numberOfLines=");
-      var5.append(var1);
-      var5.append(", expandable=");
-      var5.append(var2);
-      var5.append(", seeMoreLabel=");
-      var5.append(var4);
-      var5.append(", seeMoreLabelColor=");
-      var5.append(var6);
-      var5.append(", forceShow=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var3: Int = this.seeMoreLabelColor;
+      val var5: java.lang.Boolean = this.forceShow;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Truncation(numberOfLines=");
+      var6.append(var1);
+      var6.append(", expandable=");
+      var6.append(var2);
+      var6.append(", seeMoreLabel=");
+      var6.append(var4);
+      var6.append(", seeMoreLabelColor=");
+      var6.append(var3);
+      var6.append(", forceShow=");
+      var6.append(var5);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

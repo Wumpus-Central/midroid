@@ -182,39 +182,39 @@ public data class UnfurledMediaItem(url: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.url;
-      val var4: java.lang.String = this.proxyUrl;
-      val var10: UnfurledMediaLoadingState = this.loadingState;
-      val var2: Int = this.height;
+      val var3: java.lang.String = this.url;
+      val var6: java.lang.String = this.proxyUrl;
+      val var7: UnfurledMediaLoadingState = this.loadingState;
+      val var4: Int = this.height;
       val var5: Int = this.width;
-      val var6: java.lang.String = this.contentType;
+      val var11: java.lang.String = this.contentType;
       val var8: java.lang.String = this.placeholder;
       val var9: Int = this.placeholderVersion;
-      val var11: ContentScanMetadata = this.contentScanMetadata;
+      val var2: ContentScanMetadata = this.contentScanMetadata;
       val var1: Boolean = this.srcIsAnimated;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("UnfurledMediaItem(url=");
-      var3.append(var7);
-      var3.append(", proxyUrl=");
-      var3.append(var4);
-      var3.append(", loadingState=");
-      var3.append(var10);
-      var3.append(", height=");
-      var3.append(var2);
-      var3.append(", width=");
-      var3.append(var5);
-      var3.append(", contentType=");
-      var3.append(var6);
-      var3.append(", placeholder=");
-      var3.append(var8);
-      var3.append(", placeholderVersion=");
-      var3.append(var9);
-      var3.append(", contentScanMetadata=");
-      var3.append(var11);
-      var3.append(", srcIsAnimated=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append("UnfurledMediaItem(url=");
+      var10.append(var3);
+      var10.append(", proxyUrl=");
+      var10.append(var6);
+      var10.append(", loadingState=");
+      var10.append(var7);
+      var10.append(", height=");
+      var10.append(var4);
+      var10.append(", width=");
+      var10.append(var5);
+      var10.append(", contentType=");
+      var10.append(var11);
+      var10.append(", placeholder=");
+      var10.append(var8);
+      var10.append(", placeholderVersion=");
+      var10.append(var9);
+      var10.append(", contentScanMetadata=");
+      var10.append(var2);
+      var10.append(", srcIsAnimated=");
+      var10.append(var1);
+      var10.append(")");
+      return var10.toString();
    }
 
    public companion object {

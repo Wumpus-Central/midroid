@@ -100,12 +100,12 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
          @Override
          public void onImageInserted(Uri var1) {
             r.h(var1, "uri");
-            val var3: ReactEvents = this.this$0.getReactEvents$chat_input_release();
-            val var4: ThemedReactContext = this.$reactContext;
-            val var5: ChatInputRootView = this.$view;
-            val var2: java.lang.String = var1.toString();
-            r.g(var2, "toString(...)");
-            var3.emitEvent(var4, var5, new OnPasteImageEvent(var2, this.$reactContext.getContentResolver().getType(var1)));
+            val var2: ReactEvents = this.this$0.getReactEvents$chat_input_release();
+            val var3: ThemedReactContext = this.$reactContext;
+            val var4: ChatInputRootView = this.$view;
+            val var5: java.lang.String = var1.toString();
+            r.g(var5, "toString(...)");
+            var2.emitEvent(var3, var4, new OnPasteImageEvent(var5, this.$reactContext.getContentResolver().getType(var1)));
          }
 
          @Override
@@ -236,11 +236,11 @@ public class ChatInputViewManager : ViewGroupManager<ChatInputRootView>, DCDChat
 
                val var5: Int = var3.getInt(0);
                val var4: Int = var3.getInt(1);
-               var2 = var3.getString(2);
-               r.e(var2);
-               val var6: java.lang.String = var3.getString(3);
+               val var6: java.lang.String = var3.getString(2);
                r.e(var6);
-               this.replaceRange(var1, var5, var4, var2, var6, var3.getBoolean(4), var3.getString(5));
+               var2 = var3.getString(3);
+               r.e(var2);
+               this.replaceRange(var1, var5, var4, var6, var2, var3.getBoolean(4), var3.getString(5));
             }
             break;
          case 1353507967:

@@ -146,17 +146,17 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun getStableSafeAreaInsets(): WritableMap {
       val var1: d = new d();
-      val var2: Activity = this.getCurrentActivity();
+      val var3: Activity = this.getCurrentActivity();
       val var4: Int = 0;
-      if (var2 == null) {
+      if (var3 == null) {
          return var1.invoke(var4, var4, var4, var4) as WritableMap;
       } else {
-         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var2);
-         if (var3 == null) {
+         val var2: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var2 == null) {
             return var1.invoke(var4, var4, var4, var4) as WritableMap;
          } else {
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var2, true);
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var2, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var2, var3, true);
             return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
          }
       }

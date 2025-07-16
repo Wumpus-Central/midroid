@@ -59,15 +59,15 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
    }
 
    private fun handleTap(eventHandler: ChatEventHandler, data: AppMessageEmbedImpl, actionId: String) {
-      val var6: java.lang.String = var2.getMessageId();
-      val var5: java.lang.String = var2.getAppId();
+      val var5: java.lang.String = var2.getMessageId();
+      val var6: java.lang.String = var2.getAppId();
       val var4: java.lang.String = var2.getEmbedUrl();
       var var7: java.lang.String = var4;
       if (var4 == null) {
          var7 = "";
       }
 
-      var1.onTapAppMessageEmbed(var6, var3, var5, var7);
+      var1.onTapAppMessageEmbed(var5, var3, var6, var7);
    }
 
    @JvmStatic
@@ -245,10 +245,10 @@ public class AppMessageEmbedView  public constructor(context: Context, attrs: At
       }
 
       if (var1.getTitle() != null) {
-         var14 = this.view.title;
-         val var40: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
-         kotlin.jvm.internal.r.g(var40, "toUpperCase(...)");
-         var14.setText(var40);
+         val var40: TextView = this.view.title;
+         val var53: java.lang.String = var1.getTitle().toUpperCase(Locale.ROOT);
+         kotlin.jvm.internal.r.g(var53, "toUpperCase(...)");
+         var40.setText(var53);
       } else {
          val var41: TextView = this.view.title;
          kotlin.jvm.internal.r.g(this.view.title, "title");

@@ -48,7 +48,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
    @JvmStatic
    fun `initialize$lambda$0`(var0: MainApplication): Unit {
       SoLoaderUtils.INSTANCE.init(var0);
-      DefaultNewArchitectureEntryPoint.load(true, true, false);
+      DefaultNewArchitectureEntryPoint.load(false, false, false);
       var0.initializeReactNativeLatch.countDown();
       HermesExecutor.loadLibrary();
       return Unit.a;
@@ -71,7 +71,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
          val var1: BundleUpdater.Companion = BundleUpdater.Companion;
          BundleUpdater.Companion.init(this);
          TTIMetrics.record$default(var3, "BundlerUpdater.init()", 0L, null, false, 14, null);
-         ClientInfo.INSTANCE.init(this, "289.13", 289113, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
+         ClientInfo.INSTANCE.init(this, "289.15", 289115, "beta", "release", var1.instance().getManifestETag(), var1.instance().getOtaVersion());
          TTIMetrics.record$default(var3, "ClientInfo.init()", 0L, null, false, 14, null);
          CacheDataSourceFactory.Companion.init(this);
          TTIMetrics.record$default(var3, "CacheDataSourceFactory.init()", 0L, null, false, 14, null);
@@ -84,7 +84,7 @@ public class MainApplication : TTILoggingApplication, ReactApplication {
             }
          }
 
-         var5 = "discord_android@289.13.0-1+289113";
+         var5 = "discord_android@289.15.0-1+289115";
       }
 
       CrashReporting.INSTANCE.init(this, var5);

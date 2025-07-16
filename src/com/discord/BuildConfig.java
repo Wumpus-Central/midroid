@@ -8,11 +8,11 @@ public final class BuildConfig {
    public static final String INTEGRATION_TEST_PASSWORD = "";
    public static final String INTEGRATION_TEST_USERNAME = "";
    public static final boolean IS_HERMES_ENABLED = true;
-   public static final boolean IS_NEW_ARCHITECTURE_ENABLED = true;
+   public static final boolean IS_NEW_ARCHITECTURE_ENABLED = false;
    public static final String MAIN_MODULE = "index.native";
-   public static final String USER_AGENT = "Discord-Android/289113";
-   public static final int VERSION_CODE = 289113;
-   public static final String VERSION_NAME = "289.13 - Beta";
-   public static final String VERSION_NAME_RNA = "289.13";
+   public static final String USER_AGENT = "Discord-Android/289115";
+   public static final int VERSION_CODE = 289115;
+   public static final String VERSION_NAME = "289.15 - Beta";
+   public static final String VERSION_NAME_RNA = "289.15";
    public static final Boolean logTTIMetrics = Boolean.FALSE;
 }

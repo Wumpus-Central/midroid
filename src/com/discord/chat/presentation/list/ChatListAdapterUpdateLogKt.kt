@@ -80,13 +80,13 @@ private fun ListOperation.label(): String {
          throw new z9.n();
       }
 
-      val var19: Int = (var0 as ListOperation.ChangeRange).getFirst();
-      val var17: Int = (var0 as ListOperation.ChangeRange).getLast();
+      val var17: Int = (var0 as ListOperation.ChangeRange).getFirst();
+      val var19: Int = (var0 as ListOperation.ChangeRange).getLast();
       val var12: StringBuilder = new StringBuilder();
       var12.append("CRNG(");
-      var12.append(var19);
-      var12.append("-");
       var12.append(var17);
+      var12.append("-");
+      var12.append(var19);
       var12.append(")");
       var4 = var12.toString();
    }
