@@ -16990,6 +16990,25 @@
       ]
     ]
   ],
+  "3Ne7MD": [
+    [
+      8,
+      "userHook",
+      [
+        [
+          8,
+          "$b",
+          [
+            [
+              1,
+              "user"
+            ]
+          ]
+        ]
+      ]
+    ],
+    " updated Pin Messages permission"
+  ],
   "o3W2l5": [
     "Changed the name from ",
     [
@@ -25246,6 +25265,7 @@
   "DRgqMj": "1 Year",
   "YCrcPD": "Subscription",
   "xrmhRU": "Permissions",
+  "2XIdPj": "Pinning messages now has a separate permission.  This setting’s behavior will change soon.",
   "OIhm0N": [
     "Permissions not synced with category: ",
     [
@@ -25288,6 +25308,7 @@
   "mp1N//": "Pinned Messages",
   "1QLRYW": "Pinned",
   "CvQ18/": "Pin Message",
+  "Y5BI39": "Pin Messages",
   "WG5dys": "Are you sure you want to pin this message?",
   "NnO1S0": [
     "Discord is unable to pin that message. You may have hit the limit of ",
@@ -30043,7 +30064,6 @@
     ]
   ],
   "cfY4PD": "Claim Reward",
-  "Av9jcX": "Claim Reward!",
   "0IUT4e": [
     "Claim ",
     [
@@ -32208,6 +32228,143 @@
   "1ydhVl": "Use roles to group your server members and assign permissions.",
   "ALlnbm": "Organize your members",
   "UvdTMj": "Server Roles",
+  "1PAzQ0": [
+    "All roles and channels in ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "guildName"
+        ]
+      ]
+    ],
+    " will have their ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " setting updated to match the existing ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " setting.  This cannot be undone."
+  ],
+  "nFE8dH": "Update Pin Messages to match Manage Messages?",
+  "Vg2oTE": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then."
+  ],
+  "DXvUMD": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then. ",
+    [
+      8,
+      "$link",
+      [
+        "Copy settings on all roles and channels."
+      ],
+      [
+        [
+          1,
+          "onClickMigrate"
+        ]
+      ]
+    ]
+  ],
+  "cAuU1d": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then. A Server Administrator can copy over the setting for all roles and channels by visiting this page."
+  ],
   "FEYwX1": "Allows members to add new emoji reactions to a message. If this permission is disabled, members can still react using any existing reactions on a message.",
   "pZT2Zm": "Allows members to add new emoji reactions to a message in these channels. If this permission is disabled, members can still react using any existing reactions on a message.",
   "PVjR1d": "Allows members to add new emoji reactions to a message in this channel. If this permission is disabled, members can still react using any existing reactions on a message.",
@@ -32314,6 +32471,9 @@
   "bcuobG": "Allows members to mute other members in these voice channels for everyone.",
   "EbvdHx": "(Required for Stage moderator) Allow members to add or remove Speakers.",
   "LW5C9P": "Allows members to mute other members in this voice channel for everyone.",
+  "LN/K39": "Allows members to pin or unpin any message.",
+  "gmbD8/": "Allows members to pin or unpin any message in these channels.",
+  "0l2EjI": "Allows members to pin or unpin any message in this channel.",
   "OJkrrq": "Allows members to be more easily heard in voice channels. When activated, the volume of others without this permission will be automatically lowered.",
   "j66HgY": [
     "Allows members to be more easily heard in voice channels. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the ",
