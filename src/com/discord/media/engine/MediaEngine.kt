@@ -187,13 +187,13 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    fun `createVoiceConnection$lambda$46`(var0: Function2, var1: ConnectionInfo, var2: java.lang.String) {
       kotlin.jvm.internal.r.h(var1, "connectionInfo");
       kotlin.jvm.internal.r.h(var2, "errorMessage");
-      val var3: Log = Log.INSTANCE;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("On created with ");
-      var4.append(var1);
-      var4.append(", ");
-      var4.append(var2);
-      Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+      val var4: Log = Log.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("On created with ");
+      var3.append(var1);
+      var3.append(", ");
+      var3.append(var2);
+      Log.i$default(var4, "MediaEngine", var3.toString(), null, 4, null);
       var0.invoke(var2, NativeTypeExtensionsKt.toMap(var1));
    }
 
@@ -212,19 +212,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var3: NativeConnection = this.engineConnections.get(var1);
-      if (var3 == null) {
-         val var4: Log = Log.INSTANCE;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("[");
-         var5.append(var2);
-         var5.append("] no NativeConnection for connectionId=");
-         var5.append(var1);
-         var5.append(", returning null");
-         Log.w$default(var4, "MediaEngine", var5.toString(), null, 4, null);
+      val var5: NativeConnection = this.engineConnections.get(var1);
+      if (var5 == null) {
+         val var3: Log = Log.INSTANCE;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("[");
+         var4.append(var2);
+         var4.append("] no NativeConnection for connectionId=");
+         var4.append(var1);
+         var4.append(", returning null");
+         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var3;
+      return var5;
    }
 
    @JvmStatic
@@ -296,10 +296,10 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                kotlin.c.b(var1);
             } else {
                kotlin.c.b(var1);
-               var1 = MediaEngine.Companion;
-               var var3: Bitmap = this.$bitmap;
+               var var3: MediaEngine.Companion = MediaEngine.Companion;
+               var1 = this.$bitmap;
                this.label = 1;
-               var3 = (Bitmap)MediaEngine.Companion.access$encodeThumbnail(var1, var3, this);
+               var3 = (MediaEngine.Companion)MediaEngine.Companion.access$encodeThumbnail(var3, var1, this);
                var1 = var3;
                if (var3 === var4) {
                   return var4;
@@ -934,20 +934,20 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             val var10: MediaCodecInfo = var7.next() as MediaCodecInfo;
             val var9: java.lang.String = var10.getName();
             kotlin.jvm.internal.r.g(var9, "getName(...)");
-            val var11: Array<java.lang.String> = var10.getSupportedTypes();
-            kotlin.jvm.internal.r.g(var11, "getSupportedTypes(...)");
-            val var13: ArrayList = new ArrayList();
-            val var3: Int = var11.length;
+            val var13: Array<java.lang.String> = var10.getSupportedTypes();
+            kotlin.jvm.internal.r.g(var13, "getSupportedTypes(...)");
+            val var12: ArrayList = new ArrayList();
+            val var3: Int = var13.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var12: java.lang.String = var11[var2];
-               kotlin.jvm.internal.r.e(var11[var2]);
-               if (kotlin.text.h.I(var12, "video", false, 2, null)) {
-                  var13.add(var12);
+               val var11: java.lang.String = var13[var2];
+               kotlin.jvm.internal.r.e(var13[var2]);
+               if (kotlin.text.h.I(var11, "video", false, 2, null)) {
+                  var12.add(var11);
                }
             }
 
-            for (java.lang.String var18 : var13) {
+            for (java.lang.String var18 : var12) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
                   if (com.discord.a.a(var10)) {

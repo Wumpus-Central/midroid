@@ -2732,13 +2732,11 @@
   "gHD/nZ": "Đã đọc xong? Xem các kênh khác.",
   "9cs5LC": "Khám phá",
   "Yi2xub": "Đây là một kênh chỉ có các chủ đề.",
-  "4NDJgI": "Thao tác trò chuyện",
   "uKZtCw": "Gửi tin nhắn và nội dung đa phương tiện",
   "Jf0C/f": "Quẹt Từ Phải Qua Trái",
   "9BGJ1t": "Tìm Kiếm Danh Sách Thành Viên Trả Lời",
   "6eXLcH": "Hiện Chi Tiết Kênh",
   "ohhhDA": "Tìm kiếm, thành viên, nội dung đa phương tiện, các tin nhắn được ghim, chủ đề, và nhiều nội dung khác",
-  "QrTl5+": "Bạn có thể thay đổi hành vi quẹt trong Cài đặt.",
   "3tYNDQ": "Trả lời Tin Nhắn",
   "RzWDqa": "Tới xem nào",
   "VkKicX": "Xóa",
@@ -5022,13 +5020,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Chỉnh sửa văn bản thay thế, câu trả lời ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Sửa mô tả hình ảnh (văn bản thay thế)",
   "vcC7Qk": [
     "Cập nhật đa phương tiện, ",
@@ -5065,9 +5056,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Phong cách trả lời bảng thăm dò ý kiến",
-  "GhK6X1": "Trả lời bằng văn bản với nội dung đa phương tiện tùy chọn",
-  "an4GKS": "Chỉ cho phép câu trả lời bằng nội dung đa phương tiện",
   "fYvzER": "Ối, bạn bỏ sót rồi. Vui lòng thêm ít nhất một câu trả lời.",
   "HMrgcn": "Bạn chắc chứ?",
   "Wxa/j4": "Bạn có chắc muốn thoát không? Những thay đổi sẽ bị mất nếu bạn thoát bây giờ.",
@@ -7533,8 +7521,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Bây giờ bạn đã có quyền truy cập vào Hoạt động trên Di động trong Kênh thoại!",
-  "fhm5x8": "Hoạt động trên Điện thoại",
   "UXoQTk": "Tính năng này hiện tại không khả dụng trên Hệ điều hành này",
   "z8EAJS": [
     "1-",
@@ -24470,7 +24456,6 @@
   "ZXxLQk": "Mở Trò Chuyện",
   "q5jLJC": "Mở trong Trình Duyệt",
   "wuRE8P": "Mở Link",
-  "3/IlR0": "Mở Cài Đặt",
   "U19GMz": "tùy chọn",
   "+1H47u": "Các Tùy chọn",
   "iOWmmJ": "Kênh này không nằm trong danh sách kênh của bạn.",
@@ -30206,19 +30191,6 @@
       "videoTitle"
     ],
     " và kiếm đủ tài nguyên để mở khóa huy hiệu hồ sơ!"
-  ],
-  "yMsQ7e": [
-    "Xem ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " để nhận ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Xem video để nhận được ",

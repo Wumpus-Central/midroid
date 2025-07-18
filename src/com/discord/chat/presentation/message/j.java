@@ -10,6 +10,6 @@ public final class j implements Function1 {
    public final MessageAccessory k;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.i(this.j, this.k, (Sticker)var1);
+      return MessageAccessoriesAdapter.l(this.j, this.k, (Sticker)var1);
    }
 }

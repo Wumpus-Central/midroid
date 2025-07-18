@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_x6ru3ksijkf5ey7dzv3gf5xzuu_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_x6ru3ksijkf5ey7dzv3gf5xzuu_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_x6ru3ksijkf5ey7dzv3gf5xzuu_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_x6ru3ksijkf5ey7dzv3gf5xzuu_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_hr2ie23qcjdqpqjyo36iftfbqy_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_hr2ie23qcjdqpqjyo36iftfbqy_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_hr2ie23qcjdqpqjyo36iftfbqy_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_hr2ie23qcjdqpqjyo36iftfbqy_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -1366,8 +1366,6 @@ public final class R {
       public static int modules_parent_tools_images_family_center_empty;
       public static int modules_parent_tools_images_family_center_linking_banner_image;
       public static int modules_parent_tools_images_ic_eye;
-      public static int modules_polls_native_images_ic_image;
-      public static int modules_polls_native_images_ic_list;
       public static int modules_polls_native_images_ic_polls;
       public static int modules_polls_native_images_loadissuedark;
       public static int modules_polls_native_images_loadissuelight;

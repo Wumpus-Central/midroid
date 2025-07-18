@@ -1,13 +1,13 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.reactions.ReactionView;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 // $VF: synthetic class
-public final class S implements Function1 {
+public final class S implements OnClickListener {
    public final MessageAccessoriesAdapter j;
 
-   public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.B(this.j, (ReactionView.Reaction)var1);
+   public final void onClick(View var1) {
+      MessageAccessoriesAdapter.H(this.j, var1);
    }
 }

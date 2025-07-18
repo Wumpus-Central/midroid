@@ -2724,13 +2724,11 @@
   "gHD/nZ": "Luitko jo kaiken? Tutustu muihin kanaviin.",
   "9cs5LC": "Tutki",
   "Yi2xub": "Tämä on vain ketjuja käyttävä kanava.",
-  "4NDJgI": "Keskustelueleet",
   "uKZtCw": "Lähetä viestejä ja mediasisältöä",
   "Jf0C/f": "Oikealta vasemmalle pyyhkäisy",
   "9BGJ1t": "Vastauksen jäsenluettelohaku",
   "6eXLcH": "Näytä kanavan tiedot",
   "ohhhDA": "Haku, jäsenet, mediasisällöt, kiinnitykset, ketjut ja paljon muuta",
-  "QrTl5+": "Voit muuttaa pyyhkäisytoimintaa asetuksista.",
   "3tYNDQ": "Vastaa viestiin",
   "RzWDqa": "Tutustu",
   "VkKicX": "Tyhjennä",
@@ -4999,13 +4997,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Muokkaa ALT-tekstiä, vastaus ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Muokkaa kuvan kuvausta (ALT-tekstiä)",
   "vcC7Qk": [
     "Päivitä mediasisältö, ",
@@ -5042,9 +5033,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Kyselyn vastaustyyli",
-  "GhK6X1": "Tekstivastaukset ja mediasisältöä valinnaisena",
-  "an4GKS": "Vain mediasisältövastaukset",
   "fYvzER": "Unohdit jotakin. Lisää vähintään yksi vastausvaihtoehto.",
   "HMrgcn": "Oletko varma?",
   "Wxa/j4": "Haluatko varmasti lopettaa? Kaikki tekemäsi muutokset häviävät, jos lopetat nyt.",
@@ -7515,8 +7503,6 @@
     ],
     ": esikatselu"
   ],
-  "GK2DmJ": "Toiminnot ovat nyt käytettävissä puhekanavilla mobiiliversiossa!",
-  "fhm5x8": "Toiminnot nyt mobiiliversiossa",
   "UXoQTk": "Tämä ominaisuus ei tällä hetkellä ole käytettävissä tällä käyttöjärjestelmällä",
   "z8EAJS": [
     "1–",
@@ -24465,7 +24451,6 @@
   "ZXxLQk": "Avaa keskustelu",
   "q5jLJC": "Avaa selaimessa",
   "wuRE8P": "Avaa linkki",
-  "3/IlR0": "Avaa asetukset",
   "U19GMz": "valinnainen",
   "+1H47u": "Asetukset",
   "iOWmmJ": "Tämä kanava ei ole kanavaluettelossasi.",
@@ -30194,19 +30179,6 @@
       "videoTitle"
     ],
     ", niin saat riittävästi profiilimerkin avaamiseen!"
-  ],
-  "yMsQ7e": [
-    "Katso ",
-    [
-      1,
-      "videoTitle"
-    ],
-    ". Palkinto siitä on ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     [

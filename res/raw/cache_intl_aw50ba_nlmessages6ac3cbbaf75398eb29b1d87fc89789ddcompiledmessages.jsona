@@ -2719,13 +2719,11 @@
   "gHD/nZ": "Uitgelezen? Neem een kijkje op andere kanalen.",
   "9cs5LC": "Verkennen",
   "Yi2xub": "Dit is een kanaal met alleen threads.",
-  "4NDJgI": "Chatgebaren",
   "uKZtCw": "Berichten en media versturen",
   "Jf0C/f": "Vegen van rechts naar links",
   "9BGJ1t": "Reageren op ledenlijstzoekopdracht",
   "6eXLcH": "Kanaaldetails tonen",
   "ohhhDA": "Zoeken, leden, media, vastgepinde berichten, threads en meer",
-  "QrTl5+": "Je kunt de manier van swipen wijzigen in Instellingen.",
   "3tYNDQ": "Bericht beantwoorden",
   "RzWDqa": "Check het snel",
   "VkKicX": "Wissen",
@@ -5005,13 +5003,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Alt. tekst aanpassen, antwoord ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Beschrijving afbeelding aanpassen (alt. tekst)",
   "vcC7Qk": [
     "Media updaten, ",
@@ -5048,9 +5039,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Antwoordstijl",
-  "GhK6X1": "Geschreven antwoorden met optionele media",
-  "an4GKS": "Alleen antwoorden in de vorm van media",
   "fYvzER": "Zul je altijd zien: je bent iets vergeten. Voeg minstens één antwoord toe.",
   "HMrgcn": "Weet je het zeker?",
   "Wxa/j4": "Weet je zeker dat je wilt vertrekken? Als je nu vertrekt, gaan alle gemaakte wijzigingen verloren.",
@@ -7510,8 +7498,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Je hebt nu mobiel toegang tot activiteiten op spraakkanalen!",
-  "fhm5x8": "Activiteiten op mobiel",
   "UXoQTk": "Deze feature is nog niet beschikbaar op dit besturingssysteem",
   "z8EAJS": [
     "1-",
@@ -24446,7 +24432,6 @@
   "ZXxLQk": "Chat openen",
   "q5jLJC": "Openen in browser",
   "wuRE8P": "Open link",
-  "3/IlR0": "Instellingen openen",
   "U19GMz": "optioneel",
   "+1H47u": "Opties",
   "iOWmmJ": "Dit kanaal staat niet op je kanaallijst.",
@@ -30166,19 +30151,6 @@
       "videoTitle"
     ],
     " en verdien genoeg om een profielbadge te ontgrendelen!"
-  ],
-  "yMsQ7e": [
-    "Kijk ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " om ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    " te winnen!"
   ],
   "g+InPD": [
     "Kijk de video om ",

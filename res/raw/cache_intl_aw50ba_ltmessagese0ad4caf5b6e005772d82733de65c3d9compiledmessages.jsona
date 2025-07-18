@@ -2790,13 +2790,11 @@
   "gHD/nZ": "Jau perskaitei? Peržiūrėk kitus kanalus.",
   "9cs5LC": "Panaršyk",
   "Yi2xub": "Tai tik gijoms skirtas kanalas.",
-  "4NDJgI": "Pokalbių gestai",
   "uKZtCw": "Siųsti žinutes ir medijas",
   "Jf0C/f": "Braukiama iš dešinės į kairę",
   "9BGJ1t": "Paieška atsakiusių narių sąraše",
   "6eXLcH": "Rodyti kanalo duomenis",
   "ohhhDA": "Paieška, nariai, medijos, prisegtos žinutės, gijos ir ne tik",
-  "QrTl5+": "Nustatymuose gali pakeisti, kas nutinka braukiant.",
   "3tYNDQ": "Atsakyti į žinutę",
   "RzWDqa": "Peržiūrėti",
   "VkKicX": "Išvalyti",
@@ -5139,14 +5137,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Redaguoti alternatyvų tekstą, ",
-    [
-      1,
-      "answerNumber"
-    ],
-    " atsakymas"
-  ],
   "w7x2t7": "Redaguoti vaizdo aprašą (alternatyvų tekstą)",
   "vcC7Qk": [
     "Atnaujinti mediją ",
@@ -5190,9 +5180,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Apklausos atsakymų stilius",
-  "GhK6X1": "Tekstiniai atsakymai su galimybe pridėti mediją",
-  "an4GKS": "Tik medijos atsakymai",
   "fYvzER": "Ups, šį tą pamiršai. Pridėk bent vieną atsakymą.",
   "HMrgcn": "Esi tikras (-a)?",
   "Wxa/j4": "Ar tikrai nori išeiti? Jei dabar išeisi, bus prarasti visi pakeitimai.",
@@ -7784,8 +7771,6 @@
     ],
     " peržiūra"
   ],
-  "GK2DmJ": "Dabar turi prieigą prie veiklų balso kanaluose mobiliuosiuose įrenginiuose!",
-  "fhm5x8": "Veiklos mobiliuosiuose įrenginiuose",
   "UXoQTk": "Šiuo metu šioje OS ši funkcija neprieinama",
   "z8EAJS": [
     "1-",
@@ -25257,7 +25242,6 @@
   "ZXxLQk": "Atidaryti pokalbį",
   "q5jLJC": "Atverti naršyklėje",
   "wuRE8P": "Atidaryti Nuorodą",
-  "3/IlR0": "Atidaryti nustatymus",
   "U19GMz": "neprivaloma",
   "+1H47u": "Nustatymai",
   "iOWmmJ": "Šio kanalo tavo kanalų sąraše nėra.",
@@ -31220,19 +31204,6 @@
       "videoTitle"
     ],
     " ir uždirbk tiek, kiek užteks profilio ženkleliui gauti!"
-  ],
-  "yMsQ7e": [
-    "Žiūrėk ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " ir laimėk ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Žiūrėk vaizdo įrašą ir laimėk ",

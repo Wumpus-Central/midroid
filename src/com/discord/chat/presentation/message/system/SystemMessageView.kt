@@ -107,14 +107,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
          var4 = false;
       }
 
-      val var20: StructurableText = var1.getContent();
-      if (var20 != null) {
-         val var14: ArrayList = this.accessories;
+      val var14: StructurableText = var1.getContent();
+      if (var14 != null) {
+         val var20: ArrayList = this.accessories;
          val var13: java.lang.String = var1.getId-3Eiw7ao();
-         val var8: Boolean = MessageKt.shouldAnimateEmoji(var1);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var1);
-         val var9: Boolean = var1.getShouldShowRoleDot();
-         val var11: Boolean = var1.getShouldShowRoleOnName();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var1);
+         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var1);
+         val var11: Boolean = var1.getShouldShowRoleDot();
+         val var9: Boolean = var1.getShouldShowRoleOnName();
          val var5: Int;
          if (var4) {
             var5 = 0;
@@ -138,14 +138,14 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
             var7 = ThemeManagerKt.getTheme().getTextNormal();
          }
 
-         var14.add(
+         var20.add(
             new MessageContentAccessory(
                var13,
-               var20,
-               var8,
+               var14,
                var10,
-               var9,
+               var8,
                var11,
+               var9,
                var5,
                var6,
                var7,
@@ -174,12 +174,12 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
 
       var12 = var1.getTotalMonthsSubscribed();
       if (var12 != null && var12.intValue() <= 1) {
-         val var23: ArrayList = this.accessories;
-         val var31: java.lang.String = var1.getId-3Eiw7ao();
+         val var31: ArrayList = this.accessories;
+         val var28: java.lang.String = var1.getId-3Eiw7ao();
          val var33: java.lang.String = var1.getUsername();
-         val var28: Context = this.binding.getRoot().getContext();
-         r.g(var28, "getContext(...)");
-         var23.add(new RoleSubscriptionPurchaseAccessory(var31, var33, MessageKt.avatarUrl(var1, var28), var3, false, null));
+         val var23: Context = this.binding.getRoot().getContext();
+         r.g(var23, "getContext(...)");
+         var31.add(new RoleSubscriptionPurchaseAccessory(var28, var33, MessageKt.avatarUrl(var1, var23), var3, false, null));
       }
 
       val var24: Sticker = var1.getSticker();
@@ -236,10 +236,8 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                   var1.getId-3Eiw7ao(),
                   var1.getReactions(),
                   var2.getCanAddNewReactions(),
-                  var2.getUseAddBurstReaction(),
                   var2.getAddReactionLabel(),
                   var2.getAddNewReactionAccessibilityLabel(),
-                  var2.getAddNewBurstReactionAccessibilityLabel(),
                   var2.getReactionsTheme(),
                   null,
                   false,
@@ -252,7 +250,7 @@ public class SystemMessageView  public constructor(context: Context, attrs: Attr
                   null,
                   null,
                   null,
-                  523776,
+                  130944,
                   null
                )
             );

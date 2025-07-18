@@ -2711,13 +2711,11 @@
   "gHD/nZ": "Ferdig med å lese? Sjekk andre kanaler.",
   "9cs5LC": "Utforsk",
   "Yi2xub": "Denne kanalen er kun for tråder.",
-  "4NDJgI": "Chat-bevegelser",
   "uKZtCw": "Send meldinger og media",
   "Jf0C/f": "Sveipe fra høyre til venstre",
   "9BGJ1t": "Svar på medlemslistesøk",
   "6eXLcH": "Vis kanalinfo",
   "ohhhDA": "Søk, medlemmer, medieinnhold, pins, tråder og annet",
-  "QrTl5+": "Du kan endre innstillingene for sveiping i Innstillinger.",
   "3tYNDQ": "Svar på melding",
   "RzWDqa": "Jeg vil prøve",
   "VkKicX": "Fjern",
@@ -4988,13 +4986,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Rediger skjermlesingstekst, svaralternativ ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Rediger bildebeskrivelse (skjermlesingstekst)",
   "vcC7Qk": [
     "Oppdater medieinnhold, ",
@@ -5031,9 +5022,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Svarstil for meningsmåling",
-  "GhK6X1": "Tekstsvar hvor medieinnhold er valgfritt",
-  "an4GKS": "Svar med kun medieinnhold",
   "fYvzER": "Du glemte visst noe. Du må ha minst ett svaralternativ.",
   "HMrgcn": "Er du sikker?",
   "Wxa/j4": "Er du sikker på at du vil avslutte? Hvis du avslutter nå, mister du alle endringene du har gjort.",
@@ -7497,8 +7485,6 @@
     ],
     " til å se ut"
   ],
-  "GK2DmJ": "Nå har du tilgang til Aktiviteter på mobil i talekanaler!",
-  "fhm5x8": "Aktiviteter på mobil",
   "UXoQTk": "Dette er foreløpig ikke tilgjengelig på dette OS-et",
   "z8EAJS": [
     "1–",
@@ -24373,7 +24359,6 @@
   "ZXxLQk": "Åpne chat",
   "q5jLJC": "Åpne i nettleser",
   "wuRE8P": "Åpne lenke",
-  "3/IlR0": "Åpne innstillingene",
   "U19GMz": "valgfritt",
   "+1H47u": "Valgmulighetene",
   "iOWmmJ": "Denne kanalen er ikke på kanallisten din.",
@@ -30096,19 +30081,6 @@
       "videoTitle"
     ],
     " og tjen nok til å låse opp et profilmerke!"
-  ],
-  "yMsQ7e": [
-    "Se ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " for å vinne ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Se videoen for å vinne ",

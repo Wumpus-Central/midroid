@@ -26,16 +26,16 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       var3.append(var2);
       var3.append(".replay");
       new File(var4, var3.toString()).delete();
-      val var6: java.lang.String = var1.toString();
-      val var9: StringBuilder = new StringBuilder();
-      var9.append(var2);
-      var9.append(".json");
-      new File(var6, var9.toString()).delete();
       var4 = var1.toString();
       var3 = new StringBuilder();
       var3.append(var2);
-      var3.append(".replay");
-      this.replayFile = new File(var4, var3.toString());
+      var3.append(".json");
+      new File(var4, var3.toString()).delete();
+      val var7: java.lang.String = var1.toString();
+      val var10: StringBuilder = new StringBuilder();
+      var10.append(var2);
+      var10.append(".replay");
+      this.replayFile = new File(var7, var10.toString());
       val var8: java.lang.String = var1.toString();
       val var5: StringBuilder = new StringBuilder();
       var5.append(var2);
@@ -97,10 +97,10 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {
-            val var13: java.lang.Throwable = var7;
+            val var14: java.lang.Throwable = var7;
 
             try {
-               throw var13;
+               throw var14;
             } catch (var6: java.lang.Throwable) {
                c.a(var12, var7);
             }

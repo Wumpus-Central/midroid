@@ -10,6 +10,6 @@ public final class j0 implements Function0 {
    public final Message k;
 
    public final Object invoke() {
-      return MessageView.a(this.j, this.k);
+      return MessageView.g(this.j, this.k);
    }
 }

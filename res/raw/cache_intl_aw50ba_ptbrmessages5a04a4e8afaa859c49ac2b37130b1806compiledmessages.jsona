@@ -2724,13 +2724,11 @@
   "gHD/nZ": "Acabou de ler? Confira outros canais.",
   "9cs5LC": "Explore",
   "Yi2xub": "Este é um canal de tópicos apenas.",
-  "4NDJgI": "Gestos de conversa",
   "uKZtCw": "Envie mensagens e mídia",
   "Jf0C/f": "Deslizar da direita para a esquerda",
   "9BGJ1t": "Buscar na lista de membros de respostas",
   "6eXLcH": "Exibir detalhes do canal",
   "ohhhDA": "Buscar, membros, mídia, mensagens fixadas, tópicos e muito mais",
-  "QrTl5+": "Você pode mudar o comportamento do deslizamento nas configurações.",
   "3tYNDQ": "Responder à mensagem",
   "RzWDqa": "Confira",
   "VkKicX": "Limpar",
@@ -4999,13 +4997,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Editar texto alternativo, responder ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Editar descrição da imagem (texto alternativo)",
   "vcC7Qk": [
     "Atualize a mídia, ",
@@ -5042,9 +5033,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Estilo das respostas da enquete",
-  "GhK6X1": "Respostas em texto com mídia opcional",
-  "an4GKS": "Resposta em mídia apenas",
   "fYvzER": "Ops, você esqueceu algo. Por favor, adicione ao menos uma resposta.",
   "HMrgcn": "Você tem certeza?",
   "Wxa/j4": "Você tem certeza que quer sair? Qualquer alteração feita será perdida se você sair agora.",
@@ -7509,8 +7497,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Agora você tem acesso às Atividades em dispositivos móveis nos canais de voz!",
-  "fhm5x8": "Atividades em dispositivos móveis",
   "UXoQTk": "Este recurso não está disponível neste sistema operacional no momento",
   "z8EAJS": [
     "1-",
@@ -24432,7 +24418,6 @@
   "ZXxLQk": "Abrir chat",
   "q5jLJC": "Abrir no navegador",
   "wuRE8P": "Abrir link",
-  "3/IlR0": "Abrir configurações",
   "U19GMz": "opcional",
   "+1H47u": "Opções",
   "iOWmmJ": "Este canal não está na sua lista de canais.",
@@ -30182,19 +30167,6 @@
       "videoTitle"
     ],
     " e ganhe o suficiente para desbloquear uma insígnia de perfil!"
-  ],
-  "yMsQ7e": [
-    "Assista ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " para ganhar ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Assista ao vídeo para ganhar ",

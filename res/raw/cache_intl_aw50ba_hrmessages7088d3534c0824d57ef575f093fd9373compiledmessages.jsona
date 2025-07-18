@@ -2795,13 +2795,11 @@
   "gHD/nZ": "Čitanje gotovo? Pogledaj druge kanale.",
   "9cs5LC": "Istraži",
   "Yi2xub": "Ovo je kanal predviđen samo za niti.",
-  "4NDJgI": "Chat geste",
   "uKZtCw": "Šalji poruke i medijske sadržaje",
   "Jf0C/f": "Povlačenje zdesna ulijevo",
   "9BGJ1t": "Odgovor na pretraživanje popisa članova",
   "6eXLcH": "Prikaži pojedinosti kanala",
   "ohhhDA": "Traženje, članovi, mediji, prikvačene poruke, niti i još toga",
-  "QrTl5+": "Ponašanje koje ide uz povlačenje prsta možeš promijeniti u postavkama.",
   "3tYNDQ": "Odgovori na poruku",
   "RzWDqa": "Pogledaj",
   "VkKicX": "Obriši",
@@ -5114,13 +5112,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Uredi alt tekst, odgovor ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Uredi opis slike (Alt tekst)",
   "vcC7Qk": [
     "Ažuriraj medijski sadržaj, ",
@@ -5163,9 +5154,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Stil odgovora ankete",
-  "GhK6X1": "Tekstualni odgovori s dopuštenim medijskim sadržajem",
-  "an4GKS": "Samo odgovori koji imaju medijski sadržaj",
   "fYvzER": "Ups, nešto si zaboravio/la. Moraš dodati barem jedan odgovor.",
   "HMrgcn": "Sigurno to želiš?",
   "Wxa/j4": "Želiš li sigurno izaći? Sve napravljene promjene će se izgubiti ako sada izađeš.",
@@ -7724,8 +7712,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Od sada imaš pristup Aktivnostima na mobilnoj verziji u glasovnim kanalima!",
-  "fhm5x8": "Aktivnosti na mobilnom uređaju",
   "UXoQTk": "Ova značajka trenutačno nije dostupna u ovom operativnom sustavu",
   "z8EAJS": [
     "1 - ",
@@ -25158,7 +25144,6 @@
   "ZXxLQk": "Otvori Chat",
   "q5jLJC": "Otvori u pregledniku",
   "wuRE8P": "Otvori link",
-  "3/IlR0": "Otvori Postavke",
   "U19GMz": "neobavezno",
   "+1H47u": "Opcije",
   "iOWmmJ": "Ovaj kanal nije na tvojem popisu kanala.",
@@ -31215,19 +31200,6 @@
       "videoTitle"
     ],
     " i zaradi dovoljno da otključaš badge profila!"
-  ],
-  "yMsQ7e": [
-    "Pogledaj ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " i osvojit ćeš ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Pogledaj video i osvojit ćeš ",

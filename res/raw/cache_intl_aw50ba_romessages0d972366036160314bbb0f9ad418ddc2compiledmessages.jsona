@@ -2707,13 +2707,11 @@
   "gHD/nZ": "Ai terminat de citit? Vezi celelalte canale.",
   "9cs5LC": "Explorează",
   "Yi2xub": "Acest canal permite doar fire.",
-  "4NDJgI": "Gesturi în chat",
   "uKZtCw": "Trimite mesaje și fișiere media",
   "Jf0C/f": "Glisare de la dreapta la stânga",
   "9BGJ1t": "Caută în lista de membri care au răspuns",
   "6eXLcH": "Afișează detaliile canalului",
   "ohhhDA": "Căutare, membri, fișiere, fixări, fire și nu numai",
-  "QrTl5+": "Poți schimba efectul gestului de tragere din Setări.",
   "3tYNDQ": "Răspunde la mesaj",
   "RzWDqa": "Încearcă și tu",
   "VkKicX": "Șterge",
@@ -4979,13 +4977,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Editare text alternativ, răspunsul ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Editează descrierea imaginii (text alternativ)",
   "vcC7Qk": [
     "Actualizare conținut media, ",
@@ -5022,9 +5013,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Stilul de răspuns al sondajului",
-  "GhK6X1": "Răspunsuri text cu conținut media opțional",
-  "an4GKS": "Doar răspunsuri cu conținut media",
   "fYvzER": "Ups, ai uitat ceva! Adaugă cel puțin un răspuns.",
   "HMrgcn": "Sigur?",
   "Wxa/j4": "Sigur vrei să ieși? Schimbările făcute se vor pierde dacă ieși acum.",
@@ -7479,8 +7467,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Ai acum acces la Activități pe mobil în canalele de voce!",
-  "fhm5x8": "Activități pe mobil",
   "UXoQTk": "Această caracteristică nu e disponibilă în prezent pe acest OS",
   "z8EAJS": [
     "1-",
@@ -24406,7 +24392,6 @@
   "ZXxLQk": "Deschide chat-ul",
   "q5jLJC": "Deschide în browser",
   "wuRE8P": "Deschide link-ul",
-  "3/IlR0": "Accesează setările",
   "U19GMz": "opțional",
   "+1H47u": "Opțiuni",
   "iOWmmJ": "Acest canal nu se află în lista ta de canale.",
@@ -30133,19 +30118,6 @@
       "videoTitle"
     ],
     " și câștigă suficient pentru a debloca o insignă de profil!"
-  ],
-  "yMsQ7e": [
-    "Urmărește ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " pentru a câștiga ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Urmărește clipul video pentru a câștiga ",

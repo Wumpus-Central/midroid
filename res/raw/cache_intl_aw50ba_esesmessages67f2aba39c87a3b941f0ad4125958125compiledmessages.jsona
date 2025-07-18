@@ -2735,13 +2735,11 @@
   "gHD/nZ": "¿Has terminado de leer? Echa un vistazo a otros canales.",
   "9cs5LC": "Explorar",
   "Yi2xub": "Este es un canal solo para hilos.",
-  "4NDJgI": "Gestos del chat",
   "uKZtCw": "Envía mensajes y contenido multimedia",
   "Jf0C/f": "Deslizar de derecha a izquierda",
   "9BGJ1t": "Contestar en búsqueda de lista de miembros",
   "6eXLcH": "Mostrar detalles del canal",
   "ohhhDA": "Búsqueda, miembros, contenido multimedia, mensajes fijados, hilos y más",
-  "QrTl5+": "Puedes cambiar el comportamiento del deslizamiento en los ajustes.",
   "3tYNDQ": "Responder al mensaje",
   "RzWDqa": "Echa un vistazo",
   "VkKicX": "Borrar",
@@ -5028,13 +5026,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Editar texto alternativo, respuesta ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Editar la descripción de la imagen (texto alternativo)",
   "vcC7Qk": [
     "Actualizar contenido multimedia, ",
@@ -5048,9 +5039,6 @@
       "answerNumber"
     ]
   ],
-  "e9hWx8": "Tipo de respuesta de la encuesta",
-  "GhK6X1": "Respuestas de texto con contenido multimedia opcional",
-  "an4GKS": "Solo respuestas de contenido multimedia",
   "fYvzER": "Uy, te has olvidado de algo. Añade al menos una respuesta.",
   "HMrgcn": "¿Seguro?",
   "Wxa/j4": "¿Seguro que quieres salir? Cualquier cambio que hayas hecho se perderá si sales ahora.",
@@ -7502,8 +7490,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "¡Ahora tienes acceso a las Actividades desde tu móvil en los canales de voz!",
-  "fhm5x8": "Actividades para móvil",
   "UXoQTk": "Está función no está disponible actualmente para este sistema operativo",
   "z8EAJS": [
     "1-",
@@ -24438,7 +24424,6 @@
   "ZXxLQk": "Abrir chat",
   "q5jLJC": "Abrir en navegador",
   "wuRE8P": "Abrir enlace",
-  "3/IlR0": "Abrir ajustes",
   "U19GMz": "opcional",
   "+1H47u": "Opciones",
   "iOWmmJ": "Este canal no está en tu lista de canales.",
@@ -30199,19 +30184,6 @@
       "videoTitle"
     ],
     " y gana lo suficiente para desbloquear una insignia de perfil!"
-  ],
-  "yMsQ7e": [
-    "¡Ve ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " para ganar ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "¡Ve el vídeo para ganar ",

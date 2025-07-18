@@ -20,7 +20,6 @@ public data class MessageRow(index: Int,
       canAddNewReactions: Boolean? = null,
       addReactionLabel: String? = null,
       addNewReactionAccessibilityLabel: String? = null,
-      addNewBurstReactionAccessibilityLabel: String? = null,
       reactionsTheme: ReactionsTheme? = null,
       renderContentOnly: Boolean = false,
       messageFrame: MessageFrame? = null,
@@ -28,7 +27,7 @@ public data class MessageRow(index: Int,
       truncation: Truncation? = null,
       backgroundHighlight: BackgroundHighlight? = null,
       swipeActions: SwipeActionsType = SwipeActionsType.NONE,
-      contextType: MessageContextType? = ...,
+      contextType: MessageContextType? = null,
       replyAccessibilityLabel: String? = ...,
       forwardAccessibilityLabel: String? = ...,
       threadAccessibilityLabel: String? = null
@@ -46,7 +45,6 @@ public data class MessageRow(index: Int,
    public final val canAddNewReactions: Boolean?
    public final val addReactionLabel: String?
    public final val addNewReactionAccessibilityLabel: String?
-   public final val addNewBurstReactionAccessibilityLabel: String?
    public final val reactionsTheme: ReactionsTheme?
    public final val renderContentOnly: Boolean
    public final val messageFrame: MessageFrame?
@@ -62,7 +60,7 @@ public data class MessageRow(index: Int,
    init {
       r.h(var2, "changeType");
       r.h(var4, "message");
-      r.h(var15, "swipeActions");
+      r.h(var14, "swipeActions");
       super(null);
       this.index = var1;
       this.changeType = var2;
@@ -71,61 +69,56 @@ public data class MessageRow(index: Int,
       this.canAddNewReactions = var5;
       this.addReactionLabel = var6;
       this.addNewReactionAccessibilityLabel = var7;
-      this.addNewBurstReactionAccessibilityLabel = var8;
-      this.reactionsTheme = var9;
-      this.renderContentOnly = var10;
-      this.messageFrame = var11;
-      this.reactTag = var12;
-      this.truncation = var13;
-      this.backgroundHighlight = var14;
-      this.swipeActions = var15;
-      this.contextType = var16;
-      this.replyAccessibilityLabel = var17;
-      this.forwardAccessibilityLabel = var18;
-      this.threadAccessibilityLabel = var19;
+      this.reactionsTheme = var8;
+      this.renderContentOnly = var9;
+      this.messageFrame = var10;
+      this.reactTag = var11;
+      this.truncation = var12;
+      this.backgroundHighlight = var13;
+      this.swipeActions = var14;
+      this.contextType = var15;
+      this.replyAccessibilityLabel = var16;
+      this.forwardAccessibilityLabel = var17;
+      this.threadAccessibilityLabel = var18;
    }
 
    public operator fun component1(): Int {
       return this.index;
    }
 
-   public operator fun component10(): Boolean {
-      return this.renderContentOnly;
-   }
-
-   public operator fun component11(): MessageFrame? {
+   public operator fun component10(): MessageFrame? {
       return this.messageFrame;
    }
 
-   public operator fun component12(): Int? {
+   public operator fun component11(): Int? {
       return this.reactTag;
    }
 
-   public operator fun component13(): Truncation? {
+   public operator fun component12(): Truncation? {
       return this.truncation;
    }
 
-   public operator fun component14(): BackgroundHighlight? {
+   public operator fun component13(): BackgroundHighlight? {
       return this.backgroundHighlight;
    }
 
-   public operator fun component15(): SwipeActionsType {
+   public operator fun component14(): SwipeActionsType {
       return this.swipeActions;
    }
 
-   public operator fun component16(): MessageContextType? {
+   public operator fun component15(): MessageContextType? {
       return this.contextType;
    }
 
-   public operator fun component17(): String? {
+   public operator fun component16(): String? {
       return this.replyAccessibilityLabel;
    }
 
-   public operator fun component18(): String? {
+   public operator fun component17(): String? {
       return this.forwardAccessibilityLabel;
    }
 
-   public operator fun component19(): String? {
+   public operator fun component18(): String? {
       return this.threadAccessibilityLabel;
    }
 
@@ -153,12 +146,12 @@ public data class MessageRow(index: Int,
       return this.addNewReactionAccessibilityLabel;
    }
 
-   public operator fun component8(): String? {
-      return this.addNewBurstReactionAccessibilityLabel;
+   public operator fun component8(): ReactionsTheme? {
+      return this.reactionsTheme;
    }
 
-   public operator fun component9(): ReactionsTheme? {
-      return this.reactionsTheme;
+   public operator fun component9(): Boolean {
+      return this.renderContentOnly;
    }
 
    public fun copy(
@@ -169,7 +162,6 @@ public data class MessageRow(index: Int,
       canAddNewReactions: Boolean? = var0.canAddNewReactions,
       addReactionLabel: String? = var0.addReactionLabel,
       addNewReactionAccessibilityLabel: String? = var0.addNewReactionAccessibilityLabel,
-      addNewBurstReactionAccessibilityLabel: String? = var0.addNewBurstReactionAccessibilityLabel,
       reactionsTheme: ReactionsTheme? = var0.reactionsTheme,
       renderContentOnly: Boolean = var0.renderContentOnly,
       messageFrame: MessageFrame? = var0.messageFrame,
@@ -184,8 +176,8 @@ public data class MessageRow(index: Int,
    ): MessageRow {
       r.h(var2, "changeType");
       r.h(var4, "message");
-      r.h(var15, "swipeActions");
-      return new MessageRow(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19);
+      r.h(var14, "swipeActions");
+      return new MessageRow(var1, var2, var3, var4, var5, var6, var7, var8, var9, var10, var11, var12, var13, var14, var15, var16, var17, var18);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -208,8 +200,6 @@ public data class MessageRow(index: Int,
          } else if (!r.c(this.addReactionLabel, var1.addReactionLabel)) {
             return false;
          } else if (!r.c(this.addNewReactionAccessibilityLabel, var1.addNewReactionAccessibilityLabel)) {
-            return false;
-         } else if (!r.c(this.addNewBurstReactionAccessibilityLabel, var1.addNewBurstReactionAccessibilityLabel)) {
             return false;
          } else if (!r.c(this.reactionsTheme, var1.reactionsTheme)) {
             return false;
@@ -238,9 +228,9 @@ public data class MessageRow(index: Int,
    }
 
    public override fun hashCode(): Int {
-      val var16: Int = Integer.hashCode(this.index);
+      val var14: Int = Integer.hashCode(this.index);
       val var15: Int = this.changeType.hashCode();
-      var var14: Int = 0;
+      var var13: Int = 0;
       val var1: Int;
       if (this.jumped == null) {
          var1 = 0;
@@ -248,7 +238,7 @@ public data class MessageRow(index: Int,
          var1 = this.jumped.hashCode();
       }
 
-      val var17: Int = this.message.hashCode();
+      val var16: Int = this.message.hashCode();
       val var2: Int;
       if (this.canAddNewReactions == null) {
          var2 = 0;
@@ -271,72 +261,65 @@ public data class MessageRow(index: Int,
       }
 
       val var5: Int;
-      if (this.addNewBurstReactionAccessibilityLabel == null) {
+      if (this.reactionsTheme == null) {
          var5 = 0;
       } else {
-         var5 = this.addNewBurstReactionAccessibilityLabel.hashCode();
+         var5 = this.reactionsTheme.hashCode();
       }
 
+      val var17: Int = java.lang.Boolean.hashCode(this.renderContentOnly);
       val var6: Int;
-      if (this.reactionsTheme == null) {
+      if (this.messageFrame == null) {
          var6 = 0;
       } else {
-         var6 = this.reactionsTheme.hashCode();
+         var6 = this.messageFrame.hashCode();
       }
 
-      val var18: Int = java.lang.Boolean.hashCode(this.renderContentOnly);
       val var7: Int;
-      if (this.messageFrame == null) {
+      if (this.reactTag == null) {
          var7 = 0;
       } else {
-         var7 = this.messageFrame.hashCode();
+         var7 = this.reactTag.hashCode();
       }
 
       val var8: Int;
-      if (this.reactTag == null) {
+      if (this.truncation == null) {
          var8 = 0;
       } else {
-         var8 = this.reactTag.hashCode();
+         var8 = this.truncation.hashCode();
       }
 
       val var9: Int;
-      if (this.truncation == null) {
+      if (this.backgroundHighlight == null) {
          var9 = 0;
       } else {
-         var9 = this.truncation.hashCode();
+         var9 = this.backgroundHighlight.hashCode();
       }
 
+      val var18: Int = this.swipeActions.hashCode();
       val var10: Int;
-      if (this.backgroundHighlight == null) {
+      if (this.contextType == null) {
          var10 = 0;
       } else {
-         var10 = this.backgroundHighlight.hashCode();
+         var10 = this.contextType.hashCode();
       }
 
-      val var19: Int = this.swipeActions.hashCode();
       val var11: Int;
-      if (this.contextType == null) {
+      if (this.replyAccessibilityLabel == null) {
          var11 = 0;
       } else {
-         var11 = this.contextType.hashCode();
+         var11 = this.replyAccessibilityLabel.hashCode();
       }
 
       val var12: Int;
-      if (this.replyAccessibilityLabel == null) {
+      if (this.forwardAccessibilityLabel == null) {
          var12 = 0;
       } else {
-         var12 = this.replyAccessibilityLabel.hashCode();
-      }
-
-      val var13: Int;
-      if (this.forwardAccessibilityLabel == null) {
-         var13 = 0;
-      } else {
-         var13 = this.forwardAccessibilityLabel.hashCode();
+         var12 = this.forwardAccessibilityLabel.hashCode();
       }
 
       if (this.threadAccessibilityLabel != null) {
-         var14 = this.threadAccessibilityLabel.hashCode();
+         var13 = this.threadAccessibilityLabel.hashCode();
       }
 
       return (
@@ -355,124 +338,117 @@ public data class MessageRow(index: Int,
                                                                                                                            (
                                                                                                                                     (
                                                                                                                                              (
-                                                                                                                                                      (
-                                                                                                                                                               var16
-                                                                                                                                                                     * 31
-                                                                                                                                                                  + var15
-                                                                                                                                                            )
+                                                                                                                                                      var14
                                                                                                                                                             * 31
-                                                                                                                                                         + var1
+                                                                                                                                                         + var15
                                                                                                                                                    )
                                                                                                                                                    * 31
-                                                                                                                                                + var17
+                                                                                                                                                + var1
                                                                                                                                           )
                                                                                                                                           * 31
-                                                                                                                                       + var2
+                                                                                                                                       + var16
                                                                                                                                  )
                                                                                                                                  * 31
-                                                                                                                              + var3
+                                                                                                                              + var2
                                                                                                                         )
                                                                                                                         * 31
-                                                                                                                     + var4
+                                                                                                                     + var3
                                                                                                                )
                                                                                                                * 31
-                                                                                                            + var5
+                                                                                                            + var4
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var6
+                                                                                                   + var5
                                                                                              )
                                                                                              * 31
-                                                                                          + var18
+                                                                                          + var17
                                                                                     )
                                                                                     * 31
-                                                                                 + var7
+                                                                                 + var6
                                                                            )
                                                                            * 31
-                                                                        + var8
+                                                                        + var7
                                                                   )
                                                                   * 31
-                                                               + var9
+                                                               + var8
                                                          )
                                                          * 31
-                                                      + var10
+                                                      + var9
                                                 )
                                                 * 31
-                                             + var19
+                                             + var18
                                        )
                                        * 31
-                                    + var11
+                                    + var10
                               )
                               * 31
-                           + var12
+                           + var11
                      )
                      * 31
-                  + var13
+                  + var12
             )
             * 31
-         + var14;
+         + var13;
    }
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var16: java.lang.Boolean = this.jumped;
-      val var18: MessageBase = this.message;
-      val var13: java.lang.Boolean = this.canAddNewReactions;
-      val var6: java.lang.String = this.addReactionLabel;
-      val var14: java.lang.String = this.addNewReactionAccessibilityLabel;
-      val var7: java.lang.String = this.addNewBurstReactionAccessibilityLabel;
-      val var19: ReactionsTheme = this.reactionsTheme;
+      val var7: ChangeType = this.changeType;
+      val var10: java.lang.Boolean = this.jumped;
+      val var19: MessageBase = this.message;
+      val var9: java.lang.Boolean = this.canAddNewReactions;
+      val var3: java.lang.String = this.addReactionLabel;
+      val var11: java.lang.String = this.addNewReactionAccessibilityLabel;
+      val var15: ReactionsTheme = this.reactionsTheme;
       val var2: Boolean = this.renderContentOnly;
-      val var10: MessageFrame = this.messageFrame;
-      val var4: Int = this.reactTag;
-      val var5: Truncation = this.truncation;
-      val var12: BackgroundHighlight = this.backgroundHighlight;
-      val var15: SwipeActionsType = this.swipeActions;
-      val var9: MessageContextType = this.contextType;
-      val var11: java.lang.String = this.replyAccessibilityLabel;
-      val var17: java.lang.String = this.forwardAccessibilityLabel;
-      val var8: java.lang.String = this.threadAccessibilityLabel;
-      val var20: StringBuilder = new StringBuilder();
-      var20.append("MessageRow(index=");
-      var20.append(var1);
-      var20.append(", changeType=");
-      var20.append(var3);
-      var20.append(", jumped=");
-      var20.append(var16);
-      var20.append(", message=");
-      var20.append(var18);
-      var20.append(", canAddNewReactions=");
-      var20.append(var13);
-      var20.append(", addReactionLabel=");
-      var20.append(var6);
-      var20.append(", addNewReactionAccessibilityLabel=");
-      var20.append(var14);
-      var20.append(", addNewBurstReactionAccessibilityLabel=");
-      var20.append(var7);
-      var20.append(", reactionsTheme=");
-      var20.append(var19);
-      var20.append(", renderContentOnly=");
-      var20.append(var2);
-      var20.append(", messageFrame=");
-      var20.append(var10);
-      var20.append(", reactTag=");
-      var20.append(var4);
-      var20.append(", truncation=");
-      var20.append(var5);
-      var20.append(", backgroundHighlight=");
-      var20.append(var12);
-      var20.append(", swipeActions=");
-      var20.append(var15);
-      var20.append(", contextType=");
-      var20.append(var9);
-      var20.append(", replyAccessibilityLabel=");
-      var20.append(var11);
-      var20.append(", forwardAccessibilityLabel=");
-      var20.append(var17);
-      var20.append(", threadAccessibilityLabel=");
-      var20.append(var8);
-      var20.append(")");
-      return var20.toString();
+      val var8: MessageFrame = this.messageFrame;
+      val var18: Int = this.reactTag;
+      val var13: Truncation = this.truncation;
+      val var17: BackgroundHighlight = this.backgroundHighlight;
+      val var6: SwipeActionsType = this.swipeActions;
+      val var5: MessageContextType = this.contextType;
+      val var4: java.lang.String = this.replyAccessibilityLabel;
+      val var16: java.lang.String = this.forwardAccessibilityLabel;
+      val var14: java.lang.String = this.threadAccessibilityLabel;
+      val var12: StringBuilder = new StringBuilder();
+      var12.append("MessageRow(index=");
+      var12.append(var1);
+      var12.append(", changeType=");
+      var12.append(var7);
+      var12.append(", jumped=");
+      var12.append(var10);
+      var12.append(", message=");
+      var12.append(var19);
+      var12.append(", canAddNewReactions=");
+      var12.append(var9);
+      var12.append(", addReactionLabel=");
+      var12.append(var3);
+      var12.append(", addNewReactionAccessibilityLabel=");
+      var12.append(var11);
+      var12.append(", reactionsTheme=");
+      var12.append(var15);
+      var12.append(", renderContentOnly=");
+      var12.append(var2);
+      var12.append(", messageFrame=");
+      var12.append(var8);
+      var12.append(", reactTag=");
+      var12.append(var18);
+      var12.append(", truncation=");
+      var12.append(var13);
+      var12.append(", backgroundHighlight=");
+      var12.append(var17);
+      var12.append(", swipeActions=");
+      var12.append(var6);
+      var12.append(", contextType=");
+      var12.append(var5);
+      var12.append(", replyAccessibilityLabel=");
+      var12.append(var4);
+      var12.append(", forwardAccessibilityLabel=");
+      var12.append(var16);
+      var12.append(", threadAccessibilityLabel=");
+      var12.append(var14);
+      var12.append(")");
+      return var12.toString();
    }
 
    public companion object {

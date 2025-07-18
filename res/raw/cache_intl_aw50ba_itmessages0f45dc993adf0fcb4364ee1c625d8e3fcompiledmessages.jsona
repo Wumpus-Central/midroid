@@ -2711,13 +2711,11 @@
   "gHD/nZ": "Hai già letto tutto? Dai un'occhiata agli altri canali.",
   "9cs5LC": "Esplora",
   "Yi2xub": "Questo è un canale solo per thread.",
-  "4NDJgI": "Gesti chat",
   "uKZtCw": "Invia messaggi e media",
   "Jf0C/f": "Scorri da destra a sinistra",
   "9BGJ1t": "Cerca per rispondere a Lista dei membri",
   "6eXLcH": "Mostra i dettagli del canale",
   "ohhhDA": "Cerca, membri, contenuti multimediali, messaggi attaccati, thread e altro ancora",
-  "QrTl5+": "Puoi cambiare il comportamento dello scorrimento in Impostazioni.",
   "3tYNDQ": "Rispondi al messaggio",
   "RzWDqa": "Dai un'occhiata",
   "VkKicX": "Cancella",
@@ -5000,13 +4998,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Modifica testo alternativo, risposta ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Modifica descrizione immagine (Testo alternativo)",
   "vcC7Qk": [
     "Aggiorna media, ",
@@ -5043,9 +5034,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Stile di risposta al sondaggio",
-  "GhK6X1": "Risposte testuali con media opzionali",
-  "an4GKS": "Risposte con soli media",
   "fYvzER": "Ops, hai dimenticato qualcosa. Aggiungi almeno una risposta.",
   "HMrgcn": "Confermi?",
   "Wxa/j4": "Vuoi davvero uscire? Se esci ora, tutte le modifiche effettuate andranno perse.",
@@ -7514,8 +7502,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Hai ora accesso alle Attività su dispositivi mobili nei canali vocali!",
-  "fhm5x8": "Attività su dispositivo mobile",
   "UXoQTk": "Al momento, questa funzionalità non è disponibile su questo sistema operativo",
   "z8EAJS": [
     "1-",
@@ -24415,7 +24401,6 @@
   "ZXxLQk": "Apri chat",
   "q5jLJC": "Apri nel browser",
   "wuRE8P": "Apri il link",
-  "3/IlR0": "Apri le impostazioni",
   "U19GMz": "facoltativo",
   "+1H47u": "Opzioni",
   "iOWmmJ": "Questo canale non è nella tua lista canali.",
@@ -30189,19 +30174,6 @@
       "videoTitle"
     ],
     " e guadagna abbastanza per sbloccare un badge del profilo!"
-  ],
-  "yMsQ7e": [
-    "Guarda ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " per vincere ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Guarda il video per vincere ",

@@ -2728,13 +2728,11 @@
   "gHD/nZ": "Færdig med at læse? Tjek andre kanaler.",
   "9cs5LC": "Udforsk",
   "Yi2xub": "Dette er en kanal kun for tråde.",
-  "4NDJgI": "Chat-gestus",
   "uKZtCw": "Send beskeder og medier",
   "Jf0C/f": "Stryg fra højre mod venstre",
   "9BGJ1t": "Søg blandt svar fra medlemsliste",
   "6eXLcH": "Vis kanaloplysninger",
   "ohhhDA": "Søg, medlemmer, medier, fastgørelser, tråde og mere",
-  "QrTl5+": "Du kan ændre strygeindstillingen i Indstillinger.",
   "3tYNDQ": "Svar på besked",
   "RzWDqa": "Tjek det ud",
   "VkKicX": "Ryd",
@@ -5011,13 +5009,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Redigér alt. tekst, vælg ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Redigér billedbeskrivelse (alt. tekst)",
   "vcC7Qk": [
     "Opdatér medier, ",
@@ -5054,9 +5045,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Afstemningens svarstil",
-  "GhK6X1": "Tekstsvar med valgfri medier",
-  "an4GKS": "Kun mediesvar",
   "fYvzER": "Hovsa, du glemte noget. Tilføj venligst mindst ét svar.",
   "HMrgcn": "Er du sikker?",
   "Wxa/j4": "Er du sikker på, at du vil afslutte? Eventuelle ændringer går tabt, hvis du afslutter nu.",
@@ -7520,8 +7508,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Du har nu adgang til aktiviteter på mobilen i talekanaler!",
-  "fhm5x8": "Aktiviteter på mobil",
   "UXoQTk": "Denne funktion er på nuværende tidspunkt ikke tilgængelig på dette operativsystem",
   "z8EAJS": [
     "1-",
@@ -24534,7 +24520,6 @@
   "ZXxLQk": "Åbn chat",
   "q5jLJC": "Åbn i browser",
   "wuRE8P": "Åbn link",
-  "3/IlR0": "Åbn Indstillinger",
   "U19GMz": "valgfri",
   "+1H47u": "Valgmuligheder",
   "iOWmmJ": "Kanalen er ikke på din kanalliste.",
@@ -30277,19 +30262,6 @@
       "videoTitle"
     ],
     ", og optjen nok til at låse op for et profilemblem!"
-  ],
-  "yMsQ7e": [
-    "Se ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " for at vinde ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Se videoen for at vinde ",

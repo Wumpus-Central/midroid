@@ -18,7 +18,6 @@ import kotlin.jvm.internal.r
 
 public class ShortcutsFlexbox  public constructor(context: Context, attrs: AttributeSet? = null) : FlexboxLayout {
    private final val addReactionView: AddReactionView
-   private final val addBurstReactionView: AddReactionView
    private final val shortcutsView: FlexboxLayout
    private final val replyView: AddReactionView
    private final val forwardView: AddReactionView
@@ -33,7 +32,6 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       r.h(var1, "context");
       super(var1, var2);
       this.addReactionView = new AddReactionView(var1, null, 2, null);
-      this.addBurstReactionView = new AddReactionView(var1, null, 2, null);
       this.shortcutsView = new FlexboxLayout(var1);
       this.replyView = new AddReactionView(var1, null, 2, null);
       this.forwardView = new AddReactionView(var1, null, 2, null);
@@ -54,7 +52,6 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       this.forwardView.setVisibility(0);
       this.threadView.setVisibility(0);
       this.shortcutsView.addView(this.addReactionView);
-      this.shortcutsView.addView(this.addBurstReactionView);
       this.shortcutsView.addView(this.replyView);
       this.shortcutsView.addView(this.forwardView);
       this.shortcutsView.addView(this.threadView);
@@ -142,13 +139,13 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    @JvmStatic
-   fun `setReactions$lambda$1`(var0: View) {
+   fun `setReactions$lambda$1`(var0: ReactionView.Reaction): Unit {
+      r.h(var0, "<unused var>");
+      return Unit.a;
    }
 
    @JvmStatic
-   fun `setReactions$lambda$2`(var0: ReactionView.Reaction): Unit {
-      r.h(var0, "<unused var>");
-      return Unit.a;
+   fun `setReactions$lambda$2`(var0: View) {
    }
 
    @JvmStatic
@@ -160,16 +157,12 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    }
 
    @JvmStatic
-   fun `setReactions$lambda$5`(var0: View) {
-   }
-
-   @JvmStatic
-   fun `setReactions$lambda$8$lambda$6`(var0: Function1, var1: ReactionView.Reaction, var2: View) {
+   fun `setReactions$lambda$7$lambda$5`(var0: Function1, var1: ReactionView.Reaction, var2: View) {
       var0.invoke(var1);
    }
 
    @JvmStatic
-   fun `setReactions$lambda$8$lambda$7`(var0: Function1, var1: ReactionView.Reaction, var2: View): Boolean {
+   fun `setReactions$lambda$7$lambda$6`(var0: Function1, var1: ReactionView.Reaction, var2: View): Boolean {
       var0.invoke(var1);
       return true;
    }
@@ -185,22 +178,19 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
    public fun setReactions(
       reactions: List<Reaction>,
       canAddNewReactions: Boolean,
-      canAddNewBurstReactions: Boolean,
       addReactionLabel: String,
       addNewReactionAccessibilityLabel: String,
-      addNewBurstReactionAccessibilityLabel: String,
       reactionsTheme: ReactionsTheme?,
-      onAddReactionClick: OnClickListener = new d(),
-      onAddBurstReactionClick: OnClickListener = new e(),
+      onAddReactionClick: OnClickListener = new f(),
       onReactionClick: (Reaction) -> Unit,
-      onReactionLongPress: (Reaction) -> Unit = new f(),
+      onReactionLongPress: (Reaction) -> Unit = new g(),
       theme: DiscordTheme? = null,
       showReactionShortcut: Boolean = false,
       showReplyShortcut: Boolean = false,
       showForwardShortcut: Boolean = false,
-      showThreadShortcut: Boolean = ...,
-      shortcutsEnabled: Boolean = ...,
-      onReplyClick: OnClickListener = ...,
+      showThreadShortcut: Boolean = false,
+      shortcutsEnabled: Boolean = false,
+      onReplyClick: OnClickListener = new h(),
       onForwardClick: OnClickListener = ...,
       onThreadClick: OnClickListener = ...,
       replyAccessibilityLabel: String? = ...,
@@ -208,114 +198,93 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       threadAccessibilityLabel: String? = null
    ) {
       r.h(var1, "reactions");
-      r.h(var4, "addReactionLabel");
-      r.h(var5, "addNewReactionAccessibilityLabel");
-      r.h(var6, "addNewBurstReactionAccessibilityLabel");
-      r.h(var8, "onAddReactionClick");
-      r.h(var9, "onAddBurstReactionClick");
-      r.h(var10, "onReactionClick");
-      r.h(var11, "onReactionLongPress");
-      r.h(var18, "onReplyClick");
-      r.h(var19, "onForwardClick");
-      r.h(var20, "onThreadClick");
-      val var29: ThemeManager = ThemeManager.INSTANCE;
-      val var28: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
-      var29.setThemeOverride(var12);
+      r.h(var3, "addReactionLabel");
+      r.h(var4, "addNewReactionAccessibilityLabel");
+      r.h(var6, "onAddReactionClick");
+      r.h(var7, "onReactionClick");
+      r.h(var8, "onReactionLongPress");
+      r.h(var15, "onReplyClick");
+      r.h(var16, "onForwardClick");
+      r.h(var17, "onThreadClick");
+      val var26: ThemeManager = ThemeManager.INSTANCE;
+      val var25: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
+      var26.setThemeOverride(var9);
       var1 = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
-      val var27: Boolean;
-      if (!var14 && !var15 && !var16) {
-         var27 = false;
+      val var24: Boolean;
+      if (!var11 && !var12 && !var13) {
+         var24 = false;
       } else {
-         var27 = true;
+         var24 = true;
       }
 
-      val var36: java.util.Iterator = var1.iterator();
+      val var31: java.util.Iterator = var1.iterator();
 
-      for (int var24 = 0; var36.hasNext(); var24++) {
-         var var41: Any = var36.next();
-         if (var24 < 0) {
+      for (int var21 = 0; var31.hasNext(); var21++) {
+         var var34: ReactionView = (ReactionView)var31.next();
+         if (var21 < 0) {
             kotlin.collections.i.u();
          }
 
-         var41 = var41 as ReactionView.Reaction;
-         val var30: ReactionView = this.getOrCreateReactionView(var24, var17, var27, var1.size());
-         var30.setReaction((ReactionView.Reaction)var41, var7);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var30, false, new j(var10, (ReactionView.Reaction)var41), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var30, false, new k(var11, (ReactionView.Reaction)var41), 1, null);
+         val var27: ReactionView.Reaction = var34 as ReactionView.Reaction;
+         var34 = this.getOrCreateReactionView(var21, var14, var24, var1.size());
+         var34.setReaction(var27, var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var34, false, new d(var7, var27), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var34, false, new e(var8, var27), 1, null);
       }
 
       this.hideRemainingReactionsInRow(var1.size());
-      var var37: Boolean;
-      if (!var2 && !var13) {
-         var37 = 0;
+      val var32: Boolean;
+      if (!var2 && !var10) {
+         var32 = false;
       } else {
-         var37 = 1;
+         var32 = true;
       }
 
-      if (var37) {
-         AddReactionView.configure$default(this.addReactionView, var4, var7, false, null, 8, null);
-         this.addReactionView.setContentDescription(var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.addReactionView, false, var8, 1, null);
+      if (var32) {
+         AddReactionView.configure$default(this.addReactionView, var3, var5, false, null, 8, null);
+         this.addReactionView.setContentDescription(var4);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.addReactionView, false, var6, 1, null);
          this.setShortcutMargins(this.addReactionView);
-         if (var3) {
-            AddReactionView.configure$default(this.addBurstReactionView, var4, var7, true, null, 8, null);
-            this.addBurstReactionView.setContentDescription(var6);
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.addBurstReactionView, false, var9, 1, null);
-            this.setShortcutMargins(this.addBurstReactionView);
-         }
       }
 
-      if (var14) {
+      if (var11) {
          this.replyView.configure("", null, false, ReactAsset.Reply);
          this.setShortcutMargins(this.replyView);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.replyView, false, var18, 1, null);
-         this.replyView.setContentDescription(var21);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.replyView, false, var15, 1, null);
+         this.replyView.setContentDescription(var18);
       }
 
-      if (var15) {
+      if (var12) {
          this.forwardView.configure("", null, false, ReactAsset.ArrowAngleRightUpIcon);
          this.setShortcutMargins(this.forwardView);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.forwardView, false, var19, 1, null);
-         this.forwardView.setContentDescription(var22);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.forwardView, false, var16, 1, null);
+         this.forwardView.setContentDescription(var19);
       }
 
-      if (var16) {
+      if (var13) {
          this.threadView.configure("", null, false, ReactAsset.Thread);
          this.setShortcutMargins(this.threadView);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.threadView, false, var20, 1, null);
-         this.threadView.setContentDescription(var23);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this.threadView, false, var17, 1, null);
+         this.threadView.setContentDescription(var20);
       }
 
-      var var25: Boolean;
-      if (!var37 && !var3) {
-         var25 = 0;
+      var var22: Byte;
+      if (!var24 && !var32) {
+         var22 = 8;
       } else {
-         var25 = 1;
+         var22 = 0;
       }
 
-      if (!var27 && !var25) {
-         var25 = 8;
-      } else {
-         var25 = 0;
+      this.shortcutsView.setVisibility(var22);
+      var22 = 8;
+      if (var32) {
+         var22 = 0;
       }
 
-      this.shortcutsView.setVisibility(var25);
-      if (var37) {
-         var37 = 0;
-      } else {
-         var37 = 8;
-      }
-
-      this.addReactionView.setVisibility(var37);
-      var37 = 8;
-      if (var3) {
-         var37 = 0;
-      }
-
-      this.addBurstReactionView.setVisibility(var37);
-      this.handleAnimation(this.replyView, var14);
-      this.handleAnimation(this.forwardView, var15);
-      this.handleAnimation(this.threadView, var16);
-      ThemeManager.INSTANCE.setThemeOverride(var28);
+      this.addReactionView.setVisibility(var22);
+      this.handleAnimation(this.replyView, var11);
+      this.handleAnimation(this.forwardView, var12);
+      this.handleAnimation(this.threadView, var13);
+      ThemeManager.INSTANCE.setThemeOverride(var25);
    }
 }

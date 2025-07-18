@@ -1,13 +1,15 @@
 package com.discord.chat.presentation.message;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import com.discord.chat.bridge.sticker.Sticker;
+import com.discord.chat.presentation.message.messagepart.MessageAccessory;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class h implements OnClickListener {
+public final class h implements Function1 {
    public final MessageAccessoriesAdapter j;
+   public final MessageAccessory k;
 
-   public final void onClick(View var1) {
-      MessageAccessoriesAdapter.u(this.j, var1);
+   public final Object invoke(Object var1) {
+      return MessageAccessoriesAdapter.q(this.j, this.k, (Sticker)var1);
    }
 }

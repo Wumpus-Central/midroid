@@ -86,7 +86,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          var14.setTextColor(var12);
          val var15: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new X(var6, var7, var8, var10), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new W(var6, var7, var8, var10), 1, null);
          val var16: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.r.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var var29: Byte = 8;
@@ -135,7 +135,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          );
          val var24: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new Y(var6), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new X(var6), 1, null);
          val var25: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.r.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var25.setVisibility(8);

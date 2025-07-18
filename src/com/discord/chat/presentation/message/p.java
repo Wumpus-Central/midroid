@@ -8,6 +8,6 @@ public final class p implements Function1 {
    public final MessageAccessoriesAdapter j;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.O(this.j, (ReactionView.Reaction)var1);
+      return MessageAccessoriesAdapter.N(this.j, (ReactionView.Reaction)var1);
    }
 }

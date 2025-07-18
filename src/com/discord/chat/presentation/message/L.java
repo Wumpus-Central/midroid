@@ -8,6 +8,6 @@ public final class L implements Function1 {
    public final MessageAccessoriesAdapter j;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.c(this.j, (MessagePartViewHolder)var1);
+      return MessageAccessoriesAdapter.E(this.j, (MessagePartViewHolder)var1);
    }
 }

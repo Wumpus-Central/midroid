@@ -2729,13 +2729,11 @@
   "gHD/nZ": "Fertig? Sieh dir andere Kanäle an.",
   "9cs5LC": "Entdecken",
   "Yi2xub": "Dies ist ein reiner Thread-Kanal.",
-  "4NDJgI": "Chat-Gesten",
   "uKZtCw": "Sende Nachrichten und Medien",
   "Jf0C/f": "Von rechts nach links wischen",
   "9BGJ1t": "Suche Mitgliederliste",
   "6eXLcH": "Kanaldetails anzeigen",
   "ohhhDA": "Suche, Mitglieder, Medien, Pins, Threads und mehr",
-  "QrTl5+": "Du kannst das Wischverhalten in den Einstellungen ändern.",
   "3tYNDQ": "Auf Nachricht antworten",
   "RzWDqa": "Probiere es aus",
   "VkKicX": "Löschen",
@@ -5024,14 +5022,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Alt. Text ändern, ",
-    [
-      1,
-      "answerNumber"
-    ],
-    " beantworten"
-  ],
   "w7x2t7": "Bildbeschreibung (Alt. Text) bearbeiten",
   "vcC7Qk": [
     "Medien aktualisieren, ",
@@ -5046,9 +5036,6 @@
     ],
     " beantworten"
   ],
-  "e9hWx8": "Stil der Umfrageantwort",
-  "GhK6X1": "Textantworten mit optionalen Medien",
-  "an4GKS": "Nur in Medien antworten",
   "fYvzER": "Hoppla, du hast etwas vergessen. Bitte füg mindestens eine Antwort hinzu.",
   "HMrgcn": "Bist du sicher?",
   "Wxa/j4": "Bist du sicher, dass du jetzt beenden möchtest? Alle vorgenommenen Änderungen gehen verloren, wenn du jetzt beendest.",
@@ -7524,8 +7511,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Du hast jetzt Zugriff auf Aktivitäten auf Mobilgeräten in Sprachkanälen!",
-  "fhm5x8": "Aktivitäten auf Mobilgeräten",
   "UXoQTk": "Diese Funktion steht auf diesem Betriebssystem momentan nicht zur Verfügung",
   "z8EAJS": [
     "1–",
@@ -24518,7 +24503,6 @@
   "ZXxLQk": "Chat öffnen",
   "q5jLJC": "Im Browser öffnen",
   "wuRE8P": "Link öffnen",
-  "3/IlR0": "Einstellungen öffnen",
   "U19GMz": "Optional",
   "+1H47u": "Optionen",
   "iOWmmJ": "Dieser Kanal ist nicht in deiner Kanalliste.",
@@ -30261,19 +30245,6 @@
       "videoTitle"
     ],
     "“ an und verdiene genug, um ein Profilabzeichen freizuschalten!"
-  ],
-  "yMsQ7e": [
-    "Schau dir das ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " an, um ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    " zu gewinnen!"
   ],
   "g+InPD": [
     "Schau dir das Video an, um ",

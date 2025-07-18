@@ -1,16 +1,16 @@
 package com.discord.chat.presentation.list.messagebundling;
 
-import android.view.View;
-import android.view.View.OnClickListener;
 import com.discord.chat.bridge.Message;
 import com.discord.chat.presentation.events.ChatEventHandler;
+import com.discord.reactions.ReactionView;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class f implements OnClickListener {
+public final class f implements Function1 {
    public final ChatEventHandler j;
    public final Message k;
 
-   public final void onClick(View var1) {
-      MessageBundleConversationView.i(this.j, this.k, var1);
+   public final Object invoke(Object var1) {
+      return MessageBundleConversationView.h(this.j, this.k, (ReactionView.Reaction)var1);
    }
 }

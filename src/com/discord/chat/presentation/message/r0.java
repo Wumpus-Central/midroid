@@ -1,10 +1,13 @@
 package com.discord.chat.presentation.message;
 
-import kotlin.jvm.functions.Function0;
+import com.discord.react_strings.RenderContext;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class r0 implements Function0 {
-   public final Object invoke() {
-      return MessageView.d();
+public final class r0 implements Function1 {
+   public final String j;
+
+   public final Object invoke(Object var1) {
+      return MessageViewAccessibilityDelegate.c(this.j, (RenderContext)var1);
    }
 }

@@ -30,22 +30,22 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 2
-   // 07: aload 2
+   // 06: astore 3
+   // 07: aload 3
    // 08: ldc "/proc/cpuinfo"
    // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
    // 0d: getstatic gb/a.b Ljava/nio/charset/Charset;
-   // 10: astore 3
+   // 10: astore 2
    // 11: new java/io/InputStreamReader
    // 14: astore 0
    // 15: new java/io/FileInputStream
    // 18: astore 4
    // 1a: aload 4
-   // 1c: aload 2
+   // 1c: aload 3
    // 1d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 20: aload 0
    // 21: aload 4
-   // 23: aload 3
+   // 23: aload 2
    // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 27: new java/io/BufferedReader
    // 2a: astore 2
@@ -339,12 +339,12 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var1: java.lang.String = b.a();
+      val var1: java.lang.String = a.a();
+      var0 = b.a();
       val var2: StringBuilder = new StringBuilder();
-      var2.append(var0);
-      var2.append("_");
       var2.append(var1);
+      var2.append("_");
+      var2.append(var0);
       return var2.toString();
    } else {
       return getSocFromProcCpuInfo();

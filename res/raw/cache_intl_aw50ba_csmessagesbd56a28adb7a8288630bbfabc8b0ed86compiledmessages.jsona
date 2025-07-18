@@ -2809,13 +2809,11 @@
   "gHD/nZ": "Už máš vše přečteno? Omrkni další kanály.",
   "9cs5LC": "Probádat",
   "Yi2xub": "Toto je kanál pouze pro vlákna.",
-  "4NDJgI": "Gesta chatu",
   "uKZtCw": "Odeslat zprávu a média",
   "Jf0C/f": "Přejeď prstem zprava doleva",
   "9BGJ1t": "Hledání odpovědi v seznamu členů",
   "6eXLcH": "Zobrazit detaily kanálu",
   "ohhhDA": "Hledání, členové, média, připnutý obsah, vlákna a další",
-  "QrTl5+": "Chování potažení můžeš změnit v Nastavení.",
   "3tYNDQ": "Odpovědět na zprávu",
   "RzWDqa": "Koukni na to",
   "VkKicX": "Smazat",
@@ -5152,13 +5150,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Upravit alternativní text, odpověď ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Upravit popis obrázku (alternativní text)",
   "vcC7Qk": [
     "Aktualizovat média, ",
@@ -5201,9 +5192,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Styl odpovědi v průzkumu",
-  "GhK6X1": "Textové odpovědi s volitelným mediálním obsahem",
-  "an4GKS": "Pouze odpovědi s mediálním obsahem",
   "fYvzER": "Jejda, něco ti uniklo. Přidej alespoň jednu odpověď.",
   "HMrgcn": "Určitě to chceš udělat?",
   "Wxa/j4": "Opravu chceš odejít? Pokud tak učiníš, všechny provedené změny budou ztraceny.",
@@ -7806,8 +7794,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Od této chvíle máš přístup k aktivitám v hlasových kanálech na mobilu!",
-  "fhm5x8": "Aktivity na mobilu",
   "UXoQTk": "Tato funkce není v tomto operačním systému momentálně dostupná",
   "z8EAJS": [
     "Počet hráčů 1–",
@@ -25245,7 +25231,6 @@
   "ZXxLQk": "Otevřít chat",
   "q5jLJC": "Otevřít v prohlížeči",
   "wuRE8P": "Otevřít odkaz",
-  "3/IlR0": "Otevřít nastavení",
   "U19GMz": "volitelné",
   "+1H47u": "Možnosti",
   "iOWmmJ": "Tento kanál není na tvém seznamu kanálů.",
@@ -31257,19 +31242,6 @@
       "videoTitle"
     ],
     " a získej dostatek krystalů na odemčení odznaku na profil!"
-  ],
-  "yMsQ7e": [
-    "Sleduj ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " a vyhraj ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Sleduj video a vyhraj ",

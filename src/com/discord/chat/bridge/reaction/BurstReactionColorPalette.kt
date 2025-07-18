@@ -89,15 +89,15 @@ public data class BurstReactionColorPalette(backgroundColor: String?, accentColo
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.backgroundColor;
-      val var4: java.lang.String = this.accentColor;
+      val var4: java.lang.String = this.backgroundColor;
+      val var2: java.lang.String = this.accentColor;
       val var5: java.lang.String = this.highlightColor;
       val var1: Float = this.opacity;
       val var3: StringBuilder = new StringBuilder();
       var3.append("BurstReactionColorPalette(backgroundColor=");
-      var3.append(var2);
-      var3.append(", accentColor=");
       var3.append(var4);
+      var3.append(", accentColor=");
+      var3.append(var2);
       var3.append(", highlightColor=");
       var3.append(var5);
       var3.append(", opacity=");

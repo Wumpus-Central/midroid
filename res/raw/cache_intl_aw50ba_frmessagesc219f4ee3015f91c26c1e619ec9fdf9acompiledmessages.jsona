@@ -2727,13 +2727,11 @@
   "gHD/nZ": "Tu as terminé ta lecture ? Jette un œil aux autres salons.",
   "9cs5LC": "Découvrir",
   "Yi2xub": "Ce salon est uniquement réservé aux fils.",
-  "4NDJgI": "Gestes du chat",
   "uKZtCw": "Envoyer des messages et des médias",
   "Jf0C/f": "Balayer de droite à gauche",
   "9BGJ1t": "Répondre à la recherche de liste des membres",
   "6eXLcH": "Afficher les détails du salon",
   "ohhhDA": "Recherche, membres, médias, épinglages, fils et plus",
-  "QrTl5+": "Tu peux changer la façon dont fonctionnent des balayages dans Paramètres.",
   "3tYNDQ": "Répondre au message",
   "RzWDqa": "Y jeter un œil",
   "VkKicX": "Effacer",
@@ -5007,13 +5005,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Modifier le texte alternatif, réponse ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Modifier la description de l'image (texte alternatif)",
   "vcC7Qk": [
     "Mettre à jour un média, ",
@@ -5050,9 +5041,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Style de réponse au sondage",
-  "GhK6X1": "Réponses textuelles avec contenu média optionnel",
-  "an4GKS": "Réponses avec contenu média uniquement",
   "fYvzER": "Oups, tu as oublié quelque chose. Merci d'ajouter au moins une réponse.",
   "HMrgcn": "Tu es sûr(e) ?",
   "Wxa/j4": "Veux-tu vraiment quitter ? Tous les changements effectués seront perdus si tu quittes maintenant.",
@@ -7484,8 +7472,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Tu as désormais accès aux Activités sur mobile dans les salons vocaux !",
-  "fhm5x8": "Activités sur mobile",
   "UXoQTk": "Cette fonctionnalité n'est pas disponible sur ce système d'exploitation à l'heure actuelle",
   "z8EAJS": [
     "1-",
@@ -24446,7 +24432,6 @@
   "ZXxLQk": "Ouvrir la discussion",
   "q5jLJC": "Ouvrir dans le navigateur web",
   "wuRE8P": "Ouvrir le lien",
-  "3/IlR0": "Ouvrir les paramètres",
   "U19GMz": "facultatif",
   "+1H47u": "Options",
   "iOWmmJ": "Ce salon n'est pas dans ta liste des salons.",
@@ -30207,19 +30192,6 @@
       "videoTitle"
     ],
     " et gagne suffisamment d'orbes pour déverrouiller un badge de profil !"
-  ],
-  "yMsQ7e": [
-    "Regarde ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " pour gagner ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    " !"
   ],
   "g+InPD": [
     "Regarde la vidéo pour gagner ",

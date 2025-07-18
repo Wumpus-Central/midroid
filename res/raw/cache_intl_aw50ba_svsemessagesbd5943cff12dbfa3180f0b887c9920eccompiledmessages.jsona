@@ -2718,13 +2718,11 @@
   "gHD/nZ": "Läst klart? Kolla in andra kanaler.",
   "9cs5LC": "Utforska",
   "Yi2xub": "Det här är en kanal endast för trådar.",
-  "4NDJgI": "Chattgester",
   "uKZtCw": "Skicka meddelanden och media",
   "Jf0C/f": "Svep höger till vänster",
   "9BGJ1t": "Svar på medlemslistsökning",
   "6eXLcH": "Visa kanaldetaljer",
   "ohhhDA": "Sök, medlemmar, media, fästa meddelanden, trådar och mer",
-  "QrTl5+": "Du kan ändra svepbeteendet i Inställningar.",
   "3tYNDQ": "Svara på meddelande",
   "RzWDqa": "Kolla in det",
   "VkKicX": "Rensa",
@@ -4994,13 +4992,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Ändra alt. text, svar ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Ändra bildbeskrivning (alt. text)",
   "vcC7Qk": [
     "Uppdatera medieinnehåll, ",
@@ -5037,9 +5028,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Stil på undersökningssvar",
-  "GhK6X1": "Textsvar med valfritt medieinnehåll",
-  "an4GKS": "Endast mediesvar",
   "fYvzER": "Hoppsan, du glömde visst en grej. Lägg till minst ett svar.",
   "HMrgcn": "Är du säker?",
   "Wxa/j4": "Är du säker på att du vill lämna? Eventuella ändringar går förlorade om du avslutar nu.",
@@ -7496,8 +7484,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "Nu har du tillgång till Aktiviteter på mobilen i röstkanaler!",
-  "fhm5x8": "Aktiviteter på mobil",
   "UXoQTk": "Den här funktionen är inte tillgänglig på det här operativsystemet just nu",
   "z8EAJS": [
     "En till ",
@@ -24358,7 +24344,6 @@
   "ZXxLQk": "Öppna chatt",
   "q5jLJC": "Öppna i webbläsare",
   "wuRE8P": "Öppna länk",
-  "3/IlR0": "Öppna inställningar",
   "U19GMz": "valfri",
   "+1H47u": "Alternativ",
   "iOWmmJ": "Den här kanalen finns inte i din kanallista.",
@@ -30093,19 +30078,6 @@
       "videoTitle"
     ],
     " och tjäna tillräckligt för att låsa upp ett profilmärke!"
-  ],
-  "yMsQ7e": [
-    "Titta på ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " för att få ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Titta på videon för att vinna ",

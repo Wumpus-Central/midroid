@@ -2715,13 +2715,11 @@
   "gHD/nZ": "Hepsini okudun mu? Diğer kanallara göz at.",
   "9cs5LC": "Keşfet",
   "Yi2xub": "Bu yalnızca alt başlıklara özel bir kanal.",
-  "4NDJgI": "Sohbet El Hareketleri",
   "uKZtCw": "Mesaj ve medya gönder",
   "Jf0C/f": "Sağdan Sola Kaydırmak",
   "9BGJ1t": "Üye Listesi Aramasını Yanıtla",
   "6eXLcH": "Kanal Detaylarını Göster",
   "ohhhDA": "Ara, üyeler, medya, sabitlemeler, alt başlıklar ve daha fazlası",
-  "QrTl5+": "Kaydırma davranışını Ayarlar bölümünden değiştirebilirsin.",
   "3tYNDQ": "Mesaja Yanıt Ver",
   "RzWDqa": "Bir göz at",
   "VkKicX": "Temizle",
@@ -5001,13 +4999,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    [
-      1,
-      "answerNumber"
-    ],
-    ". yanıttaki alternatif metni düzenle"
-  ],
   "w7x2t7": "Görsel Açıklamasını (Alt. Metin) Düzenle",
   "vcC7Qk": [
     [
@@ -5044,9 +5035,6 @@
     ],
     " var"
   ],
-  "e9hWx8": "Anket yanıt şekli",
-  "GhK6X1": "Tercihe bağlı medyayla birlikte yazılı yanıtlar",
-  "an4GKS": "Yalnızca medyadan oluşan yanıtlar",
   "fYvzER": "Tüh, bir şeyi unuttun. Lütfen en az bir cevap ekle.",
   "HMrgcn": "Emin misin?",
   "Wxa/j4": "Çıkmak istediğine emin misin? Şimdi çıkarsan yapılan tüm değişiklikler kaybedilecek.",
@@ -7480,8 +7468,6 @@
     ],
     " önizlemesi"
   ],
-  "GK2DmJ": "Artık mobildeki ses kanallarında yapılan Etkinliklere erişebilirsin!",
-  "fhm5x8": "Mobilde Etkinlikler",
   "UXoQTk": "Bu özellik şu an bu işletim sisteminde mevcut değil",
   "z8EAJS": [
     "1-",
@@ -24492,7 +24478,6 @@
   "ZXxLQk": "Sohbeti Aç",
   "q5jLJC": "Tarayıcıda Aç",
   "wuRE8P": "Bağlantıyı Aç",
-  "3/IlR0": "Ayarları Aç",
   "U19GMz": "isteğe bağlı",
   "+1H47u": "Seçenekler",
   "iOWmmJ": "Bu kanal, kanal listende yok.",
@@ -30170,18 +30155,6 @@
       "videoTitle"
     ],
     " videosunu izle ve bir profil rozeti kazan!"
-  ],
-  "yMsQ7e": [
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    " kazanmak için ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " videosunu izle!"
   ],
   "g+InPD": [
     "Videoyu izle ve ",

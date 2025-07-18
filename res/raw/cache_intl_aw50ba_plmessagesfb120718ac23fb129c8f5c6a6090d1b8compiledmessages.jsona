@@ -2806,13 +2806,11 @@
   "gHD/nZ": "Wszystko przeczytane? Zajrzyj na inne kanały.",
   "9cs5LC": "Eksploruj",
   "Yi2xub": "Ten kanał jest przeznaczony wyłącznie dla wątków.",
-  "4NDJgI": "Gesty czatu",
   "uKZtCw": "Wysyłaj wiadomości i multimedia",
   "Jf0C/f": "Przesuwanie od prawej do lewej",
   "9BGJ1t": "Wyszukaj odpowiedzi na liście członków",
   "6eXLcH": "Pokaż szczegóły kanału",
   "ohhhDA": "Wyszukiwanie, członkowie, multimedia, przypięte wiadomości, wątki i więcej",
-  "QrTl5+": "Możesz zmienić zachowanie przesuwania w Ustawieniach.",
   "3tYNDQ": "Odpowiedz na wiadomość",
   "RzWDqa": "Wypróbuj",
   "VkKicX": "Wyczyść",
@@ -5157,13 +5155,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Edytuj tekst alternatywny, odpowiedź ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Edytuj opis obrazu (tekst alternatywny)",
   "vcC7Qk": [
     "Prześlij multimedia, ",
@@ -5206,9 +5197,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Styl odpowiedzi do ankiety",
-  "GhK6X1": "Odpowiedzi tekstowe z opcjonalnymi multimediami",
-  "an4GKS": "Odpowiedzi w formie samych multimediów",
   "fYvzER": "Ups, czegoś tu brakuje. Dodaj przynajmniej jedną odpowiedź.",
   "HMrgcn": "Na pewno?",
   "Wxa/j4": "Czy na pewno chcesz wyjść? Wszelkie wprowadzone zmiany zostaną utracone, jeśli wyjdziesz teraz.",
@@ -7801,8 +7789,6 @@
     ],
     " – podgląd"
   ],
-  "GK2DmJ": "Możesz teraz korzystać z aktywności na kanałach głosowych na urządzeniu mobilnym!",
-  "fhm5x8": "Aktywności na urządzeniach mobilnych",
   "UXoQTk": "Ta funkcja nie jest obecnie dostępna na tym systemie operacyjnym",
   "z8EAJS": [
     "1-",
@@ -25058,7 +25044,6 @@
   "ZXxLQk": "Otwórz czat",
   "q5jLJC": "Otwórz w przeglądarce",
   "wuRE8P": "Otwórz link",
-  "3/IlR0": "Otwórz ustawienia",
   "U19GMz": "opcjonalne",
   "+1H47u": "Opcje",
   "iOWmmJ": "Ten kanał nie znajduje się w Twojej liście kanałów.",
@@ -31089,19 +31074,6 @@
       "videoTitle"
     ],
     " i zdobądź wystarczającą liczbę do odblokowania odznaki profilowej!"
-  ],
-  "yMsQ7e": [
-    "Obejrzyj ",
-    [
-      1,
-      "videoTitle"
-    ],
-    ", aby wygrać nagrodę: ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Obejrzyj film, aby wygrać nagrodę: ",

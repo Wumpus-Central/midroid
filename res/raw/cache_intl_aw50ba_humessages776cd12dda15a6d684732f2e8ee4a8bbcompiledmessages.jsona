@@ -2723,13 +2723,11 @@
   "gHD/nZ": "Elolvastad? Nézd meg a többi csatornánkat!",
   "9cs5LC": "Felfedezés",
   "Yi2xub": "Ezen a csatornán csak gondolatmenetek oszthatók meg.",
-  "4NDJgI": "Csevegési kézmozdulatok",
   "uKZtCw": "Üzenetek és médiatartalmak küldése",
   "Jf0C/f": "Jobbról balra pöccintés",
   "9BGJ1t": "Válaszadói taglista keresése",
   "6eXLcH": "Csatornarészletek megjelenítése",
   "ohhhDA": "Többek között tagok, médiatartalmak, rögzített tartalmak, gondolatmenetek keresése",
-  "QrTl5+": "A pöccintési magatartást a Beállítások pontban tudod módosítani.",
   "3tYNDQ": "Üzenet megválaszolása",
   "RzWDqa": "Nézd meg!",
   "VkKicX": "Törlés",
@@ -5006,14 +5004,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Alternatív szöveg szerkesztése, ",
-    [
-      1,
-      "answerNumber"
-    ],
-    ". válasz"
-  ],
   "w7x2t7": "Képleírás szerkesztése (alternatív szöveg)",
   "vcC7Qk": [
     "Médiatartalom módosítása, ",
@@ -5051,9 +5041,6 @@
     ],
     " van"
   ],
-  "e9hWx8": "Szavazás válaszadási stílusa",
-  "GhK6X1": "Szöveges üzenetek választható médiatartalmakkal",
-  "an4GKS": "Csak médiatartalmas válaszok",
   "fYvzER": "Hoppá, elfelejtettél valamit. Adj meg legalább egy választ.",
   "HMrgcn": "Biztos vagy benne?",
   "Wxa/j4": "Biztosan ki szeretnél lépni? Ha most kilépsz, minden módosítás elveszik.",
@@ -7512,8 +7499,6 @@
     ],
     " előnézete"
   ],
-  "GK2DmJ": "Mostantól hozzáférsz a Tevékenységekhez mobilon a hangcsatornákon!",
-  "fhm5x8": "Tevékenységek mobilon",
   "UXoQTk": "Ez a funkció jelenleg nem érhető el ezen az operációs rendszeren",
   "z8EAJS": [
     "1–",
@@ -24388,7 +24373,6 @@
   "ZXxLQk": "Csevegés megnyitása",
   "q5jLJC": "Megnyitás böngészőben",
   "wuRE8P": "Hivatkozás megnyitása",
-  "3/IlR0": "Beállítások megnyitása",
   "U19GMz": "opcionális",
   "+1H47u": "Beállítások",
   "iOWmmJ": "Ez a csatorna nincs a csatornalistádon.",
@@ -30107,19 +30091,6 @@
       "videoTitle"
     ],
     " videót, és szerezz elegendőt a profiljelvény feloldásához!"
-  ],
-  "yMsQ7e": [
-    "Nézd meg a(z) ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " videót, hogy megnyerd a(z) ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    " jutalmat!"
   ],
   "g+InPD": [
     "Nézd meg a videót, hogy megnyerd a(z) ",

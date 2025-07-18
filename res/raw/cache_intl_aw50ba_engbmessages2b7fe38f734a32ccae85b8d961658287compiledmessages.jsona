@@ -2714,13 +2714,11 @@
   "gHD/nZ": "Done reading? Check out other channels.",
   "9cs5LC": "Explore",
   "Yi2xub": "This is a threads-only channel.",
-  "4NDJgI": "Chat Gestures",
   "uKZtCw": "Send messages and media",
   "Jf0C/f": "Swiping Right to Left",
   "9BGJ1t": "Reply Member List Search",
   "6eXLcH": "Show Channel Details",
   "ohhhDA": "Search, members, media, pins, threads and more",
-  "QrTl5+": "You can change the swipe behaviour in Settings.",
   "3tYNDQ": "Reply to Message",
   "RzWDqa": "Check it out",
   "VkKicX": "Clear",
@@ -4991,13 +4989,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Edit alt text, answer ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Edit Image Description (Alt Text)",
   "vcC7Qk": [
     "Update media, ",
@@ -5011,9 +5002,6 @@
       "answerNumber"
     ]
   ],
-  "e9hWx8": "Poll answer style",
-  "GhK6X1": "Text answers with optional media",
-  "an4GKS": "Media only answers",
   "fYvzER": "Oops, you forgot something. Please add at least one answer.",
   "HMrgcn": "Are you sure?",
   "Wxa/j4": "Are you sure you want to exit? Any changes made will be lost if you exit now.",
@@ -7471,8 +7459,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "You now have access to Activities on mobile in Voice Channels!",
-  "fhm5x8": "Activities on Mobile",
   "UXoQTk": "This feature is not available on this OS at this time",
   "z8EAJS": [
     "1-",
@@ -24388,7 +24374,6 @@
   "ZXxLQk": "Open Chat",
   "q5jLJC": "Open in Browser",
   "wuRE8P": "Open Link",
-  "3/IlR0": "Open Settings",
   "U19GMz": "optional",
   "+1H47u": "Options",
   "iOWmmJ": "This channel is not on your channel list.",
@@ -30112,19 +30097,6 @@
       "videoTitle"
     ],
     " and earn enough to unlock a profile badge!"
-  ],
-  "yMsQ7e": [
-    "Watch the ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " to win ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Watch the video to win ",
