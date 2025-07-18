@@ -30,9 +30,9 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
 
    public override fun valuesResult(values: ReadableArray) {
       r.h(var1, "values");
-      val var5: ReactAssetCache = ReactAssetCache.INSTANCE;
+      val var3: ReactAssetCache = ReactAssetCache.INSTANCE;
       val var4: ReactApplicationContext = this.reactContext;
-      val var3: HashMap = new HashMap();
+      val var5: HashMap = new HashMap();
       val var6: java.util.Iterator = ReactAsset.getEntries().iterator();
 
       for (int var2 = 0; var6.hasNext(); var2++) {
@@ -44,9 +44,9 @@ public class ReactAssetModule(reactContext: ReactApplicationContext) : NativeRea
          var7 = (var7 as ReactAsset).name();
          val var8: java.lang.String = var1.getString(var2);
          r.e(var8);
-         var3.put(var7, var8);
+         var5.put(var7, var8);
       }
 
-      var5.set(var4, var3);
+      var3.set(var4, var5);
    }
 }

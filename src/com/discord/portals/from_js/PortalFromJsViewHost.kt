@@ -94,10 +94,11 @@ internal class PortalFromJsViewHost(context: Context) : ReactViewGroup {
    public fun onAfterUpdateTransaction() {
       if (this.portalIdPrev != null) {
          this.childViewRemoved(this.portalIdPrev);
-         val var3: java.lang.String = this.getPortalId$portals_release();
          val var2: View = this.childView;
-         r.e(this.childView);
-         this.childViewAdded(var3, var2);
+         if (this.childView != null) {
+            this.childViewAdded(this.getPortalId$portals_release(), var2);
+         }
+
          this.portalIdPrev = null;
       }
    }

@@ -209,7 +209,7 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
       val var26: ThemeManager = ThemeManager.INSTANCE;
       val var25: DiscordTheme = ThemeManager.INSTANCE.getThemeOverride();
       var26.setThemeOverride(var9);
-      var1 = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
+      val var31: java.util.List = ShortcutsFlexboxKt.separateAndSortDuplicateReactions(var1);
       val var24: Boolean;
       if (!var11 && !var12 && !var13) {
          var24 = false;
@@ -217,22 +217,22 @@ public class ShortcutsFlexbox  public constructor(context: Context, attrs: Attri
          var24 = true;
       }
 
-      val var31: java.util.Iterator = var1.iterator();
+      val var28: java.util.Iterator = var31.iterator();
 
-      for (int var21 = 0; var31.hasNext(); var21++) {
-         var var34: ReactionView = (ReactionView)var31.next();
+      for (int var21 = 0; var28.hasNext(); var21++) {
+         var var34: Any = var28.next();
          if (var21 < 0) {
             kotlin.collections.i.u();
          }
 
-         val var27: ReactionView.Reaction = var34 as ReactionView.Reaction;
-         var34 = this.getOrCreateReactionView(var21, var14, var24, var1.size());
-         var34.setReaction(var27, var5);
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var34, false, new d(var7, var27), 1, null);
-         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var34, false, new e(var8, var27), 1, null);
+         var34 = var34 as ReactionView.Reaction;
+         val var27: ReactionView = this.getOrCreateReactionView(var21, var14, var24, var31.size());
+         var27.setReaction((ReactionView.Reaction)var34, var5);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var27, false, new d(var7, (ReactionView.Reaction)var34), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var27, false, new e(var8, (ReactionView.Reaction)var34), 1, null);
       }
 
-      this.hideRemainingReactionsInRow(var1.size());
+      this.hideRemainingReactionsInRow(var31.size());
       val var32: Boolean;
       if (!var2 && !var10) {
          var32 = false;

@@ -151,14 +151,14 @@ fun `json$lambda$0`(var0: JsonBuilder): Unit {
 
 public fun nativeMapOf(vararg pairs: Pair<String, *>): WritableNativeMap {
    r.h(var0, "pairs");
-   val var4: WritableNativeMap = new WritableNativeMap();
+   val var3: WritableNativeMap = new WritableNativeMap();
    val var2: Int = var0.length;
 
    for (int var1 = 0; var1 < var2; var1++) {
-      put(var4, var0[var1].a() as java.lang.String, var0[var1].b());
+      put(var3, var0[var1].a() as java.lang.String, var0[var1].b());
    }
 
-   return var4;
+   return var3;
 }
 
 public fun <V> WritableNativeMap.put(key: String, value: V) {
@@ -240,19 +240,19 @@ public fun ReadableMap.toJsonString(): String {
 public inline fun <reified T> ReadableMap.toKotlinObject(): T {
    r.h(var0, "<this>");
    val var1: Json = getJson();
-   val var3: java.lang.String = toJsonString(var0);
-   val var2: yb.b = var1.a();
+   val var2: java.lang.String = toJsonString(var0);
+   val var3: yb.b = var1.a();
    r.m(6, "T");
    v.a("kotlinx.serialization.serializer.withModule");
-   return (T)var1.b(k.d(var2, null), var3);
+   return (T)var1.b(k.d(var3, null), var2);
 }
 
 public fun <V> Map<String, V>.toNativeMap(): WritableNativeMap {
    r.h(var0, "<this>");
    val var1: WritableNativeMap = new WritableNativeMap();
 
-   for (Entry var3 : var0.entrySet()) {
-      put(var1, var3.getKey() as java.lang.String, var3.getValue());
+   for (Entry var2 : var0.entrySet()) {
+      put(var1, var2.getKey() as java.lang.String, var2.getValue());
    }
 
    return var1;
