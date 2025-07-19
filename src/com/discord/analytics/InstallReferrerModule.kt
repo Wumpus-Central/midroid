@@ -28,18 +28,18 @@ public class InstallReferrerModule(context: ReactApplicationContext) : ReactCont
    @ReactMethod
    public fun get(promise: Promise) {
       r.h(var1, "promise");
-      val var3: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
-      val var4: ObjectRef = new ObjectRef();
-      var4.j = var3.getString("referrer", null);
-      val var2: Int = var3.getInt("attempts", 0);
-      if (var4.j != null) {
-         var1.resolve(var4.j);
+      val var4: SharedPreferences = this.getReactApplicationContext().getSharedPreferences("InstallReferrer", 0);
+      val var3: ObjectRef = new ObjectRef();
+      var3.j = var4.getString("referrer", null);
+      val var2: Int = var4.getInt("attempts", 0);
+      if (var3.j != null) {
+         var1.resolve(var3.j);
       } else if (var2 < 10) {
          f.d(
             g.b(),
             null,
             null,
-            new Function2(new ObjectRef(), this, var4, var3, var1, var2, null) {
+            new Function2(new ObjectRef(), this, var3, var4, var1, var2, null) {
                final int $attempts;
                final ObjectRef $client;
                final SharedPreferences $prefs;

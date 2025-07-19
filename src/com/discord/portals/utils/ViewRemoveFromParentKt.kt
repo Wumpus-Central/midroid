@@ -16,18 +16,18 @@ public fun View.removeFromParent() {
          var1 = null;
       }
 
-      val var3: ViewGroup = var1 as ViewGroup;
+      val var4: ViewGroup = var1 as ViewGroup;
       if (var1 as ViewGroup != null) {
-         val var4: ViewPropertyAnimator = var0.animate();
-         if (var4 != null) {
-            var4.cancel();
+         val var3: ViewPropertyAnimator = var0.animate();
+         if (var3 != null) {
+            var3.cancel();
          }
 
          var0.clearAnimation();
-         var3.endViewTransition(var0);
-         TransitionManager.endTransitions(var3);
-         var3.setLayoutTransition(null);
-         var3.removeView(var0);
+         var4.endViewTransition(var0);
+         TransitionManager.endTransitions(var4);
+         var4.setLayoutTransition(null);
+         var4.removeView(var0);
       }
    }
 }

@@ -80,8 +80,8 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.text.hashCode();
-      val var4: Int = this.attachments.hashCode();
+      val var4: Int = this.text.hashCode();
+      val var3: Int = this.attachments.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.targetChannelId == null) {
@@ -94,7 +94,7 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
          var2 = this.targetUserId.hashCode();
       }
 
-      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
+      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public fun toBundle(): Bundle {
@@ -112,20 +112,20 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
 
    public override fun toString(): String {
       val var2: java.lang.String = this.text;
-      val var5: java.util.List = this.attachments;
-      val var1: java.lang.String = this.targetChannelId;
-      val var3: java.lang.String = this.targetUserId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ShareProps(text=");
-      var4.append(var2);
-      var4.append(", attachments=");
-      var4.append(var5);
-      var4.append(", targetChannelId=");
-      var4.append(var1);
-      var4.append(", targetUserId=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var1: java.util.List = this.attachments;
+      val var3: java.lang.String = this.targetChannelId;
+      val var4: java.lang.String = this.targetUserId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("ShareProps(text=");
+      var5.append(var2);
+      var5.append(", attachments=");
+      var5.append(var1);
+      var5.append(", targetChannelId=");
+      var5.append(var3);
+      var5.append(", targetUserId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Attachment(name: String, uri: String, mimeType: String?) {
@@ -195,18 +195,18 @@ internal data class ShareProps(text: String, attachments: List<com.discord.share
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.name;
-         val var2: java.lang.String = this.uri;
-         val var1: java.lang.String = this.mimeType;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("Attachment(name=");
-         var3.append(var4);
-         var3.append(", uri=");
-         var3.append(var2);
-         var3.append(", mimeType=");
-         var3.append(var1);
-         var3.append(")");
-         return var3.toString();
+         val var1: java.lang.String = this.name;
+         val var3: java.lang.String = this.uri;
+         val var4: java.lang.String = this.mimeType;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("Attachment(name=");
+         var2.append(var1);
+         var2.append(", uri=");
+         var2.append(var3);
+         var2.append(", mimeType=");
+         var2.append(var4);
+         var2.append(")");
+         return var2.toString();
       }
    }
 

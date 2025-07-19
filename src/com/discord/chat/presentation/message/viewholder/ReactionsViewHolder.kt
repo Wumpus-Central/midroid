@@ -41,18 +41,7 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       onAddReactionClick: OnClickListener,
       onReactionClick: (Reaction) -> Unit,
       onReactionLongPress: (Reaction) -> Unit,
-      theme: DiscordTheme? = null,
-      showReactionShortcut: Boolean = false,
-      showReplyShortcut: Boolean = false,
-      showForwardShortcut: Boolean = false,
-      showThreadShortcut: Boolean = false,
-      shortcutsEnabled: Boolean = false,
-      onReplyClick: OnClickListener,
-      onForwardClick: OnClickListener,
-      onThreadClick: OnClickListener,
-      replyAccessibilityLabel: String? = ...,
-      forwardAccessibilityLabel: String? = ...,
-      threadAccessibilityLabel: String? = null
+      theme: DiscordTheme? = null
    ) {
       kotlin.jvm.internal.r.h(var1, "reactions");
       kotlin.jvm.internal.r.h(var3, "addReactionLabel");
@@ -60,12 +49,6 @@ public class ReactionsViewHolder(reactionsView: ShortcutsFlexbox) : MessagePartV
       kotlin.jvm.internal.r.h(var6, "onAddReactionClick");
       kotlin.jvm.internal.r.h(var7, "onReactionClick");
       kotlin.jvm.internal.r.h(var8, "onReactionLongPress");
-      kotlin.jvm.internal.r.h(var15, "onReplyClick");
-      kotlin.jvm.internal.r.h(var16, "onForwardClick");
-      kotlin.jvm.internal.r.h(var17, "onThreadClick");
-      this.reactionsView
-         .setReactions(
-            var1, var2, var3, var4, var5, var6, new E(var7), new F(var8), var9, var10, var11, var12, var13, var14, var15, var16, var17, var18, var19, var20
-         );
+      this.reactionsView.setReactions(var1, var2, var3, var4, var5, var6, new E(var7), new F(var8), var9);
    }
 }

@@ -9,6 +9,6 @@ public final class t implements Function0 {
    public final MessagePartViewHolder k;
 
    public final Object invoke() {
-      return MessageAccessoriesAdapter.d(this.j, this.k);
+      return MessageAccessoriesAdapter.n(this.j, this.k);
    }
 }

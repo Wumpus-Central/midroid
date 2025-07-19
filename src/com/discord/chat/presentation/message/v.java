@@ -1,13 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import kotlin.jvm.functions.Function2;
-import kotlin.jvm.functions.Function4;
+import com.discord.chat.presentation.message.messagepart.MessageAccessory;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class v implements Function2 {
-   public final Function4 j;
+public final class v implements Function1 {
+   public final MessageAccessoriesAdapter j;
+   public final MessageAccessory k;
 
-   public final Object invoke(Object var1, Object var2) {
-      return MessageAccessoriesAdapter.y(this.j, (String)var1, (Integer)var2);
+   public final Object invoke(Object var1) {
+      return MessageAccessoriesAdapter.h(this.j, this.k, (Boolean)var1);
    }
 }

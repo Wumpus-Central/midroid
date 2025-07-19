@@ -1,13 +1,12 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.reactions.ReactionView;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class o implements Function1 {
+public final class o implements Function2 {
    public final MessageAccessoriesAdapter j;
 
-   public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.r(this.j, (ReactionView.Reaction)var1);
+   public final Object invoke(Object var1, Object var2) {
+      return MessageAccessoriesAdapter.I(this.j, (String)var1, (String)var2);
    }
 }

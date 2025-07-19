@@ -137,29 +137,29 @@ public data class FileAttachmentMessageAccessory(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var7: Attachment = this.attachment;
+      val var5: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
       val var6: java.lang.Float = this.attachmentsOpacity;
-      val var5: SpoilerAttributes = this.spoilerAttributes;
-      val var2: java.lang.String = this.uploaderId;
-      val var4: java.lang.String = this.uploaderItemId;
-      val var8: StringBuilder = new StringBuilder();
-      var8.append("FileAttachmentMessageAccessory(messageId=");
-      var8.append(var3);
-      var8.append(", attachment=");
-      var8.append(var7);
-      var8.append(", attachmentIndex=");
-      var8.append(var1);
-      var8.append(", attachmentsOpacity=");
-      var8.append(var6);
-      var8.append(", spoilerAttributes=");
-      var8.append(var5);
-      var8.append(", uploaderId=");
-      var8.append(var2);
-      var8.append(", uploaderItemId=");
-      var8.append(var4);
-      var8.append(")");
-      return var8.toString();
+      val var3: SpoilerAttributes = this.spoilerAttributes;
+      val var7: java.lang.String = this.uploaderId;
+      val var8: java.lang.String = this.uploaderItemId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("FileAttachmentMessageAccessory(messageId=");
+      var4.append(var5);
+      var4.append(", attachment=");
+      var4.append(var2);
+      var4.append(", attachmentIndex=");
+      var4.append(var1);
+      var4.append(", attachmentsOpacity=");
+      var4.append(var6);
+      var4.append(", spoilerAttributes=");
+      var4.append(var3);
+      var4.append(", uploaderId=");
+      var4.append(var7);
+      var4.append(", uploaderItemId=");
+      var4.append(var8);
+      var4.append(")");
+      return var4.toString();
    }
 }

@@ -30,12 +30,12 @@ public class QuoteSpan(stripeColor: Int, stripeWidth: Int, gapWidth: Int) : Lead
    }
 
    private fun draw(c: Canvas, p: Paint) {
-      val var6: Style = var2.getStyle();
+      val var5: Style = var2.getStyle();
       val var4: Int = var2.getColor();
       var2.setStyle(Style.FILL);
       var2.setColor(this.stripeColor);
       var1.drawRoundRect(this.rect, this.radius, this.radius, var2);
-      var2.setStyle(var6);
+      var2.setStyle(var5);
       var2.setColor(var4);
    }
 

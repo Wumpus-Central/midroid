@@ -27,13 +27,13 @@ public object IconUrlUtils {
    }
 
    public fun getCustomEmojiUrl(emojiId: Long, animate: Boolean, size: Int? = null): String {
-      val var6: MediaProxy = MediaProxy.INSTANCE;
-      val var7: java.lang.String = Hosts.INSTANCE.getCDN();
+      val var7: MediaProxy = MediaProxy.INSTANCE;
+      val var6: java.lang.String = Hosts.INSTANCE.getCDN();
       val var5: StringBuilder = new StringBuilder();
-      var5.append(var7);
+      var5.append(var6);
       var5.append("/emojis/");
       var5.append(var1);
-      return var6.withSize(var5.toString(), var3, var4, null);
+      return var7.withSize(var5.toString(), var3, var4, null);
    }
 
    public fun getForChannel(context: Context, id: ChannelId?, icon: String?, isGroupDM: Boolean, size: Int? = ...): String {
@@ -114,14 +114,14 @@ public object IconUrlUtils {
          label26:
          try {
             val var13: a = Result.k;
-            var3 = Hosts.INSTANCE.getCDN();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var3);
-            var7.append("/icons/");
-            var7.append(var1);
-            var7.append("/");
-            var7.append(var2);
-            var12 = Result.b(var7.toString());
+            val var7: java.lang.String = Hosts.INSTANCE.getCDN();
+            val var14: StringBuilder = new StringBuilder();
+            var14.append(var7);
+            var14.append("/icons/");
+            var14.append(var1);
+            var14.append("/");
+            var14.append(var2);
+            var12 = Result.b(var14.toString());
          } catch (var8: java.lang.Throwable) {
             val var11: a = Result.k;
             var12 = Result.b(c.a(var8));
@@ -171,45 +171,45 @@ public object IconUrlUtils {
       r.h(var1, "context");
       if (var2 != null) {
          if (UserId.equals-impl(UserId.constructor-impl(-1L), var2)) {
-            var var16: java.lang.String = var3;
+            var var17: java.lang.String = var3;
             if (var3 == null) {
-               var16 = "";
+               var17 = "";
             }
 
-            return var16;
+            return var17;
          }
 
          if (var3 != null) {
             label43:
             try {
-               val var12: a = Result.k;
+               val var13: a = Result.k;
                val var18: java.lang.String = Hosts.INSTANCE.getCDN();
-               val var13: StringBuilder = new StringBuilder();
-               var13.append(var18);
-               var13.append("/avatars/");
-               var13.append(var2);
-               var13.append("/");
-               var13.append(var3);
-               var11 = Result.b(MediaProxy.INSTANCE.withSize(var13.toString(), var5, var6, var3));
+               val var14: StringBuilder = new StringBuilder();
+               var14.append(var18);
+               var14.append("/avatars/");
+               var14.append(var2);
+               var14.append("/");
+               var14.append(var3);
+               var12 = Result.b(MediaProxy.INSTANCE.withSize(var14.toString(), var5, var6, var3));
             } catch (var8: java.lang.Throwable) {
-               val var17: a = Result.k;
-               var11 = Result.b(c.a(var8));
+               val var11: a = Result.k;
+               var12 = Result.b(c.a(var8));
                break label43;
             }
 
-            if (Result.e(var11) != null) {
-               val var15: java.lang.String = Hosts.INSTANCE.getAPI();
+            if (Result.e(var12) != null) {
+               val var16: java.lang.String = Hosts.INSTANCE.getAPI();
                val var19: StringBuilder = new StringBuilder();
-               var19.append(var15);
+               var19.append(var16);
                var19.append("/users/");
                var19.append(var2);
                var19.append("/avatars/");
                var19.append(var3);
                var19.append(".jpg");
-               var11 = var19.toString();
+               var12 = var19.toString();
             }
 
-            return var11 as java.lang.String;
+            return var12 as java.lang.String;
          }
 
          if (var4 != null) {

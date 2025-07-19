@@ -136,27 +136,27 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
-      val var1: java.lang.String = this.messageId;
-      val var5: java.lang.String = this.originalLink;
-      val var3: java.util.List = this.inContent;
-      val var6: java.util.List = this.content;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ChannelMentionContentNode(channelId=");
-      var7.append(var4);
-      var7.append(", guildId=");
-      var7.append(var2);
-      var7.append(", messageId=");
-      var7.append(var1);
-      var7.append(", originalLink=");
-      var7.append(var5);
-      var7.append(", inContent=");
-      var7.append(var3);
-      var7.append(", content=");
-      var7.append(var6);
-      var7.append(")");
-      return var7.toString();
+      val var5: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.guildId;
+      val var6: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.originalLink;
+      val var2: java.util.List = this.inContent;
+      val var3: java.util.List = this.content;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("ChannelMentionContentNode(channelId=");
+      var4.append(var5);
+      var4.append(", guildId=");
+      var4.append(var7);
+      var4.append(", messageId=");
+      var4.append(var6);
+      var4.append(", originalLink=");
+      var4.append(var1);
+      var4.append(", inContent=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

@@ -81,11 +81,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       this.binding = var6;
       val var7: MessageBundleAdapter = new MessageBundleAdapter();
       this.adapter = var7;
-      var3 = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
-      this.leftMarginPx = var3;
-      val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
-      this.rightMarginPx = var4;
-      val var5: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var3);
+      val var4: Int = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
+      this.leftMarginPx = var4;
+      var3 = this.getResources().getDimensionPixelSize(R.dimen.message_horizontal_spacing);
+      this.rightMarginPx = var3;
+      val var5: MessageBundleSpineItemDecoration = new MessageBundleSpineItemDecoration(var1, var4);
       this.spineItemDecoration = var5;
       this.onTruncateMessage = <unrepresentable>.INSTANCE;
       RippleUtilsKt.addRipple$default(this, false, 0, 3, null);
@@ -98,7 +98,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
          var1,
          new VerticalSpacingItemDecoration(SizeUtilsKt.getDpToPx(8), 0, SizeUtilsKt.getDpToPx(8), false, 10, null),
          var5,
-         new MessageBundleHorizontalSpacingDecoration(var3, var4)
+         new MessageBundleHorizontalSpacingDecoration(var4, var3)
       );
       var9.setLayoutManager(new LinearLayoutManager(var1));
       var9.setAdapter(var7);
@@ -342,24 +342,24 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var2: java.util.List = this.rows;
-         val var1: java.lang.Float = this.truncationThreshold;
-         val var5: java.util.List = this.referenceMessageRows;
-         val var4: java.lang.String = this.viewMoreText;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("MessageBundle(messageFrame=");
-         var3.append(var6);
-         var3.append(", rows=");
-         var3.append(var2);
-         var3.append(", truncationThreshold=");
-         var3.append(var1);
-         var3.append(", referenceMessageRows=");
-         var3.append(var5);
-         var3.append(", viewMoreText=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var4: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var3: java.util.List = this.rows;
+         val var2: java.lang.Float = this.truncationThreshold;
+         val var6: java.util.List = this.referenceMessageRows;
+         val var1: java.lang.String = this.viewMoreText;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("MessageBundle(messageFrame=");
+         var5.append(var4);
+         var5.append(", rows=");
+         var5.append(var3);
+         var5.append(", truncationThreshold=");
+         var5.append(var2);
+         var5.append(", referenceMessageRows=");
+         var5.append(var6);
+         var5.append(", viewMoreText=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
 
       public companion object {

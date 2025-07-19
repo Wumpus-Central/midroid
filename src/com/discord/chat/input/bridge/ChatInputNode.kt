@@ -98,9 +98,9 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var5: Int = Integer.hashCode(this.location);
-      val var4: Int = Integer.hashCode(this.length);
+      val var4: Int = Integer.hashCode(this.type);
+      val var3: Int = Integer.hashCode(this.location);
+      val var5: Int = Integer.hashCode(this.length);
       var var2: Int = 0;
       val var1: Int;
       if (this.style == null) {
@@ -114,7 +114,7 @@ public data class ChatInputNode(type: Int,
          var2 = this.tapAction.hashCode();
       }
 
-      return (((((var3 * 31 + var5) * 31 + var4) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
+      return (((((var4 * 31 + var3) * 31 + var5) * 31 + var1) * 31 + var6) * 31 + var2) * 31 + java.lang.Boolean.hashCode(this.editDisabled);
    }
 
    public override fun toString(): String {

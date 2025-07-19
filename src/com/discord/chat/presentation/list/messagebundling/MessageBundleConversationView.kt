@@ -115,26 +115,26 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var20: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
          val var14: StructurableText = var12.getContent();
-         val var15: Context = this.getContext();
-         r.g(var15, "getContext(...)");
-         val var11: java.lang.String = var12.getId-3Eiw7ao();
-         val var7: Boolean = MessageKt.shouldAnimateEmoji(var12);
-         val var8: Boolean = MessageKt.shouldShowLinkDecorations(var12);
-         val var9: Boolean = var12.getShouldShowRoleDot();
-         val var10: Boolean = var12.getShouldShowRoleOnName();
+         val var11: Context = this.getContext();
+         r.g(var11, "getContext(...)");
+         val var15: java.lang.String = var12.getId-3Eiw7ao();
+         val var9: Boolean = MessageKt.shouldAnimateEmoji(var12);
+         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var12);
+         val var8: Boolean = var12.getShouldShowRoleDot();
+         val var7: Boolean = var12.getShouldShowRoleOnName();
          val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          r.g(var16, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var16);
          val var37: TextPaint = this.binding.replyText.getPaint();
          r.g(var37, "getPaint(...)");
-         val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
+         val var28: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var14,
-            var15,
             var11,
-            var7,
-            var8,
+            var15,
             var9,
             var10,
+            var8,
+            var7,
             var37,
             null,
             null,
@@ -158,17 +158,17 @@ public class MessageBundleConversationView  public constructor(context: Context,
             46137216,
             null
          );
-         val var28: MessageContentView = this.binding.replyText;
+         val var34: MessageContentView = this.binding.replyText;
          r.g(this.binding.replyText, "replyText");
-         SpannableExtensionsKt.coverWithSpan(var34, new BackgroundSpanDrawer(var28));
-         var21 = ReplyUtilsKt.createReplyContent(var20, var34);
+         SpannableExtensionsKt.coverWithSpan(var28, new BackgroundSpanDrawer(var34));
+         var21 = ReplyUtilsKt.createReplyContent(var20, var28);
       } else if (MessageFlagKt.hasMessageFlag(var12.getFlags(), MessageFlag.IS_COMPONENTS_V2)) {
-         val var22: TextView = this.binding.replyAuthorName;
+         val var29: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var29: Context = this.getContext();
-         r.g(var29, "getContext(...)");
+         val var22: Context = this.getContext();
+         r.g(var22, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var22, I18nUtilsKt.i18nFormat$default(var29, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
+            var29, I18nUtilsKt.i18nFormat$default(var22, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
          );
       } else {
          val var30: TextView = this.binding.replyAuthorName;
@@ -187,13 +187,13 @@ public class MessageBundleConversationView  public constructor(context: Context,
          var31.getLineBounds(0, this.replyTextLineBounds);
          val var32: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var24: android.view.ViewGroup.LayoutParams = var32.getLayoutParams();
-         if (var24 == null) {
+         val var35: android.view.ViewGroup.LayoutParams = var32.getLayoutParams();
+         if (var35 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
-         var24.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
-         var32.setLayoutParams(var24);
+         var35.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
+         var32.setLayoutParams(var35);
       }
 
       val var36: ShortcutsFlexbox = this.binding.reactionsView;
@@ -214,18 +214,7 @@ public class MessageBundleConversationView  public constructor(context: Context,
          new f(var2, var12),
          null,
          null,
-         false,
-         false,
-         false,
-         false,
-         false,
-         null,
-         null,
-         null,
-         var13.getReplyAccessibilityLabel(),
-         var13.getForwardAccessibilityLabel(),
-         var13.getThreadAccessibilityLabel(),
-         130944,
+         384,
          null
       );
       r.e(var36);

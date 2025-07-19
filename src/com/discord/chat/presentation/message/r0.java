@@ -1,13 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.react_strings.RenderContext;
+import com.discord.chat.bridge.contentnode.CommandMentionContentNode;
+import com.discord.chat.presentation.events.ChatEventHandler;
 import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
 public final class r0 implements Function1 {
-   public final String j;
+   public final ChatEventHandler j;
 
    public final Object invoke(Object var1) {
-      return MessageViewAccessibilityDelegate.c(this.j, (RenderContext)var1);
+      return MessageViewReplyPreview.i(this.j, (CommandMentionContentNode)var1);
    }
 }

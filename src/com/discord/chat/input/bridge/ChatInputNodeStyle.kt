@@ -89,19 +89,19 @@ public data class ChatInputNodeStyle(fontSize: Int? = null, color: Int, backgrou
    }
 
    public override fun toString(): String {
-      val var4: Int = this.fontSize;
+      val var5: Int = this.fontSize;
       val var1: Int = this.color;
-      val var3: BackgroundStyle = this.backgroundStyle;
-      val var5: ChatInputNodeFontWeight = this.fontWeight;
+      val var4: BackgroundStyle = this.backgroundStyle;
+      val var3: ChatInputNodeFontWeight = this.fontWeight;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ChatInputNodeStyle(fontSize=");
-      var2.append(var4);
+      var2.append(var5);
       var2.append(", color=");
       var2.append(var1);
       var2.append(", backgroundStyle=");
-      var2.append(var3);
+      var2.append(var4);
       var2.append(", fontWeight=");
-      var2.append(var5);
+      var2.append(var3);
       var2.append(")");
       return var2.toString();
    }

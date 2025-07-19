@@ -152,11 +152,11 @@ public object CodeRules {
       );
       val var34: Xml = Xml.INSTANCE;
       val var31: Rule = toMatchGroupRule$default(this, Xml.INSTANCE.getPATTERN_XML_COMMENT(), 0, var1.getCommentStyleProvider(), 1, null);
-      var var9: Rule = var34.createTagRule(var1);
+      var var10: Rule = var34.createTagRule(var1);
       val var35: Pattern = PATTERN_LEADING_WS_CONSUMER;
-      var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
+      var var9: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
       val var8: Pattern = PATTERN_TEXT;
-      val var32: java.util.List = i.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
+      val var32: java.util.List = i.n(new Rule[]{var31, var10, var9, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       r.g(var39, "createSingleLineCommentPattern(\"#\")");
       var9 = toMatchGroupRule$default(this, var39, 0, var1.getCommentStyleProvider(), 1, null);

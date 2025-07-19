@@ -39,13 +39,13 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
 
    public fun bind(embeddedActivityInviteAccessory: EmbeddedActivityInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "embeddedActivityInviteAccessory");
-      val var12: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
-      val var17: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
-      this.embeddedActivityInviteView.setSplash(var12.getSplashUrl(), var1.getConstrainedWidth());
-      var17.setTitleText(var12.getTitleText());
-      var17.setHeaderText(var12.getHeaderText());
-      var17.setSubtitleText-Tu_1QLM(
-         var12.getStructurableSubtitleText(),
+      val var11: EmbeddedActivityInviteEmbedImpl = var1.getEmbeddedActivityInviteEmbed();
+      val var18: EmbeddedActivityInviteView = this.embeddedActivityInviteView;
+      this.embeddedActivityInviteView.setSplash(var11.getSplashUrl(), var1.getConstrainedWidth());
+      var18.setTitleText(var11.getTitleText());
+      var18.setHeaderText(var11.getHeaderText());
+      var18.setSubtitleText-Tu_1QLM(
+         var11.getStructurableSubtitleText(),
          var1.getMessageId-3Eiw7ao(),
          new Function2(this.eventHandler) {
             {
@@ -221,9 +221,9 @@ public class EmbeddedActivityInviteViewHolder(embeddedActivityInviteView: Embedd
             }
          }
       );
-      var17.setNoParticipantsText(var12.getNoParticipantsText());
-      var17.setLaunchButton(var12.getAcceptLabelText(), var12.getAcceptLabelBackgroundColor(), var12.getCtaEnabled());
-      var17.setAvatarUris(var12.getParticipantAvatarUris());
-      var17.setOnLaunchButtonClickListener(new j(this, var1));
+      var18.setNoParticipantsText(var11.getNoParticipantsText());
+      var18.setLaunchButton(var11.getAcceptLabelText(), var11.getAcceptLabelBackgroundColor(), var11.getCtaEnabled());
+      var18.setAvatarUris(var11.getParticipantAvatarUris());
+      var18.setOnLaunchButtonClickListener(new j(this, var1));
    }
 }

@@ -90,12 +90,12 @@ internal object MediaProxy {
          var5 = false;
       }
 
-      var4 = MediaExtensionKt.getMediaExtension(var5);
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var1);
-      var6.append(".");
-      var6.append(var4);
-      val var7: Builder = Uri.parse(var6.toString()).buildUpon();
+      val var6: java.lang.String = MediaExtensionKt.getMediaExtension(var5);
+      val var9: StringBuilder = new StringBuilder();
+      var9.append(var1);
+      var9.append(".");
+      var9.append(var6);
+      val var7: Builder = Uri.parse(var9.toString()).buildUpon();
       if (var3 != null && var3 > 0) {
          var7.appendQueryParameter("size", java.lang.String.valueOf(this.getMediaProxySize(var3)));
       }

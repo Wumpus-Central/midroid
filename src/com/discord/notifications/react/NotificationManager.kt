@@ -15,10 +15,10 @@ public class NotificationManager(reactContext: ReactApplicationContext) : ReactC
    @ReactMethod
    public fun clearNotificationsForChannel(channelId: String) {
       r.h(var1, "channelId");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.ackReactionNotifications(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var2.ackReactionNotifications(var3, var1);
    }
 
    public open fun getName(): String {

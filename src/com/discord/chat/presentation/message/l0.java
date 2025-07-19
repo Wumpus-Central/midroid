@@ -1,16 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.discord.chat.bridge.Message;
+import java.util.Comparator;
 import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class l0 implements OnClickListener {
+public final class l0 implements Comparator {
    public final Function2 j;
-   public final Message k;
 
-   public final void onClick(View var1) {
-      MessageView.m(this.j, this.k, var1);
+   @Override
+   public final int compare(Object var1, Object var2) {
+      return MessageView.g(this.j, var1, var2);
    }
 }

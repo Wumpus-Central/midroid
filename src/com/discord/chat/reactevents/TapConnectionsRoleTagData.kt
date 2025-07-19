@@ -77,17 +77,17 @@ public data class TapConnectionsRoleTagData(userId: String, guildId: String, cha
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.userId;
-      val var2: java.lang.String = this.guildId;
-      val var5: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.userId;
+      val var4: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.channelId;
       val var3: java.lang.String = this.roleId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapConnectionsRoleTagData(userId=");
-      var1.append(var4);
-      var1.append(", guildId=");
-      var1.append(var2);
-      var1.append(", channelId=");
       var1.append(var5);
+      var1.append(", guildId=");
+      var1.append(var4);
+      var1.append(", channelId=");
+      var1.append(var2);
       var1.append(", roleId=");
       var1.append(var3);
       var1.append(")");

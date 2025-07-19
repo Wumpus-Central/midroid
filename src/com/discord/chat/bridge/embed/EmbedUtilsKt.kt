@@ -220,20 +220,20 @@ public fun Embed.toMediaSource(channelId: ChannelId, messageId: MessageId, shoul
             return null;
          }
 
-         val var11: java.lang.String = var21.getEmbedUrl();
-         if (var11 == null) {
+         val var10: java.lang.String = var21.getEmbedUrl();
+         if (var10 == null) {
             return null;
          }
 
-         val var10: java.lang.String = getTag(var0);
-         val var25: MediaType = MediaType.IMAGE;
+         val var25: java.lang.String = getTag(var0);
+         val var11: MediaType = MediaType.IMAGE;
          var17 = new MediaSource(
             null,
-            var11,
+            var10,
             var0.getImage().getPlaceholder(),
             var0.getImage().getPlaceholderVersion(),
-            var10,
             var25,
+            var11,
             var4,
             ChannelId.box-impl(var1),
             var3,

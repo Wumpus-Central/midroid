@@ -7,9 +7,7 @@ import com.discord.primitives.MessageId
 import kotlin.jvm.internal.r
 
 public data class AutomodSystemMessageItem(message: Message,
-      messageContext: MessageContext = new MessageContext(
-            false, false, null, null, null, false, null, false, false, false, false, null, null, null, null, null, 65535, null
-         ),
+      messageContext: MessageContext = new MessageContext(false, false, null, null, null, false, null, false, false, false, false, null, null, 8191, null),
       allowChildGestures: Boolean = true
    )
    : ChatListItem {

@@ -213,10 +213,10 @@ internal class EmojiPickerViewAdapter(coreData: CoreData,
          kotlin.jvm.internal.r.f(var9, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.Spacer");
          var6.onBindViewHolder(var9 as EmojiPickerItem.Spacer);
       } else if (var1 is EmojiPickerViewHolder.FooterUpsell) {
-         val var7: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
-         val var10: EmojiPickerItem = this.getItem(var2);
-         kotlin.jvm.internal.r.f(var10, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
-         var7.onBindViewHolder(var10 as EmojiPickerItem.FooterUpsell);
+         val var10: EmojiPickerViewHolder.FooterUpsell = var1 as EmojiPickerViewHolder.FooterUpsell;
+         val var7: EmojiPickerItem = this.getItem(var2);
+         kotlin.jvm.internal.r.f(var7, "null cannot be cast to non-null type com.discord.emoji_picker.EmojiPickerItem.FooterUpsell");
+         var10.onBindViewHolder(var7 as EmojiPickerItem.FooterUpsell);
       } else if (var1 is EmojiPickerViewHolder.PremiumInlineRoadblockFooter) {
          (var1 as EmojiPickerViewHolder.PremiumInlineRoadblockFooter).onBindViewHolder(this.useTier0UpsellContent);
       } else {

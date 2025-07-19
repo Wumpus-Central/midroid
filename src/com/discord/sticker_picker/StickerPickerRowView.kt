@@ -43,12 +43,12 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
          var6 = var6 as StickerPickerRow.Sticker;
          val var7: View = this.getChildAt(var3);
          r.f(var7, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         val var10: StickerView = var7 as StickerView;
+         val var8: StickerView = var7 as StickerView;
          if (var6 == null) {
-            var10.setVisibility(4);
-            var10.recycle();
+            var8.setVisibility(4);
+            var8.recycle();
          } else {
-            var10.setVisibility(0);
+            var8.setVisibility(0);
             val var2: Float;
             if (((StickerPickerRow.Sticker)var6).getOpaque()) {
                var2 = 1.0F;
@@ -56,10 +56,10 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                var2 = 0.3F;
             }
 
-            var10.setAlpha(var2);
-            var10.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
-            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var10, false, new a(this, (StickerPickerRow.Sticker)var6), 1, null);
-            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var10, false, new b(this, (StickerPickerRow.Sticker)var6), 1, null);
+            var8.setAlpha(var2);
+            var8.setEnabled(((StickerPickerRow.Sticker)var6).getDisabled() xor true);
+            NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var8, false, new a(this, (StickerPickerRow.Sticker)var6), 1, null);
+            NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(var8, false, new b(this, (StickerPickerRow.Sticker)var6), 1, null);
             val var4: Int = StickerPickerRowView.WhenMappings.$EnumSwitchMapping$0[((StickerPickerRow.Sticker)var6).getType().ordinal()];
             if (var4 != 1) {
                if (var4 != 2) {
@@ -68,7 +68,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                         throw new n();
                      }
 
-                     var10.asGif(
+                     var8.asGif(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -76,7 +76,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                         ((StickerPickerRow.Sticker)var6).getName()
                      );
                   } else {
-                     var10.asLottie(
+                     var8.asLottie(
                         ((StickerPickerRow.Sticker)var6).getUrl(),
                         var1.getItemSize(),
                         var1.getItemSize(),
@@ -87,7 +87,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                      );
                   }
                } else {
-                  var10.asApng(
+                  var8.asApng(
                      ((StickerPickerRow.Sticker)var6).getUrl(),
                      var1.getItemSize(),
                      var1.getItemSize(),
@@ -96,7 +96,7 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
                   );
                }
             } else {
-               var10.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
+               var8.asPng(((StickerPickerRow.Sticker)var6).getUrl(), var1.getItemSize(), var1.getItemSize(), ((StickerPickerRow.Sticker)var6).getName());
             }
          }
       }
@@ -159,9 +159,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var1 : f0.a(this)) {
-         r.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var1 as StickerView).recycle();
+      for (View var2 : f0.a(this)) {
+         r.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var2 as StickerView).recycle();
       }
    }
 

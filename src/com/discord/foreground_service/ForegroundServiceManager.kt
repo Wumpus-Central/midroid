@@ -67,15 +67,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var6: Log = Log.INSTANCE;
-      val var5: java.lang.String = tag;
+      val var5: Log = Log.INSTANCE;
+      val var4: java.lang.String = tag;
       r.g(tag, "tag");
       val var3: Int = var2.size();
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("Start service with ");
-      var4.append(var3);
-      var4.append(" configurations.");
-      Log.i$foreground_service_release$default(var6, var5, var4.toString(), null, 4, null);
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("Start service with ");
+      var6.append(var3);
+      var6.append(" configurations.");
+      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, new d());
    }
@@ -168,14 +168,14 @@ public class ForegroundServiceManager {
       // 03: ldc_w "foregroundService"
       // 06: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 09: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0c: astore 2
+      // 0c: astore 3
       // 0d: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 10: astore 3
-      // 11: aload 3
+      // 10: astore 2
+      // 11: aload 2
       // 12: ldc "tag"
       // 14: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 17: aload 2
-      // 18: aload 3
+      // 17: aload 3
+      // 18: aload 2
       // 19: ldc_w "On service connected."
       // 1c: aconst_null
       // 1d: bipush 4
@@ -202,11 +202,11 @@ public class ForegroundServiceManager {
       // 4a: aload 0
       // 4b: aload 1
       // 4c: invokevirtual com/discord/foreground_service/ForegroundServiceManager.stopService$foreground_service_release (Landroid/content/Context;)V
-      // 4f: aload 3
+      // 4f: aload 2
       // 50: ldc "tag"
       // 52: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 55: aload 2
-      // 56: aload 3
+      // 55: aload 3
+      // 56: aload 2
       // 57: ldc_w "No configuration present (process liked died), stopping service."
       // 5a: aconst_null
       // 5b: bipush 4
@@ -337,7 +337,7 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 5
+      // 12: astore 6
       // 14: new K1/b
       // 17: astore 4
       // 19: aload 4
@@ -346,12 +346,12 @@ public class ForegroundServiceManager {
       // 1d: aload 2
       // 1e: invokespecial K1/b.<init> (Lcom/discord/foreground_service/ForegroundServiceManager;Landroid/content/Context;Ljava/util/List;)V
       // 21: new K1/c
-      // 24: astore 6
-      // 26: aload 6
+      // 24: astore 5
+      // 26: aload 5
       // 28: invokespecial K1/c.<init> ()V
-      // 2b: aload 5
+      // 2b: aload 6
       // 2d: aload 4
-      // 2f: aload 6
+      // 2f: aload 5
       // 31: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
       // 34: astore 4
       // 36: aload 0
@@ -430,14 +430,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 2
+      // 0b: astore 3
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 3
-      // 10: aload 3
+      // 0f: astore 2
+      // 10: aload 2
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 2
-      // 17: aload 3
+      // 16: aload 3
+      // 17: aload 2
       // 18: ldc_w "Stop service."
       // 1b: aconst_null
       // 1c: bipush 4

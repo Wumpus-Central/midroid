@@ -1,14 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.contentnode.CommandMentionContentNode;
-import com.discord.chat.presentation.events.ChatEventHandler;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class u0 implements Function1 {
-   public final ChatEventHandler j;
+public final class u0 implements OnClickListener {
+   public final Function0 j;
 
-   public final Object invoke(Object var1) {
-      return MessageViewReplyPreview.i(this.j, (CommandMentionContentNode)var1);
+   public final void onClick(View var1) {
+      MessageViewReplyPreview.l(this.j, var1);
    }
 }

@@ -115,9 +115,9 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = ChannelId.hashCode-impl(this.channelId);
+      val var7: Int = ChannelId.hashCode-impl(this.channelId);
       val var4: Int = MessageId.hashCode-impl(this.messageId);
-      val var7: Int = this.attachment.hashCode();
+      val var5: Int = this.attachment.hashCode();
       val var6: Int = Integer.hashCode(this.attachmentIndex);
       var var3: Int = 0;
       val var1: Int;
@@ -138,33 +138,33 @@ public data class AudioAttachmentMessageAccessory(channelId: ChannelId,
          var3 = this.color.hashCode();
       }
 
-      return ((((((var5 * 31 + var4) * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.isVoiceMessage);
+      return ((((((var7 * 31 + var4) * 31 + var5) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + java.lang.Boolean.hashCode(this.isVoiceMessage);
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var8: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: Attachment = this.attachment;
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: Attachment = this.attachment;
       val var1: Int = this.attachmentIndex;
-      val var4: java.lang.Float = this.attachmentsOpacity;
-      val var7: UserId = this.authorId;
-      val var5: Int = this.color;
+      val var6: java.lang.Float = this.attachmentsOpacity;
+      val var3: UserId = this.authorId;
+      val var8: Int = this.color;
       val var2: Boolean = this.isVoiceMessage;
       val var9: StringBuilder = new StringBuilder();
       var9.append("AudioAttachmentMessageAccessory(channelId=");
-      var9.append(var6);
+      var9.append(var5);
       var9.append(", messageId=");
-      var9.append(var8);
+      var9.append(var7);
       var9.append(", attachment=");
-      var9.append(var3);
+      var9.append(var4);
       var9.append(", attachmentIndex=");
       var9.append(var1);
       var9.append(", attachmentsOpacity=");
-      var9.append(var4);
+      var9.append(var6);
       var9.append(", authorId=");
-      var9.append(var7);
+      var9.append(var3);
       var9.append(", color=");
-      var9.append(var5);
+      var9.append(var8);
       var9.append(", isVoiceMessage=");
       var9.append(var2);
       var9.append(")");

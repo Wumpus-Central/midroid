@@ -290,7 +290,6 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_starshootingicon;
       public static int design_components_icon_native_redesign_generated_images_stickericon;
       public static int design_components_icon_native_redesign_generated_images_stickerplusicon;
-      public static int design_components_icon_native_redesign_generated_images_stickerwink2icon;
       public static int design_components_icon_native_redesign_generated_images_superreactionicon;
       public static int design_components_icon_native_redesign_generated_images_tagicon;
       public static int design_components_icon_native_redesign_generated_images_textcontrollericon;
@@ -2047,6 +2046,7 @@ public final class R {
       public static int modules_premium_powerups_guildpowerupscompiledmessages;
       public static int modules_report_to_mod_reporttomodcompiledmessages;
       public static int modules_safety_flows_safetyflowscompiledmessages;
+      public static int modules_self_remediation_feedback_selfremediationfeedbackcompiledmessages;
       public static int modules_voice_filters_voicefilternamescompiledmessages;
 
       private raw() {

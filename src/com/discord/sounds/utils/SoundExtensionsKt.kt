@@ -21,7 +21,6 @@ import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
-import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.FlowCollector
 
 internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: Int, usage: Int, soundResIdPrepared: (Int) -> Unit) {
@@ -77,10 +76,10 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                c.b(var1);
             } else {
                c.b(var1);
-               val var4: Flow = FileDownloader.downloadFile$default(
+               var1 = FileDownloader.downloadFile$default(
                   FileDownloader.INSTANCE, this.$context, this.$url, this.$fileName, this.$soundDirectory, false, 16, null
                );
-               var1 = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
+               val var4: FlowCollector = new FlowCollector(this.$soundManager, this.$key, this.$usage, this.$soundResIdPrepared) {
                   final int $key;
                   final SoundManager $soundManager;
                   final Function1 $soundResIdPrepared;
@@ -311,7 +310,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                   }
                };
                this.label = 1;
-               if (var4.collect(var1, this) === var3) {
+               if (var1.collect(var4, this) === var3) {
                   return var3;
                }
             }
@@ -326,11 +325,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 
 internal fun getRemoteSoundFilename(url: String): String {
    r.h(var0, "url");
-   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(".mp3");
-   return var2.toString();
+   var0 = Uri.parse(var0).getLastPathSegment();
+   val var1: StringBuilder = new StringBuilder();
+   var1.append(var0);
+   var1.append(".mp3");
+   return var1.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {
