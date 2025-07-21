@@ -25,15 +25,15 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun getItem(position: Int): EmojiPickerItem {
       val var6: Array<java.util.List> = this.dataSets;
       val var4: Int = this.dataSets.length;
-      var var3: Int = 0;
+      var var2: Int = 0;
 
-      for (int var2 = 0; var3 < var4; var3++) {
-         val var5: java.util.List = var6[var3];
-         if (var1 < var6[var3].size() + var2) {
-            return var5.get(var1 - var2) as EmojiPickerItem;
+      for (int var3 = 0; var2 < var4; var2++) {
+         val var5: java.util.List = var6[var2];
+         if (var1 < var6[var2].size() + var3) {
+            return var5.get(var1 - var3) as EmojiPickerItem;
          }
 
-         var2 += var5.size();
+         var3 += var5.size();
       }
 
       val var7: StringBuilder = new StringBuilder();
@@ -75,14 +75,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
       kotlin.jvm.internal.r.h(var1, "coreData");
       kotlin.jvm.internal.r.h(var2, "onChanged");
-      var var3: Array<java.util.List> = this.dataSets;
+      var var4: Array<java.util.List> = this.dataSets;
       val var5: java.util.List = var1.getLeading();
       var5.set(0, this.coreData.getLeading().get(0));
-      var3[0] = var5;
-      var3 = this.dataSets;
-      val var8: java.util.List = var1.getTrailing();
-      var8.set(kotlin.collections.i.m(var8), kotlin.collections.i.s0(this.coreData.getTrailing()));
-      var3[3] = var8;
+      var4[0] = var5;
+      var4 = this.dataSets;
+      val var6: java.util.List = var1.getTrailing();
+      var6.set(kotlin.collections.i.m(var6), kotlin.collections.i.s0(this.coreData.getTrailing()));
+      var4[3] = var6;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = kotlin.collections.i.k();
          this.dataSets[2] = kotlin.collections.i.k();
@@ -193,13 +193,13 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
       @JvmStatic
       fun `categoryIndices_delegate$lambda$1`(var0: EmojiPickerItemData.CoreData): java.util.Map {
          val var2: LinkedHashMap = new LinkedHashMap();
-         val var3: java.util.Iterator = var0.leading.iterator();
+         val var4: java.util.Iterator = var0.leading.iterator();
          var var1: Int = 0;
 
-         while (var3.hasNext()) {
-            val var4: EmojiPickerItem = var3.next() as EmojiPickerItem;
-            if (var4 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var4 as EmojiPickerItem.Category).getTitle()), var1);
+         while (var4.hasNext()) {
+            val var3: EmojiPickerItem = var4.next() as EmojiPickerItem;
+            if (var3 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var3 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }
@@ -330,8 +330,8 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
          val var4: Boolean = this.hasPremiumInlineRoadblock;
          val var8: java.util.List = this.leading;
          val var5: java.util.List = this.trailing;
-         val var7: java.util.List = this.nativeSectionsEmojis;
-         val var6: java.util.List = this.nativeSectionsEmojisUnicode;
+         val var6: java.util.List = this.nativeSectionsEmojis;
+         val var7: java.util.List = this.nativeSectionsEmojisUnicode;
          val var9: StringBuilder = new StringBuilder();
          var9.append("CoreData(rowSize=");
          var9.append(var1);
@@ -346,9 +346,9 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
          var9.append(", trailing=");
          var9.append(var5);
          var9.append(", nativeSectionsEmojis=");
-         var9.append(var7);
-         var9.append(", nativeSectionsEmojisUnicode=");
          var9.append(var6);
+         var9.append(", nativeSectionsEmojisUnicode=");
+         var9.append(var7);
          var9.append(")");
          return var9.toString();
       }

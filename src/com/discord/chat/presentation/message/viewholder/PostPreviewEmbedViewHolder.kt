@@ -32,16 +32,16 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
    public fun bind(postPreviewEmbed: PostPreviewEmbed, onTapPostPreviewEmbed: (GuildId, ChannelId, ChannelId, MessageId) -> Unit, spoilerConfig: SpoilerConfig?) {
       kotlin.jvm.internal.r.h(var1, "postPreviewEmbed");
       kotlin.jvm.internal.r.h(var2, "onTapPostPreviewEmbed");
-      val var18: PostPreviewEmbedView = this.postPreviewEmbedView;
-      val var12: java.lang.String = var1.getTitle();
-      val var17: java.lang.String = var1.getSubtitle();
-      val var9: java.lang.String = var1.getCtaText();
+      val var14: PostPreviewEmbedView = this.postPreviewEmbedView;
+      val var18: java.lang.String = var1.getTitle();
+      val var9: java.lang.String = var1.getSubtitle();
+      val var17: java.lang.String = var1.getCtaText();
       val var4: Int = var1.getCtaButtonColor();
-      val var10: java.lang.String = var1.getCoverImage();
-      val var15: java.lang.String = var1.getBlurredCoverImage();
-      val var13: java.lang.String = var1.getMessageId-3Eiw7ao();
+      val var13: java.lang.String = var1.getCoverImage();
+      val var12: java.lang.String = var1.getBlurredCoverImage();
+      val var15: java.lang.String = var1.getMessageId-3Eiw7ao();
       val var11: StructurableText = var1.getFooter();
-      val var14: java.lang.String = var1.getCoverImageOverlayText();
+      val var10: java.lang.String = var1.getCoverImageOverlayText();
       val var16: java.lang.String = var1.getBackgroundImage();
       val var21: D = new D(var2, var1);
       val var8: Boolean = var1.getShouldSpoiler();
@@ -69,6 +69,6 @@ public class PostPreviewEmbedViewHolder(postPreviewEmbedView: PostPreviewEmbedVi
          var7 = false;
       }
 
-      var18.setPostPreviewEmbed-4itWklQ(var12, var17, var9, var4, var11, var13, var10, var15, var14, var16, var21, var8, var5, var6, var7, var3);
+      var14.setPostPreviewEmbed-4itWklQ(var18, var9, var17, var4, var11, var15, var13, var12, var10, var16, var21, var8, var5, var6, var7, var3);
    }
 }

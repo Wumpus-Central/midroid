@@ -76,6 +76,7 @@
     <item type="id" name="actions_button" />
     <item type="id" name="actions_container" />
     <item type="id" name="activity_chooser_view_content" />
+    <item type="id" name="activity_icon" />
     <item type="id" name="add_reaction" />
     <item type="id" name="add_reaction_image" />
     <item type="id" name="add_reaction_text" />
@@ -172,6 +173,7 @@
     <item type="id" name="container" />
     <item type="id" name="content" />
     <item type="id" name="contentPanel" />
+    <item type="id" name="content_container" />
     <item type="id" name="content_footer_view" />
     <item type="id" name="content_inventory_component_avatar_image" />
     <item type="id" name="content_inventory_component_badge_icon" />
@@ -207,6 +209,7 @@
     <item type="id" name="design_menu_item_action_area_stub" />
     <item type="id" name="design_menu_item_text" />
     <item type="id" name="design_navigation_view" />
+    <item type="id" name="desktop_icon" />
     <item type="id" name="dialog_button" />
     <item type="id" name="dialog_card" />
     <item type="id" name="disconnect_btn" />
@@ -301,7 +304,9 @@
     <item type="id" name="footer_avatar" />
     <item type="id" name="footer_barrier" />
     <item type="id" name="footer_container" />
+    <item type="id" name="footer_content" />
     <item type="id" name="footer_divider" />
+    <item type="id" name="footer_label" />
     <item type="id" name="footer_text" />
     <item type="id" name="forum_post_action_bar_wrap" />
     <item type="id" name="fps_text" />
@@ -316,6 +321,7 @@
     <item type="id" name="gif_button" />
     <item type="id" name="gif_indicator" />
     <item type="id" name="gradient" />
+    <item type="id" name="gradient_background" />
     <item type="id" name="gradient_divider" />
     <item type="id" name="gradient_icon" />
     <item type="id" name="gradients" />
@@ -566,11 +572,15 @@
     <item type="id" name="participants" />
     <item type="id" name="participants_container" />
     <item type="id" name="participants_text" />
+    <item type="id" name="party_avatars" />
+    <item type="id" name="party_container" />
+    <item type="id" name="party_size_text" />
     <item type="id" name="percentage_bar_background" />
     <item type="id" name="percentage_bar_container" />
     <item type="id" name="pickerWrapper" />
     <item type="id" name="player_container" />
     <item type="id" name="player_icon" />
+    <item type="id" name="playstation_icon" />
     <item type="id" name="pointer_events" />
     <item type="id" name="pooling_container_listener_holder_tag" />
     <item type="id" name="pressed" />
@@ -701,6 +711,7 @@
     <item type="id" name="subtext" />
     <item type="id" name="subtitle" />
     <item type="id" name="subtitleGradient" />
+    <item type="id" name="subtitle_container" />
     <item type="id" name="subtitle_divider" />
     <item type="id" name="subtitle_icon" />
     <item type="id" name="subtitle_left" />
@@ -740,6 +751,7 @@
     <item type="id" name="textSpacerNoButtons" />
     <item type="id" name="textSpacerNoTitle" />
     <item type="id" name="textView" />
+    <item type="id" name="text_content_wrapper" />
     <item type="id" name="text_input_end_icon" />
     <item type="id" name="text_input_error_icon" />
     <item type="id" name="text_input_start_icon" />
@@ -846,5 +858,6 @@
     <item type="id" name="wrapper_reset_rotate" />
     <item type="id" name="wrapper_rotate_by_angle" />
     <item type="id" name="wrapper_states" />
+    <item type="id" name="xbox_icon" />
     <item type="id" name="year" />
 </resources>

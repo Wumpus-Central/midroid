@@ -10,6 +10,6 @@ public final class q implements Function4 {
    public final MessageAccessoriesAdapter k;
 
    public final Object invoke(Object var1, Object var2, Object var3, Object var4) {
-      return MessageAccessoriesAdapter.v(this.j, this.k, (MediaType)var1, (Integer)var2, (String)var3, (Integer)var4);
+      return MessageAccessoriesAdapter.r(this.j, this.k, (MediaType)var1, (Integer)var2, (String)var3, (Integer)var4);
    }
 }

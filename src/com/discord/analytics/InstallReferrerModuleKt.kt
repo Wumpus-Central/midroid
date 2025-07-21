@@ -50,11 +50,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var6: kotlin.Result.a = Result.k;
+               val var5: kotlin.Result.a = Result.k;
                var2.a();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var5: kotlin.Result.a = Result.k;
+               val var6: kotlin.Result.a = Result.k;
                Result.b(c.a(var3));
                return;
             }

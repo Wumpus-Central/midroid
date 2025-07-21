@@ -230,7 +230,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var31 = var30.listIterator(var30.size());
+                           var32 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -244,7 +244,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var31.hasPrevious()) {
+                              if (!var32.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -259,7 +259,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var8 = (java.lang.String)var31.previous();
+                              var31 = var32.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -272,7 +272,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (var8.length() <= 0) {
+                              if ((var31 as java.lang.String).length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -287,7 +287,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var8;
+                              var7 = var31 as java.lang.String;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -468,13 +468,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       r.h(var1, "context");
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread();
    }
 
@@ -578,27 +578,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
-         val var6: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
-         val var5: java.lang.String = this.groupHash;
+         val var7: java.lang.String = this.text;
+         val var6: java.lang.String = this.cause;
+         val var3: java.lang.String = this.groupBy;
+         val var5: java.lang.String = this.origin;
+         val var4: java.lang.String = this.groupHash;
          val var2: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var3);
-         var7.append(", cause=");
-         var7.append(var4);
-         var7.append(", groupBy=");
-         var7.append(var6);
-         var7.append(", origin=");
-         var7.append(var1);
-         var7.append(", groupHash=");
-         var7.append(var5);
-         var7.append(", textHash=");
-         var7.append(var2);
-         var7.append(")");
-         return var7.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Tombstone(text=");
+         var1.append(var7);
+         var1.append(", cause=");
+         var1.append(var6);
+         var1.append(", groupBy=");
+         var1.append(var3);
+         var1.append(", origin=");
+         var1.append(var5);
+         var1.append(", groupHash=");
+         var1.append(var4);
+         var1.append(", textHash=");
+         var1.append(var2);
+         var1.append(")");
+         return var1.toString();
       }
    }
 }

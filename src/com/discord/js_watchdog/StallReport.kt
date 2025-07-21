@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {
    public final val stallTime: Int
    public final val sessionId: String
@@ -73,17 +73,17 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var2: java.lang.String = this.sessionId;
-      val var3: java.lang.String = this.trace;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("StallReport(stallTime=");
-      var4.append(var1);
-      var4.append(", sessionId=");
-      var4.append(var2);
-      var4.append(", trace=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.String = this.sessionId;
+      val var2: java.lang.String = this.trace;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("StallReport(stallTime=");
+      var3.append(var1);
+      var3.append(", sessionId=");
+      var3.append(var4);
+      var3.append(", trace=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

@@ -107,7 +107,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       val var12: ArrayList = var1.getAvatarURLs();
       var var9: ArrayList = null;
       if (var12 != null) {
-         val var8: java.util.List = kotlin.collections.i.M0(var12, 3);
+         val var8: java.util.List = kotlin.collections.i.N0(var12, 3);
          var9 = null;
          if (var8 != null) {
             val var13: ArrayList = new ArrayList(kotlin.collections.i.v(var8, 10));
@@ -147,7 +147,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @sb.f
+   @sb.g
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -244,21 +244,21 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       }
 
       public override fun toString(): String {
-         val var2: java.lang.String = this.channelIconURL;
-         val var3: java.lang.String = this.chatIconURL;
-         val var4: ArrayList = this.avatarURLs;
+         val var1: java.lang.String = this.channelIconURL;
+         val var2: java.lang.String = this.chatIconURL;
+         val var3: ArrayList = this.avatarURLs;
          val var5: java.lang.String = this.channelName;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("MessageBundleHeader(channelIconURL=");
-         var1.append(var2);
-         var1.append(", chatIconURL=");
-         var1.append(var3);
-         var1.append(", avatarURLs=");
-         var1.append(var4);
-         var1.append(", channelName=");
-         var1.append(var5);
-         var1.append(")");
-         return var1.toString();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("MessageBundleHeader(channelIconURL=");
+         var4.append(var1);
+         var4.append(", chatIconURL=");
+         var4.append(var2);
+         var4.append(", avatarURLs=");
+         var4.append(var3);
+         var4.append(", channelName=");
+         var4.append(var5);
+         var4.append(")");
+         return var4.toString();
       }
 
       public companion object {

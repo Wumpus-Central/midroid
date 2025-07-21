@@ -35,7 +35,7 @@ public object BundleUpdaterUtils {
          }
       }
 
-      return kotlin.collections.i.T0(var5);
+      return kotlin.collections.i.U0(var5);
    }
 
    public fun getManifestFromFile(file: File): AppManifest {

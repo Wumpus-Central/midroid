@@ -5,9 +5,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapSelectActionComponent(messageId: MessageId, componentId: String) : TapSelectActionComponent(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val componentId: String
@@ -58,13 +58,13 @@ public data class TapSelectActionComponent(messageId: MessageId, componentId: St
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = this.componentId;
+      val var1: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var2: java.lang.String = this.componentId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapSelectActionComponent(messageId=");
-      var3.append(var2);
-      var3.append(", componentId=");
       var3.append(var1);
+      var3.append(", componentId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

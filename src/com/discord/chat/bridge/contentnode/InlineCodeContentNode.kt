@@ -2,9 +2,9 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class InlineCodeContentNode(content: String) : ContentNode {
    public final val content: String
 

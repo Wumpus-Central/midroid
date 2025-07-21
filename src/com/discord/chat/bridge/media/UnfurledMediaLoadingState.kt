@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = UnfurledMediaLoadingState.Serializer::class)
+@g(with = UnfurledMediaLoadingState.Serializer::class)
 public enum class UnfurledMediaLoadingState(serialNumber: Int) : IntEnum {
    LOADED_NOT_FOUND(3),
    LOADED_SUCCESS(2),

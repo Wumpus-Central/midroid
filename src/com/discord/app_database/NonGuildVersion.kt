@@ -2,9 +2,9 @@ package com.discord.app_database
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class NonGuildVersion(id: String, version: Long = 0L, versionString: String? = null) {
    public final val id: String
    public final val version: Long
@@ -53,8 +53,8 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = this.id.hashCode();
-      val var2: Int = java.lang.Long.hashCode(this.version);
+      val var2: Int = this.id.hashCode();
+      val var3: Int = java.lang.Long.hashCode(this.version);
       val var1: Int;
       if (this.versionString == null) {
          var1 = 0;
@@ -62,22 +62,22 @@ public data class NonGuildVersion(id: String, version: Long = 0L, versionString:
          var1 = this.versionString.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var1: Long = this.version;
       val var3: java.lang.String = this.versionString;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("NonGuildVersion(id=");
-      var4.append(var5);
-      var4.append(", version=");
-      var4.append(var1);
-      var4.append(", versionString=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("NonGuildVersion(id=");
+      var5.append(var4);
+      var5.append(", version=");
+      var5.append(var1);
+      var5.append(", versionString=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

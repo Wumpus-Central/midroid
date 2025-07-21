@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = StickerFormatType.Serializer::class)
+@g(with = StickerFormatType.Serializer::class)
 public enum class StickerFormatType(serialNumber: Int) : IntEnum {
    APNG(2),
    GIF(4),

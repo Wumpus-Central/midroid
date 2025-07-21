@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = SectionChildComponent.Serializer::class)
+@g(with = SectionChildComponent.Serializer::class)
 public sealed interface SectionChildComponent<T extends Component> {
    public val component: Any?
 

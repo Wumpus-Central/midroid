@@ -2,9 +2,9 @@ package com.discord.chat.bridge.ctabutton
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class CtaButton(text: String, textColor: Int? = null, backgroundColor: Int? = null, callback: String? = null) {
    public final val text: String
    public final val textColor: Int?
@@ -85,17 +85,17 @@ public data class CtaButton(text: String, textColor: Int? = null, backgroundColo
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
+      val var4: java.lang.String = this.text;
       val var3: Int = this.textColor;
-      val var4: Int = this.backgroundColor;
+      val var1: Int = this.backgroundColor;
       val var5: java.lang.String = this.callback;
       val var2: StringBuilder = new StringBuilder();
       var2.append("CtaButton(text=");
-      var2.append(var1);
+      var2.append(var4);
       var2.append(", textColor=");
       var2.append(var3);
       var2.append(", backgroundColor=");
-      var2.append(var4);
+      var2.append(var1);
       var2.append(", callback=");
       var2.append(var5);
       var2.append(")");

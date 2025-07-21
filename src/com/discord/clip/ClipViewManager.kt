@@ -58,22 +58,22 @@ public class ClipViewManager : ViewGroupManager<ClipView>, ClipViewManagerInterf
             val var6: java.util.Iterator = var3.iterator();
 
             while (var6.hasNext()) {
-               val var4: ReadableMap = var2.getMap((var6 as n).a());
-               r.e(var4);
-               val var5: java.lang.String = var4.getString("shape");
-               if (r.c(var5, "circle")) {
+               val var5: ReadableMap = var2.getMap((var6 as n).a());
+               r.e(var5);
+               val var4: java.lang.String = var5.getString("shape");
+               if (r.c(var4, "circle")) {
                   var1.addCircleCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("size"))
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("size"))
                   );
-               } else if (r.c(var5, "rounded-rect")) {
+               } else if (r.c(var4, "rounded-rect")) {
                   var1.addRoundedRectCutout(
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("x")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("y")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("width")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("height")),
-                     (float)SizeUtilsKt.getDpToPx((float)var4.getDouble("cornerRadius"))
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("x")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("y")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("width")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("height")),
+                     (float)SizeUtilsKt.getDpToPx((float)var5.getDouble("cornerRadius"))
                   );
                }
             }

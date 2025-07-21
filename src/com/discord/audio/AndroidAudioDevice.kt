@@ -8,7 +8,7 @@ import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import z9.s
 
-@sb.f
+@sb.g
 public class AndroidAudioDevice {
    public final var deviceType: Int
       internal set

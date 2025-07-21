@@ -3,7 +3,7 @@ package com.discord.mobile_voice_overlay
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 
-@sb.f
+@sb.g
 public enum class ConnectionQuality {
    Average,
    Bad,

@@ -2,9 +2,9 @@ package com.discord.chat.input.bridge
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ChatInputNode(type: Int,
    location: Int,
    length: Int,
@@ -118,28 +118,28 @@ public data class ChatInputNode(type: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.type;
+      val var3: Int = this.type;
       val var1: Int = this.location;
-      val var3: Int = this.length;
+      val var2: Int = this.length;
       val var6: ChatInputNodeStyle = this.style;
-      val var4: Boolean = this.deleteNodeOnBackspace;
+      val var5: Boolean = this.deleteNodeOnBackspace;
       val var8: TapAction = this.tapAction;
-      val var5: Boolean = this.editDisabled;
+      val var4: Boolean = this.editDisabled;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ChatInputNode(type=");
-      var7.append(var2);
+      var7.append(var3);
       var7.append(", location=");
       var7.append(var1);
       var7.append(", length=");
-      var7.append(var3);
+      var7.append(var2);
       var7.append(", style=");
       var7.append(var6);
       var7.append(", deleteNodeOnBackspace=");
-      var7.append(var4);
+      var7.append(var5);
       var7.append(", tapAction=");
       var7.append(var8);
       var7.append(", editDisabled=");
-      var7.append(var5);
+      var7.append(var4);
       var7.append(")");
       return var7.toString();
    }

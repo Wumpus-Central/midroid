@@ -32,35 +32,35 @@ fun `access$isSignedUrl`(var0: Uri): Boolean {
 @SuppressLint(["VisibleForTests"])
 internal fun Context.frescoConfig(): ImagePipelineConfig {
    r.h(var0, "<this>");
-   var var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
+   val var1: Builder = FrescoModule.Companion.getDefaultConfigBuilder(new BridgeReactContext(var0));
    val var2: FrescoDiskCache = FrescoDiskCache.INSTANCE;
-   var1 = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
+   val var6: Builder = var1.V(FrescoDiskCache.INSTANCE.newRegularDiskCache(var0))
       .Z(var2.newSmallDiskCache(var0))
       .R(new FrescoBitmapSupplier(var0))
       .W(ReactNetworking.INSTANCE.createReactOkHttpNetworkFetcher());
    val var3: a = C.n();
-   val var6: F = o.a();
-   val var4: Builder = var1.X(new E(var3.n(new F(var6.b, var6.a * 2, var6.c)).m())).S(new DefaultCacheKeyFactory() {
+   val var5: F = o.a();
+   val var4: Builder = var6.X(new E(var3.n(new F(var5.b, var5.a * 2, var5.c)).m())).S(new DefaultCacheKeyFactory() {
       @Override
       protected Uri getCacheKeySourceUri(Uri var1) {
          r.h(var1, "sourceUri");
          if (!FrescoConfigKt.access$isSignedUrl(var1)) {
             return var1;
          } else {
-            val var2: android.net.Uri.Builder = var1.buildUpon();
-            var2.clearQuery();
+            val var5: android.net.Uri.Builder = var1.buildUpon();
+            var5.clearQuery();
 
             for (java.lang.String var4 : var1.getQueryParameterNames()) {
                if (!FrescoConfigKt.access$getSIGNED_QUERY_PARAMS$p().contains(var4)) {
-                  val var5: java.util.Iterator = var1.getQueryParameters(var4).iterator();
+                  val var3: java.util.Iterator = var1.getQueryParameters(var4).iterator();
 
-                  while (var5.hasNext()) {
-                     var2.appendQueryParameter(var4, var5.next() as java.lang.String);
+                  while (var3.hasNext()) {
+                     var5.appendQueryParameter(var4, var3.next() as java.lang.String);
                   }
                }
             }
 
-            var1 = var2.build();
+            var1 = var5.build();
             r.g(var1, "build(...)");
             return var1;
          }

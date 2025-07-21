@@ -27,29 +27,29 @@ internal object SystemLogReport {
    }
 
    private fun recordBreadcrumb(msg: String, category: String) {
-      val var4: Log = Log.INSTANCE;
-      val var3: java.lang.String = TAG;
+      val var3: Log = Log.INSTANCE;
+      val var5: java.lang.String = TAG;
       r.g(TAG, "TAG");
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("Breadcrumb, [");
-      var5.append(var2);
-      var5.append("]: ");
-      var5.append(var1);
-      Log.i$default(var4, var3, var5.toString(), null, 4, null);
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("Breadcrumb, [");
+      var4.append(var2);
+      var4.append("]: ");
+      var4.append(var1);
+      Log.i$default(var3, var5, var4.toString(), null, 4, null);
    }
 
    @JvmStatic
    fun `recordSentryCrash$lambda$3`(var0: SentryStackFrame): java.lang.CharSequence {
-      val var1: java.lang.String = var0.u();
-      val var2: java.lang.String = var0.s();
-      val var3: java.lang.String = var0.r();
+      val var3: java.lang.String = var0.u();
+      val var1: java.lang.String = var0.s();
+      val var2: java.lang.String = var0.r();
       val var5: Int = var0.t();
       val var4: StringBuilder = new StringBuilder();
-      var4.append(var1);
-      var4.append(".");
-      var4.append(var2);
-      var4.append("(");
       var4.append(var3);
+      var4.append(".");
+      var4.append(var1);
+      var4.append("(");
+      var4.append(var2);
       var4.append(":");
       var4.append(var5);
       var4.append(")");
@@ -71,15 +71,15 @@ internal object SystemLogReport {
          var3 = false;
       }
 
-      val var8: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
-      val var6: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
-      val var9: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
+      val var9: SystemLogReport.LastSentryCrashCache = SystemLogReport.LastSentryCrashCache.INSTANCE;
+      val var8: SystemLogReport.SentryCrashData = SystemLogReport.LastSentryCrashCache.INSTANCE.get(var0);
+      val var6: HistoricalProcessExitReason.Reason = HistoricalProcessExitReason.INSTANCE.lastReason(var0);
       if (!var3) {
          var2 = null;
       }
 
-      var1.invoke(var9, var2, var6);
-      var8.clear(var0);
+      var1.invoke(var6, var2, var8);
+      var9.clear(var0);
       return Unit.a;
    }
 
@@ -94,7 +94,7 @@ internal object SystemLogReport {
             if (var11 != null) {
                val var12: java.util.List = var11.d();
                if (var12 != null) {
-                  val var13: java.util.List = kotlin.collections.i.D0(var12);
+                  val var13: java.util.List = kotlin.collections.i.E0(var12);
                   if (var13 != null) {
                      var14 = kotlin.collections.i.q0(var13, "\n", null, null, 0, null, new f(), 30, null);
                      break label35;
@@ -136,13 +136,13 @@ internal object SystemLogReport {
       var7.append(var17);
       var7.append(": ");
       var7.append(var9);
-      val var18: java.lang.String = var7.toString();
+      val var16: java.lang.String = var7.toString();
       var var10: java.lang.String = null;
       if (var14 != null) {
          var10 = kotlin.text.h.e1(var14, 1000);
       }
 
-      SystemLogReport.LastSentryCrashCache.INSTANCE.set(var1, new SystemLogReport.SentryCrashData(var18, var10));
+      SystemLogReport.LastSentryCrashCache.INSTANCE.set(var1, new SystemLogReport.SentryCrashData(var16, var10));
    }
 
    internal fun reportLastCrash(context: Context, cb: (Reason?, Tombstone?, com.discord.crash_reporting.system_logs.SystemLogReport.SentryCrashData?) -> Unit) {

@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public class LineBreakContentNode : ContentNode() {
    public companion object {
       public fun serializer(): KSerializer<LineBreakContentNode> {

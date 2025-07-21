@@ -22,7 +22,7 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       var8 = var6.next() as ProductDetails;
       val var7: ArrayList = new ArrayList();
       val var1: Long;
-      val var3: java.lang.String;
+      var var3: java.lang.String;
       val var4: java.lang.String;
       val var12: java.lang.String;
       if (r.c(var8.e(), "inapp")) {
@@ -63,11 +63,11 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
 
          val var16: ProductDetails.PricingPhase = var15.e().a().get(0) as ProductDetails.PricingPhase;
          if (var16 == null) {
-            val var17: java.lang.String = var8.d();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Could not find pricingPhase for product: ");
-            var21.append(var17);
-            throw new AssertionError(var21.toString());
+            var3 = var8.d();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Could not find pricingPhase for product: ");
+            var17.append(var3);
+            throw new AssertionError(var17.toString());
          }
 
          var1 = var16.d();
@@ -104,9 +104,9 @@ internal fun List<ProductDetails>.serializeProductDetails(): ReadableNativeArray
       );
    }
 
-   val var22: java.lang.String = var8.d();
-   val var18: StringBuilder = new StringBuilder();
-   var18.append("Could not find subscriptionOfferDetails for product: ");
-   var18.append(var22);
-   throw new AssertionError(var18.toString());
+   val var18: java.lang.String = var8.d();
+   val var22: StringBuilder = new StringBuilder();
+   var22.append("Could not find subscriptionOfferDetails for product: ");
+   var22.append(var18);
+   throw new AssertionError(var22.toString());
 }

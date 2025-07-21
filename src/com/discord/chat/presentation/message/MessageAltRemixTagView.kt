@@ -83,7 +83,7 @@ public class MessageAltRemixTagView(context: Context, attrs: AttributeSet) : Fra
          ColorUtilsKt.setTintColor(var12, var9);
          val var13: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new W(var4, var5, var6, var8), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var13, false, new S(var4, var5, var6, var8), 1, null);
          val var14: SimpleDraweeView = this.binding.remixIcon;
          kotlin.jvm.internal.r.g(this.binding.remixIcon, "remixIcon");
          var14.setVisibility(0);

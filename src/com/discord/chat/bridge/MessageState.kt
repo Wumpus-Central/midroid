@@ -7,11 +7,10 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import sb.f
-import ub.g
+import sb.g
 import ub.e.i
 
-@f(with = MessageState.Serializer::class)
+@g(with = MessageState.Serializer::class)
 public enum class MessageState(key: String) {
    SendFailed("SEND_FAILED"),
    Sending("SENDING"),
@@ -79,7 +78,7 @@ public enum class MessageState(key: String) {
    public object Serializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("MessageState", i.a);
+            return ub.g.a("MessageState", i.a);
          }
 
 

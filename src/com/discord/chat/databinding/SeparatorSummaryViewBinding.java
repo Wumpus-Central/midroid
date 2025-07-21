@@ -56,26 +56,26 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
 
    public static SeparatorSummaryViewBinding bind(View var0) {
       int var1 = R.id.bottom_guideline;
-      Guideline var2 = (Guideline)a.a(var0, var1);
-      if (var2 != null) {
+      Guideline var3 = (Guideline)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.button_wrapper;
-         FrameLayout var10 = (FrameLayout)a.a(var0, var1);
-         if (var10 != null) {
+         FrameLayout var6 = (FrameLayout)a.a(var0, var1);
+         if (var6 != null) {
             var1 = R.id.icon;
-            SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
-            if (var11 != null) {
+            SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.indicator_bottom;
-               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-               if (var7 != null) {
+               SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+               if (var11 != null) {
                   var1 = R.id.indicator_end_barrier;
-                  Barrier var5 = (Barrier)a.a(var0, var1);
-                  if (var5 != null) {
+                  Barrier var8 = (Barrier)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.indicator_top;
-                     SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                     if (var4 != null) {
+                     SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                     if (var7 != null) {
                         var1 = R.id.jump_button;
-                        SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                        if (var3 != null) {
+                        SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+                        if (var2 != null) {
                            var1 = R.id.middle_text;
                            TextView var12 = (TextView)a.a(var0, var1);
                            if (var12 != null) {
@@ -83,12 +83,12 @@ public final class SeparatorSummaryViewBinding implements ViewBinding {
                               SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
                               if (var9 != null) {
                                  var1 = R.id.right_bar;
-                                 View var8 = a.a(var0, var1);
-                                 if (var8 != null) {
+                                 View var5 = a.a(var0, var1);
+                                 if (var5 != null) {
                                     var1 = R.id.top_guideline;
-                                    Guideline var6 = (Guideline)a.a(var0, var1);
-                                    if (var6 != null) {
-                                       return new SeparatorSummaryViewBinding(var0, var2, var10, var11, var7, var5, var4, var3, var12, var9, var8, var6);
+                                    Guideline var10 = (Guideline)a.a(var0, var1);
+                                    if (var10 != null) {
+                                       return new SeparatorSummaryViewBinding(var0, var3, var6, var4, var11, var8, var7, var2, var12, var9, var5, var10);
                                     }
                                  }
                               }

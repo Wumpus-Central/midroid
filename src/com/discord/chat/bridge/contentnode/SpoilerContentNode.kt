@@ -3,9 +3,9 @@ package com.discord.chat.bridge.contentnode
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {
    public final val content: List<ContentNode>
    public open val spoilerOrNull: String

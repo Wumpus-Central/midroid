@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = ShadowType.Serializer::class)
+@g(with = ShadowType.Serializer::class)
 public enum class ShadowType(serialNumber: Int, elevationDp: Int) : IntEnum {
    HIGH(2, 20),
    LOW(1, 4),

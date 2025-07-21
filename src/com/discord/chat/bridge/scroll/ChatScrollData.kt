@@ -2,9 +2,9 @@ package com.discord.chat.bridge.scroll
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Boolean = false, highlight: Boolean = false, position: Int? = null) {
    public final val type: ChatScrollType
    public final val index: Int
@@ -77,8 +77,8 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
    public override fun hashCode(): Int {
       val var4: Int = this.type.hashCode();
       val var5: Int = Integer.hashCode(this.index);
-      val var3: Int = java.lang.Boolean.hashCode(this.animate);
-      val var2: Int = java.lang.Boolean.hashCode(this.highlight);
+      val var2: Int = java.lang.Boolean.hashCode(this.animate);
+      val var3: Int = java.lang.Boolean.hashCode(this.highlight);
       val var1: Int;
       if (this.position == null) {
          var1 = 0;
@@ -86,7 +86,7 @@ public data class ChatScrollData(type: ChatScrollType, index: Int, animate: Bool
          var1 = this.position.hashCode();
       }
 
-      return (((var4 * 31 + var5) * 31 + var3) * 31 + var2) * 31 + var1;
+      return (((var4 * 31 + var5) * 31 + var2) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {

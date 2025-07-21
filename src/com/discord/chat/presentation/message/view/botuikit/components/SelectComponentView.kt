@@ -224,10 +224,10 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                      if (var34 is SearchableSelectItem) {
                         val var19: SearchableSelectItem = var34 as SearchableSelectItem;
                         if ((var34 as SearchableSelectItem).getIconSrc() != null) {
-                           val var36: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
+                           val var13: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
-                           val var12: java.lang.String = var19.getIconSrc();
-                           val var13: Int = var19.getIconColor();
+                           val var36: java.lang.String = var19.getIconSrc();
+                           val var12: Int = var19.getIconColor();
                            val var28: Boolean;
                            if (var19.getType() === SelectOptionType.USER) {
                               var28 = true;
@@ -235,7 +235,7 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                               var28 = false;
                            }
 
-                           this.setImage(var36, var12, var13, var28);
+                           this.setImage(var13, var36, var12, var28);
                            val var21: SimpleDraweeSpanTextView = this.binding.selectComponentSelectionIcon;
                            r.g(this.binding.selectComponentSelectionIcon, "selectComponentSelectionIcon");
                            var21.setVisibility(0);
@@ -250,13 +250,13 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
                }
             }
          } else {
-            val var39: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
+            val var22: FlexboxLayout = this.binding.selectComponentSelectionsRoot;
             r.g(this.binding.selectComponentSelectionsRoot, "selectComponentSelectionsRoot");
-            val var22: MaterialTextView = this.binding.selectComponentSelectionText;
+            val var39: MaterialTextView = this.binding.selectComponentSelectionText;
             r.g(this.binding.selectComponentSelectionText, "selectComponentSelectionText");
-            var22.setVisibility(8);
-            var39.setVisibility(0);
-            this.setSelectedOptions(var39, var33);
+            var39.setVisibility(8);
+            var22.setVisibility(0);
+            this.setSelectedOptions(var22, var33);
          }
       } else {
          val var37: MaterialTextView = this.binding.selectComponentSelectionText;
@@ -276,31 +276,31 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
          var5 = true;
       }
 
-      val var29: Boolean;
+      val var9: Boolean;
       if (var1.getState() === ActionComponentState.LOADING) {
-         var29 = true;
+         var9 = true;
       } else {
-         var29 = false;
+         var9 = false;
       }
 
       val var23: SimpleDraweeView = this.binding.selectComponentChevron;
       r.g(this.binding.selectComponentChevron, "selectComponentChevron");
-      if (!var29) {
+      if (!var9) {
          var6 = 0;
       }
 
       var23.setVisibility(var6);
-      if (var29 != this.currentIsLoading) {
+      if (var9 != this.currentIsLoading) {
          val var24: ProgressDots = this.getProgressDots();
          var6 = 8;
-         if (var29) {
+         if (var9) {
             var6 = 0;
          }
 
          var24.setVisibility(var6);
       }
 
-      this.currentIsLoading = var29;
+      this.currentIsLoading = var9;
       val var25: View = this.binding.getRoot();
       val var4: Float;
       if (var5) {
@@ -314,15 +314,15 @@ public class SelectComponentView  public constructor(context: Context, attrs: At
       r.g(var26, "getRoot(...)");
       NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var26, false, new j(var3, var1), 1, null);
       val var14: View = this.binding.getRoot();
-      var var9: Boolean = false;
-      if (!var29) {
-         var9 = false;
+      var var29: Boolean = false;
+      if (!var9) {
+         var29 = false;
          if (!var5) {
-            var9 = true;
+            var29 = true;
          }
       }
 
-      var14.setClickable(var9);
+      var14.setClickable(var29);
       this.binding.getRoot().setEnabled(var5 xor true);
    }
 

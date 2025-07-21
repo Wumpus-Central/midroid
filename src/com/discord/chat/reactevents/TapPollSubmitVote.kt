@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapPollSubmitVote(channelId: String, messageId: String) : ReactEvent {
    public final val channelId: String
    public final val messageId: String
@@ -57,13 +57,13 @@ public data class TapPollSubmitVote(channelId: String, messageId: String) : Reac
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.messageId;
+      val var1: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapPollSubmitVote(channelId=");
-      var3.append(var2);
-      var3.append(", messageId=");
       var3.append(var1);
+      var3.append(", messageId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

@@ -34,8 +34,8 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
 
    public static RoleSubscriptionPurchaseViewBinding bind(View var0) {
       int var1 = R.id.role_subscription_badge_dummy_view;
-      View var5 = a.a(var0, var1);
-      if (var5 != null) {
+      View var3 = a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.role_subscription_purchase_badge;
          SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
          if (var7 != null) {
@@ -43,18 +43,18 @@ public final class RoleSubscriptionPurchaseViewBinding implements ViewBinding {
             SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.role_subscription_purchase_lanyard;
-               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-               if (var4 != null) {
+               SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+               if (var6 != null) {
                   var1 = R.id.role_subscription_purchaser_avatar;
-                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var4 != null) {
                      var1 = R.id.role_subscription_purchaser_username;
-                     TextView var3 = (TextView)a.a(var0, var1);
-                     if (var3 != null) {
+                     TextView var5 = (TextView)a.a(var0, var1);
+                     if (var5 != null) {
                         var1 = R.id.role_subscription_welcome;
-                        TextView var6 = (TextView)a.a(var0, var1);
-                        if (var6 != null) {
-                           return new RoleSubscriptionPurchaseViewBinding(var0, var5, var7, var2, var4, var8, var3, var6);
+                        TextView var8 = (TextView)a.a(var0, var1);
+                        if (var8 != null) {
+                           return new RoleSubscriptionPurchaseViewBinding(var0, var3, var7, var2, var6, var4, var5, var8);
                         }
                      }
                   }

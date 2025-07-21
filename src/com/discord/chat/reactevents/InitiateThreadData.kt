@@ -6,9 +6,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelId) : InitiateThreadData(var1, var2), ReactEvent {
    public final val messageId: MessageId
    public final val channelId: ChannelId
@@ -58,14 +58,14 @@ internal data class InitiateThreadData(messageId: MessageId, channelId: ChannelI
 
    public override fun toString(): String {
       val var3: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var1: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("InitiateThreadData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("InitiateThreadData(messageId=");
+      var1.append(var3);
+      var1.append(", channelId=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

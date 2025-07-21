@@ -8,6 +8,6 @@ public final class w implements Function2 {
    public final Function4 j;
 
    public final Object invoke(Object var1, Object var2) {
-      return MessageAccessoriesAdapter.H(this.j, (String)var1, (Integer)var2);
+      return MessageAccessoriesAdapter.a(this.j, (String)var1, (Integer)var2);
    }
 }

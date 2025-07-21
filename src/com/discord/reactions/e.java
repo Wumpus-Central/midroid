@@ -1,11 +1,10 @@
 package com.discord.reactions;
 
-import android.view.View;
-import android.view.View.OnClickListener;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class e implements OnClickListener {
-   public final void onClick(View var1) {
-      ShortcutsFlexbox.r(var1);
+public final class e implements Function1 {
+   public final Object invoke(Object var1) {
+      return ShortcutsFlexbox.r((ReactionView.Reaction)var1);
    }
 }

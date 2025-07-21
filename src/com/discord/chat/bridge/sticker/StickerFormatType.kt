@@ -8,10 +8,10 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import sb.f
-import ub.g
+import sb.g
+import ub.e.f
 
-@f(with = StickerFormatType.StickerFormatTypeSerializer::class)
+@g(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
    APNG(2),
    GIF(4),
@@ -50,20 +50,20 @@ public enum class StickerFormatType(intType: Int) {
    public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return g.a("StickerFormatType", ub.e.f.a);
+            return ub.g.a("StickerFormatType", f.a);
          }
 
 
       public open fun deserialize(decoder: Decoder): StickerFormatType {
          r.h(var1, "decoder");
          val var3: Int = var1.j();
-         val var5: Array<StickerFormatType> = StickerFormatType.values();
-         val var4: Int = var5.length;
+         val var6: Array<StickerFormatType> = StickerFormatType.values();
+         val var4: Int = var6.length;
 
          for (int var2 = 0; var2 < var4; var2++) {
-            val var6: StickerFormatType = var5[var2];
-            if (var5[var2].getIntType() == var3) {
-               return var6;
+            val var5: StickerFormatType = var6[var2];
+            if (var6[var2].getIntType() == var3) {
+               return var5;
             }
          }
 

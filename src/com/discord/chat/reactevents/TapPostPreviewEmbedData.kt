@@ -5,9 +5,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: String, threadId: String, messageId: MessageId) : TapPostPreviewEmbedData(
          var1, var2, var3, var4
       ),
@@ -81,17 +81,17 @@ public data class TapPostPreviewEmbedData(guildId: String, parentChannelId: Stri
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guildId;
+      val var5: java.lang.String = this.guildId;
       val var2: java.lang.String = this.parentChannelId;
-      val var5: java.lang.String = this.threadId;
+      val var3: java.lang.String = this.threadId;
       val var1: java.lang.String = MessageId.toString-impl(this.messageId);
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapPostPreviewEmbedData(guildId=");
-      var4.append(var3);
+      var4.append(var5);
       var4.append(", parentChannelId=");
       var4.append(var2);
       var4.append(", threadId=");
-      var4.append(var5);
+      var4.append(var3);
       var4.append(", messageId=");
       var4.append(var1);
       var4.append(")");

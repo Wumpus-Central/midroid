@@ -3,11 +3,11 @@ package com.discord.chat.bridge.polls
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 import r1.a
-import sb.f
+import sb.g
 import z9.j
 import z9.m
 
-@f
+@g
 public enum class PollActionPresentation {
    BUTTON,
    SECONDARY_BUTTON,

@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    public final val url: String
    public final val type: String?
@@ -63,15 +63,15 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.url;
-      val var1: java.lang.String = this.type;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("OnPasteImageEvent(url=");
-      var3.append(var2);
-      var3.append(", type=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.lang.String = this.url;
+      val var2: java.lang.String = this.type;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnPasteImageEvent(url=");
+      var1.append(var3);
+      var1.append(", type=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = PollLayoutType.Serializer::class)
+@g(with = PollLayoutType.Serializer::class)
 public enum class PollLayoutType(serialNumber: Int) : IntEnum {
    IMAGE_ONLY(2),
    TEXT_AND_IMAGE(1),
