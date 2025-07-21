@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import com.discord.chat.bridge.spoiler.SpoilerableData
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class ContainerComponent(type: Int,
@@ -164,32 +164,32 @@ public data class ContainerComponent(type: Int,
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var7: java.lang.String = this.id;
-      val var8: java.lang.String = this.errorText;
+      val var4: java.lang.String = this.id;
+      val var7: java.lang.String = this.errorText;
       val var5: java.util.List = this.components;
-      val var9: Int = this.accentColor;
+      val var3: Int = this.accentColor;
       val var2: Boolean = this.isSpoiler;
-      val var3: java.lang.String = this.spoilerDescription;
-      val var4: Int = this.themedBackgroundColor;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("ContainerComponent(type=");
-      var6.append(var1);
-      var6.append(", id=");
-      var6.append(var7);
-      var6.append(", errorText=");
-      var6.append(var8);
-      var6.append(", components=");
-      var6.append(var5);
-      var6.append(", accentColor=");
-      var6.append(var9);
-      var6.append(", isSpoiler=");
-      var6.append(var2);
-      var6.append(", spoilerDescription=");
-      var6.append(var3);
-      var6.append(", themedBackgroundColor=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var8: java.lang.String = this.spoilerDescription;
+      val var6: Int = this.themedBackgroundColor;
+      val var9: StringBuilder = new StringBuilder();
+      var9.append("ContainerComponent(type=");
+      var9.append(var1);
+      var9.append(", id=");
+      var9.append(var4);
+      var9.append(", errorText=");
+      var9.append(var7);
+      var9.append(", components=");
+      var9.append(var5);
+      var9.append(", accentColor=");
+      var9.append(var3);
+      var9.append(", isSpoiler=");
+      var9.append(var2);
+      var9.append(", spoilerDescription=");
+      var9.append(var8);
+      var9.append(", themedBackgroundColor=");
+      var9.append(var6);
+      var9.append(")");
+      return var9.toString();
    }
 
    public companion object {

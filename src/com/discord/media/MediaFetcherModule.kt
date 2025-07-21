@@ -12,7 +12,7 @@ import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.WritableNativeMap
 import java.util.Comparator
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    init {
@@ -50,7 +50,7 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
    public fun getPhotos(params: ReadableMap, promise: Promise) {
       r.h(var1, "params");
       r.h(var2, "promise");
-      val var4: Int = var1.getInt("first");
+      val var3: Int = var1.getInt("first");
       val var5: Int;
       if (var1.hasKey("offset")) {
          var5 = var1.getInt("offset");
@@ -58,31 +58,31 @@ public class MediaFetcherModule(reactContext: ReactApplicationContext) : ReactCo
          var5 = null;
       }
 
-      val var12: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
+      val var6: ContentResolverMedia.QueryType = this.getQueryType(var1.getString("assetType"));
 
-      var var3: Int;
+      var var4: Int;
       try {
-         val var6: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
-         val var7: ReactApplicationContext = this.getReactApplicationContext();
-         r.g(var7, "getReactApplicationContext(...)");
-         var16 = i.K0(i.I0(var6.getMedia(var7, var12, var4, var5), new Comparator() {
+         val var7: ContentResolverMedia.Companion = ContentResolverMedia.Companion;
+         val var12: ReactApplicationContext = this.getReactApplicationContext();
+         r.g(var12, "getReactApplicationContext(...)");
+         var16 = i.M0(i.K0(var7.getMedia(var12, var6, var3, var5), new Comparator() {
             @Override
             public final int compare(T var1, T var2) {
-               return v9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
+               return D9.a.d((var2 as ContentResolverMedia).getDateAdded(), (var1 as ContentResolverMedia).getDateAdded());
             }
-         }), var4);
-         var3 = var16.size();
+         }), var3);
+         var4 = var16.size();
       } catch (var11: Exception) {
          var2.reject("E_UNABLE_TO_LOAD", var11);
          return;
       }
 
       val var14: WritableNativeMap;
-      if (var3 == var4) {
+      if (var4 == var3) {
          try {
             var14 = NativeMapExtensionsKt.nativeMapOf(
-               s.a("start_cursor", java.lang.String.valueOf((i.f0(var16) as ContentResolverMedia).getUri())),
-               s.a("end_cursor", java.lang.String.valueOf((i.q0(var16) as ContentResolverMedia).getUri())),
+               s.a("start_cursor", java.lang.String.valueOf((i.h0(var16) as ContentResolverMedia).getUri())),
+               s.a("end_cursor", java.lang.String.valueOf((i.s0(var16) as ContentResolverMedia).getUri())),
                s.a("has_next_page", java.lang.Boolean.TRUE)
             );
          } catch (var10: Exception) {

@@ -7,7 +7,7 @@ import android.widget.TextView;
 import androidx.viewbinding.ViewBinding;
 import com.discord.chat.R;
 import com.discord.sticker.StickerView;
-import z0.a;
+import y0.a;
 
 public final class WelcomeStickerViewBinding implements ViewBinding {
    private final View rootView;

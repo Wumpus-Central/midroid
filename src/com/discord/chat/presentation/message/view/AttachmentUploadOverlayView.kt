@@ -138,11 +138,11 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeInAnim(): AnimatorSet {
-      val var2: AnimatorSet = new AnimatorSet();
-      var2.setDuration(this.transitionInDuration);
-      val var1: ValueAnimator = new ValueAnimator();
-      var1.setFloatValues(new float[]{0.0F, 1.0F});
-      var1.addUpdateListener(new f(this));
+      val var1: AnimatorSet = new AnimatorSet();
+      var1.setDuration(this.transitionInDuration);
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setFloatValues(new float[]{0.0F, 1.0F});
+      var2.addUpdateListener(new f(this));
       val var5: ValueAnimator = new ValueAnimator();
       var5.setFloatValues(new float[]{0.8F, 0.9F});
       var5.setInterpolator(new OvershootInterpolator(8.0F));
@@ -150,8 +150,8 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new h(this));
-      var2.playTogether(new Animator[]{var1, var5, var4});
-      return var2;
+      var1.playTogether(new Animator[]{var2, var5, var4});
+      return var1;
    }
 
    @JvmStatic
@@ -376,9 +376,9 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          var5.setLayoutParams(var4);
          var1.addView(var5);
          val var6: ConstraintSet = new ConstraintSet();
-         var6.g(var1);
-         var6.h(var5.getId(), 7, 0, 7, 0);
-         var6.h(var5.getId(), 3, 0, 3, 0);
+         var6.f(var1);
+         var6.g(var5.getId(), 7, 0, 7, 0);
+         var6.g(var5.getId(), 3, 0, 3, 0);
          var6.c(var1);
          return var5;
       }
@@ -437,15 +437,15 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var3: Int = this.backgroundSize;
-         val var1: Int = this.checkmarkButtonSize;
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("CompleteViewConfig(backgroundSize=");
-         var2.append(var3);
-         var2.append(", checkmarkButtonSize=");
-         var2.append(var1);
-         var2.append(")");
-         return var2.toString();
+         val var1: Int = this.backgroundSize;
+         val var2: Int = this.checkmarkButtonSize;
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("CompleteViewConfig(backgroundSize=");
+         var3.append(var1);
+         var3.append(", checkmarkButtonSize=");
+         var3.append(var2);
+         var3.append(")");
+         return var3.toString();
       }
    }
 
@@ -575,27 +575,27 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.backgroundSize;
-         val var1: Drawable = this.backgroundDrawable;
-         val var4: Int = this.cancelButtonSize;
+         val var1: Int = this.backgroundSize;
+         val var4: Drawable = this.backgroundDrawable;
+         val var6: Int = this.cancelButtonSize;
          val var5: Int = this.primaryColor;
          val var3: Int = this.progressIndicatorSize;
-         val var6: Int = this.trackColor;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("ProgressViewConfig(backgroundSize=");
-         var7.append(var2);
-         var7.append(", backgroundDrawable=");
-         var7.append(var1);
-         var7.append(", cancelButtonSize=");
-         var7.append(var4);
-         var7.append(", primaryColor=");
-         var7.append(var5);
-         var7.append(", progressIndicatorSize=");
-         var7.append(var3);
-         var7.append(", trackColor=");
-         var7.append(var6);
-         var7.append(")");
-         return var7.toString();
+         val var7: Int = this.trackColor;
+         val var2: StringBuilder = new StringBuilder();
+         var2.append("ProgressViewConfig(backgroundSize=");
+         var2.append(var1);
+         var2.append(", backgroundDrawable=");
+         var2.append(var4);
+         var2.append(", cancelButtonSize=");
+         var2.append(var6);
+         var2.append(", primaryColor=");
+         var2.append(var5);
+         var2.append(", progressIndicatorSize=");
+         var2.append(var3);
+         var2.append(", trackColor=");
+         var2.append(var7);
+         var2.append(")");
+         return var2.toString();
       }
    }
 }

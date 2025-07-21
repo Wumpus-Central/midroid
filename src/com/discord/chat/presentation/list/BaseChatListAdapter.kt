@@ -39,7 +39,7 @@ public open class BaseChatListAdapter(eventHandlerProvider: () -> ChatEventHandl
    }
 
    public override fun getChatListItem(position: Int): ChatListItem? {
-      return kotlin.collections.i.i0(this.chatListItems, var1) as ChatListItem;
+      return kotlin.collections.i.k0(this.chatListItems, var1) as ChatListItem;
    }
 
    public override fun getChatListItems(): List<ChatListItem> {

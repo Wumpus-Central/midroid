@@ -2,9 +2,9 @@ package com.discord.chat.bridge.activities
 
 import com.discord.chat.bridge.codedlinks.AppMessageEmbedImpl
 import com.discord.primitives.ApplicationId
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class ActivityInstanceEmbed(applicationId: ApplicationId,
@@ -104,23 +104,23 @@ public data class ActivityInstanceEmbed(applicationId: ApplicationId,
 
    public override fun toString(): String {
       val var2: java.lang.String = ApplicationId.toString-impl(this.applicationId);
-      val var3: java.lang.String = this.instanceId;
-      val var6: java.util.List = this.participantAvatarUris;
-      val var1: AppMessageEmbedImpl = this.appMessageEmbedModel;
-      val var4: java.lang.String = this.participantsDescription;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ActivityInstanceEmbed(applicationId=");
-      var5.append(var2);
-      var5.append(", instanceId=");
-      var5.append(var3);
-      var5.append(", participantAvatarUris=");
-      var5.append(var6);
-      var5.append(", appMessageEmbedModel=");
-      var5.append(var1);
-      var5.append(", participantsDescription=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.instanceId;
+      val var4: java.util.List = this.participantAvatarUris;
+      val var3: AppMessageEmbedImpl = this.appMessageEmbedModel;
+      val var6: java.lang.String = this.participantsDescription;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ActivityInstanceEmbed(applicationId=");
+      var1.append(var2);
+      var1.append(", instanceId=");
+      var1.append(var5);
+      var1.append(", participantAvatarUris=");
+      var1.append(var4);
+      var1.append(", appMessageEmbedModel=");
+      var1.append(var3);
+      var1.append(", participantsDescription=");
+      var1.append(var6);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

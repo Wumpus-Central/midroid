@@ -69,7 +69,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2, var3);
-      this.shadowView$delegate = r9.j.a(new E0(this));
+      this.shadowView$delegate = z9.j.a(new E0(this));
       this.setLineSpacing(0.0F, 1.05F);
    }
 
@@ -321,7 +321,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
       this.setDraweeSpanStringBuilder(var34);
       this.bottomSpacingPx = var23;
       NestedScrollOnTouchUtilsKt.enableNestedSpanClickListener(this, true);
-      androidx.core.view.Y.q0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
+      androidx.core.view.Z.o0(this, new MessageContentView.MessageContentViewAccessibilityDelegate(this));
    }
 
    public open fun setOnClickListener(l: OnClickListener?) {
@@ -351,7 +351,7 @@ public open class MessageContentView  public constructor(context: Context, attrs
          kotlin.jvm.internal.r.h(var2, "info");
          super.onInitializeAccessibilityNodeInfo(var1, var2);
          val var5: SpannableStringBuilder = new SpannableStringBuilder(this.view.getText());
-         val var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
+         var var6: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), SpoilerSpan.class));
 
          while (var6.hasNext()) {
             val var7: SpoilerSpan = var6.next() as SpoilerSpan;
@@ -364,11 +364,11 @@ public open class MessageContentView  public constructor(context: Context, attrs
             }
          }
 
-         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
+         var6 = kotlin.jvm.internal.b.a(var5.getSpans(0, var5.length(), EmojiAccessibilitySpan.class));
 
-         while (var8.hasNext()) {
-            val var9: EmojiAccessibilitySpan = var8.next() as EmojiAccessibilitySpan;
-            var5.replace(var5.getSpanStart(var9), var5.getSpanEnd(var9), var9.getName());
+         while (var6.hasNext()) {
+            val var8: EmojiAccessibilitySpan = var6.next() as EmojiAccessibilitySpan;
+            var5.replace(var5.getSpanStart(var8), var5.getSpanEnd(var8), var8.getName());
          }
 
          var2.V0(var5);

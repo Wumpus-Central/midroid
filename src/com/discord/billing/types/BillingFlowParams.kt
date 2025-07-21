@@ -1,8 +1,8 @@
 package com.discord.billing.types
 
-import Ya.a
 import com.android.billingclient.api.ProductDetails
 import com.android.billingclient.api.ProductDetails.PricingPhase
+import gb.a
 import java.security.MessageDigest
 import java.util.ArrayList
 import java.util.Arrays
@@ -38,12 +38,12 @@ internal object BillingFlowParams {
       var1 = "";
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var5: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
-         r.g(var5, "format(...)");
-         val var6: StringBuilder = new StringBuilder();
-         var6.append(var1);
-         var6.append(var5);
-         var1 = var6.toString();
+         val var6: java.lang.String = java.lang.String.format("%02x", Arrays.copyOf(new Object[]{var9[var2]}, 1));
+         r.g(var6, "format(...)");
+         val var5: StringBuilder = new StringBuilder();
+         var5.append(var1);
+         var5.append(var6);
+         var1 = var5.toString();
       }
 
       return var1;
@@ -107,14 +107,14 @@ internal object BillingFlowParams {
    }
 
    private fun getReplacementMode(oldProductDetails: ProductDetails, newProductDetails: ProductDetails): Int {
-      val var4: Long = this.getPriceAmountMicros(var1);
-      val var6: Long = this.getPriceAmountMicros(var2);
+      val var6: Long = this.getPriceAmountMicros(var1);
+      val var4: Long = this.getPriceAmountMicros(var2);
       val var8: java.lang.String = this.getPricingPhase(var1).b();
       r.g(var8, "getBillingPeriod(...)");
       val var9: java.lang.String = this.getPricingPhase(var2).b();
       r.g(var9, "getBillingPeriod(...)");
       val var3: Byte;
-      if (var6 / this.calculateStandardizedUnits(var8, var9) <= var4) {
+      if (var4 / this.calculateStandardizedUnits(var8, var9) <= var6) {
          var3 = 6;
       } else {
          var3 = 2;
@@ -277,13 +277,13 @@ internal object BillingFlowParams {
                }
 
                if (var13 == null) {
-                  var2 = var20.d();
-                  val var18: StringBuilder = new StringBuilder();
-                  var18.append("Could not find offer token for productId: ");
-                  var18.append(var2);
-                  var18.append(" offerId: ");
-                  var18.append(var6);
-                  throw new AssertionError(var18.toString());
+                  val var18: java.lang.String = var20.d();
+                  val var21: StringBuilder = new StringBuilder();
+                  var21.append("Could not find offer token for productId: ");
+                  var21.append(var18);
+                  var21.append(" offerId: ");
+                  var21.append(var6);
+                  throw new AssertionError(var21.toString());
                }
 
                var25.b(var13);

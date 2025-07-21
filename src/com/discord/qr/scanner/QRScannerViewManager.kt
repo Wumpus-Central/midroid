@@ -9,7 +9,7 @@ import com.facebook.react.viewmanagers.DCDQRScannerManagerDelegate
 import com.facebook.react.viewmanagers.DCDQRScannerManagerInterface
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 @ReactModule(name = "DCDQRScanner")
 public class QRScannerViewManager : ViewGroupManager<QRScanner>, DCDQRScannerManagerInterface<QRScanner> {

@@ -35,10 +35,10 @@ internal object Transcoder {
       encodingConfig: EncodingConfig,
       onProgress: (Float) -> Unit = ...
    ): Uri {
-      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(y9.b.c(var7), 1);
+      val var8: kotlinx.coroutines.e = new kotlinx.coroutines.e(G9.b.c(var7), 1);
       var8.C();
-      val var9: MediaTransformer = new MediaTransformer(var2);
-      access$getCancelCallbacks$p().put(var1, new Function0(var9, var1) {
+      val var13: MediaTransformer = new MediaTransformer(var2);
+      access$getCancelCallbacks$p().put(var1, new Function0(var13, var1) {
          final java.lang.String $requestId;
          final MediaTransformer $transformer;
 
@@ -51,52 +51,52 @@ internal object Transcoder {
             this.$transformer.a(this.$requestId);
          }
       });
-      val var13: MediaFormat = new MediaFormat();
+      val var9: MediaFormat = new MediaFormat();
       if (var5.getUseHEVC()) {
-         var13.setString("mime", "video/hevc");
+         var9.setString("mime", "video/hevc");
          if (var5.getCreateHDR()) {
-            var13.setInteger("profile", 4096);
+            var9.setInteger("profile", 4096);
          } else {
-            var13.setInteger("profile", 1);
+            var9.setInteger("profile", 1);
          }
       } else {
-         var13.setString("mime", "video/avc");
+         var9.setString("mime", "video/avc");
       }
 
-      var13.setInteger("width", var5.getTargetWidth());
-      var13.setInteger("height", var5.getTargetHeight());
-      var13.setInteger("bitrate", var5.getTargetBitrate().intValue());
-      var13.setFloat("frame-rate", var5.getFrameRate().floatValue());
-      var13.setFloat("operating-rate", var5.getFrameRate().floatValue());
-      var13.setFloat("i-frame-interval", var5.getKeyFrameIntervalSeconds().floatValue());
-      var13.setInteger("rotation-degrees", var5.getRotationDegrees().intValue());
-      var13.setInteger("priority", 1);
+      var9.setInteger("width", var5.getTargetWidth());
+      var9.setInteger("height", var5.getTargetHeight());
+      var9.setInteger("bitrate", var5.getTargetBitrate().intValue());
+      var9.setFloat("frame-rate", var5.getFrameRate().floatValue());
+      var9.setFloat("operating-rate", var5.getFrameRate().floatValue());
+      var9.setFloat("i-frame-interval", var5.getKeyFrameIntervalSeconds().floatValue());
+      var9.setInteger("rotation-degrees", var5.getRotationDegrees().intValue());
+      var9.setInteger("priority", 1);
       val var10: DiscordVideoMediaSource.ColorFormatSettings = var3.getColorFormatSettings();
       if (var10 != null) {
          var var11: Int = var10.getColorTransfer();
          if (var11 != null) {
-            var13.setInteger("color-transfer", var11.intValue());
+            var9.setInteger("color-transfer", var11.intValue());
          }
 
          var11 = var10.getColorStandard();
          if (var11 != null) {
-            var13.setInteger("color-standard", var11.intValue());
+            var9.setInteger("color-standard", var11.intValue());
          }
 
          var11 = var10.getColorRange();
          if (var11 != null) {
-            var13.setInteger("color-range", var11.intValue());
+            var9.setInteger("color-range", var11.intValue());
          }
 
          val var15: ByteBuffer = var10.getHdrStaticInfo();
          if (var15 != null) {
-            var13.setByteBuffer("hdr-static-info", var15);
+            var9.setByteBuffer("hdr-static-info", var15);
          }
       }
 
       val var14: com.linkedin.android.litr.d = new com.linkedin.android.litr.d.b().c(true).b(var5.getProgressUpdateGranularity()).a();
       r.g(var14, "build(...)");
-      var9.h(var1, var3.getInputUri(), var4, var13, var3.getAudioFormat(), new b8.a(var6, var9, var1, var8, var4) {
+      var13.h(var1, var3.getInputUri(), var4, var9, var3.getAudioFormat(), new f8.a(var6, var13, var1, var8, var4) {
          final CancellableContinuation $continuation;
          final Function1 $onProgress;
          final Uri $outputUri;
@@ -111,7 +111,7 @@ internal object Transcoder {
             this.$outputUri = var5;
          }
 
-         public void onCancelled(java.lang.String var1, java.util.List<c8.a> var2) {
+         public void onCancelled(java.lang.String var1, java.util.List<g8.a> var2) {
             r.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
@@ -120,16 +120,16 @@ internal object Transcoder {
             }
          }
 
-         public void onCompleted(java.lang.String var1, java.util.List<c8.a> var2) {
+         public void onCompleted(java.lang.String var1, java.util.List<g8.a> var2) {
             r.h(var1, "id");
             this.$transformer.e();
             this.$onProgress.invoke(1.0F);
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
-            val var4: kotlin.Result.a = Result.k;
+            val var3: kotlin.Result.a = Result.k;
             this.$continuation.resumeWith(Result.b(this.$outputUri));
          }
 
-         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<c8.a> var3) {
+         public void onError(java.lang.String var1, java.lang.Throwable var2, java.util.List<g8.a> var3) {
             r.h(var1, "id");
             this.$transformer.e();
             Transcoder.access$getCancelCallbacks$p().remove(this.$requestId);
@@ -164,7 +164,7 @@ internal object Transcoder {
          }
       });
       val var12: Any = var8.z();
-      if (var12 === y9.b.e()) {
+      if (var12 === G9.b.e()) {
          kotlin.coroutines.jvm.internal.g.c(var7);
       }
 

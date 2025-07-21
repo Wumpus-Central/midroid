@@ -1,8 +1,7 @@
 package com.discord.phone_verification
 
-import Vb.f
-import a2.a
-import a2.c
+import Z1.a
+import Z1.c
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.ContextWrapper
@@ -13,11 +12,12 @@ import android.os.Build.VERSION
 import android.util.Base64
 import com.discord.intents.b
 import com.discord.logging.Log
+import dc.f
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import kotlin.jvm.internal.r
-import r9.j
+import z9.j
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
@@ -64,7 +64,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var20 != null) {
             try {
-               var18 = a2.b.a(var20);
+               var18 = Z1.b.a(var20);
             } catch (var15: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var15);
                i.k();
@@ -82,7 +82,7 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
 
          if (var21 != null) {
             try {
-               var18 = a2.b.a(var21);
+               var18 = Z1.b.a(var21);
             } catch (var13: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var13);
                i.k();
@@ -105,28 +105,27 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
          for (int var19 = 0; var19 < var2; var19++) {
             val var7: Signature = var18[var19];
 
-            var var8: java.lang.String;
             try {
                val var6: AppSignatureHelper.Companion = Companion;
                r.e(var4);
                val var24: java.lang.String = var7.toCharsString();
                r.g(var24, "toCharsString(...)");
-               var8 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var9: Log = Log.INSTANCE;
-               val var23: java.lang.String = TAG;
-               val var25: StringBuilder = new StringBuilder();
-               var25.append("Hash ");
-               var25.append(var8);
-               Log.i$default(var9, var23, var25.toString(), null, 4, null);
+               var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
+               val var23: Log = Log.INSTANCE;
+               val var9: java.lang.String = TAG;
+               val var8: StringBuilder = new StringBuilder();
+               var8.append("Hash ");
+               var8.append(var25);
+               Log.i$default(var23, var9, var8.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
                break;
             }
 
-            if (var8 != null) {
+            if (var25 != null) {
                try {
-                  var22.add(var8);
+                  var22.add(var25);
                } catch (var10: NameNotFoundException) {
                   Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var10);
                   i.k();
@@ -161,14 +160,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             r.g(var10, "encodeToString(...)");
             var2 = var10.substring(0, 11);
             r.g(var2, "substring(...)");
-            val var5: Log = Log.INSTANCE;
-            val var4: java.lang.String = this.getTAG();
+            val var4: Log = Log.INSTANCE;
+            val var5: java.lang.String = this.getTAG();
             var3 = new StringBuilder();
             var3.append("pkg: ");
             var3.append(var1);
             var3.append(" -- hash: ");
             var3.append(var2);
-            Log.i$default(var5, var4, var3.toString(), null, 4, null);
+            Log.i$default(var4, var5, var3.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;

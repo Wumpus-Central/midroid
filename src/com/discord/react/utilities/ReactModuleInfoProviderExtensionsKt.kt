@@ -1,10 +1,10 @@
 package com.discord.react.utilities
 
+import A9.q
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
-import s9.q
 
 @JvmSynthetic
 fun a(var0: java.util.List, var1: Boolean): java.util.Map {
@@ -51,8 +51,8 @@ fun `createReactModuleInfoProvider$default`(var0: java.util.List, var1: Boolean,
 fun `createReactModuleInfoProvider$lambda$1`(var0: java.util.List, var1: Boolean): java.util.Map {
    val var2: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(q.d(i.v(var0, 10)), 16));
 
-   for (Object var3 : var0) {
-      var2.put(var3, createReactModuleInfo(var3 as java.lang.String, var1));
+   for (Object var4 : var0) {
+      var2.put(var4, createReactModuleInfo(var4 as java.lang.String, var1));
    }
 
    return var2;

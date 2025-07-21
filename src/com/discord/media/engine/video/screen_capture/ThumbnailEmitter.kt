@@ -61,13 +61,13 @@ internal class ThumbnailEmitter(width: Int, height: Int, periodMs: Long, onNextT
          val var10: Float = var2 * (this.height / var4);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, H9.a.c(((float)this.width - var2 * ((float)this.height / var4)) / 2.0F), 0, H9.a.c(var10), this.height
+               var1, this.rectDrawer, renderMatrix, P9.a.c(((float)this.width - var2 * ((float)this.height / var4)) / 2.0F), 0, P9.a.c(var10), this.height
             );
       } else {
          val var13: Float = var4 * (this.width / var2);
          this.frameDrawer
             .drawFrame(
-               var1, this.rectDrawer, renderMatrix, 0, H9.a.c(((float)this.height - var4 * ((float)this.width / var2)) / 2.0F), this.width, H9.a.c(var13)
+               var1, this.rectDrawer, renderMatrix, 0, P9.a.c(((float)this.height - var4 * ((float)this.width / var2)) / 2.0F), this.width, P9.a.c(var13)
             );
       }
 

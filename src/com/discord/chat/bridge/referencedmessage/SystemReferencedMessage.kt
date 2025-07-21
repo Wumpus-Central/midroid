@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.referencedmessage
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class SystemReferencedMessage(content: String) : ReferencedMessage {

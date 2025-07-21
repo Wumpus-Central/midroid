@@ -5,7 +5,7 @@ import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 internal data class LongPressPollImageData(channelId: String, messageId: String, attachmentId: String, layout: Layout) : ReactEvent {
    public final val channelId: String
@@ -84,17 +84,17 @@ internal data class LongPressPollImageData(channelId: String, messageId: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.channelId;
       val var4: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.attachmentId;
+      val var2: java.lang.String = this.attachmentId;
       val var5: TapImageData.Layout = this.layout;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LongPressPollImageData(channelId=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", messageId=");
       var3.append(var4);
       var3.append(", attachmentId=");
-      var3.append(var1);
+      var3.append(var2);
       var3.append(", layout=");
       var3.append(var5);
       var3.append(")");

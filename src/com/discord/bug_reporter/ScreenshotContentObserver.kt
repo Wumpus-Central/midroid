@@ -81,8 +81,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 02d: ifnonnull 033
       // 030: goto 11f
       // 033: getstatic android/os/Build$VERSION.SDK_INT I
-      // 036: istore 2
-      // 037: iload 2
+      // 036: istore 3
+      // 037: iload 3
       // 038: bipush 29
       // 03a: if_icmplt 078
       // 03d: aload 7
@@ -94,8 +94,8 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 050: astore 6
       // 052: aload 6
       // 054: invokevirtual java/lang/Number.intValue ()I
-      // 057: istore 3
-      // 058: iload 3
+      // 057: istore 2
+      // 058: iload 2
       // 059: bipush 1
       // 05a: if_icmpne 060
       // 05d: goto 063
@@ -106,12 +106,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 068: goto 078
       // 06b: aload 7
       // 06d: aconst_null
-      // 06e: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 06e: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 071: aconst_null
       // 072: areturn
       // 073: astore 6
       // 075: goto 112
-      // 078: iload 2
+      // 078: iload 3
       // 079: bipush 29
       // 07b: if_icmplt 093
       // 07e: aload 7
@@ -170,7 +170,7 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 109: astore 1
       // 10a: aload 7
       // 10c: aconst_null
-      // 10d: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 10d: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 110: aload 1
       // 111: areturn
       // 112: aload 6
@@ -178,12 +178,12 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       // 115: astore 1
       // 116: aload 7
       // 118: aload 6
-      // 11a: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 11a: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 11d: aload 1
       // 11e: athrow
       // 11f: aload 7
       // 121: aconst_null
-      // 122: invokestatic D9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 122: invokestatic L9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // 125: aconst_null
       // 126: areturn
    }
@@ -336,24 +336,24 @@ internal class ScreenshotContentObserver(contentResolver: ContentResolver, onScr
       }
 
       public override fun toString(): String {
-         val var3: Long = this.id;
+         val var1: Long = this.id;
          val var5: java.lang.String = this.fileName;
-         val var8: java.lang.String = this.relativePath;
-         val var6: Uri = this.uri;
-         val var1: Long = this.dateAdded;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("ScreenshotData(id=");
-         var7.append(var3);
-         var7.append(", fileName=");
-         var7.append(var5);
-         var7.append(", relativePath=");
-         var7.append(var8);
-         var7.append(", uri=");
-         var7.append(var6);
-         var7.append(", dateAdded=");
-         var7.append(var1);
-         var7.append(")");
-         return var7.toString();
+         val var6: java.lang.String = this.relativePath;
+         val var7: Uri = this.uri;
+         val var3: Long = this.dateAdded;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("ScreenshotData(id=");
+         var8.append(var1);
+         var8.append(", fileName=");
+         var8.append(var5);
+         var8.append(", relativePath=");
+         var8.append(var6);
+         var8.append(", uri=");
+         var8.append(var7);
+         var8.append(", dateAdded=");
+         var8.append(var3);
+         var8.append(")");
+         return var8.toString();
       }
    }
 }

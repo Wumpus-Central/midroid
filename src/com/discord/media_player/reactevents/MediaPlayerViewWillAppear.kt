@@ -4,10 +4,10 @@ import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import r9.s
+import sb.f
+import z9.s
 
 @f
 public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -63,14 +63,14 @@ public data class MediaPlayerViewWillAppear(channelId: String, mediaItemIds: Lis
 
    public override fun toString(): String {
       val var2: java.lang.String = this.channelId;
-      val var3: java.util.List = this.mediaItemIds;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("MediaPlayerViewWillAppear(channelId=");
-      var1.append(var2);
-      var1.append(", mediaItemIds=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.mediaItemIds;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MediaPlayerViewWillAppear(channelId=");
+      var3.append(var2);
+      var3.append(", mediaItemIds=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

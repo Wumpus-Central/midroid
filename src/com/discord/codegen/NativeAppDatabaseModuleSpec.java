@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import J3.a;
+import I3.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -22,12 +22,12 @@ public abstract class NativeAppDatabaseModuleSpec extends ReactContextBaseJavaMo
       Map var4 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var2 = new HashSet();
-         HashSet var1 = new HashSet<>(Arrays.asList("userId"));
-         HashSet var3 = new HashSet(var4.keySet());
-         var3.removeAll(var2);
-         var3.removeAll(var1);
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
+         HashSet var3 = new HashSet<>(Arrays.asList("userId"));
+         HashSet var1 = new HashSet(var4.keySet());
+         var1.removeAll(var2);
+         var1.removeAll(var3);
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var1));
          }
 
          var2.removeAll(var4.keySet());

@@ -1,9 +1,9 @@
 package com.discord.notifications.renderer.utils
 
-import Y1.v
-import Y1.w
-import Ya.b
+import X1.v
+import X1.w
 import android.text.format.DateUtils
+import gb.b
 import java.text.DateFormat
 import java.util.Date
 import kotlin.jvm.internal.r
@@ -86,10 +86,10 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var12: Int = var6.d().a();
-      val var2: Int = var6.d().m();
+      val var2: Int = var6.d().a();
+      val var12: Int = var6.d().m();
       r.e(var10);
-      var13 = h.v0(var13, var12, var2 + 1, var10).toString();
+      var13 = h.v0(var13, var2, var12 + 1, var10).toString();
       var14 = h.v0(var14, var6.d().a(), var6.d().m() + 1, var10).toString();
    }
 }

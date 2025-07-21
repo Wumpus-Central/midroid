@@ -10,7 +10,7 @@ import com.facebook.drawee.span.SimpleDraweeSpanTextView;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.google.android.flexbox.FlexboxLayout;
 import com.google.android.material.textview.MaterialTextView;
-import z0.a;
+import y0.a;
 
 public final class MessageComponentSelectViewBinding implements ViewBinding {
    public final ViewStub loadingDots;
@@ -33,21 +33,21 @@ public final class MessageComponentSelectViewBinding implements ViewBinding {
 
    public static MessageComponentSelectViewBinding bind(View var0) {
       int var1 = R.id.loading_dots;
-      ViewStub var4 = (ViewStub)a.a(var0, var1);
-      if (var4 != null) {
+      ViewStub var6 = (ViewStub)a.a(var0, var1);
+      if (var6 != null) {
          var1 = R.id.select_component_chevron;
-         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-         if (var3 != null) {
+         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.select_component_selection_icon;
-            SimpleDraweeSpanTextView var6 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var6 != null) {
+            SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var2 != null) {
                var1 = R.id.select_component_selection_text;
                MaterialTextView var5 = (MaterialTextView)a.a(var0, var1);
                if (var5 != null) {
                   var1 = R.id.select_component_selections_root;
-                  FlexboxLayout var2 = (FlexboxLayout)a.a(var0, var1);
-                  if (var2 != null) {
-                     return new MessageComponentSelectViewBinding(var0, var4, var3, var6, var5, var2);
+                  FlexboxLayout var3 = (FlexboxLayout)a.a(var0, var1);
+                  if (var3 != null) {
+                     return new MessageComponentSelectViewBinding(var0, var6, var4, var2, var5, var3);
                   }
                }
             }

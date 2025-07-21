@@ -1,15 +1,15 @@
 package com.discord.appreview
 
-import R6.b
-import R6.c
-import U6.a
+import V6.b
+import V6.c
+import Y6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.r
-import n1.d
-import n1.e
+import m1.d
+import m1.e
 
 internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Boolean, onComplete: () -> Unit, onFailure: (Exception) -> Unit) {
    private final val activity: Activity
@@ -71,10 +71,10 @@ internal class AppRatingRequester(activity: Activity, useFakeReviewManager: Bool
    }
 
    public fun executeRequest() {
-      val var1: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
-      val var2: Task = var1.b();
-      r.g(var2, "requestReviewFlow(...)");
-      var2.d(new n1.c(var1, this));
-      var2.b(new d(this));
+      val var2: ReviewManager = this.createReviewManager(this.useFakeReviewManager, this.activity);
+      val var1: Task = var2.b();
+      r.g(var1, "requestReviewFlow(...)");
+      var1.d(new m1.c(var2, this));
+      var1.b(new d(this));
    }
 }

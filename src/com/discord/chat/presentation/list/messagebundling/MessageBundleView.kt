@@ -152,7 +152,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                }
             }
 
-            val var25: java.util.List = i.z0(var11, var29);
+            val var25: java.util.List = i.B0(var11, var29);
             val var21: java.lang.String = var1.getViewMoreText();
             val var22: MessageBundleViewMoreItem;
             if (var21 != null) {
@@ -163,11 +163,11 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
 
             var var14: Boolean;
             label61: {
-               var8 = i.A0(var25, var22);
-               var26 = this.spineItemDecoration;
+               var8 = i.C0(var25, var22);
+               var30 = this.spineItemDecoration;
                if (var1.getReferenceMessageRows().isEmpty()) {
-                  val var30: java.lang.String = var1.getViewMoreText();
-                  if (var30 == null || var30.length() == 0) {
+                  val var26: java.lang.String = var1.getViewMoreText();
+                  if (var26 == null || var26.length() == 0) {
                      var14 = false;
                      break label61;
                   }
@@ -176,14 +176,14 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var14 = true;
             }
 
-            var26.setShowThreadSpine(var14);
-            val var31: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
-            val var27: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
-            if (var27 != null) {
-               var31.configure(var27, new h(var3));
+            var30.setShowThreadSpine(var14);
+            val var27: MessageFrameFeedHeaderView = this.binding.messageFrameHeader;
+            val var31: MessageFrameFeedHeaderView.MessageBundleHeader = var1.getMessageFrame();
+            if (var31 != null) {
+               var27.configure(var31, new h(var3));
             }
 
-            r.e(var31);
+            r.e(var27);
             var var6: Boolean;
             if (var1.getMessageFrame() != null) {
                var6 = 1;
@@ -197,10 +197,10 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
                var6 = 8;
             }
 
-            var31.setVisibility(var6);
+            var27.setVisibility(var6);
             NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(this, false, var2, 1, null);
             NestedScrollOnTouchUtilsKt.setOnLongClickListenerNested$default(this, false, var3, 1, null);
-            this.adapter.setItems(i.c0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
+            this.adapter.setItems(i.e0(var8), this.onTruncateMessage, var1.getTruncationThreshold(), new Function1(var4) {
                final Function1 $onTapReply;
 
                {
@@ -233,7 +233,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
    }
 
-   @kb.f
+   @sb.f
    public data class MessageBundle(messageFrame: MessageBundleHeader? = null,
       rows: List<MessageRow>,
       truncationThreshold: Float? = null,
@@ -249,7 +249,7 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       @JvmStatic
       fun {
          val var0: MessageRow.$serializer = MessageRow.$serializer.INSTANCE;
-         $childSerializers = new KSerializer[]{null, new nb.f(MessageRow.$serializer.INSTANCE), null, new nb.f(var0), null};
+         $childSerializers = new KSerializer[]{null, new vb.f(MessageRow.$serializer.INSTANCE), null, new vb.f(var0), null};
       }
 
       init {
@@ -342,22 +342,22 @@ public class MessageBundleView  public constructor(context: Context, attrs: Attr
       }
 
       public override fun toString(): String {
-         val var5: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
-         val var3: java.util.List = this.rows;
-         val var1: java.lang.Float = this.truncationThreshold;
-         val var2: java.util.List = this.referenceMessageRows;
-         val var6: java.lang.String = this.viewMoreText;
+         val var6: MessageFrameFeedHeaderView.MessageBundleHeader = this.messageFrame;
+         val var2: java.util.List = this.rows;
+         val var5: java.lang.Float = this.truncationThreshold;
+         val var3: java.util.List = this.referenceMessageRows;
+         val var1: java.lang.String = this.viewMoreText;
          val var4: StringBuilder = new StringBuilder();
          var4.append("MessageBundle(messageFrame=");
-         var4.append(var5);
-         var4.append(", rows=");
-         var4.append(var3);
-         var4.append(", truncationThreshold=");
-         var4.append(var1);
-         var4.append(", referenceMessageRows=");
-         var4.append(var2);
-         var4.append(", viewMoreText=");
          var4.append(var6);
+         var4.append(", rows=");
+         var4.append(var2);
+         var4.append(", truncationThreshold=");
+         var4.append(var5);
+         var4.append(", referenceMessageRows=");
+         var4.append(var3);
+         var4.append(", viewMoreText=");
+         var4.append(var1);
          var4.append(")");
          return var4.toString();
       }

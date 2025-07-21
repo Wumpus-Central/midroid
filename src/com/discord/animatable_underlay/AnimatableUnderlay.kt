@@ -15,7 +15,7 @@ import com.facebook.react.views.view.ReactViewGroup
 import com.facebook.react.views.view.ReactViewGroupExtensionsKt
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
-import r9.n
+import z9.n
 
 public class AnimatableUnderlay(context: Context) : ReactViewGroup {
    private final var height: Float
@@ -72,10 +72,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var15: RectF = this.pathRect;
-            val var2: Float = this.height;
-            val var3: Float = this.shapeHeight;
+            val var4: Float = this.height;
+            val var2: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var2 - (var2 - var3) / 2;
+            var15.bottom = var4 - (var4 - var2) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -96,10 +96,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var19: RectF = this.pathRect;
-            val var12: Float = this.width;
-            val var9: Float = this.shapeWidth;
+            val var9: Float = this.width;
+            val var13: Float = this.shapeWidth;
             this.pathRect.left = (this.width - this.shapeWidth) / 2;
-            var19.right = var12 - (var12 - var9) / 2;
+            var19.right = var9 - (var9 - var13) / 2;
          } else {
             val var20: RectF = this.pathRect;
             this.pathRect.left = 0.0F;
@@ -188,7 +188,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = z9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic
@@ -235,7 +235,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = z9.a.a(var0);
+         $ENTRIES = H9.a.a(var0);
       }
 
       @JvmStatic

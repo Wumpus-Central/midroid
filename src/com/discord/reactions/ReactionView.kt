@@ -77,7 +77,7 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
    private fun configureBackground(isMe: Boolean, palette: com.discord.reactions.ReactionView.BurstColorPalette?) {
       var var3: Int = 255;
       if (var2 != null) {
-         var3 = H9.a.c(var2.getOpacity() * (float)255);
+         var3 = P9.a.c(var2.getOpacity() * (float)255);
       }
 
       var var12: Int;
@@ -231,14 +231,14 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
          val var5: java.util.List = kotlin.text.h.B0(
             I18nUtilsKt.i18nFormat(var2, I18nMessage.REACT_PILL_FULL_LABEL, new a()).toString(), new java.lang.String[]{"{emojiPreview}"}, false, 0, 6, null
          );
-         var var4: java.lang.String = kotlin.collections.i.i0(var5, 0) as java.lang.String;
+         var var4: java.lang.String = kotlin.collections.i.k0(var5, 0) as java.lang.String;
          var var3: java.lang.String = "";
          var var6: java.lang.String = var4;
          if (var4 == null) {
             var6 = "";
          }
 
-         var4 = kotlin.collections.i.i0(var5, 1) as java.lang.String;
+         var4 = kotlin.collections.i.k0(var5, 1) as java.lang.String;
          if (var4 != null) {
             var3 = var4;
          }
@@ -389,11 +389,11 @@ public class ReactionView  public constructor(context: Context, attrs: Attribute
 
       this.currentShouldAnimate = var1.getEmoji().getShouldAnimate();
       if (!var3) {
-         val var9: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
-         val var16: RenderableEmoji = var1.getEmoji().renderable();
+         val var16: SimpleDraweeSpanTextView = this.binding.reactionEmoji;
+         val var9: RenderableEmoji = var1.getEmoji().renderable();
          val var11: Context = this.getContext();
          r.g(var11, "getContext(...)");
-         var9.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var16, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
+         var16.setDraweeSpanStringBuilder(RenderableEmojiKt.renderEmoji$default(var9, var11, EMOJI_SIZE, var1.getEmoji().getShouldAnimate(), 0, null, 48, null));
          this.currentEmojiId = var1.getEmoji().getEmojiId();
       }
    }

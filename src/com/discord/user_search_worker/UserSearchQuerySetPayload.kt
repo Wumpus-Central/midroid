@@ -1,11 +1,11 @@
 package com.discord.user_search_worker
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import nb.E0
-import nb.U
-import nb.y
+import sb.f
+import vb.E0
+import vb.U
+import vb.y
 
 @f
 internal data class UserSearchQuerySetPayload(query: String,
@@ -13,6 +13,7 @@ internal data class UserSearchQuerySetPayload(query: String,
    blacklist: List<String>? = null,
    whitelist: List<String>? = null,
    boosters: Map<String, Double>,
+   boosterFallback: Double,
    limit: Int
 ) {
    public final val query: String
@@ -20,12 +21,13 @@ internal data class UserSearchQuerySetPayload(query: String,
    public final val blacklist: List<String>?
    public final val whitelist: List<String>?
    public final val boosters: Map<String, Double>
+   public final val boosterFallback: Double
    public final val limit: Int
 
    @JvmStatic
    fun {
       val var0: E0 = E0.a;
-      $childSerializers = new KSerializer[]{null, null, new nb.f(E0.a), new nb.f(var0), new U(var0, y.a), null};
+      $childSerializers = new KSerializer[]{null, null, new vb.f(E0.a), new vb.f(var0), new U(var0, y.a), null, null};
    }
 
    init {
@@ -37,7 +39,8 @@ internal data class UserSearchQuerySetPayload(query: String,
       this.blacklist = var3;
       this.whitelist = var4;
       this.boosters = var5;
-      this.limit = var6;
+      this.boosterFallback = var6;
+      this.limit = var8;
    }
 
    public operator fun component1(): String {
@@ -60,7 +63,11 @@ internal data class UserSearchQuerySetPayload(query: String,
       return this.boosters;
    }
 
-   public operator fun component6(): Int {
+   public operator fun component6(): Double {
+      return this.boosterFallback;
+   }
+
+   public operator fun component7(): Int {
       return this.limit;
    }
 
@@ -70,11 +77,12 @@ internal data class UserSearchQuerySetPayload(query: String,
       blacklist: List<String>? = var0.blacklist,
       whitelist: List<String>? = var0.whitelist,
       boosters: Map<String, Double> = var0.boosters,
+      boosterFallback: Double = var0.boosterFallback,
       limit: Int = var0.limit
    ): UserSearchQuerySetPayload {
       r.h(var1, "query");
       r.h(var5, "boosters");
-      return new UserSearchQuerySetPayload(var1, var2, var3, var4, var5, var6);
+      return new UserSearchQuerySetPayload(var1, var2, var3, var4, var5, var6, var8);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -93,6 +101,8 @@ internal data class UserSearchQuerySetPayload(query: String,
          } else if (!r.c(this.whitelist, var1.whitelist)) {
             return false;
          } else if (!r.c(this.boosters, var1.boosters)) {
+            return false;
+         } else if (java.lang.Double.compare(this.boosterFallback, var1.boosterFallback) != 0) {
             return false;
          } else {
             return this.limit == var1.limit;
@@ -121,29 +131,33 @@ internal data class UserSearchQuerySetPayload(query: String,
          var3 = this.whitelist.hashCode();
       }
 
-      return ((((var4 * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.boosters.hashCode()) * 31 + Integer.hashCode(this.limit);
+      return (((((var4 * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.boosters.hashCode()) * 31 + java.lang.Double.hashCode(this.boosterFallback)) * 31
+         + Integer.hashCode(this.limit);
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.query;
-      val var3: UserSearchQuerySetFilters = this.filters;
-      val var6: java.util.List = this.blacklist;
-      val var2: java.util.List = this.whitelist;
-      val var4: java.util.Map = this.boosters;
-      val var1: Int = this.limit;
+      val var4: java.lang.String = this.query;
+      val var6: UserSearchQuerySetFilters = this.filters;
+      val var5: java.util.List = this.blacklist;
+      val var8: java.util.List = this.whitelist;
+      val var9: java.util.Map = this.boosters;
+      val var1: Double = this.boosterFallback;
+      val var3: Int = this.limit;
       val var7: StringBuilder = new StringBuilder();
       var7.append("UserSearchQuerySetPayload(query=");
-      var7.append(var5);
-      var7.append(", filters=");
-      var7.append(var3);
-      var7.append(", blacklist=");
-      var7.append(var6);
-      var7.append(", whitelist=");
-      var7.append(var2);
-      var7.append(", boosters=");
       var7.append(var4);
-      var7.append(", limit=");
+      var7.append(", filters=");
+      var7.append(var6);
+      var7.append(", blacklist=");
+      var7.append(var5);
+      var7.append(", whitelist=");
+      var7.append(var8);
+      var7.append(", boosters=");
+      var7.append(var9);
+      var7.append(", boosterFallback=");
       var7.append(var1);
+      var7.append(", limit=");
+      var7.append(var3);
       var7.append(")");
       return var7.toString();
    }

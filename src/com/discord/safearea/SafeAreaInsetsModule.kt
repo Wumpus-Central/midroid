@@ -13,13 +13,13 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import f2.a
-import f2.b
-import f2.c
-import f2.d
-import f2.e
+import e2.a
+import e2.b
+import e2.c
+import e2.d
+import e2.e
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {
@@ -147,17 +147,17 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
    public override fun getStableSafeAreaInsets(): WritableMap {
       val var1: d = new d();
       val var3: Activity = this.getCurrentActivity();
-      val var2: Int = 0;
+      val var4: Int = 0;
       if (var3 == null) {
-         return var1.invoke(var2, var2, var2, var2) as WritableMap;
+         return var1.invoke(var4, var4, var4, var4) as WritableMap;
       } else {
-         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
-         if (var4 == null) {
-            return var1.invoke(var2, var2, var2, var2) as WritableMap;
+         val var2: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var2 == null) {
+            return var1.invoke(var4, var4, var4, var4) as WritableMap;
          } else {
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
-            return var1.invoke(Math.max(var5.a, var6.a), Math.max(var5.b, var6.b), Math.max(var5.c, var6.c), Math.max(var5.d, var6.d)) as WritableMap;
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var2, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var2, var3, true);
+            return var1.invoke(Math.max(var6.a, var5.a), Math.max(var6.b, var5.b), Math.max(var6.c, var5.c), Math.max(var6.d, var5.d)) as WritableMap;
          }
       }
    }

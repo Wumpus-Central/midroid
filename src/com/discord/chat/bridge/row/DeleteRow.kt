@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.row
 
 import com.discord.chat.bridge.ChangeType
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class DeleteRow(index: Int, changeType: ChangeType = ChangeType.DELETE) : Row {

@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class StringSelectItem(label: String,
@@ -108,22 +108,22 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.label;
+      val var4: java.lang.String = this.label;
       val var5: java.lang.String = this.value;
       val var2: ComponentEmoji = this.emoji;
-      val var4: java.lang.String = this.description;
-      val var1: java.lang.Boolean = this.default;
+      val var1: java.lang.String = this.description;
+      val var3: java.lang.Boolean = this.default;
       val var6: StringBuilder = new StringBuilder();
       var6.append("StringSelectItem(label=");
-      var6.append(var3);
+      var6.append(var4);
       var6.append(", value=");
       var6.append(var5);
       var6.append(", emoji=");
       var6.append(var2);
       var6.append(", description=");
-      var6.append(var4);
-      var6.append(", default=");
       var6.append(var1);
+      var6.append(", default=");
+      var6.append(var3);
       var6.append(")");
       return var6.toString();
    }

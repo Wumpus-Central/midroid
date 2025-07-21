@@ -1,8 +1,8 @@
 package com.discord.sticker_picker
 
+import H9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
-import z9.a
 
 internal data class StickerPickerRow(rowContentWidth: Int,
    rowContentPaddingVertical: Int,
@@ -206,30 +206,30 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.id;
+         val var8: java.lang.String = this.id;
          val var6: java.lang.String = this.name;
          val var4: StickerPickerRow.Sticker.Type = this.type;
          val var1: Boolean = this.animated;
-         val var7: java.lang.String = this.url;
+         val var5: java.lang.String = this.url;
          val var3: Boolean = this.disabled;
          val var2: Boolean = this.opaque;
-         val var8: StringBuilder = new StringBuilder();
-         var8.append("Sticker(id=");
-         var8.append(var5);
-         var8.append(", name=");
-         var8.append(var6);
-         var8.append(", type=");
-         var8.append(var4);
-         var8.append(", animated=");
-         var8.append(var1);
-         var8.append(", url=");
-         var8.append(var7);
-         var8.append(", disabled=");
-         var8.append(var3);
-         var8.append(", opaque=");
-         var8.append(var2);
-         var8.append(")");
-         return var8.toString();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Sticker(id=");
+         var7.append(var8);
+         var7.append(", name=");
+         var7.append(var6);
+         var7.append(", type=");
+         var7.append(var4);
+         var7.append(", animated=");
+         var7.append(var1);
+         var7.append(", url=");
+         var7.append(var5);
+         var7.append(", disabled=");
+         var7.append(var3);
+         var7.append(", opaque=");
+         var7.append(var2);
+         var7.append(")");
+         return var7.toString();
       }
 
       public enum class Type {

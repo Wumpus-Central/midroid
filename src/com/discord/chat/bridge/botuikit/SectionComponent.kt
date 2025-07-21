@@ -1,8 +1,8 @@
 package com.discord.chat.bridge.botuikit
 
-import kb.f
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
+import sb.f
 
 @f
 public data class SectionComponent(type: Int, id: String, errorText: String? = null, components: List<SectionChildComponent<*>>, accessory: SectionAccessory<*>)
@@ -80,8 +80,8 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.type);
-      val var3: Int = this.id.hashCode();
+      val var3: Int = Integer.hashCode(this.type);
+      val var2: Int = this.id.hashCode();
       val var1: Int;
       if (this.errorText == null) {
          var1 = 0;
@@ -89,28 +89,28 @@ public data class SectionComponent(type: Int, id: String, errorText: String? = n
          var1 = this.errorText.hashCode();
       }
 
-      return (((var2 * 31 + var3) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
+      return (((var3 * 31 + var2) * 31 + var1) * 31 + this.components.hashCode()) * 31 + this.accessory.hashCode();
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var6: java.lang.String = this.id;
+      val var4: java.lang.String = this.id;
       val var5: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
+      val var6: java.util.List = this.components;
       val var2: SectionAccessory = this.accessory;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SectionComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var6);
-      var4.append(", errorText=");
-      var4.append(var5);
-      var4.append(", components=");
-      var4.append(var3);
-      var4.append(", accessory=");
-      var4.append(var2);
-      var4.append(")");
-      return var4.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("SectionComponent(type=");
+      var3.append(var1);
+      var3.append(", id=");
+      var3.append(var4);
+      var3.append(", errorText=");
+      var3.append(var5);
+      var3.append(", components=");
+      var3.append(var6);
+      var3.append(", accessory=");
+      var3.append(var2);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

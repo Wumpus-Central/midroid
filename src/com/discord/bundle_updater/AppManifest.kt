@@ -1,12 +1,12 @@
 package com.discord.bundle_updater
 
+import A9.q
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import nb.E0
-import nb.U
-import s9.q
+import vb.E0
+import vb.U
 
-@kb.f
+@sb.f
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
    public final val metadata: AppManifestMetadata
    public final val hashes: Map<String, String>
@@ -69,14 +69,14 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var1: AppManifestMetadata = this.metadata;
-      val var3: java.util.Map = this.hashes;
+      val var3: AppManifestMetadata = this.metadata;
+      val var1: java.util.Map = this.hashes;
       val var4: java.util.Map = this.patches;
       val var2: StringBuilder = new StringBuilder();
       var2.append("AppManifest(metadata=");
-      var2.append(var1);
-      var2.append(", hashes=");
       var2.append(var3);
+      var2.append(", hashes=");
+      var2.append(var1);
       var2.append(", patches=");
       var2.append(var4);
       var2.append(")");

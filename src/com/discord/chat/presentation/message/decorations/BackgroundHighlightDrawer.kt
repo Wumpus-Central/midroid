@@ -1,12 +1,12 @@
 package com.discord.chat.presentation.message.decorations
 
-import A1.a
-import A1.b
-import A1.c
 import android.content.Context
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.presentation.list.item.ChatListItem
 import kotlin.jvm.internal.r
+import z1.a
+import z1.b
+import z1.c
 
 public class BackgroundHighlightDrawer(context: Context) : HighlightedMessageDrawer {
    init {

@@ -25,7 +25,7 @@ import com.facebook.react.viewmanagers.FastestListManagerDelegate
 import com.facebook.react.viewmanagers.FastestListManagerInterface
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import r9.s
+import z9.s
 
 @ReactModule(name = "FastestList")
 internal class FastestListViewManager : InitialPropsViewGroupManager<FastestListView>, FastestListManagerInterface<FastestListView> {
@@ -98,8 +98,8 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       return new FastestListView(
          var1,
          ReactStylesDiffMapExtensionsKt.getBoolean(var2, "horizontal"),
-         ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "insetEnd"),
-         ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "insetStart"),
+         SizeUtilsKt.getDpToPx(var2.getFloat("insetEnd", 0.0F)),
+         SizeUtilsKt.getDpToPx(var2.getFloat("insetStart", 0.0F)),
          ReactStylesDiffMapExtensionsKt.getBoolean(var2, "keyboardDismissOnDrag"),
          new b(this),
          ReactStylesDiffMapExtensionsKt.getNonNullInt(var2, "scrollEventThrottle"),
@@ -165,13 +165,13 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
    }
 
    @ReactProp(name = "insetEnd")
-   public open fun setInsetEnd(view: FastestListView, value: Int) {
+   public open fun setInsetEnd(view: FastestListView, value: Float) {
       r.h(var1, "view");
       var1.setInsetEnd(SizeUtilsKt.getDpToPx(var2));
    }
 
    @ReactProp(name = "insetStart")
-   public open fun setInsetStart(view: FastestListView, value: Int) {
+   public open fun setInsetStart(view: FastestListView, value: Float) {
       r.h(var1, "view");
       var1.setInsetStart(SizeUtilsKt.getDpToPx(var2));
    }

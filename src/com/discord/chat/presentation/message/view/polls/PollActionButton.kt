@@ -93,7 +93,7 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
             if (var7 != 2) {
                if (var7 != 3) {
                   if (var7 != 4) {
-                     throw new r9.n();
+                     throw new z9.n();
                   }
 
                   val var18: TextView = this.binding.actionText;
@@ -124,49 +124,49 @@ public class PollActionButton  public constructor(context: Context, attrs: Attri
                   var11 = var21;
                }
             } else {
-               val var24: DCDButton = this.binding.actionButton;
+               val var22: DCDButton = this.binding.actionButton;
                r.g(this.binding.actionButton, "actionButton");
-               var24.setVisibility(8);
-               val var25: TextView = this.binding.actionText;
+               var22.setVisibility(8);
+               val var23: TextView = this.binding.actionText;
                this.binding.actionText.setTextColor(ThemeManagerKt.getTheme().getTextBrand());
-               r.e(var25);
-               DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimarySemibold);
-               var25.setText(var1.getLabel());
-               var25.setClickable(true);
-               var25.setOnClickListener(new d(var1, var5, var2, var4));
+               r.e(var23);
+               DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimarySemibold);
+               var23.setText(var1.getLabel());
+               var23.setClickable(true);
+               var23.setOnClickListener(new d(var1, var5, var2, var4));
                var var12: PollsActionAccessibilityDelegate = null;
                if (var1.getType() != null) {
                   var12 = new PollsActionAccessibilityDelegate(var1);
                }
 
-               var25.setAccessibilityDelegate(var12);
-               r.e(var25);
-               var11 = var25;
+               var23.setAccessibilityDelegate(var12);
+               r.e(var23);
+               var11 = var23;
             }
          } else {
-            val var22: DCDButton = this.binding.actionButton;
+            val var24: DCDButton = this.binding.actionButton;
             r.g(this.binding.actionButton, "actionButton");
-            var22.setVisibility(8);
-            val var23: TextView = this.binding.actionText;
+            var24.setVisibility(8);
+            val var25: TextView = this.binding.actionText;
             r.e(this.binding.actionText);
-            var23.setVisibility(0);
-            var23.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
-            DiscordFontUtilsKt.setDiscordFont(var23, DiscordFont.PrimaryMedium);
-            var23.setText(var1.getFullTextLabel());
+            var25.setVisibility(0);
+            var25.setTextColor(ThemeManagerKt.getTheme().getTextSecondary());
+            DiscordFontUtilsKt.setDiscordFont(var25, DiscordFont.PrimaryMedium);
+            var25.setText(var1.getFullTextLabel());
             if (var1.getType() == null) {
                var8 = false;
             }
 
-            var23.setClickable(var8);
-            var23.setOnClickListener(new c(var1, var5, var2, var4));
+            var25.setClickable(var8);
+            var25.setOnClickListener(new c(var1, var5, var2, var4));
             var var13: PollsActionAccessibilityDelegate = null;
             if (var1.getType() != null) {
                var13 = new PollsActionAccessibilityDelegate(var1);
             }
 
-            var23.setAccessibilityDelegate(var13);
-            r.e(var23);
-            var11 = var23;
+            var25.setAccessibilityDelegate(var13);
+            r.e(var25);
+            var11 = var25;
          }
 
          var11.setEnabled(var1.getEnabled());

@@ -180,15 +180,15 @@ public object FontManager {
       // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: aload 0
       // 09: invokespecial com/discord/react/FontManager.getInitialFontSize ()F
-      // 0c: fstore 3
+      // 0c: fstore 2
       // 0d: aload 0
       // 0e: aload 1
       // 0f: invokevirtual com/discord/react/FontManager.getFontScale (Landroid/content/Context;)F
-      // 12: fstore 2
+      // 12: fstore 3
       // 13: aload 0
       // 14: monitorexit
-      // 15: fload 3
-      // 16: fload 2
+      // 15: fload 2
+      // 16: fload 3
       // 17: fmul
       // 18: freturn
       // 19: astore 1
