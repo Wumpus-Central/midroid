@@ -12,9 +12,9 @@ import com.facebook.drawee.view.SimpleDraweeView
 import ib.K
 import ib.f
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.g
 
@@ -83,8 +83,8 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                   } else {
                      c.b(var1);
                      var1 = this.L$0 as CoroutineScope;
-                     val var5: CoroutineDispatcher = K.a();
-                     var4 = new Function2(this.this$0, null) {
+                     var4 = K.a();
+                     val var5: Function2 = new Function2(this.this$0, null) {
                         int label;
                         final ThumbhashPlaceholderControllerListener this$0;
 
@@ -115,7 +115,7 @@ public class ThumbhashPlaceholderControllerListener(draweeView: SimpleDraweeView
                      };
                      this.L$0 = var1;
                      this.label = 1;
-                     var4 = f.g(var5, (Function2)var4, this);
+                     var4 = f.g((CoroutineContext)var4, var5, this);
                      if (var4 === var3x) {
                         return var3x;
                      }

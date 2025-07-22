@@ -122,14 +122,14 @@ public object Kotlin {
                   r.h(var1, "matcher");
                   r.h(var2, "parser");
                   val var8: java.lang.String = var1.group(1);
-                  val var5: java.lang.String = var1.group(2);
-                  val var4: java.lang.String = var1.group(3);
-                  val var7: java.lang.String = var1.group(4);
-                  val var6: ParseSpec.Companion = ParseSpec.Companion;
+                  val var4: java.lang.String = var1.group(2);
+                  val var5: java.lang.String = var1.group(3);
+                  val var6: java.lang.String = var1.group(4);
+                  val var7: ParseSpec.Companion = ParseSpec.Companion;
                   r.e(var8);
-                  r.e(var4);
-                  r.e(var7);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new Kotlin.FunctionNode<>(var8, var5, var4, var7, this.$codeStyleProviders), var3);
+                  r.e(var5);
+                  r.e(var6);
+                  return (ParseSpec<RC, S>)var7.createTerminal(new Kotlin.FunctionNode<>(var8, var4, var5, var6, this.$codeStyleProviders), var3);
                }
             };
          }

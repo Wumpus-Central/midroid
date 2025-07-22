@@ -98,7 +98,7 @@ private fun createSectionItem(
    } else {
       val var16: ReadableMap = var7.getMap(var2);
       r.e(var16);
-      var8 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var16, "sizes").getInt(var4));
+      var8 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var16, "sizes").getDouble(var4));
    }
 
    val var15: java.lang.String;
@@ -145,7 +145,7 @@ internal operator fun Companion.invoke(value: ReadableMap): Versioned {
    if (var1.getBoolean("itemSizeIsUniform")) {
       val var23: ReadableMap = var10.getMap(0);
       r.e(var23);
-      var6 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var23, "sizes").getInt(0));
+      var6 = SizeUtilsKt.getDpToPx(NativeMapExtensionsKt.getNonNullArray(var23, "sizes").getDouble(0));
    } else {
       var6 = null;
    }
