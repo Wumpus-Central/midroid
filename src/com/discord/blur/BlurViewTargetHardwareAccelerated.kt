@@ -82,10 +82,10 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       kotlin.jvm.internal.r.h(var1, "canvas");
       val var8: java.util.Map = this.blurRects;
       val var7: LinkedHashMap = new LinkedHashMap();
-      val var9: java.util.Iterator = var8.entrySet().iterator();
+      val var10: java.util.Iterator = var8.entrySet().iterator();
 
       while (true) {
-         val var6: Boolean = var9.hasNext();
+         val var6: Boolean = var10.hasNext();
          var var4: Boolean = false;
          if (!var6) {
             if (var7.isEmpty()) {
@@ -100,34 +100,34 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
 
             for (Entry var15 : this.blurRectRenderNodes.entrySet()) {
                val var12: Int = (var15.getKey() as java.lang.Number).intValue();
-               val var17: RenderNode = r.a(var15.getValue());
+               val var11: RenderNode = r.a(var15.getValue());
                val var16: BlurViewTargetHardwareAccelerated.BlurRect = var7.get(var12) as BlurViewTargetHardwareAccelerated.BlurRect;
                if (var16 != null) {
                   val var2: Float = this.blurAmounts.getOrDefault(var12, -1.0F).floatValue();
-                  t.a(var17, s.a(Math.abs(var2), Math.abs(var2), TileMode.CLAMP));
-                  i.a(var17, 0, 0, var16.getWidth(), var16.getHeight());
-                  u.a(var17, (float)(var16.getWindowX() - this.blurViewTargetWindowOffsetX));
-                  j.a(var17, (float)(var16.getWindowY() - this.blurViewTargetWindowOffsetY));
-                  val var11: RecordingCanvas = m.a(var17);
+                  t.a(var11, s.a(Math.abs(var2), Math.abs(var2), TileMode.CLAMP));
+                  i.a(var11, 0, 0, var16.getWidth(), var16.getHeight());
+                  u.a(var11, (float)(var16.getWindowX() - this.blurViewTargetWindowOffsetX));
+                  j.a(var11, (float)(var16.getWindowY() - this.blurViewTargetWindowOffsetY));
+                  val var17: RecordingCanvas = m.a(var11);
                   n.a(
-                     var11,
+                     var17,
                      -((float)(var16.getWindowX() - this.blurViewTargetWindowOffsetX)),
                      -((float)(var16.getWindowY() - this.blurViewTargetWindowOffsetY))
                   );
-                  o.a(var11, this.blurContentRenderNode);
-                  p.a(var17);
-                  q.a(var1, var17);
+                  o.a(var17, this.blurContentRenderNode);
+                  p.a(var11);
+                  q.a(var1, var11);
                }
             }
 
             return;
          }
 
-         val var10: Entry = var9.next() as Entry;
-         val var5: Int = (var10.getKey() as java.lang.Number).intValue();
-         val var13: BlurViewTargetHardwareAccelerated.BlurRect = var10.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
+         val var13: Entry = var10.next() as Entry;
+         val var5: Int = (var13.getKey() as java.lang.Number).intValue();
+         val var9: BlurViewTargetHardwareAccelerated.BlurRect = var13.getValue() as BlurViewTargetHardwareAccelerated.BlurRect;
          val var3: Boolean;
-         if (var13.getWidth() != 0 && var13.getHeight() != 0) {
+         if (var9.getWidth() != 0 && var9.getHeight() != 0) {
             var3 = true;
          } else {
             var3 = false;
@@ -138,7 +138,7 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
          }
 
          if (var3 && var4) {
-            var7.put(var10.getKey(), var10.getValue());
+            var7.put(var13.getKey(), var13.getValue());
          }
       }
    }
@@ -245,19 +245,19 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       public override fun toString(): String {
-         val var4: Int = this.windowX;
+         val var3: Int = this.windowX;
          val var2: Int = this.windowY;
-         val var1: Int = this.width;
-         val var3: Int = this.height;
+         val var4: Int = this.width;
+         val var1: Int = this.height;
          val var5: StringBuilder = new StringBuilder();
          var5.append("BlurRect(windowX=");
-         var5.append(var4);
+         var5.append(var3);
          var5.append(", windowY=");
          var5.append(var2);
          var5.append(", width=");
-         var5.append(var1);
+         var5.append(var4);
          var5.append(", height=");
-         var5.append(var3);
+         var5.append(var1);
          var5.append(")");
          return var5.toString();
       }

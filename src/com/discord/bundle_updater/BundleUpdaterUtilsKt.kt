@@ -25,10 +25,10 @@ internal fun AssetManager.getManifestFromAsset(asset: String): AppManifest {
       val var10: BufferedReader = new BufferedReader(new InputStreamReader(var9, gb.a.b), 8192);
 
       try {
-         val var11: Json = json;
-         val var13: java.lang.String = q.e(var10);
-         var11.a();
-         var12 = var11.b(AppManifest.Companion.serializer(), var13) as AppManifest;
+         val var13: Json = json;
+         var1 = q.e(var10);
+         var13.a();
+         var12 = var13.b(AppManifest.Companion.serializer(), var1) as AppManifest;
       } catch (var4: java.lang.Throwable) {
          val var2: java.lang.Throwable = var4;
 

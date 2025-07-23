@@ -118,27 +118,27 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var2: Float = this.totalDurationSecs;
-      val var1: Float = this.startDurationSecs;
-      val var7: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var7: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var1: Float = this.totalDurationSecs;
+      val var2: Float = this.startDurationSecs;
+      val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
-      val var4: java.lang.String = this.attachmentId;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("MediaAttachmentPlaybackStartedData(messageId=");
-      var5.append(var6);
-      var5.append(", totalDurationSecs=");
-      var5.append(var2);
-      var5.append(", startDurationSecs=");
-      var5.append(var1);
-      var5.append(", senderUserId=");
-      var5.append(var7);
-      var5.append(", isVoiceMessage=");
-      var5.append(var3);
-      var5.append(", attachmentId=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.attachmentId;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MediaAttachmentPlaybackStartedData(messageId=");
+      var4.append(var7);
+      var4.append(", totalDurationSecs=");
+      var4.append(var1);
+      var4.append(", startDurationSecs=");
+      var4.append(var2);
+      var4.append(", senderUserId=");
+      var4.append(var6);
+      var4.append(", isVoiceMessage=");
+      var4.append(var3);
+      var4.append(", attachmentId=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

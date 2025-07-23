@@ -33,16 +33,16 @@ internal object NotificationChannels {
          var5 = false;
       }
 
-      val var8: NotificationChannelCompat.Builder = var3.g(var5);
-      val var10: StringBuilder = new StringBuilder();
-      var10.append("android.resource://");
-      val var7: java.lang.String = var1.getPackageName();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var7);
-      var6.append("/");
-      var6.append(var4);
-      var10.append(var6.toString());
-      var8.h(Uri.parse(var10.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
+      var3 = var3.g(var5);
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("android.resource://");
+      val var6: java.lang.String = var1.getPackageName();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var6);
+      var7.append("/");
+      var7.append(var4);
+      var8.append(var7.toString());
+      var3.h(Uri.parse(var8.toString()), new android.media.AudioAttributes.Builder().setUsage(5).setContentType(2).build());
    }
 
    private fun configureMediaChannel(legacyChannel: NotificationChannelCompat?, builder: Builder) {
@@ -89,9 +89,9 @@ internal object NotificationChannels {
                }
             }
 
-            val var9: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
-            val var11: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
-            var10 = var9.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var11.defaultLabel(var5.getId())).a();
+            val var11: androidx.core.app.j.c = new androidx.core.app.j.c(var5.getGroupId());
+            val var9: NotificationChannels.ChannelGroup.Companion = NotificationChannels.ChannelGroup.Companion;
+            var10 = var11.c(NotificationChannels.ChannelGroup.Companion.defaultLabel(var5.getId())).b(var9.defaultLabel(var5.getId())).a();
          }
 
          var7.add(var10);
@@ -130,11 +130,11 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var3 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var4: java.lang.String = var3.b();
+      for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var4: java.lang.String = var2.b();
          r.g(var4, "getId(...)");
          if (kotlin.text.h.I(var4, "calls", false, 2, null)) {
-            return var3;
+            return var2;
          }
       }
 
@@ -156,11 +156,11 @@ internal object NotificationChannels {
    private fun com.discord.notifications.renderer.NotificationChannels.CallRingtone.getChannelId(): String {
       val var4: java.lang.String;
       if (NotificationChannels.WhenMappings.$EnumSwitchMapping$0[var1.ordinal()] == 1) {
-         val var3: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("calls_");
-         var2.append(var3);
-         var4 = var2.toString();
+         val var2: java.lang.String = NotificationChannels.CallRingtone.Default.getId();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("calls_");
+         var3.append(var2);
+         var4 = var3.toString();
       } else {
          val var6: java.lang.String = var1.getId();
          val var5: StringBuilder = new StringBuilder();
@@ -409,8 +409,8 @@ internal object NotificationChannels {
                   r.e(var18);
                   var15.configureCallChannel(var1, var21, var18, var7.getResource());
 
-                  for (NotificationChannelCompat var20 : var6) {
-                     NotificationManagerUtilsKt.getNotificationManagerCompat(var1).f(var20.b());
+                  for (NotificationChannelCompat var19 : var6) {
+                     NotificationManagerUtilsKt.getNotificationManagerCompat(var1).f(var19.b());
                   }
 
                   NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(kotlin.collections.i.e(var18.a()));

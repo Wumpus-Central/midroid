@@ -51,23 +51,23 @@ public object BundleUpdaterUtils {
          r.h(var1, "file");
          val var10: BufferedSource = cc.m.d(cc.m.k(var1));
 
-         var var12: java.lang.String;
+         var var11: java.lang.String;
          try {
-            val var11: cc.j = cc.j.m.a(cc.m.b());
-            var10.F1(var11);
-            var12 = var11.a().s();
+            val var2: cc.j = cc.j.m.a(cc.m.b());
+            var10.F1(var2);
+            var11 = var2.a().s();
          } catch (var5: java.lang.Throwable) {
-            val var2: java.lang.Throwable = var5;
+            val var3: java.lang.Throwable = var5;
 
             try {
-               throw var2;
+               throw var3;
             } catch (var4: java.lang.Throwable) {
                L9.c.a(var10, var5);
             }
          }
 
          L9.c.a(var10, null);
-         return var12;
+         return var11;
       }
    }
 }

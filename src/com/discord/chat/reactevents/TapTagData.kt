@@ -57,8 +57,8 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = MessageId.hashCode-impl(this.messageId);
-      val var2: Int = ChannelId.hashCode-impl(this.channelId);
+      val var2: Int = MessageId.hashCode-impl(this.messageId);
+      val var3: Int = ChannelId.hashCode-impl(this.channelId);
       val var1: Int;
       if (this.tagType == null) {
          var1 = 0;
@@ -66,7 +66,7 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
          var1 = this.tagType.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -74,14 +74,14 @@ public data class TapTagData(messageId: MessageId, channelId: ChannelId, tagType
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = MessageId.toString-impl(this.messageId);
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: java.lang.String = MessageId.toString-impl(this.messageId);
+      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
       val var1: java.lang.String = this.tagType;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapTagData(messageId=");
-      var2.append(var4);
-      var2.append(", channelId=");
       var2.append(var3);
+      var2.append(", channelId=");
+      var2.append(var4);
       var2.append(", tagType=");
       var2.append(var1);
       var2.append(")");

@@ -164,38 +164,38 @@ public data class BuildOverrideCookieMeta(expiresAt: String? = null,
          var9 = null;
       }
 
-      val var6: Pair = s.a("allowedVersions", var9);
-      val var7: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
+      val var7: Pair = s.a("allowedVersions", var9);
+      val var6: Pair = s.a("allowLoggedOut", this.allowLoggedOut);
       var var12: WritableNativeMap = null;
       if (this.experiments != null) {
          var12 = NativeMapExtensionsKt.toNativeMap(this.experiments);
       }
 
-      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var6, var7, s.a("experiments", var12));
+      return NativeMapExtensionsKt.nativeMapOf(var3, var4, var5, var7, var6, s.a("experiments", var12));
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.expiresAt;
+      val var2: java.lang.String = this.expiresAt;
       val var3: java.lang.String = this.releaseChannel;
       val var6: java.util.List = this.validForUserIds;
-      val var5: java.util.List = this.allowedVersions;
-      val var2: java.lang.Boolean = this.allowLoggedOut;
-      val var1: java.util.Map = this.experiments;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("BuildOverrideCookieMeta(expiresAt=");
-      var4.append(var7);
-      var4.append(", releaseChannel=");
-      var4.append(var3);
-      var4.append(", validForUserIds=");
-      var4.append(var6);
-      var4.append(", allowedVersions=");
-      var4.append(var5);
-      var4.append(", allowLoggedOut=");
-      var4.append(var2);
-      var4.append(", experiments=");
-      var4.append(var1);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.List = this.allowedVersions;
+      val var1: java.lang.Boolean = this.allowLoggedOut;
+      val var7: java.util.Map = this.experiments;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("BuildOverrideCookieMeta(expiresAt=");
+      var5.append(var2);
+      var5.append(", releaseChannel=");
+      var5.append(var3);
+      var5.append(", validForUserIds=");
+      var5.append(var6);
+      var5.append(", allowedVersions=");
+      var5.append(var4);
+      var5.append(", allowLoggedOut=");
+      var5.append(var1);
+      var5.append(", experiments=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

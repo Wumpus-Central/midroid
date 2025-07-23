@@ -45,17 +45,17 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
 
    public static PollTextAndImageAnswerViewBinding bind(View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var3 = (PollCheckboxView)a.a(var0, var1);
-      if (var3 != null) {
+      PollCheckboxView var2 = (PollCheckboxView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.image;
-         PollMediaView var6 = (PollMediaView)a.a(var0, var1);
-         if (var6 != null) {
+         PollMediaView var4 = (PollMediaView)a.a(var0, var1);
+         if (var4 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var4 != null) {
+            SimpleDraweeSpanTextView var3 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.percentage_bar_background;
-               View var2 = a.a(var0, var1);
-               if (var2 != null) {
+               View var8 = a.a(var0, var1);
+               if (var8 != null) {
                   var1 = R.id.percentage_bar_container;
                   FrameLayout var5 = (FrameLayout)a.a(var0, var1);
                   if (var5 != null) {
@@ -63,9 +63,9 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
                      TextView var7 = (TextView)a.a(var0, var1);
                      if (var7 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var8 = (TextView)a.a(var0, var1);
-                        if (var8 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var3, var6, var4, var2, var5, var7, var8);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var2, var4, var3, var8, var5, var7, var6);
                         }
                      }
                   }

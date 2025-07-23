@@ -27,13 +27,13 @@ public object IconUrlUtils {
    }
 
    public fun getCustomEmojiUrl(emojiId: Long, animate: Boolean, size: Int? = null): String {
-      val var7: MediaProxy = MediaProxy.INSTANCE;
-      val var5: java.lang.String = Hosts.INSTANCE.getCDN();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append(var5);
-      var6.append("/emojis/");
-      var6.append(var1);
-      return var7.withSize(var6.toString(), var3, var4, null);
+      val var5: MediaProxy = MediaProxy.INSTANCE;
+      val var6: java.lang.String = Hosts.INSTANCE.getCDN();
+      val var7: StringBuilder = new StringBuilder();
+      var7.append(var6);
+      var7.append("/emojis/");
+      var7.append(var1);
+      return var5.withSize(var7.toString(), var3, var4, null);
    }
 
    public fun getForChannel(context: Context, id: ChannelId?, icon: String?, isGroupDM: Boolean, size: Int? = ...): String {
@@ -44,15 +44,15 @@ public object IconUrlUtils {
          label34:
          try {
             val var11: a = Result.k;
-            val var17: MediaProxy = MediaProxy.INSTANCE;
+            val var12: MediaProxy = MediaProxy.INSTANCE;
             val var7: java.lang.String = Hosts.INSTANCE.getCDN();
-            val var12: StringBuilder = new StringBuilder();
-            var12.append(var7);
-            var12.append("/channel-icons/");
-            var12.append(var2);
-            var12.append("/");
-            var12.append(var3);
-            var10 = Result.b(var17.withSize(var12.toString(), false, var5, var3));
+            val var17: StringBuilder = new StringBuilder();
+            var17.append(var7);
+            var17.append("/channel-icons/");
+            var17.append(var2);
+            var17.append("/");
+            var17.append(var3);
+            var10 = Result.b(var12.withSize(var17.toString(), false, var5, var3));
          } catch (var8: java.lang.Throwable) {
             val var15: a = Result.k;
             var10 = Result.b(c.a(var8));

@@ -40,7 +40,7 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       r.h(var6, "onTapSpoiler");
       r.h(var7, "onTapObscureToggle");
       val var25: Attachment = var2.getAttachment();
-      val var22: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
+      val var21: UploadItemProps = var2.getUploadItemProps(new Function2(var1) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -51,12 +51,12 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
             (super.receiver as ChatEventHandler).onTapCancelUploadItem(var1, var2);
          }
       });
-      val var21: java.lang.String = var25.getUrl();
-      val var11: Int = var25.getWidth();
-      val var9: Int = var25.getHeight();
-      val var24: java.lang.String = var25.getPlaceholder();
-      val var23: Int = var25.getPlaceholderVersion();
-      val var10: Int = var2.getRadiusPx();
+      val var23: java.lang.String = var25.getUrl();
+      val var10: Int = var25.getWidth();
+      val var11: Int = var25.getHeight();
+      val var22: java.lang.String = var25.getPlaceholder();
+      val var24: Int = var25.getPlaceholderVersion();
+      val var9: Int = var2.getRadiusPx();
       val var20: MediaContainingViewResizer.ResizeMode;
       if (var3) {
          var20 = MediaContainingViewResizer.ResizeMode.Fill;
@@ -106,8 +106,8 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       val var18: Boolean = var25.getShowDescription();
-      val var35: java.lang.String = var25.getDescription();
-      val var37: java.lang.String = var25.getHint();
+      val var37: java.lang.String = var25.getDescription();
+      val var35: java.lang.String = var25.getHint();
       val var19: Boolean = var2.getUseNewAltTextButton();
       val var29: Function1 = new Function1(var1) {
          {
@@ -130,11 +130,11 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
       }
 
       super.bind(
-         var21,
-         var11,
-         var9,
-         var24,
          var23,
+         var10,
+         var11,
+         var22,
+         var24,
          var17,
          var30,
          var12,
@@ -142,16 +142,16 @@ public class MosaicItemMessageAttachmentImageViewHolder(view: MediaImageView) : 
          var14,
          var15,
          var18,
-         var35,
          var37,
+         var35,
          var19,
          var29,
-         var10,
+         var9,
          var20,
          var3 xor true,
          var4,
          var5,
-         var22,
+         var21,
          var28,
          var8,
          var27,

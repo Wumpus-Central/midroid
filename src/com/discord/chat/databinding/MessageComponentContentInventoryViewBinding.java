@@ -42,17 +42,17 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
 
    public static MessageComponentContentInventoryViewBinding bind(View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-      if (var6 != null) {
+      SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+      if (var7 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+         if (var2 != null) {
             var1 = R.id.content_inventory_component_media_image;
-            SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
-            if (var7 != null) {
+            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.content_inventory_component_platform_icon;
-               SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-               if (var2 != null) {
+               SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+               if (var4 != null) {
                   var1 = R.id.content_inventory_component_subtitle;
                   TextView var8 = (TextView)a.a(var0, var1);
                   if (var8 != null) {
@@ -62,7 +62,7 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
                         var1 = R.id.content_inventory_component_username;
                         TextView var5 = (TextView)a.a(var0, var1);
                         if (var5 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var6, var4, var7, var2, var8, var3, var5);
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var7, var2, var6, var4, var8, var3, var5);
                         }
                      }
                   }

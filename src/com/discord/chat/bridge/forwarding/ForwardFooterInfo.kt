@@ -70,8 +70,8 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.timestampLabel.hashCode();
-      val var2: Int = this.originLabel.hashCode();
+      val var2: Int = this.timestampLabel.hashCode();
+      val var4: Int = this.originLabel.hashCode();
       val var3: Int = this.accessibilityLabel.hashCode();
       val var1: Int;
       if (this.originIconUrl == null) {
@@ -80,25 +80,25 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
          var1 = this.originIconUrl.hashCode();
       }
 
-      return ((var4 * 31 + var2) * 31 + var3) * 31 + var1;
+      return ((var2 * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.timestampLabel;
-      val var3: java.lang.String = this.originLabel;
-      val var1: java.lang.String = this.accessibilityLabel;
-      val var5: java.lang.String = this.originIconUrl;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ForwardFooterInfo(timestampLabel=");
-      var4.append(var2);
-      var4.append(", originLabel=");
-      var4.append(var3);
-      var4.append(", accessibilityLabel=");
-      var4.append(var1);
-      var4.append(", originIconUrl=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var5: java.lang.String = this.timestampLabel;
+      val var1: java.lang.String = this.originLabel;
+      val var2: java.lang.String = this.accessibilityLabel;
+      val var4: java.lang.String = this.originIconUrl;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ForwardFooterInfo(timestampLabel=");
+      var3.append(var5);
+      var3.append(", originLabel=");
+      var3.append(var1);
+      var3.append(", accessibilityLabel=");
+      var3.append(var2);
+      var3.append(", originIconUrl=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

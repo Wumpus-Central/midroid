@@ -82,19 +82,19 @@ public data class ComponentActionEventHandlers(onTapButtonActionComponent: (Stri
    }
 
    public override fun toString(): String {
-      val var2: Function1 = this.onTapButtonActionComponent;
-      val var4: Function1 = this.onTapButtonLinkComponent;
-      val var3: Function1 = this.onTapSelectActionComponent;
-      val var1: Function3 = this.onTapContentInventoryEntry;
+      val var3: Function1 = this.onTapButtonActionComponent;
+      val var2: Function1 = this.onTapButtonLinkComponent;
+      val var1: Function1 = this.onTapSelectActionComponent;
+      val var4: Function3 = this.onTapContentInventoryEntry;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ComponentActionEventHandlers(onTapButtonActionComponent=");
-      var5.append(var2);
-      var5.append(", onTapButtonLinkComponent=");
-      var5.append(var4);
-      var5.append(", onTapSelectActionComponent=");
       var5.append(var3);
-      var5.append(", onTapContentInventoryEntry=");
+      var5.append(", onTapButtonLinkComponent=");
+      var5.append(var2);
+      var5.append(", onTapSelectActionComponent=");
       var5.append(var1);
+      var5.append(", onTapContentInventoryEntry=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

@@ -147,10 +147,10 @@ public data class ChannelSelectComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var6: Int = Integer.hashCode(this.type);
-      val var4: Int = this.id.hashCode();
-      val var7: Int = this.state.hashCode();
-      val var5: Int = this.customId.hashCode();
+      val var7: Int = Integer.hashCode(this.type);
+      val var5: Int = this.id.hashCode();
+      val var6: Int = this.state.hashCode();
+      val var4: Int = this.customId.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.placeholder == null) {
@@ -166,52 +166,52 @@ public data class ChannelSelectComponent(type: Int,
          var2 = this.accessibilityLabel.hashCode();
       }
 
-      val var10: Int = Integer.hashCode(this.minValues);
-      val var9: Int = Integer.hashCode(this.maxValues);
-      val var11: Int = java.lang.Boolean.hashCode(this.disabled);
-      val var8: Int = this.selectedOptions.hashCode();
+      val var9: Int = Integer.hashCode(this.minValues);
+      val var10: Int = Integer.hashCode(this.maxValues);
+      val var8: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var11: Int = this.selectedOptions.hashCode();
       if (this.channelTypes != null) {
          var3 = this.channelTypes.hashCode();
       }
 
-      return (((((((((var6 * 31 + var4) * 31 + var7) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var11) * 31 + var8) * 31 + var3;
+      return (((((((((var7 * 31 + var5) * 31 + var6) * 31 + var4) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var8) * 31 + var11) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var3: Int = this.type;
-      val var10: java.lang.String = this.id;
-      val var7: ActionComponentState = this.state;
-      val var9: java.lang.String = this.customId;
+      val var2: Int = this.type;
+      val var7: java.lang.String = this.id;
+      val var12: ActionComponentState = this.state;
+      val var5: java.lang.String = this.customId;
       val var6: java.lang.String = this.placeholder;
-      val var11: java.lang.String = this.accessibilityLabel;
-      val var1: Int = this.minValues;
-      val var2: Int = this.maxValues;
+      val var9: java.lang.String = this.accessibilityLabel;
+      val var3: Int = this.minValues;
+      val var1: Int = this.maxValues;
       val var4: Boolean = this.disabled;
-      val var12: java.util.List = this.selectedOptions;
-      val var5: java.util.List = this.channelTypes;
+      val var11: java.util.List = this.selectedOptions;
+      val var10: java.util.List = this.channelTypes;
       val var8: StringBuilder = new StringBuilder();
       var8.append("ChannelSelectComponent(type=");
-      var8.append(var3);
+      var8.append(var2);
       var8.append(", id=");
-      var8.append(var10);
-      var8.append(", state=");
       var8.append(var7);
+      var8.append(", state=");
+      var8.append(var12);
       var8.append(", customId=");
-      var8.append(var9);
+      var8.append(var5);
       var8.append(", placeholder=");
       var8.append(var6);
       var8.append(", accessibilityLabel=");
-      var8.append(var11);
+      var8.append(var9);
       var8.append(", minValues=");
-      var8.append(var1);
+      var8.append(var3);
       var8.append(", maxValues=");
-      var8.append(var2);
+      var8.append(var1);
       var8.append(", disabled=");
       var8.append(var4);
       var8.append(", selectedOptions=");
-      var8.append(var12);
+      var8.append(var11);
       var8.append(", channelTypes=");
-      var8.append(var5);
+      var8.append(var10);
       var8.append(")");
       return var8.toString();
    }

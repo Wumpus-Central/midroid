@@ -115,13 +115,13 @@ public class MessageBundleConversationView  public constructor(context: Context,
          val var20: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
          val var11: StructurableText = var12.getContent();
-         val var15: Context = this.getContext();
-         r.g(var15, "getContext(...)");
-         val var14: java.lang.String = var12.getId-3Eiw7ao();
-         val var9: Boolean = MessageKt.shouldAnimateEmoji(var12);
-         val var10: Boolean = MessageKt.shouldShowLinkDecorations(var12);
-         val var7: Boolean = var12.getShouldShowRoleDot();
-         val var8: Boolean = var12.getShouldShowRoleOnName();
+         val var14: Context = this.getContext();
+         r.g(var14, "getContext(...)");
+         val var15: java.lang.String = var12.getId-3Eiw7ao();
+         val var10: Boolean = MessageKt.shouldAnimateEmoji(var12);
+         val var9: Boolean = MessageKt.shouldShowLinkDecorations(var12);
+         val var8: Boolean = var12.getShouldShowRoleDot();
+         val var7: Boolean = var12.getShouldShowRoleOnName();
          val var16: FontMetrics = this.binding.replyText.getPaint().getFontMetrics();
          r.g(var16, "getFontMetrics(...)");
          val var3: Float = TextUtilsKt.getBaselineHeightPx(var16);
@@ -129,12 +129,12 @@ public class MessageBundleConversationView  public constructor(context: Context,
          r.g(var37, "getPaint(...)");
          val var34: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
             var11,
-            var15,
             var14,
-            var9,
+            var15,
             var10,
-            var7,
+            var9,
             var8,
+            var7,
             var37,
             null,
             null,
@@ -163,20 +163,20 @@ public class MessageBundleConversationView  public constructor(context: Context,
          SpannableExtensionsKt.coverWithSpan(var34, new BackgroundSpanDrawer(var28));
          var21 = ReplyUtilsKt.createReplyContent(var20, var34);
       } else if (MessageFlagKt.hasMessageFlag(var12.getFlags(), MessageFlag.IS_COMPONENTS_V2)) {
-         val var29: TextView = this.binding.replyAuthorName;
+         val var22: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var22: Context = this.getContext();
-         r.g(var22, "getContext(...)");
+         val var29: Context = this.getContext();
+         r.g(var29, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var29, I18nUtilsKt.i18nFormat$default(var22, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
+            var22, I18nUtilsKt.i18nFormat$default(var29, I18nMessage.REPLY_QUOTE_COMPONENTS_V2_MOBILE, null, 2, null).toString()
          );
       } else {
-         val var30: TextView = this.binding.replyAuthorName;
+         val var23: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var23: Context = this.getContext();
-         r.g(var23, "getContext(...)");
+         val var30: Context = this.getContext();
+         r.g(var30, "getContext(...)");
          var21 = ReplyUtilsKt.createSystemReplyContent(
-            var30, I18nUtilsKt.i18nFormat$default(var23, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
+            var23, I18nUtilsKt.i18nFormat$default(var30, I18nMessage.REPLY_QUOTE_NO_TEXT_CONTENT_MOBILE, null, 2, null).toString()
          );
       }
 
@@ -185,15 +185,15 @@ public class MessageBundleConversationView  public constructor(context: Context,
       if (var31.isLaidOut() && var31.getWidth() > 0) {
          var31.measure(MeasureSpec.makeMeasureSpec(var31.getWidth(), Integer.MIN_VALUE), MeasureSpec.makeMeasureSpec(0, 0));
          var31.getLineBounds(0, this.replyTextLineBounds);
-         val var35: TextView = this.binding.replyAuthorName;
+         val var24: TextView = this.binding.replyAuthorName;
          r.g(this.binding.replyAuthorName, "replyAuthorName");
-         val var32: android.view.ViewGroup.LayoutParams = var35.getLayoutParams();
+         val var32: android.view.ViewGroup.LayoutParams = var24.getLayoutParams();
          if (var32 == null) {
             throw new NullPointerException("null cannot be cast to non-null type android.view.ViewGroup.LayoutParams");
          }
 
          var32.height = this.replyTextLineBounds.bottom - this.replyTextLineBounds.top;
-         var35.setLayoutParams(var32);
+         var24.setLayoutParams(var32);
       }
 
       val var36: ShortcutsFlexbox = this.binding.reactionsView;

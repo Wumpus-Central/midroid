@@ -23,17 +23,17 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    }
 
    public fun getItem(position: Int): EmojiPickerItem {
-      val var6: Array<java.util.List> = this.dataSets;
+      val var5: Array<java.util.List> = this.dataSets;
       val var4: Int = this.dataSets.length;
       var var3: Int = 0;
 
       for (int var2 = 0; var3 < var4; var3++) {
-         val var5: java.util.List = var6[var3];
-         if (var1 < var6[var3].size() + var2) {
-            return var5.get(var1 - var2) as EmojiPickerItem;
+         val var6: java.util.List = var5[var3];
+         if (var1 < var5[var3].size() + var2) {
+            return var6.get(var1 - var2) as EmojiPickerItem;
          }
 
-         var2 += var5.size();
+         var2 += var6.size();
       }
 
       val var7: StringBuilder = new StringBuilder();
@@ -45,14 +45,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun getItemCount(): Int {
       val var4: Array<java.util.List> = this.dataSets;
       val var3: Int = this.dataSets.length;
-      var var1: Int = 0;
+      var var2: Int = 0;
 
-      var var2: Int;
-      for (var2 = 0; var1 < var3; var1++) {
-         var2 += var4[var1].size();
+      var var1: Int;
+      for (var1 = 0; var2 < var3; var2++) {
+         var1 += var4[var2].size();
       }
 
-      return var2;
+      return var1;
    }
 
    public fun getItemIndex(position: Int): Int? {
@@ -75,14 +75,14 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
    public fun setCoreData(coreData: com.discord.emoji_picker.EmojiPickerItemData.CoreData, onChanged: () -> Unit) {
       kotlin.jvm.internal.r.h(var1, "coreData");
       kotlin.jvm.internal.r.h(var2, "onChanged");
-      val var5: Array<java.util.List> = this.dataSets;
-      val var3: java.util.List = var1.getLeading();
-      var3.set(0, this.coreData.getLeading().get(0));
-      var5[0] = var3;
-      val var6: Array<java.util.List> = this.dataSets;
-      val var8: java.util.List = var1.getTrailing();
-      var8.set(kotlin.collections.i.m(var8), kotlin.collections.i.s0(this.coreData.getTrailing()));
-      var6[3] = var8;
+      val var3: Array<java.util.List> = this.dataSets;
+      val var4: java.util.List = var1.getLeading();
+      var4.set(0, this.coreData.getLeading().get(0));
+      var3[0] = var4;
+      val var8: Array<java.util.List> = this.dataSets;
+      val var6: java.util.List = var1.getTrailing();
+      var6.set(kotlin.collections.i.m(var6), kotlin.collections.i.s0(this.coreData.getTrailing()));
+      var8[3] = var6;
       if (var1.getHasSearchData()) {
          this.dataSets[1] = kotlin.collections.i.k();
          this.dataSets[2] = kotlin.collections.i.k();
@@ -193,13 +193,13 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
       @JvmStatic
       fun `categoryIndices_delegate$lambda$1`(var0: EmojiPickerItemData.CoreData): java.util.Map {
          val var2: LinkedHashMap = new LinkedHashMap();
-         val var3: java.util.Iterator = var0.leading.iterator();
+         val var4: java.util.Iterator = var0.leading.iterator();
          var var1: Int = 0;
 
-         while (var3.hasNext()) {
-            val var4: EmojiPickerItem = var3.next() as EmojiPickerItem;
-            if (var4 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var4 as EmojiPickerItem.Category).getTitle()), var1);
+         while (var4.hasNext()) {
+            val var3: EmojiPickerItem = var4.next() as EmojiPickerItem;
+            if (var3 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var3 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }
@@ -212,9 +212,9 @@ internal class EmojiPickerItemData(coreData: com.discord.emoji_picker.EmojiPicke
             var2.put(IdUtilsKt.convertToId((var7.next() as EmojiPickerItemData.CoreData.NativeSection.Unicode).getTitle()), var1);
          }
 
-         for (EmojiPickerItem var5 : var0.trailing) {
-            if (var5 is EmojiPickerItem.Category) {
-               var2.put(IdUtilsKt.convertToId((var5 as EmojiPickerItem.Category).getTitle()), var1);
+         for (EmojiPickerItem var8 : var0.trailing) {
+            if (var8 is EmojiPickerItem.Category) {
+               var2.put(IdUtilsKt.convertToId((var8 as EmojiPickerItem.Category).getTitle()), var1);
                var1++;
             }
          }

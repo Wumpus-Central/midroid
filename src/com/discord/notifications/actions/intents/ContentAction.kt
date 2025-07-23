@@ -81,14 +81,14 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
 
    public override fun toString(): String {
       val var3: java.lang.String = this.tag;
-      val var2: java.util.Map = this.data;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("ContentAction(tag=");
-      var1.append(var3);
-      var1.append(", data=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.Map = this.data;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentAction(tag=");
+      var2.append(var3);
+      var2.append(", data=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public fun writeToParcel(dest: Parcel, flags: Int) {
@@ -107,15 +107,15 @@ public data class ContentAction(tag: String, data: Map<String, String?>) : Notif
    internal class Creator : android.os.Parcelable.Creator<ContentAction> {
       fun createFromParcel(var1: Parcel): ContentAction {
          r.h(var1, "parcel");
-         val var5: java.lang.String = var1.readString();
+         val var4: java.lang.String = var1.readString();
          val var3: Int = var1.readInt();
-         val var4: LinkedHashMap = new LinkedHashMap(var3);
+         val var5: LinkedHashMap = new LinkedHashMap(var3);
 
          for (int var2 = 0; var2 != var3; var2++) {
-            var4.put(var1.readString(), var1.readString());
+            var5.put(var1.readString(), var1.readString());
          }
 
-         return new ContentAction(var5, var4);
+         return new ContentAction(var4, var5);
       }
 
       fun newArray(var1: Int): Array<ContentAction> {

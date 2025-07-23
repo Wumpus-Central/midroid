@@ -47,30 +47,30 @@ public final class MediaViewBinding implements ViewBinding {
 
    public static MediaViewBinding bind(View var0) {
       int var1 = R.id.inline_media_gif_indicator;
-      SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-      if (var5 != null) {
+      SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.inline_media_image_preview;
-         SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-         if (var4 != null) {
+         SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.inline_media_loading_indicator;
             ProgressBar var2 = (ProgressBar)a.a(var0, var1);
             if (var2 != null) {
                var1 = R.id.inline_media_play_button;
-               ImageView var8 = (ImageView)a.a(var0, var1);
-               if (var8 != null) {
+               ImageView var7 = (ImageView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.inline_media_volume_toggle;
-                  SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-                  if (var6 != null) {
+                  SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
+                  if (var8 != null) {
                      var1 = R.id.overlay_tag;
-                     ConstraintLayout var9 = (ConstraintLayout)a.a(var0, var1);
-                     if (var9 != null) {
+                     ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
+                     if (var6 != null) {
                         var1 = R.id.overlay_tag_icon;
-                        SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-                        if (var3 != null) {
+                        SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
+                        if (var5 != null) {
                            var1 = R.id.overlay_tag_text;
-                           TextView var7 = (TextView)a.a(var0, var1);
-                           if (var7 != null) {
-                              return new MediaViewBinding(var0, var5, var4, var2, var8, var6, var9, var3, var7);
+                           TextView var9 = (TextView)a.a(var0, var1);
+                           if (var9 != null) {
+                              return new MediaViewBinding(var0, var4, var3, var2, var7, var8, var6, var5, var9);
                            }
                         }
                      }
