@@ -107,12 +107,12 @@ public class OverlayTrashWrap : OverlayView {
 
    public constructor(context: Context, attrs: AttributeSet?) : kotlin.jvm.internal.r.h(var1, "context") {
       super(var1, var2);
-      val var7: WindowUtils = WindowUtils.INSTANCE;
-      val var5: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
-      var5.width = -1;
-      var5.gravity = 81;
-      var7.addFlag(var5, 16);
-      this.windowLayoutParams = var5;
+      val var5: WindowUtils = WindowUtils.INSTANCE;
+      val var7: LayoutParams = WindowUtils.INSTANCE.createWindowLayoutParams();
+      var7.width = -1;
+      var7.gravity = 81;
+      var5.addFlag(var7, 16);
+      this.windowLayoutParams = var7;
       val var6: TrashWrapBinding = TrashWrapBinding.inflate(LayoutInflater.from(this.getContext()), this);
       kotlin.jvm.internal.r.g(var6, "inflate(...)");
       this.binding = var6;
@@ -147,11 +147,11 @@ public class OverlayTrashWrap : OverlayView {
       });
       this.showAnimator = var3;
       var3 = new AnimatorSet();
-      var11 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
-      var11.setTarget(this);
-      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
-      var9.setTarget(var6.trashWrapTargetZone);
-      var3.playTogether(new Animator[]{var11, var9});
+      val var9: Animator = AnimatorInflater.loadAnimator(this.getContext(), R.animator.fade_out);
+      var9.setTarget(this);
+      var11 = AnimatorInflater.loadAnimator(this.getContext(), R.animator.slide_out_bottom);
+      var11.setTarget(var6.trashWrapTargetZone);
+      var3.playTogether(new Animator[]{var9, var11});
       var3.addListener(new AnimatorListener(this) {
          final OverlayTrashWrap this$0;
 
@@ -292,10 +292,10 @@ public class OverlayTrashWrap : OverlayView {
       super.onLayout(var1, var2, var3, var4, var5);
       if (var1) {
          this.binding.trashWrapTargetZone.getLocationOnScreen(this.locationOnScreen);
-         var3 = this.locationOnScreen[0];
-         var2 = this.locationOnScreen[1];
+         var2 = this.locationOnScreen[0];
+         var3 = this.locationOnScreen[1];
          this.trashZoneRect
-            .set(var3, this.locationOnScreen[1], this.binding.trashWrapTargetZone.getWidth() + var3, this.binding.trashWrapTargetZone.getHeight() + var2);
+            .set(var2, this.locationOnScreen[1], this.binding.trashWrapTargetZone.getWidth() + var2, this.binding.trashWrapTargetZone.getHeight() + var3);
       }
    }
 

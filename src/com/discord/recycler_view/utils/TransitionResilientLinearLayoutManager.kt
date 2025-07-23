@@ -1,16 +1,17 @@
-package com.discord.chat.presentation.list
+package com.discord.recycler_view.utils
 
 import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.discord.crash_reporting.CrashReporting
+import kotlin.jvm.internal.r
 
-public class TransitionResilientLinearLayoutManager(context: Context, orientation: Int = 1, reverseLayout: Boolean = false) : LinearLayoutManager {
+public open class TransitionResilientLinearLayoutManager(context: Context, orientation: Int = 1, reverseLayout: Boolean = false) : LinearLayoutManager {
    private final var disableRecycling: Boolean
 
    init {
-      kotlin.jvm.internal.r.h(var1, "context");
+      r.h(var1, "context");
       super(var1, var2, var3);
    }
 
@@ -19,7 +20,7 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleAllViews(recycler: Recycler) {
-      kotlin.jvm.internal.r.h(var1, "recycler");
+      r.h(var1, "recycler");
 
       try {
          if (this.disableRecycling) {
@@ -33,8 +34,8 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleView(child: View, recycler: Recycler) {
-      kotlin.jvm.internal.r.h(var1, "child");
-      kotlin.jvm.internal.r.h(var2, "recycler");
+      r.h(var1, "child");
+      r.h(var2, "recycler");
 
       try {
          if (this.disableRecycling) {
@@ -48,7 +49,7 @@ public class TransitionResilientLinearLayoutManager(context: Context, orientatio
    }
 
    public override fun removeAndRecycleViewAt(index: Int, recycler: Recycler) {
-      kotlin.jvm.internal.r.h(var2, "recycler");
+      r.h(var2, "recycler");
 
       try {
          if (this.disableRecycling) {

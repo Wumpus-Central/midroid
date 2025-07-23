@@ -255,11 +255,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.r.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.r.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var35: java.util.List = kotlin.collections.i.N0(var8, --var2);
-         val var23: ShortcutsFlexbox = this.binding.reactionsView;
+         val var23: java.util.List = kotlin.collections.i.N0(var8, --var2);
+         val var35: ShortcutsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
-         var23.setVisibility(0);
-         this.setReactions(var35, var12, var13, var14, var15);
+         var35.setVisibility(0);
+         this.setReactions(var23, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
          val var36: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.r.e(this.binding.otherReactionsCount);

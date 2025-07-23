@@ -93,17 +93,17 @@ internal data class FirstLayoutData(firstVisibleMessageIndex: Int,
    }
 
    public override fun toString(): String {
-      val var1: Int = this.firstVisibleMessageIndex;
+      val var2: Int = this.firstVisibleMessageIndex;
       val var4: java.lang.Double = this.firstVisibleMessagePercentVisible;
-      val var2: Int = this.lastVisibleMessageIndex;
+      val var1: Int = this.lastVisibleMessageIndex;
       val var5: java.lang.Double = this.lastVisibleMessagePercentVisible;
       val var3: StringBuilder = new StringBuilder();
       var3.append("FirstLayoutData(firstVisibleMessageIndex=");
-      var3.append(var1);
+      var3.append(var2);
       var3.append(", firstVisibleMessagePercentVisible=");
       var3.append(var4);
       var3.append(", lastVisibleMessageIndex=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", lastVisibleMessagePercentVisible=");
       var3.append(var5);
       var3.append(")");

@@ -29,13 +29,13 @@ public object SerializerUtils {
          val var3: LinkedHashMap = new LinkedHashMap();
 
          for (KProperty1 var7 : c.a(var2)) {
-            val var4: JsonElement = (var6 as JsonObject).get(var7.getName()) as JsonElement;
-            if (var4 == null) {
+            val var5: JsonElement = (var6 as JsonObject).get(var7.getName()) as JsonElement;
+            if (var5 == null) {
                if (!var7.getReturnType().j()) {
                   var3.put(var7.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var7, var4)) {
-               var3.put(var7.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var7, var5)) {
+               var3.put(var7.getName(), var5.toString());
             }
          }
 

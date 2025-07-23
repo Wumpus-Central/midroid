@@ -69,12 +69,12 @@ public object NumericUtils {
             kotlin.jvm.internal.r.e(var9);
             var10 = var9 as java.lang.String;
          } else {
-            val var11: Any = var8.get(var3);
+            val var7: Any = var8.get(var3);
             var6 = this.toRomanNumeral(var1 - var3);
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var11);
-            var7.append((java.lang.String)var6);
-            var10 = var7.toString();
+            val var11: StringBuilder = new StringBuilder();
+            var11.append(var7);
+            var11.append((java.lang.String)var6);
+            var10 = var11.toString();
          }
 
          return var10;

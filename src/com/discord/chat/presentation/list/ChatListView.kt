@@ -23,6 +23,7 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import java.lang.reflect.Field
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation

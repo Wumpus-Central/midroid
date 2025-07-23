@@ -95,8 +95,8 @@ public object ContactSyncProvider {
          var var5: java.lang.String;
          var var6: java.lang.String;
          while (true) {
-            var6 = var10;
-            var5 = var2;
+            var5 = var10;
+            var6 = var2;
             if (!var7.moveToNext()) {
                break;
             }
@@ -115,8 +115,8 @@ public object ContactSyncProvider {
             }
 
             if (var13 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var13.length() != 0) {
                   break;
                }
@@ -125,8 +125,8 @@ public object ContactSyncProvider {
             var10 = var4;
             var2 = var13;
             if (var4 != null) {
-               var6 = var4;
-               var5 = var13;
+               var5 = var4;
+               var6 = var13;
                if (var4.length() != 0) {
                   break;
                }
@@ -137,7 +137,7 @@ public object ContactSyncProvider {
          }
 
          var7.close();
-         return new ContactNameEntry(var5, var6);
+         return new ContactNameEntry(var6, var5);
       }
    }
 
@@ -151,10 +151,10 @@ public object ContactSyncProvider {
       } else {
          while (var7.moveToNext()) {
             val var6: java.lang.String = this.getColumnString(var7, "display_name");
-            val var9: java.lang.String = this.getColumnString(var7, "data4");
-            val var10: java.lang.String = this.getColumnString(var7, "_id");
+            val var10: java.lang.String = this.getColumnString(var7, "data4");
+            val var9: java.lang.String = this.getColumnString(var7, "_id");
             var var3: java.lang.String = this.getColumnString(var7, "contact_id");
-            if (var10 != null && var3 != null) {
+            if (var9 != null && var3 != null) {
                var var4: ContactNameEntry;
                label46: {
                   var4 = this.getContactName(var1, var3);
@@ -186,13 +186,13 @@ public object ContactSyncProvider {
                   var2 = false;
                }
 
-               if (var9 != null) {
+               if (var10 != null) {
                   var var5: java.lang.String = var6;
                   if (var6 == null) {
                      var5 = "";
                   }
 
-                  val var12: ContactSyncBlobEntry = var8.put(var9, new ContactSyncBlobEntry(var9, var5, var2, var10, var3, var13));
+                  val var12: ContactSyncBlobEntry = var8.put(var10, new ContactSyncBlobEntry(var10, var5, var2, var9, var3, var13));
                }
             }
          }

@@ -123,11 +123,11 @@ public object JavaScript {
                   r.h(var2, "parser");
                   val var7: java.lang.String = var1.group(1);
                   val var4: java.lang.String = var1.group(2);
-                  val var5: java.lang.String = var1.group(3);
-                  val var6: ParseSpec.Companion = ParseSpec.Companion;
+                  val var6: java.lang.String = var1.group(3);
+                  val var5: ParseSpec.Companion = ParseSpec.Companion;
                   r.e(var7);
-                  r.e(var5);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.FunctionNode<>(var7, var4, var5, this.$codeStyleProviders), var3);
+                  r.e(var6);
+                  return (ParseSpec<RC, S>)var5.createTerminal(new JavaScript.FunctionNode<>(var7, var4, var6, this.$codeStyleProviders), var3);
                }
             };
          }
@@ -168,14 +168,14 @@ public object JavaScript {
                public ParseSpec<RC, S> parse(Matcher var1, Parser<RC, ? super Node<RC>, S> var2, S var3) {
                   r.h(var1, "matcher");
                   r.h(var2, "parser");
-                  val var4: java.lang.String = var1.group(1);
-                  val var7: java.lang.String = var1.group(2);
+                  val var7: java.lang.String = var1.group(1);
+                  val var4: java.lang.String = var1.group(2);
                   val var5: java.lang.String = var1.group(3);
                   val var6: ParseSpec.Companion = ParseSpec.Companion;
-                  r.e(var4);
                   r.e(var7);
+                  r.e(var4);
                   r.e(var5);
-                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.ObjectPropertyNode<>(var4, var7, var5, this.$codeStyleProviders), var3);
+                  return (ParseSpec<RC, S>)var6.createTerminal(new JavaScript.ObjectPropertyNode<>(var7, var4, var5, this.$codeStyleProviders), var3);
                }
             };
          }

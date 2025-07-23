@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.TransitionResilientLinearLayoutManager
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
@@ -29,6 +28,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
 
@@ -138,11 +138,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       super.onDraw(var1);
       if (this.showingForwardBar) {
          this.getForwardBarPaint().setColor(ThemeManagerKt.getTheme().getBorderStrong());
-         val var3: Float = leftMarginPx;
          val var2: Float = leftMarginPx;
+         val var3: Float = leftMarginPx;
          val var5: Int = FORWARD_BAR_WIDTH;
          var1.drawRoundRect(
-            var3, 0.0F, var2 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
+            var2, 0.0F, var3 + (float)FORWARD_BAR_WIDTH, (float)this.getForwardBarHeight(), (float)(var5 / 2), (float)(var5 / 2), this.getForwardBarPaint()
          );
       }
    }
@@ -173,31 +173,31 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var11: Resources = this.getResources();
-      kotlin.jvm.internal.r.g(var11, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
-      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var11: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      kotlin.jvm.internal.r.g(var12, "getResources(...)");
+      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
+      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var16: java.util.Iterator = var5.iterator();
+         val var13: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var16.hasNext()) {
+            if (!var13.hasNext()) {
                break;
             }
 
-            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var13.setShowThreadSpine(var9);
+      var16.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

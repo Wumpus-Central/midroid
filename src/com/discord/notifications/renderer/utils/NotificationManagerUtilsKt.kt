@@ -144,10 +144,10 @@ internal fun Context.getActiveReactionNotifications(channelId: String): List<Sta
             if (var7[var2].getTag() != null) {
                var var3: Int;
                label45: {
-                  val var8: Regex = messageRegex;
-                  val var15: java.lang.String = var21.getTag();
-                  r.g(var15, "getTag(...)");
-                  var16 = Regex.c(var8, var15, 0, 2, null);
+                  val var15: Regex = messageRegex;
+                  val var8: java.lang.String = var21.getTag();
+                  r.g(var8, "getTag(...)");
+                  var16 = Regex.c(var15, var8, 0, 2, null);
                   if (var16 != null) {
                      val var22: java.util.List = var16.b();
                      if (var22 != null) {

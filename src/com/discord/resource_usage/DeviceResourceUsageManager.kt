@@ -59,7 +59,7 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       try {
          var14 = Result.b(Runtime.getRuntime().availableProcessors());
       } catch (var2: java.lang.Throwable) {
-         var14 = Result.k;
+         var1 = Result.k;
          var14 = Result.b(c.a(var2));
          break label30;
       }
@@ -115,15 +115,15 @@ internal class DeviceResourceUsageManager(timeSpanMillis: Long = 1000L) {
       // 13: astore 10
       // 15: invokestatic java/lang/Thread.currentThread ()Ljava/lang/Thread;
       // 18: invokevirtual java/lang/Thread.getId ()J
-      // 1b: lstore 5
-      // 1d: aload 10
-      // 1f: ifnonnull 25
-      // 22: goto 32
-      // 25: aload 10
-      // 27: invokevirtual java/lang/Long.longValue ()J
-      // 2a: lstore 3
-      // 2b: lload 3
-      // 2c: lload 5
+      // 1b: lstore 3
+      // 1c: aload 10
+      // 1e: ifnonnull 24
+      // 21: goto 32
+      // 24: aload 10
+      // 26: invokevirtual java/lang/Long.longValue ()J
+      // 29: lstore 5
+      // 2b: lload 5
+      // 2d: lload 3
       // 2e: lcmp
       // 2f: ifeq 36
       // 32: aload 9

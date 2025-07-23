@@ -84,18 +84,18 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.rowContentWidth;
+      val var1: Int = this.rowContentWidth;
       val var2: Int = this.rowContentPaddingVertical;
-      val var1: Int = this.itemSize;
+      val var3: Int = this.itemSize;
       val var6: java.util.List = this.items;
       val var4: Boolean = this.isSectionNitroLocked;
       val var5: StringBuilder = new StringBuilder();
       var5.append("EmojiPickerRow(rowContentWidth=");
-      var5.append(var3);
+      var5.append(var1);
       var5.append(", rowContentPaddingVertical=");
       var5.append(var2);
       var5.append(", itemSize=");
-      var5.append(var1);
+      var5.append(var3);
       var5.append(", items=");
       var5.append(var6);
       var5.append(", isSectionNitroLocked=");
@@ -189,23 +189,23 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
 
       public override fun toString(): String {
          val var6: java.lang.String = this.id;
-         val var3: java.lang.String = this.name;
-         val var4: java.lang.String = this.url;
-         val var2: Boolean = this.animated;
-         val var1: Boolean = this.disabled;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Emoji(id=");
-         var5.append(var6);
-         var5.append(", name=");
-         var5.append(var3);
-         var5.append(", url=");
-         var5.append(var4);
-         var5.append(", animated=");
-         var5.append(var2);
-         var5.append(", disabled=");
-         var5.append(var1);
-         var5.append(")");
-         return var5.toString();
+         val var5: java.lang.String = this.name;
+         val var3: java.lang.String = this.url;
+         val var1: Boolean = this.animated;
+         val var2: Boolean = this.disabled;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Emoji(id=");
+         var4.append(var6);
+         var4.append(", name=");
+         var4.append(var5);
+         var4.append(", url=");
+         var4.append(var3);
+         var4.append(", animated=");
+         var4.append(var1);
+         var4.append(", disabled=");
+         var4.append(var2);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

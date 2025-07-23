@@ -175,6 +175,11 @@ internal class FastestListView(context: Context,
       return Unit.a;
    }
 
+   public open fun endViewTransition(view: View?) {
+      super.endViewTransition(var1);
+      this.typedLayoutManager.disableRecycling(false);
+   }
+
    public override fun fling(velocityX: Int, velocityY: Int): Boolean {
       val var3: RecyclerViewScrollLimiter = RecyclerViewScrollLimiter.INSTANCE;
       return super.fling(RecyclerViewScrollLimiter.INSTANCE.getClampedVelocity(var1), var3.getClampedVelocity(var2));
@@ -297,6 +302,11 @@ internal class FastestListView(context: Context,
       if (this.isVerticalScrollBarEnabled() != var1) {
          this.setVerticalScrollBarEnabled(var1);
       }
+   }
+
+   public open fun startViewTransition(view: View?) {
+      this.typedLayoutManager.disableRecycling(true);
+      super.startViewTransition(var1);
    }
 
    public companion object {

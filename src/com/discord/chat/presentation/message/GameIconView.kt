@@ -21,14 +21,14 @@ public class GameIconView(context: Context, attrs: AttributeSet) : FrameLayout {
       kotlin.jvm.internal.r.h(var1, "context");
       kotlin.jvm.internal.r.h(var2, "attrs");
       super(var1, var2);
-      val var5: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var3: SimpleDraweeView = var5.gameControllerIcon;
-      kotlin.jvm.internal.r.g(var5.gameControllerIcon, "gameControllerIcon");
-      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.GameController);
-      val var4: SimpleDraweeView = var5.gameControllerIcon;
-      kotlin.jvm.internal.r.g(var5.gameControllerIcon, "gameControllerIcon");
+      val var3: GameIconViewBinding = GameIconViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var5: SimpleDraweeView = var3.gameControllerIcon;
+      kotlin.jvm.internal.r.g(var3.gameControllerIcon, "gameControllerIcon");
+      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.GameController);
+      val var4: SimpleDraweeView = var3.gameControllerIcon;
+      kotlin.jvm.internal.r.g(var3.gameControllerIcon, "gameControllerIcon");
       ColorUtilsKt.setTintColor(var4, ThemeManagerKt.getTheme().getTextMuted());
    }
 

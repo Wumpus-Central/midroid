@@ -46,13 +46,13 @@ public data class UploadContext(uploaderId: String, uploadItemId: String) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.uploaderId;
-      val var2: java.lang.String = this.uploadItemId;
+      val var2: java.lang.String = this.uploaderId;
+      val var1: java.lang.String = this.uploadItemId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("UploadContext(uploaderId=");
-      var3.append(var1);
-      var3.append(", uploadItemId=");
       var3.append(var2);
+      var3.append(", uploadItemId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }
