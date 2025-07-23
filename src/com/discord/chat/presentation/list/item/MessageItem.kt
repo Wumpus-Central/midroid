@@ -131,29 +131,29 @@ public data class MessageItem(message: Message,
    }
 
    public override fun toString(): String {
-      val var4: Message = this.message;
-      val var7: MessageFrame = this.messageFrame;
-      val var5: MessageContext = this.messageContext;
+      val var6: Message = this.message;
+      val var3: MessageFrame = this.messageFrame;
+      val var4: MessageContext = this.messageContext;
       val var1: Boolean = this.allowChildGestures;
-      val var3: BackgroundHighlight = this.backgroundHighlight;
-      val var8: Int = this.reactTag;
+      val var8: BackgroundHighlight = this.backgroundHighlight;
+      val var7: Int = this.reactTag;
       val var2: Boolean = this.renderContentOnly;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MessageItem(message=");
-      var6.append(var4);
-      var6.append(", messageFrame=");
-      var6.append(var7);
-      var6.append(", messageContext=");
-      var6.append(var5);
-      var6.append(", allowChildGestures=");
-      var6.append(var1);
-      var6.append(", backgroundHighlight=");
-      var6.append(var3);
-      var6.append(", reactTag=");
-      var6.append(var8);
-      var6.append(", renderContentOnly=");
-      var6.append(var2);
-      var6.append(")");
-      return var6.toString();
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("MessageItem(message=");
+      var5.append(var6);
+      var5.append(", messageFrame=");
+      var5.append(var3);
+      var5.append(", messageContext=");
+      var5.append(var4);
+      var5.append(", allowChildGestures=");
+      var5.append(var1);
+      var5.append(", backgroundHighlight=");
+      var5.append(var8);
+      var5.append(", reactTag=");
+      var5.append(var7);
+      var5.append(", renderContentOnly=");
+      var5.append(var2);
+      var5.append(")");
+      return var5.toString();
    }
 }

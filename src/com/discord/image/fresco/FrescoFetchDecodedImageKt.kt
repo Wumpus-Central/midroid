@@ -47,11 +47,13 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$copyBitmap = var2;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             r.h(var1, "dataSource");
             this.$continuation.resumeWith(Result.b(null));
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             val var2: a = Result.k;
             var var4: Bitmap = var1;
@@ -89,16 +91,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var5: a = Result.k;
-      var9 = Result.b(Uri.parse(var1));
+      val var9: a = Result.k;
+      var8 = Result.b(Uri.parse(var1));
    } catch (var6: java.lang.Throwable) {
-      val var8: a = Result.k;
-      var9 = Result.b(c.a(var6));
+      val var5: a = Result.k;
+      var8 = Result.b(c.a(var6));
       break label15;
    }
 
-   var var10: Any = var9;
-   if (Result.g(var9)) {
+   var var10: Any = var8;
+   if (Result.g(var8)) {
       var10 = null;
    }
 
@@ -124,11 +126,13 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
             this.$onDecodedImage = var1;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             r.h(var1, "dataSource");
             this.$onDecodedImage.invoke(null);
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }
@@ -142,16 +146,16 @@ public fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor?
 
    label16:
    try {
-      val var4: a = Result.k;
-      var8 = Result.b(Uri.parse(var1));
+      val var8: a = Result.k;
+      var7 = Result.b(Uri.parse(var1));
    } catch (var5: java.lang.Throwable) {
-      val var7: a = Result.k;
-      var8 = Result.b(c.a(var5));
+      val var4: a = Result.k;
+      var7 = Result.b(c.a(var5));
       break label16;
    }
 
-   var var9: Any = var8;
-   if (Result.g(var8)) {
+   var var9: Any = var7;
+   if (Result.g(var7)) {
       var9 = null;
    }
 

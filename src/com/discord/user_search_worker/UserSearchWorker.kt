@@ -261,8 +261,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var30: java.util.List;
                   if (var7) {
-                     var10 = var27.getUsername();
-                     val var11: java.lang.String = var27.getGlobalName();
+                     val var11: java.lang.String = var27.getUsername();
+                     var10 = var27.getGlobalName();
                      val var18: java.lang.String = var27.getFriendNickname();
                      val var19: java.util.Map = var27.getNicknames();
                      val var28: UserSearchQuerySetFilters = var2.getFilters();
@@ -273,7 +273,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var29 = null;
                      }
 
-                     var30 = i.n(new java.lang.String[]{var10, var11, var18, (java.lang.String)var19.get(var29)});
+                     var30 = i.n(new java.lang.String[]{var11, var10, var18, (java.lang.String)var19.get(var29)});
                   } else {
                      if (var7) {
                         throw new n();

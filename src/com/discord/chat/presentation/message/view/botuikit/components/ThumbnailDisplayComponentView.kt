@@ -55,17 +55,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       r.h(var1, "component");
       r.h(var2, "componentProvider");
       r.h(var3, "componentContext");
-      val var13: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      val var12: java.lang.String = var3.getContainerId();
-      val var11: java.lang.String = var1.getId();
+      val var12: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var11: java.lang.String = var3.getContainerId();
+      var var13: java.lang.String = var1.getId();
       val var16: StringBuilder = new StringBuilder();
       var16.append("ThumbnailDisplayComponent(");
-      var16.append(var11);
+      var16.append(var13);
       var16.append(")");
-      val var17: SpoilerAttributes = var13.forGenericMedia(var1, var12, var16.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var17: SpoilerAttributes = var12.forGenericMedia(var1, var11, var16.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var20: UnfurledMediaItem = var1.getMedia();
       val var21: MediaImageViewHolder = this.imageViewHolder;
-      val var7: Boolean = var1.isSpoiler();
+      val var8: Boolean = var1.isSpoiler();
       val var18: SpoilerConfig;
       if (var17 != null) {
          var18 = SpoilerAttributes.configure$default(var17, var3.getMediaItemEventHandlers().getOnMediaItemSpoilerClicked(), null, 2, null);
@@ -74,10 +74,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       val var10: Boolean = var1.isObscure();
-      val var9: Boolean = var1.isObscureAwaitingScan();
+      val var7: Boolean = var1.isObscureAwaitingScan();
       val var6: Boolean = var1.getObscureHideControls();
-      val var8: Boolean = var1.getObscureIsOpaque();
-      val var22: java.lang.String = var20.getProxyUrl();
+      val var9: Boolean = var1.getObscureIsOpaque();
+      var13 = var20.getProxyUrl();
       var var14: Int = var20.getWidth();
       var var4: Int;
       if (var14 != null) {
@@ -95,17 +95,17 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       }
 
       var21.bind(
-         var22,
+         var13,
          var4,
          var5,
          var20.getPlaceholder(),
          var20.getPlaceholderVersion(),
-         var7,
+         var8,
          var18,
          var10,
-         var9,
+         var7,
          var6,
-         var8,
+         var9,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),

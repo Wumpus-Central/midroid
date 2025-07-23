@@ -62,19 +62,19 @@ public data class RGBAColorModel(r: Float, g: Float, b: Float, a: Float) {
    }
 
    public override fun toString(): String {
-      val var3: Float = this.r;
-      val var4: Float = this.g;
-      val var1: Float = this.b;
-      val var2: Float = this.a;
+      val var1: Float = this.r;
+      val var2: Float = this.g;
+      val var3: Float = this.b;
+      val var4: Float = this.a;
       val var5: StringBuilder = new StringBuilder();
       var5.append("RGBAColorModel(r=");
-      var5.append(var3);
-      var5.append(", g=");
-      var5.append(var4);
-      var5.append(", b=");
       var5.append(var1);
-      var5.append(", a=");
+      var5.append(", g=");
       var5.append(var2);
+      var5.append(", b=");
+      var5.append(var3);
+      var5.append(", a=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

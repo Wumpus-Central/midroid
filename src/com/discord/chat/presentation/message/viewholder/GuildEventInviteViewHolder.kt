@@ -53,12 +53,12 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
    public fun bind(inviteAccessory: GuildEventInviteMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "inviteAccessory");
       val var22: GuildEventInviteEmbedImpl = var1.getInvite();
-      val var19: GuildEventInviteView = this.guildEventInviteView;
+      val var21: GuildEventInviteView = this.guildEventInviteView;
       this.guildEventInviteView.setHeader(var22.getHeaderIcon(), var22.getHeaderText(), var22.getHeaderColor());
-      var19.setCreatorAvatar(var22.getCreatorAvatar());
-      var19.setBadge(var22.getBadgeIcon(), var22.getBadgeCount());
-      var19.setTitle(var22.getTitleText(), var22.getTitleColor());
-      var19.setDescription-iRUqyQU(
+      var21.setCreatorAvatar(var22.getCreatorAvatar());
+      var21.setBadge(var22.getBadgeIcon(), var22.getBadgeCount());
+      var21.setTitle(var22.getTitleText(), var22.getTitleColor());
+      var21.setDescription-iRUqyQU(
          var22.getContent(),
          var1.getMessageId-3Eiw7ao(),
          var1.getShouldAnimateEmoji(),
@@ -239,9 +239,9 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
             }
          }
       );
-      var19.setGuild(var22.getGuildName(), var22.getGuildIcon());
-      var19.setChannel(var22.getChannelIcon(), var22.getChannelName());
-      var19.setAcceptButton(
+      var21.setGuild(var22.getGuildName(), var22.getGuildIcon());
+      var21.setChannel(var22.getChannelIcon(), var22.getChannelName());
+      var21.setAcceptButton(
          var22.getAcceptLabelIcon(),
          var22.getAcceptLabelText(),
          var22.getAcceptLabelColor(),
@@ -249,6 +249,6 @@ public class GuildEventInviteViewHolder(guildEventInviteView: GuildEventInviteVi
          var22.getAcceptLabelBackgroundColor(),
          new o(this, var1)
       );
-      var19.setSecondaryButton(var22.getSecondaryActionIcon(), new p(this, var1));
+      var21.setSecondaryButton(var22.getSecondaryActionIcon(), new p(this, var1));
    }
 }

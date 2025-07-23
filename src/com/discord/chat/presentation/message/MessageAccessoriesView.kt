@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.TransitionResilientLinearLayoutManager
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
@@ -29,6 +28,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
 
@@ -99,10 +99,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : fb.k.J(androidx.core.view.f0.a(this))) {
-         val var1: View = var3.c() as View;
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -177,27 +177,27 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       val var11: Resources = this.getResources();
       kotlin.jvm.internal.r.g(var11, "getResources(...)");
       this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
-      val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
+      val var16: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {
          var9 = false;
       } else {
-         val var16: java.util.Iterator = var5.iterator();
+         val var13: java.util.Iterator = var5.iterator();
 
          while (true) {
             var9 = var10;
-            if (!var16.hasNext()) {
+            if (!var13.hasNext()) {
                break;
             }
 
-            if (var16.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
+            if (var13.next() as MessageAccessory is ThreadEmbedMessageAccessory) {
                var9 = true;
                break;
             }
          }
       }
 
-      var13.setShowThreadSpine(var9);
+      var16.setShowThreadSpine(var9);
       this.accessoriesAdapter.setEventHandler(var6);
       this.accessoriesAdapter.setComponentProvider(var7);
       this.accessoriesAdapter.setItems-bo5iIEc(var1, var2, var4, var5);

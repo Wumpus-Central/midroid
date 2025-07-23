@@ -108,22 +108,22 @@ public data class StringSelectItem(label: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.label;
+      val var1: java.lang.String = this.label;
       val var3: java.lang.String = this.value;
-      val var5: ComponentEmoji = this.emoji;
-      val var6: java.lang.String = this.description;
-      val var1: java.lang.Boolean = this.default;
+      val var2: ComponentEmoji = this.emoji;
+      val var5: java.lang.String = this.description;
+      val var6: java.lang.Boolean = this.default;
       val var4: StringBuilder = new StringBuilder();
       var4.append("StringSelectItem(label=");
-      var4.append(var2);
+      var4.append(var1);
       var4.append(", value=");
       var4.append(var3);
       var4.append(", emoji=");
-      var4.append(var5);
+      var4.append(var2);
       var4.append(", description=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(", default=");
-      var4.append(var1);
+      var4.append(var6);
       var4.append(")");
       return var4.toString();
    }

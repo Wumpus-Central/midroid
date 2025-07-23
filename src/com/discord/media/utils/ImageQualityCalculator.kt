@@ -160,12 +160,12 @@ public object ImageQualityCalculator {
       val var37: Double = var15 / var26;
       var17 = (var17 - var13 * var36) / var23;
       var11 = (var11 - var15 * var37) / var23;
-      var13 = (var9 - var13 * var37) / var23;
-      var15 = var7;
-      var9 = var8;
-      var11 = (var36 * var36 + var37 * var37 + var15) * (var17 + var11 + var8);
-      if ((var36 * var36 + var37 * var37 + var15) * (var17 + var11 + var8) > 0.0) {
-         var9 = (var36 * 2.0 * var37 + var15) * (var13 * 2.0 + var9) / var11;
+      var9 = (var9 - var13 * var37) / var23;
+      var13 = var7;
+      var15 = var8;
+      var11 = (var36 * var36 + var37 * var37 + var13) * (var17 + var11 + var8);
+      if ((var36 * var36 + var37 * var37 + var13) * (var17 + var11 + var8) > 0.0) {
+         var9 = (var36 * 2.0 * var37 + var13) * (var9 * 2.0 + var15) / var11;
       } else {
          var9 = 0.0;
       }
@@ -286,24 +286,24 @@ public object ImageQualityCalculator {
                      return null;
                   }
 
-                  var var6: Int;
+                  var var7: Int;
                   var var8: Int;
                   try {
-                     var6 = this.$originalBitmap.getWidth();
+                     var7 = this.$originalBitmap.getWidth();
                      var8 = this.$originalBitmap.getHeight();
                   } catch (var20: Exception) {
                      return null;
                   }
 
-                  val var7: Int = var6 * var8;
+                  val var6: Int = var7 * var8;
 
                   var var13: IntArray;
                   var var15: IntArray;
                   try {
-                     var13 = new int[var7];
-                     var15 = new int[var7];
-                     this.$originalBitmap.getPixels(var13, 0, var6, 0, 0, var6, var8);
-                     this.$compressedBitmap.getPixels(var15, 0, var6, 0, 0, var6, var8);
+                     var13 = new int[var6];
+                     var15 = new int[var6];
+                     this.$originalBitmap.getPixels(var13, 0, var7, 0, 0, var7, var8);
+                     this.$compressedBitmap.getPixels(var15, 0, var7, 0, 0, var7, var8);
                   } catch (var19: Exception) {
                      return null;
                   }
@@ -332,8 +332,8 @@ public object ImageQualityCalculator {
                      val var9: Long = System.nanoTime();
                      val var27: ImageQualityCalculator = ImageQualityCalculator.INSTANCE;
                      var1 = new ImageQualityCalculator.ImageQualityMetrics(
-                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var6, var8),
-                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var6, var8),
+                        ImageQualityCalculator.access$calculatePSNR(ImageQualityCalculator.INSTANCE, var1, var13, var7, var8),
+                        ImageQualityCalculator.access$calculateSSIM(var27, var1, var13, var7, var8),
                         (System.nanoTime() - var9) / 1000000L,
                         (System.nanoTime() - System.nanoTime()) / 1000000L
                      );
@@ -388,19 +388,19 @@ public object ImageQualityCalculator {
                kotlin.c.b(var1);
 
                var var3: Bitmap;
-               var var5: ImageQualityCalculator;
+               var var5: Bitmap;
                try {
-                  var5 = ImageQualityCalculator.INSTANCE;
-                  var3 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
-                  var1 = ImageQualityCalculator.access$decodeByteArraySafely(var5, this.$compressedData);
+                  var1 = ImageQualityCalculator.INSTANCE;
+                  var5 = ImageQualityCalculator.access$decodeByteArraySafely(ImageQualityCalculator.INSTANCE, this.$originalData);
+                  var3 = ImageQualityCalculator.access$decodeByteArraySafely(var1, this.$compressedData);
                } catch (var7: Exception) {
                   return null;
                }
 
-               if (var3 != null && var1 != null) {
+               if (var5 != null && var3 != null) {
                   try {
                      this.label = 1;
-                     var3 = (Bitmap)var5.calculateQualityMetrics(var3, var1, this);
+                     var3 = (Bitmap)var1.calculateQualityMetrics(var5, var3, this);
                   } catch (var6: Exception) {
                      return null;
                   }

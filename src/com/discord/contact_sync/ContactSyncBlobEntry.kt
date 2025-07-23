@@ -111,27 +111,27 @@ public data class ContactSyncBlobEntry(phone: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.phone;
-      val var6: java.lang.String = this.unencryptedName;
+      val var6: java.lang.String = this.phone;
+      val var4: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var3: java.lang.String = this.deviceContactId;
-      val var2: java.lang.String = this.givenName;
-      val var7: java.lang.String = this.familyName;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ContactSyncBlobEntry(phone=");
-      var4.append(var5);
-      var4.append(", unencryptedName=");
-      var4.append(var6);
-      var4.append(", hasImageData=");
-      var4.append(var1);
-      var4.append(", deviceContactId=");
-      var4.append(var3);
-      var4.append(", givenName=");
-      var4.append(var2);
-      var4.append(", familyName=");
-      var4.append(var7);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.deviceContactId;
+      val var3: java.lang.String = this.givenName;
+      val var5: java.lang.String = this.familyName;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("ContactSyncBlobEntry(phone=");
+      var7.append(var6);
+      var7.append(", unencryptedName=");
+      var7.append(var4);
+      var7.append(", hasImageData=");
+      var7.append(var1);
+      var7.append(", deviceContactId=");
+      var7.append(var2);
+      var7.append(", givenName=");
+      var7.append(var3);
+      var7.append(", familyName=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public companion object {

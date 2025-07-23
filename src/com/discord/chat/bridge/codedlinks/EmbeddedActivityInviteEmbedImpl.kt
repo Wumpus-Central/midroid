@@ -390,9 +390,9 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun hashCode(): Int {
-      val var27: Int = Integer.hashCode(this.backgroundColor);
-      val var28: Int = Integer.hashCode(this.borderColor);
-      val var26: Int = Integer.hashCode(this.headerColor);
+      val var28: Int = Integer.hashCode(this.backgroundColor);
+      val var26: Int = Integer.hashCode(this.borderColor);
+      val var27: Int = Integer.hashCode(this.headerColor);
       var var25: Int = 0;
       val var1: Int;
       if (this.headerText == null) {
@@ -562,8 +562,8 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
          var24 = this.titleText.hashCode();
       }
 
-      val var30: Int = this.participantAvatarUris.hashCode();
-      val var29: Int = this.extendedType.hashCode();
+      val var29: Int = this.participantAvatarUris.hashCode();
+      val var30: Int = this.extendedType.hashCode();
       if (this.structurableSubtitleText != null) {
          var25 = this.structurableSubtitleText.hashCode();
       }
@@ -598,12 +598,12 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                                                                                                                                                                                                                          (
                                                                                                                                                                                                                                                                   (
                                                                                                                                                                                                                                                                            (
-                                                                                                                                                                                                                                                                                    var27
+                                                                                                                                                                                                                                                                                    var28
                                                                                                                                                                                                                                                                                           * 31
-                                                                                                                                                                                                                                                                                       + var28
+                                                                                                                                                                                                                                                                                       + var26
                                                                                                                                                                                                                                                                                  )
                                                                                                                                                                                                                                                                                  * 31
-                                                                                                                                                                                                                                                                              + var26
+                                                                                                                                                                                                                                                                              + var27
                                                                                                                                                                                                                                                                         )
                                                                                                                                                                                                                                                                         * 31
                                                                                                                                                                                                                                                                      + var1
@@ -678,10 +678,10 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
                                                       + var24
                                                 )
                                                 * 31
-                                             + var30
+                                             + var29
                                        )
                                        * 31
-                                    + var29
+                                    + var30
                               )
                               * 31
                            + var25
@@ -694,105 +694,105 @@ public data class EmbeddedActivityInviteEmbedImpl(backgroundColor: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.backgroundColor;
-      val var1: Int = this.borderColor;
-      val var3: Int = this.headerColor;
-      val var14: java.lang.String = this.headerText;
-      val var8: InviteType = this.type;
-      val var12: Int = this.acceptLabelBackgroundColor;
-      val var18: Int = this.acceptLabelBorderColor;
-      val var15: Int = this.acceptLabelColor;
-      val var23: java.lang.String = this.acceptLabelText;
-      val var7: java.lang.String = this.bodyText;
-      val var24: Int = this.bodyTextColor;
-      val var16: java.lang.Boolean = this.canBeAccepted;
-      val var27: java.lang.Boolean = this.embedCanBeTapped;
+      val var3: Int = this.backgroundColor;
+      val var2: Int = this.borderColor;
+      val var1: Int = this.headerColor;
+      val var32: java.lang.String = this.headerText;
+      val var23: InviteType = this.type;
+      val var28: Int = this.acceptLabelBackgroundColor;
+      val var9: Int = this.acceptLabelBorderColor;
+      val var29: Int = this.acceptLabelColor;
+      val var13: java.lang.String = this.acceptLabelText;
+      val var19: java.lang.String = this.bodyText;
+      val var26: Int = this.bodyTextColor;
+      val var30: java.lang.Boolean = this.canBeAccepted;
+      val var22: java.lang.Boolean = this.embedCanBeTapped;
       val var17: Int = this.resolvingGradientEnd;
-      val var19: Int = this.resolvingGradientStart;
-      val var33: java.lang.Boolean = this.splashHasRadialGradient;
-      val var30: Int = this.splashOpacity;
-      val var21: java.lang.String = this.splashUrl;
-      val var29: java.lang.String = this.inviteSplash;
-      val var28: java.lang.String = this.subtitle;
-      val var5: Int = this.subtitleColor;
-      val var22: Int = this.thumbnailBackgroundColor;
-      val var32: Int = this.thumbnailCornerRadius;
-      val var20: java.lang.String = this.thumbnailText;
-      val var9: java.lang.String = this.thumbnailUrl;
-      val var10: Int = this.titleColor;
-      val var25: java.lang.String = this.titleText;
-      val var31: java.util.List = this.participantAvatarUris;
-      val var26: CodedLinkExtendedType = this.extendedType;
-      val var11: AnnotatedStructurableText = this.structurableSubtitleText;
-      val var13: java.lang.String = this.noParticipantsText;
+      val var24: Int = this.resolvingGradientStart;
+      val var11: java.lang.Boolean = this.splashHasRadialGradient;
+      val var7: Int = this.splashOpacity;
+      val var20: java.lang.String = this.splashUrl;
+      val var10: java.lang.String = this.inviteSplash;
+      val var5: java.lang.String = this.subtitle;
+      val var31: Int = this.subtitleColor;
+      val var16: Int = this.thumbnailBackgroundColor;
+      val var21: Int = this.thumbnailCornerRadius;
+      val var27: java.lang.String = this.thumbnailText;
+      val var8: java.lang.String = this.thumbnailUrl;
+      val var14: Int = this.titleColor;
+      val var6: java.lang.String = this.titleText;
+      val var33: java.util.List = this.participantAvatarUris;
+      val var18: CodedLinkExtendedType = this.extendedType;
+      val var12: AnnotatedStructurableText = this.structurableSubtitleText;
+      val var25: java.lang.String = this.noParticipantsText;
       val var4: Boolean = this.ctaEnabled;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
-      var6.append(var2);
-      var6.append(", borderColor=");
-      var6.append(var1);
-      var6.append(", headerColor=");
-      var6.append(var3);
-      var6.append(", headerText=");
-      var6.append(var14);
-      var6.append(", type=");
-      var6.append(var8);
-      var6.append(", acceptLabelBackgroundColor=");
-      var6.append(var12);
-      var6.append(", acceptLabelBorderColor=");
-      var6.append(var18);
-      var6.append(", acceptLabelColor=");
-      var6.append(var15);
-      var6.append(", acceptLabelText=");
-      var6.append(var23);
-      var6.append(", bodyText=");
-      var6.append(var7);
-      var6.append(", bodyTextColor=");
-      var6.append(var24);
-      var6.append(", canBeAccepted=");
-      var6.append(var16);
-      var6.append(", embedCanBeTapped=");
-      var6.append(var27);
-      var6.append(", resolvingGradientEnd=");
-      var6.append(var17);
-      var6.append(", resolvingGradientStart=");
-      var6.append(var19);
-      var6.append(", splashHasRadialGradient=");
-      var6.append(var33);
-      var6.append(", splashOpacity=");
-      var6.append(var30);
-      var6.append(", splashUrl=");
-      var6.append(var21);
-      var6.append(", inviteSplash=");
-      var6.append(var29);
-      var6.append(", subtitle=");
-      var6.append(var28);
-      var6.append(", subtitleColor=");
-      var6.append(var5);
-      var6.append(", thumbnailBackgroundColor=");
-      var6.append(var22);
-      var6.append(", thumbnailCornerRadius=");
-      var6.append(var32);
-      var6.append(", thumbnailText=");
-      var6.append(var20);
-      var6.append(", thumbnailUrl=");
-      var6.append(var9);
-      var6.append(", titleColor=");
-      var6.append(var10);
-      var6.append(", titleText=");
-      var6.append(var25);
-      var6.append(", participantAvatarUris=");
-      var6.append(var31);
-      var6.append(", extendedType=");
-      var6.append(var26);
-      var6.append(", structurableSubtitleText=");
-      var6.append(var11);
-      var6.append(", noParticipantsText=");
-      var6.append(var13);
-      var6.append(", ctaEnabled=");
-      var6.append(var4);
-      var6.append(")");
-      return var6.toString();
+      val var15: StringBuilder = new StringBuilder();
+      var15.append("EmbeddedActivityInviteEmbedImpl(backgroundColor=");
+      var15.append(var3);
+      var15.append(", borderColor=");
+      var15.append(var2);
+      var15.append(", headerColor=");
+      var15.append(var1);
+      var15.append(", headerText=");
+      var15.append(var32);
+      var15.append(", type=");
+      var15.append(var23);
+      var15.append(", acceptLabelBackgroundColor=");
+      var15.append(var28);
+      var15.append(", acceptLabelBorderColor=");
+      var15.append(var9);
+      var15.append(", acceptLabelColor=");
+      var15.append(var29);
+      var15.append(", acceptLabelText=");
+      var15.append(var13);
+      var15.append(", bodyText=");
+      var15.append(var19);
+      var15.append(", bodyTextColor=");
+      var15.append(var26);
+      var15.append(", canBeAccepted=");
+      var15.append(var30);
+      var15.append(", embedCanBeTapped=");
+      var15.append(var22);
+      var15.append(", resolvingGradientEnd=");
+      var15.append(var17);
+      var15.append(", resolvingGradientStart=");
+      var15.append(var24);
+      var15.append(", splashHasRadialGradient=");
+      var15.append(var11);
+      var15.append(", splashOpacity=");
+      var15.append(var7);
+      var15.append(", splashUrl=");
+      var15.append(var20);
+      var15.append(", inviteSplash=");
+      var15.append(var10);
+      var15.append(", subtitle=");
+      var15.append(var5);
+      var15.append(", subtitleColor=");
+      var15.append(var31);
+      var15.append(", thumbnailBackgroundColor=");
+      var15.append(var16);
+      var15.append(", thumbnailCornerRadius=");
+      var15.append(var21);
+      var15.append(", thumbnailText=");
+      var15.append(var27);
+      var15.append(", thumbnailUrl=");
+      var15.append(var8);
+      var15.append(", titleColor=");
+      var15.append(var14);
+      var15.append(", titleText=");
+      var15.append(var6);
+      var15.append(", participantAvatarUris=");
+      var15.append(var33);
+      var15.append(", extendedType=");
+      var15.append(var18);
+      var15.append(", structurableSubtitleText=");
+      var15.append(var12);
+      var15.append(", noParticipantsText=");
+      var15.append(var25);
+      var15.append(", ctaEnabled=");
+      var15.append(var4);
+      var15.append(")");
+      return var15.toString();
    }
 
    public companion object {

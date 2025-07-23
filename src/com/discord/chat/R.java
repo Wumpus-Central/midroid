@@ -144,7 +144,6 @@ public final class R {
       public static int chat_list_adapter_item_text_feedback;
       public static int chat_list_adapter_item_visibility_icon;
       public static int chat_list_feedback_icon;
-      public static int chat_list_view;
       public static int checkbox;
       public static int children_views;
       public static int clan_tag_chiplet;
@@ -515,8 +514,6 @@ public final class R {
       public static int media_view;
       public static int media_visual_placeholder_view;
       public static int message_alt_remix_tag_view;
-      public static int message_bundle_conversation_view;
-      public static int message_bundle_view;
       public static int message_component_action_row_view;
       public static int message_component_button_view;
       public static int message_component_container_view;

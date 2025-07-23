@@ -53,24 +53,24 @@ public final class ThreadEmbedViewBinding implements ViewBinding {
          SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
          if (var6 != null) {
             var1 = R.id.thread_embed_messages_count;
-            TextView var9 = (TextView)a.a(var0, var1);
-            if (var9 != null) {
+            TextView var8 = (TextView)a.a(var0, var1);
+            if (var8 != null) {
                var1 = R.id.thread_embed_most_recent_message_avatar;
-               SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-               if (var5 != null) {
+               SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+               if (var7 != null) {
                   var1 = R.id.thread_embed_most_recent_message_content;
-                  SimpleDraweeSpanTextView var8 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-                  if (var8 != null) {
+                  SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.thread_embed_most_recent_message_header;
-                     LinearLayout var7 = (LinearLayout)a.a(var0, var1);
-                     if (var7 != null) {
+                     LinearLayout var9 = (LinearLayout)a.a(var0, var1);
+                     if (var9 != null) {
                         var1 = R.id.thread_embed_most_recent_message_name;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
+                        TextView var4 = (TextView)a.a(var0, var1);
+                        if (var4 != null) {
                            var1 = R.id.thread_embed_name;
-                           TextView var4 = (TextView)a.a(var0, var1);
-                           if (var4 != null) {
-                              return new ThreadEmbedViewBinding(var0, var3, var6, var9, var5, var8, var7, var2, var4);
+                           TextView var5 = (TextView)a.a(var0, var1);
+                           if (var5 != null) {
+                              return new ThreadEmbedViewBinding(var0, var3, var6, var8, var7, var2, var9, var4, var5);
                            }
                         }
                      }

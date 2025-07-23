@@ -21,16 +21,16 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
    init {
       r.h(var1, "logsFolderPath");
       super();
-      var var4: java.lang.String = var1.toString();
+      val var4: java.lang.String = var1.toString();
       var var3: StringBuilder = new StringBuilder();
       var3.append(var2);
       var3.append(".replay");
       new File(var4, var3.toString()).delete();
-      var4 = var1.toString();
-      var3 = new StringBuilder();
-      var3.append(var2);
-      var3.append(".json");
-      new File(var4, var3.toString()).delete();
+      val var6: java.lang.String = var1.toString();
+      val var9: StringBuilder = new StringBuilder();
+      var9.append(var2);
+      var9.append(".json");
+      new File(var6, var9.toString()).delete();
       val var7: java.lang.String = var1.toString();
       val var10: StringBuilder = new StringBuilder();
       var10.append(var2);
@@ -88,12 +88,12 @@ public class DebugRowLogger(logsFolderPath: Path, tag: Int) : RowLogger {
       label18: {
          val var2: BooleanRef = new BooleanRef();
          val var1: FileOutputStream = new FileOutputStream(this.jsonFile);
-         val var3: Charset = a.b;
+         val var4: Charset = a.b;
          val var12: OutputStreamWriter = new OutputStreamWriter(var1, a.b);
 
          try {
             var12.write("[\n");
-            q.c(new InputStreamReader(new FileInputStream(this.replayFile), var3), new H1.a(var2, var12));
+            q.c(new InputStreamReader(new FileInputStream(this.replayFile), var4), new H1.a(var2, var12));
             var12.write("\n]");
             var12.flush();
          } catch (var7: java.lang.Throwable) {

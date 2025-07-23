@@ -92,7 +92,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("76006fd0-e7ae-4451-a870-15122ab4284c");
+      var5.setProguardUuid("bfd98d7d-7462-4bb2-8f9f-62516aa2fed0");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -110,8 +110,8 @@ public object CrashReporting {
       r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.n(var3);
@@ -174,21 +174,21 @@ public object CrashReporting {
    public fun init(context: Context, releaseName: String) {
       r.h(var1, "context");
       r.h(var2, "releaseName");
-      val var4: ClientInfo = ClientInfo.INSTANCE;
+      val var3: ClientInfo = ClientInfo.INSTANCE;
       if (ClientInfo.INSTANCE.isProdBuild()) {
-         val var3: java.lang.String = Build.DEVICE;
+         val var4: java.lang.String = Build.DEVICE;
          r.g(Build.DEVICE, "DEVICE");
-         if (h.N(var3, "vivo", false, 2, null)) {
+         if (h.N(var4, "vivo", false, 2, null)) {
             return;
          }
       }
 
       val var5: java.lang.String;
-      if (var4.isDebugBuild() || var4.isDeveloperBuild()) {
+      if (var3.isDebugBuild() || var3.isDeveloperBuild()) {
          var5 = "";
       } else if (CrashReportingCache.Companion.getInstance(var1).isStaff()) {
          var5 = "https://90509cba01573ee4e14a2f5e15aee5ca@o64374.ingest.sentry.io/5992375";
-      } else if (!var4.isProdBuild()) {
+      } else if (!var3.isProdBuild()) {
          var5 = "https://9a42ef460144a03b30c8b2d5321cfe11@o64374.ingest.sentry.io/5992375";
       } else {
          var5 = "https://70545531dfe34835bf4dd0996821e8b6@o64374.ingest.sentry.io/5992375";

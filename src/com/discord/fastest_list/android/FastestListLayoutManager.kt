@@ -1,12 +1,13 @@
 package com.discord.fastest_list.android
 
 import android.content.Context
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import kotlin.jvm.internal.r
 
-internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false) : LinearLayoutManager {
+internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false)
+   : TransitionResilientLinearLayoutManager {
    public final var renderAhead: RenderAhead
       internal set
 

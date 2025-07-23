@@ -35,14 +35,14 @@ public final class MediaImageViewBinding implements ViewBinding {
 
    public static MediaImageViewBinding bind(View var0) {
       int var1 = R.id.container;
-      ConstraintLayout var6 = (ConstraintLayout)a.a(var0, var1);
-      if (var6 != null) {
+      ConstraintLayout var5 = (ConstraintLayout)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.gif_indicator;
          SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
          if (var3 != null) {
             var1 = R.id.image;
-            SimpleDraweeView var5 = (SimpleDraweeView)a.a(var0, var1);
-            if (var5 != null) {
+            SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
+            if (var6 != null) {
                var1 = R.id.image_alt_text;
                TextView var7 = (TextView)a.a(var0, var1);
                if (var7 != null) {
@@ -52,7 +52,7 @@ public final class MediaImageViewBinding implements ViewBinding {
                      var1 = R.id.media_view_alt_text_button;
                      AltTextButtonView var4 = (AltTextButtonView)a.a(var0, var1);
                      if (var4 != null) {
-                        return new MediaImageViewBinding(var0, var6, var3, var5, var7, var2, var4);
+                        return new MediaImageViewBinding(var0, var5, var3, var6, var7, var2, var4);
                      }
                   }
                }

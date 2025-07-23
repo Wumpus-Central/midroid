@@ -12,9 +12,9 @@ public object NumericUtils {
       val var1: java.util.List = kotlin.text.h.B0("abcdefghijklmnopqrstuvwxyz", new java.lang.String[]{""}, false, 0, 6, null);
       val var0: ArrayList = new ArrayList();
 
-      for (var1 : var1) {
-         if ((var1 as java.lang.String).length() != 0) {
-            var0.add(var1);
+      for (Object var2 : var1) {
+         if ((var2 as java.lang.String).length() != 0) {
+            var0.add(var2);
          }
       }
 
@@ -42,11 +42,11 @@ public object NumericUtils {
             return letters.get((int)var1 - 1);
          } else {
             val var10: Long = kotlin.ranges.d.e(var1 % (long)26, 1L);
-            val var9: java.lang.String = this.toLetter(var1 / (long)26);
-            val var8: java.lang.String = this.toLetter(var10);
+            val var8: java.lang.String = this.toLetter(var1 / (long)26);
+            val var9: java.lang.String = this.toLetter(var10);
             val var11: StringBuilder = new StringBuilder();
-            var11.append(var9);
             var11.append(var8);
+            var11.append(var9);
             return var11.toString();
          }
       } else {

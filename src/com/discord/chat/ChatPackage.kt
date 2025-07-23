@@ -20,7 +20,6 @@ public class ChatPackage : BaseReactPackage {
             new ChatViewManager(),
             new ChatListViewManager(),
             new MessageViewManagers.MessageViewManager(),
-            new MessageViewManagers.MessageBundleViewManager(),
             new MessageViewManagers.SystemMessageViewManager(),
             new MessageViewManagers.AutoModerationSystemMessageViewManager()
          }

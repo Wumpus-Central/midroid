@@ -17,6 +17,7 @@ import ib.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec {
@@ -87,8 +88,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  var1 = K.a();
-                  val var4: Function2 = new Function2(null) {
+                  val var4: CoroutineDispatcher = K.a();
+                  var1 = new Function2(null) {
                      int label;
 
                      {
@@ -123,7 +124,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var1, var4, this) === var3) {
+                  if (f.g(var4, var1, this) === var3) {
                      return var3;
                   }
                }
