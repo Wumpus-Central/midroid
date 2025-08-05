@@ -2,7 +2,7 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class TextContentNode(content: String? = null) : ContentNode() {

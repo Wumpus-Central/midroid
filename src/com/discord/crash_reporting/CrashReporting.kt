@@ -1,6 +1,7 @@
 package com.discord.crash_reporting
 
-import A9.q
+import B9.n
+import C9.q
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -27,7 +28,6 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import z9.n
 
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
@@ -83,16 +83,16 @@ public object CrashReporting {
       var5.setEnvironment(ClientInfo.INSTANCE.getReleaseChannel());
       var5.setDist(var7.getVersionCode());
       var5.setRelease(var1);
-      val var6: File = var2.getCacheDir();
-      val var8: StringBuilder = new StringBuilder();
-      var8.append(var6);
-      var8.append("/sentry");
-      var5.setCacheDirPath(var8.toString());
+      val var8: File = var2.getCacheDir();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append(var8);
+      var6.append("/sentry");
+      var5.setCacheDirPath(var6.toString());
       var5.setEnableActivityLifecycleTracingAutoFinish(false);
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("bfd98d7d-7462-4bb2-8f9f-62516aa2fed0");
+      var5.setProguardUuid("9742ed66-b470-453b-a62c-d15f47570e05");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -110,8 +110,8 @@ public object CrashReporting {
       r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var6 : var2.entrySet()) {
-         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
+      for (Entry var5 : var2.entrySet()) {
+         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
       }
 
       var4.n(var3);
@@ -121,7 +121,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       r.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", z9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", B9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(H.b(var1.getClass()))) {
@@ -209,7 +209,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = J9.a.a(var0);
       }
 
       @JvmStatic

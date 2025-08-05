@@ -173,6 +173,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModuleWithViewManager(new a(), new h()));
       var1.add(var2.getViewManagers(new i(), new j(), new k(), new l(), new m(), new b(), new c(), new d(), new e(), new f()));
       var1.add(var2.getTurboPackageForModule("NativeAdsModule", <unrepresentable>.INSTANCE));

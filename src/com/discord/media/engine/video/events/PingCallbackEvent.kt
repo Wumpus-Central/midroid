@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: String, port: Int, seq: Int) : ReactEvent {
@@ -82,22 +82,22 @@ internal data class PingCallbackEvent(connectionId: Int, ping: Int, server: Stri
    public override fun toString(): String {
       val var4: Int = this.connectionId;
       val var3: Int = this.ping;
-      val var6: java.lang.String = this.server;
-      val var2: Int = this.port;
-      val var1: Int = this.seq;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("PingCallbackEvent(connectionId=");
-      var5.append(var4);
-      var5.append(", ping=");
-      var5.append(var3);
-      var5.append(", server=");
-      var5.append(var6);
-      var5.append(", port=");
-      var5.append(var2);
-      var5.append(", seq=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.server;
+      val var1: Int = this.port;
+      val var2: Int = this.seq;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("PingCallbackEvent(connectionId=");
+      var6.append(var4);
+      var6.append(", ping=");
+      var6.append(var3);
+      var6.append(", server=");
+      var6.append(var5);
+      var6.append(", port=");
+      var6.append(var1);
+      var6.append(", seq=");
+      var6.append(var2);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

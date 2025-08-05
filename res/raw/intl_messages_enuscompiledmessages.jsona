@@ -440,6 +440,7 @@
   "/yqgqq": "Add an email to your account",
   "YXXMxM": "Some Discord features require your account to have a verified email.",
   "ydw5nZ": "Add Email",
+  "iMJO39": "Add Emoji",
   "N2c/Ul": "Favorite",
   "w5uwoK": "Add Friend",
   "zIJnAw": "Add Friends",
@@ -1428,6 +1429,7 @@
   "se5gLi": "Success!",
   "ZN4hkZ": "Authorize and Continue",
   "feD3+v": "Share your game activity with Discord",
+  "/bdaND": "Share your game activity with Discord",
   "WNKzo6": [
     "Add your Discord friends in the game (You can have up to ",
     [
@@ -1436,9 +1438,32 @@
     ],
     " friends)"
   ],
+  "z9peam": [
+    "Add your Discord friends in the games (You can have up to ",
+    [
+      1,
+      "maxFriends"
+    ],
+    " friends)"
+  ],
   "ex4sMT": "This game’s social experience is powered by Discord.",
+  "3Mau09": [
+    "This connection applies to all games played with your ",
+    [
+      1,
+      "applicationName"
+    ],
+    " account. ",
+    [
+      1,
+      "applicationName"
+    ],
+    "'s social experiences provide features powered by Discord."
+  ],
   "j7peBg": "Message Discord users from the game",
+  "daY6xs": "Message Discord users from the games",
   "YFFVMz": "Receive personalized content and promotions if your Discord settings allow it",
+  "mSqazM": "Receive personalized content and promotions if your Discord settings allow it",
   "Nusip6": "Hide Password",
   "euS7r6": "We're so excited to see you again!",
   "x2L32d": [
@@ -2497,7 +2522,6 @@
   "jSnJGR": "Cancel reply",
   "QnKxtL": "There was an error canceling the transfer. Please leave the voice channel on your console.",
   "LNhXcH": "Unable to disconnect",
-  "tHT/Vl": "You cannot access this hangout",
   "0yAqqK": "Cannot add user to post",
   "YErysL": "Cannot add user to thread",
   "ut7sq6": "Cannot change channel permissions",
@@ -2907,7 +2931,6 @@
     ", view all"
   ],
   "d5YwKy": "Look at my beautiful decoration",
-  "sB3lwM": "Claim",
   "4kp0AA": [
     [
       1,
@@ -3043,14 +3066,6 @@
     ],
     " Profile Effect"
   ],
-  "eWoUGx": [
-    "-",
-    [
-      1,
-      "percent"
-    ],
-    " off"
-  ],
   "DkxLY2": [
     [
       2,
@@ -3070,13 +3085,6 @@
   "gxEIl5": "Nitro members get discounts on everything in the Shop.",
   "Lh3QfX": "New and popular styles include SpongeBob, Anime, Galaxy, Cyberpunk, and more.",
   "RUtg4u": "Shop anywhere, anytime",
-  "7yqdFR": [
-    "Usually ",
-    [
-      1,
-      "price"
-    ]
-  ],
   "D6zVpq": [
     "Nameplate preview: ",
     [
@@ -3085,13 +3093,6 @@
     ]
   ],
   "gOzMv7": "Your Nameplate is updated!",
-  "W3gIWF": [
-    [
-      1,
-      "price"
-    ],
-    " with Nitro"
-  ],
   "Kxw2LS": [
     [
       1,
@@ -3107,6 +3108,7 @@
     ]
   ],
   "SWm2am": "Your Profile Effect is updated!",
+  "ivaAAw": "Popular Picks",
   "HSX4HR": [
     "Profile effect preview: ",
     [
@@ -3188,7 +3190,6 @@
   "5upuq6": "Discord Shop",
   "yzW/fX": "Admins",
   "xFcotb": "Shop All",
-  "LuhKs7": "Hmmm, we weren't able to load the Shop. Check back later.",
   "xNiB/P": "Featured",
   "zMqLHx": "Discord Shop Featured Page",
   "AfrvRE": "Shop the whole Shop",
@@ -8030,6 +8031,30 @@
     ],
     " available"
   ],
+  "m0YV7O": "Emoji Name",
+  "WkK72t": [
+    [
+      6,
+      "count",
+      {
+        "one": [
+          [
+            7
+          ],
+          " open slot"
+        ],
+        "other": [
+          [
+            7
+          ],
+          " open slots"
+        ]
+      },
+      0,
+      "cardinal"
+    ]
+  ],
+  "U2JFHR": "emoji_name",
   "kIO9j4": [
     "That emoji was too big! Emoji must be under ",
     [
@@ -8254,13 +8279,10 @@
     ]
   ],
   "SEgHFh": "Content Warning: This may contain sensitive content",
-  "jesz8f": "Messages will not be filtered for explicit images.",
   "M6GNsL": "Messages will not be filtered for sensitive image-based media.",
   "VbSyAw": "Do not filter",
-  "dzbET0": "All messages will be filtered for explicit images.",
   "Z+yUWF": "All messages will be filtered for sensitive image-based media.",
   "iHuPEx": "Filter messages from all members",
-  "qZ1eHh": "Messages from server members without a role will be filtered for explicit images.",
   "3fRINz": "Messages from server members without a role will be filtered for sensitive image-based media.",
   "ynfFaG": "Filter messages from server members without roles",
   "SpxcUV": "May contain sensitive content",
@@ -8475,22 +8497,6 @@
   "W3Noi4": "New threads will not show in the channel list after being inactive for the specified duration.",
   "fyXclZ": "New posts will not show in the channel list after being inactive for the specified duration.",
   "PA2MZm": "This will determine whether members who have not explicitly set their notification settings receive a notification for every message sent in this server or not. We highly recommend setting this to only @mentions for a Community Server.",
-  "zOmxND": [
-    "Automatically block messages in this server that may contain explicit images in channels not marked as Age-restricted. Please choose how this filter will apply to members in your server. We recommend enabling this. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more about this setting here."
-      ],
-      [
-        [
-          1,
-          "helpdeskArticle"
-        ]
-      ]
-    ]
-  ],
   "BI4ukJ": [
     "Choose if server members can share image-based media detected by Discord’s sensitive content filters. This setting will apply to channels that are not age-restricted. ",
     [
@@ -8699,7 +8705,6 @@
   "dI4d4e": "Email",
   "tUjnxs": "Email or Phone Number",
   "uiXMo6": "Grace Period",
-  "Kd6OQU": "Explicit image filter",
   "bPgfJy": "Sensitive content filters",
   "vceJPj": "Display role members separately from online members",
   "LKCupK": "Input",
@@ -9008,9 +9013,9 @@
   "uXA57+": "Thread Name is required",
   "kesTVV": "Starter Message is required",
   "d611xM": "Add to Post",
-  "zMsUsr": "We recommend doing this so that people can see your thumbnail while browsing the list view.",
+  "0Ycgw8": "This will add a thumbnail to your post in the list view.",
   "8rKVHB": "Don't Add",
-  "hMWWMT": "Would you like to add media to the original post?",
+  "+SZF6e": "Add media to the original post?",
   "L9fR+P": "Search posts",
   "GbryDQ": "Forum Channel",
   "iZ5pgo": "Create a space for organized discussions",
@@ -11915,6 +11920,8 @@
       "rejectionReason"
     ]
   ],
+  "WXHcq6": "Membership Approved",
+  "TQY/RU": "Membership Rejected",
   "rSAOk5": "The user is not eligible to join this server.",
   "DxJj4e": "Ineligible to join",
   "BMlbEx": "This application has been withdrawn.",
@@ -11984,6 +11991,7 @@
   "kJwpBQ": "This server's features are limited",
   "y29JXl": "Server Members",
   "oB9gra": "No members were found.",
+  "SaDIpK": "Discord Join Date",
   "/mTqt7": [
     "(Added) ",
     [
@@ -12080,13 +12088,6 @@
   "PFWIYW": "Welcome!",
   "pclUFB": "Server Owner",
   "hfYfEB": "Discord Partner",
-  "0QO34e": [
-    [
-      1,
-      "username"
-    ],
-    " is streaming"
-  ],
   "mYlo/f": "This is currently not supported on this device.",
   "s2N5HR": "Thank you,",
   "2Ab4IS": "By creating an announcement channel, your server profile will be visible to others outside your server members. You can control Profile privacy in Server Settings > Profile.",
@@ -12656,7 +12657,7 @@
   "oPV2c3": "Your membership has been restarted!",
   "UTYBjY": "Search channels",
   "He+cmZ": "Server Name Unavailable",
-  "BU4Dio": "Go to enable",
+  "BU4Dio": "Enable",
   "7NzkfX": [
     "You must ",
     [
@@ -18900,6 +18901,29 @@
   "RHhk+P": "No Logs Yet",
   "tzkaDw": "We broke something. Come back later.",
   "Ww5Tj4": "This is Awkward",
+  "qnimbG": [
+    "By ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "username"
+        ]
+      ]
+    ]
+  ],
+  "aURgY2": "Approved",
+  "BzjDQE": "Approve",
+  "hDtbs7": "Reject",
+  "mFP/q6": "Provide a denial reason to the user (OPTIONAL)",
+  "bv82GR": "There are no approved applications.",
+  "/wqiSk": "There are no pending applications.",
+  "7YSJ6e": "There are no rejected applications.",
+  "KQeYoK": "Interview",
+  "4eQVBA": "Pending",
+  "bSZklZ": "Rejected",
   "eoXe0t": "Sort by: Newest",
   "mmeWUF": "Sort by: Oldest",
   "K/i3iY": "Read the rules",
@@ -18917,11 +18941,21 @@
           [
             7
           ],
+          "",
+          [
+            1,
+            "decorator"
+          ],
           " Boost"
         ],
         "other": [
           [
             7
+          ],
+          "",
+          [
+            1,
+            "decorator"
           ],
           " Boosts"
         ]
@@ -19710,8 +19744,6 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
-  "QVhmGx": "You missed the hangout :(",
-  "IE2uZW": "The hangout is over, want to start it again?",
   "1+boPj": "Happening Now",
   "zSG3Q0": [
     "Your message could not be delivered because this message contains a link blocked by Discord. You can learn more here: ",
@@ -21165,7 +21197,6 @@
   "jlfuFR": "Join an existing server",
   "ihLPiI": "Follow Post",
   "XpeFYm": "Join",
-  "zIeJq6": "Join Hangout",
   "Bd/Li4": "Join Muted",
   "E8euSk": "Join on Xbox",
   "yRjK4u": "Join a server",
@@ -21327,21 +21358,6 @@
   "lfpjfX": "Tap anywhere to dismiss.",
   "MdrITE": "Your DMs live here now!",
   "hvVgAQ": "Learn More",
-  "fjSvsL": [
-    [
-      8,
-      "$link",
-      [
-        "Learn More"
-      ],
-      [
-        [
-          1,
-          "onClick"
-        ]
-      ]
-    ]
-  ],
   "BPDKoK": [
     [
       8,
@@ -21497,6 +21513,20 @@
       "medium"
     ]
   ],
+  "EvDn1N": [
+    "Connect your account to ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ],
+    " to send messages."
+  ],
   "DA9v5O": [
     "Currently linked to ",
     [
@@ -21527,6 +21557,7 @@
     "? You can set up a channel link again later."
   ],
   "JmUENj": "Remove Channel Link",
+  "SrvsMD": "You don't have permission to unlink this channel.",
   "6D5WVl": "Oops! Something went wrong while trying to unlink this channel. Please try again later.",
   "vFzPFh": "Failed to remove link",
   "+5kSoa": "Link Copied!",
@@ -22082,6 +22113,7 @@
     " ago"
   ],
   "FsBhl5": "just now",
+  "NOOm1d": "All Members",
   "/beONz": [
     "Next: ",
     [
@@ -22448,6 +22480,7 @@
       "episodeNum"
     ]
   ],
+  "Vt4cn5": "Application Date",
   "z3wbj4": "Timed Out",
   "HumZAg": "Bot Invite",
   "Ql/e9f": "Server Discovery",
@@ -24383,6 +24416,13 @@
     ],
     "'s privacy policy and terms of service apply to this application."
   ],
+  "8LemYm": [
+    [
+      1,
+      "application"
+    ],
+    "'s privacy policy and terms of service apply to all games."
+  ],
   "rxlyKC": [
     "The developer of ",
     [
@@ -24419,6 +24459,41 @@
     ],
     " apply to this application."
   ],
+  "yVfotr": [
+    [
+      1,
+      "application"
+    ],
+    "'s ",
+    [
+      8,
+      "$link",
+      [
+        "privacy policy"
+      ],
+      [
+        [
+          1,
+          "privacyPolicyURL"
+        ]
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$link",
+      [
+        "terms of service"
+      ],
+      [
+        [
+          1,
+          "termsOfServiceURL"
+        ]
+      ]
+    ],
+    " apply to all games."
+  ],
   "TBvmMz": [
     "The developer of ",
     [
@@ -24441,6 +24516,27 @@
     ],
     " and terms of service apply to this application."
   ],
+  "pYVSam": [
+    [
+      1,
+      "application"
+    ],
+    "'s ",
+    [
+      8,
+      "$link",
+      [
+        "privacy policy"
+      ],
+      [
+        [
+          1,
+          "privacyPolicyURL"
+        ]
+      ]
+    ],
+    " and terms of service apply to all games."
+  ],
   "q0T/Q0": [
     "The developer of ",
     [
@@ -24462,6 +24558,27 @@
       ]
     ],
     " apply to this application."
+  ],
+  "nBLOp6": [
+    [
+      1,
+      "application"
+    ],
+    "'s privacy policy and ",
+    [
+      8,
+      "$link",
+      [
+        "terms of service"
+      ],
+      [
+        [
+          1,
+          "termsOfServiceURL"
+        ]
+      ]
+    ],
+    " apply to all games."
   ],
   "5k5OKC": [
     "Once you authorize, you will be redirected ",
@@ -24546,9 +24663,7 @@
   "mqn87+": "Oops, something went wrong...",
   "PJ4dKy": "Hide content",
   "G3nQR0": "Why we hide some media",
-  "XW3vjo": "We automatically detect and filter media that may be sensitive. You can manage this filter in your Privacy & Safety settings.",
   "RUw0ZG": "We automatically detect and filter some media that may be sensitive. You can manage this filter in your Content & Social settings. You can learn more about this in our Help Center.",
-  "i4daNj": "We automatically detect and filter media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
   "E/oQYG": "We automatically detect and filter some media that may be sensitive to help protect people on Discord who are under 18. You can learn more about this in our Help Center.",
   "bmbHPD": "Dismiss",
   "Ge0HUl": [
@@ -24570,7 +24685,6 @@
   "sGW77u": "Why we hide some media",
   "2aXnfX": "Why we hide some media",
   "ZH7P2t": "Mark As Not Sensitive",
-  "gg5Dp6": "Help improve our sensitive media filter by forwarding this media to Discord.",
   "z4du/P": "Help improve our sensitive content filters by forwarding this media to Discord.",
   "TPpVkJ": "Mark as not sensitive",
   "gFsTKi": "Thanks for letting us know!",
@@ -24579,30 +24693,12 @@
   "N/oRIy": "Filter",
   "K0OWPz": "Graphic media",
   "aWD+tr": "Sensitive Content",
-  "ZUvrwM": [
-    "Choose what you see when uploaded or linked media may contain sensitive content. ",
-    [
-      8,
-      "$link",
-      [
-        "Learn more"
-      ],
-      [
-        [
-          1,
-          "learnMoreLink"
-        ]
-      ]
-    ]
-  ],
   "uEz8JC": "Sensitive Media",
   "D/157e": "Block",
   "S49UaW": "Blur",
   "5k5OFh": "Show",
-  "6k0AgI": "Direct Messages from friends",
   "+uI23N": "Direct messages from friends",
   "FP+a4+": "Messages in server channels",
-  "D2EGSk": "Direct Messages from others",
   "Yh+HX1": "Direct messages from others",
   "UIsxU1": "Show content",
   "9D+zGR": "Go to Settings",
@@ -26981,9 +27077,6 @@
   "OuItFh": "Custom App Icons",
   "R2IV/f": "More Emoji Power",
   "RSXQYG": "HD Video",
-  "YCZldH": "Unlock a World of Perks with Nitro",
-  "EW+VIS": "Discord's Rocket Fuel",
-  "eG+cW1": "Supercharge Your World",
   "4pEwXF": "Give your favorite communities a boost and unlock awesome perks.",
   "NyDu//": "2 Server Boosts + 30% off",
   "Mt3U1d": "Use a different avatar, profile theme, banner, and bio in each of your servers.",
@@ -31292,6 +31385,39 @@
     " a trial. Please try again later."
   ],
   "7VBEub": "Hmm... Something went wrong",
+  "L/leCw": [
+    [
+      1,
+      "receiver"
+    ],
+    " start your 2 weeks of Nitro"
+  ],
+  "febG6u": [
+    [
+      1,
+      "receiver"
+    ],
+    " enjoy a 2-week Nitro trial"
+  ],
+  "zz1MYm": [
+    [
+      1,
+      "sender"
+    ],
+    " gave ",
+    [
+      1,
+      "receiver"
+    ],
+    " a Nitro trial"
+  ],
+  "PVQOi4": [
+    [
+      1,
+      "receiver"
+    ],
+    " start your 2-week Nitro trial"
+  ],
   "eEz1Nz": "Uh-oh, something went wrong. Try restarting the app to fix it!",
   "IiWKws": [
     [
@@ -31509,6 +31635,40 @@
     " more friends."
   ],
   "UfPk1t": "You can select 1 more friend.",
+  "TYu+MD": [
+    "You'll get more trials in the future. Make someone’s day and gift Nitro while you wait. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "omMr+f": [
+    "Send three friends a 2-week Nitro trial and become the MVP of the group chat. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "USo4s7": "Share Nitro with Friends",
   "bXTClZ": "Start Trial",
   "gtNqJS": "2-WEEK TRIAL",
@@ -31937,6 +32097,13 @@
   "ItuabG": "Sign into Roblox",
   "no96NT": "Show off your verified Roblox account information right in your profile. You can set this up later from Settings > Connections.",
   "t3asUV": "Connect Roblox to Discord",
+  "G6BGd3": [
+    "Roblox • ",
+    [
+      1,
+      "subgameName"
+    ]
+  ],
   "LPJmLy": "Roles",
   "3OxP4u": [
     "Select up to ",
@@ -32425,8 +32592,6 @@
   "QAxIIi": "Allows members to rename, delete, close, and turn on slow mode for threads and posts. They can also view private threads.",
   "S31soa": "Allows members to rename, delete, close, and turn on slow mode for threads and posts in these channels. They can also view private threads.",
   "XLi/jI": "Allows members to rename, delete, close, and turn on slow mode for posts in this channel.",
-  "AKdc4O": "Allows members to rename, delete, close, and turn on slow mode for threads. They can also view private threads.",
-  "YDIQ8P": "Allows members to rename, delete, close, and turn on slow mode for threads in these channels. They can also view private threads.",
   "yvan0t": "Allows members to rename, delete, close, and turn on slow mode for threads in this channel. They can also view private threads.",
   "LczYqK": "Allows members to create, edit, or delete webhooks, which can post messages from other apps or sites into this server.",
   "K5+ZZ2": "Allows members to create, edit, or delete webhooks in these channels, which can post messages from other apps or sites.",
@@ -32636,7 +32801,6 @@
       ]
     ]
   ],
-  "qry4PT": "Allows members to send messages in text channels.",
   "WFwfSE": [
     "Allows members to publish their own messages to all servers following this ",
     [
@@ -32654,13 +32818,10 @@
     ],
     "."
   ],
-  "qLnFpa": "Allows members to send messages in these channels.",
   "WQ6zpa": "Allows members to send messages in this channel.",
   "C2ZPEx": "Allow members to send messages in threads and in posts on forum channels.",
   "DlIVcH": "Allow members to send messages in threads and posts under these channels.",
   "XTnrPD": "Allow members to send messages in threads and posts under this channel.",
-  "6pyXvr": "Allow members to send messages in threads.",
-  "VvrChI": "Allow members to send messages in threads under these channels.",
   "xHO6MT": "Allow members to send messages in threads under this channel.",
   "prvWKi": "Allow members to send messages in text channels and create posts in forum channels.",
   "IjeLur": "Allow members to send messages and create posts in these channels.",
@@ -32889,10 +33050,6 @@
   "qFsx5u": "Show alerts in direct messages",
   "39O+8P": "Block and report",
   "5NhTvr": "They won’t be able to message you. If you feel their actions could harm someone, please submit a report to Discord.",
-  "1zzTSk": "Not a fan of annoying messages? Control your DM settings & block away.",
-  "61GrDA": "How to Block",
-  "xmrJWl": "Need some quiet time? Mute away - you're in control.",
-  "ajEMl5": "How to Mute",
   "pEdBDw": [
     "Thanks for upholding Discord's ",
     [
@@ -33438,6 +33595,7 @@
   "hcMwDQ": "After a date",
   "c9qSBQ": "Before a date",
   "cdPmq6": "In a specific channel",
+  "8Fmo4+": "In a specific DM",
   "6iuVMj": "From a specific person",
   "DMAzx8": "Has specific data",
   "CMKzQ0": "Mention someone",
@@ -33620,9 +33778,7 @@
   ],
   "mY3Y39": "Hold Up!",
   "TXNS7e": "Send",
-  "PoyOY2": "Your message could not be sent. It may contain sensitive media, which has been blocked by someone in this conversation.",
   "mktny8": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this conversation.",
-  "bNMQVF": "Your message could not be sent. It may contain explicit media, which has been blocked by the server.",
   "i4AbAQ": "Your message could not be sent. Discord detected that it may contain sensitive content, which is not allowed in this server.",
   "YrjcgY": "We don't store blocked media permanently. Since this media was uploaded a while ago, the option to mark it as not sensitive has expired.",
   "iS/eFB": "Unable to Mark as Not Sensitive",
@@ -34767,6 +34923,7 @@
       ]
     ]
   ],
+  "b5FqhI": "Age restricted",
   "5q17w8": "Stream Paused",
   "meVVlZ": [
     [
@@ -37433,13 +37590,6 @@
   "9YJgam": "the-couch",
   "lhV0Y2": "This will change the theme across all your devices.",
   "d5Gu9P": "You can always change this later!",
-  "RqCPVl": [
-    "They're hanging out in #",
-    [
-      1,
-      "channelName"
-    ]
-  ],
   "j+wlh4": "This is what you have",
   "7Xm5QE": "Thread",
   "B2panJ": "Threads",
@@ -38251,6 +38401,7 @@
   "zLZPmp": "Unknown",
   "J90oLS": "unknown-channel",
   "/ZjyYG": "Please update Discord to access this channel",
+  "11pdXV": "unknown-game",
   "n+olu7": "Unknown Integration",
   "YV4F/v": "unknown-role",
   "30mdIy": "Unknown User",
@@ -38358,19 +38509,30 @@
       "premiumMaxSize"
     ]
   ],
-  "q5fTZm": [
+  "tRuxk5": [
     "The max file size is ",
     [
       1,
       "maxSize"
     ],
-    "."
-  ],
-  "htbuIS": [
-    "Upgrade to Discord Nitro to upload files\nup to ",
+    ". Upgrade to Discord Nitro to upload files up to ",
     [
       1,
       "premiumMaxSize"
+    ],
+    ". ",
+    [
+      8,
+      "$link",
+      [
+        "Learn More"
+      ],
+      [
+        [
+          1,
+          "onClick"
+        ]
+      ]
     ]
   ],
   "tUOJdH": [
@@ -38418,6 +38580,7 @@
       "platform"
     ]
   ],
+  "04B8fH": "Currently",
   "FMbL3t": "Clear failed",
   "2TbM/P": "Playing a game",
   "kUEnxM": "Listening",
@@ -39029,7 +39192,6 @@
   "hg/+aW": "Enter the 2FA Code",
   "x5CoXV": "Nameplate",
   "RJxLnZ": "Tap to edit Nameplate",
-  "OwlOS0": "Edit your Nameplate on a desktop device.",
   "najZCQ": "Suppress background noise from your mic.",
   "wkYAl5": "None",
   "rdoNzs": "Krisp",
@@ -39122,7 +39284,6 @@
     ]
   ],
   "Hj/Bur": "Sensitive content filters",
-  "c/UOwM": "Sensitive media",
   "GYpoAg": "Mature Sexual Media",
   "Wnojv7": "Helps detect image-based media that may contain sexually explicit or suggestive material involving adults.",
   "xbMc8v": "Soundboard",
@@ -39787,21 +39948,6 @@
   ],
   "7Xq/nZ": "Watch Stream",
   "n8nU4e": "Wave",
-  "er/cHx": [
-    "👋 You waved at ",
-    [
-      1,
-      "username"
-    ]
-  ],
-  "noNjkZ": [
-    "👋 ",
-    [
-      1,
-      "username"
-    ],
-    " waved at you"
-  ],
   "y1Wu2d": "your pal",
   "m0zYbW": [
     "Wave to ",
@@ -39987,13 +40133,6 @@
       []
     ],
     "."
-  ],
-  "YIZnWl": [
-    "You are in #",
-    [
-      1,
-      "channelName"
-    ]
   ],
   "vh+Zpq": "You can't call this user.",
   "dKhVQE": "Log In",

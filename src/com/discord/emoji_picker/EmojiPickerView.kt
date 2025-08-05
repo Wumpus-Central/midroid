@@ -74,8 +74,8 @@ internal class EmojiPickerView(context: Context,
       kotlin.jvm.internal.r.h(var11, "onShowNitroUpsell");
       kotlin.jvm.internal.r.h(var13, "config");
       super(var1);
-      this.visibilityTracker$delegate = z9.j.a(new o(var11, this));
-      this.scroller$delegate = z9.j.a(new p(this, var13, var10, var6, var7, var8));
+      this.visibilityTracker$delegate = B9.j.b(new o(var11, this));
+      this.scroller$delegate = B9.j.b(new p(this, var13, var10, var6, var7, var8));
       this.premiumUpsellGradientDecoration = new EmojiPickerPremiumUpsellGradientBackground(var1, var12);
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -153,7 +153,7 @@ internal class EmojiPickerView(context: Context,
             && var1 !is EmojiPickerItem.FooterUpsell
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockHeader
             && var1 !is EmojiPickerItem.PremiumInlineRoadblockFooter) {
-            throw new z9.n();
+            throw new B9.n();
          }
 
          var2 = this.getTypedLayoutManager().getSpanCount();
@@ -305,10 +305,10 @@ internal class EmojiPickerView(context: Context,
 
    public fun setUseTier0UpsellContent(useTier0UpsellContent: Boolean) {
       this.getTypedAdapter().setUseTier0UpsellContent(var1);
-      val var3: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
-      val var2: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var2, "getContext(...)");
-      var3.setUseTier0UpsellContent(var2, var1);
+      val var2: EmojiPickerPremiumUpsellGradientBackground = this.premiumUpsellGradientDecoration;
+      val var3: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var3, "getContext(...)");
+      var2.setUseTier0UpsellContent(var3, var1);
    }
 
    public data class Config(animateEmoji: Boolean, scrollFastOptimizationEnabled: Boolean, scrollFastVelocity: Int, disableAnimationsOnScroll: Boolean) {
@@ -378,19 +378,19 @@ internal class EmojiPickerView(context: Context,
       }
 
       public override fun toString(): String {
-         val var4: Boolean = this.animateEmoji;
-         val var3: Boolean = this.scrollFastOptimizationEnabled;
+         val var3: Boolean = this.animateEmoji;
+         val var2: Boolean = this.scrollFastOptimizationEnabled;
          val var1: Int = this.scrollFastVelocity;
-         val var2: Boolean = this.disableAnimationsOnScroll;
+         val var4: Boolean = this.disableAnimationsOnScroll;
          val var5: StringBuilder = new StringBuilder();
          var5.append("Config(animateEmoji=");
-         var5.append(var4);
-         var5.append(", scrollFastOptimizationEnabled=");
          var5.append(var3);
+         var5.append(", scrollFastOptimizationEnabled=");
+         var5.append(var2);
          var5.append(", scrollFastVelocity=");
          var5.append(var1);
          var5.append(", disableAnimationsOnScroll=");
-         var5.append(var2);
+         var5.append(var4);
          var5.append(")");
          return var5.toString();
       }

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class TimestampContentNode(timestamp: Long, full: String, formatted: String) : ContentNode {
@@ -60,15 +60,15 @@ public data class TimestampContentNode(timestamp: Long, full: String, formatted:
 
    public override fun toString(): String {
       val var1: Long = this.timestamp;
-      val var4: java.lang.String = this.full;
-      val var3: java.lang.String = this.formatted;
+      val var3: java.lang.String = this.full;
+      val var4: java.lang.String = this.formatted;
       val var5: StringBuilder = new StringBuilder();
       var5.append("TimestampContentNode(timestamp=");
       var5.append(var1);
       var5.append(", full=");
-      var5.append(var4);
-      var5.append(", formatted=");
       var5.append(var3);
+      var5.append(", formatted=");
+      var5.append(var4);
       var5.append(")");
       return var5.toString();
    }

@@ -51,7 +51,7 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
       this.binding.label.setContentDescription(var2);
       val var4: FrameLayout = this.binding.overlayContainer;
       kotlin.jvm.internal.r.g(this.binding.overlayContainer, "overlayContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new O0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new Q0(var3), 1, null);
    }
 
    public override fun getOverlayView(): View {

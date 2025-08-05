@@ -4,7 +4,7 @@ import android.os.Parcel
 import com.discord.snowflake.SnowflakePrimitive
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public inline class GuildId : SnowflakePrimitive {

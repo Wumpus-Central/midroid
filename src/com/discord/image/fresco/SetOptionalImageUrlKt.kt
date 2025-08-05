@@ -1,11 +1,11 @@
 package com.discord.image.fresco
 
+import B2.f
 import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener
 import com.facebook.drawee.view.SimpleDraweeView
 import kotlin.jvm.internal.r
-import z2.f
 
 public fun SimpleDraweeView.setOptionalImageUrl(
    imageUrl: String?,

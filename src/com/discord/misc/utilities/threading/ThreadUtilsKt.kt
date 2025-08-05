@@ -1,13 +1,13 @@
 package com.discord.misc.utilities.threading
 
+import B9.j
+import B9.m
 import android.os.Handler
 import android.os.Looper
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.internal.r
-import z9.j
-import z9.m
 
-public final val uiHandler: Handler by j.b(m.k, new a())
+public final val uiHandler: Handler by j.a(m.k, new a())
    public final get() {
       return uiHandler$delegate.getValue() as Handler;
    }

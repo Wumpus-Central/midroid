@@ -7,9 +7,9 @@ import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import ub.g
-import ub.e.i
-import wb.e
+import wb.g
+import wb.e.i
+import yb.e
 
 public object ContentNodeSerializer : KSerializer {
    public open val descriptor: SerialDescriptor

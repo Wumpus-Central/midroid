@@ -1,9 +1,9 @@
 package com.discord.device.react_events
 
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
-import z9.s
 
 internal class DeviceThermalStateChangedEvent(state: Int) : ReactEvent {
    private final val state: Int

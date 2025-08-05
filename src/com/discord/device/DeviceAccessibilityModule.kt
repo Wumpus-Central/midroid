@@ -1,6 +1,6 @@
 package com.discord.device
 
-import A9.n
+import C9.n
 import android.app.Activity
 import android.view.View
 import com.discord.codegen.NativeDeviceAccessibilityModuleSpec
@@ -30,9 +30,9 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
 
    @JvmStatic
    fun `enableFocusLock$lambda$4`(var0: ReadableArray, var1: DeviceAccessibilityModule) {
-      val var3: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
+      val var4: DeviceFocusLockManager = DeviceFocusLockManager.INSTANCE;
       val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var0);
-      val var4: ArrayList = new ArrayList();
+      val var3: ArrayList = new ArrayList();
       val var8: java.util.Iterator = var5.iterator();
 
       while (var8.hasNext()) {
@@ -43,11 +43,11 @@ internal class DeviceAccessibilityModule(reactContext: ReactApplicationContext) 
          r.e(var7);
          val var9: View = ReactContextFindViewKt.findView(var6, var7);
          if (var9 != null) {
-            var4.add(var9);
+            var3.add(var9);
          }
       }
 
-      var3.enableFocusLock(var4);
+      var4.enableFocusLock(var3);
    }
 
    public override fun disableFocusLock() {

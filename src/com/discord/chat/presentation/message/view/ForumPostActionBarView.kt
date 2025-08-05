@@ -166,9 +166,9 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          ReactAssetUtilsKt.setOptionalReactImageUrl(var12, var2.getIcon());
          val var13: SimpleDraweeSpanTextView = this.binding.sharePromptSubtitle;
          kotlin.jvm.internal.r.e(this.binding.sharePromptSubtitle);
-         val var14: StructurableText = var2.getSubtitle();
-         val var10: Context = var13.getContext();
-         kotlin.jvm.internal.r.g(var10, "getContext(...)");
+         val var10: StructurableText = var2.getSubtitle();
+         val var14: Context = var13.getContext();
+         kotlin.jvm.internal.r.g(var14, "getContext(...)");
          val var15: FontMetrics = var13.getPaint().getFontMetrics();
          kotlin.jvm.internal.r.g(var15, "getFontMetrics(...)");
          val var7: Float = TextUtilsKt.getBaselineHeightPx(var15);
@@ -177,8 +177,8 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
          SimpleDraweeSpanTextViewUtilsKt.setOptionalText(
             var13,
             TextUtilsKt.toSpannable$default(
-               var14,
                var10,
+               var14,
                var1,
                false,
                false,
@@ -255,11 +255,11 @@ public class ForumPostActionBarView  public constructor(context: Context, attrs:
       kotlin.jvm.internal.r.h(var20, "onDismissSharePromptClick");
       kotlin.jvm.internal.r.h(var21, "onLinkClicked");
       if (var8 != null && !var8.isEmpty()) {
-         val var23: java.util.List = kotlin.collections.i.N0(var8, --var2);
-         val var35: ShortcutsFlexbox = this.binding.reactionsView;
+         val var35: java.util.List = kotlin.collections.i.N0(var8, --var2);
+         val var23: ShortcutsFlexbox = this.binding.reactionsView;
          kotlin.jvm.internal.r.g(this.binding.reactionsView, "reactionsView");
-         var35.setVisibility(0);
-         this.setReactions(var23, var12, var13, var14, var15);
+         var23.setVisibility(0);
+         this.setReactions(var35, var12, var13, var14, var15);
          val var22: Int = Math.max(var8.size() - var2, 0);
          val var33: DCDButton = this.binding.otherReactionsCount;
          kotlin.jvm.internal.r.e(this.binding.otherReactionsCount);

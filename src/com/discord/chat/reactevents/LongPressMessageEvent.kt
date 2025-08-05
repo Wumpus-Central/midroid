@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 internal data class LongPressMessageEvent(messageId: String,
@@ -98,8 +98,8 @@ internal data class LongPressMessageEvent(messageId: String,
 
    public override fun hashCode(): Int {
       val var6: Int = this.messageId.hashCode();
-      val var4: Int = this.channelId.hashCode();
-      val var5: Int = Integer.hashCode(this.mediaIndex);
+      val var5: Int = this.channelId.hashCode();
+      val var4: Int = Integer.hashCode(this.mediaIndex);
       val var3: Int = this.mediaType.hashCode();
       var var2: Int = 0;
       val var1: Int;
@@ -113,7 +113,7 @@ internal data class LongPressMessageEvent(messageId: String,
          var2 = this.componentMediaIndex.hashCode();
       }
 
-      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((((var6 * 31 + var5) * 31 + var4) * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {
@@ -121,27 +121,27 @@ internal data class LongPressMessageEvent(messageId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.channelId;
       val var1: Int = this.mediaIndex;
-      val var7: java.lang.String = this.mediaType;
-      val var3: java.lang.String = this.componentId;
+      val var3: java.lang.String = this.mediaType;
+      val var7: java.lang.String = this.componentId;
       val var4: Int = this.componentMediaIndex;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("LongPressMessageEvent(messageId=");
-      var5.append(var6);
-      var5.append(", channelId=");
-      var5.append(var2);
-      var5.append(", mediaIndex=");
-      var5.append(var1);
-      var5.append(", mediaType=");
-      var5.append(var7);
-      var5.append(", componentId=");
-      var5.append(var3);
-      var5.append(", componentMediaIndex=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("LongPressMessageEvent(messageId=");
+      var6.append(var2);
+      var6.append(", channelId=");
+      var6.append(var5);
+      var6.append(", mediaIndex=");
+      var6.append(var1);
+      var6.append(", mediaType=");
+      var6.append(var3);
+      var6.append(", componentId=");
+      var6.append(var7);
+      var6.append(", componentMediaIndex=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

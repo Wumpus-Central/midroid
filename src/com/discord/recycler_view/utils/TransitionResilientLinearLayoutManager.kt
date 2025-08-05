@@ -5,14 +5,33 @@ import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
 import com.discord.crash_reporting.CrashReporting
+import d2.a
 import kotlin.jvm.internal.r
 
-public open class TransitionResilientLinearLayoutManager(context: Context, orientation: Int = 1, reverseLayout: Boolean = false) : LinearLayoutManager {
+public open class TransitionResilientLinearLayoutManager(context: Context,
+      orientation: Int = 1,
+      reverseLayout: Boolean = false,
+      onModifyCapturedException: (Exception) -> Exception = new a()
+   )
+   : LinearLayoutManager {
+   private final val onModifyCapturedException: (Exception) -> Exception
    private final var disableRecycling: Boolean
 
    init {
       r.h(var1, "context");
+      r.h(var4, "onModifyCapturedException");
       super(var1, var2, var3);
+      this.onModifyCapturedException = var4;
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: Exception): Exception {
+      r.h(var0, "e");
+      return var0;
+   }
+
+   private fun captureException(e: Exception) {
+      CrashReporting.captureException$default(CrashReporting.INSTANCE, this.onModifyCapturedException.invoke(var1) as java.lang.Throwable, false, 2, null);
    }
 
    public fun disableRecycling(disableRecycling: Boolean) {
@@ -29,7 +48,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context, orien
             super.removeAndRecycleAllViews(var1);
          }
       } catch (var2: Exception) {
-         CrashReporting.captureException$default(CrashReporting.INSTANCE, var2, false, 2, null);
+         this.captureException(var2);
       }
    }
 
@@ -44,7 +63,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context, orien
             super.removeAndRecycleView(var1, var2);
          }
       } catch (var3: Exception) {
-         CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
+         this.captureException(var3);
       }
    }
 
@@ -58,7 +77,7 @@ public open class TransitionResilientLinearLayoutManager(context: Context, orien
             super.removeAndRecycleViewAt(var1, var2);
          }
       } catch (var3: Exception) {
-         CrashReporting.captureException$default(CrashReporting.INSTANCE, var3, false, 2, null);
+         this.captureException(var3);
       }
    }
 }

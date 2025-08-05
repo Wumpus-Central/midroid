@@ -14,7 +14,7 @@ public enum class VisualPlaceholderState {
    fun {
       val var0: Array<VisualPlaceholderState> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = J9.a.a(var0);
    }
 
    @JvmStatic

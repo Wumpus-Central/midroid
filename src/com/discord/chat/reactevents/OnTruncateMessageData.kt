@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 internal data class OnTruncateMessageData(messageId: MessageId) : OnTruncateMessageData(var1), ReactEvent {

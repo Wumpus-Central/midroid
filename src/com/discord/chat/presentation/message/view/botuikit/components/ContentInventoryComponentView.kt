@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import B9.m
 import android.content.Context
 import android.graphics.drawable.GradientDrawable.Orientation
 import android.util.AttributeSet
@@ -32,7 +33,6 @@ import java.util.ArrayList
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import z9.m
 
 public class ContentInventoryComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -58,8 +58,8 @@ public class ContentInventoryComponentView  public constructor(context: Context,
    init {
       r.h(var1, "context");
       super(var1, var2, var3);
-      this.draweeControllerBuilder = H2.d.g();
-      this.binding$delegate = z9.j.b(m.l, new e(this));
+      this.draweeControllerBuilder = J2.d.g();
+      this.binding$delegate = B9.j.a(m.l, new e(this));
    }
 
    @JvmStatic

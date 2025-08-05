@@ -1,19 +1,20 @@
 package com.discord.sounds.utils
 
-import D9.a
-import G9.b
+import F9.a
+import I9.b
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import ib.K
-import ib.d0
-import ib.f
 import java.io.File
 import java.util.Comparator
+import kb.K
+import kb.d0
+import kb.f
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.functions.Function2
@@ -180,8 +181,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                         c.b(var5);
                         if (var1 is DownloadState.Completed) {
                            try {
-                              val var6: d0 = K.c();
-                              var5 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
+                              var5 = K.c();
+                              val var6: Function2 = new Function2(this.$soundManager, this.$key, this.$usage, var1, this.$soundResIdPrepared, null) {
                                  final DownloadState $downloadState;
                                  final int $key;
                                  final SoundManager $soundManager;
@@ -227,7 +228,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                                  }
                               };
                               ((<unrepresentable>)var13).label = 1;
-                              var12 = f.g(var6, (Function2)var5, (Continuation)var13);
+                              var12 = f.g((CoroutineContext)var5, var6, (Continuation)var13);
                            } catch (var8: Exception) {
                               val var11: d0 = K.c();
                               var5 = new Function2(var8, null) {
@@ -273,8 +274,8 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            return Unit.a;
                         }
 
-                        val var10: d0 = K.c();
-                        var5 = new Function2(null) {
+                        var5 = K.c();
+                        val var10: Function2 = new Function2(null) {
                            int label;
 
                            {
@@ -300,7 +301,7 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
                            }
                         };
                         ((<unrepresentable>)var13).label = 3;
-                        if (f.g(var10, (Function2)var5, (Continuation)var13) === var15) {
+                        if (f.g((CoroutineContext)var5, var10, (Continuation)var13) === var15) {
                            return var15;
                         }
                      }
@@ -324,11 +325,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 
 internal fun getRemoteSoundFilename(url: String): String {
    r.h(var0, "url");
-   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
-   val var2: StringBuilder = new StringBuilder();
-   var2.append(var1);
-   var2.append(".mp3");
-   return var2.toString();
+   var0 = Uri.parse(var0).getLastPathSegment();
+   val var1: StringBuilder = new StringBuilder();
+   var1.append(var0);
+   var1.append(".mp3");
+   return var1.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {

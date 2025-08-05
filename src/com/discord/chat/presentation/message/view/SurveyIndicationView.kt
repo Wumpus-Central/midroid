@@ -89,7 +89,7 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
          false,
          false,
          var11,
-         new W0(var3, var1),
+         new Y0(var3, var1),
          null,
          null,
          null,

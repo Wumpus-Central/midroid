@@ -9,6 +9,6 @@ public final class N implements Function1 {
    public final RenderContext k;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.v(this.j, this.k, (View)var1);
+      return TextUtilsKt.E(this.j, this.k, (View)var1);
    }
 }

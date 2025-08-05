@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import A9.q
+import C9.q
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -20,28 +20,28 @@ public object CookieValidator {
          if (var8 == null) {
             return null;
          } else {
-            val var9: java.lang.String = URLDecoder.decode(var8, "UTF-8");
-            val var2: okio.ByteString.a = ByteString.n;
-            r.e(var9);
-            val var10: ByteString = var2.b(var9);
+            var var2: java.lang.String = URLDecoder.decode(var8, "UTF-8");
+            val var9: okio.ByteString.a = ByteString.n;
+            r.e(var2);
+            val var10: ByteString = var9.b(var2);
             if (var10 != null) {
-               val var13: java.lang.String = var10.H();
-               if (var13 != null) {
+               var2 = var10.H();
+               if (var2 != null) {
                   try {
                      var11 = Json.d;
-                     var14 = Json.d.g(var13);
-                  } catch (var7: sb.h) {
+                     var14 = Json.d.g(var2);
+                  } catch (var7: ub.h) {
                      return null;
                   }
 
-                  var var3: JsonElement = wb.g.o(var14).get("$meta") as JsonElement;
+                  var var3: JsonElement = yb.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = wb.g.o(var14);
+                  val var15: JsonObject = yb.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {

@@ -1,7 +1,7 @@
 package com.discord.serialization
 
-import U9.c
-import f2.a
+import W9.c
+import h2.a
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
@@ -22,24 +22,24 @@ public object SerializerUtils {
    public fun findErroringFields(jsonString: String, deserializerClass: KClass<*>): com.discord.serialization.SerializerUtils.SerializerError {
       r.h(var1, "jsonString");
       r.h(var2, "deserializerClass");
-      val var3: JsonElement = b.b(null, new a(), 1, null).g(var1);
-      if (var3 !is JsonObject) {
+      val var6: JsonElement = b.b(null, new a(), 1, null).g(var1);
+      if (var6 !is JsonObject) {
          return SerializerUtils.SerializerError.EMPTY.INSTANCE;
       } else {
-         val var6: LinkedHashMap = new LinkedHashMap();
+         val var3: LinkedHashMap = new LinkedHashMap();
 
          for (KProperty1 var5 : c.a(var2)) {
-            val var4: JsonElement = (var3 as JsonObject).get(var5.getName()) as JsonElement;
-            if (var4 == null) {
+            val var7: JsonElement = (var6 as JsonObject).get(var5.getName()) as JsonElement;
+            if (var7 == null) {
                if (!var5.getReturnType().j()) {
-                  var6.put(var5.getName(), "null");
+                  var3.put(var5.getName(), "null");
                }
-            } else if (!SerializerUtilsKt.access$parseProperty(var5, var4)) {
-               var6.put(var5.getName(), var4.toString());
+            } else if (!SerializerUtilsKt.access$parseProperty(var5, var7)) {
+               var3.put(var5.getName(), var7.toString());
             }
          }
 
-         return new SerializerUtils.SerializerError.Data(var6);
+         return new SerializerUtils.SerializerError.Data(var3);
       }
    }
 
@@ -77,12 +77,12 @@ public object SerializerUtils {
          }
 
          public override fun toString(): String {
-            val var1: java.util.Map = this.data;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Data(data=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.util.Map = this.data;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Data(data=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
 

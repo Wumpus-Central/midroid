@@ -142,7 +142,6 @@
     <item type="id" name="camera_button" />
     <item type="id" name="cancel_action" />
     <item type="id" name="cancel_button" />
-    <item type="id" name="card" />
     <item type="id" name="catalyst_redbox_title" />
     <item type="id" name="category_name" />
     <item type="id" name="cause_header" />
@@ -405,7 +404,6 @@
     <item type="id" name="item_subtitle" />
     <item type="id" name="item_title" />
     <item type="id" name="item_touch_helper_previous_elevation" />
-    <item type="id" name="join_cta" />
     <item type="id" name="json" />
     <item type="id" name="json_header" />
     <item type="id" name="jump_button" />

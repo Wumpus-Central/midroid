@@ -8,6 +8,6 @@ public final class l implements Function1 {
    public final RenderContext j;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.h(this.j, (GenericDraweeHierarchyBuilder)var1);
+      return TextUtilsKt.n(this.j, (GenericDraweeHierarchyBuilder)var1);
    }
 }

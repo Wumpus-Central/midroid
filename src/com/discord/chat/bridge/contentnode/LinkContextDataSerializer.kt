@@ -5,9 +5,9 @@ import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import wb.g
+import yb.g
 
-private object LinkContextDataSerializer : wb.d(H.b(LinkContextData.class)) {
+private object LinkContextDataSerializer : yb.d(H.b(LinkContextData.class)) {
    protected open fun selectDeserializer(element: JsonElement): KSerializer<out LinkContextData> {
       r.h(var1, "element");
       val var2: KSerializer;

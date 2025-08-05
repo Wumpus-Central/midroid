@@ -10,6 +10,7 @@ import com.discord.fastest_list.android.view_holder.FastestListViewHolderListFoo
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderListHeader
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionFooter
 import com.discord.fastest_list.android.view_holder.FastestListViewHolderSectionHeader
+import com.discord.misc.utilities.ids.IdUtilsKt
 import kotlin.jvm.internal.r
 
 internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
@@ -41,7 +42,7 @@ internal class FastestListViewAdapter(layoutManager: FastestListLayoutManager,
    }
 
    public override fun getItemId(position: Int): Long {
-      return var1;
+      return IdUtilsKt.convertToId(this.sections.getItem(var1).getKey());
    }
 
    public override fun getItemViewType(position: Int): Int {

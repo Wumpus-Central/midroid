@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
@@ -44,12 +44,12 @@ public data class OnNearbyMessageReceivedEvent(body: String) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.body;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("OnNearbyMessageReceivedEvent(body=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.body;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("OnNearbyMessageReceivedEvent(body=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

@@ -1,6 +1,7 @@
 package com.discord.user_search_worker
 
-import A9.q
+import B9.n
+import C9.q
 import java.text.Normalizer
 import java.text.Normalizer.Form
 import java.util.ArrayList
@@ -12,7 +13,6 @@ import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.r
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonBuilder
-import z9.n
 
 internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String, String) -> Unit) {
    public final val onResults: (List<UserSearchWorkerResult>, String, String) -> Unit
@@ -49,7 +49,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       var2 = var2.toLowerCase(var9);
       r.g(var2, "toLowerCase(...)");
       val var6: Int = var2.length();
-      val var3: Int = var1.length();
+      var var3: Int = var1.length();
       if (var3 > var6) {
          return false;
       } else if (var3 == var6) {
@@ -57,28 +57,32 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       } else {
          val var7: Int = var1.length();
          var var5: Int = 0;
+         var3 = 0;
 
-         for (int var12 = 0; var5 < var7; var5++) {
+         while (var5 < var7) {
             val var8: Char = var1.charAt(var5);
-            var var4: Int = var12;
 
+            var var4: Int;
             while (true) {
-               var12 = var4;
-               if (var4 >= var6) {
+               var4 = var3;
+               if (var3 >= var6) {
                   break;
                }
 
-               var12 = var4 + 1;
-               if (var2.charAt(var4) == var8) {
+               var4 = var3 + 1;
+               if (var2.charAt(var3) == var8) {
                   break;
                }
 
-               var4 = var12;
+               var3 = var4;
             }
 
-            if (var12 == var6) {
+            if (var4 == var6) {
                return false;
             }
+
+            var5++;
+            var3 = var4;
          }
 
          return true;
@@ -202,11 +206,11 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
       }
 
       for (Entry var23 : this.queries.entrySet()) {
-         val var16: java.lang.String = var23.getKey() as java.lang.String;
+         val var20: java.lang.String = var23.getKey() as java.lang.String;
          val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
          val var24: UserSearchQuerySetFilters = var28.getFilters();
          if (var24 == null || r.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
-            this.searchUsers(var16, var28);
+            this.searchUsers(var20, var28);
          }
       }
    }
@@ -237,8 +241,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          var9.append("^");
          var9.append(var22);
          var var10: java.lang.String = var9.toString();
-         val var25: gb.d = gb.d.l;
-         val var14: Regex = new Regex(var10, gb.d.l);
+         val var25: ib.d = ib.d.l;
+         val var14: Regex = new Regex(var10, ib.d.l);
          var var23: Regex = new Regex(var22, var25);
 
          for (Entry var26 : this.users.entrySet()) {
@@ -261,9 +265,9 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                } else {
                   val var30: java.util.List;
                   if (var7) {
-                     val var11: java.lang.String = var27.getUsername();
+                     val var18: java.lang.String = var27.getUsername();
                      var10 = var27.getGlobalName();
-                     val var18: java.lang.String = var27.getFriendNickname();
+                     val var11: java.lang.String = var27.getFriendNickname();
                      val var19: java.util.Map = var27.getNicknames();
                      val var28: UserSearchQuerySetFilters = var2.getFilters();
                      val var29: java.lang.String;
@@ -273,7 +277,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var29 = null;
                      }
 
-                     var30 = i.n(new java.lang.String[]{var11, var10, var18, (java.lang.String)var19.get(var29)});
+                     var30 = i.n(new java.lang.String[]{var18, var10, var11, (java.lang.String)var19.get(var29)});
                   } else {
                      if (var7) {
                         throw new n();
@@ -318,8 +322,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                      var24 = var39;
                   }
 
-                  var32 = var24;
                   var23 = var31;
+                  var32 = var24;
                }
 
                if (var32 != null) {
@@ -328,7 +332,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
             }
          }
 
-         this.onResults.invoke(i.N0(i.L0(var13, D9.a.b(new Function1[]{new b(), new c()})), var2.getLimit()), var12, var1);
+         this.onResults.invoke(i.N0(i.L0(var13, F9.a.b(new Function1[]{new b(), new c()})), var2.getLimit()), var12, var1);
       }
    }
 
@@ -428,15 +432,15 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
          }
 
          public override fun toString(): String {
-            val var3: java.lang.String = this.comparator;
+            val var4: java.lang.String = this.comparator;
             val var1: Double = this.score;
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("LocalResult(comparator=");
-            var4.append(var3);
-            var4.append(", score=");
-            var4.append(var1);
-            var4.append(")");
-            return var4.toString();
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("LocalResult(comparator=");
+            var3.append(var4);
+            var3.append(", score=");
+            var3.append(var1);
+            var3.append(")");
+            return var3.toString();
          }
       }
    }

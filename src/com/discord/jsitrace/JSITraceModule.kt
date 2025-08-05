@@ -31,11 +31,11 @@ public class JSITraceModule(reactContext: ReactApplicationContext) : ReactContex
          val var8: java.lang.Long = ReactContextExtensionsKt.jsiId(var5);
          var var7: Boolean = false;
          if (var8 != null) {
-            val var3: Long = var8;
+            val var1: Long = var8;
 
             try {
                System.loadLibrary("jsitrace");
-               this.nativeInstall(var3);
+               this.nativeInstall(var1);
             } catch (var6: Exception) {
                return false;
             }

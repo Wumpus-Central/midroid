@@ -80,76 +80,76 @@ public final class ActivityRichPresenceInviteEmbedViewBinding implements ViewBin
       SimpleDraweeView var16 = (SimpleDraweeView)a.a(var0, var1);
       if (var16 != null) {
          var1 = R.id.content_container;
-         ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
-         if (var3 != null) {
+         ConstraintLayout var15 = (ConstraintLayout)a.a(var0, var1);
+         if (var15 != null) {
             var1 = R.id.desktop_icon;
-            SimpleDraweeView var17 = (SimpleDraweeView)a.a(var0, var1);
-            if (var17 != null) {
+            SimpleDraweeView var10 = (SimpleDraweeView)a.a(var0, var1);
+            if (var10 != null) {
                var1 = R.id.footer_container;
-               ConstraintLayout var10 = (ConstraintLayout)a.a(var0, var1);
-               if (var10 != null) {
+               ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
+               if (var12 != null) {
                   var1 = R.id.footer_content;
-                  LinearLayout var19 = (LinearLayout)a.a(var0, var1);
-                  if (var19 != null) {
+                  LinearLayout var2 = (LinearLayout)a.a(var0, var1);
+                  if (var2 != null) {
                      var1 = R.id.footer_label;
                      TextView var5 = (TextView)a.a(var0, var1);
                      if (var5 != null) {
                         var1 = R.id.gradient_background;
-                        View var15 = a.a(var0, var1);
-                        if (var15 != null) {
+                        View var13 = a.a(var0, var1);
+                        if (var13 != null) {
                            var1 = R.id.header_text;
-                           TextView var7 = (TextView)a.a(var0, var1);
-                           if (var7 != null) {
+                           TextView var6 = (TextView)a.a(var0, var1);
+                           if (var6 != null) {
                               var1 = R.id.party_avatars;
-                              OverlappingCirclesView var13 = (OverlappingCirclesView)a.a(var0, var1);
-                              if (var13 != null) {
+                              OverlappingCirclesView var8 = (OverlappingCirclesView)a.a(var0, var1);
+                              if (var8 != null) {
                                  var1 = R.id.party_container;
-                                 ConstraintLayout var12 = (ConstraintLayout)a.a(var0, var1);
-                                 if (var12 != null) {
+                                 ConstraintLayout var3 = (ConstraintLayout)a.a(var0, var1);
+                                 if (var3 != null) {
                                     var1 = R.id.party_size_text;
-                                    TextView var9 = (TextView)a.a(var0, var1);
-                                    if (var9 != null) {
+                                    TextView var17 = (TextView)a.a(var0, var1);
+                                    if (var17 != null) {
                                        var1 = R.id.playstation_icon;
-                                       SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-                                       if (var2 != null) {
+                                       SimpleDraweeView var7 = (SimpleDraweeView)a.a(var0, var1);
+                                       if (var7 != null) {
                                           var1 = R.id.subtitle;
                                           TextView var18 = (TextView)a.a(var0, var1);
                                           if (var18 != null) {
                                              var1 = R.id.subtitle_container;
-                                             ConstraintLayout var8 = (ConstraintLayout)a.a(var0, var1);
-                                             if (var8 != null) {
+                                             ConstraintLayout var4 = (ConstraintLayout)a.a(var0, var1);
+                                             if (var4 != null) {
                                                 var1 = R.id.subtitle_icon;
-                                                SimpleDraweeView var4 = (SimpleDraweeView)a.a(var0, var1);
-                                                if (var4 != null) {
+                                                SimpleDraweeView var9 = (SimpleDraweeView)a.a(var0, var1);
+                                                if (var9 != null) {
                                                    var1 = R.id.text_content_wrapper;
-                                                   LinearLayout var11 = (LinearLayout)a.a(var0, var1);
-                                                   if (var11 != null) {
+                                                   LinearLayout var19 = (LinearLayout)a.a(var0, var1);
+                                                   if (var19 != null) {
                                                       var1 = R.id.title;
-                                                      TextView var6 = (TextView)a.a(var0, var1);
-                                                      if (var6 != null) {
+                                                      TextView var14 = (TextView)a.a(var0, var1);
+                                                      if (var14 != null) {
                                                          var1 = R.id.xbox_icon;
-                                                         SimpleDraweeView var14 = (SimpleDraweeView)a.a(var0, var1);
-                                                         if (var14 != null) {
+                                                         SimpleDraweeView var11 = (SimpleDraweeView)a.a(var0, var1);
+                                                         if (var11 != null) {
                                                             return new ActivityRichPresenceInviteEmbedViewBinding(
                                                                var0,
                                                                var16,
+                                                               var15,
+                                                               var10,
+                                                               var12,
+                                                               var2,
+                                                               var5,
+                                                               var13,
+                                                               var6,
+                                                               var8,
                                                                var3,
                                                                var17,
-                                                               var10,
-                                                               var19,
-                                                               var5,
-                                                               var15,
                                                                var7,
-                                                               var13,
-                                                               var12,
-                                                               var9,
-                                                               var2,
                                                                var18,
-                                                               var8,
                                                                var4,
-                                                               var11,
-                                                               var6,
-                                                               var14
+                                                               var9,
+                                                               var19,
+                                                               var14,
+                                                               var11
                                                             );
                                                          }
                                                       }

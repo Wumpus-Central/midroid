@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w.d(), emoji: PollMediaEmoji? = null, stickerId: Long? = null) {
@@ -94,19 +94,19 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var2: java.util.Set = this.attachmentIds;
+      val var4: java.lang.String = this.text;
+      val var1: java.util.Set = this.attachmentIds;
       val var5: PollMediaEmoji = this.emoji;
-      val var4: java.lang.Long = this.stickerId;
+      val var2: java.lang.Long = this.stickerId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("PollMedia(text=");
-      var3.append(var1);
+      var3.append(var4);
       var3.append(", attachmentIds=");
-      var3.append(var2);
+      var3.append(var1);
       var3.append(", emoji=");
       var3.append(var5);
       var3.append(", stickerId=");
-      var3.append(var4);
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

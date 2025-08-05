@@ -130,7 +130,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          this.lastState = new ReferralView.Companion.State.Resolving(var1.getItemId());
       } else {
          if (var9 !is ReferralEmbed.Resolved) {
-            throw new z9.n();
+            throw new B9.n();
          }
 
          var var7: Boolean = this.didResolve(var1.getItemId());
@@ -202,7 +202,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
                   false,
                   false,
                   var48,
-                  new J0(var3, var1),
+                  new L0(var3, var1),
                   null,
                   null,
                   null,
@@ -286,7 +286,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
             var26.setText(var34.getAcceptLabelText());
             var26.setTextColor(var34.getAcceptLabelColor());
-            var26.setOnClickButtonListener(new K0(var2));
+            var26.setOnClickButtonListener(new M0(var2));
             val var15: Context = var26.getContext();
             kotlin.jvm.internal.r.g(var15, "getContext(...)");
             val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, R.drawable.premium_tier2_gradient);

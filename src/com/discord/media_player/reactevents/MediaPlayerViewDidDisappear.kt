@@ -1,13 +1,13 @@
 package com.discord.media_player.reactevents
 
+import B9.s
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
-import z9.s
+import ub.g
 
 @g
 public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: List<String>) : ReactEvent {
@@ -62,13 +62,13 @@ public data class MediaPlayerViewDidDisappear(channelId: String, mediaItemIds: L
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.channelId;
-      val var2: java.util.List = this.mediaItemIds;
+      val var2: java.lang.String = this.channelId;
+      val var3: java.util.List = this.mediaItemIds;
       val var1: StringBuilder = new StringBuilder();
       var1.append("MediaPlayerViewDidDisappear(channelId=");
-      var1.append(var3);
-      var1.append(", mediaItemIds=");
       var1.append(var2);
+      var1.append(", mediaItemIds=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

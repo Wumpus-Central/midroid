@@ -13,7 +13,7 @@ public class DeviceResourceUsageManagerModule(reactContext: ReactApplicationCont
    init {
       r.h(var1, "reactContext");
       super(var1);
-      this.deviceResourceUsageManager = new DeviceResourceUsageManager(0L, 1, null);
+      this.deviceResourceUsageManager = new DeviceResourceUsageManager(var1);
    }
 
    @ReactMethod
@@ -47,10 +47,10 @@ public class DeviceResourceUsageManagerModule(reactContext: ReactApplicationCont
    @ReactMethod
    public fun getNetworkUsage(callback: Callback) {
       r.h(var1, "callback");
-      val var3: DeviceResourceUsageRecorder.Companion = DeviceResourceUsageRecorder.Companion;
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.invoke(new Object[]{var3.getNetworkUsage(var2)});
+      val var2: DeviceResourceUsageRecorder.Companion = DeviceResourceUsageRecorder.Companion;
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var1.invoke(new Object[]{var2.getNetworkUsage(var3)});
    }
 
    public open fun initialize() {

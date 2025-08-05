@@ -3,7 +3,7 @@ package com.discord.chat.bridge.contentnode
 import com.discord.chat.bridge.spoiler.SpoilerableData
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class SpoilerContentNode(content: List<ContentNode>) : ContentNode, SpoilerableData {

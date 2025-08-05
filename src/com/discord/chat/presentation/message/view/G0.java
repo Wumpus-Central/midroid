@@ -1,11 +1,12 @@
 package com.discord.chat.presentation.message.view;
 
-import com.discord.chat.bridge.contentnode.LinkContentNode;
-import kotlin.jvm.functions.Function1;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class G0 implements Function1 {
-   public final Object invoke(Object var1) {
-      return MessageContentView.d((LinkContentNode)var1);
+public final class G0 implements Function0 {
+   public final MessageContentView j;
+
+   public final Object invoke() {
+      return MessageContentView.b(this.j);
    }
 }

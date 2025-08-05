@@ -2,7 +2,7 @@ package com.discord.chat.bridge.messageframe
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class UnknownMessageFrame(type: MessageFrameType) : MessageFrame {

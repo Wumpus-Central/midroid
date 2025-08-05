@@ -5,7 +5,7 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g(with = ActionComponentState.Serializer::class)
 public enum class ActionComponentState(serialNumber: Int) : IntEnum {
@@ -25,7 +25,7 @@ public enum class ActionComponentState(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<ActionComponentState> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = J9.a.a(var0);
    }
 
    init {

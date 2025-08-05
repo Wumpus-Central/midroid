@@ -8,6 +8,6 @@ public final class k implements Function1 {
    public final BundleUpdaterManager j;
 
    public final Object invoke(Object var1) {
-      return BundleUpdaterManager.g(this.j, (List)var1);
+      return BundleUpdaterManager.f(this.j, (List)var1);
    }
 }

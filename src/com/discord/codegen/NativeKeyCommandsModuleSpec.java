@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import I3.a;
+import K3.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.common.build.ReactBuildConfig;
@@ -18,28 +18,28 @@ public abstract class NativeKeyCommandsModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var1 = this.getTypedExportedConstants();
+      Map var2 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
          HashSet var4 = new HashSet<>(
             Arrays.asList(
                "keyModifierAlphaShift", "keyModifierAlternate", "keyModifierCommand", "keyModifierControl", "keyModifierNumericPad", "keyModifierShift"
             )
          );
-         HashSet var2 = new HashSet();
-         HashSet var3 = new HashSet(var1.keySet());
+         HashSet var1 = new HashSet();
+         HashSet var3 = new HashSet(var2.keySet());
          var3.removeAll(var4);
-         var3.removeAll(var2);
+         var3.removeAll(var1);
          if (!var3.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var3));
          }
 
-         var4.removeAll(var1.keySet());
+         var4.removeAll(var2.keySet());
          if (!var4.isEmpty()) {
             throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var4));
          }
       }
 
-      return var1;
+      return var2;
    }
 
    public String getName() {

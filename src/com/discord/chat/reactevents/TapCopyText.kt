@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import B9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
-import z9.s
+import ub.g
 
 @g
 internal data class TapCopyText(text: CharSequence) : ReactEvent {

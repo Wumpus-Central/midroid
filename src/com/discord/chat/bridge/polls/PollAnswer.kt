@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class PollAnswer(answerId: String,
@@ -138,10 +138,10 @@ public data class PollAnswer(answerId: String,
 
    public override fun hashCode(): Int {
       val var4: Int = this.answerId.hashCode();
-      val var5: Int = this.pollMedia.hashCode();
+      val var8: Int = this.pollMedia.hashCode();
       val var7: Int = java.lang.Boolean.hashCode(this.didSelfVote);
       val var6: Int = this.votes.hashCode();
-      val var8: Int = Integer.hashCode(this.votesPercentage);
+      val var5: Int = Integer.hashCode(this.votesPercentage);
       var var3: Int = 0;
       val var1: Int;
       if (this.isSelected == null) {
@@ -161,24 +161,24 @@ public data class PollAnswer(answerId: String,
          var3 = this.shouldAnimateTransition.hashCode();
       }
 
-      return (((((((var4 * 31 + var5) * 31 + var7) * 31 + var6) * 31 + var8) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
+      return (((((((var4 * 31 + var8) * 31 + var7) * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + this.style.hashCode();
    }
 
    public override fun toString(): String {
       val var9: java.lang.String = this.answerId;
-      val var6: PollMedia = this.pollMedia;
+      val var4: PollMedia = this.pollMedia;
       val var2: Boolean = this.didSelfVote;
       val var5: java.lang.String = this.votes;
       val var1: Int = this.votesPercentage;
-      val var3: java.lang.Boolean = this.isSelected;
-      val var4: java.lang.Boolean = this.isVictor;
-      val var10: java.lang.Boolean = this.shouldAnimateTransition;
-      val var7: java.lang.String = this.style;
+      val var7: java.lang.Boolean = this.isSelected;
+      val var10: java.lang.Boolean = this.isVictor;
+      val var3: java.lang.Boolean = this.shouldAnimateTransition;
+      val var6: java.lang.String = this.style;
       val var8: StringBuilder = new StringBuilder();
       var8.append("PollAnswer(answerId=");
       var8.append(var9);
       var8.append(", pollMedia=");
-      var8.append(var6);
+      var8.append(var4);
       var8.append(", didSelfVote=");
       var8.append(var2);
       var8.append(", votes=");
@@ -186,13 +186,13 @@ public data class PollAnswer(answerId: String,
       var8.append(", votesPercentage=");
       var8.append(var1);
       var8.append(", isSelected=");
-      var8.append(var3);
-      var8.append(", isVictor=");
-      var8.append(var4);
-      var8.append(", shouldAnimateTransition=");
-      var8.append(var10);
-      var8.append(", style=");
       var8.append(var7);
+      var8.append(", isVictor=");
+      var8.append(var10);
+      var8.append(", shouldAnimateTransition=");
+      var8.append(var3);
+      var8.append(", style=");
+      var8.append(var6);
       var8.append(")");
       return var8.toString();
    }

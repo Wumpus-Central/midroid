@@ -1,6 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import G9.b
+import I9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -13,11 +13,11 @@ import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.react.views.imagehelper.ImageSource
 import com.facebook.react.views.imagehelper.ResourceDrawableIdHelper
 import com.google.android.material.button.MaterialButton
-import ib.K
-import ib.f
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
+import kb.K
+import kb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
@@ -129,19 +129,19 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      r.g(var1, "getContext(...)");
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var3.isResource()) {
-                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var2x.isResource()) {
+                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
                         r.g(var6, "getContext(...)");
-                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
+                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
                         r.e(var1);
-                     } else if (r.c(var3.getUri().getScheme(), "file")) {
-                        var1 = Drawable.createFromPath(var3.getUri().getPath());
+                     } else if (r.c(var2x.getUri().getScheme(), "file")) {
+                        var1 = Drawable.createFromPath(var2x.getUri().getPath());
                         r.e(var1);
                      } else {
-                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var8: URLConnection = new URL(var2x.getSource()).openConnection();
                         r.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();

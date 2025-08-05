@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g
 public data class TapChannelPromptButtonData(messageId: String, channelId: String, buttonType: String) : ReactEvent {
@@ -67,14 +67,14 @@ public data class TapChannelPromptButtonData(messageId: String, channelId: Strin
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.channelId;
+      val var1: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var4: java.lang.String = this.buttonType;
       val var2: StringBuilder = new StringBuilder();
       var2.append("TapChannelPromptButtonData(messageId=");
-      var2.append(var3);
-      var2.append(", channelId=");
       var2.append(var1);
+      var2.append(", channelId=");
+      var2.append(var3);
       var2.append(", buttonType=");
       var2.append(var4);
       var2.append(")");

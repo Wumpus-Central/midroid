@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.Window
-import b4.b
 import com.discord.bundle_updater.BundleUpdater
 import com.discord.crash_reporting.CrashReporting
 import com.discord.jank_stats.JankStatsAggregator
@@ -21,8 +20,6 @@ import java.util.concurrent.Future
 import kotlin.jvm.internal.r
 
 public abstract class ReactActivity : com.facebook.react.ReactActivity {
-   internal final lateinit var rootView: ReactRootView
-
    @JvmStatic
    fun {
       r.g(MainActivity::class.java, "forName(...)");
@@ -54,7 +51,7 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public open fun onConfigurationChanged(newConfig: Configuration) {
       r.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
-      b.m.a(this, var1);
+      d4.b.m.a(this, var1);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
@@ -99,12 +96,11 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
          }
       }
 
-      protected open fun createRootView(): com.facebook.react.ReactRootView {
+      protected open fun createRootView(): com.facebook.react.ReactRootView? {
          val var1: Context = this.getContext();
          r.g(var1, "getContext(...)");
          val var2: ReactRootView = new ReactRootView(var1);
-         var2.setIsFabric(DefaultNewArchitectureEntryPoint.getFabricEnabled());
-         this.this$0.setRootView$react_activity_release(var2);
+         var2.setIsFabric(this.isFabricEnabled());
          return var2;
       }
 

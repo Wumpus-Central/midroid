@@ -1,7 +1,8 @@
 package com.discord.foreground_service.service
 
+import B9.s
 import D.d
-import D9.a
+import F9.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -16,7 +17,6 @@ import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
 import java.util.Comparator
 import kotlin.jvm.internal.r
-import z9.s
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -33,7 +33,7 @@ internal object ServiceNotification {
 
 
    private fun buildNotification(context: Context, serviceNotificationConfiguration: ServiceNotificationConfiguration): Notification {
-      var var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
+      val var4: NotificationCompat.Builder = new NotificationCompat.Builder(var1, "mediaConnections").x(var2.getTitle()).w(var2.getContent());
       val var3: ServiceNotificationConfiguration.Action = var2.getContentAction();
       val var6: PendingIntent;
       if (var3 != null) {
@@ -44,19 +44,19 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      var4 = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var5: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var5 : var2.getAuxiliaryActions()) {
-         var4.a(
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+         var5.a(
             0,
-            var5.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var5.getTag(), var5.getTaskName(), var5.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      return var4.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
+      return var5.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {

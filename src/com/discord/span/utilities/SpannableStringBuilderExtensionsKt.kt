@@ -4,7 +4,7 @@ import android.content.Context
 import android.text.SpannableStringBuilder
 import android.text.style.StrikethroughSpan
 import android.text.style.UnderlineSpan
-import g2.e
+import i2.e
 import kotlin.jvm.internal.r
 
 @JvmSynthetic
@@ -133,14 +133,14 @@ public inline fun SpannableStringBuilder.wrapIn(vararg spans: Any?, action: (Spa
    r.h(var0, "<this>");
    r.h(var1, "spans");
    r.h(var2, "action");
-   val var4: Int = var0.length();
+   val var5: Int = var0.length();
    var2.invoke(var0);
-   val var5: Int = var1.length;
+   val var4: Int = var1.length;
 
-   for (int var3 = 0; var3 < var5; var3++) {
+   for (int var3 = 0; var3 < var4; var3++) {
       val var6: Any = var1[var3];
       if (var1[var3] != null) {
-         var0.setSpan(var6, var4, var0.length(), 33);
+         var0.setSpan(var6, var5, var0.length(), 33);
       }
    }
 

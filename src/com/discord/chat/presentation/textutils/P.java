@@ -10,6 +10,6 @@ public final class P implements Function2 {
    public final DraweeSpanStringBuilder k;
 
    public final Object invoke(Object var1, Object var2) {
-      return TextUtilsKt.E(this.j, this.k, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
+      return TextUtilsKt.x(this.j, this.k, (DraweeSpanStringBuilder)var1, (RenderContext)var2);
    }
 }

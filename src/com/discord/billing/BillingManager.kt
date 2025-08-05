@@ -11,8 +11,8 @@ import com.discord.billing.types.QueryProductDetailsParams
 import com.discord.misc.utilities.backoff.ExponentialBackoff
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import ib.K
-import ib.U
+import kb.K
+import kb.U
 import kotlin.coroutines.Continuation
 import kotlin.enums.EnumEntries
 import kotlin.jvm.functions.Function0
@@ -205,7 +205,7 @@ internal class BillingManager(isProdBuild: Boolean,
             }
 
             public final Object invokeSuspend(Object var1) {
-               G9.b.e();
+               I9.b.e();
                if (this.label == 0) {
                   kotlin.c.b(var1);
                   val var2: BillingClient = BillingManager.access$getBillingClient$p(this.this$0);
@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.r.g(var2, "getProducts(...)");
 
-         for (java.lang.String var7 : var2) {
-            val var5: Function3 = this.onPurchaseUpdated;
-            val var4: java.lang.String = var1.i();
-            kotlin.jvm.internal.r.g(var4, "getPurchaseToken(...)");
-            val var6: java.lang.String = var1.e();
-            kotlin.jvm.internal.r.g(var6, "getPackageName(...)");
-            kotlin.jvm.internal.r.e(var7);
-            var5.invoke(var4, var6, var7);
+         for (java.lang.String var5 : var2) {
+            val var7: Function3 = this.onPurchaseUpdated;
+            val var6: java.lang.String = var1.i();
+            kotlin.jvm.internal.r.g(var6, "getPurchaseToken(...)");
+            val var3: java.lang.String = var1.e();
+            kotlin.jvm.internal.r.g(var3, "getPackageName(...)");
+            kotlin.jvm.internal.r.e(var5);
+            var7.invoke(var6, var3, var5);
          }
       }
    }
@@ -295,7 +295,7 @@ internal class BillingManager(isProdBuild: Boolean,
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
          val var7: CoroutineScope = this.getCoroutineScope(var5);
-         ib.f.d(
+         kb.f.d(
             var7,
             K.a(),
             null,
@@ -438,7 +438,7 @@ internal class BillingManager(isProdBuild: Boolean,
       fun {
          val var0: Array<BillingManager.ConnectionState> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = J9.a.a(var0);
       }
 
       init {

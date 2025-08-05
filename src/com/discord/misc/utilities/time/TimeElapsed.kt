@@ -1,10 +1,10 @@
 package com.discord.misc.utilities.time
 
+import B9.j
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
 import kotlin.jvm.internal.r
-import z9.j
 
 public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
    private final val startTime: Long
@@ -29,8 +29,8 @@ public data class TimeElapsed(startTime: Long = System.currentTimeMillis()) {
 
    init {
       this.startTime = var1;
-      this.durationMillis$delegate = j.a(new a(this));
-      this.duration$delegate = j.a(new b(this));
+      this.durationMillis$delegate = j.b(new a(this));
+      this.duration$delegate = j.b(new b(this));
    }
 
    private operator fun component1(): Long {

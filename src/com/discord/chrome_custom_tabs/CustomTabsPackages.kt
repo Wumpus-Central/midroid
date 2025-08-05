@@ -1,8 +1,8 @@
 package com.discord.chrome_custom_tabs
 
-import I1.a
-import I1.b
-import I1.c
+import J1.a
+import J1.b
+import J1.c
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ResolveInfo

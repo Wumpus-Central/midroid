@@ -132,7 +132,6 @@ public final class R {
       public static int button_container;
       public static int button_wrapper;
       public static int camera_button;
-      public static int card;
       public static int cause_header;
       public static int channel_bottom_barrier;
       public static int channel_icon;
@@ -276,7 +275,6 @@ public final class R {
       public static int item_invite_total_member_text;
       public static int item_subtitle;
       public static int item_title;
-      public static int join_cta;
       public static int json;
       public static int json_header;
       public static int jump_button;
@@ -553,7 +551,6 @@ public final class R {
       public static int thread_starter_message_header_view;
       public static int timestamp_view;
       public static int video_attachment_view;
-      public static int voice_invite_embed;
       public static int welcome_sticker_view;
 
       private layout() {

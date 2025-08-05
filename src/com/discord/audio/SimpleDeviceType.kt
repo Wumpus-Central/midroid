@@ -17,7 +17,7 @@ public enum class SimpleDeviceType {
    fun {
       val var0: Array<SimpleDeviceType> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = J9.a.a(var0);
    }
 
    @JvmStatic

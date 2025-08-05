@@ -1,5 +1,6 @@
 package com.discord.bundle_updater
 
+import B9.s
 import android.app.Activity
 import android.app.Application
 import android.view.View
@@ -13,7 +14,10 @@ import com.discord.main.MainActivity
 import com.discord.misc.utilities.activity.ActivityExtensionsKt
 import com.discord.reactevents.ReactEvents
 import com.discord.theme.ThemeManagerKt
+import com.facebook.react.ReactActivity
 import com.facebook.react.ReactApplication
+import com.facebook.react.ReactDelegate
+import com.facebook.react.ReactHost
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactNativeHost
 import com.facebook.react.bridge.JSBundleLoader
@@ -22,13 +26,15 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.WritableNativeMap
+import com.facebook.react.runtime.ReactHostImpl
+import com.facebook.react.runtime.internal.bolts.Task
 import com.jakewharton.processphoenix.ProcessPhoenix
 import java.io.File
 import java.lang.reflect.Field
+import java.lang.reflect.Method
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import z9.s
 
 public class BundleUpdaterManager(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactContext: ReactApplicationContext
@@ -43,58 +49,32 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    @JvmStatic
-   fun `addListener$lambda$5`(var0: BundleUpdaterManager, var1: Boolean): Unit {
+   fun `addListener$lambda$6`(var0: BundleUpdaterManager, var1: Boolean): Unit {
       var0.reactEvents.emitModuleEvent(var0.reactContext, new BundleDownloadedEvent(var1));
       return Unit.a;
    }
 
    @JvmStatic
-   fun `addListener$lambda$6`(var0: BundleUpdaterManager, var1: java.util.List): Unit {
+   fun `addListener$lambda$7`(var0: BundleUpdaterManager, var1: java.util.List): Unit {
       r.h(var1, "metrics");
       var0.reactEvents.emitModuleEvent(var0.reactContext, new OtaCheckAttemptEvent(var1));
       return Unit.a;
    }
 
    @JvmStatic
-   fun `checkForUpdateAndReload$lambda$2`(var0: BundleUpdaterManager): Unit {
+   fun `checkForUpdateAndReload$lambda$1`(var0: BundleUpdaterManager): Unit {
       var0.removeSpinnerView();
       var0.runOnActivity(new i(var0));
       return Unit.a;
    }
 
    @JvmStatic
-   fun `checkForUpdateAndReload$lambda$2$lambda$1`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+   fun `checkForUpdateAndReload$lambda$1$lambda$0`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
       r.h(var1, "$this$runOnActivity");
-      val var6: Activity = var0.reactContext.getCurrentActivity();
-      if (var6 != null) {
-         var var7: Application = var6.getApplication();
-         if (var7 != null) {
-            if (var7 !is ReactApplication) {
-               var7 = null;
-            }
-
-            val var8: ReactApplication = var7 as ReactApplication;
-            if (var7 as ReactApplication != null) {
-               val var9: ReactNativeHost = var8.getReactNativeHost();
-               if (var9 != null) {
-                  val var4: ReactInstanceManager = var9.getReactInstanceManager();
-                  if (var4 != null) {
-                     val var5: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
-                     var var10: java.lang.String = null;
-                     if (var5 != null) {
-                        val var11: File = var5.getLocation();
-                        var10 = null;
-                        if (var11 != null) {
-                           var10 = var11.getAbsolutePath();
-                        }
-                     }
-
-                     var0.setJSBundle(var4, var10);
-                     var4.recreateReactContextInBackground();
-                  }
-               }
-            }
-         }
+      if (var0.reactContext.isBridgeless()) {
+         var0.updateBridgeless();
+      } else {
+         var0.updateLegacy();
       }
 
       return Unit.a;
@@ -105,7 +85,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    @JvmStatic
-   fun `removeSpinnerView$lambda$11`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+   fun `removeSpinnerView$lambda$12`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
       r.h(var1, "$this$runOnActivity");
       if (var0.progressLayout != null) {
          var1.removeView(var0.progressLayout);
@@ -123,7 +103,7 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    @JvmStatic
-   fun `runOnActivity$lambda$13$lambda$12`(var0: Activity, var1: Function1) {
+   fun `runOnActivity$lambda$14$lambda$13`(var0: Activity, var1: Function1) {
       val var2: View = ActivityExtensionsKt.getRootView(var0);
       if (var2 != null) {
          var var3: View = var2;
@@ -185,10 +165,134 @@ public class BundleUpdaterManager(reactContext: ReactApplicationContext) : React
    }
 
    @JvmStatic
-   fun `showSpinnerView$lambda$9`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
+   fun `showSpinnerView$lambda$10`(var0: BundleUpdaterManager, var1: ViewGroup): Unit {
       r.h(var1, "$this$runOnActivity");
       var1.addView(var0.progressLayout);
       return Unit.a;
+   }
+
+   private fun updateBridgeless() {
+      val var2: Activity = this.reactContext.getCurrentActivity();
+      val var7: ReactActivity;
+      if (var2 is ReactActivity) {
+         var7 = var2 as ReactActivity;
+      } else {
+         var7 = null;
+      }
+
+      var var9: ReactHost;
+      label66: {
+         if (var7 != null) {
+            val var3: ReactDelegate = var7.getReactDelegate();
+            if (var3 != null) {
+               var9 = var3.getReactHost();
+               break label66;
+            }
+         }
+
+         var9 = null;
+      }
+
+      val var10: ReactHostImpl;
+      if (var9 is ReactHostImpl) {
+         var10 = var9 as ReactHostImpl;
+      } else {
+         var10 = null;
+      }
+
+      var var13: java.lang.String;
+      label60: {
+         val var4: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
+         if (var4 != null) {
+            val var12: File = var4.getLocation();
+            if (var12 != null) {
+               var13 = var12.getAbsolutePath();
+               break label60;
+            }
+         }
+
+         var13 = null;
+      }
+
+      label55: {
+         if (var13 != null) {
+            val var5: JSBundleLoader = JSBundleLoader.createFileLoader(var13);
+            var14 = var5;
+            if (var5 != null) {
+               break label55;
+            }
+         }
+
+         var14 = JSBundleLoader.createAssetLoader(this.getReactApplicationContext(), "assets://index.android.bundle", false);
+         r.g(var14, "createAssetLoader(...)");
+      }
+
+      val var16: Method;
+      if (var10 != null) {
+         var16 = var10.getClass().getDeclaredMethod("loadBundle", JSBundleLoader.class);
+      } else {
+         var16 = null;
+      }
+
+      if (var16 != null) {
+         var16.setAccessible(true);
+      }
+
+      if (var16 != null) {
+         var9 = (ReactHost)var16.invoke(var10, var14);
+      } else {
+         var9 = null;
+      }
+
+      var var15: Task = null;
+      if (var9 is Task) {
+         var15 = var9 as Task;
+      }
+
+      if (var15 != null) {
+         var15.waitForCompletion();
+      }
+
+      if (var7 != null) {
+         val var8: ReactDelegate = var7.getReactDelegate();
+         if (var8 != null) {
+            var8.reload();
+         }
+      }
+   }
+
+   private fun updateLegacy() {
+      val var2: Activity = this.reactContext.getCurrentActivity();
+      if (var2 != null) {
+         var var6: Application = var2.getApplication();
+         if (var6 != null) {
+            if (var6 !is ReactApplication) {
+               var6 = null;
+            }
+
+            val var7: ReactApplication = var6 as ReactApplication;
+            if (var6 as ReactApplication != null) {
+               val var8: ReactNativeHost = var7.getReactNativeHost();
+               if (var8 != null) {
+                  val var4: ReactInstanceManager = var8.getReactInstanceManager();
+                  if (var4 != null) {
+                     val var5: BundleUpdater.OtaBundle = BundleUpdater.Companion.instance().getBundle();
+                     var var9: java.lang.String = null;
+                     if (var5 != null) {
+                        val var10: File = var5.getLocation();
+                        var9 = null;
+                        if (var10 != null) {
+                           var9 = var10.getAbsolutePath();
+                        }
+                     }
+
+                     this.setJSBundle(var4, var9);
+                     var4.recreateReactContextInBackground();
+                  }
+               }
+            }
+         }
+      }
    }
 
    @ReactMethod

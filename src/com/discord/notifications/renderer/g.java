@@ -10,6 +10,6 @@ public final class g implements OnClickListener {
    public final DismissCallAction k;
 
    public final void onClick(View var1) {
-      <unrepresentable>.g(this.j, this.k, var1);
+      <unrepresentable>.f(this.j, this.k, var1);
    }
 }

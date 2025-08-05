@@ -1,5 +1,6 @@
 package com.discord.user_search_worker
 
+import B9.s
 import com.discord.reactevents.ReactEvents
 import com.discord.user_search_worker.react_events.ReturnResultsEvent
 import com.facebook.react.bridge.ReactApplicationContext
@@ -7,7 +8,6 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import z9.s
 
 public class UserSearchWorkerManagerModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
    private final val reactEvents: ReactEvents

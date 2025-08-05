@@ -8,6 +8,6 @@ public final class w implements Function1 {
    public final QuoteSpan j;
 
    public final Object invoke(Object var1) {
-      return TextUtilsKt.m(this.j, (RenderContext.Insets)var1);
+      return TextUtilsKt.u(this.j, (RenderContext.Insets)var1);
    }
 }

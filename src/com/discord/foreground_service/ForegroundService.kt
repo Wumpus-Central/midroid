@@ -1,30 +1,25 @@
 package com.discord.foreground_service
 
-import K1.a
+import L1.a
 import android.app.Service
 import android.content.Context
 import android.content.Intent
-import android.os.IBinder
 import com.discord.foreground_service.service.ServiceNotification
 import com.discord.foreground_service.utils.ForegroundServiceUtilsKt
 import com.discord.misc.utilities.threading.ThreadUtilsKt
 import kotlin.jvm.internal.r
 
 internal class ForegroundService : Service {
-   public open fun onBind(intent: Intent?): IBinder? {
-      return null;
-   }
-
-   public open fun onCreate() {
-      ForegroundServiceManager.Companion.getInstance().onServiceCreated$foreground_service_release(this);
+   public open fun onBind(intent: Intent?): Nothing {
+      throw new IllegalStateException("bindService is not supported. Use startForegroundServiceCompat");
    }
 
    public open fun onDestroy() {
-      ForegroundServiceManager.Companion.getInstance().onServiceDisconnected$foreground_service_release();
+      ForegroundServiceManager.Companion.getInstance().onServiceDestroyed$foreground_service_release();
    }
 
    public open fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
-      ForegroundServiceManager.Companion.getInstance().onServiceConnected$foreground_service_release(this);
+      ForegroundServiceManager.Companion.getInstance().onServiceCreatedOrUpdated$foreground_service_release(this);
       return super.onStartCommand(var1, var2, var3);
    }
 
@@ -42,16 +37,9 @@ internal class ForegroundService : Service {
          ForegroundService.Companion.stopInternal(var0, var1);
       }
 
-      private fun stopInternal(context: Context, service: Service?) {
-         if (var2 != null) {
-            var2.stopForeground(1);
-         }
-
-         if (var2 != null) {
-            var2.stopSelf();
-         }
-
-         var1.stopService(this.getServiceIntent(var1));
+      private fun stopInternal(context: Context, service: Service) {
+         var2.stopForeground(1);
+         var2.stopSelf();
          ServiceNotification.INSTANCE.clearNotifications(var1);
       }
 
@@ -67,8 +55,9 @@ internal class ForegroundService : Service {
          }
       }
 
-      public fun stop(context: Context, service: Service?) {
+      public fun stop(context: Context, service: Service) {
          r.h(var1, "context");
+         r.h(var2, "service");
          val var3: Long = System.currentTimeMillis() - ForegroundService.access$getLastServiceStartTime$cp();
          if (var3 > 3000L) {
             this.stopInternal(var1, var2);

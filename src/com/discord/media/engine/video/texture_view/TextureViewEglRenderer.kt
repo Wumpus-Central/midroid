@@ -171,14 +171,14 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
    public open fun onSurfaceTextureAvailable(surface: SurfaceTexture, width: Int, height: Int) {
       r.h(var1, "surface");
       if (ThreadUtilsKt.isOnMainThread()) {
-         val var9: Log = Log.INSTANCE;
-         val var5: java.lang.String = access$getName(this);
+         val var5: Log = Log.INSTANCE;
+         val var6: java.lang.String = access$getName(this);
          var2 = access$getCount$cp().incrementAndGet();
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("createEglSurface (");
-         var6.append(var2);
-         var6.append(" total)");
-         Log.i$default(var9, var5, var6.toString(), null, 4, null);
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("createEglSurface (");
+         var9.append(var2);
+         var9.append(" total)");
+         Log.i$default(var5, var6, var9.toString(), null, 4, null);
          this.createEglSurface(var1);
       } else {
          val var7: Thread = Thread.currentThread();
@@ -207,8 +207,8 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          });
          ThreadUtils.awaitUninterruptibly(var10, java.lang.Long.MAX_VALUE);
          val var5: Long = System.currentTimeMillis();
-         val var12: Log = Log.INSTANCE;
-         val var11: java.lang.String = access$getName(this);
+         val var11: Log = Log.INSTANCE;
+         val var12: java.lang.String = access$getName(this);
          val var2: Int = access$getCount$cp().decrementAndGet();
          val var8: StringBuilder = new StringBuilder();
          var8.append("releaseEglSurface (");
@@ -216,7 +216,7 @@ internal class TextureViewEglRenderer(name: String) : EglRenderer, SurfaceTextur
          var8.append(" ms) (");
          var8.append(var2);
          var8.append(" total)");
-         Log.i$default(var12, var11, var8.toString(), null, 4, null);
+         Log.i$default(var11, var12, var8.toString(), null, 4, null);
          return true;
       } else {
          val var9: Thread = Thread.currentThread();

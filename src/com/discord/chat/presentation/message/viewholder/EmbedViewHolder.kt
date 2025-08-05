@@ -46,23 +46,23 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          var11 = true;
       }
 
-      val var31: EmbedView = this.embedView;
-      val var28: Embed = var2.getEmbed();
-      val var13: Long = var2.getChannelId-o4g7jtM();
+      val var27: EmbedView = this.embedView;
+      val var29: Embed = var2.getEmbed();
+      val var20: Long = var2.getChannelId-o4g7jtM();
       val var24: java.lang.String = var2.getMessageId-3Eiw7ao();
       val var12: Int = var2.getConstrainedWidth();
-      val var15: Boolean;
+      val var13: Boolean;
       if (var2.getShouldAutoPlayGifs() && var11) {
-         var15 = true;
+         var13 = true;
       } else {
-         var15 = false;
+         var13 = false;
       }
 
-      val var18: Boolean = var2.getShouldAnimateEmoji();
-      val var19: Boolean = var2.getShouldShowLinkDecorations();
-      val var21: Boolean = var2.getShouldShowRoleDot();
-      val var20: Boolean = var2.getShouldShowRoleOnName();
-      val var26: Function3 = new Function3(var1) {
+      val var19: Boolean = var2.getShouldAnimateEmoji();
+      val var17: Boolean = var2.getShouldShowLinkDecorations();
+      val var16: Boolean = var2.getShouldShowRoleDot();
+      val var18: Boolean = var2.getShouldShowRoleOnName();
+      val var32: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -73,7 +73,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var35: Function3 = new Function3(var1) {
+      val var30: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onLinkClicked", "onLinkClicked-u7_MRrM(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -84,7 +84,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-u7_MRrM(var1, var2, var3);
          }
       };
-      val var25: Function2 = new Function2(var1) {
+      val var26: Function2 = new Function2(var1) {
          {
             super(
                2,
@@ -102,7 +102,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkClicked-ntcYbpo(var1, var2);
          }
       };
-      val var29: Function1 = new Function1(var1) {
+      val var28: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
          }
@@ -112,7 +112,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onLinkLongClicked(var1);
          }
       };
-      val var32: Function1 = new Function1(var1) {
+      val var23: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapCopyText", "onTapCopyText(Ljava/lang/CharSequence;)V", 0);
          }
@@ -122,7 +122,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapCopyText(var1);
          }
       };
-      val var30: Function1 = new Function1(var1) {
+      val var31: Function1 = new Function1(var1) {
          {
             super(1, var1, ChatEventHandler::class.java, "onTapEmoji", "onTapEmoji(Lcom/discord/chat/bridge/contentnode/EmojiContentNode;)V", 0);
          }
@@ -132,7 +132,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapEmoji(var1);
          }
       };
-      val var23: Function3 = new Function3(var1) {
+      val var25: Function3 = new Function3(var1) {
          {
             super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -142,7 +142,7 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
             (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
          }
       };
-      val var27: Function4 = new Function4(var1) {
+      val var35: Function4 = new Function4(var1) {
          {
             super(
                4,
@@ -170,50 +170,50 @@ public class EmbedViewHolder(embedView: EmbedView) : MessagePartViewHolder {
          }
       };
       var var33: java.lang.Boolean = var2.getEmbed().getObscureIsOpaque();
-      val var16: Boolean;
+      val var14: Boolean;
       if (var33 != null) {
-         var16 = var33;
+         var14 = var33;
       } else {
-         var16 = false;
+         var14 = false;
       }
 
       var33 = var2.getEmbed().getObscureHideControls();
-      val var17: Boolean;
+      val var15: Boolean;
       if (var33 != null) {
-         var17 = var33;
+         var15 = var33;
       } else {
-         var17 = false;
+         var15 = false;
       }
 
-      var31.setEmbed-0qg1u9A(
-         var28,
-         var13,
+      var27.setEmbed-0qg1u9A(
+         var29,
+         var20,
          var24,
          var12,
          var3,
          var4,
-         var15,
-         var18,
+         var13,
          var19,
-         var21,
-         var20,
-         var26,
-         var35,
+         var17,
+         var16,
+         var18,
+         var32,
+         var30,
          var7,
          var8,
-         var25,
-         var29,
-         var32,
-         var5,
-         var30,
+         var26,
+         var28,
          var23,
-         var27,
+         var5,
+         var31,
+         var25,
+         var35,
          var34,
          var6,
          var9,
          var11 xor true,
-         var17,
-         var16,
+         var15,
+         var14,
          var2.isForwardedContent()
       );
    }

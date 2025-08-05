@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import A9.n
+import C9.n
 import com.facebook.react.bridge.ReadableArray
 import com.facebook.react.bridge.ReadableMap
 import com.facebook.react.bridge.ReadableNativeArray
@@ -195,7 +195,7 @@ public fun ReadableArray.toJson(): JSONArray {
             var3.put(toJson(var5));
             break;
          default:
-            throw new z9.n();
+            throw new B9.n();
       }
    }
 

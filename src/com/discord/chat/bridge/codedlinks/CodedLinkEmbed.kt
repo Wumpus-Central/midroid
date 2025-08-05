@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.codedlinks
 
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g(with = CodedLinkSerializer::class)
 public sealed class CodedLinkEmbed protected constructor() {

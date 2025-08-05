@@ -1,8 +1,9 @@
 package com.discord.core
 
-import A9.q
-import G9.b
-import H2.d
+import B9.s
+import C9.q
+import I9.b
+import J2.d
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -25,14 +26,13 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import ib.K
-import ib.d0
-import ib.f
+import kb.K
+import kb.d0
+import kb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
-import z9.s
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView
@@ -135,8 +135,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            4,
                            null
                         );
-                        var1 = K.c();
-                        val var6: Function2 = new Function2(this.this$0, this.$uri, null) {
+                        val var6: d0 = K.c();
+                        var1 = new Function2(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -170,7 +170,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        return if (f.g(var1, var6, this) != var5) Unit.a else var5;
+                        return if (f.g(var6, var1, this) != var5) Unit.a else var5;
                      }
                   } else if (this.label != 2) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -180,10 +180,10 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
                } else {
                   c.b(var1);
-                  var var22: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
-                  val var3: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
-                  if (var22 != 0 && var3 != 0) {
-                     var1 = new Size(var22, var3);
+                  val var3: Int = SizeUtilsKt.getDpToPx(this.$widthDp);
+                  var var22: Int = SizeUtilsKt.getDpToPx(this.$heightDp);
+                  if (var3 != 0 && var22 != 0) {
+                     var1 = new Size(var3, var22);
                   } else {
                      var1 = new Size(200, 200);
                   }
@@ -203,8 +203,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            4,
                            null
                         );
-                        val var15: d0 = K.c();
-                        val var24: Function2 = new Function2(this.this$0, this.$uri, null) {
+                        val var24: d0 = K.c();
+                        val var15: Function2 = new Function2(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -238,7 +238,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var15, var24, this) != var5) {
+                        if (f.g(var24, var15, this) != var5) {
                            return Unit.a;
                         }
 
@@ -259,8 +259,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            4,
                            null
                         );
-                        val var16: d0 = K.c();
-                        val var25: Function2 = new Function2(this.this$0, this.$uri, null) {
+                        val var25: d0 = K.c();
+                        val var16: Function2 = new Function2(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -294,7 +294,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var16, var25, this) != var5) {
+                        if (f.g(var25, var16, this) != var5) {
                            return Unit.a;
                         }
 
@@ -314,8 +314,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            4,
                            null
                         );
-                        val var19: d0 = K.c();
-                        val var27: Function2 = new Function2(this.this$0, this.$uri, null) {
+                        val var27: d0 = K.c();
+                        val var19: Function2 = new Function2(this.this$0, this.$uri, null) {
                            final Uri $uri;
                            int label;
                            final LocalImageThumbnailView this$0;
@@ -349,7 +349,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                            }
                         };
                         this.label = 2;
-                        if (f.g(var19, var27, this) != var5) {
+                        if (f.g(var27, var19, this) != var5) {
                            return Unit.a;
                         }
 
@@ -367,8 +367,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                   }
 
                   try {
-                     val var7: d0 = K.c();
-                     val var29: Function2 = new Function2(this.this$0, var4, this.$uri, var1, null) {
+                     val var29: d0 = K.c();
+                     val var7: Function2 = new Function2(this.this$0, var4, this.$uri, var1, null) {
                         final Bitmap $bitmap;
                         final boolean $isBitmapEmpty;
                         final Uri $uri;
@@ -411,7 +411,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 1;
-                     var1 = f.g(var7, var29, this);
+                     var1 = f.g(var29, var7, this);
                   } catch (var9: Exception) {
                      CrashReporting.addBreadcrumb$default(
                         CrashReporting.INSTANCE,
@@ -421,8 +421,8 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         4,
                         null
                      );
-                     val var20: d0 = K.c();
-                     val var28: Function2 = new Function2(this.this$0, this.$uri, null) {
+                     val var28: d0 = K.c();
+                     val var20: Function2 = new Function2(this.this$0, this.$uri, null) {
                         final Uri $uri;
                         int label;
                         final LocalImageThumbnailView this$0;
@@ -456,7 +456,7 @@ public class LocalImageThumbnailView  public constructor(context: Context, attrs
                         }
                      };
                      this.label = 2;
-                     if (f.g(var20, var28, this) != var5) {
+                     if (f.g(var28, var20, this) != var5) {
                         return Unit.a;
                      }
 

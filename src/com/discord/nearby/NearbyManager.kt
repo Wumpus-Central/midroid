@@ -5,11 +5,11 @@ import com.google.android.gms.nearby.messages.Message
 import com.google.android.gms.nearby.messages.SubscribeOptions
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.r
-import o6.d
-import o6.h
-import o6.i
+import q6.d
+import q6.h
+import q6.i
 
-internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : o6.b {
+internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String) -> Unit, onError: (String) -> Unit) : q6.b {
    private final val onFoundUser: (String) -> Unit
    private final val onLostUser: (String) -> Unit
    private final val onError: (String) -> Unit
@@ -46,16 +46,16 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
 
    public fun disableNearby(context: Context) {
       r.h(var1, "context");
-      val var3: d = l6.a.a(var1);
-      var3.d(this.statusCallback);
+      val var3: d = n6.a.a(var1);
+      var3.m(this.statusCallback);
       var var4: Message = this.outboundMessage;
       if (this.outboundMessage == null) {
          r.y("outboundMessage");
          var4 = null;
       }
 
-      var3.e(var4);
-      var3.g(this);
+      var3.b(var4);
+      var3.h(this);
    }
 
    public fun enableNearby(context: Context) {
@@ -66,10 +66,10 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
          var2 = null;
       }
 
-      val var4: d = l6.a.a(var1);
-      var4.h(this.statusCallback);
+      val var4: d = n6.a.a(var1);
+      var4.f(this.statusCallback);
       var4.j(var2);
-      var4.i(this, this.subscribeOptions);
+      var4.k(this, this.subscribeOptions);
    }
 
    public open fun onFound(message: Message) {
@@ -78,7 +78,7 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       val var2: Function1 = this.onFoundUser;
       val var3: ByteArray = var1.p();
       r.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, gb.a.b));
+      var2.invoke(new java.lang.String(var3, ib.a.b));
    }
 
    public open fun onLost(message: Message) {
@@ -87,12 +87,12 @@ internal class NearbyManager(onFoundUser: (String) -> Unit, onLostUser: (String)
       val var2: Function1 = this.onLostUser;
       val var3: ByteArray = var1.p();
       r.g(var3, "getContent(...)");
-      var2.invoke(new java.lang.String(var3, gb.a.b));
+      var2.invoke(new java.lang.String(var3, ib.a.b));
    }
 
    public fun setOutboundMessage(message: String) {
       r.h(var1, "message");
-      val var2: ByteArray = var1.getBytes(gb.a.b);
+      val var2: ByteArray = var1.getBytes(ib.a.b);
       r.g(var2, "getBytes(...)");
       this.outboundMessage = new Message(var2);
    }

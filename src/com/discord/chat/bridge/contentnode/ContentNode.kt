@@ -1,7 +1,7 @@
 package com.discord.chat.bridge.contentnode
 
 import kotlinx.serialization.KSerializer
-import sb.g
+import ub.g
 
 @g(with = ContentNodeSerializer::class)
 public sealed class ContentNode protected constructor() {

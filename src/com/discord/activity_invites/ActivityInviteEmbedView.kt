@@ -1,6 +1,10 @@
 package com.discord.activity_invites
 
-import H2.d
+import B2.f
+import B9.j
+import B9.m
+import B9.n
+import J2.d
 import android.content.Context
 import android.content.res.ColorStateList
 import android.util.AttributeSet
@@ -28,10 +32,6 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder
 import com.facebook.imagepipeline.request.Postprocessor
 import java.util.ArrayList
 import kotlin.jvm.internal.r
-import z2.f
-import z9.j
-import z9.m
-import z9.n
 
 public class ActivityInviteEmbedView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : ConstraintLayout {
    private final val binding: ActivityInviteEmbedViewBinding
@@ -58,7 +58,7 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       val var5: ActivityInviteEmbedViewBinding = ActivityInviteEmbedViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var5, "inflate(...)");
       this.binding = var5;
-      this.grayscalePostprocessor$delegate = j.b(m.l, new com.discord.activity_invites.a());
+      this.grayscalePostprocessor$delegate = j.a(m.l, new com.discord.activity_invites.a());
       this.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
       ViewClippingUtilsKt.clipToRoundedRectangle(this, SizeUtilsKt.getDpToPx(8));
       val var6: SimpleDraweeView = var5.startImage;
@@ -177,15 +177,15 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
       }
 
       var5.setVisibility(var2);
-      val var4: OverlappingCirclesView = this.binding.avatars;
-      val var6: ArrayList = new ArrayList(i.v(var3, 10));
+      val var6: OverlappingCirclesView = this.binding.avatars;
+      val var4: ArrayList = new ArrayList(i.v(var3, 10));
       val var7: java.util.Iterator = var3.iterator();
 
       while (var7.hasNext()) {
-         var6.add(new OverlappingItem(var7.next() as java.lang.String));
+         var4.add(new OverlappingItem(var7.next() as java.lang.String));
       }
 
-      var4.setItems(var6);
+      var6.setItems(var4);
    }
 
    private fun setBottomEndLabel(text: CharSequence?, color: Int) {
@@ -373,18 +373,18 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var4: java.lang.String = this.uri;
+            val var3: java.lang.String = this.uri;
             val var2: Boolean = this.fullSize;
             val var1: Boolean = this.grayscale;
-            val var3: StringBuilder = new StringBuilder();
-            var3.append("End(uri=");
-            var3.append(var4);
-            var3.append(", fullSize=");
-            var3.append(var2);
-            var3.append(", grayscale=");
-            var3.append(var1);
-            var3.append(")");
-            return var3.toString();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append("End(uri=");
+            var4.append(var3);
+            var4.append(", fullSize=");
+            var4.append(var2);
+            var4.append(", grayscale=");
+            var4.append(var1);
+            var4.append(")");
+            return var4.toString();
          }
       }
 
@@ -423,12 +423,12 @@ public class ActivityInviteEmbedView  public constructor(context: Context, attrs
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.uri;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Start(uri=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: java.lang.String = this.uri;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Start(uri=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

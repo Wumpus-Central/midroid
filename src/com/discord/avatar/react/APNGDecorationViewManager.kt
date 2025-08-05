@@ -1,5 +1,6 @@
 package com.discord.avatar.react
 
+import B9.s
 import com.discord.avatar.decoration.DecorationView
 import com.discord.avatar.react.events.OnImageLoadedEvent
 import com.discord.image.animated_image.apng.APNGImageView
@@ -12,7 +13,6 @@ import com.facebook.react.viewmanagers.APNGDecorationViewManagerDelegate
 import com.facebook.react.viewmanagers.APNGDecorationViewManagerInterface
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import z9.s
 
 @ReactModule(name = "APNGDecorationView")
 internal class APNGDecorationViewManager : SimpleViewManager<DecorationView>, APNGDecorationViewManagerInterface<DecorationView> {

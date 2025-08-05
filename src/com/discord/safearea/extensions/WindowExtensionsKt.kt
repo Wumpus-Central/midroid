@@ -7,6 +7,6 @@ import kotlin.jvm.internal.r
 internal fun Window.setSystemUITransparent() {
    r.h(var0, "<this>");
    if (VERSION.SDK_INT >= 29) {
-      e2.a.a(var0, false);
+      g2.a.a(var0, false);
    }
 }

@@ -1,6 +1,6 @@
 package com.discord.thumbhash
 
-import H2.d
+import J2.d
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri

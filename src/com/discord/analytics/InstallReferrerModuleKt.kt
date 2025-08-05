@@ -1,6 +1,6 @@
 package com.discord.analytics
 
-import G9.b
+import I9.b
 import com.android.installreferrer.api.InstallReferrerClient
 import e1.a
 import kotlin.coroutines.Continuation
@@ -36,7 +36,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.f(
+   var2.h(
       new Function1(var0) {
          final InstallReferrerClient $this_await;
 

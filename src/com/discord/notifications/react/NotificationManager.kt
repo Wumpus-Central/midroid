@@ -27,17 +27,9 @@ public class NotificationManager(reactContext: ReactApplicationContext) : ReactC
 
    @ReactMethod
    public fun setShowFullscreenCallUI(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.setShowFullscreenCallUI(var2, var1);
    }
 
    @ReactMethod
    public fun setShowMissedCallNotifications(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.setShowMissedCallNotifications(var2, var1);
    }
 }

@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import com.discord.bundle_updater.BundleUpdater
+import com.discord.deep_link.DeepLinkPreprocessor
 import com.discord.external_pip.ExternalPipModule
 import com.discord.foreground_service.ForegroundServiceManager
 import com.discord.notifications.client.NotificationClient
@@ -18,7 +19,7 @@ import kotlin.jvm.internal.r
 public class MainActivity : ReactActivity {
    @SuppressLint(["VisibleForTests"])
    private fun currentReactContext(): ReactContext? {
-      return this.getReactInstanceManager().getCurrentReactContext();
+      return this.getReactActivityDelegate().getCurrentReactContext();
    }
 
    public override fun getActivityDelegate(): ActivityDelegate {
@@ -31,11 +32,12 @@ public class MainActivity : ReactActivity {
          }
 
          private final void parseIntent(Intent var1) {
+            new DeepLinkPreprocessor().handleAndUpdateIntent(var1);
             val var2: NotificationClient = NotificationClient.Companion.getInstance();
             val var3: Context = this.getContext();
             r.g(var3, "getContext(...)");
             var2.handleIntent(var3, var1);
-            val var5: ForegroundServiceManager = ForegroundServiceManager.Companion.getInstance();
+            val var5: ForegroundServiceManager.Companion = ForegroundServiceManager.Companion;
             val var4: Context = this.getContext();
             r.g(var4, "getContext(...)");
             var5.handleIntent(var4, var1);
