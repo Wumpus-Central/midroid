@@ -53,13 +53,13 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.tag;
-      val var3: java.util.Map = this.data;
+      val var3: java.lang.String = this.tag;
+      val var1: java.util.Map = this.data;
       val var2: StringBuilder = new StringBuilder();
       var2.append("ShortcutData(tag=");
-      var2.append(var1);
-      var2.append(", data=");
       var2.append(var3);
+      var2.append(", data=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }
@@ -75,19 +75,19 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          r.h(var3, "clazz");
          r.h(var4, "tag");
          r.h(var5, "data");
-         val var8: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
-         val var6: java.util.List = i.c();
+         val var6: Intent = new Intent(var2, null, var1, var3).putExtra("discord_shortcut", true).putExtra("discord_shortcut_tag", var4);
+         val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
             var4 = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var6.add(var4);
-               var6.add(var13);
+               var8.add(var4);
+               var8.add(var13);
             }
          }
 
-         val var7: Intent = var8.putExtra("discord_shortcut_data", i.a(var6).toArray(new java.lang.String[0]));
+         val var7: Intent = var6.putExtra("discord_shortcut_data", i.a(var8).toArray(new java.lang.String[0]));
          r.g(var7, "putExtra(...)");
          return var7;
       }

@@ -110,27 +110,27 @@ public data class SafetyPolicyNoticeEmbed(classificationId: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.classificationId;
-      val var7: java.lang.String = this.titleText;
-      val var1: java.lang.String = this.titleIcon;
-      val var2: java.lang.String = this.subtitleText;
-      val var6: java.lang.String = this.descriptionText;
-      val var3: java.lang.String = this.ctaText;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("SafetyPolicyNoticeEmbed(classificationId=");
-      var4.append(var5);
-      var4.append(", titleText=");
-      var4.append(var7);
-      var4.append(", titleIcon=");
-      var4.append(var1);
-      var4.append(", subtitleText=");
-      var4.append(var2);
-      var4.append(", descriptionText=");
-      var4.append(var6);
-      var4.append(", ctaText=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var2: java.lang.String = this.classificationId;
+      val var4: java.lang.String = this.titleText;
+      val var6: java.lang.String = this.titleIcon;
+      val var7: java.lang.String = this.subtitleText;
+      val var3: java.lang.String = this.descriptionText;
+      val var5: java.lang.String = this.ctaText;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("SafetyPolicyNoticeEmbed(classificationId=");
+      var1.append(var2);
+      var1.append(", titleText=");
+      var1.append(var4);
+      var1.append(", titleIcon=");
+      var1.append(var6);
+      var1.append(", subtitleText=");
+      var1.append(var7);
+      var1.append(", descriptionText=");
+      var1.append(var3);
+      var1.append(", ctaText=");
+      var1.append(var5);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

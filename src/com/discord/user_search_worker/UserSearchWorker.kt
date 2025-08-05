@@ -203,10 +203,10 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
 
       for (Entry var23 : this.queries.entrySet()) {
          val var20: java.lang.String = var23.getKey() as java.lang.String;
-         val var28: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
-         val var24: UserSearchQuerySetFilters = var28.getFilters();
-         if (var24 == null || r.c(var24.getFriends(), var2) || var24.getGuild() != null && var8.contains(var24.getGuild())) {
-            this.searchUsers(var20, var28);
+         val var24: UserSearchQuerySetPayload = var23.getValue() as UserSearchQuerySetPayload;
+         val var28: UserSearchQuerySetFilters = var24.getFilters();
+         if (var28 == null || r.c(var28.getFriends(), var2) || var28.getGuild() != null && var8.contains(var28.getGuild())) {
+            this.searchUsers(var20, var24);
          }
       }
    }
@@ -262,8 +262,8 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                   val var29: java.util.List;
                   if (var7) {
                      var10 = var26.getUsername();
-                     val var18: java.lang.String = var26.getGlobalName();
-                     val var11: java.lang.String = var26.getFriendNickname();
+                     val var11: java.lang.String = var26.getGlobalName();
+                     val var18: java.lang.String = var26.getFriendNickname();
                      val var19: java.util.Map = var26.getNicknames();
                      val var27: UserSearchQuerySetFilters = var2.getFilters();
                      val var28: java.lang.String;
@@ -273,7 +273,7 @@ internal class UserSearchWorker(onResults: (List<UserSearchWorkerResult>, String
                         var28 = null;
                      }
 
-                     var29 = i.n(new java.lang.String[]{var10, var18, var11, (java.lang.String)var19.get(var28)});
+                     var29 = i.n(new java.lang.String[]{var10, var11, var18, (java.lang.String)var19.get(var28)});
                   } else {
                      if (var7) {
                         throw new n();

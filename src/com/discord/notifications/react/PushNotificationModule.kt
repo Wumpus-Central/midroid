@@ -120,10 +120,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun getLightsEnabled(promise: Promise) {
       r.h(var1, "promise");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(var3.isLightsEnabled(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var1.resolve(var2.isLightsEnabled(var3));
    }
 
    public open fun getName(): String {
@@ -133,10 +133,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
    @ReactMethod
    public fun getSoundsEnabled(promise: Promise) {
       r.h(var1, "promise");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var1.resolve(var3.isSoundsEnabled(var2));
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var1.resolve(var2.isSoundsEnabled(var3));
    }
 
    @ReactMethod
@@ -230,26 +230,26 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setCurrentUser(username: String?, userId: String?) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var4: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var4, "getReactApplicationContext(...)");
-      var3.setCurrentUser(var4, var1, var2);
+      val var4: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var4.setCurrentUser(var3, var1, var2);
    }
 
    @ReactMethod
    public fun setLightsEnabled(enabled: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.setLightsEnabled(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var2.setLightsEnabled(var3, var1);
    }
 
    @ReactMethod
    public fun setNotifyEveryTime(notifyEveryTime: Boolean) {
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.setNotifyEveryTime(var2, var1);
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var2.setNotifyEveryTime(var3, var1);
    }
 
    @ReactMethod
@@ -262,10 +262,10 @@ public class PushNotificationModule(reactContext: ReactApplicationContext) : Rea
 
    @ReactMethod
    public fun setVibrationsEnabled(enabled: Boolean) {
-      val var2: NotificationClient = NotificationClient.Companion.getInstance();
-      val var3: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var3, "getReactApplicationContext(...)");
-      var2.setVibrationsEnabled(var3, var1);
+      val var3: NotificationClient = NotificationClient.Companion.getInstance();
+      val var2: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var2, "getReactApplicationContext(...)");
+      var3.setVibrationsEnabled(var2, var1);
    }
 
    @ReactMethod

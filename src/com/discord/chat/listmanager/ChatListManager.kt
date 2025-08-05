@@ -188,10 +188,10 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
                c.b(var1);
             } else {
                c.b(var1);
-               val var4: MutableSharedFlow = ChatListManager.access$getUpdatesFlow$p(this.this$0);
-               var1 = this.$update;
+               var1 = ChatListManager.access$getUpdatesFlow$p(this.this$0);
+               val var4: ChatListUpdate = this.$update;
                this.label = 1;
-               if (var4.emit(var1, this) === var3) {
+               if (var1.emit(var4, this) === var3) {
                   return var3;
                }
             }
@@ -217,9 +217,9 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
          val var11: BlockedGroupRow = var1 as BlockedGroupRow;
          val var8: java.lang.String = (var1 as BlockedGroupRow).getText();
          val var7: java.lang.String = (var1 as BlockedGroupRow).getButton().getAction().getContext();
-         val var2: Int = var11.getColor();
+         val var3: Int = var11.getColor();
          val var4: Int = var11.getBackgroundColor();
-         val var3: Int = var11.getBorderColor();
+         val var2: Int = var11.getBorderColor();
          val var5: Boolean = var11.getRevealed();
          val var6: java.util.List = var11.getContent();
          var var12: java.util.List = var6;
@@ -246,7 +246,7 @@ public class ChatListManager(coroutineScope: CoroutineScope) {
             );
          }
 
-         var9 = new BlockedGroupChatListItem(var8, var7, var2, var4, var3, var5, i.O(var14));
+         var9 = new BlockedGroupChatListItem(var8, var7, var3, var4, var2, var5, i.O(var14));
       }
 
       return (ChatListItem)var9;

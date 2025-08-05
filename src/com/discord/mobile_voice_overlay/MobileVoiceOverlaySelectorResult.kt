@@ -85,23 +85,23 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
 
    public override fun toString(): String {
       val var3: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var4: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var1: java.lang.String = this.channelName;
-      val var5: java.lang.String = this.guildName;
-      val var6: java.lang.String = this.categoryName;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var2.append(var3);
-      var2.append(", channelId=");
-      var2.append(var4);
-      var2.append(", channelName=");
-      var2.append(var1);
-      var2.append(", guildName=");
-      var2.append(var5);
-      var2.append(", categoryName=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var5: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var6: java.lang.String = this.channelName;
+      val var2: java.lang.String = this.guildName;
+      val var1: java.lang.String = this.categoryName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var4.append(var3);
+      var4.append(", channelId=");
+      var4.append(var5);
+      var4.append(", channelName=");
+      var4.append(var6);
+      var4.append(", guildName=");
+      var4.append(var2);
+      var4.append(", categoryName=");
+      var4.append(var1);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

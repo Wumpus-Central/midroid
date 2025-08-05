@@ -65,8 +65,8 @@ public class ActivityRichPresenceInviteEmbedView  public constructor(context: Co
          var2.setVisibility(0);
          val var7: ArrayList = new ArrayList(i.v(var1, 10));
 
-         for (RGBAColorModel var5 : var1) {
-            var7.add(Color.argb((int)(var5.getA() * (float)255), (int)var5.getR(), (int)var5.getG(), (int)var5.getB()));
+         for (RGBAColorModel var3 : var1) {
+            var7.add(Color.argb((int)(var3.getA() * (float)255), (int)var3.getR(), (int)var3.getG(), (int)var3.getB()));
          }
 
          val var6: IntArray = i.T0(var7);

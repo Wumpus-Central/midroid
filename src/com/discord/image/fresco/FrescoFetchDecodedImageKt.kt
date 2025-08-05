@@ -47,11 +47,13 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$copyBitmap = var2;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             r.h(var1, "dataSource");
             this.$continuation.resumeWith(Result.b(null));
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             val var2: a = Result.k;
             var var4: Bitmap = var1;
@@ -124,11 +126,13 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
             this.$onDecodedImage = var1;
          }
 
+         @Override
          protected void onFailureImpl(DataSource var1) {
             r.h(var1, "dataSource");
             this.$onDecodedImage.invoke(null);
          }
 
+         @Override
          protected void onNewResultImpl(Bitmap var1) {
             this.$onDecodedImage.invoke(var1);
          }

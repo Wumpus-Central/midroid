@@ -85,19 +85,19 @@ public data class TapInviteEvent(messageId: String, index: Int, primary: Boolean
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.messageId;
       val var1: Int = this.index;
       val var5: java.lang.Boolean = this.primary;
-      val var2: java.lang.Boolean = this.secondary;
+      val var3: java.lang.Boolean = this.secondary;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapInviteEvent(messageId=");
-      var4.append(var3);
+      var4.append(var2);
       var4.append(", index=");
       var4.append(var1);
       var4.append(", primary=");
       var4.append(var5);
       var4.append(", secondary=");
-      var4.append(var2);
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

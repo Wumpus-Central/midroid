@@ -168,8 +168,8 @@ public data class FlaggedMessageEmbed(id: MessageId,
    }
 
    public override fun hashCode(): Int {
-      val var9: Int = MessageId.hashCode-impl(this.id);
-      val var10: Int = ChannelId.hashCode-impl(this.channelId);
+      val var10: Int = MessageId.hashCode-impl(this.id);
+      val var9: Int = ChannelId.hashCode-impl(this.channelId);
       var var8: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -226,51 +226,51 @@ public data class FlaggedMessageEmbed(id: MessageId,
          var8 = this.communicationDisabled.hashCode();
       }
 
-      return ((((((((((var9 * 31 + var10) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
+      return ((((((((((var10 * 31 + var9) * 31 + var1) * 31 + var2) * 31 + var3) * 31 + var4) * 31 + var5) * 31 + var11) * 31 + var6) * 31 + var12) * 31 + var7)
             * 31
          + var8;
    }
 
    public override fun toString(): String {
-      val var11: java.lang.String = MessageId.toString-impl(this.id);
-      val var8: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: GuildId = this.guildId;
+      val var12: java.lang.String = MessageId.toString-impl(this.id);
+      val var7: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: GuildId = this.guildId;
       val var10: UserId = this.userId;
-      val var7: StructurableText = this.content;
-      val var5: java.lang.String = this.channelName;
-      val var12: java.lang.String = this.username;
+      val var9: StructurableText = this.content;
+      val var6: java.lang.String = this.channelName;
+      val var3: java.lang.String = this.username;
       val var1: Int = this.usernameColor;
-      val var6: Int = this.roleColor;
+      val var13: Int = this.roleColor;
       val var2: Boolean = this.shouldShowRoleDot;
-      val var13: java.lang.String = this.avatarURL;
-      val var4: java.lang.Boolean = this.communicationDisabled;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("FlaggedMessageEmbed(id=");
-      var9.append(var11);
-      var9.append(", channelId=");
-      var9.append(var8);
-      var9.append(", guildId=");
-      var9.append(var3);
-      var9.append(", userId=");
-      var9.append(var10);
-      var9.append(", content=");
-      var9.append(var7);
-      var9.append(", channelName=");
-      var9.append(var5);
-      var9.append(", username=");
-      var9.append(var12);
-      var9.append(", usernameColor=");
-      var9.append(var1);
-      var9.append(", roleColor=");
-      var9.append(var6);
-      var9.append(", shouldShowRoleDot=");
-      var9.append(var2);
-      var9.append(", avatarURL=");
-      var9.append(var13);
-      var9.append(", communicationDisabled=");
-      var9.append(var4);
-      var9.append(")");
-      return var9.toString();
+      val var11: java.lang.String = this.avatarURL;
+      val var5: java.lang.Boolean = this.communicationDisabled;
+      val var8: StringBuilder = new StringBuilder();
+      var8.append("FlaggedMessageEmbed(id=");
+      var8.append(var12);
+      var8.append(", channelId=");
+      var8.append(var7);
+      var8.append(", guildId=");
+      var8.append(var4);
+      var8.append(", userId=");
+      var8.append(var10);
+      var8.append(", content=");
+      var8.append(var9);
+      var8.append(", channelName=");
+      var8.append(var6);
+      var8.append(", username=");
+      var8.append(var3);
+      var8.append(", usernameColor=");
+      var8.append(var1);
+      var8.append(", roleColor=");
+      var8.append(var13);
+      var8.append(", shouldShowRoleDot=");
+      var8.append(var2);
+      var8.append(", avatarURL=");
+      var8.append(var11);
+      var8.append(", communicationDisabled=");
+      var8.append(var5);
+      var8.append(")");
+      return var8.toString();
    }
 
    public companion object {

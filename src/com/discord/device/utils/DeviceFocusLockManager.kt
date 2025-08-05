@@ -14,18 +14,18 @@ public object DeviceFocusLockManager {
    private final val focusExcludedViewPreviousImportantForAccessibilityValue: MutableMap<Int, Int> = new LinkedHashMap()
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
+      val var6: LinkedHashSet = new LinkedHashSet();
       val var8: LinkedHashSet = new LinkedHashSet();
-      val var7: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var6: ArrayList = new ArrayList();
+         val var7: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             r.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var7.contains(var5 as ViewGroup)) {
-               var6.clear();
+            if (var8.contains(var5 as ViewGroup)) {
+               var7.clear();
                break;
             }
 
@@ -35,18 +35,18 @@ public object DeviceFocusLockManager {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
                   r.e(var4);
-                  var6.add(var4);
+                  var7.add(var4);
                }
             }
 
-            var7.add(var11);
+            var8.add(var11);
             var4 = var11;
          }
 
-         var8.addAll(var6);
+         var6.addAll(var7);
       }
 
-      return i.U0(var8);
+      return i.U0(var6);
    }
 
    public fun disableFocusLock() {

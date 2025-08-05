@@ -44,9 +44,9 @@ public object CookieValidator {
                   val var15: JsonObject = xb.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
-                  for (Entry var4 : var15.entrySet()) {
-                     if (!r.c(var4.getKey() as java.lang.String, "$meta")) {
-                        var18.put(var4.getKey(), var4.getValue());
+                  for (Entry var16 : var15.entrySet()) {
+                     if (!r.c(var16.getKey() as java.lang.String, "$meta")) {
+                        var18.put(var16.getKey(), var16.getValue());
                      }
                   }
 
