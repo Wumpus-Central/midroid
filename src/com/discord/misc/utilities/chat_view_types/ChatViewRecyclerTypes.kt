@@ -45,11 +45,11 @@ public object ChatViewRecyclerTypes {
    public const val REACTION_BURST_REACTION: Int = 45
    public const val REACTION_REACTION: Int = 46
    public const val REACTION_ADD_REACTION: Int = 47
-   public const val REACTION_ADD_BURST_REACTION: Int = 48
    public const val MEDIA_ATTACHMENT_MOSAIC_IMAGE: Int = 49
    public const val MEDIA_ATTACHMENT_MOSAIC_VIDEO: Int = 50
    public const val MEDIA_ATTACHMENT_MOSAIC_VISUAL_PLACEHOLDER: Int = 51
    public const val REFERRAL: Int = 52
    public const val GUILD_PROFILE_INVITE: Int = 53
    public const val APP_MESSAGE_EMBED: Int = 54
+   public const val ACTIVITY_RICH_PRESENCE_INVITE_EMBED: Int = 55
 }

@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message;
 
+import com.discord.chat.bridge.sticker.Sticker;
 import com.discord.chat.presentation.message.messagepart.MessageAccessory;
 import kotlin.jvm.functions.Function1;
 
@@ -9,6 +10,6 @@ public final class O implements Function1 {
    public final MessageAccessory k;
 
    public final Object invoke(Object var1) {
-      return MessageAccessoriesAdapter.d(this.j, this.k, (Boolean)var1);
+      return MessageAccessoriesAdapter.E(this.j, this.k, (Sticker)var1);
    }
 }

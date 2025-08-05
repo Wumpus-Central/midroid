@@ -2,9 +2,10 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
+import vb.f
 
-@f
+@g
 public data class ChannelMentionContentNode(channelId: String,
       guildId: String? = null,
       messageId: String? = null,
@@ -23,7 +24,7 @@ public data class ChannelMentionContentNode(channelId: String,
    @JvmStatic
    fun {
       val var0: ContentNodeSerializer = ContentNodeSerializer.INSTANCE;
-      $childSerializers = new KSerializer[]{null, null, null, null, new vb.f(ContentNodeSerializer.INSTANCE), new vb.f(var0)};
+      $childSerializers = new KSerializer[]{null, null, null, null, new f(ContentNodeSerializer.INSTANCE), new f(var0)};
    }
 
    init {
@@ -135,27 +136,27 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var6: java.lang.String = this.channelId;
-      val var7: java.lang.String = this.guildId;
+      val var4: java.lang.String = this.channelId;
+      val var3: java.lang.String = this.guildId;
       val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.originalLink;
-      val var5: java.util.List = this.inContent;
-      val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChannelMentionContentNode(channelId=");
-      var3.append(var6);
-      var3.append(", guildId=");
-      var3.append(var7);
-      var3.append(", messageId=");
-      var3.append(var2);
-      var3.append(", originalLink=");
-      var3.append(var1);
-      var3.append(", inContent=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var5: java.lang.String = this.originalLink;
+      val var6: java.util.List = this.inContent;
+      val var7: java.util.List = this.content;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ChannelMentionContentNode(channelId=");
+      var1.append(var4);
+      var1.append(", guildId=");
+      var1.append(var3);
+      var1.append(", messageId=");
+      var1.append(var2);
+      var1.append(", originalLink=");
+      var1.append(var5);
+      var1.append(", inContent=");
+      var1.append(var6);
+      var1.append(", content=");
+      var1.append(var7);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

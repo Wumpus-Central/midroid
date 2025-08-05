@@ -51,15 +51,15 @@ public sealed class MessageAttachmentAccessory protected constructor(messageId: 
 
    public companion object {
       private fun createAccessoryDescription(attachment: Attachment, attachmentIndex: Int): String {
-         val var3: java.lang.String;
+         var var3: java.lang.String;
          if (var1.getUploaderId() != null && var1.getUploaderItemId() != null) {
-            val var5: java.lang.String = var1.getUploaderId();
-            val var4: java.lang.String = var1.getUploaderItemId();
-            val var7: StringBuilder = new StringBuilder();
-            var7.append(var5);
-            var7.append(" ");
-            var7.append(var4);
-            var3 = var7.toString();
+            var3 = var1.getUploaderId();
+            val var5: java.lang.String = var1.getUploaderItemId();
+            val var4: StringBuilder = new StringBuilder();
+            var4.append(var3);
+            var4.append(" ");
+            var4.append(var5);
+            var3 = var4.toString();
          } else {
             var3 = java.lang.String.valueOf(var2);
          }

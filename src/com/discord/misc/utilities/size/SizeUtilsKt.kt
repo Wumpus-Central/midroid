@@ -22,6 +22,12 @@ public final val dpToPx: Int
    }
 
 
+public final val dpToPx: Int
+   public final get() {
+      return a.b(var0 * (double)Resources.getSystem().getDisplayMetrics().density);
+   }
+
+
 public final val spToPx: Int
    public final get() {
       return a.c(TypedValue.applyDimension(2, (float)var0, Resources.getSystem().getDisplayMetrics()));

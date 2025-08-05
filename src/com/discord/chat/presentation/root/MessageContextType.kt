@@ -2,11 +2,11 @@ package com.discord.chat.presentation.root
 
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 import z9.j
 import z9.m
 
-@f
+@g
 public enum class MessageContextType {
    DEFAULT,
    SEARCH   @JvmStatic

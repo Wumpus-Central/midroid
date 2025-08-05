@@ -37,15 +37,15 @@ public final class MessageBundleConversationViewBinding implements ViewBinding {
          ShortcutsFlexbox var5 = (ShortcutsFlexbox)a.a(var0, var1);
          if (var5 != null) {
             var1 = R.id.reply_author_avatar;
-            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
+            if (var3 != null) {
                var1 = R.id.reply_author_name;
-               TextView var3 = (TextView)a.a(var0, var1);
-               if (var3 != null) {
+               TextView var2 = (TextView)a.a(var0, var1);
+               if (var2 != null) {
                   var1 = R.id.reply_text;
                   MessageContentView var4 = (MessageContentView)a.a(var0, var1);
                   if (var4 != null) {
-                     return new MessageBundleConversationViewBinding(var0, var6, var5, var2, var3, var4);
+                     return new MessageBundleConversationViewBinding(var0, var6, var5, var3, var2, var4);
                   }
                }
             }

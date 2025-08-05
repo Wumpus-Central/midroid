@@ -2,9 +2,9 @@ package com.discord.chat.bridge.forwarding
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ForwardFooterInfo(timestampLabel: String, originLabel: String, accessibilityLabel: String, originIconUrl: String? = null) {
    public final val timestampLabel: String
    public final val originLabel: String
@@ -84,19 +84,19 @@ public data class ForwardFooterInfo(timestampLabel: String, originLabel: String,
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.timestampLabel;
-      val var4: java.lang.String = this.originLabel;
+      val var5: java.lang.String = this.timestampLabel;
+      val var1: java.lang.String = this.originLabel;
       val var2: java.lang.String = this.accessibilityLabel;
-      val var5: java.lang.String = this.originIconUrl;
+      val var4: java.lang.String = this.originIconUrl;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ForwardFooterInfo(timestampLabel=");
-      var3.append(var1);
+      var3.append(var5);
       var3.append(", originLabel=");
-      var3.append(var4);
+      var3.append(var1);
       var3.append(", accessibilityLabel=");
       var3.append(var2);
       var3.append(", originIconUrl=");
-      var3.append(var5);
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

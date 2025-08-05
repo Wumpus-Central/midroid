@@ -3,9 +3,9 @@ package com.discord.chat.bridge
 import com.discord.primitives.MessageId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage(var1, var2) {
    public final val id: MessageId
    public final val stackTrace: String
@@ -52,15 +52,15 @@ public data class ErrorMessage(id: MessageId, stackTrace: String) : ErrorMessage
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = MessageId.toString-impl(this.id);
-      val var1: java.lang.String = this.stackTrace;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ErrorMessage(id=");
-      var2.append(var3);
-      var2.append(", stackTrace=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = MessageId.toString-impl(this.id);
+      val var3: java.lang.String = this.stackTrace;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("ErrorMessage(id=");
+      var1.append(var2);
+      var1.append(", stackTrace=");
+      var1.append(var3);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

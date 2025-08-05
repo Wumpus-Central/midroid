@@ -2,11 +2,11 @@ package com.discord.chat.bridge.row
 
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 import z9.j
 import z9.m
 
-@f
+@g
 public enum class LoadingActionType {
    LOAD_MORE_AFTER,
    LOAD_MORE_BEFORE   @JvmStatic

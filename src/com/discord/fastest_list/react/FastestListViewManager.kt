@@ -182,6 +182,12 @@ internal class FastestListViewManager : InitialPropsViewGroupManager<FastestList
       var1.setKeyboardDismissOnDrag(var2);
    }
 
+   public open fun setPadding(view: FastestListView, left: Int, top: Int, right: Int, bottom: Int) {
+      r.h(var1, "view");
+      super.setPadding(var1, var2, var3, var4, var5);
+      var1.setPadding(var2, var3, var4, var5);
+   }
+
    @ReactProp(name = "placeholderConfig")
    public open fun setPlaceholderConfig(view: FastestListView, value: ReadableMap?) {
       r.h(var1, "view");

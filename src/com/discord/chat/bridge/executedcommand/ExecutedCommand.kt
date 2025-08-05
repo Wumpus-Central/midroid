@@ -4,9 +4,9 @@ import com.discord.chat.bridge.structurabletext.AnnotatedStructurableText
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ExecutedCommand(userId: UserId,
    usernameColor: Int,
    avatarURL: String? = ...,
@@ -155,29 +155,29 @@ public data class ExecutedCommand(userId: UserId,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = UserId.toString-impl(this.userId);
-      val var1: Int = this.usernameColor;
-      val var5: java.lang.String = this.avatarURL;
-      val var2: Int = this.targetUsernameColor;
-      val var8: AnnotatedStructurableText = this.content;
-      val var9: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
-      val var3: java.lang.Boolean = this.showAppsIcon;
+      val var8: java.lang.String = UserId.toString-impl(this.userId);
+      val var2: Int = this.usernameColor;
+      val var9: java.lang.String = this.avatarURL;
+      val var1: Int = this.targetUsernameColor;
+      val var3: AnnotatedStructurableText = this.content;
+      val var4: ExecutedCommandBackgroundStyles = this.commandNameBackgroundStyles;
+      val var5: java.lang.Boolean = this.showAppsIcon;
       val var6: java.lang.Boolean = this.showControllerIcon;
       val var7: StringBuilder = new StringBuilder();
       var7.append("ExecutedCommand(userId=");
-      var7.append(var4);
-      var7.append(", usernameColor=");
-      var7.append(var1);
-      var7.append(", avatarURL=");
-      var7.append(var5);
-      var7.append(", targetUsernameColor=");
-      var7.append(var2);
-      var7.append(", content=");
       var7.append(var8);
-      var7.append(", commandNameBackgroundStyles=");
+      var7.append(", usernameColor=");
+      var7.append(var2);
+      var7.append(", avatarURL=");
       var7.append(var9);
-      var7.append(", showAppsIcon=");
+      var7.append(", targetUsernameColor=");
+      var7.append(var1);
+      var7.append(", content=");
       var7.append(var3);
+      var7.append(", commandNameBackgroundStyles=");
+      var7.append(var4);
+      var7.append(", showAppsIcon=");
+      var7.append(var5);
       var7.append(", showControllerIcon=");
       var7.append(var6);
       var7.append(")");

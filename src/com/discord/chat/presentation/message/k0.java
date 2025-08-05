@@ -1,15 +1,11 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.Message;
-import com.discord.chat.presentation.events.ChatEventHandler;
-import kotlin.jvm.functions.Function0;
+import com.discord.chat.presentation.message.messagepart.MessageAccessory;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class k0 implements Function0 {
-   public final ChatEventHandler j;
-   public final Message k;
-
-   public final Object invoke() {
-      return MessageView.i(this.j, this.k);
+public final class k0 implements Function2 {
+   public final Object invoke(Object var1, Object var2) {
+      return MessageView.b((MessageAccessory)var1, (MessageAccessory)var2);
    }
 }

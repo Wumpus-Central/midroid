@@ -2,9 +2,9 @@ package com.discord.notifications.api
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class EmbedField(name: String? = null, value: String? = null) {
    public final val name: String?
    public final val value: String?

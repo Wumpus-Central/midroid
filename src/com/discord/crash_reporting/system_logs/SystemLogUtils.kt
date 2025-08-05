@@ -26,12 +26,12 @@ internal object SystemLogUtils {
 
    @JvmStatic
    fun {
-      val var1: java.lang.String = Regex.k.c("libdiscord_version");
-      val var0: StringBuilder = new StringBuilder();
-      var0.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
-      var0.append(var1);
-      var0.append("\\].+))");
-      regexExtractTombstone = new Regex(var0.toString());
+      val var0: java.lang.String = Regex.k.c("libdiscord_version");
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("(?:^(?:[^\\s]+\\s+){4}F\\s+DEBUG\\s+:\\s(.+))|(^.+(\\[");
+      var1.append(var0);
+      var1.append("\\].+))");
+      regexExtractTombstone = new Regex(var1.toString());
    }
 
    private fun fetch(filter: Regex?, cb: (LinkedList<String>) -> Unit) {
@@ -103,24 +103,25 @@ internal object SystemLogUtils {
             val var11: gb.d = gb.d.m;
             val var17: Regex = new Regex("^Cause: (.+)$", gb.d.m);
             val var21: Sequence = k.z(Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new h(new Regex("classes\\d+.dex")));
-            val var8: HashSet = w.e(
+            val var13: HashSet = w.e(
                new java.lang.String[]{"libc.so (abort", "libart.so (art::Runtime::Abort(char const*", "libbase.so (android::base::LogMessage::~LogMessage("}
             );
 
             try {
                var7 = var21.iterator();
 
+               val var8: Any;
                do {
                   if (!var7.hasNext()) {
                      throw new NoSuchElementException("Sequence contains no element matching the predicate.");
                   }
 
-                  var14 = var7.next();
-               } while (var8.contains((java.lang.String)var14));
+                  var8 = var7.next();
+               } while (var13.contains((java.lang.String)var8));
 
-               var13 = var14 as java.lang.String;
+               var14 = var8 as java.lang.String;
             } catch (var9: NoSuchElementException) {
-               var13 = "Unknown";
+               var14 = "Unknown";
             }
 
             val var22: java.lang.String = k.x(var21, "\n", null, null, 0, null, null, 62, null);
@@ -134,7 +135,7 @@ internal object SystemLogUtils {
                }
             }
 
-            return new SystemLogUtils.Tombstone(var19, var3, var22, var13, this.hashString(var22), this.hashString(var19));
+            return new SystemLogUtils.Tombstone(var19, var3, var22, var14, this.hashString(var22), this.hashString(var19));
          }
       }
    }
@@ -578,25 +579,25 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var3: java.lang.String = this.text;
-         val var4: java.lang.String = this.cause;
-         val var6: java.lang.String = this.groupBy;
-         val var1: java.lang.String = this.origin;
-         val var5: java.lang.String = this.groupHash;
-         val var2: java.lang.String = this.textHash;
+         val var2: java.lang.String = this.text;
+         val var6: java.lang.String = this.cause;
+         val var4: java.lang.String = this.groupBy;
+         val var3: java.lang.String = this.origin;
+         val var1: java.lang.String = this.groupHash;
+         val var5: java.lang.String = this.textHash;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Tombstone(text=");
-         var7.append(var3);
-         var7.append(", cause=");
-         var7.append(var4);
-         var7.append(", groupBy=");
-         var7.append(var6);
-         var7.append(", origin=");
-         var7.append(var1);
-         var7.append(", groupHash=");
-         var7.append(var5);
-         var7.append(", textHash=");
          var7.append(var2);
+         var7.append(", cause=");
+         var7.append(var6);
+         var7.append(", groupBy=");
+         var7.append(var4);
+         var7.append(", origin=");
+         var7.append(var3);
+         var7.append(", groupHash=");
+         var7.append(var1);
+         var7.append(", textHash=");
+         var7.append(var5);
          var7.append(")");
          return var7.toString();
       }

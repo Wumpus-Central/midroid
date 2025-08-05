@@ -3,9 +3,9 @@ package com.discord.lifecycle.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal class OnHostDestroyEvent : ReactEvent {
    override fun serialize(): WritableMap {
       return ReactEvent.DefaultImpls.serialize(this);

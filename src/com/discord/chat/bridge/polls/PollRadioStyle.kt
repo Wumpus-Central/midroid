@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = PollRadioStyle.Serializer::class)
+@g(with = PollRadioStyle.Serializer::class)
 public enum class PollRadioStyle(serialNumber: Int) : IntEnum {
    CHECKMARK(3),
    FILLED(2),

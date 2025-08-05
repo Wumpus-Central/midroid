@@ -2747,13 +2747,11 @@
   "gHD/nZ": "Done reading? Check out other channels.",
   "9cs5LC": "Explore",
   "Yi2xub": "This is a threads only channel.",
-  "4NDJgI": "Chat Gestures",
   "uKZtCw": "Send messages and media",
   "Jf0C/f": "Swiping Right to Left",
   "9BGJ1t": "Reply Member List Search",
   "6eXLcH": "Show Channel Details",
   "ohhhDA": "Search, members, media, pins, threads, and more",
-  "QrTl5+": "You can change the swipe behavior in Settings.",
   "3tYNDQ": "Reply to Message",
   "RzWDqa": "Check it out",
   "VkKicX": "Clear",
@@ -5063,13 +5061,6 @@
       "cardinal"
     ]
   ],
-  "d04UhI": [
-    "Edit alt text, answer ",
-    [
-      1,
-      "answerNumber"
-    ]
-  ],
   "w7x2t7": "Edit Image Description (Alt Text)",
   "vcC7Qk": [
     "Update media, ",
@@ -5106,9 +5097,6 @@
       "cardinal"
     ]
   ],
-  "e9hWx8": "Poll answer style",
-  "GhK6X1": "Text answers with optional media",
-  "an4GKS": "Media only answers",
   "fYvzER": "Oops, you forgot something. Please add at least one answer.",
   "HMrgcn": "Are you sure?",
   "2BR5R0": "Back to editing",
@@ -7729,8 +7717,6 @@
       "applicationName"
     ]
   ],
-  "GK2DmJ": "You now have access to Activities on mobile in Voice Channels!",
-  "fhm5x8": "Activities on Mobile",
   "UXoQTk": "This feature is not available on this OS at this time",
   "z8EAJS": [
     "1-",
@@ -12094,13 +12080,6 @@
   "PFWIYW": "Welcome!",
   "pclUFB": "Server Owner",
   "hfYfEB": "Discord Partner",
-  "0QO34e": [
-    [
-      1,
-      "username"
-    ],
-    " is streaming"
-  ],
   "mYlo/f": "This is currently not supported on this device.",
   "s2N5HR": "Thank you,",
   "2Ab4IS": "By creating an announcement channel, your server profile will be visible to others outside your server members. You can control Profile privacy in Server Settings > Profile.",
@@ -16989,6 +16968,25 @@
         ]
       ]
     ]
+  ],
+  "3Ne7MD": [
+    [
+      8,
+      "userHook",
+      [
+        [
+          8,
+          "$b",
+          [
+            [
+              1,
+              "user"
+            ]
+          ]
+        ]
+      ]
+    ],
+    " updated Pin Messages permission"
   ],
   "o3W2l5": [
     "Changed the name from ",
@@ -22452,6 +22450,7 @@
   "PHSAsr": "YouTube (Integration)",
   "/3vIRU": "Server Invite",
   "vdu7oa": "Manual Verification",
+  "9/ZreX": "Linked Channel",
   "DvMBkZ": "Unknown",
   "dGiD1N": "Vanity URL",
   "EIUjR0": [
@@ -25051,7 +25050,6 @@
   "ZXxLQk": "Open Chat",
   "q5jLJC": "Open in Browser",
   "wuRE8P": "Open Link",
-  "3/IlR0": "Open Settings",
   "U19GMz": "optional",
   "+1H47u": "Options",
   "iOWmmJ": "This channel is not on your channel list.",
@@ -25245,7 +25243,9 @@
   "Mh9bTk": "1 Month",
   "DRgqMj": "1 Year",
   "YCrcPD": "Subscription",
+  "jdPblp": "Unknown",
   "xrmhRU": "Permissions",
+  "2XIdPj": "Pinning messages now has a separate permission.  This setting’s behavior will change soon.",
   "OIhm0N": [
     "Permissions not synced with category: ",
     [
@@ -25288,6 +25288,7 @@
   "mp1N//": "Pinned Messages",
   "1QLRYW": "Pinned",
   "CvQ18/": "Pin Message",
+  "Y5BI39": "Pin Messages",
   "WG5dys": "Are you sure you want to pin this message?",
   "NnO1S0": [
     "Discord is unable to pin that message. You may have hit the limit of ",
@@ -30043,7 +30044,6 @@
     ]
   ],
   "cfY4PD": "Claim Reward",
-  "Av9jcX": "Claim Reward!",
   "0IUT4e": [
     "Claim ",
     [
@@ -30831,19 +30831,6 @@
       "videoTitle"
     ],
     " and earn enough to unlock a profile badge!"
-  ],
-  "yMsQ7e": [
-    "Watch the ",
-    [
-      1,
-      "videoTitle"
-    ],
-    " to win ",
-    [
-      1,
-      "rewardNameWithArticle"
-    ],
-    "!"
   ],
   "g+InPD": [
     "Watch the video to win ",
@@ -32208,6 +32195,143 @@
   "1ydhVl": "Use roles to group your server members and assign permissions.",
   "ALlnbm": "Organize your members",
   "UvdTMj": "Server Roles",
+  "1PAzQ0": [
+    "All roles and channels in ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "guildName"
+        ]
+      ]
+    ],
+    " will have their ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " setting updated to match the existing ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " setting.  This cannot be undone."
+  ],
+  "nFE8dH": "Update Pin Messages to match Manage Messages?",
+  "Vg2oTE": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then."
+  ],
+  "DXvUMD": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then. ",
+    [
+      8,
+      "$link",
+      [
+        "Copy settings on all roles and channels."
+      ],
+      [
+        [
+          1,
+          "onClickMigrate"
+        ]
+      ]
+    ]
+  ],
+  "cAuU1d": [
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " and ",
+    [
+      8,
+      "$b",
+      [
+        "Pin Messages"
+      ]
+    ],
+    " are now separate permissions. On ",
+    [
+      1,
+      "breakingChangeDate"
+    ],
+    ", ",
+    [
+      8,
+      "$b",
+      [
+        "Manage Messages"
+      ]
+    ],
+    " will no longer grant the ability to pin. If needed, please make adjustments to roles and channels before then. A Server Administrator can copy over the setting for all roles and channels by visiting this page."
+  ],
   "FEYwX1": "Allows members to add new emoji reactions to a message. If this permission is disabled, members can still react using any existing reactions on a message.",
   "pZT2Zm": "Allows members to add new emoji reactions to a message in these channels. If this permission is disabled, members can still react using any existing reactions on a message.",
   "PVjR1d": "Allows members to add new emoji reactions to a message in this channel. If this permission is disabled, members can still react using any existing reactions on a message.",
@@ -32314,6 +32438,9 @@
   "bcuobG": "Allows members to mute other members in these voice channels for everyone.",
   "EbvdHx": "(Required for Stage moderator) Allow members to add or remove Speakers.",
   "LW5C9P": "Allows members to mute other members in this voice channel for everyone.",
+  "LN/K39": "Allows members to pin or unpin any message.",
+  "gmbD8/": "Allows members to pin or unpin any message in these channels.",
+  "0l2EjI": "Allows members to pin or unpin any message in this channel.",
   "OJkrrq": "Allows members to be more easily heard in voice channels. When activated, the volume of others without this permission will be automatically lowered.",
   "j66HgY": [
     "Allows members to be more easily heard in voice channels. When activated, the volume of others without this permission will be automatically lowered. Priority Speaker is activated by using the ",
@@ -39273,7 +39400,6 @@
   ],
   "5hKnyM": "Standard (recommended)",
   "PXq9f3": "Video Uploads",
-  "HO/oXl": "View",
   "fZgLpK": "View Audit Log",
   "W/A4Qk": "View Channel",
   "0lTLTk": "View Server Subscription Insights",

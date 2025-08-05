@@ -5,9 +5,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapSoundmojiData(soundId: String, channelId: String, guildId: String? = ..., messageId: MessageId? = ...) : TapSoundmojiData(
          var1, var2, var3, var4
       ),
@@ -77,8 +77,8 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
    }
 
    public override fun hashCode(): Int {
-      val var4: Int = this.soundId.hashCode();
-      val var3: Int = this.channelId.hashCode();
+      val var3: Int = this.soundId.hashCode();
+      val var4: Int = this.channelId.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.guildId == null) {
@@ -91,7 +91,7 @@ public data class TapSoundmojiData(soundId: String, channelId: String, guildId: 
          var2 = MessageId.hashCode-impl(this.messageId);
       }
 
-      return ((var4 * 31 + var3) * 31 + var1) * 31 + var2;
+      return ((var3 * 31 + var4) * 31 + var1) * 31 + var2;
    }
 
    override fun serialize(): WritableMap {

@@ -5,10 +5,10 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 import z9.s
 
-@f
+@g
 public data class TapTimestampEvent(timestamp: String) : ReactEvent {
    public final val timestamp: String
 

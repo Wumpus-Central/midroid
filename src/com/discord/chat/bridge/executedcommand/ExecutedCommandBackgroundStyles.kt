@@ -2,9 +2,9 @@ package com.discord.chat.bridge.executedcommand
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ExecutedCommandBackgroundStyles(color: Int? = null, borderRadius: Int? = null, spaceAround: Boolean? = java.lang.Boolean.FALSE) {
    public final val color: Int?
    public final val borderRadius: Int?

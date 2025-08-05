@@ -2,9 +2,9 @@ package com.discord.chat.bridge.forwarding
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ForwardInfo(snapshotIndex: Int, footerInfo: ForwardFooterInfo? = null) {
    public final val snapshotIndex: Int
    public final val footerInfo: ForwardFooterInfo?

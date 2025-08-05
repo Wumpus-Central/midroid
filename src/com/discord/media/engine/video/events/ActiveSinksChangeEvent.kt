@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class ActiveSinksChangeEvent(streamId: String, active: Boolean) : ReactEvent {
    public final val streamId: String
    public final val active: Boolean

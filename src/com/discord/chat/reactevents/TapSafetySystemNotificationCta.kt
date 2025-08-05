@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapSafetySystemNotificationCta(ctaType: String, ctaKey: String) : ReactEvent {
    public final val ctaType: String
    public final val ctaKey: String

@@ -3,9 +3,9 @@ package com.discord.chat.bridge.embed
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class EmbedField(rawName: String? = null, rawValue: String? = null, name: StructurableText? = null, value: StructurableText? = null) {
    public final val rawName: String?
    public final val rawValue: String?
@@ -98,19 +98,19 @@ public data class EmbedField(rawName: String? = null, rawValue: String? = null, 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.rawName;
-      val var2: java.lang.String = this.rawValue;
-      val var3: StructurableText = this.name;
-      val var5: StructurableText = this.value;
+      val var3: java.lang.String = this.rawName;
+      val var5: java.lang.String = this.rawValue;
+      val var1: StructurableText = this.name;
+      val var2: StructurableText = this.value;
       val var4: StringBuilder = new StringBuilder();
       var4.append("EmbedField(rawName=");
-      var4.append(var1);
-      var4.append(", rawValue=");
-      var4.append(var2);
-      var4.append(", name=");
       var4.append(var3);
-      var4.append(", value=");
+      var4.append(", rawValue=");
       var4.append(var5);
+      var4.append(", name=");
+      var4.append(var1);
+      var4.append(", value=");
+      var4.append(var2);
       var4.append(")");
       return var4.toString();
    }

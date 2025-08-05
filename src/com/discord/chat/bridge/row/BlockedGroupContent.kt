@@ -3,11 +3,11 @@ package com.discord.chat.bridge.row
 import com.discord.chat.bridge.MessageBase
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class BlockedGroupContent(message: MessageBase) {
-   @f(
+   @g(
       with = MessageSerializer.class
    )
    public final val message: MessageBase
@@ -42,12 +42,12 @@ public data class BlockedGroupContent(message: MessageBase) {
    }
 
    public override fun toString(): String {
-      val var1: MessageBase = this.message;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("BlockedGroupContent(message=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: MessageBase = this.message;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("BlockedGroupContent(message=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

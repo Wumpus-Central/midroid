@@ -2,9 +2,9 @@ package com.discord.chat.bridge.polls
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class PollAction(label: String,
    presentation: PollActionPresentation,
    enabled: Boolean,
@@ -92,23 +92,23 @@ public data class PollAction(label: String,
    }
 
    public fun getFullTextLabel(): String {
-      val var1: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.secondaryLabel;
       if (this.secondaryLabel == null) {
          return this.label;
       } else {
          val var2: java.lang.String = this.label;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append(var2);
-         var3.append("  •  ");
-         var3.append(var1);
-         return var3.toString();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append(var2);
+         var1.append("  •  ");
+         var1.append(var3);
+         return var1.toString();
       }
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.label.hashCode();
-      val var4: Int = this.presentation.hashCode();
-      val var6: Int = java.lang.Boolean.hashCode(this.enabled);
+      val var4: Int = this.label.hashCode();
+      val var6: Int = this.presentation.hashCode();
+      val var5: Int = java.lang.Boolean.hashCode(this.enabled);
       var var3: Int = 0;
       val var1: Int;
       if (this.type == null) {
@@ -128,31 +128,31 @@ public data class PollAction(label: String,
          var3 = this.accessibilityHint.hashCode();
       }
 
-      return ((((var5 * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var4 * 31 + var6) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.label;
-      val var5: PollActionPresentation = this.presentation;
+      val var4: java.lang.String = this.label;
+      val var7: PollActionPresentation = this.presentation;
       val var1: Boolean = this.enabled;
-      val var7: java.lang.String = this.type;
-      val var4: java.lang.String = this.secondaryLabel;
-      val var6: java.lang.String = this.accessibilityHint;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollAction(label=");
-      var3.append(var2);
-      var3.append(", presentation=");
-      var3.append(var5);
-      var3.append(", enabled=");
-      var3.append(var1);
-      var3.append(", type=");
-      var3.append(var7);
-      var3.append(", secondaryLabel=");
-      var3.append(var4);
-      var3.append(", accessibilityHint=");
-      var3.append(var6);
-      var3.append(")");
-      return var3.toString();
+      val var6: java.lang.String = this.type;
+      val var2: java.lang.String = this.secondaryLabel;
+      val var3: java.lang.String = this.accessibilityHint;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollAction(label=");
+      var5.append(var4);
+      var5.append(", presentation=");
+      var5.append(var7);
+      var5.append(", enabled=");
+      var5.append(var1);
+      var5.append(", type=");
+      var5.append(var6);
+      var5.append(", secondaryLabel=");
+      var5.append(var2);
+      var5.append(", accessibilityHint=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

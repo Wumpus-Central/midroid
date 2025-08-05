@@ -3,9 +3,9 @@ package com.discord.chat.bridge.threads
 import com.discord.chat.bridge.Message
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ThreadEmbedMessage(message: Message) {
    public final val message: Message
 

@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = SelectOptionType.Serializer::class)
+@g(with = SelectOptionType.Serializer::class)
 public enum class SelectOptionType(serialNumber: Int) : IntEnum {
    CHANNEL(4),
    ROLE(3),

@@ -147,11 +147,11 @@ public class AttachmentMediaMosaicAdapter(context: Context,
                var3 = false;
             }
 
-            val var9: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
-            val var8: b = new b(this, (ImageAttachmentMessageAccessory)var6);
+            val var8: a = new a(this, (ImageAttachmentMessageAccessory)var6, var1);
+            val var9: b = new b(this, (ImageAttachmentMessageAccessory)var6);
             val var4: Boolean = this.shouldAutoPlayGifs;
             var7.bindAttachment(
-               var5, (ImageAttachmentMessageAccessory)var6, var3, var9, var8, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
+               var5, (ImageAttachmentMessageAccessory)var6, var3, var8, var9, new c(this, (ImageAttachmentMessageAccessory)var6), new d(this), var4
             );
          } else {
             if (var1 !is MosaicItemMessageAttachmentVideoViewHolder) {

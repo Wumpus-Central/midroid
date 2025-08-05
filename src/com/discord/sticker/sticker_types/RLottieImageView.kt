@@ -12,7 +12,6 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.rlottie.RLottieDrawable
 import com.discord.theme.ThemeManagerKt
 import ib.K
-import ib.d0
 import java.io.File
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
@@ -74,8 +73,8 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: d0 = K.c();
-                  var1 = new Function2(this.this$0, null) {
+                  var1 = K.c();
+                  val var4: Function2 = new Function2(this.this$0, null) {
                      int label;
                      final RLottieImageView this$0;
 
@@ -104,23 +103,23 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                      }
                   };
                   this.label = 1;
-                  if (ib.f.g(var4, var1, this) === var3) {
+                  if (ib.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }
 
-               val var7: FileDownloader = FileDownloader.INSTANCE;
+               val var5: FileDownloader = FileDownloader.INSTANCE;
                val var11: Context = this.this$0.getContext();
                r.g(var11, "getContext(...)");
-               val var9: java.lang.String = this.$config.getUrl();
-               val var6: java.lang.String = this.$config.getAsset();
-               val var5: StringBuilder = new StringBuilder();
-               var5.append(var6);
-               var5.append(".json");
-               val var10: Flow = FileDownloader.downloadFile$default(
-                  var7, var11, var9, var5.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
+               val var7: java.lang.String = this.$config.getUrl();
+               val var9: java.lang.String = this.$config.getAsset();
+               val var6: StringBuilder = new StringBuilder();
+               var6.append(var9);
+               var6.append(".json");
+               val var12: Flow = FileDownloader.downloadFile$default(
+                  var5, var11, var7, var6.toString(), new File(this.this$0.getContext().getCacheDir(), "stickers"), false, 16, null
                );
-               val var12: FlowCollector = new FlowCollector(this.this$0, this.$config) {
+               val var10: FlowCollector = new FlowCollector(this.this$0, this.$config) {
                   final RLottieImageView.Config $config;
                   final RLottieImageView this$0;
 
@@ -157,15 +156,15 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                               if (this.label == 0) {
                                  kotlin.c.b(var1);
                                  this.this$0.setImageDrawable(null);
-                                 val var6: RLottieImageView = this.this$0;
-                                 val var5: Context = this.this$0.getContext();
-                                 r.g(var5, "getContext(...)");
-                                 val var7: File = (this.$downloadState as DownloadState.Completed).getFile();
-                                 val var2x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
+                                 val var5: RLottieImageView = this.this$0;
+                                 val var7: Context = this.this$0.getContext();
+                                 r.g(var7, "getContext(...)");
+                                 val var6: File = (this.$downloadState as DownloadState.Completed).getFile();
+                                 val var4x: Int = SizeUtilsKt.getDpToPx(this.$config.getWidthDp());
                                  val var3: Int = SizeUtilsKt.getDpToPx(this.$config.getHeightDp());
-                                 val var4x: Int = this.$config.getRenderMode();
-                                 if (var4x != 0) {
-                                    if (var4x != 1) {
+                                 val var2x: Int = this.$config.getRenderMode();
+                                 if (var2x != 0) {
+                                    if (var2x != 1) {
                                        var1 = RLottieDrawable.PlaybackMode.ONCE;
                                     } else {
                                        var1 = RLottieDrawable.PlaybackMode.FREEZE;
@@ -174,7 +173,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                                     var1 = RLottieDrawable.PlaybackMode.LOOP;
                                  }
 
-                                 var6.setAnimation(var5, var7, var2x, var3, var1);
+                                 var5.setAnimation(var7, var6, var4x, var3, var1);
                                  this.this$0.setBackground(null);
                                  RLottieImageView.access$getRLottieStateManager$p(this.this$0).onFetchFinished(true, this.$config.getAnimate());
                                  return Unit.a;
@@ -226,7 +225,7 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
                   }
                };
                this.label = 2;
-               return if (var10.collect(var12, this) === var3) var3 else Unit.a;
+               return if (var12.collect(var10, this) === var3) var3 else Unit.a;
             }
          },
          2,
@@ -391,25 +390,25 @@ internal class RLottieImageView(context: Context) : com.discord.rlottie.RLottieI
       }
 
       public override fun toString(): String {
-         val var5: java.lang.String = this.url;
+         val var6: java.lang.String = this.url;
          val var4: Boolean = this.animate;
-         val var2: Int = this.widthDp;
-         val var1: Int = this.heightDp;
-         val var6: java.lang.String = this.asset;
-         val var3: Int = this.renderMode;
+         val var3: Int = this.widthDp;
+         val var2: Int = this.heightDp;
+         val var5: java.lang.String = this.asset;
+         val var1: Int = this.renderMode;
          val var7: StringBuilder = new StringBuilder();
          var7.append("Config(url=");
-         var7.append(var5);
+         var7.append(var6);
          var7.append(", animate=");
          var7.append(var4);
          var7.append(", widthDp=");
-         var7.append(var2);
-         var7.append(", heightDp=");
-         var7.append(var1);
-         var7.append(", asset=");
-         var7.append(var6);
-         var7.append(", renderMode=");
          var7.append(var3);
+         var7.append(", heightDp=");
+         var7.append(var2);
+         var7.append(", asset=");
+         var7.append(var5);
+         var7.append(", renderMode=");
+         var7.append(var1);
          var7.append(")");
          return var7.toString();
       }

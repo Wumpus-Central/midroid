@@ -2,9 +2,9 @@ package com.discord.chat.bridge.truncation
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLabel: String? = null, seeMoreLabelColor: Int? = null, forceShow: Boolean? = null) {
    public final val numberOfLines: Int
    public final val expandable: Boolean
@@ -101,21 +101,21 @@ public data class Truncation(numberOfLines: Int, expandable: Boolean, seeMoreLab
       val var1: Int = this.numberOfLines;
       val var2: Boolean = this.expandable;
       val var4: java.lang.String = this.seeMoreLabel;
-      val var3: Int = this.seeMoreLabelColor;
-      val var5: java.lang.Boolean = this.forceShow;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Truncation(numberOfLines=");
-      var6.append(var1);
-      var6.append(", expandable=");
-      var6.append(var2);
-      var6.append(", seeMoreLabel=");
-      var6.append(var4);
-      var6.append(", seeMoreLabelColor=");
-      var6.append(var3);
-      var6.append(", forceShow=");
-      var6.append(var5);
-      var6.append(")");
-      return var6.toString();
+      val var5: Int = this.seeMoreLabelColor;
+      val var6: java.lang.Boolean = this.forceShow;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Truncation(numberOfLines=");
+      var3.append(var1);
+      var3.append(", expandable=");
+      var3.append(var2);
+      var3.append(", seeMoreLabel=");
+      var3.append(var4);
+      var3.append(", seeMoreLabelColor=");
+      var3.append(var5);
+      var3.append(", forceShow=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

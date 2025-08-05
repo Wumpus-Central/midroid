@@ -2,9 +2,9 @@ package com.discord.chat.bridge.embed
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class EmbedMedia(url: String,
       proxyURL: String? = null,
       width: Int,
@@ -151,33 +151,33 @@ public data class EmbedMedia(url: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.url;
-      val var6: java.lang.String = this.proxyURL;
-      val var2: Int = this.width;
-      val var1: Int = this.height;
-      val var8: java.lang.String = this.placeholder;
-      val var5: Int = this.placeholderVersion;
+      val var6: java.lang.String = this.url;
+      val var8: java.lang.String = this.proxyURL;
+      val var1: Int = this.width;
+      val var2: Int = this.height;
+      val var7: java.lang.String = this.placeholder;
+      val var9: Int = this.placeholderVersion;
       val var3: Boolean = this.srcIsAnimated;
-      val var9: java.lang.String = this.contentType;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("EmbedMedia(url=");
-      var7.append(var4);
-      var7.append(", proxyURL=");
-      var7.append(var6);
-      var7.append(", width=");
-      var7.append(var2);
-      var7.append(", height=");
-      var7.append(var1);
-      var7.append(", placeholder=");
-      var7.append(var8);
-      var7.append(", placeholderVersion=");
-      var7.append(var5);
-      var7.append(", srcIsAnimated=");
-      var7.append(var3);
-      var7.append(", contentType=");
-      var7.append(var9);
-      var7.append(")");
-      return var7.toString();
+      val var4: java.lang.String = this.contentType;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("EmbedMedia(url=");
+      var5.append(var6);
+      var5.append(", proxyURL=");
+      var5.append(var8);
+      var5.append(", width=");
+      var5.append(var1);
+      var5.append(", height=");
+      var5.append(var2);
+      var5.append(", placeholder=");
+      var5.append(var7);
+      var5.append(", placeholderVersion=");
+      var5.append(var9);
+      var5.append(", srcIsAnimated=");
+      var5.append(var3);
+      var5.append(", contentType=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

@@ -30,22 +30,22 @@ internal fun getSocFromProcCpuInfo(): String {
    // 00: ldc ""
    // 02: astore 1
    // 03: new java/io/File
-   // 06: astore 3
-   // 07: aload 3
-   // 08: ldc "/proc/cpuinfo"
-   // 0a: invokespecial java/io/File.<init> (Ljava/lang/String;)V
-   // 0d: getstatic gb/a.b Ljava/nio/charset/Charset;
-   // 10: astore 2
-   // 11: new java/io/InputStreamReader
-   // 14: astore 0
-   // 15: new java/io/FileInputStream
-   // 18: astore 4
-   // 1a: aload 4
-   // 1c: aload 3
-   // 1d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
-   // 20: aload 0
-   // 21: aload 4
-   // 23: aload 2
+   // 06: astore 4
+   // 08: aload 4
+   // 0a: ldc "/proc/cpuinfo"
+   // 0c: invokespecial java/io/File.<init> (Ljava/lang/String;)V
+   // 0f: getstatic gb/a.b Ljava/nio/charset/Charset;
+   // 12: astore 3
+   // 13: new java/io/InputStreamReader
+   // 16: astore 0
+   // 17: new java/io/FileInputStream
+   // 1a: astore 2
+   // 1b: aload 2
+   // 1c: aload 4
+   // 1e: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
+   // 21: aload 0
+   // 22: aload 2
+   // 23: aload 3
    // 24: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 27: new java/io/BufferedReader
    // 2a: astore 2
@@ -184,7 +184,7 @@ internal fun maxCpuFreq(): String {
    // 05a: lload 4
    // 05c: lstore 8
    // 05e: getstatic gb/a.b Ljava/nio/charset/Charset;
-   // 061: astore 14
+   // 061: astore 15
    // 063: lload 4
    // 065: lstore 8
    // 067: new java/io/InputStreamReader
@@ -192,17 +192,17 @@ internal fun maxCpuFreq(): String {
    // 06c: lload 4
    // 06e: lstore 8
    // 070: new java/io/FileInputStream
-   // 073: astore 15
+   // 073: astore 14
    // 075: lload 4
    // 077: lstore 8
-   // 079: aload 15
+   // 079: aload 14
    // 07b: aload 12
    // 07d: invokespecial java/io/FileInputStream.<init> (Ljava/io/File;)V
    // 080: lload 4
    // 082: lstore 8
    // 084: aload 13
-   // 086: aload 15
-   // 088: aload 14
+   // 086: aload 14
+   // 088: aload 15
    // 08a: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
    // 08d: lload 4
    // 08f: lstore 8
@@ -339,13 +339,13 @@ internal fun socName(): String {
          }
       }
 
-      var0 = a.a();
-      val var2: java.lang.String = b.a();
-      val var1: StringBuilder = new StringBuilder();
-      var1.append(var0);
-      var1.append("_");
-      var1.append(var2);
-      return var1.toString();
+      val var2: java.lang.String = a.a();
+      val var1: java.lang.String = b.a();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append(var2);
+      var4.append("_");
+      var4.append(var1);
+      return var4.toString();
    } else {
       return getSocFromProcCpuInfo();
    }

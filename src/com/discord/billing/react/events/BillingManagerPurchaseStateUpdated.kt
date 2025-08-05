@@ -3,9 +3,9 @@ package com.discord.billing.react.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class BillingManagerPurchaseStateUpdated(billingResult: Int) : ReactEvent {
    public final val billingResult: Int
 

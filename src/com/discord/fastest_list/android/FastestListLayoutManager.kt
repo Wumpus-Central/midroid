@@ -1,12 +1,13 @@
 package com.discord.fastest_list.android
 
 import android.content.Context
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.State
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker.RenderAhead
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import kotlin.jvm.internal.r
 
-internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false) : LinearLayoutManager {
+internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Context, horizontal: Boolean, reverseLayout: Boolean = false)
+   : TransitionResilientLinearLayoutManager {
    public final var renderAhead: RenderAhead
       internal set
 
@@ -25,14 +26,14 @@ internal class FastestListLayoutManager(renderAhead: RenderAhead, context: Conte
          val var1: Float;
          val var2: Float;
          if (this.horizontal) {
-            var2 = this.getWidth();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getWidth();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          } else {
-            var2 = this.getHeight();
-            var1 = this.renderAhead.getExtraLayoutPercent();
+            var1 = this.getHeight();
+            var2 = this.renderAhead.getExtraLayoutPercent();
          }
 
-         return (int)(var2 * var1);
+         return (int)(var1 * var2);
       }
 
 

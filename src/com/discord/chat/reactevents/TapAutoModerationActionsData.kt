@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class TapAutoModerationActionsData(messageId: String, channelId: String) : ReactEvent {
    public final val messageId: String
    public final val channelId: String
@@ -57,13 +57,13 @@ public data class TapAutoModerationActionsData(messageId: String, channelId: Str
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.messageId;
-      val var2: java.lang.String = this.channelId;
+      val var2: java.lang.String = this.messageId;
+      val var3: java.lang.String = this.channelId;
       val var1: StringBuilder = new StringBuilder();
       var1.append("TapAutoModerationActionsData(messageId=");
-      var1.append(var3);
-      var1.append(", channelId=");
       var1.append(var2);
+      var1.append(", channelId=");
+      var1.append(var3);
       var1.append(")");
       return var1.toString();
    }

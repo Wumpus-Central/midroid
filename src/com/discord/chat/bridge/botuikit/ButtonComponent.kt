@@ -2,9 +2,9 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class ButtonComponent(type: Int,
       id: String,
       state: ActionComponentState,
@@ -153,8 +153,8 @@ public data class ButtonComponent(type: Int,
          var2 = this.label.hashCode();
       }
 
-      val var9: Int = this.style.hashCode();
-      val var10: Int = java.lang.Boolean.hashCode(this.disabled);
+      val var10: Int = this.style.hashCode();
+      val var9: Int = java.lang.Boolean.hashCode(this.disabled);
       val var3: Int;
       if (this.emoji == null) {
          var3 = 0;
@@ -173,41 +173,41 @@ public data class ButtonComponent(type: Int,
          var5 = this.skuId.hashCode();
       }
 
-      return ((((((((var8 * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var9) * 31 + var10) * 31 + var3) * 31 + var4) * 31 + var5;
+      return ((((((((var8 * 31 + var7) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var10) * 31 + var9) * 31 + var3) * 31 + var4) * 31 + var5;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
       val var7: java.lang.String = this.id;
-      val var3: ActionComponentState = this.state;
-      val var5: java.lang.String = this.customId;
-      val var6: java.lang.String = this.label;
-      val var9: ButtonStyle = this.style;
+      val var11: ActionComponentState = this.state;
+      val var8: java.lang.String = this.customId;
+      val var3: java.lang.String = this.label;
+      val var5: ButtonStyle = this.style;
       val var2: Boolean = this.disabled;
-      val var8: ComponentEmoji = this.emoji;
+      val var6: ComponentEmoji = this.emoji;
       val var10: java.lang.String = this.url;
-      val var11: java.lang.String = this.skuId;
+      val var9: java.lang.String = this.skuId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("ButtonComponent(type=");
       var4.append(var1);
       var4.append(", id=");
       var4.append(var7);
       var4.append(", state=");
-      var4.append(var3);
+      var4.append(var11);
       var4.append(", customId=");
-      var4.append(var5);
+      var4.append(var8);
       var4.append(", label=");
-      var4.append(var6);
+      var4.append(var3);
       var4.append(", style=");
-      var4.append(var9);
+      var4.append(var5);
       var4.append(", disabled=");
       var4.append(var2);
       var4.append(", emoji=");
-      var4.append(var8);
+      var4.append(var6);
       var4.append(", url=");
       var4.append(var10);
       var4.append(", skuId=");
-      var4.append(var11);
+      var4.append(var9);
       var4.append(")");
       return var4.toString();
    }

@@ -46,12 +46,12 @@ internal object ServiceNotification {
 
       val var5: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
          var5.a(
             0,
-            var8.getTitle(),
+            var7.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
+               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
             )
          );
       }
@@ -71,7 +71,7 @@ internal object ServiceNotification {
       r.h(var1, "<this>");
       r.h(var2, "context");
       r.h(var3, "serviceNotificationConfigurations");
-      var3 = i.K0(var3, new Comparator() {
+      var3 = i.L0(var3, new Comparator() {
          @Override
          public final int compare(T var1, T var2) {
             return a.d((var1 as ServiceNotificationConfiguration).getPriority(), (var2 as ServiceNotificationConfiguration).getPriority());

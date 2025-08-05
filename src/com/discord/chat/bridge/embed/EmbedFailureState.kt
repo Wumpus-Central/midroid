@@ -6,9 +6,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = EmbedFailureState.Serializer::class)
+@g(with = EmbedFailureState.Serializer::class)
 public enum class EmbedFailureState(serialNumber: Int) : IntEnum {
    AUTO_MODERATION_BLOCKED_MESSAGE(2),
    UNSPECIFIED(0),

@@ -23,6 +23,7 @@ import com.discord.misc.utilities.threading.ThreadUtilsKt
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
 import com.discord.recycler_view.scroller.Scroller
 import com.discord.recycler_view.scroller.Scroller.TargetAlignment
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import java.lang.reflect.Field
 import java.util.Map.Entry
 import kotlin.coroutines.Continuation
@@ -65,16 +66,16 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       this.chatListAdapter = var6;
       this.componentProvider = new ComponentProvider(var1, true);
       this.scroller = new Scroller(this);
-      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
-      this.linearLayoutManager = var4;
-      val var5: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
+      val var5: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 0, false, 6, null);
+      this.linearLayoutManager = var5;
+      val var4: VerticalSpacingItemDecoration = new VerticalSpacingItemDecoration(
          SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(16), SizeUtilsKt.getDpToPx(30), false, 8, null
       );
-      this.verticalSpacingItemDecoration = var5;
+      this.verticalSpacingItemDecoration = var4;
       this.scrollStateObserver = new ChatScrollStateObserver(new m(this));
       this.isFirstLayout = true;
-      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var5);
-      this.setLayoutManager(var4);
+      ChatListUtilsKt.configureMessageRecyclerView(this, var1, var4);
+      this.setLayoutManager(var5);
       this.setAdapter(var6);
       this.addScrollStateListener();
       this.configureRecycledViewPoolSizes();
@@ -123,15 +124,15 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
    }
 
    private fun configureRecycledViewPoolSizes() {
-      var var4: Pair = z9.s.a(RegularMessageDelegate.class, 50);
-      val var3: Int = 25;
+      val var3: Pair = z9.s.a(RegularMessageDelegate.class, 50);
+      var var4: Int = 25;
 
-      for (Entry var7 : A9.q.l(new Pair[]{var4, z9.s.a(SystemMessageDelegate.class, var3), z9.s.a(SeparatorDelegate.class, var3)}).entrySet()) {
+      for (Entry var7 : A9.q.l(new Pair[]{var3, z9.s.a(SystemMessageDelegate.class, var4), z9.s.a(SeparatorDelegate.class, var4)}).entrySet()) {
          val var5: Class = var7.getKey() as Class;
          val var2: Int = (var7.getValue() as java.lang.Number).intValue();
          var4 = this.chatListAdapter.getDelegateViewTypes().get(var5);
          kotlin.jvm.internal.r.e(var4);
-         this.getRecycledViewPool().setMaxRecycledViews((var4 as java.lang.Number).intValue(), var2);
+         this.getRecycledViewPool().setMaxRecycledViews(var4.intValue(), var2);
       }
    }
 
@@ -142,14 +143,14 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
       } catch (var6: IllegalArgumentException) {
          val var2: Field = RecyclerView.class.getDeclaredField("mState");
          var2.setAccessible(true);
-         val var3: Any = var2.get(this);
+         val var7: Any = var2.get(this);
          val var5: CrashReporting = CrashReporting.INSTANCE;
-         val var7: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
+         val var3: ChatListAdapterUpdateLog = ChatListAdapterUpdateLog.INSTANCE;
          val var4: StringBuilder = new StringBuilder();
          var4.append("About to crash because of ChatList, dumping update log:\n");
-         var4.append(var7);
-         var4.append("\n Recycler State: ");
          var4.append(var3);
+         var4.append("\n Recycler State: ");
+         var4.append(var7);
          CrashReporting.addBreadcrumb$default(var5, var4.toString(), null, null, 6, null);
          throw var6;
       }
@@ -294,11 +295,11 @@ public class ChatListView  public constructor(context: Context, attrs: Attribute
             null
          );
       } else {
-         val var3: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var3);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var3: StringBuilder = new StringBuilder();
+         var3.append("Expected to be on android main thread. Current: ");
+         var3.append(var2);
+         throw new IllegalStateException(var3.toString().toString());
       }
    }
 

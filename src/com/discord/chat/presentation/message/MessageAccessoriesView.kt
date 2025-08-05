@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.RecycledViewPool
 import com.discord.chat.R
 import com.discord.chat.presentation.events.ChatEventHandler
-import com.discord.chat.presentation.list.TransitionResilientLinearLayoutManager
 import com.discord.chat.presentation.message.decorations.MessageAccessoriesHorizontalSpacingDecoration
 import com.discord.chat.presentation.message.decorations.ThreadSpineItemDecoration
 import com.discord.chat.presentation.message.messagepart.MessageAccessory
@@ -29,6 +28,7 @@ import com.discord.primitives.GuildId
 import com.discord.primitives.MessageId
 import com.discord.reactions.ShortcutsFlexbox
 import com.discord.recycler_view.decorations.VerticalSpacingItemDecoration
+import com.discord.recycler_view.utils.TransitionResilientLinearLayoutManager
 import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.functions.Function0
 
@@ -73,7 +73,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.accessoriesAdapter = var4;
       val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
       this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = z9.j.a(new V());
+      this.forwardBarPaint$delegate = z9.j.a(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -99,10 +99,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
 
    private fun getForwardBarHeight(): Int {
       for (Pair var3 : fb.k.J(androidx.core.view.f0.a(this))) {
-         val var2: View = var3.c() as View;
+         val var1: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var2.getBottom();
+            return var1.getBottom();
          }
       }
 

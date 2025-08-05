@@ -95,8 +95,6 @@
     ]
   ],
   "MVi7LS": "Suppress Highlights in this server",
-  "7gTJbm": "Active Call",
-  "4d+iBw": "Active Conversation",
   "ktOTRU": "Recently Played",
   "Gk1P8f": "Currently Playing",
   "fxOLPT": "updated their status",
@@ -104,13 +102,6 @@
   "jVshKi": "Servers",
   "OMdbs7": "Thanks! This will take effect shortly.",
   "AGrUbm": "Back to Home",
-  "zbVaKi": [
-    "Because you played ",
-    [
-      1,
-      "applicationName"
-    ]
-  ],
   "lNJYV1": "Browse more servers",
   "5lP6Aw": "Turning this off means no content from this channel will be shown.",
   "0jRosr": "Channel Preferences",
@@ -155,7 +146,6 @@
       ]
     ]
   ],
-  "29mxFh": "Explore",
   "x4OezM": "The more servers you join, the more interesting content you’ll find.",
   "lv1tcX": "Featured servers you might like",
   "F6TmZG": "Content was irrelevant",
@@ -168,7 +158,6 @@
   "3wDyfX": "Filter content from employee servers",
   "HT2IlJ": "Forward",
   "xIUfJS": "Forward Message",
-  "yNWCsL": "posted something you might like",
   "CHUAYm": "in",
   "zAa/Ex": "Share",
   "6+JeWV": "Shared Highlight",
@@ -188,7 +177,6 @@
   "DwLrLC": "started a thread.",
   "aDAwS0": "Trending Topic",
   "swhcPD": "sent a video.",
-  "MOA2xs": "Join the community server!",
   "u0KPUV": "The more servers you join, the more interesting content you’ll find.",
   "19ldCA": "Choose 3 or more featured servers you’re interested in.",
   "XG+2Q0": "Join in",
@@ -199,14 +187,6 @@
       1,
       "guildName"
     ]
-  ],
-  "BSSkgI": [
-    "Want more content from ",
-    [
-      1,
-      "applicationName"
-    ],
-    "?"
   ],
   "90AwBw": [
     "From ",

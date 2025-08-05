@@ -3,9 +3,9 @@ package com.discord.app_database
 import java.util.Arrays
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {
    public final val guildVersions: Array<GuildVersion>
    public final val nonGuildVersions: Array<NonGuildVersion>
@@ -52,15 +52,15 @@ public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVer
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = Arrays.toString((Object[])this.guildVersions);
-      val var3: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("DatabaseVersions(guildVersions=");
-      var1.append(var2);
-      var1.append(", nonGuildVersions=");
-      var1.append(var3);
-      var1.append(")");
-      return var1.toString();
+      val var3: java.lang.String = Arrays.toString((Object[])this.guildVersions);
+      val var1: java.lang.String = Arrays.toString((Object[])this.nonGuildVersions);
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("DatabaseVersions(guildVersions=");
+      var2.append(var3);
+      var2.append(", nonGuildVersions=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

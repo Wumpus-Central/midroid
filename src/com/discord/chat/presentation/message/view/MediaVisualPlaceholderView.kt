@@ -163,16 +163,16 @@ public class MediaVisualPlaceholderView  public constructor(context: Context, at
       public override fun toString(): String {
          val var1: Int = this.width;
          val var2: Int = this.height;
-         val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
-         val var3: StringBuilder = new StringBuilder();
-         var3.append("TargetSize(width=");
-         var3.append(var1);
-         var3.append(", height=");
-         var3.append(var2);
-         var3.append(", resizeMode=");
-         var3.append(var4);
-         var3.append(")");
-         return var3.toString();
+         val var3: MediaContainingViewResizer.ResizeMode = this.resizeMode;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("TargetSize(width=");
+         var4.append(var1);
+         var4.append(", height=");
+         var4.append(var2);
+         var4.append(", resizeMode=");
+         var4.append(var3);
+         var4.append(")");
+         return var4.toString();
       }
    }
 }

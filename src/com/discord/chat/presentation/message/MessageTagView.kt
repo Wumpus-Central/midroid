@@ -86,7 +86,7 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          var14.setTextColor(var12);
          val var15: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new X(var6, var7, var8, var10), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var15, false, new T(var6, var7, var8, var10), 1, null);
          val var16: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.r.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var var29: Byte = 8;
@@ -126,16 +126,16 @@ public class MessageTagView(context: Context, attrs: AttributeSet) : FrameLayout
          val var26: Context = this.getContext();
          kotlin.jvm.internal.r.g(var26, "getContext(...)");
          var22.setTextColor(ColorUtilsKt.getColorCompat(var26, R.color.brand_560));
-         val var27: ConstraintLayout = this.binding.layout;
+         val var23: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         val var23: Context = this.getContext();
-         kotlin.jvm.internal.r.g(var23, "getContext(...)");
+         val var27: Context = this.getContext();
+         kotlin.jvm.internal.r.g(var27, "getContext(...)");
          ViewBackgroundUtilsKt.setBackgroundRectangle$default(
-            var27, ColorUtilsKt.getThemeColor(var23, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
+            var23, ColorUtilsKt.getThemeColor(var27, R.color.brand_200, R.color.brand_260), SizeUtilsKt.getDpToPx(8), null, 0, 12, null
          );
          val var24: ConstraintLayout = this.binding.layout;
          kotlin.jvm.internal.r.g(this.binding.layout, "layout");
-         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new Y(var6), 1, null);
+         NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var24, false, new U(var6), 1, null);
          val var25: SimpleDraweeView = this.binding.verifiedBotIcon;
          kotlin.jvm.internal.r.g(this.binding.verifiedBotIcon, "verifiedBotIcon");
          var25.setVisibility(8);

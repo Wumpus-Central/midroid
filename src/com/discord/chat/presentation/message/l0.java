@@ -1,15 +1,14 @@
 package com.discord.chat.presentation.message;
 
-import com.discord.chat.bridge.Message;
-import com.discord.chat.presentation.events.ChatEventHandler;
-import kotlin.jvm.functions.Function0;
+import java.util.Comparator;
+import kotlin.jvm.functions.Function2;
 
 // $VF: synthetic class
-public final class l0 implements Function0 {
-   public final ChatEventHandler j;
-   public final Message k;
+public final class l0 implements Comparator {
+   public final Function2 j;
 
-   public final Object invoke() {
-      return MessageView.o(this.j, this.k);
+   @Override
+   public final int compare(Object var1, Object var2) {
+      return MessageView.g(this.j, var1, var2);
    }
 }

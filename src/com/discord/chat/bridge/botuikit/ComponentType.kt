@@ -5,9 +5,9 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f(with = ComponentType.Serializer::class)
+@g(with = ComponentType.Serializer::class)
 public enum class ComponentType(serialNumber: Int) : IntEnum {
    ACTION_ROW(1),
    BUTTON(2),

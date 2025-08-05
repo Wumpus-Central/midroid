@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.botuikit
 
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 public sealed class SelectComponent protected constructor() : BaseActionComponent() {
    public abstract val placeholder: String?
    public abstract val accessibilityLabel: String?

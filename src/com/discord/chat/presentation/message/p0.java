@@ -1,14 +1,17 @@
 package com.discord.chat.presentation.message;
 
-import java.util.Comparator;
-import kotlin.jvm.functions.Function2;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.chat.bridge.executedcommand.ExecutedCommand;
+import com.discord.chat.presentation.events.ChatEventHandler;
 
 // $VF: synthetic class
-public final class p0 implements Comparator {
-   public final Function2 j;
+public final class p0 implements OnClickListener {
+   public final ChatEventHandler j;
+   public final String k;
+   public final ExecutedCommand l;
 
-   @Override
-   public final int compare(Object var1, Object var2) {
-      return MessageView.g(this.j, var1, var2);
+   public final void onClick(View var1) {
+      MessageViewReplyPreview.g(this.j, this.k, this.l, var1);
    }
 }

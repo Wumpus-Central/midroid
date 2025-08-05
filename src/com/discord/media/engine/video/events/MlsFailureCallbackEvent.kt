@@ -4,9 +4,9 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.f
+import sb.g
 
-@f
+@g
 internal data class MlsFailureCallbackEvent(connectionId: Int, source: String, reason: String) : ReactEvent {
    public final val connectionId: Int
    public final val source: String
