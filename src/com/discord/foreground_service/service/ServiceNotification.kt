@@ -1,7 +1,8 @@
 package com.discord.foreground_service.service
 
+import A9.s
 import D.d
-import D9.a
+import E9.a
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -16,7 +17,6 @@ import com.discord.notifications.actions.intents.NotificationAction
 import com.discord.notifications.renderer.R
 import java.util.Comparator
 import kotlin.jvm.internal.r
-import z9.s
 
 internal object ServiceNotification {
    private const val FOREGROUND_NOTIFICATION_CHANNEL: String = "mediaConnections"
@@ -44,19 +44,19 @@ internal object ServiceNotification {
          var6 = null;
       }
 
-      val var5: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
+      val var7: NotificationCompat.Builder = var4.v(var6).T(R.drawable.ic_notification_24dp).K(true).S(true);
 
-      for (ServiceNotificationConfiguration.Action var7 : var2.getAuxiliaryActions()) {
-         var5.a(
+      for (ServiceNotificationConfiguration.Action var8 : var2.getAuxiliaryActions()) {
+         var7.a(
             0,
-            var7.getTitle(),
+            var8.getTitle(),
             NotificationAction.DefaultImpls.toPendingIntent$default(
-               new GenericAction(var7.getTag(), var7.getTaskName(), var7.getData()), var1, 0, false, 2, null
+               new GenericAction(var8.getTag(), var8.getTaskName(), var8.getData()), var1, 0, false, 2, null
             )
          );
       }
 
-      return var5.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
+      return var7.A(d.a(s.a("permissionType", var2.getType().ordinal()))).g();
    }
 
    public fun Context.clearNotifications() {

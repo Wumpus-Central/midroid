@@ -1,9 +1,9 @@
 package com.discord.shortcuts
 
-import A9.q
+import B9.q
 import android.content.Context
 import android.content.Intent
-import fb.k
+import gb.k
 import java.util.Map.Entry
 import kotlin.jvm.internal.r
 
@@ -79,10 +79,10 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
          val var8: java.util.List = i.c();
 
          for (Entry var12 : var5.entrySet()) {
-            var4 = var12.getKey() as java.lang.String;
+            val var9: java.lang.String = var12.getKey() as java.lang.String;
             val var13: java.lang.String = var12.getValue() as java.lang.String;
             if (var13 != null) {
-               var8.add(var4);
+               var8.add(var9);
                var8.add(var13);
             }
          }
@@ -110,11 +110,11 @@ public data class ShortcutData(tag: String, data: Map<String, String>) {
                   val var8: Sequence = k.m(var7, 2);
                   if (var8 != null) {
                      for (java.util.List var5 : var8) {
-                        val var9: java.lang.String = var5.get(0) as java.lang.String;
+                        val var4: java.lang.String = var5.get(0) as java.lang.String;
                         val var12: java.lang.String = var5.get(1) as java.lang.String;
-                        r.e(var9);
+                        r.e(var4);
                         r.e(var12);
-                        var11.put(var9, var12);
+                        var11.put(var4, var12);
                      }
                   }
                }

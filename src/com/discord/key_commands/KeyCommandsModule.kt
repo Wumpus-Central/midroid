@@ -1,10 +1,10 @@
 package com.discord.key_commands
 
-import A9.q
+import A9.s
+import B9.q
 import com.discord.codegen.NativeKeyCommandsModuleSpec
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.r
-import z9.s
 
 public class KeyCommandsModule(reactContext: ReactApplicationContext) : NativeKeyCommandsModuleSpec {
    init {

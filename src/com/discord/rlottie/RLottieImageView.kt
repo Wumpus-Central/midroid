@@ -1,5 +1,6 @@
 package com.discord.rlottie
 
+import A9.t
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build.VERSION
@@ -13,7 +14,6 @@ import java.io.File
 import java.util.HashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.r
-import z9.t
 
 public open class RLottieImageView : m {
    private final var layerColors: HashMap<String, Int>?
@@ -144,12 +144,12 @@ public open class RLottieImageView : m {
       playbackMode: PlaybackMode = RLottieDrawable.PlaybackMode.LOOP
    ) {
       r.i(var5, "playbackMode");
-      val var6: Context = this.getContext();
-      r.d(var6, "context");
       val var7: Context = this.getContext();
       r.d(var7, "context");
+      val var6: Context = this.getContext();
+      r.d(var6, "context");
       val var9: RLottieDrawable = new RLottieDrawable(
-         var6, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var7).getRefreshRate(), false, var4
+         var7, var1, java.lang.String.valueOf(var1), var2, var3, this.getDisplayCompat(var6).getRefreshRate(), false, var4
       );
       this.drawable = var9;
       this.playbackMode = var5;

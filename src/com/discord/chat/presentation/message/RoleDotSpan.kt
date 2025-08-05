@@ -28,12 +28,12 @@ public class RoleDotSpan(context: Context, backgroundColor: Int, spSize: Int = 2
       this.pxSize = (int)(SizeUtilsKt.getSpToPx(var3) * var4);
       val var5: Int = ColorUtilsKt.getThemeColor(var1, R.color.black, R.color.white);
       this.borderColor = var5;
-      val var7: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
-      this.roleDot = var7;
-      val var6: PaintDrawable = new PaintDrawable(var2);
-      var6.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
-      this.backgroundDrawable = var6;
-      this.layerDrawable = new LayerDrawable(new Drawable[]{var6, var7});
+      val var6: RoleDotDrawable = new RoleDotDrawable(var1, var5, var3);
+      this.roleDot = var6;
+      val var7: PaintDrawable = new PaintDrawable(var2);
+      var7.setCornerRadius((float)SizeUtilsKt.getDpToPx(4));
+      this.backgroundDrawable = var7;
+      this.layerDrawable = new LayerDrawable(new Drawable[]{var7, var6});
    }
 
    public open fun getDrawable(): Drawable {

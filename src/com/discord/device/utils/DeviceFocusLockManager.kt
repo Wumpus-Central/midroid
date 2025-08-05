@@ -14,18 +14,18 @@ public object DeviceFocusLockManager {
    private final val focusExcludedViewPreviousImportantForAccessibilityValue: MutableMap<Int, Int> = new LinkedHashMap()
 
    private fun getParallelAncestorViewTrees(targetViews: List<View>): List<View> {
-      val var8: LinkedHashSet = new LinkedHashSet();
       val var6: LinkedHashSet = new LinkedHashSet();
+      val var9: LinkedHashSet = new LinkedHashSet();
 
       for (View var4 : var1) {
-         val var9: ArrayList = new ArrayList();
+         val var7: ArrayList = new ArrayList();
 
          while (var4.getParent() instanceof ViewGroup) {
             val var5: ViewParent = var4.getParent();
             r.f(var5, "null cannot be cast to non-null type android.view.ViewGroup");
             val var11: ViewGroup = var5 as ViewGroup;
-            if (var6.contains(var5 as ViewGroup)) {
-               var9.clear();
+            if (var9.contains(var5 as ViewGroup)) {
+               var7.clear();
                break;
             }
 
@@ -35,29 +35,29 @@ public object DeviceFocusLockManager {
                var4 = var11.getChildAt(var2);
                if (!var1.contains(var4)) {
                   r.e(var4);
-                  var9.add(var4);
+                  var7.add(var4);
                }
             }
 
-            var6.add(var11);
+            var9.add(var11);
             var4 = var11;
          }
 
-         var8.addAll(var9);
+         var6.addAll(var7);
       }
 
-      return i.U0(var8);
+      return i.U0(var6);
    }
 
    public fun disableFocusLock() {
-      val var4: java.util.Iterator = focusExcludedViews.entrySet().iterator();
+      val var3: java.util.Iterator = focusExcludedViews.entrySet().iterator();
 
-      while (var4.hasNext()) {
-         val var2: View = (var4.next() as Entry).getValue() as View;
-         val var3: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
+      while (var3.hasNext()) {
+         val var2: View = (var3.next() as Entry).getValue() as View;
+         val var4: Int = focusExcludedViewPreviousImportantForAccessibilityValue.get(var2.getId());
          val var1: Int;
-         if (var3 != null) {
-            var1 = var3;
+         if (var4 != null) {
+            var1 = var4;
          } else {
             var1 = 0;
          }
@@ -73,11 +73,11 @@ public object DeviceFocusLockManager {
       r.h(var1, "targetViews");
       this.disableFocusLock();
 
-      for (View var2 : this.getParallelAncestorViewTrees(var1)) {
-         if (var2.getId() > 0 && var2.getImportantForAccessibility() != 4) {
-            focusExcludedViews.put(var2.getId(), var2);
-            focusExcludedViewPreviousImportantForAccessibilityValue.put(var2.getId(), var2.getImportantForAccessibility());
-            var2.setImportantForAccessibility(4);
+      for (View var3 : this.getParallelAncestorViewTrees(var1)) {
+         if (var3.getId() > 0 && var3.getImportantForAccessibility() != 4) {
+            focusExcludedViews.put(var3.getId(), var3);
+            focusExcludedViewPreviousImportantForAccessibilityValue.put(var3.getId(), var3.getImportantForAccessibility());
+            var3.setImportantForAccessibility(4);
          }
       }
    }

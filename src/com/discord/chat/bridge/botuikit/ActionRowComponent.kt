@@ -2,7 +2,7 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class ActionRowComponent(type: Int, id: String, errorText: String? = null, components: List<Component>) : BaseLayoutComponent {
@@ -77,20 +77,20 @@ public data class ActionRowComponent(type: Int, id: String, errorText: String? =
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var5: java.lang.String = this.id;
-      val var2: java.lang.String = this.errorText;
-      val var3: java.util.List = this.components;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("ActionRowComponent(type=");
-      var4.append(var1);
-      var4.append(", id=");
-      var4.append(var5);
-      var4.append(", errorText=");
-      var4.append(var2);
-      var4.append(", components=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: java.lang.String = this.id;
+      val var4: java.lang.String = this.errorText;
+      val var5: java.util.List = this.components;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ActionRowComponent(type=");
+      var2.append(var1);
+      var2.append(", id=");
+      var2.append(var3);
+      var2.append(", errorText=");
+      var2.append(var4);
+      var2.append(", components=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

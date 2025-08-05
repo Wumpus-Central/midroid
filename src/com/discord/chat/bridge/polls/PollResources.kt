@@ -1,9 +1,9 @@
 package com.discord.chat.bridge.polls
 
-import A9.q
+import B9.q
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class PollResources(selectedIcon: String, checkmarkIcon: String, styles: Map<String, PollStyleSet> = q.h()) {

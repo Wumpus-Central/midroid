@@ -1,5 +1,6 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.chat.bridge.contentnode.LinkContentNode
 import com.discord.chat.bridge.contentnode.LinkContextData
 import com.discord.logging.Log
@@ -12,7 +13,6 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.r
-import z9.s
 
 public data class TapLinkData(messageId: MessageId? = ..., title: String? = ..., target: LinkContextData? = ..., content: String = ...) : TapLinkData(
          var1, var2, var3, var4
@@ -144,11 +144,11 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
             NativeMapExtensionsKt.put(var5, "addSpace", var7);
          }
       } else {
-         val var8: Log = Log.INSTANCE;
-         val var11: StringBuilder = new StringBuilder();
-         var11.append("Missing target type data: ");
-         var11.append(var4);
-         Log.e$default(var8, "TapLink", var11.toString(), null, 4, null);
+         val var11: Log = Log.INSTANCE;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Missing target type data: ");
+         var8.append(var4);
+         Log.e$default(var11, "TapLink", var8.toString(), null, 4, null);
       }
 
       return var5;
@@ -182,16 +182,16 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          return false;
       } else {
          var var2: Boolean;
-         var var3: TapLinkData;
+         var var4: TapLinkData;
          label37: {
-            var3 = var1 as TapLinkData;
+            var4 = var1 as TapLinkData;
             if (this.messageId == null) {
-               if (var3.messageId == null) {
+               if (var4.messageId == null) {
                   var2 = true;
                   break label37;
                }
-            } else if (var3.messageId != null) {
-               var2 = MessageId.equals-impl0(this.messageId, var3.messageId);
+            } else if (var4.messageId != null) {
+               var2 = MessageId.equals-impl0(this.messageId, var4.messageId);
                break label37;
             }
 
@@ -200,12 +200,12 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
 
          if (!var2) {
             return false;
-         } else if (!r.c(this.title, var3.title)) {
+         } else if (!r.c(this.title, var4.title)) {
             return false;
-         } else if (!r.c(this.target, var3.target)) {
+         } else if (!r.c(this.target, var4.target)) {
             return false;
          } else {
-            return r.c(this.content, var3.content);
+            return r.c(this.content, var4.content);
          }
       }
    }
@@ -268,18 +268,18 @@ public data class TapLinkData(messageId: MessageId? = ..., title: String? = ...,
          var6 = MessageId.toString-impl(this.messageId);
       }
 
-      val var2: java.lang.String = this.title;
-      val var5: LinkContextData = this.target;
-      val var3: java.lang.String = this.content;
+      val var3: java.lang.String = this.title;
+      val var2: LinkContextData = this.target;
+      val var5: java.lang.String = this.content;
       val var4: StringBuilder = new StringBuilder();
       var4.append("TapLinkData(messageId=");
       var4.append(var6);
       var4.append(", title=");
-      var4.append(var2);
-      var4.append(", target=");
-      var4.append(var5);
-      var4.append(", content=");
       var4.append(var3);
+      var4.append(", target=");
+      var4.append(var2);
+      var4.append(", content=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

@@ -3,7 +3,7 @@ package com.discord.chat.input.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 internal data class OnContentSizeChangeEvent(width: Int, height: Int) : ReactEvent {

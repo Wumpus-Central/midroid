@@ -1,8 +1,9 @@
 package com.discord.core
 
-import A9.q
-import G9.b
-import H2.d
+import A9.s
+import B9.q
+import H9.b
+import I2.d
 import android.content.ContentResolver
 import android.content.Context
 import android.graphics.Bitmap
@@ -25,14 +26,13 @@ import com.facebook.drawee.generic.GenericDraweeHierarchy
 import com.facebook.drawee.view.SimpleDraweeView
 import com.facebook.imagepipeline.common.ResizeOptions
 import com.facebook.imagepipeline.request.ImageRequestBuilder
-import ib.K
-import ib.d0
-import ib.f
+import jb.K
+import jb.d0
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.CoroutineScope
-import z9.s
 
 public class LocalImageThumbnailView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0) : FrameLayout {
    private final var imageView: ImageView

@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class TapContentInventoryEntryEmbedData(messageId: String, authorId: String, contentId: String, tappedElement: String) : ReactEvent {
@@ -85,18 +85,18 @@ public data class TapContentInventoryEntryEmbedData(messageId: String, authorId:
       val var1: java.lang.String = this.messageId;
       val var2: java.lang.String = this.authorId;
       val var3: java.lang.String = this.contentId;
-      val var4: java.lang.String = this.tappedElement;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapContentInventoryEntryEmbedData(messageId=");
-      var5.append(var1);
-      var5.append(", authorId=");
-      var5.append(var2);
-      var5.append(", contentId=");
-      var5.append(var3);
-      var5.append(", tappedElement=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: java.lang.String = this.tappedElement;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("TapContentInventoryEntryEmbedData(messageId=");
+      var4.append(var1);
+      var4.append(", authorId=");
+      var4.append(var2);
+      var4.append(", contentId=");
+      var4.append(var3);
+      var4.append(", tappedElement=");
+      var4.append(var5);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

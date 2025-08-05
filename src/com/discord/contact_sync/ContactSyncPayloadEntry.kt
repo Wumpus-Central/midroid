@@ -2,7 +2,7 @@ package com.discord.contact_sync
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class ContactSyncPayloadEntry(friendId: String) {

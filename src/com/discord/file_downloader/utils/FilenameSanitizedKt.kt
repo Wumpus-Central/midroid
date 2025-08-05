@@ -1,12 +1,12 @@
 package com.discord.file_downloader.utils
 
-import A9.q
+import A9.s
+import B9.q
 import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder
 import java.util.Locale
 import kotlin.jvm.internal.r
-import z9.s
 
 private final val EXTENSION_TO_MIME_TYPE: Map<String, String> =
    q.l(
@@ -51,21 +51,21 @@ public fun CharSequence.filenameSanitized(): String {
 }
 
 private fun fixAtSeparatorExtensions(filename: String, useUrlEncoded: Boolean): String {
-   val var3: java.lang.String;
+   val var2: java.lang.String;
    if (var1) {
-      var3 = "%40";
+      var2 = "%40";
    } else {
-      var3 = "@";
+      var2 = "@";
    }
 
    val var5: FilenamePatterns = FilenamePatterns.INSTANCE;
-   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var3).h(var0, "$1.$2");
-   var var2: java.lang.String = var4;
+   val var4: java.lang.String = FilenamePatterns.INSTANCE.binExtensionFixPattern(var2).h(var0, "$1.$2");
+   var var3: java.lang.String = var4;
    if (r.c(var4, var0)) {
-      var2 = var5.atSeparatorPattern(var3).h(var0, "$1.$2");
+      var3 = var5.atSeparatorPattern(var2).h(var0, "$1.$2");
    }
 
-   return var2;
+   return var3;
 }
 
 public fun String.getMimeTypeFromFilename(): String? {

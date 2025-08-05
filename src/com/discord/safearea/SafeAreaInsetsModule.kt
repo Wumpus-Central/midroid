@@ -1,5 +1,6 @@
 package com.discord.safearea
 
+import A9.s
 import android.app.Activity
 import android.os.Build.VERSION
 import android.view.Window
@@ -13,13 +14,12 @@ import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.UiThreadUtil
 import com.facebook.react.bridge.WritableMap
 import com.facebook.react.bridge.WritableNativeMap
-import e2.a
-import e2.b
-import e2.c
-import e2.d
-import e2.e
+import f2.a
+import f2.b
+import f2.c
+import f2.d
+import f2.e
 import kotlin.jvm.internal.r
-import z9.s
 
 internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : NativeSafeAreaInsetsModuleSpec {
    init {
@@ -146,17 +146,17 @@ internal class SafeAreaInsetsModule(reactContext: ReactApplicationContext) : Nat
 
    public override fun getStableSafeAreaInsets(): WritableMap {
       val var1: d = new d();
-      val var4: Activity = this.getCurrentActivity();
+      val var3: Activity = this.getCurrentActivity();
       val var2: Int = 0;
-      if (var4 == null) {
+      if (var3 == null) {
          return var1.invoke(var2, var2, var2, var2) as WritableMap;
       } else {
-         val var3: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var4);
-         if (var3 == null) {
+         val var4: WindowInsetsCompat = WindowInsetsCompatExtensionsKt.getWindowInsetsCompat(var3);
+         if (var4 == null) {
             return var1.invoke(var2, var2, var2, var2) as WritableMap;
          } else {
-            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var3, true);
-            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var3, var4, true);
+            val var5: Insets = WindowInsetsCompatExtensionsKt.getDisplayCutoutInsets(var4, true);
+            val var6: Insets = WindowInsetsCompatExtensionsKt.getSystemBarInsets(var4, var3, true);
             return var1.invoke(Math.max(var5.a, var6.a), Math.max(var5.b, var6.b), Math.max(var5.c, var6.c), Math.max(var5.d, var6.d)) as WritableMap;
          }
       }

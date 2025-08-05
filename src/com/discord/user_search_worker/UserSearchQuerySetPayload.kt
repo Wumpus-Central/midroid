@@ -2,11 +2,11 @@ package com.discord.user_search_worker
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
-import vb.E0
-import vb.U
-import vb.f
-import vb.y
+import tb.g
+import wb.E0
+import wb.U
+import wb.f
+import wb.y
 
 @g
 internal data class UserSearchQuerySetPayload(query: String,
@@ -137,30 +137,30 @@ internal data class UserSearchQuerySetPayload(query: String,
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.query;
+      val var7: java.lang.String = this.query;
       val var8: UserSearchQuerySetFilters = this.filters;
-      val var9: java.util.List = this.blacklist;
-      val var4: java.util.List = this.whitelist;
-      val var7: java.util.Map = this.boosters;
+      val var5: java.util.List = this.blacklist;
+      val var9: java.util.List = this.whitelist;
+      val var6: java.util.Map = this.boosters;
       val var1: Double = this.boosterFallback;
       val var3: Int = this.limit;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("UserSearchQuerySetPayload(query=");
-      var6.append(var5);
-      var6.append(", filters=");
-      var6.append(var8);
-      var6.append(", blacklist=");
-      var6.append(var9);
-      var6.append(", whitelist=");
-      var6.append(var4);
-      var6.append(", boosters=");
-      var6.append(var7);
-      var6.append(", boosterFallback=");
-      var6.append(var1);
-      var6.append(", limit=");
-      var6.append(var3);
-      var6.append(")");
-      return var6.toString();
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("UserSearchQuerySetPayload(query=");
+      var4.append(var7);
+      var4.append(", filters=");
+      var4.append(var8);
+      var4.append(", blacklist=");
+      var4.append(var5);
+      var4.append(", whitelist=");
+      var4.append(var9);
+      var4.append(", boosters=");
+      var4.append(var6);
+      var4.append(", boosterFallback=");
+      var4.append(var1);
+      var4.append(", limit=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

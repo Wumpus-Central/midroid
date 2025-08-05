@@ -4,7 +4,7 @@ import android.app.Activity
 import com.discord.codegen.NativeThemeModuleSpec
 import com.discord.theme.utils.ActivityThemeUtils
 import com.facebook.react.bridge.ReactApplicationContext
-import j2.L2
+import k2.L2
 import kotlin.jvm.internal.r
 
 public class ThemeModule(reactContext: ReactApplicationContext) : NativeThemeModuleSpec {

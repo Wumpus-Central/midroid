@@ -1,6 +1,6 @@
 package com.discord.image.fresco.postprocessors.processors
 
-import A3.a
+import B3.a
 import android.graphics.Bitmap
 import kotlin.jvm.internal.r
 

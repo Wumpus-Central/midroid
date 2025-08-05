@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.decorations
 
+import A9.j
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Rect
@@ -13,7 +14,6 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.r
 import z1.d
 import z1.e
-import z9.j
 
 public class SpineDrawer(context: Context, contentStartPositionPx: Int) : RecyclerView.ItemDecoration {
    public final val context: Context
@@ -39,8 +39,8 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
       super();
       this.context = var1;
       this.contentStartPositionPx = var2;
-      this.lineDrawable$delegate = j.a(new d(this));
-      this.splineView$delegate = j.a(new e(this));
+      this.lineDrawable$delegate = j.b(new d(this));
+      this.splineView$delegate = j.b(new e(this));
       this.itemPaddingOffset = var1.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing);
       this.spineRect = new Rect();
    }
@@ -68,11 +68,11 @@ public class SpineDrawer(context: Context, contentStartPositionPx: Int) : Recycl
       r.h(var4, "viewToCenterSpine");
       var1.save();
       var2.getDecoratedBoundsWithMargins(var3, this.spineRect);
-      val var6: Int = var3.getTop();
       val var7: Int = var3.getTop();
+      val var9: Int = var3.getTop();
       val var8: Int = (var4.getBottom() - var4.getTop()) / 2;
-      val var9: Int = this.itemPaddingOffset;
-      val var11: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var6, this.contentStartPositionPx, var7 + var8 + var9);
+      val var6: Int = this.itemPaddingOffset;
+      val var11: Rect = new Rect(var5 - this.getLineDrawable().getIntrinsicWidth() / 2, var7, this.contentStartPositionPx, var9 + var8 + var6);
       val var10: ChannelSpineView = this.getSplineView();
       var10.setRowHeight((float)(var11.height() / 2));
       var10.measure(MeasureSpec.makeMeasureSpec(var11.width(), 1073741824), MeasureSpec.makeMeasureSpec(var11.height(), 1073741824));

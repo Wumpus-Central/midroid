@@ -1,6 +1,7 @@
 package com.discord.notifications.api
 
-import A9.q
+import A9.s
+import B9.q
 import com.discord.notifications.api.NotificationData.Companion
 import com.discord.primitives.ChannelId
 import com.discord.primitives.MessageId
@@ -9,7 +10,6 @@ import java.util.ArrayList
 import java.util.LinkedHashMap
 import java.util.Map.Entry
 import kotlin.jvm.internal.r
-import z9.s
 
 public fun Companion.localNotificationData(notification: Map<String, Any>): NotificationData {
    r.h(var0, "<this>");
@@ -25,21 +25,21 @@ public fun Companion.localNotificationData(notification: Map<String, Any>): Noti
       if (var9 != null) {
          val var3: LinkedHashMap = new LinkedHashMap();
 
-         for (Entry var6 : var9.entrySet()) {
-            if (var6.getKey() is java.lang.String && var6.getValue() is java.lang.String) {
-               var3.put(var6.getKey(), var6.getValue());
+         for (Entry var4 : var9.entrySet()) {
+            if (var4.getKey() is java.lang.String && var4.getValue() is java.lang.String) {
+               var3.put(var4.getKey(), var4.getValue());
             }
          }
 
          val var12: ArrayList = new ArrayList(var3.size());
 
-         for (Entry var24 : var3.entrySet()) {
-            var var20: Any = var24.getKey();
-            val var25: Any = var24.getValue();
-            r.f(var20, "null cannot be cast to non-null type kotlin.String");
-            var20 = var20 as java.lang.String;
-            r.f(var25, "null cannot be cast to non-null type kotlin.String");
-            var12.add(s.a(var20, var25 as java.lang.String));
+         for (Entry var20 : var3.entrySet()) {
+            var var24: Any = var20.getKey();
+            val var21: Any = var20.getValue();
+            r.f(var24, "null cannot be cast to non-null type kotlin.String");
+            var24 = var24 as java.lang.String;
+            r.f(var21, "null cannot be cast to non-null type kotlin.String");
+            var12.add(s.a(var24, var21 as java.lang.String));
          }
 
          var9 = q.t(var12);

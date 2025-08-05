@@ -13,7 +13,7 @@ public class DeviceResourceUsageManagerModule(reactContext: ReactApplicationCont
    init {
       r.h(var1, "reactContext");
       super(var1);
-      this.deviceResourceUsageManager = new DeviceResourceUsageManager(0L, 1, null);
+      this.deviceResourceUsageManager = new DeviceResourceUsageManager(var1);
    }
 
    @ReactMethod

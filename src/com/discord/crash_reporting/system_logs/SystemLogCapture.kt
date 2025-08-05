@@ -1,274 +1,189 @@
 package com.discord.crash_reporting.system_logs
 
+import android.app.ActivityManager
+import android.app.ActivityManager.MemoryInfo
+import android.content.Context
+import com.discord.misc.utilities.collections.CircularByteBuffer
+import java.io.File
 import kotlin.jvm.internal.r
 
 internal class SystemLogCapture {
-   private final val buffer: FixedSizeLineBuffer = new FixedSizeLineBuffer(524288)
-   private final val tombstoneBuffer: FixedSizeLineBuffer = new FixedSizeLineBuffer(102400)
+   private final val buffer: CircularByteBuffer = new CircularByteBuffer(262144)
+   private final val tombstoneBuffer: CircularByteBuffer = new CircularByteBuffer(51200)
+   private final val memoryInfo: MemoryInfo
+   private final lateinit var activityManager: ActivityManager
 
-   private fun start() {
+   private fun addExceptionToBuffer(e: Exception) {
+      val var5: Array<StackTraceElement> = var1.getStackTrace();
+      r.g(var5, "getStackTrace(...)");
+      val var3: Int = var5.length;
+
+      for (int var2 = 0; var2 < var3; var2++) {
+         val var7: StackTraceElement = var5[var2];
+         val var6: CircularByteBuffer = this.buffer;
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("    ");
+         var4.append(var7);
+         var6.addLine(var4.toString());
+      }
+   }
+
+   private fun isLowMemory(): Boolean {
+      val var3: MemoryInfo = this.memoryInfo;
+      var var1: ActivityManager = this.activityManager;
+      if (this.activityManager == null) {
+         r.y("activityManager");
+         var1 = null;
+      }
+
+      var1.getMemoryInfo(this.memoryInfo);
+      return var3.lowMemory;
+   }
+
+   private fun readFromLogcat() {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index -1 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1064)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:565)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
       //
       // Bytecode:
-      // 000: new java/io/File
-      // 003: dup
-      // 004: ldc "/system/bin/logcat"
-      // 006: invokespecial java/io/File.<init> (Ljava/lang/String;)V
-      // 009: invokevirtual java/io/File.exists ()Z
-      // 00c: ifne 019
-      // 00f: aload 0
-      // 010: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 013: ldc "Unable to locate '/system/bin/logcat'"
-      // 015: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
-      // 018: return
-      // 019: aconst_null
-      // 01a: astore 5
-      // 01c: aconst_null
-      // 01d: astore 6
-      // 01f: aload 6
-      // 021: astore 4
-      // 023: aload 5
-      // 025: astore 3
-      // 026: new java/lang/ProcessBuilder
-      // 029: astore 7
-      // 02b: aload 6
-      // 02d: astore 4
-      // 02f: aload 5
-      // 031: astore 3
-      // 032: aload 7
-      // 034: bipush 1
-      // 035: anewarray 83
-      // 038: dup
-      // 039: bipush 0
-      // 03a: ldc "/system/bin/logcat"
-      // 03c: aastore
-      // 03d: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
-      // 040: aload 6
-      // 042: astore 4
-      // 044: aload 5
-      // 046: astore 3
-      // 047: aload 7
-      // 049: bipush 1
-      // 04a: invokevirtual java/lang/ProcessBuilder.redirectErrorStream (Z)Ljava/lang/ProcessBuilder;
-      // 04d: invokevirtual java/lang/ProcessBuilder.start ()Ljava/lang/Process;
-      // 050: astore 5
-      // 052: aload 5
-      // 054: astore 4
-      // 056: aload 5
-      // 058: astore 3
-      // 059: aload 5
-      // 05b: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
-      // 05e: astore 7
-      // 060: aload 5
-      // 062: astore 4
-      // 064: aload 5
-      // 066: astore 3
-      // 067: aload 7
-      // 069: ldc "getInputStream(...)"
-      // 06b: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 06e: aload 5
-      // 070: astore 4
-      // 072: aload 5
-      // 074: astore 3
-      // 075: getstatic gb/a.b Ljava/nio/charset/Charset;
-      // 078: astore 8
-      // 07a: aload 5
-      // 07c: astore 4
-      // 07e: aload 5
-      // 080: astore 3
-      // 081: new java/io/InputStreamReader
-      // 084: astore 6
-      // 086: aload 5
-      // 088: astore 4
-      // 08a: aload 5
-      // 08c: astore 3
-      // 08d: aload 6
-      // 08f: aload 7
-      // 091: aload 8
-      // 093: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;Ljava/nio/charset/Charset;)V
-      // 096: aload 5
-      // 098: astore 4
-      // 09a: aload 5
-      // 09c: astore 3
-      // 09d: new java/io/BufferedReader
-      // 0a0: astore 7
-      // 0a2: aload 5
-      // 0a4: astore 4
-      // 0a6: aload 5
-      // 0a8: astore 3
-      // 0a9: aload 7
-      // 0ab: aload 6
-      // 0ad: sipush 8192
-      // 0b0: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;I)V
-      // 0b3: aload 5
-      // 0b5: astore 4
-      // 0b7: aload 5
-      // 0b9: astore 3
-      // 0ba: aload 7
-      // 0bc: invokevirtual java/io/BufferedReader.readLine ()Ljava/lang/String;
-      // 0bf: astore 6
-      // 0c1: aload 6
-      // 0c3: ifnonnull 0c9
-      // 0c6: goto 11f
-      // 0c9: aload 5
-      // 0cb: astore 4
-      // 0cd: aload 5
-      // 0cf: astore 3
-      // 0d0: getstatic com/discord/crash_reporting/system_logs/SystemLogCapture.Companion Lcom/discord/crash_reporting/system_logs/SystemLogCapture$Companion;
-      // 0d3: aload 6
-      // 0d5: invokevirtual com/discord/crash_reporting/system_logs/SystemLogCapture$Companion.shouldIncludeLogLine$crash_reporting_release (Ljava/lang/String;)Z
-      // 0d8: ifeq 0f7
-      // 0db: aload 5
-      // 0dd: astore 4
-      // 0df: aload 5
-      // 0e1: astore 3
-      // 0e2: aload 0
-      // 0e3: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 0e6: aload 6
-      // 0e8: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
-      // 0eb: goto 0f7
-      // 0ee: astore 3
-      // 0ef: goto 1f6
-      // 0f2: astore 7
-      // 0f4: goto 135
-      // 0f7: aload 5
-      // 0f9: astore 4
-      // 0fb: aload 5
-      // 0fd: astore 3
-      // 0fe: getstatic com/discord/crash_reporting/system_logs/SystemLogUtils.INSTANCE Lcom/discord/crash_reporting/system_logs/SystemLogUtils;
-      // 101: invokevirtual com/discord/crash_reporting/system_logs/SystemLogUtils.getRegexExtractTombstone$crash_reporting_release ()Lkotlin/text/Regex;
-      // 104: aload 6
-      // 106: invokevirtual kotlin/text/Regex.g (Ljava/lang/CharSequence;)Z
-      // 109: ifeq 0b3
-      // 10c: aload 5
-      // 10e: astore 4
-      // 110: aload 5
-      // 112: astore 3
-      // 113: aload 0
-      // 114: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.tombstoneBuffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 117: aload 6
-      // 119: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
-      // 11c: goto 0b3
-      // 11f: aload 5
-      // 121: astore 4
-      // 123: aload 5
-      // 125: astore 3
-      // 126: aload 7
-      // 128: invokevirtual java/io/BufferedReader.close ()V
-      // 12b: aload 5
-      // 12d: astore 3
-      // 12e: aload 3
-      // 12f: invokevirtual java/lang/Process.destroy ()V
-      // 132: goto 1ed
-      // 135: aload 3
-      // 136: astore 4
-      // 138: aload 0
-      // 139: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 13c: astore 6
-      // 13e: aload 3
-      // 13f: astore 4
-      // 141: new java/lang/StringBuilder
-      // 144: astore 5
-      // 146: aload 3
-      // 147: astore 4
-      // 149: aload 5
-      // 14b: invokespecial java/lang/StringBuilder.<init> ()V
-      // 14e: aload 3
-      // 14f: astore 4
-      // 151: aload 5
-      // 153: ldc "Exception getting system logs '"
-      // 155: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 158: pop
-      // 159: aload 3
-      // 15a: astore 4
-      // 15c: aload 5
-      // 15e: aload 7
-      // 160: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      // 163: pop
-      // 164: aload 3
-      // 165: astore 4
-      // 167: aload 5
-      // 169: ldc "'"
-      // 16b: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 16e: pop
-      // 16f: aload 3
-      // 170: astore 4
-      // 172: aload 6
-      // 174: aload 5
-      // 176: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 179: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
-      // 17c: aload 3
-      // 17d: astore 4
-      // 17f: aload 7
-      // 181: invokevirtual java/lang/Throwable.getStackTrace ()[Ljava/lang/StackTraceElement;
-      // 184: astore 5
-      // 186: aload 3
-      // 187: astore 4
-      // 189: aload 5
-      // 18b: ldc "getStackTrace(...)"
-      // 18d: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 190: aload 3
-      // 191: astore 4
-      // 193: aload 5
-      // 195: arraylength
-      // 196: istore 2
-      // 197: bipush 0
-      // 198: istore 1
-      // 199: iload 1
-      // 19a: iload 2
-      // 19b: if_icmpge 1e6
-      // 19e: aload 5
-      // 1a0: iload 1
-      // 1a1: aaload
-      // 1a2: astore 6
-      // 1a4: aload 3
-      // 1a5: astore 4
-      // 1a7: aload 0
-      // 1a8: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/crash_reporting/system_logs/FixedSizeLineBuffer;
-      // 1ab: astore 7
-      // 1ad: aload 3
-      // 1ae: astore 4
-      // 1b0: new java/lang/StringBuilder
-      // 1b3: astore 8
-      // 1b5: aload 3
-      // 1b6: astore 4
-      // 1b8: aload 8
-      // 1ba: invokespecial java/lang/StringBuilder.<init> ()V
-      // 1bd: aload 3
-      // 1be: astore 4
-      // 1c0: aload 8
-      // 1c2: ldc "    "
-      // 1c4: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
-      // 1c7: pop
-      // 1c8: aload 3
-      // 1c9: astore 4
-      // 1cb: aload 8
-      // 1cd: aload 6
-      // 1cf: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
-      // 1d2: pop
-      // 1d3: aload 3
-      // 1d4: astore 4
-      // 1d6: aload 7
-      // 1d8: aload 8
-      // 1da: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
-      // 1dd: invokevirtual com/discord/crash_reporting/system_logs/FixedSizeLineBuffer.addLine (Ljava/lang/String;)V
-      // 1e0: iinc 1 1
-      // 1e3: goto 199
-      // 1e6: aload 3
-      // 1e7: ifnull 1ed
-      // 1ea: goto 12e
-      // 1ed: ldc2_w 1000
-      // 1f0: invokestatic java/lang/Thread.sleep (J)V
-      // 1f3: goto 019
-      // 1f6: aload 4
-      // 1f8: ifnull 200
-      // 1fb: aload 4
-      // 1fd: invokevirtual java/lang/Process.destroy ()V
-      // 200: aload 3
-      // 201: athrow
-      // 202: astore 3
-      // 203: goto 11f
+      // 00: new java/lang/ProcessBuilder
+      // 03: astore 1
+      // 04: aload 1
+      // 05: bipush 1
+      // 06: anewarray 142
+      // 09: dup
+      // 0a: bipush 0
+      // 0b: ldc "/system/bin/logcat"
+      // 0d: aastore
+      // 0e: invokespecial java/lang/ProcessBuilder.<init> ([Ljava/lang/String;)V
+      // 11: aload 1
+      // 12: bipush 1
+      // 13: invokevirtual java/lang/ProcessBuilder.redirectErrorStream (Z)Ljava/lang/ProcessBuilder;
+      // 16: invokevirtual java/lang/ProcessBuilder.start ()Ljava/lang/Process;
+      // 19: astore 1
+      // 1a: new java/io/BufferedReader
+      // 1d: astore 2
+      // 1e: new java/io/InputStreamReader
+      // 21: astore 3
+      // 22: aload 3
+      // 23: aload 1
+      // 24: invokevirtual java/lang/Process.getInputStream ()Ljava/io/InputStream;
+      // 27: invokespecial java/io/InputStreamReader.<init> (Ljava/io/InputStream;)V
+      // 2a: aload 2
+      // 2b: aload 3
+      // 2c: invokespecial java/io/BufferedReader.<init> (Ljava/io/Reader;)V
+      // 2f: new com/discord/crash_reporting/system_logs/d
+      // 32: astore 3
+      // 33: aload 3
+      // 34: aload 0
+      // 35: invokespecial com/discord/crash_reporting/system_logs/d.<init> (Lcom/discord/crash_reporting/system_logs/SystemLogCapture;)V
+      // 38: aload 2
+      // 39: aload 3
+      // 3a: invokestatic M9/q.c (Ljava/io/Reader;Lkotlin/jvm/functions/Function1;)V
+      // 3d: getstatic kotlin/Unit.a Lkotlin/Unit;
+      // 40: astore 3
+      // 41: aload 2
+      // 42: aconst_null
+      // 43: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 46: aload 1
+      // 47: invokevirtual java/lang/Process.destroy ()V
+      // 4a: return
+      // 4b: astore 2
+      // 4c: goto 5d
+      // 4f: astore 4
+      // 51: aload 4
+      // 53: athrow
+      // 54: astore 3
+      // 55: aload 2
+      // 56: aload 4
+      // 58: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
+      // 5b: aload 3
+      // 5c: athrow
+      // 5d: aload 1
+      // 5e: invokevirtual java/lang/Process.destroy ()V
+      // 61: aload 2
+      // 62: athrow
+      // 63: astore 2
+      // 64: aload 0
+      // 65: getfield com/discord/crash_reporting/system_logs/SystemLogCapture.buffer Lcom/discord/misc/utilities/collections/CircularByteBuffer;
+      // 68: astore 1
+      // 69: new java/lang/StringBuilder
+      // 6c: dup
+      // 6d: invokespecial java/lang/StringBuilder.<init> ()V
+      // 70: astore 3
+      // 71: aload 3
+      // 72: ldc "Exception starting logcat process '"
+      // 74: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 77: pop
+      // 78: aload 3
+      // 79: aload 2
+      // 7a: invokevirtual java/lang/StringBuilder.append (Ljava/lang/Object;)Ljava/lang/StringBuilder;
+      // 7d: pop
+      // 7e: aload 3
+      // 7f: ldc "'"
+      // 81: invokevirtual java/lang/StringBuilder.append (Ljava/lang/String;)Ljava/lang/StringBuilder;
+      // 84: pop
+      // 85: aload 1
+      // 86: aload 3
+      // 87: invokevirtual java/lang/StringBuilder.toString ()Ljava/lang/String;
+      // 8a: invokevirtual com/discord/misc/utilities/collections/CircularByteBuffer.addLine (Ljava/lang/String;)V
+      // 8d: aload 0
+      // 8e: aload 2
+      // 8f: invokespecial com/discord/crash_reporting/system_logs/SystemLogCapture.addExceptionToBuffer (Ljava/lang/Exception;)V
+      // 92: return
+   }
+
+   @JvmStatic
+   fun `readFromLogcat$lambda$2$lambda$1`(var0: SystemLogCapture, var1: java.lang.String): Unit {
+      r.h(var1, "line");
+      if (Companion.shouldIncludeLogLine$crash_reporting_release(var1)) {
+         var0.buffer.addLine(var1);
+      }
+
+      if (SystemLogUtils.INSTANCE.getRegexExtractTombstone$crash_reporting_release().g(var1)) {
+         var0.tombstoneBuffer.addLine(var1);
+      }
+
+      return Unit.a;
+   }
+
+   private fun start() {
+      if (!new File("/system/bin/logcat").exists()) {
+         this.buffer.addLine("Unable to locate '/system/bin/logcat'");
+      } else {
+         while (true) {
+            try {
+               try {
+                  if (!this.isLowMemory()) {
+                     this.readFromLogcat();
+                  } else {
+                     this.buffer.addLine("Low memory. Skipping logcat read for 2000ms");
+                  }
+               } catch (var4: Exception) {
+                  val var2: CircularByteBuffer = this.buffer;
+                  val var3: StringBuilder = new StringBuilder();
+                  var3.append("Exception getting system logs, will restart logcat. '");
+                  val var1: Any;
+                  var3.append(var1);
+                  var3.append("'");
+                  var2.addLine(var3.toString());
+                  this.addExceptionToBuffer((Exception)var1);
+               }
+            } catch (var5: java.lang.Throwable) {
+               Thread.sleep(2000L);
+            }
+
+            Thread.sleep(2000L);
+         }
+      }
    }
 
    @JvmStatic
@@ -283,11 +198,15 @@ internal class SystemLogCapture {
       this.buffer.appendString(var1);
    }
 
-   public fun startThread(): Thread {
-      return E9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new d(this), 20, null);
+   public fun startThread(context: Context) {
+      r.h(var1, "context");
+      this.activityManager = var1.getSystemService(ActivityManager.class) as ActivityManager;
+      F9.a.b(true, true, null, SystemLogCapture.class.getSimpleName(), 0, new e(this), 20, null);
    }
 
    public companion object {
+      private const val THREAD_SLEEP_MS: Long
+
       internal fun shouldIncludeLogLine(line: String): Boolean {
          r.h(var1, "line");
          return kotlin.text.h.N(var1, "chatty  : uid=", false, 2, null) xor true;

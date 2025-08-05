@@ -2,7 +2,7 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentName: String, content: List<ContentNode>?) : MentionContentNode {
@@ -70,16 +70,16 @@ public data class AttachmentLinkContentNode(attachmentUrl: String, attachmentNam
    public override fun toString(): String {
       val var4: java.lang.String = this.attachmentUrl;
       val var1: java.lang.String = this.attachmentName;
-      val var2: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("AttachmentLinkContentNode(attachmentUrl=");
-      var3.append(var4);
-      var3.append(", attachmentName=");
-      var3.append(var1);
-      var3.append(", content=");
-      var3.append(var2);
-      var3.append(")");
-      return var3.toString();
+      val var3: java.util.List = this.content;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AttachmentLinkContentNode(attachmentUrl=");
+      var2.append(var4);
+      var2.append(", attachmentName=");
+      var2.append(var1);
+      var2.append(", content=");
+      var2.append(var3);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

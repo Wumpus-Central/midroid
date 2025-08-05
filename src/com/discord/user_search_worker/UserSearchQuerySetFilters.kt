@@ -2,7 +2,7 @@ package com.discord.user_search_worker
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Boolean? = null, strict: Boolean? = null) {
@@ -77,16 +77,16 @@ internal data class UserSearchQuerySetFilters(guild: String? = null, friends: Bo
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.guild;
-      val var1: java.lang.Boolean = this.friends;
-      val var4: java.lang.Boolean = this.strict;
+      val var4: java.lang.String = this.guild;
+      val var3: java.lang.Boolean = this.friends;
+      val var1: java.lang.Boolean = this.strict;
       val var2: StringBuilder = new StringBuilder();
       var2.append("UserSearchQuerySetFilters(guild=");
-      var2.append(var3);
-      var2.append(", friends=");
-      var2.append(var1);
-      var2.append(", strict=");
       var2.append(var4);
+      var2.append(", friends=");
+      var2.append(var3);
+      var2.append(", strict=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

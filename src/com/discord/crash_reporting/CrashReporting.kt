@@ -1,6 +1,7 @@
 package com.discord.crash_reporting
 
-import A9.q
+import A9.n
+import B9.q
 import android.content.Context
 import android.os.Build
 import com.discord.client_info.ClientInfo
@@ -27,7 +28,6 @@ import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import z9.n
 
 public object CrashReporting {
    public final var isCrashedLastRun: Boolean?
@@ -92,7 +92,7 @@ public object CrashReporting {
       var5.setEnableAutoActivityLifecycleTracing(false);
       var5.setTracesSampleRate(0.0);
       var5.setSampleRate(var3);
-      var5.setProguardUuid("259ef19b-8df7-42c0-9547-8dfea83dea62");
+      var5.setProguardUuid("b6bed938-3e5e-4c2b-8467-906bd526f60b");
       var5.setTag("buildNumber", var7.getVersionCode());
       var5.setTag("appVersion", var7.getVersionName());
       var5.setBeforeSend(new a(var2));
@@ -110,8 +110,8 @@ public object CrashReporting {
       r.h(var2, "breadcrumbData");
       val var4: e = new e(var1);
 
-      for (Entry var5 : var2.entrySet()) {
-         var4.o(var5.getKey() as java.lang.String, var5.getValue() as java.lang.String);
+      for (Entry var6 : var2.entrySet()) {
+         var4.o(var6.getKey() as java.lang.String, var6.getValue() as java.lang.String);
       }
 
       var4.n(var3);
@@ -121,7 +121,7 @@ public object CrashReporting {
 
    public fun captureException(throwable: Throwable, ignoreNetworkExceptions: Boolean = false) {
       r.h(var1, "throwable");
-      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", z9.c.b(var1), null, 4, null);
+      Log.e$default(Log.INSTANCE, "SentryBreadcrumb", A9.c.b(var1), null, 4, null);
       if (!var2) {
          p1.i(var1);
       } else if (!ignoreNetworkExceptionList.contains(H.b(var1.getClass()))) {
@@ -209,7 +209,7 @@ public object CrashReporting {
       fun {
          val var0: Array<CrashReporting.ErrorLevel> = $values();
          $VALUES = var0;
-         $ENTRIES = H9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       @JvmStatic

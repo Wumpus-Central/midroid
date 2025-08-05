@@ -67,12 +67,12 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       if (var9 == null) {
-         val var10: java.util.Map = this.blurRectRenderNodes;
+         val var12: java.util.Map = this.blurRectRenderNodes;
          l.a();
-         val var12: StringBuilder = new StringBuilder();
-         var12.append("blur-");
-         var12.append(var1);
-         var10.putIfAbsent(var1, k.a(var12.toString()));
+         val var10: StringBuilder = new StringBuilder();
+         var10.append("blur-");
+         var10.append(var1);
+         var12.putIfAbsent(var1, k.a(var10.toString()));
          this.blurRects.put(var1, new BlurViewTargetHardwareAccelerated.BlurRect(var2, var3, var4, var5));
          this.invalidate();
       }
@@ -245,19 +245,19 @@ internal class BlurViewTargetHardwareAccelerated(context: Context, blurTargetNat
       }
 
       public override fun toString(): String {
-         val var3: Int = this.windowX;
-         val var2: Int = this.windowY;
+         val var2: Int = this.windowX;
+         val var1: Int = this.windowY;
          val var4: Int = this.width;
-         val var1: Int = this.height;
+         val var3: Int = this.height;
          val var5: StringBuilder = new StringBuilder();
          var5.append("BlurRect(windowX=");
-         var5.append(var3);
-         var5.append(", windowY=");
          var5.append(var2);
+         var5.append(", windowY=");
+         var5.append(var1);
          var5.append(", width=");
          var5.append(var4);
          var5.append(", height=");
-         var5.append(var1);
+         var5.append(var3);
          var5.append(")");
          return var5.toString();
       }

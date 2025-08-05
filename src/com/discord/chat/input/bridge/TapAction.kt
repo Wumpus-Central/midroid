@@ -2,7 +2,7 @@ package com.discord.chat.input.bridge
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class TapAction(action: String, channelId: String, optionName: String) {
@@ -61,16 +61,16 @@ public data class TapAction(action: String, channelId: String, optionName: Strin
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.action;
-      val var2: java.lang.String = this.channelId;
-      val var1: java.lang.String = this.optionName;
+      val var2: java.lang.String = this.action;
+      val var1: java.lang.String = this.channelId;
+      val var4: java.lang.String = this.optionName;
       val var3: StringBuilder = new StringBuilder();
       var3.append("TapAction(action=");
-      var3.append(var4);
-      var3.append(", channelId=");
       var3.append(var2);
-      var3.append(", optionName=");
+      var3.append(", channelId=");
       var3.append(var1);
+      var3.append(", optionName=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

@@ -1,5 +1,6 @@
 package com.discord.lifecycle
 
+import A9.s
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents
@@ -7,7 +8,6 @@ import com.facebook.react.bridge.LifecycleEventListener
 import com.facebook.react.bridge.ReactApplicationContext
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
-import z9.s
 
 public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeAppLifecycleModuleSpec {
    private final val reactContext: ReactApplicationContext
@@ -29,10 +29,10 @@ public class AppLifecycleModule(reactContext: ReactApplicationContext) : NativeA
 
          public void onHostDestroy() {
             if (AppLifecycleModule.access$getReactListenerCount$p(this.this$0) != 0) {
-               val var2: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
-               val var1: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
-               r.g(var1, "access$getReactApplicationContext(...)");
-               var2.emitModuleEvent(var1, new OnHostDestroyEvent());
+               val var1: ReactEvents = AppLifecycleModule.access$getReactEvents$p(this.this$0);
+               val var2: ReactApplicationContext = AppLifecycleModule.access$getReactApplicationContext(this.this$0);
+               r.g(var2, "access$getReactApplicationContext(...)");
+               var1.emitModuleEvent(var2, new OnHostDestroyEvent());
             }
          }
 

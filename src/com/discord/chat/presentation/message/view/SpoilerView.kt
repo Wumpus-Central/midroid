@@ -52,14 +52,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       kotlin.jvm.internal.r.g(this.binding.obscure, "obscure");
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var6: Function1 = var3.getLabel();
-      val var5: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var5, "getContext(...)");
-      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
+      val var5: Function1 = var3.getLabel();
+      var var6: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var6, "getContext(...)");
+      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
       val var8: Function1 = var3.getDescription();
-      val var12: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var12, "getContext(...)");
-      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      var6 = this.getContext();
+      kotlin.jvm.internal.r.g(var6, "getContext(...)");
+      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
    }
 
    @JvmStatic

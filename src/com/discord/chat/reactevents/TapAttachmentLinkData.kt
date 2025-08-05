@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
-import z9.s
+import tb.g
 
 @g
 internal data class TapAttachmentLinkData(attachmentUrl: String? = null) : ReactEvent {

@@ -3,7 +3,7 @@ package com.discord.chat.bridge.reaction
 import com.discord.reactions.ReactionView
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
@@ -137,27 +137,27 @@ public data class ReactionsTheme(reactionBackgroundColor: Int? = null,
    }
 
    public override fun toString(): String {
-      val var5: Int = this.reactionBackgroundColor;
-      val var2: Int = this.reactionBorderColor;
-      val var3: Int = this.reactionTextColor;
-      val var4: Int = this.activeReactionBackgroundColor;
-      val var6: Int = this.activeReactionBorderColor;
-      val var1: Int = this.activeReactionTextColor;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ReactionsTheme(reactionBackgroundColor=");
-      var7.append(var5);
-      var7.append(", reactionBorderColor=");
-      var7.append(var2);
-      var7.append(", reactionTextColor=");
-      var7.append(var3);
-      var7.append(", activeReactionBackgroundColor=");
-      var7.append(var4);
-      var7.append(", activeReactionBorderColor=");
-      var7.append(var6);
-      var7.append(", activeReactionTextColor=");
-      var7.append(var1);
-      var7.append(")");
-      return var7.toString();
+      val var4: Int = this.reactionBackgroundColor;
+      val var1: Int = this.reactionBorderColor;
+      val var7: Int = this.reactionTextColor;
+      val var5: Int = this.activeReactionBackgroundColor;
+      val var2: Int = this.activeReactionBorderColor;
+      val var3: Int = this.activeReactionTextColor;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ReactionsTheme(reactionBackgroundColor=");
+      var6.append(var4);
+      var6.append(", reactionBorderColor=");
+      var6.append(var1);
+      var6.append(", reactionTextColor=");
+      var6.append(var7);
+      var6.append(", activeReactionBackgroundColor=");
+      var6.append(var5);
+      var6.append(", activeReactionBorderColor=");
+      var6.append(var2);
+      var6.append(", activeReactionTextColor=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

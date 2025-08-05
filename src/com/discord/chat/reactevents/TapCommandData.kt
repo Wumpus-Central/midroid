@@ -6,7 +6,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class TapCommandData(channelId: String, commandId: String, commandName: String, commandKey: String) : ReactEvent {
@@ -88,21 +88,21 @@ public data class TapCommandData(channelId: String, commandId: String, commandNa
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.channelId;
+      val var5: java.lang.String = this.channelId;
       val var1: java.lang.String = this.commandId;
-      val var4: java.lang.String = this.commandName;
-      val var3: java.lang.String = this.commandKey;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("TapCommandData(channelId=");
-      var5.append(var2);
-      var5.append(", commandId=");
-      var5.append(var1);
-      var5.append(", commandName=");
-      var5.append(var4);
-      var5.append(", commandKey=");
-      var5.append(var3);
-      var5.append(")");
-      return var5.toString();
+      val var2: java.lang.String = this.commandName;
+      val var4: java.lang.String = this.commandKey;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("TapCommandData(channelId=");
+      var3.append(var5);
+      var3.append(", commandId=");
+      var3.append(var1);
+      var3.append(", commandName=");
+      var3.append(var2);
+      var3.append(", commandKey=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

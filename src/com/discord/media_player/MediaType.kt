@@ -15,7 +15,7 @@ public enum class MediaType {
    fun {
       val var0: Array<MediaType> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = I9.a.a(var0);
    }
 
    @JvmStatic

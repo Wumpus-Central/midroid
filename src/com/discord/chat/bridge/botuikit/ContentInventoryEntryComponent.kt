@@ -2,7 +2,7 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class ContentInventoryEntryComponent(type: Int, id: String, contentInventoryEntry: ContentInventoryEntry? = null) : Component {
@@ -53,8 +53,8 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = Integer.hashCode(this.type);
-      val var2: Int = this.id.hashCode();
+      val var2: Int = Integer.hashCode(this.type);
+      val var3: Int = this.id.hashCode();
       val var1: Int;
       if (this.contentInventoryEntry == null) {
          var1 = 0;
@@ -62,20 +62,20 @@ public data class ContentInventoryEntryComponent(type: Int, id: String, contentI
          var1 = this.contentInventoryEntry.hashCode();
       }
 
-      return (var3 * 31 + var2) * 31 + var1;
+      return (var2 * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var4: java.lang.String = this.id;
-      val var2: ContentInventoryEntry = this.contentInventoryEntry;
+      val var2: java.lang.String = this.id;
+      val var4: ContentInventoryEntry = this.contentInventoryEntry;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ContentInventoryEntryComponent(type=");
       var3.append(var1);
       var3.append(", id=");
-      var3.append(var4);
-      var3.append(", contentInventoryEntry=");
       var3.append(var2);
+      var3.append(", contentInventoryEntry=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

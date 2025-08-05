@@ -1,10 +1,10 @@
 package com.discord.media.engine.video.events
 
+import A9.s
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.r
-import z9.s
 
 internal data class AudioInputInitializedEvent(timeToInitialized: Double, description: Map<String, Any>) : ReactEvent {
    public final val timeToInitialized: Double
@@ -57,13 +57,13 @@ internal data class AudioInputInitializedEvent(timeToInitialized: Double, descri
 
    public override fun toString(): String {
       val var1: Double = this.timeToInitialized;
-      val var3: java.util.Map = this.description;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AudioInputInitializedEvent(timeToInitialized=");
-      var4.append(var1);
-      var4.append(", description=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.util.Map = this.description;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioInputInitializedEvent(timeToInitialized=");
+      var3.append(var1);
+      var3.append(", description=");
+      var3.append(var4);
+      var3.append(")");
+      return var3.toString();
    }
 }

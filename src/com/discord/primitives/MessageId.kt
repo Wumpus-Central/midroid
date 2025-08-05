@@ -5,7 +5,7 @@ import android.os.Parcelable
 import com.discord.snowflake.SnowflakeUtils
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public inline class MessageId : Parcelable {

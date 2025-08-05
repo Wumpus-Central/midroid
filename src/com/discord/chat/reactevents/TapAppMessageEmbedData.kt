@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 internal data class TapAppMessageEmbedData(messageId: String, actionId: String, appId: String, embedUrl: String) : ReactEvent {
@@ -77,21 +77,21 @@ internal data class TapAppMessageEmbedData(messageId: String, actionId: String, 
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.messageId;
       val var3: java.lang.String = this.actionId;
-      val var5: java.lang.String = this.appId;
-      val var4: java.lang.String = this.embedUrl;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("TapAppMessageEmbedData(messageId=");
-      var2.append(var1);
-      var2.append(", actionId=");
-      var2.append(var3);
-      var2.append(", appId=");
-      var2.append(var5);
-      var2.append(", embedUrl=");
-      var2.append(var4);
-      var2.append(")");
-      return var2.toString();
+      val var4: java.lang.String = this.appId;
+      val var2: java.lang.String = this.embedUrl;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("TapAppMessageEmbedData(messageId=");
+      var1.append(var5);
+      var1.append(", actionId=");
+      var1.append(var3);
+      var1.append(", appId=");
+      var1.append(var4);
+      var1.append(", embedUrl=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

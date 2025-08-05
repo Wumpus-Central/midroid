@@ -147,7 +147,7 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
       var24.setVisibility(var17);
    }
 
-   @sb.g
+   @tb.g
    public data class MessageBundleHeader(channelIconURL: String? = null,
       chatIconURL: String? = null,
       avatarURLs: ArrayList<String>? = null,
@@ -245,20 +245,20 @@ public class MessageFrameFeedHeaderView  public constructor(context: Context, at
 
       public override fun toString(): String {
          val var2: java.lang.String = this.channelIconURL;
-         val var3: java.lang.String = this.chatIconURL;
-         val var4: ArrayList = this.avatarURLs;
-         val var1: java.lang.String = this.channelName;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("MessageBundleHeader(channelIconURL=");
-         var5.append(var2);
-         var5.append(", chatIconURL=");
-         var5.append(var3);
-         var5.append(", avatarURLs=");
-         var5.append(var4);
-         var5.append(", channelName=");
-         var5.append(var1);
-         var5.append(")");
-         return var5.toString();
+         val var4: java.lang.String = this.chatIconURL;
+         val var5: ArrayList = this.avatarURLs;
+         val var3: java.lang.String = this.channelName;
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("MessageBundleHeader(channelIconURL=");
+         var1.append(var2);
+         var1.append(", chatIconURL=");
+         var1.append(var4);
+         var1.append(", avatarURLs=");
+         var1.append(var5);
+         var1.append(", channelName=");
+         var1.append(var3);
+         var1.append(")");
+         return var1.toString();
       }
 
       public companion object {

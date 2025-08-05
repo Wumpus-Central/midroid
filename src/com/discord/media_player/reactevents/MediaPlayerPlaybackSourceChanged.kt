@@ -1,15 +1,15 @@
 package com.discord.media_player.reactevents
 
-import A9.q
+import A9.s
+import Ab.a
+import B9.q
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
-import sb.k
-import z9.s
-import zb.a
+import tb.g
+import tb.k
 
 @g
 public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSource?) : ReactEvent {
@@ -57,12 +57,12 @@ public data class MediaPlayerPlaybackSourceChanged(source: MediaPlayerPlaybackSo
    }
 
    public override fun toString(): String {
-      val var1: MediaPlayerPlaybackSource = this.source;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("MediaPlayerPlaybackSourceChanged(source=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: MediaPlayerPlaybackSource = this.source;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("MediaPlayerPlaybackSourceChanged(source=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

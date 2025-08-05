@@ -2497,7 +2497,6 @@
   "jSnJGR": "Cancel reply",
   "QnKxtL": "There was an error canceling the transfer. Please leave the voice channel on your console.",
   "LNhXcH": "Unable to disconnect",
-  "tHT/Vl": "You cannot access this hangout",
   "0yAqqK": "Cannot add user to post",
   "YErysL": "Cannot add user to thread",
   "ut7sq6": "Cannot change channel permissions",
@@ -3188,7 +3187,6 @@
   "5upuq6": "Discord Shop",
   "yzW/fX": "Admins",
   "xFcotb": "Shop All",
-  "LuhKs7": "Hmmm, we weren't able to load the Shop. Check back later.",
   "xNiB/P": "Featured",
   "zMqLHx": "Discord Shop Featured Page",
   "AfrvRE": "Shop the whole Shop",
@@ -12649,7 +12647,7 @@
   "oPV2c3": "Your membership has been restarted!",
   "UTYBjY": "Search channels",
   "He+cmZ": "Server Name Unavailable",
-  "BU4Dio": "Go to enable",
+  "BU4Dio": "Enable",
   "7NzkfX": [
     "You must ",
     [
@@ -19703,8 +19701,6 @@
   "jkg8Zm": "Voice channels are for hanging out. When you’re ready to talk, just hop in. Friends will be able to see and join you. It’s like using telepathy to say hi.",
   "GNeL2t": "No one's here yet",
   "o3kmm5": "Servers with a published discovery landing page can only remove vanity URLs but cannot modify it",
-  "QVhmGx": "You missed the hangout :(",
-  "IE2uZW": "The hangout is over, want to start it again?",
   "1+boPj": "Happening Now",
   "zSG3Q0": [
     "Your message could not be delivered because this message contains a link blocked by Discord. You can learn more here: ",
@@ -21158,7 +21154,6 @@
   "jlfuFR": "Join an existing server",
   "ihLPiI": "Follow Post",
   "XpeFYm": "Join",
-  "zIeJq6": "Join Hangout",
   "Bd/Li4": "Join Muted",
   "E8euSk": "Join on Xbox",
   "yRjK4u": "Join a server",
@@ -21490,6 +21485,20 @@
       "medium"
     ]
   ],
+  "EvDn1N": [
+    "Connect your account to ",
+    [
+      8,
+      "$b",
+      [
+        [
+          1,
+          "name"
+        ]
+      ]
+    ],
+    " to send messages."
+  ],
   "DA9v5O": [
     "Currently linked to ",
     [
@@ -21520,6 +21529,7 @@
     "? You can set up a channel link again later."
   ],
   "JmUENj": "Remove Channel Link",
+  "SrvsMD": "You don't have permission to unlink this channel.",
   "6D5WVl": "Oops! Something went wrong while trying to unlink this channel. Please try again later.",
   "vFzPFh": "Failed to remove link",
   "+5kSoa": "Link Copied!",
@@ -23879,7 +23889,6 @@
   "F53CAQ": "Feeling aimless? Like a paper plane drifting through the skies?\nGet some friends in here by creating an invite link!",
   "+nLJkZ": "No invites yet",
   "xisTfX": "Discord does not have access to your microphone",
-  "zjVh8v": "No servers in common",
   "xlUg0t": "No Output Devices",
   "jQHU4O": "Discord does not have access to your photos",
   "fmyaWF": "This channel doesn't have any\npinned messages... yet.",
@@ -31286,6 +31295,39 @@
     " a trial. Please try again later."
   ],
   "7VBEub": "Hmm... Something went wrong",
+  "L/leCw": [
+    [
+      1,
+      "receiver"
+    ],
+    " start your 2 weeks of Nitro"
+  ],
+  "febG6u": [
+    [
+      1,
+      "receiver"
+    ],
+    " enjoy a 2-week Nitro trial"
+  ],
+  "zz1MYm": [
+    [
+      1,
+      "sender"
+    ],
+    " gave ",
+    [
+      1,
+      "receiver"
+    ],
+    " a Nitro trial"
+  ],
+  "PVQOi4": [
+    [
+      1,
+      "receiver"
+    ],
+    " start your 2-week Nitro trial"
+  ],
   "eEz1Nz": "Uh-oh, something went wrong. Try restarting the app to fix it!",
   "IiWKws": [
     [
@@ -31503,6 +31545,40 @@
     " more friends."
   ],
   "UfPk1t": "You can select 1 more friend.",
+  "TYu+MD": [
+    "You'll get more trials in the future. Make someone’s day and gift Nitro while you wait. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "omMr+f": [
+    "Send three friends a 2-week Nitro trial and become the MVP of the group chat. ",
+    [
+      8,
+      "$link",
+      [
+        "Learn more"
+      ],
+      [
+        [
+          1,
+          "helpdeskArticle"
+        ]
+      ]
+    ],
+    "."
+  ],
   "USo4s7": "Share Nitro with Friends",
   "bXTClZ": "Start Trial",
   "gtNqJS": "2-WEEK TRIAL",
@@ -32849,6 +32925,11 @@
   ],
   "7sFNfX": "Remove member",
   "rt0ERU": "(Only you can see this channel)",
+  "Mi9KbW": "rocks are really old",
+  "9wVJRE": "Role Style",
+  "XpWmJy": "Gradient",
+  "QTKppa": "Holographic",
+  "8Qyaho": "Solid",
   "xFb68v": "This emoji is unavailable.",
   "g8i/bW": "Get Server Subscription to use this emoji.",
   "Eoynp6": "This is a premium emoji. Type its name in the chat bar to use it.",
@@ -34756,6 +34837,7 @@
       ]
     ]
   ],
+  "b5FqhI": "Age restricted",
   "5q17w8": "Stream Paused",
   "meVVlZ": [
     [
@@ -37422,13 +37504,6 @@
   "9YJgam": "the-couch",
   "lhV0Y2": "This will change the theme across all your devices.",
   "d5Gu9P": "You can always change this later!",
-  "RqCPVl": [
-    "They're hanging out in #",
-    [
-      1,
-      "channelName"
-    ]
-  ],
   "j+wlh4": "This is what you have",
   "7Xm5QE": "Thread",
   "B2panJ": "Threads",
@@ -39776,21 +39851,6 @@
   ],
   "7Xq/nZ": "Watch Stream",
   "n8nU4e": "Wave",
-  "er/cHx": [
-    "👋 You waved at ",
-    [
-      1,
-      "username"
-    ]
-  ],
-  "noNjkZ": [
-    "👋 ",
-    [
-      1,
-      "username"
-    ],
-    " waved at you"
-  ],
   "y1Wu2d": "your pal",
   "m0zYbW": [
     "Wave to ",
@@ -39902,6 +39962,7 @@
     ]
   ],
   "0/xHFB": "Windows",
+  "cqpybG": "Wumpus",
   "Nfvo7+": "Xbox",
   "ynEs/f": [
     "Connected on ",
@@ -39975,13 +40036,6 @@
       []
     ],
     "."
-  ],
-  "YIZnWl": [
-    "You are in #",
-    [
-      1,
-      "channelName"
-    ]
   ],
   "vh+Zpq": "You can't call this user.",
   "dKhVQE": "Log In",

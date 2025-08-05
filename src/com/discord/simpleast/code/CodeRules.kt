@@ -1,6 +1,7 @@
 package com.discord.simpleast.code
 
-import A9.q
+import A9.s
+import B9.q
 import android.text.SpannableStringBuilder
 import com.discord.simpleast.core.node.Node
 import com.discord.simpleast.core.node.StyleNode
@@ -14,7 +15,6 @@ import java.util.regex.Matcher
 import java.util.regex.Pattern
 import kotlin.jvm.functions.Function3
 import kotlin.jvm.internal.r
-import z9.s
 
 public object CodeRules {
    private const val CODE_BLOCK_BODY_GROUP: Int = 3
@@ -111,12 +111,12 @@ public object CodeRules {
       val var24: Rule = toMatchGroupRule$default(this, var5, 0, var1.getLiteralStyleProvider(), 1, null);
       var var6: Pattern = Pattern.compile("^'[\\s\\S]*?(?<!\\\\)'(?=\\W|\\s|$)");
       r.g(var6, "Pattern.compile(\"\"\"^'[\\s…*?(?<!\\\\)'(?=\\W|\\s|$)\"\"\")");
-      var var7: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
-      var6 = Pattern.compile("^@(\\w+)");
-      r.g(var6, "Pattern.compile(\"\"\"^@(\\w+)\"\"\")");
+      val var28: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
+      var var7: Pattern = Pattern.compile("^@(\\w+)");
+      r.g(var7, "Pattern.compile(\"\"\"^@(\\w+)\"\"\")");
       val var23: java.util.List = this.createGenericCodeRules(
          var1,
-         i.n(new Rule[]{var22, var24, var7, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
+         i.n(new Rule[]{var22, var24, var28, toMatchGroupRule$default(this, var7, 0, var1.getGenericsStyleProvider(), 1, null)}),
          new java.lang.String[]{"class", "def", "lambda"},
          new java.lang.String[]{"True|False|None"},
          "from|import|global|nonlocal",
@@ -131,12 +131,12 @@ public object CodeRules {
       val var26: Rule = toMatchGroupRule$default(this, var5, 0, var1.getCommentStyleProvider(), 1, null);
       var6 = Pattern.compile("^\"[\\s\\S]*?(?<!\\\\)\"(?=\\W|\\s|$)");
       r.g(var6, "Pattern.compile(\"\"\"^\"[\\s…*?(?<!\\\\)\"(?=\\W|\\s|$)\"\"\")");
-      var7 = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
+      val var33: Rule = toMatchGroupRule$default(this, var6, 0, var1.getLiteralStyleProvider(), 1, null);
       var6 = Pattern.compile("^#!?\\[.*?\\]\\n");
       r.g(var6, "Pattern.compile(\"\"\"^#!?\\[.*?\\]\\n\"\"\")");
       val var27: java.util.List = this.createGenericCodeRules(
          var1,
-         i.n(new Rule[]{var26, var7, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
+         i.n(new Rule[]{var26, var33, toMatchGroupRule$default(this, var6, 0, var1.getGenericsStyleProvider(), 1, null)}),
          new java.lang.String[]{"struct", "trait", "mod"},
          new java.lang.String[]{
             "Self|Result|Ok|Err|Option|None|Some",
@@ -155,7 +155,7 @@ public object CodeRules {
       var var9: Rule = var34.createTagRule(var1);
       val var8: Pattern = PATTERN_LEADING_WS_CONSUMER;
       var var10: Rule = toMatchGroupRule$default(this, PATTERN_LEADING_WS_CONSUMER, 0, null, 3, null);
-      val var35: Pattern = PATTERN_TEXT;
+      var7 = PATTERN_TEXT;
       val var32: java.util.List = i.n(new Rule[]{var31, var9, var10, toMatchGroupRule$default(this, PATTERN_TEXT, 0, null, 3, null)});
       val var39: Pattern = this.createSingleLineCommentPattern("#");
       r.g(var39, "createSingleLineCommentPattern(\"#\")");
@@ -183,14 +183,14 @@ public object CodeRules {
             toMatchGroupRule$default(this, var54, 0, var1.getKeywordStyleProvider(), 1, null),
             toMatchGroupRule$default(this, PATTERN_NUMBERS, 0, var1.getLiteralStyleProvider(), 1, null),
             toMatchGroupRule$default(this, var8, 0, null, 3, null),
-            toMatchGroupRule$default(this, var35, 0, null, 3, null)
+            toMatchGroupRule$default(this, var7, 0, null, 3, null)
          }
       );
       val var45: Crystal = Crystal.INSTANCE;
-      val var41: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
+      val var37: java.util.List = Crystal.INSTANCE.createCrystalCodeRules$simpleast_core_release(var1);
       val var46: Array<java.lang.String> = var45.getKEYWORDS();
       val var38: java.util.List = this.createGenericCodeRules(
-         var1, var41, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
+         var1, var37, new java.lang.String[]{"def", "class"}, var45.getBUILT_INS(), Arrays.copyOf(var46, var46.length)
       );
       val var51: JavaScript = JavaScript.INSTANCE;
       val var48: java.util.List = JavaScript.INSTANCE.createCodeRules$simpleast_core_release(var1);

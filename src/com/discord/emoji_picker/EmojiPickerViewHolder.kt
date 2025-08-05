@@ -121,7 +121,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          kotlin.jvm.internal.r.h(var2, "onPressEmoji");
          kotlin.jvm.internal.r.h(var3, "onLongPressEmoji");
          super(new SimpleDraweeView(var1), null);
-         this.placeholder$delegate = z9.j.a(new B());
+         this.placeholder$delegate = A9.j.b(new B());
          val var4: View = this.itemView;
          kotlin.jvm.internal.r.f(this.itemView, "null cannot be cast to non-null type com.facebook.drawee.view.SimpleDraweeView");
          val var5: SimpleDraweeView = var4 as SimpleDraweeView;
@@ -272,7 +272,7 @@ internal sealed class EmojiPickerViewHolder protected constructor(view: View) : 
          }
       }
 
-      private class EmojiLoadListener(animating: Boolean) : L2.a {
+      private class EmojiLoadListener(animating: Boolean) : M2.a {
          private final var animating: Boolean
 
          init {

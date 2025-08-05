@@ -39,7 +39,6 @@ public object ChatViewRecyclerTypes {
    public const val SAFETY_SYSTEM_NOTIFICATION: Int = 39
    public const val ACTIVITY_INSTANCE_EMBED: Int = 40
    public const val CTA_BUTTON: Int = 41
-   public const val VOICE_INVITE_EMBED: Int = 42
    public const val FORWARD_HEADER: Int = 43
    public const val FORWARD_BREADCRUMB: Int = 44
    public const val REACTION_BURST_REACTION: Int = 45
