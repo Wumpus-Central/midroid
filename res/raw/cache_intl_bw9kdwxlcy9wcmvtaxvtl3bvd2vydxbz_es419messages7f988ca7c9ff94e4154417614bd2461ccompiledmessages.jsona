@@ -1,0 +1,25 @@
+{
+  "FJZeZG": "Desbloquea nuevos estilos de rol con las mejoras.",
+  "VpEDJS": "Haz que certos roles sean mágicos",
+  "+/IHLi": "mágico",
+  "tBhCys": "Con el estilo de rol \"Holográfico\" no hace falta que elijas ningún color.",
+  "vQz+6e": "Degradado",
+  "7lwpzc": [
+    "Abre Discord en el escritorio para desbloquear y configurar nuevos beneficios de mejora: ",
+    [
+      1,
+      "perks"
+    ]
+  ],
+  "MNO3sL": [
+    [
+      1,
+      "perk1"
+    ],
+    " y ",
+    [
+      1,
+      "perk2"
+    ]
+  ]
+}

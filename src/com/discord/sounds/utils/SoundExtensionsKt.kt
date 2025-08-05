@@ -1,18 +1,18 @@
 package com.discord.sounds.utils
 
-import D9.a
-import G9.b
+import E9.a
+import H9.b
 import android.content.Context
 import android.net.Uri
 import com.discord.file_downloader.DownloadState
 import com.discord.file_downloader.FileDownloader
 import com.discord.logging.Log
 import com.discord.sounds.SoundManager
-import ib.K
-import ib.d0
-import ib.f
 import java.io.File
 import java.util.Comparator
+import jb.K
+import jb.d0
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.jvm.internal.d
@@ -326,11 +326,11 @@ internal fun Context.fetchSound(url: String, soundManager: SoundManager, key: In
 
 internal fun getRemoteSoundFilename(url: String): String {
    r.h(var0, "url");
-   var0 = Uri.parse(var0).getLastPathSegment();
-   val var1: StringBuilder = new StringBuilder();
-   var1.append(var0);
-   var1.append(".mp3");
-   return var1.toString();
+   val var1: java.lang.String = Uri.parse(var0).getLastPathSegment();
+   val var2: StringBuilder = new StringBuilder();
+   var2.append(var1);
+   var2.append(".mp3");
+   return var2.toString();
 }
 
 internal fun Context.getSoundsCacheDirectory(): File {

@@ -23,14 +23,14 @@ public final class SegmentedControlBinding implements ViewBinding {
    }
 
    public static SegmentedControlBinding bind(View var0) {
-      CardView var3 = (CardView)var0;
+      CardView var2 = (CardView)var0;
       int var1 = R.id.segmentContainer;
-      LinearLayout var2 = (LinearLayout)a.a(var0, var1);
-      if (var2 != null) {
+      LinearLayout var3 = (LinearLayout)a.a(var0, var1);
+      if (var3 != null) {
          var1 = R.id.selectedSegmentBg;
          CardView var4 = (CardView)a.a(var0, var1);
          if (var4 != null) {
-            return new SegmentedControlBinding(var3, var3, var2, var4);
+            return new SegmentedControlBinding(var2, var2, var3, var4);
          }
       }
 

@@ -142,7 +142,6 @@
     <item type="id" name="camera_button" />
     <item type="id" name="cancel_action" />
     <item type="id" name="cancel_button" />
-    <item type="id" name="card" />
     <item type="id" name="catalyst_redbox_title" />
     <item type="id" name="category_name" />
     <item type="id" name="cause_header" />
@@ -159,7 +158,6 @@
     <item type="id" name="chat_list_adapter_item_text_feedback" />
     <item type="id" name="chat_list_adapter_item_visibility_icon" />
     <item type="id" name="chat_list_feedback_icon" />
-    <item type="id" name="chat_list_view" />
     <item type="id" name="checkbox" />
     <item type="id" name="children_views" />
     <item type="id" name="chronometer" />
@@ -406,7 +404,6 @@
     <item type="id" name="item_subtitle" />
     <item type="id" name="item_title" />
     <item type="id" name="item_touch_helper_previous_elevation" />
-    <item type="id" name="join_cta" />
     <item type="id" name="json" />
     <item type="id" name="json_header" />
     <item type="id" name="jump_button" />

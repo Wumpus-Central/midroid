@@ -337,10 +337,10 @@ public class ForegroundServiceManager {
       // 09: ldc_w "serviceConfigurations"
       // 0c: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 0f: getstatic com/discord/permissions/NativePermissionPromise.INSTANCE Lcom/discord/permissions/NativePermissionPromise;
-      // 12: astore 6
+      // 12: astore 5
       // 14: new K1/b
-      // 17: astore 5
-      // 19: aload 5
+      // 17: astore 6
+      // 19: aload 6
       // 1b: aload 0
       // 1c: aload 1
       // 1d: aload 2
@@ -349,8 +349,8 @@ public class ForegroundServiceManager {
       // 24: astore 4
       // 26: aload 4
       // 28: invokespecial K1/c.<init> ()V
-      // 2b: aload 6
-      // 2d: aload 5
+      // 2b: aload 5
+      // 2d: aload 6
       // 2f: aload 4
       // 31: invokevirtual com/discord/permissions/NativePermissionPromise.generate (Lkotlin/jvm/functions/Function0;Lkotlin/jvm/functions/Function0;)Lcom/facebook/react/bridge/PromiseImpl;
       // 34: astore 4
@@ -388,10 +388,10 @@ public class ForegroundServiceManager {
       // 6e: goto 8e
       // 71: astore 1
       // 72: goto 91
-      // 75: new z9/n
+      // 75: new A9/n
       // 78: astore 1
       // 79: aload 1
-      // 7a: invokespecial z9/n.<init> ()V
+      // 7a: invokespecial A9/n.<init> ()V
       // 7d: aload 1
       // 7e: athrow
       // 7f: aload 1

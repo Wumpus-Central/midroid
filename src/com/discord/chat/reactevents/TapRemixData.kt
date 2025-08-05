@@ -5,7 +5,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class TapRemixData(messageId: MessageId) : TapRemixData(var1), ReactEvent {

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.connectionsroletag
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: Int, iconColor: Int) {
@@ -67,15 +67,15 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.id;
-      val var5: java.lang.String = this.name;
+      val var5: java.lang.String = this.id;
+      val var4: java.lang.String = this.name;
       val var2: Int = this.backgroundColor;
       val var1: Int = this.iconColor;
       val var3: StringBuilder = new StringBuilder();
       var3.append("ConnectionsRoleTag(id=");
-      var3.append(var4);
-      var3.append(", name=");
       var3.append(var5);
+      var3.append(", name=");
+      var3.append(var4);
       var3.append(", backgroundColor=");
       var3.append(var2);
       var3.append(", iconColor=");

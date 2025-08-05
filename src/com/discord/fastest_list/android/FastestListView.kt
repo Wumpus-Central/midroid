@@ -76,15 +76,15 @@ internal class FastestListView(context: Context,
       this.sections = var25;
       val var20: FastestListLayoutManager = new FastestListLayoutManager(var15, var1, var2, false, 8, null);
       this.typedLayoutManager = var20;
-      val var24: FastestListVisibleItemsTracker = new FastestListVisibleItemsTracker(var20, var25, new com.discord.fastest_list.android.a(var13, this));
+      val var24: FastestListVisibleItemsTracker = new FastestListVisibleItemsTracker(var20, var25, new b(var13, this));
       this.typedVisibleItemsTracker = var24;
-      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new b(var12, this));
+      val var23: FastestListViewAdapter = new FastestListViewAdapter(var20, var14, var25, new c(var12, this));
       this.typedAdapter = var23;
       this.scroller = new Scroller(this);
       this.scrollOffset = new FastestListScrollOffset(var20, var25);
-      val var22: FastestListScrollListener = new FastestListScrollListener(var5, var7, new c(this, var9), new d(this, var10, var11), var20, var24);
+      val var22: FastestListScrollListener = new FastestListScrollListener(var5, var7, new d(this, var9), new e(this, var10, var11), var20, var24);
       this.onScrollListener = var22;
-      val var21: e = new e(this, var6);
+      val var21: f = new f(this, var6);
       this.onLayoutChangeListener = var21;
       this.setHasFixedSize(true);
       RecyclerViewExtensionsKt.setReactNativeClipToPadding(this);
@@ -103,13 +103,13 @@ internal class FastestListView(context: Context,
    @SuppressLint(["NotifyDataSetChanged"])
    private fun onItemDataChanged(positions: List<DataChanged> = kotlin.collections.i.k()) {
       if (!var1.isEmpty()) {
-         for (FastestListViewAdapter.DataChanged var4 : var1) {
-            val var2: Int = var4.component1();
-            val var3: Int = var4.component2();
-            if (var3 == 1) {
-               this.typedAdapter.notifyItemChanged(var2);
+         for (FastestListViewAdapter.DataChanged var5 : var1) {
+            val var3: Int = var5.component1();
+            val var2: Int = var5.component2();
+            if (var2 == 1) {
+               this.typedAdapter.notifyItemChanged(var3);
             } else {
-               this.typedAdapter.notifyItemRangeChanged(var2, var3);
+               this.typedAdapter.notifyItemRangeChanged(var3, var2);
             }
          }
       } else {

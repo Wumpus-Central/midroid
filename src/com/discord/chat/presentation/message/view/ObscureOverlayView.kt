@@ -40,7 +40,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       this.binding = var4;
       val var3: BlurView = var4.blurView;
       kotlin.jvm.internal.r.g(var4.blurView, "blurView");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new H0(), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var3, false, new J0(), 1, null);
       val var5: SimpleDraweeView = var4.mediaWarningIcon;
       kotlin.jvm.internal.r.e(var4.mediaWarningIcon);
       ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.MediaChannelNSFW);
@@ -90,7 +90,7 @@ public class ObscureOverlayView  public constructor(context: Context, attributeS
       kotlin.jvm.internal.r.h(var6, "onHide");
       this.handleRevealedState(var4);
       this.binding.blurView.setupWith(var3).g(24.0F).b(Color.argb(80, 0, 0, 0)).c(var3.getBackground()).a(true);
-      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new I0(var6, this));
+      this.binding.hideButton.configure(ReactAsset.HideMedia, I18nMessage.OBSCURED_CONTENT_HIDE_CONTENT_ALT, new K0(var6, this));
       this.binding.revealButton.configure(ReactAsset.ShowMedia, I18nMessage.OBSCURED_CONTENT_SHOW_CONTENT_ALT, var5);
       this.binding.descriptionLabel.setText(var1);
       this.binding.descriptionLabel.setContentDescription(var2);

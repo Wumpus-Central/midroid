@@ -1,8 +1,8 @@
 package com.discord.appreview
 
-import V6.b
-import V6.c
-import Y6.a
+import W6.b
+import W6.c
+import Z6.a
 import android.app.Activity
 import com.google.android.gms.tasks.Task
 import com.google.android.play.core.review.ReviewManager

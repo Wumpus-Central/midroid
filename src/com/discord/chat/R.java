@@ -132,7 +132,6 @@ public final class R {
       public static int button_container;
       public static int button_wrapper;
       public static int camera_button;
-      public static int card;
       public static int cause_header;
       public static int channel_bottom_barrier;
       public static int channel_icon;
@@ -144,7 +143,6 @@ public final class R {
       public static int chat_list_adapter_item_text_feedback;
       public static int chat_list_adapter_item_visibility_icon;
       public static int chat_list_feedback_icon;
-      public static int chat_list_view;
       public static int checkbox;
       public static int children_views;
       public static int clan_tag_chiplet;
@@ -277,7 +275,6 @@ public final class R {
       public static int item_invite_total_member_text;
       public static int item_subtitle;
       public static int item_title;
-      public static int join_cta;
       public static int json;
       public static int json_header;
       public static int jump_button;
@@ -515,8 +512,6 @@ public final class R {
       public static int media_view;
       public static int media_visual_placeholder_view;
       public static int message_alt_remix_tag_view;
-      public static int message_bundle_conversation_view;
-      public static int message_bundle_view;
       public static int message_component_action_row_view;
       public static int message_component_button_view;
       public static int message_component_container_view;
@@ -556,7 +551,6 @@ public final class R {
       public static int thread_starter_message_header_view;
       public static int timestamp_view;
       public static int video_attachment_view;
-      public static int voice_invite_embed;
       public static int welcome_sticker_view;
 
       private layout() {

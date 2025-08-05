@@ -1,6 +1,6 @@
 package com.discord.notifications.react
 
-import A9.q
+import B9.q
 import com.discord.notifications.client.NotificationClient
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.Callback
@@ -23,10 +23,10 @@ public class PushNotificationCategoryModule(reactContext: ReactApplicationContex
    @ReactMethod
    public fun registerNotificationCategories(localizedCategoryNames: ReadableMap) {
       r.h(var1, "localizedCategoryNames");
-      val var3: NotificationClient = NotificationClient.Companion.getInstance();
-      val var2: ReactApplicationContext = this.getReactApplicationContext();
-      r.g(var2, "getReactApplicationContext(...)");
-      var3.initNotificationCategories(var2, NativeMapExtensionsKt.toStringMap(var1), q.h());
+      val var2: NotificationClient = NotificationClient.Companion.getInstance();
+      val var3: ReactApplicationContext = this.getReactApplicationContext();
+      r.g(var3, "getReactApplicationContext(...)");
+      var2.initNotificationCategories(var3, NativeMapExtensionsKt.toStringMap(var1), q.h());
    }
 
    @ReactMethod

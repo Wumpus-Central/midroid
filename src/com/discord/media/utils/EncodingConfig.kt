@@ -152,32 +152,32 @@ internal data class EncodingConfig(targetWidth: Int,
    }
 
    public override fun toString(): String {
-      val var2: Int = this.targetWidth;
-      val var3: Int = this.targetHeight;
-      val var10: java.lang.Number = this.frameRate;
+      val var3: Int = this.targetWidth;
+      val var2: Int = this.targetHeight;
+      val var8: java.lang.Number = this.frameRate;
       val var7: java.lang.Number = this.keyFrameIntervalSeconds;
-      val var6: java.lang.Number = this.targetBitrate;
+      val var10: java.lang.Number = this.targetBitrate;
       val var4: Boolean = this.useHEVC;
       val var5: Boolean = this.createHDR;
-      val var8: java.lang.Number = this.rotationDegrees;
+      val var6: java.lang.Number = this.rotationDegrees;
       val var1: Int = this.progressUpdateGranularity;
       val var9: StringBuilder = new StringBuilder();
       var9.append("EncodingConfig(targetWidth=");
-      var9.append(var2);
-      var9.append(", targetHeight=");
       var9.append(var3);
+      var9.append(", targetHeight=");
+      var9.append(var2);
       var9.append(", frameRate=");
-      var9.append(var10);
+      var9.append(var8);
       var9.append(", keyFrameIntervalSeconds=");
       var9.append(var7);
       var9.append(", targetBitrate=");
-      var9.append(var6);
+      var9.append(var10);
       var9.append(", useHEVC=");
       var9.append(var4);
       var9.append(", createHDR=");
       var9.append(var5);
       var9.append(", rotationDegrees=");
-      var9.append(var8);
+      var9.append(var6);
       var9.append(", progressUpdateGranularity=");
       var9.append(var1);
       var9.append(")");

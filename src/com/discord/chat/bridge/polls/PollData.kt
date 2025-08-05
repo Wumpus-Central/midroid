@@ -2,7 +2,7 @@ package com.discord.chat.bridge.polls
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class PollData(resources: PollResources,
@@ -210,10 +210,10 @@ public data class PollData(resources: PollResources,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = this.resources.hashCode();
+      val var8: Int = this.resources.hashCode();
       val var9: Int = this.question.hashCode();
-      val var10: Int = this.answers.hashCode();
-      val var8: Int = this.answersInteraction.hashCode();
+      val var7: Int = this.answers.hashCode();
+      val var10: Int = this.answersInteraction.hashCode();
       var var6: Int = 0;
       val var1: Int;
       if (this.answerTapAccessibilityLabel == null) {
@@ -223,12 +223,12 @@ public data class PollData(resources: PollResources,
       }
 
       val var11: Int = this.layoutType.hashCode();
-      val var12: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
+      val var15: Int = java.lang.Boolean.hashCode(this.canSelectMultipleAnswers);
       val var14: Int = java.lang.Boolean.hashCode(this.canTapAnswers);
-      val var17: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
-      val var13: Int = java.lang.Boolean.hashCode(this.hasVoted);
-      val var15: Int = java.lang.Boolean.hashCode(this.isExpired);
-      val var16: Int = this.containerStyle.hashCode();
+      val var16: Int = java.lang.Boolean.hashCode(this.canShowVoteCounts);
+      val var12: Int = java.lang.Boolean.hashCode(this.hasVoted);
+      val var17: Int = java.lang.Boolean.hashCode(this.isExpired);
+      val var13: Int = this.containerStyle.hashCode();
       val var2: Int;
       if (this.myAvatarUrl == null) {
          var2 = 0;
@@ -274,9 +274,9 @@ public data class PollData(resources: PollResources,
                                                                                                 (
                                                                                                          (
                                                                                                                   (
-                                                                                                                           ((var7 * 31 + var9) * 31 + var10)
+                                                                                                                           ((var8 * 31 + var9) * 31 + var7)
                                                                                                                                  * 31
-                                                                                                                              + var8
+                                                                                                                              + var10
                                                                                                                         )
                                                                                                                         * 31
                                                                                                                      + var1
@@ -285,22 +285,22 @@ public data class PollData(resources: PollResources,
                                                                                                             + var11
                                                                                                       )
                                                                                                       * 31
-                                                                                                   + var12
+                                                                                                   + var15
                                                                                              )
                                                                                              * 31
                                                                                           + var14
                                                                                     )
                                                                                     * 31
-                                                                                 + var17
+                                                                                 + var16
                                                                            )
                                                                            * 31
-                                                                        + var13
+                                                                        + var12
                                                                   )
                                                                   * 31
-                                                               + var15
+                                                               + var17
                                                          )
                                                          * 31
-                                                      + var16
+                                                      + var13
                                                 )
                                                 * 31
                                              + var2
@@ -319,60 +319,60 @@ public data class PollData(resources: PollResources,
    }
 
    public override fun toString(): String {
-      val var17: PollResources = this.resources;
-      val var12: PollMedia = this.question;
-      val var11: java.util.List = this.answers;
-      val var9: PollChatAnswerInteractionType = this.answersInteraction;
-      val var14: java.lang.String = this.answerTapAccessibilityLabel;
+      val var18: PollResources = this.resources;
+      val var10: PollMedia = this.question;
+      val var6: java.util.List = this.answers;
+      val var12: PollChatAnswerInteractionType = this.answersInteraction;
+      val var8: java.lang.String = this.answerTapAccessibilityLabel;
       val var7: PollLayoutType = this.layoutType;
-      val var4: Boolean = this.canSelectMultipleAnswers;
-      val var3: Boolean = this.canTapAnswers;
-      val var2: Boolean = this.canShowVoteCounts;
-      val var5: Boolean = this.hasVoted;
-      val var1: Boolean = this.isExpired;
-      val var8: java.lang.String = this.containerStyle;
-      val var13: java.lang.String = this.myAvatarUrl;
-      val var18: PollAction = this.secondaryAction;
-      val var15: PollAction = this.primaryAction;
-      val var16: PollAction = this.tertiaryAction;
-      val var10: java.lang.String = this.promptLabel;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("PollData(resources=");
-      var6.append(var17);
-      var6.append(", question=");
-      var6.append(var12);
-      var6.append(", answers=");
-      var6.append(var11);
-      var6.append(", answersInteraction=");
-      var6.append(var9);
-      var6.append(", answerTapAccessibilityLabel=");
-      var6.append(var14);
-      var6.append(", layoutType=");
-      var6.append(var7);
-      var6.append(", canSelectMultipleAnswers=");
-      var6.append(var4);
-      var6.append(", canTapAnswers=");
-      var6.append(var3);
-      var6.append(", canShowVoteCounts=");
-      var6.append(var2);
-      var6.append(", hasVoted=");
-      var6.append(var5);
-      var6.append(", isExpired=");
-      var6.append(var1);
-      var6.append(", containerStyle=");
-      var6.append(var8);
-      var6.append(", myAvatarUrl=");
-      var6.append(var13);
-      var6.append(", secondaryAction=");
-      var6.append(var18);
-      var6.append(", primaryAction=");
-      var6.append(var15);
-      var6.append(", tertiaryAction=");
-      var6.append(var16);
-      var6.append(", promptLabel=");
-      var6.append(var10);
-      var6.append(")");
-      return var6.toString();
+      val var2: Boolean = this.canSelectMultipleAnswers;
+      val var1: Boolean = this.canTapAnswers;
+      val var5: Boolean = this.canShowVoteCounts;
+      val var3: Boolean = this.hasVoted;
+      val var4: Boolean = this.isExpired;
+      val var9: java.lang.String = this.containerStyle;
+      val var16: java.lang.String = this.myAvatarUrl;
+      val var13: PollAction = this.secondaryAction;
+      val var14: PollAction = this.primaryAction;
+      val var17: PollAction = this.tertiaryAction;
+      val var15: java.lang.String = this.promptLabel;
+      val var11: StringBuilder = new StringBuilder();
+      var11.append("PollData(resources=");
+      var11.append(var18);
+      var11.append(", question=");
+      var11.append(var10);
+      var11.append(", answers=");
+      var11.append(var6);
+      var11.append(", answersInteraction=");
+      var11.append(var12);
+      var11.append(", answerTapAccessibilityLabel=");
+      var11.append(var8);
+      var11.append(", layoutType=");
+      var11.append(var7);
+      var11.append(", canSelectMultipleAnswers=");
+      var11.append(var2);
+      var11.append(", canTapAnswers=");
+      var11.append(var1);
+      var11.append(", canShowVoteCounts=");
+      var11.append(var5);
+      var11.append(", hasVoted=");
+      var11.append(var3);
+      var11.append(", isExpired=");
+      var11.append(var4);
+      var11.append(", containerStyle=");
+      var11.append(var9);
+      var11.append(", myAvatarUrl=");
+      var11.append(var16);
+      var11.append(", secondaryAction=");
+      var11.append(var13);
+      var11.append(", primaryAction=");
+      var11.append(var14);
+      var11.append(", tertiaryAction=");
+      var11.append(var17);
+      var11.append(", promptLabel=");
+      var11.append(var15);
+      var11.append(")");
+      return var11.toString();
    }
 
    public companion object {

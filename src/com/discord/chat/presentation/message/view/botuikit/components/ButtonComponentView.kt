@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import A9.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -32,7 +33,6 @@ import com.google.android.material.textview.MaterialTextView
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import z9.n
 
 public class ButtonComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : ConstraintLayout,
@@ -67,7 +67,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       val var4: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var4, "inflate(...)");
       this.binding = var4;
-      this.progressDots$delegate = z9.j.a(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      this.progressDots$delegate = A9.j.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
       val var6: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
       var6.b(0.0F);

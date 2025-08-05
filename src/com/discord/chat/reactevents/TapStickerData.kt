@@ -1,12 +1,12 @@
 package com.discord.chat.reactevents
 
+import A9.s
 import com.discord.chat.bridge.sticker.Sticker
 import com.discord.primitives.MessageId
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
-import z9.s
 
 public data class TapStickerData(sticker: Sticker, messageId: MessageId) : TapStickerData(var1, var2), ReactEvent {
    public final val sticker: Sticker

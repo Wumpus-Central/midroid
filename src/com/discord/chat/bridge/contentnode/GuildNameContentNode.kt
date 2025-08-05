@@ -2,7 +2,7 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class GuildNameContentNode(guildId: String? = null, content: String, icon: String? = null) : ContentNode {
@@ -70,16 +70,16 @@ public data class GuildNameContentNode(guildId: String? = null, content: String,
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = this.guildId;
+      val var3: java.lang.String = this.guildId;
       val var1: java.lang.String = this.content;
-      val var3: java.lang.String = this.icon;
+      val var4: java.lang.String = this.icon;
       val var2: StringBuilder = new StringBuilder();
       var2.append("GuildNameContentNode(guildId=");
-      var2.append(var4);
+      var2.append(var3);
       var2.append(", content=");
       var2.append(var1);
       var2.append(", icon=");
-      var2.append(var3);
+      var2.append(var4);
       var2.append(")");
       return var2.toString();
    }

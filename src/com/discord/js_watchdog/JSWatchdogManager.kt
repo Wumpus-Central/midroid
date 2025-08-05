@@ -1,15 +1,15 @@
 package com.discord.js_watchdog
 
-import G9.b
+import H9.b
 import android.content.Context
 import com.discord.crash_reporting.CrashReporting
 import com.discord.logging.Log
 import com.facebook.react.bridge.Promise
-import ib.U
-import ib.f
 import java.io.File
 import java.util.Timer
 import java.util.TimerTask
+import jb.U
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
@@ -194,28 +194,28 @@ public object JSWatchdogManager {
                   }
 
                   if (var6 != null) {
-                     var var4: Boolean;
+                     var var2x: Boolean;
                      var var5: java.lang.String;
-                     var var15: Long;
+                     var var16: Long;
                      try {
                         var5 = this.$sessionId;
-                        var4 = this.$enableTrace;
-                        var15 = this.$sentTimestamp - var6.longValue() - 500;
+                        var2x = this.$enableTrace;
+                        var16 = this.$sentTimestamp - var6.longValue() - 500;
                      } catch (var11: Exception) {
                         CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var11);
                         this.$promise.reject(var11);
                         return Unit.a;
                      }
 
-                     if (var15 > 1000L) {
+                     if (var16 > 1000L) {
                         try {
-                           val var7: Log = Log.INSTANCE;
-                           val var19: StringBuilder = new StringBuilder();
-                           var19.append("Exceeded JS stall threshold [based on previous ping]: ");
-                           var19.append(var15);
-                           Log.i$default(var7, "JSWatchdogManager", var19.toString(), null, 4, null);
+                           val var19: Log = Log.INSTANCE;
+                           val var7: StringBuilder = new StringBuilder();
+                           var7.append("Exceeded JS stall threshold [based on previous ping]: ");
+                           var7.append(var16);
+                           Log.i$default(var19, "JSWatchdogManager", var7.toString(), null, 4, null);
                            var1.j = true;
-                           JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var15, var5, var4);
+                           JSWatchdogManager.access$saveStallReport(JSWatchdogManager.INSTANCE, (int)var16, var5, var2x);
                         } catch (var10: Exception) {
                            CrashReporting.INSTANCE.captureMessage("Failed to process JSWatchdog ping", var10);
                            this.$promise.reject(var10);
@@ -235,7 +235,7 @@ public object JSWatchdogManager {
                            {
                               this.$sentTimestamp$inlined = var1;
                               this.$sessionId$inlined = var3;
-                              this.$enableTrace$inlined = var4x;
+                              this.$enableTrace$inlined = var4;
                            }
 
                            @Override

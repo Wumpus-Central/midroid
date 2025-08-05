@@ -131,11 +131,6 @@ public class ChatViewManager : ViewGroupManager<ChatView>, DCDChatManagerInterfa
       r.h(var1, "view");
    }
 
-   @ReactProp(name = "scrollEnabled")
-   public open fun setScrollEnabled(view: ChatView, value: Boolean) {
-      r.h(var1, "view");
-   }
-
    public companion object {
       public const val NAME: String
       private const val COMMAND_SCROLL_TO: String

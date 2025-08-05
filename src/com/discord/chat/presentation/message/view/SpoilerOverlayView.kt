@@ -27,15 +27,15 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var4: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var4, "inflate(...)");
-      this.binding = var4;
-      val var3: TextView = var4.label;
-      kotlin.jvm.internal.r.e(var4.label);
-      DiscordFontUtilsKt.setDiscordFont(var3, DiscordFont.PrimaryBold);
-      var3.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
-      ViewClippingUtilsKt.clipToCircle(var3);
-      var4.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
+      val var3: SpoilerOverlayViewBinding = SpoilerOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var4: TextView = var3.label;
+      kotlin.jvm.internal.r.e(var3.label);
+      DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
+      var4.setBackgroundColor(ColorUtilsKt.getColorCompat(var1, R.color.primary_800));
+      ViewClippingUtilsKt.clipToCircle(var4);
+      var3.overlayContainer.setBackgroundColor(ThemeManagerKt.getTheme().getSpoilerHiddenBackground());
    }
 
    @JvmStatic
@@ -51,7 +51,7 @@ public class SpoilerOverlayView  public constructor(context: Context, attributeS
       this.binding.label.setContentDescription(var2);
       val var4: FrameLayout = this.binding.overlayContainer;
       kotlin.jvm.internal.r.g(this.binding.overlayContainer, "overlayContainer");
-      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new O0(var3), 1, null);
+      NestedScrollOnTouchUtilsKt.setOnClickListenerNested$default(var4, false, new Q0(var3), 1, null);
    }
 
    public override fun getOverlayView(): View {

@@ -1,5 +1,6 @@
 package com.discord.theme
 
+import A9.n
 import android.app.Activity
 import android.content.Context
 import android.content.res.Resources
@@ -10,7 +11,6 @@ import com.discord.theme.utils.UpdateSystemUiKt
 import com.facebook.react.bridge.ReactContext
 import java.util.EnumMap
 import kotlin.jvm.internal.r
-import z9.n
 
 public object ThemeManager {
    private final var themes: EnumMap<DiscordTheme, DiscordThemeObject> = new EnumMap(DiscordTheme::class.java)

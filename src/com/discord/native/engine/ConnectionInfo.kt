@@ -2,7 +2,9 @@ package com.discord.native.engine
 
 import kotlin.jvm.internal.r
 
-public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAddress: String, localPort: Int) {
+public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAddress: String, localPort: Int, createConnectionTime: Int, connectTime: Int) {
+   public final val connectTime: Int
+   public final val createConnectionTime: Int
    public final val isConnected: Boolean
    public final val localAddress: String
    public final val localPort: Int
@@ -16,6 +18,8 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       this.protocol = var2;
       this.localAddress = var3;
       this.localPort = var4;
+      this.createConnectionTime = var5;
+      this.connectTime = var6;
    }
 
    public operator fun component1(): Boolean {
@@ -34,15 +38,25 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
       return this.localPort;
    }
 
+   public operator fun component5(): Int {
+      return this.createConnectionTime;
+   }
+
+   public operator fun component6(): Int {
+      return this.connectTime;
+   }
+
    public fun copy(
       isConnected: Boolean = var0.isConnected,
       protocol: String = var0.protocol,
       localAddress: String = var0.localAddress,
-      localPort: Int = var0.localPort
+      localPort: Int = var0.localPort,
+      createConnectionTime: Int = var0.createConnectionTime,
+      connectTime: Int = var0.connectTime
    ): ConnectionInfo {
       r.h(var2, "protocol");
       r.h(var3, "localAddress");
-      return new ConnectionInfo(var1, var2, var3, var4);
+      return new ConnectionInfo(var1, var2, var3, var4, var5, var6);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -58,32 +72,50 @@ public data class ConnectionInfo(isConnected: Boolean, protocol: String, localAd
             return false;
          } else if (!r.c(this.localAddress, var1.localAddress)) {
             return false;
+         } else if (this.localPort != var1.localPort) {
+            return false;
+         } else if (this.createConnectionTime != var1.createConnectionTime) {
+            return false;
          } else {
-            return this.localPort == var1.localPort;
+            return this.connectTime == var1.connectTime;
          }
       }
    }
 
    public override fun hashCode(): Int {
-      return ((java.lang.Boolean.hashCode(this.isConnected) * 31 + this.protocol.hashCode()) * 31 + this.localAddress.hashCode()) * 31
-         + Integer.hashCode(this.localPort);
+      return (
+               (
+                        ((java.lang.Boolean.hashCode(this.isConnected) * 31 + this.protocol.hashCode()) * 31 + this.localAddress.hashCode()) * 31
+                           + Integer.hashCode(this.localPort)
+                     )
+                     * 31
+                  + Integer.hashCode(this.createConnectionTime)
+            )
+            * 31
+         + Integer.hashCode(this.connectTime);
    }
 
    public override fun toString(): String {
-      val var2: Boolean = this.isConnected;
-      val var3: java.lang.String = this.protocol;
-      val var4: java.lang.String = this.localAddress;
-      val var1: Int = this.localPort;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("ConnectionInfo(isConnected=");
-      var5.append(var2);
-      var5.append(", protocol=");
-      var5.append(var3);
-      var5.append(", localAddress=");
-      var5.append(var4);
-      var5.append(", localPort=");
-      var5.append(var1);
-      var5.append(")");
-      return var5.toString();
+      val var4: Boolean = this.isConnected;
+      val var5: java.lang.String = this.protocol;
+      val var7: java.lang.String = this.localAddress;
+      val var2: Int = this.localPort;
+      val var3: Int = this.createConnectionTime;
+      val var1: Int = this.connectTime;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ConnectionInfo(isConnected=");
+      var6.append(var4);
+      var6.append(", protocol=");
+      var6.append(var5);
+      var6.append(", localAddress=");
+      var6.append(var7);
+      var6.append(", localPort=");
+      var6.append(var2);
+      var6.append(", createConnectionTime=");
+      var6.append(var3);
+      var6.append(", connectTime=");
+      var6.append(var1);
+      var6.append(")");
+      return var6.toString();
    }
 }

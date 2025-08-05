@@ -71,9 +71,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          }
       });
       this.accessoriesAdapter = var4;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false);
+      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
       this.transitionResilientLinearLayoutManager = var3;
-      this.forwardBarPaint$delegate = z9.j.a(new Q());
+      this.forwardBarPaint$delegate = A9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
       leftMarginPx = this.getResources().getDimensionPixelSize(R.dimen.message_start_guideline);
@@ -98,11 +98,11 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    }
 
    private fun getForwardBarHeight(): Int {
-      for (Pair var3 : fb.k.J(androidx.core.view.f0.a(this))) {
-         val var1: View = var3.c() as View;
+      for (Pair var3 : gb.k.J(androidx.core.view.f0.a(this))) {
+         val var2: View = var3.c() as View;
          val var4: View = var3.d() as View;
          if (var4 is ShortcutsFlexbox || var4 is ThreadEmbedView) {
-            return var1.getBottom();
+            return var2.getBottom();
          }
       }
 
@@ -173,10 +173,10 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
          this.showingForwardBar = var10;
       }
 
-      val var12: MessageAccessoriesView.Companion = Companion;
-      val var11: Resources = this.getResources();
-      kotlin.jvm.internal.r.g(var11, "getResources(...)");
-      this.updateLeftMargin(var12.getAccessoryLeftMargin(var11, var8, var9));
+      val var11: MessageAccessoriesView.Companion = Companion;
+      val var12: Resources = this.getResources();
+      kotlin.jvm.internal.r.g(var12, "getResources(...)");
+      this.updateLeftMargin(var11.getAccessoryLeftMargin(var12, var8, var9));
       val var13: ThreadSpineItemDecoration = this.threadSpineDecoration;
       var10 = false;
       if (var5 != null && var5.isEmpty()) {

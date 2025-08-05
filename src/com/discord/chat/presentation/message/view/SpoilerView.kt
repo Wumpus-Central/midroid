@@ -34,8 +34,8 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var3: SpoilerViewBinding = SpoilerViewBinding.inflate(LayoutInflater.from(var1), this);
       kotlin.jvm.internal.r.g(var3, "inflate(...)");
       this.binding = var3;
-      this.onReveal = new U0();
-      this.onHide = new V0();
+      this.onReveal = new W0();
+      this.onHide = new X0();
    }
 
    private fun configureObscureOverlay(config: SpoilerConfig, parent: ViewGroup) {
@@ -59,7 +59,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       val var8: Function1 = var3.getDescription();
       val var12: Context = this.getContext();
       kotlin.jvm.internal.r.g(var12, "getContext(...)");
-      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new Q0(var7), new R0(var7));
+      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new S0(var7), new T0(var7));
    }
 
    @JvmStatic
@@ -81,13 +81,13 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
       val var4: Function1 = var1.getAttributes().getLabel();
-      val var5: Context = this.getContext();
+      var var5: Context = this.getContext();
       kotlin.jvm.internal.r.g(var5, "getContext(...)");
       val var8: java.lang.String = var4.invoke(var5) as java.lang.String;
-      val var9: Function1 = var1.getAttributes().getDescription();
-      val var6: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var6, "getContext(...)");
-      var3.configure(var8, var9.invoke(var6) as java.lang.String, new P0(this, var2));
+      val var6: Function1 = var1.getAttributes().getDescription();
+      var5 = this.getContext();
+      kotlin.jvm.internal.r.g(var5, "getContext(...)");
+      var3.configure(var8, var6.invoke(var5) as java.lang.String, new R0(this, var2));
    }
 
    @JvmStatic
@@ -102,7 +102,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun onObscureToggleVisibilityClick(overlayView: View, onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new T0(this, var1, var2);
+      return new V0(this, var1, var2);
    }
 
    @JvmStatic
@@ -113,7 +113,7 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
    }
 
    private fun onObscureVerifyAgeClick(onTapObscureToggle: (Boolean) -> Unit): (Boolean) -> Unit {
-      return new S0(var1);
+      return new U0(var1);
    }
 
    @JvmStatic

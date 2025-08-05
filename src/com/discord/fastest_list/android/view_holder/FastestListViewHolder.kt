@@ -1,10 +1,10 @@
 package com.discord.fastest_list.android.view_holder
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import android.view.View.OnLayoutChangeListener
 import android.view.ViewGroup.LayoutParams
-import android.widget.FrameLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListSections.Entry
@@ -16,11 +16,11 @@ import com.discord.portals.from_js.PortalFromJsContextManager
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 
-internal sealed class FastestListViewHolder protected constructor(view: View, onUnexpectedItemSize: (Entry, Int) -> Unit) : RecyclerView.ViewHolder(
-         new FrameLayout(var1.getContext())
-      ),
+internal sealed class FastestListViewHolder protected constructor(view: View, onUnexpectedItemSize: (Entry, Int) -> Unit)
+   : RecyclerView.ViewHolder,
    PortalFromJsContext {
-   protected final val view: FrameLayout
+   protected final val view: FastestListViewHolderView
+   private final var viewTransitioning: Boolean
    private final var viewPlaceholder: FastestListPlaceholder?
    private final var viewPortalId: String?
    private final var viewPortalBound: Boolean
@@ -29,11 +29,23 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
    private final var horizontal: Boolean
 
    init {
+      val var3: Context = var1.getContext();
+      r.g(var3, "getContext(...)");
+      super(new FastestListViewHolderView(var3));
       var1 = this.itemView;
-      r.f(this.itemView, "null cannot be cast to non-null type android.widget.FrameLayout");
-      this.view = var1 as FrameLayout;
+      r.f(this.itemView, "null cannot be cast to non-null type com.discord.fastest_list.android.view_holder.FastestListViewHolderView");
+      val var5: FastestListViewHolderView = var1 as FastestListViewHolderView;
+      this.view = var1 as FastestListViewHolderView;
       this.viewPortalSizeValidator = new FastestListViewHolder.ViewPortalSizeValidator(this, var2);
       this.itemView.setLayoutParams(new RecyclerView.LayoutParams(-2, -2));
+      var5.setOnViewTransitioning(new a(this));
+   }
+
+   @JvmStatic
+   fun `_init_$lambda$0`(var0: FastestListViewHolder, var1: Boolean): Unit {
+      var0.viewTransitioning = var1;
+      updatePlaceholder$default(var0, var0.view, null, 1, null);
+      return Unit.a;
    }
 
    private fun View.updateLayoutParams(itemSize: Int, horizontal: Boolean) {
@@ -59,24 +71,36 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       }
    }
 
-   private fun ViewGroup.updatePlaceholder(placeholderType: FastestListPlaceholderType) {
-      val var3: FastestListPlaceholder.Companion = FastestListPlaceholder.Companion;
-      if (!r.c(this.viewPlaceholder, FastestListPlaceholder.Companion.get(var2))) {
-         if (this.viewPlaceholder != null) {
-            this.viewPlaceholder.onPlaceholderShouldUnbind(var1);
+   private fun ViewGroup.updatePlaceholder(placeholderType: FastestListPlaceholderType? = null) {
+      if (!this.viewTransitioning) {
+         if (var2 != null) {
+            val var3: FastestListPlaceholder.Companion = FastestListPlaceholder.Companion;
+            if (!r.c(this.viewPlaceholder, FastestListPlaceholder.Companion.get(var2))) {
+               if (this.viewPlaceholder != null) {
+                  this.viewPlaceholder.onPlaceholderShouldUnbind(var1);
+               }
+
+               this.viewPlaceholder = var3.get(var2);
+            }
          }
 
-         this.viewPlaceholder = var3.get(var2);
-      }
+         if (!this.viewPortalBound) {
+            if (this.item == null) {
+               return;
+            }
 
-      if (!this.viewPortalBound && this.viewPlaceholder != null) {
-         var var5: FastestListSections.Entry = this.item;
-         if (this.item == null) {
-            r.y("item");
-            var5 = null;
+            if (this.viewPlaceholder != null) {
+               var var5: FastestListSections.Entry = this.item;
+               if (this.item == null) {
+                  r.y("item");
+                  var5 = null;
+               }
+
+               this.viewPlaceholder.onPlaceholderShouldBind(this.view, var5);
+            }
+         } else if (this.viewPlaceholder != null) {
+            this.viewPlaceholder.onPlaceholderShouldUnbind(this.view);
          }
-
-         this.viewPlaceholder.onPlaceholderShouldBind(this.view, var5);
       }
    }
 
@@ -101,13 +125,10 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       r.h(var2, "portalView");
       if (r.c(this.viewPortalId, var1)) {
          this.viewPortalBound = true;
-         if (this.viewPlaceholder != null) {
-            this.viewPlaceholder.onPlaceholderShouldUnbind(this.view);
-         }
-
-         val var4: FrameLayout = this.view;
+         updatePlaceholder$default(this, this.view, null, 1, null);
+         val var3: FastestListViewHolderView = this.view;
          var2.addOnLayoutChangeListener(this.viewPortalSizeValidator);
-         var4.addView(var2);
+         var3.addView(var2);
       }
    }
 
@@ -116,20 +137,12 @@ internal sealed class FastestListViewHolder protected constructor(view: View, on
       r.h(var2, "portalView");
       if (r.c(this.viewPortalId, var1)) {
          this.viewPortalBound = false;
-         if (this.viewPlaceholder != null) {
-            var var6: FastestListSections.Entry = this.item;
-            if (this.item == null) {
-               r.y("item");
-               var6 = null;
-            }
-
-            this.viewPlaceholder.onPlaceholderShouldBind(this.view, var6);
-         }
       }
 
-      val var7: FrameLayout = this.view;
+      updatePlaceholder$default(this, this.view, null, 1, null);
+      val var3: FastestListViewHolderView = this.view;
       var2.removeOnLayoutChangeListener(this.viewPortalSizeValidator);
-      var7.removeView(var2);
+      var3.removeView(var2);
    }
 
    public open fun onViewRecycled() {

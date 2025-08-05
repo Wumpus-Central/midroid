@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
+import A9.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -17,7 +18,6 @@ import com.discord.theme.ThemeManagerKt
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlin.reflect.KClass
-import z9.n
 
 public class SeparatorDisplayComponentView  public constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
    : LinearLayout,

@@ -2,7 +2,7 @@ package com.discord.notifications.api
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class Embed(fields: List<EmbedField>? = null) {
@@ -46,12 +46,12 @@ public data class Embed(fields: List<EmbedField>? = null) {
    }
 
    public override fun toString(): String {
-      val var2: java.util.List = this.fields;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("Embed(fields=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: java.util.List = this.fields;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Embed(fields=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

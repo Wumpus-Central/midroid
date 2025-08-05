@@ -2,7 +2,7 @@ package com.discord.app_database
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class GuildVersion(id: String, version: Long) {

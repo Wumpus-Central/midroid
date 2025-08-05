@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 internal data class ShareBroadcastReceiverAppClicked(app: String, location: String?) : ReactEvent {
@@ -63,13 +63,13 @@ internal data class ShareBroadcastReceiverAppClicked(app: String, location: Stri
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.app;
-      val var3: java.lang.String = this.location;
+      val var3: java.lang.String = this.app;
+      val var2: java.lang.String = this.location;
       val var1: StringBuilder = new StringBuilder();
       var1.append("ShareBroadcastReceiverAppClicked(app=");
-      var1.append(var2);
-      var1.append(", location=");
       var1.append(var3);
+      var1.append(", location=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

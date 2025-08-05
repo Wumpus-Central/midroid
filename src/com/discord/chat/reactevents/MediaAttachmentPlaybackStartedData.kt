@@ -6,7 +6,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
@@ -121,9 +121,9 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       val var7: java.lang.String = MessageId.toString-impl(this.messageId);
       val var1: Float = this.totalDurationSecs;
       val var2: Float = this.startDurationSecs;
-      val var6: java.lang.String = UserId.toString-impl(this.senderUserId);
+      val var5: java.lang.String = UserId.toString-impl(this.senderUserId);
       val var3: Boolean = this.isVoiceMessage;
-      val var5: java.lang.String = this.attachmentId;
+      val var6: java.lang.String = this.attachmentId;
       val var4: StringBuilder = new StringBuilder();
       var4.append("MediaAttachmentPlaybackStartedData(messageId=");
       var4.append(var7);
@@ -132,11 +132,11 @@ public data class MediaAttachmentPlaybackStartedData(messageId: MessageId,
       var4.append(", startDurationSecs=");
       var4.append(var2);
       var4.append(", senderUserId=");
-      var4.append(var6);
+      var4.append(var5);
       var4.append(", isVoiceMessage=");
       var4.append(var3);
       var4.append(", attachmentId=");
-      var4.append(var5);
+      var4.append(var6);
       var4.append(")");
       return var4.toString();
    }

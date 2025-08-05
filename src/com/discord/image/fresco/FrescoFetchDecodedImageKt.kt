@@ -1,7 +1,7 @@
 package com.discord.image.fresco
 
-import G9.b
-import H2.d
+import H9.b
+import I2.d
 import android.content.Context
 import android.graphics.Bitmap
 import android.net.Uri
@@ -38,7 +38,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
       }
 
       val var8: DataSource = d.a().k(var7.J(var10).a(), var0);
-      var8.f(new r3.b(var6, var3) {
+      var8.f(new s3.b(var6, var3) {
          final CancellableContinuation $continuation;
          final boolean $copyBitmap;
 
@@ -65,7 +65,7 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
             this.$continuation.resumeWith(Result.b(var4));
          }
       }, access$getExecutorSupplier$p().a());
-      var6.f(new Function1(var8) {
+      var6.h(new Function1(var8) {
          final DataSource $imageDataSource;
 
          {
@@ -89,16 +89,16 @@ public suspend fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProce
 public suspend fun Context.fetchDecodedImage(uri: String?, postProcessor: PostProcessor? = ..., copyBitmap: Boolean = ...): Bitmap? {
    label15:
    try {
-      val var9: a = Result.k;
-      var8 = Result.b(Uri.parse(var1));
-   } catch (var6: java.lang.Throwable) {
       val var5: a = Result.k;
-      var8 = Result.b(c.a(var6));
+      var9 = Result.b(Uri.parse(var1));
+   } catch (var6: java.lang.Throwable) {
+      val var8: a = Result.k;
+      var9 = Result.b(c.a(var6));
       break label15;
    }
 
-   var var10: Any = var8;
-   if (Result.g(var8)) {
+   var var10: Any = var9;
+   if (Result.g(var9)) {
       var10 = null;
    }
 
@@ -117,7 +117,7 @@ public fun Context.fetchDecodedImage(uri: Uri?, postProcessor: PostProcessor? = 
          var6 = var2.create();
       }
 
-      d.a().k(var5.J(var6).a(), var0).f(new r3.b(var3) {
+      d.a().k(var5.J(var6).a(), var0).f(new s3.b(var3) {
          final Function1 $onDecodedImage;
 
          {

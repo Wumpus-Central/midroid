@@ -24,7 +24,7 @@ public class MobileVoiceOverlayModule(reactContext: ReactApplicationContext) : N
    init {
       kotlin.jvm.internal.r.h(var1, "reactContext");
       super(var1);
-      this.mobileVoiceOverlay$delegate = z9.j.a(new r(this));
+      this.mobileVoiceOverlay$delegate = A9.j.b(new r(this));
    }
 
    @JvmStatic

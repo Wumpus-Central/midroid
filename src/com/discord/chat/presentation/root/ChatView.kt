@@ -1,5 +1,6 @@
 package com.discord.chat.presentation.root
 
+import A9.s
 import android.content.Context
 import android.view.View
 import android.view.ViewGroup
@@ -15,7 +16,6 @@ import com.discord.recycler_view.utils.RecyclerViewExtensionsKt
 import com.facebook.react.views.view.ReactViewGroup
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
-import z9.s
 
 public class ChatView(context: Context) : ReactViewGroup {
    private final lateinit var chatList: ChatListView
@@ -118,11 +118,11 @@ public class ChatView(context: Context) : ReactViewGroup {
 
          var8.scrollToPosition(var1, var2, var3, var4);
       } else {
-         val var7: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var7);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Expected to be on android main thread. Current: ");
+         var7.append(var5);
+         throw new IllegalStateException(var7.toString().toString());
       }
    }
 

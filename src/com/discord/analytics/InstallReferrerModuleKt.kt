@@ -1,6 +1,6 @@
 package com.discord.analytics
 
-import G9.b
+import H9.b
 import com.android.installreferrer.api.InstallReferrerClient
 import e1.a
 import kotlin.coroutines.Continuation
@@ -36,7 +36,7 @@ private suspend fun InstallReferrerClient.await(): Int {
          this.$continuation.resumeWith(Result.b(var1));
       }
    };
-   var2.f(
+   var2.h(
       new Function1(var0) {
          final InstallReferrerClient $this_await;
 
@@ -50,11 +50,11 @@ private suspend fun InstallReferrerClient.await(): Int {
             val var2: InstallReferrerClient = this.$this_await;
 
             try {
-               val var5: kotlin.Result.a = Result.k;
+               val var6: kotlin.Result.a = Result.k;
                var2.a();
                Result.b(Unit.a);
             } catch (var3: java.lang.Throwable) {
-               val var6: kotlin.Result.a = Result.k;
+               val var5: kotlin.Result.a = Result.k;
                Result.b(c.a(var3));
                return;
             }

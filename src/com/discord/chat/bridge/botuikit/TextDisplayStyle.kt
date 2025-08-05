@@ -5,7 +5,7 @@ import com.discord.serialization.IntEnumSerializer
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.H
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g(with = TextDisplayStyle.Serializer::class)
 public enum class TextDisplayStyle(serialNumber: Int) : IntEnum {
@@ -24,7 +24,7 @@ public enum class TextDisplayStyle(serialNumber: Int) : IntEnum {
    fun {
       val var0: Array<TextDisplayStyle> = $values();
       $VALUES = var0;
-      $ENTRIES = H9.a.a(var0);
+      $ENTRIES = I9.a.a(var0);
    }
 
    init {

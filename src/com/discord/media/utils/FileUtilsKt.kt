@@ -1,6 +1,6 @@
 package com.discord.media.utils
 
-import cc.m
+import dc.m
 import java.io.File
 import java.io.InputStream
 import kotlin.jvm.internal.r
@@ -15,16 +15,16 @@ internal fun InputStream.writeTo(outputFile: File): File {
       try {
          var2.b1(m.l(var0));
       } catch (var4: java.lang.Throwable) {
-         val var9: java.lang.Throwable = var4;
+         val var10: java.lang.Throwable = var4;
 
          try {
-            throw var9;
+            throw var10;
          } catch (var3: java.lang.Throwable) {
-            L9.c.a(var2, var4);
+            M9.c.a(var2, var4);
          }
       }
 
-      L9.c.a(var2, null);
+      M9.c.a(var2, null);
       return var1;
    }
 }

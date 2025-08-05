@@ -3,7 +3,7 @@ package com.discord.notifications.api
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class DirectReplyUser(id: UserId, username: String? = ..., discriminator: String? = ..., avatar: String? = ...) : DirectReplyUser(
@@ -89,18 +89,18 @@ public data class DirectReplyUser(id: UserId, username: String? = ..., discrimin
       val var3: java.lang.String = UserId.toString-impl(this.id);
       val var4: java.lang.String = this.username;
       val var5: java.lang.String = this.discriminator;
-      val var1: java.lang.String = this.avatar;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("DirectReplyUser(id=");
-      var2.append(var3);
-      var2.append(", username=");
-      var2.append(var4);
-      var2.append(", discriminator=");
-      var2.append(var5);
-      var2.append(", avatar=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: java.lang.String = this.avatar;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("DirectReplyUser(id=");
+      var1.append(var3);
+      var1.append(", username=");
+      var1.append(var4);
+      var1.append(", discriminator=");
+      var1.append(var5);
+      var1.append(", avatar=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

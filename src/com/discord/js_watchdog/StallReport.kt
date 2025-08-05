@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class StallReport(stallTime: Int, sessionId: String, trace: String?) : ReactEvent {
@@ -55,8 +55,8 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
    }
 
    public override fun hashCode(): Int {
-      val var2: Int = Integer.hashCode(this.stallTime);
-      val var3: Int = this.sessionId.hashCode();
+      val var3: Int = Integer.hashCode(this.stallTime);
+      val var2: Int = this.sessionId.hashCode();
       val var1: Int;
       if (this.trace == null) {
          var1 = 0;
@@ -64,7 +64,7 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
          var1 = this.trace.hashCode();
       }
 
-      return (var2 * 31 + var3) * 31 + var1;
+      return (var3 * 31 + var2) * 31 + var1;
    }
 
    override fun serialize(): WritableMap {
@@ -73,15 +73,15 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var4: java.lang.String = this.sessionId;
-      val var2: java.lang.String = this.trace;
+      val var2: java.lang.String = this.sessionId;
+      val var4: java.lang.String = this.trace;
       val var3: StringBuilder = new StringBuilder();
       var3.append("StallReport(stallTime=");
       var3.append(var1);
       var3.append(", sessionId=");
-      var3.append(var4);
-      var3.append(", trace=");
       var3.append(var2);
+      var3.append(", trace=");
+      var3.append(var4);
       var3.append(")");
       return var3.toString();
    }

@@ -1,12 +1,12 @@
 package com.discord.crash_reporting.system_logs;
 
-import kotlin.jvm.functions.Function0;
+import kotlin.jvm.functions.Function1;
 
 // $VF: synthetic class
-public final class d implements Function0 {
+public final class d implements Function1 {
    public final SystemLogCapture j;
 
-   public final Object invoke() {
-      return SystemLogCapture.a(this.j);
+   public final Object invoke(Object var1) {
+      return SystemLogCapture.a(this.j, (String)var1);
    }
 }

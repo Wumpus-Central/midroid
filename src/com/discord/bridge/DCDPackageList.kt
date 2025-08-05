@@ -85,7 +85,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
 
          @Override
          public boolean isFabric() {
-            return false;
+            return true;
          }
       };
    }
@@ -142,6 +142,7 @@ public class DCDPackageList(host: ReactNativeHost) : PackageList {
       val var1: ArrayList = super.getPackages();
       val var2: DCDModuleProvider = DCDModuleProvider.INSTANCE;
       var1.add(DCDModuleProvider.INSTANCE.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
+      var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));
       var1.add(var2.getLegacyPackageForModule(<unrepresentable>.INSTANCE));

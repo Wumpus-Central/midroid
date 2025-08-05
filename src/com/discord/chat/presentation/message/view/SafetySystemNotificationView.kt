@@ -29,15 +29,15 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var5: SafetySystemNotificationBinding = SafetySystemNotificationBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var5, "inflate(...)");
-      this.binding = var5;
-      val var3: View = var5.getRoot();
-      var3.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
-      kotlin.jvm.internal.r.e(var3);
-      ViewClippingUtilsKt.clipToRoundedRectangle(var3, SizeUtilsKt.getDpToPx(8));
-      val var4: TextView = var5.separator;
-      var5.separator.setText("•");
+      val var3: SafetySystemNotificationBinding = SafetySystemNotificationBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var3, "inflate(...)");
+      this.binding = var3;
+      val var5: View = var3.getRoot();
+      var5.setBackgroundColor(ThemeManagerKt.getTheme().getBackgroundSecondary());
+      kotlin.jvm.internal.r.e(var5);
+      ViewClippingUtilsKt.clipToRoundedRectangle(var5, SizeUtilsKt.getDpToPx(8));
+      val var4: TextView = var3.separator;
+      var3.separator.setText("•");
       var4.setTextColor(ThemeManagerKt.getTheme().getTextMuted());
       kotlin.jvm.internal.r.e(var4);
       DiscordFontUtilsKt.setDiscordFont(var4, DiscordFont.PrimaryBold);
@@ -60,7 +60,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setPrimaryCta(primaryCtaText: String, primaryCtaType: String, primaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.primaryCta;
-      this.binding.primaryCta.setOnClickListener(new M0(var4, var2, var3));
+      this.binding.primaryCta.setOnClickListener(new O0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.r.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);
@@ -73,7 +73,7 @@ public class SafetySystemNotificationView  public constructor(context: Context, 
 
    private fun setSecondaryCta(secondaryCtaText: String, secondaryCtaType: String, secondaryCtaKey: String, callback: (String, String) -> Unit) {
       val var5: TextView = this.binding.secondaryCta;
-      this.binding.secondaryCta.setOnClickListener(new N0(var4, var2, var3));
+      this.binding.secondaryCta.setOnClickListener(new P0(var4, var2, var3));
       var5.setText(var1);
       kotlin.jvm.internal.r.e(var5);
       DiscordFontUtilsKt.setDiscordFont(var5, DiscordFont.PrimaryMedium);

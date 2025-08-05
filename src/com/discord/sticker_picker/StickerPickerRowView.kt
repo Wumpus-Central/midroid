@@ -1,5 +1,6 @@
 package com.discord.sticker_picker
 
+import A9.n
 import android.content.Context
 import android.view.View
 import android.widget.LinearLayout
@@ -10,12 +11,11 @@ import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react_gesture_handler.nested_touch.NestedScrollOnTouchUtilsKt
 import com.discord.ripple.RippleUtilsKt
 import com.discord.sticker.StickerView
-import i2.a
-import i2.b
-import i2.c
-import i2.d
+import j2.a
+import j2.b
+import j2.c
+import j2.d
 import kotlin.jvm.internal.r
-import z9.n
 
 internal class StickerPickerRowView(context: Context) : LinearLayout {
    private final var firstRenderPass: Boolean
@@ -158,9 +158,9 @@ internal class StickerPickerRowView(context: Context) : LinearLayout {
    }
 
    public fun clean() {
-      for (View var1 : f0.a(this)) {
-         r.f(var1, "null cannot be cast to non-null type com.discord.sticker.StickerView");
-         (var1 as StickerView).recycle();
+      for (View var2 : f0.a(this)) {
+         r.f(var2, "null cannot be cast to non-null type com.discord.sticker.StickerView");
+         (var2 as StickerView).recycle();
       }
    }
 

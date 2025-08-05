@@ -47,8 +47,8 @@ public fun chatListAdapterConfigurator(
          new DeserializationErrorDelegate(var1)
       }
    )) {
-      var0.c(var5);
-      var4.put(var5.getClass(), var0.f(var5));
+      var0.b(var5);
+      var4.put(var5.getClass(), var0.e(var5));
    }
 
    return var4;

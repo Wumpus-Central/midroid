@@ -11,13 +11,12 @@ import com.facebook.react.uimanager.ViewGroupManager
 import com.facebook.react.uimanager.annotations.ReactProp
 import com.facebook.react.viewmanagers.DCDPortalViewManagerDelegate
 import com.facebook.react.viewmanagers.DCDPortalViewManagerInterface
-import ib.I
-import ib.K
-import ib.f
+import jb.I
+import jb.K
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : NativePortalFromNativeModuleSpec {
@@ -79,7 +78,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
             }
 
             public final Object invokeSuspend(Object var1) {
-               val var3: Any = G9.b.e();
+               val var3: Any = H9.b.e();
                if (this.label != 0) {
                   if (this.label != 1) {
                      throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -88,8 +87,8 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2(null) {
                      int label;
 
                      {
@@ -105,7 +104,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
 
                      public final Object invokeSuspend(Object var1) {
-                        val var3: Any = G9.b.e();
+                        val var3: Any = H9.b.e();
                         if (this.label != 0) {
                            if (this.label != 1) {
                               throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -124,7 +123,7 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
                      }
                   };
                   this.label = 1;
-                  if (f.g(var4, var1, this) === var3) {
+                  if (f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

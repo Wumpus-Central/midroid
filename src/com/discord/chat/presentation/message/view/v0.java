@@ -1,13 +1,16 @@
 package com.discord.chat.presentation.message.view;
 
-import com.discord.media_player.reactevents.MediaPlayFinishedAnalytics;
-import kotlin.jvm.functions.Function1;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.discord.media_player.MediaSource;
 
 // $VF: synthetic class
-public final class v0 implements Function1 {
+public final class v0 implements OnClickListener {
    public final MediaView j;
+   public final boolean k;
+   public final MediaSource l;
 
-   public final Object invoke(Object var1) {
-      return MediaView.e(this.j, (MediaPlayFinishedAnalytics)var1);
+   public final void onClick(View var1) {
+      MediaView.k(this.j, this.k, this.l, var1);
    }
 }

@@ -1,7 +1,7 @@
 package com.discord.security_key;
 
 // $VF: synthetic class
-public final class f implements t6.e {
+public final class f implements u6.e {
    public final WebAuthn a;
 
    public final void onFailure(Exception var1) {

@@ -1,5 +1,6 @@
 package com.discord.chat.bridge.row
 
+import A9.n
 import com.discord.chat.bridge.BackgroundHighlight
 import com.discord.chat.bridge.ErrorMessage
 import com.discord.chat.bridge.Message
@@ -16,7 +17,6 @@ import com.discord.chat.presentation.list.item.SystemMessageItem
 import com.discord.chat.presentation.root.MessageContext
 import com.discord.chat.presentation.root.MessageContextKt
 import kotlin.jvm.internal.r
-import z9.n
 
 public fun MessageBase.toChatListMessageItem(
    messageFrame: MessageFrame? = null,

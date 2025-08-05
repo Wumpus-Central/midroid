@@ -3,7 +3,7 @@ package com.discord.app_database
 import java.util.Arrays
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import sb.g
+import tb.g
 
 @g
 public data class DatabaseVersions(vararg guildVersions: Any, vararg nonGuildVersions: Any) {

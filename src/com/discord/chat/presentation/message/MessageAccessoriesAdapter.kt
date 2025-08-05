@@ -26,7 +26,6 @@ import com.discord.chat.bridge.safetysystemnotification.SafetySystemNotification
 import com.discord.chat.bridge.spoiler.SpoilerAttributes
 import com.discord.chat.bridge.spoiler.SpoilerConfig
 import com.discord.chat.bridge.sticker.Sticker
-import com.discord.chat.bridge.voiceinviteembed.VoiceInviteEmbed
 import com.discord.chat.databinding.TimestampViewBinding
 import com.discord.chat.presentation.events.ChatEventHandler
 import com.discord.chat.presentation.invitetospeak.InviteToSpeakView
@@ -72,7 +71,6 @@ import com.discord.chat.presentation.message.messagepart.SurveyIndicationMessage
 import com.discord.chat.presentation.message.messagepart.ThreadEmbedMessageAccessory
 import com.discord.chat.presentation.message.messagepart.TimestampMessageAccessory
 import com.discord.chat.presentation.message.messagepart.VideoAttachmentMessageAccessory
-import com.discord.chat.presentation.message.messagepart.VoiceInviteMessageAccessory
 import com.discord.chat.presentation.message.messagepart.WelcomeStickerAccessory
 import com.discord.chat.presentation.message.view.ActivityInstanceEmbedView
 import com.discord.chat.presentation.message.view.AppMessageEmbedView
@@ -105,7 +103,6 @@ import com.discord.chat.presentation.message.view.SafetyPolicyNoticeView
 import com.discord.chat.presentation.message.view.SafetySystemNotificationView
 import com.discord.chat.presentation.message.view.SurveyIndicationView
 import com.discord.chat.presentation.message.view.ThreadEmbedView
-import com.discord.chat.presentation.message.view.VoiceInviteEmbedView
 import com.discord.chat.presentation.message.view.botuikit.ComponentProvider
 import com.discord.chat.presentation.message.view.botuikit.MessageComponentsView
 import com.discord.chat.presentation.message.view.mosaic.AttachmentMediaMosaicContainerView
@@ -156,7 +153,6 @@ import com.discord.chat.presentation.message.viewholder.StickerPngViewHolder
 import com.discord.chat.presentation.message.viewholder.SurveyIndicationViewHolder
 import com.discord.chat.presentation.message.viewholder.ThreadEmbedViewHolder
 import com.discord.chat.presentation.message.viewholder.TimestampViewHolder
-import com.discord.chat.presentation.message.viewholder.VoiceInviteEmbedViewHolder
 import com.discord.chat.presentation.message.viewholder.WelcomeStickerViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentImageViewHolder
 import com.discord.chat.presentation.message.viewholder.mosaicitem.attachments.MosaicItemMessageAttachmentVideoViewHolder
@@ -743,7 +739,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                if (var4 != 2) {
                   if (var4 != 3) {
                      if (var4 != 4) {
-                        throw new z9.n();
+                        throw new A9.n();
                      }
 
                      var4 = 27;
@@ -810,7 +806,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
 
             if (var4 != 2) {
                if (var4 != 3) {
-                  throw new z9.n();
+                  throw new A9.n();
                }
 
                var4 = 38;
@@ -819,8 +815,6 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          } else if (var3 is CtaButtonMessageAccessory) {
             var4 = 41;
-         } else if (var3 is VoiceInviteMessageAccessory) {
-            var4 = 42;
          } else if (var3 is ForwardHeaderMessageAccessory) {
             var4 = 43;
          } else if (var3 is ForwardBreadcrumbMessageAccessory) {
@@ -832,7 +826,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                      throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                   }
 
-                  throw new z9.n();
+                  throw new A9.n();
                }
 
                throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
@@ -853,12 +847,12 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          var8 = null;
       }
 
-      val var51: Function6 = var8.getOnMessageLongPressed();
-      val var52: q;
-      if (var51 != null) {
-         var52 = new q(var51, this);
+      val var50: Function6 = var8.getOnMessageLongPressed();
+      val var51: q;
+      if (var50 != null) {
+         var51 = new q(var50, this);
       } else {
-         var52 = null;
+         var51 = null;
       }
 
       val var10: MessageAccessory = this.items.get(var2);
@@ -874,15 +868,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          val var5: Int = var1.itemView.getContext().getResources().getDimensionPixelSize(R.dimen.message_media_max_height);
          var2 = var12.getRadiusPx();
          val var13: OnLongClickListener = var12.getOnLongClick();
-         val var96: SpoilerAttributes = var12.getSpoilerAttributes();
-         val var97: SpoilerConfig;
-         if (var96 != null) {
-            var97 = var96.configure(new i(this, var1), new u(this, var10));
+         val var94: SpoilerAttributes = var12.getSpoilerAttributes();
+         val var95: SpoilerConfig;
+         if (var94 != null) {
+            var95 = var94.configure(new i(this, var1), new u(this, var10));
          } else {
-            var97 = null;
+            var95 = null;
          }
 
-         var11.bind(var8, var12, var5, var2, new z(this, var1), var97, new A(var1, var10, this), var13, var12.getPortal());
+         var11.bind(var8, var12, var5, var2, new z(this, var1), var95, new A(var1, var10, this), var13, var12.getPortal());
       } else if (var10 is InfoLinkMessageAccessory) {
          (var1 as InfoLinkViewHolder).bind((var10 as InfoLinkMessageAccessory).getText(), (var10 as InfoLinkMessageAccessory).getIcon(), new C(this, var10));
       } else if (var10 is ReferralMessageAccessory) {
@@ -907,15 +901,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is GiftMessageAccessory) {
-         val var98: GiftViewHolder = var1 as GiftViewHolder;
-         val var55: GiftMessageAccessory = var10 as GiftMessageAccessory;
+         val var96: GiftViewHolder = var1 as GiftViewHolder;
+         val var54: GiftMessageAccessory = var10 as GiftMessageAccessory;
          var var26: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var26 = null;
          }
 
-         var98.bind(var55, new Function1(var26) {
+         var96.bind(var54, new Function1(var26) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapGiftCodeEmbed", "onTapGiftCodeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -926,15 +920,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          }, new E(this, var10));
       } else if (var10 is MessageContentAccessory) {
-         val var148: MessageContentViewHolder = var1 as MessageContentViewHolder;
-         val var132: MessageContentAccessory = var10 as MessageContentAccessory;
+         val var144: MessageContentViewHolder = var1 as MessageContentViewHolder;
+         val var129: MessageContentAccessory = var10 as MessageContentAccessory;
          var8 = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var8 = null;
          }
 
-         val var158: Function2 = new Function2(var8) {
+         val var154: Function2 = new Function2(var8) {
             {
                super(
                   2,
@@ -958,7 +952,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var8 = null;
          }
 
-         val var164: Function1 = new Function1(var8) {
+         val var160: Function1 = new Function1(var8) {
             {
                super(1, var1, ChatEventHandler::class.java, "onLinkLongClicked", "onLinkLongClicked(Lcom/discord/chat/bridge/contentnode/LinkContentNode;)V", 0);
             }
@@ -1174,10 +1168,10 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var8 = null;
          }
 
-         var148.bind(
-            var132,
-            var158,
-            var164,
+         var144.bind(
+            var129,
+            var154,
+            var160,
             var14,
             var15,
             var16,
@@ -1204,33 +1198,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is MediaMosaicAttachmentMessageAccessory) {
-         val var149: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
-         var var113: ChatEventHandler = this.eventHandler;
+         val var145: AttachmentMediaMosaicViewHolder = var1 as AttachmentMediaMosaicViewHolder;
+         var var111: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
-            var113 = null;
+            var111 = null;
          }
 
-         val var169: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
-         val var165: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
-         val var159: G = new G(this);
-         val var71: B;
-         if (var52 != null) {
-            var71 = new B(var52);
+         val var155: MediaMosaicAttachmentMessageAccessory = var10 as MediaMosaicAttachmentMessageAccessory;
+         val var161: java.util.List = (var10 as MediaMosaicAttachmentMessageAccessory).getAttachments();
+         val var165: G = new G(this);
+         val var70: B;
+         if (var51 != null) {
+            var70 = new B(var51);
          } else {
-            var71 = null;
+            var70 = null;
          }
 
-         var149.bind(
-            var113,
+         var145.bind(
+            var111,
+            var161,
             var165,
-            var159,
-            var71,
+            var70,
             new J(this, var1),
             new K(this, var10),
-            var169.isForwardedContent(),
-            var169.getShouldAutoPlayGif(),
-            var169.getConstrainedWidth()
+            var155.isForwardedContent(),
+            var155.getShouldAutoPlayGif(),
+            var155.getConstrainedWidth()
          );
       } else if (var10 is ReactionsMessageAccessory) {
          (var1 as ReactionsViewHolder)
@@ -1256,29 +1250,29 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is EmbeddedActivityInviteMessageAccessory) {
          (var1 as EmbeddedActivityInviteViewHolder).bind(var10 as EmbeddedActivityInviteMessageAccessory);
       } else if (var10 is GuildProfileInviteMessageAccessory) {
-         val var114: GuildProfileInviteViewHolder = var1 as GuildProfileInviteViewHolder;
-         val var133: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
+         val var112: GuildProfileInviteViewHolder = var1 as GuildProfileInviteViewHolder;
+         val var130: GuildProfileInviteMessageAccessory = var10 as GuildProfileInviteMessageAccessory;
          var var28: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var28 = null;
          }
 
-         var114.bind(var133, var28);
+         var112.bind(var130, var28);
       } else if (var10 is GuildInviteDisabledMessageAccessory) {
          (var1 as GuildInviteDisabledViewHolder).bind(var10 as GuildInviteDisabledMessageAccessory);
       } else if (var10 is GuildEventInviteMessageAccessory) {
          (var1 as GuildEventInviteViewHolder).bind(var10 as GuildEventInviteMessageAccessory);
       } else if (var10 is ThreadEmbedMessageAccessory) {
-         val var115: ThreadEmbedViewHolder = var1 as ThreadEmbedViewHolder;
-         val var134: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
+         val var113: ThreadEmbedViewHolder = var1 as ThreadEmbedViewHolder;
+         val var131: ThreadEmbedMessageAccessory = var10 as ThreadEmbedMessageAccessory;
          var var29: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var29 = null;
          }
 
-         var115.bind(var134, new Function1(var29) {
+         var113.bind(var131, new Function1(var29) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapThreadEmbed", "onTapThreadEmbed-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1289,32 +1283,32 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is ForumPostActionBar) {
-         val var116: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
-         val var166: ForumPostActionBar = var10 as ForumPostActionBar;
-         val var170: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
-         val var173: g = new g(this);
-         val var160: h = new h(this);
-         val var171: j = new j(this);
-         val var135: k = new k(this);
-         val var172: l = new l(this);
-         val var174: m = new m(this);
-         val var150: n = new n(this);
+         val var114: ForumPostActionBarViewHolder = var1 as ForumPostActionBarViewHolder;
+         val var146: ForumPostActionBar = var10 as ForumPostActionBar;
+         val var132: ReactionsTheme = (var10 as ForumPostActionBar).getReactionsTheme();
+         val var168: g = new g(this);
+         val var156: h = new h(this);
+         val var170: j = new j(this);
+         val var166: k = new k(this);
+         val var169: l = new l(this);
+         val var167: m = new m(this);
+         val var162: n = new n(this);
          var var30: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var30 = null;
          }
 
-         var116.bind(
-            var166,
+         var114.bind(
+            var146,
+            var132,
+            var168,
+            var156,
             var170,
-            var173,
-            var160,
-            var171,
-            var135,
-            var172,
-            var174,
-            var150,
+            var166,
+            var169,
+            var167,
+            var162,
             new Function2(var30) {
                {
                   super(
@@ -1335,47 +1329,47 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is FileAttachmentMessageAccessory) {
-         val var76: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
-         val var117: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
-         val var136: o = new o(this);
-         val var151: SpoilerAttributes = var117.getSpoilerAttributes();
+         val var75: FileAttachmentViewHolder = var1 as FileAttachmentViewHolder;
+         val var115: FileAttachmentMessageAccessory = var10 as FileAttachmentMessageAccessory;
+         val var133: o = new o(this);
+         val var147: SpoilerAttributes = var115.getSpoilerAttributes();
          val var31: SpoilerConfig;
-         if (var151 != null) {
-            var31 = SpoilerAttributes.configure$default(var151, new p(this, var1), null, 2, null);
+         if (var147 != null) {
+            var31 = SpoilerAttributes.configure$default(var147, new p(this, var1), null, 2, null);
          } else {
             var31 = null;
          }
 
-         var76.bind(var117, var136, var31);
+         var75.bind(var115, var133, var31);
       } else if (var10 is MessageComponentsAccessory) {
-         val var152: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
-         val var161: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
-         var var119: ChatEventHandler = this.eventHandler;
+         val var157: MessageComponentsViewHolder = var1 as MessageComponentsViewHolder;
+         val var163: MessageComponentsAccessory = var10 as MessageComponentsAccessory;
+         var var117: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
-            var119 = null;
+            var117 = null;
          }
 
-         val var77: r;
-         if (var52 != null) {
-            var77 = new r(var52);
+         val var76: r;
+         if (var51 != null) {
+            var76 = new r(var51);
          } else {
-            var77 = null;
+            var76 = null;
          }
 
-         var152.bind(var161, this.botComponentProvider, new s(var10, this), var77, new t(this, var1), new v(this, var10), var119);
+         var157.bind(var163, this.botComponentProvider, new s(var10, this), var76, new t(this, var1), new v(this, var10), var117);
       } else if (var10 is FlaggedMessageEmbedAccessory) {
          (var1 as FlaggedMessageEmbedViewHolder).bind(var10 as FlaggedMessageEmbedAccessory);
       } else if (var10 is FlaggedMessageActionBarAccessory) {
-         val var120: FlaggedMessageActionBarViewHolder = var1 as FlaggedMessageActionBarViewHolder;
-         val var137: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
+         val var118: FlaggedMessageActionBarViewHolder = var1 as FlaggedMessageActionBarViewHolder;
+         val var134: FlaggedMessageActionBarAccessory = var10 as FlaggedMessageActionBarAccessory;
          var var32: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var32 = null;
          }
 
-         val var153: Function2 = new Function2(var32) {
+         val var149: Function2 = new Function2(var32) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1391,7 +1385,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var33 = null;
          }
 
-         var120.bind(var137, var153, new Function2(var33) {
+         var118.bind(var134, var149, new Function2(var33) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1402,15 +1396,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is AutoModerationNotificationEmbedAccessory) {
-         val var121: AutoModerationNotificationEmbedViewHolder = var1 as AutoModerationNotificationEmbedViewHolder;
-         val var138: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
+         val var119: AutoModerationNotificationEmbedViewHolder = var1 as AutoModerationNotificationEmbedViewHolder;
+         val var135: AutoModerationNotificationEmbedAccessory = var10 as AutoModerationNotificationEmbedAccessory;
          var var34: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var34 = null;
          }
 
-         val var154: Function2 = new Function2(var34) {
+         val var150: Function2 = new Function2(var34) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationActions", "onTapAutoModerationActions-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1426,7 +1420,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var35 = null;
          }
 
-         var121.bind(var138, var154, new Function2(var35) {
+         var119.bind(var135, var150, new Function2(var35) {
             {
                super(2, var1, ChatEventHandler::class.java, "onTapAutoModerationFeedback", "onTapAutoModerationFeedback-pfaIj0E(Ljava/lang/String;J)V", 0);
             }
@@ -1441,15 +1435,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is WelcomeStickerAccessory) {
          (var1 as WelcomeStickerViewHolder).bind(var10 as WelcomeStickerAccessory);
       } else if (var10 is ActivityInviteEmbedMessageAccessory) {
-         val var122: ActivityInviteEmbedViewHolder = var1 as ActivityInviteEmbedViewHolder;
-         val var139: ActivityInviteEmbedMessageAccessory = var10 as ActivityInviteEmbedMessageAccessory;
+         val var120: ActivityInviteEmbedViewHolder = var1 as ActivityInviteEmbedViewHolder;
+         val var136: ActivityInviteEmbedMessageAccessory = var10 as ActivityInviteEmbedMessageAccessory;
          var var36: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var36 = null;
          }
 
-         var122.bind(var139, new Function1(var36) {
+         var120.bind(var136, new Function1(var36) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapJoinActivity", "onTapJoinActivity-1xi1bu0(Ljava/lang/String;)V", 0);
             }
@@ -1479,33 +1473,33 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       } else if (var10 is InviteToSpeakAccessory) {
          (var1 as InviteToSpeakViewHolder).bind(var10 as InviteToSpeakAccessory);
       } else if (var10 is AudioAttachmentMessageAccessory) {
-         val var155: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
-         val var140: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
+         val var151: AudioPlayerViewHolder = var1 as AudioPlayerViewHolder;
+         val var137: AudioAttachmentMessageAccessory = var10 as AudioAttachmentMessageAccessory;
          var var38: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var38 = null;
          }
 
-         val var84: w;
-         if (var52 != null) {
-            var84 = new w(var52);
+         val var83: w;
+         if (var51 != null) {
+            var83 = new w(var51);
          } else {
-            var84 = null;
+            var83 = null;
          }
 
-         var155.bind(var140, var38, var84);
+         var151.bind(var137, var38, var83);
       } else if (var10 is PostPreviewEmbedMessageAccessory) {
-         val var162: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
-         val var168: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
-         val var156: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
+         val var158: PostPreviewEmbedViewHolder = var1 as PostPreviewEmbedViewHolder;
+         val var164: PostPreviewEmbedMessageAccessory = var10 as PostPreviewEmbedMessageAccessory;
+         val var152: PostPreviewEmbed = (var10 as PostPreviewEmbedMessageAccessory).getPostPreviewEmbed();
          var8 = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var8 = null;
          }
 
-         val var86: Function4 = new Function4(var8) {
+         val var85: Function4 = new Function4(var8) {
             {
                super(4, var1, ChatEventHandler::class.java, "onTapPostPreviewEmbed", "onTapPostPreviewEmbed-kUTrp-s(JJJLjava/lang/String;)V", 0);
             }
@@ -1515,26 +1509,26 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                (super.receiver as ChatEventHandler).onTapPostPreviewEmbed-kUTrp-s(var1, var3, var5, var7);
             }
          };
-         val var125: SpoilerAttributes = var168.getSpoilerAttributes();
+         val var123: SpoilerAttributes = var164.getSpoilerAttributes();
          val var39: SpoilerConfig;
-         if (var125 != null) {
-            var39 = var125.configure(new x(this, var1), new y(this, var10));
+         if (var123 != null) {
+            var39 = var123.configure(new x(this, var1), new y(this, var10));
          } else {
             var39 = null;
          }
 
-         var162.bind(var156, var86, var39);
+         var158.bind(var152, var85, var39);
       } else if (var10 is ChannelPromptActionsAccessory) {
-         val var126: ChannelPromptActionsViewHolder = var1 as ChannelPromptActionsViewHolder;
-         val var141: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
+         val var124: ChannelPromptActionsViewHolder = var1 as ChannelPromptActionsViewHolder;
+         val var138: ChannelPromptActionsAccessory = var10 as ChannelPromptActionsAccessory;
          var var40: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var40 = null;
          }
 
-         var126.bind(
-            var141,
+         var124.bind(
+            var138,
             new Function3(var40) {
                {
                   super(
@@ -1555,15 +1549,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is SafetyPolicyNoticeMessageAccessory) {
-         val var127: SafetyPolicyNoticeViewHolder = var1 as SafetyPolicyNoticeViewHolder;
-         val var142: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
+         val var125: SafetyPolicyNoticeViewHolder = var1 as SafetyPolicyNoticeViewHolder;
+         val var139: SafetyPolicyNoticeMessageAccessory = var10 as SafetyPolicyNoticeMessageAccessory;
          var var41: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var41 = null;
          }
 
-         var127.bind(var142, new Function1(var41) {
+         var125.bind(var139, new Function1(var41) {
             {
                super(1, var1, ChatEventHandler::class.java, "onTapSafetyPolicyNoticeEmbed", "onTapSafetyPolicyNoticeEmbed(Ljava/lang/String;)V", 0);
             }
@@ -1574,16 +1568,16 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          });
       } else if (var10 is SafetySystemNotificationMessageAccessory) {
-         val var128: SafetySystemNotificationViewHolder = var1 as SafetySystemNotificationViewHolder;
-         val var143: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
+         val var126: SafetySystemNotificationViewHolder = var1 as SafetySystemNotificationViewHolder;
+         val var140: SafetySystemNotificationEmbed = (var10 as SafetySystemNotificationMessageAccessory).getSafetySystemNotificationEmbed();
          var var42: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var42 = null;
          }
 
-         var128.bind(
-            var143,
+         var126.bind(
+            var140,
             new Function2(var42) {
                {
                   super(
@@ -1604,15 +1598,15 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is PollMessageAccessory) {
-         val var157: PollViewHolder = var1 as PollViewHolder;
-         val var144: PollMessageAccessory = var10 as PollMessageAccessory;
+         val var153: PollViewHolder = var1 as PollViewHolder;
+         val var141: PollMessageAccessory = var10 as PollMessageAccessory;
          var var43: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var43 = null;
          }
 
-         val var163: Function3 = new Function3(var43) {
+         val var159: Function3 = new Function3(var43) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapPollAnswer", "onTapPollAnswer-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1629,7 +1623,7 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var44 = null;
          }
 
-         val var92: Function3 = new Function3(var44) {
+         val var91: Function3 = new Function3(var44) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapPollAction", "onTapPollAction-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1646,10 +1640,10 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             var45 = null;
          }
 
-         var157.bind(
-            var144,
-            var163,
-            var92,
+         var153.bind(
+            var141,
+            var159,
+            var91,
             new Function8(var45) {
                {
                   super(
@@ -1673,18 +1667,18 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             }
          );
       } else if (var10 is CtaButtonMessageAccessory) {
-         val var93: CtaButtonViewHolder = var1 as CtaButtonViewHolder;
+         val var92: CtaButtonViewHolder = var1 as CtaButtonViewHolder;
          val var46: CtaButtonMessageAccessory = var10 as CtaButtonMessageAccessory;
          val var6: Long = (var10 as CtaButtonMessageAccessory).getChannelId-o4g7jtM();
-         val var129: java.lang.String = (var10 as CtaButtonMessageAccessory).getMessageId-3Eiw7ao();
-         val var145: CtaButton = var46.getCtaButton();
+         val var127: java.lang.String = (var10 as CtaButtonMessageAccessory).getMessageId-3Eiw7ao();
+         val var142: CtaButton = var46.getCtaButton();
          var var47: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
             var47 = null;
          }
 
-         var93.bind-JjTCmh4(var6, var129, var145, new Function3(var47) {
+         var92.bind-JjTCmh4(var6, var127, var142, new Function3(var47) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapCtaButton", "onTapCtaButton-sekaTiM(JLjava/lang/String;Ljava/lang/String;)V", 0);
             }
@@ -1693,25 +1687,6 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                kotlin.jvm.internal.r.h(var3, "p1");
                kotlin.jvm.internal.r.h(var4, "p2");
                (super.receiver as ChatEventHandler).onTapCtaButton-sekaTiM(var1, var3, var4);
-            }
-         });
-      } else if (var10 is VoiceInviteMessageAccessory) {
-         val var130: VoiceInviteEmbedViewHolder = var1 as VoiceInviteEmbedViewHolder;
-         val var146: VoiceInviteEmbed = (var10 as VoiceInviteMessageAccessory).getEmbed();
-         var var48: ChatEventHandler = this.eventHandler;
-         if (this.eventHandler == null) {
-            kotlin.jvm.internal.r.y("eventHandler");
-            var48 = null;
-         }
-
-         var130.bind(var146, new Function3(var48) {
-            {
-               super(3, var1, ChatEventHandler::class.java, "onTapChannel", "onTapChannel(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V", 0);
-            }
-
-            public final void invoke(java.lang.String var1, java.lang.String var2, java.lang.String var3) {
-               kotlin.jvm.internal.r.h(var1, "p0");
-               (super.receiver as ChatEventHandler).onTapChannel(var1, var2, var3);
             }
          });
       } else if (var10 is ForwardHeaderMessageAccessory) {
@@ -1723,21 +1698,21 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
                   throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
                }
 
-               throw new z9.n();
+               throw new A9.n();
             }
 
             throw new IllegalArgumentException("No longer allowed. Use MediaMosaicAttachmentMessageAccessory");
          }
 
-         val var131: ForwardBreadcrumbViewHolder = var1 as ForwardBreadcrumbViewHolder;
-         val var147: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
-         var var49: ChatEventHandler = this.eventHandler;
+         val var128: ForwardBreadcrumbViewHolder = var1 as ForwardBreadcrumbViewHolder;
+         val var143: ForwardBreadcrumbMessageAccessory = var10 as ForwardBreadcrumbMessageAccessory;
+         var var48: ChatEventHandler = this.eventHandler;
          if (this.eventHandler == null) {
             kotlin.jvm.internal.r.y("eventHandler");
-            var49 = null;
+            var48 = null;
          }
 
-         var131.bind(var147, new Function3(var49) {
+         var128.bind(var143, new Function3(var48) {
             {
                super(3, var1, ChatEventHandler::class.java, "onTapForwardFooter", "onTapForwardFooter-SHRpUJI(IJLjava/lang/String;)V", 0);
             }
@@ -1757,101 +1732,102 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
       var var16: Any;
       switch (var2) {
          case 0:
-            val var75: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var75, "getContext(...)");
-            var16 = new MessageContentViewHolder(new MessageContentView(var75, null, 0, 6, null));
-            break;
-         case 1:
             val var74: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var74, "getContext(...)");
-            var16 = new EmbedViewHolder(new EmbedView(var74, null, 2, null));
+            var16 = new MessageContentViewHolder(new MessageContentView(var74, null, 0, 6, null));
+            break;
+         case 1:
+            val var73: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var73, "getContext(...)");
+            var16 = new EmbedViewHolder(new EmbedView(var73, null, 2, null));
             break;
          case 2:
          case 3:
          case 10:
          case 30:
+         case 42:
          case 45:
          case 46:
          case 47:
          case 48:
          case 51:
          default:
-            val var73: StringBuilder = new StringBuilder();
-            var73.append("Unknown view type: ");
-            var73.append(var2);
-            throw new IllegalArgumentException(var73.toString());
+            val var72: StringBuilder = new StringBuilder();
+            var72.append("Unknown view type: ");
+            var72.append(var2);
+            throw new IllegalArgumentException(var72.toString());
          case 4:
-            val var72: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var72, "getContext(...)");
-            var16 = new ReactionsViewHolder(new ShortcutsFlexbox(var72, null, 2, null));
+            val var71: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var71, "getContext(...)");
+            var16 = new ReactionsViewHolder(new ShortcutsFlexbox(var71, null, 2, null));
             break;
          case 5:
-            val var70: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var70, "getContext(...)");
-            val var86: GuildInviteView = new GuildInviteView(var70, null, 0, 6, null);
-            var var71: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var71 = null;
-            }
-
-            var16 = new GuildInviteViewHolder(var86, var71);
-            break;
-         case 6:
             val var69: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var69, "getContext(...)");
-            var16 = new StickerPngViewHolder(new StickerView(var69, null, 0, 6, null));
-            break;
-         case 7:
-            val var68: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var68, "getContext(...)");
-            var16 = new StickerApngViewHolder(new StickerView(var68, null, 0, 6, null));
-            break;
-         case 8:
-            val var67: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var67, "getContext(...)");
-            var16 = new StickerLottieViewHolder(new StickerView(var67, null, 0, 6, null));
-            break;
-         case 9:
-            val var66: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var66, "getContext(...)");
-            var16 = new ThreadEmbedViewHolder(new ThreadEmbedView(var66, null, 0, 6, null));
-            break;
-         case 11:
-            val var64: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var64, "getContext(...)");
-            val var85: FileAttachmentView = new FileAttachmentView(var64, null, 2, null);
-            var var65: ChatEventHandler = this.eventHandler;
+            val var85: GuildInviteView = new GuildInviteView(var69, null, 0, 6, null);
+            var var70: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
-               var65 = null;
+               var70 = null;
             }
 
-            var16 = new FileAttachmentViewHolder(var85, var65);
+            var16 = new GuildInviteViewHolder(var85, var70);
             break;
-         case 12:
+         case 6:
+            val var68: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var68, "getContext(...)");
+            var16 = new StickerPngViewHolder(new StickerView(var68, null, 0, 6, null));
+            break;
+         case 7:
+            val var67: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var67, "getContext(...)");
+            var16 = new StickerApngViewHolder(new StickerView(var67, null, 0, 6, null));
+            break;
+         case 8:
+            val var66: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var66, "getContext(...)");
+            var16 = new StickerLottieViewHolder(new StickerView(var66, null, 0, 6, null));
+            break;
+         case 9:
+            val var65: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var65, "getContext(...)");
+            var16 = new ThreadEmbedViewHolder(new ThreadEmbedView(var65, null, 0, 6, null));
+            break;
+         case 11:
             val var63: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var63, "getContext(...)");
-            var16 = new MessageComponentsViewHolder(new MessageComponentsView(var63, null, 0, 6, null));
-            break;
-         case 13:
-            val var62: TextView = TimestampViewBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false).getRoot();
-            kotlin.jvm.internal.r.g(var62, "getRoot(...)");
-            var16 = new TimestampViewHolder(var62);
-            break;
-         case 14:
-            val var60: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var60, "getContext(...)");
-            val var84: WelcomeStickerView = new WelcomeStickerView(var60, null, 2, null);
-            var var61: ChatEventHandler = this.eventHandler;
+            val var84: FileAttachmentView = new FileAttachmentView(var63, null, 2, null);
+            var var64: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
-               var61 = null;
+               var64 = null;
+            }
+
+            var16 = new FileAttachmentViewHolder(var84, var64);
+            break;
+         case 12:
+            val var62: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var62, "getContext(...)");
+            var16 = new MessageComponentsViewHolder(new MessageComponentsView(var62, null, 0, 6, null));
+            break;
+         case 13:
+            val var61: TextView = TimestampViewBinding.inflate(LayoutInflater.from(var1.getContext()), var1, false).getRoot();
+            kotlin.jvm.internal.r.g(var61, "getRoot(...)");
+            var16 = new TimestampViewHolder(var61);
+            break;
+         case 14:
+            val var59: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var59, "getContext(...)");
+            val var83: WelcomeStickerView = new WelcomeStickerView(var59, null, 2, null);
+            var var60: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var60 = null;
             }
 
             var16 = new WelcomeStickerViewHolder(
-               var84,
-               new Function2(var61) {
+               var83,
+               new Function2(var60) {
                   {
                      super(
                         2,
@@ -1872,116 +1848,116 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             );
             break;
          case 15:
-            val var58: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var58, "getContext(...)");
-            val var83: GuildEventInviteView = new GuildEventInviteView(var58, null, 0, 6, null);
-            var var59: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var59 = null;
-            }
-
-            var16 = new GuildEventInviteViewHolder(var83, var59, new H(this));
-            break;
-         case 16:
             val var57: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var57, "getContext(...)");
-            var16 = new GiftViewHolder(new GiftView(var57, null, 2, null));
+            val var82: GuildEventInviteView = new GuildEventInviteView(var57, null, 0, 6, null);
+            var var58: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var58 = null;
+            }
+
+            var16 = new GuildEventInviteViewHolder(var82, var58, new H(this));
             break;
-         case 17:
+         case 16:
             val var56: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var56, "getContext(...)");
-            var16 = new ActivityInviteEmbedViewHolder(new ActivityInviteEmbedView(var56, null, 0, 6, null));
+            var16 = new GiftViewHolder(new GiftView(var56, null, 2, null));
+            break;
+         case 17:
+            val var55: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var55, "getContext(...)");
+            var16 = new ActivityInviteEmbedViewHolder(new ActivityInviteEmbedView(var55, null, 0, 6, null));
             break;
          case 18:
-            val var54: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var54, "getContext(...)");
-            val var82: EphemeralIndicationView = new EphemeralIndicationView(var54, null, 0, 6, null);
-            var var55: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var55 = null;
-            }
-
-            var16 = new EphemeralIndicationViewHolder(var82, var55);
-            break;
-         case 19:
             val var53: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var53, "getContext(...)");
-            var16 = new InteractionStatusViewHolder(new InteractionStatusView(var53, null, 2, null));
+            val var81: EphemeralIndicationView = new EphemeralIndicationView(var53, null, 0, 6, null);
+            var var54: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var54 = null;
+            }
+
+            var16 = new EphemeralIndicationViewHolder(var81, var54);
             break;
-         case 20:
+         case 19:
             val var52: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var52, "getContext(...)");
-            var16 = new ForumPostActionBarViewHolder(new ForumPostActionBarView(var52, null, 0, 6, null));
+            var16 = new InteractionStatusViewHolder(new InteractionStatusView(var52, null, 2, null));
+            break;
+         case 20:
+            val var51: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var51, "getContext(...)");
+            var16 = new ForumPostActionBarViewHolder(new ForumPostActionBarView(var51, null, 0, 6, null));
             break;
          case 21:
-            val var50: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var50, "getContext(...)");
-            val var81: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var50, null, 2, null);
-            var var51: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var51 = null;
-            }
-
-            var16 = new FlaggedMessageEmbedViewHolder(var81, var51);
-            break;
-         case 22:
             val var49: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var49, "getContext(...)");
-            var16 = new FlaggedMessageActionBarViewHolder(new FlaggedMessageActionBarView(var49, null, 0, 6, null));
+            val var80: FlaggedMessageEmbedView = new FlaggedMessageEmbedView(var49, null, 2, null);
+            var var50: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var50 = null;
+            }
+
+            var16 = new FlaggedMessageEmbedViewHolder(var80, var50);
             break;
-         case 23:
+         case 22:
             val var48: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var48, "getContext(...)");
-            var16 = new RoleSubscriptionPurchaseViewHolder(new RoleSubscriptionPurchaseView(var48, null, 0, 6, null));
+            var16 = new FlaggedMessageActionBarViewHolder(new FlaggedMessageActionBarView(var48, null, 0, 6, null));
+            break;
+         case 23:
+            val var47: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var47, "getContext(...)");
+            var16 = new RoleSubscriptionPurchaseViewHolder(new RoleSubscriptionPurchaseView(var47, null, 0, 6, null));
             break;
          case 24:
-            val var46: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var46, "getContext(...)");
-            val var80: SurveyIndicationView = new SurveyIndicationView(var46, null, 0, 6, null);
-            var var47: ChatEventHandler = this.eventHandler;
+            val var45: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var45, "getContext(...)");
+            val var79: SurveyIndicationView = new SurveyIndicationView(var45, null, 0, 6, null);
+            var var46: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
-               var47 = null;
+               var46 = null;
             }
 
-            var16 = new SurveyIndicationViewHolder(var80, var47);
+            var16 = new SurveyIndicationViewHolder(var79, var46);
             break;
          case 25:
-            val var44: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var44, "getContext(...)");
-            val var79: GuildInviteDisabledView = new GuildInviteDisabledView(var44, null, 0, 6, null);
-            var var45: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var45 = null;
-            }
-
-            var16 = new GuildInviteDisabledViewHolder(var79, var45);
-            break;
-         case 26:
             val var43: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var43, "getContext(...)");
-            var16 = new AttachmentMediaMosaicViewHolder(new AttachmentMediaMosaicContainerView(var43, null, 2, null));
-            break;
-         case 27:
-            val var42: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var42, "getContext(...)");
-            var16 = new StickerGifViewHolder(new StickerView(var42, null, 0, 6, null));
-            break;
-         case 28:
-            val var40: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var40, "getContext(...)");
-            val var87: InviteToSpeakView = new InviteToSpeakView(var40, null, 2, null);
-            var var41: ChatEventHandler = this.eventHandler;
+            val var86: GuildInviteDisabledView = new GuildInviteDisabledView(var43, null, 0, 6, null);
+            var var44: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
-               var41 = null;
+               var44 = null;
             }
 
-            var16 = new InviteToSpeakViewHolder(var87, new Function1(var41) {
+            var16 = new GuildInviteDisabledViewHolder(var86, var44);
+            break;
+         case 26:
+            val var42: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var42, "getContext(...)");
+            var16 = new AttachmentMediaMosaicViewHolder(new AttachmentMediaMosaicContainerView(var42, null, 2, null));
+            break;
+         case 27:
+            val var41: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var41, "getContext(...)");
+            var16 = new StickerGifViewHolder(new StickerView(var41, null, 0, 6, null));
+            break;
+         case 28:
+            val var39: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var39, "getContext(...)");
+            val var78: InviteToSpeakView = new InviteToSpeakView(var39, null, 2, null);
+            var var40: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var40 = null;
+            }
+
+            var16 = new InviteToSpeakViewHolder(var78, new Function1(var40) {
                {
                   super(1, var1, ChatEventHandler::class.java, "onTapInviteToSpeak", "onTapInviteToSpeak-1xi1bu0(Ljava/lang/String;)V", 0);
                }
@@ -1993,83 +1969,78 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
             });
             break;
          case 29:
-            val var39: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var39, "getContext(...)");
-            var16 = new AudioPlayerViewHolder(new AudioPlayerView(var39, null, 0, 6, null));
+            val var38: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var38, "getContext(...)");
+            var16 = new AudioPlayerViewHolder(new AudioPlayerView(var38, null, 0, 6, null));
             break;
          case 31:
-            val var37: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var37, "getContext(...)");
-            val var78: EmbeddedActivityInviteView = new EmbeddedActivityInviteView(var37, null, 0, 6, null);
-            var var38: ChatEventHandler = this.eventHandler;
-            if (this.eventHandler == null) {
-               kotlin.jvm.internal.r.y("eventHandler");
-               var38 = null;
-            }
-
-            var16 = new EmbeddedActivityInviteViewHolder(var78, var38);
-            break;
-         case 32:
             val var36: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var36, "getContext(...)");
-            var16 = new PostPreviewEmbedViewHolder(new PostPreviewEmbedView(var36, null, 0, 6, null));
-            break;
-         case 33:
-            val var35: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var35, "getContext(...)");
-            var16 = new AutoModerationNotificationEmbedViewHolder(new AutoModerationNotificationEmbedView(var35, null, 2, null));
-            break;
-         case 34:
-            val var34: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var34, "getContext(...)");
-            var16 = new ChannelPromptActionsViewHolder(new ChannelPromptActionsView(var34, null, 2, null));
-            break;
-         case 35:
-            val var33: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var33, "getContext(...)");
-            var16 = new InfoLinkViewHolder(new InfoLinkView(var33, null, 2, null));
-            break;
-         case 36:
-            val var32: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var32, "getContext(...)");
-            var16 = new SafetyPolicyNoticeViewHolder(new SafetyPolicyNoticeView(var32, null, 2, null));
-            break;
-         case 37:
-            val var31: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var31, "getContext(...)");
-            var16 = new PollViewHolder(new PollTextAndImageView(var31, null, 0, 6, null));
-            break;
-         case 38:
-            val var30: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var30, "getContext(...)");
-            var16 = new PollViewHolder(new PollImageOnlyView(var30, null, 0, 6, null));
-            break;
-         case 39:
-            val var29: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var29, "getContext(...)");
-            var16 = new SafetySystemNotificationViewHolder(new SafetySystemNotificationView(var29, null, 2, null));
-            break;
-         case 40:
-            val var27: Context = var1.getContext();
-            kotlin.jvm.internal.r.g(var27, "getContext(...)");
-            val var77: ActivityInstanceEmbedView = new ActivityInstanceEmbedView(var27, null, 0, 6, null);
-            var var28: ChatEventHandler = this.eventHandler;
+            val var77: EmbeddedActivityInviteView = new EmbeddedActivityInviteView(var36, null, 0, 6, null);
+            var var37: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
-               var28 = null;
+               var37 = null;
             }
 
-            var16 = new ActivityInstanceEmbedViewHolder(var77, var28);
+            var16 = new EmbeddedActivityInviteViewHolder(var77, var37);
             break;
-         case 41:
+         case 32:
+            val var35: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var35, "getContext(...)");
+            var16 = new PostPreviewEmbedViewHolder(new PostPreviewEmbedView(var35, null, 0, 6, null));
+            break;
+         case 33:
+            val var34: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var34, "getContext(...)");
+            var16 = new AutoModerationNotificationEmbedViewHolder(new AutoModerationNotificationEmbedView(var34, null, 2, null));
+            break;
+         case 34:
+            val var33: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var33, "getContext(...)");
+            var16 = new ChannelPromptActionsViewHolder(new ChannelPromptActionsView(var33, null, 2, null));
+            break;
+         case 35:
+            val var32: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var32, "getContext(...)");
+            var16 = new InfoLinkViewHolder(new InfoLinkView(var32, null, 2, null));
+            break;
+         case 36:
+            val var31: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var31, "getContext(...)");
+            var16 = new SafetyPolicyNoticeViewHolder(new SafetyPolicyNoticeView(var31, null, 2, null));
+            break;
+         case 37:
+            val var30: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var30, "getContext(...)");
+            var16 = new PollViewHolder(new PollTextAndImageView(var30, null, 0, 6, null));
+            break;
+         case 38:
+            val var29: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var29, "getContext(...)");
+            var16 = new PollViewHolder(new PollImageOnlyView(var29, null, 0, 6, null));
+            break;
+         case 39:
+            val var28: Context = var1.getContext();
+            kotlin.jvm.internal.r.g(var28, "getContext(...)");
+            var16 = new SafetySystemNotificationViewHolder(new SafetySystemNotificationView(var28, null, 2, null));
+            break;
+         case 40:
             val var26: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var26, "getContext(...)");
-            var16 = new CtaButtonViewHolder(new CtaButtonView(var26, null, 2, null));
+            val var76: ActivityInstanceEmbedView = new ActivityInstanceEmbedView(var26, null, 0, 6, null);
+            var var27: ChatEventHandler = this.eventHandler;
+            if (this.eventHandler == null) {
+               kotlin.jvm.internal.r.y("eventHandler");
+               var27 = null;
+            }
+
+            var16 = new ActivityInstanceEmbedViewHolder(var76, var27);
             break;
-         case 42:
+         case 41:
             val var25: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var25, "getContext(...)");
-            var16 = new VoiceInviteEmbedViewHolder(new VoiceInviteEmbedView(var25, null, 2, null));
+            var16 = new CtaButtonViewHolder(new CtaButtonView(var25, null, 2, null));
             break;
          case 43:
             val var24: Context = var1.getContext();
@@ -2104,14 +2075,14 @@ public class MessageAccessoriesAdapter(measureAndLayout: () -> Unit = new f()) :
          case 54:
             val var17: Context = var1.getContext();
             kotlin.jvm.internal.r.g(var17, "getContext(...)");
-            val var76: AppMessageEmbedView = new AppMessageEmbedView(var17, null, 0, 6, null);
+            val var75: AppMessageEmbedView = new AppMessageEmbedView(var17, null, 0, 6, null);
             var var18: ChatEventHandler = this.eventHandler;
             if (this.eventHandler == null) {
                kotlin.jvm.internal.r.y("eventHandler");
                var18 = null;
             }
 
-            var16 = new AppMessageEmbedViewHolder(var76, var18);
+            var16 = new AppMessageEmbedViewHolder(var75, var18);
             break;
          case 55:
             val var15: Context = var1.getContext();

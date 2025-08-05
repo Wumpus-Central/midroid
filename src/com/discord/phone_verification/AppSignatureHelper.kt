@@ -1,5 +1,6 @@
 package com.discord.phone_verification
 
+import A9.j
 import Z1.a
 import Z1.c
 import android.annotation.SuppressLint
@@ -12,16 +13,15 @@ import android.os.Build.VERSION
 import android.util.Base64
 import com.discord.intents.b
 import com.discord.logging.Log
-import dc.f
+import ec.f
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 import java.util.ArrayList
 import kotlin.jvm.internal.r
-import z9.j
 
 @SuppressLint(["PackageManagerGetSignatures"])
 public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
-   public final val appSignatures: MutableList<String> by j.a(new c(this))
+   public final val appSignatures: MutableList<String> by j.b(new c(this))
       public final get() {
          return this.appSignatures$delegate.getValue() as MutableList<java.lang.String>;
       }
@@ -111,12 +111,12 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
                val var24: java.lang.String = var7.toCharsString();
                r.g(var24, "toCharsString(...)");
                var25 = AppSignatureHelper.Companion.access$hash(var6, var4, var24);
-               val var9: Log = Log.INSTANCE;
-               val var8: java.lang.String = TAG;
-               val var23: StringBuilder = new StringBuilder();
-               var23.append("Hash ");
-               var23.append(var25);
-               Log.i$default(var9, var8, var23.toString(), null, 4, null);
+               val var8: Log = Log.INSTANCE;
+               val var23: java.lang.String = TAG;
+               val var9: StringBuilder = new StringBuilder();
+               var9.append("Hash ");
+               var9.append(var25);
+               Log.i$default(var8, var23, var9.toString(), null, 4, null);
             } catch (var11: NameNotFoundException) {
                Log.INSTANCE.e(TAG, "Unable to find package to obtain hash.", var11);
                i.k();
@@ -160,14 +160,14 @@ public class AppSignatureHelper(context: Context?) : ContextWrapper(var1) {
             r.g(var10, "encodeToString(...)");
             var2 = var10.substring(0, 11);
             r.g(var2, "substring(...)");
-            val var5: Log = Log.INSTANCE;
+            val var4: Log = Log.INSTANCE;
             val var13: java.lang.String = this.getTAG();
-            val var4: StringBuilder = new StringBuilder();
-            var4.append("pkg: ");
-            var4.append(var1);
-            var4.append(" -- hash: ");
-            var4.append(var2);
-            Log.i$default(var5, var13, var4.toString(), null, 4, null);
+            val var5: StringBuilder = new StringBuilder();
+            var5.append("pkg: ");
+            var5.append(var1);
+            var5.append(" -- hash: ");
+            var5.append(var2);
+            Log.i$default(var4, var13, var5.toString(), null, 4, null);
          } catch (var6: NoSuchAlgorithmException) {
             Log.INSTANCE.e(this.getTAG(), "hash:NoSuchAlgorithm", var6);
             return null;
