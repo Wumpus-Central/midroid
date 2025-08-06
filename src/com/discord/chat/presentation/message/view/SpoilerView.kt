@@ -52,14 +52,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       kotlin.jvm.internal.r.g(this.binding.obscure, "obscure");
       var9.setVisibility(0);
       val var10: ObscureOverlayView = this.binding.obscure;
-      val var5: Function1 = var3.getLabel();
-      var var6: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var6, "getContext(...)");
-      val var11: java.lang.String = var5.invoke(var6) as java.lang.String;
+      val var6: Function1 = var3.getLabel();
+      val var5: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var5, "getContext(...)");
+      val var11: java.lang.String = var6.invoke(var5) as java.lang.String;
       val var8: Function1 = var3.getDescription();
-      var6 = this.getContext();
-      kotlin.jvm.internal.r.g(var6, "getContext(...)");
-      var10.configure(var11, var8.invoke(var6) as java.lang.String, var2, this.isOverlayVisible, new S0(var7), new T0(var7));
+      val var12: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var12, "getContext(...)");
+      var10.configure(var11, var8.invoke(var12) as java.lang.String, var2, this.isOverlayVisible, new S0(var7), new T0(var7));
    }
 
    @JvmStatic
@@ -80,14 +80,14 @@ public class SpoilerView  public constructor(context: Context, attributeSet: Att
       kotlin.jvm.internal.r.g(this.binding.spoiler, "spoiler");
       var3.setVisibility(0);
       var3 = this.binding.spoiler;
-      val var5: Function1 = var1.getAttributes().getLabel();
+      var var5: Function1 = var1.getAttributes().getLabel();
       val var4: Context = this.getContext();
       kotlin.jvm.internal.r.g(var4, "getContext(...)");
       val var8: java.lang.String = var5.invoke(var4) as java.lang.String;
-      val var6: Function1 = var1.getAttributes().getDescription();
-      val var9: Context = this.getContext();
-      kotlin.jvm.internal.r.g(var9, "getContext(...)");
-      var3.configure(var8, var6.invoke(var9) as java.lang.String, new R0(this, var2));
+      var5 = var1.getAttributes().getDescription();
+      val var6: Context = this.getContext();
+      kotlin.jvm.internal.r.g(var6, "getContext(...)");
+      var3.configure(var8, var5.invoke(var6) as java.lang.String, new R0(this, var2));
    }
 
    @JvmStatic

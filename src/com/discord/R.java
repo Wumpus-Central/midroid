@@ -43,10 +43,10 @@ public final class R {
       public static int _discord_common_js_shared_images_flags_vi;
       public static int _discord_common_js_shared_images_flags_zhcn;
       public static int _discord_common_js_shared_images_flags_zhtw;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_e7meo7px54z7tagmzfpkpnti74_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_e7meo7px54z7tagmzfpkpnti74_node_modules_reactnavigation_elements_src_assets_backiconmask;
-      public static int _node_modules_pnpm_reactnavigationelements1331_e7meo7px54z7tagmzfpkpnti74_node_modules_reactnavigation_elements_src_assets_backicon;
-      public static int _node_modules_pnpm_reactnavigationelements1331_e7meo7px54z7tagmzfpkpnti74_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_qcvgvam2ojqzjebglbw7o5446m_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1330_patch_hashx6y77xpsvirc6p4el4z6ye2qk4_qcvgvam2ojqzjebglbw7o5446m_node_modules_reactnavigation_elements_src_assets_backiconmask;
+      public static int _node_modules_pnpm_reactnavigationelements1331_qcvgvam2ojqzjebglbw7o5446m_node_modules_reactnavigation_elements_src_assets_backicon;
+      public static int _node_modules_pnpm_reactnavigationelements1331_qcvgvam2ojqzjebglbw7o5446m_node_modules_reactnavigation_elements_src_assets_backiconmask;
       public static int design_components_icon_native_redesign_generated_images_accessibilityicon;
       public static int design_components_icon_native_redesign_generated_images_activitiesicon;
       public static int design_components_icon_native_redesign_generated_images_analyticsicon;
@@ -163,6 +163,7 @@ public final class R {
       public static int design_components_icon_native_redesign_generated_images_flagicon;
       public static int design_components_icon_native_redesign_generated_images_flashicon;
       public static int design_components_icon_native_redesign_generated_images_foldericon;
+      public static int design_components_icon_native_redesign_generated_images_folderplusicon;
       public static int design_components_icon_native_redesign_generated_images_foodicon;
       public static int design_components_icon_native_redesign_generated_images_forumicon;
       public static int design_components_icon_native_redesign_generated_images_forumlockicon;
@@ -673,15 +674,11 @@ public final class R {
       public static int images_native_icons_ic_file_small_webcode;
       public static int images_native_icons_ic_file_text;
       public static int images_native_icons_ic_file_upload_24px;
-      public static int images_native_icons_ic_folder_add_24px;
-      public static int images_native_icons_ic_forum_channel_list_view_24px;
-      public static int images_native_icons_ic_forum_channel_sort_order_24px;
       public static int images_native_icons_ic_friend_request_accepted;
       public static int images_native_icons_ic_friend_wave_24px;
       public static int images_native_icons_ic_gear;
       public static int images_native_icons_ic_gif_24px;
       public static int images_native_icons_ic_gift;
-      public static int images_native_icons_ic_grid_24px;
       public static int images_native_icons_ic_group_dm;
       public static int images_native_icons_ic_guild_grid_24px;
       public static int images_native_icons_ic_guild_video_24px;

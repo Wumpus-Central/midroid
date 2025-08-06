@@ -89,24 +89,24 @@ public data class PostSharePrompt(title: String, subtitle: StructurableText, cta
    }
 
    public override fun toString(): String {
-      val var5: java.lang.String = this.title;
-      val var6: StructurableText = this.subtitle;
-      val var3: java.lang.String = this.cta;
-      val var4: java.lang.String = this.icon;
-      val var2: java.lang.String = this.closeIcon;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("PostSharePrompt(title=");
-      var1.append(var5);
-      var1.append(", subtitle=");
-      var1.append(var6);
-      var1.append(", cta=");
-      var1.append(var3);
-      var1.append(", icon=");
-      var1.append(var4);
-      var1.append(", closeIcon=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var4: java.lang.String = this.title;
+      val var3: StructurableText = this.subtitle;
+      val var6: java.lang.String = this.cta;
+      val var5: java.lang.String = this.icon;
+      val var1: java.lang.String = this.closeIcon;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PostSharePrompt(title=");
+      var2.append(var4);
+      var2.append(", subtitle=");
+      var2.append(var3);
+      var2.append(", cta=");
+      var2.append(var6);
+      var2.append(", icon=");
+      var2.append(var5);
+      var2.append(", closeIcon=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

@@ -109,9 +109,9 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
             } else {
                c.b(var11);
                val var4: Long = System.currentTimeMillis();
-               val var6: Long = var4 - this.$timeLastEmitted.j;
-               val var8: Long = this.$timeoutMillis;
-               if (var6 > this.$timeoutMillis) {
+               val var8: Long = var4 - this.$timeLastEmitted.j;
+               val var6: Long = this.$timeoutMillis;
+               if (var8 > this.$timeoutMillis) {
                   this.$timeLastEmitted.j = var4;
                   var11 = this.$collector;
                   ((<unrepresentable>)var12).label = 1;
@@ -125,7 +125,7 @@ public suspend fun <T> MutableSharedFlow<T>.collectWithLeadingDebounce(timeoutMi
                ((<unrepresentable>)var12).L$0 = this;
                ((<unrepresentable>)var12).L$1 = var1;
                ((<unrepresentable>)var12).label = 2;
-               if (I.a(var8 - var6, (Continuation)var12) === var15) {
+               if (I.a(var6 - var8, (Continuation)var12) === var15) {
                   return var15;
                }
 

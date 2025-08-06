@@ -9008,6 +9008,7 @@
   ],
   "nBNJ/P": "Posted >30d ago",
   "Wy5RIS": "Only people you invite and moderators can see this thread.",
+  "eJEUvL": "This field is required.",
   "FGjMZW": "Hide After Inactivity",
   "Nb2/RE": "New Thread",
   "uXA57+": "Thread Name is required",
@@ -32101,11 +32102,11 @@
   "no96NT": "Show off your verified Roblox account information right in your profile. You can set this up later from Settings > Connections.",
   "t3asUV": "Connect Roblox to Discord",
   "G6BGd3": [
-    "Roblox • ",
     [
       1,
       "subgameName"
-    ]
+    ],
+    " • Roblox"
   ],
   "LPJmLy": "Roles",
   "3OxP4u": [

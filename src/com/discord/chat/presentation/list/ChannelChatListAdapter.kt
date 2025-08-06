@@ -44,11 +44,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
 
    private fun enqueueUpdate(update: ChannelChatListAdapterUpdate) {
       if (!ThreadUtilsKt.isOnMainThread()) {
-         val var4: Thread = Thread.currentThread();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Expected to be on android main thread. Current: ");
-         var5.append(var4);
-         throw new IllegalStateException(var5.toString().toString());
+         val var5: Thread = Thread.currentThread();
+         val var4: StringBuilder = new StringBuilder();
+         var4.append("Expected to be on android main thread. Current: ");
+         var4.append(var5);
+         throw new IllegalStateException(var4.toString().toString());
       } else {
          access$getUpdateQueue$p(this).add(var1);
          if (access$getUpdateQueue$p(this).size() == 1 && !access$isProcessingUpdate$p(this)) {
@@ -327,11 +327,11 @@ public class ChannelChatListAdapter(doLayout: () -> Unit, eventHandlerProvider: 
          access$setProcessingUpdate$p(this, false);
          access$getUpdateQueue$p(this).clear();
       } else {
-         val var1: Thread = Thread.currentThread();
-         val var2: StringBuilder = new StringBuilder();
-         var2.append("Expected to be on android main thread. Current: ");
-         var2.append(var1);
-         throw new IllegalStateException(var2.toString().toString());
+         val var2: Thread = Thread.currentThread();
+         val var1: StringBuilder = new StringBuilder();
+         var1.append("Expected to be on android main thread. Current: ");
+         var1.append(var2);
+         throw new IllegalStateException(var1.toString().toString());
       }
    }
 

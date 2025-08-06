@@ -7,6 +7,6 @@ public final class i implements Function0 {
    public final SelectComponentView j;
 
    public final Object invoke() {
-      return SelectComponentView.h(this.j);
+      return SelectComponentView.g(this.j);
    }
 }

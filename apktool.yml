@@ -12,8 +12,8 @@ packageInfo:
   forcedPackageId: 127
   renameManifestPackage: null
 versionInfo:
-  versionCode: 293202
-  versionName: 293.2 - Alpha
+  versionCode: 293203
+  versionName: 293.3 - Alpha
 sharedLibrary: false
 sparseResources: false
 compactEntries: false

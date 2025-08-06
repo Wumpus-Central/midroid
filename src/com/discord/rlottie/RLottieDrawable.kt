@@ -302,12 +302,12 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                                  break;
                               }
 
-                              val var7: Entry = var45.next() as Entry;
+                              val var8: Entry = var45.next() as Entry;
                               RLottieDrawable.Companion.access$setLayerColor(
                                  RLottieDrawable.Companion,
                                  RLottieDrawable.access$getNativePtr$p(this.this$0),
-                                 var7.getKey() as java.lang.String,
-                                 (var7.getValue() as java.lang.Number).intValue()
+                                 var8.getKey() as java.lang.String,
+                                 (var8.getValue() as java.lang.Number).intValue()
                               );
                            } catch (var24: Exception) {
                               break label176;
@@ -329,13 +329,14 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
 
                      RLottieDrawable.access$setPendingReplaceColors$p(this.this$0, null);
 
+                     var var2: Int;
                      var var4: Long;
-                     var var43: Int;
+                     var var53: RLottieDrawable.Companion;
                      var var54: Bitmap;
                      try {
-                        var47 = RLottieDrawable.Companion;
+                        var53 = RLottieDrawable.Companion;
                         var4 = RLottieDrawable.access$getNativePtr$p(this.this$0);
-                        var43 = RLottieDrawable.access$getCurrentFrame$p(this.this$0);
+                        var2 = RLottieDrawable.access$getCurrentFrame$p(this.this$0);
                         var54 = this.this$0.getBackgroundBitmap();
                      } catch (var21: Exception) {
                         Log.e("RLottieDrawable", "Error loading frame", var21);
@@ -351,19 +352,18 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                         }
                      }
 
-                     var var2: Int;
                      var var3: Int;
-                     var var53: Bitmap;
+                     var var43: Int;
                      try {
-                        var2 = RLottieDrawable.access$getWidth$p(this.this$0);
+                        var43 = RLottieDrawable.access$getWidth$p(this.this$0);
                         var3 = RLottieDrawable.access$getHeight$p(this.this$0);
-                        var53 = this.this$0.getBackgroundBitmap();
+                        var47 = this.this$0.getBackgroundBitmap();
                      } catch (var19: Exception) {
                         Log.e("RLottieDrawable", "Error loading frame", var19);
                         break label139;
                      }
 
-                     if (var53 == null) {
+                     if (var47 == null) {
                         try {
                            r.s();
                         } catch (var18: Exception) {
@@ -373,7 +373,7 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                      }
 
                      try {
-                        if (RLottieDrawable.Companion.access$getFrame(var47, var4, var43, var54, var2, var3, var53.getRowBytes(), true) == -1) {
+                        if (RLottieDrawable.Companion.access$getFrame(var53, var4, var2, var54, var43, var3, var47.getRowBytes(), true) == -1) {
                            RLottieDrawable.access$getUiHandler$cp().post(RLottieDrawable.access$getUiRunnableNoFrame$p(this.this$0));
                            return;
                         }
@@ -475,11 +475,11 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
          }
       };
 
-      var var13: IntRef;
+      var var11: IntRef;
       try {
          var56 = var1.getResources().openRawResource(var2);
          r.d(var56, "context.resources.openRawResource(rawRes)");
-         var13 = new IntRef();
+         var11 = new IntRef();
       } catch (var19: java.lang.Throwable) {
          Log.e("RLottieDrawable", "Error Constructing", var19);
          return;
@@ -493,7 +493,7 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
          try {
             var10 = buffer;
             var9 = var56.read(buffer, 0, buffer.length);
-            var13.j = var9;
+            var11.j = var9;
          } catch (var16: java.lang.Throwable) {
             Log.e("RLottieDrawable", "Error Constructing", var16);
             break;
@@ -530,9 +530,9 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
 
          try {
             if (readBuffer.length < var9 + var2) {
-               val var11: ByteArray = new byte[readBuffer.length * 2];
-               System.arraycopy(readBuffer, 0, var11, 0, var2);
-               readBuffer = var11;
+               val var12: ByteArray = new byte[readBuffer.length * 2];
+               System.arraycopy(readBuffer, 0, var12, 0, var2);
+               readBuffer = var12;
             }
          } catch (var18: java.lang.Throwable) {
             Log.e("RLottieDrawable", "Error Constructing", var18);
@@ -540,8 +540,8 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
          }
 
          try {
-            System.arraycopy(var10, 0, readBuffer, var2, var13.j);
-            var2 += var13.j;
+            System.arraycopy(var10, 0, readBuffer, var2, var11.j);
+            var2 += var11.j;
          } catch (var17: java.lang.Throwable) {
             Log.e("RLottieDrawable", "Error Constructing", var17);
             break;
@@ -717,12 +717,12 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                                  break;
                               }
 
-                              val var7: Entry = var45.next() as Entry;
+                              val var8: Entry = var45.next() as Entry;
                               RLottieDrawable.Companion.access$setLayerColor(
                                  RLottieDrawable.Companion,
                                  RLottieDrawable.access$getNativePtr$p(this.this$0),
-                                 var7.getKey() as java.lang.String,
-                                 (var7.getValue() as java.lang.Number).intValue()
+                                 var8.getKey() as java.lang.String,
+                                 (var8.getValue() as java.lang.Number).intValue()
                               );
                            } catch (var24: Exception) {
                               break label176;
@@ -744,13 +744,14 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
 
                      RLottieDrawable.access$setPendingReplaceColors$p(this.this$0, null);
 
+                     var var2: Int;
                      var var4: Long;
-                     var var43: Int;
+                     var var53: RLottieDrawable.Companion;
                      var var54: Bitmap;
                      try {
-                        var47 = RLottieDrawable.Companion;
+                        var53 = RLottieDrawable.Companion;
                         var4 = RLottieDrawable.access$getNativePtr$p(this.this$0);
-                        var43 = RLottieDrawable.access$getCurrentFrame$p(this.this$0);
+                        var2 = RLottieDrawable.access$getCurrentFrame$p(this.this$0);
                         var54 = this.this$0.getBackgroundBitmap();
                      } catch (var21: Exception) {
                         Log.e("RLottieDrawable", "Error loading frame", var21);
@@ -766,19 +767,18 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                         }
                      }
 
-                     var var2: Int;
                      var var3: Int;
-                     var var53: Bitmap;
+                     var var43: Int;
                      try {
-                        var2 = RLottieDrawable.access$getWidth$p(this.this$0);
+                        var43 = RLottieDrawable.access$getWidth$p(this.this$0);
                         var3 = RLottieDrawable.access$getHeight$p(this.this$0);
-                        var53 = this.this$0.getBackgroundBitmap();
+                        var47 = this.this$0.getBackgroundBitmap();
                      } catch (var19: Exception) {
                         Log.e("RLottieDrawable", "Error loading frame", var19);
                         break label139;
                      }
 
-                     if (var53 == null) {
+                     if (var47 == null) {
                         try {
                            r.s();
                         } catch (var18: Exception) {
@@ -788,7 +788,7 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                      }
 
                      try {
-                        if (RLottieDrawable.Companion.access$getFrame(var47, var4, var43, var54, var2, var3, var53.getRowBytes(), true) == -1) {
+                        if (RLottieDrawable.Companion.access$getFrame(var53, var4, var2, var54, var43, var3, var47.getRowBytes(), true) == -1) {
                            RLottieDrawable.access$getUiHandler$cp().post(RLottieDrawable.access$getUiRunnableNoFrame$p(this.this$0));
                            return;
                         }
@@ -1045,10 +1045,10 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
                this.newReplaceColors = null;
             }
 
-            val var3: ExecutorService = loadFrameRunnableQueue;
-            val var4: Runnable = this.loadFrameRunnable;
+            val var4: ExecutorService = loadFrameRunnableQueue;
+            val var3: Runnable = this.loadFrameRunnable;
             this.loadFrameTask = this.loadFrameRunnable;
-            var3.execute(var4);
+            var4.execute(var3);
             return true;
          }
       } else {
@@ -1295,10 +1295,10 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
    }
 
    public fun restart(): Boolean {
-      val var2: RLottieDrawable.PlaybackMode = RLottieDrawable.PlaybackMode.ONCE;
+      val var1: RLottieDrawable.PlaybackMode = RLottieDrawable.PlaybackMode.ONCE;
       if (this.playbackMode.compareTo(RLottieDrawable.PlaybackMode.ONCE) >= 0 && this.autoRepeatPlayCount != 0) {
          this.autoRepeatPlayCount = 0;
-         this.playbackMode = var2;
+         this.playbackMode = var1;
          this.start();
          return true;
       } else {
@@ -1412,13 +1412,13 @@ public open class RLottieDrawable : BitmapDrawable, Animatable {
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
       @JvmStatic
       fun {
-         val var1: RLottieDrawable.PlaybackMode = new RLottieDrawable.PlaybackMode();
-         LOOP = var1;
-         val var0: RLottieDrawable.PlaybackMode = new RLottieDrawable.PlaybackMode();
-         ONCE = var0;
          val var2: RLottieDrawable.PlaybackMode = new RLottieDrawable.PlaybackMode();
-         FREEZE = var2;
-         $VALUES = new RLottieDrawable.PlaybackMode[]{var1, var0, var2};
+         LOOP = var2;
+         val var1: RLottieDrawable.PlaybackMode = new RLottieDrawable.PlaybackMode();
+         ONCE = var1;
+         val var0: RLottieDrawable.PlaybackMode = new RLottieDrawable.PlaybackMode();
+         FREEZE = var0;
+         $VALUES = new RLottieDrawable.PlaybackMode[]{var2, var1, var0};
       }
    }
 }

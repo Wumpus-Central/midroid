@@ -185,29 +185,29 @@ internal data class FastestListPlaceholderConfig(listFooter: FastestListPlacehol
    }
 
    public override fun toString(): String {
-      val var1: FastestListPlaceholderType = this.listFooter;
-      val var3: FastestListPlaceholderType = this.listHeader;
-      val var7: FastestListPlaceholderType = this.sectionFooter;
-      val var8: FastestListPlaceholderType = this.sectionHeader;
-      val var6: FastestListPlaceholderType = this.sectionItem;
-      val var4: FastestListPlaceholderType = this.sectionItemAtFront;
-      val var2: FastestListPlaceholderType = this.sectionItemAtRear;
+      val var3: FastestListPlaceholderType = this.listFooter;
+      val var6: FastestListPlaceholderType = this.listHeader;
+      val var4: FastestListPlaceholderType = this.sectionFooter;
+      val var1: FastestListPlaceholderType = this.sectionHeader;
+      val var8: FastestListPlaceholderType = this.sectionItem;
+      val var2: FastestListPlaceholderType = this.sectionItemAtFront;
+      val var7: FastestListPlaceholderType = this.sectionItemAtRear;
       val var5: FastestListPlaceholderType = this.sectionItemSingleton;
       val var9: StringBuilder = new StringBuilder();
       var9.append("FastestListPlaceholderConfig(listFooter=");
-      var9.append(var1);
-      var9.append(", listHeader=");
       var9.append(var3);
-      var9.append(", sectionFooter=");
-      var9.append(var7);
-      var9.append(", sectionHeader=");
-      var9.append(var8);
-      var9.append(", sectionItem=");
+      var9.append(", listHeader=");
       var9.append(var6);
-      var9.append(", sectionItemAtFront=");
+      var9.append(", sectionFooter=");
       var9.append(var4);
-      var9.append(", sectionItemAtRear=");
+      var9.append(", sectionHeader=");
+      var9.append(var1);
+      var9.append(", sectionItem=");
+      var9.append(var8);
+      var9.append(", sectionItemAtFront=");
       var9.append(var2);
+      var9.append(", sectionItemAtRear=");
+      var9.append(var7);
       var9.append(", sectionItemSingleton=");
       var9.append(var5);
       var9.append(")");

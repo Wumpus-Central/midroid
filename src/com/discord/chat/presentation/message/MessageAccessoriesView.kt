@@ -61,7 +61,7 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
    init {
       kotlin.jvm.internal.r.h(var1, "context");
       super(var1, var2);
-      val var4: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
+      val var3: MessageAccessoriesAdapter = new MessageAccessoriesAdapter(new Function0(this) {
          {
             super(0, var1, ViewMeasureExtensionsKt::class.java, "measureAndLayout", "measureAndLayout(Landroid/view/View;)V", 1);
          }
@@ -70,9 +70,9 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
             ViewMeasureExtensionsKt.measureAndLayout(super.receiver as View);
          }
       });
-      this.accessoriesAdapter = var4;
-      val var3: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
-      this.transitionResilientLinearLayoutManager = var3;
+      this.accessoriesAdapter = var3;
+      val var4: TransitionResilientLinearLayoutManager = new TransitionResilientLinearLayoutManager(var1, 1, false, null, 8, null);
+      this.transitionResilientLinearLayoutManager = var4;
       this.forwardBarPaint$delegate = B9.j.b(new Q());
       this.setItemAnimator(null);
       this.setNestedScrollingEnabled(false);
@@ -86,8 +86,8 @@ public class MessageAccessoriesView  public constructor(context: Context, attrs:
       this.addItemDecoration(
          new VerticalSpacingItemDecoration(this.getResources().getDimensionPixelSize(R.dimen.message_accessories_vertical_spacing), 0, 0, false, 14, null)
       );
-      this.setLayoutManager(var3);
-      this.setAdapter(var4);
+      this.setLayoutManager(var4);
+      this.setAdapter(var3);
    }
 
    @JvmStatic

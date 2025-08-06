@@ -39,7 +39,6 @@ import kb.K
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -474,11 +473,11 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
             I9.b.e();
             if (this.label == 0) {
                kotlin.c.b(var1);
-               val var2x: ChatInputRootView.CurrentTextAndSelection = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
+               var1 = this.L$0 as ChatInputRootView.CurrentTextAndSelection;
                if (this.L$0 as ChatInputRootView.CurrentTextAndSelection != null) {
-                  var1 = this.this$0.getListener();
-                  if (var1 != null) {
-                     var1.onTextOrSelectionChanged(var2x.getSelectionStart(), var2x.getSelectionEnd(), var2x.getText(), var2x.getEditId());
+                  val var2x: ChatInputRootView.ChatInputListener = this.this$0.getListener();
+                  if (var2x != null) {
+                     var2x.onTextOrSelectionChanged(var1.getSelectionStart(), var1.getSelectionEnd(), var1.getText(), var1.getEditId());
                   }
                }
 
@@ -551,8 +550,8 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                   kotlin.c.b(var1);
                } else {
                   kotlin.c.b(var1);
-                  val var4: CoroutineDispatcher = K.a();
-                  var1 = new Function2(null) {
+                  var1 = K.a();
+                  val var4: Function2 = new Function2(null) {
                      int label;
 
                      {
@@ -587,7 +586,7 @@ public class ChatInputRootView  public constructor(context: Context, attrs: Attr
                      }
                   };
                   this.label = 1;
-                  if (kb.f.g(var4, var1, this) === var3) {
+                  if (kb.f.g(var1, var4, this) === var3) {
                      return var3;
                   }
                }

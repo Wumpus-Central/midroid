@@ -87,16 +87,16 @@ public object PublicFileDownloader {
       // 4e: new com/discord/file_downloader/DownloadState$Failure
       // 51: astore 5
       // 53: new java/lang/IllegalStateException
-      // 56: astore 8
+      // 56: astore 7
       // 58: new java/io/FileNotFoundException
-      // 5b: astore 7
-      // 5d: aload 7
+      // 5b: astore 8
+      // 5d: aload 8
       // 5f: invokespecial java/io/FileNotFoundException.<init> ()V
-      // 62: aload 8
-      // 64: aload 7
+      // 62: aload 7
+      // 64: aload 8
       // 66: invokespecial java/lang/IllegalStateException.<init> (Ljava/lang/Throwable;)V
       // 69: aload 5
-      // 6b: aload 8
+      // 6b: aload 7
       // 6d: invokespecial com/discord/file_downloader/DownloadState$Failure.<init> (Ljava/lang/Exception;)V
       // 70: aload 1
       // 71: aload 5
@@ -221,52 +221,52 @@ public object PublicFileDownloader {
 
                            val var22: Any = this.$context.getSystemService("download");
                            r.f(var22, "null cannot be cast to non-null type android.app.DownloadManager");
-                           val var31: DownloadManager = var22 as DownloadManager;
+                           val var26: DownloadManager = var22 as DownloadManager;
                            var23 = new LongRef();
                            var23.j = -1L;
 
                            var var3x: Long;
                            try {
-                              var3x = var31.enqueue(
+                              var3x = var26.enqueue(
                                  PublicFileDownloader.access$getFileDownloadRequest(PublicFileDownloader.INSTANCE, this.$url, this.$fileName, this.$description)
                               );
                               var23.j = var3x;
                            } catch (var15: Exception) {
+                              var7 = var23;
                               var6 = var1;
                               var1 = var15;
-                              var7 = var23;
                               break label86;
                            }
 
                            if (var3x != 0L && var3x != 1L) {
                               try {
                                  PublicFileDownloader.access$getOnDownloadListeners$p()
-                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var31, this.$fileName));
+                                    .put(kotlin.coroutines.jvm.internal.b.e(var23.j), new b(var23, var1, var26, this.$fileName));
                                  break label81;
                               } catch (var12: Exception) {
+                                 var7 = var23;
                                  var6 = var1;
                                  var1 = var12;
-                                 var7 = var23;
                                  break label86;
                               }
                            }
 
                            try {
-                              val var26: DownloadState.Failure = new DownloadState.Failure(
+                              val var27: DownloadState.Failure = new DownloadState.Failure(
                                  new IllegalStateException("Download Manager returned an invalid download id")
                               );
                               this.L$0 = var1;
                               this.L$1 = var23;
                               this.label = 2;
-                              var27 = var1.r(var26, this);
+                              var28 = var1.r(var27, this);
                            } catch (var14: Exception) {
+                              var7 = var23;
                               var6 = var1;
                               var1 = var14;
-                              var7 = var23;
                               break label86;
                            }
 
-                           if (var27 === var9) {
+                           if (var28 === var9) {
                               return var9;
                            }
 

@@ -67,15 +67,15 @@ public data class ConnectionsRoleTag(id: String, name: String, backgroundColor: 
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
+      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.name;
       val var2: Int = this.backgroundColor;
       val var1: Int = this.iconColor;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ConnectionsRoleTag(id=");
-      var5.append(var3);
-      var5.append(", name=");
       var5.append(var4);
+      var5.append(", name=");
+      var5.append(var3);
       var5.append(", backgroundColor=");
       var5.append(var2);
       var5.append(", iconColor=");

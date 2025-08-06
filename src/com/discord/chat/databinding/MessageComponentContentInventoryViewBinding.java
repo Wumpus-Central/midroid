@@ -42,8 +42,8 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
 
    public static MessageComponentContentInventoryViewBinding bind(View var0) {
       int var1 = R.id.content_inventory_component_avatar_image;
-      SimpleDraweeView var6 = (SimpleDraweeView)a.a(var0, var1);
-      if (var6 != null) {
+      SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+      if (var2 != null) {
          var1 = R.id.content_inventory_component_badge_icon;
          SimpleDraweeView var8 = (SimpleDraweeView)a.a(var0, var1);
          if (var8 != null) {
@@ -60,9 +60,9 @@ public final class MessageComponentContentInventoryViewBinding implements ViewBi
                      TextView var4 = (TextView)a.a(var0, var1);
                      if (var4 != null) {
                         var1 = R.id.content_inventory_component_username;
-                        TextView var2 = (TextView)a.a(var0, var1);
-                        if (var2 != null) {
-                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var6, var8, var3, var5, var7, var4, var2);
+                        TextView var6 = (TextView)a.a(var0, var1);
+                        if (var6 != null) {
+                           return new MessageComponentContentInventoryViewBinding((ContentInventoryComponentView)var0, var2, var8, var3, var5, var7, var4, var6);
                         }
                      }
                   }
