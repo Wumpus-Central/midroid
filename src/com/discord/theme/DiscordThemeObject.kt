@@ -141,6 +141,21 @@ public sealed class DiscordThemeObject protected constructor() {
       }
 
 
+   public abstract val redesignButtonPrimaryOverlayBackground: Int
+      public abstract get() {
+      }
+
+
+   public abstract val redesignButtonPrimaryOverlayPressedBackground: Int
+      public abstract get() {
+      }
+
+
+   public abstract val redesignButtonPrimaryOverlayText: Int
+      public abstract get() {
+      }
+
+
    public abstract val redesignButtonTertiaryBackground: Int
       public abstract get() {
       }

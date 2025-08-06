@@ -20046,6 +20046,9 @@
       ]
     ]
   ],
+  "aqlmp6": "Blur image-based media that may contain violent or potentially disturbing visual material in DMs and servers",
+  "SYkEBg": "Blur added to graphic media",
+  "RVX1zc": "Graphic Media Filter",
   "naWE6e": "Get space without letting them know",
   "264qVF": [
     "You ignored ",
@@ -20089,9 +20092,9 @@
     ]
   ],
   "1yxTIC": "Recommended Settings",
-  "Vzp5BA": "Blur potentially sensitive media in DMs and servers",
-  "YdZZtL": "Blur added to sensitive media",
-  "5Qu1IS": "Sensitive content filter",
+  "jcRSp6": "Blur image-based media that may contain sexually explicit or suggestive material involving adults in DMs and servers",
+  "E6UmXV": "Blur added to mature sexual media",
+  "Gtck/v": "Mature Sexual Media Filter",
   "ytCpKi": "Ignore",
   "tFY5ZW": "Ignored",
   "VFWjc3": [
@@ -33564,6 +33567,10 @@
   ],
   "5LdpkZ": "Active just now",
   "uNkIhY": "Active yesterday",
+  "qCQzBg": "user, bot or webhook",
+  "JL7sRU": "bot",
+  "tPZo4u": "user",
+  "WjkIKS": "webhook",
   "UJxL3d": "true or false",
   "Zbbc1N": "specific date",
   "uAbFDA": "file name",
@@ -33591,8 +33598,10 @@
   "uvDZBQ": "We dropped the magnifying glass. Can you try searching again?",
   "kP6oFx": "Search Filters",
   "KSDx7O": "after",
+  "us8IQk": "authorType",
   "qZ+7BA": "before",
   "hcMwDQ": "After a date",
+  "C4r6xM": "By author type",
   "c9qSBQ": "Before a date",
   "cdPmq6": "In a specific channel",
   "8Fmo4+": "In a specific DM",
@@ -33609,6 +33618,7 @@
   "Qf3ptr": "me",
   "i96lOz": "mentions",
   "hwbB7u": "Filter messages from after a date",
+  "tJPdhY": "Filter messages from users, bots, or webhooks",
   "YEN3ub": "Filter messages from before a date",
   "qDUdlZ": "Filter messages from a particular channel",
   "kkGlw8": "Filter messages from a particular user",
@@ -39123,6 +39133,16 @@
   "CHf9iI": "Use Default",
   "SUnWBA": "Are you sure you want to logout?",
   "aBZ/oa": "Discovery",
+  "OX4ybm": [
+    "Some settings aren't available until you ",
+    [
+      8,
+      "hook",
+      [
+        "verify your age group"
+      ]
+    ]
+  ],
   "EUo0ys": [
     "Some settings are customized for teens by default. ",
     [

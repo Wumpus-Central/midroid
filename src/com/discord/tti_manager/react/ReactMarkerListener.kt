@@ -62,29 +62,41 @@ public object ReactMarkerListener : MarkerListener {
 
       if (var6 != null) {
          switch (var6.hashCode()) {
+            case -1775741598:
+               if (!var6.equals("REACT_BRIDGELESS_LOADING_START")) {
+                  return;
+               }
+               break;
             case -1048597525:
-               if (var6.equals("PRE_RUN_JS_BUNDLE_START")) {
-                  this.setBundleStartedTimestamp(var4);
-                  this.setBundleLoadedTimestamp(var4);
-                  this.setBundleParsedTimestamp(var4);
+               if (!var6.equals("PRE_RUN_JS_BUNDLE_START")) {
+                  return;
                }
                break;
             case -351240678:
                if (var6.equals("CONTENT_APPEARED")) {
                   this.stop();
                }
-               break;
+
+               return;
             case 241900896:
                if (var6.equals("RUN_JS_BUNDLE_END")) {
                   this.setBundleParsedTimestamp(var4);
                }
-               break;
+
+               return;
             case 551634855:
                if (var6.equals("RUN_JS_BUNDLE_START")) {
                   this.setBundleLoadedTimestamp(var4);
                }
+
+               return;
             default:
+               return;
          }
+
+         this.setBundleStartedTimestamp(var4);
+         this.setBundleLoadedTimestamp(var4);
+         this.setBundleParsedTimestamp(var4);
       }
    }
 
