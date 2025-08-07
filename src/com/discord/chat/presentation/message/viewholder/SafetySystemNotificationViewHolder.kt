@@ -15,8 +15,8 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
    public fun bind(safetySystemNotificationEmbed: SafetySystemNotificationEmbed, onTapCta: (String, String) -> Unit) {
       kotlin.jvm.internal.r.h(var1, "safetySystemNotificationEmbed");
       kotlin.jvm.internal.r.h(var2, "onTapCta");
-      val var10: SafetySystemNotificationView = this.safetySystemNotificationView;
-      val var12: java.lang.String = var1.getTitleText();
+      val var12: SafetySystemNotificationView = this.safetySystemNotificationView;
+      val var10: java.lang.String = var1.getTitleText();
       val var14: java.lang.String = var1.getTitleIcon();
       val var13: java.lang.String = var1.getSubtitleText();
       val var11: java.lang.String = var1.getDescriptionText();
@@ -56,6 +56,6 @@ public class SafetySystemNotificationViewHolder(safetySystemNotificationView: Sa
          var8 = "";
       }
 
-      var10.setContent(var12, var14, var13, var11, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
+      var12.setContent(var10, var14, var13, var11, var3, var4, var5, var6, var7, var8, var1.getFooterTheme(), var2);
    }
 }

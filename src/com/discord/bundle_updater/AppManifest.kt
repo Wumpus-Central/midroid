@@ -1,12 +1,12 @@
 package com.discord.bundle_updater
 
-import C9.q
+import B9.q
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import xb.E0
-import xb.U
+import wb.E0
+import wb.U
 
-@ub.g
+@tb.g
 public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String, String> = q.h(), patches: Map<String, String> = q.h()) {
    public final val metadata: AppManifestMetadata
    public final val hashes: Map<String, String>
@@ -69,18 +69,18 @@ public data class AppManifest(metadata: AppManifestMetadata, hashes: Map<String,
    }
 
    public override fun toString(): String {
-      val var1: AppManifestMetadata = this.metadata;
-      val var2: java.util.Map = this.hashes;
-      val var3: java.util.Map = this.patches;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("AppManifest(metadata=");
-      var4.append(var1);
-      var4.append(", hashes=");
-      var4.append(var2);
-      var4.append(", patches=");
-      var4.append(var3);
-      var4.append(")");
-      return var4.toString();
+      val var3: AppManifestMetadata = this.metadata;
+      val var4: java.util.Map = this.hashes;
+      val var1: java.util.Map = this.patches;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("AppManifest(metadata=");
+      var2.append(var3);
+      var2.append(", hashes=");
+      var2.append(var4);
+      var2.append(", patches=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

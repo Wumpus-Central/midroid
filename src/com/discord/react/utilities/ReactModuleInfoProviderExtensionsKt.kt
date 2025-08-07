@@ -1,6 +1,6 @@
 package com.discord.react.utilities
 
-import C9.q
+import B9.q
 import com.facebook.react.module.model.ReactModuleInfo
 import com.facebook.react.module.model.ReactModuleInfoProvider
 import java.util.LinkedHashMap

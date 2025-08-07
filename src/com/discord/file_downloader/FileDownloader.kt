@@ -1,7 +1,7 @@
 package com.discord.file_downloader
 
-import B9.j
-import C9.q
+import A9.j
+import B9.q
 import android.content.Context
 import com.discord.resource_usage.DeviceResourceUsageRecorder
 import java.io.File
@@ -9,7 +9,7 @@ import java.util.Map.Entry
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
 import kotlinx.coroutines.flow.Flow
-import nb.e
+import mb.e
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response

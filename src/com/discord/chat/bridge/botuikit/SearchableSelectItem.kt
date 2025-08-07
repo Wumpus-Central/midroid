@@ -2,7 +2,7 @@ package com.discord.chat.bridge.botuikit
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class SearchableSelectItem(label: String,
@@ -95,9 +95,9 @@ public data class SearchableSelectItem(label: String,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.label.hashCode();
+      val var6: Int = this.label.hashCode();
       val var4: Int = this.value.hashCode();
-      val var6: Int = this.type.hashCode();
+      val var5: Int = this.type.hashCode();
       var var3: Int = 0;
       val var1: Int;
       if (this.iconSrc == null) {
@@ -117,31 +117,31 @@ public data class SearchableSelectItem(label: String,
          var3 = this.iconEmoji.hashCode();
       }
 
-      return ((((var5 * 31 + var4) * 31 + var6) * 31 + var1) * 31 + var2) * 31 + var3;
+      return ((((var6 * 31 + var4) * 31 + var5) * 31 + var1) * 31 + var2) * 31 + var3;
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.label;
-      val var5: java.lang.String = this.value;
-      val var1: SelectOptionType = this.type;
-      val var6: java.lang.String = this.iconSrc;
+      val var6: java.lang.String = this.label;
+      val var1: java.lang.String = this.value;
+      val var4: SelectOptionType = this.type;
+      val var7: java.lang.String = this.iconSrc;
       val var2: Int = this.iconColor;
-      val var4: ComponentEmoji = this.iconEmoji;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("SearchableSelectItem(label=");
-      var3.append(var7);
-      var3.append(", value=");
-      var3.append(var5);
-      var3.append(", type=");
-      var3.append(var1);
-      var3.append(", iconSrc=");
-      var3.append(var6);
-      var3.append(", iconColor=");
-      var3.append(var2);
-      var3.append(", iconEmoji=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var3: ComponentEmoji = this.iconEmoji;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("SearchableSelectItem(label=");
+      var5.append(var6);
+      var5.append(", value=");
+      var5.append(var1);
+      var5.append(", type=");
+      var5.append(var4);
+      var5.append(", iconSrc=");
+      var5.append(var7);
+      var5.append(", iconColor=");
+      var5.append(var2);
+      var5.append(", iconEmoji=");
+      var5.append(var3);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

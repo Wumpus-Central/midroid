@@ -24,7 +24,7 @@ internal class PNGStickerView(context: Context) : SimpleDraweeView {
 
    public fun loadGifImage(url: String, widthDp: Int?, heightDp: Int?, animate: Boolean) {
       r.h(var1, "url");
-      this.setController((J2.d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
+      this.setController((I2.d.g().Q(var1).B(var4) as PipelineDraweeControllerBuilder).d());
       var var5: Int;
       if (var2 != null) {
          var5 = var2;

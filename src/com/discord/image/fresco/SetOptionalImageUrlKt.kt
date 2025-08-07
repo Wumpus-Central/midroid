@@ -1,6 +1,6 @@
 package com.discord.image.fresco
 
-import B2.f
+import A2.f
 import android.net.Uri
 import android.net.Uri.Builder
 import com.facebook.drawee.controller.ControllerListener

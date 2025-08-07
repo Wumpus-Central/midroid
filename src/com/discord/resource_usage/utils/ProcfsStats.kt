@@ -1,7 +1,7 @@
 package com.discord.resource_usage.utils
 
-import N9.j
-import Qb.c
+import M9.j
+import Pb.c
 import android.os.Process
 import java.io.File
 

@@ -3,7 +3,7 @@ package com.discord.media_player.reactevents
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class MediaPlayerMuteStateChanged(id: Double, isMuted: Boolean) : ReactEvent {

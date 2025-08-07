@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multipleRoutesAvailable: Boolean) : ReactEvent {
@@ -55,15 +55,15 @@ internal data class AudioRouteEmitterAudioRouteChanged(routeType: String, multip
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.routeType;
+      val var2: java.lang.String = this.routeType;
       val var1: Boolean = this.multipleRoutesAvailable;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioRouteEmitterAudioRouteChanged(routeType=");
-      var2.append(var3);
-      var2.append(", multipleRoutesAvailable=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("AudioRouteEmitterAudioRouteChanged(routeType=");
+      var3.append(var2);
+      var3.append(", multipleRoutesAvailable=");
+      var3.append(var1);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

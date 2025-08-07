@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import J9.a
+import I9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
 

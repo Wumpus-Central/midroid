@@ -8,7 +8,7 @@ import android.net.Uri
 import com.discord.chrome_custom_tabs.CustomTabs
 import com.discord.theme.R
 import com.discord.theme.utils.ColorUtilsKt
-import hb.k
+import gb.k
 import kotlin.jvm.functions.Function1
 import kotlin.jvm.internal.r
 

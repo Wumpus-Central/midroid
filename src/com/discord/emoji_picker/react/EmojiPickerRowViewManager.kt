@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import B9.s
+import A9.s
 import com.discord.emoji_picker.EmojiPickerRowView
 import com.discord.emoji_picker.react_events.OnLongPressEmojiEvent
 import com.discord.emoji_picker.react_events.OnPressEmojiEvent

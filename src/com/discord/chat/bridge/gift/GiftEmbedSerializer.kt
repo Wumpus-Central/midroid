@@ -6,8 +6,8 @@ import kotlinx.serialization.DeserializationStrategy
 import kotlinx.serialization.KSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonObject
-import yb.d
-import yb.g
+import xb.d
+import xb.g
 
 public object GiftEmbedSerializer : d(H.b(GiftEmbed.class)) {
    protected open fun selectDeserializer(element: JsonElement): DeserializationStrategy<GiftEmbed> {

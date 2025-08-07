@@ -1,13 +1,13 @@
 package com.discord.audio.react.events
 
-import B9.s
+import A9.s
 import com.discord.audio.AndroidAudioDevice
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableNativeMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) : ReactEvent {
@@ -47,12 +47,12 @@ internal data class AudioManagerAudioDeviceChanged(device: AndroidAudioDevice) :
    }
 
    public override fun toString(): String {
-      val var1: AndroidAudioDevice = this.device;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("AudioManagerAudioDeviceChanged(device=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var2: AndroidAudioDevice = this.device;
+      val var1: StringBuilder = new StringBuilder();
+      var1.append("AudioManagerAudioDeviceChanged(device=");
+      var1.append(var2);
+      var1.append(")");
+      return var1.toString();
    }
 
    public companion object {

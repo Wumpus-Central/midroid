@@ -1,6 +1,6 @@
 package com.discord.animatable_underlay
 
-import B9.n
+import A9.n
 import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Color
@@ -72,10 +72,10 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
             }
 
             val var15: RectF = this.pathRect;
-            val var4: Float = this.height;
-            val var2: Float = this.shapeHeight;
+            val var2: Float = this.height;
+            val var3: Float = this.shapeHeight;
             this.pathRect.top = (this.height - this.shapeHeight) / 2;
-            var15.bottom = var4 - (var4 - var2) / 2;
+            var15.bottom = var2 - (var2 - var3) / 2;
          } else {
             val var16: RectF = this.pathRect;
             this.pathRect.top = 0.0F;
@@ -188,7 +188,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionX> = $values();
          $VALUES = var0;
-         $ENTRIES = J9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       @JvmStatic
@@ -235,7 +235,7 @@ public class AnimatableUnderlay(context: Context) : ReactViewGroup {
       fun {
          val var0: Array<AnimatableUnderlay.ClipDirectionY> = $values();
          $VALUES = var0;
-         $ENTRIES = J9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       @JvmStatic

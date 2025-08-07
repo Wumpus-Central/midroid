@@ -3,7 +3,7 @@ package com.discord.chat.presentation.message.view.botuikit.events
 import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 internal data class OnBotComponentTestTapEvent(dummy: Boolean = true) : ReactEvent {

@@ -9,8 +9,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.SealedClassSerializer
 import kotlinx.serialization.json.JsonElement
 import kotlinx.serialization.json.JsonPrimitive
-import yb.d
-import yb.g
+import xb.d
+import xb.g
 
 public object MessageFrameSerializer : d(H.b(MessageFrame.class)) {
    private final val knownTypes: List<Int>

@@ -4,10 +4,10 @@ import com.discord.activity_invites.RGBAColorModel
 import kotlin.jvm.internal.H
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.a
-import ub.g
-import xb.E0
-import xb.f
+import tb.a
+import tb.g
+import wb.E0
+import wb.f
 
 @g
 public data class ActivityRichPresenceInviteEmbed(footerLabel: String? = null,
@@ -251,43 +251,43 @@ public data class ActivityRichPresenceInviteEmbed(footerLabel: String? = null,
    }
 
    public override fun toString(): String {
-      val var9: java.lang.String = this.footerLabel;
-      val var7: java.util.List = this.gradientColors;
-      val var5: java.lang.String = this.headerText;
-      val var4: java.lang.String = this.iconSrc;
-      val var2: java.lang.Boolean = this.isActive;
-      val var8: java.lang.Boolean = this.isSpotifyParty;
-      val var11: Int = this.maxPartySize;
-      val var3: java.util.List = this.partyMemberAvatarURIs;
-      val var12: java.lang.String = this.partySizeText;
-      val var13: java.util.List = this.platformIconKeys;
-      val var1: java.lang.String = this.subtitle;
-      val var6: java.lang.String = this.title;
+      val var7: java.lang.String = this.footerLabel;
+      val var6: java.util.List = this.gradientColors;
+      val var2: java.lang.String = this.headerText;
+      val var1: java.lang.String = this.iconSrc;
+      val var13: java.lang.Boolean = this.isActive;
+      val var12: java.lang.Boolean = this.isSpotifyParty;
+      val var3: Int = this.maxPartySize;
+      val var4: java.util.List = this.partyMemberAvatarURIs;
+      val var5: java.lang.String = this.partySizeText;
+      val var8: java.util.List = this.platformIconKeys;
+      val var9: java.lang.String = this.subtitle;
+      val var11: java.lang.String = this.title;
       val var10: StringBuilder = new StringBuilder();
       var10.append("ActivityRichPresenceInviteEmbed(footerLabel=");
-      var10.append(var9);
-      var10.append(", gradientColors=");
       var10.append(var7);
-      var10.append(", headerText=");
-      var10.append(var5);
-      var10.append(", iconSrc=");
-      var10.append(var4);
-      var10.append(", isActive=");
-      var10.append(var2);
-      var10.append(", isSpotifyParty=");
-      var10.append(var8);
-      var10.append(", maxPartySize=");
-      var10.append(var11);
-      var10.append(", partyMemberAvatarURIs=");
-      var10.append(var3);
-      var10.append(", partySizeText=");
-      var10.append(var12);
-      var10.append(", platformIconKeys=");
-      var10.append(var13);
-      var10.append(", subtitle=");
-      var10.append(var1);
-      var10.append(", title=");
+      var10.append(", gradientColors=");
       var10.append(var6);
+      var10.append(", headerText=");
+      var10.append(var2);
+      var10.append(", iconSrc=");
+      var10.append(var1);
+      var10.append(", isActive=");
+      var10.append(var13);
+      var10.append(", isSpotifyParty=");
+      var10.append(var12);
+      var10.append(", maxPartySize=");
+      var10.append(var3);
+      var10.append(", partyMemberAvatarURIs=");
+      var10.append(var4);
+      var10.append(", partySizeText=");
+      var10.append(var5);
+      var10.append(", platformIconKeys=");
+      var10.append(var8);
+      var10.append(", subtitle=");
+      var10.append(var9);
+      var10.append(", title=");
+      var10.append(var11);
       var10.append(")");
       return var10.toString();
    }

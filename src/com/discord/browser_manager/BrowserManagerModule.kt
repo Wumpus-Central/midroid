@@ -1,7 +1,7 @@
 package com.discord.browser_manager
 
-import B9.s
-import C9.q
+import A9.s
+import B9.q
 import android.content.Context
 import com.discord.cache.Cache
 import com.discord.codegen.NativeBrowserManagerModuleSpec

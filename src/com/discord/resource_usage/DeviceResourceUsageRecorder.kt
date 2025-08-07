@@ -1,7 +1,7 @@
 package com.discord.resource_usage
 
-import B9.s
-import Vb.e
+import A9.s
+import Ub.e
 import android.net.TrafficStats
 import android.os.Process
 import android.os.Build.VERSION
@@ -9,7 +9,7 @@ import android.telephony.TelephonyManager
 import com.discord.react.utilities.NativeMapExtensionsKt
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.WritableNativeMap
-import e2.b
+import d2.b
 import kotlin.jvm.internal.r
 import okhttp3.Response
 import okhttp3.ResponseBody

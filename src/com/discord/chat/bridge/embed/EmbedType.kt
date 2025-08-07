@@ -1,12 +1,12 @@
 package com.discord.chat.bridge.embed
 
-import B9.j
-import B9.m
-import J9.a
+import A9.j
+import A9.m
+import I9.a
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 import q1.e
-import ub.g
+import tb.g
 
 @g
 public enum class EmbedType {

@@ -7,6 +7,6 @@ public final class r implements Function0 {
    public final MobileVoiceOverlayModule j;
 
    public final Object invoke() {
-      return MobileVoiceOverlayModule.a(this.j);
+      return MobileVoiceOverlayModule.b(this.j);
    }
 }

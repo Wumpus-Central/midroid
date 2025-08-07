@@ -1,6 +1,6 @@
 package com.discord.timers
 
-import B9.s
+import A9.s
 import com.discord.codegen.NativeTimersModuleSpec
 import com.discord.reactevents.ReactEvents
 import com.discord.timers.reactevents.IntervalEvent

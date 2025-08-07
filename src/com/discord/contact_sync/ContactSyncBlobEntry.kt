@@ -2,7 +2,7 @@ package com.discord.contact_sync
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class ContactSyncBlobEntry(phone: String,
@@ -114,9 +114,9 @@ public data class ContactSyncBlobEntry(phone: String,
       val var3: java.lang.String = this.phone;
       val var2: java.lang.String = this.unencryptedName;
       val var1: Boolean = this.hasImageData;
-      val var7: java.lang.String = this.deviceContactId;
+      val var4: java.lang.String = this.deviceContactId;
       val var6: java.lang.String = this.givenName;
-      val var4: java.lang.String = this.familyName;
+      val var7: java.lang.String = this.familyName;
       val var5: StringBuilder = new StringBuilder();
       var5.append("ContactSyncBlobEntry(phone=");
       var5.append(var3);
@@ -125,11 +125,11 @@ public data class ContactSyncBlobEntry(phone: String,
       var5.append(", hasImageData=");
       var5.append(var1);
       var5.append(", deviceContactId=");
-      var5.append(var7);
+      var5.append(var4);
       var5.append(", givenName=");
       var5.append(var6);
       var5.append(", familyName=");
-      var5.append(var4);
+      var5.append(var7);
       var5.append(")");
       return var5.toString();
    }

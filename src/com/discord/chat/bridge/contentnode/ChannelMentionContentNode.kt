@@ -2,8 +2,8 @@ package com.discord.chat.bridge.contentnode
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
-import xb.f
+import tb.g
+import wb.f
 
 @g
 public data class ChannelMentionContentNode(channelId: String,
@@ -136,27 +136,27 @@ public data class ChannelMentionContentNode(channelId: String,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.channelId;
-      val var2: java.lang.String = this.guildId;
-      val var6: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.originalLink;
-      val var5: java.util.List = this.inContent;
-      val var4: java.util.List = this.content;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("ChannelMentionContentNode(channelId=");
-      var3.append(var7);
-      var3.append(", guildId=");
-      var3.append(var2);
-      var3.append(", messageId=");
-      var3.append(var6);
-      var3.append(", originalLink=");
-      var3.append(var1);
-      var3.append(", inContent=");
-      var3.append(var5);
-      var3.append(", content=");
-      var3.append(var4);
-      var3.append(")");
-      return var3.toString();
+      val var1: java.lang.String = this.channelId;
+      val var7: java.lang.String = this.guildId;
+      val var2: java.lang.String = this.messageId;
+      val var5: java.lang.String = this.originalLink;
+      val var4: java.util.List = this.inContent;
+      val var3: java.util.List = this.content;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChannelMentionContentNode(channelId=");
+      var6.append(var1);
+      var6.append(", guildId=");
+      var6.append(var7);
+      var6.append(", messageId=");
+      var6.append(var2);
+      var6.append(", originalLink=");
+      var6.append(var5);
+      var6.append(", inContent=");
+      var6.append(var4);
+      var6.append(", content=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

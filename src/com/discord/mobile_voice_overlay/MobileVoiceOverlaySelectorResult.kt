@@ -4,7 +4,7 @@ import com.discord.primitives.ChannelId
 import com.discord.primitives.GuildId
 import kotlinx.serialization.KSerializer
 
-@ub.g
+@tb.g
 public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: ChannelId, channelName: String, guildName: String, categoryName: String) : MobileVoiceOverlaySelectorResult(
       var1, var3, var5, var6, var7
    ) {
@@ -84,24 +84,24 @@ public data class MobileVoiceOverlaySelectorResult(guildId: GuildId, channelId: 
    }
 
    public override fun toString(): String {
-      val var4: java.lang.String = GuildId.toString-impl(this.guildId);
-      val var2: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var3: java.lang.String = this.channelName;
-      val var5: java.lang.String = this.guildName;
-      val var1: java.lang.String = this.categoryName;
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("MobileVoiceOverlaySelectorResult(guildId=");
-      var6.append(var4);
-      var6.append(", channelId=");
-      var6.append(var2);
-      var6.append(", channelName=");
-      var6.append(var3);
-      var6.append(", guildName=");
-      var6.append(var5);
-      var6.append(", categoryName=");
-      var6.append(var1);
-      var6.append(")");
-      return var6.toString();
+      val var1: java.lang.String = GuildId.toString-impl(this.guildId);
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var4: java.lang.String = this.channelName;
+      val var2: java.lang.String = this.guildName;
+      val var5: java.lang.String = this.categoryName;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("MobileVoiceOverlaySelectorResult(guildId=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var6);
+      var3.append(", channelName=");
+      var3.append(var4);
+      var3.append(", guildName=");
+      var3.append(var2);
+      var3.append(", categoryName=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

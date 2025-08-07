@@ -2,7 +2,7 @@ package com.discord.chat.bridge.messageframe
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class MessageFrameJump(type: MessageFrameType, guildName: String? = null, channelName: String? = null) : MessageFrame {
@@ -70,18 +70,18 @@ public data class MessageFrameJump(type: MessageFrameType, guildName: String? = 
    }
 
    public override fun toString(): String {
-      val var4: MessageFrameType = this.type;
-      val var2: java.lang.String = this.guildName;
-      val var1: java.lang.String = this.channelName;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("MessageFrameJump(type=");
-      var3.append(var4);
-      var3.append(", guildName=");
-      var3.append(var2);
-      var3.append(", channelName=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: MessageFrameType = this.type;
+      val var1: java.lang.String = this.guildName;
+      val var3: java.lang.String = this.channelName;
+      val var4: StringBuilder = new StringBuilder();
+      var4.append("MessageFrameJump(type=");
+      var4.append(var2);
+      var4.append(", guildName=");
+      var4.append(var1);
+      var4.append(", channelName=");
+      var4.append(var3);
+      var4.append(")");
+      return var4.toString();
    }
 
    public companion object {

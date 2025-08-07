@@ -1,6 +1,6 @@
 package com.discord.device.utils
 
-import B9.n
+import A9.n
 import android.content.Context
 import android.provider.Settings.Global
 import android.provider.Settings.SettingNotFoundException
@@ -83,7 +83,7 @@ public object DeviceReducedMotion {
       fun {
          val var0: Array<DeviceReducedMotion.MotionPreference> = $values();
          $VALUES = var0;
-         $ENTRIES = J9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       @JvmStatic

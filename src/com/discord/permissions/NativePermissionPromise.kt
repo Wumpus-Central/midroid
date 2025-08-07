@@ -12,9 +12,9 @@ public object NativePermissionPromise {
       r.h(var2, "result");
       var var3: Any;
       if (var2 is Array<Any>) {
-         var3 = (StringBuilder)(var2 as Array<Any>)[0];
+         var3 = (var2 as Array<Any>)[0];
       } else {
-         var3 = (StringBuilder)var2;
+         var3 = var2;
       }
 
       if (var3 is java.lang.String) {
@@ -28,11 +28,11 @@ public object NativePermissionPromise {
       if (r.c(var3, var4)) {
          var0.invoke();
       } else {
-         val var5: CrashReporting = CrashReporting.INSTANCE;
-         var3 = new StringBuilder();
-         var3.append("NativePermissionPromise: Unknown Result: ");
-         var3.append(var2);
-         CrashReporting.addBreadcrumb$default(var5, var3.toString(), null, null, 6, null);
+         var3 = CrashReporting.INSTANCE;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("NativePermissionPromise: Unknown Result: ");
+         var5.append(var2);
+         CrashReporting.addBreadcrumb$default((CrashReporting)var3, var5.toString(), null, null, 6, null);
          var1.invoke();
       }
    }
@@ -40,11 +40,11 @@ public object NativePermissionPromise {
    @JvmStatic
    fun `generate$lambda$1`(var0: Function0, var1: Array<Any>) {
       r.h(var1, "result");
-      val var3: CrashReporting = CrashReporting.INSTANCE;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("NativePermissionPromise: Rejection: ");
-      var2.append(var1);
-      CrashReporting.addBreadcrumb$default(var3, var2.toString(), null, null, 6, null);
+      val var2: CrashReporting = CrashReporting.INSTANCE;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("NativePermissionPromise: Rejection: ");
+      var3.append(var1);
+      CrashReporting.addBreadcrumb$default(var2, var3.toString(), null, null, 6, null);
       var0.invoke();
    }
 

@@ -273,11 +273,11 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
       kotlin.jvm.internal.r.h(var3, "screenBounds");
-      val var4: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
-      var1 = this.screenOffset[1];
-      val var11: Int = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var1, var2), var11 - this.getHeight()));
+      var var5: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
+      val var10: Int = this.screenOffset[1];
+      var5 = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var10, var2), var5 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
@@ -294,10 +294,10 @@ public abstract class OverlayBubbleWrap : OverlayView {
                   this.actualPosition.x = (int)var1.getRawX() - this.deltaX;
                   this.actualPosition.y = (int)var1.getRawY() - this.deltaY;
                   if (this.isAttachedToWindow() && this.anchorPosition == null) {
-                     val var3: LayoutParams = this.windowLayoutParams;
-                     val var4: Point = this.actualPosition;
+                     val var4: LayoutParams = this.windowLayoutParams;
+                     val var3: Point = this.actualPosition;
                      this.windowLayoutParams.x = this.actualPosition.x;
-                     var3.y = var4.y;
+                     var4.y = var3.y;
                      this.updateViewLayout();
                   }
                }

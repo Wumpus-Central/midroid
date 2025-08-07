@@ -1,6 +1,6 @@
 package com.discord.activity_invites
 
-import B2.f
+import A2.f
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.GradientDrawable

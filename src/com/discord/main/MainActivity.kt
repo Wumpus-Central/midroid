@@ -33,14 +33,14 @@ public class MainActivity : ReactActivity {
 
          private final void parseIntent(Intent var1) {
             new DeepLinkPreprocessor().handleAndUpdateIntent(var1);
-            val var3: NotificationClient = NotificationClient.Companion.getInstance();
-            val var2: Context = this.getContext();
-            r.g(var2, "getContext(...)");
-            var3.handleIntent(var2, var1);
-            val var4: ForegroundServiceManager.Companion = ForegroundServiceManager.Companion;
-            val var5: Context = this.getContext();
-            r.g(var5, "getContext(...)");
-            var4.handleIntent(var5, var1);
+            val var2: NotificationClient = NotificationClient.Companion.getInstance();
+            var var3: Context = this.getContext();
+            r.g(var3, "getContext(...)");
+            var2.handleIntent(var3, var1);
+            val var4: ForegroundServiceManager = ForegroundServiceManager.INSTANCE;
+            var3 = this.getContext();
+            r.g(var3, "getContext(...)");
+            var4.handleIntent(var3, var1);
             StartupFlagsModule.Companion.handleIntent(var1);
             BundleUpdater.Companion.instance().handleIntent(var1);
          }

@@ -5,7 +5,7 @@ import com.discord.primitives.MessageId
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class Summary(id: String,
@@ -149,33 +149,33 @@ public data class Summary(id: String,
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var6: java.lang.String = this.topic;
-      val var9: java.lang.String = this.summShort;
-      val var8: java.util.List = this.people;
-      val var5: java.lang.String = MessageId.toString-impl(this.startId);
-      val var4: java.lang.String = MessageId.toString-impl(this.endId);
+      val var4: java.lang.String = this.id;
+      val var5: java.lang.String = this.topic;
+      val var7: java.lang.String = this.summShort;
+      val var2: java.util.List = this.people;
+      val var8: java.lang.String = MessageId.toString-impl(this.startId);
+      val var9: java.lang.String = MessageId.toString-impl(this.endId);
       val var1: Int = this.count;
-      val var3: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("Summary(id=");
-      var7.append(var2);
-      var7.append(", topic=");
-      var7.append(var6);
-      var7.append(", summShort=");
-      var7.append(var9);
-      var7.append(", people=");
-      var7.append(var8);
-      var7.append(", startId=");
-      var7.append(var5);
-      var7.append(", endId=");
-      var7.append(var4);
-      var7.append(", count=");
-      var7.append(var1);
-      var7.append(", channelId=");
-      var7.append(var3);
-      var7.append(")");
-      return var7.toString();
+      val var6: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("Summary(id=");
+      var3.append(var4);
+      var3.append(", topic=");
+      var3.append(var5);
+      var3.append(", summShort=");
+      var3.append(var7);
+      var3.append(", people=");
+      var3.append(var2);
+      var3.append(", startId=");
+      var3.append(var8);
+      var3.append(", endId=");
+      var3.append(var9);
+      var3.append(", count=");
+      var3.append(var1);
+      var3.append(", channelId=");
+      var3.append(var6);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

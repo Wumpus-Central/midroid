@@ -1,7 +1,7 @@
 package com.discord.file_downloader.utils
 
-import B9.s
-import C9.q
+import A9.s
+import B9.q
 import android.webkit.MimeTypeMap
 import java.io.UnsupportedEncodingException
 import java.net.URLDecoder

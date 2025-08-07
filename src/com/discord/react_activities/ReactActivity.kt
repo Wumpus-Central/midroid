@@ -51,17 +51,17 @@ public abstract class ReactActivity : com.facebook.react.ReactActivity {
    public open fun onConfigurationChanged(newConfig: Configuration) {
       r.h(var1, "newConfig");
       super.onConfigurationChanged(var1);
-      d4.b.m.a(this, var1);
+      c4.b.m.a(this, var1);
    }
 
    protected open fun onCreate(savedInstanceState: Bundle?) {
       super.onCreate(null);
       BundleUpdater.Companion.checkForOta();
       ImmersiveMode.INSTANCE.enableImmersiveMode(this);
-      val var2: JankStatsAggregator = JankStatsAggregator.INSTANCE;
-      val var3: Window = this.getWindow();
-      r.g(var3, "getWindow(...)");
-      var2.initialize(var3);
+      val var3: JankStatsAggregator = JankStatsAggregator.INSTANCE;
+      val var2: Window = this.getWindow();
+      r.g(var2, "getWindow(...)");
+      var3.initialize(var2);
       JSWatchdogManager.INSTANCE.initialize(this);
       val var4: ThemeManager = ThemeManager.INSTANCE;
       ThemeManager.INSTANCE.updateSystemUi(this);

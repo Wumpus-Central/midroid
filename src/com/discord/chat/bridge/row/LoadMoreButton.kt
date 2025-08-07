@@ -2,7 +2,7 @@ package com.discord.chat.bridge.row
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class LoadMoreButton(action: LoadingAction, text: String, backgroundColor: Int, cornerRadius: Int? = null, color: Int? = null) {
@@ -77,9 +77,9 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = this.action.hashCode();
-      val var3: Int = this.text.hashCode();
-      val var4: Int = Integer.hashCode(this.backgroundColor);
+      val var4: Int = this.action.hashCode();
+      val var5: Int = this.text.hashCode();
+      val var3: Int = Integer.hashCode(this.backgroundColor);
       var var2: Int = 0;
       val var1: Int;
       if (this.cornerRadius == null) {
@@ -92,28 +92,28 @@ public data class LoadMoreButton(action: LoadingAction, text: String, background
          var2 = this.color.hashCode();
       }
 
-      return (((var5 * 31 + var3) * 31 + var4) * 31 + var1) * 31 + var2;
+      return (((var4 * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2;
    }
 
    public override fun toString(): String {
       val var4: LoadingAction = this.action;
-      val var3: java.lang.String = this.text;
+      val var2: java.lang.String = this.text;
       val var1: Int = this.backgroundColor;
       val var5: Int = this.cornerRadius;
-      val var6: Int = this.color;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("LoadMoreButton(action=");
-      var2.append(var4);
-      var2.append(", text=");
-      var2.append(var3);
-      var2.append(", backgroundColor=");
-      var2.append(var1);
-      var2.append(", cornerRadius=");
-      var2.append(var5);
-      var2.append(", color=");
-      var2.append(var6);
-      var2.append(")");
-      return var2.toString();
+      val var3: Int = this.color;
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("LoadMoreButton(action=");
+      var6.append(var4);
+      var6.append(", text=");
+      var6.append(var2);
+      var6.append(", backgroundColor=");
+      var6.append(var1);
+      var6.append(", cornerRadius=");
+      var6.append(var5);
+      var6.append(", color=");
+      var6.append(var3);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

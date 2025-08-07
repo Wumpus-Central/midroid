@@ -1,6 +1,6 @@
 package com.discord.bug_reporter
 
-import B9.s
+import A9.s
 import android.content.ContentResolver
 import com.discord.bug_reporter.react.events.ScreenshotTakenEvent
 import com.discord.reactevents.ReactEvents

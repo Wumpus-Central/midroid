@@ -1,7 +1,7 @@
 package com.discord.segmented.control
 
-import B9.s
-import C9.n
+import A9.s
+import B9.n
 import android.annotation.SuppressLint
 import android.graphics.Color
 import com.discord.misc.utilities.size.SizeUtilsKt

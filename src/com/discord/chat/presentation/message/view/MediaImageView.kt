@@ -218,9 +218,9 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
       val var31: SpoilerViewManager = this.spoilerViewManager;
-      val var34: ConstraintLayout = this.binding.container;
+      val var28: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var33: SimpleDraweeView = this.binding.image;
+      val var34: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.r.g(this.binding.image, "image");
       if (var11 && !var15) {
          var15 = true;
@@ -234,11 +234,11 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var31.configureSpoiler(var8, this, var34, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
-      val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
-      val var29: ConstraintLayout = this.binding.container;
+      var31.configureSpoiler(var8, this, var28, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      val var29: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
+      val var32: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      var32.configureAttachmentOverlay(this, var29, var9, var10);
+      var29.configureAttachmentOverlay(this, var32, var9, var10);
       this.configureGifIndicator(var16, var17, var18);
    }
 
@@ -377,14 +377,14 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       }
 
       public override fun toString(): String {
-         val var2: Int = this.width;
-         val var1: Int = this.height;
+         val var1: Int = this.width;
+         val var2: Int = this.height;
          val var4: MediaContainingViewResizer.ResizeMode = this.resizeMode;
          val var3: StringBuilder = new StringBuilder();
          var3.append("TargetSize(width=");
-         var3.append(var2);
-         var3.append(", height=");
          var3.append(var1);
+         var3.append(", height=");
+         var3.append(var2);
          var3.append(", resizeMode=");
          var3.append(var4);
          var3.append(")");

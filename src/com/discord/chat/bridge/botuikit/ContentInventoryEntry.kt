@@ -3,7 +3,7 @@ package com.discord.chat.bridge.botuikit
 import com.discord.primitives.UserId
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class ContentInventoryEntry(authorId: UserId,
@@ -204,8 +204,8 @@ public data class ContentInventoryEntry(authorId: UserId,
    }
 
    public override fun hashCode(): Int {
-      val var7: Int = UserId.hashCode-impl(this.authorId);
-      val var9: Int = this.contentId.hashCode();
+      val var9: Int = UserId.hashCode-impl(this.authorId);
+      val var7: Int = this.contentId.hashCode();
       val var8: Int = this.imageUrl.hashCode();
       var var6: Int = 0;
       val var1: Int;
@@ -246,8 +246,8 @@ public data class ContentInventoryEntry(authorId: UserId,
          var5 = this.titleClickable.hashCode();
       }
 
-      val var14: Int = this.subtitles.hashCode();
-      val var13: Int = this.gradientColors.hashCode();
+      val var13: Int = this.subtitles.hashCode();
+      val var14: Int = this.gradientColors.hashCode();
       if (this.clickable != null) {
          var6 = this.clickable.hashCode();
       }
@@ -256,7 +256,7 @@ public data class ContentInventoryEntry(authorId: UserId,
                (
                         (
                                  (
-                                          ((((((((var7 * 31 + var9) * 31 + var8) * 31 + var1) * 31 + var10) * 31 + var2) * 31 + var3) * 31 + var11) * 31 + var4)
+                                          ((((((((var9 * 31 + var7) * 31 + var8) * 31 + var1) * 31 + var10) * 31 + var2) * 31 + var3) * 31 + var11) * 31 + var4)
                                                 * 31
                                              + var12
                                        )
@@ -264,61 +264,61 @@ public data class ContentInventoryEntry(authorId: UserId,
                                     + var5
                               )
                               * 31
-                           + var14
+                           + var13
                      )
                      * 31
-                  + var13
+                  + var14
             )
             * 31
          + var6;
    }
 
    public override fun toString(): String {
-      val var13: java.lang.String = UserId.toString-impl(this.authorId);
-      val var1: java.lang.String = this.contentId;
+      val var1: java.lang.String = UserId.toString-impl(this.authorId);
+      val var8: java.lang.String = this.contentId;
       val var14: java.lang.String = this.imageUrl;
-      val var7: ContentInventoryEntryClickable = this.imageClickable;
-      val var11: java.lang.String = this.avatarUrl;
-      val var10: java.lang.String = this.platformIconUrl;
-      val var12: ContentInventoryEntryClickable = this.platformClickable;
-      val var5: java.lang.String = this.userActionDescription;
-      val var6: ContentInventoryEntryClickable = this.userClickable;
-      val var3: java.lang.String = this.title;
-      val var8: ContentInventoryEntryClickable = this.titleClickable;
-      val var9: java.util.List = this.subtitles;
-      val var4: java.util.List = this.gradientColors;
-      val var2: ContentInventoryEntryClickable = this.clickable;
-      val var15: StringBuilder = new StringBuilder();
-      var15.append("ContentInventoryEntry(authorId=");
-      var15.append(var13);
-      var15.append(", contentId=");
-      var15.append(var1);
-      var15.append(", imageUrl=");
-      var15.append(var14);
-      var15.append(", imageClickable=");
-      var15.append(var7);
-      var15.append(", avatarUrl=");
-      var15.append(var11);
-      var15.append(", platformIconUrl=");
-      var15.append(var10);
-      var15.append(", platformClickable=");
-      var15.append(var12);
-      var15.append(", userActionDescription=");
-      var15.append(var5);
-      var15.append(", userClickable=");
-      var15.append(var6);
-      var15.append(", title=");
-      var15.append(var3);
-      var15.append(", titleClickable=");
-      var15.append(var8);
-      var15.append(", subtitles=");
-      var15.append(var9);
-      var15.append(", gradientColors=");
-      var15.append(var4);
-      var15.append(", clickable=");
-      var15.append(var2);
-      var15.append(")");
-      return var15.toString();
+      val var12: ContentInventoryEntryClickable = this.imageClickable;
+      val var9: java.lang.String = this.avatarUrl;
+      val var3: java.lang.String = this.platformIconUrl;
+      val var6: ContentInventoryEntryClickable = this.platformClickable;
+      val var10: java.lang.String = this.userActionDescription;
+      val var15: ContentInventoryEntryClickable = this.userClickable;
+      val var11: java.lang.String = this.title;
+      val var13: ContentInventoryEntryClickable = this.titleClickable;
+      val var4: java.util.List = this.subtitles;
+      val var7: java.util.List = this.gradientColors;
+      val var5: ContentInventoryEntryClickable = this.clickable;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("ContentInventoryEntry(authorId=");
+      var2.append(var1);
+      var2.append(", contentId=");
+      var2.append(var8);
+      var2.append(", imageUrl=");
+      var2.append(var14);
+      var2.append(", imageClickable=");
+      var2.append(var12);
+      var2.append(", avatarUrl=");
+      var2.append(var9);
+      var2.append(", platformIconUrl=");
+      var2.append(var3);
+      var2.append(", platformClickable=");
+      var2.append(var6);
+      var2.append(", userActionDescription=");
+      var2.append(var10);
+      var2.append(", userClickable=");
+      var2.append(var15);
+      var2.append(", title=");
+      var2.append(var11);
+      var2.append(", titleClickable=");
+      var2.append(var13);
+      var2.append(", subtitles=");
+      var2.append(var4);
+      var2.append(", gradientColors=");
+      var2.append(var7);
+      var2.append(", clickable=");
+      var2.append(var5);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

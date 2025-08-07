@@ -103,7 +103,7 @@ private fun renderEmojiInto(
 ) {
    val var8: Int = var0.length();
    var0.append('\u200b');
-   val var11: com.facebook.drawee.controller.a = (((J2.d.g().B(var5) as PipelineDraweeControllerBuilder)
+   val var11: com.facebook.drawee.controller.a = (((I2.d.g().B(var5) as PipelineDraweeControllerBuilder)
             .F(ImageRequestBuilder.x(Uri.parse(var1)).N(new ResizeOptions(var4, var4, 0.0F, 0.0F, 12, null)).I(RequestLevel.k).a()) as PipelineDraweeControllerBuilder)
          .D(var2) as PipelineDraweeControllerBuilder)
       .d();

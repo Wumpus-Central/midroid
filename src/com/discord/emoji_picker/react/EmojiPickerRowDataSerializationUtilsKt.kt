@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react
 
-import C9.n
+import B9.n
 import com.discord.emoji_picker.EmojiPickerRow
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt

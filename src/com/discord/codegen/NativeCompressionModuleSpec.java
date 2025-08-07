@@ -1,6 +1,6 @@
 package com.discord.codegen;
 
-import K3.a;
+import J3.a;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
@@ -31,24 +31,24 @@ public abstract class NativeCompressionModuleSpec extends ReactContextBaseJavaMo
 
    @a
    public final Map<String, Object> getConstants() {
-      Map var1 = this.getTypedExportedConstants();
+      Map var2 = this.getTypedExportedConstants();
       if (ReactBuildConfig.DEBUG || ReactBuildConfig.IS_INTERNAL_BUILD) {
-         HashSet var3 = new HashSet<>(Arrays.asList("supportsZstd"));
-         HashSet var4 = new HashSet();
-         HashSet var2 = new HashSet(var1.keySet());
-         var2.removeAll(var3);
-         var2.removeAll(var4);
-         if (!var2.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
+         HashSet var1 = new HashSet<>(Arrays.asList("supportsZstd"));
+         HashSet var3 = new HashSet();
+         HashSet var4 = new HashSet(var2.keySet());
+         var4.removeAll(var1);
+         var4.removeAll(var3);
+         if (!var4.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
          }
 
-         var3.removeAll(var1.keySet());
-         if (!var3.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var3));
+         var1.removeAll(var2.keySet());
+         if (!var1.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module doesn't fill in constants: %s", var1));
          }
       }
 
-      return var1;
+      return var2;
    }
 
    public String getName() {

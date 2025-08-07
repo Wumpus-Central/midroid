@@ -55,14 +55,14 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
       r.h(var1, "component");
       r.h(var2, "componentProvider");
       r.h(var3, "componentContext");
-      val var16: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var13: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
       val var12: java.lang.String = var3.getContainerId();
       val var11: java.lang.String = var1.getId();
-      val var13: StringBuilder = new StringBuilder();
-      var13.append("ThumbnailDisplayComponent(");
-      var13.append(var11);
-      var13.append(")");
-      val var17: SpoilerAttributes = var16.forGenericMedia(var1, var12, var13.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
+      val var16: StringBuilder = new StringBuilder();
+      var16.append("ThumbnailDisplayComponent(");
+      var16.append(var11);
+      var16.append(")");
+      val var17: SpoilerAttributes = var13.forGenericMedia(var1, var12, var16.toString(), var1.getMedia().getProxyUrl(), var1.getVerifyAge());
       val var20: UnfurledMediaItem = var1.getMedia();
       val var21: MediaImageViewHolder = this.imageViewHolder;
       val var7: Boolean = var1.isSpoiler();
@@ -73,10 +73,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var18 = null;
       }
 
-      val var8: Boolean = var1.isObscure();
-      val var10: Boolean = var1.isObscureAwaitingScan();
-      val var9: Boolean = var1.getObscureHideControls();
-      val var6: Boolean = var1.getObscureIsOpaque();
+      val var10: Boolean = var1.isObscure();
+      val var9: Boolean = var1.isObscureAwaitingScan();
+      val var6: Boolean = var1.getObscureHideControls();
+      val var8: Boolean = var1.getObscureIsOpaque();
       val var22: java.lang.String = var20.getProxyUrl();
       var var14: Int = var20.getWidth();
       var var4: Int;
@@ -102,10 +102,10 @@ public class ThumbnailDisplayComponentView  public constructor(context: Context,
          var20.getPlaceholderVersion(),
          var7,
          var18,
-         var8,
          var10,
          var9,
          var6,
+         var8,
          false,
          var1.getDescription(),
          var1.getDescriptionHint(),

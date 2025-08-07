@@ -22,7 +22,7 @@ import org.json.JSONObject
 
 @ReactModule(name = "SelectActionComponentView")
 public class SelectActionComponentViewManager : SimpleViewManager<SelectComponentView> {
-   private final val reactEvents: ReactEvents = new ReactEvents(B9.s.a("onTap", H.b(OnSelectComponentTapEvent.class)))
+   private final val reactEvents: ReactEvents = new ReactEvents(A9.s.a("onTap", H.b(OnSelectComponentTapEvent.class)))
 
    private fun createSelectComponentContext(onTap: () -> Unit): ComponentContext {
       val var2: ComponentContextDefaults = ComponentContextDefaults.INSTANCE;
@@ -97,13 +97,13 @@ public class SelectActionComponentViewManager : SimpleViewManager<SelectComponen
       } else {
          try {
             val var11: java.lang.String = H.b(StringSelectComponent.class).b();
-            val var17: java.lang.String = H.b(var15.getClass()).b();
-            val var21: StringBuilder = new StringBuilder();
-            var21.append("Expected ");
-            var21.append(var11);
-            var21.append(" but got ");
-            var21.append(var17);
-            throw new IllegalStateException(var21.toString().toString());
+            val var21: java.lang.String = H.b(var15.getClass()).b();
+            val var17: StringBuilder = new StringBuilder();
+            var17.append("Expected ");
+            var17.append(var11);
+            var17.append(" but got ");
+            var17.append(var21);
+            throw new IllegalStateException(var17.toString().toString());
          } catch (var7: Exception) {
             val var10: java.lang.String = H.b(StringSelectComponent.class).b();
             val var20: java.lang.String = var7.getMessage();

@@ -2,7 +2,7 @@ package com.discord.chat.bridge.channelprompt
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class ChannelPromptData(cameraButtonIcon: String? = null,
@@ -152,30 +152,30 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var3: java.lang.String = this.cameraButtonIcon;
-      val var8: java.lang.String = this.gifButtonIcon;
-      val var2: java.lang.String = this.emojiButtonIcon;
-      val var5: java.lang.String = this.gamingStatsButtonText;
-      val var1: java.lang.String = this.cameraButtonText;
-      val var6: java.lang.String = this.gifButtonText;
+      val var7: java.lang.String = this.cameraButtonIcon;
+      val var5: java.lang.String = this.gifButtonIcon;
+      val var3: java.lang.String = this.emojiButtonIcon;
+      val var1: java.lang.String = this.gamingStatsButtonText;
+      val var2: java.lang.String = this.cameraButtonText;
+      val var8: java.lang.String = this.gifButtonText;
       val var4: java.lang.String = this.emojiButtonText;
-      val var7: StringBuilder = new StringBuilder();
-      var7.append("ChannelPromptData(cameraButtonIcon=");
-      var7.append(var3);
-      var7.append(", gifButtonIcon=");
-      var7.append(var8);
-      var7.append(", emojiButtonIcon=");
-      var7.append(var2);
-      var7.append(", gamingStatsButtonText=");
-      var7.append(var5);
-      var7.append(", cameraButtonText=");
-      var7.append(var1);
-      var7.append(", gifButtonText=");
-      var7.append(var6);
-      var7.append(", emojiButtonText=");
-      var7.append(var4);
-      var7.append(")");
-      return var7.toString();
+      val var6: StringBuilder = new StringBuilder();
+      var6.append("ChannelPromptData(cameraButtonIcon=");
+      var6.append(var7);
+      var6.append(", gifButtonIcon=");
+      var6.append(var5);
+      var6.append(", emojiButtonIcon=");
+      var6.append(var3);
+      var6.append(", gamingStatsButtonText=");
+      var6.append(var1);
+      var6.append(", cameraButtonText=");
+      var6.append(var2);
+      var6.append(", gifButtonText=");
+      var6.append(var8);
+      var6.append(", emojiButtonText=");
+      var6.append(var4);
+      var6.append(")");
+      return var6.toString();
    }
 
    public companion object {

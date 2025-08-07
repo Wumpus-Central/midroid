@@ -16,10 +16,10 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
    public fun bind(accessory: ActivityRichPresenceInviteEmbedMessageAccessory) {
       kotlin.jvm.internal.r.h(var1, "accessory");
       val var10: ActivityRichPresenceInviteEmbed = var1.getActivityRichPresenceInviteEmbed();
-      val var15: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
-      val var7: java.lang.String = var10.getHeaderText();
+      val var7: ActivityRichPresenceInviteEmbedView = this.activityRichPresenceInviteEmbedView;
+      val var6: java.lang.String = var10.getHeaderText();
       val var8: java.lang.String = var10.getTitle();
-      val var6: java.lang.String = var10.getSubtitle();
+      val var15: java.lang.String = var10.getSubtitle();
       val var5: java.lang.String = var10.getIconSrc();
       val var9: java.lang.Boolean = var10.isSpotifyParty();
       val var3: Boolean;
@@ -38,9 +38,9 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var2 = 0;
       }
 
-      val var12: java.lang.String = var10.getPartySizeText();
-      val var13: java.util.List = var10.getPartyMemberAvatarURIs();
-      val var14: java.util.List = var10.getPlatformIconKeys();
+      val var13: java.lang.String = var10.getPartySizeText();
+      val var14: java.util.List = var10.getPartyMemberAvatarURIs();
+      val var12: java.util.List = var10.getPlatformIconKeys();
       val var18: java.util.List = var10.getGradientColors();
       val var17: java.lang.Boolean = var10.isActive();
       val var4: Boolean;
@@ -50,6 +50,6 @@ public class ActivityRichPresenceInviteEmbedViewHolder(activityRichPresenceInvit
          var4 = false;
       }
 
-      var15.setActivityRichPresenceInviteEmbed(var7, var8, var6, var5, var3, var16, var2, var12, var13, var14, var18, var4);
+      var7.setActivityRichPresenceInviteEmbed(var6, var8, var15, var5, var3, var16, var2, var13, var14, var12, var18, var4);
    }
 }

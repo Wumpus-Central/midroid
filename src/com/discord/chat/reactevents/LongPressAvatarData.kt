@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class LongPressAvatarData(messageId: String, userId: String) : ReactEvent {
@@ -57,13 +57,13 @@ public data class LongPressAvatarData(messageId: String, userId: String) : React
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.messageId;
-      val var1: java.lang.String = this.userId;
+      val var1: java.lang.String = this.messageId;
+      val var2: java.lang.String = this.userId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("LongPressAvatarData(messageId=");
-      var3.append(var2);
-      var3.append(", userId=");
       var3.append(var1);
+      var3.append(", userId=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

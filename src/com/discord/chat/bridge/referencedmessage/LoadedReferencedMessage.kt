@@ -4,7 +4,7 @@ import com.discord.chat.bridge.Message
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class LoadedReferencedMessage(message: Message, systemContent: StructurableText? = null) : ReferencedMessage {
@@ -59,13 +59,13 @@ public data class LoadedReferencedMessage(message: Message, systemContent: Struc
    }
 
    public override fun toString(): String {
-      val var2: Message = this.message;
-      val var3: StructurableText = this.systemContent;
+      val var3: Message = this.message;
+      val var2: StructurableText = this.systemContent;
       val var1: StringBuilder = new StringBuilder();
       var1.append("LoadedReferencedMessage(message=");
-      var1.append(var2);
-      var1.append(", systemContent=");
       var1.append(var3);
+      var1.append(", systemContent=");
+      var1.append(var2);
       var1.append(")");
       return var1.toString();
    }

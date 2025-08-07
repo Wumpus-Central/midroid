@@ -4,7 +4,7 @@ import android.content.Context
 import android.text.SpannableStringBuilder
 import android.text.style.StrikethroughSpan
 import android.text.style.UnderlineSpan
-import i2.e
+import h2.e
 import kotlin.jvm.internal.r
 
 @JvmSynthetic

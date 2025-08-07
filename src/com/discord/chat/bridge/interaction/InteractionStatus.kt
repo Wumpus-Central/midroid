@@ -3,7 +3,7 @@ package com.discord.chat.bridge.interaction
 import com.discord.chat.bridge.structurabletext.StructurableText
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class InteractionStatus(state: InteractionStatusViewState, text: StructurableText) {
@@ -74,13 +74,13 @@ public data class InteractionStatus(state: InteractionStatusViewState, text: Str
    }
 
    public override fun toString(): String {
-      val var2: InteractionStatusViewState = this.state;
-      val var1: StructurableText = this.text;
+      val var1: InteractionStatusViewState = this.state;
+      val var2: StructurableText = this.text;
       val var3: StringBuilder = new StringBuilder();
       var3.append("InteractionStatus(state=");
-      var3.append(var2);
-      var3.append(", text=");
       var3.append(var1);
+      var3.append(", text=");
+      var3.append(var2);
       var3.append(")");
       return var3.toString();
    }

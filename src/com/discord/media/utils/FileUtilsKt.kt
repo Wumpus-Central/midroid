@@ -1,6 +1,6 @@
 package com.discord.media.utils
 
-import ec.m
+import dc.m
 import java.io.File
 import java.io.InputStream
 import kotlin.jvm.internal.r
@@ -13,18 +13,18 @@ internal fun InputStream.writeTo(outputFile: File): File {
       val var2: BufferedSink = m.c(m.j(var1, false, 1, null));
 
       try {
-         var2.d1(m.l(var0));
+         var2.b1(m.l(var0));
       } catch (var4: java.lang.Throwable) {
-         val var9: java.lang.Throwable = var4;
+         val var10: java.lang.Throwable = var4;
 
          try {
-            throw var9;
+            throw var10;
          } catch (var3: java.lang.Throwable) {
-            N9.c.a(var2, var4);
+            M9.c.a(var2, var4);
          }
       }
 
-      N9.c.a(var2, null);
+      M9.c.a(var2, null);
       return var1;
    }
 }

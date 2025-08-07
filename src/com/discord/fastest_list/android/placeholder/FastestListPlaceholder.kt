@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import B9.n
+import A9.n
 import android.view.ViewGroup
 import androidx.collection.LruCache
 import com.discord.fastest_list.android.FastestListSections.Entry

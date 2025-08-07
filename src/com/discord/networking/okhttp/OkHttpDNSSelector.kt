@@ -1,8 +1,8 @@
 package com.discord.networking.okhttp
 
-import B9.n
-import F9.a
-import Pb.l
+import A9.n
+import E9.a
+import Ob.l
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress
@@ -99,7 +99,7 @@ internal class OkHttpDNSSelector(mode: com.discord.networking.okhttp.OkHttpDNSSe
       fun {
          val var0: Array<OkHttpDNSSelector.IPvMode> = $values();
          $VALUES = var0;
-         $ENTRIES = J9.a.a(var0);
+         $ENTRIES = I9.a.a(var0);
       }
 
       init {

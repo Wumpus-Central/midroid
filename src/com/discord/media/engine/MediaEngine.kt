@@ -24,7 +24,7 @@ import com.discord.native.engine.NativeEngine
 import com.discord.native.engine.VideoInputDeviceDescription
 import java.io.ByteArrayOutputStream
 import java.util.ArrayList
-import kb.x0
+import jb.x0
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function0
 import kotlin.jvm.functions.Function1
@@ -37,7 +37,7 @@ import org.json.JSONArray
 import org.json.JSONObject
 import org.webrtc.VideoFrame
 
-public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = kb.K.a()) {
+public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatcher = jb.K.a()) {
    private final val context: Context
    private final val instanceCreationNs: Long
    private final val engineConnections: MediaEngineNativeConnections
@@ -81,7 +81,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       this.instanceCreationNs = System.nanoTime();
       this.engineConnections = new MediaEngineNativeConnections();
       this.dispatcher = new AsyncInitDispatcher("MediaEngine", 0L, 2, null);
-      this.coroutineScope = kotlinx.coroutines.g.a(var2.T(new kb.B("MediaEngine")));
+      this.coroutineScope = kotlinx.coroutines.g.a(var2.T(new jb.B("MediaEngine")));
    }
 
    @JvmStatic
@@ -194,7 +194,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       var4.append(", ");
       var4.append(var2);
       Log.i$default(var3, "MediaEngine", var4.toString(), null, 4, null);
-      val var5: java.util.Map = C9.q.x(NativeTypeExtensionsKt.toMap(var1));
+      val var5: java.util.Map = B9.q.x(NativeTypeExtensionsKt.toMap(var1));
       var5.put("connectCallbackScheduledMs", System.nanoTime() / (long)1000000);
       var0.invoke(var2, var5);
    }
@@ -214,19 +214,19 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    }
 
    private fun getConnection(connectionId: Int, methodName: String): NativeConnection? {
-      val var5: NativeConnection = this.engineConnections.get(var1);
-      if (var5 == null) {
-         val var3: Log = Log.INSTANCE;
+      val var3: NativeConnection = this.engineConnections.get(var1);
+      if (var3 == null) {
+         val var5: Log = Log.INSTANCE;
          val var4: StringBuilder = new StringBuilder();
          var4.append("[");
          var4.append(var2);
          var4.append("] no NativeConnection for connectionId=");
          var4.append(var1);
          var4.append(", returning null");
-         Log.w$default(var3, "MediaEngine", var4.toString(), null, 4, null);
+         Log.w$default(var5, "MediaEngine", var4.toString(), null, 4, null);
       }
 
-      return var5;
+      return var3;
    }
 
    @JvmStatic
@@ -269,7 +269,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
    @JvmStatic
    fun `setBroadcastThumbnailParams$lambda$57$lambda$56`(var0: MediaEngine, var1: Function1, var2: Bitmap): Unit {
       kotlin.jvm.internal.r.h(var2, "bitmap");
-      kb.f.d(var0.coroutineScope, null, null, new Function2(var2, var1, null) {
+      jb.f.d(var0.coroutineScope, null, null, new Function2(var2, var1, null) {
          final Bitmap $bitmap;
          final Function1 $callback;
          int label;
@@ -289,7 +289,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
          }
 
          public final Object invokeSuspend(Object var1) {
-            val var4: Any = I9.b.e();
+            val var4: Any = H9.b.e();
             if (this.label != 0) {
                if (this.label != 1) {
                   throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
@@ -927,32 +927,32 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
       val var4: AsyncInitDispatcher = this.dispatcher;
       this.dispatcher.validateState();
       if (var4.getInitialized()) {
-         val var8: JSONObject = new JSONObject();
+         val var7: JSONObject = new JSONObject();
          var var6: Array<java.lang.String> = new java.lang.String[0];
          var var5: Array<java.lang.String> = new java.lang.String[0];
-         val var7: java.util.Iterator = kotlin.jvm.internal.b.a(new MediaCodecList(0).getCodecInfos());
+         val var8: java.util.Iterator = kotlin.jvm.internal.b.a(new MediaCodecList(0).getCodecInfos());
 
-         while (var7.hasNext()) {
-            val var9: MediaCodecInfo = var7.next() as MediaCodecInfo;
-            val var10: java.lang.String = var9.getName();
-            kotlin.jvm.internal.r.g(var10, "getName(...)");
-            val var12: Array<java.lang.String> = var9.getSupportedTypes();
-            kotlin.jvm.internal.r.g(var12, "getSupportedTypes(...)");
-            val var11: ArrayList = new ArrayList();
-            val var3: Int = var12.length;
+         while (var8.hasNext()) {
+            val var10: MediaCodecInfo = var8.next() as MediaCodecInfo;
+            val var9: java.lang.String = var10.getName();
+            kotlin.jvm.internal.r.g(var9, "getName(...)");
+            val var11: Array<java.lang.String> = var10.getSupportedTypes();
+            kotlin.jvm.internal.r.g(var11, "getSupportedTypes(...)");
+            val var12: ArrayList = new ArrayList();
+            val var3: Int = var11.length;
 
             for (int var2 = 0; var2 < var3; var2++) {
-               val var13: java.lang.String = var12[var2];
-               kotlin.jvm.internal.r.e(var12[var2]);
+               val var13: java.lang.String = var11[var2];
+               kotlin.jvm.internal.r.e(var11[var2]);
                if (kotlin.text.h.I(var13, "video", false, 2, null)) {
-                  var11.add(var13);
+                  var12.add(var13);
                }
             }
 
-            for (java.lang.String var18 : var11) {
+            for (java.lang.String var18 : var12) {
                val var14: java.lang.String;
                if (VERSION.SDK_INT >= 29) {
-                  if (com.discord.a.a(var9)) {
+                  if (com.discord.a.a(var10)) {
                      var14 = "(HW)";
                   } else {
                      var14 = "(SW)";
@@ -962,9 +962,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
                }
 
                val var15: java.lang.String = kotlin.collections.i.q0(
-                  kotlin.collections.i.n(new java.lang.String[]{var18, var10, var14}), " ", null, null, 0, null, null, 62, null
+                  kotlin.collections.i.n(new java.lang.String[]{var18, var9, var14}), " ", null, null, 0, null, null, 62, null
                );
-               if (var9.isEncoder()) {
+               if (var10.isEncoder()) {
                   var6 = kotlin.collections.c.v(var6, var15) as Array<java.lang.String>;
                } else {
                   var5 = kotlin.collections.c.v(var5, var15) as Array<java.lang.String>;
@@ -972,9 +972,9 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
             }
          }
 
-         var8.put("available_video_encoders", new JSONArray(var6));
-         var8.put("available_video_decoders", new JSONArray(var5));
-         val var16: java.lang.String = var8.toString();
+         var7.put("available_video_encoders", new JSONArray(var6));
+         var7.put("available_video_decoders", new JSONArray(var5));
+         val var16: java.lang.String = var7.toString();
          kotlin.jvm.internal.r.g(var16, "toString(...)");
          var1.invoke(var16);
       } else {
@@ -1696,7 +1696,7 @@ public class MediaEngine(context: Context, coroutineDispatcher: CoroutineDispatc
 
          label27: {
             val var5: Any = ((<unrepresentable>)var8).result;
-            val var10: Any = I9.b.e();
+            val var10: Any = H9.b.e();
             val var6: ByteArray;
             if (((<unrepresentable>)var8).label != 0) {
                if (((<unrepresentable>)var8).label != 1) {

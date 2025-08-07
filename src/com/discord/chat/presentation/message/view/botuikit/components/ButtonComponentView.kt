@@ -1,6 +1,6 @@
 package com.discord.chat.presentation.message.view.botuikit.components
 
-import B9.n
+import A9.n
 import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
@@ -67,7 +67,7 @@ public class ButtonComponentView  public constructor(context: Context, attrs: At
       val var6: MessageComponentButtonViewBinding = MessageComponentButtonViewBinding.inflate(LayoutInflater.from(var1), this);
       r.g(var6, "inflate(...)");
       this.binding = var6;
-      this.progressDots$delegate = B9.j.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
+      this.progressDots$delegate = A9.j.b(new com.discord.chat.presentation.message.view.botuikit.components.a(this));
       this.currentStyle = ButtonStyle.UNKNOWN;
       val var4: com.google.android.flexbox.FlexboxLayout.LayoutParams = new com.google.android.flexbox.FlexboxLayout.LayoutParams(-2, -2);
       var4.b(0.0F);

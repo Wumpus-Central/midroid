@@ -1,11 +1,11 @@
 package com.discord.chat.bridge.safetysystemnotification
 
-import B9.j
-import B9.m
+import A9.j
+import A9.m
 import kotlin.enums.EnumEntries
 import kotlinx.serialization.KSerializer
 import s1.a
-import ub.g
+import tb.g
 
 @g
 public enum class FooterTheme {
@@ -23,7 +23,7 @@ public enum class FooterTheme {
    fun {
       val var0: Array<FooterTheme> = $values();
       $VALUES = var0;
-      $ENTRIES = J9.a.a(var0);
+      $ENTRIES = I9.a.a(var0);
    }
 
    @JvmStatic

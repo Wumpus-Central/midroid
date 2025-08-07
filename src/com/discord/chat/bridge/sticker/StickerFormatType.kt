@@ -1,6 +1,6 @@
 package com.discord.chat.bridge.sticker
 
-import J9.a
+import I9.a
 import java.util.NoSuchElementException
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
@@ -8,8 +8,8 @@ import kotlinx.serialization.KSerializer
 import kotlinx.serialization.descriptors.SerialDescriptor
 import kotlinx.serialization.encoding.Decoder
 import kotlinx.serialization.encoding.Encoder
-import ub.g
-import wb.e.f
+import tb.g
+import vb.e.f
 
 @g(with = StickerFormatType.StickerFormatTypeSerializer::class)
 public enum class StickerFormatType(intType: Int) {
@@ -50,7 +50,7 @@ public enum class StickerFormatType(intType: Int) {
    public object StickerFormatTypeSerializer : KSerializer {
       public open val descriptor: SerialDescriptor
          public open get() {
-            return wb.g.a("StickerFormatType", f.a);
+            return vb.g.a("StickerFormatType", f.a);
          }
 
 
@@ -73,7 +73,7 @@ public enum class StickerFormatType(intType: Int) {
       public open fun serialize(encoder: Encoder, value: StickerFormatType) {
          r.h(var1, "encoder");
          r.h(var2, "value");
-         var1.y(var2.getIntType());
+         var1.x(var2.getIntType());
       }
    }
 }

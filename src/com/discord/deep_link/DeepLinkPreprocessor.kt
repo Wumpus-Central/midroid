@@ -8,16 +8,16 @@ public class DeepLinkPreprocessor {
    public fun handleAndUpdateIntent(intent: Intent) {
       r.h(var1, "intent");
       if (r.c(var1.getAction(), "android.intent.action.VIEW")) {
-         val var4: Uri = var1.getData();
-         if (var4 != null) {
-            var var2: java.lang.String = var4.getHost();
-            val var3: java.util.List = var4.getPathSegments();
-            if (r.c(var2, "discordapp.onelink.me")) {
+         val var2: Uri = var1.getData();
+         if (var2 != null) {
+            val var4: java.lang.String = var2.getHost();
+            val var3: java.util.List = var2.getPathSegments();
+            if (r.c(var4, "discordapp.onelink.me")) {
                r.e(var3);
                if (!var3.isEmpty()) {
-                  var2 = var4.getQueryParameter("deep_link_value");
-                  if (var2 != null) {
-                     var1.setData(Uri.parse(var2));
+                  val var5: java.lang.String = var2.getQueryParameter("deep_link_value");
+                  if (var5 != null) {
+                     var1.setData(Uri.parse(var5));
                   }
                }
             }

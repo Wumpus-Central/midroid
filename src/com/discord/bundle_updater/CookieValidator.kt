@@ -1,6 +1,6 @@
 package com.discord.bundle_updater
 
-import C9.q
+import B9.q
 import java.net.URLDecoder
 import java.util.LinkedHashMap
 import java.util.Map.Entry
@@ -30,18 +30,18 @@ public object CookieValidator {
                   try {
                      var11 = Json.d;
                      var14 = Json.d.g(var13);
-                  } catch (var7: ub.h) {
+                  } catch (var7: tb.h) {
                      return null;
                   }
 
-                  var var3: JsonElement = yb.g.o(var14).get("$meta") as JsonElement;
+                  val var3: JsonElement = xb.g.o(var14).get("$meta") as JsonElement;
                   if (var3 == null) {
                      return null;
                   }
 
                   var11.a();
                   val var12: BuildOverrideCookieMeta = var11.d(BuildOverrideCookieMeta.Companion.serializer(), var3) as BuildOverrideCookieMeta;
-                  val var15: JsonObject = yb.g.o(var14);
+                  val var15: JsonObject = xb.g.o(var14);
                   val var18: LinkedHashMap = new LinkedHashMap();
 
                   for (Entry var4 : var15.entrySet()) {
@@ -53,11 +53,11 @@ public object CookieValidator {
                   val var17: LinkedHashMap = new LinkedHashMap(q.d(var18.size()));
 
                   for (Entry var5 : var18.entrySet()) {
-                     var3 = (JsonElement)var5.getKey();
-                     val var6: JsonElement = var5.getValue() as JsonElement;
-                     val var21: kotlinx.serialization.json.Json.a = Json.d;
+                     val var20: Any = var5.getKey();
+                     val var21: JsonElement = var5.getValue() as JsonElement;
+                     val var6: kotlinx.serialization.json.Json.a = Json.d;
                      Json.d.a();
-                     var17.put(var3, var21.d(BuildOverrideCookieBuild.Companion.serializer(), var6) as BuildOverrideCookieBuild);
+                     var17.put(var20, var6.d(BuildOverrideCookieBuild.Companion.serializer(), var21) as BuildOverrideCookieBuild);
                   }
 
                   return new BuildOverrideCookieContents(var12, var17);

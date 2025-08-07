@@ -49,7 +49,7 @@ internal object SystemLogUtils {
 
          var2.invoke(var4);
       } else {
-         G9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
+         F9.a.b(false, false, null, null, 0, new h(var4, var1, var3, var2), 31, null);
       }
    }
 
@@ -99,9 +99,9 @@ internal object SystemLogUtils {
          if (kotlin.text.h.c0(var19)) {
             return null;
          } else {
-            val var11: ib.d = ib.d.m;
-            val var17: Regex = new Regex("^Cause: (.+)$", ib.d.m);
-            val var21: Sequence = hb.k.z(
+            val var11: hb.d = hb.d.m;
+            val var17: Regex = new Regex("^Cause: (.+)$", hb.d.m);
+            val var21: Sequence = gb.k.z(
                Regex.e(new Regex("^\\s+#\\d+ pc .+/(.+? .+?)\\+?[+)]", var11), var19, 0, 2, null), new i(new Regex("classes\\d+.dex"))
             );
             val var23: HashSet = w.e(
@@ -124,7 +124,7 @@ internal object SystemLogUtils {
                var13 = "Unknown";
             }
 
-            val var22: java.lang.String = hb.k.x(var21, "\n", null, null, 0, null, null, 62, null);
+            val var22: java.lang.String = gb.k.x(var21, "\n", null, null, 0, null, null, 62, null);
             val var24: MatchResult = Regex.c(var17, var19, 0, 2, null);
             var3 = null;
             if (var24 != null) {
@@ -155,7 +155,7 @@ internal object SystemLogUtils {
 
    private fun hashString(input: String): String {
       val var2: MessageDigest = MessageDigest.getInstance("SHA-1");
-      val var3: ByteArray = var1.getBytes(ib.a.b);
+      val var3: ByteArray = var1.getBytes(hb.a.b);
       r.g(var3, "getBytes(...)");
       val var4: ByteArray = var2.digest(var3);
       r.e(var4);
@@ -231,7 +231,7 @@ internal object SystemLogUtils {
                         var5 = var4;
 
                         try {
-                           var31 = var30.listIterator(var30.size());
+                           var32 = var30.listIterator(var30.size());
                         } catch (var19: Exception) {
                            var25 = var19;
                            var4 = var4;
@@ -245,7 +245,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (!var31.hasPrevious()) {
+                              if (!var32.hasPrevious()) {
                                  break label190;
                               }
                            } catch (var22: Exception) {
@@ -260,7 +260,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var8 = (java.lang.String)var31.previous();
+                              var31 = var32.previous();
                            } catch (var18: Exception) {
                               var25 = var18;
                               var4 = var4;
@@ -273,7 +273,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              if (var8.length() <= 0) {
+                              if ((var31 as java.lang.String).length() <= 0) {
                                  continue;
                               }
                            } catch (var23: Exception) {
@@ -288,7 +288,7 @@ internal object SystemLogUtils {
                            var5 = var4;
 
                            try {
-                              var7 = var8;
+                              var7 = var31 as java.lang.String;
                               break;
                            } catch (var17: Exception) {
                               var25 = var17;
@@ -469,13 +469,13 @@ internal object SystemLogUtils {
    @SuppressLint(["LogNotTimber"])
    public fun initSystemLogCapture(context: Context) {
       r.h(var1, "context");
-      val var3: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("[");
-      var2.append("libdiscord_version");
-      var2.append("]: ");
-      var2.append(var3);
-      Log.v("Discord", var2.toString());
+      val var2: java.lang.String = DebugPrintableCollection.Companion.libdiscordVersion(var1);
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("[");
+      var3.append("libdiscord_version");
+      var3.append("]: ");
+      var3.append(var2);
+      Log.v("Discord", var3.toString());
       systemLogCapture.startThread(var1);
    }
 
@@ -579,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var1: java.lang.String = this.text;
-         val var6: java.lang.String = this.cause;
-         val var3: java.lang.String = this.groupBy;
-         val var5: java.lang.String = this.origin;
-         val var4: java.lang.String = this.groupHash;
-         val var2: java.lang.String = this.textHash;
-         val var7: StringBuilder = new StringBuilder();
-         var7.append("Tombstone(text=");
-         var7.append(var1);
-         var7.append(", cause=");
-         var7.append(var6);
-         var7.append(", groupBy=");
-         var7.append(var3);
-         var7.append(", origin=");
-         var7.append(var5);
-         var7.append(", groupHash=");
-         var7.append(var4);
-         var7.append(", textHash=");
-         var7.append(var2);
-         var7.append(")");
-         return var7.toString();
+         val var6: java.lang.String = this.text;
+         val var7: java.lang.String = this.cause;
+         val var4: java.lang.String = this.groupBy;
+         val var3: java.lang.String = this.origin;
+         val var2: java.lang.String = this.groupHash;
+         val var1: java.lang.String = this.textHash;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("Tombstone(text=");
+         var5.append(var6);
+         var5.append(", cause=");
+         var5.append(var7);
+         var5.append(", groupBy=");
+         var5.append(var4);
+         var5.append(", origin=");
+         var5.append(var3);
+         var5.append(", groupHash=");
+         var5.append(var2);
+         var5.append(", textHash=");
+         var5.append(var1);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

@@ -1,7 +1,7 @@
 package com.discord.crash_reporting.react_events
 
-import B9.s
-import S9.c
+import A9.s
+import R9.c
 import com.discord.crash_reporting.system_logs.HistoricalProcessExitReason
 import com.discord.crash_reporting.system_logs.SystemLogReport
 import com.discord.crash_reporting.system_logs.SystemLogUtils
@@ -120,16 +120,16 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
          var1.putString("exitDescription", var5.getReason());
       }
 
-      val var6: SystemLogUtils.Tombstone = this.tombstone;
+      val var3: SystemLogUtils.Tombstone = this.tombstone;
       if (this.tombstone != null) {
          var1.putString("tombstoneGroupHash", this.tombstone.getGroupHash());
-         val var3: java.lang.String = var6.getCause();
-         if (var3 != null) {
-            var1.putString("tombstoneCause", var3);
+         val var6: java.lang.String = var3.getCause();
+         if (var6 != null) {
+            var1.putString("tombstoneCause", var6);
          }
 
-         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var6.getText())) {
-            var1.putString("tombstone", h.e1(var6.getText(), 6291456));
+         if (d.o(new IntRange(0, 1000), c.j) == 0 && !h.c0(var3.getText())) {
+            var1.putString("tombstone", h.e1(var3.getText(), 6291456));
          }
       }
 
@@ -137,19 +137,19 @@ internal data class CrashReportEvent(crashedLastRun: Boolean?, sentryData: Sentr
    }
 
    public override fun toString(): String {
-      val var2: java.lang.Boolean = this.crashedLastRun;
-      val var1: SystemLogReport.SentryCrashData = this.sentryData;
-      val var5: HistoricalProcessExitReason.Reason = this.reason;
-      val var3: SystemLogUtils.Tombstone = this.tombstone;
+      val var1: java.lang.Boolean = this.crashedLastRun;
+      val var2: SystemLogReport.SentryCrashData = this.sentryData;
+      val var3: HistoricalProcessExitReason.Reason = this.reason;
+      val var5: SystemLogUtils.Tombstone = this.tombstone;
       val var4: StringBuilder = new StringBuilder();
       var4.append("CrashReportEvent(crashedLastRun=");
-      var4.append(var2);
-      var4.append(", sentryData=");
       var4.append(var1);
+      var4.append(", sentryData=");
+      var4.append(var2);
       var4.append(", reason=");
-      var4.append(var5);
-      var4.append(", tombstone=");
       var4.append(var3);
+      var4.append(", tombstone=");
+      var4.append(var5);
       var4.append(")");
       return var4.toString();
    }

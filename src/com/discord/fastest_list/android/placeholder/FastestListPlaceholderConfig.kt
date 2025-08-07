@@ -1,6 +1,6 @@
 package com.discord.fastest_list.android.placeholder
 
-import B9.n
+import A9.n
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListSections.Entry
 import kotlin.jvm.internal.r
@@ -185,33 +185,33 @@ internal data class FastestListPlaceholderConfig(listFooter: FastestListPlacehol
    }
 
    public override fun toString(): String {
-      val var3: FastestListPlaceholderType = this.listFooter;
-      val var6: FastestListPlaceholderType = this.listHeader;
-      val var4: FastestListPlaceholderType = this.sectionFooter;
-      val var1: FastestListPlaceholderType = this.sectionHeader;
-      val var8: FastestListPlaceholderType = this.sectionItem;
-      val var2: FastestListPlaceholderType = this.sectionItemAtFront;
-      val var7: FastestListPlaceholderType = this.sectionItemAtRear;
-      val var5: FastestListPlaceholderType = this.sectionItemSingleton;
-      val var9: StringBuilder = new StringBuilder();
-      var9.append("FastestListPlaceholderConfig(listFooter=");
-      var9.append(var3);
-      var9.append(", listHeader=");
-      var9.append(var6);
-      var9.append(", sectionFooter=");
-      var9.append(var4);
-      var9.append(", sectionHeader=");
-      var9.append(var1);
-      var9.append(", sectionItem=");
-      var9.append(var8);
-      var9.append(", sectionItemAtFront=");
-      var9.append(var2);
-      var9.append(", sectionItemAtRear=");
-      var9.append(var7);
-      var9.append(", sectionItemSingleton=");
-      var9.append(var5);
-      var9.append(")");
-      return var9.toString();
+      val var6: FastestListPlaceholderType = this.listFooter;
+      val var9: FastestListPlaceholderType = this.listHeader;
+      val var8: FastestListPlaceholderType = this.sectionFooter;
+      val var2: FastestListPlaceholderType = this.sectionHeader;
+      val var4: FastestListPlaceholderType = this.sectionItem;
+      val var3: FastestListPlaceholderType = this.sectionItemAtFront;
+      val var1: FastestListPlaceholderType = this.sectionItemAtRear;
+      val var7: FastestListPlaceholderType = this.sectionItemSingleton;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("FastestListPlaceholderConfig(listFooter=");
+      var5.append(var6);
+      var5.append(", listHeader=");
+      var5.append(var9);
+      var5.append(", sectionFooter=");
+      var5.append(var8);
+      var5.append(", sectionHeader=");
+      var5.append(var2);
+      var5.append(", sectionItem=");
+      var5.append(var4);
+      var5.append(", sectionItemAtFront=");
+      var5.append(var3);
+      var5.append(", sectionItemAtRear=");
+      var5.append(var1);
+      var5.append(", sectionItemSingleton=");
+      var5.append(var7);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object

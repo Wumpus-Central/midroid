@@ -1,6 +1,6 @@
 package com.discord.lifecycle
 
-import B9.s
+import A9.s
 import com.discord.codegen.NativeAppLifecycleModuleSpec
 import com.discord.lifecycle.react.events.OnHostDestroyEvent
 import com.discord.reactevents.ReactEvents

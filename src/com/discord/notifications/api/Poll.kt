@@ -2,7 +2,7 @@ package com.discord.notifications.api
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class Poll(question: PollMedia) {
@@ -38,12 +38,12 @@ public data class Poll(question: PollMedia) {
    }
 
    public override fun toString(): String {
-      val var2: PollMedia = this.question;
-      val var1: StringBuilder = new StringBuilder();
-      var1.append("Poll(question=");
-      var1.append(var2);
-      var1.append(")");
-      return var1.toString();
+      val var1: PollMedia = this.question;
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("Poll(question=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

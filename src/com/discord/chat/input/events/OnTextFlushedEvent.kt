@@ -4,7 +4,7 @@ import com.discord.reactevents.ReactEvent
 import com.facebook.react.bridge.WritableMap
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactEvent {
@@ -57,13 +57,13 @@ internal data class OnTextFlushedEvent(text: String, requestId: String) : ReactE
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.text;
-      val var2: java.lang.String = this.requestId;
+      val var2: java.lang.String = this.text;
+      val var1: java.lang.String = this.requestId;
       val var3: StringBuilder = new StringBuilder();
       var3.append("OnTextFlushedEvent(text=");
-      var3.append(var1);
-      var3.append(", requestId=");
       var3.append(var2);
+      var3.append(", requestId=");
+      var3.append(var1);
       var3.append(")");
       return var3.toString();
    }

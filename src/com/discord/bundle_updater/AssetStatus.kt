@@ -13,7 +13,7 @@ public enum class AssetStatus {
    fun {
       val var0: Array<AssetStatus> = $values();
       $VALUES = var0;
-      $ENTRIES = J9.a.a(var0);
+      $ENTRIES = I9.a.a(var0);
    }
 
    @JvmStatic

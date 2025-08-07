@@ -2,7 +2,7 @@ package com.discord.chat.bridge.sticker
 
 import kotlin.jvm.internal.r
 import kotlinx.serialization.KSerializer
-import ub.g
+import tb.g
 
 @g
 public data class Sticker(id: Long,
@@ -128,11 +128,11 @@ public data class Sticker(id: Long,
    }
 
    public override fun hashCode(): Int {
-      val var3: Int = java.lang.Long.hashCode(this.id);
-      val var5: Int = this.formatType.hashCode();
+      val var7: Int = java.lang.Long.hashCode(this.id);
+      val var6: Int = this.formatType.hashCode();
       val var4: Int = this.name.hashCode();
-      val var6: Int = this.asset.hashCode();
-      val var7: Int = this.url.hashCode();
+      val var5: Int = this.asset.hashCode();
+      val var3: Int = this.url.hashCode();
       var var2: Int = 0;
       val var1: Int;
       if (this.width == null) {
@@ -145,39 +145,39 @@ public data class Sticker(id: Long,
          var2 = this.height.hashCode();
       }
 
-      return (((((((var3 * 31 + var5) * 31 + var4) * 31 + var6) * 31 + var7) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
+      return (((((((var7 * 31 + var6) * 31 + var4) * 31 + var5) * 31 + var3) * 31 + var1) * 31 + var2) * 31 + Integer.hashCode(this.renderMode)) * 31
          + this.accessibilityLabel.hashCode();
    }
 
    public override fun toString(): String {
       val var2: Long = this.id;
-      val var10: StickerFormatType = this.formatType;
-      val var4: java.lang.String = this.name;
+      val var7: StickerFormatType = this.formatType;
+      val var10: java.lang.String = this.name;
       val var5: java.lang.String = this.asset;
       val var6: java.lang.String = this.url;
-      val var11: Int = this.width;
-      val var8: Int = this.height;
+      val var4: Int = this.width;
+      val var11: Int = this.height;
       val var1: Int = this.renderMode;
-      val var7: java.lang.String = this.accessibilityLabel;
+      val var8: java.lang.String = this.accessibilityLabel;
       val var9: StringBuilder = new StringBuilder();
       var9.append("Sticker(id=");
       var9.append(var2);
       var9.append(", formatType=");
-      var9.append(var10);
+      var9.append(var7);
       var9.append(", name=");
-      var9.append(var4);
+      var9.append(var10);
       var9.append(", asset=");
       var9.append(var5);
       var9.append(", url=");
       var9.append(var6);
       var9.append(", width=");
-      var9.append(var11);
+      var9.append(var4);
       var9.append(", height=");
-      var9.append(var8);
+      var9.append(var11);
       var9.append(", renderMode=");
       var9.append(var1);
       var9.append(", accessibilityLabel=");
-      var9.append(var7);
+      var9.append(var8);
       var9.append(")");
       return var9.toString();
    }

@@ -1,6 +1,6 @@
 package com.discord.react_asset_fetcher
 
-import I9.b
+import H9.b
 import android.content.Context
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
@@ -16,12 +16,12 @@ import com.google.android.material.button.MaterialButton
 import java.net.HttpURLConnection
 import java.net.URL
 import java.net.URLConnection
-import kb.K
-import kb.f
+import jb.K
+import jb.f
 import kotlin.coroutines.Continuation
+import kotlin.coroutines.CoroutineContext
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineScope
 
 public fun Context.getReactImageUrl(assetUrl: String): String {
@@ -103,8 +103,8 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
          } else {
             c.b(var1);
             var1 = this.$this_setReactIcon;
-            val var5: CoroutineDispatcher = K.b();
-            var4 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
+            var4 = K.b();
+            val var5: Function2 = new Function2(this.$this_setReactIcon, this.$assetUrl, null) {
                final java.lang.String $assetUrl;
                final MaterialButton $this_setReactIcon;
                int label;
@@ -156,7 +156,7 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
             };
             this.L$0 = var1;
             this.label = 1;
-            var4 = f.g(var5, (Function2)var4, this);
+            var4 = f.g((CoroutineContext)var4, var5, this);
             if (var4 === var3) {
                return var3;
             }

@@ -1,6 +1,6 @@
 package com.discord.fastest_list.react
 
-import B9.s
+import A9.s
 import com.discord.fastest_list.android.FastestListSections
 import com.discord.fastest_list.android.FastestListView
 import com.discord.fastest_list.android.FastestListVisibleItemsTracker

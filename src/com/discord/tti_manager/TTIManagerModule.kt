@@ -1,7 +1,7 @@
 package com.discord.tti_manager
 
-import B9.s
-import C9.q
+import A9.s
+import B9.q
 import com.discord.logging.Log
 import com.discord.react.utilities.NativeArrayExtensionsKt
 import com.discord.react.utilities.NativeMapExtensionsKt
@@ -108,10 +108,10 @@ public class TTIManagerModule(reactContext: ReactApplicationContext) : ReactCont
 
       try {
          if (BuildConfig.logTTIMetrics) {
-            val var1: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
-            val var2: ReactApplicationContext = this.getReactApplicationContext();
-            r.g(var2, "getReactApplicationContext(...)");
-            var1.unregister(var2, this.ttiBroadcastReceiver);
+            val var2: TTIBroadcastReceiver.Companion = TTIBroadcastReceiver.Companion;
+            val var1: ReactApplicationContext = this.getReactApplicationContext();
+            r.g(var1, "getReactApplicationContext(...)");
+            var2.unregister(var1, this.ttiBroadcastReceiver);
          }
       } catch (var3: Exception) {
       }

@@ -1,6 +1,6 @@
 package com.discord.emoji_picker.react_events
 
-import B9.s
+import A9.s
 import com.discord.emoji_picker.EmojiPickerScroller.ScrollEvent
 import com.discord.misc.utilities.size.SizeUtilsKt
 import com.discord.react.utilities.NativeMapExtensionsKt

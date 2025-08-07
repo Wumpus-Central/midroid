@@ -8,8 +8,8 @@ import android.view.View.OnClickListener
 import android.view.View.OnLongClickListener
 import android.widget.TextView
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
-import kb.I
-import kb.f
+import jb.I
+import jb.f
 import kotlin.coroutines.Continuation
 import kotlin.jvm.functions.Function2
 import kotlin.jvm.internal.r
@@ -221,7 +221,7 @@ public class NestedScrollOnTouchTracker internal constructor(context: Context,
 
                      public final Object invokeSuspend(Object var1) {
                         label46: {
-                           val var7: Any = I9.b.e();
+                           val var7: Any = H9.b.e();
                            if (this.label != 0) {
                               if (this.label != 1) {
                                  if (this.label != 2) {

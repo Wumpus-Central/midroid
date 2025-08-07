@@ -11,10 +11,12 @@ import com.facebook.react.bridge.ReadableArray
 import kotlin.jvm.internal.r
 
 public class ForegroundServiceModule(reactContext: ReactApplicationContext) : ReactContextBaseJavaModule {
+   private final val reactContext: ReactApplicationContext
+
    init {
       r.h(var1, "reactContext");
       super(var1);
-      ForegroundServiceManager.Companion.initialize(var1);
+      this.reactContext = var1;
    }
 
    public open fun getName(): String {
@@ -24,7 +26,7 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
    @ReactMethod
    public fun isServiceRunning(callback: Callback) {
       r.h(var1, "callback");
-      var1.invoke(new Object[]{ForegroundServiceManager.Companion.getInstance().isRunning$foreground_service_release()});
+      var1.invoke(new Object[]{ForegroundServiceManager.INSTANCE.isRunning$foreground_service_release()});
    }
 
    @ReactMethod
@@ -36,12 +38,12 @@ public class ForegroundServiceModule(reactContext: ReactApplicationContext) : Re
             CrashReporting.INSTANCE, "Couldn't start ForegroundService, no service configurations provided.", null, null, 6, null
          );
       } else {
-         ForegroundServiceManager.Companion.getInstance().onRequestServiceCreateOrUpdate$foreground_service_release(var2);
+         ForegroundServiceManager.INSTANCE.onRequestServiceCreateOrUpdate$foreground_service_release(this.reactContext, var2);
       }
    }
 
    @ReactMethod
    public fun stopService() {
-      ForegroundServiceManager.Companion.getInstance().onRequestServiceDestroy$foreground_service_release();
+      ForegroundServiceManager.INSTANCE.onRequestServiceDestroy$foreground_service_release(this.reactContext);
    }
 }

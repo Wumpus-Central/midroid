@@ -4,8 +4,8 @@ import android.content.Context
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView.Recycler
+import c2.a
 import com.discord.crash_reporting.CrashReporting
-import d2.a
 import kotlin.jvm.internal.r
 
 public open class TransitionResilientLinearLayoutManager(context: Context,
