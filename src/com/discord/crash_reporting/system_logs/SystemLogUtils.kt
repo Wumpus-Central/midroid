@@ -435,8 +435,8 @@ internal object SystemLogUtils {
    }
 
    private fun waitFor(process: Process) {
-      val var2: Long = System.nanoTime();
-      val var4: Long = TimeUnit.SECONDS.toNanos(15L);
+      val var4: Long = System.nanoTime();
+      val var2: Long = TimeUnit.SECONDS.toNanos(15L);
 
       while (true) {
          try {
@@ -444,7 +444,7 @@ internal object SystemLogUtils {
             return;
          } catch (var7: IllegalThreadStateException) {
             Thread.sleep(100L);
-            if (System.nanoTime() >= var2 + var4) {
+            if (System.nanoTime() >= var4 + var2) {
                return;
             }
          }
@@ -579,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.text;
+         val var1: java.lang.String = this.text;
          val var3: java.lang.String = this.cause;
-         val var4: java.lang.String = this.groupBy;
-         val var7: java.lang.String = this.origin;
-         val var1: java.lang.String = this.groupHash;
-         val var2: java.lang.String = this.textHash;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Tombstone(text=");
-         var5.append(var6);
-         var5.append(", cause=");
-         var5.append(var3);
-         var5.append(", groupBy=");
-         var5.append(var4);
-         var5.append(", origin=");
-         var5.append(var7);
-         var5.append(", groupHash=");
-         var5.append(var1);
-         var5.append(", textHash=");
-         var5.append(var2);
-         var5.append(")");
-         return var5.toString();
+         val var2: java.lang.String = this.groupBy;
+         val var5: java.lang.String = this.origin;
+         val var4: java.lang.String = this.groupHash;
+         val var7: java.lang.String = this.textHash;
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("Tombstone(text=");
+         var6.append(var1);
+         var6.append(", cause=");
+         var6.append(var3);
+         var6.append(", groupBy=");
+         var6.append(var2);
+         var6.append(", origin=");
+         var6.append(var5);
+         var6.append(", groupHash=");
+         var6.append(var4);
+         var6.append(", textHash=");
+         var6.append(var7);
+         var6.append(")");
+         return var6.toString();
       }
    }
 }

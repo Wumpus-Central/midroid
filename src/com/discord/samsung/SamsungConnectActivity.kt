@@ -379,13 +379,13 @@ public class SamsungConnectActivity : AppCompatActivity {
          }
 
          public override fun toString(): String {
-            val var1: java.lang.String = this.authCode;
-            val var2: java.lang.String = this.serverUrl;
+            val var2: java.lang.String = this.authCode;
+            val var1: java.lang.String = this.serverUrl;
             val var3: StringBuilder = new StringBuilder();
             var3.append("Success(authCode=");
-            var3.append(var1);
-            var3.append(", serverUrl=");
             var3.append(var2);
+            var3.append(", serverUrl=");
+            var3.append(var1);
             var3.append(")");
             return var3.toString();
          }

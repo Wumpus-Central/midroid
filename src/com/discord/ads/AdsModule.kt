@@ -52,10 +52,10 @@ public class AdsModule(reactContext: ReactApplicationContext) : NativeAdsModuleS
       try {
          var0.x(AdvertisingIdClient.a(var1.getReactApplicationContext()));
       } catch (var4: Exception) {
-         val var5: java.lang.String = var4.getMessage();
+         val var3: java.lang.String = var4.getMessage();
          val var2: StringBuilder = new StringBuilder();
          var2.append("Error getting google advertising ID info: ");
-         var2.append(var5);
+         var2.append(var3);
          var0.y(new Exception(var2.toString(), var4));
       }
    }

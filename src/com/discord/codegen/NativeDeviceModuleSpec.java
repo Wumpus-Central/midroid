@@ -38,12 +38,12 @@ public abstract class NativeDeviceModuleSpec extends ReactContextBaseJavaModule 
                "timeZone"
             )
          );
-         HashSet var2 = new HashSet();
-         HashSet var4 = new HashSet(var1.keySet());
-         var4.removeAll(var3);
-         var4.removeAll(var2);
-         if (!var4.isEmpty()) {
-            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var4));
+         HashSet var4 = new HashSet();
+         HashSet var2 = new HashSet(var1.keySet());
+         var2.removeAll(var3);
+         var2.removeAll(var4);
+         if (!var2.isEmpty()) {
+            throw new IllegalStateException(String.format("Native Module Flow doesn't declare constants: %s", var2));
          }
 
          var3.removeAll(var1.keySet());

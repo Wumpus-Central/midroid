@@ -73,7 +73,7 @@ internal object IdentifyPayload {
          break label38;
       }
 
-      var var21: java.util.Map = (java.util.Map)var6;
+      var var21: Any = var6;
       if (Result.g(var6)) {
          var21 = null;
       }
@@ -83,25 +83,27 @@ internal object IdentifyPayload {
          Log.w$default(Log.INSTANCE, "IdentifyPayload", "skipping identify mutation: root is not a json object", null, 4, null);
          return var1;
       } else {
-         var6 = var6 as JsonObject;
-         val var8: java.util.List = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
-         val var12: Array<GuildVersion> = var2.getGuildVersions();
-         var21 = new LinkedHashMap(d.d(q.d(var12.length), 16));
-         var var5: Int = var12.length;
+         var21 = var6 as JsonObject;
+         var6 = i.n(new java.lang.String[]{"d", "client_state", "guild_versions"});
+         val var8: Array<GuildVersion> = var2.getGuildVersions();
+         val var12: LinkedHashMap = new LinkedHashMap(d.d(q.d(var8.length), 16));
+         var var5: Int = var8.length;
 
          for (int var3 = 0; var3 < var5; var3++) {
-            val var24: Pair = s.a(var12[var3].getId(), g.c(var12[var3].getVersion()));
-            var21.put(var24.c(), var24.d());
+            val var24: Pair = s.a(var8[var3].getId(), g.c(var8[var3].getVersion()));
+            var12.put(var24.c(), var24.d());
          }
 
-         var var13: JsonObject = this.put((JsonObject)var6, var8, new JsonObject(var21));
+         var var13: JsonObject = this.put((JsonObject)var21, (java.util.List<java.lang.String>)var6, new JsonObject(var12));
          val var14: Array<NonGuildVersion> = var2.getNonGuildVersions();
          var5 = var14.length;
 
          for (int var15 = 0; var15 < var5; var15++) {
             var6 = var14[var15];
-            val var23: IdentifyPayload = INSTANCE;
-            var13 = INSTANCE.put(var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}), var23.toJson((NonGuildVersion)var6));
+            var21 = INSTANCE;
+            var13 = INSTANCE.put(
+               var13, i.n(new java.lang.String[]{"d", "client_state", ((NonGuildVersion)var6).getId()}), ((IdentifyPayload)var21).toJson((NonGuildVersion)var6)
+            );
          }
 
          return var13.toString();

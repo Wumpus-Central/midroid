@@ -28,13 +28,13 @@ public class CircularByteBuffer(maxByteCount: Int) {
    }
 
    private fun addLineBytes(lineBytes: ByteArray) {
-      val var2: Int = var1.length + 1;
+      val var3: Int = var1.length + 1;
       this.makeSpace(var1.length + 1);
-      val var3: Int = this.tail;
+      val var2: Int = this.tail;
       this.writeBytes(var1);
       this.writeByte(this.newlineByte);
-      this.lines.addLast(s.a(var3, var1.length));
-      this.size += var2;
+      this.lines.addLast(s.a(var2, var1.length));
+      this.size += var3;
       this.isEmpty = false;
    }
 
@@ -45,18 +45,18 @@ public class CircularByteBuffer(maxByteCount: Int) {
    }
 
    private fun readLine(start: Int, length: Int): String {
-      val var4: java.lang.String;
+      val var6: java.lang.String;
       if (var1 + var2 <= this.buffer.length) {
-         var4 = new java.lang.String(this.buffer, var1, var2, CHARSET);
+         var6 = new java.lang.String(this.buffer, var1, var2, CHARSET);
       } else {
          val var3: Int = this.buffer.length - var1;
-         val var6: ByteArray = new byte[var2];
-         System.arraycopy(this.buffer, var1, var6, 0, var3);
-         System.arraycopy(this.buffer, 0, var6, var3, var2 - var3);
-         var4 = new java.lang.String(var6, CHARSET);
+         val var5: ByteArray = new byte[var2];
+         System.arraycopy(this.buffer, var1, var5, 0, var3);
+         System.arraycopy(this.buffer, 0, var5, var3, var2 - var3);
+         var6 = new java.lang.String(var5, CHARSET);
       }
 
-      return var4;
+      return var6;
    }
 
    private fun removeFrontLine() {
@@ -348,11 +348,11 @@ public class CircularByteBuffer(maxByteCount: Int) {
       public override fun toString(): String {
          val var4: Int = this.linesCount;
          val var5: Int = this.bytesUsed;
-         val var1: Int = this.bytesCapacity;
+         val var2: Int = this.bytesCapacity;
          val var6: M = M.a;
          val var8: java.lang.String = java.lang.String.format(Locale.US, "%.1f", Arrays.copyOf(new Object[]{this.memoryEfficiency * (float)100}, 1));
          r.g(var8, "format(...)");
-         val var2: Int = this.headPosition;
+         val var1: Int = this.headPosition;
          val var3: Int = this.tailPosition;
          val var7: StringBuilder = new StringBuilder();
          var7.append("BufferStats(lines=");
@@ -360,11 +360,11 @@ public class CircularByteBuffer(maxByteCount: Int) {
          var7.append(", used=");
          var7.append(var5);
          var7.append("B/");
-         var7.append(var1);
+         var7.append(var2);
          var7.append("B (");
          var7.append(var8);
          var7.append("%), head=");
-         var7.append(var2);
+         var7.append(var1);
          var7.append(", tail=");
          var7.append(var3);
          var7.append(")");

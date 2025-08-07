@@ -10,32 +10,27 @@ public object HermesSamplingProfilerUtil {
       label18: {
          val var10: FileInputStream = new FileInputStream(var1);
 
-         var var2: ByteArray;
+         var var11: ByteArray;
          try {
-            var2 = b.c(var10);
+            var11 = b.c(var10);
          } catch (var5: java.lang.Throwable) {
-            val var3: java.lang.Throwable = var5;
+            val var2: java.lang.Throwable = var5;
 
             try {
-               throw var3;
+               throw var2;
             } catch (var4: java.lang.Throwable) {
                c.a(var10, var5);
             }
          }
 
          c.a(var10, null);
-         return h.r(var2);
+         return h.r(var11);
       }
    }
 
    public fun findSampleTrace(cacheDir: File): String? {
       // $VF: Couldn't be decompiled
       // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
-      // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.code.cfg.ExceptionRangeCFG.isCircular()" because "range" is null
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.graphToStatement(DomHelper.java:84)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.parseGraph(DomHelper.java:203)
-      //   at org.jetbrains.java.decompiler.modules.decompiler.decompose.DomHelper.createStatement(DomHelper.java:27)
-      //   at org.jetbrains.java.decompiler.main.rels.MethodProcessor.codeToJava(MethodProcessor.java:157)
       //
       // Bytecode:
       // 000: aload 1
@@ -315,30 +310,30 @@ public object HermesSamplingProfilerUtil {
       // 23a: aload 12
       // 23c: invokeinterface java/util/Map.entrySet ()Ljava/util/Set; 1
       // 241: invokeinterface java/util/Set.iterator ()Ljava/util/Iterator; 1
-      // 246: astore 12
+      // 246: astore 14
       // 248: aload 9
       // 24a: astore 1
-      // 24b: aload 12
+      // 24b: aload 14
       // 24d: invokeinterface java/util/Iterator.hasNext ()Z 1
       // 252: ifeq 2be
       // 255: aload 9
       // 257: astore 1
-      // 258: aload 12
+      // 258: aload 14
       // 25a: invokeinterface java/util/Iterator.next ()Ljava/lang/Object; 1
       // 25f: checkcast java/util/Map$Entry
-      // 262: astore 14
+      // 262: astore 13
       // 264: aload 9
       // 266: astore 1
-      // 267: aload 14
+      // 267: aload 13
       // 269: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
       // 26e: checkcast java/lang/String
       // 271: invokestatic kotlin/text/h.m (Ljava/lang/String;)Ljava/lang/Integer;
-      // 274: astore 13
-      // 276: aload 13
+      // 274: astore 12
+      // 276: aload 12
       // 278: ifnull 29c
       // 27b: aload 9
       // 27d: astore 1
-      // 27e: aload 13
+      // 27e: aload 12
       // 280: invokevirtual java/lang/Number.intValue ()I
       // 283: aload 11
       // 285: invokevirtual java/lang/Integer.intValue ()I
@@ -361,9 +356,9 @@ public object HermesSamplingProfilerUtil {
       // 2a2: aload 9
       // 2a4: astore 1
       // 2a5: aload 10
-      // 2a7: aload 14
+      // 2a7: aload 13
       // 2a9: invokeinterface java/util/Map$Entry.getKey ()Ljava/lang/Object; 1
-      // 2ae: aload 14
+      // 2ae: aload 13
       // 2b0: invokeinterface java/util/Map$Entry.getValue ()Ljava/lang/Object; 1
       // 2b5: invokeinterface java/util/Map.put (Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; 3
       // 2ba: pop
@@ -387,12 +382,12 @@ public object HermesSamplingProfilerUtil {
       // 2df: aload 9
       // 2e1: astore 1
       // 2e2: getstatic kotlinx/serialization/json/Json.d Lkotlinx/serialization/json/Json$a;
-      // 2e5: astore 11
+      // 2e5: astore 12
       // 2e7: aload 9
       // 2e9: astore 1
       // 2ea: getstatic kotlinx/serialization/json/JsonObject.Companion Lkotlinx/serialization/json/JsonObject$Companion;
       // 2ed: invokevirtual kotlinx/serialization/json/JsonObject$Companion.serializer ()Lkotlinx/serialization/KSerializer;
-      // 2f0: astore 12
+      // 2f0: astore 11
       // 2f2: aload 9
       // 2f4: astore 1
       // 2f5: new kotlinx/serialization/json/JsonObject
@@ -404,8 +399,8 @@ public object HermesSamplingProfilerUtil {
       // 301: invokespecial kotlinx/serialization/json/JsonObject.<init> (Ljava/util/Map;)V
       // 304: aload 9
       // 306: astore 1
-      // 307: aload 11
-      // 309: aload 12
+      // 307: aload 12
+      // 309: aload 11
       // 30b: aload 10
       // 30d: invokevirtual kotlinx/serialization/json/Json.c (Ltb/i;Ljava/lang/Object;)Ljava/lang/String;
       // 310: astore 8

@@ -73,15 +73,15 @@ public data class StallReport(stallTime: Int, sessionId: String, trace: String?)
 
    public override fun toString(): String {
       val var1: Int = this.stallTime;
-      val var3: java.lang.String = this.sessionId;
-      val var2: java.lang.String = this.trace;
+      val var2: java.lang.String = this.sessionId;
+      val var3: java.lang.String = this.trace;
       val var4: StringBuilder = new StringBuilder();
       var4.append("StallReport(stallTime=");
       var4.append(var1);
       var4.append(", sessionId=");
-      var4.append(var3);
-      var4.append(", trace=");
       var4.append(var2);
+      var4.append(", trace=");
+      var4.append(var3);
       var4.append(")");
       return var4.toString();
    }

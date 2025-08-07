@@ -47,9 +47,9 @@ public class VerticalPaddingSpan(top: Int, bottom: Int) : LineHeightSpan {
          }
 
          if (var7.getSpanEnd(this) == var3) {
-            var3 = this.bottom;
+            var2 = this.bottom;
             var6.bottom = var6.bottom + this.bottom;
-            var6.descent += var3;
+            var6.descent += var2;
          } else {
             var6.bottom = this.origBottom;
             var6.descent = this.origDescent;

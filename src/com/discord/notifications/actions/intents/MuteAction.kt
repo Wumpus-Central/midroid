@@ -36,18 +36,18 @@ public class MuteAction(tag: String, guildId: GuildId?, channelId: ChannelId, mu
    public override fun onNotificationAction(context: Context, intent: Intent) {
       r.h(var1, "context");
       r.h(var2, "intent");
-      val var5: HeadlessTasks.Companion = HeadlessTasks.Companion;
-      val var3: Bundle = new Bundle();
+      val var3: HeadlessTasks.Companion = HeadlessTasks.Companion;
+      val var5: Bundle = new Bundle();
       if (this.guildId != null) {
-         var3.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
+         var5.putString("guildId", java.lang.String.valueOf(this.guildId.unbox-impl()));
       }
 
-      var3.putString("channelId", java.lang.String.valueOf(this.channelId));
+      var5.putString("channelId", java.lang.String.valueOf(this.channelId));
       if (this.muteTime != null) {
-         var3.putInt("muteTime", this.muteTime);
+         var5.putInt("muteTime", this.muteTime);
       }
 
-      HeadlessTasks.Companion.startHeadlessTask$default(var5, var1, "MuteAction", 0L, false, var3, true, 12, null);
+      HeadlessTasks.Companion.startHeadlessTask$default(var3, var1, "MuteAction", 0L, false, var5, true, 12, null);
    }
 
    override fun onNotificationActionComplete(var1: Context) {

@@ -72,17 +72,17 @@ public class SurveyIndicationView  public constructor(context: Context, attrs: A
       ReactAssetUtilsKt.setReactImageUrl(var5, var2.getFeedbackIconUrl());
       val var10: SimpleDraweeSpanTextView = this.binding.chatListAdapterItemTextFeedback;
       kotlin.jvm.internal.r.e(this.binding.chatListAdapterItemTextFeedback);
-      val var9: StructurableText = var2.getContent();
-      val var6: Context = var10.getContext();
-      kotlin.jvm.internal.r.g(var6, "getContext(...)");
+      val var6: StructurableText = var2.getContent();
+      val var9: Context = var10.getContext();
+      kotlin.jvm.internal.r.g(var9, "getContext(...)");
       val var7: FontMetrics = var10.getPaint().getFontMetrics();
       kotlin.jvm.internal.r.g(var7, "getFontMetrics(...)");
       val var4: Float = TextUtilsKt.getBaselineHeightPx(var7);
       val var11: TextPaint = this.binding.chatListAdapterItemTextFeedback.getPaint();
       kotlin.jvm.internal.r.g(var11, "getPaint(...)");
       val var8: DraweeSpanStringBuilder = TextUtilsKt.toSpannable$default(
-         var9,
          var6,
+         var9,
          var1,
          false,
          false,

@@ -233,14 +233,14 @@ internal class BillingManager(isProdBuild: Boolean,
          val var2: java.util.List = var1.f();
          kotlin.jvm.internal.r.g(var2, "getProducts(...)");
 
-         for (java.lang.String var3 : var2) {
-            val var6: Function3 = this.onPurchaseUpdated;
-            val var5: java.lang.String = var1.i();
-            kotlin.jvm.internal.r.g(var5, "getPurchaseToken(...)");
-            val var4: java.lang.String = var1.e();
-            kotlin.jvm.internal.r.g(var4, "getPackageName(...)");
-            kotlin.jvm.internal.r.e(var3);
-            var6.invoke(var5, var4, var3);
+         for (java.lang.String var6 : var2) {
+            val var4: Function3 = this.onPurchaseUpdated;
+            val var3: java.lang.String = var1.i();
+            kotlin.jvm.internal.r.g(var3, "getPurchaseToken(...)");
+            val var7: java.lang.String = var1.e();
+            kotlin.jvm.internal.r.g(var7, "getPackageName(...)");
+            kotlin.jvm.internal.r.e(var6);
+            var4.invoke(var3, var7, var6);
          }
       }
    }
@@ -294,12 +294,12 @@ internal class BillingManager(isProdBuild: Boolean,
       if (!this.isBillingClientReady()) {
          var4.invoke(new BillingManagerException.BillingClientNotReadyException());
       } else {
-         val var6: CoroutineScope = this.getCoroutineScope(var5);
+         val var7: CoroutineScope = this.getCoroutineScope(var5);
          jb.f.d(
-            var6,
+            var7,
             K.a(),
             null,
-            new Function2(new ExponentialBackoff(var6, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
+            new Function2(new ExponentialBackoff(var7, 0L, 0L, 0, 14, null), var4, this, var3, var2, var1, null)// $VF: Couldn't be decompiled
    // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
    // java.lang.NullPointerException: Cannot invoke "org.jetbrains.java.decompiler.modules.decompiler.stats.Statement.getVarDefinitions()" because "stat" is null
    //   at org.jetbrains.java.decompiler.modules.decompiler.vars.VarDefinitionHelper.iterateClashingNames(VarDefinitionHelper.java:1468)

@@ -82,13 +82,13 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
       if (this.id != null) {
          val var7: java.lang.Long = h.o(this.id);
          if (var7 != null) {
-            val var2: Long = var7.longValue();
+            val var1: Long = var7.longValue();
             var var8: java.lang.String = this.displayName;
             if (this.displayName == null) {
                var8 = this.name;
             }
 
-            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var2, this.animated, var8);
+            val var9: RenderableEmoji.CustomWithEmojiId = RenderableEmoji.Companion.customWithEmojiId(var1, this.animated, var8);
             if (var9 != null) {
                return var9;
             }
@@ -99,21 +99,21 @@ public data class PollMediaEmoji(id: String?, name: String, displayName: String?
    }
 
    public override fun toString(): String {
-      val var2: java.lang.String = this.id;
-      val var4: java.lang.String = this.name;
+      val var4: java.lang.String = this.id;
+      val var3: java.lang.String = this.name;
       val var5: java.lang.String = this.displayName;
       val var1: Boolean = this.animated;
-      val var3: StringBuilder = new StringBuilder();
-      var3.append("PollMediaEmoji(id=");
-      var3.append(var2);
-      var3.append(", name=");
-      var3.append(var4);
-      var3.append(", displayName=");
-      var3.append(var5);
-      var3.append(", animated=");
-      var3.append(var1);
-      var3.append(")");
-      return var3.toString();
+      val var2: StringBuilder = new StringBuilder();
+      var2.append("PollMediaEmoji(id=");
+      var2.append(var4);
+      var2.append(", name=");
+      var2.append(var3);
+      var2.append(", displayName=");
+      var2.append(var5);
+      var2.append(", animated=");
+      var2.append(var1);
+      var2.append(")");
+      return var2.toString();
    }
 
    public companion object {

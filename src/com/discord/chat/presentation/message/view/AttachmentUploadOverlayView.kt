@@ -48,17 +48,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       this.transitionOutDuration = 175L;
       this.transitionDelay = 400L;
       this.animationStartDelay = 1000L;
-      val var3: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
-      kotlin.jvm.internal.r.g(var3, "inflate(...)");
-      this.binding = var3;
+      val var5: AttachmentUploadOverlayViewBinding = AttachmentUploadOverlayViewBinding.inflate(LayoutInflater.from(var1), this);
+      kotlin.jvm.internal.r.g(var5, "inflate(...)");
+      this.binding = var5;
       this.onAnimationComplete = new e();
-      val var5: SimpleDraweeView = var3.uploadCancel;
-      kotlin.jvm.internal.r.e(var3.uploadCancel);
-      ReactAssetUtilsKt.setReactAsset(var5, ReactAsset.Cancel);
-      ColorUtilsKt.setTintColor(var5, Color.argb(255, 255, 255, 255));
-      I18nUtilsKt.i18nContentDescription$default(var5, I18nMessage.CANCEL, null, 2, null);
-      val var4: SimpleDraweeView = var3.uploadComplete;
-      kotlin.jvm.internal.r.e(var3.uploadComplete);
+      val var3: SimpleDraweeView = var5.uploadCancel;
+      kotlin.jvm.internal.r.e(var5.uploadCancel);
+      ReactAssetUtilsKt.setReactAsset(var3, ReactAsset.Cancel);
+      ColorUtilsKt.setTintColor(var3, Color.argb(255, 255, 255, 255));
+      I18nUtilsKt.i18nContentDescription$default(var3, I18nMessage.CANCEL, null, 2, null);
+      val var4: SimpleDraweeView = var5.uploadComplete;
+      kotlin.jvm.internal.r.e(var5.uploadComplete);
       ReactAssetUtilsKt.setReactAsset(var4, ReactAsset.Checkmark);
       ColorUtilsKt.setTintColor(var4, Color.argb(255, 88, 101, 242));
       I18nUtilsKt.i18nContentDescription$default(var4, I18nMessage.UPLOAD_COMPLETE, null, 2, null);
@@ -181,17 +181,17 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
    }
 
    private fun uploadCompleteCheckmarkFadeOutAnim(): AnimatorSet {
-      val var2: AnimatorSet = new AnimatorSet();
-      var2.setDuration(this.transitionOutDuration);
-      var2.setStartDelay(this.transitionDelay);
-      val var1: ValueAnimator = new ValueAnimator();
-      var1.setFloatValues(new float[]{0.9F, 0.8F});
-      var1.addUpdateListener(new j(this));
+      val var1: AnimatorSet = new AnimatorSet();
+      var1.setDuration(this.transitionOutDuration);
+      var1.setStartDelay(this.transitionDelay);
+      val var2: ValueAnimator = new ValueAnimator();
+      var2.setFloatValues(new float[]{0.9F, 0.8F});
+      var2.addUpdateListener(new j(this));
       val var4: ValueAnimator = new ValueAnimator();
       var4.setFloatValues(new float[]{1.0F, 0.0F});
       var4.addUpdateListener(new k(this));
-      var2.playTogether(new Animator[]{var1, var4});
-      var2.addListener(new AnimatorListener(this) {
+      var1.playTogether(new Animator[]{var2, var4});
+      var1.addListener(new AnimatorListener(this) {
          final AttachmentUploadOverlayView this$0;
 
          {
@@ -216,7 +216,7 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
          public void onAnimationStart(Animator var1) {
          }
       });
-      return var2;
+      return var1;
    }
 
    @JvmStatic
@@ -437,13 +437,13 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var1: Int = this.backgroundSize;
-         val var2: Int = this.checkmarkButtonSize;
+         val var2: Int = this.backgroundSize;
+         val var1: Int = this.checkmarkButtonSize;
          val var3: StringBuilder = new StringBuilder();
          var3.append("CompleteViewConfig(backgroundSize=");
-         var3.append(var1);
-         var3.append(", checkmarkButtonSize=");
          var3.append(var2);
+         var3.append(", checkmarkButtonSize=");
+         var3.append(var1);
          var3.append(")");
          return var3.toString();
       }
@@ -575,27 +575,27 @@ internal class AttachmentUploadOverlayView  public constructor(context: Context,
       }
 
       public override fun toString(): String {
-         val var2: Int = this.backgroundSize;
-         val var6: Drawable = this.backgroundDrawable;
-         val var4: Int = this.cancelButtonSize;
-         val var7: Int = this.primaryColor;
-         val var5: Int = this.progressIndicatorSize;
-         val var3: Int = this.trackColor;
-         val var1: StringBuilder = new StringBuilder();
-         var1.append("ProgressViewConfig(backgroundSize=");
-         var1.append(var2);
-         var1.append(", backgroundDrawable=");
-         var1.append(var6);
-         var1.append(", cancelButtonSize=");
-         var1.append(var4);
-         var1.append(", primaryColor=");
-         var1.append(var7);
-         var1.append(", progressIndicatorSize=");
-         var1.append(var5);
-         var1.append(", trackColor=");
-         var1.append(var3);
-         var1.append(")");
-         return var1.toString();
+         val var1: Int = this.backgroundSize;
+         val var4: Drawable = this.backgroundDrawable;
+         val var7: Int = this.cancelButtonSize;
+         val var3: Int = this.primaryColor;
+         val var6: Int = this.progressIndicatorSize;
+         val var2: Int = this.trackColor;
+         val var5: StringBuilder = new StringBuilder();
+         var5.append("ProgressViewConfig(backgroundSize=");
+         var5.append(var1);
+         var5.append(", backgroundDrawable=");
+         var5.append(var4);
+         var5.append(", cancelButtonSize=");
+         var5.append(var7);
+         var5.append(", primaryColor=");
+         var5.append(var3);
+         var5.append(", progressIndicatorSize=");
+         var5.append(var6);
+         var5.append(", trackColor=");
+         var5.append(var2);
+         var5.append(")");
+         return var5.toString();
       }
    }
 }

@@ -69,16 +69,16 @@ public data class LoadingRow(index: Int, changeType: ChangeType, button: LoadMor
 
    public override fun toString(): String {
       val var1: Int = this.index;
-      val var3: ChangeType = this.changeType;
-      val var5: LoadMoreButton = this.button;
+      val var5: ChangeType = this.changeType;
+      val var3: LoadMoreButton = this.button;
       val var2: Boolean = this.isLoading;
       val var4: StringBuilder = new StringBuilder();
       var4.append("LoadingRow(index=");
       var4.append(var1);
       var4.append(", changeType=");
-      var4.append(var3);
-      var4.append(", button=");
       var4.append(var5);
+      var4.append(", button=");
+      var4.append(var3);
       var4.append(", isLoading=");
       var4.append(var2);
       var4.append(")");

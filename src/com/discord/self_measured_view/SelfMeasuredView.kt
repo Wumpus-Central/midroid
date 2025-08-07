@@ -35,6 +35,7 @@ public class SelfMeasuredView  public constructor(context: Context, attrs: Attri
       r.h(var1, "context");
       super(var1, var2, var3);
       this.reactContext = var1 as ReactContext;
+      this.fabricEnabled = true;
       this.runnable = new a(this);
    }
 
