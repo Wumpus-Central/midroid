@@ -42,14 +42,14 @@ public object BSDiff {
          var11 = 0L;
 
          while (var11 < var9) {
+            val var15: Long = InputStreamUtilsKt.readOffset(var3);
             var13 = InputStreamUtilsKt.readOffset(var3);
             val var17: Long = InputStreamUtilsKt.readOffset(var3);
-            val var15: Long = InputStreamUtilsKt.readOffset(var3);
-            if (var11 + var13 + var17 > var9) {
+            if (var11 + var15 + var13 > var9) {
                throw new BSDiff.BsPatchError("Corrupted patch, attempting to make new file that's too big");
             }
 
-            var var19: java.util.Iterator = this.chunkRange(var13).iterator();
+            var var19: java.util.Iterator = this.chunkRange(var15).iterator();
 
             while (var19.hasNext()) {
                val var8: Int = (var19.next() as java.lang.Number).intValue();
@@ -63,7 +63,7 @@ public object BSDiff {
                var6.write(var20, 0, var8);
             }
 
-            var19 = this.chunkRange(var17).iterator();
+            var19 = this.chunkRange(var13).iterator();
 
             while (var19.hasNext()) {
                val var22: Int = (var19.next() as java.lang.Number).intValue();
@@ -71,8 +71,8 @@ public object BSDiff {
                var6.write(var20, 0, var22);
             }
 
-            var1.seek(var1.getFilePointer() + var15);
-            var11 += var13 + var17;
+            var1.seek(var1.getFilePointer() + var17);
+            var11 += var15 + var13;
          }
 
          var6.close();
@@ -184,7 +184,7 @@ public object BSDiff {
       // a1: return
       // a2: astore 2
       // a3: goto e5
-      // a6: astore 3
+      // a6: astore 2
       // a7: goto da
       // aa: astore 2
       // ab: goto cf
@@ -215,13 +215,13 @@ public object BSDiff {
       // d5: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
       // d8: aload 3
       // d9: athrow
-      // da: aload 3
+      // da: aload 2
       // db: athrow
-      // dc: astore 2
+      // dc: astore 3
       // dd: aload 4
-      // df: aload 3
+      // df: aload 2
       // e0: invokestatic M9/c.a (Ljava/io/Closeable;Ljava/lang/Throwable;)V
-      // e3: aload 2
+      // e3: aload 3
       // e4: athrow
       // e5: aload 2
       // e6: athrow

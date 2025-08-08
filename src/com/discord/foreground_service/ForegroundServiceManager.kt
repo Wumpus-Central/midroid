@@ -33,20 +33,20 @@ public class ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var2: Int = var3;
-               if (var3 < var4) {
+               var var3: Int = var2;
+               if (var2 < var4) {
                   var8 = var6;
-                  var2 = var4;
+                  var3 = var4;
                }
 
                var5 = var8;
-               var3 = var2;
+               var2 = var3;
             } while (var7.hasNext());
          }
 
@@ -67,15 +67,15 @@ public class ForegroundServiceManager {
    }
 
    private fun startServiceInternal(context: Context, serviceConfigurations: List<ServiceNotificationConfiguration>) {
-      val var5: Log = Log.INSTANCE;
+      val var6: Log = Log.INSTANCE;
       val var4: java.lang.String = tag;
       r.g(tag, "tag");
       val var3: Int = var2.size();
-      val var6: StringBuilder = new StringBuilder();
-      var6.append("Start service with ");
-      var6.append(var3);
-      var6.append(" configurations.");
-      Log.i$foreground_service_release$default(var5, var4, var6.toString(), null, 4, null);
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("Start service with ");
+      var5.append(var3);
+      var5.append(" configurations.");
+      Log.i$foreground_service_release$default(var6, var4, var5.toString(), null, 4, null);
       this.serviceConfigurations = var2;
       ForegroundService.Companion.start(var1, new d());
    }
@@ -83,10 +83,10 @@ public class ForegroundServiceManager {
    @JvmStatic
    fun `startServiceInternal$lambda$3`(var0: Exception): Unit {
       r.h(var0, "e");
-      val var2: Log = Log.INSTANCE;
-      val var1: java.lang.String = tag;
+      val var1: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
       r.g(tag, "tag");
-      var2.w$foreground_service_release(var1, "Unable to start service", var0);
+      var1.w$foreground_service_release(var2, "Unable to start service", var0);
       return Unit.a;
    }
 
@@ -285,14 +285,14 @@ public class ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 2
+      // 05: astore 1
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 1
-      // 0a: aload 1
+      // 09: astore 2
+      // 0a: aload 2
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 2
-      // 11: aload 1
+      // 10: aload 1
+      // 11: aload 2
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4
@@ -430,14 +430,14 @@ public class ForegroundServiceManager {
       // 03: ldc "context"
       // 05: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 08: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 0b: astore 3
+      // 0b: astore 2
       // 0c: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 0f: astore 2
-      // 10: aload 2
+      // 0f: astore 3
+      // 10: aload 3
       // 11: ldc "tag"
       // 13: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 16: aload 3
-      // 17: aload 2
+      // 16: aload 2
+      // 17: aload 3
       // 18: ldc_w "Stop service."
       // 1b: aconst_null
       // 1c: bipush 4

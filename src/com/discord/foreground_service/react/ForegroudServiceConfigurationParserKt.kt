@@ -76,10 +76,10 @@ internal fun Companion.parseList(readableArray: ReadableArray): List<ServiceNoti
 
    while (var7.hasNext()) {
       val var2: Int = (var7 as n).a();
-      val var5: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
-      val var4: ReadableMap = var1.getMap(var2);
-      r.e(var4);
-      var6.add(parse(var5, var4));
+      val var4: ServiceNotificationConfiguration.Companion = ServiceNotificationConfiguration.Companion;
+      val var5: ReadableMap = var1.getMap(var2);
+      r.e(var5);
+      var6.add(parse(var4, var5));
    }
 
    return var6;

@@ -129,19 +129,19 @@ public fun MaterialButton.setReactIcon(assetUrl: String, iconSize: Int) {
                      c.b(var1);
                      var1 = this.$this_setReactIcon.getContext();
                      r.g(var1, "getContext(...)");
-                     val var3: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
+                     val var2x: ImageSource = new ImageSource(var1, this.$assetUrl, 0.0, 0.0, null, false, 60, null);
                      var1 = this.$this_setReactIcon;
-                     if (var3.isResource()) {
-                        val var2x: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
+                     if (var2x.isResource()) {
+                        val var3: ResourceDrawableIdHelper = ResourceDrawableIdHelper.Companion.getInstance();
                         val var6: Context = var1.getContext();
                         r.g(var6, "getContext(...)");
-                        var1 = var2x.getResourceDrawable(var6, var3.getSource());
+                        var1 = var3.getResourceDrawable(var6, var2x.getSource());
                         r.e(var1);
-                     } else if (r.c(var3.getUri().getScheme(), "file")) {
-                        var1 = Drawable.createFromPath(var3.getUri().getPath());
+                     } else if (r.c(var2x.getUri().getScheme(), "file")) {
+                        var1 = Drawable.createFromPath(var2x.getUri().getPath());
                         r.e(var1);
                      } else {
-                        val var8: URLConnection = new URL(var3.getSource()).openConnection();
+                        val var8: URLConnection = new URL(var2x.getSource()).openConnection();
                         r.f(var8, "null cannot be cast to non-null type java.net.HttpURLConnection");
                         val var9: HttpURLConnection = var8 as HttpURLConnection;
                         (var8 as HttpURLConnection).connect();

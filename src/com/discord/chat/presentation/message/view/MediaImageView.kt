@@ -85,10 +85,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       if (var1) {
          return false;
       } else {
-         val var4: Int = GIF_INDICATOR_PADDING;
+         val var6: Int = GIF_INDICATOR_PADDING;
          var1 = false;
          if (this.getLayoutParams().height > GIF_INDICATOR_HEIGHT + GIF_INDICATOR_PADDING * 2) {
-            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var4 * 2) {
+            if (this.getLayoutParams().width <= GIF_INDICATOR_WIDTH + var6 * 2) {
                var1 = false;
             } else {
                if (var2 == null) {
@@ -217,10 +217,10 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
       val var27: FrameLayout = this.binding.imageBlurBg;
       kotlin.jvm.internal.r.g(this.binding.imageBlurBg, "imageBlurBg");
       ViewClippingUtilsKt.clipToRoundedRectangle(var27, var9);
-      val var31: SpoilerViewManager = this.spoilerViewManager;
-      val var33: ConstraintLayout = this.binding.container;
+      val var28: SpoilerViewManager = this.spoilerViewManager;
+      val var34: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
-      val var34: SimpleDraweeView = this.binding.image;
+      val var33: SimpleDraweeView = this.binding.image;
       kotlin.jvm.internal.r.g(this.binding.image, "image");
       if (var11 && !var15) {
          var15 = true;
@@ -234,7 +234,7 @@ public open class MediaImageView  public constructor(context: Context, attrs: At
          var7 = true;
       }
 
-      var31.configureSpoiler(var8, this, var33, var34, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
+      var28.configureSpoiler(var8, this, var34, var33, this.binding.imageBlurBg, var15, var12, var7, var9, var13, var14);
       val var32: AttachmentUploadOverlayViewManager = this.attachmentUploadOverlay;
       val var29: ConstraintLayout = this.binding.container;
       kotlin.jvm.internal.r.g(this.binding.container, "container");
