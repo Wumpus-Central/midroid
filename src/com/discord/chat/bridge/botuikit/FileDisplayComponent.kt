@@ -124,12 +124,12 @@ public data class FileDisplayComponent(type: Int,
    }
 
    public override fun hashCode(): Int {
-      val var5: Int = Integer.hashCode(this.type);
+      val var6: Int = Integer.hashCode(this.type);
       val var2: Int = this.id.hashCode();
-      val var3: Int = this.file.hashCode();
-      val var6: Int = this.name.hashCode();
+      val var5: Int = this.file.hashCode();
+      val var7: Int = this.name.hashCode();
       val var4: Int = this.size.hashCode();
-      val var7: Int = java.lang.Boolean.hashCode(this.isSpoiler);
+      val var3: Int = java.lang.Boolean.hashCode(this.isSpoiler);
       val var1: Int;
       if (this.spoilerDescription == null) {
          var1 = 0;
@@ -137,28 +137,28 @@ public data class FileDisplayComponent(type: Int,
          var1 = this.spoilerDescription.hashCode();
       }
 
-      return (((((var5 * 31 + var2) * 31 + var3) * 31 + var6) * 31 + var4) * 31 + var7) * 31 + var1;
+      return (((((var6 * 31 + var2) * 31 + var5) * 31 + var7) * 31 + var4) * 31 + var3) * 31 + var1;
    }
 
    public override fun toString(): String {
       val var1: Int = this.type;
-      val var8: java.lang.String = this.id;
-      val var5: UnfurledMediaItem = this.file;
-      val var3: java.lang.String = this.name;
-      val var4: java.lang.String = this.size;
+      val var3: java.lang.String = this.id;
+      val var4: UnfurledMediaItem = this.file;
+      val var8: java.lang.String = this.name;
+      val var5: java.lang.String = this.size;
       val var2: Boolean = this.isSpoiler;
       val var6: java.lang.String = this.spoilerDescription;
       val var7: StringBuilder = new StringBuilder();
       var7.append("FileDisplayComponent(type=");
       var7.append(var1);
       var7.append(", id=");
-      var7.append(var8);
-      var7.append(", file=");
-      var7.append(var5);
-      var7.append(", name=");
       var7.append(var3);
-      var7.append(", size=");
+      var7.append(", file=");
       var7.append(var4);
+      var7.append(", name=");
+      var7.append(var8);
+      var7.append(", size=");
+      var7.append(var5);
       var7.append(", isSpoiler=");
       var7.append(var2);
       var7.append(", spoilerDescription=");

@@ -25,15 +25,15 @@ public final class BlockedMessageGroupViewBinding implements ViewBinding {
 
    public static BlockedMessageGroupViewBinding bind(View var0) {
       int var1 = R.id.blocked_message_group_button;
-      TextView var2 = (TextView)a.a(var0, var1);
-      if (var2 != null) {
+      TextView var4 = (TextView)a.a(var0, var1);
+      if (var4 != null) {
          var1 = R.id.blocked_messages;
-         RecyclerView var4 = (RecyclerView)a.a(var0, var1);
-         if (var4 != null) {
+         RecyclerView var3 = (RecyclerView)a.a(var0, var1);
+         if (var3 != null) {
             var1 = R.id.close_icon;
-            SimpleDraweeView var3 = (SimpleDraweeView)a.a(var0, var1);
-            if (var3 != null) {
-               return new BlockedMessageGroupViewBinding(var0, var2, var4, var3);
+            SimpleDraweeView var2 = (SimpleDraweeView)a.a(var0, var1);
+            if (var2 != null) {
+               return new BlockedMessageGroupViewBinding(var0, var4, var3, var2);
             }
          }
       }

@@ -1116,21 +1116,21 @@ public data class Message(type: MessageType,
       } else if (var1 !is Message) {
          return false;
       } else {
-         val var4: Message = var1 as Message;
-         if (this.type != (var1 as Message).type) {
+         var1 = var1;
+         if (this.type != var1.type) {
             return false;
-         } else if (!MessageId.equals-impl0(this.id, var4.id)) {
+         } else if (!MessageId.equals-impl0(this.id, var1.id)) {
             return false;
          } else {
             var var2: Boolean;
             label386: {
                if (this.nonce == null) {
-                  if (var4.nonce == null) {
+                  if (var1.nonce == null) {
                      var2 = true;
                      break label386;
                   }
-               } else if (var4.nonce != null) {
-                  var2 = MessageId.equals-impl0(this.nonce, var4.nonce);
+               } else if (var1.nonce != null) {
+                  var2 = MessageId.equals-impl0(this.nonce, var1.nonce);
                   break label386;
                }
 
@@ -1139,184 +1139,184 @@ public data class Message(type: MessageType,
 
             if (!var2) {
                return false;
-            } else if (!ChannelId.equals-impl0(this.channelId, var4.channelId)) {
+            } else if (!ChannelId.equals-impl0(this.channelId, var1.channelId)) {
                return false;
-            } else if (!r.c(this.guildId, var4.guildId)) {
+            } else if (!r.c(this.guildId, var1.guildId)) {
                return false;
-            } else if (this.state != var4.state) {
+            } else if (this.state != var1.state) {
                return false;
-            } else if (!r.c(this.authorId, var4.authorId)) {
+            } else if (!r.c(this.authorId, var1.authorId)) {
                return false;
-            } else if (this.flags != var4.flags) {
+            } else if (this.flags != var1.flags) {
                return false;
-            } else if (!r.c(this.edited, var4.edited)) {
+            } else if (!r.c(this.edited, var1.edited)) {
                return false;
-            } else if (!r.c(this.editedColor, var4.editedColor)) {
+            } else if (!r.c(this.editedColor, var1.editedColor)) {
                return false;
-            } else if (!r.c(this._constrainedWidth, var4._constrainedWidth)) {
+            } else if (!r.c(this._constrainedWidth, var1._constrainedWidth)) {
                return false;
-            } else if (!r.c(this.textColor, var4.textColor)) {
+            } else if (!r.c(this.textColor, var1.textColor)) {
                return false;
-            } else if (!r.c(this.linkColor, var4.linkColor)) {
+            } else if (!r.c(this.linkColor, var1.linkColor)) {
                return false;
-            } else if (!r.c(this.timestamp, var4.timestamp)) {
+            } else if (!r.c(this.timestamp, var1.timestamp)) {
                return false;
-            } else if (!r.c(this.timestampColor, var4.timestampColor)) {
+            } else if (!r.c(this.timestampColor, var1.timestampColor)) {
                return false;
-            } else if (!r.c(this.username, var4.username)) {
+            } else if (!r.c(this.username, var1.username)) {
                return false;
-            } else if (!r.c(this.usernameColor, var4.usernameColor)) {
+            } else if (!r.c(this.usernameColor, var1.usernameColor)) {
                return false;
-            } else if (!r.c(this.roleColor, var4.roleColor)) {
+            } else if (!r.c(this.roleColor, var1.roleColor)) {
                return false;
-            } else if (!r.c(this.roleColors, var4.roleColors)) {
+            } else if (!r.c(this.roleColors, var1.roleColors)) {
                return false;
-            } else if (this.shouldShowRoleDot != var4.shouldShowRoleDot) {
+            } else if (this.shouldShowRoleDot != var1.shouldShowRoleDot) {
                return false;
-            } else if (this.shouldShowRoleOnName != var4.shouldShowRoleOnName) {
+            } else if (this.shouldShowRoleOnName != var1.shouldShowRoleOnName) {
                return false;
-            } else if (!r.c(this.colorString, var4.colorString)) {
+            } else if (!r.c(this.colorString, var1.colorString)) {
                return false;
-            } else if (!r.c(this.avatarURL, var4.avatarURL)) {
+            } else if (!r.c(this.avatarURL, var1.avatarURL)) {
                return false;
-            } else if (!r.c(this.avatarDecorationURL, var4.avatarDecorationURL)) {
+            } else if (!r.c(this.avatarDecorationURL, var1.avatarDecorationURL)) {
                return false;
-            } else if (!r.c(this.embeds, var4.embeds)) {
+            } else if (!r.c(this.embeds, var1.embeds)) {
                return false;
-            } else if (!r.c(this.attachments, var4.attachments)) {
+            } else if (!r.c(this.attachments, var1.attachments)) {
                return false;
-            } else if (!r.c(this.attachmentsOpacity, var4.attachmentsOpacity)) {
+            } else if (!r.c(this.attachmentsOpacity, var1.attachmentsOpacity)) {
                return false;
-            } else if (!r.c(this.content, var4.content)) {
+            } else if (!r.c(this.content, var1.content)) {
                return false;
-            } else if (!r.c(this.reactions, var4.reactions)) {
+            } else if (!r.c(this.reactions, var1.reactions)) {
                return false;
-            } else if (!r.c(this.codedLinks, var4.codedLinks)) {
+            } else if (!r.c(this.codedLinks, var1.codedLinks)) {
                return false;
-            } else if (!r.c(this.activityInstanceEmbed, var4.activityInstanceEmbed)) {
+            } else if (!r.c(this.activityInstanceEmbed, var1.activityInstanceEmbed)) {
                return false;
-            } else if (!r.c(this.stickers, var4.stickers)) {
+            } else if (!r.c(this.stickers, var1.stickers)) {
                return false;
-            } else if (!r.c(this.roleIcon, var4.roleIcon)) {
+            } else if (!r.c(this.roleIcon, var1.roleIcon)) {
                return false;
-            } else if (!r.c(this.connectionsRoleTag, var4.connectionsRoleTag)) {
+            } else if (!r.c(this.connectionsRoleTag, var1.connectionsRoleTag)) {
                return false;
-            } else if (!r.c(this.threadEmbed, var4.threadEmbed)) {
+            } else if (!r.c(this.threadEmbed, var1.threadEmbed)) {
                return false;
-            } else if (this.mentioned != var4.mentioned) {
+            } else if (this.mentioned != var1.mentioned) {
                return false;
-            } else if (!r.c(this.gifAutoPlay, var4.gifAutoPlay)) {
+            } else if (!r.c(this.gifAutoPlay, var1.gifAutoPlay)) {
                return false;
-            } else if (!r.c(this.animateEmoji, var4.animateEmoji)) {
+            } else if (!r.c(this.animateEmoji, var1.animateEmoji)) {
                return false;
-            } else if (!r.c(this.showLinkDecorations, var4.showLinkDecorations)) {
+            } else if (!r.c(this.showLinkDecorations, var1.showLinkDecorations)) {
                return false;
-            } else if (!r.c(this.referencedMessage, var4.referencedMessage)) {
+            } else if (!r.c(this.referencedMessage, var1.referencedMessage)) {
                return false;
-            } else if (!r.c(this.executedCommand, var4.executedCommand)) {
+            } else if (!r.c(this.executedCommand, var1.executedCommand)) {
                return false;
-            } else if (!r.c(this.components, var4.components)) {
+            } else if (!r.c(this.components, var1.components)) {
                return false;
-            } else if (!r.c(this.threadStarterMessageHeader, var4.threadStarterMessageHeader)) {
+            } else if (!r.c(this.threadStarterMessageHeader, var1.threadStarterMessageHeader)) {
                return false;
-            } else if (!r.c(this.communicationDisabled, var4.communicationDisabled)) {
+            } else if (!r.c(this.communicationDisabled, var1.communicationDisabled)) {
                return false;
-            } else if (!r.c(this.tagText, var4.tagText)) {
+            } else if (!r.c(this.tagText, var1.tagText)) {
                return false;
-            } else if (!r.c(this.tagVerified, var4.tagVerified)) {
+            } else if (!r.c(this.tagVerified, var1.tagVerified)) {
                return false;
-            } else if (!r.c(this.tagTextColor, var4.tagTextColor)) {
+            } else if (!r.c(this.tagTextColor, var1.tagTextColor)) {
                return false;
-            } else if (!r.c(this.tagBackgroundColor, var4.tagBackgroundColor)) {
+            } else if (!r.c(this.tagBackgroundColor, var1.tagBackgroundColor)) {
                return false;
-            } else if (!r.c(this.tagType, var4.tagType)) {
+            } else if (!r.c(this.tagType, var1.tagType)) {
                return false;
-            } else if (!r.c(this.tagIconUrl, var4.tagIconUrl)) {
+            } else if (!r.c(this.tagIconUrl, var1.tagIconUrl)) {
                return false;
-            } else if (!r.c(this.opTagText, var4.opTagText)) {
+            } else if (!r.c(this.opTagText, var1.opTagText)) {
                return false;
-            } else if (!r.c(this.ephemeralIndication, var4.ephemeralIndication)) {
+            } else if (!r.c(this.ephemeralIndication, var1.ephemeralIndication)) {
                return false;
-            } else if (!r.c(this.surveyIndication, var4.surveyIndication)) {
+            } else if (!r.c(this.surveyIndication, var1.surveyIndication)) {
                return false;
-            } else if (!r.c(this.interactionStatus, var4.interactionStatus)) {
+            } else if (!r.c(this.interactionStatus, var1.interactionStatus)) {
                return false;
-            } else if (!r.c(this.useAttachmentGridLayout, var4.useAttachmentGridLayout)) {
+            } else if (!r.c(this.useAttachmentGridLayout, var1.useAttachmentGridLayout)) {
                return false;
-            } else if (!r.c(this.useAttachmentUploadPreview, var4.useAttachmentUploadPreview)) {
+            } else if (!r.c(this.useAttachmentUploadPreview, var1.useAttachmentUploadPreview)) {
                return false;
-            } else if (!r.c(this.isCurrentUserMessageAuthor, var4.isCurrentUserMessageAuthor)) {
+            } else if (!r.c(this.isCurrentUserMessageAuthor, var1.isCurrentUserMessageAuthor)) {
                return false;
-            } else if (!r.c(this.obscureLearnMoreLabel, var4.obscureLearnMoreLabel)) {
+            } else if (!r.c(this.obscureLearnMoreLabel, var1.obscureLearnMoreLabel)) {
                return false;
-            } else if (!r.c(this.usingGradientTheme, var4.usingGradientTheme)) {
+            } else if (!r.c(this.usingGradientTheme, var1.usingGradientTheme)) {
                return false;
-            } else if (!r.c(this.title, var4.title)) {
+            } else if (!r.c(this.title, var1.title)) {
                return false;
-            } else if (!r.c(this.description, var4.description)) {
+            } else if (!r.c(this.description, var1.description)) {
                return false;
-            } else if (!r.c(this.avatarURLs, var4.avatarURLs)) {
+            } else if (!r.c(this.avatarURLs, var1.avatarURLs)) {
                return false;
-            } else if (!r.c(this.isCallActive, var4.isCallActive)) {
+            } else if (!r.c(this.isCallActive, var1.isCallActive)) {
                return false;
-            } else if (!r.c(this.missed, var4.missed)) {
+            } else if (!r.c(this.missed, var1.missed)) {
                return false;
-            } else if (!r.c(this.rawMilliseconds, var4.rawMilliseconds)) {
+            } else if (!r.c(this.rawMilliseconds, var1.rawMilliseconds)) {
                return false;
-            } else if (!r.c(this.sticker, var4.sticker)) {
+            } else if (!r.c(this.sticker, var1.sticker)) {
                return false;
-            } else if (!r.c(this.stickerLabel, var4.stickerLabel)) {
+            } else if (!r.c(this.stickerLabel, var1.stickerLabel)) {
                return false;
-            } else if (!r.c(this.buttonLabel, var4.buttonLabel)) {
+            } else if (!r.c(this.buttonLabel, var1.buttonLabel)) {
                return false;
-            } else if (!r.c(this.showInviteToSpeakButton, var4.showInviteToSpeakButton)) {
+            } else if (!r.c(this.showInviteToSpeakButton, var1.showInviteToSpeakButton)) {
                return false;
-            } else if (!r.c(this.activityInviteEmbed, var4.activityInviteEmbed)) {
+            } else if (!r.c(this.activityInviteEmbed, var1.activityInviteEmbed)) {
                return false;
-            } else if (!r.c(this.activityRichPresenceInviteEmbed, var4.activityRichPresenceInviteEmbed)) {
+            } else if (!r.c(this.activityRichPresenceInviteEmbed, var1.activityRichPresenceInviteEmbed)) {
                return false;
-            } else if (this.isFirstForumPostMessage != var4.isFirstForumPostMessage) {
+            } else if (this.isFirstForumPostMessage != var1.isFirstForumPostMessage) {
                return false;
-            } else if (!r.c(this.postActions, var4.postActions)) {
+            } else if (!r.c(this.postActions, var1.postActions)) {
                return false;
-            } else if (!r.c(this.autoModerationContext, var4.autoModerationContext)) {
+            } else if (!r.c(this.autoModerationContext, var1.autoModerationContext)) {
                return false;
-            } else if (!r.c(this.referralTrialOfferInfo, var4.referralTrialOfferInfo)) {
+            } else if (!r.c(this.referralTrialOfferInfo, var1.referralTrialOfferInfo)) {
                return false;
-            } else if (!r.c(this.giftCodes, var4.giftCodes)) {
+            } else if (!r.c(this.giftCodes, var1.giftCodes)) {
                return false;
-            } else if (!r.c(this.referralTrialOffer, var4.referralTrialOffer)) {
+            } else if (!r.c(this.referralTrialOffer, var1.referralTrialOffer)) {
                return false;
-            } else if (!r.c(this.totalMonthsSubscribed, var4.totalMonthsSubscribed)) {
+            } else if (!r.c(this.totalMonthsSubscribed, var1.totalMonthsSubscribed)) {
                return false;
-            } else if (!r.c(this.postPreviewEmbeds, var4.postPreviewEmbeds)) {
+            } else if (!r.c(this.postPreviewEmbeds, var1.postPreviewEmbeds)) {
                return false;
-            } else if (!r.c(this.channelPromptData, var4.channelPromptData)) {
+            } else if (!r.c(this.channelPromptData, var1.channelPromptData)) {
                return false;
-            } else if (!r.c(this.safetyPolicyNoticeEmbed, var4.safetyPolicyNoticeEmbed)) {
+            } else if (!r.c(this.safetyPolicyNoticeEmbed, var1.safetyPolicyNoticeEmbed)) {
                return false;
-            } else if (!r.c(this.safetySystemNotificationEmbed, var4.safetySystemNotificationEmbed)) {
+            } else if (!r.c(this.safetySystemNotificationEmbed, var1.safetySystemNotificationEmbed)) {
                return false;
-            } else if (!r.c(this.pollData, var4.pollData)) {
+            } else if (!r.c(this.pollData, var1.pollData)) {
                return false;
-            } else if (!r.c(this.ctaButton, var4.ctaButton)) {
+            } else if (!r.c(this.ctaButton, var1.ctaButton)) {
                return false;
-            } else if (!r.c(this.audioAttachmentBackgroundColor, var4.audioAttachmentBackgroundColor)) {
+            } else if (!r.c(this.audioAttachmentBackgroundColor, var1.audioAttachmentBackgroundColor)) {
                return false;
-            } else if (!r.c(this.forwardInfo, var4.forwardInfo)) {
+            } else if (!r.c(this.forwardInfo, var1.forwardInfo)) {
                return false;
-            } else if (!r.c(this.showInlineForwardButton, var4.showInlineForwardButton)) {
+            } else if (!r.c(this.showInlineForwardButton, var1.showInlineForwardButton)) {
                return false;
-            } else if (!r.c(this.clanTagGuildId, var4.clanTagGuildId)) {
+            } else if (!r.c(this.clanTagGuildId, var1.clanTagGuildId)) {
                return false;
-            } else if (!r.c(this.clanTag, var4.clanTag)) {
+            } else if (!r.c(this.clanTag, var1.clanTag)) {
                return false;
-            } else if (!r.c(this.clanBadgeUrl, var4.clanBadgeUrl)) {
+            } else if (!r.c(this.clanBadgeUrl, var1.clanBadgeUrl)) {
                return false;
-            } else if (!r.c(this.gameApplicationId, var4.gameApplicationId)) {
+            } else if (!r.c(this.gameApplicationId, var1.gameApplicationId)) {
                return false;
             } else {
-               return this.isAnnouncementChannel == var4.isAnnouncementChannel;
+               return this.isAnnouncementChannel == var1.isAnnouncementChannel;
             }
          }
       }
@@ -1332,8 +1332,8 @@ public data class Message(type: MessageType,
    }
 
    public override fun hashCode(): Int {
-      val var85: Int = this.type.hashCode();
-      val var84: Int = MessageId.hashCode-impl(this.id);
+      val var84: Int = this.type.hashCode();
+      val var85: Int = MessageId.hashCode-impl(this.id);
       var var83: Int = 0;
       val var1: Int;
       if (this.nonce == null) {
@@ -2009,9 +2009,9 @@ public data class Message(type: MessageType,
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               (
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        (
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                var85
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                var84
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       * 31
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   + var84
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   + var85
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              )
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              * 31
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           + var1
@@ -2300,8 +2300,8 @@ public data class Message(type: MessageType,
    }
 
    public override fun toString(): String {
-      val var9: MessageType = this.type;
-      val var10: java.lang.String = MessageId.toString-impl(this.id);
+      val var10: MessageType = this.type;
+      val var9: java.lang.String = MessageId.toString-impl(this.id);
       val var95: java.lang.String;
       if (this.nonce == null) {
          var95 = "null";
@@ -2309,282 +2309,282 @@ public data class Message(type: MessageType,
          var95 = MessageId.toString-impl(this.nonce);
       }
 
-      val var65: java.lang.String = ChannelId.toString-impl(this.channelId);
-      val var67: GuildId = this.guildId;
-      val var71: MessageState = this.state;
-      val var11: UserId = this.authorId;
+      val var70: java.lang.String = ChannelId.toString-impl(this.channelId);
+      val var11: GuildId = this.guildId;
+      val var41: MessageState = this.state;
+      val var42: UserId = this.authorId;
       val var6: Long = this.flags;
-      val var41: java.lang.String = this.edited;
-      val var92: Int = this.editedColor;
-      val var72: java.lang.Float = this._constrainedWidth;
-      val var42: Int = this.textColor;
-      val var87: Int = this.linkColor;
-      val var16: java.lang.String = this.timestamp;
-      val var85: Int = this.timestampColor;
-      val var58: java.lang.String = this.username;
-      val var57: Int = this.usernameColor;
-      val var36: Int = this.roleColor;
-      val var38: RoleColors = this.roleColors;
-      val var4: Boolean = this.shouldShowRoleDot;
-      val var5: Boolean = this.shouldShowRoleOnName;
-      val var14: Int = this.colorString;
-      val var50: java.lang.String = this.avatarURL;
-      val var48: java.lang.String = this.avatarDecorationURL;
-      val var73: java.util.List = this.embeds;
-      val var12: java.util.List = this.attachments;
-      val var13: java.lang.Float = this.attachmentsOpacity;
-      val var86: StructurableText = this.content;
-      val var83: java.util.List = this.reactions;
-      val var31: java.util.List = this.codedLinks;
-      val var69: ActivityInstanceEmbed = this.activityInstanceEmbed;
-      val var26: java.util.List = this.stickers;
-      val var25: RoleIcon = this.roleIcon;
-      val var81: ConnectionsRoleTag = this.connectionsRoleTag;
-      val var64: ThreadEmbed = this.threadEmbed;
-      val var2: Boolean = this.mentioned;
-      val var53: java.lang.Boolean = this.gifAutoPlay;
-      val var22: java.lang.Boolean = this.animateEmoji;
-      val var17: java.lang.Boolean = this.showLinkDecorations;
-      val var62: ReferencedMessage = this.referencedMessage;
-      val var78: ExecutedCommand = this.executedCommand;
-      val var77: java.util.List = this.components;
-      val var19: java.lang.String = this.threadStarterMessageHeader;
-      val var29: java.lang.Boolean = this.communicationDisabled;
-      val var21: java.lang.String = this.tagText;
-      val var51: java.lang.Boolean = this.tagVerified;
-      val var54: Int = this.tagTextColor;
-      val var88: Int = this.tagBackgroundColor;
-      val var56: java.lang.String = this.tagType;
-      val var32: java.lang.String = this.tagIconUrl;
-      val var93: java.lang.String = this.opTagText;
-      val var70: EphemeralIndication = this.ephemeralIndication;
-      val var55: SurveyIndication = this.surveyIndication;
-      val var43: InteractionStatus = this.interactionStatus;
-      val var94: java.lang.Boolean = this.useAttachmentGridLayout;
-      val var15: java.lang.Boolean = this.useAttachmentUploadPreview;
-      val var91: java.lang.Boolean = this.isCurrentUserMessageAuthor;
-      val var59: java.lang.String = this.obscureLearnMoreLabel;
-      val var89: java.lang.Boolean = this.usingGradientTheme;
-      val var37: java.lang.String = this.title;
-      val var28: java.lang.String = this.description;
-      val var52: java.util.List = this.avatarURLs;
-      val var18: java.lang.Boolean = this.isCallActive;
-      val var74: java.lang.Boolean = this.missed;
-      val var46: java.lang.Long = this.rawMilliseconds;
-      val var66: Sticker = this.sticker;
-      val var27: java.lang.String = this.stickerLabel;
-      val var40: java.lang.String = this.buttonLabel;
-      val var79: java.lang.Boolean = this.showInviteToSpeakButton;
-      val var44: ActivityInviteEmbed = this.activityInviteEmbed;
-      val var34: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
+      val var74: java.lang.String = this.edited;
+      val var43: Int = this.editedColor;
+      val var89: java.lang.Float = this._constrainedWidth;
+      val var15: Int = this.textColor;
+      val var56: Int = this.linkColor;
+      val var87: java.lang.String = this.timestamp;
+      val var60: Int = this.timestampColor;
+      val var59: java.lang.String = this.username;
+      val var36: Int = this.usernameColor;
+      val var38: Int = this.roleColor;
+      val var68: RoleColors = this.roleColors;
+      val var5: Boolean = this.shouldShowRoleDot;
+      val var1: Boolean = this.shouldShowRoleOnName;
+      val var51: Int = this.colorString;
+      val var49: java.lang.String = this.avatarURL;
+      val var75: java.lang.String = this.avatarDecorationURL;
+      val var12: java.util.List = this.embeds;
+      val var13: java.util.List = this.attachments;
+      val var88: java.lang.Float = this.attachmentsOpacity;
+      val var85: StructurableText = this.content;
+      val var31: java.util.List = this.reactions;
+      val var72: java.util.List = this.codedLinks;
+      val var25: ActivityInstanceEmbed = this.activityInstanceEmbed;
+      val var24: java.util.List = this.stickers;
+      val var83: RoleIcon = this.roleIcon;
+      val var67: ConnectionsRoleTag = this.connectionsRoleTag;
+      val var29: ThreadEmbed = this.threadEmbed;
+      val var4: Boolean = this.mentioned;
+      val var22: java.lang.Boolean = this.gifAutoPlay;
+      val var16: java.lang.Boolean = this.animateEmoji;
+      val var64: java.lang.Boolean = this.showLinkDecorations;
+      val var80: ReferencedMessage = this.referencedMessage;
+      val var79: ExecutedCommand = this.executedCommand;
+      val var19: java.util.List = this.components;
+      val var28: java.lang.String = this.threadStarterMessageHeader;
+      val var21: java.lang.Boolean = this.communicationDisabled;
+      val var52: java.lang.String = this.tagText;
+      val var54: java.lang.Boolean = this.tagVerified;
+      val var90: Int = this.tagTextColor;
+      val var58: Int = this.tagBackgroundColor;
+      val var32: java.lang.String = this.tagType;
+      val var93: java.lang.String = this.tagIconUrl;
+      val var73: java.lang.String = this.opTagText;
+      val var57: EphemeralIndication = this.ephemeralIndication;
+      val var44: SurveyIndication = this.surveyIndication;
+      val var94: InteractionStatus = this.interactionStatus;
+      val var14: java.lang.Boolean = this.useAttachmentGridLayout;
+      val var92: java.lang.Boolean = this.useAttachmentUploadPreview;
+      val var61: java.lang.Boolean = this.isCurrentUserMessageAuthor;
+      val var91: java.lang.String = this.obscureLearnMoreLabel;
+      val var37: java.lang.Boolean = this.usingGradientTheme;
+      val var27: java.lang.String = this.title;
+      val var53: java.lang.String = this.description;
+      val var18: java.util.List = this.avatarURLs;
+      val var76: java.lang.Boolean = this.isCallActive;
+      val var47: java.lang.Boolean = this.missed;
+      val var69: java.lang.Long = this.rawMilliseconds;
+      val var26: Sticker = this.sticker;
+      val var40: java.lang.String = this.stickerLabel;
+      val var81: java.lang.String = this.buttonLabel;
+      val var45: java.lang.Boolean = this.showInviteToSpeakButton;
+      val var34: ActivityInviteEmbed = this.activityInviteEmbed;
+      val var55: ActivityRichPresenceInviteEmbed = this.activityRichPresenceInviteEmbed;
       val var3: Boolean = this.isFirstForumPostMessage;
-      val var24: ForumPostActions = this.postActions;
-      val var82: AutoModerationContext = this.autoModerationContext;
-      val var61: ReferralEmbed = this.referralTrialOfferInfo;
-      val var75: java.util.List = this.giftCodes;
-      val var60: GiftEmbed = this.referralTrialOffer;
-      val var63: Int = this.totalMonthsSubscribed;
-      val var30: java.util.List = this.postPreviewEmbeds;
-      val var45: ChannelPromptData = this.channelPromptData;
-      val var33: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
-      val var35: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
-      val var80: PollData = this.pollData;
-      val var39: CtaButton = this.ctaButton;
-      val var20: Int = this.audioAttachmentBackgroundColor;
-      val var76: ForwardInfo = this.forwardInfo;
-      val var49: java.lang.Boolean = this.showInlineForwardButton;
-      val var84: GuildId = this.clanTagGuildId;
-      val var68: java.lang.String = this.clanTag;
-      val var23: java.lang.String = this.clanBadgeUrl;
-      val var47: java.lang.String = this.gameApplicationId;
-      val var1: Boolean = this.isAnnouncementChannel;
-      val var90: StringBuilder = new StringBuilder();
-      var90.append("Message(type=");
-      var90.append(var9);
-      var90.append(", id=");
-      var90.append(var10);
-      var90.append(", nonce=");
-      var90.append(var95);
-      var90.append(", channelId=");
-      var90.append(var65);
-      var90.append(", guildId=");
-      var90.append(var67);
-      var90.append(", state=");
-      var90.append(var71);
-      var90.append(", authorId=");
-      var90.append(var11);
-      var90.append(", flags=");
-      var90.append(var6);
-      var90.append(", edited=");
-      var90.append(var41);
-      var90.append(", editedColor=");
-      var90.append(var92);
-      var90.append(", _constrainedWidth=");
-      var90.append(var72);
-      var90.append(", textColor=");
-      var90.append(var42);
-      var90.append(", linkColor=");
-      var90.append(var87);
-      var90.append(", timestamp=");
-      var90.append(var16);
-      var90.append(", timestampColor=");
-      var90.append(var85);
-      var90.append(", username=");
-      var90.append(var58);
-      var90.append(", usernameColor=");
-      var90.append(var57);
-      var90.append(", roleColor=");
-      var90.append(var36);
-      var90.append(", roleColors=");
-      var90.append(var38);
-      var90.append(", shouldShowRoleDot=");
-      var90.append(var4);
-      var90.append(", shouldShowRoleOnName=");
-      var90.append(var5);
-      var90.append(", colorString=");
-      var90.append(var14);
-      var90.append(", avatarURL=");
-      var90.append(var50);
-      var90.append(", avatarDecorationURL=");
-      var90.append(var48);
-      var90.append(", embeds=");
-      var90.append(var73);
-      var90.append(", attachments=");
-      var90.append(var12);
-      var90.append(", attachmentsOpacity=");
-      var90.append(var13);
-      var90.append(", content=");
-      var90.append(var86);
-      var90.append(", reactions=");
-      var90.append(var83);
-      var90.append(", codedLinks=");
-      var90.append(var31);
-      var90.append(", activityInstanceEmbed=");
-      var90.append(var69);
-      var90.append(", stickers=");
-      var90.append(var26);
-      var90.append(", roleIcon=");
-      var90.append(var25);
-      var90.append(", connectionsRoleTag=");
-      var90.append(var81);
-      var90.append(", threadEmbed=");
-      var90.append(var64);
-      var90.append(", mentioned=");
-      var90.append(var2);
-      var90.append(", gifAutoPlay=");
-      var90.append(var53);
-      var90.append(", animateEmoji=");
-      var90.append(var22);
-      var90.append(", showLinkDecorations=");
-      var90.append(var17);
-      var90.append(", referencedMessage=");
-      var90.append(var62);
-      var90.append(", executedCommand=");
-      var90.append(var78);
-      var90.append(", components=");
-      var90.append(var77);
-      var90.append(", threadStarterMessageHeader=");
-      var90.append(var19);
-      var90.append(", communicationDisabled=");
-      var90.append(var29);
-      var90.append(", tagText=");
-      var90.append(var21);
-      var90.append(", tagVerified=");
-      var90.append(var51);
-      var90.append(", tagTextColor=");
-      var90.append(var54);
-      var90.append(", tagBackgroundColor=");
-      var90.append(var88);
-      var90.append(", tagType=");
-      var90.append(var56);
-      var90.append(", tagIconUrl=");
-      var90.append(var32);
-      var90.append(", opTagText=");
-      var90.append(var93);
-      var90.append(", ephemeralIndication=");
-      var90.append(var70);
-      var90.append(", surveyIndication=");
-      var90.append(var55);
-      var90.append(", interactionStatus=");
-      var90.append(var43);
-      var90.append(", useAttachmentGridLayout=");
-      var90.append(var94);
-      var90.append(", useAttachmentUploadPreview=");
-      var90.append(var15);
-      var90.append(", isCurrentUserMessageAuthor=");
-      var90.append(var91);
-      var90.append(", obscureLearnMoreLabel=");
-      var90.append(var59);
-      var90.append(", usingGradientTheme=");
-      var90.append(var89);
-      var90.append(", title=");
-      var90.append(var37);
-      var90.append(", description=");
-      var90.append(var28);
-      var90.append(", avatarURLs=");
-      var90.append(var52);
-      var90.append(", isCallActive=");
-      var90.append(var18);
-      var90.append(", missed=");
-      var90.append(var74);
-      var90.append(", rawMilliseconds=");
-      var90.append(var46);
-      var90.append(", sticker=");
-      var90.append(var66);
-      var90.append(", stickerLabel=");
-      var90.append(var27);
-      var90.append(", buttonLabel=");
-      var90.append(var40);
-      var90.append(", showInviteToSpeakButton=");
-      var90.append(var79);
-      var90.append(", activityInviteEmbed=");
-      var90.append(var44);
-      var90.append(", activityRichPresenceInviteEmbed=");
-      var90.append(var34);
-      var90.append(", isFirstForumPostMessage=");
-      var90.append(var3);
-      var90.append(", postActions=");
-      var90.append(var24);
-      var90.append(", autoModerationContext=");
-      var90.append(var82);
-      var90.append(", referralTrialOfferInfo=");
-      var90.append(var61);
-      var90.append(", giftCodes=");
-      var90.append(var75);
-      var90.append(", referralTrialOffer=");
-      var90.append(var60);
-      var90.append(", totalMonthsSubscribed=");
-      var90.append(var63);
-      var90.append(", postPreviewEmbeds=");
-      var90.append(var30);
-      var90.append(", channelPromptData=");
-      var90.append(var45);
-      var90.append(", safetyPolicyNoticeEmbed=");
-      var90.append(var33);
-      var90.append(", safetySystemNotificationEmbed=");
-      var90.append(var35);
-      var90.append(", pollData=");
-      var90.append(var80);
-      var90.append(", ctaButton=");
-      var90.append(var39);
-      var90.append(", audioAttachmentBackgroundColor=");
-      var90.append(var20);
-      var90.append(", forwardInfo=");
-      var90.append(var76);
-      var90.append(", showInlineForwardButton=");
-      var90.append(var49);
-      var90.append(", clanTagGuildId=");
-      var90.append(var84);
-      var90.append(", clanTag=");
-      var90.append(var68);
-      var90.append(", clanBadgeUrl=");
-      var90.append(var23);
-      var90.append(", gameApplicationId=");
-      var90.append(var47);
-      var90.append(", isAnnouncementChannel=");
-      var90.append(var1);
-      var90.append(")");
-      return var90.toString();
+      val var84: ForumPostActions = this.postActions;
+      val var63: AutoModerationContext = this.autoModerationContext;
+      val var77: ReferralEmbed = this.referralTrialOfferInfo;
+      val var62: java.util.List = this.giftCodes;
+      val var66: GiftEmbed = this.referralTrialOffer;
+      val var30: Int = this.totalMonthsSubscribed;
+      val var46: java.util.List = this.postPreviewEmbeds;
+      val var33: ChannelPromptData = this.channelPromptData;
+      val var35: SafetyPolicyNoticeEmbed = this.safetyPolicyNoticeEmbed;
+      val var82: SafetySystemNotificationEmbed = this.safetySystemNotificationEmbed;
+      val var39: PollData = this.pollData;
+      val var20: CtaButton = this.ctaButton;
+      val var78: Int = this.audioAttachmentBackgroundColor;
+      val var50: ForwardInfo = this.forwardInfo;
+      val var86: java.lang.Boolean = this.showInlineForwardButton;
+      val var71: GuildId = this.clanTagGuildId;
+      val var23: java.lang.String = this.clanTag;
+      val var48: java.lang.String = this.clanBadgeUrl;
+      val var17: java.lang.String = this.gameApplicationId;
+      val var2: Boolean = this.isAnnouncementChannel;
+      val var65: StringBuilder = new StringBuilder();
+      var65.append("Message(type=");
+      var65.append(var10);
+      var65.append(", id=");
+      var65.append(var9);
+      var65.append(", nonce=");
+      var65.append(var95);
+      var65.append(", channelId=");
+      var65.append(var70);
+      var65.append(", guildId=");
+      var65.append(var11);
+      var65.append(", state=");
+      var65.append(var41);
+      var65.append(", authorId=");
+      var65.append(var42);
+      var65.append(", flags=");
+      var65.append(var6);
+      var65.append(", edited=");
+      var65.append(var74);
+      var65.append(", editedColor=");
+      var65.append(var43);
+      var65.append(", _constrainedWidth=");
+      var65.append(var89);
+      var65.append(", textColor=");
+      var65.append(var15);
+      var65.append(", linkColor=");
+      var65.append(var56);
+      var65.append(", timestamp=");
+      var65.append(var87);
+      var65.append(", timestampColor=");
+      var65.append(var60);
+      var65.append(", username=");
+      var65.append(var59);
+      var65.append(", usernameColor=");
+      var65.append(var36);
+      var65.append(", roleColor=");
+      var65.append(var38);
+      var65.append(", roleColors=");
+      var65.append(var68);
+      var65.append(", shouldShowRoleDot=");
+      var65.append(var5);
+      var65.append(", shouldShowRoleOnName=");
+      var65.append(var1);
+      var65.append(", colorString=");
+      var65.append(var51);
+      var65.append(", avatarURL=");
+      var65.append(var49);
+      var65.append(", avatarDecorationURL=");
+      var65.append(var75);
+      var65.append(", embeds=");
+      var65.append(var12);
+      var65.append(", attachments=");
+      var65.append(var13);
+      var65.append(", attachmentsOpacity=");
+      var65.append(var88);
+      var65.append(", content=");
+      var65.append(var85);
+      var65.append(", reactions=");
+      var65.append(var31);
+      var65.append(", codedLinks=");
+      var65.append(var72);
+      var65.append(", activityInstanceEmbed=");
+      var65.append(var25);
+      var65.append(", stickers=");
+      var65.append(var24);
+      var65.append(", roleIcon=");
+      var65.append(var83);
+      var65.append(", connectionsRoleTag=");
+      var65.append(var67);
+      var65.append(", threadEmbed=");
+      var65.append(var29);
+      var65.append(", mentioned=");
+      var65.append(var4);
+      var65.append(", gifAutoPlay=");
+      var65.append(var22);
+      var65.append(", animateEmoji=");
+      var65.append(var16);
+      var65.append(", showLinkDecorations=");
+      var65.append(var64);
+      var65.append(", referencedMessage=");
+      var65.append(var80);
+      var65.append(", executedCommand=");
+      var65.append(var79);
+      var65.append(", components=");
+      var65.append(var19);
+      var65.append(", threadStarterMessageHeader=");
+      var65.append(var28);
+      var65.append(", communicationDisabled=");
+      var65.append(var21);
+      var65.append(", tagText=");
+      var65.append(var52);
+      var65.append(", tagVerified=");
+      var65.append(var54);
+      var65.append(", tagTextColor=");
+      var65.append(var90);
+      var65.append(", tagBackgroundColor=");
+      var65.append(var58);
+      var65.append(", tagType=");
+      var65.append(var32);
+      var65.append(", tagIconUrl=");
+      var65.append(var93);
+      var65.append(", opTagText=");
+      var65.append(var73);
+      var65.append(", ephemeralIndication=");
+      var65.append(var57);
+      var65.append(", surveyIndication=");
+      var65.append(var44);
+      var65.append(", interactionStatus=");
+      var65.append(var94);
+      var65.append(", useAttachmentGridLayout=");
+      var65.append(var14);
+      var65.append(", useAttachmentUploadPreview=");
+      var65.append(var92);
+      var65.append(", isCurrentUserMessageAuthor=");
+      var65.append(var61);
+      var65.append(", obscureLearnMoreLabel=");
+      var65.append(var91);
+      var65.append(", usingGradientTheme=");
+      var65.append(var37);
+      var65.append(", title=");
+      var65.append(var27);
+      var65.append(", description=");
+      var65.append(var53);
+      var65.append(", avatarURLs=");
+      var65.append(var18);
+      var65.append(", isCallActive=");
+      var65.append(var76);
+      var65.append(", missed=");
+      var65.append(var47);
+      var65.append(", rawMilliseconds=");
+      var65.append(var69);
+      var65.append(", sticker=");
+      var65.append(var26);
+      var65.append(", stickerLabel=");
+      var65.append(var40);
+      var65.append(", buttonLabel=");
+      var65.append(var81);
+      var65.append(", showInviteToSpeakButton=");
+      var65.append(var45);
+      var65.append(", activityInviteEmbed=");
+      var65.append(var34);
+      var65.append(", activityRichPresenceInviteEmbed=");
+      var65.append(var55);
+      var65.append(", isFirstForumPostMessage=");
+      var65.append(var3);
+      var65.append(", postActions=");
+      var65.append(var84);
+      var65.append(", autoModerationContext=");
+      var65.append(var63);
+      var65.append(", referralTrialOfferInfo=");
+      var65.append(var77);
+      var65.append(", giftCodes=");
+      var65.append(var62);
+      var65.append(", referralTrialOffer=");
+      var65.append(var66);
+      var65.append(", totalMonthsSubscribed=");
+      var65.append(var30);
+      var65.append(", postPreviewEmbeds=");
+      var65.append(var46);
+      var65.append(", channelPromptData=");
+      var65.append(var33);
+      var65.append(", safetyPolicyNoticeEmbed=");
+      var65.append(var35);
+      var65.append(", safetySystemNotificationEmbed=");
+      var65.append(var82);
+      var65.append(", pollData=");
+      var65.append(var39);
+      var65.append(", ctaButton=");
+      var65.append(var20);
+      var65.append(", audioAttachmentBackgroundColor=");
+      var65.append(var78);
+      var65.append(", forwardInfo=");
+      var65.append(var50);
+      var65.append(", showInlineForwardButton=");
+      var65.append(var86);
+      var65.append(", clanTagGuildId=");
+      var65.append(var71);
+      var65.append(", clanTag=");
+      var65.append(var23);
+      var65.append(", clanBadgeUrl=");
+      var65.append(var48);
+      var65.append(", gameApplicationId=");
+      var65.append(var17);
+      var65.append(", isAnnouncementChannel=");
+      var65.append(var2);
+      var65.append(")");
+      return var65.toString();
    }
 
    public companion object {

@@ -45,27 +45,27 @@ public final class PollTextAndImageAnswerViewBinding implements ViewBinding {
 
    public static PollTextAndImageAnswerViewBinding bind(View var0) {
       int var1 = R.id.checkbox;
-      PollCheckboxView var8 = (PollCheckboxView)a.a(var0, var1);
-      if (var8 != null) {
+      PollCheckboxView var5 = (PollCheckboxView)a.a(var0, var1);
+      if (var5 != null) {
          var1 = R.id.image;
-         PollMediaView var5 = (PollMediaView)a.a(var0, var1);
-         if (var5 != null) {
+         PollMediaView var8 = (PollMediaView)a.a(var0, var1);
+         if (var8 != null) {
             var1 = R.id.label;
-            SimpleDraweeSpanTextView var2 = (SimpleDraweeSpanTextView)a.a(var0, var1);
-            if (var2 != null) {
+            SimpleDraweeSpanTextView var4 = (SimpleDraweeSpanTextView)a.a(var0, var1);
+            if (var4 != null) {
                var1 = R.id.percentage_bar_background;
-               View var6 = a.a(var0, var1);
-               if (var6 != null) {
+               View var3 = a.a(var0, var1);
+               if (var3 != null) {
                   var1 = R.id.percentage_bar_container;
-                  FrameLayout var4 = (FrameLayout)a.a(var0, var1);
-                  if (var4 != null) {
+                  FrameLayout var6 = (FrameLayout)a.a(var0, var1);
+                  if (var6 != null) {
                      var1 = R.id.vote_counts;
                      TextView var7 = (TextView)a.a(var0, var1);
                      if (var7 != null) {
                         var1 = R.id.vote_percentage;
-                        TextView var3 = (TextView)a.a(var0, var1);
-                        if (var3 != null) {
-                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var8, var5, var2, var6, var4, var7, var3);
+                        TextView var2 = (TextView)a.a(var0, var1);
+                        if (var2 != null) {
+                           return new PollTextAndImageAnswerViewBinding((ConstraintLayout)var0, var5, var8, var4, var3, var6, var7, var2);
                         }
                      }
                   }

@@ -63,13 +63,13 @@ public data class OnPasteImageEvent(url: String, type: String?) : ReactEvent {
    }
 
    public override fun toString(): String {
-      val var1: java.lang.String = this.url;
-      val var3: java.lang.String = this.type;
+      val var3: java.lang.String = this.url;
+      val var1: java.lang.String = this.type;
       val var2: StringBuilder = new StringBuilder();
       var2.append("OnPasteImageEvent(url=");
-      var2.append(var1);
-      var2.append(", type=");
       var2.append(var3);
+      var2.append(", type=");
+      var2.append(var1);
       var2.append(")");
       return var2.toString();
    }

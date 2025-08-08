@@ -32,25 +32,25 @@ public class FileDisplayComponentView  public constructor(context: Context, attr
       r.h(var1, "component");
       r.h(var2, "componentProvider");
       r.h(var3, "componentContext");
-      val var7: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
-      var var6: java.lang.String = var3.getContainerId();
-      val var10: java.lang.String = var1.getId();
+      val var6: SpoilerAttributes.Companion = SpoilerAttributes.Companion;
+      val var10: java.lang.String = var3.getContainerId();
+      val var7: java.lang.String = var1.getId();
       val var5: StringBuilder = new StringBuilder();
       var5.append("FileDisplayComponent(");
-      var5.append(var10);
+      var5.append(var7);
       var5.append(")");
-      val var8: SpoilerAttributes = var7.forGenericMedia(var1, var6, var5.toString(), var1.getFile().getUrl(), null);
-      val var11: java.lang.String = var1.getName();
-      var6 = var1.getSize();
-      val var12: java.lang.String = var1.getFile().getUrl();
+      val var14: SpoilerAttributes = var6.forGenericMedia(var1, var10, var5.toString(), var1.getFile().getUrl(), null);
+      val var12: java.lang.String = var1.getName();
+      val var13: java.lang.String = var1.getSize();
+      val var11: java.lang.String = var1.getFile().getUrl();
       val var4: Boolean = var1.isSpoiler();
-      val var14: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
+      val var8: Function2 = var3.getGeneralEventHandlers().getOnLinkClicked();
       var var9: SpoilerConfig = null;
-      if (var8 != null) {
-         var9 = SpoilerAttributes.configure$default(var8, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
+      if (var14 != null) {
+         var9 = SpoilerAttributes.configure$default(var14, var3.getGeneralEventHandlers().getOnTapSpoiler(), null, 2, null);
       }
 
-      this.setContent(var11, var6, var12, var14, var4, var9, null, null);
+      this.setContent(var12, var13, var11, var8, var4, var9, null, null);
    }
 
    public override fun getComponentType(): KClass<FileDisplayComponent> {

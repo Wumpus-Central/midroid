@@ -1,7 +1,6 @@
 package com.discord.portals.from_native
 
 import android.app.Activity
-import android.widget.FrameLayout
 import com.discord.codegen.NativePortalFromNativeModuleSpec
 import com.discord.misc.utilities.coroutines.CoroutineViewUtilsKt
 import com.facebook.react.bridge.ReactApplicationContext
@@ -38,16 +37,16 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
    }
 
    @ReactModule(name = "DCDPortalView")
-   public class ViewManager : ViewGroupManager<FrameLayout>, DCDPortalViewManagerInterface<FrameLayout> {
-      private final val delegate: DCDPortalViewManagerDelegate<FrameLayout, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> =
+   public class ViewManager : ViewGroupManager<PortalHolderViewGroup>, DCDPortalViewManagerInterface<PortalHolderViewGroup> {
+      private final val delegate: DCDPortalViewManagerDelegate<PortalHolderViewGroup, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> =
          new DCDPortalViewManagerDelegate(this)
 
-      protected open fun createViewInstance(reactContext: ThemedReactContext): FrameLayout {
+      protected open fun createViewInstance(reactContext: ThemedReactContext): PortalHolderViewGroup {
          r.h(var1, "reactContext");
-         return new FrameLayout(var1);
+         return new PortalHolderViewGroup(var1);
       }
 
-      protected open fun getDelegate(): DCDPortalViewManagerDelegate<FrameLayout, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> {
+      protected open fun getDelegate(): DCDPortalViewManagerDelegate<PortalHolderViewGroup, com.discord.portals.from_native.PortalFromNativeModule.ViewManager> {
          return this.delegate;
       }
 
@@ -56,11 +55,11 @@ internal class PortalFromNativeModule(reactContext: ReactApplicationContext) : N
       }
 
       @ReactProp(name = "portal")
-      public open fun setPortal(portalView: FrameLayout, portal: Double) {
+      public open fun setPortal(portalView: PortalHolderViewGroup, portal: Double) {
          r.h(var1, "portalView");
          f.d(CoroutineViewUtilsKt.getAttachedScope(var1), null, null, new Function2(var2, var1, null) {
             final double $portal;
-            final FrameLayout $portalView;
+            final PortalHolderViewGroup $portalView;
             int label;
 
             {

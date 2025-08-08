@@ -574,7 +574,41 @@
     ]
   ],
   "E4Cd5O": "This channel contains adult content marked as age-restricted. Do you wish to proceed?",
-  "ZtuRtr": "This server contains adult content marked as age-restricted. Do you wish to proceed?",
+  "6ejLER": [
+    "Before you can view this age-restricted server, we need to verify your age. We will only ask you for this once. ",
+    [
+      8,
+      "$link",
+      [
+        "Why do I need to provide my birthday?"
+      ],
+      [
+        [
+          1,
+          "helpURL"
+        ]
+      ]
+    ]
+  ],
+  "ZtuRtr": "This server contains sensitive content marked as age-restricted. Do you wish to proceed?",
+  "6++3cX": [
+    "You must be over legal age in order to view age-restricted servers. Learn more about our ",
+    [
+      8,
+      "$link",
+      [
+        "age verification process here"
+      ],
+      [
+        [
+          1,
+          "helpURL"
+        ]
+      ]
+    ],
+    "."
+  ],
+  "H0SG/v": "You do not have access to this age-restricted server",
   "2kHZen": [
     "You need to be 18 or older in order to view age-restricted channels on Discord. ",
     [
@@ -8126,10 +8160,7 @@
   "7r4OKi": "Allow synced subscribers to use your Twitch Custom Emoticons in Discord.",
   "xc+Ps7": "Enable Video",
   "qaYzPD": "End Event",
-  "1LTC8P": "Enter account details",
   "o4JNrK": "Enter your confirmation code",
-  "ZLRYGR": "Enter email",
-  "j2MWLi": "Enter phone number",
   "WEdDgo": "Enter phone or email",
   "j2d6Ki": "Error",
   "CvQlAA": "We've tracked the error and will get right on it.",
@@ -8592,9 +8623,9 @@
       ]
     ]
   ],
-  "9eUgwc": "Users will need to confirm they are of over legal age to view in the content in this channel.\nAge-restricted channels are exempt from the explicit content filter.",
+  "9eUgwc": "Users will need to confirm they are of over the legal age to view in the content in this channel.\nAge-restricted channels are exempt from the explicit content filter.",
   "iyQQ6+": [
-    "Users will need to confirm they are of over legal age to view in the content in this server. ",
+    "Users will need to confirm they are over the legal age to view the content in this server ",
     [
       8,
       "$link",
@@ -31694,8 +31725,6 @@
   ],
   "vwMEHR": "Billing is paused in your country",
   "pV8xeX": "Register",
-  "PTHakp": "Create a password",
-  "JumOYm": "Create a username",
   "Hu9dUF": "Add a user/role mention to the media",
   "3N7uLy": "Add sticker to media",
   "WpFYAg": "Add text to media",
@@ -32102,11 +32131,11 @@
   "no96NT": "Show off your verified Roblox account information right in your profile. You can set this up later from Settings > Connections.",
   "t3asUV": "Connect Roblox to Discord",
   "G6BGd3": [
+    "Roblox • ",
     [
       1,
       "subgameName"
-    ],
-    " • Roblox"
+    ]
   ],
   "LPJmLy": "Roles",
   "3OxP4u": [
@@ -37938,7 +37967,7 @@
   "nkO4Ly": "Follow the steps",
   "5B+npK": "Verify Age",
   "u/xqhY": "This channel is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this channel?",
-  "akjk0d": "This server is marked as age-restricted because it contains adult content. Do you want to verify your age group to access this server?",
+  "akjk0d": "This server is marked as age-restricted. It may contain sensitive content. Do you want to verify your age group to access this server?",
   "x1coPj": [
     "This channel contains adult content marked as age-restricted. We determined you're in the ",
     [
@@ -37951,7 +37980,7 @@
     " age group. If we made a mistake, you can reverify."
   ],
   "7uIWQE": [
-    "This server contains adult content marked as age-restricted. We determined you're in the ",
+    "This server contains sensitive content marked as age-restricted. We determined you're in the ",
     [
       8,
       "$b",
@@ -39447,13 +39476,11 @@
   ],
   "HO9Lf3": "Error opening survey",
   "shbR1d": "Use Application Commands",
-  "qLzvmp": "Use email instead",
   "rLSGen": "Use Activities",
   "3TzAk5": "Use External Apps",
   "BpBGZW": "Use External Emoji",
   "pwaVJy": "Use External Sounds",
   "UeRs+f": "Use External Stickers",
-  "lnOfAg": "Use phone number instead",
   "Bco7ND": "Use Soundboard",
   "CVxXDA": "Use speaker",
   "08zAV1": "Use Voice Activity",

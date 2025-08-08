@@ -255,13 +255,13 @@ public object UnicodeEmojis {
       }
 
       public override fun toString(): String {
-         val var2: java.util.List = this.names;
-         val var1: java.lang.String = this.surrogates;
+         val var1: java.util.List = this.names;
+         val var2: java.lang.String = this.surrogates;
          val var3: StringBuilder = new StringBuilder();
          var3.append("Emoji(names=");
-         var3.append(var2);
-         var3.append(", surrogates=");
          var3.append(var1);
+         var3.append(", surrogates=");
+         var3.append(var2);
          var3.append(")");
          return var3.toString();
       }
@@ -440,33 +440,33 @@ public object UnicodeEmojis {
       }
 
       public override fun toString(): String {
-         val var4: java.util.List = this.people;
-         val var3: java.util.List = this.nature;
-         val var7: java.util.List = this.food;
-         val var5: java.util.List = this.activity;
+         val var5: java.util.List = this.people;
+         val var7: java.util.List = this.nature;
+         val var3: java.util.List = this.food;
+         val var6: java.util.List = this.activity;
          val var8: java.util.List = this.travel;
-         val var9: java.util.List = this.objects;
-         val var1: java.util.List = this.symbols;
-         val var2: java.util.List = this.flags;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("EmojiCategories(people=");
-         var6.append(var4);
-         var6.append(", nature=");
-         var6.append(var3);
-         var6.append(", food=");
-         var6.append(var7);
-         var6.append(", activity=");
-         var6.append(var5);
-         var6.append(", travel=");
-         var6.append(var8);
-         var6.append(", objects=");
-         var6.append(var9);
-         var6.append(", symbols=");
-         var6.append(var1);
-         var6.append(", flags=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var1: java.util.List = this.objects;
+         val var2: java.util.List = this.symbols;
+         val var4: java.util.List = this.flags;
+         val var9: StringBuilder = new StringBuilder();
+         var9.append("EmojiCategories(people=");
+         var9.append(var5);
+         var9.append(", nature=");
+         var9.append(var7);
+         var9.append(", food=");
+         var9.append(var3);
+         var9.append(", activity=");
+         var9.append(var6);
+         var9.append(", travel=");
+         var9.append(var8);
+         var9.append(", objects=");
+         var9.append(var1);
+         var9.append(", symbols=");
+         var9.append(var2);
+         var9.append(", flags=");
+         var9.append(var4);
+         var9.append(")");
+         return var9.toString();
       }
 
       public companion object {

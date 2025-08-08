@@ -37,6 +37,11 @@ public object ForegroundServiceManager {
       serviceWakelocks = new Wakelocks(var0, 0L, 2, null);
    }
 
+   private fun cleanupStateAfterServiceStop() {
+      serviceWakelocks.release();
+      serviceRef = null;
+   }
+
    private fun getTypeFromServiceConfigurationList(serviceConfigurations: List<ServiceNotificationConfiguration>): Type {
       val var7: java.util.Iterator = var1.iterator();
       if (!var7.hasNext()) {
@@ -47,20 +52,20 @@ public object ForegroundServiceManager {
          if (!var7.hasNext()) {
             var8 = var5;
          } else {
-            var var2: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
+            var var3: Int = (var5 as ServiceNotificationConfiguration).getType().ordinal();
 
             do {
                val var6: Any = var7.next();
                val var4: Int = (var6 as ServiceNotificationConfiguration).getType().ordinal();
                var8 = var5;
-               var var3: Int = var2;
-               if (var2 < var4) {
+               var var2: Int = var3;
+               if (var3 < var4) {
                   var8 = var6;
-                  var3 = var4;
+                  var2 = var4;
                }
 
                var5 = var8;
-               var2 = var3;
+               var3 = var2;
             } while (var7.hasNext());
          }
 
@@ -71,38 +76,38 @@ public object ForegroundServiceManager {
    private fun handleCreateOrUpdateService(op: com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.CreateOrUpdate) {
       val var4: ReactApplicationContext = var1.getContextRef().get();
       if (var4 != null) {
-         val var3: ServiceNotificationConfiguration.Type = this.getTypeFromServiceConfigurationList(var1.getServiceConfigurations());
-         val var5: PromiseImpl = NativePermissionPromise.INSTANCE.generate(new b(var3, var4), new c());
+         val var5: ServiceNotificationConfiguration.Type = this.getTypeFromServiceConfigurationList(var1.getServiceConfigurations());
+         val var3: PromiseImpl = NativePermissionPromise.INSTANCE.generate(new b(var5, var4), new c());
          val var6: NativeModule = var4.getNativeModule(NativePermissionManagerModule.class);
          r.e(var6);
          val var7: NativePermissionManagerModule = var6 as NativePermissionManagerModule;
-         val var2: Int = ForegroundServiceManager.WhenMappings.$EnumSwitchMapping$0[var3.ordinal()];
+         val var2: Int = ForegroundServiceManager.WhenMappings.$EnumSwitchMapping$0[var5.ordinal()];
          if (var2 != 1) {
             if (var2 != 2) {
                if (var2 != 3) {
                   throw new n();
                }
 
-               var7.requestForegroundServicePermissionVoiceCall(var5);
+               var7.requestForegroundServicePermissionVoiceCall(var3);
             } else {
-               var7.requestForegroundServicePermissionVoiceCall(var5);
+               var7.requestForegroundServicePermissionVoiceCall(var3);
             }
          } else {
-            var7.requestForegroundServicePermissionFileUpload(var5);
+            var7.requestForegroundServicePermissionFileUpload(var3);
          }
       }
    }
 
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2`(var0: ServiceNotificationConfiguration.Type, var1: ReactApplicationContext): Unit {
-      val var2: Log = Log.INSTANCE;
-      val var3: java.lang.String = tag;
+      val var3: Log = Log.INSTANCE;
+      val var2: java.lang.String = tag;
       r.g(tag, "tag");
       val var5: java.lang.String = var0.name();
       val var4: StringBuilder = new StringBuilder();
       var4.append("Create or update service with configuration type ");
       var4.append(var5);
-      Log.i$foreground_service_release$default(var2, var3, var4.toString(), null, 4, null);
+      Log.i$foreground_service_release$default(var3, var2, var4.toString(), null, 4, null);
       ForegroundService.Companion.start(var1, new d());
       return Unit.a;
    }
@@ -110,10 +115,10 @@ public object ForegroundServiceManager {
    @JvmStatic
    fun `handleCreateOrUpdateService$lambda$2$lambda$1`(var0: Exception): Unit {
       r.h(var0, "e");
-      val var1: Log = Log.INSTANCE;
-      val var2: java.lang.String = tag;
+      val var2: Log = Log.INSTANCE;
+      val var1: java.lang.String = tag;
       r.g(tag, "tag");
-      var1.w$foreground_service_release(var2, "Unable to start service", var0);
+      var2.w$foreground_service_release(var1, "Unable to start service", var0);
       INSTANCE.onCreateOrUpdateServiceFailed();
       return Unit.a;
    }
@@ -131,10 +136,10 @@ public object ForegroundServiceManager {
    private fun handleDestroyService(op: com.discord.foreground_service.ForegroundServiceManager.ForegroundServiceOperation.Destroy) {
       val var2: ReactApplicationContext = var1.getContextRef().get();
       if (var2 == null) {
-         val var8: Log = Log.INSTANCE;
-         val var6: java.lang.String = tag;
+         val var6: Log = Log.INSTANCE;
+         val var8: java.lang.String = tag;
          r.g(tag, "tag");
-         Log.i$foreground_service_release$default(var8, var6, "handleDestroyService context is null.", null, 4, null);
+         Log.i$foreground_service_release$default(var6, var8, "handleDestroyService context is null.", null, 4, null);
       } else {
          val var4: Service;
          if (serviceRef != null) {
@@ -144,10 +149,10 @@ public object ForegroundServiceManager {
          }
 
          if (var4 == null) {
-            val var5: Log = Log.INSTANCE;
-            val var7: java.lang.String = tag;
+            val var7: Log = Log.INSTANCE;
+            val var5: java.lang.String = tag;
             r.g(tag, "tag");
-            Log.i$foreground_service_release$default(var5, var7, "handleDestroyService service is null.", null, 4, null);
+            Log.i$foreground_service_release$default(var7, var5, "handleDestroyService service is null.", null, 4, null);
             this.handleNextOperation();
          } else {
             ForegroundService.Companion.stop(var2, var4);
@@ -273,18 +278,18 @@ public object ForegroundServiceManager {
       // 0a: ldc_w "serviceConfigurations"
       // 0d: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
       // 10: new com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
-      // 13: astore 3
-      // 14: new java/lang/ref/WeakReference
-      // 17: astore 4
-      // 19: aload 4
-      // 1b: aload 1
-      // 1c: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
-      // 1f: aload 3
-      // 20: aload 4
-      // 22: aload 2
-      // 23: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
-      // 26: aload 0
-      // 27: aload 3
+      // 13: astore 4
+      // 15: new java/lang/ref/WeakReference
+      // 18: astore 3
+      // 19: aload 3
+      // 1a: aload 1
+      // 1b: invokespecial java/lang/ref/WeakReference.<init> (Ljava/lang/Object;)V
+      // 1e: aload 4
+      // 20: aload 3
+      // 21: aload 2
+      // 22: invokespecial com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate.<init> (Ljava/lang/ref/WeakReference;Ljava/util/List;)V
+      // 25: aload 0
+      // 26: aload 4
       // 28: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleQueueOperation (Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;)V
       // 2b: aload 0
       // 2c: monitorexit
@@ -424,33 +429,118 @@ public object ForegroundServiceManager {
       // 00: aload 0
       // 01: monitorenter
       // 02: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
-      // 05: astore 2
+      // 05: astore 1
       // 06: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
-      // 09: astore 1
-      // 0a: aload 1
+      // 09: astore 2
+      // 0a: aload 2
       // 0b: ldc "tag"
       // 0d: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
-      // 10: aload 2
-      // 11: aload 1
+      // 10: aload 1
+      // 11: aload 2
       // 12: ldc_w "On service destroyed."
       // 15: aconst_null
       // 16: bipush 4
       // 17: aconst_null
       // 18: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
-      // 1b: getstatic com/discord/foreground_service/ForegroundServiceManager.serviceWakelocks Lcom/discord/foreground_service/utils/Wakelocks;
-      // 1e: invokevirtual com/discord/foreground_service/utils/Wakelocks.release ()V
-      // 21: aconst_null
-      // 22: putstatic com/discord/foreground_service/ForegroundServiceManager.serviceRef Ljava/lang/ref/WeakReference;
-      // 25: aload 0
-      // 26: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleNextOperation ()V
-      // 29: aload 0
-      // 2a: monitorexit
-      // 2b: return
-      // 2c: astore 1
-      // 2d: aload 0
-      // 2e: monitorexit
-      // 2f: aload 1
-      // 30: athrow
+      // 1b: aload 0
+      // 1c: invokespecial com/discord/foreground_service/ForegroundServiceManager.cleanupStateAfterServiceStop ()V
+      // 1f: aload 0
+      // 20: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleNextOperation ()V
+      // 23: aload 0
+      // 24: monitorexit
+      // 25: return
+      // 26: astore 1
+      // 27: aload 0
+      // 28: monitorexit
+      // 29: aload 1
+      // 2a: athrow
+   }
+
+   internal fun onServiceRecoveryAttempt(foregroundService: Service): Boolean {
+      // $VF: Couldn't be decompiled
+      // Please report this to the Vineflower issue tracker, at https://github.com/Vineflower/vineflower/issues with a copy of the class file (if you have the rights to distribute it!)
+      // java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+      //   at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+      //   at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+      //   at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+      //   at java.base/java.util.Objects.checkIndex(Objects.java:385)
+      //   at java.base/java.util.ArrayList.remove(ArrayList.java:551)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.removeExceptionInstructionsEx(FinallyProcessor.java:1057)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.verifyFinallyEx(FinallyProcessor.java:572)
+      //   at org.jetbrains.java.decompiler.modules.decompiler.FinallyProcessor.iterateGraph(FinallyProcessor.java:90)
+      //
+      // Bytecode:
+      // 00: aload 0
+      // 01: monitorenter
+      // 02: aload 1
+      // 03: ldc_w "foregroundService"
+      // 06: invokestatic kotlin/jvm/internal/r.h (Ljava/lang/Object;Ljava/lang/String;)V
+      // 09: getstatic com/discord/foreground_service/ForegroundServiceManager.currentOperation Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;
+      // 0c: astore 2
+      // 0d: aload 2
+      // 0e: instanceof com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
+      // 11: ifeq 20
+      // 14: aload 2
+      // 15: checkcast com/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation$CreateOrUpdate
+      // 18: astore 2
+      // 19: goto 22
+      // 1c: astore 1
+      // 1d: goto 75
+      // 20: aconst_null
+      // 21: astore 2
+      // 22: aload 2
+      // 23: ifnonnull 4f
+      // 26: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 29: astore 2
+      // 2a: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 2d: astore 3
+      // 2e: aload 3
+      // 2f: ldc "tag"
+      // 31: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 34: aload 2
+      // 35: aload 3
+      // 36: ldc_w "Service not recoverable. Stopping the service."
+      // 39: aconst_null
+      // 3a: bipush 4
+      // 3b: aconst_null
+      // 3c: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 3f: getstatic com/discord/foreground_service/ForegroundService.Companion Lcom/discord/foreground_service/ForegroundService$Companion;
+      // 42: aconst_null
+      // 43: aload 1
+      // 44: invokevirtual com/discord/foreground_service/ForegroundService$Companion.stop (Landroid/content/Context;Landroid/app/Service;)V
+      // 47: aload 0
+      // 48: invokespecial com/discord/foreground_service/ForegroundServiceManager.cleanupStateAfterServiceStop ()V
+      // 4b: aload 0
+      // 4c: monitorexit
+      // 4d: bipush 0
+      // 4e: ireturn
+      // 4f: getstatic com/discord/foreground_service/utils/Log.INSTANCE Lcom/discord/foreground_service/utils/Log;
+      // 52: astore 1
+      // 53: getstatic com/discord/foreground_service/ForegroundServiceManager.tag Ljava/lang/String;
+      // 56: astore 3
+      // 57: aload 3
+      // 58: ldc "tag"
+      // 5a: invokestatic kotlin/jvm/internal/r.g (Ljava/lang/Object;Ljava/lang/String;)V
+      // 5d: aload 1
+      // 5e: aload 3
+      // 5f: ldc_w "Attempting to recover service."
+      // 62: aconst_null
+      // 63: bipush 4
+      // 64: aconst_null
+      // 65: invokestatic com/discord/foreground_service/utils/Log.i$foreground_service_release$default (Lcom/discord/foreground_service/utils/Log;Ljava/lang/String;Ljava/lang/String;Ljava/lang/Exception;ILjava/lang/Object;)V
+      // 68: aload 0
+      // 69: aload 2
+      // 6a: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleQueueOperation (Lcom/discord/foreground_service/ForegroundServiceManager$ForegroundServiceOperation;)V
+      // 6d: aload 0
+      // 6e: invokespecial com/discord/foreground_service/ForegroundServiceManager.handleNextOperation ()V
+      // 71: aload 0
+      // 72: monitorexit
+      // 73: bipush 1
+      // 74: ireturn
+      // 75: aload 0
+      // 76: monitorexit
+      // 77: aload 1
+      // 78: athrow
    }
 
    private sealed class ForegroundServiceOperation protected constructor() {
@@ -504,15 +594,15 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var3: java.util.List = this.serviceConfigurations;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("CreateOrUpdate(contextRef=");
-            var2.append(var1);
-            var2.append(", serviceConfigurations=");
-            var2.append(var3);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: java.util.List = this.serviceConfigurations;
+            val var3: StringBuilder = new StringBuilder();
+            var3.append("CreateOrUpdate(contextRef=");
+            var3.append(var2);
+            var3.append(", serviceConfigurations=");
+            var3.append(var1);
+            var3.append(")");
+            return var3.toString();
          }
       }
 
@@ -549,12 +639,12 @@ public object ForegroundServiceManager {
          }
 
          public override fun toString(): String {
-            val var1: WeakReference = this.contextRef;
-            val var2: StringBuilder = new StringBuilder();
-            var2.append("Destroy(contextRef=");
-            var2.append(var1);
-            var2.append(")");
-            return var2.toString();
+            val var2: WeakReference = this.contextRef;
+            val var1: StringBuilder = new StringBuilder();
+            var1.append("Destroy(contextRef=");
+            var1.append(var2);
+            var1.append(")");
+            return var1.toString();
          }
       }
    }

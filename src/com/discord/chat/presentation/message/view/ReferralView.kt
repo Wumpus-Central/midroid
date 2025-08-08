@@ -144,20 +144,20 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          kotlin.jvm.internal.r.g(this.binding.nitroLogoBanner, "nitroLogoBanner");
          val var34: ReferralEmbed.Resolved = var9 as ReferralEmbed.Resolved;
          ReactAssetUtilsKt.setOptionalReactImageUrl(var42, (var9 as ReferralEmbed.Resolved).getHeaderLogoUrl());
-         val var43: TextView = this.binding.imageCopy;
+         val var35: TextView = this.binding.imageCopy;
          this.binding.imageCopy.setText(var34.getHeaderText());
-         var43.setTextColor(var34.getHeaderColor());
-         kotlin.jvm.internal.r.e(var43);
-         val var35: java.lang.CharSequence = var43.getText();
-         kotlin.jvm.internal.r.g(var35, "getText(...)");
+         var35.setTextColor(var34.getHeaderColor());
+         kotlin.jvm.internal.r.e(var35);
+         val var43: java.lang.CharSequence = var35.getText();
+         kotlin.jvm.internal.r.g(var43, "getText(...)");
          var var5: Byte;
-         if (!kotlin.text.h.c0(var35)) {
+         if (!kotlin.text.h.c0(var43)) {
             var5 = 0;
          } else {
             var5 = 8;
          }
 
-         var43.setVisibility(var5);
+         var35.setVisibility(var5);
          val var36: SimpleDraweeView = this.binding.nitroTicket;
          kotlin.jvm.internal.r.g(this.binding.nitroTicket, "nitroTicket");
          ReactAssetUtilsKt.setOptionalReactImageUrl(var36, var34.getThumbnailUrl());
@@ -183,9 +183,9 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
          if (var46 != null && !kotlin.text.h.c0(var46)) {
             var38.setText(var34.getBodyText());
          } else if (var34.getStructuredBodyText() != null) {
-            val var47: AnnotatedStructurableText = var34.getStructuredBodyText();
-            val var11: Context = var38.getContext();
-            kotlin.jvm.internal.r.g(var11, "getContext(...)");
+            val var11: AnnotatedStructurableText = var34.getStructuredBodyText();
+            val var47: Context = var38.getContext();
+            kotlin.jvm.internal.r.g(var47, "getContext(...)");
             val var12: java.lang.String = var1.getMessageId-3Eiw7ao();
             val var13: FontMetrics = var38.getPaint().getFontMetrics();
             kotlin.jvm.internal.r.g(var13, "getFontMetrics(...)");
@@ -194,15 +194,15 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
             kotlin.jvm.internal.r.g(var48, "getPaint(...)");
             var38.setDraweeSpanStringBuilder(
                TextUtilsKt.toSpannable$default(
-                  var47,
                   var11,
+                  var47,
                   var12,
                   false,
                   true,
                   false,
                   false,
                   var48,
-                  new L0(var3, var1),
+                  new J0(var3, var1),
                   null,
                   null,
                   null,
@@ -286,7 +286,7 @@ public class ReferralView  public constructor(context: Context, attrs: Attribute
 
             var26.setText(var34.getAcceptLabelText());
             var26.setTextColor(var34.getAcceptLabelColor());
-            var26.setOnClickButtonListener(new M0(var2));
+            var26.setOnClickButtonListener(new K0(var2));
             val var15: Context = var26.getContext();
             kotlin.jvm.internal.r.g(var15, "getContext(...)");
             val var16: Drawable = GetDrawableCompatKt.getDrawableCompat(var15, R.drawable.premium_tier2_gradient);

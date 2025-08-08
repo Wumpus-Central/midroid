@@ -104,10 +104,10 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
    public fun bind(accessory: AudioAttachmentMessageAccessory, eventHandler: ChatEventHandler, onLongClicked: ((String, Int?) -> Unit)?) {
       kotlin.jvm.internal.r.h(var1, "accessory");
       kotlin.jvm.internal.r.h(var2, "eventHandler");
-      val var5: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
-      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var5, null, 1, null));
-      val var6: Attachment = var1.getAttachment();
-      val var7: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
+      val var6: AudioPlayerManager.AudioSource = AudioPlayerUtilsKt.toAudioSource(var1);
+      this.configureVisibilityObservers(var1, AudioPlayerUtilsKt.toMediaSource$default(var6, null, 1, null));
+      val var7: Attachment = var1.getAttachment();
+      val var5: UploadItemProps = var1.getUploadItemProps(new Function2(var2) {
          {
             super(2, var1, ChatEventHandler::class.java, "onTapCancelUploadItem", "onTapCancelUploadItem(Ljava/lang/String;Ljava/lang/String;)V", 0);
          }
@@ -120,25 +120,25 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
       });
       val var4: AudioPlayerView = this.view;
       this.view.setSourceUrl(var1);
-      val var8: ByteArray = var6.getWaveformByteArray();
+      val var8: ByteArray = var7.getWaveformByteArray();
       if (var8 != null) {
          var4.setSampleData(var8);
       } else {
          var4.setAudioFileDetails(var1.getAttachment());
       }
 
-      val var9: java.lang.Float = var6.getDurationSecs();
+      val var9: java.lang.Float = var7.getDurationSecs();
       if (var9 != null) {
          var4.setDurationMs((long)(var9.floatValue() * (float)1000));
       } else {
          var4.setUnknownDuration();
       }
 
-      var4.setUploadProgress(var7);
+      var4.setUploadProgress(var5);
       var4.setOnLongPress(new b(var3, var1));
-      var4.shouldAnimate(var6.isAnimated());
+      var4.shouldAnimate(var7.isAnimated());
       var4.setContainerBackgroundColor(var1.getColor());
-      var4.setListener(new AudioPlayerView.Listener(var6, var2, var1, var5) {
+      var4.setListener(new AudioPlayerView.Listener(var7, var2, var1, var6) {
          final AudioAttachmentMessageAccessory $accessory;
          final AudioPlayerManager.AudioSource $audioSource;
          final ChatEventHandler $eventHandler;
@@ -159,14 +159,14 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
                var3 = var7;
             } else {
                val var13: MediaPlayer = AudioPlayerManager.INSTANCE.getPlayer(this.$audioSource);
-               val var4: Long;
+               val var5: Long;
                if (var13 != null) {
-                  var4 = var13.durationMs();
+                  var5 = var13.durationMs();
                } else {
-                  var4 = 0L;
+                  var5 = 0L;
                }
 
-               var3 = (float)var4 * 1000.0F;
+               var3 = (float)var5 * 1000.0F;
             }
 
             val var10: ChatEventHandler = this.$eventHandler;
@@ -174,14 +174,14 @@ public class AudioPlayerViewHolder(view: AudioPlayerView) : MessagePartViewHolde
             val var14: UserId = this.$accessory.getAuthorId-wUX8bhU();
             if (var14 != null) {
                val var11: Long = var14.unbox-impl();
-               val var6: Boolean = this.$accessory.isVoiceMessage();
+               val var4: Boolean = this.$accessory.isVoiceMessage();
                val var8: java.lang.String = this.$accessory.getAttachment().getId();
                var var15: java.lang.String = var8;
                if (var8 == null) {
                   var15 = "";
                }
 
-               var10.mediaAttachmentPlaybackEnded-O97gnAM(var9, var3, var1, var11, var2, var6, var15);
+               var10.mediaAttachmentPlaybackEnded-O97gnAM(var9, var3, var1, var11, var2, var4, var15);
             }
          }
 

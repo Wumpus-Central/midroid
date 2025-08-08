@@ -130,11 +130,11 @@ internal object NotificationChannels {
    }
 
    private fun getCallChannel(context: Context): NotificationChannelCompat? {
-      for (NotificationChannelCompat var4 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
-         val var3: java.lang.String = var4.b();
+      for (NotificationChannelCompat var2 : NotificationManagerUtilsKt.getNotificationManagerCompat(var1).n()) {
+         val var3: java.lang.String = var2.b();
          r.g(var3, "getId(...)");
          if (kotlin.text.h.I(var3, "calls", false, 2, null)) {
-            return var4;
+            return var2;
          }
       }
 
@@ -162,11 +162,11 @@ internal object NotificationChannels {
          var3.append(var2);
          var4 = var3.toString();
       } else {
-         val var6: java.lang.String = var1.getId();
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("calls_");
-         var5.append(var6);
-         var4 = var5.toString();
+         val var5: java.lang.String = var1.getId();
+         val var6: StringBuilder = new StringBuilder();
+         var6.append("calls_");
+         var6.append(var5);
+         var4 = var6.toString();
       }
 
       return var4;
@@ -337,8 +337,8 @@ internal object NotificationChannels {
       try {
          NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(var9);
       } catch (var13: Exception) {
-         val var21: CrashReporting = CrashReporting.INSTANCE;
-         val var19: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(q.d(kotlin.collections.i.v(var17, 10)), 16));
+         val var19: CrashReporting = CrashReporting.INSTANCE;
+         val var21: LinkedHashMap = new LinkedHashMap(kotlin.ranges.d.d(q.d(kotlin.collections.i.v(var17, 10)), 16));
 
          for (androidx.core.app.j var12 : var17) {
             label32: {
@@ -362,10 +362,10 @@ internal object NotificationChannels {
             }
 
             val var16: Pair = s.a(var15, java.lang.String.valueOf(var7));
-            var19.put(var16.c(), var16.d());
+            var21.put(var16.c(), var16.d());
          }
 
-         CrashReporting.addBreadcrumb$default(var21, "Failed to create notification group or channel", var19, null, 4, null);
+         CrashReporting.addBreadcrumb$default(var19, "Failed to create notification group or channel", var21, null, 4, null);
          CrashReporting.captureException$default(CrashReporting.INSTANCE, var13, false, 2, null);
       }
    }
@@ -400,20 +400,20 @@ internal object NotificationChannels {
                      var2 = var10.toString();
                   }
 
-                  val var18: NotificationChannelCompat.Builder = var9.b(var2)
+                  val var15: NotificationChannelCompat.Builder = var9.b(var2)
                      .c(NotificationChannels.Category.Calls.getGroup().getGroupId())
                      .i(var21.g())
                      .e(var21.f())
                      .d(var3);
-                  val var15: NotificationChannels = INSTANCE;
-                  r.e(var18);
-                  var15.configureCallChannel(var1, var21, var18, var7.getResource());
+                  val var18: NotificationChannels = INSTANCE;
+                  r.e(var15);
+                  var18.configureCallChannel(var1, var21, var15, var7.getResource());
 
                   for (NotificationChannelCompat var19 : var6) {
                      NotificationManagerUtilsKt.getNotificationManagerCompat(var1).f(var19.b());
                   }
 
-                  NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(kotlin.collections.i.e(var18.a()));
+                  NotificationManagerUtilsKt.getNotificationManagerCompat(var1).e(kotlin.collections.i.e(var15.a()));
                   return;
                }
             }

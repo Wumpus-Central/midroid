@@ -1,16 +1,14 @@
 package com.discord.chat.presentation.message.view;
 
 import android.view.View;
-import android.view.View.OnClickListener;
-import kotlin.jvm.functions.Function2;
+import kotlin.jvm.functions.Function0;
 
 // $VF: synthetic class
-public final class P0 implements OnClickListener {
-   public final Function2 j;
-   public final String k;
-   public final String l;
+public final class P0 implements Function0 {
+   public final SpoilerView j;
+   public final View k;
 
-   public final void onClick(View var1) {
-      SafetySystemNotificationView.a(this.j, this.k, this.l, var1);
+   public final Object invoke() {
+      return SpoilerView.f(this.j, this.k);
    }
 }

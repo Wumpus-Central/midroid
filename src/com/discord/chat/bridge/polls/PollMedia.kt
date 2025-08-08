@@ -97,18 +97,18 @@ public data class PollMedia(text: String? = null, attachmentIds: Set<String> = w
       val var1: java.lang.String = this.text;
       val var3: java.util.Set = this.attachmentIds;
       val var2: PollMediaEmoji = this.emoji;
-      val var5: java.lang.Long = this.stickerId;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("PollMedia(text=");
-      var4.append(var1);
-      var4.append(", attachmentIds=");
-      var4.append(var3);
-      var4.append(", emoji=");
-      var4.append(var2);
-      var4.append(", stickerId=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: java.lang.Long = this.stickerId;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("PollMedia(text=");
+      var5.append(var1);
+      var5.append(", attachmentIds=");
+      var5.append(var3);
+      var5.append(", emoji=");
+      var5.append(var2);
+      var5.append(", stickerId=");
+      var5.append(var4);
+      var5.append(")");
+      return var5.toString();
    }
 
    public companion object {

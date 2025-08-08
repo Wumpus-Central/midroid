@@ -152,26 +152,26 @@ public data class ChannelPromptData(cameraButtonIcon: String? = null,
    }
 
    public override fun toString(): String {
-      val var7: java.lang.String = this.cameraButtonIcon;
-      val var5: java.lang.String = this.gifButtonIcon;
-      val var3: java.lang.String = this.emojiButtonIcon;
-      val var1: java.lang.String = this.gamingStatsButtonText;
-      val var2: java.lang.String = this.cameraButtonText;
-      val var8: java.lang.String = this.gifButtonText;
+      val var3: java.lang.String = this.cameraButtonIcon;
+      val var1: java.lang.String = this.gifButtonIcon;
+      val var2: java.lang.String = this.emojiButtonIcon;
+      val var8: java.lang.String = this.gamingStatsButtonText;
+      val var5: java.lang.String = this.cameraButtonText;
+      val var7: java.lang.String = this.gifButtonText;
       val var4: java.lang.String = this.emojiButtonText;
       val var6: StringBuilder = new StringBuilder();
       var6.append("ChannelPromptData(cameraButtonIcon=");
-      var6.append(var7);
-      var6.append(", gifButtonIcon=");
-      var6.append(var5);
-      var6.append(", emojiButtonIcon=");
       var6.append(var3);
-      var6.append(", gamingStatsButtonText=");
+      var6.append(", gifButtonIcon=");
       var6.append(var1);
-      var6.append(", cameraButtonText=");
+      var6.append(", emojiButtonIcon=");
       var6.append(var2);
-      var6.append(", gifButtonText=");
+      var6.append(", gamingStatsButtonText=");
       var6.append(var8);
+      var6.append(", cameraButtonText=");
+      var6.append(var5);
+      var6.append(", gifButtonText=");
+      var6.append(var7);
       var6.append(", emojiButtonText=");
       var6.append(var4);
       var6.append(")");

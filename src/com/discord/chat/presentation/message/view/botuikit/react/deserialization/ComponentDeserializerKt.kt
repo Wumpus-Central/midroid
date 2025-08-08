@@ -24,11 +24,11 @@ internal inline fun <reified T : Component> deserializeComponentModel(model: Rea
 
    var var12: Component;
    try {
-      val var16: Json = getJson();
-      val var11: ComponentSerializer = ComponentSerializer.INSTANCE;
+      val var11: Json = getJson();
+      val var16: ComponentSerializer = ComponentSerializer.INSTANCE;
       val var7: java.lang.String = new JSONObject(var0.toHashMap()).toString();
       r.g(var7, "toString(...)");
-      var12 = var16.b(var11, var7) as Component;
+      var12 = var11.b(var16, var7) as Component;
       r.m(3, "T");
    } catch (var5: Exception) {
       r.m(4, "T");

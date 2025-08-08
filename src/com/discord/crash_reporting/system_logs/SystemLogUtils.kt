@@ -579,27 +579,27 @@ internal object SystemLogUtils {
       }
 
       public override fun toString(): String {
-         val var6: java.lang.String = this.text;
-         val var7: java.lang.String = this.cause;
-         val var4: java.lang.String = this.groupBy;
+         val var4: java.lang.String = this.text;
+         val var2: java.lang.String = this.cause;
+         val var5: java.lang.String = this.groupBy;
          val var3: java.lang.String = this.origin;
-         val var2: java.lang.String = this.groupHash;
-         val var1: java.lang.String = this.textHash;
-         val var5: StringBuilder = new StringBuilder();
-         var5.append("Tombstone(text=");
-         var5.append(var6);
-         var5.append(", cause=");
-         var5.append(var7);
-         var5.append(", groupBy=");
-         var5.append(var4);
-         var5.append(", origin=");
-         var5.append(var3);
-         var5.append(", groupHash=");
-         var5.append(var2);
-         var5.append(", textHash=");
-         var5.append(var1);
-         var5.append(")");
-         return var5.toString();
+         val var1: java.lang.String = this.groupHash;
+         val var6: java.lang.String = this.textHash;
+         val var7: StringBuilder = new StringBuilder();
+         var7.append("Tombstone(text=");
+         var7.append(var4);
+         var7.append(", cause=");
+         var7.append(var2);
+         var7.append(", groupBy=");
+         var7.append(var5);
+         var7.append(", origin=");
+         var7.append(var3);
+         var7.append(", groupHash=");
+         var7.append(var1);
+         var7.append(", textHash=");
+         var7.append(var6);
+         var7.append(")");
+         return var7.toString();
       }
    }
 }

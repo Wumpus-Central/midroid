@@ -84,9 +84,9 @@ internal object BrowserManager {
       r.h(var3, "onFailure");
 
       try {
-         val var4: Uri = Uri.parse(var2);
-         r.e(var4);
-         this.openUrlWithCustomTabs(var1, var4, new c(var1, var2, var3));
+         val var5: Uri = Uri.parse(var2);
+         r.e(var5);
+         this.openUrlWithCustomTabs(var1, var5, new c(var1, var2, var3));
       } catch (var6: Exception) {
          this.tryOpenUrlExternally(var1, var2, var3);
       }

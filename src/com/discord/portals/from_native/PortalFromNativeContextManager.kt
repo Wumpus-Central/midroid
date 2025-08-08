@@ -1,9 +1,7 @@
 package com.discord.portals.from_native
 
 import android.view.View
-import android.widget.FrameLayout
 import com.discord.misc.utilities.measure.ViewMeasureExtensionsKt
-import com.discord.portals.utils.ViewRemoveFromParentKt
 import java.lang.ref.WeakReference
 import java.util.LinkedHashMap
 import kotlin.jvm.internal.r
@@ -76,7 +74,7 @@ public object PortalFromNativeContextManager {
       return var2;
    }
 
-   public fun registerView(portal: Double, portalView: FrameLayout) {
+   public fun registerView(portal: Double, portalView: PortalHolderViewGroup) {
       r.h(var3, "portalView");
       val var4: PortalFromNativeContext = portalContextMap.get(var1);
       if (var4 != null) {
@@ -92,17 +90,17 @@ public object PortalFromNativeContextManager {
    }
 
    public fun unregisterView(portal: Double) {
-      val var4: PortalFromNativeContext = portalContextMap.remove(var1);
-      if (var4 != null) {
+      val var3: PortalFromNativeContext = portalContextMap.remove(var1);
+      if (var3 != null) {
          _portalContextIdsFlow.setValue(null);
-         val var3: View = var4.getView().get();
-         if (var3 == null) {
+         val var4: View = var3.getView().get();
+         if (var4 == null) {
             return;
          }
 
-         ViewRemoveFromParentKt.removeFromParent(var3);
-         var4.getOnViewRemovedFromPortal().invoke(var3);
-         var4.getReturnViewToParent().invoke(var3);
+         var3.getRemoveViewFromParent().invoke(var4);
+         var3.getOnViewRemovedFromPortal().invoke(var4);
+         var3.getReturnViewToParent().invoke(var4);
       }
    }
 

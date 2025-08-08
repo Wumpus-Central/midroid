@@ -273,11 +273,11 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    public fun animateToCoordinate(dockX: Int, dockY: Int, screenBounds: Rect = var0.getContext()) {
       kotlin.jvm.internal.r.h(var3, "screenBounds");
-      var var5: Int = var3.right;
-      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var5 - this.getWidth()));
-      val var10: Int = this.screenOffset[1];
-      var5 = var3.bottom;
-      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var10, var2), var5 - this.getHeight()));
+      val var4: Int = var3.right;
+      this.animateTo(this.springAnimationX, (float)this.windowLayoutParams.x, (float)Math.min(Math.max(var3.left, var1), var4 - this.getWidth()));
+      val var12: Int = this.screenOffset[1];
+      var1 = var3.bottom;
+      this.animateTo(this.springAnimationY, (float)this.windowLayoutParams.y, (float)Math.min(Math.max(var3.top - var12, var2), var1 - this.getHeight()));
    }
 
    public open fun dispatchTouchEvent(motionEvent: MotionEvent): Boolean {
@@ -316,13 +316,13 @@ public abstract class OverlayBubbleWrap : OverlayView {
 
    protected fun getAllowedAreaBounds(context: Context): Rect {
       kotlin.jvm.internal.r.h(var1, "context");
-      val var4: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
-      val var3: Rect = this.insetMargins;
-      var4.left = var4.left + this.insetMargins.left;
-      var4.right = var4.right - var3.right;
-      var4.top = var4.top + var3.top;
-      var4.bottom = var4.bottom - var3.bottom;
-      return var4;
+      val var3: Rect = WindowUtils.INSTANCE.getScreenSize(var1);
+      val var4: Rect = this.insetMargins;
+      var3.left = var3.left + this.insetMargins.left;
+      var3.right = var3.right - var4.right;
+      var3.top = var3.top + var4.top;
+      var3.bottom = var3.bottom - var4.bottom;
+      return var3;
    }
 
    public override fun getInitialLayoutParams(): LayoutParams {

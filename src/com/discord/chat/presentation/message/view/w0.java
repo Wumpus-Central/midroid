@@ -1,13 +1,14 @@
 package com.discord.chat.presentation.message.view;
 
-import kotlin.jvm.functions.Function0;
+import android.view.View;
+import android.view.View.OnClickListener;
 
 // $VF: synthetic class
-public final class w0 implements Runnable {
-   public final Function0 j;
+public final class w0 implements OnClickListener {
+   public final MediaView j;
+   public final OnClickListener k;
 
-   @Override
-   public final void run() {
-      MediaView.i(this.j);
+   public final void onClick(View var1) {
+      MediaView.d(this.j, this.k, var1);
    }
 }

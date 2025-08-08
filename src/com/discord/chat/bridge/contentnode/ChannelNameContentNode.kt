@@ -86,21 +86,21 @@ public data class ChannelNameContentNode(channelType: ChannelType? = null, iconT
    }
 
    public override fun toString(): String {
-      val var5: ChannelType = this.channelType;
-      val var3: java.lang.String = this.iconType;
-      val var4: java.lang.String = this.icon;
-      val var1: java.util.List = this.content;
-      val var2: StringBuilder = new StringBuilder();
-      var2.append("ChannelNameContentNode(channelType=");
-      var2.append(var5);
-      var2.append(", iconType=");
-      var2.append(var3);
-      var2.append(", icon=");
-      var2.append(var4);
-      var2.append(", content=");
-      var2.append(var1);
-      var2.append(")");
-      return var2.toString();
+      val var4: ChannelType = this.channelType;
+      val var1: java.lang.String = this.iconType;
+      val var2: java.lang.String = this.icon;
+      val var5: java.util.List = this.content;
+      val var3: StringBuilder = new StringBuilder();
+      var3.append("ChannelNameContentNode(channelType=");
+      var3.append(var4);
+      var3.append(", iconType=");
+      var3.append(var1);
+      var3.append(", icon=");
+      var3.append(var2);
+      var3.append(", content=");
+      var3.append(var5);
+      var3.append(")");
+      return var3.toString();
    }
 
    public companion object {

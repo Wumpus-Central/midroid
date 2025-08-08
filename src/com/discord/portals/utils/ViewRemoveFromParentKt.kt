@@ -1,10 +1,9 @@
 package com.discord.portals.utils
 
-import android.transition.TransitionManager
 import android.view.View
 import android.view.ViewGroup
 import android.view.ViewParent
-import android.view.ViewPropertyAnimator
+import android.view.animation.Animation
 import kotlin.jvm.internal.r
 
 public fun View.removeFromParent() {
@@ -18,16 +17,14 @@ public fun View.removeFromParent() {
 
       val var4: ViewGroup = var1 as ViewGroup;
       if (var1 as ViewGroup != null) {
-         val var3: ViewPropertyAnimator = var0.animate();
+         val var3: Animation = var0.getAnimation();
          if (var3 != null) {
             var3.cancel();
          }
 
          var0.clearAnimation();
-         var4.endViewTransition(var0);
-         TransitionManager.endTransitions(var4);
-         var4.setLayoutTransition(null);
          var4.removeView(var0);
+         var4.endViewTransition(var0);
       }
    }
 }

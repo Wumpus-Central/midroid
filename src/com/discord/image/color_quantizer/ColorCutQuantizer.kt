@@ -154,10 +154,10 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public fun fromBitmap(bitmap: Bitmap, maxColors: Int): ColorCutQuantizer {
          r.h(var1, "bitmap");
-         val var4: Int = var1.getWidth();
-         val var3: Int = var1.getHeight();
-         val var5: IntArray = new int[var4 * var3];
-         var1.getPixels(var5, 0, var4, 0, 0, var4, var3);
+         val var3: Int = var1.getWidth();
+         val var4: Int = var1.getHeight();
+         val var5: IntArray = new int[var3 * var4];
+         var1.getPixels(var5, 0, var3, 0, 0, var3, var4);
          return new ColorCutQuantizer(new ColorHistogram(var5), var2, null);
       }
    }
@@ -186,13 +186,13 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val longestColorDimension: Int
          public final get() {
-            val var1: Int = this.maxRed - this.minRed;
-            val var2: Int = this.maxGreen - this.minGreen;
+            val var2: Int = this.maxRed - this.minRed;
+            val var1: Int = this.maxGreen - this.minGreen;
             val var3: Int = this.maxBlue - this.minBlue;
             val var4: Byte;
-            if (var1 >= var2 && var1 >= this.maxBlue - this.minBlue) {
+            if (var2 >= var1 && var2 >= this.maxBlue - this.minBlue) {
                var4 = -3;
-            } else if (var2 >= var1 && var2 >= var3) {
+            } else if (var1 >= var2 && var1 >= var3) {
                var4 = -2;
             } else {
                var4 = -1;
@@ -204,9 +204,9 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
 
       public final val averageColor: Swatch
          public final get() {
-            var var7: Int = this.lowerIndex;
+            var var6: Int = this.lowerIndex;
             val var8: Int = this.upperIndex;
-            var var6: Int = 0;
+            var var7: Int = 0;
             var var3: Int;
             var var4: Int;
             var var12: Int;
@@ -216,19 +216,19 @@ internal class ColorCutQuantizer private constructor(colorHistogram: ColorHistog
                var4 = 0;
 
                while (true) {
-                  val var9: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var7];
-                  val var10: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var9);
-                  var6 += var10;
-                  var12 += Color.red(var9) * var10;
-                  var3 += Color.green(var9) * var10;
-                  var4 += var10 * Color.blue(var9);
-                  if (var7 == var8) {
-                     var12 = var6;
+                  val var10: Int = ColorCutQuantizer.access$getMColors$p(this.this$0)[var6];
+                  val var9: Int = ColorCutQuantizer.access$getMColorPopulations$p(this.this$0).get(var10);
+                  var7 += var9;
+                  var12 += Color.red(var10) * var9;
+                  var3 += Color.green(var10) * var9;
+                  var4 += var9 * Color.blue(var10);
+                  if (var6 == var8) {
                      var6 = var12;
+                     var12 = var7;
                      break;
                   }
 
-                  var7++;
+                  var6++;
                }
             } else {
                var3 = 0;

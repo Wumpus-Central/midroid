@@ -86,10 +86,10 @@ public fun renderNotificationMessageContent(content: String): String {
          var10 = var10.format(var16);
       }
 
-      val var2: Int = var6.d().a();
-      val var12: Int = var6.d().j();
+      val var12: Int = var6.d().a();
+      val var2: Int = var6.d().j();
       r.e(var10);
-      var13 = h.v0(var13, var2, var12 + 1, var10).toString();
+      var13 = h.v0(var13, var12, var2 + 1, var10).toString();
       var14 = h.v0(var14, var6.d().a(), var6.d().j() + 1, var10).toString();
    }
 }
