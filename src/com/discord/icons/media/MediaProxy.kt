@@ -11,17 +11,17 @@ internal object MediaProxy {
 
    private fun getMediaProxySize(size: Int): Int {
       var var8: Array<Int> = MEDIA_PROXY_SIZES;
-      val var9: ArrayList = new ArrayList();
+      val var7: ArrayList = new ArrayList();
       var var3: Int = var8.length;
 
       for (int var2 = 0; var2 < var3; var2++) {
-         val var7: Int = var8[var2];
+         val var9: Int = var8[var2];
          if (var8[var2].intValue() <= var1) {
-            var9.add(var7);
+            var7.add(var9);
          }
       }
 
-      val var11: java.util.Iterator = var9.iterator();
+      val var11: java.util.Iterator = var7.iterator();
       val var6: Boolean = var11.hasNext();
       val var22: Any = null;
       var var17: Any;
@@ -30,21 +30,21 @@ internal object MediaProxy {
       } else {
          var17 = (Integer)var11.next();
          if (var11.hasNext()) {
-            var3 = var17.intValue();
+            var var13: Int = var17.intValue();
             var8 = var17;
 
             do {
                val var10: Any = var11.next();
                val var5: Int = (var10 as java.lang.Number).intValue();
                var17 = var8;
-               var var13: Int = var3;
-               if (var3 < var5) {
+               var3 = var13;
+               if (var13 < var5) {
                   var17 = (Integer)var10;
-                  var13 = var5;
+                  var3 = var5;
                }
 
                var8 = var17;
-               var3 = var13;
+               var13 = var3;
             } while (var11.hasNext());
          }
       }

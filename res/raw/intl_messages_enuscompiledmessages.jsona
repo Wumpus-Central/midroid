@@ -4979,6 +4979,7 @@
   "825cFx": "Create Account",
   "ISN+ND": "Create Category",
   "fUYU+v": "Create Channel",
+  "6Urw1t": "Create DM",
   "qyjZub": "Create Events",
   "CTLgZG": "End Date",
   "j2RuXF": "End Time",
@@ -9371,23 +9372,6 @@
   "AKBgPz": "Come back for notifications on events, streams, and more.",
   "MwjTvr": "Nothing here yet",
   "B66Z+f": "Active",
-  "kJ1AZG": [
-    "Purchasing is unavailable while ",
-    [
-      8,
-      "$link",
-      [
-        "Nitro credits"
-      ],
-      [
-        [
-          1,
-          "helpCenterLink"
-        ]
-      ]
-    ],
-    " are active"
-  ],
   "07lzz8": "Boosting is unavailable while Nitro credits are active",
   "5nrJDA": "Boost Purchasing Currently Unavailable",
   "DFMPWV": "Nitro Credit",
@@ -40036,7 +40020,6 @@
   "FfjVVl": "Chrome",
   "kEfv8/": "External Browser",
   "YayR6O": "In-App Browser",
-  "T5W6+P": "Safari",
   "q9n0TU": "Invite your friends",
   "7Tj6HR": "Wave to say hi!",
   "Yhi9/P": "Personalize your server",

@@ -11,32 +11,32 @@ import kotlin.jvm.internal.r
 
 internal fun deserializeEmojiPickerRowData(data: ReadableMap): EmojiPickerRow {
    r.h(var0, "data");
-   val var2: Int = var0.getInt("rowContentWidth");
-   val var3: Int = var0.getInt("rowContentPaddingVertical");
-   val var1: Int = var0.getInt("itemSize");
-   val var5: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
-   val var4: IntRange = NativeArrayExtensionsKt.sizeRange(var5);
-   val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var4, 10));
-   val var7: java.util.Iterator = var4.iterator();
+   val var1: Double = var0.getDouble("rowContentWidth");
+   val var4: Int = var0.getInt("rowContentPaddingVertical");
+   val var3: Int = var0.getInt("itemSize");
+   val var7: ReadableArray = NativeMapExtensionsKt.getNonNullArray(var0, "items");
+   val var5: IntRange = NativeArrayExtensionsKt.sizeRange(var7);
+   val var6: ArrayList = new ArrayList(kotlin.collections.i.v(var5, 10));
+   val var8: java.util.Iterator = var5.iterator();
 
-   while (var7.hasNext()) {
-      val var8: ReadableMap = var5.getMap((var7 as n).a());
-      r.e(var8);
-      val var9: EmojiPickerRow.Emoji;
-      if (!kotlin.text.h.c0(NativeMapExtensionsKt.getNonNullString(var8, "url"))) {
-         var9 = new EmojiPickerRow.Emoji(
-            var8.getString("id"),
-            NativeMapExtensionsKt.getNonNullString(var8, "name"),
-            NativeMapExtensionsKt.getNonNullString(var8, "url"),
-            var8.getBoolean("animated"),
-            var8.getBoolean("disabled")
+   while (var8.hasNext()) {
+      val var9: ReadableMap = var7.getMap((var8 as n).a());
+      r.e(var9);
+      val var10: EmojiPickerRow.Emoji;
+      if (!kotlin.text.h.c0(NativeMapExtensionsKt.getNonNullString(var9, "url"))) {
+         var10 = new EmojiPickerRow.Emoji(
+            var9.getString("id"),
+            NativeMapExtensionsKt.getNonNullString(var9, "name"),
+            NativeMapExtensionsKt.getNonNullString(var9, "url"),
+            var9.getBoolean("animated"),
+            var9.getBoolean("disabled")
          );
       } else {
-         var9 = null;
+         var10 = null;
       }
 
-      var6.add(var9);
+      var6.add(var10);
    }
 
-   return new EmojiPickerRow(var2, var3, var1, var6, var0.getBoolean("isSectionNitroLocked"));
+   return new EmojiPickerRow(var1, var4, var3, var6, var0.getBoolean("isSectionNitroLocked"));
 }

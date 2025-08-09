@@ -30,18 +30,18 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
       r.h(var1, "view");
       r.h(var2, "item");
       val var3: Int = Math.floorMod(var2.getKey().hashCode(), 20);
-      val var6: java.util.Map = this.placeholders;
-      val var5: Int = var3;
-      var var4: Any = var6.get(var5);
+      val var5: java.util.Map = this.placeholders;
+      val var6: Int = var3;
+      val var4: Any = var5.get(var6);
       var var7: Any = var4;
       if (var4 == null) {
-         var4 = Companion;
+         val var8: FastestListPlaceholderTypeFeedItem.Companion = Companion;
          var7 = new FastestListPlaceholderTypeFeedItem.FeedItemDrawable(
             this.config,
             FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(Companion, 0.0F, 0.0F, 3, null),
-            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default((FastestListPlaceholderTypeFeedItem.Companion)var4, 0.0F, 0.0F, 3, null)
+            FastestListPlaceholderTypeFeedItem.Companion.getRandomWidthRatio$default(var8, 0.0F, 0.0F, 3, null)
          );
-         var6.put(var5, var7);
+         var5.put(var6, var7);
       }
 
       var1.setBackground(var7 as CustomDrawDrawable);
@@ -260,32 +260,32 @@ internal class FastestListPlaceholderTypeFeedItem(config: FeedItem) : FastestLis
             );
          }
 
-         val var8: Float = this.config.getLabelSize();
+         val var11: Float = this.config.getLabelSize();
          val var20: Float = this.config.getLabelSecondarySize();
          var var6: Float = 2;
-         val var5: Float = var8 / 2;
-         val var19: Float = var20 / 2;
-         val var21: Float = this.config.getLabelPaddingInnerRatio() * var8 / var6;
-         var6 = this.config.getLabelPaddingInnerRatio() * var20 / var6;
-         val var11: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
-         val var12: Float = var14;
-         val var10: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
-         val var13: Float = var15;
-         val var23: Float = (var15 - (var8 + var20)) / 2.0F + var8;
+         val var21: Float = var11 / 2;
+         val var5: Float = var20 / 2;
+         val var19: Float = this.config.getLabelPaddingInnerRatio() * var11 / var6;
+         val var13: Float = this.config.getLabelPaddingInnerRatio() * var20 / var6;
+         val var12: Float = this.config.getPadding() + this.config.getShapeSize() + this.config.getLabelPadding();
+         val var10: Float = var14;
+         val var9: Float = var14 - this.config.getPadding() - this.config.getLabelPadding();
+         var6 = var15;
+         val var23: Float = (var15 - (var11 + var20)) / 2.0F + var11;
          var1.drawRoundRect(
-            var11,
-            ((float)var15 - (var8 + var20)) / 2.0F + var21,
-            this.labelWidthRatio * var10,
-            ((float)var15 - (var8 + var20)) / 2.0F + var8 - var21,
-            var5,
-            var5,
+            var12,
+            ((float)var15 - (var11 + var20)) / 2.0F + var19,
+            this.labelWidthRatio * var9,
+            ((float)var15 - (var11 + var20)) / 2.0F + var11 - var19,
+            var21,
+            var21,
             this.paint
          );
-         var1.drawRoundRect(var11, var23 + var6, var10 * this.labelWidthRatioSecondary, var23 + var20 - var6, var19, var19, this.paint);
+         var1.drawRoundRect(var12, var23 + var13, var9 * this.labelWidthRatioSecondary, var23 + var20 - var13, var5, var5, this.paint);
          if (this.config.getDivider()) {
             this.paint.setColor(this.config.getDividerColor());
             var1.drawRect(
-               this.config.getDividerPaddingLeft(), var13 - (float)SizeUtilsKt.getDpToPx(1), var12 - this.config.getDividerPaddingRight(), var13, this.paint
+               this.config.getDividerPaddingLeft(), var6 - (float)SizeUtilsKt.getDpToPx(1), var10 - this.config.getDividerPaddingRight(), var6, this.paint
             );
             this.paint.setColor(this.config.getColor());
          }

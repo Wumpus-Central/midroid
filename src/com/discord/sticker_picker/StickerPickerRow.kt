@@ -4,26 +4,26 @@ import I9.a
 import kotlin.enums.EnumEntries
 import kotlin.jvm.internal.r
 
-internal data class StickerPickerRow(rowContentWidth: Int,
+internal data class StickerPickerRow(rowContentWidth: Double,
    rowContentPaddingVertical: Int,
    itemSize: Int,
    items: List<com.discord.sticker_picker.StickerPickerRow.Sticker?>
 ) {
-   public final val rowContentWidth: Int
+   public final val rowContentWidth: Double
    public final val rowContentPaddingVertical: Int
    public final val itemSize: Int
    public final val items: List<com.discord.sticker_picker.StickerPickerRow.Sticker?>
 
    init {
-      r.h(var4, "items");
+      r.h(var5, "items");
       super();
       this.rowContentWidth = var1;
-      this.rowContentPaddingVertical = var2;
-      this.itemSize = var3;
-      this.items = var4;
+      this.rowContentPaddingVertical = var3;
+      this.itemSize = var4;
+      this.items = var5;
    }
 
-   public operator fun component1(): Int {
+   public operator fun component1(): Double {
       return this.rowContentWidth;
    }
 
@@ -40,13 +40,13 @@ internal data class StickerPickerRow(rowContentWidth: Int,
    }
 
    public fun copy(
-      rowContentWidth: Int = var0.rowContentWidth,
+      rowContentWidth: Double = var0.rowContentWidth,
       rowContentPaddingVertical: Int = var0.rowContentPaddingVertical,
       itemSize: Int = var0.itemSize,
       items: List<com.discord.sticker_picker.StickerPickerRow.Sticker?> = var0.items
    ): StickerPickerRow {
-      r.h(var4, "items");
-      return new StickerPickerRow(var1, var2, var3, var4);
+      r.h(var5, "items");
+      return new StickerPickerRow(var1, var3, var4, var5);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -56,7 +56,7 @@ internal data class StickerPickerRow(rowContentWidth: Int,
          return false;
       } else {
          var1 = var1;
-         if (this.rowContentWidth != var1.rowContentWidth) {
+         if (java.lang.Double.compare(this.rowContentWidth, var1.rowContentWidth) != 0) {
             return false;
          } else if (this.rowContentPaddingVertical != var1.rowContentPaddingVertical) {
             return false;
@@ -69,26 +69,27 @@ internal data class StickerPickerRow(rowContentWidth: Int,
    }
 
    public override fun hashCode(): Int {
-      return ((Integer.hashCode(this.rowContentWidth) * 31 + Integer.hashCode(this.rowContentPaddingVertical)) * 31 + Integer.hashCode(this.itemSize)) * 31
+      return ((java.lang.Double.hashCode(this.rowContentWidth) * 31 + Integer.hashCode(this.rowContentPaddingVertical)) * 31 + Integer.hashCode(this.itemSize))
+            * 31
          + this.items.hashCode();
    }
 
    public override fun toString(): String {
-      val var2: Int = this.rowContentWidth;
+      val var1: Double = this.rowContentWidth;
       val var3: Int = this.rowContentPaddingVertical;
-      val var1: Int = this.itemSize;
-      val var5: java.util.List = this.items;
-      val var4: StringBuilder = new StringBuilder();
-      var4.append("StickerPickerRow(rowContentWidth=");
-      var4.append(var2);
-      var4.append(", rowContentPaddingVertical=");
-      var4.append(var3);
-      var4.append(", itemSize=");
-      var4.append(var1);
-      var4.append(", items=");
-      var4.append(var5);
-      var4.append(")");
-      return var4.toString();
+      val var4: Int = this.itemSize;
+      val var6: java.util.List = this.items;
+      val var5: StringBuilder = new StringBuilder();
+      var5.append("StickerPickerRow(rowContentWidth=");
+      var5.append(var1);
+      var5.append(", rowContentPaddingVertical=");
+      var5.append(var3);
+      var5.append(", itemSize=");
+      var5.append(var4);
+      var5.append(", items=");
+      var5.append(var6);
+      var5.append(")");
+      return var5.toString();
    }
 
    public data class Sticker(id: String,
@@ -206,30 +207,30 @@ internal data class StickerPickerRow(rowContentWidth: Int,
       }
 
       public override fun toString(): String {
-         val var4: java.lang.String = this.id;
+         val var5: java.lang.String = this.id;
          val var7: java.lang.String = this.name;
-         val var8: StickerPickerRow.Sticker.Type = this.type;
-         val var1: Boolean = this.animated;
-         val var5: java.lang.String = this.url;
+         val var4: StickerPickerRow.Sticker.Type = this.type;
+         val var2: Boolean = this.animated;
+         val var6: java.lang.String = this.url;
          val var3: Boolean = this.disabled;
-         val var2: Boolean = this.opaque;
-         val var6: StringBuilder = new StringBuilder();
-         var6.append("Sticker(id=");
-         var6.append(var4);
-         var6.append(", name=");
-         var6.append(var7);
-         var6.append(", type=");
-         var6.append(var8);
-         var6.append(", animated=");
-         var6.append(var1);
-         var6.append(", url=");
-         var6.append(var5);
-         var6.append(", disabled=");
-         var6.append(var3);
-         var6.append(", opaque=");
-         var6.append(var2);
-         var6.append(")");
-         return var6.toString();
+         val var1: Boolean = this.opaque;
+         val var8: StringBuilder = new StringBuilder();
+         var8.append("Sticker(id=");
+         var8.append(var5);
+         var8.append(", name=");
+         var8.append(var7);
+         var8.append(", type=");
+         var8.append(var4);
+         var8.append(", animated=");
+         var8.append(var2);
+         var8.append(", url=");
+         var8.append(var6);
+         var8.append(", disabled=");
+         var8.append(var3);
+         var8.append(", opaque=");
+         var8.append(var1);
+         var8.append(")");
+         return var8.toString();
       }
 
       public enum class Type {

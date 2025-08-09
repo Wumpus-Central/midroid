@@ -57,12 +57,12 @@ internal class ScreenCapturer(mediaProjectionPermissionResultData: Intent) : Scr
    private fun createRecorder(): AudioRecord? {
       var var1: AudioRecord = null;
       if (this.mediaProjection != null) {
-         val var4: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
-         r.g(var4, "build(...)");
+         val var7: AudioPlaybackCaptureConfiguration = b.a(a.a(a.a(a.a(e.a(this.mediaProjection), 1), 14), 0));
+         r.g(var7, "build(...)");
 
          try {
             var1 = c.a(
-                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var4
+                  new Builder().setAudioFormat(new android.media.AudioFormat.Builder().setEncoding(2).setSampleRate(44100).setChannelMask(16).build()), var7
                )
                .build();
          } catch (var5: SecurityException) {

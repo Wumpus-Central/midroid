@@ -1,28 +1,28 @@
 package com.discord.emoji_picker
 
-internal data class EmojiPickerRow(rowContentWidth: Int,
+internal data class EmojiPickerRow(rowContentWidth: Double,
    rowContentPaddingVertical: Int,
    itemSize: Int,
    items: List<com.discord.emoji_picker.EmojiPickerRow.Emoji?>,
    isSectionNitroLocked: Boolean
 ) {
-   public final val rowContentWidth: Int
+   public final val rowContentWidth: Double
    public final val rowContentPaddingVertical: Int
    public final val itemSize: Int
    public final val items: List<com.discord.emoji_picker.EmojiPickerRow.Emoji?>
    public final val isSectionNitroLocked: Boolean
 
    init {
-      kotlin.jvm.internal.r.h(var4, "items");
+      kotlin.jvm.internal.r.h(var5, "items");
       super();
       this.rowContentWidth = var1;
-      this.rowContentPaddingVertical = var2;
-      this.itemSize = var3;
-      this.items = var4;
-      this.isSectionNitroLocked = var5;
+      this.rowContentPaddingVertical = var3;
+      this.itemSize = var4;
+      this.items = var5;
+      this.isSectionNitroLocked = var6;
    }
 
-   public operator fun component1(): Int {
+   public operator fun component1(): Double {
       return this.rowContentWidth;
    }
 
@@ -43,14 +43,14 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
    }
 
    public fun copy(
-      rowContentWidth: Int = var0.rowContentWidth,
+      rowContentWidth: Double = var0.rowContentWidth,
       rowContentPaddingVertical: Int = var0.rowContentPaddingVertical,
       itemSize: Int = var0.itemSize,
       items: List<com.discord.emoji_picker.EmojiPickerRow.Emoji?> = var0.items,
       isSectionNitroLocked: Boolean = var0.isSectionNitroLocked
    ): EmojiPickerRow {
-      kotlin.jvm.internal.r.h(var4, "items");
-      return new EmojiPickerRow(var1, var2, var3, var4, var5);
+      kotlin.jvm.internal.r.h(var5, "items");
+      return new EmojiPickerRow(var1, var3, var4, var5, var6);
    }
 
    public override operator fun equals(other: Any?): Boolean {
@@ -60,7 +60,7 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
          return false;
       } else {
          var1 = var1;
-         if (this.rowContentWidth != var1.rowContentWidth) {
+         if (java.lang.Double.compare(this.rowContentWidth, var1.rowContentWidth) != 0) {
             return false;
          } else if (this.rowContentPaddingVertical != var1.rowContentPaddingVertical) {
             return false;
@@ -76,7 +76,11 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
 
    public override fun hashCode(): Int {
       return (
-               ((Integer.hashCode(this.rowContentWidth) * 31 + Integer.hashCode(this.rowContentPaddingVertical)) * 31 + Integer.hashCode(this.itemSize)) * 31
+               (
+                        (java.lang.Double.hashCode(this.rowContentWidth) * 31 + Integer.hashCode(this.rowContentPaddingVertical)) * 31
+                           + Integer.hashCode(this.itemSize)
+                     )
+                     * 31
                   + this.items.hashCode()
             )
             * 31
@@ -84,24 +88,24 @@ internal data class EmojiPickerRow(rowContentWidth: Int,
    }
 
    public override fun toString(): String {
-      val var3: Int = this.rowContentWidth;
-      val var2: Int = this.rowContentPaddingVertical;
-      val var1: Int = this.itemSize;
+      val var1: Double = this.rowContentWidth;
+      val var4: Int = this.rowContentPaddingVertical;
+      val var3: Int = this.itemSize;
       val var6: java.util.List = this.items;
-      val var4: Boolean = this.isSectionNitroLocked;
-      val var5: StringBuilder = new StringBuilder();
-      var5.append("EmojiPickerRow(rowContentWidth=");
-      var5.append(var3);
-      var5.append(", rowContentPaddingVertical=");
-      var5.append(var2);
-      var5.append(", itemSize=");
-      var5.append(var1);
-      var5.append(", items=");
-      var5.append(var6);
-      var5.append(", isSectionNitroLocked=");
-      var5.append(var4);
-      var5.append(")");
-      return var5.toString();
+      val var5: Boolean = this.isSectionNitroLocked;
+      val var7: StringBuilder = new StringBuilder();
+      var7.append("EmojiPickerRow(rowContentWidth=");
+      var7.append(var1);
+      var7.append(", rowContentPaddingVertical=");
+      var7.append(var4);
+      var7.append(", itemSize=");
+      var7.append(var3);
+      var7.append(", items=");
+      var7.append(var6);
+      var7.append(", isSectionNitroLocked=");
+      var7.append(var5);
+      var7.append(")");
+      return var7.toString();
    }
 
    public data class Emoji(id: String?, name: String, url: String, animated: Boolean, disabled: Boolean) {
